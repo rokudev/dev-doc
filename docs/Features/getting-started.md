@@ -28,19 +28,7 @@ Our goal is to encourage the success of partners on our platform. We offer multi
 
 ## Introduction to the Roku platform video
 
-[block:embed]
-{
-  "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fld-Lf5F-6fI%3Ffeature%3Doembed&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dld-Lf5F-6fI&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fld-Lf5F-6fI%2Fhqdefault.jpg&type=text%2Fhtml&schema=youtube\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\"></iframe>",
-  "url": "https://www.youtube.com/watch?v=ld-Lf5F-6fI",
-  "title": "Getting Started with Roku Channel Development: Developing for the Roku platform",
-  "favicon": "https://www.youtube.com/favicon.ico",
-  "image": "https://i.ytimg.com/vi/ld-Lf5F-6fI/hqdefault.jpg",
-  "provider": "https://www.youtube.com/",
-  "href": "https://www.youtube.com/watch?v=ld-Lf5F-6fI",
-  "typeOfEmbed": "youtube"
-}
-[/block]
-
+<Embed url="https://www.youtube.com/watch?v=ld-Lf5F-6fI" title="Getting Started with Roku Channel Development: Developing for the Roku platform" favicon="https://www.youtube.com/favicon.ico" image="https://i.ytimg.com/vi/ld-Lf5F-6fI/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=ld-Lf5F-6fI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Fld-Lf5F-6fI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Dld-Lf5F-6fI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Fld-Lf5F-6fI%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 <br />
 
@@ -62,32 +50,31 @@ In this section, you'll find:
 
 <br />
 
-- [How apps work](/docs/features/how-channels-work.md)  — A high-level overview of different components required to distribute content on the Roku platform.
+* [How apps work](/docs/features/how-channels-work.md)  — A high-level overview of different components required to distribute content on the Roku platform.
 
 <br />
 
-- [App development with the Roku SDK](/docs/features/channel-development-models.md)  — A summary of the app development features offered by the [Roku SDK](/docs/developer-program/getting-started/roku-dev-prog.md) .
+* [App development with the Roku SDK](/docs/features/channel-development-models.md)  — A summary of the app development features offered by the [Roku SDK](/docs/developer-program/getting-started/roku-dev-prog.md) .
 
 <br />
 
-- [Content engagement](/docs/features/engagement/channel-store.md)  — Introduction to the various features, programs, and mechanisms available to increase the discoverability of content among target audiences.
+* [Content engagement](/docs/features/engagement/channel-store.md)  — Introduction to the various features, programs, and mechanisms available to increase the discoverability of content among target audiences.
 
 <br />
 
-- [Monetization](/docs/features/monetization/video-advertisements.md)  — Learn about the two overarching monetization models (ads and subscriptions) available to Roku content publishers, including payout terms.
+* [Monetization](/docs/features/monetization/video-advertisements.md)  — Learn about the two overarching monetization models (ads and subscriptions) available to Roku content publishers, including payout terms.
 
 <br />
 
-- [Analytics & reporting](/docs/features/analytics/analytics-reports.md)  — Information about the various reports available to publishers on the platform, including audience demographics analytics, crash reports, sales activity, transactions, and more.
+* [Analytics & reporting](/docs/features/analytics/analytics-reports.md)  — Information about the various reports available to publishers on the platform, including audience demographics analytics, crash reports, sales activity, transactions, and more.
 
 <br />
 
-- [Security](/docs/features/security.md)  — Introduction to the security protocols that exist on the Roku platform, from system and application security to supported DRM formats and user information protection.
+* [Security](/docs/features/security.md)  — Introduction to the security protocols that exist on the Roku platform, from system and application security to supported DRM formats and user information protection.
 
 <br />
 
-- [Legal](/docs/features/legal/compliance.md)  — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.  
-  <br />  
+* [Legal](/docs/features/legal/compliance.md)  — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.\ <br />\
   To learn more about how Roku apps work, [read on](/docs/features/how-channels-work.md) !
 
 <br />
@@ -102,4 +89,4 @@ console.log('Code Tab B');
 fffff
 ```
 
-[^1]\: (Circana, LLC, Retail Tracking Service, TV, Software Service, Unit Sales, 3 Months Ending September 2024)
+\[^1]\: (Circana, LLC, Retail Tracking Service, TV, Software Service, Unit Sales, 3 Months Ending September 2024)

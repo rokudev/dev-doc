@@ -20,7 +20,7 @@ next:
 
 > Supported DRM info can be queried using [ifDeviceInfo.getDRMInfo()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfo-as-object).
 >
-> If you receive a `BS lib provider not found: <DRM>` error when running a sideloaded app, you can install a production app that uses that DRM to load the missing library. For example, you can install YouTube to load Widevine, and you can install Netflix to load PlayReady.  
+> If you receive a `BS lib provider not found: <DRM>` error when running a sideloaded app, you can install a production app that uses that DRM to load the missing library. For example, you can install YouTube to load Widevine, and you can install Netflix to load PlayReady.
 
 ### PlayReady
 
@@ -92,7 +92,7 @@ requires_verimatrix_version=1.0
 drmParams = createObject("roAssociativeArray")
 drmParams.name = "Verimatrix"
 drmParams.authDomain = "auth-value-from-streaming-provider"
-drmParams.serializationUrl = "hostname-url-from-streaming-provider"`
+drmParams.serializationUrl = "hostname-url-from-streaming-provider"
 ```
 
 **Setup ContentNode and set to Video node:**
@@ -175,7 +175,7 @@ requires_widevine_version=1.0
 ```
 drmParams = {
 keySystem: "Widevine"
-licenseServerURL: "<http(s)://license-server-host/path?param=value>"
+licenseServerURL: "[http(s)://license-server-host/path?param=value](http(s)://license-server-host/path?param=value)"
 }
 ```
 
@@ -229,7 +229,6 @@ currently set to.
   ]
 }
 [/block]
-
 
 > <sup>1</sup> 4K devices set to a Display Type with a resolution  
 > smaller than 4K will default to HDCP 1.4.

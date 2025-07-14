@@ -28,7 +28,7 @@ Our goal is to encourage the success of partners on our platform. We offer multi
 
 ## Introduction to the Roku platform video
 
-<Embed url="https://www.youtube.com/watch?v=ld-Lf5F-6fI" title="Getting Started with Roku Channel Development: Developing for the Roku platform" favicon="https://www.youtube.com/favicon.ico" image="https://i.ytimg.com/vi/ld-Lf5F-6fI/hqdefault.jpg" provider="youtube.com" href="https://www.youtube.com/watch?v=ld-Lf5F-6fI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Fld-Lf5F-6fI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Dld-Lf5F-6fI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Fld-Lf5F-6fI%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
+<Embed url="https://www.youtube.com/watch?v=ld-Lf5F-6fI" href="https://www.youtube.com/watch?v=ld-Lf5F-6fI" typeOfEmbed="youtube" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Fld-Lf5F-6fI%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Dld-Lf5F-6fI%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Fld-Lf5F-6fI%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" />
 
 <br />
 
@@ -74,7 +74,7 @@ In this section, you'll find:
 
 <br />
 
-* [Legal](/docs/features/legal/compliance.md)  — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.\ <br />\
+* [Legal](/docs/features/legal/compliance.md)  — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.\
   To learn more about how Roku apps work, [read on](/docs/features/how-channels-work.md) !
 
 <br />
@@ -89,4 +89,4 @@ console.log('Code Tab B');
 fffff
 ```
 
-\[^1]\: (Circana, LLC, Retail Tracking Service, TV, Software Service, Unit Sales, 3 Months Ending September 2024)
+[^1]: (Circana, LLC, Retail Tracking Service, TV, Software Service, Unit Sales, 3 Months Ending September 2024)

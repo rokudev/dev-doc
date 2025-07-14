@@ -6,21 +6,7 @@ metadata:
   title: ''
   description: ''
 ---
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/93e71e1c9d87d30b82d945efbebf42849181fc1e521e1e179afcc27d42e12cc5-Roku-OS-Lifestyle-14-5-beta.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/93e71e1c9d87d30b82d945efbebf42849181fc1e521e1e179afcc27d42e12cc5-Roku-OS-Lifestyle-14-5-beta.png" />
 
 <br />
 

@@ -71,4 +71,4 @@ To open the debug console, follow these steps :bell:
 
 <Image align="center" alt="Folders" border={false} caption="Some Folders" src="https://m.media-amazon.com/images/I/71YnVN9UC9L.jpg" width="300px" />
 
-For more information, read the [Getting Started Guide](/introduction-to-roku-development)
+For more information, read the [Getting Started Guide](/roku-1/update/docs/introduction-to-roku-development)

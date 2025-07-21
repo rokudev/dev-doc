@@ -72,3 +72,19 @@ To open the debug console, follow these steps :bell:
 <Image align="center" alt="Folders" border={false} caption="Some Folders" src="https://m.media-amazon.com/images/I/71YnVN9UC9L.jpg" width="300px" />
 
 For more information, read the [Getting Started Guide](/roku-1/update/docs/introduction-to-roku-development)
+
+<br />
+
+<SimpleStepper>
+  <SimpleStep header="Step 1 : Plan">
+    Plan your documents and gather your resources
+  </SimpleStep>
+
+  <SimpleStep header="Step 2 : Write">
+    Write effective documentation
+  </SimpleStep>
+
+  <SimpleStep header="Step 3 : Review">
+    Review and refine your content
+  </SimpleStep>
+</SimpleStepper>

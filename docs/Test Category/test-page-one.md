@@ -46,3 +46,17 @@ To edit the text displayed on your television screen by the sample app, follow t
 4. In the [init() function](/docs/references/scenegraph/component-functions/init.md), you can also set the **label.color** field (line 27) to a different hex code (for example, white, which is 0xFFFFFF).
 
 5. Save the file.
+
+6. Zip the contents of the **hello-world** directory; do not zip the directory itself or the development application installer will report an error when you try to upload the app. Name the zip file something that makes it easy to find (for example, my-hello-world.zip).
+
+## Sideloading the updated sample app
+
+To sideload the updated Hello World sample app, follow these steps:
+
+1. In your web browser, enter the URL of your Roku device, and then log in (the **User Name** is "rokudev"; the password is the one you created when you activated developer mode on your Roku device.
+
+2. In the Development Application Installer, click **Upload**, and then select the **/hello-world-master/dist/apps/hello-world/my-hello-world.zip** file.
+
+3. The updated Hello World app launches on your Roku device and displays "My first Roku app!" in white on the screen.
+
+   ![roku600px my-first-roku-app](https://image.roku.com/ZHZscHItMTc2/my-first-roku-channel.jpg)

@@ -60,3 +60,13 @@ To sideload the updated Hello World sample app, follow these steps:
 3. The updated Hello World app launches on your Roku device and displays "My first Roku app!" in white on the screen.
 
    ![roku600px my-first-roku-app](https://image.roku.com/ZHZscHItMTc2/my-first-roku-channel.jpg)
+
+<br />
+
+## Using the debug console
+
+You can use the [Roku debug console](/docs/developer-program/debugging/debugging-channels.md) to view the output of a Roku app during runtime. If the app fails during runtime, the debug console displays the line number of the error, as well as the contents of variables at the time of the failure. If the app has compilation errors, the debug console displays them as well. It is recommended to have the debug console open whenever you are running a sideloaded app.
+
+To open the debug console, follow these steps :bell:
+
+<Image align="center" alt="Folders" border={false} caption="Some Folders" src="https://m.media-amazon.com/images/I/71YnVN9UC9L.jpg" width="300px" />

@@ -1,9 +1,17 @@
 ---
 name: ListComponent
 ---
-export const ListItem = ({children}) => {
+export const items = ["Go to the Home Screen", "Navigate to Settings", "Check for updates"];
+
+export const ListItems = ({header, items}) => {
     return (
-        <div>{children}</div>
+      <div>
+        <h2>{header}</h2>
+
+   			<ul>
+					{items.map((item, index) => (<li key={index}> {item}</li> ))}            
+				</ul>
+			</div>
     );
 };
 
@@ -29,4 +37,7 @@ export const ListComponent = ({ header }) => {
   );
 };
 
-<ListComponent header="Getting Started with Custom Components" />
+{/*<ListComponent header="Getting Started with Custom Components" />*/}
+
+<ListItems header="Sample list" items={items} />
+

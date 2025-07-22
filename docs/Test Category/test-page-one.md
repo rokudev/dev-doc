@@ -88,3 +88,47 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
     Review and refine your content
   </SimpleStep>
 </SimpleStepper>
+
+<br />
+
+## Performance
+
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Best Practice
+      </th>
+
+      <th>
+        Rationale/Benefits
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Minimize perceived latency by providing active feedback during all operations that may take longer than a second to complete.
+      </td>
+
+      <td>
+        Keeping users entertained and informed during routine time-intensive operations like video buffering and app loading gives the illusion of added performance, and positively impacts users’ perception of app quality.
+
+        <br />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Optimize your app code to provide smooth transitions and animations.
+      </td>
+
+      <td>
+        Jerky or blocky transitions erode the seamlessness of the Roku user experience and feel unfinished or “broken” to users.
+
+        <ListItems header="Sample list" items={["The first step", "The second step", "The third step"]} />
+      </td>
+    </tr>
+  </tbody>
+</Table>

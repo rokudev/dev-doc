@@ -1,6 +1,15 @@
 ---
 name: ListComponent
 ---
+export const ListItem = ({header, children}) => {
+    return (
+      <div>
+        <h2>{header}</h2>
+        <div>{children}</div>
+      </div>
+    );
+};
+
 export const ListComponent = ({ header }) => {
   return (
     <div className="flex justify-center">

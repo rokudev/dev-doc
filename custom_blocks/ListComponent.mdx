@@ -3,7 +3,7 @@ name: ListComponent
 ---
 export const items = ["Go to the Home Screen", "Navigate to Settings", "Check for updates"];
 
-export const ListItems = ({header, items}) => {
+export const ListComponent = ({header, items}) => {
     return (
       <div>
         <h2>{header}</h2>
@@ -15,4 +15,4 @@ export const ListItems = ({header, items}) => {
     );
 };
 
-<ListItems header="Sample list" items={items} />
+<ListComponent header="Sample list" items={items} />

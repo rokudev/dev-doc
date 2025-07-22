@@ -1,0 +1,26 @@
+---
+name: ListComponent
+---
+export const ListComponent = ({ header }) => {
+  return (
+    <div className="flex justify-center">
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
+        <p className="text-lg font-bold">{header}</p>
+        <p>
+          <i className="fa-solid fa-code mr-2" />
+          Write <a className="text-blue-500! dark:text-blue-300!" href="https://docs.readme.com/main/v3.0/docs/building-custom-mdx-components" target="_blank">MDX</a> to render interactive content
+        </p>
+        <p>
+          <i className="fa-solid fa-pen mr-3" />
+          Style elements with <a className="text-blue-500! dark:text-blue-300!" href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>
+        </p>
+        <p>
+          <i className="fa-solid fa-lightbulb mr-4" />
+          Need inspiration? Check out our <a className="text-blue-500! dark:text-blue-300!" href="https://github.com/readmeio/marketplace" target="_blank">Marketplace</a>!
+        </p>
+      </div>
+    </div>
+  );
+};
+
+<ListComponent header="Getting Started with Custom Components" />

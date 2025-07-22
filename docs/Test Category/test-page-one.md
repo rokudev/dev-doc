@@ -127,7 +127,7 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
       <td>
         Jerky or blocky transitions erode the seamlessness of the Roku user experience and feel unfinished or “broken” to users.
 
-        <ListItems header="Sample list" items={["The first step", "The second step", "The third step"]} />
+        <ListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />
       </td>
     </tr>
   </tbody>

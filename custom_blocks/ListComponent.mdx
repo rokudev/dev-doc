@@ -5,12 +5,15 @@ export const items = ["Go to the Home Screen", "Navigate to Settings", "Check fo
 
 export const ListComponent = ({header, items}) => {
     return (
-      <div>
+      <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
         <h2>{header}</h2>
+        
+				<div className="flex justify-left">
+          <ul>
+            {items.map((item, index) => (<li key={index}> {item}</li> ))}       
+          </ul>
+				</div>
 
-   			<ul>
-					{items.map((item, index) => (<li key={index}> {item}</li> ))}            
-				</ul>
 			</div>
     );
 };

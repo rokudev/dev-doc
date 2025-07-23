@@ -130,5 +130,15 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
         <ListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />
       </td>
     </tr>
+
+    <tr>
+      <td>
+        Sample row
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
   </tbody>
 </Table>

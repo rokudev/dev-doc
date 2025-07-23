@@ -143,7 +143,7 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
         &#x20;   \{ Name: 'Alice', Age: 25, Country: 'USA' },
         &#x20;   \{ Name: 'Bob', Age: 30, Country: 'UK' },
 
-                <ListComponent header="Sample list" items={["Go to the Home Screen", "Navigate to Settings", "Check for updates"]} />
+        <ListComponent header="Sample list" items={["Go to the Home Screen", "Navigate to Settings", "Check for updates"]} />
 
         ]}\
         />

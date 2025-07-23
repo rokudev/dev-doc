@@ -22,6 +22,17 @@ This grouping is useful for testing apps across multiple Roku device types. It i
 
 The spec then further classifies the hardware products based on their code names, rather than model numbers. For instance, the "Bryan" code name indicates a Roku Ultra. To programmatically discover the model number for this device (4660X), call the [roDeviceInfo.GetModel()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getmodel-as-string) method.
 
+### Table
+
+|    |    |    |
+| :- | :- | :- |
+|    |    |    |
+|    |    |    |
+
+<br />
+
+\*not italicized\*
+
 > The model name returned by the  [roDeviceInfo.GetModel()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getmodel-as-string) method for Roku TVs will differ from the specific model number of the device displayed in the system info. This is because the GetModel() method returns the model name of the unit, which for Roku TVs may actually cover dozens of specific model numbers. In other words, the model name for all Liberty devices is 5000X, while the specific model number may be 5509X. Use the [roDeviceInfo.GetModelDetails()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getmodeldetails-as-object) method to retrieve the specific model number.
 
 ## Current Roku models
@@ -30,7 +41,7 @@ The following models are currently being manufactured and are supported:
 
 | Device Name              | Code Name  | roDeviceInfo.GetModel() | CPU                      | Accelerated Graphics API | RAM    | Max UI Resolution | Max Playback Resolution | HDR Support                                                             | Year Released |
 | :----------------------- | :--------- | :---------------------- | :----------------------- | :----------------------- | :----- | :---------------- | :---------------------- | :---------------------------------------------------------------------- | ------------- |
-| Roku Express             | Rockett    | 3960X                   | ARM Cortex A55           | OpenGL ES 2.0            | 512 MB | 720p              | 1080p                   | No                                                                      | 2022          |
+| **Roku Express**         | *Rockett*  | 3960X                   | ARM Cortex A55           | OpenGL ES 2.0            | 512 MB | 720p              | 1080p                   | No                                                                      | 2022          |
 | Roku Express+            | Nemo       | 3931X                   | ARM Cortex A53           | OpenGL ES 2.0            | 512 MB | 720p              | 1080p                   | No                                                                      | 2019          |
 | Roku Express 4K          | Bailey     | 3940X2                  | ARM Cortex A55           | OpenGL ES 2.0            | 1 GB   | 1080p/60fps       | 4K60fps, HDR            | HDR10/10+, HLG                                                          | 2022          |
 | Roku Express 4K+         | Bailey     | 3941X2                  | ARM Cortex A55           | OpenGL ES 2.0            | 1 GB   | 1080p/60fps       | 4K60fps, HDR            | HDR10/10+, HLG                                                          | 2022          |

@@ -1,0 +1,71 @@
+---
+name: TableComponent
+---
+export const TableComponent = ({ header }) => {
+  const containerStyle = { 
+    maxWidth: '800px', 		
+    margin: '5px auto',
+    padding: '0 5px 5px 5px', 
+    border: '1px solid #ccc', 
+    borderRadius: '8px', 
+    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+    backgroundColor: 'oklch(87.2% 0.01 258.338)',
+    textAlign: 'left'
+  };
+
+  const tableStyle = {
+    width: '100%',
+    borderCollapse: 'collapse',
+    //marginTop: '20px',
+    backgroundColor: 'white',
+    borderRadius: '4px',
+    overflow: 'hidden'
+  };
+
+  const headerStyle = {
+    backgroundColor: '#f5f5f5',
+    fontWeight: 'bold',
+    padding: '12px',
+    border: '1px solid #ddd',
+    textAlign: 'left'
+  };
+  const cellStyle = {
+    padding: '12px',
+    border: '1px solid #ddd',
+    verticalAlign: 'top'
+  };
+
+  const listStyle = {
+    margin: '8px 0',
+    paddingLeft: '20px'
+  };
+
+  const listItemStyle = {
+    marginBottom: '4px'
+  };
+
+
+  return (
+    <div style={containerStyle}>
+      <h2>{header}</h2>
+      
+			<table style={tableStyle}>
+        <thead>
+          <tr>
+            <th style={headerStyle}>Role</th>
+            <th style={headerStyle}>Permissions</th>
+            <th style={headerStyle}>Access-level</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          
+        </tbody>
+
+
+
+			</table>
+		</div>
+  );
+};
+

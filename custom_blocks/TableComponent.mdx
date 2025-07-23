@@ -59,10 +59,46 @@ export const TableComponent = ({ header }) => {
         </thead>
         
         <tbody>
-          
+          {data.map((row, index) => (<tr key={index}>
+              <td style={cellStyle}>
+                <strong>{row.role}</strong>
+              </td>
+              
+              <td style={cellStyle}>
+								{row.description && (
+                  <p style={{ margin: '0 0 8px 0', fontWeight: 'normal' }}>
+                    {row.description}
+                  </p>
+                )}
+                
+                {row.permissions && row.permissions.length > 0 && (
+                  <ul style={listStyle}>
+                    {row.permissions.map((permission, permIndex) => (
+                      <li key={permIndex} style={listItemStyle}>
+                        {permission.category && (
+                          <strong>{permission.category}:</strong>
+                        )} {permission.text}
+                        {permission.subItems && permission.subItems.length > 0 && (
+                          <ul style={listStyle}>
+                            {permission.subItems.map((subItem, subIndex) => (
+                              <li key={subIndex} style={listItemStyle}>
+                                {subItem}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+							</td>
+              
+							<td style={cellStyle}>
+                <strong>{row.accessLevel}</strong>
+              </td>
+            
+					</tr> ))} 
         </tbody>
-
-
 
 			</table>
 		</div>

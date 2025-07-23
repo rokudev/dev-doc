@@ -137,14 +137,14 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
       </td>
 
       <td>
-                <SimpleTable
-                  columns={['Name', 'Age', 'Country']}
-                  data={[
-            { Name: 'Alice', Age: 25, Country: 'USA' },
-            { Name: 'Bob', Age: 30, Country: 'UK' },
-            { Name: 'Charlie', Age: 28, Country: 'Canada' }
-          ]}
-                />
+        \<SimpleTable
+        &#x20; columns=\{\['Name', 'Age', 'Country']}
+        &#x20; data=\{\[
+        &#x20;           \{ Name: 'Alice', Age: 25, Country: 'USA' },
+        &#x20;           \{ Name: 'Bob', Age: 30, Country: 'UK' },
+        &#x20;           \{\<ListComponent header="Sample list" items=\{\["Go to the Home Screen", "Navigate to Settings", "Check for updates"]} />}
+        &#x20;         ]}
+        />
       </td>
     </tr>
   </tbody>

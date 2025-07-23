@@ -43,6 +43,46 @@ export const TableComponent = ({ header }) => {
   const listItemStyle = {
     marginBottom: '4px'
   };
+  const renderCellContent = (value, type) => {
+    if (value === null || value === undefined) return '';
+
+    if (type === 'permissions' || (Array.isArray(value) && typeof value[0] === 'object')) {
+      return (
+        <ul style={listStyle}>
+          {value.map((item, index) => (
+            <li key={index} style={listItemStyle}>
+              {item.category && <strong>{item.category}:</strong>} {item.text}
+              {item.subItems && item.subItems.length > 0 && (
+                <ul style={listStyle}>
+                  {item.subItems.map((subItem, subIndex) => (
+                    <li key={subIndex} style={listItemStyle}>
+                      {subItem}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+    if (Array.isArray(value)) {
+      return (
+        <ul style={listStyle}>
+          {value.map((item, index) => (
+            <li key={index} style={listItemStyle}>{item}</li>
+          ))}
+        </ul>
+      );
+    }
+
+    if (typeof value === 'object') {
+      return JSON.stringify(value);
+    }
+
+    return String(value);
+  };
 
 
   return (
@@ -52,54 +92,29 @@ export const TableComponent = ({ header }) => {
 			<table style={tableStyle}>
         <thead>
           <tr>
-            <th style={headerStyle}>Role</th>
-            <th style={headerStyle}>Permissions</th>
-            <th style={headerStyle}>Access-level</th>
+            {columns ? columns.map((column, index) => (
+              <th key={index} style={headerStyle}>{column.label}</th>
+            )) : Object.keys(data[0] || {}).map((key, index) => (
+              <th key={index} style={headerStyle}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
+            ))}
           </tr>
         </thead>
         
         <tbody>
-          {data.map((row, index) => (<tr key={index}>
-              <td style={cellStyle}>
-                <strong>{row.role}</strong>
-              </td>
-              
-              <td style={cellStyle}>
-								{row.description && (
-                  <p style={{ margin: '0 0 8px 0', fontWeight: 'normal' }}>
-                    {row.description}
-                  </p>
-                )}
-                
-                {row.permissions && row.permissions.length > 0 && (
-                  <ul style={listStyle}>
-                    {row.permissions.map((permission, permIndex) => (
-                      <li key={permIndex} style={listItemStyle}>
-                        {permission.category && (
-                          <strong>{permission.category}:</strong>
-                        )} {permission.text}
-                        {permission.subItems && permission.subItems.length > 0 && (
-                          <ul style={listStyle}>
-                            {permission.subItems.map((subItem, subIndex) => (
-                              <li key={subIndex} style={listItemStyle}>
-                                {subItem}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-							</td>
-              
-							<td style={cellStyle}>
-                <strong>{row.accessLevel}</strong>
-              </td>
-            
-					</tr> ))} 
+          {data.map((row, index) => (
+            <tr key={index}>
+              {columns ? columns.map((column, colIndex) => (
+                <td key={colIndex} style={cellStyle}>
+                  {renderCellContent(row[column.key], column.type)}
+                </td>
+              )) : Object.entries(row).map(([key, value], colIndex) => (
+                <td key={colIndex} style={cellStyle}>
+                  {renderCellContent(value)}
+                </td>
+              ))}
+            </tr>
+          ))}
         </tbody>
-
 			</table>
 		</div>
   );

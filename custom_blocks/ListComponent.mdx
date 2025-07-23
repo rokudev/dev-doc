@@ -1,8 +1,6 @@
 ---
 name: ListComponent
 ---
-export const items = ["Go to the Home Screen", "Navigate to Settings", "Check for updates"];
-
 export const ListComponent = ({header, items}) => {
     return (
       <div className="rounded-md p-6 m-4 max-w-lg shadow-md border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
@@ -18,4 +16,5 @@ export const ListComponent = ({header, items}) => {
     );
 };
 
-<ListComponent header="Sample list" items={items} />
+// To use this in your page, copy the next line and paste into your page and customize the list of items.
+<ListComponent header="Sample list" items={["Go to the Home Screen", "Navigate to Settings", "Check for updates"]} />

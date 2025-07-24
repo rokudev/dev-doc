@@ -32,7 +32,9 @@ export const SimpleTable = ({header, columns, data}) => {
             <tr key={rowIndex}>
               {columns.map((col) => (
                 <td key={col} style={{ border: '1px solid #ddd', padding: '8px', color: 'black' }}>
+                  {row[`${col}-pre`] && <div>{row[`${col}-pre`]}<br/><br/></div>}
                   {row[col]}
+									{row[`${col}-post`] && <div><br/>{row[`${col}-post`]}</div>}
                 </td>
               ))}
             </tr>
@@ -47,6 +49,6 @@ export const SimpleTable = ({header, columns, data}) => {
 // To use this in your page, copy the next line and paste into your page and customize the list of items.
 <SimpleTable header="Simple Table" columns={['Name', 'Age', 'Country']} data={[
     { Name: 'Alice', Age: 25, Country: 'USA' },
-    { Name: 'Bob', Age: 30, Country: 'UK' },
+    { Name: 'Bob', Age: 30, 'Country-pre': 'I am from ', Country: 'UK.', 'Country-post': 'Hello everyone' },
     { Name: 'Charlie', Age: 28, Country: 'Canada' }
   ]} />

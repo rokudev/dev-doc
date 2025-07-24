@@ -176,3 +176,15 @@ Desc: <SimpleTable
 /> }
   ]}
 />
+
+<br />
+
+<ComplexTable
+  header="Comples Table"
+  columns={['Name', 'Age', 'Desc']}
+  data={[
+    { Name: 'Alice', Age: 25, Desc: 'USA' },
+    { Name: 'Bob', Age: 30, Desc: ['UK', 'Ireland', 'Sunny'] },
+    { Name: 'Charlie', Age: 28, Desc: 'Canada' }
+  ]}
+/>

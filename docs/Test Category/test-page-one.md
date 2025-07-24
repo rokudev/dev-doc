@@ -155,20 +155,20 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
 
 <br />
 
-<SimpleTable
-  header="Outer Table"
-  columns={['Name', 'Age', 'Desc']}
-  data={[
-    { Name: 'Alice', Age: 25, Desc: 'USA' },
-    { Name: 'Bob', Age: 30, Desc: 'UK' },
-    { Name: 'Charlie', Age: 28, Desc: <SimpleTable
-  header="Nested Table"
-  columns={['Name', 'Age', 'Country']}
-  data={[
-    { Name: 'Alice', Age: 25, Desc: 'USA' },
-    { Name: 'Bob', Age: 30, Desc: 'UK' },
-    { Name: 'Charlie', Age: 28, Desc: 'Canada' }
-  ]}
-/> }
-  ]}
+\<SimpleTable
+&#x20; header="Outer Table"
+&#x20; columns=\{\['Name', 'Age', 'Desc']}
+&#x20; data=\{\[
+&#x20;   \{ Name: 'Alice', Age: 25, Desc: 'USA' },
+&#x20;   \{ Name: 'Bob', Age: 30, Desc: 'UK' },
+&#x20;   \{ Name: 'Charlie', Age: 28, Desc: 'Blabla \<SimpleTable
+&#x20; header="Nested Table"
+&#x20; columns=\{\['Name', 'Age', 'Country']}
+&#x20; data=\{\[
+&#x20;   \{ Name: 'Alice', Age: 25, Desc: 'USA' },
+&#x20;   \{ Name: 'Bob', Age: 30, Desc: 'UK' },
+&#x20;   \{ Name: 'Charlie', Age: 28, Desc: 'Canada' }
+&#x20; ]}
+/>' }
+&#x20; ]}
 />

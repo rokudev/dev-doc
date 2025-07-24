@@ -155,17 +155,17 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
 
 <SimpleTable
   header="Nested Table"
-  columns={['Name', 'Age', 'Country']}
+  columns={['Name', 'Age', 'Desc']}
   data={[
-    { Name: 'Alice', Age: 25, Country: 'USA' },
-    { Name: 'Bob', Age: 30, Country: 'UK' },
-    { Name: 'Charlie', Age: 28, Country: <SimpleTable
+    { Name: 'Alice', Age: 25, Desc: 'From USA' },
+    { Name: 'Bob', Age: 30, Desc: 'From UK' },
+    { Name: 'Charlie', Age: 28, Desc: <SimpleTable
   header="A Table"
-  columns={['Name', 'Age', 'Country']}
+  columns={['Name', 'Age', 'Desc']}
   data={[
-    { Name: 'Alice', Age: 25, Country: 'USA' },
-    { Name: 'Bob', Age: 30, Country: 'UK' },
-    { Name: 'Charlie', Age: 28, Country: 'Canada' }
+    { Name: 'Alice', Age: 25, Desc: 'From USA' },
+    { Name: 'Bob', Age: 30, Desc: 'From Malaysia' },
+    { Name: 'Charlie', Age: 28, Desc: 'From Canada' }
   ]}
 /> }
   ]}

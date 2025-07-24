@@ -150,3 +150,23 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
     </tr>
   </tbody>
 </Table>
+
+<br />
+
+<SimpleTable
+  header="Nested Table"
+  columns={['Name', 'Age', 'Country']}
+  data={[
+    { Name: 'Alice', Age: 25, Country: 'USA' },
+    { Name: 'Bob', Age: 30, Country: 'UK' },
+    { Name: 'Charlie', Age: 28, Country: <SimpleTable
+  header="A Table"
+  columns={['Name', 'Age', 'Country']}
+  data={[
+    { Name: 'Alice', Age: 25, Country: 'USA' },
+    { Name: 'Bob', Age: 30, Country: 'UK' },
+    { Name: 'Charlie', Age: 28, Country: 'Canada' }
+  ]}
+/> }
+  ]}
+/>

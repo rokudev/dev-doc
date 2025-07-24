@@ -153,20 +153,20 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
 
 <br />
 
-\<SimpleTable
+\\\<SimpleTable &#x20;
 &#x20; header="Outer Table"
-&#x20; columns=\{\['Name', 'Age', 'Desc']}
-&#x20; data=\{\[
-&#x20;   \{ Name: 'Alice', Age: 25, Desc: 'From USA' },
-&#x20;   \{ Name: 'Bob', Age: 30, Desc: 'From UK' },
-&#x20;   \{ Name: 'Charlie', Age: 28, Desc: \{\<SimpleTable
+&#x20; columns=\\\{\['Name', 'Age', 'Desc']}
+&#x20; data=\\\{\[
+&#x20;   \\\{ Name: 'Alice', Age: 25, Desc: 'From USA' },
+&#x20;   \\\{ Name: 'Bob', Age: 30, Desc: 'From UK' },
+&#x20;   \\\{ Name: 'Charlie', Age: 28, Desc: \<SimpleTable
 &#x20; header="Nested Table"
-&#x20; columns=\{\['Name', 'Age', 'Desc']}
-&#x20; data=\{\[
-&#x20;   \{ Name: 'Alice', Age: 25, Desc: 'From USA' },
-&#x20;   \{ Name: 'Bob', Age: 30, Desc: 'From Malaysia' },
-&#x20;   \{ Name: 'Charlie', Age: 28, Desc: 'From Canada' }
+&#x20; columns=\\\{\['Name', 'Age', 'Desc']}
+&#x20; data=\\\{\[
+&#x20;   \\\{ Name: 'Alice', Age: 25, Desc: 'From USA' },
+&#x20;   \\\{ Name: 'Bob', Age: 30, Desc: 'From Malaysia' },
+&#x20;   \\\{ Name: 'Charlie', Age: 28, Desc: 'From Canada' }
 &#x20; ]}
-/>} }
+/> }
 &#x20; ]}
 />

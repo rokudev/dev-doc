@@ -127,7 +127,7 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
       <td>
         Jerky or blocky transitions erode the seamlessness of the Roku user experience and feel unfinished or “broken” to users.
 
-        <NewListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />
+        <ListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />
       </td>
     </tr>
 
@@ -164,7 +164,7 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
     { Name: 'Alice', Age: 25, Desc: 'USA' },
     { Name: 'Bob', Age: 30, Desc: 'UK' },
     { Name: 'Charlie', Age: 28, 'Desc-pre': 'This is our nested table', 
-     'Desc-post': <NewListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />,
+     'Desc-post': <ListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />,
 Desc: <SimpleTable
   header="Nested Table"
   columns={['Name', 'Age', 'Desc']}

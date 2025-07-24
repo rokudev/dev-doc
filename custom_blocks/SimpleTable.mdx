@@ -2,8 +2,17 @@
 name: SimpleTable
 ---
 export const SimpleTable = ({header, columns, data}) => {
+  const containerStyle = { 
+    maxWidth: '600px', 		
+    margin: '40px auto', 
+    padding: '10px', 
+    border: '1px solid #ccc', 
+    borderRadius: '2px', 
+    textAlign: 'center'
+  };
+
   return (
-    <div>
+    <div style={containerStyle}>
       
 			<h2>{header}</h2>
 

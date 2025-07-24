@@ -32,9 +32,9 @@ export const SimpleTable = ({header, columns, data}) => {
             <tr key={rowIndex}>
               {columns.map((col) => (
                 <td key={col} style={{ border: '1px solid #ddd', padding: '8px', color: 'black' }}>
-                  {row[`${col}-pre`] && <div>{row[`${col}-pre`]}<br/><br/></div>}
+                  {row[`${col}-pre`] && <div>{row[`${col}-pre`]}<br/></div>}
                   {row[col]}
-									{row[`${col}-post`] && <div><br/>{row[`${col}-post`]}</div>}
+									{row[`${col}-post`] && <div>{row[`${col}-post`]}</div>}
                 </td>
               ))}
             </tr>

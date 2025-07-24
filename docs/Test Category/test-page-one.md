@@ -163,7 +163,7 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
   data={[
     { Name: 'Alice', Age: 25, Desc: 'USA' },
     { Name: 'Bob', Age: 30, Desc: 'UK' },
-    { Name: 'Charlie', Age: 28, Desc: <SimpleTable
+    { Name: 'Charlie', Age: 28, 'Desc-pre': 'This is our nested table', Desc: <SimpleTable
   header="Nested Table"
   columns={['Name', 'Age', 'Desc']}
   data={[

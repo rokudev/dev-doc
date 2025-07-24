@@ -157,7 +157,7 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
 
 <br />
 
-<SimpleTableNew
+<SimpleTable
   header="Outer Table"
   columns={['Name', 'Age', 'Desc']}
   data={[

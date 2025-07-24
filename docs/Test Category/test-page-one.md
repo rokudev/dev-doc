@@ -75,19 +75,19 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
 
 <br />
 
-<SimpleStepperNew>
-  <SimpleStepNew header="Step 1 : Plan">
+<SimpleStepper>
+  <SimpleStep header="Step 1 : Plan">
     Plan your documents and gather your resources
-  </SimpleStepNew>
+  </SimpleStep>
 
-  <SimpleStepNew header="Step 2 : Write">
+  <SimpleStep header="Step 2 : Write">
     Write effective documentation
-  </SimpleStepNew>
+  </SimpleStep>
 
-  <SimpleStepNew header="Step 3 : Review">
+  <SimpleStep header="Step 3 : Review">
     Review and refine your content
-  </SimpleStepNew>
-</SimpleStepperNew>
+  </SimpleStep>
+</SimpleStepper>
 
 <br />
 

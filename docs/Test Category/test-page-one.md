@@ -185,7 +185,10 @@ Desc: <SimpleTable
   data={[
     { Name: 'Alice', Age: 25, Desc: 'USA' },
     { Name: 'Bob', Age: 30, Desc: ['UK', 'Ireland', 'Sunny'] },
-    { Name: 'Charlie', Age: 28, Desc: ['Canada', 'Maple syrup is very unhealthy', <SimpleTable
+    { Name: 'Charlie', Age: 28, Desc: [
+      'Canada', 
+      'Maple syrup is very unhealthy', 
+<SimpleTable
   header="A Table"
   columns={['Name', 'Age', 'Country']}
   data={[
@@ -193,6 +196,8 @@ Desc: <SimpleTable
     { Name: 'Bob', Age: 30, Country: 'UK' },
     { Name: 'Charlie', Age: 28, Country: 'Canada' }
   ]}
-/>, 'Maple leaf is nice but inedible', <ListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />] }
+  />, 
+      'Maple leaf is nice but inedible', 
+			<ListComponent header="Sample list" items={["The first step", "The second step", "The third step"]} />] }
   ]}
 />

@@ -185,7 +185,7 @@ Desc: <SimpleTable
   data={[
     { Name: 'Alice', Age: 25, Desc: 'USA' },
     { Name: 'Bob', Age: 30, Desc: ['UK', 'Ireland', 'Sunny'] },
-    { Name: 'Charlie', Age: 28, Desc: ['Canada', <SimpleTable
+    { Name: 'Charlie', Age: 28, Desc: ['Canada', 'Maple syrup is very unhealthy', <SimpleTable
   header="A Table"
   columns={['Name', 'Age', 'Country']}
   data={[

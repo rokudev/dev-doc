@@ -180,11 +180,19 @@ Desc: <SimpleTable
 <br />
 
 <ComplexTable
-  header="Comples Table"
+  header="Complex Table"
   columns={['Name', 'Age', 'Desc']}
   data={[
     { Name: 'Alice', Age: 25, Desc: 'USA' },
     { Name: 'Bob', Age: 30, Desc: ['UK', 'Ireland', 'Sunny'] },
-    { Name: 'Charlie', Age: 28, Desc: 'Canada' }
+    { Name: 'Charlie', Age: 28, Desc: ['Canada', <SimpleTable
+  header="A Table"
+  columns={['Name', 'Age', 'Country']}
+  data={[
+    { Name: 'Alice', Age: 25, Country: 'USA' },
+    { Name: 'Bob', Age: 30, Country: 'UK' },
+    { Name: 'Charlie', Age: 28, Country: 'Canada' }
+  ]}
+/>] }
   ]}
 />

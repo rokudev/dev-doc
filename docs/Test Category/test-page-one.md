@@ -185,7 +185,19 @@ Desc: <SimpleTable
   data={[
     { Name: 'Alice', Age: 25, Desc: 'USA' },
     { Name: 'Bob', Age: 30, Desc: ['UK', 'Ireland', 'Sunny'] },
-    { Name: 'Charlie', Age: 28, Desc: ['Canada', 'Maple syrup is very unhealthy', <SimpleTable
+    { Name: 'Charlie', Age: 28, Desc: [<SimpleStepper>
+  <SimpleStep header="Step 1 : Plan">
+    Plan your documents and gather your resources
+  </SimpleStep>
+
+  <SimpleStep header="Step 2 : Write">
+    Write effective documentation
+  </SimpleStep>
+
+  <SimpleStep header="Step 3 : Review">
+    Review and refine your content
+  </SimpleStep>
+</SimpleStepper>, 'Canada', 'Maple syrup is very unhealthy', <SimpleTable
   header="A Table"
   columns={['Name', 'Age', 'Country']}
   data={[

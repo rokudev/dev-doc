@@ -83,4 +83,10 @@ When a deep link is sent to your app, it will include contentId and a mediaType.
 
 <br />
 
-Word
+> A deep link for a single content item will always have the same contentId; however, the mediaType may vary based on the Roku content discovery feature sending the deep link. Your app therefore must be designed to execute the specified behavior required by each mediaType that could be sent to your app.
+>
+> For example, if your app only includes short video clips, the app only needs to handle the "shortFormVideo" mediaType. Similarly, if your app only contains movies, the app only needs to handle the "movie" mediaType.
+>
+> But if your app includes the last three seasons of a television episode, your app needs to handle the "episode", "season", and "series" mediaTypes to be able to respond to deep links sent from Roku Search, Roku voice search, and on-device ads.
+>
+> You can use the ["source" parameter](/docs/developer-program/getting-started/architecture/dev-environment.md#source-parameter) to determine from where the deep linking request originated.

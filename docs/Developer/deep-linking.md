@@ -299,3 +299,53 @@ To submit deep links for certification, follow these steps:
 2. Open the [Developer Dashboard](https://developer.roku.com/developer) and click **Manage My Channels**. Click your app, and then select **Deep Linking** from the list on the right.
 
 3. Follow the instructions in the [Deep Linking window documentation](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window).
+
+## MediaType behavior examples
+
+The following GIFs demonstrate the required launch behavior for the different mediaType values:
+
+#### movie
+
+The movie identified by the contentId is launched directly into playback. [Bookmarks](/docs/developer-program/media-playback/bookmarking.md) are used to determine the playback position.
+
+<Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/weird-deeplink-movie.gif" />
+
+#### episode
+
+The episode identified by the contentId is launched directly into playback. [Bookmarks](/docs/developer-program/media-playback/bookmarking.md) are used to determine the playback position.
+
+<Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/children-deeplink-episode.gif" />
+
+#### season (optional)
+
+A content springboard is launched. The springboard displays episodes organized by season and the episode mapped to the contentid is highlighted.
+
+<Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/rokurec-deeplink-season.gif" />
+
+#### series
+
+The episode identified by the contentId is launched directly into playback. Smart bookmarks are used to determine which episode to launch. The playback position is based on the type of series, whether the user has previously watched the series, and whether they completed the last watched episode.
+
+<Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/reno911-deeplink-series.gif" />
+
+#### shortFormVideo
+
+The shortForm video (less than 15 minutes) identified by the contentId is launched directly into playback.
+
+<Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/bangles-deeplink-shortform.gif" />
+
+#### tvSpecial
+
+The one-time TV program identified by the contentId is launched directly into playback. [Bookmarks](/docs/developer-program/media-playback/bookmarking.md) are used to determine the playback position.
+
+<Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/ozzy-deeplink-special.gif" />
+
+## Deep linking video lesson
+
+You can learn how to implement deep linking in your app by watching the [Deep linking](/videos/courses/rsg/deep-linking.md) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
+
+This lesson details how to program your app application to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences requried for the various types of content in the app's feed.
+
+## Sample app
+
+You can download and install a [sample app](https://github.com/rokudev/deep-Linking-samples) that demonstrates how to launch content with deep links. It provides content that you can use to test deep linking via ECP commands sent via cURL. It shows you how you can design your app to deep link into content when both launching an app and while the app is already running.

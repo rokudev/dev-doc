@@ -128,7 +128,7 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
    ```
    <br />
    > Use a case-insensitive check when validating the **contentId** and **mediaType** key names.
-3. If the contentId and mediaType are valid, launch the specified content item using the appropriate [launch behavior for the mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) . If either the contentId or mediaType are invalid, launch the app home page.  
+3. If the contentId and mediaType are valid, launch the specified content item using the appropriate [launch behavior for the mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) . If either the contentId or mediaType are invalid, launch the app home page.
    <br />
    ```
    if (args.mediaType = "movie" or args.mediaType = "episode" or args.mediaType = "shortFormVideo" or args.mediaType = "series" or args.mediaType = "tvSpecial")
@@ -148,12 +148,14 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
        'display an appropriate error message for the user and launch home page.
    end if
    ```
-4. Use [roInputEvent](/docs/references/brightscript/events/roinputevent.md)  to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.<br/><br/>
+4. Use [roInputEvent](/docs/references/brightscript/events/roinputevent.md)  to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.<br /><br />
 
-   a.  The [supports_input_launch](/docs/developer-program/getting-started/architecture/channel-manifest.md)  attribute (**supports\_input\_launch=1**) must be added to the manifest for this functionality to work.<br/><br/>For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent&mdash;instead of re-launching your app with the parameters.
+   a.  The [supports_input_launch](/docs/developer-program/getting-started/architecture/channel-manifest.md)  attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.<br /><br />For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent—instead of re-launching your app with the parameters.
 
-   b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.<br/><br/> See [Sample app](/docs/developer-program/discovery/implementing-deep-linking.md#sample-app)  to download and install a sample app that demonstrates how to use [roInputEvent](/docs/references/brightscript/events/roinputevent.md)  to handle deep links while your app is running.
+   b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.<br /><br /> See [Sample app](/docs/developer-program/discovery/implementing-deep-linking.md#sample-app)  to download and install a sample app that demonstrates how to use [roInputEvent](/docs/references/brightscript/events/roinputevent.md)  to handle deep links while your app is running.
+
    <br />
+
    ```
    ...
     screen = CreateObject("roSGScreen")
@@ -177,6 +179,7 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
         end if
     end while
    ```
+
    <br />
 
 #### Custom deep linking experiences from ads and Home screen banners
@@ -205,7 +208,7 @@ The Roku Deep Linking Tester provides a UI for configuring, saving, import/exp
 
 2. Open the Roku Deep Linking Tester ([https://devtools.web.roku.com/DeepLinkingTester](https://devtools.web.roku.com/DeepLinkingTester/)).  Optionally, you can download the Mac, PC, or Linux version of the tool onto your desktop. This saves you the step of having to manually enter the ID and name of the app to be tested.
 
-3. In the **Device Manager > Online** tab, select your test device by toggling the On/Off button and then clicking **Select device**. You can also manually add your device by clicking **Add a Device**, entering its IP address, entering a name to be used to identify it, and then clicking **Add**. To test sideloaded apps, click the settings icon under **Options**, enter the user name (rokudev) and password for your device, and then click **Save**.  
+3. In the **Device Manager > Online** tab, select your test device by toggling the On/Off button and then clicking **Select device**. You can also manually add your device by clicking **Add a Device**, entering its IP address, entering a name to be used to identify it, and then clicking **Add**. To test sideloaded apps, click the settings icon under **Options**, enter the user name (rokudev) and password for your device, and then click **Save**.
 
    <Image alt="roku400px - rrmselectdevice" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm-device-manager.png" />
 
@@ -232,7 +235,7 @@ The following attributes are required:
 | Parameter      | Description                                                                        | Example |
 | -------------- | ---------------------------------------------------------------------------------- | ------- |
 | EcpCommand     | Enter one of the following commands:<br />$\{ecp-commands}                         | launch  |
-| channelId      | Enter one of the following:<br/>$\{channel-ids}                                    | dev     |
+| channelId      | Enter one of the following:<br />$\{channel-ids}                                   | dev     |
 | contentIdValue | Enter the **contentId** of the content item to be used for the deep link test.     | 1234    |
 | mediaTypeValue | Enter the **mediaType** of the content item to be used for the deep link test. See |         |
 
@@ -244,6 +247,55 @@ The following attributes are required:
 \{#channel-ids}
 
 * **dev**: Sideloaded app.
-* **\<_id_\>**: Public or [beta](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines)  apps. To find your app ID, use the preview page on the Developer Dashboard.
+* **_id_**: Public or [beta](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines)  apps. To find your app ID, use the preview page on the Developer Dashboard.
 
-<br />
+<br />The following examples show how to send ECP commands via cURL HTTP POST requests. The examples are based on a sideloaded app with contentId of 1234 and a mediaType of movie. The **launch** command is used to test deep linking into content when the app is launched; the **input** command is used for when the app is already running. When sending the **input** command, the app
+(**dev**) is not required.
+
+```
+curl -d '' 'http://192.168.1.114:8060/launch/dev?contentId=1234&mediaType=movie'
+curl -d '' 'http://192.168.1.114:8060/input?contentId=1234&mediaType=movie'
+```
+
+To test deep links on your production app, replace "dev" with your app ID (an app ID of 50000 is used in the following example). Because the **input** command does not require the app ID, the same command can be used for testing in development and production.
+
+```
+curl -d '' 'http://192.168.1.114:8060/launch/50000?contentId=1234&mediaType=movie'
+curl -d '' 'http://192.168.1.114:8060/input?contentId=1234&mediaType=movie'
+```
+
+### Using the debug console for troubleshooting deep linking parameters
+
+You can use the [debug console](/docs/developer-program/debugging/debugging-channels.md#accessing-the-debug-console) to check the deep linking parameters that are being sent to your app. To do this, add a print statement to your app application that outputs the associative array passed into your app's `Main()` function and [roInputEvent](/docs/references/brightscript/events/roinputevent.md).
+
+This is useful when troubleshooting deep links because it helps you identify the **contentId** of the content being launched in case it is unknown, and it provides the **mediaType** in case the expected behavior is not being executed.
+
+The following example demonstrates how to output the associative array containing the deep linking parameters:
+
+```
+sub Main(args)
+    ...
+    if (args.mediaType <> invalid) and (args.contentId <> invalid)
+        ...
+        'print deep linking paramaters in args
+        "args= "; formatjson(args)  'pretty print AA'
+        'output
+        ' args= {action: "display", contentid: "myAwesomeShow|Season=1|Episode=1", instant_on_run_mode: "foreground", isexternal: true, lastExitOrTerminationReason: "EXIT_UNKNOWN", mediatype: "series", source: "hs-search", splashTime: "0"}
+        ...
+```
+
+### Submitting deep linking samples for certification
+
+As part of the app certification process, you must use the Developer
+Dashboard to submit sample deep linking parameters for your
+app. This enables Roku to certify that your app is responding
+with the correct behavior for the different types of content in your
+app.
+
+To submit deep links for certification, follow these steps:
+
+1. Verify that your app meets all [certification requirements](/docs/developer-program/certification/certification.md).
+
+2. Open the [Developer Dashboard](https://developer.roku.com/developer) and click **Manage My Channels**. Click your app, and then select **Deep Linking** from the list on the right.
+
+3. Follow the instructions in the [Deep Linking window documentation](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window).

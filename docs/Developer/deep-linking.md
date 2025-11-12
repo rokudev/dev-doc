@@ -236,4 +236,14 @@ The following attributes are required:
 | contentIdValue | Enter the **contentId** of the content item to be used for the deep link test.     | 1234    |
 | mediaTypeValue | Enter the **mediaType** of the content item to be used for the deep link test. See |         |
 
+\{#ecp-commands}
+
+* **launch**: Test deep linking into content when app is launched.
+* **input**: Test deep linking into content while app is running.
+
+\{#channel-ids}
+
+* **dev**: Sideloaded app.
+* *id*: Public or [beta](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines)  apps. To find your app ID, use the preview page on the Developer Dashboard.
+
 <br />

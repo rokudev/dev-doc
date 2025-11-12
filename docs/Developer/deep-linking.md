@@ -216,3 +216,24 @@ The Roku Deep Linking Tester provides a UI for configuring, saving, import/exp
    <Image alt="roku400px - deeplinktest" border={false} src="https://image.roku.com/ZHZscHItMTc2/deep-link-test-case.png" />
 
 6. Click **Send**, and verify that your app is launched and direct playback of the content starts immediately. You can change the command being sent from **Launch** (the default) to **Input** in order to verify that your app properly handles deep links while it is already running.
+
+### Using ECP commands for testing deep linking
+
+You can test deep linking in an app by sending ECP commands via cURL to your Roku device. This enables you to test deep linking into content when your app is launched and while it also running.
+
+To test deep linking using ECP/cURL, send an HTTP POST request to port 8060 on your Roku device using the following syntax:
+
+```
+http://<roku-device-ip-address>:8060/<EcpCommand>/<channelId>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>
+```
+
+The following attributes are required:
+
+| Parameter      | Description                                                                        | Example |
+| -------------- | ---------------------------------------------------------------------------------- | ------- |
+| EcpCommand     | Enter one of the following commands:<br />$\{ecp-commands}                         | launch  |
+| channelId      | Enter one of the following:<br/>$\{channel-ids}                                    | dev     |
+| contentIdValue | Enter the **contentId** of the content item to be used for the deep link test.     | 1234    |
+| mediaTypeValue | Enter the **mediaType** of the content item to be used for the deep link test. See |         |
+
+<br />

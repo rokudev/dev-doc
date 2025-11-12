@@ -90,3 +90,5 @@ When a deep link is sent to your app, it will include contentId and a mediaType.
 > But if your app includes the last three seasons of a television episode, your app needs to handle the "episode", "season", and "series" mediaTypes to be able to respond to deep links sent from Roku Search, Roku voice search, and on-device ads.
 >
 > You can use the ["source" parameter](/docs/developer-program/getting-started/architecture/dev-environment.md#source-parameter) to determine from where the deep linking request originated.
+
+<br />

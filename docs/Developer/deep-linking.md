@@ -91,4 +91,4 @@ When a deep link is sent to your app, it will include contentId and a mediaType.
 >
 > You can use the ["source" parameter](/docs/developer-program/getting-started/architecture/dev-environment.md#source-parameter) to determine from where the deep linking request originated.
 
-<br />
+\{#series-bookmarks-list}

@@ -244,6 +244,6 @@ The following attributes are required:
 \{#channel-ids}
 
 * **dev**: Sideloaded app.
-* **\<_id_**: Public or [beta](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines)  apps. To find your app ID, use the preview page on the Developer Dashboard.
+* **\<_id_\>**: Public or [beta](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines)  apps. To find your app ID, use the preview page on the Developer Dashboard.
 
 <br />

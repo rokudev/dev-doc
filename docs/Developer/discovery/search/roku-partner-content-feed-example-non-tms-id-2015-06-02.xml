@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<partnerContent>
+  <movies>
+    <movie id="{content provider id}">
+      <!--If you include a TMS id, there is no need to include anything other than playId and viewOptions-->
+      <titles>
+        <title language="en">sample series title</title>
+      </titles>
+      <images>
+        <!--Image Dimensions must be 240x360. If language is not provided, en is used.-->
+        <image language="en" category="Poster Art" width="240" height="360">
+          <url>http://yourdomain.com/path_to_image/image_name.png</url>
+        </image>
+      </images>
+      <descriptions>
+        <!--60 per language is required, 500 is optional.
+                  In otherwords, if 500 is included for a given language, you must also include a description
+                  for that language with a length of 60. If length is not provided, 60 will be used.
+                  If language is not provided, en will be used. If you want the description to be have a language of en
+                  and length of 60, neither attribute is necessary.-->
+        <description language="en" length="60">
+          Sample description
+        </description>
+      </descriptions>
+      <runTime>500</runTime>
+      <releaseYear>2010</releaseYear>
+      <!--When including cast or crew, birthdate, while optional, is a preferred value to have so we can try to match against our existing database-->
+      <crew>
+        <person>
+          <firstName>FirstName</firstName>
+          <middleName>MiddleName</middleName>
+          <lastName>LastName</lastName>
+          <image>http://www.yourdomain.com/pathtoimage/image_name.png</image><!-- size:270x360 -->
+          <role>Host</role>
+          <birthDate>1999-01-01</birthDate>
+          <deathDate>1999-01-01</deathDate>
+        </person>
+      </crew>
+      <cast>
+        <person>
+          <firstName>FirstName2</firstName>
+          <middleName>MiddleName2</middleName>
+          <lastName>LastName2</lastName>
+          <image>http://www.yourdomain.com/pathtoimage/imagename.png</image><!-- size:270x360 -->
+          <role>Actor</role>
+          <birthDate>1999-01-01</birthDate>
+          <deathDate>1999-01-01</deathDate>
+        </person>
+      </cast>
+      <ratings>
+        <!--please check shema file for a list of acceptable ratings-->
+        <rating>
+          <source>Motion Picture Association of America</source>
+          <rating>PG</rating>
+        </rating>
+      </ratings>
+      <keywords>
+        <keyword language="en">
+          <!-- please check schema file for a list of acceptable types-->
+          <type>Setting</type>
+          <word>small town</word>
+        </keyword>
+      </keywords>
+      <!--please check schema file for a list of acceptable keywords-->
+      <genres>
+        <genre>action</genre>
+      </genres>
+      <videos>
+        <video>
+          <region>us</region><!--region code should be obtained from Roku-->
+          <playId>sample-play-id-for-us-videos</playId><!--id used to open springboard screen or launch video-->
+          <viewOptions><!--multiple options can be provided here. This is typical if the play id is used to launch the springboard screen-->
+            <option>
+              <price>1.99</price><!--price is optional if license is subscription or free-->
+              <currency>USD</currency><!--currency code-->
+              <quality>SD</quality><!--HD, SD, HD+-->
+              <license>rental</license><!--rental,subscription,purchase,free-->
+            </option>
+            <option>
+              <quality>SD</quality>
+              <license>subscription</license>
+            </option>
+          </viewOptions>
+        </video>
+        <video>
+          <region>ca</region>
+          <playId>sample-play-id-for-ca-videos</playId>
+          <viewOptions>
+            <option>
+              <price>1.99</price>
+              <currency>CAD</currency>
+              <quality>SD</quality>
+              <license>rental</license>
+            </option>
+            <option>
+              <quality>SD</quality>
+              <license>subscription</license>
+            </option>
+          </viewOptions>
+        </video>
+        <video>
+          <region>gb</region>
+          <playId>sample-play-id-for-gb-videos</playId>
+          <viewOptions>
+            <option>
+              <price>1.99</price>
+              <currency>GBP</currency>
+              <quality>SD</quality>
+              <license>rental</license>
+            </option>
+            <option>
+              <quality>SD</quality>
+              <license>subscription</license>
+            </option>
+          </viewOptions>
+        </video>
+      </videos>
+    </movie>
+  </movies>
+  <seriesItems>
+    <series id="{content provider id}">
+      <titles>
+        <title language="en">sample series title</title>
+      </titles>
+      <images>
+        <!--Series images must be 360x270. If language is not provided, en is used.-->
+        <image language="en" width="360" height="270">
+          <url>http://yourdomain.com/path_to_image/image_name.png</url>
+        </image>
+      </images>
+      <descriptions>
+        <description language="en" length="60">
+         This is a description
+        </description>
+      </descriptions>
+      <originalAirDate>1999-01-01</originalAirDate>
+      <!--When including cast or crew, birthdate, while optional, is a preferred value to have so we can try to match against our existing database-->
+      <crew>
+        <person>
+          <firstName>FirstName</firstName>
+          <middleName>MiddleName</middleName>
+          <lastName>LastName</lastName>
+          <image>http://www.yourdomain.com/pathtoimage/image_name.png</image><!-- size:270x360 -->
+          <role>Director</role>
+          <birthDate>1999-01-01</birthDate>
+          <deathDate>1999-01-01</deathDate>
+        </person>
+      </crew>
+      <cast>
+        <person>
+          <firstName>FirstName2</firstName>
+          <middleName>MiddleName2</middleName>
+          <lastName>LastName2</lastName>
+          <image>http://www.yourdomain.com/pathtoimage/imagename.png</image><!-- size:270x360 -->
+          <role>Voice</role>
+          <birthDate>1999-01-01</birthDate>
+          <deathDate>1999-01-01</deathDate>
+        </person>
+      </cast>
+      <seasons>
+        <season>
+          <seasonNumber>1</seasonNumber>
+          <images>
+            <!--Series images must be 360x270. If language is not provided, en is used.-->
+            <image language="en" width="360" height="270">
+              <url>http://yourdomain.com/image_path/image_name.png</url>
+            </image>
+          </images>
+          <episodes>
+            <episode id="{content provider id}">
+              <titles>
+                <title language="en">sample series title</title>
+              </titles>
+              <images>
+                <!--Series images must be 360x270. If language is not provided, en is used.-->
+                <image language="en" width="360" height="270">
+                  <url>http://yourdomain.com/image_path/image_name.png</url>
+                </image>
+              </images>
+              <descriptions>
+                <description language="en" length="60">
+                  Sample description is here.
+                </description>
+              </descriptions>
+              <episodeNumber>1</episodeNumber>
+              <airDate>1999-01-01</airDate>
+              <!--When including cast or crew, birthdate, while optional, is a preferred value to have so we can try to match against our existing database-->
+              <crew>
+                <person>
+                  <firstName>FirstName</firstName>
+                  <middleName>MiddleName</middleName>
+                  <lastName>LastName</lastName>
+                  <image>http://www.yourdomain.com/pathtoimage/image_name.png</image><!-- size:270x360 -->
+                  <role>Director</role>
+                  <birthDate>1999-01-01</birthDate>
+                  <deathDate>1999-01-01</deathDate>
+                </person>
+              </crew>
+              <cast>
+                <person>
+                  <firstName>FirstName2</firstName>
+                  <middleName>MiddleName2</middleName>
+                  <lastName>LastName2</lastName>
+                  <image>http://www.yourdomain.com/pathtoimage/imagename.png</image><!-- size:270x360 -->
+                  <role>Voice</role>
+                  <birthDate>1999-01-01</birthDate>
+                  <deathDate>1999-01-01</deathDate>
+                </person>
+              </cast>
+              <ratings>
+                <rating>
+                  <source>Motion Picture Association of America</source>
+                  <rating>G</rating>
+                </rating>
+              </ratings>
+              <keywords>
+                <keyword>
+                  <type>Mood</type>
+                  <word>happy</word>
+                </keyword>
+              </keywords>
+              <genres>
+                <genre>comedy</genre>
+              </genres>
+              <videos>
+                <video>
+                  <region>us</region>
+                  <playId>sample-play-id-for-us-videos</playId>
+                  <viewOptions>
+                    <option>
+                      <price>1.99</price>
+                      <currency>USD</currency>
+                      <quality>SD</quality>
+                      <license>rental</license>
+                    </option>
+                    <option>
+                      <quality>SD</quality>
+                      <license>subscription</license>
+                    </option>
+                  </viewOptions>
+                </video>
+                <video>
+                  <region>ca</region>
+                  <playId>sample-play-id-for-ca-videos</playId>
+                  <viewOptions>
+                    <option>
+                      <price>1.99</price>
+                      <currency>CAD</currency>
+                      <quality>SD</quality>
+                      <license>rental</license>
+                    </option>
+                    <option>
+                      <quality>SD</quality>
+                      <license>subscription</license>
+                    </option>
+                  </viewOptions>
+                </video>
+                <video>
+                  <region>gb</region>
+                  <playId>sample-play-id-for-gb-videos</playId>
+                  <viewOptions>
+                    <option>
+                      <price>1.99</price>
+                      <currency>GBP</currency>
+                      <quality>SD</quality>
+                      <license>rental</license>
+                    </option>
+                    <option>
+                      <quality>SD</quality>
+                      <license>subscription</license>
+                    </option>
+                  </viewOptions>
+                </video>
+              </videos>
+            </episode>
+          </episodes>
+        </season>
+      </seasons>
+    </series>
+  </seriesItems>
+</partnerContent>

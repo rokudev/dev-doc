@@ -5,11 +5,11 @@ hidden: false
 metadata:
   robots: index
 ---
-Extends <Anchor label="StandardDialog" title="**Standard Dialog**" href="/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md">StandardDialog</Anchor> 
+Extends <Anchor label="StandardDialog" title="**Standard Dialog**" href="/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md">StandardDialog</Anchor>
 
 The **StandardKeyboardDialog** node enables text and voice entry of strings consisting of alphanumeric characters as well as many commonly used symbols. It is similar to the legacy [KeyboardDialog](/docs/references/scenegraph/dialog-nodes/keyboarddialog.md)  node, but includes voice entry functionality, which is provided through its internal **DynamicKeyboard** node.
 
-![roku815px - keyboard-dialog](https://image.roku.com/ZHZscHItMTc2/keyboard-dialog.jpg)
+<Image alt="roku815px - keyboard-dialog" border={false} src="https://image.roku.com/ZHZscHItMTc2/keyboard-dialog.jpg" />
 
 ## Structure
 
@@ -18,11 +18,11 @@ The **StandardKeyboardDialog** node enables text and voice entry of strings cons
 The StandardKeyboardDialog is comprised of the following areas and building block nodes:
 
 * StdDlgTitleArea.
-  * StdDlgContentArea, which may contain the following items:
-    * Zero or more StdDlgTextItem nodes.
-      * One StdDlgKeyboardItem containing a DynamicKeyboard node
-        * StdDlgButtonArea, which may contain zero or more StdDlgButton nodes. 
-          <br />
+* StdDlgContentArea, which may contain the following items:
+  * Zero or more StdDlgTextItem nodes.
+  * One StdDlgKeyboardItem containing a DynamicKeyboard node
+* StdDlgButtonArea, which may contain zero or more StdDlgButton nodes.
+  <br />
 
 ## Fields
 
@@ -41,19 +41,16 @@ The StandardKeyboardDialog is comprised of the following areas and building bloc
 
 \{#bq-buttons-note}
 
-> Minimize the number of buttons in the dialog to ensure that all buttons are visible without the user having to scroll up and down. 
+> Minimize the number of buttons in the dialog to ensure that all buttons are visible without the user having to scroll up and down.
 
 \{#keyboard-domain-values}
 
 * "email": letter-by-letter dictation for emails.
-  * "numeric": letter-by-letter dictation for PIN codes, zip codes, and other numeric input.
-    * "alphanumeric": letter-by-letter dication for street addresses or other sequences of numbers and letters.
-      * "generic": Full word input for search queries or other sequences of numbers, letters and symbols.
-        * "password": letter-by-letter dication for passwords.
-          <br />
+* "numeric": letter-by-letter dictation for PIN codes, zip codes, and other numeric input.
+* "alphanumeric": letter-by-letter dication for street addresses or other sequences of numbers and letters.
+* "generic": Full word input for search queries or other sequences of numbers, letters and symbols.
+* "password": letter-by-letter dication for passwords.
 
 ## Sample app
-
-<br />
 
 You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework)  that demonstrates how to create a standard keyboard dialog.

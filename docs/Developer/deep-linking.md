@@ -92,3 +92,22 @@ When a deep link is sent to your app, it will include contentId and a mediaType.
 > You can use the ["source" parameter](/docs/developer-program/getting-started/architecture/dev-environment.md#source-parameter) to determine from where the deep linking request originated.
 
 \{#series-bookmarks-list}
+
+* Followed TV (a series that the user has already started watching in the past): Use bookmarks to determine whether the user completed the previously watched episode. If they completed the last episode, launch the next episode in the series. If they did not, launch the episode where the user stopped watching.
+* Unwatched TV (a cataloged series that the user has not yet watched on your service): launch playback at the beginning of S1E1.
+* Daily/weekly shows (a regularly-occurring show that does not necessarily need to be watched in chronological order; for example, news broadcasts, talk shows, sports podcasts, and religious sermons): Launch the most recent episode in the series.
+
+\{#bq-season-dl}
+
+Season deep links are no longer being sent from Roku Search.
+
+### General app behavior
+
+Your app should exhibit the following behaviors when responding to deep link requests:
+
+* **Handle invalid deep links**: If a deep link has an invalid contentid or mediaType, launch the app's home screen.
+* **Handle unauthenticated users:** If an unauthenticated user is launching or deep linking into your app for the first time, route the user to the appropriate authentication flow and then process the deep link request after the user has been authenticated. This can happen when a user deep links into your app via Roku Search or an on-device ad but the app is not installed. In this case, the Roku OS will prompt the user to install the app before continuing with the deep link. 
+* **Display a paywall (if needed)**: If your app requires a purchase prior to launching, the app may display a purchase screen before the letting the user view deep linked content.
+* **Support a default profile** If your app supports different profiles, set the last one used as the default for a movie, episode or series. An app may not display a profile selection screen, or any other screen other than one for purchases or authentication, between the selection and playback of a movie or episode. Do not use any profiles linked to children as the default. 
+* **Avoid resume/start over screens**: Apps may not use resume/start over screens when handling deep links into movies, TV episodes, or TV series. Apps must use bookmarks or smart bookmarks to identify the playback position and resume at that spot.
+* **Avoid deep linking into other apps**: An app may not deep link into third-party apps.

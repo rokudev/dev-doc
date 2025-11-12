@@ -205,4 +205,14 @@ The Roku Deep Linking Tester provides a UI for configuring, saving, import/exp
 
 2. Open the Roku Deep Linking Tester ([https://devtools.web.roku.com/DeepLinkingTester](https://devtools.web.roku.com/DeepLinkingTester/)).  Optionally, you can download the Mac, PC, or Linux version of the tool onto your desktop. This saves you the step of having to manually enter the ID and name of the app to be tested.
 
-3. In the **Device Manager > Online** tab, select your test device by toggling the On/Off button and then clicking **Select device**. You can also manually add your device by clicking **Add a Device**, entering its IP address, entering a name to be used to identify it, and then clicking **Add**. To test sideloaded apps, click the settings icon under **Options**, enter the user name (rokudev) and password for your device, and then click **Save**.
+3. In the **Device Manager > Online** tab, select your test device by toggling the On/Off button and then clicking **Select device**. You can also manually add your device by clicking **Add a Device**, entering its IP address, entering a name to be used to identify it, and then clicking **Add**. To test sideloaded apps, click the settings icon under **Options**, enter the user name (rokudev) and password for your device, and then click **Save**.  
+
+   <Image alt="roku400px - rrmselectdevice" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm-device-manager.png" />
+
+4. Click the app to be tested from the list of apps on the left. For production apps, the Roku device must be keyed with the same developer key that was used to sign the app for publishing to the Streaming Store.
+
+5. Add one or more test cases. To do this, click the **Add a Test Case** icon, enter a name for the test case, and then save the test case. Enter the **contentId** and select the **mediaType** for the test case; these will automatically be saved after you enter them.
+
+   <Image alt="roku400px - deeplinktest" border={false} src="https://image.roku.com/ZHZscHItMTc2/deep-link-test-case.png" />
+
+6. Click **Send**, and verify that your app is launched and direct playback of the content starts immediately. You can change the command being sent from **Launch** (the default) to **Input** in order to verify that your app properly handles deep links while it is already running.

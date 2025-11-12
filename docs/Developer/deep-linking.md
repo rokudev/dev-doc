@@ -111,3 +111,38 @@ Your app should exhibit the following behaviors when responding to deep link req
 * **Support a default profile** If your app supports different profiles, set the last one used as the default for a movie, episode or series. An app may not display a profile selection screen, or any other screen other than one for purchases or authentication, between the selection and playback of a movie or episode. Do not use any profiles linked to children as the default. 
 * **Avoid resume/start over screens**: Apps may not use resume/start over screens when handling deep links into movies, TV episodes, or TV series. Apps must use bookmarks or smart bookmarks to identify the playback position and resume at that spot.
 * **Avoid deep linking into other apps**: An app may not deep link into third-party apps.
+
+## Implementing deep linking
+
+Deep linking is implemented by passing launch parameters to your app's Main() function. These launch parameters are passed in using an associative array similar to argv in C. Your app is responsible for parsing these parameters and taking the appropriate action, or in the case of an error, detecting it and going to the app's home screen. To integrate deep linking in your app, follow these steps:
+
+1. Accept the deep linking parameters (contentId and mediaType) being passed to it. To do this, add an associativeArray argument to your app's main entry point, which is typically either the **main()** or **runuserinterface()** function. The name of the argument is arbitrary; for the example in this section, it is **args**.
+   <br />
+   ```
+   ```
+   <br />
+   2. Verify that the contentId and mediaType have valid values. To do this, parse the associativeArray received by your app using the **contentid** and **mediatype** key names, and then check the values. 
+      <br />
+      ```
+      ```
+      <br />
+      > Use a case-insensitive check when validating the **contentId** and **mediaType** key names.
+      >
+      > <br />
+      3. If the contentId and mediaType are valid, launch the specified content item using the appropriate [launch behavior for the mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) . If either the contentId or mediaType are invalid, launch the app home page.  
+         <br />
+         ```
+         ```
+         <br />
+         <br />
+         4. Use [roInputEvent](/docs/references/brightscript/events/roinputevent.md)  to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.<br/><br/>
+            <br />
+               a.  The [supports_input_launch](/docs/developer-program/getting-started/architecture/channel-manifest.md)  attribute (**supports\_input\_launch=1**) must be added to the manifest for this functionality to work.<br/><br/>For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent&mdash;instead of re-launching your app with the parameters.
+            <br />
+               b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.<br/><br/> See [Sample app](/docs/developer-program/discovery/implementing-deep-linking.md#sample-app)  to download and install a sample app that demonstrates how to use [roInputEvent](/docs/references/brightscript/events/roinputevent.md)  to handle deep links while your app is running.
+            <br />
+            ```
+            ```
+            <br />
+
+####

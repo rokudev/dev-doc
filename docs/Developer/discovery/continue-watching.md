@@ -63,10 +63,94 @@ To get started with the Continue Watching integration, follow these steps:
 
 Integrating into Continue Watching entails calling the Roku Continue Watching APIs when a playback event occurs. Playback events occur when the customer exits the video player or finishes watching content. Sending events identifies which content the customers can keep watching and where to resume playback. Publishers can use the Roku Continue Watching APIs to add, update, and remove content items. The workflow is illustrated and summarized as follows:
 
-| Step                                                                          | API                                     | Description                                                                                                                                                                                                                                                                                                 |
-| :---------------------------------------------------------------------------- | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Retrieve bookmarks when app is launched**                                   | Publisher backend system                | The publisher maintains the playback position of content. Roku does not maintain bookmarks because content may be watched across multiple platforms (for example, web and Roku). This ensures that deep links from the Continue Watching row return the customer to the actual playback position.           |
-| **Update bookmark**                                                           | PUT request to Continue Watching API    | Once the publisher retrieves the current playback position from their backend system, the app makes a **PUT** request to update the Continue Watching row with that bookmark.                                                                                                                               |
-| **Add content to Continue Watching row when content playback starts**         | POST request to Continue Watching API   | The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />|
-| **Update content playback position when content playback ends**               | POST request to Continue Watching API   | Once the customer stops content playback, the app makes a **POST** request to update the Continue Watching row the current bookmark for that content.                                                                                                                                                       |
-| **Remove content from Continue Watching row when content has been completed** | DELETE request to Continue Watching API | The publisher controls what constitutes the completion of content (for example, end credits are shown). Once content has been completed, the app makes a DELETE request to remove the content from the Continue Watching row.                                                                               |
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Step
+      </th>
+
+      <th>
+        API
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **Retrieve bookmarks when app is launched**
+      </td>
+
+      <td>
+        Publisher backend system
+      </td>
+
+      <td>
+        The publisher maintains the playback position of content. Roku does not maintain bookmarks because content may be watched across multiple platforms (for example, web and Roku). This ensures that deep links from the Continue Watching row return the customer to the actual playback position.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Update bookmark**
+      </td>
+
+      <td>
+        PUT request to Continue Watching API
+      </td>
+
+      <td>
+        Once the publisher retrieves the current playback position from their backend system, the app makes a **PUT** request to update the Continue Watching row with that bookmark.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Add content to Continue Watching row when content playback starts**
+      </td>
+
+      <td>
+        POST request to Continue Watching API
+      </td>
+
+      <td>
+        The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />  
+
+        > During playback, do not make Continue Watching API calls to update the playback position. The main purpose of the Continue Watching user experience is to aggregate in-progress content and streamline resumption. The progress bar used to reflect the current bookmark in the Continue Watching row is an approximation. If the customer presses the Home button after the POST request has been sent, the content will still be listed in the Continue Watching row, which is the primary goal of the feature.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Update content playback position when content playback ends**
+      </td>
+
+      <td>
+        POST request to Continue Watching API
+      </td>
+
+      <td>
+        Once the customer stops content playback, the app makes a **POST** request to update the Continue Watching row the current bookmark for that content.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Remove content from Continue Watching row when content has been completed**
+      </td>
+
+      <td>
+        DELETE request to Continue Watching API
+      </td>
+
+      <td>
+        The publisher controls what constitutes the completion of content (for example, end credits are shown). Once content has been completed, the app makes a DELETE request to remove the content from the Continue Watching row.
+      </td>
+    </tr>
+  </tbody>
+</Table>

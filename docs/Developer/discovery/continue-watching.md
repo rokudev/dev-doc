@@ -35,3 +35,32 @@ Apps must have completed the following integrations to participate in Roku Conti
 1. [Roku Search](/docs/developer-program/discovery/search/implementing-search.md). Enables customers to find content on your app.
 2. [Deep linking](/docs/developer-program/discovery/implementing-deep-linking.md). Enables the requested content to be launched directly into playback on your app.
 3. [Bookmarking](/docs/developer-program/media-playback/bookmarking.md). Resumes playback of the requested content at its last watched position.
+
+## Getting started
+
+To get started with the Continue Watching integration, follow these steps:
+
+1. Verify that your app meets the listed [prerequisites](#prerequisites).
+
+
+
+2. Contact the [Roku Partner Success team](https://developer.roku.com/contact). They will determine whether your app is eligible for Continue Watching and enable your app to access the Continue Watching service endpoints.
+
+
+
+3. Request device tokens for testing the Continue Watching integration in a sideloaded environment. Provide Roku Partner Engineering with the serial numbers of the Roku devices to be used for testing during development. Upon receiving the device tokens, install them on their respective test devices by entering the following cURL command in a terminal application:
+
+   `curl --data-binary @<token-file> http://<Roku_IP>:8060/token/install`
+
+   The response from the terminal application should be as follows:
+
+```
+    <?xml version="1.0" encoding="UTF-8" ?>
+        <TokenCmdResponse>
+            <Command>Install</Command>
+            <Response>Success</Response>
+        </TokenCmdResponse>
+```
+
+4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) (channel_token=\token\). The **channel authentication token** will also be used in your production application.
+

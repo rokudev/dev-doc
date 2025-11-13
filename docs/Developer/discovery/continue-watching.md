@@ -119,7 +119,7 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
       </td>
 
       <td>
-        The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />  
+        The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />
 
         > During playback, do not make Continue Watching API calls to update the playback position. The main purpose of the Continue Watching user experience is to aggregate in-progress content and streamline resumption. The progress bar used to reflect the current bookmark in the Continue Watching row is an approximation. If the customer presses the Home button after the POST request has been sent, the content will still be listed in the Continue Watching row, which is the primary goal of the feature.
       </td>
@@ -154,3 +154,17 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
     </tr>
   </tbody>
 </Table>
+
+### API Reference
+
+The following table summarizes the basic information for the Continue Watching RESTful web services:
+
+| Item         | Description                                                  |
+| :----------- | :----------------------------------------------------------- |
+| **Endpoint** | The base URLs for the Continue Watching APIs are as follows:<br /> |
+| **Protocol** | Continue Watching API calls may only be sent using HTTPS.    |
+| **Methods**  | The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:<br /> |
+| **Header**   | Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values) |
+| **Response** | The Continue Watching APIs return one of the following response codes:<br />|
+
+

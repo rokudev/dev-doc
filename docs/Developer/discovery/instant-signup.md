@@ -82,6 +82,14 @@ Apps must complete the following steps (in addition to completing the [prerequis
 
 ### Implementing images API
 
+Apps must implement an API that retrieves the images and description of the app to be displayed to customers. The following table lists the requirements for implementing the Images API:
+
+<HTMLBlock>{`
+<p> whattup dog </p>
+`}</HTMLBlock>
+
+<br />
+
 #### Image specifications
 
 The images used for the app must meet the requirements for width, height, minimum resolution, and format.
@@ -127,7 +135,7 @@ The posters/artwork with the content or networks featured in the app are used to
       </td>
 
       <td>
-        4:3   
+        4:3
 
         * **Content-oriented apps** (apps that promote movies, TV shows, music, and other content): A minimum of 10 posters must be included with an offer.
         * **vMVPD apps** (apps that promote multiple networks/channels): A minimum of 5 artwork images must be included with an offer.

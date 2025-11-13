@@ -85,7 +85,15 @@ Apps must complete the following steps (in addition to completing the [prerequis
 Apps must implement an API that retrieves the images and description of the app to be displayed to customers. The following table lists the requirements for implementing the Images API:
 
 <HTMLBlock>{`
-<p> whattup dog </p>
+<td><strong>Response</strong></td>
+<td>The API returns the following:<br/><br/>- An <strong>images</strong> array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the <a href="#channel-image-specifications">Image specifications</a>.<br/><br/>- A <strong>description</strong> string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br/><br/><strong>Syntax</strong>:<br/><strong>Example</strong>: </td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 `}</HTMLBlock>
 
 <br />

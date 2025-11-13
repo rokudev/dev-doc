@@ -5,18 +5,17 @@ hidden: false
 metadata:
   robots: index
 ---
-
 # Continue Watching
 
 Continue Watching is a content category row within the **What to Watch** home screen navigation on Roku devices and on the Home screen of the Roku mobile app. It displays content from participating apps that customers have already started watching, which empowers customers with the speed and convenience of a single location from which they can resume content from different apps on any Roku device linked to their account. Publishers can integrate into this feature to make their content more accessible to customers, drive users to their apps, and increase engagement. Overall, this helps publishers promote their content in order to retain customers and reduce churn.
 
-![roku815px - continue watching row](https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png)
+<Image alt="roku815px - continue watching row" border={false} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png" />
 
 > The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
-
+>
 > Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](/docs/developer-program/certification/certification.md#4-channel-operation). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
-
-> Continue Watching only supports long-form content such as movies and television episodes. Short-form content (standalone content that is 15 minutes or less that is not a movie or TV show) is not supported.  
+>
+> Continue Watching only supports long-form content such as movies and television episodes. Short-form content (standalone content that is 15 minutes or less that is not a movie or TV show) is not supported.
 
 ## Overview
 
@@ -42,11 +41,7 @@ To get started with the Continue Watching integration, follow these steps:
 
 1. Verify that your app meets the listed [prerequisites](#prerequisites).
 
-
-
 2. Contact the [Roku Partner Success team](https://developer.roku.com/contact). They will determine whether your app is eligible for Continue Watching and enable your app to access the Continue Watching service endpoints.
-
-
 
 3. Request device tokens for testing the Continue Watching integration in a sideloaded environment. Provide Roku Partner Engineering with the serial numbers of the Roku devices to be used for testing during development. Upon receiving the device tokens, install them on their respective test devices by entering the following cURL command in a terminal application:
 
@@ -62,11 +57,16 @@ To get started with the Continue Watching integration, follow these steps:
         </TokenCmdResponse>
 ```
 
-4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) (channel_token=\token\). The **channel authentication token** will also be used in your production application.
+4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) (channel_token=\token). The **channel authentication token** will also be used in your production application.
 
 ## Integrating into Continue Watching
 
 Integrating into Continue Watching entails calling the Roku Continue Watching APIs when a playback event occurs. Playback events occur when the customer exits the video player or finishes watching content. Sending events identifies which content the customers can keep watching and where to resume playback. Publishers can use the Roku Continue Watching APIs to add, update, and remove content items. The workflow is illustrated and summarized as follows:
 
-![roku815px - cw-api-flow](https://image.roku.com/ZHZscHItMTc2/continue-watching-api-flow-v1.jpeg)
-
+| Step                                                                          | API                                     | Description                                                                                                                                                                                                                                                                                                 |
+| :---------------------------------------------------------------------------- | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Retrieve bookmarks when app is launched**                                   | Publisher backend system                | The publisher maintains the playback position of content. Roku does not maintain bookmarks because content may be watched across multiple platforms (for example, web and Roku). This ensures that deep links from the Continue Watching row return the customer to the actual playback position.           |
+| **Update bookmark**                                                           | PUT request to Continue Watching API    | Once the publisher retrieves the current playback position from their backend system, the app makes a **PUT** request to update the Continue Watching row with that bookmark.                                                                                                                               |
+| **Add content to Continue Watching row when content playback starts**         | POST request to Continue Watching API   | The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />|
+| **Update content playback position when content playback ends**               | POST request to Continue Watching API   | Once the customer stops content playback, the app makes a **POST** request to update the Continue Watching row the current bookmark for that content.                                                                                                                                                       |
+| **Remove content from Continue Watching row when content has been completed** | DELETE request to Continue Watching API | The publisher controls what constitutes the completion of content (for example, end credits are shown). Once content has been completed, the app makes a DELETE request to remove the content from the Continue Watching row.                                                                               |

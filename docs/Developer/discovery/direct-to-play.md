@@ -1,3 +1,11 @@
+---
+title: Direct to Play
+deprecated: false
+hidden: false
+metadata:
+  robots: index
+---
+
 # Direct to Play
 
 Apps participating in [Roku Search](/docs/developer-program/discovery/search/implementing-search.md) can further enhance their user experience and increase engagement by implementing Direct to Play. This feature allows customers to take advantage of the convenience and speed of voice commands to find and start watching content faster.

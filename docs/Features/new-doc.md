@@ -5,4 +5,4 @@ hidden: false
 metadata:
   robots: index
 ---
-Content
+This is test content

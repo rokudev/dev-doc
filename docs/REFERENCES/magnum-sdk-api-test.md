@@ -5,8 +5,3 @@ hidden: false
 metadata:
   robots: index
 ---
-<HTMLBlock>{`
-
-`}</HTMLBlock>
-
-<br />

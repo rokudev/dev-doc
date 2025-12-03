@@ -9,6 +9,8 @@ metadata:
 
 Continue Watching is a content category row within the **What to Watch** home screen navigation on Roku devices and on the Home screen of the Roku mobile app. It displays content from participating apps that customers have already started watching, which empowers customers with the speed and convenience of a single location from which they can resume content from different apps on any Roku device linked to their account. Publishers can integrate into this feature to make their content more accessible to customers, drive users to their apps, and increase engagement. Overall, this helps publishers promote their content in order to retain customers and reduce churn.
 
+> Here's a test bi-directioanl note for testing purposed.
+
 <Image alt="roku815px - continue watching row" border={false} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png" />
 
 > The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
@@ -119,7 +121,7 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
       </td>
 
       <td>
-        The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />  
+        The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />
 
         > During playback, do not make Continue Watching API calls to update the playback position. The main purpose of the Continue Watching user experience is to aggregate in-progress content and streamline resumption. The progress bar used to reflect the current bookmark in the Continue Watching row is an approximation. If the customer presses the Home button after the POST request has been sent, the content will still be listed in the Continue Watching row, which is the primary goal of the feature.
       </td>
@@ -159,10 +161,10 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
 
 The following table summarizes the basic information for the Continue Watching RESTful web services:
 
-| Item         | Description                                                  |
-| :----------- | :----------------------------------------------------------- |
-| **Endpoint** | The base URLs for the Continue Watching APIs are as follows:<br />`{endpoints-list}` `${profile-bq}` |
-| **Protocol** | Continue Watching API calls may only be sent using HTTPS.    |
-| **Methods**  | The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:<br />`${rest-methods-list}` |
+| Item         | Description                                                                                                                                                                                            |
+| :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Endpoint** | The base URLs for the Continue Watching APIs are as follows:<br />`{endpoints-list}` `${profile-bq}`                                                                                                   |
+| **Protocol** | Continue Watching API calls may only be sent using HTTPS.                                                                                                                                              |
+| **Methods**  | The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:<br />`${rest-methods-list}`                                                |
 | **Header**   | Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):`${header-list}``${bl-appendix-a-header-example-note}` |
-| **Response** | The Continue Watching APIs return one of the following response codes:<br />`${response-codes-list}` |
+| **Response** | The Continue Watching APIs return one of the following response codes:<br />`${response-codes-list}`                                                                                                   |

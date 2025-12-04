@@ -18,8 +18,6 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 <br />
 
-/co
-
 <Table align={["left","left"]}>
   <thead>
     <tr>
@@ -54,21 +52,11 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
           header="Simple Table"
           columns={['Name', 'Age', 'Desc']}
           data={[
-                    { Name: 'Alice', Age: 25, Desc: 'USA' },
-                    { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
-                    { Name: 'Charlie', Age: 28, Desc: 'Canada' }
-                  ]}
-        /><br /><br />
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-
-      </td>
-
-      <td>
-
+                            { Name: 'Alice', Age: 25, Desc: 'USA' },
+                            { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
+                            { Name: 'Charlie', Age: 28, Desc: 'Canada' }
+                          ]}
+        />
       </td>
     </tr>
   </tbody>

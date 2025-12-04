@@ -211,11 +211,20 @@ The following table summarizes the basic information for the Continue Watching R
       </td>
 
       <td>
-        Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):  
+        Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):
 
-        * 1
-        * 2
-        * 3
+   <table>
+  <tr>
+    <td>Cell 1</td>
+    <td>Cell2</td>
+  </tr>
+
+  <tr>
+    <td>Cell 1</td>
+    <td><table><tr><td>Cell 1</td><td>Cell2</td></tr></table></td>
+  </tr>
+</table>
+
       </td>
     </tr>
 

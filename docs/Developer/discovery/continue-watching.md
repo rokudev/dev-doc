@@ -161,7 +161,7 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
 
 The following table summarizes the basic information for the Continue Watching RESTful web services:
 
-<Table align={["left","left","left","left","left","left","left","left"]}>
+<Table align={["left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -170,6 +170,38 @@ The following table summarizes the basic information for the Continue Watching R
 
       <th>
         Description
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
       </th>
 
       <th>
@@ -231,6 +263,38 @@ The following table summarizes the basic information for the Continue Watching R
       <td>
 
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -240,6 +304,38 @@ The following table summarizes the basic information for the Continue Watching R
 
       <td>
         Continue Watching API calls may only be sent using HTTPS.
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
 
       <td>
@@ -299,6 +395,38 @@ The following table summarizes the basic information for the Continue Watching R
       <td>
 
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -323,6 +451,30 @@ The following table summarizes the basic information for the Continue Watching R
       </td>
 
       <td>
+        Cell 3
+      </td>
+
+      <td>
+        Cell 5
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        <table><tr><td>Cell 1</td><td>Cell2</td></tr></table>
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
         Cell 1
       </td>
 
@@ -345,15 +497,55 @@ The following table summarizes the basic information for the Continue Watching R
       <td>
         Cell2
       </td>
-    </tr>
 
-    <tr>
       <td>
         Cell 1
       </td>
 
       <td>
         Cell2
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 3
+      </td>
+
+      <td>
+        Cell 4
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
 
       <td>
@@ -413,6 +605,38 @@ The following table summarizes the basic information for the Continue Watching R
       <td>
 
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -422,6 +646,368 @@ The following table summarizes the basic information for the Continue Watching R
 
       <td>
         Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        <table><tr><td>Cell 1</td><td>Cell2</td></tr></table>
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
 
       <td>
@@ -456,6 +1042,38 @@ The following table summarizes the basic information for the Continue Watching R
 
       <td>
         The Continue Watching APIs return one of the following response codes:<br />`${response-codes-list}`
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
 
       <td>

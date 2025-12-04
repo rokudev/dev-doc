@@ -18,14 +18,50 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 <br />
 
-<Table align={["left","left"]}>
+<Table align={["left","left","left","left","left","left","left","left","left","left","left"]}>
   <thead>
     <tr>
-      <th>
+      <th style={{ textAlign: "left" }}>
 
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
 
       </th>
     </tr>
@@ -33,58 +69,286 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
   <tbody>
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         Table Row
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         OJ is innocent.
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         Nested table
       </td>
 
-      <td>
-        <table>
-          <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-          </tr>
+      <td style={{ textAlign: "left" }}>
 
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-          </tr>
+      </td>
 
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-        </table>
+      <td style={{ textAlign: "left" }}>
+        Company
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Contact
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Country
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Alfreds Futterkiste
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Maria Anders
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Germany
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Centro comercial Moctezuma
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Francisco Chang
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Mexico
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
+        Company
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Contact
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Country
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Alfreds Futterkiste
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Maria Anders
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Germany
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Centro comercial Moctezuma
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Francisco Chang
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Mexico
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
         Nested table
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         <ComplexTable
           header="Simple Table"
           columns={['Name', 'Age', 'Desc']}
           data={[
-                                    { Name: 'Alice', Age: 25, Desc: 'USA' },
-                                    { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
-                                    { Name: 'Charlie', Age: 28, Desc: 'Canada' }
-                                  ]}
+                                            { Name: 'Alice', Age: 25, Desc: 'USA' },
+                                            { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
+                                            { Name: 'Charlie', Age: 28, Desc: 'Canada' }
+                                          ]}
         />
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
     </tr>
   </tbody>

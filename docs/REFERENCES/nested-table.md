@@ -16,16 +16,9 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 > Do not send kids profile data to Roku when calling these endpoints.
 
-<table>
-  <tr>
-    <td>Cell 1</td>
-    <td>Cell2</td>
-  </tr>
-
-  <tr>
-    <td>Cell 1</td>
-    <td><table><tr><td>Cell 2</td><td>Cell4</td></tr></table></td>
-  </tr>
-</table>
+|    |    |    |
+| :- | :- | :- |
+|    |    |    |
+|    |    |    |
 
 ## Words are very unneccessary

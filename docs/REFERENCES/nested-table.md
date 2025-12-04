@@ -14,7 +14,6 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 [https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)
 [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (use this endpoint if your app has a profile selection screen and the content being passed is specific to the provided profileId (the unique user ID [UUID] of the user profile). The profileId is passed back to the app in a deep link request from the Continue Watching feature.
 
-
 > Do not send kids profile data to Roku when calling these endpoints.
 
 <table>
@@ -28,3 +27,5 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
     <td><table><tr><td>Cell 1</td><td>Cell2</td></tr></table></td>
   </tr>
 </table>
+
+## Words are very unneccessary

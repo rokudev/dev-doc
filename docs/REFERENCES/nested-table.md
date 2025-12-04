@@ -12,6 +12,6 @@ metadata:
   </tr>
   <tr>
     <td>Cell 1</td>
-    <td>Cell2</td>
+    <td><table><tr><td>Cell 1</td><td>Cell2</td></tr></table></td>
   </tr>
 </table>

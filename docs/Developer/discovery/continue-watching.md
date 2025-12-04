@@ -161,7 +161,7 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
 
 The following table summarizes the basic information for the Continue Watching RESTful web services:
 
-<Table align={["left","left"]}>
+<Table align={["left","left","left","left","left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -170,6 +170,30 @@ The following table summarizes the basic information for the Continue Watching R
 
       <th>
         Description
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
       </th>
     </tr>
   </thead>
@@ -183,6 +207,30 @@ The following table summarizes the basic information for the Continue Watching R
       <td>
         The base URLs for the Continue Watching APIs are as follows:<br />`{endpoints-list}` `${profile-bq}`
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -192,6 +240,30 @@ The following table summarizes the basic information for the Continue Watching R
 
       <td>
         Continue Watching API calls may only be sent using HTTPS.
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
 
@@ -203,6 +275,30 @@ The following table summarizes the basic information for the Continue Watching R
       <td>
         The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:<br />`${rest-methods-list}`
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -213,17 +309,142 @@ The following table summarizes the basic information for the Continue Watching R
       <td>
         Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):
 
-   <table>
-  <tr>
-    <td>Cell 1</td>
-    <td>Cell2</td>
-  </tr>
+        <table>
+          <tr>
+            <td>Cell 3</td>
+            <td>Cell 4</td>
+          </tr>
 
-  <tr>
-    <td>Cell 1</td>
-    <td><table><tr><td>Cell 1</td><td>Cell2</td></tr></table></td>
-  </tr>
-</table>
+          <tr>
+            <td>Cell 1</td>
+            <td><table><tr><td>Cell 1</td><td>Cell2</td></tr></table></td>
+          </tr>
+        </table>
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        <table><tr><td>Cell 1</td><td>Cell2</td></tr></table>
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        <table><tr><td>Cell 1</td><td>Cell2</td></tr></table>
+      </td>
+
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cell 1
+      </td>
+
+      <td>
+        Cell2
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
 
       </td>
     </tr>
@@ -235,6 +456,30 @@ The following table summarizes the basic information for the Continue Watching R
 
       <td>
         The Continue Watching APIs return one of the following response codes:<br />`${response-codes-list}`
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
   </tbody>

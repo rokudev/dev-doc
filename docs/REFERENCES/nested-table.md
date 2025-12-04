@@ -16,6 +16,10 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 > Do not send kids profile data to Roku when calling these endpoints.
 
+<br />
+
+/co
+
 <Table align={["left","left"]}>
   <thead>
     <tr>
@@ -46,12 +50,15 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
       </td>
 
       <td>
-        // To use this in your page, copy the next line and paste into the page and customize the table columns and data.
-        <ComplexTable header="Simple Table" columns={['Name', 'Age', 'Desc']} data={[
-            { Name: 'Alice', Age: 25, Desc: 'USA' },
-            { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
-            { Name: 'Charlie', Age: 28, Desc: 'Canada' }
-          ]} />
+        <ComplexTable
+          header="Simple Table"
+          columns={['Name', 'Age', 'Desc']}
+          data={[
+                    { Name: 'Alice', Age: 25, Desc: 'USA' },
+                    { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
+                    { Name: 'Charlie', Age: 28, Desc: 'Canada' }
+                  ]}
+        /><br /><br />
       </td>
     </tr>
 

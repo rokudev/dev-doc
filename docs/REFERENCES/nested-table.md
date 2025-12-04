@@ -20,70 +20,9 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 ## Words are very unnecessary
 
-<Table align={["left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-
-      </th>
-
-      <th>
-
-      </th>
-
-      <th>
-
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-
-      </td>
-
-      <td>
-        <table>
-          <tr>
-            <th>Company</th>
-            <th>Contact</th>
-            <th>Country</th>
-          </tr>
-
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-          </tr>
-
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-        </table>
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-
-      </td>
-
-      <td>
-
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-  </tbody>
-</Table>
+|    |                                                                          |    |
+| :- | :----------------------------------------------------------------------- | :- |
+|    | <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr></table> |    |
+|    |                                                                          |    |
 
 <br />

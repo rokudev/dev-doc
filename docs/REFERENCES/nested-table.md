@@ -162,144 +162,6 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
     <tr>
       <td style={{ textAlign: "left" }}>
-        Company
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Contact
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Country
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        Alfreds Futterkiste
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Maria Anders
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Germany
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        Centro comercial Moctezuma
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Francisco Chang
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Mexico
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "left" }}>
         Nested table
       </td>
 
@@ -308,10 +170,10 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
           header="Simple Table"
           columns={['Name', 'Age', 'Desc']}
           data={[
-                                            { Name: 'Alice', Age: 25, Desc: 'USA' },
-                                            { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
-                                            { Name: 'Charlie', Age: 28, Desc: 'Canada' }
-                                          ]}
+                                                    { Name: 'Alice', Age: 25, Desc: 'USA' },
+                                                    { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
+                                                    { Name: 'Charlie', Age: 28, Desc: 'Canada' }
+                                                  ]}
         />
       </td>
 

@@ -116,12 +116,9 @@ The following table summarizes the basic information for the Continue Watching R
       </td>
 
       <td>
-        The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:
+        The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:   
 
-        * **POST**. Add one or more new content items; update existing items.
-        * **GET**. Retrieve the existing list of content items.
-        * **PUT**. Replace the entire existing list of content items. When making this request, include all the content that should remain in the Continue Watching row (for example, a PUT request with a single item replaces the current list with that one item). Passing an empty body removes all content from the list.
-        * **DELETE**. Remove one or more content items.
+        1. **POST**. Add one or more new content items; update existing items.**GET**. Retrieve the existing list of content items.**PUT**. Replace the entire existing list of content items. When making this request, include all the content that should remain in the Continue Watching row (for example, a PUT request with a single item replaces the current list with that one item). Passing an empty body removes all content from the list.**DELETE**. Remove one or more content items.
       </td>
     </tr>
 
@@ -131,49 +128,7 @@ The following table summarizes the basic information for the Continue Watching R
       </td>
 
       <td>
-        Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):  
-
-        <br />
-
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-</table>
-
-        **Content-Type:** application/json**x-roku-reserved-jwt**: ""**x-roku-reserved-channel-id**: "" (the production app ID is required to sideload and test the app during development because it is linked to the search feed. In production, the Roku OS will override this value, which means you can continue passing it after development has been completed).**x-roku-reserved-channel-store-code**: ""**x-roku-reserved-virtual-user-id**: ""**x-roku-reserved-device-id**: ""**x-roku-reserved-serial-number**: ""See 
+        Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):**Content-Type:** application/json**x-roku-reserved-jwt**: ""**x-roku-reserved-channel-id**: "" (the production app ID is required to sideload and test the app during development because it is linked to the search feed. In production, the Roku OS will override this value, which means you can continue passing it after development has been completed).**x-roku-reserved-channel-store-code**: ""**x-roku-reserved-virtual-user-id**: ""**x-roku-reserved-device-id**: ""**x-roku-reserved-serial-number**: ""See [Appendix A](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md#appendix-a-sample-brightscript-code-for-adding-http-headers) for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](https://developer.roku.com/docs/references/brightscript/interfaces/ifhttpagent.md#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.
       </td>
     </tr>
 

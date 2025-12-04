@@ -23,6 +23,6 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 |             |                                                                                          |    |
 | :---------- | :--------------------------------------------------------------------------------------- | :- |
 | Table row 1 | <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><td>word up</td></table> |    |
-| Table row 2 |                                                                                          |    |
+| Table row 2 | <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><td>word up</td></table> |    |
 
 <br />

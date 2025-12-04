@@ -151,7 +151,69 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
       </td>
 
       <td>
-        The publisher controls what constitutes the completion of content (for example, end credits are shown). Once content has been completed, the app makes a DELETE request to remove the content from the Continue Watching row.
+        The publisher controls what constitutes the completion of content (for example, end credits are shown). Once content has been completed, the app makes a DELETE request to remove the content from the Continue Watching row.  
+
+        <table>
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>episodeId value</th>
+              <th>waitForNextEpisodeAvailability flag</th>
+              <th>Episode shown in Continue Watching row</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Start E1</td>
+              <td>E1</td>
+              <td>false</td>
+              <td>E1</td>
+            </tr>
+
+            <tr>
+              <td>Complete E1</td>
+              <td>E1</td>
+              <td>true</td>
+              <td>E2</td>
+            </tr>
+
+            <tr>
+              <td>Start E2</td>
+              <td>E2</td>
+              <td>false</td>
+              <td>E2</td>
+            </tr>
+
+            <tr>
+              <td>Complete E2</td>
+              <td>E2</td>
+              <td>true</td>
+              <td>none</td>
+            </tr>
+
+            <tr>
+              <td>E3 becomes available later</td>
+              <td>-</td>
+              <td>-</td>
+              <td>E3</td>
+            </tr>
+
+            <tr>
+              <td>Start E3</td>
+              <td>E3</td>
+              <td>false</td>
+              <td>E3</td>
+            </tr>
+
+            <tr>
+              <td>Complete E3</td>
+              <td>E3</td>
+              <td>true</td>
+              <td>none</td>
+            </tr>
+          </tbody>
+        </table>
       </td>
     </tr>
   </tbody>

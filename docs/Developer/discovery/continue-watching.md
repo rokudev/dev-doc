@@ -161,10 +161,72 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
 
 The following table summarizes the basic information for the Continue Watching RESTful web services:
 
-| Item         | Description                                                                                                                                                                                            |
-| :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Endpoint** | The base URLs for the Continue Watching APIs are as follows:<br />`{endpoints-list}` `${profile-bq}`                                                                                                   |
-| **Protocol** | Continue Watching API calls may only be sent using HTTPS.                                                                                                                                              |
-| **Methods**  | The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:<br />`${rest-methods-list}`                                                |
-| **Header**   | Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):`${header-list}``${bl-appendix-a-header-example-note}` |
-| **Response** | The Continue Watching APIs return one of the following response codes:<br />`${response-codes-list}`                                                                                                   |
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Item
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **Endpoint**
+      </td>
+
+      <td>
+        The base URLs for the Continue Watching APIs are as follows:<br />`{endpoints-list}` `${profile-bq}`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Protocol**
+      </td>
+
+      <td>
+        Continue Watching API calls may only be sent using HTTPS.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Methods**
+      </td>
+
+      <td>
+        The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:<br />`${rest-methods-list}`
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Header**
+      </td>
+
+      <td>
+        Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):  
+
+        * 1
+        * 2
+        * 3
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Response**
+      </td>
+
+      <td>
+        The Continue Watching APIs return one of the following response codes:<br />`${response-codes-list}`
+      </td>
+    </tr>
+  </tbody>
+</Table>

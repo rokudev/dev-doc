@@ -16,10 +16,55 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 > Do not send kids profile data to Roku when calling these endpoints.
 
-|              |                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Table Row    | OJ is innocent.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Nested table | <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><tr><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Germany</td></tr><tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><tr><td>Alfreds Futterkiste</td><td>Maria Anders</td><td>Germany</td></tr><tr><td>Centro comercial Moctezuma</td><td>Francisco Chang</td><td>Mexico</td></tr></table></tr></table> |
-|              |                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Table Row
+      </td>
+
+      <td>
+        OJ is innocent.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Nested table
+      </td>
+
+      <td>
+        // To use this in your page, copy the next line and paste into the page and customize the table columns and data.
+        <ComplexTable header="Simple Table" columns={['Name', 'Age', 'Desc']} data={[
+            { Name: 'Alice', Age: 25, Desc: 'USA' },
+            { Name: 'Bob', Age: 30, Desc: ['one', 'Two', 'Three'] },
+            { Name: 'Charlie', Age: 28, Desc: 'Canada' }
+          ]} />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Words are very unneccessary

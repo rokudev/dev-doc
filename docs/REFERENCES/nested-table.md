@@ -24,7 +24,7 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
   <tr>
     <td>Cell 1</td>
-    <td><table><tr><td>Cell 1</td><td>Cell2</td></tr></table></td>
+    <td><table><tr><td>Cell 2</td><td>Cell4</td></tr></table></td>
   </tr>
 </table>
 

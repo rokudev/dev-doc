@@ -8,5 +8,5 @@ metadata:
 <table>
   <tr>
     <td>Cell</td>
-    </tr>
+  </tr>
 </table>

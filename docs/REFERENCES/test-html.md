@@ -76,13 +76,73 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
 
 The following table summarizes the basic information for the Continue Watching RESTful web services:
 
-| Item         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Endpoint** | The base URLs for the Continue Watching APIs are as follows: [https://userdata.sr.roku.com/user-data/v1/content/continueWatchinghttps://userdata.sr.roku.com/user-data/v1/profile/**profileId**}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatchinghttps://userdata.sr.roku.com/user-data/v1/profile/\{**profileId**}/content/continueWatching) (use this endpoint if your app has a profile selection screen and the content being passed is specific to the provided **profileId** (the unique user ID [UUID] of the user profile). The **profileId** is passed back to the app in a deep link request from the Continue Watching feature.Do not send kids profile data to Roku when calling these endpoints.                                                                                                                                                                                                                                                                                                                                                                        |
-| **Protocol** | Continue Watching API calls may only be sent using HTTPS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Methods**  | The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items: **POST**. Add one or more new content items; update existing items.**GET**. Retrieve the existing list of content items.**PUT**. Replace the entire existing list of content items. When making this request, include all the content that should remain in the Continue Watching row (for example, a PUT request with a single item replaces the current list with that one item). Passing an empty body removes all content from the list.**DELETE**. Remove one or more content items.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Header**   | Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):**Content-Type:** application/json**x-roku-reserved-jwt**: ""**x-roku-reserved-channel-id**: "" (the production app ID is required to sideload and test the app during development because it is linked to the search feed. In production, the Roku OS will override this value, which means you can continue passing it after development has been completed).**x-roku-reserved-channel-store-code**: ""**x-roku-reserved-virtual-user-id**: ""**x-roku-reserved-device-id**: ""**x-roku-reserved-serial-number**: ""See [Appendix A](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md#appendix-a-sample-brightscript-code-for-adding-http-headers) for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](https://developer.roku.com/docs/references/brightscript/interfaces/ifhttpagent.md#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers. |
-| **Response** | The Continue Watching APIs return one of the following response codes: **200**: OK**204**: No content (DELETE requests only)**400**: Bad request (required fields are missing from the payload; a description of the error is returned)**401**: Unauthorized (DELETE requests only)**403**: Forbidden (if an invalid partner)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Item
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **Endpoint**
+      </td>
+
+      <td>
+        The base URLs for the Continue Watching APIs are as follows: [https://userdata.sr.roku.com/user-data/v1/content/continueWatchinghttps://userdata.sr.roku.com/user-data/v1/profile/**profileId**}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatchinghttps://userdata.sr.roku.com/user-data/v1/profile/\{**profileId**}/content/continueWatching) (use this endpoint if your app has a profile selection screen and the content being passed is specific to the provided **profileId** (the unique user ID [UUID] of the user profile). The **profileId** is passed back to the app in a deep link request from the Continue Watching feature.Do not send kids profile data to Roku when calling these endpoints.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Protocol**
+      </td>
+
+      <td>
+        Continue Watching API calls may only be sent using HTTPS.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Methods**
+      </td>
+
+      <td>
+        The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:   
+
+        1. **POST**. Add one or more new content items; update existing items.**GET**. Retrieve the existing list of content items.**PUT**. Replace the entire existing list of content items. When making this request, include all the content that should remain in the Continue Watching row (for example, a PUT request with a single item replaces the current list with that one item). Passing an empty body removes all content from the list.**DELETE**. Remove one or more content items.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Header**
+      </td>
+
+      <td>
+        Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):**Content-Type:** application/json**x-roku-reserved-jwt**: ""**x-roku-reserved-channel-id**: "" (the production app ID is required to sideload and test the app during development because it is linked to the search feed. In production, the Roku OS will override this value, which means you can continue passing it after development has been completed).**x-roku-reserved-channel-store-code**: ""**x-roku-reserved-virtual-user-id**: ""**x-roku-reserved-device-id**: ""**x-roku-reserved-serial-number**: ""See [Appendix A](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md#appendix-a-sample-brightscript-code-for-adding-http-headers) for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](https://developer.roku.com/docs/references/brightscript/interfaces/ifhttpagent.md#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Response**
+      </td>
+
+      <td>
+        The Continue Watching APIs return one of the following response codes: **200**: OK**204**: No content (DELETE requests only)**400**: Bad request (required fields are missing from the payload; a description of the error is returned)**401**: Unauthorized (DELETE requests only)**403**: Forbidden (if an invalid partner)
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Add API
 
@@ -142,12 +202,12 @@ To add new content items and update existing ones to the Continue Watching row, 
       </td>
 
       <td>
-        If the content is a TV episode that is part of a series, pass the following:   
+        If the content is a TV episode that is part of a series, pass the following:
 
         * contentId: Pass the **seriesId** in this field. This should be the same as the seriesId in the app's Roku Search feed.
-        * episodeId: Pass the **episodeId** in this field. This should be the same as the "playId" in the app's Roku Search Feed, or "contentId" in externalID implementations.   
+        * episodeId: Pass the **episodeId** in this field. This should be the same as the "playId" in the app's Roku Search Feed, or "contentId" in externalID implementations.
 
-          This enables Roku to enhance the UX presentation of the series resume point.    
+          This enables Roku to enhance the UX presentation of the series resume point.
 
           If the **waitForNextEpisodeAvailability** field is set to true, the series will only be shown in the Continue Watching row after the subsequent episode is available in the app's search feed.
       </td>
@@ -167,11 +227,11 @@ To add new content items and update existing ones to the Continue Watching row, 
       </td>
 
       <td>
-        This field is used for episodic content.   
+        This field is used for episodic content.
 
-        Set it to **true** when an episode has been completed and the next episode has not been released yet; otherwise, set it to **false**.    
+        Set it to **true** when an episode has been completed and the next episode has not been released yet; otherwise, set it to **false**.
 
-        Roku can use this information to show the content in the Continue Watching row whenever the next episode becomes available. This feature requires a [search feed](https://developer.roku.com/docs/specs/search/search-feed.md)  that lists "serial" and "episode" assets.    
+        Roku can use this information to show the content in the Continue Watching row whenever the next episode becomes available. This feature requires a [search feed](https://developer.roku.com/docs/specs/search/search-feed.md)  that lists "serial" and "episode" assets.
 
         <br />
       </td>
@@ -227,7 +287,7 @@ To add new content items and update existing ones to the Continue Watching row, 
       </td>
 
       <td>
-        The timestamp of the content item (in seconds) when the playback event occurred.    
+        The timestamp of the content item (in seconds) when the playback event occurred.
 
         Providing the **position** and **duration** enables a progress bar that approximates the playback position to be displayed on the content thumbnail in the Continue Watching row (as long as playback has started, but not completed).
       </td>

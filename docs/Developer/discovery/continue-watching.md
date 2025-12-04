@@ -10,7 +10,6 @@ metadata:
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Continue Watching Documentation</title>
     <style>
         body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; }
         h1, h2, h3, h4 { color: #2c3e50; }

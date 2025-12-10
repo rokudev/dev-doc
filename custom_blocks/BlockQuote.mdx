@@ -15,15 +15,13 @@ export const BlockQuote = ({ children, className = "", textAlign = "left", verti
             bottom: "items-end",
         },
     };
-    return (<div className={`bg-yellow-50 dark:bg-yellow-900 px-6 py-4 flex ${alignmentClasses.vertical[verticalAlign]} ${className}`}>
-      <p className={`text-yellow-900 dark:text-yellow-50 text-sm m-0 ${alignmentClasses.text[textAlign]}`}>
+    return (<div className={`bg-yellow-50 dark:bg-yellow-900 p-5 flex ${alignmentClasses.vertical[verticalAlign]} ${className}`}>
         {children}
-      </p>
     </div>);
 };
 
 
 {/* Example Usage */}
 <BlockQuote>
-  ArrayGrid is not meant to be instantiated directly by app code
+  <div>ArrayGrid is not meant to be instantiated directly by app code</div>
 </BlockQuote>

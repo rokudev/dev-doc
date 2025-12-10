@@ -10,11 +10,11 @@ metadata:
 next:
   description: ''
 ---
-Roku is an open streaming platform that is revolutionizing how consumers watch video content. Roku is at the forefront of the streaming age, having pioneered video streaming in the United States and rapidly expanding its reach across the globe. Roku produces award-winning [streaming players and soundbars](https://www.roku.com/products/players) , and has developed what is now the #1 selling smart TV streaming OS in the US, Canada, and Mexico \[^1].
+Roku is an open streaming platform that is revolutionizing how consumers watch video content. Roku is at the forefront of the streaming age, having pioneered video streaming in the United States and rapidly expanding its reach across the globe. Roku produces award-winning [streaming players and soundbars](https://www.roku.com/products/players) , and has developed what is now the #1 selling smart TV streaming OS in the US, Canada, and Mexico [^1].
 
 <br />
 
-The Roku OS is built specifically for streaming, which means publishers can seamlessly develop intuitive, high-performance apps designed especially for the TV. With Roku's audience of over 85.5 million streaming households, which is bigger than the subscribers of the six largest traditional pay-TV providers combined ([Leichtman Research Group, Nov 2023](https://leichtmanresearch.com/major-pay-tv-providers-lost-about-465000-subscribers-in-3q-2023/) ), and 32 billion hours watched last quarter, publishers can distribute their apps around the globe to expand their reach and monetize their content.
+The Roku OS is built specifically for streaming, which means publishers can seamlessly develop intuitive, high-performance apps designed especially for the TV. With Roku's audience of over 85.5 million streaming households, which is bigger than the subscribers of the six largest traditional pay-TV providers combined ([Leichtman Research Group, Nov 2023](https://leichtmanresearch.com/major-pay-tv-providers-lost-about-465000-subscribers-in-3q-2023/) ), and 32 billion hours watched last quarter, publishers can distribute their apps around the globe to expand their reach and monetize their <sup>1</sup>content.
 
 <br />
 
@@ -74,7 +74,7 @@ In this section, you'll find:
 
 <br />
 
-* [Legal](/docs/features/legal/compliance.md)  — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.\
+* [Legal](/docs/features/legal/compliance.md)  — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.  
   To learn more about how Roku apps work, [read on](/docs/features/how-channels-work.md) !
 
 <br />

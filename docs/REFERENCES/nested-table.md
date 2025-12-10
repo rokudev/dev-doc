@@ -30,21 +30,39 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
   <thead>
     <tr>
       <th>
-
+        head1
       </th>
 
       <th>
-
+        head2
       </th>
 
       <th>
-
+        head3
       </th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
+      <td>
+        row 1
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        rwo 2
+      </td>
+
       <td>
 
       </td>
@@ -63,24 +81,6 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
             { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
           ]}
         />
-      </td>
-
-      <td>
-
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-
-      </td>
-
-      <td>
-
-      </td>
-
-      <td>
-
       </td>
     </tr>
   </tbody>

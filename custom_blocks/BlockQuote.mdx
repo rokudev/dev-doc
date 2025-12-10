@@ -2,21 +2,9 @@
 name: BlockQuote
 ---
 import React from "react";
-export const BlockQuote = ({ children, className = "", textAlign = "left", verticalAlign = "center", }) => {
-    const alignmentClasses = {
-        text: {
-            left: "text-left",
-            center: "text-center",
-            right: "text-right",
-        },
-        vertical: {
-            top: "items-start",
-            center: "items-center",
-            bottom: "items-end",
-        },
-    };
-    return (<div className={`bg-yellow-50 dark:bg-yellow-900 p-5 flex ${alignmentClasses.vertical[verticalAlign]} ${className}`}>
-        {children}
+export const BlockQuote = ({ children, className = "", }) => {
+    return (<div className={`bg-amber-50 border border-[#f7e3d3] rounded-[4px] p-5 flex items-center text-left ${className}`}>
+      <div className={`text-amber-900 text-sm m-0`}>{children}</div>
     </div>);
 };
 

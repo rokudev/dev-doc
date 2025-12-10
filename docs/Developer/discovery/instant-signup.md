@@ -147,6 +147,13 @@ The posters/artwork with the content or networks featured in the app are used to
 
         * **Content-oriented apps** (apps that promote movies, TV shows, music, and other content): A minimum of 10 posters must be included with an offer.
         * **vMVPD apps** (apps that promote multiple networks/channels): A minimum of 5 artwork images must be included with an offer.
+
+        {/* Example Usage */}
+        <BlockQuote>
+          <div>Don't do whatever ypou're thinking about doing</div>
+        </BlockQuote>
+
+        <br />
       </td>
     </tr>
 

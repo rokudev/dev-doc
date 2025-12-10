@@ -20,9 +20,64 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 ## Words are very unnecessary
 
-|             |                                                                                          |    |
-| :---------- | :--------------------------------------------------------------------------------------- | :- |
-| Table row 1 | <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><td>word up</td></table> |    |
-| Table row 2 | <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><td>word up</td></table> |    |
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Table row 1
+      </td>
+
+      <td>
+        {/* Example Usage */}
+        <RokuTable
+          columns={[
+            { header: 'Name', accessor: 'name' },
+            { header: 'Email', accessor: 'email' },
+            { header: 'Role', accessor: 'role' }
+          ]}
+          data={[
+            { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+            { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+            { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
+          ]}
+        />
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Table row 2
+      </td>
+
+      <td>
+        <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><td>word up</td></table>
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 <br />

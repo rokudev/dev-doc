@@ -1,0 +1,29 @@
+---
+name: BlockQuote
+---
+import React from "react";
+export const BlockQuote = ({ children, className = "", textAlign = "left", verticalAlign = "center", }) => {
+    const alignmentClasses = {
+        text: {
+            left: "text-left",
+            center: "text-center",
+            right: "text-right",
+        },
+        vertical: {
+            top: "items-start",
+            center: "items-center",
+            bottom: "items-end",
+        },
+    };
+    return (<div className={`bg-yellow-50 dark:bg-yellow-900 px-6 py-4 flex ${alignmentClasses.vertical[verticalAlign]} ${className}`}>
+      <p className={`text-yellow-900 dark:text-yellow-50 text-sm m-0 ${alignmentClasses.text[textAlign]}`}>
+        {children}
+      </p>
+    </div>);
+};
+
+
+{/* Example Usage */}
+<BlockQuote>
+  ArrayGrid is not meant to be instantiated directly by app code
+</BlockQuote>

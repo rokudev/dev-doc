@@ -64,23 +64,15 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
       </td>
 
       <td>
-
+        {/* Example Usage */}
+        <BlockQuote>
+          <div>ArrayGrid is not meant to be instantiated directly by app code</div>
+        	some other text as well...
+        </BlockQuote>
       </td>
 
       <td>
         {/* Example Usage */}
-        <RokuTable
-          columns={[
-            { header: 'Name', accessor: 'name' },
-            { header: 'Email', accessor: 'email' },
-            { header: 'Role', accessor: 'role' }
-          ]}
-          data={[
-            { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
-            { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
-            { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
-          ]}
-        />
       </td>
     </tr>
   </tbody>

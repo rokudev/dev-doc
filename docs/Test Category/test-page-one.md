@@ -59,7 +59,7 @@ To sideload the updated Hello World sample app, follow these steps:
 
 3. The updated Hello World app launches on your Roku device and displays "My first Roku app!" in white on the screen.
 
-   ![roku600px my-first-roku-app](https://image.roku.com/ZHZscHItMTc2/my-first-roku-channel.jpg)
+   <Image alt="roku600px my-first-roku-app" border={false} src="https://image.roku.com/ZHZscHItMTc2/my-first-roku-channel.jpg" />
 
 <br />
 
@@ -141,10 +141,10 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
           header="A Table"
           columns={['Name', 'Age', 'Country']}
           data={[
-    { Name: 'Alice', Age: 25, Country: 'USA' },
-    { Name: 'Bob', Age: 30, Country: 'UK' },
-    { Name: 'Charlie', Age: 28, Country: 'Canada' }
-  ]}
+            { Name: 'Alice', Age: 25, Country: 'USA' },
+            { Name: 'Bob', Age: 30, Country: 'UK' },
+            { Name: 'Charlie', Age: 28, Country: 'Canada' }
+          ]}
         />
       </td>
     </tr>

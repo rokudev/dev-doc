@@ -14,7 +14,7 @@ Roku is an open streaming platform that is revolutionizing how consumers watch v
 
 <br />
 
-The Roku OS is built specifically for streaming, which means publishers can seamlessly develop intuitive, high-performance apps designed especially for the TV. With Roku's audience of over 85.5 million streaming households, which is bigger than the subscribers of the six largest traditional pay-TV providers combined ([Leichtman Research Group, Nov 2023](https://leichtmanresearch.com/major-pay-tv-providers-lost-about-465000-subscribers-in-3q-2023/) ), and 32 billion hours watched last quarter, publishers can distribute their apps around the globe to expand their reach and monetize their <sup>1</sup>content.
+The Roku OS is built specifically for streaming, which means publishers can seamlessly develop intuitive, high-performance apps designed especially for the TV. With Roku's audience of over 85.5 million streaming households, which is bigger than the subscribers of the six largest traditional pay-TV providers combined ([Leichtman Research Group, Nov 2023](https://leichtmanresearch.com/major-pay-tv-providers-lost-about-465000-subscribers-in-3q-2023/) ), and 32 billion hours watched last quarter, publishers can distribute their apps around the globe to expand their reach and monetize their content.
 
 <br />
 

@@ -20,6 +20,12 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
 ## Words are very unnecessary
 
+|             |                                                                                          |         |         |         |         |    |
+| :---------- | :--------------------------------------------------------------------------------------- | :------ | :------ | :------ | :------ | :- |
+| Table row 1 | {/* Example Usage */}                                                                    |         |         |         |         |    |
+| Table row 2 | <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><td>word up</td></table> | Company | Contact | Country | word up |    |
+| Company     | Contact                                                                                  | Country |         |         |         |    |
+
 <Table align={["left","left","left"]}>
   <thead>
     <tr>
@@ -40,7 +46,7 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
   <tbody>
     <tr>
       <td>
-        Table row 1
+
       </td>
 
       <td>
@@ -66,11 +72,11 @@ Endpoint	The base URLs for the Continue Watching APIs are as follows:
 
     <tr>
       <td>
-        Table row 2
+
       </td>
 
       <td>
-        <table><tr><th>Company</th><th>Contact</th><th>Country</th></tr><td>word up</td></table>
+
       </td>
 
       <td>

@@ -148,12 +148,23 @@ The posters/artwork with the content or networks featured in the app are used to
         * **Content-oriented apps** (apps that promote movies, TV shows, music, and other content): A minimum of 10 posters must be included with an offer.
         * **vMVPD apps** (apps that promote multiple networks/channels): A minimum of 5 artwork images must be included with an offer.
 
-        {/* Example Usage */}
         <BlockQuote>
-          <div>Don't do whatever ypou're thinking about doing</div>
+          <div>Don't do whatever you're thinking about doing</div>
         </BlockQuote>
 
-        <br />
+        {/* Example Usage */}
+        <RokuTable
+          columns={[
+            { header: 'Name', accessor: 'name' },
+            { header: 'Email', accessor: 'email' },
+            { header: 'Role', accessor: 'role' }
+          ]}
+          data={[
+            { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+            { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+            { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
+          ]}
+        />
       </td>
     </tr>
 

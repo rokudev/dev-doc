@@ -15,7 +15,7 @@ next:
 ---
 # Kurt Angle escape test
 
-\<it's true\>, \<oh it's damn true\> 
+&lt; it's true, oh it's damn true
 
 # Building your first app
 
@@ -145,10 +145,10 @@ For more information, read the [Getting Started Guide](/roku-1/update/docs/intro
           header="A Table"
           columns={['Name', 'Age', 'Country']}
           data={[
-                    { Name: 'Alice', Age: 25, Country: 'USA' },
-                    { Name: 'Bob', Age: 30, Country: 'UK' },
-                    { Name: 'Charlie', Age: 28, Country: 'Canada' }
-                  ]}
+                            { Name: 'Alice', Age: 25, Country: 'USA' },
+                            { Name: 'Bob', Age: 30, Country: 'UK' },
+                            { Name: 'Charlie', Age: 28, Country: 'Canada' }
+                          ]}
         />
       </td>
     </tr>

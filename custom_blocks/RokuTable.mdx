@@ -1,0 +1,41 @@
+---
+name: RokuTable
+---
+import React from "react";
+export const RokuTable = ({ columns, data, className = "", }) => {
+    return (<div className={`overflow-x-auto ${className}`}>
+      <table className="w-full border-collapse border border-gray-200 dark:border-gray-700">
+        <thead>
+          <tr>
+            {columns.map((column, index) => (<th key={index} className="px-4 py-2 text-left text-sm font-medium text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+                {column.header}
+              </th>))}
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row, rowIndex) => (<tr key={rowIndex} className={rowIndex % 2 === 0
+                ? "bg-white dark:bg-gray-900"
+                : "bg-gray-50 dark:bg-gray-800"}>
+              {columns.map((column, colIndex) => (<td key={colIndex} className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                  {row[column.accessor]}
+                </td>))}
+            </tr>))}
+        </tbody>
+      </table>
+    </div>);
+};
+
+
+{/* Example Usage */}
+<RokuTable
+  columns={[
+    { header: 'Name', accessor: 'name' },
+    { header: 'Email', accessor: 'email' },
+    { header: 'Role', accessor: 'role' }
+  ]}
+  data={[
+    { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+    { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+    { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
+  ]}
+/>

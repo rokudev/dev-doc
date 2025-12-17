@@ -7,6 +7,20 @@ metadata:
 ---
 Apps using Roku Pay can participate in Roku's Instant Signup program to offer subscription services to customers when they activate their Roku devices. With Instant Signup, customers can subscribe to apps off-device with just a few clicks and then directly access content on the app without any additional steps.
 
+{/* Example Usage */}
+<RokuTable
+  columns={[
+    { header: 'Name', accessor: 'name' },
+    { header: 'Email', accessor: 'email' },
+    { header: 'Role', accessor: 'role' }
+  ]}
+  data={[
+    { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+    { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+    { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
+  ]}
+/>
+
 Offers may include free trials, promotional pricing, and standard pricing (the user experience is tailored for each offer type; see [Appendix A](#appendix-a-instant-signup-user-experience) for examples):
 
 * Free trials and promotions are automatically converted to full paid subscriptions by Roku Pay.
@@ -152,15 +166,15 @@ The posters/artwork with the content or networks featured in the app are used to
 
         <RokuTable
           columns={[
-                    { header: 'Name', accessor: 'name' },
-                    { header: 'Email', accessor: 'email' },
-                    { header: 'Role', accessor: 'role' }
-                  ]}
+                            { header: 'Name', accessor: 'name' },
+                            { header: 'Email', accessor: 'email' },
+                            { header: 'Role', accessor: 'role' }
+                          ]}
           data={[
-                    { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
-                    { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
-                    { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
-                  ]}
+                            { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+                            { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+                            { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
+                          ]}
         />
       </td>
     </tr>

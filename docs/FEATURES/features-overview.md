@@ -23,11 +23,6 @@ Our goal is to encourage the success of partners on our platform. We offer multi
 
 ## Introduction to the Roku platform video
 
-<video title="Introduction to the Roku platform" poster="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4">
-  <img src='https://image.roku.com/ZHZscHItMTc2/roku-overview-features.jpg' alt='Introduction to the Roku platform' />
-</video>
-
 ## What to know before building a streaming app
 
 Roku offers a number of valuable resources for content publishers and developers. These resources explain the Roku platform, starting with an overview of how over-the-top (OTT) video streaming works and drilling all the way down to how to build and monetize a user base on the platform.
@@ -51,5 +46,3 @@ In this section, you'll find:
 - [Legal](/docs/features/legal/compliance.md) — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.
 
 To learn more about how Roku apps work, [read on](/docs/features/how-channels-work.md)!
-
-[^1]: (Circana, LLC, Retail Tracking Service, US, CA, and MX, TV by Software Service, Unit Sales, Jan – March 2025)

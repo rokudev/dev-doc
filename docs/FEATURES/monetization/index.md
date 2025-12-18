@@ -1,5 +1,5 @@
 ---
-title: Monetization overview
+title: Monetization
 excerpt: ''
 deprecated: false
 hidden: true

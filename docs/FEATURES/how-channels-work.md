@@ -1,5 +1,5 @@
 ---
-title: How Channels Work
+title: How apps work
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,20 +10,15 @@ metadata:
 next:
   description: ''
 ---
-
-# How apps work
-
 The Roku platform has thousands of apps, streaming billions of hours of content to our audience per year. As the industry leader in streaming devices and app offerings, it’s helpful to understand how a Roku app is developed and distributed to users around the world.
-
 
 ### New app requirements
 
 The three main requirements for creating a Roku app are:
 
-- Original and/or licensed video content.
-- A place to [host your content](#content-hosting) on the web (for example, an OVP, CDN, and so on).
-- A [feed](#playing-hosted-videos-in-a-roku-channel), which brings your content onto the Roku platform.
-
+* Original and/or licensed video content.
+* A place to [host your content](#content-hosting) on the web (for example, an OVP, CDN, and so on).
+* A [feed](#playing-hosted-videos-in-a-roku-channel), which brings your content onto the Roku platform.
 
 ### Content hosting
 
@@ -31,24 +26,24 @@ Before creating an app, an important step is to decide how and where to host you
 
 OVP (Online Video Platforms):
 
-- Zype
-- Wistia
-- Vimeo Pro
-- Ooyala
-- Brightcove
-- Kaltura
+* Zype
+* Wistia
+* Vimeo Pro
+* Ooyala
+* Brightcove
+* Kaltura
 
 CDN (Content Delivery Networks):
 
-- Akamai
-- Scale Engine
-- Limelight Networks
-- EdgeCast
-- BitGravity
-- Comcast Technology Solutions
-- Amazon Web Services (AWS)
+* Akamai
+* Scale Engine
+* Limelight Networks
+* EdgeCast
+* BitGravity
+* Comcast Technology Solutions
+* Amazon Web Services (AWS)
 
-![roku815px - videoplayback](https://image.roku.com/ZHZscHItMTc2/videoplayback.png "videoplayback")
+<Image alt="roku815px - videoplayback" border={false} src="https://image.roku.com/ZHZscHItMTc2/videoplayback.png" title="videoplayback" />
 
 ### Playing hosted videos in a Roku app
 

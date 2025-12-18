@@ -1,9 +1,14 @@
 ---
-title: Direct to Play
+title: Direct To Play
+excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
+  title: ''
+  description: ''
   robots: index
+next:
+  description: ''
 ---
 
 # Direct to Play

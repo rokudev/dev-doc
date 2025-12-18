@@ -289,7 +289,7 @@ curl -d '' 'http://192.168.1.114:8060/input?contentId=1234&mediaType=movie'
 
 ### Using the debug console for troubleshooting deep linking parameters
 
-You can use the [debug console](/docs/developer-program/debugging/debugging-channels.md#accessing-the-debug-console) to check the deep linking parameters that are being sent to your app. To do this, add a print statement to your app application that outputs the associative array passed into your app's `Main()` function and [roInputEvent](/docs/references/brightscript/events/roinputevent.md).
+You can use the [debug console](/docs/developer-program/debugging/debugging-channels.md#accessing-the-debug-console) to check the deep linking parameters that are being sent to your app. To do this, add a print statement to your app that outputs the associative array passed into your app's `Main()` function and [roInputEvent](/docs/references/brightscript/events/roinputevent.md).
 
 This is useful when troubleshooting deep links because it helps you identify the **contentId** of the content being launched in case it is unknown, and it provides the **mediaType** in case the expected behavior is not being executed.
 
@@ -369,7 +369,7 @@ The one-time TV program identified by the contentId is launched directly into pl
 
 You can learn how to implement deep linking in your app by watching the [Deep linking](/videos/courses/rsg/deep-linking.md) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
 
-This lesson details how to program your app application to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences requried for the various types of content in the app's feed.
+This lesson details how to program your app to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences requried for the various types of content in the app's feed.
 
 ## Sample app
 

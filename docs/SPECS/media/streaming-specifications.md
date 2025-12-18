@@ -1,8 +1,8 @@
 ---
-title: Streaming specifications
+title: Streaming Specifications
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''
@@ -10,6 +10,9 @@ metadata:
 next:
   description: ''
 ---
+
+# Streaming specifications
+
 Roku supports specific encoding methods and formats for streaming content on Roku devices. The following information details the best options for distributing content based on quality and availability.
 
 ## Container Formats
@@ -42,54 +45,19 @@ Some elementary stream formats can be streamed directly without encapsulating th
 
 ## Adaptive streaming protocols
 
-Network speeds can vary over time; therefore, it is important to provide multiple  
+Network speeds can vary over time; therefore, it is important to provide multiple
 video streams of varying quality to provide the best experience to your viewers is. Roku devices can then automatically select the best streaming quality based on the viewer's network connection.
 
 Roku supports the following widely-used standard formats for adaptive bit rate switching:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "",
-    "h-1": "DASH",
-    "h-2": "HLS",
-    "h-3": "Smooth",
-    "0-0": "Audio Codecs",
-    "0-1": "AAC, DTS, DD, DD+",
-    "0-2": "AAC, MP3, DTS, DD, DD+",
-    "0-3": "AAC, MP3, DTS, DD, DD+",
-    "1-0": "Video Codecs",
-    "1-1": "AVC, HEVC",
-    "1-2": "AVC, HEVC, VP9",
-    "1-3": "AVC, HEVC",
-    "2-0": "Subtitle formats",
-    "2-1": "TTML, fragmented ISMT<br/>TTML, unfragmented TTML text<br/>TTML, side-loaded TTML text<br/><br/>WebVTT, fragmented WebVTT text<br/>WebVTT, unfragmented WebVTT text<br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text",
-    "2-2": "TTML, side-loaded TTML text<br/><br/>WebVTT, fragmented WebVTT text<br/>WebVTT, unfragmented WebVTT text<br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text",
-    "2-3": "TTML, fragmented ISMT<br/>TTML, side-loaded TTML text<br/><br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text",
-    "3-0": "Audio/video chunk format",
-    "3-1": "Fragmented MP4, CMAF (muxing audio and video not supported for CMAF)",
-    "3-2": "video: TS, CMAF (muxing audio and video not supported for CMAF)<br />audio: aac, ac3, eac3",
-    "3-3": "PIFF",
-    "4-0": "DRM",
-    "4-1": "PlayReady, Widevine",
-    "4-2": "AES-128, Widevine, Verimatrix",
-    "4-3": "PlayReady",
-    "5-0": "HDR support",
-    "5-1": "Dolby Vision, HDR10",
-    "5-2": "Dolby Vision, HDR10",
-    "5-3": ""
-  },
-  "cols": 4,
-  "rows": 6,
-  "align": [
-    "left",
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
-
+|                          | DASH                                                         | HLS                                                          | Smooth                                                       |
+| :----------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| Audio Codecs             | AAC, DTS, DD, DD+                                            | AAC, MP3, DTS, DD, DD+                                       | AAC, MP3, DTS, DD, DD+                                       |
+| Video Codecs             | AVC, HEVC                                                    | AVC, HEVC, VP9                                               | AVC, HEVC                                                    |
+| Subtitle formats         | TTML, fragmented ISMT<br/>TTML, unfragmented TTML text<br/>TTML, side-loaded TTML text<br/><br/>WebVTT, fragmented WebVTT text<br/>WebVTT, unfragmented WebVTT text<br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text | TTML, side-loaded TTML text<br/><br/>WebVTT, fragmented WebVTT text<br/>WebVTT, unfragmented WebVTT text<br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text | TTML, fragmented ISMT<br/>TTML, side-loaded TTML text<br/><br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text |
+| Audio/video chunk format | Fragmented MP4, CMAF (muxing audio and video not supported for CMAF) | video: TS, CMAF (muxing audio and video not supported for CMAF)<br />audio: aac, ac3, eac3 | PIFF                                                         |
+| DRM                      | PlayReady, Widevine                                          | AES-128, Widevine, Verimatrix                                | PlayReady                                                    |
+| HDR support              | Dolby Vision, HDR10                                          | Dolby Vision, HDR10                                          |                                                              |
 
 ### Best practices
 
@@ -122,106 +90,45 @@ For trickplay of live streams, apps should seek to a position of 999,999 seconds
 
 Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only) codecs.
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "",
-    "h-1": "AVC (H.264)",
-    "h-2": "HEVC (H.265)[^1]",
-    "h-3": "VP9[^2]",
-    "h-4": "AV1 (DASH only)",
-    "0-0": "Aspect Ratio 2[^3]",
-    "0-1": "Various",
-    "0-2": "Various",
-    "0-3": "Various",
-    "0-4": "",
-    "1-0": "Dimension",
-    "1-1": "Various up to 1920x1080",
-    "1-2": "Various up to 3840x2160",
-    "1-3": "Various up to 3840x2160",
-    "1-4": "Various up to 7680 x 4320",
-    "2-0": "Input Frame Rate[^4]",
-    "2-1": "24p, 25p, 30p, 50p, 60p",
-    "2-2": "24p, 25p, 30p, 50p, 60p",
-    "2-3": "24p, 25p, 30p, 60p[^6]",
-    "2-4": "24p,25p,30p,50p,60p",
-    "3-0": "Color Space",
-    "3-1": "Rec.709",
-    "3-2": "Rec.709, Rec.2020",
-    "3-3": "Rec.709, Rec.2020",
-    "3-4": "Rec.709, Rec.2020",
-    "4-0": "Profile",
-    "4-1": "main, high",
-    "4-2": "main, main 10",
-    "4-3": "profile 0, profile 2",
-    "4-4": "main, main 10",
-    "5-0": "Level",
-    "5-1": "4.1, 4.2",
-    "5-2": "4.1, 5.0, 5.1",
-    "5-3": "",
-    "5-4": "4.1, 5.0, 5.1",
-    "6-0": "Video Mode",
-    "6-1": "Constrained VBR",
-    "6-2": "Constrained VBR",
-    "6-3": "Constrained VBR",
-    "6-4": "Constrained VBR",
-    "7-0": "Video Bitrate",
-    "7-1": "Up to 10Mbps",
-    "7-2": "Up to 40Mbps",
-    "7-3": "Up to 40Mbps",
-    "7-4": "Up to 40Mbps",
-    "8-0": "Peak Video Bit rate",
-    "8-1": "1.5x average",
-    "8-2": "1.5x average",
-    "8-3": "1.5x average",
-    "8-4": "1.5x average",
-    "9-0": "Key Frame Interval [^5]",
-    "9-1": "\\< 10s",
-    "9-2": "\\< 10s",
-    "9-3": "\\< 10s",
-    "9-4": "\\< 10s",
-    "10-0": "HDR support",
-    "10-1": "Dolby Vision: dvav.09",
-    "10-2": "Dolby Vision: dvhe.05<br />HDR10 (HEVC profile Main 10)<br />HLG",
-    "10-3": "HDR10",
-    "10-4": "Dolby Vision<br />HDR10 <br />HDR10+"
-  },
-  "cols": 5,
-  "rows": 11,
-  "align": [
-    "left",
-    "left",
-    "left",
-    "left",
-    null
-  ]
-}
-[/block]
 
+|                      | AVC (H.264)             | HEVC (H.265)[^1]                | VP9[^2]                 | AV1 (DASH only)             |
+| :------------------- | :------------------------------ | :---------------------- | :---------------------- | ----------------------- |
+| Aspect Ratio 2[^3]       | Various                 | Various                         | Various                 |                  |
+| Dimension            | Various up to 1920x1080 | Various up to 3840x2160         | Various up to 3840x2160 | Various up to 7680 x 4320 |
+| Input Frame Rate[^4] | 24p, 25p, 30p, 50p, 60p | 24p, 25p, 30p, 50p, 60p         | 24p, 25p, 30p, 60p[^6] | 24p,25p,30p,50p,60p |
+| Color Space          | Rec.709                 | Rec.709, Rec.2020               | Rec.709, Rec.2020       | Rec.709, Rec.2020 |
+| Profile              | main, high              | main, main 10                   | profile 0, profile 2    | main, main 10 |
+| Level                | 4.1, 4.2                | 4.1, 5.0, 5.1                   |                         | 4.1, 5.0, 5.1 |
+| Video Mode           | Constrained VBR         | Constrained VBR                 | Constrained VBR         | Constrained VBR |
+| Video Bitrate        | Up to 10Mbps            | Up to 40Mbps                    | Up to 40Mbps            | Up to 40Mbps |
+| Peak Video Bit rate  | 1.5x average            | 1.5x average                    | 1.5x average            | 1.5x average |
+| Key Frame Interval [^5] | < 10s                   | < 10s                           | < 10s                   | < 10s              |
+| HDR support          | Dolby Vision: dvav.09   | Dolby Vision: dvhe.05<br />HDR10 (HEVC profile Main 10)<br />HLG | HDR10                   | Dolby Vision<br />HDR10 <br />HDR10+ |
 
 Some decoder and security features are device specific. For details, see [Roku Models and Features](/docs/specs/hardware.md).
 
-[^1]\: Only supported on **Roku 4K capable** devices.  
-[^2]\: Only supported on **Roku 4K capable** devices.  
-[^3]\: The dimensions vary on a title-by-title basis depending on the source material and the target aspect ratio for the encoding (such as 4:3 or 16:9). Content should always be encoded at full width, and the height is adjusted. For example, a 1.66 aspect ratio source is encoded as a 720x432 video and displayed as letterboxed for a 4:3 display.  
-[^4]\: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is \< 10 seconds for VOD and \< 5 seconds for live content, and the segment size should be constant.  
-[^5]\: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is \< 10 seconds for VOD and \< 5 seconds for live content, and the segment size should be constant.  
-[^6]\: Only supported on HDR10 capable Roku devices.
+[^1]: Only supported on **Roku 4K capable** devices.
+[^2]: Only supported on **Roku 4K capable** devices.
+[^3]: The dimensions vary on a title-by-title basis depending on the source material and the target aspect ratio for the encoding (such as 4:3 or 16:9). Content should always be encoded at full width, and the height is adjusted. For example, a 1.66 aspect ratio source is encoded as a 720x432 video and displayed as letterboxed for a 4:3 display.
+[^4]: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is < 10 seconds for VOD and < 5 seconds for live content, and the segment size should be constant.
+[^5]: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is < 10 seconds for VOD and < 5 seconds for live content, and the segment size should be constant.
+[^6]: Only supported on HDR10 capable Roku devices.
 
 ## Supported audio codecs
 
 Roku devices support the following audio file types:
 
-- AAC: HE-AACv2, AAC-LC (CBR)
-- MP3
-- WAV (PCM)
-- AIFF
-- FLAC
-- ALAC
-- Dolby Audio: Dolby Digital (AC3), Dolby Digital Plus (E-AC3)
-- Passthrough: DTS
+  - AAC: HE-AACv2, AAC-LC (CBR)
+  - MP3
+  - WAV (PCM)
+  - AIFF
+  - FLAC
+  - ALAC
+  - Dolby Audio: Dolby Digital (AC3), Dolby Digital Plus (E-AC3)
+  - Passthrough: DTS
 
 The most common audio codecs for video content are AAC, AC3, E-AC3, and DTS. It is strongly recommended that content with multichannel audio (i.e., 5.1, 7.1 channels) be made available in Dolby Digital Plus (E-AC3). This is the preferred multichannel format for streaming on Roku's Dolby Digital Plus-enabled devices.
+
 
 |                    | AAC                   | AC3/E-AC3            | DTS         |
 | ------------------ | --------------------- | -------------------- | ----------- |
@@ -302,15 +209,18 @@ UHD encodings should provide the complete bitrate ladder with the same codec. Th
 
 Encoding in Dolby Digital Plus (instead of Dolby Digital) is recommended with the following bit rates:
 
+
 | Channels          | Bit rate |
 | ----------------- | -------- |
 | Stereo 2.0        | 96 kbps  |
 | Multi-channel 5.1 | 192 kbps |
 | Multi-channel 7.1 | 384 kbps |
 
+
 Developers can encode video content using services like Azure or [Encoding.com](http://Encoding.com). For more information, visit [developer.dolby.com](https://developer.dolby.com/)
 
 ### 4K UHD video streaming requirements
+
 
 | Specification | Requirement |
 | ------------- | ----------- |
@@ -321,13 +231,14 @@ Developers can encode video content using services like Azure or [Encoding.com](
 
 There are several conditions that must be checked to see if 4K UHD content can be played:
 
-- Video output mode must be 2160p
-- HDCP 2.2 must be enabled
-- The device must be able to decode the proper codecs and encoding  
-  profiles
-- (Optional) Check if the device decrypts within a trusted execution environment (TEE).
+  - Video output mode must be 2160p
+  - HDCP 2.2 must be enabled
+  - The device must be able to decode the proper codecs and encoding
+    profiles
+  - (Optional) Check if the device decrypts within a trusted execution environment (TEE).
 
-```
+
+~~~~
 Function CanPlay4K() as Boolean
   dev_info = CreateObject("roDeviceInfo")
   hdmi_status = CreateObject("roHdmiStatus")
@@ -360,7 +271,7 @@ Function CanPlay4K() as Boolean
 
   return true
 End Function
-```
+~~~~
 
 >  This example returns true only if both 4K HEVC and 4K VP9 decoding is supported. If your 4K UHD content is only encoded in one of these codecs, modify the third conditional statement as necessary.
 
@@ -368,12 +279,13 @@ End Function
 
 HDR10 playback requires HDMI version 2.0a. HDCP version 2.2, and an HDR10 capable player and display. Apps can check if the Roku device and connected display support HDR10 with **GetDisplayProperties().hdr10** field of the [roDeviceInfo](/docs/references/brightscript/interfaces/ifdeviceinfo.md) component.
 
-```
+~~~~
 Function canPlayHDR() as Boolean
   dev_info = createObject("roDeviceInfo")
   return dev_info.getDisplayProperties().hdr10
 End Function
-```
+~~~~
+
 
 This function should only be called after detecting 4K UHD Compatibility.
 

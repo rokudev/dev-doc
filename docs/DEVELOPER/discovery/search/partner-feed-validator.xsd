@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo>Roku partner content feed schema</xs:appinfo>
+    <xs:documentation>
+      This Schema defines a search content feed for Roku search.
+
+      Note: Your feed should contain images if you suspect that we will not be able to match
+      it to our content using the matching rules provided in the Partner Guide to Integration
+      into Roku Search document.
+		</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="requiredStringType">
+    <xs:annotation>
+      <xs:documentation>
+        This type defines a require string. Must contain at least 1 character
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="priceType">
+    <xs:annotation>
+      <xs:documentation>
+        Defines price which must contain at least two decimal points
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="qualityType">
+    <xs:annotation>
+      <xs:documentation>
+        Defineds acceptable viewing formats
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="requiredStringType">
+      <xs:enumeration value="SD"/>
+      <xs:enumeration value="HD"/>
+      <xs:enumeration value="HD+">
+        <xs:annotation>
+          <xs:documentation>
+            High definition plus (full 1080p)
+					</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="UHD">
+        <xs:annotation>
+          <xs:documentation>
+            4K
+					</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="licenseType">
+    <xs:annotation>
+      <xs:documentation>
+        Used to define acceptable license types
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="requiredStringType">
+      <xs:enumeration value="free">
+        <xs:annotation>
+          <xs:documentation>
+            Use this if the film is entirely free without subscription
+					</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="purchase">
+        <xs:annotation>
+          <xs:documentation>
+            Use this if the film can be purchased for repetitive viewing (added to a video library or downloaded)
+					</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rental">
+        <xs:annotation>
+          <xs:documentation>
+            Use this if the film can be purchased for timeframe-limited viewing
+					</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="subscription">
+        <xs:annotation>
+          <xs:documentation>
+            Use this if the the price is zero dollars and part of a subscription package
+					</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="currencyType">
+    <xs:annotation>
+      <xs:documentation>
+        Defines acceptable ISO 4217 currency codes
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="USD"/>
+      <xs:enumeration value="GBP"/>
+      <xs:enumeration value="CAD"/>
+      <xs:enumeration value="AUD"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="languageType">
+    <xs:annotation>
+      <xs:documentation>
+        Defines acceptable languages. Currently, only English is accepted.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="en"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="absoluteURI">
+    <xs:annotation>
+      <xs:documentation>
+        Defines acceptable absolute URI pattern
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:anyURI">
+      <xs:pattern value="https?://.+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ratingSourceType">
+    <xs:annotation>
+      <xs:documentation>
+        Defines acceptable rating source types
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="British Board of Film Classification"/>
+      <xs:enumeration value="Canadian Home Video Rating System"/>
+      <xs:enumeration value="Canadian Parental Rating"/>
+      <xs:enumeration value="Motion Picture Association of America"/>
+      <xs:enumeration value="UK Content Provider"/>
+      <xs:enumeration value="USA Parental Rating"/>
+      <xs:enumeration value="Austrlian Board Classification"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ratingCodeType">
+    <xs:annotation>
+      <xs:documentation>
+        Defines acceptable rating codes
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="12"/>
+      <xs:enumeration value="12A"/>
+      <xs:enumeration value="14+"/>
+      <xs:enumeration value="14A"/>
+      <xs:enumeration value="15"/>
+      <xs:enumeration value="18"/>
+      <xs:enumeration value="18+"/>
+      <xs:enumeration value="18A"/>
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="AA"/>
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="C8"/>
+      <xs:enumeration value="E"/>
+      <xs:enumeration value="G"/>
+      <xs:enumeration value="M"/>
+      <xs:enumeration value="MA15+"/>
+      <xs:enumeration value="NC-17"/>
+      <xs:enumeration value="PG"/>
+      <xs:enumeration value="PG-13"/>
+      <xs:enumeration value="R"/>
+      <xs:enumeration value="R18"/>
+      <xs:enumeration value="TV14"/>
+      <xs:enumeration value="TVG"/>
+      <xs:enumeration value="TVMA"/>
+      <xs:enumeration value="TVPG"/>
+      <xs:enumeration value="TVY"/>
+      <xs:enumeration value="TVY14"/>
+      <xs:enumeration value="TVY7"/>
+      <xs:enumeration value="U"/>
+      <xs:enumeration value="Uc"/>
+      <xs:enumeration value="UNRATED"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="descriptionLengthType">
+    <xs:annotation>
+      <xs:documentation>
+        Defines acceptable length values for description.
+        The description provided must be less that or equal to the length provided and more than the next lowest number.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:enumeration value="60"/>
+      <xs:enumeration value="100"/>
+      <xs:enumeration value="250"/>
+      <xs:enumeration value="500"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="genresType">
+    <xs:sequence>
+      <xs:element name="genre" minOccurs="0" maxOccurs="unbounded">
+        <xs:simpleType>
+          <xs:annotation>
+            <xs:documentation>
+              Defines acceptable values for genre
+						</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Action"/>
+            <xs:enumeration value="Action sports"/>
+            <xs:enumeration value="Adventure"/>
+            <xs:enumeration value="Aerobics"/>
+            <xs:enumeration value="Agriculture"/>
+            <xs:enumeration value="Animals"/>
+            <xs:enumeration value="Animated"/>
+            <xs:enumeration value="Anime"/>
+            <xs:enumeration value="Anthology"/>
+            <xs:enumeration value="Archery"/>
+            <xs:enumeration value="Arm wrestling"/>
+            <xs:enumeration value="Art"/>
+            <xs:enumeration value="Arts/crafts"/>
+            <xs:enumeration value="Auction"/>
+            <xs:enumeration value="Auto"/>
+            <xs:enumeration value="Auto racing"/>
+            <xs:enumeration value="Aviation"/>
+            <xs:enumeration value="Awards"/>
+            <xs:enumeration value="Badminton"/>
+            <xs:enumeration value="Ballet"/>
+            <xs:enumeration value="Baseball"/>
+            <xs:enumeration value="Basketball"/>
+            <xs:enumeration value="Beach soccer"/>
+            <xs:enumeration value="Beach volleyball"/>
+            <xs:enumeration value="Biathlon"/>
+            <xs:enumeration value="Bicycle"/>
+            <xs:enumeration value="Bicycle racing"/>
+            <xs:enumeration value="Billiards"/>
+            <xs:enumeration value="Biography"/>
+            <xs:enumeration value="Blackjack"/>
+            <xs:enumeration value="Boat"/>
+            <xs:enumeration value="Boat racing"/>
+            <xs:enumeration value="Bobsled"/>
+            <xs:enumeration value="Bodybuilding"/>
+            <xs:enumeration value="Bowling"/>
+            <xs:enumeration value="Boxing"/>
+            <xs:enumeration value="Bullfighting"/>
+            <xs:enumeration value="Bus./financial"/>
+            <xs:enumeration value="Canoe"/>
+            <xs:enumeration value="Card games"/>
+            <xs:enumeration value="Cheerleading"/>
+            <xs:enumeration value="Children"/>
+            <xs:enumeration value="Children-music"/>
+            <xs:enumeration value="Children-special"/>
+            <xs:enumeration value="Children-talk"/>
+            <xs:enumeration value="Collectibles"/>
+            <xs:enumeration value="Comedy"/>
+            <xs:enumeration value="Comedy drama"/>
+            <xs:enumeration value="Community"/>
+            <xs:enumeration value="Computers"/>
+            <xs:enumeration value="Consumer"/>
+            <xs:enumeration value="Cooking"/>
+            <xs:enumeration value="Cricket"/>
+            <xs:enumeration value="Crime"/>
+            <xs:enumeration value="Crime drama"/>
+            <xs:enumeration value="Curling"/>
+            <xs:enumeration value="Dance"/>
+            <xs:enumeration value="Dark comedy"/>
+            <xs:enumeration value="Darts"/>
+            <xs:enumeration value="Debate"/>
+            <xs:enumeration value="Diving"/>
+            <xs:enumeration value="Docudrama"/>
+            <xs:enumeration value="Documentary"/>
+            <xs:enumeration value="Dog racing"/>
+            <xs:enumeration value="Dog show"/>
+            <xs:enumeration value="Dog sled"/>
+            <xs:enumeration value="Drag racing"/>
+            <xs:enumeration value="Drama"/>
+            <xs:enumeration value="Educational"/>
+            <xs:enumeration value="Entertainment"/>
+            <xs:enumeration value="Environment"/>
+            <xs:enumeration value="Equestrian"/>
+            <xs:enumeration value="Erotic"/>
+            <xs:enumeration value="Event"/>
+            <xs:enumeration value="Exercise"/>
+            <xs:enumeration value="Fantasy"/>
+            <xs:enumeration value="Fashion"/>
+            <xs:enumeration value="Fencing"/>
+            <xs:enumeration value="Field hockey"/>
+            <xs:enumeration value="Figure skating"/>
+            <xs:enumeration value="Fishing"/>
+            <xs:enumeration value="Football"/>
+            <xs:enumeration value="Fundraiser"/>
+            <xs:enumeration value="Gaelic football"/>
+            <xs:enumeration value="Game show"/>
+            <xs:enumeration value="Gaming"/>
+            <xs:enumeration value="Gay/lesbian"/>
+            <xs:enumeration value="Golf"/>
+            <xs:enumeration value="Gymnastics"/>
+            <xs:enumeration value="Handball"/>
+            <xs:enumeration value="Health"/>
+            <xs:enumeration value="Historical drama"/>
+            <xs:enumeration value="History"/>
+            <xs:enumeration value="Hockey"/>
+            <xs:enumeration value="Holiday"/>
+            <xs:enumeration value="Holiday music"/>
+            <xs:enumeration value="Holiday music special"/>
+            <xs:enumeration value="Holiday special"/>
+            <xs:enumeration value="Holiday-children"/>
+            <xs:enumeration value="Holiday-children special"/>
+            <xs:enumeration value="Home improvement"/>
+            <xs:enumeration value="Horror"/>
+            <xs:enumeration value="Horse"/>
+            <xs:enumeration value="House/garden"/>
+            <xs:enumeration value="How-to"/>
+            <xs:enumeration value="Hunting"/>
+            <xs:enumeration value="Hurling"/>
+            <xs:enumeration value="Hydroplane racing"/>
+            <xs:enumeration value="Indoor soccer"/>
+            <xs:enumeration value="Interview"/>
+            <xs:enumeration value="Intl soccer"/>
+            <xs:enumeration value="Kayaking"/>
+            <xs:enumeration value="Lacrosse"/>
+            <xs:enumeration value="Law"/>
+            <xs:enumeration value="Luge"/>
+            <xs:enumeration value="Martial arts"/>
+            <xs:enumeration value="Medical"/>
+            <xs:enumeration value="Military"/>
+            <xs:enumeration value="Miniseries"/>
+            <xs:enumeration value="Mixed martial arts"/>
+            <xs:enumeration value="Motorcycle"/>
+            <xs:enumeration value="Motorcycle racing"/>
+            <xs:enumeration value="Motorsports"/>
+            <xs:enumeration value="Mountain biking"/>
+            <xs:enumeration value="Music"/>
+            <xs:enumeration value="Music special"/>
+            <xs:enumeration value="Music talk"/>
+            <xs:enumeration value="Musical"/>
+            <xs:enumeration value="Musical comedy"/>
+            <xs:enumeration value="Mystery"/>
+            <xs:enumeration value="Nature"/>
+            <xs:enumeration value="News"/>
+            <xs:enumeration value="Newsmagazine"/>
+            <xs:enumeration value="Olympics"/>
+            <xs:enumeration value="Opera"/>
+            <xs:enumeration value="Outdoors"/>
+            <xs:enumeration value="Parade"/>
+            <xs:enumeration value="Paranormal"/>
+            <xs:enumeration value="Parenting"/>
+            <xs:enumeration value="Performing arts"/>
+            <xs:enumeration value="Playoff sports"/>
+            <xs:enumeration value="Poker"/>
+            <xs:enumeration value="Politics"/>
+            <xs:enumeration value="Polo"/>
+            <xs:enumeration value="Pool"/>
+            <xs:enumeration value="Pro wrestling"/>
+            <xs:enumeration value="Public affairs"/>
+            <xs:enumeration value="Racquet"/>
+            <xs:enumeration value="Reality"/>
+            <xs:enumeration value="Religious"/>
+            <xs:enumeration value="Ringuette"/>
+            <xs:enumeration value="Rodeo"/>
+            <xs:enumeration value="Roller derby"/>
+            <xs:enumeration value="Romance"/>
+            <xs:enumeration value="Romantic comedy"/>
+            <xs:enumeration value="Rowing"/>
+            <xs:enumeration value="Rugby"/>
+            <xs:enumeration value="Running"/>
+            <xs:enumeration value="Sailing"/>
+            <xs:enumeration value="Science"/>
+            <xs:enumeration value="Science fiction"/>
+            <xs:enumeration value="Self improvement"/>
+            <xs:enumeration value="Shooting"/>
+            <xs:enumeration value="Shopping"/>
+            <xs:enumeration value="Sitcom"/>
+            <xs:enumeration value="Skateboarding"/>
+            <xs:enumeration value="Skating"/>
+            <xs:enumeration value="Skeleton"/>
+            <xs:enumeration value="Skiing"/>
+            <xs:enumeration value="Snooker"/>
+            <xs:enumeration value="Snowboarding"/>
+            <xs:enumeration value="Snowmobile"/>
+            <xs:enumeration value="Soap"/>
+            <xs:enumeration value="Soap special"/>
+            <xs:enumeration value="Soap talk"/>
+            <xs:enumeration value="Soccer"/>
+            <xs:enumeration value="Softball"/>
+            <xs:enumeration value="Special"/>
+            <xs:enumeration value="Speed skating"/>
+            <xs:enumeration value="Sports talk"/>
+            <xs:enumeration value="Squash"/>
+            <xs:enumeration value="Standup"/>
+            <xs:enumeration value="Sumo wrestling"/>
+            <xs:enumeration value="Surfing"/>
+            <xs:enumeration value="Suspense"/>
+            <xs:enumeration value="Swimming"/>
+            <xs:enumeration value="Table tennis"/>
+            <xs:enumeration value="Talk"/>
+            <xs:enumeration value="Technology"/>
+            <xs:enumeration value="Tennis"/>
+            <xs:enumeration value="Theater"/>
+            <xs:enumeration value="Thriller"/>
+            <xs:enumeration value="Track/field"/>
+            <xs:enumeration value="Travel"/>
+            <xs:enumeration value="Triathlon"/>
+            <xs:enumeration value="Variety"/>
+            <xs:enumeration value="Volleyball"/>
+            <xs:enumeration value="War"/>
+            <xs:enumeration value="Water polo"/>
+            <xs:enumeration value="Water skiing"/>
+            <xs:enumeration value="Watersports"/>
+            <xs:enumeration value="Weather"/>
+            <xs:enumeration value="Weightlifting"/>
+            <xs:enumeration value="Western"/>
+            <xs:enumeration value="Wrestling"/>
+            <xs:enumeration value="Yacht racing"/>
+            <xs:enumeration value="action"/>
+            <xs:enumeration value="action sports"/>
+            <xs:enumeration value="adventure"/>
+            <xs:enumeration value="aerobics"/>
+            <xs:enumeration value="agriculture"/>
+            <xs:enumeration value="animals"/>
+            <xs:enumeration value="animated"/>
+            <xs:enumeration value="anime"/>
+            <xs:enumeration value="anthology"/>
+            <xs:enumeration value="archery"/>
+            <xs:enumeration value="arm wrestling"/>
+            <xs:enumeration value="art"/>
+            <xs:enumeration value="arts/crafts"/>
+            <xs:enumeration value="auction"/>
+            <xs:enumeration value="auto"/>
+            <xs:enumeration value="auto racing"/>
+            <xs:enumeration value="aviation"/>
+            <xs:enumeration value="awards"/>
+            <xs:enumeration value="badminton"/>
+            <xs:enumeration value="ballet"/>
+            <xs:enumeration value="baseball"/>
+            <xs:enumeration value="basketball"/>
+            <xs:enumeration value="beach soccer"/>
+            <xs:enumeration value="beach volleyball"/>
+            <xs:enumeration value="biathlon"/>
+            <xs:enumeration value="bicycle"/>
+            <xs:enumeration value="bicycle racing"/>
+            <xs:enumeration value="billiards"/>
+            <xs:enumeration value="biography"/>
+            <xs:enumeration value="blackjack"/>
+            <xs:enumeration value="boat"/>
+            <xs:enumeration value="boat racing"/>
+            <xs:enumeration value="bobsled"/>
+            <xs:enumeration value="bodybuilding"/>
+            <xs:enumeration value="bowling"/>
+            <xs:enumeration value="boxing"/>
+            <xs:enumeration value="bullfighting"/>
+            <xs:enumeration value="bus./financial"/>
+            <xs:enumeration value="canoe"/>
+            <xs:enumeration value="card games"/>
+            <xs:enumeration value="cheerleading"/>
+            <xs:enumeration value="children"/>
+            <xs:enumeration value="children-music"/>
+            <xs:enumeration value="children-special"/>
+            <xs:enumeration value="children-talk"/>
+            <xs:enumeration value="collectibles"/>
+            <xs:enumeration value="comedy"/>
+            <xs:enumeration value="comedy drama"/>
+            <xs:enumeration value="community"/>
+            <xs:enumeration value="computers"/>
+            <xs:enumeration value="consumer"/>
+            <xs:enumeration value="cooking"/>
+            <xs:enumeration value="cricket"/>
+            <xs:enumeration value="crime"/>
+            <xs:enumeration value="crime drama"/>
+            <xs:enumeration value="curling"/>
+            <xs:enumeration value="dance"/>
+            <xs:enumeration value="dark comedy"/>
+            <xs:enumeration value="darts"/>
+            <xs:enumeration value="debate"/>
+            <xs:enumeration value="diving"/>
+            <xs:enumeration value="docudrama"/>
+            <xs:enumeration value="documentary"/>
+            <xs:enumeration value="dog racing"/>
+            <xs:enumeration value="dog show"/>
+            <xs:enumeration value="dog sled"/>
+            <xs:enumeration value="drag racing"/>
+            <xs:enumeration value="drama"/>
+            <xs:enumeration value="educational"/>
+            <xs:enumeration value="entertainment"/>
+            <xs:enumeration value="environment"/>
+            <xs:enumeration value="equestrian"/>
+            <xs:enumeration value="erotic"/>
+            <xs:enumeration value="event"/>
+            <xs:enumeration value="exercise"/>
+            <xs:enumeration value="fantasy"/>
+            <xs:enumeration value="fashion"/>
+            <xs:enumeration value="fencing"/>
+            <xs:enumeration value="field hockey"/>
+            <xs:enumeration value="figure skating"/>
+            <xs:enumeration value="fishing"/>
+            <xs:enumeration value="football"/>
+            <xs:enumeration value="fundraiser"/>
+            <xs:enumeration value="gaelic football"/>
+            <xs:enumeration value="game show"/>
+            <xs:enumeration value="gaming"/>
+            <xs:enumeration value="gay/lesbian"/>
+            <xs:enumeration value="golf"/>
+            <xs:enumeration value="gymnastics"/>
+            <xs:enumeration value="handball"/>
+            <xs:enumeration value="health"/>
+            <xs:enumeration value="historical drama"/>
+            <xs:enumeration value="history"/>
+            <xs:enumeration value="hockey"/>
+            <xs:enumeration value="holiday"/>
+            <xs:enumeration value="holiday music"/>
+            <xs:enumeration value="holiday music special"/>
+            <xs:enumeration value="holiday special"/>
+            <xs:enumeration value="holiday-children"/>
+            <xs:enumeration value="holiday-children special"/>
+            <xs:enumeration value="home improvement"/>
+            <xs:enumeration value="horror"/>
+            <xs:enumeration value="horse"/>
+            <xs:enumeration value="house/garden"/>
+            <xs:enumeration value="how-to"/>
+            <xs:enumeration value="hunting"/>
+            <xs:enumeration value="hurling"/>
+            <xs:enumeration value="hydroplane racing"/>
+            <xs:enumeration value="indoor soccer"/>
+            <xs:enumeration value="interview"/>
+            <xs:enumeration value="intl soccer"/>
+            <xs:enumeration value="kayaking"/>
+            <xs:enumeration value="lacrosse"/>
+            <xs:enumeration value="law"/>
+            <xs:enumeration value="luge"/>
+            <xs:enumeration value="martial arts"/>
+            <xs:enumeration value="medical"/>
+            <xs:enumeration value="military"/>
+            <xs:enumeration value="miniseries"/>
+            <xs:enumeration value="mixed martial arts"/>
+            <xs:enumeration value="motorcycle"/>
+            <xs:enumeration value="motorcycle racing"/>
+            <xs:enumeration value="motorsports"/>
+            <xs:enumeration value="mountain biking"/>
+            <xs:enumeration value="music"/>
+            <xs:enumeration value="music special"/>
+            <xs:enumeration value="music talk"/>
+            <xs:enumeration value="musical"/>
+            <xs:enumeration value="musical comedy"/>
+            <xs:enumeration value="mystery"/>
+            <xs:enumeration value="nature"/>
+            <xs:enumeration value="news"/>
+            <xs:enumeration value="newsmagazine"/>
+            <xs:enumeration value="olympics"/>
+            <xs:enumeration value="opera"/>
+            <xs:enumeration value="outdoors"/>
+            <xs:enumeration value="parade"/>
+            <xs:enumeration value="paranormal"/>
+            <xs:enumeration value="parenting"/>
+            <xs:enumeration value="performing arts"/>
+            <xs:enumeration value="playoff sports"/>
+            <xs:enumeration value="poker"/>
+            <xs:enumeration value="politics"/>
+            <xs:enumeration value="polo"/>
+            <xs:enumeration value="pool"/>
+            <xs:enumeration value="pro wrestling"/>
+            <xs:enumeration value="public affairs"/>
+            <xs:enumeration value="racquet"/>
+            <xs:enumeration value="reality"/>
+            <xs:enumeration value="religious"/>
+            <xs:enumeration value="ringuette"/>
+            <xs:enumeration value="rodeo"/>
+            <xs:enumeration value="roller derby"/>
+            <xs:enumeration value="romance"/>
+            <xs:enumeration value="romantic comedy"/>
+            <xs:enumeration value="rowing"/>
+            <xs:enumeration value="rugby"/>
+            <xs:enumeration value="running"/>
+            <xs:enumeration value="sailing"/>
+            <xs:enumeration value="science"/>
+            <xs:enumeration value="science fiction"/>
+            <xs:enumeration value="self improvement"/>
+            <xs:enumeration value="shooting"/>
+            <xs:enumeration value="shopping"/>
+            <xs:enumeration value="sitcom"/>
+            <xs:enumeration value="skateboarding"/>
+            <xs:enumeration value="skating"/>
+            <xs:enumeration value="skeleton"/>
+            <xs:enumeration value="skiing"/>
+            <xs:enumeration value="snooker"/>
+            <xs:enumeration value="snowboarding"/>
+            <xs:enumeration value="snowmobile"/>
+            <xs:enumeration value="soap"/>
+            <xs:enumeration value="soap special"/>
+            <xs:enumeration value="soap talk"/>
+            <xs:enumeration value="soccer"/>
+            <xs:enumeration value="softball"/>
+            <xs:enumeration value="special"/>
+            <xs:enumeration value="speed skating"/>
+            <xs:enumeration value="sports talk"/>
+            <xs:enumeration value="squash"/>
+            <xs:enumeration value="standup"/>
+            <xs:enumeration value="sumo wrestling"/>
+            <xs:enumeration value="surfing"/>
+            <xs:enumeration value="suspense"/>
+            <xs:enumeration value="swimming"/>
+            <xs:enumeration value="table tennis"/>
+            <xs:enumeration value="talk"/>
+            <xs:enumeration value="technology"/>
+            <xs:enumeration value="tennis"/>
+            <xs:enumeration value="theater"/>
+            <xs:enumeration value="thriller"/>
+            <xs:enumeration value="track/field"/>
+            <xs:enumeration value="travel"/>
+            <xs:enumeration value="triathlon"/>
+            <xs:enumeration value="variety"/>
+            <xs:enumeration value="volleyball"/>
+            <xs:enumeration value="war"/>
+            <xs:enumeration value="water polo"/>
+            <xs:enumeration value="water skiing"/>
+            <xs:enumeration value="watersports"/>
+            <xs:enumeration value="weather"/>
+            <xs:enumeration value="weightlifting"/>
+            <xs:enumeration value="western"/>
+            <xs:enumeration value="wrestling"/>
+            <xs:enumeration value="yacht racing"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="regionType">
+    <xs:annotation>
+      <xs:documentation>
+        Defines acceptable regions
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="us"/>
+      <xs:enumeration value="US"/>
+      <xs:enumeration value="ca"/>
+      <xs:enumeration value="CA"/>
+      <xs:enumeration value="gb"/>
+      <xs:enumeration value="GB"/>
+      <xs:enumeration value="ie"/>
+      <xs:enumeration value="IE"/>
+      <xs:enumeration value="au"/>
+      <xs:enumeration value="AU"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="playIdType">
+    <xs:restriction base="requiredStringType">
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="releaseYearType">
+    <xs:annotation>
+      <xs:documentation>
+        Year initially released or first aired
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedShort">
+      <xs:minInclusive value="1900"/>
+      <xs:maxInclusive value="2099"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="namePartsType">
+    <xs:sequence>
+      <xs:element name="firstName" type="requiredStringType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="middleName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="personNameType">
+    <xs:choice>
+      <xs:element name="fullName" type="requiredStringType" minOccurs="1" maxOccurs="1"/>
+      <xs:group ref="namePartsType"/>
+    </xs:choice>
+  </xs:group>
+  <xs:complexType name="castType">
+    <xs:sequence>
+      <xs:element name="person" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="personNameType"/>
+            <xs:element name="image" type="absoluteURI" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="role" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="Actor"/>
+                  <xs:enumeration value="Anchor"/>
+                  <xs:enumeration value="Host"/>
+                  <xs:enumeration value="Narrator"/>
+                  <xs:enumeration value="Voice"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="birthDate" type="dateType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="deathDate" type="dateType" minOccurs="0" maxOccurs="1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="crewType">
+    <xs:sequence>
+      <xs:element name="person" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:group ref="personNameType"/>
+            <xs:element name="image" type="absoluteURI" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="role" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="Director"/>
+                  <xs:enumeration value="Host"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="birthDate" type="dateType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="deathDate" type="dateType" minOccurs="0" maxOccurs="1"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="titlesType">
+    <xs:annotation>
+      <xs:documentation>
+        In the future, multiple titles can be used here to support multiple languages. At the moment, Roku only supports English (en).
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="title" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="requiredStringType">
+              <xs:attribute name="language" type="languageType" use="optional" default="en"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="movieImagesType">
+    <xs:sequence>
+      <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="url" minOccurs="1" maxOccurs="1" type="absoluteURI"/>
+          </xs:sequence>
+          <xs:attribute name="language" type="languageType" use="optional" default="en"/>
+          <xs:attribute name="category" use="optional" default="Poster Art">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Poster Art"/>
+                <xs:enumeration value="Box Art"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="width" use="optional">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="240"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="height" use="optional">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="360"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tvImagesType">
+    <xs:sequence>
+      <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="url" minOccurs="1" maxOccurs="1" type="absoluteURI"/>
+          </xs:sequence>
+          <xs:attribute name="language" type="languageType" use="optional" default="en"/>
+          <xs:attribute name="width" use="optional">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="360"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="height" use="optional">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="270"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="category" use="optional"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descriptionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="language" type="languageType" use="optional">
+          <xs:annotation>
+            <xs:documentation>
+              If omitted, default is en
+						</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="length" type="descriptionLengthType" use="optional">
+          <xs:annotation>
+            <xs:documentation>
+              If omitted, default is 60.
+						</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="descriptionsType">
+    <xs:annotation>
+      <xs:documentation>
+        You must provide a movie description that does not exceed 60 characters.
+        You may want to, though not required, provide a second longer description
+        not to exceed 500 characters.
+			</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:restriction base="descriptionType">
+              <xs:maxLength value="500"/>
+            </xs:restriction>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="dateType">
+    <xs:annotation>
+      <xs:documentation>Used to define date type. Supports yyyy-mm-dd</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="keywordType">
+    <xs:annotation>
+      <xs:documentation>
+        This type defines keyword category type
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Character"/>
+      <xs:enumeration value="General"/>
+      <xs:enumeration value="Mood"/>
+      <xs:enumeration value="Setting"/>
+      <xs:enumeration value="Subject"/>
+      <xs:enumeration value="Theme"/>
+      <xs:enumeration value="Time Period"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="keywordsType">
+    <xs:sequence>
+      <xs:element name="keyword" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="type" type="keywordType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="word" minOccurs="1" maxOccurs="1">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="75"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:all>
+          <xs:attribute name="language" use="optional" default="en"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ratingsType">
+    <xs:sequence>
+      <xs:element name="rating" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="source" type="ratingSourceType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="rating" type="ratingCodeType" minOccurs="1" maxOccurs="1"/>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="videosType">
+    <xs:sequence>
+      <xs:element name="video" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="region" type="regionType" minOccurs="0" maxOccurs="1">
+              <xs:annotation>
+                <xs:documentation>If omitted, us will be default</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="playId" type="playIdType" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="viewOptions" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="option" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:all>
+                        <xs:element name="price" type="priceType" minOccurs="0" maxOccurs="1">
+                          <xs:annotation>
+                            <xs:documentation>
+                              May be omitted if licenseType is subscription or free. When omitted, price will be set to 0.00.
+														</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="currency" type="currencyType" minOccurs="0" maxOccurs="1">
+                          <xs:annotation>
+                            <xs:documentation>
+                              If omitted, USD will be used.
+														</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="quality" type="qualityType" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="license" type="licenseType" minOccurs="1" maxOccurs="1"/>
+                      </xs:all>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+              <xs:unique name="uniqueVideoOptions">
+                <xs:selector xpath="option"/>
+                <xs:field xpath="quality"/>
+                <xs:field xpath="license"/>
+              </xs:unique>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="idType">
+    <xs:annotation>
+      <xs:documentation>
+        Used to define constraints for id
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+      <xs:minLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="runTimeType">
+    <xs:annotation>
+      <xs:documentation>
+        Used to define constraints for runTime
+			</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:unsignedInt">
+      <xs:minInclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="partnerContent">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="movies" maxOccurs="1" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="movie" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="titles" type="titlesType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="images" type="movieImagesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="descriptions" type="descriptionsType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="runTime" type="runTimeType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="releaseYear" type="releaseYearType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="cast" type="castType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="crew" type="crewType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="ratings" type="ratingsType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="keywords" type="keywordsType" minOccurs="0" maxOccurs="1">
+                      <xs:unique name="Unique_movie_keyword">
+                        <xs:selector xpath="keyword"/>
+                        <xs:field xpath="word"/>
+                      </xs:unique>
+                    </xs:element>
+                    <xs:element name="genres" type="genresType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="videos" type="videosType" minOccurs="1" maxOccurs="1"/>
+                  </xs:all>
+                  <xs:attribute name="id" type="idType" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+          <xs:unique name="uniqueMovieId">
+            <xs:selector xpath="movie"/>
+            <xs:field xpath="@id"/>
+          </xs:unique>
+        </xs:element>
+        <xs:element name="seriesItems" maxOccurs="1" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="series" maxOccurs="unbounded" minOccurs="1">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="titles" type="titlesType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="images" type="tvImagesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="descriptions" type="descriptionsType" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="originalAirDate" type="dateType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="cast" type="castType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="crew" type="crewType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="seasons" minOccurs="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="season" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="seasonNumber" type="xs:unsignedShort" minOccurs="1" maxOccurs="1"/>
+                                <xs:element name="images" type="tvImagesType" minOccurs="0" maxOccurs="1"/>
+                                <xs:element name="episodes" minOccurs="1" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="episode" maxOccurs="unbounded" minOccurs="1">
+                                        <xs:complexType>
+                                          <xs:all>
+                                            <xs:element name="titles" type="titlesType" minOccurs="1" maxOccurs="1"/>
+                                            <xs:element name="images" type="tvImagesType" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="descriptions" type="descriptionsType" minOccurs="1" maxOccurs="1"/>
+                                            <xs:element name="episodeNumber" type="xs:unsignedShort" minOccurs="1" maxOccurs="1"/>
+                                            <xs:element name="airDate" type="dateType" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="cast" type="castType" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="crew" type="crewType" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="ratings" type="ratingsType" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="keywords" type="keywordsType" minOccurs="0" maxOccurs="1">
+                                              <xs:unique name="Unique_episode_keyword">
+                                                <xs:selector xpath="keyword"/>
+                                                <xs:field xpath="word"/>
+                                              </xs:unique>
+                                            </xs:element>
+                                            <xs:element name="genres" type="genresType" minOccurs="0" maxOccurs="1"/>
+                                            <xs:element name="videos" type="videosType" minOccurs="1" maxOccurs="1"/>
+                                          </xs:all>
+                                          <xs:attribute name="id" type="idType" use="required"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                  <xs:attribute name="id" type="idType" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+          <xs:unique name="uniqueSeriesId">
+            <xs:selector xpath="series"/>
+            <xs:field xpath="@id"/>
+          </xs:unique>
+          <xs:unique name="uniqueEpisode">
+            <xs:selector xpath=".//episode"/>
+            <xs:field xpath="@id"/>
+          </xs:unique>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

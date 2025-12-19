@@ -1,5 +1,5 @@
 ---
-title: tets
+title: BrightScript
 deprecated: false
 hidden: false
 metadata:

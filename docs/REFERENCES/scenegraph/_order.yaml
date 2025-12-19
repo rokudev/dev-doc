@@ -6,8 +6,8 @@
 - renderable-nodes
 - label-nodes
 - animation-nodes
-- control-nodes
 - typographic-nodes
+- control-nodes
 - layout-group-nodes
 - dynamic-voice-keyboard-nodes
 - standard-dialog-framework-nodes

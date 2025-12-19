@@ -2,6 +2,7 @@
 - xml-elements
 - node
 - scene
+- abstract-nodes
 - renderable-nodes
 - label-nodes
 - layout-group-nodes

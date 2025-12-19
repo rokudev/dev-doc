@@ -1,5 +1,5 @@
 ---
-title: Security
+title: Security on the Roku platform
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-# Security on the Roku platform
 The Roku Platform is designed to protect each app's intellectual property, while ensuring the audience is safe from malicious attacks.
 
 Roku devices are designed to play a variety of streaming
@@ -69,29 +67,31 @@ applications can share registry data by creating each application's
 package with the same developer ID keys.
 
 ## App intellectual property
+
 All intellectual property and code is protected by the publisher/partner/developer.
 
 ## Account and payment protection
+
 When a new user creates a Roku account, their personal information is recorded in our secure online system. For making purchases in Roku apps, the customer can opt-in to require a PIN and dialog prompt before approving a purchase.
 
 In addition, apps are allowed to request limited information from users. When an app is creating a new user account for their backend service, the Roku OS will prompt a dialog for the user to approve the requested information before sharing.
 
 Information that apps can request about users includes:
 
-- first name
-- last name
-- email
-- street
-- city
-- state
-- zip
-- country
-- phone
+* first name
+* last name
+* email
+* street
+* city
+* state
+* zip
+* country
+* phone
 
 Learn more about the APIs to add purchases to your apps:
 
-- [roChannelStore](/docs/references/brightscript/components/rochannelstore.md)
-- [ChannelStore node](/docs/references/scenegraph/control-nodes/channelstore.md)
+* [roChannelStore](/docs/references/brightscript/components/rochannelstore.md)
+* [ChannelStore node](/docs/references/scenegraph/control-nodes/channelstore.md)
 
 ## Packaging
 
@@ -109,10 +109,9 @@ The Roku OS supports High-bandwidth Digital Content Protection (HDCP) for conten
 
 For more details, see [Content Protection](/docs/specs/media/content-protection.md#copy-protection).
 
-
 **Related resources:**
 
-- [How apps work](/docs/features/features-overview.md#how-channels-work)
-- [Packaging apps](/docs/developer-program/publishing/packaging-channels.md)
-- [DRM details](/docs/specs/media/content-protection.md#drm)
-- [Content protection](/docs/specs/media/content-protection.md#copy-protection)
+* [How apps work](/docs/features/features-overview.md#how-channels-work)
+* [Packaging apps](/docs/developer-program/publishing/packaging-channels.md)
+* [DRM details](/docs/specs/media/content-protection.md#drm)
+* [Content protection](/docs/specs/media/content-protection.md#copy-protection)

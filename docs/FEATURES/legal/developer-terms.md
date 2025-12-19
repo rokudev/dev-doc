@@ -1,5 +1,5 @@
 ---
-title: Developer Terms
+title: Developer terms and agreements
 excerpt: ''
 deprecated: false
 hidden: true

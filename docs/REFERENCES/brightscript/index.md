@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: BrightScript
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,5 +10,3 @@ metadata:
 next:
   description: ''
 ---
-
-# BrightScript API

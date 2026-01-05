@@ -1,5 +1,5 @@
 ---
-title: Abstract Nodes
+title: Abstract nodes
 excerpt: ''
 deprecated: false
 hidden: true

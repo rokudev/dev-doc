@@ -1,5 +1,5 @@
 ---
-title: "Label Nodes"
+title: Label nodes
 excerpt: ''
 deprecated: false
 hidden: true

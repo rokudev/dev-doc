@@ -1,5 +1,5 @@
 ---
-title: "Abstract Nodes"
+title: Abstract Nodes
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-# Abstract Nodes
+# Abstract nodes
 
 Welcome to the Abstract Nodes section!

@@ -1,5 +1,5 @@
 ---
-title: "Dynamic Voice Keyboard Nodes"
+title: Dynamic voice keyboard nodes
 excerpt: ''
 deprecated: false
 hidden: true

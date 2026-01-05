@@ -1,5 +1,5 @@
 ---
-title: Standard Keyboard Dialog
+title: "StandardKeyboardDialog"
 excerpt: ''
 deprecated: false
 hidden: true

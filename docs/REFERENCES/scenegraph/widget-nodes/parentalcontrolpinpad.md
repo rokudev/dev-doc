@@ -1,5 +1,5 @@
 ---
-title: Parentalcontrolpinpad
+title: "ParentalControlPinPad"
 excerpt: ''
 deprecated: false
 hidden: true

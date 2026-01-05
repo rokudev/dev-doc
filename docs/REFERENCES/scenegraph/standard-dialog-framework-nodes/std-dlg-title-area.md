@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Title Area
+title: "StdDlgTitleArea"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Ifaudioplayer
+title: "ifAudioPlayer"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Global Math Functions
+title: "Global math functions"
 excerpt: ''
 deprecated: false
 hidden: true

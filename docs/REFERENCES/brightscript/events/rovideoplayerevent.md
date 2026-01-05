@@ -1,5 +1,5 @@
 ---
-title: Rovideoplayerevent
+title: "roVideoPlayerEvent"
 excerpt: ''
 deprecated: false
 hidden: true

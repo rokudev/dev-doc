@@ -1,5 +1,5 @@
 ---
-title: Ifenum
+title: "ifEnum"
 excerpt: ''
 deprecated: false
 hidden: true

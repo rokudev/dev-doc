@@ -1,5 +1,5 @@
 ---
-title: Ifappmanager
+title: "ifAppManager"
 excerpt: ''
 deprecated: false
 hidden: true

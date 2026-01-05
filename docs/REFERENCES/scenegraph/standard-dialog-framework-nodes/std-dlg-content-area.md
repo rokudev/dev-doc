@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Content Area
+title: "StdDlgContentArea"
 excerpt: ''
 deprecated: false
 hidden: true

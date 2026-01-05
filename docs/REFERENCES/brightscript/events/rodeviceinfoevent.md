@@ -1,5 +1,5 @@
 ---
-title: Rodeviceinfoevent
+title: "roDeviceInfoEvent"
 excerpt: ''
 deprecated: false
 hidden: true

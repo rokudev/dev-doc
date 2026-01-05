@@ -1,5 +1,5 @@
 ---
-title: Pinpad
+title: "PinPad"
 excerpt: ''
 deprecated: false
 hidden: true

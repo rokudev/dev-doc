@@ -1,5 +1,5 @@
 ---
-title: Billing
+title: "Subscriptions and one-time purchases"
 excerpt: ''
 deprecated: false
 hidden: true

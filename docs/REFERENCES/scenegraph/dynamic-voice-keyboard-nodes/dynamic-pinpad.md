@@ -1,5 +1,5 @@
 ---
-title: Dynamic Pinpad
+title: "DynamicPinPad"
 excerpt: ''
 deprecated: false
 hidden: true

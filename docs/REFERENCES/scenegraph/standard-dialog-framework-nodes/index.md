@@ -1,5 +1,5 @@
 ---
-title: Standard Dialog Framework Overview
+title: "Standard dialog framework"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Iffontregistry
+title: "ifFontRegistry"
 excerpt: ''
 deprecated: false
 hidden: true

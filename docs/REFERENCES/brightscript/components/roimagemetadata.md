@@ -1,5 +1,5 @@
 ---
-title: Roimagemetadata
+title: "roImageMetadata"
 excerpt: ''
 deprecated: false
 hidden: true

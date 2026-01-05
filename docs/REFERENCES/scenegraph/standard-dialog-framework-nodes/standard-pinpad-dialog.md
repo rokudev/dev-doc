@@ -1,5 +1,5 @@
 ---
-title: Standard Pinpad Dialog
+title: "StandardPinPadDialog"
 excerpt: ''
 deprecated: false
 hidden: true

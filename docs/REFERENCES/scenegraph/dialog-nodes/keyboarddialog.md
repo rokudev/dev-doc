@@ -1,5 +1,5 @@
 ---
-title: Keyboarddialog
+title: "KeyboardDialog"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Componentlibrary
+title: "ComponentLibrary"
 excerpt: ''
 deprecated: false
 hidden: true

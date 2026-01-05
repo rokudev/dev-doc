@@ -1,5 +1,5 @@
 ---
-title: Ifarrayget
+title: "ifArrayGet"
 excerpt: ''
 deprecated: false
 hidden: true

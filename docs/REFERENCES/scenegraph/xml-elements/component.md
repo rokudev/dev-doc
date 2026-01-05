@@ -1,5 +1,5 @@
 ---
-title: Component
+title: "<component\>"
 excerpt: ''
 deprecated: false
 hidden: true

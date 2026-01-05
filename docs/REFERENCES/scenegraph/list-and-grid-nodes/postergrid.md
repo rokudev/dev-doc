@@ -1,5 +1,5 @@
 ---
-title: Postergrid
+title: "PosterGrid"
 excerpt: ''
 deprecated: false
 hidden: true

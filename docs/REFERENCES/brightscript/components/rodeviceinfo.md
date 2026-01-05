@@ -1,5 +1,5 @@
 ---
-title: Rodeviceinfo
+title: "roDeviceInfo"
 excerpt: ''
 deprecated: false
 hidden: true

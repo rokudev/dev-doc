@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Button
+title: "StdDlgButton"
 excerpt: ''
 deprecated: false
 hidden: true

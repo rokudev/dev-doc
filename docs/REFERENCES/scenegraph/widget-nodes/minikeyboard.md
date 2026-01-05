@@ -1,5 +1,5 @@
 ---
-title: Minikeyboard
+title: "MiniKeyboard"
 excerpt: ''
 deprecated: false
 hidden: true

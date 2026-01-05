@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Keyboard Item
+title: "StdDlgKeyboardItem"
 excerpt: ''
 deprecated: false
 hidden: true

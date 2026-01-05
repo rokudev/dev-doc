@@ -1,5 +1,5 @@
 ---
-title: Poster
+title: "Poster"
 excerpt: ''
 deprecated: false
 hidden: true

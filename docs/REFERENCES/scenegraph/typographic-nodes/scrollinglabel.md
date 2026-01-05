@@ -1,5 +1,5 @@
 ---
-title: Scrollinglabel
+title: "ScrollingLabel"
 excerpt: ''
 deprecated: false
 hidden: true

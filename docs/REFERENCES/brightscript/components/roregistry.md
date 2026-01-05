@@ -1,5 +1,5 @@
 ---
-title: Roregistry
+title: "roRegistry"
 excerpt: ''
 deprecated: false
 hidden: true

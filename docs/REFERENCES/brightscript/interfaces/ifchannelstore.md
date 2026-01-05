@@ -1,5 +1,5 @@
 ---
-title: Ifchannelstore
+title: "ifChannelStore"
 excerpt: ''
 deprecated: false
 hidden: true

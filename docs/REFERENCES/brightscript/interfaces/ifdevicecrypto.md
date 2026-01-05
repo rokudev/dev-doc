@@ -1,5 +1,5 @@
 ---
-title: Ifdevicecrypto
+title: "ifDeviceCrypto"
 excerpt: ''
 deprecated: false
 hidden: true

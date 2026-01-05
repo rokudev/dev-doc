@@ -1,5 +1,5 @@
 ---
-title: Roappmemorynotificationevent
+title: "roAppMemoryNotificationEvent"
 excerpt: ''
 deprecated: false
 hidden: true

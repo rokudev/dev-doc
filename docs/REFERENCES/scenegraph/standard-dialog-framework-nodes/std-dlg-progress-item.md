@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Progress Item
+title: "StdDlgProgressItem"
 excerpt: ''
 deprecated: false
 hidden: true

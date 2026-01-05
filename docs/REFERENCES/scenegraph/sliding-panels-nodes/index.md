@@ -1,5 +1,5 @@
 ---
-title: Sliding Panels
+title: "Sliding panels"
 excerpt: ''
 deprecated: false
 hidden: true

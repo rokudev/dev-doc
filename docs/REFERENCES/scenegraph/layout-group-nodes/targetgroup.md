@@ -1,5 +1,5 @@
 ---
-title: Targetgroup
+title: "TargetGroup"
 excerpt: ''
 deprecated: false
 hidden: true

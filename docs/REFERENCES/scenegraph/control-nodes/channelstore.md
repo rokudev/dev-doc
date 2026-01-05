@@ -1,5 +1,5 @@
 ---
-title: Channelstore
+title: "ChannelStore"
 excerpt: ''
 deprecated: false
 hidden: true

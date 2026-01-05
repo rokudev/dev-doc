@@ -1,5 +1,5 @@
 ---
-title: Colorfieldinterpolator
+title: "ColorFieldInterpolator"
 excerpt: ''
 deprecated: false
 hidden: true

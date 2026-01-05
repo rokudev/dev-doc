@@ -1,5 +1,5 @@
 ---
-title: Ifsocketconnectionstatus
+title: "ifSocketConnectionStatus"
 excerpt: ''
 deprecated: false
 hidden: true

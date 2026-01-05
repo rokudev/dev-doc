@@ -1,5 +1,5 @@
 ---
-title: Pindialog
+title: "PinDialog"
 excerpt: ''
 deprecated: false
 hidden: true

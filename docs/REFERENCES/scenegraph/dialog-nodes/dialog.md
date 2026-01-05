@@ -1,5 +1,5 @@
 ---
-title: Dialog
+title: "Dialog"
 excerpt: ''
 deprecated: false
 hidden: true

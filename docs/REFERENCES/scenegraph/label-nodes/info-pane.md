@@ -1,5 +1,5 @@
 ---
-title: Info Pane
+title: "InfoPane"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Animationbase
+title: "AnimationBase"
 excerpt: ''
 deprecated: false
 hidden: true

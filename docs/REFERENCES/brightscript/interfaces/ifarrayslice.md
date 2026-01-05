@@ -1,5 +1,5 @@
 ---
-title: Ifarrayslice
+title: "ifArraySlice"
 excerpt: ''
 deprecated: false
 hidden: true

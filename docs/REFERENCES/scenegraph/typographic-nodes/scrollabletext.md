@@ -1,5 +1,5 @@
 ---
-title: Scrollabletext
+title: "ScrollableText"
 excerpt: ''
 deprecated: false
 hidden: true

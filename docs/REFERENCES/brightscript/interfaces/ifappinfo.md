@@ -1,5 +1,5 @@
 ---
-title: Ifappinfo
+title: "ifAppInfo"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Ifregex
+title: "ifRegex"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Global String Functions
+title: "Global string functions"
 excerpt: ''
 deprecated: false
 hidden: true

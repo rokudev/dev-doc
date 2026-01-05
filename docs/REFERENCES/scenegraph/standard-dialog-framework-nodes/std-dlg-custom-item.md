@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Custom Item
+title: "StdDlgCustomItem"
 excerpt: ''
 deprecated: false
 hidden: true

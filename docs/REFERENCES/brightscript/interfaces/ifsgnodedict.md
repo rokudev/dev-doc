@@ -1,5 +1,5 @@
 ---
-title: Ifsgnodedict
+title: "ifSGNodeDict"
 excerpt: ''
 deprecated: false
 hidden: true

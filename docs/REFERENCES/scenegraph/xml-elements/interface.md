@@ -1,5 +1,5 @@
 ---
-title: Interface
+title: "<interface\>"
 excerpt: ''
 deprecated: false
 hidden: true

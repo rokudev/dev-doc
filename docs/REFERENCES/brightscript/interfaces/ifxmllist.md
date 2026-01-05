@@ -1,5 +1,5 @@
 ---
-title: Ifxmllist
+title: "ifXMLList"
 excerpt: ''
 deprecated: false
 hidden: true

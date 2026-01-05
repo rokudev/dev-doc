@@ -1,5 +1,5 @@
 ---
-title: Simplelabel
+title: "SimpleLabel"
 excerpt: ''
 deprecated: false
 hidden: true

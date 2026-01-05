@@ -1,5 +1,5 @@
 ---
-title: Ifdeviceinfo
+title: "ifDeviceInfo"
 excerpt: ''
 deprecated: false
 hidden: true

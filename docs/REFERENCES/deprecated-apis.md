@@ -1,5 +1,5 @@
 ---
-title: Deprecated Apis
+title: "Deprecated APIs"
 excerpt: ''
 deprecated: false
 hidden: true

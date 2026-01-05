@@ -1,5 +1,5 @@
 ---
-title: Rohdmistatus
+title: "roHdmiStatus"
 excerpt: ''
 deprecated: false
 hidden: true

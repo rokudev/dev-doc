@@ -1,5 +1,5 @@
 ---
-title: Ifcecstatus
+title: "ifCECStatus"
 excerpt: ''
 deprecated: false
 hidden: true

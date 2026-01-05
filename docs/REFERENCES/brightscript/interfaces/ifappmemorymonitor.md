@@ -1,5 +1,5 @@
 ---
-title: Ifappmemorymonitor
+title: "ifAppMemoryMonitor"
 excerpt: ''
 deprecated: false
 hidden: true

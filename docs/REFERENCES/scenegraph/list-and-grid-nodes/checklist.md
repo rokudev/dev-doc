@@ -1,5 +1,5 @@
 ---
-title: Checklist
+title: "CheckList"
 excerpt: ''
 deprecated: false
 hidden: true

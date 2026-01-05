@@ -1,5 +1,5 @@
 ---
-title: Sales Activity Report
+title: "Sales Activity Report"
 excerpt: ''
 deprecated: false
 hidden: true

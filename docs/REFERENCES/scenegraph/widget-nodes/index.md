@@ -1,5 +1,5 @@
 ---
-title: Widget Nodes
+title: "Widget Nodes"
 excerpt: ''
 deprecated: false
 hidden: true

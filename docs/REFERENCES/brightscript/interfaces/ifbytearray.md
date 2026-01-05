@@ -1,5 +1,5 @@
 ---
-title: Ifbytearray
+title: "ifByteArray"
 excerpt: ''
 deprecated: false
 hidden: true

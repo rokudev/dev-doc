@@ -1,5 +1,5 @@
 ---
-title: Layoutgroup
+title: "LayoutGroup"
 excerpt: ''
 deprecated: false
 hidden: true

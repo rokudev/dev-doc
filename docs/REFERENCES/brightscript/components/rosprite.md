@@ -1,5 +1,5 @@
 ---
-title: Rosprite
+title: "roSprite"
 excerpt: ''
 deprecated: false
 hidden: true

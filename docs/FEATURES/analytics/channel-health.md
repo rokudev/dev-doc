@@ -1,5 +1,5 @@
 ---
-title: Channel Health
+title: "Channel Health Report"
 excerpt: ''
 deprecated: false
 hidden: true

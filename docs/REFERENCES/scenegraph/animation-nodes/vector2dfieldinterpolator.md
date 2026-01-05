@@ -1,5 +1,5 @@
 ---
-title: Vector2Dfieldinterpolator
+title: "Vector2DFieldInterpolator"
 excerpt: ''
 deprecated: false
 hidden: true

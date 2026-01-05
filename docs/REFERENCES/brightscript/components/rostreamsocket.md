@@ -1,5 +1,5 @@
 ---
-title: Rostreamsocket
+title: "roStreamSocket"
 excerpt: ''
 deprecated: false
 hidden: true

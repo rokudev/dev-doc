@@ -1,5 +1,5 @@
 ---
-title: Soundeffect
+title: "SoundEffect"
 excerpt: ''
 deprecated: false
 hidden: true

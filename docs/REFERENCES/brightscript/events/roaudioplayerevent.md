@@ -1,5 +1,5 @@
 ---
-title: Roaudioplayerevent
+title: "roAudioPlayerEvent"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,9 @@
 ---
+<<<<<<< Updated upstream
 title: Typographic nodes
+=======
+title: "Typography"
+>>>>>>> Stashed changes
 excerpt: ''
 deprecated: false
 hidden: true

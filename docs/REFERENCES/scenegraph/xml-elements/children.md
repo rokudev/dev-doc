@@ -1,5 +1,5 @@
 ---
-title: Children
+title: "<children\>"
 excerpt: ''
 deprecated: false
 hidden: true

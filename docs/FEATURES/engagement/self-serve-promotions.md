@@ -1,5 +1,5 @@
 ---
-title: Self Serve Promotions
+title: "Self-serve app promotion tool"
 excerpt: ''
 deprecated: false
 hidden: true

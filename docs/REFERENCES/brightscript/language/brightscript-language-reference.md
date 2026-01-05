@@ -1,5 +1,5 @@
 ---
-title: Brightscript Language Reference
+title: "BrightScript language reference"
 excerpt: ''
 deprecated: false
 hidden: true

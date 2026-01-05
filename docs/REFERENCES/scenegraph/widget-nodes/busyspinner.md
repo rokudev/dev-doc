@@ -1,5 +1,5 @@
 ---
-title: Busyspinner
+title: "BusySpinner"
 excerpt: ''
 deprecated: false
 hidden: true

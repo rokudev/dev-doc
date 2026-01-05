@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Item Group
+title: "StdDlgItemGroup"
 excerpt: ''
 deprecated: false
 hidden: true

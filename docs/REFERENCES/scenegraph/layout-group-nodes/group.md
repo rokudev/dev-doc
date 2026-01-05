@@ -1,5 +1,5 @@
 ---
-title: Group
+title: "Group"
 excerpt: ''
 deprecated: false
 hidden: true

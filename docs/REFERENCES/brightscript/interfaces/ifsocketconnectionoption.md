@@ -1,5 +1,5 @@
 ---
-title: Ifsocketconnectionoption
+title: "ifSocketConnectionOption"
 excerpt: ''
 deprecated: false
 hidden: true

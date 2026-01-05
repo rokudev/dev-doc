@@ -1,5 +1,5 @@
 ---
-title: Ifimagemetadata
+title: "ifImageMetadata"
 excerpt: ''
 deprecated: false
 hidden: true

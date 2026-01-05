@@ -1,5 +1,5 @@
 ---
-title: Ifregistrysection
+title: "ifRegistrySection"
 excerpt: ''
 deprecated: false
 hidden: true

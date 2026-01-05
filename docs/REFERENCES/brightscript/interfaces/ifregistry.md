@@ -1,5 +1,5 @@
 ---
-title: Ifregistry
+title: "ifRegistry"
 excerpt: ''
 deprecated: false
 hidden: true

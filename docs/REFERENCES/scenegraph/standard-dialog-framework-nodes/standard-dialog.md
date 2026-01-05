@@ -1,5 +1,5 @@
 ---
-title: Standard Dialog
+title: "StandardDialog"
 excerpt: ''
 deprecated: false
 hidden: true

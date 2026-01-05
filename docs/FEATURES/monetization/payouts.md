@@ -1,5 +1,5 @@
 ---
-title: Payouts
+title: "Publisher payouts"
 excerpt: ''
 deprecated: false
 hidden: true

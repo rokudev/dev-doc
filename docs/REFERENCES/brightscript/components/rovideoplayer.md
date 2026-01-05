@@ -1,5 +1,5 @@
 ---
-title: Rovideoplayer
+title: "roVideoPlayer"
 excerpt: ''
 deprecated: false
 hidden: true

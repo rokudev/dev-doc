@@ -1,5 +1,5 @@
 ---
-title: Rochannelstore
+title: "roChannelStore"
 excerpt: ''
 deprecated: false
 hidden: true

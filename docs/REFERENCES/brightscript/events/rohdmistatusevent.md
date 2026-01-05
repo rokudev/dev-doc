@@ -1,5 +1,5 @@
 ---
-title: Rohdmistatusevent
+title: "roHdmiStatusEvent"
 excerpt: ''
 deprecated: false
 hidden: true

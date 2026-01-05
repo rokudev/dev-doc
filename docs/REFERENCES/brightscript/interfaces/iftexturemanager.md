@@ -1,5 +1,5 @@
 ---
-title: Iftexturemanager
+title: "ifTextureManager"
 excerpt: ''
 deprecated: false
 hidden: true

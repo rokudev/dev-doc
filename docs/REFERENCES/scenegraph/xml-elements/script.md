@@ -1,5 +1,5 @@
 ---
-title: Script
+title: "<script\>"
 excerpt: ''
 deprecated: false
 hidden: true

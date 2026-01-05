@@ -1,5 +1,5 @@
 ---
-title: Standard Progress Dialog
+title: "StandardProgressDialog"
 excerpt: ''
 deprecated: false
 hidden: true

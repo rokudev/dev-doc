@@ -1,5 +1,5 @@
 ---
-title: Transaction Report
+title: "Transaction Report"
 excerpt: ''
 deprecated: false
 hidden: true

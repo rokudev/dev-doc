@@ -1,5 +1,5 @@
 ---
-title: Rectangle
+title: "Rectangle"
 excerpt: ''
 deprecated: false
 hidden: true

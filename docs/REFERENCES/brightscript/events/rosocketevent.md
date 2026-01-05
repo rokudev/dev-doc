@@ -1,5 +1,5 @@
 ---
-title: Rosocketevent
+title: "roSocketEvent"
 excerpt: ''
 deprecated: false
 hidden: true

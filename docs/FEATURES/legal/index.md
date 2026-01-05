@@ -1,5 +1,5 @@
 ---
-title: Legal
+title: "Compliance"
 excerpt: ''
 deprecated: false
 hidden: true

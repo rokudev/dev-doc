@@ -1,5 +1,5 @@
 ---
-title: Ifsprite
+title: "ifSprite"
 excerpt: ''
 deprecated: false
 hidden: true

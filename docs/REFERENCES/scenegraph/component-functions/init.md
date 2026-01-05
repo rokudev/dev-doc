@@ -1,5 +1,5 @@
 ---
-title: Init
+title: "init()"
 excerpt: ''
 deprecated: false
 hidden: true

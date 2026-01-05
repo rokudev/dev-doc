@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Bullet Text Item
+title: "StdDlgBulletTextItem"
 excerpt: ''
 deprecated: false
 hidden: true

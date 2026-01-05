@@ -1,5 +1,5 @@
 ---
-title: Voice Text Edit Box
+title: "VoiceTextEditBox"
 excerpt: ''
 deprecated: false
 hidden: true

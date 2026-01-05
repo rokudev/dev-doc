@@ -1,5 +1,5 @@
 ---
-title: Expressions Variables Types
+title: "Expressions, variables, and types"
 excerpt: ''
 deprecated: false
 hidden: true

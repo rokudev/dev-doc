@@ -1,5 +1,5 @@
 ---
-title: Ifsgnodeboundingrect
+title: "ifSGNodeBoundingRect"
 excerpt: ''
 deprecated: false
 hidden: true

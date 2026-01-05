@@ -1,5 +1,5 @@
 ---
-title: Channel Stability
+title: "Channel Stability Report"
 excerpt: ''
 deprecated: false
 hidden: true

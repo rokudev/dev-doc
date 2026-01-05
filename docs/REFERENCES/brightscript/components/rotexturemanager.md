@@ -1,5 +1,5 @@
 ---
-title: Rotexturemanager
+title: "roTextureManager"
 excerpt: ''
 deprecated: false
 hidden: true

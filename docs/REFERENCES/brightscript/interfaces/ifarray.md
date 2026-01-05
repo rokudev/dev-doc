@@ -1,5 +1,5 @@
 ---
-title: Ifarray
+title: "ifArray"
 excerpt: ''
 deprecated: false
 hidden: true

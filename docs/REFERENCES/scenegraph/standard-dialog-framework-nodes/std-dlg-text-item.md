@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Text Item
+title: "StdDlgTextItem"
 excerpt: ''
 deprecated: false
 hidden: true

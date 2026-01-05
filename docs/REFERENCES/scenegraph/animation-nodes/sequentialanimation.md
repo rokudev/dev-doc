@@ -1,5 +1,5 @@
 ---
-title: Sequentialanimation
+title: "SequentialAnimation"
 excerpt: ''
 deprecated: false
 hidden: true

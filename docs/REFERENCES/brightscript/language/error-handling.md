@@ -1,5 +1,5 @@
 ---
-title: Error Handling
+title: "Error handling in BrightScript"
 excerpt: ''
 deprecated: false
 hidden: true

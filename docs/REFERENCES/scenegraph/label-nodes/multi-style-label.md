@@ -1,5 +1,5 @@
 ---
-title: Multi Style Label
+title: "MultiStyleLabel"
 excerpt: ''
 deprecated: false
 hidden: true

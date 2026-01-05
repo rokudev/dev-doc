@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Area Base
+title: "StdDlgAreaBase"
 excerpt: ''
 deprecated: false
 hidden: true

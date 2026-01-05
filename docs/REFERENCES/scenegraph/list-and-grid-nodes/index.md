@@ -1,5 +1,5 @@
 ---
-title: List and Grid Nodes
+title: "Lists and grids"
 excerpt: ''
 deprecated: false
 hidden: true

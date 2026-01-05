@@ -1,5 +1,5 @@
 ---
-title: Statement Summary
+title: "Statement summary"
 excerpt: ''
 deprecated: false
 hidden: true

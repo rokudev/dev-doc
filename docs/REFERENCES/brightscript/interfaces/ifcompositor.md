@@ -1,5 +1,5 @@
 ---
-title: Ifcompositor
+title: "ifCompositor"
 excerpt: ''
 deprecated: false
 hidden: true

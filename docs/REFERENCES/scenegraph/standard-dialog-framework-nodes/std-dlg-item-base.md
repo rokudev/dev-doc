@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Item Base
+title: "StdDlgItemBase"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Button Area
+title: "StdDlgButtonArea"
 excerpt: ''
 deprecated: false
 hidden: true

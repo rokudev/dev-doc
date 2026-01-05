@@ -1,5 +1,5 @@
 ---
-title: Ifarraysort
+title: "ifArraySort"
 excerpt: ''
 deprecated: false
 hidden: true

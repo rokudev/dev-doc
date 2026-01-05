@@ -1,5 +1,5 @@
 ---
-title: Roaudioplayer
+title: "roAudioPlayer"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Maskgroup
+title: "MaskGroup"
 excerpt: ''
 deprecated: false
 hidden: true

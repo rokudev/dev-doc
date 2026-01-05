@@ -1,5 +1,5 @@
 ---
-title: Label Base
+title: "LabelBase"
 excerpt: ''
 deprecated: false
 hidden: true

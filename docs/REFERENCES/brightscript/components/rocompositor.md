@@ -1,5 +1,5 @@
 ---
-title: Rocompositor
+title: "roCompositor"
 excerpt: ''
 deprecated: false
 hidden: true

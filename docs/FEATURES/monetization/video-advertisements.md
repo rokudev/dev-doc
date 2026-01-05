@@ -1,5 +1,5 @@
 ---
-title: Video Advertisements
+title: "Video advertisements"
 excerpt: ''
 deprecated: false
 hidden: true

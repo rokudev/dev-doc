@@ -1,5 +1,5 @@
 ---
-title: Label
+title: "Label"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Arraygrid
+title: "ArrayGrid"
 excerpt: ''
 deprecated: false
 hidden: true

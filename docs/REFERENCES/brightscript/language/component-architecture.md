@@ -1,5 +1,5 @@
 ---
-title: Component Architecture
+title: "Component architecture"
 excerpt: ''
 deprecated: false
 hidden: true

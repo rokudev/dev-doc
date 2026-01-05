@@ -1,5 +1,5 @@
 ---
-title: Parallelanimation
+title: "ParallelAnimation"
 excerpt: ''
 deprecated: false
 hidden: true

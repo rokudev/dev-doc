@@ -1,5 +1,5 @@
 ---
-title: Channel Store
+title: "Streaming Store"
 excerpt: ''
 deprecated: false
 hidden: true

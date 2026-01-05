@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Graphic Item
+title: "StdDlgGraphicItem"
 excerpt: ''
 deprecated: false
 hidden: true

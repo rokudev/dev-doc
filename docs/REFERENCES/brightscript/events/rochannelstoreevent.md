@@ -1,5 +1,5 @@
 ---
-title: Rochannelstoreevent
+title: "roChannelStoreEvent"
 excerpt: ''
 deprecated: false
 hidden: true

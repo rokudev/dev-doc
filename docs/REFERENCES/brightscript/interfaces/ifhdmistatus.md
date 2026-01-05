@@ -1,5 +1,5 @@
 ---
-title: Ifhdmistatus
+title: "ifHdmiStatus"
 excerpt: ''
 deprecated: false
 hidden: true

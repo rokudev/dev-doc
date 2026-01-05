@@ -1,5 +1,5 @@
 ---
-title: Floatfieldinterpolator
+title: "FloatFieldInterpolator"
 excerpt: ''
 deprecated: false
 hidden: true

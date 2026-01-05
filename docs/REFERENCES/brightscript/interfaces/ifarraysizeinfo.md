@@ -1,5 +1,5 @@
 ---
-title: Ifarraysizeinfo
+title: "ifArraySizeInfo"
 excerpt: ''
 deprecated: false
 hidden: true

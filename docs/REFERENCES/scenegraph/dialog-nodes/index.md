@@ -1,5 +1,5 @@
 ---
-title: Dialog Nodes
+title: "Dialog Nodes"
 excerpt: ''
 deprecated: false
 hidden: true

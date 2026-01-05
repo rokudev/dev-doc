@@ -1,5 +1,5 @@
 ---
-title: Rofontregistry
+title: "roFontRegistry"
 excerpt: ''
 deprecated: false
 hidden: true

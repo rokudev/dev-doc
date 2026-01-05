@@ -1,5 +1,5 @@
 ---
-title: Contentnode
+title: "ContentNode"
 excerpt: ''
 deprecated: false
 hidden: true

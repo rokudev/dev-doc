@@ -1,5 +1,5 @@
 ---
-title: Dynamic Keyboard
+title: "DynamicKeyboard"
 excerpt: ''
 deprecated: false
 hidden: true

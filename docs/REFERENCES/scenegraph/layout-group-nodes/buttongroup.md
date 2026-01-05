@@ -1,5 +1,5 @@
 ---
-title: Buttongroup
+title: "ButtonGroup"
 excerpt: ''
 deprecated: false
 hidden: true

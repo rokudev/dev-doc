@@ -1,5 +1,5 @@
 ---
-title: Video
+title: "Video"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Standard Message Dialog
+title: "StandardMessageDialog"
 excerpt: ''
 deprecated: false
 hidden: true

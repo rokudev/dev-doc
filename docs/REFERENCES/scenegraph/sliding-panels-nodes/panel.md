@@ -1,5 +1,5 @@
 ---
-title: Panel
+title: "Panel"
 excerpt: ''
 deprecated: false
 hidden: true

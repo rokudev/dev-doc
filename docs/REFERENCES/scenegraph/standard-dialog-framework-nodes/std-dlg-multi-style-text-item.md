@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Multi Style Text Item
+title: "StdDlgMultiStyleTextItem"
 excerpt: ''
 deprecated: false
 hidden: true

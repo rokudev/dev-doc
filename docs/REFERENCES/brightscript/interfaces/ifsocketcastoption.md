@@ -1,5 +1,5 @@
 ---
-title: Ifsocketcastoption
+title: "ifSocketCastOption"
 excerpt: ''
 deprecated: false
 hidden: true

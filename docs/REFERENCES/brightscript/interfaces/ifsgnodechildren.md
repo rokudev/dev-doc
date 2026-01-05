@@ -1,5 +1,5 @@
 ---
-title: Ifsgnodechildren
+title: "ifSGNodeChildren"
 excerpt: ''
 deprecated: false
 hidden: true

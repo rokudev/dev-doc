@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Side Card Area
+title: "StdDlgSideCardArea"
 excerpt: ''
 deprecated: false
 hidden: true

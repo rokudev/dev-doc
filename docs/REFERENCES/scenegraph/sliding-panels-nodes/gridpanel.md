@@ -1,5 +1,5 @@
 ---
-title: Gridpanel
+title: "GridPanel"
 excerpt: ''
 deprecated: false
 hidden: true

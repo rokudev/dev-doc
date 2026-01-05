@@ -1,5 +1,5 @@
 ---
-title: Payout Audit Report
+title: "Payout Audit Report"
 excerpt: ''
 deprecated: false
 hidden: true

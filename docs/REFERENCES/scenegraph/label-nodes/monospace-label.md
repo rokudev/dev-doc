@@ -1,5 +1,5 @@
 ---
-title: Monospace Label
+title: "MonospaceLabel"
 excerpt: ''
 deprecated: false
 hidden: true

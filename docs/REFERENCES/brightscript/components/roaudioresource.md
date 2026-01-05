@@ -1,5 +1,5 @@
 ---
-title: Roaudioresource
+title: "roAudioResource"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Std Dlg Action Card Item
+title: "StdDlgActionCardItem"
 excerpt: ''
 deprecated: false
 hidden: true

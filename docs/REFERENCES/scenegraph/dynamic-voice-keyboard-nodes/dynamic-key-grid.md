@@ -1,5 +1,5 @@
 ---
-title: Dynamic Key Grid
+title: "DynamicKeyGrid"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Ifarrayjoin
+title: "ifArrayJoin"
 excerpt: ''
 deprecated: false
 hidden: true

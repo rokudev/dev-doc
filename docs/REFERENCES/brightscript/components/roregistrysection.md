@@ -1,5 +1,5 @@
 ---
-title: Roregistrysection
+title: "roRegistrySection"
 excerpt: ''
 deprecated: false
 hidden: true

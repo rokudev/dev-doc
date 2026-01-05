@@ -1,5 +1,5 @@
 ---
-title: Panelset
+title: "PanelSet"
 excerpt: ''
 deprecated: false
 hidden: true

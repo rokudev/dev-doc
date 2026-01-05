@@ -1,5 +1,5 @@
 ---
-title: Ifvideoplayer
+title: "ifVideoPlayer"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Ifboolean
+title: "ifBoolean"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Global Utility Functions
+title: "Global utility functions"
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: Targetlist
+title: "TargetList"
 excerpt: ''
 deprecated: false
 hidden: true

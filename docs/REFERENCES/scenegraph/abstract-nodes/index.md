@@ -10,6 +10,3 @@ metadata:
 next:
   description: ''
 ---
-# Abstract nodes
-
-Welcome to the Abstract Nodes section!

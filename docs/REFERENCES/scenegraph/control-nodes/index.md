@@ -1,5 +1,5 @@
 ---
-title: "Control Nodes"
+title: Control nodes
 excerpt: ''
 deprecated: false
 hidden: true

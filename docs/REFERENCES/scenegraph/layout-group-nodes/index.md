@@ -1,5 +1,5 @@
 ---
-title: "Layout Group Nodes"
+title: Layout group nodes
 excerpt: ''
 deprecated: false
 hidden: true

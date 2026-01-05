@@ -1,18 +1,5 @@
 ---
-<<<<<<< Updated upstream
-title: Typographic nodes
-=======
-title: "Typography"
->>>>>>> Stashed changes
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
+title: Typographic Nodes
 ---
 The SceneGraph API includes the **Font** node class for specifying the
 font characteristics to be used by your application. Each node class

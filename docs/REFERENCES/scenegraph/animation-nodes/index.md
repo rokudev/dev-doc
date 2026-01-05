@@ -1,5 +1,5 @@
 ---
-title: Animation Nodes
+title: Animation nodes
 excerpt: ''
 deprecated: false
 hidden: true

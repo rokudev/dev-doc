@@ -1,5 +1,5 @@
 ---
-title: Typographic Nodes
+title: Typographic nodes
 ---
 The SceneGraph API includes the **Font** node class for specifying the
 font characteristics to be used by your application. Each node class

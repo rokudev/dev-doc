@@ -1,5 +1,5 @@
 ---
-title: "roEVPCipher"
+title: roEVPCipher
 excerpt: ''
 deprecated: false
 hidden: true
@@ -32,7 +32,7 @@ Some of the ciphers do not have large keys and others have security implications
 | aes-[128/192/256]-cfb8 | 128/192/256 bit AES in 8 bit CFB mode    | 128,192,256     | 128               |
 | aes-[128/192/256]-ecb  | 128/192/256 bit AES in ECB mode          | 128,192,256     | 128               |
 | aes-[128/192/256]-ofb  | 128/192/256 bit AES in OFB mode          | 128,192,256     | 128               |
-| bf-cbc                 | Blowfish in CBC mode<br />${bq-blowfish} | 128             | 64                |
+| bf-cbc                 | Blowfish in CBC mode | 128             | 64                |
 | bf                     | Alias for bf-cbc                         | 128             | 64                |
 | bf-cfb                 | Blowfish in CFB mode                     | 128             | 64                |
 | bf-ecb                 | Blowfish in ECB mode                     | 128             | 64                |
@@ -53,10 +53,6 @@ Some of the ciphers do not have large keys and others have security implications
 | des-ede3-ofb           | Three key triple DES EDE in OFB mode     | 112             | 64                |
 | desx                   | DESX algorithm                           | approx. 119     | 64                |
 | desx-cbc               | DESX in CBC mode                         | approx. 119     | 64                |
-
-{#bq-blowfish}
-
-> Blowfish (bf*) ciphers are obsolete. Support for these ciphers may be removed in future Roku OS releases.
 
 ## Supported interfaces
 

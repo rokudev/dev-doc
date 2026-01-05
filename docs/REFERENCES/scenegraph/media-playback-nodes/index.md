@@ -1,5 +1,5 @@
 ---
-title: "Media Playback Nodes"
+title: Media playback nodes
 excerpt: ''
 deprecated: false
 hidden: true

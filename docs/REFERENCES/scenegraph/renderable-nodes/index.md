@@ -1,5 +1,5 @@
 ---
-title: "Renderable Nodes"
+title: Renderable nodes
 excerpt: ''
 deprecated: false
 hidden: true

@@ -48,7 +48,7 @@ To generate XML, create an roXMLElement, then use functions like SetName(), AddA
 
 Then call GenXML() to return the XML as a string.
 
-GenXML() takes one parameter (boolean) that indicates whether the generated `<xml>` should have the `<xml>` tag at the top.
+GenXML() takes one parameter (boolean) that indicates whether the generated `<xml>` should have the `<?xml ...>` tag at the top.
 
 **Example: Subroutine to print out the contents of an roXMLElement tree**
 

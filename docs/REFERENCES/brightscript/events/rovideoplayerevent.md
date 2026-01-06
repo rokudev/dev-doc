@@ -1,5 +1,5 @@
 ---
-title: "roVideoPlayerEvent"
+title: roVideoPlayerEvent
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # roVideoPlayerEvent
 
 The roVideoPlayer sends the roVideoPlayerEvent with the following predicates that indicate its valid event types:
@@ -37,7 +36,7 @@ Specific information about the event can be obtained by calling the GetMessages(
 
 #### GetMessage() as String
 
-Returns a description of the message (for exampe, "Format Detected").
+Returns a description of the message (for example, "Format Detected").
 
 #### GetInfo() as Object
 
@@ -253,55 +252,34 @@ Returns the segment start time in seconds.
 
 Returns an associative array with the following information about the stream segment:
 
-| Key | Value |
-| - | - |
-| StreamBandwidth | Bandwidth of the stream being played in kbps |
-| SegStartTime | Segment start time (offset from start of stream) in milliseconds |
-| Sequence | Stream segment sequence number |
-| SegUrl | Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth) |
-| HdrMode | Indicates the HDR format of the content, which may be one of the following values:${hdr-values} |
 
-{#hdr-values}
-
-- 0: UNKNOWN
-- 1: NONE (SDR)
-- 2: HDR10
-- 3: DOLBY_VISION
-- 4: HLG10
-- 5: HDR10_PLUS
-- 6: SL_HDR2
-
-### isDownloadSegmentInfo() as Boolean
-
-Checks whether a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded. This method returns true if a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex() and GetInfo() methods on the event.
-
-#### GetMessage() as String
-
-Returns a description of the message (for example, "Download segment info").
-
-#### GetIndex() as Integer
-
-Returns the segment sequence number.
-
-#### GetInfo() as Object
-
-Returns an associative array containing the following information about the segment download:
-
-| Key | Value |
-| - | - |
-| Status | Status of the download: 0 = success, nonzero = error |
-| Sequence |Stream segment sequence number (same as returned by GetIndex) |
-| SegUrl | Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth) |
-| DownloadDuration | Amount of time spent downloading the segment, in milliseconds |
-| SegSize	| Segment size, in bytes |
-| SegType	| Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux |
-| Bitrate | Bitrate of the segment, in bits per second |
-| SegBitrate |Bitrate of the segment, in kilobits per second (equal to Bitrate / 1000) |
-
-### isRequestSucceeded() as Boolean
-
-Checks whether the player has finished playing an item in the content list. This method returns true if the  player has finished playing a content list item; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetIndex() method on the event.
-
-#### GetIndex() as Integer
-
-Returns the index of the item in the content list that finished playing.
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>StreamBandwidth</td>
+<td>Bandwidth of the stream being played in kbps</td>
+</tr>
+<tr>
+<td>SegStartTime</td>
+<td>Segment start time (offset from start of stream) in milliseconds</td>
+</tr>
+<tr>
+<td>Sequence</td>
+<td>Stream segment sequence number</td>
+</tr>
+<tr>
+<td>SegUrl</td>
+<td>Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth)</td>
+</tr>
+<tr>
+<td>HdrMode</td>
+<td>Indicates the HDR format of the content, which may be one of the following values:<ul><li>0: UNKNOWN</li><li>1: NONE (SDR)</li><li>2: HDR10</li><li>3: DOLBY_VISION</li><li>4: HLG10</li><li>5: HDR10_PLUS</li><li>6: SL_HDR2</li></ul><h3>isDownloadSegmentInfo() as Boolean</h3><p>Checks whether a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded. This method returns true if a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex() and GetInfo() methods on the event.</p><h4>GetMessage() as String</h4><p>Returns a description of the message (for example, "Download segment info").</p><h4>GetIndex() as Integer</h4><p>Returns the segment sequence number.</p><h4>GetInfo() as Object</h4><p>Returns an associative array containing the following information about the segment download:</p></td>
+</tr>
+</tbody>
+</table>

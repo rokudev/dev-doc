@@ -136,88 +136,20 @@ When there is a match (the name uttered by the user matches the registered text 
 
 **Parameters**
 
-| Name    | Type                        | Description                                                  |
-| :------ | :-------------------------- | :----------------------------------------------------------- |
-| actions | array of associative arrays | The list of text strings to be regsitered. Once a text string is registered, it can be matched to voice requests received by the app.  Each text string is defined with the following attributes:${actions-list} |
 
-{#actions-list}
-
-- a **text** key for storing the name or word to be matched.
-- an optional **link** key for storing a deep link.
-
-#### Example
-
-```
-appMgr = CreateObject("roAppManager")
-
-profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
-profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
-profile3 = { text: "John", link: "6Nu70-N37x-901"}
-
-actions = [profile1, profile2, profile3]
-
-appMgr.SetVoiceActionStrings(actions)
-```
-
-### GetLastExitInfo() as Object
-
-*Available since Roku OS 13.0*
-
-**Description**
-
-Returns a roAssociativeArray that includes an exit code indicating why an app was terminated, a timestamp, the state of the app and Roku media player at the time the app was exited, and the memory limit exceeded (if applicable). This helps developers monitor and debug memory issues with their apps.
-
-**Return Values**
-
-An roAssociativeArray the following information about the most recent app exits. Invalid is returned if no app exits are recorded.
-
-| Name               | Type    | Description                                                  |
-| :----------------- | :------ | :----------------------------------------------------------- |
-| timestamp          | String  | An ISO 8601 date string that specifies the time of the app exit. |
-| exit_code          | String  | The exit code, which denotes the cause of the app termination. See [lastExitOrTerminationReason](/docs/developer-program/getting-started/architecture/dev-environment.md#lastexitorterminationreason-parameter) for the list of possible exit codes. For memory-related app exits, this value will be one of the following: ${exit-code-list} |
-| mem_limit          | Integer | The applicable per-app memory limit that was exceeded (in Mb). This attribute is only included If the **exitCode** is EXIT_CHANNEL_MEM_LIMIT_FG or EXIT_CHANNEL_MEM_LIMIT_BG. |
-| app_state          | String  | The state of the app when it was terminated: ${app-state-list} |
-| console_log        | String  | The last 20 lines of text written to the BrightScript console before termination. The console output includes BrightScript print statements, BrightScript errors and warnings, and any system messages. The availability of this attribute depends on the platform and app configuration. |
-| media_player_state | String  | The state of the media player before the app was terminated. This attribute is included for all **exitCode** values except EXIT_CHANNEL_MEM_LIMIT_FG and EXIT_CHANNEL_MEM_LIMIT_BG: ${media_player_state_list} |
-
-{#exit-code-list}
-
-- **EXIT_CHANNEL_MEM_LIMIT_FG**: The app exceeded the per-app memory limit while running in the foreground.
-- **EXIT_CHANNEL_MEM_LIMIT_BG**: The app exceeded the per-app memory limit while running in the background.
-- **EXIT_OUT_OF_MEMORY**: The device was running under low-memory conditions.
-- **EXIT_AM_LOWRESOURCE**: System resources were low.
-- **EXIT_SYSTEM_KILL**: The app was preemptively closed by the Roku OS.
-- **EXIT_UNKNOWN:** The device was rebooted because of low memory, or 10 or more apps had run before the launch of your app.
-
-{#app-state-list}
-
-- **foreground**: The application was running in the foreground.
-- **background**: The application was running in the background.
-
-{#media_player_state_list}
-
-- **playing**: The media player was playing.
-- **stopped**: The media player was stopped.
-
-##### Example
-
-The following sample demonstrates how to use the **GetLastExitInfo()** function.
-
-```
-appManager = CreateObject("roAppManager")
-closureDump = appManager.GetLastExitInfo()
-
-if closureDump <> invalid then
-    print "Timestamp: ", closureDump.timestamp
-    print "exitCode: ", closureDump.exit_code
-    print "limit: ", closureDump.mem_limit
-    print "mediaPlayerState: ", closureDump.media_player_state
-    print "------------------------------ " + "Console Log" + " ------------------------------"
-    print closureDump.console_log
-    print "------------------------------ " + "BrightScript Memory" + " ------------------------------"
-else
-    print "No recorded closure for active plugin"
-end if
-```
-
-#####
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">actions</td>
+<td style="text-align: left;">array of associative arrays</td>
+<td style="text-align: left;">The list of text strings to be regsitered. Once a text string is registered, it can be matched to voice requests received by the app.  Each text string is defined with the following attributes:<ul><li>a <strong>text</strong> key for storing the name or word to be matched.</li><li>an optional <strong>link</strong> key for storing a deep link.</li></ul><h4>Example</h4><p><code>appMgr = CreateObject("roAppManager")&lt;/p&gt;&lt;p&gt;profile1 = { text: "kids", link: "d46ge-i8Y5-192"}profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}profile3 = { text: "John", link: "6Nu70-N37x-901"}&lt;/p&gt;&lt;p&gt;actions = [profile1, profile2, profile3]&lt;/p&gt;&lt;p&gt;appMgr.SetVoiceActionStrings(actions)</code></p><h3>GetLastExitInfo() as Object</h3><p><em>Available since Roku OS 13.0</em></p><p><strong>Description</strong></p><p>Returns a roAssociativeArray that includes an exit code indicating why an app was terminated, a timestamp, the state of the app and Roku media player at the time the app was exited, and the memory limit exceeded (if applicable). This helps developers monitor and debug memory issues with their apps.</p><p><strong>Return Values</strong></p><p>An roAssociativeArray the following information about the most recent app exits. Invalid is returned if no app exits are recorded.</p><p></td>
+</tr>
+</tbody>
+</table>

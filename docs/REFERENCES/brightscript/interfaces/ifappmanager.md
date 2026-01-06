@@ -113,8 +113,6 @@ Apps can check the launch parameters to determine whether the app was launched v
 
 ### SetVoiceActionStrings(actions as Object) as Void
 
-
-
 #### Description
 
 Specifies a list of text strings, such as user profile names, that can be matched to voice requests.
@@ -131,6 +129,8 @@ When there is a match (the name uttered by the user matches the registered text 
 
 - a **text** key for storing the name or word to be matched.
 - an optional **link** key for storing a deep link.
+
+
 
 #### Example
 
@@ -186,6 +186,8 @@ An roAssociativeArray the following information about the most recent app exits.
 - **playing**: The media player was playing.
 - **stopped**: The media player was stopped.
 
+
+
 ##### Example
 
 The following sample demonstrates how to use the **GetLastExitInfo()** function.
@@ -206,5 +208,3 @@ else
     print "No recorded closure for active plugin"
 end if
 ```
-
-#####

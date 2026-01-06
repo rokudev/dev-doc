@@ -57,7 +57,7 @@ If LogType is "http.connect" or "http.error", the event AA contains the base key
     <tr>
       <td>Status</td>
       <td>String</td>
-      <td>If LogType is "http.connect", this will be "ok". Otherwise, it will be one of the following:<br/> <ul><li>unknownerror</li><li>dnsfailure</li><li>dnstimeout</li><li>noroutetohost</li><li>connectiontimeout</li><li>connectionrefused</li><li>untrustedcert</li><li>expiredcert</li><li>nocipher</li><li>handshakefailed</li><li>generalsocketerror</li><li>httperror</li></ul><p>If LogType is "bandwidth.minute", the event AA contains the base keys and the following additional key:</p></td>
+      <td>If LogType is "http.connect", this will be "ok". Otherwise, it will be one of the following:<br /><br /> <ul><li>unknownerror</li><li>dnsfailure</li><li>dnstimeout</li><li>noroutetohost</li><li>connectiontimeout</li><li>connectionrefused</li><li>untrustedcert</li><li>expiredcert</li><li>nocipher</li><li>handshakefailed</li><li>generalsocketerror</li><li>httperror</li></ul><p>If LogType is "bandwidth.minute", the event AA contains the base keys and the following additional key:</p></td>
     </tr>
 
     <tr>

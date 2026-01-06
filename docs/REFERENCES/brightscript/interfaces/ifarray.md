@@ -1,4 +1,16 @@
 ---
+title: ifArray
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+---
 title: "ifArray"
 excerpt: ''
 deprecated: false
@@ -15,13 +27,7 @@ next:
 
 ## Implemented by
 
-| Name        | Description |
-| ----------- | ----------- |
-| [roArray](/docs/references/brightscript/components/roarray.md "roArray")     | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type            |
-| [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") | The byte array component is used to contain and manipulate an arbitrary array of bytes            |
-| [roList](/docs/references/brightscript/components/rolist.md "roList")      | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members            |
-| [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList")   | Contains a list of roXML objects            |
-
+| Name        | Description || ----------- | ----------- || [roArray](/docs/references/brightscript/components/roarray.md "roArray")     | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type            || [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") | The byte array component is used to contain and manipulate an arbitrary array of bytes            || [roList](/docs/references/brightscript/components/rolist.md "roList")      | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members            || [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList")   | Contains a list of roXML objects            |
 
 ## Supported methods
 
@@ -53,10 +59,7 @@ Adds the specified value to the end of the array.
 
 #### Parameters
 
-| Name   | Type    | Description                                    |
-| ------ | ------- | ---------------------------------------------- |
-| tvalue | Dynamic | The value to be added to the end of the array. |
-
+| Name   | Type    | Description                                    || ------ | ------- | ---------------------------------------------- || tvalue | Dynamic | The value to be added to the end of the array. |
 ### Shift() As Dynamic
 
 #### Description
@@ -75,10 +78,7 @@ Adds the specified value to the beginning of the array (at the zero index) and s
 
 #### Parameters
 
-| Name   | Type    | Description                                          |
-| ------ | ------- | ---------------------------------------------------- |
-| tvalue | Dynamic | The value to be added to the beginning of the array. |
-
+| Name   | Type    | Description                                          || ------ | ------- | ---------------------------------------------------- || tvalue | Dynamic | The value to be added to the beginning of the array. |
 ### Delete(index as Integer) As Boolean
 
 #### Description
@@ -86,8 +86,6 @@ Adds the specified value to the beginning of the array (at the zero index) and s
 Deletes the indicated array entry, and shifts all entries up. This decreases the array length by one.
 
 #### Parameters
-
-{#DeleteParameters}   
 
 | Name  | Type    | Description                             |
 | ----- | ------- | --------------------------------------- |

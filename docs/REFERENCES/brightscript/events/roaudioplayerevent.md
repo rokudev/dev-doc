@@ -1,5 +1,5 @@
 ---
-title: "roAudioPlayerEvent"
+title: roAudioPlayerEvent
 excerpt: ''
 deprecated: false
 hidden: true
@@ -130,17 +130,7 @@ Returns an associative array with the following information about the stream seg
 | SegStartTime                                      | Segment start time (offset from start of stream) in milliseconds |
 | Sequence                                          | Stream segment sequence number                               |
 | SegUrl                                            | Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth) |
-| HdrMode | Indicates the HDR format of the content, which may be one of the following values:${hdr-values} |
-
-{#hdr-values}
-
-- 0: UNKNOWN
-- 1: NONE (SDR)
-- 2: HDR10
-- 3: DOLBY_VISION
-- 4: HLG10
-- 5: HDR10_PLUS
-- 6: SL_HDR2
+| HdrMode | Indicates the HDR format of the content, which may be one of the following values: |
 
 ### isDownloadSegmentInfo() as Boolean
 

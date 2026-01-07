@@ -76,29 +76,30 @@ To run a Transaction Report, follow these steps:
         The type of transaction, which may be one of the following values:.
 
         <ComplexTable
-          algin="left"
-        	header="Transaction Event Types"
-          columns={[':Type', ':Meaning']}
+          header="Transaction Event Types"
+          columns={['Type', 'Meaning']}
           data={[
-                    { Type: 'Purchase', Meaning: 'A successful purchase transaction (historically used to indicate purchases under Roku Standard Billing: RSB). Such transactions include 1) one-time purchases. and 2) initial and recurring subscription charges.' },
-                    { Type: 'Cancellation', Meaning: 'Either an end user actively canceled a subscription or Roku is unable to successfully capture the end user\'s subscription event.' },
-                    { Type: 'Renewal', Meaning: 'An end user, who actively cancelled a subscription, successfully signed up again before the previously scheduled expiration of the subscription.' },
-                    { Type: 'DowngradeCancel', Meaning: 'A successful downgrade transaction\'s cancellation of the outgoing (base) subscription.' },
-                    { Type: 'DowngradeSale', Meaning: 'A successful downgrade transaction\'s sale of a new (downgraded) subscription, to replace the outgoing (base) plan.' },
-                    { Type: 'UpgradeCancel', Meaning: 'A successful upgrade transaction\'s cancellation of the outgoing (base) subscription.' },
-                    { Type: 'UpgradeSale', Meaning: 'A successful upgrade transaction\'s sale of a new (upgraded) subscription, replacing the outgoing (base) subscription.' },
-                    { Type: 'CancellationOfferInitiated', Meaning: 'An offer was successfully sent to a customer trying to cancel their subscription.' },
-                    { Type: 'Charge', Meaning: 'A successful purchase transaction (historically used to indicate purchases under Roku as Payment Method: RPM).' },
-                    { Type: 'Refund', Meaning: 'A successful refund transaction (historically used to indicate refunds under Roku as Payment Method: RPM).' },
-                    { Type: 'Reversal', Meaning: 'A successful refund transaction (historically used to indicate refunds under Roku Standard Billing: RSB).' },
-                    { Type: 'GraceInitiated', Meaning: 'Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP.' },
-                    { Type: 'GraceRecovered', Meaning: 'Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same.' },
-                    { Type: 'OnHoldInitiated', Meaning: 'Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.' },
-                    { Type: 'Chargeback', Meaning: 'The customer has initiated a transaction dispute. For apps in the Germany Streaming Store only, a SEPA chargeback may occur when the customer disputes a transaction made through Roku Pay that results in a chargeback or their bank account has insufficient funds.' },
-                    { Type: 'ChargebackReversed', Meaning: 'Roku successfully reversed the chargeback claim.' },
-                    { Type: 'SecondChargeback', Meaning: 'The customer\'s bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback).' }
-                  ]}
+            { Type: 'Purchase', Meaning: 'A successful purchase transaction (historically used to indicate purchases under Roku Standard Billing: RSB). Such transactions include 1) one-time purchases. and 2) initial and recurring subscription charges.' },
+            { Type: 'Cancellation', Meaning: 'Either an end user actively canceled a subscription or Roku is unable to successfully capture the end user\'s subscription event.' },
+            { Type: 'Renewal', Meaning: 'An end user, who actively cancelled a subscription, successfully signed up again before the previously scheduled expiration of the subscription.' },
+            { Type: 'DowngradeCancel', Meaning: 'A successful downgrade transaction\'s cancellation of the outgoing (base) subscription.' },
+            { Type: 'DowngradeSale', Meaning: 'A successful downgrade transaction\'s sale of a new (downgraded) subscription, to replace the outgoing (base) plan.' },
+            { Type: 'UpgradeCancel', Meaning: 'A successful upgrade transaction\'s cancellation of the outgoing (base) subscription.' },
+            { Type: 'UpgradeSale', Meaning: 'A successful upgrade transaction\'s sale of a new (upgraded) subscription, replacing the outgoing (base) subscription.' },
+            { Type: 'CancellationOfferInitiated', Meaning: 'An offer was successfully sent to a customer trying to cancel their subscription.' },
+            { Type: 'Charge', Meaning: 'A successful purchase transaction (historically used to indicate purchases under Roku as Payment Method: RPM).' },
+            { Type: 'Refund', Meaning: 'A successful refund transaction (historically used to indicate refunds under Roku as Payment Method: RPM).' },
+            { Type: 'Reversal', Meaning: 'A successful refund transaction (historically used to indicate refunds under Roku Standard Billing: RSB).' },
+            { Type: 'GraceInitiated', Meaning: 'Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP.' },
+            { Type: 'GraceRecovered', Meaning: 'Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same.' },
+            { Type: 'OnHoldInitiated', Meaning: 'Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.' },
+            { Type: 'Chargeback', Meaning: 'The customer has initiated a transaction dispute. For apps in the Germany Streaming Store only, a SEPA chargeback may occur when the customer disputes a transaction made through Roku Pay that results in a chargeback or their bank account has insufficient funds.' },
+            { Type: 'ChargebackReversed', Meaning: 'Roku successfully reversed the chargeback claim.' },
+            { Type: 'SecondChargeback', Meaning: 'The customer\'s bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback).' }
+          ]}
         />
+
+        <br />
       </td>
     </tr>
   </tbody>

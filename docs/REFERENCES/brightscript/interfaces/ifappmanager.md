@@ -1,9 +1,6 @@
 ---
 title: ifAppManager
 ---
----
-title: ifAppManager
----
 # ifAppManager
 
 

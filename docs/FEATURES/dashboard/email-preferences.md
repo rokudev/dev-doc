@@ -19,6 +19,6 @@ The Developer Dashboard includes an email preferences center that lets you choos
 
 To set your developer program email preferences, [go to the Roku Launchpad](https://developer.roku.com/dev/landing) and click **Email Preferences**. You can also click the **Email Preferences** link in the footer of any Roku Developer's email. You then select the checkboxes for the notifications you want to receive and click **Save preferences**.
 
-<Image alt="roku600px - email-prefs.png" border=\{false\} src="https://image.roku.com/ZHZscHItMTc2/email-prefs.png" />
+<image alt="roku600px - email-prefs.png" border={false} src="https://image.roku.com/ZHZscHItMTc2/email-prefs.png" />
 
 > Regardless of your selections, you will always receive crucial service notifications, such as updates to the certification criteria or changes to the Roku Distribution Agreement.

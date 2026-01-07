@@ -1,5 +1,5 @@
 ---
-title: "Roku Search feed (JSON)"
+title: Roku Search feed (JSON)
 excerpt: ''
 deprecated: false
 hidden: true
@@ -485,7 +485,7 @@ Provide the poster and background images to be displayed for the content item in
 
 | Field       | Type                         | Description                                       | Required |
 | :---------- | :--------------------------- | :------------------------------------------------ | :------- |
-| playOptions | [PlayOption](#playoptions)[] | The list of options for playing the content item. | Required |
+| playOptions | [PlayOption][] | The list of options for playing the content item. | Required |
 
 #### playOptions
 
@@ -558,7 +558,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
 </tr>
 <tr>
 <td>availabilityInfo</td>
-<td>Map<Enum, String[]></td>
+<td>Map\<Enum, String[]\></td>
 <td>The list of <a href="https://www.iso.org/obp/ui/#search/code/">ISO Alpha-2 two-letter country codes</a> in which the content item is to be made available to Roku Search.</td>
 <td>Required, if the <strong>defaultAvailabilityCountries</strong> field is not specified.</td>
 </tr>

@@ -73,12 +73,11 @@ To run a Transaction Report, follow these steps:
       </td>
 
       <td>
-        The type of transaction, which may be one of the following values:  
+        The type of transaction, which may be one of the following values:.
 
-        // To use this in your page, copy the next line and paste into the page and customize the table columns and data.
         <ComplexTable 
           header="Transaction Event Types" 
-          columns={['Type', 'Meaning']} 
+          columns={[':Type', ':Meaning']} 
           data={[
             { Type: 'Purchase', Meaning: 'A successful purchase transaction (historically used to indicate purchases under Roku Standard Billing: RSB). Such transactions include 1) one-time purchases. and 2) initial and recurring subscription charges.' },
             { Type: 'Cancellation', Meaning: 'Either an end user actively canceled a subscription or Roku is unable to successfully capture the end user\'s subscription event.' },

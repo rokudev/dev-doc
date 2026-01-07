@@ -1,3 +1,16 @@
+---
+title: "DRM & content protection"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # DRM & content protection
 
 ## DRM

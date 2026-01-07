@@ -1,3 +1,16 @@
+---
+title: "Hardware specifications"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # Hardware specifications
 
 Roku has a wide assortment of hardware products, including streaming players and smart TVs. This document provides key specifications for these products that can be considered when developing apps on the Roku platform.

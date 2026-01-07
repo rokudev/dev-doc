@@ -1,3 +1,16 @@
+---
+title: "Streaming Store graphics"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # Streaming Store graphics
 
 Roku has defined guidelines for rendering a poster on the Roku home screen and in the Streaming Store. The following section describes the specifications required to display the graphics for an app on the Roku platform.

@@ -177,11 +177,9 @@ You can also access ContentNode attributes as fields using dot (.) notation if y
 
 ~~~
 <component  name = "listitemcontent" extends = "ContentNode" >
-
   <interface >
     <field id = "componentname" type = "string" />
   </interface>
-
 </component>
 ~~~
 
@@ -191,7 +189,7 @@ Then for a listitemcontent ContentNode object iteminfo, you can read or write th
 iteminfo.componentname
 ~~~
 
-> You can only use dot (.) notation to access ContentNode fields as attributes found in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md "Content Meta-Data"), or defined as an [<interface\>](/docs/references/scenegraph/xml-elements/interface.md "<interface\>") element field in a custom ContentNode component.
+> You can only use dot (.) notation to access ContentNode fields as attributes found in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md "Content Meta-Data"), or defined as an [<interface\>](/docs/references/scenegraph/xml-elements/interface.md "\<interface\>") element field in a custom ContentNode component.
 
 ## Content feed video lesson
 

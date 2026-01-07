@@ -50,5 +50,3 @@ All system log events are disabled by default and must be explicitly enabled by 
 </tbody>
 </table>
 
-
-

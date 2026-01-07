@@ -41,7 +41,3 @@ The float value stored in the calling Float object.
 Sets the calling Float object to the specified float value. 
 
 #### Parameters
-
-| Name  | Type  | Description                                            |
-| ----- | ----- | ------------------------------------------------------ |
-| value | Float | The float value to be set on the calling Float object. |

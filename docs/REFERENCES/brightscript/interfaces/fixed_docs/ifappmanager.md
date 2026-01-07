@@ -90,10 +90,10 @@ Updates video or audio [content metadata](/docs/developer-program/getting-starte
 
 ```
 appmgr = CreateObject("roAppManager")
-appmgr.SetNowPlayingContentMetaData(&#123;
+appmgr.SetNowPlayingContentMetaData({
  title: "The Gambler",
  contentType: "movie"
-&#125;)
+})
 ```
 
 To revert an update, pass `invalid` in this method:
@@ -151,9 +151,9 @@ When there is a match (the name uttered by the user matches the registered text 
 ```
 appMgr = CreateObject("roAppManager")
 
-profile1 = &#123; text: "kids", link: "d46ge-i8Y5-192"&#125;
-profile2 = &#123; text: "Jane", link: "2a2Nu-u1D4-555"&#125;
-profile3 = &#123; text: "John", link: "6Nu70-N37x-901"&#125;
+profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
+profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
+profile3 = { text: "John", link: "6Nu70-N37x-901"}
 
 actions = [profile1, profile2, profile3]
 

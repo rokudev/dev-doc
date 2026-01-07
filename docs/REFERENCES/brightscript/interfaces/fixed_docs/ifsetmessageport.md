@@ -31,8 +31,3 @@ next:
 Sets the [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") to be used for all events from the screen.
 
 #### Parameters
-
-| Name           | Type | Description           |
-| -------------- | ---- | --------------------- |
-| Port | Object | The roMessagePort to be used for screen events. |
-

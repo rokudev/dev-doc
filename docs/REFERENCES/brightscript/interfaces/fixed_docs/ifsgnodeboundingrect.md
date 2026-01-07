@@ -254,8 +254,8 @@ RectangleGroup
 Rectangle (Green)
 Rectangle (Yellow)
 <Scene>
-  <Group id="RectGroup" translation="[100, 50]" >
-        <Rectangle id="GreenRect" width="100" height="150" color="0x00FF00FF" translation="[200, 75]" >
+  <Group id="RectGroup" translation="[100, 50]" \>
+        <Rectangle id="GreenRect" width="100" height="150" color="0x00FF00FF" translation="[200, 75]" \>
             <Rectangle id="YellowRect" width="150" height="250" color="0xFFFF00FF" translation="[200,100]" rotation="-0.45"/>
         </Rectangle>
    </Group>

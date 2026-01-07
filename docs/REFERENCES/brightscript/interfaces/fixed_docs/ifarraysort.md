@@ -113,13 +113,13 @@ Performs a stable sort of an array of associative arrays by value of a common fi
 #### Examples
 
 ~~~
-    a=[ &#123;id:3, name:"Betty"&#125;, &#123;id:1, name:"Carol"&#125;, &#123;id:2, name:"Anne"&#125; ]
+    a=[ \{id:3, name:"Betty"\}, \{id:1, name:"Carol"\}, \{id:2, name:"Anne"\} ]
     a.SortBy("name") 
-    REM sets the array to [ &#123;id:2, name:"Anne"&#125;, &#123;id:3, name:"Betty"&#125;, &#123;id:1, name:"Carol"&#125; ]
+    REM sets the array to [ \{id:2, name:"Anne"\}, \{id:3, name:"Betty"\}, \{id:1, name:"Carol"\} ]
     a.SortBy("id") 
-    REM sets the array to [ &#123;id:1, name:"Carol"&#125;, &#123;id:2, name:"Anne"&#125;, &#123;id:3, name:"Betty"&#125; ]
+    REM sets the array to [ \{id:1, name:"Carol"\}, \{id:2, name:"Anne"\}, \{id:3, name:"Betty"\} ]
     a.SortBy("name", "r")  REM reverse order sort
-    REM sets the array to [ &#123;id:1, name:"Carol"&#125;, &#123;id:3, name:"Betty"&#125;, &#123;id:2, name:"Anne"&#125; ]
+    REM sets the array to [ \{id:1, name:"Carol"\}, \{id:3, name:"Betty"\}, \{id:2, name:"Anne"\} ]
 ~~~
 
 ### Reverse() as Void

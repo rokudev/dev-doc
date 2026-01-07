@@ -1,5 +1,5 @@
 ---
-title: "ifChannelStore"
+title: ifChannelStore
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # ifChannelStore
 
 ## Implemented by
@@ -223,7 +222,7 @@ Sets the current Order (shopping cart) to the elements specified in the paramete
 <tr>
 <td>orderInfo</td>
 <td>roAssociativeArray</td>
-<td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: ${action-list}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>&lt;br&gt;m.store = CreateObject("roChannelStore")​&lt;br&gt;' Populate myOrderItems&lt;br&gt;myOrderInfo.action = "Upgrade"&lt;br&gt;m.store.setOrder(myOrderItems, myOrderInfo)&lt;br&gt;</code></code></pre><br />See <a href="/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md#calling-the-roku-web-service-validate-transaction-api">On-device upgrade and downgrade</a> for how to implement Roku Pay web services for upgrades/downgrades.</td>
+<td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: $\\}action-list\\}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>&lt;br&gt;m.store = CreateObject("roChannelStore")​&lt;br&gt;' Populate myOrderItems&lt;br&gt;myOrderInfo.action = "Upgrade"&lt;br&gt;m.store.setOrder(myOrderItems, myOrderInfo)&lt;br&gt;</code></code></pre><br />See <a href="/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md#calling-the-roku-web-service-validate-transaction-api">On-device upgrade and downgrade</a> for how to implement Roku Pay web services for upgrades/downgrades.</td>
 </tr>
 </tbody>
 </table>
@@ -370,12 +369,12 @@ This function works like GetUserData(), but allows the caller to specify which u
 <tr>
 <td>requestInfo<br /></td>
 <td>roAssociativeArray</td>
-<td>Specifies whether the RFI screen is used for customer sign-ups or sign-ins. This may be one of the following values:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>context</td><td>string</td><td>"signup"</td><td>Specifies the context of the RFI screen, which may be one of the following values:<br />$&#123;context-list&#125;<br />See the <a href="#sign-in-example">Sign-in example</a> for how to use this field.</td></tr></tbody></table></td>
+<td>Specifies whether the RFI screen is used for customer sign-ups or sign-ins. This may be one of the following values:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>context</td><td>string</td><td>"signup"</td><td>Specifies the context of the RFI screen, which may be one of the following values:<br />$\\}context-list\\}<br />See the <a href="#sign-in-example">Sign-in example</a> for how to use this field.</td></tr></tbody></table></td>
 </tr>
 <tr>
 <td>forceShowData</td>
 <td>Boolean</td>
-<td>If true, the RFI screen displays the values of the requested customer information to be shared with the app (for example, Jone Doe, <a href="mailto:bmsith@roku.com">j</a><a href="mailto:on.doe@emailaddress.com">on.doe@emailaddress.com</a>). <br /><br />By default, this flag is set to false, which means that the default RFI screen for the region is used. For example, in the US, the RFI screen displays the type of customer information being requested (email address, name, and so on).<br /><br />This flag has no effect if the context field is set to "signin" (the RFI sign-in screen always displays the customer information values). <br /><br /><strong>Example</strong>:<br /><pre><code><code>&lt;br&gt;&lt;br&gt;store = CreateObject("roChannelStore")&lt;br&gt;&lt;br&gt;' Doesn't show user data in dialog unless necessary in he user's region.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth")&lt;br&gt;' Show user data values in dialog.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth", {context: "signup", forceShowData: true})&lt;br&gt;' forceShowData currently has no effect in signin context, as the shared data is always shown.&lt;br&gt;userData = store.GetPartialUserData("email", {context: "signin", forceShowData: false})&lt;br&gt;</code></code></pre></td>
+<td>If true, the RFI screen displays the values of the requested customer information to be shared with the app (for example, Jone Doe, <a href="mailto:bmsith@roku.com">j</a><a href="mailto:on.doe@emailaddress.com">on.doe@emailaddress.com</a>). <br /><br />By default, this flag is set to false, which means that the default RFI screen for the region is used. For example, in the US, the RFI screen displays the type of customer information being requested (email address, name, and so on).<br /><br />This flag has no effect if the context field is set to "signin" (the RFI sign-in screen always displays the customer information values). <br /><br /><strong>Example</strong>:<br /><pre><code><code>&lt;br&gt;&lt;br&gt;store = CreateObject("roChannelStore")&lt;br&gt;&lt;br&gt;' Doesn't show user data in dialog unless necessary in he user's region.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth")&lt;br&gt;' Show user data values in dialog.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth", \\}context: "signup", forceShowData: true\\})&lt;br&gt;' forceShowData currently has no effect in signin context, as the shared data is always shown.&lt;br&gt;userData = store.GetPartialUserData("email", \\}context: "signin", forceShowData: false\\})&lt;br&gt;</code></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -411,7 +410,7 @@ userData = store.GetPartialUserData("email, phone, firstname, lastname")
 store = CreateObject("roChannelStore")
 
 ' Request user's email for sign-in
-userData = store.GetPartialUserData("email", &#123;context: "signin"&#125;)
+userData = store.GetPartialUserData("email", \}context: "signin"\})
 ```
 
 ### GetUserRegionData() as Object
@@ -559,12 +558,12 @@ To verify the JWT, developers must [download the Roku device attestation token c
 The decoded JWT contains the following fields:
 
 ```
-"x-roku-attestation-data": &#123;
+"x-roku-attestation-data": \}
     "nonce": "5E0692E0A389F4F6",
     "channelId": "dev",
     "developerId": "caa73fbb5e75a46a4b6114de51a5ada7d616e2ed",
     "timestampMs": 1656377873990
- &#125;
+ \}
 ```
 
 ### RequestPartnerOrder(orderInfo as roAssociativeArray, productID as String) as Object

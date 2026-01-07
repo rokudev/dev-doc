@@ -256,5 +256,3 @@ Renames the directory.
 
 A flag indicating whether the directory was successfully renamed. If the provided target directory (**toPath**) exists, it is not overwritten; instead the operation fails and this method returns false
 
-
-

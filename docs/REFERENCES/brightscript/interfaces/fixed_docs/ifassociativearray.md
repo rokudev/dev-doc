@@ -130,7 +130,7 @@ An array of associative array keys/value pairs.
 #### Example
 
 ~~~
-    aa = &#123;one:1, two:2, three:3&#125;
+    aa = \{one:1, two:2, three:3\}
     for each item in aa.Items()
         print item.key, item.value
     end for

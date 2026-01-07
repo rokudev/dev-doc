@@ -456,7 +456,7 @@ An associative array with the supported DRM system and features:
 **Example**
 
 ```
-PlayReady : &#123;
+PlayReady : {
     multikey: false
     securestop: true
     tee: false
@@ -469,7 +469,7 @@ Widevine : &#123;
     tee: false
     version: "widevine 16.4.0"
     securityLevel: "1"
-&#125;
+}
 ```
 
 > tee indicates the core DRM system runs in a Trusted Execution Environment.
@@ -638,7 +638,7 @@ print "Window Opacity=";di.GetCaptionsOption("Window/Opacity")
 
 #### Description
 
-Checks whether the system settings for Time (**Setting > System > Time**) is set to a 12 or 24-hour format.
+Checks whether the system settings for Time (**Setting \> System \> Time**) is set to a 12 or 24-hour format.
 
 #### Return Values
 
@@ -1199,7 +1199,7 @@ An associative array that includes a flag indicating whether the video format ca
 
 If the Roku Player cannot play that video format, it will return false, and return the closest video format it can play, with the changed fields, such as:
 
-`&#123;"codec":["hevc","mpeg1","mpeg2","h263","mpeg4 avc","vp9"],"result":false,"updated":"codec"&#125;`
+`{"codec":["hevc","mpeg1","mpeg2","h263","mpeg4 avc","vp9"],"result":false,"updated":"codec"}`
 
 The return value shows the Roku Player cannot play requested video format, shows the updated keys of the requested video format (level and profile) that it can support, and the all the key values of the requested video format supported by the Roku Player.
 

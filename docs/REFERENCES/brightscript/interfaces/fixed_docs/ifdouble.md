@@ -47,5 +47,3 @@ Sets the calling Double object to the specified double value.
 | ----- | ------ | -------------------------------------------------------- |
 | value | Double | The double value to be set on the calling Double object. |
 
-
-

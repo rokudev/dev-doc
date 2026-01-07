@@ -1,5 +1,5 @@
 ---
-title: "Additional topics"
+title: Developer Dashboard
 excerpt: ''
 deprecated: false
 hidden: true

@@ -1,5 +1,5 @@
 ---
-title: "ifDateTime"
+title: ifDateTime
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # ifDateTime
 
 ## Implemented by
@@ -144,17 +143,25 @@ Returns the localized date of the device.
 
 #### Parameters
 
-| Name   | Type   | Description                                                  |
-| :----- | :----- | :----------------------------------------------------------- |
-| format | String | Specify the format of the date string to be returned: ${date-string-format} |
 
-{#date-string-format}
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>format</td>
+<td>String</td>
+<td>Specify the format of the date string to be returned: <ul><li>full</li><li>long</li><li>medium</li><li>short</li><li>custom formatting string using date symbols (for example, "MMM d, y")</li></ul></td>
+</tr>
+</tbody>
+</table>
 
-- full
-- long
-- medium
-- short
-- custom formatting string using date symbols (for example, "MMM d, y")
+
 
 #### Custom date formatting values
 
@@ -193,16 +200,25 @@ Returns the localized time of the device.
 
 #### Parameters
 
-| Name   | Type   | Description                                                  |
-| :----- | :----- | :----------------------------------------------------------- |
-| format | String | Specify the format of the time string to be returned: ${time-string-format} |
 
-{#time-string-format}
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>format</td>
+<td>String</td>
+<td>Specify the format of the time string to be returned: <ul><li>short</li><li>short-h12</li><li>short-h24</li><li>custom formatting string using time symbols (for example, "h:mm a")</li></ul></td>
+</tr>
+</tbody>
+</table>
 
-- short
-- short-h12
-- short-h24
-- custom formatting string using time symbols (for example, "h:mm a")
+
 
 #### Custom time formatting values
 
@@ -239,20 +255,8 @@ Returns the date/time formatted string.
 
 | Name   | Type   | Description                     |
 | ------ | ------ | ------------------------------- |
-| format | String | ${dateString-Format-Parameters} |
+| format | String | <table><thead><tr><th>Format</th></tr></thead><tbody><tr><td>long-date</td></tr><tr><td>short-weekday</td></tr><tr><td>no-weekday</td></tr><tr><td>short-month</td></tr><tr><td>short-month-short-weekday</td></tr><tr><td>short-month-no-weekday</td></tr><tr><td>short-date</td></tr><tr><td>short-date-dashes</td></tr></tbody></table> |
 
-{#dateString-Format-Parameters}
-
-| Format                    |
-| ------------------------- |
-| long-date                 |
-| short-weekday             |
-| no-weekday                |
-| short-month               |
-| short-month-short-weekday |
-| short-month-no-weekday    |
-| short-date                |
-| short-date-dashes         |
 
 #### Return Value
 

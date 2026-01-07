@@ -1,5 +1,5 @@
 ---
-title: "ifStringOps"
+title: ifStringOps
 excerpt: ''
 deprecated: false
 hidden: true
@@ -311,8 +311,8 @@ Returns the string with the following characters replaced with their correspondi
 | ---------------- | ------------- |
 | " (double quote) | \&quot;       |
 | ' (single quote) | \&apos;       |
-| <                | \&lt;         |
-| >                | \&gt;         |
+| \<                | \&lt;         |
+| \>                | \&gt;         |
 | &                | \&amp;        |
 
 #### Return Value

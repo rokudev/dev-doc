@@ -1,5 +1,5 @@
 ---
-title: "Component Functions"
+title: Component functions
 excerpt: ''
 deprecated: false
 hidden: true

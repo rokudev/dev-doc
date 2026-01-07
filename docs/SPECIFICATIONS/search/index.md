@@ -1,5 +1,5 @@
 ---
-title: "Introduction to the Roku search feed specification"
+title: Introduction to the Roku search feed specification
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # Introduction to the Roku search feed specification
 
 

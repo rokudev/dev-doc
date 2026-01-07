@@ -136,7 +136,7 @@ An asset represents a specific content item in the app's catalog. It contains al
 <tr>
 <td>releaseDate</td>
 <td>String</td>
-<td>The date the content item was initially released or first aired in <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 format</a>: {YYYY}-{MM}-{DD}. For example, "2022-11-11".<br /><br />This field is used to sort programs chronologically and to group related content in Roku Search.</td>
+<td>The date the content item was initially released or first aired in <a href="http://www.iso.org/iso/home/standards/iso8601.htm">ISO 8601 format</a>: \{YYYY\}-\{MM\}-\{DD\}. For example, "2022-11-11".<br /><br />This field is used to sort programs chronologically and to group related content in Roku Search.</td>
 <td>Required, unless the <strong>releaseYear</strong> field is provided.<br /><br />At least one of the <strong>releaseDate</strong> or <strong>releaseYear</strong> fields must be provided.</td>
 </tr>
 <tr>

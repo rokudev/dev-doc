@@ -16,7 +16,7 @@ The [Developer Dashboard](http://developer.roku.com/dev/dashboard) serves as the
 
 The **My channels** section provides easy access to recently updated apps, enabling developers to quickly click into their most high-touch projects.
 
-<Image alt="roku815px - My channels screen shot" border=\{false\} src="https://image.roku.com/ZHZscHItMTc2/My-Channels.png" />
+<Image alt="roku815px - My channels screen shot" border={false} src="https://image.roku.com/ZHZscHItMTc2/My-Channels.png" />
 
 Clicking on any of these apps will take the user to the Preview & Publish page for the app, from which they can edit the app metadata. Refer to [App publishing](/docs/developer-program/publishing/channel-publishing-guide.md) for information on managing app settings.
 
@@ -24,7 +24,7 @@ Clicking on any of these apps will take the user to the Preview & Publish page f
 
 The **Scheduled releases** section of the main panel lists app releases, product updates, or offers that were previously scheduled by the developer, ordered by date.
 
-<Image alt="roku815px - Scheduled releases screen shot" border=\{false\} src="https://image.roku.com/ZHZscHItMTc2/Scheduled-Releases.png" />
+<Image alt="roku815px - Scheduled releases screen shot" border={false} src="https://image.roku.com/ZHZscHItMTc2/Scheduled-Releases.png" />
 
 For an overview on in-app products, promotions, and product groups, see [Adding in-channel products](/docs/developer-program/roku-pay/quickstart/in-channel-products.md).
 
@@ -32,7 +32,7 @@ For an overview on in-app products, promotions, and product groups, see [Adding 
 
 The **What's new** section highlights important Roku platform news such as platform policy changes, app certification updates, and app publishing blackout dates.
 
-<Image alt="roku815px - What's new screen shot" border=\{false\} src="https://image.roku.com/ZHZscHItMTc2/Whats-New.png" />
+<Image alt="roku815px - What's new screen shot" border={false} src="https://image.roku.com/ZHZscHItMTc2/Whats-New.png" />
 
 # Additional topics
 

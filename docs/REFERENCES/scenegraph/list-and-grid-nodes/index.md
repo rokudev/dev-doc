@@ -1,5 +1,5 @@
 ---
-title: "Lists and grids"
+title: Lists and grids
 excerpt: ''
 deprecated: false
 hidden: true
@@ -286,15 +286,15 @@ file. You define all the screen elements you need for your custom
 list/grid items in this item component file, such as posters, labels,
 rectangles, and so forth. Then you can create custom appearance and
 behavior for the items by writing callback functions triggered by
-`onChange` events in the **<interface\>** element fields you select for
+`onChange` events in the **\<interface\>** element fields you select for
 the item. These customizable list/grid node classes provide a much
-greater selection of built-in **<interface\>** element fields than
+greater selection of built-in **\<interface\>** element fields than
 those provided by the standard list/grid node classes. These additional
 fields allow you program custom appearance and behavior of the item,
 such as custom animations when the user focuses/selects the items.
 
 The additional
-read-only **<interface\>** element fields for item components in these
+read-only **\<interface\>** element fields for item components in these
 customizable lists and grids are:
 
   - `width`
@@ -349,7 +349,7 @@ contains the index of the focused/selected item in the focused row.
 ### Custom focus indicators
 
 The **RowList**, **MarkupList**, and
-**MarkupGrid** node classes provide special **<interface\>** fields for
+**MarkupGrid** node classes provide special **\<interface\>** fields for
 item component definitions that enable animations to indicate focus
 changes to the user. The `focusPercent` field can be used with an
 `onChange` attribute callback function to animate focus indicators as
@@ -360,7 +360,7 @@ from 0.0 to 1.0 for the newly-focused item, while simultaneously
 decreasing from 1.0 to 0.0 for the previously-focused item. For example,
 to enlarge a poster slightly when the item receives focus, while
 simultaneously shrinking the poster of the previously focused item, you
-could set up an **<interface\>** element
+could set up an **\<interface\>** element
 `focusPercent` field  `onChange` callback function `showfocus()` in
 the item component XML file:
 

@@ -65,15 +65,62 @@ If the XML component contains interface fields that match the names shown in the
 
 Note that the fields are updated in the order presented in the table below. Any layout scripting you write based on these fields should be done in that order to avoid updating your layout based on a field that has not been updated yet.
 
-| Field Name    | Field Type      | Access Permission | Description                                                  |
-| :------------ | :-------------- | ----------------- | :----------------------------------------------------------- |
-| currTarget    | float           | READ_ONLY         | Set to index of the current TargetSet's targetRect that should contain the item. If currTarget is an integer value, the item's currRect field will be the value of currTarget'th item in the TargetGroup node's currTargetSet field's targetRect's array. If currTarget is not an integer, it indicates that the item is animating from one targetRect index to another. <br /><br />For example, if the value is 5.7, the item is between the rectangles at index 5 and 6 of the TargetGroup node's currTargetSet's targetRect field. The item if 70% occupying the rectangle at index 6 and 30% occupying the rectangle at index 5. |
-| currRect      | rectangle       | READ_ONLY         | Set to the rectangle that the item should occupy. The rectangle values can be accessed either as an associative array with "x", "y", "width" and "height" elements or as an array of four float's containing the x, y, width and height values of the rectangles.<br /><br />Note that the item will be automatically translated so that its origin is at the (x,y) location of this rectangle relative to the origin of the TargetGroup node. Typically, the width and height of currRect is used to dynamically adjust the size of the item as it animates from one target to another. |
-| index         | integer         | READ_ONLY         | Set to the index of this item in the data model.             |
-| groupHasFocus | Boolean         | READ_ONLY         | Set to true if the **TargetGroup** node has focus, false otherwise. |
-| itemContent   | **ContentNode** |                   | Contains the data to be displayed by the group item. The relationship between data in the **ContentNode** node and the visual elements of the grid item is determined by the markup and scripts in the item XML component. <br /><br />Typically, an observer callback function of the `itemContent` field is used to update the grid item when the content changes. |
-| focusPercent  | float           | READ_ONLY         | The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from one item to the next. <br /><br />The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused item, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused item. <br /><br />This value can be used as a timing key to smoothly animate the appearance of the focused item as well as the previously-focused item, to indicate the movement of focus to the user. |
-| itemHasFocus  | Boolean         | READ_ONLY         | Indicates whether the item component currently is the TargetGroup's focused item. <br /><br />When scrolling starts, the itemHasFocus field for the currently focused item is set to false. When scrolling ends, the itemHasFocus field for the newly focused item is set to true. <br /><br />During the scrolling animation, all itemHasFocus fields are set to false.Only one item component of any TargetGroup should have itemHasFocus set to true. If the TargetGroup does not focus, all itemHasFocus fields of their item components should be set to false. |
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Field Type</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currTarget</td>
+<td>float</td>
+<td>READ_ONLY</td>
+<td>Set to index of the current TargetSet's targetRect that should contain the item. If currTarget is an integer value, the item's currRect field will be the value of currTarget'th item in the TargetGroup node's currTargetSet field's targetRect's array. If currTarget is not an integer, it indicates that the item is animating from one targetRect index to another. <br /><br />For example, if the value is 5.7, the item is between the rectangles at index 5 and 6 of the TargetGroup node's currTargetSet's targetRect field. The item if 70% occupying the rectangle at index 6 and 30% occupying the rectangle at index 5.</td>
+</tr>
+<tr>
+<td>currRect</td>
+<td>rectangle</td>
+<td>READ_ONLY</td>
+<td>Set to the rectangle that the item should occupy. The rectangle values can be accessed either as an associative array with "x", "y", "width" and "height" elements or as an array of four float's containing the x, y, width and height values of the rectangles.<br /><br />Note that the item will be automatically translated so that its origin is at the (x,y) location of this rectangle relative to the origin of the TargetGroup node. Typically, the width and height of currRect is used to dynamically adjust the size of the item as it animates from one target to another.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer</td>
+<td>READ_ONLY</td>
+<td>Set to the index of this item in the data model.</td>
+</tr>
+<tr>
+<td>groupHasFocus</td>
+<td>Boolean</td>
+<td>READ_ONLY</td>
+<td>Set to true if the <strong>TargetGroup</strong> node has focus, false otherwise.</td>
+</tr>
+<tr>
+<td>itemContent</td>
+<td><strong>ContentNode</strong></td>
+<td></td>
+<td>Contains the data to be displayed by the group item. The relationship between data in the <strong>ContentNode</strong> node and the visual elements of the grid item is determined by the markup and scripts in the item XML component. <br /><br />Typically, an observer callback function of the <code>itemContent</code> field is used to update the grid item when the content changes.</td>
+</tr>
+<tr>
+<td>focusPercent</td>
+<td>float</td>
+<td>READ_ONLY</td>
+<td>The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from one item to the next. <br /><br />The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused item, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused item. <br /><br />This value can be used as a timing key to smoothly animate the appearance of the focused item as well as the previously-focused item, to indicate the movement of focus to the user.</td>
+</tr>
+<tr>
+<td>itemHasFocus</td>
+<td>Boolean</td>
+<td>READ_ONLY</td>
+<td>Indicates whether the item component currently is the TargetGroup's focused item. <br /><br />When scrolling starts, the itemHasFocus field for the currently focused item is set to false. When scrolling ends, the itemHasFocus field for the newly focused item is set to true. <br /><br />During the scrolling animation, all itemHasFocus fields are set to false.Only one item component of any TargetGroup should have itemHasFocus set to true. If the TargetGroup does not focus, all itemHasFocus fields of their item components should be set to false.</td>
+</tr>
+</tbody>
+</table>
+
 
 ## Data bindings
 
@@ -82,8 +129,3 @@ A TargetGroup node should have a single ContentNode as the root node in its cont
 The specific data fields in the ContentNode should match the values referenced by the TargetGroup node's XML component.
 
 ## Sample apps
-
-| Sample                                                       | Description                                                  |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [FloatingFocusWrap](https://github.com/rokudev/samples/blob/master/ux%20components/screen%20elements/target_group/FloatingFocusWrap) | TargetGroup example demonstrating floating focus and wrapping from the first and last items. |
-| [TwoRowFixedFocus](https://github.com/rokudev/samples/blob/master/ux%20components/screen%20elements/target_group/TwoRowFixedFocus) | A sample demonstrating an unfocused TargetList when more than one TargetList is present. |

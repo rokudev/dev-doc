@@ -56,3 +56,18 @@ Component libraries do not need to be packaged or signed with the same devid as 
 [ComponentLibraryTestChannel](https://github.com/rokudev/samples/tree/master/utilities) is a test app that downloads the component library implemented from the source code in [ComponentLibrary](https://github.com/rokudev/samples/tree/master/utilities). The test app then creates an instance of the <LoadingIndicator> component implemented in the library.
 
 ## Fields
+
+| Field        | Type              | Default                                   | Access Permission | Description           |
+| ------------ | ----------------- | ----------------------------------------- | ----------------- | --------------------- |
+| loadStatus   | value string      | "none"                                    | READ_ONLY         | Indicates the progress of the library download. The possible values are: ${loadStatusValues} |
+| id           | string            | no default                                | READ_WRITE        | Set to a unique ID for the library for the application |
+| uri          | uri               | no default                                | READ_WRITE        | The URL of the library to be downloaded |
+
+{#loadStatusValues}
+
+| Value   | Meaning                                            |
+| ------ | ------------------------------------------------- |
+| none    | The default if the library is not being downloaded |
+| loading | Library is downloading                             |
+| ready   | Library has downloaded successfully                |
+| failed  | Download of the library has failed                 |

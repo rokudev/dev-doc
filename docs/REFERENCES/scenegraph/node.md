@@ -24,9 +24,9 @@ The abstract base class of all SceneGraph nodes and the equivalent of the Bright
 | id           | string            | ""                                        | READ_WRITE        | Adds a dictionary entry that allows the node to be retrieved with [ifSGNodeDict](/docs/references/brightscript/interfaces/ifsgnodedict.md "ifSGNodeDict") findNode() function. |
 | focusedChild | N/A               | N/A                                       | READ_WRITE        | When a node or one of its children gains or loses the keyboard focus, the focusedChild field will be set and call its observer functions. In the observer function, typically, you use [ifSGNodeFocus](/docs/references/brightscript/interfaces/ifsgnodefocus.md "ifSGNodeFocus") functions to query whether this node or some other node has the key focus or is in the key focus chain. Accessing the value of the field will result in script errors. |
 | focusable    | Boolean           | false                                     | READ_WRITE        | Provides a hint as to whether or not this node can take the key focus. |
-| change       | associative array | { Index1: 0, Index2: 0, Operation: none } | READ_ONLY         | Operations affecting the set of children of a Node are recorded in this field if, and only if, this field has been observed. The field associative array indicates the operation and two indexes, index1 and index 2, involved in the change. The operation is denoted by these value strings: ${ChangeValues} |
+| change       | associative array | \{ Index1: 0, Index2: 0, Operation: none \} | READ_ONLY         | Operations affecting the set of children of a Node are recorded in this field if, and only if, this field has been observed. The field associative array indicates the operation and two indexes, index1 and index 2, involved in the change. The operation is denoted by these value strings:${change-values} |
 
-{#ChangeValues}
+{#change-values}
 
 | Value  | Meaning                                                      |
 | ----- | ----------------------------------------------------------- |

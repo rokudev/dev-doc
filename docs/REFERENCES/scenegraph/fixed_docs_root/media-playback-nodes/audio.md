@@ -1,0 +1,238 @@
+---
+title: "Audio"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
+# Audio
+
+Extends [**Node**](/docs/references/scenegraph/node.md)
+
+The Audio node class plays streaming audio.
+
+The Audio node class has no built-in visual UI, but you can build your own UI for the node, including trick play, or showing an album cover or similar graphical image for each song selected by a user.
+
+## Fields
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td>ContentNode</td>
+<td>NULL</td>
+<td>READ_WRITE</td>
+<td>The ContentNode with the <a href="/docs/developer-program/getting-started/architecture/content-metadata.md">Content Meta-Data</a> for the audio or audio playlist (a sequence of audios) to be played. If a audio playlist is to be played, the ContentNode must include complete child ContentNodes for each audio in the playlist, with all attributes required to play that audio.</td>
+</tr>
+<tr>
+<td>contentIsPlaylist</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>If set to true, enables audio playlists (a sequence of audios to be played). To enable audio playlists, the ContentNode set in the <code>content</code> field must have children ContentNodes for each audio in the playlist. When audio playback is started, all of the audios in the playlist will be played in sequence.</td>
+</tr>
+<tr>
+<td>nextContentIndex</td>
+<td>integer</td>
+<td>-1</td>
+<td>READ_WRITE</td>
+<td>If the <code>contentIsPlaylist</code> field is set to true to enable audio playlists, sets the index of the next audio in the playlist to be played. Setting this field does not immediately change the audio being played, but takes effect when the current audio is completed or skipped. By default, this value is -1, which performs the default index increment operation. After the audio specified by the index in this field begins playing, the field is set to the default -1 again, so the next audio played will be set by the default index increment operation, unless the field is set again to a different index.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>If set to true, the audio or audio playlist (if the <code>contentIsPlaylist</code> field is set to true to enable audio playlists) will be restarted from the beginning after the end is reached.</td>
+</tr>
+<tr>
+<td>bufferingStatus</td>
+<td>associative array</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Contains information about stream buffering progress and status. This field is valid only while buffering is in progress, both at stream startup or when re-buffering is required. Observers will be notified when any element of the array changes, and also when buffering is complete and the field itself becomes invalid. The array contains the following name - value pairs.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>percentage</td><td>Percent buffering complete as an integer.</td></tr><tr><td>isUnderrun</td><td>Boolean value indicating if a stream underrun occurred.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>control</td>
+<td>option string</td>
+<td>none</td>
+<td>READ_WRITE</td>
+<td>Sets the desired play state for the audio, such as starting or stopping the audio play. Getting the value of this field returns the most recent value set, or <code>none</code> if no value has been set. In order to dynamically monitor the actual state of the audio, see the <code>state</code> field.<br /><br /><table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>none</td><td>No play state set</td></tr><tr><td>play</td><td>Start audio play</td></tr><tr><td>start</td><td>Start audio play</td></tr><tr><td>stop</td><td>Stop audio play</td></tr><tr><td>pause</td><td>Pause audio play</td></tr><tr><td>resume</td><td>Resume audio play after a pause</td></tr><tr><td>replay</td><td>Replay audio</td></tr><tr><td>prebuffer</td><td>Starts buffering the audio stream before the Audio node actually begins playback. Only one audio stream can be buffering in the application at any time. Setting the <code>control</code> field to <code>prebuffer</code> for another audio stream after setting <code>prebuffer</code> for a previous audio stream stops the buffering of the previous audio stream.</td></tr><tr><td>skipcontent</td><td>Skip the currently-playing content, and begin playing the next content in the playlist. If the content is not a playlist, or if the current content is the end of the playlist, this will end playback.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>notificationInterval</td>
+<td>time</td>
+<td>0.5</td>
+<td>READ_WRITE</td>
+<td>The interval between notifications to observers of the position field, specified as the number of seconds. If the value is 0, no notifications are delivered. This value may be read or modified at any time.</td>
+</tr>
+<tr>
+<td>timedMetaDataSelectionKeys</td>
+<td>array of strings</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>If the audio stream contains timed meta data such as ID3 tags, any meta data with a key matching an entry in this array will be set into the timedMetaData field. If any entry in this array is "*", then all timed meta data will be selected.</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>time</td>
+<td>invalid</td>
+<td>WRITE_ONLY</td>
+<td>Sets the current position in the audio. The value is the number seconds from the beginning of the stream, specified as a double.</td>
+</tr>
+<tr>
+<td>contentIndex</td>
+<td>integer</td>
+<td>-1</td>
+<td>READ_ONLY</td>
+<td>The index of the audio in the audio playlist that is currently playing. Generally, you would only want to check this field if audio playlists are enabled (by setting the <code>contentIsPlaylist</code> field to true), but it is set to 0 when a single audio is playing and audio playlists are not enabled.</td>
+</tr>
+<tr>
+<td>timedMetaData</td>
+<td>associative array</td>
+<td>{ }</td>
+<td>READ_ONLY</td>
+<td>The most recent timed meta data that has been decoded from the audio stream. Only meta data with a key that matches an entry in timedMetaDataSelectionKeys will be set into this field. The value of this field is an associative array which contains arbitrary keys and values, as found in the audio stream.<br /><br />As of Roku OS 10.5, this field can be used to read ID3 tags embedded in an audio stream.</td>
+</tr>
+<tr>
+<td>state</td>
+<td>value string</td>
+<td>none</td>
+<td>READ_ONLY</td>
+<td>Describes the current audio play state, such as if the audio play has been paused.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>none</td><td>No current play state</td></tr><tr><td>buffering</td><td>Audio stream is currently buffering</td></tr><tr><td>playing</td><td>Audio is currently playing</td></tr><tr><td>paused</td><td>Audio is currently paused</td></tr><tr><td>stopped</td><td>Audio is currently stopped</td></tr><tr><td>finished</td><td>Audio has completed play</td></tr><tr><td>error</td><td>An error has occurred in the audio play. The error code and error message can be found in the <code>errorCode</code> and <code>errorMsg</code> fields respectively.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>position</td>
+<td>time</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>The current position in the audio play, as the number of seconds.</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>time</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The duration of the audio being played, specified in seconds. This becomes valid when playback begins and may change if the audio is dynamic content, such as a live event.</td>
+</tr>
+<tr>
+<td>errorCode</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The error code associated with the audio play error set in the <code>state</code> field</td>
+</tr>
+<tr>
+<td>errorMsg</td>
+<td>string</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>An error message describing the audio play error set in the <code>state</code> field.</td>
+</tr>
+<tr>
+<td>audioFormat</td>
+<td>string</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>Contains the format of the currently playing audio.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>""</td><td>No stream playing</td></tr><tr><td>aac</td><td>ISO/IEC 14496-3, Advanced Audio Coding</td></tr><tr><td>aac_adif</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td></tr><tr><td>aac_adts</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td></tr><tr><td>aac_latm</td><td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td></tr><tr><td>ac3</td><td>Dolby Digital</td></tr><tr><td>alac</td><td>Apple Lossless</td></tr><tr><td>dts</td><td>DTS Coherent Acoustics</td></tr><tr><td>eac3</td><td>Dolby Digital Plus</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>mp2</td><td>ISO/IEC 11172-3, MPEG Audio Layer II</td></tr><tr><td>mp3</td><td>ISO/IEC 11172-3, MPEG Audio Layer III</td></tr><tr><td>none</td><td>Stream contains no playable audio</td></tr><tr><td>pcm</td><td>linear PCM</td></tr><tr><td>unknown</td><td>Stream contains unknown audio</td></tr><tr><td>vorbis</td><td>Ogg Vorbis</td></tr><tr><td>wma<br /><em>sunset as of Roku OS 12.5</em></td><td>Microsoft Windows Media Audio.<br /><br />As of Roku OS 10.5, the Roku platform no longer supports this audio format. As part of the Roku OS 12.5 release, this format was officially sunset.</td></tr><tr><td>wmapro<br /><em>sunset as of Roku OS 12.5</em></td><td>Microsoft Windows Media Pro Audio.<br /><br />As of Roku OS 10.5, the Roku platform no longer supports this audio format. As part of the Roku OS 12.5 release, this format was officially sunset.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>streamingSegment</td>
+<td>associative array</td>
+<td>{ }</td>
+<td>READ_ONLY</td>
+<td>Information about the audio segment that is currently streaming. This is only meaningful for segmented audio transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>segBitrateBps</td><td>integer</td><td>Bitrate of the segment in bits per second</td></tr><tr><td>segSequence</td><td>integer</td><td>The sequence number of the segment in the audio</td></tr><tr><td>segStart</td><td>time</td><td>The start time of the segment from the start of the audio, specified in seconds</td></tr><tr><td>segUrl</td><td>string</td><td>URL of the segment</td></tr><tr><td>segTypeStr</td><td>string</td><td>The type of data in the segment: "unknown", "mux", "audio", "video", or "captions".</td></tr><tr><td>hdrModeStr</td><td>string</td><td>The HDR format of the content, which may be one of the following values:${hdr-values}</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>focusedChild</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>READ_WRITE</td>
+<td>When a node or one of its children gains or loses the keyboard focus, the focusedChild field will be set and call its observer functions. In the observer function, typically, you use <a href="/docs/references/brightscript/interfaces/ifsgnodefocus.md">ifSGNodeFocus</a> functions to query whether this node or some other node has the key focus or is in the key focus chain.<br /><br />Accessing the value of the field will result in script errors.</td>
+</tr>
+<tr>
+<td>autoplayAfterSeek</td>
+<td>boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>Enables audio content to automatically play after rebuffering. Setting this flag to false disables this default behavior.</td>
+</tr>
+<tr>
+<td>mute</td>
+<td>boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Set to true to mute the audio currently playing in the Audio node. Set to false to restore audio.</td>
+</tr>
+<tr>
+<td>streamInfo</td>
+<td>associative array</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Information about the audio stream that is currently playing or buffering.<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>isUnderrun</td><td>Boolean</td><td>If true, the stream was downloaded due to an underrun</td></tr><tr><td>isResumed</td><td>Boolean</td><td>If true, playback was resumed after trickplay</td></tr><tr><td>measuredBItrate</td><td>Integer</td><td>The measured bitrate (bps) of the network when the stream was selected</td></tr><tr><td>streamBitrate</td><td>Integer</td><td>The bitrate of the stream</td></tr><tr><td>streamUrl</td><td>URI</td><td>The URL of the stream</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>timeToStartStreaming</td>
+<td>time</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The time in seconds from playback being started until the audio actually began playing. The minimum valid value is 1 millisecond, and this is only valid if the current value of the <code>state</code> field is <code>playing</code>. When the state field value is not <code>playing</code>, the value will be 0. This field is updated prior to the <code>state</code> field changing, so <code>state</code> field observer callback functions can assume this field is valid after the <code>state</code> field value changes to <code>playing</code>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+## Data bindings
+
+See [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) for the required and optional play parameters, and descriptive information for audio playback. Set these parameters in a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node, and assign the ContentNode to the content field of the Audio node to apply the parameters to a particular audio content item.
+
+For HTTPS access, note the following Content Meta-Data attributes:
+
+- `HttpCertificatesFile`
+- `HttpCookies`
+- `HttpHeaders`
+- `HttpSendClientCertificates`
+
+These attributes must be set to handle secure HTTP transfers of audio files. Note that this is a different HTTPS mechanism than used for other SceneGraph nodes as described in [roHttpAgent](/docs/references/brightscript/components/rohttpagent.md).
+
+> Prior to Roku OS 7.2, each Audio and Video node created and configured an `HttpAgent` only when the first content was played in a given Audio or Video node instance. This sometimes meant that additional content would fail to play in the same node because headers, cookies, and certificates were not updated or correctly replaced from the new content record. Apps that are dependent upon this behavior will need to be updated to set the required data into the Content Meta-Data for each piece of content, or to programmatically set those values into the `HttpAgent` before playing each piece of content.
+
+## Example
+
+**Example application:** [AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample)
+
+[AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample) uses a [LabelList](/docs/references/scenegraph/list-and-grid-nodes/labellist.md) node to select from several spoken audio examples. The [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) for the example is found in the `pkg:/server/audiocontent.xml` file, read into a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node by the [Task](/docs/references/scenegraph/control-nodes/task.md) node `audiocontentreader.xml` component file.
+
+
+
+
+
+
+
+## Sample app
+
+[AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample) is a sample app demonstrating Audio in action.

@@ -41,7 +41,7 @@ The output from the above code would like the following:
 
 ## Supported interfaces
 
-* <Anchor label="ifDeviceInfo" title="ifDeviceInfo " href="/docs/references/brightscript/interfaces/ifdeviceinfo.md">ifDeviceInfo</Anchor>
+* [ifDeviceInfo](https://roku-ent.readme.io/dev/docs/references/brightscript/interfaces/ifdeviceinfo.md)
 * <Anchor label="ifSetMessagePort" title="ifSetMessagePort" href="/docs/references/brightscript/interfaces/ifsetmessageport.md">ifSetMessagePort</Anchor>
 * <Anchor label="ifGetMessagePort" title="ifGetMessagePort" href="/docs/references/brightscript/interfaces/ifgetmessageport.md">ifGetMessagePort</Anchor>
 

@@ -1,6 +1,9 @@
 ---
 title: ifAppManager
 ---
+---
+title: ifAppManager
+---
 # ifAppManager
 
 
@@ -17,7 +20,7 @@ title: ifAppManager
 
 #### Description
 
-Returns an [roTimespan](/docs/references/brightscript/components/rotimespan.md "roTimespan") object, which is "marked" when the user clicked on the application button on the home screen.<br/><br/>Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started.
+Returns an [roTimespan](/docs/references/brightscript/components/rotimespan.md "roTimespan") object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started.
 
 #### Return Value
 
@@ -37,7 +40,7 @@ The number of minutes set for the screensaver wait time.
 
 #### Description
 
-This method allows an app to tell Roku when the user is signed in or signed out of the app<br/><br/>If the app is removed, the Roku OS will call SetUserSignedIn(false) on the app's behalf.
+This method allows an app to tell Roku when the user is signed in or signed out of the app<br /><br />If the app is removed, the Roku OS will call SetUserSignedIn(false) on the app's behalf.
 
 #### Parameters
 
@@ -49,7 +52,7 @@ This method allows an app to tell Roku when the user is signed in or signed out 
 
 #### Description
 
-Enables or disables the automatic screen reader and override any manifest setting.<br/><br/>This is useful for apps that want to temporarily turn off the automatic screen reader for specific screens.
+Enables or disables the automatic screen reader and override any manifest setting.<br /><br />This is useful for apps that want to temporarily turn off the automatic screen reader for specific screens.
 
 #### Parameters
 
@@ -128,16 +131,16 @@ When there is a match (the name uttered by the user matches the registered text 
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Description</th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">actions</td>
-<td style="text-align: left;">array of associative arrays</td>
-<td style="text-align: left;">The list of text strings to be regsitered. Once a text string is registered, it can be matched to voice requests received by the app.  Each text string is defined with the following attributes:<ul><li>a <strong>text</strong> key for storing the name or word to be matched.</li><li>an optional <strong>link</strong> key for storing a deep link.</li></ul></td>
+<td>actions</td>
+<td>array of associative arrays</td>
+<td>The list of text strings to be regsitered. Once a text string is registered, it can be matched to voice requests received by the app.  Each text string is defined with the following attributes:<ul><li>a <strong>text</strong> key for storing the name or word to be matched.</li><li>an optional <strong>link</strong> key for storing a deep link.</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -176,50 +179,44 @@ An roAssociativeArray the following information about the most recent app exits.
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Name</th>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Description</th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">timestamp</td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">An ISO 8601 date string that specifies the time of the app exit.</td>
+<td>timestamp</td>
+<td>String</td>
+<td>An ISO 8601 date string that specifies the time of the app exit.</td>
 </tr>
 <tr>
-<td style="text-align: left;">exit_code</td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The exit code, which denotes the cause of the app termination. See <a href="/docs/developer-program/getting-started/architecture/dev-environment.md#lastexitorterminationreason-parameter">lastExitOrTerminationReason</a> for the list of possible exit codes. For memory-related app exits, this value will be one of the following: <ul><li><strong>EXIT_CHANNEL_MEM_LIMIT_FG</strong>: The app exceeded the per-app memory limit while running in the foreground.</li><li><strong>EXIT_CHANNEL_MEM_LIMIT_BG</strong>: The app exceeded the per-app memory limit while running in the background.</li><li><strong>EXIT_OUT_OF_MEMORY</strong>: The device was running under low-memory conditions.</li><li><strong>EXIT_AM_LOWRESOURCE</strong>: System resources were low.</li><li><strong>EXIT_SYSTEM_KILL</strong>: The app was preemptively closed by the Roku OS.</li><li><strong>EXIT_UNKNOWN:</strong> The device was rebooted because of low memory, or 10 or more apps had run before the launch of your app.</li></ul></td>
+<td>exit_code</td>
+<td>String</td>
+<td>The exit code, which denotes the cause of the app termination. See <a href="/docs/developer-program/getting-started/architecture/dev-environment.md#lastexitorterminationreason-parameter">lastExitOrTerminationReason</a> for the list of possible exit codes. For memory-related app exits, this value will be one of the following: <ul><li><strong>EXIT_CHANNEL_MEM_LIMIT_FG</strong>: The app exceeded the per-app memory limit while running in the foreground.</li><li><strong>EXIT_CHANNEL_MEM_LIMIT_BG</strong>: The app exceeded the per-app memory limit while running in the background.</li><li><strong>EXIT_OUT_OF_MEMORY</strong>: The device was running under low-memory conditions.</li><li><strong>EXIT_AM_LOWRESOURCE</strong>: System resources were low.</li><li><strong>EXIT_SYSTEM_KILL</strong>: The app was preemptively closed by the Roku OS.</li><li><strong>EXIT_UNKNOWN:</strong> The device was rebooted because of low memory, or 10 or more apps had run before the launch of your app.</li></ul></td>
 </tr>
 <tr>
-<td style="text-align: left;">mem_limit</td>
-<td style="text-align: left;">Integer</td>
-<td style="text-align: left;">The applicable per-app memory limit that was exceeded (in Mb). This attribute is only included If the <strong>exitCode</strong> is EXIT_CHANNEL_MEM_LIMIT_FG or EXIT_CHANNEL_MEM_LIMIT_BG.</td>
+<td>mem_limit</td>
+<td>Integer</td>
+<td>The applicable per-app memory limit that was exceeded (in Mb). This attribute is only included If the <strong>exitCode</strong> is EXIT_CHANNEL_MEM_LIMIT_FG or EXIT_CHANNEL_MEM_LIMIT_BG.</td>
 </tr>
 <tr>
-<td style="text-align: left;">app_state</td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The state of the app when it was terminated: <ul><li><strong>foreground</strong>: The application was running in the foreground.</li><li><strong>background</strong>: The application was running in the background.</li></ul></td>
+<td>app_state</td>
+<td>String</td>
+<td>The state of the app when it was terminated: <ul><li><strong>foreground</strong>: The application was running in the foreground.</li><li><strong>background</strong>: The application was running in the background.</li></ul></td>
 </tr>
 <tr>
-<td style="text-align: left;">console_log</td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The last 20 lines of text written to the BrightScript console before termination. The console output includes BrightScript print statements, BrightScript errors and warnings, and any system messages. The availability of this attribute depends on the platform and app configuration.</td>
+<td>console_log</td>
+<td>String</td>
+<td>The last 20 lines of text written to the BrightScript console before termination. The console output includes BrightScript print statements, BrightScript errors and warnings, and any system messages. The availability of this attribute depends on the platform and app configuration.</td>
 </tr>
 <tr>
-<td style="text-align: left;">media_player_state</td>
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">The state of the media player before the app was terminated. This attribute is included for all <strong>exitCode</strong> values except EXIT_CHANNEL_MEM_LIMIT_FG and EXIT_CHANNEL_MEM_LIMIT_BG: <ul><li><strong>playing</strong>: The media player was playing.</li><li><strong>stopped</strong>: The media player was stopped.</li></ul></td>
+<td>media_player_state</td>
+<td>String</td>
+<td>The state of the media player before the app was terminated. This attribute is included for all <strong>exitCode</strong> values except EXIT_CHANNEL_MEM_LIMIT_FG and EXIT_CHANNEL_MEM_LIMIT_BG: <ul><li><strong>playing</strong>: The media player was playing.</li><li><strong>stopped</strong>: The media player was stopped.</li></ul></td>
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
 
 ##### Example
 

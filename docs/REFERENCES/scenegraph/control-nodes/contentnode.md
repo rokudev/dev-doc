@@ -1,5 +1,5 @@
 ---
-title: "ContentNode"
+title: ContentNode
 excerpt: ''
 deprecated: false
 hidden: true
@@ -173,7 +173,7 @@ All of the attributes listed in [Content Meta-Data](/docs/developer-program/gett
 iteminfo.description
 ~~~
 
-You can also access ContentNode attributes as fields using dot (.) notation if you add the attribute as an [<interface\>](/docs/references/scenegraph/xml-elements/interface.md "<interface\>") element field to an extended ContentNode component. For example, you could extend a ContentNode as a custom listitemcontent component with a componentname field to include an XML component name in a list item:
+You can also access ContentNode attributes as fields using dot (.) notation if you add the attribute as an [\<interface\>](/docs/references/scenegraph/xml-elements/interface.md") element field to an extended ContentNode component. For example, you could extend a ContentNode as a custom listitemcontent component with a componentname field to include an XML component name in a list item:
 
 ~~~
 <component  name = "listitemcontent" extends = "ContentNode" >
@@ -191,7 +191,7 @@ Then for a listitemcontent ContentNode object iteminfo, you can read or write th
 iteminfo.componentname
 ~~~
 
-> You can only use dot (.) notation to access ContentNode fields as attributes found in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md "Content Meta-Data"), or defined as an [<interface\>](/docs/references/scenegraph/xml-elements/interface.md "<interface\>") element field in a custom ContentNode component.
+> You can only use dot (.) notation to access ContentNode fields as attributes found in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md "Content Meta-Data"), or defined as an [\<interface\>](/docs/references/scenegraph/xml-elements/interface.md) element field in a custom ContentNode component.
 
 ## Content feed video lesson
 

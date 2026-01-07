@@ -1,5 +1,5 @@
 ---
-title: "ifChannelStore"
+title: ifChannelStore
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # ifChannelStore
 
 ## Implemented by
@@ -201,7 +200,7 @@ If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/
 
 #### Description
 
-Sets the current Order (shopping cart) to the elements specified in the parameter, which must be an roList of roAssociativeArray items.<br/><br/>Passing an empty roList clears the Order, like calling ClearOrder().
+Sets the current Order (shopping cart) to the elements specified in the parameter, which must be an roList of roAssociativeArray items.<br /><br />Passing an empty roList clears the Order, like calling ClearOrder().
 
 #### Parameters
 
@@ -223,7 +222,7 @@ Sets the current Order (shopping cart) to the elements specified in the paramete
 <tr>
 <td>orderInfo</td>
 <td>roAssociativeArray</td>
-<td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: ${action-list}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>&lt;br&gt;m.store = CreateObject("roChannelStore")​&lt;br&gt;' Populate myOrderItems&lt;br&gt;myOrderInfo.action = "Upgrade"&lt;br&gt;m.store.setOrder(myOrderItems, myOrderInfo)&lt;br&gt;</code></code></pre><br />See <a href="/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md#calling-the-roku-web-service-validate-transaction-api">On-device upgrade and downgrade</a> for how to implement Roku Pay web services for upgrades/downgrades.</td>
+<td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: $\}action-list\}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>&lt;br&gt;m.store = CreateObject("roChannelStore")​&lt;br&gt;' Populate myOrderItems&lt;br&gt;myOrderInfo.action = "Upgrade"&lt;br&gt;m.store.setOrder(myOrderItems, myOrderInfo)&lt;br&gt;</code></code></pre><br />See <a href="/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md#calling-the-roku-web-service-validate-transaction-api">On-device upgrade and downgrade</a> for how to implement Roku Pay web services for upgrades/downgrades.</td>
 </tr>
 </tbody>
 </table>
@@ -370,12 +369,12 @@ This function works like GetUserData(), but allows the caller to specify which u
 <tr>
 <td>requestInfo<br /></td>
 <td>roAssociativeArray</td>
-<td>Specifies whether the RFI screen is used for customer sign-ups or sign-ins. This may be one of the following values:<br/><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>context</td><td>string</td><td>"signup"</td><td>Specifies the context of the RFI screen, which may be one of the following values:<br />${context-list}<br />See the <a href="#sign-in-example">Sign-in example</a> for how to use this field.</td></tr></tbody></table></td>
+<td>Specifies whether the RFI screen is used for customer sign-ups or sign-ins. This may be one of the following values:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>context</td><td>string</td><td>"signup"</td><td>Specifies the context of the RFI screen, which may be one of the following values:<br />$\}context-list\}<br />See the <a href="#sign-in-example">Sign-in example</a> for how to use this field.</td></tr></tbody></table></td>
 </tr>
 <tr>
 <td>forceShowData</td>
 <td>Boolean</td>
-<td>If true, the RFI screen displays the values of the requested customer information to be shared with the app (for example, Jone Doe, <a href="mailto:bmsith@roku.com">j</a><a href="mailto:on.doe@emailaddress.com">on.doe@emailaddress.com</a>). <br /><br />By default, this flag is set to false, which means that the default RFI screen for the region is used. For example, in the US, the RFI screen displays the type of customer information being requested (email address, name, and so on).<br /><br />This flag has no effect if the context field is set to "signin" (the RFI sign-in screen always displays the customer information values). <br /><br /><strong>Example</strong>:<br /><pre><code><code>&lt;br&gt;&lt;br&gt;store = CreateObject("roChannelStore")&lt;br&gt;&lt;br&gt;' Doesn't show user data in dialog unless necessary in he user's region.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth")&lt;br&gt;' Show user data values in dialog.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth", {context: "signup", forceShowData: true})&lt;br&gt;' forceShowData currently has no effect in signin context, as the shared data is always shown.&lt;br&gt;userData = store.GetPartialUserData("email", {context: "signin", forceShowData: false})&lt;br&gt;</code></code></pre></td>
+<td>If true, the RFI screen displays the values of the requested customer information to be shared with the app (for example, Jone Doe, <a href="mailto:bmsith@roku.com">j</a><a href="mailto:on.doe@emailaddress.com">on.doe@emailaddress.com</a>). <br /><br />By default, this flag is set to false, which means that the default RFI screen for the region is used. For example, in the US, the RFI screen displays the type of customer information being requested (email address, name, and so on).<br /><br />This flag has no effect if the context field is set to "signin" (the RFI sign-in screen always displays the customer information values). <br /><br /><strong>Example</strong>:<br /><pre><code><code>&lt;br&gt;&lt;br&gt;store = CreateObject("roChannelStore")&lt;br&gt;&lt;br&gt;' Doesn't show user data in dialog unless necessary in he user's region.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth")&lt;br&gt;' Show user data values in dialog.&lt;br&gt;userData = store.GetPartialUserData("email,firstname,lastname,gender,birth", \}context: "signup", forceShowData: true\})&lt;br&gt;' forceShowData currently has no effect in signin context, as the shared data is always shown.&lt;br&gt;userData = store.GetPartialUserData("email", \}context: "signin", forceShowData: false\})&lt;br&gt;</code></code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -411,7 +410,7 @@ userData = store.GetPartialUserData("email, phone, firstname, lastname")
 store = CreateObject("roChannelStore")
 
 ' Request user's email for sign-in
-userData = store.GetPartialUserData("email", {context: "signin"})
+userData = store.GetPartialUserData("email", \}context: "signin"\})
 ```
 
 ### GetUserRegionData() as Object
@@ -436,7 +435,7 @@ An associative array that contains the following fields:
 
 #### Description
 
-Stores an access token, oAuth token, or other authentication artifact that can be retrieved by calling the [GetChannelCred()](/docs/references/brightscript/interfaces/ifchannelstore.md#getchannelcred-as-object)method. This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. <br/><br/>This method can be used to store an authentication artifact with Roku for a signed in user, associating that user with a particular Roku account. For more information, see [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md).
+Stores an access token, oAuth token, or other authentication artifact that can be retrieved by calling the [GetChannelCred()](/docs/references/brightscript/interfaces/ifchannelstore.md#getchannelcred-as-object)method. This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. <br /><br />This method can be used to store an authentication artifact with Roku for a signed in user, associating that user with a particular Roku account. For more information, see [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md).
 
 #### Parameters
 
@@ -448,10 +447,29 @@ Stores an access token, oAuth token, or other authentication artifact that can b
 
 This command returns an roAssociativeArray with the following values:
 
-| Key      | Type    | Value                                                        |
-| -------- | ------- | ------------------------------------------------------------ |
-| response | json    | A string in JSON format, with the following key-value pairs: <br/><table><thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>status</td><td>string</td><td>The request status, which may be "success" or "failure".</td></tr><tr><td>error</td><td>string</td><td>A description of the error (if any). This will be set to "none" for a successful request.</td></tr><tr><td>error_detail</td><td>string</td><td>A detailed description of the service error (if any). This value will be null (uninitialized) for a successful request.</td></tr></tbody></table><br/><br />if billing is not enabled for the app, this field will include a string with a service error message. |
-| status   | Integer | An integer representing the request status. A successful request will return a status of 0. |
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>response</td>
+<td>json</td>
+<td>A string in JSON format, with the following key-value pairs: <br /><table><thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>status</td><td>string</td><td>The request status, which may be "success" or "failure".</td></tr><tr><td>error</td><td>string</td><td>A description of the error (if any). This will be set to "none" for a successful request.</td></tr><tr><td>error_detail</td><td>string</td><td>A detailed description of the service error (if any). This value will be null (uninitialized) for a successful request.</td></tr></tbody></table><br /><br />if billing is not enabled for the app, this field will include a string with a service error message.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Integer</td>
+<td>An integer representing the request status. A successful request will return a status of 0.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 ### GetChannelCred() as Object
@@ -487,7 +505,7 @@ An associative array that contains the following fields:
 <tr>
 <td>json</td>
 <td>string</td>
-<td>A string in JSON format, with the following key-value pairs: <table><thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>error</td><td>string</td><td>A string containing an error message (if any). This value will be <code>null</code> (uninitialized) for a successful request.</td></tr><tr><td>roku_pucid</td><td>string</td><td>This is an agnostic ID (in UUID format) representing the user. This value will be identical when retrieved in the same app across devices linked to the same Roku account.<br /><br />The PUCID can be used in place of requiring the user to enter their email address or username again (for example, when setting up a new device on the same Roku account).</td></tr><tr><td>token_type</td><td>string</td><td>Type of the returned token, e.g. <code>"urn:roku:pucid:token_type:pucid_token"</code></td></tr><tr><td>channel_data</td><td>string</td><td>The access token, oAuth token, or other authentication artifact stored in the Roku cloud.<br /><br />This field is not returned if the <a href="#storechannelcreddata">StoreChannelCredData</a> command is not used to store an artifact in the Roku cloud.</td></tr></tbody></table> <br/>If the request fails, this json string will be empty.</td>
+<td>A string in JSON format, with the following key-value pairs: <table><thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>error</td><td>string</td><td>A string containing an error message (if any). This value will be <code>null</code> (uninitialized) for a successful request.</td></tr><tr><td>roku_pucid</td><td>string</td><td>This is an agnostic ID (in UUID format) representing the user. This value will be identical when retrieved in the same app across devices linked to the same Roku account.<br /><br />The PUCID can be used in place of requiring the user to enter their email address or username again (for example, when setting up a new device on the same Roku account).</td></tr><tr><td>token_type</td><td>string</td><td>Type of the returned token, e.g. <code>"urn:roku:pucid:token_type:pucid_token"</code></td></tr><tr><td>channel_data</td><td>string</td><td>The access token, oAuth token, or other authentication artifact stored in the Roku cloud.<br /><br />This field is not returned if the <a href="#storechannelcreddata">StoreChannelCredData</a> command is not used to store an artifact in the Roku cloud.</td></tr></tbody></table> <br />If the request fails, this json string will be empty.</td>
 </tr>
 <tr>
 <td>publisherDeviceID</td>
@@ -540,12 +558,12 @@ To verify the JWT, developers must [download the Roku device attestation token c
 The decoded JWT contains the following fields:
 
 ```
-"x-roku-attestation-data": {
+"x-roku-attestation-data": \}
     "nonce": "5E0692E0A389F4F6",
     "channelId": "dev",
     "developerId": "caa73fbb5e75a46a4b6114de51a5ada7d616e2ed",
     "timestampMs": 1656377873990
- }
+ \}
 ```
 
 ### RequestPartnerOrder(orderInfo as roAssociativeArray, productID as String) as Object
@@ -556,10 +574,29 @@ Checks the user's billing status and is a prerequisite for ConfirmPartnerOrder()
 
 #### Parameters
 
-| Key       | Type               | Description                                                  |
-| --------- | ------------------ | ------------------------------------------------------------ |
-| orderInfo | roAssociativeArray | Specifies the product to be ordered from a TVOD app. The order contains the following fields:<br /><table><thead><tr><th style="text-align: left;">Field</th><th style="text-align: left;">Type</th><th style="text-align: left;">Description</th></tr></thead><tbody><tr><td style="text-align: left;">priceDisplay</td><td style="text-align: left;">string</td><td style="text-align: left;">The original price of the product.</td></tr><tr><td style="text-align: left;">price</td><td style="text-align: left;">string</td><td style="text-align: left;">The final price of the product, including any discounts.</td></tr><tr><td style="text-align: left;">title</td><td style="text-align: left;">string</td><td style="text-align: left;">A description of the product (for example, the name of a rental movie).</td></tr><tr><td style="text-align: left;">couponCode</td><td style="text-align: left;">string</td><td style="text-align: left;">An alphanumeric string entered by the customer to receive a discounted price on the product.</td></tr><tr><td style="text-align: left;">contentKey</td><td style="text-align: left;">string</td><td style="text-align: left;">The publisher-specific SKU (or other unique identifier) for the product.</td></tr></tbody></table> |
-| productID | String             | The product identifier as entered on the Developer Dashboard when the product was created |
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orderInfo</td>
+<td>roAssociativeArray</td>
+<td>Specifies the product to be ordered from a TVOD app. The order contains the following fields:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>priceDisplay</td><td>string</td><td>The original price of the product.</td></tr><tr><td>price</td><td>string</td><td>The final price of the product, including any discounts.</td></tr><tr><td>title</td><td>string</td><td>A description of the product (for example, the name of a rental movie).</td></tr><tr><td>couponCode</td><td>string</td><td>An alphanumeric string entered by the customer to receive a discounted price on the product.</td></tr><tr><td>contentKey</td><td>string</td><td>The publisher-specific SKU (or other unique identifier) for the product.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>productID</td>
+<td>String</td>
+<td>The product identifier as entered on the Developer Dashboard when the product was created</td>
+</tr>
+</tbody>
+</table>
+
 
 
 #### Return Value
@@ -586,10 +623,29 @@ This function is equivalent to doOrder() for transactional purchases. The user's
 
 #### Parameters
 
-| Key              | Type               | Description                                                  |
-| ---------------- | ------------------ | ------------------------------------------------------------ |
-| confirmOrderInfo | roAssociativeArray | Confirms the product being ordered from a TVOD app. The order contains the following fields:<br /><table><thead><tr><th style="text-align: left;">Field</th><th style="text-align: left;">Type</th><th style="text-align: left;">Description</th></tr></thead><tbody><tr><td style="text-align: left;">orderId</td><td style="text-align: left;">string</td><td style="text-align: left;">The orderID generated by Roku, which is included in the roAssociativeArray returned by the <a href="#requestpartnerorderorderinfo-as-roassociativearray-productid-as-string-as-object">RequestPartnerOrder()</a> method.</td></tr><tr><td style="text-align: left;">priceDisplay</td><td style="text-align: left;">string</td><td style="text-align: left;">The original price of the product.</td></tr><tr><td style="text-align: left;">price</td><td style="text-align: left;">string</td><td style="text-align: left;">The final price of the product, including any discounts.</td></tr><tr><td style="text-align: left;">title</td><td style="text-align: left;">string</td><td style="text-align: left;">The name of the product to be displayed on customers' invoices.</td></tr><tr><td style="text-align: left;">couponCode</td><td style="text-align: left;">string</td><td style="text-align: left;">An alphanumeric string entered by the customer to receive a discounted price on the product.</td></tr><tr><td style="text-align: left;">contentKey</td><td style="text-align: left;">string</td><td style="text-align: left;">The publisher-specific SKU (or other unique identifier) for the product.</td></tr></tbody></table><br /><blockquote>The currency symbol may not be included in the **price** or **priceDisplay** values</blockquote>. |
-| productID        | String             | The product identifier as entered on the Developer Dashboard when the product was created |
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>confirmOrderInfo</td>
+<td>roAssociativeArray</td>
+<td>Confirms the product being ordered from a TVOD app. The order contains the following fields:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>orderId</td><td>string</td><td>The orderID generated by Roku, which is included in the roAssociativeArray returned by the <a href="#requestpartnerorderorderinfo-as-roassociativearray-productid-as-string-as-object">RequestPartnerOrder()</a> method.</td></tr><tr><td>priceDisplay</td><td>string</td><td>The original price of the product.</td></tr><tr><td>price</td><td>string</td><td>The final price of the product, including any discounts.</td></tr><tr><td>title</td><td>string</td><td>The name of the product to be displayed on customers' invoices.</td></tr><tr><td>couponCode</td><td>string</td><td>An alphanumeric string entered by the customer to receive a discounted price on the product.</td></tr><tr><td>contentKey</td><td>string</td><td>The publisher-specific SKU (or other unique identifier) for the product.</td></tr></tbody></table><br /><blockquote>The currency symbol may not be included in the <strong>price</strong> or <strong>priceDisplay</strong> values</blockquote>.</td>
+</tr>
+<tr>
+<td>productID</td>
+<td>String</td>
+<td>The product identifier as entered on the Developer Dashboard when the product was created</td>
+</tr>
+</tbody>
+</table>
+
 
 
 #### Return Value

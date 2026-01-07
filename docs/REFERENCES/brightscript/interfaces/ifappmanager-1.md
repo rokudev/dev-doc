@@ -1,5 +1,17 @@
 ---
 title: ifAppManager
+excerpt: ''
+deprecated: false
+hidden: false
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+---
+title: ifAppManager
 ---
 # ifAppManager
 
@@ -214,6 +226,12 @@ An roAssociativeArray the following information about the most recent app exits.
 </tr>
 </tbody>
 </table>
+
+
+
+
+
+
 
 ##### Example
 

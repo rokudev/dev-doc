@@ -82,20 +82,50 @@ end sub
 
 ## Fields
 
-| Field    | Type    | Default | Access Permission | Description                                                  |
-| -------- | ------- | ------- | ----------------- | ------------------------------------------------------------ |
-| control  | string  | none    | READ_WRITE        | Used to control the operation of the Timer node. Recognized values include: ${ControlValues} |
-| repeat   | Boolean | false   | READ_WRITE        | If set to true, the Timer node fires repeatedly, each time the specified duration field value elapses. If set to false, the Timer node only fires once until restarted |
-| duration | time    | 1       | READ_WRITE        | Specifies the time in seconds before the Timer node fires after the control field value is set to start. To specify time values down to millisecond granularity, use a float type (0.001 equals one millisecond) |
-| fire     | Event   | N/A     | OBSERVE_ONLY      | Triggers observer callback functions when the Timer node fires. Please note that the timer observer callback executes on the render thread |
 
-{#ControlValues}
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>control</td>
+<td>string</td>
+<td>none</td>
+<td>READ_WRITE</td>
+<td>Used to control the operation of the Timer node. Recognized values include: <table><thead><tr><th>Value</th><th>Effect</th></tr></thead><tbody><tr><td>none</td><td>No effect</td></tr><tr><td>start</td><td>Starts the <strong>Timer</strong> node operation</td></tr><tr><td>stop</td><td>Stops a running <strong>Timer</strong> node</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>repeat</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>If set to true, the Timer node fires repeatedly, each time the specified duration field value elapses. If set to false, the Timer node only fires once until restarted</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>time</td>
+<td>1</td>
+<td>READ_WRITE</td>
+<td>Specifies the time in seconds before the Timer node fires after the control field value is set to start. To specify time values down to millisecond granularity, use a float type (0.001 equals one millisecond)</td>
+</tr>
+<tr>
+<td>fire</td>
+<td>Event</td>
+<td>N/A</td>
+<td>OBSERVE_ONLY</td>
+<td>Triggers observer callback functions when the Timer node fires. Please note that the timer observer callback executes on the render thread</td>
+</tr>
+</tbody>
+</table>
 
-| Value | Effect                              |
-| ---- | ---------------------------------- |
-| none  | No effect                           |
-| start | Starts the **Timer** node operation |
-| stop  | Stops a running **Timer** node      |
+
 
 ## Sample app
 [TimerExample](https://github.com/rokudev/samples/tree/master/ux%20components/control/TimerExample) is a sample app demonstrating Timer in action.

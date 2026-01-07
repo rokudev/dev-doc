@@ -1,5 +1,5 @@
 ---
-title: "StdDlgMultiStyleTextItem"
+title: StdDlgMultiStyleTextItem
 excerpt: ''
 deprecated: false
 hidden: true
@@ -82,7 +82,7 @@ msTextItem.text = "This StdDlgMultiStyleTextItem renders the URL <url>http://www
 
 ## Example
 
-In this example, two drawing styles named "default" and "url" have been defined and assigned to the **drawingStyles** field of the **StdDlgMultiStyleTextItem** node. The roku.com URL is enclosed in <url> tags, which renders the text with the "url" style defined in the **drawingStyles** field. The parts of the string that are not enclosed in the <url> tags use the "default" drawing style. If no "default" **drawingStyle** had been defined, the system default drawing style would have been used.
+In this example, two drawing styles named "default" and "url" have been defined and assigned to the **drawingStyles** field of the **StdDlgMultiStyleTextItem** node. The roku.com URL is enclosed in \<url\> tags, which renders the text with the "url" style defined in the **drawingStyles** field. The parts of the string that are not enclosed in the \<url\> tags use the "default" drawing style. If no "default" **drawingStyle** had been defined, the system default drawing style would have been used.
 
 ![roku815px - StdDlgMultiStyleTextItemFHD](https://image.roku.com/ZHZscHItMTc2/StdDlgMultiStyleTextItemFHD.jpg)
 

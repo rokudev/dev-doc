@@ -1,8 +1,5 @@
 ---
 title: Transaction Report
-excerpt: >-
-  Learn how to use the Roku Pay Transaction Report to view, analyze, and export
-  transaction data for your app.
 deprecated: false
 hidden: true
 link:

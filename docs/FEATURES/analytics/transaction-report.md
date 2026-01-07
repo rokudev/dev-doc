@@ -37,82 +37,135 @@ To run a Transaction Report, follow these steps:
 
 2. Click **Run**. The **User Transactions** table lists the following information for each transaction in the specified time period:
 
-   | Field                    | Description                                                  |
-   | ------------------------ | ------------------------------------------------------------ |
-   | event_date               | The date of the transaction (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format; timestamps are in UTC). |
-   | invoice_number           | The Roku-generated unique ID for the transaction. This invoice number is included in purchase confirmation emails sent to customers. It can be used as a lookup key for customer queries or requests. |
-   | transaction_type         | The type of transaction, which may be one of the following values: ${transaction-type} |
-   | developer_transaction_id | The partner-specific unique ID for the transaction.          |
-   | user_transaction_id      | The user-based ID for the transaction. If this transaction is a purchase, it will be the same as the **original_transaction_id**. If this transaction is a renewal, it will be different. |
-   | user_id                  | The unique ID of the customer.                               |
-   | zip_code                 | The zip code of the customer.                                |
-   | channel_name             | The name of the app.                                     |
-   | product_code             | The product identifier as entered on the Developer Dashboard when the product was created. |
-   | product_name             | The name of the product as entered on the Developer Dashboard when the product was created. |
-   | quantity                 | The number of items purchased.                               |
-   | amount                   | The localized dollar amount of the purchase.<br /><br />If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction.<br /><br />All cancellation and downgrade transaction types should have a $0 amount. |
-   | service_credits          | Amount $0 is expected for all cancellation & downgrade transaction typesAny credits applied to the transaction. If the **transaction_type** is UpgradeSale, this field will contain the prorated amount of the current subscription that is still unused. |
-   | net_amount               | Localized total of the item purchased (including tax if applicable) with local currency symbol, after subtracting **service_credits**.<br /><br />If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction.<br /><br />All cancellation and downgrade transaction types should have a $0 amount. |
-   | currency                 | The currency used for the transaction: USD, CAD, EUR, or GBP. |
-   | expiration_date          | The subscription end date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format). |
-   | original_transaction_id  | The ID of the original subscription purchase.                |
-   | original_purchase_date   | The date of the original subscription purchase (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format). |
-   | partner_reference_id     | The partner-specific internal ID for an in-app product.  |
-   | refund_description       | Roku-specified explanation for refund transactions.          |
-   | comments                 | Any Roku-entered comments for the transaction.               |
-   | channel_store_code       | The [ISO Alpha-2 two-letter country code](https://www.iso.org/obp/ui/#search) of the Streaming Store associated with the app from which the purchase was made. |
-   | purchase_channel         | Where the Roku Pay subscription purchase was made: ${purchase-channel} |
-   | purchase_context         | How the subscription purchase was made: ${purchase-context}  |
 
-{#purchase-channel}
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>event_date</td>
+<td>The date of the transaction (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format; timestamps are in UTC).</td>
+</tr>
+<tr>
+<td>invoice_number</td>
+<td>The Roku-generated unique ID for the transaction. This invoice number is included in purchase confirmation emails sent to customers. It can be used as a lookup key for customer queries or requests.</td>
+</tr>
+<tr>
+<td>transaction_type</td>
+<td>The type of transaction, which may be one of the following values: <table><thead><tr><th>Type</th><th>Meaning</th></tr></thead><tbody><tr><td>Purchase</td><td>A successful purchase transaction (historically used to indicate purchases under Roku Standard Billing: RSB). Such transactions include 1) one-time purchases. and 2) initial and recurring subscription charges.</td></tr><tr><td>Cancellation</td><td>Either an end user actively canceled a subscription or Roku is unable to successfully capture the end user's subscription event.</td></tr><tr><td>Renewal</td><td>An end user, who actively cancelled a subscription, successfully signed up again before the previously scheduled expiration of the subscription.</td></tr><tr><td>DowngradeCancel</td><td>A successful downgrade transaction's cancellation of the outgoing (base) subscription.</td></tr><tr><td>DowngradeSale</td><td>A successful downgrade transaction's sale of a new (downgraded) subscription, to replace the outgoing (base) plan.</td></tr><tr><td>UpgradeCancel</td><td>A successful upgrade transaction's cancellation of the outgoing (base) subscription.</td></tr><tr><td>UpgradeSale</td><td>A successful upgrade transaction's sale of a new (upgraded) subscription, replacing the outgoing (base) subscription.</td></tr><tr><td>CancellationOfferInitiated</td><td>An offer was successfully sent to a customer trying to cancel their subscription.</td></tr><tr><td>Charge</td><td>A successful purchase transaction (historically used to indicate purchases under Roku as Payment Method: RPM).</td></tr><tr><td>Refund</td><td>A successful refund transaction (historically used to indicate refunds under Roku as Payment Method: RPM).</td></tr><tr><td>Reversal</td><td>A successful refund transaction (historically used to indicate refunds under Roku Standard Billing: RSB).</td></tr><tr><td>GraceInitiated</td><td>Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP.</td></tr><tr><td>GraceRecovered</td><td>Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same.</td></tr><tr><td>OnHoldInitiated</td><td>Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.</td></tr><tr><td>Chargeback</td><td>The customer has initiated a transaction dispute. <br /><br />For apps in the Germany Streaming Store only, a SEPA chargeback may occur when the customer disputes a transaction made through Roku Pay that results in a chargeback or their bank account has insufficient funds.</td></tr><tr><td>ChargebackReversed</td><td>Roku successfully reversed the chargeback claim.</td></tr><tr><td>SecondChargeback</td><td>The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback).</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>developer_transaction_id</td>
+<td>The partner-specific unique ID for the transaction.</td>
+</tr>
+<tr>
+<td>user_transaction_id</td>
+<td>The user-based ID for the transaction. If this transaction is a purchase, it will be the same as the <strong>original_transaction_id</strong>. If this transaction is a renewal, it will be different.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>The unique ID of the customer.</td>
+</tr>
+<tr>
+<td>zip_code</td>
+<td>The zip code of the customer.</td>
+</tr>
+<tr>
+<td>channel_name</td>
+<td>The name of the app.</td>
+</tr>
+<tr>
+<td>product_code</td>
+<td>The product identifier as entered on the Developer Dashboard when the product was created.</td>
+</tr>
+<tr>
+<td>product_name</td>
+<td>The name of the product as entered on the Developer Dashboard when the product was created.</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>The number of items purchased.</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>The localized dollar amount of the purchase.<br /><br />If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction.<br /><br />All cancellation and downgrade transaction types should have a $0 amount.</td>
+</tr>
+<tr>
+<td>service_credits</td>
+<td>Amount $0 is expected for all cancellation &amp; downgrade transaction typesAny credits applied to the transaction. If the <strong>transaction_type</strong> is UpgradeSale, this field will contain the prorated amount of the current subscription that is still unused.</td>
+</tr>
+<tr>
+<td>net_amount</td>
+<td>Localized total of the item purchased (including tax if applicable) with local currency symbol, after subtracting <strong>service_credits</strong>.<br /><br />If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction.<br /><br />All cancellation and downgrade transaction types should have a $0 amount.</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>The currency used for the transaction: USD, CAD, EUR, or GBP.</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>The subscription end date (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format).</td>
+</tr>
+<tr>
+<td>original_transaction_id</td>
+<td>The ID of the original subscription purchase.</td>
+</tr>
+<tr>
+<td>original_purchase_date</td>
+<td>The date of the original subscription purchase (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format).</td>
+</tr>
+<tr>
+<td>partner_reference_id</td>
+<td>The partner-specific internal ID for an in-app product.</td>
+</tr>
+<tr>
+<td>refund_description</td>
+<td>Roku-specified explanation for refund transactions.</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>Any Roku-entered comments for the transaction.</td>
+</tr>
+<tr>
+<td>channel_store_code</td>
+<td>The <a href="https://www.iso.org/obp/ui/#search">ISO Alpha-2 two-letter country code</a> of the Streaming Store associated with the app from which the purchase was made.</td>
+</tr>
+<tr>
+<td>purchase_channel</td>
+<td>Where the Roku Pay subscription purchase was made: <ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="/docs/developer-program/discovery/instant-signup.md">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
+</tr>
+<tr>
+<td>purchase_context</td>
+<td>How the subscription purchase was made: <ul><li><strong>isu</strong>. Subscription was purchased via <a href="/docs/developer-program/discovery/instant-signup.md">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
+</tr>
+</tbody>
+</table>
 
-- **web**. Subscription was purchased from [Roku.com](http://roku.com/) (for example, through [Instant Signup](/docs/developer-program/discovery/instant-signup.md) during the device activation).
-- **device**. Subscription was purchased on the Roku device (through the on-device sign-up flow).
 
-{#purchase-context}
 
-- **isu**. Subscription was purchased via [Instant Signup](/docs/developer-program/discovery/instant-signup.md).
-- **iap**. Subscription was purchased via an in-application purchase.
 
-{#transaction-type}
-
-| Type                       | Meaning                                                      |
-| -------------------------- | ------------------------------------------------------------ |
-| Purchase                   | A successful purchase transaction (historically used to indicate purchases under Roku Standard Billing: RSB). Such transactions include 1) one-time purchases. and 2) initial and recurring subscription charges. |
-| Cancellation               | Either an end user actively canceled a subscription or Roku is unable to successfully capture the end user's subscription event. |
-| Renewal                    | An end user, who actively cancelled a subscription, successfully signed up again before the previously scheduled expiration of the subscription. |
-| DowngradeCancel            | A successful downgrade transaction's cancellation of the outgoing (base) subscription. |
-| DowngradeSale              | A successful downgrade transaction's sale of a new (downgraded) subscription, to replace the outgoing (base) plan. |
-| UpgradeCancel              | A successful upgrade transaction's cancellation of the outgoing (base) subscription. |
-| UpgradeSale                | A successful upgrade transaction's sale of a new (upgraded) subscription, replacing the outgoing (base) subscription. |
-| CancellationOfferInitiated | An offer was successfully sent to a customer trying to cancel their subscription. |
-| Charge                     | A successful purchase transaction (historically used to indicate purchases under Roku as Payment Method: RPM). |
-| Refund                     | A successful refund transaction (historically used to indicate refunds under Roku as Payment Method: RPM). |
-| Reversal                   | A successful refund transaction (historically used to indicate refunds under Roku Standard Billing: RSB). |
-| GraceInitiated             | Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP. |
-| GraceRecovered             | Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same. |
-| OnHoldInitiated            | Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP. |
-| Chargeback                 | The customer has initiated a transaction dispute. <br /><br />For apps in the Germany Streaming Store only, a SEPA chargeback may occur when the customer disputes a transaction made through Roku Pay that results in a chargeback or their bank account has insufficient funds. |
-| ChargebackReversed         | Roku successfully reversed the chargeback claim.             |
-| SecondChargeback           | The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback). |
 
 ## Estimating monthly subscription revenue with the Transaction Report
 
 You can use the Transaction Report to estimate the monthly payouts from subscription purchases and reconcile the estimates with the actual payouts received.  To estimate your monthly subscription revenue, follow these steps:
 
-1. Run a Transaction Report for the last 13 months or the previous month. <br/><br/>
+1. Run a Transaction Report for the last 13 months or the previous month. <br /><br />
 
    - If this is the first time you are doing the estimate and you have annual subscriptions, run a Transaction Report for the last 13 months (payouts are sent approximately 30 days after the end of a month; therefore you need to use a 13-month period to calculate payouts for the last 12 months). To do this, set the **Time Period** in the **Filter** to **"is in the past"** **"13" "months"**, or select **is in range** and enter the 13-month time period.
 
-   - If you are just estimating the previous month's subscription revenue, set the **Time Period** in the **Filter** to **"is in the past"** **"1" "months"**, or select **is in range** and enter the 1-month time period. <br/><br/>
+   - If you are just estimating the previous month's subscription revenue, set the **Time Period** in the **Filter** to **"is in the past"** **"1" "months"**, or select **is in range** and enter the 1-month time period. <br /><br />
 
-2. Separate the monthly and annual subscription transactions. Filter on a field in the report that distinguishes between monthly and annual subscriptions. This may be the **product_code** or **product_name** field, if you included "monthly" or "annual" in the name, or it can be the **net_amount** as it is likely that your annual subscriptions have distinctive prices compared to the monthly ones.<br/><br/>
+2. Separate the monthly and annual subscription transactions. Filter on a field in the report that distinguishes between monthly and annual subscriptions. This may be the **product_code** or **product_name** field, if you included "monthly" or "annual" in the name, or it can be the **net_amount** as it is likely that your annual subscriptions have distinctive prices compared to the monthly ones.<br /><br />
 
 
-3. Calculate the monthly subscription revenue. In the list of monthly subscription purchases, sum the revenue and multiply the total by 0.80 (based on 80% share of the subscription revenue).<br/><br/>
+3. Calculate the monthly subscription revenue. In the list of monthly subscription purchases, sum the revenue and multiply the total by 0.80 (based on 80% share of the subscription revenue).<br /><br />
 >Payouts for monthly subscription revenue are typically sent the next month; therefore, your January monthly revenue would be sent in February, February revenue in March, and so on.
 
-<br/>The following table demonstrates how the **product_name**, **product_code**, and **net_amount** fields may be used to identify monthly subscriptions and then how to calculate the amount of revenue that will be paid out the following month. Only the first 3 of 300 hypothetical monthly subscriptions are shown.<br/><br/>
+<br />The following table demonstrates how the **product_name**, **product_code**, and **net_amount** fields may be used to identify monthly subscriptions and then how to calculate the amount of revenue that will be paid out the following month. Only the first 3 of 300 hypothetical monthly subscriptions are shown.<br /><br />
 
 | product_name | product_code | net_amount | 80% Revenue Share (paid out next month) |
 | ------------ | ------------ | ---------- | --------------------------------------- |
@@ -131,7 +184,7 @@ You can use the Transaction Report to estimate the monthly payouts from subscrip
 
    c. Attribute the prorated monthly annual subscription revenue you calculated to each of the next 12 months.  For example, if $3,600 of annual subscription revenue was generated in January, $2,400 in February, and $1,200 in March, then your January monthly annual subscription revenue would be $300, February would be $500, and March would be $600, and so on.
 
-   d. Repeat these steps for each subsequent month, summing the annual subscription revenue attributions for each month.<br/><br/>
+   d. Repeat these steps for each subsequent month, summing the annual subscription revenue attributions for each month.<br /><br />
 
    The following example demonstrates how new annual subscriptions are attributed to monthly revenue for a new app launched in January. The two left-most columns in the table record the new annual subscription revenue generated for each month within a year. The month columns to the right list the pro-rated annual subscription revenue that is attributed to the subsequent months. For example, the table shows $3,600 new annual subscription revenue for January, which is paid out in equal $300 installments from February to the next January (not shown).
 
@@ -155,11 +208,38 @@ You can use the Transaction Report to estimate the monthly payouts from subscrip
 
 5. Use the calculations from steps 3 and 4 to add the monthly and pro-rated annual subscription revenue to estimate the expected payout for a month. The following table uses the first three months of a year to demonstrate how to do this:
 
-   | Month    | Monthly Subscription Revenue <br />(from previous month) | Pro-Rated Annual Subscription Revenue<br/>(from previous 12 months) | Total Expected Payout |
-   | -------- | -------------------------------------------------------- | ------------------------------------------------------------ | --------------------- |
-   | February | $1,200                                                   | $300                                                         | $1,500                |
-   | March    | $1,000                                                   | $500                                                         | $1,600                |
-   | April    | $1,100                                                   | $600                                                         | $1,700                |
+
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Monthly Subscription Revenue <br />(from previous month)</th>
+<th>Pro-Rated Annual Subscription Revenue<br />(from previous 12 months)</th>
+<th>Total Expected Payout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>February</td>
+<td>$1,200</td>
+<td>$300</td>
+<td>$1,500</td>
+</tr>
+<tr>
+<td>March</td>
+<td>$1,000</td>
+<td>$500</td>
+<td>$1,600</td>
+</tr>
+<tr>
+<td>April</td>
+<td>$1,100</td>
+<td>$600</td>
+<td>$1,700</td>
+</tr>
+</tbody>
+</table>
+
 
 ## Using and sharing report data
 
@@ -192,19 +272,19 @@ You can email a Transaction Report to one or more recipients as a spreadsheet, t
 
 
 
-2. In the **Title** field, enter the subject line for the email.<br/><br/>
+2. In the **Title** field, enter the subject line for the email.<br /><br />
 
 
 
 3. In the **Who Should it be emailed to?** field, enter one or more recipients by entering their email address and then clicking **Add**.
-   <br/><br/>Optionally, select the **Include a Custom Message** check box to include any additional information in the body of the email message.<br/><br/>
+   <br /><br />Optionally, select the **Include a Custom Message** check box to include any additional information in the body of the email message.<br /><br />
 
 
 
-4. In the **Format data as** field, select whether to attach the Transaction Report as a **PDF** (tiled or single column), **Visualization** (tiled or single-column chart), or CSV zip file.<br/><br/>Optionally, expand **Filters** to edit the currently configured time periods to include in the report.  See **[Running a Transaction Report](#running-a-transaction-report)** for more information on how to do this.
+4. In the **Format data as** field, select whether to attach the Transaction Report as a **PDF** (tiled or single column), **Visualization** (tiled or single-column chart), or CSV zip file.<br /><br />Optionally, expand **Filters** to edit the currently configured time periods to include in the report.  See **[Running a Transaction Report](#running-a-transaction-report)** for more information on how to do this.
 
 
-5. Optionally, expand **Advanced Options** to configure the visualizations, data formatting, and hyperlinks in the email and the attached report.<br/><br/>
+5. Optionally, expand **Advanced Options** to configure the visualizations, data formatting, and hyperlinks in the email and the attached report.<br /><br />
 
 
 6. Click **Send**.
@@ -219,16 +299,16 @@ You can create a schedule to automatically email a Transaction Report in a recur
 
 
 
-2. Click the **New+** icon to create a new schedule, or click an existing schedule from the let pane to edit it.<br/><br/>
+2. Click the **New+** icon to create a new schedule, or click an existing schedule from the let pane to edit it.<br /><br />
 
 
-3. In the **Give your schedule a name** field, enter a descriptive name for the schedule that makes it easy to identify in your list of schedules. For example, you can include the format, frequency, time period or any other relevant information that distinguishes the schedule.<br/><br/>
+3. In the **Give your schedule a name** field, enter a descriptive name for the schedule that makes it easy to identify in your list of schedules. For example, you can include the format, frequency, time period or any other relevant information that distinguishes the schedule.<br /><br />
 
 
-4. In the **Who Should it be emailed to?** field, enter one or more recipients by entering their email address and then clicking **Add**.<br/><br/>Optionally, select the **Include a Custom Message** check box to include any additional information in the body of the email message.<br/><br/>
+4. In the **Who Should it be emailed to?** field, enter one or more recipients by entering their email address and then clicking **Add**.<br /><br />Optionally, select the **Include a Custom Message** check box to include any additional information in the body of the email message.<br /><br />
 
 
-5. In the **Format data as** field, select whether to attach the Transaction Report as a **PDF** (tiled or single column), **Visualization** (tiled or single-column chart), or CSV zip file.<br/><br/>
+5. In the **Format data as** field, select whether to attach the Transaction Report as a **PDF** (tiled or single column), **Visualization** (tiled or single-column chart), or CSV zip file.<br /><br />
 
 
 6. In the **Deliver this schedule** field, configure the cadence used to email the report. You can send the report **Daily**, **Weekly**, **Monthly**, **Hourly**, or **By Minute**. Once you select a cadence, configure on which day/date and the time to send the report.
@@ -244,13 +324,13 @@ You can create a schedule to automatically email a Transaction Report in a recur
    - **By Minute**. Email the report every 5, 10, 15, 20, 25, 30 minutes within a specific time range. The report is emailed every 5 minutes between 6:00AM and 6:00PM by default.
 
 
-7. Optionally, expand **Filters** to edit the currently configured time periods to include in the report.     See **[Running a Transaction Report](#running-a-transaction-report)** for more information on how to do this.<br/><br/>
+7. Optionally, expand **Filters** to edit the currently configured time periods to include in the report.     See **[Running a Transaction Report](#running-a-transaction-report)** for more information on how to do this.<br /><br />
 
 
-8. Optionally, expand **Advanced Options** to configure the visualizations, data formatting, and hyperlinks in the email and the attached report. <br/><br/>
+8. Optionally, expand **Advanced Options** to configure the visualizations, data formatting, and hyperlinks in the email and the attached report. <br /><br />
 
 
-9. Optionally, click **Send Test** to send the Transaction Report to the list of email recipients in the selected format.<br/><br/>
+9. Optionally, click **Send Test** to send the Transaction Report to the list of email recipients in the selected format.<br /><br />
 
 
 10. Click **Save As** to save the schedule. Repeat steps 2-9 to create another schedule.

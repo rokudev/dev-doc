@@ -38,15 +38,70 @@ For efficiency, sometimes the control logic for the GridPanel may create and hol
 
 ## Fields
 
-| Field                      | Type    | Default    | Access Permission | Description                                                  |
-| -------------------------- | ------- | ---------- | ----------------- | ------------------------------------------------------------ |
-| grid                       | Node    | NULL       | READ_WRITE        | The grid field should be set to either a PosterGrid or MarkupGrid node to be displayed in the Panel. In general, because the layout of any grid is usually custom, you will generally need to set the grid's itemSize, itemSpacing, numRows and numColumns fields. The GridPanel will position the grid appropriately. |
-| leftLabel                  | Node    | Label node | READ_WRITE        | The leftLabel field is set to a Label node that is positioned just above the left/top corner of the grid. Setting the Label node's text field will cause that text string to be displayed. Setting other fields of the Label node can be used to adjust the Label's text color and other visual attributes. |
-| rightLabel                 | Node    | Label node | READ_WRITE        | The rightLabel field is set to a Label node that is positioned just above the right/top corner of the grid. Setting the Label node's text field will cause that text string to be displayed. Setting other fields of the Label node can be used to adjust the Label's text color and other visual attributes.<br/><br/>The rightLabel is often used to display a "1 of N" message that reflects the index of the grid's focused item. |
-| showSectionLabels          | Boolean | false      | READ_WRITE        | If showSectionLabels is set to true and the data for the grid node is divided into sections, the Title attribute of the current section will be displayed as the leftLabel of the grid. As the grid items scroll, the leftLabel will smoothly transition as each section of the grid reaches the focus position. |
-| createNextPanelIndex       | integer | N/A        | READ_ONLY         | When the createNextPanelOnItemFocus field is true, createNextPanel is set when a new panel needs to be created and added to the PanelSet. The value of the field is the index of the grid's content that should be used to create and populate the new panel.<br/><br/>The createNextPanelIndex field is guaranteed to be set exactly once whenever the next panel for the focused grid item needs to be created. |
-| nextPanel                  | Node    | false      | WRITE_ONLY        | When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in repsonse to the createNextPanelIndex field being set. |
-| createNextPanelOnItemFocus | Boolean | true       | READ_WRITE        | When set to true, the Create Next Panel mechanism is enabled (i.e. the createNextPanelIndex field will be set when a new grid item receives the focus). When set to false, the Create Next Panel mechanism is disabled (i.e. the createNextPanelIndex field will not be set when a new grid item receives the focus). |
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>grid</td>
+<td>Node</td>
+<td>NULL</td>
+<td>READ_WRITE</td>
+<td>The grid field should be set to either a PosterGrid or MarkupGrid node to be displayed in the Panel. In general, because the layout of any grid is usually custom, you will generally need to set the grid's itemSize, itemSpacing, numRows and numColumns fields. The GridPanel will position the grid appropriately.</td>
+</tr>
+<tr>
+<td>leftLabel</td>
+<td>Node</td>
+<td>Label node</td>
+<td>READ_WRITE</td>
+<td>The leftLabel field is set to a Label node that is positioned just above the left/top corner of the grid. Setting the Label node's text field will cause that text string to be displayed. Setting other fields of the Label node can be used to adjust the Label's text color and other visual attributes.</td>
+</tr>
+<tr>
+<td>rightLabel</td>
+<td>Node</td>
+<td>Label node</td>
+<td>READ_WRITE</td>
+<td>The rightLabel field is set to a Label node that is positioned just above the right/top corner of the grid. Setting the Label node's text field will cause that text string to be displayed. Setting other fields of the Label node can be used to adjust the Label's text color and other visual attributes.<br /><br />The rightLabel is often used to display a "1 of N" message that reflects the index of the grid's focused item.</td>
+</tr>
+<tr>
+<td>showSectionLabels</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>If showSectionLabels is set to true and the data for the grid node is divided into sections, the Title attribute of the current section will be displayed as the leftLabel of the grid. As the grid items scroll, the leftLabel will smoothly transition as each section of the grid reaches the focus position.</td>
+</tr>
+<tr>
+<td>createNextPanelIndex</td>
+<td>integer</td>
+<td>N/A</td>
+<td>READ_ONLY</td>
+<td>When the createNextPanelOnItemFocus field is true, createNextPanel is set when a new panel needs to be created and added to the PanelSet. The value of the field is the index of the grid's content that should be used to create and populate the new panel.<br /><br />The createNextPanelIndex field is guaranteed to be set exactly once whenever the next panel for the focused grid item needs to be created.</td>
+</tr>
+<tr>
+<td>nextPanel</td>
+<td>Node</td>
+<td>false</td>
+<td>WRITE_ONLY</td>
+<td>When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in repsonse to the createNextPanelIndex field being set.</td>
+</tr>
+<tr>
+<td>createNextPanelOnItemFocus</td>
+<td>Boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>When set to true, the Create Next Panel mechanism is enabled (i.e. the createNextPanelIndex field will be set when a new grid item receives the focus). When set to false, the Create Next Panel mechanism is disabled (i.e. the createNextPanelIndex field will not be set when a new grid item receives the focus).</td>
+</tr>
+</tbody>
+</table>
+
 
 >  If you are creating the grid field (either a PosterGrid or MarkupGrid) associated with a GridPanel in script of a component that extends GridPanel, you also need to add the grid as a child of the GridPanel. For example, in a component that extends GridPanel, where m.top is that component, you would associate the grid field with a PosterGrid as follows:
 

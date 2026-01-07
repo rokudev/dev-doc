@@ -15,7 +15,7 @@ next:
 
 Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
 
-The PanelSet node provides the panel sliding behavior seen in the Roku home screen. The PanelSet node manages the position of a set of child Panel nodes, and implements the left and right panel sliding behavior. Once a Panel node has been added to a PanelSet node, it remains a child of the PanelSet node unless it is replaced by another Panel node, or slides completely off the right side of the screen.
+The PanelSet node provides the panel sliding behavior seen in the Roku home screen. The PanelSet node manages the position of a set of child Panel nodes, and implements the left and right panel sliding behavior. Once a Panel node has been added to a PanelSet node, it remains a child of the PanelSet node unless it is replaced by another Panel node, or slides completely off the right side of the screen.
 
 The PanelSet node is designed to display two Panel nodes in most cases, one Panel node on the left and one on the right. When the PanelSet node has focus, and the user presses the **Left** (or **Back**) or **Right** remote control key, the panels slide to the left or right one position.
 
@@ -39,11 +39,11 @@ For consistency, it is recommended that panels be set to the default height. Sim
 |              | wide       | 63       | 112      |
 |              | full       | 100      | 170      |
 
-Narrow panels should be paired with wide panels, so that both panels fit in the alloted region without overlapping the PanelSet node previous and next arrow indicators. Similarly, medium panels should be paired with medium panels. Only one full-screen width panel can be displayed at a time, so full-screen  cause both left and right panels to slide on/offscreen when they are added to the PanelSet node.
+Narrow panels should be paired with wide panels, so that both panels fit in the alloted region without overlapping the PanelSet node previous and next arrow indicators. Similarly, medium panels should be paired with medium panels. Only one full-screen width panel can be displayed at a time, so full-screen  cause both left and right panels to slide on/offscreen when they are added to the PanelSet node.
 
-When two panels are onscreen, a default gap is added between the left and right panels. For SD, the spacing is set to 20 pixels. For HD, the spacing is 30 pixels. The PanelSet node positions the left panel so that the panel origin is at (`leftPosition, 0`) in the PanelSet node coordinate system, where `leftPosition` is the value of the left Panel node `leftPosition` field. The PanelSet node positions the right panel so that the panel origin is at (`leftPosition  leftWidth + spacing`), where `leftPosition` and `leftWidth` are the left panel `leftPosition` and `width` fields, and spacing is the default horizontal spacing attribute.
+When two panels are onscreen, a default gap is added between the left and right panels. For SD, the spacing is set to 20 pixels. For HD, the spacing is 30 pixels. The PanelSet node positions the left panel so that the panel origin is at (`leftPosition, 0`) in the PanelSet node coordinate system, where `leftPosition` is the value of the left Panel node `leftPosition` field. The PanelSet node positions the right panel so that the panel origin is at (`leftPosition  leftWidth + spacing`), where `leftPosition` and `leftWidth` are the left panel `leftPosition` and `width` fields, and spacing is the default horizontal spacing attribute.
 
-Note that the PanelSet node positions the origin of each Panel node coordinate system by setting the Panel node `translation` field, but it does not clip the panel to the rectangle defined by the Panel node `width` and `height` fields, so if the Panel node contains a child node with translation set to (`-10, -5`), that child will be rendered 10 pixels to the right and 5 pixels above the panel origin.
+Note that the PanelSet node positions the origin of each Panel node coordinate system by setting the Panel node `translation` field, but it does not clip the panel to the rectangle defined by the Panel node `width` and `height` fields, so if the Panel node contains a child node with translation set to (`-10, -5`), that child will be rendered 10 pixels to the right and 5 pixels above the panel origin.
 
 #### Child Management
 
@@ -51,21 +51,21 @@ The regular roSGNode child management interface, ifSGNodeChildren, is used for a
 
 Typically, the first panel is created, the panel `focusedChild` field has an observer added, then the panel is added to the PanelSet node with `appendChild()`. Then focus is set on that panel, causing the `focusedChild` observer function to be called. The `focusedChild` observer function typically will create the second panel, add a `focusedChild` observer on that panel, then add the second panel to the PanelSet node with `appendChild()`, and so forth.
 
-If any panel contains a list or grid, the typical usage is that when the list or grid panel is on the left, each list/grid item creates a different panel on the right. Typically, the list or grid `itemUnfocused` and `itemFocused` fields are observed. When the `itemUnfocused` field changes, the list or grid panel will hide the panel on the right, then when the `itemFocused` field changes, it will create a new panel for the newly focused list or grid item, and call `replaceChild()` to cause the old panel to be replaced by the new one.
+If any panel contains a list or grid, the typical usage is that when the list or grid panel is on the left, each list/grid item creates a different panel on the right. Typically, the list or grid `itemUnfocused` and `itemFocused` fields are observed. When the `itemUnfocused` field changes, the list or grid panel will hide the panel on the right, then when the `itemFocused` field changes, it will create a new panel for the newly focused list or grid item, and call `replaceChild()` to cause the old panel to be replaced by the new one.
 
 The PanelSet node assumes that:
 
 - Only Panel nodes are added as PanelSet node children
-- Panels are added only using the `appendChild()` or `createChild()` roSGNode functions. The Panel node `leftPosition` field must be set prior to calling `appendChild()` or `createChild()`. Appending a child will trigger a PanelSet node slide action in most cases.
+- Panels are added only using the `appendChild()` or `createChild()` roSGNode functions. The Panel node `leftPosition` field must be set prior to calling `appendChild()` or `createChild()`. Appending a child will trigger a PanelSet node slide action in most cases.
 - Panels can be replaced using the `replaceChild()` roSGNode function.
 - Panel children should never be removed from the PanelSet node using the `removeChild()` roSGNode function. The PanelSet node automatically removes Panel node children when they slide offscreen to the right.
-- The `insertChild()` and `removeChild()` roSGNode functions are never used.
+- The `insertChild()` and `removeChild()` roSGNode functions are never used.
 
 ## Fields
 
 | Field         | Type    | Default | Access Permission | Description                                                                                                                                                      |
 |---------------|---------|---------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| width         | float   | 1280    | READ_WRITE        | Specifies the width of the PanelSet node. In most cases, this is set to the display width (such as 1280 for HD).                                         |
+| width         | float   | 1280    | READ_WRITE        | Specifies the width of the PanelSet node. In most cases, this is set to the display width (such as 1280 for HD).                                         |
 | height        | float   | 605     | READ_WRITE        | Specifies the height of the PanelSet node. In most cases, this is set to the the display height minus the overhang height.                               |
 | slideDuration | integer | 500     | READ_WRITE        | Milliseconds of the slide transition. The default is 1/2 second.                                                                                         |
 | numPanels     | integer | 0       | READ_ONLY         | Contains the current number of Panel nodes that are children of the PanelSet node.                                                             |

@@ -23,10 +23,35 @@ scene = screen.CreateScene("OverhangPanelSetScene")
 
 ## Fields
 
-| Field    | Type     | Default          | Access Permission | Use                                                                                                                                                                                                                                                                                                                                              |
-|----------|----------|------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| overhang | Overhang | An Overhang node | READ_ONLY | Provides access to the Overhang node created for this scene. Fields of the Overhang node can be set to custom the overhang.                                                                                                                                                                                                    |
-| panelSet | PanelSet | A PanelSet node  | READ_ONLY | Provides access to the PanelSet node created for this scene. The RoSGNode child APIs can be used to add panels to the panel set. Be careful to follow the restrictions on using the child APIs that are described in the PanelSet documentation.<br/><br/>Fields of the PanelSet node can also be set to custom the panel set. |
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overhang</td>
+<td>Overhang</td>
+<td>An Overhang node</td>
+<td>READ_ONLY</td>
+<td>Provides access to the Overhang node created for this scene. Fields of the Overhang node can be set to custom the overhang.</td>
+</tr>
+<tr>
+<td>panelSet</td>
+<td>PanelSet</td>
+<td>A PanelSet node</td>
+<td>READ_ONLY</td>
+<td>Provides access to the PanelSet node created for this scene. The RoSGNode child APIs can be used to add panels to the panel set. Be careful to follow the restrictions on using the child APIs that are described in the PanelSet documentation.<br /><br />Fields of the PanelSet node can also be set to custom the panel set.</td>
+</tr>
+</tbody>
+</table>
+
 
 ## Sample app
 [OverhangPanelSetSceneExample](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/OverhangPanelSetSceneExample) is a sample app demonstrating OverhangPanelSetScene in action.

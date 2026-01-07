@@ -1,5 +1,5 @@
 ---
-title: "Content engagement overview"
+title: Content engagement
 excerpt: ''
 deprecated: false
 hidden: true

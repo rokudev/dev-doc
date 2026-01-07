@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: Analytics reports
 excerpt: ''
 deprecated: false
 hidden: true

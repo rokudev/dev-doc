@@ -28,31 +28,37 @@ As of July 1, 2025, Roku supports only the JSON version of the Roku Search feed 
 
 The following table highlights the benefits of the JSON feed spec:
 
-| **Format**                                            | JSON                                                         |
-| ----------------------------------------------------- | ------------------------------------------------------------ |
-| **Multi-region support**                              | One feed for all regions. <br /><br />A single feed may include different  languages, content availability windows, and rating systems for different regions. |
-| **Availability windows**                              | Supported                                                    |
-| **Multi-source support**                              | One feed for all content metadata sources                    |
-| **Content types supported**                           | ${json-feed-types}                                           |
-| **Aspect ratios for content posters and backgrounds** | ${json-aspect-ratios}                                        |
 
-{#json-feed-types}
+<table>
+<thead>
+<tr>
+<th><strong>Format</strong></th>
+<th>JSON</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multi-region support</strong></td>
+<td>One feed for all regions. <br /><br />A single feed may include different  languages, content availability windows, and rating systems for different regions.</td>
+</tr>
+<tr>
+<td><strong>Availability windows</strong></td>
+<td>Supported</td>
+</tr>
+<tr>
+<td><strong>Multi-source support</strong></td>
+<td>One feed for all content metadata sources</td>
+</tr>
+<tr>
+<td><strong>Content types supported</strong></td>
+<td><ul><li>movies</li><li>television episodes</li><li>short-form content</li></ul></td>
+</tr>
+<tr>
+<td><strong>Aspect ratios for content posters and backgrounds</strong></td>
+<td><ul><li>16:9 (a 16:9 or 2:3 image for the content poster is required)</li><li>2:3</li><li>4:3</li></ul></td>
+</tr>
+</tbody>
+</table>
 
-- movies
-- television episodes
-- short-form content
 
-{#xml-feed-types}
 
-- movies
-- television episodes
-
-{#json-aspect-ratios}
-
-- 16:9 (a 16:9 or 2:3 image for the content poster is required)
-- 2:3
-- 4:3
-
-{#xml-aspect-ratios}
-
-- 2:3

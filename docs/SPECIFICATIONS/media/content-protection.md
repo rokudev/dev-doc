@@ -118,91 +118,27 @@ The Roku OS supports Widevine DRM for all Roku apps.
 
 The Widevine support security levels for the different Roku devices is as follows:
 
-| L1 TVs        | L1 Players        | L2 Players        |
-| ------------- | ----------------- | ----------------- |
-| ${l1-tv-list} | ${l1-player-list} | ${l2-player-list} |
 
-{#l1-tv-list}
+<table>
+<thead>
+<tr>
+<th>L1 TVs</th>
+<th>L1 Players</th>
+<th>L2 Players</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ul><li>FtWorth</li><li>Longview</li><li>Reno/Bandera</li><li>Liberty</li><li>Midland/El Paso</li><li>Malone/Camden</li><li>Roma</li><li>Athens</li><li>Miami</li><li>Trinidad</li><li>Roxton</li><li>Sandia</li><li>Damon</li><li>Shiner</li></ul></td>
+<td><ul><li>Dallas</li><li>Cooper 2/3/4</li><li>Bryan</li><li>Amarillo 1080/4K</li><li>Gilbert 1080/4K</li><li>Nemo</li><li>Littlefield</li><li>Fruitland/Chico</li><li>Benjamin</li><li>Marlin</li><li>Madison</li><li>Bailey</li><li>Rockett</li><li>Logan</li><li>Lockhart</li><li>Brewster</li></ul></td>
+<td><ul><li>Giga</li><li>Tyler</li><li>Paolo</li><li>Sugarland/Jackson</li><li>Austin/Mustang</li><li>Briscoe</li></ul><p><strong>Required Roku manifest entries:</strong></p><pre><code>requires_widevine_drm=1requires_widevine_version=1.0</code></pre><p><strong>Configure DRM parameters in an roAssociativeArray:</strong></p><pre><code>drmParams = \{keySystem: &quot;Widevine&quot;licenseServerURL: &quot;&lt;http(s)://license-server-host/path?param=value&gt;&quot;\}</code></pre><p><strong>Setup ContentNode and set to Video node:</strong></p><pre><code>contentNode = createObject(&quot;roSGNode&quot;, &quot;contentNode&quot;)contentNode.streamFormat = &quot;dash&quot;contentNode.url = &quot;wwww.myvideo.com/content.mpd&quot;contentNode.drmParams = drmParamsm.video.content = contentNode</code></pre><p>For the Digital Rights Management (DRM) Control Attributes, refer to the <a href="/docs/developer-program/getting-started/architecture/content-metadata.md#ContentMeta-Data-DigitalRightsManagement(DRM)ControlAttributes">Content Meta-Data</a> documentation.</p><p><strong>Supported schemes</strong></p><table><thead><tr><th>Scheme</th><th>Key Rotation?</th><th>Firmware dependency</th></tr></thead><tbody><tr><td>CTR</td><td>No</td><td>8.1.x</td></tr><tr><td>CTR</td><td>Yes</td><td>9.0.x</td></tr><tr><td>CBC/CBCS</td><td>Yes</td><td>9.0.x</td></tr></tbody></table></td>
+</tr>
+</tbody>
+</table>
 
-- FtWorth
-- Longview
-- Reno/Bandera
-- Liberty
-- Midland/El Paso
-- Malone/Camden
-- Roma
-- Athens
-- Miami
-- Trinidad
-- Roxton
-- Sandia
-- Damon
-- Shiner
 
-{#l1-player-list}
 
-- Dallas
-- Cooper 2/3/4
-- Bryan
-- Amarillo 1080/4K
-- Gilbert 1080/4K
-- Nemo
-- Littlefield
-- Fruitland/Chico
-- Benjamin
-- Marlin
-- Madison
-- Bailey
-- Rockett
-- Logan
-- Lockhart
-- Brewster
 
-{#l2-player-list}
-
-- Giga
-- Tyler
-- Paolo
-- Sugarland/Jackson
-- Austin/Mustang
-- Briscoe
-
-**Required Roku manifest entries:**
-
-~~~~
-requires_widevine_drm=1
-requires_widevine_version=1.0
-~~~~
-
-**Configure DRM parameters in an roAssociativeArray:**
-
-~~~~
-drmParams = {
-keySystem: "Widevine"
-licenseServerURL: "<http(s)://license-server-host/path?param=value>"
-}
-~~~~
-
-**Setup ContentNode and set to Video node:**
-
-~~~~
-contentNode = createObject("roSGNode", "contentNode")
-contentNode.streamFormat = "dash"
-contentNode.url = "wwww.myvideo.com/content.mpd"
-contentNode.drmParams = drmParams
-
-m.video.content = contentNode
-~~~~
-
-For the Digital Rights Management (DRM) Control Attributes, refer to the [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md#ContentMeta-Data-DigitalRightsManagement(DRM)ControlAttributes) documentation.
-
-**Supported schemes**
-
-| Scheme   | Key Rotation? | Firmware dependency |
-| -------- | ------------- | ------------------- |
-| CTR      | No            | 8.1.x               |
-| CTR      | Yes           | 9.0.x               |
-| CBC/CBCS | Yes           | 9.0.x               |
 
 ## Copy protection
 

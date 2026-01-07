@@ -50,14 +50,56 @@ video streams of varying quality to provide the best experience to your viewers 
 
 Roku supports the following widely-used standard formats for adaptive bit rate switching:
 
-|                          | DASH                                                         | HLS                                                          | Smooth                                                       |
-| :----------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| Audio Codecs             | AAC, DTS, DD, DD+                                            | AAC, MP3, DTS, DD, DD+                                       | AAC, MP3, DTS, DD, DD+                                       |
-| Video Codecs             | AVC, HEVC                                                    | AVC, HEVC, VP9                                               | AVC, HEVC                                                    |
-| Subtitle formats         | TTML, fragmented ISMT<br/>TTML, unfragmented TTML text<br/>TTML, side-loaded TTML text<br/><br/>WebVTT, fragmented WebVTT text<br/>WebVTT, unfragmented WebVTT text<br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text | TTML, side-loaded TTML text<br/><br/>WebVTT, fragmented WebVTT text<br/>WebVTT, unfragmented WebVTT text<br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text | TTML, fragmented ISMT<br/>TTML, side-loaded TTML text<br/><br/>WebVTT, side-loaded WebVTT text<br/><br/>SRT, side-loaded SRT text |
-| Audio/video chunk format | Fragmented MP4, CMAF (muxing audio and video not supported for CMAF) | video: TS, CMAF (muxing audio and video not supported for CMAF)<br />audio: aac, ac3, eac3 | PIFF                                                         |
-| DRM                      | PlayReady, Widevine                                          | AES-128, Widevine, Verimatrix                                | PlayReady                                                    |
-| HDR support              | Dolby Vision, HDR10                                          | Dolby Vision, HDR10                                          |                                                              |
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>DASH</th>
+<th>HLS</th>
+<th>Smooth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audio Codecs</td>
+<td>AAC, DTS, DD, DD+</td>
+<td>AAC, MP3, DTS, DD, DD+</td>
+<td>AAC, MP3, DTS, DD, DD+</td>
+</tr>
+<tr>
+<td>Video Codecs</td>
+<td>AVC, HEVC</td>
+<td>AVC, HEVC, VP9</td>
+<td>AVC, HEVC</td>
+</tr>
+<tr>
+<td>Subtitle formats</td>
+<td>TTML, fragmented ISMT<br />TTML, unfragmented TTML text<br />TTML, side-loaded TTML text<br /><br />WebVTT, fragmented WebVTT text<br />WebVTT, unfragmented WebVTT text<br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
+<td>TTML, side-loaded TTML text<br /><br />WebVTT, fragmented WebVTT text<br />WebVTT, unfragmented WebVTT text<br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
+<td>TTML, fragmented ISMT<br />TTML, side-loaded TTML text<br /><br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
+</tr>
+<tr>
+<td>Audio/video chunk format</td>
+<td>Fragmented MP4, CMAF (muxing audio and video not supported for CMAF)</td>
+<td>video: TS, CMAF (muxing audio and video not supported for CMAF)<br />audio: aac, ac3, eac3</td>
+<td>PIFF</td>
+</tr>
+<tr>
+<td>DRM</td>
+<td>PlayReady, Widevine</td>
+<td>AES-128, Widevine, Verimatrix</td>
+<td>PlayReady</td>
+</tr>
+<tr>
+<td>HDR support</td>
+<td>Dolby Vision, HDR10</td>
+<td>Dolby Vision, HDR10</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 
 ### Best practices
 
@@ -91,19 +133,98 @@ For trickplay of live streams, apps should seek to a position of 999,999 seconds
 Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only) codecs.
 
 
-|                      | AVC (H.264)             | HEVC (H.265)[^1]                | VP9[^2]                 | AV1 (DASH only)             |
-| :------------------- | :------------------------------ | :---------------------- | :---------------------- | ----------------------- |
-| Aspect Ratio 2[^3]       | Various                 | Various                         | Various                 |                  |
-| Dimension            | Various up to 1920x1080 | Various up to 3840x2160         | Various up to 3840x2160 | Various up to 7680 x 4320 |
-| Input Frame Rate[^4] | 24p, 25p, 30p, 50p, 60p | 24p, 25p, 30p, 50p, 60p         | 24p, 25p, 30p, 60p[^6] | 24p,25p,30p,50p,60p |
-| Color Space          | Rec.709                 | Rec.709, Rec.2020               | Rec.709, Rec.2020       | Rec.709, Rec.2020 |
-| Profile              | main, high              | main, main 10                   | profile 0, profile 2    | main, main 10 |
-| Level                | 4.1, 4.2                | 4.1, 5.0, 5.1                   |                         | 4.1, 5.0, 5.1 |
-| Video Mode           | Constrained VBR         | Constrained VBR                 | Constrained VBR         | Constrained VBR |
-| Video Bitrate        | Up to 10Mbps            | Up to 40Mbps                    | Up to 40Mbps            | Up to 40Mbps |
-| Peak Video Bit rate  | 1.5x average            | 1.5x average                    | 1.5x average            | 1.5x average |
-| Key Frame Interval [^5] | < 10s                   | < 10s                           | < 10s                   | < 10s              |
-| HDR support          | Dolby Vision: dvav.09   | Dolby Vision: dvhe.05<br />HDR10 (HEVC profile Main 10)<br />HLG | HDR10                   | Dolby Vision<br />HDR10 <br />HDR10+ |
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>AVC (H.264)</th>
+<th>HEVC (H.265)[^1]</th>
+<th>VP9[^2]</th>
+<th>AV1 (DASH only)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aspect Ratio 2[^3]</td>
+<td>Various</td>
+<td>Various</td>
+<td>Various</td>
+<td></td>
+</tr>
+<tr>
+<td>Dimension</td>
+<td>Various up to 1920x1080</td>
+<td>Various up to 3840x2160</td>
+<td>Various up to 3840x2160</td>
+<td>Various up to 7680 x 4320</td>
+</tr>
+<tr>
+<td>Input Frame Rate[^4]</td>
+<td>24p, 25p, 30p, 50p, 60p</td>
+<td>24p, 25p, 30p, 50p, 60p</td>
+<td>24p, 25p, 30p, 60p[^6]</td>
+<td>24p,25p,30p,50p,60p</td>
+</tr>
+<tr>
+<td>Color Space</td>
+<td>Rec.709</td>
+<td>Rec.709, Rec.2020</td>
+<td>Rec.709, Rec.2020</td>
+<td>Rec.709, Rec.2020</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>main, high</td>
+<td>main, main 10</td>
+<td>profile 0, profile 2</td>
+<td>main, main 10</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>4.1, 4.2</td>
+<td>4.1, 5.0, 5.1</td>
+<td></td>
+<td>4.1, 5.0, 5.1</td>
+</tr>
+<tr>
+<td>Video Mode</td>
+<td>Constrained VBR</td>
+<td>Constrained VBR</td>
+<td>Constrained VBR</td>
+<td>Constrained VBR</td>
+</tr>
+<tr>
+<td>Video Bitrate</td>
+<td>Up to 10Mbps</td>
+<td>Up to 40Mbps</td>
+<td>Up to 40Mbps</td>
+<td>Up to 40Mbps</td>
+</tr>
+<tr>
+<td>Peak Video Bit rate</td>
+<td>1.5x average</td>
+<td>1.5x average</td>
+<td>1.5x average</td>
+<td>1.5x average</td>
+</tr>
+<tr>
+<td>Key Frame Interval [^5]</td>
+<td>&lt; 10s</td>
+<td>&lt; 10s</td>
+<td>&lt; 10s</td>
+<td>&lt; 10s</td>
+</tr>
+<tr>
+<td>HDR support</td>
+<td>Dolby Vision: dvav.09</td>
+<td>Dolby Vision: dvhe.05<br />HDR10 (HEVC profile Main 10)<br />HLG</td>
+<td>HDR10</td>
+<td>Dolby Vision<br />HDR10 <br />HDR10+</td>
+</tr>
+</tbody>
+</table>
+
 
 Some decoder and security features are device specific. For details, see [Roku Models and Features](/docs/specs/hardware.md).
 
@@ -255,8 +376,8 @@ Function CanPlay4K() as Boolean
   end if
 
   ' Check if the Roku player can decode 4K 60fps HEVC streams or 4K 30fps vp9 streams
-  hevc_video = { Codec: "hevc", Profile: "main", Level: "5.1" }
-  vp9_video = { Codec: "vp9", Profile: "profile 0" }
+  hevc_video = \{ Codec: "hevc", Profile: "main", Level: "5.1" \}
+  vp9_video = \{ Codec: "vp9", Profile: "profile 0" \}
   can_decode_hevc = dev_info.CanDecodeVideo(hevc_video)
   can_decode_vp9 = dev_info.CanDecodeVideo(vp9_video)
   if can_decode_hevc.result <> true OR can_decode_vp9.result <> true

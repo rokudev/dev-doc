@@ -104,26 +104,3 @@ The following models are no longer manufactured, but can run the latest Roku OS:
 ## Legacy models
 
 The following models have been discontinued, cannot run newer Roku OS versions, and cannot be used to run IDK apps. The table lists the latest compatible version in each case:
-
-| Device Name          | Code name | roDeviceInfo.GetModel() | CPU                 | RAM    | Latest Roku OS version |
-| :------------------- | :-------- | :---------------------- | :------------------ | :----- | :--------------------- |
-| Roku DVP             | Griffin   | N1000                   | MIPS 400 MHz        | 256 MB | 3.1                    |
-| Roku SD              | Redwood   | N1050                   | MIPS 400 MHz        | 256 MB | 3.1                    |
-| Roku HD              | Redwood   | N1100                   | MIPS 400 MHz        | 256 MB | 3.1                    |
-| Roku HD-XR           | Redwood   | N1101                   | MIPS 400 MHz        | 256 MB | 3.1                    |
-| Roku HD              | Pico      | 2000C                   | MIPS 400 MHz        | 256 MB | 3.1                    |
-| Roku XD              | Pico      | 2050X, 2050N            | MIPS 400 MHz        | 256 MB | 3.1                    |
-| Roku XD              | Pico      | 2100X, 2100N            | MIPS 400 MHz        | 256 MB | 3.1                    |
-| Roku LT              | Giga      | 2400X                   | ARM11 600 MHz       | 256 MB | 9.1                    |
-| Roku 2 HD            | Giga      | 3000X                   | ARM11 600 MHz       | 256 MB | 9.1                    |
-| Roku 2 XD            | Giga      | 3050X                   | ARM11 600 MHz       | 256 MB | 9.1                    |
-| Roku 2 XS            | Giga      | 3100X                   | ARM11 600 MHz       | 256 MB | 9.1                    |
-| Roku LT              | Paolo     | 2450X                   | MIPS 400 MHz        | 256 MB | 9.1                    |
-| Roku HD              | Paolo     | 2500X                   | MIPS 400 MHz        | 256 MB | 9.1                    |
-| Roku Streaming Stick | Jackson   | 3400X, 3420X            | ARM11 600 MHz       | 256 MB | 9.1                    |
-| Roku LT              | Tyler     | 2700X                   | MIPS 600 MHz        | 512 MB | 11                     |
-| Roku 1, Roku SE      | Tyler     | 2710X                   | MIPS 600 MHz        | 512 MB | 11                     |
-| Roku 2               | Tyler     | 2720X                   | MIPS 600 MHz        | 512 MB | 11                     |
-| Roku Streaming Stick | Sugarland | 3500X                   | ARM11 600 MHz       | 512 MB | 11                     |
-| Roku 4               | Dallas    | 4400X                   | ARM quad core       | 1.5 GB | 11.5                   |
-| 8K Roku TV           | Bandera   | E000X                   | ARM quad core 1 GHz | 1.5 GB | 13.1                   |

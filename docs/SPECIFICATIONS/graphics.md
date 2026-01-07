@@ -103,10 +103,3 @@ you must set up the manifest file as described in Manifest File.
 
 The following are the graphic image sizes and formats for a 1080p user
 interface.
-
-|Graphic Image|Size|Format|
-|--- |--- |--- |
-|App logo|540x405 pixels|JPEG|
-|Splash screen|1920x1080 pixels|JPEG|
-|Roku Search app buttons|165x60 pixels|PNG|
-|Roku Search brand tiles|147x113 pixels|JPEG|

@@ -61,54 +61,343 @@ Each time the RowList focus animation completes a step, the RowList's rowItemFoc
 
 ## Fields
 
-| Field                              | Type              | Default        | Access Permission | Description           |
-| ---------------------------------- | ----------------- | -------------- | ----------------- | --------------------- |
-| itemComponentName | string |  | READ_WRITE | Specifies the name of an XML component for the items in each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed in [RowList XML Component](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#rowlist-xml-component) below. |
-| rowTitleComponentName | string |  | READ_WRITE | Specifies the name of an XML component to render titles in place of the row label. This component must extend from [Group](/docs/references/scenegraph/layout-group-nodes/group.md). If this component defines a "content" field, it will be set to the row's content. If this component defines a "rowCounterVertAlign" field (possible values are "top", "center", and "bottom"), the row counter's vertical alignment is respective of the row title component. |
-| content | ContentNode | none | READ_WRITE | Specifies the content for the list. The content should be a single ContentNode that has one child ContentNode for each row. These child ContentNodes for each row should themselves contains child ContentNodes for each item in the row. See [Data Bindings](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#data-bindings) below for more details. |
-| itemSize | vector2d | [0,0] | READ_WRITE | Specifies the width and height of rows in the list. Note that this the width of the entire row, not the width of the posters in the row. |
-| itemSpacing | vector2d | [0,0] | READ_WRITE | Specifies the spacing between rows in the list. The y-dimension of the vector specifies the vertical spacing between rows, and the x-dimension is ignored. |
-| numRows | integer | 0 | READ_WRITE | Specifies the number of visible rows in the list. Note that the actual number of rows may be more or less than the number of visible rows depending on the number of items in the list content. |
-| rowHeights | array of floats | [ ] | READ_WRITE | Specifies the heights of each row of the list. This allows the height of each row of the list to vary from row to row. The values override the height specified in the y-dimension value of the `itemSize` field. If the array contains fewer elements than the number of rows in the data model, the y-dimension value of the `itemSize` field is used as the height of the extra rows. |
-| rowSpacings | array of floats | [ ] | READ_WRITE | Specifies the spacing after each row of the list. This allows the spacing between rows to vary from row to row. The values override the vertical spacing specified in y-dimension value of the `itemSpacing` field. If the array contains fewer elements than the number of rows in the data model, the y-dimension value of the `itemSpacing` field is used as the spacing after the extra rows. |
-| rowItemSize | array of vector2d | [ ] | READ_WRITE | Specifies the width and height of the items in each row. The array of values must include at least one element. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the size for the extra rows. |
-| rowItemSpacing | array of vector2d | [ ] | READ_WRITE | Specifies the spacing between items in each row. The x-dimension of each array value specifies the horizontal spacing between list items in the corresponding row. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the spacing for the extra rows. If the array contains no values, no space will be included between list items in all rows. |
-| focusXOffset | array of floats | [ ] | READ_WRITE | Specifies the x-dimension offset of the first fully visible item in each row relative to the left edge of the list. In most cases, the first fully visible item in each row will be positioned at the left edge of the list, so this field does not need to be specified. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the x-dimension offset for the extra rows. If the array contains no values, the default x-dimension offset of 0.0 is used. |
-| rowLabelOffset | array of vector2d | [0,0] | READ_WRITE | Specifies the offset of the row label for each row. The x-dimension specifies the horizontal offset of the label from the left edge of the row. The y-dimension component specifies the vertical spacing between the label and the list items in the row. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the offset for the labels of the extra rows. If the array specified contains no values, a default offset value of [0,0] is used. |
-| showRowLabel | array of Boolean | [ ] | READ_WRITE | Specifies whether the row label on the left edge of each row is displayed. If the array contains fewer elements than the number of rows in the data model, the last value in array is used to control the display of the row label for the extra rows. If the array contains no values, no row labels are displayed. |
-| showRowCounter | array of Boolean | [ ] | READ_WRITE | Specifies whether the "item_number of total_number_of_items" label on the right edge of each row is displayed. Note that the "item_number of total_number_of_items" label is only displayed for the focused row even if the `showRowCounter` field value for that row is set to true. If the array contains fewer elements than the number of rows in the data model, the last value in array is used to control the display of the "item_number of total_number_of_items" label for the extra rows. If the array contains no values, no "item_number of total_number_of_items" labels are displayed. |
-| indefiniteRowItemCount | array of Boolean | [ ] | READ_WRITE | For each row, a value of true indicates that  a "+" character should be appended to the "total_number_of_items" label in the UI (which should be the case when there are unfetched pages beyond what is currently accessible/visible, e.g., "Item 4 of 30+"). |
-| variableWidthItems | array of Boolean | [ ] | READ_WRITE | This field is only supported when `rowFocusAnimationStyle = "fixedFocusWrap"`<br/><br/>By default, all items in a row of the RowList node have the same width and height. By setting `variableWidthItems` to true for a row, the items in the row will continue to have the same height, but the width will be taken from the `[SD/HD/FHD]ItemWidth` field of the ContentNode associated with each item. See [Data Bindings](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#data-bindings) below for more details. <br/><br/>`variableWidthItems` is an array with one element per row in the RowList. If there are fewer elements than rows in the RowList, the last value in the array is repeated. If all rows of the RowList have variable widths, you can set `variableWidthItems="[true]"` or `variableWidthItems="true"`.<br/><br/>The `[SD/HD/FHD]ItemWidth` values specified should match the `ui_resolutions` attribute in the manifest.<br/><br/>Example: If you only specify `ui_resolutions=fhd`, you should only set `FHDItemWidth` and allow the device to autoscale when rendering for HD and SD display modes. If you specify `ui_resolutions=hd`,fhd, you can set `HDItemWidth` and `FHDItemWidth`.<br/><br/>If any item does not specify the `[SD/HD/FHD]ItemWidth` in its ContentNode for a variable width row, the `x` value of the RowList's `rowItemSize` field for that row is used as the `width` for that item. |
-| rowFocusAnimationStyle | option string | floatingFocus | READ_WRITE | Specifies the how the focus indicator moves in a row of items in response to the remote direction pad Left and Right key presses. The possible values are:<br/><br/>${rowFocusAnimationStyle} |
-| vertFocusAnimationStyle | option string | fixedFocus | READ_WRITE | Specifies the how the focus indicator moves in a list or a column of grid items in response to the remote direction pad Up and Down key presses. The possible values are:<br/><br/>${vertFocusAnimationStyle} |
-| rowLabelColor | color | 0xffffffff | READ_WRITE | Specifies the color of the row and "`item_number of total_number_of_items`" labels. |
-| rowLabelFont | font | system default | READ_WRITE | Specifies the font for the row and "`item_number of total_number_of_items`" labels. |
-| rowCounterRightOffset | float |  | READ_WRITE | Field provides greater control over the UX.<br/><br/>When set, this value specifies the location of the right edge of the row counter relative to right edge of the RowList's clipping rectangle. If not set, the right edge of the row counter is positioned to equal the left offset of the row title. |
-| showRowCounterForShortRows | Boolean | true | READ_WRITE | Field provides greater control over the UX.<br/><br/>When set to true, the row counter is shown for all rows. When set to false, the row counter is not shown for rows where all items fit onscreen. |
-| fadeFocusFeedbackWhenAutoScrolling | Boolean | false | READ_WRITE | When set to true, the focus feedback indicator will quickly fade out when scrolling multiple items and fade back in when the scrolling ends. The focus feedback indicator will also after in and out when using the FFW/Rewind keys to scroll a page at a time.<br/><br/>Note: This field is defined on [ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md) and thus is inherited by all of the following components: LabelList, MarkupList, PosterGrid, MarkupGrid, RowList, CheckList, and RadioButtonList. |
-| currFocusFeedbackOpacity | float |  | READ_ONLY | This field provides access to the current opacity of the focus feedback indicator. It can be used to have other items on the screen fade in/out when the focus feedback indicator fades in/out.<br/><br/>Note: This field is defined on [ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md) and thus is inherited by all of the following components: LabelList, MarkupList, PosterGrid, MarkupGrid, RowList, CheckList, and RadioButtonList. |
-| drawFocusFeedbackOnTop | Boolean | false | READ_WRITE | Specifies whether the focus indicator bitmap is drawn below or on top of the list items. |
-| drawFocusFeedback | Boolean | true | READ_WRITE | Specifies whether or not the focus indicator bitmap is displayed. |
-| imageWellBitmapUri | uri |  | READ_WRITE | Specifies the bitmap file to use to suggest where images would appear for empty lists. |
-| focusBitmapUri | uri |  | READ_WRITE | Specifies the bitmap file used for the focus indicator when the list has focus. In most cases, this should be a [9-patch image](https://image.roku.com/ZHZscHItMTc2/focus-9.png) that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| focusFootprintBitmapUri | uri |  | READ_WRITE | Specifies the bitmap file used for the focus indicator when the list does not have focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| focusBitmapBlendColor              | color             | 0xFFFFFFFF     | READ_WRITE        | Blend the graphic image specified by `focusBitmapUri` with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus indicator graphic image with a different color than the image specified by `focusBitmapUri`. |
-| focusFootprintBlendColor | color | 0xFFFFFFFF | READ_WRITE | Blend the graphic image specified by `focusFootprintBitmapUri` with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus footprint indicator graphic image with a different color than the image specified by `focusFootprintBitmapUri`. |
-| loadingBitmapUri | uri |  | READ_WRITE | Specifies a bitmap file to display while a list item poster is loading.<br /><br />To execute a seamless cross-fade transition between posters, set the **loadingBitmapUri** of the next poster to be shown to the uri of the currently displayed poster. |
-| loadingBitmapOpacity | float | 1.0 | READ_WRITE | Specifies an opacity value used to render the loading bitmap. |
-| failedBitmapUri | uri |  | READ_WRITE | Specifies a bitmap file to display when a list item poster fails to load. |
-| failedBitmapOpacity                | float             | 1.0            | READ_WRITE        | Specifies an opacity value used to render the failed bitmap. |
-| wrapDividerBitmapUri               | uri               |                | READ_WRITE        | Specifies the bitmap file to use as a visual separator between the last and first list items when the list wraps. In most case, this should be a 9-patch image that specifies both expandable regions. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| wrapDividerHeight                  | float             | 0              | READ_WRITE        | Specifies the height of the divider. The wrap divider bitmap will be scaled to this height. The width of the wrap divider is set to the width of the list items (that is, the x-dimension value of the `itemSize` field). |
-| rowItemSelected                    | array of integer  | [ ]            | READ_ONLY         | When an item is selected, set to a 2-element array, where element 0 contains the index of the row containing the selected item, and element 1 contains the index of the selected item in that row. |
-| rowItemFocused                     | array of integer  | [ ]            | READ_ONLY         | When an item gains the key focus, set to a 2-element array, where element 0 contains the index of the focused row, and element 1 contains the index of the focused item in that row. |
-| currFocusColumn | float | 0.0 | READ_WRITE | Indicates which column of the currently focused row in a RowList component currently has focus. This field is typically used to implement a horizontal pagination mechanism for the currently focused row.<br /><br />If this value is set to 3.7, it means that item 3 occupies 30% of the currently focused row while item 4 occupies 70% of it.<br /><br />To maximize performance, the field should be kept to a minimum, as these scripts will run once during each render. |
-| itemSelected                       | integer           | 0              | READ_ONLY         | When an item is selected, set to the index of the selected row. |
-| itemFocused                        | integer           | 0              | READ_ONLY         | When a row gains the key focus, set to the index of the focused row. |
-| itemUnfocused                      | integer           | 0              | READ_ONLY         | When a row loses the key focus, set to the index of the unfocused row. |
-| jumpToItem                         | integer           | 0              | WRITE_ONLY        | When set to a valid item index, causes the list to immediately update so that the specified row moves into the focus position. |
-| jumpToRowItem                      | array of integer  | [ ]            | WRITE_ONLY        | When set to a valid [ row, col ] index pair, causes the list to immediately update so that the specified row, col item moves into the focus position. |
-| animateToItem                      | integer           | 0              | WRITE_ONLY        | When set to a valid item index, causes the list to quickly scroll so that the specified row moves into the focus position. |
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>itemComponentName</td>
+<td>string</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the name of an XML component for the items in each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed in <a href="/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#rowlist-xml-component">RowList XML Component</a> below.</td>
+</tr>
+<tr>
+<td>rowTitleComponentName</td>
+<td>string</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the name of an XML component to render titles in place of the row label. This component must extend from <a href="/docs/references/scenegraph/layout-group-nodes/group.md">Group</a>. If this component defines a "content" field, it will be set to the row's content. If this component defines a "rowCounterVertAlign" field (possible values are "top", "center", and "bottom"), the row counter's vertical alignment is respective of the row title component.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>ContentNode</td>
+<td>none</td>
+<td>READ_WRITE</td>
+<td>Specifies the content for the list. The content should be a single ContentNode that has one child ContentNode for each row. These child ContentNodes for each row should themselves contains child ContentNodes for each item in the row. See <a href="/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#data-bindings">Data Bindings</a> below for more details.</td>
+</tr>
+<tr>
+<td>itemSize</td>
+<td>vector2d</td>
+<td>[0,0]</td>
+<td>READ_WRITE</td>
+<td>Specifies the width and height of rows in the list. Note that this the width of the entire row, not the width of the posters in the row.</td>
+</tr>
+<tr>
+<td>itemSpacing</td>
+<td>vector2d</td>
+<td>[0,0]</td>
+<td>READ_WRITE</td>
+<td>Specifies the spacing between rows in the list. The y-dimension of the vector specifies the vertical spacing between rows, and the x-dimension is ignored.</td>
+</tr>
+<tr>
+<td>numRows</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_WRITE</td>
+<td>Specifies the number of visible rows in the list. Note that the actual number of rows may be more or less than the number of visible rows depending on the number of items in the list content.</td>
+</tr>
+<tr>
+<td>rowHeights</td>
+<td>array of floats</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies the heights of each row of the list. This allows the height of each row of the list to vary from row to row. The values override the height specified in the y-dimension value of the <code>itemSize</code> field. If the array contains fewer elements than the number of rows in the data model, the y-dimension value of the <code>itemSize</code> field is used as the height of the extra rows.</td>
+</tr>
+<tr>
+<td>rowSpacings</td>
+<td>array of floats</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies the spacing after each row of the list. This allows the spacing between rows to vary from row to row. The values override the vertical spacing specified in y-dimension value of the <code>itemSpacing</code> field. If the array contains fewer elements than the number of rows in the data model, the y-dimension value of the <code>itemSpacing</code> field is used as the spacing after the extra rows.</td>
+</tr>
+<tr>
+<td>rowItemSize</td>
+<td>array of vector2d</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies the width and height of the items in each row. The array of values must include at least one element. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the size for the extra rows.</td>
+</tr>
+<tr>
+<td>rowItemSpacing</td>
+<td>array of vector2d</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies the spacing between items in each row. The x-dimension of each array value specifies the horizontal spacing between list items in the corresponding row. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the spacing for the extra rows. If the array contains no values, no space will be included between list items in all rows.</td>
+</tr>
+<tr>
+<td>focusXOffset</td>
+<td>array of floats</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies the x-dimension offset of the first fully visible item in each row relative to the left edge of the list. In most cases, the first fully visible item in each row will be positioned at the left edge of the list, so this field does not need to be specified. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the x-dimension offset for the extra rows. If the array contains no values, the default x-dimension offset of 0.0 is used.</td>
+</tr>
+<tr>
+<td>rowLabelOffset</td>
+<td>array of vector2d</td>
+<td>[0,0]</td>
+<td>READ_WRITE</td>
+<td>Specifies the offset of the row label for each row. The x-dimension specifies the horizontal offset of the label from the left edge of the row. The y-dimension component specifies the vertical spacing between the label and the list items in the row. If the array contains fewer elements than the number of rows in the data model, the last value in the array is used as the offset for the labels of the extra rows. If the array specified contains no values, a default offset value of [0,0] is used.</td>
+</tr>
+<tr>
+<td>showRowLabel</td>
+<td>array of Boolean</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies whether the row label on the left edge of each row is displayed. If the array contains fewer elements than the number of rows in the data model, the last value in array is used to control the display of the row label for the extra rows. If the array contains no values, no row labels are displayed.</td>
+</tr>
+<tr>
+<td>showRowCounter</td>
+<td>array of Boolean</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies whether the "item_number of total_number_of_items" label on the right edge of each row is displayed. Note that the "item_number of total_number_of_items" label is only displayed for the focused row even if the <code>showRowCounter</code> field value for that row is set to true. If the array contains fewer elements than the number of rows in the data model, the last value in array is used to control the display of the "item_number of total_number_of_items" label for the extra rows. If the array contains no values, no "item_number of total_number_of_items" labels are displayed.</td>
+</tr>
+<tr>
+<td>indefiniteRowItemCount</td>
+<td>array of Boolean</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>For each row, a value of true indicates that  a "+" character should be appended to the "total_number_of_items" label in the UI (which should be the case when there are unfetched pages beyond what is currently accessible/visible, e.g., "Item 4 of 30+").</td>
+</tr>
+<tr>
+<td>variableWidthItems</td>
+<td>array of Boolean</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>This field is only supported when <code>rowFocusAnimationStyle = "fixedFocusWrap"</code><br /><br />By default, all items in a row of the RowList node have the same width and height. By setting <code>variableWidthItems</code> to true for a row, the items in the row will continue to have the same height, but the width will be taken from the <code>[SD/HD/FHD]ItemWidth</code> field of the ContentNode associated with each item. See <a href="/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#data-bindings">Data Bindings</a> below for more details. <br /><br /><code>variableWidthItems</code> is an array with one element per row in the RowList. If there are fewer elements than rows in the RowList, the last value in the array is repeated. If all rows of the RowList have variable widths, you can set <code>variableWidthItems="[true]"</code> or <code>variableWidthItems="true"</code>.<br /><br />The <code>[SD/HD/FHD]ItemWidth</code> values specified should match the <code>ui_resolutions</code> attribute in the manifest.<br /><br />Example: If you only specify <code>ui_resolutions=fhd</code>, you should only set <code>FHDItemWidth</code> and allow the device to autoscale when rendering for HD and SD display modes. If you specify <code>ui_resolutions=hd</code>,fhd, you can set <code>HDItemWidth</code> and <code>FHDItemWidth</code>.<br /><br />If any item does not specify the <code>[SD/HD/FHD]ItemWidth</code> in its ContentNode for a variable width row, the <code>x</code> value of the RowList's <code>rowItemSize</code> field for that row is used as the <code>width</code> for that item.</td>
+</tr>
+<tr>
+<td>rowFocusAnimationStyle</td>
+<td>option string</td>
+<td>floatingFocus</td>
+<td>READ_WRITE</td>
+<td>Specifies the how the focus indicator moves in a row of items in response to the remote direction pad Left and Right key presses. The possible values are:<br /><br /><table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>floatingFocus</td><td>Causes the focus indicator to float left or right until it reaches the end of the row, at which point the focus indicator will stay fixed on the first or last item in the row, and the items will scroll left or right if there were items that were not visible.</td></tr><tr><td>fixedFocusWrap</td><td>Causes the row to wrap around when the focus indicator reaches the first or last item in the row, as long as the row contains enough items to fill the row. If the row does not contain enough items to fill the row, the focus indicator will float left and right.</td></tr><tr><td>fixedFocus</td><td>Causes the focus to stay fixed on the first item in each row. As the user scrolls, the previous selected item goes off the screen. Scrolling continues until the last item is reached with no wrapping.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>vertFocusAnimationStyle</td>
+<td>option string</td>
+<td>fixedFocus</td>
+<td>READ_WRITE</td>
+<td>Specifies the how the focus indicator moves in a list or a column of grid items in response to the remote direction pad Up and Down key presses. The possible values are:<br /><br /><table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>floatingFocus</td><td>Causes the focus indicator to float up or down until it reaches the end of the list, at which point the focus indicator will stay fixed on the first or last row in the list, and the rows will scroll up or down if there are rows that were not visible.</td></tr><tr><td>fixedFocusWrap</td><td>Causes the column to wrap around when the focus indicator reaches the first or last row in the list, as long as the list contains enough rows to fill the list. If the list does not contain enough rows to fill the list, the focus indicator will float up and down.</td></tr><tr><td>fixedFocus</td><td>Causes the focus to stay fixed on the upper row. As the user scrolls down, the row containing the previously selected item scrolls up off screen. Scrolling continues until the last row is reached.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>rowLabelColor</td>
+<td>color</td>
+<td>0xffffffff</td>
+<td>READ_WRITE</td>
+<td>Specifies the color of the row and "<code>item_number of total_number_of_items</code>" labels.</td>
+</tr>
+<tr>
+<td>rowLabelFont</td>
+<td>font</td>
+<td>system default</td>
+<td>READ_WRITE</td>
+<td>Specifies the font for the row and "<code>item_number of total_number_of_items</code>" labels.</td>
+</tr>
+<tr>
+<td>rowCounterRightOffset</td>
+<td>float</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Field provides greater control over the UX.<br /><br />When set, this value specifies the location of the right edge of the row counter relative to right edge of the RowList's clipping rectangle. If not set, the right edge of the row counter is positioned to equal the left offset of the row title.</td>
+</tr>
+<tr>
+<td>showRowCounterForShortRows</td>
+<td>Boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>Field provides greater control over the UX.<br /><br />When set to true, the row counter is shown for all rows. When set to false, the row counter is not shown for rows where all items fit onscreen.</td>
+</tr>
+<tr>
+<td>fadeFocusFeedbackWhenAutoScrolling</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>When set to true, the focus feedback indicator will quickly fade out when scrolling multiple items and fade back in when the scrolling ends. The focus feedback indicator will also after in and out when using the FFW/Rewind keys to scroll a page at a time.<br /><br />Note: This field is defined on <a href="/docs/references/scenegraph/abstract-nodes/arraygrid.md">ArrayGrid</a> and thus is inherited by all of the following components: LabelList, MarkupList, PosterGrid, MarkupGrid, RowList, CheckList, and RadioButtonList.</td>
+</tr>
+<tr>
+<td>currFocusFeedbackOpacity</td>
+<td>float</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>This field provides access to the current opacity of the focus feedback indicator. It can be used to have other items on the screen fade in/out when the focus feedback indicator fades in/out.<br /><br />Note: This field is defined on <a href="/docs/references/scenegraph/abstract-nodes/arraygrid.md">ArrayGrid</a> and thus is inherited by all of the following components: LabelList, MarkupList, PosterGrid, MarkupGrid, RowList, CheckList, and RadioButtonList.</td>
+</tr>
+<tr>
+<td>drawFocusFeedbackOnTop</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Specifies whether the focus indicator bitmap is drawn below or on top of the list items.</td>
+</tr>
+<tr>
+<td>drawFocusFeedback</td>
+<td>Boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>Specifies whether or not the focus indicator bitmap is displayed.</td>
+</tr>
+<tr>
+<td>imageWellBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the bitmap file to use to suggest where images would appear for empty lists.</td>
+</tr>
+<tr>
+<td>focusBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the bitmap file used for the focus indicator when the list has focus. In most cases, this should be a <a href="https://image.roku.com/ZHZscHItMTc2/focus-9.png">9-patch image</a> that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>focusFootprintBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the bitmap file used for the focus indicator when the list does not have focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>focusBitmapBlendColor</td>
+<td>color</td>
+<td>0xFFFFFFFF</td>
+<td>READ_WRITE</td>
+<td>Blend the graphic image specified by <code>focusBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus indicator graphic image with a different color than the image specified by <code>focusBitmapUri</code>.</td>
+</tr>
+<tr>
+<td>focusFootprintBlendColor</td>
+<td>color</td>
+<td>0xFFFFFFFF</td>
+<td>READ_WRITE</td>
+<td>Blend the graphic image specified by <code>focusFootprintBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus footprint indicator graphic image with a different color than the image specified by <code>focusFootprintBitmapUri</code>.</td>
+</tr>
+<tr>
+<td>loadingBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies a bitmap file to display while a list item poster is loading.<br /><br />To execute a seamless cross-fade transition between posters, set the <strong>loadingBitmapUri</strong> of the next poster to be shown to the uri of the currently displayed poster.</td>
+</tr>
+<tr>
+<td>loadingBitmapOpacity</td>
+<td>float</td>
+<td>1.0</td>
+<td>READ_WRITE</td>
+<td>Specifies an opacity value used to render the loading bitmap.</td>
+</tr>
+<tr>
+<td>failedBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies a bitmap file to display when a list item poster fails to load.</td>
+</tr>
+<tr>
+<td>failedBitmapOpacity</td>
+<td>float</td>
+<td>1.0</td>
+<td>READ_WRITE</td>
+<td>Specifies an opacity value used to render the failed bitmap.</td>
+</tr>
+<tr>
+<td>wrapDividerBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the bitmap file to use as a visual separator between the last and first list items when the list wraps. In most case, this should be a 9-patch image that specifies both expandable regions. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>wrapDividerHeight</td>
+<td>float</td>
+<td>0</td>
+<td>READ_WRITE</td>
+<td>Specifies the height of the divider. The wrap divider bitmap will be scaled to this height. The width of the wrap divider is set to the width of the list items (that is, the x-dimension value of the <code>itemSize</code> field).</td>
+</tr>
+<tr>
+<td>rowItemSelected</td>
+<td>array of integer</td>
+<td>[ ]</td>
+<td>READ_ONLY</td>
+<td>When an item is selected, set to a 2-element array, where element 0 contains the index of the row containing the selected item, and element 1 contains the index of the selected item in that row.</td>
+</tr>
+<tr>
+<td>rowItemFocused</td>
+<td>array of integer</td>
+<td>[ ]</td>
+<td>READ_ONLY</td>
+<td>When an item gains the key focus, set to a 2-element array, where element 0 contains the index of the focused row, and element 1 contains the index of the focused item in that row.</td>
+</tr>
+<tr>
+<td>currFocusColumn</td>
+<td>float</td>
+<td>0.0</td>
+<td>READ_WRITE</td>
+<td>Indicates which column of the currently focused row in a RowList component currently has focus. This field is typically used to implement a horizontal pagination mechanism for the currently focused row.<br /><br />If this value is set to 3.7, it means that item 3 occupies 30% of the currently focused row while item 4 occupies 70% of it.<br /><br />To maximize performance, the field should be kept to a minimum, as these scripts will run once during each render.</td>
+</tr>
+<tr>
+<td>itemSelected</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>When an item is selected, set to the index of the selected row.</td>
+</tr>
+<tr>
+<td>itemFocused</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>When a row gains the key focus, set to the index of the focused row.</td>
+</tr>
+<tr>
+<td>itemUnfocused</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>When a row loses the key focus, set to the index of the unfocused row.</td>
+</tr>
+<tr>
+<td>jumpToItem</td>
+<td>integer</td>
+<td>0</td>
+<td>WRITE_ONLY</td>
+<td>When set to a valid item index, causes the list to immediately update so that the specified row moves into the focus position.</td>
+</tr>
+<tr>
+<td>jumpToRowItem</td>
+<td>array of integer</td>
+<td>[ ]</td>
+<td>WRITE_ONLY</td>
+<td>When set to a valid [ row, col ] index pair, causes the list to immediately update so that the specified row, col item moves into the focus position.</td>
+</tr>
+<tr>
+<td>animateToItem</td>
+<td>integer</td>
+<td>0</td>
+<td>WRITE_ONLY</td>
+<td>When set to a valid item index, causes the list to quickly scroll so that the specified row moves into the focus position.</td>
+</tr>
+</tbody>
+</table>
+
 
 ## RowList XML component
 
@@ -118,18 +407,80 @@ If the XML component contains interface fields that match the names shown in the
 
 Note that the fields are updated in the order presented in the table below. Any layout scripting you write based on these fields should be done in that order to avoid updating your layout based on a field that has not been updated yet.
 
-| Field Name                         | Field Type        | Access Permission | Description           |
-| ---------------------------------- | ----------------- | ----------------- | --------------------- |
-| width              | float             | READ_ONLY        | Set to the width of the item. |
-| height                      | float           | READ_ONLY        | Set to the height of the item |
-| index                  | integer            | READ_ONLY        | Set to the data model index within the data for the row that contains this item. For example, if this appeared in row 2, then the field is set to 0 for the first item in row 2, 1 for the second item in row 2, and so on. |
-| rowIndex                            | integer           | READ_ONLY        | Set to the data model index of the row that contains this item |
-| rowHasFocus                    | Boolean  | READ_ONLY         | Set to true if the row that contains this item has focus, false otherwise. |
-| rowListHasFocus                     | Boolean               | READ_ONLY        | Set to true if the row list that contains this item has focus, false otherwise. |
-| itemContent                     | ContentNode | READ_WRITE        | Contains the data to be displayed by the row list item. The relationship between data in the ContentNode and the visual elements of the row list item is determined by the scripts in the item XML component. Typically, an observer callback function of the `itemContent` field is used to update the row list item when the content changes. |
-| focusPercent                  | Float      | READ_ONLY        | The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from one item in a row to the next. The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused item, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused item. This value can be used as a timing key to smoothly animate the appearance of the focused item as well as the previously-focused item, to indicate the movement of focus to the user. |
-| rowFocusPercent               | float             | READ_ONLY        | The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from an item in one row to an item in an adjacent row, either above or below the previously-focused row. The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused row, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused row. This value can be used as a timing key to smoothly animate the appearance of the focused row as well as the previously-focused row, to indicate the movement of focus to the user. |
-| itemHasFocus                        | Boolean          | READ_ONLY        | Indicates whether the item component currently is the RowList's focused item. When scrolling starts, the itemHasFocus field for the currently focused item is set to false. When scrolling ends, the itemHasFocus field for the newly focused item is set to true. During the scrolling animation, all itemHasFocus fields are set to false.<br/><br/>Only one item component of any RowList should have itemHasFocus set to true. If the RowList does not focus, all itemHasFocus fields of their item components should be set to false. |
+
+<table>
+<thead>
+<tr>
+<th>Field Name</th>
+<th>Field Type</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>float</td>
+<td>READ_ONLY</td>
+<td>Set to the width of the item.</td>
+</tr>
+<tr>
+<td>height</td>
+<td>float</td>
+<td>READ_ONLY</td>
+<td>Set to the height of the item</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer</td>
+<td>READ_ONLY</td>
+<td>Set to the data model index within the data for the row that contains this item. For example, if this appeared in row 2, then the field is set to 0 for the first item in row 2, 1 for the second item in row 2, and so on.</td>
+</tr>
+<tr>
+<td>rowIndex</td>
+<td>integer</td>
+<td>READ_ONLY</td>
+<td>Set to the data model index of the row that contains this item</td>
+</tr>
+<tr>
+<td>rowHasFocus</td>
+<td>Boolean</td>
+<td>READ_ONLY</td>
+<td>Set to true if the row that contains this item has focus, false otherwise.</td>
+</tr>
+<tr>
+<td>rowListHasFocus</td>
+<td>Boolean</td>
+<td>READ_ONLY</td>
+<td>Set to true if the row list that contains this item has focus, false otherwise.</td>
+</tr>
+<tr>
+<td>itemContent</td>
+<td>ContentNode</td>
+<td>READ_WRITE</td>
+<td>Contains the data to be displayed by the row list item. The relationship between data in the ContentNode and the visual elements of the row list item is determined by the scripts in the item XML component. Typically, an observer callback function of the <code>itemContent</code> field is used to update the row list item when the content changes.</td>
+</tr>
+<tr>
+<td>focusPercent</td>
+<td>Float</td>
+<td>READ_ONLY</td>
+<td>The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from one item in a row to the next. The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused item, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused item. This value can be used as a timing key to smoothly animate the appearance of the focused item as well as the previously-focused item, to indicate the movement of focus to the user.</td>
+</tr>
+<tr>
+<td>rowFocusPercent</td>
+<td>float</td>
+<td>READ_ONLY</td>
+<td>The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from an item in one row to an item in an adjacent row, either above or below the previously-focused row. The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused row, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused row. This value can be used as a timing key to smoothly animate the appearance of the focused row as well as the previously-focused row, to indicate the movement of focus to the user.</td>
+</tr>
+<tr>
+<td>itemHasFocus</td>
+<td>Boolean</td>
+<td>READ_ONLY</td>
+<td>Indicates whether the item component currently is the RowList's focused item. When scrolling starts, the itemHasFocus field for the currently focused item is set to false. When scrolling ends, the itemHasFocus field for the newly focused item is set to true. During the scrolling animation, all itemHasFocus fields are set to false.<br /><br />Only one item component of any RowList should have itemHasFocus set to true. If the RowList does not focus, all itemHasFocus fields of their item components should be set to false.</td>
+</tr>
+</tbody>
+</table>
+
 
 ## Data bindings
 
@@ -143,14 +494,49 @@ A RowList node should have a single ContentNode as the root node in its content 
 
 ## Item node data bindings
 
-| Attribute          | Type        | Description       |
-| ------------------ | ----------- | ----------------- |
-| FHDGRIDPOSTERURL / FHDPOSTERURL              | uri      | The image file for the item poster when the screen resolution is set to FHD. FHDGRIDPOSTERURL is used if non-empty. FHDPOSTERURL is used otherwise.  |
-| HDGRIDPOSTERURL / HDPOSTERURL              | uri      | The image file for the item poster when the screen resolution is set to HD. HDGRIDPOSTERURL is used if non-empty. HDPOSTERURL is used otherwise.  |
-| SDGRIDPOSTERURL / SDPOSTERURL              | uri      | The image file for the item poster when the screen resolution is set to SD. SDGRIDPOSTERURL is used if non-empty. SDPOSTERURL is used otherwise.  |
-| FHDItemWidth              | float      | The width for the FHD item. This value is used in conjunction with `variableWidthItems` and should only be set if the associated `ui_resolutions` attribute is also specified.<br/><br/>This field must be added to the ContentNode via [addField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#addfieldfieldname-as-string-type-as-string-alwaynotify-as-boolean-as-boolean) prior to setting a value. Ex. `ContentNode.addField("FHDItemWidth", "float", false)`  |
-| HDItemWidth              | float      | The width for the HD item. This value is used in conjunction with `variableWidthItems` and should only be set if the associated `ui_resolutions` attribute is also specified.<br/><br/>This field must be added to the ContentNode via [addField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#addfieldfieldname-as-string-type-as-string-alwaynotify-as-boolean-as-boolean)  prior to setting a value. Ex. `ContentNode.addField("HDItemWidth", "float", false)`  |
-| SDItemWidth              | float      | The width for the SD item. This value is used in conjunction with `variableWidthItems` and should only be set if the associated `ui_resolutions` attribute is also specified.<br/><br/>This field must be added to the ContentNode via [addField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#addfieldfieldname-as-string-type-as-string-alwaynotify-as-boolean-as-boolean)  prior to setting a value. Ex. `ContentNode.addField("SDItemWidth", "float", false)`  |
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FHDGRIDPOSTERURL / FHDPOSTERURL</td>
+<td>uri</td>
+<td>The image file for the item poster when the screen resolution is set to FHD. FHDGRIDPOSTERURL is used if non-empty. FHDPOSTERURL is used otherwise.</td>
+</tr>
+<tr>
+<td>HDGRIDPOSTERURL / HDPOSTERURL</td>
+<td>uri</td>
+<td>The image file for the item poster when the screen resolution is set to HD. HDGRIDPOSTERURL is used if non-empty. HDPOSTERURL is used otherwise.</td>
+</tr>
+<tr>
+<td>SDGRIDPOSTERURL / SDPOSTERURL</td>
+<td>uri</td>
+<td>The image file for the item poster when the screen resolution is set to SD. SDGRIDPOSTERURL is used if non-empty. SDPOSTERURL is used otherwise.</td>
+</tr>
+<tr>
+<td>FHDItemWidth</td>
+<td>float</td>
+<td>The width for the FHD item. This value is used in conjunction with <code>variableWidthItems</code> and should only be set if the associated <code>ui_resolutions</code> attribute is also specified.<br /><br />This field must be added to the ContentNode via <a href="/docs/references/brightscript/interfaces/ifsgnodefield.md#addfieldfieldname-as-string-type-as-string-alwaynotify-as-boolean-as-boolean">addField()</a> prior to setting a value. Ex. <code>ContentNode.addField("FHDItemWidth", "float", false)</code></td>
+</tr>
+<tr>
+<td>HDItemWidth</td>
+<td>float</td>
+<td>The width for the HD item. This value is used in conjunction with <code>variableWidthItems</code> and should only be set if the associated <code>ui_resolutions</code> attribute is also specified.<br /><br />This field must be added to the ContentNode via <a href="/docs/references/brightscript/interfaces/ifsgnodefield.md#addfieldfieldname-as-string-type-as-string-alwaynotify-as-boolean-as-boolean">addField()</a>  prior to setting a value. Ex. <code>ContentNode.addField("HDItemWidth", "float", false)</code></td>
+</tr>
+<tr>
+<td>SDItemWidth</td>
+<td>float</td>
+<td>The width for the SD item. This value is used in conjunction with <code>variableWidthItems</code> and should only be set if the associated <code>ui_resolutions</code> attribute is also specified.<br /><br />This field must be added to the ContentNode via <a href="/docs/references/brightscript/interfaces/ifsgnodefield.md#addfieldfieldname-as-string-type-as-string-alwaynotify-as-boolean-as-boolean">addField()</a>  prior to setting a value. Ex. <code>ContentNode.addField("SDItemWidth", "float", false)</code></td>
+</tr>
+</tbody>
+</table>
+
 
 ## RowList sample apps
 
@@ -166,21 +552,7 @@ The follow sample apps can be installed on your local device for testing and rev
 
 
 
-{#rowFocusAnimationStyle}
 
-| Option          | Effect        |
-| --------------- | ------------------ |
-| floatingFocus   | Causes the focus indicator to float left or right until it reaches the end of the row, at which point the focus indicator will stay fixed on the first or last item in the row, and the items will scroll left or right if there were items that were not visible.   |
-| fixedFocusWrap  | Causes the row to wrap around when the focus indicator reaches the first or last item in the row, as long as the row contains enough items to fill the row. If the row does not contain enough items to fill the row, the focus indicator will float left and right. |
-| fixedFocus      | Causes the focus to stay fixed on the first item in each row. As the user scrolls, the previous selected item goes off the screen. Scrolling continues until the last item is reached with no wrapping. |
-
-{#vertFocusAnimationStyle}
-
-| Option          | Effect        |
-| --------------- | ------------------ |
-| floatingFocus   | Causes the focus indicator to float up or down until it reaches the end of the list, at which point the focus indicator will stay fixed on the first or last row in the list, and the rows will scroll up or down if there are rows that were not visible.   |
-| fixedFocusWrap  | Causes the column to wrap around when the focus indicator reaches the first or last row in the list, as long as the list contains enough rows to fill the list. If the list does not contain enough rows to fill the list, the focus indicator will float up and down. |
-| fixedFocus  | Causes the focus to stay fixed on the upper row. As the user scrolls down, the row containing the previously selected item scrolls up off screen. Scrolling continues until the last row is reached. |
 
 ## Sample app
 [RowListExample](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/RowListExample) is a sample app demonstrating RowList in action.

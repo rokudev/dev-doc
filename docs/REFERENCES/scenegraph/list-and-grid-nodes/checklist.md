@@ -30,14 +30,63 @@ The following is a sample screenshot showing the use of CheckList:
 
 ## Fields
 
-| Field                   | Type             | Default   | Access Permission | Description                                                  |
-| ----------------------- | ---------------- | --------- | ----------------- | ------------------------------------------------------------ |
-| checkedState            | array of Boolean | all false | READ_WRITE        | Specifies the checked state of each item in the list. A value of true indicates the item is in the checked state. A value of false indicates that the item is in the unchecked state. When reading the value of the field, note that the field array will always include one value for each item in the list.<br/><br/>When writing the value of the field, if the specified array includes fewer values than items in the list, the list items that are unspecified will remain in their current state. For example, if there are 10 items in the list and the field value is set to [ `true`, `true` ], items 0 and 1 will have their checked state set to true, and the checked state of the remaining items (items 3 to 9) will be unchanged. |
-| checkOnSelect           | Boolean          | true      | READ_WRITE        | Controls whether or not pressing the remote control OK key causes the checkedState field to automatically toggle the checked state of the currently focused list item. By default, field value is set to true, but there are use cases where other behavior may be desired. In those cases, it is up to the developer to manage the checked state of the list items by setting the `checkedState` field to the desired index. |
-| checkedIconUri          | uri              |           | READ_WRITE        | Specifies the checkbox icon to use for list items that are in the checked state when that list item does not the key focus. Typically, the icon will include the outline of a box with a checkmark indicator inside. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| uncheckedIconUri        | uri              |           | READ_WRITE        | Specifies the checkbox icon to use for list items that are in the unchecked state when that list item does not have the key focus. Typically, the icon will include the outline of an empty box. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| focusedCheckedIconUri   | uri              |           | READ_WRITE        | Specifies the checkbox icon to use for list items that are in the checked state when that list item has the key focus. Typically, the icon will include the outline of a box with a checkmark indicator inside. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| focusedUncheckedIconUri | uri              |           | READ_WRITE        | Specifies the checkbox icon to use for list items that are in the unchecked state when that list item has the key focus. Typically, the icon will include the outline of an empty box. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checkedState</td>
+<td>array of Boolean</td>
+<td>all false</td>
+<td>READ_WRITE</td>
+<td>Specifies the checked state of each item in the list. A value of true indicates the item is in the checked state. A value of false indicates that the item is in the unchecked state. When reading the value of the field, note that the field array will always include one value for each item in the list.<br /><br />When writing the value of the field, if the specified array includes fewer values than items in the list, the list items that are unspecified will remain in their current state. For example, if there are 10 items in the list and the field value is set to [ <code>true</code>, <code>true</code> ], items 0 and 1 will have their checked state set to true, and the checked state of the remaining items (items 3 to 9) will be unchanged.</td>
+</tr>
+<tr>
+<td>checkOnSelect</td>
+<td>Boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>Controls whether or not pressing the remote control OK key causes the checkedState field to automatically toggle the checked state of the currently focused list item. By default, field value is set to true, but there are use cases where other behavior may be desired. In those cases, it is up to the developer to manage the checked state of the list items by setting the <code>checkedState</code> field to the desired index.</td>
+</tr>
+<tr>
+<td>checkedIconUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the checkbox icon to use for list items that are in the checked state when that list item does not the key focus. Typically, the icon will include the outline of a box with a checkmark indicator inside. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>uncheckedIconUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the checkbox icon to use for list items that are in the unchecked state when that list item does not have the key focus. Typically, the icon will include the outline of an empty box. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>focusedCheckedIconUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the checkbox icon to use for list items that are in the checked state when that list item has the key focus. Typically, the icon will include the outline of a box with a checkmark indicator inside. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>focusedUncheckedIconUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the checkbox icon to use for list items that are in the unchecked state when that list item has the key focus. Typically, the icon will include the outline of an empty box. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+</tbody>
+</table>
+
 
 ## Data bindings
 
@@ -60,7 +109,7 @@ The section root ContentNodes use the following attributes:
 
 | Attribute       | Type   | Description                                                                                                           |
 |-----------------|--------|-----------------------------------------------------------------------------------------------------------------------|
-| CONTENTTYPE     | string | Must be set to `SECTION`                                                                                              |
+| CONTENTTYPE     | string | Must be set to `SECTION`                                                                                              |
 | TITLE           | string | Label for the section divider                                                                                         |
 | HDGRIDPOSTERURL | uri    | The image file for the icon to be displayed to the left of the section label when the screen resolution is set to HD. |
 | SDGRIDPOSTERURL | uri    | The image file for the icon to be displayed to the left of the section label when the screen resolution is set to SD. |

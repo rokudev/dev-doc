@@ -29,34 +29,203 @@ The following example displays the use of the MarkupList node.
 
 ## Fields
 
-| Field                    | Type        | Default                | Access Permission | Description                                                  |
-| ------------------------ | ----------- | ---------------------- | ----------------- | ------------------------------------------------------------ |
-| itemComponentName        | string      |                        | READ_WRITE        | Specifies the name of a XML component for the list items. An instance of this component is created on demand for each visible item of the list. The XML component must define a specific interface as detailed in [MarkupList XML component](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md#MarkupList-XML-Component) below. |
-| content                  | ContentNode | none                   | READ_WRITE        | Specifies the content for the list. See [Data bindings](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md#Data-Bindings) below for more details.<br/>If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string. |
-| itemSize                 | vector2d    | [0,0]                  | READ_WRITE        | Specifies the width and height of each item in the list      |
-| itemSpacing              | vector2d    | [0,0]                  | READ_WRITE        | The second value of the vector specifies the vertical spacing between items in the list. The first value of the vector is ignored. |
-| numRows                  | integer     | 12                     | READ_WRITE        | Specifies the number of visible rows displayed. The actual number of rows may be more or less than the number of visible rows specified depending on the number of items in the list content. |
-| drawFocusFeedback        | Boolean     | true                   | READ_WRITE        | Specifies whether or not the focus indicator bitmap is displayed |
-| drawFocusFeedbackOnTop   | Boolean     | true                   | READ_WRITE        | Specifies whether the focus indicator bitmap is drawn below or on top of the list items |
-| focusBitmapUri           | uri         |                        | READ_WRITE        | Specifies the bitmap file used for the focus indicator when the list has focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| focusFootprintBitmapUri  | uri         |                        | READ_WRITE        | Specifies the bitmap file used for the focus indicator when the list does not have focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| focusBitmapBlendColor    | color       | 0xFFFFFFFF             | READ_WRITE        | Blend the graphic image specified by `focusBitmapUri` with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus indicator graphic image with a different color than the image specified by `focusBitmapUri.` |
-| focusFootprintBlendColor | color       | 0xFFFFFFFF             | READ_WRITE        | Blend the graphic image specified by `focusFootprintBitmapUri` with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus footprint indicator graphic image with a different color than the image specified by `focusFootprintBitmapUri`. |
-| wrapDividerBitmapUri     | uri         |                        | READ_WRITE        | Specifies the bitmap file to use as a wrap divider, the visual separator between the last and first list items when the list wraps. In most cases, this should be a 9-patch image that specifies both expandable regions. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap. |
-| wrapDividerHeight        | float       | 0.0                    | READ_WRITE        | Specifies the height of the wrap divider, the visual separator between the last and first list items when the list wraps. The bitmap for the wrap divider is scaled to this height. The width of the wrap divider is set to the width of the list items as specified by the `itemSize` field width value. |
-| sectionDividerBitmapUri  | uri         |                        | READ_WRITE        | If the ContentNode specifies sections for a list or grid, specifies a custom bitmap to use as a visual divider between the sections of the list or grid. Only set this field to use a bitmap with a different appearance than the system default. For sections that do not include an icon or a title, the system default or custom bitmap specified as the `wrapDividerBitmapUri` field value is used for the section dividers. In most cases, you will want to use a 9-patch PNG bitmap with both expandable regions, which is the type of bitmap used as the system default. |
-| sectionDividerFont       | font        | system default         | READ_WRITE        | Specifies the font for section divider labels                |
-| sectionDividerTextColor  | color       | 0xddddddff             | READ_WRITE        | Specifies the text color for section divider labels          |
-| sectionDividerSpacing    | float       | 10                     | READ_WRITE        | If the ContentNode specifies sections for a list or grid, and the section dividers are specified to include an icon and/or a label, specifies the spacing between the icon, label, and section divider bitmap. |
-| sectionDividerHeight     | float       | 40                     | READ_WRITE        | Specifies the height of the section dividers. The width of the section dividers is determined by the width of the list items as specified by the itemSize field width value. |
-| sectionDividerMinWidth   | float       | 117                    | READ_WRITE        | Specifies the minimum width of the section divider bitmap. The section divider label will be ellipsized if necessary in order to ensure that the section divider bitmap meets the minimum width. |
-| sectionDividerLeftOffset | float       | 0                      | READ_WRITE        | Number of pixels to offset the left edge of the section divider relative to the left edge of the list items. |
-| itemSelected             | integer     | 0                      | READ_ONLY         | When a list item is selected, itemSelected is set to the index of the selected item. |
-| itemFocused              | integer     | 0                      | READ_ONLY         | When a list item gains the key focus, set to the index of the focused item. |
-| itemUnfocused            | integer     | 0                      | READ_ONLY         | When a list item loses the key focus, set to the index of the unfocused item. |
-| jumpToItem               | integer     | 0                      | WRITE_ONLY        | When set to a valid item index, this causes the list to immediately update so that the specified index moves into the focus position. |
-| animateToItem            | integer     | 0                      | WRITE_ONLY        | When set to a valid item index, this causes the list to quickly scroll so that the specified index moves into the focus position. |
-| itemClippingRect         | rect2d      | [ 0.0, 0.0, 0.0, 0.0 ] | READ_WRITE        | Specifies a clipping region for the list or grid items       |
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>itemComponentName</td>
+<td>string</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the name of a XML component for the list items. An instance of this component is created on demand for each visible item of the list. The XML component must define a specific interface as detailed in <a href="/docs/references/scenegraph/list-and-grid-nodes/markuplist.md#MarkupList-XML-Component">MarkupList XML component</a> below.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>ContentNode</td>
+<td>none</td>
+<td>READ_WRITE</td>
+<td>Specifies the content for the list. See <a href="/docs/references/scenegraph/list-and-grid-nodes/markuplist.md#Data-Bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
+</tr>
+<tr>
+<td>itemSize</td>
+<td>vector2d</td>
+<td>[0,0]</td>
+<td>READ_WRITE</td>
+<td>Specifies the width and height of each item in the list</td>
+</tr>
+<tr>
+<td>itemSpacing</td>
+<td>vector2d</td>
+<td>[0,0]</td>
+<td>READ_WRITE</td>
+<td>The second value of the vector specifies the vertical spacing between items in the list. The first value of the vector is ignored.</td>
+</tr>
+<tr>
+<td>numRows</td>
+<td>integer</td>
+<td>12</td>
+<td>READ_WRITE</td>
+<td>Specifies the number of visible rows displayed. The actual number of rows may be more or less than the number of visible rows specified depending on the number of items in the list content.</td>
+</tr>
+<tr>
+<td>drawFocusFeedback</td>
+<td>Boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>Specifies whether or not the focus indicator bitmap is displayed</td>
+</tr>
+<tr>
+<td>drawFocusFeedbackOnTop</td>
+<td>Boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>Specifies whether the focus indicator bitmap is drawn below or on top of the list items</td>
+</tr>
+<tr>
+<td>focusBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the bitmap file used for the focus indicator when the list has focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>focusFootprintBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the bitmap file used for the focus indicator when the list does not have focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>focusBitmapBlendColor</td>
+<td>color</td>
+<td>0xFFFFFFFF</td>
+<td>READ_WRITE</td>
+<td>Blend the graphic image specified by <code>focusBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus indicator graphic image with a different color than the image specified by <code>focusBitmapUri.</code></td>
+</tr>
+<tr>
+<td>focusFootprintBlendColor</td>
+<td>color</td>
+<td>0xFFFFFFFF</td>
+<td>READ_WRITE</td>
+<td>Blend the graphic image specified by <code>focusFootprintBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus footprint indicator graphic image with a different color than the image specified by <code>focusFootprintBitmapUri</code>.</td>
+</tr>
+<tr>
+<td>wrapDividerBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>Specifies the bitmap file to use as a wrap divider, the visual separator between the last and first list items when the list wraps. In most cases, this should be a 9-patch image that specifies both expandable regions. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
+</tr>
+<tr>
+<td>wrapDividerHeight</td>
+<td>float</td>
+<td>0.0</td>
+<td>READ_WRITE</td>
+<td>Specifies the height of the wrap divider, the visual separator between the last and first list items when the list wraps. The bitmap for the wrap divider is scaled to this height. The width of the wrap divider is set to the width of the list items as specified by the <code>itemSize</code> field width value.</td>
+</tr>
+<tr>
+<td>sectionDividerBitmapUri</td>
+<td>uri</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>If the ContentNode specifies sections for a list or grid, specifies a custom bitmap to use as a visual divider between the sections of the list or grid. Only set this field to use a bitmap with a different appearance than the system default. For sections that do not include an icon or a title, the system default or custom bitmap specified as the <code>wrapDividerBitmapUri</code> field value is used for the section dividers. In most cases, you will want to use a 9-patch PNG bitmap with both expandable regions, which is the type of bitmap used as the system default.</td>
+</tr>
+<tr>
+<td>sectionDividerFont</td>
+<td>font</td>
+<td>system default</td>
+<td>READ_WRITE</td>
+<td>Specifies the font for section divider labels</td>
+</tr>
+<tr>
+<td>sectionDividerTextColor</td>
+<td>color</td>
+<td>0xddddddff</td>
+<td>READ_WRITE</td>
+<td>Specifies the text color for section divider labels</td>
+</tr>
+<tr>
+<td>sectionDividerSpacing</td>
+<td>float</td>
+<td>10</td>
+<td>READ_WRITE</td>
+<td>If the ContentNode specifies sections for a list or grid, and the section dividers are specified to include an icon and/or a label, specifies the spacing between the icon, label, and section divider bitmap.</td>
+</tr>
+<tr>
+<td>sectionDividerHeight</td>
+<td>float</td>
+<td>40</td>
+<td>READ_WRITE</td>
+<td>Specifies the height of the section dividers. The width of the section dividers is determined by the width of the list items as specified by the itemSize field width value.</td>
+</tr>
+<tr>
+<td>sectionDividerMinWidth</td>
+<td>float</td>
+<td>117</td>
+<td>READ_WRITE</td>
+<td>Specifies the minimum width of the section divider bitmap. The section divider label will be ellipsized if necessary in order to ensure that the section divider bitmap meets the minimum width.</td>
+</tr>
+<tr>
+<td>sectionDividerLeftOffset</td>
+<td>float</td>
+<td>0</td>
+<td>READ_WRITE</td>
+<td>Number of pixels to offset the left edge of the section divider relative to the left edge of the list items.</td>
+</tr>
+<tr>
+<td>itemSelected</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>When a list item is selected, itemSelected is set to the index of the selected item.</td>
+</tr>
+<tr>
+<td>itemFocused</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>When a list item gains the key focus, set to the index of the focused item.</td>
+</tr>
+<tr>
+<td>itemUnfocused</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>When a list item loses the key focus, set to the index of the unfocused item.</td>
+</tr>
+<tr>
+<td>jumpToItem</td>
+<td>integer</td>
+<td>0</td>
+<td>WRITE_ONLY</td>
+<td>When set to a valid item index, this causes the list to immediately update so that the specified index moves into the focus position.</td>
+</tr>
+<tr>
+<td>animateToItem</td>
+<td>integer</td>
+<td>0</td>
+<td>WRITE_ONLY</td>
+<td>When set to a valid item index, this causes the list to quickly scroll so that the specified index moves into the focus position.</td>
+</tr>
+<tr>
+<td>itemClippingRect</td>
+<td>rect2d</td>
+<td>[ 0.0, 0.0, 0.0, 0.0 ]</td>
+<td>READ_WRITE</td>
+<td>Specifies a clipping region for the list or grid items</td>
+</tr>
+</tbody>
+</table>
+
 
 ### MarkupList XML Component
 

@@ -27,12 +27,12 @@ focusedTargetSet1 = createObject("roSGNode", "TargetSet")
 m.tList1.focusedTargetSet = [ focusedTargetSet1 ]
 
 focusedTargetSet1.targetRects = [
-    { x:-178, y:-64, height:134, width:240 },
-    { x:72, y:-96, height:202, width:360 }, ' rectangle in focus (Item 1)
-    { x:442, y:-64, height:134, width:240 },
-    { x:692, y:-64, height:134, width:240 },
-    { x:942, y:-64, height:134, width:240 },
-    { x:1192, y:-64, height:134, width:240 }
+    \{ x:-178, y:-64, height:134, width:240 \},
+    \{ x:72, y:-96, height:202, width:360 \}, ' rectangle in focus (Item 1)
+    \{ x:442, y:-64, height:134, width:240 \},
+    \{ x:692, y:-64, height:134, width:240 \},
+    \{ x:942, y:-64, height:134, width:240 \},
+    \{ x:1192, y:-64, height:134, width:240 \}
 ]
 focusedTargetSet1.color = "0x00202020AA"
 focusedTargetSet1.focusIndex = 1
@@ -41,12 +41,12 @@ focusedTargetSet1.focusIndex = 1
 **unfocusedTargetSet**
 ~~~~
 unfocusedTargetSet.targetRects = [
-    { x:-100, y:-64, height:134, width:240 },
-    { x:150, y:-64, height:134, width:240 },
-    { x:400, y:-64, height:134, width:240 },
-    { x:650, y:-64, height:134, width:240 },
-    { x:900, y:-64, height:134, width:240 },
-    { x:1150, y:-64, height:134, width:240 }
+    \{ x:-100, y:-64, height:134, width:240 \},
+    \{ x:150, y:-64, height:134, width:240 \},
+    \{ x:400, y:-64, height:134, width:240 \},
+    \{ x:650, y:-64, height:134, width:240 \},
+    \{ x:900, y:-64, height:134, width:240 \},
+    \{ x:1150, y:-64, height:134, width:240 \}
 ]
 unfocusedTargetSet.color = "0x00202020AA"
 ~~~~
@@ -71,34 +71,34 @@ m.tList1.focusedTargetSet = [ focusedTargetSet1, focusedTargetSet2, focusedTarge
 **Additional TargetSets for floating focus**
 ~~~~
 focusedTargetSet2.targetRects = [
-    { x:-178, y:-64, height:134, width:240 },
-    { x:72, y:-64, height:134, width:240 },
-    { x:322, y:-96, height:202, width:360 }, ' rectangle in focus (Item 2)
-    { x:692, y:-64, height:134, width:240 },
-    { x:942, y:-64, height:134, width:240 },
-    { x:1192, y:-64, height:134, width:240 }
+    \{ x:-178, y:-64, height:134, width:240 \},
+    \{ x:72, y:-64, height:134, width:240 \},
+    \{ x:322, y:-96, height:202, width:360 \}, ' rectangle in focus (Item 2)
+    \{ x:692, y:-64, height:134, width:240 \},
+    \{ x:942, y:-64, height:134, width:240 \},
+    \{ x:1192, y:-64, height:134, width:240 \}
 ]
 focusedTargetSet2.color = "0x00202020AA"
 focusedTargetSet2.focusIndex = 2
 
 focusedTargetSet3.targetRects = [
-    { x:-178, y:-64, height:134, width:240 },
-    { x:72, y:-64, height:134, width:240 },
-    { x:322, y:-64, height:134, width:240 },
-    { x:572, y:-96, height:202, width:360 }, ' rectangle in focus (Item 3)
-    { x:942, y:-64, height:134, width:240 },
-    { x:1192, y:-64, height:134, width:240 }
+    \{ x:-178, y:-64, height:134, width:240 \},
+    \{ x:72, y:-64, height:134, width:240 \},
+    \{ x:322, y:-64, height:134, width:240 \},
+    \{ x:572, y:-96, height:202, width:360 \}, ' rectangle in focus (Item 3)
+    \{ x:942, y:-64, height:134, width:240 \},
+    \{ x:1192, y:-64, height:134, width:240 \}
 ]
 focusedTargetSet3.color = "0x00202020AA"
 focusedTargetSet3.focusIndex = 3
 
 focusedTargetSet4.targetRects = [
-    { x:-178, y:-64, height:134, width:240 },
-    { x:72, y:-64, height:134, width:240 },
-    { x:322, y:-64, height:134, width:240 },
-    { x:572, y:-64, height:134, width:240 },
-    { x:822, y:-96, height:202, width:360 }, ' rectangle in focus (Item 4)
-    { x:1192, y:-64, height:134, width:240 }
+    \{ x:-178, y:-64, height:134, width:240 \},
+    \{ x:72, y:-64, height:134, width:240 \},
+    \{ x:322, y:-64, height:134, width:240 \},
+    \{ x:572, y:-64, height:134, width:240 \},
+    \{ x:822, y:-96, height:202, width:360 \}, ' rectangle in focus (Item 4)
+    \{ x:1192, y:-64, height:134, width:240 \}
 ]
 focusedTargetSet4.color = "0x00202020AA"
 focusedTargetSet4.focusIndex = 4
@@ -115,12 +115,49 @@ focusedTargetSet4.focusIndex = 4
 
 ## Fields
 
-| Field              | Type                     | Default | Access Permission | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|--------------------|--------------------------|---------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| focusedTargetSet   | array of TargetSet nodes | [ ]     | READ_WRITE        |Specifies one or more TargetSet's to be used when the TargetList has the focus. If a single TargetSet is specified, focus will stay fixed on the targetRect of that TargetSet that corresponds to the TargetGroup's focus index. The focus index will come from the TargetSet if explicitly specified or from the TargetGroup's defaultTargetSetFocusIndex field if not.<br/><br/>If focusedTargetSet includes more than one TargetSet node, that defines a sequence of TargetSet's that will be advanced through as the user presses the advance or reverse key. When advancing, the focus floats from one TargetSet's to the next TargetSet in the array until the last element of the focusedTargetSet is reached, at which point the focus is fixed to the last element and the items begin to scroll.<br/><br/>When reversing, the focus floats from one TargetSet to the previous TargetSet in the array until the first element of the focusedTargetSet is reached, at which point the focus is fixed to the first element and the items begin to scroll.<br/><br/>See above for more discussion of setting up fixed and floating focus use cases. |
-| unfocusedTargetSet | TargetSet                | invalid | READ_WRITE        |Specifies the TargetSet to be used when the TargetList does not have the focus.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| advanceKey         | string                   | "down"  | READ_WRITE        |Specifies which remote button will move the focus forward. For vertical lists, this will typically be set to "down". For horizontal rows, this will typically be set to "right".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| reverseKey         | string                   | "up"    | READ_WRITE        |Specifies which remote button will move the focus backward. For vertical lists, this will typically be set to "up". For horizontal rows, this will typically be set to "left".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>focusedTargetSet</td>
+<td>array of TargetSet nodes</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>Specifies one or more TargetSet's to be used when the TargetList has the focus. If a single TargetSet is specified, focus will stay fixed on the targetRect of that TargetSet that corresponds to the TargetGroup's focus index. The focus index will come from the TargetSet if explicitly specified or from the TargetGroup's defaultTargetSetFocusIndex field if not.<br /><br />If focusedTargetSet includes more than one TargetSet node, that defines a sequence of TargetSet's that will be advanced through as the user presses the advance or reverse key. When advancing, the focus floats from one TargetSet's to the next TargetSet in the array until the last element of the focusedTargetSet is reached, at which point the focus is fixed to the last element and the items begin to scroll.<br /><br />When reversing, the focus floats from one TargetSet to the previous TargetSet in the array until the first element of the focusedTargetSet is reached, at which point the focus is fixed to the first element and the items begin to scroll.<br /><br />See above for more discussion of setting up fixed and floating focus use cases.</td>
+</tr>
+<tr>
+<td>unfocusedTargetSet</td>
+<td>TargetSet</td>
+<td>invalid</td>
+<td>READ_WRITE</td>
+<td>Specifies the TargetSet to be used when the TargetList does not have the focus.</td>
+</tr>
+<tr>
+<td>advanceKey</td>
+<td>string</td>
+<td>"down"</td>
+<td>READ_WRITE</td>
+<td>Specifies which remote button will move the focus forward. For vertical lists, this will typically be set to "down". For horizontal rows, this will typically be set to "right".</td>
+</tr>
+<tr>
+<td>reverseKey</td>
+<td>string</td>
+<td>"up"</td>
+<td>READ_WRITE</td>
+<td>Specifies which remote button will move the focus backward. For vertical lists, this will typically be set to "up". For horizontal rows, this will typically be set to "left".</td>
+</tr>
+</tbody>
+</table>
+
 
 
 

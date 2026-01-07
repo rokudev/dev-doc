@@ -1,48 +1,29 @@
 ---
-title: Analytics reports
-excerpt: ''
+title: Analytics Reports
+excerpt: >-
+  Access and analyze app analytics and sales reports through Roku's Developer
+  Dashboard. Learn about app health, viewership trends, and more.
 deprecated: false
 hidden: true
+link:
+  new_tab: false
 metadata:
   title: ''
   description: ''
   robots: index
-next:
-  description: ''
 ---
-
 # Overview
 
-Apps have access to web-based app analytics and sales reports through Roku's
-Developer Dashboard. This allows you to analyze your app's health, viewership trends, and metrics
-for specific titles and devices. The following video highlights the different app analytics available to you.
+Apps have access to web-based app analytics and sales reports through Roku's Developer Dashboard. This allows you to analyze your app's health, viewership trends, and metrics for specific titles and devices. The following video highlights the different app analytics available to you.
 
 <video title="Roku Channel Analytic Reports" poster="https://image.roku.com/ZHZscHItMTc2/channel-analytics-poster.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/channel-analytics.mp4">
+    <source src="https://image.roku.com/ZHZscHItMTc2/channel-analytics.mp4" />
 </video>
-As a service to our partners, Roku provides some basic analytics for all apps
-on the platform in the form of standardized dashboards with metrics on
-app health, viewership and engagement, and so forth.
-Dashboards are read-only - meaning users cannot modify the dashboards themselves
-(apart from applying filters), create new dashboards, or change any of the
-underlying data.
+As a service to our partners, Roku provides some basic analytics for all apps on the platform in the form of standardized dashboards with metrics on app health, viewership and engagement, and so forth. Dashboards are read-only - meaning users cannot modify the dashboards themselves (apart from applying filters), create new dashboards, or change any of the underlying data.
 
-Also, the app data displayed are restricted to app owners.
-You will never see data pertaining to apps other than your own,
-and Roku will never share your app data with other app owners.
-Roku evaluates making changes to the available dashboards on an ongoing basis,
-based on feedback from our app partners.
-Access to some dashboards may be restricted based on the size of the
-business relationship.
+Also, the app data displayed are restricted to app owners. You will never see data pertaining to apps other than your own, and Roku will never share your app data with other app owners. Roku evaluates making changes to the available dashboards on an ongoing basis, based on feedback from our app partners. Access to some dashboards may be restricted based on the size of the business relationship.
 
-In-app data Roku often differentiates between unique accounts and unique devices.
-Roku generally considers unique accounts to be a better measure of audience size
-and engagement metrics, while unique devices can be a more meaningful measure of
-app health metrics such as crashes and buffering.
-The reason for this is that once a user installs an app,
-that installation will synchronize across all devices associated with that user's
-account, potentially inflating installation counts relative to the actual number
-of households with the app installed.
+In-app data Roku often differentiates between unique accounts and unique devices. Roku generally considers unique accounts to be a better measure of audience size and engagement metrics, while unique devices can be a more meaningful measure of app health metrics such as crashes and buffering. The reason for this is that once a user installs an app, that installation will synchronize across all devices associated with that user's account, potentially inflating installation counts relative to the actual number of households with the app installed.
 
 Reports also distinguish between "visitors" and "viewers" according to the following definitions:
 
@@ -133,11 +114,9 @@ To export data from a report, follow the steps below:
 
    ![roku815px - Trans Main showing three-dot](https://image.roku.com/ZHZscHItMTc2/download-analytics-report-1.png)
 
-
 3. The Download dialog appears. The **File Format** field provides PDF (default) and CSV output options. If you select PDF, optionally configure the report layout settings (paper size, table row visibility, and dashboard tiles arrangement).
 
    ![roku815px - Trans Download Dialog](https://image.roku.com/ZHZscHItMTc2/download-analytics-report-2.png)
-
 
 4. Click **Download** to export the report to your local machine. If you are downloading the report as a PDF, you can alternatively click **Open in Browser** to open the report in a new tab in your web browser.
 
@@ -149,11 +128,9 @@ You can create a schedule to automatically email a report in a recurring daily, 
 
    ![roku815px - roku_pay_transactions_schedule](https://image.roku.com/ZHZscHItMTc2/schedule-analytics-report-1.png "roku-pay-transactions-schedule")
 
-
 2. The **Schedule Delivery** dialog opens.
 
    ![roku600px - roku_pay_transactions_schedule](https://image.roku.com/ZHZscHItMTc2/engagement-report-destinations-s3.png "roku-pay-transactions-schedule")
-
 
 3. In the **Settings** tab, enter the following properties:
 
@@ -190,11 +167,9 @@ You can create a schedule to automatically email a report in a recurring daily, 
 
    ![roku600px - roku_pay_transactions_schedule](https://image.roku.com/ZHZscHItMTc2/schedule-delivery-filters-tab.png "roku-pay-transactions-schedule")
 
-
 5. Optionally, expand **Advanced Options** to configure the visualizations, data formatting, and hyperlinks in the email and the attached report.
 
    ![roku600px - roku_pay_transactions_schedule](https://image.roku.com/ZHZscHItMTc2/schedule-delivery-adanced-tab.png "roku-pay-transactions-schedule")
-
 
 6. Optionally, click **Send Test** to send the report to the list of email recipients in the selected format.
 

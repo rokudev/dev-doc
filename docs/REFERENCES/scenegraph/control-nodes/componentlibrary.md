@@ -1,5 +1,5 @@
 ---
-title: "ComponentLibrary"
+title: ComponentLibrary
 excerpt: ''
 deprecated: false
 hidden: true
@@ -53,6 +53,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
 ## Example
 
-[ComponentLibraryTestChannel](https://github.com/rokudev/samples/tree/master/utilities) is a test app that downloads the component library implemented from the source code in [ComponentLibrary](https://github.com/rokudev/samples/tree/master/utilities). The test app then creates an instance of the <LoadingIndicator> component implemented in the library.
+[ComponentLibraryTestChannel](https://github.com/rokudev/samples/tree/master/utilities) is a test app that downloads the component library implemented from the source code in [ComponentLibrary](https://github.com/rokudev/samples/tree/master/utilities). The test app then creates an instance of the \<LoadingIndicator\> component implemented in the library.
 
 ## Fields

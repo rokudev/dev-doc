@@ -1,16 +1,3 @@
----
-title: "Introduction to the Roku search feed specification"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
-
 # Introduction to the Roku search feed specification
 
 

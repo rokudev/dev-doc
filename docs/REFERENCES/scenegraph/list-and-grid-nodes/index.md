@@ -255,11 +255,10 @@ The fields to set these options are:
   - `horizFocusAnimationStyle`
   - `vertFocusAnimationStyle`
 
-`If the list or grid is set to wrap when the first or last item is
+If the list or grid is set to wrap when the first or last item is
 reached, the list or grid node provides a default visual divider element
 between the first and last items that can be customized. The fields used
 to customize the wrap divider element are:
-`
 
   - `wrapDividerBitmapUri`
   - `wrapDividerWidth`
@@ -283,7 +282,7 @@ classes.
 The key to customizing these
 node classes is to create custom item definitions in a component XML
 file. You define all the screen elements you need for your custom
-list/grid items in this item component file, such as posters, labels,
+list and grid items in this item component file, such as posters, labels,
 rectangles, and so forth. Then you can create custom appearance and
 behavior for the items by writing callback functions triggered by
 `onChange` events in the **<interface\>** element fields you select for

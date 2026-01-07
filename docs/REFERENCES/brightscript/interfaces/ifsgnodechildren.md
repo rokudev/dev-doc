@@ -23,51 +23,47 @@ The ifSGNodeChildren interface allows querying and manipulation of nodes in a Sc
 To use the methods in this interface to manipulate child nodes at the scene level, the subject nodes must be wrapped in another element, typically a Group node. For example:
 
 ~~~~
-&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;component name = "myScene" extends = "Scene" &gt;
-  &lt;script type = "text/brightscript" &gt;
-    &lt;![CDATA[
+<?xml version="1.0" encoding="utf-8" ?>
+<component name = "myScene" extends = "Scene" >
+  <script type = "text/brightscript" >
+    <![CDATA[
     sub init()
       m.myGroup = m.top.FindNode("myGroup")
       m.label = m.myGroup.getChild(0)
     end sub
-    ]]&gt;
-  </script&gt;
+    ]]>
+  </script>
 
-  &lt;children&gt;
-    &lt;Group id = "myGroup"&gt;
-      &lt;Label id = "myLabel" ... />
-    </Group&gt;
-  </children&gt;
-</component&gt;
+  <children>
+    <Group id = "myGroup">
+      <Label id = "myLabel" ... />
+    </Group>
+  </children>
+</component>
 ~~~~
 
 In the example above, m.label will contain the roSGNode corresponding to the Label node after the getChild() call. On the other hand, the following will not work:
 
 ~~~~
-&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;component name = "myScene" extends = "Scene" &gt;
-  &lt;script type = "text/brightscript" &gt;
-    &lt;![CDATA[
+<?xml version="1.0" encoding="utf-8" ?>
+<component name = "myScene" extends = "Scene" >
+  <script type = "text/brightscript" >
+    <![CDATA[
     sub init()
       m.label = m.top.getChild(0)
     end sub
-    ]]&gt;
-  </script&gt;
+    ]]>
+  </script>
 
-  &lt;children&gt;
-    &lt;Label id = "myLabel" ... />
-  </children&gt;
-</component&gt;
+  <children>
+    <Label id = "myLabel" ... />
+  </children>
+</component>
 ~~~~
 
-<<<<<<< HEAD
-The Scene node children are hidden elements used by the SceneGraph framework. Thus, despite the fact that the Label node is in the scene &lt;children&gt; element, it will not be retrieved by getChild() .
-=======
 The Scene node children are hidden elements used by the SceneGraph framework. Thus, despite the fact that the Label node is in the scene \<children\> element, it will not be retrieved by getChild() .
->>>>>>> 2f596512cf45ac3deaf1775d45bf25f83ed2caf4
 
-&gt;Removing or replacing a node in a SceneGraph node tree can cause that node to be destroyed entirely if there are no more references to it.
+>Removing or replacing a node in a SceneGraph node tree can cause that node to be destroyed entirely if there are no more references to it.
 
 ## Supported methods
 
@@ -213,27 +209,27 @@ Moves the subject node to another parent node.
 
 #### Parameters
 
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name</th&gt;
-&lt;th&gt;Type</th&gt;
-&lt;th&gt;Description</th&gt;
-</tr&gt;
-</thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;newParent</td&gt;
-&lt;td&gt;roSGNode</td&gt;
-&lt;td&gt;The new parent node where the child node is to be moved.</td&gt;
-</tr&gt;
-&lt;tr&gt;
-&lt;td&gt;adjustTransform</td&gt;
-&lt;td&gt;Boolean</td&gt;
-&lt;td&gt;Specifies whether the translation, rotation, and scale of the node are adjusted so that the node has the same transformation factors relative to the screen as it previously did.&lt;br />&lt;br />If &lt;strong&gt;adjustTransform</strong&gt; is true, the subject node transformation factor fields (translation/rotation/scale) are adjusted so that the node has the same transformation factors relative to the screen as it previously did.&lt;br />&lt;br />If &lt;strong&gt;adjustTransform</strong&gt; is false, the subject node is simply parented to the new node without adjusting its transformation factor fields, in which case, the reparenting operation could cause the node to jump to a new position on the screen.</td&gt;
-</tr&gt;
-</tbody&gt;
-</table&gt;
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newParent</td>
+<td>roSGNode</td>
+<td>The new parent node where the child node is to be moved.</td>
+</tr>
+<tr>
+<td>adjustTransform</td>
+<td>Boolean</td>
+<td>Specifies whether the translation, rotation, and scale of the node are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If <strong>adjustTransform</strong> is true, the subject node transformation factor fields (translation/rotation/scale) are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If <strong>adjustTransform</strong> is false, the subject node is simply parented to the new node without adjusting its transformation factor fields, in which case, the reparenting operation could cause the node to jump to a new position on the screen.</td>
+</tr>
+</tbody>
+</table>
 
 =======
 | Name            | Type     | Description                                                  |
@@ -337,15 +333,11 @@ cn.addfield("c","string",false)
 cn.update(aa,false)
 'At this point, cn would contain the following:
 
-&lt;Component: roSGNode&gt; =
-&#123;
-    change: &lt;Component: roAssociativeArray&gt;
-=======
 <Component: roSGNode> =
 {
     change: <Component: roAssociativeArray>
     focusable: false
-    focusedChild: &lt;Component: roInvalid&gt;
+    focusedChild: <Component: roInvalid>
     id: ""
     a: "1"
     b: "2"
@@ -359,7 +351,7 @@ cn.update(aa,false)
 
 Replaces the child nodes in the subject node, starting at the position specified by index, with new child nodes specified by child_nodes
 
-&gt; Starting from Roku OS 8.1, when using this method to update the content of each item in a markupGrid, if more items are supplied than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children. The [appendChildren()](#appendchildchild-as-rosgnode-as-boolean) function can be used to add the extra items.
+> Starting from Roku OS 8.1, when using this method to update the content of each item in a markupGrid, if more items are supplied than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children. The [appendChildren()](#appendchildchild-as-rosgnode-as-boolean) function can be used to add the extra items.
 
 #### Parameters
 
@@ -421,7 +413,7 @@ The node's root Scene.
 The following methods can be called on any subject node and return the same global results. They can be used in a development app for debugging purposes, but should not be used in a production app.
 
 
-<p>&gt;These methods are similar to the debugger sgnodes commands. See <a href="/docs/developer-program/debugging/debugging-channels.md#special-scenegraph-debugging-commands">Special SceneGraph Debugging Commands</a> for information on the debugger sgnodes commands. Also please note that calling these functions from code should only be done for debugging purposes. Any calls to <a href="#getall-as-object">getAll()</a>, <a href="#getroots-as-object">getRoots()</a>, <a href="#getrootsmeta-as-object">getRootsMeta()</a> and <a href="#getallmeta-as-object">getAllMeta()</a> should be removed from your production channels. |</p>
+<p>>These methods are similar to the debugger sgnodes commands. See <a href="/docs/developer-program/debugging/debugging-channels.md#special-scenegraph-debugging-commands">Special SceneGraph Debugging Commands</a> for information on the debugger sgnodes commands. Also please note that calling these functions from code should only be done for debugging purposes. Any calls to <a href="#getall-as-object">getAll()</a>, <a href="#getroots-as-object">getRoots()</a>, <a href="#getrootsmeta-as-object">getRootsMeta()</a> and <a href="#getallmeta-as-object">getAllMeta()</a> should be removed from your production channels. |</p>
 
 
 ### getAll() as Object

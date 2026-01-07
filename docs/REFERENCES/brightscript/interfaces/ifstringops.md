@@ -1,5 +1,5 @@
 ---
-title: "ifStringOps"
+title: ifStringOps
 excerpt: ''
 deprecated: false
 hidden: true
@@ -307,7 +307,6 @@ a = ["one", "two", "three"]
 
 Returns the string with the following characters replaced with their corresponding HTML entity encoding sequences below:
 
-
 <table>
 <thead>
 <tr>
@@ -339,6 +338,14 @@ Returns the string with the following characters replaced with their correspondi
 </tbody>
 </table>
 
+=======
+| Character        | Replaced with |
+| ---------------- | ------------- |
+| " (double quote) | \&quot;       |
+| ' (single quote) | \&apos;       |
+| \<                | \&lt;         |
+| \>                | \&gt;         |
+| &                | \&amp;        |
 
 #### Return Value
 

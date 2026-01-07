@@ -1,5 +1,5 @@
 ---
-title: "ifSGNodeChildren"
+title: ifSGNodeChildren
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # ifSGNodeChildren
 
 The ifSGNodeChildren interface allows querying and manipulation of nodes in a SceneGraph node tree, such as creating new nodes, placing them at certain positions in the tree, and removing them.
@@ -62,7 +61,11 @@ In the example above, m.label will contain the roSGNode corresponding to the Lab
 </component&gt;
 ~~~~
 
+<<<<<<< HEAD
 The Scene node children are hidden elements used by the SceneGraph framework. Thus, despite the fact that the Label node is in the scene &lt;children&gt; element, it will not be retrieved by getChild() .
+=======
+The Scene node children are hidden elements used by the SceneGraph framework. Thus, despite the fact that the Label node is in the scene \<children\> element, it will not be retrieved by getChild() .
+>>>>>>> 2f596512cf45ac3deaf1775d45bf25f83ed2caf4
 
 &gt;Removing or replacing a node in a SceneGraph node tree can cause that node to be destroyed entirely if there are no more references to it.
 
@@ -210,7 +213,6 @@ Moves the subject node to another parent node.
 
 #### Parameters
 
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -233,6 +235,11 @@ Moves the subject node to another parent node.
 </tbody&gt;
 </table&gt;
 
+=======
+| Name            | Type     | Description                                                  |
+| --------------- | -------- | ------------------------------------------------------------ |
+| newParent       | roSGNode | The new parent node where the child node is to be moved.     |
+| adjustTransform | Boolean  | Specifies whether the translation, rotation, and scale of the node are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If **adjustTransform** is true, the subject node transformation factor fields (translation/rotation/scale) are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If **adjustTransform** is false, the subject node is simply parented to the new node without adjusting its transformation factor fields, in which case, the reparenting operation could cause the node to jump to a new position on the screen. |
 
 #### Return Value
 
@@ -322,23 +329,28 @@ Takes the key-value pairs in an roAssociativeArray and maps the values to the re
 The following example demonstrates how to use this method:
 
 ```
-aa = &#123;"a":"1", "b":"2", "c":"3", "d":"4"&#125;
+aa = {"a":"1", "b":"2", "c":"3", "d":"4"}
 cn = createObject("roSGNode", "contentNode")
 cn.addfield("a","string",false)
 cn.addfield("b","string",false)
 cn.addfield("c","string",false)
 cn.update(aa,false)
 'At this point, cn would contain the following:
+
 &lt;Component: roSGNode&gt; =
 &#123;
     change: &lt;Component: roAssociativeArray&gt;
+=======
+<Component: roSGNode> =
+{
+    change: <Component: roAssociativeArray>
     focusable: false
     focusedChild: &lt;Component: roInvalid&gt;
     id: ""
     a: "1"
     b: "2"
     c: "3"
-&#125;
+}
 ```
 
 ### replaceChildren(child_nodes as Object, index as Integer) as Boolean

@@ -20,7 +20,7 @@ Our goal is to encourage the success of partners on our platform. We offer multi
 
 ## Introduction to the Roku platform video
 
-<video src="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4" width="1080" height="720" controls />
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4" width="540" height="360" controls />
 
 ## What to know before building a streaming app
 

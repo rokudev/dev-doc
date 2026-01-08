@@ -1,5 +1,5 @@
 ---
-title: Certification
+title: Certification criteria
 excerpt: ''
 deprecated: false
 hidden: true

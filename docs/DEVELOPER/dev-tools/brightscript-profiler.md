@@ -37,15 +37,78 @@ The workflow of the BrightScript Profiler is as below:
 
 Below is the list of manifest keys used by the profiler:
 
-| **Manifest Entry**    | **Value Type** | **Legal Values** | **Default Value** | **Required**              | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|-----------------------|----------------|------------------|-------------------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| bsprof_data_dest      | enum           | local , network  | local             | Yes                       | If this entry value is `local`, profiling data is collected on the device and can be downloaded from the Application Installer after the app terminates. This is the default.  If this entry value is `network`, the profiling data is sent over the network rather than being stored on the device. See the section on Retrieving Profiling Data for details.                                                                                                                                                                                                                                                                                                                                     |
-| bsprof_enable         | boolean        | 0 , 1            | 0                 | Yes                       | Turns on BrightScript Profiling when the app is running. This is the master flag and must be set to 1 for any other profiling options to take effect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| bsprof_enable_lines   | boolean        | 0 , 1            | 0                 | Yes                       | Collects memory and CPU data for each line of BrightScript source code. This makes it easier to pinpoint memory and CPU usage issues.<br /><br />This value is set to 0 by default, which means that data is collected for each BrightScript function as a whole. <br /><br />Enabling this feature can have a significant impact on device performance.<br/><br/>Requires BrightScript profiling to be enabled (`bsprof_enable=1`), and the RSG version to be set to 1.2 (`rsg_version=1.2`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| bsprof_enable_mem     | boolean        | 0 , 1            | 0                 | Yes, if using memory profiling | Turns on memory profiling.<br/><br/>Requires BrightScript profiling to be enabled (`bsprof_enable=1`).<br/><br/>If this is enabled, the `bsprof_sample_ratio` is automatically set to 1.0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| bsprof_pause_on_start | boolean        | 0 , 1            | 0                 | No                        | Immediately after launching the app, profiling is paused until manually resumed with the bsprof-resume command on the port 8080 debug console. <br /><br />This is useful for profiling isolated parts of an app's UI or operations, rather than profiling the entire startup sequence of the app.<br/><br />Requires BrightScript profiling to be enabled (`bsprof_enable=1`).                                                                                                                                                                                                                                                                                                                                              |
-| bsprof_sample_ratio   | float          | 0.001 to 1.0     | 1.0               | Yes                       | Sets how often profiling samples are taken, while the app is running. Only has effect if `bsprof_enable=1`.If memory profiling is enabled (`bsprof_enable_mem=1`), this value is automatically set to 1.0.<br/><br/>The `bs_prof_sample_ratio` can be adjusted from 0.001 to 1.0. A sample ratio of 1.0 is the default and provides the most accurate data because every BrightScript statement is measured. A sample ratio of 1.0, however, may slow down device performance, but does not typically affect the usability of the app. If slower device performance is observed, reduce the ratio to lessen the profiler’s overhead.|
-| rsg_version           | float          | 1.1, 1.2         |                   | Yes, if using line-levl memory profiling                       | To use line-level profiling, this must be set to 1.2 (`rsg_version=1.2`). If it is not set to 1.2, profiling will still work correctly; however, line-level data will not be generated.<br/><br/>`rsg_version 1.2` provides significant performance improvements; therefore, you should set it to 1.2 regardless whether your app is using line-level profiling.<br/><br/>See [Roku Manifest for more information](/docs/developer-program/getting-started/architecture/channel-manifest.md).|
+
+<table>
+<thead>
+<tr>
+<th><strong>Manifest Entry</strong></th>
+<th><strong>Value Type</strong></th>
+<th><strong>Legal Values</strong></th>
+<th><strong>Default Value</strong></th>
+<th><strong>Required</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bsprof_data_dest</td>
+<td>enum</td>
+<td>local , network</td>
+<td>local</td>
+<td>Yes</td>
+<td>If this entry value is <code>local</code>, profiling data is collected on the device and can be downloaded from the Application Installer after the app terminates. This is the default.  If this entry value is <code>network</code>, the profiling data is sent over the network rather than being stored on the device. See the section on Retrieving Profiling Data for details.</td>
+</tr>
+<tr>
+<td>bsprof_enable</td>
+<td>boolean</td>
+<td>0 , 1</td>
+<td>0</td>
+<td>Yes</td>
+<td>Turns on BrightScript Profiling when the app is running. This is the master flag and must be set to 1 for any other profiling options to take effect.</td>
+</tr>
+<tr>
+<td>bsprof_enable_lines</td>
+<td>boolean</td>
+<td>0 , 1</td>
+<td>0</td>
+<td>Yes</td>
+<td>Collects memory and CPU data for each line of BrightScript source code. This makes it easier to pinpoint memory and CPU usage issues.<br /><br />This value is set to 0 by default, which means that data is collected for each BrightScript function as a whole. <br /><br />Enabling this feature can have a significant impact on device performance.<br /><br />Requires BrightScript profiling to be enabled (<code>bsprof_enable=1</code>), and the RSG version to be set to 1.2 (<code>rsg_version=1.2</code>).</td>
+</tr>
+<tr>
+<td>bsprof_enable_mem</td>
+<td>boolean</td>
+<td>0 , 1</td>
+<td>0</td>
+<td>Yes, if using memory profiling</td>
+<td>Turns on memory profiling.<br /><br />Requires BrightScript profiling to be enabled (<code>bsprof_enable=1</code>).<br /><br />If this is enabled, the <code>bsprof_sample_ratio</code> is automatically set to 1.0.</td>
+</tr>
+<tr>
+<td>bsprof_pause_on_start</td>
+<td>boolean</td>
+<td>0 , 1</td>
+<td>0</td>
+<td>No</td>
+<td>Immediately after launching the app, profiling is paused until manually resumed with the bsprof-resume command on the port 8080 debug console. <br /><br />This is useful for profiling isolated parts of an app's UI or operations, rather than profiling the entire startup sequence of the app.<br /><br />Requires BrightScript profiling to be enabled (<code>bsprof_enable=1</code>).</td>
+</tr>
+<tr>
+<td>bsprof_sample_ratio</td>
+<td>float</td>
+<td>0.001 to 1.0</td>
+<td>1.0</td>
+<td>Yes</td>
+<td>Sets how often profiling samples are taken, while the app is running. Only has effect if <code>bsprof_enable=1</code>.If memory profiling is enabled (<code>bsprof_enable_mem=1</code>), this value is automatically set to 1.0.<br /><br />The <code>bs_prof_sample_ratio</code> can be adjusted from 0.001 to 1.0. A sample ratio of 1.0 is the default and provides the most accurate data because every BrightScript statement is measured. A sample ratio of 1.0, however, may slow down device performance, but does not typically affect the usability of the app. If slower device performance is observed, reduce the ratio to lessen the profiler’s overhead.</td>
+</tr>
+<tr>
+<td>rsg_version</td>
+<td>float</td>
+<td>1.1, 1.2</td>
+<td></td>
+<td>Yes, if using line-levl memory profiling</td>
+<td>To use line-level profiling, this must be set to 1.2 (<code>rsg_version=1.2</code>). If it is not set to 1.2, profiling will still work correctly; however, line-level data will not be generated.<br /><br /><code>rsg_version 1.2</code> provides significant performance improvements; therefore, you should set it to 1.2 regardless whether your app is using line-level profiling.<br /><br />See <a href="/docs/developer-program/getting-started/architecture/channel-manifest.md">Roku Manifest for more information</a>.</td>
+</tr>
+</tbody>
+</table>
+
 
 
 ## Running the profiler on an app
@@ -80,12 +143,12 @@ These profiling commands exist on port 8080 (Roku OS Versions 9 and later):
 
 ## Collecting the data
 
-The app's manifest entry `bsprof_data_dest` determines how the
+The app's manifest entry `bsprof_data_dest` determines how the
 profiling data is retrieved from the device. The data can be stored
 locally on the device and downloaded after the app finishes running
 and exits, or it can be streamed over a network connection while the
-app is running. Streaming consumes significantly less memory on the
-device while the app is running.  In addition, if the app fails,
+app is running. Streaming consumes significantly less memory on the
+device while the app is running.  In addition, if the app fails,
 the memory data will have been accurately collected up until the time of
 the crash (CPU data, however, is typically lost if a failure occurs).
 
@@ -93,9 +156,9 @@ the crash (CPU data, however, is typically lost if a failure occurs).
 ### Data Destination: Local
 
 Local data storage is the default storage for profiling, though it can
-be explicitly selected by adding` bsprof_data_dest=local` to the
+be explicitly selected by adding` bsprof_data_dest=local` to the
 manifest file. When using this destination, the data becomes
-available on the device's Application Installer after the app
+available on the device's Application Installer after the app
 exits:
 
 1.  Launch the app and run through the test cases. Once the app
@@ -105,7 +168,7 @@ exits:
    ![roku815px - profilingDataUtility](https://image.roku.com/ZHZscHItMTc2/profilingDataUtility.png "profilingDataUtility")
 
 
-2.  Click **Profiling Data** to generate a `.bsprof` file and a link to download the data from your Roku device.
+2.  Click **Profiling Data** to generate a `.bsprof` file and a link to download the data from your Roku device.
 
    ![roku815px - profilingDataReady](https://image.roku.com/ZHZscHItMTc2/profilingDataReady.png "profilingDataReady")
 
@@ -134,29 +197,29 @@ Once that message is seen, the profiling connection is closed by the device and 
 
 ## Viewing profiling data
 
-After downloading the `.bsprof` file, the data can be viewed using
-the [BrightScript Profiler Visualization
+After downloading the `.bsprof` file, the data can be viewed using
+the [BrightScript Profiler Visualization
 Tool](http://devtools.web.roku.com/profiler/viewer/).
 The tool lists the function calls in each thread. For SceneGraph
 applications, each thread corresponds to either the main BrightScript
-thread or a single instance of a `<component>`. For example, if you have
+thread or a single instance of a `<component>`. For example, if you have
 a Task node that is instantiated multiple times, each instance will
 appear as a separate thread. The results are the same for
-any custom `<component>` in the app that is instantiated multiple
+any custom `<component>` in the app that is instantiated multiple
 times. The main BrightScript thread (`Thread main`) is also represented
-as a single thread even though it has no `<component>`.
+as a single thread even though it has no `<component>`.
 
 For each function listed in the tool, you can expand it to drill down
 further into its call path and get more detailed data on the function.
-If you enabled line-level profiling for the app, you can also click
-on the ellipses to the right of a function to view profiling data for
+If you enabled line-level profiling for the app, you can also click
+on the ellipses to the right of a function to view profiling data for
 the individual lines of code within a function.
 
 ![roku815px - bsprofilerCpu](https://image.roku.com/ZHZscHItMTc2/bsprofilerCpu.png "bsprofilerCpu")
 
 ### CPU
 
-The **CPU** tab lists CPU time, wall-clock time, and call count
+The **CPU** tab lists CPU time, wall-clock time, and call count
 statistics for each function observed and for the function's associated
 call path (expand a function to view its call path). CPU time refers to
 the number of operations each function takes to complete; this number
@@ -168,13 +231,13 @@ different Roku devices but low-end Roku devices can take more real-world
 time to complete one operation than a high-end Roku device.
 
 The CPU and wall-clock time columns are further divided into separate
-sections for `self`, `callees`, and `total:`
+sections for `self`, `callees`, and `total:`
 
--   **self**. The CPU/wall-clock time the function consumes itself.
--   **callees**. The amount of CPU/wall-clock time consumed by any
+-   **self**. The CPU/wall-clock time the function consumes itself.
+-   **callees**. The amount of CPU/wall-clock time consumed by any
     functions called by the original function.
--   **total**. The amount of CPU/wall-clock time consumed by the
-    original function (self) and any callee functions.
+-   **total**. The amount of CPU/wall-clock time consumed by the
+    original function (self) and any callee functions.
 
 ### Memory Graph
 
@@ -199,8 +262,8 @@ tab.
 You can collect profile data for each line of BrightScript source code
 to better pinpoint high CPU and memory usage. To do this, enable
 profiling (`bsprof_enable=1`), line-level profiling
-(`bsprof_enable_lines=1`), and RSG version 1.2 (`rsg_version=1.2`) in
-the manifest. In the **CPU** or **Memory** tab, click on the
+(`bsprof_enable_lines=1`), and RSG version 1.2 (`rsg_version=1.2`) in
+the manifest. In the **CPU** or **Memory** tab, click on the
 ellipses to the right of the function to drill down into its individual
 lines of code.
 
@@ -288,9 +351,3 @@ Click **Show call paths** to open the **CPU** or **Memory** tab with more detail
 
 Here are a few key points on how to use this data to improve app performance:
 
-
-| Data Type                                                           | Definition and Best Use                                                                                                                                                                                           |
-| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| High wall-clock time but low CPU time                               | This pattern shows a function is consistently waiting, whether it be for input or a response from an external source. These functions are best suited for Task nodes so that it doesn't block the main thread.    |
-| Complex functions                                                   | Try to simplify the as much as possible. If a function handles multiple tasks, consider breaking it out into several functions to further isolate how much CPU or wall-clock time is consumed by each task. |
-| Functions that consume a large amount of CPU or wall-clock time     | Move functions to Task nodes, if they are consistently waiting. A function can be determined to be waiting if it's wall-clock time is high, but its CPU cost is low                                                                                                                                        |

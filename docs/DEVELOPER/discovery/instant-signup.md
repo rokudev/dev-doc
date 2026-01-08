@@ -99,56 +99,40 @@ Apps must complete the following steps (in addition to completing the [prerequis
 
 Apps must implement an API that retrieves the images and description of the app to be displayed to customers. The following table lists the requirements for implementing the Images API:
 
-| Item         | Description                                                  |
-| ------------ | ------------------------------------------------------------ |
-| **Endpoint** | /api/offers/rsb/images                                       |
-| **Method**   | GET                                                          |
-| **Header**   | The HTTP header of the GET requests includes a JSON Web Token (JWT) for verifying that the API call is from Roku and the customer's locale for determining which offer image to display to the customer. <br/>${metadataApiHeaderTable} |
-| **Response** | The API returns the following:<br/><br/>- An **images** array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the [Image specifications](#channel-image-specifications).<br/><br/>- A **description** string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br/><br/>**Syntax**:${metadataApiResponseSyntax}<br/>**Example**: ${metadataApiResponseExample} |
-| **Error**    | ${metadataApiErrorCodes}                                     |
 
-  {#metadataApiHeaderTable}
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Endpoint</strong></td>
+<td>/api/offers/rsb/images</td>
+</tr>
+<tr>
+<td><strong>Method</strong></td>
+<td>GET</td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td>The HTTP header of the GET requests includes a JSON Web Token (JWT) for verifying that the API call is from Roku and the customer's locale for determining which offer image to display to the customer. <br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Authorization: Bearer</td><td>String</td><td>A JWT token that enables apps to verify that API calls are from Roku. The JWT is signed with the partner's <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> using the <a href="https://tools.ietf.org/html/rfc7518#section-3.2">HS512 (HMAC using SHA-512)</a> algorithm. To generate the JWT, use the following algorithm, payload, and secret key:<br /><br />- <strong>Algorithm</strong>: HS512. <br /><br />- <strong>Payload</strong>:${jwt-payload-images-code}<br />- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> (see the following <a href="/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#roku-pay-api-key">document</a> for more information).<br /><br />Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td></tr><tr><td>locale</td><td>String</td><td>The location of the customer in language-country format (en-us or es-mx, for example).</td></tr></tbody></table><p>{#metadataApiResponseSyntax}</p><p><code>\{    "images": "Array.&lt;String&gt;",    "description": "string"  \}</code></p><p>{#metadataApiResponseExample}</p><p><code>\{    "images": [ "https://myChannelImage/item1.jpg",                  "https://myChannelContentPosterImages/item2.jpg",                "https://myChannelContentPosterImages/item3.jpg"],    "description": "Your favorite movies from your favorite decade"              \}</code></p><p>{#metadataApiErrorCodes}  </p><ul><li>200: OK</li><li>400: Bad request</li><li>500: Error</li></ul></td>
+</tr>
+<tr>
+<td><strong>Response</strong></td>
+<td>The API returns the following:<br /><br />- An <strong>images</strong> array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the <a href="#channel-image-specifications">Image specifications</a>.<br /><br />- A <strong>description</strong> string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br /><br /><strong>Syntax</strong>:${metadataApiResponseSyntax}<br /><strong>Example</strong>: ${metadataApiResponseExample}</td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td>${metadataApiErrorCodes}</td>
+</tr>
+</tbody>
+</table>
 
-| Field                 | Type   | Description                                                  |
-| --------------------- | ------ | ------------------------------------------------------------ |
-| Authorization: Bearer | String | A JWT token that enables apps to verify that API calls are from Roku. The JWT is signed with the partner's [Roku Pay API Key](https://developer.roku.com/api/settings) using the [HS512 (HMAC using SHA-512)](https://tools.ietf.org/html/rfc7518#section-3.2) algorithm. To generate the JWT, use the following algorithm, payload, and secret key:<br/><br/>- **Algorithm**: HS512. <br/><br/>- **Payload**:${jwt-payload-images-code}<br/>- **Secret key**: [Roku Pay API Key](https://developer.roku.com/api/settings) (see the following [document](/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#roku-pay-api-key) for more information).<br/><br/>Apps can use [JWT debugger](https://jwt.io/) or other online tool to verify generated JWTs. |
-| locale                | String | The location of the customer in language-country format (en-us or es-mx, for example). |
 
-  {#metadataApiResponseSyntax}
-
-  ```
-  {
-    "images": "Array.<String>",
-    "description": "string"
-  }
-  ```
-
-  {#metadataApiResponseExample}
-
-  ```
-  {
-    "images": [ "https://myChannelImage/item1.jpg",  
-                "https://myChannelContentPosterImages/item2.jpg",
-                "https://myChannelContentPosterImages/item3.jpg"],
-    "description": "Your favorite movies from your favorite decade"            
-  }
-  ```
-
-  {#metadataApiErrorCodes}  
-
-  - 200: OK
-  - 400: Bad request
-  - 500: Error
-
-{#jwt-payload-images-code}
-
-```
-"iss": "roku_instant_signup",
-"sub": "instant_signup_metadata",
-"exp": 1616010343 (1 hour from the current time, in epoch unix timestamp format)
-"aud": "roku_developers" (the app name)
-"iat": 1616006743 (the current time, in epoch unix timestamp format)
-```
+  
 
 #### Image specifications
 
@@ -165,18 +149,31 @@ The images used for the app must meet the requirements for width, height, minimu
 
 The posters/artwork with the content or networks featured in the app are used to highlight the app's offerings. The posters/artwork must meet the following requirements:
 
-| Specification | Requirements                                                 |
-| ------------- | ------------------------------------------------------------ |
-| File format   | JPG                                                          |
-| Aspect ratio  | 4:3${aspect_ratio_requirements}                              |
-| Licensing     | Posters/artwork must be licensed for usage. Dates that posters may be used must be specified |
 
-{#aspect_ratio_requirements}
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File format</td>
+<td>JPG</td>
+</tr>
+<tr>
+<td>Aspect ratio</td>
+<td>4:3<ul><li><strong>Content-oriented apps</strong> (apps that promote movies, TV shows, music, and other content): A minimum of 10 posters must be included with an offer.</li><li><strong>vMVPD apps</strong> (apps that promote multiple networks/channels): A minimum of 5 artwork images must be included with an offer.</li></ul><blockquote><p>The displaying of up-to-date content images in the device activation workflow may be delayed because of Roku's caching and approval policy.</p></blockquote></td>
+</tr>
+<tr>
+<td>Licensing</td>
+<td>Posters/artwork must be licensed for usage. Dates that posters may be used must be specified</td>
+</tr>
+</tbody>
+</table>
 
-- **Content-oriented apps** (apps that promote movies, TV shows, music, and other content): A minimum of 10 posters must be included with an offer.
-- **vMVPD apps** (apps that promote multiple networks/channels): A minimum of 5 artwork images must be included with an offer.
 
-> The displaying of up-to-date content images in the device activation workflow may be delayed because of Roku's caching and approval policy.
 
 ### Implementing products API
 
@@ -192,81 +189,43 @@ Each product will include its associated name and description, which were entere
 
 The following table lists the requirements for implementing the personalized product display API:
 
-| Item         | Description                                                  |
-| ------------ | ------------------------------------------------------------ |
-| **Endpoint** | /api/offers/rsb/products                                     |
-| **Method**   | GET                                                          |
-| **Headers**  | The HTTP header of the GET requests includes a JWT token for verifying that the API call is from Roku, and the customer's email hash, locale, and activation date for determining which offers the customer is eligible for: ${productsApiHeaderTable} |
-| **Response** | The API returns a **Products** array, which contains a list of product objects. The following information is included for each product in the array: <br/>${product-table}<br/><br/>**Syntax**:${productsApiResponseSyntax}<br/>**Example**: ${productsApiResponseExample}<br/>If the customer is not eligible for any offers, return an empty array. |
-| **Error**    | ${productsApiErrorCodes}                                     |
 
-{#productsApiHeaderTable}
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Endpoint</strong></td>
+<td>/api/offers/rsb/products</td>
+</tr>
+<tr>
+<td><strong>Method</strong></td>
+<td>GET</td>
+</tr>
+<tr>
+<td><strong>Headers</strong></td>
+<td>The HTTP header of the GET requests includes a JWT token for verifying that the API call is from Roku, and the customer's email hash, locale, and activation date for determining which offers the customer is eligible for: <table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Authorization: Bearer</td><td>String</td><td>A JWT token that enables apps to verify that API calls are from Roku. The JWT is signed with the partner's <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> using the <a href="https://tools.ietf.org/html/rfc7518#section-3.2">HS512 (HMAC using SHA-512)</a> algorithm. To generate the JWT, use the following algorithm, payload, and secret key:<br /><br />- <strong>Algorithm</strong>: HS512. <br /><br />- <strong>Payload</strong>:${jwt-payload-products-code}<br />- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> (see the following <a href="/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#roku-pay-api-key">document</a> for more information).<br /><br />Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td></tr><tr><td>roku-reserved-email-hash</td><td>String</td><td>The unsalted SHA-512 hash of the customer's email address. This can be used to determine which offers customers are eligible. See <a href="#using-email-hashes-to-determine-offer-eligibility">Using email hashes to determine offer eligibility</a> for more information.</td></tr><tr><td>locale</td><td>String</td><td>The location of the customer in language-country format (en-us or es-mx, for example).</td></tr><tr><td>activation-date</td><td>String</td><td>A timestamp in UTC format indicating when the device was originally activated (for example, 2021-07-01T17:04:33Z).</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td><strong>Response</strong></td>
+<td>The API returns a <strong>Products</strong> array, which contains a list of product objects. The following information is included for each product in the array: <br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Id</td><td>String</td><td>Identifies the product to be purchased, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-Channel Product page in the Developer Dashboard</a> when the product was created. The name of the in-app product must include the app name.</td></tr><tr><td>desc</td><td>String</td><td>A brief (maximum 100 character) description of the product.<br /><br />Do not include any billing information such as pricing and billing cycle in the description. Roku automatically populates this information from the <a href="/docs/developer-program/roku-pay/quickstart/in-channel-products.md">in-app products you've created in the Developer Dashboard</a>.</td></tr><tr><td>details</td><td>String</td><td>Optional. App lineup images in markdown format (for example, <code>"<img alt="img" src="https://www.roku.com/images/roku-developers.svg" />"</code>)</td></tr><tr><td>name</td><td>String</td><td>Optional. The name of the offer (for example, "Roku Developers annual subscription")</td></tr><tr><td>images</td><td>Array of Strings</td><td>Optional. An array of images that may be shown in the offer card once an offer is selected.</td></tr></tbody></table><br /><br /><strong>Syntax</strong>:<code>\{    "products": "Array.&lt;Product&gt;"  \}&lt;/p&gt;&lt;p&gt;Product = \{    "id": "string",    "desc": "string",    "details": "string",    "name" "string",    "images": "Array.&lt;String&gt;"  \}</code></p><p>{#productsApiResponseExample}</p><p><code>\{      "products": [          \{              "id": "roku_developers_monthly",              "desc": "Unlimited streaming access to all Roku Developers content"          \},          \{              "id": "roku_developers_annual",              "desc": "Unlimited streaming access to all Roku Developers content."          \}      ]  \}</code><br /><strong>Example</strong>: ${productsApiResponseExample}<br />If the customer is not eligible for any offers, return an empty array.</td>
+</tr>
+<tr>
+<td><strong>Error</strong></td>
+<td><pre><code>* 200: OK<br />  * 400: Bad request<br />  * 500: Error</code></pre></td>
+</tr>
+</tbody>
+</table>
 
-| Field                    | Type   | Description                                                  |
-| ------------------------ | ------ | ------------------------------------------------------------ |
-| Authorization: Bearer    | String | A JWT token that enables apps to verify that API calls are from Roku. The JWT is signed with the partner's [Roku Pay API Key](https://developer.roku.com/api/settings) using the [HS512 (HMAC using SHA-512)](https://tools.ietf.org/html/rfc7518#section-3.2) algorithm. To generate the JWT, use the following algorithm, payload, and secret key:<br/><br/>- **Algorithm**: HS512. <br/><br/>- **Payload**:${jwt-payload-products-code}<br/>- **Secret key**: [Roku Pay API Key](https://developer.roku.com/api/settings) (see the following [document](/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#roku-pay-api-key) for more information).<br/><br/>Apps can use [JWT debugger](https://jwt.io/) or other online tool to verify generated JWTs. |
-| roku-reserved-email-hash | String | The unsalted SHA-512 hash of the customer's email address. This can be used to determine which offers customers are eligible. See [Using email hashes to determine offer eligibility](#using-email-hashes-to-determine-offer-eligibility) for more information. |
-| locale                   | String | The location of the customer in language-country format (en-us or es-mx, for example). |
-| activation-date          | String | A timestamp in UTC format indicating when the device was originally activated (for example, 2021-07-01T17:04:33Z). |
 
-{#productsApiResponseSyntax}
 
-  ```
-  {
-    "products": "Array.<Product>"
-  }
 
-  Product = {
-    "id": "string",
-    "desc": "string",
-    "details": "string",
-    "name" "string",
-    "images": "Array.<String>"
-  }
-  ```
 
-  {#productsApiResponseExample}
 
-  ```
-  {
-      "products": [
-          {
-              "id": "roku_developers_monthly",
-              "desc": "Unlimited streaming access to all Roku Developers content"
-          },
-          {
-              "id": "roku_developers_annual",
-              "desc": "Unlimited streaming access to all Roku Developers content."
-          }
-      ]
-  }
-  ```
-
-{#product-table}
-
-| Field   | Type             | Description                                                  |
-| ------- | ---------------- | ------------------------------------------------------------ |
-| Id      | String           | Identifies the product to be purchased, as entered in the **Product Identifier** field on the [In-Channel Product page in the Developer Dashboard](https://developer.roku.com/products) when the product was created. The name of the in-app product must include the app name. |
-| desc    | String           | A brief (maximum 100 character) description of the product.<br /><br />Do not include any billing information such as pricing and billing cycle in the description. Roku automatically populates this information from the [in-app products you've created in the Developer Dashboard](/docs/developer-program/roku-pay/quickstart/in-channel-products.md). |
-| details | String           | Optional. App lineup images in markdown format (for example, `"![img](https://www.roku.com/images/roku-developers.svg)"`) |
-| name    | String           | Optional. The name of the offer (for example, "Roku Developers annual subscription") |
-| images  | Array of Strings | Optional. An array of images that may be shown in the offer card once an offer is selected. |
-
-{#productsApiErrorCodes}  
-
-  * 200: OK
-  * 400: Bad request
-  * 500: Error
-
-{#jwt-payload-products-code}
-
-```
-"iss": "roku_instant_signup",
-"sub": "instant_signup_elegibility",
-"exp": 1616010343 (1 hour from the current time, in epoch unix timestamp format)
-"aud": "roku_developers" (the app name)
-"iat": 1616006743 (the current time, in epoch unix timestamp format)
-```
 
 #### Using email hashes to determine offer eligibility
 
@@ -301,7 +260,7 @@ Apps can provide an **account** endpoint that accepts POST requests. This enable
 
 When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](/docs/developer-program/roku-pay/implementation/push-notifications.md#sale) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
 
-     {
+     \{
         "customerId": "168c2bda168854bb805f24ab296390a3",
         "transactionType": "Sale",
         "transactionId": "bf9af441015311ed810f0a58a9feac11",
@@ -330,7 +289,7 @@ When a customer selects a subscription, they are prompted to grant Roku permissi
         "federationToken": "763edc77-4b19-547b-8c48-23a7a0234327",
         "pucId": "763edc77-4b19-547b-8c48-23a7a0234327",
         "isFreeTrial": false
-    }
+    \}
 
 > If the user subscribes to your app via an Instant Signup on-device offer, the **purchaseChannel** and **purchaseContext** fields are set to "DEVICE" and "ISU", respectively.
 >
@@ -510,5 +469,3 @@ The subscription will automatically renew for <product-price> per <month|year> u
 After selecting “Start your subscription” you will be charged the &lt;product-price&gt; &lt;monthly|annual&gt; price for this subscription now.
 
 “&lt;product-name&gt;“ is a recurring, pre-paid subscription that will begin immediately after you select “Start your subscription” at the cost of &lt;product-price&gt; per &lt;month|year&gt;. By selecting “Start your subscription” you agree that we may share your Roku account information with &lt;publisher name&gt;, which may include your name, email address, zip code, age and gender. Visit “&lt;product privacy policy URL&gt;” to learn how &lt;publisher name&gt; uses your information. Access and use of “&lt;product-name&gt;“ is subject to the publisher terms of service URL&gt;, which may require you to create an account.
-
-The subscription will automatically renew for &lt;product-price&gt;  per <month|year> until you cancel. You must cancel before your subscription renews to avoid being billed for the next term. You can manage your subscription at [my.roku.com](http://my.roku.com/). No refunds are given for partial term cancellations. Void where prohibited.

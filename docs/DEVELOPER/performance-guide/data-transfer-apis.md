@@ -117,7 +117,7 @@ my_aa = n.MoveFromField("aa_field")
 > The *move* operations (`PostMessage` and `MoveIntoField`) remove the contents from the source object and move them across to the destination. This clears out the source object. For example:
 >
 > ```
-> aa = {foo: "hello", bar: [1, 2, 3]}
+> aa = \{foo: "hello", bar: [1, 2, 3]\}
 > node.moveIntoField("myfield", aa)
 > ? aa           ' Prints an empty AA
 > ```
@@ -128,7 +128,7 @@ my_aa = n.MoveFromField("aa_field")
 >
 > ```
 >sub_array = [1, 2, 3]
-> aa = {foo: "hello", bar: sub_array}
+> aa = \{foo: "hello", bar: sub_array\}
 > ' At this point, there is an external reference into aa
 > node.moveIntoField("myfield", aa)
 > ? aa           ' Prints an empty AA
@@ -351,21 +351,30 @@ This function may be called from any thread.
 
 #### Parameters
 
-| **Name**   | **Type** | **Description**                                              |
-| :--------- | :------- | :----------------------------------------------------------- |
-| message_id | String   | The ID of the channel to which this message should be posted. |
-| data       | Object   | The contents of the message to be passed to any registered handlers. This must be recursively copyable. Non-copyable objects are ignored silently.<br />Copyable objects include:${copyable-objects-list} |
 
-{#copyable-objects-list}
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message_id</td>
+<td>String</td>
+<td>The ID of the channel to which this message should be posted.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Object</td>
+<td>The contents of the message to be passed to any registered handlers. This must be recursively copyable. Non-copyable objects are ignored silently.<br />Copyable objects include:<ul><li>roAssociativeArray</li><li>roArray</li><li>integer, long integer</li><li>string</li><li>bool</li><li>float, double</li><li>invalid</li><li>roSGNode</li></ul></td>
+</tr>
+</tbody>
+</table>
 
-- roAssociativeArray
-- roArray
-- integer, long integer
-- string
-- bool
-- float, double
-- invalid
-- roSGNode
+
 
 ### roRenderThreadQueue.CopyMessage(message_id as String, data as Object) as Void
 

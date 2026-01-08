@@ -300,13 +300,3 @@ Roku also supports WebVTT captions in DASH as per the DASH-IF IOP guidelines. Th
 ## Closed caption support summary
 
 Below is a summary of the closed caption formats supported by the various video streaming technologies on Roku devices.
-
-|             | SMPTE-TT                         | EIA-608                                                       | WebVTT                                                                  |
-| ----------- | -------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| MP4 VOD     | Yes (external file only)         | Yes (in stream only for all manifests containing AVC streams) | No                                                                      |
-| HLS VOD     | Yes (external file only)         | Yes (in stream only for all manifests containing AVC streams) | Yes  (in a separate stream described in the manifest (playlist for hls) |
-| HLS Live    | No                               | Yes (in stream only for all manifests containing AVC streams) | Yes  (in a separate stream described in the manifest (playlist for hls) |
-| Smooth VOD  | Yes (in stream or external file) | Yes (in stream only for all manifests containing AVC streams) | No                                                                      |
-| Smooth Live | Yes (in stream only)             | Yes (in stream only for all manifests containing AVC streams) | No                                                                      |
-| DASH VOD    | Yes (external file only)         | Yes (in stream only for all manifests containing AVC streams) | Yes                                                                      |
-| DASH Live    | Yes (in stream or external file)         | Yes (in stream only for all manifests containing AVC streams) | Yes

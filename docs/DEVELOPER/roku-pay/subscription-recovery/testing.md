@@ -60,19 +60,46 @@ To move subscriptions into different states and verify your subscription recover
 
 The **subscription-recovery** test API includes a set of POST methods for changing the state of subscriptions. Changes in the subscription state may take 10–30 minutes. 
 
-| #    | Usecase                                            | Subscription state change | Method | URL                                                          |
-| :--- | :------------------------------------------------- | :------------------------ | :----- | :----------------------------------------------------------- |
-| 1    | Move an active subscription to the in-grace state  | active → in-grace         | POST   | https://apipub.roku.com/test/subscription-recovery/grace-period-state/{partnerApiKey}/{transactionId} |
-| 2    | Move an in-grace subscription to the on-hold state | in-grace → on-hold        | POST   | https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/{partnerApiKey}/{transactionId} |
-| 3    | Passively cancel a subscription                    | ${passive-cancel-list}    | POST   | https://apipub.roku.com/test/subscription-recovery/deactivated-state/{partnerApiKey}/{transactionId} |
-| 4    | Recover a subscription                             | ${sub-recover-list}       | POST   | [https://apipub.roku.com/test/subscription-recovery/recover/{](https://apipub.roku.com/test/subscription-recovery/recover/{devToken}/{transactionId)[partnerApiKey](https://apipub.roku.com/test/subscription-recovery/deactivated-state/{partnerApiKey}/{transactionId)}/{transactionId} |
 
-{#passive-cancel-list}
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Usecase</th>
+<th>Subscription state change</th>
+<th>Method</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Move an active subscription to the in-grace state</td>
+<td>active → in-grace</td>
+<td>POST</td>
+<td>https://apipub.roku.com/test/subscription-recovery/grace-period-state/{partnerApiKey}/{transactionId}</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Move an in-grace subscription to the on-hold state</td>
+<td>in-grace → on-hold</td>
+<td>POST</td>
+<td>https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/{partnerApiKey}/{transactionId}</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Passively cancel a subscription</td>
+<td><ul><li>in-grace → canceled</li><li>on-hold → canceled</li></ul></td>
+<td>POST</td>
+<td>https://apipub.roku.com/test/subscription-recovery/deactivated-state/{partnerApiKey}/{transactionId}</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Recover a subscription</td>
+<td><ul><li>in-grace → recovered</li><li>on-hold → recovered</li></ul></td>
+<td>POST</td>
+<td><a href="https://apipub.roku.com/test/subscription-recovery/recover/{devToken}/{transactionId">https://apipub.roku.com/test/subscription-recovery/recover/{</a><a href="https://apipub.roku.com/test/subscription-recovery/deactivated-state/{partnerApiKey}/{transactionId">partnerApiKey</a>}/{transactionId}</td>
+</tr>
+</tbody>
+</table>
 
-- in-grace → canceled
-- on-hold → canceled
-
-{#sub-recover-list}
-
-- in-grace → recovered
-- on-hold → recovered

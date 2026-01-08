@@ -17,13 +17,44 @@ next:
 
 Several means are available for an application to store data:
 
-| Storage            | Advantages                                                   | Disadvantages                                                |
-| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| file in tmp:       | Files are read/write                                         | Contents are not retained when application exits.<br /><br />Unmanaged. Does not automatically delete data unless the application actively manages the directory. This increases app's memory usage, which could result in an app failures. |
-| file in cachefs:   | Files are read/write; an arbitrary amount of data can be written. <br /><br />cachefs use is per developer ID. Files in cachefs are stored in RAM; therefore, a reboot will evict them from cachefs.<br /><br />Does not count towards app’s total memory usage | Data is evicted when more space is required for another app  |
-| file in pkg:       | Accesses any files included in app package                   | Files are read-only                                          |
-| file on USB device | Accesses files on removable USB media                        | Files are read-only; not all Roku models support USB         |
-| Registry           | Data is read/write; data is retained when the application exits and when the system reboots | Data size is limited. Each app has access to only 32kb of registry space. |
+
+<table>
+<thead>
+<tr>
+<th>Storage</th>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file in tmp:</td>
+<td>Files are read/write</td>
+<td>Contents are not retained when application exits.<br /><br />Unmanaged. Does not automatically delete data unless the application actively manages the directory. This increases app's memory usage, which could result in an app failures.</td>
+</tr>
+<tr>
+<td>file in cachefs:</td>
+<td>Files are read/write; an arbitrary amount of data can be written. <br /><br />cachefs use is per developer ID. Files in cachefs are stored in RAM; therefore, a reboot will evict them from cachefs.<br /><br />Does not count towards app’s total memory usage</td>
+<td>Data is evicted when more space is required for another app</td>
+</tr>
+<tr>
+<td>file in pkg:</td>
+<td>Accesses any files included in app package</td>
+<td>Files are read-only</td>
+</tr>
+<tr>
+<td>file on USB device</td>
+<td>Accesses files on removable USB media</td>
+<td>Files are read-only; not all Roku models support USB</td>
+</tr>
+<tr>
+<td>Registry</td>
+<td>Data is read/write; data is retained when the application exits and when the system reboots</td>
+<td>Data size is limited. Each app has access to only 32kb of registry space.</td>
+</tr>
+</tbody>
+</table>
+
 
 ### Cachefs
 

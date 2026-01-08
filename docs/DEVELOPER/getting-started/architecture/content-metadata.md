@@ -51,60 +51,185 @@ item to the user, in a user interface element that allows the user to
 select the item.
 
 
-| Attributes            | Type    | Values                                                       | Example                                      |
-| --------------------- | ------- | ------------------------------------------------------------ | -------------------------------------------- |
-| ContentType           | String  | Although ContentType accepts type String, the return value is of type [roInt](/docs/references/brightscript/components/roint.md). See table below. ${ContentType} | "movie"                                      |
-| Title                 | String  | Content title: movie title for films; episode title for TV series | "The Dark Knight"                            |
-| TitleSeason           | String  | Season title for TV series                                   | "Battlestar Galactica Season 5"              |
-| SecondaryTitle        | String  | Secondary title for the video content                        | "2022" (release year of the movie)           |
-| ProgramID             | String  | An opaque, unique identifier for the content the app is playing. Each movie, episode, or other content in the app should have a different program ID value.<br /><br />This identifier is used to debug content-specific playback issues. Roku will reference this programID in playback error reports, allowing developers to identify the content that failed to play. | "54b2f1ae-a0e9-46e0-a4d7-47b4e00e9c15"       |
-| Description           | String  | Description of content                                       | "Batman, Gordon and Harvey Dent are forced…" |
-| SDPosterUrl           | String  | URL for SD content artwork                                   | mysite.com/img/sd1932.jpg                    |
-| HDPosterUrl           | String  | URL for HD content artwork                                   | mysite.com/img/hd1932.jpg                    |
-| FHDPosterUrl          | String  | YesterdayURL for FHD content artwork                         | mysite.com/img/fhd1932.jpg                   |
-| ReleaseDate           | String  | Formatted Date String                                        | "3/31/2009"                                  |
-| Rating                | String  | Selects an icon to be displayed for the corresponding MPAA or TV rating, that is, the value will display as an icon artwork. See [Rating Attribute Icons](/docs/developer-program/getting-started/architecture/content-metadata.md#rating-attribute-icons) for a list of the acceptable values and the corresponding icon. | "PG-13"                                      |
-| StarRating            | Integer | Specifies the star rating to display as red star icon artwork, as a number from 1 to 100: ${StarRating} Numbers not divisible by 20 are displayed as a fractional star (A number of 30 will display one and a half stars) | 80                                           |
-| UserStarRating        | Integer | Specifies the user star rating to display as yellow star icon artwork, as a number from 1 to 100: ${UserStarRating} Does not display fractional stars for numbers not divisible by 20 | 80                                           |
-| ShortDescriptionLine1 | String  | Line 1 of Poster Screen Description                          | "The Dark Knight"                            |
-| ShortDescriptionLine2 | String  | Line 2 of Poster Screen Description                          | "Rent $1.99, Buy $14.99"                     |
-| EpisodeNumber         | String  | Episode Number                                               | "1"                                          |
-| NumEpisodes           | Integer | Number of episodes for a "season" or "series" contentType    | 40                                           |
-| Actors                | roArray | List of Actor Names                                          | ["Brad Pitt", "Angelina Jolie"]              |
-| Actors                | String  | Individual Actor Name                                        | "Brad Pitt"                                  |
-| Directors             | roArray | List of Director Names                                       | ["Joel Coen", "Clint Eastwood"]              |
-| Categories            | roArray | List of Category/Genre Names                                 | ["Comedy", "Drama"]                          |
-| Categories            | String  | Individual Category/Genre Name                               | "Comedy"                                     |
-| Album                 | String  | roSpringboard audio style uses this to display the album     | "Achtung"                                    |
-| Artist                | String  | roSpringboard audio style uses to show artist                | "U2"                                         |
-| TextOverlayUL         | String  | roSlideShow displays this string in Upper Left corner of slide | "Joe's Photos"                               |
-| TextOverlayUR         | String  | roSlideShow displays this string in Upper Right corner of slide | "3 of 20"                                    |
-| TextOverlayBody       | String  | roSlideShow displays this string on the bottom part of slide | "Wanda's 40'th Birthday"                     |
 
-{#ContentType}
+<table>
+<thead>
+<tr>
+<th>Attributes</th>
+<th>Type</th>
+<th>Values</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ContentType</td>
+<td>String</td>
+<td>Although ContentType accepts type String, the return value is of type <a href="/docs/references/brightscript/components/roint.md">roInt</a>. See table below. <table><thead><tr><th>Content Type</th><th>Return Value</th></tr></thead><tbody><tr><td>audio</td><td>5</td></tr><tr><td>episode</td><td>4</td></tr><tr><td>movie</td><td>1</td></tr><tr><td>not set or not supported</td><td>0</td></tr><tr><td>season</td><td>3</td></tr><tr><td>series</td><td>2</td></tr></tbody></table></td>
+<td>"movie"</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>String</td>
+<td>Content title: movie title for films; episode title for TV series</td>
+<td>"The Dark Knight"</td>
+</tr>
+<tr>
+<td>TitleSeason</td>
+<td>String</td>
+<td>Season title for TV series</td>
+<td>"Battlestar Galactica Season 5"</td>
+</tr>
+<tr>
+<td>SecondaryTitle</td>
+<td>String</td>
+<td>Secondary title for the video content</td>
+<td>"2022" (release year of the movie)</td>
+</tr>
+<tr>
+<td>ProgramID</td>
+<td>String</td>
+<td>An opaque, unique identifier for the content the app is playing. Each movie, episode, or other content in the app should have a different program ID value.<br /><br />This identifier is used to debug content-specific playback issues. Roku will reference this programID in playback error reports, allowing developers to identify the content that failed to play.</td>
+<td>"54b2f1ae-a0e9-46e0-a4d7-47b4e00e9c15"</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>String</td>
+<td>Description of content</td>
+<td>"Batman, Gordon and Harvey Dent are forced…"</td>
+</tr>
+<tr>
+<td>SDPosterUrl</td>
+<td>String</td>
+<td>URL for SD content artwork</td>
+<td>mysite.com/img/sd1932.jpg</td>
+</tr>
+<tr>
+<td>HDPosterUrl</td>
+<td>String</td>
+<td>URL for HD content artwork</td>
+<td>mysite.com/img/hd1932.jpg</td>
+</tr>
+<tr>
+<td>FHDPosterUrl</td>
+<td>String</td>
+<td>YesterdayURL for FHD content artwork</td>
+<td>mysite.com/img/fhd1932.jpg</td>
+</tr>
+<tr>
+<td>ReleaseDate</td>
+<td>String</td>
+<td>Formatted Date String</td>
+<td>"3/31/2009"</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td>String</td>
+<td>Selects an icon to be displayed for the corresponding MPAA or TV rating, that is, the value will display as an icon artwork. See <a href="/docs/developer-program/getting-started/architecture/content-metadata.md#rating-attribute-icons">Rating Attribute Icons</a> for a list of the acceptable values and the corresponding icon.</td>
+<td>"PG-13"</td>
+</tr>
+<tr>
+<td>StarRating</td>
+<td>Integer</td>
+<td>Specifies the star rating to display as red star icon artwork, as a number from 1 to 100: <ul><li>20 displays one star</li><li>40 displays two stars</li><li>60 displays three stars</li><li>80 displays four stars</li><li>100 displays five stars</li></ul> Numbers not divisible by 20 are displayed as a fractional star (A number of 30 will display one and a half stars)</td>
+<td>80</td>
+</tr>
+<tr>
+<td>UserStarRating</td>
+<td>Integer</td>
+<td>Specifies the user star rating to display as yellow star icon artwork, as a number from 1 to 100: <ul><li>20 displays one star</li><li>40 displays two stars</li><li>60 displays three stars</li><li>80 displays four stars</li><li>100 displays five stars</li></ul> Does not display fractional stars for numbers not divisible by 20</td>
+<td>80</td>
+</tr>
+<tr>
+<td>ShortDescriptionLine1</td>
+<td>String</td>
+<td>Line 1 of Poster Screen Description</td>
+<td>"The Dark Knight"</td>
+</tr>
+<tr>
+<td>ShortDescriptionLine2</td>
+<td>String</td>
+<td>Line 2 of Poster Screen Description</td>
+<td>"Rent $1.99, Buy $14.99"</td>
+</tr>
+<tr>
+<td>EpisodeNumber</td>
+<td>String</td>
+<td>Episode Number</td>
+<td>"1"</td>
+</tr>
+<tr>
+<td>NumEpisodes</td>
+<td>Integer</td>
+<td>Number of episodes for a "season" or "series" contentType</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Actors</td>
+<td>roArray</td>
+<td>List of Actor Names</td>
+<td>["Brad Pitt", "Angelina Jolie"]</td>
+</tr>
+<tr>
+<td>Actors</td>
+<td>String</td>
+<td>Individual Actor Name</td>
+<td>"Brad Pitt"</td>
+</tr>
+<tr>
+<td>Directors</td>
+<td>roArray</td>
+<td>List of Director Names</td>
+<td>["Joel Coen", "Clint Eastwood"]</td>
+</tr>
+<tr>
+<td>Categories</td>
+<td>roArray</td>
+<td>List of Category/Genre Names</td>
+<td>["Comedy", "Drama"]</td>
+</tr>
+<tr>
+<td>Categories</td>
+<td>String</td>
+<td>Individual Category/Genre Name</td>
+<td>"Comedy"</td>
+</tr>
+<tr>
+<td>Album</td>
+<td>String</td>
+<td>roSpringboard audio style uses this to display the album</td>
+<td>"Achtung"</td>
+</tr>
+<tr>
+<td>Artist</td>
+<td>String</td>
+<td>roSpringboard audio style uses to show artist</td>
+<td>"U2"</td>
+</tr>
+<tr>
+<td>TextOverlayUL</td>
+<td>String</td>
+<td>roSlideShow displays this string in Upper Left corner of slide</td>
+<td>"Joe's Photos"</td>
+</tr>
+<tr>
+<td>TextOverlayUR</td>
+<td>String</td>
+<td>roSlideShow displays this string in Upper Right corner of slide</td>
+<td>"3 of 20"</td>
+</tr>
+<tr>
+<td>TextOverlayBody</td>
+<td>String</td>
+<td>roSlideShow displays this string on the bottom part of slide</td>
+<td>"Wanda's 40'th Birthday"</td>
+</tr>
+</tbody>
+</table>
 
-| Content Type | Return Value |
-| ------------ | ------------ |
-| audio |	5 |
-| episode |	4 |
-| movie |	1 |
-| not set or not supported |	0 |
-| season |	3 |
-| series |	2 |
 
-{#StarRating}
-- 20 displays one star
-- 40 displays two stars
-- 60 displays three stars
-- 80 displays four stars
-- 100 displays five stars
 
-{#UserStarRating}
-- 20 displays one star
-- 40 displays two stars
-- 60 displays three stars
-- 80 displays four stars
-- 100 displays five stars
+
 
 ## Digital rights management (DRM) control attributes
 
@@ -112,38 +237,122 @@ Digital rights management (DRM) content meta-data control attributes are availab
 
 **Note:** Not all attributes are required, and may not have the same semantic meaning when applied to different DRM systems.
 
-| Attribute                                                    | DRM System                                   | Type   | Value                                                        | Example                                                      |
-| ------------------------------------------------------------ | -------------------------------------------- | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| appData                                                      | Playready, Widevine, Verimatrix: Optional    | String | Special meaning per DRM system. If supplied, expected to be a base64 encoded string. | "SGF2ZSB0byBkZWFsIHdpdGggQmFzZTY0IGZ..."                     |
-| encodingKey                                                  | Playready: Optional                          | String | This field is deprecated; use the **licenseServerURL** field.<br /><br />Specifies the PlayReady license acquisition data, in format depending on the EncodingType attribute value specified:<br/>${encodingKeyList} | "http://serverName/                                          |
-| encodingType                                                 | Playready: Optional                          | String | This field is deprecated; use the **licenseServerURL** field.<br /><br />Specifies the encoding scheme for PlayReady DRM, by setting to one of the following values:<br/>${encodingType} | "PlayReadyLicenseAcquisitionAndChallenge"                    |
-| KeySystem                                                    | Required for all                             | String | "playready" or "widevine". This value is case-insensitive. The default is an empty string.<br /><br />${verimatrix_blockquote} | "widevine"                                                   |
-| licenseRenewURL                                              | Widevine: Optional                           | String | A URL location for sending license renewal requests. If not specified, the Roku OS would send renewal requests to the URL specified in the licenseServerURL. | " https://host.com/license/wideivne/renew?licenseid=090495867002 " |
-| licenseServerURL                                             | Playready: Required Widevine: Required       | String | A URL location of a license server. This URL may include CGI parameters.<br /><br />If this field contains the PlayReady license acquisition URL plus additional custom license acquisition request data in format "URL%%%",  the “PlayReadyLicenseAcquisitionAndChallenge" type is used. | "https://host.com/license/playready?contentid=090495867002 " |
-| serializationURL                                             | Playready, Widevine: Optional                | String | A server address used for device provisioning                | "https://host.com/provision/device?esn=090495867002 "        |
-| serviceCert                                                  | Widevine: Optional Others: N/R (leave unset) | String | The actual certificate string for Widevine purposes, which must be obtained out-of-band (OOB) by the app. Leave this unset unless Widevine is used for DRM. | Certificate strings are too long to display here. Examples can be fetched from such sources as the Widevine test license server at "https://proxy.uat.widevine.com/proxy. " |
-| lic_acq_window                                               | Widevine: Optional                           | String | The maximum amount of time (in milliseconds) that an app waits before rotating its Widevine DRM keys. The app can generate a random wait time between 0 and the value specified in the **lic_acq_window** field, and use the random wait time to instruct when the Video node should make its next Widevine license request. | 1000                                                         |
-| ignoreInitDataPssh<br /><br />*Available since Roku OS 14.5* | Widevine: Optional                           | String | Ignores the PSSH in the initialization segment. This enables support for Harmonic/DTV-GO DASH-IOP v5.0.0 streams with In-Band Key-Rotation Signaling without breaking legacy streams/apps that do not provide the `<ContentProtection>` element with PSSH info in the DASH manifest. <br /><br />The default value is `"false"`. | "true"                                                       |
-| licReqTemplate<br /><br />*Available since Roku OS 14.6*     | Widevine                                     |        | Contains the license request "template, which is the entire license request without the license challenge filled-in<br /><br />JSON or XML formats are supported.<br /><br />Use this parameter and the **templateType**, **requestField**, and **responseField** parameters to wrap the Widevine license challenge payload in the request format (JSON or XML) required by your license server proxy. <br /><br />See [Example of wrapping the Widevine license challenge payload](#example-of-wrapping-the-widevine-license-challenge-payload) for more information. | "JSON"                                                       |
-| templateType<br /><br />*Available since Roku OS 14.6*       | Widevine                                     | String | Set to "JSON", "XML" or "BASE64"<br />-  JSON: licReqTemplate is in json format<br/>- XML: licReqTemplate is in XML format<br/>- BASE64 - Does not use licReqTemplate Instead, base64 encode the challenge and send it in POST body<br/> If no value is specified, the license template is not used | "JSON"                                                       |
-| requestField<br /><br />*Available since Roku OS 14.6*       | Widevine                                     | String | jsonpath or xpath to the element whose value must contain the fixed token LICENSE_CHALLENGE<br />- jsonpath if templateType is "JSON" <br />- xpath if templateType is "XML"<br /><br />The Roku OS Roku replaces the  LICENSE_CHALLENGE token with the base64 encoded license challenge.<br /><br />As of Roku OS 15.0, the LICENSE_CHALLENGE token can be provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly. | ".parameters[0].body"                                        |
-| responseField<br /><br />*Available since Roku OS 14.6*      | Widevine                                     | String | json-path or xpath to the element that         contains the base64 encoded license response<br/>- jsonpath if templateType is "JSON" <br />- xpath if templateType is "XML"<br /><br />The Roku OS extracts the license response, base64 decodes it, and provides it to the DRM client in the Roku firmware.<br /><br />After setting the license response in the DRM agent , the license response is made available in the **licenseStatus** Playback field, which is an associative array. The **response** field in the associative array contains the entire license response. | ".output.widevine2License.license"                           |
 
-{#encodingKeyList}
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>DRM System</th>
+<th>Type</th>
+<th>Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appData</td>
+<td>Playready, Widevine, Verimatrix: Optional</td>
+<td>String</td>
+<td>Special meaning per DRM system. If supplied, expected to be a base64 encoded string.</td>
+<td>"SGF2ZSB0byBkZWFsIHdpdGggQmFzZTY0IGZ..."</td>
+</tr>
+<tr>
+<td>encodingKey</td>
+<td>Playready: Optional</td>
+<td>String</td>
+<td>This field is deprecated; use the <strong>licenseServerURL</strong> field.<br /><br />Specifies the PlayReady license acquisition data, in format depending on the EncodingType attribute value specified:<br /><ul><li><p>when encodingType="PlayReadyLicenseAcquisitionUrl", the EncodingKey attribute contains the PlayReady license acquisition URL</p></li><li><p>when encodingType="PlayReadyLicenseAcquisitionAndChallenge", the EncodingKey attribute contains the PlayReady license acquisition URL plus additional custom license acquisition request data in format "URL%%%"  Note, this is the same value that used to be specified directly in Content Metadata structure   The app just needs to set drmParams.licenseSererUrl.</p></li></ul></td>
+<td>"http://serverName/</td>
+</tr>
+<tr>
+<td>encodingType</td>
+<td>Playready: Optional</td>
+<td>String</td>
+<td>This field is deprecated; use the <strong>licenseServerURL</strong> field.<br /><br />Specifies the encoding scheme for PlayReady DRM, by setting to one of the following values:<br /><ul><li>"PlayReadyLicenseAcquisitionUrl"</li><li>"PlayReadyLicenseAcquisitionAndChallenge"  Note, this is the same value that used to be specified directly in Content Metadata structure</li></ul></td>
+<td>"PlayReadyLicenseAcquisitionAndChallenge"</td>
+</tr>
+<tr>
+<td>KeySystem</td>
+<td>Required for all</td>
+<td>String</td>
+<td>"playready" or "widevine". This value is case-insensitive. The default is an empty string.<br /><br /><blockquote><p>As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click <a href="/docs/specs/media/content-protection.md">here</a> for more information on implementing these DRMs.</p></blockquote></td>
+<td>"widevine"</td>
+</tr>
+<tr>
+<td>licenseRenewURL</td>
+<td>Widevine: Optional</td>
+<td>String</td>
+<td>A URL location for sending license renewal requests. If not specified, the Roku OS would send renewal requests to the URL specified in the licenseServerURL.</td>
+<td>" https://host.com/license/wideivne/renew?licenseid=090495867002 "</td>
+</tr>
+<tr>
+<td>licenseServerURL</td>
+<td>Playready: Required Widevine: Required</td>
+<td>String</td>
+<td>A URL location of a license server. This URL may include CGI parameters.<br /><br />If this field contains the PlayReady license acquisition URL plus additional custom license acquisition request data in format "URL%%%",  the “PlayReadyLicenseAcquisitionAndChallenge" type is used.</td>
+<td>"https://host.com/license/playready?contentid=090495867002 "</td>
+</tr>
+<tr>
+<td>serializationURL</td>
+<td>Playready, Widevine: Optional</td>
+<td>String</td>
+<td>A server address used for device provisioning</td>
+<td>"https://host.com/provision/device?esn=090495867002 "</td>
+</tr>
+<tr>
+<td>serviceCert</td>
+<td>Widevine: Optional Others: N/R (leave unset)</td>
+<td>String</td>
+<td>The actual certificate string for Widevine purposes, which must be obtained out-of-band (OOB) by the app. Leave this unset unless Widevine is used for DRM.</td>
+<td>Certificate strings are too long to display here. Examples can be fetched from such sources as the Widevine test license server at "https://proxy.uat.widevine.com/proxy. "</td>
+</tr>
+<tr>
+<td>lic_acq_window</td>
+<td>Widevine: Optional</td>
+<td>String</td>
+<td>The maximum amount of time (in milliseconds) that an app waits before rotating its Widevine DRM keys. The app can generate a random wait time between 0 and the value specified in the <strong>lic_acq_window</strong> field, and use the random wait time to instruct when the Video node should make its next Widevine license request.</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>ignoreInitDataPssh<br /><br /><em>Available since Roku OS 14.5</em></td>
+<td>Widevine: Optional</td>
+<td>String</td>
+<td>Ignores the PSSH in the initialization segment. This enables support for Harmonic/DTV-GO DASH-IOP v5.0.0 streams with In-Band Key-Rotation Signaling without breaking legacy streams/apps that do not provide the <code>&lt;ContentProtection&gt;</code> element with PSSH info in the DASH manifest. <br /><br />The default value is <code>"false"</code>.</td>
+<td>"true"</td>
+</tr>
+<tr>
+<td>licReqTemplate<br /><br /><em>Available since Roku OS 14.6</em></td>
+<td>Widevine</td>
+<td></td>
+<td>Contains the license request "template, which is the entire license request without the license challenge filled-in<br /><br />JSON or XML formats are supported.<br /><br />Use this parameter and the <strong>templateType</strong>, <strong>requestField</strong>, and <strong>responseField</strong> parameters to wrap the Widevine license challenge payload in the request format (JSON or XML) required by your license server proxy. <br /><br />See <a href="#example-of-wrapping-the-widevine-license-challenge-payload">Example of wrapping the Widevine license challenge payload</a> for more information.</td>
+<td>"JSON"</td>
+</tr>
+<tr>
+<td>templateType<br /><br /><em>Available since Roku OS 14.6</em></td>
+<td>Widevine</td>
+<td>String</td>
+<td>Set to "JSON", "XML" or "BASE64"<br />-  JSON: licReqTemplate is in json format<br />- XML: licReqTemplate is in XML format<br />- BASE64 - Does not use licReqTemplate Instead, base64 encode the challenge and send it in POST body<br /> If no value is specified, the license template is not used</td>
+<td>"JSON"</td>
+</tr>
+<tr>
+<td>requestField<br /><br /><em>Available since Roku OS 14.6</em></td>
+<td>Widevine</td>
+<td>String</td>
+<td>jsonpath or xpath to the element whose value must contain the fixed token LICENSE_CHALLENGE<br />- jsonpath if templateType is "JSON" <br />- xpath if templateType is "XML"<br /><br />The Roku OS Roku replaces the  LICENSE_CHALLENGE token with the base64 encoded license challenge.<br /><br />As of Roku OS 15.0, the LICENSE_CHALLENGE token can be provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.</td>
+<td>".parameters[0].body"</td>
+</tr>
+<tr>
+<td>responseField<br /><br /><em>Available since Roku OS 14.6</em></td>
+<td>Widevine</td>
+<td>String</td>
+<td>json-path or xpath to the element that         contains the base64 encoded license response<br />- jsonpath if templateType is "JSON" <br />- xpath if templateType is "XML"<br /><br />The Roku OS extracts the license response, base64 decodes it, and provides it to the DRM client in the Roku firmware.<br /><br />After setting the license response in the DRM agent , the license response is made available in the <strong>licenseStatus</strong> Playback field, which is an associative array. The <strong>response</strong> field in the associative array contains the entire license response.</td>
+<td>".output.widevine2License.license"</td>
+</tr>
+</tbody>
+</table>
 
-* when encodingType="PlayReadyLicenseAcquisitionUrl", the EncodingKey attribute contains the PlayReady license acquisition URL
-
-* when encodingType="PlayReadyLicenseAcquisitionAndChallenge", the EncodingKey attribute contains the PlayReady license acquisition URL plus additional custom license acquisition request data in format "URL%%%"  Note, this is the same value that used to be specified directly in Content Metadata structure   The app just needs to set drmParams.licenseSererUrl.
 
 
-{#encodingType}
 
-* "PlayReadyLicenseAcquisitionUrl"
-* "PlayReadyLicenseAcquisitionAndChallenge"  Note, this is the same value that used to be specified directly in Content Metadata structure
-
-{#verimatrix_blockquote}
-
-> As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](/docs/specs/media/content-protection.md) for more information on implementing these DRMs.
 
 ### Passing custom HTTP headers to licensing requests
 
@@ -153,7 +362,7 @@ Developers looking to pass custom HTTP headers with a licensing request can now 
 
 ~~~~
 
-contMeta = {
+contMeta = \{
     HDPosterUrl:"pkg:/images/BigBuckBunny.jpg"
     SDPosterUrl:"pkg:/images/BigBuckBunny.jpg"
     ShortDescriptionLine1:"Parking Wars(VOD)"
@@ -162,11 +371,11 @@ contMeta = {
     SwitchingStrategy:""
     MinBandwidth:500
     VideoUrl: "http://dev.domain.com/mm/dash/vod/173850/85768039/TG_W_WIFI.mpd"
-    drmParams: { ' setting up DRM config
+    drmParams: \{ ' setting up DRM config
         keySystem: "Widevine"
         licenseServerURL: "http://msfrn-ci-cp-dev.mobitv.com/widevine/get_license"
-    }
-}
+    \}
+\}
 
 ~~~~
 
@@ -207,25 +416,27 @@ Developers can use the **contentClassifier** content metadata attribute to speci
 
 ###### Content classifier value
 
-| Attribute        | Type   | Values                       | Example |
-| :--------------- | :----- | :--------------------------- | :------ |
-| contentClassifer | string | ${content-classifier-values} | "drama" |
 
-{#content-classifier-values}
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Values</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contentClassifer</td>
+<td>string</td>
+<td><ul><li>" "</li><li>"action"</li><li>"animated"</li><li>"black+white" (black and white)</li><li>"comedy"</li><li>"drama"</li><li>"music"</li><li>"music:lyrics"</li><li>"nature"</li><li>"news"</li><li>"podcast" (audio only)</li><li>"reality"</li><li>"sports"</li></ul></td>
+<td>"drama"</td>
+</tr>
+</tbody>
+</table>
 
-- " "
-- "action"
-- "animated"
-- "black+white" (black and white)
-- "comedy"
-- "drama"
-- "music"
-- "music:lyrics"
-- "nature"
-- "news"
-- "podcast" (audio only)
-- "reality"
-- "sports"
+
 
 ###### Content classifier sound and picture modes
 
@@ -252,101 +463,301 @@ The following table details how the different **contentClassifier** attribute va
 Playback configuration meta-data attributes are used to configure the playback of the content item.
 
 
-| Attribute                    | Type                                                         | Values                                                       | Example                                                      |
-| ---------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Live                         | Boolean                                                      | Optional flag indicating video is live. Replaces time remaining in progress bar to display "Live". Default is false | True                                                         |
-| Url                          | String                                                       | Stream URL for Scene Graph Video node | mysite.com/img/vacation.jpg                                  |
-| SDBifUrl                     | String                                                       | BIF URL for SD trick mode                                    | mysite.com/bif/sd1932.bif                                    |
-| HDBifUrl                     | String                                                       | BIF URL for HD trick mode                                    | mysite.com/bif/hd1932.bif                                    |
-| FHDBifUrl                    | String                                                       | BIF URL for FHD trick mode                                   | mysite.com/bif/fhd1932.bif                                   |
-| Stream                       | roAssociativeArray                                           | Supported by roVideoPlayer and roVideoScreen, but not the Roku Scene Graph Video node.<br />For the Video node, use the top level url, streamformat, etc. attributes. <br /><br />The exception is cases where you don't have adaptive streams (typically MP4) and need to specify different bitrate variants separately. For this use case use the Streams attribute. roAssociativeArray that has parameters representing the stream settings that were set as individual roArrays in previous firmware revisions. <br /><br />The old method is still supported and descriptions of the parameters can be found under those content-meta data entries. <br /><br />For url please see StreamUrls, for quality it is now a Boolean that is true for HD quality. <br />${Stream} | { url : "http://me.com/big.m3u8", quality : true, contentid : "big-hls" } |
-| Streams                      | roArray of roAssociativeArrays                               | Used by roVideoPlayer and roVideoScreen to specify the content metadata for a set of fixed bitrate streams.<br /><br />Each array item specifies the URL, bitrate, etc. for one stream variant. <br /><br />Setting stream content metadata using the Streams value is recommended for non-adaptive video (such as MP4 progressive download) only.<br /><br />For adaptive streaming, use the Stream metadata value.<br />${Streams} | [ { url : "http://me.com/x-384.mp4",  bitrate : 384, quality : false, contentid : "x-384" },  { url : "http://me.com/x2500.mp4",  bitrate : 2500, quality : true, contentid : "x-1500" } ] |
-| StreamBitrates               | roArray                                                      | Array of bitrates in kbps for content streams used. <br /><br />Setting stream bitrates using this value is recommended for non-adaptive video (such as MP4 progressive download) only.<br /><br />**Must be used in conjunction with StreamUrls and StreamQualities** | [ 384, 500, 1000, 1500 ]                                     |
-| StreamUrls                   | roArray                                                      | Array of URLs for content streams. <br /><br />Setting stream urls using this value is recommended for non-adaptive video (such as MP4 progressive download) only.<br /><br /> **Must be used in conjunction with StreamBitrates and StreamQualities** | [ "mysite.com/vid/1932-1.mp4", "mysite.com/vid/1932-2.mp4", "mysite.com/vid/1932-3.mp4", "mysite.com/vid/1932-4.mp4" ] |
-| StreamQualities              | roArray                                                      | Array of Strings quality indicators identifying a stream as "SD" or "HD". <br /><br /> **Must be used in conjunction with StreamBitrates and StreamUrls** | [ "SD", "SD", "SD", "HD" ]                                   |
-| StreamContentIDs             | roArray                                                      | array of strings values logged in Roku logs to identify stream and bitrate played | [ "myco-19321-384.mp4", "myco-19321-500.mp4", "myco-19321-1000.mp4", "myco-19321-1500.mp4" ] |
-| StreamStickyHttpRedirects    | roArray                                                      | Array of Boolean values indicating if the HTTP endpoint should be sticky and not subject to change on subsequent requests. Default is false | [ false, false, false, false ]                               |
-| StreamStartTimeOffset        | Integer                                                      | Optional. Default is 0. The offset into the stream which is considered the beginning of playback. Time in seconds. | 3600 (one hour)                                              |
-| StreamFormat                 | String                                                       | Type of content ${StreamFormat}                              |                                                              |
-| Length                       | Float                                                        | Movie Length in Seconds; Length zero displays at 0m, Length not set will not display | 3600 (one hour)                                              |
-| PlayStart                    | Float                                                        | PlayStart defines the start position of the content, in seconds.<br /><br />Starting from Roku OS 8.0, content metadata supports negative PlayStart values. This feature allows the media players to start playbacks distanced from the edge of the live stream | 0                                                            |
-| ClosedCaptions               | Boolean                                                      | Boolean indicating if CC icon should be displayed            | True                                                         |
-| HDBranded                    | Boolean                                                      | Boolean indicating if HD branding should be displayed        | True                                                         |
-| IsHD                         | Boolean                                                      | Boolean indicating if content is HD                          | True                                                         |
-| SubtitleColor                | String                                                       | Theme metadata attribute that specifies the color to use when rendering subtitle text | "#FF0000"                                                    |
-| SubtitleConfig               | roAssociativeArray: {TrackName : String}                     | Specifies the caption settings for content playback.<br /><br />TrackName sets the name of the caption track to render. This string is a concatenation of the track source and track id, separated by a "/".<br /><br />Valid track sources are: "ism", "mkv", "eia608" and "dvb".<br /><br />The track id must match the track identifier in the smooth or mkvmanifest. For example, if an mkvfile has a caption track called “english1” the TrackName to select this track is “mkv/english1”.<br /><br />When the track source is "dvb", the track id is the three-letter language code, with "_sdh" appended for subtitles for the deaf and hard of hearing. For example, "dvb/eng_sdh" are English subtitles for the deaf and hard of hearing and "dvb/nor" are normal Norwegian subtitles.<br /><br />For sideloaded caption tracks, the TrackName is the url from where the caption track can be downloaded.Sideloaded caption formats can include srt,ttml, anddfxp. Specifying eia608/1 will trigger the Roku OS to search for embedded 608/708 captions in the stream. In the 8.0 Roku OS, automatic track selection based on a preferred caption language setting is introduced. Omit setting a URL here to avoid interfering with the automatic track selection. It is sufficient to add the URLs to SubtitleTracks | { TrackName :  "mkv/english1" }                              |
-| SubtitleTracks               | roArray of roAssociativeArray: [{Language : String, Description : String, TrackName : String},...] | SubtitleTracks sets the list of available caption tracks available to the stream. This list is added to the track list in the closed caption configuration dialog that is displayed during video playback when the user presses the Roku remote control * button. The captions from the selected track are then displayed on the screen. Language specifies the ISO 639.2B 3 character language code. This string is used to match the proper caption track with the audio language. Description specifies the text that will be shown for the corresponding track in the closed caption configuration dialog. For sideloaded caption tracks the TrackName is the URL from where the caption track can be downloaded. Sideloaded caption formats can include srt, ttml, and dfxp. The SubtitleTracks metadata is generally only used for side loaded captions. the Roku OS detects in-stream captions and thus specifying SubtitleTracks in this case is not necessary |                                                              |
-| SubtitleUrl                  | String                                                       | Specifies the path to an SRT or TTML formatted file used to render subtitles or closed captions, respectively. This is supported on roVideoScreen only. See [Closed Caption Support](/docs/developer-program/media-playback/closed-caption.md) for additional details | "mysite.com/vid/1932.srt"; "mysite.com/vid/1932.xml"         |
-| VideoDisableUI               | Boolean                                                      | If set to true, hides the Scene Graph Video node trick play UI; If set to false (the default) shows the Scene Graph Video node trick play UI | video = createObject("roSGNode", "Video"); video.content.VideoDisableUI = true |
-| EncodingType                 | String                                                       | Specifies the encoding scheme for PlayReady DRM, by setting to one of the following values: ${encodingType} |                                                              |
-| EncodingKey                  | String                                                       | Specifies the PlayReady license acquisition URL, and additional custom request data, determined by the EncodingType attribute value specified: ${encodingKeyList} |                                                              |
-| SwitchingStrategy            | String                                                       | roVideoPlayer or roVideoScreen.<br /><br />Specify different stream switching algorithms to be used in HLS adaptive streaming. <br />Only has an effect on HLS streams. "full-adaptation" uses measured bandwidth and buffer fullness to determine when to switch. This strategy requires that segments align across variants as the HLS spec requires. This is the new default | "full-adaptation"                                            |
-| Watched                      | Boolean                                                      | Flag indicating if content has been watched                  | True                                                         |
-| ForwardQueryStringParams     | Boolean                                                      | Controls whether query string parameters from initial HLS stream manifest requests are forward to subsequent segment download requests. The default value is set to true for backwards compatibility. | True                                                         |
-| ForwardDashQueryStringParams | Boolean                                                      | Controls whether query string parameters from initial DASH stream manifest requests are forward to subsequent segment download requests. The default value is set to false for backwards compatibility. | False                                                        |
-| IgnoreStreamErrors           | Boolean                                                      | When set to true the media player will not stop playback when it runs into a streaming related error for this content. Instead, it will skip to the next item in the content list.<br /><br />If this was the last item in the content list the media player will send a regular completion event (like isFullResult). Apps are still notified of any errors via an isRequestFailed notification but a new attribute in the event’s GetInfo object tells the app the error was ignored.<br /><br />See the changes related to isRequestFailed for more information. The default value is false. | ${ignoreStreamErrorsCode}                                    |
-| AdaptiveMinStartBitrate      | Integer                                                      | Minimum startup bitrate specified in kbps. Streaming will start with a variant equal to or greater than this value. If this value is not set or if it's set to zero, any minimum start bitrate will be ignored. | 5000                                                         |
-| AdaptiveMaxStartBitrate      | Integer                                                      | Maximum startup bitrate specified in kbps. Streaming will start with a variant less than or equal to this value. If this value is not set, it will default to 2500 kbps. | 2000                                                         |
-| filterCodecProfiles          | Boolean                                                      | Filters out any video profile/codec level combinations that the specified hardware cannot play. The default value is false, in which case no filtering occurs. **Note that this currently only works for DASH streams.**  | True                                                         |
-| LiveBoundsPauseBehavior      | String                                                       | Allows an app to customize Media Player behavior on live streams when playing in the earliest part of a DVR buffer.<br /><br />The stream remains paused even though it is playing in the earliest part of the buffer of a live stream when the value of the attribute is set to "pause." This enables the Roku OS to distinguish between live streams and live streams that eventually transition to video on demand.<br /><br />The possible values of this attribute are "resume", "stop", "pause", with resume being the default value.<br /><br />**Currently, this attribute will work only with Smooth and Dash streams.**  (Available since Roku OS 8.1) | Resume                                                       |
-| ClipStart                    | Float                                                        | ClipStart sets the clip start position of the playback. The unit of ClipStart is seconds (Available since Roku OS 8.1). | 00.0                                                         |
-| ClipEnd                      | Float                                                        | ClipEnd sets the clip end position. The unit of ClipEnd is seconds (Available since Roku OS 8.1). | 00.0                                                         |
-| PreferredAudioCodec          | String                                                       | Specifies the audio codec that should be used during playback. The Media Player will select and report to the app only those audio renditions that are encoded with the specified codec. Renditions that are encoded with a different codec are ignored. Possible values of this attribute are "aac", "ac3" and "eac3". | "aac"                                                        |
-| AudioWhitelist               | String                                                       | Comma-separated list of audio tracks (based on ISO 639-1 or ISO 639-2 language code) that may be selected from the **Audio track** setting for the content.<br /><br />| "en, spa"                                                    |
-| AudioBlacklist               | String                                                       | Comma-separated list of audio tracks (based on ISO 639-1 or 639-2 language code) that may not be selected from the **Audio track** setting for the content. <br /><br />(Available since Roku OS 9.4)<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence. | "ita, fr"                                                    |
-| CaptionWhitelist             | String                                                       | Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may be selected from the **Accessibility>Captioning track** setting for the content.<br /><br />| "en, spa"                                                    |
-| CaptionBlacklist             | String                                                       | Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may not be selected from the **Accessibility>Captioning track** setting for the content.<br /><br />(Available since Roku OS 9.4)<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence. | "deu, dan"                                                   |
 
-{#ignoreStreamErrorsCode}
-```json
-video_details = {
-    streamFormat: "mp4"
-    ignoreStreamErrors: true
-    streams: [{bitrate: 537, height: 360, width: 640, url: “https://..."}]
-}
-```
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Values</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Live</td>
+<td>Boolean</td>
+<td>Optional flag indicating video is live. Replaces time remaining in progress bar to display "Live". Default is false</td>
+<td>True</td>
+</tr>
+<tr>
+<td>Url</td>
+<td>String</td>
+<td>Stream URL for Scene Graph Video node</td>
+<td>mysite.com/img/vacation.jpg</td>
+</tr>
+<tr>
+<td>SDBifUrl</td>
+<td>String</td>
+<td>BIF URL for SD trick mode</td>
+<td>mysite.com/bif/sd1932.bif</td>
+</tr>
+<tr>
+<td>HDBifUrl</td>
+<td>String</td>
+<td>BIF URL for HD trick mode</td>
+<td>mysite.com/bif/hd1932.bif</td>
+</tr>
+<tr>
+<td>FHDBifUrl</td>
+<td>String</td>
+<td>BIF URL for FHD trick mode</td>
+<td>mysite.com/bif/fhd1932.bif</td>
+</tr>
+<tr>
+<td>Stream</td>
+<td>roAssociativeArray</td>
+<td>Supported by roVideoPlayer and roVideoScreen, but not the Roku Scene Graph Video node.<br />For the Video node, use the top level url, streamformat, etc. attributes. <br /><br />The exception is cases where you don't have adaptive streams (typically MP4) and need to specify different bitrate variants separately. For this use case use the Streams attribute. roAssociativeArray that has parameters representing the stream settings that were set as individual roArrays in previous firmware revisions. <br /><br />The old method is still supported and descriptions of the parameters can be found under those content-meta data entries. <br /><br />For url please see StreamUrls, for quality it is now a Boolean that is true for HD quality. <br /><table><thead><tr><th>Key</th><th>Type</th></tr></thead><tbody><tr><td>url</td><td>String</td></tr><tr><td>stickyredirects</td><td>Boolean</td></tr><tr><td>quality</td><td>Boolean</td></tr><tr><td>contentid</td><td>String</td></tr><tr><td>bitrate</td><td>Integer</td></tr></tbody></table></td>
+<td>{ url : "http://me.com/big.m3u8", quality : true, contentid : "big-hls" }</td>
+</tr>
+<tr>
+<td>Streams</td>
+<td>roArray of roAssociativeArrays</td>
+<td>Used by roVideoPlayer and roVideoScreen to specify the content metadata for a set of fixed bitrate streams.<br /><br />Each array item specifies the URL, bitrate, etc. for one stream variant. <br /><br />Setting stream content metadata using the Streams value is recommended for non-adaptive video (such as MP4 progressive download) only.<br /><br />For adaptive streaming, use the Stream metadata value.<br /><table><thead><tr><th>Key</th><th>Type</th></tr></thead><tbody><tr><td>url</td><td>String</td></tr><tr><td>stickyredirects</td><td>Boolean</td></tr><tr><td>quality</td><td>Boolean</td></tr><tr><td>contentid</td><td>String</td></tr><tr><td>bitrate</td><td>Integer</td></tr></tbody></table></td>
+<td>[ { url : "http://me.com/x-384.mp4",  bitrate : 384, quality : false, contentid : "x-384" },  { url : "http://me.com/x2500.mp4",  bitrate : 2500, quality : true, contentid : "x-1500" } ]</td>
+</tr>
+<tr>
+<td>StreamBitrates</td>
+<td>roArray</td>
+<td>Array of bitrates in kbps for content streams used. <br /><br />Setting stream bitrates using this value is recommended for non-adaptive video (such as MP4 progressive download) only.<br /><br /><strong>Must be used in conjunction with StreamUrls and StreamQualities</strong></td>
+<td>[ 384, 500, 1000, 1500 ]</td>
+</tr>
+<tr>
+<td>StreamUrls</td>
+<td>roArray</td>
+<td>Array of URLs for content streams. <br /><br />Setting stream urls using this value is recommended for non-adaptive video (such as MP4 progressive download) only.<br /><br /> <strong>Must be used in conjunction with StreamBitrates and StreamQualities</strong></td>
+<td>[ "mysite.com/vid/1932-1.mp4", "mysite.com/vid/1932-2.mp4", "mysite.com/vid/1932-3.mp4", "mysite.com/vid/1932-4.mp4" ]</td>
+</tr>
+<tr>
+<td>StreamQualities</td>
+<td>roArray</td>
+<td>Array of Strings quality indicators identifying a stream as "SD" or "HD". <br /><br /> <strong>Must be used in conjunction with StreamBitrates and StreamUrls</strong></td>
+<td>[ "SD", "SD", "SD", "HD" ]</td>
+</tr>
+<tr>
+<td>StreamContentIDs</td>
+<td>roArray</td>
+<td>array of strings values logged in Roku logs to identify stream and bitrate played</td>
+<td>[ "myco-19321-384.mp4", "myco-19321-500.mp4", "myco-19321-1000.mp4", "myco-19321-1500.mp4" ]</td>
+</tr>
+<tr>
+<td>StreamStickyHttpRedirects</td>
+<td>roArray</td>
+<td>Array of Boolean values indicating if the HTTP endpoint should be sticky and not subject to change on subsequent requests. Default is false</td>
+<td>[ false, false, false, false ]</td>
+</tr>
+<tr>
+<td>StreamStartTimeOffset</td>
+<td>Integer</td>
+<td>Optional. Default is 0. The offset into the stream which is considered the beginning of playback. Time in seconds.</td>
+<td>3600 (one hour)</td>
+</tr>
+<tr>
+<td>StreamFormat</td>
+<td>String</td>
+<td>Type of content <ul><li>Type of content:<ul><li>Default: H.264/AAC in .mp4 Container</li></ul></li><li>Valid values:<ul><li>"mp4" (mp4 will also accept .mov and .m4v files)</li><li>"wma" (deprecated)</li><li>"mp3"  </li><li>"hls"-"ism" (smooth streaming)</li><li>"dash" (MPEG-DASH)</li><li>"mkv", "mka", "mks"</li></ul></li><li>Deprecated:<ul><li>"wmv"</li></ul></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Float</td>
+<td>Movie Length in Seconds; Length zero displays at 0m, Length not set will not display</td>
+<td>3600 (one hour)</td>
+</tr>
+<tr>
+<td>PlayStart</td>
+<td>Float</td>
+<td>PlayStart defines the start position of the content, in seconds.<br /><br />Starting from Roku OS 8.0, content metadata supports negative PlayStart values. This feature allows the media players to start playbacks distanced from the edge of the live stream</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ClosedCaptions</td>
+<td>Boolean</td>
+<td>Boolean indicating if CC icon should be displayed</td>
+<td>True</td>
+</tr>
+<tr>
+<td>HDBranded</td>
+<td>Boolean</td>
+<td>Boolean indicating if HD branding should be displayed</td>
+<td>True</td>
+</tr>
+<tr>
+<td>IsHD</td>
+<td>Boolean</td>
+<td>Boolean indicating if content is HD</td>
+<td>True</td>
+</tr>
+<tr>
+<td>SubtitleColor</td>
+<td>String</td>
+<td>Theme metadata attribute that specifies the color to use when rendering subtitle text</td>
+<td>"#FF0000"</td>
+</tr>
+<tr>
+<td>SubtitleConfig</td>
+<td>roAssociativeArray: {TrackName : String}</td>
+<td>Specifies the caption settings for content playback.<br /><br />TrackName sets the name of the caption track to render. This string is a concatenation of the track source and track id, separated by a "/".<br /><br />Valid track sources are: "ism", "mkv", "eia608" and "dvb".<br /><br />The track id must match the track identifier in the smooth or mkvmanifest. For example, if an mkvfile has a caption track called “english1” the TrackName to select this track is “mkv/english1”.<br /><br />When the track source is "dvb", the track id is the three-letter language code, with "_sdh" appended for subtitles for the deaf and hard of hearing. For example, "dvb/eng_sdh" are English subtitles for the deaf and hard of hearing and "dvb/nor" are normal Norwegian subtitles.<br /><br />For sideloaded caption tracks, the TrackName is the url from where the caption track can be downloaded.Sideloaded caption formats can include srt,ttml, anddfxp. Specifying eia608/1 will trigger the Roku OS to search for embedded 608/708 captions in the stream. In the 8.0 Roku OS, automatic track selection based on a preferred caption language setting is introduced. Omit setting a URL here to avoid interfering with the automatic track selection. It is sufficient to add the URLs to SubtitleTracks</td>
+<td>{ TrackName :  "mkv/english1" }</td>
+</tr>
+<tr>
+<td>SubtitleTracks</td>
+<td>roArray of roAssociativeArray: [{Language : String, Description : String, TrackName : String},...]</td>
+<td>SubtitleTracks sets the list of available caption tracks available to the stream. This list is added to the track list in the closed caption configuration dialog that is displayed during video playback when the user presses the Roku remote control * button. The captions from the selected track are then displayed on the screen. Language specifies the ISO 639.2B 3 character language code. This string is used to match the proper caption track with the audio language. Description specifies the text that will be shown for the corresponding track in the closed caption configuration dialog. For sideloaded caption tracks the TrackName is the URL from where the caption track can be downloaded. Sideloaded caption formats can include srt, ttml, and dfxp. The SubtitleTracks metadata is generally only used for side loaded captions. the Roku OS detects in-stream captions and thus specifying SubtitleTracks in this case is not necessary</td>
+<td></td>
+</tr>
+<tr>
+<td>SubtitleUrl</td>
+<td>String</td>
+<td>Specifies the path to an SRT or TTML formatted file used to render subtitles or closed captions, respectively. This is supported on roVideoScreen only. See <a href="/docs/developer-program/media-playback/closed-caption.md">Closed Caption Support</a> for additional details</td>
+<td>"mysite.com/vid/1932.srt"; "mysite.com/vid/1932.xml"</td>
+</tr>
+<tr>
+<td>VideoDisableUI</td>
+<td>Boolean</td>
+<td>If set to true, hides the Scene Graph Video node trick play UI; If set to false (the default) shows the Scene Graph Video node trick play UI</td>
+<td>video = createObject("roSGNode", "Video"); video.content.VideoDisableUI = true</td>
+</tr>
+<tr>
+<td>EncodingType</td>
+<td>String</td>
+<td>Specifies the encoding scheme for PlayReady DRM, by setting to one of the following values: <ul><li>"PlayReadyLicenseAcquisitionUrl"</li><li>"PlayReadyLicenseAcquisitionAndChallenge"  Note, this is the same value that used to be specified directly in Content Metadata structure</li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>EncodingKey</td>
+<td>String</td>
+<td>Specifies the PlayReady license acquisition URL, and additional custom request data, determined by the EncodingType attribute value specified: <ul><li><p>when encodingType="PlayReadyLicenseAcquisitionUrl", the EncodingKey attribute contains the PlayReady license acquisition URL</p></li><li><p>when encodingType="PlayReadyLicenseAcquisitionAndChallenge", the EncodingKey attribute contains the PlayReady license acquisition URL plus additional custom license acquisition request data in format "URL%%%"  Note, this is the same value that used to be specified directly in Content Metadata structure   The app just needs to set drmParams.licenseSererUrl.</p></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td>SwitchingStrategy</td>
+<td>String</td>
+<td>roVideoPlayer or roVideoScreen.<br /><br />Specify different stream switching algorithms to be used in HLS adaptive streaming. <br />Only has an effect on HLS streams. "full-adaptation" uses measured bandwidth and buffer fullness to determine when to switch. This strategy requires that segments align across variants as the HLS spec requires. This is the new default</td>
+<td>"full-adaptation"</td>
+</tr>
+<tr>
+<td>Watched</td>
+<td>Boolean</td>
+<td>Flag indicating if content has been watched</td>
+<td>True</td>
+</tr>
+<tr>
+<td>ForwardQueryStringParams</td>
+<td>Boolean</td>
+<td>Controls whether query string parameters from initial HLS stream manifest requests are forward to subsequent segment download requests. The default value is set to true for backwards compatibility.</td>
+<td>True</td>
+</tr>
+<tr>
+<td>ForwardDashQueryStringParams</td>
+<td>Boolean</td>
+<td>Controls whether query string parameters from initial DASH stream manifest requests are forward to subsequent segment download requests. The default value is set to false for backwards compatibility.</td>
+<td>False</td>
+</tr>
+<tr>
+<td>IgnoreStreamErrors</td>
+<td>Boolean</td>
+<td>When set to true the media player will not stop playback when it runs into a streaming related error for this content. Instead, it will skip to the next item in the content list.<br /><br />If this was the last item in the content list the media player will send a regular completion event (like isFullResult). Apps are still notified of any errors via an isRequestFailed notification but a new attribute in the event’s GetInfo object tells the app the error was ignored.<br /><br />See the changes related to isRequestFailed for more information. The default value is false.</td>
+<td><pre><code><code>json&lt;br /&gt;video_details = \\{&lt;br /&gt;    streamFormat: "mp4"&lt;br /&gt;    ignoreStreamErrors: true&lt;br /&gt;    streams: [\\{bitrate: 537, height: 360, width: 640, url: “https://..."\\}]&lt;br /&gt;\\}&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td>AdaptiveMinStartBitrate</td>
+<td>Integer</td>
+<td>Minimum startup bitrate specified in kbps. Streaming will start with a variant equal to or greater than this value. If this value is not set or if it's set to zero, any minimum start bitrate will be ignored.</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>AdaptiveMaxStartBitrate</td>
+<td>Integer</td>
+<td>Maximum startup bitrate specified in kbps. Streaming will start with a variant less than or equal to this value. If this value is not set, it will default to 2500 kbps.</td>
+<td>2000</td>
+</tr>
+<tr>
+<td>filterCodecProfiles</td>
+<td>Boolean</td>
+<td>Filters out any video profile/codec level combinations that the specified hardware cannot play. The default value is false, in which case no filtering occurs. <strong>Note that this currently only works for DASH streams.</strong></td>
+<td>True</td>
+</tr>
+<tr>
+<td>LiveBoundsPauseBehavior</td>
+<td>String</td>
+<td>Allows an app to customize Media Player behavior on live streams when playing in the earliest part of a DVR buffer.<br /><br />The stream remains paused even though it is playing in the earliest part of the buffer of a live stream when the value of the attribute is set to "pause." This enables the Roku OS to distinguish between live streams and live streams that eventually transition to video on demand.<br /><br />The possible values of this attribute are "resume", "stop", "pause", with resume being the default value.<br /><br /><strong>Currently, this attribute will work only with Smooth and Dash streams.</strong>  (Available since Roku OS 8.1)</td>
+<td>Resume</td>
+</tr>
+<tr>
+<td>ClipStart</td>
+<td>Float</td>
+<td>ClipStart sets the clip start position of the playback. The unit of ClipStart is seconds (Available since Roku OS 8.1).</td>
+<td>00.0</td>
+</tr>
+<tr>
+<td>ClipEnd</td>
+<td>Float</td>
+<td>ClipEnd sets the clip end position. The unit of ClipEnd is seconds (Available since Roku OS 8.1).</td>
+<td>00.0</td>
+</tr>
+<tr>
+<td>PreferredAudioCodec</td>
+<td>String</td>
+<td>Specifies the audio codec that should be used during playback. The Media Player will select and report to the app only those audio renditions that are encoded with the specified codec. Renditions that are encoded with a different codec are ignored. Possible values of this attribute are "aac", "ac3" and "eac3".</td>
+<td>"aac"</td>
+</tr>
+<tr>
+<td>AudioWhitelist</td>
+<td>String</td>
+<td>Comma-separated list of audio tracks (based on ISO 639-1 or ISO 639-2 language code) that may be selected from the <strong>Audio track</strong> setting for the content.<br /><br /></td>
+<td>"en, spa"</td>
+</tr>
+<tr>
+<td>AudioBlacklist</td>
+<td>String</td>
+<td>Comma-separated list of audio tracks (based on ISO 639-1 or 639-2 language code) that may not be selected from the <strong>Audio track</strong> setting for the content. <br /><br />(Available since Roku OS 9.4)<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
+<td>"ita, fr"</td>
+</tr>
+<tr>
+<td>CaptionWhitelist</td>
+<td>String</td>
+<td>Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may be selected from the <strong>Accessibility&gt;Captioning track</strong> setting for the content.<br /><br /></td>
+<td>"en, spa"</td>
+</tr>
+<tr>
+<td>CaptionBlacklist</td>
+<td>String</td>
+<td>Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may not be selected from the <strong>Accessibility&gt;Captioning track</strong> setting for the content.<br /><br />(Available since Roku OS 9.4)<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
+<td>"deu, dan"</td>
+</tr>
+</tbody>
+</table>
 
-{#Stream}
 
-| Key             | Type    |
-|-----------------|---------|
-| url             | String  |
-| stickyredirects | Boolean |
-| quality         | Boolean |
-| contentid       | String  |
-| bitrate         | Integer |
 
-{#Streams}
 
-| Key             | Type    |
-|-----------------|---------|
-| url             | String  |
-| stickyredirects | Boolean |
-| quality         | Boolean |
-| contentid       | String  |
-| bitrate         | Integer |
 
-{#StreamFormat}
-* Type of content:
-    - Default: H.264/AAC in .mp4 Container
-* Valid values:
-    - "mp4" (mp4 will also accept .mov and .m4v files)
-    - "wma" (deprecated)
-    - "mp3"  
-    - "hls"
-    -"ism" (smooth streaming)
-    - "dash" (MPEG-DASH)
-    - "mkv", "mka", "mks"
-* Deprecated:
-    - "wmv"
 
 ## CDN switching
 
 Content Delivery Networks (CDNs) can be switched during playback to load balance traffic and failover to different servers in order to help optimize performance.  The **CdnConfig** attribute can be used for managing load balancing and failovers.
 
-| Attribute | Type                           | Values             | Description                                                  |
-| --------- | ------------------------------ | ------------------ | ------------------------------------------------------------ |
-| cdnConfig | roArray of roAssociativeArrays | ${cdnConfigValues} | To use this field, create a child node and use a playlist (even though only one content item will be in the playlist). This field is updated only when **contentIsPlayList** is true.<br /><br />The **URLFilter**, **Priority**, and **Weight** attributes must be specified to apply these configurations. |
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cdnConfig</td>
+<td>roArray of roAssociativeArrays</td>
+<td><table><thead><tr><th>Key</th><th>Required/ Optional</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>URLFilter</td><td>Required</td><td>String</td><td>A substring that identifies the (base)URL to which these CDN settings apply. <br /><br />The Roku media player matches this string against all (base)URLs listed in the manifest and applies the setting to all (base)URLs that contain this substring.</td></tr><tr><td>ContentFilter</td><td>Optional</td><td>String</td><td>For DASH streams, a substring that filters the period or asset ID to which these CDN settings apply.<br /><br /> The Roku player only applies these CDN setting to periods with a period ID or asset ID that contains this substring. <br /><br />This match is used in addition to the URL filter.</td></tr><tr><td>Priority</td><td>Required</td><td>Integer</td><td>For configuring failovers, sets the priority for this (base)URL from 1 to x (a priority of 0 or less is invalid). <br /><br />A lower value indicates a higher priority. For example, a (base)URL with a priority of 1 is higher than another with a priority of 10. <br /><br />If the highest priority server fails, traffic is routed to the server with the next highest priority. If all servers are configured with the same priority, and one fails, no failover will happen.</td></tr><tr><td>Weight</td><td>Required</td><td>Integer</td><td>For configuring load balancing, sets the relative weight for all (base)URLs with the same priority. This must be a value of 1 or greater (a weight of 0 disables a CDN). <br /><br />The weight of a given BaseURL is its weight value divided by the sum of all weight values. This means that to spread the load equally across multiple CDNs with the same priority, set the weight for each to the same value. To configure the weights for two servers to 80% and a third server to 20%, for example, set servers one and two to 8 and server three to 4.</td></tr><tr><td>ServiceLocation</td><td>Optional</td><td>String</td><td>A blacklist of failed BaseURL locations.</td></tr></tbody></table></td>
+<td>To use this field, create a child node and use a playlist (even though only one content item will be in the playlist). This field is updated only when <strong>contentIsPlayList</strong> is true.<br /><br />The <strong>URLFilter</strong>, <strong>Priority</strong>, and <strong>Weight</strong> attributes must be specified to apply these configurations.</td>
+</tr>
+</tbody>
+</table>
+
 
 **Example**
 
@@ -361,15 +772,6 @@ this.cur_clip.CDNConfig = [
 
 
 
-{#cdnConfigValues}
-
-| Key             | Required/ Optional | Type    | Description                                                  |
-| --------------- | ------------------ | ------- | ------------------------------------------------------------ |
-| URLFilter       | Required           | String  | A substring that identifies the (base)URL to which these CDN settings apply. <br /><br />The Roku media player matches this string against all (base)URLs listed in the manifest and applies the setting to all (base)URLs that contain this substring. |
-| ContentFilter   | Optional           | String  | For DASH streams, a substring that filters the period or asset ID to which these CDN settings apply.<br /><br /> The Roku player only applies these CDN setting to periods with a period ID or asset ID that contains this substring. <br /><br />This match is used in addition to the URL filter. |
-| Priority        | Required           | Integer | For configuring failovers, sets the priority for this (base)URL from 1 to x (a priority of 0 or less is invalid). <br /><br />A lower value indicates a higher priority. For example, a (base)URL with a priority of 1 is higher than another with a priority of 10. <br /><br />If the highest priority server fails, traffic is routed to the server with the next highest priority. If all servers are configured with the same priority, and one fails, no failover will happen. |
-| Weight          | Required           | Integer | For configuring load balancing, sets the relative weight for all (base)URLs with the same priority. This must be a value of 1 or greater (a weight of 0 disables a CDN). <br /><br />The weight of a given BaseURL is its weight value divided by the sum of all weight values. This means that to spread the load equally across multiple CDNs with the same priority, set the weight for each to the same value. To configure the weights for two servers to 80% and a third server to 20%, for example, set servers one and two to 8 and server three to 4. |
-| ServiceLocation | Optional           | String  | A blacklist of failed BaseURL locations.                     |
 
 ## SceneGraph certificate attributes
 
@@ -396,18 +798,40 @@ video.setHttpAgent(httpAgent)
 ~~~~
 
 
-| Attribute                 | Type             | Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| HttpCertificatesFile      | uri              | If set, the Scene Graph Audio or Video node loads this public certificate bundle, to authenticate the server. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When playing this content, the agent is updated in the following manner: ${HttpCertificatesFileList}                                                                |
-| HttpCookies               | array of strings | If set, the Scene Graph Audio or Video node send the cookies to the server. Each cookie must have the following syntax: dom=domain;path=path;name=name;val=value; When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP cookies in the agent are cleared and replaced with the cookies defined by this attribute  |
-| HttpHeaders               | array of strings | If set, the Scene Graph Audio or Video node sends these headers to the server. Each string must be of the format "name:value". When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP headers in the agent are cleared and replaced with the headers defined by this attribute                                     |
-| HttpSendClientCertificate | Boolean          | If true, the Scene Graph Audio or Video node sends the client device certificate to the server, for client authentication. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute exists, the value of this attribute (true or false) is set into the HttpAgent             |
 
-{#HttpCertificatesFileList}
-- If this attribute is defined, the file URI is set into the HttpAgent instance. However, if this attribute is specified and the value is the empty string (""), then no changes will be made to the HttpAgent.
-- If this attribute is not defined, the behavior depends upon whether the Content Meta-Data (CMD) contains secure (https) URLs:
-    - If no secure URLs exist in the meta-data, then no certificates file path is set into the agent.
-    - If a secure URL does exist, the platform's default certificates are set into the agent.
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HttpCertificatesFile</td>
+<td>uri</td>
+<td>If set, the Scene Graph Audio or Video node loads this public certificate bundle, to authenticate the server. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When playing this content, the agent is updated in the following manner: <ul><li>If this attribute is defined, the file URI is set into the HttpAgent instance. However, if this attribute is specified and the value is the empty string (""), then no changes will be made to the HttpAgent.</li><li>If this attribute is not defined, the behavior depends upon whether the Content Meta-Data (CMD) contains secure (https) URLs:<ul><li>If no secure URLs exist in the meta-data, then no certificates file path is set into the agent.</li><li>If a secure URL does exist, the platform's default certificates are set into the agent.</li></ul></li></ul></td>
+</tr>
+<tr>
+<td>HttpCookies</td>
+<td>array of strings</td>
+<td>If set, the Scene Graph Audio or Video node send the cookies to the server. Each cookie must have the following syntax: dom=domain;path=path;name=name;val=value; When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP cookies in the agent are cleared and replaced with the cookies defined by this attribute</td>
+</tr>
+<tr>
+<td>HttpHeaders</td>
+<td>array of strings</td>
+<td>If set, the Scene Graph Audio or Video node sends these headers to the server. Each string must be of the format "name:value". When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP headers in the agent are cleared and replaced with the headers defined by this attribute</td>
+</tr>
+<tr>
+<td>HttpSendClientCertificate</td>
+<td>Boolean</td>
+<td>If true, the Scene Graph Audio or Video node sends the client device certificate to the server, for client authentication. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute exists, the value of this attribute (true or false) is set into the HttpAgent</td>
+</tr>
+</tbody>
+</table>
+
+
 
 ### drmHttpAgent for handling DRM key/license requests separately
 
@@ -442,25 +866,99 @@ cited in the field will be used for those fetches instead.
 The playback control meta-data attributes are used to control
 the playback parameters for the content item.  
 
-| Attribute    | Type    | Values                                                       | Example |
-| ------------ | ------- | ------------------------------------------------------------ | ------- |
-| MinBandwidth | Integer | roVideoPlayer or roVideoScreen: Will only select variant streams with a bandwidth higher than this minimum bandwidth. Units are kbps. By default Wowza servers set streams to 64 kbs, so you might want to set this parameter to something smaller than 64 when first testing Wowza streams. You will eventually want to specify the Wowza bitrates with a smil file (Please see the encoding guide) | 48      |
-| MaxBandwidth | Integer | roVideoPlayer or roVideoScreen: Will only select variant streams with a bandwidth less than this maximum bandwidth. Units are kbps | 2500    |
-| AudioPIDPref | Integer | **This attribute is deprecated**<br /><br />Users can select their preferred audio language on-device in the **Settings > Audio > Audio Preferred Language** screen. | 483     |
-| FullHD       | Boolean | roVideoPlayer or roVideoScreen: Specify that this stream was encoded at 1080p resolution | true    |
-| FrameRate    | Integer | roVideoPlayer or roVideoScreen: Specify the 1080p stream was encoded at 24 or 30 fps | 24      |
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Values</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MinBandwidth</td>
+<td>Integer</td>
+<td>roVideoPlayer or roVideoScreen: Will only select variant streams with a bandwidth higher than this minimum bandwidth. Units are kbps. By default Wowza servers set streams to 64 kbs, so you might want to set this parameter to something smaller than 64 when first testing Wowza streams. You will eventually want to specify the Wowza bitrates with a smil file (Please see the encoding guide)</td>
+<td>48</td>
+</tr>
+<tr>
+<td>MaxBandwidth</td>
+<td>Integer</td>
+<td>roVideoPlayer or roVideoScreen: Will only select variant streams with a bandwidth less than this maximum bandwidth. Units are kbps</td>
+<td>2500</td>
+</tr>
+<tr>
+<td>AudioPIDPref</td>
+<td>Integer</td>
+<td><strong>This attribute is deprecated</strong><br /><br />Users can select their preferred audio language on-device in the <strong>Settings &gt; Audio &gt; Audio Preferred Language</strong> screen.</td>
+<td>483</td>
+</tr>
+<tr>
+<td>FullHD</td>
+<td>Boolean</td>
+<td>roVideoPlayer or roVideoScreen: Specify that this stream was encoded at 1080p resolution</td>
+<td>true</td>
+</tr>
+<tr>
+<td>FrameRate</td>
+<td>Integer</td>
+<td>roVideoPlayer or roVideoScreen: Specify the 1080p stream was encoded at 24 or 30 fps</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+
 
 
 ## Track ID attributes
 
 
-| Attribute             | Type   | Values                                                       | Example         |
-| --------------------- | ------ | ------------------------------------------------------------ | --------------- |
-| TrackIDAudio          | String | roVideoPlayer or roVideoScreen: Used in SmoothStreaming (StreamFormat = "ISM") to specify. Set the TrackIDAudio field to the desired track's StreamIndex.Name attribute from the manifest file | "Spanish"       |
-| TrackIDVideo          | String | roVideoPlayer or roVideoScreen: Used in SmoothStreaming (StreamFormat = "ISM") to specify. Set the TrackIDVideo field to the desired track's StreamIndex.Name attribute from the manifest file | "h264video"     |
-| TrackIDSubtitle       | String | roVideoPlayer: Used to specify a closed caption track in a video stream that supports 608/708 captions | "eia608/1"      |
-| AudioFormat           | String | roSpringboardScreen: If set to "dolby-digital", will display a "5.1 ))" icon in the lower left of a movie style springboard screen | "dolby-digital" |
-| AudioLanguageSelected | String | **This attribute was deprecated as of the Roku 9.2 OS release.** <br /><br />Users can select their preferred audio language on-device in the **Settings > Audio > Audio Preferred Language** screen. | "eng"           |
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Values</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TrackIDAudio</td>
+<td>String</td>
+<td>roVideoPlayer or roVideoScreen: Used in SmoothStreaming (StreamFormat = "ISM") to specify. Set the TrackIDAudio field to the desired track's StreamIndex.Name attribute from the manifest file</td>
+<td>"Spanish"</td>
+</tr>
+<tr>
+<td>TrackIDVideo</td>
+<td>String</td>
+<td>roVideoPlayer or roVideoScreen: Used in SmoothStreaming (StreamFormat = "ISM") to specify. Set the TrackIDVideo field to the desired track's StreamIndex.Name attribute from the manifest file</td>
+<td>"h264video"</td>
+</tr>
+<tr>
+<td>TrackIDSubtitle</td>
+<td>String</td>
+<td>roVideoPlayer: Used to specify a closed caption track in a video stream that supports 608/708 captions</td>
+<td>"eia608/1"</td>
+</tr>
+<tr>
+<td>AudioFormat</td>
+<td>String</td>
+<td>roSpringboardScreen: If set to "dolby-digital", will display a "5.1 ))" icon in the lower left of a movie style springboard screen</td>
+<td>"dolby-digital"</td>
+</tr>
+<tr>
+<td>AudioLanguageSelected</td>
+<td>String</td>
+<td><strong>This attribute was deprecated as of the Roku 9.2 OS release.</strong> <br /><br />Users can select their preferred audio language on-device in the <strong>Settings &gt; Audio &gt; Audio Preferred Language</strong> screen.</td>
+<td>"eng"</td>
+</tr>
+</tbody>
+</table>
+
 
 ## roListScreen attributes
 

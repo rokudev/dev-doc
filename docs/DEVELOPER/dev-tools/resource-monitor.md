@@ -114,13 +114,38 @@ The Roku Resource Monitor displays app events (red) and media events (blue) on t
 
 The following app and media events are displayed:
 
-| App events/beacons                                       | Media events                                                 |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
-| splash screen display (AppSplashInitiate/AppSplashComplete)  | video playback (VODStartInitiate/VODStartComplete)           |
-| compilation (AppCompileInitiate/AppCompileComplete)          | channel change (LiveChannelChangeInitiate/LiveChannelChangeComplete) |
-| suspension (AppSuspendInitiate/AppSuspendComplete)           | time grid (EPG) launch (EPGLaunchInitiate/EPGLaunchComplete) |
-| resumption (AppResumeInitiate/AppResumeComplete*) <br />*The appResumeComplete beacon must be fired by the app* |                                                              |
-| exit (AppExitInitiated/AppExitComplete)                      |                                                              |
+
+<table>
+<thead>
+<tr>
+<th>App events/beacons</th>
+<th>Media events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>splash screen display (AppSplashInitiate/AppSplashComplete)</td>
+<td>video playback (VODStartInitiate/VODStartComplete)</td>
+</tr>
+<tr>
+<td>compilation (AppCompileInitiate/AppCompileComplete)</td>
+<td>channel change (LiveChannelChangeInitiate/LiveChannelChangeComplete)</td>
+</tr>
+<tr>
+<td>suspension (AppSuspendInitiate/AppSuspendComplete)</td>
+<td>time grid (EPG) launch (EPGLaunchInitiate/EPGLaunchComplete)</td>
+</tr>
+<tr>
+<td>resumption (AppResumeInitiate/AppResumeComplete<em>) <br /></em>The appResumeComplete beacon must be fired by the app*</td>
+<td></td>
+</tr>
+<tr>
+<td>exit (AppExitInitiated/AppExitComplete)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 
 ## Monitoring resource usage
 
@@ -151,25 +176,56 @@ The System memory usage graph tracks the amount of **resident** and **swap** mem
 
 Each of the values listed in the graph is described as follows:
 
-| Value            | Description                                                  |
-| :--------------- | :----------------------------------------------------------- |
-| Used             | The total amount of memory used by the app process; this is the sum of the **resident** and **swap** values. |
-| Resident         | The total amount of memory that is mapped into the address space of the app process; this is the sum of the **anonymous**, **file-backed**, and **shared** values. |
-| Swap             | The total amount of app process memory swapped out to 'disk' (RokuOS uses ZRAM 'disk'). This value varies for different Roku device models. |
-| Anonymous        | The total amount of anonymous memory (for example, the stack and heap); this value also includes the demux allocation during media playback. Developers can control the amount of anonymous memory used by their app. |
-| File backed      | The amount of file-backed memory used by the app (for example, BrightScript code). Developers cannot directly control the amount of the file-backed memory used by their app; however, high anonymous memory consumption results in more swapping and paging. |
-| Shared           | The amount of shared memory used by the app process (for example, media player buffers and IPC channels). Developers cannot control the amount of shared memory used by their app. |
-|                  |                                                              |
-| Foreground limit | The maximum amount of DRAM that may be used by the app when browsing and selecting content in the app UI and during playback. If an app exceeds the limit displayed in the app system memory usage pane while running in the foreground, the Roku OS terminates the app. The foreground limit varies by device, and it is subject to change.<br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the foreground when specific system memory levels are reached on those devices.<br />${bq-foreground} |
-| Background limit | The maximum amount of DRAM that may be used by the app while running in the background (this limit is also applicable for apps that have integrated Instant Resume). If an app exceeds the limit displayed in the app system memory usage pane while running in the background, the Roku OS terminates the app. The Roku OS also terminates apps running in the background when specific system memory levels are reached. <br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the background when specific system memory levels are reached on those devices. <br />${bq-background} |
 
-{#bq-foreground}
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Used</td>
+<td>The total amount of memory used by the app process; this is the sum of the <strong>resident</strong> and <strong>swap</strong> values.</td>
+</tr>
+<tr>
+<td>Resident</td>
+<td>The total amount of memory that is mapped into the address space of the app process; this is the sum of the <strong>anonymous</strong>, <strong>file-backed</strong>, and <strong>shared</strong> values.</td>
+</tr>
+<tr>
+<td>Swap</td>
+<td>The total amount of app process memory swapped out to 'disk' (RokuOS uses ZRAM 'disk'). This value varies for different Roku device models.</td>
+</tr>
+<tr>
+<td>Anonymous</td>
+<td>The total amount of anonymous memory (for example, the stack and heap); this value also includes the demux allocation during media playback. Developers can control the amount of anonymous memory used by their app.</td>
+</tr>
+<tr>
+<td>File backed</td>
+<td>The amount of file-backed memory used by the app (for example, BrightScript code). Developers cannot directly control the amount of the file-backed memory used by their app; however, high anonymous memory consumption results in more swapping and paging.</td>
+</tr>
+<tr>
+<td>Shared</td>
+<td>The amount of shared memory used by the app process (for example, media player buffers and IPC channels). Developers cannot control the amount of shared memory used by their app.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Foreground limit</td>
+<td>The maximum amount of DRAM that may be used by the app when browsing and selecting content in the app UI and during playback. If an app exceeds the limit displayed in the app system memory usage pane while running in the foreground, the Roku OS terminates the app. The foreground limit varies by device, and it is subject to change.<br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the foreground when specific system memory levels are reached on those devices.<br /><blockquote><p>The foreground limit may be decreased in the near future; therefore, apps should consume only 75% of the displayed limit. The reduced limit will be enforced by the Roku OS in the near future.</p></blockquote></td>
+</tr>
+<tr>
+<td>Background limit</td>
+<td>The maximum amount of DRAM that may be used by the app while running in the background (this limit is also applicable for apps that have integrated Instant Resume). If an app exceeds the limit displayed in the app system memory usage pane while running in the background, the Roku OS terminates the app. The Roku OS also terminates apps running in the background when specific system memory levels are reached. <br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the background when specific system memory levels are reached on those devices. <br /><blockquote><p>The background limit may be decreased in the near future; therefore, apps should consume a maximum of 100 MB of DRAM while running in the background. The reduced limit will be enforced by the Roku OS in the near future. See <a href="/docs/developer-program/performance-guide/data-management.md">Data management</a> and <a href="/docs/developer-program/performance-guide/memory-management.md">Memory management</a> for best practices on allocating resources.</p></blockquote></td>
+</tr>
+</tbody>
+</table>
 
-> The foreground limit may be decreased in the near future; therefore, apps should consume only 75% of the displayed limit. The reduced limit will be enforced by the Roku OS in the near future.
 
-{#bq-background}
 
-> The background limit may be decreased in the near future; therefore, apps should consume a maximum of 100 MB of DRAM while running in the background. The reduced limit will be enforced by the Roku OS in the near future. See [Data management](/docs/developer-program/performance-guide/data-management.md) and [Memory management](/docs/developer-program/performance-guide/memory-management.md) for best practices on allocating resources.
 
 ### CPU usage
 

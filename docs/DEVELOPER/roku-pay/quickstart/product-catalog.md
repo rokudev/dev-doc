@@ -149,26 +149,46 @@ To create a new product, follow these steps:
 
 3. Enter the following information for the product:
 
-   | Setting                   | Description                                                  |
-   | :------------------------ | :----------------------------------------------------------- |
-   | Product name              | Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the [Channel Properties window](https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md#properties-window). <br /><br />To provide additional localized product names, click **Add product name in another language**, select a locale, and then enter the localized product name. You can provide one product name per locale. |
-   | Product Id                | The internal code for your product.                          |
-   | Category                  | Select one of the following categories:<br /><br />${category-list}${category-info-bq} |
-   | Internet required         | Select 'Yes' for video and audio apps.                       |
-   | It is add-on              | If the product is an add-on (a service purchased on top of a base subscription product), enable this setting, and then select the prerequisite base products. Add-ons are only accessible in the customer flow if the required base products have already been purchased or are being purchased at the same time as the add-on.<br /><br />Offering add-ons in your app requires additional API integration work. See [Integrating add-ons](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md) for more information on how to do this. |
-   | Product exclusivity group | Product groups are required for each set of mutually exclusive subscription products offered by your app. This enables customers to upgrade or downgrade their subscription products on-device, and avoid being double billed for access to the same content or service. If customers cannot purchase this product while being entitled to another product, enable this. |
+
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product name</td>
+<td>Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the <a href="https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md#properties-window">Channel Properties window</a>. <br /><br />To provide additional localized product names, click <strong>Add product name in another language</strong>, select a locale, and then enter the localized product name. You can provide one product name per locale.</td>
+</tr>
+<tr>
+<td>Product Id</td>
+<td>The internal code for your product.</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Select one of the following categories:<br /><br /><ul><li>Video content</li><li>Audio content</li><li>Game token</li></ul><blockquote><p>Once you save the product, the category cannot be changed.</p></blockquote></td>
+</tr>
+<tr>
+<td>Internet required</td>
+<td>Select 'Yes' for video and audio apps.</td>
+</tr>
+<tr>
+<td>It is add-on</td>
+<td>If the product is an add-on (a service purchased on top of a base subscription product), enable this setting, and then select the prerequisite base products. Add-ons are only accessible in the customer flow if the required base products have already been purchased or are being purchased at the same time as the add-on.<br /><br />Offering add-ons in your app requires additional API integration work. See <a href="/docs/developer-program/roku-pay/quickstart/add-ons-integration.md">Integrating add-ons</a> for more information on how to do this.</td>
+</tr>
+<tr>
+<td>Product exclusivity group</td>
+<td>Product groups are required for each set of mutually exclusive subscription products offered by your app. This enables customers to upgrade or downgrade their subscription products on-device, and avoid being double billed for access to the same content or service. If customers cannot purchase this product while being entitled to another product, enable this.</td>
+</tr>
+</tbody>
+</table>
+
    
 4. Click **Save product** to save the product without creating a purchase option (you can create purchase options for the product later), or click **Save and create purchase option** to create one or more purchase options for the product immediately after saving the product.
 
-{#category-list}
 
-- Video content
-- Audio content
-- Game token
-
-{#category-info-bq}
-
-> Once you save the product, the category cannot be changed.
 
 ### Creating purchase options
 
@@ -202,12 +222,34 @@ To create a purchase option for a product, follow these steps:
 
      
 
-   | Purchase detail setting | Description                                                  |
-   | :---------------------- | :----------------------------------------------------------- |
-   | Channel                 | Select one or more apps where this product will be available for sale. All the apps that belong to the logged-in administrator (root account) are listed. |
-   | Product                 | Select the product for which you are creating a purchase option. If you are creating a subscription bundle, select two or more products to be included in the bundle (the products may be two base products, or a base product and one or more add-ons). You may only select products that are not in the same product group. Click **Add another product to bundle** to include additional products in the bundle. Add-on products can only be bundled with prerequisite products. |
-   | Display name            | A 50-character maximum name of the purchase option. This name will be displayed to customers in the app's on-device purchasing workflow and in subscription emails sent by Roku. The name can include letters, numbers, spaces, and punctuation marks (UTF-8 characters are not supported for product names in English).<br /><br />The display name should include the name of the app, and it should make it easy for customers to identify the product (for example, "Roku Developers - Ad-Free"). Do not include any billing information in the name (for example, billing frequency, price, or trial/discount); the Roku platform UI will automatically display this information to customers. You can use can include billing information in the **SKU** setting in order to identify different purchase options uniquely.${display-name-cert-note-bq}Optionally, you can provide a localized product name. To do this, click **Add display name in another language**, select a language from the list (French, Spanish, or German), and then enter the localized product name. The localized product name can be a maximum of 50 characters and may include UTF-8 characters. Repeat this step to provide another localized product name; you can provide one per language. |
-   | SKU                     | The publisher-specific SKU (or other unique identifier) for the product. This code is used in the Roku Pay APIs and reporting. It cannot be changed after the purchase option is published. The SKU must be unique within the developer account. The SKU may include the product and billing information (for example, "roku-developers-ad-free-monthly"). |
+
+<table>
+<thead>
+<tr>
+<th>Purchase detail setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel</td>
+<td>Select one or more apps where this product will be available for sale. All the apps that belong to the logged-in administrator (root account) are listed.</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Select the product for which you are creating a purchase option. If you are creating a subscription bundle, select two or more products to be included in the bundle (the products may be two base products, or a base product and one or more add-ons). You may only select products that are not in the same product group. Click <strong>Add another product to bundle</strong> to include additional products in the bundle. Add-on products can only be bundled with prerequisite products.</td>
+</tr>
+<tr>
+<td>Display name</td>
+<td>A 50-character maximum name of the purchase option. This name will be displayed to customers in the app's on-device purchasing workflow and in subscription emails sent by Roku. The name can include letters, numbers, spaces, and punctuation marks (UTF-8 characters are not supported for product names in English).<br /><br />The display name should include the name of the app, and it should make it easy for customers to identify the product (for example, "Roku Developers - Ad-Free"). Do not include any billing information in the name (for example, billing frequency, price, or trial/discount); the Roku platform UI will automatically display this information to customers. You can use can include billing information in the <strong>SKU</strong> setting in order to identify different purchase options uniquely.<blockquote><p><strong>Certification requirement:</strong> The purchase option display name must clearly identify the service being offered by the app. You must have full legal rights or consent for the purchase option name and the rights to all trademarks and copyright expressions associated with the names. The purchase option name may not include the name "Roku", text related to a trial or discount offer<strong>,</strong> or any profane, derogatory, or misleading language.</p></blockquote>Optionally, you can provide a localized product name. To do this, click <strong>Add display name in another language</strong>, select a language from the list (French, Spanish, or German), and then enter the localized product name. The localized product name can be a maximum of 50 characters and may include UTF-8 characters. Repeat this step to provide another localized product name; you can provide one per language.</td>
+</tr>
+<tr>
+<td>SKU</td>
+<td>The publisher-specific SKU (or other unique identifier) for the product. This code is used in the Roku Pay APIs and reporting. It cannot be changed after the purchase option is published. The SKU must be unique within the developer account. The SKU may include the product and billing information (for example, "roku-developers-ad-free-monthly").</td>
+</tr>
+</tbody>
+</table>
+
 
 4. Configure the following **Billing plan** settings:
 
@@ -215,11 +257,30 @@ To create a purchase option for a product, follow these steps:
 
    
 
-   | Billing plan setting | Description                                                  |
-   | :------------------- | :----------------------------------------------------------- |
-   | Billing frequency    | Select the billing period to be used for the subscription product: **monthly**, **quarterly**, or **annual**. Using quartely billing requires [additional API work](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#appendix-a-add-on-api-reference). |
-   | Regular price        | Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products: ${price-tier-list}See the [Price tier reference guide](/docs/developer-program/roku-pay/quickstart/price-tiers.md) for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:${price-tier-selected}If you are creating a [TVOD-exclusive app](https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md), select any price tier. The price passed in the [ChannelStore APIs](https://developer.roku.com/docs/references/scenegraph/control-nodes/channelstore.md) overrides the price corresponding to the selected price tier. ${bq-cert-note-price-change} |
-   | Base offer           | Create free trial and introductory price offers for base subscription and add-on products. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer. Select one of the following base offers:<br />${base-offer-list} |
+
+<table>
+<thead>
+<tr>
+<th>Billing plan setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Billing frequency</td>
+<td>Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quartely billing requires <a href="/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#appendix-a-add-on-api-reference">additional API work</a>.</td>
+</tr>
+<tr>
+<td>Regular price</td>
+<td>Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products: <ul><li>One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99). </li><li>Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).</li></ul>See the <a href="/docs/developer-program/roku-pay/quickstart/price-tiers.md">Price tier reference guide</a> for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:<ul><li>The <strong>Currency code</strong> is the three-letter ISO-4217 code of the currency in which the customer will be billed.</li><li>The <strong>Purchase price</strong> reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.</li><li>The <strong>Net price</strong> field displays the pre-tax price.  The <strong>Proceeds</strong> field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.</li></ul>If you are creating a <a href="https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://developer.roku.com/docs/references/scenegraph/control-nodes/channelstore.md">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. <blockquote><p><strong>Certification requirement</strong>: SVOD apps must provide a 30-day notice to existing customers before changing the price of their service.</p></blockquote></td>
+</tr>
+<tr>
+<td>Base offer</td>
+<td>Create free trial and introductory price offers for base subscription and add-on products. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer. Select one of the following base offers:<br /><ul><li><strong>None</strong> (default). The purchase option does not include an offer.</li><li><strong>Free trial</strong>. Include a free trial period with the purchase option. In the <strong>Trial length</strong> box, enter the number of days or months in the trial offer and then select the unit of time (<strong>Days</strong> or <strong>Months</strong>).</li><li><strong>Introductory price</strong>. Include a discount with the purchase option. In the <strong>Introductory period</strong> box, enter the number of days, months, or years the introductory price is valid, and then select the pricing tier corresponding to the discounted price to be offered from the <strong>Price</strong> list.  Discounts cannot be specified using percentages or absolute currency units (for example, USD). Discounts may only be specified using the appropriate price tier. For example, the absolute discount from tier 9 to tier 6 is $3.00 ($8.99-5.99); the percentage discount is 33.4% ($(1-(5.99/8.99))x100).</li></ul></td>
+</tr>
+</tbody>
+</table>
+
    
 5. Click **Save as Draft** to save the purchase option without publishing it. Click **Publish** to activate the purchase option on your app.
 
@@ -229,30 +290,10 @@ To create a purchase option for a product, follow these steps:
 
    ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-summary.png?version=3&modificationDate=1721077270895&cacheVersion=1&api=v2&width=600&height=524)
 
-{#display-name-cert-note-bq}
 
-> **Certification requirement:** The purchase option display name must clearly identify the service being offered by the app. You must have full legal rights or consent for the purchase option name and the rights to all trademarks and copyright expressions associated with the names. The purchase option name may not include the name "Roku", text related to a trial or discount offer**,** or any profane, derogatory, or misleading language.
 
-{#price-tier-list}
 
-- One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99). 
-- Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).  
 
-{#bq-cert-note-price-change}
-
-> **Certification requirement**: SVOD apps must provide a 30-day notice to existing customers before changing the price of their service. 
-
-{#price-tier-selected}
-
-- The **Currency code** is the three-letter ISO-4217 code of the currency in which the customer will be billed.
-- The **Purchase price** reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.
-- The **Net price** field displays the pre-tax price.  The **Proceeds** field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.
-
-{#base-offer-list}
-
-- **None** (default). The purchase option does not include an offer.
-- **Free trial**. Include a free trial period with the purchase option. In the **Trial length** box, enter the number of days or months in the trial offer and then select the unit of time (**Days** or **Months**).
-- **Introductory price**. Include a discount with the purchase option. In the **Introductory period** box, enter the number of days, months, or years the introductory price is valid, and then select the pricing tier corresponding to the discounted price to be offered from the **Price** list.  Discounts cannot be specified using percentages or absolute currency units (for example, USD). Discounts may only be specified using the appropriate price tier. For example, the absolute discount from tier 9 to tier 6 is $3.00 ($8.99-5.99); the percentage discount is 33.4% ($(1-(5.99/8.99))x100).
 
 ### Creating product exclusivity groups
 

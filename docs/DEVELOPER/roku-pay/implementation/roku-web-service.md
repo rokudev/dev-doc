@@ -19,22 +19,40 @@ The Roku Pay APIs are RESTful web services that use standard HTTP methods for tr
 
 The following table summarizes the basic information for the Roku Pay web services:
 
-| Item         | Description                                                  |
-| :----------- | :----------------------------------------------------------- |
-| URL          | The base URL for the Roku Pay APIs is **https://apipub.roku.com/listen/transaction-service.svc**. The resource name for the API is then appended to the URL.<br /><br />For example, the URL for the `validate-transaction` API is **https://apipub.roku.com/listen/transaction-service.svc/validate-transaction**. |
-| Protocol     | Roku Pay API calls may be sent using either HTTP or HTTPS.   |
-| Format       | Roku Pay APIs support both JSON and XML-formatted data. Format the `accept` header as follows: ${format-list} |
-| HTTP Methods | Roku Pay APIs support GET and POST methods for retrieving and managing transaction data: ${http-methods-list} |
-| API Key      | All Roku Pay API requests must include the developer's API key. See [Setting up Roku Pay web services](/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md) for more information about getting and managing the key. For all requests, the app associated with the transaction ID or refund ID passed into the call must be owned by the developer associated with the Roku Pay API Key. |
 
-{#format-list}
-- **JSON**: accept: application/json
-- **XML**: accept: application/xml
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL</td>
+<td>The base URL for the Roku Pay APIs is <strong>https://apipub.roku.com/listen/transaction-service.svc</strong>. The resource name for the API is then appended to the URL.<br /><br />For example, the URL for the <code>validate-transaction</code> API is <strong>https://apipub.roku.com/listen/transaction-service.svc/validate-transaction</strong>.</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>Roku Pay API calls may be sent using either HTTP or HTTPS.</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Roku Pay APIs support both JSON and XML-formatted data. Format the <code>accept</code> header as follows: <ul><li><strong>JSON</strong>: accept: application/json</li><li><strong>XML</strong>: accept: application/xml</li></ul></td>
+</tr>
+<tr>
+<td>HTTP Methods</td>
+<td>Roku Pay APIs support GET and POST methods for retrieving and managing transaction data: <ul><li><strong>GET</strong>: All GET requests must include the Roku Pay API key and the ID of the item being validated in the URL (transaction or refund ID).</li><li><strong>POST</strong>: All POST requests require JSON or XML-formatted data in the body. The Roku Pay API key must be included in the body.</li></ul></td>
+</tr>
+<tr>
+<td>API Key</td>
+<td>All Roku Pay API requests must include the developer's API key. See <a href="/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md">Setting up Roku Pay web services</a> for more information about getting and managing the key. For all requests, the app associated with the transaction ID or refund ID passed into the call must be owned by the developer associated with the Roku Pay API Key.</td>
+</tr>
+</tbody>
+</table>
 
-{#http-methods-list}
 
-- **GET**: All GET requests must include the Roku Pay API key and the ID of the item being validated in the URL (transaction or refund ID).
-- **POST**: All POST requests require JSON or XML-formatted data in the body. The Roku Pay API key must be included in the body.
+
 
 ##  APIs
 

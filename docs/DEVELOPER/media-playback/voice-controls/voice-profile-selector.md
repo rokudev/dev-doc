@@ -43,9 +43,9 @@ To implement voice support for a profile selection screen, integrate the followi
 - **Profile selection via registered/matched text strings**. Apps can call  the [roAppManager.SetVoiceActionStrings()](/docs/references/brightscript/interfaces/ifappmanager.md#setvoiceactionstringsactions-as-object-as-void) function to register a list of text strings, such as user profile names, that can be matched to voice requests.
 
         appMgr = CreateObject("roAppManager")
-        profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
-        profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
-        profile3 = { text: "John", link: "6Nu70-N37x-901"}
+        profile1 = \{ text: "kids", link: "d46ge-i8Y5-192"\}
+        profile2 = \{ text: "Jane", link: "2a2Nu-u1D4-555"\}
+        profile3 = \{ text: "John", link: "6Nu70-N37x-901"\}
 
         actions = [profile1, profile2, profile3]
 
@@ -55,7 +55,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
         function handleTransport(evt)
             cmd = evt.command
-            ret = {status: "unhandled"}
+            ret = \{status: "unhandled"\}
             if cmd = "action"
                 print "profile name uttered by user"
                 print evt.text ' prints "kids", "Jane", or "John"
@@ -71,7 +71,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
         function handleTransport(evt)
             cmd = evt.command
-            ret = {status: "unhandled"}
+            ret = \{status: "unhandled"\}
             if cmd = "select"
                 print "Voice ordinal event"
                 print evt.ordinal ' prints 1

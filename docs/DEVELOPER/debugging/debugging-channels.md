@@ -159,29 +159,72 @@ ID    Location                                Source Code
 ## SceneGraph debug server (port 8080) commands
 
 
-| Command                                       | Description                                                  |
-| --------------------------------------------- | ------------------------------------------------------------ |
-| brightscript_warnings [*num-warnings*]        | Sets the maximum number of BrightScript warnings displayed in the debug console. Warnings may indicate possible bugs in the code and therefore should be addressed. |
-| chanperf [-r *seconds*]                       | Prints the current memory and CPU utilization of an app (RAM usage is reported in KibiBytes [KiB]).<br/><br />**chanperf**<br/>Sending this command with no arguments generates the following output on port 8080 for example:<br />`channel: mem=15156KiB{anon=2720,file=12392,shared=44},%cpu=7{user=1,sys=6}`<br/><br />**chanperf -r *seconds***<br/>Executes and repeats the **chanperf** command the specified number of seconds and outputs the results to port 8085. To cancel a repeating command, use the chanperf command with no arguments or with the -r parameter set to 0 ("chanperf" or "chanperf -r 0"). Calling this command with the seconds parameter set to 10 generates the following output on port 8085 for example:<br/>`channel: mem=27124KiB{anon=9684,file=17372,shared=68},%cpu=43{user=30,sys=13} repeat 10s (on dev console), chanperf -r 0 to stop`${bq-chanperf-output-note}**Error message**<br/>If the app is not running, or if undefined attribute is missing from the manifest, the following output is generated:<br/>undefined${bq-sample-app} |
-| logrendezvous \[on &#124; off]                | Enable console logging of thread rendezvous. Set to off to disable. |
-| loaded_textures                               | Displays the current set of images loaded into texture memory. |
-| r2d2_bitmaps                                  | Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively. Starting with Roku OS 9.3, the name of each bitmap is included |
-| remove_plugin *app id*                        | Removes the indicated app from the local device, as well as from all devices linked to the same Roku account. For example, if an app has a *app id* of "987654_cf9a", then the following command would remove it: `remove_plugin 987654_cf9a`<br /><br />The list of available app ids can be seen in the second (from leftmost) column of the display produced by the **plugins -m** port 8080 command. The local device must be linked to a Roku account. <br /><br />To use this command, the local device must be linked to a Roku account. Apps are not removed on another device until it synchronizes with the Streaming Store (for example, via an automatic check for updates). |
-| sgnodes all                                   | Prints every existing node created by the currently running app. <br /><br />As of Roku OS 14.5, you can use this command on your published app if the device is keyed with the same developer ID/key used to generate the app's package file.<br /><br />As of Roku OS 10.0, this prints the number of **osref** references to the node (held in the Roku platform) and **bscref** references (held in the app). The **bcsref** count includes references from "m." variable and local variables. Child references and field references do not increase **bscref** counts. <br /><br />The **osref** count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one **osref** on the child. Additionally, any field of type **node**, **nodearray**, or **assocarray** will add one **osref** to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.<br /><br />The reported **osref** count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes. The **bscref** count provides a more relevant and accurate indication of the resources that the app itself controls.<br /><br />The `sgnodes all`, `sgnodes roots`, and `sgnodes node_ID` commands are similar to the getAll() , getRoots() , getRootsMeta(), and getAllMeta() [ifSGNodeChildren](/docs/references/brightscript/interfaces/ifsgnodechildren.md) methods, which can be called on any SceneGraph node. |
-| sgnodes roots                                 | Prints every existing node without a parent created by the currently running app. The existence of these un-parented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node. |
-| sgnodes node_ID                               | Prints nodes with an id field set to node_ID, except it, bypasses all the hierarchy and rules and just runs straight down the whole list in the order of node creation. It will list multiple nodes if there are several that match. |
-| sgperf start&#124;clear&#124;report&#124;stop | Provides basic node operation performance metrics. This command tracks all node operations by a thread, whether it's being created or an operation on an existing node, and whether it involves a rendezvous. Settings: start - enables counting, clear - resets counters to zero, report - prints current counts with rendezvous as a percentage, stop - disables counting. |
-| sgversion force or default 1.0 or 1.1         | Changes the observer callback model and overrides the default rsg_version specified in the manifest. For example, `sgversion force 1.0` will set rsg_version=1.0 regardless of what is specified in the manifest. With default, it will set the default rsg_version when it is not specified in the manifest. Changing the rsg_version will require restarting the app, but these changes will not survive a device reboot. <br /><br />Support for the “rsg_version=1.0” manifest flag is deprecated. This deprecation means that the 1.0 features are no longer supported (and thus should not be expected to work). All apps must adopt the current observer callback model in successive firmware updates. |
-| fps_display                                   | Displays frames-per-second and free memory on-screen. Leverage this tool to optimize your app UI. Following are the commands to use the fps meter: fps_display 1 turns on the fps meter. It presents a 1-second moving average of the current frame rate AND fps_display 0 turns the meter back off. |
-| free                                          | Provides a snapshot of the amount of in-use and free memory on the device. |
 
-{#bq-chanperf-output-note}
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>brightscript_warnings [<em>num-warnings</em>]</td>
+<td>Sets the maximum number of BrightScript warnings displayed in the debug console. Warnings may indicate possible bugs in the code and therefore should be addressed.</td>
+</tr>
+<tr>
+<td>chanperf [-r <em>seconds</em>]</td>
+<td>Prints the current memory and CPU utilization of an app (RAM usage is reported in KibiBytes [KiB]).<br /><br /><strong>chanperf</strong><br />Sending this command with no arguments generates the following output on port 8080 for example:<br /><code>channel: mem=15156KiB\{anon=2720,file=12392,shared=44\},%cpu=7\{user=1,sys=6\}</code><br /><br /><strong>chanperf -r <em>seconds</em></strong><br />Executes and repeats the <strong>chanperf</strong> command the specified number of seconds and outputs the results to port 8085. To cancel a repeating command, use the chanperf command with no arguments or with the -r parameter set to 0 ("chanperf" or "chanperf -r 0"). Calling this command with the seconds parameter set to 10 generates the following output on port 8085 for example:<br /><code>channel: mem=27124KiB\{anon=9684,file=17372,shared=68\},%cpu=43\{user=30,sys=13\} repeat 10s (on dev console), chanperf -r 0 to stop</code><blockquote><p>The output for the chanperf -r <em>seconds</em> command is sent to port 8085. It is not displayed on port 8080</p></blockquote><strong>Error message</strong><br />If the app is not running, or if undefined attribute is missing from the manifest, the following output is generated:<br />undefined<blockquote><p>You can download a <a href="https://github.com/rokudev/sgnodes-all-demo">sample app</a> that demonstrates how to use the <strong>chanperf</strong> command.</p></blockquote></td>
+</tr>
+<tr>
+<td>logrendezvous [on &#124; off]</td>
+<td>Enable console logging of thread rendezvous. Set to off to disable.</td>
+</tr>
+<tr>
+<td>loaded_textures</td>
+<td>Displays the current set of images loaded into texture memory.</td>
+</tr>
+<tr>
+<td>r2d2_bitmaps</td>
+<td>Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively. Starting with Roku OS 9.3, the name of each bitmap is included</td>
+</tr>
+<tr>
+<td>remove_plugin <em>app id</em></td>
+<td>Removes the indicated app from the local device, as well as from all devices linked to the same Roku account. For example, if an app has a <em>app id</em> of "987654_cf9a", then the following command would remove it: <code>remove_plugin 987654_cf9a</code><br /><br />The list of available app ids can be seen in the second (from leftmost) column of the display produced by the <strong>plugins -m</strong> port 8080 command. The local device must be linked to a Roku account. <br /><br />To use this command, the local device must be linked to a Roku account. Apps are not removed on another device until it synchronizes with the Streaming Store (for example, via an automatic check for updates).</td>
+</tr>
+<tr>
+<td>sgnodes all</td>
+<td>Prints every existing node created by the currently running app. <br /><br />As of Roku OS 14.5, you can use this command on your published app if the device is keyed with the same developer ID/key used to generate the app's package file.<br /><br />As of Roku OS 10.0, this prints the number of <strong>osref</strong> references to the node (held in the Roku platform) and <strong>bscref</strong> references (held in the app). The <strong>bcsref</strong> count includes references from "m." variable and local variables. Child references and field references do not increase <strong>bscref</strong> counts. <br /><br />The <strong>osref</strong> count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one <strong>osref</strong> on the child. Additionally, any field of type <strong>node</strong>, <strong>nodearray</strong>, or <strong>assocarray</strong> will add one <strong>osref</strong> to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.<br /><br />The reported <strong>osref</strong> count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes. The <strong>bscref</strong> count provides a more relevant and accurate indication of the resources that the app itself controls.<br /><br />The <code>sgnodes all</code>, <code>sgnodes roots</code>, and <code>sgnodes node_ID</code> commands are similar to the getAll() , getRoots() , getRootsMeta(), and getAllMeta() <a href="/docs/references/brightscript/interfaces/ifsgnodechildren.md">ifSGNodeChildren</a> methods, which can be called on any SceneGraph node.</td>
+</tr>
+<tr>
+<td>sgnodes roots</td>
+<td>Prints every existing node without a parent created by the currently running app. The existence of these un-parented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.</td>
+</tr>
+<tr>
+<td>sgnodes node_ID</td>
+<td>Prints nodes with an id field set to node_ID, except it, bypasses all the hierarchy and rules and just runs straight down the whole list in the order of node creation. It will list multiple nodes if there are several that match.</td>
+</tr>
+<tr>
+<td>sgperf start&#124;clear&#124;report&#124;stop</td>
+<td>Provides basic node operation performance metrics. This command tracks all node operations by a thread, whether it's being created or an operation on an existing node, and whether it involves a rendezvous. Settings: start - enables counting, clear - resets counters to zero, report - prints current counts with rendezvous as a percentage, stop - disables counting.</td>
+</tr>
+<tr>
+<td>sgversion force or default 1.0 or 1.1</td>
+<td>Changes the observer callback model and overrides the default rsg_version specified in the manifest. For example, <code>sgversion force 1.0</code> will set rsg_version=1.0 regardless of what is specified in the manifest. With default, it will set the default rsg_version when it is not specified in the manifest. Changing the rsg_version will require restarting the app, but these changes will not survive a device reboot. <br /><br />Support for the “rsg_version=1.0” manifest flag is deprecated. This deprecation means that the 1.0 features are no longer supported (and thus should not be expected to work). All apps must adopt the current observer callback model in successive firmware updates.</td>
+</tr>
+<tr>
+<td>fps_display</td>
+<td>Displays frames-per-second and free memory on-screen. Leverage this tool to optimize your app UI. Following are the commands to use the fps meter: fps_display 1 turns on the fps meter. It presents a 1-second moving average of the current frame rate AND fps_display 0 turns the meter back off.</td>
+</tr>
+<tr>
+<td>free</td>
+<td>Provides a snapshot of the amount of in-use and free memory on the device.</td>
+</tr>
+</tbody>
+</table>
 
-> The output for the chanperf -r *seconds* command is sent to port 8085. It is not displayed on port 8080
 
-{#bq-sample-app}
 
-> You can download a [sample app](https://github.com/rokudev/sgnodes-all-demo) that demonstrates how to use the **chanperf** command.
 
 ## Troubleshooting common development errors
 

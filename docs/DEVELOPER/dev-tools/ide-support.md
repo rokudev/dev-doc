@@ -93,7 +93,7 @@ code.
 
 ### Updating the plugin
 
-Add the Roku Plugin package using this path: **Eclipse** \> **Help** \>
+Add the Roku Plugin package using this path: **Eclipse** \> **Help** \>
 **Install New Software** \> **Add**...
 
   -   - Name: Roku Plugin

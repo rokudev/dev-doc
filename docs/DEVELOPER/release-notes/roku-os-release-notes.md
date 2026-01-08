@@ -732,12 +732,12 @@ Below is a list of key developer-facing Roku OS 10.0 updates:
 
     Some fields used to set options on the Dynamic voice-enabled keyboards and the StandardDialog nodes always print their value as “invalid” in BrightScript. Equality comparisons of these field values will also not work correctly. Setting the value of these fields from either BrightScript or XML does work correctly. These fields include:
 
-    The **voiceEntryType** field of the [VoiceTextEditBox](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) node.<br/>
-    The **domain** field of the [DynamicKeyboardBase](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md) node.<br/>
-    The **keyboardDomain** field of the [StandardKeyboardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md) node.<br/>
-    The **bulletType** field of the [StdDlgBulletTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-bullet-text-item.md) node.<br/>
-    The **graphicAlign** field of the [StdDlgGraphicItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md) node.<br/>
-    The **keyLayout** field of the [StdDlgKeyboardItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-keyboard-item.md) node.<br/>
+    The **voiceEntryType** field of the [VoiceTextEditBox](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) node.<br />
+    The **domain** field of the [DynamicKeyboardBase](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md) node.<br />
+    The **keyboardDomain** field of the [StandardKeyboardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md) node.<br />
+    The **bulletType** field of the [StdDlgBulletTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-bullet-text-item.md) node.<br />
+    The **graphicAlign** field of the [StdDlgGraphicItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md) node.<br />
+    The **keyLayout** field of the [StdDlgKeyboardItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-keyboard-item.md) node.<br />
     The **namedTextStyle** field of the [StdDlgTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md) node.
 
 
@@ -930,7 +930,7 @@ Here is a list of key developer-facing Roku OS 9.3 updates:
 
 #### Architecture
 
-- **[rsg_version manifest flag defaults to 1.2](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)** — The **rsg_version** attribute in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) now defaults to 1.2 (**rsg_version=1.2**). As of Roku OS 9.0, setting the **rsg_version** attribute to 1.2 enables an internal mechanism for processing component <script\> tags that optimizes the resulting compiled script code. This results in a reduced initial startup time and lesser memory usage while preserving compatibility.<br/><br/>The deprecated **eval()** function is not compatible with **rsg_version 1.2**; therefore, developers must do one of the following to keep their apps running if their apps use this function:<br/><br/>1. (Recommended) Remove all usage of the deprecated **eval()** function. If you are using the **eval()** function to initialize data, use the [parseJSON()](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-as-object) function instead.<br/><br/>2. Update the **rsg_version** attribute in the manifest to **1.1** (**rsgversion=1.1**).
+- **[rsg_version manifest flag defaults to 1.2](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)** — The **rsg_version** attribute in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) now defaults to 1.2 (**rsg_version=1.2**). As of Roku OS 9.0, setting the **rsg_version** attribute to 1.2 enables an internal mechanism for processing component <script\> tags that optimizes the resulting compiled script code. This results in a reduced initial startup time and lesser memory usage while preserving compatibility.<br /><br />The deprecated **eval()** function is not compatible with **rsg_version 1.2**; therefore, developers must do one of the following to keep their apps running if their apps use this function:<br /><br />1. (Recommended) Remove all usage of the deprecated **eval()** function. If you are using the **eval()** function to initialize data, use the [parseJSON()](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-as-object) function instead.<br /><br />2. Update the **rsg_version** attribute in the manifest to **1.1** (**rsgversion=1.1**).
 
 #### Tools
 
@@ -1111,7 +1111,7 @@ Below is a complete list of the APIs deprecated as of Roku OS 8.1.
     free memory on-screen. Developers can leverage this tool to optimize
     their app UI.
   - **Registry ReadMulti and WriteMulti
-    APIs** — [roRegistrySection](/docs/references/brightscript/components/roregistrysection.md) adds
+    APIs** — [roRegistrySection](/docs/references/brightscript/components/roregistrysection.md) adds
     two new APIs, **WriteMulti** and **ReadMulti** — to allow apps
     to read/write multiple keys at a time.
   - **\[BETA\] New file system for data caching** — A new file
@@ -1194,7 +1194,7 @@ Below is a complete list of the APIs deprecated as of Roku OS 8.1.
     Apps can get notified when a system overlay is displayed.
   - **roDeviceInfoEvent update** — A new event,
     isCaptionModeChangedEvent, has been added
-    to [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) to
+    to [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) to
     enable developers to check if the user changes the closed caption
     mode or track.
   - **Closed caption track selection** — It is no longer necessary for a
@@ -1240,7 +1240,7 @@ increase performance of Roku SceneGraph (RSG) apps.
 
   - **UI changes to the RowList & ArrayGrid components** — Two new
     fields have been added to
-    the [RowList](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md) and [ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md) components
+    the [RowList](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md) and [ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md) components
     to provide greater control over the UX:
 
       - **RowList** — `rowCounterRightOffset`  
@@ -1731,7 +1731,7 @@ ReadAsciiFile() now supports UTF-16 files ([**Global Utility Functions**](/docs/
 
     Example:  
 
-    aa={a:2,b:1,c:3} : for each x in aa : print x;" from ";aa : end
+    aa=\{a:2,b:1,c:3\} : for each x in aa : print x;" from ";aa : end
     for  
 
     Previously:
@@ -2124,7 +2124,7 @@ the developer forum.
       - performance improvements
       - typed values in function parameters and returns
       - improved auto-boxing and type promotion
-      - explicit programmer controlled garbage collection 
+      - explicit programmer controlled garbage collection 
       - better statement stepping in source level debugger
       - collections can include intrinsic values rather than only
         objects

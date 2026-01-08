@@ -92,7 +92,7 @@ To create the automated sign-in script, follow these steps:
    - Change the entered password to `script-password`.
 
    The steps in the script should therefore appear as follows:
-      ${codeLogin}
+      <pre><code>```<br />- text: script-login<br />- text: script-password<br />```</code></pre>
 
 5. Export the sign-in script to your desktop. Click the hamburger icon to the right of the New Script button, click **Export scripts**, select the check box for the script to be exported, and then click **Export scripts** again.
 
@@ -105,13 +105,6 @@ To create the automated sign-in script, follow these steps:
    You can [download the sign-in script](https://github.com/rokudev/on-device-authentication) used for the on-device authentication sample and test it. This also provides a quick reference to help write your script. To import the script into the Roku Remote Tool, click **New Script**, click **Import from**, and then select the script. This sample app does not include a sign-out flow, so no sample sign-out script is incuded.
 
    ![roku815px - roku-remote-import](https://image.roku.com/ZHZscHItMTc2/roku-remote-import-v1.png)
-
-
-{#codeLogin}
-```
-- text: script-login
-- text: script-password
-```
 
 
 

@@ -104,95 +104,172 @@ The Roku's JavaScript Library includes the following keywords:
 
 (*available since release 2.0*)
 
-| Keyword  | Argument        | Description                                                  | Example                                                      |
-| -------- | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| sideLoad | ${sideload-arg} | Sideloads an app that has been packaged into a zip file.<br /><br />If the **sideLoad** command fails, [sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the app to be tested and use the **launchTheChannel** command. | `await library.sideLoad("channel.zip", "rokudev", "your_device_password")` |
 
-{#sideload-arg}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Argument</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sideLoad</td>
+<td><ul><li><strong>channel</strong>: The file path of a zipped package file.</li><li><strong>username</strong>: Enter <strong>rokudev</strong>, which is the user name for the Development Application Installer.</li><li><strong>password</strong>: The password for accessing the Development Application Installer on your Roku device.</li></ul></td>
+<td>Sideloads an app that has been packaged into a zip file.<br /><br />If the <strong>sideLoad</strong> command fails, <a href="/docs/developer-program/getting-started/developer-setup.md#sideloading-channels">sideload</a> the app to be tested and use the <strong>launchTheChannel</strong> command.</td>
+<td><code>await library.sideLoad("channel.zip", "rokudev", "your_device_password")</code></td>
+</tr>
+</tbody>
+</table>
 
-* **channel**: The file path of a zipped package file.
-* **username**: Enter **rokudev**, which is the user name for the Development Application Installer.
-* **password**: The password for accessing the Development Application Installer on your Roku device.
+
 
 ### launchTheChannel
 
-| Keyword          | Argument                  | Description                                                  | Example                                                      |
-| ---------------- | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| launchTheChannel | ${launch-the-channel-arg} | Launches the app corresponding to the specified app ID. | `await library.launchTheChannel("dev", "myMovie123", "movie")` |
 
-{#launch-the-channel-arg}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Argument</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>launchTheChannel</td>
+<td><ul><li><strong>channel_code</strong>: The ID of the app to be launched.</li><li><strong>contentId</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li><li><strong>mediaType</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li></ul></td>
+<td>Launches the app corresponding to the specified app ID.</td>
+<td><code>await library.launchTheChannel("dev", "myMovie123", "movie")</code></td>
+</tr>
+</tbody>
+</table>
 
-* **channel_code**: The ID of the app to be launched.
-* **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
-* **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+
 
 ### inputDeepLinkingData
 
 (*available since release 2.0*)
 
-| Keyword              | Argument                  | Description                                                  | Example                                                      |
-| -------------------- | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| inputDeepLinkingData | ${input-deep-linking-arg} | Launches the app corresponding to the specified app ID. | `await library.inputDeepLinkingData("dev", "myMovie123", "movie")` |
 
-{#input-deep-linking-arg}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Argument</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputDeepLinkingData</td>
+<td><ul><li><strong>channelId</strong>: The ID of the app to be launched.</li><li><strong>contentId</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li><li><strong>mediaType</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li></ul></td>
+<td>Launches the app corresponding to the specified app ID.</td>
+<td><code>await library.inputDeepLinkingData("dev", "myMovie123", "movie")</code></td>
+</tr>
+</tbody>
+</table>
 
-* **channelId**: The ID of the app to be launched.
-* **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
-* **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+
 
 ### getApps
 
-| Keyword | Description                                                  | Example          |
-| :------ | :----------------------------------------------------------- | ---------------- |
-| getApps | Returns a list of installed apps as an array of objects. Each app object contains the following fields: ${get-apps-list} | ${get-apps-code} |
 
-{#get-apps-list}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getApps</td>
+<td>Returns a list of installed apps as an array of objects. Each app object contains the following fields: <ul><li>title</li><li>id</li><li>type</li><li>version</li><li>subtype</li></ul></td>
+<td><pre><code><code>&lt;br /&gt;expect(apps[0].ID).to.equal('some_id')&lt;br /&gt;const apps = await library.getApps()&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-* title
-* id
-* type
-* version
-* subtype
 
-{#get-apps-code}
 
-```
-expect(apps[0].ID).to.equal('some_id')
-const apps = await library.getApps()
-```
 
 ### sendKey
 
-| Keyword | Arguments        | Description                                           | Example                              |
-| :------ | :--------------- | :---------------------------------------------------- | ------------------------------------ |
-| sendKey | ${send-key-args} | Simulates the press and release of the specified key. | `await library.sendKey('select', 4)` |
 
-{#send-key-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sendKey</td>
+<td><ul><li><strong>key_press</strong>: The key to be pressed and released, which may be one of the following: "up", "down", "right", "left", "back, "select", "instantreplay", "play", "stop", "rev", "fwd", and "info".</li><li><strong>delay</strong>: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.</li></ul></td>
+<td>Simulates the press and release of the specified key.</td>
+<td><code>await library.sendKey('select', 4)</code></td>
+</tr>
+</tbody>
+</table>
 
-- **key_press**: The key to be pressed and released, which may be one of the following: "up", "down", "right", "left", "back, "select", "instantreplay", "play", "stop", "rev", "fwd", and "info".
-- **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+
 
 ### sendKeys
 
-| Keyword  | Arguments         | Description                                        | Example                                                      |
-| :------- | :---------------- | :------------------------------------------------- | ------------------------------------------------------------ |
-| sendKeys | ${send-keys-args} | Simulates the sequence of keypresses and releases. | `await library.sendKeys(['down', 'down', 'down', 'down', 'select'])` |
 
-{#send-keys-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sendKeys</td>
+<td><ul><li><strong>sequence</strong>: An array containing the sequence of keys to be pressed and released (for example, down, down, down, down, select).</li><li><strong>delay</strong>: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.</li></ul></td>
+<td>Simulates the sequence of keypresses and releases.</td>
+<td><code>await library.sendKeys(['down', 'down', 'down', 'down', 'select'])</code></td>
+</tr>
+</tbody>
+</table>
 
-- **sequence**: An array containing the sequence of keys to be pressed and released (for example, down, down, down, down, select).
-- **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+
 
 ### sendWord
 
-| Keyword  | Arguments         | Description                                               | Example                          |
-| :------- | :---------------- | :-------------------------------------------------------- | -------------------------------- |
-| sendWord | ${send-word-args} | Simulates the press and release of each letter in a word. | `await library.sendWord('user')` |
 
-{#send-word-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sendWord</td>
+<td><ul><li><strong>word</strong>: The specified word to be entered.</li><li><strong>delay</strong>: The delay (in seconds) before the entry of each letter in the specified word. This argument is optional, and it defaults to 2 seconds if not specified.</li></ul></td>
+<td>Simulates the press and release of each letter in a word.</td>
+<td><code>await library.sendWord('user')</code></td>
+</tr>
+</tbody>
+</table>
 
-- **word**: The specified word to be entered.
-- **delay**: The delay (in seconds) before the entry of each letter in the specified word. This argument is optional, and it defaults to 2 seconds if not specified.
+
 
 ### markTimer
 
@@ -206,292 +283,327 @@ const apps = await library.getApps()
 
 (*available since release 2.0*)
 
-| Keyword  | Description                                                  | Example         |
-| :------- | :----------------------------------------------------------- | --------------- |
-| getTimer | Returns the number of milliseconds elapsed since the timer was last started. | ${getTimerCode} |
 
-{#getTimerCode}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getTimer</td>
+<td>Returns the number of milliseconds elapsed since the timer was last started.</td>
+<td><pre><code><code>&lt;br /&gt;let res = await library.verifyIsPlaybackStarted(25, 1);&lt;br /&gt;expect(res).to.equal(true);   &lt;br /&gt;let time = library.getTimer();&lt;br /&gt;expect(14000).greaterThan(time);&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-```
-let res = await library.verifyIsPlaybackStarted(25, 1);
-expect(res).to.equal(true);   
-let time = library.getTimer();
-expect(14000).greaterThan(time);
-```
+
 
 ### verifyIsPlaybackStarted
 
-| Keyword                 | Arguments               | Description                                                  | Example                          |
-| :---------------------- | :---------------------- | :----------------------------------------------------------- | -------------------------------- |
-| verifyIsPlaybackStarted | ${verify-playback-args} | Verify playback has started on the Roku media player. <br /><br />This keyword fails if player state is not "play". | `verifyIsPlaybackStarted(25, 2)` |
 
-{#verify-playback-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>verifyIsPlaybackStarted</td>
+<td><ul><li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li><li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li></ul></td>
+<td>Verify playback has started on the Roku media player. <br /><br />This keyword fails if player state is not "play".</td>
+<td><code>verifyIsPlaybackStarted(25, 2)</code></td>
+</tr>
+</tbody>
+</table>
 
-- **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
-- **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
 
 ### verifyIsScreenLoaded
 
-| Keyword                 | Arguments                    | Description                                                  | Example                                                      |
-| :---------------------- | :--------------------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| Verify is screen loaded | ${verify-screen-loaded-args} | Verify that the screen is loaded based on the provided element data. | `verifyIsScreenLoaded({'elementData': [{'using': 'text', 'value': 'Barack Gates, Bill Obama'}]})` |
 
-{#verify-screen-loaded-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verify is screen loaded</td>
+<td><ul><li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> command for more information.</li><li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li><li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li></ul></td>
+<td>Verify that the screen is loaded based on the provided element data.</td>
+<td><code>verifyIsScreenLoaded(\{'elementData': [\{'using': 'text', 'value': 'Barack Gates, Bill Obama'\}]\})</code></td>
+</tr>
+</tbody>
+</table>
 
-- **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) command for more information.
-- **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
-- **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
 
 ### getChildNodes
 
-| Keyword       | Arguments              | Description                                          | Example                |
-| :------------ | :--------------------- | :--------------------------------------------------- | ---------------------- |
-| getChildNodes | ${get-child-node-args} | Retrieves the child component of the specified node. | ${get-child-node-code} |
 
-{#get-child-node-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getChildNodes</td>
+<td><ul><li><p><strong>parentNode</strong>: The parent node for which the child nodes are to be retrieved.</p></li><li><p><strong>locator</strong> (optional): An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:</p><pre><code>"using" ("attr", "tag", "text") : specify locator type"value": tag or attribute value"attribute"(only for "attr" type): specify attribute</code></pre></li></ul></td>
+<td>Retrieves the child component of the specified node.</td>
+<td><pre><code><code>&lt;br /&gt;const rowList = await library.getElement(\\{"elementData" :[\\{"using": "tag", "value": "ZoomRowList"\\}]\\});&lt;br /&gt;const searchData = [\\{"using": "tag", "value": "RenderableNode"\\}, \\{"using": "attr", "attribute": "focused", "value": "true"\\}];&lt;br /&gt;const result = library.getChildNodes(rowList, searchData);&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-- **parentNode**: The parent node for which the child nodes are to be retrieved.
 
-- **locator** (optional): An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:
 
-        "using" ("attr", "tag", "text") : specify locator type
-        "value": tag or attribute value
-        "attribute"(only for "attr" type): specify attribute
-
-{#get-child-node-code}
-
-```
-const rowList = await library.getElement({"elementData" :[{"using": "tag", "value": "ZoomRowList"}]});
-const searchData = [{"using": "tag", "value": "RenderableNode"}, {"using": "attr", "attribute": "focused", "value": "true"}];
-const result = library.getChildNodes(rowList, searchData);
-```
 
 ### getElement
 
-| Keyword     | Arguments           | Description                                                  | Example             |
-| :---------- | :------------------ | :----------------------------------------------------------- | ------------------- |
-| Get element | ${get-element-args} | Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element. | ${get-element-code} |
 
-{#get-element-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Get element</td>
+<td><ul><li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> for more information.</li><li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li></ul></td>
+<td>Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element.</td>
+<td><pre><code><code>&lt;br /&gt;const element = await library.getElement(\\{'elementData': [\\{'using': 'attr', 'attribute': 'name', 'value': 'poster'\\}]\\}, 4);&lt;br /&gt;&lt;br /&gt;const poster = library.getAttribute(element, 'uri');&lt;br /&gt;expect(poster).to.equal('poster.png');&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-- **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
-- **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
 
-{#get-element-code}
 
-```
-const element = await library.getElement({'elementData': [{'using': 'attr', 'attribute': 'name', 'value': 'poster'}]}, 4);
-
-const poster = library.getAttribute(element, 'uri');
-expect(poster).to.equal('poster.png');
-```
 
 ### getElements
 
-| Keyword     | Arguments            | Description                                                  | Example              |
-| :---------- | :------------------- | :----------------------------------------------------------- | -------------------- |
-| getElements | ${get-elements-args} | Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements. | ${get-elements-code} |
 
-{#get-elements-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getElements</td>
+<td><ul><li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> for more information.</li><li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li></ul></td>
+<td>Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements.</td>
+<td><pre><code><code>&lt;br /&gt;const elements= await library.getElements(\\{'elementData': [\\{'using': 'attr', 'attribute': 'name', 'value': 'poster'\\}]\\}, 4);&lt;br /&gt;&lt;br /&gt;const poster = library.getAttribute(elements[0], 'uri');&lt;br /&gt;expect(poster).to.equal('poster.png');&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-- **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
-- **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
 
-{#get-elements-code}
 
-```
-const elements= await library.getElements({'elementData': [{'using': 'attr', 'attribute': 'name', 'value': 'poster'}]}, 4);
-
-const poster = library.getAttribute(elements[0], 'uri');
-expect(poster).to.equal('poster.png');
-```
 
 ### getFocusedElement
 
-| Keyword           | Description                                                  | Example                     |
-| :---------------- | :----------------------------------------------------------- | --------------------------- |
-| getFocusedElement | Return the element on the screen that currently has focus. See the [WebDriver active element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#get-v1/session/:sessionId/element/active) for more information. | ${get-focused-element-code} |
 
-{#get-focused-element-code}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getFocusedElement</td>
+<td>Return the element on the screen that currently has focus. See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#get-v1/session/:sessionId/element/active">WebDriver active element command</a> for more information.</td>
+<td><pre><code><code>&lt;br /&gt;const element = await library.getFocusedElement()&lt;br /&gt;&lt;br /&gt;const poster = library.getAttribute(element, 'uri');&lt;br /&gt;expect(poster).to.equal('poster.png');&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-```
-const element = await library.getFocusedElement()
 
-const poster = library.getAttribute(element, 'uri');
-expect(poster).to.equal('poster.png');
-```
 
 ### verifyIsChannelLoaded
 
-| Keyword               | Arguments                  | Description                                                  | Example                                      |
-| :-------------------- | :------------------------- | :----------------------------------------------------------- | -------------------------------------------- |
-| verifyIsChannelLoaded | ${get-verify-channel-args} | Verify that the specified app has been launched.<br /><br />This keyword fails if the provided app ID does not match a valid app. | `await library.verifyIsChannelLoaded('dev')` |
 
-{#get-verify-channel-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>verifyIsChannelLoaded</td>
+<td><ul><li><strong>id</strong>: The ID of the app to be launched. Use <code>dev</code> to verify a sideloaded app.</li><li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li><li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li></ul></td>
+<td>Verify that the specified app has been launched.<br /><br />This keyword fails if the provided app ID does not match a valid app.</td>
+<td><code>await library.verifyIsChannelLoaded('dev')</code></td>
+</tr>
+</tbody>
+</table>
 
-- **id**: The ID of the app to be launched. Use `dev` to verify a sideloaded app.
-- **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
-- **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
 
 ###getCurrentChannelInfo
 
-| Keyword               | Description                                                  | Example                  |
-| :-------------------- | :----------------------------------------------------------- | ------------------------ |
-| getCurrentChannelInfo | Returns an object containing information about the app currently loaded. This object has the following fields:<br />${current-app-response} | ${get-channel-info-code} |
 
-{#current-app-response}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getCurrentChannelInfo</td>
+<td>Returns an object containing information about the app currently loaded. This object has the following fields:<br /><table><thead><tr><th><strong>Key</strong></th><th><strong>Type</strong></th><th><strong>Description</strong></th></tr></thead><tbody><tr><td>sessionId</td><td>string</td><td>The advertising ID of the device</td></tr><tr><td>status</td><td>int</td><td>A status code summarizing the result of the command.</td></tr><tr><td>value</td><td>array</td><td></td></tr><tr><td>value[i].Title</td><td>string</td><td>The title of the app.</td></tr><tr><td>value[i].ID</td><td>string</td><td>The ID of the app.</td></tr><tr><td>value[i].Version</td><td>string</td><td>The build version of the app.</td></tr><tr><td>value[i].Subtype</td><td>string</td><td>"ndka"/"rsga"</td></tr><tr><td>value[i].Type</td><td>string</td><td>"menu"/"appl"</td></tr></tbody></table></td>
+<td><pre><code><code>&lt;br /&gt;const data = await library.getPlayerInfo();&lt;br /&gt;expect(data.Position).greaterThan(9000);&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-| **Key**          | **Type** | **Description**                                      |
-| :--------------- | :------- | :--------------------------------------------------- |
-| sessionId        | string   | The advertising ID of the device                     |
-| status           | int      | A status code summarizing the result of the command. |
-| value            | array    |                                                      |
-| value[i].Title   | string   | The title of the app.                            |
-| value[i].ID      | string   | The ID of the app.                               |
-| value[i].Version | string   | The build version of the app.                    |
-| value[i].Subtype | string   | "ndka"/"rsga"                                        |
-| value[i].Type    | string   | "menu"/"appl"                                        |
 
-{#get-channel-info-code}
 
-```
-const data = await library.getPlayerInfo();
-expect(data.Position).greaterThan(9000);
-```
 
 ### getDeviceInfo
 
-| Keyword       | Description                                                  | Example                 |
-| :------------ | :----------------------------------------------------------- | ----------------------- |
-| getDeviceInfo | Returns an object containing the information about the device. This object has the following fields:<br />${session-response} | ${get-device-info-code} |
 
-{#get-device-info-code}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getDeviceInfo</td>
+<td>Returns an object containing the information about the device. This object has the following fields:<br /><table><thead><tr><th><strong>Key</strong></th><th><strong>Type</strong></th><th><strong>Description</strong></th></tr></thead><tbody><tr><td>sessionId</td><td>string</td><td>The advertisement ID of the device.</td></tr><tr><td>status</td><td>int</td><td>A status code summarizing the result of the command.</td></tr><tr><td>value</td><td>object</td><td></td></tr><tr><td>value.vendorName</td><td>string</td><td>The vendor of the device.</td></tr><tr><td>value.modelName</td><td>string</td><td>The model of the device.</td></tr><tr><td>value.language</td><td>string</td><td>The language of the device.</td></tr><tr><td>value.country</td><td>string</td><td>The country of the device.</td></tr><tr><td>value.ip</td><td>string</td><td>The IP address of the device.</td></tr><tr><td>value.timeout</td><td>int</td><td>The specified timeout for WebDriver client requests.</td></tr><tr><td>value.pressDelay</td><td>int</td><td>The specified delay between key presses.</td></tr></tbody></table></td>
+<td><pre><code><code>&lt;br /&gt;const info = await library.getDeviceInfo()&lt;br /&gt;expect(info.language).to.equal('en')&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-```
-const info = await library.getDeviceInfo()
-expect(info.language).to.equal('en')
-```
 
-{#session-response}
 
-| **Key**          | **Type** | **Description**                                      |
-| :--------------- | :------- | :--------------------------------------------------- |
-| sessionId        | string   | The advertisement ID of the device.                  |
-| status           | int      | A status code summarizing the result of the command. |
-| value            | object   |                                                      |
-| value.vendorName | string   | The vendor of the device.                            |
-| value.modelName  | string   | The model of the device.                             |
-| value.language   | string   | The language of the device.                          |
-| value.country    | string   | The country of the device.                           |
-| value.ip         | string   | The IP address of the device.                        |
-| value.timeout    | int      | The specified timeout for WebDriver client requests. |
-| value.pressDelay | int      | The specified delay between key presses.             |
 
 ### getPlayerInfo
 
-| Keyword       | Description                                                  | Example                 |
-| :------------ | :----------------------------------------------------------- | ----------------------- |
-| getPlayerInfo | Returns an object containing information about the Roku media player. This object has the following fields:<br />${player-response} | ${get-player-info-code} |
 
-{#player-response}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getPlayerInfo</td>
+<td>Returns an object containing information about the Roku media player. This object has the following fields:<br /><table><thead><tr><th><strong>Key</strong></th><th><strong>Type</strong></th><th><strong>Description</strong></th></tr></thead><tbody><tr><td>sessionId</td><td>string</td><td>The advertising ID of the device</td></tr><tr><td>status</td><td>int</td><td>A status code summarizing the result of the command</td></tr><tr><td>value</td><td>object</td><td></td></tr><tr><td>value.error</td><td>string</td><td>Indicates whether there was a playback error. If no error occurred, this is set to "false"</td></tr><tr><td>value.state</td><td>string</td><td>Indicates the current playback state ("play", "pause", "resume", and so on)</td></tr><tr><td>value.format</td><td>object</td><td>The <strong>format</strong> element contains the following attributes: <em>audio</em>, <em>caption</em>, <em>container</em>, <em>drm</em>, <em>video</em>, and <em>res</em>.</td></tr><tr><td>value.format.audio</td><td>string</td><td>The audio compression method ("aac", "aac_adts", and so on.)</td></tr><tr><td>value.format.caption</td><td>string</td><td>The closed caption format ("608_708", for example). This value is set to "none" if there are no captions.</td></tr><tr><td>value.format.container</td><td>string</td><td>The container format ("hls", for example)</td></tr><tr><td>value.format.drm</td><td>string</td><td>The encoding type. If no encoding is used, this us set to "none".</td></tr><tr><td>value.format.video</td><td>string</td><td>The format of the currently playing video stream ("mpeg4-15", for example)</td></tr><tr><td>value.format.res</td><td>string</td><td>The resolution of the currently playing video stream ("1280X720", for example).</td></tr><tr><td>value.buffering</td><td>object</td><td>The <strong>buffering</strong> element contains the following attributes: <em>current</em>, <em>max</em>, <em>target</em>.</td></tr><tr><td>value.buffering.current</td><td>string</td><td>The current buffering speed (in kbps).</td></tr><tr><td>value.buffering.max</td><td>string</td><td>The maximum possible buffering speed (in kbps).</td></tr><tr><td>value.buffering.target</td><td>string</td><td>The target buffering speed (in kbps).</td></tr><tr><td>value.newStream</td><td>object</td><td>The <strong>newStream</strong> element contains the following attribute: <em>speed</em>.</td></tr><tr><td>value.newStream.speed</td><td>string</td><td>The current playback speed (in bps)</td></tr><tr><td>value.position</td><td>string</td><td>The time of the current position in the stream, expressed as the elapsed time (in ms) since the start of stream or UTC time, depending on the content.</td></tr><tr><td>value.duration</td><td>string</td><td>The duration of the video being played (in seconds). This becomes valid when playback begins and may change if the video is dynamic content, such as a live event.</td></tr><tr><td>value.isLive</td><td>string</td><td>A flag indicating whether the video being played is a live stream.</td></tr><tr><td>value.runtime</td><td>string</td><td>The runtime of the video being played (in seconds).</td></tr><tr><td>value.streamSegment</td><td>object</td><td>The <strong>streamSegment</strong> attribute contains Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS  This element contains the following attributes: <em>bitrate</em>, <em>mediaSequence</em>, <em>segmentType</em>, and <em>time</em>.</td></tr><tr><td>value.streamSegment.bitrate</td><td>string</td><td>The bitrate of the video segment (in bps).</td></tr><tr><td>value.streamSegment.mediaSequence</td><td>string</td><td>The HLS media sequence ID of the segment in the video.</td></tr><tr><td>value.streamSegment.segmentType</td><td>string</td><td>The type of data in the segment, which may be one of the following values: "audio", "video", "captions", "mux".</td></tr><tr><td>value.streamSegment.time</td><td>string</td><td>The chunk start time.</td></tr></tbody></table></td>
+<td><pre><code><code>&lt;br /&gt;const data = await library.getPlayerInfo();&lt;br /&gt;expect(data.Position).greaterThan(9000);&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-| **Key**                           | **Type** | **Description**                                              |
-| :-------------------------------- | :------- | :----------------------------------------------------------- |
-| sessionId                         | string   | The advertising ID of the device                             |
-| status                            | int      | A status code summarizing the result of the command          |
-| value                             | object   |                                                              |
-| value.error                       | string   | Indicates whether there was a playback error. If no error occurred, this is set to "false" |
-| value.state                       | string   | Indicates the current playback state ("play", "pause", "resume", and so on) |
-| value.format                      | object   | The **format** element contains the following attributes: *audio*, *caption*, *container*, *drm*, *video*, and *res*. |
-| value.format.audio                | string   | The audio compression method ("aac", "aac_adts", and so on.) |
-| value.format.caption              | string   | The closed caption format ("608_708", for example). This value is set to "none" if there are no captions. |
-| value.format.container            | string   | The container format ("hls", for example)                    |
-| value.format.drm                  | string   | The encoding type. If no encoding is used, this us set to "none". |
-| value.format.video                | string   | The format of the currently playing video stream ("mpeg4-15", for example) |
-| value.format.res                  | string   | The resolution of the currently playing video stream ("1280X720", for example). |
-| value.buffering                   | object   | The **buffering** element contains the following attributes: *current*, *max*, *target*. |
-| value.buffering.current           | string   | The current buffering speed (in kbps).                       |
-| value.buffering.max               | string   | The maximum possible buffering speed (in kbps).              |
-| value.buffering.target            | string   | The target buffering speed (in kbps).                        |
-| value.newStream                   | object   | The **newStream** element contains the following attribute: *speed*. |
-| value.newStream.speed             | string   | The current playback speed (in bps)                          |
-| value.position                    | string   | The time of the current position in the stream, expressed as the elapsed time (in ms) since the start of stream or UTC time, depending on the content. |
-| value.duration                    | string   | The duration of the video being played (in seconds). This becomes valid when playback begins and may change if the video is dynamic content, such as a live event. |
-| value.isLive                      | string   | A flag indicating whether the video being played is a live stream. |
-| value.runtime                     | string   | The runtime of the video being played (in seconds).          |
-| value.streamSegment               | object   | The **streamSegment** attribute contains Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS  This element contains the following attributes: *bitrate*, *mediaSequence*, *segmentType*, and *time*. |
-| value.streamSegment.bitrate       | string   | The bitrate of the video segment (in bps).                   |
-| value.streamSegment.mediaSequence | string   | The HLS media sequence ID of the segment in the video.       |
-| value.streamSegment.segmentType   | string   | The type of data in the segment, which may be one of the following values: "audio", "video", "captions", "mux". |
-| value.streamSegment.time          | string   | The chunk start time.                                        |
-
-{#get-player-info-code}
-
-```
-const data = await library.getPlayerInfo();
-expect(data.Position).greaterThan(9000);
-```
 
 
 
 ### verifyIsChannelExist
 
-| Keyword              | Arguments                    | Description                                                  | Example                      |
-| :------------------- | ---------------------------- | :----------------------------------------------------------- | ---------------------------- |
-| verifyIsChannelExist | ${verify-channel-exist-args} | Verifies the specified app is installed on the device. This keyword fails if the **apps** array does not contain the app specified in the **id** argument. | ${verify-channel-exist-code} |
 
-{#verify-channel-exist-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>verifyIsChannelExist</td>
+<td><ul><li><strong>apps</strong>: An array containing  currently installed on the device.</li><li><strong>id</strong>: The ID of the app to be verified. Use <code>dev</code> to verify a sideloaded app.</li></ul></td>
+<td>Verifies the specified app is installed on the device. This keyword fails if the <strong>apps</strong> array does not contain the app specified in the <strong>id</strong> argument.</td>
+<td><pre><code><code>&lt;br /&gt;const apps = await library.getApps();&lt;br /&gt;const res = library.verifyIsChannelExist(apps, 'dev');&lt;br /&gt;expect(res).equal(true);&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-* **apps**: An array containing  currently installed on the device.
-* **id**: The ID of the app to be verified. Use `dev` to verify a sideloaded app.
 
-{#verify-channel-exist-code}
 
-```
-const apps = await library.getApps();
-const res = library.verifyIsChannelExist(apps, 'dev');
-expect(res).equal(true);
-```
 
 ### setTimeout
 
 | Keyword    | Arguments           | Description                                      | Example                           |
 | :--------- | ------------------- | :----------------------------------------------- | --------------------------------- |
-| setTimeout | ${set-timeout-args} | Sets the timeout for Web driver client requests. | `await library.setTimeout(10000)` |
+| setTimeout | <strong>timeout</strong>: The amount of time (in milliseconds) that Web driver client requests are allowed to run. | Sets the timeout for Web driver client requests. | `await library.setTimeout(10000)` |
 
-{#set-timeout-args}
-
-**timeout**: The amount of time (in milliseconds) that Web driver client requests are allowed to run.
 
 ### setDelay
 
 | Keyword  | Arguments         | Description                                                  | Example                        |
 | :------- | ----------------- | :----------------------------------------------------------- | ------------------------------ |
-| setDelay | ${set-delay-args} | Sets the delay between key presses. This keyword works with the **Send keys** keyword. | `await library.setDelay(1000)` |
+| setDelay | <strong>delay</strong>: The interval (in milliseconds) to be used between key presses. | Sets the delay between key presses. This keyword works with the **Send keys** keyword. | `await library.setDelay(1000)` |
 
-{#set-delay-args}
-
-**delay**: The interval (in milliseconds) to be used between key presses.
 
 ### getAttribute
 
-| Keyword      | Arguments             | Description                                                  | Example               |
-| :----------- | --------------------- | :----------------------------------------------------------- | --------------------- |
-| getAttribute | ${get-attribute-args} | Get attribute value. This keyword fails if an element does not contain the specified attribute. | ${get-attribute-code} |
 
-{#get-attribute-args}
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Arguments</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getAttribute</td>
+<td><ul><li><strong>element</strong>: An object that contains element information (attributes, child nodes).<br /></li><li><strong>attr</strong>: The name of the attribute to be retrieved.</li></ul></td>
+<td>Get attribute value. This keyword fails if an element does not contain the specified attribute.</td>
+<td><pre><code><code>&lt;br /&gt;const elements= await library.getElements(\\{'elementData': [\\{'using': 'attr', 'attribute': 'name', 'value': 'poster'\\}]\\}, 4);&lt;br /&gt;&lt;br /&gt;const poster = library.getAttribute(elements[0], 'uri');&lt;br /&gt;expect(poster).to.equal('poster.png')&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-* **element**: An object that contains element information (attributes, child nodes).<br/>
-* **attr**: The name of the attribute to be retrieved.
 
-{#get-attribute-code}
 
-```
-const elements= await library.getElements({'elementData': [{'using': 'attr', 'attribute': 'name', 'value': 'poster'}]}, 4);
-
-const poster = library.getAttribute(elements[0], 'uri');
-expect(poster).to.equal('poster.png')
-```
 
 ## Sample test cases
 

@@ -48,7 +48,11 @@ next:
 
 ### Version 2.14 – 12/2020
 
-- Added support for the characters **{|}"<>\^`** (which are neither reserved nor unreserved by [RFC-3986](https://tools.ietf.org/html/rfc3986)) by percent-encoding them in ad request and beacon URLs
+
+<ul>
+<li>Added support for the characters <strong>{|}"&lt;&gt;\^`</strong> (which are neither reserved nor unreserved by <a href="https://tools.ietf.org/html/rfc3986">RFC-3986</a>) by percent-encoding them in ad request and beacon URLs</li>
+</ul>
+
 - New [`enableInPodStitching(isIPS as Boolean)`](/docs/developer-program/advertising/raf-api.md#enableinpodstitchingisips-as-boolean) method brings benefits from [CSAS API](/docs/developer-program/advertising/csas.md) to apps using the classic CSAI [showAds()](/docs/developer-program/advertising/raf-api.md#showadsads-as-object-ctx-as-object-view-as-object-as-boolean) by stitching together multiple video clips within a single ad break (no buffering between ads)
 - When parsing VAST, preserve the `id` attribute of `<MediaFile/>`
 - Added support for [getAds()](/docs/developer-program/advertising/raf-api.md#getadsmsg-as-string-as-object) parsing a local file from tmp:/ via e.g. [setAdURL("tmp:/myVASTorVMAPorSMRX.xml")](/docs/developer-program/advertising/raf-api.md#setadurlurl-as-string)
@@ -98,7 +102,9 @@ declare *rsg_version=1.2* (or assume the default 1.1 [the default is now 1.2 as 
 RAF would print
 a warning:
 ~~~~
-[RAF.err] roUrlTransfer.setURL("some invalid URL") rejected argument - invalid chars? (space and "<>\^`{|} must be %-encoded)
+
+<p>[RAF.err] roUrlTransfer.setURL("some invalid URL") rejected argument - invalid chars? (space and "&lt;&gt;\^`{|} must be %-encoded)</p>
+
 ~~~~
 - Bug fixes and performance improvements
 - Deployed to devices with Roku OS 9.1 and above

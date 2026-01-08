@@ -37,17 +37,35 @@ The fields in the monitoring file may be one of the following data types:
 
 A monitoring session file contains the following objects (listed in order):
 
-| Object   | Description                                                  |
-| :------- | :----------------------------------------------------------- |
-| device   | The name, model, serial number, and OS version of the test device. |
-| channel  | The ID, name, and version of the test app.               |
-| metadata | The unique ID, timestamp, and version of the monitoring file. |
-| session  | A stream of multiple entries of the following types: ${session-list} |
 
-{#session-list}
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>device</td>
+<td>The name, model, serial number, and OS version of the test device.</td>
+</tr>
+<tr>
+<td>channel</td>
+<td>The ID, name, and version of the test app.</td>
+</tr>
+<tr>
+<td>metadata</td>
+<td>The unique ID, timestamp, and version of the monitoring file.</td>
+</tr>
+<tr>
+<td>session</td>
+<td>A stream of multiple entries of the following types: <ul><li><strong>static</strong>. The background and foreground DRAM usage limits (for supported devices only; this field is set to "null" on unsupported devices).</li><li><strong>live</strong>. The resource usage statistics. This contains arrays of objects for the following metrics: <strong>channel_system_memory_usage</strong>, <strong>channel_cpu_usage</strong>, <strong>channel_graphics_memory_usage</strong>, <strong>channel_graph_metrics, graphics_rendering_frame_rate,  sgrendezvous</strong> and <strong>fw_beacons</strong>.</li></ul></td>
+</tr>
+</tbody>
+</table>
 
-- **static**. The background and foreground DRAM usage limits (for supported devices only; this field is set to "null" on unsupported devices).
-- **live**. The resource usage statistics. This contains arrays of objects for the following metrics: **channel_system_memory_usage**, **channel_cpu_usage**, **channel_graphics_memory_usage**, **channel_graph_metrics, graphics_rendering_frame_rate,  sgrendezvous** and **fw_beacons**.
+
 
 ### Device information
 
@@ -90,165 +108,112 @@ The **session** object contains the static memory usage limits of the test app a
 
 The **static** object contains the following persistent data:
 
-| Name             | Type        | Unit  | Description                                                  |
-| :--------------- | :---------- | :---- | :----------------------------------------------------------- |
-| foreground_limit | number/null | Bytes | The maximum amount of DRAM that may be used by the app when browsing and selecting content in the app UI and during playback. If an app exceeds the limit displayed in the app system memory usage pane while running in the foreground, the Roku OS terminates the app. The foreground limit varies by device, and it is subject to change.<br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the foreground when specific system memory levels are reached on those devices.<br />${bq-foreground} |
-| background_limit | number/null | Bytes | The maximum amount of DRAM that may be used by the app while running in the background (this limit is also applicable for apps that have integrated Instant Resume). If an app exceeds the limit displayed in the app system memory usage pane while running in the background, the Roku OS terminates the app. The Roku OS also terminates apps running in the background when specific system memory levels are reached. <br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the background when specific system memory levels are reached on those devices. <br />${bq-background} |
 
-{#bq-foreground}
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>foreground_limit</td>
+<td>number/null</td>
+<td>Bytes</td>
+<td>The maximum amount of DRAM that may be used by the app when browsing and selecting content in the app UI and during playback. If an app exceeds the limit displayed in the app system memory usage pane while running in the foreground, the Roku OS terminates the app. The foreground limit varies by device, and it is subject to change.<br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the foreground when specific system memory levels are reached on those devices.<br /><blockquote><p>The foreground limit may be decreased in the near future; therefore, apps should consume only 75% of the displayed limit. The reduced limit will be enforced by the Roku OS in the near future.</p></blockquote></td>
+</tr>
+<tr>
+<td>background_limit</td>
+<td>number/null</td>
+<td>Bytes</td>
+<td>The maximum amount of DRAM that may be used by the app while running in the background (this limit is also applicable for apps that have integrated Instant Resume). If an app exceeds the limit displayed in the app system memory usage pane while running in the background, the Roku OS terminates the app. The Roku OS also terminates apps running in the background when specific system memory levels are reached. <br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the background when specific system memory levels are reached on those devices. <br /><blockquote><p>The background limit may be decreased in the near future; therefore, apps should consume a maximum of 100 MB of DRAM while running in the background. The reduced limit will be enforced by the Roku OS in the near future. See <a href="/docs/developer-program/performance-guide/data-management.md">Data management</a> and <a href="/docs/developer-program/performance-guide/memory-management.md">Memory management</a> for best practices on allocating resources.</p></blockquote></td>
+</tr>
+</tbody>
+</table>
 
-> The foreground limit may be decreased in the near future; therefore, apps should consume only 75% of the displayed limit. The reduced limit will be enforced by the Roku OS in the near future.
 
-{#bq-background}
 
-> The background limit may be decreased in the near future; therefore, apps should consume a maximum of 100 MB of DRAM while running in the background. The reduced limit will be enforced by the Roku OS in the near future. See [Data management](/docs/developer-program/performance-guide/data-management.md) and [Memory management](/docs/developer-program/performance-guide/memory-management.md) for best practices on allocating resources.
 
 #### Live
 
 The **live** object contains the following objects for the resource usage statistics generated during the monitoring session:
 
-| Name                          | Type  | Description                                                  |
-| :---------------------------- | :---- | :----------------------------------------------------------- |
-| bs_objects                    | array | Array of points that include BrightScripted objects sorted by groups:<br />${bs-objects-usage-table} |
-| channel_system_memory_usage   | array | Array of points for the following system memory usage metrics generated over time:<br />${system-memory-usage-table} |
-| channel_cpu_usage             | array | Array of points for the following CPU usage metrics generated over time:<br />${cpu-usage-table} |
-| channel_graphics_memory_usage | array | Array of points for the following graphics memory usage metrics generated over time:<br />${graphics-usage-table} |
-| channel_graph_metrics         | array | Array of points for the following SceneGraph metrics generated over time (foreground and background):<br />${rsg-metrics-table} |
-| graphics_rendering_frame_rate | array | Array of points for the following graphics rendering frame rate data generated over time (foreground and background): ${frame-rate-table} |
-| sgrendezvous                  | array | Array of points for the following rendezvous event data generated over time (foreground and background): ${rendezvous-table} |
-| fw_beacons                    | array | Array of app and media events (signal beacons) that have occurred on the app. Each event has a Unix timestamp in milliseconds (13-digit) marking when the event occurred. The timestamp has a **number** type provided in **bytes**. See [Measuring app performance ](/docs/developer-program/performance-guide/measuring-channel-performance.md)for detailed descriptions of these events.<br /><br />**Channel events:** ${channel-events-list}<br /><br />**Media events:** ${media-events-list} |
-| registry_usage                | array | Array of points for the channel registry entries.<br />${registry-usage-table} |
 
-{#system-memory-usage-table}
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bs_objects</td>
+<td>array</td>
+<td>Array of points that include BrightScripted objects sorted by groups:<br /><table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained</td></tr><tr><td>groups</td><td>array</td><td>N/A</td><td>Array of objects that includes: <br /><br />${groups-table}</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>channel_system_memory_usage</td>
+<td>array</td>
+<td>Array of points for the following system memory usage metrics generated over time:<br /><table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained</td></tr><tr><td>used</td><td>number</td><td>Bytes</td><td>Number/null. Amount of used memory (sum of resident and swap) by the app</td></tr><tr><td>resident</td><td>number</td><td>Bytes</td><td>Number/null. Amount of resident memory in use by the app (sum of shared, anonymous and file-backed memory)</td></tr><tr><td>swap</td><td>number</td><td>Bytes</td><td>Number/null. Amount of swap memory in use by the app</td></tr><tr><td>anon</td><td>number</td><td>Bytes</td><td>Number/null. Amount of anonymous memory in use by the app</td></tr><tr><td>file</td><td>number</td><td>Bytes</td><td>Number/null. Amount of file-backed memory in use by the app</td></tr><tr><td>shared</td><td>number</td><td>Bytes</td><td>Number/null. Amount of shared memory in use by the app</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>channel_cpu_usage</td>
+<td>array</td>
+<td>Array of points for the following CPU usage metrics generated over time:<br /><table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained</td></tr><tr><td>total</td><td>number</td><td>Percent</td><td>Number/null. The total CPU usage percentage (sum of user and kernel) by the app</td></tr><tr><td>user</td><td>number</td><td>Percent</td><td>Number/null. User space CPU usage percentage by the app</td></tr><tr><td>sys</td><td>number</td><td>Percent</td><td>Number/null. Kernel space CPU usage percentage by the app</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>channel_graphics_memory_usage</td>
+<td>array</td>
+<td>Array of points for the following graphics memory usage metrics generated over time:<br /><table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained</td></tr><tr><td>texture</td><td>number</td><td>Bytes</td><td>Number/null. Amount of texture memory in use by the app</td></tr><tr><td>system</td><td>number</td><td>Bytes</td><td>Number/null. Amount of system memory in use by the app</td></tr><tr><td>bitmaps</td><td>array</td><td>N/A</td><td>Array of objects that includes the following bitmap data: ${bitmaps-table}</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>channel_graph_metrics</td>
+<td>array</td>
+<td>Array of points for the following SceneGraph metrics generated over time (foreground and background):<br /><table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained</td></tr><tr><td>total_nodes</td><td>number</td><td>Bytes</td><td>Number/null. Total number of nodes in the channel</td></tr><tr><td>total_memory</td><td>number</td><td>Bytes</td><td>Number/null.</td></tr><tr><td>Nodes</td><td>array</td><td>-</td><td>Array of objects that includes the following fields:${rsg-groups-table}</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>graphics_rendering_frame_rate</td>
+<td>array</td>
+<td>Array of points for the following graphics rendering frame rate data generated over time (foreground and background): <table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained</td></tr><tr><td>fps</td><td>number</td><td>Count</td><td>Recent number of rendered graphics frames per seconds</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>sgrendezvous</td>
+<td>array</td>
+<td>Array of points for the following rendezvous event data generated over time (foreground and background): <table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained.</td></tr><tr><td>total_time</td><td>number</td><td>Bytes</td><td>The total time spent in rendezvous events during each sampling interval.</td></tr><tr><td>drop_ count</td><td>number</td><td>Bytes</td><td>The number of rendezvous events that were dropped because the event queue was full.</td></tr><tr><td>count</td><td>number</td><td>Bytes</td><td>The number of rendezvous events during each sampling interval</td></tr><tr><td>items</td><td>array</td><td>N/A</td><td>Array of objects that includes the following rendezvous event information: ${rendezvous-items-table}</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>fw_beacons</td>
+<td>array</td>
+<td>Array of app and media events (signal beacons) that have occurred on the app. Each event has a Unix timestamp in milliseconds (13-digit) marking when the event occurred. The timestamp has a <strong>number</strong> type provided in <strong>bytes</strong>. See <a href="/docs/developer-program/performance-guide/measuring-channel-performance.md">Measuring app performance </a>for detailed descriptions of these events.<br /><br /><strong>Channel events:</strong> <ul><li>app_compile_initiate / app_compile_complete</li><li>app_load_initiate / app_load_complete</li><li>app_splash_initiate / app_splash_complete</li><li>app_resume_initiate / app_resume_complete</li><li>app_suspend_initiate / app_suspend_complete</li><li>app_exit_initiate / app_exit_complete</li></ul><br /><br /><strong>Media events:</strong> <ul><li>vod_start_initiate / vod_start_complete</li><li>epg_launch_initiate / epg_launch_complete</li><li>live_channel_change_initiate / live_channel_change_complete</li></ul></td>
+</tr>
+<tr>
+<td>registry_usage</td>
+<td>array</td>
+<td>Array of points for the channel registry entries.<br /><table><thead><tr><th>Name</th><th>Type</th><th>Unit</th><th>Description</th></tr></thead><tbody><tr><td>Timestamp</td><td>number</td><td>Bytes</td><td>Unix timestamp in milliseconds (13-digit) when data was obtained.</td></tr><tr><td>Used</td><td>number</td><td>Bytes</td><td>Number/null. The amount of storage currently used on the device.</td></tr><tr><td>Sections</td><td>array</td><td>-</td><td>Array of objects that includes: <br />${registry-sections}</td></tr></tbody></table></td>
+</tr>
+</tbody>
+</table>
 
-| Name      | Type   | Unit  | Description                                                  |
-| :-------- | :----- | :---- | :----------------------------------------------------------- |
-| timestamp | number | Bytes | Unix timestamp in milliseconds (13-digit) when data was obtained |
-| used      | number | Bytes | Number/null. Amount of used memory (sum of resident and swap) by the app |
-| resident  | number | Bytes | Number/null. Amount of resident memory in use by the app (sum of shared, anonymous and file-backed memory) |
-| swap      | number | Bytes | Number/null. Amount of swap memory in use by the app     |
-| anon      | number | Bytes | Number/null. Amount of anonymous memory in use by the app |
-| file      | number | Bytes | Number/null. Amount of file-backed memory in use by the app |
-| shared    | number | Bytes | Number/null. Amount of shared memory in use by the app   |
 
-{#cpu-usage-table}
 
-| Name      | Type   | Unit    | Description                                                  |
-| :-------- | :----- | :------ | :----------------------------------------------------------- |
-| timestamp | number | Bytes   | Unix timestamp in milliseconds (13-digit) when data was obtained |
-| total     | number | Percent | Number/null. The total CPU usage percentage (sum of user and kernel) by the app |
-| user      | number | Percent | Number/null. User space CPU usage percentage by the app  |
-| sys       | number | Percent | Number/null. Kernel space CPU usage percentage by the app |
 
-{#graphics-usage-table}
 
-| Name      | Type   | Unit  | Description                                                  |
-| :-------- | :----- | :---- | :----------------------------------------------------------- |
-| timestamp | number | Bytes | Unix timestamp in milliseconds (13-digit) when data was obtained |
-| texture   | number | Bytes | Number/null. Amount of texture memory in use by the app  |
-| system    | number | Bytes | Number/null. Amount of system memory in use by the app   |
-| bitmaps   | array  | N/A   | Array of objects that includes the following bitmap data: ${bitmaps-table} |
 
-{#bitmaps-table}
 
-| Name   | Type   | Unit  | Description                             |
-| :----- | :----- | :---- | :-------------------------------------- |
-| bpp    | number | Bytes | The bits per pixel (bpp) of the bitmap. |
-| height | number | Bytes | The height of the bitmap in pixels.     |
-| width  | number | Bytes | The width of the bitmap in pixels.      |
-| size   | number | Bytes | The size of the bitmap in bytes.        |
-| name   | string | Bytes | The URL path of the bitmap.             |
 
-{#rsg-metrics-table}
 
-| Name         | Type   | Unit  | Description                                                  |
-| :----------- | :----- | :---- | :----------------------------------------------------------- |
-| timestamp    | number | Bytes | Unix timestamp in milliseconds (13-digit) when data was obtained |
-| total_nodes  | number | Bytes | Number/null. Total number of nodes in the channel            |
-| total_memory | number | Bytes | Number/null.                                                 |
-| Nodes        | array  | -     | Array of objects that includes the following fields:${rsg-groups-table} |
 
-{#frame-rate-table}
 
-| Name      | Type   | Unit  | Description                                                  |
-| :-------- | :----- | :---- | :----------------------------------------------------------- |
-| timestamp | number | Bytes | Unix timestamp in milliseconds (13-digit) when data was obtained |
-| fps       | number | Count | Recent number of rendered graphics frames per seconds        |
 
-{#rendezvous-table}
 
-| Name        | Type   | Unit  | Description                                                  |
-| :---------- | :----- | :---- | :----------------------------------------------------------- |
-| timestamp   | number | Bytes | Unix timestamp in milliseconds (13-digit) when data was obtained. |
-| total_time  | number | Bytes | The total time spent in rendezvous events during each sampling interval. |
-| drop_ count | number | Bytes | The number of rendezvous events that were dropped because the event queue was full. |
-| count       | number | Bytes | The number of rendezvous events during each sampling interval |
-| items       | array  | N/A   | Array of objects that includes the following rendezvous event information: ${rendezvous-items-table} |
 
-{#rendezvous-items-table}
 
-| Name        | Type   | Unit  | Description                                                  |
-| :---------- | :----- | :---- | :----------------------------------------------------------- |
-| Id          | number | Bytes | The unique ID of the rendezvous event.                       |
-| start       | number | Bytes | Number/null. The number of milliseconds that elapsed during the rendezvous event. |
-| end         | number | Bytes | Number/null. The number of milliseconds that elapsed during the rendezvous event. |
-| line_number | number | Bytes | Number/null. The line number of the rendezvous event.        |
-| name        | string | Bytes | The source of the rendezvous event.                          |
 
-{#channel-events-list}
-
-- app_compile_initiate / app_compile_complete
-- app_load_initiate / app_load_complete
-- app_splash_initiate / app_splash_complete
-- app_resume_initiate / app_resume_complete
-- app_suspend_initiate / app_suspend_complete
-- app_exit_initiate / app_exit_complete
-
-{#media-events-list}
-
-- vod_start_initiate / vod_start_complete
-- epg_launch_initiate / epg_launch_complete
-- live_channel_change_initiate / live_channel_change_complete
-
-{#bs-objects-usage-table}
-
-| Name      | Type   | Unit  | Description                                                  |
-| :-------- | :----- | :---- | :----------------------------------------------------------- |
-| timestamp | number | Bytes | Unix timestamp in milliseconds (13-digit) when data was obtained |
-| groups    | array  | N/A   | Array of objects that includes: <br /><br />${groups-table}  |
-
-{#rsg-groups-table}
-
-| Name   | Type   | Unit  | Description             |
-| :----- | :----- | :---- | :---------------------- |
-| Name   | string | Bytes | Name of the node        |
-| Count  | number | Bytes | Count of the node       |
-| Memory | number | Bytes | Memory size of the node |
-
-{#groups-table}
-
-| Name           | Type   | Unit  | Description                                                  |
-| :------------- | :----- | :---- | :----------------------------------------------------------- |
-| Name           | string | Bytes | Name of group.                                               |
-| Id             | string | Bytes | ID of the group.                                             |
-| Objects count  | number | Bytes | Count of object in the group.                                |
-| Objects        | array  | -     | Array of objects that includes the **count**, **name**, and **memory** of each object. |
-| Objects memory | number | Bytes | Memory size of objects in the group.                         |
-
-{#registry-usage-table}
-
-| Name      | Type   | Unit  | Description                                                  |
-| :-------- | :----- | :---- | :----------------------------------------------------------- |
-| Timestamp | number | Bytes | Unix timestamp in milliseconds (13-digit) when data was obtained. |
-| Used      | number | Bytes | Number/null. The amount of storage currently used on the device. |
-| Sections  | array  | -     | Array of objects that includes: <br />${registry-sections}   |
-
-{#registry-sections}
-
-| Name  | Type   | Unit  | Description                                                  |
-| :---- | :----- | :---- | :----------------------------------------------------------- |
-| Name  | string | Bytes | Name of section                                              |
-| Items | array  | -     | Items in the section. Each item includes the **key** (string) for that section. |
 
 ### Monitoring file example
 

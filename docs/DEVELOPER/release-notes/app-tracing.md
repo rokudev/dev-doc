@@ -76,64 +76,48 @@ Data stops streaming when the client disconnects. If the client reconnects, the 
 
 You can use the roPerfetto BrightScript component to capture custom events in a Perfetto trace. The types of events you can record include instantaneous, duration, scoped, and flow events. 
 
-| **Event**     | **Description**                                              | **Example**                         | **Snippet**           |
-| ------------- | ------------------------------------------------------------ | ----------------------------------- | --------------------- |
-| Instantaneous | Events without a duration                                    | keypress                            | ${instantaneous-code} |
-| Duration      | Events with a beginning and an end                           | long function                       | ${duration-code}      |
-| Scoped        | Similar to duration events, but the end-event is generated automatically when the object returned from the call is released. |                                     | ${scoped-code}        |
-| Flow          | Creation of a “flow” of events from one piece of code to another. | A Task thread to the Render thread. | ${flow-code}          |
 
-{#instantaneous-code}
+<table>
+<thead>
+<tr>
+<th><strong>Event</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Snippet</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instantaneous</td>
+<td>Events without a duration</td>
+<td>keypress</td>
+<td><pre><code><code>&lt;br /&gt;tracer = CreateObject("roPerfetto")&lt;br /&gt;tracer.instantEvent("my_instant_event")&lt;br /&gt;tracer.instantEvent("my_instant_event", \\{debug_1: 42, debug_2: "hello"\\})&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Events with a beginning and an end</td>
+<td>long function</td>
+<td><pre><code><code>&lt;br /&gt;sub myfunc()&lt;br /&gt;    tracer = CreateObject("roPerfetto")&lt;br /&gt;    params = \\{debug_1: 42, debug_2: "hello"\\}&lt;br /&gt;    tracer.beginEvent("my_duration_event", params)&lt;br /&gt;    do_stuff()&lt;br /&gt;    tracer.endEvent()&lt;br /&gt;end sub&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td>Scoped</td>
+<td>Similar to duration events, but the end-event is generated automatically when the object returned from the call is released.</td>
+<td></td>
+<td><pre><code><code>&lt;br /&gt;sub myfunc()&lt;br /&gt;    tracer = CreateObject("roPerfetto")&lt;br /&gt;    params = \\{debug_1: 42, debug_2: "hello"\\}&lt;br /&gt;    scoped_event = tracer.createScopedEvent("my_scoped_event", params)&lt;br /&gt;    do_stuff()&lt;br /&gt;    ' end event auto-created when scoped_event is released.&lt;br /&gt;end sub&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td>Flow</td>
+<td>Creation of a “flow” of events from one piece of code to another.</td>
+<td>A Task thread to the Render thread.</td>
+<td><pre><code><code>&lt;br /&gt;sub func1()&lt;br /&gt;    flowId = 42   ' A user-selected unique unsigned integer identifier&lt;br /&gt;    tracer = CreateObject("roPerfetto")&lt;br /&gt;    tracer.flowEvent(flowId, "my_flow_event_1")&lt;br /&gt;end sub&lt;br /&gt;sub func2()&lt;br /&gt;    flowId = 42&lt;br /&gt;    tracer = CreateObject("roPerfetto")&lt;br /&gt;    tracer.flowEvent(flowId, "my_flow_event_2")&lt;br /&gt;end sub&lt;br /&gt;sub func3()&lt;br /&gt;    flowId = 42&lt;br /&gt;    tracer = CreateObject("roPerfetto")&lt;br /&gt;    tracer.terminateFlow(flowId, "my_flow_event_3")&lt;br /&gt;end sub&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
-```
-tracer = CreateObject("roPerfetto")
-tracer.instantEvent("my_instant_event")
-tracer.instantEvent("my_instant_event", {debug_1: 42, debug_2: "hello"})
-```
 
-{#duration-code}
 
-```
-sub myfunc()
-    tracer = CreateObject("roPerfetto")
-    params = {debug_1: 42, debug_2: "hello"}
-    tracer.beginEvent("my_duration_event", params)
-    do_stuff()
-    tracer.endEvent()
-end sub
-```
 
-{#scoped-code}
 
-```
-sub myfunc()
-    tracer = CreateObject("roPerfetto")
-    params = {debug_1: 42, debug_2: "hello"}
-    scoped_event = tracer.createScopedEvent("my_scoped_event", params)
-    do_stuff()
-    ' end event auto-created when scoped_event is released.
-end sub
-```
-
-{#flow-code}
-
-```
-sub func1()
-    flowId = 42   ' A user-selected unique unsigned integer identifier
-    tracer = CreateObject("roPerfetto")
-    tracer.flowEvent(flowId, "my_flow_event_1")
-end sub
-sub func2()
-    flowId = 42
-    tracer = CreateObject("roPerfetto")
-    tracer.flowEvent(flowId, "my_flow_event_2")
-end sub
-sub func3()
-    flowId = 42
-    tracer = CreateObject("roPerfetto")
-    tracer.terminateFlow(flowId, "my_flow_event_3")
-end sub
-```
 
 ## Visualizing trace files in Perfetto
 
@@ -152,10 +136,3 @@ You can query the data in a trace using [PerfettoSQL](https://perfetto.dev/docs/
 3. Click **Run Query**.![perfetto-sql](https://image.roku.com/ZHZscHItMTc2/perfetto-sql.png)
 
 The following examples demonstrate some of the use cases for querying your trace data:
-
-| **Use case**                                                 | **Query**                                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Find long executions of swapBuffers which indicate places where the channel may be dropping frames | `SELECT * FROM slice WHERE name = 'swapBuffers' ORDER BY dur DESC;` |
-| Find places where the channel is handling a key press with OnKeyEvent() | `SELECT * FROM slice WHERE name = 'keyEvent' ORDER BY dur DESC;` |
-| Find all of the observers being called in the app.           | `SELECT * FROM slice WHERE name = 'observer.callback' ORDER BY dur DESC;` |
-| Find all of the places where the channel is calling setField. | `SELECT * FROM slice WHERE name = 'roSGNode.setField' ORDER BY dur DESC;` |

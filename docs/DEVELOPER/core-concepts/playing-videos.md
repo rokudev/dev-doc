@@ -428,12 +428,3 @@ a Video node that plays the video.
 The table below summarizes all of the downloadable samples demonstrating
 the video playback features introduced in this
 section.
-
-| Sample App                                                                 | Description                                                   |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| [Simple\_Grid\_and\_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_and_Video)                | Video player in a simple grid UI.                             |
-| [Simple\_Grid\_with\_Details\_and\_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video) | Video player in a simple grid UI with details page.           |
-| [PanelSet\_and\_Video](https://github.com/rokudev/samples/blob/master/media/PanelSet_and_Video)                    | Video player in a simple PanelSet UI.                         |
-| [VideoList](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/VideoList)                               | Video player with content selected from a LabelList.          |
-| [FastVideoStart](https://github.com/rokudev/samples/blob/master/media/FastVideoStart)                          | Sample demonstrating how to use Fast Video Start.             |
-| [SceneGraphCaptionsDemo](https://github.com/rokudev/samples/blob/master/media/SceneGraphCaptionsDemo)                  | Sample demonstrating how to integrate closed caption support. |

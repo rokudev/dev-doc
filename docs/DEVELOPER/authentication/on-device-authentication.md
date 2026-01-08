@@ -23,29 +23,58 @@ Apps implement on-device authentications so that customers can complete sign-ups
 
 To implement on-device authentication, you first verify whether a customer should have access to your content. To do this, you check whether the customer has an active Roku subscription for the content, and then check whether there is a valid access token stored in their device registry. If the device registry does not contain a valid access token, you check whether one is stored in the Roku cloud. The next steps depend on the results of these checks. The following table lists the next steps for each possible outcome; the subsequent flow chart illustrates the logic used in this authentication workflow.  
 
-| Active  Subscription through Roku Pay? | Valid Access Token in Device Registry and Entitlement? | Valid Access Token in Roku Cloud? | Next Steps                                                   |
-| :------------------------------------- | :----------------------------------------------------- | --------------------------------- | :----------------------------------------------------------- |
-| YES                                    | YES                                                    | —                                 | Get a refresh token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content. |
-| YES                                    | NO                                                     | YES                               | Store an access token in the device registry. Grant access to content. |
-| YES                                    | NO                                                     | NO                                | The next steps depend on whether the customer originally created their account through Roku Pay or your own service ("publisher service)":<br/> ${billingTypeList} |
-| NO                                     | YES                                                    | —                                 | Grant access to content.                                     |
-| NO                                     | NO                                                     | YES                               | If the customer is signed in, store the access token in the device registry, and grant access to content. If the customer is signing up (or has signed out), have them re-authenticate. |
-| NO                                     | NO                                                     | NO                                | Create a new subscription through Roku Pay.                  |
+
+<table>
+<thead>
+<tr>
+<th>Active  Subscription through Roku Pay?</th>
+<th>Valid Access Token in Device Registry and Entitlement?</th>
+<th>Valid Access Token in Roku Cloud?</th>
+<th>Next Steps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YES</td>
+<td>YES</td>
+<td>—</td>
+<td>Get a refresh token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.</td>
+</tr>
+<tr>
+<td>YES</td>
+<td>NO</td>
+<td>YES</td>
+<td>Store an access token in the device registry. Grant access to content.</td>
+</tr>
+<tr>
+<td>YES</td>
+<td>NO</td>
+<td>NO</td>
+<td>The next steps depend on whether the customer originally created their account through Roku Pay or your own service ("publisher service)":<br /> <ul><li><strong>Created through Roku Pay</strong>: Validate the previous transaction. Get a new access token from your entitlement server and store in device registry and Roku cloud. Grant access to content.<br /><br /></li><li><strong>Created through publisher service</strong>: Check whether the Roku cloud has an access token. If it does and the customer is signed in, store the access token in the device registry, and then grant access to content.</li></ul><p>If the customer is not signed up or is signed out, display your app UI, get the customer's email address, and have them sign up or sign back in. Once the customer has successfully authenticated, generate a new access token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.</p><p>If the Roku cloud does not have an access token, display your app UI and then get the customer's email address. Use the email address to check whether the customer is linked to an active subscription in your system. If there is already an active subscription, generate a new access token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.</p><p><img alt="roku815px - on-device-authenticaton with automatic account link flow chart" src="https://image.roku.com/ZHZscHItMTc2/on-device-authentication-aal-v11.jpeg" /></p><blockquote><p>For SVOD and TVOD apps (and other subscription services), on-device authentication deprecates the <a href="/docs/developer-program/authentication/authentication-and-linking.md">"rendezvous" registration method</a>. With this method, a customer was shown a registration code on their device and had to enter it on an external website. An authentication service then linked the customer's device to their account via an access token that was downloaded and stored on the device.</p><p>Authentication via a third-party oAuth provider such as Google or Facebook is not supported.</p></blockquote></td>
+</tr>
+<tr>
+<td>NO</td>
+<td>YES</td>
+<td>—</td>
+<td>Grant access to content.</td>
+</tr>
+<tr>
+<td>NO</td>
+<td>NO</td>
+<td>YES</td>
+<td>If the customer is signed in, store the access token in the device registry, and grant access to content. If the customer is signing up (or has signed out), have them re-authenticate.</td>
+</tr>
+<tr>
+<td>NO</td>
+<td>NO</td>
+<td>NO</td>
+<td>Create a new subscription through Roku Pay.</td>
+</tr>
+</tbody>
+</table>
 
 
-{#billingTypeList}
-* **Created through Roku Pay**: Validate the previous transaction. Get a new access token from your entitlement server and store in device registry and Roku cloud. Grant access to content.<br/><br/>
-* **Created through publisher service**: Check whether the Roku cloud has an access token. If it does and the customer is signed in, store the access token in the device registry, and then grant access to content.
 
-  If the customer is not signed up or is signed out, display your app UI, get the customer's email address, and have them sign up or sign back in. Once the customer has successfully authenticated, generate a new access token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.
-
-  If the Roku cloud does not have an access token, display your app UI and then get the customer's email address. Use the email address to check whether the customer is linked to an active subscription in your system. If there is already an active subscription, generate a new access token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.
-
-![roku815px - on-device-authenticaton with automatic account link flow chart](https://image.roku.com/ZHZscHItMTc2/on-device-authentication-aal-v11.jpeg)
-
-> For SVOD and TVOD apps (and other subscription services), on-device authentication deprecates the ["rendezvous" registration method](/docs/developer-program/authentication/authentication-and-linking.md). With this method, a customer was shown a registration code on their device and had to enter it on an external website. An authentication service then linked the customer's device to their account via an access token that was downloaded and stored on the device.
-
-> Authentication via a third-party oAuth provider such as Google or Facebook is not supported.
 
 ## Verifying access to content
 
@@ -74,13 +103,13 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
 
 3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call.
 
-        https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/transactionid
+        https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/\{partnerAPIKey\}/transactionid
 
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
         <result>
-            <transactionId>{transactionId}</transactionId>
+            <transactionId>\{transactionId\}</transactionId>
             ...
             <isEntitled>true</isEntitled>
             ...
@@ -216,7 +245,7 @@ To complete and validate the new subscription, follow these steps:
 
         myOrder = CreateObject("roSGNode", "ContentNode")
         itemPurchased = myOrder.createChild("ContentNode")
-        itemPurchased.addFields({ "code": "UPC3L5A", "qty": 1})
+        itemPurchased.addFields(\{ "code": "UPC3L5A", "qty": 1\})
         myChannelStore.order = myOrder
 
 
@@ -253,7 +282,7 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
 
         myChannelStore.requestedUserData("email")
         info = CreateObject(“roSGNode”, “ContentNode”)
-        info.addFields({context: “signin”})
+        info.addFields(\{context: “signin”\})
         myChannelStore.requestedUserDataInfo = info
 
 

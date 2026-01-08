@@ -70,12 +70,34 @@ When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases
 
 The [v2 getAllPurchases](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#getpurchases) API returns an **purchases.billingPlan.state** field that reports the status of a subscription, which may be one of the following values:
 
-| Subscription state | **purchases.billingPlan.state**                           |
-| ------------------ | :-------------------------------------------------------- |
-| Current            | "ActivePaid"<br />"ActiveFreeTrial"<br />"ActiveCanceled" |
-| In Recovery        | "ActiveInGracePeriod" (in 3-day grace period)             |
-| On Hold            | "InactiveOnHold"                                          |
-| Cancelled          | <br />"InactiveExpired"                                   |
+
+<table>
+<thead>
+<tr>
+<th>Subscription state</th>
+<th><strong>purchases.billingPlan.state</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current</td>
+<td>"ActivePaid"<br />"ActiveFreeTrial"<br />"ActiveCanceled"</td>
+</tr>
+<tr>
+<td>In Recovery</td>
+<td>"ActiveInGracePeriod" (in 3-day grace period)</td>
+</tr>
+<tr>
+<td>On Hold</td>
+<td>"InactiveOnHold"</td>
+</tr>
+<tr>
+<td>Cancelled</td>
+<td><br />"InactiveExpired"</td>
+</tr>
+</tbody>
+</table>
+
 
 #### Product Catalog 1.0 (ChannelStore API)
 
@@ -114,62 +136,51 @@ This reference summarizes the **request** and **requestStatus** fields used by t
 
 #### request
 
-| Field   | Type              | Description                                                  |
-| :------ | :---------------- | :----------------------------------------------------------- |
-| request | associative array | Includes the request's command and context. ${do-dunning-request} |
 
-{#do-dunning-request}
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request</td>
+<td>associative array</td>
+<td>Includes the request's command and context. <table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>command</td><td>string</td><td>Set to "DoRecovery"</td></tr><tr><td>context</td><td>associative array</td><td>Used to match the <strong>requestStatus</strong> with <strong>request</strong>. For example, you can set this to {"id: DoRecovery_1"}.</td></tr><tr><td>params</td><td>associative array</td><td>Optional. Used to configure the in-app Roku Pay subscription renewal dialog. If this parameter is not included, the in-app Roku Pay subscription renewal dialog does not allow customers to watch content while their subscription is in recovery. ${recovery-context-param}</td></tr></tbody></table></td>
+</tr>
+</tbody>
+</table>
 
-| Field   | Type              | Description                                                  |
-| :------ | :---------------- | :----------------------------------------------------------- |
-| command | string            | Set to "DoRecovery"                                          |
-| context | associative array | Used to match the **requestStatus** with **request**. For example, you can set this to {"id: DoRecovery_1"}. |
-| params  | associative array | Optional. Used to configure the in-app Roku Pay subscription renewal dialog. If this parameter is not included, the in-app Roku Pay subscription renewal dialog does not allow customers to watch content while their subscription is in recovery. ${recovery-context-param} |
 
-{#recovery-context-param}
 
-| Field           | Type   | Description                                                  |
-| --------------- | ------ | ------------------------------------------------------------ |
-| recoveryContext | string | This may be set to the following value: <br /><br />"playback": Sets the last option in the Roku Pay subscription renewal dialog to "Continue Watching". This lets customers continue watching content while their subscription is in recovery. |
 
 #### requestStatus
 
-| Field         | Type              | Description                                                  |
-| :------------ | :---------------- | :----------------------------------------------------------- |
-| requestStatus | associative array | Includes the status of the DoRecovery command and the recovery status data returned by it. ${do-dunning-request-status} |
 
-{#do-dunning-request-status}
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requestStatus</td>
+<td>associative array</td>
+<td>Includes the status of the DoRecovery command and the recovery status data returned by it. <table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>result</td><td>associative array</td><td>Contains the following key-value pairs for the recovery status of the subscription: ${result-field}</td></tr><tr><td>status</td><td>enum</td><td>The command completion status, which may be one of the following values:${status-list}</td></tr><tr><td>statusMessage</td><td>string</td><td>A text description of the command completion status.</td></tr><tr><td>command</td><td>string</td><td>The command passed into the request, which is "DoRecovery".</td></tr><tr><td>context</td><td>associative array</td><td>The context passed into the request (for example, {id: "DoRecovery_1"}).</td></tr></tbody></table></td>
+</tr>
+</tbody>
+</table>
 
-| Field         | Type              | Description                                                  |
-| :------------ | :---------------- | :----------------------------------------------------------- |
-| result        | associative array | Contains the following key-value pairs for the recovery status of the subscription: ${result-field} |
-| status        | enum              | The command completion status, which may be one of the following values:${status-list} |
-| statusMessage | string            | A text description of the command completion status.         |
-| command       | string            | The command passed into the request, which is "DoRecovery".  |
-| context       | associative array | The context passed into the request (for example, {id: "DoRecovery_1"}). |
 
-{#result-field}
 
-| Field            | Type             | Description                                                  |
-| ---------------- | ---------------- | ------------------------------------------------------------ |
-| recoveryStatus   | integer          | ${dunning-status-list}                                       |
-| recoveryProducts | array of strings | List of product codes associated with subscriptions for which payments are still attempting to be recovered. |
 
-{#dunning-status-list}
 
-- **3**. A subscription, which was in recovery (Roku was attempting to charge their method of payment over a period of days), has been canceled by the user. As a result, the subscription is no longer valid.
-- **2**. One or more subscriptions are still in recovery.
-- **1**. No subscriptions are in recovery.
-
-{#status-list}
-
-- **2**  Interrupted
-- **1**  Success
-- **0**  Network error
-- **-1** HTTP Error/Timeout
-- **-2** Timeout
-- **-3** Unknown Error
-- **-4** Invalid request
 
 #### SceneGraph (SDK 2) example
 

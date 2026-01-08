@@ -243,12 +243,12 @@ scheduledPods = []
 adBreakIndex = 0
 for each ad in adPods[0].ad
   ' schedule one ad per ad break
-  scheduledPods.Push({viewed : false,
+  scheduledPods.Push(\{viewed : false,
                       renderSequence : "midroll",
                       duration : ad.duration,
                       renderTime : adBreakSchedule[adBreakIndex],
                       ads : [ad]
-                      })
+                      \})
   adBreakIndex = adBreakIndex + 1
 end for
 ~~~~
@@ -414,7 +414,7 @@ The supported content meta-data attributes are:
 | Description          | Left-aligned relative to PosterUrl                       | "Description for custom buffering screen"                                                                          |
 
 ~~~~
-bufferScreenContent = {}
+bufferScreenContent = \{\}
 bufferScreenContent.HDBackgroundImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png"
 bufferScreenContent.HDPosterUrl = "http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png"
 bufferScreenContent.Title = "Title for custom buffering screen"
@@ -439,13 +439,13 @@ other roImageCanvas attributes.
 
 ~~~~
 layers = [
-    {Url: BackgroundImageUrl}
-    {Url: PosterUrl, TargetRect : {x : 405, y : 370, w : 467, h : 262}}
-    {
+    \{Url: BackgroundImageUrl\}
+    \{Url: PosterUrl, TargetRect : \{x : 405, y : 370, w : 467, h : 262\}\}
+    \{
         Text : "This is a custom build screen"
-        TextAttrs : { Color : "#FF0000", HAlign : "Center", Font : "Large"}
-        TargetRect : {y : 50, h : 30}
-    }
+        TextAttrs : \{ Color : "#FF0000", HAlign : "Center", Font : "Large"\}
+        TargetRect : \{y : 50, h : 30\}
+    \}
 ]
 adIface.setAdBufferScreenLayer(2, layers)
 ~~~~
@@ -530,7 +530,7 @@ video ad that the client application has just begun rendering,
 the `Impression` beacons for that ad could be fired with a single call:
 
 ~~~~
-adIface.fireTrackingEvents(ad, {type: "Impression"})
+adIface.fireTrackingEvents(ad, \{type: "Impression"\})
 ~~~~
 
 While the ad playback progresses, assuming the
@@ -539,14 +539,14 @@ seconds since the ad began rendering, the quartile beacons can be sent
 via:
 
 ~~~~
-adIface.fireTrackingEvents(ad, {time: adProgressTime})
+adIface.fireTrackingEvents(ad, \{time: adProgressTime\})
 ~~~~
 
 If the ad were paused by the user, then the client app would fire
 the `Pause` beacons:
 
 ~~~~
-adIface.fireTrackingEvents(ad, {type: "Pause"})
+adIface.fireTrackingEvents(ad, \{type: "Pause"\})
 ~~~~
 
 ## Requirements for server side ad insertion
@@ -746,27 +746,27 @@ to [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertio
 conform to this
 structure.
 
-Note: Square brackets ‘\[ \]’ indicate BrightScript arrays, curly brackets '{
-}' indicate associative arrays, and prefix ‘+’ indicates a required data
+Note: Square brackets ‘\[ \]’ indicate BrightScript arrays, curly brackets '\{
+\}' indicate associative arrays, and prefix ‘+’ indicates a required data
 member.
 
 **Ad structure**
 
 ~~~~
-adPods : [{
+adPods : [\{
          +viewed         : Boolean,
          +renderSequence : String ("preroll" | "midroll" | "postroll"),
          +duration       : Float (in s),
           renderTime     : Float (in s),
           slots          : Int,
           backfilled     : Boolean,
-         +tracking: [{
+         +tracking: [\{
             +event: String,
             +url: String,
             +triggered: Boolean,
              valid: Boolean
-          }],
-         +ads : [{
+          \}],
+         +ads : [\{
                  +duration     : Float (in s),
                  +streamFormat : String,
                  +adServer     : String,
@@ -776,7 +776,7 @@ adPods : [{
                   creativeId   : String,
                   creativeAdId : String,
                   clickThrough : String (URL),
-                 +streams : [{
+                 +streams : [\{
                              +url      : String (URL),
                              +bitrate  : Int (in kbps),
                              +width    : Int,
@@ -784,31 +784,31 @@ adPods : [{
                              +mimeType : String,
                               provider : String,
                               id       : String
-                  }],
-                 +tracking : [{
+                  \}],
+                 +tracking : [\{
                               +event     : String,
                               +url       : String (URL),
                               +triggered : Boolean,
                                valid     : Boolean,
                                time      : Float (in s)
-                  }],
-                  companionAds: [{
+                  \}],
+                  companionAds: [\{
                                  +url          : String (URL),
                                  +width        : Int,
                                  +height       : Int,
                                  +mimeType     : String,
                                   clickThrough : String (URL),
                                   provider     : String,
-                                 +tracking : [{
+                                 +tracking : [\{
                                               +event     : String,
                                               +url       : String (URL),
                                               +triggered : Boolean,
                                                valid     : Boolean,
                                                time      : Float (in s)
-                                  }]
-                  }]
-          }]
-}]
+                                  \}]
+                  \}]
+          \}]
+\}]
 ~~~~
 
 The object returned from a new call
@@ -914,40 +914,3 @@ a single primary genre code for the selected content from the following
 set of values. Publishers should provide the most specific category
 applicable to the content for which ads are to be shown.
 
-
-| Description                 | Code |
-| --------------------------- | ---- |
-| Adventure                   | A    |
-| Audience Participation      | AP   |
-| Award Ceremonies & Pageants | AC   |
-| Children’s Programming      | CP   |
-| Comedy Variety              | CV   |
-| Concert Music               | CM   |
-| Conversation, Colloquies    | CC   |
-| Daytime Drama               | DD   |
-| Devotional                  | D    |
-| Documentary, General        | DO   |
-| Documentary, News           | DN   |
-| Evening Animation           | EA   |
-| Feature Film                | FF   |
-| General Drama               | GD   |
-| General Variety             | GV   |
-| Instructions, Advice        | IA   |
-| Musical Drama               | MD   |
-| News                        | N    |
-| Official Police             | OP   |
-| Paid Political              | P    |
-| Participation Variety       | PV   |
-| Popular Music -Contemporary | PC   |
-| Popular Music -Standard     | PS   |
-| Private Detective           | PD   |
-| Quiz -Give Away             | QG   |
-| Quiz -Panel                 | QP   |
-| Science Fiction             | SF   |
-| Situation Comedy            | CS   |
-| Sports Anthology            | SA   |
-| Sports Commentary           | SC   |
-| Sports News                 | SN   |
-| Sports Event                | SE   |
-| Suspense/Mystery            | SM   |
-| Western Drama               | EW   |

@@ -61,48 +61,101 @@ To get started with your RAF integration, do the following:
 
 ## Supported features of popular ad formats
 
-| VAST 2.0 Feature                | Supported                                                    |
-| :------------------------------ | :----------------------------------------------------------- |
-| Linear Ads                      | Yes                                                          |
-| Wrapper and Inline Ads          | Yes                                                          |
-| Tracking Events                 | Yes                                                          |
-| ClickThrough (interactive ads)  | Yes                                                          |
-| Companion Ads                   | *apiFramework* handled: ${companionAds}                      |
-| MediaFile type                  | ${mediaFileType} |
-| Extension elements              | ${extensionElements} |
-| Non-Linear Ads                  | No                                                           |
-| VAST 3.0 Feature                | Supported                                                    |
-| Ad pods via sequence attribute  | Yes                                                          |
-| Extended error tracking         | Yes                                                          |
-| VAST tracking macros            | Yes                                                          |
-| Ad “buffet” selection           | Yes                                                          |
-| Skippable linear ads            | No                                                           |
-| OBA industry icon               | No                                                           |
-| VMAP Feature                    | Supported                                                    |
-| Ad pods playlists               | Yes                                                          |
-| Tracking events                 | Yes                                                          |
-| ‘repeatAfter’ AdBreak attribute | No                                                           |
-| Extension elements              | No                                                           |
 
-{#companionAds}
+<table>
+<thead>
+<tr>
+<th>VAST 2.0 Feature</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear Ads</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Wrapper and Inline Ads</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Tracking Events</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>ClickThrough (interactive ads)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Companion Ads</td>
+<td><em>apiFramework</em> handled: <ul><li>"innovid"</li><li>"brightline"</li><li>"brightline_RSG"</li></ul></td>
+</tr>
+<tr>
+<td>MediaFile type</td>
+<td><ul><li>"video/mp4"</li><li>"video/x-mp4"</li><li>"video/mp4-h264"</li><li>"application/x-mpegurl"</li><li>"application/vnd.apple.mpegurl"</li><li>"application/json"</li></ul></td>
+</tr>
+<tr>
+<td>Extension elements</td>
+<td><ul><li>DFP waterfall</li><li>TrueX</li></ul></td>
+</tr>
+<tr>
+<td>Non-Linear Ads</td>
+<td>No</td>
+</tr>
+<tr>
+<td>VAST 3.0 Feature</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Ad pods via sequence attribute</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Extended error tracking</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>VAST tracking macros</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Ad “buffet” selection</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Skippable linear ads</td>
+<td>No</td>
+</tr>
+<tr>
+<td>OBA industry icon</td>
+<td>No</td>
+</tr>
+<tr>
+<td>VMAP Feature</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Ad pods playlists</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Tracking events</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>‘repeatAfter’ AdBreak attribute</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Extension elements</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
 
-- "innovid"
-- "brightline"
-- "brightline_RSG"
 
-{#mediaFileType}
 
-- "video/mp4"
-- "video/x-mp4"
-- "video/mp4-h264"
-- "application/x-mpegurl"
-- "application/vnd.apple.mpegurl"
-- "application/json"
 
-{#extensionElements}
-
-- DFP waterfall
-- TrueX
 
 ## RAF video lesson
 

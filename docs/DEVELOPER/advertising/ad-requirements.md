@@ -45,18 +45,20 @@ Apps must integrate the following RAF-related requirements to pass certification
 <!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#raf-1-integration-requirements"	-->
 <!--- ||ccRuleEnd -->
 
+
 <!--- ||ccRuleBegin "1d0feeed-c939-4c3e-96f2-ee0bc69cd244" -->
 <!--- ||ccName "RAF 1.3 Audience measurement" -->
 <!--- ||ccDescriptionBegin "Channels in the U.S. Channel Store only that are not child-directed must support Roku ad tracking by calling the [enableAdMeasurements()](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#enableadmeasurementsenabled) method and passing the required content metadata within the following methods: [setContentGenre()](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean), [setContentId()](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean), and [setContentLength()](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#setcontentlengthlength-as-integer).<br /><br />Optionally, apps may use the [setNielsenGenre API](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#setnielsengenregenre-as-string) to pass specific Nielsen Genre granularity and the [setNielsenAppId API](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#setnielsenappidid-as-string) for those who specify a custom Nielsen App ID. <br /><br />The [enableAdMeasurements](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#enableadmeasurementsenabled) method deprecates the [enableNielsenDAR](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#nielsen-dar) API; therefore, do not use the [enableNielsenDAR](https://developer.roku.com/docs/developer-program/advertising/raf-api.md#nielsen-dar) API." -->
 <!--- ||ccDescriptionEnd -->
-<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#IntegratingtheRokuAdvertisingFramework-GeneralAudienceMeasurement"]	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md"]	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#IntegratingtheRokuAdvertisingFramework-set-nielsen-genre"]	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#setnielsenappidid-as-string"]	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#enableadmeasurementsenabled"]	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#nielsen-dar"]	-->
-<!--- ||ccRegion ["US"]	-->
+<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#IntegratingtheRokuAdvertisingFramework-GeneralAudienceMeasurement"]   -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md"] -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#IntegratingtheRokuAdvertisingFramework-set-nielsen-genre"]    -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#setnielsenappidid-as-string"] -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#enableadmeasurementsenabled"] -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/raf-api.md#nielsen-dar"] -->
+<!--- ||ccRegion ["US"] -->
+
 <!--- WARNING: This rule potentially has complex region logic. It may need to be broken apart into two or more rules, to adequately cover the situation with the region specification ability currently provided by the meta-data syntax	-->
 <!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#raf-1-integration-requirements"	-->
 <!--- ||ccRuleEnd -->
@@ -116,16 +118,18 @@ Apps must integrate the following RAF-related requirements to pass certification
 <!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-1-general-integration-requirements"  -->
 <!--- ||ccRuleEnd -->
 
+
 <!--- ||ccRuleBegin "81dedd38-f809-44ff-97dc-9d4e6b39e034" -->
 <!--- ||ccName "ADS 1.4 Demand API" -->
 <!--- ||ccDescriptionBegin "Channels in the U.S. Channel Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months may be required to implement the Demand API as part of their integration (this requirement is also applicable to new apps projected to reach the specified thresholds shortly after launch).<br /><br />Channels outside the U.S. Channel Store that have streamed more than an average of 200,000 hours per month over the last three months, and new apps outside the U.S. Channel Store that are projected to reach this threshold, may also be required to implement the Demand API." -->
 <!--- ||ccDescriptionEnd -->
-<!--- ||ccEffectiveDate "2021-04-01T12:00:00.000"	-->
-<!--- ||ccEngagementThreshold "Channels in the U.S. Channel Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months, or new apps that are projected to reach those thresholds shortly after launch. Channels outside the U.S. Channel Store that have streamed more than an average of 200,000 hours per month over the last three months, or new apps that are projected to reach those thresholds shortly after launch"	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/demand-api.md"]	-->
-<!--- ||ccRegion ["Global"]	-->
-<!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-1-general-integration-requirements"	-->
+<!--- ||ccEffectiveDate "2021-04-01T12:00:00.000"   -->
+<!--- ||ccEngagementThreshold "Channels in the U.S. Channel Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months, or new apps that are projected to reach those thresholds shortly after launch. Channels outside the U.S. Channel Store that have streamed more than an average of 200,000 hours per month over the last three months, or new apps that are projected to reach those thresholds shortly after launch" -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/demand-api.md"]  -->
+<!--- ||ccRegion ["Global"] -->
+<!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-1-general-integration-requirements" -->
 <!--- ||ccRuleEnd -->
+
 
 <!--- ||ccRuleBegin "34e1b582-f4ad-4d34-8564-f78b2a70394b" -->
 <!--- ||ccName "ADS 1.5 RFI screen for authenticated ad-monetized apps" -->
@@ -137,13 +141,50 @@ Apps must integrate the following RAF-related requirements to pass certification
 <!--- ||ccRuleEnd -->
 
 
-| Requirement | Name                                           | Description                                                  | Documentation                                                |
-| :---------- | :--------------------------------------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| ADS 1.1     | SDKs and libraries                             | Partners must disclose integration/use of all non-Roku SDKs, libraries, or other software systems and external advertising partners (for example, DSPs) that enable video, audio, or banner ad insertion, and Roku has the right to approve or deny such non-Roku SDKs, libraries, or other software systems. | [Roku Advertising Framework overview](/docs/developer-program/advertising/roku-advertising-framework.md) |
-| ADS 1.2     | Ad terms                                       | Apps that have an inventory relationship with Roku must meet the advertising terms specified in all applicable agreements. | [Video Advertising](/docs/features/monetization/video-advertisements.md) |
-| ADS 1.3     | Ad experience                                  | Apps selling ads exclusively and/or with Roku must comply with ad load, ad frequency, and acceptable ad requirements. | [Roku Advertising Guidelines](http://www.roku.com/adguidelines) |
-| ADS 1.4     | Demand API                                     | Apps in the U.S. Streaming Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months may be required to implement the Demand API as part of their integration (this requirement may also be applicable to new apps projected to reach the specified thresholds shortly after launch).<br /><br />Apps outside the U.S. Streaming Store that have streamed more than an average of 200,000 hours per month over the last three months, and new apps outside the U.S. Streaming Store that are projected to reach this threshold, may also be required to implement the Demand API. | [Implementing the Demand API](/docs/developer-program/advertising/demand-api.md) |
-| ADS 1.5     | RFI screen for authenticated ad-monetized apps | Authenticated ad-monetized apps must use the [getUserData](/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the channel. Only if the user declines the request may apps require the customer to manually enter their information. | [Signup requirements and best practices](/docs/developer-program/roku-pay/signup-best-practices.md)<br /><br />[Sign-in requirements and best practices](/docs/developer-program/roku-pay/signin-best-practices.md) |
+
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Name</th>
+<th>Description</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADS 1.1</td>
+<td>SDKs and libraries</td>
+<td>Partners must disclose integration/use of all non-Roku SDKs, libraries, or other software systems and external advertising partners (for example, DSPs) that enable video, audio, or banner ad insertion, and Roku has the right to approve or deny such non-Roku SDKs, libraries, or other software systems.</td>
+<td><a href="/docs/developer-program/advertising/roku-advertising-framework.md">Roku Advertising Framework overview</a></td>
+</tr>
+<tr>
+<td>ADS 1.2</td>
+<td>Ad terms</td>
+<td>Apps that have an inventory relationship with Roku must meet the advertising terms specified in all applicable agreements.</td>
+<td><a href="/docs/features/monetization/video-advertisements.md">Video Advertising</a></td>
+</tr>
+<tr>
+<td>ADS 1.3</td>
+<td>Ad experience</td>
+<td>Apps selling ads exclusively and/or with Roku must comply with ad load, ad frequency, and acceptable ad requirements.</td>
+<td><a href="http://www.roku.com/adguidelines">Roku Advertising Guidelines</a></td>
+</tr>
+<tr>
+<td>ADS 1.4</td>
+<td>Demand API</td>
+<td>Apps in the U.S. Streaming Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months may be required to implement the Demand API as part of their integration (this requirement may also be applicable to new apps projected to reach the specified thresholds shortly after launch).<br /><br />Apps outside the U.S. Streaming Store that have streamed more than an average of 200,000 hours per month over the last three months, and new apps outside the U.S. Streaming Store that are projected to reach this threshold, may also be required to implement the Demand API.</td>
+<td><a href="/docs/developer-program/advertising/demand-api.md">Implementing the Demand API</a></td>
+</tr>
+<tr>
+<td>ADS 1.5</td>
+<td>RFI screen for authenticated ad-monetized apps</td>
+<td>Authenticated ad-monetized apps must use the <a href="/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata">getUserData</a> command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the channel. Only if the user declines the request may apps require the customer to manually enter their information.</td>
+<td><a href="/docs/developer-program/roku-pay/signup-best-practices.md">Signup requirements and best practices</a><br /><br /><a href="/docs/developer-program/roku-pay/signin-best-practices.md">Sign-in requirements and best practices</a></td>
+</tr>
+</tbody>
+</table>
+
 
 <!--- ||ccCatBegin "75a523a7-65bf-4712-a2e9-49d32e75e9ba" -->
 
@@ -151,15 +192,17 @@ Apps must integrate the following RAF-related requirements to pass certification
 
 <!--- ||ccCatEnd -->
 
+
 <!--- ||ccRuleBegin "060c3d3a-b0cf-47dd-a369-c1e6d39c22ae" -->
-<!--- ||ccName "ADS 2.1 Roku ID for Advertisers (RIDA) identifier<br/>Limit Ad Tracking (LAT) flag" -->
+<!--- ||ccName "ADS 2.1 Roku ID for Advertisers (RIDA) identifier<br />Limit Ad Tracking (LAT) flag" -->
 <!--- ||ccDescriptionBegin "Channels must pass Roku's ID for Advertisers (RIDA) and "limit ad tracking" (LAT) value on ad server requests. If the user has opted out, channels must still pass the temporary ID returned by the [rodeviceInfo.GetRida()](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string) function to support frequency capping (this temporary ID is different than the UUID returned if the user has not opted out; it expires after 30 days)." -->
 <!--- ||ccDescriptionEnd -->
-<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string", "https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean", "https://developer.roku.com/docs/developer-program/advertising/raf-api.md#IntegratingtheRokuAdvertisingFramework-URLParameterMacros"]	-->
-<!--- ||ccRegion ["Global"]	-->
-<!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-2-privacy-requirements"	-->
+<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string", "https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean", "https://developer.roku.com/docs/developer-program/advertising/raf-api.md#IntegratingtheRokuAdvertisingFramework-URLParameterMacros"]   -->
+<!--- ||ccRegion ["Global"] -->
+<!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-2-privacy-requirements" -->
 <!--- ||ccRuleEnd -->
+
 
 <!--- ||ccRuleBegin "1dffc485-b460-4342-b0d7-79df06457d25" -->
 <!--- ||ccName "ADS 2.2 Child-directed content" -->
@@ -171,10 +214,32 @@ Apps must integrate the following RAF-related requirements to pass certification
 <!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-2-privacy-requirements"	-->
 <!--- ||ccRuleEnd -->
 
-| Requirement | Name                                                         | Description                                                  | Documentation                                                |
-| :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| ADS 2.1     | Roku ID for Advertisers (RIDA) identifier  Limit Ad Tracking (LAT) flag | Apps must pass Roku's ID for Advertisers (RIDA) and "limit ad tracking" (LAT) value on ad server requests. If the user has opted out, apps must still pass the temporary ID returned by the [rodeviceInfo.GetRida()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string) function to support frequency capping (this temporary ID is different than the UUID returned if the user has not opted out; it expires after 30 days). | [GetRida()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string)<br /><br /> [IsRIDADisabled()asBoolean](/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean) <br /><br />[URL parameter macros](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros) |
-| ADS 2.2     | Child-directed content                                       | Apps with child-directed content must make ad requests that indicate that content is child-directed when serving ads during child-directed content. | [kidsContent parameter in the setContentGenre() method](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean) <br /><br />[ROKU_ADS_KIDS_CONTENT URL parameter macro](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros) |
+
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Name</th>
+<th>Description</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADS 2.1</td>
+<td>Roku ID for Advertisers (RIDA) identifier  Limit Ad Tracking (LAT) flag</td>
+<td>Apps must pass Roku's ID for Advertisers (RIDA) and "limit ad tracking" (LAT) value on ad server requests. If the user has opted out, apps must still pass the temporary ID returned by the <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string">rodeviceInfo.GetRida()</a> function to support frequency capping (this temporary ID is different than the UUID returned if the user has not opted out; it expires after 30 days).</td>
+<td><a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string">GetRida()</a><br /><br /> <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean">IsRIDADisabled()asBoolean</a> <br /><br /><a href="/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros">URL parameter macros</a></td>
+</tr>
+<tr>
+<td>ADS 2.2</td>
+<td>Child-directed content</td>
+<td>Apps with child-directed content must make ad requests that indicate that content is child-directed when serving ads during child-directed content.</td>
+<td><a href="/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean">kidsContent parameter in the setContentGenre() method</a> <br /><br /><a href="/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros">ROKU_ADS_KIDS_CONTENT URL parameter macro</a></td>
+</tr>
+</tbody>
+</table>
+
 
 
 
@@ -206,10 +271,32 @@ Apps must integrate the following RAF-related requirements to pass certification
 <!--- ||ccRuleEnd -->
 
 
-| Requirement | Name       | Description                                                  | Documentation                                                |
-| :---------- | :--------- | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| ADS 3.1     | Channel ID | Apps must pass their Roku channel ID in ad server requests to Roku. | [roChannelInfo.getId() function](/docs/references/brightscript/interfaces/ifappinfo.md#getid-as-string)<br /><br />[ROKU_ADS_APP_ID URL parameter macro populated by RAF](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros) |
-| ADS 3.2     | User agent | Apps must use the Roku-generated device user agent in all server-side ad requests. | [RAF integration guide](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#3-user-agent-requirements) |
+
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Name</th>
+<th>Description</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADS 3.1</td>
+<td>Channel ID</td>
+<td>Apps must pass their Roku channel ID in ad server requests to Roku.</td>
+<td><a href="/docs/references/brightscript/interfaces/ifappinfo.md#getid-as-string">roChannelInfo.getId() function</a><br /><br /><a href="/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros">ROKU_ADS_APP_ID URL parameter macro populated by RAF</a></td>
+</tr>
+<tr>
+<td>ADS 3.2</td>
+<td>User agent</td>
+<td>Apps must use the Roku-generated device user agent in all server-side ad requests.</td>
+<td><a href="/docs/developer-program/advertising/integrating-roku-advertising-framework.md#3-user-agent-requirements">RAF integration guide</a></td>
+</tr>
+</tbody>
+</table>
+
 
 <!--- ||ccCatBegin "21d1516c-b39e-4c86-8999-f54744f40c95" -->
 
@@ -217,15 +304,17 @@ Apps must integrate the following RAF-related requirements to pass certification
 
 <!--- ||ccCatEnd -->
 
+
 <!--- ||ccRuleBegin "58e371bf-4f5f-4c00-89bf-f8f5d298e5f6" -->
 <!--- ||ccName "ADS 4.1 Ad break - back button behavior" -->
-<!--- ||ccDescriptionBegin "For all channels except those streaming live content or replaying live broadcast streams, when the back button is pressed during an ad break, the channel returns to the previous screen (if the channel can't return to the previous screen, the channel displays an exit confirmation dialog).<br/>When playback resumes (with the same or different content), channels must attempt to initiate an ad break to preserve the previously exited ad experience." -->
+<!--- ||ccDescriptionBegin "For all channels except those streaming live content or replaying live broadcast streams, when the back button is pressed during an ad break, the channel returns to the previous screen (if the channel can't return to the previous screen, the channel displays an exit confirmation dialog).<br />When playback resumes (with the same or different content), channels must attempt to initiate an ad break to preserve the previously exited ad experience." -->
 <!--- ||ccDescriptionEnd -->
-<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"	-->
-<!--- ||ccRegion ["Global"]	-->
-<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/integrating-roku-advertising-framework.md"]	-->
-<!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-4-ad-break-playback-requirements"	-->
+<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
+<!--- ||ccRegion ["Global"] -->
+<!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/integrating-roku-advertising-framework.md"]  -->
+<!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-4-ad-break-playback-requirements"   -->
 <!--- ||ccRuleEnd -->
+
 
 <!--- ||ccRuleBegin "d98b171d-ff75-4efa-b884-6f69d2e472ed" -->
 <!--- ||ccName "ADS 4.2 Ad break - FF/REW commands" -->
@@ -236,8 +325,3 @@ Apps must integrate the following RAF-related requirements to pass certification
 <!--- ||ccRelatedResources ["https://developer.roku.com/docs/developer-program/advertising/integrating-roku-advertising-framework.md"]	-->
 <!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/advertising/ad-requirements.md#ads-4-ad-break-playback-requirements"	-->
 <!--- ||ccRuleEnd -->
-
-| Requirement | Name                            | Description                                                  | Documentation                                                |
-| :---------- | :------------------------------ | :----------------------------------------------------------- | ------------------------------------------------------------ |
-| ADS 4.1     | Ad break - back button behavior | All apps must return to the previous screen when the back button is pressed during an ad break (if the app can't return to the previous screen, the app must display an exit confirmation dialog).<br /><br />All apps must attempt to initiate an ad break to preserve the previously exited ad experience when playback resumes. Exemptions from this requirement include (1) live streams and (2) replays of broadcast streams, unless ad insertion is used to insert new ads in the replay. | [RAF integration guide](/docs/developer-program/advertising/integrating-roku-advertising-framework.md) |
-| ADS 4.2     | Ad break - FF/REW commands      | All apps must ignore FF/REW commands received during an ad break (via either key presses or voice commands). Exemptions from this requirement include (1) live streams and (2) replays of broadcast streams, unless ad insertion is used to insert new ads in the replay. | [RAF integration guide](/docs/developer-program/advertising/integrating-roku-advertising-framework.md) |

@@ -120,98 +120,124 @@ commands to the Roku device.
 
 ### General ECP commands
 
-| Command                                                      | Description                                                  | Required Device Settings                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| query/media-player                                           | Returns a child element named 'player' that identifies the media player state. The information returned includes the current stream segment and position of the content being played, the running time of the content, audio format, and buffering. This command is accessed using an HTTP GET. |                                                              |
-| keydown/&lt;KEY&gt;                                          | Equivalent to pressing the remote control key identified after the slash. This command is sent using an HTTP POST with no body. | **Control by mobile apps** setting “Enabled”                 |
-| keyup/&lt;KEY&gt;                                            | Equivalent to releasing the remote control key identified after the slash. This command is sent using an HTTP POST with no body. | **Control by mobile apps** setting “Enabled”                 |
-| keypress/&lt;KEY&gt;                                         | Equivalent to pressing down and releasing the remote control key identified after the slash. You can also use this command, and the keydown and keyup commands, to send keyboard alphanumeric characters when a keyboard screen is active, as described in [Keypress Key Values](#keypress-key-values). This command is sent using an HTTP POST with no body. | **Control by mobile apps** setting “Enabled”                 |
-| query/device-info                                            | Retrieves device information similar to that returned by roDeviceInfo. This command is accessed using an HTTP GET.<br /><br />As of Roku OS 15.0, this command returns the following fields that indicate whether TV power and audio volume control have been enabled on a Roku streaming player: <br /><br />- supports-tv-power-control<br />- supports-audio-volume-control |                                                              |
-| query/icon/&lt;APP_ID&gt;                                    | supports-tv-power-control supports-audio-volume-controlReturns an icon corresponding to the application identified by appID. The binary data with an identifying MIME-type header is returned. This command is accessed using an HTTP GET. Example: GET /query/icon/1 | **Control by mobile apps** setting “Enabled”                 |
-| query/chanperf<br /><br />query/chanperf/<*channelld*\>?duration-seconds=<*seconds*> | Returns the current memory and CPU utilization of the app running in the foreground (RAM usage is reported bytes). The foreground app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file. <br /><br />${query-chanperf-list} | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/r2d2-bitmaps                                           | Returns a list of the assets that have been loaded into texture memory and the amount of used, available, and maximum memory on your device (in bytes).<br /><br />As of Roku OS 11.5, this query returns all bitmaps in texture memory, including those that cannot be directly attributed to an app. | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/sgnodes/all?count_only=true&sizes=true                 | Returns all the nodes created by the currently running app. This includes the number of **osref** references to the node (held in the Roku platform) and **bscref** references (held in the app).<br /><br />${query-sgnodes-list} - The **count_only** parameter returns the total number of objects as a parameter in the **All-Nodes** field .<br />- The **size** parameter returns the memory used by the object (in kB). | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/sgnodes/roots?count_only=true&sizes=true               | Prints every existing node without a parent that has been created by the currently running app. The existence of these un-parented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node. | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/sgnodes/nodes?node-id=*nodeId*&count_only=true&sizes=true | Prints nodes with an id field set to node_ID, except it, bypasses all the hierarchy and rules and just runs straight down the whole list in the order of node creation. It will list multiple nodes if there are several that match. | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| sgrendezvous                                                 | Lists the node rendezvous events for a sideloaded app or production/beta app linked to the Roku developer's account.<br /><br />Use the following commands to enable the logging of rendezvous events, log the events, and disable logging. To use these commands, the device must have developer mode enabled. <br /><br />${query-sgrendezvous-table} | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/registry/<*channelld*\>                                | Lists the entries in the device registry for a sideloaded app or production/beta app linked to the Roku developer's account. The app ID must be provided; for sideloaded apps, use "dev" as the channelId. | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/graphics-frame-rate<br /><br />*Available since Roku OS 12.0* | Returns the recent number of rendered graphics frames per seconds (this value is separate from the video frame rate). Developer mode must be enabled to use this command. | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| fwbeacons<br /><br />*Available since Roku OS 12.0*          | Tracks app and media lifecycle events for a specific app. To use these commands, the device must have developer mode enabled.<br />${fwbeacons-table} | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/app-object-counts/<*channelId*\><br /><br />*Available since Roku OS 13.0* | Returns the counts for the different BrightScript node objects in the app. This helps developers determine the counts of each type of object held by their Brightscript app.<br /><br />The app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file. | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| query/app-state/<*appId*\><br /><br />*Available since Roku OS 13.0* | Returns the current app state: "active", "background" (suspended; running in the background), or "inactive". <br /><br />The app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file.<br /><br />If the app is not installed, this command returns an error. | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| exit-app<br /><br />(POST request)<br /><br />*Available since Roku OS 13.0* | Suspends or terminates an app that is running: <br />${exit-app-list} | Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled” |
-| input                                                        | Sends custom events to the current application. It takes a user defined list of name-value pairs sent as query string URI parameters. The external control server places these name-value pairs into an associative array, and passes them directly through to the currently executing app script using a Message Port attached to a created roInput object.<br /><br />[Input Command Conventions](/docs/developer-program/dev-tools/external-control-api.md#input-command-conventions) includes detailed recommendations on how to pass your data.<br /><br />Messages of type [roInputEvent](/docs/references/brightscript/events/roinputevent.md) have a GetInfo() method that will obtain the associative array. The arguments must be URL-encoded. <br /><br />This command is sent using an HTTP POST with no body. Example: `POST /input?acceleration.x=0.0&acceleration.y=0.0&acceleration.z=9.8` |                                                              |
 
-{#query-chanperf-list}
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Required Device Settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query/media-player</td>
+<td>Returns a child element named 'player' that identifies the media player state. The information returned includes the current stream segment and position of the content being played, the running time of the content, audio format, and buffering. This command is accessed using an HTTP GET.</td>
+<td></td>
+</tr>
+<tr>
+<td>keydown/&lt;KEY&gt;</td>
+<td>Equivalent to pressing the remote control key identified after the slash. This command is sent using an HTTP POST with no body.</td>
+<td><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>keyup/&lt;KEY&gt;</td>
+<td>Equivalent to releasing the remote control key identified after the slash. This command is sent using an HTTP POST with no body.</td>
+<td><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>keypress/&lt;KEY&gt;</td>
+<td>Equivalent to pressing down and releasing the remote control key identified after the slash. You can also use this command, and the keydown and keyup commands, to send keyboard alphanumeric characters when a keyboard screen is active, as described in <a href="#keypress-key-values">Keypress Key Values</a>. This command is sent using an HTTP POST with no body.</td>
+<td><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/device-info</td>
+<td>Retrieves device information similar to that returned by roDeviceInfo. This command is accessed using an HTTP GET.<br /><br />As of Roku OS 15.0, this command returns the following fields that indicate whether TV power and audio volume control have been enabled on a Roku streaming player: <br /><br />- supports-tv-power-control<br />- supports-audio-volume-control</td>
+<td></td>
+</tr>
+<tr>
+<td>query/icon/&lt;APP_ID&gt;</td>
+<td>supports-tv-power-control supports-audio-volume-controlReturns an icon corresponding to the application identified by appID. The binary data with an identifying MIME-type header is returned. This command is accessed using an HTTP GET. Example: GET /query/icon/1</td>
+<td><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/chanperf<br /><br />query/chanperf/&lt;<em>channelld</em>&gt;?duration-seconds=&lt;<em>seconds</em>&gt;</td>
+<td>Returns the current memory and CPU utilization of the app running in the foreground (RAM usage is reported bytes). The foreground app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file. <br /><br /><ul><li><p>Including the <strong>channelId</strong> option in the path outputs statistics for a specific app from the Streaming Store. To use this command, the device must be keyed with the same developer ID/key that was used to generate the package file. The app's process ID (pid) is added to the output of this command.</p></li><li><p>Including <strong>duration-seconds</strong> in the query string executes and repeats the <strong>chanperf</strong> command the specified number of seconds. To cancel a repeating command, use the chanperf command with no arguments or with the duration-seconds parameter set to 0 ("chanperf" or "chanperf/duration-seconds=0"). The default duration is <strong>1</strong> second.</p></li></ul></td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/r2d2-bitmaps</td>
+<td>Returns a list of the assets that have been loaded into texture memory and the amount of used, available, and maximum memory on your device (in bytes).<br /><br />As of Roku OS 11.5, this query returns all bitmaps in texture memory, including those that cannot be directly attributed to an app.</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/sgnodes/all?count_only=true&amp;sizes=true</td>
+<td>Returns all the nodes created by the currently running app. This includes the number of <strong>osref</strong> references to the node (held in the Roku platform) and <strong>bscref</strong> references (held in the app).<br /><br /><ul><li><p>The <strong>bcsref</strong> count includes references from "m." variable and local variables. Child references and field references do not increase <strong>bscref</strong> counts. The <strong>bscref</strong> count provides a more relevant and accurate indication of the resources that the app itself controls.  </p></li><li><p>The <strong>osref</strong> count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one <strong>osref</strong> on the child. Additionally, any field of type <strong>node</strong>, <strong>nodearray</strong>, or <strong>assocarray</strong> will add one <strong>osref</strong> to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node. The reported <strong>osref</strong> count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes.</p></li></ul> - The <strong>count_only</strong> parameter returns the total number of objects as a parameter in the <strong>All-Nodes</strong> field .<br />- The <strong>size</strong> parameter returns the memory used by the object (in kB).</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/sgnodes/roots?count_only=true&amp;sizes=true</td>
+<td>Prints every existing node without a parent that has been created by the currently running app. The existence of these un-parented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/sgnodes/nodes?node-id=<em>nodeId</em>&amp;count_only=true&amp;sizes=true</td>
+<td>Prints nodes with an id field set to node_ID, except it, bypasses all the hierarchy and rules and just runs straight down the whole list in the order of node creation. It will list multiple nodes if there are several that match.</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>sgrendezvous</td>
+<td>Lists the node rendezvous events for a sideloaded app or production/beta app linked to the Roku developer's account.<br /><br />Use the following commands to enable the logging of rendezvous events, log the events, and disable logging. To use these commands, the device must have developer mode enabled. <br /><br /><table><thead><tr><th>Command</th><th>Argument</th><th>Description</th></tr></thead><tbody><tr><td>sgrendezvous/track<br />(POST request)</td><td>channel_id (optional)</td><td>Starts the logging of node rendezvous events node between threads. Only one app can be tracked at a time. Tracking a different app clears any queued rendezvous events.<br /><br />To track rendezvous events, send a POST command with no JSON body: ${track-rendezvous-events-request-code}The response to this command is as follows: ${track-rendezvous-events-response-code}</td></tr><tr><td>query/sgrendezvous</td><td></td><td>Returns the rendezvous events that have occurred since tracking was enabled, or since the previous call to query/sgrendezvous. A maximum of 1,000 events are queued between calls; events beyond this limit are not logged. If events are dropped, the response includes the total count of those dropped events.<br /><br />To retrieve rendezvous events, send a GET command: ${get-rendezvous-events-request-code}<br />See <a href="#querysgrendezvous-example">query/sgrendezvous example</a> for details on the command response.</td></tr><tr><td>sgrendezvous/untrack</td><td></td><td>To stop the tracking of rendezvous events, send a POST command with no JSON body: ${untrack-rendezvous-events-request-code}<br />The response to this command is as follows: ${untrack-rendezvous-events-response-code}</td></tr></tbody></table></td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/registry/&lt;<em>channelld</em>&gt;</td>
+<td>Lists the entries in the device registry for a sideloaded app or production/beta app linked to the Roku developer's account. The app ID must be provided; for sideloaded apps, use "dev" as the channelId.</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/graphics-frame-rate<br /><br /><em>Available since Roku OS 12.0</em></td>
+<td>Returns the recent number of rendered graphics frames per seconds (this value is separate from the video frame rate). Developer mode must be enabled to use this command.</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>fwbeacons<br /><br /><em>Available since Roku OS 12.0</em></td>
+<td>Tracks app and media lifecycle events for a specific app. To use these commands, the device must have developer mode enabled.<br /><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td>fwbeacons/track fwbeacons/track/&lt;<em>channelId</em>&gt;<br />(POST request)</td><td>Enables tracking of app and media lifecycle events for a specific app. When tracking is enabled, a maximum of 1,000 events may be queued for retrieval with the <strong>query/fwbeacons</strong> command; events may be lost if not queried. If tracking is enabled with a different channel ID, all queued events on the previous app are discarded.<br /><br />If the <em>channelId</em> path parameter is not specified, the query is run on the foreground UI app.<br /><br />All devices may monitor a sideloaded app. Devices that are keyed may monitor apps from the Streaming Store that are signed with the same developer key.</td></tr><tr><td>query/fwbeacons</td><td>Retrieves the app and media lifecycle events that have occurred since the previous query, or since tracking was enabled if no query has been done.</td></tr><tr><td>fwbeacons/untrack</td><td>Disables tracking of app and media lifecycle events (if enabled) and discards all queued events.</td></tr></tbody></table></td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/app-object-counts/&lt;<em>channelId</em>&gt;<br /><br /><em>Available since Roku OS 13.0</em></td>
+<td>Returns the counts for the different BrightScript node objects in the app. This helps developers determine the counts of each type of object held by their Brightscript app.<br /><br />The app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file.</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>query/app-state/&lt;<em>appId</em>&gt;<br /><br /><em>Available since Roku OS 13.0</em></td>
+<td>Returns the current app state: "active", "background" (suspended; running in the background), or "inactive". <br /><br />The app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file.<br /><br />If the app is not installed, this command returns an error.</td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>exit-app<br /><br />(POST request)<br /><br /><em>Available since Roku OS 13.0</em></td>
+<td>Suspends or terminates an app that is running: <br /><ul><li>If the app supports Instant Resume and is running in the foreground, sending this command suspends the app (the app runs in the background).</li><li>If the app supports Instant Resume and is running in the background or the app does not support Instant Resume and is running, sending this command terminates the app.</li></ul></td>
+<td>Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting “Enabled”</td>
+</tr>
+<tr>
+<td>input</td>
+<td>Sends custom events to the current application. It takes a user defined list of name-value pairs sent as query string URI parameters. The external control server places these name-value pairs into an associative array, and passes them directly through to the currently executing app script using a Message Port attached to a created roInput object.<br /><br /><a href="/docs/developer-program/dev-tools/external-control-api.md#input-command-conventions">Input Command Conventions</a> includes detailed recommendations on how to pass your data.<br /><br />Messages of type <a href="/docs/references/brightscript/events/roinputevent.md">roInputEvent</a> have a GetInfo() method that will obtain the associative array. The arguments must be URL-encoded. <br /><br />This command is sent using an HTTP POST with no body. Example: <code>POST /input?acceleration.x=0.0&amp;acceleration.y=0.0&amp;acceleration.z=9.8</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
-- Including the **channelId** option in the path outputs statistics for a specific app from the Streaming Store. To use this command, the device must be keyed with the same developer ID/key that was used to generate the package file. The app's process ID (pid) is added to the output of this command.
-
-- Including **duration-seconds** in the query string executes and repeats the **chanperf** command the specified number of seconds. To cancel a repeating command, use the chanperf command with no arguments or with the duration-seconds parameter set to 0 ("chanperf" or "chanperf/duration-seconds=0"). The default duration is **1** second.
-
-{#query-sgnodes-list}
-
-- The **bcsref** count includes references from "m." variable and local variables. Child references and field references do not increase **bscref** counts. The **bscref** count provides a more relevant and accurate indication of the resources that the app itself controls.  
-
-- The **osref** count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one **osref** on the child. Additionally, any field of type **node**, **nodearray**, or **assocarray** will add one **osref** to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node. The reported **osref** count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes.
-
-{#query-sgrendezvous-table}
-
-| Command                                | Argument              | Description                                                  |
-| -------------------------------------- | --------------------- | ------------------------------------------------------------ |
-| sgrendezvous/track<br />(POST request) | channel_id (optional) | Starts the logging of node rendezvous events node between threads. Only one app can be tracked at a time. Tracking a different app clears any queued rendezvous events.<br /><br />To track rendezvous events, send a POST command with no JSON body: ${track-rendezvous-events-request-code}The response to this command is as follows: ${track-rendezvous-events-response-code} |
-| query/sgrendezvous                     |                       | Returns the rendezvous events that have occurred since tracking was enabled, or since the previous call to query/sgrendezvous. A maximum of 1,000 events are queued between calls; events beyond this limit are not logged. If events are dropped, the response includes the total count of those dropped events.<br /><br />To retrieve rendezvous events, send a GET command: ${get-rendezvous-events-request-code}<br />See [query/sgrendezvous example](#querysgrendezvous-example) for details on the command response. |
-| sgrendezvous/untrack                   |                       | To stop the tracking of rendezvous events, send a POST command with no JSON body: ${untrack-rendezvous-events-request-code}<br />The response to this command is as follows: ${untrack-rendezvous-events-response-code} |
-
-{#fwbeacons-table}
-
-| Command                                                      | Description                                                  |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
-| fwbeacons/track fwbeacons/track/<*channelId*><br />(POST request) | Enables tracking of app and media lifecycle events for a specific app. When tracking is enabled, a maximum of 1,000 events may be queued for retrieval with the **query/fwbeacons** command; events may be lost if not queried. If tracking is enabled with a different channel ID, all queued events on the previous app are discarded.<br /><br />If the *channelId* path parameter is not specified, the query is run on the foreground UI app.<br /><br />All devices may monitor a sideloaded app. Devices that are keyed may monitor apps from the Streaming Store that are signed with the same developer key. |
-| query/fwbeacons                                              | Retrieves the app and media lifecycle events that have occurred since the previous query, or since tracking was enabled if no query has been done. |
-| fwbeacons/untrack                                            | Disables tracking of app and media lifecycle events (if enabled) and discards all queued events. |
 
 
-{#track-rendezvous-events-request-code}
 
-```
-POST http://[IP address]:8060/query/sgrendezvous/track
-POST http://[IP address]:8060/query/sgrendezvous/track/[channel_id]
-```
 
-{#track-rendezvous-events-response-code}
 
-```
-<sgrendezvous>
-    <tracking-enabled>true</tracking-enabled>
-    <status>OK</status>
-</sgrendezvous>
-```
 
-{#get-rendezvous-events-request-code}
 
-```
-GET http://[IP address]:8060/query/sgrendezvous
-```
 
-{#untrack-rendezvous-events-request-code}
 
-```
-POST http://[IP address]:8060/query/sgrendezvous/untrack
-```
 
-{#untrack-rendezvous-events-response-code}
-
-```
-<sgrendezvous>
-    <tracking-enabled>false</tracking-enabled>
-    <status>OK</status>
-</sgrendezvous>
-```
-
-{#exit-app-list}
-
-- If the app supports Instant Resume and is running in the foreground, sending this command suspends the app (the app runs in the background).
-- If the app supports Instant Resume and is running in the background or the app does not support Instant Resume and is running, sending this command terminates the app.
 
 ### Roku TV ECP commands
 

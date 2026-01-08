@@ -13,9 +13,9 @@ next:
 
 # Measuring app performance
 
-The Roku OS records key app performance metrics such as app launch time, app change time, app exit time, and video start time via signal beacons. Signal beacons are markers for the start and stop points of user-initiated actions.
+The Roku OS records key app performance metrics such as app launch time, app change time, app exit time, and video start time via signal beacons. Signal beacons are markers for the start and stop points of user-initiated actions.
 
-To measure app launch time, for example, beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](/developer-program/debugging/debugging-channels.md). You can then use the feedback from the console to update your application, if needed, to meet the certification requirements. 
+To measure app launch time, for example, beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](/developer-program/debugging/debugging-channels.md). You can then use the feedback from the console to update your application, if needed, to meet the certification requirements. 
 
 > App launch and video start times must meet the specified [certification performance
 requirements](/docs/developer-program/certification/certification.md#3performance).
@@ -28,7 +28,7 @@ For measuring app launch times, however, apps must implement the **AppLaunchComp
 
 ### AppLaunch signal beacons
 
-Apps must fire an **AppLaunchComplete** beacon when the app home page is fully rendered. This beacon must also be fired when video playback starts after handling a [deep link](/docs/developer-program/discovery/implementing-deep-linking.md), and the app can respond to commands sent via the remote control.
+Apps must fire an **AppLaunchComplete** beacon when the app home page is fully rendered. This beacon must also be fired when video playback starts after handling a [deep link](/docs/developer-program/discovery/implementing-deep-linking.md), and the app can respond to commands sent via the remote control.
 
 To fire the **AppLaunchComplete** beacon from the app, call the **signalBeacon()** function on any node as demonstrated in the following example:
 
@@ -55,7 +55,7 @@ myScene.signalBeacon(“AppDialogComplete”)
 
 ## Measuring EPG launch times
 
-If your app contains an EPG, the application must also fire beacons when the user initiates a keypress to display the EPG (**EPGLaunchInitiate**) and when the EPG is fully rendered and navigable (**EPGLaunchComplete**). The following example demonstrates how to do this:
+If your app contains an EPG, the application must also fire beacons when the user initiates a keypress to display the EPG (**EPGLaunchInitiate**) and when the EPG is fully rendered and navigable (**EPGLaunchComplete**). The following example demonstrates how to do this:
 
 ```
 myEPGComponent.signalBeacon(“EPGLaunchInitiate”)
@@ -68,28 +68,40 @@ Only EPG launch sequences that start within 5 seconds of the `AppLaunchComplete`
 
 ## Viewing app performance metrics
 
-You can use the BrightScript console (port 8085) to view a log with your app's performance metrics. When a beacon is fired, the console immediately outputs statistics related to the initiate or complete
-beacon. When you exit your app, the console displays a report summarizing the statistics for the just-concluded session, which are described as follows:
+You can use the BrightScript console (port 8085) to view a log with your app's performance metrics. When a beacon is fired, the console immediately outputs statistics related to the initiate or complete
+beacon. When you exit your app, the console displays a report summarizing the statistics for the just-concluded session, which are described as follows:
 
-| **Statistic**                  | **Beacon Type** | **Description**                                              |
-| :----------------------------- | :-------------- | :----------------------------------------------------------- |
-| TimeBase                       | Initiate        | A timestamp for the beacon based on milliseconds elapsed since the initiate beacon for the app launch was recorded. |
-| Duration                       | Complete        | Milliseconds between the initiate and complete beacons.      |
-| Memory Points (MiP, KiP, or p) | Complete        | Memory points provide a relative measurement for your app's memory performance that can be used for trend analysis. You can monitor the amount of memory points reported for any complete beacon to see if it goes up or down across builds of your application.  <br /><br />Memory points are measured in mebipoints (MiP), kibipoints (KiP), or points (p). This is similar to how units of information are expressed as mebibytes (MiB), kibibytes (Kib), and bytes. |
 
-<br/>![roku815px - signalBeaconReport](https://image.roku.com/ZHZscHItMTc2/signalBeaconReport-v2.jpg "signalBeaconReport")
+<table>
+<thead>
+<tr>
+<th><strong>Statistic</strong></th>
+<th><strong>Beacon Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TimeBase</td>
+<td>Initiate</td>
+<td>A timestamp for the beacon based on milliseconds elapsed since the initiate beacon for the app launch was recorded.</td>
+</tr>
+<tr>
+<td>Duration</td>
+<td>Complete</td>
+<td>Milliseconds between the initiate and complete beacons.</td>
+</tr>
+<tr>
+<td>Memory Points (MiP, KiP, or p)</td>
+<td>Complete</td>
+<td>Memory points provide a relative measurement for your app's memory performance that can be used for trend analysis. You can monitor the amount of memory points reported for any complete beacon to see if it goes up or down across builds of your application.  <br /><br />Memory points are measured in mebipoints (MiP), kibipoints (KiP), or points (p). This is similar to how units of information are expressed as mebibytes (MiB), kibibytes (Kib), and bytes.</td>
+</tr>
+</tbody>
+</table>
+
+
+<br />![roku815px - signalBeaconReport](https://image.roku.com/ZHZscHItMTc2/signalBeaconReport-v2.jpg "signalBeaconReport")
 
 ## Performance metrics reference
 
 The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start,  change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.  
-
-| **Metric**     | **Start Point**                                              | **Stop Point**                                               | **Initiate Beacon**                                          | **Complete Beacon**                                          |
-| :------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| App launch | The user presses the OK button to launch an app from the home screen. | The app is fully rendered and operational on its initial UI screen, or it reaches user-operable video playback. | AppLaunchInitiate<br /><br />The last keypress before the beacon was signaled. If there was no prior keypress, the Initiate beacon signal time. | AppLaunchComplete<br /><br />The first render pass completes after the Complete beacon has been signaled via the signalBeacon() method.  <br /><br />**Your application must fire this beacon to pass certification.** |
-| App compile    | The app compilation starts.                              | The app compilation finishes.                            | AppCompileInitate <br /><br />The app compilation starts after the app is launched. | AppCompileComplete <br /><br />The app compilation finishes. |
-| Dialog launch  | A dialog (for example, a login, user selection, or network error screen that the user must dismiss) is loaded. | The dialog exits.                                            | AppDialogInitiate<br /><br />The app enters a dialog before rendering the home screen where the app waits for user input.<br /><br />**Your application must fire this beacon if your app includes any dialogs requiring user input before rendering the home page.** | AppDialogComplete<br /><br />The user dismisses the dialog.<br /><br />**Your application must fire this beacon if your app includes any dialogs requiring user input before rendering the home page.** |
-| EPG launch     | The user initiates a keypress to bring up the EPG.           | The EPG is fully rendered and navigable.                     | EPGLaunchInitiate<br /><br />The last keypress before the initiate beacon was signaled. If there was no prior keypress, the Initiate beacon signal time.  <br /><br />**Your application should fire this beacon if your app includes an EPG.** | EPGLaunchComplete. <br /><br />The first render pass completes after the Complete beacon has been signaled via the signalBeacon() method.  <br /><br />**Your application should fire this beacon if your app includes an EPG.** |
-| Video start    | The user initiates a keypress to play a video.               | Video playback has started and is visible to the user.       | VODStartInitiate<br /><br />The last keypress that occurred between play events. If there was no prior keypress, the Initiate beacon signal time. | VODStartComplete<br /><br />The first render pass completes after the Complete beacon has been signaled (when the video node receives the "firstFramePresented" event from the Media Player). |
-| Live start     | After bringing up the EPG, the user initiates a keypress to play a video. | Video playback has started and is visible to the user.       | LiveStartInitiate<br /><br />The last keypress that occurred between play events. If there was no prior keypress, the Initiate beacon signal time. | LiveStartComplete<br /><br />The first render pass completes after the Complete beacon has been signaled (when the video node receives the "firstFramePresented" event from the Media Player). |
-| Channel change | The user initiates a keypress to change the app.         | The new video playback has started and is visible to the user. | LiveChannelChangeInitiate<br /><br /> The time of the last keypress that occurred between play events, which must both be live streams as reported by the media player session object when the firstFramePresented event is received. In addition, the previous keypress must have happened before the video player was destroyed for a live channel change event to have occurred. | LiveChannelChangeComplete<br /><br /> The first render pass completes after the Complete beacon has been signaled (when the video node receives the "firstFramePresented" event from the Media Player upon a live channel change occurring). |
-| Channel exit   | The user presses the Home button to exit an app.          | The app has exited and the home screen is fully rendered and operational. | AppExitInitiated<br /><br />The home key handler engages app shutdown. | AppExitComplete<br /><br />The first render pass completes after the Complete beacon has been signaled (when the Roku OS completes application exit) and the Home screen is displayed. |

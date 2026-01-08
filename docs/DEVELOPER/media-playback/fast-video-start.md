@@ -59,10 +59,10 @@ The following code demonstrates this use case.
 ~~~~
 port = CreateObject( "roMessagePort" )
 
-content = {
-  Stream: { url : "http://play.this.url.com/video.m3u8" }
+content = \{
+  Stream: \{ url : "http://play.this.url.com/video.m3u8" \}
   StreamFormat: "hls"
-}
+\}
 
 ' First   create the player and set content list
 player = CreateObject( "roVideoPlayer" )

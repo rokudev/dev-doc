@@ -40,11 +40,15 @@ When firing the signup event, pass in "Sign_Up|" along with pipe-separated key-v
 
 The syntax is therefore as follows:
 
-"Sign_Up"|pageNumber={*int*}|pageType={*type*}.
+
+<p>"Sign_Up"|pageNumber={<em>int</em>}|pageType={<em>type</em>}.</p>
+
 
 You can use a hierarchal page numbering system to identify different pages in the signup flow at the same level. This is useful in case your signup flow forks based on different options. For example, you may have separate monthly and annual plan pages that you could number 3.1 and 3.2. If you use hierarchal numbering, the pages must still be uniquely numbered across the sign-up flow. The syntax in this case is therefore as follows:
 
-"Sign_Up"|pageNumber={*int*}.{*int*}|pageType={*type*}.
+
+<p>"Sign_Up"|pageNumber={<em>int</em>}.{<em>int</em>}|pageType={<em>type</em>}.</p>
+
 
 #### Examples
 
@@ -69,7 +73,9 @@ If your app's signup flow is contained within a form that covers one or more pag
 
 #### Syntax
 
-"Sign_Up"|field={*string*}.
+
+<p>"Sign_Up"|field={<em>string</em>}.</p>
+
 
 #### Examples
 
@@ -96,9 +102,11 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
 
    a. When `roSGScreen` is active, create a "Roku_Analytics:AnalyticsNode" node and persist it by storing in the global node.
 
-   b. To add the RED library as a provider, include `RED: {}` when assigning to its `.init` field.
+   b. To add the RED library as a provider, include `RED: \{\}` when assigning to its `.init` field.
 
-   c. To dispatch a signup event, assign `{RED: {eventName: "Sign_Up|pageNumber=int|pageType=type"}` or `{RED: {eventName: "Sign_Up_Form"|field=string"}` to the `.trackEvent` field.
+
+<p>c. To dispatch a signup event, assign <code>\{RED: \{eventName: "Sign_Up|pageNumber=int|pageType=type"\}</code> or <code>\{RED: \{eventName: "Sign_Up_Form"|field=string"\}</code> to the <code>.trackEvent</code> field.</p>
+
 
    The following example demonstrates how to send signup events:
 
@@ -115,12 +123,15 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
             if RAC = invalid then
                 RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
                 RAC.debug = true ' for verbose output to BrightScript console, optional
-                RAC.init = {RED: {}} ' activate RED as a provider
-                globalNode.addFields({roku_event_dispatcher: RAC})
+                RAC.init = \{RED: \{\}\} ' activate RED as a provider
+                globalNode.addFields(\{roku_event_dispatcher: RAC\})
             end if
     
             ' dispatch an event to Roku
-            RAC.trackEvent = {RED: {eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
+
+<pre><code>        RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"\}\}
+</code></pre>
+
             end sub
 
 3. Use the [debug console](/docs/developer-program/debugging/debugging-channels.md) to verify that your app is sending signup events.
@@ -140,5 +151,3 @@ To use the RAF **fireRokuMarketingPixel()** method to send authentication events
 
 
 3. When an authenticated customer launches your app, call the **fireRokuMarketingPixel()** method using the following syntax:
-
-        adIface.fireRokuMarketingPixel("Sign_Up|pageNumber=1|pageType=landing")

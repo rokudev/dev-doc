@@ -142,7 +142,7 @@ ___
 
 **Last updated**: October, 2025
 
-Certification criteria are listed by functionality. <br/>
+Certification criteria are listed by functionality. <br />
 
 <!--- ||ccCatBegin "b27a69e3-03ee-47dc-bd79-21db638fef61" -->
 ### 1. Advertising
@@ -640,5 +640,3 @@ Apps must adhere to [Roku’s autoplay policy](/docs/developer-program/media-pla
 <!--- ||ccRegion ["Global"] -->
 <!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/certification/certification.md" -->
 <!--- ||ccRuleEnd -->
-
-<!--- ||ccHiddenSectionEnd -->

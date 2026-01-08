@@ -21,12 +21,41 @@ Publishers integrate the Demand API to create a direct automated connection with
 >
 > The following table summarizes which apps must implement the Demand API and when the implementation is required:
 >
-> | App criteria                                             | In U.S Streaming Store | Outside U.S Streaming Store |
-> | ------------------------------------------------------------ | -------------------- | ------------------------- |
-> | Inventory relationship with Roku?                            | YES                  | YES                       |
-> | Streaming hours <br />(average hours per month over the last three months) | 100,000              | 200,000                   |
-> | New installs<br />(average new installs per month over the last three months) | 10,000               | N/A                       |
-> | Requirement effective date                                   | April 1, 2021        | April 1, 2022             |
+
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>App criteria</th>
+<th>In U.S Streaming Store</th>
+<th>Outside U.S Streaming Store</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inventory relationship with Roku?</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Streaming hours <br />(average hours per month over the last three months)</td>
+<td>100,000</td>
+<td>200,000</td>
+</tr>
+<tr>
+<td>New installs<br />(average new installs per month over the last three months)</td>
+<td>10,000</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Requirement effective date</td>
+<td>April 1, 2021</td>
+<td>April 1, 2022</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
 
 ## Integration steps
 

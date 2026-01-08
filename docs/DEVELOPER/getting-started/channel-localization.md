@@ -17,35 +17,29 @@ Publishers can distribute their content across the world through the [Streaming 
 
 Roku has Streaming Stores in the following countries:
 
-| North America | Europe     | Latin America | Asia Pacific |
-| ------------- | ---------- | ------------- | ------------ |
-| ${na-list}    | ${eu-list} | ${la-list}    | Australia    |
 
-{#na-list}
+<table>
+<thead>
+<tr>
+<th>North America</th>
+<th>Europe</th>
+<th>Latin America</th>
+<th>Asia Pacific</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ul><li>United States</li><li>Canada</li></ul></td>
+<td><ul><li>United Kingdom</li><li>Ireland</li><li>Germany</li></ul></td>
+<td><ul><li>Argentina</li><li>Brazil</li><li>Chile</li><li>Colombia</li><li>Costa Rica</li><li>El Salvador</li><li>Guatemala</li><li>Honduras</li><li>Mexico</li><li>Nicaragua</li><li>Panama</li><li>Peru</li></ul></td>
+<td>Australia</td>
+</tr>
+</tbody>
+</table>
 
-- United States
-- Canada
 
-{#eu-list}
 
-- United Kingdom
-- Ireland
-- Germany
 
-{#la-list}
-
-- Argentina
-- Brazil
-- Chile
-- Colombia
-- Costa Rica
-- El Salvador
-- Guatemala
-- Honduras
-- Mexico
-- Nicaragua
-- Panama
-- Peru
 
 ## Development
 

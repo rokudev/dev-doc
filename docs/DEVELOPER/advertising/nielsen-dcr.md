@@ -30,4 +30,3 @@ Onboarding and deploying Nielsen DCR entails the following steps:
 [Nielsen DCR Solutions](https://www.nielsen.com/us/en/solutions/capabilities/digital-content-ratings)
 
 [DCR Video & Static Roku Cloud API](https://engineeringportal.nielsen.com/docs/DCR_Video_%26_Static_Roku_Cloud_API)
-

@@ -31,8 +31,8 @@ The static analysis utility is distributed as a ZIP file.  The contents of the Z
 .
 └── sca-cmd
     ├── bin
-    │   ├── sca-cmd
-    │   └── sca-cmd.bat
+    │   ├── sca-cmd
+    │   └── sca-cmd.bat
     └── lib
         └── sca-cmd.jar
 ```

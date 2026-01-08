@@ -149,7 +149,7 @@ get its special global element:
 You will need to take the associative array, modify it and save it back into the field.
 
 ~~~
-m.global.addFields( {red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff} ) 
+m.global.addFields( \{red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff\} ) 
 ... 
 
 m.rect = m.top.findNode("Rect1") 

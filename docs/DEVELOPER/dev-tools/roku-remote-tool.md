@@ -41,7 +41,7 @@ The Roku Remote Tool application is available for download and installation on W
 
 1. Start the Device Manager. If the Device Manager is not shown at tool startup, begin by clicking **Select a Device** in the upper left corner. Then:
 
-      a. Click **Favorites** (needed for Desktop client only) <br/>
+      a. Click **Favorites** (needed for Desktop client only) <br />
 
       b. Click **+Add a Device**
 
@@ -99,117 +99,167 @@ The Roku Remote Tools records button press and text entry sequences as "steps" i
 
 Begin by specifying your app information in the `params` section. You must use **[Add Channel](#AddChannel)** to add at least one app before continuing.
 
-|         Keyword         |                       Graphic or Label                       |                         Description                          |                Example (in `params` section)                 |
-| :---------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|     `rasp_version`      |                             none                             |  Define the scripting version; default is inserted for you.  |                    **`rasp_version: 1`**                     |
-| `default_`<br/>`keypress_wait` | [![roku200px - rremote-advanced-mode-gear](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-gear.png?version=3&modificationDate=1626142003000&api=v2)](#Configure) | Use the gear button to set the integer value of global delay between button presses. <br/>For non-integer values: <br/>- Manually position the cursor at the end of the line<br/>- Backspace to delete the old value<br/>- Type in the new value and hit Enter. | **`default_keypress_wait: 2`**<br/>**`default_keypress_wait: 0.25`** |
-|       `channels`        | **[Add Channel](#AddChannel)** | Use the **[Add Channel](#AddChannel)** macro as a convenient way of entering app listings in the script. <br/>(You could instead type the entries in manually.)  To add app(s) using the macro, repeat these steps as needed:<br/><br/>1. Provide a Channel Name<br/>2. Enter Channel ID<br/>3. Click **Add to table**<br/>then click the ![roku815px - (plus)](https://confluence.portal.roku.com:8443/s/i0p0pk/8502/1ef1526ca6e62f10d6a1c5f77fccb30527d7d4d1/_/images/icons/emoticons/add.svg) next to each table entry to be inserted.<br/><br/>![roku400px - rremote-advanced-mode-add-channel-roku700px](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-add-channel.png) | **`channels:`** <br/>**` 'My First Channel': 12345`** <br/>**` 'My Second Channel': 12346`** <br/>**` 'My Third Channel': 12347`** |
+
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Graphic or Label</th>
+<th>Description</th>
+<th>Example (in <code>params</code> section)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rasp_version</code></td>
+<td>none</td>
+<td>Define the scripting version; default is inserted for you.</td>
+<td><strong><code>rasp_version: 1</code></strong></td>
+</tr>
+<tr>
+<td><code>default_</code><br /><code>keypress_wait</code></td>
+<td><a href="#Configure"><img alt="roku200px - rremote-advanced-mode-gear" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-gear.png?version=3&amp;modificationDate=1626142003000&amp;api=v2" /></a></td>
+<td>Use the gear button to set the integer value of global delay between button presses. <br />For non-integer values: <br />- Manually position the cursor at the end of the line<br />- Backspace to delete the old value<br />- Type in the new value and hit Enter.</td>
+<td><strong><code>default_keypress_wait: 2</code></strong><br /><strong><code>default_keypress_wait: 0.25</code></strong></td>
+</tr>
+<tr>
+<td><code>channels</code></td>
+<td><strong><a href="#AddChannel">Add Channel</a></strong></td>
+<td>Use the <strong><a href="#AddChannel">Add Channel</a></strong> macro as a convenient way of entering app listings in the script. <br />(You could instead type the entries in manually.)  To add app(s) using the macro, repeat these steps as needed:<br /><br />1. Provide a Channel Name<br />2. Enter Channel ID<br />3. Click <strong>Add to table</strong><br />then click the <img alt="roku815px - (plus)" src="https://confluence.portal.roku.com:8443/s/i0p0pk/8502/1ef1526ca6e62f10d6a1c5f77fccb30527d7d4d1/_/images/icons/emoticons/add.svg" /> next to each table entry to be inserted.<br /><br /><img alt="roku400px - rremote-advanced-mode-add-channel-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-add-channel.png" /></td>
+<td><strong><code>channels:</code></strong> <br /><strong><code>'My First Channel': 12345</code></strong> <br /><strong><code>'My Second Channel': 12346</code></strong> <br /><strong><code>'My Third Channel': 12347</code></strong></td>
+</tr>
+</tbody>
+</table>
+
 
 
 ### steps
 
 Continue by creating operational steps, using a concise set of commands. Steps can be typed manually into the editor, but are more rapidly created by clicking the emulated remote keys.
 
-|          Step           |                           Graphic                            |                         Description                          | Example                                                      |
-| :---------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------- |
-|         `press`         | ![roku200px - rremote-keypad](https://image.roku.com/ZHZscHItMTc2/rremote-keypad.png?version=2&modificationDate=1626301445000&api=v2)<br/>Keypad |                         Button press                         | ${codePress}|
-|         `text`          | [![roku200px - rremote-keyboard-input](https://image.roku.com/ZHZscHItMTc2/rremote-keyboard-input.png?version=1&modificationDate=1626301445000&api=v2)](#Keyboardinput)<br/>Text entry box below keypad | Alphanumeric keystroke entry, where permitted by the Roku TV device interface<br/><br/>Static input <br/>– Checked: Keystrokes withheld until the adjacent **[>]** button is clicked <br/>– Unchecked: Each keystroke is sent out as it is entered | **`Developer`**<br/>(typed in box)                                |
-|         `pause`         | [![roku200px - rremote-advanced-mode-sleep](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-sleep.png?version=3&modificationDate=1626141994000&api=v2)](#Pause/Sleep) | A pause (or delay or sleep) may be inserted at a specified point between steps.<br/>1. Position the cursor in the script where the pause should occur.<br/>2. Click the lower-right corner of Sleep and set the number of seconds to pause.<br/>3. Click the main part of Sleep to insert the command.<br/><br/>You may need to insert a pause step for any action in the UI that takes time to be completed before another step in the script can be executed. For example, it may take a few seconds for the app UI to be populated after being launched. This ensures that the subsequent steps are actually navigating the UI. Do not include more than 10 pause steps in a script. | ${codePause}              |
-|         `loop`          | [![roku200px - rremote-advanced-mode-loop](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-loop.png?version=3&modificationDate=1626143345000&api=v2)](#AddLoop) | One or more steps can be made into a loop. This button remains grayed-out until more than one line of code has been highlighted.Using the mouse, select a two or more steps in the editor.<br/>1. Click the lower right corner of the Add Loop button and select the number of iterations.<br/>2. Click the main part of Add Loop to surround the steps with the appropriate `loop` commands. | ${codeLoop} |
-| `wait_for_`<br/>`player_state` | [![roku200px - rremote-advanced-mode-slate](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-slate.png?version=3&modificationDate=1626143323000&api=v2)](#WaitforPlayerState) | Pause to wait on player state to be selected by user press of Play, Stop, or Pause.Put the cursor in the script where the wait should occur.Click the Wait for Player State button.Select Play, Stop, or Pause. | ${codeWait}|
 
-{#codePress}
-```
-- press: home
-- press: up
-- press: reverse
-```
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Graphic</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>press</code></td>
+<td><img alt="roku200px - rremote-keypad" src="https://image.roku.com/ZHZscHItMTc2/rremote-keypad.png?version=2&amp;modificationDate=1626301445000&amp;api=v2" /><br />Keypad</td>
+<td>Button press</td>
+<td><pre><code><code>&lt;br /&gt;- press: home&lt;br /&gt;- press: up&lt;br /&gt;- press: reverse&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td><a href="#Keyboardinput"><img alt="roku200px - rremote-keyboard-input" src="https://image.roku.com/ZHZscHItMTc2/rremote-keyboard-input.png?version=1&amp;modificationDate=1626301445000&amp;api=v2" /></a><br />Text entry box below keypad</td>
+<td>Alphanumeric keystroke entry, where permitted by the Roku TV device interface<br /><br />Static input <br />– Checked: Keystrokes withheld until the adjacent <strong>[&gt;]</strong> button is clicked <br />– Unchecked: Each keystroke is sent out as it is entered</td>
+<td><strong><code>Developer</code></strong><br />(typed in box)</td>
+</tr>
+<tr>
+<td><code>pause</code></td>
+<td><a href="#Pause/Sleep"><img alt="roku200px - rremote-advanced-mode-sleep" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-sleep.png?version=3&amp;modificationDate=1626141994000&amp;api=v2" /></a></td>
+<td>A pause (or delay or sleep) may be inserted at a specified point between steps.<br />1. Position the cursor in the script where the pause should occur.<br />2. Click the lower-right corner of Sleep and set the number of seconds to pause.<br />3. Click the main part of Sleep to insert the command.<br /><br />You may need to insert a pause step for any action in the UI that takes time to be completed before another step in the script can be executed. For example, it may take a few seconds for the app UI to be populated after being launched. This ensures that the subsequent steps are actually navigating the UI. Do not include more than 10 pause steps in a script.</td>
+<td><pre><code><code>&lt;br /&gt;- press: reverse&lt;br /&gt;- pause: 3&lt;br /&gt;- press: play&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td><a href="#AddLoop"><img alt="roku200px - rremote-advanced-mode-loop" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-loop.png?version=3&amp;modificationDate=1626143345000&amp;api=v2" /></a></td>
+<td>One or more steps can be made into a loop. This button remains grayed-out until more than one line of code has been highlighted.Using the mouse, select a two or more steps in the editor.<br />1. Click the lower right corner of the Add Loop button and select the number of iterations.<br />2. Click the main part of Add Loop to surround the steps with the appropriate <code>loop</code> commands.</td>
+<td><pre><code><code>&lt;br /&gt;- loop:  &lt;br /&gt;    iterations: 2&lt;br /&gt;    steps:&lt;br /&gt;    (loop steps go here)&lt;br /&gt;&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td><code>wait_for_</code><br /><code>player_state</code></td>
+<td><a href="#WaitforPlayerState"><img alt="roku200px - rremote-advanced-mode-slate" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-slate.png?version=3&amp;modificationDate=1626143323000&amp;api=v2" /></a></td>
+<td>Pause to wait on player state to be selected by user press of Play, Stop, or Pause.Put the cursor in the script where the wait should occur.Click the Wait for Player State button.Select Play, Stop, or Pause.</td>
+<td><pre><code><code>&lt;br /&gt;wait_for_player_state: play&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
 
-{#codePause}
-```
-- press: reverse
-- pause: 3
-- press: play
-```
 
 
-{#codeLoop}
-```
-- loop:  
-    iterations: 2
-    steps:
-    (loop steps go here)
 
-```
-
-{#codeWait}
-```
-wait_for_player_state: play
-```
 
 ### blocks
 
 Creation of the following blocks is aided by macros. Click on each label for details.
 
-|         Step         |                    Label                     |                         Description                          | Example          |
-| :------------------: | :------------------------------------------: | :----------------------------------------------------------: | :--------------- |
-|       `launch`       |     **[Launch Channel](#LaunchChannel)**     | Launch one of  entered with Add Channel in the `params` section. <br/><br/>To launch an app, repeat these steps as needed to enter channel information for  you plan to use:<br/>1. Select an app<br/>2. Enter **Content ID** and **Media type**<br/>3. Click **Add**<br/>then click **Add to script** ![roku815px - (plus)](https://confluence.portal.roku.com:8443/s/i0p0pk/8502/1ef1526ca6e62f10d6a1c5f77fccb30527d7d4d1/_/images/icons/emoticons/add.svg) on the app(s) to be launched.<br/><br/>![roku400px - rremote-advanced-mode-launch-channel-roku700px](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-launch-channel.png) | ${codeBlock}     |
-| `validate_streaming` | **[Validate Streaming](#ValidateStreaming)** | Verify that the specified stream functions as expected. <br/>Select:  <br/>- the desired Video codec<br/>- the audio codec in use<br/>- the DRM method<br/>then click **Add to script** to insert script commands to validate the indicated stream type.<br/><br/>![roku400px - rremote-advanced-mode-validate-streaming-roku700px](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-validate-streaming-v1.png) | ${codeValidate}  |
-| `channel_tile_order` | **[Channel Tile Order](#ChannelTileOrder)**  | Set how the displayed channel tiles are ordered on the screen <br/><br/>![roku400px - rremote-advanced-mode-channel-tile-order-roku700px](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-channel-tile-order.png) | ${codeTileOrder} |
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Label</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>launch</code></td>
+<td><strong><a href="#LaunchChannel">Launch Channel</a></strong></td>
+<td>Launch one of  entered with Add Channel in the <code>params</code> section. <br /><br />To launch an app, repeat these steps as needed to enter channel information for  you plan to use:<br />1. Select an app<br />2. Enter <strong>Content ID</strong> and <strong>Media type</strong><br />3. Click <strong>Add</strong><br />then click <strong>Add to script</strong> <img alt="roku815px - (plus)" src="https://confluence.portal.roku.com:8443/s/i0p0pk/8502/1ef1526ca6e62f10d6a1c5f77fccb30527d7d4d1/_/images/icons/emoticons/add.svg" /> on the app(s) to be launched.<br /><br /><img alt="roku400px - rremote-advanced-mode-launch-channel-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-launch-channel.png" /></td>
+<td><pre><code><code>&lt;br /&gt;- launch:&lt;br /&gt;    channel_name: My Test Channel&lt;br /&gt;    content_id: 12345&lt;br /&gt;    media_type: movie&lt;br /&gt;    query: options.contentID=12345&amp;mediatype=movie&lt;br /&gt;    timeout: 35&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td><code>validate_streaming</code></td>
+<td><strong><a href="#ValidateStreaming">Validate Streaming</a></strong></td>
+<td>Verify that the specified stream functions as expected. <br />Select:  <br />- the desired Video codec<br />- the audio codec in use<br />- the DRM method<br />then click <strong>Add to script</strong> to insert script commands to validate the indicated stream type.<br /><br /><img alt="roku400px - rremote-advanced-mode-validate-streaming-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-validate-streaming-v1.png" /></td>
+<td><pre><code><code>&lt;br /&gt;- validate_streaming:&lt;br /&gt;    audio_codec: ac3&lt;br /&gt;    video_codec: mpeg4_2&lt;br /&gt;    drm: aes-128&lt;br /&gt;    on_error:&lt;br /&gt;      - press: right&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td><code>channel_tile_order</code></td>
+<td><strong><a href="#ChannelTileOrder">Channel Tile Order</a></strong></td>
+<td>Set how the displayed channel tiles are ordered on the screen <br /><br /><img alt="roku400px - rremote-advanced-mode-channel-tile-order-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-channel-tile-order.png" /></td>
+<td><pre><code><code>&lt;br /&gt;- channel_tile_order:&lt;br /&gt;    1: My Test Channel&lt;br /&gt;    2: Roku Developer Channel&lt;br /&gt;    3: My Other Test Channel&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
 
-{#codeBlock}
-```
-- launch:
-    channel_name: My Test Channel
-    content_id: 12345
-    media_type: movie
-    query: options.contentID=12345&mediatype=movie
-    timeout: 35
-```
 
 
-{#codeValidate}
-```
-- validate_streaming:
-    audio_codec: ac3
-    video_codec: mpeg4_2
-    drm: aes-128
-    on_error:
-      - press: right
-```
 
-{#codeTileOrder}
-```
-- channel_tile_order:
-    1: My Test Channel
-    2: Roku Developer Channel
-    3: My Other Test Channel
-```
 
 #### Defining your own blocks of steps for re-use
 
 For sequences of steps that you have to follow in multiple places within your script, define the sequence once and then label it for re-use.
 
-|      Step       |                       On-screen label                        |                         Description                          |    Example     |
-| :-------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :------------: |
-| `step: &idxxxx` | [![roku200px - rremote-advanced-mode-block](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-block.png?version=3&modificationDate=1626143354000&api=v2)](#AddBlock)<br/>**[Add Block](#BlockIDs)** | Two or more steps can be defined as a block with an identifier.<br/>Using the mouse or cursor control keys, highlight a step or group of steps in the editor.<br/>Click the **[Add Block](#BlockIDs)** button to create the block and generate its ID in the form **`&id`**`1234` | ${codeStepID}  |
-|    `*idxxxx`    |                  **[Block IDs](#BlockIDs)**                  | Steps defined as blocks are reusable throughout the code by referring to the identifier.<br/>Place the cursor elsewhere in the code.<br/>Click **[Block IDs](#BlockIDs)** and pick from the list, which will insert the chosen block as `*id1234` | ${codeBlockID} |
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>On-screen label</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>step: &amp;idxxxx</code></td>
+<td><a href="#AddBlock"><img alt="roku200px - rremote-advanced-mode-block" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-block.png?version=3&amp;modificationDate=1626143354000&amp;api=v2" /></a><br /><strong><a href="#BlockIDs">Add Block</a></strong></td>
+<td>Two or more steps can be defined as a block with an identifier.<br />Using the mouse or cursor control keys, highlight a step or group of steps in the editor.<br />Click the <strong><a href="#BlockIDs">Add Block</a></strong> button to create the block and generate its ID in the form <strong><code>&amp;id</code></strong><code>1234</code></td>
+<td><pre><code><code>&lt;br /&gt;- step: &amp;id9027&lt;br /&gt;    - press: up&lt;br /&gt;    - press: right&lt;br /&gt;</code></code></pre></td>
+</tr>
+<tr>
+<td><code>*idxxxx</code></td>
+<td><strong><a href="#BlockIDs">Block IDs</a></strong></td>
+<td>Steps defined as blocks are reusable throughout the code by referring to the identifier.<br />Place the cursor elsewhere in the code.<br />Click <strong><a href="#BlockIDs">Block IDs</a></strong> and pick from the list, which will insert the chosen block as <code>*id1234</code></td>
+<td><pre><code><code>&lt;br /&gt;- *id9027&lt;br /&gt;</code></code></pre></td>
+</tr>
+</tbody>
+</table>
 
 
-{#codeStepID}
-```
-- step: &id9027
-    - press: up
-    - press: right
-```
 
 
-{#codeBlockID}
-```
-- *id9027
-```
 
 ## Running a script
 

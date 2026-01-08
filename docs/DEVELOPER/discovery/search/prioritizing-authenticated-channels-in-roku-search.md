@@ -48,10 +48,10 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
    a. When `roSGScreen` is active, create a "Roku_Analytics:AnalyticsNode" node and persist it by storing in the global node.
 
 
-   b. To add the RED library as a provider, include `RED: {}` when assigning to its `.init` field.
+   b. To add the RED library as a provider, include `RED: \{\}` when assigning to its `.init` field.
 
 
-   c. To dispatch an event for authentication, assign `{RED: {eventName: "Roku_Authenticated"}} to the .trackEvent` field.
+   c. To dispatch an event for authentication, assign `\{RED: \{eventName: "Roku_Authenticated"\}\} to the .trackEvent` field.
 
 
    The following example demonstrates how to send authentication events:

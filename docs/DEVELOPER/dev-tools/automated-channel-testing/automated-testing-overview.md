@@ -104,42 +104,42 @@ To install the [Roku Robot Framework Library](/docs/developer-program/dev-tools/
 
    The syntax of the **config.json** file is as follows:
 
-        {
-            "devices": {
-                "Device 1 name": {
+        \{
+            "devices": \{
+                "Device 1 name": \{
                     "ip_address": <string>,
                     "timeout":  <number>,
                     "pressDelay": <number>
-                },
-                "Device 2 name": {
+                \},
+                "Device 2 name": \{
                     "ip_address": <string>,
                     "timeout":  <number>
-                }
-            },
+                \}
+            \},
             "server_path": <string>,
             "test": <string>,
             "outputdir": <string>
-        }
+        \}
 
    The following example demonstrates how to write the **config.json** file:
 
-        {
-            "devices": {
-                "Amarillo": {
+        \{
+            "devices": \{
+                "Amarillo": \{
                     "ip_address": "192.168.1.64",
                     "timeout":  20000,
                     "pressDelay": 2000
-                },
-                "Littlefield": {
+                \},
+                "Littlefield": \{
                     "ip_address": 192.168.1.16,
                     "timeout":  25000,
                     "pressDelay": 1000
-                }
-            },
+                \}
+            \},
             "server_path": "/automated-channel-testing-master/bin/RokuWebDriver_<os|linux|windows.exe>,
             "test": "Tests/Basic_tests_multi_device.robot",
             "outputdir": "Results"
-        }
+        \}
 
    b.  [Sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
 
@@ -204,42 +204,42 @@ To install the [Roku JavaScript  Library](/docs/developer-program/dev-tools/auto
 
    The syntax of the **config.json** file is as follows:
 
-        {
-            "devices": {
-                "Device 1 name": {
+        \{
+            "devices": \{
+                "Device 1 name": \{
                     "ip_address": <string>,
                     "timeout":  <number>,
                     "pressDelay": <number>
-                },
-                "Device 2 name": {
+                \},
+                "Device 2 name": \{
                     "ip_address": <string>,
                     "timeout":  <number>
-                }
-            },
+                \}
+            \},
             "server_path": <string>,
             "test": <string>,
             "outputdir": <string>
-        }
+        \}
 
    The following example demonstrates how to write the **config.json** file:
 
-        {
-            "devices": {
-                "Amarillo": {
+        \{
+            "devices": \{
+                "Amarillo": \{
                     "ip_address": "192.168.1.64",
                     "timeout":  20000,
                     "pressDelay": 2000
-                },
-                "Littlefield": {
+                \},
+                "Littlefield": \{
                     "ip_address": 192.168.1.16,
                     "timeout":  25000,
                     "pressDelay": 1000
-                }
-            },
+                \}
+            \},
             "server_path": "/automated-channel-testing-master/bin/RokuWebDriver_<os|linux|windows.exe>,
             "test": "multipleDevices/multiple_devices_test_basics.js",
             "outputdir": "Results"
-        }
+        \}
 
    b.  [Sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
 

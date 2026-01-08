@@ -108,12 +108,54 @@ Analytics vendors using Model \#2 use `trackEvent` rather than `setContentMetada
 
 ### Initialization attributes
 
-| Parameter          | Type               | Required | Default value | Description                                                  | RACL implementation                                          |
-| :----------------- | :----------------- | :------- | :------------ | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| api_secret         | string             | Required | -             | An `API Secret` that is generated through the Google Analytics UI. | This parameter is added to each request. <br /><br />If the parameter is not specified or the type is incorrect, RAC prints a warning to the debug console, and the payload is not sent. <br /><br />If data needs to be sent to multiple data streams,  create one RAC instance per stream. |
-| measurement_id     | string             | Required | -             | The identifier for a Data Stream. In the Google Analytics UI, this parameter is listed under **Admin** > **Data Streams** > **choose your stream** > **Measurement ID**. <br /><br />Google Analytics (GA4) supports tracking multiple data streams for a single property. | This parameter is added to each request. <br /><br />If the parameter is not specified or the type is incorrect, RAC prints a warning to the debug console, and the payload is not sent. |
-| defaultParams      | roAssociativeArray | Optional | -             | A set of static parameters and values that should be included in each request (see the [Google Analytics (GA4) JSON body documentation](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=gtag#payload_post_body) for more information). | RAC applies these parameters and values to the root level of each payload constructed by the [**trackEvent()** method](#trackevent). |
-| defaultEventParams | roAssociativeArray | Optional | -             | A set of static parameters and values that should be sent with every event. | RAC applies these parameters and values to each event within every payload constructed by the [**trackEvent()** method](#trackevent). |
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default value</th>
+<th>Description</th>
+<th>RACL implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api_secret</td>
+<td>string</td>
+<td>Required</td>
+<td>-</td>
+<td>An <code>API Secret</code> that is generated through the Google Analytics UI.</td>
+<td>This parameter is added to each request. <br /><br />If the parameter is not specified or the type is incorrect, RAC prints a warning to the debug console, and the payload is not sent. <br /><br />If data needs to be sent to multiple data streams,  create one RAC instance per stream.</td>
+</tr>
+<tr>
+<td>measurement_id</td>
+<td>string</td>
+<td>Required</td>
+<td>-</td>
+<td>The identifier for a Data Stream. In the Google Analytics UI, this parameter is listed under <strong>Admin</strong> &gt; <strong>Data Streams</strong> &gt; <strong>choose your stream</strong> &gt; <strong>Measurement ID</strong>. <br /><br />Google Analytics (GA4) supports tracking multiple data streams for a single property.</td>
+<td>This parameter is added to each request. <br /><br />If the parameter is not specified or the type is incorrect, RAC prints a warning to the debug console, and the payload is not sent.</td>
+</tr>
+<tr>
+<td>defaultParams</td>
+<td>roAssociativeArray</td>
+<td>Optional</td>
+<td>-</td>
+<td>A set of static parameters and values that should be included in each request (see the <a href="https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=gtag#payload_post_body">Google Analytics (GA4) JSON body documentation</a> for more information).</td>
+<td>RAC applies these parameters and values to the root level of each payload constructed by the <a href="#trackevent"><strong>trackEvent()</strong> method</a>.</td>
+</tr>
+<tr>
+<td>defaultEventParams</td>
+<td>roAssociativeArray</td>
+<td>Optional</td>
+<td>-</td>
+<td>A set of static parameters and values that should be sent with every event.</td>
+<td>RAC applies these parameters and values to each event within every payload constructed by the <a href="#trackevent"><strong>trackEvent()</strong> method</a>.</td>
+</tr>
+</tbody>
+</table>
+
 
 #### Example:
 
@@ -181,16 +223,16 @@ vendor-specific configuration data.
 **Example:**
 
 ~~~
-m.global.RSG_analytics.init = {
-    IQ : {
+m.global.RSG_analytics.init = \{
+    IQ : \{
         PCODE : "pcode_value"
-    }
-    omniture : {
+    \}
+    omniture : \{
         baseURL : “https://omniture.suite.url/”
         ' For convenience, this allows developers to define a set of parameters and values that will be sent with every omniture call
-        defaultParams : {}
-    }
-}
+        defaultParams : \{\}
+    \}
+\}
 ~~~
 
 ### Methods
@@ -210,9 +252,9 @@ method needs to be set each time a new Video node is created.
 **Example:**
 
 ~~~
-m.global.RSG_analytics.initVideoPlayer = {
+m.global.RSG_analytics.initVideoPlayer = \{
     video: m.video
-}
+\}
 ~~~
 
 
@@ -229,34 +271,34 @@ for analytics providers and are optional.
 **Example with only Roku content meta-data:**
 
 ~~~
-myContent = {
+myContent = \{
     streamFormat = "mp4"
     streamUrl = "www.mycontent.com/video.mp4"
-}
+\}
 
-m.global.RSG_analytics.setContentMetadata = {
+m.global.RSG_analytics.setContentMetadata = \{
     content: myContent
-}
+\}
 ~~~
 
 **Example with Roku content meta-data and additional analytics provider information:**
 
 ~~~
-myContent = {
+myContent = \{
     streamFormat = "mp4"
     streamUrl = "www.mycontent.com/video.mp4"
-}
+\}
 
-metadata = {
+metadata = \{
     duration : item.length,
     assetId : item.id,
     assetType : "external"
-}
+\}
 
-m.global.RSG_analytics.setContentMetadata = {
+m.global.RSG_analytics.setContentMetadata = \{
     content: myContent
     IQ : metadata
-}
+\}
 ~~~
 
 
@@ -279,15 +321,15 @@ after a mid-roll ad).
 
 ~~~
 sub onVideoState()
-    closeStates = {
+    closeStates = \{
         finished : "",
         error : ""
-    }
+    \}
     if closeStates[m.video.state] <> invalid then
         'Send video player so analytics node could unobserve all fields and close session properly
-        m.global.RSG_analytics.finishedVideoPlayback = {
+        m.global.RSG_analytics.finishedVideoPlayback = \{
             video: m.video
-        }
+        \}
         hideVideo() 'implement this to restore prev screen
     end if
 end Sub
@@ -315,35 +357,70 @@ Developers can track events from the [standard GA4 events](https://developers.go
 
 > Parameters may also be placed in the `defaultParams` or `defaultEventParams` fields during initialization and RAC will automatically apply them to every event.
 
-| Parameter     | Type    | Required | Default value                                                | Description                                                  | RAC implementation                                           |
-| :------------ | :------ | :------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| client_id     | string  | Required | [GetChannelClientID()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string) | Uniquely identifies a user instance of a web client.<br /><br />This is the equivalent of the  "cid" parameter in Universal Analytics (UA). | This field is populated with value returned by the [GetChannelClientID()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string) method, if it is not provided by the developer. |
-| events        | roArray | Required | -                                                            | An array of event items that to be provided by developer.<br /><br /> Up to 25 events can be sent per request. <br /><br />See the [Google Analytics (GA4) events reference](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events) for all valid events. | RAC will print a debug console warning if this value is empty or is not an array. The payload is still sent if this parameter is not specified. |
-| events[].name | string  | Required | -                                                            | The name for the event.<br /><br />See the [Google Analytics (GA4) events reference](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events) for all options.<br /><br />This is an equivalent of the "t" parameter in Universal Analytics (UA). | RAC only checks the "name" for each event in array. If the event "name" is not provided, RAC prints a debug console warning, but still sends the events to the Google server.<br /><br />If this parameter is not specified, the payload is still sent. |
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Default value</th>
+<th>Description</th>
+<th>RAC implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>client_id</td>
+<td>string</td>
+<td>Required</td>
+<td><a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string">GetChannelClientID()</a></td>
+<td>Uniquely identifies a user instance of a web client.<br /><br />This is the equivalent of the  "cid" parameter in Universal Analytics (UA).</td>
+<td>This field is populated with value returned by the <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string">GetChannelClientID()</a> method, if it is not provided by the developer.</td>
+</tr>
+<tr>
+<td>events</td>
+<td>roArray</td>
+<td>Required</td>
+<td>-</td>
+<td>An array of event items that to be provided by developer.<br /><br /> Up to 25 events can be sent per request. <br /><br />See the <a href="https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events">Google Analytics (GA4) events reference</a> for all valid events.</td>
+<td>RAC will print a debug console warning if this value is empty or is not an array. The payload is still sent if this parameter is not specified.</td>
+</tr>
+<tr>
+<td>events[].name</td>
+<td>string</td>
+<td>Required</td>
+<td>-</td>
+<td>The name for the event.<br /><br />See the <a href="https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events">Google Analytics (GA4) events reference</a> for all options.<br /><br />This is an equivalent of the "t" parameter in Universal Analytics (UA).</td>
+<td>RAC only checks the "name" for each event in array. If the event "name" is not provided, RAC prints a debug console warning, but still sends the events to the Google server.<br /><br />If this parameter is not specified, the payload is still sent.</td>
+</tr>
+</tbody>
+</table>
+
 
 **Example:**
 
 ~~~
-m.global.RSG_analytics.trackEvent = {
-    GA4: {
+m.global.RSG_analytics.trackEvent = \{
+    GA4: \{
         events: [
-            {
+            \{
                 name: "test_event"
-                params: {
+                params: \{
                     "param1": "value1"
                     "param2": 222
                     ' here RAC will append defaultEventParams. For instance, currency from the init example above
-                }
-            }
+                \}
+            \}
         ]
         ' here RAC will append defaultParams, For instance, client_id, api_secret, and measurement_id from the init example above
-     }
-    omniture: {
+     \}
+    omniture: \{
         events: “event15,event17”,
         page_name: “splash_screen”,
         c17: “channel_launch”
-    }
-}
+    \}
+\}
 ~~~
 
 ### Debug
@@ -373,11 +450,11 @@ Sub VerySimpleShowVideo(item)
     m.global.RSG_analytics = CreateObject("roSGNode","Roku_Analytics:AnalyticsNode")
 
     ' Analytics Initialization
-    m.global.RSG_analytics.init = {
-        IQ : {
+    m.global.RSG_analytics.init = \{
+        IQ : \{
             PCODE : "pcode_value"
-        }
-    }
+        \}
+    \}
 
     m.video = m.top.createchild("roSGNode","Video")
     m.video.notificationInterval = 1
@@ -385,34 +462,34 @@ Sub VerySimpleShowVideo(item)
 
     'Setup analytics for this video player
     'We will pass IDs of analytics that should take part in this video playback
-    m.global.RSG_analytics.initVideoPlayer = {
+    m.global.RSG_analytics.initVideoPlayer = \{
         video: m.video
-    }
+    \}
     'set IQ specific metadata
     'This metadata is IQ specific and cannot be stored in ContentNode
-    metadata = {
+    metadata = \{
         duration : item.length,
         assetId : item.id,
         assetType : "external"
-    }
-    m.global.RSG_analytics.setContentMetadata = {
+    \}
+    m.global.RSG_analytics.setContentMetadata = \{
         IQ : metadata
-    }
+    \}
 
     m.video.observeField("state","onVideoState")
     m.video.control = "start"
 End Sub
 
 Sub onVideoState()
-    closeStates = {
+    closeStates = \{
         finished : "",
         error : ""
-    }
+    \}
     if closeStates[m.video.state] <> invalid then
         'Send video player so analytics node could unobserve all fields and close session properly
-        m.global.RSG_analytics.finishedVideoPlayback = {
+        m.global.RSG_analytics.finishedVideoPlayback = \{
             video: m.video
-        }
+        \}
         hideVideo() 'implement this to restore prev screen
     end if
 end Sub
@@ -447,8 +524,3 @@ When using the sample app for
 Google analytics (Model \#2), make sure to change the tracking ID to
 your Google analytics tracking ID in baseScene.brs under the folder
 components.
-
-| Model            | Download                               |
-| ---------------- | -------------------------------------- |
-| Simple model #1  | [RokuAnalyticsComponent_Model1](https://github.com/rokudev/samples/tree/master/analytics)  |
-| Simple model #2  | [RokuAnalyticsComponent_Model2](https://github.com/rokudev/samples/tree/master/analytics)  |

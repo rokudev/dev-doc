@@ -48,17 +48,17 @@ Developers are expected to use these tools, the [certification criteria](/docs/d
 **Expected Result**:
 
 - Nielsen DAR contains **imrworldwide** in the subdomain, and the following content metadata and Nielsen data that you passed:
-  - c45 = <Content Duration\>
-  - c13 = <Nielsen Channel ID\>
-  - c43 = <Nielsen Program ID\>
-  - c44 = <Nielsen Genre\>
+  - c45 = \<Content Duration\>
+  - c13 = \<Nielsen Channel ID\>
+  - c43 = \<Nielsen Program ID\>
+  - c44 = \<Nielsen Genre\>
 
 
 
 - Comscore vCE Contains **scorecardresearch** in the subdomain and the following content metadata that you passed**:**
-  - ns_st_ge = <Content Genre\>
-  - ns_st_pr = <Content ID\>
-  - ns_st_cd = <Content Length\>
+  - ns_st_ge = \<Content Genre\>
+  - ns_st_pr = \<Content ID\>
+  - ns_st_cd = \<Content Length\>
 
 **RAF 1.4** Apps must display the number of ads during ad breaks using the standard Roku-branded label channellied by RAF for all ads inserted client-side.
 

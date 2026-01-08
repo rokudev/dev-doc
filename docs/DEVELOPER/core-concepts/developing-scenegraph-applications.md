@@ -14,11 +14,11 @@ next:
 # Developing SceneGraph applications
 
 Package files should include all the XML components they define in a
-top level directory named <span>`components` </span>(the top level
+top level directory named \<span\>`components` \</span\>(the top level
 directory in the app package contains
 the `manifest` file, the `source` directory, and so forth). When the
 app is launched all the files with extension `.xml` in
-the <span>`components` </span>directory are loaded and added to the
+the \<span\>`components` \</span\>directory are loaded and added to the
 available types of nodes that can be created.
 
 Currently, packages must include all of the XML component XML
@@ -200,7 +200,7 @@ BrightScript code files needed for your SceneGraph scene. The XML files
 must have the extension `.xml`, and as usual, BrightScript code files
 must have the extension `.brs`.
 
-Each XML component file contains a single <component\> element that
+Each XML component file contains a single \<component\> element that
 contains a specific SceneGraph node/element tree defining that
 component.
 
@@ -238,7 +238,7 @@ end sub
 
 In the above example, the SceneGraph component is a definition of a
 Scene node class named `rectangleScene`. The component definition
-consists of a <script\> element, which defines some BrightScript
+consists of a \<script\> element, which defines some BrightScript
 code to be used to initialize `rectangleScene`, and a Rectangle node
 definition, that defines the location, size, and color of a rectangle to
 be shown on the display screen, with a node ID of `bottomRectangle`.

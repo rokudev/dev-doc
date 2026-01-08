@@ -1,8 +1,5 @@
 ---
 title: Transaction Report
-excerpt: >-
-  Learn how to use the Roku Pay Transaction Report to analyze transactions,
-  estimate subscription revenue, and share report data.
 deprecated: false
 hidden: true
 link:

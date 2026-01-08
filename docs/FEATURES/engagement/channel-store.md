@@ -1,16 +1,3 @@
----
-title: "Streaming Store"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
-
 # Streaming Store
 
 *Browse the Streaming Store to find the best content on the Roku Platform*

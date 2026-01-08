@@ -1,16 +1,3 @@
----
-title: "Self-serve app promotion tool"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
-
 # Self-serve app promotion tool
 
 Publishers and agencies can use [Roku's self-serve app promotion tool](https://admanager.roku.com/) to programmatically purchase Roku home screen banner ads, Roku screensaver ads, and video ads in order to promote apps, increase viewership, and reach users on the Roku platform. This single tool enables the targeting of viewers with Roku's exclusive audience data, launching ad campaigns to convert viewers, and then measuring and optimizing campaign performance in real-time.

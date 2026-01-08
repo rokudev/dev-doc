@@ -1,16 +1,3 @@
----
-title: "Roku Search overview"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
-
 # Roku Search overview
 
 Roku Search provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement. The lift provided by Roku Search makes it essential for reaching and expanding your audience on the Roku platform.  

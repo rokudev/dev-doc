@@ -1,5 +1,8 @@
 ---
 title: Transaction Report
+excerpt: >-
+  Learn how to use the Roku Pay Transaction Report to analyze transactions,
+  estimate subscription revenue, and share report data.
 deprecated: false
 hidden: true
 link:
@@ -102,49 +105,113 @@ To run a Transaction Report, follow these steps:
         <br />
       </td>
     </tr>
+
+    <tr>
+      <td>
+        developer_transaction_id
+      </td>
+
+      <td>
+        The partner-specific unique ID for the transaction.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        user_transaction_id
+      </td>
+
+      <td>
+        The user-based ID for the transaction. If this transaction is a purchase, it will be the same as the original_transaction_id. If this transaction is a renewal, it will be different.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        user_id
+      </td>
+
+      <td>
+        The unique ID of the customer.
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>zip_code</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The zip code of the customer.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>channel_name</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The name of the app.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>product_code</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The product identifier as entered on the Developer Dashboard when the product was created.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>product_name</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The name of the product as entered on the Developer Dashboard when the product was created.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>quantity</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The number of items purchased.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>amount</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The localized dollar amount of the purchase. If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction. All cancellation and downgrade transaction types should have a $0 amount.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>service_credits</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>Any credits applied to the transaction. If the transaction_type is UpgradeSale, this field will contain the prorated amount of the current subscription that is still unused. Amount $0 is expected for all cancellation &amp; downgrade transaction types.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>net_amount</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>Localized total of the item purchased (including tax if applicable) with local currency symbol, after subtracting service_credits. If the amount is $0 and the transaction type is “Purchase”, it is a free trial or test. All cancellation and downgrade types should be $0.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>currency</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The currency used for the transaction: USD, CAD, EUR, or GBP.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>expiration_date</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The subscription end date (in ISO 8601 format).</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>original_transaction_id</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The ID of the original subscription purchase.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>original_purchase_date</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The date of the original subscription purchase (in ISO 8601 format).</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>partner_reference_id</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The partner-specific internal ID for an in-app product.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>refund_description</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>Roku-specified explanation for refund transactions.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>comments</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>Any Roku-entered comments for the transaction.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>channel_store_code</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>The ISO Alpha-2 two-letter country code of the Streaming Store associated with the app.</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>purchase_channel</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>Where the Roku Pay subscription purchase was made: <strong>web</strong> (Roku.com) or <strong>device</strong> (on-device sign-up flow).</td>
+    </tr>
+    <tr>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}><strong>purchase_context</strong></td>
+      <td style={{ padding: '12px', border: '1px solid #ddd' }}>How the subscription purchase was made: <strong>isu</strong> (Instant Signup) or <strong>iap</strong> (In-application purchase).</td>
+    </tr>
   </tbody>
 </Table>
 
-| Type                       | Meaning                                                                                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Purchase                   | A successful purchase transaction (historically used to indicate purchases under Roku Standard Billing: RSB). Such transactions include 1) one-time purchases. and 2) initial and recurring subscription charges.                                                               |
-| Cancellation               | Either an end user actively canceled a subscription or Roku is unable to successfully capture the end user's subscription event.                                                                                                                                                |
-| Renewal                    | An end user, who actively cancelled a subscription, successfully signed up again before the previously scheduled expiration of the subscription.                                                                                                                                |
-| DowngradeCancel            | A successful downgrade transaction's cancellation of the outgoing (base) subscription.                                                                                                                                                                                          |
-| DowngradeSale              | A successful downgrade transaction's sale of a new (downgraded) subscription, to replace the outgoing (base) plan.                                                                                                                                                              |
-| UpgradeCancel              | A successful upgrade transaction's cancellation of the outgoing (base) subscription.                                                                                                                                                                                            |
-| UpgradeSale                | A successful upgrade transaction's sale of a new (upgraded) subscription, replacing the outgoing (base) subscription.                                                                                                                                                           |
-| CancellationOfferInitiated | An offer was successfully sent to a customer trying to cancel their subscription.                                                                                                                                                                                               |
-| Charge                     | A successful purchase transaction (historically used to indicate purchases under Roku as Payment Method: RPM).                                                                                                                                                                  |
-| Refund                     | A successful refund transaction (historically used to indicate refunds under Roku as Payment Method: RPM).                                                                                                                                                                      |
-| Reversal                   | A successful refund transaction (historically used to indicate refunds under Roku Standard Billing: RSB).                                                                                                                                                                       |
-| GraceInitiated             | Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP.                                                                                                                                                         |
-| GraceRecovered             | Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same.                                                                                                                                |
-| OnHoldInitiated            | Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.                                                                                               |
-| Chargeback                 | The customer has initiated a transaction dispute. For apps in the Germany Streaming Store only, a SEPA chargeback may occur when the customer disputes a transaction made through Roku Pay that results in a chargeback or their bank account has insufficient funds.           |
-| ChargebackReversed         | Roku successfully reversed the chargeback claim.                                                                                                                                                                                                                                |
-| SecondChargeback           | The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback). |
-
-| developer_transaction_id | The partner-specific unique ID for the transaction. |
-| user_transaction_id | The user-based ID for the transaction. If this transaction is a purchase, it will be the same as the **original_transaction_id**. If this transaction is a renewal, it will be different. |
-| user_id | The unique ID of the customer. |
-| zip_code | The zip code of the customer. |
-| channel_name | The name of the app. |
-| product_code | The product identifier as entered on the Developer Dashboard when the product was created. |
-| product_name | The name of the product as entered on the Developer Dashboard when the product was created. |
-| quantity | The number of items purchased. |
-| amount | The localized dollar amount of the purchase. If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction. All cancellation and downgrade transaction types should have a $0 amount. |
-| service_credits | Amount $0 is expected for all cancellation & downgrade transaction types. Any credits applied to the transaction. If the **transaction_type** is UpgradeSale, this field will contain the prorated amount of the current subscription that is still unused. |
-| net_amount | Localized total of the item purchased (including tax if applicable) with local currency symbol, after subtracting **service_credits**. If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction. All cancellation and downgrade transaction types should have a $0 amount. |
-| currency | The currency used for the transaction: USD, CAD, EUR, or GBP. |
-| expiration_date | The subscription end date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format). |
-| original_transaction_id | The ID of the original subscription purchase. |
-| original_purchase_date | The date of the original subscription purchase (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format). |
-| partner_reference_id | The partner-specific internal ID for an in-app product. |
-| refund_description | Roku-specified explanation for refund transactions. |
-| comments | Any Roku-entered comments for the transaction. |
-| channel_store_code | The [ISO Alpha-2 two-letter country code](https://www.iso.org/obp/ui/#search) of the Streaming Store associated with the app from which the purchase was made. |
-| purchase_channel | Where the Roku Pay subscription purchase was made: |
+<br />
 
 * **web**. Subscription was purchased from [Roku.com](http://roku.com/) (for example, through [Instant Signup](/docs/developer-program/discovery/instant-signup.md) during the device activation).
 * **device**. Subscription was purchased on the Roku device (through the on-device sign-up flow).

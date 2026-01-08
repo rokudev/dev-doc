@@ -60,7 +60,7 @@ Developers are expected to use these tools, the [certification criteria](/docs/d
   - ns_st_pr = \<Content ID\>
   - ns_st_cd = \<Content Length\>
 
-**RAF 1.4** Apps must display the number of ads during ad breaks using the standard Roku-branded label channellied by RAF for all ads inserted client-side.
+**RAF 1.4** Apps must display the number of ads during ad breaks using the standard Roku-branded label applied by RAF for all ads inserted client-side.
 
 **Tests**:
 
@@ -69,7 +69,7 @@ Developers are expected to use these tools, the [certification criteria](/docs/d
 3. Play the same video until the mid-roll ads are invoked. Verify again that the number of ads in the ad break are displayed on the screen.
 
 **Expected Result**:
-The number of ads in the ad break are displayed during the ad break using the standard Roku-branded label channellied by RAF.
+The number of ads in the ad break are displayed during the ad break using the standard Roku-branded label applied by RAF.
 
 **ADS 1.1** Apps must disclose integration/use of all non-Roku SDKs, libraries, or other software systems and external advertising partners (e.g., DSPs) that enable video, audio, or banner ad insertion. Roku has the right to approve or deny such non-Roku SDKs, libraries, or other software systems.
 

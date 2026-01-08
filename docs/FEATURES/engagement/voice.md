@@ -50,8 +50,6 @@ For more information: [Voice Profile Selection integration guide](/docs/develope
 
 Once playback begins, customers can use basic voice commands to fast forward, rewind, and pause the video. Apps can further enhance their voice capabilities and make it even easier for customers to control the playback of their content by supporting enhanced voice commands such as “skip ahead 2 minutes”, “go back 30 seconds”, and “start over”. Apps can also support additional enhanced controls such as "what's playing" to display the name of the content currently in playback.
 
-<video title="Roku Voice Profile Selector">
-  <source src="https://image.roku.com/ZHZscHItMTc2/voice-controls.mp4" />
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/voice-controls.mp4" width="320" height="240" controls />
 
 For more information: [Voice controls integration guide](/docs/developer-program/media-playback/voice-controls/transport-controls.md).

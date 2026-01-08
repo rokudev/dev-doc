@@ -42,7 +42,7 @@ pkg:/locale/fr_CA/translations.ts
 ~~~
 
 For strings defined in XML markup in a
-<children\> element, or <interface\> element field strings,
+\<children\> element, or \<interface\> element field strings,
 the strings will be automatically translated by the SceneGraph
 application, if translations of the string exist in the localization
 files. If no translation file exists for the current locale, or no
@@ -55,7 +55,7 @@ string will be used.
 > that need to be localized in the corresponding BrightScript Init() function.
 
 For strings assigned using BrightScript in a
-<script\> element, you can use the
+\<script\> element, you can use the
 [`tr()`](/docs/references/brightscript/language/global-utility-functions.md#trsource-as-string-as-string)
 function to localize a string, if you have provided a translation of the
 string in a `translations.xml` file in the XLIFF XML format in the
@@ -136,7 +136,7 @@ follows:
 `pkg:/locale/default/images/image_name_default`
 
 
-In Brightscript in a <script\> element, you can also use the getLocalizedAsset() method in [ifLocalization](/docs/references/brightscript/interfaces/iflocalization.md) to get a localized
+In Brightscript in a \<script\> element, you can also use the getLocalizedAsset() method in [ifLocalization](/docs/references/brightscript/interfaces/iflocalization.md) to get a localized
 graphical image.
 
 For example:

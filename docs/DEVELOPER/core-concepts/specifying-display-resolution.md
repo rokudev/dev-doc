@@ -83,80 +83,80 @@ following describes the manifest file attributes to specify the
 supported screen resolutions for SceneGraph applications.
 
 
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Attribute</strong></td>
-<td><strong>Type</strong></td>
-<td><strong>Description</strong></td>
-<td><strong>Example</strong></td>
-</tr>
-<tr class="even">
-<td><p>ui_resolutions</p></td>
-<td><p>option list string</p></td>
-<td><p>A comma-separated list of up to three strings that identify the UI resolutions the application has been designed to support. The string can include the following options:</p>
-<div class="table-wrap">
-<table>
-<thead>
-<tr class="header">
-<th>Option</th>
-<th>Support</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>sd</td>
-<td>Applications designed for standard definition displays (480)</td>
-</tr>
-<tr class="even">
-<td>hd</td>
-<td>Applications designed for high-definition displays (720)</td>
-</tr>
-<tr class="odd">
-<td>fhd</td>
-<td>Applications designed for full high-definition displays (1080)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>The example shows how to specify that the application is intended for all three possible supported resolutions, and will automatically scale and select graphical images (if provided) for all three. The default value is <code>sd,hd</code>.</p></td>
-<td><p><code>sd,hd,fhd</code></p>
-<p> </p></td>
-</tr>
-<tr class="odd">
-<td>uri_resolution_autosub</td>
-<td>option list string</td>
-<td><p>Provides a flexible way to specify graphical image URIs that are automatically modified to replace a specified string with a string that gets a resolution-specific graphical image.</p>
-<p>The attribute value is a comma-separated list of four strings that specify the string to be replaced along with the replacement strings for SD, HD and FHD resolutions.</p>
-<p>For example, suppose the manifest includes this line:</p>
-<p><code>uri_resolution_autosub=$$RES$$,SD,720p,1080p</code></p>
-<p>And the Roku player supports full high-definition resolution. Then if the application specifies a URI of:</p>
-<p><code>http://www.roku.com/testChannel/assets/$$RES$$/rokuTV.jpg</code></p>
-<p>At runtime that URI will be modified to:</p>
-<p><code>http://www.roku.com/testChannel/assets/1080p/rokuTV.jpg</code></p>
-<p>And the application will get the full-high definition version of the graphical image in the specified directory.</p></td>
-<td><code>$$RES$$,SD,HD,FHD</code></td>
-</tr>
-<tr class="even">
-<td>splash_screen_fhd</td>
-<td>uri</td>
-<td>URI of the FHD version of the splash screen.</td>
-<td><code>&quot;pkg:/images/sge_fhd_splash.jpg&quot;</code></td>
-</tr>
-<tr class="odd">
-<td>mm_icon_focus_fhd</td>
-<td>uri</td>
-<td>URI of the FHD application icon.</td>
-<td><code>&quot;pkg:/images/sge_fhd_icon.jpg&quot;</code></td>
-</tr>
-</tbody>
-</table>
+\<table\>
+\<colgroup\>
+\<col style="width: 25%" /\>
+\<col style="width: 25%" /\>
+\<col style="width: 25%" /\>
+\<col style="width: 25%" /\>
+\</colgroup\>
+\<tbody\>
+\<tr class="odd"\>
+\<td\>\<strong\>Attribute\</strong\>\</td\>
+\<td\>\<strong\>Type\</strong\>\</td\>
+\<td\>\<strong\>Description\</strong\>\</td\>
+\<td\>\<strong\>Example\</strong\>\</td\>
+\</tr\>
+\<tr class="even"\>
+\<td\>\<p\>ui_resolutions\</p\>\</td\>
+\<td\>\<p\>option list string\</p\>\</td\>
+\<td\>\<p\>A comma-separated list of up to three strings that identify the UI resolutions the application has been designed to support. The string can include the following options:\</p\>
+\<div class="table-wrap"\>
+\<table\>
+\<thead\>
+\<tr class="header"\>
+\<th\>Option\</th\>
+\<th\>Support\</th\>
+\</tr\>
+\</thead\>
+\<tbody\>
+\<tr class="odd"\>
+\<td\>sd\</td\>
+\<td\>Applications designed for standard definition displays (480)\</td\>
+\</tr\>
+\<tr class="even"\>
+\<td\>hd\</td\>
+\<td\>Applications designed for high-definition displays (720)\</td\>
+\</tr\>
+\<tr class="odd"\>
+\<td\>fhd\</td\>
+\<td\>Applications designed for full high-definition displays (1080)\</td\>
+\</tr\>
+\</tbody\>
+\</table\>
+\</div\>
+\<p\>The example shows how to specify that the application is intended for all three possible supported resolutions, and will automatically scale and select graphical images (if provided) for all three. The default value is \<code\>sd,hd\</code\>.\</p\>\</td\>
+\<td\>\<p\>\<code\>sd,hd,fhd\</code\>\</p\>
+\<p\> \</p\>\</td\>
+\</tr\>
+\<tr class="odd"\>
+\<td\>uri_resolution_autosub\</td\>
+\<td\>option list string\</td\>
+\<td\>\<p\>Provides a flexible way to specify graphical image URIs that are automatically modified to replace a specified string with a string that gets a resolution-specific graphical image.\</p\>
+\<p\>The attribute value is a comma-separated list of four strings that specify the string to be replaced along with the replacement strings for SD, HD and FHD resolutions.\</p\>
+\<p\>For example, suppose the manifest includes this line:\</p\>
+\<p\>\<code\>uri_resolution_autosub=$$RES$$,SD,720p,1080p\</code\>\</p\>
+\<p\>And the Roku player supports full high-definition resolution. Then if the application specifies a URI of:\</p\>
+\<p\>\<code\>http://www.roku.com/testChannel/assets/$$RES$$/rokuTV.jpg\</code\>\</p\>
+\<p\>At runtime that URI will be modified to:\</p\>
+\<p\>\<code\>http://www.roku.com/testChannel/assets/1080p/rokuTV.jpg\</code\>\</p\>
+\<p\>And the application will get the full-high definition version of the graphical image in the specified directory.\</p\>\</td\>
+\<td\>\<code\>$$RES$$,SD,HD,FHD\</code\>\</td\>
+\</tr\>
+\<tr class="even"\>
+\<td\>splash_screen_fhd\</td\>
+\<td\>uri\</td\>
+\<td\>URI of the FHD version of the splash screen.\</td\>
+\<td\>\<code\>&quot;pkg:/images/sge_fhd_splash.jpg&quot;\</code\>\</td\>
+\</tr\>
+\<tr class="odd"\>
+\<td\>mm_icon_focus_fhd\</td\>
+\<td\>uri\</td\>
+\<td\>URI of the FHD application icon.\</td\>
+\<td\>\<code\>&quot;pkg:/images/sge_fhd_icon.jpg&quot;\</code\>\</td\>
+\</tr\>
+\</tbody\>
+\</table\>
 
 
 ### Autoscaling guidelines

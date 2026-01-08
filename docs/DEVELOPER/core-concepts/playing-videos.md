@@ -313,7 +313,7 @@ to configure the video playback. In almost all cases, you should be able
 to use the attributes listed in Content Meta-Data (see [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md)) which are all recognized as field names for
 a ContentNode. In the rare cases where you
 require a custom attribute not found in Content Meta-Data, you can
-create a custom ContentNode by adding <interface\> fields,
+create a custom ContentNode by adding \<interface\> fields,
 or possibly by setting up a parallel associative array that can be
 accessed using the same user interface element node indexing that you
 use for accessing ContentNodes.
@@ -368,10 +368,10 @@ descriptive and configuration meta-data for videos. The Task node
 converts the XML file attributes for each video, and builds the
 corresponding ContentNode with the attribute data.
 The Task node should be created, have an observer callback set for
-the `videocontent` <interface\> field, configured with the URL of
-the server XML file as the `metadatauri` <interface\> field, then
+the `videocontent` \<interface\> field, configured with the URL of
+the server XML file as the `metadatauri` \<interface\> field, then
 run. When the ContentNode is complete, it is assigned to
-the `videocontent` <interface\> field of the Task node, which
+the `videocontent` \<interface\> field of the Task node, which
 then triggers the callback function to configure lists or grids for each
 video item, and allow the configuration meta-data to be assigned to
 a Video node that plays the video.

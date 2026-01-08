@@ -30,9 +30,9 @@ aspects of your application can probably be used in the new context of a
 SceneGraph application. For example, calls to your existing BrightScript
 functions can be added to any SceneGraph XML component file, by
 specifying the location of the BrightScript file in the package
-components directory in the **<script\>** element. For example, if you
+components directory in the **\<script\>** element. For example, if you
 had a set of functions to manipulate URLs, you could add the following
-**<script\>** element to allow a SceneGraph component to call the
+**\<script\>** element to allow a SceneGraph component to call the
 functions:
 
 ~~~

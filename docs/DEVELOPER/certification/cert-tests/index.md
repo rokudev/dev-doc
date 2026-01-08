@@ -1,5 +1,5 @@
 ---
-title: Cert Tests
+title: Certification Tests
 excerpt: ''
 deprecated: false
 hidden: true

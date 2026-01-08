@@ -1,8 +1,5 @@
 ---
 title: Channel Behavior Analysis testing for authenticated apps
-excerpt: >-
-  Learn how to test authenticated apps using the Roku Remote Tool and Channel
-  Behavior Analysis for performance and deep linking certification.
 deprecated: false
 hidden: true
 link:
@@ -18,9 +15,7 @@ Developers of authenticated subscription (SVOD), ad-supported (AVOD), and free a
 
 Once the scripts have been written, developers can upload them to the [Channel Behavior Analysis page in the Developer Dashboard](/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis-window) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes – before submitting the app for certification.
 
-<video src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" width="720" height="480" controls />
-
-<img src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg" alt="authenticated channel certification testing" />
+<video src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg" width="720" height="480" controls />
 
 ## Prerequisites
 

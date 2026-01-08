@@ -16,9 +16,9 @@ The Roku OS is built specifically for streaming, which means publishers can seam
 
 As TV viewing continues to shift to streaming platforms, Roku is well-positioned to help content publishers with a sophisticated suite of tools that make it easy to distribute and monetize content. The Roku Developer Program empowers content publishers to build Roku streaming apps. You can use our [developer SDK](/docs/developer-program/getting-started/roku-dev-prog.md) to build a customized streaming experience.
 
-Our goal is to encourage the success of partners on our platform. We offer multiple paths to monetization, whether you choose to charge a subscription fee, offer free streaming content supported by advertising or even a combination of both, Roku can support many monetization strategies. We have a team that is dedicated to [helping content publishers grow their audience](https://advertising.roku.com/content-publishers) on our platform and capture the increasing number of viewers who are no longer tuning into traditional TV.
+Our goal is to encourage the success of partners on our platform. We offer multiple paths to monetization, whether you choose to charge a subscription fee, offer free streaming content supported by advertising or even a combination of both, Roku can support many monetization strategies. We have a team that is dedicated to [helping content publishers grow their audience](https://advertising.roku.com/content-publishers) on our platform and capture the increasing number of viewers who are no longer tuning into traditional TV.  
 
-https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4" width="1280" height="960" controls />
 
 ## What to know before building a streaming app
 

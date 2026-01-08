@@ -1,8 +1,5 @@
 ---
-title: voice
-excerpt: >-
-  Learn about Roku Voice features for building voice-enabled apps, including
-  Direct to Play, voice keyboards, profile selection, and voice controls.
+title: Roku Voice
 link:
   new_tab: false
 ---

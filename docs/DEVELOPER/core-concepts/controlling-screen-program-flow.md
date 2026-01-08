@@ -66,7 +66,7 @@ make available to the component to display the categories, including
 icons, text, graphic images, in either JSON or XML format. The data
 provided for that component should also include data to pass to another
 custom component, through the
-[<interface\>](/docs/references/scenegraph/xml-elements/interface.md) element or other means, to
+[\<interface\\>](/docs/references/scenegraph/xml-elements/interface.md) element or other means, to
 allow user selection of further sub-categories or video content items.
 All of the previous BrightScript component "screens", including
 "screens" for registration, search, license display, can be developed as
@@ -111,8 +111,8 @@ SceneGraph component outline similar to the following:
 
 You can then select the nodes to comprise your custom component from the
 SceneGraph API node classes, to either create or modify them using
-BrightScript in the <script\> element, and/or declare/define them
-in XML markup in the <children\> element. For example, for a list
+BrightScript in the \<script\\> element, and/or declare/define them
+in XML markup in the \<children\\> element. For example, for a list
 of categories, you might want to use the
 [LabelList](/docs/references/scenegraph/list-and-grid-nodes/labellist.md) node class, or perhaps the
 [MarkupList](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md) node class, since you intend
@@ -121,7 +121,7 @@ to include graphic images as part of your list. You will also use two
 component for your icon and poster graphic images, perhaps as part of
 another custom component that is the definition of the
 `itemComponentName` field of the MarkupList node. You complete the
-component by adding <interface\> element fields as needed to get
+component by adding \<interface\\> element fields as needed to get
 and set data that is either needed for the component, or passed to other
 components and/or the Scene node BrightScript program flow.
 
@@ -187,14 +187,14 @@ outline:
 The outline includes the Poster nodes we will use for graphic
 images, a Label node for the item string, and a Rectangle node
 we will use as a cursor to indicate focus on the item. It also includes
-the <interface\> `itemContent` field to set the Poster node
+the \<interface\\> `itemContent` field to set the Poster node
 URIs, and the text string for the Label node, with the
-`showcontent()` function in the <script\> element setting the
+`showcontent()` function in the \<script\\> element setting the
 required fields for those nodes when the MarkupList node creates
 each instance of the item component.
 
 To complete this component, you would need to specify the local
-coordinate locations of each of the renderable <children\> nodes
+coordinate locations of each of the renderable \<children\\> nodes
 according to the design of the user interface, and any other behavior
 you want for each list item, such as when it becomes focused and/or
 unfocused. For this design, we want only the text of each item and the
@@ -214,9 +214,9 @@ focused:
   translation = "[ 192, 4 ]"  />
 ~~~~
 
-Then we can write the <script\> element callback function
+Then we can write the \<script\\> element callback function
 `showfocus()` to indicate focus when the `focusPercent`
-<interface\> field changes:
+<interface\\> field changes:
 
 ~~~~
 sub showfocus()  
@@ -281,7 +281,7 @@ from a custom RowList node:
 
 These examples download and convert a MRSS XML feed containing all the
 data for the application to a ContentNode field added to the
-Scene node <interface\> element. In this case, the data for the
+Scene node \<interface\\> element. In this case, the data for the
 application is downloaded and converted in the `source/main.brs` file
 after the application Scene node is created but before it is shown,
 rather than using a Task node in the actual SceneGraph application.

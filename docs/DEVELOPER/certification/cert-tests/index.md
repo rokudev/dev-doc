@@ -1,5 +1,5 @@
 ---
-title: "Pre-certification tests"
+title: Certification testing
 excerpt: ''
 deprecated: false
 hidden: true

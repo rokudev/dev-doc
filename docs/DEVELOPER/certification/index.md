@@ -1,0 +1,16 @@
+---
+title: Certification
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
+# Certification
+
+Welcome to the Certification section!

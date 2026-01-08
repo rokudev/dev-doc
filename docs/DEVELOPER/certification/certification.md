@@ -12,15 +12,6 @@ next:
 ---
 # Certification criteria
 
-\<!--- !!! WARNING !!! WARNING !!! WARNING !!! WARNING !!!
-This file contains Certification Criteria Content Metadata!
-When a metadata tag requires a URL (e.g., for ccRelatedResoures,
-or ccCertURL) always use FULL URLs (i.e, no "/docs" relative
-URLs). Using anything other than FULL URLs in metadata tags
-will BREAK the automated certification testing system!
-For metadata tag syntax, see [https://confluence.portal.roku.com:8443/display/DEVPLATFORM/CCSVC+-+Gitlab+Dev+Docs+Integration](https://confluence.portal.roku.com:8443/display/DEVPLATFORM/CCSVC+-+Gitlab+Dev+Docs+Integration).
---\>
-
 To ensure that the Roku platform provides a consistent, performant experience for customers, Roku reserves the right to review all new and updated public apps in the Roku Streaming Store for design and performance criteria. This certification process confirms that apps properly integrate applicable Roku platform requirements.
 
 > Roku reserves the right to remove published apps from the Roku Streaming Store at any time if they do not maintain compliance with the requirements specified in this document, per the [Roku Distribution Agreement](https://docs.roku.com/doc/developerdistribution/en-us) (or other applicable distribution agreement).
@@ -142,8 +133,6 @@ Certification criteria may be applicable to one or more app model types supporte
 **Last updated**: October, 2025
 
 Certification criteria are listed by functionality. <br />
-
-\<!--- ||ccCatBegin "b27a69e3-03ee-47dc-bd79-21db638fef61" -->
 
 ### 1. Advertising
 

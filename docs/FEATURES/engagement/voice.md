@@ -1,4 +1,4 @@
-# Roku Voice overview
+# Roku Voice
 
 Roku Voice enables publishers to build voice-enabled apps that empower customers with the convenience of using their voice to launch, access, and control the playback of content. With Roku Voice, publishers can integrate the following features to accelerate content delivery and simplify playback:
 

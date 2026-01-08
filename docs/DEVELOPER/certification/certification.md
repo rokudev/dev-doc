@@ -1,5 +1,5 @@
 ---
-title: "Certification criteria"
+title: Certification
 excerpt: ''
 deprecated: false
 hidden: true
@@ -640,3 +640,4 @@ Apps must adhere to [Roku’s autoplay policy](/docs/developer-program/media-pla
 \<!--- ||ccRegion ["Global"] --\>
 \<!--- ||ccCertURL "https://developer.roku.com/docs/developer-program/certification/certification.md" --\>
 \<!--- ||ccRuleEnd --\>
+

@@ -18,6 +18,8 @@ As TV viewing continues to shift to streaming platforms, Roku is well-positioned
 
 Our goal is to encourage the success of partners on our platform. We offer multiple paths to monetization, whether you choose to charge a subscription fee, offer free streaming content supported by advertising or even a combination of both, Roku can support many monetization strategies. We have a team that is dedicated to [helping content publishers grow their audience](https://advertising.roku.com/content-publishers) on our platform and capture the increasing number of viewers who are no longer tuning into traditional TV.
 
+## Introduction to the Roku platform video
+
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4" width="1080" height="720" controls />
 
 ## What to know before building a streaming app

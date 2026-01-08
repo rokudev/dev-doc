@@ -192,15 +192,15 @@ Once this observer is set up, the component will continuously monitor the `examp
 exampletimer.unobserveField("fire")
 ```
 
-The event handler function you write must be included in the component <script> element, and manipulate objects within the scope of the component.
+The event handler function you write must be included in the component \<script\> element, and manipulate objects within the scope of the component.
 
-By default observers are only called when the value of a field changes. Code that assigns a field value to the same value as currently assigned to the field will not trigger observers. If you want observers to be called any time a field value is set, regardless of the value, an <interface> field must be defined with the `alwaysNotify` attribute set to true.
+By default observers are only called when the value of a field changes. Code that assigns a field value to the same value as currently assigned to the field will not trigger observers. If you want observers to be called any time a field value is set, regardless of the value, an \<interface\> field must be defined with the `alwaysNotify` attribute set to true.
 
 Here is an example of a field observer and the associated event handler function:
 
 **Field observer XML BrightScript example**
 
-<script type = "text/brightscript" >
+<script type = "text/brightscript" \>
   <![CDATA[
   sub init()
     m.top.setFocus(true)
@@ -220,8 +220,8 @@ Here is an example of a field observer and the associated event handler function
       m.textchange = false
     end if
   end sub
-  ]]>
-</script>
+  ]]\>
+</script\>
 
 > **Optional roSGNodeEvent Callback Function** Argument Field observer callback functions can specify an [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) argument. For example, the changetext() callback function signature in the example above could have been written as sub changetext(event as roSGNodeEvent). In this case, the callback function can call the [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) functions to extract information about the node that triggered the callback, specific field that triggered the callback, etc.
 
@@ -241,9 +241,9 @@ For example, if the width field of a Rectangle that contains a Label is set, an 
 
 With the release of Roku OS 7.5, nested observer callbacks are no longer deferred. Observer callbacks now happen recursively. See the [Queued Callback Model](/docs/developer-program/core-concepts/handling-application-events.md#queued-callback-model) section above for details.
 
-## Handling component \<interface> field value changes
+## Handling component \<interface\> field value changes
 
-Any \<field> element defined in a component [](/docs/references/scenegraph/xml-elements/interface.md) element can have an observer attached by setting the value of the optional `onChange` attribute. Set the `onChange` attribute to the callback function name that will handle the component field value change.
+Any \<field\> element defined in a component [](/docs/references/scenegraph/xml-elements/interface.md) element can have an observer attached by setting the value of the optional `onChange` attribute. Set the `onChange` attribute to the callback function name that will handle the component field value change.
 
 ## Functional fields
 

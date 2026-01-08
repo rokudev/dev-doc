@@ -1,3 +1,16 @@
+---
+title: "Development environment overview"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # Development environment overview
 
 ## Architectural overview

@@ -1,3 +1,16 @@
+---
+title: "Activating developer mode"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # Activating developer mode
 
 Once you [get a Roku device](https://www.roku.com/products/players) and [enroll in the Roku developer program](https://developer.roku.com/enrollment/standard), you can put your device in developer mode, sideload apps using the Roku web plug-in, and then [run sample apps](https://github.com/rokudev/) and test and debug your app.

@@ -1,3 +1,16 @@
+---
+title: "Manifest file"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 #  Manifest file
 
 ## Root level

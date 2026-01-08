@@ -1,3 +1,16 @@
+---
+title: "Content metadata"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # Content metadata
 
 Content metadata describes a viewable title that will be shown to the

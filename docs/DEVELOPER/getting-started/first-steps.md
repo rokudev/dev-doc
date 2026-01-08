@@ -1,3 +1,16 @@
+---
+title: "First steps"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # First steps
 
 To get started building a Roku app, do the following:

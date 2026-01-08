@@ -1,3 +1,16 @@
+---
+title: "Building your first app"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
 # Building your first app
 You can build your first Roku app by modifying Roku's Hello World sample. After you sideload the app, you can use the Roku debug console to view the app's runtime output.
 

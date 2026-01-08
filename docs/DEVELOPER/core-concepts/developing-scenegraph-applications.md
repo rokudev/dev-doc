@@ -1,24 +1,25 @@
 ---
-title: "Developing SceneGraph applications"
-excerpt: ''
+title: Developing SceneGraph applications
+excerpt: >-
+  Learn how to develop SceneGraph applications, including setting up
+  directories, creating manifest files, and more.
 deprecated: false
 hidden: true
+link:
+  new_tab: false
 metadata:
   title: ''
   description: ''
   robots: index
-next:
-  description: ''
 ---
-
 # Developing SceneGraph applications
 
 Package files should include all the XML components they define in a
-top level directory named \<span\>`components` \</span\>(the top level
+top level directory named `components` (the top level
 directory in the app package contains
 the `manifest` file, the `source` directory, and so forth). When the
 app is launched all the files with extension `.xml` in
-the \<span\>`components` \</span\>directory are loaded and added to the
+the `components` directory are loaded and added to the
 available types of nodes that can be created.
 
 Currently, packages must include all of the XML component XML
@@ -46,14 +47,15 @@ below.
 
 The `manifest` file contains the following fields:
 
-~~~
+```
 title=application_title
 subtitle=application_subtitle
 major_version=major_version_number
 minor_version=minor_version_number
 build_version=build_version_number
 
-mm_icon_focus_fhd=FHD_focus_graphic_file_URI``mm_icon_focus_hd=HD_focus_graphic_file_URI
+mm_icon_focus_fhd=FHD_focus_graphic_file_URI
+mm_icon_focus_hd=HD_focus_graphic_file_URI
 mm_icon_side_hd=HD_side_graphic_file_URI
 mm_icon_focus_sd=SD_focus_graphic_file_URI
 mm_icon_side_sd=SD_side_graphic_file_URI
@@ -63,7 +65,7 @@ splash_screen_hd=HD_splash_screen_graphic_file_URI
 splash_screen_fhd=HD_splash_screen_graphic_file_URI
 splash_color=color_specifier
 splash_min_time=milliseconds
-~~~
+```
 
 Many of the fields of the `manifest` file are optional or not required
 for the application to run. The `title` and `subtitle` fields can be
@@ -71,7 +73,7 @@ useful for debugging, as are the `_version` fields. These can be set to
 aid debugging various versions of your application, but are not
 required.
 
-The various *\_graphic\_file\_URI* field values are used to specify a
+The various *`_graphic_file_URI`* field values are used to specify a
 graphic that allows a user to select your application, and a "splash"
 screen that appears briefly before the application begins to run, often
 used while it is still loading.
@@ -104,7 +106,7 @@ file.
 
 **Manifest file example**
 
-~~~
+```
 title=Test Application
 subtitle=A SceneGraph Test
 major_version=1
@@ -120,7 +122,7 @@ splash_screen_sd=pkg:/images/splash_sd.jpg
 splash_screen_hd=pkg:/images/splash_hd.jpg
 splash_color=#000000
 splash_min_time=1000
-~~~
+```
 
 ## Set up the source directory
 
@@ -129,7 +131,7 @@ thread, with the extension
 `.brs`.
 Since applications including SceneGraph scenes allow BrightScript code
 to either be embedded in, or used by, an XML component file in a
-<script\>
+`<script>`
 element, for many SceneGraph applications this directory will only
 contain a
 `main.brs`
@@ -148,7 +150,7 @@ directory](/docs/developer-program/core-concepts/developing-scenegraph-applicati
 
 **Example main.brs file**
 
-~~~
+```
 sub Main()
   showChannelSGScreen()
 end sub
@@ -170,7 +172,7 @@ sub showChannelSGScreen()
     end if
   end while
 end sub
-~~~
+```
 
 You can use this example `main.brs` file for your SceneGraph
 applications simply by adding the name of a Screen Graph scene defined
@@ -185,13 +187,13 @@ For example:
 Similarly, you can control the flow of scenes through your application
 by creating and showing scenes as needed:
 
-~~~
+```
 screen = CreateObject("roSGScreen")
 m.port = CreateObject("roMessagePort")
 screen.setMessagePort(m.port)
 scene = screen.CreateScene("another_scene")
 screen.show()
-~~~
+```
 
 ## Set up the components directory
 
@@ -200,7 +202,7 @@ BrightScript code files needed for your SceneGraph scene. The XML files
 must have the extension `.xml`, and as usual, BrightScript code files
 must have the extension `.brs`.
 
-Each XML component file contains a single \<component\> element that
+Each XML component file contains a single `<component>` element that
 contains a specific SceneGraph node/element tree defining that
 component.
 
@@ -208,7 +210,7 @@ For example:
 
 **Example SceneGraph XML component file**
 
-~~~
+```
 <?xml version="1.0" encoding="utf-8" ?>
 
 <component name="rectangleScene" extends="Scene" >
@@ -234,11 +236,11 @@ end sub
 </children>
 
 </component>
-~~~
+```
 
 In the above example, the SceneGraph component is a definition of a
 Scene node class named `rectangleScene`. The component definition
-consists of a \<script\> element, which defines some BrightScript
+consists of a `<script>` element, which defines some BrightScript
 code to be used to initialize `rectangleScene`, and a Rectangle node
 definition, that defines the location, size, and color of a rectangle to
 be shown on the display screen, with a node ID of `bottomRectangle`.

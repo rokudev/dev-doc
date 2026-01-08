@@ -1,5 +1,5 @@
 ---
-title: "Downloading server content"
+title: Downloading server content
 excerpt: ''
 deprecated: false
 hidden: true
@@ -75,19 +75,19 @@ contained in JSON or XML formats, you can then use the corresponding
 BrightScript parsing functions and components to configure a
 ContentNode with the content data. The BrightScript JSON/XML
 parsing loop should be set up to terminate when the **Task** node
-<interface\> field for the target ContentNode is fully
+\<interface\> field for the target ContentNode is fully
 configured with new data, to allow an `observeField()` function set in
 the component that requires the data to trigger a callback function to
 assign the data to the target node.
 
 For example, the following Task node downloads a list of strings to
 be used as text for a LabelList node. The Task node includes two
-<interface\> fields, one for the URI of the content data (`uri`),
+\<interface\> fields, one for the URI of the content data (`uri`),
 and another for the ContentNode that will be configured with
 the data (`content`). When an XML component requires a list of
 strings for a LabelList node, the component can set the `control`
 field of the Task node object to `RUN`. This sends the specified
-<interface\> field values to the Task node, in this case the
+\<interface\> field values to the Task node, in this case the
 URI of the content data, and starts the Task node. The Task node
 then downloads an XML file with the content data from the specified URI,
 parses the XML data, and creates a parent ContentNode, and

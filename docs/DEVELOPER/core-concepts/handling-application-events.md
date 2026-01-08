@@ -200,8 +200,8 @@ Here is an example of a field observer and the associated event handler function
 
 **Field observer XML BrightScript example**
 
-<script type = "text/brightscript" \>
-  <![CDATA[
+\<script type = "text/brightscript" \>
+  \<![CDATA[
   sub init()
     m.top.setFocus(true)
     m.bottomlabel = m.top.findNode("bottomLabel")
@@ -221,7 +221,7 @@ Here is an example of a field observer and the associated event handler function
     end if
   end sub
   ]]\>
-</script\>
+\</script\>
 
 > **Optional roSGNodeEvent Callback Function** Argument Field observer callback functions can specify an [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) argument. For example, the changetext() callback function signature in the example above could have been written as sub changetext(event as roSGNodeEvent). In this case, the callback function can call the [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) functions to extract information about the node that triggered the callback, specific field that triggered the callback, etc.
 

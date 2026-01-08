@@ -93,7 +93,7 @@ then downloads an XML file with the content data from the specified URI,
 parses the XML data, and creates a parent ContentNode, and
 child ContentNodes for each string. When the ContentNode
 node is configured with all the strings in the XML file, it is assigned
-to the ContentNode object reference set in the <interface\>
+to the ContentNode object reference set in the \<interface\>
 field. This change in the field value triggers the `observeField()`
 callback function in the component XML file to add the strings to the
 LabelList node `content` field.

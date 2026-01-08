@@ -1,5 +1,5 @@
 ---
-title: "Building your first app"
+title: Building your first app
 excerpt: ''
 deprecated: false
 hidden: true
@@ -108,4 +108,4 @@ To use a makefile to automate the sideloading of an app, follow these steps:
 
 3. Run “make install”.
 
-        % export ROKU_DEV_TARGET=192.168.1.140 % export DEVPASSWORD=1234 % cd<sdk>/examples/source/videoplayer % make install
+        % export ROKU_DEV_TARGET=192.168.1.140 % export DEVPASSWORD=1234 % cd\<sdk\>/examples/source/videoplayer % make install

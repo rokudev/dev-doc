@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "SceneGraph XML"
 excerpt: ''
 deprecated: false
 hidden: true
@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 
-# Overview
+# SceneGraph XML
 
 The term SceneGraph refers to a design algorithm and associated
 programming constructs that are widely used in computer graphics

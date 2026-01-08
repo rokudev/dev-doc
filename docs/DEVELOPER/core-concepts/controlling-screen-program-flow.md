@@ -1,5 +1,5 @@
 ---
-title: "Controlling screen program flow"
+title: Controlling screen program flow
 excerpt: ''
 deprecated: false
 hidden: true
@@ -216,7 +216,7 @@ focused:
 
 Then we can write the \<script\> element callback function
 `showfocus()` to indicate focus when the `focusPercent`
-<interface\> field changes:
+\<interface\> field changes:
 
 ~~~~
 sub showfocus()  

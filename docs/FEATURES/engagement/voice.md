@@ -18,11 +18,12 @@ Customers can use their Roku voice remote or mobile app to tell their device to 
 
 For example, if a new viewer says "play Die Hart", the first episode of the Die Hart series on The Roku Channel is launched directly into playback.
 
-To participate in direct-to-play, apps must have already implemented Roku Search and deep linking. SVOD and TVE apps must also send authentication status events to Roku
-
-<video title="Roku Direct to Play Demo">
-  <source src="https://image.roku.com/ZHZscHItMTc2/direct-to-play.mp4" />
+<video title="">
+  <source src="" />
 </video>
+
+![Roku Direct to Play Demo](https://image.roku.com/ZHZscHItMTc2/direct-to-play.mp4)
+
 
 For more information: [Direct to Play integration guide](/docs/developer-program/discovery/direct-to-play.md).
 

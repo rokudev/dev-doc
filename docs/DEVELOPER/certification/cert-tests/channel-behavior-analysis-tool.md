@@ -1,0 +1,26 @@
+---
+title: "Channel behavior analysis tests"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
+# Channel behavior analysis tests
+
+> Subscription (SVOD), ad-supported (AVOD), and free apps must pass automated certification testing in order to published to the Streaming Store. Apps cannot be submitted for publishing without passing automated certification testing.
+
+The [Channel Behavior Analysis tool](/docs/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis-window), which is a part of the app builder flow in the Developer Dashboard, enables developers to run self-serve automated certification tests on their apps. The tool verifies whether apps meet the following [performance](/docs/developer-program/certification/certification.md#3-performance) and [deep linking](/docs/developer-program/certification/certification.md#5-deep-linking) certification requirements:
+
+| Test case                          | Certification requirement tested                             | Date added    |
+| ---------------------------------- | ------------------------------------------------------------ | ------------- |
+| App launch performance         | The app launches to a **fully rendered** homescreen within 15 seconds on the Roku Streaming Stick+ (Amarillo-2019 3810X) or 20 seconds on the Roku Express (Littlefield 37XXX).<br /><br />You must add a signal beacon to your application to measure launch times. Once you add the beacon, you can use the debug console to verify that your app's launch time is meeting this requirement. | July 2020     |
+| Deep linking               | App supports deep linking for all media types (including "series"), per [Roku's deep linking policy](/docs/developer-program/discovery/implementing-deep-linking.md). When the app is already running, app uses [roInputEvent](/docs/references/brightscript/events/roinputevent.md) to send [direct playback commands](/docs/developer-program/discovery/direct-to-play.md) to the app and [deep link](/docs/developer-program/discovery/implementing-deep-linking.md) to content. | July 2020     |
+| Content playback performance   | Content starts playing within 8 seconds of initiation on the Roku Streaming Stick+ (Amarillo-2019 3810X) or 10 seconds on the Roku Express (Littlefield 37XXX). <br /><br />If your app is using the Roku video player, the Roku OS automatically fires beacons to measure and record the video start time; therefore, no additional implementation work for your application is required. If your app is using a custom video player, your application must fire the video start beacons. | July 2020     |
+| Focused Full-Screen Video Playback | App keeps focus on the Video node during full-screen video playback when there are no active UI components over the video. | August  2023  |
+| Screensaver policy                 | App does not override or interfere with Roku's system screensaver. See [Roku’s Screensaver Policy](https://developer.roku.com/docs/developer-program/media-playback/screensavers.md). | December 2023 |

@@ -18,6 +18,8 @@ Customers can use their Roku voice remote or mobile app to tell their device to 
 
 For example, if a new viewer says "play Die Hart", the first episode of the Die Hart series on The Roku Channel is launched directly into playback.
 
+<video src="https://image.roku.com/ZHZscHItMTc2/direct-to-play.mp4" width="640" height="480" controls />
+
 For more information: [Direct to Play integration guide](/docs/developer-program/discovery/direct-to-play.md).
 
 ## Voice keyboards

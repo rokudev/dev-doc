@@ -140,13 +140,11 @@ Certification criteria are listed by functionality. <br />
 
 ### 2. Purchases
 
-
 **2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](/docs/developer-program/roku-pay/roku-pay-requirements.md). Apps must disclose integration/use of all non-Roku SDKs and libraries, and app features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and app features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their app other than Roku Pay.
 
 **2.2** Apps that include authentication must complete account sign-ups and sign-ins on the device using [On-device authentication](/docs/developer-program/authentication/on-device-authentication.md). Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms.
 
 Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md). The upgrade/downgrade workflows are prohibited from including external webpages.
-
 
 **2.3** SVOD apps that have streamed more than an average of 10 million hours per month over the last three months must implement Roku's [Instant Signup (ISU)](/docs/developer-program/discovery/instant-signup.md) feature. This requirement is also applicable to new SVOD apps projected to reach the specified streaming hours threshold shortly after launch. Apps offering Premium Subscriptions on The Roku Channel are exempt from this requirement.
 
@@ -160,225 +158,73 @@ Apps must return a product offer to Roku for all current non-subscribers. This e
 
 ### 3. Performance
 
-
 **3.1** Apps must be available on all Roku devices that receive the current Roku OS; responsive to user launch, navigation, browse, and playback of content at a reasonable speed on all supported Roku devices; and be free of frequent crashes, rebuffering, or other material performance that negatively impacts or limits the consumer experience.
 
 Apps must meet requirements 3.2–3.6 when measured specifically on the Roku Streaming Stick+ (Amarillo-2019 3810X) or the Roku Premiere+ (Gilbert 4K 3921X). If the performance requirement is not met on these specified devices, Roku reserves the right to block launch on all other Roku device types.
 
-**3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the app to measure launch times. The debug console can then be used to verify that the app's launch time is meeting this requirement. See [Measuring channel performance](/docs/developer-program/performance-guide/measuring-channel-performance.md) on how to measure app launch times.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/performance-guide/measuring-channel-performance.md](https://developer.roku.com/docs/developer-program/performance-guide/measuring-channel-performance.md)"] -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance](https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance)"  -->
-\<!--- ||ccRuleEnd -->
+**3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the app to measure launch times. The debug console can then be used to verify that the app's launch time is meeting this requirement. See [Measuring channel performance](/docs/developer-program/performance-guide/measuring-channel-performance.md) on how to measure app launch times.
 
-\<!--- ||ccRuleBegin "f9c9991b-0abf-4fe5-9244-b3dc40e3c2d1" -->
-\<!--- ||ccName "Screen-to-screen transition speed requirements" -->
-\<!--- ||ccDescriptionBegin -->
+
 **3.3** Apps must have screen-to-screen (scene-to-scene) transitions that are within 3 seconds.
 
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance](https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance)"  -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "62b068a4-5dbf-4964-b0ee-1e38fb4c849e" -->
-\<!--- ||ccName "Response speed to user requests" -->
-\<!--- ||ccDescriptionBegin -->
-**3.4** Apps must display a loading indicator during any process visible to users that takes longer than 3 seconds. Apps must respond to user requests within 10 seconds.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance](https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance)"  -->
-\<!--- ||ccRuleEnd -->
+**3.4** Apps must display a loading indicator during any process visible to users that takes longer than 3 seconds. Apps must respond to user requests within 10 seconds.
 
-\<!--- ||ccRuleBegin "60ee85aa-e547-4594-b7b0-309f09f2b512" -->
-\<!--- ||ccName "Response speed for remote button press, tile navigation" -->
-\<!--- ||ccDescriptionBegin -->
-**3.5** Apps must respond to remote button presses and navigate between tiles within 250 milliseconds.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance](https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance)"  -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "557bd93b-05f8-435b-95c7-eec3b568912a" -->
-\<!--- ||ccName "Speed of content playback start" -->
-\<!--- ||ccDescriptionBegin -->
+**3.5** Apps must respond to remote button presses and navigate between tiles within 250 milliseconds.
+
+
 **3.6** Apps must start playing content within 8 seconds of initiation.
 
 Apps with custom video players must fire video start beacons to measure video start times (if the app is using the Roku video player, the Roku OS automatically fires beacons to measure and record the video start time).
 
 The debug console can be used to verify that video start times are compliant. See [Measuring app performance](/docs/developer-program/performance-guide/measuring-channel-performance.md) for more information.
 
-Roku's [Fast Video Start](/docs/developer-program/media-playback/fast-video-start.md) is available to pre-buffer content and help improve playback performance.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/performance-guide/measuring-channel-performance.md](https://developer.roku.com/docs/developer-program/performance-guide/measuring-channel-performance.md)", "[https://developer.roku.com/docs/developer-program/media-playback/fast-video-start.md](https://developer.roku.com/docs/developer-program/media-playback/fast-video-start.md)"] -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance](https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance)"  -->
-\<!--- ||ccRuleEnd -->
+Roku's [Fast Video Start](/docs/developer-program/media-playback/fast-video-start.md) is available to pre-buffer content and help improve playback performance.
 
-\<!--- ||ccRuleBegin "b8d521b9-355c-4c36-a25a-67a5b63ebb53" -->
-\<!--- ||ccName "Channel file size" -->
-\<!--- ||ccDescriptionBegin -->
-**3.7** The app's file size must be 4 MB or less.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance](https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance)"  -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccCatBegin "bd9b4bdb-d0c0-488c-8233-7fd708e02f10" -->
+**3.7** The app's file size must be 4 MB or less.
 
 ### 4. Channel operation
 
-\<!--- ||ccCatEnd -->
 
-\<!--- ||ccRuleBegin "3c9f4009-9a67-4c47-a59b-6cea639c1419" -->
-\<!--- ||ccName "Channel updates non-disruptive to saved data" -->
-\<!--- ||ccDescriptionBegin -->
-**4.1** App updates are prohibited from requiring reactivation/re-linking/re-login, and must persist saved data.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
+**4.1** App updates are prohibited from requiring reactivation/re-linking/re-login, and must persist saved data.
 
-\<!--- ||ccRuleBegin "94c42ed8-32b0-4923-b5c8-9e536f69e34b" -->
-\<!--- ||ccName "Automatic Account Link requirement" -->
-\<!--- ||ccDescriptionBegin -->
-**4.2** Apps that require a user to log in and that have streamed more than an average of 1 million hours per month over the last three months must integrate [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md). This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccEngagementThreshold "apps that require a user account to login and that have streamed more than an average of 1 million hours over the last three months" -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md](https://developer.roku.com/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md)"] -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "9c32dbd1-342a-42c9-b8ea-352edbd749ab" -->
-\<!--- ||ccName "Roku Event Dispatcher requirement" -->
-\<!--- ||ccDescriptionBegin -->
-**4.3**  Apps that require authentication (SVOD, TVE, and other subscription services) must use the [Roku Event Dispatcher](/docs/developer-program/discovery/search/prioritizing-authenticated-channels-in-roku-search.md) to communicate authentication status.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/discovery/search/prioritizing-authenticated-apps-in-roku-search.md](https://developer.roku.com/docs/developer-program/discovery/search/prioritizing-authenticated-apps-in-roku-search.md)"] -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
+**4.2** Apps that require a user to log in and that have streamed more than an average of 1 million hours per month over the last three months must integrate [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md). This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
-\<!--- ||ccRuleBegin "fca2177f-979b-45cc-8b2b-edf1c4907b90" -->
-\<!--- ||ccName "Video and audio quality" -->
-\<!--- ||ccDescriptionBegin -->
-**4.4** Roku [reserves use of the Options](/docs/developer-program/design/masterui.md) ("*") button during video playback for the sole purpose of Roku system displays. Apps may use the Options button for additional in-app options while UI components are displayed on top of the video.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/design/masterui.md](https://developer.roku.com/docs/developer-program/design/masterui.md)"] -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "9af5ff55-e2d5-4e23-a393-02486aa59972" -->
-\<!--- ||ccName "Channel UI cannot block Roku screensaver" -->
-\<!--- ||ccDescriptionBegin -->
-**4.5** Apps are prohibited from overriding or interfering with Roku's system screensaver. See [Roku’s Screensaver Policy](/docs/developer-program/media-playback/screensavers.md).\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
+**4.3**  Apps that require authentication (SVOD, TVE, and other subscription services) must use the [Roku Event Dispatcher](/docs/developer-program/discovery/search/prioritizing-authenticated-channels-in-roku-search.md) to communicate authentication status.
 
-\<!--- ||ccRuleBegin "c9698b8c-cfe2-466a-a816-e2fa39ad0395" -->
-\<!--- ||ccName "Back button functional requirements" -->
-\<!--- ||ccDescriptionBegin -->
-**4.6** Apps must directly return the user to the previous screen and/or state when the [back button](/docs/developer-program/design/remote-control-buttons.md) on the Roku remote is pressed. When the back button is pressed on the app's home screen, apps must exit the app and return the user to the Roku home screen. Apps may display a single confirmation dialog immediately before the user exits the app—and then return the user to the Roku home screen upon receiving confirmation that they want to leave the app.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/design/remote-control-buttons.md](https://developer.roku.com/docs/developer-program/design/remote-control-buttons.md)"]   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "4173992c-0139-456a-bcfc-7ab8d9bbe4b0" -->
-\<!--- ||ccName "Trick play thumbnail requirement" -->
-\<!--- ||ccDescriptionBegin -->
-**4.7** Apps must display thumbnails during [trick play](/docs/developer-program/media-playback/trick-mode/trick-mode.md) for VOD content longer than 15 minutes.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "2020-10-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/media-playback/trick-mode/trick-mode.md](https://developer.roku.com/docs/developer-program/media-playback/trick-mode/trick-mode.md)"]    -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
+**4.4** Roku [reserves use of the Options](/docs/developer-program/design/masterui.md) ("*") button during video playback for the sole purpose of Roku system displays. Apps may use the Options button for additional in-app options while UI components are displayed on top of the video.
 
-\<!--- ||ccRuleBegin "2a68c2b2-5bea-4f58-9682-fe9d06ab55aa" -->
-\<!--- ||ccName "Closed captions" -->
-\<!--- ||ccDescriptionBegin -->
+
+**4.5** Apps are prohibited from overriding or interfering with Roku's system screensaver. See [Roku’s Screensaver Policy](/docs/developer-program/media-playback/screensavers.md).
+
+
+**4.6** Apps must directly return the user to the previous screen and/or state when the [back button](/docs/developer-program/design/remote-control-buttons.md) on the Roku remote is pressed. When the back button is pressed on the app's home screen, apps must exit the app and return the user to the Roku home screen. Apps may display a single confirmation dialog immediately before the user exits the app—and then return the user to the Roku home screen upon receiving confirmation that they want to leave the app.
+
+
+**4.7** Apps must display thumbnails during [trick play](/docs/developer-program/media-playback/trick-mode/trick-mode.md) for VOD content longer than 15 minutes.
+
+
 **4.8**  Apps must comply with [all applicable accessibility laws](https://docs.roku.com/published/channelaccessibility/en/us) and global settings related to accessibility and user experience. Apps must provide [closed captions](/docs/developer-program/media-playback/closed-caption.md) and audio descriptions for content where required by law. If including closed captions, the app must follow the user global settings for closed captioning, and support the following closed captioning settings in the Options menu: On, Off, On instant replay, and On mute (Roku TVs only). For VOD content, apps must synchronize the captions with the audio.
 
 Apps must adhere to [Roku’s autoplay policy](/docs/developer-program/media-playback/autoplay.md).
 
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "2024-10-01T12:00:00.000"   -->
-\<!--- WARNING! This criterion has multiple clauses. The effective date applies only to the last item (autoplay) but the rest was already in effect. -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/media-playback/closed-caption.md](https://developer.roku.com/docs/developer-program/media-playback/closed-caption.md)"]   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "51f2ca7c-8488-432b-a9a3-a9d6c565a937" -->
-\<!--- ||ccName "Instant replay" -->
-\<!--- ||ccDescriptionBegin -->
-**4.9** Apps must rewind between 10 to 25 seconds when the [instant replay button](/docs/developer-program/design/remote-control-buttons.md#instant-replayskip-back) on the Roku remote is pressed.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
+**4.9** Apps must rewind between 10 to 25 seconds when the [instant replay button](/docs/developer-program/design/remote-control-buttons.md#instant-replayskip-back) on the Roku remote is pressed.
 
-\<!--- ||ccRuleBegin "76eb9f65-cad9-48fe-9911-2631d5ad9fbe" -->
-\<!--- ||ccName "Video bookmark threshold, persistence" -->
-\<!--- ||ccDescriptionBegin -->
-**4.10** Apps must implement [bookmarking](/docs/developer-program/media-playback/bookmarking.md) for all VOD content longer than 15 minutes. Apps must store bookmarks for a minimum of 30 days.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "f0ea9e6a-d639-437d-88e0-0cf9e17058dc" -->
-\<!--- ||ccName "Voice control support" -->
-\<!--- ||ccDescriptionBegin -->
-**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](/docs/developer-program/media-playback/voice-controls/transport-controls.md) that are supported on the Roku platform. Apps must implement proper [error handling](/docs/developer-program/media-playback/voice-controls/transport-controls.md#error-handling) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
+**4.10** Apps must implement [bookmarking](/docs/developer-program/media-playback/bookmarking.md) for all VOD content longer than 15 minutes. Apps must store bookmarks for a minimum of 30 days.
 
-\<!--- WARNING! This criterion has 3 clauses. The effective date applies to the 2nd and 3rd criteria items ("Additionally") but the rest was already in effect. -->
-\<!--- ||ccEngagementThreshold "For all apps that have streamed more than an average of 5 million hours over the last three months"  -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/media-playback/voice-controls/transport-controls.md](https://developer.roku.com/docs/developer-program/media-playback/voice-controls/transport-controls.md)"]    -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "eb0c5e1a-e23d-401f-b17a-d26418032046" -->
-\<!--- ||ccName "Voice keyboard support for email, PIN, and password entry" -->
-\<!--- ||ccDescriptionBegin -->
+**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](/docs/developer-program/media-playback/voice-controls/transport-controls.md) that are supported on the Roku platform. Apps must implement proper [error handling](/docs/developer-program/media-playback/voice-controls/transport-controls.md#error-handling) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
-**4.12** Apps must use [Roku voice keyboards](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md) for [email](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md), [PIN](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-pinpad.md), and [password](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md) entry.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "2022-10-01T12:00:00.000"   -->
-\<!--- WARNING! This criterion has 3 aspects. The effective date applies to the 3rd criteria item ("password entry"), but the rest was already in effect for "email" and "PIN" starting April 1, 2022. -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md](https://developer.roku.com/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md)"]  -->
+**4.12** Apps must use [Roku voice keyboards](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md) for [email](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md), [PIN](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-pinpad.md), and [password](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md) entry.
 
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md](https://developer.roku.com/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md)"]   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-pinpad.md](https://developer.roku.com/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-pinpad.md)"] -->
-
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "1d5064f9-ddc5-4db5-8b14-c2cb5a0875e2" -->
-\<!--- ||ccName "Continue Watching integration for apps meeting streaming hours threshold" -->
-\<!--- ||ccDescriptionBegin -->
-
-**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Continue Watching](/docs/developer-program/discovery/continue-watching.md) feature. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "2023-04-01T12:00:00.000"   -->
-
-\<!--- ||ccEngagementThreshold "For all apps (except TVOD, live linear, and made for kids apps)that have streamed more than an average of 5 million hours over the last three months"  -->
-
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/discovery/continue-watching.md](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md)"]   -->
-
-\<!--- ||ccRegion ["US"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation](https://developer.roku.com/docs/developer-program/certification/certification.md#4-channel-operation)"    -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccCatBegin "1309e7f7-6799-44ca-8d89-bd162a771f4b" -->
+**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Continue Watching](/docs/developer-program/discovery/continue-watching.md) feature. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 
 ### 5. Deep linking
 

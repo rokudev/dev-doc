@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Getting started
 excerpt: ''
 deprecated: false
 hidden: true

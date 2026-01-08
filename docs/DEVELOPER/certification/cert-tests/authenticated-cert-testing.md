@@ -1,8 +1,5 @@
 ---
 title: Channel Behavior Analysis testing for authenticated apps
-excerpt: >-
-  Learn how to test authenticated apps using the Roku Remote Tool and Channel
-  Behavior Analysis for performance and deep linking certification.
 deprecated: false
 hidden: true
 link:
@@ -18,21 +15,18 @@ Developers of authenticated subscription (SVOD), ad-supported (AVOD), and free a
 
 Once the scripts have been written, developers can upload them to the [Channel Behavior Analysis page in the Developer Dashboard](/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis-window) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes – before submitting the app for certification.
 
-<video title="Authenticated channel certification testing" poster="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" />
-  <img src='https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg' alt='authenticated channel certification testing' />
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg" width="720" height="480" controls />
 
 ## Prerequisites
 
 To run Channel Behavior Analysis testing on authenticated apps, developers must first do the following:
 
-- Create a **Public** app. The developer sign-in/out scripts cannot be used with [beta apps](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines).
-- [Upload a package file](/docs/developer-program/publishing/channel-publishing-guide.md#package-upload-window).
-- [Pass static analysis testing](/docs/developer-program/publishing/channel-publishing-guide.md#static-analysis-window).
-- [Provide test credentials](/docs/developer-program/publishing/channel-publishing-guide.md#test-credentials-window).
-- [Provide deep link parameters](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window).
-- [Write automated sign-in and sign-out scripts](#writing-automated-sign-in-and-sign-out-scripts).
+* Create a **Public** app. The developer sign-in/out scripts cannot be used with [beta apps](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines).
+* [Upload a package file](/docs/developer-program/publishing/channel-publishing-guide.md#package-upload-window).
+* [Pass static analysis testing](/docs/developer-program/publishing/channel-publishing-guide.md#static-analysis-window).
+* [Provide test credentials](/docs/developer-program/publishing/channel-publishing-guide.md#test-credentials-window).
+* [Provide deep link parameters](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window).
+* [Write automated sign-in and sign-out scripts](#writing-automated-sign-in-and-sign-out-scripts).
 
 This document demonstrates how to write these scripts with the [Roku Remote tool](http://devtools.web.roku.com/RokuRemote/) for signing in to the [on-device authentication sample app](https://github.com/rokudev/on-device-authentication) and signing out.
 
@@ -50,11 +44,11 @@ To launch the Roku Remote Tool and add your device and development app to it, fo
 
 3. Add your test device to the Roku Remote Tool. In the Device Manager, enter the IP address of your test device, enter a name to be used to identify the device, and then click **Add**. Toggle the device on, and then close the dialog.
 
-   ![roku600px - roku-remote-add-device-toggle-on](https://image.roku.com/ZHZscHItMTc2/roku-remote-add-device-toggle-on-v2.png)
+   <Image alt="roku600px - roku-remote-add-device-toggle-on" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-add-device-toggle-on-v2.png" />
 
 4. Add your development app. Click **Add channel**, and then enter the name of the app that is specified in the **title** attribute of the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#required-attributes), enter the app ID, which is "dev" if you sideloaded the app, and then click **Add to table**. Click the add icon for the app under **Add to script** so the Roku OS can identify the app to be automated.
 
-   ![roku600px - roku-remote-add-channel](https://image.roku.com/ZHZscHItMTc2/roku-remote-add-channel-v1.png)
+   <Image alt="roku600px - roku-remote-add-channel" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-add-channel-v1.png" />
 
 ### Creating the sign-in script
 
@@ -62,37 +56,38 @@ To create the automated sign-in script, follow these steps:
 
 1. Click **Launch the app**. Select the app from the **Channel name** list, and then click **Add** (the deep linking **Content ID** and **Media type** parameters are not required; the actual deep linking parameters to be used should have already been provided in the [Deep Linking page](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-page) as part of the [prerequisites](#prerequisites)). Click the add icon for the app under **Add to script** to add a "launch" step for the app to the script.
 
-   ![roku600px - roku-remote-launch-channel](https://image.roku.com/ZHZscHItMTc2/roku-remote-launch-channel-v1.png)
+   <Image alt="roku600px - roku-remote-launch-channel" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-launch-channel-v1.png" />
 
 2. Use the keypad on the left side to sign in to the app. As you click a button, a "press" step with the name of the button is added to the script. The complexity of the script varies based on the screens and required navigation in the sign-in flow. The following image demonstrates the initial sequence of keypresses used to sign in to the [on-device authentication sample app](https://github.com/rokudev/on-device-authentication):
 
-    ![roku815px - roku-remote-steps](https://image.roku.com/ZHZscHItMTc2/roku-remote-steps-v2.png)
+   <Image alt="roku815px - roku-remote-steps" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-steps-v2.png" />
 
 3. Upon opening a keyboard dialog for entering login credentials, enter the user name and password in the **Keyboard Input** box and then click the arrow button to the right of it. A "text" step with the credential is added to the script. Click the **Play** button to test the script. Edit the steps as needed until the script successfully signs the user in.
 
-  > You may need to insert a "pause" step (by pressing the pause icon) for any action in the UI that takes time to be completed before another step in the script can be executed. For example, it may take a few seconds for the app UI to be populated after being launched. This ensures that the subsequent steps are actually navigating the UI. Do not include more than 10 pause steps in a script.
-
-   > Do not include steps that exit the app or Channel Behavior Analysis will fail. For example, do not include a "home" step, and do not include a "back" step if it results in the app being exited.
+> You may need to insert a "pause" step (by pressing the pause icon) for any action in the UI that takes time to be completed before another step in the script can be executed. For example, it may take a few seconds for the app UI to be populated after being launched. This ensures that the subsequent steps are actually navigating the UI. Do not include more than 10 pause steps in a script.
+>
+> Do not include steps that exit the app or Channel Behavior Analysis will fail. For example, do not include a "home" step, and do not include a "back" step if it results in the app being exited.
 
 4. When you have finished testing the script, replace the credentials with the following template variables (the actual credentials to be used should have already been provided in the Test Credentials page as part of the [prerequisites](#prerequisites)):
 
-   - Change the entered user name to `script-login`.
+   * Change the entered user name to `script-login`.
 
-   - Change the entered password to `script-password`.
+   * Change the entered password to `script-password`.
 
    The steps in the script should therefore appear as follows:
-      ```
-      - text: script-login
-      - text: script-password
-      ```
+
+   ```
+   - text: script-login
+   - text: script-password
+   ```
 
 5. Export the sign-in script to your desktop. Click the hamburger icon to the right of the New Script button, click **Export scripts**, select the check box for the script to be exported, and then click **Export scripts** again.
 
-   ![roku815px - roku-remote-export-script](https://image.roku.com/ZHZscHItMTc2/roku-remote-export-script-v1.png)
+   <Image alt="roku815px - roku-remote-export-script" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-export-script-v1.png" />
 
    You can [download the sign-in script](https://github.com/rokudev/on-device-authentication) used for the on-device authentication sample and test it. This also provides a quick reference to help write your script. To import the script into the Roku Remote Tool, click **New Script**, click **Import from**, and then select the script. This sample app does not include a sign-out flow, so no sample sign-out script is included.
 
-   ![roku815px - roku-remote-import](https://image.roku.com/ZHZscHItMTc2/roku-remote-import-v1.png)
+   <Image alt="roku815px - roku-remote-import" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-import-v1.png" />
 
 ### Creating the sign-out script
 
@@ -120,31 +115,31 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
    If you can't find the Sign In/Out Scripts button shown below for your Public app, make sure your app Customer Account Requirement field is accurate. For more information, follow the steps below:
 
-      a. On the Developer Dashboard, click **Manage My Channels**.
+   a. On the Developer Dashboard, click **Manage My Channels**.
 
-      b. Navigate to the app you'd like to run Channel Behavior Analysis on.
+   b. Navigate to the app you'd like to run Channel Behavior Analysis on.
 
-      c. Click **Preview and Update** next to the app and click **Properties** in the dropdown.
+   c. Click **Preview and Update** next to the app and click **Properties** in the dropdown.
 
-      d. Scroll down to the **Customer Account Requirement** section.
+   d. Scroll down to the **Customer Account Requirement** section.
 
-      e. Ensure that "A customer account **is required** to access some or all app features" is selected.
+   e. Ensure that "A customer account **is required** to access some or all app features" is selected.
 
-      f. Click **Save**.
+   f. Click **Save**.
 
-      g. Navigate to **Channel Behavior Analysis**. You should now see the option to upload your .rasp script file.
+   g. Navigate to **Channel Behavior Analysis**. You should now see the option to upload your .rasp script file.
 
-   ![roku815px - cert-test-home](https://image.roku.com/ZHZscHItMTc2/cert-test-home-cba.png)
+   <Image alt="roku815px - cert-test-home" border={false} src="https://image.roku.com/ZHZscHItMTc2/cert-test-home-cba.png" />
 
 5. Select the [test credentials](/docs/developer-program/publishing/channel-publishing-guide.md#test-credentials-window) title that contains the user name and password to be used to sign-in into the app. The Channel Behavior Analysis tool will automatically replace the "script-login" and "script-password" template variables in the script with the user name and password entered for the selected test credentials title.
 
 6. In the **Upload Sign In/Sign Out Scripts** dialog, click **Upload** to upload the exported sign-in and sign-out scripts (**.rasp** files) on your desktop.
 
-   ![roku815px - upload-scripts-home](https://image.roku.com/ZHZscHItMTc2/upload-scripts-home-v2a.jpg)
+   <Image alt="roku815px - upload-scripts-home" border={false} src="https://image.roku.com/ZHZscHItMTc2/upload-scripts-home-v2a.jpg" />
 
 7. The **Script Body** pane on the right displays the steps in the script. The pane highlights the user name and password that have replaced the "script-login" and "script-password" template variables.
 
-   ![roku815px - cert-test-script-highlight](https://image.roku.com/ZHZscHItMTc2/cert-test-script-highlight.jpg)
+   <Image alt="roku815px - cert-test-script-highlight" border={false} src="https://image.roku.com/ZHZscHItMTc2/cert-test-script-highlight.jpg" />
 
 8. Click **Save** to return to the Channel Behavior Analysis page.
 
@@ -166,9 +161,9 @@ You can [download the on-device authentication sample app ](https://github.com/r
 
 6. In the Deep Linking page, enter the following deep linking parameters:
 
-   - mediaType = movie
+   * mediaType = movie
 
-   - contentId = 6c9d0951d6d74229afe4adf972b278dd
+   * contentId = 6c9d0951d6d74229afe4adf972b278dd
 
 7. Complete the **Test Credentials** page. There are no specific requirements for completing this page in order to run the sample app; the sample app accepts any user name/password to grant access to content.
 

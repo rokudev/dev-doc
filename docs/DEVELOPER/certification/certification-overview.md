@@ -136,97 +136,35 @@ Certification criteria are listed by functionality. <br />
 
 ### 1. Advertising
 
-\<!--- ||ccCatEnd -->
-
-\<!--- ||ccRuleBegin "ffce46e7-61ae-4a3d-b8d4-04126cf84e09" -->
-\<!--- ||ccName "RAF requirement" -->
-\<!--- ||ccDescriptionBegin -->
-**1.1** Apps that include video advertising must comply with all the integration requirements listed in [Roku advertising requirements](/docs/developer-program/advertising/ad-requirements.md) document.
-
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/advertising/roku-advertising-framework.md](https://developer.roku.com/docs/developer-program/advertising/roku-advertising-framework.md)"]  -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#1-advertising](https://developer.roku.com/docs/developer-program/certification/certification.md#1-advertising)"  -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccCatBegin "5bd05d4a-a40b-408b-98fc-b025c338002b" -->
+1.1 Apps that include video advertising must comply with all the integration requirements listed in the <a href="/docs/developer-program/advertising/ad-requirements.md">Roku advertising requirements</a>  document.
 
 ### 2. Purchases
 
-\<!--- ||ccCatEnd -->
 
-\<!--- ||ccRuleBegin "daa2a604-1661-449d-8409-c3bc937489af" -->
-\<!--- ||ccName "Roku Pay billing flow" -->
-\<!--- ||ccDescriptionBegin -->
-**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](/docs/developer-program/roku-pay/roku-pay-requirements.md). Apps must disclose integration/use of all non-Roku SDKs and libraries, and app features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and app features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their app other than Roku Pay.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/roku-pay/implementation/overview.md](https://developer.roku.com/docs/developer-program/roku-pay/implementation/overview.md)"]    -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases](https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases)"    -->
-\<!--- ||ccRuleEnd -->
+**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](/docs/developer-program/roku-pay/roku-pay-requirements.md). Apps must disclose integration/use of all non-Roku SDKs and libraries, and app features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and app features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their app other than Roku Pay.
 
-\<!--- ||ccRuleBegin "36b8c92f-0e4d-4faf-9297-c13fb3d4062f" -->
-\<!--- ||ccName "On-device sign-up/sign-in, up/downgrade" -->
-\<!--- ||ccDescriptionBegin -->
 **2.2** Apps that include authentication must complete account sign-ups and sign-ins on the device using [On-device authentication](/docs/developer-program/authentication/on-device-authentication.md). Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms.
 
 Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md). The upgrade/downgrade workflows are prohibited from including external webpages.
 
-\<!--- ||ccDescriptionEnd -->
-\<!--- WARNING! This criterion has two clauses and it is unclear whether
-the effective date applies only to the second clause or to both. -->
-\<!--- ||ccEffectiveDate "2020-10-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/authentication/on-device-authentication.md](https://developer.roku.com/docs/developer-program/authentication/on-device-authentication.md)", "[https://developer.roku.com/docs/developer-program/roku-pay/signup-best-practices.md](https://developer.roku.com/docs/developer-program/roku-pay/signup-best-practices.md)", "[https://developer.roku.com/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md](https://developer.roku.com/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md)"] -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases](https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases)"    -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "55e1de5a-8fc0-4a53-8002-96357ec64b5b" -->
-\<!--- ||ccName "Roku Instant Signup program" -->
-\<!--- ||ccDescriptionBegin -->
 **2.3** SVOD apps that have streamed more than an average of 10 million hours per month over the last three months must implement Roku's [Instant Signup (ISU)](/docs/developer-program/discovery/instant-signup.md) feature. This requirement is also applicable to new SVOD apps projected to reach the specified streaming hours threshold shortly after launch. Apps offering Premium Subscriptions on The Roku Channel are exempt from this requirement.
 
 Apps' ISU integration must include offers for lapsed and canceled subscribers. This requirement is applicable to apps with existing ISU integrations.
 
-Apps must return a product offer to Roku for all current non-subscribers. This ensures that all non-subscribed customers receive a product offer on all touchpoints. This helps drive subscription sign-ups, particularly for lapsed and cancelled customers.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "2024-10-01T12:00:00.000"   -->
-\<!--- ||ccEngagementThreshold "SVOD apps that have streamed more than an average of 10 million hours over the last three months, and new SVOD apps projected to reach the specified streaming hour threshold shortly after launch apps' ISU integration must include offers for lapsed and canceled subscribers (effective after October 1, 2024). This requirement is applicable to apps with existing ISU integrations."   -->
-\<!--- WARNING! This criterion has 2 clauses. The effective date applies to the 2nd item (rejoin logic) but the rest was already in effect. -->
+Apps must return a product offer to Roku for all current non-subscribers. This ensures that all non-subscribed customers receive a product offer on all touchpoints. This helps drive subscription sign-ups, particularly for lapsed and cancelled customers.
 
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/discovery/instant-signup.md](https://developer.roku.com/docs/developer-program/discovery/instant-signup.md)"]    -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases](https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases)"    -->
-\<!--- ||ccRuleEnd -->
+<br />
 
-\<!--- ||ccRuleBegin "25a7b3ee-2cf9-42f1-8260-4fdb04e6b2d7" -->
-\<!--- ||ccName "Content and application nesting not permitted" -->
-\<!--- ||ccDescriptionBegin -->
-**2.4** Apps are prohibited from including nested content or applications, additional content via browsers or embedded screens, deep links to other applications, or any cross-app functionality.\<!--- ||ccdescriptionend -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases](https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases)"    -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccCatBegin "eb357126-18bd-41b1-92b4-cbce17945125" -->
+**2.4** Apps are prohibited from including nested content or applications, additional content via browsers or embedded screens, deep links to other applications, or any cross-app functionality.
 
 ### 3. Performance
 
-\<!--- ||ccCatEnd -->
 
-\<!--- ||ccRuleBegin "b96b11df-c21d-471d-9b35-017024b109c4" -->
-\<!--- ||ccName "Mandatory app availability in all current-FW platforms" -->
-\<!--- ||ccDescriptionBegin -->
 **3.1** Apps must be available on all Roku devices that receive the current Roku OS; responsive to user launch, navigation, browse, and playback of content at a reasonable speed on all supported Roku devices; and be free of frequent crashes, rebuffering, or other material performance that negatively impacts or limits the consumer experience.
 
-Apps must meet requirements 3.2–3.6 when measured specifically on the Roku Streaming Stick+ (Amarillo-2019 3810X) or the Roku Premiere+ (Gilbert 4K 3921X). If the performance requirement is not met on these specified devices, Roku reserves the right to block launch on all other Roku device types.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance](https://developer.roku.com/docs/developer-program/certification/certification.md#3-performance)"  -->
-\<!--- ||ccRuleEnd -->
+Apps must meet requirements 3.2–3.6 when measured specifically on the Roku Streaming Stick+ (Amarillo-2019 3810X) or the Roku Premiere+ (Gilbert 4K 3921X). If the performance requirement is not met on these specified devices, Roku reserves the right to block launch on all other Roku device types.
 
-\<!--- ||ccRuleBegin "18e768b5-9643-4dd4-ba3d-c409441d8ddb" -->
-\<!--- ||ccName "Channel launch speed requirements" -->
-\<!--- ||ccDescriptionBegin -->
 **3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the app to measure launch times. The debug console can then be used to verify that the app's launch time is meeting this requirement. See [Measuring channel performance](/docs/developer-program/performance-guide/measuring-channel-performance.md) on how to measure app launch times.\<!--- ||ccDescriptionEnd -->
 \<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
 \<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/performance-guide/measuring-channel-performance.md](https://developer.roku.com/docs/developer-program/performance-guide/measuring-channel-performance.md)"] -->

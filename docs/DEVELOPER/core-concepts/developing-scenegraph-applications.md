@@ -1,8 +1,5 @@
 ---
 title: Developing SceneGraph applications
-excerpt: >-
-  Learn how to develop SceneGraph applications, including setting up
-  directories, creating manifest files, and more.
 deprecated: false
 hidden: true
 link:

@@ -228,174 +228,28 @@ Apps must adhere to [Roku’s autoplay policy](/docs/developer-program/media-pla
 
 ### 5. Deep linking
 
-\<!--- ||ccCatEnd -->
 
-\<!--- ||ccRuleBegin "b0ef2b3c-f376-4f6a-8820-4ec5c14838be" -->
-\<!--- ||ccName "Deep linking support requirement" -->
-\<!--- ||ccDescriptionBegin -->
-**5.1** Apps must support deep linking for all media types, per Roku's [deep linking policy](/docs/developer-program/discovery/implementing-deep-linking.md). Live streams (and replays of live broadcast streams) may be exempt from this requirement.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md)"] -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#5-deep-linking](https://developer.roku.com/docs/developer-program/certification/certification.md#5-deep-linking)" -->
-\<!--- ||ccRuleEnd -->
+**5.1** Apps must support deep linking for all media types, per Roku's [deep linking policy](/docs/developer-program/discovery/implementing-deep-linking.md). Live streams (and replays of live broadcast streams) may be exempt from this requirement.
 
-\<!--- ||ccRuleBegin "9c9d3b47-759a-4529-ac82-734ac0d0985d" -->
-\<!--- ||ccName "Direct playback support in running app" -->
-\<!--- ||ccDescriptionBegin -->
-**5.2**  Apps must implement [Direct to Play](/docs/developer-program/discovery/direct-to-play.md) to support direct voice playback commands for launching and playing content.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/discovery/direct-to-play.md](https://developer.roku.com/docs/developer-program/discovery/direct-to-play.md)"]    -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md)"] -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/references/brightscript/events/roinputevent.md](https://developer.roku.com/docs/references/brightscript/events/roinputevent.md)"]   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#5-deep-linking](https://developer.roku.com/docs/developer-program/certification/certification.md#5-deep-linking)" -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "4906bd53-85b0-424d-a4c1-565490e058a6" -->
-\<!--- ||ccName "Deep-linking, commerce limited to within app" -->
-\<!--- ||ccDescriptionBegin -->
-**5.3** Apps are prohibited from deep linking into other apps or directing users to exit the app to purchase content, goods or other services.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#5-deep-linking](https://developer.roku.com/docs/developer-program/certification/certification.md#5-deep-linking)" -->
-\<!--- ||ccRuleEnd -->
+**5.2**  Apps must implement [Direct to Play](/docs/developer-program/discovery/direct-to-play.md) to support direct voice playback commands for launching and playing content.
 
-\<!--- ||ccCatBegin "b29cedbc-b3be-40ba-afd2-6abe15cb9f1e" -->
+
+**5.3** Apps are prohibited from deep linking into other apps or directing users to exit the app to purchase content, goods or other services.
 
 ### 6. UI and Graphics
 
-\<!--- ||ccCatEnd -->
 
-\<!--- ||ccRuleBegin "27917dc2-2a01-463a-843b-aca408e458a8" -->
-\<!--- ||ccName "Channel version number" -->
-\<!--- ||ccDescriptionBegin -->
-**6.1** Apps must have a non-zero version number. This number must be incremented for each build submitted and updated in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md).\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRelatedResources ["[https://developer.roku.com/docs/developer-program/getting-started/architecture/channel-manifest.md](https://developer.roku.com/docs/developer-program/getting-started/architecture/channel-manifest.md)"]   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics](https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics)"  -->
-\<!--- ||ccRuleEnd -->
+**6.1** Apps must have a non-zero version number. This number must be incremented for each build submitted and updated in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md).
 
-\<!--- ||ccRuleBegin "83617eac-e30d-444c-bde8-243c871dc85a" -->
-\<!--- ||ccName "Kids & Family category" -->
-\<!--- ||ccDescriptionBegin -->
-**6.2** Apps in the Kids & Family category must only include content that is appropriate for children. Apps are prohibited from including ads that are targeted based on user activity (behavioral advertising) and may only include ads that are appropriate for children (for example, no graphic violence, no adult situations, and so on).\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics](https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics)"  -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "01695ae8-2649-4f06-b699-19087f38caf1" -->
-\<!--- ||ccName "Pornography and public app decorum" -->
-\<!--- ||ccDescriptionBegin -->
-**6.3** Public apps are prohibited from containing content deemed to be pornographic. With respect to app information that may appear outside of the application (for example, in search results, in the platform user interface, or on Roku’s website), content and descriptions must be appropriate for all ages. This includes the app name, artwork, and descriptions appearing in the Roku Streaming Store and web. This also pertains to content titles, artwork, and descriptions appearing in Roku Search.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics](https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics)"  -->
-\<!--- ||ccRuleEnd -->
+**6.2** Apps in the Kids & Family category must only include content that is appropriate for children. Apps are prohibited from including ads that are targeted based on user activity (behavioral advertising) and may only include ads that are appropriate for children (for example, no graphic violence, no adult situations, and so on).
 
-\<!--- ||ccRuleBegin "4b42afe5-b620-491a-82a3-04a3f675e3b8" -->
-\<!--- ||ccName "Splash screen and streaming store artwork standards" -->
-\<!--- ||ccDescriptionBegin -->
-**6.4** The Roku Streaming Store artwork and splash screen must clearly represent the name or identity of the app using only broadcast-safe colors with proper sizing. The app splash screen must support FHD (1920x1080p) and HD (1280x720p) resolutions. In addition, artwork must not be transparent. The splash screen's URI must be listed in the package manifest file.\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics](https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics)"  -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "2ad0a67a-d677-498d-91d2-0372195dd9f9" -->
-\<!--- ||ccName "CVAA compliance" -->
-\<!--- ||ccDescriptionBegin -->
-**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](/docs/features/legal/compliance.md#cvaa).\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000"   -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics](https://developer.roku.com/docs/developer-program/certification/certification.md#6-ui-and-graphics)"  -->
-\<!--- ||ccRuleEnd -->
+**6.3** Public apps are prohibited from containing content deemed to be pornographic. With respect to app information that may appear outside of the application (for example, in search results, in the platform user interface, or on Roku’s website), content and descriptions must be appropriate for all ages. This includes the app name, artwork, and descriptions appearing in the Roku Streaming Store and web. This also pertains to content titles, artwork, and descriptions appearing in Roku Search.
 
-\<!--- ||ccHiddenSectionBegin -->
 
-\<!--- ||ccCatBegin "b68050ad-c0e1-4f09-85a0-3cf4eb558feb" -->
-\<!--- ||ccCatName "### 100 - Internal Requirements" -->
-\<!--- ||ccCatEnd -->
+**6.4** The Roku Streaming Store artwork and splash screen must clearly represent the name or identity of the app using only broadcast-safe colors with proper sizing. The app splash screen must support FHD (1920x1080p) and HD (1280x720p) resolutions. In addition, artwork must not be transparent. The splash screen's URI must be listed in the package manifest file.
 
-\<!--- ||ccRuleBegin "59e7a5ea-16b0-4c46-9b62-5852934b7f4a" -->
-\<!--- ||ccName "Deprecations" -->
-\<!--- ||ccDescriptionBegin "100.1 - BrightScript/RSG deprecated APIs, Components, fields, etc."-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
 
-\<!--- ||ccRuleBegin "58d6cde6-8b9a-4b23-8011-3a8d1a69c814" -->
-\<!--- ||ccName "Manifest" -->
-\<!--- ||ccDescriptionBegin "100.2 - Manifest"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "f27db89b-7a14-4eb0-abca-f1c43ad90acf" -->
-\<!--- ||ccName "Billing" -->
-\<!--- ||ccDescriptionBegin "100.3 - Roku Streaming Store Billing integration"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "3e4b1af5-8134-4b7f-837e-2f0979844d72" -->
-\<!--- ||ccName "Roku Streaming Store" -->
-\<!--- ||ccDescriptionBegin "100.4 - Roku Streaming Store integration"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "e0649c02-e13b-47fc-9379-101b1919761f" -->
-\<!--- ||ccName "Roku Advertising Framework" -->
-\<!--- ||ccDescriptionBegin "100.5 - Roku Advertising Framework integration"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "87e552fb-7501-4b6b-9c59-e0aae8215831" -->
-\<!--- ||ccName "Package" -->
-\<!--- ||ccDescriptionBegin "100.6 - Roku Streaming Store Package"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "877334da-1a0a-41c0-92f4-7537ac3e4813" -->
-\<!--- ||ccName "Uncharacterized" -->
-\<!--- ||ccDescriptionBegin "100.7 - Uncharacterized Certification Checks"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "80dd9857-fc1d-4a2f-aa13-7008f8e6656b" -->
-\<!--- ||ccName "Screensavers" -->
-\<!--- ||ccDescriptionBegin "100.8 - Screensavers Compliance Checks"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
-
-\<!--- ||ccRuleBegin "1a40356c-493b-4994-b0e5-72c12be497b9" -->
-\<!--- ||ccName "Monitoring" -->
-\<!--- ||ccDescriptionBegin "100.9 - Various Code Monitoring"-->
-\<!--- ||ccDescriptionEnd -->
-\<!--- ||ccEffectiveDate "1970-01-01T12:00:00.000" -->
-\<!--- ||ccRegion ["Global"] -->
-\<!--- ||ccCertURL "[https://developer.roku.com/docs/developer-program/certification/certification.md](https://developer.roku.com/docs/developer-program/certification/certification.md)" -->
-\<!--- ||ccRuleEnd -->
+**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](/docs/features/legal/compliance.md#cvaa).

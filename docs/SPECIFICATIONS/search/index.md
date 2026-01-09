@@ -1,5 +1,5 @@
 ---
-title: Discovery overview
+title: Roku Search overview
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,50 +10,19 @@ metadata:
 next:
   description: ''
 ---
+Roku Search aggregates content from participating apps into a single, indexed search feed. It helps users find content quickly by entering or saying the name of a movie, TV show, actor/actress, and so on. By participating in Roku Search, any content in your app that matches a query is automatically listed in the search results. This provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement.
 
-Getting started
-Certification
-Design
-SceneGraph core concepts
-Media playback
-Discovery
+This document covers the step to prepare and submit your app to participate in Roku Search. To review the Roku Search feed schema itself, see the Search feed specification.
+
 Overview
-Search
-Direct to Play
-Instant Signup
-Deep linking
-Continue Watching
-Advertising
-Roku Pay
-Authentication
-Analytics
-Debugging
-Publishing
-Developer tools
-Performance
-Release notes
-Development partners
-Overview
-Roku offers several free programs to apps for increasing their discoverability, including Roku Search, and Instant Signup. These programs provide a high ROI as they typically require a simple integration without any economics. Participating in these free discovery programs enables apps to maximize the value of their content by increasing installations, engagement, and revenue via subscriptions, purchases/rentals, and ads.
+Roku Search is listed in the main menu of the Roku home screen. Users can use their Roku remote control or Roku mobile app to enter or say their search, and then Roku Search displays content matching the query. If the search is for an actor, actress, or director, users can select content related to the person or view their filmography and then select content. The search results also include Roku Zones, which users can select to view a curated selection of content related to the query from apps across the Roku platform.
 
-The following table summarizes these content discovery programs, provides links to their implementation guides, and lists their requirements.
+roku815px - search results
 
-Content Discovery Program	Description	Opportunity	Requirements
-Roku Search	Match content in your app to users' search queries.	Convert searches into subscriptions and rentals, drive users to your app, and increase engagement.
+When users select a content item, the content details screen provides options for watching the item (from free or subscription). It also provides information about the item such as the title, star rating, release year, parental rating, run time, genre, description, cast, and director.
 
-Participating in Roku Search makes your app eligible for two additional content discovery programs: Visual Search Results for Roku Voice, Roku Zones and Save List.	
-search feed
-deep linking
-sending authentication events (SVOD and TVE apps)
-Direct to Play	Launch app directly into playback when users tell their device to play content.	Increase engagement by allowing customers to take advantage of the convenience and speed of voice commands to find and start watching content faster.	
-Roku Search
-deep linking
-roInput event handling
-sending authentication events (SVOD and TVE apps)
-Instant Signup	Offer free trials and related promotions to customers for subscription services.	Drive conversions to paid subscriptions.	
-Roku Pay
-On-device authentication
-Web service endpoints (for offers images, products, and user account creation).
-Roku also provides publishers with audience development programs to further increase their exposure such as self-serve Roku home screen display ads, on-device promotions, and off-device marketing messages.
+roku815px - search channels
 
-For more information on Roku's free and paid content discovery features, see Content engagement overview.
+Users can then select an app, which launches it and takes them directly to the selected content or a content springboard (via deep linking). If the app is not already installed, it is first added upon being selected.
+
+After completing a search, users can add the results to My Feed, which provides updates on previous searches (for example, a newly added movie starring a previously searched actress).

@@ -22,7 +22,7 @@ BrightScript files in the `pkg:/components` directory are compiled in
 the same way as BrightScript files in the `pkg:/source` directory. The
 SceneGraph component files are compiled by creating a list of component
 names for the application, based on the `name` attribute of
-the [**<component\>**](component_1608292.html) element of each file.
+the [**\<component\>**](component_1608292.html) element of each file.
 These component names are checked for validity as instances of the
 components are created in the application. This check is
 *case-sensitive*: the component name to be created must *exactly* match

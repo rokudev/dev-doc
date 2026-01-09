@@ -16,7 +16,7 @@ next:
 Because the SceneGraph API includes BrightScript objects and interfaces,
 you have the flexibility to create SceneGraph application screens using
 a variety of methods. You can create the screens entirely in XML markup
-in the **<children\>** element of the SceneGraph XML **<component\>**
+in the **\<children\>** element of the SceneGraph XML **\<component\>**
 element. This will create the SceneGraph node tree defined by the XML
 markup when the component is initialized. But you can also create and
 add nodes to the SceneGraph tree dynamically in BrightScript as needed

@@ -24,13 +24,13 @@ for the component.
 
 You can select the node classes for your component from the built-in
 node classes (as described in
-**<span style="color: rgb(255,0,0);"><span style="color: rgb(0,0,0);">[SceneGraph
-API Reference](SceneGraph-API-Reference_1607602.html)</span></span>**),
+**\<span style="color: rgb(255,0,0);"\>\<span style="color: rgb(0,0,0);"\>[SceneGraph
+API Reference](SceneGraph-API-Reference_1607602.html)\</span\>\</span\>**),
 and also from custom components that you have created yourself by
 defining the custom component in an XML file. In both cases, you must
 identify the node class or component to be defined for your component,
 either in BrightScript using the `createObject()` or `createChild()` or
-similar functions, or as child nodes of the **<children\>** element in
+similar functions, or as child nodes of the **\<children\>** element in
 the XML file. In both cases, you begin the new XML file definition of
 the component by identifying either the basic abstract node class the
 component will be extended from, either a **Scene** node class or the
@@ -74,7 +74,7 @@ useful, add the XML markup to an XML component file extended from the
 built-in abstract **Group** node class, with a descriptive name such as
 `textbox`. After that, you can use the component in any other XML
 component file by creating it using that name. For example, to use it by
-declaring it in the XML markup in the **<children\>** element of an XML
+declaring it in the XML markup in the **\<children\>** element of an XML
 component file:
 
 ~~~
@@ -138,14 +138,14 @@ it are constructed.
 As each component being extended is constructed, the following sequence
 of events occurs:
 
-1.  The **<children\>** nodes defined in the component being extended
+1.  The **\<children\>** nodes defined in the component being extended
     are created, and their fields are set to their initial values,
     either to a default value, or to the value specified in the XML
     markup.
-2.  The **<interface\>** fields in the component being extended are
+2.  The **\<interface\>** fields in the component being extended are
     created, and their initial values are set, either to a default
     value, or to the value specified by the `value` attribute.
-3.  The **<script\>** element `init()` function of the component being
+3.  The **\<script\>** element `init()` function of the component being
     extended is called, and all initializations contained in the
     function are performed.
 
@@ -166,7 +166,7 @@ custom components:
     function in the *extended component*. This allows you to *override*
     (or *overload*) a function name to perform differently depending on
     the component from which it is called.
-  - **<interface\>** fields accumulate: the extended component includes
+  - **\<interface\>** fields accumulate: the extended component includes
     all of the interface fields of the component from which it is
     extended in addition to its own. In the case where an extended
     component field name is the same as the component from which it is

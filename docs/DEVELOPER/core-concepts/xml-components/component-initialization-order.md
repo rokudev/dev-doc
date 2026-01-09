@@ -16,17 +16,17 @@ next:
 Instances of components defined in an XML file follow a well-defined
 initialization order when they are created.
 
-1.  The [**<children\>**](children_1608551.html) element nodes defined
+1.  The [**\<children\>**](children_1608551.html) element nodes defined
     in XML markup are created, and their fields are set to their initial
     values, either to a default value, or to the value specified in the
     XML markup.
 
-2.  The **[<interface\>](interface_1608549.html)** element fields of
+2.  The **[\<interface\>](interface_1608549.html)** element fields of
     the XML component are created, and their initial values are set,
     either to a default value, or to the value specified by the `value`
     attribute.
 
-3.  The [**<script\>**](script_1608550.html) element `init()` function
+3.  The [**\<script\>**](script_1608550.html) element `init()` function
     is called, and all initializations contained in the function are
     performed.
 
@@ -34,17 +34,17 @@ Note the following implications of this initialization order.
 
 ## Initial XML Markup Node Field Values May Be Overridden
 
-The field values defined in XML markup in the **<children\>** nodes may
+The field values defined in XML markup in the **\<children\>** nodes may
 be overridden as many as two times, depending on the definitions of the
-**<interface\>** element field attributes, and the initializations
-contained in the **<script\>** element **`init()`** function.
+**\<interface\>** element field attributes, and the initializations
+contained in the **\<script\>** element **`init()`** function.
 
 ## Observer Functions
 
 Observer functions of fields that are set up in the **`init()`**
 function do not get called when those fields are initialized. This is
 because the initialization of interface fields, or of fields of the
-component **<children\>** element nodes, is done before the
+component **\<children\>** element nodes, is done before the
 **`init()`** function that sets up the observers is called. Thus, in
 some cases, it may be necessary to explicitly call the field observer
 functions in **`init()`** if they need to be executed for the initial
@@ -61,7 +61,7 @@ calls may return an object reference to an unconstructed object.
 
 ## Parenting and the Focus Chain
 
-For nodes that are defined in the **<children\>** XML markup of the
+For nodes that are defined in the **\<children\>** XML markup of the
 component file, the parent node is set after the node is created, and
 **`init()`** is called. This has implications for the focus chain (see
 [**Remote Control Events**](Remote-Control-Events_1607636.html)), which

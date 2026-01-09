@@ -1,5 +1,5 @@
 ---
-title: "Specifying display resolution"
+title: Specifying display resolution
 excerpt: ''
 deprecated: false
 hidden: true
@@ -82,7 +82,7 @@ in special manifest file attributes for SceneGraph applications. The
 following describes the manifest file attributes to specify the
 supported screen resolutions for SceneGraph applications.
 
-
+```
 \<table\>
 \<colgroup\>
 \<col style="width: 25%" /\>
@@ -157,7 +157,7 @@ supported screen resolutions for SceneGraph applications.
 \</tr\>
 \</tbody\>
 \</table\>
-
+```
 
 ### Autoscaling guidelines
 

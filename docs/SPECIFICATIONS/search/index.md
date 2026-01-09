@@ -1,5 +1,5 @@
 ---
-title: Introduction to the Roku search feed specification
+title: Discovery overview
 excerpt: ''
 deprecated: false
 hidden: true

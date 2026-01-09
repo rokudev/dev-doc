@@ -1,8 +1,5 @@
 ---
 title: BrightScript/XML markup equivalence
-excerpt: >-
-  Learn how to create SceneGraph application screens using BrightScript and XML
-  markup, with examples of node creation and configuration.
 deprecated: false
 hidden: true
 link:

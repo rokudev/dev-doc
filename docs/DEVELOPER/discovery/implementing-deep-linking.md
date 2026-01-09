@@ -1,5 +1,5 @@
 ---
-title: "Deep linking"
+title: Deep linking
 excerpt: ''
 deprecated: false
 hidden: true
@@ -84,48 +84,47 @@ Understanding and adhering to these deep linking requirements provides a standar
 
 When a deep link is sent to your app, it will include contentId and a mediaType. The contentId specifies which content to play, and the mediaType tells your app how it must handle the launching of the content item. The following table summarizes the required launch behavior for each mediaType. For examples of the different mediaType behaviors, see [MediaType behavior examples](#mediatype-behavior-examples).
 
-
-\<table\>
-\<thead\>
-\<tr\>
-\<th\>mediaType in Deep Link\</th\>
-\<th\>Description\</th\>
-\<th\>Required Launch Behavior\</th\>
-\</tr\>
-\</thead\>
-\<tbody\>
-\<tr\>
-\<td\>movie\</td\>
-\<td\>Movie or long-form film (over 15 minutes).\</td\>
-\<td\>Play the movie identified by the contentId. Use \<a href="/docs/developer-program/media-playback/bookmarking.md"\>bookmarks\</a\> to determine the playback position.\</td\>
-\</tr\>
-\<tr\>
-\<td\>episode\</td\>
-\<td\>Single content item (an episode of a TV show, for example).\</td\>
-\<td\>Play the episode identified by the contentId. Use \<a href="/docs/developer-program/media-playback/bookmarking.md"\>bookmarks\</a\> to determine the playback position.\</td\>
-\</tr\>
-\<tr\>
-\<td\>season (optional)\</td\>
-\<td\>As part of a series, single set of related TV episodes.\</td\>
-\<td\>Optionally, launch a content springboard that displays episodes organized by season; highlight the episode mapped to the contentid.\<br /\>Season deep links are no longer being sent from Roku Search.\</td\>
-\</tr\>
-\<tr\>
-\<td\>series\</td\>
-\<td\>Set of related serialized episodes and possibly seasons. Includes TV shows and daily/weekly ongoing shows.\</td\>
-\<td\>Launch an episode into direct playback using smart bookmarks. A smart bookmark determines the episode to be launched and the playback position based on the type of series, whether the user has previously watched the series, and whether they completed the last watched episode.\<br /\>\<br /\>The different types of series and their recommended smart bookmark behavior are as follows:\<br /\>\<ul\>\<li\>Followed TV (a series that the user has already started watching in the past): Use bookmarks to determine whether the user completed the previously watched episode. If they completed the last episode, launch the next episode in the series. If they did not, launch the episode where the user stopped watching.\</li\>\<li\>Unwatched TV (a cataloged series that the user has not yet watched on your service): launch playback at the beginning of S1E1.\</li\>\<li\>Daily/weekly shows (a regularly-occurring show that does not necessarily need to be watched in chronological order; for example, news broadcasts, talk shows, sports podcasts, and religious sermons): Launch the most recent episode in the series.\</li\>\</ul\>\</td\>
-\</tr\>
-\<tr\>
-\<td\>shortFormVideo\</td\>
-\<td\>Standalone content that is 15 minutes or less that is not a movie or TV show (for example, movie trailers, news clips, comedy clips, food reviews, or other clips).\</td\>
-\<td\>Play the short-form item identified by the contentId.\<br /\>\<br /\>Apps containing only short-form items are exempt from deep linking certification requirements.\</td\>
-\</tr\>
-\<tr\>
-\<td\>tvSpecial\</td\>
-\<td\>One-time TV programs that are not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).\</td\>
-\<td\>Play the TV special identified by the contentId. Use \<a href="/docs/developer-program/media-playback/bookmarking.md"\>bookmarks\</a\> to determine the playback position.\</td\>
-\</tr\>
-\</tbody\>
-\</table\>
+<table>
+<thead>
+<tr>
+<th>mediaType in Deep Link</th>
+<th>Description</th>
+<th>Required Launch Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>movie</td>
+<td>Movie or long-form film (over 15 minutes).</td>
+<td>Play the movie identified by the contentId. Use \<a href="/docs/developer-program/media-playback/bookmarking.md">bookmarks\</a> to determine the playback position.</td>
+</tr>
+<tr>
+<td>episode</td>
+<td>Single content item (an episode of a TV show, for example).</td>
+<td>Play the episode identified by the contentId. Use \<a href="/docs/developer-program/media-playback/bookmarking.md">bookmarks\</a> to determine the playback position.</td>
+</tr>
+<tr>
+<td>season (optional)</td>
+<td>As part of a series, single set of related TV episodes.</td>
+<td>Optionally, launch a content springboard that displays episodes organized by season; highlight the episode mapped to the contentid.<br />Season deep links are no longer being sent from Roku Search.</td>
+</tr>
+<tr>
+<td>series</td>
+<td>Set of related serialized episodes and possibly seasons. Includes TV shows and daily/weekly ongoing shows.</td>
+<td>Launch an episode into direct playback using smart bookmarks. A smart bookmark determines the episode to be launched and the playback position based on the type of series, whether the user has previously watched the series, and whether they completed the last watched episode.<br /><br />The different types of series and their recommended smart bookmark behavior are as follows:<br /><ul><li>Followed TV (a series that the user has already started watching in the past): Use bookmarks to determine whether the user completed the previously watched episode. If they completed the last episode, launch the next episode in the series. If they did not, launch the episode where the user stopped watching.</li><li>Unwatched TV (a cataloged series that the user has not yet watched on your service): launch playback at the beginning of S1E1.</li><li>Daily/weekly shows (a regularly-occurring show that does not necessarily need to be watched in chronological order; for example, news broadcasts, talk shows, sports podcasts, and religious sermons): Launch the most recent episode in the series.</li></ul></td>
+</tr>
+<tr>
+<td>shortFormVideo</td>
+<td>Standalone content that is 15 minutes or less that is not a movie or TV show (for example, movie trailers, news clips, comedy clips, food reviews, or other clips).</td>
+<td>Play the short-form item identified by the contentId.<br /><br />Apps containing only short-form items are exempt from deep linking certification requirements.</td>
+</tr>
+<tr>
+<td>tvSpecial</td>
+<td>One-time TV programs that are not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).</td>
+<td>Play the TV special identified by the contentId. Use <a href="/docs/developer-program/media-playback/bookmarking.md">bookmarks</a> to determine the playback position.</td>
+</tr>
+</tbody>
+</table>
 
 
 > A deep link for a single content item will always have the same contentId; however, the mediaType may vary based on the Roku content discovery feature sending the deep link. Your app therefore must be designed to execute the specified behavior required by each mediaType that could be sent to your app.
@@ -281,41 +280,6 @@ http://<roku-device-ip-address>:8060/<EcpCommand>/<channelId>?contentId=<content
 ```
 
 The following attributes are required:
-
-
-\<table\>
-\<thead\>
-\<tr\>
-\<th\>Parameter\</th\>
-\<th\>Description\</th\>
-\<th\>Example\</th\>
-\</tr\>
-\</thead\>
-\<tbody\>
-\<tr\>
-\<td\>EcpCommand\</td\>
-\<td\>Enter one of the following commands:\<br /\>\<ul\>\<li\>\<strong\>launch\</strong\>: Test deep linking into content when app is launched.\</li\>\<li\>\<strong\>input\</strong\>: Test deep linking into content while app is running.\</li\>\</ul\>\</td\>
-\<td\>launch\</td\>
-\</tr\>
-\<tr\>
-\<td\>channelId\</td\>
-\<td\>Enter one of the following:\<br /\>\<ul\>\<li\>\<strong\>dev\</strong\>: Sideloaded app.\</li\>\<li\>\<strong\>&lt;\<em\>id\</em\>&gt;\</strong\>: Public or \<a href="/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines"\>beta\</a\> apps. To find your app ID, use the preview page on the Developer Dashboard.\</li\>\</ul\>\<p\>\<br /\>The following examples show how to send ECP commands via cURL HTTP POST requests. The examples are based on a sideloaded app with contentId of 1234 and a mediaType of movie. The \<strong\>launch\</strong\> command is used to test deep linking into content when the app is launched; the \<strong\>input\</strong\> command is used for when the app is already running. When sending the \<strong\>input\</strong\> command, the app(\<strong\>dev\</strong\>) is not required.\</p\>\<pre\>\<code\>curl -d '' 'http://192.168.1.114:8060/launch/dev?contentId=1234&amp;mediaType=movie'curl -d '' 'http://192.168.1.114:8060/input?contentId=1234&amp;mediaType=movie'\</code\>\</pre\>\<p\>To test deep links on your production app, replace "dev" with your app ID (an app ID of 50000 is used in the following example). Because the \<strong\>input\</strong\> command does not require the app ID, the same command can be used for testing in development and production.\</p\>\<pre\>\<code\>curl -d '' 'http://192.168.1.114:8060/launch/50000?contentId=1234&amp;mediaType=movie'curl -d '' 'http://192.168.1.114:8060/input?contentId=1234&amp;mediaType=movie'\</code\>\</pre\>\</td\>
-\<td\>dev\</td\>
-\</tr\>
-\<tr\>
-\<td\>contentIdValue\</td\>
-\<td\>Enter the \<strong\>contentId\</strong\> of the content item to be used for the deep link test.\</td\>
-\<td\>1234\</td\>
-\</tr\>
-\<tr\>
-\<td\>mediaTypeValue\</td\>
-\<td\>Enter the \<strong\>mediaType\</strong\> of the content item to be used for the deep link test. See \<a href="#mediatype-behavior"\>MediaType behavior\</a\> for the possible values.\</td\>
-\<td\>movie\</td\>
-\</tr\>
-\</tbody\>
-\</table\>
-
-
 
 
 ### Using the debug console for troubleshooting deep linking parameters

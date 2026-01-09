@@ -1,5 +1,5 @@
 ---
-title: "SceneGraph threads"
+title: Threads
 excerpt: ''
 deprecated: false
 hidden: true

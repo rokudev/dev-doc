@@ -1,17 +1,16 @@
-- SceneGraph overview
-- SceneGraph XML
-- Data scoping
-- SceneGraph BrightScript
-- XML components
-- Threads
-- Developing SceneGraph applications
-- Specifying display resolution
-- Handling application events
-- Event loops
-- Controlling screen layout
-- Controlling screen program flow
-- Downloading server content
-- Playing videos
-- Localization
-- Transitioning to SceneGraph
+- index
+- scenegraph-xml
+- data-scoping
+- scenegraph-brightscript
+- xml-components
+- threads
 - developing-scenegraph-applications
+- specifying-display-resolution
+- handling-application-events
+- event-loops
+- controlling-screen-layout
+- controlling-screen-program-flow
+- downloading-server-content
+- playing-videos
+- localization
+- transitioning-to-scenegraph

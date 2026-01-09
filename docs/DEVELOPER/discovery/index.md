@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Discovery"
 excerpt: ''
 deprecated: false
 hidden: true

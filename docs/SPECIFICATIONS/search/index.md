@@ -10,54 +10,50 @@ metadata:
 next:
   description: ''
 ---
-# Introduction to the Roku search feed specification
 
+Getting started
+Certification
+Design
+SceneGraph core concepts
+Media playback
+Discovery
+Overview
+Search
+Direct to Play
+Instant Signup
+Deep linking
+Continue Watching
+Advertising
+Roku Pay
+Authentication
+Analytics
+Debugging
+Publishing
+Developer tools
+Performance
+Release notes
+Development partners
+Overview
+Roku offers several free programs to apps for increasing their discoverability, including Roku Search, and Instant Signup. These programs provide a high ROI as they typically require a simple integration without any economics. Participating in these free discovery programs enables apps to maximize the value of their content by increasing installations, engagement, and revenue via subscriptions, purchases/rentals, and ads.
 
-Apps can participate in Roku Search to make their content more discoverable to customers looking for content to watch. This gives publishers an opportunity to convert searches into subscriptions and rentals, drive users to their apps, and increase engagement.
+The following table summarizes these content discovery programs, provides links to their implementation guides, and lists their requirements.
 
-To integrate into Roku Search, apps must provide the URL of their [search feed](/docs/specs/search/search-feed.md), which is a [JSON](/docs/specs/search/search-feed.md) file that contains a unique ID and metadata for each video in the app's catalog. The search feed must conform to Roku's schemas and be validated by Roku. Once the feed passes validation,  content metadata is added to the Roku Search master database.
+Content Discovery Program	Description	Opportunity	Requirements
+Roku Search	Match content in your app to users' search queries.	Convert searches into subscriptions and rentals, drive users to your app, and increase engagement.
 
-When a customer uses their Roku remote control or Roku mobile app to enter or say their search, Roku Search automatically lists content from participating apps that matches the query.
+Participating in Roku Search makes your app eligible for two additional content discovery programs: Visual Search Results for Roku Voice, Roku Zones and Save List.	
+search feed
+deep linking
+sending authentication events (SVOD and TVE apps)
+Direct to Play	Launch app directly into playback when users tell their device to play content.	Increase engagement by allowing customers to take advantage of the convenience and speed of voice commands to find and start watching content faster.	
+Roku Search
+deep linking
+roInput event handling
+sending authentication events (SVOD and TVE apps)
+Instant Signup	Offer free trials and related promotions to customers for subscription services.	Drive conversions to paid subscriptions.	
+Roku Pay
+On-device authentication
+Web service endpoints (for offers images, products, and user account creation).
+Roku also provides publishers with audience development programs to further increase their exposure such as self-serve Roku home screen display ads, on-device promotions, and off-device marketing messages.
 
-## Feed spec versions
-
-As of July 1, 2025, Roku supports only the JSON version of the Roku Search feed specification. Support for the legacy XML version has been sunset. 
-
-## JSON feed specification highlights
-
-The following table highlights the benefits of the JSON feed spec:
-
-
-<table>
-<thead>
-<tr>
-<th><strong>Format</strong></th>
-<th>JSON</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Multi-region support</strong></td>
-<td>One feed for all regions. <br /><br />A single feed may include different  languages, content availability windows, and rating systems for different regions.</td>
-</tr>
-<tr>
-<td><strong>Availability windows</strong></td>
-<td>Supported</td>
-</tr>
-<tr>
-<td><strong>Multi-source support</strong></td>
-<td>One feed for all content metadata sources</td>
-</tr>
-<tr>
-<td><strong>Content types supported</strong></td>
-<td><ul><li>movies</li><li>television episodes</li><li>short-form content</li></ul></td>
-</tr>
-<tr>
-<td><strong>Aspect ratios for content posters and backgrounds</strong></td>
-<td><ul><li>16:9 (a 16:9 or 2:3 image for the content poster is required)</li><li>2:3</li><li>4:3</li></ul></td>
-</tr>
-</tbody>
-</table>
-
-
-
+For more information on Roku's free and paid content discovery features, see Content engagement overview.

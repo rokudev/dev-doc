@@ -165,8 +165,6 @@ To create a new product, follow these steps:
 
 4. Click **Save product** to save the product without creating a purchase option (you can create purchase options for the product later), or click **Save and create purchase option** to create one or more purchase options for the product immediately after saving the product.
 
-\
-
 ### Creating purchase options
 
 Once you have created a product, you create one or more purchase options for a single product or a bundle of products. A purchase option specifies the product type (monthly, quarterly, or annual subscription, one-time purchase, or bundle), price, and any free trial or introductory price offers.

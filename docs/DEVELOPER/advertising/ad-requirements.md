@@ -131,3 +131,8 @@ This document lists the requirements for displaying video and interactive ads in
 </table>
 
 ### ADS 4 Ad break playback requirements
+
+| Requirement | Name                            | Description                                                  | Documentation                                                |
+| :---------- | :------------------------------ | :----------------------------------------------------------- | ------------------------------------------------------------ |
+| ADS 4.1     | Ad break - back button behavior | All apps must return to the previous screen when the back button is pressed during an ad break (if the app can't return to the previous screen, the app must display an exit confirmation dialog).<br /><br />All apps must attempt to initiate an ad break to preserve the previously exited ad experience when playback resumes. Exemptions from this requirement include (1) live streams and (2) replays of broadcast streams, unless ad insertion is used to insert new ads in the replay. | [RAF integration guide](/docs/developer-program/advertising/integrating-roku-advertising-framework.md) |
+| ADS 4.2     | Ad break - FF/REW commands      | All apps must ignore FF/REW commands received during an ad break (via either key presses or voice commands). Exemptions from this requirement include (1) live streams and (2) replays of broadcast streams, unless ad insertion is used to insert new ads in the replay. | [RAF integration guide](/docs/developer-program/advertising/integrating-roku-advertising-framework.md) |

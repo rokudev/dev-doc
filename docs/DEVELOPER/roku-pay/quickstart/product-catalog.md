@@ -1,5 +1,5 @@
 ---
-title: "Creating the product catalog"
+title: Creating the product catalog
 excerpt: ''
 deprecated: false
 hidden: true
@@ -168,7 +168,7 @@ To create a new product, follow these steps:
 </tr>
 <tr>
 <td>Category</td>
-<td>Select one of the following categories:<br /><br />${category-list}${category-info-bq}</td>
+<td>Select one of the following categories:<br /><br /></td>
 </tr>
 <tr>
 <td>Internet required</td>
@@ -240,7 +240,7 @@ To create a purchase option for a product, follow these steps:
 </tr>
 <tr>
 <td>Display name</td>
-<td>A 50-character maximum name of the purchase option. This name will be displayed to customers in the app's on-device purchasing workflow and in subscription emails sent by Roku. The name can include letters, numbers, spaces, and punctuation marks (UTF-8 characters are not supported for product names in English).<br /><br />The display name should include the name of the app, and it should make it easy for customers to identify the product (for example, "Roku Developers - Ad-Free"). Do not include any billing information in the name (for example, billing frequency, price, or trial/discount); the Roku platform UI will automatically display this information to customers. You can use can include billing information in the <strong>SKU</strong> setting in order to identify different purchase options uniquely.${display-name-cert-note-bq}Optionally, you can provide a localized product name. To do this, click <strong>Add display name in another language</strong>, select a language from the list (French, Spanish, or German), and then enter the localized product name. The localized product name can be a maximum of 50 characters and may include UTF-8 characters. Repeat this step to provide another localized product name; you can provide one per language.</td>
+<td>A 50-character maximum name of the purchase option. This name will be displayed to customers in the app's on-device purchasing workflow and in subscription emails sent by Roku. The name can include letters, numbers, spaces, and punctuation marks (UTF-8 characters are not supported for product names in English).<br /><br />The display name should include the name of the app, and it should make it easy for customers to identify the product (for example, "Roku Developers - Ad-Free"). Do not include any billing information in the name (for example, billing frequency, price, or trial/discount); the Roku platform UI will automatically display this information to customers. You can use can include billing information in the <strong>SKU</strong> setting in order to identify different purchase options uniquely. Optionally, you can provide a localized product name. To do this, click <strong>Add display name in another language</strong>, select a language from the list (French, Spanish, or German), and then enter the localized product name. The localized product name can be a maximum of 50 characters and may include UTF-8 characters. Repeat this step to provide another localized product name; you can provide one per language.</td>
 </tr>
 <tr>
 <td>SKU</td>
@@ -271,11 +271,11 @@ To create a purchase option for a product, follow these steps:
 </tr>
 <tr>
 <td>Regular price</td>
-<td>Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products: ${price-tier-list}See the <a href="/docs/developer-program/roku-pay/quickstart/price-tiers.md">Price tier reference guide</a> for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:${price-tier-selected}If you are creating a <a href="https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://developer.roku.com/docs/references/scenegraph/control-nodes/channelstore.md">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. ${bq-cert-note-price-change}</td>
+<td>Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products: See the <a href="/docs/developer-program/roku-pay/quickstart/price-tiers.md">Price tier reference guide</a> for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:If you are creating a <a href="https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://developer.roku.com/docs/references/scenegraph/control-nodes/channelstore.md">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. </td>
 </tr>
 <tr>
 <td>Base offer</td>
-<td>Create free trial and introductory price offers for base subscription and add-on products. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer. Select one of the following base offers:<br />${base-offer-list}</td>
+<td>Create free trial and introductory price offers for base subscription and add-on products. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer. Select one of the following base offers:<br />$</td>
 </tr>
 </tbody>
 </table>
@@ -320,7 +320,7 @@ To create a product exclusivity group, follow these steps:
 
    
 
-3. In the **Product** **Group Name** box, enter a descriptive name for the group that makes it easy to identify. For example, if you are creating a product group containing ad-supported and ad-free plans, it could be named "<product name> - Ad options group".
+3. In the **Product** **Group Name** box, enter a descriptive name for the group that makes it easy to identify. For example, if you are creating a product group containing ad-supported and ad-free plans, it could be named "\<product name\> - Ad options group".
 
    
 

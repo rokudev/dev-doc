@@ -790,16 +790,16 @@ adPods : [{
                                  +mimeType     : String,
                                   clickThrough : String (URL),
                                   provider     : String,
-                                 +tracking : [\{
+                                 +tracking : [{
                                               +event     : String,
                                               +url       : String (URL),
                                               +triggered : Boolean,
                                                valid     : Boolean,
                                                time      : Float (in s)
-                                  \}]
-                  \}]
-          \}]
-\}]
+                                  }]
+                  }]
+          }]
+}]
 ```
 
 The object returned from a new call

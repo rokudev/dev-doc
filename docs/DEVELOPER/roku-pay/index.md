@@ -1,5 +1,5 @@
 ---
-title: "How Roku Pay works"
+title: "Roku Pay"
 excerpt: ''
 deprecated: false
 hidden: true

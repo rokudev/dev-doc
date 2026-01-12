@@ -1,5 +1,5 @@
 ---
-title: "Subscription Recovery settings"
+title: Settings
 excerpt: ''
 deprecated: false
 hidden: true

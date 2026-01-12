@@ -1,5 +1,5 @@
 ---
-title: "Enrolling in the Roku Partner Payouts Program"
+title: Enrolling in the Roku Partner Payouts Program
 excerpt: ''
 deprecated: false
 hidden: true
@@ -62,10 +62,7 @@ To enroll in the Roku Partner Payouts Program, enter your payout settings follow
 
 ##### Video demo
 
-<video title="Roku Pay: Enrolling in the Roku Partner Payouts Program" poster="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.mp4">
-  <img src='https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.png' alt='Roku Pay: Enrolling in the Roku Partner Payouts Program' />
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.mp4" poster="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.png" width="720" height="480" controls />
 
 ### Contact information
 

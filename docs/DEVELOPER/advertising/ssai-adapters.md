@@ -1,5 +1,5 @@
 ---
-title: "Implementing Server-Side Ad Insertion Using Roku Adapters"
+title: Implementing Server-Side Ad Insertion Using Roku Adapters
 excerpt: ''
 deprecated: false
 hidden: true
@@ -65,20 +65,20 @@ The following entry loads the adapter into your task:
 > At the beginning of the playback Task, instantiate the adapter with proper parameters and then initialize it. The valid values of the parameter name are uplynk, adobe, onceux, yospace, awsemt, and ggldai.
 
 ~~~
-adapter = RAFX_SSAI(\{name:"uplynk"\})  ' Supported: uplynk, adobeonceux, yospace, awsemt, ggldai
+adapter = RAFX_SSAI({name:"uplynk"})  ' Supported: uplynk, adobeonceux, yospace, awsemt, ggldai
 adapter.init()
 ~~~
 
 ### 2. Make an initial request to SSAI manifest server getting Ad metadata: Request Ad Metadata
 
 ~~~
-request = \{
+request = {
 
     type: adapter.SreamType.VOD  ' Required, VOD or LIVE
 
     url:  "http://admanifest.ssai.com/api?assetid=abcdefg"' Ad metadata URL, provided by SSAI
 
-\}
+}
 
 result = adapter.requestStream(request)
 The value of the parameter URL depends on which SSAI manifest servers to integrate and which type of stream it is. (The app may query the initial request to SSAI manifest server by itself rather than using the adapter.requestStream() call). Valid values of the parameter type are VOD or LIVE. VOD is when Ad metadata is fetched before the playback starts, LIVE is when Ad metadata is provided as ping/poll/in-stream (such as X-MARKER) content playback.
@@ -100,7 +100,7 @@ The value of params.player is given to RAF internally as the second parameter of
 
 ~~~
 port = CreateObject("roMessagePort")
-params = \{player: \{sgnode:m.top.video, port:port\}\}
+params = {player: {sgnode:m.top.video, port:port}}
 adapter.enableAds(params)
 m.top.video.observeField("position", port)
 ~~~
@@ -120,10 +120,10 @@ By default, params.useStitched is set to true. In this case:
 #### **a) Optional: enable ads without stitchedAdHandledEvent**
 
    ~~~
-    params = \{  
-        player: \{sgnode:m.top.video, port:port\},
+    params = {  
+        player: {sgnode:m.top.video, port:port},
         useStitched: false
-    \}
+    }
 
     adapter.enableAds(params) ' adapter will not call RAF.stitchedAdHandledEvent() and RAF will not play Interactive Ad
    ~~~
@@ -348,7 +348,7 @@ Before using the adapter samples, the developer must be familiar with the SSAI p
 </thead>
 <tbody>
 <tr>
-<td>RAFX SSAI Adapter for OnceUX VOD mode, showing ad rendering via stitchedAdInit()/stitchedAdHandledEvent().  <br /><br /> OnceUX Adapter provides the following services: <br /><br /> When VOD <br /> - Request ad metadata and parse XML <br /> - Configure RAF stitchedAdsInit() <br /> - Track ad events through RAF stitchedAdHandledEvent() <br /><br />  When reading stream info, "playURL" field is not available because OnceUX provides a pair of video contentURL and metadata URL. <br /><br /> <strong>Read Stream Info:</strong> <br /><br /> <br />~~~~ <br />...  <br />streamInfo = adapter.getStreamInfo()  <br />'  url = streamInfo["playURL"]        This field is NOT available when OnceUX adapter. <br />... <br />~~~~ <br /><br /> However, the returned value of getStreamInfo() includes a field called <strong>tracking</strong>. This returns a list of event info generated from XML element:  <uo:contentImpressions><uo:Impression>. The app is  responsible for sending those pixels when playback starts. <br /><br /> For example: <br /><br />  <strong>Sending Content Start Beacon:</strong> <br />~~~~ <br />... <br />m.top.video.control = "PLAY" ' Start video content <br />... <br />... <br />adIface = Roku_Ads() <br />for each evt in streamInfo.tracking <br />    if "Impression" = evt.event <br />        adIface.util.getNoResponseFromUrl(evt.url) ' send beacon to OnceUX <br />    end if <br />end for  <br />~~~~</td>
+<td>RAFX SSAI Adapter for OnceUX VOD mode, showing ad rendering via stitchedAdInit()/stitchedAdHandledEvent().  <br /><br /> OnceUX Adapter provides the following services: <br /><br /> When VOD <br /> - Request ad metadata and parse XML <br /> - Configure RAF stitchedAdsInit() <br /> - Track ad events through RAF stitchedAdHandledEvent() <br /><br />  When reading stream info, "playURL" field is not available because OnceUX provides a pair of video contentURL and metadata URL. <br /><br /> <strong>Read Stream Info:</strong> <br /><br /> <br />~~~~ <br />...  <br />streamInfo = adapter.getStreamInfo()  <br />'  url = streamInfo["playURL"]        This field is NOT available when OnceUX adapter. <br />... <br />~~~~ <br /><br /> However, the returned value of getStreamInfo() includes a field called <strong>tracking</strong>. This returns a list of event info generated from XML element:  \<uo:contentImpressions\>\<uo:Impression\>. The app is  responsible for sending those pixels when playback starts. <br /><br /> For example: <br /><br />  \<strong\>Sending Content Start Beacon:\</strong\> <br />~~~~ <br />... <br />m.top.video.control = "PLAY" ' Start video content <br />... <br />... <br />adIface = Roku_Ads() <br />for each evt in streamInfo.tracking <br />    if "Impression" = evt.event <br />        adIface.util.getNoResponseFromUrl(evt.url) ' send beacon to OnceUX <br />    end if <br />end for  <br />~~~~</td>
 <td><a href="https://github.com/rokudev/samples/tree/master/advertising/rsgoux/">rsgoux</a>  <br /><br />See OnceUXTask.brs to find how to use the adapter. Copy rafxssai.brs to  your project and integrate it with the content playback Task.</td>
 </tr>
 </tbody>
@@ -386,7 +386,7 @@ Before using the adapter samples, the developer must be familiar with the SSAI p
 </thead>
 <tbody>
 <tr>
-<td>RAFX SSAI Adapter for AWS Elemental MediaTailor(AWSEMT), showing ad rendering via stitchedAdInit()/stitchedAdHandledEvent() .  <br /><br /> AWSEMT Adapter provides following services:   <br /><br />- Request masterURL, parse JSON, extract hls_url and tracking_url. For apps with  known hls_url, use setStreamInfo() instead of requestStream() and   getStreamInfo()  <br /><br />  <strong>Using setStreamInfo()</strong>  <br /><br />  <br />~~~~ <br />if makingIntialRequest <br />    result = adapter.requestStream(...) <br />    streamInfo = adapter.getStreamInfo() <br />else <br />    streamInfo = { <br />        type: m.top.testConfig.type, 'Required <br />        tracking_url: m.top.tracking_url, 'Required. App must provide valid URL <br />        hls_url: m.top.hls_url 'Required. App must provide valid URL <br />    } <br />    adapter.setStreamInfo(streamInfo) <br />end if  <br />~~~~   <br /><br />  <br /> - Poll ad metadata, parse JSON and configure RAF stitchedAdsInit() <br /> - Track ad events through RAF stitchedAdHandledEvent() masterURL may require GET or POST. When POST request is required, fill request.body with {"adParams":{}} <br /> - See AEMTTask.brs, function loadStream().</td>
+<td>RAFX SSAI Adapter for AWS Elemental MediaTailor(AWSEMT), showing ad rendering via stitchedAdInit()/stitchedAdHandledEvent() .  <br /><br /> AWSEMT Adapter provides following services:   <br /><br />- Request masterURL, parse JSON, extract hls_url and tracking_url. For apps with  known hls_url, use setStreamInfo() instead of requestStream() and   getStreamInfo()  <br /><br />  <strong>Using setStreamInfo()</strong>  <br /><br />  <br />~~~~ <br />if makingIntialRequest <br />    result = adapter.requestStream(...) <br />    streamInfo = adapter.getStreamInfo() <br />else <br />    streamInfo = \{ <br />        type: m.top.testConfig.type, 'Required <br />        tracking_url: m.top.tracking_url, 'Required. App must provide valid URL <br />        hls_url: m.top.hls_url 'Required. App must provide valid URL <br />    } <br />    adapter.setStreamInfo(streamInfo) <br />end if  <br />~~~~   <br /><br />  <br /> - Poll ad metadata, parse JSON and configure RAF stitchedAdsInit() <br /> - Track ad events through RAF stitchedAdHandledEvent() masterURL may require GET or POST. When POST request is required, fill request.body with \{"adParams":\{\}\} <br /> - See AEMTTask.brs, function loadStream().</td>
 <td><a href="https://github.com/rokudev/samples/tree/master/advertising/rsgemt/">rsgemt</a> <br /><br /> See AEMTTask.brs to find how to use the adapter. Copy rafxssai.brs to  your project and integrate it with the content playback Task.</td>
 </tr>
 </tbody>

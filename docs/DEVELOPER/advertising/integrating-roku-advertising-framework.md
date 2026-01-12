@@ -1,5 +1,5 @@
 ---
-title: "Integrating the Roku Advertising Framework"
+title: Integrating the Roku Advertising Framework
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # Integrating the Roku Advertising Framework
 
 ## Getting started
@@ -30,37 +29,37 @@ examples designed to cover a variety of different scenarios. The video
 ad features are provided as a common library deployed and managed as a
 hidden app.
 
->  The RAF library may not be loaded through a component library.
+> The RAF library may not be loaded through a component library.
 
 The following line must be placed in the [manifest file](/docs/developer-program/getting-started/architecture/channel-manifest.md) for
 any applications using the Roku Advertising Framework library:
 
 **Manifest entry**
 
-~~~~
+```
 bs_libs_required=roku_ads_lib
-~~~~
+```
 
 Client applications do not include any additional BrightScript modules
 as part of their own package file. Instead, the “Library” keyword is
 used. The following line should be the first entry in
 your `main.brs` file:
 
-~~~~
+```
 Library "Roku_Ads.brs"
-~~~~
+```
 
 The library interface is obtained by calling the constructor with no arguments:
 
-~~~~
+```
 adIface = Roku_Ads()
-~~~~
+```
 
 Configure the ad URL before making the ad request call:
 
-~~~~
+```
 adIface.setAdUrl(myAdUrl)
-~~~~
+```
 
 (You may wish to check [URL Parameter Macros](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros) to
 see if any parameter values in the ad URL should be replaced with the
@@ -73,16 +72,16 @@ makes the initial request to the ad server, parses the server response,
 and returns the structure of ads to be rendered prior to, or during
 playback, of the selected content:
 
-~~~~
+```
 adPods = adIface.getAds()
-~~~~
+```
 
 Any preroll ads present in the returned set of ad pods can be
 immediately rendered by calling:
 
-~~~~
+```
 shouldPlayContent = adIface.showAds(adPods, invalid, adHolder)
-~~~~
+```
 
 Checking and acting on the return value here allows the application to
 determine if the user exited out of the ad (for example, by pressing the
@@ -92,14 +91,13 @@ before playing the main content.
 If the application is only showing preroll ads, the above five lines are
 sufficient. If the ad server URL was configured for additional midroll
 and/or postroll ads, the client application should periodically
-call [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with
-the message from the content video playback loop to determine when to
+call [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with the message from the content video playback loop to determine when to
 halt the content playback and render the
 ads:
 
 **Calling getAds() in a while loop**
 
-~~~~
+```
 while shouldPlayContent
   videoMsg = wait(0, contentVideoScreen.GetMessagePort())
   adPods = adIface.getAds(videoMsg)
@@ -112,23 +110,22 @@ while shouldPlayContent
   end if
   ' *** Insert client app’s video event handler code here
 end while
-~~~~
-
+```
 
 **Please note** that the system overlay behavior has been modified in Roku
 OS 8. Every time RAF is rendered, the Video node will not be in focus.
-For the Roku system overlay to slide out when the \* button is clicked,
+For the Roku system overlay to slide out when the * button is clicked,
 the Video node should be set to be in focus. Otherwise, the app
-retains control over the \* button and will need to handle button
+retains control over the * button and will need to handle button
 presses on their own. To set the Video node in focus again, use the
 following code snippet:
 
-~~~
+```
 sub init()
 m.top.setFocus(true)
 setVideo()
 sub
-~~~
+```
 
 ## Use cases
 
@@ -146,18 +143,17 @@ URL (which currently provides only a single ad), the ad URL must be
 configured before requesting an
 ad pod:
 
-~~~~
+```
 Library "Roku_Ads.brs"
 
 adIface = Roku_Ads()
 adIface.setAdUrl(myAdUrl)
 adPods = adIface.getAds()
-~~~~
+```
 
 You may wish to check [URL parameter macros](#url-parameter-macros) to
 see if any parameter values in the ad URL should be replaced with the
 provided macros.
-
 
 At this point, the ad server response has been fully parsed and is
 available in the adPods [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure).
@@ -182,9 +178,9 @@ its `renderSequence` attribute.
 Just call [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with
 the adPods value that the application obtained above:
 
-~~~~
+```
 shouldPlayContent = adIface.showAds(adPods)
-~~~~
+```
 
 Note that the return value should still be checked to see if the user
 exited the ad, and therefore should also exit out of content playback
@@ -204,7 +200,7 @@ occur:
 
 **Sequential ad pod rendering example**
 
-~~~~
+```
 shouldPlayContent = adIface.showAds(adPods)
 while shouldPlayContent
   videoMsg = wait(0, contentVideoScreen.GetMessagePort())
@@ -218,7 +214,7 @@ while shouldPlayContent
   end if
   ' *** Insert client app’s video event handler code here
 end while
-~~~~
+```
 
 This usage of [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) also
 automatically implements the default policy that determines whether to
@@ -237,21 +233,21 @@ necessary:
 
 **Custom ad scheduling example**
 
-~~~~
+```
 adBreakSchedule = [adBreakTime1, adBreakTime2, adBreakTime3]
 scheduledPods = []
 adBreakIndex = 0
 for each ad in adPods[0].ad
   ' schedule one ad per ad break
-  scheduledPods.Push(\{viewed : false,
+  scheduledPods.Push([{viewed : false,
                       renderSequence : "midroll",
                       duration : ad.duration,
                       renderTime : adBreakSchedule[adBreakIndex],
                       ads : [ad]
-                      \})
+                      })
   adBreakIndex = adBreakIndex + 1
 end for
-~~~~
+```
 
 Default sequential rendering could then be used by first importing this
 new `scheduledPods` ad structure, as described in [Custom Ad Parsing and
@@ -264,7 +260,7 @@ rendering:
 
 **Complete ad rendering control example**
 
-~~~~
+```
 shouldPlayContent = true
 adBreakIndex = 0
 while shouldPlayContent
@@ -283,7 +279,7 @@ while shouldPlayContent
   end if
   ' *** Insert client app’s video event handler code here
 end while
-~~~~
+```
 
 This type of custom ad scheduling may also be necessary if the client
 application relies on multiple ad services to fill its ad slots. For
@@ -302,7 +298,7 @@ For examples, see the [Roku Advertising sample apps](https://github.com/rokudev/
 
 Apps using VMAP or SmartXML ad responses to structure midroll ad pods can enable the Just In Time (JIT) feature to speed up ad playback start times. With JIT, individual midroll ad pods are retrieved before ad breaks instead of all them being fetched prior to content playback. This can reduce multiple seconds from the playback start time depending on the number of midroll ads being inserted.
 
-> Apps that want to use the JIT feature, but use an ad response structure other than SmartXML or VMAP for inserting midroll ad breaks, can contact [adsupport@roku.com](mailto:adsupport@roku.com) for solutions to speed up content playback.  
+> Apps that want to use the JIT feature, but use an ad response structure other than SmartXML or VMAP for inserting midroll ad breaks, can contact [adsupport@roku.com](mailto:adsupport@roku.com) for solutions to speed up content playback.
 
 To enable the JIT feature, call RAF’s **enableJITPods()** method:
 
@@ -339,7 +335,7 @@ Apps can use the [GetRIDA()](/docs/references/brightscript/interfaces/ifdevicein
 
 **Retrieving RIDA example**
 
-~~~~
+```
 Function getAdID() as String
     adId = ""
     dev_info = createObject("roDeviceInfo")
@@ -348,7 +344,7 @@ Function getAdID() as String
     end if
     return adId
 End Function
-~~~~
+```
 
 #### RIDA specific parameters
 
@@ -357,29 +353,28 @@ parameters in their ad request that the app can pass the RIDA in.
 
 For Freewheel, the parameters are:
 
-~~~~
+```
 _fw_did=rida:<roku-device-id>
 _fw_vcid2=<roku-device-id>
-~~~~
+```
 
 **Example**
 
-~~~~
+```
 url = http://my.ad.server.net/?my_first_param=MyFirstValue&other_param=SomeOtherValue&_fw_did=rida:<roku-device-id>
-~~~~
+```
 
 For DFP, the parameter is called `rdid`. Additional details available
-here: <https://support.google.com/dfp_premium/answer/6238701?hl=en>
-
+here: \<[https://support.google.com/dfp_premium/answer/6238701?hl=en\>](https://support.google.com/dfp_premium/answer/6238701?hl=en>)
 
 **Example**
 
-~~~~
+```
 url = http://pubads.g.doubleclick.net/gampad/request-type?my_first_param=MyFirstValue&other_param=SomeOtherValue&rdid=<roku-device-id>
-~~~~
+```
 
-> Replace <roku-device-id\> with the RIDA for audience
-targeting.
+> Replace \<roku-device-id> with the RIDA for audience
+> targeting.
 
 ### Custom buffering screens
 
@@ -392,7 +387,7 @@ The default ad buffering screen displays a message and a progress bar.
 Both attributes can either be enabled or disabled
 using [enableAdBufferMessaging()](/docs/developer-program/advertising/raf-api.md#buffer-screen-customization).
 
-![roku815px - integrateraf1](https://image.roku.com/ZHZscHItMTc2/integrateraf1.jpg "integrateraf1")
+<Image alt="roku815px - integrateraf1" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf1.jpg" title="integrateraf1" />
 
 #### Custom buffering screen using content metadata (fixed positioning)
 
@@ -404,26 +399,26 @@ SetAdBufferScreenLayer() as described in the next section.
 
 The supported content meta-data attributes are:
 
-| Attribute            | Positioning                                              | Example (below image)                                                                                              |
-| -------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| HDBackgroundImageUrl | Aligned to top-left corner                               | <https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png> |
-| SDBackgroundImageUrl | Aligned to top-left corner                               | n/a                                                                                                                |
-| HDPosterUrl          | Aligned to top-center                                    | <http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png>                     |
-| SDPosterUrl          | Aligned to top-center                                    | n/a                                                                                                                |
-| Title                | Center-aligned relative to and displayed below PosterUrl | "Title for custom buffering screen"                                                                                |
-| Description          | Left-aligned relative to PosterUrl                       | "Description for custom buffering screen"                                                                          |
+| Attribute            | Positioning                                              | Example (below image)                                                                                                                                                                                                                     |
+| -------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| HDBackgroundImageUrl | Aligned to top-left corner                               | \<[https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png\>](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png>) |
+| SDBackgroundImageUrl | Aligned to top-left corner                               | n/a                                                                                                                                                                                                                                       |
+| HDPosterUrl          | Aligned to top-center                                    | \<[http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png\>](http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png>)                                         |
+| SDPosterUrl          | Aligned to top-center                                    | n/a                                                                                                                                                                                                                                       |
+| Title                | Center-aligned relative to and displayed below PosterUrl | "Title for custom buffering screen"                                                                                                                                                                                                       |
+| Description          | Left-aligned relative to PosterUrl                       | "Description for custom buffering screen"                                                                                                                                                                                                 |
 
-~~~~
-bufferScreenContent = \{\}
+```
+bufferScreenContent = {}
 bufferScreenContent.HDBackgroundImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png"
 bufferScreenContent.HDPosterUrl = "http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png"
 bufferScreenContent.Title = "Title for custom buffering screen"
 bufferScreenContent.Description = "Description for custom buffering screen"
 
 adIface.SetAdBufferScreenContent(bufferScreenContent)
-~~~~
+```
 
-![roku815px - integrateraf2](https://image.roku.com/ZHZscHItMTc2/integrateraf2.jpg "integrateraf2")
+<Image alt="roku815px - integrateraf2" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf2.jpg" title="integrateraf2" />
 
 #### Custom buffering screen using content metadata (custom positioning)
 
@@ -434,23 +429,22 @@ as [setAdBufferScreenContent()](/docs/developer-program/advertising/raf-api.md#b
 but enables you to customize the positioning and
 other roImageCanvas attributes.
 
-
 **Custom buffering screen using layers**
 
-~~~~
+```
 layers = [
-    \{Url: BackgroundImageUrl\}
-    \{Url: PosterUrl, TargetRect : \{x : 405, y : 370, w : 467, h : 262\}\}
-    \{
+    {Url: BackgroundImageUrl}
+    {Url: PosterUrl, TargetRect : {x : 405, y : 370, w : 467, h : 262}}
+    {
         Text : "This is a custom build screen"
-        TextAttrs : \{ Color : "#FF0000", HAlign : "Center", Font : "Large"\}
-        TargetRect : \{y : 50, h : 30\}
-    \}
+        TextAttrs : { Color : "#FF0000", HAlign : "Center", Font : "Large"}
+        TargetRect : {y : 50, h : 30}
+    }
 ]
 adIface.setAdBufferScreenLayer(2, layers)
-~~~~
+```
 
-![roku815px - integrateraf3](https://image.roku.com/ZHZscHItMTc2/integrateraf3.jpg "integrateraf3")
+<Image alt="roku815px - integrateraf3" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf3.jpg" title="integrateraf3" />
 
 For an example on different custom buffering screen implementations,
 see [CustomBufferScreenSceneGraphSample](https://github.com/rokudev/samples/tree/master/advertising).
@@ -458,10 +452,8 @@ see [CustomBufferScreenSceneGraphSample](https://github.com/rokudev/samples/tree
 ### Custom ad parsing and rendering
 
 Custom ad parsing and rendering requires explicit approval from Roku to
-ensure proper ad delivery and quality. Please reach out to
-<adsupport@roku.com> for verifying your implementation prior to
+ensure proper ad delivery and quality. Please reach out to \<[adsupport@roku.com](mailto:adsupport@roku.com)\ for verifying your implementation prior to
 submitting your app for publication.
-
 
 #### Custom ad parsing
 
@@ -476,9 +468,9 @@ first calling
 the [importAds()](/docs/developer-program/advertising/raf-api.md#importadsadpodarray-as-object) method
 with the ad structure constructed externally by the client:
 
-~~~
+```
 adIface.importAds(myAdPodArray)
-~~~
+```
 
 #### Custom ad rendering
 
@@ -529,25 +521,25 @@ As an example, if `ad` contains the [Ad structure](/docs/developer-program/adver
 video ad that the client application has just begun rendering,
 the `Impression` beacons for that ad could be fired with a single call:
 
-~~~~
-adIface.fireTrackingEvents(ad, \{type: "Impression"\})
-~~~~
+```
+adIface.fireTrackingEvents(ad, {type: "Impression"})
+```
 
 While the ad playback progresses, assuming the
 variable `adProgressTime` holds a value representing the number of
 seconds since the ad began rendering, the quartile beacons can be sent
 via:
 
-~~~~
-adIface.fireTrackingEvents(ad, \{time: adProgressTime\})
-~~~~
+```
+adIface.fireTrackingEvents(ad, {time: adProgressTime})
+```
 
 If the ad were paused by the user, then the client app would fire
 the `Pause` beacons:
 
-~~~~
-adIface.fireTrackingEvents(ad, \{type: "Pause"\})
-~~~~
+```
+adIface.fireTrackingEvents(ad, {type: "Pause"})
+```
 
 ## Requirements for server side ad insertion
 
@@ -609,30 +601,30 @@ required [Ad Structure](/docs/developer-program/advertising/integrating-roku-adv
 metadata may, in some cases, come from a third party SDK provided by
 your stitching platform.
 
-  - **For server stitched ads, the 'time' member of the 'tracking' data
-    (in [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure)) for
-    each ad is required**. The value of this data member should
-    correspond to the absolute time in the entire stream, not just
-    relative to the current ad.
-      - Example: For a 30-second ad that starts at 15:00 in the stitched
-        stream, the 'Impression' beacons for that ad should be set to
-        900 seconds and the 'Midpoint' beacons for that ad should be 915
-        seconds (i.e., @15:15). The 'time' member should still be
-        omitted for beacons that do not depend on time (such as 'Pause'
-        or 'AcceptInvitation').
-  - The meaning of postroll stitched ads is slightly different than for
-    client-inserted ads, since the ads are part of the stream. **Client
-    code can still set the 'renderSequence' for the pod to 'postroll',
-    but all time values should still refer to the absolute position
-    within the stitched stream.**
+* **For server stitched ads, the 'time' member of the 'tracking' data
+  (in [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure)) for
+  each ad is required**. The value of this data member should
+  correspond to the absolute time in the entire stream, not just
+  relative to the current ad.
+  * Example: For a 30-second ad that starts at 15:00 in the stitched
+    stream, the 'Impression' beacons for that ad should be set to
+    900 seconds and the 'Midpoint' beacons for that ad should be 915
+    seconds (i.e., @15:15). The 'time' member should still be
+    omitted for beacons that do not depend on time (such as 'Pause'
+    or 'AcceptInvitation').
+* The meaning of postroll stitched ads is slightly different than for
+  client-inserted ads, since the ads are part of the stream. **Client
+  code can still set the 'renderSequence' for the pod to 'postroll',
+  but all time values should still refer to the absolute position
+  within the stitched stream.**
 
 Scheduling and rendering is then initialized by first calling
 the [`stitchedAdsInit()`](/docs/developer-program/advertising/raf-api.md#server-stitched-ads) method with the ad structure constructed by the
 client:
 
-~~~~
+```
 adIface.stitchedAdsInit(myAdPodArray)
-~~~~
+```
 
 Playback of the stitched stream is then started via an roVideoPlayer
 object (or optionally, a wrapped interface that matches the
@@ -645,7 +637,7 @@ logic:
 
 **Server side ad insertion example**
 
-~~~~
+```
 playContent = true
 while playContent
   msg = Wait(0, videoPlayer.GetMessagePort())
@@ -662,23 +654,23 @@ while playContent
     ' ... Your application's usual event-handling code here ...
   end if
 end while
-~~~~
+```
 
-  - If currentAd = invalid, then no current ad is being rendered, and
-    the app can handle the event normally.
-  - If currentAd <\> invalid and currentAd.evtHandled = true, then the
-    ad renderer handled the event, and no further action should be taken
-    on that event.
-  - If currentAd.adExited = true, then the user exited the ad renderer
-    and the app should exit playback and return to content selection.
-  - Only if no current ad is being rendered or currentAd.evtHandled =
-    false should the app handle the event in any way. Keep in mind that
-    ad rendering can create new roImageCanvas objects with their own
-    navigation, or roVideoPlayer objects with their own internal state
-    and position. These will in general have nothing at all to do with
-    any such object created by the content playback app, yet they will
-    share the same message port so that the application event loop can
-    forward all events to the ad renderer first.
+* If currentAd = invalid, then no current ad is being rendered, and
+  the app can handle the event normally.
+* If currentAd \<> invalid and currentAd.evtHandled = true, then the
+  ad renderer handled the event, and no further action should be taken
+  on that event.
+* If currentAd.adExited = true, then the user exited the ad renderer
+  and the app should exit playback and return to content selection.
+* Only if no current ad is being rendered or currentAd.evtHandled =
+  false should the app handle the event in any way. Keep in mind that
+  ad rendering can create new roImageCanvas objects with their own
+  navigation, or roVideoPlayer objects with their own internal state
+  and position. These will in general have nothing at all to do with
+  any such object created by the content playback app, yet they will
+  share the same message port so that the application event loop can
+  forward all events to the ad renderer first.
 
 Alternatively, an roAssociativeArray can wrap and mimic the interface of
 the roVideoPlayer parameter
@@ -698,26 +690,25 @@ typically used for ad targeting, interaction tracking, and development
 purposes, or to optimize the ad experience for the user’s
 device.
 
-
-| URL Parameter                                                | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ROKU\_ADS\_TRACKING\_ID                                      | RIDA (Roku ID for Advertising) value used for device identification |
-| ROKU\_ADS\_LIMIT\_TRACKING                                   | Set to true or false, depending on whether user has limited ad tracking |
-| ROKU\_ADS\_APP\_ID                                           | Identifies the client application making the ad request      |
-| <span style="color: rgb(0,0,0);">ROKU\_ADS\_APP\_VERSION</span> | Used to obtain the application version string                |
-| ROKU\_ADS\_LIB\_VERSION                                      | Used to obtain the RAF library version string                |
-| ROKU\_ADS\_CONTENT\_ID                                       | Identifies the content to allow for ad targeting             |
-| ROKU\_ADS\_CONTENT\_GENRE                                    | Identifies the content categorization to allow for ad targeting |
-| ROKU\_ADS\_CONTENT\_LENGTH                                   | Improves ad targeting by providing length of content (in number of seconds) |
-| ROKU\_ADS\_USER\_AGENT                                       | Device model and Roku OS version                             |
-| ROKU\_ADS\_DEVICE\_MODEL                                     | Device model                                                 |
-| ROKU\_ADS\_EXTERNAL\_IP                                      | <span style="color: rgb(0,0,0);">External IP address of the device</span> |
-| ROKU\_ADS\_DISPLAY\_WIDTH                                    | Width of device display                                      |
-| ROKU\_ADS\_DISPLAY\_HEIGHT                                   | Height of device display                                     |
-| ROKU\_ADS\_TIMESTAMP                                         | Current timestamp value (number of milliseconds elapsed since 00:00:00 1/1/1970 GMT) |
-| ROKU\_ADS\_CACHE\_BUSTER                                     | Makes the URL unique to avoid retrieving cached ad server responses, or to ensure proper counting of unique event tracking beacons |
-| ROKU\_ADS\_KIDS\_CONTENT                                     | Mark ad requests as appearing in a content title, channel, or area of a channel that is made for kids, or where you have actual knowledge that the end user is a child. This macro is designed to help flag ad requests that may be subject to child privacy and child protection laws such as the Children's Online Privacy Protection Act (COPPA). For more information about these laws, see [Channels or Content Made for Kids](https://docs.roku.com/published/madeforkids). |
-| ROKU\_ADS\_LOCALE                                            | Returns current locale in the same format as [roDeviceInfo.getCurrentLocale()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getcurrentlocale-as-string) (e.g., "en_US", "es_ES") |
+| URL Parameter           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ROKU_ADS_TRACKING_ID    | RIDA (Roku ID for Advertising) value used for device identification                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ROKU_ADS_LIMIT_TRACKING | Set to true or false, depending on whether user has limited ad tracking                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ROKU_ADS_APP_ID         | Identifies the client application making the ad request                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ROKU_ADS_APP_VERSION    | Used to obtain the application version string                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ROKU_ADS_LIB_VERSION    | Used to obtain the RAF library version string                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ROKU_ADS_CONTENT_ID     | Identifies the content to allow for ad targeting                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ROKU_ADS_CONTENT_GENRE  | Identifies the content categorization to allow for ad targeting                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ROKU_ADS_CONTENT_LENGTH | Improves ad targeting by providing length of content (in number of seconds)                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ROKU_ADS_USER_AGENT     | Device model and Roku OS version                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ROKU_ADS_DEVICE_MODEL   | Device model                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ROKU_ADS_EXTERNAL_IP    | External IP address of the device                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ROKU_ADS_DISPLAY_WIDTH  | Width of device display                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ROKU_ADS_DISPLAY_HEIGHT | Height of device display                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ROKU_ADS_TIMESTAMP      | Current timestamp value (number of milliseconds elapsed since 00:00:00 1/1/1970 GMT)                                                                                                                                                                                                                                                                                                                                                                                              |
+| ROKU_ADS_CACHE_BUSTER   | Makes the URL unique to avoid retrieving cached ad server responses, or to ensure proper counting of unique event tracking beacons                                                                                                                                                                                                                                                                                                                                                |
+| ROKU_ADS_KIDS_CONTENT   | Mark ad requests as appearing in a content title, channel, or area of a channel that is made for kids, or where you have actual knowledge that the end user is a child. This macro is designed to help flag ad requests that may be subject to child privacy and child protection laws such as the Children's Online Privacy Protection Act (COPPA). For more information about these laws, see [Channels or Content Made for Kids](https://docs.roku.com/published/madeforkids). |
+| ROKU_ADS_LOCALE         | Returns current locale in the same format as [roDeviceInfo.getCurrentLocale()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getcurrentlocale-as-string) (e.g., "en_US", "es_ES")                                                                                                                                                                                                                                                                                      |
 
 #### Example
 
@@ -729,11 +720,11 @@ set:
 
 **setAdUrl example**
 
-~~~~
+```
 rokuAds = Roku_Ads()
 url = "http://my.ad.server.net/?my_first_param=MyFirstValue&my_app_id=ROKU_ADS_APP_ID&my_user_agent=ROKU_ADS_USER_AGENT&my_timestamp=ROKU_ADS_TIMESTAMP&other_param=SomeOtherValue"
 rokuAds.setAdUrl(url)
-~~~~
+```
 
 ## Ad structure
 
@@ -746,27 +737,27 @@ to [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertio
 conform to this
 structure.
 
-Note: Square brackets ‘\[ \]’ indicate BrightScript arrays, curly brackets '\{
-\}' indicate associative arrays, and prefix ‘+’ indicates a required data
+Note: Square brackets ‘[ ]’ indicate BrightScript arrays, curly brackets '\{
+}' indicate associative arrays, and prefix ‘+’ indicates a required data
 member.
 
 **Ad structure**
 
-~~~~
-adPods : [\{
+```
+adPods : [{
          +viewed         : Boolean,
          +renderSequence : String ("preroll" | "midroll" | "postroll"),
          +duration       : Float (in s),
           renderTime     : Float (in s),
           slots          : Int,
           backfilled     : Boolean,
-         +tracking: [\{
+         +tracking: [{
             +event: String,
             +url: String,
             +triggered: Boolean,
              valid: Boolean
-          \}],
-         +ads : [\{
+          }],
+         +ads : [{
                  +duration     : Float (in s),
                  +streamFormat : String,
                  +adServer     : String,
@@ -776,7 +767,7 @@ adPods : [\{
                   creativeId   : String,
                   creativeAdId : String,
                   clickThrough : String (URL),
-                 +streams : [\{
+                 +streams : [{
                              +url      : String (URL),
                              +bitrate  : Int (in kbps),
                              +width    : Int,
@@ -784,32 +775,32 @@ adPods : [\{
                              +mimeType : String,
                               provider : String,
                               id       : String
-                  \}],
-                 +tracking : [\{
+                  }],
+                 +tracking : [{
                               +event     : String,
                               +url       : String (URL),
                               +triggered : Boolean,
                                valid     : Boolean,
                                time      : Float (in s)
-                  \}],
-                  companionAds: [\{
+                  }],
+                  companionAds: [{
                                  +url          : String (URL),
                                  +width        : Int,
                                  +height       : Int,
                                  +mimeType     : String,
                                   clickThrough : String (URL),
                                   provider     : String,
-                                 +tracking : [\{
+                                 +tracking : [{
                                               +event     : String,
                                               +url       : String (URL),
                                               +triggered : Boolean,
                                                valid     : Boolean,
                                                time      : Float (in s)
-                                  \}]
-                  \}]
-          \}]
-\}]
-~~~~
+                                  }]
+                  }]
+          }]
+}]
+```
 
 The object returned from a new call
 to [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with
@@ -822,7 +813,6 @@ by [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertio
 For client applications that perform their own ad rendering, the valid
 event types that must be handled are represented in the `tracking` array
 of the [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure) by:
-
 
 | Event name       | Trigger condition                                              |
 | ---------------- | -------------------------------------------------------------- |
@@ -843,7 +833,6 @@ of the [Ad Structure](/docs/developer-program/advertising/integrating-roku-adver
 | Unmute           | User un-muted ad                                               |
 | AcceptInvitation | User launched another portion of an ad (for interactive ads)   |
 
-
 ## Roku genre tags
 
 Tagging content by genre
@@ -852,59 +841,59 @@ specific to the ad provider, and may not be uniformly implemented. For
 ads provided by the Roku ad service, there is currently a canonical set
 of genre tags that can be used to improve ad targeting:
 
-  - Action
-  - Adventure
-  - Animals
-  - Animated
-  - Anime
-  - Ballet
-  - Biography
-  - Children
-  - Comedy
-  - Comedy drama
-  - Crime
-  - Crime drama
-  - Cuisine
-  - Dark comedy
-  - Docudrama
-  - Documentary
-  - Drama
-  - Educational
-  - Entertainment
-  - Faith
-  - Fantasy
-  - Fashion
-  - Food
-  - Gaming
-  - Health
-  - Historical drama
-  - History
-  - Horror
-  - Martial arts
-  - Miniseries
-  - Music
-  - Musical
-  - Musical comedy
-  - Mystery
-  - Nature
-  - News
-  - Performing arts
-  - Reality
-  - Romance
-  - Romantic comedy
-  - Science
-  - Science fiction
-  - Sitcom
-  - Special
-  - Sports
-  - Suspense
-  - Talk
-  - Technology
-  - Theater
-  - Thriller
-  - Travel
-  - War
-  - Western
+* Action
+* Adventure
+* Animals
+* Animated
+* Anime
+* Ballet
+* Biography
+* Children
+* Comedy
+* Comedy drama
+* Crime
+* Crime drama
+* Cuisine
+* Dark comedy
+* Docudrama
+* Documentary
+* Drama
+* Educational
+* Entertainment
+* Faith
+* Fantasy
+* Fashion
+* Food
+* Gaming
+* Health
+* Historical drama
+* History
+* Horror
+* Martial arts
+* Miniseries
+* Music
+* Musical
+* Musical comedy
+* Mystery
+* Nature
+* News
+* Performing arts
+* Reality
+* Romance
+* Romantic comedy
+* Science
+* Science fiction
+* Sitcom
+* Special
+* Sports
+* Suspense
+* Talk
+* Technology
+* Theater
+* Thriller
+* Travel
+* War
+* Western
 
 ## Nielsen DAR genre tags
 
@@ -913,4 +902,3 @@ via [setNielsenGenre()](/docs/developer-program/advertising/raf-api.md#nielsen-d
 a single primary genre code for the selected content from the following
 set of values. Publishers should provide the most specific category
 applicable to the content for which ads are to be shown.
-

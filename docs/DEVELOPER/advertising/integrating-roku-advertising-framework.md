@@ -1,5 +1,5 @@
 ---
-title: "Integrating the Roku Advertising Framework"
+title: Integrating the Roku Advertising Framework
 excerpt: ''
 deprecated: false
 hidden: true
@@ -92,8 +92,7 @@ before playing the main content.
 If the application is only showing preroll ads, the above five lines are
 sufficient. If the ad server URL was configured for additional midroll
 and/or postroll ads, the client application should periodically
-call [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with
-the message from the content video playback loop to determine when to
+call [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with the message from the content video playback loop to determine when to
 halt the content playback and render the
 ads:
 
@@ -243,12 +242,12 @@ scheduledPods = []
 adBreakIndex = 0
 for each ad in adPods[0].ad
   ' schedule one ad per ad break
-  scheduledPods.Push(\{viewed : false,
+  scheduledPods.Push([{viewed : false,
                       renderSequence : "midroll",
                       duration : ad.duration,
                       renderTime : adBreakSchedule[adBreakIndex],
                       ads : [ad]
-                      \})
+                      })
   adBreakIndex = adBreakIndex + 1
 end for
 ~~~~
@@ -369,7 +368,7 @@ url = http://my.ad.server.net/?my_first_param=MyFirstValue&other_param=SomeOther
 ~~~~
 
 For DFP, the parameter is called `rdid`. Additional details available
-here: <https://support.google.com/dfp_premium/answer/6238701?hl=en>
+here: \<https://support.google.com/dfp_premium/answer/6238701?hl=en\>
 
 
 **Example**
@@ -378,7 +377,7 @@ here: <https://support.google.com/dfp_premium/answer/6238701?hl=en>
 url = http://pubads.g.doubleclick.net/gampad/request-type?my_first_param=MyFirstValue&other_param=SomeOtherValue&rdid=<roku-device-id>
 ~~~~
 
-> Replace <roku-device-id\> with the RIDA for audience
+> Replace \<roku-device-id\> with the RIDA for audience
 targeting.
 
 ### Custom buffering screens
@@ -406,15 +405,15 @@ The supported content meta-data attributes are:
 
 | Attribute            | Positioning                                              | Example (below image)                                                                                              |
 | -------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| HDBackgroundImageUrl | Aligned to top-left corner                               | <https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png> |
+| HDBackgroundImageUrl | Aligned to top-left corner                               | \<https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png\> |
 | SDBackgroundImageUrl | Aligned to top-left corner                               | n/a                                                                                                                |
-| HDPosterUrl          | Aligned to top-center                                    | <http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png>                     |
+| HDPosterUrl          | Aligned to top-center                                    | \<http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png\>                     |
 | SDPosterUrl          | Aligned to top-center                                    | n/a                                                                                                                |
 | Title                | Center-aligned relative to and displayed below PosterUrl | "Title for custom buffering screen"                                                                                |
 | Description          | Left-aligned relative to PosterUrl                       | "Description for custom buffering screen"                                                                          |
 
 ~~~~
-bufferScreenContent = \{\}
+bufferScreenContent = {}
 bufferScreenContent.HDBackgroundImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png"
 bufferScreenContent.HDPosterUrl = "http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png"
 bufferScreenContent.Title = "Title for custom buffering screen"
@@ -439,13 +438,13 @@ other roImageCanvas attributes.
 
 ~~~~
 layers = [
-    \{Url: BackgroundImageUrl\}
-    \{Url: PosterUrl, TargetRect : \{x : 405, y : 370, w : 467, h : 262\}\}
-    \{
+    {Url: BackgroundImageUrl}
+    {Url: PosterUrl, TargetRect : {x : 405, y : 370, w : 467, h : 262}}
+    {
         Text : "This is a custom build screen"
-        TextAttrs : \{ Color : "#FF0000", HAlign : "Center", Font : "Large"\}
-        TargetRect : \{y : 50, h : 30\}
-    \}
+        TextAttrs : { Color : "#FF0000", HAlign : "Center", Font : "Large"}
+        TargetRect : {y : 50, h : 30}
+    }
 ]
 adIface.setAdBufferScreenLayer(2, layers)
 ~~~~
@@ -458,8 +457,7 @@ see [CustomBufferScreenSceneGraphSample](https://github.com/rokudev/samples/tree
 ### Custom ad parsing and rendering
 
 Custom ad parsing and rendering requires explicit approval from Roku to
-ensure proper ad delivery and quality. Please reach out to
-<adsupport@roku.com> for verifying your implementation prior to
+ensure proper ad delivery and quality. Please reach out to \<adsupport@roku.com\ for verifying your implementation prior to
 submitting your app for publication.
 
 
@@ -530,7 +528,7 @@ video ad that the client application has just begun rendering,
 the `Impression` beacons for that ad could be fired with a single call:
 
 ~~~~
-adIface.fireTrackingEvents(ad, \{type: "Impression"\})
+adIface.fireTrackingEvents(ad, {type: "Impression"})
 ~~~~
 
 While the ad playback progresses, assuming the
@@ -539,14 +537,14 @@ seconds since the ad began rendering, the quartile beacons can be sent
 via:
 
 ~~~~
-adIface.fireTrackingEvents(ad, \{time: adProgressTime\})
+adIface.fireTrackingEvents(ad, {time: adProgressTime})
 ~~~~
 
 If the ad were paused by the user, then the client app would fire
 the `Pause` beacons:
 
 ~~~~
-adIface.fireTrackingEvents(ad, \{type: "Pause"\})
+adIface.fireTrackingEvents(ad, {type: "Pause"})
 ~~~~
 
 ## Requirements for server side ad insertion
@@ -666,7 +664,7 @@ end while
 
   - If currentAd = invalid, then no current ad is being rendered, and
     the app can handle the event normally.
-  - If currentAd <\> invalid and currentAd.evtHandled = true, then the
+  - If currentAd \<\> invalid and currentAd.evtHandled = true, then the
     ad renderer handled the event, and no further action should be taken
     on that event.
   - If currentAd.adExited = true, then the user exited the ad renderer
@@ -704,14 +702,14 @@ device.
 | ROKU\_ADS\_TRACKING\_ID                                      | RIDA (Roku ID for Advertising) value used for device identification |
 | ROKU\_ADS\_LIMIT\_TRACKING                                   | Set to true or false, depending on whether user has limited ad tracking |
 | ROKU\_ADS\_APP\_ID                                           | Identifies the client application making the ad request      |
-| <span style="color: rgb(0,0,0);">ROKU\_ADS\_APP\_VERSION</span> | Used to obtain the application version string                |
+| ROKU\_ADS\_APP\_VERSION | Used to obtain the application version string                |
 | ROKU\_ADS\_LIB\_VERSION                                      | Used to obtain the RAF library version string                |
 | ROKU\_ADS\_CONTENT\_ID                                       | Identifies the content to allow for ad targeting             |
 | ROKU\_ADS\_CONTENT\_GENRE                                    | Identifies the content categorization to allow for ad targeting |
 | ROKU\_ADS\_CONTENT\_LENGTH                                   | Improves ad targeting by providing length of content (in number of seconds) |
 | ROKU\_ADS\_USER\_AGENT                                       | Device model and Roku OS version                             |
 | ROKU\_ADS\_DEVICE\_MODEL                                     | Device model                                                 |
-| ROKU\_ADS\_EXTERNAL\_IP                                      | <span style="color: rgb(0,0,0);">External IP address of the device</span> |
+| ROKU\_ADS\_EXTERNAL\_IP                                      | External IP address of the device |
 | ROKU\_ADS\_DISPLAY\_WIDTH                                    | Width of device display                                      |
 | ROKU\_ADS\_DISPLAY\_HEIGHT                                   | Height of device display                                     |
 | ROKU\_ADS\_TIMESTAMP                                         | Current timestamp value (number of milliseconds elapsed since 00:00:00 1/1/1970 GMT) |
@@ -913,4 +911,3 @@ via [setNielsenGenre()](/docs/developer-program/advertising/raf-api.md#nielsen-d
 a single primary genre code for the selected content from the following
 set of values. Publishers should provide the most specific category
 applicable to the content for which ads are to be shown.
-

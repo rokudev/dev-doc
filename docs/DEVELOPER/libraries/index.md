@@ -1,5 +1,5 @@
 ---
-title: "Roku Analytics Component Library"
+title: "Analytics"
 excerpt: ''
 deprecated: false
 hidden: true

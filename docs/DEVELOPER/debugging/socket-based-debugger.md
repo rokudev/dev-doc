@@ -138,7 +138,7 @@ struct DebuggerResponse {
 };
 ```
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -194,7 +194,16 @@ struct DebuggerResponse {
       </td>
 
       <td>
-        An enum indicating the status of the request. If the debugger request was successful, a value of **0** is returned. This may be one of the following values:<br /> $\{error_code_table}
+        An enum indicating the status of the request. If the debugger request was successful, a value of **0** is returned. This may be one of the following values:  
+
+        * 0: OK
+        * 1: OTHER_ERR
+        * 2: UNDEFINED_COMMAND
+        * 3: CANT_CONTINUE
+        * 4: NOT_STOPPED
+        * 5: INVALID_ARGS
+        * 6: THREAD_DETACHED
+        * 7: EXECUTION_TIMEOUT
       </td>
     </tr>
 
@@ -208,11 +217,9 @@ struct DebuggerResponse {
       </td>
 
       <td>
-        If the value returned to the **error_code** field is not "OK" (error code 0), an **error_flags** bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves):     
+        If the value returned to the **error_code** field is not "OK" (error code 0), an **error_flags** bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves):   
 
         <br />
-
-        If the **error_code** is set to "OK", the **error_flags** and **error_data** fields are not included in the debugger response.
       </td>
     </tr>
 
@@ -229,7 +236,6 @@ struct DebuggerResponse {
         This field is included if the value returned to the **error_code** field is not "OK" (error code 0) and the **error_flags** bitmap is not set to 0.
       </td>
     </tr>
-
     <tr>
       <td>
         data
@@ -247,28 +253,6 @@ struct DebuggerResponse {
 </Table>
 
 <br />
-
-| Code | Status            |
-| ---- | ----------------- |
-| 0    | OK                |
-| 1    | OTHER_ERR         |
-| 2    | UNDEFINED_COMMAND |
-| 3    | CANT_CONTINUE     |
-| 4    | NOT_STOPPED       |
-| 5    | INVALID_ARGS      |
-| 6    | THREAD_DETACHED   |
-| 7    | EXECUTION_TIMEOUT |
-
-\{#error_flags_code}
-
-```
-enum ErrorFlags {
-    INVALID_VALUE_IN_PATH = 0x0001,
-    MISSING_KEY_IN_PATH = 0x0002
-};
-```
-
-\{#error_flags_table}
 
 | Field                 | Type   | Summary                                                                                                           |
 | :-------------------- | :----- | :---------------------------------------------------------------------------------------------------------------- |

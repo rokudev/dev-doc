@@ -121,34 +121,4 @@ struct DebuggerRequest {
 };
 ```
 
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>packet_length</td>
-<td>uint32</td>
-<td>The size of the packet to be sent.<br />Example: (4 + 4 + 4 + sizeof(ARGUMENTS))</td>
-</tr>
-<tr>
-<td>request_id</td>
-<td>uint32</td>
-<td>The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
-</tr>
-<tr>
-<td>command_code</td>
-<td>uint32</td>
-<td>An enum representing the debugging command being sent, which may be one of the following values:</td>
-</tr>
-<tr>
-<td>command_arguments (optional)</td>
-<td>uint8</td>
-<td>Command-specific arguments (these may not be present for some commands)</td>
-</tr>
-</tbody>
-</table>
+<table> <thead> <tr> <th>Field</th> <th>Type</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><code>packet_length</code></td> <td>uint32</td> <td>The size of the packet to be sent.</td> </tr> <tr> <td><code>request_id</code></td> <td>uint32</td> <td>The ID of the debugger request (must be >= 1).</td> </tr> <tr> <td><code>command_code</code></td> <td>uint32</td> <td>An enum representing the debugging command being sent, which may be one of the following values:</td> </tr> <tr> <td><code>command_arguments</code></td> <td>uint8</td> <td>Command-specific arguments (if applicable).</td> </tr> </tbody> </table>

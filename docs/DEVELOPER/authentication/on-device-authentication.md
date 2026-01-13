@@ -103,13 +103,13 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
 
 3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call.
 
-        https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/\{partnerAPIKey\}/transactionid
+        https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/transactionid
 
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
         <result>
-            <transactionId>\{transactionId\}</transactionId>
+            <transactionId>{transactionId}</transactionId>
             ...
             <isEntitled>true</isEntitled>
             ...
@@ -245,7 +245,7 @@ To complete and validate the new subscription, follow these steps:
 
         myOrder = CreateObject("roSGNode", "ContentNode")
         itemPurchased = myOrder.createChild("ContentNode")
-        itemPurchased.addFields(\{ "code": "UPC3L5A", "qty": 1\})
+        itemPurchased.addFields({ "code": "UPC3L5A", "qty": 1})
         myChannelStore.order = myOrder
 
 
@@ -282,7 +282,7 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
 
         myChannelStore.requestedUserData("email")
         info = CreateObject(“roSGNode”, “ContentNode”)
-        info.addFields(\{context: “signin”\})
+        info.addFields({context: “signin”})
         myChannelStore.requestedUserDataInfo = info
 
 

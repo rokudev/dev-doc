@@ -1,5 +1,5 @@
 ---
-title: "Roku Advertising Framework overview"
+title: "Advertising"
 excerpt: ''
 deprecated: false
 hidden: true

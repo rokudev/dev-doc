@@ -107,4 +107,48 @@ The behavior after the handshake has been executed, depends on the version of th
 - **2.0.0 (and later)**: The debug target will immediately stop on the first BrightScript statement in the script and send an ALL_THREADS_STOPPED message. The debugger client (for example, an IDE) may then set dynamic breakpoints in the target before its execution. In all cases, the debugger client must send a CONTINUE command to begin executing BrightScript code.
 - **1.0.1**: The debug target runs immediately after the handshake.
 
+## Debugger Request Format
 
+Remote debugging clients can send a debugger request to the debugging target (for example, the script group) using the following packet structure for the network byte stream:
+
+```
+struct DebuggerRequest {
+    uint32 packet_length;
+    uint32 request_id;        
+    uint32 command_code;      
+    uint8 command_arguments;
+};
+```
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>packet_length</td>
+<td>uint32</td>
+<td>The size of the packet to be sent.<br />Example: (4 + 4 + 4 + sizeof(ARGUMENTS))</td>
+</tr>
+<tr>
+<td>request_id</td>
+<td>uint32</td>
+<td>The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
+</tr>
+<tr>
+<td>command_code</td>
+<td>uint32</td>
+<td>An enum representing the debugging command being sent, which may be one of the following values:<br /></td>
+</tr>
+<tr>
+<td>command_arguments (optional)</td>
+<td>uint8</td>
+<td>Command-specific arguments (these may not be present for some commands)</td>
+</tr>
+</tbody>
+</table>

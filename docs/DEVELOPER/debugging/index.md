@@ -222,3 +222,13 @@ ID    Location                                Source Code
 </tr>
 </tbody>
 </table>
+
+
+## Troubleshooting common development errors
+
+There are several very common errors that you will encounter when developing SceneGraph apps. Quite often these errors are caused by not spelling component names or variables correctly but may appear as different types of errors on the display screen and in the debugger.
+
+### Graphic image does not appear, question mark appears instead of image
+
+The graphic image file was not found in the location specified in the application. Check that graphic image file is in the specified location, either on your development server, or in the application ZIP package, usually in the pkg:/images directory. Make sure the path to the file is correct, and the name of the file is spelled correctly. Roku SceneGraph applications, like previous Roku applications, generally follow the convention used in many client display applications, such as web browsers, which is to show a default image if the specified image cannot be found. If a question mark image is shown in a Roku SceneGraph app, check the path and file name spelling to ensure that the correct graphic image appears.
+

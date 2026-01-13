@@ -28,8 +28,6 @@ While both the basic and enhanced subscription recovery solutions include renewa
 | **Billing period (if recovered)** | Remains the same                                             | Resets to the actual payment date                            |
 | **Documentation**                 | [Basic recovery guide](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/basic-recovery.md) | [Enhanced recovery guide](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md) |
 
-------
-
 ### Basic subscription recovery
 
 > **Migration Notice:** Effective October 1, 2024, all apps using Roku Pay must implement Enhanced Subscription Recovery to pass [certification](https://www.google.com/search?q=/docs/developer-program/certification/certification.md%234-channel-operation). Apps currently using the basic solution must migrate to the [Enhanced Recovery](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md) solution.
@@ -39,8 +37,6 @@ When the auto-renewal of a customer's subscription fails, Roku Pay automatically
 If payment is received during the 3-day grace period, entitlement is maintained. If no payment is received by the end of the 3 days, the subscription is canceled immediately.
 
 **For more information:** [Basic subscription recovery integration guide](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/basic-recovery.md)
-
-------
 
 ### Enhanced subscription recovery
 
@@ -54,8 +50,6 @@ If payment is recovered, entitlement is restored. If recovered during grace, the
 
 **For more information:** [Enhanced subscription recovery integration guide](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md)
 
-------
-
 ## Subscription recovery settings
 
 Use the **Subscription recovery** page in the Developer Dashboard to configure these settings. This page allows you to:
@@ -65,8 +59,6 @@ Use the **Subscription recovery** page in the Developer Dashboard to configure t
 - Manage self-serve migration.
 
 **For more information:** [Subscription recovery settings](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/settings.md)
-
-------
 
 ## Subscription recovery testing
 

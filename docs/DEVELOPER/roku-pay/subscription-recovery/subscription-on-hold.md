@@ -1,8 +1,5 @@
 ---
 title: Enhanced Subscription Recovery
-excerpt: >-
-  Learn about Roku's Enhanced Subscription Recovery feature, its integration
-  steps, and testing procedures.
 deprecated: false
 hidden: true
 link:
@@ -70,12 +67,63 @@ When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases
 
 The [v2 getAllPurchases](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#getpurchases) API returns an **purchases.billingPlan.state** field that reports the status of a subscription, which may be one of the following values:
 
-| Subscription state | **purchases.billingPlan.state**                           |
-| ------------------ | :-------------------------------------------------------- |
-| Current            | "ActivePaid"<br />"ActiveFreeTrial"<br />"ActiveCanceled" |
-| In Recovery        | "ActiveInGracePeriod" (in 3-day grace period)             |
-| On Hold            | "InactiveOnHold"                                          |
-| Cancelled          | "InactiveExpired"                                   |
+<Table align={[null,"left"]}>
+  <thead>
+    <tr>
+      <th>
+        Subscription state
+      </th>
+
+      <th>
+        **purchases.billingPlan.state**
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Current
+      </td>
+
+      <td>
+        * "ActivePaid"
+        * "ActiveFreeTrial"
+        * "ActiveCanceled"
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        In Recovery
+      </td>
+
+      <td>
+        "ActiveInGracePeriod" (in 3-day grace period)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        On Hold
+      </td>
+
+      <td>
+        "InactiveOnHold"
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Cancelled
+      </td>
+
+      <td>
+        "InactiveExpired"
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 #### Product Catalog 1.0 (ChannelStore API)
 
@@ -92,12 +140,12 @@ When customers launch an app, the app calls the ChannelStore [getAllPurchases](/
 
 You should routinely synchronize your entitlement service with the Roku Pay web services to make sure your system has up-to-date entitlement data (this also provides a backup in case your backend system occasionally does not receive or process a batch of push notifications sent by Roku). Call the [validate-transaction API](/docs/developer-program/roku-pay/implementation/roku-web-service.md#managing-subscription-recovery) as part of a nightly batch routine to get the updated status of your customers' subscriptions. This API returns an **isEntitled** flag that is used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
 
-| Subscription state                                           | **"isEntitled"** | **"expirationDate"** | **"cancelled"** |
-| :----------------------------------------------------------- | :--------------- | :------------------- | :-------------- |
-| Current                                                      | true             | future date          | false           |
-| In recovery (in 3-day grace period)                          | true             | current or past date | false           |
-| On Hold                                                      | false            | current or past date | false           |
-| Canceled                                                     | false            | past date            | true            |
+| Subscription state                                                 | **"isEntitled"** | **"expirationDate"** | **"cancelled"** |
+| :----------------------------------------------------------------- | :--------------- | :------------------- | :-------------- |
+| Current                                                            | true             | future date          | false           |
+| In recovery (in 3-day grace period)                                | true             | current or past date | false           |
+| On Hold                                                            | false            | current or past date | false           |
+| Canceled                                                           | false            | past date            | true            |
 | Canceled - pending **(subscription canceled during current term)** | true             | future date          | true            |
 
 > **Free trials:** When a free trial ends and the customer's method of payment fails, the `is_entitled` flag is set to "false" and the subscription is automatically placed on hold.
@@ -114,62 +162,15 @@ This reference summarizes the **request** and **requestStatus** fields used by t
 
 #### request
 
-| Field   | Type              | Description                                                  |
-| :------ | :---------------- | :----------------------------------------------------------- |
-| request | associative array | Includes the request's command and context. \{do-dunning-request\} |
-
-\{#do-dunning-request\}
-
-| Field   | Type              | Description                                                  |
-| :------ | :---------------- | :----------------------------------------------------------- |
-| command | string            | Set to "DoRecovery"                                          |
-| context | associative array | Used to match the **requestStatus** with **request**. For example, you can set this to \{"id: DoRecovery_1"\}. |
-| params  | associative array | Optional. Used to configure the in-app Roku Pay subscription renewal dialog. If this parameter is not included, the in-app Roku Pay subscription renewal dialog does not allow customers to watch content while their subscription is in recovery. \{recovery-context-param\} |
-
-\{#recovery-context-param\}
-
-| Field           | Type   | Description                                                  |
-| --------------- | ------ | ------------------------------------------------------------ |
-| recoveryContext | string | This may be set to the following value: <br /><br />"playback": Sets the last option in the Roku Pay subscription renewal dialog to "Continue Watching". This lets customers continue watching content while their subscription is in recovery. |
+| Field   | Type              | Description                                  |
+| :------ | :---------------- | :------------------------------------------- |
+| request | associative array | Includes the request's command and context.  |
 
 #### requestStatus
 
-| Field         | Type              | Description                                                  |
-| :------------ | :---------------- | :----------------------------------------------------------- |
-| requestStatus | associative array | Includes the status of the DoRecovery command and the recovery status data returned by it. \{do-dunning-request-status\} |
-
-\{#do-dunning-request-status\}
-
-| Field         | Type              | Description                                                  |
-| :------------ | :---------------- | :----------------------------------------------------------- |
-| result        | associative array | Contains the following key-value pairs for the recovery status of the subscription: \{result-field\} |
-| status        | enum              | The command completion status, which may be one of the following values:\{status-list\} |
-| statusMessage | string            | A text description of the command completion status.         |
-| command       | string            | The command passed into the request, which is "DoRecovery".  |
-| context       | associative array | The context passed into the request (for example, \{id: "DoRecovery_1"\}). |
-
-\{#result-field\}
-
-| Field            | Type             | Description                                                  |
-| ---------------- | ---------------- | ------------------------------------------------------------ |
-| recoveryStatus   | integer          | \{dunning-status-list\}                                       |
-| recoveryProducts | array of strings | List of product codes associated with subscriptions for which payments are still attempting to be recovered. |
-
-\{#dunning-status-list\}
-
-- **3**. A subscription, which was in recovery (Roku was attempting to charge their method of payment over a period of days), has been canceled by the user. As a result, the subscription is no longer valid.
-- **2**. One or more subscriptions are still in recovery.
-- **1**. No subscriptions are in recovery.
-
-\{#status-list\}
-
-- **2**  Interrupted
-- **1**  Success
-- **0**  Network error
-- **-1** HTTP Error/Timeout
-- **-2** Timeout
-- **-3** Unknown Error
-- **-4** Invalid request
+| Field         | Type              | Description                                                                                 |
+| :------------ | :---------------- | :------------------------------------------------------------------------------------------ |
+| requestStatus | associative array | Includes the status of the DoRecovery command and the recovery status data returned by it.  |
 
 #### SceneGraph (SDK 2) example
 
@@ -256,11 +257,11 @@ For more information: [Subscription recovery testing](/docs/developer-program/ro
 
 You must ingest and process the following additional [push notifications](/docs/developer-program/roku-pay/implementation/push-notifications.md) sent by Roku Pay as the subscription recovery state changes:
 
-| Message              | Description                                                  |
-| :------------------- | :----------------------------------------------------------- |
-| GraceInitiated       | Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP. |
-| GraceRecovered       | Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same. |
-| OnHoldInitiated      | Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP. |
+| Message              | Description                                                                                                                                                                                 |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| GraceInitiated       | Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP.                                                                     |
+| GraceRecovered       | Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same.                                            |
+| OnHoldInitiated      | Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.           |
 | OnHoldRecovered Sale | Payment is received for a subscription that was on-hold. Customer is granted access to content automatically and the billing period is adjusted to the time that the payment was collected. |
 
 #### GraceInitiated

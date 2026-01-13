@@ -1,3 +1,6 @@
+---
+title: Authentication
+---
 # On-device authentication
 
 Apps implement on-device authentications so that customers can complete sign-ups and sign-ins entirely on their Roku devices—without having to visit an external webpage. Additionally, once a customer authenticates on one device, they can automatically be signed in when they activate additional Roku devices linked to their same Roku account.

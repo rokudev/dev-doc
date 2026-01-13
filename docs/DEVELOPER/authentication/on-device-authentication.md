@@ -1,5 +1,5 @@
 ---
-title: Authentication
+title: On-Device Authentication
 ---
 # On-device authentication
 

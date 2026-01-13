@@ -1,5 +1,5 @@
 ---
-title: "Designing Roku apps"
+title: Design
 excerpt: ''
 deprecated: false
 hidden: true

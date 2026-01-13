@@ -1,5 +1,5 @@
 ---
-title: "Analytics"
+title: Analytics
 excerpt: ''
 deprecated: false
 hidden: true
@@ -358,9 +358,7 @@ displayed in the console).
 m.global.RSG_analytics.debug = true
 ~~~
 
-
-<Note>
-Please note that the library **does** send beacons even in debug mode.
+> The library **does** send beacons even in debug mode.
 
 ## Example
 

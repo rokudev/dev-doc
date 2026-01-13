@@ -1,5 +1,5 @@
 ---
-title: "Channel certification overview"
+title: Certification
 excerpt: ''
 deprecated: false
 hidden: true

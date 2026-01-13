@@ -1,5 +1,5 @@
 ---
-title: "Roku Sso Authentication Protocol"
+title: Roku SSO Authentication Protocol
 excerpt: ''
 deprecated: false
 hidden: true

@@ -194,7 +194,7 @@ struct DebuggerResponse {
       </td>
 
       <td>
-        An enum indicating the status of the request. If the debugger request was successful, a value of **0** is returned. This may be one of the following values:  
+        An enum indicating the status of the request. If the debugger request was successful, a value of **0** is returned. This may be one of the following values:
 
         * 0: OK
         * 1: OTHER_ERR
@@ -217,9 +217,17 @@ struct DebuggerResponse {
       </td>
 
       <td>
-        If the value returned to the **error_code** field is not "OK" (error code 0), an **error_flags** bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves):   
+        If the value returned to the **error_code** field is not "OK" (error code 0), an **error_flags** bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves):  
 
-        <br />
+        ```
+        enum ErrorFlags {
+            INVALID_VALUE_IN_PATH = 0x0001,
+            MISSING_KEY_IN_PATH = 0x0002
+        };
+        ```
+
+        * INVALID_VALUE_IN_PATH (uint32): invalid_path_index. The index of the element in the requested path that exists, but has invalid or unknown value.
+        * MISSING_KEY_IN_PATH (uint32): invalid_path_index. missing_key_index. The index of the element in path that was not found.
       </td>
     </tr>
 
@@ -236,6 +244,7 @@ struct DebuggerResponse {
         This field is included if the value returned to the **error_code** field is not "OK" (error code 0) and the **error_flags** bitmap is not set to 0.
       </td>
     </tr>
+
     <tr>
       <td>
         data
@@ -253,8 +262,3 @@ struct DebuggerResponse {
 </Table>
 
 <br />
-
-| Field                 | Type   | Summary                                                                                                           |
-| :-------------------- | :----- | :---------------------------------------------------------------------------------------------------------------- |
-| INVALID_VALUE_IN_PATH | uint32 | invalid_path_index. The index of the element in the requested path that exists, but has invalid or unknown value. |
-| MISSING_KEY_IN_PATH   | uint32 | missing_key_index. The index of the element in path that was not found.                                           |

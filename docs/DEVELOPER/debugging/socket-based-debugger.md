@@ -138,40 +138,45 @@ struct DebuggerResponse {
 };
 ```
 
-| Field         | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| packet_length | Unit32  | The length of the packet in bytes, including this field. Client must read this many bytes.                                                                                                                                                                                                                                                                                                                                                           |
-| request_id    | uint32  | The ID of the debugger request (must be >=1). This ID is included in the debugger response.                                                                                                                                                                                                                                                                                                                                                          |
-| error_code    | uint32  | An enum indicating the status of the request. If the debugger request was successful, a value of **0** is returned. This may be one of the following values:<br /> $\{error_code_table}                                                                                                                                                                                                                                                              |
-| error_flags   | unit32  | If the value returned to the **error_code** field is not "OK" (error code 0), an **error_flags** bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves): $\{error_flags_code}<br />$\{error_flags_table}<br />If the **error_code** is set to "OK", the **error_flags** and **error_data** fields are not included in the debugger response. |
-| error_data    | uint8[] | This field is included If the value returned to the **error_code** field is not "OK" (error code 0) and the **error_flags** bitmap is not set to 0.                                                                                                                                                                                                                                                                                                  |
-| data          | uint8   | The command response returned based on the request type.                                                                                                                                                                                                                                                                                                                                                                                             |
 
-\{#error_code_table}
-
-| Code | Status            |
-| ---- | ----------------- |
-| 0    | OK                |
-| 1    | OTHER_ERR         |
-| 2    | UNDEFINED_COMMAND |
-| 3    | CANT_CONTINUE     |
-| 4    | NOT_STOPPED       |
-| 5    | INVALID_ARGS      |
-| 6    | THREAD_DETACHED   |
-| 7    | EXECUTION_TIMEOUT |
-
-\{#error_flags_code}
-
-```
-enum ErrorFlags {
-    INVALID_VALUE_IN_PATH = 0x0001,
-    MISSING_KEY_IN_PATH = 0x0002
-};
-```
-
-\{#error_flags_table}
-
-| Field                 | Type   | Summary                                                                                                           |
-| :-------------------- | :----- | :---------------------------------------------------------------------------------------------------------------- |
-| INVALID_VALUE_IN_PATH | uint32 | invalid_path_index. The index of the element in the requested path that exists, but has invalid or unknown value. |
-| MISSING_KEY_IN_PATH   | uint32 | missing_key_index. The index of the element in path that was not found.                                           |
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>packet_length</td>
+<td>Unit32</td>
+<td>The length of the packet in bytes, including this field. Client must read this many bytes.</td>
+</tr>
+<tr>
+<td>request_id</td>
+<td>uint32</td>
+<td>The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
+</tr>
+<tr>
+<td>error_code</td>
+<td>uint32</td>
+<td>An enum indicating the status of the request. If the debugger request was successful, a value of <strong>0</strong> is returned. This may be one of the following values:<br /></td>
+</tr>
+<tr>
+<td>error_flags</td>
+<td>unit32</td>
+<td>If the value returned to the <strong>error_code</strong> field is not "OK" (error code 0), an <strong>error_flags</strong> bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves):<br />If the <strong>error_code</strong> is set to "OK", the <strong>error_flags</strong> and <strong>error_data</strong> fields are not included in the debugger response.</td>
+</tr>
+<tr>
+<td>error_data</td>
+<td>uint8[]</td>
+<td>This field is included If the value returned to the <strong>error_code</strong> field is not "OK" (error code 0) and the <strong>error_flags</strong> bitmap is not set to 0.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>uint8</td>
+<td>The command response returned based on the request type.</td>
+</tr>
+</tbody>
+</table>

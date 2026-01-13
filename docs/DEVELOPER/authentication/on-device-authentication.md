@@ -87,4 +87,6 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
 
 1. Call the [**ChannelStore.getAllPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) command. This command returns all of the historical subscription and one-time purchases made by the customer on the app. It causes the **purchases** field to be set to a **ContentNode** containing the results of the command. The **purchases** contentNode contains a child content node for each purchase.
 
-   myChannelStore.command = "getAllPurchases"
+   `myChannelStore.command = "getAllPurchases"`
+2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
+3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call.

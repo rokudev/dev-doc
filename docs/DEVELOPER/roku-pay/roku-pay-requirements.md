@@ -53,7 +53,7 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <td>RP 2.1</td>
       <td>RFI screen</td>
       <td>All authenticated transactional apps (SVOD, TVOD, and other subscription services) must use the <a href="/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata">getUserData</a> command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the app.<br /><br />Only if the user declines the request, may apps require the customer to manually enter information other than a password.</td>
-      <td><ul><li><a href="/docs/developer-program/roku-pay/signup-best-practices.md">Signup requirements and best practices</a></li><li><a href="/docs/developer-program/roku-pay/signin-best-practices.md">Sign-in requirements and best practices</a></li></ul>\<!---</td>
+      <td><ul><li><a href="/docs/developer-program/roku-pay/signup-best-practices.md">Signup requirements and best practices</a></li><li><a href="/docs/developer-program/roku-pay/signin-best-practices.md">Sign-in requirements and best practices</a></li></ul></td>
     </tr>
   </tbody>
 </table>
@@ -103,7 +103,7 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
 
 ## RP 4 Authentication and entitlement requirements
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>

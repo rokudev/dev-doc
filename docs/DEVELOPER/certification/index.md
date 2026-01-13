@@ -1,5 +1,5 @@
 ---
-title: Certifications
+title: Certification
 excerpt: ''
 deprecated: false
 hidden: true

@@ -90,3 +90,20 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
    `myChannelStore.command = "getAllPurchases"`
 2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
 3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call.
+
+ https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/transactionid
+
+
+4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
+
+        \<result\>
+            \<transactionId\>\{transactionId\}\</transactionId\>
+            ...
+            \<isEntitled\>true\</isEntitled\>
+            ...
+            \<rokuCustomerId\>abcdefghijklmnop\</rokuCustomerId\>
+            \<expirationDate\>2020-08-22T14:59:50\</expirationDate\>
+        \</result\>
+
+
+5. Proceed to the [next section](#check-for-a-valid-access-token-in-the-device-registry) to verify that the customer's device has a valid access token. This is still necessary even if **isEntitled** is true to handle scenarios where the customer has an active subscription but is using a new device or has factory reset their existing device. If **isEntitled** is false, cancel the subscription and remove the entitlement.

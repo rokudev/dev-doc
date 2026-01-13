@@ -1,5 +1,5 @@
 ---
-title: "Authentication Overview"
+title: "Authentication"
 excerpt: ''
 deprecated: false
 hidden: true

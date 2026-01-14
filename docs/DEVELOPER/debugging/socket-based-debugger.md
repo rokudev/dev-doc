@@ -8212,8 +8212,30 @@ struct AllThreadsStoppedUpdateData{
 };
 ```
 
-| Field                | Type  | Description                                                                                   |
-| -------------------- | ----- | --------------------------------------------------------------------------------------------- |
-| primary_thread_index | int32 | The index of the primary thread that initiated the stop. This is -1 if the thread is unknown. |
-| stop_reason          | uint8 | An enum describing why the thread was stopped. This may be one of the following values:<br /> |
-| stop_reason_detail   | utf8z | Provides extra details (for example, "Divide by Zero", "STOP", "BREAK")                       |
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>primary_thread_index</td>
+<td>int32</td>
+<td>The index of the primary thread that initiated the stop. This is -1 if the thread is unknown.</td>
+</tr>
+<tr>
+<td>stop_reason</td>
+<td>uint8</td>
+<td>An enum describing why the thread was stopped. This may be one of the following values:<br /><table><thead><tr><th>Value</th><th>Reason</th><th>Summary</th></tr></thead><tbody><tr><td>0</td><td>UNDEFINED</td><td>Uninitialized stopReason.</td></tr><tr><td>1</td><td>NOT_STOPPED</td><td>Thread is running.</td></tr><tr><td>2</td><td>NORMAL_EXIT</td><td>Thread exited.</td></tr><tr><td>3</td><td>STOP_STATEMENT</td><td>Stop statement executed.</td></tr><tr><td>4</td><td>BREAK</td><td>Another thread in the group encountered an error or other reason outside this thread.</td></tr><tr><td>5</td><td>RUNTIME_ERROR</td><td>Thread stopped because of an error during execution.</td></tr><tr><td>6</td><td>CAUGHT_RUNTIME_ERROR</td><td>Thread stopped due to a caught runtime error. This only occurs if exception breakpoints are configured to stop on caught exceptions.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>stop_reason_detail</td>
+<td>utf8z</td>
+<td>Provides extra details (for example, "Divide by Zero", "STOP", "BREAK")</td>
+</tr>
+</tbody>
+</table>
+

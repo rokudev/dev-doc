@@ -39792,26 +39792,27 @@ enum ProtocolErrorCode {
 }
 ```
 
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flags</td>
-<td>bool</td>
-<td>This field is always set to 0. It is reserved for future use.</td>
-</tr>
-<tr>
-<td>protocol_error_code</td>
-<td>uint32</td>
-<td>An enum indicating the type of protocol error that has occurred. This may be one of the following values:<br /></td>
-</tr>
-</tbody>
-</table>
+<table><thead><tr><th>Field</th><th>Type</th><th>Summary</th></tr></thead><tbody><tr><td>flags</td><td>bool</td><td>This field is always set to 0. It is reserved for future use.</td></tr><tr><td>protocol_error_code</td><td>uint32</td><td>An enum indicating the type of protocol error that has occurred. This may be one of the following values: <table><tr><td>Code</td><td>Error</td><td>Description</td></tr><tr><td>0</td><td>UNDEFINED</td><td></td></tr><tr><td>1</td><td>IO_CONSOLE_FAIL</td><td>The connection on the I/O port failed (this typically means that the client did not connect within the timeout).</td></tr></table><br /></td></tr></tbody></table>
+
+### ExceptionBreakpointError
+
+An EXCEPTION_BREAKPOINT_ERROR is sent if a compilation or runtime error occurs while evaluating the cond_expr of an exception breakpoint. In this case, the **update_type** field in a DebuggerUpdate message is set to EXCEPTION_BREAKPOINT_ERROR, and the **data** field contains a structure named **ExceptionBreakpointErrorUpdateData** that provides the reason for the error. The **ExceptionBreakpointErrorUpdateData** structure has the following syntax:
+
+```
+struct ExceptionBreakpointErrorUpdateData {
+    uint32                    flags;
+    uint32                    filter_id;
+    uint32                    num_compile_errors;
+    utf8z[num_compile_errors] compile_errors;
+    uint32                    num_runtime_errors;
+    utf8z[num_runtime_errors] runtime_errors;
+    uint32                    num_other_errors;
+    utf8z[num_other_errors]   other_errors;
+    uint32                    line_number;
+    utf8z                     file_path;
+}
+```
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Summary</th></tr></thead><tbody><tr><td>flags</td><td>bool</td><td>This field is always set to 0. It is reserved for future use.</td></tr><tr><td>filter\_id</td><td>uint32</td><td>The filter ID of the breakpoint <table><thead><tr><th>Value</th><th>Filter ID</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>CAUGHT</td><td>Stop on all caught exceptions.</td></tr><tr><td>2</td><td>UNCAUGHT</td><td>Stop on all uncaught exceptions.</td></tr></tbody></table></td></tr><tr><td>num\_compile\_errors</td><td>uint32</td><td>The number of compile-time errors.</td></tr><tr><td>compile\_errors</td><td>utf8z\[num\_compile\_errors]</td><td>The list of compile-time errors.</td></tr><tr><td>num\_runtime\_errors</td><td>uint32</td><td>The number of runtime errors.</td></tr><tr><td>runtime\_errors</td><td>utf8z\[num\_runtime\_errors]</td><td>The list of runtime errors.</td></tr><tr><td>num\_other\_errors</td><td>uint32</td><td>The number of other errors (for example, permission errors).</td></tr><tr><td>other\_errors</td><td>utf8z\[num\_other\_errors]</td><td>The list of other errors.</td></tr><tr><td>line\_number</td><td>uint32</td><td>The line number where the condition failed to evaluate.</td></tr><tr><td>file\_path</td><td>utf8z</td><td>the file path where the condition failed to evaluate.</td></tr></tbody></table>
 
 <br />

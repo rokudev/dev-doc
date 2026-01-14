@@ -16313,3 +16313,31 @@ struct ThreadAttachedUpdateData{
      utf8z stop_reason_detail;
 }
 ```
+
+### BreakpointError
+
+A BREAKPOINT_ERROR is sent if a compilation or runtime error occurs while evaluating the cond_expr of a conditional breakpoint. In this case, the **update_type** field in a DebuggerUpdate message is set to BREAKPOINT_ERROR, and the **data** field contains a structure named **BreakpointErrorUpdateData** that provides the reason for the error. The **BreakpointErrorUpdateData** structure has the following syntax:
+
+```
+struct BreakpointErrorUpdateData {
+    uint32                    flags;            
+    uint32                    breakpoint_id;
+    uint32                    num_compile_errors;
+    utf8z[num_compile_errors] compile_errors;
+    uint32                    num_runtime_errors;
+    utf8z[num_runtime_errors] runtime_errors;
+    uint32                    num_other_errors;
+    utf8z[num_other_errors]   other_errors;
+}
+```
+
+| Field              | Type                      | Summary                                                                                           |
+| ------------------ | ------------------------- | ------------------------------------------------------------------------------------------------- |
+| flags              | bool                      | This field is always set to 0. It is reserved for future use.                                     |
+| breakpoint_id      | uint8                     | The unique ID of the breakpoint (values greater than 0 are valid; a value of 0 denotes an error). |
+| num_compile_errors | uint32                    | The number of compile-time errors.                                                                |
+| compile_errors     | utf8z[num_compile_errors] | The list of compile-time errors.                                                                  |
+| num_runtime_errors | uint32                    | The number of runtime errors.                                                                     |
+| runtime_errors     | utf8z[num_runtime_errors] | The list of runtime errors.                                                                       |
+| num_other_errors   | uint32                    | The number of other errors (for example, permission errors).                                      |
+| other_errors       | utf8z[num_other_errors]   | The list of other errors.                                                                         |

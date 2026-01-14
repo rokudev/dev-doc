@@ -275,7 +275,7 @@ struct DebuggerUpdate {
 };
 ```
 
-<Table align={["left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left"]}>
+<Table align={["left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left","left"]}>
   <thead>
     <tr>
       <th style={{ textAlign: "left" }}>
@@ -288,6 +288,126 @@ struct DebuggerUpdate {
 
       <th style={{ textAlign: "left" }}>
         Description
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
       </th>
 
       <th style={{ textAlign: "left" }}>
@@ -1505,6 +1625,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -1520,6 +1760,126 @@ struct DebuggerUpdate {
         The ID of the debugger request, which must be **0**. This ID is included in the debugger response.
 
         **0** is a reserved value for the **request_id** in DebuggerUpdate messages; therefore, a debugging client may not send a DebuggerRequest with a **request_id** of 0.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -2744,6 +3104,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -2756,7 +3236,127 @@ struct DebuggerUpdate {
       </td>
 
       <td style={{ textAlign: "left" }}>
-        An enum representing the update being sent by the debugger, which may be one of the following values: <table><tr><td>Code</td><td>Update</td><td>Description</td></tr><tr><td>0</td><td>UNDEF</td><td /></tr><tr><td>1</td><td>IO_PORT_OPENED</td><td>The remote debugging client should connect to the port included in the **data** field to retrieve the running script's output. Only reads are allowed on the I/O connection.</td></tr><tr><td>2</td><td>ALL_THREADS_STOPPED</td><td>All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)      message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.</td></tr><tr><td>3</td><td>THREAD_ATTACHED</td><td>A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)      message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.</td></tr><tr><td>4</td><td>BREAKPOINT_ERROR</td><td>A compilation or runtime error occurred when evaluating the **cond_expr** of a conditional breakpoint.</td></tr><tr><td>5</td><td>COMPILE_ERROR</td><td>A compilation error occurred.</td></tr><tr><td>6<br /><br />*Available since Roku OS 12.0*</td><td>BREAKPOINT_VERIFIED</td><td>A breakpoint has successfully been applied to an executable line of code.</td></tr><tr><td>7<br /><br />*Available since Roku OS 12.0*</td><td>PROTOCOL_ERROR</td><td>An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.</td></tr><tr><td>8<br /><br />*Available since Roku OS 14.1*</td><td>EXCEPTION_BREAKPOINT_ERROR</td><td>A compilation or runtime error has occurred when evaluating the **cond_expr** of an exception breakpoint.</td></tr></table>
+        An enum representing the update being sent by the debugger, which may be one of the following values: <table><tr><td>Code</td><td>Update</td><td>Description</td></tr><tr><td>0</td><td>UNDEF</td><td /></tr><tr><td>1</td><td>IO_PORT_OPENED</td><td>The remote debugging client should connect to the port included in the **data** field to retrieve the running script's output. Only reads are allowed on the I/O connection.</td></tr><tr><td>2</td><td>ALL_THREADS_STOPPED</td><td>All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)       message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.</td></tr><tr><td>3</td><td>THREAD_ATTACHED</td><td>A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)       message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.</td></tr><tr><td>4</td><td>BREAKPOINT_ERROR</td><td>A compilation or runtime error occurred when evaluating the **cond_expr** of a conditional breakpoint.</td></tr><tr><td>5</td><td>COMPILE_ERROR</td><td>A compilation error occurred.</td></tr><tr><td>6<br /><br />*Available since Roku OS 12.0*</td><td>BREAKPOINT_VERIFIED</td><td>A breakpoint has successfully been applied to an executable line of code.</td></tr><tr><td>7<br /><br />*Available since Roku OS 12.0*</td><td>PROTOCOL_ERROR</td><td>An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.</td></tr><tr><td>8<br /><br />*Available since Roku OS 14.1*</td><td>EXCEPTION_BREAKPOINT_ERROR</td><td>A compilation or runtime error has occurred when evaluating the **cond_expr** of an exception breakpoint.</td></tr></table>
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Code
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Update
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Description
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        0
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        UNDEF
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        1
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        IO_PORT_OPENED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        The remote debugging client should connect to the port included in the **data** field to retrieve the running script's output. Only reads are allowed on the I/O connection.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        2
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ALL_THREADS_STOPPED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)      message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        3
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        THREAD_ATTACHED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)      message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        4
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        BREAKPOINT_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A compilation or runtime error occurred when evaluating the **cond_expr** of a conditional breakpoint.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        5
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        COMPILE_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A compilation error occurred.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        6<br /><br />_Available since Roku OS 12.0_
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        BREAKPOINT_VERIFIED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A breakpoint has successfully been applied to an executable line of code.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        7<br /><br />_Available since Roku OS 12.0_
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        PROTOCOL_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        8<br /><br />_Available since Roku OS 14.1_
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        EXCEPTION_BREAKPOINT_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A compilation or runtime error has occurred when evaluating the **cond_expr** of an exception breakpoint.
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -3972,6 +4572,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -3981,6 +4701,126 @@ struct DebuggerUpdate {
 
       <td style={{ textAlign: "left" }}>
         UNDEF
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -5200,6 +6040,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -5212,7 +6172,127 @@ struct DebuggerUpdate {
       </td>
 
       <td style={{ textAlign: "left" }}>
-        All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)     message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.
+        All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)      message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -5826,7 +6906,127 @@ struct DebuggerUpdate {
       </td>
 
       <td style={{ textAlign: "left" }}>
-        A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)     message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.
+        A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)      message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -7042,6 +8242,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -7055,6 +8375,126 @@ struct DebuggerUpdate {
 
       <td style={{ textAlign: "left" }}>
         A compilation error occurred.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -8270,6 +9710,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -8283,6 +9843,126 @@ struct DebuggerUpdate {
 
       <td style={{ textAlign: "left" }}>
         An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -9498,6 +11178,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -10112,6 +11912,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -10121,6 +12041,126 @@ struct DebuggerUpdate {
 
       <td style={{ textAlign: "left" }}>
         UNDEF
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -11340,6 +13380,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -11352,7 +13512,127 @@ struct DebuggerUpdate {
       </td>
 
       <td style={{ textAlign: "left" }}>
-        All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)    message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.
+        All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)     message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -11966,7 +14246,127 @@ struct DebuggerUpdate {
       </td>
 
       <td style={{ textAlign: "left" }}>
-        A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)    message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.
+        A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)     message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -13182,6 +15582,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -13195,6 +15715,7466 @@ struct DebuggerUpdate {
 
       <td style={{ textAlign: "left" }}>
         A compilation error occurred.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        6<br /><br />_Available since Roku OS 12.0_
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        BREAKPOINT_VERIFIED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A breakpoint has successfully been applied to an executable line of code.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        7<br /><br />_Available since Roku OS 12.0_
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        PROTOCOL_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        8<br /><br />_Available since Roku OS 14.1_
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        EXCEPTION_BREAKPOINT_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A compilation or runtime error has occurred when evaluating the **cond_expr** of an exception breakpoint.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        Code
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Update
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Description
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        0
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        UNDEF
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        1
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        IO_PORT_OPENED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        The remote debugging client should connect to the port included in the **data** field to retrieve the running script's output. Only reads are allowed on the I/O connection.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        2
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        ALL_THREADS_STOPPED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped)    message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        3
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        THREAD_ATTACHED
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached)    message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        4
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        BREAKPOINT_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A compilation or runtime error occurred when evaluating the **cond_expr** of a conditional breakpoint.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        5
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        COMPILE_ERROR
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        A compilation error occurred.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -14410,6 +24390,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -15024,6 +25124,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
 
     <tr>
@@ -15037,6 +25257,126 @@ struct DebuggerUpdate {
 
       <td style={{ textAlign: "left" }}>
         A compilation or runtime error has occurred when evaluating the **cond_expr** of an exception breakpoint.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -16256,6 +26596,126 @@ struct DebuggerUpdate {
       <td style={{ textAlign: "left" }}>
 
       </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
     </tr>
   </tbody>
 </Table>
@@ -16359,38 +26819,95 @@ struct CompileErrorUpdateData {
 ```
 
 <table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flags</td>
-<td>bool</td>
-<td>This field is always set to 0 (reserved for future use).</td>
-</tr>
-<tr>
-<td>utf8z</td>
-<td>error_string</td>
-<td>A text message describing the compiler error.</td>
-</tr>
-<tr>
-<td>utf8z</td>
-<td>file_spec</td>
-<td>A simple file path indicating where the compiler error occurred. It maps to all matching file paths in the app or its libraries <br /><br />"pkg:/\<filepath\>" specifies a file in the app<br /><br />"lib:/\<library_name\>//\<filepath\>" specifies a file in a library.</td>
-</tr>
-<tr>
-<td>uint32</td>
-<td>line_number</td>
-<td>The line number where the compile error occurred.</td>
-</tr>
-<tr>
-<td>utf8z</td>
-<td>library_name</td>
-<td>The name of the library where the compile error occurred.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>flags</td>
+      <td>bool</td>
+      <td>This field is always set to 0 (reserved for future use).</td>
+    </tr>
+
+    <tr>
+      <td>utf8z</td>
+      <td>error\_string</td>
+      <td>A text message describing the compiler error.</td>
+    </tr>
+
+    <tr>
+      <td>utf8z</td>
+      <td>file\_spec</td>
+      <td>A simple file path indicating where the compiler error occurred. It maps to all matching file paths in the app or its libraries <br /><br />"pkg:/\<filepath>" specifies a file in the app<br /><br />"lib:/\<library\_name>//\<filepath>" specifies a file in a library.</td>
+    </tr>
+
+    <tr>
+      <td>uint32</td>
+      <td>line\_number</td>
+      <td>The line number where the compile error occurred.</td>
+    </tr>
+
+    <tr>
+      <td>utf8z</td>
+      <td>library\_name</td>
+      <td>The name of the library where the compile error occurred.</td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+### BreakpointVerified
+
+_Available since Roku OS 12.0_
+
+A BREAKPOINT_VERIFIED message is sent when a breakpoint has successfully been applied to an executable line of code. Breakpoints may be added at any time; however, the changes may not be applied immediately if the debug target is running.  In this case, the **update_type** field in a DebuggerUpdate message is set to BREAKPOINT_VERIFIED, and the **data** field contains a structure named **BreakpointVerifiedUpdateData** that provides the ID assigned to the verified breakpoint. The **BreakpointVerifiedUpdateData** structure has the following syntax:
+
+```
+struct BreakpointVerifiedUpdateData {
+    uint32 flags // Reserved for future use
+    uint32 num_breakpoints
+    VerifiedBreakpointInfo[num_breakpoints]
+}
+```
+
+```
+struct VerifiedBreakpointInfo {
+    uint32 breakpoint_id
+}
+```
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>flags</td>
+      <td>bool</td>
+      <td>This field is always set to 0. It is reserved for future use.</td>
+    </tr>
+
+    <tr>
+      <td>num\_breakpoints</td>
+      <td>uint32</td>
+      <td>The number of breakpoints in the <strong>breakpoints</strong> array.</td>
+    </tr>
+
+    <tr>
+      <td>VerifiedBreakpointInfo</td>
+      <td>array</td>
+      <td>A list of verified breakpoints. Each verified breakpoint has the following syntax:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Summary</th></tr></thead><tbody><tr><td>breakpoint\_id</td><td>utf8z</td><td>The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error.</td></tr></tbody></table></td>
+    </tr>
+  </tbody>
 </table>

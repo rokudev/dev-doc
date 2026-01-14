@@ -8200,4 +8200,20 @@ struct DebuggerUpdate {
   </tbody>
 </Table>
 
-<br />
+### AllThreadsStopped
+
+If the **update_type** in a DebuggerUpdate message is set to ALL_THREADS_STOPPED, the **data** field contains a structure named **AllThreadsStoppedUpdateData** that provides the reason for the stop. The **AllThreadsStoppedUpdateData** structure has the following syntax:
+
+```
+struct AllThreadsStoppedUpdateData{
+		int32 primary_thread_index;
+		uint8 stop_reason;
+		utf8z stop_reason_detail;
+};
+```
+
+| Field                | Type  | Description                                                                                   |
+| -------------------- | ----- | --------------------------------------------------------------------------------------------- |
+| primary_thread_index | int32 | The index of the primary thread that initiated the stop. This is -1 if the thread is unknown. |
+| stop_reason          | uint8 | An enum describing why the thread was stopped. This may be one of the following values:<br /> |
+| stop_reason_detail   | utf8z | Provides extra details (for example, "Divide by Zero", "STOP", "BREAK")                       |

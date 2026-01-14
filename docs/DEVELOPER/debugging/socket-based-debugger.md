@@ -16341,3 +16341,56 @@ struct BreakpointErrorUpdateData {
 | runtime_errors     | utf8z[num_runtime_errors] | The list of runtime errors.                                                                       |
 | num_other_errors   | uint32                    | The number of other errors (for example, permission errors).                                      |
 | other_errors       | utf8z[num_other_errors]   | The list of other errors.                                                                         |
+
+<br />
+
+### CompileError
+
+A COMPILE_ERROR is sent if a compilation error occurs. In this case, the **update_type** field in a DebuggerUpdate message is set to COMPILE_ERROR, and the **data** field contains a structure named **CompileErrorUpdateData** that provides the reason for the error. The **CompileErrorUpdateData** structure has the following syntax:
+
+```
+struct CompileErrorUpdateData {
+    uint32 flags;
+    utf8z  error_string;
+    utf8z  file_spec;
+    uint32 line_number;
+    utf8z  library_name;
+}
+```
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td>bool</td>
+<td>This field is always set to 0 (reserved for future use).</td>
+</tr>
+<tr>
+<td>utf8z</td>
+<td>error_string</td>
+<td>A text message describing the compiler error.</td>
+</tr>
+<tr>
+<td>utf8z</td>
+<td>file_spec</td>
+<td>A simple file path indicating where the compiler error occurred. It maps to all matching file paths in the app or its libraries <br /><br />"pkg:/\<filepath\>" specifies a file in the app<br /><br />"lib:/\<library_name\>//\<filepath\>" specifies a file in a library.</td>
+</tr>
+<tr>
+<td>uint32</td>
+<td>line_number</td>
+<td>The line number where the compile error occurred.</td>
+</tr>
+<tr>
+<td>utf8z</td>
+<td>library_name</td>
+<td>The name of the library where the compile error occurred.</td>
+</tr>
+</tbody>
+</table>

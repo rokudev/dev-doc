@@ -121,7 +121,7 @@ struct DebuggerRequest {
 };
 ```
 
-<table> <thead> <tr> <th>Field</th> <th>Type</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><code>packet_length</code></td> <td>uint32</td> <td>The size of the packet to be sent.</td> </tr> <tr> <td><code>request_id</code></td> <td>uint32</td> <td>The ID of the debugger request (must be >= 1).</td> </tr> <tr> <td><code>command_code</code></td> <td>uint32</td> <td><table><tr><td>Code</td><td>Command</td></tr><tr><td>1</td><td>STOP</td></tr><tr><td>2</td><td>CONTINUE</td></tr><tr><td>3</td><td>THREADS</td></tr><tr><td>4</td><td>STACKTRACE</td></tr><tr><td>5</td><td>VARIABLES</td></tr><tr><td>6</td><td>STEP</td></tr><tr><td>7</td><td>ADD_BREAKPOINTS</td></tr><tr><td>8</td><td>LIST_BREAKPOINTS</td></tr><tr><td>9</td><td>REMOVE_BREAKPOINTS</td></tr><tr><td>10</td><td>EXECUTE</td></tr><tr><td>11</td><td>ADD_CONDITIONAL_BREAKPOINTS</td></tr><tr><td>12</td><td>SET_EXCEPTION_BREAKPOINTS</td></tr><tr><td>122</td><td>EXIT_CHANNEL</td></tr></table></td> </tr> <tr> <td><code>command_arguments</code></td> <td>uint8</td> <td>Command-specific arguments (if applicable).</td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>Field</th> <th>Type</th> <th>Description</th> </tr> </thead> <tbody> <tr> <td><code>packet_length</code></td> <td>uint32</td> <td>The size of the packet to be sent.</td> </tr> <tr> <td><code>request_id</code></td> <td>uint32</td> <td>The ID of the debugger request (must be >= 1).</td> </tr> <tr> <td><code>command_code</code></td> <td>uint32</td> <td><ul><li>1: STOP</li><li>2: CONTINUE</li><li>3: THREADS</li><li>4: STACKTRACE</li><li>5: VARIABLES</li><li>6: STEP</li><li>7: ADD_BREAKPOINTS</li><li>8: LIST_BREAKPOINTS</li><li>9: REMOVE_BREAKPOINTS</li><li>10: EXECUTE</li><li>11: ADD_CONDITIONAL_BREAKPOINTS</li><li>12: SET_EXCEPTION_BREAKPOINTS</li><li>122: EXIT_CHANNEL</li></ul></td> </tr> <tr> <td><code>command_arguments</code></td> <td>uint8</td> <td>Command-specific arguments (if applicable).</td> </tr> </tbody> </table>
 
 ## Debugger Response Format
 
@@ -217,7 +217,7 @@ struct DebuggerResponse {
       </td>
 
       <td>
-        If the value returned to the **error_code** field is not "OK" (error code 0), an **error_flags** bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves):  
+        If the value returned to the **error_code** field is not "OK" (error code 0), an **error_flags** bitmap is returned. The bitmap contains the following flags (the associated data follows the flags; their order is based on the order of the flags themselves):
 
         ```
         enum ErrorFlags {

@@ -118,12 +118,129 @@ commands to the Roku device.
 
 ### General ECP commands
 
-| Command               | Description                                                                                                                                                                                                                                                                                                                                                                    | Required Device Settings                     |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
-| query/media-player    | Returns a child element named 'player' that identifies the media player state. The information returned includes the current stream segment and position of the content being played, the running time of the content, audio format, and buffering. This command is accessed using an HTTP GET.                                                                                |                                              |
-| keydown/\<KEY>        | Equivalent to pressing the remote control key identified after the slash. This command is sent using an HTTP POST with no body.                                                                                                                                                                                                                                                | **Control by mobile apps** setting “Enabled” |
-| keyup/\<KEY>          | Equivalent to releasing the remote control key identified after the slash. This command is sent using an HTTP POST with no body.                                                                                                                                                                                                                                               | **Control by mobile apps** setting “Enabled” |
-| keypress/\<KEY>       | Equivalent to pressing down and releasing the remote control key identified after the slash. You can also use this command, and the keydown and keyup commands, to send keyboard alphanumeric characters when a keyboard screen is active, as described in                                                                                                                     |                                              |
-| query/device-info     | Retrieves device information similar to that returned by roDeviceInfo. This command is accessed using an HTTP GET.<br /><br />As of Roku OS 15.0, this command returns the following fields that indicate whether TV power and audio volume control have been enabled on a Roku streaming player: <br /><br />- supports-tv-power-control<br />- supports-audio-volume-control |                                              |
-| query/icon/\<APP_ID\> | Returns an icon corresponding to the application identified by appID. The binary data with an identifying MIME-type header is returned. This command is accessed using an HTTP GET. Example: GET /query/icon/1**Control by mobile apps** setting “Enabled”                                                                                                                     | **Control by mobile apps** setting “Enabled” |
-|                       |                                                                                                                                                                                                                                                                                                                                                                                |                                              |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Command
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Required Device Settings
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        query/media-player
+      </td>
+
+      <td>
+        Returns a child element named 'player' that identifies the media player state. The information returned includes the current stream segment and position of the content being played, the running time of the content, audio format, and buffering. This command is accessed using an HTTP GET.
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        keydown/\<KEY>
+      </td>
+
+      <td>
+        Equivalent to pressing the remote control key identified after the slash. This command is sent using an HTTP POST with no body.
+      </td>
+
+      <td>
+        **Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        keyup/\<KEY>
+      </td>
+
+      <td>
+        Equivalent to releasing the remote control key identified after the slash. This command is sent using an HTTP POST with no body.
+      </td>
+
+      <td>
+        **Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        keypress/\<KEY>
+      </td>
+
+      <td>
+        Equivalent to pressing down and releasing the remote control key identified after the slash. You can also use this command, and the keydown and keyup commands, to send keyboard alphanumeric characters when a keyboard screen is active, as described in
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        query/device-info
+      </td>
+
+      <td>
+        Retrieves device information similar to that returned by roDeviceInfo. This command is accessed using an HTTP GET.<br /><br />As of Roku OS 15.0, this command returns the following fields that indicate whether TV power and audio volume control have been enabled on a Roku streaming player: <br /><br />- supports-tv-power-control<br />- supports-audio-volume-control
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        query/icon/\<APP_ID\>
+      </td>
+
+      <td>
+        Returns an icon corresponding to the application identified by appID. The binary data with an identifying MIME-type header is returned. This command is accessed using an HTTP GET. Example: GET /query/icon/1**Control by mobile apps** setting “Enabled”
+      </td>
+
+      <td>
+        **Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        query/chanperf<br /><br />query/chanperf/\<*channelld*\\>?duration-seconds=\<*seconds*\>
+      </td>
+
+      <td>
+        Returns the current memory and CPU utilization of the app running in the foreground (RAM usage is reported bytes). The foreground app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file. <br /><br />- -   
+
+        * Including the **channelId** option in the path outputs statistics for a specific app from the Streaming Store. To use this command, the device must be keyed with the same developer ID/key that was used to generate the package file. The app's process ID (pid) is added to the output of this command.
+        * Including **duration-seconds** in the query string executes and repeats the **chanperf** command the specified number of seconds. To cancel a repeating command, use the chanperf command with no arguments or with the duration-seconds parameter set to 0 ("chanperf" or "chanperf/duration-seconds=0"). The default duration is **1** second.
+
+        <br />
+      </td>
+
+      <td>
+        Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+<br />
+
+<br />

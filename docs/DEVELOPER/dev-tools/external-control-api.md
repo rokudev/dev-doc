@@ -429,3 +429,38 @@ The response includes the following fields:
 </sgnodes>
 ```
 
+#### query/sgrendezvous example
+
+The following commands enable rendezvous tracking and list the rendezvous events for a sideloaded app or production/beta app linked to the Roku developer's account:
+
+```
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/query/sgrendezvous/track"
+$ curl "http://${ROKU_DEV_TARGET}:8060/query/sgrendezvous"
+```
+
+The response includes an \<item\> element for each node rendezvous event that was logged. Each event recorded is one that occurred after tracking was enabled or after the previous call to query/sgrendezvous, whichever occurred last.
+
+* The **end-tm** and **start-tm** fields indicate the number of milliseconds that elapsed during the rendezvous.
+* The **timestamp** indicates the time that the query was executed.
+  <br />
+  ```
+  <sgrendezvous>
+      <data>
+          <tracking-enabled>true</tracking-enabled>
+          <plugin-id>dev</plugin-id>
+          <drop-count>0</drop-count>
+          <count>4</count>
+          <item>
+              <id>471</id>
+              <start-tm>2731136</start-tm>
+              <end-tm>2731136</end-tm>
+              <line-number>21</line-number>
+              <file>pkg:/components/ServiceTask.brs</file>
+      </data>
+      <timestamp>1656713004102</timestamp>
+      <status>OK</status>
+  </sgrendezvous>
+  ```
+  <br />
+
+<br />

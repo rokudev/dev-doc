@@ -213,3 +213,58 @@ include:
 * geolocation (from GPS)
 * device-provided derivations of above sensor readings, for example
   "shake" from accelerometer, or "pinch" from multi-touch
+
+## External Control Protocol examples
+
+The following are some example ECP commands sent via the curl command.
+The ROKU_DEV_TARGET environment variable should be set with the TCP/IP address
+of the target Roku device, e.g.
+
+```
+$ export ROKU_DEV_TARGET=192.168.1.134
+```
+
+### Query/media-player example
+
+The following command retrieves media player information.
+
+```
+$ curl "http://$ROKU_DEV_TARGET:8060/query/media-player"
+```
+
+The response includes the following fields:
+
+```
+<player error="false" state="play">
+	<plugin bandwidth="44692475 bps" id="dev" name="MultiLive"/>
+	<format audio="aac" captions="none" container="mp4" drm="none" video="mpeg4_15" video_res="1280x546"/>
+	<buffering current="1000" max="1000" target="0"/>
+	<new_stream speed="128000 bps"/>
+	<position>6916 ms</position>
+	<duration>887999 ms</duration>
+	<is_live>false</is_live>
+	<runtime>887999 ms</runtime>
+	<stream_segment bitrate="0" media_sequence="1" segment_type="mux" time="0"/>
+</player>
+```
+
+### Keypress example
+
+The following command simulates a user hitting the "Home" button
+
+```
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/keypress/home"
+```
+
+### Keyup/keydown example
+
+The following commands move the cursor to the far left by holding down
+the Left key for 10 seconds
+
+```
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/keydown/left"
+$ sleep 10
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/keyup/left"
+```
+
+###

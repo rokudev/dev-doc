@@ -1,8 +1,5 @@
 ---
 title: Roku app tracing (with Perfetto)
-excerpt: >-
-  Learn how to use Perfetto for tracing Roku apps to optimize performance and
-  reduce resource consumption.
 deprecated: false
 hidden: true
 link:

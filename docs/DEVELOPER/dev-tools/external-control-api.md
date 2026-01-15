@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-# External Control Protocol (ECP)
+`# External Control Protocol (ECP)
 
 The External Control Protocol (ECP) enables a Roku device to be controlled over a local area network by providing a number of external control services. The Roku devices offering these external control services are discoverable using SSDP (Simple Service Discovery Protocol). ECP is a simple RESTful API that can be accessed by programs in virtually any programming environment.
 
@@ -817,4 +817,74 @@ $ curl -d '' "http://$ROKU_DEV_TARGET:8060/keypress/Lit_k"
 $ curl -d '' "http://$ROKU_DEV_TARGET:8060/keypress/Lit_u"
 ```
 
-##
+## Example programs
+
+There is a sample External Control Protocol application available that
+requires only glibc to compile. The program is self contained in the
+/examples/rokuExternalControl.c file in the sample. You can compile and run
+it with the following commands:
+
+```
+$ cd SDK_directory
+$ gcc ./examples/rokuExternalControl.c –o rokuExternalControl
+$ ./rokuExternalControl
+```
+
+On Windows, it can be compiled with the following line:
+
+```
+> cl /D "WIN32" rokuExternalControl.c
+```
+
+The program first uses SSDP to query for Roku devices in the local area
+network. The first Roku device that responds is the one to which
+commands are sent. All requests and responses are printed to stdout so
+that you can easily follow what the program is doing. The program next
+moves the cursor to the home screen and highlights the "Netflix"
+program. It does this by sending the Home key command, and then holding
+down the left key for twelve seconds. Then it sends the Right key three
+times. After keeping the "Netflix" program highlighted for five seconds,
+the program launches the "simplevideoplayer" application with url and
+streamformat as keys in the associative array passed to the Main() entry
+point. The simplevideoplayer application immediately launches the
+roVideoScreen when launched with an associative array containing valid
+url and streamformat keys.
+
+With ECP, you have complete control of your Roku device over the
+network. We can't wait to see what kind of solutions our developer
+community can create. The sample C program can be quickly modified to
+run in a variety of environments including Firefox, IE, and other
+browser plugins, iPhone, iPad, and other mobile device environments.
+
+The SDK also includes a couple of Java applications. There is an Android
+remote application in examples/source/ecp\_client/android\_remote, and a
+simple application to find Roku devices on the local area network in
+examples/source/ecp\_client/Roku\_Finder.
+
+## DIAL (Discovery and Launch)
+
+The Roku platform supports the DIAL (Discovery and Launch) protocol.
+DIAL is a simple network protocol for discovering first screen devices,
+and applications from a second screen (such as a mobile iOS or Android
+application,) and for launching first screen applications on the first
+screen device from the second screen app. In the context of the Roku
+platform, the first screen device is the Roku device itself. A first
+screen application is a DIAL-aware app installed on the Roku device.
+Complete details of the DIAL specification can be found here:
+
+`<http://www.dial-multiscreen.org/dial-protocol-specification>`
+
+Many current Roku developers are familiar with the Roku external control
+protocol (ECP) which includes functionality similar to DIAL. An
+experienced Roku developer may thus fairly ask the question "why do I
+need DIAL?" One reason is that you may already have a DIAL based second
+screen implementation for use with other platforms. DIAL support on the
+Roku platform means that you don’t need to add a second protocol to your
+current application for discovery and launch.
+
+[The Roku DIAL sample](https://github.com/rokudev/samples/tree/master/utilities)  contains
+detailed documentation of Roku DIAL support, as well as BrightScript,
+Android, and iOS sample applications. In DIAL parlance, the
+BrightScript sample is the first screen application, and the Android and
+iOS apps are the second screen applications. These sample applications
+should help you get started with your own Roku DIAL support.

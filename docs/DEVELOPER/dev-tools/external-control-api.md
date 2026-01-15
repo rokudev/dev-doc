@@ -438,7 +438,7 @@ $ curl -d '' "http://$ROKU_DEV_TARGET:8060/query/sgrendezvous/track"
 $ curl "http://${ROKU_DEV_TARGET}:8060/query/sgrendezvous"
 ```
 
-The response includes an \<item\> element for each node rendezvous event that was logged. Each event recorded is one that occurred after tracking was enabled or after the previous call to query/sgrendezvous, whichever occurred last.
+The response includes an \<item> element for each node rendezvous event that was logged. Each event recorded is one that occurred after tracking was enabled or after the previous call to query/sgrendezvous, whichever occurred last.
 
 * The **end-tm** and **start-tm** fields indicate the number of milliseconds that elapsed during the rendezvous.
 * The **timestamp** indicates the time that the query was executed.
@@ -663,3 +663,35 @@ $ curl "http://$ROKU_DEV_TARGET:8060/query/tv-channels"
 ```
 
 ### Query/tv-active-channel example
+
+Below is an example of the Roku TV query/tv-active-channel response.
+
+```
+$ curl "http://$ROKU_DEV_TARGET:8060/query/tv-active-channel"
+
+<tv-channel>
+	<channel>
+		<number>14.3</number>
+		<name>getTV</name>
+		<type>air-digital</type>
+		<user-hidden>false</user-hidden>
+		<active-input>true</active-input>
+		<signal-state>valid</signal-state>
+		<signal-mode>480i</signal-mode>
+		<signal-quality>20</signal-quality>
+		<signal-strength>-75</signal-strength>
+		<program-title>Airwolf</program-title>
+		<program-description>The team will travel all around the world in order to shut down a global crime ring.</program-description>
+		<program-ratings>TV-14-D-V</program-ratings>
+		<program-analog-audio>none</program-analog-audio>
+		<program-digital-audio>stereo</program-digital-audio>
+		<program-audio-languages>eng</program-audio-languages>
+		<program-audio-formats>AC3</program-audio-formats>
+		<program-audio-language>eng</program-audio-language>
+		<program-audio-format>AC3</program-audio-format>
+		<program-has-cc>true</program-has-cc>
+	</channel>
+</tv-channel>
+```
+
+## Deep linking to an app

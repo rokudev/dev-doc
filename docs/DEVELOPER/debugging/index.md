@@ -1,5 +1,5 @@
 ---
-title: "Debugging"
+title: Debugging
 excerpt: ''
 deprecated: false
 hidden: true
@@ -224,8 +224,6 @@ ID    Location                                Source Code
 </table>
 
 
-
-
 ## Troubleshooting common development errors
 
 There are several very common errors that you will encounter when developing SceneGraph apps. Quite often these errors are caused by not spelling component names or variables correctly but may appear as different types of errors on the display screen and in the debugger.
@@ -236,7 +234,7 @@ The graphic image file was not found in the location specified in the applicatio
 
 ### Debugger message: "Type Mismatch"
 
-This usually means that a BrightScript variable has been incorrectly spelled after it has been declared, never declared at all, or declared as a local variable in another function. Check the backtrace information supplied by the debugger for the local variables used at the time of the error, and note that the variables listed as <uninitialized>. Check for the declaration of the variable or variables listed earlier in the application prior to the error message, and correct the spelling, or declare them correctly, as needed. In many cases, the error occurs because there is an attempt to use a local variable declared in one function block in another function. To correct this, you can declare the variable using the m object reference which gives the variable file scope.
+This usually means that a BrightScript variable has been incorrectly spelled after it has been declared, never declared at all, or declared as a local variable in another function. Check the backtrace information supplied by the debugger for the local variables used at the time of the error, and note that the variables listed as \<uninitialized\>. Check for the declaration of the variable or variables listed earlier in the application prior to the error message, and correct the spelling, or declare them correctly, as needed. In many cases, the error occurs because there is an attempt to use a local variable declared in one function block in another function. To correct this, you can declare the variable using the m object reference which gives the variable file scope.
 
 ### Debugger message: "'Dot' Operator attempted with invalid BrightScript Component or interface reference"
 
@@ -266,13 +264,13 @@ centerx          <uninitialized>
 centery          <uninitialized>
 ~~~
 
-Note also the variables that were assigned values from interface functions on invalid component objects will be listed as <uninitialized>. Typically in Roku SceneGraph applications, the problem is caused by attempting to create a component object for a component class name that is not in either the built-in node classes, or extended node classes declared in the application package components directory. To fix this error, scroll up in the debugger output to the point at which the component object creation error occurred, which will have the following error message:
+Note also the variables that were assigned values from interface functions on invalid component objects will be listed as \<uninitialized\>. Typically in Roku SceneGraph applications, the problem is caused by attempting to create a component object for a component class name that is not in either the built-in node classes, or extended node classes declared in the application package components directory. To fix this error, scroll up in the debugger output to the point at which the component object creation error occurred, which will have the following error message:
 
 ~~~
 BRIGHTSCRIPT: ERROR: roSGNode: Failed to create roSGNode with type Rectangleexample: ...pkg:/components/smallexamplescene.xml(16)
 ~~~
 
-This shows the file and line number where the actual component object creation error occurred. To fix the error, correct the mismatch between the component name and the component object creation function argument. Quite often this is the result of a case mismatch between the extended component name in a <component> element, since these names are case-sensitive. Correct the case-sensitive spelling of the component name either in the component file, or at the point where you attempted to create the component object.
+This shows the file and line number where the actual component object creation error occurred. To fix the error, correct the mismatch between the component name and the component object creation function argument. Quite often this is the result of a case mismatch between the extended component name in a \<component\> element, since these names are case-sensitive. Correct the case-sensitive spelling of the component name either in the component file, or at the point where you attempted to create the component object.
 
 ### List or grid fails to appear, or first item is blank or missing information
 
@@ -285,7 +283,7 @@ sub showvideolist()
 end sub
 ~~~
 
-This is a typical callback function that is triggered by the ContentNode being created in a Task node (in this case, the event was a new ContentNode assigned to the m.readVideoContentTask Task node object <interface> element videocontent field).
+This is a typical callback function that is triggered by the ContentNode being created in a Task node (in this case, the event was a new ContentNode assigned to the m.readVideoContentTask Task node object \<interface\> element videocontent field).
 
 Also, if you are having problems with a callback function not assigning a valid ContentNode, carefully check that the field observers were set before the Task node was configured and launched (but after the Task node object was created). For example, for the above example, the Task node object should have been created, had the field observers set, configured, and launched, in that order:
 
@@ -314,7 +312,7 @@ If they are leaks, they must be part of cycles or they would have been deleted a
 
 If the nodes are merely unneeded, they might not be in cycles but may be simply stored somewhere the code will no longer access even though it could. If so, the app should be updated to dereference any nodes that are no longer needed. This can be done by setting the variables or fields that are holding the nodes to invalid.
 
-The getAll() and getAllMeta() methods can also be used to find nodes that are still referenced by other nodes, but still may be leaks or unneeded. The set of top-level nodes directly under the <All_Nodes> XML element is similar to those returned by the getRoots() method, and any leaked cycle will have at least one member in this set. Unneeded or cyclically linked nodes can appear anywhere in the node hierarchy, however, so the complete listing should be reviewed when leaks are suspected. A leaf entry that references any node above it in a tree represents a cycle.
+The getAll() and getAllMeta() methods can also be used to find nodes that are still referenced by other nodes, but still may be leaks or unneeded. The set of top-level nodes directly under the \<All_Nodes\> XML element is similar to those returned by the getRoots() method, and any leaked cycle will have at least one member in this set. Unneeded or cyclically linked nodes can appear anywhere in the node hierarchy, however, so the complete listing should be reviewed when leaks are suspected. A leaf entry that references any node above it in a tree represents a cycle.
 
 Note that determining whether a node is unneeded is not always a simple task, and is up to the intent of the app code. Outright cyclical leaks can be detected automatically, but since that can be a time consuming operation, it is only performed on app exit, and the app should be coded to avoid creating them.
 

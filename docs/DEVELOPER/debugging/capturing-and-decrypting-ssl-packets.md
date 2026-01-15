@@ -1,5 +1,5 @@
 ---
-title: "Capturing and decrypting SSL packets"
+title: Capturing and decrypting SSL packets
 excerpt: ''
 deprecated: false
 hidden: true
@@ -23,8 +23,8 @@ The following are some useful links:
 - [Wireshark](https://www.wireshark.org/) (Free for decrypting tcpdump)
 - [Charles Proxy](https://www.charlesproxy.com/) (Easy setup, Easy GUI, Not free, Optional)
 
-<Note>
-Before performing any of the methods that use Wireshark, make sure you have the correct keys for SSL decryption. Click for more information on [Wireshark SSL](https://wiki.wireshark.org/SSL).
+
+> Before performing any of the methods that use Wireshark, make sure you have the correct keys for SSL decryption. Click for more information on [Wireshark SSL (https://wiki.wireshark.org/SSL).
 
 Click for more information on how to create a [self-signed SSL certificate](https://www.akadia.com/services/ssh_test_certificate.html).
 
@@ -53,7 +53,7 @@ Click for more information on how to create a [self-signed SSL certificate](http
 3. Launch **Wireshark**, select **Capture** from the top menu, and add the following capture filter with the **IP address** of the device that you want to capture. Select **OK** when done.
 
     ~~~
-    Field 1: IP address <IP Address>                         Field 2: host <IP Address>
+    Field 1: IP address <IP Address>                         Field 2: host \<IP Address\>
     ~~~
 
     ![roku815px - capturing-and-decrypting-2](https://image.roku.com/ZHZscHItMTc2/capturing-and-decrypting-2.png "capturing-and-decrypting-2.png")

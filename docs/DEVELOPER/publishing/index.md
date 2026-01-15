@@ -1,5 +1,5 @@
 ---
-title: "Pre-publishing checklist"
+title: Publishing
 excerpt: ''
 deprecated: false
 hidden: true

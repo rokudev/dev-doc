@@ -498,4 +498,116 @@ The response includes an \<item\> element for each node rendezvous event that wa
   ```
   #### query/fwbeacons example
 
-<br />
+The following commands enable app and media lifecycle event tracking and list the events for a sideloaded app:
+
+```
+$ curl -d '' "http://${ROKU_DEV_TARGET}:8060/fwbeacons/track/dev"
+$ curl "http://${ROKU_DEV_TARGET}:8060/query/fwbeacons"
+```
+
+The response includes the following fields:
+
+```
+<fwbeacons>
+    <tracking-enabled>true</tracking-enabled>
+    <plugin-id>dev</plugin-id>
+    <drop-count>0</drop-count>
+    <interval-drop-count>0</interval-drop-count>
+    <count>6</count>
+    <app-compile-initiate>
+        <timestamp>1675727290681</timestamp>
+    </app-compile-initiate>
+    <app-compile-complete>
+        <timestamp>1675727290706</timestamp>
+    </app-compile-complete>
+    <app-splash-initiate>
+        <timestamp>1675727290733</timestamp>
+    </app-splash-initiate>
+    <app-splash-complete>
+        <timestamp>1675727291615</timestamp>
+    </app-splash-complete>
+    <app-exit-initiate>
+        <timestamp>1675727295248</timestamp>
+    </app-exit-initiate>
+    <app-exit-complete>
+        <timestamp>1675727295333</timestamp>
+    </app-exit-complete>
+    <timestamp>1675727301787</timestamp>
+    <status>OK</status>
+</fwbeacons>
+```
+
+#### query/app-object-counts example
+
+The following command returns the counts for the different BrightScript node objects in the app.
+
+```
+$ curl '' "http://$ROKU_DEV_TARGET:8060/query/app-object-counts/<channelId>"
+```
+
+The response includes the following fields:
+
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<app-object-counts>
+    <channel-id>581251</channel-id>
+    <channel-title>Roku Developers</channel-title>
+    <channel-version>9.3.10</channel-version>
+    <objects>
+        <object>
+            <name>roArray</name>
+            <count>100</count>
+        </object>
+        <object>
+            <type>roAssociativeArray</type>
+            <count>200</count>
+        </object>
+        <object>
+            <name>roSGNode</name>
+            <subtype>Label</subtype>
+            <count>300</count>
+        </object>
+        <object>
+            <name>roSGNode</name>
+            <subtype>ContentNode</subtype>
+            <count>400</count>
+        </object>
+        <object>
+            <name>roSGNode</name>
+            <subtype>AppScene</subtype>
+            <count>1</count>
+        </object>
+        <object>
+            <name>roSGNode</name>
+            <subtype>Poster</subtype>
+            <count>200</count>
+        </object>
+        <object>
+            <type>roString</type>
+            <count>2000</count>
+        </object>
+    <objects>
+    <<objects-count>>3201</<objects-count>>
+</app-object-counts>
+```
+
+#### query/app-state example
+
+The following command returns the state of the app state: "active", "background" (suspended; running in the background), or "inactive".
+
+```
+$ curl '' "http://$ROKU_DEV_TARGET:8060/query/app-state/<appId>"
+```
+
+The response includes the following fields:
+
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<channel>
+    <channel-id>581251</channel-id>
+    <channel-state>active</channel-state>
+	  <channel-version>1.2</channel-version>
+</channel>
+```
+
+#### exit-app example

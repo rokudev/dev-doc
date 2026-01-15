@@ -1,5 +1,5 @@
 ---
-title: "Index"
+title: "Performance"
 excerpt: ''
 deprecated: false
 hidden: true

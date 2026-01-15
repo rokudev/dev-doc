@@ -1,5 +1,5 @@
 ---
-title: "Roku OS developer release notes"
+title: "Release notes"
 excerpt: ''
 deprecated: false
 hidden: true

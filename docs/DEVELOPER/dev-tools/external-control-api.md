@@ -118,7 +118,7 @@ commands to the Roku device.
 
 ### General ECP commands
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -230,8 +230,37 @@ commands to the Roku device.
 
         * Including the **channelId** option in the path outputs statistics for a specific app from the Streaming Store. To use this command, the device must be keyed with the same developer ID/key that was used to generate the package file. The app's process ID (pid) is added to the output of this command.
         * Including **duration-seconds** in the query string executes and repeats the **chanperf** command the specified number of seconds. To cancel a repeating command, use the chanperf command with no arguments or with the duration-seconds parameter set to 0 ("chanperf" or "chanperf/duration-seconds=0"). The default duration is **1** second.
+      </td>
 
-        <br />
+      <td>
+        Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        query/r2d2-bitmaps
+      </td>
+
+      <td>
+        Returns a list of the assets that have been loaded into texture memory and the amount of used, available, and maximum memory on your device (in bytes).<br /><br />As of Roku OS 11.5, this query returns all bitmaps in texture memory, including those that cannot be directly attributed to an app.
+      </td>
+
+      <td>
+        Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        query/sgnodes/all?count_only=true&sizes=true
+      </td>
+
+      <td>
+        Returns all the nodes created by the currently running app. This includes the number of **osref** references to the node (held in the Roku platform) and **bscref** references (held in the app).<br /><br />  
+
+        * The **bcsref** count includes references from "m." variable and local variables. Child references and field references do not increase **bscref** counts. The **bscref** count provides a more relevant and accurate indication of the resources that the app itself controls.  
+        * The **osref** count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one **osref** on the child. Additionally, any field of type **node**, **nodearray**, or **assocarray** will add one **osref** to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node. The reported **osref** count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes. - The **count_only** parameter returns the total number of objects as a parameter in the **All-Nodes** field .<br />  - The **size** parameter returns the memory used by the object (in kB).
       </td>
 
       <td>

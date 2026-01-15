@@ -59,3 +59,13 @@ multicast address and port (239.255.255.250:1900) used for local area
 network communication. The Roku device responds to M-SEARCH queries on
 this IP address and port.
 
+To query for a Roku device IP address, send the following HTTP request
+to 239.255.255.250 port 1900:
+
+~~~~
+M-SEARCH * HTTP/1.1
+Host: 239.255.255.250:1900
+Man: "ssdp:discover"
+ST: roku:ecp
+
+~~~~

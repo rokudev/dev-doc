@@ -1,3 +1,17 @@
+---
+title: Development partners
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
+
 # Third-party developers
 
 Many digital media development studios have incorporated Roku development into their offerings. Publishing partners sometimes find it beneficial to leverage these studios' existing familiarity with the Roku platform to help build their apps.

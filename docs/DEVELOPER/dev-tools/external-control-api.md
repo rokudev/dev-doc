@@ -461,6 +461,41 @@ The response includes an \<item\> element for each node rendezvous event that wa
       <status>OK</status>
   </sgrendezvous>
   ```
-  <br />
+  The following command disables rendezvous tracking:
+  ```
+  $ curl -d '' "http://$ROKU_DEV_TARGET:8060/query/sgrendezvous/untrack"
+  ```
+  #### query/registry example
+  The following command returns the registry entries for the app.
+  ```
+  curl '' "http://$ROKU_DEV_TARGET:8060/query/registry/dev"
+  ```
+  The response includes the following fields:
+  ```
+  <plugin-registry>
+      <registry>
+          <dev-id>e090ac01d342483bb28831a7e1afff8e</dev-id>
+          <plugins>dev</plugins>
+          <space-available>9168</space-available>
+  		<sections>
+              <section>
+                  <name>UserInfo</name>
+              	<items>
+              		<item>
+          				<key>NextPaymentDate</key>
+              			<value>2022-09-17T17:17:55</value>
+          			</item>
+              		<item>
+          				<key>UserId</key>
+              			<value>1429492</value>
+          			</item>
+  				</items>
+  			</section>
+  		</sections>
+      </registry>
+      <status>OK</status>
+  </plugin-registry>
+  ```
+  #### query/fwbeacons example
 
 <br />

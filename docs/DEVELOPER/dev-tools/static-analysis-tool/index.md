@@ -1,5 +1,5 @@
 ---
-title: "Static Analysis Tool"
+title: Static Analysis Tool
 excerpt: ''
 deprecated: false
 hidden: true
@@ -23,7 +23,7 @@ The app publishing flow includes a Static Analysis Tool used to analyze the app'
 
 The Static Analysis Tool is available from the [Developer Dashboard](https://developer.roku.com/developer).
 
-1. From the **Developer Dashboard > Manage My Channels** tool, [upload a package file](/docs/developer-program/publishing/channel-publishing-guide.md#package-upload-window).
+1. From the **Developer Dashboard \> Manage My Channels** tool, [upload a package file](/docs/developer-program/publishing/channel-publishing-guide.md#package-upload-window).
 
 
 2. Select **Static Analysis** from the drop-down menu.  This option is only available after a package file has been uploaded.
@@ -42,13 +42,12 @@ The Static Analysis Tool is available from the [Developer Dashboard](https://dev
     ![roku815px - static-analysis-test-results](https://image.roku.com/ZHZscHItMTc2/static-analysis-test-results-v2.png "static-analysis-test-results")
 
 
-<pre><code>| Column                    | Description                                                  |
+| Column                    | Description                                                  |
 | ------------------------- | ------------------------------------------------------------ |
 | Message                   | A description of the issue related to the app.           |
 | Severity                  | The type of message: error, warning, or info.&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Error&lt;/strong&gt;.  Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Warning&lt;/strong&gt;. Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Info&lt;/strong&gt;. Info messages provide tips that may be helpful in the development of the app.&lt;/li&gt;&lt;/ul&gt; |
 | Category                  | The type of issue (for example, package, performance, billing, manifest, and so on). |
 | Certification Requirement | Provides a link to any related certification requirements in the [Certification Criteria](/docs/developer-program/certification/certification.md) document. |
-</code></pre>
 
 
     You can filter the test results based on the **Severity** or **Category**.

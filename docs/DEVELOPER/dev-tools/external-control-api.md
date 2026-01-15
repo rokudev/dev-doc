@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-`# External Control Protocol (ECP)
+# External Control Protocol (ECP)
 
 The External Control Protocol (ECP) enables a Roku device to be controlled over a local area network by providing a number of external control services. The Roku devices offering these external control services are discoverable using SSDP (Simple Service Discovery Protocol). ECP is a simple RESTful API that can be accessed by programs in virtually any programming environment.
 

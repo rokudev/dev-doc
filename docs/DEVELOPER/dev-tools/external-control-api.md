@@ -611,3 +611,55 @@ The response includes the following fields:
 ```
 
 #### exit-app example
+
+The following command suspends or terminates an app that is running.
+
+```
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/exit-app/<channelId>"
+```
+
+This command returns an HTTP 200 success code if the app was active or suspended. It returns an HTTP 404 (Not Found) error if the app was not running.
+
+### Input examples
+
+The following command passes three components of acceleration through to
+the app. All query string parameters are passed to the currently
+running app. The remote app and the currently running app just need to
+agree on the query string parameters and any communication can be
+developed.
+
+```
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/input?acceleration.x=0.0&acceleration.y=0.0&acceleration.z=9.8"
+```
+
+The following command indicates that a touch at the given x and y has
+touched down on the screen.
+
+```
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/input?touch.0.x=200.0&touch.0.y=135.0&touch.0.op=down"
+```
+
+### Query/tv-channels example
+
+Below is an example of the Roku TV query/tv-channels response.
+
+```
+$ curl "http://$ROKU_DEV_TARGET:8060/query/tv-channels"
+
+<tv-channels>
+	<channel>
+		<number>1.1</number>
+		<name>WhatsOn</name>
+		<type>air-digital</type>
+		<user-hidden>false</user-hidden>
+	</channel>
+	<channel>
+		<number>1.3</number>
+		<name>QVC</name>
+		<type>air-digital</type>
+		<user-hidden>false</user-hidden>
+	</channel>
+</tv-channels>
+```
+
+### Query/tv-active-channel example

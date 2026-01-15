@@ -1,8 +1,5 @@
 ---
 title: App Publishing
-excerpt: >-
-  Guide to publishing apps on Roku, including beta and public app guidelines,
-  creation, testing, and publishing processes.
 deprecated: false
 hidden: true
 link:

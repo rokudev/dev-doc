@@ -429,6 +429,3 @@ The response includes the following fields:
 </sgnodes>
 ```
 
-<br />
-
-<br />

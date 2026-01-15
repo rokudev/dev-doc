@@ -1,8 +1,5 @@
 ---
 title: BrightScriptDoc
-excerpt: >-
-  Documentation for BrightScriptDoc, the BrightScript language documentation
-  generator for inline code comments.
 deprecated: false
 hidden: true
 link:

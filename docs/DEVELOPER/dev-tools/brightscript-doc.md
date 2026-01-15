@@ -1,16 +1,14 @@
 ---
-title: "BrightScriptDoc"
-excerpt: ''
+title: BrightScriptDoc
 deprecated: false
 hidden: true
+link:
+  new_tab: false
 metadata:
   title: ''
   description: ''
   robots: index
-next:
-  description: ''
 ---
-
 # BrightScriptDoc
 
 ## Overview
@@ -37,7 +35,7 @@ BrightScriptDoc tags fall into two broad categories: Block tags or Inline tags.
 
 ### Block Tags
 
-Block tags are in the general format: @tagname <tag specific arguments>
+Block tags are in the general format: @tagname \<tag specific arguments\>
 
 Block tags must be the only thing on the comment line (nothing but REM or single quote and whitespace can come before it on the line).
 
@@ -83,7 +81,7 @@ The @see tag comes in 3 different possible forms:
 
 In this form, the @see tag simply outputs the quoted text as is (without the quotes).
 
-***@see <a href="">label</a> url***
+***@see \<a href=""\>label\</a\> url***
 
 In this form, the @see tag outputs the entire referenced link, as-is.
 
@@ -94,14 +92,14 @@ When the BrightScriptDoc processor is running in the context of the BrightScript
 
 ### Inline Tags
 
-Inline tags are in the format: \{@tagname <tag specific arguments>\}
+Inline tags are in the format: \{@tagname \<tag specific arguments\>\}
 
 Inline tags can be used anywhere display text can be used, including in the descriptive text arguments of block tags and the main comment section. Example tag types include the \{@link\}, \{@literal\}, and \{@code\} tags.
 
 #### The \{@link\} tag
 
 The @link tag is an inline tag.
-@link is an inline version of the 3rd form of the @see tag (i.e. the type.method#field form). Note that the <a href... form of @see is not needed as a separate inline tag, since most HTML markup is permitted inline in text as-is.
+@link is an inline version of the 3rd form of the @see tag (i.e. the type.method#field form). Note that the \<a href... form of @see is not needed as a separate inline tag, since most HTML markup is permitted inline in text as-is.
 
 #### The \{@literal\} tag
 
@@ -179,7 +177,7 @@ End Function
 ' @param titlePrefix a static prefix for the video title display line
 ' @param contentAAArray an Array of content meta‐data Aas
 ' @return False if there was an error during creating or running this screen.
-' @see <a href="/docs/developer-program/getting-started/architecture/content-metadata.md">Content Meta‐data</a>
+' @see \<a href="/docs/developer-program/getting-started/architecture/content-metadata.md"\>Content Meta‐data\</a\>
 ' @see .CreateUtils CreateUtils()
 Function ShowCustomScreen(utilsas Object, site as String, titlePrefix as String, contentAAArray as Object)as BooLean
 
@@ -216,9 +214,9 @@ z = CreateObject("roFoo")
 End Function
 
 ' Creates an \{@link roAssociativeArray associative array\} of useful general utility functions.
-' \{@literal <bold> and </bold> are presented as is in this literal tag, rather than causing "and" to be bolded\}
+' \{@literal \<bold\> and \</bold\> are presented as is in this literal tag, rather than causing "and" to be bolded\}
 
-' \{@code of course, the same thing is true in this code tag, but the font face is different ‐ <bold> and the matching </bold> tags are shown rather than cause the "and the matching" to be bolded\}
+' \{@code of course, the same thing is true in this code tag, but the font face is different ‐ \<bold\> and the matching \</bold\> tags are shown rather than cause the "and the matching" to be bolded\}
 ' <br />
 ' And any old HTML you want to throw in is also valid, although equivalent BrightScriptDoc tags are more efficient...
 ' <table border=1>

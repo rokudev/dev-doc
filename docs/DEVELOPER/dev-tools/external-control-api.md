@@ -310,3 +310,56 @@ $ curl "http://$ROKU_DEV_TARGET:8060/query/device-info"
   <supports-private-listening>false</supports-private-listening>
   <headphones-connected>false</headphones-connected>
 </device-info>
+
+### Query/icon example
+
+This following command will return the icon for the app with ID 12 (Netflix).
+The response will be raw binary picture data, after HTTP headers, including one with the MIME type of the picture data.
+
+```
+$ curl -v "http://$ROKU_DEV_TARGET:8060/query/icon/12" -o image-12
+< HTTP/1.1 200 OK
+< Content-Length: 20679
+< Cache-Control: no-cache
+< Content-Type: image/jpeg
+```
+
+### Query debugging examples
+
+#### Query/chanperf example
+
+The following command returns the current memory and CPU utilization of an app (RAM usage is reported in bytes).
+
+`curl "http://${ROKU_DEV_TARGET}:8060/query/chanperf"`
+
+The response includes the following fields:
+
+```
+ <chanperf>
+	<timestamp>1672980398506</timestamp>
+	<plugin>
+		<cpu-percent>
+			<duration-seconds>1.000000</duration-seconds>
+			<user>12.2</user>
+			<sys>5.5</sys>
+		</cpu-percent>
+		<memory>
+			<used>87785472</used>
+			<res>87785472</res>
+			<anon>24027136</anon>
+			<swap>0</swap>
+			<file>24727552</file>
+			<shared>39030784</shared>
+		</memory>
+		<id>dev</id>
+		<unsecured>
+			<process-id>6861</process-id>
+		</unsecured>
+	</plugin>
+	<status>OK</status>
+</chanperf>
+```
+
+#### Query/r2d2-bitmaps example
+
+The following command returns a list of the assets that have been loaded into texture memory, and the amount of used, available, and maximum memory on your device (in bytes).

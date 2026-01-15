@@ -363,3 +363,49 @@ The response includes the following fields:
 #### Query/r2d2-bitmaps example
 
 The following command returns a list of the assets that have been loaded into texture memory, and the amount of used, available, and maximum memory on your device (in bytes).
+
+```
+curl "http://${ROKU_DEV_TARGET}:8060/query/r2d2-bitmaps"
+```
+
+The response includes the following fields:
+
+```
+<r2d2-bitmaps>
+	<rographics>
+		<sytem-memory>
+			<used>115200</used>
+		</sytem-memory>
+		<texture-memory>
+			<used>26841088</used>
+			<available>93158912</available>
+			<max>120000000</max>
+		</texture-memory>
+		<bitmap>
+			<width>1920</width>
+			<height>1080</height>
+			<bpp>3</bpp>
+			<size>8355840</size>
+			<name>/tmp/plugin/CMAAAA2AIKa9/pkg:/images/splash-screen_fhd.jpg</name>
+		</bitmap>
+		<bitmap>
+			<width>1920</width>
+			<height>1080</height>
+			<bpp>3</bpp>
+			<size>8355840</size>
+			<name>/nvram/theme/FHD/BackgroundBitmap.jpg</name>
+		</bitmap>
+	</rographics>
+	<status>OK</status>
+</r2d2-bitmaps>
+```
+
+#### Query/sgnodes/all example
+
+The following command returns each existing node created by the currently running app. This includes the number of **osref** references to the node (held in the Roku platform) and **bscref** references (held in the app)..
+
+```
+curl "http://${ROKU_DEV_TARGET}:8060/query/sgnodes"
+```
+
+The response includes the following fields:

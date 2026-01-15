@@ -69,3 +69,43 @@ Man: "ssdp:discover"
 ST: roku:ecp
 
 ~~~~
+
+There *must* be a blank line at the end of the file above. If you
+put the above request into a file such as roku\_ecp\_req.txt, you can
+issue the following command on most Linux machines to test the request:
+
+~~~~
+$ ncat -u 239.255.255.250 1900 < roku_ecp_req.txt
+~~~~
+
+If you view the response using Wireshark, and filter on port 1900, you
+can see the Roku device response (Ncat has trouble receiving multicast
+traffic, so viewing the response using Ncat does not work). The response
+has the following format:
+
+~~~~~
+HTTP/1.1 200 OK
+Cache-Control: max-age=3600
+ST: roku:ecp
+Location: http://192.168.1.134:8060/
+USN: uuid:roku:ecp:P0A070000007
+~~~~~
+
+If you get a 200 status response, the Location header is valid. You can
+parse out the URL for the Roku device external control services from the
+Location header. The Roku device serial number is contained in the USN
+line after uuid:roku:ecp. Note that if there are multiple Roku devices
+in your local area network, you will get multiple responses. Your
+program could keep a map of USNs to location URLs, and allow the user to
+select which Roku device on the network to control. We recommend you let
+the user assign names to the USNs.
+
+When parsing headers in the response, in accordance with the UPnP Device
+Architecture specification, field names should not be treated as case
+sensitive. That means that, for example, the Location header may begin
+with either "Location:" or "LOCATION:" or "location:", and so forth.
+
+Please note the Cache-Control header. Roku devices multicast NOTIFY
+messages periodically (approximately every 20 minutes). It is safe to
+assume the unit is no longer available if you have not received a new
+NOTIFY message before the Cache-Control max-age time expires.

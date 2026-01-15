@@ -710,3 +710,15 @@ The standard for deep linking uses parameters:
 
 You trigger deep linking by doing an HTTP post to port 8060 on your Roku
 device. The general form is
+
+```
+http://<IP of Roku>:8060/launch/[dev | channeID]?contentId=<content ID>&MediaType=<mediaType>
+```
+
+The first example will launch the current sideloaded application and
+deep link to a season contentID 1234. Notice the -d ' ' which forces
+it to do a http post.
+
+```
+curl -d '' "http://$ROKU_DEV_TARGET:8060/launch/dev?contentID=13234&MediaType=season"
+```

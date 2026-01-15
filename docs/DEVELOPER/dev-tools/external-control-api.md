@@ -729,7 +729,12 @@ You can also just launch the app without deep linking by removing the arguments 
 
 You can find the app ID of a production app by using one of the two deep link test tools:
 
-`<https://devtools.web.roku.com/DeepLinkingTester/>
-``<https://my.roku.com/account/add?channel=KX3UPK>`
+```
+<https://devtools.web.roku.com/DeepLinkingTester/>
+<https://my.roku.com/account/add?channel=KX3UPK>
+```
 
-*
+
+
+
+

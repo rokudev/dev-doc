@@ -109,3 +109,10 @@ Please note the Cache-Control header. Roku devices multicast NOTIFY
 messages periodically (approximately every 20 minutes). It is safe to
 assume the unit is no longer available if you have not received a new
 NOTIFY message before the Cache-Control max-age time expires.
+
+## External control service commands
+
+The external control services provided by ECP are included in a simple
+RESTful API accessed using HTTP on port 8060. Once you have the Roku
+device IP address, you can issue the following external control service
+commands to the Roku device.

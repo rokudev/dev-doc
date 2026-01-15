@@ -695,3 +695,18 @@ $ curl "http://$ROKU_DEV_TARGET:8060/query/tv-active-channel"
 ```
 
 ## Deep linking to an app
+
+One of the most common ways that app developers encounter ECP is
+deep linking. Deep linking lets other parts of the system launch a
+particular piece of content via parameters passed to the app at
+launch time. See this section on [Deep Linking](/docs/developer-program/discovery/implementing-deep-linking.md) for implementation details.
+
+The standard for deep linking uses parameters:
+
+| Parameter | Description                                                       | Possible Values                                                                                 |
+| --------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| contentID | Partner defined unique identifier for a specific piece of content | Any value \< 255 characters long and not using "&" or other characters that are not URL encoded |
+| mediaType | Parameter to give context to the type of contentID passed         | "series", "season", "episode", movie", "shortFormVideo", and "tvSpecial"                        |
+
+You trigger deep linking by doing an HTTP post to port 8060 on your Roku
+device. The general form is

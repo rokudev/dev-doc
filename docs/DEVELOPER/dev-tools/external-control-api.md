@@ -734,7 +734,87 @@ You can find the app ID of a production app by using one of the two deep link te
 <https://my.roku.com/account/add?channel=KX3UPK>
 ```
 
+## Keypress key values
 
+When the current screen on the Roku box includes an on-screen keyboard,
+any keyboard character can be sent via the keyup, keydown, and keypress
+commands. The key parameter can either be a key name, such as the name
+of a button on a remote control, or a printable character value
+specified with the prefix "Lit_".
 
+Printable ASCII character code values can be transmitted "as-is" with
+the "Lit_" prefix. For example, you can send a 'r' with "Lit_r". In
+addition, any UTF-8 encoded character can be sent by URL-encoding it.
+For example, the euro symbol can be sent with "Lit_%E2%82%AC".
 
+There are even some keys you can send that are not available on any
+physical remote. _Enter_ is for completing keyboard entry fields, such
+as search fields (it is _not_ the same as Select). _Search_ is used for pressing and holding down the microphone/magnifying glass button, which causes the Roku Voice heads-up display to listen for a voice command.
 
+The following are the key names that are recognized by ECP:
+
+```
+  Home
+  Rev
+  Fwd
+  Play
+  Select
+  Left
+  Right
+  Down
+  Up
+  Back
+  InstantReplay
+  Info
+  Backspace
+  Search
+  Enter
+```
+
+Roku devices that support the "Find Remote" support:
+
+```
+  FindRemote
+```
+
+*Note that **query/device-info** includes a **supports-find-remote** flag that indicates whether the Roku device supports FindRemote.
+
+However, this does not specifically indicate that the device has a paired remote that supports "Find remote" as well.
+
+Some Roku devices, such as Roku TVs, also support:
+
+```
+  VolumeDown
+  VolumeMute
+  VolumeUp
+  PowerOff
+```
+
+Roku TV devices also support changing the app when watching the TV tuner input:
+
+```
+  ChannelUp
+  ChannelDown
+```
+
+Roku TV devices also support keys to set the current TV input UI:
+
+```
+  InputTuner
+  InputHDMI1
+  InputHDMI2
+  InputHDMI3
+  InputHDMI4
+  InputAV1
+```
+
+Example: On the on-screen keyboard, the string 'roku' can be sent via the following commands:
+
+```
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/keypress/Lit_r"
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/keypress/Lit_o"
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/keypress/Lit_k"
+$ curl -d '' "http://$ROKU_DEV_TARGET:8060/keypress/Lit_u"
+```
+
+##

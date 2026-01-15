@@ -1,8 +1,5 @@
 ---
 title: Automated App Testing Overview
-excerpt: >-
-  Overview of automated app testing for Roku developers, including tools,
-  workflows, and libraries.
 deprecated: false
 hidden: true
 link:

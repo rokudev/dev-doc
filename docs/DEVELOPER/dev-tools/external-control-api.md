@@ -161,4 +161,55 @@ indicates: acceleration in each dimension relative to free fall
 units: meters/sec^2
 names: acceleration.x, acceleration.y, acceleration.z
 
-###
+### Orientation
+
+indicates: angular displacement from flat/level and true (or magnetic?)
+north.
+units: radians
+names: orientation.x, orientation.y, orientation.z
+notes: Accurate indication of this is not generally possible without
+correlation with other sensors or assumptions. Devices make assumptions
+to flip the display, for example, that assume that the device is usually
+not moving (much) so that all force is simply opposed to gravity, and
+that can be assumed to be the "up" direction. Deviation from magnetic
+north depends on a magnetometer, and deviation from true north also
+depends on geolocation.
+
+### Gyroscope
+
+indicates: angular rotation rate about each axis using the right hand
+rule for sign
+units: radians/sec
+names: rotation.x, rotation.y, rotation.z
+
+### Magnetometer
+
+indicates: magnetic field strength
+units: micro-Tesla
+names: magnetic.x, magnetic.y, magnetic.z
+
+### Touch and multi-touch
+
+Touch and multi-touch commands take the same form. The resource is the
+same "input" as all other generic input commands.
+
+Each action is decomposed to an argument in each dimension (of 2, x and
+y with the same orientation as for the sensor inputs, with origin in
+lower left). There is an additional "op" argument which can specify
+down, up, press (down and up), move, or cancel. Each input is also
+qualified with a pointer id that indicates the initial order of down
+touches in a multi-touch gesture.
+
+Several such points can be specified in a single POST, especially a
+move, but a full triad of x, y, and op arguments should be sent, and
+expected for each point, within a POST that contains any of them.
+
+### Additional input values
+
+Other information you might want to pass using the **input** command may
+include:
+
+* sensor accuracy
+* geolocation (from GPS)
+* device-provided derivations of above sensor readings, for example
+  "shake" from accelerometer, or "pinch" from multi-touch

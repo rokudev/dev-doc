@@ -267,6 +267,62 @@ commands to the Roku device.
         Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled”
       </td>
     </tr>
+
+    <tr>
+      <td>
+        query/sgnodes/roots?count_only=true&sizes=true
+      </td>
+
+      <td>
+        Prints every existing node without a parent that has been created by the currently running app. The existence of these un-parented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.
+      </td>
+
+      <td>
+        Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        query/sgnodes/nodes?node-id=_nodeId_&count_only=true&sizes=true
+      </td>
+
+      <td>
+        Prints nodes with an id field set to node_ID, except it, bypasses all the hierarchy and rules and just runs straight down the whole list in the order of node creation. It will list multiple nodes if there are several that match.
+      </td>
+
+      <td>
+        Developer mode enabled<br /><br />**Control by mobile apps** setting “Enabled”
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        sgrendezvous
+      </td>
+
+      <td>
+        Lists the node rendezvous events for a sideloaded app or production/beta app linked to the Roku developer's account.<br /><br />Use the following commands to enable the logging of rendezvous events, log the events, and disable logging. To use these commands, the device must have developer mode enabled. <br /><br />
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
   </tbody>
 </Table>
 

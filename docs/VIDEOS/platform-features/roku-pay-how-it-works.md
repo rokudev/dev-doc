@@ -27,5 +27,3 @@ This video highlights the streamlined purchasing experience provided by Roku Pay
 
 [Implementing Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md)
 
-
-

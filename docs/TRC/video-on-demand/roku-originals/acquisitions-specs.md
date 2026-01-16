@@ -172,27 +172,95 @@ Mixing Specifications:
 
 The formatting requested below is a subset of the [Roku Channel Ingest Specifications](/trc-docs/video-on-demand/ingest-specifications.md).
 
-| **Video Codec**        | **ProRes**                                                   |
-| ---------------------- | ------------------------------------------------------------ |
-| Container              | MOV                                                          |
-| Profile                | 4444XQ Preferred (If available)<br />ProRes 422 HQ           |
-| Minimum Bitrate        | 175-400 mbit/s (based on Profile)                            |
-| Landscape aspect ratio | 16:9 (1.77:1) - (no black bars)<br />W3840 x H2160 (UHD)     |
-| Pixel aspect ratio     | Square pixels (1:1)                                          |
-| Scan type              | Progressive scan type                                        |
-| Chroma Subsampling     | 4:4:4                                                        |
-| Color Space            | BT.709 Legal Video Range (16 to 940)                         |
-| Bit depth              | 10-bit or 12-bit                                             |
-| Constant Frame Rate    | 23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p             |
-| Native frame rate      | No 3:2 pulldown flags                                        |
-| Text Track/Captions    | Omit empty embedded text tracks<br />Captions should be delivered as sidecar assets |
 
-| **Audio Codec**                    | **PCM**                                                      |
-| ---------------------------------- | ------------------------------------------------------------ |
-| Format                             | 2 Interleaved Tracks or 8 Mono Tracks                        |
-| Track Layout                       | <u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br />**7.1 audio is not permitted on any masters at this time** |
-| Sample Rate/Bit Depth              | 48000Hz/24-bit                                               |
-| Channel Mapping & Metadata Tagging | See 2.4.2 - Verify correct audio channel mapping and metadata tagging. |
+<table>
+<thead>
+<tr>
+<th><strong>Video Codec</strong></th>
+<th><strong>ProRes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container</td>
+<td>MOV</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>4444XQ Preferred (If available)<br />ProRes 422 HQ</td>
+</tr>
+<tr>
+<td>Minimum Bitrate</td>
+<td>175-400 mbit/s (based on Profile)</td>
+</tr>
+<tr>
+<td>Landscape aspect ratio</td>
+<td>16:9 (1.77:1) - (no black bars)<br />W3840 x H2160 (UHD)</td>
+</tr>
+<tr>
+<td>Pixel aspect ratio</td>
+<td>Square pixels (1:1)</td>
+</tr>
+<tr>
+<td>Scan type</td>
+<td>Progressive scan type</td>
+</tr>
+<tr>
+<td>Chroma Subsampling</td>
+<td>4:4:4</td>
+</tr>
+<tr>
+<td>Color Space</td>
+<td>BT.709 Legal Video Range (16 to 940)</td>
+</tr>
+<tr>
+<td>Bit depth</td>
+<td>10-bit or 12-bit</td>
+</tr>
+<tr>
+<td>Constant Frame Rate</td>
+<td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
+</tr>
+<tr>
+<td>Native frame rate</td>
+<td>No 3:2 pulldown flags</td>
+</tr>
+<tr>
+<td>Text Track/Captions</td>
+<td>Omit empty embedded text tracks<br />Captions should be delivered as sidecar assets</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table>
+<thead>
+<tr>
+<th><strong>Audio Codec</strong></th>
+<th><strong>PCM</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Format</td>
+<td>2 Interleaved Tracks or 8 Mono Tracks</td>
+</tr>
+<tr>
+<td>Track Layout</td>
+<td><u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
+</tr>
+<tr>
+<td>Sample Rate/Bit Depth</td>
+<td>48000Hz/24-bit</td>
+</tr>
+<tr>
+<td>Channel Mapping &amp; Metadata Tagging</td>
+<td>See 2.4.2 - Verify correct audio channel mapping and metadata tagging.</td>
+</tr>
+</tbody>
+</table>
+
 
 #### 2.4.4 Textless delivery
 
@@ -210,19 +278,62 @@ Proxy files are a Roku Original-specific deliverable. They are utilized by multi
 
 From each Texted Master created, please export following proxy files:
 
-| Video Codec         | H.264                                                        |
-| ------------------- | ------------------------------------------------------------ |
-| Container           | MOV or MP4                                                   |
-| Picture             | (1) Clean & (1) w/Vis.TC UR (1) Series Opener Only           |
-| Bitrate             | 5mbit/s (total file size < 1gb to 2gb)                       |
-| Dimensions          | W1920 x H1080 (HD)                                           |
-| Scan Type           | Progressive scan type                                        |
-| Color Space         | BT.709 Legal Video Range                                     |
-| Bit Depth           | 10-bit or 12-bit                                             |
-| Constant Frame Rate | Should Match Master                                          |
-| Native Frame Rate   | Should Match Master                                          |
-| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                          |
-| Filename            | ShowCode\_ProdNumber\_AirOrder\_Language\_Proxy\_HD\_<br />FN(if applicable)\_Audio\_Timecode(Clean or VisTC)\_RevisionDate-v#\_(Final or Pre-QC).mov<br /><br />THAM\_101\_AIR\_1\_PROXY\_enUS\_HD\_FN\_2CH\_CLEAN\_20200916\_V4\_FINAL.mov |
+
+<table>
+<thead>
+<tr>
+<th>Video Codec</th>
+<th>H.264</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container</td>
+<td>MOV or MP4</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>(1) Clean &amp; (1) w/Vis.TC UR (1) Series Opener Only</td>
+</tr>
+<tr>
+<td>Bitrate</td>
+<td>5mbit/s (total file size &lt; 1gb to 2gb)</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>W1920 x H1080 (HD)</td>
+</tr>
+<tr>
+<td>Scan Type</td>
+<td>Progressive scan type</td>
+</tr>
+<tr>
+<td>Color Space</td>
+<td>BT.709 Legal Video Range</td>
+</tr>
+<tr>
+<td>Bit Depth</td>
+<td>10-bit or 12-bit</td>
+</tr>
+<tr>
+<td>Constant Frame Rate</td>
+<td>Should Match Master</td>
+</tr>
+<tr>
+<td>Native Frame Rate</td>
+<td>Should Match Master</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Ch.1 Stereo Left, Ch.2 Stereo Right</td>
+</tr>
+<tr>
+<td>Filename</td>
+<td>ShowCode_ProdNumber_AirOrder_Language_Proxy_HD_<br />FN(if applicable)_Audio_Timecode(Clean or VisTC)_RevisionDate-v#_(Final or Pre-QC).mov<br /><br />THAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov</td>
+</tr>
+</tbody>
+</table>
+
 
 ### 2.5 Audio delivery
 

@@ -180,11 +180,42 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
 
 **Rating Tiers**
 
-|           |                           VIOLENCE                           |                          SEX/NUDITY                          |                     SUBSTANCE USE/ABUSE                      |                           LANGUAGE                           |
-| :-------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **TV-PG** |   **✔** Shootings, brawls, fist fights<br />**✖** No blood   | **✔**  Limited to kissing, couples in bed, implied sexual situations<br />**✖** No nudity at all<br />**✖** No sexual violence | **✔**  Implied drug use (not glorified or must show consequences) | **✔**  Limited use of bleeping/dropping strong language. Ass, damn, hell, and bitch |
-| **TV-14** | **✔**  Brief violence, OK with some blood shown<br />**✕** No gore | **✔**  Covered sex is allowed, brief thrusting, implied sexual abuse OK<br />**✔** Exposed butt/side breast OK<br />**✖** No full nudity | **✔**  Visuals/use of drug abuse (not glorified, must show consequences)<br />**✖** No smoking minors | **✔**  Shit, asshole, bastard (when used in a pejorative matter), goddamn, bitch, dick and pussy (as an insult) |
-| **TV-MA** |           **✔**  On-screen graphic violence, gore            | **✔**  Depictions of graphic sexual activity or sexual violence<br />**✔**  Full male or female nudity | **✔**  Graphic visuals of substance use/abuse, injection, etc. (both. minors and adults)<br />**✖** No smoking minors | **✔**  Use of fuck, tits, twat, cum, pussy, and cunt<br />**✖** Racial slurs and hate speech on a case-by-case basis |
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>VIOLENCE</th>
+<th>SEX/NUDITY</th>
+<th>SUBSTANCE USE/ABUSE</th>
+<th>LANGUAGE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TV-PG</strong></td>
+<td><strong>✔</strong> Shootings, brawls, fist fights<br /><strong>✖</strong> No blood</td>
+<td><strong>✔</strong>  Limited to kissing, couples in bed, implied sexual situations<br /><strong>✖</strong> No nudity at all<br /><strong>✖</strong> No sexual violence</td>
+<td><strong>✔</strong>  Implied drug use (not glorified or must show consequences)</td>
+<td><strong>✔</strong>  Limited use of bleeping/dropping strong language. Ass, damn, hell, and bitch</td>
+</tr>
+<tr>
+<td><strong>TV-14</strong></td>
+<td><strong>✔</strong>  Brief violence, OK with some blood shown<br /><strong>✕</strong> No gore</td>
+<td><strong>✔</strong>  Covered sex is allowed, brief thrusting, implied sexual abuse OK<br /><strong>✔</strong> Exposed butt/side breast OK<br /><strong>✖</strong> No full nudity</td>
+<td><strong>✔</strong>  Visuals/use of drug abuse (not glorified, must show consequences)<br /><strong>✖</strong> No smoking minors</td>
+<td><strong>✔</strong>  Shit, asshole, bastard (when used in a pejorative matter), goddamn, bitch, dick and pussy (as an insult)</td>
+</tr>
+<tr>
+<td><strong>TV-MA</strong></td>
+<td><strong>✔</strong>  On-screen graphic violence, gore</td>
+<td><strong>✔</strong>  Depictions of graphic sexual activity or sexual violence<br /><strong>✔</strong>  Full male or female nudity</td>
+<td><strong>✔</strong>  Graphic visuals of substance use/abuse, injection, etc. (both. minors and adults)<br /><strong>✖</strong> No smoking minors</td>
+<td><strong>✔</strong>  Use of fuck, tits, twat, cum, pussy, and cunt<br /><strong>✖</strong> Racial slurs and hate speech on a case-by-case basis</td>
+</tr>
+</tbody>
+</table>
+
 
 ### 5.3 Rough cut review
 
@@ -574,26 +605,91 @@ Mixing Specifications:
 
 #### 8.4.3 Texted video masters
 
-| Video Codec            | ProRes                                                  |
-| ---------------------- | ------------------------------------------------------- |
-| Container              | MOV                                                     |
-| Profile                | 422 HQ                                                  |
-| Minimum Bitrate        | 175 mbits or higher                                     |
-| Landscape aspect ratio | 16:9 (1.77:1) - (no black bars)<br />W1920 x H1080 (HD) |
-| Pixel aspect ratio     | Square pixels (1:1)                                     |
-| Scan type              | Progressive scan type                                   |
-| Chroma Subsampling     | 4:2:2                                                   |
-| Color Space            | BT.709 Legal Video Range                                |
-| Bit depth              | 10-bit or 12 bit                                        |
-| Constant Frame Rate    | 23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p        |
-| Native frame rate      | No 3:2 pulldown flags                                   |
 
-| Audio Codec                        | PCM                                                          |
-| ---------------------------------- | ------------------------------------------------------------ |
-| Format                             | 2 Interleaved Tracks or 8 Mono Tracks                        |
-| Track Layout                       | Interleaved: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br />Mono:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br />**7.1 audio is not permitted on any masters at this time** |
-| Sample Rate/ Bit Depth             | 48000Hz/24-bit                                               |
-| Channel Mapping & Metadata Tagging | See 8.4.2 - Verify correct audio channel mapping and metadata tagging. |
+<table>
+<thead>
+<tr>
+<th>Video Codec</th>
+<th>ProRes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container</td>
+<td>MOV</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>422 HQ</td>
+</tr>
+<tr>
+<td>Minimum Bitrate</td>
+<td>175 mbits or higher</td>
+</tr>
+<tr>
+<td>Landscape aspect ratio</td>
+<td>16:9 (1.77:1) - (no black bars)<br />W1920 x H1080 (HD)</td>
+</tr>
+<tr>
+<td>Pixel aspect ratio</td>
+<td>Square pixels (1:1)</td>
+</tr>
+<tr>
+<td>Scan type</td>
+<td>Progressive scan type</td>
+</tr>
+<tr>
+<td>Chroma Subsampling</td>
+<td>4:2:2</td>
+</tr>
+<tr>
+<td>Color Space</td>
+<td>BT.709 Legal Video Range</td>
+</tr>
+<tr>
+<td>Bit depth</td>
+<td>10-bit or 12 bit</td>
+</tr>
+<tr>
+<td>Constant Frame Rate</td>
+<td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
+</tr>
+<tr>
+<td>Native frame rate</td>
+<td>No 3:2 pulldown flags</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table>
+<thead>
+<tr>
+<th>Audio Codec</th>
+<th>PCM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Format</td>
+<td>2 Interleaved Tracks or 8 Mono Tracks</td>
+</tr>
+<tr>
+<td>Track Layout</td>
+<td>Interleaved: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br />Mono:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
+</tr>
+<tr>
+<td>Sample Rate/ Bit Depth</td>
+<td>48000Hz/24-bit</td>
+</tr>
+<tr>
+<td>Channel Mapping &amp; Metadata Tagging</td>
+<td>See 8.4.2 - Verify correct audio channel mapping and metadata tagging.</td>
+</tr>
+</tbody>
+</table>
+
 
 #### 8.4.4 Textless delivery
 
@@ -620,19 +716,62 @@ Examples of what to remove for the Textless Masters:
 
 From each Texted Master created, please export the following proxy files:
 
-| Video Codec         | H.264                                                        |
-| ------------------- | ------------------------------------------------------------ |
-| Container           | MOV or MP4                                                   |
-| Picture             | (1) Clean & (1) w/ Vis.TC UR & (1) w/ Burned English CC*     |
-| Bitrate             | 5mbit/s (total file size < 1gb to 2gb)                       |
-| Dimensions          | W1920 x H1080 (HD)                                           |
-| Scan Type           | Progressive scan type                                        |
-| Color Space         | BT.709 Legal Video Range                                     |
-| Bit Depth           | 10-bit or 12-bit                                             |
-| Constant Frame Rate | Should Match Master                                          |
-| Native Frame Rate   | Should Match Master                                          |
-| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                          |
-| Filename            | ShowCode_ProdNumber_AirOrder_Language_Proxy_HD\_<br />FN(if applicable)\_Audio_Timecode(Clean or VisTC)\_RevisionDate-v#_(Final or Pre-QC).mov<br /><br /> THAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov |
+
+<table>
+<thead>
+<tr>
+<th>Video Codec</th>
+<th>H.264</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Container</td>
+<td>MOV or MP4</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>(1) Clean &amp; (1) w/ Vis.TC UR &amp; (1) w/ Burned English CC*</td>
+</tr>
+<tr>
+<td>Bitrate</td>
+<td>5mbit/s (total file size &lt; 1gb to 2gb)</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>W1920 x H1080 (HD)</td>
+</tr>
+<tr>
+<td>Scan Type</td>
+<td>Progressive scan type</td>
+</tr>
+<tr>
+<td>Color Space</td>
+<td>BT.709 Legal Video Range</td>
+</tr>
+<tr>
+<td>Bit Depth</td>
+<td>10-bit or 12-bit</td>
+</tr>
+<tr>
+<td>Constant Frame Rate</td>
+<td>Should Match Master</td>
+</tr>
+<tr>
+<td>Native Frame Rate</td>
+<td>Should Match Master</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Ch.1 Stereo Left, Ch.2 Stereo Right</td>
+</tr>
+<tr>
+<td>Filename</td>
+<td>ShowCode_ProdNumber_AirOrder_Language_Proxy_HD_<br />FN(if applicable)_Audio_Timecode(Clean or VisTC)_RevisionDate-v#_(Final or Pre-QC).mov<br /><br /> THAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov</td>
+</tr>
+</tbody>
+</table>
+
 
 **Spanish language series will require a third proxy deliverable with burned in English cc. Closed captions must be 100% final. This should be labeled as “PRESS” preceding “PROXY” in the file name. Example:**
 

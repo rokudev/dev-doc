@@ -33,11 +33,42 @@ Include **at least 2 relevant Roku Provided Tags** from the menu below on *every
 
 Examples:
 
-|      Title       | Baseline<br />(2 Roku tags)<br />Preferred |     Rich Tags<br />(2 Roku Tags +)<br />Preferred      |      | Mismatched Tags -<br />Not Preferred |
-| :--------------: | :----------------------------------------: | :----------------------------------------------------: | :--: | :----------------------------------: |
-|    Mean Girls    |         comedy<br />coming of age          | comedy, coming of age, romantic comedy, leading ladies |      |         action, documentary          |
-| Schindler's List |           drama<br />world war 2           |      drama, world war 2, war, history, biography       |      |       comedy, romance, action        |
-|     Hoarders     |        reality tv<br />documentary         |          reality tv, documentary, bingeworthy          |      | romance, ensemble tv shows, cooking  |
+
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Baseline<br />(2 Roku tags)<br />Preferred</th>
+<th>Rich Tags<br />(2 Roku Tags +)<br />Preferred</th>
+<th></th>
+<th>Mismatched Tags -<br />Not Preferred</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean Girls</td>
+<td>comedy<br />coming of age</td>
+<td>comedy, coming of age, romantic comedy, leading ladies</td>
+<td></td>
+<td>action, documentary</td>
+</tr>
+<tr>
+<td>Schindler's List</td>
+<td>drama<br />world war 2</td>
+<td>drama, world war 2, war, history, biography</td>
+<td></td>
+<td>comedy, romance, action</td>
+</tr>
+<tr>
+<td>Hoarders</td>
+<td>reality tv<br />documentary</td>
+<td>reality tv, documentary, bingeworthy</td>
+<td></td>
+<td>romance, ensemble tv shows, cooking</td>
+</tr>
+</tbody>
+</table>
+
 
 Choose from the list of Roku tags:
 

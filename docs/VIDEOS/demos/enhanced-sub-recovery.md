@@ -1,0 +1,28 @@
+---
+title: "Enhanced Subscription Recovery Webinar"
+excerpt: ''
+deprecated: false
+hidden: true
+metadata:
+  title: ''
+  description: ''
+  robots: index
+next:
+  description: ''
+---
+
+# Enhanced Subscription Recovery Webinar
+
+In July 2024, Roku's Partner Engineering reviewed the Enhanced Subscription Recovery feature and explained how to implement, test, and enable it in your apps. 
+
+## Video
+
+<video title="Roku Resource Monitor Memory Management Webinar" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/roku-developers-2024-poster-enh-sub-recovery-webinar.png">
+    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/enhanced-sub-recovery-webinar.mp4">
+</video>
+
+
+## Related documentation
+
+- [Enhanced Subscription Recovery](https://go.roku.com/enhanced-sub-recovery-doc)
+

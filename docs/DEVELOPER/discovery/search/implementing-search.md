@@ -1,8 +1,5 @@
 ---
 title: Implementing Roku Search
-excerpt: >-
-  Guide to implementing Roku Search, including creating and validating search
-  feeds, testing, and submitting for review.
 deprecated: false
 hidden: true
 link:

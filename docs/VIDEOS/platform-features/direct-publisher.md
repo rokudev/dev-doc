@@ -13,7 +13,8 @@ next:
 
 # Roku Direct Publisher
 
-<video src="https://image.roku.com/ZHZscHItMTc2/direct-publisher-overview.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-direct-publisher.jpg" width="720" height="480" controls />
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-voice-demo-v5.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice.jpg" width="720" height="480" controls />
+
 
 ## About this video
 
@@ -21,6 +22,6 @@ This video highlights how Direct Publisher provides an easy-to-follow wizard tha
 
 ## Related documentation
 
-[Direct Publsiher overview](/docs/direct-publisher/overview.m)
+[Direct Publsiher overview](/docs/direct-publisher/overview.md)
 
 [Direct Publisher quick start guide](/docs/direct-publisher/getting-started/getting-started.md)

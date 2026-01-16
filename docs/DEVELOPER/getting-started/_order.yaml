@@ -1,9 +1,9 @@
-- Developing a streaming app
-- First steps
-- Activating developer mode
-- Building your first app
-- Creating a content feed
-- Taking the online video course
-- Running sample apps
-- App localization
-- Architecture essentials
+- index
+- first-steps
+- developer-setup
+- hello-world
+- content-feed
+- taking-video-course
+- samples
+- channel-localization
+- architecture

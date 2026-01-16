@@ -44,7 +44,7 @@ values, 2D vectors, and pointers to other nodes. Fields can have
 animations attached to them that allow the property represented by the
 field to be smoothly interpolated through a set of key values.
 
-## Renderable/non-renderable nodes
+## Renderable\/non-renderable nodes
 
 In Roku SceneGraph, nodes can either be *renderable* or not. Renderable
 nodes are arranged in the tree structure that is traversed during
@@ -71,7 +71,7 @@ can be arbitrarily composed into new node classes that encapsulate more
 complex appearance and behavior, including common user interface widgets
 such as buttons, lists, grids, virtual keyboards, and dialogs.
 
-## Key events/rendering optimization
+## Key events\/rendering optimization
 
 In addition to adding logical structure to graphical user interface
 elements and supporting rendering/animation, the SceneGraph algorithm is

@@ -15,8 +15,6 @@ next:
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-streaming-overview-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/streaming-overview.jpg" width="720" height="480" controls />
 
-
-
 ## About this video
 
 This video summarizes how streaming works on the Roku platform. It explains how content is delivered from a content delivery network (CDN) to a Roku device via a content feed.

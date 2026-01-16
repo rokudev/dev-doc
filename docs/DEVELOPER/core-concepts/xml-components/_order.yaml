@@ -1,5 +1,6 @@
-- XML components overview
-- Defining SceneGraph components
-- SceneGraph compilation
-- Component initialization order
-- Creating custom components
+- index
+- defining-scenegraph-components
+- scenegraph-compilation
+- component-initialization-order
+- creating-custom-components
+

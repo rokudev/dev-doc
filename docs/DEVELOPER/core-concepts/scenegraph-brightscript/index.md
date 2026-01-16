@@ -1,5 +1,5 @@
 ---
-title: "SceneGraph XML"
+title: "SceneGraph BrightScript"
 excerpt: ''
 deprecated: false
 hidden: true

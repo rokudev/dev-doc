@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Platform features"
 excerpt: ''
 deprecated: false
 hidden: true

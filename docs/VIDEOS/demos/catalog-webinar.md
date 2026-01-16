@@ -17,9 +17,7 @@ This webinar, presented on July 28th, 2025, highlighted the new product catalog 
 
 ## Video
 
-<video title="Catalog 2.0 Webinar" poster="https://image.roku.com/ZHZscHItMTc2/catalog-webinar-poster.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/webinar-catalog-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/webinar-catalog-qa.mp4" poster="https://image.roku.com/ZHZscHItMTc2/catalog-webinar-poster.png" width="720" height="480" controls />
 
 
 

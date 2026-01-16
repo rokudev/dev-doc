@@ -17,58 +17,40 @@ Roku held their annual developer summit online on October 13, 2020. Topics cover
 
 ## Introduction
 
-<video title="2020 Roku Developer Summit: Introduction" poster="https://image.roku.com/ZHZscHItMTc2/roku-developers-summit-poster.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-1-intro.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-1-intro.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developers-summit-poster.jpg" width="720" height="480" controls />
 ## Welcome
 
-<video title="2020 Roku Developer Summit: Welcome" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2-welcome.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-2-welcome.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-2-welcome.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2-welcome.png" width="720" height="480" controls />
 
 ## Fall updates: Hardware & OS
 
-<video title="2020 Roku Developer Summit: Fall Updates" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-3-product-update-v1.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-3-product-update-v1.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-3-product-update-v1.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-3-product-update-v1.png" width="720" height="480" controls />
 
 ## Developer updates
 
-<video title="2020 Roku Developer Summit: Developer Updates" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-4-developer-update-v1.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-4-developer-update.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-4-developer-update.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-4-developer-update-v1.png" width="720" height="480" controls />
 
 
 
 ## Certification updates
 
-<video title="2020 Roku Developer Summit: Certification Updates" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-5-certification-update-v1.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-5-certification-update.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-5-certification-update.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-5-certification-update-v1.png" width="720" height="480" controls />
 
 ## Roku Pay updates
 
-<video title="2020 Roku Developer Summit: Roku Pay Updates" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-6-roku-pay-v1.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-6-roku-pay.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-6-roku-pay.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-6-roku-pay-v1.png" width="720" height="480" controls />
 
 ## Demand API
 
-<video title="2020 Roku Developer Summit: Demand API" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-7-demand-api-v1.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-7-demand-api.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-7-demand-api.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-7-demand-api-v1.png" width="720" height="480" controls />
 
 ## Growing an audience
 
-<video title="2020 Roku Developer Summit: Growing an audience" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-8-channel-growth-v1.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-8-channel-growth.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-2020-8-channel-growth.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-8-channel-growth-v1.png" width="720" height="480" controls />
 
 ## Panel discussion with Roku engineers
 
-<video title="2020 Roku Developer Summit: Panel discussion" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-9-panel-discussion.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/8-developer-summit-2020-panel.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/8-developer-summit-2020-panel.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-developer-summit-9-panel-discussion.png" width="720" height="480" controls />
 
 ## Related
 

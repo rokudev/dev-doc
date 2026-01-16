@@ -21,75 +21,51 @@ After the keynote, a series of panel discussions were held over two days that in
 
 ## Keynote
 
-<video title="Roku 2025 Developer Summit: Keynote" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-keynote.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-keynote-v2.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-keynote-v2.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-keynote.png" width="720" height="480" controls />
 
 
 ## Panels
 
 ### Developer Tools
 
-<video title="Roku 2025 Developer Summit: Developer Tools" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-developer-tools.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-panel-dev-tools-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-panel-dev-tools-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-developer-tools.png" width="720" height="480" controls />
 
 ### App Performance
 
-<video title="Roku 2025 Developer Summit:  App Performance" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-app-performance.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-panel-app-performance-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-panel-app-performance-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-app-performance.png" width="720" height="480" controls />
 
 ### Platform Stability
 
-<video title="Roku 2025 Developer Summit: Platform Stability" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-stability.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-panel-platform-stability-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-panel-platform-stability-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-stability.png" width="720" height="480" controls />
 
 ### Beta Program
 
-<video title="Roku 2025 Developer Summit: Beta Program" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-beta-program.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-beta-program-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-beta-program-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-beta-program.png" width="720" height="480" controls />
 
 ### Community Tools
 
-<video title="Roku 2025 Developer Summit: Community Tools" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-community-tools.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-community-tools-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-community-tools-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-community-tools.png" width="720" height="480" controls />
 
 ### Content Discovery
 
-<video title="Roku 2025 Developer Summit: Content Discovery" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-content-discovery.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-content-discovery.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-content-discovery.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-content-discovery.png" width="720" height="480" controls />
 
 ### Audience Growth
 
-<video title="Roku 2025 Developer Summit: Audience Growth" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-audience-growth.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-audience-growth-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-audience-growth-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-audience-growth.png" width="720" height="480" controls />
 
 ###  Roku Pay
 
-<video title="Roku 2025 Developer Summit: Roku Pay" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-roku-pay.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-roku-pay-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-roku-pay-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-roku-pay.png" width="720" height="480" controls />
 
 ### Localization
 
-<video title="Roku 2025 Developer Summit: Localization Beyond Latin- Based Characters" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-localization.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-localization-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-localization-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-localization.png" width="720" height="480" controls />
 
 ###  Media
 
-<video title="Roku 2025 Developer Summit: Media" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-media.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-media-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-media-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-media.png" width="720" height="480" controls />
 
 ###  SceneGraph
 
-<video title="Roku 2025 Developer Summit: SceneGraph" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-scenegraph.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-rsg-qa.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/dev-summit-25-rsg-qa.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/dev-summit-25/posters/dev-summit-25-poster-scenegraph.png" width="720" height="480" controls />

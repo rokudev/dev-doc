@@ -23,9 +23,7 @@ The webinar featured a demo showing how to integrate voice keyboards in an app (
 
 ## Video
 
-<video title="Roku Voice Webinar" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice-webinar-poster.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar-voice-update.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar-voice-update.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice-webinar-poster.png" width="720" height="480" controls />
 
 
 
@@ -35,4 +33,3 @@ The webinar featured a demo showing how to integrate voice keyboards in an app (
 - [Voice keyboard reference](/docs/features/voice/overview.md#voice-keyboards)
 - [Voice profile selection](/docs/features/voice/overview.md#voice-enabled-profile-selection-screens)
 - [Voice controls](/docs/features/voice/overview.md#voice-controls)
-

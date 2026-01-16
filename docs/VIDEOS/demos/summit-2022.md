@@ -19,58 +19,41 @@ After the keynote, a series of panel discussions were held on a number of key pl
 
 ## Keynote
 
-<video title="Roku 2022 Developer Summit: Keynote" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-keynote-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-keynote.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-keynote.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-keynote-poster.png" width="720" height="480" controls />
 
 
 ## Panels
 
 ### Roku Pay panel
 
-<video title="Roku 2022 Developer Summit: Roku Pay panel" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-pay-panel-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-rpay-panel.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-rpay-panel.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-pay-panel-poster.png" width="720" height="480" controls />
 
 
 ### Roku Voice panel
 
-<video title="Roku 2022 Developer Summit: Roku Voice panel" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-voice-panel-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-voice-panel.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-voice-panel.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-voice-panel-poster.png" width="720" height="480" controls />
 
 
 ### SceneGraph panel
 
-<video title="Roku 2022 Developer Summit: Roku SceneGraph panel" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-rsg-panel-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-rsg-panel.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-rsg-panel.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-rsg-panel-poster.png" width="720" height="480" controls />
 
 
 ### Video ads panel
 
-<video title="Roku 2022 Developer Summit: Video ads panel" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-raf-panel-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-raf-panel.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-raf-panel.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-raf-panel-poster.png" width="720" height="480" controls />
 
 
 ### Roku Search panel
 
-<video title="Roku 2022 Developer Summit: Roku Search panel" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-search-panel-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-search-panel.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-search-panel.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-search-panel-poster.png" width="720" height="480" controls />
 
 
 ### Roku developer tools panel
 
-<video title="Roku 2022 Developer Summit: Developer tools panel" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-dev-tools-panel-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-dev-tools-panel.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-dev-tools-panel.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-dev-tools-panel-poster.png" width="720" height="480" controls />
 
 
 ### RokuCommunity tools panel
 
-<video title="Roku 2022 Developer Summit: RokuCommunity tools panel" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-community-panel-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-community-tools-panel.mp4">
-</video>
-
+<video src="https://devtools.web.roku.com/videos/dev-summit-22/dev-summit-22-community-tools-panel.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-22/posters/roku-community-panel-poster.png" width="720" height="480" controls />

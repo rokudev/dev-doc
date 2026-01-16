@@ -13,9 +13,7 @@ next:
 
 # BrightScript Remote Network Debug Protocol
 
-<video title="BrightScript Debug Protocol Demo" poster="https://image.roku.com/ZHZscHItMTc2/bs-debug-protocol.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4" poster="https://image.roku.com/ZHZscHItMTc2/bs-debug-protocol.jpg" width="720" height="480" controls />
 
 ## About this video
 

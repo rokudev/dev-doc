@@ -22,15 +22,11 @@ In September 2021, Roku presented a webinar explaining how to take advantage of 
 
 ## Part 1: Overview and demo
 
-<video title="Distributing a Channel in Germany Webinar - Part 1" poster="https://image.roku.com/ZHZscHItMTc2/roku-germany.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar-germany-part1.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar-germany-part1.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-germany.jpg" width="720" height="480" controls />
 
 ## Part 2: Q&A
 
-<video title="Distributing a Channel in Germany Webinar - Part 2" poster="https://image.roku.com/ZHZscHItMTc2/roku-germany.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar-germany-part2-qa.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar-germany-part2-qa.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-germany.jpg" width="720" height="480" controls />
 
 ## Related documentation
 

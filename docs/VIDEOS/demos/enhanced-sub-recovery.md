@@ -17,12 +17,9 @@ In July 2024, Roku's Partner Engineering reviewed the Enhanced Subscription Reco
 
 ## Video
 
-<video title="Roku Resource Monitor Memory Management Webinar" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/roku-developers-2024-poster-enh-sub-recovery-webinar.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/enhanced-sub-recovery-webinar.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/enhanced-sub-recovery-webinar.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/roku-developers-2024-poster-enh-sub-recovery-webinar.png" width="720" height="480" controls />
 
 
 ## Related documentation
 
 - [Enhanced Subscription Recovery](https://go.roku.com/enhanced-sub-recovery-doc)
-

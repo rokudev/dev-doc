@@ -22,9 +22,7 @@ In July 2022, Roku explained the Roku Advertising Watermark to developers. Topic
 
 ## Video
 
-<video title="Roku Voice Webinar" poster="https://image.roku.com/ZHZscHItMTc2/roku-ad-watermark-poster.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar-ad-watermark.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar-ad-watermark.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-ad-watermark-poster.png" width="720" height="480" controls />
 
 
 
@@ -32,4 +30,3 @@ In July 2022, Roku explained the Roku Advertising Watermark to developers. Topic
 ## Related documentation
 
 - [Roku Advertising Watermark implementation guide](/docs/developer-program/advertising/ad-watermark.md)
-

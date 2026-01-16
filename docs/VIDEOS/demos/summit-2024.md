@@ -17,92 +17,62 @@ Roku held its annual developer summit online on September 24–25, 2024.  The su
 
 ## Keynote
 
-<video title="Roku 2024 Developer Summit: Keynote" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-keynote-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/keynote.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/keynote.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-keynote-poster.png" width="720" height="480" controls />
 
 ## Panels
 
 ### Search and Deep Linking
 
-<video title="Roku 2024 Developer Summit: Search and Deep Linking" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-search-deeplink-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-search-deeplink-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-search-deeplink-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-search-deeplink-poster.png" width="720" height="480" controls />
 
 ### Roku Pay
 
-<video title="Roku 2024 Developer Summit: Roku Pay" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-roku-pay-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-roku-pay-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-roku-pay-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-roku-pay-poster.png" width="720" height="480" controls />
 
 ### Audience Growth
 
-<video title="Roku 2024 Developer Summit: Audience Growth" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-audience-growth-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-audience-growth-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-audience-growth-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-audience-growth-poster.png" width="720" height="480" controls />
 
 ### User Experience
 
-<video title="Roku 2024 Developer Summit: User Experience" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-ux-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-ux-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-ux-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-ux-poster.png" width="720" height="480" controls />
 
 ### Test Automation
 
-<video title="Roku 2024 Developer Summit: Test Automation" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-rta-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rta-ext-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rta-ext-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-rta-poster.png" width="720" height="480" controls />
 
 ### Content Discovery
 
-<video title="Roku 2024 Developer Summit: Content Discovery" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-content-discovery-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-content-discovery-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-content-discovery-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-content-discovery-poster.png" width="720" height="480" controls />
 
 ### Developer Essentials
 
-<video title="Roku 2024 Developer Summit: Developer Essentials" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-rde-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rde-ext-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rde-ext-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-rde-poster.png" width="720" height="480" controls />
 
 ### Developer Tools
 
-<video title="Roku 2024 Developer Summit: Developer Tools" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-developer-tools-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-developer-tools-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-developer-tools-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-developer-tools-poster.png" width="720" height="480" controls />
 
 ### Localization
 
-<video title="Roku 2024 Developer Summit: Localization" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-localization-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-localization-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-localization-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-localization-poster.png" width="720" height="480" controls />
 
 ### Community Tools
 
-<video title="Roku 2024 Developer Summit: Community Tools" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-community-tools-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-community-tools-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-community-tools-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-community-tools-poster.png" width="720" height="480" controls />
 
 ### Ads
 
-<video title="Roku 2024 Developer Summit: Ads" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-ads-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-ads-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-ads-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-ads-poster.png" width="720" height="480" controls />
 
 ### Developing an SDK for Roku Pay
 
-<video title="Roku 2024 Developer Summit: Developing an SDK for Roku Pay" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-dev-sdk-rpay-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rpay-sdk-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rpay-sdk-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-dev-sdk-rpay-poster.png" width="720" height="480" controls />
 
 ### Voice AI Gaming
 
-<video title="Roku 2024 Developer Summit: Voice AI Gaming" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-voice-ai-gaming-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-voice-ai-gaming-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-voice-ai-gaming-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-voice-ai-gaming-poster.png" width="720" height="480" controls />
 
 ### Roku SceneGraph
 
-<video title="Roku 2024 Developer Summit: SceneGraph" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-rsg-poster.png">
-    <source src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rsg-qa.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/dev-summit-24/dev-summit-24-rsg-qa.mp4" poster="https://devtools.web.roku.com/videos/dev-summit-24/poster/dev-summit-24-rsg-poster.png" width="720" height="480" controls />

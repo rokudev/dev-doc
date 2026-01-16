@@ -23,128 +23,86 @@ After the keynote, a series of 10 workshops and panel discussions were held on a
 
 ### Introduction
 
-<video title="Roku 2021 Developer Summit: Keynote - Introduction" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-intro.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/1-welcome.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/1-welcome.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-intro.png" width="720" height="480" controls />
 
 ### Welcome
 
-<video title="Roku 2021 Developer Summit: Keynote - Welcome Address" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-welcome.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/2-keynote-address.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/2-keynote-address.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-welcome.png" width="720" height="480" controls />
 
 ### Germany app distribution
 
-<video title="Roku 2021 Developer Summit: Keynote - Germany channel distribution" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-germany.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/3-gemany-channel-distribution.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/3-gemany-channel-distribution.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-germany.png" width="720" height="480" controls />
 
 ### Roku voice
 
-<video title="Roku 2021 Developer Summit: Keynote - Roku Voice" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-voice.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/4-roku-voice.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/4-roku-voice.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-voice.png" width="720" height="480" controls />
 
 ### Instant Resume
 
-<video title="Roku 2021 Developer Summit: Keynote - Instant Resume" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-instant-resume.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/5-instant-resume.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/5-instant-resume.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-instant-resume.png" width="720" height="480" controls />
 
 ### Roku Search feed spec 2.0
 
-<video title="Roku 2021 Developer Summit: Keynote - Search feed 2.0" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-search.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/6-roku-search-2.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/6-roku-search-2.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-search.png" width="720" height="480" controls />
 
 ### Developer Dashboard 2.0
 
-<video title="Roku 2021 Developer Summit: Keynote - Developer Dashboard 2.0" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-dashboard.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/7-developer-dashboard-2.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/7-developer-dashboard-2.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-dashboard.png" width="720" height="480" controls />
 
 ### Developer tools
 
-<video title="Roku 2021 Developer Summit: Keynote - Developer tools" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-dev-tools.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/8-developer-tools.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/8-developer-tools.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-dev-tools.png" width="720" height="480" controls />
 
 ### Certification update
 
-<video title="Roku 2021 Developer Summit: Keynote - Certification updates" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-cert-update.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/9-certification-updates.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/9-certification-updates.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-cert-update.png" width="720" height="480" controls />
 
 ### Platform updates
 
-<video title="Roku 2021 Developer Summit: Keynote - Platform updates" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-platform-update.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/10-platform-updates.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/10-platform-updates.mp4" poster="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-platform-update.png" width="720" height="480" controls />
 
 ### Platform updates Q&A
 
-<video title="Roku 2021 Developer Summit: Platform updates Q&A" poster="https://image.roku.com/ZHZscHItMTc2/platform-update-qa.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-platform-qa.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-platform-qa.mp4" poster="https://image.roku.com/ZHZscHItMTc2/platform-update-qa.jpg" width="720" height="480" controls />
 
 ## Workshops and panels
 
 ### Roku Pay panel
 
-<video title="Roku 2021 Developer Summit: Roku Pay panel" poster="https://image.roku.com/ZHZscHItMTc2/roku-pay-panel.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-roku-pay-panel.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-roku-pay-panel.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-pay-panel.jpg" width="720" height="480" controls />
 
 ### Voice keyboard workshop
 
-<video title="Roku 2021 Developer Summit: Voice keyboard workshop" poster="https://image.roku.com/ZHZscHItMTc2/voice-keyboard-workshop.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-voice-keyboards.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-voice-keyboards.mp4" poster="https://image.roku.com/ZHZscHItMTc2/voice-keyboard-workshop.jpg" width="720" height="480" controls />
 
 ### Germany app distribution workshop
 
-<video title="Roku 2021 Developer Summit: Germany channel distribution workshop" poster="https://image.roku.com/ZHZscHItMTc2/germany-channel-distro.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-germany.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-germany.mp4" poster="https://image.roku.com/ZHZscHItMTc2/germany-channel-distro.jpg" width="720" height="480" controls />
 
 ### Self-serve certification workshop
 
-<video title="Roku 2021 Developer Summit: Self-serve certification workshop" poster="https://image.roku.com/ZHZscHItMTc2/self-serve-cert.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-self-serve-cert.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-self-serve-cert.mp4" poster="https://image.roku.com/ZHZscHItMTc2/self-serve-cert.jpg" width="720" height="480" controls />
 
 ### Roku SceneGraph panel
 
-<video title="Roku 2021 Developer Summit: Roku SceneGraph panel" poster="https://image.roku.com/ZHZscHItMTc2/rsg-panel.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-rsg-panel.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-rsg-panel.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-panel.jpg" width="720" height="480" controls />
 
 ### RAF panel
 
-<video title="Roku 2021 Developer Summit: Roku Advertising Framework (RAF) panel" poster="https://image.roku.com/ZHZscHItMTc2/raf-panel.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-raf-panel.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-raf-panel.mp4" poster="https://image.roku.com/ZHZscHItMTc2/raf-panel.jpg" width="720" height="480" controls />
 
 ### Roku Voice panel
 
-<video title="Roku 2021 Developer Summit: Roku Voice panel" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice-panel.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-voice-panel.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-voice-panel.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice-panel.jpg" width="720" height="480" controls />
 
 ### Standard dialog framework workshop
 
-<video title="Roku 2021 Developer Summit: Standard dialog framework workshop" poster="https://image.roku.com/ZHZscHItMTc2/std-dialog-framework-workshop.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-std-dlg-framework-workshop.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-std-dlg-framework-workshop.mp4" poster="https://image.roku.com/ZHZscHItMTc2/std-dialog-framework-workshop.jpg" width="720" height="480" controls />
 
 ### Automatic Account Link panel
 
-<video title="Roku 2021 Developer Summit: Automatic Account Link (AAL) panel" poster="https://image.roku.com/ZHZscHItMTc2/all-panel.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-aal-panel.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-aal-panel.mp4" poster="https://image.roku.com/ZHZscHItMTc2/all-panel.jpg" width="720" height="480" controls />
 
 ### Instant Resume workshop
 
-<video title="Roku 2021 Developer Summit: Instant Resume workshop" poster="https://image.roku.com/ZHZscHItMTc2/instant-resume-workshop.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-instant-resume-workshop.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/dev-summit-21-instant-resume-workshop.mp4" poster="https://image.roku.com/ZHZscHItMTc2/instant-resume-workshop.jpg" width="720" height="480" controls />

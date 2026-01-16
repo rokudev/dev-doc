@@ -23,13 +23,10 @@ The webinar featured a demo showing how to generate, test, and implement trickpl
 
 ## Video
 
-<video title="Trickplay Thumbnail Webinar" poster="https://image.roku.com/ZHZscHItMTc2/trickplay-webinar-thumbnail.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar-trickplay.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar-trickplay.mp4" poster="https://image.roku.com/ZHZscHItMTc2/trickplay-webinar-thumbnail.png" width="720" height="480" controls />
 
 
 ## Related documentation
 
 - [Trickplay mode overview](https://developer.roku.com/docs/developer-program/media-playback/trick-mode/trick-mode.md)
 - [Video node: trickplay fields](https://developer.roku.com/docs/references/scenegraph/media-playback-nodes/video.md)
-

@@ -17,9 +17,7 @@ In June 2024, Roku's Developer Platform team explained how developers can build 
 
 ## Video
 
-<video title="Roku Resource Monitor Memory Management Webinar" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/roku-developers-2024-poster-rrm-mm-webinar-poster.png">
-    <source src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/webinar-rrm-best-practices.mp4">
-</video>
+<video src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/webinar-rrm-best-practices.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/roku-developers-2024-poster-rrm-mm-webinar-poster.png" width="720" height="480" controls />
 
 ## Related documentation
 
@@ -28,4 +26,3 @@ In June 2024, Roku's Developer Platform team explained how developers can build 
 - [BrightScript Profiler User's Guide](/docs/developer-program/dev-tools/brightscript-profiler.md)
 - [BrightScript Profiler File Specification](/docs/developer-program/dev-tools/brs-profiler-file-format.md)
 - [External Control Protocol (ECP) Guide](/docs/developer-program/dev-tools/external-control-api.md)
-

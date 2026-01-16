@@ -17,9 +17,7 @@ In May 2024, Roku's Developer Platform team explained how developers can use the
 
 ## Video
 
-<video title="Roku Resource Monitor 3.0 Webinar" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/roku-developers-2024-poster-rrm-3-webinar.png">
-    <source src="https://image.roku.com/ZHZscHItMTc2/RRM-3-webinar-qa-compressed.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/RRM-3-webinar-qa-compressed.mp4" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/roku-developers-2024-poster-rrm-3-webinar.png" width="720" height="480" controls />
 ## Related documentation
 
 - [Roku Resource Monitor User's Guide](/docs/developer-program/dev-tools/resource-monitor.md)

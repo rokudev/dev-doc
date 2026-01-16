@@ -13,9 +13,7 @@ next:
 
 # Managing user access
 
-<video title="User management" poster="https://image.roku.com/ZHZscHItMTc2/user-management.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/managing-user-access.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/managing-user-access.mp4" poster="https://image.roku.com/ZHZscHItMTc2/user-management.jpg" width="720" height="480" controls />
 
 ## About this video
 

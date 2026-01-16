@@ -24,9 +24,7 @@ The webinar featured a demo showing how to use the tool to monitor the memory, C
 
 ## Video
 
-<video title="Roku Resource Monitor Webinar" poster="https://image.roku.com/ZHZscHItMTc2/rrm-webinar-poster.png">
-    <source src="https://devtools.web.roku.com/videos/webinar-rrm.mp4">
-</video>
+<video src="https://devtools.web.roku.com/videos/webinar-rrm.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rrm-webinar-poster.png" width="720" height="480" controls />
 
 
 

@@ -19,41 +19,29 @@ In November 2020, Roku presented a two-part webinar series on using the BrightSc
 
 ### Video 1: Introduction
 
-<video title="BrightScript Debug Protocol Demo" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part1.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar1-brightscript-live-part-1-intro.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar1-brightscript-live-part-1-intro.mp4" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part1.jpg" width="720" height="480" controls />
 
 ### Video 2: Demo
 
-<video title="BrightScript Debug Protocol Demo" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part1.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar1-brightscript-live-part-2-demo.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar1-brightscript-live-part-2-demo.mp4" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part1.jpg" width="720" height="480" controls />
 
 ### Video 3: Q&A
 
-<video title="BrightScript Debug Protocol Demo" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part1.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar1-brightscript-live-part-3-qa.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar1-brightscript-live-part-3-qa.mp4" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part1.jpg" width="720" height="480" controls />
 
 ## Webinar Part 2 - Analyzing data
 
 ### Video 1: Introduction
 
-<video title="BrightScript Debug Protocol Demo" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part2.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar2-brightscript-live-part1-intro.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar2-brightscript-live-part1-intro.mp4" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part2.jpg" width="720" height="480" controls />
 
 ### Video 2: Demo
 
-<video title="BrightScript Debug Protocol Demo" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part2.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar2-brightscript-live-part2-demo.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar2-brightscript-live-part2-demo.mp4" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part2.jpg" width="720" height="480" controls />
 
 ### Video 3: Q&A
 
-<video title="BrightScript Debug Protocol Demo" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part2.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/webinar2-brightscript-live-part3-qa.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/webinar2-brightscript-live-part3-qa.mp4" poster="https://image.roku.com/ZHZscHItMTc2/bsprofiler-webinar-part2.jpg" width="720" height="480" controls />
 
 ## Related documentation
 

@@ -1,5 +1,5 @@
 ---
-title: "Streaming Specs"
+title: Streaming Specs
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,5 +10,4 @@ metadata:
 next:
   description: ''
 ---
-
 # Streaming Specs

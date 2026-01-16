@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Roku development"
+title: "Getting started"
 excerpt: ''
 deprecated: false
 hidden: true
@@ -13,7 +13,7 @@ next:
 
 # Introduction to Roku development
 
-With the the #1 selling smart TV streaming OS in the US, Canada, and Mexico [^1] and 35.4 billion hours watched last quarter, Roku is at the forefront of the streaming revolution. The Roku OS is built specifically for streaming, which means developers can seamlessly build intuitive, high-performance streaming apps designed especially for the TV. If you have a video catalog ready for distribution, this document will help you get started building a Roku app.
+With the #1 selling smart TV streaming OS in the US, Canada, and Mexico [^1] and 35.4 billion hours watched last quarter, Roku is at the forefront of the streaming revolution. The Roku OS is built specifically for streaming, which means developers can seamlessly build intuitive, high-performance streaming apps designed especially for the TV. If you have a video catalog ready for distribution, this document will help you get started building a Roku app.
 
 ![roku600px - roku-dev-hero roku](https://image.roku.com/ZHZscHItMTc2/idk-hero.jpg)           
 

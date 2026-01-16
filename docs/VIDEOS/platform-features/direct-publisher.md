@@ -13,9 +13,7 @@ next:
 
 # Roku Direct Publisher
 
-<video title="Roku SceneGraph Developers: Introduction to the course" poster="https://image.roku.com/ZHZscHItMTc2/roku-direct-publisher.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/direct-publisher-overview.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/direct-publisher-overview.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-direct-publisher.jpg" width="720" height="480" controls />
 
 ## About this video
 

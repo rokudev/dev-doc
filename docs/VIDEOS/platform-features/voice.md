@@ -13,9 +13,7 @@ next:
 
 # Roku Voice
 
-<video title="Roku SceneGraph Developers: Introduction to the course" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice.jpg">
-    <source src="https://image.roku.com/ZHZscHItMTc2/roku-voice-demo-v5.mp4">
-</video>
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-voice-demo-v5.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice.jpg" width="720" height="480" controls />
 
 ## About this video
 

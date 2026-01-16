@@ -1,0 +1,41 @@
+{
+   "Overview":"/trc-docs/overview.md",
+   "Video on demand":{
+      "Ad supported":{
+         "Getting started":"/trc-docs/video-on-demand/ad-supported/getting-started.md"
+      },
+      "Premium subscriptions":{
+         "Assets and branding":"/trc-docs/video-on-demand/premium-subscriptions/assets-and-branding.md"
+      },
+      "Roku Originals":{
+         "Production guidelines – brand":"/trc-docs/video-on-demand/roku-originals/branded-prod-guidelines.md",
+         "Production guidelines – alt":"/trc-docs/video-on-demand/roku-originals/alternative-prod-guidelines.md",
+         "Production guidelines – scr":"/trc-docs/video-on-demand/roku-originals/scripted-prod-guidelines.md",
+         "Legal guidelines – alt":"/trc-docs/video-on-demand/roku-originals/alt-prod-legal-guidelines.md",
+         "Legal guidelines – scr":"/trc-docs/video-on-demand/roku-originals/scr-prod-legal-guidelines.md",
+         "Post branded specs":"/trc-docs/video-on-demand/roku-originals/post-branded-specs.md",
+         "Post alternative specs":"/trc-docs/video-on-demand/roku-originals/post-alternative-specs.md",
+         "Post scripted specs":"/trc-docs/video-on-demand/roku-originals/post-scripted-specs.md",
+         "Post spanish specs":"/trc-docs/video-on-demand/roku-originals/post-spanish-specs.md",
+         "Post features specs":"/trc-docs/video-on-demand/roku-originals/features-specs.md",
+         "Post acquisitions specs":"/trc-docs/video-on-demand/roku-originals/acquisitions-specs.md",
+         "Post live event specs":"/trc-docs/video-on-demand/roku-originals/post-live-event-specs.md"
+      },
+      "Content delivery":{
+         "Ingest specifications":"/trc-docs/video-on-demand/delivery/ingest-specifications.md",
+         "Especificaciones para la ingesta":"/trc-docs/video-on-demand/delivery/ingest-specifications-spanish.md"
+      },
+      "Availability":{
+         "Avails and CTL specifications":"/trc-docs/video-on-demand/avail/title-avail-specifications.md"
+      },
+      "Best practices":{
+         "Content tags and metadata":"/trc-docs/video-on-demand/recs/content-tags-and-metadata.md"
+      }
+   },
+   "Linear":{
+      "Getting started":"/trc-docs/live-linear/getting-started.md",
+      "Linear channel ingest specs": "/trc-docs/live-linear/ovp-linear-ingest-spec.md",
+      "EPG for linear channel": "/trc-docs/live-linear/epg-on-trc.md"
+   },
+   "FAQs":"/trc-docs/faqs.md"
+}

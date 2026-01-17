@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifInput
 
 
 ## Implemented by

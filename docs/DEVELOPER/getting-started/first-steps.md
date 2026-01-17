@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# First steps
 
 To get started building a Roku app, do the following:
 

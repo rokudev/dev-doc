@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roByteArray
 
 The byte array component is used to contain and manipulate an arbitrary array of bytes. 
 

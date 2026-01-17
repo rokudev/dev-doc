@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Enhanced Subscription Recovery Webinar
 
 In July 2024, Roku's Partner Engineering reviewed the Enhanced Subscription Recovery feature and explained how to implement, test, and enable it in your apps. 
 

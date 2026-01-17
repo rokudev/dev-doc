@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# How Roku Pay works
 
 Roku Pay is Roku's proprietary payment platform. It provides a robust payment experience featuring a low-friction signup flow and an end-to-end payment process. By integrating Roku Pay in an app, publishers can provide simple, streamlined workflows that enable customers to purchase and access content with minimal interaction. Once customers add a method of payment to their Roku customer account, they can subscribe to apps, rent movies, and purchase sporting events and pay-per-views all directly on-device with just a few key presses from their Roku remote control.
 

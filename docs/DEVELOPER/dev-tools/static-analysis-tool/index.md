@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Static Analysis Tool
 
 > Apps must pass Static Analysis with no **Errors** before they can be published to the Streaming Store.
 

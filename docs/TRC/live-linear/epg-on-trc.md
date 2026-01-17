@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# EPG on The Roku Channel
 
 ## Summary
 

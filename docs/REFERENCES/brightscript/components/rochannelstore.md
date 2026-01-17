@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roChannelStore
 
 The roChannelStore component allows the application to perform a purchase of an In-App Product or upgrade an app. Most of the purchase flow, screens and messaging associated with the financial transaction are handled by the Roku OS outside of control or monitoring by BrightScript code. The BrightScript code merely initiates the purchase and receives a final result. This will engender trust with users and give them confidence that they are dealing with the Streaming Store.
 

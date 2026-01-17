@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roUtils
 
 *Available since Roku OS 15.0*
 

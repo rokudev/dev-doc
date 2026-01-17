@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Handling application events
 
 ## Render thread queue
 

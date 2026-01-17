@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifArrayJoin
 
 
 ## Implemented by

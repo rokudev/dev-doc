@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roStreamSocket
 
 
 The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them. The interface is modeled on and works much like standard Berkeley sockets.

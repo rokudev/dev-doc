@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Voice
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-voice-demo-v5.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-voice.jpg" width="720" height="480" controls />
 

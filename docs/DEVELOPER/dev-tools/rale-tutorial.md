@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# RALE
 
 The Roku Advanced Layout Editor (RALE) is a tool that provides a hierarchical view of the node tree
 in a RokuSceneGraph app. It also lets developers or designers dynamically lay out the visual aspects

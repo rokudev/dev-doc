@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SceneGraph core concepts
 
 The SceneGraph framework is used for developing apps. This framework incorporates two key concepts:
 

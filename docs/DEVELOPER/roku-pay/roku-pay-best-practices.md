@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Pay best practices
 
 ## Do
 

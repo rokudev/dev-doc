@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Transitioning to SceneGraph
 
 The following summarizes how to transition from the older Roku API to
 SceneGraph applications. In general, SceneGraph handles events without

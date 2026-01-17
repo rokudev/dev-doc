@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# ifHttpAgent
 
 The ifHttpAgent methods modify the way that URLs are accessed
 

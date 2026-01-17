@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roChannelStoreEvent
 
 The roChannelStore sends an roChannelStoreEvent in response to a call to any of several Get* methods in [ifChannelStore](/docs/references/brightscript/interfaces/ifchannelstore.md "ifChannelStore"). The following predicates indicate its valid event types:
 

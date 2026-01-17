@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Distributing apps in Europe
 
 <video src="https://image.roku.com/ZHZscHItMTc2/distro-channels-eu.mp4" poster="https://image.roku.com/ZHZscHItMTc2/distro-channels-eu.png" width="720" height="480" controls />
 

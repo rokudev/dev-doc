@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Samples
 
 The [Roku Developers GitHub repo](https://github.com/rokudev) provides a large selection of sample app code. Repos from SceneGraph nodes and implementations, to full integrated master sample apps, are briefly described below.
 

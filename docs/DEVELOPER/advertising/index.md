@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Advertising Framework overview
 
 The Roku Advertising Framework (RAF) enables the seamless integration of video advertising into your apps. The RAF library, which is built directly into the Roku SDK, includes the following features that make it easy to provide a consistent ad experience across apps:
 

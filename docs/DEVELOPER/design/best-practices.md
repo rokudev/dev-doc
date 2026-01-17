@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Best practices
 
 ## Performance
 

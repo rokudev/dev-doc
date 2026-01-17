@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Group
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# GridPanel
 
 Extends [**Panel**](/docs/references/scenegraph/sliding-panels-nodes/panel.md)
 

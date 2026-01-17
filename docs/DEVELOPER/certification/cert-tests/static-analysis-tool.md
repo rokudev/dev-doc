@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Static Analysis tests
 
 > Apps must pass Static Analysis testing in order to published to the Streaming Store. Apps cannot be submitted for publishing without passing static analysis testing.
 

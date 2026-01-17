@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roSystemLog
 
 
 The roSystemLog component enables the application to receive events from the Roku Streaming Player that are intended for reporting errors and trends, rather than trigger a response to a user action.

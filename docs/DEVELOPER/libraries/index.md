@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Analytics Component Library
 The Roku Analytics Component Library (RACL) implements Google Analytics, Omniture, and Ooyala Analytics, amongst other third-party analytics solutions. The library creates a simple method for using SceneGraph apps with one or more of these analytics solutions.
 
 ## Support Models

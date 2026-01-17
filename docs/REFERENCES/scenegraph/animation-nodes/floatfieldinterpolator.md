@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# FloatFieldInterpolator
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

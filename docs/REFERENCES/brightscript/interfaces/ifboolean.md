@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifBoolean
 
 Interface equivalent for intrinsic type Boolean.
 

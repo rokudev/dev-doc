@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Signup requirements and best practices
 
 SVOD and TVOD apps (and other subscription services) participating in Roku Pay can maximize subscription revenue by minimizing the number of screens and keypresses in the on-device sign-up workflow. Otherwise, customers may abandon the sign-up workflow if prompted to enter their email address or other personal information in an account creation screen because it requires too many keypresses.
 

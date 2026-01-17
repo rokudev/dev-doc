@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Introduction to the course
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit1-intro-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/video1-intro-course-v2.png" width="720" height="480" controls />
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Advertising Watermark Webinar
 
 In July 2022, Roku explained the Roku Advertising Watermark to developers. Topics covered in this webinar included:
 

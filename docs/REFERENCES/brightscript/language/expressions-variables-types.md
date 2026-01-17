@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Expressions, variables, and types
 
 
 ## Identifiers

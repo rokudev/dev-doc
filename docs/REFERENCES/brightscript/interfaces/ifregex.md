@@ -13,7 +13,6 @@ next:
 
 
 
-# ifRegex
 
 > See the PCRE documentation (http://www.pcre.org/) for documentation on the PCRE library used for regular expression matching.  See the [Perlre main page](http://perldoc.perl.org/perlre.html "Perlre main page") for complete documentation of the possible regular expressions this library can parse and match. In general, most Perl compatible regular expressions are supported.
 

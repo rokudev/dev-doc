@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Sliding panels
 
 Sliding panels allow the creation of sets of other elements, such as
 lists or grids, that are grouped into *panels* that can be moved left

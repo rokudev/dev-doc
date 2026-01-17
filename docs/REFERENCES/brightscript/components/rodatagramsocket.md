@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roDataGramSocket
 
 The roDataGramSocket component enables Brightscript apps to send and receive UDP packets. The interface is modeled on and works much like standard Berkeley sockets.
 

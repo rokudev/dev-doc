@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Spanish language - alternative media delivery specifications
 
 *Version 2.1 - August 2023*
 

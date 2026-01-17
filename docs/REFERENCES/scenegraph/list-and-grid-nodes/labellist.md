@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# LabelList
 
 Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roSGNode
 
 The roSGNode object is the BrightScript equivalent of SceneGraph XML
 file node creation. To create an roSGNode object for a specific node

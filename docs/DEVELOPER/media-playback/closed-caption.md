@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Closed caption
 
 The Roku platform supports the following closed caption formats:
 

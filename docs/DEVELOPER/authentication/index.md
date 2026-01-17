@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Authentication Overview
 
 Roku provides mechanisms and protocols that streamline authentication for apps. These authentication methods allow customers to sign into apps with minimal input to ensure they can access and engage with content.  
 

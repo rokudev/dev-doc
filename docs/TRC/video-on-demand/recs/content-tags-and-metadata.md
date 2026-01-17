@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Best practices: content tags and metadata
 
 *The following contains details for content tags and metadata related to media ingest. Please see [ingest specifications](/trc-docs/video-on-demand/ingest-specifications.md#metadata-updates-mdu-and-file-replacements) for more.*
 

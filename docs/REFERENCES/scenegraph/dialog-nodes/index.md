@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Dialog Nodes
 
 Welcome to the Dialog Nodes section!

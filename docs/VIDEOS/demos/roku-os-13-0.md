@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku OS 13.0 Developer Features Webinar
 
 In April 2024, Roku's Advanced Tech team reviewed the new SceneGraph and BrightScript APIs, media and content metadata enhancements, and developer tool updates included in Roku OS 13.0. 
 

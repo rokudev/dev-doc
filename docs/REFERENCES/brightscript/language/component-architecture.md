@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Component architecture
 
 The BrightScript Component architecture and library are separate from
 BrightScript, but BrightScript requires them.

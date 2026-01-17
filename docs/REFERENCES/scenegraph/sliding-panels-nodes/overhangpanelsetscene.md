@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# OverhangPanelSetScene
 
 Extends [**Scene**](/docs/references/scenegraph/scene.md)
 

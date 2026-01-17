@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifProgramGuide
 
 ## Implemented by
 

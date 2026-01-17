@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Component initialization order
 
 Instances of components defined in an XML file follow a well-defined
 initialization order when they are created.

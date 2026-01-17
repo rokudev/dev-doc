@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Developer Summit 2025
 
 Roku held its annual developer summit online on September 16–17, 2025. The Developer Summit opened with the keynote address, which included a welcome address from CEO Anthony Wood, the traditional recap of the past year in streaming and key industry trends, new product and feature announcements, and a summary of new features recently added to the Roku Developer Portal. 
 

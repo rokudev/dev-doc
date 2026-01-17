@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Packaging Roku apps
 
 Publishing an app on the Streaming Store requires several items for the app, such as its
 source code, images, and fonts, to be "packaged" into a bundle that gets encrypted. This enables developers to publish apps while keeping all intellectual property safely encrypted. The process of “packaging an app” uses cryptographic hardware built into Roku devices and creates a package that can be safely distributed on Roku devices.

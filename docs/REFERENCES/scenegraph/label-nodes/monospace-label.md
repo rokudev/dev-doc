@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# MonospaceLabel
 
 *Available since Roku OS 14.0*
 

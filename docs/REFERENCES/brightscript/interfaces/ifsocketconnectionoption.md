@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSocketConnectionOption
 
 ## Implemented by
 

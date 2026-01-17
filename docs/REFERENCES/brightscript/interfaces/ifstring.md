@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifString
 
 ## Implemented by
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Setting the monetization method
 
 To add products to a subscription video on demand (SVOD) or transactional video on demand (TVOD) app that is implementing Roku Pay, you must specify which monetization methods your app will use: **subscriptions** and/or **one-time purchases**. This step is required when publishing apps to the Streaming Store; however, it is a best practice to set the monetization method directly after creating an app. This ensures that you can create in-app products without encountering any error messages in the Developer Dashboard.
 

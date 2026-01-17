@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# PinDialog
 
 > Roku OS 10.0 introduced a new [StandardPinPadDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-pinpad-dialog.md "**Standard PinPad Dialog**"), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the PIN pad dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy PinDialog nodes in their app with the new [StandardPinPadDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-pinpad-dialog.md "**Standard PinPad Dialog**"). 
 >

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Running Channel Behavior Analysis testing on authenticated apps
 
 <video src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg" width="720" height="480" controls />
 

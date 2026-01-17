@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roCECStatusEvent
 
 The roCECStatusEvent determines the active source status for set boxes. Apps subscribing to the roCECStatusEvent are notified when the active-source status of the device changes per the CEC message traffic.
 

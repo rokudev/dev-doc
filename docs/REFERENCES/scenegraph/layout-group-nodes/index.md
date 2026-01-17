@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Layout Group Nodes
 
 Welcome to the Layout Group Nodes section!

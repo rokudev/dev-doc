@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifMicrophone
 
 ## Implemented by
 

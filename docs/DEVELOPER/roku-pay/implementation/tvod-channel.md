@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating TVOD apps (Catalog 1.0)
 
 > If your Roku Developer account was created after April 30, 2025, see [Creating TVOD Apps (Catalog 2.0)](/docs/developer-program/roku-pay/implementation/tvod-app-catalog.md) for how to create in-app products and call the ChannelStore APIs to handle purchases.
 

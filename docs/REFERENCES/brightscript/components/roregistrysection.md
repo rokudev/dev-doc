@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roRegistrySection
 
 
 A Registry Section enables the organization of settings within the registry. Different registry sections may have their own keys with the same name. In other words, key names are scoped within the registry section to which they belong.

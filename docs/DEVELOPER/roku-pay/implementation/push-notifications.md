@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Pay push notifications reference
 
 Roku Pay push notifications send billing data to a publisher's web server listener when transactions occur. Transactions include purchases, cancellations, refunds, credits, and renewed cancellations. Receiving push notifications enables publishers to update their backend system in real-time as subscriptions are purchased, canceled, and refunded.  
 

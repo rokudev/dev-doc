@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifEnum
 
 ## Implemented by
 

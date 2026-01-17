@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Fast video start
 
 Fast video start is a user interface design technique for apps
 that reduces the amount of time apparent to the user that the video

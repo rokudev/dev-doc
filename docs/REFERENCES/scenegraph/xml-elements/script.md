@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# <script\>
 
 The <script\> element allows the definition of functions to initialize the component, and to respond to events (including key events) and field value changes. The BrightScript interfaces for the SceneGraph nodes used by BrightScript are the same interfaces defined for [roSGNode](/docs/references/brightscript/components/rosgnode.md) objects.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifArraySizeInfo
 
 *Available since Roku OS 15.0*
 

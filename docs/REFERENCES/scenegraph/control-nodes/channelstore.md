@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ChannelStore
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

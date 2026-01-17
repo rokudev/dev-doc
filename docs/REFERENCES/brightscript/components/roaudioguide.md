@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roAudioGuide
 
 > This component is only available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running Roku OS version 7.5 and later.
 

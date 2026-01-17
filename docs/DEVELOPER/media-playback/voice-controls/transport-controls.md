@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Implementing voice controls
 
 Voice controls enable your app to handle commands from the Roku voice remote and Roku mobile app. This makes it easy for your customers to control the playback of your content with the convenience of voice commands, which enhances the overall user experience of your app.
 

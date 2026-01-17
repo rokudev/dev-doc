@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Scripted production guidelines
 
 *Version 2.4 - February 2024*
 

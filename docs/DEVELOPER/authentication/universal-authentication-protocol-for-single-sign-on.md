@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Automatic Account Link
 
 Automatic account link enables apps to authenticate customers using an access token or authentication artifact stored in the Roku cloud. This simplifies authentication for customers with multiple Roku devices: Once successfully authenticated on one device, customers are automatically signed in when they activate additional Roku devices linked to the same Roku account.
 

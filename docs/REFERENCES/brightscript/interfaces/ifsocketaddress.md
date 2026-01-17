@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSocketAddress
 
 ## Implemented by
 

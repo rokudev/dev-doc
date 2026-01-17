@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Runtime functions
 
 ## CreateObject(classname as String, \[optional parameters\]) as Object
 

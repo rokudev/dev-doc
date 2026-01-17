@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Key Design Principles
 
 A UI is invisible when users remain focused on their goal of navigating
 and watching the content instead of figuring out how to use or operate

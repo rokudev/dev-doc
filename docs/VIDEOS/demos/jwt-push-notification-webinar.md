@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Pay JWT-secured Push Notifications Webinar
 
 In March 2024, Roku explained how developers can integrate JWT-secured push notifications to securely receive Roku Pay transaction data in near-real time. Topics covered in this webinar included:
 

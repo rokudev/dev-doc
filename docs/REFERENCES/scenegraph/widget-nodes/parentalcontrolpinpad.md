@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ParentalControlPinPad
 
 ParentalControlPinPad is a variant of the [PinPad component](/docs/references/scenegraph/widget-nodes/pinpad.md "PinPad component"), although it does have a few key differences: The pin, pinLength, and secureMode fields are made private (i.e., not accessible to BrightScript, and secureMode set to true).
 

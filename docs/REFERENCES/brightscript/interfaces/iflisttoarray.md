@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifListToArray
 
 ## Implemented by
 

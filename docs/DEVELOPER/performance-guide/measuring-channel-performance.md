@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Measuring app performance
 
 The Roku OS records key app performance metrics such as app launch time, app change time, app exit time, and video start time via signal beacons. Signal beacons are markers for the start and stop points of user-initiated actions.
 

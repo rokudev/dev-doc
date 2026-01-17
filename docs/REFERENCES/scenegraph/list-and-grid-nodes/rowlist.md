@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# RowList
 
 Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku JavaScript Library
 
 Roku's JavaScript Library enables keyword-driven testing of apps. The library resides in a JavaScript class that has methods that map directly to keyword names. The keywords take the same arguments as the methods implementing them. The keywords report failures with exceptions, create logs by writing to standard output, and return values using the `return` statement.
 

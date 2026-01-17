@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ColorFieldInterpolator
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

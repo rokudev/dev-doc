@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Channel certification overview
 
 All public channels must meet Roku's [certification criteria](/docs/developer-program/certification/certification.md#certification-criteria-1) to be published to the Roku Channel Store. This ensures that all channels in the Roku Channel Store have properly integrated required platform features in order to provide viewers a consistent user experience.
 

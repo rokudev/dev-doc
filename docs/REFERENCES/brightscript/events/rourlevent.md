@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roUrlEvent
 
 The roUrlTransfer component sends the roUrlEvent with the following methods:
 

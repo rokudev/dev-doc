@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Eclipse IDE support
 
 > Roku has discontinued support for its Eclipse IDE plug-in. Developers will still be able to [download the Roku plug-in for the Eclipse IDE](https://devtools.web.roku.com/ide/eclipse/plugin) and use it to program, sideload, and test their Roku apps. However, Roku will no longer release software updates or fix bugs for the tool.
 >

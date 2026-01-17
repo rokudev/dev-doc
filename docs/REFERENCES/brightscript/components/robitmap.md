@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roBitmap
 
 The roBitmap component contains image data and provides an interface (ifDraw2D) for drawing. Bitmaps can be used for a variety of purposes, such as for sprites, compositing, or as double buffers.
 

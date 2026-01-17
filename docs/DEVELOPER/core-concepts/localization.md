@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SceneGraph localization
 
 You can supply localized versions of the
 strings and package graphical images used in a SceneGraph application

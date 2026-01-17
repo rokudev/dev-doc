@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Resource Monitor Memory Management Webinar
 
 In June 2024, Roku's Developer Platform team explained how developers can build task nodes in their apps to efficiently use memory and CPU resources, manage the duration and number of rendezvouses, and implement observer functions, which run when tasks are completed. 
 

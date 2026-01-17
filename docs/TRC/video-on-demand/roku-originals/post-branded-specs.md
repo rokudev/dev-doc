@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Branded delivery specifications
 
 *Version 2.0* - *March 2025*
 

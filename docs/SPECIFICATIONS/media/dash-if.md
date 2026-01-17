@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku OS support for DASH-IF
 
 The support for DASH-IF in Roku OS is based on ["Guidelines for Implementation: DASH-IF Interoperability Points" (Version 4.3: November, 2018](https://dashif.org/docs/DASH-IF-IOP-v4.3.pdf) – we refer to this publication as "DASH Interop Guidelines," and the specific interoperability points as IOPs). While extensive, Roku's support for this comprehensive specification is not yet complete. This article covers known discrepancies between the full DASH standard and Roku's support for it in the runtime content player and other facilities. Discrepancies will be added to this list as they are discovered; developers should alert Roku to any discrepancies not mentioned here, so that proper attention can be paid to them, toward the goal of improving Roku's support for the DASH standard.
 

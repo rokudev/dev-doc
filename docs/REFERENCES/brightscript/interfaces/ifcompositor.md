@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifCompositor
 
 ## Implemented by
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating test users
 
 Test users can make in-app purchases free-of-charge for testing purposes. This is useful for testing the Roku Pay integration in an app.
 

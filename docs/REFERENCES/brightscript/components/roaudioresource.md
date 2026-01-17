@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roAudioResource
 
 The roAudioResouce allows .wav files to be cached to memory and quickly played at any time. roAudioResource is intended to support short audio clips which need to be played with very little latency. The system caches the entire wav file in memory so that playback can begin very quickly.
 

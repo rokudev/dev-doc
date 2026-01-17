@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Memory management
 
 ## Texture memory
 

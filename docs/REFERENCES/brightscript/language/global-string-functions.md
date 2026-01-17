@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Global string functions 
 
 
 ## UCase(s as String) as String

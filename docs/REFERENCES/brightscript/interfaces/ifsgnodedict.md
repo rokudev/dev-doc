@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSGNodeDict
 
 The ifSGNodeDict interface allows you access information about the nodes in a SceneGraph node tree, and find and return a node with a specific ID.
 

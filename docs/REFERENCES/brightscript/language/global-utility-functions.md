@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Global utility functions
 
 BrightScript has a set of standard, module scope, functions. These
 functions are stored in the global object. If the compiler sees a

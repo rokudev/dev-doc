@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Getting started
 
 Integrating Roku Pay in an app is seamless. Roku Pay includes a SceneGraph ChannelStore component that contains a complete suite of APIs for managing on-device authentication, purchases, free trial offers, upgrades/downgrades, and access to content. In addition, Roku Pay includes a RESTful API and push notifications that are integrated into an app's backend system for validating, refunding, and canceling purchases. 
 

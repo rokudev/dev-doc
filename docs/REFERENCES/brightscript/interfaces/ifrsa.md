@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifRSA
 
 ## Implemented by
 

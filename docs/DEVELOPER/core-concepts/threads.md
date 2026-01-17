@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SceneGraph threads
 
 SceneGraph applications support these basic thread types:
 

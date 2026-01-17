@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Overview
 
 Voice controls enable apps to handle commands from the Roku voice remote and Roku mobile app to control the playback of content and select a user from a profile screen.
 

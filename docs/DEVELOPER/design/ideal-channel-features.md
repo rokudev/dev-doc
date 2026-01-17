@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Ideal app features
 
 While attraction and retention of users primarily depends on the app content, the ability for the user to easily
 interact with your app creates a delightful association with

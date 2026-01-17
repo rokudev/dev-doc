@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roMessagePort
 
 
 A Message Port is the place messages ([events](/docs/developer-program/core-concepts/event-loops.md)) are sent. 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roSGNodeEvent
 
 An roSGNode object sends roSGNodeEvent messages to a specified port when changes occur in nodes.  An roSGNodeEvent is also sent as the argument of field observer callback functions.  Both of these cases allow a SceneGraph application to respond to events.  roSGNodeEvent supports the following methods.
 

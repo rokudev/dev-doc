@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Live event VOD delivery specifications
 
 *Version 2.0 - September 2023*
 

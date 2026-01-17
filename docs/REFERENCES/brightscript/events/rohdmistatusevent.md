@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roHdmiStatusEvent
 
 The roHdmiStatus sends the roHdmiStatusEvent with the following predicates that indicate its valid event types:
 

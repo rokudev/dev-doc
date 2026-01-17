@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roHMAC
 
 The HMAC component provides an interface to the OpenSSL HMAC functions. These functions generate a Message Authentication Code (MAC) based on a key, in such a way that no one without the key could plausibly generate the MAC. HMAC uses a digest (hash) algorithm to generate the MAC.
 

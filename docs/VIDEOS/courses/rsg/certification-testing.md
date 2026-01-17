@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Certification testing
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit13-cert-testing-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit13-cert-testing.jpg" width="720" height="480" controls />
 ## About this lesson

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifInt
 
 > Interface equivalent for intrinsic type 'Integer'
 

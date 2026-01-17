@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Publisher payouts
 
 Roku’s Partner Payouts Program is the vehicle through which partners receive payments for apps, games, content, and ads served to millions of active Roku users.
 

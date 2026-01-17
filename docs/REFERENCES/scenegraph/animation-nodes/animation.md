@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Animation
 
 Extends [**AnimationBase**](/docs/references/scenegraph/abstract-nodes/animationbase.md)
 

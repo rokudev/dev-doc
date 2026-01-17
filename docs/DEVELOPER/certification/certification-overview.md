@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Certification criteria
 
 To ensure that the Roku platform provides a consistent, performant experience for customers, Roku reserves the right to review all new and updated public apps in the Roku Streaming Store for design and performance criteria. This certification process confirms that apps properly integrate applicable Roku platform requirements.
 

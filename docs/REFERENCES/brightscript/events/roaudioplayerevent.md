@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roAudioPlayerEvent
 
 The roAudioPlayer sends the roAudioPlayerEvent with the following predicates that indicate its valid event types:
 

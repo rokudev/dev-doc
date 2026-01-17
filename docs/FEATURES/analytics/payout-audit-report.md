@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Payout Audit Report
 
 The Payout Audit Report displays information, including monthly transaction amounts and deferred payouts, which partners can use to reconcile their apps' revenue activity with receipts from Roku Accounts Payable. Revenue events are expressed using the currencies originally involved. Both net revenue share and original amounts collected by Roku are reported.
 

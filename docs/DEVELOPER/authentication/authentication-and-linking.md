@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Rendezvous linking
 
 > All apps, except TVE apps, must complete authentication entirely on-device to pass certification. See [On-device authentication](/docs/developer-program/authentication/on-device-authentication.md) for how to implement the required authentication method.
 >

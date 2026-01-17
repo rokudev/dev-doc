@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ProgressDialog
 
 > Roku OS 10.0 introduced a new [StandardProgressDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-progress-dialog.md "**Standard Progress Dialog**"), which features updated graphics and color palette support. This enables developers to provide a consistent user experience across the progress dialogs in their app. Developers should replace the legacy ProgressDialog nodes in their app with the new [StandardProgressDialog nodes](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-progress-dialog.md "**Standard Progress Dialog**"). 
 >

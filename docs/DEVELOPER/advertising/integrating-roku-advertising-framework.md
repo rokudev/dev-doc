@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Integrating the Roku Advertising Framework
 
 ## Getting started
 

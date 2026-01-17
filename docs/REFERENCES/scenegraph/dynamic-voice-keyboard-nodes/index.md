@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Dynamic Voice Keyboard Nodes
 
 Welcome to the Dynamic Voice Keyboard Nodes section!

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roUrlTransfer
 
 
 A roUrlTransfer object transfers data to or from remote servers specified by URLs. It can perform mutual authentication with a web server.

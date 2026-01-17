@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSGNodeField
 
 The ifSGNodeField interface allows querying, getting, setting, and performing other similar manipulation operations on Scene Graph node fields. This interface also allows you to set and unset event observers on a subject node field.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Optimization techniques
 
 ## SGNode initialization
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roRegion
 
 
 The roRegion component is used to represent a subsection of a bitmap.

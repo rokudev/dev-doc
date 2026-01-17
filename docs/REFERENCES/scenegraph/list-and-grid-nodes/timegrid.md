@@ -12,7 +12,6 @@ next:
 ---
 
 
-# TimeGrid
 
 OTT providers can use the TimeGrid node to implement an Electronic Program Guide (EPG) in their apps. In an EPG, channels are represented as horizontal rows, one for each channel. Each row has an channel name on the left, and a set of programs airing on that app to the right. The size of each program depends on its duration. One of these programs has a remote control focus highlight indicator on it, and this highlight can be moved around using the remote control (as long as the TimeGrid node has remote control focus).
 

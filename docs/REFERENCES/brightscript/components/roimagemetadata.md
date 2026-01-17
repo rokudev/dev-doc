@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roImageMetadata
 
 The roImageMetadata component provides developers access to image file metadata included in many .jpg EXIF headers.
 

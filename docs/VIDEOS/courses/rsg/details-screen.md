@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating a Details Screen
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit8-details-screen-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit8-detailsScreen.png" width="720" height="480" controls />
 

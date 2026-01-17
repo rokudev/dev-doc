@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Streaming overview
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-streaming-overview-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/streaming-overview.jpg" width="720" height="480" controls />
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Catalog 2.0 Webinar
 
 This webinar, presented on July 28th, 2025, highlighted the new product catalog in the Developer Dashboard (Catalog 2.0), which is currently being rolled out. The webinar also demonstrated how Catalog 2.0 helps you create and manage your subscription and one-time purchase products.
 

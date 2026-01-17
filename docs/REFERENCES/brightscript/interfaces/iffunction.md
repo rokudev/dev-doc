@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifFunction
 
 Interface equivalent for intrinsic type Function.
 

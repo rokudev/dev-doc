@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Testing a Roku Pay app
 
 Testing the purchase and entitlement workflows in your Roku Pay workflow entails three major steps:
 

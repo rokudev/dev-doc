@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# ifArray
 
 ## Implemented by
 

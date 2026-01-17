@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roTextureRequestEvent
 
 The [roTextureManager](/docs/references/brightscript/components/rotexturemanager.md "roTextureManager") sends the roTextureRequestEvent after completing a request.
 

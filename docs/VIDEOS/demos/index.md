@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Overview
 
 Roku regularly hosts webinars to provide the Roku development community with detailed coverage of key Roku development tools and features. The webinars are usually led by Roku engineers or other subject matter experts, and they typically include a presentation explaining the importance of the feature, a demo showing how it works, and Q&A session for addressing questions from the Roku developer community. Webinars also include Roku's annual developer summit.
 

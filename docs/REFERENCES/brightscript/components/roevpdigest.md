@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roEVPDigest
 
 The EVP Digest component provides an interface to the OpenSSL EVP library of message digest algorithms. The EVP library provides a high-level interface to cryptographic hash functions.
 

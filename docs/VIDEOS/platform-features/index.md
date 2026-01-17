@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Overview
 
 Platform feature videos highlight some of the key tools for building an app on the Roku platform, driving engagement, and monetizing content.
 

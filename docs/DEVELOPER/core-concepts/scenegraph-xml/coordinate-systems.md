@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SceneGraph coordinate systems
 
 Each renderable node has a local coordinate system associated with it
 with an origin at (0,0) with x increasing left-to-right and y increasing

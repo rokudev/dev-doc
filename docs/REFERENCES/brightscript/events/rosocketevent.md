@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roSocketEvent
 
 
 An roStreamSocket or roDataGramSocket object sends the roSocketEvent to indicate a change in the status of the socket. The socket must enable specific event notifications via the notify methods of ifSocketAsync.

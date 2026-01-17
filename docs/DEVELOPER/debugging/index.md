@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Debugging
 
 Testing Roku apps involves using a debug console and access to a
 variety of ports. The debug console provides a window into the runtime

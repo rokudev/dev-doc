@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# App localization
 
 Publishers can distribute their content across the world through the [Streaming Store](https://channelstore.roku.com/). The Streaming Store includes all of North America, many countries in Latin America, and several countries in Europe. The Roku development platform makes it easy to broadly disseminate content; however, publishers should consider localization in the development, distribution, engagement, and monetization of their apps.
 

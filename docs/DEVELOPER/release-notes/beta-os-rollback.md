@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Reverting Roku beta OS to production on devices
 
 Developers enrolled in the Roku beta program can revert their devices running a beta OS back to the latest production build in a self-serve manner.
 

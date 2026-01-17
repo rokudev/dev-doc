@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Enabling Developer Mode
 
 <video src="https://image.roku.com/ZHZscHItMTc2/RokuDeveloperMode.mp4" poster="https://image.roku.com/ZHZscHItMTc2/enable-developer-mode-v1b.png" width="720" height="480" controls />
 

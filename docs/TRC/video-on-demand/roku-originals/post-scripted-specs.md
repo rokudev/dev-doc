@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Scripted media delivery specifications
 
 *Version 3.0 - August 2025*
 

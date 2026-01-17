@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roInput
 
 An roInput object can be used to receive events sent from a network client using the External Control Protocol (ECP), as described in [External Control API](/docs/developer-program/dev-tools/external-control-api.md "External Control API").
 

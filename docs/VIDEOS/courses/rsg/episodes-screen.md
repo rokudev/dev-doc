@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating an Episodes Screen
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit9-episodePicker-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit9-episodesScreen.png" width="720" height="480" controls />
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roDeviceCrypto
 
 The roDeviceCrypto component enables you to encrypt and decrypt data on a device using a key that is unique per app, device, or model. Using an app key for example, you can encrypt data for an app so that it may only be decrypted by that same app. In this case, you could provision credentials or an API key from the cloud to devices securely. With a device key for example, you could implement a secure-storage like algorithm.
 

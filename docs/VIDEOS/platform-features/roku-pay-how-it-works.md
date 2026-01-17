@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Pay: Simplifying customer payments
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-pay-how-it-works.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-pay-how-it-works-v3.png" width="720" height="480" controls />
 

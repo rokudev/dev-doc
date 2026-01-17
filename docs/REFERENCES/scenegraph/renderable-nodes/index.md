@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Renderable Nodes
 
 Welcome to the Renderable Nodes section!

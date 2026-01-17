@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# BIF file creation using the Roku BIF tool
 
 Roku provides command-line tools for Mac, Linux, and Windows, enabling you to generate BIF files for your  videos.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Automated app testing
 
 <video src="https://image.roku.com/ZHZscHItMTc2/automated-channel-testing.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auto-channel-test.jpg" width="720" height="480" controls />
 

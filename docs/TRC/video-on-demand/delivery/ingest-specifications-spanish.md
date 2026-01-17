@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Especificaciones para la ingesta
 
 A continuación, encontrarás una lista completa de los requisitos de formato para los activos multimedia y metadatos de las empresas socias, incluidas las plantillas de archivo y las pautas de entrega. La plataforma de ingesta de Roku está totalmente automatizada y el pleno cumplimiento de esta especificación garantizará el procesamiento puntual y sin errores del contenido para su distribución en Roku Channel. Si fuera necesario realizar algún cambio en el flujo de trabajo establecido durante la incorporación, avisa a un representante de Roku lo antes posible para organizar cualquier prueba o configuración nueva. Roku espera que el contenido y los metadatos se entreguen de la manera acordada durante la fase de incorporación y prueba. Asegúrate de que el conocimiento sobre las entregas se transfiera al nuevo personal en caso de que se actualicen o cambien los equipos.
 

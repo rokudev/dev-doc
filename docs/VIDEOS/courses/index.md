@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Overview
 
 Courses enable Roku developers to get started and get up to speed fast on creating streaming applications for the Roku platform. Each online course contains a series of instructor-led video lessons walking developers through Roku development topics, such as building the app UI, integrating core app features, and testing apps.
 

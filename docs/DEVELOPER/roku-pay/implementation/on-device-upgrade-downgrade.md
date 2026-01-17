@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# On-device upgrade and downgrade
 
 Apps with Roku Pay integrations can implement on-device subscription upgrades and downgrades. By doing so, customers can seamlessly switch plans directly from their devices, and apps can ensure that they are billed properly. This enables apps to target different audiences with the best plan in order to maximize content monetization.
 

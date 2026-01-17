@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifEVPCipher
 
 ## Implemented by
 

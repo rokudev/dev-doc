@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Downloading server content
 
 Various types of content material can be downloaded from your server to
 a SceneGraph application. Many of the renderable nodes include a `uri`

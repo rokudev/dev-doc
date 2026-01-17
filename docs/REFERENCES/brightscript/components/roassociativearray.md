@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roAssociativeArray
 
 An associative array (also known as a map, dictionary or hash table) allows objects to be associated with string keys. Associative arrays are built into the language. They can be accessed implicitly by using the dot or bracket operators, or by calling functions from the [ifAssociativeArray](/docs/references/brightscript/interfaces/ifassociativearray.md "ifAssociativeArray") interface. For example, the last three lines in this example are equivalent:
 

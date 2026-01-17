@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Sales Activity Report
 
 The Sales Activity Report displays app revenue, including sales from transactions, refunds, and subscription cancellations (both active and passive), over a given month. This information can be helpful in closing a publisher's accounting books or reconciling payouts received from Roku Accounts Payable.
 

@@ -12,7 +12,6 @@ metadata:
   description: ''
   robots: index
 ---
-# Overview
 
 Apps have access to web-based app analytics and sales reports through Roku's Developer Dashboard. This allows you to analyze your app's health, viewership trends, and metrics for specific titles and devices. The following video highlights the different app analytics available to you.
 

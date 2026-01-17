@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Font
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

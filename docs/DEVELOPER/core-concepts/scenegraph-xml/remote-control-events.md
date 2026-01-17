@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Remote control events
 
 The SceneGraph architecture supports a notion of remote control key
 focus. At any time, any node in the SceneGraph node tree can be assigned

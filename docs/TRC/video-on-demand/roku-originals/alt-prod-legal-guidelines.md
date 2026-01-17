@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Alternative production legal guidelines
 
 In creating content for exhibition on Roku, there are a few guidelines that the Roku Production Legal team would like you to keep in mind.  As a reminder, we expect you to retain your own production legal counsel to represent your interests, as the Roku Production Legal team represents Roku.  Please review these guidelines with your legal counsel.  If you have any questions or concerns after reviewing, let’s set a time to discuss.  
 

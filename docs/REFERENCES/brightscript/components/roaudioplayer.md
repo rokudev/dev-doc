@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roAudioPlayer
 
 The Audio Player object provides the ability to setup the playing of a series of audio streams. The object accepts an array of content meta-data objects, describing the audio and providing URLs for accessing each stream. The component understands the following streamformat values: "mp3", "mp4", "hls", "es.aac-adts", "flac."
 

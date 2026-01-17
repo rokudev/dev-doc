@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Dialog
 
 > Roku OS 10.0 introduced a new [StandardDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**"), which features updated graphics and color palette support. This enables developers to provide a consistent user experience across the dialogs in their app. Developers should replace the legacy Dialog nodes in their app with the new [StandardDialog nodes](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**").
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roScreen
 
 
 The roScreen component provides a full screen drawing surface that can be stacked and that you can receive input events from.

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSGNodeBoundingRect
 
 
 The ifSGNodeBoundingRect interface can be used to query the bounding rectangle of subject node. The ifSGNodeBoundingRect interface methods return a node bounding rectangle as an associative array with four elements:

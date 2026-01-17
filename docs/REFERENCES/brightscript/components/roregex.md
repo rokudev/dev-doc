@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roRegex
 
 
 The roRegex component provides the powerful regular expression processing of the PCRE library to Brightscript strings.

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roTextureManager
 
 
 The Texture Manager provides a set of API's for managing an roBitmap cache.

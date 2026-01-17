@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# Developing SceneGraph applications
 
 Package files should include all the XML components they define in a
 top level directory named `components` (the top level

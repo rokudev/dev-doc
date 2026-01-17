@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Implementing Server-Side Ad Insertion Using Roku Adapters
 
 ## Overview
 

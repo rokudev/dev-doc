@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Sign-in requirements and best practices
 
 SVOD and TVOD apps (and other subscription services) participating in Roku Pay can streamline subscriber logins by minimizing the number of screens and keypresses in the on-device sign-in workflow. For example, customers may abandon the sign-in workflow when prompted to enter their email address because it requires too many keypresses.
 

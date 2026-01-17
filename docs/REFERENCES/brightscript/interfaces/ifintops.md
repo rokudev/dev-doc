@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifIntOps
 
 ## Implemented by
 

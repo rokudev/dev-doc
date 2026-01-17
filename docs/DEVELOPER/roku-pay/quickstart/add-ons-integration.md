@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Catalog 2.0 API integration guide
 
 Publishers can integrate add-ons in their apps to offer customers premium content, additional apps, and other upgrades and features, and they can bundle add-ons with base subscriptions. By integrating add-ons, customers can complete the purchase of all desired products and features for their subscription online and directly on-device with just a few key presses. This enables publishers to maximize subscription revenue through upsells, without any additional friction in the purchase workflow. 
 

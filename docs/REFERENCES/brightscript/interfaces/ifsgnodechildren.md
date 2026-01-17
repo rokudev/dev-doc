@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# ifSGNodeChildren
 
 The ifSGNodeChildren interface allows querying and manipulation of nodes in a SceneGraph node tree, such as creating new nodes, placing them at certain positions in the tree, and removing them.
 

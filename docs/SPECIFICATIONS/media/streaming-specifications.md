@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Streaming specifications
 
 Roku supports specific encoding methods and formats for streaming content on Roku devices. The following information details the best options for distributing content based on quality and availability.
 

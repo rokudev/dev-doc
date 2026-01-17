@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Playing Videos
 
 Playing any type of video requires just one SceneGraph node
 class: [Video](/docs/references/scenegraph/media-playback-nodes/video.md).

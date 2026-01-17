@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# BrightScript support
 
 Several BrightScript functions and components cannot be used in
 SceneGraph component scripts. Many of the BrightScript components that

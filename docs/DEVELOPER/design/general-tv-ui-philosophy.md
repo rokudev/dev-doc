@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# UI philosophy
 
 Roku experience is designed for a mass market; it should be noted that television displays are communal and different from computers,
 phones, and tablets. For example, people lean back and relax while

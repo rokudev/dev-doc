@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Widget Nodes
 
 Welcome to the Widget Nodes section!

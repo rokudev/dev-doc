@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Offering subscriptions
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit11-subscriptions-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit11-subscriptions-v3.png" width="720" height="480" controls />
 

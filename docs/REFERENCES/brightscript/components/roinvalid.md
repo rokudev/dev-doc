@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roInvalid
 
 roInvalid is the object equivalent for intrinsic type 'Invalid'.
 

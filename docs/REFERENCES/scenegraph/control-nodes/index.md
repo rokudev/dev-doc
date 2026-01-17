@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Control Nodes
 
 Welcome to the Control Nodes section!

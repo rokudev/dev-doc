@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roRegistry
 
 
 The Registry is an area of non-volatile storage where a small number of persistent settings can be stored.

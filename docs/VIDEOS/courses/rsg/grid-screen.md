@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating a Grid Screen
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit5-gridscreen-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit5-gridScreen.png" width="720" height="480" controls />
 

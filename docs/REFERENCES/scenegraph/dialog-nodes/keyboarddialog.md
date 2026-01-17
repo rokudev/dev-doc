@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# KeyboardDialog
 
 > Roku OS 10.0 introduced a new [StandardKeyboardDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md "**Standard Keyboard Dialog**"), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the keyboard dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy KeyboardDialog nodes in their app with the new [StandardKeyboardDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md "**Standard Keyboard Dialog**"). 
 >

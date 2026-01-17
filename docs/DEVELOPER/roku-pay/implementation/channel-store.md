@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SceneGraph ChannelStore
 
 The SceneGraph ChannelStore node is used to manage the on-device user experience of the purchase flow through Roku Pay. It includes a complete suite of APIs (referred to as commands) for implementing the on-device purchasing, entitlement, and authentication workflows. This document summarizes these ChannelStore commands.
 

@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roSystemLogEvent
 
 roSystemLogEvents are sent when enabled via <Anchor label="roSystemLog" title="roSystemLog" href="/docs/references/brightscript/components/rosystemlog.md">roSystemLog</Anchor> . roSystemLogEvent has the following method:
 

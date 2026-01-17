@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roTimespan
 
 
 The Timespan object provides an interface to a simple timer for tracking the duration of activities. It's useful for tracking how an action has taken or if a specified time has elapsed from some starting event.

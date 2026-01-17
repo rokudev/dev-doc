@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Tracking signup abandonment
 
 You can track customers' progress through your app's signup workflow to identify where users may be abandoning the process. For example, customers may successfully enter their login credentials to create an account, but exit the flow when prompted to enter their payment information. By firing events on each page, the generated feedback can be used to minimize friction in the sign-up workflow and thus reduce abandonment.
 

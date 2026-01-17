@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Receiving secured Roku Pay push notifications
 
 Publishers can use signed JSON web tokens (JWT/JWS) to securely receive Roku Pay push notification messages. This enables publishers to verify that the messages received by their push notification endpoint originated from Roku.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Implementing the Demand API
 
 Publishers integrate the Demand API to create a direct automated connection with demand partners that provides real-time demand across all of the publisher's inventory. This decreases inventory waste, unifies demand from Roku and third-parties, and enables the publisher to maintain full control of their inventory allocation with their ad server. The automated supply and demand matching provided by the Demand API helps publishers monetize video ad inventory more efficiently.
 

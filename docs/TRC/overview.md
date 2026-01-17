@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# **The Roku Channel overview**
 
 At Roku, we believe that all TV will be streamed. Everything we do is rooted in this vision to ultimately make TV better for everyone. New shows, additional kinds of content, better product offerings, and smarter algorithms have attracted enthusiastic fans who are tuning into The Roku Channel more and more each month. 
 

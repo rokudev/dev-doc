@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SoundEffect
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

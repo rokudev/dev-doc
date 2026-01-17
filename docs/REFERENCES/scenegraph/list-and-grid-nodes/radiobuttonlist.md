@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# RadioButtonList
 
 Extends [**LabelList**](/docs/references/scenegraph/list-and-grid-nodes/labellist.md)
 

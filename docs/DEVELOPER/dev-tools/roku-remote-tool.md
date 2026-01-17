@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Remote Tool
 
 The Roku Remote Tool provides developers a quick and intuitive way to create reusable scripts for ad-hoc testing of their app. This ensures a high-quality end-user experience and efficient use of developer resources. Developers can use the Roku Remote Tool to do the following:
 

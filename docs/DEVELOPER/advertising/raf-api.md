@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# API reference
 
 ## Construction
 

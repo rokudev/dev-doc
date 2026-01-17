@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Overview
 
 The getting started videos introduce developers to the Roku platform. They explain how streaming  works and the benefits of developing streaming applications for the Roku platform. Before starting any Roku course, developers should watch these videos.  
 

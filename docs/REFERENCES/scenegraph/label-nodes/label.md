@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Label
 
 Extends [**LabelBase**](/docs/references/scenegraph/label-nodes/label-base.md)
 

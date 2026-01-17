@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# XML components overview
 
 An XML-based markup language has been added to the SceneGraph API that
 allows new SceneGraph components to be defined consisting of a set of

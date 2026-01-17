@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Channel behavior analysis tests
 
 > Subscription (SVOD), ad-supported (AVOD), and free apps must pass automated certification testing in order to published to the Streaming Store. Apps cannot be submitted for publishing without passing automated certification testing.
 

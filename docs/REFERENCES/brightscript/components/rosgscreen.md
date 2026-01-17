@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roSGScreen
 
 The roSGScreen object is a SceneGraph canvas that displays the
 contents of a SceneGraph Scene node instance. The object is created

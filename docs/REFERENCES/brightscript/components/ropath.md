@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roPath
 
 
 The roPath component provides developers an easy way to create valid file system paths. 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifTextToSpeech
 
 
 > To implement CVAA/screen reader support in your app, use the [roAudioGuide](/docs/references/brightscript/components/roaudioguide.md) component object. The roTextToSpeech component object is typically used for book readers and other special-purpose applications.

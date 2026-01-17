@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roList
 
 The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members. The array operator [ ] can be used to access any element in the ordered list.
 

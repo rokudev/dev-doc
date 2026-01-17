@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roAudioMetadata
 
 The roAudioMetadata component provides developers access to audio file metadata included in many audio files. This should enable some audiofiles to deliver the information needed to fill out an roSpringboard screen without passing the info in a separate xml feed. roAudioMetadata currently only works with local file URLs. 
 

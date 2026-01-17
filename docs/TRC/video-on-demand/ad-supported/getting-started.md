@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# New to The Roku Channel - getting started
 
 ## Content submissions
 

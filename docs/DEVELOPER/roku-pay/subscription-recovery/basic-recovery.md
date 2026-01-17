@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Basic Subscription Recovery
 
 When payment for a subscription auto-renewal fails, Roku's basic subscription recovery feature gives customers a 3-day grace period where they can continue accessing content, while Roku Pay notifies them daily via email to update their method of payment (MOP). Once the 3-day grace period expires, the subscription is canceled. This solution helps the publisher improve the chance of recovering payments and thereby reduce passive cancelations.
 

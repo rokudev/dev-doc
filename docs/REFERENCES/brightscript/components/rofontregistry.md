@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roFontRegistry
 
 The roFontRegistry object allows you to create roFont objects, either using the default font or using fonts in TrueType or OpenType files packaged with your application.
 

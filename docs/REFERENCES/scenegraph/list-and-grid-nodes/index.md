@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Lists and grids
 
 Lists and grids are important screen elements for the application user
 interface. Lists and grids allow the user to choose from a selection of

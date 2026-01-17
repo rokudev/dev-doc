@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# onKeyEvent()
 
 The `onKeyEvent()` function receives remote control key events from the Roku OS, and allows the writing of event handlers for a node or component in response to the events. The function returns a message to the Roku OS to indicate that a particular event has been handled by the node or component, preventing the event from moving up the focus chain, to possibly be handled by parent nodes in the SceneGraph node tree, or by default firmware handlers.
 

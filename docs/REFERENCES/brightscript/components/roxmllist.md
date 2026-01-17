@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roXMLList
 
 
 Contains a list of roXML objects.

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roFileSystemEvent
 
 The roFileSystem component sends the roFileSystemEvent with the following predicates that indicate its valid event types:
 

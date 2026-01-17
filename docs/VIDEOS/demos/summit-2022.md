@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Developer Summit 2022
 
 Roku held its annual developer summit online on November 1–2, 2022. The summit started with a keynote address that recapped the past year in streaming and highlighted key industry trends for the upcoming year. The keynote then highlighted new platform features and developer tools, discussed the importance of using the [Roku Advertising Watermark](/docs/developer-program/advertising/ad-watermark.md), and reviewed the latest [certification updates](/docs/developer-program/certification/certification.md).
 

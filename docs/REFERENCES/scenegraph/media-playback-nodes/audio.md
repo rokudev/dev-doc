@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Audio
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

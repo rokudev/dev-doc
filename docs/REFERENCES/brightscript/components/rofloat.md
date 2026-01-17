@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roFloat
 
 roFloat is the object equivalent for intrinsic type 'Float'.
 

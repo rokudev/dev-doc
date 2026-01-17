@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifTextureRequest
 
 
 ## Implemented by

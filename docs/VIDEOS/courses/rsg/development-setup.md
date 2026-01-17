@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Development setup
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit2-developerSetup-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit2-developerSetup-v3a.png" width="720" height="480" controls />
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Premium subscriptions on The Roku Channel
 
 ## Assets & branding overview
 

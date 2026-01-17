@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roEVPCipher
 
 The EVP Cipher component provides an interface to the OpenSSL EVP library of symmetric cipher commands. The EVP library provides a high-level interface to cryptographic functions to implement digital "envelopes".
 

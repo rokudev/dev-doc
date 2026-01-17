@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Setting up Roku Pay web services
 
 Roku Pay includes [web services](/docs/developer-program/roku-pay/implementation/roku-web-service.md#apis) that developers integrate into their backend system for validating, refunding, and canceling transactions related to subscriptions and one-time purchases. In addition to pulling transactions via the [Roku Pay web services](/docs/developer-program/roku-pay/implementation/roku-web-service.md#apis), publishers can receive the transactions in real-time via [push notifications](/docs/developer-program/roku-pay/implementation/push-notifications.md). These features enable publishers to implement an entitlement service for checking whether to grant users access, issue refunds or service credits, and cancel subscriptions.
 

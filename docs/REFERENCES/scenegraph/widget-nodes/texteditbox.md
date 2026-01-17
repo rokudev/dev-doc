@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# TextEditBox
 
 Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**") 
 

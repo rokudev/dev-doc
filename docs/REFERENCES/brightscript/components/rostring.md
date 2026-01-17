@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roString
 
 
 roString is the object equivalent for intrinsic type 'String'.

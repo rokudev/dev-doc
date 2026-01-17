@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifDeviceCrypto
 
 ## Implemented By
 

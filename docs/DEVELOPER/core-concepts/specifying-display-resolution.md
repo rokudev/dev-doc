@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# Specifying display resolution
 
 SceneGraph applications allow you to specify an intended display screen resolution for your user interface application. But SceneGraph applications also automatically scale the screen elements for screen displays and Roku players that do not support the intended screen resolution. This gives you greater control of the appearance quality of your application than in previous Roku firmware, and allows you to design your application for full high-definition display resolution.
 

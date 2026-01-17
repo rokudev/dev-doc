@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Designing for devices
 
 Every public app on the Roku platform is certified on all
 currently-supported Roku models before being published. The list of

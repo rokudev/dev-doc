@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SceneGraph compilation
 
 SceneGraph components are compiled as the application is started. All
 SceneGraph component files (with the extension `*.xml)`, and any related

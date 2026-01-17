@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# Roku app tracing (with Perfetto)
 
 Starting with Roku OS 15.1, you can use [Perfetto](https://perfetto.dev/docs/) to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance. Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.
 

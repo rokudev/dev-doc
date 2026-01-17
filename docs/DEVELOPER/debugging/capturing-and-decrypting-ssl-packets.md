@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Capturing and decrypting SSL packets
 
 ## Introduction
 

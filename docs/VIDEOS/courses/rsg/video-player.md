@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Adding the Video Player
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit6-videoplayer-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit6-videoPlayer-v2a.png" width="720" height="480" controls />
 

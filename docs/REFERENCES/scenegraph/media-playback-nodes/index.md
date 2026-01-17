@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Media Playback Nodes
 
 Welcome to the Media Playback Nodes section!

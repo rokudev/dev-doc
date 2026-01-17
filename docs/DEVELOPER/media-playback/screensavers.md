@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Screensavers
 
 > Only standalone screensaver apps are permitted. Non-screensaver apps, including but not limited to video/audio streaming apps, games, and utilities, are prohibited from including screensavers.
 

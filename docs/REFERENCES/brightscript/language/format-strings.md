@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Format strings
 
 A BrightScript Format string is a [printf-like](https://en.wikipedia.org/wiki/Printf) format string that is similar to that provided by C, C++, and other languages.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSGNodeHttpAgentAccess
 
 The ifSGNodeHttpAgentAccess interface allows you to get an [roHttpAgent](/docs/references/brightscript/components/rohttpagent.md "roHttpAgent") object from a SceneGraph node, and set an roHttpAgent object for a nod
 

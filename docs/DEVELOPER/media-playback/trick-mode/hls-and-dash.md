@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# HLS and DASH
 
 > Roku recommends that ad-supported apps employing [Server-Side Ad Insertion (SSAI)](/docs/developer-program/advertising/ssai-adapters.md) use *only* HLS or DASH "standard" thumbnails, as an incompatibility in the BIF-support mechanism can cause thumbnails and video to fall out of synch during SSAI operation. Developers should convert existing apps that use BIF and SSAI to use "standard" thumbnails instead, at the earliest opportunity.
 

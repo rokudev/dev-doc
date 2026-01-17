@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifHMAC
 
 ## Implemented by
 

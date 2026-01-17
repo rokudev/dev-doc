@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Development environment overview
 
 ## Architectural overview
 

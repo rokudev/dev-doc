@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Designing Roku apps
 
 This document highlights Roku's approach to UIs for streaming media, with progressive
 levels of requirements which are crucial to pass Roku's app certification process, as well as create a well-designed Roku

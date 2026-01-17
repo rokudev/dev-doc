@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Text to speech
 
 > This feature is only available on the following devices: Roku
 Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku

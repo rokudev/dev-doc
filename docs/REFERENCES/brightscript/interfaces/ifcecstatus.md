@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifCECStatus
 
 ## Implemented by
 

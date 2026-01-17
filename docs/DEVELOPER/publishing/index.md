@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Pre-publishing checklist
 
 Before submitting an app for publication in a new Streaming Store it previously had not been distributed in, publishers should take the time to make sure their app is compliant with local laws and will provide the best end-user experience for the audience in the new region where the app will be distributed.
 

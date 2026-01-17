@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Label Nodes
 
 Welcome to the Label Nodes section!

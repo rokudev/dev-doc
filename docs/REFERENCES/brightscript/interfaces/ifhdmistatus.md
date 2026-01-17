@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifHdmiStatus
 
 ## Implemented by
 

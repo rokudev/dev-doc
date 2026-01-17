@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Deprecated APIs
 
 Roku periodically deprecates nodes, functions, fields, and attributes when releasing new or updated APIs.
 

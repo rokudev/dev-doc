@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Enabling billing testing
 
 Developers can designate one public or beta app for "billing testing" to observe output from the SceneGraph ChannelStore node in the debug console when the app is sideloaded. The billing testing feature provides developers with visibility into the confirmations, error codes, and other transactional metadata related to purchases made with Roku Pay.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Statement summary
 
 BrightScript supports the following familiar looking statement types:
 

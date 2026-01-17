@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# PosterGrid
 
 Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
 

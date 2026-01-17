@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Viewership Summary Report
 
 You can the Viewership Summary Report to examine the number of visits, streaming hours and rebuffers per hour for your app.
 

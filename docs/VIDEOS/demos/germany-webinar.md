@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Distributing a Channel in Germany Webinar
 
 In September 2021, Roku presented a webinar explaining how to take advantage of Roku’s expansion into Germany by publishing apps to Roku's Germany Streaming Store. Topics covered in this webinar included:
 

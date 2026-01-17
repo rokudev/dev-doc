@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Remote control buttons
 
 The Roku remote is unique to the platform, with a specific set of
 buttons each triggering different commands. Some buttons, like the dPad,

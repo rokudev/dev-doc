@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roBoolean
 
 roBoolean is the object equivalent for intrinsic type Boolean. 
 

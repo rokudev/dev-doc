@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roXMLElement
 
 roXMLElement is used to contain an XML tree.
 

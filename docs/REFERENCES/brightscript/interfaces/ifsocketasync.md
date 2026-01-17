@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSocketAsync
 
 The ifSocketAsync interface provides asynchronous socket features that utilize a full-featured select loop in the Roku OS that communicates to the application using a BrightScript [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort"). This interface is valid on roStreamSocket and roDataGramSocket objects that were assigned a BrightScript port via [SetMessagePort()](/docs/references/brightscript/interfaces/ifsetmessageport.md).
 

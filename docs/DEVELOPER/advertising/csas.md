@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Implementing client-side ad stitching
 
 You can combine video content and ad pods into a single playlist and then render it. This optimizes the video playback experience by eliminating buffering between your content and ads. The Roku Advertising Framework (RAF) API includes [**constructStitchedStream**()](/docs/developer-program/advertising/raf-api.md#constructstitchedstreamcontentmetadata-as-object-ads-as-object-as-object) and [**renderStitchedStream()**](/docs/developer-program/advertising/raf-api.md#renderstitchedstreamcsasstream-as-object-view-as-object-as-boolean) methods that enable you to seamlessly create and render stitched streams.
 

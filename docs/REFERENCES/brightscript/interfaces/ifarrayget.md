@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifArrayGet
 
 The ifArrayGet interface supports the array indexing operator [ ]
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Debugging apps
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit7-debugger-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit7-debugging.png" width="720" height="480" controls />
 

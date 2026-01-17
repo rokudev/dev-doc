@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roInputEvent
 
 The roInput component sends the roInputEvent with the following predicates that indicate its valid event types:
 

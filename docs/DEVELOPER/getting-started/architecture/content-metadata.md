@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Content metadata
 
 Content metadata describes a viewable title that will be shown to the
 user. Content may be any supported type of video and the metadata is

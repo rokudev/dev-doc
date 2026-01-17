@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Reserved words 
 
 Like other programming languages, BrightScript has a number of reserved
 words that have specific meanings to the Roku platform.

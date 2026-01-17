@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# init()
 
 Allows initialization and other scripted control of a SceneGraph XML component.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# New to The Roku Channel - getting started
 
 Welcome to linear channels at Roku! Here are resources to help get you started on launching live and linear content in The Roku Channel.
 

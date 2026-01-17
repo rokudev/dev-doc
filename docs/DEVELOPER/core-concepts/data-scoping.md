@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# SceneGraph data scoping
 
 SceneGraph applications have data object scoping rules that are similar
 to traditional programming languages. You have:

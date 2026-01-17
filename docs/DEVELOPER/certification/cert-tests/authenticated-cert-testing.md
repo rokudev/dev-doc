@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# Channel Behavior Analysis testing for authenticated apps
 
 Developers of authenticated subscription (SVOD), ad-supported (AVOD), and free apps can write automation scripts with the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool) that navigate the app's on-device sign-in and sign-out flows.
 

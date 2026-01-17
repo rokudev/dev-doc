@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roVideoPlayerEvent
 
 The roVideoPlayer sends the roVideoPlayerEvent with the following predicates that indicate its valid event types:
 

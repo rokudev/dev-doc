@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Submitting a Roku Search feed
 
 <video src="https://image.roku.com/ZHZscHItMTc2/search-feed-submission-flow.mp4" poster="https://image.roku.com/ZHZscHItMTc2/search-feed-submission-flow.png" width="720" height="480" controls />
 

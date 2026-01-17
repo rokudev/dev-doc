@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ButtonGroup
 
 Extends [**LayoutGroup**](/docs/references/scenegraph/layout-group-nodes/layoutgroup.md "**LayoutGroup**")
 

@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Media playback
 
 Welcome to the Media playback section!

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Trickplay Thumbnail Webinar
 
 In May 2022, Roku presented a webinar demonstrating how to integrate trickplay thumbnails in an app. Topics covered in this webinar included:
 

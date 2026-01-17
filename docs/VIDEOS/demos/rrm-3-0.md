@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Resource Monitor 3.0 Webinar
 
 In May 2024, Roku's Developer Platform team explained how developers can use the Roku Resource Monitor to identify memory and CPU consumption trends and patterns in their apps. This webinar also highlighted the latest features in the tool, including new graphs that track BrightScript object allocation patterns in apps. 
 

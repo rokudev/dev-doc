@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# TargetSet
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

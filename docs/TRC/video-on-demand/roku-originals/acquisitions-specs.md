@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Acquired content - scripted media delivery specifications
 
 *Version 3.0* - *August 2025*
 

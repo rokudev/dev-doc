@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Node
 
 The abstract base class of all SceneGraph nodes and the equivalent of the BrightScript roSGNode component. See [roSGNode](/docs/references/brightscript/components/rosgnode.md "roSGNode") for supported interfaces.
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Channel Stability Report
 
 You can use the Channel Stability Report to analyze your app's performance based on BrightScript crashes and memory closures. This report includes a graph for each currently supported Roku device model, and each graph plots these two stability metrics for each device model in weekly intervals over the last 30 days (you can change the default reporting period and the data interval).
 

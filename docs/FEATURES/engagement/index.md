@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Content engagement overview
 
 Roku offers a robust promotional toolset for app publishers. This includes several free programs for organically driving content discovery such as [Roku Search](#roku-search), [Instant Signup](#instant-signup), and [Featured Free](#featured-free). These programs provide a high ROI as they typically require a simple integration and no economics.
 

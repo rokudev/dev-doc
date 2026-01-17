@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifDraw2D
 
 Coordinates (x,y) for this interface are based on an origin (0,0) at the top, left. (This is common for 2D drawing APIs, but is different than OpenGL's default coordinate system).
 

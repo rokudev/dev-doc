@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Roku Pay integration requirements
 
 All apps with transactional content or in-app purchases (SVOD, TVOD, and other subscription services) must integrate and enable Roku Pay services. This document lists the requirements for integrating Roku Pay services in an app. Apps must adhere to all of these requirements to pass certification.
 

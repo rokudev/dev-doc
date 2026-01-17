@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Vector2DFieldInterpolator
 
 Extends [**Node**](/docs/references/scenegraph/node.md)
 

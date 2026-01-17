@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Node field observers
 
 All node and component fields can have *observers* attached to them.
 These observers continuously monitor the state of the specified field,

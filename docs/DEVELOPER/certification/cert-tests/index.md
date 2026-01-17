@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Pre-certification tests
 
 These tests describe the specific behavior and attributes an app must demonstrate to pass Roku's certification process. Use this list to create tests for your channel during development. See [Certification](/docs/developer-program/certification/certification.md#preparing-for-certification) for more information on policies and processes as you prepare for certification.
 

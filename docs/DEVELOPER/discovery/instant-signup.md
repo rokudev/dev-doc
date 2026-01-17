@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Instant Signup
 
 Apps using Roku Pay can participate in Roku's Instant Signup program to offer subscription services to customers when they activate their Roku devices. With Instant Signup, customers can subscribe to apps off-device with just a few clicks and then directly access content on the app without any additional steps.
 

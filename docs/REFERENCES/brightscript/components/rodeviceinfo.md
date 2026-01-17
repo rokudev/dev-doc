@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roDeviceInfo
 
 The Device Info provides an interface to obtain attributes about the device.
 

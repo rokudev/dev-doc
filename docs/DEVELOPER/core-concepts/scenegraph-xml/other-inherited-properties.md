@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Other inherited properties
 
 In addition to inheriting a transform matrix from its parent, each node
 in the SceneGraph also inherits visibility and opacity information.

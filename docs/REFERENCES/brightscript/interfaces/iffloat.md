@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifFloat
 
 Interface equivalent for intrinsic type Float
 

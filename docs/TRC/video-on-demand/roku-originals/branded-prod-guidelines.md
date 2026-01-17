@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# **Branded production guidelines**
 
 *Version 3.0 - August 2024*
 

@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Component Functions
 
 Welcome to the Component Functions section!

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku WebDriver
 
 The Roku WebDriver is required to control an app. It can be used in conjunction with the [Roku Robot Framework Library](/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md), [Roku JavaScript library](/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md), another test framework, or a programming language or a programming language such as Python, Java, or Go to execute test cases.
 

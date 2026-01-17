@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Pay reports
 
 Roku Pay includes a suite of analytical, sales, and transactional reports to help publishers manage and track payouts. These reports can be accessed from the Developer Dashboard, and they can be viewed in your web browser, or exported or emailed as a spreadsheet, tab-separated text (TXT) file, comma-separated value (CSV) file, or as a chart.
 

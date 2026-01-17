@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# Automated app testing overview
 
 Roku app developers can use Roku's test automation software to write and execute test cases, including app purchasing, performance, deep linking, and other certification-related testing. Roku provides custom [Selenium](https://selenium.dev)-based [WebDriver APIs](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md) for sending commands to launch apps, send keypresses, and check whether SceneGraph components are present on the screen. Apps can use the WebDriver APIs to control a Roku device, while using a test framework or programming language to create, run, log, and record test cases. To make automated testing even easier, Roku provides [Robot](/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md) and [JavaScript](/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md) libraries and a [Postman collection](#postman-collection).
 

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku's master UI
 
 While developers have the ability to build and design their app to
 meet nearly any aesthetics they prefer, users will still be experiencing

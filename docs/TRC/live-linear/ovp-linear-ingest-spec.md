@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# The Roku Channel live linear ingest specifications (OVP)
 
 *Version 3.2*
 

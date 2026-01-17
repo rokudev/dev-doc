@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roFunction
 
 roFunction is the object equivalent for intrinsic type Function.
 

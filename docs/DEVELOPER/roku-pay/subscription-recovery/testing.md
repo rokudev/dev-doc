@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Enhanced Subscription Recovery testing
 
 If you are using [enhanced subscription recovery](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md), you can use the **subscription-recovery** test API to manually force subscriptions into different states (active, in-grace period, on-hold, passively canceled, and recovered). This helps expedite the testing of your enhanced subscription recovery integration.
 

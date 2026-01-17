@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# BrightScript Profiler
 
 You can use the BrightScript Profiler to pinpoint where performance improvements and efficiencies can be made in your Roku app. The tool enables you to collect and analyze  the following metrics:
 

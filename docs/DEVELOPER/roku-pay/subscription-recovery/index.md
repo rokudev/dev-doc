@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Introduction to Subscription Recovery
 
 Roku Pay includes basic and enhanced subscription recovery solutions to help publishers reduce passive cancellations. When payment for a subscription auto-renewal fails, Roku Pay continuously notifies the customer to update their method of payment (MOP). In addition, Roku Pay provides options for controlling whether customers remain entitled to content while Roku attempts to collect their payment.
 

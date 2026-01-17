@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Xml Elements
 
 Welcome to the Xml Elements section!

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# BrightScript Profiler file format specification
 
 Developers can follow this specification to build a custom profiling tool that analyzes app performance metrics such as CPU and memory usage. This specification describes the entries in the header, body, and footer of a BrightScript profiler file (**.bsprof**) file.  
 

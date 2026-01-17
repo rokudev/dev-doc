@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Video advertisements
 
 The Roku platform enables technical video advertisement propagation and monetization for our app partners. As specified in the [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us), apps that incorporate advertisements into their business model will default to an "**Inventory Split**" model, whereby the app sets up its own ad server and must send 30% of inventory to Roku. Roku retains 100% of revenue from this inventory (but is under no obligation to fill it). The publisher fully controls the remaining 70%, and keeps 100% of the revenue associated with its share of inventory.
 

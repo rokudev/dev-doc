@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Roku Resource Monitor session file specification
 
 Developers can follow this specification to build a custom resource monitoring tool that analyzes the memory, CPU, and SceneGraph node usage metrics collected with the [Roku Resource Monitor](/docs/developer-program/dev-tools/resource-monitor.md). This specification describes the data types and structure of a monitoring session file (.JSON) that has been exported from the Roku Resource Monitor.
 

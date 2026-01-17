@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roDateTime
 
 The roDateTime provides an interface to obtain the current date/time for the player and manipulate date/times.
 

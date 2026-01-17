@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Channel Health Report
 
 You can use the Channel Health Report to examine the number and type of crashes for your app to understand how the app is performing. This report can be especially helpful around the time of a new release for your app when a spike in errors may indicate the need to either rollback or quickly update your app version to prevent the user experience from degrading substantially. Included in this report is a crash log showing BrightScript errors.
 

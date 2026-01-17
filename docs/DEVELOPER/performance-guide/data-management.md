@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Data management
 
 ## Thread ownership of Nodes
 

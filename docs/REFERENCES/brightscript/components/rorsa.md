@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roRSA
 
 The RSA component provides an interface to the OpenSSL RSA library of signing algorithms.
 

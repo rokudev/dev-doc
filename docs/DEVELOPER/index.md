@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Developer
 
 Welcome to the Developer section!

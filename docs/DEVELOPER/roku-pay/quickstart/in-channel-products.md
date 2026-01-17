@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Adding in-app products
 
 > If your Roku Developer account was created after April 30, 2025, see [Creating the product catalog](/docs/developer-program/roku-pay/quickstart/product-catalog.md) for how to create in-app products.
 

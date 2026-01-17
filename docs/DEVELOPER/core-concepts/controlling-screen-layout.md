@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Controlling screen layout
 
 Screen element layout is accomplished in several different ways in
 SceneGraph applications:

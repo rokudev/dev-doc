@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Enrolling in the Roku Partner Payouts Program
 
 Publishers must enroll in the [Roku Partner Payouts Program](https://developer.roku.com/payments/) to monetize content in a Roku app. This enables publishers to receive payouts from video ads, subscriptions, one-time purchases, and pay-to-install apps (games and screensavers). Monetized apps cannot be published without enrollment.
 

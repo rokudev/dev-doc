@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Channel Engagement Report
 
 You can use the Channel Engagement Report to grow your audience by analyzing data about streaming activity and the size of your install base.
 

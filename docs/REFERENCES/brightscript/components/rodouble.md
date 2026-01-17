@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roDouble
 
 roDouble is the object equivalent for intrinsic type 'Double'.
 

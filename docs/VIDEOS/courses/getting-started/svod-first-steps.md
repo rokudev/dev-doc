@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating an SVOD app: First steps
 
 <video src="https://image.roku.com/ZHZscHItMTc2/svod-channel-getting-started.mp4" poster="https://image.roku.com/ZHZscHItMTc2/svod-first-steps.jpg" width="720" height="480" controls />
 

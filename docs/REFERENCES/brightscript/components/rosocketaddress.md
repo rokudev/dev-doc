@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roSocketAddress
 
 
 The roSocketAddress is used by the roStreamSocket and roDataGramSocket components for TCP and UDP traffic respectively.

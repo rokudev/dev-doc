@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Prioritizing authenticated apps
 
 SVOD and TVE apps must communicate the authentication status of customers when they launch your app. Authenticated apps are listed above non-authenticated ones in content discovery features such as the Roku Search; therefore, providing the authentication status prioritizes your app, which helps drive users to your app.
 

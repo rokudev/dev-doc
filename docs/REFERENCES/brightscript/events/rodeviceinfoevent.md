@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# roDeviceInfoEvent
 
 The roDeviceInfo component sends the roDeviceInfoEvent with the following predicates that indicate its valid event types:
 

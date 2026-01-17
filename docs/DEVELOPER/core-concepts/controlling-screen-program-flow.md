@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Controlling screen program flow
 
 SceneGraph applications can control the flow of screen elements in the
 following ways:

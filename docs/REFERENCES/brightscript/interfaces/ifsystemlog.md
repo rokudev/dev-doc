@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSystemLog
 
 ## Implemented by
 

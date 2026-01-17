@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Alternative & documentary production guidelines
 
 *Version 2.3 - February 2024*
 

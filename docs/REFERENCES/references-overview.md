@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Reference overview
 
 The reference materials in this section provide developers with detailed
 syntactic and semantic information about the Roku platform's key development

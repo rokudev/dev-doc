@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Avails and Committed Title List specifications
 
 ## Avails and Committed Title Lists for The Roku Channel
 

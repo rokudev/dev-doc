@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Defining SceneGraph components
 
 A Roku SceneGraph application consists of one or more SceneGraph
 components. These SceneGraph components are defined in XML files, which

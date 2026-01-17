@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roTextureRequest
 
 
 An roTextureRequest is used to make requests to the roTextureManager.

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ZoomRowList
 
 The ZoomRowList node allows a row of the Row-Row Grid to smoothly zoom up to a larger size when that row has focus. Rows in this node are capable of gaining the focus while scrolling, and smoothly zooming up by the specified amount. The amount to zoom can be specified on a per row basis so that some rows can zoom up by a larger amount than others.
 

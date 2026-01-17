@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-#  Manifest file
 
 ## Root level
 

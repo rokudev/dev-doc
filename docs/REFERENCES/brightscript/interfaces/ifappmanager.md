@@ -1,7 +1,6 @@
 ---
 title: ifAppManager
 ---
-# ifAppManager
 
 
 ## Implemented by

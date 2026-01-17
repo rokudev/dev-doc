@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Optimized data transfer and reference handling
 
 Roku OS 15.0 includes new APIs for populating node fields by *moving* rather than *copying* associative arrays. These new APIs overcome the traditional performance issues posed by setting or getting the large associative array fields of nodes. On the render thread, data can now be efficiently accessed by *reference* rather than copying. In addition, rendezvous blocking in task node threads can now be avoided by passing messages asynchronously to the queue of the render thread.
 

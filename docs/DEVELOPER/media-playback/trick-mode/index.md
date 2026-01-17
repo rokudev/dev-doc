@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Trick mode
 
 Trick mode provides visual feedback during playback operations such as seek, forward, and rewind. This function lets a user visualize the timestamp of the content they are seeking. The Roku platform supports two types of trick mode. For apps generating and publishing image archives in the Roku BIF (Base Index Frame), HLS, or DASH standard file formats, a scene-based trick mode using index frames is supported. When the thumbnails necessary to support scene-based trick mode are not available at playback time, a time-based method of supporting trick modes is used instead.
 

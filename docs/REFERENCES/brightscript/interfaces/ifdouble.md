@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifDouble
 
 > Interface equivalent for intrinsic type Double
 

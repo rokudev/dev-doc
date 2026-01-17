@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Displaying video ads
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit10-video-ads-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit10-video-ads.png" width="720" height="480" controls />
 

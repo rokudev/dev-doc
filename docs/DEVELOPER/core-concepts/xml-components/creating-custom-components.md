@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating custom components
 
 A SceneGraph application consists of one or more custom SceneGraph
 components defined in XML files. These component XML files define the

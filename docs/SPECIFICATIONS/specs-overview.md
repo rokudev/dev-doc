@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Specifications overview
 
 
 The specifications contained in this section are intended to enable apps to

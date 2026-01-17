@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifTextureManager
 
 
 ## Implemented by

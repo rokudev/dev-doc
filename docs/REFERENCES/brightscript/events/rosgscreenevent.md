@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roSGScreenEvent
 
 **roSGScreenEvents** are events sent to a scene graph **roSGScreen** by the framework.  Other than when notifying the app's main BrightScript thread that the screen is being closed, and thus that the app should be terminated, apps do not generally handle these events.
 

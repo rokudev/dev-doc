@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Developer Summit 2021
 
 Roku held their annual developer summit online on October 26–27, 2021. The summit started with a keynote address that recapped the past year in streaming and highlighted key industry trends for the upcoming year. The keynote then highlighted the opportunity for publishers to [distribute their apps in Germany](https://partnersuccess.roku.com/hc/en-us/articles/1500006343601) and recapped the latest [Roku Voice features](/docs/developer-program/media-playback/voice-controls/overview.md).  The keynote also included a summary of the latest updates to [self-serve certification](/docs/developer-program/certification/cert-tests/certification-testing.md) and [certification requirements](/docs/developer-program/certification/certification.md).  
 

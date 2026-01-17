@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating the content feed
 
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit4-contentFeed-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit4-content-feed.png" width="720" height="480" controls />
 

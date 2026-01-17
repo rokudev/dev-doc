@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Voice Webinar
 
 In June 2022, Roku updated developers on the latest Roku Voice features. Topics covered in this webinar included:
 

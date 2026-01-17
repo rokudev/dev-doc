@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku development overview
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-overview.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-overview.jpg" width="720" height="480" controls />
 

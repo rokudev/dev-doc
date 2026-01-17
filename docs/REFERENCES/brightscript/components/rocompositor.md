@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roCompositor
 
 The roCompositor allows the composition and animation of multiple roBitmaps and roRegions.
 

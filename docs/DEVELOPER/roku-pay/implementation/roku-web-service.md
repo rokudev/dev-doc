@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Pay web services reference
 
 The Roku Pay APIs are RESTful web services that use standard HTTP methods for transferring billing transaction data between the Roku platform and the publisher's backend system. The Roku Pay APIs enable publishers to validate entitlements to products; refund and cancel subscriptions; issue service credits; and update customer billing cycles.
 

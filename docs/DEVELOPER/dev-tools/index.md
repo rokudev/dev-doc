@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Overview
 
 Prior to using the Roku developer tools, your Roku device must have Developer Settings enabled.
 

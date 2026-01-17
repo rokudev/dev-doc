@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Developer Summit 2024
 
 Roku held its annual developer summit online on September 24–25, 2024.  The summit opened with the keynote address, which included the traditional recap of the past year in streaming and key industry trends, new product and feature announcements, and a summary of new features recently added to the Roku Developer Dashboard. After the keynote, a series of panel discussions were held over two days that included: SceneGraph, Developer tools, community tools, voice AI gaming, test automation, and more. 
 

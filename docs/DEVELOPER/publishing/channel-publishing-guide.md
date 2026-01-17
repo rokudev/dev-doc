@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# App publishing
 
 When your app is tested and ready to deploy, you publish it using the Developer Dashboard. There are two types of app you can work with.
 

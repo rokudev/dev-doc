@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ListPanel
 
 Extends [**Panel**](/docs/references/scenegraph/sliding-panels-nodes/panel.md)
 

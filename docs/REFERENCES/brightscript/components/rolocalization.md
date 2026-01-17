@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roLocalization
 
 
 The roLocalization object provides functions to assist in localization. This object provides functions to assist in localization.

@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Developer Summit 2023
 
 Roku held its annual developer summit online on September 12–13, 2023. The summit opened with remarks from CEO and founder Anthony Wood, who was followed by a series of speakers who recapped the past year in streaming and highlighted key industry trends for the upcoming year; summarized new platform features; and provided updates around video ads, Roku Pay, and the Roku Developer Dashboard.
 

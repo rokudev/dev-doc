@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# User access management in the Developer Dashboard
 
 You can use the [**Roles and access** page in the Developer Dashboard](https://developer.roku.com/account/user-access-list) to enable team members to manage your developer account or specific apps within it. A ***role*** gives a user a set of one or more ***permissions*** to complete specific tasks in your account. Each role has an ***access level***, which determines whether the user can complete tasks for all the apps in your account or just one or more selected apps.  
 

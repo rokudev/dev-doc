@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSGNodeFocus
 
 The ifSGNodeFocus interface is used to query and manipulate the remote control focus of the nodes in a SceneGraph node tree.
 

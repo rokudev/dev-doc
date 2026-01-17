@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# Creating the product catalog
 
 > This document covers the new version of the in-app products UI, which is referred to as Catalog 2.0.
 >

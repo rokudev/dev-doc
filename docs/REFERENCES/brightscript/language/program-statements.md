@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Program statements
 
 ## DIM name (dim1, dim2, …, dimK)
 

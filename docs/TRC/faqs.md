@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# FAQs
 
 ## Ad supported
 

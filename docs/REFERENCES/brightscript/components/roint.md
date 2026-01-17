@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roInt
 
 roInt is the object equivalent for intrinsic type Integer.
 

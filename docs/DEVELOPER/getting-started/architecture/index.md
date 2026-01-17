@@ -11,6 +11,5 @@ next:
   description: ''
 ---
 
-# Architecture
 
 Welcome to the Architecture section!

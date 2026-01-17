@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Error handling in BrightScript
 
 Formal support for error handling  came to BrightScript in Roku OS 9.4, with the introduction of exception trapping. BrightScript's `TRY`/`CATCH`/`THROW` model may be familiar to developers who have worked with other popular programming languages, such as Java or Python. This article provides an overview of error handling under BrightScript, especially as achieved through the exception trapping feature. Detailed statement syntax is discussed in the Reference article about [Program statements](/docs/references/brightscript/language/program-statements.md#try-catch-variable-end-try).
 

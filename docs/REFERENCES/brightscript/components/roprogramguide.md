@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roProgramGuide
 
 Represents Electronic Program Guide (EPG) information from the tuner. 
 

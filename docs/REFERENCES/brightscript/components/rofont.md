@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roFont
 
 roFont represents a particular font, from a font-family (eg. Arial), with a particular pixel size (e.g 20), and a particular boldness or italicness. 
 

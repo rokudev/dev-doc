@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# Implementing Roku Search
 
 Roku Search aggregates content from participating apps into a single, indexed search feed. It helps users find content quickly by entering or saying the name of a movie, TV show, actor/actress, and so on. By participating in Roku Search, any content in your app that matches a query is automatically listed in the search results. This provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement.
 

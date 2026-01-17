@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifAudioResource
 
 ## Implemented by 
 

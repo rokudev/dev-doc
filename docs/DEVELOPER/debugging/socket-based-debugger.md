@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-# BrightScript debug protocol
 
 The Roku socket-based BrightScript debug protocol enables Roku app development to be tightly integrated into Visual Studio Code, Eclipse, and other Integrated Development Environments (IDEs). A tight integration helps expedite Roku app development as an IDE could be used to do the following:
 

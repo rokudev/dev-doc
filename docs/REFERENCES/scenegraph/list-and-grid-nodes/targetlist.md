@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# TargetList
 
 Extends [**TargetGroup**](/docs/references/scenegraph/layout-group-nodes/targetgroup.md)
 

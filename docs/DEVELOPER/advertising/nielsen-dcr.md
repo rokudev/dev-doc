@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Implementing Nielsen Digital Content Ratings (DCR) measurement
 
 Publishers can enable Digital Content Ratings (DCR) measurement on their Roku apps to understand their viewers' content consumption. Nielsen DCR provides publishers with analytics and reporting for the average audience, reach, frequency, gross rating point (GRP) and time spent metrics on the Roku platform. 
 

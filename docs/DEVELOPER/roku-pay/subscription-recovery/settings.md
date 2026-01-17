@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-#  Subscription Recovery settings
 
 You can use the **Subscription recovery** page in the Developer Dashboard to enable Enhanced Subscription Recovery for your apps. The page lists the subscription recovery solution ([basic](/docs/developer-program/roku-pay/subscription-recovery/basic-recovery.md) or [enhanced](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md)) used for each public and beta app in your developer account and lets you enable the enhanced recovery solution.
 

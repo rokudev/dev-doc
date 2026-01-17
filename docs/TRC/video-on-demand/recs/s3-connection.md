@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Direct S3 connection for content delivery
 
 Roku supports a direct S3 to S3 method for content delivery. The Roku delivery bucket for S3 direct connect uses a customer-managed KMS key. Since we are performing cross-account transfers, a KMS key and policy which grants external accounts permissions will be required.
 

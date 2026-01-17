@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Resource Monitor Webinar
 
 In September 2022, Roku demonstrated how developers can use the Roku Resource Monitor to identify resource consumption trends and patterns in their apps. Topics covered in this webinar include:
 

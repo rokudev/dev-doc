@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifImageMetadata
 
 ## Implemented by
 

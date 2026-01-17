@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Global math functions 
 
 The following math functions are part of global. Trig functions use or return radians, not degrees.
 

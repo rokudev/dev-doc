@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Compliance
 
 All app developers must comply with the laws and legislation for the countries their content is available in. The following overview covers the most common factors to consider for apps on the Roku Platform in addition to Roku OS features designed to assist in your legal compliance.
 

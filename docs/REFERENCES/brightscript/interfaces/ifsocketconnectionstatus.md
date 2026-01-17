@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifSocketConnectionStatus
 
 ## Implemented by
 

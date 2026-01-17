@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roUniversalControlEvent
 
 The roScreen object sends the roUniversalControlEvent with the following related methods. If an app constrains the events processed to just the roUniversalControlEvent, the app will work with any controller. The GetID(), GetChar(), GetKey(), and IsPress() methods can be used instead of parsing the GetInt() return value to more effectively distinguish between remote control and keyboard key presses, and the key press and release events.
 

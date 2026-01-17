@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# ifArraySet
 
 The ifArraySet interface supports the array indexing operator [].
 

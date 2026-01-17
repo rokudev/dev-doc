@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# roArray
 
 An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type.
 

@@ -9,7 +9,6 @@ metadata:
   description: ''
   robots: index
 ---
-# BrightScriptDoc
 
 ## Overview
 

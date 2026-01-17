@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Creating a content feed
 
 Every Roku app has a content feed. The content feed is a cloud-hosted file that typically contains hundreds to thousands of titles in a publisher's catalog and detailed metadata about each title such as its unique ID, name, description, artwork, and URL.
 

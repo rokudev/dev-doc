@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Autoplay
 
 Apps may launch video playback automatically within their apps to drive subscriptions, increase engagement, and provide a more immersive user experience. These autoplay experiences include:
 

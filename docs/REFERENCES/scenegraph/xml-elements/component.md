@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# <component\>
 
 The <component\> element defines all aspects of the component defined in a SceneGraph XML component file. Every SceneGraph XML component file must have exactly one <component\> element that contains all other XML elements in the file, which may include:
 

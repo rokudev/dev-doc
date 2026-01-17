@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# BrightScript language reference
 
 
 Roku BrightScript is a powerful scripting language that makes it easy

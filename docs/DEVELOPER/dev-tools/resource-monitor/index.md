@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Roku Resource Monitor
 
 The Roku Resource Monitor tracks and visualizes several key metrics, including system and graphics memory usage, CPU consumption, memory allocation for BrightScript objects, counts for SceneGraph nodes, the number of rendezvous events, and the graphics rendering frame rate. This enables developers to test the different screens in their app and identify resource consumption trends and patterns. 
 

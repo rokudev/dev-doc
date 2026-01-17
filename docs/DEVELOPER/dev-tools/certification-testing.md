@@ -11,7 +11,6 @@ next:
   description: ''
 ---
 
-# Certification testing tool
 
 Developers can use the self-serve certification testing tool in the [Developer Dashboard](https://developer.roku.com/developer) to verify that their apps meet [performance](/docs/developer-program/certification/certification.md#3-performance) and [deep linking](/docs/developer-program/certification/certification.md#5-deep-linking) certification requirements. This enables developers to independently test their apps and update them before formally submitting them for publishing. By identifying any issues prior to submitting their apps, developers can avoid potential delays in the publishing of their apps.
 

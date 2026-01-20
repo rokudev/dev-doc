@@ -88,12 +88,11 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
        end for
    endif
    ```
-3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call.
-   ```
-   https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/transactionid
-   ```
+3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call
 
-<br />
+```
+https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/transactionid
+```
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 

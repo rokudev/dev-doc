@@ -1,9 +1,10 @@
 - roku-remote-tool
 - scenegraph-schema
 - ide-support
-- SceneGraphDeveloperExtensions
+- sgdex
 - rale-tutorial
 - resource-monitor
+- app-tracing
 - brightscript-profiler
 - brs-profiler-file-format
 - external-control-api

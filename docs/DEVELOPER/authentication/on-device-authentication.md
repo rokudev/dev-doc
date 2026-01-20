@@ -1,7 +1,6 @@
 ---
 title: On-Device Authentication
 ---
-
 Apps implement on-device authentications so that customers can complete sign-ups and sign-ins entirely on their Roku devices—without having to visit an external webpage. Additionally, once a customer authenticates on one device, they can automatically be signed in when they activate additional Roku devices linked to their same Roku account.
 
 > Apps that include authentication must complete account sign-ups and sign-ins on the device using on-device authentication to pass [certification](/docs/developer-program/certification/certification.md#2-purchases). Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms.
@@ -85,14 +84,16 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
-   \<result>
-   \<transactionId>\{transactionId}\</transactionId>
-   ...
-   \<isEntitled>true\</isEntitled>
-   ...
-   \<rokuCustomerId>abcdefghijklmnop\</rokuCustomerId>
+   ```
+   <result>
+   		<transactionId>\{transactionId}\</transactionId>
+      ...
+      \<isEntitled>true\</isEntitled>
+      ...
+      \<rokuCustomerId>abcdefghijklmnop\</rokuCustomerId>
    \<expirationDate>2020-08-22T14:59:50\</expirationDate>
    \</result>
+   ```
 
 5. Proceed to the [next section](#check-for-a-valid-access-token-in-the-device-registry) to verify that the customer's device has a valid access token. This is still necessary even if **isEntitled** is true to handle scenarios where the customer has an active subscription but is using a new device or has factory reset their existing device. If **isEntitled** is false, cancel the subscription and remove the entitlement.
 

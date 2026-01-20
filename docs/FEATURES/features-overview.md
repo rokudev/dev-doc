@@ -22,6 +22,9 @@ Our goal is to encourage the success of partners on our platform. We offer multi
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.jpg" width="720" height="480" controls />
 
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.mp4" title="Introduction to the Roku platform" poster="https://image.roku.com/ZHZscHItMTc2/roku-overview-features.jpg"><img src='https://image.roku.com/ZHZscHItMTc2/roku-overview-features.jpg' alt='Introduction to the Roku platform'/>
+</video>
+
 ## What to know before building a streaming app
 
 Roku offers a number of valuable resources for content publishers and developers. These resources explain the Roku platform, starting with an overview of how over-the-top (OTT) video streaming works and drilling all the way down to how to build and monetize a user base on the platform.

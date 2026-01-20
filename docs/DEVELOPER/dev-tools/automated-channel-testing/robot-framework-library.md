@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 <HTMLBlock>{`
-<div class="markdown-body developer-content-body"><h1 id="roku-robot-framework-library">Roku Robot Framework Library</h1>
+<div class="markdown-body developer-content-body">
 <p>Roku's Robot Framework Library enables keyword-driven testing of apps. The library resides in a Python class that has methods that map directly to keyword names. The keywords take the same arguments as the methods implementing them. The keywords report failures with exceptions, create logs by writing to standard output, and return values using the <code>return</code> statement.</p>
 <h2 id="instantiating-the-library">Instantiating the library</h2>
 <p>To create an instance of the Roku Framework Robot Library, provide the following four arguments:</p>

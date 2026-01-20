@@ -1,5 +1,5 @@
 ---
-title: "Roku Search overview"
+title: Roku Search
 excerpt: ''
 deprecated: false
 hidden: true

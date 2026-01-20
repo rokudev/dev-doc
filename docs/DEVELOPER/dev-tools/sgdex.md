@@ -1,5 +1,5 @@
 ---
-title: "SGDEX"
+title: SGDEX
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,8 @@ metadata:
 next:
   description: ''
 ---
-]
+Scene Graph Developer Extensions (SGDEX) is a collection of developer sample code that demonstrates how a developer can use pre-built, reusable Roku Scene Graph (RSG) components to enable rapid development of channels that follow a consistent UX paradigm.
 
-## SceneGraph Developer Extensions
+For more information on using SGDEX, click [here](https://github.com/rokudev/SceneGraphDeveloperExtensions#overview) 
 
-https://github.com/rokudev/SceneGraphDeveloperExtensions#overview
+[https://github.com/rokudev/SceneGraphDeveloperExtensions#overview]()

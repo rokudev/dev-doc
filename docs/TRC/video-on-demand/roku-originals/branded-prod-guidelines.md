@@ -1,5 +1,5 @@
 ---
-title: "**Branded production guidelines**"
+title: "Branded production guidelines"
 excerpt: ''
 deprecated: false
 hidden: true

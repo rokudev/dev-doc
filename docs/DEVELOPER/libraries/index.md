@@ -1,5 +1,5 @@
 ---
-title: Analytics
+title: Roku Analytics Component Library (RACL)
 excerpt: ''
 deprecated: false
 hidden: true

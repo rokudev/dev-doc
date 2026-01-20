@@ -77,7 +77,7 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
 1. Call the [**ChannelStore.getAllPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) command. This command returns all of the historical subscription and one-time purchases made by the customer on the app. It causes the **purchases** field to be set to a **ContentNode** containing the results of the command. The **purchases** contentNode contains a child content node for each purchase.
 
    `myChannelStore.command = "getAllPurchases"`
-2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.  
+2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
    ```
    if (myChannelStore.purchases <> invalid)
        count = myChannelStore.purchases.GetChildCount()
@@ -88,12 +88,12 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
        end for
    endif
    ```
-3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call.  
+3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay web service GET API call.
    ```
    https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/transactionid
    ```
 
-[https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/\{partnerAPIKey}/transactionid](https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/\{partnerAPIKey}/transactionid)
+<br />
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
@@ -116,7 +116,7 @@ To check for a valid access token in the device registry, follow these steps:
 
 1. Create an [**roRegistrySection**](/docs/references/brightscript/components/roregistrysection.md) object. This provides access to your section within the device registry to get and read your keys. When creating the registry section, pass in the name of your registry. This must be the same name used when the registry section was created.
 
-   `reg_sec = CreateObject("roRegistrySection", \<your_registry_section>")`  
+   `reg_sec = CreateObject("roRegistrySection", \<your_registry_section>")`
 
    > To get a list of the keys in the registry section in order to find the one linked to the access token, call the [**roRegistrySection.getKeyList()**](/docs/references/brightscript/interfaces/ifregistrysection.md#getkeylist-as-object) method.
 

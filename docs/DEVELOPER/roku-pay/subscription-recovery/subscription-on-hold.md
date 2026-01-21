@@ -1,8 +1,5 @@
 ---
 title: Enhanced Subscription Recovery
-excerpt: >-
-  Learn about Roku's Enhanced Subscription Recovery feature, its integration
-  steps, and how to manage subscription states effectively.
 deprecated: false
 hidden: true
 link:

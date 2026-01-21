@@ -978,3 +978,12 @@ While time settings are dictated by the content owner, Roku will need the metada
 
 Certain characters in an XML will render the document unreadable by the Roku ingest platform unless handled (escaped) properly. The below characters must be provided in their Escaped Form for all node values that do not support CDATA sections:
 
+| Character Name | Character | Escaped Form |
+| -------------- | --------- | ------------ |
+| Ampersand      | &         | `&amp;`      |
+| Less-than      | \<         | `&lt;`       |
+| Greater-than   | \>         | `&gt;`       |
+| Quotes         | "         | `&quot;`     |
+| Apostrophe     | '         | `&apos;`     |
+
+Special characters should never be used in file names or file name references within the XML or Excel metadata. [See File Naming Guidelines](#file-naming) for more on this.

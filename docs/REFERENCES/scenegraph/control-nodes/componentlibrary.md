@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Extends [**Node**](/docs/references/scenegraph/node.md)
 
 The ComponentLibrary node class downloads a library of custom SceneGraph components to be used in an application. The ComponentLibrary node should be used in a Scene node, such as Scene or OverhangPanelSetScene. One way to ensure that the library downloads before the SceneGraph application begins to compile the components for the application, is to begin the download in the main.brs file that creates the Scene node, by adding an `<interface>` field to the Scene node that can be used to monitor the download, and starts the application when the download is complete.
@@ -58,16 +56,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
 | Field        | Type              | Default                                   | Access Permission | Description           |
 | ------------ | ----------------- | ----------------------------------------- | ----------------- | --------------------- |
-| loadStatus   | value string      | "none"                                    | READ_ONLY         | Indicates the progress of the library download. The possible values are: ${loadStatusValues} |
+| loadStatus   | value string      | "none"                                    | READ_ONLY         | Indicates the progress of the library download. The possible values are:  |
 | id           | string            | no default                                | READ_WRITE        | Set to a unique ID for the library for the application |
 | uri          | uri               | no default                                | READ_WRITE        | The URL of the library to be downloaded |
-
-{#loadStatusValues}
-
-| Value   | Meaning                                            |
-| ------ | ------------------------------------------------- |
-| none    | The default if the library is not being downloaded |
-| loading | Library is downloading                             |
-| ready   | Library has downloaded successfully                |
-| failed  | Download of the library has failed                 |
-

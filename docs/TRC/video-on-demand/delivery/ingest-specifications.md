@@ -965,11 +965,12 @@ Certain characters in an XML will render the document unreadable by the Roku ing
 
 | Character Name | Character | Escaped Form |
 | -------------- | --------- | ------------ |
-| Ampersand      | \&         | `&amp;`      |
+| Ampersand      | &         | `&amp;`      |
 | Less-than      | \<         | `&lt;`       |
 | Greater-than   | \>         | `&gt;`       |
 | Quotes         | "         | `&quot;`     |
 | Apostrophe     | '         | `&apos;`     |
 
 Special characters should never be used in file names or file name references within the XML or Excel metadata. [See File Naming Guidelines](#file-naming) for more on this.
+
 

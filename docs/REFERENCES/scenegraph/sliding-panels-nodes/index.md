@@ -344,3 +344,54 @@ The full width `examplesGridPanel` component was defined as follows,
 setting the `isFullScreen` field to true to automatically slide the
 panel when added to the panel set and
 focused:
+
+```
+<component name="examplesGridPanel" extends="GridPanel" >
+
+<interface>
+  <field id = "overhangtext" type = "string" />
+  <field id = "gridcontenturi" type = "string" onChange = "readpostergrid" />
+</interface>
+
+<script type="text/brightscript" >
+<![CDATA[
+
+sub init()
+  m.top.panelSize = "full"
+  m.top.isFullScreen = true
+  m.top.focusable = true
+  m.top.hasNextPanel = false
+  m.top.createNextPanelOnItemFocus = false
+  m.top.optionsAvailable = true
+  m.top.grid = m.top.findNode("examplesPosterGrid")
+end sub
+
+sub readpostergrid()
+  m.readPosterGridTask = createObject("roSGNode","postergridCR")
+  m.readPosterGridTask.postergriduri = m.top.gridcontenturi
+  m.readPosterGridTask.observeField("postergridcontent","showpostergrid")
+  m.readPosterGridTask.control = "RUN"
+end sub
+
+sub showpostergrid()
+  m.top.grid.content = m.readPosterGridTask.postergridcontent
+  m.top.overhangTitle = m.top.overhangtext
+end sub
+
+]]>
+</script>
+
+<children>
+
+<PosterGrid
+  id = "examplesPosterGrid"
+  basePosterSize = "[520,296]"
+  caption1NumLines = "1"
+  numColumns = "2"
+  numRows = "5"
+  itemSpacing = "[15,15]" />
+
+</children>
+
+</component>
+```

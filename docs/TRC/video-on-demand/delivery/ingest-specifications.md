@@ -850,3 +850,34 @@ Ad break, intro credit, and end credit cue points can be supplied in the MovieLa
         </manifest:Marker>
       </manifest:Markers>
 ```
+
+### MovieLabs schema validation
+
+Roku is using Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html) for parsing & validating the MEC MMC XML files. You can use the command line tool provided in xmlbeans to validate. 
+
+1. Download & extract xmlbeans to local
+2. From command line, cd to the xmlbeans bin directory
+3. Inside bin directory you will find the validate tool
+4. Also download the official MovieLab schema xsd files to local ( https://movielabs.com/schema/manifest/v1.10/manifest-v1.10.xsd https://movielabs.com/schema/mdmec/v2.9/mdmec-v2.9.xsd )
+5. Usage: validate schema.xsd instance.xml ( be sure to point schema.xsd to mdmec-v2.9.xsd for MEC, and manifest-v1.10.xsd for MMC )
+6. From the command line output you can tell if the given xml is valid or not
+
+**Example usage**
+
+```
+./validate ~/dev/movielabsSpec/schema/mdmec-v2.9.xsd /path/to/file/directory/MEC_SAMPLE_123456789.xml
+```
+
+**Example response**
+
+```
+XMLBEANS_LIB=./../lib
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+/path/to/file/directory /MEC_SAMPLE_123456789.xml valid
+```
+
+## Metadata requirements
+
+Roku utilizes a transform engine that can “normalize” different metadata formats to fit Roku’s ingestion needs. Exact element or field names are not as important as consistent delivery of agreed upon element or field names. The data within any field must conform to Roku Channel Ingest Specification regardless of element or field name. If you use an XML format for delivery of your content to other platforms, you may be able to repurpose this for delivery to Roku. You may provide a sample of this existing metadata format during onboarding for Roku to evaluate validity for ingest into Roku Channel. Regardless of the format delivered, all required elements/fields must be provided in the metadata deliverable.
+
+### Minimum required metadata by content type

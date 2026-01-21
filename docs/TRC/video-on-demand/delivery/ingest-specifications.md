@@ -1079,3 +1079,19 @@ Some fields need to be updated in "groups". All required fields in a group must 
  -  End Date (required)
 
 Upload the metadata update to the "prod" folder in Aspera
+
+*If you do not see the update reflected on Roku Channel within 24 hours, please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com)*
+
+**File replacements and additions**
+
+File replacements and additions are automated and will be processed in the same manner as content that needs to be ingested into Roku Channel's content library. A file replacement will replace a file that currently exists in Roku Channel's library. A file addition will add a new file to an existing record in Roku Channel's library. A file addition would be used to add localized subtitles or dubs to an existing record. Please follow the procedure outlined below to replace one or more files.
+
+1. File replacements and additions must be delivered in the same format as the ingest metadata
+2. File replacements and additions must include **the exact same asset ID** that was included when the content was originally ingested
+
+ - *Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system*
+
+3. Only the file name references of the files that are being replaced or added should be included in the metadata file. Any file that is not being replaced or added should not be delivered or referenced in the metadata file.
+4. If the source video file is being replaced and there is a change in the duration of the source, any related files (captions, subtitles, audio dubs) should also be replaced.
+5. File replacements require language values in order to update properly
+6. Upload the file replacement or addition metadata to the "prod" folder in Aspera

@@ -10,12 +10,40 @@ metadata:
 next:
   description: ''
 ---
+<br />
+
+## Fields
+
+See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor> node and its base classes ([Group](/docs/references/scenegraph/layout-group-nodes/group.md) and [Node](/docs/references/scenegraph/node.md)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Access Permission</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>keyGrid</td>
+      <td>DynamicKeyGrid node</td>
+      <td>The DynamicKeyGrid node associated with the keyboard</td>
+      <td>READ</td>
+      <td>Provides access to the internal <strong>DynamicKeyGrid</strong> node of this <strong>DynamicKeyboardBase</strong> component.<br /><br />Do not set this field to null or to a different DynamicKeyGrid node; this field should be used only to access the fields of this component's internal DynamicKeyGrid node.<br /><blockquote><p>The <strong>DynamicKeyGrid</strong>.<strong>keyDefinitionUri</strong> field must be set to the custom Key Definition File that defines the keyboard's layout.</p></blockquote></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Default VoiceTextEditBox settings
 
-| Field          | Type    | Default   | Description                                                  |
-| :------------- | :------ | :-------- | :----------------------------------------------------------- |
-| voiceEntryType | string  | "generic" | The type of characters accepted via voice entry.             |
-| voiceEnabled   | boolean | true      | Specifies whether voice entry is enabled for the text edit box of the dynamic keyboard. |
+| Field          | Type    | Default   | Description                                                                                          |
+| :------------- | :------ | :-------- | :--------------------------------------------------------------------------------------------------- |
+| voiceEntryType | string  | "generic" | The type of characters accepted via voice entry.                                                     |
+| voiceEnabled   | boolean | true      | Specifies whether voice entry is enabled for the text edit box of the dynamic keyboard.              |
 | maxTextLength  | integer | 75        | The maximum number of characters that may be entered into the text edit box of the dynamic keyboard. |
 
 ## Sample Key Definition File

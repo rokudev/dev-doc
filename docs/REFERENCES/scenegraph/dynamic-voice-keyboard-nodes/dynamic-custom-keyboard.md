@@ -63,7 +63,7 @@ The following example demonstrates a custom key handler:
 1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:
 
         "keys": [
-            { "label": "Aa", "strOut": "ChangeCase" },
+            \{ "label": "Aa", "strOut": "ChangeCase" \},
             <OTHER KEYS>
         ]
 
@@ -98,7 +98,7 @@ In most cases, the default key selection handlers can be used for modifying the 
 1. The Key Definition File includes a key definition with an action intended to duplicate the character to the left of the cursor position, positioning the cursor after the duplicated character:
 
         "keys": [
-            { "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" },
+            \{ "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" \},
             <OTHER KEYS>
         ]
 
@@ -126,13 +126,29 @@ In most cases, the default key selection handlers can be used for modifying the 
 
 See the [DynamicKeyboardBase](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md "DynamicKeyboardBase") node and its base classes ([Group](/docs/references/scenegraph/layout-group-nodes/group.md) and [Node](/docs/references/scenegraph/node.md)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
 
-| Field   | Type                | Default                                              | Access Permission | Description                                                  |
-| :------ | :------------------ | :--------------------------------------------------- | :---------------- | :----------------------------------------------------------- |
-| keyGrid | DynamicKeyGrid node | The DynamicKeyGrid node associated with the keyboard | READ              | Provides access to the internal **DynamicKeyGrid** node of this **DynamicKeyboardBase** component.<br /><br />Do not set this field to null or to a different DynamicKeyGrid node; this field should be used only to access the fields of this component's internal DynamicKeyGrid node.<br />${bq-key-grid-note} |
 
-{#bq-key-grid-note}
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyGrid</td>
+<td>DynamicKeyGrid node</td>
+<td>The DynamicKeyGrid node associated with the keyboard</td>
+<td>READ</td>
+<td>Provides access to the internal <strong>DynamicKeyGrid</strong> node of this <strong>DynamicKeyboardBase</strong> component.<br /><br />Do not set this field to null or to a different DynamicKeyGrid node; this field should be used only to access the fields of this component's internal DynamicKeyGrid node.<br /><blockquote><p>The <strong>DynamicKeyGrid</strong>.<strong>keyDefinitionUri</strong> field must be set to the custom Key Definition File that defines the keyboard's layout.</p></blockquote></td>
+</tr>
+</tbody>
+</table>
 
-> The **DynamicKeyGrid**.**keyDefinitionUri** field must be set to the custom Key Definition File that defines the keyboard's layout.
+
 
 ## Default VoiceTextEditBox settings
 

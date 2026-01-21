@@ -51,12 +51,39 @@ A **Section** contains one or more **Grid** objects.
 
 A **Section** may contain one or more **Grid** objects. A **Section** typically contains multiple **Grid** objects when defining different key layouts for a particular mode of the overall **KeyLayout**. For example, the "alpha key" section of Roku's current WiFi keyboard has six modes ("alphanumLowerCase", "alphanumUpperCase", "symbolsLowerCase", "symbolsUpperCase", "accentsLowerCase", "accentsUpperCase"). Each of the modes for these **Section** objects is specified using a different **Grid**.
 
-| Attribute     | Type                     | Description                                                  |
-| :------------ | :----------------------- | :----------------------------------------------------------- |
-| gridHeightFHD | unsigned                 | Height of the grid for FHD.This attribute is only required if the **Section** includes multiple **Grid** objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height. |
-| gridHeightHD  | unsigned                 | Height of the grid for HD.This attribute is only required if the **Section** includes multiple **Grid** objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height. |
-| modes         | string/array of strings  | The keyboard mode when this grid is shown.If the **mode** field of a **[DynamicKeyGrid](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md)** node is set, the **Grid** object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's WiFi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes. |
-| rows          | array of **Row** objects | An array of **Row** objects in the **Grid**. A **Grid** object contains one or more **Row** objects (it must have at least one).If the *rows* array contains a null Row (for example, {} in the *rows* array), a blank space will be shown (no key background, label or icon is drawn) and focus cannot be set on that Row object. |
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gridHeightFHD</td>
+<td>unsigned</td>
+<td>Height of the grid for FHD.This attribute is only required if the <strong>Section</strong> includes multiple <strong>Grid</strong> objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height.</td>
+</tr>
+<tr>
+<td>gridHeightHD</td>
+<td>unsigned</td>
+<td>Height of the grid for HD.This attribute is only required if the <strong>Section</strong> includes multiple <strong>Grid</strong> objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height.</td>
+</tr>
+<tr>
+<td>modes</td>
+<td>string/array of strings</td>
+<td>The keyboard mode when this grid is shown.If the <strong>mode</strong> field of a <strong><a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md">DynamicKeyGrid</a></strong> node is set, the <strong>Grid</strong> object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's WiFi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes.</td>
+</tr>
+<tr>
+<td>rows</td>
+<td>array of <strong>Row</strong> objects</td>
+<td>An array of <strong>Row</strong> objects in the <strong>Grid</strong>. A <strong>Grid</strong> object contains one or more <strong>Row</strong> objects (it must have at least one).If the <em>rows</em> array contains a null Row (for example, {} in the <em>rows</em> array), a blank space will be shown (no key background, label or icon is drawn) and focus cannot be set on that Row object.</td>
+</tr>
+</tbody>
+</table>
+
 
 ## Row
 
@@ -88,17 +115,30 @@ A **Key** specifies a single key within a **Row** object. The **Key** defines th
 
 A **KeySuggestions** object specifies one or more optional values for the associated **Key** object. The optional values are displayed when one of the key's triggers occurs.
 
-| Attribute | Type                    | Description                                                  |
-| :-------- | :---------------------- | :----------------------------------------------------------- |
-| options   | string/array of strings | The optional strings associated with the **Key** object (for example, the @ key may have options of @[gmail.com](http://gmail.com/), @[msn.com](http://msn.com/), and so on). |
-| triggers  | string/array of strings | The actions that trigger the suggestions pop-up. This may be one or both of the following values:<br /><br />${triggers-table} |
 
-{#triggers-table}
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td>string/array of strings</td>
+<td>The optional strings associated with the <strong>Key</strong> object (for example, the @ key may have options of @<a href="http://gmail.com/">gmail.com</a>, @<a href="http://msn.com/">msn.com</a>, and so on).</td>
+</tr>
+<tr>
+<td>triggers</td>
+<td>string/array of strings</td>
+<td>The actions that trigger the suggestions pop-up. This may be one or both of the following values:<br /><br /><table><thead><tr><th>string</th><th>description</th></tr></thead><tbody><tr><td>select</td><td>The suggestions pop-up appears when the key is selected.</td></tr><tr><td>hover</td><td>The suggestions pop-up appears if focus remains on the key for a short interval.</td></tr></tbody></table></td>
+</tr>
+</tbody>
+</table>
 
-| string | description                                                  |
-| :----- | :----------------------------------------------------------- |
-| select | The suggestions pop-up appears when the key is selected.     |
-| hover  | The suggestions pop-up appears if focus remains on the key for a short interval. |
+
 
 ## Computing Key Sizes
 

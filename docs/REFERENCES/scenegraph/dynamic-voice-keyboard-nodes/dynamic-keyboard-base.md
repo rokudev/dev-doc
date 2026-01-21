@@ -37,13 +37,56 @@ The DynamicKeyboardBase is an abstract class that provides the functionality for
 
 ## Fields
 
-| Field                                           | Type                                                         | Default                                           | Access Permission | Description                                                  |
-| :---------------------------------------------- | :----------------------------------------------------------- | :------------------------------------------------ | :---------------- | :----------------------------------------------------------- |
-| text                                            | string                                                       | ""                                                | READ_WRITE        | Contains the string of characters that has been entered. The text written to this field may also be displayed in the VoiceTextEditBox. |
-| textEditBox                                     | [**VoiceTextEditBox** node](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) | The VoiceTextEditBox associated with the keyboard | READ              | The internal [VoiceTextEditBox node](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different VoiceTextEditBox node; this field should be used only to access the fields of this node's internal VoiceTextEditBox node. |
-| hideTextBox | boolean                                                      | false                                             | READ_WRITE        | Hides the keyboard's internal **VoiceTextEditBox**, and renders the keyboard's **DynamicKeyGrid** at the top of the node. |
-| keyGrid                                         | **[DynamicKeyGrid node](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md)** | The DynamicKeyGrid associated with the keyboard   | READ              | The internal [DynamicKeyGrid node](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md) used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different DynamicKeyGrid node; this field should be only used to access the fields of this node's internal DynamicKeyGrid node, such as the mode or horizWrapping fields. |
-| domain                                          | string                                                       | "generic"                                         | READ_WRITE        | The keyboard mode, which may be one of the following:<br />${domain-mode-list}<br />The domain may be used to:<br />${domain-use-list} |
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>string</td>
+<td>""</td>
+<td>READ_WRITE</td>
+<td>Contains the string of characters that has been entered. The text written to this field may also be displayed in the VoiceTextEditBox.</td>
+</tr>
+<tr>
+<td>textEditBox</td>
+<td><a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md"><strong>VoiceTextEditBox</strong> node</a></td>
+<td>The VoiceTextEditBox associated with the keyboard</td>
+<td>READ</td>
+<td>The internal <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md">VoiceTextEditBox node</a> used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different VoiceTextEditBox node; this field should be used only to access the fields of this node's internal VoiceTextEditBox node.</td>
+</tr>
+<tr>
+<td>hideTextBox</td>
+<td>boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Hides the keyboard's internal <strong>VoiceTextEditBox</strong>, and renders the keyboard's <strong>DynamicKeyGrid</strong> at the top of the node.</td>
+</tr>
+<tr>
+<td>keyGrid</td>
+<td><strong><a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md">DynamicKeyGrid node</a></strong></td>
+<td>The DynamicKeyGrid associated with the keyboard</td>
+<td>READ</td>
+<td>The internal <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md">DynamicKeyGrid node</a> used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different DynamicKeyGrid node; this field should be only used to access the fields of this node's internal DynamicKeyGrid node, such as the mode or horizWrapping fields.</td>
+</tr>
+<tr>
+<td>domain</td>
+<td>string</td>
+<td>"generic"</td>
+<td>READ_WRITE</td>
+<td>The keyboard mode, which may be one of the following:<br /><ul><li>"email": letter-by-letter dictation for emails.</li><li>"numeric": letter-by-letter dictation for PIN codes, zip codes, and other numeric input.</li><li>"alphanumeric": letter-by-letter dication for street addresses or other sequences of numbers and letters.</li><li>"generic": Full word input for search queries or other sequences of numbers, letters and symbols.</li><li>"password": letter-by-letter dication for passwords.</li></ul><br />The domain may be used to:<br /><ul><li>Set options for the speech recognition system.</li><li>Identify when a complete string has been entered (for example, an email address).</li><li>Specify whether the entered string is displayed as a single string or a discrete sequence of characters (for example, a PIN code).</li><li>Enable key suggestions (for example, a pop-up for the ampersand key (&amp;) to provide common email choices).</li></ul></td>
+</tr>
+</tbody>
+</table>
+
 
 ## UX recommendations
 
@@ -58,18 +101,3 @@ The DynamicKeyboardBase is an abstract class that provides the functionality for
 ## Sample app
 
 You can download and install a [sample app](https://github.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure dynamic voice-enabled keyboards. The sample app includes a voice-enabled keyboard, PIN pad, mini-keyboard, and custom keyboard (an address keyboard form).
-
-{#domain-mode-list}
-
-- "email": letter-by-letter dictation for emails.
-- "numeric": letter-by-letter dictation for PIN codes, zip codes, and other numeric input.
-- "alphanumeric": letter-by-letter dication for street addresses or other sequences of numbers and letters.
-- "generic": Full word input for search queries or other sequences of numbers, letters and symbols.
-- "password": letter-by-letter dication for passwords.
-
-{#domain-use-list}
-
-- Set options for the speech recognition system.
-- Identify when a complete string has been entered (for example, an email address).
-- Specify whether the entered string is displayed as a single string or a discrete sequence of characters (for example, a PIN code).
-- Enable key suggestions (for example, a pop-up for the ampersand key (&) to provide common email choices).

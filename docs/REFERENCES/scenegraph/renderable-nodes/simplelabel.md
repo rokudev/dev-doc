@@ -114,70 +114,60 @@ Rotation of SimpleLabel nodes is supported. The center of rotation is determined
 
 ## Fields
 
-| Field       | Type    | Default        | Description                                         |
-| ---------- | ------ | ------------- | ----------------------------------------------------------- |
-| text        | string  | ""             | Specifies the text to be displayed                           |
-| color       | color   | 0xddddddff     | Specifies the text color                                     |
-| fontUri     | string  | system default | Specifies either a path to a TrueType or OpenType font file or a built-in system font name.<br /><br />For TrueType or OpenType font files, the file must be included with the application (e.g. `pkg:/fonts/SomeFontFile.ttf`). If no fontUri is specified, the System Default font is used.<br /><br />The table below shows the options for using built-in system fonts. The "**Fixed Size?"** column indicates whether the `fontSize` field of the **SimpleLabel** is respected or not. For those where the size is fixed, the font size cannot be modified.${fontUriTable} |
-| fontSize | integer | system default | Specifies the size of the font in points. As noted in the description of the `fontUri` field, the use of fixed size system fonts ignores the value of the `fontSize` field. |
-| horizOrigin | string  | left           | See [**Horizontal Origin**](/docs/references/scenegraph/renderable-nodes/simplelabel.md#SimpleLabel-HorizontalOrigin)  |
-| vertOrigin  | string  | top            | See [**Vertical Origin**](/docs/references/scenegraph/renderable-nodes/simplelabel.md#SimpleLabel-VerticalOrigin) |
 
-{#fontUriTable}
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>string</td>
+<td>""</td>
+<td>Specifies the text to be displayed</td>
+</tr>
+<tr>
+<td>color</td>
+<td>color</td>
+<td>0xddddddff</td>
+<td>Specifies the text color</td>
+</tr>
+<tr>
+<td>fontUri</td>
+<td>string</td>
+<td>system default</td>
+<td>Specifies either a path to a TrueType or OpenType font file or a built-in system font name.<br /><br />For TrueType or OpenType font files, the file must be included with the application (e.g. <code>pkg:/fonts/SomeFontFile.ttf</code>). If no fontUri is specified, the System Default font is used.<br /><br />The table below shows the options for using built-in system fonts. The "<strong>Fixed Size?"</strong> column indicates whether the <code>fontSize</code> field of the <strong>SimpleLabel</strong> is respected or not. For those where the size is fixed, the font size cannot be modified.<table><thead><tr><th>fontUri String</th><th>Fixed Size?</th></tr></thead><tbody><tr><td><code>font:SmallestSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:SmallSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:MediumSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:LargeSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:SmallestBoldSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:SmallBoldSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:MediumBoldSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:LargeBoldSystemFont</code></td><td>Yes</td></tr><tr><td><code>font:SystemFontFile</code></td><td>No</td></tr><tr><td><code>font:BoldSystemFontFile</code></td><td>No</td></tr><tr><td>System Default (field not set)</td><td>Yes</td></tr></tbody></table><p><br />The following <a href="/docs/references/scenegraph/layout-group-nodes/group.md#fields" title="Fields">Fields</a> derived from the Group base class can also be used:</p><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Access Permission</th><th>Description</th></tr></thead><tbody><tr><td>scaleRotateCenter</td><td>vector2d</td><td>[0.0,0.0]</td><td>READ_WRITE</td><td>Describes the location of a point in the node local coordinate that serves as the center of the scale and rotation operations</td></tr><tr><td>visible</td><td>Boolean</td><td>true</td><td>READ_WRITE</td><td>If true, the node and its children are rendered. If false, the node and its children do not render</td></tr><tr><td>inheritParentOpacity</td><td>Boolean</td><td>true</td><td>READ_WRITE</td><td>If true, the node opacity is determined by multiplying opacity attribute of the node by the opacity of the parent node, which may have been determined by multiplying the opacity of its ancestor nodes. If false, the node opacity is determined by the opacity attribute set for the node or the default opacity attribute value</td></tr><tr><td>rotation</td><td>float</td><td>0.0</td><td>READ_WRITE</td><td>Defines the rotation angle about the scaleRotateCenter point (in radians) of the node local coordinate system. Positive values specify a counterclockwise rotation, negative values specify a clockwise rotation. For some Roku Player hardware, specifically Roku Players without OpenGL graphics support, only rotations of 0, 90, 180 and 270 degrees (in equivalent radians) are supported. (See <a href="/docs/specs/hardware.md#current-models" title="Roku Models and Features">Roku Models and Features</a> for information on OpenGL support)</td></tr><tr><td>scale</td><td>vector2d</td><td>[1.0,1.0]</td><td>READ_WRITE</td><td>Defines the scale factor to be applied to the node local coordinate</td></tr><tr><td>renderTracking</td><td>option as string</td><td>disabled</td><td>READ_WRITE</td><td>renderTracking is set to "disabled" when enableRenderTracking is set to false. The following options are only available when enableRenderTracking is set to true: ${renderTracking}</td></tr><tr><td>inheritParentTransform</td><td>Boolean</td><td>true</td><td>READ_WRITE</td><td>If true, the node overall transformation is determined by combining the accumulated transformation matrix of all of its ancestors in the SceneGraph with the node local 2D transformation matrix described by its translation, rotation, scale and scaleRotateCenter fields. If false, the accumulated transformation of all of its ancestors in the SceneGraph is ignored and only the node local transformation matrix is used. This causes the node to be transformed relative to the root of the SceneGraph (that is, the Scene component)</td></tr><tr><td>renderPass</td><td>integer</td><td>0</td><td>READ_WRITE</td><td>Used in combination with the numRenderPasses field of nodes extended from the <a href="/docs/references/scenegraph/abstract-nodes/arraygrid.md" title="ArrayGrid">ArrayGrid</a> abstract node class, to optimize rendering of lists and grids. This should never be set to a non-zero value unless you are optimizing the performance of a list or grid rendering by specifying the sequence of rendering operations for sub-elements of the list or grid items, and have set the numRenderPasses field value for the list or grid to a value greater than 1. If the numRenderPasses field value for the list or grid is set to a value greater than 1, you must set this field to a value greater than 0 for all sub-elements of the list or grid items, and not greater than the numRenderPasses field value. If the numRenderPasses field is set to a value greater than 1, and you set this field for a list or grid item sub-element to 0 (the default), or a value greater than the numRenderPasses field value, the list or grid item sub-element will not render</td></tr><tr><td>childRenderOrder</td><td>option as string</td><td>renderLast</td><td>READ_WRITE</td><td>${childRenderOrder}</td></tr><tr><td>clippingRect</td><td>array of float</td><td>[ 0.0, 0.0, 0.0, 0.0 ]</td><td>READ_WRITE</td><td>Specifies a rectangle in the node local coordinate system that is used to limit the region where this node and its children can render. If a non-empty rectangle is specified, then all drawing by this node and its children will be limited to that rectangular area. ${clippingRectValues}</td></tr><tr><td>enableRenderTracking</td><td>Boolean</td><td>false</td><td>READ_WRITE</td><td>If true, renderTracking will be set to a string describing how much of the node is rendered on screen</td></tr><tr><td>translation</td><td>vector2d</td><td>[0.0,0.0]</td><td>READ_WRITE</td><td>Defines the origin of the node local coordinate system relative to its parent node</td></tr><tr><td>opacity</td><td>float</td><td>1.0</td><td>READ_WRITE</td><td>Sets the opacity of the node and its children. Opacity is the opposite of transparency. Opacity values range from 0.0 (fully transparent) to 1.0 (fully opaque). As the SceneGraph is traversed, the opacity values are combined by multiplying the current accumulated opacity with the node opacity, so that if the accumulated opacity of a node ancestors is 0.25 (75% transparent), the node will have opacity of 0.25 or less. This allows entire branches of the SceneGraph to fade in and out by animating the opacity of the node at the root of the branch</td></tr><tr><td>muteAudioGuide</td><td>Boolean</td><td>false</td><td>READ_WRITE</td><td>Set to true to suppress the default CVAA text to speech. This allows apps to provide their own custom implementation</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>fontSize</td>
+<td>integer</td>
+<td>system default</td>
+<td>Specifies the size of the font in points. As noted in the description of the <code>fontUri</code> field, the use of fixed size system fonts ignores the value of the <code>fontSize</code> field.</td>
+</tr>
+<tr>
+<td>horizOrigin</td>
+<td>string</td>
+<td>left</td>
+<td>See <a href="/docs/references/scenegraph/renderable-nodes/simplelabel.md#SimpleLabel-HorizontalOrigin"><strong>Horizontal Origin</strong></a></td>
+</tr>
+<tr>
+<td>vertOrigin</td>
+<td>string</td>
+<td>top</td>
+<td>See <a href="/docs/references/scenegraph/renderable-nodes/simplelabel.md#SimpleLabel-VerticalOrigin"><strong>Vertical Origin</strong></a></td>
+</tr>
+</tbody>
+</table>
 
-| fontUri String                 | Fixed Size? |
-| ----------------------------- | ---------- |
-| `font:SmallestSystemFont`      | Yes         |
-| `font:SmallSystemFont`         | Yes         |
-| `font:MediumSystemFont`        | Yes         |
-| `font:LargeSystemFont`         | Yes         |
-| `font:SmallestBoldSystemFont`  | Yes         |
-| `font:SmallBoldSystemFont`     | Yes         |
-| `font:MediumBoldSystemFont`    | Yes         |
-| `font:LargeBoldSystemFont`     | Yes         |
-| `font:SystemFontFile`          | No          |
-| `font:BoldSystemFontFile`      | No          |
-| System Default (field not set) | Yes         |
 
-<br/>The following [Fields](/docs/references/scenegraph/layout-group-nodes/group.md#fields "Fields") derived from the Group base class can also be used:
 
-| Field                  | Type              | Default                                   | Access Permission | Description           |
-| ---------------------- | ----------------- | ----------------------------------------- | ----------------- | --------------------- |
-| scaleRotateCenter                           | vector2d          | [0.0,0.0]                                 | READ_WRITE        | Describes the location of a point in the node local coordinate that serves as the center of the scale and rotation operations |
-| visible                                     | Boolean           | true                                      | READ_WRITE        | If true, the node and its children are rendered. If false, the node and its children do not render |
-| inheritParentOpacity                        | Boolean           | true                                      | READ_WRITE        | If true, the node opacity is determined by multiplying opacity attribute of the node by the opacity of the parent node, which may have been determined by multiplying the opacity of its ancestor nodes. If false, the node opacity is determined by the opacity attribute set for the node or the default opacity attribute value |
-| rotation                                    | float             | 0.0                                       | READ_WRITE        | Defines the rotation angle about the scaleRotateCenter point (in radians) of the node local coordinate system. Positive values specify a counterclockwise rotation, negative values specify a clockwise rotation. For some Roku Player hardware, specifically Roku Players without OpenGL graphics support, only rotations of 0, 90, 180 and 270 degrees (in equivalent radians) are supported. (See [Roku Models and Features](/docs/specs/hardware.md#current-models "Roku Models and Features") for information on OpenGL support) |
-| scale                                       | vector2d          | [1.0,1.0]                                 | READ_WRITE        | Defines the scale factor to be applied to the node local coordinate |
-| renderTracking            | option as string  | disabled                                  | READ_WRITE        | renderTracking is set to "disabled" when enableRenderTracking is set to false. The following options are only available when enableRenderTracking is set to true: ${renderTracking} |
-| inheritParentTransform                      | Boolean           | true                                      | READ_WRITE        | If true, the node overall transformation is determined by combining the accumulated transformation matrix of all of its ancestors in the SceneGraph with the node local 2D transformation matrix described by its translation, rotation, scale and scaleRotateCenter fields. If false, the accumulated transformation of all of its ancestors in the SceneGraph is ignored and only the node local transformation matrix is used. This causes the node to be transformed relative to the root of the SceneGraph (that is, the Scene component) |
-| renderPass                                  | integer           | 0                                         | READ_WRITE        | Used in combination with the numRenderPasses field of nodes extended from the [ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md "ArrayGrid") abstract node class, to optimize rendering of lists and grids. This should never be set to a non-zero value unless you are optimizing the performance of a list or grid rendering by specifying the sequence of rendering operations for sub-elements of the list or grid items, and have set the numRenderPasses field value for the list or grid to a value greater than 1. If the numRenderPasses field value for the list or grid is set to a value greater than 1, you must set this field to a value greater than 0 for all sub-elements of the list or grid items, and not greater than the numRenderPasses field value. If the numRenderPasses field is set to a value greater than 1, and you set this field for a list or grid item sub-element to 0 (the default), or a value greater than the numRenderPasses field value, the list or grid item sub-element will not render |
-| childRenderOrder                            | option as string  | renderLast                                | READ_WRITE        | ${childRenderOrder} |
-| clippingRect                                | array of float    | [ 0.0, 0.0, 0.0, 0.0 ]                    | READ_WRITE        | Specifies a rectangle in the node local coordinate system that is used to limit the region where this node and its children can render. If a non-empty rectangle is specified, then all drawing by this node and its children will be limited to that rectangular area. ${clippingRectValues} |
-| enableRenderTracking | Boolean           | false                                     | READ_WRITE        | If true, renderTracking will be set to a string describing how much of the node is rendered on screen |
-| translation                                 | vector2d          | [0.0,0.0]                                 | READ_WRITE        | Defines the origin of the node local coordinate system relative to its parent node |
-| opacity                                     | float             | 1.0                                       | READ_WRITE        | Sets the opacity of the node and its children. Opacity is the opposite of transparency. Opacity values range from 0.0 (fully transparent) to 1.0 (fully opaque). As the SceneGraph is traversed, the opacity values are combined by multiplying the current accumulated opacity with the node opacity, so that if the accumulated opacity of a node ancestors is 0.25 (75% transparent), the node will have opacity of 0.25 or less. This allows entire branches of the SceneGraph to fade in and out by animating the opacity of the node at the root of the branch |
-| muteAudioGuide           | Boolean           | false                                     | READ_WRITE        | Set to true to suppress the default CVAA text to speech. This allows apps to provide their own custom implementation |
 
-{#childRenderOrder}
 
-| Option          | Description                                                  |
-| -------------- | ----------------------------------------------------------- |
-| `"renderFirst"` | any drawing done by this node will be done **before** the node children are rendered |
-| `"renderLast"`  | any drawing done by this node will be done **after** the node children are rendered |
-
-{#renderTracking}
-
-| Option      | Description                                                  |
-| ---------- | ----------------------------------------------------------- |
-| `"none"`    | renderTracking is set to `"none"` if **one or more** of these conditions is true:<br/><ul><li>the node's `visible` field is set to `false`</li><li>the node's `opacity` field is set to `0.0`</li><li>no `clippingRect` is specified and the node is completely offscreen</li><li>a `clippingRect` is specified and the node lies completely outside that `clippingRect's` coordinates or is completely offscreen</li></ul> |
-| `"partial"` | renderTracking is set to `"partial"` if **all** of the following conditions are true:<br/><ul><li>the node's `visible` field is set to `true`</li><li>the node's `opacity` field is greater than `0.0`</li><li>no `clippingRect` is specified and the node is partially offscreen</li><li>a `clippingRect` is specified and the node lies partially inside the `clippingRect's` coordinates</li></ul> |
-| `"full"`    | renderTracking is set to `"full"` if **all** of the following conditions are true:<br/><ul><li>the node's `visible` field is set to `true`</li><li>the node's `opacity` field is greater than `0.0`</li><li>no `clippingRect` is specified and the node is completely onscreen</li><li>a `clippingRect` is specified and the node lies completely inside the `clippingRect's` coordinates</li></ul> |
-
-{#clippingRectValues}
-
-- `ClippingRects` can be specified by the node or by any of its ancestors in the SceneGraph.
-- `ClippingRects` are automatically set by some nodes such as lists and grids.
-- `ClippingRects` are always clipped to the screen boundaries, so if a `clippingRect` is specified that is partially or completely offscreen, it will be clipped to the screen boundaries. With respect to render tracking, although the node could be completely within the bounds of the specified `clippingRect`, it's `renderTracking` field could be set to `"none"` if the portion of the `clippingRect` it occupies is completely offscreen.
 
 ## Sample app
 

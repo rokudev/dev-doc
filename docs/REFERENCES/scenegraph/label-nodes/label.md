@@ -60,20 +60,58 @@ The following displays the text string "Application Development Made Easy!" in t
 
 Fields derived from the [Group](/docs/references/scenegraph/layout-group-nodes/group.md#fields "Fields") and [LabelBase](/docs/references/scenegraph/label-nodes/label-base.md#fields) classes can be used.
 
-| Field                  | Type              | Default                                   | Access Permission | Description           |
-| ---------------------- | ----------------- | ----------------------------------------- | ----------------- | --------------------- |
-| font | Font | system default | READ_WRITE | Specifies the Font node to be used |
-| lineSpacing         | float   |                | READ_WRITE        | If the text is displayed on more than one line, specifies the amount of additional space added between lines |
-| truncateOnDelimiter | string  |                | READ_WRITE        | If the width field value is greater than zero, provides a set of characters that are used to determine how to truncate the last line of text that is displayed if it extends beyond the specified width. If none of the characters in the last line of text are included in the truncateOnDelimiter field value string, the entire last line is not displayed. When the value is set to a non-empty string, the ellipsizeOnBoundary field value is ignored |
-| leadingEllipsis | boolean | false | READ_WRITE | Specifies whether to display the end or beginning of text that overflows its available width:<br />${leading-ellipsis-list} |
-| wrappedLines | Integer |  | READ_ONLY | indicates the number of wrapped lines in the label. |
 
-{#leading-ellipsis-list}
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>font</td>
+<td>Font</td>
+<td>system default</td>
+<td>READ_WRITE</td>
+<td>Specifies the Font node to be used</td>
+</tr>
+<tr>
+<td>lineSpacing</td>
+<td>float</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>If the text is displayed on more than one line, specifies the amount of additional space added between lines</td>
+</tr>
+<tr>
+<td>truncateOnDelimiter</td>
+<td>string</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>If the width field value is greater than zero, provides a set of characters that are used to determine how to truncate the last line of text that is displayed if it extends beyond the specified width. If none of the characters in the last line of text are included in the truncateOnDelimiter field value string, the entire last line is not displayed. When the value is set to a non-empty string, the ellipsizeOnBoundary field value is ignored</td>
+</tr>
+<tr>
+<td>leadingEllipsis</td>
+<td>boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Specifies whether to display the end or beginning of text that overflows its available width:<br /><ul><li><strong>true</strong>. The end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog". </li><li><strong>false</strong>. The start of the text is shown (for example, "the quick brown fox jumps...").</li></ul></td>
+</tr>
+<tr>
+<td>wrappedLines</td>
+<td>Integer</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>indicates the number of wrapped lines in the label.</td>
+</tr>
+</tbody>
+</table>
 
-- **true**. The end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog". 
-- **false**. The start of the text is shown (for example, "the quick brown fox jumps...").
+
 
 ## Sample app
 
 You can download and install a [sample app](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/LabelExample) that demonstrates how to use the Label node.
-

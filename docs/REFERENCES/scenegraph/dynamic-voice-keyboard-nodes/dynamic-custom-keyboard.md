@@ -10,21 +10,409 @@ metadata:
 next:
   description: ''
 ---
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
+## Default VoiceTextEditBox settings
 
-The Video node class provides a controlled play of live or VOD video.
+| Field          | Type    | Default   | Description                                                  |
+| :------------- | :------ | :-------- | :----------------------------------------------------------- |
+| voiceEntryType | string  | "generic" | The type of characters accepted via voice entry.             |
+| voiceEnabled   | boolean | true      | Specifies whether voice entry is enabled for the text edit box of the dynamic keyboard. |
+| maxTextLength  | integer | 75        | The maximum number of characters that may be entered into the text edit box of the dynamic keyboard. |
 
-The Video node includes a wide variety of internal nodes to support trick play, playback buffering indicators, and so forth. Playback buffering indicators, to indicate buffering before initial playback as well as re-buffering, use an internal instance of a ProgressBar node. For trick play, an internal instance of a TrickPlayBar node is provided. For display of BIF images for DVD-like chapter selection, an internal instance of a BIFDisplay node is provided.
+## Sample Key Definition File
 
-Starting from Roku OS 8, the behavior of the Roku system overlay is such that the system overlay now slides in whenever the * button is pressed, the Video node is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the system overlay does not slide in and the OnKeyEvent() handler is fired.
+The following sample demonstrates a Key Definition File that defines five grids for **DynamicCustomKeyboard** node. See the [Key Definition File specification](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/key-definition-file.md) for more information.
 
-## Fields
+```
+{
+  "keyboardWidthFHD": 576,
+  "keyboardHeightFHD": 432,
 
-### Playback fields
+  "keyboardWidthHD": 384,
+  "keyboardHeightHD": 288,
+  "sections": [
+    {
+      "grids": [
+        {
+          "modes": "NameUpper",
+          "rows": [
+            {
+              "keys": [
+                { "label": "A" },
+                { "label": "B" },
+                { "label": "C" },
+                { "label": "D" },
+                { "label": "E" },
+                { "label": "F" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "G" },
+                { "label": "H" },
+                { "label": "I" },
+                { "label": "J" },
+                { "label": "K" },
+                { "label": "L" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "M" },
+                { "label": "N" },
+                { "label": "O" },
+                { "label": "P" },
+                { "label": "Q" },
+                { "label": "R" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "S" },
+                { "label": "T" },
+                { "label": "U" },
+                { "label": "V" },
+                { "label": "W" },
+                { "label": "X" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "Y" },
+                { "label": "Z" },
+                {
+                  "icon": "theme:DKB_SpaceKeyBitmap",
+                  "focusIcon": "theme:DKB_SpaceKeyFocusBitmap",
+                  "strOut": "Space"
+                },
+                {
+                  "icon": "theme:DKB_DeleteKeyBitmap",
+                  "focusIcon": "theme:DKB_DeleteKeyFocusBitmap",
+                  "strOut": "Delete"
+                },
+                {
+                  "icon": "theme:DKB_ClearKeyBitmap",
+                  "focusIcon": "theme:DKB_ClearKeyFocusBitmap",
+                  "strOut": "Clear"
+                },
+                {
+                  "label": "Aa",
+                  "strOut": "UpperLower"
+                }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "Prev", "disabled": 1 },
+                { "label": "Next" }
+              ]
+            }
+          ]
+        },
+        {
+          "modes": "NameLower",
+          "rows": [
+            {
+              "keys": [
+                { "label": "a" },
+                { "label": "b" },
+                { "label": "c" },
+                { "label": "d" },
+                { "label": "e" },
+                { "label": "f" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "g" },
+                { "label": "h" },
+                { "label": "i" },
+                { "label": "j" },
+                { "label": "k" },
+                { "label": "l" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "m" },
+                { "label": "n" },
+                { "label": "o" },
+                { "label": "p" },
+                { "label": "q" },
+                { "label": "r" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "s" },
+                { "label": "t" },
+                { "label": "u" },
+                { "label": "v" },
+                { "label": "w" },
+                { "label": "x" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "y" },
+                { "label": "z" },
+                {
+                  "icon": "theme:KeyboardSpaceOnBitmap",
+                  "focusIcon": "theme:KeyboardSpaceOffBitmap",
+                  "strOut": "Space"
+                },
+                {
+                  "icon": "theme:KeyboardDeleteOnBitmap",
+                  "focusIcon": "theme:KeyboardDeleteOffBitmap",
+                  "strOut": "Delete"
+                },
+                {
+                  "icon": "theme:KeyboardClearOnBitmap",
+                  "focusIcon": "theme:KeyboardClearOffBitmap",
+                  "strOut": "Clear"
+                },
+                {
+                  "label": "Aa",
+                  "strOut": "UpperLower"
+                }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "Prev", "disabled": 1 },
+                { "label": "Next" }
+              ]
+            }
+          ]
+        },
+        {
+          "modes": "Zip",
+          "gridHeightFHD": 360,
+          "gridHeightHD": 240,
+          "rows": [
+            {
+              "keys": [
+                { "label": "1" },
+                { "label": "2" },
+                { "label": "3" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "4" },
+                { "label": "5" },
+                { "label": "6" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "7" },
+                { "label": "8" },
+                { "label": "9" }
+              ]
+            },
+            {
+              "keys": [
+                {
+                  "icon": "theme:KeyboardDeleteOnBitmap",
+                  "focusIcon": "theme:KeyboardDeleteOffBitmap",
+                  "strOut": "Delete"
+                },
+                {
+"label": "0"
+},
+                {
+                  "icon": "theme:KeyboardClearOnBitmap",
+                  "focusIcon": "theme:KeyboardClearOffBitmap",
+                  "strOut": "Clear"
+                }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "Prev" },
+                { "label": "Next" }
+              ]
+            }
+          ]
+        },
+        {
+          "modes": "FullUpper",
+          "rows": [
+            {
+              "keys": [
+                { "label": "0" },
+                { "label": "1" },
+                { "label": "2" },
+                { "label": "3" },
+                { "label": "4" },
+                { "label": "5" },
+                { "label": "6" },
+                { "label": "7" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "8" },
+                { "label": "9" },
+                { "label": "A" },
+                { "label": "B" },
+                { "label": "C" },
+                { "label": "D" },
+                { "label": "E" },
+                { "label": "F" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "G" },
+                { "label": "H" },
+                { "label": "I" },
+                { "label": "J" },
+                { "label": "K" },
+                { "label": "L" },
+                { "label": "M" },
+                { "label": "N" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "O" },
+                { "label": "P" },
+                { "label": "Q" },
+                { "label": "R" },
+                { "label": "S" },
+                { "label": "T" },
+                { "label": "U" },
+                { "label": "V" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "W" },
+                { "label": "X" },
+                { "label": "Y" },
+                { "label": "Z" },
+                {
+                  "icon": "theme:KeyboardSpaceOnBitmap",
+                  "focusIcon": "theme:KeyboardSpaceOffBitmap",
+                  "strOut": "Space"
+                },
+                {
+                  "icon": "theme:KeyboardDeleteOnBitmap",
+                  "focusIcon": "theme:KeyboardDeleteOffBitmap",
+                  "strOut": "Delete"
+                },
+                {
+                  "icon": "theme:KeyboardClearOnBitmap",
+                  "focusIcon": "theme:KeyboardClearOffBitmap",
+                  "strOut": "Clear"
+                },
+                {
+                  "label": "Aa",
+                  "strOut": "UpperLower"
+                }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "Prev" },
+                { "label": "Next", "disabled": 1 }
+              ]
+            }
+          ]
+        },
+        {
+          "modes": "FullLower",
+          "rows": [
+            {
+              "keys": [
+                { "label": "0" },
+                { "label": "1" },
+                { "label": "2" },
+                { "label": "3" },
+                { "label": "4" },
+                { "label": "5" },
+                { "label": "6" },
+                { "label": "7" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "8" },
+                { "label": "9" },
+                { "label": "a" },
+                { "label": "b" },
+                { "label": "c" },
+                { "label": "d" },
+                { "label": "e" },
+                { "label": "f" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "g" },
+                { "label": "h" },
+                { "label": "i" },
+                { "label": "j" },
+                { "label": "k" },
+                { "label": "l" },
+                { "label": "m" },
+                { "label": "n" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "o" },
+                { "label": "p" },
+                { "label": "q" },
+                { "label": "r" },
+                { "label": "s" },
+                { "label": "t" },
+                { "label": "u" },
+                { "label": "v" }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "w" },
+                { "label": "x" },
+                { "label": "y" },
+                { "label": "z" },
+                {
+                  "icon": "theme:KeyboardSpaceOnBitmap",
+                  "focusIcon": "theme:KeyboardSpaceOffBitmap",
+                  "strOut": "Space"
+                },
+                {
+                  "icon": "theme:KeyboardDeleteOnBitmap",
+                  "focusIcon": "theme:KeyboardDeleteOffBitmap",
+                  "strOut": "Delete"
+                },
+                {
+                  "icon": "theme:KeyboardClearOnBitmap",
+                  "focusIcon": "theme:KeyboardClearOffBitmap",
+                  "strOut": "Clear"
+                },
+                {
+                  "label": "Aa",
+                  "strOut": "UpperLower"
+                }
+              ]
+            },
+            {
+              "keys": [
+                { "label": "Prev" },
+                { "label": "Next", "disabled": 1 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
 
-To set the specific video playback parameters for a particular video, set the [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) attributes for the video in a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node, and assign the ContentNode to the `content` field of the Video node.
+## Sample app
 
-Video playback can then be controlled by setting the value of the `control` field, such as setting the field value to `play` to begin playback.
-
-The `control` field includes a `prebuffer` option, which allows the video to begin buffering without showing the video. You can use this option to begin buffering of a video before a user has actually selected and started the video, such as when the user is looking at information about various video offerings in a list or grid or another type of UI element. This can eliminate much or all of the apparent delay in starting the video due to buffering the video for the user. For example, you could set the `control` field value to `prebuffer` in a callback function triggered by the `itemFocused` events that occur as a user scrolls down a list of video offerings that also display information about each video. When the user makes the selection, you can begin the actual video playback by setting the `control` field value to `play` in a callback function triggered by the `itemSelected` event for the list.
-
+You can download and install a [sample app](https://github.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure a dynamic voice-enabled custom keyboard (an address keyboard form). This sample include an example KDF file that specifies the layout of this custom keyboard.

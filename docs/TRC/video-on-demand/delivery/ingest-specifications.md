@@ -760,3 +760,30 @@ Order of delivery is important. The Roku MovieLabs service will require that the
 [Video files](#video-requirements), [audio files](#audio-requirements), [closed caption files](#closed-captions), [subtitle files](#subtitles), [image files](#artwork), [minimum metadata requirements](#minimum-required-metadata-by-content-type), [genres](#genres), and [ratings and rating sources](#rating-values-by-rating-system-and-country), must adhere to the supported formats and requirements defined in this specification
 
 #### Tags
+
+Tags for merchandising/curation can be delivered via the Keyword node supported in the MovieLabs MEC XML. Please see the [MovieLabs MEC Schema](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link116) for proper placement of the Keyword node
+
+<u>Example:</u>
+
+```
+<md:LocalizedInfo language="en">
+	<md:TitleDisplayUnlimited>Great Title of My Show</md:TitleDisplayUnlimited>
+	<md:Summary190>Short summary of my show.</md:Summary190>
+	<md:Summary400>Longer summary of my show.</md:Summary400>
+	<md:Genre id="genre"/>
+	<md:Keyword>keyword</md:Keyword>
+</md:LocalizedInfo>
+```
+
+#### TMS IDs
+
+Gracenote TMS IDs can be delivered via the MovieLabs MEC XML as an Identifier with Namespace TMSID in the AltIdentifier node. Please see the [MovieLabs MEC Schema](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link121) for proper structure of the AltIdentifier node
+
+<u>Example:</u>
+
+```
+<md:AltIdentifier>
+	<md:Namespace>TMSID</md:Namespace>
+	<md:Identifier>EP012345678910</md:Identifier>
+</md:AltIdentifier>
+```

@@ -227,3 +227,124 @@ Roku supports a variety of frame rates and scan types. All video files should be
 | ---------- | ----------------- |
 | Channel 1  | Stereo Left (SL)  |
 | Channel 2  | Stereo Right (SR) |
+
+### Secondary audio deliverables
+
+Content delivered with an audio language that is not primary to the territory of distribution must be delivered with an audio dub and/or subtitle file translating the content into that territory’s primary language. Secondary audio tracks may be multiplexed in with the video file deliverable or delivered in a single interleaved sidecar audio file. All secondary audio tracks, whether multiplexed in the video or delivered as an interleaved sidecar file, must be delivered as a full audio mix. Roku does not support dialogue only dub tracks.
+
+#### Sidecar secondary audio
+
+- Sidecar audio must be delivered as a single interleaved file. Roku does not support discrete single-channel files
+- Sidecar audio must sync to the video source file delivered to Roku
+- Roku supports one sidecar audio dub file per language
+
+Below are the supported sidecar audio formats. Deliver sidecar audio with highest bitrate and sampling rate available.
+
+| Container       | Codecs       | Extension |
+| --------------- | ------------ | --------- |
+| WAV (preferred) | PCM          | .wav      |
+| MPEG-1 Layer 3  | MP3          | .mp3      |
+| OGA             | Opus, Vorbis | .ogg      |
+
+#### Descriptive audio
+
+Descriptive audio is an alternate audio track for the visually impaired. The official FCC Audio Description documentation can be found at the below link:
+
+https://www.fcc.gov/audio-description
+
+Roku strongly prefers to receive descriptive audio tracks wherever available. Descriptive audio deliveries will follow the deliverables outlined in the [Secondary Audio Deliverables](#secondary-audio-deliverables) section above 
+
+#### Audio channel layout hints
+
+In the event video files cannot be created to include proper audio channel labels, an audio layout hint must be provided in the metadata for the video files that are delivered. The available hints are defined below.
+
+##### Audio layout hints
+
+| Descriptor         | Definition                                                   |
+| ------------------ | ------------------------------------------------------------ |
+| stereoOnly         | 2 channel stereo audio only. Can be delivered on a single track or on 2 discrete tracks |
+| surroundOnly       | 6 channel 5.1 surround audio only. Can be delivered on a single track or on 6 discrete tracks |
+| stereoPlusSurround | 8 channel audio with stereo on channels 1 and 2 followed by 5.1 surround on channels 3 through 8 |
+| surroundPlusStereo | 8 channel audio with 5.1 on channels 1 through 6 followed by stereo on channels 7 and 8 |
+
+### Closed captions
+
+Roku prefers to receive closed captioning for all content to provide the best user experience possible.
+
+For content intended for the US, Roku adheres to FCC closed captioning rules regarding Internet Video Programming. Those rules can be found at the below link:
+
+https://www.fcc.gov/consumers/guides/captioning-internet-video-programming
+
+All content required by the FCC to have closed captioning must be delivered to Roku with closed captions and those captions must be conformed and synced to program. For content that is exempt from the closed caption requirement per FCC rules, a valid exemption code number must be included in the metadata. Allowable exemption code numbers and their definitions:
+
+1 - The content has never aired on television in the United States.
+2 - The content has only aired on television in the United States without captions.
+3 - The content has not aired on television in the United States with captions since September 30, 2012.
+4 - The content does not consist of full-length video programming.
+5 - The content does not fall within a category of online programming that requires captions under FCC regulations (49 C.F.R. § 79.4(b)).
+6 - The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.
+
+For content intended for territories outside of the US, Roku will adhere to the requirements in that territory.
+
+Captions may be provided in one of two ways:
+
+- EIA-608/CEA-708 embedded in-stream in the video file
+- Sidecar caption file
+- Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
+- See below for a full listing of supported sidecar caption files
+- Sidecar captions must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
+- Do not provide an empty file (a file without text) for sidecar captions
+- TTML and WebVTT positional data supported
+- Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
+
+*Closed caption text styling support is limited to:*
+
+- *bold \<b\> and italic \<i\> tags*
+- *text color*
+- *text positioning*
+
+*Quicktime video files must be accompanied by a sidecar closed caption file. Roku does not support the Quicktime text track.*
+
+| **Format Name**                             | Supports Positional Data | **File Extension** | Encoding | **Delivery Type**       | **Languages**                                           |
+| ------------------------------------------- | ------------------------ | ------------------ | -------- | ----------------------- | ------------------------------------------------------- |
+| Timed Text Markup Language (TTML)           | Y                        | .ttml              | UTF-8    | sidecar                 | follows audio language of either video file or dub file |
+| Web Video Text Track (WebVTT)               | Y                        | .vtt or .webvtt    | UTF-8    | sidecar                 | follows audio language of either video file or dub file |
+| Distribution Format Exchange Profile (DFXP) | N                        | .dfxp              | UTF-8    | sidecar                 | follows audio language of either video file or dub file |
+| EBU Subtitle Data Exchange Format (STL)     | N                        | .stl               | UTF-8    | sidecar                 | follows audio language of either video file or dub file |
+| SubRip Text (SRT)                           | N                        | .srt               | UTF-8    | sidecar                 | follows audio language of either video file or dub file |
+| EIA-608/CEA-708                             | N                        | n/a                | n/a      | Embedded in MPEG stream | embedded in video file                                  |
+| SCC                                         | N                        | .scc               | ASCII    | sidecar                 | follows audio language of either video file or dub file |
+
+### Subtitles
+
+Content delivered with an audio language that is not primary to the territory of distribution must be delivered with an audio dub and/or subtitle file translating the content into that territory’s primary language.
+
+- Full subtitles must NOT be burned into the video
+- Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
+- See below for a full listing of supported sidecar subtitle files
+- Sidecar subtitles must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
+- Do not provide an empty file (a file without text) for sidecar subtitles
+- TTML and WebVTT positional data supported
+- Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
+
+*Subtitle text styling support is limited to:*
+
+- *bold \<b\> and italic \<i\> tags*
+- *text color*
+- *text positioning*
+
+
+| **Format Name**                             | Supports Positional Data | **File Extension** | Encoding | **Delivery Type** | **Languages**                                                |
+| ------------------------------------------- | ------------------------ | ------------------ | -------- | ----------------- | ------------------------------------------------------------ |
+| Timed Text Markup Language (TTML)           | Y                        | .ttml              | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
+| Web Video Text Track (WebVTT)               | Y                        | .vtt or .webvtt    | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
+| Distribution Format Exchange Profile (DFXP) | N                        | .dfxp              | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
+| EBU Subtitle Data Exchange Format (STL)     | N                        | .stl               | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
+| SubRip Text (SRT)                           | N                        | .srt               | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
+
+### Artwork
+
+Roku supports three image types for each piece of content. Each image type will be used in a different location within Roku Channel. Roku prefers to receive all three art sizes whenever possible. Each image must be delivered in JPEG or PNG format. Please provide images in Roku's preferred image resolution to avoid delays in publishing. Images *must* meet or exceed the minimum resolution and *must* be delivered in the *exact* aspect ratio defined for each image type.
+
+#### Image type definitions
+

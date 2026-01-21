@@ -1057,3 +1057,25 @@ Metadata updates must include **the exact same asset ID** that was included when
 *Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system*
 
 All file name references must be removed from a metadata only update. This includes:
+
+- source video file name 
+- closed captions file name
+- subtitle file name
+- audio dub file name
+- key, background, and/or poster art file names
+
+Some fields need to be updated in "groups". All required fields in a group must be provided for the update to process successfully. Below are the current groups:
+
+-  Metadata group (all of the required fields must be present in order to update one of these)
+ -  Language (required)
+ -  Title (required)
+ -  Short description (required)
+ -  Long description (optional)
+
+-  Availability group (all of the required fields must be present in order to update one of these)
+ -  License Type (required)
+ -  Country (required)
+ -  Start Date (required)
+ -  End Date (required)
+
+Upload the metadata update to the "prod" folder in Aspera

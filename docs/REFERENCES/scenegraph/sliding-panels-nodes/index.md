@@ -63,3 +63,81 @@ slide the
 panels.
 
 ![roku815px - sliding-panels](https://image.roku.com/ZHZscHItMTc2/sliding-panels.jpg "sliding-panels")
+
+## Panel adding/sliding
+
+As part of a panel set, panel node classes are designed to automatically
+slide into and out of view in response to being added to the panel set
+as a result of user input or other program behavior. To allow this
+automatic adding/sliding behavior, panel node classes have a set of
+default width sizes based on the width of the panel set, excluding the
+arrow indicators on the sides of the panel set. The `panelSize` field
+for panel node classes should be set to one of four width sizes:
+
+<div class="table-wrap">
+
+| Size   | Description                                     |
+| ------ | ----------------------------------------------- |
+| narrow | Approximately a third of the panel set width    |
+| medium | Approximately one half the panel set width      |
+| wide   | Approximately two-thirds of the panel set width |
+| full   | Approximately the full panel set width          |
+
+</div>
+
+The precise horizontal positioning of panels in the panel set depends on
+the screen resolution, as well as the setting of the `leftPosition`
+field of the panel node. The `leftPosition` field determines the offset
+from the left side of the panel set for a panel, but has default
+settings based on screen resolution that generally should not be
+changed. The actual pixel sizes and left position of the panels is as
+follows:
+
+<div class="table-wrap">
+
+| Panel Field  | Panel Size | SD Value         | HD Value         |
+| ------------ | ---------- | ---------------- | ---------------- |
+| height       | all        | 403              | 605              |
+| width        | narrow     | 218              | 388              |
+|              | medium     | 292              | 520              |
+|              | wide       | 363              | 645\<            |
+|              | full       | 520              | 940              |
+| leftPosition | narrow     | 60               | 105              |
+|              | medium     | 60               | 105              |
+|              | wide       | 63               | 112              |
+|              | full       | 100              | 170              |
+
+</div>
+
+The width size you choose for each panel should be determined by the
+size of the content of the panel, and the size of adjacent panels to the
+left and right. When a panel is added that can only be displayed by
+sliding an existing panel (or panels) to the left, the **PanelSet** node
+class will automatically slide the existing panel or panels to the
+left. So the simplest method to set up this automatic sliding of the
+panels as needed is to select the default panel width sizes that fill
+the panel set width at all times.
+
+To do this, you should pair adjacent panels based on their width size.
+For example, two medium panels that are added as the first two panels on
+the left could be paired with full panel to be created on the right,
+with the `isFullScreen` field set to true, which configures the panel to
+be the only panel to be shown. Then when the full right panel is added,
+the two medium panels slide automatically off the screen to the left,
+and the full right panel slides into view from the right. Alternately,
+you could pair a narrow and a wide panel on the left with a full panel
+on the right. In some cases, you might want to create *tombstone* panels
+with additional information on focused items in a panel to the left to
+fill the panel set width.
+
+After setting up the panels in the panel set according to size and
+content, the panels will slide back and forth automatically based on
+user <span>**Right**</span>,
+<span>**Left**</span>, and
+<span>**Back**</span> key presses,
+adding new panels to the panel set, and putting the focus on
+already-added panels. You add new panels as children of the panel set
+using the `createChild()` function, or using the `createObject()`
+function followed by the `appendChild()` function, depending on the
+sequence your application will follow to slide the panels, because the
+panels will not slide until added to the panel set.

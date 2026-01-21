@@ -129,5 +129,26 @@ Partners can aid in the curation of their content on Roku Channel by providing T
 - Full-Frame presentation (1.78 aspect ratio) is preferred whenever available
 - Letterboxed 16:9 is allowed but should be minimized
 - SD 16:9 content must not be delivered in a 4:3 container with letterboxing
-- High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible
+- High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible.
 
+#### Video frame rate
+
+Roku supports a variety of frame rates and scan types. All video files should be delivered in their original native frame rate and scan type
+
+#### Video resolution
+
+| Type    | Width | Height | Pixel Aspect Ratio              |
+| ------- | ----- | ------ | ------------------------------- |
+| SD      | 720   | 480    | 4:3 or 16:9 (anamorphic pixels) |
+| SD      | 640   | 480    | 1:1 (square pixels)             |
+| SD      | 853   | 480    | 1:1 (square pixels)             |
+| SD      | 720   | 576    | 4:3 or 16:9 (anamorphic pixels) |
+| SD      | 768   | 576    | 1:1 (square pixels)             |
+| SD      | 1024  | 576    | 1:1 (square pixels)             |
+| HD      | 1280  | 720    | 1:1 (square pixels)             |
+| FHD     | 1920  | 1080   | 1:1 (square pixels)             |
+| UHD\*\* | 3840  | 2160   | 1:1 (square pixels)             |
+
+*\*\*UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel*
+
+#### Video formats

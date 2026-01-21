@@ -1,5 +1,5 @@
 ---
-title: "BusySpinner"
+title: BusySpinner
 excerpt: ''
 deprecated: false
 hidden: true
@@ -25,17 +25,10 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
 | Field        | Type          | Default                   | Access Permission | Description                                                  |
 | ------------ | ------------- | ------------------------- | ----------------- | ------------------------------------------------------------ |
 | poster       | Poster node   | internal instance default | READ_WRITE        | Set the uri field of the Poster node to select the bitmap for the busy spinner |
-| control      | option string | none                      | READ_WRITE        | Sets the operational state of the busy spinner ${controlValues} |
+| control      | option string | none                      | READ_WRITE        | Sets the operational state of the busy spinner: controlValues |
 | clockwise    | Boolean       | true                      | READ_WRITE        | Specifies whether the bitmap rotates in a clockwise or counterclockwise direction |
 | spinInterval | time          | 2                         | READ_WRITE        | The number of seconds to complete a 360-degree rotation of the spinner image. A value of 0 will cause the spinner to remain stationary and not spin |
 
-{#controlValues}
-
-| Option | Effect                                                       |
-| -----  | ------------------------------------------------------------ |
-| none   | No operational state set. The busy spinner will run if not set to `"stop"`. |
-| start  | Starts the busy spinner if not running                       |
-| stop   | Stops the busy spinner if running                            |
 
 ## Sample app
 [BusySpinnerExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/BusySpinnerExample) is a sample app demonstrating BusySpinner in action.

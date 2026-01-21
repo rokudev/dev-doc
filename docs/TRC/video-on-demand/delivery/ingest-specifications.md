@@ -558,3 +558,35 @@ Depending on what client is being used, there are different settings that can af
   https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings
   https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings
 
+### File delivery
+
+- Video, closed captions, and artwork files must be *completely delivered prior to the delivery of metadata*
+- Production files MUST be delivered to the **`/prod`** folder. Automation is dependent on proper file delivery location. Failure to deliver files to the correct folder will result in processing delays or content not processing at all
+- Test files may be delivered to the **`/testing`** folder
+- It is preferred that content not be delivered to subfolders. If subfolders are necessary, follow the below guidelines:
+- Subfolders must **not** begin with an underscore
+- Do **not** separate files into subfolders by file type
+- All media files for a single title (episode, movie, or shortForm) must be delivered to the same directory
+- The ingest platform assumes media files referenced in the metadata are in the same directory as the metadata file. As such, metadata must be delivered to the same directory as the media files contained within the metadata
+- Delivery notifications can be sent to [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
+
+#### File retention
+
+The delivery location is a temporary location for our Partners to upload files for ingestion into Roku Channel content library. Automation will move files from the delivery location upon successful ingest to an archive location to be stored indefinitely. All files uploaded to the delivery location are expected to be ingested within a reasonable time frame not to exceed 30 days. Valid and complete metadata must be delivered shortly after files are delivered to ensure timely ingest. Files in the delivery location that have not ingested after 30 days are subject to deletion.
+
+*Exceptions to the file retention policy may be made to files in the **`/testing`** folder*
+
+#### File naming
+
+Source video, closed captions, and artwork files delivered for ingest must adhere to the following guidelines:
+
+- File names must not exceed 125 characters in length
+- File names must match the reference to the file name in the metadata supplied for the title delivered
+- File names are case-sensitive
+- File names must end with a proper file extension. File extensions are expected to be lowercase
+
+<ul>
+<li>Whitespace and special characters <code>!@#$%^&amp;*()\{\}|[]\;:’”?/&gt;&lt;,</code> must not be included in any file name</li>
+</ul>
+
+- The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…

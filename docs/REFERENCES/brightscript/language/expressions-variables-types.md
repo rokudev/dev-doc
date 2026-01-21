@@ -1,5 +1,5 @@
 ---
-title: "Expressions, variables, and types"
+title: Expressions, variables, and types
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,9 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
-
 ## Identifiers
 
 Identifiers (names of variables, functions, labels, or object member
@@ -130,7 +127,7 @@ compilation](/docs/references/brightscript/language/conditional-compilation.md).
 ### In XML
 
 In the XML part of the code, in order to comment or temporarily disable
-a line of code, you must use **<\!--** comment **--\>** as in the
+a line of code, you must use **\<\!--** comment **--\\>** as in the
 following example:
 
 Note that the apostrophe DOES NOT work within the XML environment.
@@ -195,7 +192,7 @@ myarray = [] ' empty array
 
 myarray = [ 1, 2, 3 ] ' array of three members
 
-myarray = [ x+5, true, 1<>2, ["a","b"] ] ' array of four members
+myarray = [ x+5, true, 1\<\>2, ["a","b"] ] ' array of four members
 ~~~
 
 
@@ -320,7 +317,7 @@ Division follows the same rules as +, \* and -, except that it is never
 done at the integer level: when both operators are integers, the
 operation is done as float with a float result.
 
-During a compare operation (<, \>, =, etc.) the operands are converted
+During a compare operation (\<, \\>, =, etc.) the operands are converted
 to the same type before they are compared. The less precise type will
 always be converted to the more precise type.
 
@@ -355,8 +352,8 @@ except for exponentiation, which is right associative.
 | – , +                      | Negation (unary)              |
 | \* ,  / , MOD, \\          | Multiplicative operators      |
 | – , +                      | Additive operators            |
-| <<, \>\>                 | Integer bitshift operators    |
-| <, \>, = , <\>, <=, \>= | Comparisons                   |
+| \<\<, \>\>                 | Integer bitshift operators    |
+| \<, \>, = , \<\\>, \<=, \>= | Comparisons                   |
 | NOT                        | Unary logical NOT or bitwise |
 | AND                        | Logical or bitwise            |
 | OR                         | Logical or bitwise            |
@@ -589,9 +586,9 @@ END IF
 
    This code should be written as follows:
 
-        IF aa?.foo <> invalid THEN ...   ' Test if aa.foo exists
+        IF aa?.foo \<\> invalid THEN ...   ' Test if aa.foo exists
         IF aa?.foo = TRUE     THEN ...   ' Test if aa.foo is present and true
-        IF aa?.foo <> FALSE   THEN ...   ' Test if aa.foo is true, or missing
+        IF aa?.foo \<\> FALSE   THEN ...   ' Test if aa.foo is true, or missing
 
 #### Support details 
 
@@ -706,7 +703,7 @@ and bitshift operations that take a numeric operand:
 
   - \\=
 
-  - <<=
+  - \<\<=
 
   - \>\>=
 
@@ -767,9 +764,9 @@ This table describes the comparison operators. All operate on either numeric val
 |   Operator   |   Numeric                   |   String                                            |
 | ------------ | --------------------------- | --------------------------------------------------- |
 | A = B        | true if A equals B          | true if strings A and B are identical               |
-| A <\> B     | true if A is not equal to B | true if strings A and B are different               |
-| A < B       | true if A is less than B    | true if string A is lexically less than string B    |
-| A <= B      | true if (A < B) or (A = B) | true if (A < B) or (A = B)                         |
+| A \<\\> B     | true if A is not equal to B | true if strings A and B are different               |
+| A \< B       | true if A is less than B    | true if string A is lexically less than string B    |
+| A \<= B      | true if (A \< B) or (A = B) | true if (A \< B) or (A = B)                         |
 | A \> B       | true if A is greater than B | true if string A is lexically greater than string B |
 | A \>= B      | true if (A \> B) or (A = B) | true if (A \> B) or (A = B)                         |
 

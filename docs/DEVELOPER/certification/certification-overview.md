@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 To ensure that the Roku platform provides a consistent, performant experience for customers, Roku reserves the right to review all new and updated public apps in the Roku Streaming Store for design and performance criteria. This certification process confirms that apps properly integrate applicable Roku platform requirements.
 
 > Roku reserves the right to remove published apps from the Roku Streaming Store at any time if they do not maintain compliance with the requirements specified in this document, per the [Roku Distribution Agreement](https://docs.roku.com/doc/developerdistribution/en-us) (or other applicable distribution agreement).
@@ -163,15 +162,11 @@ Apps must meet requirements 3.2–3.6 when measured specifically on the Roku Str
 
 **3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the app to measure launch times. The debug console can then be used to verify that the app's launch time is meeting this requirement. See [Measuring channel performance](doc:measuring-channel-performance) on how to measure app launch times.
 
-
 **3.3** Apps must have screen-to-screen (scene-to-scene) transitions that are within 3 seconds.
-
 
 **3.4** Apps must display a loading indicator during any process visible to users that takes longer than 3 seconds. Apps must respond to user requests within 10 seconds.
 
-
 **3.5** Apps must respond to remote button presses and navigate between tiles within 250 milliseconds.
-
 
 **3.6** Apps must start playing content within 8 seconds of initiation.
 
@@ -181,43 +176,31 @@ The debug console can be used to verify that video start times are compliant. Se
 
 Roku's [Fast Video Start](doc:fast-video-start) is available to pre-buffer content and help improve playback performance.
 
-
 **3.7** The app's file size must be 4 MB or less.
 
 ### 4. Channel operation
 
-
 **4.1** App updates are prohibited from requiring reactivation/re-linking/re-login, and must persist saved data.
-
 
 **4.2** Apps that require a user to log in and that have streamed more than an average of 1 million hours per month over the last three months must integrate [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on). This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
-
 **4.3**  Apps that require authentication (SVOD, TVE, and other subscription services) must use the [Roku Event Dispatcher](doc:prioritizing-authenticated-channels-in-roku-search) to communicate authentication status.
-
 
 **4.4** Roku [reserves use of the Options](doc:masterui) ("*") button during video playback for the sole purpose of Roku system displays. Apps may use the Options button for additional in-app options while UI components are displayed on top of the video.
 
-
 **4.5** Apps are prohibited from overriding or interfering with Roku's system screensaver. See [Roku’s Screensaver Policy](doc:screensavers).
-
 
 **4.6** Apps must directly return the user to the previous screen and/or state when the [back button](doc:remote-control-buttons) on the Roku remote is pressed. When the back button is pressed on the app's home screen, apps must exit the app and return the user to the Roku home screen. Apps may display a single confirmation dialog immediately before the user exits the app—and then return the user to the Roku home screen upon receiving confirmation that they want to leave the app.
 
-
 **4.7** Apps must display thumbnails during [trick play](doc:trick-mode) for VOD content longer than 15 minutes.
-
 
 **4.8**  Apps must comply with [all applicable accessibility laws](https://docs.roku.com/published/channelaccessibility/en/us) and global settings related to accessibility and user experience. Apps must provide [closed captions](doc:closed-caption) and audio descriptions for content where required by law. If including closed captions, the app must follow the user global settings for closed captioning, and support the following closed captioning settings in the Options menu: On, Off, On instant replay, and On mute (Roku TVs only). For VOD content, apps must synchronize the captions with the audio.
 
 Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
-
 **4.9** Apps must rewind between 10 to 25 seconds when the [instant replay button](doc:remote-control-buttons) on the Roku remote is pressed.
 
-
 **4.10** Apps must implement [bookmarking](doc:bookmarking) for all VOD content longer than 15 minutes. Apps must store bookmarks for a minimum of 30 days.
-
 
 **4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](doc:transport-controls) that are supported on the Roku platform. Apps must implement proper [error handling](doc:transport-controls) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
@@ -227,28 +210,20 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 ### 5. Deep linking
 
-
 **5.1** Apps must support deep linking for all media types, per Roku's [deep linking policy](doc:implementing-deep-linking). Live streams (and replays of live broadcast streams) may be exempt from this requirement.
 
-
 **5.2**  Apps must implement [Direct to Play](doc:direct-to-play) to support direct voice playback commands for launching and playing content.
-
 
 **5.3** Apps are prohibited from deep linking into other apps or directing users to exit the app to purchase content, goods or other services.
 
 ### 6. UI and Graphics
 
-
 **6.1** Apps must have a non-zero version number. This number must be incremented for each build submitted and updated in the [manifest](doc:channel-manifest).
-
 
 **6.2** Apps in the Kids & Family category must only include content that is appropriate for children. Apps are prohibited from including ads that are targeted based on user activity (behavioral advertising) and may only include ads that are appropriate for children (for example, no graphic violence, no adult situations, and so on).
 
-
 **6.3** Public apps are prohibited from containing content deemed to be pornographic. With respect to app information that may appear outside of the application (for example, in search results, in the platform user interface, or on Roku’s website), content and descriptions must be appropriate for all ages. This includes the app name, artwork, and descriptions appearing in the Roku Streaming Store and web. This also pertains to content titles, artwork, and descriptions appearing in Roku Search.
-
 
 **6.4** The Roku Streaming Store artwork and splash screen must clearly represent the name or identity of the app using only broadcast-safe colors with proper sizing. The app splash screen must support FHD (1920x1080p) and HD (1280x720p) resolutions. In addition, artwork must not be transparent. The splash screen's URI must be listed in the package manifest file.
 
-
-**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](doc:compliance).
+**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](doc:legal).

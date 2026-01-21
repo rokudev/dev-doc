@@ -152,3 +152,41 @@ The following adds two medium panels as children of a panel set in an
 observers with callback functions to populate and add panels to the
 right, and slide the panels back and forth based on user key
 presses.
+
+**Panel Adding/Sliding Example**
+
+```
+sub init()
+  m.top.backgroundURI = "pkg:/images/rsgetbg.jpg"
+
+  m.top.overhang.showClock = false
+  m.top.overhang.showOptions = true
+
+  m.categoriespanel = m.top.panelSet.createChild("categoriesListPanel")
+
+  m.categoryinfopanel = m.top.panelset.createChild("categoryinfoPanel")
+
+  m.categoriespanel.list.observeField("itemFocused","showcategoryinfo")
+  m.categoryinfopanel.observeField("focusedChild","slideexamplesgridpanel")
+
+  m.categoriespanel.setFocus(true)
+end sub
+
+sub showcategoryinfo()
+  categorycontent = m.categoriespanel.list.content.getChild(m.categoriespanel.list.itemFocused)
+  m.categoryinfopanel.description = categorycontent.description
+  m.examplespanel = createObject("RoSGNode","examplesGridPanel")
+  m.examplespanel.overhangtext = categorycontent.shortdescriptionline1
+  m.examplespanel.gridcontenturi = categorycontent.Url
+end sub
+
+sub slideexamplesgridpanel()
+  if not m.top.panelSet.isGoingBack
+    m.top.panelSet.appendChild(m.examplespanel)
+    m.examplespanel.setFocus(true)
+  else
+    m.categoriespanel.setFocus(true)
+  end if
+end sub
+
+```

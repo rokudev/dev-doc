@@ -1045,3 +1045,15 @@ Roku currently supports updating the below metadata fields via automated MDU:
 - Credits
 - Ad Breaks
 - Cue Points
+
+**Metadata update (MDU)**
+
+Metadata updates (MDUs) are automated and will be processed in the same manner as content that needs to be ingested into Roku Channel's content library. Please follow the procedure outlined below to update metadata only.
+
+Metadata updates must be delivered in the same format as the ingest metadata
+
+Metadata updates must include **the exact same asset ID** that was included when the content was originally ingested
+
+*Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system*
+
+All file name references must be removed from a metadata only update. This includes:

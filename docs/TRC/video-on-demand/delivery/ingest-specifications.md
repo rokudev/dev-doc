@@ -979,12 +979,3 @@ While time settings are dictated by the content owner, Roku will need the metada
 - display_name
 
 Certain characters in an XML will render the document unreadable by the Roku ingest platform unless handled (escaped) properly. The below characters must be provided in their Escaped Form for all node values that do not support CDATA sections:
-
-| Character Name | Character | Escaped Form |
-| -------------- | --------- | ------------ |
-| Ampersand      | &         | `&amp;`      |
-| Less-than      | \<         | `&lt;`       |
-| Greater-than   | \>         | `&gt;`       |
-| Quotes         | "         | `&quot;`     |
-| Apostrophe     | '         | `&apos;`     |
-

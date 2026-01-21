@@ -348,3 +348,41 @@ Roku supports three image types for each piece of content. Each image type will 
 
 #### Image type definitions
 
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Extension</th>
+<th>Image Type</th>
+<th>Minimum<br />Resolution</th>
+<th>Preferred<br />Resolution</th>
+<th>Aspect Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
+<td>.jpg<br />.jpeg<br />.png</td>
+<td>Key Art<br />Image with title treatment</td>
+<td>800x450</td>
+<td>1920x1080</td>
+<td>16:9</td>
+</tr>
+<tr>
+<td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
+<td>.jpg<br />.jpeg<br />.png</td>
+<td>Background<br />Textless image used in background of program page</td>
+<td>800x450</td>
+<td>1920x1080</td>
+<td>16:9</td>
+</tr>
+<tr>
+<td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
+<td>.jpg<br />.jpeg<br />.png</td>
+<td>Box Cover<br />Vertical poster image with title treatment</td>
+<td>534x801</td>
+<td>2000x3000</td>
+<td>2:3</td>
+</tr>
+</tbody>
+</table>

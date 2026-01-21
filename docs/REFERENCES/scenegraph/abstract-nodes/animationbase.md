@@ -1,5 +1,5 @@
 ---
-title: "AnimationBase"
+title: AnimationBase
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,38 +10,172 @@ metadata:
 next:
   description: ''
 ---
+Extends <Anchor label="**Node**" title="**Node**" href="/docs/references/scenegraph/node.md">**Node**</Anchor>
 
-
-Extends [**Node**](/docs/references/scenegraph/node.md "**Node**")
-
-AnimationBase is an abstract node class that contains the fields common to the [Animation](/docs/references/scenegraph/animation-nodes/animation.md "Animation"), [SequentialAnimation](/docs/references/scenegraph/animation-nodes/sequentialanimation.md "SequentialAnimation"), and [ParallelAnimation](/docs/references/scenegraph/animation-nodes/parallelanimation.md "ParallelAnimation") nodes. The purpose of the AnimationBase node class is to provide the basic functionality needed to animate screen elements, such as moving them across the display screen, fading them in and out of view, or changing their color. All node classes extended from AnimationBase require the use of the interpolator node classes [FloatFieldInterpolator](/docs/references/scenegraph/animation-nodes/floatfieldinterpolator.md "FloatFieldInterpolator"), [Vector2DFieldInterpolator](/docs/references/scenegraph/animation-nodes/vector2dfieldinterpolator.md "Vector2DFieldInterpolator"), and [ColorFieldInterpolator](/docs/references/scenegraph/animation-nodes/colorfieldinterpolator.md "ColorFieldInterpolator") as child nodes to achieve a specific animation effect.
+AnimationBase is an abstract node class that contains the fields common to the <Anchor label="Animation" title="Animation" href="/docs/references/scenegraph/animation-nodes/animation.md">Animation</Anchor>, <Anchor label="SequentialAnimation" title="SequentialAnimation" href="/docs/references/scenegraph/animation-nodes/sequentialanimation.md">SequentialAnimation</Anchor>, and <Anchor label="ParallelAnimation" title="ParallelAnimation" href="/docs/references/scenegraph/animation-nodes/parallelanimation.md">ParallelAnimation</Anchor> nodes. The purpose of the AnimationBase node class is to provide the basic functionality needed to animate screen elements, such as moving them across the display screen, fading them in and out of view, or changing their color. All node classes extended from AnimationBase require the use of the interpolator node classes <Anchor label="FloatFieldInterpolator" title="FloatFieldInterpolator" href="/docs/references/scenegraph/animation-nodes/floatfieldinterpolator.md">FloatFieldInterpolator</Anchor>, <Anchor label="Vector2DFieldInterpolator" title="Vector2DFieldInterpolator" href="/docs/references/scenegraph/animation-nodes/vector2dfieldinterpolator.md">Vector2DFieldInterpolator</Anchor>, and <Anchor label="ColorFieldInterpolator" title="ColorFieldInterpolator" href="/docs/references/scenegraph/animation-nodes/colorfieldinterpolator.md">ColorFieldInterpolator</Anchor> as child nodes to achieve a specific animation effect.
 
 > AnimationBase is not meant to be instantiated directly by app code
 
 ## Fields
 
-| Field   | Type          | Default | Access Permission | Description                                                  |
-| ------- | ------------- | ------- | ----------------- | ------------------------------------------------------------ |
-| control | option string | none    | READ_WRITE        | Controls the animation. Supported options include: ${ControlValues} |
-| state   | value string  | stopped | READ_ONLY         | Indicates the state of the animation. Values include: ${StateValues} |
-| repeat  | Boolean       | false   | READ_WRITE        | Controls whether the animation stops when it finishes (false) or repeats from the beginning (true) |
-| delay   | time          | 0       | READ_WRITE        | Delays the start of the animation by the specified number of seconds |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
 
-{#ControlValues}
+      <th>
+        Type
+      </th>
 
-| Option | Effect                                                       |
-| ----- | ----------------------------------------------------------- |
-| none   | Initial state with no associated action                      |
-| start  | Always plays the animation from the beginning                |
-| stop   | Stops the animation in its current state                     |
-| pause  | Pauses the animation in its current state                    |
-| resume | If paused, resumes the animation from its current state. If the animation is not paused, plays the animation from the beginning. |
-| finish | Jumps to the end of the animation, then stops. All animated fields will be immediately set to their final values as if the animation had completed. |
+      <th>
+        Default
+      </th>
 
-{#StateValues}
+      <th>
+        Access Permission
+      </th>
 
-| Value   | Meaning                                                      |
-| ------ | ----------------------------------------------------------- |
-| running | Indicates that the animation is in progress                  |
-| paused  | Indicates that the animation has been paused                 |
-| stopped | Indicates that the animation has either run to completion or has been explicitly stopped |
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        control
+      </td>
+
+      <td>
+        option string
+      </td>
+
+      <td>
+        none
+      </td>
+
+      <td>
+        READ_WRITE
+      </td>
+
+      <td>
+        <table>
+            <tr>
+                <td>Option</td>
+                <td>Effect</td>
+            </tr>
+            <tr>
+                <td>none</td>
+                <td>Initial state with no associated action</td>
+            </tr>
+            <tr>
+                <td>start</td>
+                <td>Always plays the animation from the beginning</td>
+            </tr>
+            <tr>
+                <td>stop</td>
+                <td>Stops the animation in its current state</td>
+            </tr>
+            <tr>
+                <td>pause</td>
+                <td>Pauses the animation in its current state</td>
+            </tr>
+            <tr>
+                <td>resume</td>
+                <td>If paused, resumes the animation from its current state. If the animation is not paused, plays the animation from the beginning.</td>
+            </tr>
+            <tr>
+                <td>finish</td>
+                <td>Jumps to the end of the animation, then stops. All animated fields will be immediately set to their final values as if the animation had completed.</td>
+            </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        state
+      </td>
+
+      <td>
+        value string
+      </td>
+
+      <td>
+        stopped
+      </td>
+
+      <td>
+        READ_ONLY
+      </td>
+
+      <td>
+        <table>
+            <tr>
+                <td>Value</td>
+                <td>Meaning</td>
+            </tr>
+            <tr>
+                <td>running</td>
+                <td>Indicates that the animation is in progress</td>
+            </tr>
+            <tr>
+                <td>paused</td>
+                <td>Indicates that the animation has been paused</td>
+            </tr>
+            <tr>
+                <td>stopped</td>
+                <td>Indicates that the animation has either run to completion or has been explicitly stopped</td>
+            </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        repeat
+      </td>
+
+      <td>
+        Boolean
+      </td>
+
+      <td>
+        false
+      </td>
+
+      <td>
+        READ_WRITE
+      </td>
+
+      <td>
+        Controls whether the animation stops when it finishes (false) or repeats from the beginning (true)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        delay
+      </td>
+
+      <td>
+        time
+      </td>
+
+      <td>
+        0
+      </td>
+
+      <td>
+        READ_WRITE
+      </td>
+
+      <td>
+        Delays the start of the animation by the specified number of seconds
+      </td>
+    </tr>
+  </tbody>
+</Table>

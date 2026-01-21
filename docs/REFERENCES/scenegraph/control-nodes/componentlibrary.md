@@ -12,7 +12,7 @@ next:
 ---
 Extends [**Node**](/docs/references/scenegraph/node.md)
 
-The ComponentLibrary node class downloads a library of custom SceneGraph components to be used in an application. The ComponentLibrary node should be used in a Scene node, such as Scene or OverhangPanelSetScene. One way to ensure that the library downloads before the SceneGraph application begins to compile the components for the application, is to begin the download in the main.brs file that creates the Scene node, by adding an `<interface>` field to the Scene node that can be used to monitor the download, and starts the application when the download is complete.
+The ComponentLibrary node class downloads a library of custom SceneGraph components to be used in an application. The ComponentLibrary node should be used in a Scene node, such as Scene or OverhangPanelSetScene. One way to ensure that the library downloads before the SceneGraph application begins to compile the components for the application is to begin the download in the main.brs file that creates the Scene node, by adding an \<interface\> field to the Scene node that can be used to monitor the download, and starts the application when the download is complete.
 
 ## Loading Component Libraries
 

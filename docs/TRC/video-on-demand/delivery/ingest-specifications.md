@@ -452,3 +452,13 @@ Roku supports three image types for each piece of content. Each image type will 
 </tr>
 </tbody>
 </table>
+
+#### Artwork content guidelines
+
+- Key Art (graphic with the full title of the asset visible)
+- No sexually explicit or graphically violent artwork
+- Artwork should be post-theatrical and not include language such as *In Theaters Now* or *Coming Soon*
+- Artwork designed specifically for digital delivery is preferred
+- Artwork for international territories should be localized for each territory
+- For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
+- Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku

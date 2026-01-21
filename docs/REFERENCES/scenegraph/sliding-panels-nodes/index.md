@@ -198,6 +198,9 @@ the `categoriesListPanel` component was defined as
 follows:
 
 ```
+<component name="categoriesListPanel" extends="ListPanel" >
+<script type="text/brightscript" >
+<![CDATA[
 sub init()
   m.top.panelSize = "medium"
   m.top.focusable = true

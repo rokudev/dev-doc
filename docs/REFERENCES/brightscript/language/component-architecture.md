@@ -1,5 +1,5 @@
 ---
-title: "Component architecture"
+title: Component architecture
 excerpt: ''
 deprecated: false
 hidden: true
@@ -549,12 +549,13 @@ end function
 
 
 Output:
-
+```
 hi\!  
 \--------  
 value: hi\!  
 get: <bsTypedValue: Function\>  
 set: <bsTypedValue: Function\>
+```
 
 ## Script libraries
 

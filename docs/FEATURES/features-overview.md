@@ -14,7 +14,7 @@ Roku is an open streaming platform that is revolutionizing how consumers watch v
 
 The Roku OS is built specifically for streaming, which means publishers can seamlessly develop intuitive, high-performance apps designed especially for the TV. With 35.4 billion hours watched last quarter, publishers can distribute their apps around the globe to expand their reach and monetize their content.
 
-As TV viewing continues to shift to streaming platforms, Roku is well-positioned to help content publishers with a sophisticated suite of tools that make it easy to distribute and monetize content. The Roku Developer Program empowers content publishers to build Roku streaming apps. You can use our [developer SDK](getting-started) to build a customized streaming experience.
+As TV viewing continues to shift to streaming platforms, Roku is well-positioned to help content publishers with a sophisticated suite of tools that make it easy to distribute and monetize content. The Roku Developer Program empowers content publishers to build Roku streaming apps. You can use our [developer SDK](doc:getting-started) to build a customized streaming experience.
 
 Our goal is to encourage the success of partners on our platform. We offer multiple paths to monetization, whether you choose to charge a subscription fee, offer free streaming content supported by advertising or even a combination of both, Roku can support many monetization strategies. We have a team that is dedicated to [helping content publishers grow their audience](https://advertising.roku.com/content-publishers) on our platform and capture the increasing number of viewers who are no longer tuning into traditional TV.
 

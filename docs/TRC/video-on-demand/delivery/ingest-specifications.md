@@ -897,4 +897,55 @@ Roku utilizes a transform engine that can “normalize” different metadata for
 </tbody>
 </table>
 
+### Content type definitions
 
+Roku Channel supports 3 content types: tv, film, and clip. All content must be delivered as one of these 3 content types. Titles must be delivered to Roku Channel in the same content type the program was originally available in. The below definitions can help guide how to classify content that is intended for Roku Channel.
+
+**TV**
+
+Episodic content that is structured in a series --> season --> episode hierarchy should be delivered to the TV specification.
+
+**Film**
+
+Full length, long form, stand-alone titles should be delivered to the Film specification. Any program that is not intended to be nested in a series/season/episode hierarchy and exceeds roughly 15 minutes run time should be considered a film. This includes stand-alone TV Specials.
+
+**Clip**
+
+Short form, stand-alone titles that do not exceed roughly 15 minutes run time should be delivered to the Clip specification.
+
+### ID requirements and expectations
+
+Roku does not supply IDs for content. IDs are to be generated and supplied by the Partner for content that is delivered to Roku. Every clip and movie must be delivered with an asset_id. Every episode must be delivered with 3 IDs: an asset_id, a series_id, and a season_id. IDs need to be meaningful to your team as they are how we positively identify a title in our system. The asset ID in the ingest metadata should match the Title ID provided in the avail document. This will aid in tracking the content throughout Roku’s pipeline from Avails submission through publication on Roku Channel. Any updates to the title once it has been ingested into our system MUST be accompanied by the asset ID. Guidelines and definitions of IDs are below:
+
+| **ID **   | Definitions                                                  |
+| --------- | ------------------------------------------------------------ |
+| asset_id  | Immutable, unique identifier for a clip, episode, or movie. Required for all content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION** |
+| series_id | Immutable, unique identifier for a series. Cannot be the same as the season or unique episode ID. Must be delivered with all episodes of a series and must be consistent for all episodes of a series. Required for TV content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION** |
+| season_id | Immutable, unique identifier for a season. Cannot be the same as the series or unique episode ID. Must be delivered with all episodes of a season of a series and must be consistent for all episodes within that season. Required for TV content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION** |
+
+### Availability sheets/planners
+
+Roku requests an initial launch list of titles/episodes/clips in current library that are available to Roku at the time of onboarding and a schedule when the content will be refreshed. For ongoing production, Roku requests that Avails be provided 60 days prior to licensing window start and the content be delivered at least 30 days before curation onto the channel. This will allow ample time for processing and QC of the content before it goes live on Roku Channel. Delivery capacity to be coordinated after signing
+
+| Documents           |                                                              |
+| ------------------- | ------------------------------------------------------------ |
+| Roku Avail Spec     | Check out the avail specifications page [here](https://go.roku.com/trc-avail-spec) |
+| Roku Avail Template | Download Roku's avail template [here](https://go.roku.com/trc-avail-template) |
+
+### Availability windows
+
+Roku has the ability for content to display on-device and for user playback at a specific starting time. By default, content will go into window at 12:00 am (midnight) and expire at 11:59:59 pm in the users’ time zone.
+
+If content is to go live at a time other than midnight or expire at a time other than 11:59:59 pm, the license window start or end values in the inbound metadata must include the desired times.
+
+There are two types of specific time designations – relative and absolute.
+
+- Relative Time – a Saturday night premiere of a movie goes into window at 9pm local time for all users. A user in the Eastern Time Zone watches at 9pm but a user in the Pacific Time Zone, at the exact same moment (6pm PT), cannot watch that content.
+- Absolute Time – a new episode of a series goes into window at 9pm Eastern and becomes immediately available across all time zones. A user in the Pacific Time Zone can watch the content at 6 pm local time.
+
+ While time settings are dictated by the content owner, Roku will need the metadata as follows:
+
+- If the content has a relative start time, that time must be indicated in the ingest metadata and formatted as “yyyy-mm-ddThh:mm:ss” (2019-11-01T21:00:00)
+- If the content has an absolute start time, that time must be indicated in the ingest metadata. The time must be presented as UTC time and formatted as “yyyy-mm-ddThh:mm:ssZ” (2019-11-02T01:00:00Z).
+- In this example, 9 pm Eastern Time on November 1 is 1 am UTC (https://www.thetimezoneconverter.com)
+- If the ingest metadata arrives without a time, Roku will assume a relative start time of midnight and a relative end time of 11:59:59 pm

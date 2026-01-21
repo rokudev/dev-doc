@@ -1,5 +1,5 @@
 ---
-title: "Premium Subscriptions on The Roku Channel"
+title: "Premium Subscriptions"
 excerpt: ''
 deprecated: false
 hidden: true

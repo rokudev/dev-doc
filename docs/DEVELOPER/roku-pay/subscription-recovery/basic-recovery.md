@@ -1,5 +1,5 @@
 ---
-title: "Basic Subscription Recovery"
+title: Basic Subscription Recovery
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,12 +10,9 @@ metadata:
 next:
   description: ''
 ---
-
-
 When payment for a subscription auto-renewal fails, Roku's basic subscription recovery feature gives customers a 3-day grace period where they can continue accessing content, while Roku Pay notifies them daily via email to update their method of payment (MOP). Once the 3-day grace period expires, the subscription is canceled. This solution helps the publisher improve the chance of recovering payments and thereby reduce passive cancelations.
 
 > Effective October 1, 2024, all apps using Roku Pay must implement Enhanced Subscription Recovery to pass [certification](doc:certification). As a result, apps using basic subscription recovery solution must migrate to [Enhanced Subscription Recovery](doc:subscription-on-hold).
->
 
 ## Overview
 
@@ -27,7 +24,7 @@ If Roku receives a payment during the 3-day grace period, it is processed and en
 
 Roku sends email notifications prompting the customer to update their MOP or manage their subscription online at [my.roku.com](http://my.roku.com/).
 
-![roku600px - email-hold-notification](https://image.roku.com/ZHZscHItMTc2/email-hold-notification.jpg)
+<Image alt="roku600px - email-hold-notification" border={false} src="https://image.roku.com/ZHZscHItMTc2/email-hold-notification.jpg" />
 
 ## Entitlement checks
 

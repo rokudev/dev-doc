@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
 
 The BusySpinner node class is a simple widget that displays a continuously rotating bitmap. Since the BusySpinner node class uses an internal Poster node instance, the busy spinner bitmap can be specified by setting the internal Poster node uri field.

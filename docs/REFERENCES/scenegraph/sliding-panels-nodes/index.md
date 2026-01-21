@@ -1,5 +1,5 @@
 ---
-title: "Sliding panels"
+title: Sliding panels
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Sliding panels allow the creation of sets of other elements, such as
 lists or grids, that are grouped into *panels* that can be moved left
 and right on and off the display screen. The panels can also be created
@@ -58,9 +56,9 @@ focused panel in the **PanelSet** node. As part of an
 automatically positioned below the **Overhang** node. The **PanelSet**
 node class includes areas on the left and right side of the panel set
 designed for automatic arrow indicators, to prompt the user to press the
-<span style="color: rgb(153,51,102);">**Right**</span>,
-<span style="color: rgb(153,51,102);">**Left**</span>, or
-<span style="color: rgb(153,51,102);">**Back**</span> keys to select and
+<span>**Right**</span>,
+<span>**Left**</span>, or
+<span>**Back**</span> keys to select and
 slide the
 panels.
 
@@ -102,7 +100,7 @@ follows:
 | height       | all        | 403              | 605              |
 | width        | narrow     | 218              | 388              |
 |              | medium     | 292              | 520              |
-|              | wide       | 363              | 645< |
+|              | wide       | 363              | 645\<            |
 |              | full       | 520              | 940              |
 | leftPosition | narrow     | 60               | 105              |
 |              | medium     | 60               | 105              |
@@ -134,9 +132,9 @@ fill the panel set width.
 
 After setting up the panels in the panel set according to size and
 content, the panels will slide back and forth automatically based on
-user <span style="color: rgb(153,51,102);">**Right**</span>,
-<span style="color: rgb(153,51,102);">**Left**</span>, and
-<span style="color: rgb(153,51,102);">**Back**</span> key presses,
+user <span>**Right**</span>,
+<span>**Left**</span>, and
+<span>**Back**</span> key presses,
 adding new panels to the panel set, and putting the focus on
 already-added panels. You add new panels as children of the panel set
 using the `createChild()` function, or using the `createObject()`
@@ -155,17 +153,9 @@ observers with callback functions to populate and add panels to the
 right, and slide the panels back and forth based on user key
 presses.
 
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-
 **Panel Adding/Sliding Example**
 
-</div>
-
-<div class="codeContent panelContent pdl">
-
-``` brush: vb; gutter: false; theme: Confluence
+```
 sub init()
   m.top.backgroundURI = "pkg:/images/rsgetbg.jpg"
 
@@ -198,11 +188,8 @@ sub slideexamplesgridpanel()
     m.categoriespanel.setFocus(true)
   end if
 end sub
+
 ```
-
-</div>
-
-</div>
 
 The `categoriesListPanel` component object created as a child of the
 panel set was defined as a medium panel in its component XML file, and
@@ -210,22 +197,10 @@ the same was done for the `categoryinfoPanel` component. For example,
 the `categoriesListPanel` component was defined as
 follows:
 
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-
-**Panel Component XML Markup Example**
-
-</div>
-
-<div class="codeContent panelContent pdl">
-
-``` brush: xml; gutter: false; theme: Confluence
+```
 <component name="categoriesListPanel" extends="ListPanel" >
-
 <script type="text/brightscript" >
 <![CDATA[
-
 sub init()
   m.top.panelSize = "medium"
   m.top.focusable = true
@@ -289,11 +264,6 @@ functions to do this."
 
 </component>
 ```
-
-</div>
-
-</div>
-
 Since both the `categoriesListPanel` and `categoryinfoPanel` components
 were defined as medium panels (each approximately one-half the panel set
 width), they fill the entire panel set width. The `categoryinfoPanel`
@@ -303,17 +273,9 @@ component list on the left. It implements an `<interface>` element with
 an `onChange` callback function attribute for a string
 field:
 
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-
 **Simple Tombstone Panel XML Markup Example**
 
-</div>
-
-<div class="codeContent panelContent pdl">
-
-``` brush: xml; gutter: false; theme: Confluence
+```
 <component name="categoryinfoPanel" extends="Panel" >
 
 <interface>
@@ -359,11 +321,8 @@ end sub
 </children>
 
 </component>
+
 ```
-
-</div>
-
-</div>
 
 So when a user focuses on an item in the `m.categoriespanel` component
 list, the `showcategoryinfo()` callback function triggered by the
@@ -375,9 +334,9 @@ Because the `m.examplespanel` panel object is created using
 slide. The sliding is performed by the `focusedChild` field observer
 callback function `slideexamplesgridpanel()` when focus moves to the
 `m.categoryinfopanel` panel object in automatic response to user
-<span style="color: rgb(153,51,102);">**Right**</span>,
-<span style="color: rgb(153,51,102);">**Left**</span>, and
-<span style="color: rgb(153,51,102);">**Back**</span> key presses. The
+<span>**Right**</span>,
+<span>**Left**</span>, and
+<span>**Back**</span> key presses. The
 callback function moves the focus to either the left-hand
 `m.categoriespanel` panel object, or the full width right-hand
 `m.examplespanel` object, depending on the direction of the key press
@@ -389,17 +348,7 @@ setting the `isFullScreen` field to true to automatically slide the
 panel when added to the panel set and
 focused:
 
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
-
-**Full Width Panel XML Markup Example**
-
-</div>
-
-<div class="codeContent panelContent pdl">
-
-``` brush: xml; gutter: false; theme: Confluence
+```
 <component name="examplesGridPanel" extends="GridPanel" >
 
 <interface>
@@ -449,21 +398,3 @@ end sub
 
 </component>
 ```
-
-</div>
-
-</div>
-
-</div>
-
-<div class="pageSection group">
-
-<div class="pageSectionHeader">
-
-</div>
-
-</div>
-
-</div>
-
-</div>

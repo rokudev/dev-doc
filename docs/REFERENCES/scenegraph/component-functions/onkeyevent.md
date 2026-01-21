@@ -1,5 +1,5 @@
 ---
-title: "onKeyEvent()"
+title: onKeyEvent()
 excerpt: ''
 deprecated: false
 hidden: true
@@ -24,7 +24,7 @@ function onKeyEvent(_key_ as String, _press_ as Boolean) as Boolean
 end function
 ```
 
-Key event handling is easy to set up in XML by including an `onKeyEvent()` function in the <script\> element. When the XML component or its children have the key focus, the `onKeyEvent()` function will be called whenever an unhandled key event bubbles up the focus chain to the XML component.
+Key event handling is easy to set up in XML by including an `onKeyEvent()` function in the \<script\> element. When the XML component or its children have the key focus, the `onKeyEvent()` function will be called whenever an unhandled key event bubbles up the focus chain to the XML component.
 
 The `key` parameter contains a string, which is case-sensitive, that identifies which button was pressed. The `key` strings supported by the `onKeyEvent()` function, and the corresponding remote key, are as follows:
 

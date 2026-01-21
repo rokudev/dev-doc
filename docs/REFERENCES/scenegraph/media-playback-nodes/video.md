@@ -1,5 +1,5 @@
 ---
-title: "Video"
+title: Video
 excerpt: ''
 deprecated: false
 hidden: true
@@ -125,7 +125,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td></td>
 <td>READ_ONLY</td>
 
-<td>A diagnostic message to help resolve the video play error set in the <code>state</code> field.<br /><br />The format of the errorStr is as follows: category:\\{category_name\\}:error:\{error_code\\}:ignored:\\{0|1\\}:\\{source\\}:\\{source_name\\}:\\{additional catcher comment\\}:\\{error_string\\}:extra:\\{error_attributes\\} <br /><br /><table><thead><tr><th>errorStr Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>category_name</td><td>string</td><td>The type of error, which includes: "http", "drm", "mediaerror", or "mediaplayer".</td></tr><tr><td>error_code</td><td>integer</td><td>The unique code associated with the error.</td></tr><tr><td>ignored</td><td>integer</td><td>Indicates whether the error generated an exception (0) or was ignored resulting in the next item in the content list being played (1).</td></tr><tr><td>source</td><td>string</td><td>The module that generated the error.</td></tr><tr><td>source_name</td><td>string</td><td>The module that generated the error.</td></tr><tr><td>additional catcher comment</td><td>string</td><td>Typically, the comment added when the exception is caught.</td></tr><tr><td>error_string</td><td>string</td><td>A text message describing the video play error.</td></tr><tr><td>error_attributes</td><td>string</td><td>The error attribute, which includes the clipId (the unique ID of the clip that failed to play).</td></tr></tbody></table></td>
+<td>A diagnostic message to help resolve the video play error set in the <code>state</code> field.<br /><br />The format of the errorStr is as follows:<br /><br /><table><thead><tr><th>errorStr Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>category_name</td><td>string</td><td>The type of error, which includes: "http", "drm", "mediaerror", or "mediaplayer".</td></tr><tr><td>error_code</td><td>integer</td><td>The unique code associated with the error.</td></tr><tr><td>ignored</td><td>integer</td><td>Indicates whether the error generated an exception (0) or was ignored resulting in the next item in the content list being played (1).</td></tr><tr><td>source</td><td>string</td><td>The module that generated the error.</td></tr><tr><td>source_name</td><td>string</td><td>The module that generated the error.</td></tr><tr><td>additional catcher comment</td><td>string</td><td>Typically, the comment added when the exception is caught.</td></tr><tr><td>error_string</td><td>string</td><td>A text message describing the video play error.</td></tr><tr><td>error_attributes</td><td>string</td><td>The error attribute, which includes the clipId (the unique ID of the clip that failed to play).</td></tr></tbody></table></td>
 
 </tr>
 <tr>
@@ -136,18 +136,18 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>A diagnostic message to help resolve the video play error set in the <code>state</code> field.<br /><br />The roAssociativeArray contains the following fields:<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>clipId</td><td>integer</td><td>The unique ID for the clip</td></tr><tr><td>ignored</td><td>integer</td><td>Indicates whether the error generated an exception (0) or was ignored resulting in the next item in the content list being played (1).</td></tr><tr><td>source</td><td>string</td><td>The module that generated the error.</td></tr><tr><td>category</td><td>String</td><td>The type of error, which includes: "http", "drm", "mediaerror", or "mediaplayer".</td></tr><tr><td>errcode</td><td>integer</td><td>The internal Roku code associated with the error.  Use the <strong>dbgmsg</strong> field for debugging.</td></tr><tr><td>dbgmsg</td><td>string</td><td>A verbose debug message that can help identify the root cause of the error.</td></tr><tr><td>drmerrcode</td><td>integer</td><td>The error code returned by the DRM system, if any, when a video player error occurs</td></tr></tbody></table></td>
 </tr>
 <tr>
-<td>decoderStats</td>
-<td>roAssociativeArray</td>
-<td>\{\}</td>
-<td>READ_ONLY</td>
-<td>Provides the following video decoder statistics related to the start of video playback:<br /><br /><pre><code></td>
+  <td>decoderStats</td>
+  <td>roAssociativeArray</td>
+  <td>{}</td>
+  <td>READ_ONLY</td>
+  <td>Provides video decoder statistics related to playback.</td>
 </tr>
 <tr>
-<td>enableDecoderStats</td>
-<td>boolean</td>
-<td>false</td>
-<td>READ_WRITE</td>
-<td>Enables updates to the <strong>decoderStats</strong> field.</td>
+  <td>enableDecoderStats</td>
+  <td>boolean</td>
+  <td>false</td>
+  <td>READ_WRITE</td>
+  <td>Enables updates to the <strong>decoderStats</strong> field.</td>
 </tr>
 <tr>
 <td>playbackActionButtons</td>
@@ -221,7 +221,6 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
 </tbody>
 </table>
-
 
 ### Trickplay fields
 
@@ -396,14 +395,14 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>associative array</td>
 <td>\{ \}</td>
 <td>READ_ONLY</td>
-<td>Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>hdrModeStr</td><td>string</td><td>HDR format of the content, which may be one of the following values: "invalid", "unknown", "none", "hdr10", "dolby_vision", "hlg10", "hdr10", "sl-hdr2".</td></tr><tr><td>segBitrateBps</td><td>integer</td><td>Bitrate of the segment in bits per second</td></tr><tr><td>segSequence</td><td>integer</td><td>The sequence number of the segment in the video</td></tr><tr><td>segStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>segUrl</td><td>string</td><td>URL of the segment</td></tr><tr><td>segType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>segTypeStr</td><td>String</td><td>Type of data in the segment:  "audio", "video", "captions",  "mux"</td></tr><tr><td>latency</td><td>integer</td><td>The time, in milliseconds, between the current live edge (or most recent available media segment on the CDN) and the segment currently being played.</td></tr><tr><td>path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: <period>/<adaptset>/<repr>/<segment></td></tr><tr><td>width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr></tbody></table></td>
+<td>Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>hdrModeStr</td><td>string</td><td>HDR format of the content, which may be one of the following values: "invalid", "unknown", "none", "hdr10", "dolby_vision", "hlg10", "hdr10", "sl-hdr2".</td></tr><tr><td>segBitrateBps</td><td>integer</td><td>Bitrate of the segment in bits per second</td></tr><tr><td>segSequence</td><td>integer</td><td>The sequence number of the segment in the video</td></tr><tr><td>segStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>segUrl</td><td>string</td><td>URL of the segment</td></tr><tr><td>segType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>segTypeStr</td><td>String</td><td>Type of data in the segment:  "audio", "video", "captions",  "mux"</td></tr><tr><td>latency</td><td>integer</td><td>The time, in milliseconds, between the current live edge (or most recent available media segment on the CDN) and the segment currently being played.</td></tr><tr><td>path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: \<period\>/\<adaptset\>/\<repr\>/\<segment\></td></tr><tr><td>width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr></tbody></table></td>
 </tr>
 <tr>
 <td>downloadedSegment</td>
 <td>associative array</td>
 <td>invalid</td>
 <td>READ_ONLY</td>
-<td>Information about the video segment that was just downloaded. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Status</td><td>integer</td><td>Status of the download: 0 = success, nonzero = error</td></tr><tr><td>SegSequence</td><td>integer</td><td>Stream segment sequence number</td></tr><tr><td>SegUrl</td><td>string</td><td>Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth)</td></tr><tr><td>DownloadDuration</td><td>integer</td><td>Amount of time spent downloading the segment, in milliseconds</td></tr><tr><td>SegSize</td><td>integer</td><td>Segment size, in bytes</td></tr><tr><td>SegType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>BitrateBPS</td><td>integer</td><td>Bitrate of the segment, in bits per second</td></tr><tr><td>SegStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>SegDuration</td><td>string</td><td>The duration of the segment in milliseconds.</td></tr><tr><td>Path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: <period>/<adaptset>/<repr>/<segment></td></tr><tr><td>Width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>Height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr><tr><td>HdrMode</td><td></td><td>Indicates the HDR format of the content, which may be one of the following values:$\{hdr-values\}</td></tr></tbody></table></td>
+<td>Information about the video segment that was just downloaded. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Status</td><td>integer</td><td>Status of the download: 0 = success, nonzero = error</td></tr><tr><td>SegSequence</td><td>integer</td><td>Stream segment sequence number</td></tr><tr><td>SegUrl</td><td>string</td><td>Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth)</td></tr><tr><td>DownloadDuration</td><td>integer</td><td>Amount of time spent downloading the segment, in milliseconds</td></tr><tr><td>SegSize</td><td>integer</td><td>Segment size, in bytes</td></tr><tr><td>SegType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>BitrateBPS</td><td>integer</td><td>Bitrate of the segment, in bits per second</td></tr><tr><td>SegStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>SegDuration</td><td>string</td><td>The duration of the segment in milliseconds.</td></tr><tr><td>Path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: \<period\>/\<adaptset\>/\<repr\>/\<segment\></td></tr><tr><td>Width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>Height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr><tr><td>HdrMode</td><td></td><td>Indicates the HDR format of the content, which may be one of the following values:</td></tr></tbody></table></td>
 </tr>
 <tr>
 <td>enableLiveAvailabilityWindow</td>
@@ -435,7 +434,6 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
 </tbody>
 </table>
-
 
 ### UI fields
 
@@ -530,8 +528,6 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
 </tbody>
 </table>
-
-
 
 ### Closed caption fields
 
@@ -668,7 +664,7 @@ The user can manually set their preferred language in the **Settings > Audio > A
 
 For example, if the user chooses Portuguese as their preferred language, the Roku OS will by default select the Portuguese audio track the next time they watch content (if available). If the selected audio track is in Portuguese (Brazil), the user's preferred country is set to Brazil, and the Portuguese (Brazil) audio track is selected by default the next time the user watches content.
 
-> It is recommend that apps use the audio track selection logic provided by the Roku OS instead of implementing their own.
+> It is recommended that apps use the audio track selection logic provided by the Roku OS instead of implementing their own.
 
 Overall, the Roku OS uses the following criteria (listed in order of priority) to determine which audio track to play:
 
@@ -823,51 +819,3 @@ end function
 ]]>
 </script>
 ~~~~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Sample app
-
-[VideoExample](https://github.com/rokudev/samples/tree/master/media/VideoExample) is a sample app demonstrating Video in action.

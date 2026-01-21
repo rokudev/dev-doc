@@ -949,3 +949,27 @@ There are two types of specific time designations – relative and absolute.
 - If the content has an absolute start time, that time must be indicated in the ingest metadata. The time must be presented as UTC time and formatted as “yyyy-mm-ddThh:mm:ssZ” (2019-11-02T01:00:00Z).
 - In this example, 9 pm Eastern Time on November 1 is 1 am UTC (https://www.thetimezoneconverter.com)
 - If the ingest metadata arrives without a time, Roku will assume a relative start time of midnight and a relative end time of 11:59:59 pm
+
+### Special characters
+
+
+<p>Roku utilizes CDATA sections to allow special characters (e.g. !@#$%^&amp;<em>(){}|[]\;:’”?/&gt;&lt;, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the </em><em>only</em>* nodes that support CDATA sections:</p>
+
+
+- title
+- long_synopsis
+- short_synopsis
+- display_name
+
+Certain characters in an XML will render the document unreadable by the Roku ingest platform unless handled (escaped) properly. The below characters must be provided in their Escaped Form for all node values that do not support CDATA sections:
+
+| Character Name | Character | Escaped Form |
+| -------------- | --------- | ------------ |
+| Ampersand      | \&         | `&amp;`      |
+| Less-than      | \<         | `&lt;`       |
+| Greater-than   | \>         | `&gt;`       |
+| Quotes         | "         | `&quot;`     |
+| Apostrophe     | '         | `&apos;`     |
+
+Special characters should never be used in file names or file name references within the XML or Excel metadata. [See File Naming Guidelines](#file-naming) for more on this.
+

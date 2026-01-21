@@ -190,3 +190,74 @@ sub slideexamplesgridpanel()
 end sub
 
 ```
+
+The `categoriesListPanel` component object created as a child of the
+panel set was defined as a medium panel in its component XML file, and
+the same was done for the `categoryinfoPanel` component. For example,
+the `categoriesListPanel` component was defined as
+follows:
+
+```
+sub init()
+  m.top.panelSize = "medium"
+  m.top.focusable = true
+  m.top.hasNextPanel = true
+  m.top.leftOnly = true
+  m.top.createNextPanelOnItemFocus = false
+  m.top.selectButtonMovesPanelForward = true
+  m.top.overhangTitle = "SceneGraph Examples"
+  m.categorieslist = m.top.findNode("categorieslist")
+  m.top.list = m.categorieslist
+end sub
+
+]]>
+</script>
+
+<children>
+
+<LabelList id = "categorieslist" >
+
+  <ContentNode role = "content" >
+    <ContentNode  
+      title = "Renderable Nodes"  
+      description = "Basic Nodes That Show Things  
+      &#xA;  
+      &#xA;  &#8226; Rectangle
+      &#xA;  &#8226; Label
+      &#xA;  &#8226; Poster  
+      &#xA;  &#8226; Video"
+      shortdescriptionline1="Renderable Node Markup"  
+      Url = "http://www.sdktestinglab.com/renderablegrid.xml" />
+    <ContentNode  
+      title = "Z-Order/Parent-Child"  
+      description = "SceneGraph Tree Order Matters  
+      &#xA;  
+      &#xA;Demonstrates the basic concepts of SceneGraph element layering
+and inheritance. In Roku SceneGraph, what's on the bottom of your XML tree goes
+on top!"  
+      shortdescriptionline1="Z-Order/Parent-Child Markup"  
+      Url = "http://www.sdktestinglab.com/zordergrid.xml" />  
+    <ContentNode title = "Animations"  
+      description = "Fly Things Around and Flash Lights  
+      &#xA;  
+      &#xA;This shows you how to make your application more moving, by animating
+screen elements. There are examples for all of the field interpolator nodes, plus
+sequential and parallel animations."  
+      shortdescriptionline1="Animation Markup"   
+      Url = "http://www.sdktestinglab.com/animationgrid.xml" />
+    <ContentNode title = "Events and Observers"  
+      description = "React When Stuff Happens  
+      &#xA;  
+      &#xA;You need to handle events that come from both the user, and program
+actions. You'll learn to use the onKeyEvent() and observeField() SceneGraph
+functions to do this."   
+      shortdescriptionline1="Events and Observers Markup"  
+      Url = "http://www.sdktestinglab.com/eventsobserversgrid.xml" />
+  </ContentNode>
+
+</LabelList>
+
+</children>
+
+</component>
+```

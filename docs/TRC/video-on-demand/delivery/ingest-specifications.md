@@ -189,3 +189,41 @@ Roku supports a variety of frame rates and scan types. All video files should be
 </tr>
 </tbody>
 </table>
+
+### Audio requirements
+
+*Files must have industry standard audio configurations with all channels clearly labeled for position and language* (depending on file format)
+
+- PCM 16-Bit or 24-Bit 48kHz audio at highest bitrate preferred
+- Dolby AC3 Audio is supported
+
+**Roku prefers to receive 5.1 and Stereo audio whenever possible**
+
+| 5.1 Surround + 2.0 Stereo | Channel Label       |
+| ------------------------- | ------------------- |
+| Channel 1                 | Left Front (L)      |
+| Channel 2                 | Right Front (R)     |
+| Channel 3                 | Center (C)          |
+| Channel 4                 | LFE (Lfe)           |
+| Channel 5                 | Left Surround (Ls)  |
+| Channel 6                 | Right Surround (Rs) |
+| Channel 7                 | Stereo Left (SL)    |
+| Channel 8                 | Stereo Right (SR)   |
+
+**5.1 Surround only is acceptable if 5.1 + Stereo is not available**
+
+| 5.1 Surround Only | Channel Label       |
+| ----------------- | ------------------- |
+| Channel 1         | Left Front (L)      |
+| Channel 2         | Right Front (R)     |
+| Channel 3         | Center (C)          |
+| Channel 4         | LFE (Lfe)           |
+| Channel 5         | Left Surround (Ls)  |
+| Channel 6         | Right Surround (Rs) |
+
+**Stereo only is acceptable if 5.1 + Stereo and 5.1 Surround only are not available**
+
+| 2.0 Stereo | Channel Label     |
+| ---------- | ----------------- |
+| Channel 1  | Stereo Left (SL)  |
+| Channel 2  | Stereo Right (SR) |

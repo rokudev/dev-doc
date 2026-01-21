@@ -741,3 +741,22 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 </tr>
 </tbody>
 </table>
+
+## MovieLabs content delivery
+
+Order of delivery is important. The Roku MovieLabs service will require that the MMC XML file be delivered after all media files referenced within have completed delivery. Roku cannot process content without successful delivery of both the MMC and MEC XMLs. Please see examples below: 
+
+- For each MMC, all files referenced in the MMC should be delivered prior to the delivery of the MMC XML to be considered a successful delivery
+- For each MEC, all files referenced in the MEC should be delivered prior to the delivery of the MEC XML to be considered a successful delivery
+- Movies, Series, Seasons, and Episodes require successful delivery of both MMC and MEC to ingest
+- Episodes cannot ingest without successful delivery and ingest of MMC and MEC of the Season to which the Episode belongs
+- Seasons cannot ingest without successful delivery and ingest of MMC and MEC of the Series to which the Season belongs
+- Episodes processed by Roku’s system before the Series and/or Season to which the Episode belongs will be held in an uningested state until the Series and/or Season has been successfully delivered
+- Seasons processed by Roku’s system before the Series to which the Season belongs and/or an Episode belonging to that Season will be held in an uningested state until the Series and/or an Episode has been successfully delivered
+- Series processed by Roku’s system before a Season and an Episode belonging to that Series will be held in an uningested state until a Season and Episode has been successfully delivered
+
+### Roku specific metadata and media files
+
+[Video files](#video-requirements), [audio files](#audio-requirements), [closed caption files](#closed-captions), [subtitle files](#subtitles), [image files](#artwork), [minimum metadata requirements](#minimum-required-metadata-by-content-type), [genres](#genres), and [ratings and rating sources](#rating-values-by-rating-system-and-country), must adhere to the supported formats and requirements defined in this specification
+
+#### Tags

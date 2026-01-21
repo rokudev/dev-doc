@@ -647,3 +647,97 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 | Hyphen         | -         |
 | Period         | .         |
 | Underscore     | _         |
+
+##### Characters forbidden in file names
+
+
+<table>
+<thead>
+<tr>
+<th>Character Name</th>
+<th>Character</th>
+<th>Character Name</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"At" symbol</td>
+<td>@</td>
+<td>Left square bracket</td>
+<td>[</td>
+</tr>
+<tr>
+<td>Ampersand</td>
+<td>&amp;</td>
+<td>Less than</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>Asterisk</td>
+<td>*</td>
+<td>Percent</td>
+<td>\%</td>
+</tr>
+<tr>
+<td>Backslash</td>
+<td>\\</td>
+<td>Plus</td>
+<td>+</td>
+</tr>
+<tr>
+<td>Caret</td>
+<td>^</td>
+<td>Pound/hashtag</td>
+<td>#</td>
+</tr>
+<tr>
+<td>Colon</td>
+<td>:</td>
+<td>Question mark</td>
+<td>\?</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>,</td>
+<td>Quotation marks/double quote</td>
+<td>"</td>
+</tr>
+<tr>
+<td>Dollar</td>
+<td>$</td>
+<td>Right curly brace</td>
+<td>\}</td>
+</tr>
+<tr>
+<td>Equals</td>
+<td>=</td>
+<td>Right square bracket</td>
+<td>]</td>
+</tr>
+<tr>
+<td>Forward slash</td>
+<td>/</td>
+<td>Semicolon</td>
+<td>;</td>
+</tr>
+<tr>
+<td>Grave accent</td>
+<td>`</td>
+<td>Space</td>
+<td><code></code></td>
+</tr>
+<tr>
+<td>Greater than</td>
+<td>&gt;</td>
+<td>Tilde</td>
+<td>~</td>
+</tr>
+<tr>
+<td>Left curly brace</td>
+<td>\{</td>
+<td>Vertical pipe</td>
+<td>|</td>
+</tr>
+</tbody>
+</table>

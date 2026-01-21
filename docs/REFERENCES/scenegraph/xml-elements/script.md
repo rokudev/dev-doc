@@ -1,20 +1,8 @@
----
-title: "<script\>"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
 
 
-The <script\> element allows the definition of functions to initialize the component, and to respond to events (including key events) and field value changes. The BrightScript interfaces for the SceneGraph nodes used by BrightScript are the same interfaces defined for [roSGNode](/docs/references/brightscript/components/rosgnode.md) objects.
+The \<script\> element allows the definition of functions to initialize the component, and to respond to events (including key events) and field value changes. The BrightScript interfaces for the SceneGraph nodes used by BrightScript are the same interfaces defined for [roSGNode](/docs/references/brightscript/components/rosgnode.md) objects.
 
-You can include any type of BrightScript object declarations, definitions, and creation, and the related functions to operate on the BrightScript objects, in a <script\> element, except for certain objects and functions that must be used asynchronously in a [Task](/docs/references/scenegraph/control-nodes/task.md) node (see [BrightScript support](/docs/developer-program/core-concepts/scenegraph-brightscript/brightscript-support.md)). In addition, there are two functions that are declared specifically for use in SceneGraph component <script\> elements:
+You can include any type of BrightScript object declarations, definitions, and creation, and the related functions to operate on the BrightScript objects, in a \<script\> element, except for certain objects and functions that must be used asynchronously in a [Task](/docs/references/scenegraph/control-nodes/task.md) node (see [BrightScript support](/docs/developer-program/core-concepts/scenegraph-brightscript/brightscript-support.md)). In addition, there are two functions that are declared specifically for use in SceneGraph component \<script\> elements:
 
 - [init()](/docs/references/scenegraph/component-functions/init.md) 
 - [onKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
@@ -43,7 +31,7 @@ pkg:/components/framework/Task.brs
 
 ## Attributes
 
-The <script\> element has two attributes:
+The \<script\> element has two attributes:
 
 | Attribute | Required | Description                                                  |
 | :-------- | :------- | :----------------------------------------------------------- |
@@ -64,7 +52,7 @@ function createStopwatch(parent as object) as object
 end function
 ~~~~
 
-The <script\> element contains zero or more BrightScript functions. Because BrightScript can contain special characters reserved for XML, the body of the <script\> element must be enclosed in an XML `CDATA` section. For example:
+The \<script\> element contains zero or more BrightScript functions. Because BrightScript can contain special characters reserved for XML, the body of the \<script\> element must be enclosed in an XML `CDATA` section. For example:
 
 **Embedding BrightScript code in XML**
 ~~~~
@@ -85,10 +73,10 @@ The <script\> element contains zero or more BrightScript functions. Because Brig
 
 The `CDATA` section can contain any valid BrightScript code, including any BrightScript library.
 
-BrightScript code can also be included from an external file using the uri attribute of the <script\> element:
+BrightScript code can also be included from an external file using the uri attribute of the \<script\> element:
 
 ~~~~
 <script type = "text/brightscript" uri = "pkg:/components/VideoTheater.brs" />
 ~~~~
 
-XML component files may include more than one <script\> element. This allows for the dividing the BrightScript code into logical groupings, as well as including BrightScript source from more than one external file.
+XML component files may include more than one \<script\> element. This allows for the dividing the BrightScript code into logical groupings, as well as including BrightScript source from more than one external file.

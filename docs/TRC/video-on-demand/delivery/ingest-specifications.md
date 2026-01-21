@@ -130,3 +130,4 @@ Partners can aid in the curation of their content on Roku Channel by providing T
 - Letterboxed 16:9 is allowed but should be minimized
 - SD 16:9 content must not be delivered in a 4:3 container with letterboxing
 - High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible
+

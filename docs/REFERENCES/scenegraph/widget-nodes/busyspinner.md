@@ -20,136 +20,515 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
 
 ## Fields
 
-<Table>
+<Table align={["left","left","left","left","left","left","left","left","left","left","left","left","left"]}>
   <thead>
     <tr>
-      <th>
+      <th style={{ textAlign: "left" }}>
         Field
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Type
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Default
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Access Permission
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Description
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
+      </th>
+
+      <th style={{ textAlign: "left" }}>
+
       </th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         poster
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Poster node
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         internal instance default
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Set the uri field of the Poster node to select the bitmap for the busy spinner
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         control
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         option string
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         none
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Sets the operational state of the busy spinner:
 
         <table>
-            <tr>
-                <td>Option</td>
-                <td>Effect</td>
-            </tr>
-            <tr>
-                <td>none</td>
-                <td>No operational state set. The busy spinner will run if not set to `&quot;stop&quot;`.</td>
-            </tr>
-            <tr>
-                <td>start</td>
-                <td>Starts the busy spinner if not running</td>
-            </tr>
-            <tr>
-                <td>stop</td>
-                <td>Stops the busy spinner if running</td>
-            </tr>
+          <tr>
+            <td>Option</td>
+            <td>Effect</td>
+          </tr>
+
+          <tr>
+            <td>none</td>
+            <td>No operational state set. The busy spinner will run if not set to `"stop";`.</td>
+          </tr>
+
+          <tr>
+            <td>start</td>
+            <td>Starts the busy spinner if not running</td>
+          </tr>
+
+          <tr>
+            <td>stop</td>
+            <td>Stops the busy spinner if running</td>
+          </tr>
         </table>
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Option
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Effect
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        none
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        No operational state set. The busy spinner will run if not set to `&quot;stop&quot;`.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        start
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Starts the busy spinner if not running
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        stop
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Stops the busy spinner if running
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
+        Option
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Effect
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        none
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        No operational state set. The busy spinner will run if not set to `&quot;stop&quot;`.
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        start
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Starts the busy spinner if not running
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
+        stop
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+        Stops the busy spinner if running
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td style={{ textAlign: "left" }}>
         clockwise
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Boolean
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         true
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Specifies whether the bitmap rotates in a clockwise or counterclockwise direction
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         spinInterval
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         time
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         2
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         The number of seconds to complete a 360-degree rotation of the spinner image. A value of 0 will cause the spinner to remain stationary and not spin
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
+      </td>
+
+      <td style={{ textAlign: "left" }}>
+
       </td>
     </tr>
   </tbody>

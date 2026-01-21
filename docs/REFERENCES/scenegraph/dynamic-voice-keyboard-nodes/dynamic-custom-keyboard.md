@@ -16,12 +16,41 @@ next:
 
 The following example demonstrates a custom key handler:
 
-1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:
+1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:  
+   ```
+   "keys": [
+               \{ "label": "Aa", "strOut": "ChangeCase" \},
+               <OTHER KEYS>
+           ]
+   ```
 
-2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:
+2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:  
+   ```
+    <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
+               <interface>
+                   <function name="keySelected" />
+               </interface>
+               <OTHER COMPONENT ELEMENTS>
+   </component>
+   ```
 
-3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:
+3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:  
+   ```
+     function keySelected(key as string) as boolean
+               if key = "ChangeCase"
+                   if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
+                       m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
+                   else
+                       m.top.keyGrid.mode = "UpperCase"
+                   end if
+                   return true    ' key selection is handled, return true
+               end if
+               ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
+               return false
+           end function
 
+   ```
+   <br />
 
 #### Custom key handlers that modify the entered text string
 

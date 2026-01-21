@@ -590,3 +590,4 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 </ul>
 
 - The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
+

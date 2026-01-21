@@ -10,6 +10,3 @@ metadata:
 next:
   description: ''
 ---
-
-
-Welcome to the Renderable Nodes section!

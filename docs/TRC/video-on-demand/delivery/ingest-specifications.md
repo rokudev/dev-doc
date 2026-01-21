@@ -152,3 +152,40 @@ Roku supports a variety of frame rates and scan types. All video files should be
 *\*\*UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel*
 
 #### Video formats
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Codecs</th>
+<th>Extension</th>
+<th>Bitrate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apple® ProRes</td>
+<td>ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles)</td>
+<td>.mov</td>
+<td>50 Mbps or greater</td>
+</tr>
+<tr>
+<td>XDCam</td>
+<td></td>
+<td>.mxf</td>
+<td>50 Mbps or greater</td>
+</tr>
+<tr>
+<td>MPEG-2</td>
+<td></td>
+<td>.ts.mpg</td>
+<td>HD = 15Mbps or greaterSD = 3.75Mbps or greater</td>
+</tr>
+<tr>
+<td>MPEG-4</td>
+<td>H.264</td>
+<td>.mp4</td>
+<td>5Mbps or greater</td>
+</tr>
+</tbody>
+</table>

@@ -626,18 +626,18 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 
 ##### Characters allowed in file names
 
-
 <table>
-<thead>
-<tr>
-<th>Character sets</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ul><li>0-9</li><li>a-z</li><li>A-Z</li></ul><p><em>Correct file delivery location, proper file delivery cadence, and proper file naming is the responsibility of our Partners as the Partner is the expert in their own content and we do not always have insight into individual Partner delivery schedules.</em></p></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Character sets</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><ul><li>0-9</li><li>a-z</li><li>A-Z</li></ul><p><em>Correct file delivery location, proper file delivery cadence, and proper file naming is the responsibility of our Partners as the Partner is the expert in their own content and we do not always have insight into individual Partner delivery schedules.</em></p></td>
+    </tr>
+  </tbody>
 </table>
 
 <br />
@@ -650,110 +650,125 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 
 ##### Characters forbidden in file names
 
-
 <table>
-<thead>
-<tr>
-<th>Character Name</th>
-<th>Character</th>
-<th>Character Name</th>
-<th>Character</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>"At" symbol</td>
-<td>@</td>
-<td>Left square bracket</td>
-<td>[</td>
-</tr>
-<tr>
-<td>Ampersand</td>
-<td>&amp;</td>
-<td>Less than</td>
-<td>&lt;</td>
-</tr>
-<tr>
-<td>Asterisk</td>
-<td>*</td>
-<td>Percent</td>
-<td>\%</td>
-</tr>
-<tr>
-<td>Backslash</td>
-<td>\\</td>
-<td>Plus</td>
-<td>+</td>
-</tr>
-<tr>
-<td>Caret</td>
-<td>^</td>
-<td>Pound/hashtag</td>
-<td>#</td>
-</tr>
-<tr>
-<td>Colon</td>
-<td>:</td>
-<td>Question mark</td>
-<td>\?</td>
-</tr>
-<tr>
-<td>Comma</td>
-<td>,</td>
-<td>Quotation marks/double quote</td>
-<td>"</td>
-</tr>
-<tr>
-<td>Dollar</td>
-<td>$</td>
-<td>Right curly brace</td>
-<td>\}</td>
-</tr>
-<tr>
-<td>Equals</td>
-<td>=</td>
-<td>Right square bracket</td>
-<td>]</td>
-</tr>
-<tr>
-<td>Forward slash</td>
-<td>/</td>
-<td>Semicolon</td>
-<td>;</td>
-</tr>
-<tr>
-<td>Grave accent</td>
-<td>`</td>
-<td>Space</td>
-<td><code></code></td>
-</tr>
-<tr>
-<td>Greater than</td>
-<td>&gt;</td>
-<td>Tilde</td>
-<td>~</td>
-</tr>
-<tr>
-<td>Left curly brace</td>
-<td>\{</td>
-<td>Vertical pipe</td>
-<td>|</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Character Name</th>
+      <th>Character</th>
+      <th>Character Name</th>
+      <th>Character</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>"At" symbol</td>
+      <td>@</td>
+      <td>Left square bracket</td>
+      <td>\[</td>
+    </tr>
+
+    <tr>
+      <td>Ampersand</td>
+      <td>&</td>
+      <td>Less than</td>
+      <td>\<</td>
+    </tr>
+
+    <tr>
+      <td>Asterisk</td>
+      <td>\*</td>
+      <td>Percent</td>
+      <td>%</td>
+    </tr>
+
+    <tr>
+      <td>Backslash</td>
+      <td>\\</td>
+      <td>Plus</td>
+      <td>+</td>
+    </tr>
+
+    <tr>
+      <td>Caret</td>
+      <td>^</td>
+      <td>Pound/hashtag</td>
+      <td>#</td>
+    </tr>
+
+    <tr>
+      <td>Colon</td>
+      <td>:</td>
+      <td>Question mark</td>
+      <td>?</td>
+    </tr>
+
+    <tr>
+      <td>Comma</td>
+      <td>,</td>
+      <td>Quotation marks/double quote</td>
+      <td>"</td>
+    </tr>
+
+    <tr>
+      <td>Dollar</td>
+      <td>$</td>
+      <td>Right curly brace</td>
+      <td>}</td>
+    </tr>
+
+    <tr>
+      <td>Equals</td>
+      <td>=</td>
+      <td>Right square bracket</td>
+      <td>]</td>
+    </tr>
+
+    <tr>
+      <td>Forward slash</td>
+      <td>/</td>
+      <td>Semicolon</td>
+      <td>;</td>
+    </tr>
+
+    <tr>
+      <td>Grave accent</td>
+      <td>\`</td>
+      <td>Space</td>
+
+      <td>
+        <code />
+      </td>
+    </tr>
+
+    <tr>
+      <td>Greater than</td>
+      <td>></td>
+      <td>Tilde</td>
+      <td>\~</td>
+    </tr>
+
+    <tr>
+      <td>Left curly brace</td>
+      <td>\{</td>
+      <td>Vertical pipe</td>
+      <td>|</td>
+    </tr>
+  </tbody>
 </table>
 
 ## MovieLabs content delivery
 
-Order of delivery is important. The Roku MovieLabs service will require that the MMC XML file be delivered after all media files referenced within have completed delivery. Roku cannot process content without successful delivery of both the MMC and MEC XMLs. Please see examples below: 
+Order of delivery is important. The Roku MovieLabs service will require that the MMC XML file be delivered after all media files referenced within have completed delivery. Roku cannot process content without successful delivery of both the MMC and MEC XMLs. Please see examples below:
 
-- For each MMC, all files referenced in the MMC should be delivered prior to the delivery of the MMC XML to be considered a successful delivery
-- For each MEC, all files referenced in the MEC should be delivered prior to the delivery of the MEC XML to be considered a successful delivery
-- Movies, Series, Seasons, and Episodes require successful delivery of both MMC and MEC to ingest
-- Episodes cannot ingest without successful delivery and ingest of MMC and MEC of the Season to which the Episode belongs
-- Seasons cannot ingest without successful delivery and ingest of MMC and MEC of the Series to which the Season belongs
-- Episodes processed by Roku’s system before the Series and/or Season to which the Episode belongs will be held in an uningested state until the Series and/or Season has been successfully delivered
-- Seasons processed by Roku’s system before the Series to which the Season belongs and/or an Episode belonging to that Season will be held in an uningested state until the Series and/or an Episode has been successfully delivered
-- Series processed by Roku’s system before a Season and an Episode belonging to that Series will be held in an uningested state until a Season and Episode has been successfully delivered
+* For each MMC, all files referenced in the MMC should be delivered prior to the delivery of the MMC XML to be considered a successful delivery
+* For each MEC, all files referenced in the MEC should be delivered prior to the delivery of the MEC XML to be considered a successful delivery
+* Movies, Series, Seasons, and Episodes require successful delivery of both MMC and MEC to ingest
+* Episodes cannot ingest without successful delivery and ingest of MMC and MEC of the Season to which the Episode belongs
+* Seasons cannot ingest without successful delivery and ingest of MMC and MEC of the Series to which the Season belongs
+* Episodes processed by Roku’s system before the Series and/or Season to which the Episode belongs will be held in an uningested state until the Series and/or Season has been successfully delivered
+* Seasons processed by Roku’s system before the Series to which the Season belongs and/or an Episode belonging to that Season will be held in an uningested state until the Series and/or an Episode has been successfully delivered
+* Series processed by Roku’s system before a Season and an Episode belonging to that Series will be held in an uningested state until a Season and Episode has been successfully delivered
 
 ### Roku specific metadata and media files
 
@@ -787,6 +802,7 @@ Gracenote TMS IDs can be delivered via the MovieLabs MEC XML as an Identifier wi
 	<md:Identifier>EP012345678910</md:Identifier>
 </md:AltIdentifier>
 ```
+
 #### MMC XML ad breaks and cue points
 
 Ad break, intro credit, and end credit cue points can be supplied in the MovieLabs MMC XML in the Markers node. Please see the [MovieLabs MMC Schema](https://movielabs.com/md/manifest/v1.10/manifest-v1.10/manifest-v1.10.html#Link184) for proper structure of the Markers node
@@ -853,12 +869,12 @@ Ad break, intro credit, and end credit cue points can be supplied in the MovieLa
 
 ### MovieLabs schema validation
 
-Roku is using Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html) for parsing & validating the MEC MMC XML files. You can use the command line tool provided in xmlbeans to validate. 
+Roku is using Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html) for parsing & validating the MEC MMC XML files. You can use the command line tool provided in xmlbeans to validate.
 
 1. Download & extract xmlbeans to local
 2. From command line, cd to the xmlbeans bin directory
 3. Inside bin directory you will find the validate tool
-4. Also download the official MovieLab schema xsd files to local ( https://movielabs.com/schema/manifest/v1.10/manifest-v1.10.xsd https://movielabs.com/schema/mdmec/v2.9/mdmec-v2.9.xsd )
+4. Also download the official MovieLab schema xsd files to local ( [https://movielabs.com/schema/manifest/v1.10/manifest-v1.10.xsd](https://movielabs.com/schema/manifest/v1.10/manifest-v1.10.xsd) [https://movielabs.com/schema/mdmec/v2.9/mdmec-v2.9.xsd](https://movielabs.com/schema/mdmec/v2.9/mdmec-v2.9.xsd) )
 5. Usage: validate schema.xsd instance.xml ( be sure to point schema.xsd to mdmec-v2.9.xsd for MEC, and manifest-v1.10.xsd for MMC )
 6. From the command line output you can tell if the given xml is valid or not
 
@@ -883,18 +899,19 @@ Roku utilizes a transform engine that can “normalize” different metadata for
 ### Minimum required metadata by content type
 
 <table>
-<thead>
-<tr>
-<th>Film/Clip Requirements</th>
-<th>TV Requirements</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ul><li>provider</li><li>content type</li><li>asset_id</li><li>title</li><li>release_date</li><li>runtime</li><li>genres</li><li>rating</li><li>rating system</li><li>short_synopsis</li><li>video file_name</li><li>captions file_name (if captions are required)</li><li>key art file_name</li></ul></td>
-<td><ul><li>provider</li><li>content type</li><li>asset_id</li><li>episode title</li><li>episodeNumber</li><li>episode release_date</li><li>runtime</li><li>rating</li><li>rating system</li><li>episode short_synopsis</li><li>series_id</li><li>series title</li><li>series release_date</li><li>series genres</li><li>series short_synopsis</li><li>season_id</li><li>seasonNumber</li><li>video file_name</li><li>captions file_name (if captions are required)</li><li>episode thumbnail file_name</li><li>series key art file_name</li></ul></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Film/Clip Requirements</th>
+      <th>TV Requirements</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><ul><li>provider</li><li>content type</li><li>asset\_id</li><li>title</li><li>release\_date</li><li>runtime</li><li>genres</li><li>rating</li><li>rating system</li><li>short\_synopsis</li><li>video file\_name</li><li>captions file\_name (if captions are required)</li><li>key art file\_name</li></ul></td>
+      <td><ul><li>provider</li><li>content type</li><li>asset\_id</li><li>episode title</li><li>episodeNumber</li><li>episode release\_date</li><li>runtime</li><li>rating</li><li>rating system</li><li>episode short\_synopsis</li><li>series\_id</li><li>series title</li><li>series release\_date</li><li>series genres</li><li>series short\_synopsis</li><li>season\_id</li><li>seasonNumber</li><li>video file\_name</li><li>captions file\_name (if captions are required)</li><li>episode thumbnail file\_name</li><li>series key art file\_name</li></ul></td>
+    </tr>
+  </tbody>
 </table>
 
 ### Content type definitions
@@ -917,20 +934,20 @@ Short form, stand-alone titles that do not exceed roughly 15 minutes run time sh
 
 Roku does not supply IDs for content. IDs are to be generated and supplied by the Partner for content that is delivered to Roku. Every clip and movie must be delivered with an asset_id. Every episode must be delivered with 3 IDs: an asset_id, a series_id, and a season_id. IDs need to be meaningful to your team as they are how we positively identify a title in our system. The asset ID in the ingest metadata should match the Title ID provided in the avail document. This will aid in tracking the content throughout Roku’s pipeline from Avails submission through publication on Roku Channel. Any updates to the title once it has been ingested into our system MUST be accompanied by the asset ID. Guidelines and definitions of IDs are below:
 
-| **ID **   | Definitions                                                  |
-| --------- | ------------------------------------------------------------ |
-| asset_id  | Immutable, unique identifier for a clip, episode, or movie. Required for all content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION** |
-| series_id | Immutable, unique identifier for a series. Cannot be the same as the season or unique episode ID. Must be delivered with all episodes of a series and must be consistent for all episodes of a series. Required for TV content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION** |
+| **ID **   | Definitions                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| asset_id  | Immutable, unique identifier for a clip, episode, or movie. Required for all content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION**                                                                                                                                                              |
+| series_id | Immutable, unique identifier for a series. Cannot be the same as the season or unique episode ID. Must be delivered with all episodes of a series and must be consistent for all episodes of a series. Required for TV content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION**                    |
 | season_id | Immutable, unique identifier for a season. Cannot be the same as the series or unique episode ID. Must be delivered with all episodes of a season of a series and must be consistent for all episodes within that season. Required for TV content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION** |
 
 ### Availability sheets/planners
 
 Roku requests an initial launch list of titles/episodes/clips in current library that are available to Roku at the time of onboarding and a schedule when the content will be refreshed. For ongoing production, Roku requests that Avails be provided 60 days prior to licensing window start and the content be delivered at least 30 days before curation onto the channel. This will allow ample time for processing and QC of the content before it goes live on Roku Channel. Delivery capacity to be coordinated after signing
 
-| Documents           |                                                              |
-| ------------------- | ------------------------------------------------------------ |
+| Documents           |                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------- |
 | Roku Avail Spec     | Check out the avail specifications page [here](https://go.roku.com/trc-avail-spec) |
-| Roku Avail Template | Download Roku's avail template [here](https://go.roku.com/trc-avail-template) |
+| Roku Avail Template | Download Roku's avail template [here](https://go.roku.com/trc-avail-template)      |
 
 ### Availability windows
 
@@ -940,124 +957,13 @@ If content is to go live at a time other than midnight or expire at a time other
 
 There are two types of specific time designations – relative and absolute.
 
-- Relative Time – a Saturday night premiere of a movie goes into window at 9pm local time for all users. A user in the Eastern Time Zone watches at 9pm but a user in the Pacific Time Zone, at the exact same moment (6pm PT), cannot watch that content.
-- Absolute Time – a new episode of a series goes into window at 9pm Eastern and becomes immediately available across all time zones. A user in the Pacific Time Zone can watch the content at 6 pm local time.
+* Relative Time – a Saturday night premiere of a movie goes into window at 9pm local time for all users. A user in the Eastern Time Zone watches at 9pm but a user in the Pacific Time Zone, at the exact same moment (6pm PT), cannot watch that content.
+* Absolute Time – a new episode of a series goes into window at 9pm Eastern and becomes immediately available across all time zones. A user in the Pacific Time Zone can watch the content at 6 pm local time.
 
- While time settings are dictated by the content owner, Roku will need the metadata as follows:
+While time settings are dictated by the content owner, Roku will need the metadata as follows:
 
-- If the content has a relative start time, that time must be indicated in the ingest metadata and formatted as “yyyy-mm-ddThh:mm:ss” (2019-11-01T21:00:00)
-- If the content has an absolute start time, that time must be indicated in the ingest metadata. The time must be presented as UTC time and formatted as “yyyy-mm-ddThh:mm:ssZ” (2019-11-02T01:00:00Z).
-- In this example, 9 pm Eastern Time on November 1 is 1 am UTC (https://www.thetimezoneconverter.com)
-- If the ingest metadata arrives without a time, Roku will assume a relative start time of midnight and a relative end time of 11:59:59 pm
+* If the content has a relative start time, that time must be indicated in the ingest metadata and formatted as “yyyy-mm-ddThh:mm:ss” (2019-11-01T21:00:00)
+* If the content has an absolute start time, that time must be indicated in the ingest metadata. The time must be presented as UTC time and formatted as “yyyy-mm-ddThh:mm:ssZ” (2019-11-02T01:00:00Z).
+* In this example, 9 pm Eastern Time on November 1 is 1 am UTC ([https://www.thetimezoneconverter.com](https://www.thetimezoneconverter.com))
+* If the ingest metadata arrives without a time, Roku will assume a relative start time of midnight and a relative end time of 11:59:59 pm
 
-### Special characters
-
-
-<p>Roku utilizes CDATA sections to allow special characters (e.g. !@#$%^&amp;<em>(){}|[]\;:’”?/&gt;&lt;, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the </em><em>only</em>* nodes that support CDATA sections:</p>
-
-
-- title
-- long_synopsis
-- short_synopsis
-- display_name
-
-Certain characters in an XML will render the document unreadable by the Roku ingest platform unless handled (escaped) properly. The below characters must be provided in their Escaped Form for all node values that do not support CDATA sections:
-
-| Character Name | Character | Escaped Form |
-| -------------- | --------- | ------------ |
-| Ampersand      | &         | `&amp;`      |
-| Less-than      | \<         | `&lt;`       |
-| Greater-than   | \>         | `&gt;`       |
-| Quotes         | "         | `&quot;`     |
-| Apostrophe     | '         | `&apos;`     |
-
-Special characters should never be used in file names or file name references within the XML or Excel metadata. [See File Naming Guidelines](#file-naming) for more on this.
-
-### Supported metadata formats
-
-XML format preferred. One complete XML shall be delivered for each movie, clip, or TV episode video file delivered. Metadata shall be delivered via Aspera to the same folder location as the video, captions, and artwork files.
-
-**Supported metadata formats**
-
-
-<table>
-<thead>
-<tr>
-<th>Format Name</th>
-<th>Format Extension</th>
-<th>Encoding</th>
-<th>Package Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>XML (preferred)</td>
-<td>.xml</td>
-<td>UTF-8</td>
-<td>clip1.0<br />film5.0<br />tv1.0<br />Cablelabs ADI 1.1<br /><br /><strong><em>Additional XML schemas supported on a case-by-case basis</em></strong></td>
-</tr>
-<tr>
-<td>Excel</td>
-<td>.xlsx</td>
-<td>See below for <a href="#roku-excel-metadata-guildelines">Roku Excel Metadata Templates</a> and <a href="#roku-excel-metadata-guidelines-and-templates">Excel Metadata Guidelines</a></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-
-### Metadata updates (MDU) and file replacements
-
-Updates are automated and can be sent if there is a need to change metadata or asset files for any program that has previously been delivered to Roku Channel. All metadata and/or file replacement updates must include **Provider**, **Asset ID**, and **Content Type** of the program as it was originally delivered to Roku for the update to succeed. Version control will be handled by Roku's system, there is no need to provide versioning information in the metadata.
-
-Roku currently supports updating the below metadata fields via automated MDU:
-
-- TMS ID
-- EIDR ID
-- Titles (primary and localized)
-- Short Descriptions (primary and localized)
-- Long Descriptions (primary and localized)
-- Release Date
-- Series Titles
-- Season Number
-- Episode Number
-- Language (and localized languages)
-- Availability Windows
-- License Types
-- Countries
-- Genres
-- Provider Tags
-- Content Ratings (system & rating)
-- Credits
-- Ad Breaks
-- Cue Points
-
--  Availability group (all of the required fields must be present in order to update one of these)
- -  License Type (required)
- -  Country (required)
- -  Start Date (required)
- -  End Date (required)
-
-Upload the metadata update to the "prod" folder in Aspera
-
-*If you do not see the update reflected on Roku Channel within 24 hours, please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com)*
-
-**File replacements and additions**
-
-File replacements and additions are automated and will be processed in the same manner as content that needs to be ingested into Roku Channel's content library. A file replacement will replace a file that currently exists in Roku Channel's library. A file addition will add a new file to an existing record in Roku Channel's library. A file addition would be used to add localized subtitles or dubs to an existing record. Please follow the procedure outlined below to replace one or more files.
-
-1. File replacements and additions must be delivered in the same format as the ingest metadata
-2. File replacements and additions must include **the exact same asset ID** that was included when the content was originally ingested
-
- - *Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system*
-
-3. Only the file name references of the files that are being replaced or added should be included in the metadata file. Any file that is not being replaced or added should not be delivered or referenced in the metadata file.
-4. If the source video file is being replaced and there is a change in the duration of the source, any related files (captions, subtitles, audio dubs) should also be replaced.
-5. File replacements require language values in order to update properly
-6. Upload the file replacement or addition metadata to the "prod" folder in Aspera
-
-*As a best practice, please provide replacement files with a unique name both in the metadata and on the file itself. Simply adding a versionnumber (_v2, _v3, etc.) would suffice. For example:* `movie_title_v2.mov`
-
-**Content takedown**
-
-If rights change from when the content was originally delivered to Roku and content needs to be removed from Roku Channel either immediately or scheduled, the availability end date can be changed by providing ametadata update as defined [below](#metadata-updates-mdu-and-file-replacements). Explicit updates should be provided for all territories from which thecontent should be removed. Please be aware that end dates providedwithout time values specified will expire at 11:59:59pm on that date.

@@ -221,3 +221,216 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
 </tbody>
 </table>
+
+### Trickplay fields
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>duration</td>
+<td>time</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The duration of the video being played, specified in seconds. This becomes valid when playback begins and may change if the video is dynamic content, such as a live event.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>If set to true, the video or video playlist (if the <code>contentIsPlaylist</code> field is set to true to enable video playlists) will be restarted from the beginning after the end is reached.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>time</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Time of the current position in the stream. Either UTC time or elapsed since start of stream depending on content type. <br /><br />As of Roku OS 9.3, when the video is paused, the position is recorded for that pause event. This means that playing, pausing, and resuming a video generates three separate positions.</td>
+</tr>
+<tr>
+<td>positionInfo</td>
+<td>roAssociativeArray</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Contains the following fields that provide information about the last rendered video and audio samples.<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Access Permission</th><th>Description</th></tr></thead><tbody><tr><td>audio</td><td>double</td><td>invalid</td><td>READ_ONLY</td><td>Position of the last rendered audio sample, specified in seconds</td></tr><tr><td>clip_id</td><td>integer</td><td>invalid</td><td>READ_ONLY</td><td>The unique ID of the clip</td></tr><tr><td>epoch</td><td>integer</td><td>invalid</td><td>READ_ONLY</td><td>0 means positions are relative to videoStart; 1 means that positions are utc</td></tr><tr><td>video</td><td>double</td><td>invalid</td><td>READ_ONLY</td><td>The value of this field is double/float, in seconds since epoch.Position of the last rendered video sample, specified in seconds</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>clipId</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The clip ID of the currently playing track.</td>
+</tr>
+<tr>
+<td>notificationInterval</td>
+<td>time</td>
+<td>0.5</td>
+<td>READ_WRITE</td>
+<td>The interval between notifications to observers of the position field, specified as the number of seconds. If the value is 0, no notifications are delivered. This value may be read or modified at any time.</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>time</td>
+<td>invalid</td>
+<td>WRITE_ONLY</td>
+<td>Sets the current position in the video. The value is the number seconds from the beginning of the stream, specified as a double.</td>
+</tr>
+<tr>
+<td>seekMode</td>
+<td>string</td>
+<td>"default"</td>
+<td>READ_WRITE</td>
+<td>Determines the desired level of accuracy for seek behavior:<br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>default</td><td>Seek to the closest sync frame (segment, or I-frame of a multi-frame segment) that is earlier than the requested seek time.</td></tr><tr><td>accurate</td><td>Seek to the exact time requested if platform support (video decoder step function) is available.</td></tr></tbody></table><br /></td>
+</tr>
+<tr>
+<td>autoplayAfterSeek</td>
+<td>boolean</td>
+<td>true</td>
+<td>READ_WRITE</td>
+<td>Enables video content to automatically play after rebuffering. Setting this flag to false disables this default behavior.</td>
+</tr>
+<tr>
+<td>timedMetaData</td>
+<td>associative array</td>
+<td>\{ \}</td>
+<td>READ_ONLY</td>
+<td>The most recent timed meta data that has been decoded from the video stream. Only meta data with a key that matches an entry in timedMetaDataSelectionKeys will be set into this field. The value of this field is an associative array which contains arbitrary keys and values, as found in the video stream.</td>
+</tr>
+<tr>
+<td>timedMetaData2</td>
+<td>associative array</td>
+<td>\{ \}</td>
+<td>READ_ONLY</td>
+<td>This field contains all the same information included in the <strong>timedMetaData</strong> field and the following additional fields:<br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>data</td><td>associative array</td><td>The values from the stream's metadata tag, as defined by video provider.</td></tr><tr><td>position</td><td>time</td><td>The Presentation Time Stamp (PTS) when the tag was seen.</td></tr><tr><td>source</td><td>enum</td><td>This may be one of the following string values: $\{source-enum-list\}</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>timedMetaDataSelectionKeys</td>
+<td>array of strings</td>
+<td>[ ]</td>
+<td>READ_WRITE</td>
+<td>If the video stream contains timed meta data such as ID3 tags, any meta data with a key matching an entry in this array is set into the timedMetaData field.<br /><br />For EMSG data, if any entry in this array is "*", then all timed meta data is selected.<br /><br />HLS tags must be defined separately.</td>
+</tr>
+<tr>
+<td>streamInfo</td>
+<td>associative array</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Information about the video stream that is currently playing or buffering.<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>isUnderrun</td><td>Boolean</td><td>If true, the stream was downloaded due to an underrun</td></tr><tr><td>isResume</td><td>Boolean</td><td>If true, playback was resumed after trickplay</td></tr><tr><td>measuredBItrate</td><td>Integer</td><td>The measured bitrate (bps) of the network when the stream was selected</td></tr><tr><td>streamBitrate</td><td>Integer</td><td>The bitrate of the stream</td></tr><tr><td>streamUrl</td><td>URI</td><td>The URL of the stream</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>completedStreamInfo</td>
+<td>associative array</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Information about the video stream that most recently completed playing, due to an error, user action, or end of the stream. The associative array consists of the same keys as for the <code>streaminfo</code> field, with one additional key, <code>isFullResult</code>, a Boolean type that, if true indicates the <code>stream</code> played to completion, or if false, was interrupted by an error or user action. This field is set prior to the <code>state</code> field being changed, so <code>state</code> field observer callback functions can assume that the associative array values are valid when the state field changes.</td>
+</tr>
+<tr>
+<td>timeToStartStreaming</td>
+<td>time</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The time in seconds from playback being started until the video actually began playing. The minimum valid value is 1 millisecond, and this is only valid if the current value of the <code>state</code> field is <code>playing</code>. When the state field value is not <code>playing</code>, the value will be 0. This field is updated prior to the <code>state</code> field changing, so <code>state</code> field observer callback functions can assume this field is valid after the <code>state</code> field value changes to <code>playing</code>.</td>
+</tr>
+<tr>
+<td>bufferingStatus</td>
+<td>associative array</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Contains information about stream buffering progress and status. This field is valid only while buffering is in progress, both at stream startup or when re-buffering is required. Observers will be notified when any element of the array changes, and also when buffering is complete and the field itself becomes invalid. The array contains the following name - value pairs.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>percentage</td><td>Percent buffering complete as an integer.</td></tr><tr><td>isUnderrun</td><td>Boolean value indicating if a stream underrun occurred.</td></tr><tr><td>prebufferDone</td><td>A boolean value that indicates whether the player has buffered enough data to allow the player to begin playing immediately should "control" be set to "play."</td></tr><tr><td>actualStart</td><td>A time value that is automatically set when prebufferDone becomes true, specifying the actual time from which playback will resume. This may vary from the time requested in the content node's playStart field, depending on the capabilities of the player and the seekMode setting.</td></tr></tbody></table><br /><blockquote><p>While it is possible to use the Video node seek field to specify the seek time, it is recommended that apps do the following:</p><ol><li>Set the content node field playStart in seek-to-pause scenarios.</li><li>In the video node, set "control" to "prebuffer".</li><li>Wait for "prebufferDone" to become "true".</li><li>Check "actualStart" (if desired).</li><li>Set "control" to "play".</li></ol></blockquote></td>
+</tr>
+<tr>
+<td>videoFormat</td>
+<td>string</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>Contains the format of the currently playing video stream.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>""</td><td>No stream playing</td></tr><tr><td>none</td><td>Stream contains no playable video</td></tr><tr><td>unknown</td><td>Stream contains unknown video</td></tr><tr><td>hevc</td><td>ISO/IEC 23008-2, H.265, HEVC</td></tr><tr><td>hevc_b</td><td>ISO/IEC 23008-2 Annex-B, H.265, HEVC</td></tr><tr><td>mpeg1</td><td>ISO/IEC 11172-2, MPEG-1 part 2, H.261</td></tr><tr><td>mpeg2</td><td>ISO/IEC 13818-2, MPEG-2 part 2, H.262</td></tr><tr><td>mpeg4_2</td><td>ISO/IEC 14496-2, MPEG-4 part 2, H.263</td></tr><tr><td>mpeg4_10b</td><td>ISO/IEC 14496-10, MPEG-4 part 10 Annex-B, H.264, vc-1</td></tr><tr><td>mpeg4_15</td><td>ISO/IEC 14496-15, MPEG-4 part 15, H.264, vc-1</td></tr><tr><td>AVC vc1</td><td>vc-1</td></tr><tr><td>wmv</td><td>Microsoft Windows Media Video</td></tr><tr><td>vp8</td><td>VP8 codec</td></tr><tr><td>vp9</td><td>VP9 codec</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>pauseBufferStart</td>
+<td>time</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The beginning position of the video buffered when paused. This field is only valid for live video.</td>
+</tr>
+<tr>
+<td>pauseBufferEnd</td>
+<td>time</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The ending position of the video buffered when paused. This field is only valid for live video.</td>
+</tr>
+<tr>
+<td>pauseBufferPosition</td>
+<td>time</td>
+<td>0</td>
+<td>READ_ONLY</td>
+<td>The current presentation position of the video buffered when paused. This field is only valid for live video.</td>
+</tr>
+<tr>
+<td>pauseBufferOverflow</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_ONLY</td>
+<td>Indicates that the video buffer was not able to save all video since being paused. This field is only valid for live video.</td>
+</tr>
+<tr>
+<td>pauseBufferEpochOffset</td>
+<td>double</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Enables apps to translate the relative time provided in the <strong>pauseBuffer</strong> fields to UTC time based on the wall-clock timing provided in live manifests/playlists.</td>
+</tr>
+<tr>
+<td>streamingSegment</td>
+<td>associative array</td>
+<td>\{ \}</td>
+<td>READ_ONLY</td>
+<td>Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>hdrModeStr</td><td>string</td><td>HDR format of the content, which may be one of the following values: "invalid", "unknown", "none", "hdr10", "dolby_vision", "hlg10", "hdr10", "sl-hdr2".</td></tr><tr><td>segBitrateBps</td><td>integer</td><td>Bitrate of the segment in bits per second</td></tr><tr><td>segSequence</td><td>integer</td><td>The sequence number of the segment in the video</td></tr><tr><td>segStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>segUrl</td><td>string</td><td>URL of the segment</td></tr><tr><td>segType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>segTypeStr</td><td>String</td><td>Type of data in the segment:  "audio", "video", "captions",  "mux"</td></tr><tr><td>latency</td><td>integer</td><td>The time, in milliseconds, between the current live edge (or most recent available media segment on the CDN) and the segment currently being played.</td></tr><tr><td>path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: \<period\>/\<adaptset\>/\<repr\>/\<segment\></td></tr><tr><td>width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>downloadedSegment</td>
+<td>associative array</td>
+<td>invalid</td>
+<td>READ_ONLY</td>
+<td>Information about the video segment that was just downloaded. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Status</td><td>integer</td><td>Status of the download: 0 = success, nonzero = error</td></tr><tr><td>SegSequence</td><td>integer</td><td>Stream segment sequence number</td></tr><tr><td>SegUrl</td><td>string</td><td>Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth)</td></tr><tr><td>DownloadDuration</td><td>integer</td><td>Amount of time spent downloading the segment, in milliseconds</td></tr><tr><td>SegSize</td><td>integer</td><td>Segment size, in bytes</td></tr><tr><td>SegType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>BitrateBPS</td><td>integer</td><td>Bitrate of the segment, in bits per second</td></tr><tr><td>SegStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>SegDuration</td><td>string</td><td>The duration of the segment in milliseconds.</td></tr><tr><td>Path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: \<period\>/\<adaptset\>/\<repr\>/\<segment\></td></tr><tr><td>Width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>Height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr><tr><td>HdrMode</td><td></td><td>Indicates the HDR format of the content, which may be one of the following values:</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>enableLiveAvailabilityWindow</td>
+<td>Boolean</td>
+<td>False</td>
+<td>READ_WRITE</td>
+<td>Enables the scrubbing of the trickplay bar during the availability window of live linear streams.</td>
+</tr>
+<tr>
+<td>enableThumbnailTilesDuringLive</td>
+<td>Boolean</td>
+<td>False</td>
+<td>READ_WRITE</td>
+<td>Enables the <strong>thumbnailTiles</strong> field to be set and updated in the case of live HLS and DASH streams, which contain thumbnails as the thumbnails become available.<br /><br />By default and when this is set to false, the <strong>thumbnailTiles</strong> field is not written during live streams to maintain backwards compatibility with older applications and to avoid performance or memory issues. This is becuase they might not be expecting constant updates to the <strong>thumbnailTiles</strong> field if they were written to handle VOD streams, which rarely update the <strong>thumbnailTiles</strong> field.</td>
+</tr>
+<tr>
+<td>thumbnailTiles</td>
+<td>roAssociativeArray</td>
+<td>[]</td>
+<td>READ_WRITE</td>
+<td>Contains the information about HLS and DASH standard thumbnail tiles as they are discovered within the manifest for streams which contain them.<br /><br />This field was first introduced (for VOD only) starting in Roku OS 9.1. Starting with Roku OS 11.0, the app can enable this field for HLS and DASH live streams containing standard thumbnails by setting enableThumbnailTilesDuringLive to true.<br /><br /><blockquote><p>For Roku OS releases before 9.4, the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile_id: tile_set\}(string to associative array)</p><p>For Roku OS 9.4 and later,  the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile_id: [tile_set, tile_set, tile_set,...]\}(string to array of associative arrays). This format allows discontinuous tile_sets of the same resolution to be grouped together as a "choice" for display.</p></blockquote><br /><br />The <strong>tile_id</strong> field is a unique string identifier for the <strong>tile_set</strong>, which is an associative array containing the attributes of the tile set as well as information about the thumbnails.<br /><br />The <strong>tile_set</strong> field contains the following fields:<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>htiles</td><td>integer</td><td>0</td><td>Horizontal number of thumbnails in a tile (columns.)</td></tr><tr><td>vtiles</td><td>integer</td><td>0</td><td>Vertical number of thumbnails in a tile (rows.)</td></tr><tr><td>width</td><td>integer</td><td>0</td><td>Number of horizontal pixels in a thumbnail (this is not the tile as the one in the DASH spec).</td></tr><tr><td>height</td><td>integer</td><td>0</td><td>Number of vertical pixels in a thumbnail (this is not the same tile as the one in the DASH spec).</td></tr><tr><td>bandwidth</td><td>integer</td><td>0</td><td>Max tile size in bits / duration.</td></tr><tr><td>duration</td><td>float</td><td>0.0</td><td>Duration of one tile in seconds (assuming a full tile).</td></tr><tr><td>initial_time<br /></td><td>float</td><td>0.0</td><td>Presentation start time of current <strong>tile_set</strong> in seconds. Thumbnails in tiles beginning before this time should be skipped, and the first relevant thumbnail duration should be updated accordingly.</td></tr><tr><td>final_time</td><td>float</td><td>0.0</td><td>End time of current tile_set in seconds.</td></tr><tr><td>tiles</td><td>roArray</td><td>[]</td><td>Contains information about each tile in the <strong>tile_set</strong>. This contains the following fields: <br />$\{tiles-list\}</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>trickPlayBackgroundOverlay</td>
+<td>uri</td>
+<td>""</td>
+<td>WRITE</td>
+<td>The background overlay to be displayed whenever the playback UI is visible during the video playback experience.</td>
+</tr>
+</tbody>
+</table>

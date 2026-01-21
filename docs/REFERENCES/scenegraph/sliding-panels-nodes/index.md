@@ -320,3 +320,27 @@ end sub
 </component>
 
 ```
+
+So when a user focuses on an item in the `m.categoriespanel` component
+list, the `showcategoryinfo()` callback function triggered by the
+`itemFocused` field change targets the `m.categoryinfopanel` panel
+object with content for that item, and creates an `examplesGridPanel`
+component object, a full width **GridPanel** node panel to the right.
+Because the `m.examplespanel` panel object is created using
+`createObject()`, but not yet added to the panel set, the panels do not
+slide. The sliding is performed by the `focusedChild` field observer
+callback function `slideexamplesgridpanel()` when focus moves to the
+`m.categoryinfopanel` panel object in automatic response to user
+<span>**Right**</span>,
+<span>**Left**</span>, and
+<span>**Back**</span> key presses. The
+callback function moves the focus to either the left-hand
+`m.categoriespanel` panel object, or the full width right-hand
+`m.examplespanel` object, depending on the direction of the key press
+indicated by the panel set `isGoingBack` field, automatically sliding
+the panels in response to the focus change.
+
+The full width `examplesGridPanel` component was defined as follows,
+setting the `isFullScreen` field to true to automatically slide the
+panel when added to the panel set and
+focused:

@@ -529,3 +529,293 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tbody>
 </table>
 
+### Closed caption fields
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>globalCaptionMode</td>
+<td>option string</td>
+<td>Off</td>
+<td>READ_WRITE</td>
+<td>Sets the value of the global Roku closed-caption mode. This can be used to allow the user or the application to change the closed-caption mode in an application just before or during video playback. The possible options are:<br /><br /><table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>"Off"</td><td>Turns the global Roku closed-caption mode off.</td></tr><tr><td>"On"</td><td>Turns the global Roku closed-caption mode on.</td></tr><tr><td>"Instant replay"</td><td>Sets the global Roku closed-caption setting to display captions only during instant replay.</td></tr><tr><td>"When mute"</td><td>Sets the global Roku closed-caption setting to display captions only when the volume is muted. (This only applies to Roku TVs.)</td></tr></tbody></table><br /><br />The app should set the <code>subtitleTrack</code> field regardless of the selected Caption Mode.</td>
+</tr>
+<tr>
+<td>suppressCaptions</td>
+<td>boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Suppresses the closed caption for the purpose of resolving conflicts in cases where UI elements are drawn.<br /><br />Note that most of the disabling/enabling of the captions are done by the Roku OS, including enabling closed caption for Instant Replay.</td>
+</tr>
+<tr>
+<td>subtitleTrack</td>
+<td>string</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>The identifier of the selected subtitle track. Subtitles may or may not be visible on the screen, depending upon the user's caption mode setting. <br /><br />Reading this field will return the identifier of the subtitle track selected by the user. Writing this the field will change the track.<br /><br />See also: <a href="#closed-caption-fields">globalCaptionMode</a></td>
+</tr>
+<tr>
+<td>currentSubtitleTrack</td>
+<td>string</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>The identifier of the selected subtitle track. Subtitles may or may not be visible on the screen, depending upon the user's caption mode setting. <br /><br />Reading this field will return the identifier of the subtitle track that is playing. When the user has not selected a track, the Roku media player will select a track based on the preferred caption language system setting.</td>
+</tr>
+<tr>
+<td>availableSubtitleTracks</td>
+<td>array of associative arrays</td>
+<td>[ ] empty array</td>
+<td>READ_ONLY</td>
+<td>The list of subtitle tracks available in the video stream. The array is initially populated with the tracks specified in the Content Meta-Data, and additional tracks are added if they are detected by the digital video player. Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Description</td><td>string</td><td>Descriptive name of the subtitle track</td></tr><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>TrackName</td><td>string</td><td>The track identifier. The value of this field may be used to select the subtitle track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-music-and-sound."</td></tr><tr><td>HasAccessibilityCaption<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>HLS: represents "public.accessibility.transcribes-spoken-dialog." <br /><br />DASH: Subtitle track contains captions</td></tr><tr><td>HasAccessibilitySign<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>DASH: Subtitle track contains a sign-language interpretation of an audio component info.</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>captionStyle</td>
+<td>associative array</td>
+<td>system default</td>
+<td>READ_WRITE</td>
+<td>Allows apps to style closed captions. For any keys that are absent from the associative array, or for unexpected values, the Default value is assumed for that property. Following are the possible key names and values for this field:<br /><br /><table><thead><tr><th>Property</th><th>Possible Values</th></tr></thead><tbody><tr><td>Text/Font<br /></td><td>Default<br />Serif Fixed Width<br />Serif Proportional<br />Sans Serif Fixed Width<br />Sans Serif Proportional<br />Casual<br />Cursive<br />Small Caps</td></tr><tr><td>Text/Effect</td><td>Default<br />None<br />Raised<br />Depressed<br />Uniform<br />Drop shadow (left)<br />Drop shadow (right)</td></tr><tr><td>Text/Size</td><td>Default<br />Large<br />Medium<br />Small</td></tr><tr><td>Text/Color</td><td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td></tr><tr><td>Text/Opacity</td><td>Default<br />25%<br />50%<br />75%<br />100%</td></tr><tr><td>Background/Color</td><td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td></tr><tr><td>Background/Opacity</td><td>Default<br />Off<br />25%<br />50%<br />75%<br />100%</td></tr><tr><td>Window/Color</td><td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td></tr><tr><td>Window/Opacity</td><td>Default<br />Off<br />25%<br />50%<br />75%<br />100%</td></tr></tbody></table></td>
+</tr>
+</tbody>
+</table>
+
+
+### Audio fields
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mute</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Set to true to mute the audio of the video currently playing in the Video node. Set to false to restore audio.</td>
+</tr>
+<tr>
+<td>audioTrack</td>
+<td>string</td>
+<td></td>
+<td>READ_WRITE</td>
+<td>The track identifier of the selected audio track. <br /><br />Reading this field will return the track identifier of the audio selected by the user.<br /><br />Writing this value will change the audio track. However,  apps should not do this unless they are implementing  their own track selection menu that users control. This is because the Roku OS selects the best track automatically based on preferred language setting on the device. See <a href="#automatic-audio-track-selection">Automatic audio track selection</a> for more information.</td>
+</tr>
+<tr>
+<td>currentAudioTrack</td>
+<td>String</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>The track identifier of the audio being played. Reading this field will return the track that is being played, which may be different than the track being selected (for example, when the Roku media player cannot play a certain format). <br /><br />When the user has not selected an audio track, the platform will select a track based on the preferred audio language setting.</td>
+</tr>
+<tr>
+<td>availableAudioTracks</td>
+<td>array of associative arrays</td>
+<td>[ ] empty array</td>
+<td>READ_ONLY</td>
+<td>Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>Name</td><td>string</td><td>Descriptive name of the audio track</td></tr><tr><td>Track</td><td>string</td><td>The track identifier. The value of this field may be used to select the audio track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-video." <br /><br />DASH: Audio track contains a textual description (intended for audio synthesis) or an audio description describing a visual component.</td></tr><tr><td>HasAccessibilityEAI<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>DASH: Audio track contains an element for improved intelligibility of the dialogue [Enhanced Audio Intelligibility].</td></tr></tbody></table><br /><br />The field also retrieves audio description tracks which are typically seen on broadcast TV. An audio description track is mixed with the main audio track.</td>
+</tr>
+<tr>
+<td>seamlessAudioTrackSelection<br /><br /><em>Available since Roku OS 13.0</em></td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Enables apps to continuously play video when the audio track is switched. This feature currently supports HLS only.<br /><br /><ul><li><strong>true</strong>: Continues video playback when the audio track changes (provided that HLS is being used and the audio format of the new audio track is the same as the original one). In this case, a brief period of no audio may occur while the audio tracks are switched.</li><li><strong>false</strong>: Pauses video playback for approximately 1 second when the audio track changes (default behavior). In this case, a black screen and/or buffering appears while the audio tracks are switched.</li></ul><br /><br />To enable this feature, you must set this field before sending any command to the Video node. This field may not be changed during video playback.</td>
+</tr>
+<tr>
+<td>audioFormat</td>
+<td>string</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>In all other cases they shouldn't .Contains the format of the currently playing audio.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>""</td><td>No stream playing</td></tr><tr><td>none</td><td>Stream contains no playable audio</td></tr><tr><td>unknown</td><td>Stream contains unknown audio</td></tr><tr><td>aac</td><td>ISO/IEC 14496-3, Advanced Audio Coding</td></tr><tr><td>aac_adif</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td></tr><tr><td>aac_adts</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td></tr><tr><td>aac_latm</td><td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td></tr><tr><td>ac3</td><td>Dolby Digital</td></tr><tr><td>ac4</td><td>Dolby Audio - AC-4</td></tr><tr><td>alac</td><td>Apple Lossless</td></tr><tr><td>dts</td><td>DTS Coherent Acoustics</td></tr><tr><td>eac3</td><td>Dolby Digital Plus</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>mat</td><td>Dolby Audio - TrueHD</td></tr><tr><td>mp3</td><td>ISO/IEC 11172-3, MPEG Audio Layer III</td></tr><tr><td>pcm</td><td>linear PCM</td></tr><tr><td>vorbis</td><td>Ogg Vorbis</td></tr><tr><td>wma</td><td>Microsoft Windows Media Audio (sunset as of Roku OS 12.5)</td></tr><tr><td>wmapro</td><td>Microsoft Windows Media Pro Audio (sunset as of Roku OS 12.5)</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>supplementaryAudioVolume</td>
+<td>int</td>
+<td>50</td>
+<td>READ_WRITE</td>
+<td>Sets the volume of the description tracks separately from the main audio track. The field value can range from 0 to 100.</td>
+</tr>
+</tbody>
+</table>
+
+
+#### Automatic audio track selection
+
+If multiple audio tracks are available for video content, the Roku OS automatically selects the best track based on the preferred audio track settings on the device (language, country code, and descriptive setting) and the quality of the audio track (bitrate/format).
+
+The user can manually set their preferred language in the **Settings > Audio > Audio preferred language** menu, and the country code and descriptive setting are automatically set when the user selects an audio track. The preferred language setting is also automatically updated when the user selects an audio track (the preferred language is set to the language of the selected track).
+
+For example, if the user chooses Portuguese as their preferred language, the Roku OS will by default select the Portuguese audio track the next time they watch content (if available). If the selected audio track is in Portuguese (Brazil), the user's preferred country is set to Brazil, and the Portuguese (Brazil) audio track is selected by default the next time the user watches content.
+
+> It is recommended that apps use the audio track selection logic provided by the Roku OS instead of implementing their own.
+
+Overall, the Roku OS uses the following criteria (listed in order of priority) to determine which audio track to play:
+
+1. Preferred audio track settings:
+
+   a. The track explicitly selected by the user.
+
+   b. The track with the user's preferred language, country code and descriptive setting.
+
+   c. The track with the preferred language and the country code.
+
+   d. The track with the preferred language that is marked as the default audio track.
+
+   e. The track with the preferred language.
+
+   f. The first track.
+
+2. Highest quality audio track (based on bitrate/format)
+
+> Any language not included in the provided list of common languages is added to the list as the last entry. The common languages list may only have a single unlisted language. For example, if the user selects Korean as the audio track for a movie, the last entry in the common languages list is Korean, which is used as the preferred language from thereon. If the user then selects a Chinese audio track, Chinese overwrites Korean as the last entry in the common language list and is used as the preferred language.
+
+### CDN fields
+
+Developers can receive event-based notifications when the CDN is switched during content playback.
+
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cdnSwitch</td>
+<td>roArray of roAssociativeArrays</td>
+<td><table><thead><tr><th>Key</th><th>Required/ Optional</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>URLFilter</td><td>Required</td><td>String</td><td>A substring that identifies the (base)URL to which these CDN settings apply. <br /><br />The Roku media player matches this string against all (base)URLs listed in the manifest and applies the setting to all (base)URLs that contain this substring.</td></tr><tr><td>ContentFilter</td><td>Optional</td><td>String</td><td>For DASH streams, a substring that filters the period or asset ID to which these CDN settings apply.<br /><br /> The Roku player only applies these CDN setting to periods with a period ID or asset ID that contains this substring. <br /><br />This match is used in addition to the URL filter.</td></tr><tr><td>Priority</td><td>Required</td><td>Integer</td><td>For configuring failovers, sets the priority for this (base)URL from 1 to x (a priority of 0 or less is invalid). <br /><br />A lower value indicates a higher priority. For example, a (base)URL with a priority of 1 is higher than another with a priority of 10. <br /><br />If the highest priority server fails, traffic is routed to the server with the next highest priority. If all servers are configured with the same priority, and one fails, no failover will happen.</td></tr><tr><td>Weight</td><td>Required</td><td>Integer</td><td>For configuring load balancing, sets the relative weight for all (base)URLs with the same priority. This must be a value of 1 or greater (a weight of 0 disables a CDN). <br /><br />The weight of a given BaseURL is its weight value divided by the sum of all weight values. This means that to spread the load equally across multiple CDNs with the same priority, set the weight for each to the same value. To configure the weights for two servers to 80% and a third server to 20%, for example, set servers one and two to 8 and server three to 4.</td></tr><tr><td>ServiceLocation</td><td>Optional</td><td>String</td><td>A blacklist of failed BaseURL locations.</td></tr></tbody></table></td>
+<td>Indicates that a CDN switching event has occurred.<br /><br />Apps can monitor this field in the background. When the Video player detects a CDN change, it automatically updates this field.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+### Miscellaneous fields
+
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaxVideoDecodeResolution</td>
+<td>vector2d (width, height)</td>
+<td>[0,0]</td>
+<td>READ_WRITE</td>
+<td>Sets the max resolution required by your video.<br /><br />Video decode memory is a shared resource with OpenGL texture memory. The Brightscript 2D APIs are implemented using OpenGL texture memory on Roku models that support the Open GL APIs (see <a href="/docs/specs/hardware.md">Hardware specifications</a> for a list of these models).<br /><br />On models that do not support Open GL APIs, this field exists for API compatibility but has no effect on actual memory allocations.<br /><br />Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720 as the maximum supported resolution for a particular Roku model (see <a href="/docs/specs/hardware.md">Hardware specifications</a> for a list of these models).<br /><br />This field enables applications that want to use both the 2D APIs and video playback with a lower resolution than 1080p. Without this field, these applications are likely to not have enough memory for either video playback or UI rendering.<br /><br />If width is 0 (the default), it is unlimited. If height is 0 (the default), it is unlimited.</td>
+</tr>
+<tr>
+<td>cgms</td>
+<td>integer</td>
+<td>0</td>
+<td>READ_WRITE</td>
+<td>Sets the CGMS (Copy Guard Management System) on analog outputs to the desired level. The valid values are:<br /><br /><table><thead><tr><th>Value</th><th>Effect</th></tr></thead><tbody><tr><td>0</td><td>No copy restriction</td></tr><tr><td>1</td><td>Copy no more</td></tr><tr><td>2</td><td>Copy once allowed</td></tr><tr><td>3</td><td>No copying permitted</td></tr></tbody></table></td>
+</tr>
+<tr>
+<td>enableScreenSaverWhilePlaying</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Set this to true to allow the screensaver to activate even if video is playing, as long as that video does not cover 50% or more of the screen. Set to false to block the screensaver activating if any video is playing. Note that this field has no effect when the video node plays audio only streams. For screensaver control with audio only streams, use the disableScreenSaver field.</td>
+</tr>
+<tr>
+<td>disableScreenSaver</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Set this to true to suppress the screensaver. This is typically used to suppress the screensaver when playing audio-only streams.</td>
+</tr>
+<tr>
+<td>contentBlocked</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_ONLY</td>
+<td><em>Available since Roku OS 8.</em><br /><br />Determines whether the current content is blocked.</td>
+</tr>
+</tbody>
+</table>
+
+
+## Data bindings
+
+See [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) for the required and optional play parameters, and descriptive information for video playback. Set these parameters in a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node, and assign the ContentNode to the content field of the Video node to apply the parameters to a particular video content item.
+
+For HTTPS access, note the following Content Meta-Data attributes:
+
+- `HttpCertificatesFile`
+- `HttpCookies`
+- `HttpHeaders`
+- `HttpSendClientCertificates`
+
+These attributes must be set to handle secure HTTP transfers of video files. Note that this is a different HTTPS mechanism than used for other SceneGraph nodes as described in [roHttpAgent](/docs/references/brightscript/components/rohttpagent.md).
+
+> Prior to Roku OS 7.2, each Audio and Video node created and configured an `HttpAgent` only when the first content was played in a given Audio or Video node instance. This sometimes meant that additional content would fail to play in the same node because headers, cookies, and certificates were not updated or correctly replaced from the new content record. Apps that are dependent upon this behavior will need to be updated to set the required data into the Content Meta-Data for each piece of content, or to programmatically set those values into the `HttpAgent` before playing each piece of content.
+
+## Example
+
+To play video in an application, you first need to create a Video node, either in BrightScript using the roSGNode [ifSGNodeChildren](/docs/references/brightscript/interfaces/ifsgnodechildren.md) interface, or in XML markup. For example, in XML markup:
+
+~~~~
+
+<Video
+  id="musicvideos"
+  width="1280"
+  height="720"
+  translation="[0,0]"
+/>
+~~~~
+
+The Video node is then scripted to specify the URL of the video stream, streaming format, video title, and any other [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) attributes needed for the particular playback. Once the video properties are specified, the video can be played by setting the Video node `control` field value to `play`.
+
+~~~~
+<script type="text/brightscript" >
+<![CDATA[
+
+sub init()
+  m.top.setFocus(true)
+  setVideo()
+end sub
+
+function setVideo() as void
+  videoContent = createObject("RoSGNode", "ContentNode")
+  videoContent.url = "https://roku.s.cpl.delvenetworks.com/media/59021fabe3b645968e382ac726cd6c7b/60b4a471ffb74809beb2f7d5a15b3193/roku_ep_111_segment_1_final-cc_mix_033015-a7ec8a288c4bcec001c118181c668de321108861.m3u8"
+  videoContent.title = "Test Video"
+  videoContent.streamformat = "hls"
+
+  m.video = m.top.findNode("musicvideos")
+  m.video.content = videoContent
+  m.video.control = "play"
+end function
+
+]]>
+</script>
+~~~~

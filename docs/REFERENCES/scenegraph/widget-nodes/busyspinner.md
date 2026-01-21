@@ -20,13 +20,141 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
 
 ## Fields
 
-| Field        | Type          | Default                   | Access Permission | Description                                                  |
-| ------------ | ------------- | ------------------------- | ----------------- | ------------------------------------------------------------ |
-| poster       | Poster node   | internal instance default | READ_WRITE        | Set the uri field of the Poster node to select the bitmap for the busy spinner |
-| control      | option string | none                      | READ_WRITE        | Sets the operational state of the busy spinner: controlValues |
-| clockwise    | Boolean       | true                      | READ_WRITE        | Specifies whether the bitmap rotates in a clockwise or counterclockwise direction |
-| spinInterval | time          | 2                         | READ_WRITE        | The number of seconds to complete a 360-degree rotation of the spinner image. A value of 0 will cause the spinner to remain stationary and not spin |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
 
+      <th>
+        Type
+      </th>
+
+      <th>
+        Default
+      </th>
+
+      <th>
+        Access Permission
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        poster
+      </td>
+
+      <td>
+        Poster node
+      </td>
+
+      <td>
+        internal instance default
+      </td>
+
+      <td>
+        READ_WRITE
+      </td>
+
+      <td>
+        Set the uri field of the Poster node to select the bitmap for the busy spinner
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        control
+      </td>
+
+      <td>
+        option string
+      </td>
+
+      <td>
+        none
+      </td>
+
+      <td>
+        READ_WRITE
+      </td>
+
+      <td>
+        Sets the operational state of the busy spinner:
+
+        <table>
+            <tr>
+                <td>Option</td>
+                <td>Effect</td>
+            </tr>
+            <tr>
+                <td>none</td>
+                <td>No operational state set. The busy spinner will run if not set to `&quot;stop&quot;`.</td>
+            </tr>
+            <tr>
+                <td>start</td>
+                <td>Starts the busy spinner if not running</td>
+            </tr>
+            <tr>
+                <td>stop</td>
+                <td>Stops the busy spinner if running</td>
+            </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        clockwise
+      </td>
+
+      <td>
+        Boolean
+      </td>
+
+      <td>
+        true
+      </td>
+
+      <td>
+        READ_WRITE
+      </td>
+
+      <td>
+        Specifies whether the bitmap rotates in a clockwise or counterclockwise direction
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        spinInterval
+      </td>
+
+      <td>
+        time
+      </td>
+
+      <td>
+        2
+      </td>
+
+      <td>
+        READ_WRITE
+      </td>
+
+      <td>
+        The number of seconds to complete a 360-degree rotation of the spinner image. A value of 0 will cause the spinner to remain stationary and not spin
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Sample app
+
 [BusySpinnerExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/BusySpinnerExample) is a sample app demonstrating BusySpinner in action.

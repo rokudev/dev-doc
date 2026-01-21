@@ -16,8 +16,8 @@ Below is a comprehensive list of formatting requirements for partner media asset
 
 As an alternative to this specification, Roku Channel supports content delivery via MovieLabs specification.
 
-- **MMC and MEC** - Roku Channel MovieLabs service was built on MEC v2.9 and MMC v1.10 as defined on MovieLabs’ site: https://www.movielabs.com/md/
-- **EMA avails** - Roku Channel supports the latest version of the [EMA specification](https://movielabs.com/md/avails/) via the xlsx deliverable
+* **MMC and MEC** - Roku Channel MovieLabs service was built on MEC v2.9 and MMC v1.10 as defined on MovieLabs’ site: [https://www.movielabs.com/md/](https://www.movielabs.com/md/)
+* **EMA avails** - Roku Channel supports the latest version of the [EMA specification](https://movielabs.com/md/avails/) via the xlsx deliverable
 
 Roku prefers MovieLabs deliverables from all Premium Subscription (SVOD) Partners. Please see additional Roku Channel-specific MovieLabs delivery details [here](#movielabs-content-delivery)
 
@@ -37,35 +37,35 @@ Ad break timecodes shall be delivered according to the Roku Ad Policy in the adB
 
 ##### Movie ad policy
 
-- No adBreaks should be listed during the first 10 minutes of playback
-- No pre-roll adBreak should be listed – 00:00:00.000
-- adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
-- There should be no less than 10 minutes between each adBreak
-- No adBreaks within 10 minutes of end credits
+* No adBreaks should be listed during the first 10 minutes of playback
+* No pre-roll adBreak should be listed – 00:00:00.000
+* adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
+* There should be no less than 10 minutes between each adBreak
+* No adBreaks within 10 minutes of end credits
 
 ##### Series episode ad policy
 
 Content length longer than 15 minutes:
 
-- No adBreaks should be listed during the first 5 mins of playback
-- No pre-roll adBreak should be listed - 00:00:00
-- adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
-- There should be no less than 7 mins between each adBreak
-- No adBreaks within the last 5 minutes of end credits
+* No adBreaks should be listed during the first 5 mins of playback
+* No pre-roll adBreak should be listed - 00:00:00
+* adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
+* There should be no less than 7 mins between each adBreak
+* No adBreaks within the last 5 minutes of end credits
 
 ### Kids directed content policy
 
 “Kids-Directed Content” is content that either: (i) is directed to children as defined by the applicable law of the jurisdiction in which the content is shown (e.g., [The Children's Online Privacy Protection Act](https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa)); or (ii) was made for viewing primarily by children within the jurisdiction in which the content is shown.
 
-- Roku must be made aware of the intent to submit or distribute content that is directed at children
-- DO NOT submit or distribute kids directed content without Roku’s express written approval
-- When given approval by Roku to submit or distribute content directed at children, all content metadata must include the following:
-- For Movie content:
-- The `<tag>` “kidsdirected” (all lowercase) must be included as one of the tags for every movie
-- A valid MPAA, USA_PR, or TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
-- For Episodic Series content:
-- The `<tag>` “kidsdirected” (all lowercase) must be included as one of the series and episodic tags for every series and episode
-- A valid TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
+* Roku must be made aware of the intent to submit or distribute content that is directed at children
+* DO NOT submit or distribute kids directed content without Roku’s express written approval
+* When given approval by Roku to submit or distribute content directed at children, all content metadata must include the following:
+* For Movie content:
+* The `<tag>` “kidsdirected” (all lowercase) must be included as one of the tags for every movie
+* A valid MPAA, USA_PR, or TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
+* For Episodic Series content:
+* The `<tag>` “kidsdirected” (all lowercase) must be included as one of the series and episodic tags for every series and episode
+* A valid TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
 
 Please see [here](https://docs.roku.com/published/madeforkids) for more information and guidance on content "made for kids"
 
@@ -73,10 +73,10 @@ Please see [here](https://docs.roku.com/published/madeforkids) for more informat
 
 Roku Channel does not allow branding or external URL links/calls to action on key art or within the video and closed captioning. Calls to action are creatives and/or content segments that direct users outside of the Roku Channel ecosystem to consume content on external services. Video must be edited to remove links or directions for users to visit external sites. This includes:
 
-- Brand logos
-- Web urls
-- QR codes
-- Verbally or textually calling viewers to "click", "subscribe", "buy now", "go to", etc
+* Brand logos
+* Web urls
+* QR codes
+* Verbally or textually calling viewers to "click", "subscribe", "buy now", "go to", etc
 
 Please contact your Roku representative for more details.
 
@@ -84,25 +84,25 @@ Please contact your Roku representative for more details.
 
 Music cue sheets may be submitted to Roku for content distributed to Roku Channel via the below link:
 
-https://go.roku.com/music-cue-sheet-submission
+[https://go.roku.com/music-cue-sheet-submission](https://go.roku.com/music-cue-sheet-submission)
 
 Please do not submit music cue sheets with the video package deliverables via Aspera. Cue sheets delivered with the video package will be subject to deletion.
 
 ## User experience on Roku Channel
 
-Roku augments metadata and artwork that appears in Roku Channel on Roku devices, web browsers, mobile applications, and other off-platform players with data supplied from Gracenote’s database where available. The Gracenote data aids in a unified experience of a title across platforms as well as on the greater Roku ecosystem. Roku will attempt to match all content delivered by our Partners to a corresponding record in Gracenote’s database. *At this time all metadata and artwork that appears on Roku Channel is sourced from Gracenote if that content is found in Gracenote’s database.*
+Roku augments metadata and artwork that appears in Roku Channel on Roku devices, web browsers, mobile applications, and other off-platform players with data supplied from Gracenote’s database where available. The Gracenote data aids in a unified experience of a title across platforms as well as on the greater Roku ecosystem. Roku will attempt to match all content delivered by our Partners to a corresponding record in Gracenote’s database. _At this time all metadata and artwork that appears on Roku Channel is sourced from Gracenote if that content is found in Gracenote’s database._
 
-Gracenote leverages "Artwork Personalization" where they supply alternate imagery to diversify title artwork for different users based on several factors (demographics, popularity, etc.); which has led to an increase in user engagement. Gracenote does accept official key art from Partners, but not all users will see official art unless the algorithm serves it to them. Gracenote supplies ~3 unique images, and create alternative versions of artwork sourced from a variety of places (ex. original broadcaster, production studio, creative agency). Gracenote has stated to Roku that all images are under a fair use license, and they apply the same quality standards to Personalized Images as they do to partner supplied Key Art, e.g., no major spoilers, no dark/blurry/grainy images, no violent/suggestive imagery, avoidance of smoking. 
+Gracenote leverages "Artwork Personalization" where they supply alternate imagery to diversify title artwork for different users based on several factors (demographics, popularity, etc.); which has led to an increase in user engagement. Gracenote does accept official key art from Partners, but not all users will see official art unless the algorithm serves it to them. Gracenote supplies ~3 unique images, and create alternative versions of artwork sourced from a variety of places (ex. original broadcaster, production studio, creative agency). Gracenote has stated to Roku that all images are under a fair use license, and they apply the same quality standards to Personalized Images as they do to partner supplied Key Art, e.g., no major spoilers, no dark/blurry/grainy images, no violent/suggestive imagery, avoidance of smoking.
 
 Our systems use a combination of methods to match a title its correct Gracenote record. Partners can aid in the matching to a Gracenote record by providing accurate metadata including:
 
-- Exact title of a series, movie, TV special, or short form video
-- Release dates that are accurate to the year the title was originally released on any platform
-- Accurate season and episode numbers according to the original release order
-- Accurate TMS (Gracenote) IDs by content type
-- Content classified as an episode with Gracenote must be delivered as an Episode to Roku
-- Content classified as a movie with Gracenote must be delivered as a movie to Roku
-- Content classified as a TV Special with Gracenote can be delivered as a movie to Roku
+* Exact title of a series, movie, TV special, or short form video
+* Release dates that are accurate to the year the title was originally released on any platform
+* Accurate season and episode numbers according to the original release order
+* Accurate TMS (Gracenote) IDs by content type
+* Content classified as an episode with Gracenote must be delivered as an Episode to Roku
+* Content classified as a movie with Gracenote must be delivered as a movie to Roku
+* Content classified as a TV Special with Gracenote can be delivered as a movie to Roku
 
 Partners can aid in the curation of their content on Roku Channel by providing Tags with each movie, episode, or clip. Roku Channel editorial team and recommendations engine will utilize the provided Tags and Genres to help surface content on Roku Channel Platform UI. The more tags that are included, the more ways the content can be curated/surfaced to the end user. Please see [Best practices: content tags and metadata](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md) for more details.
 
@@ -110,26 +110,39 @@ Partners can aid in the curation of their content on Roku Channel by providing T
 
 ### Video requirements
 
-- All video content must be **full program only**:
+* All video content must be **full program only**:
 
-- no bars/tone or slates at program start
-- no textless video after program end
-- no more than 2 seconds of black at program start
-- no more than 2 seconds of black after program end
+* no bars/tone or slates at program start
 
+* no textless video after program end
 
-- Video files should be semi-textless (also known as "texted with no subtitles" or "textless with main, ends, and graphic text"). Video can include opening and end credit text but all subtitles for foreign dialogue must be removed.
-- Do not include advertisements within the video. All ad insertion points for ad supported content will be provided in the metadata file based on the [Roku Ad Policy guidelines](#ad-policy)
-- Commercial blacks may be included within the video so long as they are no longer than 2 seconds
-- Commercial blacks are acceptable for episodic TV content but not expected for movie content
-- Video files must be delivered as a single, seamless video file
-- Do not deliver hard parted (broken into segments at the ad break points) video files
-- Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the video prior to delivery to Roku
-- HD video content must be delivered in a 16:9 container
-- Full-Frame presentation (1.78 aspect ratio) is preferred whenever available
-- Letterboxed 16:9 is allowed but should be minimized
-- SD 16:9 content must not be delivered in a 4:3 container with letterboxing
-- High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible.
+* no more than 2 seconds of black at program start
+
+* no more than 2 seconds of black after program end
+
+* Video files should be semi-textless (also known as "texted with no subtitles" or "textless with main, ends, and graphic text"). Video can include opening and end credit text but all subtitles for foreign dialogue must be removed.
+
+* Do not include advertisements within the video. All ad insertion points for ad supported content will be provided in the metadata file based on the [Roku Ad Policy guidelines](#ad-policy)
+
+* Commercial blacks may be included within the video so long as they are no longer than 2 seconds
+
+* Commercial blacks are acceptable for episodic TV content but not expected for movie content
+
+* Video files must be delivered as a single, seamless video file
+
+* Do not deliver hard parted (broken into segments at the ad break points) video files
+
+* Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the video prior to delivery to Roku
+
+* HD video content must be delivered in a 16:9 container
+
+* Full-Frame presentation (1.78 aspect ratio) is preferred whenever available
+
+* Letterboxed 16:9 is allowed but should be minimized
+
+* SD 16:9 content must not be delivered in a 4:3 container with letterboxing
+
+* High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible.
 
 #### Video frame rate
 
@@ -137,65 +150,73 @@ Roku supports a variety of frame rates and scan types. All video files should be
 
 #### Video resolution
 
-| Type    | Width | Height | Pixel Aspect Ratio              |
-| ------- | ----- | ------ | ------------------------------- |
-| SD      | 720   | 480    | 4:3 or 16:9 (anamorphic pixels) |
-| SD      | 640   | 480    | 1:1 (square pixels)             |
-| SD      | 853   | 480    | 1:1 (square pixels)             |
-| SD      | 720   | 576    | 4:3 or 16:9 (anamorphic pixels) |
-| SD      | 768   | 576    | 1:1 (square pixels)             |
-| SD      | 1024  | 576    | 1:1 (square pixels)             |
-| HD      | 1280  | 720    | 1:1 (square pixels)             |
-| FHD     | 1920  | 1080   | 1:1 (square pixels)             |
-| UHD\*\* | 3840  | 2160   | 1:1 (square pixels)             |
+| Type  | Width | Height | Pixel Aspect Ratio              |
+| ----- | ----- | ------ | ------------------------------- |
+| SD    | 720   | 480    | 4:3 or 16:9 (anamorphic pixels) |
+| SD    | 640   | 480    | 1:1 (square pixels)             |
+| SD    | 853   | 480    | 1:1 (square pixels)             |
+| SD    | 720   | 576    | 4:3 or 16:9 (anamorphic pixels) |
+| SD    | 768   | 576    | 1:1 (square pixels)             |
+| SD    | 1024  | 576    | 1:1 (square pixels)             |
+| HD    | 1280  | 720    | 1:1 (square pixels)             |
+| FHD   | 1920  | 1080   | 1:1 (square pixels)             |
+| UHD** | 3840  | 2160   | 1:1 (square pixels)             |
 
-*\*\*UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel*
+_**UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel_
 
 #### Video formats
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Codecs</th>
-<th>Extension</th>
-<th>Bitrate</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Apple® ProRes</td>
-<td>ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles)</td>
-<td>.mov</td>
-<td>50 Mbps or greater</td>
-</tr>
-<tr>
-<td>XDCam</td>
-<td></td>
-<td>.mxf</td>
-<td>50 Mbps or greater</td>
-</tr>
-<tr>
-<td>MPEG-2</td>
-<td></td>
-<td>.ts.mpg</td>
-<td>HD = 15Mbps or greaterSD = 3.75Mbps or greater</td>
-</tr>
-<tr>
-<td>MPEG-4</td>
-<td>H.264</td>
-<td>.mp4</td>
-<td>5Mbps or greater</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Codecs</th>
+      <th>Extension</th>
+      <th>Bitrate</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Apple® ProRes</td>
+      <td>ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles)</td>
+      <td>.mov</td>
+      <td>50 Mbps or greater</td>
+    </tr>
+
+    <tr>
+      <td>XDCam</td>
+
+      <td />
+
+      <td>.mxf</td>
+      <td>50 Mbps or greater</td>
+    </tr>
+
+    <tr>
+      <td>MPEG-2</td>
+
+      <td />
+
+      <td>.ts.mpg</td>
+      <td>HD = 15Mbps or greaterSD = 3.75Mbps or greater</td>
+    </tr>
+
+    <tr>
+      <td>MPEG-4</td>
+      <td>H.264</td>
+      <td>.mp4</td>
+      <td>5Mbps or greater</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Audio requirements
 
-*Files must have industry standard audio configurations with all channels clearly labeled for position and language* (depending on file format)
+_Files must have industry standard audio configurations with all channels clearly labeled for position and language_ (depending on file format)
 
-- PCM 16-Bit or 24-Bit 48kHz audio at highest bitrate preferred
-- Dolby AC3 Audio is supported
+* PCM 16-Bit or 24-Bit 48kHz audio at highest bitrate preferred
+* Dolby AC3 Audio is supported
 
 **Roku prefers to receive 5.1 and Stereo audio whenever possible**
 
@@ -234,9 +255,9 @@ Content delivered with an audio language that is not primary to the territory of
 
 #### Sidecar secondary audio
 
-- Sidecar audio must be delivered as a single interleaved file. Roku does not support discrete single-channel files
-- Sidecar audio must sync to the video source file delivered to Roku
-- Roku supports one sidecar audio dub file per language
+* Sidecar audio must be delivered as a single interleaved file. Roku does not support discrete single-channel files
+* Sidecar audio must sync to the video source file delivered to Roku
+* Roku supports one sidecar audio dub file per language
 
 Below are the supported sidecar audio formats. Deliver sidecar audio with highest bitrate and sampling rate available.
 
@@ -250,9 +271,9 @@ Below are the supported sidecar audio formats. Deliver sidecar audio with highes
 
 Descriptive audio is an alternate audio track for the visually impaired. The official FCC Audio Description documentation can be found at the below link:
 
-https://www.fcc.gov/audio-description
+[https://www.fcc.gov/audio-description](https://www.fcc.gov/audio-description)
 
-Roku strongly prefers to receive descriptive audio tracks wherever available. Descriptive audio deliveries will follow the deliverables outlined in the [Secondary Audio Deliverables](#secondary-audio-deliverables) section above 
+Roku strongly prefers to receive descriptive audio tracks wherever available. Descriptive audio deliveries will follow the deliverables outlined in the [Secondary Audio Deliverables](#secondary-audio-deliverables) section above
 
 #### Audio channel layout hints
 
@@ -260,12 +281,12 @@ In the event video files cannot be created to include proper audio channel label
 
 ##### Audio layout hints
 
-| Descriptor         | Definition                                                   |
-| ------------------ | ------------------------------------------------------------ |
-| stereoOnly         | 2 channel stereo audio only. Can be delivered on a single track or on 2 discrete tracks |
-| surroundOnly       | 6 channel 5.1 surround audio only. Can be delivered on a single track or on 6 discrete tracks |
+| Descriptor         | Definition                                                                                       |
+| ------------------ | ------------------------------------------------------------------------------------------------ |
+| stereoOnly         | 2 channel stereo audio only. Can be delivered on a single track or on 2 discrete tracks          |
+| surroundOnly       | 6 channel 5.1 surround audio only. Can be delivered on a single track or on 6 discrete tracks    |
 | stereoPlusSurround | 8 channel audio with stereo on channels 1 and 2 followed by 5.1 surround on channels 3 through 8 |
-| surroundPlusStereo | 8 channel audio with 5.1 on channels 1 through 6 followed by stereo on channels 7 and 8 |
+| surroundPlusStereo | 8 channel audio with 5.1 on channels 1 through 6 followed by stereo on channels 7 and 8          |
 
 ### Closed captions
 
@@ -273,7 +294,7 @@ Roku prefers to receive closed captioning for all content to provide the best us
 
 For content intended for the US, Roku adheres to FCC closed captioning rules regarding Internet Video Programming. Those rules can be found at the below link:
 
-https://www.fcc.gov/consumers/guides/captioning-internet-video-programming
+[https://www.fcc.gov/consumers/guides/captioning-internet-video-programming](https://www.fcc.gov/consumers/guides/captioning-internet-video-programming)
 
 All content required by the FCC to have closed captioning must be delivered to Roku with closed captions and those captions must be conformed and synced to program. For content that is exempt from the closed caption requirement per FCC rules, a valid exemption code number must be included in the metadata. Allowable exemption code numbers and their definitions:
 
@@ -288,22 +309,22 @@ For content intended for territories outside of the US, Roku will adhere to the 
 
 Captions may be provided in one of two ways:
 
-- EIA-608/CEA-708 embedded in-stream in the video file
-- Sidecar caption file
-- Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
-- See below for a full listing of supported sidecar caption files
-- Sidecar captions must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
-- Do not provide an empty file (a file without text) for sidecar captions
-- TTML and WebVTT positional data supported
-- Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
+* EIA-608/CEA-708 embedded in-stream in the video file
+* Sidecar caption file
+* Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
+* See below for a full listing of supported sidecar caption files
+* Sidecar captions must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
+* Do not provide an empty file (a file without text) for sidecar captions
+* TTML and WebVTT positional data supported
+* Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
 
-*Closed caption text styling support is limited to:*
+_Closed caption text styling support is limited to:_
 
-- *bold \<b\> and italic \<i\> tags*
-- *text color*
-- *text positioning*
+* _bold \<b> and italic \<i> tags_
+* _text color_
+* _text positioning_
 
-*Quicktime video files must be accompanied by a sidecar closed caption file. Roku does not support the Quicktime text track.*
+_Quicktime video files must be accompanied by a sidecar closed caption file. Roku does not support the Quicktime text track._
 
 | **Format Name**                             | Supports Positional Data | **File Extension** | Encoding | **Delivery Type**       | **Languages**                                           |
 | ------------------------------------------- | ------------------------ | ------------------ | -------- | ----------------------- | ------------------------------------------------------- |
@@ -319,23 +340,22 @@ Captions may be provided in one of two ways:
 
 Content delivered with an audio language that is not primary to the territory of distribution must be delivered with an audio dub and/or subtitle file translating the content into that territory’s primary language.
 
-- Full subtitles must NOT be burned into the video
-- Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
-- See below for a full listing of supported sidecar subtitle files
-- Sidecar subtitles must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
-- Do not provide an empty file (a file without text) for sidecar subtitles
-- TTML and WebVTT positional data supported
-- Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
+* Full subtitles must NOT be burned into the video
+* Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
+* See below for a full listing of supported sidecar subtitle files
+* Sidecar subtitles must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
+* Do not provide an empty file (a file without text) for sidecar subtitles
+* TTML and WebVTT positional data supported
+* Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
 
-*Subtitle text styling support is limited to:*
+_Subtitle text styling support is limited to:_
 
-- *bold \<b\> and italic \<i\> tags*
-- *text color*
-- *text positioning*
+* _bold \<b> and italic \<i> tags_
+* _text color_
+* _text positioning_
 
-
-| **Format Name**                             | Supports Positional Data | **File Extension** | Encoding | **Delivery Type** | **Languages**                                                |
-| ------------------------------------------- | ------------------------ | ------------------ | -------- | ----------------- | ------------------------------------------------------------ |
+| **Format Name**                             | Supports Positional Data | **File Extension** | Encoding | **Delivery Type** | **Languages**                                                                                                |
+| ------------------------------------------- | ------------------------ | ------------------ | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------ |
 | Timed Text Markup Language (TTML)           | Y                        | .ttml              | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
 | Web Video Text Track (WebVTT)               | Y                        | .vtt or .webvtt    | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
 | Distribution Format Exchange Profile (DFXP) | N                        | .dfxp              | UTF-8    | sidecar           | must conform to a supported [language code](#language-codes). Please also include region code where possible |
@@ -344,47 +364,50 @@ Content delivered with an audio language that is not primary to the territory of
 
 ### Artwork
 
-Roku supports three image types for each piece of content. Each image type will be used in a different location within Roku Channel. Roku prefers to receive all three art sizes whenever possible. Each image must be delivered in JPEG or PNG format. Please provide images in Roku's preferred image resolution to avoid delays in publishing. Images *must* meet or exceed the minimum resolution and *must* be delivered in the *exact* aspect ratio defined for each image type.
+Roku supports three image types for each piece of content. Each image type will be used in a different location within Roku Channel. Roku prefers to receive all three art sizes whenever possible. Each image must be delivered in JPEG or PNG format. Please provide images in Roku's preferred image resolution to avoid delays in publishing. Images _must_ meet or exceed the minimum resolution and _must_ be delivered in the _exact_ aspect ratio defined for each image type.
 
 #### Image type definitions
 
 <table>
-<thead>
-<tr>
-<th>Format</th>
-<th>Extension</th>
-<th>Image Type</th>
-<th>Minimum<br />Resolution</th>
-<th>Preferred<br />Resolution</th>
-<th>Aspect Ratio</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
-<td>.jpg<br />.jpeg<br />.png</td>
-<td>Key Art<br />Image with title treatment</td>
-<td>800x450</td>
-<td>1920x1080</td>
-<td>16:9</td>
-</tr>
-<tr>
-<td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
-<td>.jpg<br />.jpeg<br />.png</td>
-<td>Background<br />Textless image used in background of program page</td>
-<td>800x450</td>
-<td>1920x1080</td>
-<td>16:9</td>
-</tr>
-<tr>
-<td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
-<td>.jpg<br />.jpeg<br />.png</td>
-<td>Box Cover<br />Vertical poster image with title treatment</td>
-<td>534x801</td>
-<td>2000x3000</td>
-<td>2:3</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th>Extension</th>
+      <th>Image Type</th>
+      <th>Minimum<br />Resolution</th>
+      <th>Preferred<br />Resolution</th>
+      <th>Aspect Ratio</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
+      <td>.jpg<br />.jpeg<br />.png</td>
+      <td>Key Art<br />Image with title treatment</td>
+      <td>800x450</td>
+      <td>1920x1080</td>
+      <td>16:9</td>
+    </tr>
+
+    <tr>
+      <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
+      <td>.jpg<br />.jpeg<br />.png</td>
+      <td>Background<br />Textless image used in background of program page</td>
+      <td>800x450</td>
+      <td>1920x1080</td>
+      <td>16:9</td>
+    </tr>
+
+    <tr>
+      <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
+      <td>.jpg<br />.jpeg<br />.png</td>
+      <td>Box Cover<br />Vertical poster image with title treatment</td>
+      <td>534x801</td>
+      <td>2000x3000</td>
+      <td>2:3</td>
+    </tr>
+  </tbody>
 </table>
 
 #### Minimum art requirements by content type
@@ -397,71 +420,81 @@ Roku supports three image types for each piece of content. Each image type will 
 
 **Movie content type art requirements**
 
-| Art             | Required/Preferred | Notes                                                        |
-| --------------- | ------------------ | ------------------------------------------------------------ |
+| Art             | Required/Preferred | Notes                                                                                          |
+| --------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
 | 16:9 Key Art    | Required           | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
 | 2:3 Box Cover   | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
 | 16:9 Background | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
 
 **TV content type art requirements**
 
-
 <table>
-<thead>
-<tr>
-<th><strong><em>Series Content Type</em></strong></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Art</strong></td>
-<td><strong>Required/Preferred</strong></td>
-<td><strong>Notes</strong></td>
-</tr>
-<tr>
-<td>16:9 Key Art</td>
-<td>Required</td>
-<td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
-</tr>
-<tr>
-<td>2:3 Box Cover</td>
-<td>Preferred</td>
-<td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
-</tr>
-<tr>
-<td>16:9 Background</td>
-<td>Preferred</td>
-<td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
-</tr>
-<tr>
-<td><strong><em>Episode Content Type</em></strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Art</strong></td>
-<td><strong>Required/Preferred</strong></td>
-<td><strong>Notes</strong></td>
-</tr>
-<tr>
-<td>16:9 Background</td>
-<td>Required</td>
-<td>Episodic image may be letterboxed or pillarboxed depending upon the source video. Windowboxed images will be rejected.<br />Episodic images should be unique for each episode and represent the content of the episode</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><strong><em>Series Content Type</em></strong></th>
+
+      <th />
+
+      <th />
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Art</strong></td>
+      <td><strong>Required/Preferred</strong></td>
+      <td><strong>Notes</strong></td>
+    </tr>
+
+    <tr>
+      <td>16:9 Key Art</td>
+      <td>Required</td>
+      <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
+    </tr>
+
+    <tr>
+      <td>2:3 Box Cover</td>
+      <td>Preferred</td>
+      <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
+    </tr>
+
+    <tr>
+      <td>16:9 Background</td>
+      <td>Preferred</td>
+      <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
+    </tr>
+
+    <tr>
+      <td><strong><em>Episode Content Type</em></strong></td>
+
+      <td />
+
+      <td />
+    </tr>
+
+    <tr>
+      <td><strong>Art</strong></td>
+      <td><strong>Required/Preferred</strong></td>
+      <td><strong>Notes</strong></td>
+    </tr>
+
+    <tr>
+      <td>16:9 Background</td>
+      <td>Required</td>
+      <td>Episodic image may be letterboxed or pillarboxed depending upon the source video. Windowboxed images will be rejected.<br />Episodic images should be unique for each episode and represent the content of the episode</td>
+    </tr>
+  </tbody>
 </table>
 
 #### Artwork content guidelines
 
-- Key Art (graphic with the full title of the asset visible)
-- No sexually explicit or graphically violent artwork
-- Artwork should be post-theatrical and not include language such as *In Theaters Now* or *Coming Soon*
-- Artwork designed specifically for digital delivery is preferred
-- Artwork for international territories should be localized for each territory
-- For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
-- Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku
+* Key Art (graphic with the full title of the asset visible)
+* No sexually explicit or graphically violent artwork
+* Artwork should be post-theatrical and not include language such as _In Theaters Now_ or _Coming Soon_
+* Artwork designed specifically for digital delivery is preferred
+* Artwork for international territories should be localized for each territory
+* For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
+* Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku
 
 #### Artwork placement on platform examples
 
@@ -469,49 +502,49 @@ Roku supports three image types for each piece of content. Each image type will 
 
 Highlighted example of the 16:9 texted image with title treatment
 
-![roku400px - movieGrid](https://image.roku.com/ZHZscHItMTc2/movieBrowse.jpg)
+<Image alt="roku400px - movieGrid" border={false} src="https://image.roku.com/ZHZscHItMTc2/movieBrowse.jpg" />
 
 **Movie artwork -details experience**
 
 Highlighted example of the 16:9 textless image
 
-![roku400px - movieDetails](https://image.roku.com/ZHZscHItMTc2/movieDetail.jpg)
+<Image alt="roku400px - movieDetails" border={false} src="https://image.roku.com/ZHZscHItMTc2/movieDetail.jpg" />
 
 **Series artwork - browse experience**
 
 Highlighted example of the 16:9 texted series image with title treatment
 
-![roku400px - seriesGrid](https://image.roku.com/ZHZscHItMTc2/seriesBrowse.jpg)
+<Image alt="roku400px - seriesGrid" border={false} src="https://image.roku.com/ZHZscHItMTc2/seriesBrowse.jpg" />
 
 **Series artwork - details experience**
 
 Highlighted example of the 16:9 textless series image
 
-![roku400px - seriesDetail](https://image.roku.com/ZHZscHItMTc2/seriesDetails.jpg)
+<Image alt="roku400px - seriesDetail" border={false} src="https://image.roku.com/ZHZscHItMTc2/seriesDetails.jpg" />
 
 **Episode artwork - episode picker experience**
 
 Highlighted example of the 16:9 textless episode images
 
-![roku400px - episodePicker](https://image.roku.com/ZHZscHItMTc2/episodePicker.jpg)
+<Image alt="roku400px - episodePicker" border={false} src="https://image.roku.com/ZHZscHItMTc2/episodePicker.jpg" />
 
 **Episode artwork - episode details experience**
 
 Highlighted example of the 16:9 textless episode image
 
-![roku400px - episodeDetail](https://image.roku.com/ZHZscHItMTc2/episodeDetail.jpg)
+<Image alt="roku400px - episodeDetail" border={false} src="https://image.roku.com/ZHZscHItMTc2/episodeDetail.jpg" />
 
 **Clip artwork - browse experience**
 
 Highlighted example of the 16:9 texted image with title treatment
 
-![roku400px - clipGrid](https://image.roku.com/ZHZscHItMTc2/clipBrowse.jpg)
+<Image alt="roku400px - clipGrid" border={false} src="https://image.roku.com/ZHZscHItMTc2/clipBrowse.jpg" />
 
 **Poster artwork - search experience**
 
 Highlighted example of the 2:3 texted image with title treatment from the Search experience. 2:3 images are preferred for series and movie content types
 
-![posterSearch](https://image.roku.com/ZHZscHItMTc2/posterSearch.jpg)
+<Image alt="posterSearch" border={false} src="https://image.roku.com/ZHZscHItMTc2/posterSearch.jpg" />
 
 ## Delivery guidelines
 
@@ -523,7 +556,7 @@ Alternate file transfer or physical delivery methods may be evaluated on a case-
 
 Provide the name(s) and email address(es) for users that will be transmitting content to Roku for Roku Channel.
 
-Roku’s Aspera Shares URL: https://aspera.sr.roku.com
+Roku’s Aspera Shares URL: [https://aspera.sr.roku.com](https://aspera.sr.roku.com)
 
 You will need to install the Aspera Connect browser plugin to upload content via Aspera Shares.
 
@@ -539,58 +572,75 @@ Roku will provide host and username information during onboarding.
 
 **Aspera Client**
 
-[Aspera Client Download](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client&release=All&platform=All&function=all)
+[Aspera Client Download](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all)
 
 #### Transfer Bandwidth
 
 Roku recommends verifying or updating the global and user preferences of the Aspera Client to align with your preferred upload bandwidth. Please note Roku applies a global bandwidth cap of 300Mbps.
 
-![asperaPreferences](https://image.roku.com/ZHZscHItMTc2/asperaPreferences.jpg)
+<Image alt="asperaPreferences" border={false} src="https://image.roku.com/ZHZscHItMTc2/asperaPreferences.jpg" />
 
 Depending on what client is being used, there are different settings that can affect transfer speeds.
 
-- If using the Desktop Client GUI, global settings can be set
-  https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings
-- Transfer speeds can also be set on a per-Connection level (the "Speed" setting in step 7):
-  https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections
-- If connecting via command line, there is a specific switch: `-l 100m` would set the transfer rate at 100Mbps
-- If connecting via Aspera Shares, target rates can be set both system-wide or per-user in the Shares web interface
-  https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings
-  https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings
+* If using the Desktop Client GUI, global settings can be set
+  [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings)
+* Transfer speeds can also be set on a per-Connection level (the "Speed" setting in step 7):
+  [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections)
+* If connecting via command line, there is a specific switch: `-l 100m` would set the transfer rate at 100Mbps
+* If connecting via Aspera Shares, target rates can be set both system-wide or per-user in the Shares web interface
+  [https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings)
+  [https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings)
 
 ### File delivery
 
-- Video, closed captions, and artwork files must be *completely delivered prior to the delivery of metadata*
-- Production files MUST be delivered to the **`/prod`** folder. Automation is dependent on proper file delivery location. Failure to deliver files to the correct folder will result in processing delays or content not processing at all
-- Test files may be delivered to the **`/testing`** folder
-- It is preferred that content not be delivered to subfolders. If subfolders are necessary, follow the below guidelines:
-- Subfolders must **not** begin with an underscore
-- Do **not** separate files into subfolders by file type
-- All media files for a single title (episode, movie, or shortForm) must be delivered to the same directory
-- The ingest platform assumes media files referenced in the metadata are in the same directory as the metadata file. As such, metadata must be delivered to the same directory as the media files contained within the metadata
-- Delivery notifications can be sent to [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
+* Video, closed captions, and artwork files must be _completely delivered prior to the delivery of metadata_
+* Production files MUST be delivered to the **`/prod`** folder. Automation is dependent on proper file delivery location. Failure to deliver files to the correct folder will result in processing delays or content not processing at all
+* Test files may be delivered to the **`/testing`** folder
+* It is preferred that content not be delivered to subfolders. If subfolders are necessary, follow the below guidelines:
+* Subfolders must **not** begin with an underscore
+* Do **not** separate files into subfolders by file type
+* All media files for a single title (episode, movie, or shortForm) must be delivered to the same directory
+* The ingest platform assumes media files referenced in the metadata are in the same directory as the metadata file. As such, metadata must be delivered to the same directory as the media files contained within the metadata
+* Delivery notifications can be sent to [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
 
 #### File retention
 
 The delivery location is a temporary location for our Partners to upload files for ingestion into Roku Channel content library. Automation will move files from the delivery location upon successful ingest to an archive location to be stored indefinitely. All files uploaded to the delivery location are expected to be ingested within a reasonable time frame not to exceed 30 days. Valid and complete metadata must be delivered shortly after files are delivered to ensure timely ingest. Files in the delivery location that have not ingested after 30 days are subject to deletion.
 
-*Exceptions to the file retention policy may be made to files in the **`/testing`** folder*
+_Exceptions to the file retention policy may be made to files in the **`/testing`** folder_
 
 #### File naming
 
 Source video, closed captions, and artwork files delivered for ingest must adhere to the following guidelines:
 
-- File names must not exceed 125 characters in length
-- File names must match the reference to the file name in the metadata supplied for the title delivered
-- File names are case-sensitive
-- File names must end with a proper file extension. File extensions are expected to be lowercase
+* File names must not exceed 125 characters in length
+* File names must match the reference to the file name in the metadata supplied for the title delivered
+* File names are case-sensitive
+* File names must end with a proper file extension. File extensions are expected to be lowercase
 
 <ul>
-<li>Whitespace and special characters <code>!@#$%^&amp;*()\{\}|[]\;:’”?/&gt;&lt;,</code> must not be included in any file name</li>
+  <li>Whitespace and special characters <code>!@#$%^&\*()\{}|\[];:’”?/>\<,</code> must not be included in any file name</li>
 </ul>
 
-- The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
+* The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
 
+##### Characters allowed in file names
+
+
+<table>
+<thead>
+<tr>
+<th>Character sets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ul><li>0-9</li><li>a-z</li><li>A-Z</li></ul><p><em>Correct file delivery location, proper file delivery cadence, and proper file naming is the responsibility of our Partners as the Partner is the expert in their own content and we do not always have insight into individual Partner delivery schedules.</em></p></td>
+</tr>
+</tbody>
+</table>
+
+<br />
 
 | Character name | Character |
 | -------------- | --------- |

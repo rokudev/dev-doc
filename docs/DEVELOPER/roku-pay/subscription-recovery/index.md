@@ -42,11 +42,11 @@ When auto-renewal fails, the customer enters a **3-day grace period** with full 
 
 * **Hold State:** Customers are blocked from accessing content.
 * **Notifications:** Users see prompts on the Roku home screen, upon app launch, and via email.
-* **In-App Recovery:** Publishers should use the [ChannelStore DoRecovery API](https://www.google.com/search?q=%23in-channel-subscription-renewal-dialog) to trigger a renewal dialog when a user attempts to play content.
+* **In-App Recovery:** Publishers should use the [ChannelStore DoRecovery API](#in-channel-subscription-renewal-dialog) to trigger a renewal dialog when a user attempts to play content.
 
 If payment is recovered, entitlement is restored. If recovered during grace, the billing cycle remains unchanged; if recovered while on hold, the billing cycle resets to the payment date.
 
-**For more information:** [Enhanced subscription recovery integration guide](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md)
+**For more information:** [Enhanced subscription recovery integration guide](doc:subscription-on-hold)
 
 ## Subscription recovery settings
 
@@ -56,10 +56,10 @@ Use the **Subscription recovery** page in the Developer Dashboard to configure t
 * Toggle between Basic and Enhanced solutions.
 * Manage self-serve migration.
 
-**For more information:** [Subscription recovery settings](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/settings.md)
+**For more information:** [Subscription recovery settings](doc:settings)
 
 ## Subscription recovery testing
 
 Use the `subscription-recovery` test API to manually force subscriptions into specific states (Active, In-Grace, On-Hold, Canceled, or Recovered). This allows you to verify your app's UI and backend logic without waiting for real billing cycles.
 
-**For more information:** [Subscription recovery testing](https://www.google.com/search?q=/docs/developer-program/roku-pay/subscription-recovery/testing.md)
+**For more information:** [Subscription recovery testing](doc:testing1.md)

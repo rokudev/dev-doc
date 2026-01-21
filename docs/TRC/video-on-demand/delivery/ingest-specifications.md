@@ -386,3 +386,69 @@ Roku supports three image types for each piece of content. Each image type will 
 </tr>
 </tbody>
 </table>
+
+#### Minimum art requirements by content type
+
+**Clip content type art requirements**
+
+| Art          | Required/Preferred | Notes                                            |
+| ------------ | ------------------ | ------------------------------------------------ |
+| 16:9 Key Art | Required           | Only the 16:9 texted image is required for Clips |
+
+**Movie content type art requirements**
+
+| Art             | Required/Preferred | Notes                                                        |
+| --------------- | ------------------ | ------------------------------------------------------------ |
+| 16:9 Key Art    | Required           | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
+| 2:3 Box Cover   | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
+| 16:9 Background | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
+
+**TV content type art requirements**
+
+
+<table>
+<thead>
+<tr>
+<th><strong><em>Series Content Type</em></strong></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Art</strong></td>
+<td><strong>Required/Preferred</strong></td>
+<td><strong>Notes</strong></td>
+</tr>
+<tr>
+<td>16:9 Key Art</td>
+<td>Required</td>
+<td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
+</tr>
+<tr>
+<td>2:3 Box Cover</td>
+<td>Preferred</td>
+<td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
+</tr>
+<tr>
+<td>16:9 Background</td>
+<td>Preferred</td>
+<td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
+</tr>
+<tr>
+<td><strong><em>Episode Content Type</em></strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Art</strong></td>
+<td><strong>Required/Preferred</strong></td>
+<td><strong>Notes</strong></td>
+</tr>
+<tr>
+<td>16:9 Background</td>
+<td>Required</td>
+<td>Episodic image may be letterboxed or pillarboxed depending upon the source video. Windowboxed images will be rejected.<br />Episodic images should be unique for each episode and represent the content of the episode</td>
+</tr>
+</tbody>
+</table>

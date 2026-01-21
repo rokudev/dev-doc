@@ -10,7 +10,51 @@ metadata:
 next:
   description: ''
 ---
+Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor> 
+
+The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md)  node that provides keyboard functionality.
+
 <br />
+
+The layout of the keyboard is customized based on a JSON-formatted Key Definition File. In the Key Definition File, the developer labels the individual keys and groups them into sections and rows. The key labels support the characters in the Basic Latin, Latin 1 Supplement, Latin Extended-A, and Latin Extended-B blocks. This provides support for most Western European languages, including English, French, German, Italian, Portuguese, and Spanish.
+
+<Image alt="roku815px - address-keyboard-voice" border={false} src="https://image.roku.com/ZHZscHItMTc2/address-keyboard-voice.jpg" />
+
+## Accessing the Key Definition File
+
+The instance of the **DynamicKeyGrid** node is accessed via the **keyGrid** field of the **DynamicCustomKeyboard** node. The **keyGrid** field includes a **keyDefinitionUri** field, which must be set to a valid Key Definition File. Typically, this is done by creating an RSG component that extends the **DynamicCustomKeyboard** and then defining an **init()** function for that component as demonstrated in the following example:
+
+```
+sub init()
+        m.top.keyGrid.keyDefinitionUri = "pkg:/data/coolKeyboardLayoutKDF.json"
+end sub
+```
+
+In this example, the **keyGrid** is set to the **coolKeyboardLayoutKDF.json** file, which is located in the **data** directory of the package file. The Key Definition File may be stored anywhere within the package file.
+
+## Default key selection handlers
+
+It is recommended that developers create a component that extends the **DynamicCustomKeyboard** node class. This provides default key selection handling for the following use cases:
+
+| Key                                                           | Default Handler                                                                                                                                                                           |
+| :------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "label" specified, but not "strOut"                           | The "label" string is inserted in the text field's string at the current cursor position.                                                                                                 |
+| "strOut" set to "clear" ("clear" is case insensitive)         | The text field is set to the empty string.                                                                                                                                                |
+| "strOut" set to "backspace" ("backspace" is case insensitive) | The character to the left of the cursor position is deleted from the text field's string.                                                                                                 |
+| "strOut" set to "space" ("space" is case insensitive")        | A space is inserted in the text field's string at the current cursor position.                                                                                                            |
+| "strOut" set to some other string                             | By default, the "strOut" string is inserted in the text field's string at the current cursor position. In this case, the component typically provides a custom key selection handler (see |
+
+## Custom key selection handlers
+
+For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface\> element that has the following signature:
+
+```
+    function keySelected(key as string) as boolean
+```
+
+The *key* parameter is set to the key's "strOut" field, if specified; otherwise, it is set to the key's "label" string.
+
+The function should return *true* if it handles the key selection. Returning *false* causes the [default key selection handler](#default-key-selection-handler)  behavior to be used.
 
 #### Example custom key select handler
 

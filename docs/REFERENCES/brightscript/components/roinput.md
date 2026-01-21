@@ -12,11 +12,11 @@ next:
 ---
 
 
-An roInput object can be used to receive events sent from a network client using the External Control Protocol (ECP), as described in [External Control API](/docs/developer-program/dev-tools/external-control-api.md "External Control API").
+An roInput object can be used to receive events sent from a network client using the External Control Protocol (ECP), as described in [External Control API](doc:external-control-api).
 
-> The [supports_input_launch manifest flag](/docs/developer-program/getting-started/architecture/channel-manifest.md#launch-requirement-attributes) must be set for channels to accept deep linking parameters when already running. This flag enables deep linking into content without relaunching the app. See the [Deep Linking sample app](https://github.com/rokudev/deep-Linking-samples) for how to use roInput to handle deep links into content while the app is already running. 
+> The [supports_input_launch manifest flag](doc:channel-manifest) must be set for channels to accept deep linking parameters when already running. This flag enables deep linking into content without relaunching the app. See the [Deep Linking sample app](https://github.com/rokudev/deep-Linking-samples) for how to use roInput to handle deep links into content while the app is already running. 
 
-Refer to [External Control Service Commands](/docs/developer-program/dev-tools/external-control-api.md#external-control-service-commands "External Control Service Commands") for information about the ECP input command.
+Refer to [External Control Service Commands](doc:external-control-api) for information about the ECP input command.
 
 This object is created without any arguments:
 
@@ -59,9 +59,9 @@ end while
 
 ## Supported interfaces
 
-- [ifInput](/docs/references/brightscript/interfaces/ifinput.md "ifInput")
+- [ifInput](doc:ifinput)
 
 
 ## Supported events
 
-- [roInputEvent](/docs/references/brightscript/events/roinputevent.md "roInputEvent")
+- [roInputEvent](doc:roinputevent)

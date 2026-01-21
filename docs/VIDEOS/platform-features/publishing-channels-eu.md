@@ -28,8 +28,8 @@ This video explains how developers can surface their Roku apps to relevant viewe
 
 [Launching an app in Germany knowledge center article](https://partnersuccess.roku.com/hc/en-us/articles/1500006343601)
 
-[Channel publishing guide](/docs/developer-program/publishing/channel-publishing-guide.md)  
+[Channel publishing guide](doc:channel-publishing-guide)  
 
-[Search feed spec](/docs/specs/search-feed.md)
+[Search feed spec](doc:search-feed)
 
-[Roku Pay in-app products](/docs/developer-program/roku-pay/quickstart/in-channel-products.md)
+[Roku Pay in-app products](doc:in-channel-products)

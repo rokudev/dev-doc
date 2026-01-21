@@ -17,7 +17,7 @@ next:
 
 | Name      | Description                               |
 | --------- | ----------------------------------------- |
-| [roInput](/docs/references/brightscript/components/roinput.md "roInput")   | An roInput object can be used to receive events sent from a network client using the External Control Protocol (ECP), as described in External Control API |
+| [roInput](doc:roinput)   | An roInput object can be used to receive events sent from a network client using the External Control Protocol (ECP), as described in External Control API |
 
 
 ## Supported methods
@@ -52,7 +52,7 @@ Registers an app to receive `roInput transport` events, which are voice commands
 
 Voice commands include the following: "fast forward", "next, "play", "pause", "replay", "rewind", "seek", and "startover". Once you register your app to receive transport events, your app must call the `EventResponse()` method to handle them.
 
-See [Implementing Voice Controls](/docs/developer-program/media-playback/voice-controls/transport-controls.md) for more information.
+See [Implementing Voice Controls](doc:transport-controls) for more information.
 
 #### Return Value
 

@@ -24,7 +24,7 @@ The following table summarizes the basic information for the Roku Pay web servic
 | Protocol     | Roku Pay API calls may be sent using either HTTP or HTTPS.   |
 | Format       | Roku Pay APIs support both JSON and XML-formatted data. Format the `accept` header as follows: $\{format-list\} |
 | HTTP Methods | Roku Pay APIs support GET and POST methods for retrieving and managing transaction data: $\{http-methods-list\} |
-| API Key      | All Roku Pay API requests must include the developer's API key. See [Setting up Roku Pay web services](/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md) for more information about getting and managing the key. For all requests, the app associated with the transaction ID or refund ID passed into the call must be owned by the developer associated with the Roku Pay API Key. |
+| API Key      | All Roku Pay API requests must include the developer's API key. See [Setting up Roku Pay web services](doc:setting-up-web-services) for more information about getting and managing the key. For all requests, the app associated with the transaction ID or refund ID passed into the call must be owned by the developer associated with the Roku Pay API Key. |
 
 \{#format-list\}
 - **JSON**: accept: application/json
@@ -158,7 +158,7 @@ To execute the nightly recovery sync with the `validate-transaction` API, follow
 
    c. If the `isEntitled` flag is "false", Roku has completed the payment retry cycle and canceled the subscription. Call the `cancel subscription` API and put the account in an "unsubscribed" state in your entitlement service so it can stop calling the `validate transaction` API for that subscription.
 
-   **Free trials:** When a free trial ends and the customer's method of payment fails, the `is_entitled` flag is "false". For apps using [Enhanced Subscription Recovery](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md), the subscription will automatically be placed on hold; for apps using [Basic Recovery](/docs/developer-program/roku-pay/subscription-recovery/basic-recovery.md), the subscription is automatically cancelled (there is no grace period in this case).
+   **Free trials:** When a free trial ends and the customer's method of payment fails, the `is_entitled` flag is "false". For apps using [Enhanced Subscription Recovery](doc:subscription-on-hold), the subscription will automatically be placed on hold; for apps using [Basic Recovery](doc:basic-recovery), the subscription is automatically cancelled (there is no grace period in this case).
 
 The following table summarizes the action to be taken after checking the `expirationDate`:
 
@@ -170,7 +170,7 @@ The following table summarizes the action to be taken after checking the `expira
 
 #### Managing upgrades/downgrades
 
-Roku Pay supports on-device upgrades and downgrades between subscription products. Once an upgrade/downgrade has been completed, apps should call the `validate-transaction` API with the transaction ID from the `purchaseid` field of the [**doOrder** command](/docs/references/scenegraph/control-nodes/channelstore.md#doorder) to update their system. For subscription upgrades and downgrades, the `validate-transaction` API response includes the following fields to identify the transaction:
+Roku Pay supports on-device upgrades and downgrades between subscription products. Once an upgrade/downgrade has been completed, apps should call the `validate-transaction` API with the transaction ID from the `purchaseid` field of the [**doOrder** command](doc:channelstore) to update their system. For subscription upgrades and downgrades, the `validate-transaction` API response includes the following fields to identify the transaction:
 
 - `purchase_type:` Indicates whether the transaction is an `UPGRADE` or `DOWNGRADE`.
 

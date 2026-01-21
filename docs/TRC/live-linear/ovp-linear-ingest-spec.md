@@ -20,7 +20,7 @@ This specification describes the ingest specifications and EPG requirements requ
 
 The Roku Channel feed format follows the JSON-Schema Draft 4. All the properties in the schema are case sensitive. Before submitting a feed, make sure it is a valid JSON file. You can do that by using an IDE or free online tools, such as [JSON Schema Validator](https://www.jsonschemavalidator.net/) or [JSON Schema Lint](https://jsonschemalint.com/#!/version/draft-07/markup/json).
 
-For guidelines about presenting your channel's EPG, see [EPG on The Roku Channel](/trc-docs/live-linear/epg-on-trc.md).
+For guidelines about presenting your channel's EPG, see [EPG on The Roku Channel](doc:epg-on-trc).
 
 ### A note about deduplication of metadata
 
@@ -986,7 +986,7 @@ Notes:
 
 - Please include the liveFeed as the first item in a feed.
 - Only a title or a **TMS** ExternalID is required for programs referenced in a schedule. We will reject anything that's not a **valid** ExternalID.
-- When referencing an episode, the parent items must also be in included ([series](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#series) and [season](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#season) when applicable). These parent items must be **<u>fully populated with required fields</u>** as specified in the [Roku Direct Published feed specification](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md) or the series item must contain a valid External **TMS** id.
+- When referencing an episode, the parent items must also be in included ([series](doc:json-dp-spec) and [season](doc:json-dp-spec) when applicable). These parent items must be **<u>fully populated with required fields</u>** as specified in the [Roku Direct Published feed specification](doc:json-dp-spec) or the series item must contain a valid External **TMS** id.
 
 ![roku400px - feedspecs-1](https://image.roku.com/ZHZscHItMTc2/feed-specs-1-v2.jpg)
 

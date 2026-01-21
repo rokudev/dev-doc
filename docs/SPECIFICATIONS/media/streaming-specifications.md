@@ -103,7 +103,7 @@ Roku supports the following widely-used standard formats for adaptive bit rate s
 ### Best practices
 
 - Dash and HLS are the preferred formats. These protocols will be the first to receive new features and offer the best playback performance.
-- For best performance, the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) should indicate the resolution and frame rate of each representation. This allows the player to filter out encodings that cannot be played in advance, without the need to fetch the actual media.
+- For best performance, the [manifest](doc:channel-manifest) should indicate the resolution and frame rate of each representation. This allows the player to filter out encodings that cannot be played in advance, without the need to fetch the actual media.
 - Roku recommends media chunk durations between 4 and 6 seconds for DASH and HLS streams, and 2 seconds for Smooth.
 - Caption data can be provided in three different ways:
   - sideloaded as a separate url specified in content metadata.
@@ -225,7 +225,7 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
 </table>
 
 
-Some decoder and security features are device specific. For details, see [Roku Models and Features](/docs/specs/hardware.md).
+Some decoder and security features are device specific. For details, see [Roku Models and Features](doc:hardware).
 
 [^1]: Only supported on **Roku 4K capable** devices.
 [^2]: Only supported on **Roku 4K capable** devices.
@@ -278,7 +278,7 @@ The following image formats are currently supported. The use of PNG is recommend
 
 Apps must check to be sure that Roku OS is version 9.4 or later before attempting to use WebP images.
 
-SceneGraph [Poster nodes](/docs/references/scenegraph/renderable-nodes/poster.md) can now accept URIs that provide WebP images, and those images can optionally have alpha channels for transparency (similar to the PNG approach).
+SceneGraph [Poster nodes](doc:poster) can now accept URIs that provide WebP images, and those images can optionally have alpha channels for transparency (similar to the PNG approach).
 
 For image assets delivered from a web server (or CDN), conditionally request WebP instead of JPEG/PNG if Roku OS version is first confirmed to be >= 9.4.
 
@@ -397,7 +397,7 @@ End Function
 
 ### HDR10 video streaming requirements
 
-HDR10 playback requires HDMI version 2.0a. HDCP version 2.2, and an HDR10 capable player and display. Apps can check if the Roku device and connected display support HDR10 with **GetDisplayProperties().hdr10** field of the [roDeviceInfo](/docs/references/brightscript/interfaces/ifdeviceinfo.md) component.
+HDR10 playback requires HDMI version 2.0a. HDCP version 2.2, and an HDR10 capable player and display. Apps can check if the Roku device and connected display support HDR10 with **GetDisplayProperties().hdr10** field of the [roDeviceInfo](doc:ifdeviceinfo) component.
 
 ~~~~
 Function canPlayHDR() as Boolean

@@ -18,7 +18,7 @@ Publishers can integrate add-ons in their apps to offer customers premium conten
 
 Integrating add-ons entails the following steps:
 
-1. Creating add-on products in the Developer Dashboard. A product represents a set of content (for example, a premium app or app package) or other features offered by your app. **You must upgrade to Product Catalog 2.0 to create add-ons** (see [Creating the Product Catalog](/docs/developer-program/roku-pay/quickstart/product-catalog.md) for how to migrate the In-app purchase workflow in the Developer Dashboard to the new Product Catalog 2.0 experience).
+1. Creating add-on products in the Developer Dashboard. A product represents a set of content (for example, a premium app or app package) or other features offered by your app. **You must upgrade to Product Catalog 2.0 to create add-ons** (see [Creating the Product Catalog](doc:product-catalog) for how to migrate the In-app purchase workflow in the Developer Dashboard to the new Product Catalog 2.0 experience).
 
    
 
@@ -46,7 +46,7 @@ Publishers need to create a product in the Developer Dashboard for each add-on t
 
    | Setting                   | Description                                                  |
    | :------------------------ | :----------------------------------------------------------- |
-   | Product name              | Select a locale and then enter the product name. This name is used in Roku Pay reports, and it is displayed to customers for product bundles only. The list of available locales is based on the languages selected in the [Channel Properties window](/docs/developer-program/publishing/channel-publishing-guide.md#properties-window). To provide additional localized product names, click **Add product name in another language**, select a locale, and then enter the localized product name. You can provide one product name per locale. |
+   | Product name              | Select a locale and then enter the product name. This name is used in Roku Pay reports, and it is displayed to customers for product bundles only. The list of available locales is based on the languages selected in the [Channel Properties window](doc:channel-publishing-guide). To provide additional localized product names, click **Add product name in another language**, select a locale, and then enter the localized product name. You can provide one product name per locale. |
    | Internet required         | Accept the default setting, which is **Yes**.                |
    | Product Id                | The internal code for the add-on product.                    |
    | It is an add-on           | Enable this setting, and then select the prerequisite base products. Add-ons are only accessible in the customer flow if the required base products have already been purchased or are being purchased at the same time as the add-on. |
@@ -104,7 +104,7 @@ To create a purchase option for an add-on product, follow these steps:
 
    
 
-5. If you selected **Publish** in step 6, review the **Purchase details** and **Billing plan** settings, and then click **Confirm** to make the purchase option available to customers on your app. After you create an add-on, you can schedule limited-time offers and schedule price changes for it (see [Creating the Product Catalog](/docs/developer-program/roku-pay/quickstart/product-catalog.md) for how to do this).
+5. If you selected **Publish** in step 6, review the **Purchase details** and **Billing plan** settings, and then click **Confirm** to make the purchase option available to customers on your app. After you create an add-on, you can schedule limited-time offers and schedule price changes for it (see [Creating the Product Catalog](doc:product-catalog) for how to do this).
 
     ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/add-on-purchase-detail-confirmation.png)
 

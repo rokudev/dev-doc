@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md "**StdDlgItemBase**")
+Extends [StdDlgItemBase](doc:std-dlg-item-base)
 
-The **StdDlgBulletTextItem** node is used to display a bulleted list of text in the dialog's content area. It should only be used as a child of a [**StdDlgContentArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-content-area.md) node. 
+The **StdDlgBulletTextItem** node is used to display a bulleted list of text in the dialog's content area. It should only be used as a child of a [**StdDlgContentArea**](doc:std-dlg-content-area) node. 
 
 ![roku815px - StdDlgBulletTextItem](https://image.roku.com/ZHZscHItMTc2/StdDlgBulletTextItem-v2.jpg)
 

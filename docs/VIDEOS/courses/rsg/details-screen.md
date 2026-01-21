@@ -25,31 +25,31 @@ This lesson describes how to build a Details Screen using more complex component
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Details Screen sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/DetailsScreen) | Download and review the code used in this lesson to create a details screen. |
-| [Sideloading  Roku apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) | Sideload and test the Details Screen app created in this lesson. |
+| [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Details Screen app created in this lesson. |
 
 ## Related
 
-[LayoutGroup node](/docs/references/scenegraph/layout-group-nodes/layoutgroup.md)
+[LayoutGroup node](doc:layoutgroup)
 
-[Group node](/docs/references/scenegraph/layout-group-nodes/group.md)
+[Group node](doc:group)
 
-[Rectangle node](/docs/references/scenegraph/renderable-nodes/rectangle.md)
+[Rectangle node](doc:rectangle)
 
-[Label node](/docs/references/scenegraph/renderable-nodes/label.md)
+[Label node](doc:label)
 
-[Poster node](/docs/references/scenegraph/renderable-nodes/poster.md)
+[Poster node](doc:poster)
 
-[Content node](/docs/references/scenegraph/control-nodes/contentnode.md)  
+[Content node](doc:contentnode)  
 
-[Content meta data](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content meta data](doc:content-metadata)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[Event loops](/docs/developer-program/core-concepts/event-loops.md)
+[Event loops](doc:event-loops)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[ifSGNodeChildren interface](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
+[ifSGNodeChildren interface](doc:ifsgnodechildren)
 
 ## How to watch
 

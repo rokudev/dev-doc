@@ -16,10 +16,10 @@ The roCECStatus component enables apps to identify the active-source status for 
 
 ## Supported interfaces
 
-- [ifCECStatus](/docs/references/brightscript/interfaces/ifcecstatus.md "ifCECstatus")
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")
-- [ifGetMessagePort ](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort ")
+- [ifCECStatus](doc:ifcecstatus)
+- [ifSetMessagePort](doc:ifsetmessageport)
+- [ifGetMessagePort ](doc:ifgetmessageport)
 
 ## Supported events
 
-- [roCECStatusEvent](/docs/references/brightscript/events/rocecstatusevent.md "*roCECStatusEvent*")
+- [roCECStatusEvent](doc:rocecstatusevent)

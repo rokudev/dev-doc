@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
+Extends [**Group**](doc:group)
 
 The Panel node is used to create sliding panels for app UI, similar to those in the Roku OS home screen.
 

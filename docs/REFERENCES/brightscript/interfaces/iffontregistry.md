@@ -17,7 +17,7 @@ next:
 
 | Name           | Description                               |
 | -------------- | ----------------------------------------- |
-| [roFontRegistry](/docs/references/brightscript/components/rofontregistry.md "roFontRegistry") | The roFontRegistry object allows you to create roFont objects, either using the default font or using fonts in TrueType or OpenType files packaged with your application |
+| [roFontRegistry](doc:rofontregistry) | The roFontRegistry object allows you to create roFont objects, either using the default font or using fonts in TrueType or OpenType files packaged with your application |
 
 
 ## Supported methods
@@ -43,7 +43,7 @@ Returns the names of the font families that have been registered via the [Regist
 
 #### Return Value
 
-An [roArray](/docs/references/brightscript/components/roarray.md "roArray") of strings that represent the names of the font families that have been registered.
+An [roArray](doc:roarray) of strings that represent the names of the font families that have been registered.
 
 ### GetFont(family as String, size as Integer, bold as Boolean, italic as Boolean) as Object
 
@@ -62,7 +62,7 @@ Returns a font from the specified family, selected from the fonts previously reg
 
 #### Return Value
 
-An [roFont](/docs/references/brightscript/components/rofont.md "roFont") object representing a font from the specified family.
+An [roFont](doc:rofont) object representing a font from the specified family.
 
 ### GetDefaultFont() as Object
 

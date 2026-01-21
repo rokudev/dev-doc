@@ -25,6 +25,6 @@ In March 2024, Roku explained how developers can integrate JWT-secured push noti
 
 ## Related documentation
 
-- [Receiving JWT-secured push notifications](/docs/developer-program/roku-pay/implementation/push-notifications-jwt.md)
-- [Configuring Roku Pay push notifications in the Developer Dashboard](/docs/developer-program/roku-pay/implementation/push-notifications-jwt.md)
-- [Push notifications reference guide](/docs/developer-program/roku-pay/implementation/push-notifications.md)
+- [Receiving JWT-secured push notifications](doc:push-notifications-jwt)
+- [Configuring Roku Pay push notifications in the Developer Dashboard](doc:push-notifications-jwt)
+- [Push notifications reference guide](doc:push-notifications)

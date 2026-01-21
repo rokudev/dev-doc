@@ -22,4 +22,4 @@ This object can be created with no parameters:
 
 ## Supported Interfaces
 
-* [ifProgramGuide](/docs/references/brightscript/interfaces/ifprogramguide.md)
+* [ifProgramGuide](doc:ifprogramguide)

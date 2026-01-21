@@ -16,7 +16,7 @@ next:
 
 | Name              | Description                                                                 |
 | ----------------- | --------------------------------------------------------------------------- |
-| [roRegistrySection](/docs/references/brightscript/components/roregistrysection.md "roRegistrySection") | A Registry Section enables the organization of settings within the registry |
+| [roRegistrySection](doc:roregistrysection) | A Registry Section enables the organization of settings within the registry |
 
 
 ## Supported methods

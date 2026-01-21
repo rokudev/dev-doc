@@ -25,5 +25,5 @@ This webinar, presented on July 28th, 2025, highlighted the new product catalog 
 
 ## Related documentation
 
-- [Product Catalog 2.0 User's Guide](/docs/developer-program/roku-pay/quickstart/product-catalog.md)
-- [Catalog 2.0 API Integration Guide](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md)
+- [Product Catalog 2.0 User's Guide](doc:product-catalog)
+- [Catalog 2.0 API Integration Guide](doc:add-ons-integration)

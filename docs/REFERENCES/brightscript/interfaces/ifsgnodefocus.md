@@ -18,7 +18,7 @@ The ifSGNodeFocus interface is used to query and manipulate the remote control f
 
 | Name     | Description                                                                             |
 | -------- | --------------------------------------------------------------------------------------- |
-| [roSGNode](/docs/references/brightscript/components/rosgnode.md "roSGNode")  | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
+| [roSGNode](doc:rosgnode)  | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
 
 
 ## Supported methods

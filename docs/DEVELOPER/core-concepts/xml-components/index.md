@@ -28,14 +28,14 @@ created by either declaring it in another XML component file:
 ```
 
 Or using the `createObject()` function to create an
-[**roSGNode**](/docs/references/brightscript/components/rosgnode.md) object:
+[**roSGNode**](doc:rosgnode) object:
 
 ```
 createObject("roSGNode", "Gizmo")
 ```
 
 Each component XML file defines a top-level
-[**\<component\>**](/docs/references/scenegraph/xml-elements/component.md) XML element that may contain
-an **[\<interface\>](/docs/references/scenegraph/xml-elements/interface.md)** element, zero or more
-**[\<script\>](/docs/references/scenegraph/xml-elements/script.md)** elements, and zero or more
+[**\<component\>**](doc:component) XML element that may contain
+an **[\<interface\>](doc:interface)** element, zero or more
+**[\<script\>](doc:script)** elements, and zero or more
 elements defining child SceneGraph nodes.

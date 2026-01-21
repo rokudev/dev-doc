@@ -12,9 +12,9 @@ next:
 ---
 
 
-You can use the **Subscription recovery** page in the Developer Dashboard to enable Enhanced Subscription Recovery for your apps. The page lists the subscription recovery solution ([basic](/docs/developer-program/roku-pay/subscription-recovery/basic-recovery.md) or [enhanced](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md)) used for each public and beta app in your developer account and lets you enable the enhanced recovery solution.
+You can use the **Subscription recovery** page in the Developer Dashboard to enable Enhanced Subscription Recovery for your apps. The page lists the subscription recovery solution ([basic](doc:basic-recovery) or [enhanced](doc:subscription-on-hold)) used for each public and beta app in your developer account and lets you enable the enhanced recovery solution.
 
-> Read the [Enhanced Subscription Recovery documentation](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md) before enabling this feature for your apps. This integration requires you to update entitlements in your system based on the Roku Pay transaction data you pull from the [Roku Pay web services](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) and/or receive via [push notifications](/docs/developer-program/roku-pay/implementation/push-notifications.md).
+> Read the [Enhanced Subscription Recovery documentation](doc:subscription-on-hold) before enabling this feature for your apps. This integration requires you to update entitlements in your system based on the Roku Pay transaction data you pull from the [Roku Pay web services](doc:roku-web-service) and/or receive via [push notifications](doc:push-notifications).
 >
 > If this feature is not implemented correctly, customers will be unable to purchase a subscription for your app until the on-hold period has elapsed.
 
@@ -24,7 +24,7 @@ You can use the **Subscription recovery** page in the Developer Dashboard to ena
 
 To enable the enhanced recovery solution for a public or beta app, follow these steps:
 
-1. Verify that you have [completed the Enhanced Subscription Recovery integration](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md) and [published the updated version of your app](/docs/developer-program/publishing/channel-publishing-guide.md#updating-an-existing-channel).
+1. Verify that you have [completed the Enhanced Subscription Recovery integration](doc:subscription-on-hold) and [published the updated version of your app](doc:channel-publishing-guide).
 
 2. Under **Monetization** in the left sidebar, click **Subscription Recovery**.
 

@@ -64,9 +64,9 @@ resizing the images themselves.
 #### Use minimalistic item renderers
 
 The fewer elements, the better.
-Use [Rectangle](/docs/references/scenegraph/renderable-nodes/rectangle.md) nodes,
+Use [Rectangle](doc:rectangle) nodes,
 which do not require a bitmap loaded into memory,
-over [Poster](/docs/references/scenegraph/renderable-nodes/poster.md) nodes
+over [Poster](doc:poster) nodes
 whenever possible. Keep in mind that even bitmaps for elements like
 focus rings and keyboard backgrounds take up texture memory - so take
 care to not use unnecessarily large images for these.

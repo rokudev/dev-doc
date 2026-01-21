@@ -46,6 +46,6 @@ brush: plain; gutter: false; theme: Confluence
 
 ## Supported interfaces
 
-- [ifAppInfo](/docs/references/brightscript/interfaces/ifappinfo.md "ifAppInfo")
+- [ifAppInfo](doc:ifappinfo)
 
 

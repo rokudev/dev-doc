@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
-The **DynamicKeyGrid** node implements a grid of keys that are defined and organized in a [Key Definition File](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/key-definition-file.md). It is typically used in a subclass of the [DynamicKeyboardBase](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md) node (DynamicKeyboard, DynamicPinPad, and DynamicMiniKeyboard) to display the string of characters entered via text or voice entry. It may also be used as an individual node.
+The **DynamicKeyGrid** node implements a grid of keys that are defined and organized in a [Key Definition File](doc:key-definition-file). It is typically used in a subclass of the [DynamicKeyboardBase](doc:dynamic-keyboard-base) node (DynamicKeyboard, DynamicPinPad, and DynamicMiniKeyboard) to display the string of characters entered via text or voice entry. It may also be used as an individual node.
 
 ## Fields
 

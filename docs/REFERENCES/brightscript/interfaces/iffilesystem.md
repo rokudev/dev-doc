@@ -17,12 +17,12 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roFileSystem](/docs/references/brightscript/components/rofilesystem.md "roFile System") | The roFilesystem component implements common filesystem inspection and modification routines |
+| [roFileSystem](doc:rofilesystem) | The roFilesystem component implements common filesystem inspection and modification routines |
 
 
 ## Supported methods
 
-The format of file and directory pathnames is described on the [File System](/docs/developer-program/getting-started/architecture/file-system.md "File System") page.
+The format of file and directory pathnames is described on the [File System](doc:file-system) page.
 
 ### GetVolumeList() as Object
 
@@ -32,7 +32,7 @@ Returns the available volumes on the device.
 
 #### Return Value
 
-An [roList](/docs/references/brightscript/components/rolist.md "roList") containing strings representing the available volumes.
+An [roList](doc:rolist) containing strings representing the available volumes.
 
 ### GetDirectoryListing(dirPath as String) as Object
 
@@ -48,7 +48,7 @@ Returns the file names in the specified directory path.
 
 #### Return Value
 
-An [roList](/docs/references/brightscript/components/rolist.md "roList") of strings representing the directory listing of names in dirPath.
+An [roList](doc:rolist) of strings representing the directory listing of names in dirPath.
 
 ### Find(dirPath as String, regEx as String) as Object
 
@@ -65,7 +65,7 @@ Returns the file names in the specified directory path matching the provided reg
 
 #### Return Value
 
-An [roList](/docs/references/brightscript/components/rolist.md "roList") of Strings representing the directory listing of names in dirPath that match the regex.
+An [roList](doc:rolist) of Strings representing the directory listing of names in dirPath that match the regex.
 
 ### FindRecurse(dirPath as String, regEx as String) as Object
 
@@ -82,7 +82,7 @@ Returns the file names in the specified directory path and any sudirectories mat
 
 #### Return Value
 
-An [roList](/docs/references/brightscript/components/rolist.md "roList") of Strings representing the directory listing of names in dirPath that match the regex. Each item in the list is the name of the file relative to dirPath.
+An [roList](doc:rolist) of Strings representing the directory listing of names in dirPath that match the regex. Each item in the list is the name of the file relative to dirPath.
 
 ### Match(path as String, pattern as String) as Object
 
@@ -99,7 +99,7 @@ Returns the file names in the specified directory path matching the provided she
 
 #### Return Value
 
-An [roList](/docs/references/brightscript/components/rolist.md "roList") of Strings representing the directory listing of names in dirPath that match the shell-like pattern.
+An [roList](doc:rolist) of Strings representing the directory listing of names in dirPath that match the shell-like pattern.
 
 ### Exists(path as String) as Boolean
 
@@ -131,7 +131,7 @@ Returns the keys in the specified directory path.
 
 #### Return Value
 
-An [roAssociativeArray](/docs/references/brightscript/components/roassociativearray.md "roAssociativeArray") containing the following key-value pairs for the specified path:
+An [roAssociativeArray](doc:roassociativearray) containing the following key-value pairs for the specified path:
 
 
 <table>

@@ -59,8 +59,8 @@ without regard to their absolute pixel coordinates. Instead, each node
 can be have a layout relative to its local coordinate system, with its
 absolute on-screen position, size and orientation determined by the
 accumulated transformation matrix. For example, in a
-[PanelSet](/docs/references/scenegraph/sliding-panels-nodes/panelset.md) node screen, each
-[Panel](/docs/references/scenegraph/sliding-panels-nodes/panel.md) node has a local origin of (0,0) at the
+[PanelSet](doc:panelset) node screen, each
+[Panel](doc:panel) node has a local origin of (0,0) at the
 top/left corner of the panel.
 The PanelSet node is the
 parent of each Panel node in

@@ -23,15 +23,15 @@ Publishers can review this basic pre-publishing checklist provided to help ensur
 
 #### Regional compliance
 
-- [Localize](/docs/developer-program/core-concepts/localization.md) the language of all relevant textual or graphic elements to the predominating language in the territory.
+- [Localize](doc:localization) the language of all relevant textual or graphic elements to the predominating language in the territory.
 - Implement any required content geo-restrictions.
-- Review and comply with [local legal regulations](/docs/features/legal/compliance.md), such as any relevant laws pertaining to data privacy or restricting targeted advertisements to children. Note, this is not intended to be a comprehensive list of applicable laws and regulations applicable in each new territory.
-- Apply [local content ratings](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes) to the content metadata.
-- Ensure any [video advertisements](/docs/developer-program/advertising/integrating-roku-advertising-framework.md) running within the app are relevant to the audience.
-- Ensure any [subscription pricing models](/docs/developer-program/roku-pay/quickstart/in-channel-products.md) have been adjusted for the territory.
+- Review and comply with [local legal regulations](doc:compliance), such as any relevant laws pertaining to data privacy or restricting targeted advertisements to children. Note, this is not intended to be a comprehensive list of applicable laws and regulations applicable in each new territory.
+- Apply [local content ratings](doc:content-metadata) to the content metadata.
+- Ensure any [video advertisements](doc:integrating-roku-advertising-framework) running within the app are relevant to the audience.
+- Ensure any [subscription pricing models](doc:in-channel-products) have been adjusted for the territory.
 
 #### Discovery and support
 
-- [Enable the app for inclusion in Roku Search](/docs/specs/search/search-feed.md#multiregion-and-multilanguage-support) in the region, if applicable. This may include providing a dedicated feed for content available in the region or localizing the metadata to the relevant language.
+- [Enable the app for inclusion in Roku Search](doc:search-feed) in the region, if applicable. This may include providing a dedicated feed for content available in the region or localizing the metadata to the relevant language.
 - Establish local customer support apps and ensure this information is easily accessible to the end-user.
 - If applicable, coordinate local PR and marketing efforts with Roku to drive awareness of the app launch in the territory.

@@ -51,7 +51,7 @@ The following example demonstrates the types of metadata included in the feed fo
 
 ## Configuring the content feed
 
-To create the content feed, you first want to determine which metadata you want to surface to users. Consider which metadata items are the most important for users to find and select content in your app. You should also review the [Content Metadata documentation](/docs/developer-program/getting-started/architecture/content-metadata.md) for the descriptive, playback, and DRM fields you might want to include. Use your analysis to create a template with the selected metadata fields.
+To create the content feed, you first want to determine which metadata you want to surface to users. Consider which metadata items are the most important for users to find and select content in your app. You should also review the [Content Metadata documentation](doc:content-metadata) for the descriptive, playback, and DRM fields you might want to include. Use your analysis to create a template with the selected metadata fields.
 
 ## Hosting the content feed
 

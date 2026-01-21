@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [Group](/docs/references/scenegraph/layout-group-nodes/group.md)
+Extends [Group](doc:group)
 
-The **StdDlgAreaBase** node is the base class and provides the common functionality for the three StandardDialog area nodes: [**StdDlgTitleArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-title-area.md), [**StdDlgContentArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-content-area.md) and [**StdDlgButtonArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md). 
+The **StdDlgAreaBase** node is the base class and provides the common functionality for the three StandardDialog area nodes: [**StdDlgTitleArea**](doc:std-dlg-title-area), [**StdDlgContentArea**](doc:std-dlg-content-area) and [**StdDlgButtonArea**](doc:std-dlg-button-area). 
 
 ## Fields
 

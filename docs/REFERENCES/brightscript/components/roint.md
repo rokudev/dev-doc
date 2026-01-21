@@ -46,6 +46,6 @@ BrightScript> print o-55
 
 ## Supported interfaces
 
-- [ifInt](/docs/references/brightscript/interfaces/ifint.md "ifInt")
-- [ifIntOps](/docs/references/brightscript/interfaces/ifintops.md "ifIntOps")
-- [ifToStr](/docs/references/brightscript/interfaces/iftostr.md "ifToStr")
+- [ifInt](doc:ifint)
+- [ifIntOps](doc:ifintops)
+- [ifToStr](doc:iftostr)

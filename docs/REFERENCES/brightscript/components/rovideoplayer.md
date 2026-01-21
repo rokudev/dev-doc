@@ -20,12 +20,12 @@ This object is created with no parameters:
 
 ## Supported interfaces
 
-- [ifVideoPlayer](/docs/references/brightscript/interfaces/ifvideoplayer.md "ifVideoPlayer")                 
-- [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md "ifHttpAgent")                    
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")               
-- [ifGetMessagePort](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort")               
+- [ifVideoPlayer](doc:ifvideoplayer)                 
+- [ifHttpAgent](doc:ifhttpagent)                    
+- [ifSetMessagePort](doc:ifsetmessageport)               
+- [ifGetMessagePort](doc:ifgetmessageport)               
 
 
 ## Supported events
 
-- [roVideoPlayerEvent](/docs/references/brightscript/events/rovideoplayerevent.md "roVideoPlayerEvent")              
+- [roVideoPlayerEvent](doc:rovideoplayerevent)              

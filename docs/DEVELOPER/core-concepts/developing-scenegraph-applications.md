@@ -95,7 +95,7 @@ to the files should use `pkg:` resource prefix, such as
 `pkg:/images/splash_sd.jpg`. More information about the requirements and
 recommendations for the graphics files included in the application
 package can be found in [Set up the images
-directory](/docs/developer-program/core-concepts/developing-scenegraph-applications.md#set-up-the-images-directory).
+directory](doc:developing-scenegraph-applications).
 
 The following is an example of a `manifest`
 file.
@@ -142,7 +142,7 @@ creating and showing the scene defined in the SceneGraph scene named
 `rectangleScene` (the `rectangleScene` scene is defined in an XML
 component file in the `components` directory as described in [Set up
 the components
-directory](/docs/developer-program/core-concepts/developing-scenegraph-applications.md#set-up-the-components-directory)).
+directory](doc:developing-scenegraph-applications)).
 
 **Example main.brs file**
 
@@ -245,10 +245,10 @@ Complete information on creating XML component files and associated
 BrightScript code for your SceneGraph application can be found in:
 
   - [SceneGraph core
-    concepts](/docs/developer-program/core-concepts/core-concepts.md)
+    concepts](doc:core-concepts)
   - [SceneGraph Samples](https://github.com/rokudev/samples/tree/master/ux%20components)
   - [SceneGraph API
-    reference](/docs/references/scenegraph/component-functions/init.md)
+    reference](doc:init)
 
 ## Set up the images directory
 
@@ -256,7 +256,7 @@ Any graphic image files to be included in the application package itself
 should be copied into the `images` directory. As a minimum, the `images`
 directory *must* contain the application selection and splash screen
 graphic files described in [Create or modify a manifest
-file](/docs/developer-program/core-concepts/developing-scenegraph-applications.md#create-or-modify-a-manifest-file)
+file](doc:developing-scenegraph-applications)
 above. Other graphic files used in the application that will not be
 downloaded from your server should also be copied into the `images`
 directory.

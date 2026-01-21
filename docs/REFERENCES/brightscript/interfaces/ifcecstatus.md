@@ -16,7 +16,7 @@ next:
 
 | Name                                                         | Description                                        |
 | ------------------------------------------------------------ | -------------------------------------------------- |
-| [roCECStatus](/docs/references/brightscript/components/rocecstatus.md "roCECStatus") | Identifies the active source status for set boxes. |
+| [roCECStatus](doc:rocecstatus) | Identifies the active source status for set boxes. |
 
 
 ## Supported methods

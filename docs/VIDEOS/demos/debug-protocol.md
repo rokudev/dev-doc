@@ -20,4 +20,4 @@ This video demonstrates the [Roku Remote Debugger](https://github.com/rokudev/re
 
 ## Related documentation
 
-[BrightScript debug protocol](/docs/developer-program/debugging/socket-based-debugger.md)
+[BrightScript debug protocol](doc:socket-based-debugger)

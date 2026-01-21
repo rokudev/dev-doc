@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 The FloatFieldInterpolator node class specifies a keyframe animation sequence to be applied to a floating point field of a node (such as, an opacity, width or height value.)
 

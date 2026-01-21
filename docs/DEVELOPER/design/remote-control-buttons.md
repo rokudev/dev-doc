@@ -46,7 +46,7 @@ Conventional uses of the Roku remote's buttons:
      - dPad up/down: Some apps with playlists use up/down key to
        navigate to the previous or the next video.
 
-       See [Trick Mode](/docs/developer-program/media-playback/trick-mode/trick-mode.md) for more information.
+       See [Trick Mode](doc:trick-mode) for more information.
 
 - **During music playback**:
 

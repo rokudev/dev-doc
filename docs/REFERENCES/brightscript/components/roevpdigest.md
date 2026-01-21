@@ -56,4 +56,4 @@ print result
 
 ## Supported interfaces
 
-- [ifEVPDigest](/docs/references/brightscript/interfaces/ifevpdigest.md "ifEVPDigest")
+- [ifEVPDigest](doc:ifevpdigest)

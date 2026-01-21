@@ -51,42 +51,42 @@ and ifGetMessagePort.
 
 **For each**  
 The for-each statement works on any object that has an
-[ifEnum](/docs/references/brightscript/interfaces/ifenum.md) interface. These include: Array,
+[ifEnum](doc:ifenum) interface. These include: Array,
 Associative Array, List, ByteArray, and MessagePort.
 
 **Print**  
 If the expression being printed evaluates to an object that has an
-[ifEnum](/docs/references/brightscript/interfaces/ifenum.md) interface, print will print every item
+[ifEnum](doc:ifenum) interface, print will print every item
 that can be enumerated.  
 In addition to printing the values of intrinsic types, PRINT will also
 print any object that exposes one of these interfaces:
-[ifString](/docs/references/brightscript/interfaces/ifstring.md), [ifInt](/docs/references/brightscript/interfaces/ifint.md),
-[ifFloat](/docs/references/brightscript/interfaces/iffloat.md).
+[ifString](doc:ifstring), [ifInt](doc:ifint),
+[ifFloat](doc:iffloat).
 
 **Wait**  
 The wait function will work on any object that has an
-[ifMessagePort](/docs/references/brightscript/interfaces/ifmessageport.md) interface.
+[ifMessagePort](doc:ifmessageport) interface.
 
 **Array operator –"\[\]"**  
 The array operator works on any object that has an
-[ifArrayGet](/docs/references/brightscript/interfaces/ifarrayget.md) or
-[ifArraySet](/docs/references/brightscript/interfaces/ifarrayset.md) interface. This includes Array,
+[ifArrayGet](doc:ifarrayget) or
+[ifArraySet](doc:ifarrayset) interface. This includes Array,
 AssociativeArray, ByteArray, and Lists.
 
 **Member access operator "."**  
 The "." Operator works on any object that has an
-[ifAssociativeArray](/docs/references/brightscript/interfaces/ifassociativearray.md) interface (as well
+[ifAssociativeArray](doc:ifassociativearray) interface (as well
 as on any BrightScript Component (when calling a member function)). It
 also has special meaning when used on
-[roXMLElement](/docs/references/brightscript/components/roxmlelement.md) or
-[roXMLList](/docs/references/brightscript/components/roxmllist.md).
+[roXMLElement](doc:roxmlelement) or
+[roXMLList](doc:roxmllist).
 
 **Expression parsing**  
 Any expression that is expecting an Integer, Float, Double, Boolean or
-String, can take an object with the [ifInt](/docs/references/brightscript/interfaces/ifint.md),
-[ifFloat](/docs/references/brightscript/interfaces/iffloat.md), [ifDouble](/docs/references/brightscript/interfaces/ifdouble.md),
-[ifBoolean](/docs/references/brightscript/interfaces/ifboolean.md), or
-[ifString](/docs/references/brightscript/interfaces/ifstring.md) interface.
+String, can take an object with the [ifInt](doc:ifint),
+[ifFloat](doc:iffloat), [ifDouble](doc:ifdouble),
+[ifBoolean](doc:ifboolean), or
+[ifString](doc:ifstring) interface.
 
 ## Intrinsic types and object types
 
@@ -387,7 +387,7 @@ End Function
 
 #### Parsing colons in namespace element and attribute tags
 
-For elements and attributes with namespaces, you can use the [roXMLElement interface](/docs/references/brightscript/interfaces/ifxmlelement.md#getattributes-as-object) to parse the colons in their tags. Consider the following XML:
+For elements and attributes with namespaces, you can use the [roXMLElement interface](doc:ifxmlelement) to parse the colons in their tags. Consider the following XML:
 
 ```
 <media:thumbnail xmlns:media='http://something.something.com/mrss/' url='http://blahblablah.com' width='72' height='72' />
@@ -480,10 +480,10 @@ BrightScript uses the following scoping rules:
     hard-coded global variable "global" that is an interface to the
     global BrightScript Component. The global component contains all
     global library functions. There is also a global context that can be
-    accessed via the [GetGlobalAA()](/docs/references/brightscript/language/runtime-functions.md#getglobalaa-as-object). If in function scope and that function is not a method in an
+    accessed via the [GetGlobalAA()](doc:runtime-functions). If in function scope and that function is not a method in an
     object, "m." also references the global associative array accessed
     with
-    [GetGlobalAA()](/docs/references/brightscript/language/runtime-functions.md#getglobalaa-as-object).
+    [GetGlobalAA()](doc:runtime-functions).
   - Functions declared with the FUNCTION statement are at global scope,
     unless they are anonymous, in which case they are local scope.
   - Local variables exist with function Scope. If a function calls
@@ -561,7 +561,7 @@ set: <bsTypedValue: Function\>
 
 In addition to the platform BrightScript components discussed in [Brief
 summary of BrightScript
-Components](/docs/references/brightscript/language/component-architecture.md#brief-summary-of-brightscript-components),
+Components](doc:component-architecture),
 BrightScript enables platform BrightScript libraries to be used in your
 scripts.  
 BrightScript libraries are .brs files that are provided by the platform

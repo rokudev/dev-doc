@@ -16,7 +16,7 @@ next:
 
 | Name            | Description                                                                                                            |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| [roSocketAddress](/docs/references/brightscript/components/rosocketaddress.md "roSocketAddress") | The roSocketAddress is used by the roStreamSocket and roDataGramSocket components for TCP and UDP traffic respectively |
+| [roSocketAddress](doc:rosocketaddress) | The roSocketAddress is used by the roStreamSocket and roDataGramSocket components for TCP and UDP traffic respectively |
 
 
 ## Supported methods
@@ -73,7 +73,7 @@ The hostname.
 
 ### SetPort(port as Integer) as Boolean
 
-> This function is deprecated and should not be used. Use the [setMessagePort()](/docs/references/brightscript/interfaces/ifsetmessageport.md#setmessageportport-as-object--as-void) function instead.
+> This function is deprecated and should not be used. Use the [setMessagePort()](doc:ifsetmessageport) function instead.
 
 #### Description
 

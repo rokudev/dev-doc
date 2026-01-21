@@ -24,15 +24,15 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
+Extends [**Group**](doc:group)
 
 The Poster node class draws an image with the top/left corner located at the origin of the node local coordinate system. Because the Poster node class extends the Group node class, a Poster node can have child nodes. For example, a Poster node might have a Label node as a child that draws an annotation on top of the poster.
 
-The Poster node class supports JPEG, PNG and (since Roku OS 9.4) [WebP](https://developers.google.com/speed/webp/) image files. Please observe [Special WebP considerations](/docs/specs/media/streaming-specifications.md#special-webp-considerations) when using the latter.
+The Poster node class supports JPEG, PNG and (since Roku OS 9.4) [WebP](https://developers.google.com/speed/webp/) image files. Please observe [Special WebP considerations](doc:streaming-specifications) when using the latter.
 
 The Poster node class includes the capability to automatically scale graphical images to different sizes as they are loaded, by setting the loadWidth and loadHeight field values. After the graphical images are loaded, the images can be scaled to fit within the target screen element area specified by the width and height field values. To use this capability, select the scaling option you want as the value of the loadDisplayMode field.
 
-See SceneGraph's [Texture Memory](/docs/developer-program/performance-guide/memory-management.md#texture-memory "Texture Memory") feature for more information.
+See SceneGraph's [Texture Memory](doc:memory-management) feature for more information.
 
 > In order for the load scaling options to work, the option fields must be set in XML markup before the uri field
 
@@ -90,7 +90,7 @@ Rotation of Posters is supported. On platforms that do not support OpenGL, only 
 
 ## Fields
 
-[Fields](/docs/references/scenegraph/layout-group-nodes/group.md#fields "Fields")  derived from the Group base class can also be used.
+[Fields](doc:group)  derived from the Group base class can also be used.
 
 
 <table>

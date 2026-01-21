@@ -14,7 +14,7 @@ next:
 
 Allows initialization and other scripted control of a SceneGraph XML component.
 
-If the \<script\> element contains the definition of a function named init() that has no parameters, that function will be invoked after the XML file has been parsed, and the nodes contained in the file have been created and had their fields set to the values in the XML. Typical uses of the init() function are to cache roSGNode values in the script global variable that will be frequently used in other functions in the script, and to set up field observers that will call other BrightScript functions when the observed field changes value. See [Component initialization order](/docs/developer-program/core-concepts/xml-components/component-initialization-order.md) for complete information on the initialization order for components defined in XML, and the implications of that initialization order for field settings and observer functions.
+If the \<script\> element contains the definition of a function named init() that has no parameters, that function will be invoked after the XML file has been parsed, and the nodes contained in the file have been created and had their fields set to the values in the XML. Typical uses of the init() function are to cache roSGNode values in the script global variable that will be frequently used in other functions in the script, and to set up field observers that will call other BrightScript functions when the observed field changes value. See [Component initialization order](doc:component-initialization-order) for complete information on the initialization order for components defined in XML, and the implications of that initialization order for field settings and observer functions.
 
 #### Syntax
 

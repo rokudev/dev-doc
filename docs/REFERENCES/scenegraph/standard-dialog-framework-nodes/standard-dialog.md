@@ -14,7 +14,7 @@ next:
 
 
 
-Extends [Group](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [Group](doc:group)
 
 The **StandardDialog** node is the base for Roku's pre-built standard message, keyboard, pinpad, and progress dialogs. It can also be used directly with a custom dialog structure built with the **StdDialogItem** nodes.
 

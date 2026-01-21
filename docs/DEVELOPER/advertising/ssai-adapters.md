@@ -14,13 +14,13 @@ next:
 
 ## Overview
 
-The Roku Ad Framework (RAF) is responsible for a consistent ad experience across the Roku platform. For apps that implement ads using server-side ad insertion (SSAI), this can prove challenging due to the various steps involved. To simplify this process, developers can leverage the Roku-approved approaches via the adapter samples provided by Roku [below](/docs/developer-program/advertising/ssai-adapters.md#rafx-ssai-adapter-samples).
+The Roku Ad Framework (RAF) is responsible for a consistent ad experience across the Roku platform. For apps that implement ads using server-side ad insertion (SSAI), this can prove challenging due to the various steps involved. To simplify this process, developers can leverage the Roku-approved approaches via the adapter samples provided by Roku [below](doc:ssai-adapters).
 
-> Before using the adapters, please refer to [Requirements for Server Side Ad Insertion](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#requirements-for-server-side-ad-insertion).
+> Before using the adapters, please refer to [Requirements for Server Side Ad Insertion](doc:integrating-roku-advertising-framework).
 
 ## Roku Ad Framework requirements
 
-All apps including video advertisements are required to meet [Roku's certification requirements for RAF](/docs/developer-program/certification/certification.md). Notably, the app must always use client-side firing (all SSAI providers support client-side firing) through RAF.
+All apps including video advertisements are required to meet [Roku's certification requirements for RAF](doc:certification). Notably, the app must always use client-side firing (all SSAI providers support client-side firing) through RAF.
 
 The Roku adapters provide two options:
 
@@ -29,7 +29,7 @@ The Roku adapters provide two options:
 
 It is encouraged that the developer uses the first option, but with either option, the metrics must be fired using RAF APIs.
 
-The APIs used are different depending on the approach, but audience measurement is always required to be dispatched client side at Roku. We recommend apps [adopt the comScore VCE-inclusive audience measurement API](/docs/developer-program/advertising/raf-api.md#general-audience-measurement).
+The APIs used are different depending on the approach, but audience measurement is always required to be dispatched client side at Roku. We recommend apps [adopt the comScore VCE-inclusive audience measurement API](doc:raf-api).
 
 ## RAFX SSAI Adapters
 
@@ -55,7 +55,7 @@ To playback an SSAI stream, the developer would typically follow these steps:
 
 These are the high level instructions on how to playback server-side ads content using the adapters:
 
-> For detailed working instructions, refer to the adapter samples [below](/docs/developer-program/advertising/ssai-adapters.md#rafx-ssai-adapter-samples).
+> For detailed working instructions, refer to the adapter samples [below](doc:ssai-adapters).
 
 ### 1. Loading the adapter
 
@@ -187,7 +187,7 @@ end function
 
 When you are ready to start playback, you need to configure RAF by enabling ad measurements:
 
-Note: It is recommended to use [enableAdMeasurements](/docs/developer-program/advertising/raf-api.md#general-audience-measurement).
+Note: It is recommended to use [enableAdMeasurements](doc:raf-api).
 
 ~~~~
 
@@ -245,7 +245,7 @@ For apps playing SSAI streams, it is required to call RAF APIs using the guideli
 It is required for apps to call the following every time the content is played back in the Task:
 
 Enable ad measurement: **enableAdMeasurements**(true)
-Set content/app info: [setContentGenre()](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean), [setContentId()](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean), and [setContentLength()](/docs/developer-program/advertising/raf-api.md#setcontentlengthlength-as-integer).
+Set content/app info: [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api).
 
 When the useStitched:true, the adapter itself will:
 

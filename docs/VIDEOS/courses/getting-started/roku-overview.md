@@ -36,9 +36,9 @@ The video concludes by highlighting the key differences between Roku development
 
 [Roku Streaming Store](https://channelstore.roku.com/)
 
-[SceneGraph core concepts](/docs/developer-program/core-concepts/core-concepts.md)  
+[SceneGraph core concepts](doc:core-concepts)  
 
-[BrightScript language reference](/docs/references/brightscript/language/brightscript-language-reference.md)
+[BrightScript language reference](doc:brightscript-language-reference)
 
 ## How to watch
 

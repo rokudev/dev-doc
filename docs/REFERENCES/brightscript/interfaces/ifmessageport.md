@@ -17,7 +17,7 @@ next:
 
 | Name          | Description                               |
 | ------------- | ----------------------------------------- |
-| [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") | A Message Port is the place messages (events) are sent |
+| [roMessagePort](doc:romessageport) | A Message Port is the place messages (events) are sent |
 
 
 ## Supported methods

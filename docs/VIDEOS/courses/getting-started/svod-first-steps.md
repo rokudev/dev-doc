@@ -17,13 +17,13 @@ next:
 
 ## About this video
 
-This video explains the first steps for [monetizing content](/docs/features/monetization/monetization-overview.md) on the Roku streaming platform with a subscription app. It is intended for publishers and content owners who are new to Roku and are ready to distribute their content to Roku's global audience of over 50 million active user accounts.
+This video explains the first steps for [monetizing content](doc:monetization-overview) on the Roku streaming platform with a subscription app. It is intended for publishers and content owners who are new to Roku and are ready to distribute their content to Roku's global audience of over 50 million active user accounts.
 
-The video answers basic questions for new publishers, such as "what is streaming?", "who is Roku?", and "what are apps?", and it explains how integrating [Roku Pay](/docs/features/monetization/billing.md) enables publishers to collect customer payments.
+The video answers basic questions for new publishers, such as "what is streaming?", "who is Roku?", and "what are apps?", and it explains how integrating [Roku Pay](doc:billing) enables publishers to collect customer payments.
 
-It then guides new publishers through the required initial setup steps for creating a subscription app, which includes [getting a Roku device](https://www.roku.com/products/), [creating a Roku customer account](https://my.roku.com/signup), and [enrolling in the Roku developer program](https://developer.roku.com/enrollment/standard) and [enrolling in the Roku Partner Payouts program](/docs/developer-program/roku-pay/quickstart/partner-payouts.md). See [Next steps](#next-steps) for links to completing these requirements.
+It then guides new publishers through the required initial setup steps for creating a subscription app, which includes [getting a Roku device](https://www.roku.com/products/), [creating a Roku customer account](https://my.roku.com/signup), and [enrolling in the Roku developer program](https://developer.roku.com/enrollment/standard) and [enrolling in the Roku Partner Payouts program](doc:partner-payouts). See [Next steps](#next-steps) for links to completing these requirements.
 
-After watching this video, publishers can complete the initial requirements and then begin developing their subscription app with the [Roku SDK](/docs/developer-program/getting-started/roku-dev-prog.md). The [Resources](#resources) section includes links to the Roku documentation, Roku developer tools, online video course, master sample app, and other useful material to help publishers get started.
+After watching this video, publishers can complete the initial requirements and then begin developing their subscription app with the [Roku SDK](doc:roku-dev-prog). The [Resources](#resources) section includes links to the Roku documentation, Roku developer tools, online video course, master sample app, and other useful material to help publishers get started.
 
 ## Next steps
 
@@ -71,9 +71,9 @@ After watching this video, publishers can complete the initial requirements and 
 
 ## Resources
 
-[Roku Developer docs](/docs/features/features-overview.md)
+[Roku Developer docs](doc:features-overview)
 
-[Roku Developers online video course](/videos/courses/rsg/overview.md)
+[Roku Developers online video course](doc:overview)
 
 [Roku Developers master sample channel](https://github.com/rokudev/scenegraph-master-sample)
 
@@ -85,17 +85,17 @@ After watching this video, publishers can complete the initial requirements and 
 
 [Roku Developer dashboard](https://developer.roku.com/developer)
 
-[Roku third-party development partners](/docs/developer-program/third-party-devs.md)
+[Roku third-party development partners](doc:third-party-devs)
 
 ## Related documentation
 
-[Roku Pay overview](/docs/features/monetization/billing.md)
+[Roku Pay overview](doc:billing)
 
-[SceneGraph core concepts](/docs/developer-program/core-concepts/core-concepts.md)  
+[SceneGraph core concepts](doc:core-concepts)  
 
-[BrightScript language reference](/docs/references/brightscript/language/brightscript-language-reference.md)
+[BrightScript language reference](doc:brightscript-language-reference)
 
-[Roku hardware specification](/docs/specs/hardware.md)
+[Roku hardware specification](doc:hardware)
 
 [Roku Streaming Store](https://channelstore.roku.com/)
 

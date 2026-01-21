@@ -20,9 +20,9 @@ This video highlights the streamlined purchasing experience provided by Roku Pay
 
 ## Related documentation
 
-[Roku Pay](/docs/features/monetization/billing.md)
+[Roku Pay](doc:billing)
 
-[How Roku Pay works](/docs/developer-program/roku-pay/how-roku-pay-works.md)
+[How Roku Pay works](doc:how-roku-pay-works)
 
-[Implementing Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md)
+[Implementing Roku Pay](doc:overview)
 

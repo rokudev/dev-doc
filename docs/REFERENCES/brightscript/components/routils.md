@@ -20,4 +20,4 @@ The **roUtils** component provides a unique namespace for a library of global fu
 
 ## Supported interfaces
 
-- [ifUtils](/docs/references/brightscript/interfaces/ifutils.md "ifUtils")
+- [ifUtils](doc:ifutils)

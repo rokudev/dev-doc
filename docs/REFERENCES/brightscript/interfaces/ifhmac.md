@@ -16,7 +16,7 @@ next:
 
 | Name      | Description                               |
 | --------- | ----------------------------------------- |
-| [roHMAC](/docs/references/brightscript/components/rohmac.md "roHMAC")    | The HMAC component provides an interface to the OpenSSL HMAC functions |
+| [roHMAC](doc:rohmac)    | The HMAC component provides an interface to the OpenSSL HMAC functions |
 
 
 ## Supported methods
@@ -31,7 +31,7 @@ Initializes new HMAC context.
 
 | Name       | Type   | Description                                                  |
 | ---------- | ------ | ------------------------------------------------------------ |
-| digestType | String | Selects one of the supported digest algorithms, as documented in [roEVPDigest](/docs/references/brightscript/components/roevpdigest.md "roEVPDigest"). |
+| digestType | String | Selects one of the supported digest algorithms, as documented in [roEVPDigest](doc:roevpdigest). |
 | key        | Object | An roByteArray containing the key for the MAC.               |
 
 #### Return Value
@@ -64,11 +64,11 @@ mac = hmac.Final()
 
 | Name    | Type   | Description                                                  |
 | ------- | ------ | ------------------------------------------------------------ |
-| message | Object | An [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") with the data to be digested. |
+| message | Object | An [roByteArray](doc:robytearray) with the data to be digested. |
 
 #### Return Value
 
-An [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") containing the generated MAC.
+An [roByteArray](doc:robytearray) containing the generated MAC.
 
 ### Update(partialMesssage as Object) as Void
 
@@ -80,13 +80,13 @@ Adds more data to be digested. The data in the array is added to the current dig
 
 | Name            | Type   | Description                                                  |
 | --------------- | ------ | ------------------------------------------------------------ |
-| partialMesssage | Object | An [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") with the additional data to be digested. |
+| partialMesssage | Object | An [roByteArray](doc:robytearray) with the additional data to be digested. |
 
 ### Final() as Object
 
 #### Description
 
-Returns an [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") containing the final MAC.
+Returns an [roByteArray](doc:robytearray) containing the final MAC.
 
 #### Return Value
 

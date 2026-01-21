@@ -19,7 +19,7 @@ next:
 
 | Name      | Description                                  |
 | --------- | -------------------------------------------- |
-| [roInt](/docs/references/brightscript/components/roint.md "roInt")     | Object equivalent for intrinsic type Integer |
+| [roInt](doc:roint)     | Object equivalent for intrinsic type Integer |
 
 ## Supported methods
 

@@ -12,11 +12,11 @@ next:
 ---
 
 
-> Roku OS 10.0 introduced a new [StandardProgressDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-progress-dialog.md "**Standard Progress Dialog**"), which features updated graphics and color palette support. This enables developers to provide a consistent user experience across the progress dialogs in their app. Developers should replace the legacy ProgressDialog nodes in their app with the new [StandardProgressDialog nodes](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-progress-dialog.md "**Standard Progress Dialog**"). 
+> Roku OS 10.0 introduced a new [StandardProgressDialog node](doc:standard-progress-dialog), which features updated graphics and color palette support. This enables developers to provide a consistent user experience across the progress dialogs in their app. Developers should replace the legacy ProgressDialog nodes in their app with the new [StandardProgressDialog nodes](doc:standard-progress-dialog). 
 >
 > To upgrade a legacy progress dialog to the standard version, prepend "Standard" to the node type. For example, change `      progressdialog = createObject("roSGNode", "ProgressDialog")` to `      progressdialog = createObject("roSGNode", "StandardProgressDialog")`.
 
-Extends [**Dialog**](/docs/references/scenegraph/dialog-nodes/dialog.md "**Dialog**")
+Extends [**Dialog**](doc:dialog)
 
 The ProgressDialog node class is a special type of Dialog node that includes the dialog title region and a spinning icon as the body of the dialog. The ProgressDialog node class uses a BusySpinner node to display the spinning icon.
 

@@ -24,15 +24,15 @@ With voice controls, your app can respond to:
 
 - [Additional enhanced commands](#additional-enhanced-voice-controls) such as "what's playing" to display the title of the content currently in playback (referred to as "nowplaying"), "skip intro"/"skip recap" to skip the current section being played (referred to as "skip"), "shuffle" to randomly select content in a playlist, "loop" to repeat the content in a playlist, and "like"/"dislike" to rate content.
 
-> Implementing the [basic](#basic-voice-controls), [enhanced](#enhanced-voice-controls), and [additional enhanced](#additional-enhanced-voice-controls)  voice controls is required for apps that have streamed more than an average of 5 million hours per month over the last three months to pass [certification](/docs/developer-program/certification/certification.md#4-channel-operation) (it is also required for new apps expected to reach this threshold shortly after launch).
+> Implementing the [basic](#basic-voice-controls), [enhanced](#enhanced-voice-controls), and [additional enhanced](#additional-enhanced-voice-controls)  voice controls is required for apps that have streamed more than an average of 5 million hours per month over the last three months to pass [certification](doc:certification) (it is also required for new apps expected to reach this threshold shortly after launch).
 
 By default, the Roku OS handles supports for the basic commands. However, apps must still implement [error handling](#error-handling) for any unsupported basic commands.
 
-In order for your app to support the enhanced voice controls, which include "seek", "start over", and "next", you must update the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) and implement the [roInput](/docs/references/brightscript/components/roinput.md) object to listen for and handle voice commands.
+In order for your app to support the enhanced voice controls, which include "seek", "start over", and "next", you must update the [manifest](doc:channel-manifest) and implement the [roInput](doc:roinput) object to listen for and handle voice commands.
 
 ## Updating the manifest
 
-To support the voice controls, add the following flags in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md):
+To support the voice controls, add the following flags in the [manifest](doc:channel-manifest):
 
 | Feature                                                      | Manifest Entry           |
 | ------------------------------------------------------------ | ------------------------ |
@@ -45,10 +45,10 @@ If you do not enable the **supports_etc_seek** and **supports_etc_next** manifes
 ## Handling voice commands
 
 To handle voice commands in your app, your application needs to use
-the [**roInput**](/docs/references/brightscript/components/roinput.md) object to listen for transport control events and process them. To do this, follow
+the [**roInput**](doc:roinput) object to listen for transport control events and process them. To do this, follow
 these steps:
 
-1.  Create an **roInput** object, and set the [**roMessagePort**](/docs/references/brightscript/components/romessageport.md) for receiving events.
+1.  Create an **roInput** object, and set the [**roMessagePort**](doc:romessageport) for receiving events.
 
         input = CreateObject("roInput")
         port = CreateObject("roMessagePort")
@@ -63,15 +63,15 @@ these steps:
 
 3.  Use a message loop to listen for the voice commands. In the message loop, do the following:
 
-   a.  Use the [**roInputEvent.GetInfo()**](/docs/references/brightscript/events/roinputevent.md#getinfo-as-object) method to check for voice control commands sent to your app. This method returns an AssociativeArray with the following fields: **type**, **id, command**.
+   a.  Use the [**roInputEvent.GetInfo()**](doc:roinputevent) method to check for voice control commands sent to your app. This method returns an AssociativeArray with the following fields: **type**, **id, command**.
 
     - You can use the **type** key to verify that the event received is a voice command (transport event), and the **command** key to identify the specific command.
 
     - For the "seek" command, the AssociativeArray will contain two additional fields: **direction** and **duration**. The **direction** field indicates whether the seek command is for skipping "forward" or "backward"; the **duration** field specifies how many seconds to skip forward or backward.
 
-    - Seek functionality can also be implemented via trickplay using the [**Video.seek**](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) field. In this case, the app must implement the [Roku Advertising Framework](/docs/developer-program/advertising/roku-advertising-framework.md) (or not include ads). The seek voice control attribute must also be enabled in the [Roku manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) (**supports_etc_seek=1**).
+    - Seek functionality can also be implemented via trickplay using the [**Video.seek**](doc:video) field. In this case, the app must implement the [Roku Advertising Framework](doc:roku-advertising-framework) (or not include ads). The seek voice control attribute must also be enabled in the [Roku manifest](doc:channel-manifest) (**supports_etc_seek=1**).
 
-   b.  Call the [**roInput.EventResponse()**](/docs/references/brightscript/interfaces/ifinput.md#eventresponseroassociativearray-aa-as-boolean) method to indicate that you have handled the voice command.
+   b.  Call the [**roInput.EventResponse()**](doc:ifinput) method to indicate that you have handled the voice command.
 
     - This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
 
@@ -185,9 +185,9 @@ these steps:
 
 ## Error handling
 
-As described in [Handling voice commands](#handling-voice-commands), apps must immediately call the [**roInput.EventResponse()**](/docs/references/brightscript/interfaces/ifinput.md#eventresponseroassociativearray-aa-as-boolean) method upon receiving a voice command to indicate that the voice command has been handled.  If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled".
+As described in [Handling voice commands](#handling-voice-commands), apps must immediately call the [**roInput.EventResponse()**](doc:ifinput) method upon receiving a voice command to indicate that the voice command has been handled.  If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled".
 
-For convenience, the list of possible values for the **status** field of the associative array taken by the [**roInput.EventResponse()**](/docs/references/brightscript/interfaces/ifinput.md#eventresponseroassociativearray-aa-as-boolean) method is as follows:
+For convenience, the list of possible values for the **status** field of the associative array taken by the [**roInput.EventResponse()**](doc:ifinput) method is as follows:
 
 - "error.generic" (*Available since Roku OS 10.0*). No active media is available to fulfill the voice command. Passing this status displays "That is not available" in the Roku Voice heads-up display. This can be used in cases, for example, when an app receives a "forward" or "next" command, but there is no content to fast forward or play next, respectively.
 
@@ -241,7 +241,7 @@ The following table summarizes which apps need to implement handling for enhance
 
 ## Using ECP commands for testing voice controls
 
-You can test voice controls in an app by sending [External Control Protocol (ECP)](/docs/developer-program/dev-tools/external-control-api.md) commands via cURL to your Roku device. Specifically, send an HTTP POST request to port 8060 on your Roku device using the following syntax:
+You can test voice controls in an app by sending [External Control Protocol (ECP)](doc:external-control-api) commands via cURL to your Roku device. Specifically, send an HTTP POST request to port 8060 on your Roku device using the following syntax:
 
 ```
 curl -d '' 'http://<roku-device-ip-address>:8060/input/<channelId>?id=<longInteger>&type=transport&command=<commandValue>'
@@ -307,14 +307,14 @@ curl -d '' 'http://192.168.1.114:8060/input/dev?id=8&type=transport&command=seek
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/transport-control) that demonstrates how to implement voice controls. It demonstrates how to handle voice commands in your app, and it shows you how to use the [**roInputEvent**](/docs/references/brightscript/events/roinputevent.md) to listen for transport events and then process them. This sample includes standard and custom video player apps, a live app, and an app implementing server-side ad insertion [SSAI](/docs/developer-program/advertising/ssai-adapters.md) via the [Roku Advertising Framework (RAF)](/docs/developer-program/advertising/roku-advertising-framework.md):
+You can download and install a [sample app](https://github.com/rokudev/transport-control) that demonstrates how to implement voice controls. It demonstrates how to handle voice commands in your app, and it shows you how to use the [**roInputEvent**](doc:roinputevent) to listen for transport events and then process them. This sample includes standard and custom video player apps, a live app, and an app implementing server-side ad insertion [SSAI](doc:ssai-adapters) via the [Roku Advertising Framework (RAF)](doc:roku-advertising-framework):
 
-- The standard UI app shows how the native Roku Media Player handles voice controls. You can run this app and use the [debug console](/docs/developer-program/debugging/debugging-channels.md) to view output related to transport events.
-- The custom UI, live, and SSAI apps shows how your application can receive and process voice controls. This is especially important if your app uses custom [trick mode](/docs/developer-program/media-playback/trick-mode.md) or it is using a RAF SSAI implementation because your app must explicitly handle "seek" and "start over" transport commands in these cases.
+- The standard UI app shows how the native Roku Media Player handles voice controls. You can run this app and use the [debug console](doc:debugging-channels) to view output related to transport events.
+- The custom UI, live, and SSAI apps shows how your application can receive and process voice controls. This is especially important if your app uses custom [trick mode](doc:trick-mode) or it is using a RAF SSAI implementation because your app must explicitly handle "seek" and "start over" transport commands in these cases.
 
 ## Video demo
 
-For a video demonstration of voice controls, see the [Voice overview guide](/docs/features/voice/overview.md).
+For a video demonstration of voice controls, see the [Voice overview guide](doc:overview).
 
 ## Voice control required behavior
 

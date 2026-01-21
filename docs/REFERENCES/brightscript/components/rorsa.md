@@ -60,4 +60,4 @@ end if
 
 ## Supported interfaces
 
-- [ifRSA](/docs/references/brightscript/interfaces/ifrsa.md "ifRSA")
+- [ifRSA](doc:ifrsa)

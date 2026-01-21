@@ -24,6 +24,6 @@ This is useful in the following situations:
 
 ## Supported interfaces
 
-- [ifString](/docs/references/brightscript/interfaces/ifstring.md "ifString")                
-- [ifStringOps](/docs/references/brightscript/interfaces/ifstringops.md "ifStringOps")             
-- [ifToStr](/docs/references/brightscript/interfaces/iftostr.md "ifToStr")                 
+- [ifString](doc:ifstring)                
+- [ifStringOps](doc:ifstringops)             
+- [ifToStr](doc:iftostr)                 

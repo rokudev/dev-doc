@@ -19,7 +19,7 @@ next:
 
 | Name      | Description                               |
 | --------- | ----------------------------------------- |
-| [roDouble](/docs/references/brightscript/components/rodouble.md "roDouble")  | roDouble is a legacy object name, corresponding to the intrinsic Double object |
+| [roDouble](doc:rodouble)  | roDouble is a legacy object name, corresponding to the intrinsic Double object |
 
 
 ## Supported methods

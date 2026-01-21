@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
+Extends [**ArrayGrid**](doc:arraygrid)
 
 The MarkupList node class is a generic list class that can be used to display a list of items.
 

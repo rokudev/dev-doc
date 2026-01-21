@@ -21,5 +21,5 @@ This component allows you to query the status of the HDMI connection for a Roku 
 
 ## Supported interfaces
 
-- [ifHdmiStatus](/docs/references/brightscript/interfaces/ifhdmistatus.md "ifHdmiStatus")                  
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")              
+- [ifHdmiStatus](doc:ifhdmistatus)                  
+- [ifSetMessagePort](doc:ifsetmessageport)              

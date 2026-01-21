@@ -26,9 +26,9 @@ The Roku Advertising Framework (RAF) enables the seamless integration of video a
 - Client-side handling of tracking events that is aligned with the IAB/MRC's [impression measurement guidelines]([https://mediaratingcouncil.org/sites/default/files/Standards/Digital%20Video%20Served%20Impression%20Measurement%20Guidelines%20%28MMTF%20June%202018%29.pdf).
 
 
-- Audience measurement via [Nielsen DAR](https://www.nielsen.com/hk/en/solutions/capabilities/digital-ad-ratings/)/[DCR](/docs/developer-program/advertising/nielsen-dcr.md), [Comscore vCE](https://www.comscore.com/Products/Ratings-and-Planning/Campaign-Ratings), and other platforms.
+- Audience measurement via [Nielsen DAR](https://www.nielsen.com/hk/en/solutions/capabilities/digital-ad-ratings/)/[DCR](doc:nielsen-dcr), [Comscore vCE](https://www.comscore.com/Products/Ratings-and-Planning/Campaign-Ratings), and other platforms.
 
-  > Per [Roku's certification requirements](/docs/developer-program/advertising/ad-requirements.md#ads-3-ad-tracking-requirements), all ad measurement beacons must be fired directly by RAF client-side (they may not be wrapped). This is required to apply the [Roku Advertising Watermark](/docs/developer-program/advertising/ad-watermark.md) to the beacons.
+  > Per [Roku's certification requirements](doc:ad-requirements), all ad measurement beacons must be fired directly by RAF client-side (they may not be wrapped). This is required to apply the [Roku Advertising Watermark](doc:ad-watermark) to the beacons.
 
 
 - Interactive ads through Innovid, BrightLine, and Roku.
@@ -41,7 +41,7 @@ The Roku Advertising Framework (RAF) enables the seamless integration of video a
 
 ## Certification requirement
 
-Per [Roku's certification criteria](/docs/developer-program/certification/certification.md#1-advertising), all apps that monetize advertising must integrate RAF to pass certification.
+Per [Roku's certification criteria](doc:certification), all apps that monetize advertising must integrate RAF to pass certification.
 
 ## Getting started
 
@@ -50,13 +50,13 @@ To get started with your RAF integration, do the following:
 - If you don't have an ad server, contact [adsupport@roku.com](mailto:adsupport@roku.com) for recommendations or alternative ad serving solutions.
 
 
-- Read [monetizing an app with video advertisements](/docs/features/monetization/video-advertisements.md) for monetization options.
+- Read [monetizing an app with video advertisements](doc:video-advertisements) for monetization options.
 
 
-- Read the [certification requirements for ad-supported apps](/docs/developer-program/certification/certification.md#1-advertising).
+- Read the [certification requirements for ad-supported apps](doc:certification).
 
 
-- Review the [RAF integration guide](/docs/developer-program/advertising/integrating-roku-advertising-framework.md).
+- Review the [RAF integration guide](doc:integrating-roku-advertising-framework).
 
 ## Supported features of popular ad formats
 
@@ -158,6 +158,6 @@ To get started with your RAF integration, do the following:
 
 ## RAF video lesson
 
-You can learn how to implement RAF in order to display video ads in your app by watching the [Displaying video ads](/videos/courses/rsg/video-ads.md) video lesson in Roku's [SceneGraph: Build a channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
+You can learn how to implement RAF in order to display video ads in your app by watching the [Displaying video ads](doc:video-ads) video lesson in Roku's [SceneGraph: Build a channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
 
 This lesson describes how to implement RAF in order to seamlessly insert video ads into content. It highlights the different client and server-side ad insertion and stitching solutions provided by RAF, and explains how to get started with RAF in order to display video ads in your app.

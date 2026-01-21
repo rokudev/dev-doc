@@ -15,7 +15,7 @@ next:
 
 | Name     | Description                                                                                                                  |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [roScreen](/docs/references/brightscript/components/roscreen.md "roScreen") | The roScreen component provides a full screen drawing surface that can be stacked and that you can receive input events from |
+| [roScreen](doc:roscreen) | The roScreen component provides a full screen drawing surface that can be stacked and that you can receive input events from |
 
 ## Supported methods
 
@@ -23,7 +23,7 @@ next:
 
 #### Description
 
-This function first operates the same as a call to [ifDraw2D](/docs/references/brightscript/interfaces/ifdraw2d.md "ifDraw2D"), completing all queued drawing operations on the back buffer (draw surface).
+This function first operates the same as a call to [ifDraw2D](doc:ifdraw2d), completing all queued drawing operations on the back buffer (draw surface).
 
 The new back buffer should be assumed to be in a garbage state after this call is complete, which means you will need to re-render the entire frame before a subsequent call to SwapBuffers. This call will not return until the back buffer is ready to be drawn on to. Depending on the implementation, it may take up to a single video frame period for the new front buffer to become visible.
 

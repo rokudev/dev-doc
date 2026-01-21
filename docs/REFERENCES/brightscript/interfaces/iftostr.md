@@ -18,14 +18,14 @@ next:
 
 | Name          | Description |
 | ------------- | ----------- |
-| [roBoolean](/docs/references/brightscript/components/roboolean.md "roBoolean")   | Object equivalent for intrinsic type Boolean            |
-| [roDouble](/docs/references/brightscript/components/rodouble.md "roDouble")      | Object equivalent for intrinsic type 'Double'            |
-| [roFloat](/docs/references/brightscript/components/rofloat.md "roFloat")       | Object equivalent for intrinsic type 'Float'            |
-| [roFunction](/docs/references/brightscript/components/rofunction.md "roFunction")    | Object equivalent for intrinsic type Function            |
-| [roInt](/docs/references/brightscript/components/roint.md "roInt")         | Object equivalent for intrinsic type Integer            |
-| [roInvalid](/docs/references/brightscript/components/roinvalid.md "roInvalid")     | Object equivalent for intrinsic type 'Invalid'            |
-| [roLongInteger](/docs/references/brightscript/components/rolonginteger.md "roLongInteger") | Object equivalent for intrinsic type LongInteger            |
-| [roString](/docs/references/brightscript/components/rostring.md "roString")      | Object equivalent for intrinsic type 'String'            |
+| [roBoolean](doc:roboolean)   | Object equivalent for intrinsic type Boolean            |
+| [roDouble](doc:rodouble)      | Object equivalent for intrinsic type 'Double'            |
+| [roFloat](doc:rofloat)       | Object equivalent for intrinsic type 'Float'            |
+| [roFunction](doc:rofunction)    | Object equivalent for intrinsic type Function            |
+| [roInt](doc:roint)         | Object equivalent for intrinsic type Integer            |
+| [roInvalid](doc:roinvalid)     | Object equivalent for intrinsic type 'Invalid'            |
+| [roLongInteger](doc:rolonginteger) | Object equivalent for intrinsic type LongInteger            |
+| [roString](doc:rostring)      | Object equivalent for intrinsic type 'String'            |
 
 ## Supported methods
 
@@ -43,7 +43,7 @@ The string.
 
 #### Description
 
-Returns the object's value formatted as a string according to the specified printf-like [format string](/docs/references/brightscript/language/global-string-functions.md#format-strings).
+Returns the object's value formatted as a string according to the specified printf-like [format string](doc:global-string-functions).
 
 The object's value can be considered as an implicit parameter to be converted in the formatting for each placeholder parameter.
 

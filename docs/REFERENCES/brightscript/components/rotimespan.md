@@ -43,4 +43,4 @@ End Function
 
 ## Supported interfaces
 
-- [ifTimespan](/docs/references/brightscript/interfaces/iftimespan.md "ifTimespan")             
+- [ifTimespan](doc:iftimespan)             

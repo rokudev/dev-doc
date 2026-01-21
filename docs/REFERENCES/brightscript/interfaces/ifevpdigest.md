@@ -16,7 +16,7 @@ next:
 
 | Name        | Description                               |
 | ----------- | ----------------------------------------- |
-| [roEVPDigest](/docs/references/brightscript/components/roevpdigest.md "roEVPDigest") | The EVP Digest component provides an interface to the OpenSSL EVP library of message digest algorithms |
+| [roEVPDigest](doc:roevpdigest) | The EVP Digest component provides an interface to the OpenSSL EVP library of message digest algorithms |
 
 
 ## Supported methods
@@ -41,7 +41,7 @@ Returns 0 on success or non-zero on failure.
 
 #### Description
 
-Re-initializes an existing message digest context. This can be called to reuse an existing [roEVPDigest](/docs/references/brightscript/components/roevpdigest.md "roEVPDigest") object to digest new data.
+Re-initializes an existing message digest context. This can be called to reuse an existing [roEVPDigest](doc:roevpdigest) object to digest new data.
 
 #### Return Value
 
@@ -57,7 +57,7 @@ Digests the provided data.
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
-| bytes | Object | An [roByteArray](/docs/references/brightscript/components/robytearray.md) containing digested data |
+| bytes | Object | An [roByteArray](doc:robytearray) containing digested data |
 
 #### Return Value
 
@@ -87,7 +87,7 @@ Adds more data to be digested.
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
-| bytes | Object | An [roByteArray](/docs/references/brightscript/components/robytearray.md) containing data to be added to the current digest |
+| bytes | Object | An [roByteArray](doc:robytearray) containing data to be added to the current digest |
 
 ### Final() as String
 

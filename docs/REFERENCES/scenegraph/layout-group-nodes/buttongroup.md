@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**LayoutGroup**](/docs/references/scenegraph/layout-group-nodes/layoutgroup.md "**LayoutGroup**")
+Extends [**LayoutGroup**](doc:layoutgroup)
 
 The ButtonGroup node class manages the layout, visual attributes, and focus management of a vertical list of Button nodes. When the ButtonGroup node has focus, it sets the key focus on a single one of its child Button nodes.
 
@@ -26,8 +26,8 @@ The ButtonGroup node class manages the layout, visual attributes, and focus mana
 | ----------------------- | ---------------- | ---------------------------- | ----------------- | ------------------------------------------------------------ |
 | textColor               | color            | 0xffffffff                   | READ_WRITE        | Specifies the button label color for all unfocused Button nodes in the group. Only set to override the system default |
 | focusedTextColor        | color            | 0xffffffff                   | READ_WRITE        | Specifies the button label color for the Button node that has focus, if any. Only set to override the system default |
-| textFont                | Font             | system: MediumSystemFont     | READ_WRITE        | Specifies the [Font](/docs/references/scenegraph/typographic-nodes/font.md "Font") node for all unfocused Button nodes in the group. Only set to override the system default. See Font for a list of all system fonts available |
-| focusedTextFont         | Font             | system: MediumBoldSystemFont | READ_WRITE        | Specifies the [Font](/docs/references/scenegraph/typographic-nodes/font.md "Font") node for the Button node that has focus, if any. Only set to override the system default. See Font  for a list of all system fonts available |
+| textFont                | Font             | system: MediumSystemFont     | READ_WRITE        | Specifies the [Font](doc:font) node for all unfocused Button nodes in the group. Only set to override the system default. See Font for a list of all system fonts available |
+| focusedTextFont         | Font             | system: MediumBoldSystemFont | READ_WRITE        | Specifies the [Font](doc:font) node for the Button node that has focus, if any. Only set to override the system default. See Font  for a list of all system fonts available |
 | focusBitmapUri          | uri              |                              | READ_WRITE        | Specifies the bitmap to be used as the background for the Button node that has focus. Only set to override the system default |
 | focusFootprintBitmapUri | uri              |                              | READ_WRITE        | Specifies the bitmap to be used as the focus footprint background, when focus is not on the ButtonGroup node. The focus footprint is a visual indicator of the button that will take focus when focus moves back onto the ButtonGroup node. Only set to override the system default |
 | iconUri                 | uri              |                              | READ_WRITE        | Specifies the bitmap for the button icon for all unfocused Button nodes in the group. Only set to override the system default |

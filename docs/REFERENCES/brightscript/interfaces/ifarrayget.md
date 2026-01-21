@@ -14,17 +14,17 @@ next:
 
 The ifArrayGet interface supports the array indexing operator [ ]
 
-(See [Array Operator](/docs/references/brightscript/language/expressions-variables-types.md#effects-of-type-conversions-on-accuracy "Array Operator"))
+(See [Array Operator](doc:expressions-variables-types))
 
 
 ## Implemented by
 
 | Name        | Description |
 | ----------- | ----------- |
-| [roArray](/docs/references/brightscript/components/roarray.md "roArray")     | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type            |
-| [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") | The byte array component is used to contain and manipulate an arbitrary array of bytes            |
-| [roList](/docs/references/brightscript/components/rolist.md "roList")      | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members            |
-| [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList")   | Contains a list of roXML objects            |
+| [roArray](doc:roarray)     | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type            |
+| [roByteArray](doc:robytearray) | The byte array component is used to contain and manipulate an arbitrary array of bytes            |
+| [roList](doc:rolist)      | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members            |
+| [roXMLList](doc:roxmllist)   | Contains a list of roXML objects            |
 
 
 ## Supported methods

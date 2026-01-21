@@ -47,12 +47,12 @@ End Sub
 
 ## Supported interfaces
 
-- [ifAudioPlayer](/docs/references/brightscript/interfaces/ifaudioplayer.md "ifAudioPlayer")
-- [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md "ifHttpAgent")
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")
-- [ifGetMessagePort](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort")
+- [ifAudioPlayer](doc:ifaudioplayer)
+- [ifHttpAgent](doc:ifhttpagent)
+- [ifSetMessagePort](doc:ifsetmessageport)
+- [ifGetMessagePort](doc:ifgetmessageport)
 
 
 ## Supported events
 
-- [roAudioPlayerEvent](/docs/references/brightscript/events/roaudioplayerevent.md "roAudioPlayerEvent")
+- [roAudioPlayerEvent](doc:roaudioplayerevent)

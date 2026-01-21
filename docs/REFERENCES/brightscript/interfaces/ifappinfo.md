@@ -17,7 +17,7 @@ next:
 
 | Name      | Description                               |
 | --------- | ----------------------------------------- |
-| [roAppInfo](/docs/references/brightscript/components/roappinfo.md) | Returns information about the application |
+| [roAppInfo](doc:roappinfo) | Returns information about the application |
 
 
 ## Supported methods

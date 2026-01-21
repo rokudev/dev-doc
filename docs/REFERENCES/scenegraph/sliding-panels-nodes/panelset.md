@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
+Extends [**Group**](doc:group)
 
 The PanelSet node provides the panel sliding behavior seen in the Roku home screen. The PanelSet node manages the position of a set of child Panel nodes, and implements the left and right panel sliding behavior. Once a Panel node has been added to a PanelSet node, it remains a child of the PanelSet node unless it is replaced by another Panel node, or slides completely off the right side of the screen.
 

@@ -20,6 +20,6 @@ Normally roXMLList objects are not created via CreateObject(), but are returned 
 
 ## Supported interfaces
 
-- [ifList](/docs/references/brightscript/interfaces/iflist.md "ifList")                    
-- [ifXMLList](/docs/references/brightscript/interfaces/ifxmllist.md "ifXMLList")                  
-- [ifListToArray](/docs/references/brightscript/interfaces/iflisttoarray.md "ifListToArray")             
+- [ifList](doc:iflist)                    
+- [ifXMLList](doc:ifxmllist)                  
+- [ifListToArray](doc:iflisttoarray)             

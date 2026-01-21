@@ -16,7 +16,7 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roSGScreen](/docs/references/brightscript/components/rosgscreen.md "roSGScreen") | The roSGScreen object is a SceneGraph canvas that displays the contents of a SceneGraph Scene node tree |
+| [roSGScreen](doc:rosgscreen) | The roSGScreen object is a SceneGraph canvas that displays the contents of a SceneGraph Scene node tree |
 
 
 ## Supported methods

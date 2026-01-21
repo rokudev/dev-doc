@@ -15,7 +15,7 @@ metadata:
 
 When payment for a subscription auto-renewal fails, Roku's Enhanced Subscription Recovery feature (formerly referred to as "Passive Subscription on Hold" or "Subscription on Hold") notifies the customer on-device and via email to update their method of payment (MOP) on file for 60 days. This helps the publisher improve the chance of recovering payments and thereby reduce passive cancellations.
 
-> All apps offering subscriptions must implement Enhanced Subscription Recovery to pass [certification](/docs/developer-program/roku-pay/roku-pay-requirements.md#rp-4-authentication-and-entitlement-requirements).
+> All apps offering subscriptions must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements).
 
 ## Overview
 
@@ -42,22 +42,22 @@ To integrate Enhanced Subscription recovery in your app, you must complete the f
 
 **App publishing and enabling enhanced recovery**
 
-6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](/docs/developer-program/publishing/channel-publishing-guide.md#updating-an-existing-channel), and then [Enable Enhanced Subscription Recovery](#subscription-recovery-settings) for it.
+6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](doc:channel-publishing-guide), and then [Enable Enhanced Subscription Recovery](#subscription-recovery-settings) for it.
 
 ### Enabling enhanced subscription recovery
 
-Use the [**Subscription recovery** page](/docs/developer-program/roku-pay/subscription-recovery/settings.md) in the Developer Dashboard to enable Enhanced Subscription Recovery for your app.
+Use the [**Subscription recovery** page](doc:settings) in the Developer Dashboard to enable Enhanced Subscription Recovery for your app.
 
 * **Beta app**: Before starting the integration work, enable enhanced subscription recovery for the **beta** version of your app . This enables you to verify that your app and backend are getting the current state of subscriptions and providing the correct user experience based on the state.
-* **Public app**: Once you have completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **production** version of your app](/docs/developer-program/publishing/channel-publishing-guide.md#updating-an-existing-channel). Once your updated production app has been published, enable the enhanced recovery solution for it.
+* **Public app**: Once you have completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **production** version of your app](doc:channel-publishing-guide). Once your updated production app has been published, enable the enhanced recovery solution for it.
 
   > Do not enable Enhanced Subscription Recovery for your public app until you have completed, tested, and verified the integration steps. If this feature is not implemented correctly, customers will be unable to purchase a subscription for your app until the on-hold period has elapsed.
 
-For more information on enabling Enhanced Subscription Recovery for your app, see [Subscription recovery settings](/docs/developer-program/roku-pay/subscription-recovery/settings.md).
+For more information on enabling Enhanced Subscription Recovery for your app, see [Subscription recovery settings](doc:settings).
 
 ### Entitlement checks
 
-You must use the Roku Pay APIs to check whether a subscription is current, in recovery (in 3-day grace period), on hold, or canceled. The [ChannelStore API](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) is used to check the subscription status client-side upon app launch and then block access to content based on the results; the [Roku Pay web service APIs](/docs/developer-program/roku-pay/implementation/roku-web-service.md) are used server-side for regular nightly syncs to update the publisher's entitlement service.
+You must use the Roku Pay APIs to check whether a subscription is current, in recovery (in 3-day grace period), on hold, or canceled. The [ChannelStore API](doc:channelstore) is used to check the subscription status client-side upon app launch and then block access to content based on the results; the [Roku Pay web service APIs](doc:roku-web-service) are used server-side for regular nightly syncs to update the publisher's entitlement service.
 
 > When payment is recovered for a subscription that is in-grace or on-hold, check the entitlement status of the subscription upon receiving and processing the recovery event and entitle the customer.
 
@@ -65,9 +65,9 @@ You must use the Roku Pay APIs to check whether a subscription is current, in re
 
 #### Product Catalog 2.0 (ChannelStore generic request framework)
 
-When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#getpurchases) API (with **version**=2 and **includeExpired**=true), as part of the required on-device authentication, to determine whether to block access to content.
+When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases](doc:add-ons-integration) API (with **version**=2 and **includeExpired**=true), as part of the required on-device authentication, to determine whether to block access to content.
 
-The [v2 getAllPurchases](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#getpurchases) API returns an **purchases.billingPlan.state** field that reports the status of a subscription, which may be one of the following values:
+The [v2 getAllPurchases](doc:add-ons-integration) API returns an **purchases.billingPlan.state** field that reports the status of a subscription, which may be one of the following values:
 
 <table>
   <thead>
@@ -104,7 +104,7 @@ The [v2 getAllPurchases](/docs/developer-program/roku-pay/quickstart/add-ons-int
 
 #### Product Catalog 1.0 (ChannelStore API)
 
-When customers launch an app, the app calls the ChannelStore [getAllPurchases](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) API returns an **inDunning** flag that is used along with the **status** field to get the status of a subscription:
+When customers launch an app, the app calls the ChannelStore [getAllPurchases](doc:channelstore) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](doc:channelstore) API returns an **inDunning** flag that is used along with the **status** field to get the status of a subscription:
 
 | Subscription state                  | **"inDunning"** | **"status"** |
 | :---------------------------------- | :-------------- | :----------- |
@@ -115,7 +115,7 @@ When customers launch an app, the app calls the ChannelStore [getAllPurchases](/
 
 #### Roku Pay web service APIs
 
-You should routinely synchronize your entitlement service with the Roku Pay web services to make sure your system has up-to-date entitlement data (this also provides a backup in case your backend system occasionally does not receive or process a batch of push notifications sent by Roku). Call the [validate-transaction API](/docs/developer-program/roku-pay/implementation/roku-web-service.md#managing-subscription-recovery) as part of a nightly batch routine to get the updated status of your customers' subscriptions. This API returns an **isEntitled** flag that is used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
+You should routinely synchronize your entitlement service with the Roku Pay web services to make sure your system has up-to-date entitlement data (this also provides a backup in case your backend system occasionally does not receive or process a batch of push notifications sent by Roku). Call the [validate-transaction API](doc:roku-web-service) as part of a nightly batch routine to get the updated status of your customers' subscriptions. This API returns an **isEntitled** flag that is used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
 
 | Subscription state                                                 | **"isEntitled"** | **"expirationDate"** | **"cancelled"** |
 | :----------------------------------------------------------------- | :--------------- | :------------------- | :-------------- |
@@ -354,13 +354,13 @@ end function
 
 ### Subscription recovery testing
 
-Use the **subscription-recovery** test API to manually force subscriptions into different states (active, in-grace period, on-hold, passively canceled, and recovered), which helps expedite the testing of your [subscription recovery](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md) integration.
+Use the **subscription-recovery** test API to manually force subscriptions into different states (active, in-grace period, on-hold, passively canceled, and recovered), which helps expedite the testing of your [subscription recovery](doc:subscription-on-hold) integration.
 
-For more information: [Subscription recovery testing](/docs/developer-program/roku-pay/subscription-recovery/testing.md)
+For more information: [Subscription recovery testing](doc:testing)
 
 ### Push notifications
 
-You must ingest and process the following additional [push notifications](/docs/developer-program/roku-pay/implementation/push-notifications.md) sent by Roku Pay as the subscription recovery state changes:
+You must ingest and process the following additional [push notifications](doc:push-notifications) sent by Roku Pay as the subscription recovery state changes:
 
 | Message              | Description                                                                                                                                                                                 |
 | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

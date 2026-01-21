@@ -11,9 +11,9 @@ next:
   description: ''
 ---
 
-Deep linking enables users to get to your content faster from the Roku UI via [Roku's content discovery features](/docs/features/engagement/overview.md) (for example, [Roku Search](/docs/developer-program/discovery/search/implementing-search.md) and [Roku home screen banners](/docs/features/engagement/self-serve-promotions.md#display-ads-on-roku)). With deep linking, your app is launched into playback or content springboards directly from the Roku UI. For example, when a movie is selected from Roku Search, playback starts immediately without any app navigation. This functionality enables you to leverage Roku's content discovery features in order to drive users to your app and increase engagement.
+Deep linking enables users to get to your content faster from the Roku UI via [Roku's content discovery features](doc:overview) (for example, [Roku Search](doc:implementing-search) and [Roku home screen banners](doc:self-serve-promotions)). With deep linking, your app is launched into playback or content springboards directly from the Roku UI. For example, when a movie is selected from Roku Search, playback starts immediately without any app navigation. This functionality enables you to leverage Roku's content discovery features in order to drive users to your app and increase engagement.
 
-> Public apps with video content must implement deep linking to pass [certification](/docs/developer-program/certification/certification.md#5-deep-linking).
+> Public apps with video content must implement deep linking to pass [certification](doc:certification).
 
 ## Overview
 
@@ -29,7 +29,7 @@ Implementing deep linking in an app entails the following steps:
 
 3. **Update the app**. Program the app so it accepts and validates the deep linking parameters and launches into the required experience. \<br />\<br />
 
-4. **Test deep linking in the app**. Verify that the app handles deep links correctly using the Roku Deep Linking Tester or [External Control Protocol](/docs/developer-program/dev-tools/external-control-api.md) (ECP) commands sent via cURL.\<br />\<br />
+4. **Test deep linking in the app**. Verify that the app handles deep links correctly using the Roku Deep Linking Tester or [External Control Protocol](doc:external-control-api) (ECP) commands sent via cURL.\<br />\<br />
 
 5. **Submit deep link samples for certification**. Submit sample
    deep link parameters in the Developer Dashboard for each mediaType in your app.
@@ -42,13 +42,13 @@ Deep link requests contain two key parameters: **contentid** and **mediaType**.
 
 * The \<a href="mediatype">\</a>mediaType specifies how an app should behave when receiving a deep link request. See [MediaType behavior](#mediatype-behavior) for more information.
 
-The following example demonstrates a deep link request sent to an app.  The [**source** parameter](/docs/developer-program/getting-started/architecture/dev-environment.md#source-parameter) specifies the origin of the deep link request (in this case, it is from [Roku Search](/docs/developer-program/discovery/search/implementing-search.md)):
+The following example demonstrates a deep link request sent to an app.  The [**source** parameter](doc:dev-environment) specifies the origin of the deep link request (in this case, it is from [Roku Search](doc:implementing-search)):
 
 ```
 http://192.168.1.114:8060/launch/50000?contentId=myAwesomeShow|Season=1|Episode=1&mediaType=series&source=hs-search
 ```
 
-The app receives the deep link parameters as an associative array as demonstrated in the following example (see [Implementing Deep Linking](/docs/developer-program/discovery/implementing-deep-linking.md#implementing-deep-linking) for more information on handling these parameters; see [Using the debug console for troubleshooting deep linking parameters](#using-the-debug-console-for-troubleshooting-deep-linking-parameters) for how to check the deep linking parameters being sent to your app):
+The app receives the deep link parameters as an associative array as demonstrated in the following example (see [Implementing Deep Linking](doc:implementing-deep-linking) for more information on handling these parameters; see [Using the debug console for troubleshooting deep linking parameters](#using-the-debug-console-for-troubleshooting-deep-linking-parameters) for how to check the deep linking parameters being sent to your app):
 
 ```
 <Component: roAssociativeArray> =
@@ -64,7 +64,7 @@ The app receives the deep link parameters as an associative array as demonstrate
   }
 ```
 
-> If an app is participating in [Roku Search](/docs/features/engagement/roku-search.md), the contentid in the Roku Search feed (PlayID) must map to the contentid in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed.
+> If an app is participating in [Roku Search](doc:roku-search), the contentid in the Roku Search feed (PlayID) must map to the contentid in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed.
 >
 > For episodic content, Roku Search only recognizes the episode contentid. An episode's contentid therefore must remain consistent, regardless if a deep link launches the episode or an episodic picker screen. These different deep link behaviors are determined solely by the mediaType. Separate contentIDs used to identify the season and series of the same content item are therefore ignored.
 
@@ -132,7 +132,7 @@ When a deep link is sent to your app, it will include contentId and a mediaType.
 >
 > But if your app includes the last three seasons of a television episode, your app needs to handle the "episode", "season", and "series" mediaTypes to be able to respond to deep links sent from Roku Search, Roku voice search, and on-device ads.
 >
-> You can use the ["source" parameter](/docs/developer-program/getting-started/architecture/dev-environment.md#source-parameter) to determine from where the deep linking request originated.
+> You can use the ["source" parameter](doc:dev-environment) to determine from where the deep linking request originated.
 
 ### General app behavior
 
@@ -164,7 +164,7 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
 
 > Use a case-insensitive check when validating the **contentId** and **mediaType** key names.
 
-3. If the contentId and mediaType are valid, launch the specified content item using the appropriate [launch behavior for the mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior). If either the contentId or mediaType are invalid, launch the app home page.
+3. If the contentId and mediaType are valid, launch the specified content item using the appropriate [launch behavior for the mediaType](doc:implementing-deep-linking). If either the contentId or mediaType are invalid, launch the app home page.
 
    if (args.mediaType = "movie" or args.mediaType = "episode" or args.mediaType = "shortFormVideo" or args.mediaType = "series" or args.mediaType = "tvSpecial")
    if valid_contentId(contentId) ' You define this function in your back-end
@@ -183,11 +183,11 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
    'display an appropriate error message for the user and launch home page.
    end if
 
-4. Use [roInputEvent](/docs/references/brightscript/events/roinputevent.md) to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.\<br />\<br />
+4. Use [roInputEvent](doc:roinputevent) to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.\<br />\<br />
 
-a.  The [supports_input_launch](/docs/developer-program/getting-started/architecture/channel-manifest.md) attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.\<br />\<br />For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent—instead of re-launching your app with the parameters.
+a.  The [supports_input_launch](doc:channel-manifest) attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.\<br />\<br />For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent—instead of re-launching your app with the parameters.
 
-b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.\<br />\<br /> See [Sample app](/docs/developer-program/discovery/implementing-deep-linking.md#sample-app) to download and install a sample app that demonstrates how to use [roInputEvent](/docs/references/brightscript/events/roinputevent.md) to handle deep links while your app is running.
+b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.\<br />\<br /> See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
 
 ...
 screen = CreateObject("roSGScreen")
@@ -221,9 +221,9 @@ To handle deep linking for these scenarios, assign a unique **contentId** to the
 
 You can verify whether your app is implementing the correct deep linking behavior using either the [Roku Deep Linker
 Tester](https://devtools.web.roku.com/DeepLinkingTester/) and the associated [Roku Deep Linking Tester
-channel](https://my.roku.com/account/add?channel=KX3UPK) or [ECP](/docs/developer-program/dev-tools/external-control-api.md) commands sent via cURL. Both methods enable you to test deep linking into content when launching an app; however, to test deep linking while your app is running, you must use ECP commands.
+channel](https://my.roku.com/account/add?channel=KX3UPK) or [ECP](doc:external-control-api) commands sent via cURL. Both methods enable you to test deep linking into content when launching an app; however, to test deep linking while your app is running, you must use ECP commands.
 
-You can also check which deep linking parameters are being sent to your app using the [debug console](/docs/developer-program/debugging/debugging-channels.md#accessing-the-debug-console).
+You can also check which deep linking parameters are being sent to your app using the [debug console](doc:debugging-channels).
 
 > Test each mediaType in your content feed. For example, if your feed contains movies and short-form videos, you should test deep linking to content of both mediaTypes. In addition, if your feed contains series content, you must test that both series and episode mediaTypes demonstrate their required launch behaviors.
 >
@@ -317,7 +317,7 @@ The following attributes are required:
 
 ### Using the debug console for troubleshooting deep linking parameters
 
-You can use the [debug console](/docs/developer-program/debugging/debugging-channels.md#accessing-the-debug-console) to check the deep linking parameters that are being sent to your app. To do this, add a print statement to your app that outputs the associative array passed into your app's `Main()` function and [roInputEvent](/docs/references/brightscript/events/roinputevent.md).
+You can use the [debug console](doc:debugging-channels) to check the deep linking parameters that are being sent to your app. To do this, add a print statement to your app that outputs the associative array passed into your app's `Main()` function and [roInputEvent](doc:roinputevent).
 
 This is useful when troubleshooting deep links because it helps you identify the **contentId** of the content being launched in case it is unknown, and it provides the **mediaType** in case the expected behavior is not being executed.
 
@@ -345,11 +345,11 @@ app.
 
 To submit deep links for certification, follow these steps:
 
-1. Verify that your app meets all [certification requirements](/docs/developer-program/certification/certification.md).
+1. Verify that your app meets all [certification requirements](doc:certification).
 
 2. Open the [Developer Dashboard](https://developer.roku.com/developer) and click **Manage My Channels**. Click your app, and then select **Deep Linking** from the list on the right.
 
-3. Follow the instructions in the [Deep Linking window documentation](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window).
+3. Follow the instructions in the [Deep Linking window documentation](doc:channel-publishing-guide).
 
 ## MediaType behavior examples
 
@@ -357,13 +357,13 @@ The following GIFs demonstrate the required launch behavior for the different me
 
 #### movie
 
-The movie identified by the contentId is launched directly into playback. [Bookmarks](/docs/developer-program/media-playback/bookmarking.md) are used to determine the playback position.
+The movie identified by the contentId is launched directly into playback. [Bookmarks](doc:bookmarking) are used to determine the playback position.
 
 <Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/weird-deeplink-movie.gif" />
 
 #### episode
 
-The episode identified by the contentId is launched directly into playback. [Bookmarks](/docs/developer-program/media-playback/bookmarking.md) are used to determine the playback position.
+The episode identified by the contentId is launched directly into playback. [Bookmarks](doc:bookmarking) are used to determine the playback position.
 
 <Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/children-deeplink-episode.gif" />
 
@@ -387,13 +387,13 @@ The shortForm video (less than 15 minutes) identified by the contentId is launch
 
 #### tvSpecial
 
-The one-time TV program identified by the contentId is launched directly into playback. [Bookmarks](/docs/developer-program/media-playback/bookmarking.md) are used to determine the playback position.
+The one-time TV program identified by the contentId is launched directly into playback. [Bookmarks](doc:bookmarking) are used to determine the playback position.
 
 <Image alt="roku600px movie-deeplink-gif" border={false} src="https://image.roku.com/ZHZscHItMTc2/ozzy-deeplink-special.gif" />
 
 ## Deep linking video lesson
 
-You can learn how to implement deep linking in your app by watching the [Deep linking](/videos/courses/rsg/deep-linking.md) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
+You can learn how to implement deep linking in your app by watching the [Deep linking](doc:deep-linking) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
 
 This lesson details how to program your app to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences requried for the various types of content in the app's feed.
 

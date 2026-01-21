@@ -19,7 +19,7 @@ Interface equivalent for intrinsic type Function.
 
 | Name       | Description                               |
 | ---------- | ----------------------------------------- |
-| [roFunction](/docs/references/brightscript/components/rofunction.md "roFunction") | Object equivalent for intrinsic type Function |
+| [roFunction](doc:rofunction) | Object equivalent for intrinsic type Function |
 
 
 ## Supported methods

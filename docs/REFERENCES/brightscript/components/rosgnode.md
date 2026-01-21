@@ -26,7 +26,7 @@ Poster node class:
 
 Reference information on all SceneGraph node classes can be found in
 [SceneGraph API
-Reference](/docs/references/scenegraph/node.md).
+Reference](doc:node).
 
 Prior to creating an roSGScreen object and calling its `show()`
 function, creating roSGNode objects and using their interfaces is
@@ -41,14 +41,14 @@ In addition, roSGNode implements the ifAssociativeArray interface as a wrapper f
 
 ## Supported Interfaces
 
-* [ifAssociativeArray](/docs/references/brightscript/interfaces/ifassociativearray.md)
-* [ifSGNodeChildren](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
-* [ifSGNodeField](/docs/references/brightscript/interfaces/ifsgnodefield.md)
-* [ifSGNodeDict](/docs/references/brightscript/interfaces/ifsgnodedict.md)
-* [ifSGNodeFocus](/docs/references/brightscript/interfaces/ifsgnodefocus.md)
-* [ifSGNodeBoundingRect](/docs/references/brightscript/interfaces/ifsgnodeboundingrect.md)
-* [ifSGNodeHttpAgentAccess](/docs/references/brightscript/interfaces/ifsgnodehttpagentaccess.md)
+* [ifAssociativeArray](doc:ifassociativearray)
+* [ifSGNodeChildren](doc:ifsgnodechildren)
+* [ifSGNodeField](doc:ifsgnodefield)
+* [ifSGNodeDict](doc:ifsgnodedict)
+* [ifSGNodeFocus](doc:ifsgnodefocus)
+* [ifSGNodeBoundingRect](doc:ifsgnodeboundingrect)
+* [ifSGNodeHttpAgentAccess](doc:ifsgnodehttpagentaccess)
 
 ## Supported Events
 
-* [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md)
+* [roSGNodeEvent](doc:rosgnodeevent)

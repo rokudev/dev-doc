@@ -12,14 +12,14 @@ next:
 ---
 
 
-The ifSocketAsync interface provides asynchronous socket features that utilize a full-featured select loop in the Roku OS that communicates to the application using a BrightScript [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort"). This interface is valid on roStreamSocket and roDataGramSocket objects that were assigned a BrightScript port via [SetMessagePort()](/docs/references/brightscript/interfaces/ifsetmessageport.md).
+The ifSocketAsync interface provides asynchronous socket features that utilize a full-featured select loop in the Roku OS that communicates to the application using a BrightScript [roMessagePort](doc:romessageport). This interface is valid on roStreamSocket and roDataGramSocket objects that were assigned a BrightScript port via [SetMessagePort()](doc:ifsetmessageport).
 
 ## Implemented by
 
 | Name             | Description                                                                                                                            |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [roDataGramSocket](/docs/references/brightscript/components/rodatagramsocket.md "roDataGramSocket") | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets                                               |
-| [roStreamSocket](/docs/references/brightscript/components/rostreamsocket.md "roStreamSocket")   | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
+| [roDataGramSocket](doc:rodatagramsocket) | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets                                               |
+| [roStreamSocket](doc:rostreamsocket)   | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
 
 ## Supported methods
 
@@ -93,7 +93,7 @@ Enables roSocketEvent events to be sent via the message port when the underlying
 
 #### Description
 
-Returns a unique identifier that can be compared to the value returned by the [roSocketEvent.getSocketID()](/docs/references/brightscript/events/rosocketevent.md#getsocketid-as-integer) method to match the underlying socket to receive the event.
+Returns a unique identifier that can be compared to the value returned by the [roSocketEvent.getSocketID()](doc:rosocketevent) method to match the underlying socket to receive the event.
 
 #### Return Paramters
 

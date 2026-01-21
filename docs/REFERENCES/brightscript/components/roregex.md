@@ -33,4 +33,4 @@ Any combination of the following behavior flags ("i" in the example above which 
 
 ## Supported interfaces
 
-- [ifRegex](/docs/references/brightscript/interfaces/ifregex.md "ifRegex")
+- [ifRegex](doc:ifregex)

@@ -22,11 +22,11 @@ This object is created with no parameters:
 
 ## Supported interfaces
 
-- [ifFileSystem](/docs/references/brightscript/interfaces/iffilesystem.md "ifFileSystem")
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")
-- [ifGetMessagePort](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort")
+- [ifFileSystem](doc:iffilesystem)
+- [ifSetMessagePort](doc:ifsetmessageport)
+- [ifGetMessagePort](doc:ifgetmessageport)
 
 
 ## Supported events
 
-- [roFileSystemEvent](/docs/references/brightscript/events/rofilesystemevent.md "roFileSystemEvent")
+- [roFileSystemEvent](doc:rofilesystemevent)

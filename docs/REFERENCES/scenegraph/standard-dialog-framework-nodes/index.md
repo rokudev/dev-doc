@@ -14,7 +14,7 @@ next:
 
 As part of the Roku OS 10.0 release, Roku's standard dialog framework enables developers to use new pre-built modal pop-up dialogs and build custom ones. Dialogs are used to display information to users that require their immediate attention (for example, selecting a subscription product, entering credentials or account information, informing the user that a screen is loading, and so on). These new pre-built and custom standard keyboards are summarized as follows:
 
-- **New pre-built message, keyboard, pin pad, and progress dialogs**. These new dialogs feature updated graphics and color palette support that enable developers to provide a consistent user experience across the dialogs in their app (and across the Roku platform as developers can easily adopt the new design of Roku OS system dialogs). In addition, the keyboard and pin pad dialogs include voice entry support for faster customer sign-ups and sign-ins. These new dialog nodes deprecate the [legacy versions](/docs/references/scenegraph/dialog-nodes/dialog.md).
+- **New pre-built message, keyboard, pin pad, and progress dialogs**. These new dialogs feature updated graphics and color palette support that enable developers to provide a consistent user experience across the dialogs in their app (and across the Roku platform as developers can easily adopt the new design of Roku OS system dialogs). In addition, the keyboard and pin pad dialogs include voice entry support for faster customer sign-ups and sign-ins. These new dialog nodes deprecate the [legacy versions](doc:dialog).
 
 
 
@@ -71,7 +71,7 @@ Each of these areas has a corresponding node for building a custom dialog: **Std
 
 
 
-- The **StdDlgSideCardArea** node may contain one or SceneGraph nodes (for example, a [Poster](/docs/references/scenegraph/renderable-nodes/poster.md) node for displaying an image or a [Label](/docs/references/scenegraph/label-nodes/label.md) node for displaying text).
+- The **StdDlgSideCardArea** node may contain one or SceneGraph nodes (for example, a [Poster](doc:poster) node for displaying an image or a [Label](doc:label) node for displaying text).
 
 
 The following table summarizes the standard dialog nodes used to build custom dialogs and their hierarchy. For completeness, the content items and buttons that may be included in the **StdDlgContentArea** and **StdDlgButtonArea** nodes are listed; however, they do not inherit any properties from the nodes.
@@ -235,7 +235,7 @@ By default, the StandardDialog node uses a default color palette consisting of s
 
 2. **Setting the color palette for all dialogs (recommended)**: Create an **RSGPalette** node and assign it to the Scene's palette field. This ensures that all the dialogs in the app have a consistent appearance because the Scene's palette is used for all StandardDialog nodes, unless overridden in an individual dialog. Overriding the Scene's palette is typically done in the **init()** function of a custom RSG component that extends the Scene node.
 
-For more information about how StandardDialog nodes used the RSGPalette colors, see the [StandardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "StandardDialog")'s palette field.
+For more information about how StandardDialog nodes used the RSGPalette colors, see the [StandardDialog](doc:standard-dialog)'s palette field.
 
 ##### Example
 

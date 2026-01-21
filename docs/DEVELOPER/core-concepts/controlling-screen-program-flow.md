@@ -39,7 +39,7 @@ creates the custom components as needed, in response to user selections,
 or changes in data received from and/or sent to a server. These custom
 components are analogous to BrightScript components with data interfaces
 that render screens and screen elements, such as roPosterScreen; in
-fact, the SceneGraph [PosterGrid](/docs/references/scenegraph/list-and-grid-nodes/postergrid.md) node
+fact, the SceneGraph [PosterGrid](doc:postergrid) node
 class is itself very similar to the BrightScript component
 roPosterScreen. But by using the SceneGraph API, you can combine several
 node classes into a custom component with its own encapsulated behavior
@@ -65,7 +65,7 @@ make available to the component to display the categories, including
 icons, text, graphic images, in either JSON or XML format. The data
 provided for that component should also include data to pass to another
 custom component, through the
-[\<interface\>](/docs/references/scenegraph/xml-elements/interface.md) element or other means, to
+[\<interface\>](doc:interface) element or other means, to
 allow user selection of further sub-categories or video content items.
 All of the previous BrightScript component "screens", including
 "screens" for registration, search, license display, can be developed as
@@ -113,10 +113,10 @@ SceneGraph API node classes, to either create or modify them using
 BrightScript in the \<script\> element, and/or declare/define them
 in XML markup in the \<children\> element. For example, for a list
 of categories, you might want to use the
-[LabelList](/docs/references/scenegraph/list-and-grid-nodes/labellist.md) node class, or perhaps the
-[MarkupList](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md) node class, since you intend
+[LabelList](doc:labellist) node class, or perhaps the
+[MarkupList](doc:markuplist) node class, since you intend
 to include graphic images as part of your list. You will also use two
-[Poster](/docs/references/scenegraph/renderable-nodes/poster.md) node classes somewhere in your
+[Poster](doc:poster) node classes somewhere in your
 component for your icon and poster graphic images, perhaps as part of
 another custom component that is the definition of the
 `itemComponentName` field of the MarkupList node. You complete the

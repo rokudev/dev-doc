@@ -11,18 +11,18 @@ next:
   description: ''
 ---
 
-If you are using [enhanced subscription recovery](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md), you can use the **subscription-recovery** test API to manually force subscriptions into different states (active, in-grace period, on-hold, passively canceled, and recovered). This helps expedite the testing of your enhanced subscription recovery integration.
+If you are using [enhanced subscription recovery](doc:subscription-on-hold), you can use the **subscription-recovery** test API to manually force subscriptions into different states (active, in-grace period, on-hold, passively canceled, and recovered). This helps expedite the testing of your enhanced subscription recovery integration.
 
 ## Prerequisites
 
-Making subscription-recovery test API calls requires a beta app, test user account, and transaction validation method ([push notifications](/docs/developer-program/roku-pay/implementation/push-notifications-jwt.md) or [API calls](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines)). Complete the following steps so that you can generate new subscriptions, and receive and verify state changes:
+Making subscription-recovery test API calls requires a beta app, test user account, and transaction validation method ([push notifications](doc:push-notifications-jwt) or [API calls](doc:channel-publishing-guide)). Complete the following steps so that you can generate new subscriptions, and receive and verify state changes:
 
-1. Create a [beta version of your app](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines).
-2. [Create a test user](/docs/developer-program/roku-pay/quickstart/test-users.md) and link it to your beta app.
-3. (Recommended) Integrate [Roku Pay push notifications](/docs/developer-program/roku-pay/implementation/push-notifications-jwt.md) in your backend system. This enables you to receive and verify subscription state changes in near real-time. Otherwise, you can verify changes by pulling transaction data via Roku Pay [validate-transaction API calls](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines).
-4. Enable [Enhanced Subscription Recovery](/docs/developer-program/roku-pay/subscription-recovery/settings.md#enabling-enhanced-subscription-recovery) in the Developer Dashboard for your beta app.
+1. Create a [beta version of your app](doc:channel-publishing-guide).
+2. [Create a test user](doc:test-users) and link it to your beta app.
+3. (Recommended) Integrate [Roku Pay push notifications](doc:push-notifications-jwt) in your backend system. This enables you to receive and verify subscription state changes in near real-time. Otherwise, you can verify changes by pulling transaction data via Roku Pay [validate-transaction API calls](doc:channel-publishing-guide).
+4. Enable [Enhanced Subscription Recovery](doc:settings) in the Developer Dashboard for your beta app.
 
-Once you have successfully tested Enhanced Subscription Recovery with the beta version of your app,  you can [publish the updated production version of your app](/docs/developer-program/publishing/channel-publishing-guide.md#updating-an-existing-channel) and then enable [Enhanced Subscription Recovery](/docs/developer-program/roku-pay/subscription-recovery/settings.md#enabling-enhanced-subscription-recovery) for it.
+Once you have successfully tested Enhanced Subscription Recovery with the beta version of your app,  you can [publish the updated production version of your app](doc:channel-publishing-guide) and then enable [Enhanced Subscription Recovery](doc:settings) for it.
 
 > You must publish the updated version of your **production** app before enabling Enhanced Subscription Recovery for it. If you do not do this, customers will be unable to purchase a subscription for your app until the on-hold period has elapsed.
 
@@ -48,7 +48,7 @@ To move subscriptions into different states and verify your subscription recover
 
    e. recovered (from in-grace or on-hold states)
 
-4. Use Roku Pay push notifications or Roku Pay [validate-transaction API calls](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines) to verify that your back-end system is receiving and processing subscription state changes.
+4. Use Roku Pay push notifications or Roku Pay [validate-transaction API calls](doc:channel-publishing-guide) to verify that your back-end system is receiving and processing subscription state changes.
 
 5. Void transactions before starting another subscription test with the same user and product. Do not reuse already-tested subscriptions; testing must be done on new signups.
 

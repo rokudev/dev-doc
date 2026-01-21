@@ -167,7 +167,7 @@ height="44"
 translation="[290,34]" />
 ```
 
-These are the same attributes set in all the other examples, only the location of the XML attributes has changed to your server. Now you need to set up a **Task** node to download the XML attributes file from your server (see [**Downloading Server Content**](/docs/developer-program/core-concepts/downloading-server-content.md) and [**Task**](/docs/references/scenegraph/control-nodes/task.md), and convert the attributes to an associative array, as was set up manually in the previous example:
+These are the same attributes set in all the other examples, only the location of the XML attributes has changed to your server. Now you need to set up a **Task** node to download the XML attributes file from your server (see [**Downloading Server Content**](doc:downloading-server-content) and [**Task**](doc:task), and convert the attributes to an associative array, as was set up manually in the previous example:
 
 **Task node to download server XML node configuration file**
 

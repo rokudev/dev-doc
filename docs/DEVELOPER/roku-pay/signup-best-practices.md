@@ -26,7 +26,7 @@ Implementing this streamlined user experience involves two different aspects: th
 
 The on-device sign-up workflow should adhere to the standards and best practices specified in this section. This includes the order of the screens, the copy used in the screens, and when customer information is sent to the app's backend system in order to check for an existing account and create a new one.
 
-For standards and best practices for designing the sign-in UI, see [Sign-in requirements and best practices](/docs/developer-program/roku-pay/signin-best-practices.md).
+For standards and best practices for designing the sign-in UI, see [Sign-in requirements and best practices](doc:signin-best-practices).
 
 ### Screen order
 
@@ -69,7 +69,7 @@ As previously described, the RFI screen enables customers to grant the app acces
 
 ## Integrations
 
-Roku offers a number of integrations that enable apps to provide customers with a seamless on-device sign-up experience. Implementing these integrations helps apps increase the number of successful subscriptions and purchases, and it ensures that your app complies with Roku's [app certification requirements related to purchasing](/docs/developer-program/certification/certification.md#2-purchases).
+Roku offers a number of integrations that enable apps to provide customers with a seamless on-device sign-up experience. Implementing these integrations helps apps increase the number of successful subscriptions and purchases, and it ensures that your app complies with Roku's [app certification requirements related to purchasing](doc:certification).
 
 Some integrations are required only if your app meets the stated streaming thresholds; however, implementing all of these integrations is recommended for all apps.
 
@@ -82,21 +82,21 @@ Some integrations are required only if your app meets the stated streaming thres
 
 ### On-device authentication
 
-On-device authentication enables customers to start a subscription from your on-device app UI. This integration uses the [ChannelStore APIs](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) to manage the on-device user experience of the purchase flow through Roku Pay. It includes a complete suite of APIs for implementing the on-device purchasing, entitlement, and authentication workflows.
+On-device authentication enables customers to start a subscription from your on-device app UI. This integration uses the [ChannelStore APIs](doc:channelstore) to manage the on-device user experience of the purchase flow through Roku Pay. It includes a complete suite of APIs for implementing the on-device purchasing, entitlement, and authentication workflows.
 
 ![on-device-auth-schematic](https://image.roku.com/ZHZscHItMTc2/on-device-auth-schematic-v2.jpg)
 
-For more information, click [here](/docs/developer-program/authentication/on-device-authentication.md#creating-new-roku-subscriptions-through-roku-pay).
+For more information, click [here](doc:on-device-authentication).
 
 > **Certification requirement**: All SVOD and TVOD apps (and other subscription services) must implement On-device authentication.
 
 ### On-device upgrade/downgrade
 
-On-device upgrade/downgrade enables customers to seamlessly switch plans directly from their devices, while making sure they are billed properly. Your app can then target different audiences with the best plan in order to maximize content monetization. This integration uses the [ChannelStore](/docs/references/scenegraph/control-nodes/channelstore.md#doorder) and [Roku Pay web service](/docs/developer-program/roku-pay/implementation/roku-web-service.md) APIs to handle upgrades/downgrades.
+On-device upgrade/downgrade enables customers to seamlessly switch plans directly from their devices, while making sure they are billed properly. Your app can then target different audiences with the best plan in order to maximize content monetization. This integration uses the [ChannelStore](doc:channelstore) and [Roku Pay web service](doc:roku-web-service) APIs to handle upgrades/downgrades.
 
 ![roku815px - subscription-plans](https://image.roku.com/ZHZscHItMTc2/subscription-plans-v4.jpg)
 
-For more information, see [On-device upgrade and downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md).
+For more information, see [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade).
 
 > **Certification requirement**: All SVOD and TVOD apps (and other subscription services) must implement On-device upgrade/downgrade.
 
@@ -106,7 +106,7 @@ Automatic account link automatically signs customers into your app when they act
 
 ![roku815px - automatic account link flow chart](https://image.roku.com/ZHZscHItMTc2/AAL.jpg)
 
-For more information, click [here](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md).
+For more information, click [here](doc:universal-authentication-protocol-for-single-sign-on).
 
 > **Certification requirement**: All apps requiring a user account to login and that have streamed more than an average of 5 million hours per month over the last three months must implement Automatic Account Link.  
 >
@@ -119,6 +119,6 @@ With abandonment tracking, your apps fires events upon loading each page within 
 
 ![roku815px - abandonment-tracking](https://image.roku.com/ZHZscHItMTc2/tracking-abandonment-v5.png)
 
-For more information, click [here](/docs/developer-program/roku-pay/implementation/tracking-signup-abandonment.md).
+For more information, click [here](doc:tracking-signup-abandonment).
 
 > **Certification requirement**: All subscription services that have streamed more than an average of 5 million hours per month over the last three months must implement abandonment tracking in their signup workflow. This requirement is also applicable to new subscription services projected to reach the specified streaming hour threshold shortly after launch.

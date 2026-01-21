@@ -16,42 +16,42 @@ next:
 
 ## About this lesson
 
-This lesson explains how to build an Episodes Screen that organizes television series into seasons and episodes. The left side of the screen displays the seasons; the right side of the screen lists the episodes in the selected season. Each episode typically includes a thumbnail, title, description, and release date. When an episode is selected, its [Details Screen](/videos/courses/rsg/details-screen.md) opens and the content can then be launched into playback. This enables viewers to quickly browse through different episodes in a series to find the one they want to watch.  
+This lesson explains how to build an Episodes Screen that organizes television series into seasons and episodes. The left side of the screen displays the seasons; the right side of the screen lists the episodes in the selected season. Each episode typically includes a thumbnail, title, description, and release date. When an episode is selected, its [Details Screen](doc:details-screen) opens and the content can then be launched into playback. This enables viewers to quickly browse through different episodes in a series to find the one they want to watch.  
 
-This lesson shows how to use new components such as the [MarkupList](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md) and further layer components to create more complex UIs. It shows how to parse the [content feed](/videos/courses/rsg/content-feed.md) to populate an episode screen with sequentially numbered seasons and the episodes that belong in those seasons. In addition, it explains how to create buttons for the different seasons in a series, and how to set the focus on an episode when a season is selected and switch the focus between the [grid](/videos/courses/rsg/grid-screen.md), episode, and [video](/videos/courses/rsg/video-player.md) screens.
+This lesson shows how to use new components such as the [MarkupList](doc:markuplist) and further layer components to create more complex UIs. It shows how to parse the [content feed](doc:content-feed) to populate an episode screen with sequentially numbered seasons and the episodes that belong in those seasons. In addition, it explains how to create buttons for the different seasons in a series, and how to set the focus on an episode when a season is selected and switch the focus between the [grid](doc:grid-screen), episode, and [video](doc:video-player) screens.
 
 ## Resources
 
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Episodes Screen sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/EpisodesScreen) | Download and review the code used in this lesson to create an episodes screen. |
-| [Sideloading  Roku apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) | Sideload and test the Episodes Screen app created in this lesson. |
+| [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Episodes Screen app created in this lesson. |
 
 ## Related
 
-[MarkupList node](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md)
+[MarkupList node](doc:markuplist)
 
-[LayoutGroup node](/docs/references/scenegraph/layout-group-nodes/layoutgroup.md)
+[LayoutGroup node](doc:layoutgroup)
 
-[Group node](/docs/references/scenegraph/layout-group-nodes/group.md)
+[Group node](doc:group)
 
-[Rectangle node](/docs/references/scenegraph/renderable-nodes/rectangle.md)
+[Rectangle node](doc:rectangle)
 
-[Label node](/docs/references/scenegraph/renderable-nodes/label.md)
+[Label node](doc:label)
 
-[Poster node](/docs/references/scenegraph/renderable-nodes/poster.md)
+[Poster node](doc:poster)
 
-[Content node](/docs/references/scenegraph/control-nodes/contentnode.md)  
+[Content node](doc:contentnode)  
 
-[Content meta data](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content meta data](doc:content-metadata)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[Event loops](/docs/developer-program/core-concepts/event-loops.md)
+[Event loops](doc:event-loops)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[ifSGNodeChildren interface](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
+[ifSGNodeChildren interface](doc:ifsgnodechildren)
 
 ## How to watch
 

@@ -84,7 +84,7 @@ End Sub
 
 ## Supported interfaces
 
-- [ifTextureRequest](/docs/references/brightscript/interfaces/iftexturerequest.md "ifTextureRequest ")                 
-- [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md "ifHttpAgent")           
+- [ifTextureRequest](doc:iftexturerequest)                 
+- [ifHttpAgent](doc:ifhttpagent)           
 
                

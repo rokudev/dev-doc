@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 The Audio node class plays streaming audio.
 
@@ -207,7 +207,7 @@ The Audio node class has no built-in visual UI, but you can build your own UI fo
 
 ## Data bindings
 
-See [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) for the required and optional play parameters, and descriptive information for audio playback. Set these parameters in a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node, and assign the ContentNode to the content field of the Audio node to apply the parameters to a particular audio content item.
+See [Content Meta-Data](doc:content-metadata) for the required and optional play parameters, and descriptive information for audio playback. Set these parameters in a [ContentNode](doc:contentnode) node, and assign the ContentNode to the content field of the Audio node to apply the parameters to a particular audio content item.
 
 For HTTPS access, note the following Content Meta-Data attributes:
 
@@ -216,7 +216,7 @@ For HTTPS access, note the following Content Meta-Data attributes:
 - `HttpHeaders`
 - `HttpSendClientCertificates`
 
-These attributes must be set to handle secure HTTP transfers of audio files. Note that this is a different HTTPS mechanism than used for other SceneGraph nodes as described in [roHttpAgent](/docs/references/brightscript/components/rohttpagent.md).
+These attributes must be set to handle secure HTTP transfers of audio files. Note that this is a different HTTPS mechanism than used for other SceneGraph nodes as described in [roHttpAgent](doc:rohttpagent).
 
 > Prior to Roku OS 7.2, each Audio and Video node created and configured an `HttpAgent` only when the first content was played in a given Audio or Video node instance. This sometimes meant that additional content would fail to play in the same node because headers, cookies, and certificates were not updated or correctly replaced from the new content record. Apps that are dependent upon this behavior will need to be updated to set the required data into the Content Meta-Data for each piece of content, or to programmatically set those values into the `HttpAgent` before playing each piece of content.
 
@@ -224,7 +224,7 @@ These attributes must be set to handle secure HTTP transfers of audio files. Not
 
 **Example application:** [AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample)
 
-[AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample) uses a [LabelList](/docs/references/scenegraph/list-and-grid-nodes/labellist.md) node to select from several spoken audio examples. The [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) for the example is found in the `pkg:/server/audiocontent.xml` file, read into a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node by the [Task](/docs/references/scenegraph/control-nodes/task.md) node `audiocontentreader.xml` component file.
+[AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample) uses a [LabelList](doc:labellist) node to select from several spoken audio examples. The [Content Meta-Data](doc:content-metadata) for the example is found in the `pkg:/server/audiocontent.xml` file, read into a [ContentNode](doc:contentnode) node by the [Task](doc:task) node `audiocontentreader.xml` component file.
 
 
 

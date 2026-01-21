@@ -19,7 +19,7 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roUtils](/docs/references/brightscript/components/routils.md "roUtils") | The **roUtils** component provides a unique namespace for a library of global functions, including the **DeepCopy()** function for copying objects and their nested objects and the **isSameObject()** function for checking whether two BrightScript objects refer to the same instance. |
+| [roUtils](doc:routils) | The **roUtils** component provides a unique namespace for a library of global functions, including the **DeepCopy()** function for copying objects and their nested objects and the **isSameObject()** function for checking whether two BrightScript objects refer to the same instance. |
 
 ### DeepCopy(data as Object) as Object
 

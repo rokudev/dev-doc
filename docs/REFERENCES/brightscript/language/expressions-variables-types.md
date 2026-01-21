@@ -26,7 +26,7 @@ functions or interfaces (appear after a ".")) have the following rules.
 * May be of any length
 
 * May not use a "reserved word" as the name (see [Reserved
-  Words](/docs/references/brightscript/language/reserved-words.md) for list of
+  Words](doc:reserved-words) for list of
   reserved words).
 
 * If a variable: may end with an optional type designator character ($
@@ -122,7 +122,7 @@ line:
 To comment out multiple lines, precede each of them with REM or
 apostrophe. To "block comment" big chunks of text, consider
 using [conditional
-compilation](/docs/references/brightscript/language/conditional-compilation.md).
+compilation](doc:conditional-compilation).
 
 ### In XML
 
@@ -626,7 +626,7 @@ are not automatically set to roArray.
 
 Developers can use optional chaining operators, "?.", "?@", "?[", and "?(", in their BrightScript code to access possibly invalid values. This enables developers to execute more concise, higher-performing code. The optional chaining operators are used to read the value of a property nested within a chain of connected objects without having to first check whether each reference in the chain does not return the BrightScript value of "invalid". If the expression to the left of the chaining operator is invalid, the operator to the right of the chaining operator is skipped.
 
-> The optional chaining operators feature is not supported on devices running firmware earlier than Roku OS 11.0 (doing so generates syntax errors). If the app does use the optional chaining operators feature, specify Roku OS 11.0 (or later) as the minimum version when [uploading your package file](/docs/developer-program/publishing/channel-publishing-guide.md#upload-a-package) in order to publish to the Streaming Store.
+> The optional chaining operators feature is not supported on devices running firmware earlier than Roku OS 11.0 (doing so generates syntax errors). If the app does use the optional chaining operators feature, specify Roku OS 11.0 (or later) as the minimum version when [uploading your package file](doc:channel-publishing-guide) in order to publish to the Streaming Store.
 
 #### Example
 

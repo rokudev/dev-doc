@@ -19,7 +19,7 @@ This lesson describes how to prepare your app to be published to the Roku Stream
 
 This lesson highlights how your Roku device test suite should not only include the current devices used by Roku for certification testing, but also contain as many supported devices as possible to optimize app performance for users across all Roku devices.
 
-It explains how you can write state-driven UI test cases for app purchasing, performance, deep linking, and other certification-related criteria using the [Roku Robot Framework Library](/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md), [Roku JavaScript library](/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md), another test framework, or a programming language such as Python, Java, or Go.  
+It explains how you can write state-driven UI test cases for app purchasing, performance, deep linking, and other certification-related criteria using the [Roku Robot Framework Library](doc:robot-framework-library), [Roku JavaScript library](doc:javascript-library), another test framework, or a programming language such as Python, Java, or Go.  
 
 It provides a quick demo of Roku's Static Analysis tool, which detects certification-related issues with your app's code and must be passed in order for your app to be published to the Streamimg Store. It also summarizes the Channel Behavior Analysis tool, which can be used for free and ad-based apps to verify that they meet certification criteria related to performance and deep linking. It briefly covers the BrightScript Profiler, which you can use to identify parts of your app's code where you can improve performance and memory usage.
 
@@ -90,17 +90,17 @@ In the demo of the Channel Behavior Analysis tool, the video uses the SceneGraph
 
 ## Related
 
-[Task node](/docs/references/scenegraph/control-nodes/task.md)
+[Task node](doc:task)
 
-[SceneGraph threads](/docs/developer-program/core-concepts/threads.md)
+[SceneGraph threads](doc:threads)
 
-[SceneGraph development tips for performance](/docs/developer-program/performance-guide/development-tips.md)
+[SceneGraph development tips for performance](doc:development-tips)
 
-[SceneGraph development tips for data management](/docs/developer-program/performance-guide/data-management.md)
+[SceneGraph development tips for data management](doc:data-management)
 
-[TimeGrid node](/docs/references/scenegraph/list-and-grid-nodes/timegrid.md)
+[TimeGrid node](doc:timegrid)
 
-[Designing for devices](/docs/developer-program/design/designing-for-device-capabilities.md)
+[Designing for devices](doc:designing-for-device-capabilities)
 
 ## How to watch
 

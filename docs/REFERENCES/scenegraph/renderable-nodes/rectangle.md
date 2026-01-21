@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
 The Rectangle node class draws a solid color rectangle with the top/left corner of the rectangle drawn at the origin of the node local coordinate system. Because the Rectangle node class extends the Group node class, it can have child nodes. For example, a Rectangle node might have a child Label node, resulting in text being drawn inside of a box.
 
@@ -63,7 +63,7 @@ Rotation of Rectangles is supported. On platforms that do not support OpenGL, on
 
 ## Fields
 
-[Fields](/docs/references/scenegraph/layout-group-nodes/group.md#fields "Fields") derived from the Group base class can also be used.
+[Fields](doc:group) derived from the Group base class can also be used.
 
 | Field                  | Type                                          | Default                                   | Access Permission | Description           |
 | ---------------------- | --------------------------------------------- | ----------------------------------------- | ----------------- | --------------------- |

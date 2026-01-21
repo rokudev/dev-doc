@@ -71,7 +71,7 @@ Actions requiring background progress longer than 3 seconds should display the a
 
 Always test your app on the low end platforms (Roku Express = Littlefield) to ensure acceptable performance (It will then run great on a high end platform).
 
-[SceneGraph performance guide](/docs/developer-program/performance-guide/development-tips.md) provides more in-depth technical advice on how to build a smooth, lag-free experience for users across all Roku devices.  
+[SceneGraph performance guide](doc:development-tips) provides more in-depth technical advice on how to build a smooth, lag-free experience for users across all Roku devices.  
 
 
 ### 6. Properly advertise your app
@@ -102,14 +102,14 @@ Always test your app on the low end platforms (Roku Express = Littlefield) to en
 ### 8. Make app sign-up easy
 
 - If installing your app also requires users to go through a sign up process, make it as short and easy as possible.
-- [Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md) increases successful sign-ups by letting users sign-up by a single button click.
+- [Roku Pay](doc:overview) increases successful sign-ups by letting users sign-up by a single button click.
 - If you have to collect additional user information other than what is necessary for signing up, it is highly recommended to not ask that during the sign-up process. Collect additional information via a follow-up email.
 - Most additional sign-up screen that ask for date of birth, gender, any screen with an on-screen keyboard, etc., result in significant user drop-out and is not recommended.  
 
 
 ### 9. Properly monetize your app
 
-- If you are monetizing your app with video ads, be sure to integrate it with the Roku Advertising Framework (RAF). RAF is a certification requirement for ad-supported apps. You can refer to the [RAF documentation](/docs/developer-program/advertising/roku-advertising-framework.md) for more information.
+- If you are monetizing your app with video ads, be sure to integrate it with the Roku Advertising Framework (RAF). RAF is a certification requirement for ad-supported apps. You can refer to the [RAF documentation](doc:roku-advertising-framework) for more information.
 - RAF ensures that all ads across your app have a consistent experience and hence can drive higher user engagement.
 - RAF supports a privacy compliant Roku ID for advertisers that enables advanced targeting and frequency capping.
 - RAF also supports advanced and immersive ad formats that many advertisers prefer to use.  

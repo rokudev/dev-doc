@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Panel**](/docs/references/scenegraph/sliding-panels-nodes/panel.md)
+Extends [**Panel**](doc:panel)
 
 The GridPanel node class allows you to easily create a Panel that adheres to the Roku layout and behavior for panels that contain a PosterGrid or MarkupGrid node. The GridPanel node class provides the following functionality:
 

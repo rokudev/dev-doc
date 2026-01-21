@@ -31,7 +31,7 @@ The webinar featured a demo showing how to use the tool to monitor the memory, C
 
 ## Related documentation
 
-- [Roku Resource Monitor user's guide](/docs/developer-program/dev-tools/resource-monitor.md)
-- [Roku Resource Monitor session file specification](/docs/developer-program/dev-tools/rrm-file-format.md)
-- [ECP command reference](/docs/developer-program/debugging/external-control-api.md)
-- [BrightScript Profiler user's guide](/docs/developer-program/dev-tools/brightscript-profiler.md)
+- [Roku Resource Monitor user's guide](doc:resource-monitor)
+- [Roku Resource Monitor session file specification](doc:rrm-file-format)
+- [ECP command reference](doc:external-control-api)
+- [BrightScript Profiler user's guide](doc:brightscript-profiler)

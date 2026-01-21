@@ -16,7 +16,7 @@ next:
 
 ## Overview
 
-The Streaming Store is where Roku users can search, discover, and download [public channels](/docs/developer-program/publishing/channel-publishing-guide.md#public-channels) on the Roku Platform.
+The Streaming Store is where Roku users can search, discover, and download [public channels](doc:channel-publishing-guide) on the Roku Platform.
 
 ## What is the Streaming Store?
 
@@ -24,7 +24,7 @@ The Streaming Store is the “home” for all public apps on the Roku Platform. 
 
 Essentially, the Streaming Store can be thought of as the Roku app store.
 
-All public apps have been [reviewed and certified](/docs/developer-program/certification/certification.md) for quality and functionality. This means that users can expect an app downloaded from the Streaming Store to be of a high standard.
+All public apps have been [reviewed and certified](doc:certification) for quality and functionality. This means that users can expect an app downloaded from the Streaming Store to be of a high standard.
 
 ## Accessing the Streaming Store
 

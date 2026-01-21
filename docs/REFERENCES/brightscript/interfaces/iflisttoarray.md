@@ -16,8 +16,8 @@ next:
 
 | Name      | Description |
 | --------- | ----------- |
-| [roList](/docs/references/brightscript/components/rolist.md "roList") | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members |
-| [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList")| Contains a list of roXML objects |
+| [roList](doc:rolist) | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members |
+| [roXMLList](doc:roxmllist)| Contains a list of roXML objects |
 
 
 ## Supported methods

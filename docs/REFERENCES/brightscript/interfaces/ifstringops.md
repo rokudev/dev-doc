@@ -17,12 +17,12 @@ next:
 
 | Name         | Description                                                           |
 |--------------|-----------------------------------------------------------------------|
-|[roString](/docs/references/brightscript/components/rostring.md "roString")      | Object equivalent for intrinsic type 'String'                                                                      |
+|[roString](doc:rostring)      | Object equivalent for intrinsic type 'String'                                                                      |
 
 
 ## Supported methods
 
-&gt; ifStringOps provides various methods for manipulating string objects. Some of these duplicate functionality also available in the [global string functions](/docs/references/brightscript/language/brightscript-language-reference.md "global string functions").
+&gt; ifStringOps provides various methods for manipulating string objects. Some of these duplicate functionality also available in the [global string functions](doc:brightscript-language-reference).
 
 &gt; Note that the ifStringOps string indices start at 0; they do not start at 1 like global string functions.
 
@@ -32,7 +32,7 @@ next:
 
 Sets the roString object to the specified first set of characters of the provided string.
 
-The [ifString interface](/docs/references/brightscript/interfaces/ifstring.md) includes a similar function, [ifString.SetString()](/docs/references/brightscript/interfaces/ifstring.md#setstringvalue-as-string-as-void), which does not take a length parameter.
+The [ifString interface](doc:ifstring) includes a similar function, [ifString.SetString()](doc:ifstring), which does not take a length parameter.
 
 #### Parameters
 
@@ -383,7 +383,7 @@ REM "%E2%80%A2"
 
 URL decodes the specified string per [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt "RFC 3986") and returns the decoded string.
 
-The functionality is essentially the same as [roUrlTransfer](/docs/references/brightscript/components/rourltransfer.md). Unescape, but without the overhead of creating a roUrlTransfer object.
+The functionality is essentially the same as [roUrlTransfer](doc:rourltransfer). Unescape, but without the overhead of creating a roUrlTransfer object.
 
 If the escaped string includes invalid escape sequences, the decode will fail and an empty string will be returned.
 
@@ -545,9 +545,9 @@ s = "Roku Rocks"
 
 #### Description
 
-Returns a format conversion using the specified printf-like [format string](/docs/references/brightscript/language/global-string-functions.md#format-strings) and matching dynamic parameters.
+Returns a format conversion using the specified printf-like [format string](doc:global-string-functions) and matching dynamic parameters.
 
-The parameters must match the format string's placeholders in count and expected data type or an [error](/docs/references/brightscript/language/error-handling.md) may occur. 
+The parameters must match the format string's placeholders in count and expected data type or an [error](doc:error-handling) may occur. 
 
 #### Return Value
 

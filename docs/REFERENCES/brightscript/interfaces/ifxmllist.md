@@ -16,7 +16,7 @@ next:
 
 | Name      | Description |
 | --------- | ----------- |
-| [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList") | Contains a list of roXML objects |
+| [roXMLList](doc:roxmllist) | Contains a list of roXML objects |
 
 
 ## Supported methods
@@ -89,7 +89,7 @@ The object string.
 
 If the list contains exactly one item, this function returns the child elements of that item. Otherwise it returns invalid. 
 
-> This function does not return the items contained in the roXMLList. Use [ifList](/docs/references/brightscript/interfaces/iflist.md "ifList") functions to access those items.
+> This function does not return the items contained in the roXMLList. Use [ifList](doc:iflist) functions to access those items.
 
 #### Return Value
 

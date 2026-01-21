@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StandardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**")
+Extends [StandardDialog](doc:standard-dialog)
 
-The **StandardPinPadDialog** node enables text and voice entry of numeric characters—typically, short numeric PIN codes. It is similar to the legacy [PinDialog](/docs/references/scenegraph/dialog-nodes/pindialog.md) node, but includes additional voice entry of the numeric digits. This additional functionality is provided through the node's internal DynamicPinPad and VoiceTextEditBox nodes.
+The **StandardPinPadDialog** node enables text and voice entry of numeric characters—typically, short numeric PIN codes. It is similar to the legacy [PinDialog](doc:pindialog) node, but includes additional voice entry of the numeric digits. This additional functionality is provided through the node's internal DynamicPinPad and VoiceTextEditBox nodes.
 
 ![roku815px - pin-pad-dialog](https://image.roku.com/ZHZscHItMTc2/pin-pad-dialog.jpg)
 

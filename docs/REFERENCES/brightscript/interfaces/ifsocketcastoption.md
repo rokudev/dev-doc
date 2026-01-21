@@ -16,11 +16,11 @@ next:
 
 | Name             | Description                                                                              |
 | ---------------- | ---------------------------------------------------------------------------------------- |
-| [roDataGramSocket](/docs/references/brightscript/components/rodatagramsocket.md "roDataGramSocket") | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets |
+| [roDataGramSocket](doc:rodatagramsocket) | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets |
 
 ## Supported methods
 
-Only the [roDataGramSocket](/docs/references/brightscript/components/rodatagramsocket.md "roDataGramSocket") component supports the ifSocketCastOption multicast interface. The [roStreamSocket](/docs/references/brightscript/components/rostreamsocket.md "roStreamSocket") component does not support multicast.
+Only the [roDataGramSocket](doc:rodatagramsocket) component supports the ifSocketCastOption multicast interface. The [roStreamSocket](doc:rostreamsocket) component does not support multicast.
 
 ### GetBroadcast() as Boolean
 
@@ -58,7 +58,7 @@ Joins a specific multicast group.
 
 | Name      | Type   | Description                                                  |
 | --------- | ------ | ------------------------------------------------------------ |
-| ipAddress | Object | An [roSocketAddress](/docs/references/brightscript/components/rostreamsocket.md "roSocketAddress") representing the group to be joined. IPV4 multicast addresses are in the range of 224.0.0.0 through 239.255.255.255. |
+| ipAddress | Object | An [roSocketAddress](doc:rostreamsocket) representing the group to be joined. IPV4 multicast addresses are in the range of 224.0.0.0 through 239.255.255.255. |
 
 #### Return Value
 
@@ -74,7 +74,7 @@ Drops out of a specific multicast group.
 
 | Name      | Type   | Description                                                  |
 | --------- | ------ | ------------------------------------------------------------ |
-| ipAddress | Object | An [roSocketAddress](/docs/references/brightscript/components/rostreamsocket.md "roSocketAddress") representing the group to leave. IPV4 multicast addresses are in the range of 224.0.0.0 through 239.255.255.255. |
+| ipAddress | Object | An [roSocketAddress](doc:rostreamsocket) representing the group to leave. IPV4 multicast addresses are in the range of 224.0.0.0 through 239.255.255.255. |
 
 #### Return Value
 

@@ -18,7 +18,7 @@ next:
 
 The Roku Channel is committed to providing the highest quality content and values its Partners for helping to achieve this goal. The Roku Originals Post Production Delivery Specifications outline the best practices for the Partner at this time. This document and the requirements are subject to change at Roku’s sole discretion. 
 
-The specifications below encompass deliverables for Roku Originals Post Production, as they relate to VOD delivery of Live Events/Series. It is not comprehensive of all deliverables that may be required as part of your agreement. Please continue to utilize the [The Roku Channel Ingest Specifications](/trc-docs/video-on-demand/ingest-specifications.md) document for all other areas noted below: 
+The specifications below encompass deliverables for Roku Originals Post Production, as they relate to VOD delivery of Live Events/Series. It is not comprehensive of all deliverables that may be required as part of your agreement. Please continue to utilize the [The Roku Channel Ingest Specifications](doc:ingest-specifications) document for all other areas noted below: 
 
 - Ad Policy
 - Kids Directed Content Policy 
@@ -198,7 +198,7 @@ For the Final Texted Masters, all audio should be contained within the delivered
 
 #### 4.3.4 VOD texted video masters
 
-The formatting requested below is a subset of [The Roku Channel Ingest Specifications](/trc-docs/video-on-demand/ingest-specifications.md). 
+The formatting requested below is a subset of [The Roku Channel Ingest Specifications](doc:ingest-specifications). 
 
 
 <table>
@@ -428,7 +428,7 @@ The required details will include, but are not limited to, the following:
 
 Please note that air order and episode titles must be a decision made with your Content Executive. The episode titles must be creatively driven (e.g. not “Episode 1”) and should be written with the show writers or receive writer approval. <u>Episode Titles should be locked after Rough Cut 1s</u>.
 
-Please ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](/trc-docs/video-on-demand/ingest-specifications.md#roku-excel-metadata-guidelines-and-templates).
+Please ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](doc:ingest-specifications).
 
 #### 4.6.2 Credits documents
 

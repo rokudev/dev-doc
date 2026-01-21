@@ -68,7 +68,7 @@ This visualization compares the number of rebuffers per hour to the total hours 
 
 ## Viewership Details table
 
-The Viewership Details table shows the number of visits, streams, streaming hours and rebuffers per streaming hour by Roku device. The hardware is identified by the Roku codename. The Roku model number is provided next to the hardware name, see [Roku Models and Features](/docs/specs/hardware.md#TheRokuChannelDeveloperProgram-RokuModelsRokuModelsandFeatures) for the list of hardware and model numbers.
+The Viewership Details table shows the number of visits, streams, streaming hours and rebuffers per streaming hour by Roku device. The hardware is identified by the Roku codename. The Roku model number is provided next to the hardware name, see [Roku Models and Features](doc:hardware) for the list of hardware and model numbers.
 
 Click a column header to sort by that column. Click on the "more" icon (three dots) on the far right side of the name bar on this table to download it. The download includes additional product details along with the table.
 

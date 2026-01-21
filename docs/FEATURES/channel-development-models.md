@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Once you've begun [hosting your content on the web](/docs/features/how-channels-work.md), you'll next need to build your app from the ground up using the [Roku SDK](/docs/developer-program/getting-started/roku-dev-prog.md). The Roku SDK offers nearly endless UI and feature customization options, a suite of development tools, and a robust set of APIs for publishers. The Roku developer APIs enable you to build apps that include the following features:
+Once you've begun [hosting your content on the web](doc:how-channels-work), you'll next need to build your app from the ground up using the [Roku SDK](doc:roku-dev-prog). The Roku SDK offers nearly endless UI and feature customization options, a suite of development tools, and a robust set of APIs for publishers. The Roku developer APIs enable you to build apps that include the following features:
 
 * **Consistent cross-platform UI** — You have complete control to mirror the UI of your application on other devices, creating a consistent experience for your end-users.
 

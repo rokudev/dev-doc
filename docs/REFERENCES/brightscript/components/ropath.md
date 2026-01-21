@@ -15,7 +15,7 @@ next:
 
 The roPath component provides developers an easy way to create valid file system paths. 
 
-The roPath component is a convenience class that implements [ifString](/docs/references/brightscript/interfaces/ifstring.md "ifString") while providing additional validation and path inspection functionality. See [File System](/docs/developer-program/getting-started/architecture/file-system.md "File System") for more information about valid path names.
+The roPath component is a convenience class that implements [ifString](doc:ifstring) while providing additional validation and path inspection functionality. See [File System](doc:file-system) for more information about valid path names.
 
 This object is created with a string that represents the initial path:
 
@@ -34,5 +34,5 @@ if parts.extension = ".bmp" then print "this is a bitmap file"
 
 ## Supported interfaces
 
-- [ifPath](/docs/references/brightscript/interfaces/ifpath.md "ifPath")
-- [ifString](/docs/references/brightscript/interfaces/ifstring.md "ifString")
+- [ifPath](doc:ifpath)
+- [ifString](doc:ifstring)

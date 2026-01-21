@@ -12,7 +12,7 @@ next:
 ---
 
 
-*The following contains details for content tags and metadata related to media ingest. Please see [ingest specifications](/trc-docs/video-on-demand/ingest-specifications.md#metadata-updates-mdu-and-file-replacements) for more.*
+*The following contains details for content tags and metadata related to media ingest. Please see [ingest specifications](doc:ingest-specifications) for more.*
 
 We are often asked - how does the content appear on the Roku platform? The answer is almost always with metadata.
 

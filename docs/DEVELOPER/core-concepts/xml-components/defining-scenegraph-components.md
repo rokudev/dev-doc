@@ -22,7 +22,7 @@ SceneGraph component as needed.
 ## \<component\> XML element
 
 The component XML files consist of a
-[**\<component\>**](/docs/references/scenegraph/xml-elements/component.md) XML element, which contains
+[**\<component\>**](doc:component) XML element, which contains
 the other XML elements that can further define the component. The
 **\<component\>** element has two required attributes:
 
@@ -44,7 +44,7 @@ new characteristics you declare and define for the new component.
 
 Roku SceneGraph components allow (but do not enforce), encapsulation of
 internal component behavior, by providing an
-[**\<interface\>**](/docs/references/scenegraph/xml-elements/interface.md) XML element. The **\<interface\>** element can contain several **\<field\>** elements,
+[**\<interface\>**](doc:interface) XML element. The **\<interface\>** element can contain several **\<field\>** elements,
 which define custom fields for the components. These custom fields can
 be written and read by the application in the same way as the fields of
 the built-in node classes. This allows the application to set a field
@@ -56,7 +56,7 @@ internal fields of the component.
 
 Component behavior is controlled using
 BrightScript in a
-[**\<script\>**](/docs/references/scenegraph/xml-elements/script.md) XML element. The **\<script\>**
+[**\<script\>**](doc:script) XML element. The **\<script\>**
 element provides two methods of including BrightScript code in the
 component:
 
@@ -68,11 +68,11 @@ component:
 ## \<children\> XML Element
 
 You can create the component SceneGraph nodes entirely in BrightScript
-in the [**\<script\>**](/docs/references/scenegraph/xml-elements/script.md) element. But Roku SceneGraph also supplies a
-[**\<children\>**](/docs/references/scenegraph/xml-elements/children.md) XML element to allow nodes to
+in the [**\<script\>**](doc:script) element. But Roku SceneGraph also supplies a
+[**\<children\>**](doc:children) XML element to allow nodes to
 be defined in XML markup. These SceneGraph nodes are then created
 automatically when the component is created (see [**Component
-Initialization Order**](/docs/developer-program/core-concepts/xml-components/component-initialization-order.md) for
+Initialization Order**](doc:component-initialization-order) for
 important details on this process).
 
 Defining SceneGraph nodes in the **\<children\>** element is
@@ -81,7 +81,7 @@ number and types of nodes, rather than a number of different node types
 that may be created (and removed) dynamically as part of component
 operation. Field values of the nodes declared and defined in the
 **\<children\>** element can still be set dynamically in the
-[**\<script\>**](/docs/references/scenegraph/xml-elements/script.md) element, by first using the
+[**\<script\>**](doc:script) element, by first using the
 **ifSGNodeDict** **`findNode()`** method to find the object reference.
 
 There are some limitations in defining node field values in the
@@ -93,21 +93,21 @@ or otherwise control the operation of certain nodes, such as media
 playback or animation nodes, by setting the values of those types of
 fields in the XML markup definition of the node in the **\<children\>**
 element. Rather you should find the object reference using the
-**ifSGNodeDict** **`findNode()`** method in the [**\<script\>**](/docs/references/scenegraph/xml-elements/script.md) element,
+**ifSGNodeDict** **`findNode()`** method in the [**\<script\>**](doc:script) element,
 then set those fields there, as part of your scripting to control
 component behavior.
 
 ## Node Definition Examples
 
 A typical XML file will include one or more SceneGraph node elements
-inside the [**\<component\>**](/docs/references/scenegraph/xml-elements/component.md) element. These nodes are instantiated when
+inside the [**\<component\>**](doc:component) element. These nodes are instantiated when
 the XML is parsed, and added as children of the XML
 **\<component\> **element top-level node.
 
 Nodes are defined using an XML element that matches the node type.
  Field values of the node are specified as attributes of the node
 element. The following example shows how to define a
-[**\<Poster\>**](/docs/references/scenegraph/renderable-nodes/poster.md) node, and set its `id`, `uri` and `translation`
+[**\<Poster\>**](doc:poster) node, and set its `id`, `uri` and `translation`
 fields.
 
 **Defining a Node in XML**
@@ -145,8 +145,8 @@ of the node. In a few cases, nodes defined in the body of another node
 serve a special purpose, and should not be added as children. In that
 case, the nodes defined in the body should have an XML `role` attribute
 specified to indicate which field of the parent node should be set to
-their value. For example, a [**\<Label\>**](/docs/references/scenegraph/label-nodes/label.md) node could have a
-[**\<Font\>**](/docs/references/scenegraph/typographic-nodes/font.md) node defined in its body. If you specify the role
+their value. For example, a [**\<Label\>**](doc:label) node could have a
+[**\<Font\>**](doc:font) node defined in its body. If you specify the role
 attribute as `font` for the **\<Font\> **node, it causes the
 parent **\<Label\> **node `font` field to be set to the
 **\<Font\> **node.
@@ -183,7 +183,7 @@ follows:
 Roku SceneGraph includes a wide variety of node classes that are built
 into the SceneGraph API. These built-in node classes are described
 in the [**SceneGraph XML
-Reference**](/docs/developer-program/core-concepts/scenegraph-xml/overview.md).
+Reference**](doc:overview).
 
 But Roku SceneGraph allows you to extend these built-in node classes
 with your own custom node classes, with unique fields, appearance,
@@ -193,8 +193,8 @@ needed for your application.
 
 For example, the starting point of any SceneGraph application is a
 custom node class extended from one of the built-in **Scene** node
-classes, such as [**Scene**](/docs/references/scenegraph/scene.md) or
-[**OverhangPanelSetScene**](/docs/references/scenegraph/sliding-panels-nodes/overhangpanelsetscene.md). These
+classes, such as [**Scene**](doc:scene) or
+[**OverhangPanelSetScene**](doc:overhangpanelsetscene). These
 **Scene** node classes are *abstract* node classes, you *must* extend
 them in order to use them. So every SceneGraph application *must*
 include an XML component file in the following format:
@@ -210,7 +210,7 @@ customized_scene_definitions
 
 The built-in abstract **Scene** node is extended by setting the `name`
 and `extends` attributes of the
-[**\<component\>**](/docs/references/scenegraph/xml-elements/component.md) XML element. After this
+[**\<component\>**](doc:component) XML element. After this
 custom extended **Scene** node is defined in an XML component file in
 the `pkg:/components` directory, you can then start the application by
 creating the custom **Scene** node component in the `pkg:/source`
@@ -223,7 +223,7 @@ Likewise, you define custom components for your entire application that
 are created and added to your SceneGraph node tree as needed. For
 example, you could add a custom scrollable row list component to your
 application by extending the built-in
-[**RowList**](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md) node class component in an XML
+[**RowList**](doc:rowlist) node class component in an XML
 component file:
 
 ~~~
@@ -260,7 +260,7 @@ custom row list to the application **Scene** component using the
 ~~~
 
 Or you can add the custom component using XML markup in the
-[**\<children\>**](/docs/references/scenegraph/xml-elements/children.md) element of the XML component
+[**\<children\>**](doc:children) element of the XML component
 file:
 
 ~~~

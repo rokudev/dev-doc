@@ -16,7 +16,7 @@ next:
 
 | Name            | Description                               |
 | --------------- | ----------------------------------------- |
-| [roAudioMetadata](/docs/references/brightscript/components/roaudiometadata.md "roAudioMetadata") | This component provides developers access to audio file metadata included in many audio files |
+| [roAudioMetadata](doc:roaudiometadata) | This component provides developers access to audio file metadata included in many audio files |
 
 
 ## Supported methods

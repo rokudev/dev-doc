@@ -12,11 +12,11 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**") 
+Extends [**Group**](doc:group) 
 
-The MiniKeyboard node class allows a user to enter a string of letters and numerals. The string entered is displayed in a [TextEditBox](/docs/references/scenegraph/widget-nodes/texteditbox.md "TextEditBox") node that is part of the MiniKeyboard node.
+The MiniKeyboard node class allows a user to enter a string of letters and numerals. The string entered is displayed in a [TextEditBox](doc:texteditbox) node that is part of the MiniKeyboard node.
 
-The MiniKeyboard node is intended for users to enter a simple case-insensitive string consisting of the letters A-Z and the numerals 0-9. It is intended for use in functions such as "Search", where the entered string need not support general case-sensitive text entry. For general text entry, use a [Keyboard](/docs/references/scenegraph/widget-nodes/keyboard.md "Keyboard") node instead.
+The MiniKeyboard node is intended for users to enter a simple case-insensitive string consisting of the letters A-Z and the numerals 0-9. It is intended for use in functions such as "Search", where the entered string need not support general case-sensitive text entry. For general text entry, use a [Keyboard](doc:keyboard) node instead.
 
 The MiniKeyboard node must have the key focus in order to work properly.
 

@@ -16,7 +16,7 @@ next:
 
 | Name         | Description |
 | ------------ | ----------- |
-| [roXMLElement](/docs/references/brightscript/components/roxmlelement.md "roXMLElement") | roXMLElement is used to contain an XML tree |
+| [roXMLElement](doc:roxmlelement) | roXMLElement is used to contain an XML tree |
 
 
 ## Supported methods
@@ -41,7 +41,7 @@ A flag indicating whether the operation was successful. In that case, other meth
 
 #### Description
 
-Returns the body of the element. If the element contains child elements, `GetBody()` returns an [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList") representing those elements, like GetChildElements(). If there are no children but the element contains text, `GetBody()` returns an [roString](/docs/references/brightscript/components/rostring.md "roString") like `GetText()`. If the element is empty, `GetBody()` returns invalid.
+Returns the body of the element. If the element contains child elements, `GetBody()` returns an [roXMLList](doc:roxmllist) representing those elements, like GetChildElements(). If there are no children but the element contains text, `GetBody()` returns an [roString](doc:rostring) like `GetText()`. If the element is empty, `GetBody()` returns invalid.
 
 #### Return Value
 
@@ -81,7 +81,7 @@ The text in the element.
 
 #### Description
 
-If this element contains any child elements, this method returns an [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList") representing those elements. If there are no child elements, returns invalid. 
+If this element contains any child elements, this method returns an [roXMLList](doc:roxmllist) representing those elements. If there are no child elements, returns invalid. 
 
 This function won't handle cases of mixed XML content, i.e., content with both child elements and text such as: Child TextMore Text. In this case `GetChildElements()` called with the top level as an argument would return an roXMLList containing only one item corresponding to the element. The body text "More Text" would be lost. To handle mixed content cases, use `GetChildNodes()`.
 
@@ -93,7 +93,7 @@ An element list.
 
 #### Description
 
-If this element contains any child elements, this method returns an [roList](/docs/references/brightscript/components/rolist.md "roList") representing those elements. If there are no child elements, returns invalid. The difference between this function and `GetChildElements()` is that `GetChildNodes()` handles the case of mixed XML content, i.e., content with both child elements and text such as: Child TextMore Text. In this case `GetChildNodes()` called with the top level as an argument would return an roList with two elements. The first element would be an `roXMLElement` containing the information about. The second would be an `roString` containing "More Text".
+If this element contains any child elements, this method returns an [roList](doc:rolist) representing those elements. If there are no child elements, returns invalid. The difference between this function and `GetChildElements()` is that `GetChildNodes()` handles the case of mixed XML content, i.e., content with both child elements and text such as: Child TextMore Text. In this case `GetChildNodes()` called with the top level as an argument would return an roList with two elements. The first element would be an `roXMLElement` containing the information about. The second would be an `roString` containing "More Text".
 
 #### Return Value
 
@@ -103,7 +103,7 @@ An element list.
 
 #### Description
 
-Returns an [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList") representing all child elements of this element whose case-sensitive name is specified. If only one element matches the name, an roXMLList containing one element is returned. If no elements match, an empty roXMLList is returned.
+Returns an [roXMLList](doc:roxmllist) representing all child elements of this element whose case-sensitive name is specified. If only one element matches the name, an roXMLList containing one element is returned. If no elements match, an empty roXMLList is returned.
 
 #### Parameters
 
@@ -119,7 +119,7 @@ An element list.
 
 #### Description
 
-Returns an [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList") representing all child elements of this element whose case-insensitive name is specified. If only one element matches the name, an roXMLList containing one element is returned. If no elements match, an empty roXMLList is returned.
+Returns an [roXMLList](doc:roxmllist) representing all child elements of this element whose case-insensitive name is specified. If only one element matches the name, an roXMLList containing one element is returned. If no elements match, an empty roXMLList is returned.
 
 #### Parameters
 

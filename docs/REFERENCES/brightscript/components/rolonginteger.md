@@ -20,5 +20,5 @@ roLongInteger is the object name corresponding to the intrinsic LongInteger obje
 
 ## Supported interfaces
 
-- [ifLongInt](/docs/references/brightscript/interfaces/iflongint.md "ifLongInt")
-- [ifToStr](/docs/references/brightscript/interfaces/iftostr.md "ifToStr")
+- [ifLongInt](doc:iflongint)
+- [ifToStr](doc:iftostr)

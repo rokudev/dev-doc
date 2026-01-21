@@ -15,7 +15,7 @@ next:
 
 OTT providers can use the TimeGrid node to implement an Electronic Program Guide (EPG) in their apps. In an EPG, channels are represented as horizontal rows, one for each channel. Each row has an channel name on the left, and a set of programs airing on that app to the right. The size of each program depends on its duration. One of these programs has a remote control focus highlight indicator on it, and this highlight can be moved around using the remote control (as long as the TimeGrid node has remote control focus).
 
-The TimeGrid node also features an alternative Now/Next view that lists only the programs currently airing and airing next, with their respective start times. See [Now/Next mode](/docs/references/scenegraph/list-and-grid-nodes/timegrid.md#nownext-mode) for more information.
+The TimeGrid node also features an alternative Now/Next view that lists only the programs currently airing and airing next, with their respective start times. See [Now/Next mode](doc:timegrid) for more information.
 
 ![roku815px - time grid](https://image.roku.com/ZHZscHItMTc2/epg-standard.jpg "time grid")
 
@@ -521,7 +521,7 @@ The following fields are used to enable Now/Next mode, configure the Now and Nex
 
 ## Measuring EPG launch times
 
-Apps with an EPG must fire signal beacons to measure the EPG launch time. Beacons must be fired when the user initiates a keypress to display the EPG (**EPGLaunchInitiate**) and when the EPG is fully rendered and navigable (**EPGLaunchComplete**). See [Measuring Channel Performance](/docs/developer-program/performance-guide/measuring-channel-performance.md) for more information.
+Apps with an EPG must fire signal beacons to measure the EPG launch time. Beacons must be fired when the user initiates a keypress to display the EPG (**EPGLaunchInitiate**) and when the EPG is fully rendered and navigable (**EPGLaunchComplete**). See [Measuring Channel Performance](doc:measuring-channel-performance) for more information.
 
 ## Sample app
 

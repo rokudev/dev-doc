@@ -97,7 +97,7 @@ Returns a substring of *s* with length *n* and starting at position *p*.
 n may be omitted, in which case the string starting at p and ending at
 the end of the string is returned.
 
-Unlike the [ifStringOps.Mid()](/docs/references/brightscript/interfaces/ifstringops.md#midstart_index-as-integer-as-string) method, the first character in the string is
+Unlike the [ifStringOps.Mid()](doc:ifstringops) method, the first character in the string is
 position 1.
 
 ~~~ 
@@ -127,10 +127,10 @@ value string as a sign placeholder.
 
 (For integer values, *value*.ToStr() may be used instead if a leading
 blank for non-negative numbers is not desired. See
-[ifIntOpts](/docs/references/brightscript/interfaces/ifintops.md) in [roInt](/docs/references/brightscript/components/roint.md)).
+[ifIntOpts](doc:ifintops) in [roInt](doc:roint)).
 
-See the [ifStringOps](/docs/references/brightscript/interfaces/ifstringops.md) interface in
-[roString](/docs/references/brightscript/components/rostring.md) for the corresponding inverse /
+See the [ifStringOps](doc:ifstringops) interface in
+[roString](doc:rostring) for the corresponding inverse /
 string-to-value functions ToInt() and ToFloat().
 
 ## StrI(value as Integer, radix as Integer) as String

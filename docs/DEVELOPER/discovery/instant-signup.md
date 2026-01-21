@@ -19,7 +19,7 @@ Offers may include free trials, promotional pricing, and standard pricing (the u
 - Free trials and promotions are automatically converted to full paid subscriptions by Roku Pay.
 - Standard pricing may only be offered if the app does not offer free trials or promotional pricing on-device or across other comparable platforms.
 
-> SVOD apps that have streamed more than an average of 10 million hours per month over the last three months (and new SVOD apps expected to meet the threshold shortly after launch) must participate in Roku’s Instant Signup program to pass [certification](/docs/developer-program/certification/certification.md#2-purchases).
+> SVOD apps that have streamed more than an average of 10 million hours per month over the last three months (and new SVOD apps expected to meet the threshold shortly after launch) must participate in Roku’s Instant Signup program to pass [certification](doc:certification).
 >
 > Apps' ISU integration must include offers for lapsed and canceled subscribers. This requirement is applicable to apps with existing ISU integrations. 
 >
@@ -37,9 +37,9 @@ Based on the answers to the survey questions, the customer's eligibility, and ot
 
 > Once an offer is presented to a customer and they select it and confirm the transaction, apps must honor the terms of the offer, regardless if the customer is actually eligible for the offer. To determine customers' offer eligibility, you must use the [SHA-512 email hash](#using-email-hashes-to-determine-offer-eligibility) passed in the [products API](#implementing-products-api) calls.
 
-Once the customer confirms the transaction, the publisher's account endpoint receives the customer's information via a [push notification](/docs/developer-program/roku-pay/implementation/push-notifications.md#sale) from the Roku Pay web services. This enables the publisher to create a user account in their backend system for the customer automatically.
+Once the customer confirms the transaction, the publisher's account endpoint receives the customer's information via a [push notification](doc:push-notifications) from the Roku Pay web services. This enables the publisher to create a user account in their backend system for the customer automatically.
 
-After the transaction is completed, the app is automatically added to the home screen of the customer's Roku devices. When the customer launches the app, they can directly access content without any additional steps—if the publisher has created a user account for them. If the publisher has not created a user account for the customer upon app launch, the app must use the alternative account creation method of calling the [ChannelStore](/docs/references/scenegraph/control-nodes/channelstore.md) APIs to validate the customer's subscription, get their information, and store access tokens in the device registry and in the Roku cloud.
+After the transaction is completed, the app is automatically added to the home screen of the customer's Roku devices. When the customer launches the app, they can directly access content without any additional steps—if the publisher has created a user account for them. If the publisher has not created a user account for the customer upon app launch, the app must use the alternative account creation method of calling the [ChannelStore](doc:channelstore) APIs to validate the customer's subscription, get their information, and store access tokens in the device registry and in the Roku cloud.
 
 ![instant-signup-workflow](https://image.roku.com/ZHZscHItMTc2/instant-signup-workflow-v7a.jpg)
 
@@ -47,16 +47,16 @@ After the transaction is completed, the app is automatically added to the home s
 
   Apps must have completed the following integrations to participate in Roku Instant Signup:
 
-- **[Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md)**. Enable Roku to create trial subscriptions and handle billing for auto-renewals on app.
+- **[Roku Pay](doc:overview)**. Enable Roku to create trial subscriptions and handle billing for auto-renewals on app.
 
 
-- [**Roku Pay Web Service API push notifications**](/docs/developer-program/roku-pay/implementation/push-notifications.md). Receive personal information granted by customers to create user accounts on their behalf automatically.
+- [**Roku Pay Web Service API push notifications**](doc:push-notifications). Receive personal information granted by customers to create user accounts on their behalf automatically.
 
 
-- **[On-device authentication](/docs/developer-program/authentication/on-device-authentication.md)**. Validate subscriptions activated through Roku Pay before granting customers access to content.
+- **[On-device authentication](doc:on-device-authentication)**. Validate subscriptions activated through Roku Pay before granting customers access to content.
 
 
-- **[Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md)**. Automatically sign customers in when they activate additional Roku devices linked to their same Roku account.
+- **[Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)**. Automatically sign customers in when they activate additional Roku devices linked to their same Roku account.
 
 ## Getting started
 
@@ -178,13 +178,13 @@ The posters/artwork with the content or networks featured in the app are used to
 
 Apps must implement an API that retrieves the product offers to be displayed to the customer when they click an app image. Apps may return offers for up to three unique products (for example, for example, an ad-supported plan, monthly limited-ads plan, and monthly premium ad-free plan). Apps may not return different offers for the same product (for example, returning 7-day and 30-day free trials for the same product is not allowed).
 
-Each product will include its associated name and description, which were entered in the **Product Name** field on the [**Manage In-app Products** page](/docs/developer-program/roku-pay/quickstart/in-channel-products.md) within the Developer Dashboard.
+Each product will include its associated name and description, which were entered in the **Product Name** field on the [**Manage In-app Products** page](doc:in-channel-products) within the Developer Dashboard.
 
 > To change the product offers that are displayed to customers, apps must contact the [Roku Partner Success team](https://developer.roku.com/contact "https://developer.roku.com/contact") before making any updates.
 >
 > ------
 >
-> Apps can use the [ChannelStore.GetCatalog](/docs/references/scenegraph/control-nodes/channelstore.md#getcatalog) command to get a list of products associated with the app, including whether a free trial period or introductory pricing is offered.
+> Apps can use the [ChannelStore.GetCatalog](doc:channelstore) command to get a list of products associated with the app, including whether a free trial period or introductory pricing is offered.
 
 The following table lists the requirements for implementing the personalized product display API:
 
@@ -247,9 +247,9 @@ The following diagram illustrates how the SHA-512 email hash is used to determin
 
 ### Creating user accounts
 
-Apps must use Roku Pay Web Service API [push notifications](/docs/developer-program/roku-pay/implementation/push-notifications.md) to automatically create new user accounts in their backend system when customers sign up for a subscription. To integrate push notifications, go to the [Developer Dashboard](https://developer.roku.com/api/settings) and then click **Roku Pay Web Services**. Under **Push Notification URL**, enter a secure URL for receiving push notifications and keep the **Stop sending billing notifications** check box cleared.  
+Apps must use Roku Pay Web Service API [push notifications](doc:push-notifications) to automatically create new user accounts in their backend system when customers sign up for a subscription. To integrate push notifications, go to the [Developer Dashboard](https://developer.roku.com/api/settings) and then click **Roku Pay Web Services**. Under **Push Notification URL**, enter a secure URL for receiving push notifications and keep the **Stop sending billing notifications** check box cleared.  
 
-Additionally, apps can use the [ChannelStore APIs](/docs/references/scenegraph/control-nodes/channelstore.md) to create new customer accounts when customers launch their app but do not have a user account.
+Additionally, apps can use the [ChannelStore APIs](doc:channelstore) to create new customer accounts when customers launch their app but do not have a user account.
 
 > It is recommended that apps requiring user accounts support both account creation scenarios. Automatically creating user account upon activation of the trial subscription enables the customer to directly and seamlessly access content upon launching the app without any additional input. In the event that the app's web server listener is not responding to the push notifications or there is some other push notification failure, account creation can still be completed upon app launch as a backup.
 
@@ -257,7 +257,7 @@ Additionally, apps can use the [ChannelStore APIs](/docs/references/scenegraph/c
 
 Apps can provide an **account** endpoint that accepts POST requests. This enables apps to receive the customer's information that is collected during device activation and use it to create new user accounts in their backend system automatically.
 
-When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](/docs/developer-program/roku-pay/implementation/push-notifications.md#sale) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
+When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](doc:push-notifications) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
 
      \{
         "customerId": "168c2bda168854bb805f24ab296390a3",
@@ -301,7 +301,7 @@ When a customer selects a subscription, they are prompted to grant Roku permissi
 >
 >
 
-Use the information in the push notification to create a new account for the customer. Store the transaction ID, and the customer's email address, name, and user ID in your system. As part of the [on-device authentication](/docs/developer-program/authentication/on-device-authentication.md) flow, the transaction ID is used to validate access to content upon subsequent app launches.
+Use the information in the push notification to create a new account for the customer. Store the transaction ID, and the customer's email address, name, and user ID in your system. As part of the [on-device authentication](doc:on-device-authentication) flow, the transaction ID is used to validate access to content upon subsequent app launches.
 
 In addition, you should generate a secure temporary password and store it in the customer's account, and then send the customer a "Welcome" email with information on how to reset the temporary password.
 
@@ -311,9 +311,9 @@ Upon launch, apps may only display a single dialog for entering a password. The 
 
 #### Creating user accounts upon app launch
 
-Apps can leverage the [ChannelStore](/docs/references/scenegraph/control-nodes/channelstore.md) APIs and [Roku Pay web services](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) to create user accounts when customers launch their app. This ensures that user accounts have been created before customers can access content. Creating user accounts with these APIs entails getting the purchase data, validating the subscription, and storing access tokens in the device registry and in the Roku cloud. The following steps describe how to do this:
+Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web services](doc:roku-web-service) to create user accounts when customers launch their app. This ensures that user accounts have been created before customers can access content. Creating user accounts with these APIs entails getting the purchase data, validating the subscription, and storing access tokens in the device registry and in the Roku cloud. The following steps describe how to do this:
 
-1. Call the [**ChannelStore.getPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) command. This causes the **purchases** field to be set to a **ContentNode** containing the results of the command. The **purchases** contentNode contains a child content node for each purchase.
+1. Call the [**ChannelStore.getPurchases**](doc:channelstore) command. This causes the **purchases** field to be set to a **ContentNode** containing the results of the command. The **purchases** contentNode contains a child content node for each purchase.
 
           myChannelStore.command = "getPurchases"
 
@@ -330,7 +330,7 @@ Apps can leverage the [ChannelStore](/docs/references/scenegraph/control-nodes/c
           endif
 
 
-3. Pass the transaction ID into a [**validate-transaction**](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction) Roku Pay Web Service API call.
+3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service) Roku Pay Web Service API call.
 
           transactionId = myChannelStore.purchases.getChild(x).purchaseId
 
@@ -349,12 +349,12 @@ Apps can leverage the [ChannelStore](/docs/references/scenegraph/control-nodes/c
 
 5. Check the access token in your entitlement server to verify whether it is still valid.  If the access token is valid, generate a refresh token in your system and store it in the device registry and in the Roku cloud, and then grant the customer access to the content. In this case, no additional steps are required and authentication is complete.
 
-    - Call the [**roRegistrySection.write()**](/docs/references/brightscript/interfaces/ifregistrysection.md#writekey-as-string-value-as-string-as-boolean) and [**roRegistrySection.flush()**](/docs/references/brightscript/interfaces/ifregistrysection.md#deletekey-as-string-value-as-string-as-boolean) methods to permanently store the refresh token on the device:
+    - Call the [**roRegistrySection.write()**](doc:ifregistrysection) and [**roRegistrySection.flush()**](doc:ifregistrysection) methods to permanently store the refresh token on the device:
 
            reg_sec.write("access_token_key_name", "access_token_value")
            reg_sec.flush()
 
-    - Call the [**ChannelStore.storeChannelCredData **](/docs/references/scenegraph/control-nodes/channelstore.md#storechannelcreddata) command to store the access token in the Roku cloud. You can use the **status** and **response** fields of the **storeChannelCredDataStatus** content node to verify that the command was successful and that the access token stored in the Roku cloud has the specified value.
+    - Call the [**ChannelStore.storeChannelCredData **](doc:channelstore) command to store the access token in the Roku cloud. You can use the **status** and **response** fields of the **storeChannelCredDataStatus** content node to verify that the command was successful and that the access token stored in the Roku cloud has the specified value.
 
             myChannelStore.channelCredData = "your access token"
             myChannelStore.command = "storeChannelCredData "
@@ -393,7 +393,7 @@ The following process is used to test and verify the app's Instant Signup integr
 
 Apps can identify whether Roku Pay subscription purchase originated from Instant Signup (a customer signing up for a free trial offer is considered a purchase). This may be useful, for example, for publishers to compare the number of subscription purchases made via Instant Signup versus on-device.
 
-The ChannelStore node [**getPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) and [**getAllPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) commands, [**roChannelStore.getPurchases**](/docs/references/brightscript/interfaces/ifchannelstore.md#getpurchases-as-void) function, [Roku Pay **validate-transaction** web service](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction), and [Roku Pay **Sale** push notification](/docs/developer-program/roku-pay/implementation/push-notifications.md#sale) include **purchaseChannel** and **purchaseContext** fields that indicate the source of the purchase.
+The ChannelStore node [**getPurchases**](doc:channelstore) and [**getAllPurchases**](doc:channelstore) commands, [**roChannelStore.getPurchases**](doc:ifchannelstore) function, [Roku Pay **validate-transaction** web service](doc:roku-web-service), and [Roku Pay **Sale** push notification](doc:push-notifications) include **purchaseChannel** and **purchaseContext** fields that indicate the source of the purchase.
 
 | Source                           | purchaseChannel | purchaseContext |
 | -------------------------------- | --------------- | --------------- |
@@ -401,7 +401,7 @@ The ChannelStore node [**getPurchases**](/docs/references/scenegraph/control-nod
 | Instant Signup (on-device)       | "ISU"           | "DEVICE"        |
 | In-app purchase                  | "IAP"           | "DEVICE"        |
 
-In addition, the [Roku Pay Transaction Report](/docs/features/analytics/transaction-report.md) includes a **purchase_context** column indicating the origin of the sign-up ('isu" or "iap").
+In addition, the [Roku Pay Transaction Report](doc:transaction-report) includes a **purchase_context** column indicating the origin of the sign-up ('isu" or "iap").
 
 ## Appendix A: Instant Signup user experience
 

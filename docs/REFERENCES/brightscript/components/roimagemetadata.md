@@ -156,4 +156,4 @@ End Sub
 
 ## Supported interfaces
 
-- [ifImageMetadata](/docs/references/brightscript/interfaces/ifimagemetadata.md "ifImageMetadata")
+- [ifImageMetadata](doc:ifimagemetadata)

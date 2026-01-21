@@ -10,7 +10,7 @@ next:
   description: ''
 ---
 
-Two BrightScript objects, [roSGScreen](/docs/references/brightscript/components/rosgscreen.md) and [roSGNode](/docs/references/brightscript/components/rosgnode.md), are defined to allow our SceneGraph technology to be used in scripting.
+Two BrightScript objects, [roSGScreen](doc:rosgscreen) and [roSGNode](doc:rosgnode), are defined to allow our SceneGraph technology to be used in scripting.
 
 ## BrightScript SceneGraph Scene creation
 

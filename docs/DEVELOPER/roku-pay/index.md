@@ -16,7 +16,7 @@ Roku Pay is Roku's proprietary payment platform. It provides a robust payment ex
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-pay-how-it-works.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-pay-how-it-works-v3.png" width="720" height="480" controls />
 
-This document uses the example of a customer signing up for a subscription video on demand (SVOD) app to highlight the streamlined purchasing experience provided by Roku Pay. This purchasing workflow is similar for customers renting movies, ordering pay-per-views and sporting events, or making other one-time purchases in a [transactional video on demand (TVOD) app](/docs/developer-program/roku-pay/implementation/tvod-channel.md).
+This document uses the example of a customer signing up for a subscription video on demand (SVOD) app to highlight the streamlined purchasing experience provided by Roku Pay. This purchasing workflow is similar for customers renting movies, ordering pay-per-views and sporting events, or making other one-time purchases in a [transactional video on demand (TVOD) app](doc:tvod-channel).
 
 ## Customer adds payment method
 
@@ -24,11 +24,11 @@ When a customer activates their Roku device, they create their Roku account and 
 
 ![roku400px - img](https://image.roku.com/ZHZscHItMTc2/customer-account-MOP-v2.png?)
 
-> Apps can participate in [Instant Signup](/docs/developer-program/discovery/instant-signup.md) to offer free trial subscriptions to customers when they activate their device.
+> Apps can participate in [Instant Signup](doc:instant-signup) to offer free trial subscriptions to customers when they activate their device.
 
 ## Customer selects subscription product
 
-Once a customer installs an SVOD app, they can select a subscription product. Apps can offer free trial periods and discounted offers, and Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Apps can also offer monthly and annual subscriptions and allow customers to [upgrade their plan directly on-device](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md).
+Once a customer installs an SVOD app, they can select a subscription product. Apps can offer free trial periods and discounted offers, and Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Apps can also offer monthly and annual subscriptions and allow customers to [upgrade their plan directly on-device](doc:on-device-upgrade-downgrade).
 
 ![roku815px - mtv-hits-subscription](https://image.roku.com/ZHZscHItMTc2/mtv-hits-subscription-v2a.png)
 

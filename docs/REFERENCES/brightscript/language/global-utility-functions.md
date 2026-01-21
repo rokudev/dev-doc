@@ -190,7 +190,7 @@ Return the integer value of the string, or 0 if nothing is parsed.
 ## RunGarbageCollector() as Object
 
 This function runs the garbage collector on the current thread. It returns and Associative array with some statistics regarding the garbage collection.   
-See the [Garbage collection](/docs/references/brightscript/language/component-architecture.md#garbage-collection) section of this manual for more detail. You don't normally need to call
+See the [Garbage collection](doc:component-architecture) section of this manual for more detail. You don't normally need to call
 this function.   
 
 For example:
@@ -332,7 +332,7 @@ The same as the previous [FormatJson method](#formatjsonjson-as-object-flags--0-
 Translates the source string into the language of the current locale.
 The function looks for a translations.xml file in the XLIFF format in
 the pkg:/locale subdirectory named for the current locale (see
-[ifDeviceInfo.GetCurrentLocale](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getcurrentlocale-as-string) for the list
+[ifDeviceInfo.GetCurrentLocale](doc:ifdeviceinfo) for the list
 of currently-supported locales). If the translations.xml file exists for
 the current locale, and contains the source string with a translated
 string, the function returns the translated string. Otherwise, the

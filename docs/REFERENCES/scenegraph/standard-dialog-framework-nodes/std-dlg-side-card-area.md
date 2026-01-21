@@ -14,15 +14,15 @@ next:
 
 
 
-Extends [StdDlgAreaBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-area-base.md)
+Extends [StdDlgAreaBase](doc:std-dlg-area-base)
 
 ## Description
 
 The **StdDlgSideCardArea** node is used to add a freeform area to the right or left side of a custom standard framework dialog for displaying decorative images or annotative text. 
 
-This node can be displayed on either the left or right side of the vertical column that contains the dialog's child [StdDlgAreaBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-area-base.md) nodes ([TitleArea](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-title-area.md), [StdDlgContentArea(s)](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-content-area.md), and/or [StdDlgButtonArea](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md)). The node can either extend to the edge of the dialog's background image or honor the background image's 9-patch boundaries.
+This node can be displayed on either the left or right side of the vertical column that contains the dialog's child [StdDlgAreaBase](doc:std-dlg-area-base) nodes ([TitleArea](doc:std-dlg-title-area), [StdDlgContentArea(s)](doc:std-dlg-content-area), and/or [StdDlgButtonArea](doc:std-dlg-button-area)). The node can either extend to the edge of the dialog's background image or honor the background image's 9-patch boundaries.
 
-The width of the vertical column containing the [StdDlgAreaBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-area-base.md) child nodes does not extend across the full width of the dialog as it does for dialogs that do not contain a **StdDlgSideCardArea** node.
+The width of the vertical column containing the [StdDlgAreaBase](doc:std-dlg-area-base) child nodes does not extend across the full width of the dialog as it does for dialogs that do not contain a **StdDlgSideCardArea** node.
 
 A dialog may contain only a single **StdDlgSideCardArea** node, and that node must be a child of the dialog. 
 
@@ -137,7 +137,7 @@ end sub
 
 #### Annotative
 
-In this example, the **StdDlgSideCardArea** has a child **Label** node ("Show the QR Code...") and a child **Poster** node to show the QR code below the Label. The height of the dialog is set to the maximum height of the bounding rectangle of the **StdDlgSideCardArea** and the vertical column that contains the dialog's child [StdDlgAreaBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-area-base.md) nodes ([TitleArea](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-title-area.md), [StdDlgContentArea(s)](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-content-area.md), and/or [StdDlgButtonArea](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md)). In this case, the StdDlgSideCardArea is slightly taller; therefore, it's height is used.
+In this example, the **StdDlgSideCardArea** has a child **Label** node ("Show the QR Code...") and a child **Poster** node to show the QR code below the Label. The height of the dialog is set to the maximum height of the bounding rectangle of the **StdDlgSideCardArea** and the vertical column that contains the dialog's child [StdDlgAreaBase](doc:std-dlg-area-base) nodes ([TitleArea](doc:std-dlg-title-area), [StdDlgContentArea(s)](doc:std-dlg-content-area), and/or [StdDlgButtonArea](doc:std-dlg-button-area)). In this case, the StdDlgSideCardArea is slightly taller; therefore, it's height is used.
 
 ![roku815px - SideCardAnnotation](https://image.roku.com/ZHZscHItMTc2/SideCardAnnotation.jpg)
 

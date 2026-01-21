@@ -19,9 +19,9 @@ This object is created without any arguments:
 
 ``CreateObject("roSocketAddress")``
 
-Methods in [ifSocketAddress](/docs/references/brightscript/interfaces/ifsocketaddress.md "ifSocketAddress") are used to assign an IP address to the object. roSocketAddress currently supports only IPV4 addresses.
+Methods in [ifSocketAddress](doc:ifsocketaddress) are used to assign an IP address to the object. roSocketAddress currently supports only IPV4 addresses.
 
 
 ## Supported interfaces
 
-- [ifSocketAddress](/docs/references/brightscript/interfaces/ifsocketaddress.md "ifSocketAddress")            
+- [ifSocketAddress](doc:ifsocketaddress)            

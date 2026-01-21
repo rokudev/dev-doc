@@ -14,15 +14,15 @@ next:
 
 
 
-Extends [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md)
+Extends [StdDlgItemBase](doc:std-dlg-item-base)
 
 ## Description
 
-The **StdDlgActionCardItem** is used to highlight the [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md) child nodes in the content area of a custom dialog. This node enables developers to add a "more info" arrow icon, radio button icon, or check box icon to the items in the content area. Developers can leverage these icons to enhance the check box and radio button functionality in their custom dialogs.
+The **StdDlgActionCardItem** is used to highlight the [StdDlgItemBase](doc:std-dlg-item-base) child nodes in the content area of a custom dialog. This node enables developers to add a "more info" arrow icon, radio button icon, or check box icon to the items in the content area. Developers can leverage these icons to enhance the check box and radio button functionality in their custom dialogs.
 
 The icons and the StdDlgItemBase child nodes are drawn on top of a rectangular background that is tinted using the RSGPalette's **DialogFootprintColor** field.
 
-When the StdDlgActionCardItem node has focus, the icons themselves are tinted using the [RSGPalette's](/docs/references/scenegraph/scene.md#fields) **DialogFocusItemColor** field. When the node does not have focus, the icons are tinted using the **DialogTextColor** field.
+When the StdDlgActionCardItem node has focus, the icons themselves are tinted using the [RSGPalette's](doc:scene) **DialogFocusItemColor** field. When the node does not have focus, the icons are tinted using the **DialogTextColor** field.
 
 The **StdDlgActionCardItem** node is designed to be focusable; therefore, it may receive key events.
 
@@ -192,7 +192,7 @@ In this example, the dialog has a **StdDlgContentArea** node a **StdDlgItemGroup
 
 The **StdDlgItemGroup** node enforces the rule that when multiple items **StdDlgActionCardItem** nodes have their **iconType** field set to "radiobutton", only one may have its **selected** status be set to "true".
 
-This example configures an [**RSGPalette** node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md) for the dialog, and then it uses the "DialogTextColor" from that palette as the colors for the **SimpleLabel** children of the **StdDlgActionCardItem** node.
+This example configures an [**RSGPalette** node](doc:standard-dialog) for the dialog, and then it uses the "DialogTextColor" from that palette as the colors for the **SimpleLabel** children of the **StdDlgActionCardItem** node.
 
 ![roku815px - actionCards-radio-checkbox-items](https://image.roku.com/ZHZscHItMTc2/actionCards-radio-checkbox-items.jpg)
 

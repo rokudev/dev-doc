@@ -153,7 +153,7 @@ To create a new ad campaign, follow these steps:
 
    - **Open your app**. Clicking the display ad launches the app home page.
 
-   - **Open specific content**. Clicking the display ad deep links to the content. Enter the contentId and mediaType of the content in the **Deep Link Parameters** box. The contentId uniquely identifies content in an app; the mediaType specifies how an app should behave when [receiving a deep link request](/docs/developer-program/discovery/implementing-deep-linking.md). You can use the [Deep Linking Tester](http://devtools.web.roku.com/#deep-linking-tool) to verify that the deep link works.
+   - **Open specific content**. Clicking the display ad deep links to the content. Enter the contentId and mediaType of the content in the **Deep Link Parameters** box. The contentId uniquely identifies content in an app; the mediaType specifies how an app should behave when [receiving a deep link request](doc:implementing-deep-linking). You can use the [Deep Linking Tester](http://devtools.web.roku.com/#deep-linking-tool) to verify that the deep link works.
 
        **Syntax**: contentid=*contentId*&mediatype=*mediaType*
 

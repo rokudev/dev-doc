@@ -13,7 +13,7 @@ next:
 
 
 
-A Message Port is the place messages ([events](/docs/developer-program/core-concepts/event-loops.md)) are sent. 
+A Message Port is the place messages ([events](doc:event-loops)) are sent. 
 
 When using BrightScript, you would not call these functions directly. Instead, use the "Wait" BrightScript statement.  
 
@@ -24,4 +24,4 @@ This object is created with no parameters:
 
 ## Supported interfaces
 
-- [ifMessagePort](/docs/references/brightscript/interfaces/ifmessageport.md "ifMessagePort") 
+- [ifMessagePort](doc:ifmessageport) 

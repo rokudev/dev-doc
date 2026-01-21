@@ -16,10 +16,10 @@ next:
 
 | Name                | Description                                                                                                            |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| [roChannelStoreEvent](/docs/references/brightscript/events/rochannelstoreevent.md "roChannelStoreEvent") | The roChannelStore sends an roChannelStoreEvent in response to a call to any of several Get* methods in ifChannelStore |
-| [roPath](/docs/references/brightscript/components/ropath.md "roPath")            | The roPath component provides developers an easy way to create valid file system paths                                 |
-| [roString](/docs/references/brightscript/components/rostring.md "roString")            | Object equivalent for intrinsic type 'String'                                                                          |
-| [roUrlEvent](/docs/references/brightscript/events/rourlevent.md "roUrlEvent")         | The roUrlTransfer component sends the roUrlEvent component                                                             |
+| [roChannelStoreEvent](doc:rochannelstoreevent) | The roChannelStore sends an roChannelStoreEvent in response to a call to any of several Get* methods in ifChannelStore |
+| [roPath](doc:ropath)            | The roPath component provides developers an easy way to create valid file system paths                                 |
+| [roString](doc:rostring)            | Object equivalent for intrinsic type 'String'                                                                          |
+| [roUrlEvent](doc:rourlevent)         | The roUrlTransfer component sends the roUrlEvent component                                                             |
 
 ## Supported methods
 

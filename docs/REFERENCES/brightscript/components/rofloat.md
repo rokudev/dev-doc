@@ -21,5 +21,5 @@ This is useful in the following situations:
 
 ## Supported interfaces
 
-- [ifFloat](/docs/references/brightscript/interfaces/iffloat.md "ifFloat")
-- [ifToStr](/docs/references/brightscript/interfaces/iftostr.md "ifToStr")
+- [ifFloat](doc:iffloat)
+- [ifToStr](doc:iftostr)

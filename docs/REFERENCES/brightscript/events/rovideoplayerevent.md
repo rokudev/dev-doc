@@ -198,7 +198,7 @@ End Function
 
 Checks whether an ID3 timecode has passed with an event that includes key-value pairs for timed metadata that the BrightScript app is interested in.
 
-All timed metadata is released after it is delivered to the BrightScript app.  It is also released without delivery if the BrightScript app did not indicate its interest in the data with a [SetTimedMetaDataForKeys()](/docs/references/brightscript/interfaces/ifvideoplayer.md#settimedmetadataforkeyskeys-as-dynamic-as-void) method call.
+All timed metadata is released after it is delivered to the BrightScript app.  It is also released without delivery if the BrightScript app did not indicate its interest in the data with a [SetTimedMetaDataForKeys()](doc:ifvideoplayer) method call.
 
 This method returns true if an ID3 timecode has passed; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex(), and GetInfo() methods on the event.
 
@@ -220,7 +220,7 @@ Returns an associative array with timedMetadata at the PTS timecode specified in
 
 ### isPlaybackPosition() as Boolean
 
-Checks whether the current position in the video stream has changed. This event is sent periodically while playing, as determined by the last call to [ifVideoPlayer.SetPositionNotificationPeriod](/docs/references/brightscript/interfaces/ifvideoplayer.md#setpositionnotificationperiodperiod-as-integer-as-void "ifVideoPlayer.SetPositionNotificationPeriod"). This method returns true if the current position in the video stream has changed; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetIndex() and GetInfo() methods on the event.
+Checks whether the current position in the video stream has changed. This event is sent periodically while playing, as determined by the last call to [ifVideoPlayer.SetPositionNotificationPeriod](doc:ifvideoplayer.md#setpositionnotificationperiodperiod-as-integer-as-void "ifVideoPlayer). This method returns true if the current position in the video stream has changed; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetIndex() and GetInfo() methods on the event.
 
 ### GetIndex() as Integer
 

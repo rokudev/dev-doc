@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
+Extends [**ArrayGrid**](doc:arraygrid)
 
 The PosterGrid node is a simple grid class that can be used to display two-dimensional grids of posters. In addition to the poster, each item in the grid can include up to two lines of captions.
 

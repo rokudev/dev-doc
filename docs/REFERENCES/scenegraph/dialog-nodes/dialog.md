@@ -12,9 +12,9 @@ next:
 ---
 
 
-> Roku OS 10.0 introduced a new [StandardDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**"), which features updated graphics and color palette support. This enables developers to provide a consistent user experience across the dialogs in their app. Developers should replace the legacy Dialog nodes in their app with the new [StandardDialog nodes](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**").
+> Roku OS 10.0 introduced a new [StandardDialog node](doc:standard-dialog), which features updated graphics and color palette support. This enables developers to provide a consistent user experience across the dialogs in their app. Developers should replace the legacy Dialog nodes in their app with the new [StandardDialog nodes](doc:standard-dialog).
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
 The Dialog node class defines a modal pop-up dialog used to present the user with information requiring their immediate attention.
 

@@ -173,7 +173,7 @@ Indicates whether the **GetRef()** function will succeed in the current context.
 
 The specified **field_name** must be an associative array, and it must have previously been given a value via **SetRef()**.
 
-The **CanGetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](/docs/references/brightscript/interfaces/ifsgnodefield.md#queuefieldsqueuenode-as-boolean-as-boolean) has been enabled.
+The **CanGetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
 #### Return Value
 
@@ -185,7 +185,7 @@ This function returns true if the call to the **GetRef()** function will succeed
 
 Returns a reference to the value of an **roSGNode** field, which must be an associative array.  If the field is not an associative array, the call fails. The specified field must have previously been given a value via **SetRef()**.
 
-The **GetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](/docs/references/brightscript/interfaces/ifsgnodefield.md#queuefieldsqueuenode-as-boolean-as-boolean) has been enabled.
+The **GetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
 #### Parameters
 

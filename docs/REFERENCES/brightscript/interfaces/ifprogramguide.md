@@ -16,7 +16,7 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roProgramGuide](/docs/references/brightscript/components/roprogramguide.md) | Represents Electronic Program Guide (EPG) information from the tuner. |
+| [roProgramGuide](doc:roprogramguide) | Represents Electronic Program Guide (EPG) information from the tuner. |
 
 ## Supported methods
 

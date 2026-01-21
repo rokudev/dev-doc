@@ -15,7 +15,7 @@ next:
 The byte array component is used to contain and manipulate an arbitrary array of bytes. 
 
 This object contains functions to convert strings to or from a byte array, as well as to or from ascii hex or ascii base 64. Note that if you are converting a byte array to a string, and the byte array contains a zero, the string conversion will end at that point. roByteArray will autosize to become larger as needed. If you wish to turn off this behavior, then use the SetResize() function. If you read an uninitialized index, "invalid" is returned. 
-roByteArray supports the [ifArray](/docs/references/brightscript/interfaces/ifarray.md "ifArray") interface, and so can be accessed with the array [] operator. The byte array is always accessed as unsigned bytes when using this interface. roByteArray also supports the ifEnum interface, and so can be used with a "for each" statement.
+roByteArray supports the [ifArray](doc:ifarray) interface, and so can be accessed with the array [] operator. The byte array is always accessed as unsigned bytes when using this interface. roByteArray also supports the ifEnum interface, and so can be used with a "for each" statement.
 
 **Example**
 
@@ -51,9 +51,9 @@ end for
 
 ## Supported interfaces
 
-- [ifByteArray](/docs/references/brightscript/interfaces/ifbytearray.md "ifByteArray")
-- [ifArray](/docs/references/brightscript/interfaces/ifarray.md "ifArray")
-- [ifArrayGet](/docs/references/brightscript/interfaces/ifarrayget.md "ifArrayGet")
-- [ifArraySet](/docs/references/brightscript/interfaces/ifarrayset.md "ifArraySet")
-- [ifArraySlice](/docs/references/brightscript/interfaces/ifarrayslice.md)
-- [ifEnum](/docs/references/brightscript/interfaces/ifenum.md "ifEnum")
+- [ifByteArray](doc:ifbytearray)
+- [ifArray](doc:ifarray)
+- [ifArrayGet](doc:ifarrayget)
+- [ifArraySet](doc:ifarrayset)
+- [ifArraySlice](doc:ifarrayslice)
+- [ifEnum](doc:ifenum)

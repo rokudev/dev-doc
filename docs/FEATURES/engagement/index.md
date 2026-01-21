@@ -22,7 +22,7 @@ Using these promotional tools enables apps to maximize the value of their conten
 
 Roku Search aggregates content from participating apps into a single, indexed search feed. It enables users to quickly find and watch content by entering or saying the name of a movie, TV show, or actor/actress instead of having to browse through individual apps. By participating in Roku Search, any content in your app that matches a query is automatically listed in the search results. This provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement.
 
-See [Implementing Roku Search](/docs/developer-program/discovery/search/implementing-search.md) to integrate your app into Roku Search.
+See [Implementing Roku Search](doc:implementing-search) to integrate your app into Roku Search.
 
 ![roku815px - roku-search-results](https://image.roku.com/ZHZscHItMTc2/roku-discovery-search-v3.png)
 
@@ -58,7 +58,7 @@ When customers search for content, they can add the movies and TV shows that the
 
 Instant Signup enables users to start free trial subscriptions with just a few clicks when activating their Roku devices, and then directly access content on the app without any additional steps. This provides SVOD apps using Roku Pay an opportunity to offer free trials and related promotions to customers for their subscription services in order to drive conversions to paid subscriptions.
 
-See [Instant Signup](/docs/developer-program/discovery/instant-signup.md) to integrate your SVOD app into this program.
+See [Instant Signup](doc:instant-signup) to integrate your SVOD app into this program.
 
 ![roku400px -  - isu-sample-streambox](https://image.roku.com/ZHZscHItMTc2/streambox-free-trial.jpg)
 
@@ -86,7 +86,7 @@ In addition, Roku offers self-serve tools that you can use to purchase display a
 
 Apps can purchase targeted display ads that appear on the Roku home screen to the right of the My Channels section. This provides apps with an opportunity to target specific groups of Roku users with relevant ads in order to increase their visibility on the Roku platform and drive engagement and sign-ups.  
 
-See [Self-Serve Promotions](/docs/features/engagement/self-serve-promotions.md) for more information on purchasing display ads on the Roku home screen.
+See [Self-Serve Promotions](doc:self-serve-promotions) for more information on purchasing display ads on the Roku home screen.
 
 ![roku815px - roku-discovery-ads](https://image.roku.com/ZHZscHItMTc2/roku-discovery-ads-v2.png)
 
@@ -96,4 +96,4 @@ Roku provides apps with a robust suite of reports for analyzing app performance,
 
 ![roku815px - analytics-7-channel-engagement](https://image.roku.com/ZHZscHItMTc2/analytics-7.png "analytics-7")
 
-See [Analytics and Reporting](/docs/features/analytics/analytics-reports.md) for more information.
+See [Analytics and Reporting](doc:analytics-reports) for more information.

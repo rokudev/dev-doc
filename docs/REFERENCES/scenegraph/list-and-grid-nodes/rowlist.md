@@ -12,13 +12,13 @@ next:
 ---
 
 
-Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
+Extends [**ArrayGrid**](doc:arraygrid)
 
-The RowList node class provides a vertically-scrollable list, containing rows of independent horizontally-scrollable individual items. Each item in a row can include a poster, but can also include much more complex sub-elements defined in an item component file, in the same way that items are defined in the [MarkupList](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md) and [MarkupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md) node classes. The RowList node class includes interface fields for customizing the appearance as the user scrolls up and down through the rows.
+The RowList node class provides a vertically-scrollable list, containing rows of independent horizontally-scrollable individual items. Each item in a row can include a poster, but can also include much more complex sub-elements defined in an item component file, in the same way that items are defined in the [MarkupList](doc:markuplist) and [MarkupGrid](doc:markupgrid) node classes. The RowList node class includes interface fields for customizing the appearance as the user scrolls up and down through the rows.
 
 Like those node classes, the RowList node class provides special interface fields to the item components to allow custom appearance and animations as the user scrolls left and right through the items in a row.
 
->You can use the [ZoomRowList](/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md) node class to enlarge the row in the RowList that currently has focus. In addition to providing a zoomed focus row, the ZoomRowList features custom row item and row decoration components, unique zooming amounts for individual rows, and separate heights for zoomed/unzoomed row items.
+>You can use the [ZoomRowList](doc:zoomrowlist) node class to enlarge the row in the RowList that currently has focus. In addition to providing a zoomed focus row, the ZoomRowList features custom row item and row decoration components, unique zooming amounts for individual rows, and separate heights for zoomed/unzoomed row items.
 
 ## Guidelines
 
@@ -37,7 +37,7 @@ There are three horizontal item scrolling options for the RowList node class con
 
 #### Vertical Row Scrolling
 
-The vertical row scrolling options are controlled by the `vertFocusAnimationStyle` field, and behave in the same way for rows as they do for list items as described in [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md).
+The vertical row scrolling options are controlled by the `vertFocusAnimationStyle` field, and behave in the same way for rows as they do for list items as described in [**ArrayGrid**](doc:arraygrid).
 
 The RowList node class supports two types of item definitions.
 

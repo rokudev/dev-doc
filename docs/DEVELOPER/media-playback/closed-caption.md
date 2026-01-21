@@ -31,7 +31,7 @@ the use of SRT subtitles.
 
 ## Closed caption tracks specification
 
-Use the **SubtitleTracks** [content metadata](/docs/developer-program/getting-started/architecture/content-metadata.md) property to specify the language,
+Use the **SubtitleTracks** [content metadata](doc:content-metadata) property to specify the language,
 description, and track name for each subtitle track. Do not use the **SubtitleConfig**
 property unless you are overriding the caption track that
 is automatically selected based on user caption language preference.
@@ -41,7 +41,7 @@ Omitting the description will cause the UI to display the language in
 the closed caption menu. A description should at least contain the
 language.
 
-See the [Video node documentation](/docs/references/scenegraph/media-playback-nodes/video.md#closed-caption-fields) for additional fields related to closed captioning.
+See the [Video node documentation](doc:video) for additional fields related to closed captioning.
 
 ## Certification requirements
 
@@ -60,8 +60,8 @@ Unless the app overrides it, all Roku players will launch an **Options overlay m
 pressed during playback of full-screen videos.
 
 However, this only works if the
-app does not have its [OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md) handler
-fired, and the **[Video node](/docs/references/scenegraph/media-playback-nodes/video.md)** is playing full
+app does not have its [OnKeyEvent()](doc:onkeyevent) handler
+fired, and the **[Video node](doc:video)** is playing full
 screen and setFocus is enabled i.e., the Video node is in focus, as displayed in the following code
 example:
 
@@ -82,7 +82,7 @@ key.
 
 #### Certification requirements
 
-Per Roku's [certification requirements](/docs/developer-program/certification/certification.md#4-channel-operation) Apps must support the following closed captioning settings in the Options menu: On, Off, On instant replay, and On mute (Roku TVs only). 
+Per Roku's [certification requirements](doc:certification) Apps must support the following closed captioning settings in the Options menu: On, Off, On instant replay, and On mute (Roku TVs only). 
 
 For VOD content, apps must synchronize the captions with the audio.
 
@@ -94,10 +94,10 @@ For VOD content, apps must synchronize the captions with the audio.
     language is not available, it defaults to the system's UI language.
 
   - The global **closedCaptionMode** method of
-    the [Video node](/docs/references/scenegraph/media-playback-nodes/video.md) object
+    the [Video node](doc:video) object
     is how you turn on and off closed captioning of the current playing
     video. The global settings can be read and set in
-    the [roDeviceInfo](/docs/references/brightscript/interfaces/ifdeviceinfo.md) object. These
+    the [roDeviceInfo](doc:ifdeviceinfo) object. These
     affect the same system setting. Whenever the user switches on/off
     closed caption, it is expected that the global setting will be
     adjusted accordingly. Therefore setting the global setting every
@@ -112,7 +112,7 @@ For VOD content, apps must synchronize the captions with the audio.
 
   - If you are using the **roVideoScreen** or **roVideoPlayer**, you
     should be rewriting your application
-    in **[SceneGraph](/docs/developer-program/core-concepts/core-concepts.md)** as the older
+    in **[SceneGraph](doc:core-concepts)** as the older
     technologies are being dropped from the Roku OS.
 
 ### Star button
@@ -147,7 +147,7 @@ user presses *.
 
 The replay button events
 can be received like any
-other [events](/docs/developer-program/core-concepts/event-loops.md).
+other [events](doc:event-loops).
 
 The Roku OS automatically enables the closed captions during the replay
 interval.
@@ -160,13 +160,13 @@ should move the play head and changes the demarcation point accordingly
 ### Additional considerations
 
 Although **Closed captioning** and **Subtitles** are two different
-things, and server separate functions, both functions reside within the [Video node](/docs/references/scenegraph/media-playback-nodes/video.md).
+things, and server separate functions, both functions reside within the [Video node](doc:video).
 
 One important consideration with the rules outlined above is that
-the [Roku Advertising Framework](/docs/developer-program/advertising/roku-advertising-framework.md) (RAF)
+the [Roku Advertising Framework](doc:roku-advertising-framework) (RAF)
 will turn off **trickplay** and the **instant replay** for the duration
 of an ad. If you are using server-stitched ads, you must
-disable this with the [**Video.enableUI** field](/docs/references/scenegraph/media-playback-nodes/video.md#ui-fields).
+disable this with the [**Video.enableUI** field](doc:video).
 
 
 ![roku815px - Roku-remote-control-4-button](https://image.roku.com/ZHZscHItMTc2/Roku-remote-control-4-button.png "Roku-remote-control-4-button")
@@ -175,7 +175,7 @@ Finally, note that the **fast forward**, **rewind**, and
 the **left** & **right** arrows on the direction pad should move the
 play head.
 
-Use the [**Video.notificationInterval**](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) field to simplify the app
+Use the [**Video.notificationInterval**](doc:video) field to simplify the app
 logic around this. This field lets you set the number of seconds that observers of the position field should receive notifications.
 
 
@@ -191,7 +191,7 @@ etc. These settings are available to developers via APIs defined on the
 roDeviceInfo component. It is not necessary for apps to implement
 their own closed caption settings UI, as the state of the global
 settings can be queried using these new API functions. Details of the
-global closed caption settings APIs can be found [here](/docs/references/scenegraph/media-playback-nodes/video.md).\</span\>
+global closed caption settings APIs can be found [here](doc:video).\</span\>
 
 
 ## SMPTE-TT

@@ -115,7 +115,7 @@ First-time users: You must first enable its **Packager** utility option using th
 
 
 2. **Install (or “sideload”) the app on the Roku device.**
-    Use the Installer page of the Development Application to "sideload" the app to your Roku device. Refer to [Developer environment setup](/docs/developer-program/getting-started/developer-setup.md) about how to sideload apps.
+    Use the Installer page of the Development Application to "sideload" the app to your Roku device. Refer to [Developer environment setup](doc:developer-setup) about how to sideload apps.
 
   ![roku815px - packagingchannels3-roku815px](https://image.roku.com/ZHZscHItMTc2/packaging-channels-v4.png)
 

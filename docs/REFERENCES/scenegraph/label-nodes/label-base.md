@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
+Extends [**Group**](doc:group)
 
-The LabelBase node is an abstract base class for the [**Label**](/docs/references/scenegraph/label-nodes/label.md) and [**MultiStyleLabel**](/docs/references/scenegraph/label-nodes/multi-style-label.md) nodes. The Label node is used to display a string of text with a single style; the MultiStyleLabel node is used display a string of text with mixed styles (for example, plain and bold text, different fonts, and/or multiple colors). The LabelBase node provides the dimensions, text alignment, wrapping, auto-truncating, and other common functionality for its child nodes.
+The LabelBase node is an abstract base class for the [**Label**](doc:label) and [**MultiStyleLabel**](doc:multi-style-label) nodes. The Label node is used to display a string of text with a single style; the MultiStyleLabel node is used display a string of text with mixed styles (for example, plain and bold text, different fonts, and/or multiple colors). The LabelBase node provides the dimensions, text alignment, wrapping, auto-truncating, and other common functionality for its child nodes.
 
 > The LabelBase node was introduced in Roku OS 10.5 to provide a single base class for the Label node and the new MultiStyleLabel node, which was added as part of the Roku OS 10.5 release. The Label node now inherits most of its functionality from LabelBase node class. Developers, however, do not need to update their app code to account for this refactoring. 
 
@@ -42,7 +42,7 @@ There are three possible values for the horizAlign field:
 - right
   The right edge of each line of text is positioned at x-coordinate position corresponding to the computed width of the LabelBase node local coordinate system.
 
-> If the width field is equal to zero, a single line of text will be rendered (see [Wrapping](/docs/references/scenegraph/label-nodes/label-base.md#wrapping-text "Wrapping") for more details). In that case, all three values of the horizAlign field have the same result, since the computed width equals the rendered width of the text.
+> If the width field is equal to zero, a single line of text will be rendered (see [Wrapping](doc:label-base) for more details). In that case, all three values of the horizAlign field have the same result, since the computed width equals the rendered width of the text.
 
 #### Vertical Alignment
 
@@ -107,4 +107,4 @@ Rotation of LabelBase nodes is supported. On platforms that do not support OpenG
 
 ## Fields
 
-Fields derived from the [Group](/docs/references/scenegraph/layout-group-nodes/group.md#fields) base class can also be used.
+Fields derived from the [Group](doc:group) base class can also be used.

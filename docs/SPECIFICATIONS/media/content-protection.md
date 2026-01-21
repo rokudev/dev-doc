@@ -21,7 +21,7 @@ next:
 | DASH   | Y         |         | Y        |
 
 
->Supported DRM info can be queried using [ifDeviceInfo.getDRMInfo()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfo-as-object).
+>Supported DRM info can be queried using [ifDeviceInfo.getDRMInfo()](doc:ifdeviceinfo).
 
 > If you receive a `BS lib provider not found: <DRM>` error when running a sideloaded app, you can install a production app that uses that DRM to load the missing library. For example, you can install YouTube to load Widevine, and you can install Netflix to load PlayReady.  
 
@@ -158,4 +158,4 @@ currently set to.
 > smaller than 4K will default to HDCP 1.4.
 >
 > HDCP versioning can be queried
-> using [ifHdmiStatus.getHDCPVersion()](/docs/references/brightscript/interfaces/ifhdmistatus.md#gethdcpversion-as-string).
+> using [ifHdmiStatus.getHDCPVersion()](doc:ifhdmistatus).

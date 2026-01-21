@@ -12,9 +12,9 @@ next:
 ---
 
 
-Extends [**LabelBase**](/docs/references/scenegraph/label-nodes/label-base.md)
+Extends [**LabelBase**](doc:label-base)
 
-> As of Roku OS 10.5, the Label node inherits most of its functionality from [LabelBase](/docs/references/scenegraph/label-nodes/label-base.md) node class. Developers, however, do not need to update their app code to account for this refactoring. 
+> As of Roku OS 10.5, the Label node inherits most of its functionality from [LabelBase](doc:label-base) node class. Developers, however, do not need to update their app code to account for this refactoring. 
 
 The Label node class is used to display a string of text.
 
@@ -58,7 +58,7 @@ The following displays the text string "Application Development Made Easy!" in t
 
 ## Fields
 
-Fields derived from the [Group](/docs/references/scenegraph/layout-group-nodes/group.md#fields "Fields") and [LabelBase](/docs/references/scenegraph/label-nodes/label-base.md#fields) classes can be used.
+Fields derived from the [Group](doc:group) and [LabelBase](doc:label-base) classes can be used.
 
 
 <table>

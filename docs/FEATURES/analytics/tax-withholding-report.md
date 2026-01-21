@@ -22,7 +22,7 @@ The Tax Withholding Report lists the monthly payouts you have received from Roku
 | Paycheck currency code                           | The three-letter country code of the currency used to pay for the in-app products. |
 | Subscription amount (in paycheck currency)       | The amount of revenue generated from sales of your in-app products. |
 | Roku revenue share amount (in paycheck currency) | The amount of revenue to be shared with Roku per  contract.  |
-| Withholding tax percentage                       | The percentage of tax withheld from your revenue share (this is based on the tax document you submitted when you [enrolled in payouts](/docs/developer-program/roku-pay/quickstart/partner-payouts.md#tax-forms)). |
+| Withholding tax percentage                       | The percentage of tax withheld from your revenue share (this is based on the tax document you submitted when you [enrolled in payouts](doc:partner-payouts)). |
 | Withholding tax amount (in paycheck currency)    | The amount of tax withheld from your payout as specified in the paycheck amount (your revenue share). |
 | Paycheck amount (in paycheck currency)           | Your revenue share.                                          |
 | Payable currency code                            | The three-letter country code of the currency in which you received the payout from Roku |

@@ -73,7 +73,7 @@ User interface functionality available in the SDK includes:
   - Search Screen (Keyword based search with progressive disclosure of results)
 
 Detailed information on all these screens can be found in
-the [BrightScript Component reference](/docs/references/brightscript/language/component-architecture.md).
+the [BrightScript Component reference](doc:component-architecture).
 
 ## Display modes (HD/SD)
 
@@ -156,8 +156,8 @@ below.
 | "debug-server"                                       | debug server on port 8080.                                   |
 | "purchase-dialog"                                    | Purchase dialog in the Streaming Store                         |
 | "hs-search"                                          | Roku Search                                                  |
-| "voice-search"                                       | Roku Voice search command ([Visual Search Results For Roku Voice](/docs/features/engagement/roku-search.md#visual-search-results-for-roku-voice); for example, "Weird") |
-| "voice-command"                                      | Roku Voice command ([Direct-to-Play](/docs/features/voice/overview.md#direct-to-play); for example, "Play Weird") |
+| "voice-search"                                       | Roku Voice search command ([Visual Search Results For Roku Voice](doc:roku-search); for example, "Weird") |
+| "voice-command"                                      | Roku Voice command ([Direct-to-Play](doc:overview); for example, "Play Weird") |
 | "dial"                                               | DIAL protocol                                                |
 | "hs-d"                                               | launched from Featured Free page                             |
 | "channel-store"                                      | Tile for app or associated content selected from Streaming Store. |
@@ -209,7 +209,7 @@ Exit codes do not persist across system reboots and system resumptions. The last
 
 ### Sub RunScreenSaver()
 
-RunScreenSaver is called to launch a [screensaver](/docs/developer-program/media-playback/screensavers.md) when the Roku has been idle for
+RunScreenSaver is called to launch a [screensaver](doc:screensavers) when the Roku has been idle for
 the configured idle time. The screensaver to launch is selected by the
 user on the Screensaver settings page. The Roku box may not start the
 custom screensaver and will use a default screensaver instead if there

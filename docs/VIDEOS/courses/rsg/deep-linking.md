@@ -36,38 +36,38 @@ This lesson concludes by demonstrating how to use the Roku Deep Linking Tester a
 
 To keep the app demonstration segments in this lesson concise and make them more comprehensible, the pre-roll ads that you will see when deep linking into content in the sample app have been edited out.
 
-As described in the [document for the Subscriptions video](/videos/courses/rsg/subscriptions.md#steps-required-to-play-content), you need to create an app and then configure the app and your developer account for testing in order to play the videos in the [Deep linking sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/DeepLinking).
+As described in the [document for the Subscriptions video](doc:subscriptions), you need to create an app and then configure the app and your developer account for testing in order to play the videos in the [Deep linking sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/DeepLinking).
 
 ## Resources
 
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Deep linking sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/DeepLinking) | Download and review the code used in this lesson to accept and process deep links into an app. |
-| [Sideloading apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) | Sideload and test the DeepLinking app created in this lesson. |
-| [Deep linking implementation guide](/docs/developer-program/discovery/implementing-deep-linking.md) | Read how to implement deep linking in an app. This document highlights how deep linking works, details the required app behavior based on the media type included in the deep link, and provides code samples demonstrating how to handle deep links upon launching the app and while it is already running. It explains how to use the Deep Linking Tester and cURL commands to verify that an app is programmed correctly to handle deep links. |
-| [Certification criteria for deep linking](/docs/developer-program/certification/certification.md#5-deep-linking) | Read the certification criteria for handling deep links in an app. |
+| [Sideloading apps](doc:developer-setup) | Sideload and test the DeepLinking app created in this lesson. |
+| [Deep linking implementation guide](doc:implementing-deep-linking) | Read how to implement deep linking in an app. This document highlights how deep linking works, details the required app behavior based on the media type included in the deep link, and provides code samples demonstrating how to handle deep links upon launching the app and while it is already running. It explains how to use the Deep Linking Tester and cURL commands to verify that an app is programmed correctly to handle deep links. |
+| [Certification criteria for deep linking](doc:certification) | Read the certification criteria for handling deep links in an app. |
 | [Roku Deep Linking Tester](http://devtools.web.roku.com/DeepLinkingTester) | Use the Deep Linking Tester tool to verify that your app is handling deep links correctly. This tool provides a UI for configuring, saving, import/exporting, and executing deep linking test cases. |
-| [Bookmarking implementation guide](/docs/developer-program/media-playback/bookmarking.md) | Read how to record and retrieve the user's playback position for the content in your app. Learn how bookmarking enables users to continue watching content precisely where they stopped. |
+| [Bookmarking implementation guide](doc:bookmarking) | Read how to record and retrieve the user's playback position for the content in your app. Learn how bookmarking enables users to continue watching content precisely where they stopped. |
 
 ## Related
 
-[roInput](/docs/references/brightscript/components/roinput.md)
+[roInput](doc:roinput)
 
-[Device registry](/docs/references/brightscript/components/roregistry.md)
+[Device registry](doc:roregistry)
 
-[Registry section](/docs/references/brightscript/components/roregistrysection.md)
+[Registry section](doc:roregistrysection)
 
-[External Control Protocol (ECP)](/docs/developer-program/debugging/external-control-api.md)
+[External Control Protocol (ECP)](doc:external-control-api)
 
-[Measuring app performance](/docs/developer-program/performance-guide/measuring-channel-performance.md)
+[Measuring app performance](doc:measuring-channel-performance)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[Event loops](/docs/developer-program/core-concepts/event-loops.md)
+[Event loops](doc:event-loops)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[ifSGNodeChildren interface](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
+[ifSGNodeChildren interface](doc:ifsgnodechildren)
 
 ## How to watch
 

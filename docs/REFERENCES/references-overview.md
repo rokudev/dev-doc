@@ -25,12 +25,12 @@ components, interfaces, events, or methods.
 Developers new to Roku development are encouraged to read the following two
 sections before consulting the reference materials:
 
-- [BrightScript language reference](/docs/references/brightscript/language/brightscript-language-reference.md) — This
+- [BrightScript language reference](doc:brightscript-language-reference) — This
 section explains the fundamentals of Roku's scripting language, BrightScript,
 which is used to power all Roku apps.
 Here you'll find information about the BrightScript component architecture,
 global functions, reserved words, etc.
-- [SceneGraph core concepts](/docs/developer-program/core-concepts/core-concepts.md) — SceneGraph
+- [SceneGraph core concepts](doc:core-concepts) — SceneGraph
 is the UI framework used to style all Roku apps. The core concepts section
 explains how to handle critical app operations such as data scoping,
 event handling, node and field observers, multi-thread operations, and much more.
@@ -63,6 +63,6 @@ with – or are especially relevant to – a particular feature?
 - (How) Does the existence, behavior or structure of statement x, call y,
 or object/component z vary significantly with system version?
 
-Aspects of the last question are specially covered in the separate [Deprecated APIs](/docs/references/deprecated-apis.md) document,
+Aspects of the last question are specially covered in the separate [Deprecated APIs](doc:deprecated-apis) document,
 which developers should revisit periodically, or whenever notified by Roku,
 in order to keep their channels current for certification purposes.

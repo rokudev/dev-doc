@@ -22,7 +22,7 @@ You can also localize your application from your server using URL directives bas
 the user.
 
 > The application package localization features rely on the locales and locale
-IDs currently supported by Roku. The list of these supported locales can be found in the description of the [ifDeviceInfo](/docs/references/brightscript/interfaces/ifdeviceinfo.md) `GetCurrentLocale()` method.
+IDs currently supported by Roku. The list of these supported locales can be found in the description of the [ifDeviceInfo](doc:ifdeviceinfo) `GetCurrentLocale()` method.
 
 
 ## Localizing strings in the application package
@@ -55,7 +55,7 @@ string will be used.
 
 For strings assigned using BrightScript in a
 \<script\> element, you can use the
-[`tr()`](/docs/references/brightscript/language/global-utility-functions.md#trsource-as-string-as-string)
+[`tr()`](doc:global-utility-functions)
 function to localize a string, if you have provided a translation of the
 string in a `translations.xml` file in the XLIFF XML format in the
 package directory `pkg:/locale/locale_ID/` directory. The `tr()`
@@ -79,7 +79,7 @@ The `tr()` function will look for the
 the "hello world" source string. If the source string exists in the
 file, with a translated string, the translated string will be returned,
 and assigned to the `text` field of the
-[**Label**](/docs/references/scenegraph/label-nodes/label.md) node object `m.greetinglabel`. If no
+[**Label**](doc:label) node object `m.greetinglabel`. If no
 translation file exists, or the source string and translated string does
 not exist in the file, the original source string will be returned, and
 assigned to the `text` field.
@@ -96,7 +96,7 @@ For each graphical image to be localized,
 provide each localized image in the `pkg:/locale/` directory, in
 as many languages as you want that are currently supported by Roku. Then
 use the following format for the value of the `uri` field of the
-[Poster](/docs/references/scenegraph/renderable-nodes/poster.md) node:
+[Poster](doc:poster) node:
 
 ~~~
 pkg:/locale/images/localized_image
@@ -135,7 +135,7 @@ follows:
 `pkg:/locale/default/images/image_name_default`
 
 
-In Brightscript in a \<script\> element, you can also use the getLocalizedAsset() method in [ifLocalization](/docs/references/brightscript/interfaces/iflocalization.md) to get a localized
+In Brightscript in a \<script\> element, you can also use the getLocalizedAsset() method in [ifLocalization](doc:iflocalization) to get a localized
 graphical image.
 
 For example:
@@ -214,4 +214,4 @@ French:
 
 ## Localizing content
 
-Apps can identify the region associated with a customer's Roku account to determine which content to display in the app UI. For example, apps can [get the external IP address of a Roku device](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getexternalip-as-string) client-side, and return it back to the app's backend server. In the backend, the app can get the country ranges mapped to the IP address in order to determine which content to show to the customer and allow streaming. See [Channel localization](/docs/developer-program/getting-started/channel-localization.md) for how publishers should consider localization in the development, distribution, engagement, and monetization of their apps
+Apps can identify the region associated with a customer's Roku account to determine which content to display in the app UI. For example, apps can [get the external IP address of a Roku device](doc:ifdeviceinfo) client-side, and return it back to the app's backend server. In the backend, the app can get the country ranges mapped to the IP address in order to determine which content to show to the customer and allow streaming. See [Channel localization](doc:channel-localization) for how publishers should consider localization in the development, distribution, engagement, and monetization of their apps

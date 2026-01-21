@@ -18,7 +18,7 @@ Interface equivalent for intrinsic type Boolean.
 
 | Name      | Description                               |
 | --------- | ----------------------------------------- |
-| [roBoolean](/docs/references/brightscript/components/roboolean.md "roBoolean") | Object equivalent for intrinsic type Boolean |
+| [roBoolean](doc:roboolean) | Object equivalent for intrinsic type Boolean |
 
 
 ## Supported methods

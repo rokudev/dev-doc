@@ -47,11 +47,11 @@ End Sub
 
 ## Supported interfaces
 
-- [ifTextureManager](/docs/references/brightscript/interfaces/iftexturemanager.md "ifTextureManager")                 
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")               
-- [ifGetMessagePort](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort")               
-- [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md "ifHttpAgent")   
+- [ifTextureManager](doc:iftexturemanager)                 
+- [ifSetMessagePort](doc:ifsetmessageport)               
+- [ifGetMessagePort](doc:ifgetmessageport)               
+- [ifHttpAgent](doc:ifhttpagent)   
 
 ## Supported events
 
-- [roTextureRequestEvent](/docs/references/brightscript/events/rotexturerequestevent.md "roVideoPlayerEvent")  
+- [roTextureRequestEvent](doc:rotexturerequestevent)  

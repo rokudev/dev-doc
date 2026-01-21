@@ -21,4 +21,4 @@ In April 2024, Roku's Advanced Tech team reviewed the new SceneGraph and BrightS
 
 ## Related documentation
 
-- [Roku OS 13.0 release notes](/docs/developer-program/release-notes/roku-os-release-notes.md#roku-os-130)
+- [Roku OS 13.0 release notes](doc:roku-os-release-notes)

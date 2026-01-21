@@ -17,7 +17,7 @@ next:
 
 | Name          | Description                               |
 | ------------- | ----------------------------------------- |
-| [roLongInteger](/docs/references/brightscript/components/rolonginteger.md "roLongInteger") | Object equivalent for intrinsic type LongInteger |
+| [roLongInteger](doc:rolonginteger) | Object equivalent for intrinsic type LongInteger |
 
 ## Supported methods
 

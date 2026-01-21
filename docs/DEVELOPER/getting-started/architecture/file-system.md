@@ -41,13 +41,13 @@ before relying on the data cache.
 
 Depending on your application's requirements, you can choose one of
 these options. Interfaces to the registry are documented
-at [roRegistry](/docs/references/brightscript/components/roregistry.md).
+at [roRegistry](doc:roregistry).
 Interfaces to files are described below.
 
 ## Pathnames
 
 A Roku Streaming Player Pathname identifies a file. Pathnames are used
-in [ifFileSystem](/docs/references/brightscript/interfaces/iffilesystem.md) methods,
+in [ifFileSystem](doc:iffilesystem) methods,
 as well as in other components which use files. A Pathname is a string
 with the following format:
 

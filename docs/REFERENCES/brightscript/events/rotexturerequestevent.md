@@ -12,7 +12,7 @@ next:
 ---
 
 
-The [roTextureManager](/docs/references/brightscript/components/rotexturemanager.md "roTextureManager") sends the roTextureRequestEvent after completing a request.
+The [roTextureManager](doc:rotexturemanager) sends the roTextureRequestEvent after completing a request.
 
 ## Supported methods
 
@@ -22,7 +22,7 @@ Returns the unique id of the request.
 
 ### GetState() as Integer
 
-Returns the state of the request. See [ifTextureRequest](/docs/references/brightscript/interfaces/iftexturerequest.md "ifTextureRequest").GetState() for the list of states.
+Returns the state of the request. See [ifTextureRequest](doc:iftexturerequest).GetState() for the list of states.
 
 ### GetURI() as String
 

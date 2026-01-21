@@ -21,9 +21,9 @@ Bitmap pixel values and color values are always represented as 32-bit integer RG
 
 | Name     | Description                                                                                                                  |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") | The roBitmap component contains image data and provides an interface (ifDraw2D) for drawing                                  |
-| [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") | The roRegion component is used to represent a subsection of a bitmap                                                         |
-| [roScreen](/docs/references/brightscript/components/roscreen.md "roScreen") | The roScreen component provides a full screen drawing surface that can be stacked and that you can receive input events from |
+| [roBitmap](doc:robitmap) | The roBitmap component contains image data and provides an interface (ifDraw2D) for drawing                                  |
+| [roRegion](doc:roregion) | The roRegion component is used to represent a subsection of a bitmap                                                         |
+| [roScreen](doc:roscreen) | The roScreen component provides a full screen drawing surface that can be stacked and that you can receive input events from |
 
 
 ## Supported methods
@@ -222,7 +222,7 @@ Draws a line from (xStart, yStart) to (xEnd, yEnd) with RGBA color.
 
 #### Description
 
-Draws the source object, where src is an [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object, at position x,y.
+Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y.
 
 #### Parameters
 
@@ -230,7 +230,7 @@ Draws the source object, where src is an [roBitmap](/docs/references/brightscrip
 | ---- | ------- | ------------------------------------------------------------ |
 | x    | Integer | The x-coordinate of the source object.                       |
 | y    | Integer | The y-coordinate of the source object.                       |
-| src  | Object  | The [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object to be drawn. |
+| src  | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
 #### Return Value
 
@@ -240,7 +240,7 @@ A flag indicating whether the object was successfully drawn.
 
 #### Description
 
-Draws the source object, where src is an [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object, at position x,y, scaled in the x direction by scaleX and in the y direction by scaleY. scaleX and scaleY should each be greater than zero and less than one to reduce the object size, or greater than one to increase the object size
+Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y, scaled in the x direction by scaleX and in the y direction by scaleY. scaleX and scaleY should each be greater than zero and less than one to reduce the object size, or greater than one to increase the object size
 
 #### Parameters
 
@@ -250,7 +250,7 @@ Draws the source object, where src is an [roBitmap](/docs/references/brightscrip
 | y      | Integer | The y-coordinate of the source object.                       |
 | scaleX | Float   | The x direction in which the source object is to be scaled.  |
 | scaleY | Float   | The y direction in which the source object is to be scaled.  |
-| src    | Object  | The [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object to be drawn. |
+| src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
 #### Return Value
 
@@ -260,7 +260,7 @@ A flag indicating whether the object was successfully drawn.
 
 #### Description
 
-Draws the source object, where src is an [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object, at position x,y, scaled in the x direction by scaleX and in the y direction by scaleY. scaleX and scaleY should each be greater than zero and less than one to reduce the object size, or greater than one to increase the object size.
+Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y, scaled in the x direction by scaleX and in the y direction by scaleY. scaleX and scaleY should each be greater than zero and less than one to reduce the object size, or greater than one to increase the object size.
 
 #### Parameters
 
@@ -270,7 +270,7 @@ Draws the source object, where src is an [roBitmap](/docs/references/brightscrip
 | y      | Integer | The y-coordinate of the source object.                       |
 | scaleX | Float   | The x direction in which the source object is to be scaled.  |
 | scaleY | Float   | The y direction in which the source object is to be scaled.  |
-| src    | Object  | The [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object to be drawn. |
+| src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 | rgba   | Integer | The RGBA color of the source object.                         |
 
 #### Return Value
@@ -281,7 +281,7 @@ A flag indicating whether the object was successfully drawn.
 
 #### Description
 
-Draws the source object, where src is an [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object, at position x,y rotated by angle theta degrees.
+Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y rotated by angle theta degrees.
 
 #### Parameters
 
@@ -290,7 +290,7 @@ Draws the source object, where src is an [roBitmap](/docs/references/brightscrip
 | x     | Integer | The x-coordinate of the source object.                       |
 | y     | Integer | The y-coordinate of the source object.                       |
 | Theta | Float   | The position which to rotate the source object. This may be 0, 90, 180, and 270 degrees. |
-| src   | Object  | The [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object to be drawn. |
+| src   | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
 #### Return Value
 
@@ -300,7 +300,7 @@ A flag indicating whether the object was successfully drawn.
 
 #### Description
 
-Draws and then scales and rotates the source object, where src is an [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object;  at position x,y; scaled in the x direction by scaleX and in the y direction by scaleY; and rotated by angle theta degrees.
+Draws and then scales and rotates the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object;  at position x,y; scaled in the x direction by scaleX and in the y direction by scaleY; and rotated by angle theta degrees.
 
 #### Parameters
 
@@ -311,7 +311,7 @@ Draws and then scales and rotates the source object, where src is an [roBitmap](
 | Theta  | Float   | The position which to rotate the source object. This may be 0, 90, 180, and 270 degrees. |
 | scaleX | Float   | The x direction in which the source object is to be scaled.  |
 | scaleY | Float   | The y direction in which the source object is to be scaled.  |
-| src    | Object  | The [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object to be drawn. |
+| src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
 #### Return Value
 
@@ -321,7 +321,7 @@ A flag indicating whether the object was successfully drawn.
 
 #### Description
 
-Draws and then scales and rotates the source object, where src is an [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object;  at position x,y; scaled in the x direction by scaleX and in the y direction by scaleY; and rotated by angle theta degrees.
+Draws and then scales and rotates the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object;  at position x,y; scaled in the x direction by scaleX and in the y direction by scaleY; and rotated by angle theta degrees.
 
 #### Parameters
 
@@ -332,7 +332,7 @@ Draws and then scales and rotates the source object, where src is an [roBitmap](
 | Theta  | Float   | The position which to rotate the source object. This may be 0, 90, 180, and 270 degrees. |
 | scaleX | Float   | The x direction in which the source object is to be scaled.  |
 | scaleY | Float   | The y direction in which the source object is to be scaled.  |
-| src    | Object  | The [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object to be drawn. |
+| src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 | rgba   | Integer | The RGBA color of the source object.                         |
 
 #### Return Value
@@ -343,7 +343,7 @@ A flag indicating whether the object was successfully drawn.
 
 #### Description
 
-Draws and rotates the source object, where src is an [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object at position x,y, rotated by angle theta degrees.
+Draws and rotates the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object at position x,y, rotated by angle theta degrees.
 
 #### Parameters
 
@@ -352,7 +352,7 @@ Draws and rotates the source object, where src is an [roBitmap](/docs/references
 | x     | Integer | The x-coordinate of the source object.                       |
 | y     | Integer | The y-coordinate of the source object.                       |
 | Theta | Float   | The position which to rotate the source object. This may be 0, 90, 180, and 270 degrees. |
-| src   | Object  | The [roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object to be drawn. |
+| src   | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 | rgba  | Integer | The RGBA color of the source object.                         |
 
 #### Return Value
@@ -363,7 +363,7 @@ A flag indicating whether the object was successfully drawn.
 
 #### Description
 
-Draws the text at position (x,y) using the specified RGBA color and [roFont](/docs/references/brightscript/components/rofont.md "roFont") font object. Text is drawn anti-aliased. The background image/color behind the text will show through the spaces and holes in the text. To have the text erase the background, make a call to [DrawRect()](#drawrectx-as-integer-y-as-integer-width-as-integer-height-as-integer-rgba-as-integer-as-void) before calling DrawText(). The size, bold, and italic attributes are specified when creating the [roFont](/docs/references/brightscript/components/rofont.md "roFont").
+Draws the text at position (x,y) using the specified RGBA color and [roFont](doc:rofont) font object. Text is drawn anti-aliased. The background image/color behind the text will show through the spaces and holes in the text. To have the text erase the background, make a call to [DrawRect()](#drawrectx-as-integer-y-as-integer-width-as-integer-height-as-integer-rgba-as-integer-as-void) before calling DrawText(). The size, bold, and italic attributes are specified when creating the [roFont](doc:rofont).
 
 #### Parameters
 
@@ -373,7 +373,7 @@ Draws the text at position (x,y) using the specified RGBA color and [roFont](/do
 | x    | Integer | The x-coordinate of the source object.                       |
 | y    | Integer | The y-coordinate of the source object.                       |
 | rgba | Integer | The color of the text.                                       |
-| font | Object  | The [roFont](/docs/references/brightscript/components/rofont.md "roFont") object to be used for the text. |
+| font | Object  | The [roFont](doc:rofont) object to be used for the text. |
 
 #### Return Value
 
@@ -387,4 +387,4 @@ Realizes the bitmap by finishing all queued draw calls. Until Finish() is called
 
 > This method is synchronous; it does not return until all graphic operations are complete.
 
-> When working with an [roScreen](/docs/references/brightscript/components/roscreen.md "roScreen") object, the [ifScreen.SwapBuffers()](/docs/references/brightscript/interfaces/ifscreen.md#swapbuffers-as-void) method should be used instead of this method.
+> When working with an [roScreen](doc:roscreen) object, the [ifScreen.SwapBuffers()](doc:ifscreen) method should be used instead of this method.

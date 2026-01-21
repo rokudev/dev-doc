@@ -163,7 +163,7 @@ m.global.addField("RSG_analytics","node",false)
 m.global.RSG_analytics = CreateObject("roSGNode","Roku_Analytics:AnalyticsNode")
 ~~~
 
-[`addField`](/docs/references/brightscript/interfaces/ifsgnodefield.md#addfieldfieldname-as-string-type-as-string-alwaynotify-as-boolean-as-boolean) takes three parameters:
+[`addField`](doc:ifsgnodefield) takes three parameters:
 
   - The `fieldName` - the name of the field to add
   - The `type` of the field to add
@@ -174,7 +174,7 @@ m.global.RSG_analytics = CreateObject("roSGNode","Roku_Analytics:AnalyticsNode")
 
 This method takes a roAssociativeArray of roAssociativeArrays containing
 configuration data for each analytics service such as endpoint URLs, API
-keys, etc. See [Supported Vendors](/docs/developer-program/libraries/roku-analytics-component.md#supported-vendors) for
+keys, etc. See [Supported Vendors](doc:roku-analytics-component) for
 vendor-specific configuration data.
 
 **Example:**
@@ -202,7 +202,7 @@ m.global.RSG_analytics.init = {
 > Ooyala or Brightcove.
 
 This method takes a single roAssociativeArray with exactly one attribute
-named `video` containing a SceneGraph [Video node](/docs/references/scenegraph/media-playback-nodes/video.md). If your app
+named `video` containing a SceneGraph [Video node](doc:video). If your app
 uses multiple Video nodes (as might be done for mid-roll ads), this
 method needs to be set each time a new Video node is created.
 
@@ -221,7 +221,7 @@ m.global.RSG_analytics.initVideoPlayer = {
 > Ooyala or Brightcove.
 
 This method takes a roAssociativeArray of roAssociativeArrays. At least
-one sub-AA is required and must contain the [content metadata](/docs/developer-program/getting-started/architecture/content-metadata.md) for
+one sub-AA is required and must contain the [content metadata](doc:content-metadata) for
 playback. Any other sub-AAs may contain additional information required
 for analytics providers and are optional.
 
@@ -265,7 +265,7 @@ m.global.RSG_analytics.setContentMetadata = {
 
 This method is similar to `initVideoPlayer` and takes a single
 roAssociativeArray with exactly one attribute named `video` containing a
-Scenegraph [Video Node](/docs/references/scenegraph/media-playback-nodes/video.md).
+Scenegraph [Video Node](doc:video).
 This should be set once video playback has finished which will allow the
 component to finish analytics tasks and stop observing Video node
 events.
@@ -316,7 +316,7 @@ Developers can track events from the [standard GA4 events](https://developers.go
 
 | Parameter     | Type    | Required | Default value                                                | Description                                                  | RAC implementation                                           |
 | :------------ | :------ | :------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| client_id     | string  | Required | [GetChannelClientID()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string) | Uniquely identifies a user instance of a web client.<br /><br />This is the equivalent of the  "cid" parameter in Universal Analytics (UA). | This field is populated with value returned by the [GetChannelClientID()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string) method, if it is not provided by the developer. |
+| client_id     | string  | Required | [GetChannelClientID()](doc:ifdeviceinfo) | Uniquely identifies a user instance of a web client.<br /><br />This is the equivalent of the  "cid" parameter in Universal Analytics (UA). | This field is populated with value returned by the [GetChannelClientID()](doc:ifdeviceinfo) method, if it is not provided by the developer. |
 | events        | roArray | Required | -                                                            | An array of event items that to be provided by developer.<br /><br /> Up to 25 events can be sent per request. <br /><br />See the [Google Analytics (GA4) events reference](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events) for all valid events. | RAC will print a debug console warning if this value is empty or is not an array. The payload is still sent if this parameter is not specified. |
 | events[].name | string  | Required | -                                                            | The name for the event.<br /><br />See the [Google Analytics (GA4) events reference](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference/events) for all options.<br /><br />This is an equivalent of the "t" parameter in Universal Analytics (UA). | RAC only checks the "name" for each event in array. If the event "name" is not provided, RAC prints a debug console warning, but still sends the events to the Google server.<br /><br />If this parameter is not specified, the payload is still sent. |
 

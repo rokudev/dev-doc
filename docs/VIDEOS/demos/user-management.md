@@ -20,4 +20,4 @@ This video explains how to use the User Management feature in the Developer Dash
 
 ## Related documentation
 
-[User access management](/docs/features/dashboard/user-access-management.md)
+[User access management](doc:user-access-management)

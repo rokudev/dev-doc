@@ -25,20 +25,20 @@ display this information to the user when the user selects the item.
 The following are the list and grid node classes supplied by Roku as
 part of the SceneGraph API:
 
-  - [LabelList](/docs/references/scenegraph/list-and-grid-nodes/labellist.md)
-  - [MarkupList](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md)
-  - [PosterGrid](/docs/references/scenegraph/list-and-grid-nodes/postergrid.md)
-  - [MarkupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md)
-  - [RowList](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md)
-  - [CheckList](/docs/references/scenegraph/list-and-grid-nodes/checklist.md)
-  - [RadioButtonList](/docs/references/scenegraph/list-and-grid-nodes/radiobuttonlist.md)
-  - [TargetList](/docs/references/scenegraph/list-and-grid-nodes/targetlist.md)
-  - [TargetSet](/docs/references/scenegraph/list-and-grid-nodes/targetset.md)
-  - [ZoomRowList](/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md)
-  - [TimeGrid](/docs/references/scenegraph/list-and-grid-nodes/timegrid.md)
+  - [LabelList](doc:labellist)
+  - [MarkupList](doc:markuplist)
+  - [PosterGrid](doc:postergrid)
+  - [MarkupGrid](doc:markupgrid)
+  - [RowList](doc:rowlist)
+  - [CheckList](doc:checklist)
+  - [RadioButtonList](doc:radiobuttonlist)
+  - [TargetList](doc:targetlist)
+  - [TargetSet](doc:targetset)
+  - [ZoomRowList](doc:zoomrowlist)
+  - [TimeGrid](doc:timegrid)
 
 These list and grid node classes are derived from the abstract base
-class **[ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md)**. Most of the fields
+class **[ArrayGrid](doc:arraygrid)**. Most of the fields
 described in the reference information for each list or grid node
 class are described in the **ArrayGrid** reference information, though
 sometimes with slightly different field names.
@@ -50,9 +50,9 @@ multiple columns of items arranged both vertically (for the items in the
 column), and horizontally (for the rows of items across the columns).
 
 Items are indexed by list and grid nodes based on their position in the
-[**ContentNode**](/docs/references/scenegraph/control-nodes/contentnode.md) node that
+[**ContentNode**](doc:contentnode) node that
 defines each item in the list or grid (see [**Specifying List and
-Grid Content**](/docs/references/scenegraph/list-and-grid-nodes/overview.md#specifying-list-and-grid-content)).
+Grid Content**](doc:overview)).
 The first item defined in the **ContentNode** node is assigned index 0,
 the second item is assigned index 1, and so forth. The **ContentNode**
 node index determines the position of the item in the list or grid,
@@ -69,14 +69,14 @@ the next lower row, and continues incrementing from left to right and
 top to bottom for each row in the grid. For example, if you specified a
 3-column grid (by setting the `numColumns` field to `3` as described in
 [**List and Grid Layout
-Options**](/docs/references/scenegraph/list-and-grid-nodes/overview.md#list-and-grid-layout-options)), the index
+Options**](doc:overview)), the index
 would increment as
 follows:
 
 SceneGraph also provides another type of list/grid node class,
 **RowList**, that combines aspects of both lists and grids. See
 [**RowList Node
-Class**](/docs/references/scenegraph/list-and-grid-nodes/overview.md#rowlist-node-class) for information
+Class**](doc:overview) for information
 about this hybrid node class.
 
 ## Item focus and selection
@@ -158,7 +158,7 @@ are:
 If you want a custom focus indicator that cannot be defined using these
 fields, you should use one of the node classes described in
 [**Custom Item Definitions and Focus
-Indicators**](/docs/references/scenegraph/list-and-grid-nodes/overview.md#custom-item-definitions-and-focus-indicators).
+Indicators**](doc:overview).
 
 ## Specifying list and grid content
 
@@ -177,17 +177,17 @@ resulting **ContentNode** to the `content` field of the list or grid.
 For examples, see:
 
   - [**ContentNode
-    Description**](/docs/references/scenegraph/control-nodes/contentnode.md) for
+    Description**](doc:contentnode) for
     the general procedure using the **roSGNode** interface functions
-  - [**Task Example**](/docs/references/scenegraph/control-nodes/task.md#example) for a specific
+  - [**Task Example**](doc:task) for a specific
     code example of configuring a **ContentNode** node for a
     **LabelList** node using a **Task** node
   - [**Downloading Server
-    Content**](/docs/developer-program/core-concepts/downloading-server-content.md) also shows the
+    Content**](doc:downloading-server-content) also shows the
     server (or application package) XML file for the same example, and
     how the **ContentNode** node is assigned to the **LabelList** node
   - [**ContentNode
-    Example**](/docs/references/scenegraph/control-nodes/contentnode.md#example) also shows
+    Example**](doc:contentnode) also shows
     how to manually set up a **ContentNode** node for a **LabelList**
     node in BrightScript
 
@@ -266,9 +266,9 @@ to customize the wrap divider element are:
 ## Custom item definitions and focus indicators
 
 The
-[**RowList**](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md),
-[**MarkupList**](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md), and
-[**MarkupGrid**](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md) node classes provide the
+[**RowList**](doc:rowlist),
+[**MarkupList**](doc:markuplist), and
+[**MarkupGrid**](doc:markupgrid) node classes provide the
 ultimate flexibility to present lists and grids with fully-customized
 item appearance and focus indicators. These node classes allow you to
 create a custom component for list or grid items to define whatever

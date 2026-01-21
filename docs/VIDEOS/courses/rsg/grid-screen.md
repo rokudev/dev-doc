@@ -26,37 +26,37 @@ This lesson describes how to create the directory structure and manifest require
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Grid Screen sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/GridScreen) | Download and review the code used in this lesson to create a grid screen. |
-| [Sideloading  Roku apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) | Sideload and test the Grid Screen app created in this lesson. |
-| [Channel directory](/docs/developer-program/core-concepts/developing-scenegraph-applications.md) | Learn to how to create the directory structure required by Roku apps. |
-| [Channel manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) | Read how to create the manifest required by Roku apps (every app must have a manifest so the Roku OS knows which features your app supports). Learn about all the mandatory attributes that must be included in the manifest,  and the different optional features can be enabled in it. |
+| [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Grid Screen app created in this lesson. |
+| [Channel directory](doc:developing-scenegraph-applications) | Learn to how to create the directory structure required by Roku apps. |
+| [Channel manifest](doc:channel-manifest) | Read how to create the manifest required by Roku apps (every app must have a manifest so the Roku OS knows which features your app supports). Learn about all the mandatory attributes that must be included in the manifest,  and the different optional features can be enabled in it. |
 
 ## Related
 
-[Scene node](/docs/references/scenegraph/abstract-nodes/scene.md)
+[Scene node](doc:scene)
 
-[Overhang node](/docs/references/scenegraph/sliding-panels-nodes/overhang.md)
+[Overhang node](doc:overhang)
 
-[Label node](/docs/references/scenegraph/renderable-nodes/label.md)
+[Label node](doc:label)
 
-[RowList node](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md)
+[RowList node](doc:rowlist)
 
-[Poster node](/docs/references/scenegraph/renderable-nodes/poster.md)
+[Poster node](doc:poster)
 
-[Event loops](/docs/developer-program/core-concepts/event-loops.md)
+[Event loops](doc:event-loops)
 
-[Content node](/docs/references/scenegraph/control-nodes/contentnode.md)  
+[Content node](doc:contentnode)  
 
-[Content meta data](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content meta data](doc:content-metadata)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[ifSGNodeChildren interface](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
+[ifSGNodeChildren interface](doc:ifsgnodechildren)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[Runtime functions](/docs/references/brightscript/language/runtime-functions.md)
+[Runtime functions](doc:runtime-functions)
 
-[BrightScript expressions, variables, and types](/docs/references/brightscript/language/expressions-variables-types.md)
+[BrightScript expressions, variables, and types](doc:expressions-variables-types)
 
 ## How to watch
 

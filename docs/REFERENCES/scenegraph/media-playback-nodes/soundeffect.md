@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 The SoundEffect node class is used to play audio sound effects that can be triggered from events that occur in the UI. Typically, these sound effects are short audio clips, but there is no inherent limit on their length. Currently, up to four simultaneous sounds can be playing at any time, in addition to audio from streaming content and TextToSpeech audio.
 

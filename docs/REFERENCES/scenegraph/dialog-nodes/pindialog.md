@@ -12,13 +12,13 @@ next:
 ---
 
 
-> Roku OS 10.0 introduced a new [StandardPinPadDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-pinpad-dialog.md "**Standard PinPad Dialog**"), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the PIN pad dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy PinDialog nodes in their app with the new [StandardPinPadDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-pinpad-dialog.md "**Standard PinPad Dialog**"). 
+> Roku OS 10.0 introduced a new [StandardPinPadDialog node](doc:standard-pinpad-dialog), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the PIN pad dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy PinDialog nodes in their app with the new [StandardPinPadDialog node](doc:standard-pinpad-dialog). 
 >
 > To upgrade a legacy pinpad dialog to the standard version, prepend "Standard" to the node type. For example, change `      pindialog = createObject("roSGNode", "PinDialog")` to `      pindialog = createObject("roSGNode", "StandardPinDialog")`.
 
-Extends [**Dialog**](/docs/references/scenegraph/dialog-nodes/dialog.md "**Dialog**")
+Extends [**Dialog**](doc:dialog)
 
-The PinDialog node class is a special type of Dialog node that prompts the user to enter a numeric string. The PinDialog node class includes an internal [PinPad](/docs/references/scenegraph/widget-nodes/pinpad.md "PinPad") node to allow the user to input a numeric value, such as a PIN.
+The PinDialog node class is a special type of Dialog node that prompts the user to enter a numeric string. The PinDialog node class includes an internal [PinPad](doc:pinpad) node to allow the user to input a numeric value, such as a PIN.
 
 The PinDialog node class allows you to add a title (by setting the Dialog node title field), a message (by setting the Dialog node message field), and a set of action buttons (by setting the Dialog node buttons field). The bulletText and graphicUrl fields of the Dialog node should not be set. If those fields are set, the layout of the PinDialog node will likely not look correct.
 

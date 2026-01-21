@@ -36,13 +36,13 @@ The Roku Search algorithm uses a 30-day lookback window for authentication event
 
 To use the Roku Event Dispatcher in your app's authentication workflow to send authentication events, follow these steps:
 
-1. Enable the RED library in your app by adding the following line to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) file:
+1. Enable the RED library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
    ```
    sg_component_libs_required=roku_analytics
    ```
 
-2. Use the [Roku Analytics Component](/docs/developer-program/libraries/roku-analytics-component.md) to send authentication events from your app following these steps:
+2. Use the [Roku Analytics Component](doc:roku-analytics-component) to send authentication events from your app following these steps:
 
    a. When `roSGScreen` is active, create a "Roku_Analytics:AnalyticsNode" node and persist it by storing in the global node.
 
@@ -78,7 +78,7 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
 end sub
    ```
 
-3. Use the [debug console](/docs/developer-program/debugging/debugging-channels.md) to verify that your app is sending authentication events.
+3. Use the [debug console](doc:debugging-channels) to verify that your app is sending authentication events.
 
 ![roku815px - Search results for an authenticated channel that isn't using the Roku Event Dispatcher](https://image.roku.com/ZHZscHItMTc2/red-3.jpg "red-3")
 
@@ -86,7 +86,7 @@ end sub
 
 To use the RAF **fireRokuMarketingPixel()** method to send authentication events to Roku, follow these steps:
 
-1. Enable the RAF library in your app by adding the following line to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) file:
+1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
    ```
    bs_libs_required=roku_ads_lib

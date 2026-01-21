@@ -20,11 +20,11 @@ Once the scripts have been written, developers can upload them to the [Channel B
 
 To run Channel Behavior Analysis testing on authenticated apps, developers must first do the following:
 
-* Create a **Public** app. The developer sign-in/out scripts cannot be used with [beta apps](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines).
-* [Upload a package file](/docs/developer-program/publishing/channel-publishing-guide.md#package-upload-window).
-* [Pass static analysis testing](/docs/developer-program/publishing/channel-publishing-guide.md#static-analysis-window).
-* [Provide test credentials](/docs/developer-program/publishing/channel-publishing-guide.md#test-credentials-window).
-* [Provide deep link parameters](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window).
+* Create a **Public** app. The developer sign-in/out scripts cannot be used with [beta apps](doc:channel-publishing-guide).
+* [Upload a package file](doc:channel-publishing-guide).
+* [Pass static analysis testing](doc:channel-publishing-guide).
+* [Provide test credentials](doc:channel-publishing-guide).
+* [Provide deep link parameters](doc:channel-publishing-guide).
 * [Write automated sign-in and sign-out scripts](#writing-automated-sign-in-and-sign-out-scripts).
 
 This document demonstrates how to write these scripts with the [Roku Remote tool](http://devtools.web.roku.com/RokuRemote/) for signing in to the [on-device authentication sample app](https://github.com/rokudev/on-device-authentication) and signing out.
@@ -37,7 +37,7 @@ Developers can write test scripts with the [Roku Remote Tool](http://devtools.we
 
 To launch the Roku Remote Tool and add your device and development app to it, follow these steps:
 
-1. [Sideload your development app](/docs/developer-program/getting-started/developer-setup.md#steps-to-set-up-the-development-environment) on your test Roku device.
+1. [Sideload your development app](doc:developer-setup) on your test Roku device.
 
 2. Open the [Roku Remote Tool](http://devtools.web.roku.com/RokuRemote/). Optionally, you can [download the standalone app](http://devtools.web.roku.com/RokuRemote/electron.html) and run it from your desktop.
 
@@ -45,7 +45,7 @@ To launch the Roku Remote Tool and add your device and development app to it, fo
 
    <Image alt="roku600px - roku-remote-add-device-toggle-on" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-add-device-toggle-on-v2.png" />
 
-4. Add your development app. Click **Add channel**, and then enter the name of the app that is specified in the **title** attribute of the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#required-attributes), enter the app ID, which is "dev" if you sideloaded the app, and then click **Add to table**. Click the add icon for the app under **Add to script** so the Roku OS can identify the app to be automated.
+4. Add your development app. Click **Add channel**, and then enter the name of the app that is specified in the **title** attribute of the [manifest](doc:channel-manifest), enter the app ID, which is "dev" if you sideloaded the app, and then click **Add to table**. Click the add icon for the app under **Add to script** so the Roku OS can identify the app to be automated.
 
    <Image alt="roku600px - roku-remote-add-channel" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-add-channel-v1.png" />
 
@@ -53,7 +53,7 @@ To launch the Roku Remote Tool and add your device and development app to it, fo
 
 To create the automated sign-in script, follow these steps:
 
-1. Click **Launch the app**. Select the app from the **Channel name** list, and then click **Add** (the deep linking **Content ID** and **Media type** parameters are not required; the actual deep linking parameters to be used should have already been provided in the [Deep Linking page](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-page) as part of the [prerequisites](#prerequisites)). Click the add icon for the app under **Add to script** to add a "launch" step for the app to the script.
+1. Click **Launch the app**. Select the app from the **Channel name** list, and then click **Add** (the deep linking **Content ID** and **Media type** parameters are not required; the actual deep linking parameters to be used should have already been provided in the [Deep Linking page](doc:channel-publishing-guide) as part of the [prerequisites](#prerequisites)). Click the add icon for the app under **Add to script** to add a "launch" step for the app to the script.
 
    <Image alt="roku600px - roku-remote-launch-channel" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-launch-channel-v1.png" />
 
@@ -100,13 +100,13 @@ To create the automated sign-out script, follow these steps:
 
 ## Running Channel Behavior Analysis testing on authenticated apps
 
-Developers can use the self-serve Channel Behavior Analysis tool to verify that their authenticated apps meet [performance](/docs/developer-program/certification/certification.md#3-performance) and [deep linking](/docs/developer-program/certification/certification.md#5-deep-linking) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
+Developers can use the self-serve Channel Behavior Analysis tool to verify that their authenticated apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
 
 To run Channel Behavior Analysis testing on an authenticated app, follow these steps:
 
 1. Verify that all the [prerequisites](#prerequisites) have been completed.
 
-2. In the "text" steps within your sign-in script, verify that you have replaced the user name and password with the "script-login" and "script-password" template variables, respectively. The Channel Behavior Analysis tool will replace the template variables with the actual credentials entered in the [Test Credentials page](/docs/developer-program/publishing/channel-publishing-guide.md#certification-testing-window). Channel Behavior Analysis testing will fail if the actual credentials are in the script.
+2. In the "text" steps within your sign-in script, verify that you have replaced the user name and password with the "script-login" and "script-password" template variables, respectively. The Channel Behavior Analysis tool will replace the template variables with the actual credentials entered in the [Test Credentials page](doc:channel-publishing-guide). Channel Behavior Analysis testing will fail if the actual credentials are in the script.
 
 3. Navigate to the [Channel Behavior Analysis page in the Developer Dashboard](/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis-window).
 
@@ -130,7 +130,7 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
    <Image alt="roku815px - cert-test-home" border={false} src="https://image.roku.com/ZHZscHItMTc2/cert-test-home-cba.png" />
 
-5. Select the [test credentials](/docs/developer-program/publishing/channel-publishing-guide.md#test-credentials-window) title that contains the user name and password to be used to sign-in into the app. The Channel Behavior Analysis tool will automatically replace the "script-login" and "script-password" template variables in the script with the user name and password entered for the selected test credentials title.
+5. Select the [test credentials](doc:channel-publishing-guide) title that contains the user name and password to be used to sign-in into the app. The Channel Behavior Analysis tool will automatically replace the "script-login" and "script-password" template variables in the script with the user name and password entered for the selected test credentials title.
 
 6. In the **Upload Sign In/Sign Out Scripts** dialog, click **Upload** to upload the exported sign-in and sign-out scripts (**.rasp** files) on your desktop.
 
@@ -146,7 +146,7 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
 ## Sample app
 
-You can [download the on-device authentication sample app ](https://github.com/rokudev/on-device-authentication)and [sideload it on your Roku device](/docs/developer-program/getting-started/developer-setup.md#steps-to-set-up-the-development-environment) to test the certification flow for authenticated apps. The sample app includes a **rasp** folder with sign-in and sign-out scripts that you can import and run in the Roku Remote tool. You can run certification testing on the app following these steps:
+You can [download the on-device authentication sample app ](https://github.com/rokudev/on-device-authentication)and [sideload it on your Roku device](doc:developer-setup) to test the certification flow for authenticated apps. The sample app includes a **rasp** folder with sign-in and sign-out scripts that you can import and run in the Roku Remote tool. You can run certification testing on the app following these steps:
 
 1. Open the [Developer Dashboard](https://developer.roku.com/developer), click **Manage My Channels**, click **Add Channel**, and then create a new SDK app.
 
@@ -154,7 +154,7 @@ You can [download the on-device authentication sample app ](https://github.com/r
 
 3. In the **Monetization** page, select the **My channel contains in-channel subscriptions** check box.
 
-4. [Package the sample app with the Packager tool in the Development Application Installer](/docs/developer-program/publishing/packaging-channels.md#packaging-with-the-development-application-installer), and then upload the package in the Developer Dashboard **Package** **Upload** page.
+4. [Package the sample app with the Packager tool in the Development Application Installer](doc:packaging-channels), and then upload the package in the Developer Dashboard **Package** **Upload** page.
 
 5. Run **Static Analysis** testing. The app should pass with no errors and a few warnings.
 

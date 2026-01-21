@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 The Timer node class generates an observable event after a specified amount of time has elapsed.
 

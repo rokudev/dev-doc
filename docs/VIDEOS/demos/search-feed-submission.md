@@ -21,4 +21,4 @@ This video demonstrates how to validate and submit a search feed using online to
 
 ## Related documentation
 
-[Implementing Roku Search](/docs/developer-program/discovery/search/implementing-search.md)
+[Implementing Roku Search](doc:implementing-search)

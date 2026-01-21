@@ -35,7 +35,7 @@ Retrieves the ID of the node that changed.
 ### getInfo() as Object
 
 Retrieves an AA that contains the values of selected "context" fields, which
-were [specified in an earlier-executed call](/docs/references/brightscript/interfaces/ifsgnodefield.md#event-field-aggregation) to `observeField()` or `observeFieldScoped()`.
+were [specified in an earlier-executed call](doc:ifsgnodefield) to `observeField()` or `observeFieldScoped()`.
 (If no such "context" fields were designated previously, `getInfo()` returns an empty AA.)
 The array is keyed on the names of the "context" fields, and the entry values are the
 instantaneous values of the corresponding fields,

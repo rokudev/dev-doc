@@ -14,7 +14,7 @@ next:
 
 Roku Search provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement. The lift provided by Roku Search makes it essential for reaching and expanding your audience on the Roku platform.  
 
-See [Implementing Roku Search](/docs/developer-program/discovery/search/implementing-search.md) to integrate your app into Roku Search.
+See [Implementing Roku Search](doc:implementing-search) to integrate your app into Roku Search.
 
 ![roku815px - roku-search-overview](https://image.roku.com/ZHZscHItMTc2/roku-search-overview-v2.png)
 

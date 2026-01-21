@@ -16,7 +16,7 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roEVPCipher](/docs/references/brightscript/components/roevpcipher.md "roEVPCipher") | The EVP Cipher component provides an interface to the OpenSSL EVP library of symmetric cipher commands |
+| [roEVPCipher](doc:roevpcipher) | The EVP Cipher component provides an interface to the OpenSSL EVP library of symmetric cipher commands |
 
 
 ## Supported methods
@@ -45,7 +45,7 @@ Returns 0 on success or non-zero on failure.
 
 #### Description
 
-Reinitializes an existing cipher context. This can be called to reuse an existing [roEVPCipher](/docs/references/brightscript/components/roevpdigest.md "roEVPCipher") object to encrypt new data
+Reinitializes an existing cipher context. This can be called to reuse an existing [roEVPCipher](doc:roevpdigest) object to encrypt new data
 
 #### Return Value
 
@@ -56,17 +56,17 @@ Returns 0 on success or non-zero on failure.
 
 #### Description
 
-Processes the included [roByteArray](/docs/references/brightscript/components/robytearray.md) containing encrypted/decrypted data.
+Processes the included [roByteArray](doc:robytearray) containing encrypted/decrypted data.
 
 #### Parameters
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
-| bytes | Object | An [roByteArray](/docs/references/brightscript/components/robytearray.md) containing data that is encrypted or decrypted. |
+| bytes | Object | An [roByteArray](doc:robytearray) containing data that is encrypted or decrypted. |
 
 #### Return Value
 
-An [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") containing the result.
+An [roByteArray](doc:robytearray) containing the result.
 
 #### Example
 
@@ -86,17 +86,17 @@ is equivalent to
 
 #### Description
 
-Updates the included [roByteArray](/docs/references/brightscript/components/robytearray.md) containing encrypted/decrypted data.
+Updates the included [roByteArray](doc:robytearray) containing encrypted/decrypted data.
 
 #### Parameters
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
-| bytes | Object | An [roByteArray](/docs/references/brightscript/components/robytearray.md) containing data that is encrypted or decrypted. |
+| bytes | Object | An [roByteArray](doc:robytearray) containing data that is encrypted or decrypted. |
 
 #### Return Value
 
-An [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") containing a subset of the result. Some or all of the result may not be returned until the next call to Update().
+An [roByteArray](doc:robytearray) containing a subset of the result. Some or all of the result may not be returned until the next call to Update().
 
 ### Final() as Object
 

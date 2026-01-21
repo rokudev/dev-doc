@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**") 
+Extends [**Group**](doc:group) 
 
 The PinPad node is a simple widget that allows you to enter a fixed length numeric string. The string that is entered is displayed in a set of boxes above the PinPad node keyboard, with each box displaying a single numeral of the entered string.
 

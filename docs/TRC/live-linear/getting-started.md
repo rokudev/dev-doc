@@ -16,7 +16,7 @@ Welcome to linear channels at Roku! Here are resources to help get you started o
 
 ## Specifications
 
-- [Live Linear Ingest Specification](/trc-docs/live-linear/ovp-linear-ingest-spec.md)
+- [Live Linear Ingest Specification](doc:ovp-linear-ingest-spec)
 
 ## Analytics & reporting
 

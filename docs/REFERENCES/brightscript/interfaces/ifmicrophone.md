@@ -16,7 +16,7 @@ next:
 
 | Name         | Description |
 | ------------ | ----------- |
-| [roMicrophone](/docs/references/brightscript/components/romicrophone.md "roMicrophone") | The roMicrophone API allows apps to receive audio data from the user’s microphone-supported remote control device or mobile phone            |
+| [roMicrophone](doc:romicrophone) | The roMicrophone API allows apps to receive audio data from the user’s microphone-supported remote control device or mobile phone            |
 
 
 ## Supported methods
@@ -63,9 +63,9 @@ A flag indicating whether the recording was performed and saved successfully.
 
 #### Description
 
-Opens the microphone and begins streaming microphone events to the app. The app must have called the [SetMessagePort()](/docs/references/brightscript/interfaces/ifsetmessageport.md#setmessageportport-as-object--as-void) method previously. 
+Opens the microphone and begins streaming microphone events to the app. The app must have called the [SetMessagePort()](doc:ifsetmessageport) method previously. 
 
-While the microphone is open, [RecordingInfo](/docs/references/brightscript/events/romicrophoneevent.md#isrecordinginfo-as-boolean) events will be sent periodically with audio data. When the microphone is closed, a [RecordingDone](/docs/references/brightscript/events/romicrophoneevent.md#isrecordingdone-as-boolean) event will be sent. See [roMicrophoneEvent](/docs/references/brightscript/events/romicrophoneevent.md) for detailed information.
+While the microphone is open, [RecordingInfo](doc:romicrophoneevent) events will be sent periodically with audio data. When the microphone is closed, a [RecordingDone](doc:romicrophoneevent) event will be sent. See [roMicrophoneEvent](doc:romicrophoneevent) for detailed information.
 
 #### Return Value
 

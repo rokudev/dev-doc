@@ -16,9 +16,9 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roAppMemoryMonitor](/docs/references/brightscript/components/roappmemorymonitor.md "roAppMemoryMonitor") | Subscribes channels to low-memory notifications. When an app is subscribed, it receives a [roAppMemoryNotificationEvent](/docs/references/brightscript/events/roappmemorynotificationevent.md) when it reaches a specific percentage of the per-app memory limit (80%). |
+| [roAppMemoryMonitor](doc:roappmemorymonitor) | Subscribes channels to low-memory notifications. When an app is subscribed, it receives a [roAppMemoryNotificationEvent](doc:roappmemorynotificationevent) when it reaches a specific percentage of the per-app memory limit (80%). |
 
-> The roAppMemoryMonitor functions are supported on all [current and updatable device models](/docs/specs/hardware.md), except for Liberty, Austin, Mustang and Littlefield.
+> The roAppMemoryMonitor functions are supported on all [current and updatable device models](doc:hardware), except for Liberty, Austin, Mustang and Littlefield.
 
 
 

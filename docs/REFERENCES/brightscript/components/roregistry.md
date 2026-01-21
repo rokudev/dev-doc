@@ -21,7 +21,7 @@ Access to the registry is available through the roRegistry object. This object i
 
 ``CreateObject("roRegistry")``
 
-There is a separate registry for each [developer ID](/docs/developer-program/publishing/packaging-channels.md#step-3-run-the-genkey-utility-to-create-a-signing-key "developer ID"). This allows multiple applications to use the registry without being able to read or modify the registry from other applications. If desired, a single registry can be shared across multiple applications by using the same developer ID to package the applications. This is the conventional way that an "application suite" with shared preferences and other shared information should work.  Each registry is divided into sections which are specified by the developer for organization and grouping of attributes. Methods in ifRegistry are provided to list the sections in the registry and to provide access to the data in each section.
+There is a separate registry for each [developer ID](doc:packaging-channels). This allows multiple applications to use the registry without being able to read or modify the registry from other applications. If desired, a single registry can be shared across multiple applications by using the same developer ID to package the applications. This is the conventional way that an "application suite" with shared preferences and other shared information should work.  Each registry is divided into sections which are specified by the developer for organization and grouping of attributes. Methods in ifRegistry are provided to list the sections in the registry and to provide access to the data in each section.
 
 > The maximum size of each zlib-compressed application registry is **32K bytes**. Apps should minimize the amount of data stored in the registry and the frequency in which they update it.
 >
@@ -34,4 +34,4 @@ The registry is encrypted, and updates are relatively performance intensive and 
 
 ## Supported interfaces
 
-- [ifRegistry](/docs/references/brightscript/interfaces/ifregistry.md "ifRegistry")
+- [ifRegistry](doc:ifregistry)

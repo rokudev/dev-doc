@@ -63,15 +63,15 @@ End Function
 
 ## Supported interfaces
 
-- [ifSocket](/docs/references/brightscript/interfaces/ifsocket.md "ifSocket")
-- [ifSocketAsync](/docs/references/brightscript/interfaces/ifsocketasync.md "ifSocketAsync")
-- [ifSocketStatus](/docs/references/brightscript/interfaces/ifsocketstatus.md "ifSocketStatus")
-- [ifSocketOption](/docs/references/brightscript/interfaces/ifsocketoption.md "ifSocketOption")
-- [ifSocketCastOption ](/docs/references/brightscript/interfaces/ifsocketcastoption.md "ifSocketCastOption ")
+- [ifSocket](doc:ifsocket)
+- [ifSocketAsync](doc:ifsocketasync)
+- [ifSocketStatus](doc:ifsocketstatus)
+- [ifSocketOption](doc:ifsocketoption)
+- [ifSocketCastOption ](doc:ifsocketcastoption)
 
 > Some legacy Roku OS versions may implement ifSocketCastOption as ifSocketCast.
 
 
 ## Supported events
 
-- [roSocketEvent](/docs/references/brightscript/events/rosocketevent.md "roSocketEvent ")
+- [roSocketEvent](doc:rosocketevent)

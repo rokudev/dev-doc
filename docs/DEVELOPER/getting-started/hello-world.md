@@ -37,11 +37,11 @@ To edit the text displayed on your television screen by the sample app, follow t
 
 
 
-3. In the [SceneGraph **Label** node](/docs/references/scenegraph/label-nodes/label.md), update the **text** field (line 5) to the string you want displayed on your television screen (for example, "My first Roku app!").
+3. In the [SceneGraph **Label** node](doc:label), update the **text** field (line 5) to the string you want displayed on your television screen (for example, "My first Roku app!").
 
 
 
-4. In the [init() function](/docs/references/scenegraph/component-functions/init.md), you can also set the **label.color** field (line 27) to a different hex code (for example, white, which is 0xFFFFFF).
+4. In the [init() function](doc:init), you can also set the **label.color** field (line 27) to a different hex code (for example, white, which is 0xFFFFFF).
 
 
 
@@ -69,7 +69,7 @@ To sideload the updated Hello World sample app, follow these steps:
 
 ## Using the debug console
 
-You can use the [Roku debug console](/docs/developer-program/debugging/debugging-channels.md) to view the output of a Roku app during runtime. If the app fails during runtime, the debug console displays the line number of the error, as well as the contents of variables at the time of the failure. If the app has compilation errors, the debug console displays them as well. It is recommended to have the debug console open whenever you are running a sideloaded app.
+You can use the [Roku debug console](doc:debugging-channels) to view the output of a Roku app during runtime. If the app fails during runtime, the debug console displays the line number of the error, as well as the contents of variables at the time of the failure. If the app has compilation errors, the debug console displays them as well. It is recommended to have the debug console open whenever you are running a sideloaded app.
 
 To open the debug console, follow these steps:
 

@@ -19,7 +19,7 @@ next:
 
 | Name         | Description                               |
 | ------------ | ----------------------------------------- |
-| [roAudioGuide](/docs/references/brightscript/components/roaudioguide.md "roAudioGuide") | Returns information about the application |
+| [roAudioGuide](doc:roaudioguide) | Returns information about the application |
 
 ## Supported methods
 
@@ -27,7 +27,7 @@ next:
 
 #### Description
 
-Returns an ID for the spoken string to notify observer callbacks about a specific spoken string. This ID can be used with the [roTextToSpeechEvent](/docs/references/brightscript/events/rotexttospeechevent.md "roTextToSpeechEvent").<br /><br />This method will automatically split up text to reduce lag. Due to this automatic splitting, the roTextToSpeechEvent 0 ("Started speech") event for the returned ID may not be sent until later than expected. The roTextToSpeechEvents 1 ("Speech has completed") and 2 ("Speech has been flushed") events are sent at the expected times.
+Returns an ID for the spoken string to notify observer callbacks about a specific spoken string. This ID can be used with the [roTextToSpeechEvent](doc:rotexttospeechevent).<br /><br />This method will automatically split up text to reduce lag. Due to this automatic splitting, the roTextToSpeechEvent 0 ("Started speech") event for the returned ID may not be sent until later than expected. The roTextToSpeechEvents 1 ("Speech has completed") and 2 ("Speech has been flushed") events are sent at the expected times.
 
 #### Parameters
 
@@ -47,7 +47,7 @@ An ID associated with the spoken string to be used to notify observer callbacks.
 
 Interrupts and stops any current text to speech spoken string, to be used when the application does not want the text to speech to continue.
 
-> This call is equivalent to the [roTextToSpeech.Flush()](/docs/references/brightscript/interfaces/iftexttospeech.md#flush) method, and stops speech started by the [roAudioGuide.Say()](#saytext-as-string-flushspeech-as-boolean-dontrepeat-as-boolean-as-integer) and [roTextToSpeech.Say()](/docs/references/brightscript/interfaces/iftexttospeech.md#saytext-as-string-as-integer) methods.
+> This call is equivalent to the [roTextToSpeech.Flush()](doc:iftexttospeech) method, and stops speech started by the [roAudioGuide.Say()](#saytext-as-string-flushspeech-as-boolean-dontrepeat-as-boolean-as-integer) and [roTextToSpeech.Say()](doc:iftexttospeech) methods.
 
 ### Silence(duration as Integer) as Integer
 

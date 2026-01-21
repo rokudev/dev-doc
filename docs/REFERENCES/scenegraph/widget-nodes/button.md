@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
 The Button node is a simple widget that generates a buttonSelected event when the user selects it. The button can display a label and/or an icon, as well as a background image. Fields are provided to customize the label text and color depending on whether or not the button has the key focus. Similarly, the bitmaps used for the icon and background can be specified for both focused and unfocused button states.
 

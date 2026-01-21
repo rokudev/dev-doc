@@ -12,7 +12,7 @@ next:
 ---
 
 
-> If your Roku Developer account was created after April 30, 2025, see [Creating the product catalog](/docs/developer-program/roku-pay/quickstart/product-catalog.md) for how to create in-app products.
+> If your Roku Developer account was created after April 30, 2025, see [Creating the product catalog](doc:product-catalog) for how to create in-app products.
 
 Apps implementing Roku Pay can offer monthly and annual subscriptions and one-time purchases (for example, movie rentals/purchases, sporting events, pay-per-views). The **In-channel products** page lets you create the subscription and one-time purchase products for subscription video on demand (SVOD) and transactional video on demand (TVOD) apps linked to your Roku developer account.
 
@@ -20,7 +20,7 @@ Apps implementing Roku Pay can offer monthly and annual subscriptions and one-ti
 
 
 
-- TVOD-exclusive apps (apps offering only transactional content) create one in-app product for each different price point in the app. See [Creating TVOD apps](/docs/developer-program/roku-pay/implementation/tvod-channel.md) for how to create one-time purchase products.
+- TVOD-exclusive apps (apps offering only transactional content) create one in-app product for each different price point in the app. See [Creating TVOD apps](doc:tvod-channel) for how to create one-time purchase products.
 
 
 > To test in-app products on an app, the app must:
@@ -105,14 +105,14 @@ To provide the basic information for an in-app product, follow these steps:
 
 
 
-   > You may want certain products to only be available in specific countries. In the app, you can call the [**getUserRegionData**](/docs/references/scenegraph/control-nodes/channelstore.md#getuserregiondata) command to determine the country associated with the user's Roku account. You can then implement business logic to filter the results of the ChannelStore [**getCatalog** command](/docs/references/scenegraph/control-nodes/channelstore.md#getcatalog) to only display products that should be available for that country.
+   > You may want certain products to only be available in specific countries. In the app, you can call the [**getUserRegionData**](doc:channelstore) command to determine the country associated with the user's Roku account. You can then implement business logic to filter the results of the ChannelStore [**getCatalog** command](doc:channelstore) to only display products that should be available for that country.
    >
    > If you want to offer a specific in-app product in multiple countries, currency conversion can be handled by Roku or the publisher:
    >
    > - **Roku handles currency conversion**: Create a single in-app product for all countries.
    > - **Publisher handles currency conversion**: Create in-app products for each country and filter out the product by the country in the app business logic.
 
-5. In the **Product identifier** field, enter the internal code for your app. This identifier is used as the `code` field for retrieving catalog items, creating orders, and getting previous purchases with the [SceneGraph ChannelStore node](/docs/references/scenegraph/control-nodes/channelstore.md).
+5. In the **Product identifier** field, enter the internal code for your app. This identifier is used as the `code` field for retrieving catalog items, creating orders, and getting previous purchases with the [SceneGraph ChannelStore node](doc:channelstore).
 
 ### Product pricing
 
@@ -126,7 +126,7 @@ To enter the price of a product, follow these steps:
 
    - **One-Time Purchase, Consumable - Quantity:** A "packet" of identical items (such as game points, number of viewings permitted ). Enter the size of the packet in the **Quantity** field.
 
-     If you are creating a [TVOD-exclusive app](/docs/developer-program/roku-pay/implementation/tvod-channel.md), select this option and select **1** for quantity. This is because you create a single generic in-app product per product type for a TVOD app (rather than a product per content item as in a SVOD app), and this setting allows that generic in-app product to be purchased multiple times. For example, if you plan on offering movie rentals, you only need to create a single one-time purchase consumable video product. See [Creating TVOD apps](/docs/developer-program/roku-pay/implementation/tvod-channel.md) for more information.
+     If you are creating a [TVOD-exclusive app](doc:tvod-channel), select this option and select **1** for quantity. This is because you create a single generic in-app product per product type for a TVOD app (rather than a product per content item as in a SVOD app), and this setting allows that generic in-app product to be purchased multiple times. For example, if you plan on offering movie rentals, you only need to create a single one-time purchase consumable video product. See [Creating TVOD apps](doc:tvod-channel) for more information.
 
    - **Monthly subscription:** A product requiring a monthly charge for continued access.
 
@@ -141,9 +141,9 @@ To enter the price of a product, follow these steps:
 
      - Four-digit tier numbers are used for 49 cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49 and so on. The highest tier is 1030 ($30.49).
 
-     - See the [Price tier reference guide](/docs/developer-program/roku-pay/quickstart/price-tiers.md) for the complete list of price tiers for each Roku Streaming Store.
+     - See the [Price tier reference guide](doc:price-tiers) for the complete list of price tiers for each Roku Streaming Store.
 
-       If you are creating a [TVOD-exclusive app](/docs/developer-program/roku-pay/implementation/tvod-channel.md), select any price tier. The price passed in the [ChannelStore APIs](/docs/references/scenegraph/control-nodes/channelstore.md) overrides the price corresponding to the selected price tier.
+       If you are creating a [TVOD-exclusive app](doc:tvod-channel), select any price tier. The price passed in the [ChannelStore APIs](doc:channelstore) overrides the price corresponding to the selected price tier.
      
        > Certification requirement: SVOD apps must provide 30-days notice to existing customers before changing the price of their service.
 
@@ -172,9 +172,9 @@ The administrator (root account) can create free-trials offers, discount pricing
      ![roku815px - inCP-TrialsAndOffers2](https://image.roku.com/ZHZscHItMTc2/inCP-TrialsAndOffers2.jpg)
 
 
-2. If the product is ready to be made available to customers for purchase, select the **Cleared for Sale** check box. This makes the product visible to the ChanelStore node (specifically, the node's [**getCatalog** field](/docs/references/scenegraph/control-nodes/channelstore.md#getcatalog) will return this product). Selecting this check box also enables you to schedule limited-time free trial and discount offers for the product.
+2. If the product is ready to be made available to customers for purchase, select the **Cleared for Sale** check box. This makes the product visible to the ChanelStore node (specifically, the node's [**getCatalog** field](doc:channelstore) will return this product). Selecting this check box also enables you to schedule limited-time free trial and discount offers for the product.
 
-   If the product is still being tested, keep the check box cleared (it is cleared by default). In this case, the **ChannelStore** node's [**getCatalog** field](/docs/references/scenegraph/control-nodes/channelstore.md#getcatalog) will not return this product.
+   If the product is still being tested, keep the check box cleared (it is cleared by default). In this case, the **ChannelStore** node's [**getCatalog** field](doc:channelstore) will not return this product.
 
 
 3. Click **Save** to add the in-app product to the **Manage In-Channel Products** index page.
@@ -275,11 +275,11 @@ Subscription services must add any set of *mutually exclusive* subscription prod
 
 From the customer perspective, if they try to purchase a subscription product when they already have one in the same product group, Roku Pay displays a "You're already subscribed to this app" dialog.
 
-> For more on how product groups are used to enable customers to easily switch between different service tiers, see the [On-device upgrade and downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md) implementation guide.
+> For more on how product groups are used to enable customers to easily switch between different service tiers, see the [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade) implementation guide.
 
 ![roku815px - already-subscribed](https://image.roku.com/ZHZscHItMTc2/already-subscribed.jpg)
 
-> **Certification requirement**: Subscription services must create product groups for all sets of subscription products that customers cannot be subscribed to simultaneously in order to pass [certification](/docs/developer-program/certification/certification.md#2-purchases).
+> **Certification requirement**: Subscription services must create product groups for all sets of subscription products that customers cannot be subscribed to simultaneously in order to pass [certification](doc:certification).
 
 To create a product group, follow these steps:
 

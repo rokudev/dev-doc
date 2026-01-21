@@ -29,7 +29,7 @@ The ifSGNodeBoundingRect interface can be used to query the bounding rectangle o
 
 | Name     | Description                                                                             |
 | -------- | --------------------------------------------------------------------------------------- |
-| [roSGNode](/docs/references/brightscript/components/rosgnode.md) | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
+| [roSGNode](doc:rosgnode) | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
 
 
 ## Supported methods
@@ -58,7 +58,7 @@ An associative array with the node local bounding rectangle.
 
 #### Description
 
-Returns the bounding rectangle for scene components (component nodes extended from a [Scene](/docs/references/scenegraph/scene.md "Scene") or [OverhangPanelSetScene](/docs/references/scenegraph/sliding-panels-nodes/overhangpanelsetscene.md "OverhangPanelSetScene") node class).
+Returns the bounding rectangle for scene components (component nodes extended from a [Scene](doc:scene) or [OverhangPanelSetScene](doc:overhangpanelsetscene) node class).
 
 If this method is called before any child components have been added to the **Scene** component, or the child components are smaller than the **Scene** component, this is the screen dimensions of the user interface, so can be used to automatically create a bounding rectangle for the specified display user interface dimensions (SD, HD, FHD), to locate and dimension child components within the screen.
 

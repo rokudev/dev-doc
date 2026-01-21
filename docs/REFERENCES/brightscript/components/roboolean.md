@@ -22,5 +22,5 @@ This is useful in the following situations:
 
 ## Supported interfaces
 
-- [ifBoolean](/docs/references/brightscript/interfaces/ifboolean.md "ifBoolean")
-- [ifToStr](/docs/references/brightscript/interfaces/iftostr.md "ifToStr")
+- [ifBoolean](doc:ifboolean)
+- [ifToStr](doc:iftostr)

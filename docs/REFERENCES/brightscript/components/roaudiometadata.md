@@ -63,4 +63,4 @@ End Sub
 
 ## Supported interfaces
 
-- [ifAudioMetadata](/docs/references/brightscript/interfaces/ifaudiometadata.md "ifAudioMetadata")
+- [ifAudioMetadata](doc:ifaudiometadata)

@@ -12,9 +12,9 @@ next:
 ---
 
 
-Roku held its annual developer summit online on November 1–2, 2022. The summit started with a keynote address that recapped the past year in streaming and highlighted key industry trends for the upcoming year. The keynote then highlighted new platform features and developer tools, discussed the importance of using the [Roku Advertising Watermark](/docs/developer-program/advertising/ad-watermark.md), and reviewed the latest [certification updates](/docs/developer-program/certification/certification.md).
+Roku held its annual developer summit online on November 1–2, 2022. The summit started with a keynote address that recapped the past year in streaming and highlighted key industry trends for the upcoming year. The keynote then highlighted new platform features and developer tools, discussed the importance of using the [Roku Advertising Watermark](doc:ad-watermark), and reviewed the latest [certification updates](doc:certification).
 
-After the keynote, a series of panel discussions were held on a number of key platform features, including [Roku SceneGraph](/docs/developer-program/core-concepts/core-concepts.md), [Roku Pay](/docs/developer-program/roku-pay/how-roku-pay-works.md), [Roku Voice](/docs/developer-program/media-playback/voice-controls/overview.md), [video ads](/docs/developer-program/advertising/roku-advertising-framework.md), [Roku Search](/docs/developer-program/discovery/search/implementing-search.md), [Roku developer tools](https://devtools.web.roku.com/), and [community-built tools](https://github.com/rokucommunity).
+After the keynote, a series of panel discussions were held on a number of key platform features, including [Roku SceneGraph](doc:core-concepts), [Roku Pay](doc:how-roku-pay-works), [Roku Voice](doc:overview), [video ads](doc:roku-advertising-framework), [Roku Search](doc:implementing-search), [Roku developer tools](https://devtools.web.roku.com/), and [community-built tools](https://github.com/rokucommunity).
 
 ## Keynote
 

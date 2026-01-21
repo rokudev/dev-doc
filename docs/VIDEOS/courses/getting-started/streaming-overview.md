@@ -22,11 +22,11 @@ This video summarizes how streaming works on the Roku platform. It explains how 
 
 ## Related documentation
 
-[Content metadata](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content metadata](doc:content-metadata)
 
-[Feed specification](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md)
+[Feed specification](doc:json-dp-spec)
 
-[Content Delivery Networks (CDNs) and Online Video Platforms (OVPs)](/docs/features/how-channels-work.md#content-hosting)
+[Content Delivery Networks (CDNs) and Online Video Platforms (OVPs)](doc:how-channels-work)
 
 ## How to watch
 

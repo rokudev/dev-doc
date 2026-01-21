@@ -12,9 +12,9 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
-The **ChannelStore** node class provides an interface to the Streaming Store. It provides functionality equivalent to the [roChannelStore](/docs/references/brightscript/interfaces/ifchannelstore.md) component. In general, the **ChannelStore** node class allows developers to issue one of several commands, which involves the following steps:
+The **ChannelStore** node class provides an interface to the Streaming Store. It provides functionality equivalent to the [roChannelStore](doc:ifchannelstore) component. In general, the **ChannelStore** node class allows developers to issue one of several commands, which involves the following steps:
 
 1. Set the fields containing the data needed by the command (optional).
 2. Set up an observer of the result field associated with the command.
@@ -243,7 +243,7 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
 
 #### requestPartnerOrder
 
-> See [Creating TVOD apps](/docs/developer-program/roku-pay/implementation/tvod-channel.md) for how to use this field for transactional purchases.
+> See [Creating TVOD apps](doc:tvod-channel) for how to use this field for transactional purchases.
 
 
 <table>
@@ -271,7 +271,7 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
 
 #### confirmPartnerOrder
 
-> See [Creating TVOD apps](/docs/developer-program/roku-pay/implementation/tvod-channel.md) for how to use this field for transactional purchases.
+> See [Creating TVOD apps](doc:tvod-channel) for how to use this field for transactional purchases.
 
 
 <table>
@@ -368,7 +368,7 @@ Each of the actions associated with a command string are described in detail bel
 
 Displays the Roku Pay Request for Information (RFI) screen, which prompts customers to confirm that Roku may share their Roku customer account information with the calling app in order to sign up/sign in to that app. This enables apps to create and update customer accounts in their system without requiring customers to manually enter their personal information in an account creation screen.
 
-> To pass [certification](/docs/developer-program/certification/certification.md#2-purchases), all authenticated apps (SVOD, TVOD, other subscription services, and AVOD) must use the [getUserData](/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the app. Only if the user declines the request may apps require the customer to manually enter their information.
+> To pass [certification](doc:certification), all authenticated apps (SVOD, TVOD, other subscription services, and AVOD) must use the [getUserData](doc:channelstore) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the app. Only if the user declines the request may apps require the customer to manually enter their information.
 >
 
 To use this command, follow these steps:
@@ -475,7 +475,7 @@ Overall, the [**userData** field](#userdata) field may contain the following Rok
 </table>
 
 
-> For authenticated free and AVOD apps that are not enrolled in the [Roku Partner Payouts Program](/docs/developer-program/roku-pay/quickstart/partner-payouts.md), the [**userData** field](#userdata) contains a limited set of account information fields:
+> For authenticated free and AVOD apps that are not enrolled in the [Roku Partner Payouts Program](doc:partner-payouts), the [**userData** field](#userdata) contains a limited set of account information fields:
 >
 > -  **Sign-up RFI screen**: email, phone, and zip.
 > - **Sign-in RFI screen**: email and phone.
@@ -496,7 +496,7 @@ When this command is invoked, the ContentNode stored in the **userRegionData** f
 
 ### getCatalog
 
-Lists the [In-App Products](/docs/developer-program/roku-pay/quickstart/in-channel-products.md) that are linked to the running app. When this command completes, the **catalog** the completion status:
+Lists the [In-App Products](doc:in-channel-products) that are linked to the running app. When this command completes, the **catalog** the completion status:
 
 
 <table>
@@ -541,7 +541,7 @@ If the command is successful, the **catalog** or **storeCatalog** ContentNode co
 
 ### getStoreCatalog
 
-Lists the globally available [In-App Products](/docs/developer-program/roku-pay/quickstart/in-channel-products.md), which are available to all apps. When the command completes, the **storeCatalog** field is set to a ContentNode containing completion status. If successful, the **storeCatalog** field ContentNode has child **ContentNodes** for each available item. See the [**getCatalog**](#getcatalog) command for the fields related to the product that are available in the child ContentNode.
+Lists the globally available [In-App Products](doc:in-channel-products), which are available to all apps. When the command completes, the **storeCatalog** field is set to a ContentNode containing completion status. If successful, the **storeCatalog** field ContentNode has child **ContentNodes** for each available item. See the [**getCatalog**](#getcatalog) command for the fields related to the product that are available in the child ContentNode.
 
 ### doOrder
 
@@ -849,7 +849,7 @@ If this command is successful, the [**purchases** field](#purchases) ContentNode
 
 ### storeChannelCredData
 
-Stores an OAuth token, custom token, or other custom data, which you can then retrieve with the [getChannelCred](#getchannelcred) command (the token is stored in the **channelCred.json.channel_data** field). This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. As a result, users do not have to re-enter their account credentials when setting up new devices associated with the same Roku account. For more information, see [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md).
+Stores an OAuth token, custom token, or other custom data, which you can then retrieve with the [getChannelCred](#getchannelcred) command (the token is stored in the **channelCred.json.channel_data** field). This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. As a result, users do not have to re-enter their account credentials when setting up new devices associated with the same Roku account. For more information, see [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on).
 
 ```
 function init():
@@ -934,7 +934,7 @@ This command returns an roAssociativeArray with the following values:
 
 ### getChannelCred
 
-Retrieves an oAuth token, custom token, or other authentication artifact (`channel_data`), or a Roku Partner Unique Customer Identifier (`roku_pucid`) if the app is using the [Roku single-sign on (SSO) authentication service](/docs/developer-program/authentication/roku-sso-authentication-protocol.md) for authenticating users. If successful, the ContentNode stored in the `channelCred` field represents the app credentials with the following fields:
+Retrieves an oAuth token, custom token, or other authentication artifact (`channel_data`), or a Roku Partner Unique Customer Identifier (`roku_pucid`) if the app is using the [Roku single-sign on (SSO) authentication service](doc:roku-sso-authentication-protocol) for authenticating users. If successful, the ContentNode stored in the `channelCred` field represents the app credentials with the following fields:
 
 
 <table>
@@ -1025,7 +1025,7 @@ The decoded JWT contains the following fields:
 
 ### requestPartnerOrder
 
-> See [Creating TVOD channels](/docs/developer-program/roku-pay/implementation/tvod-channel.md) for how to use this command for transactional purchases.
+> See [Creating TVOD channels](doc:tvod-channel) for how to use this command for transactional purchases.
 
 Checks the user's billing status for transactional purchases. This is a prerequisite for sending the [confirmPartnerOrder command](#confirmpartnerorder).
 
@@ -1048,7 +1048,7 @@ If this command fails, the [**requestPartnerOrderStatus** field](#requestpartner
 
 ### confirmPartnerOrder
 
-> See [Creating TVOD channels](/docs/developer-program/roku-pay/implementation/tvod-channel.md) for how to use this command for transactional purchases.
+> See [Creating TVOD channels](doc:tvod-channel) for how to use this command for transactional purchases.
 
 This command is equivalent to the **doOrder** command for transaction purchases. The user's billing status must first be confirmed with the [requestPartnerOrder command](#requestpartnerorder) before sending this command.
 

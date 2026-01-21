@@ -24,7 +24,7 @@ The node with the key focus is given the first opportunity to handle a
 key event. If that node does not handle the key event, the event is
 passed up the SceneGraph node tree to the node parent. This continues
 until a parent node handles the event, or the event moves up to the root
-of the SceneGraph node tree (that is, a [**Scene**](/docs/references/scenegraph/scene.md)
+of the SceneGraph node tree (that is, a [**Scene**](doc:scene)
 node). The path from the node that has the remote control key focus up
 to the root of the SceneGraph node tree is referred to as the *focus
 chain*.
@@ -42,12 +42,12 @@ events that are not handled by default, you have the option of handling
 the event, or allowing the event to move up the focus chain, and
 possibly not be handled at all.
 
-Since they are derived from [**roSGNode**](/docs/references/brightscript/components/rosgnode.md), each
-node includes the [**ifSGNodeFocus**](/docs/references/brightscript/interfaces/ifsgnodefocus.md)
+Since they are derived from [**roSGNode**](doc:rosgnode), each
+node includes the [**ifSGNodeFocus**](doc:ifsgnodefocus)
 interface functions for querying and manipulating the current remote
 control key focus status of the node. A special function is included in
 the SceneGraph API, **`onKeyEvent()`**, that allows you handle events,
 and return a message to the Roku OS that the event has been handled.
 These two features of the SceneGraph API allow you to selectively
-control the remote control key focus, and handle remote key press events, as needed for your application. See [**Handling Remote Control Key Presses**](/docs/developer-program/core-concepts/handling-application-events.md#handling-remote-control-key-presses) for complete information on using these features to handle remote
+control the remote control key focus, and handle remote key press events, as needed for your application. See [**Handling Remote Control Key Presses**](doc:handling-application-events) for complete information on using these features to handle remote
 control key events.

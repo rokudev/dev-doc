@@ -19,7 +19,7 @@ Interface equivalent for intrinsic type Float
 
 | Name      | Description                               |
 | --------- | ----------------------------------------- |
-| [roFloat](/docs/references/brightscript/components/rofloat.md "roFloat")   | Object equivalent for intrinsic type 'Float' |
+| [roFloat](doc:rofloat)   | Object equivalent for intrinsic type 'Float' |
 
 ## Supported methods
 

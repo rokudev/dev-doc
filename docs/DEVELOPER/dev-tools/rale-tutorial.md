@@ -40,7 +40,7 @@ you can select the template you want to use, or upload your own zip to edit.
 
 The code for these templates can be found in our Eclipse Plugin. For instructions on how to download the Eclipse plugin visit
 
-[Download the Eclipse plugin here!](/docs/developer-program/getting-started/ide-support.md#installing-eclipse-and-the-plugin)
+[Download the Eclipse plugin here!](doc:ide-support)
 
 ## Editing components in RALE
 

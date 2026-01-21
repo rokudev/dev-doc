@@ -14,7 +14,7 @@ next:
 
 
 
-Extends [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md)
+Extends [StdDlgItemBase](doc:std-dlg-item-base)
 
 ## Description
 

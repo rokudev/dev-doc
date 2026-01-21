@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 The ComponentLibrary node class downloads a library of custom SceneGraph components to be used in an application. The ComponentLibrary node should be used in a Scene node, such as Scene or OverhangPanelSetScene. One way to ensure that the library downloads before the SceneGraph application begins to compile the components for the application is to begin the download in the main.brs file that creates the Scene node, by adding an \<interface> field to the Scene node that can be used to monitor the download, and starts the application when the download is complete.
 
@@ -26,11 +26,11 @@ Component libraries can be packaged and signed the same way that apps are packag
 
 > Component libraries cannot be published to the Streaming Store for distribution.
 >
-> Component libraries cannot be used to load the [Roku Advertising Framework (RAF) library](/docs/developer-program/advertising/integrating-roku-advertising-framework.md).
+> Component libraries cannot be used to load the [Roku Advertising Framework (RAF) library](doc:integrating-roku-advertising-framework).
 
 ### Manifest
 
-A component library must include a separate [manifest file](/docs/developer-program/getting-started/architecture/channel-manifest.md) in addition to the one for the app. The component library's manifest must include the [**rsg_version** flag](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) (`rsg_version=1.2`) to optimize app performance.
+A component library must include a separate [manifest file](doc:channel-manifest) in addition to the one for the app. The component library's manifest must include the [**rsg_version** flag](doc:channel-manifest) (`rsg_version=1.2`) to optimize app performance.
 
 ## Using Library Components
 

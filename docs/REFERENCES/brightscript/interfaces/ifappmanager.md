@@ -7,7 +7,7 @@ title: ifAppManager
 
 | Name         | Description                               |
 | ------------ | ----------------------------------------- |
-| [roAppManager](/docs/references/brightscript/components/roappmanager.md "roAppManager") | Returns information about the application |
+| [roAppManager](doc:roappmanager) | Returns information about the application |
 
 
 ## Supported methods
@@ -16,11 +16,11 @@ title: ifAppManager
 
 #### Description
 
-Returns an [roTimespan](/docs/references/brightscript/components/rotimespan.md "roTimespan") object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started.
+Returns an [roTimespan](doc:rotimespan) object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started.
 
 #### Return Value
 
-An [roTimespan](/docs/references/brightscript/components/rotimespan.md "roTimespan") object.
+An [roTimespan](doc:rotimespan) object.
 
 ### GetScreensaverTimeout() as Integer
 
@@ -77,13 +77,13 @@ A boolean indicating whether the specified BrightScript app is installed.
 
 #### Description
 
-Updates video or audio [content metadata](/docs/developer-program/getting-started/architecture/content-metadata.md) during playback. This method takes a subset of content metadata parameters to be updated. These values override any previously ones sent to the Roku Media Player, and they are used until this function is called again or until the [**roAppManager**](/docs/references/brightscript/components/roappmanager.md) instance is deleted.
+Updates video or audio [content metadata](doc:content-metadata) during playback. This method takes a subset of content metadata parameters to be updated. These values override any previously ones sent to the Roku Media Player, and they are used until this function is called again or until the [**roAppManager**](doc:roappmanager) instance is deleted.
 
 #### Parameters
 
 | Name            | Type               | Description                                                  |
 | --------------- | ------------------ | ------------------------------------------------------------ |
-| contentMetaData | roAssociativeArray | The video or audio [content metadata](/docs/developer-program/getting-started/architecture/content-metadata.md) parameters to be updated (for example, the title and contentType) |
+| contentMetaData | roAssociativeArray | The video or audio [content metadata](doc:content-metadata) parameters to be updated (for example, the title and contentType) |
 
 #### Example
 
@@ -111,7 +111,7 @@ Triggers a voice request for the viewer to select a user profile if the device i
 
 For example, when the user launches an app and the profile selection screen is displayed, calling this function will trigger Roku Voice to say and display "Which of these would you like" or "Who's watching?" (if a hands-free Roku Voice remote control is paired with the device).
 
-Apps can check the launch parameters to determine whether the app was launched via a voice command before calling this method. Additionally, apps can call the [roDeviceInfo.HasFeature("handsfree_voice")](/docs/references/brightscript/interfaces/ifdeviceinfo.md#hasfeaturefeature-as-string-as-boolean) function to check whether a hands-free Roku Voice remote control is paired with the device. If a hands-free remote is not paired with the device or is not active, calling this function has no effect.
+Apps can check the launch parameters to determine whether the app was launched via a voice command before calling this method. Additionally, apps can call the [roDeviceInfo.HasFeature("handsfree_voice")](doc:ifdeviceinfo) function to check whether a hands-free Roku Voice remote control is paired with the device. If a hands-free remote is not paired with the device or is not active, calling this function has no effect.
 
 ### SetVoiceActionStrings(actions as Object) as Void
 
@@ -119,7 +119,7 @@ Apps can check the launch parameters to determine whether the app was launched v
 
 Specifies a list of text strings, such as user profile names, that can be matched to voice requests.
 
-When there is a match (the name uttered by the user matches the registered text string), it is provided to the app via an roInput voice command handler. Specifically, the **command** key in the associative array returned by the [**roInputEvent.GetInfo()**](/docs/references/brightscript/events/roinputevent.md#getinfo-as-object) method is set to "action", and the **text** key is set to the matched name or other text string.
+When there is a match (the name uttered by the user matches the registered text string), it is provided to the app via an roInput voice command handler. Specifically, the **command** key in the associative array returned by the [**roInputEvent.GetInfo()**](doc:roinputevent) method is set to "action", and the **text** key is set to the matched name or other text string.
 
 **Parameters**
 

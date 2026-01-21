@@ -16,7 +16,7 @@ The roBitmap component contains image data and provides an interface (ifDraw2D) 
 
 It stores four color apps: red, green, blue, and alpha, with 32-bits per pixel. They can be any arbitrary size up to 2048x2048. However, the maximum size bitmap uses 16MB of memory, so there are practical memory limitations which would compel smaller bitmap sizes.  Coordinates (x,y) for 2D bitmaps have an origin (0,0) at the top left. roBitmap is always offscreen. The top roScreen is the only ifDraw2D surface which is displayed. roBitmap represents something that can be drawn onto, as well as something that can be drawn.
 
-Drawing operations into a roBitmap (or other surface with ifDraw2D interface, such as an [roScreen](/docs/references/brightscript/components/roscreen.md "roScreen")) are clipped so the only the part that is within its bounds is rendered. X,Y coordinates that specify a location in a bitmap to render to (for example, as used by DrawObject() or DrawText() ) may be positive or negative. Negative implies that the left and top of the rendered object will be clipped.The same bitmap cannot be used as a source and a destination in a single DrawObject() call.
+Drawing operations into a roBitmap (or other surface with ifDraw2D interface, such as an [roScreen](doc:roscreen)) are clipped so the only the part that is within its bounds is rendered. X,Y coordinates that specify a location in a bitmap to render to (for example, as used by DrawObject() or DrawText() ) may be positive or negative. Negative implies that the left and top of the rendered object will be clipped.The same bitmap cannot be used as a source and a destination in a single DrawObject() call.
 
 There are limitations when using the onscreen bitmap as a source. For example, Alpha blending may not work.
 
@@ -64,8 +64,8 @@ Screen1.Finish()
 
 ## Supported image formats
 
-See the [Roku streaming specification](/docs/specs/media/streaming-specifications.md#supported-image-formats) for the image formats supported by this component.
+See the [Roku streaming specification](doc:streaming-specifications) for the image formats supported by this component.
 
 ## Supported interfaces
 
-- [ifDraw2D](/docs/references/brightscript/interfaces/ifdraw2d.md "ifDraw2D")
+- [ifDraw2D](doc:ifdraw2d)

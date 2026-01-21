@@ -143,7 +143,7 @@ to **`Global node`**. Likewise, you can access and set the fields for
 the global node from components by accessing the component **`m`** to
 get its special global element:
 
-> Note that you cannot edit elements within [associative arrays](/docs/references/brightscript/components/roassociativearray.md).
+> Note that you cannot edit elements within [associative arrays](doc:roassociativearray).
 
 You will need to take the associative array, modify it and save it back into the field.
 

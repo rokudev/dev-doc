@@ -14,7 +14,7 @@ next:
 
 The `onKeyEvent()` function receives remote control key events from the Roku OS, and allows the writing of event handlers for a node or component in response to the events. The function returns a message to the Roku OS to indicate that a particular event has been handled by the node or component, preventing the event from moving up the focus chain, to possibly be handled by parent nodes in the SceneGraph node tree, or by default firmware handlers.
 
-> Several node classes handle certain remote control key events automatically, so the `onKeyEvent()` function is not required to handle those events, and should not be used for those events in those nodes. As an example of node classes that automatically handle certain remote control key events, grid node classes such as [PosterGrid](/docs/references/scenegraph/list-and-grid-nodes/postergrid.md) automatically handle **Up**, **Down**, **Right**, and **Left** key presses when the poster grid has focus. Typically, you should use the ifSGNodeField `observeField()` method to handle changes in the subject node fields caused by automatic key event handling of the node.
+> Several node classes handle certain remote control key events automatically, so the `onKeyEvent()` function is not required to handle those events, and should not be used for those events in those nodes. As an example of node classes that automatically handle certain remote control key events, grid node classes such as [PosterGrid](doc:postergrid) automatically handle **Up**, **Down**, **Right**, and **Left** key presses when the poster grid has focus. Typically, you should use the ifSGNodeField `observeField()` method to handle changes in the subject node fields caused by automatic key event handling of the node.
 
 #### Syntax
 
@@ -42,7 +42,7 @@ The `key` parameter contains a string, which is case-sensitive, that identifies 
 | rewind      | **Rewind**        | key usually labeled with two left-pointing triangles         |
 | fastforward | **Fast Forward**  | key usually labeled with two right-pointing triangles        |
 | options     | **Options**       | key labeled with an asterisk                                 |
-| pause       | *No physical key* | Sent instead of "play," in instances where media should strictly pause (rather than toggle with play). <br /><br />Requires the `pause_aware` [manifest attribute](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) to be set to `1`. |
+| pause       | *No physical key* | Sent instead of "play," in instances where media should strictly pause (rather than toggle with play). <br /><br />Requires the `pause_aware` [manifest attribute](doc:channel-manifest) to be set to `1`. |
 | channelup   | **Up**            | For use in the TimeGrid node. Up-pointing caret of remote directional pad. |
 | channeldown | **Down**          | For use in the TimeGrid node. Down-pointing caret of remote directional pad. |
 
@@ -53,9 +53,9 @@ The `press` parameter is a boolean value that is true if the key was pressed, an
 
 The `onKeyEvent()` function must return `true` if the XML component handled the event, or `false` if it did not handle the event. Returning `false` allows the event to continue bubbling up the focus chain so that ancestors of the XML component can handle the event. 
 
-The behavior of the Roku Options overlay has been modified, such that the Options overlay now slides in whenever the **Options** button is pressed, the [Video node](/docs/references/scenegraph/media-playback-nodes/video.md) is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the Options overlay does not slide in and the OnKeyEvent() handler is fired.
+The behavior of the Roku Options overlay has been modified, such that the Options overlay now slides in whenever the **Options** button is pressed, the [Video node](doc:video) is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the Options overlay does not slide in and the OnKeyEvent() handler is fired.
 
-> Starting from Roku OS version 8.1, literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](/docs/developer-program/dev-tools/external-control-api.md) keydown/keyup commands, now go to the onKeyEvent() handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
+> Starting from Roku OS version 8.1, literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](doc:external-control-api) keydown/keyup commands, now go to the onKeyEvent() handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
 
 Such keys are now sent at "Lit_" followed by the actual keypress ("A," "B," "C," etc.).
 

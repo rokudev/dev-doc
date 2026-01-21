@@ -14,7 +14,7 @@ next:
 
 To add products to a subscription video on demand (SVOD) or transactional video on demand (TVOD) app that is implementing Roku Pay, you must specify which monetization methods your app will use: **subscriptions** and/or **one-time purchases**. This step is required when publishing apps to the Streaming Store; however, it is a best practice to set the monetization method directly after creating an app. This ensures that you can create in-app products without encountering any error messages in the Developer Dashboard.
 
-> **Certification requirement**: Apps offering subscriptions and one-time purchases must [implement Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md) and adhere to all [Roku Pay certification requirements](/docs/developer-program/roku-pay/roku-pay-requirements.md). Per the [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us), paid applications must use Roku Pay; they  may not use any alternate billing service, direct customers to any alternative billing service(s), or encourage customers to purchase access to content other than through the Roku platform.
+> **Certification requirement**: Apps offering subscriptions and one-time purchases must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements). Per the [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us), paid applications must use Roku Pay; they  may not use any alternate billing service, direct customers to any alternative billing service(s), or encourage customers to purchase access to content other than through the Roku platform.
 >
 > To pass certification, SVOD and TVOD apps (and other subscription services) must complete sign-ups and sign-ins on-device, without having customers visit an external webpage. The sign-up and sign-in workflows may not include links to off-device promotional or marketing materials, nor may it utilize off-device sign-in mechanisms such as rendezvous linking.
 >
@@ -33,15 +33,15 @@ To select the monetization methods for an app, follow these steps:
 
    ![roku815px - monetization-method.jpg](https://image.roku.com/ZHZscHItMTc2/monetization-method-v4c.png)
 
-   - **Customers will pay before installing my channel (pay-to-install)**. Pay-to-install apps are typically only used on the Roku platform for games and screensavers. Pay-to-install apps are not typically used for SVOD apps—they do not enable customers to browse the content before installing the app, and they do not support free trial offers. See [In-app products](/docs/developer-program/roku-pay/quickstart/in-channel-products.md) for more information on configuring these fields.
+   - **Customers will pay before installing my channel (pay-to-install)**. Pay-to-install apps are typically only used on the Roku platform for games and screensavers. Pay-to-install apps are not typically used for SVOD apps—they do not enable customers to browse the content before installing the app, and they do not support free trial offers. See [In-app products](doc:in-channel-products) for more information on configuring these fields.
 
    - **My channel contains in-channel subscriptions (SVOD)**. The app includes a monthly or annual subscription offering. Select this option for SVOD apps. See **In-app products** for more information on creating subscription products.
 
-     > If you select this check box, you must [implement Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md) in your app and adhere to all [Roku Pay certification requirements](/docs/developer-program/roku-pay/roku-pay-requirements.md).
+     > If you select this check box, you must [implement Roku Pay](doc:overview) in your app and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements).
 
-   - **My channel contains in-channel one-time purchases (TVOD)**. The app offers transactional content such as movie rentals, sporting events, and pay-per-views. Select this option for TVOD-exclusive apps (app contains only transactional content) and SVOD apps that additionally offer one-time purchase products. See [Creating TVOD apps](/docs/developer-program/roku-pay/implementation/tvod-channel.md) for more information on creating one-time purchase products in the **In-App Products** page.
+   - **My channel contains in-channel one-time purchases (TVOD)**. The app offers transactional content such as movie rentals, sporting events, and pay-per-views. Select this option for TVOD-exclusive apps (app contains only transactional content) and SVOD apps that additionally offer one-time purchase products. See [Creating TVOD apps](doc:tvod-channel) for more information on creating one-time purchase products in the **In-App Products** page.
 
-     > If you select this check box, you must [implement Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md) in your app and adhere to all [Roku Pay certification requirements](/docs/developer-program/roku-pay/roku-pay-requirements.md).
+     > If you select this check box, you must [implement Roku Pay](doc:overview) in your app and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements).
 
 
-3. Click **Save**. See [Publishing apps](/docs/developer-program/publishing/channel-publishing-guide.md#monetization-window) for more information on configuring additional app monetization methods.
+3. Click **Save**. See [Publishing apps](doc:channel-publishing-guide) for more information on configuring additional app monetization methods.

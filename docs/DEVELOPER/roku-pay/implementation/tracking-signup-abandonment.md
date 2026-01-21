@@ -14,7 +14,7 @@ next:
 
 You can track customers' progress through your app's signup workflow to identify where users may be abandoning the process. For example, customers may successfully enter their login credentials to create an account, but exit the flow when prompted to enter their payment information. By firing events on each page, the generated feedback can be used to minimize friction in the sign-up workflow and thus reduce abandonment.
 
-> Subscription apps that have streamed more than an average of 5 million hours per month over the last three months (and new subscription apps expected to reach the threshold shortly after launch) must fire events on each page in their signup workflow to pass [certification](/docs/developer-program/certification/certification.md#2-purchases).
+> Subscription apps that have streamed more than an average of 5 million hours per month over the last three months (and new subscription apps expected to reach the threshold shortly after launch) must fire events on each page in their signup workflow to pass [certification](doc:certification).
 >
 > Event names must use unique, sequential page numbering and clearly identify the type of page from which the event is being fired. See [Signup pages](#signup-pages) for more information.
 
@@ -86,12 +86,12 @@ Signup events can be sent using the Roku Event Dispatcher (RED) library or the *
 
 To use the Roku Event Dispatcher in your app's signup workflow to send events, follow these steps:
 
-1. Enable the RED library in your app by adding the following line to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) file:
+1. Enable the RED library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
         sg_component_libs_required=roku_analytics
 
 
-2. Use the [Roku Analytics Component](/docs/developer-program/libraries/roku-analytics-component.md) to send signup events from your app following these steps:
+2. Use the [Roku Analytics Component](doc:roku-analytics-component) to send signup events from your app following these steps:
 
    a. When `roSGScreen` is active, create a "Roku_Analytics:AnalyticsNode" node and persist it by storing in the global node.
 
@@ -122,13 +122,13 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
             RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"\}\}
             end sub
 
-3. Use the [debug console](/docs/developer-program/debugging/debugging-channels.md) to verify that your app is sending signup events.
+3. Use the [debug console](doc:debugging-channels) to verify that your app is sending signup events.
 
 ### Integrating the RAF fireRokuMarketingPixel() method in the signup workflow
 
 To use the RAF **fireRokuMarketingPixel()** method to send authentication events to Roku, follow these steps:
 
-1. Enable the RAF library in your app by adding the following line to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) file:
+1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
         bs_libs_required=roku_ads_lib
 

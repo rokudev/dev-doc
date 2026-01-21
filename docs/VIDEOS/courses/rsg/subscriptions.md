@@ -22,7 +22,7 @@ The lesson then covers how to offer subscriptions in an app by integrating the R
 
 This lesson also summarizes some of the app certification requirements for offering transactional content in an app.
 
-> Channels offering subscriptions and one-time purchases must [implement Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md) and adhere to all [Roku Pay certification requirements](/docs/developer-program/certification/certification.md#2-purchases). Channels must integrate Roku Pay in all scenarios in which recurring or one-time payments are received.
+> Channels offering subscriptions and one-time purchases must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:certification). Channels must integrate Roku Pay in all scenarios in which recurring or one-time payments are received.
 
 ## Sample app notes
 
@@ -30,10 +30,10 @@ This lesson also summarizes some of the app certification requirements for offer
 
 To play the videos in the [Subscriptions sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/Subscriptions), you need to use the [Roku Developer Dashboard](https://developer.roku.com/developer) to create an app and then configure the app and your developer account for testing. This entails the following steps:
 
-1. [Create a test app](/docs/developer-program/publishing/channel-publishing-guide.md#create-a-public-channel).
-2. [Enable the app for billing testing](/docs/developer-program/roku-pay/testing/billing-testing.md).
-3. [Create in-app products](/docs/developer-program/roku-pay/quickstart/in-channel-products.md). You must create at least one in-app product that has a [free trial offer](/docs/developer-program/roku-pay/quickstart/in-channel-products.md#trials-and-offers).
-4. [Add a test user](/docs/developer-program/roku-pay/quickstart/test-users.md).
+1. [Create a test app](doc:channel-publishing-guide).
+2. [Enable the app for billing testing](doc:billing-testing).
+3. [Create in-app products](doc:in-channel-products). You must create at least one in-app product that has a [free trial offer](doc:in-channel-products).
+4. [Add a test user](doc:test-users).
 
 ### Voiding test user transactions
 
@@ -50,32 +50,32 @@ In addition, to keep the app demonstration segments in this lesson concise and m
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Subscriptions sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/Subscriptions) | Download and review the code used in this lesson to implement Roku Pay in an app. |
-| [Sideloading apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) | Sideload and test the Subscriptions app created in this lesson. |
-| [SceneGraph ChannelStore node](/docs/references/scenegraph/control-nodes/channelstore.md) | Read about the SceneGraph ChannelStore APIs, which are used to get subscription products from the app's catalog, pre-populate dialogs with customers' user information, purchase products, and store and retrieve user credentials. |
-| [Roku Web Service API](/docs/developer-program/roku-pay/implementation/roku-web-service.md) | Read about the Roku Web Service RESTful API, which you can integrate into your backend system to pull transaction data in order to validate, refund, and cancel subscriptions.  Learn how to subscribe to push notifications to deliver transaction data to your service endpoint. |
-| [Certification criteria for purchases](/docs/developer-program/certification/certification.md#2-purchases) | Read the certification criteria for transactional apps (SVOD apps, TVOD apps, and other subscription services). |
-| [On-device authentication](/docs/developer-program/authentication/on-device-authentication.md#sample-channel) | Read how to validate subscriptions and purchases before granting access to content. Learn how to enable customers to sign-in to an app directly on their Roku devices—without having to visit an external webpage. |
+| [Sideloading apps](doc:developer-setup) | Sideload and test the Subscriptions app created in this lesson. |
+| [SceneGraph ChannelStore node](doc:channelstore) | Read about the SceneGraph ChannelStore APIs, which are used to get subscription products from the app's catalog, pre-populate dialogs with customers' user information, purchase products, and store and retrieve user credentials. |
+| [Roku Web Service API](doc:roku-web-service) | Read about the Roku Web Service RESTful API, which you can integrate into your backend system to pull transaction data in order to validate, refund, and cancel subscriptions.  Learn how to subscribe to push notifications to deliver transaction data to your service endpoint. |
+| [Certification criteria for purchases](doc:certification) | Read the certification criteria for transactional apps (SVOD apps, TVOD apps, and other subscription services). |
+| [On-device authentication](doc:on-device-authentication) | Read how to validate subscriptions and purchases before granting access to content. Learn how to enable customers to sign-in to an app directly on their Roku devices—without having to visit an external webpage. |
 | [On-device authentication sample app](https://github.com/rokudev/on-device-authentication) | Download and test a sample app demonstrating the on-device authentication workflow. |
-| [In-app purchasing](/docs/developer-program/roku-pay/quickstart/in-channel-products.md) | Read how to create in-app products for the subscription and transactional services offered by your app. |
-| [Billing testing](/docs/developer-program/roku-pay/testing/billing-testing.md) | Read how to enable your app for billing testing.         |
+| [In-app purchasing](doc:in-channel-products) | Read how to create in-app products for the subscription and transactional services offered by your app. |
+| [Billing testing](doc:billing-testing) | Read how to enable your app for billing testing.         |
 
 ## Related
 
-[Device registry](/docs/references/brightscript/components/roregistry.md)
+[Device registry](doc:roregistry)
 
-[Registry section](/docs/references/brightscript/components/roregistrysection.md)
+[Registry section](doc:roregistrysection)
 
-[Dialog node](/docs/references/scenegraph/dialog-nodes/dialog.md)
+[Dialog node](doc:dialog)
 
-[roDateTime](/docs/references/brightscript/interfaces/ifdatetime.md)
+[roDateTime](doc:ifdatetime)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[Event loops](/docs/developer-program/core-concepts/event-loops.md)
+[Event loops](doc:event-loops)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[ifSGNodeChildren interface](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
+[ifSGNodeChildren interface](doc:ifsgnodechildren)
 
 ## How to watch
 

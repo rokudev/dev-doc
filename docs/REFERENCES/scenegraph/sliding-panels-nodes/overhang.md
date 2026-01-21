@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
+Extends [**Group**](doc:group)
 
 The Overhang node provides a information bar that is displayed at the top of a screen in many Roku apps. The regions occupied by the overhang can be filled with either a solid color or a bitmap.
 

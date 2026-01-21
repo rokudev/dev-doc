@@ -18,7 +18,7 @@ The ifSGNodeField interface allows querying, getting, setting, and performing ot
 
 | Name     | Description                                                                             |
 | -------- | --------------------------------------------------------------------------------------- |
-| [roSGNode](/docs/references/brightscript/components/rosgnode.md "roSGNode") | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
+| [roSGNode](doc:rosgnode) | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
 
 
 ## Supported methods
@@ -197,7 +197,7 @@ A flag indicating whether the fields have been successfully added.
 
 #### Description
 
-Removes a field from the subject node. Fields defined in [content metadata](/docs/developer-program/getting-started/architecture/content-metadata.md " Content Meta-Data") and the related SceneGraph node class metadata bindings can be removed, but will be dynamically re-added at any time they are explicitly accessed.
+Removes a field from the subject node. Fields defined in [content metadata](doc:content-metadata) and the related SceneGraph node class metadata bindings can be removed, but will be dynamically re-added at any time they are explicitly accessed.
 
 #### Parameters
 
@@ -215,7 +215,7 @@ A flag indicating whether the field has been successfully removed.
 
 Calls a function when a field of the subject node changes. The function called must be in the scope of the current component.
 
-Optionally, this form can pass an [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") message to the callback function by specifying the message object as an argument to the callback function. The following sample demonstrates how to do this:
+Optionally, this form can pass an [roSGNodeEvent](doc:rosgnode) message to the callback function by specifying the message object as an argument to the callback function. The following sample demonstrates how to do this:
 
 ```
 sub callback_function(message as Object)
@@ -223,7 +223,7 @@ sub callback_function(message as Object)
 end sub
 ```
 
-From this message in the callback function, you can get the node ID, the field name, and the field value at the time it was set, using the same [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") methods described in the overloaded form observeField(fieldName as String, port as Object). The [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") message also includes a pointer to the node that can be accessed using getRoSGNode(), to associate nodes without an ID in the callback function. Additional information can be accessed in the callback function by storing the information in a custom field of the node.
+From this message in the callback function, you can get the node ID, the field name, and the field value at the time it was set, using the same [roSGNodeEvent](doc:rosgnode) methods described in the overloaded form observeField(fieldName as String, port as Object). The [roSGNodeEvent](doc:rosgnode) message also includes a pointer to the node that can be accessed using getRoSGNode(), to associate nodes without an ID in the callback function. Additional information can be accessed in the callback function by storing the information in a custom field of the node.
 
 #### Parameters
 
@@ -241,20 +241,20 @@ A flag indicating whether this operation was successful.
 
 #### Description
 
-This overloaded form sends an [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") message to the [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") identified by port when the subject node field identified by fieldName changes value.
+This overloaded form sends an [roSGNodeEvent](doc:rosgnode) message to the [roMessagePort](doc:romessageport) identified by port when the subject node field identified by fieldName changes value.
 
 - Running GetNode() on the message retrieves the ID of the node that changed.
 - Running GetField() on the message gets the name of the field that changed.
 - Running GetData() on the message gets the new field value at the time of the change.
 
-This allows other threads to react to field changes, and avoids missing a value when the field changes twice before the message handler is able to receive the [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") messages.
+This allows other threads to react to field changes, and avoids missing a value when the field changes twice before the message handler is able to receive the [roSGNodeEvent](doc:rosgnode) messages.
 
 #### Parameters
 
 | Name      | Type   | Description                                                  |
 | --------- | ------ | ------------------------------------------------------------ |
 | fieldName | String | The name of the field to be monitored.                       |
-| port      | Object | The [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") to receive a [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") message when the value of the field changes. |
+| port      | Object | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
 | infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
 
 #### Return Value
@@ -281,11 +281,11 @@ A flag indicating whether this operation was successful.
 
 #### Description
 
-Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#observefieldfieldname-as-string-functionname-as-string-as-boolean "observeField(fieldName as String, functionName as String)") method.
+Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](doc:ifsgnodefield)") method.
 
 While the connection exists, any change in the called/observed node's field specified by **fieldName** results in calling the function specified by functionName in the observing component.
 
-The callback will be on the thread that owns the observed node. This is usually the render thread except in some narrowly defined scenarios. See [SceneGraph Threads](/docs/developer-program/core-concepts/threads.md "SceneGraph Threads") for further details.
+The callback will be on the thread that owns the observed node. This is usually the render thread except in some narrowly defined scenarios. See [SceneGraph Threads](doc:threads) for further details.
 
 #### Parameters
 
@@ -305,18 +305,18 @@ A flag indicating whether this operation was successful.
 
 #### Description
 
-Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#observefieldfieldname-as-string-functionname-as-string-as-boolean "observeField(fieldName as String, functionName as String)") method.
+Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](doc:ifsgnodefield)") method.
 
-While the connection exists, any change in the called/observed node's field specified by fieldName results in a message being sent to the [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") specified by port.
+While the connection exists, any change in the called/observed node's field specified by fieldName results in a message being sent to the [roMessagePort](doc:romessageport) specified by port.
 
-The message will be received on the thread that owns the port. This is either a task thread or the main BrightScript thread. See [SceneGraph Threads](/docs/developer-program/core-concepts/threads.md "SceneGraph Threads") for further details.
+The message will be received on the thread that owns the port. This is either a task thread or the main BrightScript thread. See [SceneGraph Threads](doc:threads) for further details.
 
 #### Parameters
 
 | Name       | Type                  | Description                                                  |
 | ---------- | --------------------- | ------------------------------------------------------------ |
 | fieldName  | String                | The name of the field to be monitored.                       |
-| port       | Object                | The [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") to receive a [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") message when the value of the field changes. |
+| port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
 | infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
 
 #### Return Value
@@ -329,18 +329,18 @@ A flag indicating whether this operation was successful.
 
 #### Description
 
-Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#observefieldfieldname-as-string-functionname-as-string-as-boolean "observeField(fieldName as String, functionName as String)") method.
+Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](doc:ifsgnodefield)") method.
 
-While the connection exists, any change in the called/observed node's field specified by fieldName results in a message being sent to the [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") specified by port.
+While the connection exists, any change in the called/observed node's field specified by fieldName results in a message being sent to the [roMessagePort](doc:romessageport) specified by port.
 
-The message will be received on the thread that owns the port. This is either a task thread or the main BrightScript thread. See [SceneGraph Threads](/docs/developer-program/core-concepts/threads.md "SceneGraph Threads") for further details.
+The message will be received on the thread that owns the port. This is either a task thread or the main BrightScript thread. See [SceneGraph Threads](doc:threads) for further details.
 
 #### Parameters
 
 | Name       | Type                  | Description                                                  |
 | ---------- | --------------------- | ------------------------------------------------------------ |
 | fieldName  | String                | The name of the field to be monitored.                       |
-| port       | Object                | The [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort") to receive a [roSGNodeEvent](/docs/references/brightscript/components/rosgnode.md "roSGNodeEvent") message when the value of the field changes. |
+| port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
 | infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
 
 #### Return Value
@@ -353,7 +353,7 @@ A flag indicating whether this operation was successful.
 
 Removes the connection between the observing component and the observed node's field.
 
-This is similar to the [unobserveField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#unobservefieldfieldname-as-string-as-boolean "unobserveField(fieldName as String)") method, which undoes both forms of observeField() and thus undoes both forms of observeFieldScoped().
+This is similar to the [unobserveField()](doc:ifsgnodefield)") method, which undoes both forms of observeField() and thus undoes both forms of observeFieldScoped().
 
 This method looks for and removes the implicit connection state stored in the observing object so that the calling component will no longer receive notification of changes in the specified node's field. Connections in other observing objects or even in the observed object are not affected
 
@@ -371,11 +371,11 @@ A flag indicating whether this operation was successful.
 
 #### Description
 
-Makes subsequent operations on the node fields to queue on the node itself rather than on the [Scene](/docs/references/scenegraph/scene.md "Scene") node render thread. This prevents the operations from being executed immediately.
+Makes subsequent operations on the node fields to queue on the node itself rather than on the [Scene](doc:scene) node render thread. This prevents the operations from being executed immediately.
 
-Subsequently setting this method to false will then cause all of the operations to be transferred to the [Scene](/docs/references/scenegraph/scene.md "Scene") node render thread queue to be immediately executed in a single render cycle. This can be helpful when multiple fields of a node that affect the appearance of the user interface need to be changed at one time from another thread.
+Subsequently setting this method to false will then cause all of the operations to be transferred to the [Scene](doc:scene) node render thread queue to be immediately executed in a single render cycle. This can be helpful when multiple fields of a node that affect the appearance of the user interface need to be changed at one time from another thread.
 
-This method should not be used on a node that is not owned by the render thread, as the render thread will not be able to execute the operations when they are released to it. You can use it when a node owned by a [Task](/docs/references/scenegraph/control-nodes/task.md "Task") node thread is transferred to the render thread, by setting it to a child or a node field of a node already owned by the render thread, where the queue is then released.
+This method should not be used on a node that is not owned by the render thread, as the render thread will not be able to execute the operations when they are released to it. You can use it when a node owned by a [Task](doc:task) node thread is transferred to the render thread, by setting it to a child or a node field of a node already owned by the render thread, where the queue is then released.
 
 #### Parameters
 
@@ -523,7 +523,7 @@ Indicates whether the **GetRef()** function will succeed in the current context.
 
 The specified **field_name** must be an associative array, and it must have previously been given a value via **SetRef()**.
 
-The **CanGetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](/docs/references/brightscript/interfaces/ifsgnodefield.md#queuefieldsqueuenode-as-boolean-as-boolean) has been enabled.
+The **CanGetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
 #### Return Value
 
@@ -537,7 +537,7 @@ This function returns true if the call to the **GetRef()** function will succeed
 
 Returns a reference to the value of an **roSGNode** field, which must be an associative array.  If the field is not an associative array, the call fails. The specified field must have previously been given a value via **SetRef()**.
 
-The **GetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](/docs/references/brightscript/interfaces/ifsgnodefield.md#queuefieldsqueuenode-as-boolean-as-boolean) has been enabled.
+The **GetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
 #### Parameters
 
@@ -618,7 +618,7 @@ An roAssociativeArray with the following information:
 
 Signals start and/or stop points for measuring app launch and Electronic Program Grid (EPG) launch times.                                                                                                                     
 
-To pass certification, an app must finish launching within the time specified in the [certification performance requirements](/docs/developer-program/certification/certification.md#3performance). The Roku OS automatically fires an **AppLaunchInitiate** event to mark when the user presses the OK button to launch an app from the Roku home screen. The app, however, must fire the corresponding `AppLaunchComplete` to mark when the app home page is fully rendered or when video playback starts after handling a [deep link](/docs/references/brightscript/interfaces/ifsgnodefield.md) and the app can respond to commands sent via the remote control.
+To pass certification, an app must finish launching within the time specified in the [certification performance requirements](doc:certification). The Roku OS automatically fires an **AppLaunchInitiate** event to mark when the user presses the OK button to launch an app from the Roku home screen. The app, however, must fire the corresponding `AppLaunchComplete` to mark when the app home page is fully rendered or when video playback starts after handling a [deep link](doc:ifsgnodefield) and the app can respond to commands sent via the remote control.
 
 Starting in Roku OS 9.3, if the app UI displays a login or user selection dialog before the home page, the app can fire **AppDialogInitiate** and **AppDialogComplete** beacons when the dialog loads and exits, respectively. These new beacons enable more accurate measurements of app launch times as the time spent on any dialogs requiring user input prior to rendering the home page are subtracted from the overall app launch time. If the app displays more that one dialog before the home page, multiple pairs of **AppDialogInitiate**/**AppDialogComplete** beacons may be fired. Do not fire AppDialog beacons on message dialogs that do not involve any user interaction (for example, a "please wait" or "loading" dialog).
 
@@ -656,4 +656,4 @@ When you fire a launch event, the system will return an integer indicating the r
 | 3               | Already Signaled | An event that can only be fired once (AppLaunchComplete) was signaled again. |
 | 4               | Wrong Order      | The completion event was fired before the corresponding initiate event (for example, EPGLaunchComplete was signaled before EPGLaunchInitiate). |
 
->In addition to the app launch, dialog launch, and EPG launch times, the Roku OS automatically measures five other certification performance metrics: app compile time, video start time, live start time, channel change time, and channel exit time. You can use the [BrightScript console](/docs/developer-program/debugging/debugging-channels.md) (port 8085) to view a report detailing your app's performance. See [Measuring app performance](/docs/developer-program/debugging/debugging-channels.md) for more information.
+>In addition to the app launch, dialog launch, and EPG launch times, the Roku OS automatically measures five other certification performance metrics: app compile time, video start time, live start time, channel change time, and channel exit time. You can use the [BrightScript console](doc:debugging-channels) (port 8085) to view a report detailing your app's performance. See [Measuring app performance](doc:debugging-channels) for more information.

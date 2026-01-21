@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StdDlgAreaBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-area-base.md "**StdDlgAreaBase**")
+Extends [StdDlgAreaBase](doc:std-dlg-area-base)
 
-The **StdDlgTitleArea** node contains the dialog's title information, which is always displayed at the top of the dialog. The title area may also include optional icons that appear left or right justified. The **StdDlgTitleArea** should only be used as a child node of a [**StandardDialog**](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md). 
+The **StdDlgTitleArea** node contains the dialog's title information, which is always displayed at the top of the dialog. The title area may also include optional icons that appear left or right justified. The **StdDlgTitleArea** should only be used as a child node of a [**StandardDialog**](doc:standard-dialog). 
 
 A dialog may contain a single title area, and the title area is optional (but is typically used in nearly all cases)
 

@@ -16,7 +16,7 @@ next:
 
 | Name         | Description                                                                               |
 | ------------ | ----------------------------------------------------------------------------------------- |
-| [roCompositor](/docs/references/brightscript/components/rocompositor.md "roCompositor") | The roCompositor allows the composition and animation of multiple roBitmaps and roRegions |
+| [roCompositor](doc:rocompositor) | The roCompositor allows the composition and animation of multiple roBitmaps and roRegions |
 
 
 ## Supported methods
@@ -25,7 +25,7 @@ next:
 
 #### Description
 
-Sets the destBitmap ([roBitmap](/docs/references/brightscript/components/robitmap.md "roBitmap") or [roScreen](/docs/references/brightscript/components/roscreen.md "roScreen")) and the background color.
+Sets the destBitmap ([roBitmap](doc:robitmap) or [roScreen](doc:roscreen)) and the background color.
 
 #### Parameters
 
@@ -63,13 +63,13 @@ Creates a new sprite, using an roRegion to define the sprite's bitmap. Position 
 
 #### Return Value
 
-Returns an [roSprite](/docs/references/brightscript/components/rosprite.md "roSprite") object.
+Returns an [roSprite](doc:rosprite) object.
 
 ### NewAnimatedSprite(x as Integer, y as Integer, regionArray as Object, z as Integer) as Object
 
 #### Description
 
-Creates a new sprite that consists of a sequence of frames to be animated. The frames are defined by the regionArray which is an [roArray](/docs/references/brightscript/components/roarray.md "roArray") of [roRegions](/docs/references/brightscript/components/roregion.md "roRegions"). Position the sprite at coordinate x,y. If z is provided, position the sprite in front of all other sprites with equal or lower z value
+Creates a new sprite that consists of a sequence of frames to be animated. The frames are defined by the regionArray which is an [roArray](doc:roarray) of [roRegions](doc:roregion). Position the sprite at coordinate x,y. If z is provided, position the sprite in front of all other sprites with equal or lower z value
 
 #### Parameters
 
@@ -82,7 +82,7 @@ Creates a new sprite that consists of a sequence of frames to be animated. The f
 
 #### Return Value
 
-Returns an [roSprite](/docs/references/brightscript/components/rosprite.md "roSprite") object.
+Returns an [roSprite](doc:rosprite) object.
 
 ### AnimationTick(duration as Integer) as Void
 
@@ -100,7 +100,7 @@ Moves all animated sprites. Sprites will not animate unless you call this functi
 
 #### Description
 
-Provides a global search and replace of sprite [roRegions](/docs/references/brightscript/components/roregion.md "roRegions"). Replaces regions that match oldRegion with newRegion
+Provides a global search and replace of sprite [roRegions](doc:roregion). Replaces regions that match oldRegion with newRegion
 
 #### Parameters
 

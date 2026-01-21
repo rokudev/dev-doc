@@ -12,9 +12,9 @@ next:
 ---
 
 
-Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
+Extends [**ArrayGrid**](doc:arraygrid)
 
-The MarkupGrid node class is a  is a generic grid class that can be used to display a set of items arranged into a 2D grid. The contents of each grid item is an instance of an XML component specified by the `itemComponentName` field. An instance of the XML component is used to display the data for each item in the grid data model. The appearance of the grid item as it enters/exits the grid focus position can be customized using scripting. [SimpleMarkupList](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/SimpleMarkupList) is a sample app containing a MarkupGrid where each item is an instance of an XML component. See the section [MarkupGrid XML component](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md#markupgrid-xml-component) for details.
+The MarkupGrid node class is a  is a generic grid class that can be used to display a set of items arranged into a 2D grid. The contents of each grid item is an instance of an XML component specified by the `itemComponentName` field. An instance of the XML component is used to display the data for each item in the grid data model. The appearance of the grid item as it enters/exits the grid focus position can be customized using scripting. [SimpleMarkupList](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/SimpleMarkupList) is a sample app containing a MarkupGrid where each item is an instance of an XML component. See the section [MarkupGrid XML component](doc:markupgrid) for details.
 
 The number of columns in the MarkupGrid node is fixed and the number of rows varies as needed to display all of the items in the grid data model. The items in the grid fill each row from left to right, then top to bottom. For example, if the grid data contains 8 items and the number of columns is set to 3, then items 1, 2 and 3 will be in the first row. Items 4, 5 and 6 will be in the second row. The third row will contain items 7 and 8 in the leftmost two columns and blank space in the right column.
 

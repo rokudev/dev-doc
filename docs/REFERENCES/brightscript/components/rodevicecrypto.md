@@ -16,7 +16,7 @@ The roDeviceCrypto component enables you to encrypt and decrypt data on a device
 
 ## Supported interfaces
 
-- [ifDeviceCrypto](/docs/references/brightscript/interfaces/ifdevicecrypto.md)
+- [ifDeviceCrypto](doc:ifdevicecrypto)
 
 ## Description
 

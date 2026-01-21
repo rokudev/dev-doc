@@ -17,4 +17,4 @@ The roSprite object cannot be created directly with a CreateObject() call. It mu
 
 ## Supported interfaces
 
-- [ifSprite](/docs/references/brightscript/interfaces/ifsprite.md "ifSprite")              
+- [ifSprite](doc:ifsprite)              

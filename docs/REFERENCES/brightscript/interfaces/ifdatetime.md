@@ -15,7 +15,7 @@ next:
 
 | Name       | Description                                                                                                   |
 | ---------- | ------------------------------------------------------------------------------------------------------------- |
-| [roDateTime](/docs/references/brightscript/components/rodatetime.md "roDateTime") | The roDateTime provides an interface to obtain the current date/time for the player and manipulate date/times |
+| [roDateTime](doc:rodatetime) | The roDateTime provides an interface to obtain the current date/time for the player and manipulate date/times |
 
 
 ## Supported methods

@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**LabelList**](/docs/references/scenegraph/list-and-grid-nodes/labellist.md)
+Extends [**LabelList**](doc:labellist)
 
 The RadioButtonList node class is a simple list class that can be used to display a list of mutually exclusive radio buttons. Each item in the list displays a text string and an optional check mark icon positioned to the left of the text string that indicates which of the radio buttons is currently selected.
 

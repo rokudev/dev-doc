@@ -20,7 +20,7 @@ next:
 
 | Name    | Description                                                                                                           |
 | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| [roRegex](/docs/references/brightscript/components/roregex.md "roRegex") | The roRegex component provides the powerful regular expression processing of the PCRE library to Brightscript strings |
+| [roRegex](doc:roregex) | The roRegex component provides the powerful regular expression processing of the PCRE library to Brightscript strings |
 
 
 ## Supported methods

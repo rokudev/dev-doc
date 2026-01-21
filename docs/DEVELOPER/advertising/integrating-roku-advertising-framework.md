@@ -21,16 +21,16 @@ overview of the fundamental steps required to integrate with such
 applications. Other developers may wish to have more control over
 certain features within their applications, such as rendering the ads
 with a custom UI, or integrating the event tracking with a 3rd-party
-analytics API. The [API Reference](/docs/developer-program/advertising/raf-api.md) provides
+analytics API. The [API Reference](doc:raf-api) provides
 more detailed information on the video ad API, and the [Use
-Cases](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#use-cases) section offers
+Cases](doc:integrating-roku-advertising-framework) section offers
 examples designed to cover a variety of different scenarios. The video
 ad features are provided as a common library deployed and managed as a
 hidden app.
 
 > The RAF library may not be loaded through a component library.
 
-The following line must be placed in the [manifest file](/docs/developer-program/getting-started/architecture/channel-manifest.md) for
+The following line must be placed in the [manifest file](doc:channel-manifest) for
 any applications using the Roku Advertising Framework library:
 
 **Manifest entry**
@@ -60,13 +60,13 @@ Configure the ad URL before making the ad request call:
 adIface.setAdUrl(myAdUrl)
 ```
 
-(You may wish to check [URL Parameter Macros](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros) to
+(You may wish to check [URL Parameter Macros](doc:integrating-roku-advertising-framework) to
 see if any parameter values in the ad URL should be replaced with the
 provided macros.)
 
-Aside from the [Configuration](/docs/developer-program/advertising/raf-api.md#configuration) interface,
+Aside from the [Configuration](doc:raf-api) interface,
 there are two main methods used to control ad parsing and rendering. The
-first, [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion),
+first, [getAds()](doc:raf-api),
 makes the initial request to the ad server, parses the server response,
 and returns the structure of ads to be rendered prior to, or during
 playback, of the selected content:
@@ -90,7 +90,7 @@ before playing the main content.
 If the application is only showing preroll ads, the above five lines are
 sufficient. If the ad server URL was configured for additional midroll
 and/or postroll ads, the client application should periodically
-call [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with the message from the content video playback loop to determine when to
+call [getAds()](doc:raf-api) with the message from the content video playback loop to determine when to
 halt the content playback and render the
 ads:
 
@@ -136,7 +136,7 @@ client applications. For clarity and concision, error and object
 validity checking are omitted in these examples.
 
 In all cases, the library must first be included and its interface
-constructed as described in [Getting Started](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#getting-started).
+constructed as described in [Getting Started](doc:integrating-roku-advertising-framework).
 Additionally, unless the client application is using Roku’s default ad
 URL (which currently provides only a single ad), the ad URL must be
 configured before requesting an
@@ -155,26 +155,26 @@ see if any parameter values in the ad URL should be replaced with the
 provided macros.
 
 At this point, the ad server response has been fully parsed and is
-available in the adPods [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure).
+available in the adPods [Ad Structure](doc:integrating-roku-advertising-framework).
 
 ### Client side ad insertion
 
 If the client application has no need for custom UI or user interaction
 during ad rendering, it is recommended to use the default rendering
-method [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion).
+method [showAds()](doc:raf-api).
 This method handles rendering and control of interactive and video ads,
 as well as displaying basic messaging UI (e.g., “Your program will
 continue after these messages”) and feedback UI (“Ad 1 of 3”).
-Calling [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with
+Calling [showAds()](doc:raf-api) with
 an array of ad pods (such as the structure returned from the initial
-call to [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion))
+call to [getAds()](doc:raf-api))
 will render the first pod scheduled as a preroll. Calling it with a
 single ad pod will render that pod, regardless of
 its `renderSequence` attribute.
 
 #### Single preroll ad pod
 
-Just call [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with
+Just call [showAds()](doc:raf-api) with
 the adPods value that the application obtained above:
 
 ```
@@ -190,10 +190,10 @@ back to a selection screen.
 Typically, if the ad service URL is configured to return a slate of ad
 pods to be presented throughout the presentation of the content, it is
 sufficient to
-use [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) as
+use [getAds()](doc:raf-api) as
 an event listener in the content video event loop, as described
 in [Getting
-Started](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#getting-started), to
+Started](doc:integrating-roku-advertising-framework), to
 determine when the scheduled ad breaks should
 occur:
 
@@ -215,7 +215,7 @@ while shouldPlayContent
 end while
 ```
 
-This usage of [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) also
+This usage of [getAds()](doc:raf-api) also
 automatically implements the default policy that determines whether to
 re-render ads that have already been viewed. This policy permits the
 user to rewind content up to 5 minutes before a scheduled ad break
@@ -250,7 +250,7 @@ end for
 
 Default sequential rendering could then be used by first importing this
 new `scheduledPods` ad structure, as described in [Custom Ad Parsing and
-Rendering](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#custom-ad-parsing-and-rendering).
+Rendering](doc:integrating-roku-advertising-framework).
 
 Or, if the library’s ad rendering features are desired without the
 default ad scheduling mechanism, the application may completely control
@@ -283,9 +283,9 @@ end while
 This type of custom ad scheduling may also be necessary if the client
 application relies on multiple ad services to fill its ad slots. For
 this case, separate calls are made
-to [setAdUrl()](/docs/developer-program/advertising/raf-api.md#setadurlurl-as-string),
+to [setAdUrl()](doc:raf-api),
 followed
-by [getAds()](/docs/developer-program/advertising/raf-api.md#getadsmsg-as-string-as-object),
+by [getAds()](doc:raf-api),
 to get the ads from each service. Then scheduling and rendering can be
 done using one of the methods described above.
 
@@ -303,13 +303,13 @@ To enable the JIT feature, call RAF’s **enableJITPods()** method:
 
 `adIface.enableJITPods(true)`
 
-See the [RAF API reference guide](/docs/developer-program/advertising/raf-api.md#enablejitpodsenabled-as-boolean) for more information on this method.
+See the [RAF API reference guide](doc:raf-api) for more information on this method.
 
 ### Enabling audience measurement
 
 The impression tags fired when video ads are displayed on your app must include your content's metadata (genre, ID, and length) for measurement purposes. This enables you to measure and report audience delivery with third-party audience measurement solutions such as Nielsen's Digital Ad Ratings (DAR), ComScore Campaign Ratings (CCR), and ComScore Validated Campaign Essentials (VCE).
 
-To enable ad measurement, call the [enableAdMeasurements()](/docs/developer-program/advertising/raf-api.md#enableadmeasurementsenabled) method, and pass the required content metadata within the [setContentGenre()](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean), [setContentId()](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean), and [setContentLength()](/docs/developer-program/advertising/raf-api.md#setcontentlengthlength-as-integer) methods.
+To enable ad measurement, call the [enableAdMeasurements()](doc:raf-api) method, and pass the required content metadata within the [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api) methods.
 
 ```
 adIface.enableAdMeasurements(true)
@@ -324,13 +324,13 @@ Each ad server may require different [Roku genre tags](#roku-genre-tags) tags th
 
 ##### Passing the kidsContent flag with the content genre
 
-When specifying the content genre with the [setContentGenre()](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean) method, pass the **kidsContent** flag to specify whether the content being played is targeted towards children (true) or not (false).
+When specifying the content genre with the [setContentGenre()](doc:raf-api) method, pass the **kidsContent** flag to specify whether the content being played is targeted towards children (true) or not (false).
 
 ### Frequency capping and targeting using RIDA
 
 The RIDA is similar to advertising identifiers used on other platforms. It is designed to allow ad personalization and frequency capping on the Roku platform via a device identifier that can be reset by the end user.
 
-Apps can use the [GetRIDA()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string) API to get the RIDA of a device and then pass it in ad server requests. If the customer has not opted out of ad targeting, the RIDA is set to a unique user ID (UUID). If the customer has opted-out (by enabling the "Limit ad tracking" flag from the **Settings** menu), the RIDA is set to a temporary ID that is different than the UUID and expires after 30 days. Apps must still pass this temporary ID in ad server requests to support frequency capping.
+Apps can use the [GetRIDA()](doc:ifdeviceinfo) API to get the RIDA of a device and then pass it in ad server requests. If the customer has not opted out of ad targeting, the RIDA is set to a unique user ID (UUID). If the customer has opted-out (by enabling the "Limit ad tracking" flag from the **Settings** menu), the RIDA is set to a temporary ID that is different than the UUID and expires after 30 days. Apps must still pass this temporary ID in ad server requests to support frequency capping.
 
 **Retrieving RIDA example**
 
@@ -384,7 +384,7 @@ which appear before ad playback.
 
 The default ad buffering screen displays a message and a progress bar.
 Both attributes can either be enabled or disabled
-using [enableAdBufferMessaging()](/docs/developer-program/advertising/raf-api.md#buffer-screen-customization).
+using [enableAdBufferMessaging()](doc:raf-api).
 
 <Image alt="roku815px - integrateraf1" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf1.jpg" title="integrateraf1" />
 
@@ -392,7 +392,7 @@ using [enableAdBufferMessaging()](/docs/developer-program/advertising/raf-api.md
 
 The buffering screen can also be customized by passing a content
 metadata object
-to [setAdBufferScreenContent()](/docs/developer-program/advertising/raf-api.md#buffer-screen-customization).
+to [setAdBufferScreenContent()](doc:raf-api).
 This function does not support custom positioning. Instead, use
 SetAdBufferScreenLayer() as described in the next section.
 
@@ -422,9 +422,9 @@ adIface.SetAdBufferScreenContent(bufferScreenContent)
 #### Custom buffering screen using content metadata (custom positioning)
 
 For a complete custom buffering
-screen, [setAdBufferScreenLayer()](/docs/developer-program/advertising/raf-api.md#buffer-screen-customization) allows
+screen, [setAdBufferScreenLayer()](doc:raf-api) allows
 the same content meta-data attributes
-as [setAdBufferScreenContent()](/docs/developer-program/advertising/raf-api.md#buffer-screen-customization),
+as [setAdBufferScreenContent()](doc:raf-api),
 but enables you to customize the positioning and
 other roImageCanvas attributes.
 
@@ -461,10 +461,10 @@ response format, but can still take advantage of the library’s ad
 rendering features. In this case, the application is reponsible for
 requesting and parsing the ad response and structuring the ads into an
 array of pods according to the required [Ad
-Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure).
-Scheduling and rendering can then proceed as described in [**Client Side Ad Insertion**](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#client-side-ad-insertion) by
+Structure](doc:integrating-roku-advertising-framework).
+Scheduling and rendering can then proceed as described in [**Client Side Ad Insertion**](doc:integrating-roku-advertising-framework) by
 first calling
-the [importAds()](/docs/developer-program/advertising/raf-api.md#importadsadpodarray-as-object) method
+the [importAds()](doc:raf-api) method
 with the ad structure constructed externally by the client:
 
 ```
@@ -478,24 +478,24 @@ application, either to provide custom UI while loading ads, or because
 the ads are rendered by a method unsupported by the video ad library
 (e.g., by server-side video stitching). It is sufficient to make a
 single call
-to [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) to
-get the entire [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure). The
+to [getAds()](doc:raf-api) to
+get the entire [Ad Structure](doc:integrating-roku-advertising-framework). The
 client application is then responsible for using the `streams` data to
 render the ads, and also must trigger
-the [Tracking](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#tracking-events) events
+the [Tracking](doc:integrating-roku-advertising-framework) events
 when the requisite conditions are
 met.
 
-The [fireTrackingEvents()](/docs/developer-program/advertising/raf-api.md#control) method
+The [fireTrackingEvents()](doc:raf-api) method
 is used to trigger event tracking, including client macro replacement
 and processing of ad measurement beacons. The `adStructure` parameter
 passed in to this method can be either an `adPod` or a single ad
 from [Ad
-Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure),
+Structure](doc:integrating-roku-advertising-framework),
 depending on whether the event is relevant for the entire pod (such
 as `PodStart` or `PodComplete`) or for a single ad (all other event
 types). The `ctx` parameter should contain either a `type` string from
-the [Tracking](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#tracking-events) events
+the [Tracking](doc:integrating-roku-advertising-framework) events
 or a `time` numerical value for firing time-dependent events such as
 quartile beacons. If both are specified, the `type` value takes
 precedence. Custom tracking event types can be added and fired as well,
@@ -508,7 +508,7 @@ Note: The `type` values are case-sensitive, so will only fire events with
 names that match exactly the type specified.
 
 Client code should fire all supported tracking events specified
-by [Tracking](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#tracking-events) during
+by [Tracking](doc:integrating-roku-advertising-framework) during
 ad rendering when the appropriate conditions are met. Some events need
 not be fired such as `Error`, which is specific to VAST parsing only.
 Events corresponding to operations unsupported during ad rendering also
@@ -516,7 +516,7 @@ need not be fired, such as `Rewind`, `Mute`,
 or `AcceptInvitation` (which is specific to ads with interactive
 elements).
 
-As an example, if `ad` contains the [Ad structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure) for a
+As an example, if `ad` contains the [Ad structure](doc:integrating-roku-advertising-framework) for a
 video ad that the client application has just begun rendering,
 the `Impression` beacons for that ad could be fired with a single call:
 
@@ -558,13 +558,13 @@ the app needs to call.
 #### 2. Ad measurement beacon requirements
 
 For server side ad inserted applications,
-call [fireTrackingEvents()](/docs/developer-program/advertising/raf-api.md#control) in
+call [fireTrackingEvents()](doc:raf-api) in
 RAF and ensure that the ad measurement beacons are passed to RAF via that API.
 It is valid to pass all impression beacons to RAF via this API. For
 non-Nielsen DAR beacons, RAF will be just a
 pass-through.
 
-> Per [Roku's certification requirements](/docs/developer-program/advertising/ad-requirements.md#ads-3-ad-tracking-requirements), all ad measurement beacons must be fired directly by RAF client-side (they may not be wrapped). This is required to apply the [Roku Advertising Watermark](/docs/developer-program/advertising/ad-watermark.md) to the beacons.
+> Per [Roku's certification requirements](doc:ad-requirements), all ad measurement beacons must be fired directly by RAF client-side (they may not be wrapped). This is required to apply the [Roku Advertising Watermark](doc:ad-watermark) to the beacons.
 
 **Note:** All these data points are sent directly to audience measurement platforms via RAF. RAF does not
 keep or save any of these data elements on the device or any cloud
@@ -588,7 +588,7 @@ streams.
 
 **Note:** Any interactive ad types that are not enabled in RAF when
 server-stitched would need to be rendered by the application. See
-[Custom Ad Rendering](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#custom-ad-parsing-and-rendering)
+[Custom Ad Rendering](doc:integrating-roku-advertising-framework)
 above.
 
 #### Implementation details
@@ -596,12 +596,12 @@ above.
 There are two API methods required for these use cases. First, the
 application is responsible for requesting and parsing the ad response,
 and structuring the ads into an array of pods, according to the
-required [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure). This ad
+required [Ad Structure](doc:integrating-roku-advertising-framework). This ad
 metadata may, in some cases, come from a third party SDK provided by
 your stitching platform.
 
 * **For server stitched ads, the 'time' member of the 'tracking' data
-  (in [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure)) for
+  (in [Ad Structure](doc:integrating-roku-advertising-framework)) for
   each ad is required**. The value of this data member should
   correspond to the absolute time in the entire stream, not just
   relative to the current ad.
@@ -618,7 +618,7 @@ your stitching platform.
   within the stitched stream.**
 
 Scheduling and rendering is then initialized by first calling
-the [`stitchedAdsInit()`](/docs/developer-program/advertising/raf-api.md#server-stitched-ads) method with the ad structure constructed by the
+the [`stitchedAdsInit()`](doc:raf-api) method with the ad structure constructed by the
 client:
 
 ```
@@ -627,7 +627,7 @@ adIface.stitchedAdsInit(myAdPodArray)
 
 Playback of the stitched stream is then started via an roVideoPlayer
 object (or optionally, a wrapped interface that matches the
-specification described in [`stitchedAdHandledEvent()`](/docs/developer-program/advertising/raf-api.md#server-stitched-ads)). In the event
+specification described in [`stitchedAdHandledEvent()`](doc:raf-api)). In the event
 loop for the video player, the app should then first check if an ad
 renderer handled the event, as well as checking for exit condition. If
 no ad renderer handled the event, control falls through to the
@@ -673,7 +673,7 @@ end while
 
 Alternatively, an roAssociativeArray can wrap and mimic the interface of
 the roVideoPlayer parameter
-of [stitchedAdHandledEvent()](/docs/developer-program/advertising/raf-api.md#server-stitched-ads).
+of [stitchedAdHandledEvent()](doc:raf-api).
 See method description for the minimum required key-value pairs. This
 wrapped interface is useful if there are other actions to be taken on
 player control methods (such as analytics fired when the stream is
@@ -707,13 +707,13 @@ device.
 | ROKU_ADS_TIMESTAMP      | Current timestamp value (number of milliseconds elapsed since 00:00:00 1/1/1970 GMT)                                                                                                                                                                                                                                                                                                                                                                                              |
 | ROKU_ADS_CACHE_BUSTER   | Makes the URL unique to avoid retrieving cached ad server responses, or to ensure proper counting of unique event tracking beacons                                                                                                                                                                                                                                                                                                                                                |
 | ROKU_ADS_KIDS_CONTENT   | Mark ad requests as appearing in a content title, channel, or area of a channel that is made for kids, or where you have actual knowledge that the end user is a child. This macro is designed to help flag ad requests that may be subject to child privacy and child protection laws such as the Children's Online Privacy Protection Act (COPPA). For more information about these laws, see [Channels or Content Made for Kids](https://docs.roku.com/published/madeforkids). |
-| ROKU_ADS_LOCALE         | Returns current locale in the same format as [roDeviceInfo.getCurrentLocale()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getcurrentlocale-as-string) (e.g., "en_US", "es_ES")                                                                                                                                                                                                                                                                                      |
+| ROKU_ADS_LOCALE         | Returns current locale in the same format as [roDeviceInfo.getCurrentLocale()](doc:ifdeviceinfo) (e.g., "en_US", "es_ES")                                                                                                                                                                                                                                                                                      |
 
 #### Example
 
 To make an ad request that requires the application ID, user agent, and
 timestamp values,
-call [setAdUrl()](/docs/developer-program/advertising/raf-api.md#setadurlurl-as-string) with
+call [setAdUrl()](doc:raf-api) with
 those parameters
 set:
 
@@ -730,9 +730,9 @@ rokuAds.setAdUrl(url)
 For a client application that must implement its own ad rendering, it is
 necessary to understand how the ad structure is represented in
 the BrightScript object returned
-from [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion).
+from [getAds()](doc:raf-api).
 The following is a description of the ad structure. Ad pods passed
-to [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) must
+to [showAds()](doc:raf-api) must
 conform to this
 structure.
 
@@ -802,16 +802,16 @@ adPods : [{
 ```
 
 The object returned from a new call
-to [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) with
+to [getAds()](doc:raf-api) with
 no parameters is an array of adPods in this format.
 
 ## Tracking
 
 Tracking events are triggered automatically during ad rendering
-by [showAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion).
+by [showAds()](doc:raf-api).
 For client applications that perform their own ad rendering, the valid
 event types that must be handled are represented in the `tracking` array
-of the [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure) by:
+of the [Ad Structure](doc:integrating-roku-advertising-framework) by:
 
 | Event name       | Trigger condition                                              |
 | ---------------- | -------------------------------------------------------------- |
@@ -835,7 +835,7 @@ of the [Ad Structure](/docs/developer-program/advertising/integrating-roku-adver
 ## Roku genre tags
 
 Tagging content by genre
-via [setContentGenre()](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean) is
+via [setContentGenre()](doc:raf-api) is
 specific to the ad provider, and may not be uniformly implemented. For
 ads provided by the Roku ad service, there is currently a canonical set
 of genre tags that can be used to improve ad targeting:
@@ -897,7 +897,7 @@ of genre tags that can be used to improve ad targeting:
 ## Nielsen DAR genre tags
 
 Tagging content by genre
-via [setNielsenGenre()](/docs/developer-program/advertising/raf-api.md#nielsen-dar) requires
+via [setNielsenGenre()](doc:raf-api) requires
 a single primary genre code for the selected content from the following
 set of values. Publishers should provide the most specific category
 applicable to the content for which ads are to be shown.

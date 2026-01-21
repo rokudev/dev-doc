@@ -101,7 +101,7 @@ The Task makes a local copy of the config global data which it then references v
 ## Threading and observer callbacks
 
 - The observer callback function for a given field is executed in the thread that owns the node.
-- Any callbacks set up on a Task node's fields will be executed by the Render thread if the node is owned by the Render Thread. For a Task thread to respond to the setting of such a node's fields, use the message port form of `observeField()` and wait for an [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) on that port. For nodes owned by the Task thread itself, the callback functions are set to call back directly to the Task thread.
+- Any callbacks set up on a Task node's fields will be executed by the Render thread if the node is owned by the Render Thread. For a Task thread to respond to the setting of such a node's fields, use the message port form of `observeField()` and wait for an [roSGNodeEvent](doc:rosgnodeevent) on that port. For nodes owned by the Task thread itself, the callback functions are set to call back directly to the Task thread.
 
 ## Task initialization
 
@@ -117,7 +117,7 @@ The Task makes a local copy of the config global data which it then references v
 - **SceneGraph Nodes** Nodes are reference counted. When the reference count goes to zero, the Roku OS automatically handles the clean up of SceneGraph nodes.
 - **Brightscript Objects** Brightscript objects can be cleaned up using the built-in Garbage Collector if no other elements are referencing the Brightscript object. Generally, this is done once right before video playback.
 
-  > There is no advantage to calling the Garbage Collector frequently. For more information refer to [RunGarbageCollector](/docs/references/brightscript/language/global-utility-functions.md#rungarbagecollector-as-object).
+  > There is no advantage to calling the Garbage Collector frequently. For more information refer to [RunGarbageCollector](doc:global-utility-functions).
 
 ## Circular Dependencies in SceneGraph
 
@@ -125,10 +125,10 @@ A **circular reference** is a series of references where the last object referen
 
 ## Using getScene()
 
-getScene() is a useful function to avoid having to store parent pointers. It gets the Node's root Scene, and from there you can search down for the Nodes you want to access without storing any pointers. More for information about getScene(), refer to [getScene() as roSGNode](/docs/references/brightscript/interfaces/ifsgnodechildren.md#getscene-as-rosgnode).
+getScene() is a useful function to avoid having to store parent pointers. It gets the Node's root Scene, and from there you can search down for the Nodes you want to access without storing any pointers. More for information about getScene(), refer to [getScene() as roSGNode](doc:ifsgnodechildren).
 
 ## Image Sizing
 
 - Using properly sized images for various resolutions ensures that the quality of the UI is maintained. Failing to do so can result in images being scaled on device, which degrades performance.
-- Smaller images can be added to the script using different URLs for different images. Moreover, [uri_resolution_autosub](/docs/developer-program/getting-started/architecture/channel-manifest.md#graphics-scaling-attributes) can be used to substitute the resolution type for a particular image URL, and the function regresses the URL automatically.
-- If the developer cannot provide the images using the server, they can use the Poster node fields: LoadWidth, LoadHeight, and LoadDisplayMode, at minimum values to provide low-resolution images. For more information about these fields, refer to [Posters](/docs/references/scenegraph/renderable-nodes/poster.md#autoscaling).
+- Smaller images can be added to the script using different URLs for different images. Moreover, [uri_resolution_autosub](doc:channel-manifest) can be used to substitute the resolution type for a particular image URL, and the function regresses the URL automatically.
+- If the developer cannot provide the images using the server, they can use the Poster node fields: LoadWidth, LoadHeight, and LoadDisplayMode, at minimum values to provide low-resolution images. For more information about these fields, refer to [Posters](doc:poster).

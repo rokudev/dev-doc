@@ -2,7 +2,7 @@ The \<interface> element defines a set of fields to be exposed by a component, t
 
 The \<interface> element may include one or more \<field> XML elements. Each \<field> XML element defines a top-level field for the XML component. These top-level fields define an interface that allow users of the component to read, write, and observe the fields.
 
-As of the 7.5 Roku OS release, the \<interface> element may also include one or more \<function> elements. This provides a mechanism for Roku apps to call functions synchronously, directly from a component. See [Functional Fields](/docs/developer-program/core-concepts/handling-application-events.md#HandlingApplicationEvents-FunctionalFields) for more details.
+As of the 7.5 Roku OS release, the \<interface> element may also include one or more \<function> elements. This provides a mechanism for Roku apps to call functions synchronously, directly from a component. See [Functional Fields](doc:handling-application-events) for more details.
 
 ## Attributes
 
@@ -236,7 +236,7 @@ The following attributes define each \<function> XML element:
 
 | Attribute | Required | Description                                                                                                                                                          |
 | --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name      | required | A string containing the name of the function which can be called using the [callFunc() function](/docs/references/brightscript/interfaces/ifsgnodedict.md#callfunc). |
+| name      | required | A string containing the name of the function which can be called using the [callFunc() function](doc:ifsgnodedict). |
 
 ## Examples
 

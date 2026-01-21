@@ -16,12 +16,12 @@ next:
 
 ## About this video
 
-This video highlights the two voice integrations that apps can leverage to accelerate content delivery and simplify playback: [Direct to Play](/docs/features/voice/overview.md#direct-to-play) and [Enhanced Voice Controls](/docs/features/voice/overview.md#enhanced-transport-controls).
+This video highlights the two voice integrations that apps can leverage to accelerate content delivery and simplify playback: [Direct to Play](doc:overview) and [Enhanced Voice Controls](doc:overview).
 
 ## Related documentation
 
-[Roku Voice overview](/docs/features/voice/overview.md)
+[Roku Voice overview](doc:overview)
 
-[Direct to Play](/docs/features/voice/overview.md#direct-to-play)
+[Direct to Play](doc:overview)
 
-[Enhanced Voice Controls](/docs/features/voice/overview.md#enhanced-transport-controls)
+[Enhanced Voice Controls](doc:overview)

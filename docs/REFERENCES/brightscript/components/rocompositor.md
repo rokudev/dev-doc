@@ -70,4 +70,4 @@ End Function
 
 ## Supported interfaces
 
-- [ifCompositor](/docs/references/brightscript/interfaces/ifcompositor.md "ifCompositor")
+- [ifCompositor](doc:ifcompositor)

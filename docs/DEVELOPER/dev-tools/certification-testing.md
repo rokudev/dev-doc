@@ -12,13 +12,13 @@ next:
 ---
 
 
-Developers can use the self-serve certification testing tool in the [Developer Dashboard](https://developer.roku.com/developer) to verify that their apps meet [performance](/docs/developer-program/certification/certification.md#3-performance) and [deep linking](/docs/developer-program/certification/certification.md#5-deep-linking) certification requirements. This enables developers to independently test their apps and update them before formally submitting them for publishing. By identifying any issues prior to submitting their apps, developers can avoid potential delays in the publishing of their apps.
+Developers can use the self-serve certification testing tool in the [Developer Dashboard](https://developer.roku.com/developer) to verify that their apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements. This enables developers to independently test their apps and update them before formally submitting them for publishing. By identifying any issues prior to submitting their apps, developers can avoid potential delays in the publishing of their apps.
 
 ## Using the certification testing tool
 
-To use the certification testing tool, you upload a [package file](/docs/developer-program/publishing/packaging-channels.md), enter the deep linking parameters to be tested, and then run the tool. The results of the certification test are displayed in real-time on the page as testing progresses. When the testing has been completed, an email notification is sent to you with the results.
+To use the certification testing tool, you upload a [package file](doc:packaging-channels), enter the deep linking parameters to be tested, and then run the tool. The results of the certification test are displayed in real-time on the page as testing progresses. When the testing has been completed, an email notification is sent to you with the results.
 
-> In order for the tool to complete all the performance tests, your app must have the required [signal beacons](/docs/developer-program/performance-guide/measuring-channel-performance.md#measuring-channel-and-epg-launch-times).
+> In order for the tool to complete all the performance tests, your app must have the required [signal beacons](doc:measuring-channel-performance).
 
 ### Uploading a package file
 
@@ -32,7 +32,7 @@ To upload a package file to the certification testing tool, follow these steps:
 
 ### Entering deep linking parameters
 
-To validate that your app is handling deep link requests properly, provide at least one set of [deep linking parameters](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) for each different [media type](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) in your app. For example, if your app contains movies and TV episodes, include deep linking parameters for at least one movie and one episode.
+To validate that your app is handling deep link requests properly, provide at least one set of [deep linking parameters](doc:implementing-deep-linking) for each different [media type](doc:implementing-deep-linking) in your app. For example, if your app contains movies and TV episodes, include deep linking parameters for at least one movie and one episode.
 
 To enter deep linking parameters, follow these steps:
 
@@ -41,10 +41,10 @@ To enter deep linking parameters, follow these steps:
 
 2. For each set of deep linking parameters to be included in the certification test, do the following:
 
-   a. In the **Media Type** field, select the [media type](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) of the content item (for example, movie, television episode, or television series).
+   a. In the **Media Type** field, select the [media type](doc:implementing-deep-linking) of the content item (for example, movie, television episode, or television series).
 
 
-   b. In the **Content ID** field, enter the [content ID](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the item.
+   b. In the **Content ID** field, enter the [content ID](doc:implementing-deep-linking) of the item.
 
 
    c. In the **Valid Until** field, enter the last date when the deep linking parameters will be used in your app.
@@ -70,7 +70,7 @@ The **Certification Tests** table lists the status of each individual test being
 | Status                    | The results of the test. Completed tests have a status of "Passed" or "Failed"; tests still to be performed have a status of "Queued". |
 | Severity                  | Any info messages, warnings, or errors related to a completed test. |
 | Category                  | The type of test being performed: "Performance" or "Deep Linking". |
-| Certification Requirement | Provides a link to the requirement in the [Certification Criteria](/docs/developer-program/certification/certification.md) document. |
+| Certification Requirement | Provides a link to the requirement in the [Certification Criteria](doc:certification) document. |
 | More Info                 | Provides a detailed description of any error or warning, and a link to the related documentation. |
 
 You can sort the test results by toggling the **Status**, **Severity**, or **Category** column headers. You can filter test results based on the same fields.

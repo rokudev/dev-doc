@@ -12,22 +12,22 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
-> Apps must use Roku voice keyboards for [email](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md), [PIN](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-pinpad.md), [password](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md) entry to pass [certification](/docs/developer-program/certification/certification.md#4-channel-operation).
+> Apps must use Roku voice keyboards for [email](doc:dynamic-keyboard), [PIN](doc:dynamic-pinpad), [password](doc:dynamic-keyboard) entry to pass [certification](doc:certification).
 
-The DynamicKeyboardBase is an abstract class that provides the functionality for dynamic voice-enabled keyboards. It combines [**DynamicKeyGrid**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md) and [**VoiceTextEditBox**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) nodes to provide a single node that supports text entry in multiple languages and voice entry in English and Spanish.
+The DynamicKeyboardBase is an abstract class that provides the functionality for dynamic voice-enabled keyboards. It combines [**DynamicKeyGrid**](doc:dynamic-key-grid) and [**VoiceTextEditBox**](doc:voice-text-edit-box) nodes to provide a single node that supports text entry in multiple languages and voice entry in English and Spanish.
 
-- The [**DynamicKeyGrid**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md) provides keyboard functionality. The layout of the keyboard is based on a JSON-formatted Key Definition File.
+- The [**DynamicKeyGrid**](doc:dynamic-key-grid) provides keyboard functionality. The layout of the keyboard is based on a JSON-formatted Key Definition File.
 
-  The classes derived from DynamicKeyboardBase (DynamicKeyboard, DynamicPinPad, and DynamicMiniKeyboard) have built-in Key Definition Files. For example, the DynamicKeyboard node uses a Key Definition File that matches the key layout of the [legacy Keyboard node](/docs/references/scenegraph/widget-nodes/keyboard.md).
+  The classes derived from DynamicKeyboardBase (DynamicKeyboard, DynamicPinPad, and DynamicMiniKeyboard) have built-in Key Definition Files. For example, the DynamicKeyboard node uses a Key Definition File that matches the key layout of the [legacy Keyboard node](doc:keyboard).
 
-  The [**DynamicCustomKeyboard** node](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-custom-keyboard.md) enables developers to define a custom Key Definition File in order to configure the key layout. In the Key Definition File, the developer specifies the keys in each section and row of the keyboard. The keys support the characters in the Basic Latin, Latin 1 Supplement, Latin Extended-A, and Latin Extended-B blocks. This provides support for most Western European languages, including English, French, German, Italian, Portuguese, and Spanish.
+  The [**DynamicCustomKeyboard** node](doc:dynamic-custom-keyboard) enables developers to define a custom Key Definition File in order to configure the key layout. In the Key Definition File, the developer specifies the keys in each section and row of the keyboard. The keys support the characters in the Basic Latin, Latin 1 Supplement, Latin Extended-A, and Latin Extended-B blocks. This provides support for most Western European languages, including English, French, German, Italian, Portuguese, and Spanish.
 
 
-- The [**VoiceTextEditBox**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) displays the text that has been entered or spoken. This node supports multiple voice entry modes for entering email addresses, passwords, street addresses, and PINs. This node currently supports voice entry in English and Spanish.
+- The [**VoiceTextEditBox**](doc:voice-text-edit-box) displays the text that has been entered or spoken. This node supports multiple voice entry modes for entering email addresses, passwords, street addresses, and PINs. This node currently supports voice entry in English and Spanish.
 
-> Developers should upgrade the [legacy keyboards](/docs/references/scenegraph/widget-nodes/keyboard.md) in their apps to dynamic voice-enabled keyboards in order to leverage the following benefits:
+> Developers should upgrade the [legacy keyboards](doc:keyboard) in their apps to dynamic voice-enabled keyboards in order to leverage the following benefits:
 >
 > - **Faster on-device sign-ups and sign-ins.** Enable customers to use voice entry to provide their information when subscribing to apps and logging in.
 >
@@ -90,9 +90,9 @@ The DynamicKeyboardBase is an abstract class that provides the functionality for
 
 ## UX recommendations
 
-1. Do not show hint text in the [VoiceTextEditBox](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md).
+1. Do not show hint text in the [VoiceTextEditBox](doc:voice-text-edit-box).
 2. Display secondary text under the title.
-3. Show the horizontal blinking cursor when the focus is on the [VoiceTextEditBox](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) and vertical blinking cursor when the focus is on the keyboard buttons.
+3. Show the horizontal blinking cursor when the focus is on the [VoiceTextEditBox](doc:voice-text-edit-box) and vertical blinking cursor when the focus is on the keyboard buttons.
 
 ![roku815px - email-keyboard](https://image.roku.com/ZHZscHItMTc2/email-keyboard.png)
 

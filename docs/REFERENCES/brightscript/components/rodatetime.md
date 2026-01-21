@@ -31,6 +31,6 @@ print "The date is now "; date.AsDateString("long-date")
 
 ## Supported interfaces
 
-- [ifDateTime](/docs/references/brightscript/interfaces/ifdatetime.md "ifDateTime")
+- [ifDateTime](doc:ifdatetime)
 
 > Some Roku OS versions may implement ifDateTime as ifRoDateTime

@@ -32,7 +32,7 @@ around from there.
         flow first
 
   - **Ads:**
-      - Can launch and [deep link](/docs/developer-program/discovery/implementing-deep-linking.md) to almost any level of your app
+      - Can launch and [deep link](doc:implementing-deep-linking) to almost any level of your app
           - For example, launch and jump straight to a home page, a
             category or collection page, or a details page for a
             specific item

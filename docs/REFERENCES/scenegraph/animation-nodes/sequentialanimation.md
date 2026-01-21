@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**AnimationBase**](/docs/references/scenegraph/abstract-nodes/animationbase.md)
+Extends [**AnimationBase**](doc:animationbase)
 
 The SequentialAnimation node class allows you to specify that a set of animations should occur sequentially. The children of the SequentialAnimation node specify the set of animations to be executed. Note that the use of the delay field in the child animations allows a delay between any two animations to be specified, if desired.
 

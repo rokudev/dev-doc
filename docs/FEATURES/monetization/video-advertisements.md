@@ -26,9 +26,9 @@ Please note, switching from the Inventory Split model to the Roku Sales Represen
 
 ## Implementing the Roku Advertising Framework (RAF)
 
-All apps on the Roku platform must implement Roku's custom advertising framework, RAF, for fulfilling and rendering video advertisements. Apps will not be [certified](/docs/developer-program/certification/certification.md) or published to the Streaming Store until this requirement is met.
+All apps on the Roku platform must implement Roku's custom advertising framework, RAF, for fulfilling and rendering video advertisements. Apps will not be [certified](doc:certification) or published to the Streaming Store until this requirement is met.
 
-See [Integrating the Roku Advertising Framework](/docs/developer-program/advertising/integrating-roku-advertising-framework.md) for a tutorial on how to properly configure RAF within an app.
+See [Integrating the Roku Advertising Framework](doc:integrating-roku-advertising-framework) for a tutorial on how to properly configure RAF within an app.
 
 ## Feature comparison
 

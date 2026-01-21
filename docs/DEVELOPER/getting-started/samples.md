@@ -31,7 +31,7 @@ The [Roku Developers GitHub repo](https://github.com/rokudev) provides a large s
 |                | [RAF4RSG-sample](https://github.com/rokudev/RAF4RSG-sample)  | Sample demonstrating the Roku Advertising Framework in SceneGraph |
 |                | [tv-safe-zone-overlay](https://github.com/rokudev/tv-safe-zone-overlay) | Function to overlay the current UI in a SceneGraph scene with a transparent safety zone overlay |
 |                | [simple-videoplayer-channel](https://github.com/rokudev/simple-videoplayer-channel) | SimpleVideoPlayer app remastered in SceneGraph           |
-|                | [sgnodes-all-demo](https://github.com/rokudev/sgnodes-all-demo) | Demonstrates how the `sgnodes all` SceneGraph debug console command (port 8080) returns the reference counts held by the Roku OS (osref) and the app itself (bscref); used in conjunction with the [console debugger](/docs/developer-program/debugging/debugging-channels.md) |
+|                | [sgnodes-all-demo](https://github.com/rokudev/sgnodes-all-demo) | Demonstrates how the `sgnodes all` SceneGraph debug console command (port 8080) returns the reference counts held by the Roku OS (osref) and the app itself (bscref); used in conjunction with the [console debugger](doc:debugging-channels) |
 | Advanced       | [hero-grid-channel](https://github.com/rokudev/hero-grid-channel) | Sample app with sliding hero row and a grid of content below |
 |                | [tv-safe-zone-channel](https://github.com/rokudev/tv-safe-zone-channel) | App that demonstrates the TV safe zones for Titles and Action in the UI |
 |                | [trickplay-samples](https://github.com/rokudev/trickplay-samples) | Samples that use BIF/thumbnails during trick play            |

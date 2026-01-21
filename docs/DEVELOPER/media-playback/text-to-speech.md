@@ -33,91 +33,91 @@ rates of speech, volume of speech, and other aspects of text to speech.
 Roku provides text to speech support in the following components,
 interfaces, and events:
 
-  - [roTextToSpeech](/docs/references/brightscript/components/rotexttospeech.md)
-  - [ifTextToSpeech](/docs/references/brightscript/interfaces/iftexttospeech.md)
-  - [roTextToSpeechEvent](/docs/references/brightscript/events/rotexttospeechevent.md)
+  - [roTextToSpeech](doc:rotexttospeech)
+  - [ifTextToSpeech](doc:iftexttospeech)
+  - [roTextToSpeechEvent](doc:rotexttospeechevent)
 
 Components available since Roku OS 7.5
 
-  - [roAudioGuide](/docs/references/brightscript/components/roaudioguide.md)
-  - [ifAudioGuide](/docs/references/brightscript/interfaces/ifaudioguide.md)
+  - [roAudioGuide](doc:roaudioguide)
+  - [ifAudioGuide](doc:ifaudioguide)
 
 ## Screen reader behavior for SceneGraph nodes
 
-  - **[ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md)**: speaks focused item ([ContentMetaData::TITLE](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)), followed by navigation hint, then ContentMetaData::AUDIO\_GUIDE\_SUFFIX (if any).
+  - **[ArrayGrid](doc:arraygrid)**: speaks focused item ([ContentMetaData::TITLE](doc:content-metadata)), followed by navigation hint, then ContentMetaData::AUDIO\_GUIDE\_SUFFIX (if any).
 
 
-  - **[Button](/docs/references/scenegraph/widget-nodes/button.md)**: text of button is spoken only if focused
+  - **[Button](doc:button)**: text of button is spoken only if focused
 
 
-  - **[ButtonGroup](/docs/references/scenegraph/layout-group-nodes/buttongroup.md#fields)**: speaks focused [Button](/docs/references/scenegraph/widget-nodes/button.md), followed
+  - **[ButtonGroup](doc:buttongroup)**: speaks focused [Button](doc:button), followed
     by navigation hint (“button 1 of 4”), followed by button-specific hint, if any (Button-specific hint is spoken only for StarRatingButton).
 
 
-  - **[CheckList](/docs/references/scenegraph/list-and-grid-nodes/checklist.md)**:
+  - **[CheckList](doc:checklist)**:
     speaks focused item (ContentMetaData::AUDIO\_GUIDE\_TEXT if any;
     otherwise
-    [ContentMetaData::TITLE](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes))
+    [ContentMetaData::TITLE](doc:content-metadata))
     followed by navigation hint (“checkbox, checked, 1 of 4”)
 
 
-  - **[Dialog](/docs/references/scenegraph/dialog-nodes/dialog.md)**:
+  - **[Dialog](doc:dialog)**:
     speaks `title`, `message`, and `bulletText` (if any), then reads focused button
 
 
-  - **[Keyboard](/docs/references/scenegraph/widget-nodes/keyboard.md)**:
+  - **[Keyboard](doc:keyboard)**:
     speaks hint about caps lock toggling (once), then speaks focused key
 
 
-  - **[KeyboardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md)**:
+  - **[KeyboardDialog](doc:standard-keyboard-dialog)**:
     speaks title, then keyboard
 
 
-  - **[Label](/docs/references/scenegraph/label-nodes/label.md)**:
+  - **[Label](doc:label)**:
     speaks `text` field
 
 
-  - **[LabelList](/docs/references/scenegraph/list-and-grid-nodes/labellist.md)**:
+  - **[LabelList](doc:labellist)**:
     speaks focused ContentMetaData::AUDIO\_GUIDE\_TEXT if any; otherwise speaks
-    [ContentMetaData::TITLE](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes), followed by navigation hint.
+    [ContentMetaData::TITLE](doc:content-metadata), followed by navigation hint.
 
 
-  - **[MarkupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md)**:
-    speaks focused ContentMetaData::AUDIO\_GUIDE\_TEXT if any; otherwise speaks [ContentMetaData::TITLE](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes), followed by navigation hint, then
+  - **[MarkupGrid](doc:markupgrid)**:
+    speaks focused ContentMetaData::AUDIO\_GUIDE\_TEXT if any; otherwise speaks [ContentMetaData::TITLE](doc:content-metadata), followed by navigation hint, then
     ContentMetaData::AUDIO\_GUIDE\_SUFFIX (if any), then MEDIA speech (see below)
 
 
-  - **[MarkupList](/docs/references/scenegraph/list-and-grid-nodes/markuplist.md)**: speaks focused item
-    ([ContentMetaData::TITLE](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)), followed by navigation hint, then ContentMetaData::AUDIO\_GUIDE\_SUFFIX (if any).
+  - **[MarkupList](doc:markuplist)**: speaks focused item
+    ([ContentMetaData::TITLE](doc:content-metadata)), followed by navigation hint, then ContentMetaData::AUDIO\_GUIDE\_SUFFIX (if any).
 
 
-  - **[MiniKeyboard](/docs/references/scenegraph/widget-nodes/minikeyboard.md)**:
+  - **[MiniKeyboard](doc:minikeyboard)**:
     speaks focused key
 
 
-  - **[PinDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-pinpad-dialog.md)**:
+  - **[PinDialog](doc:standard-pinpad-dialog)**:
     speaks dialog title, whether in key pad, then focused key or button
 
 
-  - **[PinPad](/docs/references/scenegraph/widget-nodes/pinpad.md)**:
+  - **[PinPad](doc:pinpad)**:
     speaks focused key
 
 
-  - **[Poster](/docs/references/scenegraph/renderable-nodes/poster.md)**: if focused, speaks `audioGuideText` field (if set)
+  - **[Poster](doc:poster)**: if focused, speaks `audioGuideText` field (if set)
 
 
-  - **[PosterGrid](/docs/references/scenegraph/list-and-grid-nodes/postergrid.md)**:
+  - **[PosterGrid](doc:postergrid)**:
     speaks focused item
-    ([ContentMetaData::TITLE](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)), followed by navigation hint.
+    ([ContentMetaData::TITLE](doc:content-metadata)), followed by navigation hint.
 
 
-  - **[ProgressDialog](/docs/references/scenegraph/dialog-nodes/progressdialog.md)**:
+  - **[ProgressDialog](doc:progressdialog)**:
     speaks dialog `title`, `message`, and `bulletText` every 15
     seconds. Speaks focused button if there is
     any.
 
 
-  - **[RadioButtonList](/docs/references/scenegraph/list-and-grid-nodes/radiobuttonlist.md)**:
+  - **[RadioButtonList](doc:radiobuttonlist)**:
     speaks focused item (ContentMetaData::AUDIO\_GUIDE\_TEXT if  any;
     otherwise, ContentMetaData::TITLE), followed by navigation and
     selection
@@ -129,38 +129,38 @@ Components available since Roku OS 7.5
     descendant; otherwise, will speak all descendants
 
 
-  - **[RowList](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md)**:
+  - **[RowList](doc:rowlist)**:
     speaks row label (when row becomes focused), then speaks focused
-    **[PosterGrid](/docs/references/scenegraph/list-and-grid-nodes/postergrid.md)**
+    **[PosterGrid](doc:postergrid)**
     or
-    **[MarkupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md)**
+    **[MarkupGrid](doc:markupgrid)**
     (MarkupGrid is used if itemComponentName is
     non-empty)
 
 
-  - **[ScrollableText](/docs/references/scenegraph/typographic-nodes/scrollabletext.md)**:
+  - **[ScrollableText](doc:scrollabletext)**:
     speaks `text`
     field
 
 
-  - **[ScrollingLabel](/docs/references/scenegraph/typographic-nodes/scrollinglabel.md)**:
+  - **[ScrollingLabel](doc:scrollinglabel)**:
     speaks `text` field
 
 
-  - **[Video](/docs/references/scenegraph/media-playback-nodes/video.md)**:  speaks
+  - **[Video](doc:video)**:  speaks
     HUD if displayed by user
 
 **Screen reader behavior for built-in SceneGraph panels and scenes:**
 
-  - **[GridPanel](/docs/references/scenegraph/sliding-panels-nodes/gridpanel.md)**:
+  - **[GridPanel](doc:gridpanel)**:
      speaks panel, then **leftLabel**
 
 
-  - **[ListPanel](/docs/references/scenegraph/sliding-panels-nodes/listpanel.md)**:
+  - **[ListPanel](doc:listpanel)**:
      speaks panel, then **leftLabel**
 
 
-  - **[PanelSet](/docs/references/scenegraph/sliding-panels-nodes/panelset.md)**:
+  - **[PanelSet](doc:panelset)**:
       - If left panel is focused, speaks focused left panel, then
         unfocused right panel (if any)
       - If right panel is focused, speaks unfocused left panel, then
@@ -170,37 +170,37 @@ Components available since Roku OS 7.5
         any)
 
 
-  - **[OverhangPanelSetScene](/docs/references/scenegraph/sliding-panels-nodes/overhangpanelsetscene.md)**:
+  - **[OverhangPanelSetScene](doc:overhangpanelsetscene)**:
     uses
-    **[Overhang](/docs/references/scenegraph/sliding-panels-nodes/overhang.md)**
+    **[Overhang](doc:overhang)**
     title when speaking location
 
 
-  - **[Scene](/docs/references/scenegraph/scene.md)**: speaks
+  - **[Scene](doc:scene)**: speaks
     dialog (if any); otherwise speaks
-    [PanelSet](/docs/references/scenegraph/sliding-panels-nodes/panelset.md) (if
+    [PanelSet](doc:panelset) (if
     any); otherwise speaks as
     RenderableNode
 
 **MEDIA speech is spoken in the following order:**
 
-  - [ContentMetaData::TEXT](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)
-  - [ContentMetaData::DESCRIPTION](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)
-  - [ContentMetaData::DIRECTORS](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)
-  - [ContentMetaData::PRODUCERS](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)
-  - [ContentMetaData::ACTORS](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)
+  - [ContentMetaData::TEXT](doc:content-metadata)
+  - [ContentMetaData::DESCRIPTION](doc:content-metadata)
+  - [ContentMetaData::DIRECTORS](doc:content-metadata)
+  - [ContentMetaData::PRODUCERS](doc:content-metadata)
+  - [ContentMetaData::ACTORS](doc:content-metadata)
 
  **There is no additional speech for the following nodes (they will behave the same as RenderableNode):**
 
-  - [BifDisplay](/docs/references/scenegraph/media-playback-nodes/video.md#fields)
-  - [BusySpinner](/docs/references/scenegraph/widget-nodes/busyspinner.md)
-  - [LayoutGroup](/docs/references/scenegraph/layout-group-nodes/layoutgroup.md)
-  - [Overhang](/docs/references/scenegraph/sliding-panels-nodes/overhang.md)
-  - [Panel](/docs/references/scenegraph/sliding-panels-nodes/panel.md)
-  - [ProgressBar](/docs/references/scenegraph/media-playback-nodes/video.md#fields)
-  - [Rectangle](/docs/references/scenegraph/renderable-nodes/rectangle.md)
-  - [TextEditBox](/docs/references/scenegraph/widget-nodes/texteditbox.md)
-  - [TrickPlayBar](/docs/references/scenegraph/media-playback-nodes/video.md#fields)
+  - [BifDisplay](doc:video)
+  - [BusySpinner](doc:busyspinner)
+  - [LayoutGroup](doc:layoutgroup)
+  - [Overhang](doc:overhang)
+  - [Panel](doc:panel)
+  - [ProgressBar](doc:video)
+  - [Rectangle](doc:rectangle)
+  - [TextEditBox](doc:texteditbox)
+  - [TrickPlayBar](doc:video)
 
 ## Implementation tips
 

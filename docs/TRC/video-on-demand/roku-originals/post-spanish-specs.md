@@ -871,7 +871,7 @@ The required details will include, but are not limited to, the following:
 
 Please note that Air Order and Episode Titles must be a decision made with your Content Executive. The Episode Titles must be creative (no “Episode 1”) and should be written with the show writers or receive writer approval.
 
-Please ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](/trc-docs/video-on-demand/ingest-specifications.md#roku-excel-metadata-guidelines-and-templates).
+Please ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](doc:ingest-specifications).
 
 #### 8.7.2 Credits documents
 

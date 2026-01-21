@@ -48,10 +48,10 @@ c
 
 ## Supported Interfaces
 
-- [ifList](/docs/references/brightscript/interfaces/iflist.md "ifList")
-- [ifArray](/docs/references/brightscript/interfaces/ifarray.md "ifArray")
-- [ifArrayGet](/docs/references/brightscript/interfaces/ifarrayget.md "ifArrayGet")
-- [ifArraySet](/docs/references/brightscript/interfaces/ifarrayset.md "ifArraySet")
-- [ifEnum](/docs/references/brightscript/interfaces/ifenum.md "ifEnum")
-- [ifListToArray](/docs/references/brightscript/interfaces/iflisttoarray.md "ifListToArray")
+- [ifList](doc:iflist)
+- [ifArray](doc:ifarray)
+- [ifArrayGet](doc:ifarrayget)
+- [ifArraySet](doc:ifarrayset)
+- [ifEnum](doc:ifenum)
+- [ifListToArray](doc:iflisttoarray)
 

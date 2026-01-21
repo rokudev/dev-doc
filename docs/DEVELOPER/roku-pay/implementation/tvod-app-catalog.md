@@ -18,7 +18,7 @@ Publishers participating in Roku Pay can monetize content by making it available
 
 ## Overview
 
-Offering transactional content in an app entails [creating products and purchase options](/docs/developer-program/roku-pay/quickstart/product-catalog.md) for the content in the Developer Dashboard and using the [ChannelStore node](/docs/references/scenegraph/control-nodes/channelstore.md) to [check the user's billing status](/docs/references/scenegraph/control-nodes/channelstore.md#requestpartnerorder) and [complete the rental or purchase transaction](/docs/references/scenegraph/control-nodes/channelstore.md#confirmpartnerorder).
+Offering transactional content in an app entails [creating products and purchase options](doc:product-catalog) for the content in the Developer Dashboard and using the [ChannelStore node](doc:channelstore) to [check the user's billing status](doc:channelstore) and [complete the rental or purchase transaction](doc:channelstore).
 
 > This workflow is intended for:
 >
@@ -27,7 +27,7 @@ Offering transactional content in an app entails [creating products and purchase
 
 ## Creating products for TVOD
 
-To link transactional content with Roku Pay, you create products and purchase options in the Developer Dashboard. With the TVOD model, products only need to be created for each [product category](/docs/developer-program/roku-pay/quickstart/product-catalog.md#creating-products) (video content, audio content, or game token). For example, if you plan on offering movie rentals, you only need to create a single product that has the video category.
+To link transactional content with Roku Pay, you create products and purchase options in the Developer Dashboard. With the TVOD model, products only need to be created for each [product category](doc:product-catalog) (video content, audio content, or game token). For example, if you plan on offering movie rentals, you only need to create a single product that has the video category.
 
 To manage multiple transactional content items using the same product, your app can leverage your product feed or publisher-specific API to retrieve the item's metadata from your catalog at runtime. When a user selects the content to be purchased, your app can use the runtime metadata to display the item's title, price, and poster image and pass the item's SKU through the ChannelStore functions in order to identify for which item to grant the user access.
 

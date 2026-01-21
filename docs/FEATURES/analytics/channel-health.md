@@ -43,7 +43,7 @@ The band of metrics below FILTERS shows the summary statistics based on what you
 ## Visualizations
 
 Below the band of summary statistics are two visualizations analyzing app and device crashes. Both visualizations have been sorted to list the products with the most crashes to the far left on the horizontal axis. The product names currently include the Roku pseudonym for hardware from 3rd party OEMs. On the vertical axis are the number of crashes by app or device. See [Roku Models and
-Features](/docs/specs/hardware.md#TheRokuChannelDeveloperProgram-RokuModelsRokuModelsandFeatures) for the list of hardware and model numbers.
+Features](doc:hardware) for the list of hardware and model numbers.
 
 Click on the legend at the bottom of each visualization to view only one or multiple metrics.  
 

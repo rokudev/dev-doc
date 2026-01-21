@@ -12,7 +12,7 @@ next:
 ---
 
 
-> Roku recommends that ad-supported apps employing [Server-Side Ad Insertion (SSAI)](/docs/developer-program/advertising/ssai-adapters.md) use *only* HLS or DASH "standard" thumbnails, as an incompatibility in the BIF-support mechanism can cause thumbnails and video to fall out of synch during SSAI operation. Developers should convert existing apps that use BIF and SSAI to use "standard" thumbnails instead, at the earliest opportunity.
+> Roku recommends that ad-supported apps employing [Server-Side Ad Insertion (SSAI)](doc:ssai-adapters) use *only* HLS or DASH "standard" thumbnails, as an incompatibility in the BIF-support mechanism can cause thumbnails and video to fall out of synch during SSAI operation. Developers should convert existing apps that use BIF and SSAI to use "standard" thumbnails instead, at the earliest opportunity.
 
 As an alternative to the Roku proprietary BIF file format, Roku SceneGraph
 supports (since OS version 9.3) the use of DASH and HLS thumbnail approaches for trick mode playback.
@@ -28,7 +28,7 @@ this feature can save significant time and effort, during content migration to t
 
 The DASH Industry Forum describes standard thumbnail tiles in ["Guidelines for Implementation: DASH-IF Interoperability Points" (Version 4.3: November, 2018 ](https://dashif.org/docs/DASH-IF-IOP-v4.3.pdf)– we refer to this publication as "DASH Interop Guidelines"). The tiles themselves (graphics files containing collections of thumbnail images arranged in an htiles x vtiles grid) are described in Section 6.2.6, and can be cited in MPD manifest files, in conjunction with `@contentType="image"` in Adaptation Sets.
 
-> Roku's support for the DASH-IF is comprehensive, but not complete. For a list of known discrepancies between the full DASH standard and Roku's support for it, see [Roku OS support for DASH-IF](/docs/specs/media/dash-if.md).
+> Roku's support for the DASH-IF is comprehensive, but not complete. For a list of known discrepancies between the full DASH standard and Roku's support for it, see [Roku OS support for DASH-IF](doc:dash-if).
 
 > As specified in Section 6.2.6 of the DASH Interop Guidelines, the maximum tile width or height pixel limit is 1080 for high-end devices and 720 for low-end devices. Developers are cautioned to use the *minimum* dimensions necessary to retain the desired image quality. Roku will scale thumbnail images as necessary. Practical experience suggests that an original thumbnail image width at or near 308 pixels provides an optimal balance of performance vs. image quality in typical situations where scaling is employed.
 

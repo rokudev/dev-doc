@@ -134,11 +134,11 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       </td>
 
       <td>
-        Apps that include authentication must complete account sign-ups and sign-ins on the device using [On-device authentication](/docs/developer-program/authentication/on-device-authentication.md). <br /><br />Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms such as rendezvous linking.
+        Apps that include authentication must complete account sign-ups and sign-ins on the device using [On-device authentication](doc:on-device-authentication). <br /><br />Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms such as rendezvous linking.
       </td>
 
       <td>
-        [On-device authentication](/docs/developer-program/authentication/on-device-authentication.md)
+        [On-device authentication](doc:on-device-authentication)
       </td>
     </tr>
 
@@ -152,11 +152,11 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       </td>
 
       <td>
-        Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md). The upgrade/downgrade workflows are prohibited from including external webpages.
+        Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade). The upgrade/downgrade workflows are prohibited from including external webpages.
       </td>
 
       <td>
-        [On-device upgrade and downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md)
+        [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade)
       </td>
     </tr>
 
@@ -170,12 +170,12 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       </td>
 
       <td>
-        Apps must automatically entitle content or subscriptions purchased through Roku Pay across all devices tied to the purchasing Roku account.<br /><br />Apps can use the [getAllPurchases](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) API can upon launch to return the transactionID for an active subscription, and they can use an entitlement server to look up an account via a call to the [validate-transaction API](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction).
+        Apps must automatically entitle content or subscriptions purchased through Roku Pay across all devices tied to the purchasing Roku account.<br /><br />Apps can use the [getAllPurchases](doc:channelstore) API can upon launch to return the transactionID for an active subscription, and they can use an entitlement server to look up an account via a call to the [validate-transaction API](doc:roku-web-service).
       </td>
 
       <td>
-        * [getPurchases ChannelStore API](/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata)
-        * [validate-transaction  Roku Pay Web service API](/docs/developer-program/roku-pay/implementation/roku-web-service.md#validate-transaction)
+        * [getPurchases ChannelStore API](doc:channelstore)
+        * [validate-transaction  Roku Pay Web service API](doc:roku-web-service)
       </td>
     </tr>
 
@@ -193,7 +193,7 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       </td>
 
       <td>
-        [Tracking signup abandonment](/docs/developer-program/roku-pay/implementation/tracking-signup-abandonment.md).
+        [Tracking signup abandonment](doc:tracking-signup-abandonment).
       </td>
     </tr>
 
@@ -207,11 +207,11 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       </td>
 
       <td>
-        All apps offering subscriptions must implement Enhanced Subscription Recovery to pass [certification](/docs/developer-program/roku-pay/roku-pay-requirements.md#rp-4-authentication-and-entitlement-requirements)
+        All apps offering subscriptions must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements)
       </td>
 
       <td>
-        [Enhanced Subscription Recovery](/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md)
+        [Enhanced Subscription Recovery](doc:subscription-on-hold)
       </td>
     </tr>
   </tbody>

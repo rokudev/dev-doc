@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**AnimationBase**](/docs/references/scenegraph/abstract-nodes/animationbase.md)
+Extends [**AnimationBase**](doc:animationbase)
 
 The ParallelAnimation node class allows you to specify that a set of animations should occur simultaneously. The children of a ParallelAnimation node specify the set of animations to be executed. Note that the use of the delay field in the child animations allows the start of the child animations to be offset from one another, if desired.
 

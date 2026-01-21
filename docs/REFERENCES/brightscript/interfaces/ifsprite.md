@@ -17,7 +17,7 @@ next:
 
 | Name     | Description |
 | -------- | ----------- |
-| [roSprite](/docs/references/brightscript/components/rosprite.md "roSprite") | This component is associated with a managing roCompositor object |
+| [roSprite](doc:rosprite) | This component is associated with a managing roCompositor object |
 
 
 ## Supported methods
@@ -199,7 +199,7 @@ roRegion object.
 
 #### Description
 
-Adjusts the part of an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion")'s bitmap that is being displayed as the sprite. Wrap is taken into consideration.
+Adjusts the part of an [roRegion](doc:roregion)'s bitmap that is being displayed as the sprite. Wrap is taken into consideration.
 
 #### Parameters
 
@@ -236,7 +236,7 @@ Any user-defined data associated with the sprite. Returns invalid if there is no
 
 #### Description
 
-Returns the first [roSprite](/docs/references/brightscript/components/rosprite.md "roSprite") that this sprite collides with. 
+Returns the first [roSprite](doc:rosprite) that this sprite collides with. 
 
 #### Return Value
 

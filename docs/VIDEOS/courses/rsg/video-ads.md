@@ -16,44 +16,44 @@ next:
 
 ## About this lesson
 
-This lesson explains how to monetize content on the Roku platform through video ads. It describes how to implement the [Roku Advertising Framework (RAF)](/docs/developer-program/advertising/roku-advertising-framework.md) in order to seamlessly insert video ads into content. It highlights the different client and server-side ad insertion and stitching solutions provided by RAF, and explains how to get started with RAF in order to display video ads in your app.  
+This lesson explains how to monetize content on the Roku platform through video ads. It describes how to implement the [Roku Advertising Framework (RAF)](doc:roku-advertising-framework) in order to seamlessly insert video ads into content. It highlights the different client and server-side ad insertion and stitching solutions provided by RAF, and explains how to get started with RAF in order to display video ads in your app.  
 
-This lesson then guides you through implementing Roku's [client-side ad stitching solution](/docs/developer-program/advertising/csas.md) to combine content with video ads into a single playlist. This solution makes it so that the videos and ads play back-to-back without any buffering. This lesson also discusses [certification criteria for displaying ads](/docs/developer-program/certification/certification.md#1-advertising) on the Roku platform, including requirements related to privacy, ad measurement, and child-directed content.
+This lesson then guides you through implementing Roku's [client-side ad stitching solution](doc:csas) to combine content with video ads into a single playlist. This solution makes it so that the videos and ads play back-to-back without any buffering. This lesson also discusses [certification criteria for displaying ads](doc:certification) on the Roku platform, including requirements related to privacy, ad measurement, and child-directed content.
 
 ## Resources
 
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Video ads sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/VideoAds) | Download and review the code used in this lesson to insert video ads in an app. |
-| [Sideloading apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) | Sideload and test the Video Ads app created in this lesson. |
-| [Video advertisements overview](/docs/features/monetization/video-advertisements.md) | Read an overview of video advertisements on the Roku platform. |
+| [Sideloading apps](doc:developer-setup) | Sideload and test the Video Ads app created in this lesson. |
+| [Video advertisements overview](doc:video-advertisements) | Read an overview of video advertisements on the Roku platform. |
 | [Roku partner payouts program](/developer/billing)           | Enroll in the Roku partner payouts program. Provide a payout method and tax information to monetize ad-supported content. |
-| [Certification criteria for ad-supported apps](/docs/developer-program/certification/certification.md#1-advertising) | Read the certification criteria for apps displaying ads on the Roku platform. |
-| [Roku Advertising Framework overview](/docs/developer-program/advertising/roku-advertising-framework.md) | Learn more about implementing Roku's client and server-side ad insertion solutions. |
-| [Roku genres](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#roku-genre-tags) | Read the list of valid genres that may be passed to RAF for proper audience measurement. |
-| [Client-side ad stitching integration guide](/docs/developer-program/advertising/csas.md) | Read how to combine content and ads into a single playlist and then render the playlist. This optimizes the video playback experience by eliminating buffering between content and ads. |
+| [Certification criteria for ad-supported apps](doc:certification) | Read the certification criteria for apps displaying ads on the Roku platform. |
+| [Roku Advertising Framework overview](doc:roku-advertising-framework) | Learn more about implementing Roku's client and server-side ad insertion solutions. |
+| [Roku genres](doc:integrating-roku-advertising-framework) | Read the list of valid genres that may be passed to RAF for proper audience measurement. |
+| [Client-side ad stitching integration guide](doc:csas) | Read how to combine content and ads into a single playlist and then render the playlist. This optimizes the video playback experience by eliminating buffering between content and ads. |
 
 ## Related
 
-[Integrating the Roku Advertising Framework](/docs/developer-program/advertising/integrating-roku-advertising-framework.md)
+[Integrating the Roku Advertising Framework](doc:integrating-roku-advertising-framework)
 
-[RAF API Reference](/docs/developer-program/advertising/raf-api.md)
+[RAF API Reference](doc:raf-api)
 
-[Task node](/docs/references/scenegraph/control-nodes/task.md)
+[Task node](doc:task)
 
-[Video node](/docs/references/scenegraph/media-playback-nodes/video.md)
+[Video node](doc:video)
 
-[Content meta data](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content meta data](doc:content-metadata)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[Event loops](/docs/developer-program/core-concepts/event-loops.md)
+[Event loops](doc:event-loops)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[ifSGNodeChildren interface](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
+[ifSGNodeChildren interface](doc:ifsgnodechildren)
 
-[Channel manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#launch-requirement-attributes)
+[Channel manifest](doc:channel-manifest)
 
 ## How to watch
 

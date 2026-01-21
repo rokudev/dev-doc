@@ -17,7 +17,7 @@ The ifSGNodeChildren interface allows querying and manipulation of nodes in a Sc
 
 | Name     | Description                                                                             |
 | -------- | --------------------------------------------------------------------------------------- |
-| [roSGNode](/docs/references/brightscript/components/rosgnode.md "roSGNode") | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
+| [roSGNode](doc:rosgnode) | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
 
 To use the methods in this interface to manipulate child nodes at the scene level, the subject nodes must be wrapped in another element, typically a Group node. For example:
 

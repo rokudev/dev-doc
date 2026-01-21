@@ -12,17 +12,17 @@ next:
 ---
 
 
-> Roku OS 10.0 introduced a new [StandardKeyboardDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md "**Standard Keyboard Dialog**"), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the keyboard dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy KeyboardDialog nodes in their app with the new [StandardKeyboardDialog node](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md "**Standard Keyboard Dialog**"). 
+> Roku OS 10.0 introduced a new [StandardKeyboardDialog node](doc:standard-keyboard-dialog), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the keyboard dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy KeyboardDialog nodes in their app with the new [StandardKeyboardDialog node](doc:standard-keyboard-dialog). 
 >
 > To upgrade a legacy keyboard dialog to the standard version, prepend "Standard" to the node type. For example, change `      keyboarddialog = createObject("roSGNode", "KeyboardDialog")` to `      keyboarddialog = createObject("roSGNode", "StandardKeyboardDialog")`.
 
-Extends [**Dialog**](/docs/references/scenegraph/dialog-nodes/dialog.md "**Dialog**")
+Extends [**Dialog**](doc:dialog)
 
 The KeyboardDialog node class is a special type of Dialog node that prompts the user to enter an alphanumeric text string. The KeyboardDialog node class includes an interrnal Keyboard node to allow the user to enter the string.
 
 The KeyboardDialog allows you to add a title (by setting the Dialog title field), a help message (by setting the Dialog message field), and a set of action buttons (by setting the Dialog node buttons field). The bulletText and graphicUrl fields of the Dialog node should not be set. If those Dialog node fields are set, the layout of the dialog will likely not look correct.
 
-Also, the KeyboardDialog node class inherits the behavior of the interrnal [Keyboard](/docs/references/scenegraph/widget-nodes/keyboard.md "Keyboard") node when the Options remote key is pressed. The Keyboard node class toggles between uppercase and lowercase letters when the Options remote key is pressed, to speed the entry of mixed-case strings by the user. Therefore, the optionsDialog field of the Dialog node class should not be set to true.
+Also, the KeyboardDialog node class inherits the behavior of the interrnal [Keyboard](doc:keyboard) node when the Options remote key is pressed. The Keyboard node class toggles between uppercase and lowercase letters when the Options remote key is pressed, to speed the entry of mixed-case strings by the user. Therefore, the optionsDialog field of the Dialog node class should not be set to true.
 
 Typically, you will want to set the KeyboardDialog node title field to prompt the user to enter the string, and add "OK" and "Cancel" buttons by setting the Dialog node buttons field to [ "OK", "Cancel" ], then observe the Dialog node class buttonSelected field to react when the user presses one of those buttons. At any time, the text field can be accessed to obtain the string entered by the user.
 

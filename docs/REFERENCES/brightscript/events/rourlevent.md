@@ -113,11 +113,11 @@ For transfer complete AsyncGetToString, AsyncPostFromString and AsnycPostFromFil
 
 ### GetSourceIdentity() as Integer
 
-Returns a magic number that can be matched with the value returned by the [roUrlTransfer.GetIdentity()](/docs/references/brightscript/interfaces/ifurltransfer.md#getidentity-as-integer) method to determine the source of the roUrlTransfer event.
+Returns a magic number that can be matched with the value returned by the [roUrlTransfer.GetIdentity()](doc:ifurltransfer) method to determine the source of the roUrlTransfer event.
 
 ### GetResponseHeaders() as Object
 
-Returns an [roAssociativeArray ](/docs/references/brightscript/components/roassociativearray.md "roAssociativeArray")containing all the headers returned by the server for appropriate protocols (such as HTTP). Headers are only returned when the status code is greater than or equal to 200 and less than 300
+Returns an [roAssociativeArray ](doc:roassociativearray)containing all the headers returned by the server for appropriate protocols (such as HTTP). Headers are only returned when the status code is greater than or equal to 200 and less than 300
 
 ### GetTargetIpAddress() as String
 
@@ -125,4 +125,4 @@ Returns the IP address of the destination.
 
 ### GetResponseHeadersArray() as Object
 
-This method returns an [roArray](/docs/references/brightscript/components/roarray.md "roArray") of [roAssociativeArrays](/docs/references/brightscript/components/roassociativearray.md "roAssociativeArray"), where each associative array contains a single header name/value pair. Use this function if you need access to duplicate headers, since GetResponseHeaders() returns only the last name/value pair for a given name. All headers are returned regardless of the status code
+This method returns an [roArray](doc:roarray) of [roAssociativeArrays](doc:roassociativearray), where each associative array contains a single header name/value pair. Use this function if you need access to duplicate headers, since GetResponseHeaders() returns only the last name/value pair for a given name. All headers are returned regardless of the status code

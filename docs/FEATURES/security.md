@@ -90,28 +90,28 @@ Information that apps can request about users includes:
 
 Learn more about the APIs to add purchases to your apps:
 
-* [roChannelStore](/docs/references/brightscript/components/rochannelstore.md)
-* [ChannelStore node](/docs/references/scenegraph/control-nodes/channelstore.md)
+* [roChannelStore](doc:rochannelstore)
+* [ChannelStore node](doc:channelstore)
 
 ## Packaging
 
-Regarding protecting the code and assets within an app, we require that all apps are [packaged](/docs/developer-program/publishing/packaging-channels.md) with a secure encryption key. When apps are submitted for the Streaming Store, the encrypted package is uploaded from the Developer Dashboard, ensuring that only the Roku device playing content has the secure package running. [Read more about app packaging](/docs/developer-program/publishing/packaging-channels.md).
+Regarding protecting the code and assets within an app, we require that all apps are [packaged](doc:packaging-channels) with a secure encryption key. When apps are submitted for the Streaming Store, the encrypted package is uploaded from the Developer Dashboard, ensuring that only the Roku device playing content has the secure package running. [Read more about app packaging](doc:packaging-channels).
 
 ## Digital rights management
 
 Roku takes copyright protection seriously. Built into every Roku device is some of the broadest support of Digital Rights Management (DRM) formats. From streaming protocols to authenticated SSL connections, publishers can bring their content to the Roku Platform with the proper security standards in place.
 
-For more details on DRM support, see [DRM details](/docs/specs/media/content-protection.md).
+For more details on DRM support, see [DRM details](doc:content-protection).
 
 ## Content protection
 
 The Roku OS supports High-bandwidth Digital Content Protection (HDCP) for content copy protection between the Roku player's HDMI port and the connected display. In addition, 4K-capable Roku devices support the Trusted Execution Environment (TEE).
 
-For more details, see [Content Protection](/docs/specs/media/content-protection.md#copy-protection).
+For more details, see [Content Protection](doc:content-protection).
 
 **Related resources:**
 
-* [How apps work](/docs/features/features-overview.md#how-channels-work)
-* [Packaging apps](/docs/developer-program/publishing/packaging-channels.md)
-* [DRM details](/docs/specs/media/content-protection.md#drm)
-* [Content protection](/docs/specs/media/content-protection.md#copy-protection)
+* [How apps work](doc:features-overview)
+* [Packaging apps](doc:packaging-channels)
+* [DRM details](doc:content-protection)
+* [Content protection](doc:content-protection)

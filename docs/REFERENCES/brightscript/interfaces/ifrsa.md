@@ -16,7 +16,7 @@ next:
 
 | Name  | Description                                                                              |
 | ----- | ---------------------------------------------------------------------------------------- |
-| [roRSA](/docs/references/brightscript/components/rorsa.md "roRSA") | The RSA component provides an interface to the OpenSSL RSA library of signing algorithms |
+| [roRSA](doc:rorsa) | The RSA component provides an interface to the OpenSSL RSA library of signing algorithms |
 
 
 ## Supported methods

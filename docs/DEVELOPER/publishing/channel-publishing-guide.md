@@ -18,11 +18,11 @@ When your app is tested and ready to deploy, you publish it using the Developer 
 
 > When publishing an app, use the Roku developer account that belongs to the organization that owns the app content. If you hired a third-party app development company to build your app for you, do _not_ allow them to publish the app under their own account, otherwise ownership of the app will belong to them according to the terms of the [Roku Distribution Agreement](https://docs.roku.com/doc/DeveloperDistribution/en-us).
 >
-> In other words, when publishing an app, make sure that your own account is the **root account** associated with the app, and that your third-party developer has simply been granted the role of "Administrator" or "Channel management." Our document on [user access management in the Developer Dashboard](/docs/features/dashboard/user-access-management.md) provides more information on root accounts and role-based permissions.
+> In other words, when publishing an app, make sure that your own account is the **root account** associated with the app, and that your third-party developer has simply been granted the role of "Administrator" or "Channel management." Our document on [user access management in the Developer Dashboard](doc:user-access-management) provides more information on root accounts and role-based permissions.
 
 ## App creation overview
 
-When you create an SDK app, you'll have the option of setting the app as a beta or public app. For either type of app, you'll start by [packaging your Roku app](/docs/developer-program/publishing/packaging-channels.md). Then follow the guidelines for creating a beta app or a public app.
+When you create an SDK app, you'll have the option of setting the app as a beta or public app. For either type of app, you'll start by [packaging your Roku app](doc:packaging-channels). Then follow the guidelines for creating a beta app or a public app.
 
 Typically, you will first create a beta app to which you'll upload your package, and then you will share the app with your beta testers. Once you have finished testing and refining your app, you will create a public app using your tested package file. If you later make revisions to the public app that again require QA testing, you'll again use a beta app.
 
@@ -60,7 +60,7 @@ Additional differences between beta and public apps are summarized as follows:
 
 To create and start testing a beta app, you will need to:
 
-1. [Package your Roku app](/docs/developer-program/publishing/packaging-channels.md).
+1. [Package your Roku app](doc:packaging-channels).
 2. [Create an app](#create-a-channel) (select **Beta**).
 3. [Upload the package](#upload-a-package) associated with this app.
 4. Provide the Access Code (from the Preview and Publish window) to your beta testers.
@@ -81,9 +81,9 @@ Moreover, the Deep Linking and Roku Search feed information required for certifi
 
 To ensure success in creating a Public app, you will need to:
 
-1. [Package your Roku app](/docs/developer-program/publishing/packaging-channels.md).
-2. Create your design assets following [Design and User Experience Guidelines](/docs/developer-program/design/design-overview.md).
-3. Go through the [Pre-certification Check List](/docs/developer-program/certification/certification.md).
+1. [Package your Roku app](doc:packaging-channels).
+2. Create your design assets following [Design and User Experience Guidelines](doc:design-overview).
+3. Go through the [Pre-certification Check List](doc:certification).
 4. [Create an app](#create-a-channel) (select **Public**).
 5. [Upload the package](#upload-a-package) associated with this app.
 6. Follow the [App certification](#channel-certification) procedure.
@@ -132,7 +132,7 @@ Configure how your app is listed in the Streaming Store, including the app's hom
 |-------|-------------|
 | Countries | Add or remove the countries where your app is distributed. Only add countries where you have the rights to distribute your app's content. The "Rest of World" Streaming Store includes regions not serviced by other Streaming Stores. |
 | Domestic region | Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streming Stores that include your app and are outside your domestic region. |
-| Made for kids? | If your app is made for kids you must select "Yes" and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.<br /><br />Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the [Roku Advertising Framework (RAF) setContentGenre() method](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean). For more information, see [Channels Made for Kids](https://docs.roku.com/published/madeforkids).<br /><br />If you select the **Is your app made for kids?** check box, targeted ads cannot be served in the app. |
+| Made for kids? | If your app is made for kids you must select "Yes" and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.<br /><br />Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the [Roku Advertising Framework (RAF) setContentGenre() method](doc:raf-api). For more information, see [Channels Made for Kids](https://docs.roku.com/published/madeforkids).<br /><br />If you select the **Is your app made for kids?** check box, targeted ads cannot be served in the app. |
 | Category | Select how your app is categorized in the Streaming Store. When customers search for apps in the selected category, your app will be included in the results. |
 | Channel age rating | Specify the age rating that best describes your app. The selected rating is displayed on the app's details page in the on-device Streaming Store. This provides parents with information to help them determine whether your app is appropriate for their children. |
 
@@ -203,8 +203,8 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
 | App type | Monetization option | Notes |
 |----------|---------------------|-------|
 | Free | I will not be monetizing my app. | If you select this option, all other options are unavailable. |
-| Subscription Video on Demand (SVOD) | My app offers subscriptions. | The app must [implement Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md) and adhere to all [Roku Pay certification requirements](/docs/developer-program/certification/certification.md#2-purchases). |
-| Transactional Video on Demand (TVOD) | My app offers one-time purchases (movie rentals/purchases, PPVs, sporting events, and other transactional content). | The app must [implement Roku Pay](/docs/developer-program/roku-pay/implementation/overview.md) and adhere to all [Roku Pay certification requirements](/docs/developer-program/certification/certification.md#2-purchases). |
+| Subscription Video on Demand (SVOD) | My app offers subscriptions. | The app must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:certification). |
+| Transactional Video on Demand (TVOD) | My app offers one-time purchases (movie rentals/purchases, PPVs, sporting events, and other transactional content). | The app must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:certification). |
 | TV Everywhere (TVE) | My app requires a cable or satellite subscription to access content. | |
 | Ad-supported | My app displays video ads. | If you select this option, you must enter the URL path to an app-ads.txt file in the **Developer URL** field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [Channel Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The **Channel ID** and **Bundle ID** values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags `appstore:store_id` and `appstore:bundle_id` to provide channel ID information in the http header of an app's Streaming Store page. Using the values from the illustration above as examples, the meta-tags would appear in the `<head>` section, as so:<pre><code>&lt;br /&gt;&lt;meta name="appstore:store_id" content="633666"&gt;&lt;br /&gt;&lt;meta name="appstore:bundle_id" content="633666"&gt;&lt;br /&gt;</code></pre><br />Consider a scenario where you want to identify your app in an OpenRTB 2.5 Bid Request. You could use the following sequence for example:<pre><code>&lt;br /&gt;"app": \{&lt;br /&gt;   "bundle": "633666",&lt;br /&gt;   "storeurl": "https://channelstore.roku.com/details/7c34d32446def64db7eb2cc359749fe5/tv-for-cats",&lt;br /&gt;         …  &lt;&lt;&lt; additional fields &gt;&gt;&gt;&lt;br /&gt;\}&lt;br /&gt;</code></pre><br />The **Developer URL** field is also provided (and discoverable) in an app's Streaming Store page `<head>` section:<pre><code>&lt;br /&gt;&lt;meta name="appstore:developer_url" content="https://www.path.to/path"&gt;&lt;br /&gt;</code></pre> |
 | Pay-to-install | My app requires customers to pay to install it. | If you’ve enrolled in the Roku Partner Payouts Program, select the cost to install your app from the **One-time payment price tier** drop-down list.<br /><br />Price tiers are used to enforce 99 cent or 49 cent pricing on app products.<br /><br />One to three-digit tier numbers are used for 99 cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).<br /><br />Four-digit tier numbers are used for 49 cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49 and so on. The highest tier is 1030 ($30.49).<br /><br /><img alt="channel-builder-2-monetization-pay-to-install - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-pay-to-install.png" /> |
@@ -229,15 +229,15 @@ Generate an encrypted package file (.pkg) for testing, publishing, and distribut
 
 | Field | Description |
 |-------|-------------|
-| Upload your .pkg or .zip file | Upload the package file (.pkg) file that you created with the [Development Application Installer](/docs/developer-program/publishing/packaging-channels.md). |
+| Upload your .pkg or .zip file | Upload the package file (.pkg) file that you created with the [Development Application Installer](doc:packaging-channels). |
 | Channel version | Select the version number for your app. |
-| Minimum firmware | Roku supports multiple [package file formats](/docs/developer-program/publishing/packaging-channels.md). Each package format requires a different minimum firmware version to be run on Roku devices, based on when the format was introduced to the OS. Enter a minimum firmware version that is equal to or greater than the one required for the package format used by your app.|
+| Minimum firmware | Roku supports multiple [package file formats](doc:packaging-channels). Each package format requires a different minimum firmware version to be run on Roku devices, based on when the format was introduced to the OS. Enter a minimum firmware version that is equal to or greater than the one required for the package format used by your app.|
 
 3. Click **Save**.
 
 ### Deep linking
 
-To validate that your app is handling deep link requests properly, provide at least one set of [deep linking parameters](/docs/developer-program/discovery/implementing-deep-linking.md) for each different [media type](/docs/developer-program/discovery/implementing-deep-linking.md) in your app. For example, if your app contains movies and TV episodes, include deep linking parameters for at least one movie and one episode.
+To validate that your app is handling deep link requests properly, provide at least one set of [deep linking parameters](doc:implementing-deep-linking) for each different [media type](doc:implementing-deep-linking) in your app. For example, if your app contains movies and TV episodes, include deep linking parameters for at least one movie and one episode.
 
 > You must provide deep linking parameters, unless your app contains a single live feed. Apps submitted without deep linking parameters will not pass certification testing.
 
@@ -258,7 +258,7 @@ To enter deep linking parameters, follow these steps:
 | Field | Description |
 |-------|-------------|
 | Media type | Select the media type of the content item from the list of choices (for example, movie, television episode, or television series). Custom types are not available. |
-| Content ID | Enter the [content ID](/docs/developer-program/discovery/implementing-deep-linking.md) of the item (this should be the same as the **PlayId** in the app's [search feed](/docs/specs/search/search-feed.md#playoptions)). |
+| Content ID | Enter the [content ID](doc:implementing-deep-linking) of the item (this should be the same as the **PlayId** in the app's [search feed](doc:search-feed)). |
 | Content title | Enter a descriptive name that makes it easy to identify the content associated with the deep link parameters. |
 | Valid until | Enter the last date when the deep linking parameters will be used in your app. Notice that, for a new parameter set, this field is pre-populated with a date that is one year in the future. You can change this date as needed. If the deep linking parameters do not expire, you can select the **Valid indefinitely** check box. |
 
@@ -289,9 +289,9 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
 | Message | A description of the issue related to the app. |
 | Severity | The type of message: error, warning, or info.<pre><code>- <strong>Error</strong>. Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.<br />- <strong>Warning</strong>. Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.<br />- <strong>Info</strong>. Info messages provide tips that may be helpful in the development of the app.</code></pre> |
 | Category | The type of issue (for example, package, performance, billing, manifest, and so on). |
-| Certification Requirement | Provides a link to any related certification requirements in the [Certification Criteria](/docs/developer-program/certification/certification.md) document. |
+| Certification Requirement | Provides a link to any related certification requirements in the [Certification Criteria](doc:certification) document. |
 
-For additional usage details and operational information, including a list of the tests conducted, see the [Static Analysis Tool](/docs/developer-program/dev-tools/static-analysis-tool/static-analysis-tool.md) documentation.
+For additional usage details and operational information, including a list of the tests conducted, see the [Static Analysis Tool](doc:static-analysis-tool) documentation.
 
 ### Test credentials
 
@@ -326,9 +326,9 @@ To provide the credentials for one or more test accounts, follow these steps:
 
 ### Channel Behavior Analysis
 
-Developers of SVOD, AVOD, and free apps can use the self-serve Channel Behavior Analysis tool to verify that their apps meet [performance](/docs/developer-program/certification/certification.md#3-performance) and [deep linking](/docs/developer-program/certification/certification.md#5-deep-linking) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
+Developers of SVOD, AVOD, and free apps can use the self-serve Channel Behavior Analysis tool to verify that their apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
 
-> To run the app launch performance test, your app must have the required [AppLaunchComplete signal beacon](/docs/developer-program/performance-guide/measuring-channel-performance.md).
+> To run the app launch performance test, your app must have the required [AppLaunchComplete signal beacon](doc:measuring-channel-performance).
 
 To run Channel Behavior Analysis testing on your app, follow these steps:
 
@@ -336,7 +336,7 @@ To run Channel Behavior Analysis testing on your app, follow these steps:
 
    ![channel-builder-2-cba-selection.png - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-selection.png)
 
-2. If customers are required to sign in to your app, upload your [sign-in and sign-out test scripts](/docs/developer-program/certification/cert-tests/authenticated-cert-testing.md#writing-automated-sign-in-and-sign-out-scripts) (unauthenticated apps can skip this step).
+2. If customers are required to sign in to your app, upload your [sign-in and sign-out test scripts](doc:authenticated-cert-testing) (unauthenticated apps can skip this step).
 
 3. Click **Run**. Alternatively, you can scroll to the bottom of the **Preview and Publish** page that opens after you submit your deep linking parameters, click **Channel Behavior Analysis**, and then run the Channel Behavior Analysis test.
 
@@ -358,12 +358,12 @@ To run Channel Behavior Analysis testing on your app, follow these steps:
 | Status | The results of the test. Completed tests have a status of "Passed" or "Failed"; tests still to be performed have a status of "Queued". |
 | Severity | Any info messages, warnings, or errors related to a completed test. |
 | Category | The type of test being performed: "Performance" or "Deep Linking". |
-| Certification requirements | Provides a link to the section in the [Certification Criteria](/docs/developer-program/certification/certification.md) document, where the criterion in question is located. |
+| Certification requirements | Provides a link to the section in the [Certification Criteria](doc:certification) document, where the criterion in question is located. |
 | Actions | Displays information, script, and screenshot icons that you can click to learn more about the test:<br /><ul><li><strong>Test information</strong>: Provides detailed test results including any additional error or warning information, a link to the related certification requirement, and a link to the related documentation.</li><li><strong>Test script</strong>: Provides the actual script executed in the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool) for the test. You can copy and paste or download and import the script and run it in the Roku Remote tool (a link to the tool is provided in the upper right-hand corner). This provides developers with insight into how their apps are tested and enables them to run the same app performance and deep linking tests Roku executes before trying to pass the certification testing.</li><li><strong>Screenshot</strong>. If a test fails, displays a screenshot of the screen in the app UI where the test failed. This icon may not be available in all test failure cases.</li></ul> |
 
 ## Publishing an app
 
-Once your public app has passed [Static Analysis](/docs/developer-program/dev-tools/static-analysis-tool/static-analysis-tool.md) and [Channel Behavior Analysis](/docs/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis-window) testing, you can schedule it for publishing by following these steps:
+Once your public app has passed [Static Analysis](doc:static-analysis-tool) and [Channel Behavior Analysis](doc:channel-publishing-guide) testing, you can schedule it for publishing by following these steps:
 
 1. Click **Schedule Publish** in the upper-right corner of the app management page. For beta apps, click **Publish**; this publishes the app and makes it available for up to 20 users to install it.
 

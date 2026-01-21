@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 The ColorFieldInterpolator node class specifies a keyframe animation sequence to be applied to the color field of a node (such as the color field of a Label node).
 

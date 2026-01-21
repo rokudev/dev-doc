@@ -38,20 +38,20 @@ Roku automatically generates the following app analytics and sales reports as [L
 
 **Analytics:**
 
-- [Channel Engagement](/docs/features/analytics/channel-engagement.md) - installs, visits and streaming data for all apps
-- [Channel Health](/docs/features/analytics/channel-health.md) - BrightScript crashes and buffering data for all apps
-- [Viewership Summary](/docs/features/analytics/viewership-summary.md) - small selection of app engagement and app health data.
-- [Channel Stability](/docs/features/analytics/channel-stability.md): BrightScript crashes and memory closures for all apps across all Roku device models.
+- [Channel Engagement](doc:channel-engagement) - installs, visits and streaming data for all apps
+- [Channel Health](doc:channel-health) - BrightScript crashes and buffering data for all apps
+- [Viewership Summary](doc:viewership-summary) - small selection of app engagement and app health data.
+- [Channel Stability](doc:channel-stability): BrightScript crashes and memory closures for all apps across all Roku device models.
 
 **Sales reports:**
 
-- [Transaction](/docs/features/analytics/transaction-report.md) - records all in-app transactions for SVOD or TVOD apps, such as product purchases, free trial initiations, and returns
+- [Transaction](doc:transaction-report) - records all in-app transactions for SVOD or TVOD apps, such as product purchases, free trial initiations, and returns
 
-- [Sales Activity](/docs/features/analytics/sales-activity-report.md) - displays daily transaction revenue totals by app, product, and currency within a window of up to one month
+- [Sales Activity](doc:sales-activity-report) - displays daily transaction revenue totals by app, product, and currency within a window of up to one month
 
-- [Payout Audit](/docs/features/analytics/payout-audit-report.md) - assists with reconciliation between app revenue activity and payouts received from Roku
+- [Payout Audit](doc:payout-audit-report) - assists with reconciliation between app revenue activity and payouts received from Roku
 
-- [Tax Withholding](/docs/features/analytics/tax-withholding-report.md) - Breaks down how net payouts are calculated after Roku's revenue share, tax withholding, and currency conversion are applied to app gross revenue.
+- [Tax Withholding](doc:tax-withholding-report) - Breaks down how net payouts are calculated after Roku's revenue share, tax withholding, and currency conversion are applied to app gross revenue.
 
     Because apps differ in both business model and technical implementation, the relevancy of specific report and availability of data therein will vary. If a report does not pertain to your app type, it will not be made available to you.
 

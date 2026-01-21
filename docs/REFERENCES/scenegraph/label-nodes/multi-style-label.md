@@ -14,7 +14,7 @@ next:
 
 
 
-Extends [**LabelBase**](/docs/references/scenegraph/label-nodes/label-base.md)
+Extends [**LabelBase**](doc:label-base)
 
 The MultiStyleLabel node class is used to create labels with mixed styles. For example, this node can be used to create a single label with plain and bold text, different fonts, and/or multiple colors.
 
@@ -22,7 +22,7 @@ The MultiStyleLabel node class is used to create labels with mixed styles. For e
 
 ## Fields
 
-Fields derived from the [Group](/docs/references/scenegraph/layout-group-nodes/group.md#fields "Fields") and [LabelBase](/docs/references/scenegraph/label-nodes/label-base.md#fields) classes can be used.
+Fields derived from the [Group](doc:group) and [LabelBase](doc:label-base) classes can be used.
 
 | Field         | Type                                    | Description                                                  |
 | :------------ | :-------------------------------------- | :----------------------------------------------------------- |
@@ -30,7 +30,7 @@ Fields derived from the [Group](/docs/references/scenegraph/layout-group-nodes/g
 
 ## Example
 
-The MultiStyleLabel **drawingStyles** field contains one or more associative arrays that represent font styles. Each font style contains **fontSize**, **fontUri**, and **color** properties. If you use a [default system font](/docs/references/scenegraph/typographic-nodes/font.md), the **fontSize** field is ignored. 
+The MultiStyleLabel **drawingStyles** field contains one or more associative arrays that represent font styles. Each font style contains **fontSize**, **fontUri**, and **color** properties. If you use a [default system font](doc:font), the **fontSize** field is ignored. 
 
 The MultiStyleLabel **text** field uses a simple markup style. Markup tags with the names of the styles defined in the **drawingStyles** field are used to delineate the boundaries of the label text to be rendered in that specific style.
 

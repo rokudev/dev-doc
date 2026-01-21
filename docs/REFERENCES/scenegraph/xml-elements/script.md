@@ -1,11 +1,11 @@
 
 
-The \<script\> element allows the definition of functions to initialize the component, and to respond to events (including key events) and field value changes. The BrightScript interfaces for the SceneGraph nodes used by BrightScript are the same interfaces defined for [roSGNode](/docs/references/brightscript/components/rosgnode.md) objects.
+The \<script\> element allows the definition of functions to initialize the component, and to respond to events (including key events) and field value changes. The BrightScript interfaces for the SceneGraph nodes used by BrightScript are the same interfaces defined for [roSGNode](doc:rosgnode) objects.
 
-You can include any type of BrightScript object declarations, definitions, and creation, and the related functions to operate on the BrightScript objects, in a \<script\> element, except for certain objects and functions that must be used asynchronously in a [Task](/docs/references/scenegraph/control-nodes/task.md) node (see [BrightScript support](/docs/developer-program/core-concepts/scenegraph-brightscript/brightscript-support.md)). In addition, there are two functions that are declared specifically for use in SceneGraph component \<script\> elements:
+You can include any type of BrightScript object declarations, definitions, and creation, and the related functions to operate on the BrightScript objects, in a \<script\> element, except for certain objects and functions that must be used asynchronously in a [Task](doc:task) node (see [BrightScript support](doc:brightscript-support)). In addition, there are two functions that are declared specifically for use in SceneGraph component \<script\> elements:
 
-- [init()](/docs/references/scenegraph/component-functions/init.md) 
-- [onKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+- [init()](doc:init) 
+- [onKeyEvent()](doc:onkeyevent)
 
 ## Relative URIs
 

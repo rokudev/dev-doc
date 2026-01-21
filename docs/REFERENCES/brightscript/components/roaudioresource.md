@@ -14,13 +14,13 @@ next:
 
 The roAudioResouce allows .wav files to be cached to memory and quickly played at any time. roAudioResource is intended to support short audio clips which need to be played with very little latency. The system caches the entire wav file in memory so that playback can begin very quickly.
 
-On Roku "Classic" models, roAudioResource does not support mixing of sounds. So when you play a sound effect, any background music is paused while the sound effect plays and then resumes after the sound effect ends. On later models, sound effects are mixed with background music. See the [Hardware specifications document](/docs/specs/hardware.md#current-models) for a list of Current and Classic models.
+On Roku "Classic" models, roAudioResource does not support mixing of sounds. So when you play a sound effect, any background music is paused while the sound effect plays and then resumes after the sound effect ends. On later models, sound effects are mixed with background music. See the [Hardware specifications document](doc:hardware) for a list of Current and Classic models.
 
 This object is created with a filename parameter that is a path to the sound resource file:
 
 `` CreateObject("roAudioResource", filename)``
 
-The filename must be the name of a local file and cannot be a URL. To use a URL, you may download the file to the application's "tmp:" file system using [roUrlTransfer](/docs/references/brightscript/components/rourltransfer.md) and pass a filename of the form "tmp:/file.wav" to CreateObject.
+The filename must be the name of a local file and cannot be a URL. To use a URL, you may download the file to the application's "tmp:" file system using [roUrlTransfer](doc:rourltransfer) and pass a filename of the form "tmp:/file.wav" to CreateObject.
 
 ~~~
 sound = CreateObject("roAudioResource", "pkg:/sounds/beep1.wav")
@@ -57,4 +57,4 @@ end if
 
 ## Supported Interfaces
 
-- [ifAudioResource](/docs/references/brightscript/interfaces/ifaudioresource.md)
+- [ifAudioResource](doc:ifaudioresource)

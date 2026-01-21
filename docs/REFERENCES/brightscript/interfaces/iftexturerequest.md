@@ -17,7 +17,7 @@ next:
 
 | Name            | Description                                                           |
 |---------------- |-----------------------------------------------------------------------|
-|[roTextureRequest](/docs/references/brightscript/components/rotexturerequest.md "roTextureRequest") | An roTextureRequest is used to make requests to the roTextureManager                                                                       |
+|[roTextureRequest](doc:rotexturerequest) | An roTextureRequest is used to make requests to the roTextureManager                                                                       |
 
 ## Supported methods
 

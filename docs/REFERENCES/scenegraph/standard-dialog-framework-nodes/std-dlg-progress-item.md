@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md "**StdDlgItemBase**")
+Extends [StdDlgItemBase](doc:std-dlg-item-base)
 
-The **StdDlgProgressItem** node is used to display a spinning progress indicator in the dialog's content area. It provides the status of a task that takes an indeterminate amount of time. It should only be used as a child of a [**StdDlgContentArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-content-area.md) node.
+The **StdDlgProgressItem** node is used to display a spinning progress indicator in the dialog's content area. It provides the status of a task that takes an indeterminate amount of time. It should only be used as a child of a [**StdDlgContentArea**](doc:std-dlg-content-area) node.
 
 ![roku815px - std-dlg-progress-item](https://image.roku.com/ZHZscHItMTc2/std-dlg-progress-item.jpg)
 

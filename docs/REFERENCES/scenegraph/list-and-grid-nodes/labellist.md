@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**ArrayGrid**](/docs/references/scenegraph/abstract-nodes/arraygrid.md)
+Extends [**ArrayGrid**](doc:arraygrid)
 
 The LabelList node class is a simple list class that can be used to display a list of items. Each item can include a text string and an optional icon positioned to the left of the text string.
 

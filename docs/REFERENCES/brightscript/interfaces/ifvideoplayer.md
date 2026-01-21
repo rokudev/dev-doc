@@ -16,7 +16,7 @@ next:
 
 | Name         | Description                                                           |
 |--------------|-----------------------------------------------------------------------|
-|[roVideoPlayer](/docs/references/brightscript/components/rovideoplayer.md "roVideoPlayer") |The roVideoPlayer component implements a video player with more programmatic control, but less user control than the roVideoScreen component  |
+|[roVideoPlayer](doc:rovideoplayer) |The roVideoPlayer component implements a video player with more programmatic control, but less user control than the roVideoScreen component  |
 
 
 ## Supported methods
@@ -52,13 +52,13 @@ Sets the content to be played by the roVideoPlayer.
 
 #### Description
 
-Adds a new [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md " Content Meta-Data") item to the end of the content list for the roVideoPlayer. roVideoPlayer playback buffers on each Content item transition.
+Adds a new [Content Meta-Data](doc:content-metadata) item to the end of the content list for the roVideoPlayer. roVideoPlayer playback buffers on each Content item transition.
 
 #### Parameters
 
 | Name        | Type   | Description                                                  |
 | ----------- | ------ | ------------------------------------------------------------ |
-| contentItem | Object | The [content metadata](/docs/developer-program/getting-started/architecture/content-metadata.md " Content Meta-Data") item to be added to the content list. |
+| contentItem | Object | The [content metadata](doc:content-metadata) item to be added to the content list. |
 
 ### ClearContent() as Void
 
@@ -257,9 +257,9 @@ Sets the target display window for the video. This is similar to the [SetDestina
 
 Sets the max resolution required by your video.
 
-Video decode memory is a shared resource with OpenGL texture memory. The BrightScript 2D APIs are implemented using OpenGL texture memory on Roku models that support the OpenGL APIs (please see [Roku Models and Features](/docs/specs/hardware.md#current-models "Roku Models and Features") for a list of these models). For models that do not support OpenGL APIs, this method exists for API compatibility but has no effect on actual memory allocations.
+Video decode memory is a shared resource with OpenGL texture memory. The BrightScript 2D APIs are implemented using OpenGL texture memory on Roku models that support the OpenGL APIs (please see [Roku Models and Features](doc:hardware) for a list of these models). For models that do not support OpenGL APIs, this method exists for API compatibility but has no effect on actual memory allocations.
 
-Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720 as the maximum supported resolution for a particular Roku model (please see [Roku Models and Features](/docs/specs/hardware.md#current-models "Roku Models and Features") for a list of these models).
+Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720 as the maximum supported resolution for a particular Roku model (please see [Roku Models and Features](doc:hardware) for a list of these models).
 
 This API enables applications that want to use both the 2D APIs and video playback with a lower resolution than 1080p. Without this call, these applications are likely to not have enough memory for either video playback or roScreen rendering.
 

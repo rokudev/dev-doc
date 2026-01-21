@@ -44,6 +44,6 @@ In November 2020, Roku presented a two-part webinar series on using the BrightSc
 
 ## Related documentation
 
-[BrightScript Profiler](/docs/developer-program/dev-tools/brightscript-profiler.md)
+[BrightScript Profiler](doc:brightscript-profiler)
 
-[BrightScript debug console](/docs/developer-program/debugging/debugging-channels.md)
+[BrightScript debug console](doc:debugging-channels)

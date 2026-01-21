@@ -18,4 +18,4 @@ The DSA component provides support for the ECDSA and EdDSA (with Ed25519 form) d
 
 ## Supported interfaces
 
-- [ifDsa](/docs/references/brightscript/interfaces/ifdsa.md)
+- [ifDsa](doc:ifdsa)

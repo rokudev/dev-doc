@@ -28,7 +28,7 @@ The webinar featured a demo showing how to integrate voice keyboards in an app (
 
 ## Related documentation
 
-- [Roku voice overview](/docs/features/voice/overview.md)
-- [Voice keyboard reference](/docs/features/voice/overview.md#voice-keyboards)
-- [Voice profile selection](/docs/features/voice/overview.md#voice-enabled-profile-selection-screens)
-- [Voice controls](/docs/features/voice/overview.md#voice-controls)
+- [Roku voice overview](doc:overview)
+- [Voice keyboard reference](doc:overview)
+- [Voice profile selection](doc:overview)
+- [Voice controls](doc:overview)

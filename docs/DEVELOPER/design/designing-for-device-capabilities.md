@@ -17,7 +17,7 @@ currently-supported Roku models before being published. The list of
 supported devices includes a wide range of product classes, from our
 entry-level set-top-boxes to 4K HDR TVs, and everything in between. This variance signifies that some devices are more powerful than the others.
 The complete list of supported Roku devices and their product specs can
-be found in the [Hardware specifications](/docs/specs/hardware.md) page.
+be found in the [Hardware specifications](doc:hardware) page.
 
 It's very important that developers remain mindful of these different
 product capabilities while building their apps. It is a best practice
@@ -40,9 +40,9 @@ Other optimization techniques include:
   - Lower video resolution or kill video playback altogether when the
     user enters a browsing page
 
-Device model numbers can be found in the [Hardware Specifications](/docs/specs/hardware.md) page.
+Device model numbers can be found in the [Hardware Specifications](doc:hardware) page.
 
-The best practices are outlined in further detail in the [SceneGraph Performance Guide](/docs/developer-program/performance-guide/development-tips.md).
+The best practices are outlined in further detail in the [SceneGraph Performance Guide](doc:development-tips).
 
 The "[Best Practices for Roku Cross-Platform UX](https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx)" presentation
 summarizes this concept of designing for high-end devices and gracefully

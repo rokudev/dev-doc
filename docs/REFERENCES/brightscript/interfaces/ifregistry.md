@@ -16,7 +16,7 @@ next:
 
 | Name       | Description                                                                                               |
 | ---------- | --------------------------------------------------------------------------------------------------------- |
-| [roRegistry](/docs/references/brightscript/components/roregistry.md "roRegistry") | The Registry is an area of non-volatile storage where a small number of persistent settings can be stored |
+| [roRegistry](doc:roregistry) | The Registry is an area of non-volatile storage where a small number of persistent settings can be stored |
 
 ## Supported methods
 
@@ -48,7 +48,7 @@ Returns the registry sections on the device.
 
 #### Return Value
 
-An roList with one entry for each registry section. Each registry section is an roString containing the name of the section. The section itself can be accessed by creating an [roRegistrySection](/docs/references/brightscript/components/roregistrysection.md "roRegistrySection") object using that name.
+An roList with one entry for each registry section. Each registry section is an roString containing the name of the section. The section itself can be accessed by creating an [roRegistrySection](doc:roregistrysection) object using that name.
 
 ### Delete(section as String) as Boolean
 

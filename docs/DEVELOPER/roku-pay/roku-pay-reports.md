@@ -16,18 +16,18 @@ Roku Pay includes a suite of analytical, sales, and transactional reports to hel
 
 ## Transaction Report
 
-The [Roku Pay Transaction Report](/docs/features/analytics/transaction-report.md) displays the historical purchases, refunds, renewals, and cancellations in their app. The data compiled in the Transaction Report can be used for [estimating annual and monthly subscription revenue](/docs/features/analytics/transaction-report.md#estimating-monthly-subscription-revenue-with-the-transaction-report), which can then be used to reconcile the payouts received.
+The [Roku Pay Transaction Report](doc:transaction-report) displays the historical purchases, refunds, renewals, and cancellations in their app. The data compiled in the Transaction Report can be used for [estimating annual and monthly subscription revenue](doc:transaction-report), which can then be used to reconcile the payouts received.
 
 ![roku815px - transaction-report](https://image.roku.com/ZHZscHItMTc2/transaction-report.jpg)
 
 ## Sales Activity Report
 
-The [Sales Activity Report](/docs/features/analytics/sales-activity-report.md) displays app revenue, including sales from transactions, refunds, and subscription cancellations (both active and passive), over a given month. This information can be helpful in closing a publisher's accounting books or reconciling payouts received from Roku Accounts Payable.
+The [Sales Activity Report](doc:sales-activity-report) displays app revenue, including sales from transactions, refunds, and subscription cancellations (both active and passive), over a given month. This information can be helpful in closing a publisher's accounting books or reconciling payouts received from Roku Accounts Payable.
 
 ![roku815px - sales-activity-report](https://image.roku.com/ZHZscHItMTc2/sales-activity-report.jpg)
 
 ## Payout Audit Report
 
-The [Payout Audit Report](/docs/features/analytics/payout-audit-report.md) displays information, including monthly transaction amounts and deferred payouts, which partners can use to reconcile their apps' revenue activity with receipts from Roku Accounts Payable. Revenue events are expressed using the currencies originally involved. Both net revenue share and original amounts collected by Roku are reported.
+The [Payout Audit Report](doc:payout-audit-report) displays information, including monthly transaction amounts and deferred payouts, which partners can use to reconcile their apps' revenue activity with receipts from Roku Accounts Payable. Revenue events are expressed using the currencies originally involved. Both net revenue share and original amounts collected by Roku are reported.
 
 ![roku815px - payout-audit-report](https://image.roku.com/ZHZscHItMTc2/payout-audit-report.jpg)

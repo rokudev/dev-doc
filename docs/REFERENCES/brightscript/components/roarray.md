@@ -23,11 +23,11 @@ The "dim" statement may be used instead of CreateObject to allocate a new array.
 
 ## Supported interfaces
 
-- [ifArray](/docs/references/brightscript/interfaces/ifarray.md "ifArray")
-- [ifArrayGet](/docs/references/brightscript/interfaces/ifarrayget.md "ifArrayGet")
-- [ifArraySet](/docs/references/brightscript/interfaces/ifarrayset.md "ifArraySet")
-- [ifEnum](/docs/references/brightscript/interfaces/ifenum.md "ifEnum")
-- [ifArrayJoin](/docs/references/brightscript/interfaces/ifarrayjoin.md "ifArrayJoin")
-- [ifArraySizeInfo](/docs/references/brightscript/interfaces/ifarraysizeinfo.md "ifArraySizeInfo")
-- [ifArraySort](/docs/references/brightscript/interfaces/ifarraysort.md "ifArraySort")
-- [ifArraySlice](/docs/references/brightscript/interfaces/ifarrayslice.md "ifArraySlice")
+- [ifArray](doc:ifarray)
+- [ifArrayGet](doc:ifarrayget)
+- [ifArraySet](doc:ifarrayset)
+- [ifEnum](doc:ifenum)
+- [ifArrayJoin](doc:ifarrayjoin)
+- [ifArraySizeInfo](doc:ifarraysizeinfo)
+- [ifArraySort](doc:ifarraysort)
+- [ifArraySlice](doc:ifarrayslice)

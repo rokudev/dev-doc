@@ -18,7 +18,7 @@ next:
 
 | Name         | Description                               |
 | ------------ | ----------------------------------------- |
-| [roAudioMetadata](/docs/references/brightscript/components/roaudiometadata.md "roAudioMetadata")| The Audio Player object provides the ability to setup the playing of a series of audio streams |
+| [roAudioMetadata](doc:roaudiometadata)| The Audio Player object provides the ability to setup the playing of a series of audio streams |
 
 
 ## Supported methods
@@ -31,7 +31,7 @@ Sets the content list to be played by the Audio Player.
 
 #### Parameters
 
-An array of associative arrays (Content Meta-Data objects) representing the information for each stream to be played. See [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md " Content Meta-Data") for details on the attributes for each element in the array.
+An array of associative arrays (Content Meta-Data objects) representing the information for each stream to be played. See [Content Meta-Data](doc:content-metadata) for details on the attributes for each element in the array.
 
 ### AddContent(contentItem as Object) as Void
 

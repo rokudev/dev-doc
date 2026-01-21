@@ -27,7 +27,7 @@ For more robust automated certification testing, refer to the [automated app tes
 
 To prepare your device and workspace for writing a script, follow these steps.
 
-**Starting step 1: [Sideload an app](/docs/developer-program/getting-started/developer-setup.md)**
+**Starting step 1: [Sideload an app](doc:developer-setup)**
 
 Testing your own app starts by sideloading the app to your Roku test device. Use the provided developer sample app if you're not yet ready with your own.
 

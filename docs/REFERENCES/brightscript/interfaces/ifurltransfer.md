@@ -17,7 +17,7 @@ next:
 
 | Name         | Description                                                           |
 |--------------|-----------------------------------------------------------------------|
-|[roUrlTransfer](/docs/references/brightscript/components/rourltransfer.md "roUrlTransfer") | A roUrlTransfer object transfers data to or from remote servers specified by URLs. It can perform mutual authentication with a web server |
+|[roUrlTransfer](doc:rourltransfer) | A roUrlTransfer object transfers data to or from remote servers specified by URLs. It can perform mutual authentication with a web server |
 
 
 ## Supported methods
@@ -139,7 +139,7 @@ The HTTP response code.
 
 Starts a GET request to a server, but does not wait for the transfer to complete. 
 
-When the GET request completes, a [roUrlEvent](/docs/references/brightscript/events/rourlevent.md "roUrlEvent") will be sent to the message port associated with the object. The event will contain a roString with the body of the response. If false is returned then the request could not be issued and no events will be delivered.
+When the GET request completes, a [roUrlEvent](doc:rourlevent) will be sent to the message port associated with the object. The event will contain a roString with the body of the response. If false is returned then the request could not be issued and no events will be delivered.
 
 #### Return Value
 
@@ -151,7 +151,7 @@ A flag indicating whether the request was issued.
 
 Starts a transfer without waiting for it to complete, similar to the [AsyncGetToString()](#asyncgettostring-as-boolean) method. However, the response body will be written to a file on the device's filesystem instead of being returned in a String object.
 
-When the GET request completes, an [roUrlEvent](/docs/references/brightscript/events/rourlevent.md "roUrlEvent") will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
+When the GET request completes, an [roUrlEvent](doc:rourlevent) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
@@ -165,17 +165,17 @@ A flag indicating whether the request was issued.
 
 #### Description
 
-Synchronously performs an HTTP HEAD request and returns an [roUrlTransfer](/docs/references/brightscript/interfaces/ifurltransfer.md "roUrlTransfer") object.
+Synchronously performs an HTTP HEAD request and returns an [roUrlTransfer](doc:ifurltransfer) object.
 
 #### Return Value
 
-An [roUrlTransfer](/docs/references/brightscript/interfaces/ifurltransfer.md "roUrlTransfer") object.  If a catastrophic failure occurs (for example, an asynchronous operation is already active), invalid is returned
+An [roUrlTransfer](doc:ifurltransfer) object.  If a catastrophic failure occurs (for example, an asynchronous operation is already active), invalid is returned
 
 ### AsyncHead() as Boolean
 
 #### Description
 
-Begins an HTTP HEAD request without waiting for it to complete. When the HEAD completes, an [roUrlEvent](/docs/references/brightscript/events/rourlevent.md "roUrlEvent") will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
+Begins an HTTP HEAD request without waiting for it to complete. When the HEAD completes, an [roUrlEvent](doc:rourlevent) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
 
 #### Return Value
 
@@ -217,7 +217,7 @@ The HTTP response code.
 
 #### Description
 
-Uses the HTTP POST method to send the supplied string to the current URL. When the POST request completes, an [roUrlTransfer](/docs/references/brightscript/interfaces/ifurltransfer.md "roUrlTransfer") will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
+Uses the HTTP POST method to send the supplied string to the current URL. When the POST request completes, an [roUrlTransfer](doc:ifurltransfer) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
 
 #### Parameters
 
@@ -233,7 +233,7 @@ A flag indicating whether the request was issued.
 
 #### Description
 
-Uses the HTTP POST method to send the contents of the specified file to the current URL. When the POST request completes, an [roUrlTransfer](/docs/references/brightscript/interfaces/ifurltransfer.md "roUrlTransfer") will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
+Uses the HTTP POST method to send the contents of the specified file to the current URL. When the POST request completes, an [roUrlTransfer](doc:ifurltransfer) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
 
 #### Parameters
 
@@ -249,7 +249,7 @@ A flag indicating whether the request was issued.
 
 #### Description
 
-Uses the HTTP POST method to send the contents of the specified file (fromFile) to the current URL. When the POST request completes successfully, an [roUrlTransfer](/docs/references/brightscript/interfaces/ifurltransfer.md "roUrlTransfer") will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.  This function is the same as AsyncPostFromFile, except that the HTTP response is written to the file specified by the toFile parameter.
+Uses the HTTP POST method to send the contents of the specified file (fromFile) to the current URL. When the POST request completes successfully, an [roUrlTransfer](doc:ifurltransfer) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.  This function is the same as AsyncPostFromFile, except that the HTTP response is written to the file specified by the toFile parameter.
 
 #### Parameters
 
@@ -399,7 +399,7 @@ The decoded string.
 
 ### UrlEncode(url as String) as String
 
-> This method is deprecated. Use the [Escape()](/docs/references/brightscript/interfaces/ifurltransfer.md#escapetext-as-string-as-string) method.
+> This method is deprecated. Use the [Escape()](doc:ifurltransfer) method.
 
 #### Description
 

@@ -20,7 +20,7 @@ Roku Pay gives publishers a robust payment platform for increasing conversions a
 
 With the reduced friction in the purchase funnel provided by Roku Pay, publishers can:
 
-- **Acquire new customers:** Publishers using Roku Pay can participate in [Instant Signup](/docs/developer-program/discovery/instant-signup.md) (Roku's program for offering customers free trial subscriptions when activating their devices) to increase free trial starts.
+- **Acquire new customers:** Publishers using Roku Pay can participate in [Instant Signup](doc:instant-signup) (Roku's program for offering customers free trial subscriptions when activating their devices) to increase free trial starts.
 
 
 
@@ -32,7 +32,7 @@ With the reduced friction in the purchase funnel provided by Roku Pay, publisher
 
 ## Complete payment management system
 
-In addition to maximizing subscription and transactional content revenue, Roku Pay eliminates the complexities of the payments industry for publishers. With Roku Pay, the complete end-to-end payment experience, from authorization to [disbursement](/docs/features/monetization/payouts.md), is managed for you. Processing costs, international currency conversions, and tax withholdings are all automatically handled. [Analytics and sales and transactional reporting](/docs/developer-program/roku-pay/roku-pay-reports.md) are provided to help manage and track payouts, which are distributed seamlessly and on time.
+In addition to maximizing subscription and transactional content revenue, Roku Pay eliminates the complexities of the payments industry for publishers. With Roku Pay, the complete end-to-end payment experience, from authorization to [disbursement](doc:payouts), is managed for you. Processing costs, international currency conversions, and tax withholdings are all automatically handled. [Analytics and sales and transactional reporting](doc:roku-pay-reports) are provided to help manage and track payouts, which are distributed seamlessly and on time.
 
 ![roku815px - roku-pay-sales-activity-report](https://image.roku.com/ZHZscHItMTc2/roku-pay-sales-activity-report-v2.jpg)
 
@@ -44,32 +44,32 @@ Most Roku customers have a method of payment (MOP) on file, and if it expires, R
 
 ## Simple integration
 
-Implementing Roku Pay entails designing a low-friction purchase funnel with the SceneGraph ChannelStore component and integrating Roku Pay web services. The ChannelStore component includes a complete suite of APIs for getting subscription products from the app's catalog, pre-populating dialogs with customers' user information, purchasing products, and granting access to content. These APIs make it so customers only need as few as two clicks to select and purchase a subscription. The Roku Pay web services are integrated into the publisher's backend system for validating, refunding, and canceling subscriptions. The Roku Pay documentation includes [best practices](/docs/developer-program/roku-pay/roku-pay-best-practices.md) for creating a low-friction purchase funnel.
+Implementing Roku Pay entails designing a low-friction purchase funnel with the SceneGraph ChannelStore component and integrating Roku Pay web services. The ChannelStore component includes a complete suite of APIs for getting subscription products from the app's catalog, pre-populating dialogs with customers' user information, purchasing products, and granting access to content. These APIs make it so customers only need as few as two clicks to select and purchase a subscription. The Roku Pay web services are integrated into the publisher's backend system for validating, refunding, and canceling subscriptions. The Roku Pay documentation includes [best practices](doc:roku-pay-best-practices) for creating a low-friction purchase funnel.
 
 ![roku815px - roku-pay-flow](https://image.roku.com/ZHZscHItMTc2/roku-pay-flow.jpg)
 
-> Apps offering transactional content (SVOD, TVOD, and other subscription services) must include an on-device [Roku Pay billing flow](/docs/developer-program/roku-pay/implementation/overview.md) to pass certification and be published to the Streaming Store.
+> Apps offering transactional content (SVOD, TVOD, and other subscription services) must include an on-device [Roku Pay billing flow](doc:overview) to pass certification and be published to the Streaming Store.
 
 ## Customer acquisition and retention solutions
 
 Roku provides a number of free, easy-to-implement solutions for acquiring and retaining customers in order to maximize subscription revenue:
 
-- **[Instant Signup](/docs/developer-program/discovery/instant-signup.md)**: Offer customers a free trial subscription of your app when activating their Roku devices.
+- **[Instant Signup](doc:instant-signup)**: Offer customers a free trial subscription of your app when activating their Roku devices.
 
   ![roku815px - isu-example](https://image.roku.com/ZHZscHItMTc2/isu-example.jpg)
 
 
 
-- **[On-device authentication](/docs/developer-program/authentication/on-device-authentication.md)**: Enable customers to start subscriptions right from your on-device app UI.
+- **[On-device authentication](doc:on-device-authentication)**: Enable customers to start subscriptions right from your on-device app UI.
 
 
 
-- **[On-device upgrade/downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md)**: Enable customers to seamlessly switch plans directly from their devices, while avoiding accidentally being double-billed for access to the same content or service. Target different customers with the best plan in order to maximize content monetization.
+- **[On-device upgrade/downgrade](doc:on-device-upgrade-downgrade)**: Enable customers to seamlessly switch plans directly from their devices, while avoiding accidentally being double-billed for access to the same content or service. Target different customers with the best plan in order to maximize content monetization.
 
 
 
-- **[Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md)**: Automatically sign customers into your app when they activate additional Roku devices linked to their same Roku account.
+- **[Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)**: Automatically sign customers into your app when they activate additional Roku devices linked to their same Roku account.
 
 
 
-- **[Abandonment tracking](/docs/developer-program/roku-pay/implementation/tracking-signup-abandonment.md)**: See where users may be abandoning the process by firing events upon loading each page within the app's signup flow.
+- **[Abandonment tracking](doc:tracking-signup-abandonment)**: See where users may be abandoning the process by firing events upon loading each page within the app's signup flow.

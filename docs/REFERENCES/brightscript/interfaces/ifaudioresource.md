@@ -16,7 +16,7 @@ next:
 
 | Name            | Description                               |
 | --------------- | ----------------------------------------- |
-| [roAudioResource](/docs/references/brightscript/components/roaudioresource.md "roAudioResource") | The roAudioResouce allows .wav files to be cached to memory and quickly played at any time |
+| [roAudioResource](doc:roaudioresource) | The roAudioResouce allows .wav files to be cached to memory and quickly played at any time |
 
 
 ## Supported methods
@@ -76,7 +76,7 @@ Typically, 1-2.
 
 #### Description
 
-Returns an [roAssociativeArray](/docs/references/brightscript/components/roassociativearray.md "roAssociativeArray") array containing the indicated metadata parameters about the audio resource.
+Returns an [roAssociativeArray](doc:roassociativearray) array containing the indicated metadata parameters about the audio resource.
 
 #### Return Value
 

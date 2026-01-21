@@ -57,49 +57,49 @@ This section provides links to the major topics covered within each presentation
 
 #### Fall updates: Hardware & OS
 
-- [Roku platform overview](/docs/features/features-overview.md)
+- [Roku platform overview](doc:features-overview)
 - [Roku TV and player products](https://www.roku.com/products)
 - [Roku Streambar](https://www.roku.com/products/audio/roku-streambar)
 - [Roku Ultra](https://www.roku.com/products/roku-ultra)
-- [Hardware specifications](/docs/specs/hardware.md)
+- [Hardware specifications](doc:hardware)
 - [Roku OS 9.4 consumer blog post](https://blog.roku.com/roku-os-94)
 
 #### Developer updates
 
-- [BrightScript exception handling](/docs/references/brightscript/language/error-handling.md)
-- [Static Analysis testing](/docs/developer-program/dev-tools/static-analysis-tool/static-analysis-tool.md)
-- [Channel behavior testing publishing window](/docs/developer-program/publishing/channel-publishing-guide.md#certification-testing-window)
-- [Channel publishing scheduler](/docs/developer-program/publishing/channel-publishing-guide.md#schedule-your-channel-release-dialog)
-- [Deep linking app publishing window](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window)
+- [BrightScript exception handling](doc:error-handling)
+- [Static Analysis testing](doc:static-analysis-tool)
+- [Channel behavior testing publishing window](doc:channel-publishing-guide)
+- [Channel publishing scheduler](doc:channel-publishing-guide)
+- [Deep linking app publishing window](doc:channel-publishing-guide)
 
 #### Certification update
 
-- [Certification criteria](/docs/developer-program/certification/certification.md)
+- [Certification criteria](doc:certification)
 - [Fall 2020 certification update](https://blog.roku.com/developer/channel-certification-criteria-updates-october-2020)
-- [Roku Advertising Framework kidsContent flag](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean)
-- [AppDialog signal beacon](/docs/developer-program/performance-guide/measuring-channel-performance.md#appdialog-signal-beacons)
-- [Trickplay thumbnails](/docs/developer-program/media-playback/trick-mode/trick-mode.md)
-- [Demand API](/docs/developer-program/advertising/demand-api.md)
-- [Subscription product groups](/docs/developer-program/roku-pay/quickstart/in-channel-products.md#adding-product-groups)
-- [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md)
-- [Voice controls](/docs/developer-program/media-playback/transport-controls.md)
+- [Roku Advertising Framework kidsContent flag](doc:raf-api)
+- [AppDialog signal beacon](doc:measuring-channel-performance)
+- [Trickplay thumbnails](doc:trick-mode)
+- [Demand API](doc:demand-api)
+- [Subscription product groups](doc:in-channel-products)
+- [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)
+- [Voice controls](doc:transport-controls)
 
 #### Roku Pay
 
-- [Roku Pay](/docs/features/monetization/billing.md)
-- [Roku Pay training video](/videos/courses/rsg/subscriptions.md)
-- [Instant Signup](/docs/developer-program/discovery/instant-signup.md)
-- [Subscription upgrade/downgrade](/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md)
-- [Subscription product groups](/docs/developer-program/roku-pay/quickstart/in-channel-products.md#adding-product-groups)
-- [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md)
+- [Roku Pay](doc:billing)
+- [Roku Pay training video](doc:subscriptions)
+- [Instant Signup](doc:instant-signup)
+- [Subscription upgrade/downgrade](doc:on-device-upgrade-downgrade)
+- [Subscription product groups](doc:in-channel-products)
+- [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)
 
 #### Demand API
 
-- [Demand API](/docs/developer-program/advertising/demand-api.md)
+- [Demand API](doc:demand-api)
 
 #### Growing an audience
 
-- [Roku Search](/docs/developer-program/discovery/search/implementing-search.md)
-- [Instant Signup](/docs/developer-program/discovery/instant-signup.md)
-- [Roku Pay](/docs/features/monetization/billing.md)
-- [Roku Advertising Framework (RAF)](/docs/developer-program/advertising/roku-advertising-framework.md)
+- [Roku Search](doc:implementing-search)
+- [Instant Signup](doc:instant-signup)
+- [Roku Pay](doc:billing)
+- [Roku Advertising Framework (RAF)](doc:roku-advertising-framework)

@@ -18,7 +18,7 @@ cannot be used provide duplicate rendering functionality as SceneGraph
 nodes, and cannot be used for that reason. You should use the equivalent
 SceneGraph nodes instead, if available. Other BrightScript functions and
 components can only be used in SceneGraph applications in a
-[Task](/docs/references/scenegraph/control-nodes/task.md) node.
+[Task](doc:task) node.
 
 The following are the BrightScript functions and components that cannot or should not
 be used in the component scripts of a SceneGraph application, with

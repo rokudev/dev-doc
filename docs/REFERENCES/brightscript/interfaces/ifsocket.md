@@ -16,13 +16,13 @@ next:
 
 | Name             | Description                                                                                                                            |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [roDataGramSocket](/docs/references/brightscript/components/rodatagramsocket.md "roDataGramSocket") | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets                                               |
-| [roStreamSocket](/docs/references/brightscript/components/rostreamsocket.md "roStreamSocket")   | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
+| [roDataGramSocket](doc:rodatagramsocket) | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets                                               |
+| [roStreamSocket](doc:rostreamsocket)   | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
 
 
 ## Supported methods
 
-These are the basic binding and data transfer operations used on both [roStreamSocket](/docs/references/brightscript/components/rostreamsocket.md "roStreamSocket") and [roDataGramSocket](/docs/references/brightscript/components/rodatagramsocket.md "roDataGramSocket"). They are synchronous or asynchronous as determined by the socket's blocking behavior. If there is a valid assigned [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort"), the blocking behavior is considered asynchronous (non-blocking). Otherwise, the blocking behavior is considered synchronous.
+These are the basic binding and data transfer operations used on both [roStreamSocket](doc:rostreamsocket) and [roDataGramSocket](doc:rodatagramsocket). They are synchronous or asynchronous as determined by the socket's blocking behavior. If there is a valid assigned [roMessagePort](doc:romessageport), the blocking behavior is considered asynchronous (non-blocking). Otherwise, the blocking behavior is considered synchronous.
 
 ### Send(data as Object, startIndex as Integer, length as Integer) as Integer
 
@@ -34,7 +34,7 @@ Sends up to length bytes of data to the socket.
 
 | Name       | Type    | Description                                                  |
 | ---------- | ------- | ------------------------------------------------------------ |
-| data       | Object  | A [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") containing the data to be sent. |
+| data       | Object  | A [roByteArray](doc:robytearray) containing the data to be sent. |
 | startIndex | Integer | The index of the byte array from which to start sending data. |
 | length     | Integer | The amount of data to be sent to the socket.                 |
 
@@ -68,7 +68,7 @@ Reads data from the socket.
 
 | Name       | Type    | Description                                                  |
 | ---------- | ------- | ------------------------------------------------------------ |
-| data       | Object  | A [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") containing the data to be stored. |
+| data       | Object  | A [roByteArray](doc:robytearray) containing the data to be stored. |
 | startIndex | Integer | The index of the byte array from which to start reading data. |
 | length     | Integer | The amount of data to be read from the socket.               |
 

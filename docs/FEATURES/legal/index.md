@@ -32,7 +32,7 @@ You are responsible for your own compliance with the GDPR, just as you are respo
 
 Here are some things to consider:
 
-- If using a third-party ad server, are you respecting the "Limit ad tracking" parameter set by the user, as determined by the [IsRIDADisabled()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean) API?
+- If using a third-party ad server, are you respecting the "Limit ad tracking" parameter set by the user, as determined by the [IsRIDADisabled()](doc:ifdeviceinfo) API?
 - Are you transparent in how you collect and handle user data (e.g., data collected about the use of your app or any Roku device)?
 - If your app collects or processes personal data, do you provide a privacy notice to explain how you collect, use, and share this data, including the types of parties with whom data is shared?
 - Do you limit use of the data to the description in your privacy notice?

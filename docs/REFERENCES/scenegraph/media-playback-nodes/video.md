@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md)
+Extends [**Group**](doc:group)
 
 The Video node class provides a controlled play of live or VOD video.
 
@@ -24,7 +24,7 @@ Starting from Roku OS 8, the behavior of the Roku system overlay is such that th
 
 ### Playback fields
 
-To set the specific video playback parameters for a particular video, set the [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) attributes for the video in a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node, and assign the ContentNode to the `content` field of the Video node.
+To set the specific video playback parameters for a particular video, set the [Content Meta-Data](doc:content-metadata) attributes for the video in a [ContentNode](doc:contentnode) node, and assign the ContentNode to the `content` field of the Video node.
 
 Video playback can then be controlled by setting the value of the `control` field, such as setting the field value to `play` to begin playback.
 
@@ -767,7 +767,7 @@ Developers can receive event-based notifications when the CDN is switched during
 
 ## Data bindings
 
-See [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) for the required and optional play parameters, and descriptive information for video playback. Set these parameters in a [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) node, and assign the ContentNode to the content field of the Video node to apply the parameters to a particular video content item.
+See [Content Meta-Data](doc:content-metadata) for the required and optional play parameters, and descriptive information for video playback. Set these parameters in a [ContentNode](doc:contentnode) node, and assign the ContentNode to the content field of the Video node to apply the parameters to a particular video content item.
 
 For HTTPS access, note the following Content Meta-Data attributes:
 
@@ -776,13 +776,13 @@ For HTTPS access, note the following Content Meta-Data attributes:
 - `HttpHeaders`
 - `HttpSendClientCertificates`
 
-These attributes must be set to handle secure HTTP transfers of video files. Note that this is a different HTTPS mechanism than used for other SceneGraph nodes as described in [roHttpAgent](/docs/references/brightscript/components/rohttpagent.md).
+These attributes must be set to handle secure HTTP transfers of video files. Note that this is a different HTTPS mechanism than used for other SceneGraph nodes as described in [roHttpAgent](doc:rohttpagent).
 
 > Prior to Roku OS 7.2, each Audio and Video node created and configured an `HttpAgent` only when the first content was played in a given Audio or Video node instance. This sometimes meant that additional content would fail to play in the same node because headers, cookies, and certificates were not updated or correctly replaced from the new content record. Apps that are dependent upon this behavior will need to be updated to set the required data into the Content Meta-Data for each piece of content, or to programmatically set those values into the `HttpAgent` before playing each piece of content.
 
 ## Example
 
-To play video in an application, you first need to create a Video node, either in BrightScript using the roSGNode [ifSGNodeChildren](/docs/references/brightscript/interfaces/ifsgnodechildren.md) interface, or in XML markup. For example, in XML markup:
+To play video in an application, you first need to create a Video node, either in BrightScript using the roSGNode [ifSGNodeChildren](doc:ifsgnodechildren) interface, or in XML markup. For example, in XML markup:
 
 ~~~~
 
@@ -794,7 +794,7 @@ To play video in an application, you first need to create a Video node, either i
 />
 ~~~~
 
-The Video node is then scripted to specify the URL of the video stream, streaming format, video title, and any other [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) attributes needed for the particular playback. Once the video properties are specified, the video can be played by setting the Video node `control` field value to `play`.
+The Video node is then scripted to specify the URL of the video stream, streaming format, video title, and any other [Content Meta-Data](doc:content-metadata) attributes needed for the particular playback. Once the video properties are specified, the video can be played by setting the Video node `control` field value to `play`.
 
 ~~~~
 <script type="text/brightscript" >

@@ -24,34 +24,34 @@ The lesson continues by providing a high-level overview of several key topics su
 
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [SceneGraph core concepts](/docs/developer-program/core-concepts/core-concepts.md) | Read in-depth documentation about many of the SceneGraph topics covered in this video. Roku SceneGraph is the object-oriented, XML framework used to design the UI of Roku apps. These documents explain how to handle critical app operations such as data scoping, event handling, node and field observers, multi-thread operations, and so on. |
-| [BrightScript language reference](/docs/references/brightscript/language/brightscript-language-reference.md) | Learn the fundamentals and syntax of Roku BrightScript, which is the scripting language used to program the behavior of Roku apps. |
+| [SceneGraph core concepts](doc:core-concepts) | Read in-depth documentation about many of the SceneGraph topics covered in this video. Roku SceneGraph is the object-oriented, XML framework used to design the UI of Roku apps. These documents explain how to handle critical app operations such as data scoping, event handling, node and field observers, multi-thread operations, and so on. |
+| [BrightScript language reference](doc:brightscript-language-reference) | Learn the fundamentals and syntax of Roku BrightScript, which is the scripting language used to program the behavior of Roku apps. |
 
 ## Related
 
-[Channel directory structure](/docs/developer-program/core-concepts/developing-scenegraph-applications.md#set-up-the-application-directory)
+[Channel directory structure](doc:developing-scenegraph-applications)
 
-[Renderable nodes](/docs/references/scenegraph/renderable-nodes/label.md)
+[Renderable nodes](doc:label)
 
-[Abstract nodes](/docs/references/scenegraph/abstract-nodes/node.md)
+[Abstract nodes](doc:node)
 
-[Control nodes](/docs/references/scenegraph/control-nodes/contentnode.md)
+[Control nodes](doc:contentnode)
 
-[Content meta data](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content meta data](doc:content-metadata)
 
-[Threading](/docs/developer-program/core-concepts/threads.md)
+[Threading](doc:threads)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[Event loops](/docs/developer-program/core-concepts/event-loops.md)
+[Event loops](doc:event-loops)
 
-[Data scoping](/docs/developer-program/core-concepts/data-scoping.md)
+[Data scoping](doc:data-scoping)
 
-[Designing Roku apps](/docs/developer-program/design/design-overview.md)
+[Designing Roku apps](doc:design-overview)
 
-[Channel performance](/docs/developer-program/performance-guide/development-tips.md)
+[Channel performance](doc:development-tips)
 
 ### How to watch
 

@@ -32,10 +32,10 @@ The following video demonstrates how Instant Resume works for live linear and VO
 
 To integrate Instant Resume, you must have a Roku test device that meets the following prerequisites:
 
-- **Multi-core ARM processor**. Instant Resume is supported only on Roku devices with multi-core, ARM processors. Although Instant Resume will be enabled on other devices, its effectiveness will vary by platform memory profile. See the [Hardware specifications](/docs/specs/hardware.md#updatable-roku-models) for processor and memory capabilities of all Roku devices.
+- **Multi-core ARM processor**. Instant Resume is supported only on Roku devices with multi-core, ARM processors. Although Instant Resume will be enabled on other devices, its effectiveness will vary by platform memory profile. See the [Hardware specifications](doc:hardware) for processor and memory capabilities of all Roku devices.
 
 
-- **Roku OS 10.0 (or higher)**. Instant Resume is supported only on devices that can run Roku OS 10.0 or higher. See the [Hardware specifications](/docs/specs/hardware.md#updatable-roku-models) for the list of current and updatable Roku devices.
+- **Roku OS 10.0 (or higher)**. Instant Resume is supported only on devices that can run Roku OS 10.0 or higher. See the [Hardware specifications](doc:hardware) for the list of current and updatable Roku devices.
 
 > Implementing Instant Resume in an app does not guarantee that the Roku OS can relaunch it in its suspended state. The Roku OS stores as many suspended apps as possible in memory; however, it removes suspended apps when additional memory is needed by the active app. If a suspended app is removed from memory, re-launching the app is done without Instant Resume.  
 
@@ -58,7 +58,7 @@ To implement Instant Resume in an app, do the following:
 
 ### Updating the manifest
 
-The [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) must include the following attributes for an app to leverage Instant Resume:
+The [manifest](doc:channel-manifest) must include the following attributes for an app to leverage Instant Resume:
 
 - **sdk_instant_resume=1**. Indicates the channel's request to participate in Instant Resume. Acknowledges that the channel has implemented all the requirements and protocols described in this document.
 
@@ -78,7 +78,7 @@ When the user later returns to the app, the Roku OS invokes the matching **custo
 >
 > ------
 >
-> Apps should minimize memory usage to increase the probability of their app being re-launched with Instant Resume. Apps can use the [BrightScript Profiler](/docs/developer-program/dev-tools/brightscript-profiler.md) or the [**chanperf** command in the debug console](/docs/developer-program/debugging/debugging-channels.md#scenegraph-debug-server-port-8080-commands) to monitor memory consumption.  
+> Apps should minimize memory usage to increase the probability of their app being re-launched with Instant Resume. Apps can use the [BrightScript Profiler](doc:brightscript-profiler) or the [**chanperf** command in the debug console](doc:debugging-channels) to monitor memory consumption.  
 
 #### Example
 
@@ -146,9 +146,9 @@ The **arg** parameter is an associative array that includes the following fields
 - **lastSuspendOrResumeReason**. The location from which the app is resumed: "screensaver" or "home".
 
 
-- **launchParams**. [Deep linking](/docs/developer-program/discovery/implementing-deep-linking.md) fields "contentId" and "mediaType", which specify the selected content and required app behavior when receiving a deep link request upon relaunch.
+- **launchParams**. [Deep linking](doc:implementing-deep-linking) fields "contentId" and "mediaType", which specify the selected content and required app behavior when receiving a deep link request upon relaunch.
 
-> [roInputEvents](/docs/references/brightscript/events/roinputevent.md) are not passed to the **customResume** handler upon relaunch to avoid sending the deep linking parameters twice. The **launchParams** field provides access to the deep linking parameters.
+> [roInputEvents](doc:roinputevent) are not passed to the **customResume** handler upon relaunch to avoid sending the deep linking parameters twice. The **launchParams** field provides access to the deep linking parameters.
 
 ### Background tasks
 
@@ -187,9 +187,9 @@ The Roku OS automatically fires **AppSuspendInitiate**/**AppSuspendComplete** be
 
 #### AppResume beacons
 
-The **AppResume** beacons are similar to the [**AppLaunch** signal beacons](/docs/developer-program/performance-guide/measuring-channel-performance.md#applaunch-signal-beacons), which are used to measure app launch times (normal launches done without Instant Resume). Beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](/docs/developer-program/debugging/debugging-channels.md). You can then use the feedback from the console to update your application.
+The **AppResume** beacons are similar to the [**AppLaunch** signal beacons](doc:measuring-channel-performance), which are used to measure app launch times (normal launches done without Instant Resume). Beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](doc:debugging-channels). You can then use the feedback from the console to update your application.
 
-For Instant Resume, the Roku OS fires the **AppResumeInitiate** beacon when the app is re-launched. Apps, however, must implement the corresponding **AppResumeComplete** beacon. The **AppResumeComplete** beacon must be fired when the suspended scene is fully rendered during the resume process. This beacon must also be fired when video playback starts after handling a [deep link](/docs/developer-program/discovery/implementing-deep-linking.md), once the app can respond to commands sent via the Roku remote control.
+For Instant Resume, the Roku OS fires the **AppResumeInitiate** beacon when the app is re-launched. Apps, however, must implement the corresponding **AppResumeComplete** beacon. The **AppResumeComplete** beacon must be fired when the suspended scene is fully rendered during the resume process. This beacon must also be fired when video playback starts after handling a [deep link](doc:implementing-deep-linking), once the app can respond to commands sent via the Roku remote control.
 
 > The **AppResumeComplete** beacon may only be fired at resume time; never fire it during a normal app launch.
 

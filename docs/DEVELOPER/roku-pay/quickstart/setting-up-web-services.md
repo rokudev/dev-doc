@@ -12,7 +12,7 @@ next:
 ---
 
 
-Roku Pay includes [web services](/docs/developer-program/roku-pay/implementation/roku-web-service.md#apis) that developers integrate into their backend system for validating, refunding, and canceling transactions related to subscriptions and one-time purchases. In addition to pulling transactions via the [Roku Pay web services](/docs/developer-program/roku-pay/implementation/roku-web-service.md#apis), publishers can receive the transactions in real-time via [push notifications](/docs/developer-program/roku-pay/implementation/push-notifications.md). These features enable publishers to implement an entitlement service for checking whether to grant users access, issue refunds or service credits, and cancel subscriptions.
+Roku Pay includes [web services](doc:roku-web-service) that developers integrate into their backend system for validating, refunding, and canceling transactions related to subscriptions and one-time purchases. In addition to pulling transactions via the [Roku Pay web services](doc:roku-web-service), publishers can receive the transactions in real-time via [push notifications](doc:push-notifications). These features enable publishers to implement an entitlement service for checking whether to grant users access, issue refunds or service credits, and cancel subscriptions.
 
 You can access the **Roku Pay Web Services** page from the left-hand sidebar menu in the Developer Dashboard. The page includes individual tabs for you to manage the following:
 
@@ -79,7 +79,7 @@ To permanently delete an expired or expiring API key, follow these steps:
 
 ## Push notifications
 
-Publishers can subscribe to [transaction notification messages from Roku Pay](/docs/developer-program/roku-pay/implementation/push-notifications.md). This enables the publisher to receive purchases, cancellations, and refund/service credit requests in real-time and update their backend system accordingly.
+Publishers can subscribe to [transaction notification messages from Roku Pay](doc:push-notifications). This enables the publisher to receive purchases, cancellations, and refund/service credit requests in real-time and update their backend system accordingly.
 
 ![roku815px - roku-pay-web-services-push-notifications](https://image.roku.com/ZHZscHItMTc2/roku-pay-web-services-push-notifications.png)
 
@@ -89,7 +89,7 @@ Roku sends push notification messages using [JWT signature authentication](https
 
 To receive  JWT/JWS-secured push notifications, follow these steps:
 
-1. Read the [Roku Pay Push Notification JWT authentication guide](/docs/developer-program/roku-pay/implementation/push-notifications-jwt.md). This document explains how to configure and test your endpoint for receiving JWT/JWS-secured messages.
+1. Read the [Roku Pay Push Notification JWT authentication guide](doc:push-notifications-jwt). This document explains how to configure and test your endpoint for receiving JWT/JWS-secured messages.
 
      > The payload for JWT/JWS-secured messages is significantly different than the one used for unauthenticated messages; therefore, you must configure your push notification endpoint properly to avoid disrupting your system
 
@@ -159,7 +159,7 @@ Once you have configured and tested your push notification integration, you can 
 
 3. Click **Save**.
 
-> See the [Roku Pay push notifications reference](/docs/developer-program/roku-pay/implementation/push-notifications.md) for more information on the contents of the Roku Pay push notification messages.
+> See the [Roku Pay push notifications reference](doc:push-notifications) for more information on the contents of the Roku Pay push notification messages.
 >
 > If the endpoint fails for a specific message for three consecutive days (72 hours), Roku stops sending that notification. If the endpoint fails to acknowledge 100 notifications within 10 days, the endpoint is considered invalid and placed on a deny list.
 

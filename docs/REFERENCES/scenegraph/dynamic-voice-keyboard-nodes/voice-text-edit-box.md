@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [TextEditBox](/docs/references/scenegraph/widget-nodes/texteditbox.md)
+Extends [TextEditBox](doc:texteditbox)
 
-The **VoiceTextEditBox** node is similar to the [legacy **TextEditBox** node](/docs/references/scenegraph/widget-nodes/texteditbox.md), but with additional voice entry functionality. Only one voice-enabled **VoiceTextEditBox** node may be on the screen at a time. If another VoiceTextEditBox is rendered on the screen, its voice functionality is disabled implicitly. 
+The **VoiceTextEditBox** node is similar to the [legacy **TextEditBox** node](doc:texteditbox), but with additional voice entry functionality. Only one voice-enabled **VoiceTextEditBox** node may be on the screen at a time. If another VoiceTextEditBox is rendered on the screen, its voice functionality is disabled implicitly. 
 
 ## Fields
 

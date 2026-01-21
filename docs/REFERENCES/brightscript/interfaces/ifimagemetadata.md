@@ -16,7 +16,7 @@ next:
 
 | Name            | Description                               |
 | --------------- | ----------------------------------------- |
-| [roImageMetadata](/docs/references/brightscript/components/roimagemetadata.md "roImageMetadata") | The roImageMetadata component provides developers access to image file metadata included in many .jpg EXIF headers |
+| [roImageMetadata](doc:roimagemetadata) | The roImageMetadata component provides developers access to image file metadata included in many .jpg EXIF headers |
 
 
 ## Supported methods
@@ -106,7 +106,7 @@ Returns all of the raw EXIF metadata.
 
 #### Return Value
 
-An associative array with all of the raw EXIF metadata. See the [EXIF section](/docs/references/brightscript/components/roimagemetadata.md#exif-background) for details about EXIF metadata.
+An associative array with all of the raw EXIF metadata. See the [EXIF section](doc:roimagemetadata) for details about EXIF metadata.
 
 ### GetRawExifTag(ifd as Integer, tagnum as Integer) as Dynamic
 

@@ -54,11 +54,11 @@ end function
 
 #### ContentNode vs. associative arrays
 
-Use [ContentNode](/docs/references/scenegraph/control-nodes/contentnode.md) fields to represent complex trees of nested data that are expensive to copy, since they will be passed by reference. Use associative arrays to store small, shallow data structs. Associative arrays will be deep-copied through fields (pass-by-value) and has the advantage of keeping parallelization safer and more efficient.
+Use [ContentNode](doc:contentnode) fields to represent complex trees of nested data that are expensive to copy, since they will be passed by reference. Use associative arrays to store small, shallow data structs. Associative arrays will be deep-copied through fields (pass-by-value) and has the advantage of keeping parallelization safer and more efficient.
 
 #### Avoiding onChange in Task threads
 
-If you'd like a Task node to execute a function in response to a field change, use the overloaded version of [**observeField()**](/docs/references/brightscript/interfaces/ifsgnodedict.md) to send an roSGNodeEvent to your message port. Do this instead of setting **onChange** in the field you want to watch. While this is certainly not necessary, it might improve visual performance since onChange is usually executed on the render thread.
+If you'd like a Task node to execute a function in response to a field change, use the overloaded version of [**observeField()**](doc:ifsgnodedict) to send an roSGNodeEvent to your message port. Do this instead of setting **onChange** in the field you want to watch. While this is certainly not necessary, it might improve visual performance since onChange is usually executed on the render thread.
 
 ## Frame Rate
 
@@ -79,7 +79,7 @@ An image that needs to be scaled takes more time to process by the GPU. Determin
 
 ## Memory
 
-Roku OS shuts down channels that exceed memory usage limits. You can view these limits in [Roku Resource Monitor](/docs/developer-program/dev-tools/resource-monitor.md). 
+Roku OS shuts down channels that exceed memory usage limits. You can view these limits in [Roku Resource Monitor](doc:resource-monitor). 
 
 It is important to understand that well before these limits are reached, channel performance may degrade due to Roku OS starting to page and swap to meet memory demands. When this happens, you will see these symptoms in Roku Resource Monitor:
 
@@ -97,7 +97,7 @@ Using too much memory may also impact [cachefs](https://developer.roku.com/fr-fr
 
 Typically, BrightScript objects are deleted when their reference count drops to zero. However, this will not happen there are circular references within an object.
 
-Circular references can be detected by calling [RunGarbageCollector](/docs/references/brightscript/language/component-architecture.md#garbage-collection). This is relatively slow to run, and so should only be used as a debug strategy. It reports the number of objects that it found and cleaned up, and can be used during development to ensure that your channel is not creating circular references, and then turned off in production. Note that our garbage collection does not detect cycles where the cycle involves BrightScript objects in different domains (for example, owned by different threads) or involves both SceneGraph nodes and BrightScript objects.
+Circular references can be detected by calling [RunGarbageCollector](doc:component-architecture). This is relatively slow to run, and so should only be used as a debug strategy. It reports the number of objects that it found and cleaned up, and can be used during development to ensure that your channel is not creating circular references, and then turned off in production. Note that our garbage collection does not detect cycles where the cycle involves BrightScript objects in different domains (for example, owned by different threads) or involves both SceneGraph nodes and BrightScript objects.
 
 ## More development tips
 
@@ -106,8 +106,8 @@ Circular references can be detected by calling [RunGarbageCollector](/docs/refer
   - Channel Version Info: **Home 3x, Up 2x, Left, Right, Left, Right, Left**
   - Developer Settings Page: **Home 3x, Up 2x, Right, Left, Right, Left, Right**
 - The Developer settings page is necessary for enabling developer mode on your box.
-- All file paths are prefixed by the device name and a colon: `pkg:/filename.txt`. See [File System](/docs/developer-program/getting-started/architecture/file-system.md) for more information.
+- All file paths are prefixed by the device name and a colon: `pkg:/filename.txt`. See [File System](doc:file-system) for more information.
 - Display a facade screen when launching your application so that it appears to the user that your app launches immediately. When your scene is first rendered, display a channel level splash image while initial setup logic is happening. Hide it once you are ready to display content to the user.
-- There are a limited number of video content and streaming formats supported on the Roku Streaming Player. See [Audio and Video Support](/docs/specs/media/streaming-specifications.md) for complete information on the supported formats.
+- There are a limited number of video content and streaming formats supported on the Roku Streaming Player. See [Audio and Video Support](doc:streaming-specifications) for complete information on the supported formats.
 - Be sure to use a unique key for each application you publish and reuse this key each time you update your application using the "rekey" option. This ensures that all versions of your application will have access to the same registry data and avoid causing users to re-link after an update.
 - We require that your web servers support range requests. If they do not, you may run into content that is not playable, or large images that do not display. The data will appear as a corrupted file format to our components, as the first block may be resent by the web server when we expect data at a particular range or offset.

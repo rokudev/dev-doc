@@ -12,7 +12,7 @@ metadata:
 
 Roku Search aggregates content from participating apps into a single, indexed search feed. It helps users find content quickly by entering or saying the name of a movie, TV show, actor/actress, and so on. By participating in Roku Search, any content in your app that matches a query is automatically listed in the search results. This provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement.
 
-> This document covers the step to prepare and submit your app to participate in Roku Search. To review the Roku Search feed schema itself, see the [Search feed](/docs/specs/search/search-feed.md) specification.
+> This document covers the step to prepare and submit your app to participate in Roku Search. To review the Roku Search feed schema itself, see the [Search feed](doc:search-feed) specification.
 
 ## Integration Steps
 
@@ -42,7 +42,7 @@ Integrating Roku Search in your app entails the following steps:
 
    * Submit your search feed to Roku for review.
 
-5. Send [authentication events](/docs/developer-program/discovery/search/prioritizing-authenticated-channels-in-roku-search.md) (for SVOD and TVE apps).
+5. Send [authentication events](doc:prioritizing-authenticated-channels-in-roku-search) (for SVOD and TVE apps).
 
 ### Search feed submission video demo
 
@@ -52,16 +52,16 @@ The following video demonstrates how to validate and submit a search feed.
 
 ### Creating a search feed
 
-Apps participating in Roku Search must provide a [search feed](/docs/specs/search/search-feed.md), which is a JSON document that contains the metadata for each content item in an app's catalog. Metadata includes the ID, type, title, description, genre, rating, release date, and artwork for the content item.
+Apps participating in Roku Search must provide a [search feed](doc:search-feed), which is a JSON document that contains the metadata for each content item in an app's catalog. Metadata includes the ID, type, title, description, genre, rating, release date, and artwork for the content item.
 
 The content metadata is stored in Roku's master database and is available for matching searches. It is also used to display information about the item after it has been selected.
 
-For content metadata to be added to the Roku Search master database, the search feed must conform to [Roku's JSON schema](/docs/specs/search/search-feed.md#schema) and be validated by Roku. See the [Search Feed specification](/docs/specs/search/search-feed.md) for more information on configuring a search feed so that it passes validation. The spec includes detailed information about each metadata field to be included in the search feed, and it provides the [JSON schema](/docs/specs/search/search-feed.md#schema) and [sample feeds](/docs/specs/search/search-feed.md#sample-feeds) that you can reference.
+For content metadata to be added to the Roku Search master database, the search feed must conform to [Roku's JSON schema](doc:search-feed) and be validated by Roku. See the [Search Feed specification](doc:search-feed) for more information on configuring a search feed so that it passes validation. The spec includes detailed information about each metadata field to be included in the search feed, and it provides the [JSON schema](doc:search-feed) and [sample feeds](doc:search-feed) that you can reference.
 
-> To make testing and troubleshooting your Roku Search integration easier, create a short test feed following the [schema](/docs/specs/search/search-feed.md#schema). This test feed should contain a single entry for each type of content in your catalog (movie, television episode, short-form video, and so on). For testing episodic television content, you can provide all the episodes within a single season of a series.
+> To make testing and troubleshooting your Roku Search integration easier, create a short test feed following the [schema](doc:search-feed). This test feed should contain a single entry for each type of content in your catalog (movie, television episode, short-form video, and so on). For testing episodic television content, you can provide all the episodes within a single season of a series.
 >
 > By starting with a test feed, you can make sure that the search feed integration works end-to-end with all the different content types in your catalog. You can then use the small feed as a template for adding the rest of your catalog to the feed.  
-> You can use the sample feeds in the [Search Feed specification](/docs/specs/search/search-feed.md) as templates for adding entries to your feed. The sample feeds adhere to the feed spec and pass validation.
+> You can use the sample feeds in the [Search Feed specification](doc:search-feed) as templates for adding entries to your feed. The sample feeds adhere to the feed spec and pass validation.
 
 #### Third-party support for integrating Roku Search
 
@@ -69,7 +69,7 @@ Apps can work with third-party vendors such as [Universal Search and Discovery](
 
 ### Validating the search feed
 
-Once the search feed has been created and is hosted online, verify that the [JSON is formatted correctly](https://jsonlint.com/), [adheres to Roku's search feed schema](/docs/specs/search/search-feed.md#schema), and [includes all the required metadata](https://developer.roku.com/apps/search/validator).
+Once the search feed has been created and is hosted online, verify that the [JSON is formatted correctly](https://jsonlint.com/), [adheres to Roku's search feed schema](doc:search-feed), and [includes all the required metadata](https://developer.roku.com/apps/search/validator).
 
 1. Use an [online JSON format validator](https://jsonlint.com/) to make sure that your feed is using properly formatted JSON. Feeds with incorrect JSON formatting will be rejected by Roku's search feed submission tool.
 
@@ -222,7 +222,7 @@ Once you have validated your search feed, you can submit your feed following the
 
 ### Testing and submitting the app
 
-Before submitting your search feed for review, you need to test your app's [deep linking implementation](/docs/developer-program/discovery/implementing-deep-linking.md) in order to verify that the app is successfully integrated with Roku Search following these steps:
+Before submitting your search feed for review, you need to test your app's [deep linking implementation](doc:implementing-deep-linking) in order to verify that the app is successfully integrated with Roku Search following these steps:
 
 1. In the **Search feeds page**, find your feed and click the next (right arrow) icon.
 
@@ -263,15 +263,15 @@ Before submitting your search feed for review, you need to test your app's [deep
 
    > The Search beta app is only created for new feeds upon their initial submission. Resubmitting an existing feed does not generate a beta app (for existing feeds submitted before January 31, 2024, [contact Roku Partner Success](mailto:partnersuccess@roku.com) to get the beta app).
 
-6. Search for content items in your feed and verify that they are included in the search results. This process confirms that your feed has been ingested into Roku Search. If results do not appear in Roku Search, confirm that the feed follows the [schema](/docs/specs/search/search-feed.md#schema) and it includes all the required metadata. If you need further help with this step, [contact Roku Partner Success](mailto:partnersuccess@roku.com).
+6. Search for content items in your feed and verify that they are included in the search results. This process confirms that your feed has been ingested into Roku Search. If results do not appear in Roku Search, confirm that the feed follows the [schema](doc:search-feed) and it includes all the required metadata. If you need further help with this step, [contact Roku Partner Success](mailto:partnersuccess@roku.com).
 
    > Search for each type of content (movie, series, tvSpecial, and shortform) in your feed in Roku Search.
 
-7. Verify the expected [deep linking behavior](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) for each applicable mediatype by clicking on search results. For series/episodic content, test both series and episode level watch options in Roku search to complete testing.
+7. Verify the expected [deep linking behavior](doc:implementing-deep-linking) for each applicable mediatype by clicking on search results. For series/episodic content, test both series and episode level watch options in Roku search to complete testing.
 
-   * **Series:** Clicking the series level watch option triggers a deep link command to app with an episode contentId and mediatype series. See the [deep linking documentation](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) for more information on the required launch behavior.
+   * **Series:** Clicking the series level watch option triggers a deep link command to app with an episode contentId and mediatype series. See the [deep linking documentation](doc:implementing-deep-linking) for more information on the required launch behavior.
 
-   * **Episode:** Clicking "Episodes" on the series search result screen leads to a season/episodic menu. Selecting an episode and clicking a watch option triggers a deep link command with the associated episode content ID and mediaType episode. See the [deep linking documentation](/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) for more information on the required launch behavior.
+   * **Episode:** Clicking "Episodes" on the series search result screen leads to a season/episodic menu. Selecting an episode and clicking a watch option triggers a deep link command with the associated episode content ID and mediaType episode. See the [deep linking documentation](doc:implementing-deep-linking) for more information on the required launch behavior.
 
 8. Test with unauthenticated accounts.
 
@@ -288,9 +288,9 @@ Before submitting your search feed for review, you need to test your app's [deep
    | Field         | Description                                                                                                                                                                                                                                                                                                                                                                                                        |
    | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | Media type    | Select the media type of the content item from the list of choices (for example, movie, television episode, or television series). Custom types are not available.                                                                                                                                                                                                                                                 |
-   | Content ID    | Enter the [content ID](/docs/developer-program/discovery/implementing-deep-linking.md) of the item (this should be the same as the **PlayId** in the app's [search feed](/docs/specs/search/search-feed.md#playoptions)).                                                                                                                                                                                          |
+   | Content ID    | Enter the [content ID](doc:implementing-deep-linking) of the item (this should be the same as the **PlayId** in the app's [search feed](doc:search-feed)).                                                                                                                                                                                          |
    | Content title | Enter a descriptive name that makes it easy to identify the content associated with the deep link parameters.                                                                                                                                                                                                                                                                                                      |
-   | Asset ID      | Enter the ID specified for the content item in the **assets.Id** field of the app's [search feed](/docs/specs/search/search-feed.md#playoptions).                                                                                                                                                                                                                                                                  |
+   | Asset ID      | Enter the ID specified for the content item in the **assets.Id** field of the app's [search feed](doc:search-feed).                                                                                                                                                                                                                                                                  |
    | Valid until   | Once an ID is created for a content item in Roku Search, it may not be changed.Enter the last date when the deep linking parameters will be used in your app. Notice that, for a new parameter set, this field is pre-populated with a date that is one year in the future. You can change this date as needed. If the deep linking parameters do not expire, you can select the **Valid indefinitely** check box. |
 
    c. The deep linking parameters are added to the list. You can edit and delete deep linking parameters in the list.
@@ -317,15 +317,15 @@ Before submitting your search feed for review, you need to test your app's [deep
 
 You can sideload an app and use it to troubleshoot the search integration following these steps:
 
-1. Use the [Roku Deep Linking Tester](/docs/developer-program/discovery/implementing-deep-linking.md#using-the-rokudeep-linking-tester) or manually [send deep link requests to your app via ECP](/docs/developer-program/discovery/implementing-deep-linking.md#using-ecp-commands-for-testing-deep-linking) to verify that deep links to content in your app from Roku search are working as expected. This method enables you to pass specific content IDs and mediaTypes in order to confirm that your app is properly launching content for the different mediaTypes it supports.
+1. Use the [Roku Deep Linking Tester](doc:implementing-deep-linking) or manually [send deep link requests to your app via ECP](doc:implementing-deep-linking) to verify that deep links to content in your app from Roku search are working as expected. This method enables you to pass specific content IDs and mediaTypes in order to confirm that your app is properly launching content for the different mediaTypes it supports.
 
-2. If deep links are not launching into the playback experience per the content item's **mediaType**, make sure the app code has implemented deep linking according to the [Deep Linking specification](/docs/developer-program/discovery/implementing-deep-linking.md#implementing-deep-linking).
+2. If deep links are not launching into the playback experience per the content item's **mediaType**, make sure the app code has implemented deep linking according to the [Deep Linking specification](doc:implementing-deep-linking).
 
    If the Deep Linking Tester launches content into the correct playback experience, but on-device testing does not, make sure that the **playId** in the search feed is synced to the **contentId** in the app.
 
 ### Sending authentication events
 
-SVOD and TVE apps must [send authentication events](/docs/developer-program/discovery/search/prioritizing-authenticated-channels-in-roku-search.md) to Roku to communicate the authentication status of customers when their app is launched. This is a [certification requirement](/docs/developer-program/certification/certification.md#4-channel-operation), and it drives engagement because it ensures that your SVOD or TVE app is listed above non-authenticated apps in the Roku Search content providers list.
+SVOD and TVE apps must [send authentication events](doc:prioritizing-authenticated-channels-in-roku-search) to Roku to communicate the authentication status of customers when their app is launched. This is a [certification requirement](doc:certification), and it drives engagement because it ensures that your SVOD or TVE app is listed above non-authenticated apps in the Roku Search content providers list.
 
 ### Updating search feeds
 
@@ -398,4 +398,4 @@ The following table lists each region where Roku Search is available and the pri
 | **Asia Pacific**  |                  |
 | Australia         | English          |
 
-For more information on participating in Roku Search in multiple regions and multiple languages, see the [Roku Search feed specification](/docs/specs/search/search-feed.md#multiregion-and-multilanguage-support).
+For more information on participating in Roku Search in multiple regions and multiple languages, see the [Roku Search feed specification](doc:search-feed).

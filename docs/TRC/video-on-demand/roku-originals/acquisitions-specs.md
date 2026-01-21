@@ -18,7 +18,7 @@ next:
 
 The Roku Channel is committed to providing the highest quality content and values its Partners for helping to achieve this goal. The Roku Originals Post Production Delivery Specifications outline the best practices for the Partner at this time. This document and the requirements are subject to change at Roku’s sole discretion.
 
-The specifications below encompass deliverables for Roku Originals Post Production, as they relate to previously completed, acquired series. It is not comprehensive of all deliverables that may be required as part of your agreement. Please continue to utilize the [The Roku Channel Ingest Specifications](/trc-docs/video-on-demand/ingest-specifications.md) document for all other areas noted below: 
+The specifications below encompass deliverables for Roku Originals Post Production, as they relate to previously completed, acquired series. It is not comprehensive of all deliverables that may be required as part of your agreement. Please continue to utilize the [The Roku Channel Ingest Specifications](doc:ingest-specifications) document for all other areas noted below: 
 
 - Ad Policy
 - Kids Directed Content Policy
@@ -169,7 +169,7 @@ Mixing Specifications:
 
 #### 2.4.3 Texted video masters
 
-The formatting requested below is a subset of the [Roku Channel Ingest Specifications](/trc-docs/video-on-demand/ingest-specifications.md).
+The formatting requested below is a subset of the [Roku Channel Ingest Specifications](doc:ingest-specifications).
 
 
 <table>
@@ -382,7 +382,7 @@ Roku Originals content should be delivered in each of the following timed-text f
 - SDH: Language in addition to sound descriptors (no forced narratives)
 - FN: Forced Narratives solely
 
-Roku requires closed captions and subtitles in **2** of the [Roku Ingest Specification](/trc-docs/video-on-demand/ingest-specifications.md) formats: SRT and WebVTT. The files have to have the same timecode and frame rate as the video and audio delivered. Character encoding MUST be UTF-8.
+Roku requires closed captions and subtitles in **2** of the [Roku Ingest Specification](doc:ingest-specifications) formats: SRT and WebVTT. The files have to have the same timecode and frame rate as the video and audio delivered. Character encoding MUST be UTF-8.
 
 **Languages & Formats Required:**
 

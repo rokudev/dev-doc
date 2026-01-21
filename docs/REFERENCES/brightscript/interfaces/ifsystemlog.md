@@ -16,7 +16,7 @@ next:
 
 | Name         | Description                                                           |
 |--------------|-----------------------------------------------------------------------|
-|[roSystemLog](/docs/references/brightscript/components/rosystemlog.md "roSystemLog")  | The roSystemLog component enables the application to receive events from the Roku Streaming Player that are intended for reporting errors and trends, rather than trigger a response to a user action   |
+|[roSystemLog](doc:rosystemlog)  | The roSystemLog component enables the application to receive events from the Roku Streaming Player that are intended for reporting errors and trends, rather than trigger a response to a user action   |
 
 
 ## Supported methods

@@ -15,7 +15,7 @@ next:
 
 
 
-The [roMicrophone](/docs/references/brightscript/components/romicrophone.md "roMicrophone") component sends the `roMicrophoneEvent` with the following predicates that indicate its valid event types:
+The [roMicrophone](doc:romicrophone) component sends the `roMicrophoneEvent` with the following predicates that indicate its valid event types:
 
 ## Supported methods
 

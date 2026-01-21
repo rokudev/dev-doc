@@ -19,5 +19,5 @@ It is a legacy object name, corresponding to the intrinsic Double object.  Appli
 
 ## Supported interfaces
 
-- [ifDouble](/docs/references/brightscript/interfaces/ifdouble.md "ifDouble")
-- [ifToStr](/docs/references/brightscript/interfaces/iftostr.md "ifToStr")
+- [ifDouble](doc:ifdouble)
+- [ifToStr](doc:iftostr)

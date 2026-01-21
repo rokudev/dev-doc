@@ -14,7 +14,7 @@ next:
 
 A BrightScript Format string is a [printf-like](https://en.wikipedia.org/wiki/Printf) format string that is similar to that provided by C, C++, and other languages.
 
-Format strings can be used by BrightScript calls [`<formatStr>.Format(args....)`](/docs/references/brightscript/interfaces/ifstringops.md) and for certain BrightScript data type calls [`<value>.ToStr(formatStr)`](/docs/references/brightscript/interfaces/iftostr.md).
+Format strings can be used by BrightScript calls [`<formatStr>.Format(args....)`](doc:ifstringops) and for certain BrightScript data type calls [`<value>.ToStr(formatStr)`](doc:iftostr).
 
 The format string consists of ordinary characters (other than '%'), which are directly copied to the output string, and conversion specifications (which start with '%').
 
@@ -30,7 +30,7 @@ The `flags`, `width`, and `precision` fields are optional, and they may control 
 "%02x%02x%02x".Format(255, 0, 128) ' returns "ff0080" 
 ```
 
-See the [ifToStr interface](/docs/references/brightscript/interfaces/iftostr.md) for more examples.
+See the [ifToStr interface](doc:iftostr) for more examples.
 
 ## type
 

@@ -12,7 +12,7 @@ next:
 ---
 
 
-> If your Roku Developer account was created after April 30, 2025, see [Creating TVOD Apps (Catalog 2.0)](/docs/developer-program/roku-pay/implementation/tvod-app-catalog.md) for how to create in-app products and call the ChannelStore APIs to handle purchases.
+> If your Roku Developer account was created after April 30, 2025, see [Creating TVOD Apps (Catalog 2.0)](doc:tvod-app-catalog) for how to create in-app products and call the ChannelStore APIs to handle purchases.
 
 Publishers participating in Roku Pay can monetize content by making it available for rental or purchase. Implementing the transactional video on demand (TVOD) model in a Roku app allows publishers to generate revenue from sporting events, pay-per-views, recent movie releases, and other popular content in their catalog. This enables viewers to enjoy the convenience of consuming a publisher's must-see content on-demand.
 
@@ -20,7 +20,7 @@ Publishers participating in Roku Pay can monetize content by making it available
 
 ## Overview
 
-Offering transactional content in an app entails [creating in-app products](/docs/developer-program/roku-pay/quickstart/in-channel-products.md) for the content in the Developer Dashboard and using the [ChannelStore node](/docs/references/scenegraph/control-nodes/channelstore.md) to [check the user's billing status](/docs/references/scenegraph/control-nodes/channelstore.md#requestpartnerorder) and [complete the rental or purchase transaction](/docs/references/scenegraph/control-nodes/channelstore.md#confirmpartnerorder).
+Offering transactional content in an app entails [creating in-app products](doc:in-channel-products) for the content in the Developer Dashboard and using the [ChannelStore node](doc:channelstore) to [check the user's billing status](doc:channelstore) and [complete the rental or purchase transaction](doc:channelstore).
 
 > This workflow is intended for:
 >
@@ -29,7 +29,7 @@ Offering transactional content in an app entails [creating in-app products](/doc
 
 ## Creating in-app products for TVOD
 
-To link transactional content with Roku Pay, you create in-app products in the Developer Dashboard. With the TVOD model, in-app products only need to be created for each [product category](/docs/developer-program/roku-pay/quickstart/in-channel-products.md#product-basics) (video, audio, game, or app/utility). For example, if you plan on offering movie rentals, you only need to create a single product that has the video category.
+To link transactional content with Roku Pay, you create in-app products in the Developer Dashboard. With the TVOD model, in-app products only need to be created for each [product category](doc:in-channel-products) (video, audio, game, or app/utility). For example, if you plan on offering movie rentals, you only need to create a single product that has the video category.
 
 To manage multiple transactional content items using the same in-app product, your app can leverage your product feed or publisher-specific API to retrieve the item's metadata from your catalog at runtime. When a user selects the content to be purchased, your app can use the runtime metadata to display the item's title, price, and poster image and pass the item's SKU through the ChannelStore functions in order to identify for which item to grant the user access.
 
@@ -44,7 +44,7 @@ When creating an in-app product for transactional content, make sure to do the f
 
 ## Handling transactional purchases
 
-To handle purchases of transactional content in your app, your app must send the [ChannelStore node's](/docs/references/scenegraph/control-nodes/channelstore.md) [requestPartnerOrder](/docs/references/scenegraph/control-nodes/channelstore.md#requestpartnerorder) and [confirmPartnerOrder](/docs/references/scenegraph/control-nodes/channelstore.md#confirmpartnerorder) commands to check the user's billing status and complete the transaction.
+To handle purchases of transactional content in your app, your app must send the [ChannelStore node's](doc:channelstore) [requestPartnerOrder](doc:channelstore) and [confirmPartnerOrder](doc:channelstore) commands to check the user's billing status and complete the transaction.
 
 To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow these steps:
 
@@ -152,4 +152,4 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/channelstore-node-tvod-sample) that demonstrates how to handle transactional purchases using the [ChannelStore](/docs/references/scenegraph/control-nodes/channelstore.md) node. This sample shows how to link a single, generic in-app product to multiple transactional content items in an app's catalog. It also shows how to dynamically name and price transactional content items and process their purchases in the Roku Pay workflow.  
+You can download and install a [sample app](https://github.com/rokudev/channelstore-node-tvod-sample) that demonstrates how to handle transactional purchases using the [ChannelStore](doc:channelstore) node. This sample shows how to link a single, generic in-app product to multiple transactional content items in an app's catalog. It also shows how to dynamically name and price transactional content items and process their purchases in the Roku Pay workflow.  

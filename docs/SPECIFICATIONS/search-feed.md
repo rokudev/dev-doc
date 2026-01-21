@@ -491,7 +491,7 @@ Provide the poster and background images to be displayed for the content item in
 
 #### playOptions
 
-In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](/docs/developer-program/discovery/implementing-deep-linking.md) into content from Roku Search) for the content item.
+In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](doc:implementing-deep-linking) into content from Roku Search) for the content item.
 
 <table>
   <thead>

@@ -15,7 +15,7 @@ next:
 
 | Name           | Description                               |
 | -------------- | ----------------------------------------- |
-| [roChannelStore](/docs/references/brightscript/components/rochannelstore.md "roChannelStore") | allows the application to perform a purchase of an in-app product or upgrade an app |
+| [roChannelStore](doc:rochannelstore) | allows the application to perform a purchase of an in-app product or upgrade an app |
 
 
 ## Supported methods
@@ -38,11 +38,11 @@ The unique number generated for the object.
 
 Requests the list of in-app products that are linked to the running app.
 
-If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/events/rochannelstoreevent.md "roChannelStoreEvent") will be received that contains an roList of roAssociativeArray items. Each associative array will contain the following parameter names with specified value type:
+If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will be received that contains an roList of roAssociativeArray items. Each associative array will contain the following parameter names with specified value type:
 
 | Parameter         | Type    | Description                                                  |
 | ----------------- | ------- | ------------------------------------------------------------ |
-| code              | string  | The **Product Identifier** that was entered in the [In-App Products page in the Developer Dashboard](/docs/developer-program/roku-pay/quickstart/in-channel-products.md#product-basics). |
+| code              | string  | The **Product Identifier** that was entered in the [In-App Products page in the Developer Dashboard](doc:in-channel-products). |
 | name              | string  | The item name (this name will also be set as the description). |
 | quantity          | Integer | For one-time purchase/consumable products only. The number of the product purchased (for example "1000" game points, "3" viewings of a movie rental). |
 | productType       | string  | The product type (ex. "MonthlySub")                          |
@@ -61,7 +61,7 @@ If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/
 
 Requests the list of globally available in-app products, which are available to all apps.
 
-If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/events/rochannelstoreevent.md "roChannelStoreEvent") will be received that contains an roList of roAssociativeArray items. Each associative array will contain the following parameter names with specified value type:
+If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will be received that contains an roList of roAssociativeArray items. Each associative array will contain the following parameter names with specified value type:
 
 | Parameter   | Type   | Description                                                |
 | ----------- | ------ | ---------------------------------------------------------- |
@@ -78,7 +78,7 @@ If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/
 
 Requests the list of purchases associated with the current user account.
 
-If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/events/rochannelstoreevent.md "roChannelStoreEvent") will be received that contains an roList of roAssociativeArray items. Each associative array will contain the following parameter names with specified value type:
+If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will be received that contains an roList of roAssociativeArray items. Each associative array will contain the following parameter names with specified value type:
 
 
 <table>
@@ -193,7 +193,7 @@ If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/
 
 The **getAllPurchases** function is similar to the [**getPurchases** function](#getpurchases-as-void) except that it requests the historical list of all canceled, expired, and terminated subscriptions over the lifetime of the current user account—in addition to the active subscriptions. You can use this method to leverage purchase history in order to implement subscription renewal flows and more easily determine if subscriptions have expired.
 
-If successful, a subsequent [roChannelStoreEvent](/docs/references/brightscript/events/rochannelstoreevent.md "roChannelStoreEvent") will be received that contains an roList of roAssociativeArray items.
+If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will be received that contains an roList of roAssociativeArray items.
 
 ### SetOrder(order as Object, orderInfo as Object) as Void
 
@@ -286,7 +286,7 @@ A flag indicating whether the user approved the order (true if the order was app
 
 ### FakeServer(enable as Boolean) as Void
 
-It is recommended that developers use [billing testing](/docs/developer-program/roku-pay/testing/billing-testing.md) instead of this method.
+It is recommended that developers use [billing testing](doc:billing-testing) instead of this method.
 
 #### Description
 
@@ -337,7 +337,7 @@ When called, the method presents a dialog screen containing the user’s account
   - birth ("YYYY-MM")
   - gender ("Male", "Female", or unspecified)
 
-  > For authenticated free and AVOD apps that are not enrolled in the [Roku Partner Payouts Program](/docs/developer-program/roku-pay/quickstart/partner-payouts.md), a limited set of account information is returned:
+  > For authenticated free and AVOD apps that are not enrolled in the [Roku Partner Payouts Program](doc:partner-payouts), a limited set of account information is returned:
   >
   > - **Sign-up RFI screen**: email, phone, and zip.
   > - **Sign-in RFI screen**: email and phone.
@@ -387,7 +387,7 @@ This function works like GetUserData(), but allows the caller to specify which u
 
 An roAssociativeArray containing the Roku account information passed in the method.
 
-> For authenticated free and AVOD apps that are not enrolled in the [Roku Partner Payouts Program](/docs/developer-program/roku-pay/quickstart/partner-payouts.md), a limited set of account information may be requested and returned:
+> For authenticated free and AVOD apps that are not enrolled in the [Roku Partner Payouts Program](doc:partner-payouts), a limited set of account information may be requested and returned:
 
 - **Sign-up RFI screen**: email, phone, and zip.
 - **Sign-in RFI screen**: email and phone.
@@ -434,7 +434,7 @@ An associative array that contains the following fields:
 
 #### Description
 
-Stores an access token, oAuth token, or other authentication artifact that can be retrieved by calling the [GetChannelCred()](/docs/references/brightscript/interfaces/ifchannelstore.md#getchannelcred-as-object)method. This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. <br /><br />This method can be used to store an authentication artifact with Roku for a signed in user, associating that user with a particular Roku account. For more information, see [Automatic Account Link](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md).
+Stores an access token, oAuth token, or other authentication artifact that can be retrieved by calling the [GetChannelCred()](doc:ifchannelstore)method. This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. <br /><br />This method can be used to store an authentication artifact with Roku for a signed in user, associating that user with a particular Roku account. For more information, see [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on).
 
 #### Parameters
 

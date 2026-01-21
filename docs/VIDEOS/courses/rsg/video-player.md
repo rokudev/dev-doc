@@ -16,35 +16,35 @@ next:
 
 ## About this lesson
 
-This lesson explains how to add the [SceneGraph Video node](/docs/references/scenegraph/media-playback-nodes/video.md) to your app and link it to the content in other components. It describes how to open the video screen when content is selected, and close it when playback finishes or the back button is pressed on the Roku remote control. This lesson also includes the [requirements for streaming videos](/docs/specs/media/streaming-specifications.md) on the Roku platform.
+This lesson explains how to add the [SceneGraph Video node](doc:video) to your app and link it to the content in other components. It describes how to open the video screen when content is selected, and close it when playback finishes or the back button is pressed on the Roku remote control. This lesson also includes the [requirements for streaming videos](doc:streaming-specifications) on the Roku platform.
 
 ## Resources
 
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Video Player sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/VideoPlayer) | Download and review the code used in this lesson to implement a Video node in a Roku app . |
-| [Sideloading  Roku apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) | Sideload and test the Video Player app created in this lesson. |
-| [Video hosting](/docs/features/how-channels-work.md#content-hosting) | View the list  content delivery networks (CDNs) and online video platforms (OVPs) that have worked with publishers to host content for their Roku apps. |
-| [Streaming spec](/docs/specs/media/streaming-specifications.md)                   | Understand the required file formats and encoding methods for streaming video content on Roku devices. |
-| [SceneGraph Video node](/docs/references/scenegraph/media-playback-nodes/video.md) | Read how to configure the different attributes of the SceneGraph Video node, including its playback, UI, trick play, and captioning parameters. |
+| [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Video Player app created in this lesson. |
+| [Video hosting](doc:how-channels-work) | View the list  content delivery networks (CDNs) and online video platforms (OVPs) that have worked with publishers to host content for their Roku apps. |
+| [Streaming spec](doc:streaming-specifications)                   | Understand the required file formats and encoding methods for streaming video content on Roku devices. |
+| [SceneGraph Video node](doc:video) | Read how to configure the different attributes of the SceneGraph Video node, including its playback, UI, trick play, and captioning parameters. |
 
 ## Related
 
-[Scene node](/docs/references/scenegraph/abstract-nodes/scene.md)
+[Scene node](doc:scene)
 
-[OnKeyEvent()](/docs/references/scenegraph/component-functions/onkeyevent.md)
+[OnKeyEvent()](doc:onkeyevent)
 
-[ifSGNodeChildren interface](/docs/references/brightscript/interfaces/ifsgnodechildren.md)
+[ifSGNodeChildren interface](doc:ifsgnodechildren)
 
-[RowList node](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md)
+[RowList node](doc:rowlist)
 
-[Handing application events](/docs/developer-program/core-concepts/handling-application-events.md)
+[Handing application events](doc:handling-application-events)
 
-[Content node](/docs/references/scenegraph/control-nodes/contentnode.md)  
+[Content node](doc:contentnode)  
 
-[Content meta data](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content meta data](doc:content-metadata)
 
-[Sideloading apps](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels)
+[Sideloading apps](doc:developer-setup)
 
 ## How to watch
 

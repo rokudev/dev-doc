@@ -17,7 +17,7 @@ Continue Watching is a content category row within the **What to Watch** home sc
 
 > The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
-> Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](/docs/developer-program/certification/certification.md#4-channel-operation). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
+> Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](doc:certification). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 >
 > Continue Watching only supports long-form content such as movies and television episodes. Short-form content (standalone content that is 15 minutes or less that is not a movie or TV show) is not supported.
 
@@ -35,9 +35,9 @@ When the customer selects a movie, TV show, or TV episode, it launches directly 
 
 Apps must have completed the following integrations to participate in Roku Continue Watching:
 
-1. [Roku Search](/docs/developer-program/discovery/search/implementing-search.md). Enables customers to find content on your app.
-2. [Deep linking](/docs/developer-program/discovery/implementing-deep-linking.md). Enables the requested content to be launched directly into playback on your app.
-3. [Bookmarking](/docs/developer-program/media-playback/bookmarking.md). Resumes playback of the requested content at its last watched position.
+1. [Roku Search](doc:implementing-search). Enables customers to find content on your app.
+2. [Deep linking](doc:implementing-deep-linking). Enables the requested content to be launched directly into playback on your app.
+3. [Bookmarking](doc:bookmarking). Resumes playback of the requested content at its last watched position.
 
 ## Getting started
 
@@ -61,7 +61,7 @@ To get started with the Continue Watching integration, follow these steps:
    </TokenCmdResponse>
 ```
 
-4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md) (channel_token=\<token>). The **channel authentication token** will also be used in your production application.
+4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](doc:channel-manifest) (channel_token=\<token>). The **channel authentication token** will also be used in your production application.
 
 ## Integrating into Continue Watching
 
@@ -259,7 +259,7 @@ If publishers require explicit consent from customers before adding their watche
 
 ## Handling deep links from Continue Watching
 
-Handling deep links sent to your app from the Continue Watching row is essentially the same as documented [here](/docs/developer-program/discovery/implementing-deep-linking.md). The deep links sent to your app include a **contentId** field with your unique ID for the content to be played, the **mediaType**, which dictates the playback experience, and the user's **profileId** (if your app has a profile selection screen).
+Handling deep links sent to your app from the Continue Watching row is essentially the same as documented [here](doc:implementing-deep-linking). The deep links sent to your app include a **contentId** field with your unique ID for the content to be played, the **mediaType**, which dictates the playback experience, and the user's **profileId** (if your app has a profile selection screen).
 
 **Syntax:**
 
@@ -275,7 +275,7 @@ http://192.168.1.4:8060/input/581251?contentId=dev-summit-21-keynote&mediaType=m
 
 ## Appendix A: Sample BrightScript code for adding HTTP headers
 
-To call the Continue Watching APIs, the app must include BrightScript code that adds the following HTTP headers (see the [**ifHttpAgent.addHeader()** function](/docs/references/brightscript/interfaces/ifhttpagent.md#addheadername-as-string-value-as-string-as-boolean) for more information). You must set the endpoint first before providing the headers.
+To call the Continue Watching APIs, the app must include BrightScript code that adds the following HTTP headers (see the [**ifHttpAgent.addHeader()** function](doc:ifhttpagent) for more information). You must set the endpoint first before providing the headers.
 
 ```
 'SetUrl needs to be called first

@@ -12,7 +12,7 @@ next:
 ---
 
 
-This utility performs BrightScript code static analysis. It provides information about common app issues, and checks for compliance with a variety of app certification requirements, deprecated component and API usage etc. The [Static Analysis Tool](/docs/developer-program/dev-tools/static-analysis-tool/static-analysis-tool.md#static-analysis-test-details) overview provides a full set of tests performed.
+This utility performs BrightScript code static analysis. It provides information about common app issues, and checks for compliance with a variety of app certification requirements, deprecated component and API usage etc. The [Static Analysis Tool](doc:static-analysis-tool) overview provides a full set of tests performed.
 
 ## Download
 

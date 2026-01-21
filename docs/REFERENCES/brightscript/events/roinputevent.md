@@ -81,7 +81,7 @@ Returns an roAssociativeArray describing the input event, which may be one of th
       <td>
         The type of command:   
 
-        * "action()". Indicates that the app has received an utterance matching a name or word previously registered with the [roAppManager.SetVoiceActionStrings()](/docs/references/brightscript/interfaces/ifappmanager.md#setvoiceactionstringsactions-as-object-as-void)   
+        * "action()". Indicates that the app has received an utterance matching a name or word previously registered with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager)   
         * "select()". Indicates that the app has received a command for selecting an item via an ordinal number. 
         * "forward" 
         * "next" 
@@ -140,7 +140,7 @@ Returns an roAssociativeArray describing the input event, which may be one of th
       </td>
 
       <td>
-        If the **type** is set to "transport" and the **command** is set to "action", this field contains the utterance matching the name or word previously registered for the app with the [roAppManager.SetVoiceActionStrings()](/docs/references/brightscript/interfaces/ifappmanager.md#setvoiceactionstringsactions-as-object-as-void) method.
+        If the **type** is set to "transport" and the **command** is set to "action", this field contains the utterance matching the name or word previously registered for the app with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager) method.
       </td>
     </tr>
 

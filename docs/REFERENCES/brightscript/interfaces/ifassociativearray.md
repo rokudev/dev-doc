@@ -17,8 +17,8 @@ next:
 
 | Name               | Description |
 | ------------------ | ----------- |
-| [roAssociativeArray](/docs/references/brightscript/components/roassociativearray.md "roAssociativeArray") | An associative array allows objects to be associated with string keys            |
-| [roSGNode](/docs/references/brightscript/components/rosgnode.md "roSGNode")           | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation            |
+| [roAssociativeArray](doc:roassociativearray) | An associative array allows objects to be associated with string keys            |
+| [roSGNode](doc:rosgnode)           | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation            |
 
 
 ## Supported methods

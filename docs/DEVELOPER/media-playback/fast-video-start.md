@@ -46,7 +46,7 @@ Prebuffer() has no
 effect.
 
 
->SceneGraph apps use the [Video node](/docs/references/scenegraph/media-playback-nodes/video.md) control field prebuffer option to implement Fast Video Start. See [Fast start media playback](/docs/developer-program/core-concepts/playing-videos.md#fast-start-media-playback) for information on implementing Fast Video Start in a SceneGraph app.
+>SceneGraph apps use the [Video node](doc:video) control field prebuffer option to implement Fast Video Start. See [Fast start media playback](doc:playing-videos) for information on implementing Fast Video Start in a SceneGraph app.
 
 
 ## roVideoPlayer use cases

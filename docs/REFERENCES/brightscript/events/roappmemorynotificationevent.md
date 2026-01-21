@@ -12,7 +12,7 @@ next:
 ---
 
 
-The [roAppMemoryMonitor](/docs/references/brightscript/components/roappmemorymonitor.md "roAppMemoryMonitor") component sends the **roAppMemoryNotificationEvent** with the percentage of memory consumed by the app compared to per-app memory limit. 
+The [roAppMemoryMonitor](doc:roappmemorymonitor) component sends the **roAppMemoryNotificationEvent** with the percentage of memory consumed by the app compared to per-app memory limit. 
 
 ## Supported methods
 

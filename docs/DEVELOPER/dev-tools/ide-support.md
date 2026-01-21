@@ -160,4 +160,4 @@ below.
 ![roku600px -  - eclipse7](https://image.roku.com/ZHZscHItMTc2/eclipse7.png "eclipse7")
 
 The complete specification and comment syntax for the documentation
-generation system, called BrightScriptDoc, [can be found here](/docs/developer-program/dev-tools/brightscript-doc.md).
+generation system, called BrightScriptDoc, [can be found here](doc:brightscript-doc).

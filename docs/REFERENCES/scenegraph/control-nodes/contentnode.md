@@ -12,15 +12,15 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 The ContentNode class allows you to specify the data used to configure a node or component. Many nodes and components require a ContentNode as the specification of their content field in order to be properly configured. In general, lists, grids, and panels require a ContentNode for configuration. The data included in a ContentNode can be data such as the text for labels in the node or component, and the spacing between items in a list, grid, or panel, including data to create custom lists, grids, and panels. The reference information for every node or component that requires a ContentNode includes a section that details the requirements of the ContentNode for that node or component.
 
-ContentNodes defined as the specification for a node or component content field are typically structured as one ContentNode parent node, with a hierarchy of child nodes that specify the actual data, and sections of data if needed. For example, a [LabelList](/docs/references/scenegraph/list-and-grid-nodes/labellist.md "LabelList") node can have several sections that divide the entire list, each with their own section heading, and specific items in that section of the list. The ContentNode for that LabelList node should have two levels of child ContentNodes, one level for the data to configure the list sections, and then another level of child ContentNodes for the data for each item in that list section.
+ContentNodes defined as the specification for a node or component content field are typically structured as one ContentNode parent node, with a hierarchy of child nodes that specify the actual data, and sections of data if needed. For example, a [LabelList](doc:labellist) node can have several sections that divide the entire list, each with their own section heading, and specific items in that section of the list. The ContentNode for that LabelList node should have two levels of child ContentNodes, one level for the data to configure the list sections, and then another level of child ContentNodes for the data for each item in that list section.
 
-A ContentNode can also be used to specify the data for custom components with defined interfaces, and for nodes and components that require [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md " Content Meta-Data"). Also, you should use a ContentNode for complex structures of data for your application rather than associative arrays. ContentNode objects are passed by reference in the application, while associative array objects are copied. For large complex data structures, passing ContentNode objects is much quicker than passing the equivalent associative array object. You can use associative arrays for simpler data structures with just a few fixed members.
+A ContentNode can also be used to specify the data for custom components with defined interfaces, and for nodes and components that require [Content Meta-Data](doc:content-metadata). Also, you should use a ContentNode for complex structures of data for your application rather than associative arrays. ContentNode objects are passed by reference in the application, while associative array objects are copied. For large complex data structures, passing ContentNode objects is much quicker than passing the equivalent associative array object. You can use associative arrays for simpler data structures with just a few fixed members.
 
-> All of the attributes listed in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md "Content Meta-Data") can be set as fields in a Content node. However, when creating a Content node, the fields themselves are not created until the valid attributes are set as fields, using either assignment (=), or set using [setField()](/docs/references/brightscript/interfaces/ifsgnodefield.md#setfieldfieldname-as-string-value-as-object-as-boolean "setField") or [setFields()](/docs/references/brightscript/interfaces/ifsgnodefield.md#setfieldsfields-as-object-as-boolean. "setFields()")
+> All of the attributes listed in [Content Meta-Data](doc:content-metadata) can be set as fields in a Content node. However, when creating a Content node, the fields themselves are not created until the valid attributes are set as fields, using either assignment (=), or set using [setField()](doc:ifsgnodefield) or [setFields()](doc:ifsgnodefield.md#setfieldsfields-as-object-as-boolean)")
 
 ### Creating ContentNodes
 
@@ -166,13 +166,13 @@ The following creates a component with a LabelList node populated with some spec
 
 ## Fields
 
-All of the attributes listed in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md "Content Meta-Data") are accessible as fields using dot (.) notation on a ContentNode object. For example, for a ContentNode object iteminfo, the Content Meta-Data Description attribute can be read or written as follows:
+All of the attributes listed in [Content Meta-Data](doc:content-metadata) are accessible as fields using dot (.) notation on a ContentNode object. For example, for a ContentNode object iteminfo, the Content Meta-Data Description attribute can be read or written as follows:
 
 ~~~
 iteminfo.description
 ~~~
 
-You can also access ContentNode attributes as fields using dot (.) notation if you add the attribute as an [\<interface\>](/docs/references/scenegraph/xml-elements/interface.md") element field to an extended ContentNode component. For example, you could extend a ContentNode as a custom listitemcontent component with a componentname field to include an XML component name in a list item:
+You can also access ContentNode attributes as fields using dot (.) notation if you add the attribute as an [\<interface\>](doc:interface) element field to an extended ContentNode component. For example, you could extend a ContentNode as a custom listitemcontent component with a componentname field to include an XML component name in a list item:
 
 ~~~
 <component  name = "listitemcontent" extends = "ContentNode" >
@@ -190,11 +190,11 @@ Then for a listitemcontent ContentNode object iteminfo, you can read or write th
 iteminfo.componentname
 ~~~
 
-> You can only use dot (.) notation to access ContentNode fields as attributes found in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md "Content Meta-Data"), or defined as an [\<interface\>](/docs/references/scenegraph/xml-elements/interface.md) element field in a custom ContentNode component.
+> You can only use dot (.) notation to access ContentNode fields as attributes found in [Content Meta-Data](doc:content-metadata), or defined as an [\<interface\>](doc:interface) element field in a custom ContentNode component.
 
 ## Content feed video lesson
 
-You can learn how to link the content metadata in your app's feed to a ContentNode by watching the [Creating the content feed](/videos/courses/rsg/debugging.md) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md). 
+You can learn how to link the content metadata in your app's feed to a ContentNode by watching the [Creating the content feed](doc:debugging) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md). 
 
 ## Sample app
 

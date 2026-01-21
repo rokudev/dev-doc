@@ -20,8 +20,8 @@ In June 2024, Roku's Developer Platform team explained how developers can build 
 
 ## Related documentation
 
-- [Roku Resource Monitor User's Guide](/docs/developer-program/dev-tools/resource-monitor.md)
-- [Roku Resource Monitor File Specification](/docs/developer-program/dev-tools/rrm-file-format.md)
-- [BrightScript Profiler User's Guide](/docs/developer-program/dev-tools/brightscript-profiler.md)
-- [BrightScript Profiler File Specification](/docs/developer-program/dev-tools/brs-profiler-file-format.md)
-- [External Control Protocol (ECP) Guide](/docs/developer-program/dev-tools/external-control-api.md)
+- [Roku Resource Monitor User's Guide](doc:resource-monitor)
+- [Roku Resource Monitor File Specification](doc:rrm-file-format)
+- [BrightScript Profiler User's Guide](doc:brightscript-profiler)
+- [BrightScript Profiler File Specification](doc:brs-profiler-file-format)
+- [External Control Protocol (ECP) Guide](doc:external-control-api)

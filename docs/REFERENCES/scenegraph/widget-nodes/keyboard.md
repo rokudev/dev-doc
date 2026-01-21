@@ -12,11 +12,11 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
-The Keyboard node class allows a user to enter a string of alphanumeric characters. The string entered is displayed in a [TextEditBox](/docs/references/scenegraph/widget-nodes/texteditbox.md "TextEditBox") node that is part of the Keyboard node.
+The Keyboard node class allows a user to enter a string of alphanumeric characters. The string entered is displayed in a [TextEditBox](doc:texteditbox) node that is part of the Keyboard node.
 
-The Keyboard node must have the key focus in order to work properly. By default, a Keyboard node toggles between uppercase and lowercase letters when the Options remote key is pressed, to speed the entry of mixed-case strings by the user. It is important not to override this behavior, particularly if a Keyboard node is used as an internal node for a [KeyboardDialog](/docs/references/scenegraph/dialog-nodes/keyboarddialog.md "KeyboardDialog") node.
+The Keyboard node must have the key focus in order to work properly. By default, a Keyboard node toggles between uppercase and lowercase letters when the Options remote key is pressed, to speed the entry of mixed-case strings by the user. It is important not to override this behavior, particularly if a Keyboard node is used as an internal node for a [KeyboardDialog](doc:keyboarddialog) node.
 
 The default appearance of a Keyboard node is very transparent, allowing the keyboard to pick up most of its color from what is rendered underneath it. The appearance can be customized by changing the keyboardBitmapUri and other fields.
 

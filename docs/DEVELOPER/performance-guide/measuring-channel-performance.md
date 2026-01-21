@@ -17,7 +17,7 @@ The Roku OS records key app performance metrics such as app launch time, app cha
 To measure app launch time, for example, beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](/developer-program/debugging/debugging-channels.md). You can then use the feedback from the console to update your application, if needed, to meet the certification requirements. 
 
 > App launch and video start times must meet the specified [certification performance
-requirements](/docs/developer-program/certification/certification.md#3performance).
+requirements](doc:certification).
 
 ## Measuring app launch times
 
@@ -27,7 +27,7 @@ For measuring app launch times, however, apps must implement the **AppLaunchComp
 
 ### AppLaunch signal beacons
 
-Apps must fire an **AppLaunchComplete** beacon when the app home page is fully rendered. This beacon must also be fired when video playback starts after handling a [deep link](/docs/developer-program/discovery/implementing-deep-linking.md), and the app can respond to commands sent via the remote control.
+Apps must fire an **AppLaunchComplete** beacon when the app home page is fully rendered. This beacon must also be fired when video playback starts after handling a [deep link](doc:implementing-deep-linking), and the app can respond to commands sent via the remote control.
 
 To fire the **AppLaunchComplete** beacon from the app, call the **signalBeacon()** function on any node as demonstrated in the following example:
 

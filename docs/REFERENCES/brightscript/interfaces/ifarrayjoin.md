@@ -17,7 +17,7 @@ next:
 
 | Name      | Description                               |
 | --------- | ----------------------------------------- |
-|  [roArray](/docs/references/brightscript/components/roarray.md "roArray")   | Returns information about the application |
+|  [roArray](doc:roarray)   | Returns information about the application |
 
 
 ## Supported methods

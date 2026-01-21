@@ -39,11 +39,11 @@ To maintain proper aspect ratio, and take care of the different pixel aspect rat
 
 The screen dimensions correspond to the drawable area that applications see. The dimensions were chosen so that applications do not need to compensate for screen aspect ratio or pixel aspect ratio. 
 
-It's likely that when porting games from other platforms, the active game area may be smaller and correspond to more traditional dimensions. In this case, the application can supply letterbox or pillarbox artwork and use an [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") to define the active area. The roRegion will translate and clip graphics to the proper area for the game. Similarly, roRegions are used to describe the left and right pillars for an SD game in HD mode, or the upper and lower letterbox regions for an HD game in SD mode. 
+It's likely that when porting games from other platforms, the active game area may be smaller and correspond to more traditional dimensions. In this case, the application can supply letterbox or pillarbox artwork and use an [roRegion](doc:roregion) to define the active area. The roRegion will translate and clip graphics to the proper area for the game. Similarly, roRegions are used to describe the left and right pillars for an SD game in HD mode, or the upper and lower letterbox regions for an HD game in SD mode. 
 
 Games that require more performance should use smaller dimensions. Games should run in HD and SD mode. The screensizes HD 854x480 paired with SD 854x626 and HD 940x480 paired with SD 720x480 were designed for this purpose.
 
-The game creates a single active game roRegion to do all graphics operations in. roRegions for pillar or letter boxes are used to fill the rest of the screen area depending on if the app is in HD or SD mode. Please refer to the dfSetupDisplayRegions() function in [v30/bslDefender.brs](/docs/references/brightscript/language/component-architecture.md#v30bslcorebrs "v30/bslDefender.brs") for help in setting up the drawable regions in screen scaling. 
+The game creates a single active game roRegion to do all graphics operations in. roRegions for pillar or letter boxes are used to fill the rest of the screen area depending on if the app is in HD or SD mode. Please refer to the dfSetupDisplayRegions() function in [v30/bslDefender.brs](doc:bslDefender) for help in setting up the drawable regions in screen scaling. 
 
 There are some useful rules of thumb to be aware of to get the best performance when rendering your games:
 
@@ -92,13 +92,13 @@ screen0.finish()
 
 ## Supported interfaces
 
-- [ifScreen](/docs/references/brightscript/interfaces/ifscreen.md "ifScreen")
-- [ifDraw2D](/docs/references/brightscript/interfaces/ifdraw2d.md "ifDraw2D")
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")
-- [ifGetMessagePort](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort")
+- [ifScreen](doc:ifscreen)
+- [ifDraw2D](doc:ifdraw2d)
+- [ifSetMessagePort](doc:ifsetmessageport)
+- [ifGetMessagePort](doc:ifgetmessageport)
 
 
 ## Supported events
 
-- [roUniversalControlEvent](/docs/references/brightscript/events/rouniversalcontrolevent.md "roUniversalControlEvent")
+- [roUniversalControlEvent](doc:rouniversalcontrolevent)
 

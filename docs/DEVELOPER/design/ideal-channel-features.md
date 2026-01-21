@@ -156,8 +156,8 @@ value of your app.
     more effective and satisfying as a 'visual search.'
   - To that end, all video navigation must be visual so users can
     actually see/preview the video they are navigating:
-      - [Enable video scrubbing](/docs/developer-program/media-playback/trick-mode.md)
-      - Show [BIFs](/docs/developer-program/media-playback/trick-mode.md#bif-file-creation-using-the-roku-bif-tool) or key-frames  
+      - [Enable video scrubbing](doc:trick-mode)
+      - Show [BIFs](doc:trick-mode) or key-frames  
 
         ![roku815px - trickmode](https://image.roku.com/ZHZscHItMTc2/trickmode.png "trickmode")
 

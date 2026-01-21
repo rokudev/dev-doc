@@ -12,11 +12,11 @@ next:
 ---
 
 
-You can combine video content and ad pods into a single playlist and then render it. This optimizes the video playback experience by eliminating buffering between your content and ads. The Roku Advertising Framework (RAF) API includes [**constructStitchedStream**()](/docs/developer-program/advertising/raf-api.md#constructstitchedstreamcontentmetadata-as-object-ads-as-object-as-object) and [**renderStitchedStream()**](/docs/developer-program/advertising/raf-api.md#renderstitchedstreamcsasstream-as-object-view-as-object-as-boolean) methods that enable you to seamlessly create and render stitched streams.
+You can combine video content and ad pods into a single playlist and then render it. This optimizes the video playback experience by eliminating buffering between your content and ads. The Roku Advertising Framework (RAF) API includes [**constructStitchedStream**()](doc:raf-api) and [**renderStitchedStream()**](doc:raf-api) methods that enable you to seamlessly create and render stitched streams.
 
 ## Creating a stitched stream
 
-Once you have [enabled the RAF library](/docs/developer-program/advertising/integrating-roku-advertising-framework.md) in the manifest and [instantiated it](/docs/developer-program/advertising/raf-api.md#roku_ads-as-object) in the app, you can create a stitched stream using the [**constructStitchedStream**()](/docs/developer-program/advertising/raf-api.md#constructstitchedstreamcontentmetadata-as-object-ads-as-object-as-object) method. This method takes two parameters: a ContentNode with the content metadata of the video to be played, and the ads in the ad pod to be rendered during playback (retrieved via the RAF [**GetAds()** method](/docs/developer-program/advertising/raf-api.md#getadsmsg-as-string-as-object)). The method returns a single playlist, which you can then render as described in the next section.
+Once you have [enabled the RAF library](doc:integrating-roku-advertising-framework) in the manifest and [instantiated it](doc:raf-api) in the app, you can create a stitched stream using the [**constructStitchedStream**()](doc:raf-api) method. This method takes two parameters: a ContentNode with the content metadata of the video to be played, and the ads in the ad pod to be rendered during playback (retrieved via the RAF [**GetAds()** method](doc:raf-api)). The method returns a single playlist, which you can then render as described in the next section.
 
 The following code example demonstrates how to create a stitched stream:
 
@@ -54,7 +54,7 @@ csasStream = m.adIface.constructStitchedStream(myContentNode, m.adPods)
 
 ## Rendering a stitched stream
 
-You can render a stitched stream using the  [**renderStitchedStream()**](/docs/developer-program/advertising/raf-api.md#renderstitchedstreamcsasstream-as-object-view-as-object-as-boolean) method. This method takes the playlist created via the [**constructStitchedStream()**](/docs/developer-program/advertising/raf-api.md#constructstitchedstreamcontentmetadata-as-object-ads-as-object-as-object) method and a renderable node to which the stitched stream can be attached.
+You can render a stitched stream using the  [**renderStitchedStream()**](doc:raf-api) method. This method takes the playlist created via the [**constructStitchedStream()**](doc:raf-api) method and a renderable node to which the stitched stream can be attached.
 
 ```
 ' render the stitched stream
@@ -63,7 +63,7 @@ m.adIface.renderStitchedStream(csasStream, scene)
 
 ## Firing ad measurement beacons without wrapping
 
-Per [Roku's certification requirements](/docs/developer-program/advertising/ad-requirements.md#ads-3-ad-tracking-requirements), all ad measurement beacons must be fired directly by RAF client-side (they may not be wrapped). This is required to apply the [Roku Advertising Watermark](/docs/developer-program/advertising/ad-watermark.md) to the beacons.
+Per [Roku's certification requirements](doc:ad-requirements), all ad measurement beacons must be fired directly by RAF client-side (they may not be wrapped). This is required to apply the [Roku Advertising Watermark](doc:ad-watermark) to the beacons.
 
 ## Sample app
 

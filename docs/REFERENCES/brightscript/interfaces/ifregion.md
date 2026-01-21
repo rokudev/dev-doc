@@ -16,7 +16,7 @@ next:
 
 | Name     | Description                                                          |
 | -------- | -------------------------------------------------------------------- |
-| [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") | The roRegion component is used to represent a subsection of a bitmap |
+| [roRegion](doc:roregion) | The roRegion component is used to represent a subsection of a bitmap |
 
 
 ## Supported methods
@@ -102,7 +102,7 @@ Initializes the fields of this region to be the same as the values of the fields
 
 #### Description
 
-Returns a newly created copy of the region as a new [roRegion](/docs/references/brightscript/components/roregion.md "roRegion") object.
+Returns a newly created copy of the region as a new [roRegion](doc:roregion) object.
 
 #### Return Value
 

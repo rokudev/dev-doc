@@ -17,7 +17,7 @@ next:
 
 ## About this lesson
 
-This lesson explains how the content feed is used to load and organize content in the app UI. It describes how the SceneGraph [Content node](/docs/references/scenegraph/control-nodes/contentnode.md) maps metadata in your content feed to components in your app UI, and it provides a few tips for creating and hosting your own feed.
+This lesson explains how the content feed is used to load and organize content in the app UI. It describes how the SceneGraph [Content node](doc:contentnode) maps metadata in your content feed to components in your app UI, and it provides a few tips for creating and hosting your own feed.
 
 ## Resources
 
@@ -53,9 +53,9 @@ This lesson explains how the content feed is used to load and organize content i
 
 ## Related
 
-[Content node](/docs/references/scenegraph/control-nodes/contentnode.md)  
+[Content node](doc:contentnode)  
 
-[Content meta data](/docs/developer-program/getting-started/architecture/content-metadata.md)
+[Content meta data](doc:content-metadata)
 
 ## How to watch
 

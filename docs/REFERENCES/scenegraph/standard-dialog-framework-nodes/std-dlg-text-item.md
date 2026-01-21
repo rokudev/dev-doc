@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md "**StdDlgItemBase**")
+Extends [StdDlgItemBase](doc:std-dlg-item-base)
 
-The **StdDlgTextItem** node is used to display a block of text. It should only be used as a child of a [**StdDlgContentArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-content-area.md) node.
+The **StdDlgTextItem** node is used to display a block of text. It should only be used as a child of a [**StdDlgContentArea**](doc:std-dlg-content-area) node.
 
 ![roku815px - StdDlgTextItem](https://image.roku.com/ZHZscHItMTc2/std-dlg-text-item.jpg)
 

@@ -12,9 +12,9 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
-The TargetSet node class is used to specify a set of target regions where items in a [TargetGroup](/docs/references/scenegraph/layout-group-nodes/targetgroup.md) node are rendered. This information includes an array of rectangles that is used to define the location and size of a region that will be occupied by an item in the TargetGroup as well as an optional index that identifies one rectangle in the array to be treated as the region where the item with focus is located.
+The TargetSet node class is used to specify a set of target regions where items in a [TargetGroup](doc:targetgroup) node are rendered. This information includes an array of rectangles that is used to define the location and size of a region that will be occupied by an item in the TargetGroup as well as an optional index that identifies one rectangle in the array to be treated as the region where the item with focus is located.
 
 ## Fields
 

@@ -14,7 +14,7 @@ next:
 
 Roku’s Partner Payouts Program is the vehicle through which partners receive payments for apps, games, content, and ads served to millions of active Roku users.
 
-To sign up for Roku Partner Payouts Program, see the [Enrolling in the Roku Partner Payouts Program](/docs/developer-program/roku-pay/quickstart/partner-payouts.md) guide.
+To sign up for Roku Partner Payouts Program, see the [Enrolling in the Roku Partner Payouts Program](doc:partner-payouts) guide.
 
 ## Publisher payouts
 
@@ -78,7 +78,7 @@ A chargeback is a dispute raised by a cardholder against any transaction, throug
 
 **When a chargeback occurs, how does Roku notify the publisher?**
 
-When a customer disputes a transaction made through Roku Pay that results in a chargeback, Roku will send a [refund push notification message](/docs/developer-program/roku-pay/implementation/push-notifications.md#refund) to the developer. The **transactionType** field in the [n](/docs/developer-program/roku-pay/implementation/push-notifications.md#refund)otification will be set to "Chargeback", "ChargebackReversed", or "SecondChargeback". Each of these values is described as follows:
+When a customer disputes a transaction made through Roku Pay that results in a chargeback, Roku will send a [refund push notification message](doc:push-notifications) to the developer. The **transactionType** field in the [n](doc:push-notifications)otification will be set to "Chargeback", "ChargebackReversed", or "SecondChargeback". Each of these values is described as follows:
 
 - "Chargeback": The customer has initiated a transaction dispute. Roku will dispute the chargeback if it is $8.99 or more. If the chargeback is reversed, Roku will send a subsequent refund notification with the **transactionType** set to "ChargebackReversed". If the chargeback is not reversed, no further notifications are sent.
 
@@ -111,4 +111,4 @@ No. Although the customer has access to content, they actually do not have a val
 
 **When Roku cancels a subscription because of a chargeback, how is the publisher notified?**
 
-Roku sends a [cancel push notification message](/docs/developer-program/roku-pay/implementation/push-notifications.md#cancellation) with the **transactionType** field set to "Chargeback". This is similar to how the push notification is sent for an active cancellation (when the customer explicitly cancels the subscription). The publisher should handle the cancel notification to determine if the customer is still entitled to content.
+Roku sends a [cancel push notification message](doc:push-notifications) with the **transactionType** field set to "Chargeback". This is similar to how the push notification is sent for an active cancellation (when the customer explicitly cancels the subscription). The publisher should handle the cancel notification to determine if the customer is still entitled to content.

@@ -12,7 +12,7 @@ next:
 ---
 
 
-> All apps, except TVE apps, must complete authentication entirely on-device to pass certification. See [On-device authentication](/docs/developer-program/authentication/on-device-authentication.md) for how to implement the required authentication method.
+> All apps, except TVE apps, must complete authentication entirely on-device to pass certification. See [On-device authentication](doc:on-device-authentication) for how to implement the required authentication method.
 >
 > Only TVE apps may use rendezvous linking to authenticate Roku customers. A TVE app is defined as an app that is accessed with credentials from a cable/satellite subscription.
 

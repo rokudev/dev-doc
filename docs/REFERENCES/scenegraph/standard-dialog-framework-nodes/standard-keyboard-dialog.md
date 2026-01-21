@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StandardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**")
+Extends [StandardDialog](doc:standard-dialog)
 
-The **StandardKeyboardDialog** node enables text and voice entry of strings consisting of alphanumeric characters as well as many commonly used symbols. It is similar to the legacy [KeyboardDialog](/docs/references/scenegraph/dialog-nodes/keyboarddialog.md) node, but includes voice entry functionality, which is provided through its internal **DynamicKeyboard** node.
+The **StandardKeyboardDialog** node enables text and voice entry of strings consisting of alphanumeric characters as well as many commonly used symbols. It is similar to the legacy [KeyboardDialog](doc:keyboarddialog) node, but includes voice entry functionality, which is provided through its internal **DynamicKeyboard** node.
 
 ![roku815px - keyboard-dialog](https://image.roku.com/ZHZscHItMTc2/keyboard-dialog.jpg)
 

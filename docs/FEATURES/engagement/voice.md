@@ -19,7 +19,7 @@ For example, if a new viewer says "play Die Hart", the first episode of the Die 
 
 <video src="https://image.roku.com/ZHZscHItMTc2/direct-to-play.mp4" width="640" height="480" controls />
 
-For more information: [Direct to Play integration guide](/docs/developer-program/discovery/direct-to-play.md).
+For more information: [Direct to Play integration guide](doc:direct-to-play).
 
 ## Voice keyboards
 
@@ -27,7 +27,7 @@ When customers sign up for an app or sign in, they can use their Roku voice remo
 
 <video src="https://image.roku.com/ZHZscHItMTc2/voice-keyboard.mp4" width="640" height="480" controls />
 
-For more information: [Voice Keyboard reference documentation](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md).
+For more information: [Voice Keyboard reference documentation](doc:dynamic-keyboard-base).
 
 ## Voice-enabled profile selection screens
 
@@ -35,7 +35,7 @@ Apps with a profile selection screen can audibly and visually prompt the custome
 
 <video src="https://image.roku.com/ZHZscHItMTc2/voice-profile-selector-v2.mp4" width="640" height="480" controls />
 
-For more information: [Voice Profile Selection integration guide](/docs/developer-program/media-playback/voice-controls/voice-profile-selector.md).
+For more information: [Voice Profile Selection integration guide](doc:voice-profile-selector).
 
 ## Voice controls
 
@@ -43,4 +43,4 @@ Once playback begins, customers can use basic voice commands to fast forward, re
 
 <video src="https://image.roku.com/ZHZscHItMTc2/voice-controls.mp4" width="640" height="480" controls />
 
-For more information: [Voice controls integration guide](/docs/developer-program/media-playback/voice-controls/transport-controls.md).
+For more information: [Voice controls integration guide](doc:transport-controls).

@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 Group is the base class of all renderable nodes. Group also provides fields that control the transformation, visibility and opacity of themselves and all of their children.
 

@@ -12,7 +12,7 @@ next:
 ---
 
 
-The roChannelStore sends an roChannelStoreEvent in response to a call to any of several Get* methods in [ifChannelStore](/docs/references/brightscript/interfaces/ifchannelstore.md "ifChannelStore"). The following predicates indicate its valid event types:
+The roChannelStore sends an roChannelStoreEvent in response to a call to any of several Get* methods in [ifChannelStore](doc:ifchannelstore). The following predicates indicate its valid event types:
 
 ## Supported methods
 
@@ -26,7 +26,7 @@ Returns a unique number that can be matched with the value returned by ifChannel
 
 #### GetResponse() as Object
 
-Returns an roList of roAssociativeArray items for the previous GET method invocation. The format of each roAssociativeArray item depends on which GETmethod was invoked. See [ifChannelStore](/docs/references/brightscript/interfaces/ifchannelstore.md "ifChannelStore") for more details.
+Returns an roList of roAssociativeArray items for the previous GET method invocation. The format of each roAssociativeArray item depends on which GETmethod was invoked. See [ifChannelStore](doc:ifchannelstore) for more details.
 
 In the case of a successfully completed ifChannelStore.DoOrder() initiated purchase transaction, the object returned by GetResponse() is an associative array containing the following information:
 

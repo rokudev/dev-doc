@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
 The MaskGroup node class allows an alpha mask bitmap to be applied to the rendering of its children. This allows effects such as having a list fade out at the bottom to be easily created.
 

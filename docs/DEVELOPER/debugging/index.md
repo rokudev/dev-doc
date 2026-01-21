@@ -90,7 +90,7 @@ publication.
 
 As of Roku OS 14.6, you can use the `backtrace`, `up`, `down`, `over`, and `out` commands in the debug console on stack frames entered via `callFunc` or an observer callback, in addition to a normal BrightScript function call.
 
-For example, if roSgNode A calls into roSgNode B on the same thread (for example, via [CallFunc](/docs/developer-program/core-concepts/handling-application-events.md#functional-fields)) and then B breaks into the call, you can now view the calls belonging to both A and B in the backtrace of the thread.
+For example, if roSgNode A calls into roSgNode B on the same thread (for example, via [CallFunc](doc:handling-application-events)) and then B breaks into the call, you can now view the calls belonging to both A and B in the backtrace of the thread.
 
 ### Type mismatch reporting
 
@@ -319,6 +319,6 @@ You can also use the equivalent sgnodes debugger commands (see Special SceneGrap
 
 ## Debugging video lesson
 
-You can learn how to debug apps by watching the [Debugging channels](/videos/courses/rsg/debugging.md) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
+You can learn how to debug apps by watching the [Debugging channels](doc:debugging) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
 
 This lesson describes how to view the crash logs, stack traces, and app performance metrics in the console. And it guides you on how to use the interactive debugger to type commands for checking and updating variable values, calling functions, and stepping through the application.

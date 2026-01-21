@@ -60,4 +60,4 @@ The video playback flow in a Roku app is:
   * URLs to indicate where the media will be downloaded from
 * A Roku app plays the content. The app's implementation can be created using the scripting language, BrightScript, and its UI framework, SceneGraph
 
-After you've successfully set up your hosting server(s), you'll need to consider which of Roku's [two app development models](/docs/features/channel-development-models.md) you'll want to use. This will determine a tremendous amount about your app, including the schema used for your content feed. To learn more, [read on](/docs/features/channel-development-models.md)!
+After you've successfully set up your hosting server(s), you'll need to consider which of Roku's [two app development models](doc:channel-development-models) you'll want to use. This will determine a tremendous amount about your app, including the schema used for your content feed. To learn more, [read on](doc:channel-development-models)!

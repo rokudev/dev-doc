@@ -74,11 +74,11 @@ Each channel is required to have clearly legible logos which are displayed on th
    2. Denotes "CC" in info HUD for each airing of program.
 
 6. Program specific Content Rating
-   1. [Territory specific rating systems](/trc-docs/live-linear/ovp-linear-ingest-spec.md#accepted-parental-ratings)
+   1. [Territory specific rating systems](doc:ovp-linear-ingest-spec)
    1. TVY and TVY7 are reserved for kidsDirected channels only (ask your Roku rep for details)
 
 7. Air dates/release dates for movies & TV episodes
-8. [Genre/s](/trc-docs/live-linear/ovp-linear-ingest-spec.md#genres-property)
+8. [Genre/s](doc:ovp-linear-ingest-spec)
 
 ### Series
 

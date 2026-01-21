@@ -15,7 +15,7 @@ next:
 
 The roSystemLog component enables the application to receive events from the Roku Streaming Player that are intended for reporting errors and trends, rather than trigger a response to a user action.
 
-All of the log event messages are sent to the roMessagePort that is registered on the [roSystemLogEvent](/docs/references/brightscript/events/rosystemlogevent.md "roSystemLogEvent") object. See roSystemLogEvent for details on the messages.
+All of the log event messages are sent to the roMessagePort that is registered on the [roSystemLogEvent](doc:rosystemlogevent) object. See roSystemLogEvent for details on the messages.
 
 This object is created with no parameters:
 
@@ -28,9 +28,9 @@ The roSystemLog component requires specific Design Patterns in your BrightScript
 - Create the roSystemLog instance on the main thread (it cannot be created on a task thread).
 - Pass the global roMessagePort referenced in the first bullet point to SetMessagePort() on the roSystemLog component.
 - Enable the desired log types using EnableType().
-- Handle the [roSystemLogEvents](/docs/references/brightscript/events/rosystemlogevent.md "roSystemLogEvents") in all message loops.
+- Handle the [roSystemLogEvents](doc:rosystemlogevent) in all message loops.
 
 
 ## Supported interfaces
 
-- [ifSystemLog](/docs/references/brightscript/interfaces/ifsystemlog.md "ifSystemLog")            
+- [ifSystemLog](doc:ifsystemlog)            

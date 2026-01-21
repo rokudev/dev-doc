@@ -40,4 +40,4 @@ Font files can quickly get very large, so be conscious of the size of the font f
 
 ## Supported interfaces
 
-- [ifFontRegistry](/docs/references/brightscript/interfaces/iffontregistry.md "ifFontRegistry")
+- [ifFontRegistry](doc:iffontregistry)

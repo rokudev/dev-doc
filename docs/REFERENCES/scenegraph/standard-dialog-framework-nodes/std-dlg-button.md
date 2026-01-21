@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [Group](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [Group](doc:group)
 
-**StdDlgButton** is the class used for each button in the [button area](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog-framework-overview.md#structure). The buttons are displayed in the order in which they are listed as children of the [**StdDlgButtonArea** node](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md). The size and layout of each button are controlled by the StandardDialog layout algorithm. **StdDlgButton** nodes should only be used as children of a **StdDlgButtonArea** node. 
+**StdDlgButton** is the class used for each button in the [button area](doc:standard-dialog-framework-overview). The buttons are displayed in the order in which they are listed as children of the [**StdDlgButtonArea** node](doc:std-dlg-button-area). The size and layout of each button are controlled by the StandardDialog layout algorithm. **StdDlgButton** nodes should only be used as children of a **StdDlgButtonArea** node. 
 
 ![roku815px - std-dlg-button](https://image.roku.com/ZHZscHItMTc2/std-dlg-button-3.jpg)
 

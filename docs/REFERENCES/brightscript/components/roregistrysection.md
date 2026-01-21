@@ -41,4 +41,4 @@ End Function
 
 ## Supported interfaces
 
-- [ifRegistrySection](/docs/references/brightscript/interfaces/ifregistrysection.md "ifRegistrySection")
+- [ifRegistrySection](doc:ifregistrysection)

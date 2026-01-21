@@ -14,7 +14,7 @@ next:
 
 ## Render thread queue
 
-You can pass data between threads without incurring rendezvous or blocking a Task thread by using the [roRenderThreadQueue component](/docs/developer-program/release-notes/data-transfer-apis.md#queueing-messages). This component provides an interface for queuing messages to be consumed by handlers on the Render thread. This allows for asynchronous communication between Task threads and the Render thread. Messages passed using this mechanism will not block the Render thread in the way that a rendezvous does.
+You can pass data between threads without incurring rendezvous or blocking a Task thread by using the [roRenderThreadQueue component](doc:data-transfer-apis). This component provides an interface for queuing messages to be consumed by handlers on the Render thread. This allows for asynchronous communication between Task threads and the Render thread. Messages passed using this mechanism will not block the Render thread in the way that a rendezvous does.
 
 ### Example
 
@@ -101,9 +101,9 @@ c1(): v2
 init(): v2
 ```
 
-The `rsg_version` entry in your the manifest file defaults to 1.2. To check and test different SceneGraph versions without refactoring your app, see the guide on [Debugging](/docs/developer-program/debugging/debugging-channels.md)
+The `rsg_version` entry in your the manifest file defaults to 1.2. To check and test different SceneGraph versions without refactoring your app, see the guide on [Debugging](doc:debugging-channels)
 
-> Support for the [“rsg_version=1.0"](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) manifest flag is deprecated as of Roku OS 8. This deprecation means that the 1.0 features continue to work in Roku OS 8, but will no longer be supported (and thus should not be expected to work) starting with the next major firmware release. All apps must adopt the [current observer callback](/docs/developer-program/core-concepts/handling-application-events.md#recursive-callback-model) model in successive firmware updates.
+> Support for the [“rsg_version=1.0"](doc:channel-manifest) manifest flag is deprecated as of Roku OS 8. This deprecation means that the 1.0 features continue to work in Roku OS 8, but will no longer be supported (and thus should not be expected to work) starting with the next major firmware release. All apps must adopt the [current observer callback](doc:handling-application-events) model in successive firmware updates.
 
 ### Event handling
 
@@ -115,7 +115,7 @@ There are three types of events that can occur in a SceneGraph application that 
 
 ## Handling remote control key presses
 
-You can handle remote control key events by writing an `onKeyEvent()` function in the [](/docs/references/scenegraph/xml-elements/script.md) element of the component you want to handle the key press event. When the component, or its children, have remote control focus, the `onKeyEvent()` function is called whenever an unhandled key event bubbles up the focus chain to the component.
+You can handle remote control key events by writing an `onKeyEvent()` function in the [](doc:script) element of the component you want to handle the key press event. When the component, or its children, have remote control focus, the `onKeyEvent()` function is called whenever an unhandled key event bubbles up the focus chain to the component.
 
 ### Using the onKeyEvent() function
 
@@ -137,11 +137,11 @@ The `onKeyEvent()` function takes two parameters, `key` and `press`. The `press`
 | fastforward | **Fast Forward** | key usually labeled with two right-pointing triangles        |
 | options     | **Options**      | key labeled with an asterisk                                 |
 
-The `onKeyEvent()` function must return true if the component handled the event, or false if it did not handle the event. Returning false allows the event to continue bubbling up the focus chain (see [Remote control events](/docs/developer-program/core-concepts/scenegraph-xml/remote-control-events.md)) so that ancestors of the component can handle the event.
+The `onKeyEvent()` function must return true if the component handled the event, or false if it did not handle the event. Returning false allows the event to continue bubbling up the focus chain (see [Remote control events](doc:remote-control-events)) so that ancestors of the component can handle the event.
 
 Starting from Roku OS 8, the behavior of the Roku system overlay is such that the system overlay now slides in whenever the * button is pressed, the Video node is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the system overlay does not slide in and the OnKeyEvent() handler is fired.
 
-There are one or more keys on any Roku remote control which are not handled by the `onKeyEvent()` function (or any Roku application event handler), such as the **Home** key. Presses of these keys are handled by the global Roku firmware event handler in a default manner that cannot be modified by application code. Also note that several node classes handle certain remote control key events automatically, so `onKeyEvent()` is not required to handle those events, and should not be used for those events in those nodes. As an example of node classes that automatically handle certain remote control key events, grid node classes such as [PosterGrid](/docs/references/scenegraph/list-and-grid-nodes/postergrid.md) automatically handle **Up**, **Down**, **Right**, and **Left** key presses when the poster grid has focus. Typically, you should use the [ifSGNodeField](/docs/references/brightscript/interfaces/ifsgnodefield.md) `observeField()` method to handle changes in the subject node fields caused by automatic key event handling of the node.
+There are one or more keys on any Roku remote control which are not handled by the `onKeyEvent()` function (or any Roku application event handler), such as the **Home** key. Presses of these keys are handled by the global Roku firmware event handler in a default manner that cannot be modified by application code. Also note that several node classes handle certain remote control key events automatically, so `onKeyEvent()` is not required to handle those events, and should not be used for those events in those nodes. As an example of node classes that automatically handle certain remote control key events, grid node classes such as [PosterGrid](doc:postergrid) automatically handle **Up**, **Down**, **Right**, and **Left** key presses when the poster grid has focus. Typically, you should use the [ifSGNodeField](doc:ifsgnodefield) `observeField()` method to handle changes in the subject node fields caused by automatic key event handling of the node.
 
 ### Example
 
@@ -172,14 +172,14 @@ end function
 
 ## Handling node field value changes
 
-There are two [ifSGNodeField](/docs/references/brightscript/interfaces/ifsgnodefield.md) methods that allow you to create (and remove) observers that continuously monitor any field value of any [roSGNode](/docs/references/brightscript/components/rosgnode.md) object, including the interface fields you have created for custom SceneGraph components:
+There are two [ifSGNodeField](doc:ifsgnodefield) methods that allow you to create (and remove) observers that continuously monitor any field value of any [roSGNode](doc:rosgnode) object, including the interface fields you have created for custom SceneGraph components:
 
 - `observeField()`
 - `unobserveField()`
 
 ### Using the ifSGNodeField observeField() and unobserveField() methods
 
-`observeField()` is an overloaded method with two versions, useful for different purposes. The first allows you to trigger a specified callback function in response to any change in the value of the observed node field. For example, to set up an observer of a [Timer](/docs/references/scenegraph/control-nodes/timer.md) node `fire` field that calls a `handleexampletimerfire()` event handler function that you write:
+`observeField()` is an overloaded method with two versions, useful for different purposes. The first allows you to trigger a specified callback function in response to any change in the value of the observed node field. For example, to set up an observer of a [Timer](doc:timer) node `fire` field that calls a `handleexampletimerfire()` event handler function that you write:
 
 ```
 exampletimer.ObserveField("fire", "handleexampletimerfire")
@@ -222,7 +222,7 @@ Here is an example of a field observer and the associated event handler function
   ]]\>
 \</script\>
 
-> **Optional roSGNodeEvent Callback Function** Argument Field observer callback functions can specify an [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) argument. For example, the changetext() callback function signature in the example above could have been written as sub changetext(event as roSGNodeEvent). In this case, the callback function can call the [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) functions to extract information about the node that triggered the callback, specific field that triggered the callback, etc.
+> **Optional roSGNodeEvent Callback Function** Argument Field observer callback functions can specify an [roSGNodeEvent](doc:rosgnodeevent) argument. For example, the changetext() callback function signature in the example above could have been written as sub changetext(event as roSGNodeEvent). In this case, the callback function can call the [roSGNodeEvent](doc:rosgnodeevent) functions to extract information about the node that triggered the callback, specific field that triggered the callback, etc.
 
 The second version of `observeField()` lets you specify a message port to notify when the observed field changes:
 
@@ -230,7 +230,7 @@ The second version of `observeField()` lets you specify a message port to notify
 m.texttimer.ObserveField("fire", m.port)
 ```
 
-This second case is used when you want a field change to trigger an event in a BrightScript message loop. This is useful when using BrightScript components (such as roChannelStore) which can only be instantiated in the main BrightScript thread or a **Task** node thread. In this case, when the observed field changes, an [roSGNodeEvent](/docs/references/brightscript/events/rosgnodeevent.md) is sent to the port passed to the `observeField()` call. The event `getField()` and `getData()` functions can be called to determine the specific node field that changed, and the new value of the field, respectively.
+This second case is used when you want a field change to trigger an event in a BrightScript message loop. This is useful when using BrightScript components (such as roChannelStore) which can only be instantiated in the main BrightScript thread or a **Task** node thread. In this case, when the observed field changes, an [roSGNodeEvent](doc:rosgnodeevent) is sent to the port passed to the `observeField()` call. The event `getField()` and `getData()` functions can be called to determine the specific node field that changed, and the new value of the field, respectively.
 
 ### Event cascades
 
@@ -238,12 +238,12 @@ Setting the value of a field triggers any field observer functions that may be a
 
 For example, if the width field of a Rectangle that contains a Label is set, an observer of that width field might set the width field of the Label. The width field of the Label might have an observer function that sets the Label’s wrap field. The chain of field settings and observer callback functions that result from setting a field (in this case, the Rectangle’s width field) is an event cascade.
 
-With the release of Roku OS 7.5, nested observer callbacks are no longer deferred. Observer callbacks now happen recursively. See the [Queued Callback Model](/docs/developer-program/core-concepts/handling-application-events.md#queued-callback-model) section above for details.
+With the release of Roku OS 7.5, nested observer callbacks are no longer deferred. Observer callbacks now happen recursively. See the [Queued Callback Model](doc:handling-application-events) section above for details.
 
 ## Handling component \<interface\> field value changes
 
-Any \<field\> element defined in a component [](/docs/references/scenegraph/xml-elements/interface.md) element can have an observer attached by setting the value of the optional `onChange` attribute. Set the `onChange` attribute to the callback function name that will handle the component field value change.
+Any \<field\> element defined in a component [](doc:interface) element can have an observer attached by setting the value of the optional `onChange` attribute. Set the `onChange` attribute to the callback function name that will handle the component field value change.
 
 ## Functional fields
 
-In addition to the field observer model, functions can be called procedurally using the [callFunc() method](/docs/references/brightscript/interfaces/ifsgnodedict.md#callfuncfuncname-as-string--as-dynamic).
+In addition to the field observer model, functions can be called procedurally using the [callFunc() method](doc:ifsgnodedict).

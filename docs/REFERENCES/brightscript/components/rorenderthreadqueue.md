@@ -20,4 +20,4 @@ The **roRenderThreadQueue** node queues messages to be consumed by handlers on t
 
 ## Supported interfaces
 
-- [ifRenderThreadQueue](/docs/references/brightscript/interfaces/ifrenderthreadqueue.md "ifRenderThreadQueue")
+- [ifRenderThreadQueue](doc:ifrenderthreadqueue)

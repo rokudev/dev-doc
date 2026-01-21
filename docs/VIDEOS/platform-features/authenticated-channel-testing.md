@@ -28,18 +28,18 @@ This video explains how developers of authenticated subscription (SVOD), ad-supp
 
 ## Related documentation
 
-[Authenticated app Channel Behavior Analysis testing guide](/docs/developer-program/certification/authenticated-cert-testing.md)
+[Authenticated app Channel Behavior Analysis testing guide](doc:authenticated-cert-testing)
 
-[Roku Remote tool guide](/docs/developer-program/dev-tools/roku-remote-tool.md)  
+[Roku Remote tool guide](doc:roku-remote-tool)  
 
-[Channel Behavior Analysis testing in the Developer Dashboard](/docs/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis-window)
+[Channel Behavior Analysis testing in the Developer Dashboard](doc:channel-publishing-guide)
 
-[Channel Behavior Analysis tests](/docs/developer-program/certification/channel-behavior-analysis-tool.md)
+[Channel Behavior Analysis tests](doc:channel-behavior-analysis-tool)
 
-[Package upload window](/docs/developer-program/publishing/channel-publishing-guide.md#package-upload-window)
+[Package upload window](doc:channel-publishing-guide)
 
-[Static Analysis window](/docs/developer-program/publishing/channel-publishing-guide.md#static-analysis-window)
+[Static Analysis window](doc:channel-publishing-guide)
 
-[Test Credentials window](/docs/developer-program/publishing/channel-publishing-guide.md#test-credentials-window)
+[Test Credentials window](doc:channel-publishing-guide)
 
-[Deep linking window](/docs/developer-program/publishing/channel-publishing-guide.md#deep-linking-window)
+[Deep linking window](doc:channel-publishing-guide)

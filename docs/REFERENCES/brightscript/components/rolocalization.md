@@ -30,4 +30,4 @@ image = loc.GetLocalizedAsset("images", "splash.png")
 
 ## Supported interfaces
 
-- [ifLocalization](/docs/references/brightscript/interfaces/iflocalization.md "ifLocalization")
+- [ifLocalization](doc:iflocalization)

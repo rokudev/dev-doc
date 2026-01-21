@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StandardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**")
+Extends [StandardDialog](doc:standard-dialog)
 
-The **StandardMessageDialog** node is used to displays a message to the user. It is similar to the legacy [Dialog](/docs/references/scenegraph/dialog-nodes/dialog.md) node. It may contain the following items (from top to bottom):
+The **StandardMessageDialog** node is used to displays a message to the user. It is similar to the legacy [Dialog](doc:dialog) node. It may contain the following items (from top to bottom):
 
 - One or more blocks of text at the top.
 - One bulleted / numbered list.

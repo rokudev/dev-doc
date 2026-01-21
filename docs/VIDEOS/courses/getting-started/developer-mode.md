@@ -20,7 +20,7 @@ This video demonstrates how to enable Developer Mode on your Roku device so you 
 
 ## Related documentation
 
-[Activate developer mode on your Roku device](/docs/developer-program/getting-started/developer-setup.md)
+[Activate developer mode on your Roku device](doc:developer-setup)
 
 
 ## How to watch

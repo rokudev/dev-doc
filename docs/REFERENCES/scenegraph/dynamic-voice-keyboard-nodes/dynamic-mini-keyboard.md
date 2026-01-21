@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [DynamicKeyboardBase](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md "**DynamicKeyboardBase**")
+Extends [DynamicKeyboardBase](doc:dynamic-keyboard-base)
 
-The **DynamicMiniKeyboard** node is similar to the [legacy **MiniKeyboard** node](/docs/references/scenegraph/widget-nodes/minikeyboard.md), but with additional voice entry functionality. It enables text and voice entry of letters A-Z and digits 0-9. It is typically used for entering a search query. 
+The **DynamicMiniKeyboard** node is similar to the [legacy **MiniKeyboard** node](doc:minikeyboard), but with additional voice entry functionality. It enables text and voice entry of letters A-Z and digits 0-9. It is typically used for entering a search query. 
 
 The key layout is fixed based on the node's pre-built Key Definition File.
 
@@ -24,7 +24,7 @@ The key layout is fixed based on the node's pre-built Key Definition File.
 
 ## Fields
 
-The DynamicMiniKeyboard node inherits all its fields from its parent [DynamicKeyboardBase](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md) node class. See the [DynamicKeyboardBase](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md) and its base classes ([Group](/docs/references/scenegraph/layout-group-nodes/group.md) and [Node](/docs/references/scenegraph/node.md)) for descriptions of the fields that can be configured.
+The DynamicMiniKeyboard node inherits all its fields from its parent [DynamicKeyboardBase](doc:dynamic-keyboard-base) node class. See the [DynamicKeyboardBase](doc:dynamic-keyboard-base) and its base classes ([Group](doc:group) and [Node](doc:node)) for descriptions of the fields that can be configured.
 
 ## Default VoiceTextEditBox settings
 

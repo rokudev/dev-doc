@@ -17,7 +17,7 @@ next:
 
 | Name            | Description                                                           |
 |-----------------|-----------------------------------------------------------------------|
-|[roTextureManager](/docs/references/brightscript/components/rotexturemanager.md "roTextureManager") | The Texture Manager provides a set of API's for managing an roBitmap cache   |
+|[roTextureManager](doc:rotexturemanager) | The Texture Manager provides a set of API's for managing an roBitmap cache   |
 
 ## Supported methods
 

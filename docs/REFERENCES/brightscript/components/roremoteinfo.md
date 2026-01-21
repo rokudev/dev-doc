@@ -41,4 +41,4 @@ true
 
 ## Supported interfaces
 
-- [ifRemoteInfo](/docs/references/brightscript/interfaces/ifremoteinfo.md "ifRemoteInfo")
+- [ifRemoteInfo](doc:ifremoteinfo)

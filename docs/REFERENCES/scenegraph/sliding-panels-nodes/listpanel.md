@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Panel**](/docs/references/scenegraph/sliding-panels-nodes/panel.md)
+Extends [**Panel**](doc:panel)
 
 The ListPanel node class allows you to easily create a Panel that adheres to the Roku layout and behavior for panels that contain a LabelList or MarkupList node. The ListPanel provides the following functionality:
 

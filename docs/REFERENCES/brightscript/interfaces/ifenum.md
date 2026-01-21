@@ -16,12 +16,12 @@ next:
 
 | Name               | Description |
 | ------------------ | ----------- |
-| [roArray](/docs/references/brightscript/components/roarray.md "roArray")            | An array stores an indexed collection of BrightScript objects |
-| [roAssociativeArray](/docs/references/brightscript/components/roassociativearray.md "roAssociativeArray") | An associative array (also known as a map, dictionary or hash table) allows objects to be associated with string keys |
-| [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray")        | The byte array component is used to contain and manipulate an arbitrary array of bytes |
-| [roList](/docs/references/brightscript/components/rolist.md "roList")             | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members |
-| [roMessagePort](/docs/references/brightscript/components/romessageport.md "roMessagePort")      | A Message Port is the place messages (events) are sent |
-| [roXMLList](/docs/references/brightscript/components/roxmllist.md "roXMLList")          | Contains a list of roXML objects |
+| [roArray](doc:roarray)            | An array stores an indexed collection of BrightScript objects |
+| [roAssociativeArray](doc:roassociativearray) | An associative array (also known as a map, dictionary or hash table) allows objects to be associated with string keys |
+| [roByteArray](doc:robytearray)        | The byte array component is used to contain and manipulate an arbitrary array of bytes |
+| [roList](doc:rolist)             | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members |
+| [roMessagePort](doc:romessageport)      | A Message Port is the place messages (events) are sent |
+| [roXMLList](doc:roxmllist)          | Contains a list of roXML objects |
 
 
 ## Supported methods

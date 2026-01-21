@@ -41,14 +41,14 @@ object.InitClientCertificates()
 
 ## Supported interfaces
 
-- [ifUrlTransfer](/docs/references/brightscript/interfaces/ifurltransfer.md "ifUrlTransfer")                 
-- [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md "ifHttpAgent")                    
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")               
-- [ifGetMessagePort](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort")               
+- [ifUrlTransfer](doc:ifurltransfer)                 
+- [ifHttpAgent](doc:ifhttpagent)                    
+- [ifSetMessagePort](doc:ifsetmessageport)               
+- [ifGetMessagePort](doc:ifgetmessageport)               
 
 
 ## Supported events
 
-- [roUrlEvent](/docs/references/brightscript/events/rourlevent.md "roUrlEvent")  
+- [roUrlEvent](doc:rourlevent)  
 
           

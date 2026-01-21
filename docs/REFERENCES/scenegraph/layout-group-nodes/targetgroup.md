@@ -12,9 +12,9 @@ next:
 ---
 
 
-Extends [**Group**](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
+Extends [**Group**](doc:group)
 
-The TargetGroup node class associates a set of rectangular regions that children of the group will occupy. Like MarkupList, the TargetGroup has a content field containing the data for each item and an itemComponentName field that specifies an RSG component that will be used to render a content item. It also has a targetSet field that contains a [TargetSet](/docs/references/scenegraph/list-and-grid-nodes/targetset.md "TargetSet") that define a set of rectangular targets where children of the TargetGroup will be rendered.
+The TargetGroup node class associates a set of rectangular regions that children of the group will occupy. Like MarkupList, the TargetGroup has a content field containing the data for each item and an itemComponentName field that specifies an RSG component that will be used to render a content item. It also has a targetSet field that contains a [TargetSet](doc:targetset) that define a set of rectangular targets where children of the TargetGroup will be rendered.
 
 The TargetGroup node is typically used to create a scrolling list (or row) of items where the focused item occupies more space than the other items.
 
@@ -37,8 +37,8 @@ The above use case specifies the most common use case for the TargetGroup node, 
 
 | Field                      | Type        | Default     | Access Permission | Description                                                  |
 | -------------------------- | ----------- | ----------- | ----------------- | ------------------------------------------------------------ |
-| itemComponentName          | string      |             | READ_WRITE        | Specifies the name of a XML component for the group items. An instance of this component is created on demand for each visible item of the group. The XML component must define a specific interface as detailed in [TargetGroup XML Component](/docs/references/scenegraph/layout-group-nodes/targetgroup.md#targetgroup-xml-component "TargetGroup XML Component") below |
-| content                    | ContentNode | none        | READ_WRITE        | Specifies the content for the group. See [Data Bindings](/docs/references/scenegraph/layout-group-nodes/targetgroup.md#data-bindings "Data Bindings") below for more details |
+| itemComponentName          | string      |             | READ_WRITE        | Specifies the name of a XML component for the group items. An instance of this component is created on demand for each visible item of the group. The XML component must define a specific interface as detailed in [TargetGroup XML Component](doc:targetgroup) below |
+| content                    | ContentNode | none        | READ_WRITE        | Specifies the content for the group. See [Data Bindings](doc:targetgroup) below for more details |
 | targetSet                  | TargetSet   | invalid     | READ_WRITE        | Specifies the TargetSet to use to define the target regions of the items in the group. When set or modified, the target regions are immediately adjusted to use the new values |
 | defaultTargetSetFocusIndex | int         | 0           | READ_WRITE        | For TargetSet's that do not specify a focusIndex, this value will be used as the index of the TargetSet where the focused item is located. If a TargetSet specifies any value for the focusIndex, that value will be used instead of defaultTargetSetFocusIndex |
 | wrap                       | Boolean     | false       | READ_WRITE        | Specifies whether the content items wraparound at the end of the TargetGroup to fill all of the targets rectangles |

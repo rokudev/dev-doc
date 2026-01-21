@@ -33,9 +33,9 @@ screen.show()
 
 ## Supported interfaces
 
-- [ifSgScreen](/docs/references/brightscript/interfaces/ifsgscreen.md "ifSgScreen")
+- [ifSgScreen](doc:ifsgscreen)
 
 
 ## Supported events
 
-- [roSGScreenEvent](/docs/references/brightscript/events/rosgscreenevent.md "roSGScreenEvent")             
+- [roSGScreenEvent](doc:rosgscreenevent)             

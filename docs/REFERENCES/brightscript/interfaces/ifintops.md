@@ -16,9 +16,9 @@ next:
 
 | Name      | Description                                  |
 | --------- | -------------------------------------------- |
-| [roInt](/docs/references/brightscript/components/roint.md "roInt")     | Object equivalent for intrinsic type Integer |
+| [roInt](doc:roint)     | Object equivalent for intrinsic type Integer |
 
-> To verify whether an object is of an integer type, you can pass the object and this interface into the [GetInterface() method](/docs/references/brightscript/language/global-utility-functions.md#getinterfaceobject-as-object-ifname-as-string-as-interface):
+> To verify whether an object is of an integer type, you can pass the object and this interface into the [GetInterface() method](doc:global-utility-functions):
 >
 > ```
 > if (GetInterface(someInteger, "ifIntOps") <> invalid)

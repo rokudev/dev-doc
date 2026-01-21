@@ -16,8 +16,8 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roArray](/docs/references/brightscript/components/roarray.md "roArray") | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type. |
-| [roByteArray](/docs/references/brightscript/interfaces/ifbytearray.md) | The byte array component is used to contain and manipulate an arbitrary array of bytes |
+| [roArray](doc:roarray) | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type. |
+| [roByteArray](doc:ifbytearray) | The byte array component is used to contain and manipulate an arbitrary array of bytes |
 
 ## Supported methods
 

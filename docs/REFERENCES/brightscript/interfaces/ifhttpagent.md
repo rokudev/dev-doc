@@ -17,13 +17,13 @@ The ifHttpAgent methods modify the way that URLs are accessed
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roAppManager](/docs/references/brightscript/components/roappmanager.md "roAppManager") | The Application Manager APIs set application level attributes, which mostly affect the look-and-feel of the application |
-| [roAudioPlayer](/docs/references/brightscript/components/roaudioplayer.md "roAudioPlayer") | The Audio Player object provides the ability to setup the playing of a series of audio streams |
-| [roSGNode](/docs/references/brightscript/components/rosgnode.md "roSGNode") | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
-| [roTextureManager](/docs/references/brightscript/components/rotexturemanager.md "roTextureManager") | The Texture Manager provides a set of API's for managing an roBitmap cache. |
-| [roTextureRequest](/docs/references/brightscript/components/rotexturerequest.md "roTextureRequest") | An roTextureRequest is used to make requests to the roTextureManager |
-| [roUrlTransfer](/docs/references/brightscript/components/rourltransfer.md "roUrlTransfer") | A roUrlTransfer object transfers data to or from remote servers specified by URLs |
-| [roVideoPlayer](/docs/references/brightscript/components/rovideoplayer.md "roVideoPlayer") | The roVideoPlayer component implements a video player with more programmatic control, but less user control than the roVideoScreen component |
+| [roAppManager](doc:roappmanager) | The Application Manager APIs set application level attributes, which mostly affect the look-and-feel of the application |
+| [roAudioPlayer](doc:roaudioplayer) | The Audio Player object provides the ability to setup the playing of a series of audio streams |
+| [roSGNode](doc:rosgnode) | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
+| [roTextureManager](doc:rotexturemanager) | The Texture Manager provides a set of API's for managing an roBitmap cache. |
+| [roTextureRequest](doc:rotexturerequest) | An roTextureRequest is used to make requests to the roTextureManager |
+| [roUrlTransfer](doc:rourltransfer) | A roUrlTransfer object transfers data to or from remote servers specified by URLs |
+| [roVideoPlayer](doc:rovideoplayer) | The roVideoPlayer component implements a video player with more programmatic control, but less user control than the roVideoScreen component |
 
 
 ## Supported methods

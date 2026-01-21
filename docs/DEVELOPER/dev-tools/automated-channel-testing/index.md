@@ -10,23 +10,23 @@ metadata:
   robots: index
 ---
 
-Roku app developers can use Roku's test automation software to write and execute test cases, including app purchasing, performance, deep linking, and other certification-related testing. Roku provides custom [Selenium](https://selenium.dev)-based [WebDriver APIs](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md) for sending commands to launch apps, send keypresses, and check whether SceneGraph components are present on the screen. Apps can use the WebDriver APIs to control a Roku device, while using a test framework or programming language to create, run, log, and record test cases. To make automated testing even easier, Roku provides [Robot](/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md) and [JavaScript](/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md) libraries and a [Postman collection](#postman-collection).
+Roku app developers can use Roku's test automation software to write and execute test cases, including app purchasing, performance, deep linking, and other certification-related testing. Roku provides custom [Selenium](https://selenium.dev)-based [WebDriver APIs](doc:web-driver) for sending commands to launch apps, send keypresses, and check whether SceneGraph components are present on the screen. Apps can use the WebDriver APIs to control a Roku device, while using a test framework or programming language to create, run, log, and record test cases. To make automated testing even easier, Roku provides [Robot](doc:robot-framework-library) and [JavaScript](doc:javascript-library) libraries and a [Postman collection](#postman-collection).
 
 Executing test automation allows apps to run state-driven UI testing for a number of scenarios. For example, apps can create a test case that installs an app and launches it with a specific contentID and mediaType to verify that deep linking works. Authenticated apps can execute more complex test cases such as launching an app, trying to play content before authenticating the user, entering valid/invalid credentials, and then trying to play content again.
 
-All test cases can be run simultaneously on multiple Roku devices. This is useful for testing app performance across different models with varying RAM and CPU. It is especially important for certification testing, which requires apps to meet [performance criteria](/docs/developer-program/certification/certification.md#3-performance) that varies for different device types.
+All test cases can be run simultaneously on multiple Roku devices. This is useful for testing app performance across different models with varying RAM and CPU. It is especially important for certification testing, which requires apps to meet [performance criteria](doc:certification) that varies for different device types.
 
 Implementing automated testing speeds up app development by reducing the number of manual UI tests that need to be run for simple to complex test cases.
 
 > Roku's test automation tools require Roku OS 9.1 or higher.
 
-> To test production apps with the Roku test automation tools, you must [package the app](/docs/developer-program/publishing/packaging-channels.md#rekeying) on your Roku device using the same Roku developer account linked to the production version of the app.
+> To test production apps with the Roku test automation tools, you must [package the app](doc:packaging-channels) on your Roku device using the same Roku developer account linked to the production version of the app.
 
 ## Workflow
 
-Test cases can be written with the [Roku Robot Framework Library](/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md), [Roku JavaScript library](/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md), another test framework, or a programming language such as Python, JavaScript, or Go. The test scripts send command requests to the [Roku WebDriver](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md) via the [JSON Wire Protocol](https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol).
+Test cases can be written with the [Roku Robot Framework Library](doc:robot-framework-library), [Roku JavaScript library](doc:javascript-library), another test framework, or a programming language such as Python, JavaScript, or Go. The test scripts send command requests to the [Roku WebDriver](doc:web-driver) via the [JSON Wire Protocol](https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol).
 
-The Roku WebDriver includes an HTTP server that receives the command requests and an [External Control Protocol (ECP)](/docs/developer-program/dev-tools/external-control-api.md) client that translates them into ECP requests, which it then routes to the target device.
+The Roku WebDriver includes an HTTP server that receives the command requests and an [External Control Protocol (ECP)](doc:external-control-api) client that translates them into ECP requests, which it then routes to the target device.
 
 The device returns the result of the command and XML data back to the Roku WebDriver, which then passes this information back to the test script as a JSON object (via the WebDriver client application).
 
@@ -36,11 +36,11 @@ The following diagram illustrates the automated app testing workflow:
 
 ## App UI testing
 
-The Roku WebDriver includes a set of [APIs](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#roku-webdriver-apis) that enable developers to run state-driven UI tests. For example, the RokuWebDriver has an [**element** API](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/element) to check if a specific SceneGraph component is present on the screen in order to determine whether a specific screen has been loaded. In addition, the Roku Robot Framework and JavaScript libraries have [keywords](/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md#keywords) that are mapped to the Roku WebDriver APIs so that developers can execute app UI-based test cases with them.
+The Roku WebDriver includes a set of [APIs](doc:web-driver) that enable developers to run state-driven UI tests. For example, the RokuWebDriver has an [**element** API](doc:element) to check if a specific SceneGraph component is present on the screen in order to determine whether a specific screen has been loaded. In addition, the Roku Robot Framework and JavaScript libraries have [keywords](doc:robot-framework-library) that are mapped to the Roku WebDriver APIs so that developers can execute app UI-based test cases with them.
 
 ## Getting started
 
-Test the [Roku WebDriver](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md) following these steps:
+Test the [Roku WebDriver](doc:web-driver) following these steps:
 
 1. Clone the [Roku automated app testing repository](https://github.com/rokudev/automated-channel-testing) or download it as a zip file.
 
@@ -56,7 +56,7 @@ Test the [Roku WebDriver](/docs/developer-program/dev-tools/automated-channel-te
        python -m pip install requests
        ```
 
-   d.  [Sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the sample app (**channel.zip**) included in the **/automated-channel-testing-master/sample** directory.
+   d.  [Sideload](doc:developer-setup) the sample app (**channel.zip**) included in the **/automated-channel-testing-master/sample** directory.
 
    e. Run the sample Web driver client application. Include the IP address of your Roku device as an argument. If the test is successful, "Test Passed" is output in the console.
 
@@ -66,7 +66,7 @@ Test the [Roku WebDriver](/docs/developer-program/dev-tools/automated-channel-te
 
 ### Installing and testing the Robot Framework Library
 
-To install the [Roku Robot Framework Library](/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md) and test it on one or more devices, follow these steps:
+To install the [Roku Robot Framework Library](doc:robot-framework-library) and test it on one or more devices, follow these steps:
 
 1. Optionally, install the Python version of the Roku Robot Framework Library via a local Python package. This enables you to directly import the Roku Robot Framework library in your Robot test case files.
 
@@ -148,7 +148,7 @@ To install the [Roku Robot Framework Library](/docs/developer-program/dev-tools/
        }
        ```
 
-   b.  [Sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
+   b.  [Sideload](doc:developer-setup) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
 
    c.  Update the **/automated-channel-testing-master/RobotLibrary/Library/variables.py** file with the IP address of the Roku test device and WebDriver path.
 
@@ -163,7 +163,7 @@ To install the [Roku Robot Framework Library](/docs/developer-program/dev-tools/
 
 ### Installing and testing the Roku JavaScript Library
 
-To install the [Roku JavaScript  Library](/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md) and test it on one or more devices, follow these steps:
+To install the [Roku JavaScript  Library](doc:javascript-library) and test it on one or more devices, follow these steps:
 
 1. Download and install the [node.js](https://nodejs.org/en/) JavaScript runtime environment.
 
@@ -255,7 +255,7 @@ To install the [Roku JavaScript  Library](/docs/developer-program/dev-tools/auto
        }
        ```
 
-   b.  [Sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
+   b.  [Sideload](doc:developer-setup) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
 
    c. Run the following console command:
 
@@ -273,7 +273,7 @@ To import the Postman JSON collection and use it to test the Roku WebDriver API 
 
 2. Verify that the Roku WebDriver server is running (to start the WebDriver, run the **main** executable in the **/automated-channel-testing-master/src** folder).
 
-3. [Sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
+3. [Sideload](doc:developer-setup) the sample app (**channel.zip**) in the **/automated-channel-testing-master/sample** folder.
 
 4. In Postman, import the **/automated-channel-testing-master/sample/Postman/WebDriver_endpoints** Postman collection.
 

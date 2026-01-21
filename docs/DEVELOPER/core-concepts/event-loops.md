@@ -37,7 +37,7 @@ Normally a script will have a structure like this:
 
 - The script creates a BrightScript Component of type "roMessagePort" .
 - The script instructs one or more other BrightScript Components to send their events to this message port, by calling SetMessagePort().
-- The script waits for an event to be delivered to the message port. The actual function to do this is [ifMessagePort.WaitMessage](/docs/references/brightscript/interfaces/ifmessageport.md), but BrightScript also provides the built-in statement WAIT to make this easier.
+- The script waits for an event to be delivered to the message port. The actual function to do this is [ifMessagePort.WaitMessage](doc:ifmessageport), but BrightScript also provides the built-in statement WAIT to make this easier.
 - When the script receives a message, it determines what type of event occurred and handles the event.
 - If a script receives an unknown type of event, it should ignore it; then just continue processing other events. Roku may occasionally add new events, and if your script is written to exit on unknown events, any future events that Roku may add will cause your application to misbehave.
 
@@ -67,7 +67,7 @@ end while
 
 ## Game scripts
 
-Real-time games which use the [ifDraw2D ](/docs/references/brightscript/interfaces/ifdraw2d.md)interface typically cannot wait like this for a message in their event loop, because the screen may need to be updated with new animation frames even if no buttons are pressed or other events occur.  One way to deal with this is to use a timeout as the first parameter of the call to wait:
+Real-time games which use the [ifDraw2D ](doc:ifdraw2d)interface typically cannot wait like this for a message in their event loop, because the screen may need to be updated with new animation frames even if no buttons are pressed or other events occur.  One way to deal with this is to use a timeout as the first parameter of the call to wait:
 
 ```
 msg = wait(5, port)
@@ -75,7 +75,7 @@ msg = wait(5, port)
 
 This waits for a message, but if no message is received within 5 milliseconds, the wait returns and msg is set to 'invalid'.  When feasible, this is a simple approach.
 
-However, an approach that usually offers more predictable performance is to use [ifMessagePort.GetMessage](/docs/references/brightscript/interfaces/ifmessageport.md) instead of wait.  This is because GetMessage will return immediately if no message is available, while the actual amount of time before a timed wait returns can vary depending on various factors.  A game script is often structured like this.
+However, an approach that usually offers more predictable performance is to use [ifMessagePort.GetMessage](doc:ifmessageport) instead of wait.  This is because GetMessage will return immediately if no message is available, while the actual amount of time before a timed wait returns can vary depending on various factors.  A game script is often structured like this.
 
 ```
 port = CreateObject("roMessagePort")

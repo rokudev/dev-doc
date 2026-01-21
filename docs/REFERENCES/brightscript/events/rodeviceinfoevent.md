@@ -125,7 +125,7 @@ Checks the current status of the device. This method returns an roAssociativeArr
       </td>
 
       <td>
-        The audio codec capability has changed if true. If your application receives this event, you can check the current audio playback capability using the [`roDeviceInfo.CanDecodeAudio`](/docs/references/brightscript/interfaces/ifdeviceinfo.md#ifDeviceInfo-CanDecodeAudio\(audio_formatasObject\)asObject) and [`roDeviceInfo.GetAudioDecodeInfo`](/docs/references/brightscript/interfaces/ifdeviceinfo.md#ifDeviceInfo-GetAudioDecodeInfo\(\)asObject) methods. <br /><br />This event is only fired if the [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](/docs/references/brightscript/interfaces/ifdeviceinfo.md#ifDeviceInfo-EnableAudioGuideChangedEvent\(enableasBoolean\)) is called before entering the message loop.
+        The audio codec capability has changed if true. If your application receives this event, you can check the current audio playback capability using the [`roDeviceInfo.CanDecodeAudio`](doc:ifdeviceinfo)asObject) and [`roDeviceInfo.GetAudioDecodeInfo`](doc:ifdeviceinfo)asObject) methods. <br /><br />This event is only fired if the [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo)) is called before entering the message loop.
       </td>
     </tr>
 
@@ -139,7 +139,7 @@ Checks the current status of the device. This method returns an roAssociativeArr
       </td>
 
       <td>
-        The video codec capability has changed if true. If your application receives this event, you can check the current video playback capability using the [`roDeviceInfo.CanDecodeVideo`](/docs/references/brightscript/interfaces/ifdeviceinfo.md#ifDeviceInfo-CanDecodeVideo\(video_formatasObject\)asObject) method.<br /><br />This event is only fired if [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](/docs/references/brightscript/interfaces/ifdeviceinfo.md#ifDeviceInfoEnableAudioGuideChangedEvent\(enableasBoolean\)) is called before entering the message loop.
+        The video codec capability has changed if true. If your application receives this event, you can check the current video playback capability using the [`roDeviceInfo.CanDecodeVideo`](doc:ifdeviceinfo)asObject) method.<br /><br />This event is only fired if [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo)) is called before entering the message loop.
       </td>
     </tr>
   </tbody>

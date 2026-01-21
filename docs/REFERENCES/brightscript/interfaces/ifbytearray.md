@@ -16,7 +16,7 @@ next:
 
 | Name        | Description                               |
 | ----------- | ----------------------------------------- |
-| [roByteArray](/docs/references/brightscript/components/robytearray.md "roByteArray") | The byte array component is used to contain and manipulate an arbitrary array of bytes |
+| [roByteArray](doc:robytearray) | The byte array component is used to contain and manipulate an arbitrary array of bytes |
 
 
 ## Supported methods
@@ -251,7 +251,7 @@ Sets the contents of the Byte Array to the specified string using UTF-8 encoding
 
 #### Description
 
-Returns the signed byte at the specified zero-based index in the Byte Array<br /><br />Use the [ifArrayGet.GetEntry()](/docs/references/brightscript/interfaces/ifarrayget.md#getentryindex-as-integer-as-dynamic) method or the [ ] array operator to read an unsigned byte in the Byte Array.
+Returns the signed byte at the specified zero-based index in the Byte Array<br /><br />Use the [ifArrayGet.GetEntry()](doc:ifarrayget) method or the [ ] array operator to read an unsigned byte in the Byte Array.
 
 #### Parameters
 

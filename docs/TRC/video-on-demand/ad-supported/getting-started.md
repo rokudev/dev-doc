@@ -14,12 +14,12 @@ next:
 
 ## Content submissions
 
-If you have content that you would like to submit for The Roku Channel, please fill out our avails template (series and feature/movies on separate templates) and send to [trc-avod-submissions@roku.com](mailto:trc-avod-submissions@roku.com). Avails templates are available in the [Title Avails Specifications](/trc-docs/video-on-demand/title-avail-specifications.md). If you own or control the necessary rights for only a small volume of VOD titles, please consider working with one of Roku’s Preferred Aggregators.
+If you have content that you would like to submit for The Roku Channel, please fill out our avails template (series and feature/movies on separate templates) and send to [trc-avod-submissions@roku.com](mailto:trc-avod-submissions@roku.com). Avails templates are available in the [Title Avails Specifications](doc:title-avail-specifications). If you own or control the necessary rights for only a small volume of VOD titles, please consider working with one of Roku’s Preferred Aggregators.
 
 ## Specifications
 
-- [Roku-Hosted (Ingest) Specs](/trc-docs/video-on-demand/ingest-specifications.md)
-- [Partner-Hosted (Feed) Specs](/trc-docs/live-linear/live-feed-specifications.md)
+- [Roku-Hosted (Ingest) Specs](doc:ingest-specifications)
+- [Partner-Hosted (Feed) Specs](doc:live-feed-specifications)
 
 ## Analytics & reporting
 

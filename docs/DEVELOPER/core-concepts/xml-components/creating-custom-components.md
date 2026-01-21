@@ -152,7 +152,7 @@ At this point, the component being extended is completely initialized,
 and the component or components to be extended from it are constructed,
 following the same three steps as above. Note these are the same steps
 described in [**Component initialization
-order**](/docs/developer-program/core-concepts/xml-components/component-initialization-order.md), and note the
+order**](doc:component-initialization-order), and note the
 implications of the initialization order described there.
 
 ### Characteristics of Components Extended from Custom Components
@@ -172,7 +172,7 @@ custom components:
     extended, the definition of the extended component field is used,
     similar to functions.
   - Any component object declared with the `m` object reference (see
-    [**SceneGraph Data Scoping**](/docs/developer-program/core-concepts/data-scoping.md)
+    [**SceneGraph Data Scoping**](doc:data-scoping)
     can be accessed in either the component that is extended or any
     components extended from it.
   - All functions defined in a component that is extended can be called

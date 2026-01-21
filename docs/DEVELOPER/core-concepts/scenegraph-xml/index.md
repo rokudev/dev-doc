@@ -55,11 +55,11 @@ two.
 In the Roku SceneGraph implementation, there are only three basic types
 of nodes that actually draw something.
 
-* A [Rectangle](/docs/references/scenegraph/renderable-nodes/rectangle.md) node renders a rectangle
+* A [Rectangle](doc:rectangle) node renders a rectangle
   to the display screen
-* A [Label](/docs/references/scenegraph/label-nodes/label.md) node renders a formatted string of
+* A [Label](doc:label) node renders a formatted string of
   text to the display screen
-* A [Poster](/docs/references/scenegraph/renderable-nodes/poster.md) node renders a graphical image
+* A [Poster](doc:poster) node renders a graphical image
   to the display screen
 
 The power of the Roku SceneGraph architecture is that the three basic

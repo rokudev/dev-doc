@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**TargetGroup**](/docs/references/scenegraph/layout-group-nodes/targetgroup.md)
+Extends [**TargetGroup**](doc:targetgroup)
 
 The TargetList node class adds useful functionality to the TargetGroup node by making is easy to set up lists and rows of items with limited amounts of scripting required. In particular, TargetList provides a built-in focused/unfocused transition, as well as a simple way to implement various focus management policies (i.e. fixed focus, floating focus, etc.). It also provides default key handling for navigating the list or row.
 

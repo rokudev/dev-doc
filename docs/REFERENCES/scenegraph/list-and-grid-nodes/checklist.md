@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**LabelList**](/docs/references/scenegraph/list-and-grid-nodes/labellist.md)
+Extends [**LabelList**](doc:labellist)
 
 The CheckList node class is a simple list class that displays a list of items, some of which include checkboxes that allow the user to select or unselect that item. Each item in the list displays a text string and an optional checkbox icon positioned to the left of the text string.
 

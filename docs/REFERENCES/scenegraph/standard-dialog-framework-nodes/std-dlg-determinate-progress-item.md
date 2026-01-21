@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md "**StdDlgItemBase**")
+Extends [StdDlgItemBase](doc:std-dlg-item-base)
 
-The **StdDlgDeterminateProgressItem** node is used to display a progress indicator in the dialog's content area. It provides the percentage of progress that has been completed for a task that takes a limited amount of time. It should only be used as a child of a [**StdDlgContentArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-content-area.md) node.
+The **StdDlgDeterminateProgressItem** node is used to display a progress indicator in the dialog's content area. It provides the percentage of progress that has been completed for a task that takes a limited amount of time. It should only be used as a child of a [**StdDlgContentArea**](doc:std-dlg-content-area) node.
 
 ![roku815px - std-dlg-determinate-progress-item](https://image.roku.com/ZHZscHItMTc2/std-dlg-determinate-progress-item-2.jpg)
 

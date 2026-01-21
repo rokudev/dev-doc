@@ -14,15 +14,15 @@ next:
 
 
 
-Extends [StdDlgItemBase](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md)
+Extends [StdDlgItemBase](doc:std-dlg-item-base)
 
-The **StdDlgItemGroup** node is used to visually group a set of StdDlgAreaBase child nodes in a custom dialog. Developers can use this node to reduce the vertical spacing between the StdDlgItemBase child nodes. For [**StdDlgActionCardItem**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-action-card-item.md) nodes, the **StdDlgItemGroup** node enforces the rule that when multiple items **StdDlgActionCardItem** nodes have their **iconType** field set to "radiobutton", only one may have its **selected** status be set to "true".
+The **StdDlgItemGroup** node is used to visually group a set of StdDlgAreaBase child nodes in a custom dialog. Developers can use this node to reduce the vertical spacing between the StdDlgItemBase child nodes. For [**StdDlgActionCardItem**](doc:std-dlg-action-card-item) nodes, the **StdDlgItemGroup** node enforces the rule that when multiple items **StdDlgActionCardItem** nodes have their **iconType** field set to "radiobutton", only one may have its **selected** status be set to "true".
 
-The **StdDlgItemGroup** node may contain one or more [**StdDlgItemBase**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md) child nodes (for example, StdDlgTextItem, StdDlgGraphicItem, and so on) as its children. It will visually group those child **StdDlgItemBase** nodes by reducing the amount of vertical space between them. However, the primary benefit of the StdDlgItemGroup node is managing **StdDlgActionCardItem** child nodes that have their **iconType** field set to "radiobutton".
+The **StdDlgItemGroup** node may contain one or more [**StdDlgItemBase**](doc:std-dlg-item-base) child nodes (for example, StdDlgTextItem, StdDlgGraphicItem, and so on) as its children. It will visually group those child **StdDlgItemBase** nodes by reducing the amount of vertical space between them. However, the primary benefit of the StdDlgItemGroup node is managing **StdDlgActionCardItem** child nodes that have their **iconType** field set to "radiobutton".
 
 ![roku815px - actionCards-radio-checkbox-items](https://image.roku.com/ZHZscHItMTc2/actionCards-radio-checkbox-items.jpg)
 
-> See the [**stdDlgActionCardItem** documentation](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-action-card-item.md#radiobutton-icontype) for code demonstarting how to use the **StdDlgItemGroup** node in a custom dialog.
+> See the [**stdDlgActionCardItem** documentation](doc:std-dlg-action-card-item) for code demonstarting how to use the **StdDlgItemGroup** node in a custom dialog.
 
 #### Fields
 

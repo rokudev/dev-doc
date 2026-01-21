@@ -26,4 +26,4 @@ To get started building a Roku app, do the following:
 
 
 
-- **[Activate developer mode on your device](/docs/developer-program/getting-started/developer-setup.md)**. This enables you run sample apps on your device to help you learn Roku development and being running and testing your own apps.
+- **[Activate developer mode on your device](doc:developer-setup)**. This enables you run sample apps on your device to help you learn Roku development and being running and testing your own apps.

@@ -22,7 +22,7 @@ app is that screensavers do not accept any user input (e.g., remote button push,
 is running, any user input terminates the screensaver and returns the user to the streaming app.
 
 Screensavers **cannot** include:
-* [DynamicComponent libraries](/docs/references/scenegraph/control-nodes/componentlibrary.md)
+* [DynamicComponent libraries](doc:componentlibrary)
 * Ad insertion
 * In-app purchases
 * Deep links
@@ -33,7 +33,7 @@ Screensavers **cannot** include:
 When a screensaver is run, a new Brightscript context is created for screensaver execution. The
 screensaver does not share Brightscript data objects with the streaming app.  
 
-The screensaver's [BrightScript Debugger](/docs/developer-program/debugging/debugging-channels.md) uses port 8087.
+The screensaver's [BrightScript Debugger](doc:debugging-channels) uses port 8087.
 
 ## Discovery
 
@@ -57,7 +57,7 @@ After clicking **Change screensaver settings** the **`RunScreenSaverSettings()`*
 
 ## Manifest entries
 
-A screensaver must have an entry in its [manifest file](/docs/developer-program/getting-started/architecture/channel-manifest.md) named
+A screensaver must have an entry in its [manifest file](doc:channel-manifest) named
 **`screensaver_title`** whose value is the title of the screensaver (usually the same as the title of the app).
 
 > The **`screensaver_title`** manifest entry may only be used for screensaver applications. Other apps

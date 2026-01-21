@@ -17,7 +17,7 @@ next:
 
 | Name         | Description                                                           |
 |--------------|-----------------------------------------------------------------------|
-|[roTimespan](/docs/references/brightscript/components/rotimespan.md "roTimespan")    | The Timespan object provides an interface to a simple timer for tracking the duration of activities                                                                      |
+|[roTimespan](doc:rotimespan)    | The Timespan object provides an interface to a simple timer for tracking the duration of activities                                                                      |
 
 
 ## Supported methods

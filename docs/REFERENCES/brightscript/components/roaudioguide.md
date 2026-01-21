@@ -16,16 +16,16 @@ next:
 
 The roAudioGuide component provides screen reader support for applications that require custom speech beyond what is provided by the automatic screen reader in SDK and Scene Graph components.
 
-Though some of the roAudioGuide API is similar to [roTextToSpeech](/docs/references/brightscript/components/rotexttospeech.md "roTextToSpeech"), roAudioGuide provides support specific to screen reader, including:
+Though some of the roAudioGuide API is similar to [roTextToSpeech](doc:rotexttospeech), roAudioGuide provides support specific to screen reader, including:
 
 - Speaks when the screen reader is enabled, and doesn't speak if it isn't.
 - Automatically splits up text to reduce lag.
 - Uses the correct voice, language, volume, and speech rate for the screen reader.
 - Tries to be "smart" by pre-processing the text for correct pronunciation of things like currency, email addresses, acronyms, media-related names and titles, etc.
 
-Usually, roAudioGuide would be used on its own, but it can be used in conjunction with [roTextToSpeech](/docs/references/brightscript/components/rotexttospeech.md "roTextToSpeech").
+Usually, roAudioGuide would be used on its own, but it can be used in conjunction with [roTextToSpeech](doc:rotexttospeech).
 
 
 ## Supported interfaces
 
-- [ifAudioGuide](/docs/references/brightscript/interfaces/ifaudioguide.md "ifAudioGuide")
+- [ifAudioGuide](doc:ifaudioguide)

@@ -13,27 +13,27 @@ next:
 
 
 Playing any type of video requires just one SceneGraph node
-class: [Video](/docs/references/scenegraph/media-playback-nodes/video.md).
+class: [Video](doc:video).
 
 To play a video, you must first prepare the files to be served to the
 Roku Player:
 
   - the video files must have been encoded in one of the formats
     supported by a Roku Player (see [Streaming
-    specifications](/docs/specs/media/streaming-specifications.md))
+    specifications](doc:streaming-specifications))
   - if you want to use an adaptive bitrate switching scheme, the video
     files must be configured to use the supported adaptive bitrate
     scheme you want (see [Streaming
-    specifications](/docs/specs/media/streaming-specifications.md))
+    specifications](doc:streaming-specifications))
   - you must also include any supporting files for special playback
     options you want, such as *trick
-    play* (see [Trick mode](/docs/developer-program/media-playback/trick-mode/trick-mode.md))
+    play* (see [Trick mode](doc:trick-mode))
 
 Then, in your application, you must:
 
   - set the various playback configuration options for your video in
     a ContentNode using Content Meta-Data (see [Content
-    Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md)) attributes
+    Meta-Data](doc:content-metadata)) attributes
   - assign the ContentNode to the `content` field of
     the Video node
   - set other Video node fields for all other video playback
@@ -137,7 +137,7 @@ video playback is interrupted by an unexpected slowdown in the video
 stream transfer rate. (Video playback interruptions are more likely to
 occur if you do not take advantage of some type of adaptive bitrate
 configuration of the video playback, such as using a segmented adaptive
-video playback scheme such as HLS, as described in [Streaming specifications](/docs/specs/media/streaming-specifications.md).)
+video playback scheme such as HLS, as described in [Streaming specifications](doc:streaming-specifications).)
 
 To indicate to the user that the video stream is buffering,
 the Video node class includes two instances of an
@@ -273,14 +273,14 @@ the Video node and the associated ContentNode to provide
 this functionality.
 
 Trick play can be supported for a video in two ways. One option is to generate and provide a set
-of BIF files for the video. For this approach, see our documentation on [BIF file creation using the Roku BIF tool](/docs/developer-program/media-playback/trick-mode/bif-file-creation.md).
+of BIF files for the video. For this approach, see our documentation on [BIF file creation using the Roku BIF tool](doc:bif-file-creation).
 
-The second option is to provide trickplay images in DASH or HLS, using the respective industry standards. You can learn more about this approach in our trickplay implementation documentation for [HLS and DASH](/docs/developer-program/media-playback/trick-mode/hls-and-dash.md).
+The second option is to provide trickplay images in DASH or HLS, using the respective industry standards. You can learn more about this approach in our trickplay implementation documentation for [HLS and DASH](doc:hls-and-dash).
 
 After you have created the trickplay files for a video, you must place the
 files on a server, and then configure the Video node to access the
 files by setting the associated ContentNode using the trick
-play attributes described in Content Meta-Data (see [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md)).
+play attributes described in Content Meta-Data (see [Content Meta-Data](doc:content-metadata)).
 
 ### Configuring trick play appearance
 
@@ -288,7 +288,7 @@ The Video node class includes an internal TrickPlayBar node to
 provide the user interface for trick play. You can customize the
 appearance of this internal node by accessing its fields in BrightScript
 in the same manner as the internal ProgressBar nodes
-(see [Configuring video stream buffering](/docs/developer-program/core-concepts/playing-videos.md#PlayingVideos-Configuringvideostreambuffering)).
+(see [Configuring video stream buffering](doc:playing-videos)).
 
 ## Configuring closed captions
 
@@ -309,7 +309,7 @@ in your Roku application.
 This XML/JSON file should contain the strings or links to all the
 information you need to present the video to the user for selection, and
 to configure the video playback. In almost all cases, you should be able
-to use the attributes listed in Content Meta-Data (see [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md)) which are all recognized as field names for
+to use the attributes listed in Content Meta-Data (see [Content Meta-Data](doc:content-metadata)) which are all recognized as field names for
 a ContentNode. In the rare cases where you
 require a custom attribute not found in Content Meta-Data, you can
 create a custom ContentNode by adding \<interface\> fields,
@@ -352,11 +352,11 @@ attributes are:
 
 > If you participate in the Roku Search program, you can use the
 information in the XML feed you supply to Roku for many of the meta-data
-attributes listed above. See [Roku Search](/docs/features/engagement/roku-search.md) for complete details.
+attributes listed above. See [Roku Search](doc:roku-search) for complete details.
 
 ### Video configuration Meta-Data
 
-See [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) for the complete list of
+See [Content Meta-Data](doc:content-metadata) for the complete list of
 video configuration meta-data.
 
 ### Example video Meta-Data XML Task node file reader

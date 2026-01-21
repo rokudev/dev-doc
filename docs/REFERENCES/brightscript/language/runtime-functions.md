@@ -104,7 +104,7 @@ End Sub
 
 ## Eval(code as String) as Dynamic
 
-> Eval is deprecated effective immediately. Use of Eval() will cause compilation or runtime errors, see [Roku Manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md). Use [roXMLElement.parse()](/docs/references/brightscript/components/roxmlelement.md) or [parseJSON()](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-as-object) instead of Eval() when initializing data. 
+> Eval is deprecated effective immediately. Use of Eval() will cause compilation or runtime errors, see [Roku Manifest](doc:channel-manifest). Use [roXMLElement.parse()](doc:roxmlelement) or [parseJSON()](doc:global-utility-functions) instead of Eval() when initializing data. 
 >
 > To test whether a function exists, you can use this alternative method: 
 >

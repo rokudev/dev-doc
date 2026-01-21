@@ -14,26 +14,26 @@ next:
 
 The Roku Resource Monitor tracks and visualizes several key metrics, including system and graphics memory usage, CPU consumption, memory allocation for BrightScript objects, counts for SceneGraph nodes, the number of rendezvous events, and the graphics rendering frame rate. This enables developers to test the different screens in their app and identify resource consumption trends and patterns. 
 
-The Roku Resource Monitor is intended to be used in conjunction with the [BrightScript Profiler](/docs/developer-program/dev-tools/brightscript-profiler.md) to improve app performance. For example, if the Roku Resource Monitor consistently shows increased consumption with a specific action on a screen, developers can use the [BrightScript Profiler](/docs/developer-program/dev-tools/brightscript-profiler.md) to further drill down into the app and pinpoint where to optimize the code.
+The Roku Resource Monitor is intended to be used in conjunction with the [BrightScript Profiler](doc:brightscript-profiler) to improve app performance. For example, if the Roku Resource Monitor consistently shows increased consumption with a specific action on a screen, developers can use the [BrightScript Profiler](doc:brightscript-profiler) to further drill down into the app and pinpoint where to optimize the code.
 
 > **Roku Resource Monitor 4.2**: The latest version of the tool features a new **Data Collection Mode** that enables developers to integrate a headless version of the tool into their CI/CD pipelines. This provides developers with automated data collection and performance monitoring without having to use the RRM UI. The collected data is saved as a JSON file and it can be attached to bug tickets, opened in the RRM UI for visualization, or post-processed to detect memory leaks and other trends.
 >
-> Click [here](/docs/developer-program/dev-tools/rrm-data-collection-mode.md) to learn how to use RRM in Data Collection Mode. 
+> Click [here](doc:rrm-data-collection-mode) to learn how to use RRM in Data Collection Mode. 
 
 
 ## Prerequisites
 
 To run the Roku Resource Monitor, you need the following:
 
-- A Roku device with [developer mode enabled](/docs/developer-program/getting-started/developer-setup.md). The Roku Resource Monitor does not support Littlefield or Liberty device models. The compatible Roku OS for the different versions of the tool are as follows:
+- A Roku device with [developer mode enabled](doc:developer-setup). The Roku Resource Monitor does not support Littlefield or Liberty device models. The compatible Roku OS for the different versions of the tool are as follows:
   - RRM 4.x: Roku OS 14.5 (or higher) or Roku OS 14.1.
   - RRM 3.1: Roku OS 13.5 or Roku OS 13.0.
 
   > As of Roku OS 14.1, the **Settings > System > Advanced system settings > Control by mobile apps** feature must be set to "Enabled" or "Permissive" for RRM to get data from your device.
 
-- Roku app (the Roku Resource Monitor works with apps running in [sideloaded](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels), beta, or production environments).
-  - To use the Roku Resource Monitor on an app running in a [beta](/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines) or [production](/docs/developer-program/publishing/channel-publishing-guide.md#public-channel-guidelines) environment, the developer must own the app.
-  - The Roku Resource Monitor is compatible with apps that use the [Instant Resume feature](/docs/developer-program/media-playback/instant-resume.md) and will show background memory consumption.
+- Roku app (the Roku Resource Monitor works with apps running in [sideloaded](doc:developer-setup), beta, or production environments).
+  - To use the Roku Resource Monitor on an app running in a [beta](doc:channel-publishing-guide) or [production](doc:channel-publishing-guide) environment, the developer must own the app.
+  - The Roku Resource Monitor is compatible with apps that use the [Instant Resume feature](doc:instant-resume) and will show background memory consumption.
 
 ## Getting started
 
@@ -107,7 +107,7 @@ As of RRM 4.0, the tool automatically saves the graph and session settings and u
 
 ### Displaying app and media events
 
-The Roku Resource Monitor displays app events (red) and media events (blue) on the x-axis of the graphs. An event is represented by a bar indicating the duration of the event and a pair of *initiate* and *complete* [beacons](/docs/developer-program/performance-guide/measuring-channel-performance.md) that denote the start and end of the event (for example, the compiling of the app, the playback of video content, and so on). You can hover your mouse pointer over an event to display an information box with the name and timestamp of the event, and the metrics at the time the event occurred.
+The Roku Resource Monitor displays app events (red) and media events (blue) on the x-axis of the graphs. An event is represented by a bar indicating the duration of the event and a pair of *initiate* and *complete* [beacons](doc:measuring-channel-performance) that denote the start and end of the event (for example, the compiling of the app, the playback of video content, and so on). You can hover your mouse pointer over an event to display an information box with the name and timestamp of the event, and the metrics at the time the event occurred.
 
 ![roku815px - rrm-beacons](https://image.roku.com/ZHZscHItMTc2/rrm4-beacons.png)
 
@@ -365,9 +365,9 @@ You can click a blue bar in the graph, which denotes a change in the registry, t
 
 You can view the metrics collected from one or more of the previous five sessions. In addition, you can export the metrics to a JSON file and share it with a teammate. The teammate can switch the Roku Resource Monitor into file mode, import the file, and then collaborate with you on the observed resource consumption.
 
-> Developers can build a custom resource monitoring tool using [ECP commands](/docs/developer-program/dev-tools/external-control-api.md).
+> Developers can build a custom resource monitoring tool using [ECP commands](doc:external-control-api).
 >
-> Developers that want to build a custom tool that is interoperable with the Roku Resource Monitor can follow the [Roku Resource Monitor session file specification](/docs/developer-program/dev-tools/rrm-file-format.md). This specification describes the data types and structure of a monitoring session file (.JSON) that has been exported from the Roku Resource Monitor.
+> Developers that want to build a custom tool that is interoperable with the Roku Resource Monitor can follow the [Roku Resource Monitor session file specification](doc:rrm-file-format). This specification describes the data types and structure of a monitoring session file (.JSON) that has been exported from the Roku Resource Monitor.
 
 To use **File mode** follow these steps:
 
@@ -408,7 +408,7 @@ In the tool preferences, you can modify the following **General** and **Session*
 ## Change log
 
 - v4.2 (September 10, 2025)
-  - Added [Data Collection Mode (CLI support for RRM)]((/docs/developer-program/dev-tools/rrm-data-collection-mode.md)) for macOS, Linux, and Windows.
+  - Added [Data Collection Mode (CLI support for RRM)]((doc:rrm-data-collection-mode)) for macOS, Linux, and Windows.
   - Added Linux-specific build optimized for Docker environments.
   - Updated font for improved consistency with Roku platform.
   - Introduced a native Apple Silicon version.
@@ -464,6 +464,6 @@ In the tool preferences, you can modify the following **General** and **Session*
 
 ## Related resources
 
-[BrightScript Profiler documentation](/docs/developer-program/dev-tools/brightscript-profiler.md)
+[BrightScript Profiler documentation](doc:brightscript-profiler)
 
 [BrightScript Profiler webinar](https://www.youtube.com/watch?v=nHfMrLypwfQ&list=PLXLCv18IEHshN1eGAOEVcNjZkfW1_lm0S)

@@ -12,7 +12,7 @@ next:
 ---
 
 
-Extends [**Node**](/docs/references/scenegraph/node.md)
+Extends [**Node**](doc:node)
 
 Vector2DFieldInterpolator specifies a keyframe animation sequence to be applied to a pair Vector2D field of a node. Most typically, this is used to animate the (x,y) coordinates of a node's translation field.
 

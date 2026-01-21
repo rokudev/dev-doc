@@ -12,7 +12,7 @@ metadata:
 
 ## Overview
 
-BrightScriptDoc is the BrightScript language documentation generator for inline code comments. It operates inside Roku's Eclipse plug-in, see [Roku Plug-in for Eclipse IDE.](/docs/developer-program/dev-tools/ide-support.md)
+BrightScriptDoc is the BrightScript language documentation generator for inline code comments. It operates inside Roku's Eclipse plug-in, see [Roku Plug-in for Eclipse IDE.](doc:ide-support)
 
 ## Basic commenting
 

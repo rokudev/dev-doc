@@ -13,7 +13,7 @@ next:
 
 > This document covers the new version of the in-app products UI, which is referred to as Catalog 2.0.
 >
-> * If your developer account was created before April 30, 2025, Roku may upgrade your account to Catalog 2.0 to take advantage of the new complex products and improved workflow. If you are selected, you will receive a notification from Roku. If you have not been selected to upgrade to Catalog 2.0, continue to use the [legacy in-product catalog UI](/docs/developer-program/roku-pay/quickstart/in-channel-products.md).
+> * If your developer account was created before April 30, 2025, Roku may upgrade your account to Catalog 2.0 to take advantage of the new complex products and improved workflow. If you are selected, you will receive a notification from Roku. If you have not been selected to upgrade to Catalog 2.0, continue to use the [legacy in-product catalog UI](doc:in-channel-products).
 >
 > * If your developer account was created after April 30, 2025, it uses Catalog 2.0. Continue reading this document for how to use Catalog 2.0.
 
@@ -29,11 +29,11 @@ Roku has updated the product catalog feature with an improved, flexible structur
 
 * [**Purchase options**](#creating-purchase-options): Add a single product and then create multiple purchase options for it (a purchase option includes the pricing, billing, and offers for a product). This means that, for example, you can create a subscription product for the content you offer, and then add monthly and annual purchase options for it. This structure simplifies and streamlines the catalog workflow.
 
-* [**Quarterly billing:**](#creating-purchase-options) Reduce churn by creating a purchase option that uses quarterly billing (requires [additional API work](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#appendix-a-catalog-20-apis)).
+* [**Quarterly billing:**](#creating-purchase-options) Reduce churn by creating a purchase option that uses quarterly billing (requires [additional API work](doc:add-ons-integration)).
 
-* [**Add-ons**](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md). Offer premium content, additional apps, and other upgrades and features on top of an existing base subscription products (requires [additional API work](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md)).
+* [**Add-ons**](doc:add-ons-integration). Offer premium content, additional apps, and other upgrades and features on top of an existing base subscription products (requires [additional API work](doc:add-ons-integration)).
 
-* [**Bundles**](#creating-purchase-options). Combine a base product with either another base product or one or more add-ons (requires [additional API work](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md)).
+* [**Bundles**](#creating-purchase-options). Combine a base product with either another base product or one or more add-ons (requires [additional API work](doc:add-ons-integration)).
 
 ###### UI enhancements
 
@@ -182,7 +182,7 @@ To create a purchase option for a product, follow these steps:
 
    * **One-Time Purchase, Consumable - Quantity:** A set of identical items (such as game points, number of viewings permitted ). Enter the size of the packet in the **Quantity** field in the **Product and billing plan** settings. If you are creating a [TVOD-exclusive app](https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md), select this option and select **1** for quantity. This is because you create a single generic in-app product per product type for a TVOD app (rather than a product per content item as in a SVOD app), and this setting allows that generic in-app product to be purchased multiple times. For example, if you plan on offering movie rentals, you only need to create a single one-time purchase consumable video product. See [Creating TVOD apps](https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md) for more information.
 
-   * **Subscription** **bundle**: A monthly, quarterly, or annual subscription that combines two base products or a single base product and one or more add-ons. See the [Catalog 2.0 API integration guide](/docs/developer-program/roku-pay/quickstart/add-ons-integration.md) for more information.
+   * **Subscription** **bundle**: A monthly, quarterly, or annual subscription that combines two base products or a single base product and one or more add-ons. See the [Catalog 2.0 API integration guide](doc:add-ons-integration) for more information.
 
 3. Configure the following **Purchase option** detail settings:
 

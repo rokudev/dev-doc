@@ -19,7 +19,7 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roRenderThreadQueue](/docs/references/brightscript/components/rorenderthreadqueue.md "roRenderThreadQueue") | The **roRenderThreadQueue** node queues messages to be consumed by handlers on the render thread. This enables asynchronous communication between Task nodes and the render thread. Messages passed using this mechanism will not block the render thread like a rendezvous. |
+| [roRenderThreadQueue](doc:rorenderthreadqueue) | The **roRenderThreadQueue** node queues messages to be consumed by handlers on the render thread. This enables asynchronous communication between Task nodes and the render thread. Messages passed using this mechanism will not block the render thread like a rendezvous. |
 
 ### AddMessageHandler(message_id as String, handler as String) as Object
 

@@ -103,15 +103,15 @@ End Function
 
 ## Supported interfaces
 
-- [ifSocketConnection](/docs/references/brightscript/interfaces/ifsocketconnection.md "ifSocketConnection")                   
-- [ifSocket](/docs/references/brightscript/interfaces/ifsocket.md "ifSocket")                             
-- [ifSocketAsync](/docs/references/brightscript/interfaces/ifsocketasync.md "ifSocketAsync")                   
-- [ifSocketStatus](/docs/references/brightscript/interfaces/ifsocketstatus.md "ifSocketStatus")                        
-- [ifSocketConnectionStatus](/docs/references/brightscript/interfaces/ifsocketconnectionstatus.md "ifSocketConnectionStatus")              
-- [ifSocketConnectionOption](/docs/references/brightscript/interfaces/ifsocketconnectionoption.md "ifSocketConnectionOption") 
-- [ifSocketOption](/docs/references/brightscript/interfaces/ifsocketoption.md)        
+- [ifSocketConnection](doc:ifsocketconnection)                   
+- [ifSocket](doc:ifsocket)                             
+- [ifSocketAsync](doc:ifsocketasync)                   
+- [ifSocketStatus](doc:ifsocketstatus)                        
+- [ifSocketConnectionStatus](doc:ifsocketconnectionstatus)              
+- [ifSocketConnectionOption](doc:ifsocketconnectionoption) 
+- [ifSocketOption](doc:ifsocketoption)        
 
 
 ## Supported events
 
-- [roSocketEvent](/docs/references/brightscript/events/rosocketevent.md "roSocketEvent")           
+- [roSocketEvent](doc:rosocketevent)           

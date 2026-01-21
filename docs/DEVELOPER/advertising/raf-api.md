@@ -32,7 +32,7 @@ Triggers event tracking, including parameter substitution for Nielsen DAR, when 
 
 | Name        | Type   | Description                                                  |
 | ----------- | ------ | ------------------------------------------------------------ |
-| adStructure | Object | Can refer to a pod (array) of ads or a single ad. Must at least contain a Tracking array member (see [Ad Structure example](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure)), and may optionally contain an ‘adServer’ member string. |
+| adStructure | Object | Can refer to a pod (array) of ads or a single ad. Must at least contain a Tracking array member (see [Ad Structure example](doc:integrating-roku-advertising-framework)), and may optionally contain an ‘adServer’ member string. |
 | ctx         | Object | Structure to capture context-specific trigger conditions. ‘type’ key-value pair used to trigger events of a specific type. ‘time’ key-value pair used to trigger time-dependent events at or prior to this time |
 
 #### Return Value
@@ -79,7 +79,7 @@ Available ad pod(s) scheduled for rendering or invalid, if none are available
 
 Renders any ads scheduled for display.
 
-When this method is called with an array of ad pods (for example, using the value returned from the initial call to the [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) method), this is interpreted to mean that any preroll ad pod present should be rendered.
+When this method is called with an array of ad pods (for example, using the value returned from the initial call to the [getAds()](doc:raf-api) method), this is interpreted to mean that any preroll ad pod present should be rendered.
 
 Client applications should always check the return value. If it is false, an application should exit content playback and return to the content selection screen. Typically, this occurs when the user presses the “Back” button during ad playback.
 
@@ -129,7 +129,7 @@ A flag indicating whether the ad pod was rendered to completion. This will be fa
 
 #### Description
 
-Sets the ad URL to be used for a new [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion) request.
+Sets the ad URL to be used for a new [getAds()](doc:raf-api) request.
 
 > You can only receive payment for ads shown in your application when the Roku Ad Framework is properly configured with a valid URL assigned by your ad service or by Roku.
 >
@@ -194,7 +194,7 @@ Configures media constraints to filter renderable video ads.
 
 By default, the MIME types are configured for “video/mp4”, “video/mp4-h264”, “video/x-mp4”, “application/x-mpegurl”, and “application/json”.
 
-Any additional known types can be mapped to their stream format by setting this parameter before calling [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion).
+Any additional known types can be mapped to their stream format by setting this parameter before calling [getAds()](doc:raf-api).
 
 #### Parameters
 
@@ -238,11 +238,11 @@ Any additional known types can be mapped to their stream format by setting this 
 
 Configures content playback parameters, which can be used for scheduling relative-positioned ad breaks in VMAP ad service responses.
 
-- If your application uses VMAP ad URLs and they are configured to use “nn%” timeOffset values, then you must specify the contentLength prior to calling [getAds()](/docs/developer-program/advertising/raf-api.md#client-ad-insertion).
+- If your application uses VMAP ad URLs and they are configured to use “nn%” timeOffset values, then you must specify the contentLength prior to calling [getAds()](doc:raf-api).
 - If VMAP is configured to use “#mm” timeOffset values, you must first specify a set of ad break times.
 - Calling with empty parameters will reset these to invalid values.
 
-The content length can also be set independently via [setContentLength()](/docs/developer-program/advertising/raf-api.md#setcontentlengthlength-as-integer) if ad break times are not required.
+The content length can also be set independently via [setContentLength()](doc:raf-api) if ad break times are not required.
 
 #### Parameters
 
@@ -279,7 +279,7 @@ The application is responsible for ensuring that the ad pods in the array contai
 
 | Argument | Type   | Description                                                  |
 | -------- | ------ | ------------------------------------------------------------ |
-| adPodArray | Object | Array of ad pods structured in accordance with the required [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure). |
+| adPodArray | Object | Array of ad pods structured in accordance with the required [Ad Structure](doc:integrating-roku-advertising-framework). |
 
 ### enableJITPods(enabled as Boolean)
 *Available since version 2.4*
@@ -304,7 +304,7 @@ When enabled, ad call redirects for midrolls are deferred until a certain time b
 
 #### Description
 
-"In-pod stitching" (IPS) mode brings some of the benefits from [CSAS API](/docs/developer-program/advertising/csas.md) to apps using the classic CSAI API [showAds()](/docs/developer-program/advertising/raf-api.md#showadsads-as-object-ctx-as-object-view-as-object-as-boolean). When IPS mode is enabled and *showAds()* is called for an ad break with multiple ads, it would stitch together the video clips for playback, prebuffering the next ad in the background while the current ad is finishing. The viewer experience is better because of the fast transitions between ads. Conversely, when IPS is disabled, each video plays individually and a few seconds are spent in a buffering screen between the ads.
+"In-pod stitching" (IPS) mode brings some of the benefits from [CSAS API](doc:csas) to apps using the classic CSAI API [showAds()](doc:raf-api). When IPS mode is enabled and *showAds()* is called for an ad break with multiple ads, it would stitch together the video clips for playback, prebuffering the next ad in the background while the current ad is finishing. The viewer experience is better because of the fast transitions between ads. Conversely, when IPS is disabled, each video plays individually and a few seconds are spent in a buffering screen between the ads.
 
 #### Parameters
 
@@ -316,7 +316,7 @@ When enabled, ad call redirects for midrolls are deferred until a certain time b
 
 *Available since version 3.1*
 
-For apps that collect explicit in-app consent for ad targeting (for example, to adhere to GDPR), this function specifies the value of the [ROKU_ADS_LIMIT_TRACKING URL parameter macro](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros) to be passed into beacons and ad requests.
+For apps that collect explicit in-app consent for ad targeting (for example, to adhere to GDPR), this function specifies the value of the [ROKU_ADS_LIMIT_TRACKING URL parameter macro](doc:integrating-roku-advertising-framework) to be passed into beacons and ad requests.
 
 This function cannot override the ROKU_ADS_LIMIT_TRACKING value if the customer has cleared the **Personalize ads** check box in the **Settings > Privacy** menu.  
 
@@ -324,7 +324,7 @@ This function cannot override the ROKU_ADS_LIMIT_TRACKING value if the customer 
 
 | Argument | Type    | Description                                                  |
 | :------- | :------ | :----------------------------------------------------------- |
-| enabled  | Boolean | Sets the [ROKU_ADS_LIMIT_TRACKING URL parameter macro](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros) to be passed into beacons and ad requests to either 1 (true; ad targeting is disabled for the customer) or 0 (false; ad targeting is disabled for the customer). |
+| enabled  | Boolean | Sets the [ROKU_ADS_LIMIT_TRACKING URL parameter macro](doc:integrating-roku-advertising-framework) to be passed into beacons and ad requests to either 1 (true; ad targeting is disabled for the customer) or 0 (false; ad targeting is disabled for the customer). |
 
 ### setTrackingCallback(callback as Function, obj as Object)
 
@@ -340,7 +340,7 @@ Sub CallbackFunc(obj = Invalid as Dynamic, eventType = Invalid as Dynamic, ctx =
 
 - The obj parameter is an opaque object always passed through to the callback.
 
-- The eventType, if set, is a string specifying a tracking event that is fired. Event names correspond to [Tracking](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#tracking-events).
+- The eventType, if set, is a string specifying a tracking event that is fired. Event names correspond to [Tracking](doc:integrating-roku-advertising-framework).
 
 - The ctx is an optional associative array that encapsulates metadata associated with VAST-specified macros or ad render progress. Each member of the ctx array should separately be considered optional (for example, client code should check for valid values before operating on these data members). Generally, if `ctx.eventType` is not set, then `ctx.time` should be set and indicate ad render progress:
 
@@ -393,7 +393,7 @@ The library version in the following format: “`<major>.<minor>`”
 
 #### Description
 
-Applications using audience measurement features must explicitly enable the framework to operate on the custom impression tag parameters. This function is used in conjunction with the [setContentGenre()](/docs/developer-program/advertising/raf-api.md#setcontentgenregenres-as-string-kidscontent-as-boolean), [setContentId()](/docs/developer-program/advertising/raf-api.md#setcontentidid-as-string), and [setContentLength()](/docs/developer-program/advertising/raf-api.md#setcontentlengthlength-as-integer) APIs to provide measurement data to third-party ad measurement platforms such as NielsenDAR, ComScore CCR, and ComScore VCE.
+Applications using audience measurement features must explicitly enable the framework to operate on the custom impression tag parameters. This function is used in conjunction with the [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api) APIs to provide measurement data to third-party ad measurement platforms such as NielsenDAR, ComScore CCR, and ComScore VCE.
 
 >  Contact [adsupport@roku.com](mailto:adsupport@roku.com) for more information on how to use audience measurement features.
 
@@ -411,7 +411,7 @@ Enables potential ad targeting by specifying a set of genre tags to associate wi
 
 To clear genre tags, pass an empty string in the **genres** parameter or omit it.
 
-The semantics and implementation of targeting based on genre values are dependent on the configured ad server, but for a list of currently-supported tags supported by the Roku ad server, see [Roku Genre Tags](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#roku-genre-tags).
+The semantics and implementation of targeting based on genre values are dependent on the configured ad server, but for a list of currently-supported tags supported by the Roku ad server, see [Roku Genre Tags](doc:integrating-roku-advertising-framework).
 
 #### Parameters
 
@@ -478,7 +478,7 @@ Omitting the **length** parameter will clear any  content length that was previo
 
 #### Description
 
-Enables ad campaign measurement using Nielsen DAR tags by specifying a primary genre for the content being played, according to the Nielsen genres defined in [Nielsen DAR Genre Tags](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#nielsen-dar-genre-tags).
+Enables ad campaign measurement using Nielsen DAR tags by specifying a primary genre for the content being played, according to the Nielsen genres defined in [Nielsen DAR Genre Tags](doc:integrating-roku-advertising-framework).
 
 **Examples**:
 
@@ -563,7 +563,7 @@ A single video stream containing the specified video feed and ads.
 
 Renders a video stream that uses client-side ad stitching.
 
-Tracking events are triggered automatically during ad rendering by this method.<br />For client applications that perform their own ad rendering, the valid event types that must be handled are represented in the `tracking` array of the [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure).
+Tracking events are triggered automatically during ad rendering by this method.<br />For client applications that perform their own ad rendering, the valid event types that must be handled are represented in the `tracking` array of the [Ad Structure](doc:integrating-roku-advertising-framework).
 
 For client-side stitched streams, the app will also get tracking events during content playback in addition to those received during ad rendering.
 
@@ -607,13 +607,13 @@ Imports ad metadata to be used for server-stitched ad rendering and resets the i
 
 The application is responsible for ensuring that the ad pods in the array contain all the required data members. In particular, for server-stitched ads, all time-dependent tracking beacons (Impression and quartile beacons) must have a valid time data member set, with a value relative to the entire stitched stream. For example, if a 30-second ad starts at 10:00 within the stitched stream, its Impression beacons should have track.time = 600.0 and its Midpoint beacons should have track.time = 615.0, and so on.
 
-This method is used in conjunction with [stitchedAdHandledEvent()](/docs/developer-program/advertising/raf-api.md#server-stitched-ads) to implement ad rendering within server-stitched video streams.
+This method is used in conjunction with [stitchedAdHandledEvent()](doc:raf-api) to implement ad rendering within server-stitched video streams.
 
 #### Parameters
 
 | Argument | Type   | Description                                                  |
 | -------- | ------ | ------------------------------------------------------------ |
-| adPodArray | roArray |Set of ad pods structured in accordance with the required [Ad Structure](/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure).|
+| adPodArray | roArray |Set of ad pods structured in accordance with the required [Ad Structure](doc:integrating-roku-advertising-framework).|
 
 ### stitchedAdHandledEvent(msg as Object, player as Object) as roAssociativeArray
 
@@ -677,7 +677,7 @@ The advertising framework must first be initialized using the stitchedAdsInit() 
 
 #### Description
 
-Enables the client application to set metadata for the content populating the default ad buffer screen. contentMetaData conforms to the format defined in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md) and can contain any or all of the following:
+Enables the client application to set metadata for the content populating the default ad buffer screen. contentMetaData conforms to the format defined in [Content Meta-Data](doc:content-metadata) and can contain any or all of the following:
 
 ```
 {
@@ -713,7 +713,7 @@ Enables the client application to display messaging text and a progress bar on t
 
 #### Description
 
-Enables the client application to set individual layer metadata for the custom ad buffer UI. contentMetaData conforms to the format defined in [Content Meta-Data](/docs/developer-program/getting-started/architecture/content-metadata.md).
+Enables the client application to set individual layer metadata for the custom ad buffer UI. contentMetaData conforms to the format defined in [Content Meta-Data](doc:content-metadata).
 
 The values that can be passed in the **zOrder** and **contentMetaData** parameters are specified by roImageCanvas.
 

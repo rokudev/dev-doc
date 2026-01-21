@@ -39,7 +39,7 @@ functions:
 ~~~
 
 If these calls relied on application global data, you would have to set
-up a *global node* as described in [Data scoping](/docs/developer-program/core-concepts/data-scoping.md)
+up a *global node* as described in [Data scoping](doc:data-scoping)
 for this data.
 
 There is a simplifying assumption you can make when transitioning an
@@ -49,12 +49,12 @@ with setting and reading of node class fields of the equivalent
 parameters. For example, the SetNumPinEntryFields() interface function
 call for the roPinEntryDialog component is replaced by setting the
 `pinLength` field of the internal **PinPad** node object of a
-[PinDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-pinpad-dialog.md) node. But note that for many of
+[PinDialog](doc:standard-pinpad-dialog) node. But note that for many of
 the older Roku API screen components, you must develop your own custom
 screen component equivalent from more fundamental SceneGraph node
 classes. For example, you must develop an equivalent of the
 roSearchScreen component using the
-[MiniKeyboard](/docs/references/scenegraph/widget-nodes/minikeyboard.md) node class as the user
+[MiniKeyboard](doc:minikeyboard) node class as the user
 input basis of a custom SceneGraph search screen component. You must
 then write additional BrightScript code to replicate the function of the
 roSearchScreen component.

@@ -18,9 +18,9 @@ When JWT signature authentication is enabled on a push notification endpoint, th
 
 This document details how to receive, decode, and respond to secured Roku Pay push notifications.
 
-> See [Setting up Roku Pay web services](/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#push-notification-url) for how to add production and test push notification endpoints and enable them to receive secured Roku Pay push notifications.
+> See [Setting up Roku Pay web services](doc:setting-up-web-services) for how to add production and test push notification endpoints and enable them to receive secured Roku Pay push notifications.
 >
-> See the [Roku Pay push notifications reference](/docs/developer-program/roku-pay/implementation/push-notifications.md) for more information on the contents of the Roku Pay push notification messages.
+> See the [Roku Pay push notifications reference](doc:push-notifications) for more information on the contents of the Roku Pay push notification messages.
 
 ## Request (sent by Roku)
 
@@ -104,7 +104,7 @@ To receive the contents of Roku Pay push notifications, publishers must do the f
 
 ### Decoding the x-Roku-message JWT claim to get the push notification message
 
-The **x-Roku-message** field within the JWT claim payload is a base64url-encoded string that contains the contents of the push notification message. The following example demonstrates the decoded **x-Roku-message** field for a [Sale notification message](/docs/developer-program/roku-pay/implementation/push-notifications.md#sale):
+The **x-Roku-message** field within the JWT claim payload is a base64url-encoded string that contains the contents of the push notification message. The following example demonstrates the decoded **x-Roku-message** field for a [Sale notification message](doc:push-notifications):
 
 ```
 {
@@ -129,7 +129,7 @@ The **x-Roku-message** field within the JWT claim payload is a base64url-encoded
 }
 ```
 
-> See the [Roku Pay push notifications reference](/docs/developer-program/roku-pay/implementation/push-notifications.md) for more information on the contents of the different Roku Pay push notification messages.
+> See the [Roku Pay push notifications reference](doc:push-notifications) for more information on the contents of the different Roku Pay push notification messages.
 
 ## Response (required from the publisher)
 
@@ -174,9 +174,9 @@ Publishers must use Roku-provided public keys, which are located [here](https://
 
 ## Testing
 
-Prior to enabling JWT signature authentication on a production endpoint, publishers can configure a test endpoint in the [Developer Dashboard](https://developer.roku.com/api/settings) and verify whether it can receive and process the JWT/JWS-secured messages. See [Setting up Roku Pay web services](/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#test-configuration-for-push-notification) for more information.
+Prior to enabling JWT signature authentication on a production endpoint, publishers can configure a test endpoint in the [Developer Dashboard](https://developer.roku.com/api/settings) and verify whether it can receive and process the JWT/JWS-secured messages. See [Setting up Roku Pay web services](doc:setting-up-web-services) for more information.
 
-In addition, publishers can manually send a test JWT/JWS-secured message with a generic payload to the configured test push notification endpoint. This enables publishers to verify that their test endpoint can receive a JWT/JWS-secured message without generating Roku Pay transactions.  See [Setting up Roku Pay web services](/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#notify-test-message-to-partner) for more information.
+In addition, publishers can manually send a test JWT/JWS-secured message with a generic payload to the configured test push notification endpoint. This enables publishers to verify that their test endpoint can receive a JWT/JWS-secured message without generating Roku Pay transactions.  See [Setting up Roku Pay web services](doc:setting-up-web-services) for more information.
 
 ## Sample
 

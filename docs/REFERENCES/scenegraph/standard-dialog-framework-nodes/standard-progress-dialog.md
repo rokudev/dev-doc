@@ -14,9 +14,9 @@ next:
 
 
 
-Extends [StandardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md "**Standard Dialog**")
+Extends [StandardDialog](doc:standard-dialog)
 
-The StandardProgressDialog node displays a spinning progress indicator that includes a short progress message to the user. It is similar to the legacy [ProgressDialog](/docs/references/scenegraph/dialog-nodes/progressdialog.md) node. 
+The StandardProgressDialog node displays a spinning progress indicator that includes a short progress message to the user. It is similar to the legacy [ProgressDialog](doc:progressdialog) node. 
 
 ![roku815px - progress-dialog-title](https://image.roku.com/ZHZscHItMTc2/progress-dialog-title-v2.jpg)
 

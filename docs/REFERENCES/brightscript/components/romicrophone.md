@@ -48,18 +48,18 @@ Implementation
 
 The application should display a focusable button or indicator in the UI that the user selects by pressing and holding the OK button. In response to the OK press event, the application can call:
 
-- [StartRecording(\)](/docs/references/brightscript/interfaces/ifmicrophone.md "StartRecording") - to receive streamed audio data from the microphone asynchronously or
-- [RecordToFile(\)](/docs/references/brightscript/interfaces/ifmicrophone.md "RecordToFile()") - to have the audio data directly captured to a WAV format output file.
+- [StartRecording(\)](doc:ifmicrophone) - to receive streamed audio data from the microphone asynchronously or
+- [RecordToFile(\)](doc:ifmicrophone)") - to have the audio data directly captured to a WAV format output file.
 
 >Roku OS will display a HUD to let the user initially consent to be recorded and to subsequently be informed when the microphone is being used. Recording is performed as long as the user holds down the OK button, or until a limit is reached or if an error should occur.
 
 ## Supported interfaces
 
-- [ifMicrophone](/docs/references/brightscript/interfaces/ifmicrophone.md "ifMicrophone")
-- [ifSetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md "ifSetMessagePort")
-- [ifGetMessagePort](/docs/references/brightscript/interfaces/ifgetmessageport.md "ifGetMessagePort")
+- [ifMicrophone](doc:ifmicrophone)
+- [ifSetMessagePort](doc:ifsetmessageport)
+- [ifGetMessagePort](doc:ifgetmessageport)
 
 
 ## Supported events
 
-- [roMicrophoneEvent](/docs/references/brightscript/events/romicrophoneevent.md "roMicrophoneEvent")
+- [roMicrophoneEvent](doc:romicrophoneevent)

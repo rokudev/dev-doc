@@ -881,3 +881,18 @@ ERROR StatusLogger Log4j2 could not find a logging implementation. Please add lo
 Roku utilizes a transform engine that can “normalize” different metadata formats to fit Roku’s ingestion needs. Exact element or field names are not as important as consistent delivery of agreed upon element or field names. The data within any field must conform to Roku Channel Ingest Specification regardless of element or field name. If you use an XML format for delivery of your content to other platforms, you may be able to repurpose this for delivery to Roku. You may provide a sample of this existing metadata format during onboarding for Roku to evaluate validity for ingest into Roku Channel. Regardless of the format delivered, all required elements/fields must be provided in the metadata deliverable.
 
 ### Minimum required metadata by content type
+
+<table>
+<thead>
+<tr>
+<th>Film/Clip Requirements</th>
+<th>TV Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ul><li>provider</li><li>content type</li><li>asset_id</li><li>title</li><li>release_date</li><li>runtime</li><li>genres</li><li>rating</li><li>rating system</li><li>short_synopsis</li><li>video file_name</li><li>captions file_name (if captions are required)</li><li>key art file_name</li></ul></td>
+<td><ul><li>provider</li><li>content type</li><li>asset_id</li><li>episode title</li><li>episodeNumber</li><li>episode release_date</li><li>runtime</li><li>rating</li><li>rating system</li><li>episode short_synopsis</li><li>series_id</li><li>series title</li><li>series release_date</li><li>series genres</li><li>series short_synopsis</li><li>season_id</li><li>seasonNumber</li><li>video file_name</li><li>captions file_name (if captions are required)</li><li>episode thumbnail file_name</li><li>series key art file_name</li></ul></td>
+</tr>
+</tbody>
+</table>

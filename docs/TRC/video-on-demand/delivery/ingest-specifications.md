@@ -1117,3 +1117,7 @@ If rights change from when the content was originally delivered to Roku and cont
 | Cablelabs Film ADI XML Example    | [Download here](https://go.roku.com/film-adi-xml-example) |
 | Cablelabs TV ADI XML Example      | [Download here](https://go.roku.com/tv-adi-xml-example)   |
 | Cablelabs Clip ADI XML Example    | [Download here](https://go.roku.com/clip-adi-xml-example) |
+
+**NOTE:** Cablelabs ADI samples are intended for illustrative purposes and not necessarily as templates. The required data must be supplied in a static node in each XML.
+
+------

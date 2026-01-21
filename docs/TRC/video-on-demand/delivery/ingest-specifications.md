@@ -969,13 +969,12 @@ While time settings are dictated by the content owner, Roku will need the metada
 
 ### Special characters
 
+<p>Roku utilizes CDATA sections to allow special characters (e.g. !@#$%^&<em>()\{\}|[];:’”?/\>\<, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the </em><em>only</em>* nodes that support CDATA sections:</p>
 
-<p>Roku utilizes CDATA sections to allow special characters (e.g. !@#$%^&amp;<em>(){}|[]\;:’”?/&gt;&lt;, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the </em><em>only</em>* nodes that support CDATA sections:</p>
-
-
-- title
-- long_synopsis
-- short_synopsis
-- display_name
+* title
+* long_synopsis
+* short_synopsis
+* display_name
 
 Certain characters in an XML will render the document unreadable by the Roku ingest platform unless handled (escaped) properly. The below characters must be provided in their Escaped Form for all node values that do not support CDATA sections:
+

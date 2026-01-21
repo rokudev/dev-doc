@@ -52,3 +52,20 @@ Content length longer than 15 minutes:
 - adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
 - There should be no less than 7 mins between each adBreak
 - No adBreaks within the last 5 minutes of end credits
+
+### Kids directed content policy
+
+“Kids-Directed Content” is content that either: (i) is directed to children as defined by the applicable law of the jurisdiction in which the content is shown (e.g., [The Children's Online Privacy Protection Act](https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa)); or (ii) was made for viewing primarily by children within the jurisdiction in which the content is shown.
+
+- Roku must be made aware of the intent to submit or distribute content that is directed at children
+- DO NOT submit or distribute kids directed content without Roku’s express written approval
+- When given approval by Roku to submit or distribute content directed at children, all content metadata must include the following:
+- For Movie content:
+- The `<tag>` “kidsdirected” (all lowercase) must be included as one of the tags for every movie
+- A valid MPAA, USA_PR, or TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
+- For Episodic Series content:
+- The `<tag>` “kidsdirected” (all lowercase) must be included as one of the series and episodic tags for every series and episode
+- A valid TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
+
+Please see [here](https://docs.roku.com/published/madeforkids) for more information and guidance on content "made for kids"
+

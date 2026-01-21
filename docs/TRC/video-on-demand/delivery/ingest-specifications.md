@@ -104,5 +104,29 @@ Our systems use a combination of methods to match a title its correct Gracenote 
 - Content classified as a movie with Gracenote must be delivered as a movie to Roku
 - Content classified as a TV Special with Gracenote can be delivered as a movie to Roku
 
-Partners can aid in the curation of their content on Roku Channel by providing Tags with each movie, episode, or clip. Roku Channel editorial team and recommendations engine will utilize the provided Tags and Genres to help surface content on Roku Channel Platform UI. The more tags that are included, the more ways the content can be curated/surfaced to the end user. Please see [Best practices: content tags and metadata](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md) for more details
+Partners can aid in the curation of their content on Roku Channel by providing Tags with each movie, episode, or clip. Roku Channel editorial team and recommendations engine will utilize the provided Tags and Genres to help surface content on Roku Channel Platform UI. The more tags that are included, the more ways the content can be curated/surfaced to the end user. Please see [Best practices: content tags and metadata](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md) for more details.
 
+## Media asset guidelines
+
+### Video requirements
+
+- All video content must be **full program only**:
+
+- no bars/tone or slates at program start
+- no textless video after program end
+- no more than 2 seconds of black at program start
+- no more than 2 seconds of black after program end
+
+
+- Video files should be semi-textless (also known as "texted with no subtitles" or "textless with main, ends, and graphic text"). Video can include opening and end credit text but all subtitles for foreign dialogue must be removed.
+- Do not include advertisements within the video. All ad insertion points for ad supported content will be provided in the metadata file based on the [Roku Ad Policy guidelines](#ad-policy)
+- Commercial blacks may be included within the video so long as they are no longer than 2 seconds
+- Commercial blacks are acceptable for episodic TV content but not expected for movie content
+- Video files must be delivered as a single, seamless video file
+- Do not deliver hard parted (broken into segments at the ad break points) video files
+- Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the video prior to delivery to Roku
+- HD video content must be delivered in a 16:9 container
+- Full-Frame presentation (1.78 aspect ratio) is preferred whenever available
+- Letterboxed 16:9 is allowed but should be minimized
+- SD 16:9 content must not be delivered in a 4:3 container with letterboxing
+- High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible

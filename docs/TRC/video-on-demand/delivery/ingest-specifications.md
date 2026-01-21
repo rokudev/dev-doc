@@ -987,3 +987,35 @@ Certain characters in an XML will render the document unreadable by the Roku ing
 | Apostrophe     | '         | `&apos;`     |
 
 Special characters should never be used in file names or file name references within the XML or Excel metadata. [See File Naming Guidelines](#file-naming) for more on this.
+
+### Supported metadata formats
+
+XML format preferred. One complete XML shall be delivered for each movie, clip, or TV episode video file delivered. Metadata shall be delivered via Aspera to the same folder location as the video, captions, and artwork files.
+
+**Supported metadata formats**
+
+
+<table>
+<thead>
+<tr>
+<th>Format Name</th>
+<th>Format Extension</th>
+<th>Encoding</th>
+<th>Package Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XML (preferred)</td>
+<td>.xml</td>
+<td>UTF-8</td>
+<td>clip1.0<br />film5.0<br />tv1.0<br />Cablelabs ADI 1.1<br /><br /><strong><em>Additional XML schemas supported on a case-by-case basis</em></strong></td>
+</tr>
+<tr>
+<td>Excel</td>
+<td>.xlsx</td>
+<td>See below for <a href="#roku-excel-metadata-guildelines">Roku Excel Metadata Templates</a> and <a href="#roku-excel-metadata-guidelines-and-templates">Excel Metadata Guidelines</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>

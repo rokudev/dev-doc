@@ -16,6 +16,7 @@ next:
 
 See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor> node and its base classes ([Group](/docs/references/scenegraph/layout-group-nodes/group.md) and [Node](/docs/references/scenegraph/node.md)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
 
+<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -37,6 +38,9 @@ See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/d
     </tr>
   </tbody>
 </table>
+`}</HTMLBlock>
+
+<br />
 
 ## Default VoiceTextEditBox settings
 

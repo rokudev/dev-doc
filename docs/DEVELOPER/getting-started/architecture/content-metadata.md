@@ -10,7 +10,6 @@ next:
   description: ''
 ---
 <HTMLBlock>{`
-<div class="markdown-body developer-content-body"><h1 id="content-metadata">Content metadata</h1>
 <p>Content metadata describes a viewable title that will be shown to the
 user. Content may be any supported type of video and the metadata is
 used by the UI to format and display the title to the user. Some

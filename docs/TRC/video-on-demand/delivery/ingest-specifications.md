@@ -1020,4 +1020,28 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
 </tbody>
 </table>
 
-lll
+### Metadata updates (MDU) and file replacements
+
+Updates are automated and can be sent if there is a need to change metadata or asset files for any program that has previously been delivered to Roku Channel. All metadata and/or file replacement updates must include **Provider**, **Asset ID**, and **Content Type** of the program as it was originally delivered to Roku for the update to succeed. Version control will be handled by Roku's system, there is no need to provide versioning information in the metadata.
+
+Roku currently supports updating the below metadata fields via automated MDU:
+
+- TMS ID
+- EIDR ID
+- Titles (primary and localized)
+- Short Descriptions (primary and localized)
+- Long Descriptions (primary and localized)
+- Release Date
+- Series Titles
+- Season Number
+- Episode Number
+- Language (and localized languages)
+- Availability Windows
+- License Types
+- Countries
+- Genres
+- Provider Tags
+- Content Ratings (system & rating)
+- Credits
+- Ad Breaks
+- Cue Points

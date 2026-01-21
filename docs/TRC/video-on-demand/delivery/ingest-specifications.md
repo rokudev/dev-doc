@@ -787,3 +787,66 @@ Gracenote TMS IDs can be delivered via the MovieLabs MEC XML as an Identifier wi
 	<md:Identifier>EP012345678910</md:Identifier>
 </md:AltIdentifier>
 ```
+#### MMC XML ad breaks and cue points
+
+Ad break, intro credit, and end credit cue points can be supplied in the MovieLabs MMC XML in the Markers node. Please see the [MovieLabs MMC Schema](https://movielabs.com/md/manifest/v1.10/manifest-v1.10/manifest-v1.10.html#Link184) for proper structure of the Markers node
+
+<u>Example:</u>
+
+```
+      <manifest:Markers>
+      
+      <!--Opening credit cuepoint start and end-->
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">155.071</manifest:Timecode>
+          <manifest:DisplayLabel>FIRST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
+          <manifest:Label>FFEI</manifest:Label>
+        </manifest:Marker>
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">200.867</manifest:Timecode>
+          <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
+          <manifest:Label>LFEI</manifest:Label>
+        </manifest:Marker>
+        
+        <!--End credit cuepoint start and end-->
+        
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
+          <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
+          <manifest:Label>FFUN</manifest:Label>
+        </manifest:Marker>
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">3812.517</manifest:Timecode>
+          <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
+          <manifest:Label>LFUN</manifest:Label>
+        </manifest:Marker>
+        
+        <!--Ad Break cuepoints (Roku only needs a start point. Our player will effectively pause video playback at this point, play the ad pod, and resume from this same point)-->
+         
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">737.111</manifest:Timecode>
+          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+          <manifest:Label>FPCI</manifest:Label>
+        </manifest:Marker>
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">1361.276</manifest:Timecode>
+          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+          <manifest:Label>FPCI</manifest:Label>
+        </manifest:Marker>
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">1948.821</manifest:Timecode>
+          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+          <manifest:Label>FPCI</manifest:Label>
+        </manifest:Marker>
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">2841.421</manifest:Timecode>
+          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+          <manifest:Label>FPCI</manifest:Label>
+        </manifest:Marker>
+        <manifest:Marker>
+          <manifest:Timecode format="seconds">3270.100</manifest:Timecode>
+          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+          <manifest:Label>FPCI</manifest:Label>
+        </manifest:Marker>
+      </manifest:Markers>
+```

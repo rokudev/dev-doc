@@ -1,30 +1,18 @@
----
-title: "<component\>"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
 
 
-The <component\> element defines all aspects of the component defined in a SceneGraph XML component file. Every SceneGraph XML component file must have exactly one <component\> element that contains all other XML elements in the file, which may include:
+The \<component\> element defines all aspects of the component defined in a SceneGraph XML component file. Every SceneGraph XML component file must have exactly one \<component\> element that contains all other XML elements in the file, which may include:
 
-- an [<interface\>](/docs/references/scenegraph/xml-elements/interface.md) element that defines the interface fields of the component
-- zero or more [<script\>](/docs/references/scenegraph/xml-elements/script.md) elements that define the BrightScript code used by the component
-- a [<children\>](/docs/references/scenegraph/xml-elements/children.md) element that contains the child <node\> elements (either the built-in node classes or node classes extended from them) for the component, declared in XML markup
+- an [\<interface\>](/docs/references/scenegraph/xml-elements/interface.md) element that defines the interface fields of the component
+- zero or more [\<script\>](/docs/references/scenegraph/xml-elements/script.md) elements that define the BrightScript code used by the component
+- a [\<children\>](/docs/references/scenegraph/xml-elements/children.md) element that contains the child \<node\> elements (either the built-in node classes or node classes extended from them) for the component, declared in XML markup
 
 ## Attributes
 
-The following attributes define a <component\> XML element:
+The following attributes define a \<component\> XML element:
 
 | Attribute    | Required | Description                                                  |
 | ------------ | -------- | ------------------------------------------------------------ |
-| name         | required | Specifies the name of the component, that allows you to create the component in your application. For example, if the name of the component is `CastMemberInfo`, you could create instances of the component declaratively in a child node element of a component <children\> element (`<CastMemberInfo/>`), or using BrightScript in a <script\> element (`createObject("roSGNode","CastMemberInfo")`). <br/><br/> The name attribute is case-sensitive. You cannot successfully create or declare a component unless the component name exactly matches the name attribute, including case. Also be aware that two components with the exact same name in the same application components directory will have undefined and generally undesirable results if you attempt to create a component object with that name in the application. |
+| name         | required | Specifies the name of the component, that allows you to create the component in your application. For example, if the name of the component is `CastMemberInfo`, you could create instances of the component declaratively in a child node element of a component \<children\> element (`<CastMemberInfo/>`), or using BrightScript in a \<script\> element (`createObject("roSGNode","CastMemberInfo")`). <br/><br/> The name attribute is case-sensitive. You cannot successfully create or declare a component unless the component name exactly matches the name attribute, including case. Also be aware that two components with the exact same name in the same application components directory will have undefined and generally undesirable results if you attempt to create a component object with that name in the application. |
 | extends      | optional | Specifies the name of the built-in or extended SceneGraph scene or node class whose functionality is extended by this component. <br /><br />For example, `extends="Group"` specifies that the component has all of the functionality of the [Group](/docs/references/scenegraph/layout-group-nodes/group.md) node class (it can have child nodes, has translation/scale/rotation fields, and so forth).<br /><br />By default, a component extends the [Group](/docs/references/scenegraph/layout-group-nodes/group.md) node class. |
 | initialFocus | optional | Specifies the ID of a node declared in the XML file to have the initial remote control focus when the component is instantiated. |
 | version      | optional | Specifies the version of the SceneGraph API. The default is 1.0 if not specified. |
@@ -33,9 +21,9 @@ The following attributes define a <component\> XML element:
 
 ## Example
 
-The following <component\> element defines a component named `GridPanelExample`, that contains <interface\>, <script\>, and <children\> elements.
+The following \<component\> element defines a component named `GridPanelExample`, that contains \<interface\>, \<script\>, and \<children\> elements.
 
-**<component\> element example**
+**\<component\> element example**
 ~~~~
 <component name = "GridPanelExample" extends = "GridPanel" initialFocus = "examplePosterGrid" >
  

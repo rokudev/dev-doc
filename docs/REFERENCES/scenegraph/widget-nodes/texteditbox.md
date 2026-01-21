@@ -1,5 +1,5 @@
 ---
-title: "TextEditBox"
+title: TextEditBox
 excerpt: ''
 deprecated: false
 hidden: true
@@ -35,12 +35,7 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
 | hintTextColor                                             | color   | 0xffffffff | Read-Write        | Specifies the color of the hint text string.                 |
 | width                                                     | float   | -1.0       | Read-Write        | Specifies the width of the **TextEditBox** node. When used internal to the **Keyboard** and **MiniKeyboard** nodes, those nodes set this field to match the width of the keyboard. |
 | backgroundUri                                             | string  | ""         | Read-Write        | Specifies the URI of the image rendered as the background of the **TextEditBox** node. |
-| leadingEllipsis | Boolean | false      | READ_WRITE        | Specifies whether to display the end or beginning of text that overflows its available width:<br />${leading-ellipsis-list} |
-
-{#leading-ellipsis-list}
-
-- **true**. The end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog". 
-- **false**. The start of the text is shown (for example, "the quick brown fox jumps...").
+| leadingEllipsis | Boolean | false      | READ_WRITE        | Specifies whether to display the end or beginning of text that overflows its available width:<br /> |
 
 ## Sample app	
 

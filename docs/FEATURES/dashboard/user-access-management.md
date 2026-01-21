@@ -24,7 +24,104 @@ To add a user to your developer account and assign them roles and permissions, f
 
    <Image alt="roku600px - multi-user-access-2-roles-access" border={false} src="https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-invite-user-button.png" />
 
-2. In the **Invite a user** page, enter the following information: <a id="user-roles" />
+2. In the **Invite a user** page, enter the following information: <a id="user-roles" />  
+   <HTMLBlock>{`
+   <table>
+   <thead>
+   <tr>
+   <th class="short-line"><strong>Field</strong></th>
+   <th class="short-line"><strong>Description</strong></th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td class="short-line">Email</td>
+   <td class="long-line">The email address of the user to be added to your developer account.</td>
+   </tr>
+   <tr>
+   <td class="short-line">Organization</td>
+   <td class="long-line">The name of the company associated with the Roku developer.</td>
+   </tr>
+   <tr>
+   <td class="short-line">Roles</td>
+   <td class="long-line">Select the checkboxes for one or more of the following roles and permissions: <div class="hscroll"><table>
+   <thead>
+   <tr>
+   <th class="short-line">Role</th>
+   <th class="short-line">Permissions</th>
+   <th class="short-line">Access-level</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <td class="short-line"><strong>Administrator</strong></td>
+   <td class="long-line">Same permissions as the root account holder. An administrator can perform all the tasks listed in this table, as well as: <ul>
+   <li>Create and delete apps</li>
+   <li>Electronically approve agreements (such as the Roku Distribution Agreement)</li>
+   <li>Enroll in the Roku Partner Payouts Program and view information used for enrollment or eligibility determination</li>
+   <li>Manage users and test users</li>
+   <li>Update developer information.</li>
+   </ul></td>
+   <td class="short-line">Account</td>
+   </tr>
+   <tr>
+   <td class="short-line"><strong>App Management</strong></td>
+   <td class="short-line"></td>
+   <td class="short-line"></td>
+   </tr>
+   <tr>
+   <td class="short-line">App management</td>
+   <td class="long-line">Access the app management and publishing features for one or more apps, including: <ul>
+   <li>App properties and metadata</li>
+   <li>Package Upload</li>
+   <li>Static Analysis</li>
+   <li>Submit for publishing</li>
+   <li>Search feeds (validate, submit, and manage)</li>
+   </ul><br><br>Select one or more apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to the managment and publishing features for all existing apps (as you create new apps, you will need to manually add them to grant access).</td>
+   <td class="short-line">App</td>
+   </tr>
+   <tr>
+   <td class="short-line">Non-financial Reports</td>
+   <td class="long-line">Access the following app analytics and health reports: <ul>
+   <li>Channel Health</li>
+   <li>Channel Engagement</li>
+   <li>Channel Stability</li>
+   <li>Viewership Summary</li>
+   </ul><br><br>Select apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to view the financial reports for all existing apps (as you create new apps, you will need to manually add them to grant access to their financial reports).</td>
+   <td class="short-line">App</td>
+   </tr>
+   <tr>
+   <td class="short-line"><strong>Monetization</strong></td>
+   <td class="short-line"></td>
+   <td class="short-line"></td>
+   </tr>
+   <tr>
+   <td class="short-line">Products</td>
+   <td class="long-line"><ul>
+   <li>Enable the developer to create and manage in-app products (for example, subscriptions, movie rentals, special events).</li>
+   <li>Add, view, edit, and delete test users.</li>
+   </ul></td>
+   <td class="short-line">Account</td>
+   </tr>
+   <tr>
+   <td class="short-line">Financial Reports</td>
+   <td class="long-line">Grant the developer access to the Roku Pay transaction, sales activity, and payout reports for one or more apps.<br><br>Select apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to view the financial reports for all existing apps (as you create new apps, you will need to manually add them to grant access to their financial reports).</td>
+   <td class="short-line">Account</td>
+   </tr>
+   <tr>
+   <td class="short-line"><strong>Payout admin</strong></td>
+   <td class="long-line"><ul>
+   <li>Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the <a href="https://developer.roku.com/payments/">Roku Partner Payouts Program</a> in order to monetize content in a Roku app. </li>
+   </ul></td>
+   <td class="short-line">Account</td>
+   </tr>
+   </tbody>
+   </table></div></td>
+   </tr>
+   </tbody>
+   </table>
+   `}</HTMLBlock>
+   <br />
 
 ![](https://image.roku.com/ZHZscHItMTc2/mua-invite-user.png)
 ![](https://image.roku.com/ZHZscHItMTc2/mua-admin.png)

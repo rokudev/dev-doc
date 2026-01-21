@@ -69,3 +69,39 @@ Content length longer than 15 minutes:
 
 Please see [here](https://docs.roku.com/published/madeforkids) for more information and guidance on content "made for kids"
 
+### External branding and calls to action (CTAs)
+
+Roku Channel does not allow branding or external URL links/calls to action on key art or within the video and closed captioning. Calls to action are creatives and/or content segments that direct users outside of the Roku Channel ecosystem to consume content on external services. Video must be edited to remove links or directions for users to visit external sites. This includes:
+
+- Brand logos
+- Web urls
+- QR codes
+- Verbally or textually calling viewers to "click", "subscribe", "buy now", "go to", etc
+
+Please contact your Roku representative for more details.
+
+### Music cue sheets
+
+Music cue sheets may be submitted to Roku for content distributed to Roku Channel via the below link:
+
+https://go.roku.com/music-cue-sheet-submission
+
+Please do not submit music cue sheets with the video package deliverables via Aspera. Cue sheets delivered with the video package will be subject to deletion.
+
+## User experience on Roku Channel
+
+Roku augments metadata and artwork that appears in Roku Channel on Roku devices, web browsers, mobile applications, and other off-platform players with data supplied from Gracenote’s database where available. The Gracenote data aids in a unified experience of a title across platforms as well as on the greater Roku ecosystem. Roku will attempt to match all content delivered by our Partners to a corresponding record in Gracenote’s database. *At this time all metadata and artwork that appears on Roku Channel is sourced from Gracenote if that content is found in Gracenote’s database.*
+
+Gracenote leverages "Artwork Personalization" where they supply alternate imagery to diversify title artwork for different users based on several factors (demographics, popularity, etc.); which has led to an increase in user engagement. Gracenote does accept official key art from Partners, but not all users will see official art unless the algorithm serves it to them. Gracenote supplies ~3 unique images, and create alternative versions of artwork sourced from a variety of places (ex. original broadcaster, production studio, creative agency). Gracenote has stated to Roku that all images are under a fair use license, and they apply the same quality standards to Personalized Images as they do to partner supplied Key Art, e.g., no major spoilers, no dark/blurry/grainy images, no violent/suggestive imagery, avoidance of smoking. 
+
+Our systems use a combination of methods to match a title its correct Gracenote record. Partners can aid in the matching to a Gracenote record by providing accurate metadata including:
+
+- Exact title of a series, movie, TV special, or short form video
+- Release dates that are accurate to the year the title was originally released on any platform
+- Accurate season and episode numbers according to the original release order
+- Accurate TMS (Gracenote) IDs by content type
+- Content classified as an episode with Gracenote must be delivered as an Episode to Roku
+- Content classified as a movie with Gracenote must be delivered as a movie to Roku
+- Content classified as a TV Special with Gracenote can be delivered as a movie to Roku
+
+Partners can aid in the curation of their content on Roku Channel by providing Tags with each movie, episode, or clip. Roku Channel editorial team and recommendations engine will utilize the provided Tags and Genres to help surface content on Roku Channel Platform UI. The more tags that are included, the more ways the content can be curated/surfaced to the end user. Please see [Best practices: content tags and metadata](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md) for more details

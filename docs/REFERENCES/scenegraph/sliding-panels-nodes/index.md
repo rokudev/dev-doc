@@ -141,3 +141,14 @@ using the `createChild()` function, or using the `createObject()`
 function followed by the `appendChild()` function, depending on the
 sequence your application will follow to slide the panels, because the
 panels will not slide until added to the panel set.
+
+## Sliding panels example
+
+**Example Application:**
+[SlidingPanels](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels)
+
+The following adds two medium panels as children of a panel set in an
+**OverhangPanelSetScene** component `init()` function, and sets up field
+observers with callback functions to populate and add panels to the
+right, and slide the panels back and forth based on user key
+presses.

@@ -261,3 +261,62 @@ functions to do this."
 
 </component>
 ```
+Since both the `categoriesListPanel` and `categoryinfoPanel` components
+were defined as medium panels (each approximately one-half the panel set
+width), they fill the entire panel set width. The `categoryinfoPanel`
+component is defined as a simple tombstone panel to be targeted with
+additional information on the focused item in the `categoriesListPanel`
+component list on the left. It implements an `<interface>` element with
+an `onChange` callback function attribute for a string
+field:
+
+**Simple Tombstone Panel XML Markup Example**
+
+```
+<component name="categoryinfoPanel" extends="Panel" >
+
+<interface>
+  <field id = "description" type = "string" onChange = "showdescription" />
+</interface>
+
+<script type="text/brightscript" >
+<![CDATA[
+
+sub init()
+  m.top.panelSize = "medium"
+  m.top.focusable = true
+  m.top.hasNextPanel = true
+
+  m.infolabel = m.top.findNode("infoLabel")
+end sub
+
+sub showdescription()
+  m.infolabel.text = m.top.description
+end sub
+
+]]>
+</script>
+
+<children>
+
+<Rectangle
+  id = "infoRectangle"
+  translation = "[0,40]"
+  height = "420"
+  width = "520"
+  color = "0x00000099" >
+
+  <Label
+    id = "infoLabel"
+    translation = "[15,15]"
+    height = "595"
+    width = "510"
+    font = "font:MediumBoldSystemFont"   />
+
+</Rectangle>
+
+</children>
+
+</component>
+
+```

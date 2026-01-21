@@ -462,3 +462,53 @@ Roku supports three image types for each piece of content. Each image type will 
 - Artwork for international territories should be localized for each territory
 - For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
 - Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku
+
+#### Artwork placement on platform examples
+
+**Movie artwork -browse experience**
+
+Highlighted example of the 16:9 texted image with title treatment
+
+![roku400px - movieGrid](https://image.roku.com/ZHZscHItMTc2/movieBrowse.jpg)
+
+**Movie artwork -details experience**
+
+Highlighted example of the 16:9 textless image
+
+![roku400px - movieDetails](https://image.roku.com/ZHZscHItMTc2/movieDetail.jpg)
+
+**Series artwork - browse experience**
+
+Highlighted example of the 16:9 texted series image with title treatment
+
+![roku400px - seriesGrid](https://image.roku.com/ZHZscHItMTc2/seriesBrowse.jpg)
+
+**Series artwork - details experience**
+
+Highlighted example of the 16:9 textless series image
+
+![roku400px - seriesDetail](https://image.roku.com/ZHZscHItMTc2/seriesDetails.jpg)
+
+**Episode artwork - episode picker experience**
+
+Highlighted example of the 16:9 textless episode images
+
+![roku400px - episodePicker](https://image.roku.com/ZHZscHItMTc2/episodePicker.jpg)
+
+**Episode artwork - episode details experience**
+
+Highlighted example of the 16:9 textless episode image
+
+![roku400px - episodeDetail](https://image.roku.com/ZHZscHItMTc2/episodeDetail.jpg)
+
+**Clip artwork - browse experience**
+
+Highlighted example of the 16:9 texted image with title treatment
+
+![roku400px - clipGrid](https://image.roku.com/ZHZscHItMTc2/clipBrowse.jpg)
+
+**Poster artwork - search experience**
+
+Highlighted example of the 2:3 texted image with title treatment from the Search experience. 2:3 images are preferred for series and movie content types
+
+![posterSearch](https://image.roku.com/ZHZscHItMTc2/posterSearch.jpg)

@@ -1095,3 +1095,11 @@ File replacements and additions are automated and will be processed in the same 
 4. If the source video file is being replaced and there is a change in the duration of the source, any related files (captions, subtitles, audio dubs) should also be replaced.
 5. File replacements require language values in order to update properly
 6. Upload the file replacement or addition metadata to the "prod" folder in Aspera
+
+*As a best practice, please provide replacement files with a unique name both in the metadata and on the file itself. Simply adding a versionnumber (_v2, _v3, etc.) would suffice. For example:* `movie_title_v2.mov`
+
+**Content takedown**
+
+If rights change from when the content was originally delivered to Roku and content needs to be removed from Roku Channel either immediately or scheduled, the availability end date can be changed by providing ametadata update as defined [below](#metadata-updates-mdu-and-file-replacements). Explicit updates should be provided for all territories from which thecontent should be removed. Please be aware that end dates providedwithout time values specified will expire at 11:59:59pm on that date.
+
+### Roku XML metadata requirements, samples, and schemas

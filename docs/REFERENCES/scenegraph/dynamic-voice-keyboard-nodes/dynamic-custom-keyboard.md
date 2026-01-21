@@ -10,6 +10,19 @@ metadata:
 next:
   description: ''
 ---
+<br />
+
+#### Example custom key select handler
+
+The following example demonstrates a custom key handler:
+
+1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:
+
+2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:
+
+3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:
+
+
 #### Custom key handlers that modify the entered text string
 
 In most cases, the default key selection handlers can be used for modifying the entered text string. However, if a custom key handler is used to do this, it must update the **cursorPosition** of the **DynamicCustomKeyboard**. The following example demonstrates a custom key handler that changes the text string:
@@ -21,34 +34,26 @@ In most cases, the default key selection handlers can be used for modifying the 
                <OTHER KEYS>
            ]
    ```
-2. The **keySelected()** function includes the following business logic:  
+2. The **keySelected()** function includes the following business logic:
    ```
-   <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
-   	<interface>
-     	<function name="keySelected" />
-   	</interface>
-     <OTHER COMPONENT ELEMENTS>
-   </component>
-
-   ```
-3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:  
-   ```
-    function keySelected(key as string) as boolean
-               if key = "ChangeCase"
-                   if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
-                       m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
-                   else
-                       m.top.keyGrid.mode = "UpperCase"
+   function keySelected(key as string) as boolean
+               if key = "DuplicateCharacter"
+                   currString = m.top.text
+                   currStringLen = currString.Len()
+                   cursorPosition = m.top.textEditBox.cursorPosition
+                   charToDuplicate = currString.Mid(cursorPosition, 1)
+                ' set the keyboard's text field to the edited string
+                   if cursorPosition > 0
+                       m.top.text = currString.Left(cursorPosition) + charToDuplicate + currString.Right(currStringLen - cursorPosition)
                    end if
-                   return true    ' key selection is handled, return true
+                   ' update the VoiceTextEditBox's cursorPosition
+                   m.top.TextEditBox.cursorPosition = cursorPosition + 1
+                   return true   ' DuplicateCharacter key selection is handled
                end if
                ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
                return false
            end function
    ```
-   <br />
-
-<br />
 
 ## Fields
 

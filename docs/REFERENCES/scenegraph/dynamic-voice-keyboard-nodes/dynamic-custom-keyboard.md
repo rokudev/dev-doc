@@ -10,6 +10,44 @@ metadata:
 next:
   description: ''
 ---
+#### Custom key handlers that modify the entered text string
+
+In most cases, the default key selection handlers can be used for modifying the entered text string. However, if a custom key handler is used to do this, it must update the **cursorPosition** of the **DynamicCustomKeyboard**. The following example demonstrates a custom key handler that changes the text string:
+
+1. The Key Definition File includes a key definition with an action intended to duplicate the character to the left of the cursor position, positioning the cursor after the duplicated character:
+   ```
+   "keys": [
+               \{ "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" \},
+               <OTHER KEYS>
+           ]
+   ```
+2. The **keySelected()** function includes the following business logic:  
+   ```
+   <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
+   	<interface>
+     	<function name="keySelected" />
+   	</interface>
+     <OTHER COMPONENT ELEMENTS>
+   </component>
+
+   ```
+3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:  
+   ```
+    function keySelected(key as string) as boolean
+               if key = "ChangeCase"
+                   if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
+                       m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
+                   else
+                       m.top.keyGrid.mode = "UpperCase"
+                   end if
+                   return true    ' key selection is handled, return true
+               end if
+               ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
+               return false
+           end function
+   ```
+   <br />
+
 <br />
 
 ## Fields

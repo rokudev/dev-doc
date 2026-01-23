@@ -1,5 +1,5 @@
 ---
-title: "Roku Pay: Simplifying customer payments"
+title: 'Roku Pay: Simplifying customer payments'
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-pay-how-it-works.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-pay-how-it-works-v3.png" width="720" height="480" controls />
 
 ## About this video
@@ -24,5 +22,4 @@ This video highlights the streamlined purchasing experience provided by Roku Pay
 
 [How Roku Pay works](doc:how-roku-pay-works)
 
-[Implementing Roku Pay](doc:overview)
-
+[Implementing Roku Pay](doc:roku-pay)

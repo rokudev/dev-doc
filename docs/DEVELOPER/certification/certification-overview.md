@@ -34,7 +34,7 @@ Use the certification criteria and the [list of pre-certification tests](doc:cer
 
 * [Channel Behavior Analysis tool](doc:channel-publishing-guide): For SVOD, AVOD, and free apps, verifies whether app performance and deep linking meet applicable certification requirements.
 
-* [Test automation software](doc:automated-testing-overview): Enables developers to write and execute automated test cases, including app purchasing, performance, deep linking, and other certification criteria.
+* [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including app purchasing, performance, deep linking, and other certification criteria.
 
 #### Test using beta apps
 
@@ -134,7 +134,7 @@ Certification criteria are listed by functionality. <br />
 
 ### 1. Advertising
 
-1.1 Apps that include video advertising must comply with all the integration requirements listed in the <a href="/docs/developer-program/advertising/ad-requirements.md">Roku advertising requirements</a>  document.
+1.1 Apps that include video advertising must comply with all the integration requirements listed in the [Roku advertising requirements document](doc:ad-requirements).
 
 ### 2. Purchases
 

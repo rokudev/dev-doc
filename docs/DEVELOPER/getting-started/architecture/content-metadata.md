@@ -54,7 +54,7 @@ select the item.</p>
 <tr>
 <td class="short-line">ContentType</td>
 <td class="short-line">String</td>
-<td class="long-line">Although ContentType accepts type String, the return value is of type <a href="doc:roint">roInt</a>. See table below. <div class="hscroll"><table>
+<td class="long-line">Although ContentType accepts type String, the return value is of type <a href=doc:roint>roInt</a>. See table below. <div class="hscroll"><table>
 <thead>
 <tr>
 <th class="short-line">Content Type</th>

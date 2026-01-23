@@ -1,5 +1,5 @@
 ---
-title: "Developer Summit 2021"
+title: Developer Summit 2021
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,13 +10,11 @@ metadata:
 next:
   description: ''
 ---
+Roku held their annual developer summit online on October 26–27, 2021. The summit started with a keynote address that recapped the past year in streaming and highlighted key industry trends for the upcoming year. The keynote then highlighted the opportunity for publishers to [distribute their apps in Germany](https://partnersuccess.roku.com/hc/en-us/articles/1500006343601) and recapped the latest [Roku Voice features](doc:overview).  The keynote also included a summary of the latest updates to [self-serve certification](doc:certification-testing) and [certification requirements](doc:certification).
 
+During the keynote address, Roku announced a number of new platform features, including [Instant Resume](doc:instant-resume), the new Search feed spec 2.0, and [Developer Dashboard 2.0](doc:overview). Also announced was the release of the Independent Developer Kit (IDK) and [betan app feature](doc:channel-publishing-guide), and the sunsetting of non-certified apps.
 
-Roku held their annual developer summit online on October 26–27, 2021. The summit started with a keynote address that recapped the past year in streaming and highlighted key industry trends for the upcoming year. The keynote then highlighted the opportunity for publishers to [distribute their apps in Germany](https://partnersuccess.roku.com/hc/en-us/articles/1500006343601) and recapped the latest [Roku Voice features](doc:overview).  The keynote also included a summary of the latest updates to [self-serve certification](doc:certification-testing) and [certification requirements](doc:certification).  
-
-During the keynote address, Roku announced a number of new platform features, including [Instant Resume](doc:instant-resume), the new Search feed spec 2.0, and [Developer Dashboard 2.0](doc:overview). Also announced was the release of the [Independent Developer Kit (IDK)](doc:idk-getting-started) and [betan app feature](doc:channel-publishing-guide), and the sunsetting of non-certified apps.
-
-After the keynote, a series of 10 workshops and panel discussions were held on a number of key platform features, including [Roku SceneGraph](doc:core-concepts), [Roku Pay](doc:how-roku-pay-works), [Roku Advertising Framework (RAF)](doc:roku-advertising-framework), [voice keyboards](doc:dynamic-keyboard-base), and the [standard dialog framework](doc:standard-dialog-framework-overview). These workshops and panel discussions enabled the developer community to directly engage with members on Roku’s product and engineering teams.
+After the keynote, a series of 10 workshops and panel discussions were held on a number of key platform features, including [Roku SceneGraph](doc:core-concepts), [Roku Pay](doc:roku-pay), [Roku Advertising Framework (RAF)](doc:advertising), [voice keyboards](doc:dynamic-keyboard-base), and the [standard dialog framework](doc:standard-dialog-framework-nodes). These workshops and panel discussions enabled the developer community to directly engage with members on Roku’s product and engineering teams.
 
 ## Keynote
 

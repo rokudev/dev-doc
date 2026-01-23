@@ -919,7 +919,7 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 * Multiple Sections - 5.1 & Stereo Mix required. 7.1 mix no longer being requested.
 * Multiple Sections - Timecodes of act breaks updated to HH:MM:SS:FF
 * 5.5 - Locked Cut requirements updated
-* 8.3.2 - Replaced Mexican SpaPlease ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](https://developer.roku.com/trc-docs/video-on-demand/ingest-specifications.md#roku-excel-metadata-guidelines-and-templates). nish (esMX) labeling with Neutral Latin American Spanish (esMX)
+* 8.3.2 - Replaced Mexican SpaPlease ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](https://go.roku.com/rokuchannel-ingest-vod#roku-excel-metadata-guidelines-and-templates) . nish (esMX) labeling with Neutral Latin American Spanish (esMX)
 * 8.4.5 - Final Proxy file size changed to a maximum of 2gb
 * 8.5.1 - Audio Deliverables updated
 * 8.6 - Replaced Mexican Spanish (esMX) labeling with Neutral Latin American Spanish (esMX); Removed SCC file requirement

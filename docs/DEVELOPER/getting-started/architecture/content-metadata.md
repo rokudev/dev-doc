@@ -147,7 +147,7 @@ select the item.</p>
 <tr>
 <td class="short-line">Rating</td>
 <td class="short-line">String</td>
-<td class="long-line">Selects an icon to be displayed for the corresponding MPAA or TV rating, that is, the value will display as an icon artwork. See <a href="https://roku-ent.readme.io/dev/content-metadata#rating-attribute-icons">Rating Attribute Icons</a> for a list of the acceptable values and the corresponding icon.</td>
+<td class="long-line">Selects an icon to be displayed for the corresponding MPAA or TV rating, that is, the value will display as an icon artwork. See <a href="https://roku-ent.readme.io/dev/docs/content-metadata#rating-attribute-icons">Rating Attribute Icons</a> for a list of the acceptable values and the corresponding icon.</td>
 <td class="short-line">"PG-13"</td>
 </tr>
 <tr>
@@ -261,7 +261,7 @@ select the item.</p>
 </tbody>
 </table></div>
 <h2 id="digital-rights-management-drm-control-attributes">Digital rights management (DRM) control attributes</h2>
-<p>Digital rights management (DRM) content meta-data control attributes are available in the Roku OS through the drmParams parameter of type <a href="https://roku-ent.readme.io/dev/roassociativearray">roAssociativeArray</a>. The table below enumerates all usable attributes of drmParams.</p>
+<p>Digital rights management (DRM) content meta-data control attributes are available in the Roku OS through the drmParams parameter of type <a href="https://roku-ent.readme.io/dev/docs/roassociativearray">roAssociativeArray</a>. The table below enumerates all usable attributes of drmParams.</p>
 <p><strong>Note:</strong> Not all attributes are required, and may not have the same semantic meaning when applied to different DRM systems.</p>
 <div class="hscroll"><table>
 <thead>
@@ -305,7 +305,7 @@ select the item.</p>
 <td class="short-line">Required for all</td>
 <td class="short-line">String</td>
 <td class="long-line">"playready" or "widevine". This value is case-insensitive. The default is an empty string.<br><br><blockquote>
-<p>As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click <a href="https://roku-ent.readme.io/dev/content-protection">here</a> for more information on implementing these DRMs.</p>
+<p>As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click <a href="https://roku-ent.readme.io/dev/docs/content-protection">here</a> for more information on implementing these DRMs.</p>
 </blockquote></td>
 <td class="short-line">"widevine"</td>
 </tr>
@@ -385,7 +385,7 @@ select the item.</p>
 <li>when encodingType="PlayReadyLicenseAcquisitionAndChallenge", the EncodingKey attribute contains the PlayReady license acquisition URL plus additional custom license acquisition request data in format "URL%%%"  Note, this is the same value that used to be specified directly in Content Metadata structure   The app just needs to set drmParams.licenseSererUrl.</li>
 </ul>
 <h3 id="passing-custom-http-headers-to-licensing-requests">Passing custom HTTP headers to licensing requests</h3>
-<p>Developers looking to pass custom HTTP headers with a licensing request can now set those headers using the <a href="https://roku-ent.readme.io/dev/ifhttpagent">ifHttpAgent</a> interface methods on the <a href="https://roku-ent.readme.io/dev/video">Video</a> node.</p>
+<p>Developers looking to pass custom HTTP headers with a licensing request can now set those headers using the <a href="https://roku-ent.readme.io/dev/docs/ifhttpagent">ifHttpAgent</a> interface methods on the <a href="https://roku-ent.readme.io/dev/docs/video">Video</a> node.</p>
 <h3 id="example-of-configuring-a-dash-stream-with-widevine-drm">Example of configuring a dash stream with Widevine DRM</h3>
 <pre><code>contMeta = {
     HDPosterUrl:"pkg:/images/BigBuckBunny.jpg"
@@ -771,7 +771,7 @@ m.video.content = videocontent
 <tr>
 <td class="short-line">SubtitleUrl</td>
 <td class="short-line">String</td>
-<td class="long-line">Specifies the path to an SRT or TTML formatted file used to render subtitles or closed captions, respectively. This is supported on roVideoScreen only. See <a href="https://roku-ent.readme.io/dev/closed-caption">Closed Caption Support</a> for additional details</td>
+<td class="long-line">Specifies the path to an SRT or TTML formatted file used to render subtitles or closed captions, respectively. This is supported on roVideoScreen only. See <a href="https://roku-ent.readme.io/dev/docs/closed-caption">Closed Caption Support</a> for additional details</td>
 <td class="long-line">"mysite.com/vid/1932.srt"; "mysite.com/vid/1932.xml"</td>
 </tr>
 <tr>
@@ -1240,7 +1240,7 @@ each value.</p>
 </tbody>
 </table></div>
 <h2 id="content-feed-video-lesson">Content feed video lesson</h2>
-<p>You can learn how to link the content metadata in your app's feed to a ContentNode by watching the <a href="/videos/courses/rsg/content-feed.md">Creating the content feed</a> video lesson in Roku's <a href="https://roku-ent.readme.io/dev/rsg">SceneGraph: Build a Channel online video course</a>.</p></div>
+<p>You can learn how to link the content metadata in your app's feed to a ContentNode by watching the <a href="/videos/courses/rsg/content-feed.md">Creating the content feed</a> video lesson in Roku's <a href="https://roku-ent.readme.io/dev/docs/rsg">SceneGraph: Build a Channel online video course</a>.</p></div>
 `}</HTMLBlock>
 
 <br />

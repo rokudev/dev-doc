@@ -1,5 +1,5 @@
 ---
-title: "Running Channel Behavior Analysis testing on authenticated apps"
+title: Running Channel Behavior Analysis testing on authenticated apps
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,15 +10,11 @@ metadata:
 next:
   description: ''
 ---
-
-
 <video src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg" width="720" height="480" controls />
-
-
 
 ## About this video
 
-This video explains how developers of authenticated subscription (SVOD), ad-supported (AVOD), and free apps can write automation scripts with the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool) that navigate the app's on-device sign-in and sign-out flows. Once the scripts have been written, developers can upload them to the [Channel Behavior Analysis page in the Developer Dashboard](/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes—before submitting the app for certification.
+This video explains how developers of authenticated subscription (SVOD), ad-supported (AVOD), and free apps can write automation scripts with the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool) that navigate the app's on-device sign-in and sign-out flows. Once the scripts have been written, developers can upload them to the [Channel Behavior Analysis page in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes—before submitting the app for certification.
 
 ## Resources
 
@@ -30,7 +26,7 @@ This video explains how developers of authenticated subscription (SVOD), ad-supp
 
 [Authenticated app Channel Behavior Analysis testing guide](doc:authenticated-cert-testing)
 
-[Roku Remote tool guide](doc:roku-remote-tool)  
+[Roku Remote tool guide](doc:roku-remote-tool)
 
 [Channel Behavior Analysis testing in the Developer Dashboard](doc:channel-publishing-guide)
 

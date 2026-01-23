@@ -299,7 +299,7 @@ Below is a list of details, best practices, and dimensions sizes for each partne
 </thead>
 <tbody>
 <tr>
-<td><strong>Pre-roll + AVOD Mid-roll</strong><br /><br />The :30 promotional video will be served as a pre-roll ad prior to unlocked content playback and can also be used in mid-roll ads that appear on The Roku Channel.<br /><br /><em>All :30 promotional videos will include {Partner logo} on The Roku Channel end card.</em></td>
+<td><strong>Pre-roll + AVOD Mid-roll</strong><br /><br />The :30 promotional video will be served as a pre-roll ad prior to unlocked content playback and can also be used in mid-roll ads that appear on The Roku Channel.<br /><br /><em>All :30 promotional videos will include \{Partner logo\} on The Roku Channel end card.</em></td>
 <td><img alt="roku400px - premium-asset-10" src="https://image.roku.com/ZHZscHItMTc2/premium-asset-10.jpg" /></td>
 </tr>
 </tbody>

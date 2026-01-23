@@ -62,4 +62,4 @@ Use the **Subscription recovery** page in the Developer Dashboard to configure t
 
 Use the `subscription-recovery` test API to manually force subscriptions into specific states (Active, In-Grace, On-Hold, Canceled, or Recovered). This allows you to verify your app's UI and backend logic without waiting for real billing cycles.
 
-**For more information:** [Subscription recovery testing](doc:testing-1.md)
+**For more information:** [Subscription recovery testing](doc:testing-1)

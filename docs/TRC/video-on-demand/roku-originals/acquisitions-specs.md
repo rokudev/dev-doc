@@ -398,7 +398,7 @@ Roku Originals content should be delivered in each of the following timed-text f
 
 * FN: Forced Narratives solely
 
-Roku requires closed captions and subtitles in **2** of the [Roku Ingest Specification](doc:ingest-specifications) formats: SRT and WebVTT. The files have to have the same timecode and frame rate as the video and audio delivered. Character encoding MUST be UTF-8.
+Roku requires closed captions and subtitles in **2** of the [Roku Ingest Specification](https://go.roku.com/rokuchannel-ingest-vod) formats: SRT and WebVTT. The files have to have the same timecode and frame rate as the video and audio delivered. Character encoding MUST be UTF-8.
 
 **Languages & Formats Required:**
 

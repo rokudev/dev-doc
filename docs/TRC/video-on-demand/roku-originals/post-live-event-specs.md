@@ -183,7 +183,7 @@ The exact timecode of each ad break, in HH:MM:SS:FF format, will be required in 
 
 For the Final Texted Masters, all audio should be contained within the delivered mezzanine file. See the audio settings listed in 2.3.4 for specifications based on delivery codec.
 
-**The audio channel mapping and tagging of metadata must be verified via a program like QuickTime 7, QuickTime Pro, Telestream Switch or Adobe Media Encoder for all texted and textless masters.**
+The audio channel mapping and tagging of metadata must be verified via a program like QuickTime 7, QuickTime Pro, Telestream Switch or Adobe Media Encoder for all texted and textless masters.
 
 * If the audio is not labeled with the correct metadata (for instance if all channels are labeled as “C” or “Mono”) this will prevent ingest on Roku’s end and will need to be corrected and re-delivered.
 * Incorrectly labeled audio can be manually adjusted in QuickTime Pro without a re-export.
@@ -195,7 +195,7 @@ Mixing Specifications:
 
 #### 4.3.4 VOD texted video masters
 
-The formatting requested below is a subset of [The Roku Channel Ingest Specifications](doc:ingest-specifications).
+The formatting requested below is a subset of [The Roku Channel Ingest Specifications](https://go.roku.com/rokuchannel-ingest-vod).
 
 <table>
   <thead>
@@ -448,7 +448,7 @@ The required details will include, but are not limited to, the following:
 
 Please note that air order and episode titles must be a decision made with your Content Executive. The episode titles must be creatively driven (e.g. not “Episode 1”) and should be written with the show writers or receive writer approval. <u>Episode Titles should be locked after Rough Cut 1s</u>.
 
-Please ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](doc:ingest-specifications).
+Please ensure you have the most up to date template for Metadata which can be found here within the [Roku Ingest Specs site](https://go.roku.com/rokuchannel-ingest-vod#roku-excel-metadata-guidelines-and-templates).
 
 #### 4.6.2 Credits documents
 

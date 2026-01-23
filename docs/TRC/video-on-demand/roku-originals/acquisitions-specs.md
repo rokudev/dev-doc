@@ -163,7 +163,7 @@ Mixing Specifications:
 
 #### 2.4.3 Texted video masters
 
-The formatting requested below is a subset of the [Roku Channel Ingest Specifications](doc:ingest-specifications).
+The formatting requested below is a subset of the [Roku Channel Ingest Specifications](https://go.roku.com/rokuchannel-ingest-vod).
 
 <table>
   <thead>

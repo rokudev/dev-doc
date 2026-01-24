@@ -20,6 +20,6 @@ This video highlights the streamlined purchasing experience provided by Roku Pay
 
 [Roku Pay](doc:billing)
 
-[How Roku Pay works](doc:how-roku-pay-works)
+[How Roku Pay works](doc:roku-pay)
 
 [Implementing Roku Pay](doc:roku-pay)

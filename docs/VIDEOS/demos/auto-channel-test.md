@@ -18,10 +18,12 @@ This video demonstrates the Roku automated app testing software. It provides a b
 
 ## Related documentation
 
-[Automated app testing overview](doc:automated-testing)
+[Automated app testing overview](doc:automated-channel-testing)
 
 [Roku Web Driver](doc:web-driver)
 
 [Roku Robot Framework Library](doc:robot-framework-library)
 
 [Roku JavaScript Library](doc:javascript-library)
+
+<br />

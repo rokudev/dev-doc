@@ -153,7 +153,52 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
 
       <td style={{ textAlign: "left" }}>
-        Sets the color palette for the dialog's background, text, buttons, and other elements. <br /><br />By default, no palette is specified; therefore, the dialog inherits the color palette from the nodes higher in the scene graph (typically, from the dialog's [Scene](/docs/references/scenegraph/scene.md) node, which has a **palette** field that can be used to consistently color the standard dialogs and keyboards in the app). <br /><br />The RSGPalette color values used by the StandardDialog node are as follows:<br />
+        <table>
+            <tr>
+                <td>Palette Color Name</td>
+                <td>Usages</td>
+            </tr>
+            <tr>
+                <td>DialogBackgroundColor</td>
+                <td>Blend color for dialog&#39;s background bitmap.</td>
+            </tr>
+            <tr>
+                <td>DialogItemColor</td>
+                <td>Blend color for the following items:&lt;br /&gt;dialog-item-color-list</td>
+            </tr>
+            <tr>
+                <td>DialogTextColor</td>
+                <td>Color for the text in the following items:&lt;br /&gt;dialog-text-color-list</td>
+            </tr>
+            <tr>
+                <td>DialogFocusColor</td>
+                <td>Blend color for the following:&lt;br /&gt;dialog-focus-color-list</td>
+            </tr>
+            <tr>
+                <td>DialogFocusItemColor</td>
+                <td>Color for the text of the focused button.</td>
+            </tr>
+            <tr>
+                <td>DialogSecondaryTextColor</td>
+                <td>Color for the text of in the following items:&lt;br /&gt;dialog-secondary-text-color-list</td>
+            </tr>
+            <tr>
+                <td>DialogSecondaryItemColor</td>
+                <td>Color for the following items:&lt;br /&gt;dialog-secondary-item-color-list</td>
+            </tr>
+            <tr>
+                <td>DialogInputFieldColor</td>
+                <td>The blend color for the text edit box background bitmap for keyboards used inside dialogs.</td>
+            </tr>
+            <tr>
+                <td>DialogKeyboardColor</td>
+                <td>The blend color for the keyboard background bitmap for keyboards used inside dialogs</td>
+            </tr>
+            <tr>
+                <td>DialogFootprintColor</td>
+                <td>The blend color for the following items:&lt;br /&gt;dialog-footprint-color-list</td>
+            </tr>
+        </table>
       </td>
     </tr>
 

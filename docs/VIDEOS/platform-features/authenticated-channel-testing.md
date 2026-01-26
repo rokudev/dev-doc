@@ -28,7 +28,7 @@ This video explains how developers of authenticated subscription (SVOD), ad-supp
 
 [Roku Remote tool guide](doc:roku-remote-tool)
 
-[Channel Behavior Analysis testing in the Developer Dashboard](doc:channel-publishing-guide)
+[Channel Behavior Analysis testing in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis)
 
 [Channel Behavior Analysis tests](doc:channel-behavior-analysis-tool)
 

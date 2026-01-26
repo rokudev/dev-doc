@@ -616,7 +616,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
 
           <tr>
             <td>DialogFocusColor</td>
-            <td>Blend color for the following:\<br />dialog-focus-color-list</td>
+            <td>Blend color for the following:\<br /></td>
           </tr>
 
           <tr>

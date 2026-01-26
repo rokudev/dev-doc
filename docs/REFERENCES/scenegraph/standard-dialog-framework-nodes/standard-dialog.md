@@ -632,7 +632,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
 
           <tr>
             <td>DialogSecondaryItemColor</td>
-            <td>Color for the following items:\<br />dialog-secondary-item-color-list</td>
+            <td>Color for the following items:<ul><li>The divider displayed below the title area.</li><li>The unfilled portion of the <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-determinate-progress-item.md">StdDlgDeterminateProgressItem&#39;s</a> graphic.</li></ul></td>
           </tr>
 
           <tr>

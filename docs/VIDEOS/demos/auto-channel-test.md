@@ -1,5 +1,5 @@
 ---
-title: "Automated app testing"
+title: Automated app testing
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 <video src="https://image.roku.com/ZHZscHItMTc2/automated-channel-testing.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auto-channel-test.jpg" width="720" height="480" controls />
 
 ## About this video
@@ -20,7 +18,7 @@ This video demonstrates the Roku automated app testing software. It provides a b
 
 ## Related documentation
 
-[Automated app testing overview](doc:automated-testing-overview)
+[Automated app testing overview](doc:automated-testing)
 
 [Roku Web Driver](doc:web-driver)
 

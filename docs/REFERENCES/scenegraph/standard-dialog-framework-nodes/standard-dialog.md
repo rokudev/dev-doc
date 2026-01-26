@@ -611,7 +611,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
 
           <tr>
             <td>DialogTextColor</td>
-            <td>Color for the text in the following items:\<br />dialog-text-color-list</td>
+            <td>Color for the text in the following items:\<br /><ul><li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to &quot;normal&quot; or &quot;bold&quot;.</li><li>All <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md">content area items</a>, except for <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a>.</li><li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-title-area.md#fields">Title area</a>. Unfocused button.</li></ul></td>
           </tr>
 
           <tr>

@@ -1,5 +1,5 @@
 ---
-title: "StdDlgButton"
+title: StdDlgButton
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,14 +10,10 @@ metadata:
 next:
   description: ''
 ---
-
-
-
-
 Extends [Group](doc:group)
 
-**StdDlgButton** is the class used for each button in the [button area](doc:standard-dialog-framework-overview). The buttons are displayed in the order in which they are listed as children of the [**StdDlgButtonArea** node](doc:std-dlg-button-area). The size and layout of each button are controlled by the StandardDialog layout algorithm. **StdDlgButton** nodes should only be used as children of a **StdDlgButtonArea** node. 
+**StdDlgButton** is the class used for each button in the [button area](doc:standard-dialog-framework-nodes#structure). The buttons are displayed in the order in which they are listed as children of the [**StdDlgButtonArea** node](doc:std-dlg-button-area). The size and layout of each button are controlled by the StandardDialog layout algorithm. **StdDlgButton** nodes should only be used as children of a **StdDlgButtonArea** node.
 
-![roku815px - std-dlg-button](https://image.roku.com/ZHZscHItMTc2/std-dlg-button-3.jpg)
+<Image alt="roku815px - std-dlg-button" border={false} src="https://image.roku.com/ZHZscHItMTc2/std-dlg-button-3.jpg" />
 
 ## Fields

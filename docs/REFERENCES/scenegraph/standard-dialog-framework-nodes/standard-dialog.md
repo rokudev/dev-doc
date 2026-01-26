@@ -7,8 +7,6 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
 
 ## Fields
 
-<br />
-
 <Table align={["left","left","left","left","left"]}>
   <thead>
     <tr>

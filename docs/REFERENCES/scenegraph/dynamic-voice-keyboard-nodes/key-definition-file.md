@@ -1,5 +1,5 @@
 ---
-title: "Key Definition File"
+title: Key Definition File
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,9 +10,7 @@ metadata:
 next:
   description: ''
 ---
-
-
-The Key Definition File is a JSON-formatted file that specifies the layout of a keyboard. The Key Definition Files for the classes derived from **DynamicKeyboardBase** (**DynamicKeyboard**, **DynamicPinPad**, and **DynamicMiniKeyboard**) are built-in and cannot be modified because the keyboard layout for these nodes is fixed. Conversely, the **DynamicCustomKeyboard** node requires developers to create the Key Definition File in order to implement a custom keyboard layout. 
+The Key Definition File is a JSON-formatted file that specifies the layout of a keyboard. The Key Definition Files for the classes derived from **DynamicKeyboardBase** (**DynamicKeyboard**, **DynamicPinPad**, and **DynamicMiniKeyboard**) are built-in and cannot be modified because the keyboard layout for these nodes is fixed. Conversely, the **DynamicCustomKeyboard** node requires developers to create the Key Definition File in order to implement a custom keyboard layout.
 
 The Key Definition File is a single JSON object with the following six hierarchal objects (listed in order from the top to the bottom of the hierarchy):
 
@@ -29,116 +27,117 @@ Properties can be set at any level of the hierarchy and are used to determine th
 
 The **KeyLayout** object specifies the key configuration for a keyboard instance. Each Key Definition File includes a single **KeyLayout**. The **KeyLayout** contains one or more Section arrays.
 
-| Attribute         | Type                         | Description                                                  |
-| :---------------- | :--------------------------- | :----------------------------------------------------------- |
-| keyboardHeightFHD | unsigned                     | Overall height of the keyboard for FHD.                      |
-| keyboardWidthFHD  | unsigned                     | Overall width of the keyboard for FHD.                       |
-| keyboardHeightHD  | unsigned                     | Overall height of the keyboard for HD.                       |
-| keyboardWidthHD   | unsigned                     | Overall width of the keyboard for HD.                        |
+| Attribute         | Type                         | Description                                                                                                                                                                                                                                                                                                                                              |
+| :---------------- | :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| keyboardHeightFHD | unsigned                     | Overall height of the keyboard for FHD.                                                                                                                                                                                                                                                                                                                  |
+| keyboardWidthFHD  | unsigned                     | Overall width of the keyboard for FHD.                                                                                                                                                                                                                                                                                                                   |
+| keyboardHeightHD  | unsigned                     | Overall height of the keyboard for HD.                                                                                                                                                                                                                                                                                                                   |
+| keyboardWidthHD   | unsigned                     | Overall width of the keyboard for HD.                                                                                                                                                                                                                                                                                                                    |
 | sections          | array of **Section** objects | An array of **Section** objects in the **KeyLayout**. A **KeyLayout** object contains one or more **Section** objects (it must have at least one). Most have a single **Section** object (for example, a PIN pad). In some cases, however, a **KeyLayout** will have multiple **Section** objects (for example, Roku's WiFi keyboard has four sections). |
 
 ## Section
 
-A **Section** contains one or more **Grid** objects. 
+A **Section** contains one or more **Grid** objects.
 
-| Attribute       | Type                      | Description                                                  |
-| :-------------- | :------------------------ | :----------------------------------------------------------- |
+| Attribute       | Type                      | Description                                                                                                                                          |
+| :-------------- | :------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sectionWidthFHD | unsigned                  | Width of the section for FHD. This attribute is only required if the **KeyLayout** includes multiple **Section** objects that have different widths. |
-| sectionWidthHD  | unsigned                  | Width of the section for HD. This attribute is only required if the **KeyLayout** includes multiple **Section** objects that have different widths. |
-| grids           | array of **Grid** objects | An array of Grid objects in the **Section**. A **Section** object contains one or more **Grid** objects (it must have at least one). |
+| sectionWidthHD  | unsigned                  | Width of the section for HD. This attribute is only required if the **KeyLayout** includes multiple **Section** objects that have different widths.  |
+| grids           | array of **Grid** objects | An array of Grid objects in the **Section**. A **Section** object contains one or more **Grid** objects (it must have at least one).                 |
 
 ## Grid
 
 A **Section** may contain one or more **Grid** objects. A **Section** typically contains multiple **Grid** objects when defining different key layouts for a particular mode of the overall **KeyLayout**. For example, the "alpha key" section of Roku's current WiFi keyboard has six modes ("alphanumLowerCase", "alphanumUpperCase", "symbolsLowerCase", "symbolsUpperCase", "accentsLowerCase", "accentsUpperCase"). Each of the modes for these **Section** objects is specified using a different **Grid**.
 
-
 <table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>gridHeightFHD</td>
-<td>unsigned</td>
-<td>Height of the grid for FHD.This attribute is only required if the <strong>Section</strong> includes multiple <strong>Grid</strong> objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height.</td>
-</tr>
-<tr>
-<td>gridHeightHD</td>
-<td>unsigned</td>
-<td>Height of the grid for HD.This attribute is only required if the <strong>Section</strong> includes multiple <strong>Grid</strong> objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height.</td>
-</tr>
-<tr>
-<td>modes</td>
-<td>string/array of strings</td>
-<td>The keyboard mode when this grid is shown.If the <strong>mode</strong> field of a <strong><a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md">DynamicKeyGrid</a></strong> node is set, the <strong>Grid</strong> object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's WiFi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes.</td>
-</tr>
-<tr>
-<td>rows</td>
-<td>array of <strong>Row</strong> objects</td>
-<td>An array of <strong>Row</strong> objects in the <strong>Grid</strong>. A <strong>Grid</strong> object contains one or more <strong>Row</strong> objects (it must have at least one).If the <em>rows</em> array contains a null Row (for example, {} in the <em>rows</em> array), a blank space will be shown (no key background, label or icon is drawn) and focus cannot be set on that Row object.</td>
-</tr>
-</tbody>
-</table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <tr>
+      <td>gridHeightFHD</td>
+      <td>unsigned</td>
+      <td>Height of the grid for FHD.This attribute is only required if the <strong>Section</strong> includes multiple <strong>Grid</strong> objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height.</td>
+    </tr>
+
+    <tr>
+      <td>gridHeightHD</td>
+      <td>unsigned</td>
+      <td>Height of the grid for HD.This attribute is only required if the <strong>Section</strong> includes multiple <strong>Grid</strong> objects and the grid's height is different from the overall KeyLayout height.The gridHeight must be less than or equal to the overall KeyLayout height.</td>
+    </tr>
+
+    <tr>
+      <td>modes</td>
+      <td>string/array of strings</td>
+      <td>The keyboard mode when this grid is shown.If the <strong>mode</strong> field of a <strong><a href="https://roku-ent.readme.io/dev/docs/dynamic-key-grid">DynamicKeyGrid</a></strong> node is set, the <strong>Grid</strong> object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's WiFi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes.</td>
+    </tr>
+
+    <tr>
+      <td>rows</td>
+      <td>array of <strong>Row</strong> objects</td>
+      <td>An array of <strong>Row</strong> objects in the <strong>Grid</strong>. A <strong>Grid</strong> object contains one or more <strong>Row</strong> objects (it must have at least one).If the <em>rows</em> array contains a null Row (for example, {} in the <em>rows</em> array), a blank space will be shown (no key background, label or icon is drawn) and focus cannot be set on that Row object.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Row
 
 A **Row** is a container for a set of keys. A **Grid** may contain one or more **Row** objects.
 
-| Attribute    | Type                     | Description                                                  |
-| :----------- | :----------------------- | :----------------------------------------------------------- |
-| rowHeightFHD | unsigned                 | Height of the row for FHD. This attribute is only required if the **Grid** includes multiple **Row** objects with different heights. |
-| rowHeightHD  | unsigned                 | Height of the row for HD. This attribute is only required if the **Grid** includes multiple **R****ow** objects with different heights. |
+| Attribute    | Type                     | Description                                                                                                                                                                                                                                                                                                   |
+| :----------- | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| rowHeightFHD | unsigned                 | Height of the row for FHD. This attribute is only required if the **Grid** includes multiple **Row** objects with different heights.                                                                                                                                                                          |
+| rowHeightHD  | unsigned                 | Height of the row for HD. This attribute is only required if the **Grid** includes multiple **R****ow** objects with different heights.                                                                                                                                                                       |
 | keys         | array of **Key** objects | An array of **Key** objects in the **Row**. A **Row** object contains one or more **Key** objects (it must have at least one).If the **Key** object does not include either a **label** field or an **icon***/***focusIcon** field, a blank key background will be drawn and focus cannot be set on that key. |
 
 ## Key
 
 A **Key** specifies a single key within a **Row** object. The **Key** defines the string or icon that is displayed on the key and the string that is sent when the key is focused or selected. Keys may either have a label or an icon, but may not have both.
 
-| Attribute   | Type           | Description                                                  |
-| :---------- | :------------- | :----------------------------------------------------------- |
-| keyWidthFHD | unsigned       | Width of the key for FHD. This attribute is only required if the **Row** includes multiple **Key** objects with different widths. |
-| keyWidthHD  | unsigned       | Width of the key for HD. This attribute is only required if the **Row** includes multiple **Key** objects with different widths. |
+| Attribute   | Type           | Description                                                                                                                                                                                                                                                                                                |
+| :---------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| keyWidthFHD | unsigned       | Width of the key for FHD. This attribute is only required if the **Row** includes multiple **Key** objects with different widths.                                                                                                                                                                          |
+| keyWidthHD  | unsigned       | Width of the key for HD. This attribute is only required if the **Row** includes multiple **Key** objects with different widths.                                                                                                                                                                           |
 | label       | string         | The string to be displayed on the key. Labels can be specified using the character itself or UTF-16 encoding. For example, the lowercase n tilde can be specified with "ñ" or "\u00F1".If the **strOut** field is not specified, this is also the string that is sent when the key is focused or selected. |
-| icon        | uri            | The icon to be displayed on the key. If an icon is specified, the **strOut** field must be specified to send the appropriate string when the key is focused or selected. If an icon is specified, do not specify a label. |
-| focusIcon   | uri            | The icon to be displayed when the key has focus. If an icon is specified, do not specify a label. |
-| strOut      | string         | The string to be sent when the key is focused or selected.   |
-| autoRepeat  | unsigned       | By default, this field is set to **0**, which means the action associated with the key occurs only once. If this field is not set to **0**, the action will continue until the key is released. |
-| disabled    | unsigned       | If this field is set to **0**, the key's label or icon is drawn with a disabled appearance and the key cannot be focused. |
-| suggestions | KeySuggestions | The alternate strings to be displayed in a pop-up when the key is triggered. |
+| icon        | uri            | The icon to be displayed on the key. If an icon is specified, the **strOut** field must be specified to send the appropriate string when the key is focused or selected. If an icon is specified, do not specify a label.                                                                                  |
+| focusIcon   | uri            | The icon to be displayed when the key has focus. If an icon is specified, do not specify a label.                                                                                                                                                                                                          |
+| strOut      | string         | The string to be sent when the key is focused or selected.                                                                                                                                                                                                                                                 |
+| autoRepeat  | unsigned       | By default, this field is set to **0**, which means the action associated with the key occurs only once. If this field is not set to **0**, the action will continue until the key is released.                                                                                                            |
+| disabled    | unsigned       | If this field is set to **0**, the key's label or icon is drawn with a disabled appearance and the key cannot be focused.                                                                                                                                                                                  |
+| suggestions | KeySuggestions | The alternate strings to be displayed in a pop-up when the key is triggered.                                                                                                                                                                                                                               |
 
 ## KeySuggestions
 
 A **KeySuggestions** object specifies one or more optional values for the associated **Key** object. The optional values are displayed when one of the key's triggers occurs.
 
-
 <table>
-<thead>
-<tr>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>options</td>
-<td>string/array of strings</td>
-<td>The optional strings associated with the <strong>Key</strong> object (for example, the @ key may have options of @<a href="http://gmail.com/">gmail.com</a>, @<a href="http://msn.com/">msn.com</a>, and so on).</td>
-</tr>
-<tr>
-<td>triggers</td>
-<td>string/array of strings</td>
-<td>The actions that trigger the suggestions pop-up. This may be one or both of the following values:<br /><br /><table><thead><tr><th>string</th><th>description</th></tr></thead><tbody><tr><td>select</td><td>The suggestions pop-up appears when the key is selected.</td></tr><tr><td>hover</td><td>The suggestions pop-up appears if focus remains on the key for a short interval.</td></tr></tbody></table></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>options</td>
+      <td>string/array of strings</td>
+      <td>The optional strings associated with the <strong>Key</strong> object (for example, the @ key may have options of @<a href="http://gmail.com/">gmail.com</a>, @<a href="http://msn.com/">msn.com</a>, and so on).</td>
+    </tr>
+
+    <tr>
+      <td>triggers</td>
+      <td>string/array of strings</td>
+      <td>The actions that trigger the suggestions pop-up. This may be one or both of the following values:<br /><br /><table><thead><tr><th>string</th><th>description</th></tr></thead><tbody><tr><td>select</td><td>The suggestions pop-up appears when the key is selected.</td></tr><tr><td>hover</td><td>The suggestions pop-up appears if focus remains on the key for a short interval.</td></tr></tbody></table></td>
+    </tr>
+  </tbody>
 </table>
-
-
 
 ## Computing Key Sizes
 
@@ -146,45 +145,29 @@ Key sizes are computed based on the various width and height properties specifie
 
 ### Key Height Computation
 
-- The overall keyboard height is specified by the KeyLayout's **keyboardHeight** attribute.
+* The overall keyboard height is specified by the KeyLayout's **keyboardHeight** attribute.
 
-  
+* All **Section** objects have the same height.
 
-- All **Section** objects have the same height.
+* Key heights are computed based on the number of **Row** objects in a KeyGrid.
 
-  
+* For equal height rows, if there are _N_ Rows in a KeyGrid, the height of each key for each row in a KeyGrid is computed as follows: `keyHeight = (keyboardHeight) / N`.
 
-- Key heights are computed based on the number of **Row** objects in a KeyGrid.
-
-  
-
-- For equal height rows, if there are *N* Rows in a KeyGrid, the height of each key for each row in a KeyGrid is computed as follows: `keyHeight = (keyboardHeight) / N`.
-
-  
-
-- To configure rows with varying heights, specify the **rowHeight** attribute for those rows. Those rows will use the explicitly specified heights and the heights of the remaining rows will be computed by equally dividing the remaining **keyboardHeight** evenly after subtracting the height of the rows with explicitly specified heights. For example, if there are *N* rows and Row 1 has its **rowHeight** explicitly specified as 75, the keys in Row 1 will have height 75, and the height of the keys in the other rows will be calculated as follows: `keyHeight = (keyboardHeight - 75) / (N - 1)`.
+* To configure rows with varying heights, specify the **rowHeight** attribute for those rows. Those rows will use the explicitly specified heights and the heights of the remaining rows will be computed by equally dividing the remaining **keyboardHeight** evenly after subtracting the height of the rows with explicitly specified heights. For example, if there are _N_ rows and Row 1 has its **rowHeight** explicitly specified as 75, the keys in Row 1 will have height 75, and the height of the keys in the other rows will be calculated as follows: `keyHeight = (keyboardHeight - 75) / (N - 1)`.
 
 ### Key Width Computation
 
-- The overall keyboard width is specified by the KeyLayout's **keyboardWidth** attribute.
+* The overall keyboard width is specified by the KeyLayout's **keyboardWidth** attribute.
 
-  
+* If there are _S_ sections, the width of each section by default would be as follows: `sectionWidth = (keyboardWidth) / N`.
 
-- If there are *S* sections, the width of each section by default would be as follows: `sectionWidth = (keyboardWidth) / N`.
+* Individual sections can override the default section width by explicitly specifying a **sectionWidth** attribute. Those sections will use the explicitly specified widths, and the remaining **keyboardWidth** will be equally divided between the sections that do not specify explicit widths, similar to how the key height is computed above if the **rowHeight** is explicitly specified for some rows.
 
-- Individual sections can override the default section width by explicitly specifying a **sectionWidth** attribute. Those sections will use the explicitly specified widths, and the remaining **keyboardWidth** will be equally divided between the sections that do not specify explicit widths, similar to how the key height is computed above if the **rowHeight** is explicitly specified for some rows.
+* Each Grid in a Section object has the same width.
 
-  
+* For keys with equal width in a Row object, if there are _K_ keys in the Row, the height of each key is computed as follows: `keyWidth = (sectionWidth) / K`.
 
-- Each Grid in a Section object has the same width. 
-
-  
-
-- For keys with equal width in a Row object, if there are *K* keys in the Row, the height of each key is computed as follows: `keyWidth = (sectionWidth) / K`.
-
-  
-
-- To configure keys with varying widths within in a Row, specify the **keyWidth** attribute for those keys. Those keys will use the explicitly specified widths, and the widths of the remaining keys will be computed by equally dividing the remaining **sectionWidth** evenly after subtracting the width of the keys with explicitly specified widths. For example, if there are *K* keys in a row and Key 1 has its **keyWidth** explicitly specified as 100, Key 1 will have width 100 and the other keys in the Row will be calculated as follows: `keyWidth = (sectionWidth - 100) / (K - 1)`.
+* To configure keys with varying widths within in a Row, specify the **keyWidth** attribute for those keys. Those keys will use the explicitly specified widths, and the widths of the remaining keys will be computed by equally dividing the remaining **sectionWidth** evenly after subtracting the width of the keys with explicitly specified widths. For example, if there are _K_ keys in a row and Key 1 has its **keyWidth** explicitly specified as 100, Key 1 will have width 100 and the other keys in the Row will be calculated as follows: `keyWidth = (sectionWidth - 100) / (K - 1)`.
 
 ## Examples
 
@@ -192,7 +175,7 @@ Key sizes are computed based on the various width and height properties specifie
 
 This example uses a Key Definition File to specify a simple numeric PIN pad. The KeyLayout includes a single Section with a single Grid that has four Rows with three Keys each.
 
-![roku815px - pin-pad-kdf](https://image.roku.com/ZHZscHItMTc2/pin-pad-kdf.jpg)
+<Image alt="roku815px - pin-pad-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/pin-pad-kdf.jpg" />
 
 ```
 {
@@ -250,13 +233,11 @@ This example uses a Key Definition File to specify a simple numeric PIN pad. The
 }
 ```
 
-
-
 ### MiniKeyboard
 
 This example uses the Key Definition File for the Search "MiniKeyboard" used by the RokuOS. The KeyLayout has a single Section with a single Grid that has six rows, with six keys each for the characters a-z and 0-9. The seventh row of the grid has three double-width keys for **Clear**, **Space**, and **Backspace**.
 
-![roku815px - mini-keyboard-kdf](https://image.roku.com/ZHZscHItMTc2/mini-keyboard-kdf-v2.jpg)
+<Image alt="roku815px - mini-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/mini-keyboard-kdf-v2.jpg" />
 
 ```
 {
@@ -357,31 +338,29 @@ This example uses the Key Definition File for the Search "MiniKeyboard" used by 
 }
 ```
 
-
-
 ### Address Keyboard
 
 This is an example of a keyboard with a single Section that supports five different modes used for entering a name, zip code and an address. The five modes are as follow:
 
-- NameUpper
-- NameLower
-- Zip
-- FullUpper
-- FullLower
+* NameUpper
+* NameLower
+* Zip
+* FullUpper
+* FullLower
 
 Each mode is associated with a different Grid layout.
 
 The examples below show the Keyboard in the "NameLower", "Zip" and "FullLower" modes. These examples illustrate the following:
 
-- For all of the modes, the same **KeyboardWidth** is used.
-- The grid used for the "Zip" mode has fewer rows than the other two modes. The **SectionHeight** for that mode is set so that the height of each row stays the same as in the other modes that use **KeyboardHeight**.
-- In the "NameLower" mode, the **Prev** key is disabled. Similarly, in the "FullUpper" mode, the **Next** key is disabled.
+* For all of the modes, the same **KeyboardWidth** is used.
+* The grid used for the "Zip" mode has fewer rows than the other two modes. The **SectionHeight** for that mode is set so that the height of each row stays the same as in the other modes that use **KeyboardHeight**.
+* In the "NameLower" mode, the **Prev** key is disabled. Similarly, in the "FullUpper" mode, the **Next** key is disabled.
 
-![roku815px - key-grid-1-lower-kdf](https://image.roku.com/ZHZscHItMTc2/key-grid-1-lower-kdf.jpg)
+<Image alt="roku815px - key-grid-1-lower-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/key-grid-1-lower-kdf.jpg" />
 
-![roku815px - key-grid-2-full-lower](https://image.roku.com/ZHZscHItMTc2/key-grid-2-full-lower-kdf.jpg)
+<Image alt="roku815px - key-grid-2-full-lower" border={false} src="https://image.roku.com/ZHZscHItMTc2/key-grid-2-full-lower-kdf.jpg" />
 
-![roku815px - key-grid-3-zip](https://image.roku.com/ZHZscHItMTc2/key-grid-3-zip-kdf.jpg)
+<Image alt="roku815px - key-grid-3-zip" border={false} src="https://image.roku.com/ZHZscHItMTc2/key-grid-3-zip-kdf.jpg" />
 
 ```
 {
@@ -771,20 +750,18 @@ The examples below show the Keyboard in the "NameLower", "Zip" and "FullLower" m
 }
 ```
 
-
-
 ### WiFi Keyboard
 
 This example shows the Key Definition File for the WiFi keyboard used by the Roku OS. That keyboard has four Sections. Each Section supports one or more modes with the modes being associated with one or more Grid objects. Each Grid ha four Row's with varying numbers of keys.
 
 The examples below show the keyboard in "ABC123Lower" mode as well as "AccentsUpper" mode. Note the following:
 
-- The leftmost section does not change its Grid for different modes. In that case, the Section has a single Grid with its mode set to an array of all of the mode names.
-- In the "SymbolsUpper" mode, the third Section has some blank keys in the bottom two rows.
+* The leftmost section does not change its Grid for different modes. In that case, the Section has a single Grid with its mode set to an array of all of the mode names.
+* In the "SymbolsUpper" mode, the third Section has some blank keys in the bottom two rows.
 
-![roku815px - wifi-keyboard-1-alphanum-kdf](https://image.roku.com/ZHZscHItMTc2/wifi-keyboard-1-alphanum-kdf.jpg)
+<Image alt="roku815px - wifi-keyboard-1-alphanum-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/wifi-keyboard-1-alphanum-kdf.jpg" />
 
-![roku815px - wifi-keyboard-2-symbols-kdf](https://image.roku.com/ZHZscHItMTc2/wifi-keyboard-2-symbols-kdf.jpg)
+<Image alt="roku815px - wifi-keyboard-2-symbols-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/wifi-keyboard-2-symbols-kdf.jpg" />
 
 ```
 {
@@ -1572,13 +1549,11 @@ The examples below show the keyboard in "ABC123Lower" mode as well as "AccentsUp
 }
 ```
 
-
-
 ### Email Keyboard with pop-up suggestions
 
 This example uses the same Key Definition File as the WiFi keyboard above, but with KeySuggestions added for the ampersand key. The suggestions pop-up is set to trigger when the key is focused for a short amount of time as well as when the key is selected.
 
-![roku815px - email-keyboard-kdf](https://image.roku.com/ZHZscHItMTc2/email-keyboard-kdf.jpg)
+<Image alt="roku815px - email-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/email-keyboard-kdf.jpg" />
 
 ```
 {
@@ -2372,13 +2347,11 @@ This example uses the same Key Definition File as the WiFi keyboard above, but w
 }
 ```
 
-
-
 ### Full Keyboard with Extended Action Section
 
-This example starts with the same Key Definition File used for the WiFi keyboard above, but adds a 5th Section that includes additional action keys. The *rows* array for that Section's Grid contains 4 elements. The 1st, 2nd and 4th Row's in that array contain a single Key (Close, Clear and Continue). The 3rd element of that array is a null Row. This causes a gap to be left between the 2nd and 4th rows of that Section. See the Section near of the bottom of the Key Definition File to see how a null Row is specified in the Grid's *rows* array.
+This example starts with the same Key Definition File used for the WiFi keyboard above, but adds a 5th Section that includes additional action keys. The _rows_ array for that Section's Grid contains 4 elements. The 1st, 2nd and 4th Row's in that array contain a single Key (Close, Clear and Continue). The 3rd element of that array is a null Row. This causes a gap to be left between the 2nd and 4th rows of that Section. See the Section near of the bottom of the Key Definition File to see how a null Row is specified in the Grid's _rows_ array.
 
-![roku815px - extended-action-keyboard-kdf](https://image.roku.com/ZHZscHItMTc2/extended-action-keyboard-kdf.jpg)
+<Image alt="roku815px - extended-action-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/extended-action-keyboard-kdf.jpg" />
 
 ```
 {

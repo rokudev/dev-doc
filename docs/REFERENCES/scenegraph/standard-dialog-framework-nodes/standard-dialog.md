@@ -153,7 +153,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
 
       <td style={{ textAlign: "left" }}>
-        Sets the color palette for the dialog's background, text, buttons, and other elements. <br /><br />By default, no palette is specified; therefore, the dialog inherits the color palette from the nodes higher in the scene graph (typically, from the dialog's [Scene](/docs/references/scenegraph/scene.md) node, which has a **palette** field that can be used to consistently color the standard dialogs and keyboards in the app). <br /><br />The RSGPalette color values used by the StandardDialog node are listed in the RSGPalette color section.
+        Sets the color palette for the dialog's background, text, buttons, and other elements. <br /><br />By default, no palette is specified; therefore, the dialog inherits the color palette from the nodes higher in the scene graph (typically, from the dialog's [Scene](/docs/references/scenegraph/scene.md) node, which has a **palette** field that can be used to consistently color the standard dialogs and keyboards in the app). <br /><br />The RSGPalette color values used by the StandardDialog node are listed in the RSGPalette color node fields section.
       </td>
     </tr>
 
@@ -207,4 +207,165 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
   </tbody>
 </Table>
 
-<br />
+## RSG Palette Color Node fields
+
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Palette Color Name
+      </th>
+
+      <th>
+        Usages
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        DialogBackgroundColor
+      </td>
+
+      <td>
+        Blend color for dialog's background bitmap.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogItemColor
+      </td>
+
+      <td>
+        Blend color for the following items:  
+
+        *
+          [StdDlgProgressItem's](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-progress-item.md)
+           spinner bitmap
+        *
+          [StdDlgDeterminateProgressItem's](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-determinate-progress-item.md)
+           graphic
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogTextColor
+      </td>
+
+      <td>
+        Color for the text in the following items:  
+
+        *
+          [StdDlgTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md)
+           and 
+          [StdDlgGraphicItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md)
+           if the **namedTextStyle** field is set to "normal" or "bold".
+        * All 
+          [content area items](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md)
+          , except for 
+          [StdDlgTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md)
+           and 
+          [StdDlgGraphicItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md)
+          .
+        *
+          [Title area](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-title-area.md#fields)
+          . Unfocused button.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogFocusColor
+      </td>
+
+      <td>
+        Blend color for the following:  
+
+        * The 
+          [button area](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md#fields)
+           focus bitmap.
+        * The focused scrollbar thumb.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogFocusItemColor
+      </td>
+
+      <td>
+        Color for the text of the focused button.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogSecondaryTextColor
+      </td>
+
+      <td>
+        Color for the text of in the following items:  
+
+        *
+          [StdDlgTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md)
+           and 
+          [StdDlgGraphicItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md)
+           if the **namedTextStyle** field is set to "secondary".
+        * Disabled button.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogSecondaryItemColor
+      </td>
+
+      <td>
+        Color for the following items:  
+
+        * The divider displayed below the title area.
+        * The unfilled portion of the 
+          [StdDlgDeterminateProgressItem's](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-determinate-progress-item.md)
+           graphic.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogInputFieldColor
+      </td>
+
+      <td>
+        The blend color for the text edit box background bitmap for keyboards used inside dialogs.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogKeyboardColor
+      </td>
+
+      <td>
+        The blend color for the keyboard background bitmap for keyboards used inside dialogs
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        DialogFootprintColor
+      </td>
+
+      <td>
+        The blend color for the following items:  
+
+        * The button focus footprint bitmap that is displayed when the 
+          [button area](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md#fields)
+           does not have focus.
+        * Unfocused scrollbar thumb and scrollbar track.
+      </td>
+    </tr>
+  </tbody>
+</Table>

@@ -1,20 +1,8 @@
----
-title: "StandardDialog"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
+# StandardDialog
 
 
 
-
-Extends [Group](doc:group)
+Extends [Group](/docs/references/scenegraph/layout-group-nodes/group.md "**Group**")
 
 The **StandardDialog** node is the base for Roku's pre-built standard message, keyboard, pinpad, and progress dialogs. It can also be used directly with a custom dialog structure built with the **StdDialogItem** nodes.
 

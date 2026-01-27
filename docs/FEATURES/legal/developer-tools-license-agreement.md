@@ -1,7 +1,7 @@
 ---
 title: Developer tools license agreement
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

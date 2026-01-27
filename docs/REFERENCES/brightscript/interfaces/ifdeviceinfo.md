@@ -426,12 +426,12 @@ Checks for the supported DRM system and its features.
 
 An associative array with the supported DRM system and features. For example, a device that supports PlayReady inside a trusted environment with secure stop returns:
 
-``\{"playready": "tee;ss"\}``
+`\{"playready": "tee;ss"\}`
 
 The values for the PlayReady key above are:
 
-- **tee** indicates the core DRM system runs in a Trusted Execution Environment
-- **ss** indicates the DRM system supports secure stop
+* **tee** indicates the core DRM system runs in a Trusted Execution Environment
+* **ss** indicates the DRM system supports secure stop
 
 ### GetDrmInfoEx() as Object
 
@@ -474,9 +474,9 @@ Determines whether global captions are turned on or off, or are in instant repla
 
 The current global setting for the Mode property, which may be one of the following values:
 
-- On
-- Off
-- Instant replay
+* On
+* Off
+* Instant replay
 
 > On a Roku TV, when the user selects "On Mute", this function will return "On" when the TV is muted and "Off" when it is not muted.
 
@@ -488,25 +488,23 @@ Sets the current global setting for the Mode property.
 
 #### Parameters
 
-
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mode</td>
-<td>String</td>
-<td>The current global setting for the Mode property, which may be one of the following values: <ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>mode</td>
+      <td>String</td>
+      <td>The current global setting for the Mode property, which may be one of the following values: <ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
+    </tr>
+  </tbody>
 </table>
-
-
 
 #### Return Values
 
@@ -520,85 +518,92 @@ Checks the current value of the specified global setting property.
 
 #### Parameters
 
-
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Option</td>
-<td>String</td>
-<td>The global setting property to be checked, which may be one of the following values: <ul><li>Mode</li><li>Text/Font</li><li>Text/Effect</li><li>Text/Size</li><li>Text/Color</li><li>Text/Opacity</li><li>Background/Color</li><li>Background/Opacity</li><li>Window/Color</li><li>Window/Opacity</li><li>Track</li><li>Track_Composite</li><li>Track_Analog</li><li>Muted</li></ul></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Option</td>
+      <td>String</td>
+      <td>The global setting property to be checked, which may be one of the following values: <ul><li>Mode</li><li>Text/Font</li><li>Text/Effect</li><li>Text/Size</li><li>Text/Color</li><li>Text/Opacity</li><li>Background/Color</li><li>Background/Opacity</li><li>Window/Color</li><li>Window/Opacity</li><li>Track</li><li>Track\_Composite</li><li>Track\_Analog</li><li>Muted</li></ul></td>
+    </tr>
+  </tbody>
 </table>
-
-
 
 #### Return Values
 
 The value of the specified global setting property, which may be as follows:
 
-
 <table>
-<thead>
-<tr>
-<th>Queried Property</th>
-<th>Possible Values</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mode</td>
-<td><ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
-</tr>
-<tr>
-<td>Text style</td>
-<td><ul><li>Default</li><li>Serif Fixed Width</li><li>Serif Proportional</li><li>Sans Serif Fixed Width</li><li>Sans Serif Proportional</li><li>Casual</li><li>Cursive</li><li>Small Caps</li></ul></td>
-</tr>
-<tr>
-<td>Text edge effect</td>
-<td><ul><li>Default</li><li>None</li><li>Raised</li><li>Depressed</li><li>Uniform</li><li>Drop shadow (left)</li><li>Drop shadow (right)</li></ul></td>
-</tr>
-<tr>
-<td>Text size</td>
-<td><ul><li>Default</li><li>Extra large</li><li>Large</li><li>Medium</li><li>Small</li><li>Extra small</li></ul></td>
-</tr>
-<tr>
-<td>Text color</td>
-<td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
-</tr>
-<tr>
-<td>Text opacity</td>
-<td><ul><li>Default</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
-</tr>
-<tr>
-<td>Background Color</td>
-<td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
-</tr>
-<tr>
-<td>Background Opacity</td>
-<td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
-</tr>
-<tr>
-<td>Window Color</td>
-<td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
-</tr>
-<tr>
-<td>Window Opacity</td>
-<td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Queried Property</th>
+      <th>Possible Values</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Mode</td>
+      <td><ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Text style</td>
+      <td><ul><li>Default</li><li>Serif Fixed Width</li><li>Serif Proportional</li><li>Sans Serif Fixed Width</li><li>Sans Serif Proportional</li><li>Casual</li><li>Cursive</li><li>Small Caps</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Text edge effect</td>
+      <td><ul><li>Default</li><li>None</li><li>Raised</li><li>Depressed</li><li>Uniform</li><li>Drop shadow (left)</li><li>Drop shadow (right)</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Text size</td>
+      <td><ul><li>Default</li><li>Extra large</li><li>Large</li><li>Medium</li><li>Small</li><li>Extra small</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Text color</td>
+      <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Text opacity</td>
+      <td><ul><li>Default</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Background Color</td>
+      <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Background Opacity</td>
+      <td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Window Color</td>
+      <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>Window Opacity</td>
+      <td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
+    </tr>
+  </tbody>
 </table>
 
 #### Example
 
-~~~
+```
 di = CreateObject("roDeviceInfo")
 mode = di.GetCaptionsMode()
 
@@ -611,7 +616,7 @@ print "Background Color=";di.GetCaptionsOption("Background/Color")
 print "Background Opacity=";di.GetCaptionsOption("Background/Opacity")
 print "Window Color=";di.GetCaptionsOption("Window/Color")
 print "Window Opacity=";di.GetCaptionsOption("Window/Opacity")
-~~~
+```
 
 ### GetClockFormat() as String
 
@@ -623,9 +628,9 @@ Checks whether the system settings for Time (**Setting > System > Time**) is set
 
 The time format:
 
-- "12h": 12-hour AM/PM format
-- "24h": 24-hour format
-- "": error
+* "12h": 12-hour AM/PM format
+* "24h": 24-hour format
+* "": error
 
 ### IsClockValid() as Dynamic
 
@@ -639,7 +644,7 @@ A flag indicating whether the system clock on the device is valid.
 
 ### EnableValidClockEvent(enable as Boolean) as Dynamic
 
-*Available since Roku OS 13.0*
+_Available since Roku OS 13.0_
 
 #### Description
 
@@ -647,8 +652,8 @@ Notifies the app when the device's system clock becomes valid.
 
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| ------ | ------- | ------------------------------------------------------------ |
+| Name   | Type    | Description                                                    |
+| ------ | ------- | -------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable valid system clock events. |
 
 #### Return Values
@@ -663,14 +668,13 @@ Notifies the app when a system overlay event (such as the [confirm partner butto
 
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| ------ | ------- | ------------------------------------------------------------ |
+| Name   | Type    | Description                                                                     |
+| ------ | ------- | ------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable system overlay event notifications. |
 
 #### Return Values
 
 A flag indicating whether the system overlay event notifications are enabled (true) or disabled (false).
-
 
 ### EnableScreensaverExitedEvent(enable as Boolean) as Dynamic
 
@@ -682,8 +686,8 @@ To receive events, you must have first called [SetMessagePort](/docs/references/
 
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| ------ | ------- | ------------------------------------------------------------ |
+| Name   | Type    | Description                                                                       |
+| ------ | ------- | --------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable screensaver exit event notifications. |
 
 #### Return Values
@@ -694,7 +698,7 @@ A flag indicating whether screensaver exit event notifications are enabled (true
 
 > **This method is deprecated**.
 >
->  Developers must use the [ifHdmiStatus](/docs/references/brightscript/interfaces/ifhdmistatus.md) interface functions instead.
+> Developers must use the [ifHdmiStatus](/docs/references/brightscript/interfaces/ifhdmistatus.md) interface functions instead.
 
 #### Description
 
@@ -708,11 +712,10 @@ A flag indicating whether an HDMI connection to a TV has been detected.
 
 #### Description
 
-
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| ------ | ------- | ------------------------------------------------------------ |
+| Name   | Type    | Description                                                                            |
+| ------ | ------- | -------------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable lowGeneralMemoryLevel event notifications. |
 
 #### Return Values
@@ -724,13 +727,14 @@ A flag indicating whether lowGeneralMemoryLevel event notifications are enabled 
 #### Description
 
 Checks the general memory levels of the device.
+
 #### Return Values
 
 Returns the general memory levels of the app, which may be one of the following values:
 
-- "normal"
-- "low"
-- "critical"
+* "normal"
+* "low"
+* "critical"
 
 ### IsStoreDemoMode() as Boolean
 
@@ -762,8 +766,8 @@ Notifies the app when a network connection status event occurs. This function en
 
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| ------ | ------- | ------------------------------------------------------------ |
+| Name   | Type    | Description                                                                                |
+| ------ | ------- | ------------------------------------------------------------------------------------------ |
 | enable | Boolean | A flag specifying whether to enable/disable network connection status event notifications. |
 
 #### Return Values
@@ -780,9 +784,9 @@ Checks whether the device has a WiFi or wired connection, or if it is not connec
 
 The type of internet connection the device is using. This may be one of the following values:
 
-- "WiFiConnection"
-- "WiredConnection"
-- "" (the device does not have an Internet connection)
+* "WiFiConnection"
+* "WiredConnection"
+* "" (the device does not have an Internet connection)
 
 ### EnableInternetStatusEvent(enable as Boolean) as Boolean
 
@@ -792,8 +796,8 @@ Notifies the app when an internet connection status event occurs. This function 
 
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| :----- | :------ | :----------------------------------------------------------- |
+| Name   | Type    | Description                                                                                |
+| :----- | :------ | :----------------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable network connection status event notifications. |
 
 #### Return Values
@@ -802,7 +806,7 @@ A flag indicating whether network connection status event notifications are enab
 
 ### GetUptimeMillisecondsAsLong() as Long
 
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 #### Description
 
@@ -862,90 +866,281 @@ Checks for the information associated with the hardware's connection
 
 An associative array with the following key-value pairs:
 
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>type</td>
+      <td>Same as the value returned from GetConnectionType(). Indicated whether the device is using a WiFiConnection or WiredConnection.</td>
+    </tr>
+
+    <tr>
+      <td>name</td>
+      <td>Name of the connection interface.</td>
+    </tr>
+
+    <tr>
+      <td>ip</td>
+      <td>IP address used by the connection.</td>
+    </tr>
+
+    <tr>
+      <td>ipv6<br /><br /><em>Available since Roku OS 12.0</em></td>
+      <td>A list of IPv6 addresses used by the connection.</td>
+    </tr>
+
+    <tr>
+      <td>mac</td>
+      <td><em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string">roDeviceInfo.GetChannelClientId </a>method to uniquely identify devices.</td>
+    </tr>
+
+    <tr>
+      <td>ssid</td>
+      <td>The SSID of the Access Point (present only if type = "WiFiConnection").</td>
+    </tr>
+
+    <tr>
+      <td>gateway</td>
+      <td>IP Address of the connection gateway (usually the router).</td>
+    </tr>
+
+    <tr>
+      <td>dns.0</td>
+      <td>IP Address of first DNS server associated with the connection.</td>
+    </tr>
+
+    <tr>
+      <td>dns.1</td>
+      <td>IP Address of the second DNS server, if any (Similarly for any subsequent DNS servers).</td>
+    </tr>
+
+    <tr>
+      <td>dns.2</td>
+      <td>IP Address of the third DNS server, if any (Similarly for any subsequent DNS servers).</td>
+    </tr>
+
+    <tr>
+      <td>dns.3</td>
+      <td>IP Address of the fourth DNS server, if any (Similarly for any subsequent DNS servers).</td>
+    </tr>
+
+    <tr>
+      <td>active</td>
+      <td>A flag indicating the network status.</td>
+    </tr>
+
+    <tr>
+      <td>default</td>
+      <td>A flag indicating whether the default WiFi connection is being used.</td>
+    </tr>
+
+    <tr>
+      <td>expectedThroughput</td>
+      <td>The actual speed of the connection.  This rate may be significantly lower than the theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.</td>
+    </tr>
+
+    <tr>
+      <td>protocol</td>
+      <td>The Wifi protocol name (IEEE 802.11g).</td>
+    </tr>
+
+    <tr>
+      <td>signal</td>
+      <td>The received signal strength indicator (RSSI) on a logarithmic scale. Values closer to 0 indicate a stronger signal; values closer to -100 indicate a weaker signal.</td>
+    </tr>
+
+    <tr>
+      <td>ssid</td>
+      <td>The service set identifier (SSID). The name of the WiFi network to which the device is connected.</td>
+    </tr>
+
+    <tr>
+      <td>txFailed</td>
+      <td>The number of dropped frames.</td>
+    </tr>
+
+    <tr>
+      <td>txRetries</td>
+      <td>The number of retries to send frames.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Video info
+
+### GetDisplayType() as String
+
+#### Description
+
+Gets the text corresponding to the button selection in the Player Info Settings/Display Type page.
+
+#### Return Values
+
+The display type, which may be one of the following values:
+
+- "HDTV"
+- "4:3 standard"
+- "16:9 anamorphic"
+
+### GetDisplayMode() as String
+
+#### Description
+
+Checks the UI resolution of the device.
+
+#### Return Values
+
+The configured graphics layer resolution, which may be one of the following values:
+
+- "480i" or "480p" (the **ui_resolutions** manifest entry includes **sd** as a supported resolution).
+- "720p"
+- "1080p" (the **ui_resolutions** manifest file entry includes **fhd** as a supported resolution)
+
+### GetDisplayAspectRatio() as String
+
+#### Description
+
+Checks the aspect ratio for the display screen.
+
+#### Return Values
+
+The aspect ratio, which may be one of the following values:
+
+-  "4x3"
+- "16x9"
+
+### GetDisplaySize() as Object
+
+#### Description
+
+Checks the display size of a screen.
+
+#### Return Values
+
+An associative array with the screen width and height. Specifically, the keys "w" and "h" contain the values for the screen width and height respectively. This may be one of the following:
+
+- 720 and 480
+- 1280 and 720
+- 1920 and 1080
+
+### GetVideoMode() as String
+
+#### Description
+
+Checks the video playback resolution.
+
+#### Return Values
+
+The video playback resolution, which maybe one of the following values:
+
+| String       | Resolution  | Aspect Ratio | Refresh Rate | Bit Depth |
+| ------------ | ----------- | ------------ | ------------ | --------- |
+| "480i"       | 720x480     | 4:3          | 60 Hz        | 8 Bit     |
+| "480p"       | 720x480     | 4:3          | 60 Hz        | 8 Bit     |
+| "576i25"     | 720x576     | 4:3          | 25 Hz        | 8 Bit     |
+| "576p50"     | 720x576     | 4:3          | 50 Hz        | 8 Bit     |
+| "576p60"     | 720x576     | 4:3          | 60 Hz        | 8 Bit     |
+| "720p50"     | 1280x720    | 16:9         | 50 Hz        | 8 Bit     |
+| "720p"       | 1280x720    | 16:9         | 60 Hz        | 8 Bit     |
+| "1080i50"    | 1920x1080   | 16:9         | 50 Hz        | 8 Bit     |
+| "1080i"      | 1920x1080   | 16:9         | 60 Hz        | 8 Bit     |
+| "1080p24"    | 1920x1080   | 16:9         | 24 Hz        | 8 Bit     |
+| "1080p25"    | 1920x1080   | 16:9         | 25 Hz        | 8 Bit     |
+| "1080p30"    | 1920x1080   | 16:9         | 30 Hz        | 8 Bit     |
+| "1080p50"    | 1920x1080   | 16:9         | 50 Hz        | 8 Bit     |
+| "1080p60b10" | 1920x1080   | 16:9         | 60 Hz        | 8 Bit     |
+| "1080p60Dv"  | 1920x1080   | 16:9         | 60 Hz        | 8 Bit     |
+| "1080p"      | 1920x1080   | 16:9         | 60 Hz        | 8 Bit     |
+| "2160p24"    | 3840x2160   | 16:9         | 24 Hz        | 8 Bit     |
+| "2160p25"    | 3840x2160   | 16:9         | 25 Hz        | 8 Bit     |
+| "2160p30"    | 3840x2160   | 16:9         | 30 Hz        | 8 Bit     |
+| "2160p30Dv"  | 3840x2160   | 16:9         | 30 Hz        | 8 Bit     |
+| "2160p50"    | 3840x2160   | 16:9         | 50 Hz        | 8 Bit     |
+| "2160p60"    | 3840x2160   | 16:9         | 60 Hz        | 8 Bit     |
+| "2160p60Dv"  | 3840x2160   | 16:9         | 60 Hz        | 8 Bit     |
+| "2160p24b10" | 3840x2160   | 16:9         | 24 Hz        | 10 Bit    |
+| "2160p25b10" | 3840x2160   | 16:9         | 25 Hz        | 10 Bit    |
+| "2160p30b10" | 3840x2160   | 16:9         | 30 Hz        | 10 Bit    |
+| "2160p50b10" | 3840x2160   | 16:9         | 50 Hz        | 10 Bit    |
+| "2160p60b10" | 3840x2160   | 16:9         | 60 Hz        | 10 Bit    |
+| "4320p60"    | 7680 x 4320 | 16:9         | 60 Hz        | 12 Bit    |
+| "4320p60b10" | 7680 x 4320 | 16:9         | 60 Hz        | 12 Bit    |
+
+### GetDisplayProperties() as Object
+
+#### Description
+
+Checks for the display properties of the screen.
+
+#### Return Values
+
+An associative array with the following key/value pairs for the display properties of the screen:
+
 
 <table>
 <thead>
 <tr>
 <th>Key</th>
+<th>Type</th>
 <th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>type</td>
-<td>Same as the value returned from GetConnectionType(). Indicated whether the device is using a WiFiConnection or WiredConnection.</td>
+<td>Width</td>
+<td>Integer</td>
+<td>Physical width of the attached display in centimeters</td>
 </tr>
 <tr>
-<td>name</td>
-<td>Name of the connection interface.</td>
+<td>Height</td>
+<td>Integer</td>
+<td>Physical height of the attached display in centimeters</td>
 </tr>
 <tr>
-<td>ip</td>
-<td>IP address used by the connection.</td>
+<td>Internal</td>
+<td>Boolean</td>
+<td>Set to true if the display is part of the Roku Player (such as a Roku TV), false otherwise</td>
 </tr>
 <tr>
-<td>ipv6<br /><br /><em>Available since Roku OS 12.0</em></td>
-<td>A list of IPv6 addresses used by the connection.</td>
+<td>Hdr10</td>
+<td>Boolean</td>
+<td>Set to true if the attached display supports HDR10, false otherwise</td>
 </tr>
 <tr>
-<td>mac</td>
-<td><em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string">roDeviceInfo.GetChannelClientId </a>method to uniquely identify devices.</td>
+<td>Hdr10Plus</td>
+<td>Boolean</td>
+<td>Set to true if the attached display supports HDR10+, false otherwise</td>
 </tr>
 <tr>
-<td>ssid</td>
-<td>The SSID of the Access Point (present only if type = "WiFiConnection").</td>
+<td>HdrSeamless</td>
+<td>Boolean</td>
+<td>Set to true if the attached display supports any type of HDR, such as HDR10, HLG, or<br />Dolby Vision, false otherwise.</td>
 </tr>
 <tr>
-<td>gateway</td>
-<td>IP Address of the connection gateway (usually the router).</td>
+<td>Headless</td>
+<td>Boolean</td>
+<td>Set to true if the attached display supports being powered off while audio continues to play</td>
 </tr>
 <tr>
-<td>dns.0</td>
-<td>IP Address of first DNS server associated with the connection.</td>
+<td>HLG</td>
+<td>Boolean</td>
+<td>Set to true if the attached display supports HLG, false otherwise</td>
 </tr>
 <tr>
-<td>dns.1</td>
-<td>IP Address of the second DNS server, if any (Similarly for any subsequent DNS servers).</td>
+<td>DolbyVision</td>
+<td>Boolean</td>
+<td>Set to true if the attached display supports Dolby Vision, false otherwise</td>
 </tr>
 <tr>
-<td>dns.2</td>
-<td>IP Address of the third DNS server, if any (Similarly for any subsequent DNS servers).</td>
-</tr>
-<tr>
-<td>dns.3</td>
-<td>IP Address of the fourth DNS server, if any (Similarly for any subsequent DNS servers).</td>
-</tr>
-<tr>
-<td>active</td>
-<td>A flag indicating the network status.</td>
-</tr>
-<tr>
-<td>default</td>
-<td>A flag indicating whether the default WiFi connection is being used.</td>
-</tr>
-<tr>
-<td>expectedThroughput</td>
-<td>The actual speed of the connection.  This rate may be significantly lower than the theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.</td>
-</tr>
-<tr>
-<td>protocol</td>
-<td>The Wifi protocol name (IEEE 802.11g).</td>
-</tr>
-<tr>
-<td>signal</td>
-<td>The received signal strength indicator (RSSI) on a logarithmic scale. Values closer to 0 indicate a stronger signal; values closer to -100 indicate a weaker signal.</td>
-</tr>
-<tr>
-<td>ssid</td>
-<td>The service set identifier (SSID). The name of the WiFi network to which the device is connected.</td>
-</tr>
-<tr>
-<td>txFailed</td>
-<td>The number of dropped frames.</td>
-</tr>
-<tr>
-<td>txRetries</td>
-<td>The number of retries to send frames.</td>
+<td>visible</td>
+<td>boolean</td>
+<td>For Roku TVs only. Indicates whether the TV screen is on/off while the Roku device is actively streaming content. This is useful for checking whether customers have muted their TV screen while streaming video in order to continue listening to the audio (for example, when playing music videos, conferences, or podcasts).</td>
 </tr>
 </tbody>
 </table>

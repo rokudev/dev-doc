@@ -595,3 +595,111 @@ The value of the specified global setting property, which may be as follows:
 </tr>
 </tbody>
 </table>
+
+#### Example
+
+~~~
+di = CreateObject("roDeviceInfo")
+mode = di.GetCaptionsMode()
+
+print "Font=";di.GetCaptionsOption("Text/Font")
+print "Color=";di.GetCaptionsOption("Text/Color")
+print "Size=";di.GetCaptionsOption("Text/Size")
+print "Effect=";di.GetCaptionsOption("Text/Effect")
+print "Opacity=";di.GetCaptionsOption("Text/Opacity")
+print "Background Color=";di.GetCaptionsOption("Background/Color")
+print "Background Opacity=";di.GetCaptionsOption("Background/Opacity")
+print "Window Color=";di.GetCaptionsOption("Window/Color")
+print "Window Opacity=";di.GetCaptionsOption("Window/Opacity")
+~~~
+
+### GetClockFormat() as String
+
+#### Description
+
+Checks whether the system settings for Time (**Setting > System > Time**) is set to a 12 or 24-hour format.
+
+#### Return Values
+
+The time format:
+
+- "12h": 12-hour AM/PM format
+- "24h": 24-hour format
+- "": error
+
+### IsClockValid() as Dynamic
+
+#### Description
+
+Checks if the device's system clock is valid.
+
+#### Return Values
+
+A flag indicating whether the system clock on the device is valid.
+
+### EnableValidClockEvent(enable as Boolean) as Dynamic
+
+*Available since Roku OS 13.0*
+
+#### Description
+
+Notifies the app when the device's system clock becomes valid.
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| ------ | ------- | ------------------------------------------------------------ |
+| enable | Boolean | A flag specifying whether to enable valid system clock events. |
+
+#### Return Values
+
+A flag indicating whether valid system clock events are enabled (true) or disabled (false).
+
+### EnableAppFocusEvent(enable as Boolean) as Dynamic
+
+#### Description
+
+Notifies the app when a system overlay event (such as the [confirm partner button HUD](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) or the caption control overlay) is displayed. This notification gives the app the opportunity to do any processing they may want to when the app loses or regains focus.
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| ------ | ------- | ------------------------------------------------------------ |
+| enable | Boolean | A flag specifying whether to enable/disable system overlay event notifications. |
+
+#### Return Values
+
+A flag indicating whether the system overlay event notifications are enabled (true) or disabled (false).
+
+
+### EnableScreensaverExitedEvent(enable as Boolean) as Dynamic
+
+#### Description
+
+Notifies the app when a screensaver exit event occurs. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when a user has exited the screensaver.
+
+To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| ------ | ------- | ------------------------------------------------------------ |
+| enable | Boolean | A flag specifying whether to enable/disable screensaver exit event notifications. |
+
+#### Return Values
+
+A flag indicating whether screensaver exit event notifications are enabled (true) or disabled (false).
+
+### IsHDMIConnected() as Boolean
+
+> **This method is deprecated**.
+>
+>  Developers must use the [ifHdmiStatus](/docs/references/brightscript/interfaces/ifhdmistatus.md) interface functions instead.
+
+#### Description
+
+Checks for an HDMI connection.
+
+#### Return Values
+
+A flag indicating whether an HDMI connection to a TV has been detected.

@@ -1163,6 +1163,41 @@ A list of associative arrays. Each associative array contains the following key/
 | ui        | boolean | True if this resolution is the current Roku UI resolution                                           |
 | preferred | boolean | True if this is the preferred UI resolution, i.e., if this is the optimal resolution for the device |
 
+### CanDecodeVideo(video_format as Object) as Object
+
+#### Description
+
+Checks whether the device can decode and play the specified video format.
+
+#### Parameters
+
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>video_format</td>
+<td>Object</td>
+<td>An associative array with the following key/value pairs specifying the video format to be checked.<br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
+</tr>
+</tbody>
+</table>
+
+#### Return Values
+
+An associative array that includes a flag indicating whether the video format can be played, and the closest video format supported by the device.
+
+If the Roku Player cannot play that video format, it will return false, and return the closest video format it can play, with the changed fields, such as:
+
+`{"codec":["hevc","mpeg1","mpeg2","h263","mpeg4 avc","vp9"],"result":false,"updated":"codec"}`
+
+The return value shows the Roku Player cannot play requested video format, shows the updated keys of the requested video format (level and profile) that it can support, and the all the key values of the requested video format supported by the Roku Player.
 
 ### GetUIResolution() as Object
 

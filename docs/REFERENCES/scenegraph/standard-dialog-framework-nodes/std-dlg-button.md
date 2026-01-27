@@ -17,3 +17,8 @@ Extends [Group](doc:group)
 <Image alt="roku815px - std-dlg-button" border={false} src="https://image.roku.com/ZHZscHItMTc2/std-dlg-button-3.jpg" />
 
 ## Fields
+
+| Field    | Type    | Default | Access Permission | Description                                                                                                                                         |
+| :------- | :------ | :------ | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| text     | string  | ""      | READ_WRITE        | The text to be displayed on the button                                                                                                              |
+| disabled | boolean | false   | READ_WRITE        | Specifies whether the button can receive focus. If this field is set to true, the button has an inactive appearance and is unable to receive focus. |

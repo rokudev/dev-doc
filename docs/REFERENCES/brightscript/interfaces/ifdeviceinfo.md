@@ -463,3 +463,135 @@ Widevine : {
 ```
 
 > tee indicates the core DRM system runs in a Trusted Execution Environment.
+
+### GetCaptionsMode() as String
+
+#### Description
+
+Determines whether global captions are turned on or off, or are in instant replay mode.
+
+#### Return Values
+
+The current global setting for the Mode property, which may be one of the following values:
+
+- On
+- Off
+- Instant replay
+
+> On a Roku TV, when the user selects "On Mute", this function will return "On" when the TV is muted and "Off" when it is not muted.
+
+### SetCaptionsMode(mode as String) as Boolean
+
+#### Description
+
+Sets the current global setting for the Mode property.
+
+#### Parameters
+
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mode</td>
+<td>String</td>
+<td>The current global setting for the Mode property, which may be one of the following values: <ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+
+
+#### Return Values
+
+A flag indicating whether the Mode property was successfully set.
+
+### GetCaptionsOption(option as String) as String
+
+#### Description
+
+Checks the current value of the specified global setting property.
+
+#### Parameters
+
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Option</td>
+<td>String</td>
+<td>The global setting property to be checked, which may be one of the following values: <ul><li>Mode</li><li>Text/Font</li><li>Text/Effect</li><li>Text/Size</li><li>Text/Color</li><li>Text/Opacity</li><li>Background/Color</li><li>Background/Opacity</li><li>Window/Color</li><li>Window/Opacity</li><li>Track</li><li>Track_Composite</li><li>Track_Analog</li><li>Muted</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+
+
+#### Return Values
+
+The value of the specified global setting property, which may be as follows:
+
+
+<table>
+<thead>
+<tr>
+<th>Queried Property</th>
+<th>Possible Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mode</td>
+<td><ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
+</tr>
+<tr>
+<td>Text style</td>
+<td><ul><li>Default</li><li>Serif Fixed Width</li><li>Serif Proportional</li><li>Sans Serif Fixed Width</li><li>Sans Serif Proportional</li><li>Casual</li><li>Cursive</li><li>Small Caps</li></ul></td>
+</tr>
+<tr>
+<td>Text edge effect</td>
+<td><ul><li>Default</li><li>None</li><li>Raised</li><li>Depressed</li><li>Uniform</li><li>Drop shadow (left)</li><li>Drop shadow (right)</li></ul></td>
+</tr>
+<tr>
+<td>Text size</td>
+<td><ul><li>Default</li><li>Extra large</li><li>Large</li><li>Medium</li><li>Small</li><li>Extra small</li></ul></td>
+</tr>
+<tr>
+<td>Text color</td>
+<td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
+</tr>
+<tr>
+<td>Text opacity</td>
+<td><ul><li>Default</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
+</tr>
+<tr>
+<td>Background Color</td>
+<td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
+</tr>
+<tr>
+<td>Background Opacity</td>
+<td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
+</tr>
+<tr>
+<td>Window Color</td>
+<td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
+</tr>
+<tr>
+<td>Window Opacity</td>
+<td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
+</tr>
+</tbody>
+</table>

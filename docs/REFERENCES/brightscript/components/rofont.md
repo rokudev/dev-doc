@@ -1,5 +1,5 @@
 ---
-title: "roFont"
+title: roFont
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,15 +10,13 @@ metadata:
 next:
   description: ''
 ---
+roFont represents a particular font, from a font-family (eg. Arial), with a particular pixel size (e.g 20), and a particular boldness or italicness.
 
-
-roFont represents a particular font, from a font-family (eg. Arial), with a particular pixel size (e.g 20), and a particular boldness or italicness. 
-
-It is used in conjunction with [roFontRegistry](doc:rofontregistry) to create and manage fonts. Font files are registered with roFontRegistry and then various methods in roFontRegistry can be used to create roFont objects.  Applications should not create roFonts with CreateObject() but should always use roFontRegistry to create them. roFont objects in turn can be used with [ifDraw2D.DrawText](doc:ifdraw2d.md#drawtextrgba-as-integer-x-as-integer-y-as-integer-text-as-string-font-as-object-as-boolean "ifDraw2D) to draw text on the screen or into bitmaps.
+It is used in conjunction with [roFontRegistry](doc:rofontregistry) to create and manage fonts. Font files are registered with roFontRegistry and then various methods in roFontRegistry can be used to create roFont objects.  Applications should not create roFonts with CreateObject() but should always use roFontRegistry to create them. roFont objects in turn can be used with [ifDraw2D.DrawText](doc:ifdraw2d#drawtextrgba-as-integer-x-as-integer-y-as-integer-text-as-string-font-as-object-as-boolean) to draw text on the screen or into bitmaps.
 
 **Example**
 
-~~~
+```
 screen = CreateObject("roScreen")
 white = &hFFFFFFFF
 blue = &h0000FFFF
@@ -34,9 +32,8 @@ y = 100
 border = 8
 screen.DrawRect(x, y, w + 2*border, h + 2*border, blue)
 screen.DrawText(text, x+border, y+border, white, font)
-~~~
-
+```
 
 ## Supported interfaces
 
-- [ifFont](doc:iffont)
+* [ifFont](doc:iffont)

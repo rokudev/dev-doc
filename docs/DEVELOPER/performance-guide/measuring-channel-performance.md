@@ -1,5 +1,5 @@
 ---
-title: "Measuring app performance"
+title: Measuring app performance
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,14 +10,12 @@ metadata:
 next:
   description: ''
 ---
-
-
 The Roku OS records key app performance metrics such as app launch time, app change time, app exit time, and video start time via signal beacons. Signal beacons are markers for the start and stop points of user-initiated actions.
 
-To measure app launch time, for example, beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](/developer-program/debugging/debugging-channels.md). You can then use the feedback from the console to update your application, if needed, to meet the certification requirements. 
+To measure app launch time, for example, beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](doc:debugging). You can then use the feedback from the console to update your application, if needed, to meet the certification requirements.
 
 > App launch and video start times must meet the specified [certification performance
-requirements](doc:certification).
+> requirements](doc:certification).
 
 ## Measuring app launch times
 
@@ -35,7 +33,7 @@ To fire the **AppLaunchComplete** beacon from the app, call the **signalBeacon()
 myScene.signalBeacon(“AppLaunchComplete”)
 ```
 
->  For your app to pass certification, your application must fire the **AppLaunchComplete** beacon to measure app launch time.
+> For your app to pass certification, your application must fire the **AppLaunchComplete** beacon to measure app launch time.
 
 ### AppDialog signal beacons
 
@@ -50,7 +48,7 @@ myScene.signalBeacon(“AppDialogInitiate”)
 myScene.signalBeacon(“AppDialogComplete”)
 ```
 
->  For your app to pass certification, your application must fire the **AppDialogInitiate** and **AppDialogComplete** beacons if the app UI displays a login, user selection, EULA, or any other dialog before the home page.
+> For your app to pass certification, your application must fire the **AppDialogInitiate** and **AppDialogComplete** beacons if the app UI displays a login, user selection, EULA, or any other dialog before the home page.
 
 ## Measuring EPG launch times
 
@@ -70,37 +68,38 @@ Only EPG launch sequences that start within 5 seconds of the `AppLaunchComplete`
 You can use the BrightScript console (port 8085) to view a log with your app's performance metrics. When a beacon is fired, the console immediately outputs statistics related to the initiate or complete
 beacon. When you exit your app, the console displays a report summarizing the statistics for the just-concluded session, which are described as follows:
 
-
 <table>
-<thead>
-<tr>
-<th><strong>Statistic</strong></th>
-<th><strong>Beacon Type</strong></th>
-<th><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TimeBase</td>
-<td>Initiate</td>
-<td>A timestamp for the beacon based on milliseconds elapsed since the initiate beacon for the app launch was recorded.</td>
-</tr>
-<tr>
-<td>Duration</td>
-<td>Complete</td>
-<td>Milliseconds between the initiate and complete beacons.</td>
-</tr>
-<tr>
-<td>Memory Points (MiP, KiP, or p)</td>
-<td>Complete</td>
-<td>Memory points provide a relative measurement for your app's memory performance that can be used for trend analysis. You can monitor the amount of memory points reported for any complete beacon to see if it goes up or down across builds of your application.  <br /><br />Memory points are measured in mebipoints (MiP), kibipoints (KiP), or points (p). This is similar to how units of information are expressed as mebibytes (MiB), kibibytes (Kib), and bytes.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><strong>Statistic</strong></th>
+      <th><strong>Beacon Type</strong></th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>TimeBase</td>
+      <td>Initiate</td>
+      <td>A timestamp for the beacon based on milliseconds elapsed since the initiate beacon for the app launch was recorded.</td>
+    </tr>
+
+    <tr>
+      <td>Duration</td>
+      <td>Complete</td>
+      <td>Milliseconds between the initiate and complete beacons.</td>
+    </tr>
+
+    <tr>
+      <td>Memory Points (MiP, KiP, or p)</td>
+      <td>Complete</td>
+      <td>Memory points provide a relative measurement for your app's memory performance that can be used for trend analysis. You can monitor the amount of memory points reported for any complete beacon to see if it goes up or down across builds of your application.  <br /><br />Memory points are measured in mebipoints (MiP), kibipoints (KiP), or points (p). This is similar to how units of information are expressed as mebibytes (MiB), kibibytes (Kib), and bytes.</td>
+    </tr>
+  </tbody>
 </table>
 
-
-<br />![roku815px - signalBeaconReport](https://image.roku.com/ZHZscHItMTc2/signalBeaconReport-v2.jpg "signalBeaconReport")
+<br />![](https://image.roku.com/ZHZscHItMTc2/signalBeaconReport-v2.jpg "signalBeaconReport")
 
 ## Performance metrics reference
 
-The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start,  change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.  
+The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start,  change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.

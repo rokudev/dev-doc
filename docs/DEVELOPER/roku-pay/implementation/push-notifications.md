@@ -1,5 +1,5 @@
 ---
-title: "Roku Pay push notifications reference"
+title: Roku Pay push notifications reference
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,11 +10,9 @@ metadata:
 next:
   description: ''
 ---
+Roku Pay push notifications send billing data to a publisher's web server listener when transactions occur. Transactions include purchases, cancellations, refunds, credits, and renewed cancellations. Receiving push notifications enables publishers to update their backend system in real-time as subscriptions are purchased, canceled, and refunded.
 
-
-Roku Pay push notifications send billing data to a publisher's web server listener when transactions occur. Transactions include purchases, cancellations, refunds, credits, and renewed cancellations. Receiving push notifications enables publishers to update their backend system in real-time as subscriptions are purchased, canceled, and refunded.  
-
->  See [Setting up Roku Pay web services](doc:setting-up-web-services) for how to add production endpoints and enable them to receive Roku Pay push notifications.
+> See [Setting up Roku Pay web services](doc:setting-up-web-services) for how to add production endpoints and enable them to receive Roku Pay push notifications.
 
 ## Security
 
@@ -40,10 +38,9 @@ Publishers must acknowledge the receipt of a Roku Pay notification message by se
 
 #### Headers
 
-- **ApiKey**: The developer's Roku Pay API key. This key can be accessed from the [Roku Pay Web Services](doc:roku-web-service) page in the Developer Dashboard.
+* **ApiKey**: The developer's Roku Pay API key. This key can be accessed from the [Roku Pay Web Services](doc:roku-web-service) page in the Developer Dashboard.
 
-- **Content-Length**: The Roku Pay API key must have a content length of 36.
-
+* **Content-Length**: The Roku Pay API key must have a content length of 36.
 
 ```
 HTTP/1.1 200 OK
@@ -63,68 +60,300 @@ abcdabcd6b1649f681a408f1beebabcd
 
 Roku Pay sends push notifications for the following transactions:
 
-| Transaction Type                                 | Description                                                  | Action Required by Publisher                                 |
-| :----------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [Sale](#sale)                                    | A purchase or renewal occurs, or a free trial starts. Renewals are denoted with the **comment** field set to"Recurring subscription processed". | $\{sale-actions-list\}                                         |
-| [GraceInitiated](#in-grace-period)               | The payment for a subscription auto-renewal fails and the subscription was placed in a grace period. | $\{grace-initiated-actions-list\}                              |
-| [GraceRecovered](#in-grace-period)               | A payment is received for a subscription that was in a grace period. | $\{grace-recovered-actions-list\}                              |
-| [OnHoldInitiated](#on-hold)                      | The grace period elapsed (renewal payment was still not received) and the subscription was placed on hold. This notification is only sent to publishers using [Enhanced Subscription Recovery](https://developer.roku.com/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md). | $\{on-hold-initiated-actions-list\}                            |
-| [OnHoldRecovered](#on-hold)                      | A payment is received for a subscription that was placed on-hold. This notification is only sent to publishers using [Enhanced Subscription Recovery](https://developer.roku.com/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md). | $\{on-hold-recovered-actions-list\}                            |
-| [CancellationOfferIntiated](#cancellationoffers) | The customer accepts a [cancellation offer](doc:product-catalog) and its specified pricing and billing terms for the subscription go into effect. | $\{sale-actions-list\}                                         |
-| [CancellationOfferEnded](#cancellationoffers)    | The pricing and billing terms specified in the [cancellation offer](doc:product-catalog) elapse. | $\{cancellation-actions-list\}                                 |
-| [Cancellation](#cancellation)                    | A subscription is canceled by the customer, deactivated becuase  the customer opted out of automatic renewal, or is passively canceled because payment could not be recovered.<br /><br />Active cancellations: The **expirationDate** field is set to the current or future date<br /><br />Deactivations: The **expirationDate** field is set to the decactivation date<br /><br />Passive cancellations: The **expirationDate** field is set to a past date. | $\{cancellation-actions-list\}                                 |
-| [Refund](#refund)                                | A refund was initiated by the publisher or Roku Pay.         | If the refund was a result of an unauthorized purchase, Roku cancels the subscription. Remove the entitlement upon receiving the cancellation notification from Roku. |
-| [Credit](#credit)                                | A service credit was issued to a Roku customer by the publisher or Roku Pay. | No action required.                                          |
-| [Resubscribe](#resubscribe)                      | A subscription previously canceled by the customer is reinstated during the current billing period. | Revert any action taken based on the cancellation.           |
-| [UpgradeSale](#upgradesdowngrades)               | An upgraded subscription is purchased.                       | Add entitlement for upgraded product.                        |
-| [UpgradeCancellation](#upgradesdowngrades)       | An original subscription is canceled as a result of being upgraded. | Remove entitlement for original product.                     |
-| [DowngradeSale](#upgradesdowngrades)             | A downgraded subscription is purchased.                      | On the expiration date of the current subscription, move entitlement to the downgrade subscription. |
-| [DowngradeCancellation](upgradesdowngrades)      | An original subscription is canceled as a result of being downgraded. | Remove entitlement for original subscription on the expiration date. |
-| [Chargeback](#chargeback)                        | The customer has initiated a transaction dispute. The transaction will be deducted from the partner's payout. | No action required.                                          |
-| [ChargebackReversed](#chargebackreversed)        | Roku successfully reversed the chargeback claim. The revenue share will be returned to the partner payout. | No action required.                                          |
-| [SecondChargeback](#secondchargeback)            | The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback). The transaction will be deducted from the partner's payout. | No action required.                                          |
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Transaction Type
+      </th>
 
-\{#sale-actions-list\}
+      <th>
+        Description
+      </th>
 
-- New purchase: Create account (if not already created) and add entitlement.
-- Renewal: Check entitlement and verify subscription is not marked for cancellation.
+      <th>
+        Action Required by Publisher
+      </th>
+    </tr>
+  </thead>
 
-\{#grace-initiated-actions-list\}
+  <tbody>
+    <tr>
+      <td>
+        [Sale](#sale)
+      </td>
 
-- Use DoRecovery API to display in-app notice prompting customer to update their method of payment.
-- Continue granting access to content in app.
+      <td>
+        A purchase or renewal occurs, or a free trial starts. Renewals are denoted with the **comment** field set to"Recurring subscription processed".
+      </td>
 
-\{#grace-recovered-actions-list\}
+      <td>
+        * New purchase: Create account (if not already created) and add entitlement.
+        * Renewal: Check entitlement and verify subscription is not marked for cancellation.
+      </td>
+    </tr>
 
-- Stop prompting the customer to update their method of payment.
-- Maintain current billing cycle.
+    <tr>
+      <td>
+        [GraceInitiated](#in-grace-period)
+      </td>
 
-\{#on-hold-initiated-actions-list\}
+      <td>
+        The payment for a subscription auto-renewal fails and the subscription was placed in a grace period.
+      </td>
 
-- Use the DoRecovery API to display an in-app notice prompting customers to update their method of payment.
-- Block access to content in app.
-- Update entitlement system to denote that access to content should be denied.
+      <td>
+        * Use DoRecovery API to display in-app notice prompting customer to update their method of payment.
+        * Continue granting access to content in app.
+      </td>
+    </tr>
 
-\{#on-hold-recovered-actions-list\}
+    <tr>
+      <td>
+        [GraceRecovered](#in-grace-period)
+      </td>
 
-- Stop prompting the customer to update their method of payment.
-- Update billing system with the new billing period.
-- Update entitlement system to denote that access to content should be granted.
+      <td>
+        A payment is received for a subscription that was in a grace period.
+      </td>
 
-\{#cancellation-actions-list\}
+      <td>
+        * Stop prompting the customer to update their method of payment.
+        * Maintain current billing cycle.
+      </td>
+    </tr>
 
-- expirationDate is a future date: no action is required until the expiration date.
-- expirationDate is today's date: remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
-- expirationDate is a past date: remove entitlement (passive cancellation; subscription could not be recovered).  
+    <tr>
+      <td>
+        [OnHoldInitiated](#on-hold)
+      </td>
+
+      <td>
+        The grace period elapsed (renewal payment was still not received) and the subscription was placed on hold. This notification is only sent to publishers using [Enhanced Subscription Recovery](https://developer.roku.com/docs/developer-program/roku-pay/subscription-recovery/subscription-on-hold.md).
+      </td>
+
+      <td>
+        * Use the DoRecovery API to display an in-app notice prompting customers to update their method of payment.
+        * Block access to content in app.
+        * Update entitlement system to denote that access to content should be denied.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [OnHoldRecovered](#on-hold)
+      </td>
+
+      <td>
+        A payment is received for a subscription that was placed on-hold. This notification is only sent to 
+      </td>
+
+      <td>
+        * Stop prompting the customer to update their method of payment.
+        * Update billing system with the new billing period.
+        * Update entitlement system to denote that access to content should be granted.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [CancellationOfferIntiated](#cancellationoffers)
+      </td>
+
+      <td>
+        The customer accepts a [cancellation offer](doc:product-catalog) and its specified pricing and billing terms for the subscription go into effect.
+      </td>
+
+      <td>
+        * New purchase: Create account (if not already created) and add entitlement.
+
+        * Renewal: Check entitlement and verify subscription is not marked for cancellation.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [CancellationOfferEnded](#cancellationoffers)
+      </td>
+
+      <td>
+        The pricing and billing terms specified in the [cancellation offer](doc:product-catalog) elapse.
+      </td>
+
+      <td>
+        * expirationDate is a future date: no action is required until the expiration date.
+        * expirationDate is today's date: remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
+        * expirationDate is a past date: remove entitlement (passive cancellation; subscription could not be recovered).
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [Cancellation](#cancellation)
+      </td>
+
+      <td>
+        A subscription is canceled by the customer, deactivated becuase  the customer opted out of automatic renewal, or is passively canceled because payment could not be recovered.<br /><br />Active cancellations: The **expirationDate** field is set to the current or future date<br /><br />Deactivations: The **expirationDate** field is set to the decactivation date<br /><br />Passive cancellations: The **expirationDate** field is set to a past date.
+      </td>
+
+      <td>
+        * expirationDate is a future date: no action is required until the expiration date.
+        * expirationDate is today's date: remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
+        * expirationDate is a past date: remove entitlement (passive cancellation; subscription could not be recovered).
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [Refund](#refund)
+      </td>
+
+      <td>
+        A refund was initiated by the publisher or Roku Pay.
+      </td>
+
+      <td>
+        If the refund was a result of an unauthorized purchase, Roku cancels the subscription. Remove the entitlement upon receiving the cancellation notification from Roku.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [Credit](#credit)
+      </td>
+
+      <td>
+        A service credit was issued to a Roku customer by the publisher or Roku Pay.
+      </td>
+
+      <td>
+        No action required.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [Resubscribe](#resubscribe)
+      </td>
+
+      <td>
+        A subscription previously canceled by the customer is reinstated during the current billing period.
+      </td>
+
+      <td>
+        Revert any action taken based on the cancellation.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [UpgradeSale](#upgradesdowngrades)
+      </td>
+
+      <td>
+        An upgraded subscription is purchased.
+      </td>
+
+      <td>
+        Add entitlement for upgraded product.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [UpgradeCancellation](#upgradesdowngrades)
+      </td>
+
+      <td>
+        An original subscription is canceled as a result of being upgraded.
+      </td>
+
+      <td>
+        Remove entitlement for original product.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [DowngradeSale](#upgradesdowngrades)
+      </td>
+
+      <td>
+        A downgraded subscription is purchased.
+      </td>
+
+      <td>
+        On the expiration date of the current subscription, move entitlement to the downgrade subscription.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [DowngradeCancellation](upgradesdowngrades)
+      </td>
+
+      <td>
+        An original subscription is canceled as a result of being downgraded.
+      </td>
+
+      <td>
+        Remove entitlement for original subscription on the expiration date.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [Chargeback](#chargeback)
+      </td>
+
+      <td>
+        The customer has initiated a transaction dispute. The transaction will be deducted from the partner's payout.
+      </td>
+
+      <td>
+        No action required.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [ChargebackReversed](#chargebackreversed)
+      </td>
+
+      <td>
+        Roku successfully reversed the chargeback claim. The revenue share will be returned to the partner payout.
+      </td>
+
+      <td>
+        No action required.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        [SecondChargeback](#secondchargeback)
+      </td>
+
+      <td>
+        The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback). The transaction will be deducted from the partner's payout.
+      </td>
+
+      <td>
+        No action required
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+<br />
 
 > **transactionId** format: The transactionIds returned by the Roku Pay push notifications are ASCII strings of variable length that may be up to 1024 bytes.
-
 
 ##### Push notifications workflow
 
 The following diagram illustrates the Roku Pay push notifications workflow:
 
-![roku815px - img](https://image.roku.com/ZHZscHItMTc2/push-notification-workflow.jpeg)
+<Image alt="roku815px - img" border={false} src="https://image.roku.com/ZHZscHItMTc2/push-notification-workflow.jpeg" />
 
 ### Sale
 
@@ -197,11 +426,9 @@ If the auto-renewal of a customer's subscription fails, Roku Pay automatically p
 
 If Roku receives a payment during the 3-day grace period, it is processed and entitlement is maintained (the billing period also remains the same). If no payment is received by the end of the 3-day grace period, the subscription is canceled.
 
-- A **GraceInitiated** push notification is sent when payment for a subscription auto-renewal fails. When this occurs, the customer may still access content while Roku attempts to charge the MOP. The developer should use the DoRecovery API to display an in-app notice prompting customers to update their method of payment. When the customer selects content in the app, the publisher should still grant access to it.
+* A **GraceInitiated** push notification is sent when payment for a subscription auto-renewal fails. When this occurs, the customer may still access content while Roku attempts to charge the MOP. The developer should use the DoRecovery API to display an in-app notice prompting customers to update their method of payment. When the customer selects content in the app, the publisher should still grant access to it.
 
-
-
-- A **GraceRecovered** push notification is sent when payment is received for a subscription that was in a grace period. When this occurs, the customer maintains access to content and the billing period remains the same. The developer should stop prompting the customer to update their method of payment.
+* A **GraceRecovered** push notification is sent when payment is received for a subscription that was in a grace period. When this occurs, the customer maintains access to content and the billing period remains the same. The developer should stop prompting the customer to update their method of payment.
 
 See [Basic Subscription Recovery](doc:basic-recovery) for more information.
 
@@ -251,11 +478,9 @@ For publishers using [Enhanced Subscription Recovery](doc:subscription-on-hold),
 
 If Roku receives a payment, it is processed and entitlement is automatically granted again, and the billing period adjusts to the time that the payment was collected. If no payment is received by the end of the 60-day notification cycle, the subscription is canceled.
 
-- An **OnHoldInitiated** push notification is sent when payment for a subscription auto-renewal fails. When this occurs, the customer should no longer have access to content. The developer should use the DoRecovery API to display an in-app notice prompting customers to update their method of payment. When the customer selects content in the app, the publisher should block access to it. The developer should update their entitlement system to denote that access to content should be denied.
+* An **OnHoldInitiated** push notification is sent when payment for a subscription auto-renewal fails. When this occurs, the customer should no longer have access to content. The developer should use the DoRecovery API to display an in-app notice prompting customers to update their method of payment. When the customer selects content in the app, the publisher should block access to it. The developer should update their entitlement system to denote that access to content should be denied.
 
-
-
-- An **OnHoldRecovered** push notification is sent when payment is received for a subscription that was on-hold. When this occurs, the customer should once again have access to content and the billing period should adjusted to the time that the payment was collected. The developer should stop prompting the customer to update their method of payment, update their system with the new billing period, and update their entitlement system to denote that access to content should be granted.
+* An **OnHoldRecovered** push notification is sent when payment is received for a subscription that was on-hold. When this occurs, the customer should once again have access to content and the billing period should adjusted to the time that the payment was collected. The developer should stop prompting the customer to update their method of payment, update their system with the new billing period, and update their entitlement system to denote that access to content should be granted.
 
 See [Enhanced Subscription Recovery](doc:subscription-on-hold) for more information.
 
@@ -343,17 +568,15 @@ A **CancellationOfferInitated** event is fired when the customer accepts a [canc
 }
 ```
 
-
-
 ### Cancellation
 
 A **Cancellation** push notification is sent when a user actively cancels their subscription or opts out of automatic renewal, or a subscription is passively canceled because the customer fails to provide a valid method of payment to keep their subscription. An **expirationDate** in the future indicates an active cancellation; a past date indicates a passive cancellation.
 
 The publisher action required (if any) depends on the **expirationDate** field:
 
-- **Future date**: No action is required until the expiration date.
-- **Today's date**: Remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
-- **Past date**: Remove entitlement (passive cancellation; the subscription could not be recovered).
+* **Future date**: No action is required until the expiration date.
+* **Today's date**: Remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
+* **Past date**: Remove entitlement (passive cancellation; the subscription could not be recovered).
 
 #### Active cancelation/decativation example
 
@@ -486,13 +709,14 @@ For example, if a customer upgrades from a monthly to an annual subscription, th
 
 +---------------+---------------+-----------------------+
 | Action        | Transaction Type                      |
-+               +---------------+-----------------------+
-|               | Sale          | Cancellation          |
-+===============+===============+=======================+
-| **Upgrade**   | UpgradeSale   | UpgradeCancellation   |
-+---------------+---------------+-----------------------+
-| **Downgrade** | DowngradeSale | DowngradeCancellation |
-+---------------+---------------+-----------------------+
+
+* +---------------+-----------------------+
+  |               | Sale          | Cancellation          |
+  +===============+===============+=======================+
+  | **Upgrade**   | UpgradeSale   | UpgradeCancellation   |
+  +---------------+---------------+-----------------------+
+  | **Downgrade** | DowngradeSale | DowngradeCancellation |
+  +---------------+---------------+-----------------------+
 
 The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` notifications sent when a customer upgrades from a monthly to an annual subscription. Samples of the `DowngradeSale` and `DowngradeCancellation` notifications are included as well.
 

@@ -111,7 +111,7 @@ Apps outside the U.S. Roku Streaming Store that have streamed more than an avera
 
 - Client-side via RAF:
   - Place [the URL parameter macros populated by RAF](doc:integrating-roku-advertising-framework) in ad request urls to populate the RIDA and LAT in the appropriate spot.
-  - [Sideload the channel](doc:packaging-channels), [Telnet into the Roku device](doc:debugging-channels), and then [enable RAF debug mode](doc:raf-api).
+  - [Sideload the channel](doc:packaging-channels), [Telnet into the Roku device](doc:debugging), and then [enable RAF debug mode](doc:raf-api).
   - Observe that RAF requests a test url and dispatches trackers on sideloaded channels when [setAdUrl](doc:raf-api) is passed an empty value.
 - Server-side: For server-side ad requests, the ad server's runtime macros are typically used to pass the RIDA and LAT values in the ad requests instead of the RAF macros. In this case, the RIDA and LAT values are usually passed to the ad server via Roku API calls.
   - Check your ad server for the runtime macros to be used to pass the RIDA and LAT values. Email [adsupport@roku.com](mailto:adsupport@roku.com) for help with this process.
@@ -137,7 +137,7 @@ Apps outside the U.S. Roku Streaming Store that have streamed more than an avera
 
 - Client-side via RAF:
   - Place the [ROKU_ADS_APP_ID URL parameter macro populated by RAF](doc:integrating-roku-advertising-framework) in ad request urls to populate the Roku channel ID in the appropriate spot.
-  - [Sideload the channel](doc:packaging-channels), [Telnet into the roku device](doc:debugging-channels), and then [enable RAF debug mode](doc:raf-api).
+  - [Sideload the channel](doc:packaging-channels), [Telnet into the roku device](doc:debugging), and then [enable RAF debug mode](doc:raf-api).
   - Observe that RAF requests a test url and dispatches trackers on sideloaded channels when [setAdUrl](doc:raf-api) is passed an empty value.
 - Server-side: For server-side ad requests, the ad server's runtime macros are typically used to pass the Roku channel ID in the ad requests instead of the RAF macros. In this case, the Roku channel ID is usually passed to the ad server via Roku API calls.
   - Check your ad server for the runtime macros to be used to pass the Roku channel ID. Email [adsupport@roku.com](mailto:adsupport@roku.com) for help with this process.
@@ -329,7 +329,7 @@ App is responsive to user navigation, find, and playback of content at a reasona
 **Tests**:
 
 1. Select your channel from the Roku home screen.
-2. Use the [BrightScript console (port 8085)](doc:debugging-channels) to check the channel launch time.
+2. Use the [BrightScript console (port 8085)](doc:debugging) to check the channel launch time.
 3. To retest, reboot your device and wait 30 seconds before testing again.
 
 **Expected Result**:

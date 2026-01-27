@@ -10,18 +10,17 @@ metadata:
 next:
   description: ''
 ---
-
 The ifSGNodeChildren interface allows querying and manipulation of nodes in a SceneGraph node tree, such as creating new nodes, placing them at certain positions in the tree, and removing them.
 
 ## Implemented by
 
-| Name     | Description                                                                             |
-| -------- | --------------------------------------------------------------------------------------- |
+| Name                     | Description                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------- |
 | [roSGNode](doc:rosgnode) | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
 
 To use the methods in this interface to manipulate child nodes at the scene level, the subject nodes must be wrapped in another element, typically a Group node. For example:
 
-~~~~
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <component name = "myScene" extends = "Scene" >
   <script type = "text/brightscript" >
@@ -39,11 +38,11 @@ To use the methods in this interface to manipulate child nodes at the scene leve
     </Group>
   </children>
 </component>
-~~~~
+```
 
 In the example above, m.label will contain the roSGNode corresponding to the Label node after the getChild() call. On the other hand, the following will not work:
 
-~~~~
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <component name = "myScene" extends = "Scene" >
   <script type = "text/brightscript" >
@@ -58,11 +57,11 @@ In the example above, m.label will contain the roSGNode corresponding to the Lab
     <Label id = "myLabel" ... />
   </children>
 </component>
-~~~~
+```
 
-The Scene node children are hidden elements used by the SceneGraph framework. Thus, despite the fact that the Label node is in the scene \<children\> element, it will not be retrieved by getChild() .
+The Scene node children are hidden elements used by the SceneGraph framework. Thus, despite the fact that the Label node is in the scene \<children> element, it will not be retrieved by getChild() .
 
->Removing or replacing a node in a SceneGraph node tree can cause that node to be destroyed entirely if there are no more references to it.
+> Removing or replacing a node in a SceneGraph node tree can cause that node to be destroyed entirely if there are no more references to it.
 
 ## Supported methods
 
@@ -209,31 +208,34 @@ Moves the subject node to another parent node.
 #### Parameters
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newParent</td>
-<td>roSGNode</td>
-<td>The new parent node where the child node is to be moved.</td>
-</tr>
-<tr>
-<td>adjustTransform</td>
-<td>Boolean</td>
-<td>Specifies whether the translation, rotation, and scale of the node are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If <strong>adjustTransform</strong> is true, the subject node transformation factor fields (translation/rotation/scale) are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If <strong>adjustTransform</strong> is false, the subject node is simply parented to the new node without adjusting its transformation factor fields, in which case, the reparenting operation could cause the node to jump to a new position on the screen.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>newParent</td>
+      <td>roSGNode</td>
+      <td>The new parent node where the child node is to be moved.</td>
+    </tr>
+
+    <tr>
+      <td>adjustTransform</td>
+      <td>Boolean</td>
+      <td>Specifies whether the translation, rotation, and scale of the node are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If <strong>adjustTransform</strong> is true, the subject node transformation factor fields (translation/rotation/scale) are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If <strong>adjustTransform</strong> is false, the subject node is simply parented to the new node without adjusting its transformation factor fields, in which case, the reparenting operation could cause the node to jump to a new position on the screen.</td>
+    </tr>
+  </tbody>
 </table>
 
 =======
-| Name            | Type     | Description                                                  |
-| --------------- | -------- | ------------------------------------------------------------ |
-| newParent       | roSGNode | The new parent node where the child node is to be moved.     |
+
+| Name            | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| newParent       | roSGNode | The new parent node where the child node is to be moved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | adjustTransform | Boolean  | Specifies whether the translation, rotation, and scale of the node are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If **adjustTransform** is true, the subject node transformation factor fields (translation/rotation/scale) are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If **adjustTransform** is false, the subject node is simply parented to the new node without adjusting its transformation factor fields, in which case, the reparenting operation could cause the node to jump to a new position on the screen. |
 
 #### Return Value
@@ -248,8 +250,8 @@ Appends an array of children nodes to the subject node.
 
 #### Parameters
 
-| Name        | Type   | Description                                                  |
-| ----------- | ------ | ------------------------------------------------------------ |
+| Name        | Type   | Description                                                   |
+| ----------- | ------ | ------------------------------------------------------------- |
 | child_nodes | Object | An roArray of child nodes to be appended to the subject node. |
 
 #### Return Value
@@ -297,9 +299,9 @@ Removes a specific number of child nodes from the subject node starting at a spe
 
 #### Parameters
 
-| Name         | Type    | Description                                                  |
-| ------------ | ------- | ------------------------------------------------------------ |
-| num_children | Integer | The number of child nodes to be removed.                     |
+| Name         | Type    | Description                                                                                         |
+| ------------ | ------- | --------------------------------------------------------------------------------------------------- |
+| num_children | Integer | The number of child nodes to be removed.                                                            |
 | index        | Integer | The starting position in the child node tree where the specified number of nodes are to be removed. |
 
 #### Return Value
@@ -314,10 +316,10 @@ Takes the key-value pairs in an roAssociativeArray and maps the values to the re
 
 #### Parameters
 
-| Name   | Type               | Description                                                  |
-| ------ | ------------------ | ------------------------------------------------------------ |
-| fields | roAssociativeArray | Contains key-value pairs corresponding to the fields in the subject node to be updated. |
-| addFields    | Boolean                    | optional (default = false). If true, and a specified key is not yet present, add it and value to the node.|
+| Name      | Type               | Description                                                                                                |
+| --------- | ------------------ | ---------------------------------------------------------------------------------------------------------- |
+| fields    | roAssociativeArray | Contains key-value pairs corresponding to the fields in the subject node to be updated.                    |
+| addFields | Boolean            | optional (default = false). If true, and a specified key is not yet present, add it and value to the node. |
 
 #### Example
 
@@ -354,9 +356,9 @@ Replaces the child nodes in the subject node, starting at the position specified
 
 #### Parameters
 
-| Name        | Type    | Description                                                  |
-| ----------- | ------- | ------------------------------------------------------------ |
-| child_nodes | Object  | An roArray of child nodes to replace the nodes in the tree.  |
+| Name        | Type    | Description                                                              |
+| ----------- | ------- | ------------------------------------------------------------------------ |
+| child_nodes | Object  | An roArray of child nodes to replace the nodes in the tree.              |
 | index       | Integer | The starting position in the tree from where to replace the child nodes. |
 
 #### Return Value
@@ -371,9 +373,9 @@ Retrieves a specific number of child nodes from the subject node, starting at a 
 
 #### Parameters
 
-| Name         | Type    | Description                                                  |
-| ------------ | ------- | ------------------------------------------------------------ |
-| num_children | Integer | The number of child nodes to be retrieved.                   |
+| Name         | Type    | Description                                                                                           |
+| ------------ | ------- | ----------------------------------------------------------------------------------------------------- |
+| num_children | Integer | The number of child nodes to be retrieved.                                                            |
 | index        | Integer | The starting position in the child node tree where the specified number of nodes are to be retrieved. |
 
 #### Return Value
@@ -388,9 +390,9 @@ Creates a specific number of new child nodes of a specific type or extended type
 
 #### Parameters
 
-| Name         | Type    | Description                                                  |
-| ------------ | ------- | ------------------------------------------------------------ |
-| num_children | Integer | Number of new child nodes to be created.                     |
+| Name         | Type    | Description                                                      |
+| ------------ | ------- | ---------------------------------------------------------------- |
+| num_children | Integer | Number of new child nodes to be created.                         |
 | subtype      | String  | Node type or extended type of the new child nodes to be created. |
 
 #### Return Value
@@ -411,9 +413,7 @@ The node's root Scene.
 
 The following methods can be called on any subject node and return the same global results. They can be used in a development app for debugging purposes, but should not be used in a production app.
 
-
-<p>>These methods are similar to the debugger sgnodes commands. See <a href="/docs/developer-program/debugging/debugging-channels.md#special-scenegraph-debugging-commands">Special SceneGraph Debugging Commands</a> for information on the debugger sgnodes commands. Also please note that calling these functions from code should only be done for debugging purposes. Any calls to <a href="#getall-as-object">getAll()</a>, <a href="#getroots-as-object">getRoots()</a>, <a href="#getrootsmeta-as-object">getRootsMeta()</a> and <a href="#getallmeta-as-object">getAllMeta()</a> should be removed from your production channels. |</p>
-
+<p>>These methods are similar to the debugger sgnodes commands. See <a href="https://roku-ent.readme.io/dev/docs/debugging#scenegraph-debug-server-port-8080-commands">Special SceneGraph Debugging Commands</a> for information on the debugger sgnodes commands. Also please note that calling these functions from code should only be done for debugging purposes. Any calls to <a href="#getall-as-object">getAll()</a>, <a href="#getroots-as-object">getRoots()</a>, <a href="#getrootsmeta-as-object">getRootsMeta()</a> and <a href="#getallmeta-as-object">getAllMeta()</a> should be removed from your production channels. |</p>
 
 ### getAll() as Object
 

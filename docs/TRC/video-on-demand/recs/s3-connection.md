@@ -1,5 +1,5 @@
 ---
-title: "Direct S3 connection for content delivery"
+title: Direct S3 connection for content delivery
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,13 +10,11 @@ metadata:
 next:
   description: ''
 ---
-
-
-Roku supports a direct S3 to S3 method for content delivery. The Roku delivery bucket for S3 direct connect uses a customer-managed KMS key. Since we are performing cross-account transfers, a KMS key and policy which grants external accounts permissions will be required.
+Roku supports a direct S3 to S3 method for content delivery. The Roku delivery bucket for S3 direct connect uses a customer-managed KMS key. Since we are performing cross-account transfers, a KMS key and policy which grants external accounts permissions will be required. 
 
 ## What Roku need from Partners
 
-IAM role ARN, which will be used (assumed) for multipart upload/s3 copy. Once we receive the ARN, we will add it into our KMS/policy allow list. 
+IAM role ARN, which will be used (assumed) for multipart upload/s3 copy. Once we receive the ARN, we will add it into our KMS/policy allow list.
 Typically, the ARN will be in the form of:
 
 ```
@@ -73,7 +71,7 @@ Roku’s S3 bucket is located in the **us-east-1** region. Cross region transfer
 
 ### Testing
 
- To validate the configuration, perform the following test
+To validate the configuration, perform the following test
 
 1. Test upload file to Roku S3 bucket and the designated partner prefix
 2. Test copy file from Partner S3 bucket to Roku S3 bucket and the designated partner prefix

@@ -1,5 +1,5 @@
 ---
-title: "ifLocalization"
+title: ifLocalization
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,14 +10,11 @@ metadata:
 next:
   description: ''
 ---
-
-
 ## Implemented by
 
-| Name           | Description                               |
-| -------------- | ----------------------------------------- |
+| Name                                 | Description                                                            |
+| ------------------------------------ | ---------------------------------------------------------------------- |
 | [roLocalization](doc:rolocalization) | The roLocalization object provides functions to assist in localization |
-
 
 ## Supported methods
 
@@ -52,18 +49,18 @@ If the user's current language setting is French (fr_CA), and the file exists, t
 
 If the file does not exist in the current locale directory, then this will search the directory locale/default/. If it exists there, it will return it; otherwise, it will check the directory locale/en_US/. If it still can't find the file, then it will return an empty string.
 
-A list of currently supported locales can be found at [ifDeviceInfo.GetCurrentLocale](doc:ifdeviceinfo.md#getcurrentlocale-as-string "ifDeviceInfo).
+A list of currently supported locales can be found at [ifDeviceInfo.GetCurrentLocale](doc:ifdeviceinfo#getcurrentlocale-as-string "ifDeviceInfo).
 
 #### Parameters
 
-| Name     | Type   | Description                                                  |
-| -------- | ------ | ------------------------------------------------------------ |
+| Name     | Type   | Description                                                                                                 |
+| -------- | ------ | ----------------------------------------------------------------------------------------------------------- |
 | dirName  | String | The name of a subdirectory in the directory pkg:/locale/XX_YY/ where XX_YY is the current language setting. |
-| fileName | String | The name of the file.                                        |
+| fileName | String | The name of the file.                                                                                       |
 
 #### Return Value
 
-An asset path. 
+An asset path.
 
 #### Example
 

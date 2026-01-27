@@ -1164,6 +1164,15 @@ A list of associative arrays. Each associative array contains the following key/
 | preferred | boolean | True if this is the preferred UI resolution, i.e., if this is the optimal resolution for the device |
 
 
+### GetUIResolution() as Object
+
+#### Description
+
+Checks for the UI resolution of the screen.
+
+#### Return Values
+
+An associative array with the following key-value pairs describing the current UI resolution:
 
 <table>
 <thead>

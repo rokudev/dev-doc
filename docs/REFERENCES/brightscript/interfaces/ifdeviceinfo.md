@@ -1145,3 +1145,23 @@ An associative array with the following key/value pairs for the display properti
 </tbody>
 </table>
 
+### GetSupportedGraphicsResolutions() as Object
+
+#### Description
+
+Checks the supported graphics resolutions.
+
+#### Return Values
+
+A list of associative arrays. Each associative array contains the following key/value pairs for the graphics resolutions:
+
+| Key       | Type    | Value                                                                                               |
+| --------- | ------- | --------------------------------------------------------------------------------------------------- |
+| width     | integer | The pixel width of the supported resolution                                                         |
+| height    | integer | The pixel height of the supported resolution                                                        |
+| name      | string  | Either SD, HD, or FHD                                                                               |
+| ui        | boolean | True if this resolution is the current Roku UI resolution                                           |
+| preferred | boolean | True if this is the preferred UI resolution, i.e., if this is the optimal resolution for the device |
+
+
+

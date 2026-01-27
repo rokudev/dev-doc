@@ -78,7 +78,7 @@ Note: This tool requires a [companion Roku app](https://my.roku.com/account/add?
 
 ## Automated app testing tools
 
-Roku's test automation tools enable automated state-driven UI testing of apps. With Roku's custom Selenium-based WebDriver APIs, app developers can automate tests on authentication and purchasing workflows, deep linking, and other certification-related criteria. Roku's Robot Framework Library enables developers to create Robot framework-compliant test cases. See [Automated app testing overview](doc:automated-testing) for more information on getting started with Roku's test automation software.
+Roku's test automation tools enable automated state-driven UI testing of apps. With Roku's custom Selenium-based WebDriver APIs, app developers can automate tests on authentication and purchasing workflows, deep linking, and other certification-related criteria. Roku's Robot Framework Library enables developers to create Robot framework-compliant test cases. See [Automated app testing overview](doc:automated-channel-testing) for more information on getting started with Roku's test automation software.
 
 ## Terms for publishing development tools
 

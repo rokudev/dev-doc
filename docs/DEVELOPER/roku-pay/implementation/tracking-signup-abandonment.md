@@ -1,5 +1,5 @@
 ---
-title: "Tracking signup abandonment"
+title: Tracking signup abandonment
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 You can track customers' progress through your app's signup workflow to identify where users may be abandoning the process. For example, customers may successfully enter their login credentials to create an account, but exit the flow when prompted to enter their payment information. By firing events on each page, the generated feedback can be used to minimize friction in the sign-up workflow and thus reduce abandonment.
 
 > Subscription apps that have streamed more than an average of 5 million hours per month over the last three months (and new subscription apps expected to reach the threshold shortly after launch) must fire events on each page in their signup workflow to pass [certification](doc:certification).
@@ -30,8 +28,8 @@ If your app's signup flow is contained within a series of pages, fire a signup e
 
 The names of the signup events must include two elements:
 
-- **Page Number**. A unique page number that identifies the page's sequence within the sign-up flow.
-- **Page Type**.  A label that clearly describes the page's functionality.
+* **Page Number**. A unique page number that identifies the page's sequence within the sign-up flow.
+* **Page Type**.  A label that clearly describes the page's functionality.
 
 #### Syntax
 
@@ -39,36 +37,38 @@ When firing the signup event, pass in "Sign_Up|" along with pipe-separated key-v
 
 The syntax is therefore as follows:
 
-"Sign_Up"|pageNumber=\{*int*\}|pageType=\{*type*\}.
+"Sign_Up"|pageNumber=\{_int_}|pageType=\{_type_}.
 
 You can use a hierarchal page numbering system to identify different pages in the signup flow at the same level. This is useful in case your signup flow forks based on different options. For example, you may have separate monthly and annual plan pages that you could number 3.1 and 3.2. If you use hierarchal numbering, the pages must still be uniquely numbered across the sign-up flow. The syntax in this case is therefore as follows:
 
-"Sign_Up"|pageNumber=\{*int*\}.\{*int*\}|pageType=\{*type*\}.
+"Sign_Up"|pageNumber=\{_int_}.\{_int_}|pageType=\{_type_}.
 
 #### Examples
 
 Developers should use the following syntax for naming signup events:
-- "Sign_Up|pageNumber=1|pageType=landing"
-- "Sign_Up|pageNumber=2|pageType=offer_selection"
-- "Sign_Up|pageNumber=3.1|pageType=basic_plan_cadence sign_up_offer_monthly"
-- "Sign_Up|pageNumber=3.2|pageType=premium_plan_cadence sign_up_offer_annual"
-- "Sign_Up|pageNumber=3|pageType=offer_confirmation"
-- "Sign_Up|pageNumber=4|pageType=registration"
-- "Sign_Up|pageNumber=5|pageType=registration_complete"
-- "Sign_Up|pageNumber=6|pageType=sign_up_complete"
+
+* "Sign_Up|pageNumber=1|pageType=landing"
+* "Sign_Up|pageNumber=2|pageType=offer_selection"
+* "Sign_Up|pageNumber=3.1|pageType=basic_plan_cadence sign_up_offer_monthly"
+* "Sign_Up|pageNumber=3.2|pageType=premium_plan_cadence sign_up_offer_annual"
+* "Sign_Up|pageNumber=3|pageType=offer_confirmation"
+* "Sign_Up|pageNumber=4|pageType=registration"
+* "Sign_Up|pageNumber=5|pageType=registration_complete"
+* "Sign_Up|pageNumber=6|pageType=sign_up_complete"
 
 #### Including form elements
+
 Optionally, you can add form element data in the signup event to generate more granular feedback on your app's signup flow. To do this, append a key-value pair with the name of the field. For example, you could fire the following event when a user enters their email address on the sign-in page:
 
 "Sign_Up|pageNumber=2|pageType=registration|field=emailAddress"
 
 ### Signup form
 
-If your app's signup flow is contained within a form that covers one or more pages, fire a signup event after each field in the form has been completed. When firing the signup event, include **Sign_Up|** and the name of the element as a key-value pair.  
+If your app's signup flow is contained within a form that covers one or more pages, fire a signup event after each field in the form has been completed. When firing the signup event, include **Sign_Up|** and the name of the element as a key-value pair.
 
 #### Syntax
 
-"Sign_Up"|field=\{*string*\}.
+"Sign_Up"|field=\{_string_}.
 
 #### Examples
 
@@ -88,10 +88,9 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
 
 1. Enable the RED library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
-        sg_component_libs_required=roku_analytics
+   sg_component_libs_required=roku_analytics
 
-
-2. Use the [Roku Analytics Component](doc:roku-analytics-component) to send signup events from your app following these steps:
+2. Use the [Roku Analytics Component](doc:libraries) to send signup events from your app following these steps:
 
    a. When `roSGScreen` is active, create a "Roku_Analytics:AnalyticsNode" node and persist it by storing in the global node.
 
@@ -101,26 +100,26 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
 
    The following example demonstrates how to send signup events:
 
-        sub Notify_Roku_UserIsLoggedIn(rsgScreen = invalid as Object)
-            ' get the global node
-            if type(m.top) = "roSGNode"  ' was called from a component script
-                globalNode = m.global
-            else ' must pass roSGScreen when calling from main() thread
-                globalNode = rsgScreen.getGlobalNode()
-            end if
-    
-            ' get the Roku Analytics Component Library used for RED
-            RAC = globalNode.roku_event_dispatcher
-            if RAC = invalid then
-                RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
-                RAC.debug = true ' for verbose output to BrightScript console, optional
-                RAC.init = \{RED: \{\}\} ' activate RED as a provider
-                globalNode.addFields(\{roku_event_dispatcher: RAC\})
-            end if
-    
-            ' dispatch an event to Roku
-            RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"\}\}
-            end sub
+   sub Notify_Roku_UserIsLoggedIn(rsgScreen = invalid as Object)
+   ' get the global node
+   if type(m.top) = "roSGNode"  ' was called from a component script
+   globalNode = m.global
+   else ' must pass roSGScreen when calling from main() thread
+   globalNode = rsgScreen.getGlobalNode()
+   end if
+
+   ' get the Roku Analytics Component Library used for RED
+   RAC = globalNode.roku_event_dispatcher
+   if RAC = invalid then
+   RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
+   RAC.debug = true ' for verbose output to BrightScript console, optional
+   RAC.init = \{RED: \{}} ' activate RED as a provider
+   globalNode.addFields(\{roku_event_dispatcher: RAC})
+   end if
+
+   ' dispatch an event to Roku
+   RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
+   end sub
 
 3. Use the [debug console](doc:debugging) to verify that your app is sending signup events.
 
@@ -130,12 +129,10 @@ To use the RAF **fireRokuMarketingPixel()** method to send authentication events
 
 1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
-        bs_libs_required=roku_ads_lib
-
+   bs_libs_required=roku_ads_lib
 
 2. Instantiate the RAF library in the app:
 
-        adIface = Roku_Ads()
-
+   adIface = Roku_Ads()
 
 3. When an authenticated customer launches your app, call the **fireRokuMarketingPixel()** method using the following syntax:

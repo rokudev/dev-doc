@@ -401,3 +401,65 @@ The two-letter ISO 639-1 language terminology code, which may be one of the foll
 | Greek      | el   |
 | Czech      | cs   |
 | Swedish    | sv   |
+
+### TimeSinceLastKeypress() as Integer
+
+#### Description
+
+Checks for the number of seconds passed since the last remote keypress.
+
+#### Return Values
+
+The number of seconds since the last remote keypress was received.
+
+### GetDrmInfo() as Object
+
+> **This method is deprecated**.
+>
+> Developers must update their apps to use the replacement API [GetDrmInfoEx()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfoex-as-object) to return the supported DRM system and features.
+
+#### Description
+
+Checks for the supported DRM system and its features.
+
+#### Return Values
+
+An associative array with the supported DRM system and features. For example, a device that supports PlayReady inside a trusted environment with secure stop returns:
+
+``\{"playready": "tee;ss"\}``
+
+The values for the PlayReady key above are:
+
+- **tee** indicates the core DRM system runs in a Trusted Execution Environment
+- **ss** indicates the DRM system supports secure stop
+
+### GetDrmInfoEx() as Object
+
+**Description**
+
+Checks for the DRM system used by the app.
+
+**Return Values**
+
+An associative array with the supported DRM system and features:
+
+**Example**
+
+```
+PlayReady : {
+    multikey: false
+    securestop: true
+    tee: false
+    version: "2.5"
+    securityLevel: "3000"
+}
+Widevine : {
+    multikey: true
+    securestop: false
+    tee: false
+    version: "widevine 16.4.0"
+    securityLevel: "1"
+}
+```
+
+> tee indicates the core DRM system runs in a Trusted Execution Environment.

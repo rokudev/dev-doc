@@ -97,3 +97,135 @@ An roAssociativeArray containing the following fields:
 | minor    | string | The minor version number (for example, 2)     |
 | revision | string | The firmware revision number (for example, 6) |
 | build    | string | The build number (for example, 4127)          |
+
+<br />
+
+### GetVersion() as String
+
+> **This method is deprecated**.
+>
+> Developers must update their apps to use [GetOSVersion()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getosversion-as-object) method to get the current Roku OS version running on a device.
+
+#### Description
+
+Returns the version number of the device.
+
+#### Return Values
+
+A 13-character string (for example "034.08E01185A"). The third through sixth characters are the major/minor version number ("4.08") and the ninth through twelfth are the build number ("1185")
+
+### GetDeviceUniqueId() as String
+
+> **This method is deprecated**.
+>
+> Developers must update their apps to use the 32-character alphanumeric unique identifier returned by [GetChannelClientId()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string).
+
+#### Description
+
+Returns a string of 12 zeroes (it no longer returns the unique identifier for the app on a device).
+
+#### Return Values
+
+A string of 12 zeros ("000000000000")
+
+### GetAdvertisingId() as String
+
+> **This method is deprecated**.
+>
+> Developers must update their apps to use the [GetRIDA()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string) method to get the unique identifier.
+
+#### Description
+
+Returns a unique identifier for the device. This identifier is persistent but can be reset by the user from the device's Settings menu or by performing a factory reset on the device.
+
+If the user has disabled Ad ID tracking from the settings menu, then this identifier should not be used for targeted advertising. IsAdIdTrackingDisabled() should be called to check if the user has disabled Ad ID tracking
+
+#### Return Values
+
+A Universally Unique Identifier (UUID) as specified in IETF-RFC 4122 with 36 characters (32 alphanumeric characters and four hyphens). The characters are grouped in the form 8-4-4-4-12, for example "123e4567-e89b-12d3-a456-426655440000"
+
+### GetRIDA() as String
+
+#### Description
+
+Returns a unique identifier for the device.
+
+If the user has set "Limit ad tracking" from the **Settings** menu (the user has opted out of targeted advertising), the RIDA is set to a temporary ID. This temporary ID is different than the UUID returned if the user has not opted out, and it expires after 30 days. Apps must still pass this temporary ID on ad server requests to support frequency capping.
+
+> If the user’s country is an EU member country, any data collection must be compliant with the [EU General Data Protection Regulation (GDPR)](/docs/features/legal/compliance.md#gdpr).
+
+#### Return Values
+
+A Universally Unique Identifier (UUID). This identifier is persistent, but it can be reset by the user from the device's **Settings** menu or by performing a factory reset on the device
+
+### IsAdIdTrackingDisabled() as Boolean
+
+> **This method is deprecated**.
+>
+> Developers must update their apps to use [IsRIDADisabled()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean) to get the Ad Id tracking status.
+
+#### Description
+
+If Ad Id tracking is disabled, the identifier returned by GetAdvertisingId() should not be used for Ad targeting
+
+#### Return Values
+
+Returns true if the user has disabled Ad Id tracking by selecting "Limit ad tracking" from the Roku Settings menu, false otherwise.
+
+### IsRIDADisabled() as Boolean
+
+#### Description
+
+Indicates whether tracking via Roku's ID for Advertisers (RIDA) is disabled on the device.
+
+#### Return Values
+
+A flag indicating whether RIDA tracking is disabled on the device (RIDA tracking can be disabled by selecting "Limit ad tracking" from the **Settings>Privacy>Advertising** menu). If RIDA tracking is disabled, this returns true; false otherwise.
+
+### GetClientTrackingId() as String
+
+> **This method is deprecated**.
+>
+> Developers must update their apps to use the [GetChannelClientId](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string) method to get the unique identifier.
+
+#### Description
+
+Returns a unique identifier for the device.
+
+#### Return Values
+
+A unique identifier. This identifier is different across apps so each app will get a different identifier when calling this function
+
+### GetChannelClientId() as String
+
+#### Description
+
+Returns a unique identifier for the device. The ID is persistent and cannot be reset. This value can be used to manage or identify devices linked to the app’s content services.
+
+#### Return Values
+
+A unique identifier. This identifier is different across apps so each app will get a different identifier when calling this function
+
+### GetUserCountryCode() as String
+
+Returns the ISO 3166-1 (2-letter) country code associated with the user's Roku account.
+
+#### Return Values
+
+An ISO 3166-1 (2-letter) country code.
+
+> If the app owner entered into an additional agreement to have the app published to a curated [Roku Powered Streaming Store](https://www.roku.com/roku-powered) instead of the user country, a Roku Powered Streaming Store Identifier will instead be returned:
+
+| Roku Powered Streaming Store | Roku Powered Streaming Store Identifier | Country |
+| ---------------------------- | --------------------------------------- | ------- |
+| Econet                       | Econet                                  | ZW      |
+| Globe                        | globe                                   | PH      |
+| PLDT                         | PLDT                                    | PH      |
+| Sky Germany                  | skyde                                   | DE      |
+| Sky Spain                    | skyes                                   | ES      |
+| Sky Ireland                  | skyie                                   | IE      |
+| Sky Italy                    | skyit                                   | IT      |
+| Sky UK                       | skyuk                                   | UK      |
+| Telstra                      | Telstra                                 | AU      |
+
+> A future enhancement to GetUserCountryCode() will return the 2-letter country code instead of the Roku Powered Streaming Store Identifier. It is therefore recommended that apps use both to avoid having to update later.

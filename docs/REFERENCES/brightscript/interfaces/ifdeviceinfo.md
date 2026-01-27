@@ -1232,5 +1232,250 @@ An associative array with the following key-value pairs describing the current U
 </tbody>
 </table>
 
+### GetGraphicsFeatures() as Object
 
+*Available since Roku OS 14.0*
+
+#### Description
+
+Checks the graphics features supported by the device.
+
+#### Return Values
+
+An associative array containing the following key/value pairs:
+
+
+<table>
+<thead>
+<tr>
+<th><strong>Key</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full_rotation</td>
+<td>boolean</td>
+<td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
+</tr>
+<tr>
+<td>astc_supported</td>
+<td>boolean</td>
+<td><ul><li>true: The device supports <a href="https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression">Adaptive Scalable Texture Compression(ASTC)</a> compressed textures and can load <a href="https://github.com/ARM-software/astc-encoder/blob/main/Docs/FileFormat.md">.astc</a> image files.</li><li>false: The device does not support ASTC.</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+### GetGraphicsPlatform() as String
+
+#### Description
+
+Checks the graphics platform of the device.
+
+#### Return Values
+
+The device's graphics platform, which may be one of the following values:
+
+- "opengl"
+- "directfb"
+
+### GetVideoDecodeInfo() as Object
+
+> **This method is deprecated**.
+>
+> Developers  should use the [CanDecodeVideo()](#candecodevideovideo_format-as-object-as-object) function instead.
+
+#### Description
+
+See http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block for an explanation of the information returned.
+
+#### Return Values
+
+An associative array with the EDID (EIA.2FCEA-861) information describing the video display
+
+### EnableCodecCapChangedEvent(enable As Boolean)
+
+#### Description
+
+Notifies the app when the audio or video codec changes. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the codec changes. To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| ------ | ------- | ------------------------------------------------------------ |
+| enable | Boolean | A flag indicating whether to enable/disable codec change event notifications. |
+
+#### Return Values
+
+A flag indicating whether codec change event notifications are enabled (true) or disabled (false).
+
+#### Audio info
+
+### GetAudioOutputChannel() as String
+
+#### Description
+
+Checks for the type of audio output.
+
+#### Return Values
+
+The selected audio output, which may be one of the following values:
+
+- "Stereo"
+- "5.1 surround"
+
+### GetAudioDecodeInfo() as Object
+
+> **This method is deprecated**.
+>
+> Developers  should use the [CanDecodeAudio()](#candecodeaudioaudio_format-as-object-as-object) function instead.
+
+#### Description
+
+Lists each audio decoder supported by the device, with up to four numbers describing the decoder from the EDID SAD (Short Audio Descriptor). Each value is of the form `"<number of channels>:<SAD1>:<SAD2>:<PassThru>:"`
+
+#### Return Values
+
+An associative array with EDID (EIA.2FCEA-861) audio decoder information for the device connected to the HDMI port (or the device itself for a Roku TV).
+
+For example, the name "DD+" may have the value "8:6:0:1" where there are 8 independent audio tracks (7.1 audio), 6 is the SAD1 byte, 0 is the SAD2 byte, and 1 is the binary value that indicates this is a pass-through audio device (not a Roku TV). The SAD1 and SAD2 bytes are interpreted differently for different codecs and more information about their values can be found here: http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format
+
+#### Example
+
+The following example demonstrates how to determine if the attached device supports Dolby Digital Plus audio:
+
+~~~
+di = CreateObject("roDeviceInfo")
+audioDecoders = di.GetAudioDecodeInfo()
+
+REM Check for surround sound codecs:
+hasDolbyDigital = audioDecoders.doesexist("AC3")
+hasDTS = audioDecoders.doesexist("DTS")
+hasDDPlus = audioDecoders.doesexist("DD+")
+~~~
+
+> The definition of hasFeature (“5.1_surround_sound”) has changed in Roku OS 6.1. In previous firmware revisions it returned true when the user set the system audio format to "Surround Sound". In Roku OS6.1 and above, it returns true when any of the codecs in the GetAudioDecodeInfo() AA has more than 2 audio channels. Users devices will also be default to the "Auto Detect" system HDMI audio setting in v6.1.
+
+### CanDecodeAudio(audio_format as Object) as Object
+
+#### Description
+
+Checks if the device can decode and play the specified audio format.
+
+> Use this method to query the codecs every time before starting playback on content (do not cache  and use the results from a previous call). In addition, use the [**roDeviceInfo.audioCodecCapabilityChanged()**](/docs/references/brightscript/events/rodeviceinfoevent.md) event to identify any codec changes that may occur when the audio output destination is switched. This will help your app to perform well with the Roku mobile app and and private listening.
+
+#### Parameters
+
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>audio_format</td>
+<td>Object</td>
+<td>An associative array with the audio format to be checked. The general format of the associative arrays for CanDecodeAudio() is similar to the parameter and return associative arrays used in <a href="#candecodevideovideo_format-as-object-as-object">CanDecodeVideo()</a>. <br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+#### Return Values
+
+An associative array that includes a flag indicating whether the audio format can be played, and the closest audio format supported by the device.
+
+### IsPassthruCodecActive() as Boolean
+
+#### Description
+
+Indicates whether a passthrough device that owns the codec (a TV, audio receiver, or soundbar connected to a Roku device via HDMI) is rendering audio.  
+
+Apps can call the [CanDecodeAudio()](#candecodevideovideo_format-as-object-as-object) function with the **audioFormat.passthru** field set to 1 to check whether the passthrough device can decode and play the specified audio format, and then call this function to determine whether the passthrough device  is actually rendering the audio.
+
+If the app receives a [**roDeviceInfoEvent.audioCodecCapabilityChanged**](/docs/references/brightscript/events/rodeviceinfoevent.md#isstatusmessage-as-boolean) event, it can call this function again to determine whether the audio output has changed (for example, check whether a different set of codecs are now relevant). The app can also re-query the [CanDecodeAudio()](#candecodevideovideo_format-as-object-as-object) function to determine whether the codecs themselves have changed (for example, an audio receiver has been disconnected).
+
+#### Return Values
+
+A flag indicating whether the passthrough device is rendering audio.  
+
+### GetSoundEffectsVolume() as Integer
+
+#### Description
+
+Checks for the user interface sound effects volume level.
+
+#### Return Values
+
+The UI sounds effects volume as a percentage. A return value of 0 indicates that UI sound effects are muted, and a value of 100 indicates that they are set to the maximum volume level
+
+### IsAudioGuideEnabled() as Dynamic
+
+> The screen reader is available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running Roku OS version 7.5 and later.
+
+#### Description
+
+Checks if the screen reader is enabled.
+
+#### Return Values
+
+A flag indicating whether the screen reader is enabled.
+
+### EnableAudioGuideChangedEvent(enable as Boolean) as Dynamic
+
+> The screen reader is available on: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running Roku OS version 7.5 and above
+
+#### Description
+
+Notifies the app when the screen reader changes. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the screen reader changes. To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| ------ | ------- | ------------------------------------------------------------ |
+| enable | Boolean | A flag indicating whether to enable/disable screen reader change event notifications. |
+
+#### Return Values
+
+A flag indicating whether screen reader change event notifications are enabled (true) or disabled (false).
+
+### IsAutoplayEnabled() as Boolean
+
+*Available since Roku OS 13.0*
+
+**Description**
+
+Returns a flag indicating whether autoplay is enabled on a device. Developers can use this function to ensure that the autoplay device setting is respected when customers browse content in their apps.
+
+If autoplay is disabled on a device, apps may not begin any video playback until the customer expressly requests it. Once a user navigates to a video or otherwise explicitly requests the playback of the video to begin, the app may continue playing that video until the user navigates away from it, pauses it, turns the device off, or a screensaver starts.
+
+Apps must adhere to [Roku’s autoplay policy](/docs/developer-program/media-playback/autoplay.md) to pass certification (Effective after October 1, 2024).
+
+**Return Value**
+
+A boolean indicating whether autoplay is enabled on a device.
+
+### isAutoAdjustRefreshRateEnabled() as Boolean
+
+*Available since Roku OS 15.0*
+
+**Description**
+
+Returns a flag indicating whether the Auto Adjust Display Refresh Rate setting is enabled on a device.
+
+**Return Value**
+
+A boolean indicating whether the Auto Adjust Display Refresh Rate setting is enabled on a device.
 

@@ -799,3 +799,154 @@ Notifies the app when an internet connection status event occurs. This function 
 #### Return Values
 
 A flag indicating whether network connection status event notifications are enabled (true) or disabled (false).
+
+### GetUptimeMillisecondsAsLong() as Long
+
+*Available since Roku OS 15.0*
+
+#### Description
+
+Returns the system's uptime since the last reboot (in milliseconds as a Long). This function is similar to the [global utility Uptime function](/docs/references/brightscript/language/global-utility-functions.md#uptimedummy-as-integer-as-float), but makes it easier for developers to handle monotonic milliseconds.
+
+#### Return Value
+
+A Long indicating the the system's uptime since the last reboot (in milliseconds).
+
+### GetInternetStatus() as Boolean
+
+#### Description
+
+Checks the internet connection status of the device.
+
+#### Return Value
+
+True if the cached internet status shows a connection; false, otherwise.
+
+### ForceInternetStatusCheck() as Boolean
+
+#### Description
+
+Forces a new internet connection check. A new check will only be initiated if the cached internet status is older than 10 seconds.
+
+#### Return Value
+
+True indicates only that a new internet check has been initiated; otherwise, false. To get the actual internet connection status, use the [**GetInternetStatus()**](getinternetstatus-as-boolean) method.
+
+### GetExternalIp() as String
+
+#### Description
+
+Checks the IP address assigned to the device by your internet service provider (ISP). This IP address is visible to the internet and all other computers outside your local network.
+
+#### Return Values
+
+The external IP address assigned to the device.
+
+### GetIPAddrs() as Object
+
+#### Description
+
+Checks the local IP address of the device.
+
+#### Return Values
+
+An associative array, where each key is the name of a network interface and the value is the IP-address of the interface. Typically, the associative array only contains a single interface.
+
+### GetConnectionInfo() as Object
+
+#### Description
+
+Checks for the information associated with the hardware's connection
+
+#### Return Values
+
+An associative array with the following key-value pairs:
+
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>Same as the value returned from GetConnectionType(). Indicated whether the device is using a WiFiConnection or WiredConnection.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Name of the connection interface.</td>
+</tr>
+<tr>
+<td>ip</td>
+<td>IP address used by the connection.</td>
+</tr>
+<tr>
+<td>ipv6<br /><br /><em>Available since Roku OS 12.0</em></td>
+<td>A list of IPv6 addresses used by the connection.</td>
+</tr>
+<tr>
+<td>mac</td>
+<td><em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string">roDeviceInfo.GetChannelClientId </a>method to uniquely identify devices.</td>
+</tr>
+<tr>
+<td>ssid</td>
+<td>The SSID of the Access Point (present only if type = "WiFiConnection").</td>
+</tr>
+<tr>
+<td>gateway</td>
+<td>IP Address of the connection gateway (usually the router).</td>
+</tr>
+<tr>
+<td>dns.0</td>
+<td>IP Address of first DNS server associated with the connection.</td>
+</tr>
+<tr>
+<td>dns.1</td>
+<td>IP Address of the second DNS server, if any (Similarly for any subsequent DNS servers).</td>
+</tr>
+<tr>
+<td>dns.2</td>
+<td>IP Address of the third DNS server, if any (Similarly for any subsequent DNS servers).</td>
+</tr>
+<tr>
+<td>dns.3</td>
+<td>IP Address of the fourth DNS server, if any (Similarly for any subsequent DNS servers).</td>
+</tr>
+<tr>
+<td>active</td>
+<td>A flag indicating the network status.</td>
+</tr>
+<tr>
+<td>default</td>
+<td>A flag indicating whether the default WiFi connection is being used.</td>
+</tr>
+<tr>
+<td>expectedThroughput</td>
+<td>The actual speed of the connection.  This rate may be significantly lower than the theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>The Wifi protocol name (IEEE 802.11g).</td>
+</tr>
+<tr>
+<td>signal</td>
+<td>The received signal strength indicator (RSSI) on a logarithmic scale. Values closer to 0 indicate a stronger signal; values closer to -100 indicate a weaker signal.</td>
+</tr>
+<tr>
+<td>ssid</td>
+<td>The service set identifier (SSID). The name of the WiFi network to which the device is connected.</td>
+</tr>
+<tr>
+<td>txFailed</td>
+<td>The number of dropped frames.</td>
+</tr>
+<tr>
+<td>txRetries</td>
+<td>The number of retries to send frames.</td>
+</tr>
+</tbody>
+</table>
+

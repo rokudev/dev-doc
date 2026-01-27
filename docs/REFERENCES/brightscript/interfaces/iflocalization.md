@@ -22,7 +22,7 @@ next:
 
 #### Description
 
-Replaces "^n" in pluralString with count and returns the result.
+Replaces `"^n"` in pluralString with count and returns the result.
 
 #### Parameters
 

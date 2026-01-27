@@ -1,5 +1,5 @@
 ---
-title: "Screensavers"
+title: Screensavers
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 > Only standalone screensaver apps are permitted. Non-screensaver apps, including but not limited to video/audio streaming apps, games, and utilities, are prohibited from including screensavers.
 
 ## Overview
@@ -22,6 +20,7 @@ app is that screensavers do not accept any user input (e.g., remote button push,
 is running, any user input terminates the screensaver and returns the user to the streaming app.
 
 Screensavers **cannot** include:
+
 * [DynamicComponent libraries](doc:componentlibrary)
 * Ad insertion
 * In-app purchases
@@ -31,9 +30,9 @@ Screensavers **cannot** include:
 ## Screensaver context
 
 When a screensaver is run, a new Brightscript context is created for screensaver execution. The
-screensaver does not share Brightscript data objects with the streaming app.  
+screensaver does not share Brightscript data objects with the streaming app.
 
-The screensaver's [BrightScript Debugger](doc:debugging-channels) uses port 8087.
+The screensaver's [BrightScript Debugger](doc:debugging) uses port 8087.
 
 ## Discovery
 
@@ -41,17 +40,17 @@ All screensavers in the Roku environment use the **`RunScreenSaver()`** function
 are prohibited for screensavers.
 
 You can access the list of available screensavers in the screensaver store or menu that is discoverable on your device (in the Roku UI) by going to
-**Settings \> Theme \> Screensavers**. This is where you can go to get, set, or remove screensavers. Note that once a screensaver is purchased and added
+**Settings > Theme > Screensavers**. This is where you can go to get, set, or remove screensavers. Note that once a screensaver is purchased and added
 the screensaver is not displayed on the Roku Home screen.
 
-![roku815px - screensavers menu](https://image.roku.com/ZHZscHItMTc2/screensavers-menu.png "screensavers_menu")
+<Image alt="roku815px - screensavers menu" border={false} src="https://image.roku.com/ZHZscHItMTc2/screensavers-menu.png" title="screensavers_menu" />
 
 ## Settings
 
 The **`RunScreenSaverSettings()`** function stores screensaver data in the device's registry. If a screensaver implements the **`RunScreenSaverSettings()`**
 function a new context menu, called **Change screensaver settings** is available under the given screensaver detail menu.
 
-![roku815px - change screensaver settings](https://image.roku.com/ZHZscHItMTc2/change-screensaver-settings.png "change_screensaver_settings")
+<Image alt="roku815px - change screensaver settings" border={false} src="https://image.roku.com/ZHZscHItMTc2/change-screensaver-settings.png" title="change_screensaver_settings" />
 
 After clicking **Change screensaver settings** the **`RunScreenSaverSettings()`** entry point is invoked allowing you to change developer specified screensaver options.
 
@@ -61,7 +60,7 @@ A screensaver must have an entry in its [manifest file](doc:channel-manifest) na
 **`screensaver_title`** whose value is the title of the screensaver (usually the same as the title of the app).
 
 > The **`screensaver_title`** manifest entry may only be used for screensaver applications. Other apps
-may not use this manifest entry; app publishing will be blocked if it is provided.
+> may not use this manifest entry; app publishing will be blocked if it is provided.
 
 ## Usable components
 
@@ -70,9 +69,9 @@ on the screen. Components which accept user input are not supported in a
 screensaver. This is a list of components which **cannot** be used in a
 screensaver.
 
-- **`roAudioPlayer`**  
-- **`roChannelStore`**  
-- **`roVideoPlayer`**  
+* **`roAudioPlayer`**
+* **`roChannelStore`**
+* **`roVideoPlayer`**
 
 ## SceneGraph screensavers
 

@@ -49,7 +49,7 @@ If the user's current language setting is French (fr_CA), and the file exists, t
 
 If the file does not exist in the current locale directory, then this will search the directory locale/default/. If it exists there, it will return it; otherwise, it will check the directory locale/en_US/. If it still can't find the file, then it will return an empty string.
 
-A list of currently supported locales can be found at [ifDeviceInfo.GetCurrentLocale](doc:ifdeviceinfo#getcurrentlocale-as-string "ifDeviceInfo).
+A list of currently supported locales can be found at [ifDeviceInfo.GetCurrentLocale](doc:ifdeviceinfo#getcurrentlocale-as-string).
 
 #### Parameters
 

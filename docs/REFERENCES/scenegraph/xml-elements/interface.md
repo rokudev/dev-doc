@@ -1,3 +1,6 @@
+---
+hidden: true
+---
 The \<interface> element defines a set of fields to be exposed by a component, to allow instances of the component to be manipulated externally to the component, while hiding details of the component implementation, in much the same way that C++ classes provide a public interface to objects. For example, a XML component might define a sprite object, and have an integer interface field that specifies which sprite bitmap to be displayed.
 
 The \<interface> element may include one or more \<field> XML elements. Each \<field> XML element defines a top-level field for the XML component. These top-level fields define an interface that allow users of the component to read, write, and observe the fields.

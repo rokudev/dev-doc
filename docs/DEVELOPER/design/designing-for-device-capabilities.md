@@ -1,5 +1,5 @@
 ---
-title: "Designing for devices"
+title: Designing for devices
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Every public app on the Roku platform is certified on all
 currently-supported Roku models before being published. The list of
 supported devices includes a wide range of product classes, from our
@@ -35,16 +33,14 @@ the same page on a higher-end product.
 
 Other optimization techniques include:
 
-  - Limiting animations
-  - Limiting the number of overdraws
-  - Lower video resolution or kill video playback altogether when the
-    user enters a browsing page
+* Limiting animations
+* Limiting the number of overdraws
+* Lower video resolution or kill video playback altogether when the
+  user enters a browsing page
 
 Device model numbers can be found in the [Hardware Specifications](doc:hardware) page.
 
-The best practices are outlined in further detail in the [SceneGraph Performance Guide](doc:development-tips).
-
 The "[Best Practices for Roku Cross-Platform UX](https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx)" presentation
 summarizes this concept of designing for high-end devices and gracefully
-degrading for lower-end devices. [Download]https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx) and
+degrading for lower-end devices. [Download](https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx]\(https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx\))  and
 leverage this guide for your app.

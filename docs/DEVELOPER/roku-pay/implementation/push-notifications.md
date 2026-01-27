@@ -339,7 +339,7 @@ Roku Pay sends push notifications for the following transactions:
       </td>
 
       <td>
-        No action required.
+        No action required
       </td>
     </tr>
   </tbody>

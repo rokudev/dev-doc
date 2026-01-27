@@ -46,7 +46,7 @@ To generate a new Roku Pay API Key, follow these steps:
 
 3. Click **Submit**.
 
-4. The new API key is generated and has a status of **Active**. The status of the current API key changes to **Expired** (if invalidated immediately) or **Expiring on *timestamp*** (if invalidation is scheduled for a later date).
+4. The new API key is generated and has a status of **Active**. The status of the current API key changes to **Expired** (if invalidated immediately) or **Expiring on _timestamp_** (if invalidation is scheduled for a later date).
 
    <Image alt="roku815px roku-pay-web-services-invalidate-key rokupx-" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-pay-web-services-new-key.png" />
 
@@ -88,7 +88,7 @@ To receive  JWT/JWS-secured push notifications, follow these steps:
 
 2. Configure a test endpoint and verify whether it can receive and process the JWT/JWS-secured messages. To do this, go to the [**Test push notification** settings](#test-push-notification-settings) and then provide an HTTPS test notification URL and test end date. JWT/JWS-secured messages will automatically start being sent to the specified test endpoint.
 
-3. Optionally, you can manually send test payloads to your test endpoint by clicking [**Send test message**](\(#on-demand-test-message\)) and entering a test payload.
+3. Optionally, you can manually send test payloads to your test endpoint by clicking [**Send test message**](#sending-test-messages) and entering a test payload.
 
 4. In the **Push notifications** setting, enter the URL for your production push notification endpoint.
 

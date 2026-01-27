@@ -122,7 +122,7 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
             RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"\}\}
             end sub
 
-3. Use the [debug console](doc:debugging-channels) to verify that your app is sending signup events.
+3. Use the [debug console](doc:debugging) to verify that your app is sending signup events.
 
 ### Integrating the RAF fireRokuMarketingPixel() method in the signup workflow
 

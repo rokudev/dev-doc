@@ -78,7 +78,7 @@ When the user later returns to the app, the Roku OS invokes the matching **custo
 >
 > ------
 >
-> Apps should minimize memory usage to increase the probability of their app being re-launched with Instant Resume. Apps can use the [BrightScript Profiler](doc:brightscript-profiler) or the [**chanperf** command in the debug console](doc:debugging-channels) to monitor memory consumption.  
+> Apps should minimize memory usage to increase the probability of their app being re-launched with Instant Resume. Apps can use the [BrightScript Profiler](doc:brightscript-profiler) or the [**chanperf** command in the debug console](doc:debugging) to monitor memory consumption.  
 
 #### Example
 
@@ -187,7 +187,7 @@ The Roku OS automatically fires **AppSuspendInitiate**/**AppSuspendComplete** be
 
 #### AppResume beacons
 
-The **AppResume** beacons are similar to the [**AppLaunch** signal beacons](doc:measuring-channel-performance), which are used to measure app launch times (normal launches done without Instant Resume). Beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](doc:debugging-channels). You can then use the feedback from the console to update your application.
+The **AppResume** beacons are similar to the [**AppLaunch** signal beacons](doc:measuring-channel-performance), which are used to measure app launch times (normal launches done without Instant Resume). Beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](doc:debugging). You can then use the feedback from the console to update your application.
 
 For Instant Resume, the Roku OS fires the **AppResumeInitiate** beacon when the app is re-launched. Apps, however, must implement the corresponding **AppResumeComplete** beacon. The **AppResumeComplete** beacon must be fired when the suspended scene is fully rendered during the resume process. This beacon must also be fired when video playback starts after handling a [deep link](doc:implementing-deep-linking), once the app can respond to commands sent via the Roku remote control.
 

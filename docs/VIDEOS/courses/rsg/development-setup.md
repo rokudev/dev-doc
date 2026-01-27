@@ -43,7 +43,7 @@ This lesson explains how to create the required user and developer accounts for 
 
 [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us)  
 
-[Debugging code](doc:debugging-channels)
+[Debugging code](doc:debugging)
 
 [Developer Tools](doc:tools-overview)
 

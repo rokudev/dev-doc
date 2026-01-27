@@ -309,7 +309,7 @@ curl -d '' 'http://192.168.1.114:8060/input/dev?id=8&type=transport&command=seek
 
 You can download and install a [sample app](https://github.com/rokudev/transport-control) that demonstrates how to implement voice controls. It demonstrates how to handle voice commands in your app, and it shows you how to use the [**roInputEvent**](doc:roinputevent) to listen for transport events and then process them. This sample includes standard and custom video player apps, a live app, and an app implementing server-side ad insertion [SSAI](doc:ssai-adapters) via the [Roku Advertising Framework (RAF)](doc:roku-advertising-framework):
 
-- The standard UI app shows how the native Roku Media Player handles voice controls. You can run this app and use the [debug console](doc:debugging-channels) to view output related to transport events.
+- The standard UI app shows how the native Roku Media Player handles voice controls. You can run this app and use the [debug console](doc:debugging) to view output related to transport events.
 - The custom UI, live, and SSAI apps shows how your application can receive and process voice controls. This is especially important if your app uses custom [trick mode](doc:trick-mode) or it is using a RAF SSAI implementation because your app must explicitly handle "seek" and "start over" transport commands in these cases.
 
 ## Video demo

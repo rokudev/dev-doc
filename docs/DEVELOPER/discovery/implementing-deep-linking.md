@@ -223,7 +223,7 @@ You can verify whether your app is implementing the correct deep linking behavio
 Tester](https://devtools.web.roku.com/DeepLinkingTester/) and the associated [Roku Deep Linking Tester
 channel](https://my.roku.com/account/add?channel=KX3UPK) or [ECP](doc:external-control-api) commands sent via cURL. Both methods enable you to test deep linking into content when launching an app; however, to test deep linking while your app is running, you must use ECP commands.
 
-You can also check which deep linking parameters are being sent to your app using the [debug console](doc:debugging-channels).
+You can also check which deep linking parameters are being sent to your app using the [debug console](doc:debugging).
 
 > Test each mediaType in your content feed. For example, if your feed contains movies and short-form videos, you should test deep linking to content of both mediaTypes. In addition, if your feed contains series content, you must test that both series and episode mediaTypes demonstrate their required launch behaviors.
 >
@@ -317,7 +317,7 @@ The following attributes are required:
 
 ### Using the debug console for troubleshooting deep linking parameters
 
-You can use the [debug console](doc:debugging-channels) to check the deep linking parameters that are being sent to your app. To do this, add a print statement to your app that outputs the associative array passed into your app's `Main()` function and [roInputEvent](doc:roinputevent).
+You can use the [debug console](doc:debugging) to check the deep linking parameters that are being sent to your app. To do this, add a print statement to your app that outputs the associative array passed into your app's `Main()` function and [roInputEvent](doc:roinputevent).
 
 This is useful when troubleshooting deep links because it helps you identify the **contentId** of the content being launched in case it is unknown, and it provides the **mediaType** in case the expected behavior is not being executed.
 

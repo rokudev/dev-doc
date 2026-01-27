@@ -40,7 +40,7 @@ Since Roku OS 10.5 (September 2021), the Windows Media Audio (**wma**) and WMApr
 
 ## [Signal beacon SteadyMaxMemPoints](doc:measuring-channel-performance)
 
-Since Roku OS 10.0 (April 2021), the **SteadyMaxMemPoints** metric has been removed from the signal beacon performance measurements. It is no longer reported in the debugging logs when an app is exited. Use the [**chanperf**](doc:debugging-channels) SceneGraph debug console command to measure an app's memory consumption.
+Since Roku OS 10.0 (April 2021), the **SteadyMaxMemPoints** metric has been removed from the signal beacon performance measurements. It is no longer reported in the debugging logs when an app is exited. Use the [**chanperf**](doc:debugging) SceneGraph debug console command to measure an app's memory consumption.
 
 ## File:// URLs
 

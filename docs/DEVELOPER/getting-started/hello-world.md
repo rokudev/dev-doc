@@ -69,7 +69,7 @@ To sideload the updated Hello World sample app, follow these steps:
 
 ## Using the debug console
 
-You can use the [Roku debug console](doc:debugging-channels) to view the output of a Roku app during runtime. If the app fails during runtime, the debug console displays the line number of the error, as well as the contents of variables at the time of the failure. If the app has compilation errors, the debug console displays them as well. It is recommended to have the debug console open whenever you are running a sideloaded app.
+You can use the [Roku debug console](doc:debugging) to view the output of a Roku app during runtime. If the app fails during runtime, the debug console displays the line number of the error, as well as the contents of variables at the time of the failure. If the app has compilation errors, the debug console displays them as well. It is recommended to have the debug console open whenever you are running a sideloaded app.
 
 To open the debug console, follow these steps:
 

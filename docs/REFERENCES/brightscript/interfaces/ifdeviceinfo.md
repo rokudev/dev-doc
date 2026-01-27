@@ -98,8 +98,6 @@ An roAssociativeArray containing the following fields:
 | revision | string | The firmware revision number (for example, 6) |
 | build    | string | The build number (for example, 4127)          |
 
-<br />
-
 ### GetVersion() as String
 
 > **This method is deprecated**.
@@ -229,3 +227,177 @@ An ISO 3166-1 (2-letter) country code.
 | Telstra                      | Telstra                                 | AU      |
 
 > A future enhancement to GetUserCountryCode() will return the 2-letter country code instead of the Roku Powered Streaming Store Identifier. It is therefore recommended that apps use both to avoid having to update later.
+
+### GetRandomUUID() as String
+
+#### Description
+
+Returns a randomly generated unique identifier. Each time this function is called, a different identifier is returned
+
+#### Return Values
+
+A Universally Unique Identifier (UUID) version 4 as specified in IETF-RFC 4122 with 36 characters (32 alphanumeric characters and four hyphens). The characters are grouped in the form 8-4-4-4-12, for example "123e4567-e89b-12d3-a456-426655440000"
+
+### GetTimeZone() as String
+
+#### Description
+
+Checks for the user's current system time zone setting.
+
+#### Return Values
+
+A string representing the user's current system time zone setting. For example, this method may return values such as:
+
+* "US/Puerto Rico-Virgin Islands"
+* "US/Guam"
+* "US/Samoa"
+* "US/Hawaii"
+* "US/Aleutian"
+* "US/Alaska"
+* "US/Pacific"
+* "US/Arizona"
+* "US/Mountain"
+* "US/Central"
+* "US/Eastern"
+* "Canada/Pacific"
+* "Canada/Mountain"
+* "Canada/Central Standard"
+* "Canada/Central"
+* "Canada/Eastern"
+* "Canada/Atlantic"
+* "Canada/Newfoundland"
+* "Europe/Germany"
+* "Europe/Iceland"
+* "Europe/Ireland"
+* "Europe/United Kingdom"
+* "Europe/Portugal"
+* "Europe/Central European Time"
+* "Europe/Greece/Finland"
+
+> Click [here](/docs/references/brightscript/interfaces/time-zones.md) for the complete list of time zones returned by this method.
+
+### HasFeature(feature as String) as Boolean
+
+#### Description
+
+Checks if the current device/firmware supports the passed in feature string.
+
+#### Parameters
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>feature</td>
+      <td>String</td>
+      <td>The feature to be checked, which may be one of the following values: <ul><li>"5.1\_surround\_sound"</li><li>"can\_output\_5.1\_surround\_sound"</li><li>"sd\_only\_hardware"</li><li>"usb\_hardware"</li><li>"sdcard\_hardware"</li><li>"ethernet\_hardware"</li><li>"gaming\_hardware"</li><li>"energy\_star\_compliant"</li><li>"soundbar\_hardware". Check whether the device has soundbar hardware (for example, speakers).</li><li>"voice\_remote" (). Checks whether a Roku device is paired with a Roku voice remote. This enables developers to tailor the in-app user experience for viewers with Roku voice remote controls.</li><li>"handsfree\_voice" (). Checks whether a Roku device is paired with a hands-free Roku remote control such as the Roku Voice Remote Pro. This enables developers to tailor the in-app user experience for viewers with hands-free Roku remote controls (for example, displaying voice tips and tricks in the UI).</li></ul><blockquote><p>The "1080p\_hardware" argument is deprecated. Apps should use the GetVideoMode() and CanDecodeVideo() functions instead</p></blockquote></td>
+    </tr>
+  </tbody>
+</table>
+
+#### Return Values
+
+A flag indicating whether the current device/firmware supports the passed in feature string.
+
+### GetCurrentLocale() as String
+
+#### Description
+
+Gets the current locale value based on the user's language setting.
+
+#### Return Values
+
+A string representing the current locale based on the user's language setting. The string is an ISO 639-1 (2-letter) language code followed by an underscore and a ISO 3166-1 (2-letter) country code. This may be one of the following values:
+
+| String  | Locale                |
+| ------- | --------------------- |
+| "en_US" | US English            |
+| "en_GB" | British English       |
+| "en_CA" | Canadian English      |
+| "en_AU" | Australian English    |
+| "fr_CA" | Canadian French       |
+| "es_ES" | International Spanish |
+| "es_MX" | Mexican Spanish       |
+| "de_DE" | German                |
+| "it_IT" | Italian               |
+| "pt_BR" | Brazilian Portuguese  |
+
+### GetCountryCode() as String
+
+#### Description
+
+Checks for the country code of the app.
+
+#### Return Values
+
+A value that indicates the Streaming Store associated with a user’s Roku account. Typically, the value returned will be an ISO 3166-1 (2-letter) country code representing the country. Alternatively, if the app owner entered into an additional agreement to have the app published to a curated [Roku Powered Streaming Store](https://www.roku.com/roku-powered) instead of the user country, then a Roku Powered Streaming Store Identifier will instead be returned. This may be one of the following values:
+
+| Value     | Country                            | Roku Powered Streaming Store (if applicable) |
+| --------- | ---------------------------------- | -------------------------------------------- |
+| "AR"      | Argentina                          |                                              |
+| "AU"      | Australia                          |                                              |
+| "BR"      | Brazil                             |                                              |
+| "CA"      | Canada                             |                                              |
+| "CL"      | Chile                              |                                              |
+| "CO"      | Colombia                           |                                              |
+| "CR"      | Costa Rica                         |                                              |
+| "DE"      | Germany                            |                                              |
+| "Econet"  | Zimbabwe                           | Econet                                       |
+| "FR"      | France                             |                                              |
+| "GB"      | Great Britain and Northern Ireland |                                              |
+| "globe"   | Philippines                        | Globe                                        |
+| "GT"      | Guatemala                          |                                              |
+| "HN"      | Honduras                           |                                              |
+| "IE"      | Republic of Ireland                |                                              |
+| "MX"      | Mexico                             |                                              |
+| "OT"      | Rest of World                      |                                              |
+| "PA"      | Panama                             |                                              |
+| "PE"      | Peru                               |                                              |
+| "PLDT"    | Philippines                        | PLDT                                         |
+| "Telstra" | Australia                          | Telstra                                      |
+| "skyde"   | Germany                            | Sky Germany                                  |
+| "skyes"   | Spain                              | Sky Spain                                    |
+| "skyie"   | Ireland                            | Sky Ireland                                  |
+| "skyit"   | Italy                              | Sky Italy                                    |
+| "skyuk"   | United Kingdom                     | Sky UK                                       |
+| "SV"      | El Salvador                        |                                              |
+| "US"      | United States                      |                                              |
+
+> This does not necessarily match the physical location of the device, nor does it necessarily match the last two letters of the current locale string.
+
+### GetPreferredCaptionLanguage() as String
+
+#### Description
+
+Checks the two-letter ISO 639-1 language terminology code of the preferred caption language set on the Roku device.
+
+#### Return Values
+
+The two-letter ISO 639-1 language terminology code, which may be one of the following values:
+
+| Language   | Code |
+| ---------- | ---- |
+| English    | en   |
+| Spanish    | sp   |
+| French     | fr   |
+| German     | de   |
+| Italian    | it   |
+| Portuguese | Pt   |
+| Russian    | ru   |
+| Turkish    | tr   |
+| Polish     | Pl   |
+| Ukranian   | uk   |
+| Romanian   | Rm   |
+| Dutch      | nl   |
+| Croatian   | hr   |
+| Hungarian  | hu   |
+| Greek      | el   |
+| Czech      | cs   |
+| Swedish    | sv   |

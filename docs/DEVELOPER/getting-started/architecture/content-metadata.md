@@ -17,7 +17,7 @@ attributes (e.g. ContentType) affect how the title is displayed on
 screen, other attributes (e.g. SDPosterURL) specify where to fetch
 artwork to display with the content and other attributes (e.g. Title)
 are just rendered as text.</p>
-<h2 id="overview">Overview</h2>
+<h2 id="overview">## Overview</h2>
 <p>The content metadata is stored in an associative array by the script
 and provided to the various screen objects as needed for display. In
 some cases an array of content metadata may be provided so that the

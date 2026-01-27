@@ -40,7 +40,7 @@ Other optimization techniques include:
 
 Device model numbers can be found in the [Hardware Specifications](doc:hardware) page.
 
-The "[Best Practices for Roku Cross-Platform UX](https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx)" presentation
+The [Best Practices for Roku Cross-Platform UX](https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx) presentation
 summarizes this concept of designing for high-end devices and gracefully
 degrading for lower-end devices. [Download](https://devtools.web.roku.com/files/Roku%20Best%20Practices%20for%20Cross-Platform%20UX.pptx)  and
 leverage this guide for your app.

@@ -703,3 +703,99 @@ Checks for an HDMI connection.
 #### Return Values
 
 A flag indicating whether an HDMI connection to a TV has been detected.
+
+### EnableLowGeneralMemoryEvent(enabled as Boolean) as Dynamic
+
+#### Description
+
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| ------ | ------- | ------------------------------------------------------------ |
+| enable | Boolean | A flag specifying whether to enable/disable lowGeneralMemoryLevel event notifications. |
+
+#### Return Values
+
+A flag indicating whether lowGeneralMemoryLevel event notifications are enabled (true) or disabled (false).
+
+### GetGeneralMemoryLevel() as String
+
+#### Description
+
+Checks the general memory levels of the device.
+#### Return Values
+
+Returns the general memory levels of the app, which may be one of the following values:
+
+- "normal"
+- "low"
+- "critical"
+
+### IsStoreDemoMode() as Boolean
+
+#### Description
+
+Checks whether the device is in demo mode.
+
+#### Return Values
+
+A flag indicating whether the device is in demo mode.
+
+#### Network info
+
+### GetLinkStatus() as Boolean
+
+#### Description
+
+Checks if the device has an active connection.
+
+#### Return Values
+
+A flag indicating whether the device has an active connection.
+
+### EnableLinkStatusEvent(enable as Boolean) as Boolean
+
+#### Description
+
+Notifies the app when a network connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the network connection status changes. To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| ------ | ------- | ------------------------------------------------------------ |
+| enable | Boolean | A flag specifying whether to enable/disable network connection status event notifications. |
+
+#### Return Values
+
+A flag indicating whether network connection status event notifications are enabled (true) or disabled (false).
+
+### GetConnectionType() as String
+
+#### Description
+
+Checks whether the device has a WiFi or wired connection, or if it is not connected through any type of network.
+
+#### Return Values
+
+The type of internet connection the device is using. This may be one of the following values:
+
+- "WiFiConnection"
+- "WiredConnection"
+- "" (the device does not have an Internet connection)
+
+### EnableInternetStatusEvent(enable as Boolean) as Boolean
+
+#### Description
+
+Notifies the app when an internet connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the network connection status changes, as indicated by `roDeviceInfoEvent.internetStatus`. To receive events, the app must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events.
+
+#### Parameters
+
+| Name   | Type    | Description                                                  |
+| :----- | :------ | :----------------------------------------------------------- |
+| enable | Boolean | A flag specifying whether to enable/disable network connection status event notifications. |
+
+#### Return Values
+
+A flag indicating whether network connection status event notifications are enabled (true) or disabled (false).

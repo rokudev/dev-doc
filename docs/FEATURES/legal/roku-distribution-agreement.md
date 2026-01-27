@@ -1,7 +1,7 @@
 ---
 title: Roku Distribution Agreement
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

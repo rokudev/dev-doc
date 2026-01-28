@@ -41,4 +41,4 @@ Apps that have been custom built using Roku's SDK may serve ads through their ow
 
 For more on custom built apps, see the overview of Roku's [two models for app development](doc:channel-development-models).
 
-For additional information regarding compliance considerations, review Roku's [compliance](doc:compliance) summary.
+For additional information regarding compliance considerations, review Roku's [compliance](doc:legal) summary.

@@ -60,129 +60,123 @@ these steps:
    ```
 
 3. Use a message loop to listen for the voice commands. In the message loop, do the following:
+   1. Use the [**roInputEvent.GetInfo()**](doc:roinputevent) method to check for voice control commands sent to your app. This method returns an AssociativeArray with the following fields: **type**, **id, command**.
+      * You can use the **type** key to verify that the event received is a voice command (transport event), and the **command** key to identify the specific command.
 
-a.  Use the [**roInputEvent.GetInfo()**](doc:roinputevent) method to check for voice control commands sent to your app. This method returns an AssociativeArray with the following fields: **type**, **id, command**.
+      * For the "seek" command, the AssociativeArray will contain two additional fields: **direction** and **duration**. The **direction** field indicates whether the seek command is for skipping "forward" or "backward"; the **duration** field specifies how many seconds to skip forward or backward.
 
-* You can use the **type** key to verify that the event received is a voice command (transport event), and the **command** key to identify the specific command.
+      * Seek functionality can also be implemented via trickplay using the [**Video.seek**](doc:video) field. In this case, the app must implement the [Roku Advertising Framework](doc:roku-advertising-framework) (or not include ads). The seek voice control attribute must also be enabled in the [Roku manifest](doc:channel-manifest) (**supports_etc_seek=1**).
+      b.  Call the [**roInput.EventResponse()**](doc:ifinput) method to indicate that you have handled the voice command.
+      * This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
 
-* For the "seek" command, the AssociativeArray will contain two additional fields: **direction** and **duration**. The **direction** field indicates whether the seek command is for skipping "forward" or "backward"; the **duration** field specifies how many seconds to skip forward or backward.
+      * This method should be called immediately after a voice command is received. If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled". See [Error handling](#error-handling) for the complete list of error messages to which the **status** field can be set.
+      c.  Optionally, for better modularization, you can pass the captured voice command to a function for handing.
+      ```
+        while m.isPlaying
+            msg = wait(0, port)
+            if type(msg) = "roInputEvent" then
+                info = msg.GetInfo()
+                if info.type = "transport" then
+                    eventRet = {status: "unhandled"}
+                    player = m.top.getScene().findNode("myVideoPlayer")
+                    if player <> invalid then
+                        eventRet = player.callFunc("handleTransport", info)
+                    end if
+                    eventRet.id = info.id
+                    input.EventResponse(eventRet)
+                end if
+                'else if ...
+                ' ... handling of other events
+           end if
+        end while
+      ```
+      4. Add business logic for handling each voice command. In this example, a function is used to receive the voice command and implement the required behavior. As a best practice, set the **ret.status** field to "unhandled" by default, and then update it to "success" if your app handles the command, or "error.generic" if the app cannot fulfill it. Setting the status to "error.generic" displays "That is not available" in the Roku Voice heads-up display. The default "unhandled" status results in the Roku OS executing the default behavior.
 
-* Seek functionality can also be implemented via trickplay using the [**Video.seek**](doc:video) field. In this case, the app must implement the [Roku Advertising Framework](doc:roku-advertising-framework) (or not include ads). The seek voice control attribute must also be enabled in the [Roku manifest](doc:channel-manifest) (**supports_etc_seek=1**).
+         ```
+         function handleTransport(evt)
+             cmd = evt.command
+             ret = {status: "unhandled"}
 
-b.  Call the [**roInput.EventResponse()**](doc:ifinput) method to indicate that you have handled the voice command.
+             if cmd = "play"
+                 'handle "play" command
+                 ret.status = "success"
 
-* This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
+             else if cmd = "pause"
+                 'handle "pause" command
+                 ret.status = "success"
 
-* This method should be called immediately after a voice command is received. If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled". See [Error handling](#error-handling) for the complete list of error messages to which the **status** field can be set.
+             else if cmd = "stop"
+                 'handle "stop" command
+                 ret.status = "success"
 
-c.  Optionally, for better modularization, you can pass the captured voice command to a function for handing.
+             else if cmd = "forward"
+                 'handle "forward" command
+                 ret.status = "success"
 
-```
-  while m.isPlaying
-      msg = wait(0, port)
-      if type(msg) = "roInputEvent" then
-          info = msg.GetInfo()
-          if info.type = "transport" then
-              eventRet = {status: "unhandled"}
-              player = m.top.getScene().findNode("myVideoPlayer")
-              if player <> invalid then
-                  eventRet = player.callFunc("handleTransport", info)
-              end if
-              eventRet.id = info.id
-              input.EventResponse(eventRet)
-          end if
-          'else if ...
-          ' ... handling of other events
-     end if
-  end while
-```
+             else if cmd = "rewind"
+                 'handle "rewind" command
+                 ret.status = "success"
 
-4. Add business logic for handling each voice command. In this example, a function is used to receive the voice command and implement the required behavior. As a best practice, set the **ret.status** field to "unhandled" by default, and then update it to "success" if your app handles the command, or "error.generic" if the app cannot fulfill it. Setting the status to "error.generic" displays "That is not available" in the Roku Voice heads-up display. The default "unhandled" status results in the Roku OS executing the default behavior.
+             else if cmd = "replay"
+                 'handle "replay" command
+                 ret.status = "success"
 
-   ```
-   function handleTransport(evt)
-       cmd = evt.command
-       ret = {status: "unhandled"}
+             else if cmd = "seek"
+                 duration = evt.duration.toInt()
+                 if evt.direction = "backward" then
+                     duration = -duration
+                     seekPosition = m.videoplayer.position + duration
+                     if seekPosition > m.videoplayer.duration then
+                         ret.status = "success.seek-end"
+                         seekPosition = m.videoplayer.duration - 30
+                     else if seekPosition < 0
+                         then ret.status = "success.seek-start"
+                         seekPosition = 0
+                     end if
+                 m.seekPosition = seekPosition playVideoFrom()
+                 ret.status = "success"
 
-       if cmd = "play"
-           'handle "play" command
-           ret.status = "success"
+             else if cmd = "next"
+                 'skip to next content item in playlist'
+                 ret.status = "success"
+             end if
 
-       else if cmd = "pause"
-           'handle "pause" command
-           ret.status = "success"
+             else if cmd = "nowplaying"
+                 'handle nowplaying command
+                 appmgr = CreateObject("roAppManager")
+                 appmgr.SetNowPlayingContentMetaData(\{
+                     title: "<title>",
+                     contentType: "<contentType>"
+                 \})
+                 ret.status = "success"
+             end if
 
-       else if cmd = "stop"
-           'handle "stop" command
-           ret.status = "success"
+             else if cmd = "loop"
+                 'handle "loop" command
+                  ret.status = "success"
+             end if
 
-       else if cmd = "forward"
-           'handle "forward" command
-           ret.status = "success"
+             else if cmd = "shuffle"
+                 'handle "shuffle" command
+                 ret.status = "success"
+             end if
 
-       else if cmd = "rewind"
-           'handle "rewind" command
-           ret.status = "success"
+             else if cmd = "skip"
+                 'handle "skip intro" command OR handle same as "next" if channel have no into/recap to skip
+                 ret.status = "success"
+             end if
 
-       else if cmd = "replay"
-           'handle "replay" command
-           ret.status = "success"
+             else if cmd = "like"
+                 'handle "like" command
+                 'optionally display a song's artist, genre, or track, or playlist title in the Roku heads-up display
+                 ret.music_track = "Messages"
+                 ret.status = "success"
+             end if
 
-       else if cmd = "seek"
-           duration = evt.duration.toInt()
-           if evt.direction = "backward" then
-               duration = -duration
-               seekPosition = m.videoplayer.position + duration
-               if seekPosition > m.videoplayer.duration then
-                   ret.status = "success.seek-end"
-                   seekPosition = m.videoplayer.duration - 30
-               else if seekPosition < 0
-                   then ret.status = "success.seek-start"
-                   seekPosition = 0
-               end if
-           m.seekPosition = seekPosition playVideoFrom()
-           ret.status = "success"
-
-       else if cmd = "next"
-           'skip to next content item in playlist'
-           ret.status = "success"
-       end if
-
-       else if cmd = "nowplaying"
-           'handle nowplaying command
-           appmgr = CreateObject("roAppManager")
-           appmgr.SetNowPlayingContentMetaData(\{
-               title: "<title>",
-               contentType: "<contentType>"
-           \})
-           ret.status = "success"
-       end if
-
-       else if cmd = "loop"
-           'handle "loop" command
-            ret.status = "success"
-       end if
-
-       else if cmd = "shuffle"
-           'handle "shuffle" command
-           ret.status = "success"
-       end if
-
-       else if cmd = "skip"
-           'handle "skip intro" command OR handle same as "next" if channel have no into/recap to skip
-           ret.status = "success"
-       end if
-
-       else if cmd = "like"
-           'handle "like" command
-           'optionally display a song's artist, genre, or track, or playlist title in the Roku heads-up display
-           ret.music_track = "Messages"
-           ret.status = "success"
-       end if
-
-       return ret
-   end function
-   ```
+             return ret
+         end function
+         ```
+       
 
 ## Error handling
 

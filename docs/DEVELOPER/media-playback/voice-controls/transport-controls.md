@@ -327,7 +327,40 @@ The following table summarizes the different voice controls, how they may be inv
 ### Enhanced voice controls
 
 <HTMLBlock>{`
-
+<table>
+<thead>
+<tr>
+<th>Voice control</th>
+<th>Voice command examples</th>
+<th>Required behavior  (in menu)</th>
+<th>Required behavior (VOD/Music)</th>
+<th>Required behavior (live linear)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start over</td>
+<td>"start over"<br />"go to beginning"</td>
+<td>Acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td>Play media from the beginning.</td>
+<td>Unless supported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+<tr>
+<td>seek</td>
+<td><strong>Forwards</strong> <br />"Forward 10 minutes" <br />"Fast forward half an hour"<br />"Skip 30 seconds"<br />"Go forward 1 minute"<br /><br /><strong>Backwards</strong><br />"Rewind 10 minutes"<br />"Go back 30 minutes"<br />"Go backward 15 seconds"</td>
+<td>Acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td>Skip media forwards or backwards by the specified time.</td>
+<td>Unless supported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+<tr>
+<td>next</td>
+<td>"next"</td>
+<td>If in profile selection screen, advance focus to next profile. Otherwise, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td><ul><li>Video: If in an episode of a series, play the next video clip or acknowledge as unhandled (the Roku OS will display message “Command not available).</li><li>Music: If in a playlist, play the next song.</li></ul></td>
+<td>Unless unsupported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+</tbody>
+</table>
 `}</HTMLBlock>
 
 <br />

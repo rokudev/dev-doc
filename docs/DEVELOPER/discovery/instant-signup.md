@@ -239,13 +239,16 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
    <result>
    ```
 
-5. Check the access token in your entitlement server to verify whether it is still valid.  If the access token is valid, generate a refresh token in your system and store it in the device registry and in the Roku cloud, and then grant the customer access to the content. In this case, no additional steps are required and authentication is complete.  
+5. Check the access token in your entitlement server to verify whether it is still valid.  If the access token is valid, generate a refresh token in your system and store it in the device registry and in the Roku cloud, and then grant the customer access to the content. In this case, no additional steps are required and authentication is complete.
 
    * Call the [**roRegistrySection.write()**](doc:ifregistrysection) and [**roRegistrySection.flush()**](doc:ifregistrysection) methods to permanently store the refresh token on the device:  
+     ```
+     reg_sec.write("access_token_key_name", "access_token_value")
+     reg_sec.flush()
+     ```
+   *   
 
    ```
-   reg_sec.write("access_token_key_name", "access_token_value")
-   reg_sec.flush()
    ```
 
    * Call the [**ChannelStore.storeChannelCredData **](doc:channelstore) command to store the access token in the Roku cloud. You can use the **status** and **response** fields of the **storeChannelCredDataStatus** content node to verify that the command was successful and that the access token stored in the Roku cloud has the specified value.

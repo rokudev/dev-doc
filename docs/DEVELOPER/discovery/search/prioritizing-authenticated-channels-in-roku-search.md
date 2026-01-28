@@ -44,67 +44,37 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
 
    a. When `roSGScreen` is active, create a "Roku_Analytics:AnalyticsNode" node and persist it by storing in the global node.
 
-   b. To add the RED library as a provider, include `RED: \{\}` when assigning to its `.init` field.
+   b. To add the RED library as a provider, include `RED:{}` when assigning to its `.init` field.
 
-   c. To dispatch an event for authentication, assign `\{RED: \{eventName: "Roku_Authenticated"\}\} to the .trackEvent` field.
+   c. To dispatch an event for authentication, assign `{RED: {eventName: "Roku_Authenticated"}} to the .trackEvent` field.
 
-   The following example demonstrates how to send authentication events:
+   The following example demonstrates how to send authentication events:  
 
    ```
    sub Notify_Roku_UserIsLoggedIn(rsgScreen = invalid as Object)
-    ' get the global node
-    if type(m.top) = "roSGNode"  ' was called from a component script
-        globalNode = m.global
-    else ' must pass roSGScreen when calling from main() thread
-        globalNode = rsgScreen.getGlobalNode()
-    end if
+       ' get the global node
+       if type(m.top) = "roSGNode"  ' was called from a component script
+           globalNode = m.global
+       else ' must pass roSGScreen when calling from main() thread
+           globalNode = rsgScreen.getGlobalNode()
+       end if
 
-    ' get the Roku Analytics Component Library used for RED
-    RAC = globalNode.roku_event_dispatcher
-    if RAC = invalid then
-        RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
-        RAC.debug = true ' for verbose output to BrightScript console, optional
-        RAC.init = \{RED: \{\}\} ' activate RED as a provider
-        globalNode.addFields(\{roku_event_dispatcher: RAC\})
-    end if
+       ' get the Roku Analytics Component Library used for RED
+       RAC = globalNode.roku_event_dispatcher
+       if RAC = invalid then
+           RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
+           RAC.debug = true ' for verbose output to BrightScript console, optional
+           RAC.init = {RED: {}} ' activate RED as a provider
+           globalNode.addFields({roku_event_dispatcher: RAC})
+       end if
 
-    ' dispatch an event to Roku
-    RAC.trackEvent = \{RED: \{eventName: "Roku_Authenticated"\}\}
+       ' dispatch an event to Roku
+       RAC.trackEvent = {RED: {eventName: "Roku_Authenticated"}}
+   end sub
    ```
 
-end sub
+3. <br />
 
-```
+<br />
 
-3. Use the [debug console](doc:debugging) to verify that your app is sending authentication events.
-
-![roku815px - Search results for an authenticated channel that isn't using the Roku Event Dispatcher](https://image.roku.com/ZHZscHItMTc2/red-3.jpg "red-3")
-
-### Integrating the RAF fireRokuMarketingPixel() method in the authentication workflow
-
-To use the RAF **fireRokuMarketingPixel()** method to send authentication events to Roku, follow these steps:
-
-1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
-
-```
-
-bs_libs_required=roku_ads_lib
-
-```
-
-2. Instantiate the RAF library in the app:
-
-```
-
-adIface = Roku_Ads()
-
-```
-
-3. When an authenticated customer launches your app, call the **fireRokuMarketingPixel()** method using the following syntax:
-
-```
-
-adIface.fireRokuMarketingPixel("Roku_Authenticated")
-
-```
-```
+<br />

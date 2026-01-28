@@ -87,6 +87,78 @@ Apps must complete the following steps (in addition to completing the [prerequis
 
 Apps must implement an API that retrieves the images and description of the app to be displayed to customers. The following table lists the requirements for implementing the Images API:
 
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Item</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line"><strong>Endpoint</strong></td>
+<td class="short-line">/api/offers/rsb/images</td>
+</tr>
+<tr>
+<td class="short-line"><strong>Method</strong></td>
+<td class="short-line">GET</td>
+</tr>
+<tr>
+<td class="short-line"><strong>Header</strong></td>
+<td class="long-line">The HTTP header of the GET requests includes a JSON Web Token (JWT) for verifying that the API call is from Roku and the customer's locale for determining which offer image to display to the customer. <br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">Authorization: Bearer</td>
+<td class="short-line">String</td>
+<td class="long-line">A JWT token that enables apps to verify that API calls are from Roku. The JWT is signed with the partner's <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> using the <a href="https://tools.ietf.org/html/rfc7518#section-3.2">HS512 (HMAC using SHA-512)</a> algorithm. To generate the JWT, use the following algorithm, payload, and secret key:<br><br>- <strong>Algorithm</strong>: HS512. <br><br>- <strong>Payload</strong>:<pre><code>"iss": "roku_instant_signup",
+"sub": "instant_signup_metadata",
+"exp": 1616010343 (1 hour from the current time, in epoch unix timestamp format)
+"aud": "roku_developers" (the app name)
+"iat": 1616006743 (the current time, in epoch unix timestamp format)
+</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> (see the following <a href="/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
+</tr>
+<tr>
+<td class="short-line">locale</td>
+<td class="short-line">String</td>
+<td class="long-line">The location of the customer in language-country format (en-us or es-mx, for example).</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line"><strong>Response</strong></td>
+<td class="long-line">The API returns the following:<br><br>- An <strong>images</strong> array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the <a href="#channel-image-specifications">Image specifications</a>.<br><br>- A <strong>description</strong> string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br><br><strong>Syntax</strong>:<pre><code>  {
+    "images": "Array.&lt;String&gt;",
+    "description": "string"
+  }
+</code></pre><br><strong>Example</strong>: <pre><code>  {
+    "images": [ "https://myChannelImage/item1.jpg",  
+                "https://myChannelContentPosterImages/item2.jpg",
+                "https://myChannelContentPosterImages/item3.jpg"],
+    "description": "Your favorite movies from your favorite decade"            
+  }
+</code></pre></td>
+</tr>
+<tr>
+<td class="short-line"><strong>Error</strong></td>
+<td class="long-line"><ul>
+<li>200: OK</li>
+<li>400: Bad request</li>
+<li>500: Error</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
+
 #### Image specifications
 
 The images used for the app must meet the requirements for width, height, minimum resolution, and format.

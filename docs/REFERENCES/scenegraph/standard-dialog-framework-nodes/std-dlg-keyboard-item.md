@@ -39,7 +39,7 @@ The **StdDlgKeyboardItem** node is used to display a keyboard or PINpad in the d
 <td>string</td>
 <td>"unspecified"</td>
 <td>READ_WRITE</td>
-<td>Specifies the type of keyboard to be displayed:<br /><ul><li>"unspecified": no keyboard is displayed.</li><li>"keyboard": A <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard.md"><strong>DynamicKeyboard</strong></a> node is displayed.</li><li>"pinpad": A <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-pinpad.md"><strong>DynamicPinPad</strong></a> node is displayed.</li></ul></td>
+<td>Specifies the type of keyboard to be displayed:<br /><ul><li>"unspecified": no keyboard is displayed.</li><li>"keyboard": A [<strong>DynamicKeyboard</strong>](doc:dynamic-keyboard) node is displayed.</li><li>"pinpad": A [<strong>DynamicPinPad</strong>](doc:dynamic-pinpad) node is displayed.</li></ul></td>
 </tr>
 <tr>
 <td>text</td>
@@ -51,9 +51,9 @@ The **StdDlgKeyboardItem** node is used to display a keyboard or PINpad in the d
 <tr>
 <td>textEditBox</td>
 <td>VoiceTextEditBox node</td>
-<td>The <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md"><strong>VoiceTextEditBox</strong></a> associated with the keyboard</td>
+<td>The [<strong>VoiceTextEditBox</strong>](doc:voice-text-edit-box) associated with the keyboard</td>
 <td>READ</td>
-<td>The internal <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md"><strong>VoiceTextEditBox</strong> node</a> used by this dialog's internal keyboard. This field should be used only to access the fields of this internal node.</td>
+<td>The internal [<strong>VoiceTextEditBox</strong> node](doc:voice-text-edit-box) used by this dialog's internal keyboard. This field should be used only to access the fields of this internal node.</td>
 </tr>
 </tbody>
 </table>

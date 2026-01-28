@@ -125,7 +125,7 @@ describe('test_3-Grid', () =&gt; {
 <li><strong>username</strong>: Enter <strong>rokudev</strong>, which is the user name for the Development Application Installer.</li>
 <li><strong>password</strong>: The password for accessing the Development Application Installer on your Roku device.</li>
 </ul></td>
-<td class="long-line">Sideloads an app that has been packaged into a zip file.<br><br>If the <strong>sideLoad</strong> command fails, <a href="/docs/developer-program/getting-started/developer-setup.md#sideloading-channels">sideload</a> the app to be tested and use the <strong>launchTheChannel</strong> command.</td>
+<td class="long-line">Sideloads an app that has been packaged into a zip file.<br><br>If the <strong>sideLoad</strong> command fails, [sideload](doc:developer-setup#sideloading-channels) the app to be tested and use the <strong>launchTheChannel</strong> command.</td>
 <td class="long-line"><code>await library.sideLoad("channel.zip", "rokudev", "your_device_password")</code></td>
 </tr>
 </tbody>
@@ -145,8 +145,8 @@ describe('test_3-Grid', () =&gt; {
 <td class="short-line">launchTheChannel</td>
 <td class="long-line"><ul>
 <li><strong>channel_code</strong>: The ID of the app to be launched.</li>
-<li><strong>contentId</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
-<li><strong>mediaType</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
+<li><strong>contentId</strong>: The [contentId](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
+<li><strong>mediaType</strong>: The [mediaType](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
 </ul></td>
 <td class="long-line">Launches the app corresponding to the specified app ID.</td>
 <td class="long-line"><code>await library.launchTheChannel("dev", "myMovie123", "movie")</code></td>
@@ -169,8 +169,8 @@ describe('test_3-Grid', () =&gt; {
 <td class="short-line">inputDeepLinkingData</td>
 <td class="long-line"><ul>
 <li><strong>channelId</strong>: The ID of the app to be launched.</li>
-<li><strong>contentId</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
-<li><strong>mediaType</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
+<li><strong>contentId</strong>: The [contentId](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
+<li><strong>mediaType</strong>: The [mediaType](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
 </ul></td>
 <td class="long-line">Launches the app corresponding to the specified app ID.</td>
 <td class="long-line"><code>await library.inputDeepLinkingData("dev", "myMovie123", "movie")</code></td>
@@ -344,7 +344,7 @@ expect(14000).greaterThan(time);
 <tr>
 <td class="short-line">Verify is screen loaded</td>
 <td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> command for more information.</li>
+<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) command for more information.</li>
 <li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li>
 <li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
 </ul></td>
@@ -400,7 +400,7 @@ const result = library.getChildNodes(rowList, searchData);
 <tr>
 <td class="short-line">Get element</td>
 <td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> for more information.</li>
+<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) for more information.</li>
 <li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
 </ul></td>
 <td class="long-line">Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element.</td>
@@ -426,7 +426,7 @@ expect(poster).to.equal('poster.png');
 <tr>
 <td class="short-line">getElements</td>
 <td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> for more information.</li>
+<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) for more information.</li>
 <li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
 </ul></td>
 <td class="long-line">Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements.</td>
@@ -450,7 +450,7 @@ expect(poster).to.equal('poster.png');
 <tbody>
 <tr>
 <td class="short-line">getFocusedElement</td>
-<td class="long-line">Return the element on the screen that currently has focus. See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#get-v1/session/:sessionId/element/active">WebDriver active element command</a> for more information.</td>
+<td class="long-line">Return the element on the screen that currently has focus. See the [WebDriver active element command](doc:web-driver#get-v1/session/:sessionId/element/active) for more information.</td>
 <td class="long-line"><pre><code>const element = await library.getFocusedElement()
 
 const poster = library.getAttribute(element, 'uri');

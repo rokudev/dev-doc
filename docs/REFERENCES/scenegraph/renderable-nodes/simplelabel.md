@@ -153,13 +153,13 @@ Rotation of SimpleLabel nodes is supported. The center of rotation is determined
 <td>horizOrigin</td>
 <td>string</td>
 <td>left</td>
-<td>See <a href="/docs/references/scenegraph/renderable-nodes/simplelabel.md#SimpleLabel-HorizontalOrigin"><strong>Horizontal Origin</strong></a></td>
+<td>See [<strong>Horizontal Origin</strong>](doc:simplelabel#SimpleLabel-HorizontalOrigin)</td>
 </tr>
 <tr>
 <td>vertOrigin</td>
 <td>string</td>
 <td>top</td>
-<td>See <a href="/docs/references/scenegraph/renderable-nodes/simplelabel.md#SimpleLabel-VerticalOrigin"><strong>Vertical Origin</strong></a></td>
+<td>See [<strong>Vertical Origin</strong>](doc:simplelabel#SimpleLabel-VerticalOrigin)</td>
 </tr>
 </tbody>
 </table>

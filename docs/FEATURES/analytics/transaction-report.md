@@ -152,12 +152,12 @@ To run a Transaction Report, follow these steps:
 
     <tr>
       <td>purchase\_channel</td>
-      <td>Where the Roku Pay subscription purchase was made: <ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="/docs/developer-program/discovery/instant-signup.md">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
+      <td>Where the Roku Pay subscription purchase was made: <ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through [Instant Signup](doc:instant-signup) during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
     </tr>
 
     <tr>
       <td>purchase\_context</td>
-      <td>How the subscription purchase was made: <ul><li><strong>isu</strong>. Subscription was purchased via <a href="/docs/developer-program/discovery/instant-signup.md">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
+      <td>How the subscription purchase was made: <ul><li><strong>isu</strong>. Subscription was purchased via [Instant Signup](doc:instant-signup).</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
     </tr>
   </tbody>
 </table>

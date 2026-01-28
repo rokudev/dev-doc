@@ -63,7 +63,7 @@ Gets the set of ads to be rendered now. This method may be called with no parame
 <tr>
 <td>msg</td>
 <td>String</td>
-<td>Optional, depending on use case. Typically, this would be a message returned from a <a href="/docs/references/brightscript/interfaces/ifmessageport.md#waitmessagetimeout-as-integer-as-dynamic">WaitMessage()</a> call on the message port of the <a href="/docs/references/brightscript/components/rovideoscreen.md">roVideoScreen</a> or <a href="/docs/references/brightscript/components/rovideoplayer.md">roVideoPlayer</a> object during content playback.<br /><br />This allows determination of which ads are scheduled for rendering based on playback position, user action, or other conditions.</td>
+<td>Optional, depending on use case. Typically, this would be a message returned from a [WaitMessage()](doc:ifmessageport#waitmessagetimeout-as-integer-as-dynamic) call on the message port of the [roVideoScreen](doc:rovideoscreen) or [roVideoPlayer](doc:rovideoplayer) object during content playback.<br /><br />This allows determination of which ads are scheduled for rendering based on playback position, user action, or other conditions.</td>
 </tr>
 </tbody>
 </table>

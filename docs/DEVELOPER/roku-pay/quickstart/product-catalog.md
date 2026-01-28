@@ -152,7 +152,7 @@ To create a new product, follow these steps:
 
     <tr>
       <td>It is add-on</td>
-      <td>If the product is an add-on (a service purchased on top of a base subscription product), enable this setting, and then select the prerequisite base products. Add-ons are only accessible in the customer flow if the required base products have already been purchased or are being purchased at the same time as the add-on.<br /><br />Offering add-ons in your app requires additional API integration work. See <a href="/docs/developer-program/roku-pay/quickstart/add-ons-integration.md">Integrating add-ons</a> for more information on how to do this.</td>
+      <td>If the product is an add-on (a service purchased on top of a base subscription product), enable this setting, and then select the prerequisite base products. Add-ons are only accessible in the customer flow if the required base products have already been purchased or are being purchased at the same time as the add-on.<br /><br />Offering add-ons in your app requires additional API integration work. See [Integrating add-ons](doc:add-ons-integration) for more information on how to do this.</td>
     </tr>
 
     <tr>
@@ -234,7 +234,7 @@ To create a purchase option for a product, follow these steps:
   <tbody>
     <tr>
       <td>Billing frequency</td>
-      <td>Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quartely billing requires <a href="/docs/developer-program/roku-pay/quickstart/add-ons-integration.md#appendix-a-add-on-api-reference">additional API work</a>.</td>
+      <td>Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quartely billing requires [additional API work](doc:add-ons-integration#appendix-a-add-on-api-reference).</td>
     </tr>
 
     <tr>
@@ -242,7 +242,7 @@ To create a purchase option for a product, follow these steps:
       <td>Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products: <ul>
 <li>One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).</li>
 <li>Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).</li>
-</ul> See the <a href="/docs/developer-program/roku-pay/quickstart/price-tiers.md">Price tier reference guide</a> for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:<ul>
+</ul> See the [Price tier reference guide](doc:price-tiers) for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:<ul>
 <li>The Currency code is the three-letter ISO-4217 code of the currency in which the customer will be billed.</li>
 <li>The Purchase price reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.</li>
 <li>The Net price field displays the pre-tax price. The Proceeds field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.</li>

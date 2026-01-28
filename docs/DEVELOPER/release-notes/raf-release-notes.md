@@ -14,14 +14,14 @@ next:
 <h1 id="roku-advertising-framework-release-notes">Roku Advertising Framework release notes</h1>
 <h3 id="version-3-1-7-2022">Version 3.1 – 7/2022</h3>
 <ul>
-<li>For apps that collect explicit in-app consent for ad targeting (for example, to adhere to GDPR), a new <a href="/docs/developer-program/advertising/raf-api.md#setlimitadtrackingenabled-as-boolean"><strong>setLimitAdTracking()</strong></a> function that specifies the value of the ROKU_ADS_LIMIT_TRACKING URL parameter macro to be passed into beacons and ad requests</li>
+<li>For apps that collect explicit in-app consent for ad targeting (for example, to adhere to GDPR), a new [<strong>setLimitAdTracking()</strong>](doc:raf-api#setlimitadtrackingenabled-as-boolean) function that specifies the value of the ROKU_ADS_LIMIT_TRACKING URL parameter macro to be passed into beacons and ad requests</li>
 <li>Improved interactive ads capabilities</li>
 <li>Deployed to devices on Roku OS 11.0 and above</li>
 </ul>
 <h3 id="version-2-18-2-2022">Version 2.18 – 2/2022</h3>
 <ul>
 <li>Support for new interactive ad experiences, improvements to existing templates</li>
-<li>Improvements to <a href="/docs/developer-program/advertising/ad-watermark.md">Roku ad watermark</a> feature</li>
+<li>Improvements to [Roku ad watermark](doc:ad-watermark) feature</li>
 <li>Multiple bug fixes and feature enhancements</li>
 <li>Deployed to devices on Roku OS 10.5 and above</li>
 </ul>
@@ -33,32 +33,32 @@ next:
 </ul>
 <h3 id="version-2-16-08-2021">Version 2.16 – 08/2021</h3>
 <ul>
-<li>Extended <a href="/docs/developer-program/advertising/ad-watermark.md">Roku ad watermark</a> to support <a href="/docs/developer-program/advertising/demand-api.md">Demand API</a> calls</li>
+<li>Extended [Roku ad watermark](doc:ad-watermark) to support [Demand API](doc:demand-api) calls</li>
 <li>Assorted bug fixes and enhancements to existing features</li>
 <li>Deployed to devices on Roku OS 10.0 and above</li>
 </ul>
 <h3 id="version-2-15-05-2021">Version 2.15 – 05/2021</h3>
 <ul>
-<li>New Feature: Methods for accessing <a href="/docs/developer-program/advertising/demand-api.md">Roku Demand API</a>. Provides more efficient monetization by connecting to real-time ad demand, while preserving control of inventory allocation with publisher&#39;s ad server</li>
+<li>New Feature: Methods for accessing [Roku Demand API](doc:demand-api). Provides more efficient monetization by connecting to real-time ad demand, while preserving control of inventory allocation with publisher&#39;s ad server</li>
 <li>New Feature: Initial implementation of watermarking for ad requests and impression pixels to combat ad fraud</li>
 <li>Added Portuguese localization of the ad UI texts</li>
-<li>Multitude of bug fixes and enhancements, notably <a href="/docs/developer-program/advertising/raf-api.md#stitchedadsinitadpodarray-as-roarray">stitchedAdsInit()</a> now clears the ad badge if called mid-ad break (<em>early cue-in</em> use case)</li>
+<li>Multitude of bug fixes and enhancements, notably [stitchedAdsInit()](doc:raf-api#stitchedadsinitadpodarray-as-roarray) now clears the ad badge if called mid-ad break (<em>early cue-in</em> use case)</li>
 <li>Deployed to devices on Roku OS 9.4 and above</li>
 </ul>
 <h3 id="version-2-14-12-2020">Version 2.14 – 12/2020</h3>
 <ul>
 <li>Added support for the characters <strong>{|}&quot;&lt;&gt;\^\`</strong> (which are neither reserved nor unreserved by <a href="https://tools.ietf.org/html/rfc3986">RFC-3986</a>) by percent-encoding them in ad request and beacon URLs</li>
-<li>New <a href="/docs/developer-program/advertising/raf-api.md#enableinpodstitchingisips-as-boolean"><code>enableInPodStitching(isIPS as Boolean)</code></a> method brings benefits from <a href="/docs/developer-program/advertising/csas.md">CSAS API</a> to apps using the classic CSAI <a href="/docs/developer-program/advertising/raf-api.md#showadsads-as-object-ctx-as-object-view-as-object-as-boolean">showAds()</a> by stitching together multiple video clips within a single ad break (no buffering between ads)</li>
+<li>New [<code>enableInPodStitching(isIPS as Boolean)</code>](doc:raf-api#enableinpodstitchingisips-as-boolean) method brings benefits from [CSAS API](doc:csas) to apps using the classic CSAI [showAds()](doc:raf-api#showadsads-as-object-ctx-as-object-view-as-object-as-boolean) by stitching together multiple video clips within a single ad break (no buffering between ads)</li>
 <li>When parsing VAST, preserve the <code>id</code> attribute of <code>&lt;MediaFile/&gt;</code></li>
-<li>Added support for <a href="/docs/developer-program/advertising/raf-api.md#getadsmsg-as-string-as-object">getAds()</a> parsing a local file from tmp:/ via e.g. <a href="/docs/developer-program/advertising/raf-api.md#setadurlurl-as-string">setAdURL(&quot;tmp:/myVASTorVMAPorSMRX.xml&quot;)</a></li>
+<li>Added support for [getAds()](doc:raf-api#getadsmsg-as-string-as-object) parsing a local file from tmp:/ via e.g. [setAdURL(&quot;tmp:/myVASTorVMAPorSMRX.xml&quot;)](doc:raf-api#setadurlurl-as-string)</li>
 <li>Multitude of bug fixes and enhancements</li>
 <li>Deployed to devices on Roku OS 9.4 and above</li>
 </ul>
 <h3 id="version-2-13-7-2020">Version 2.13 – 7/2020</h3>
 <ul>
 <li>Multitude of bug fixes and enhancements, including<ul>
-<li>Reduce <a href="/docs/developer-program/advertising/raf-api.md#enablejitpodsenabled-as-boolean">JIT pre-fetching</a> to improve playback start time for <a href="/docs/developer-program/advertising/csas.md">client-stitched</a> use case</li>
-<li>Fix regression of <a href="/docs/developer-program/roku-pay/implementation/tracking-signup-abandonment.md#integrating-the-raf-firerokumarketingpixel-method-in-the-signup-workflow">fireRokuMarketingPixel()</a> not URL-encoding its arguments</li>
+<li>Reduce [JIT pre-fetching](doc:raf-api#enablejitpodsenabled-as-boolean) to improve playback start time for [client-stitched](doc:csas) use case</li>
+<li>Fix regression of [fireRokuMarketingPixel()](doc:tracking-signup-abandonment#integrating-the-raf-firerokumarketingpixel-method-in-the-signup-workflow) not URL-encoding its arguments</li>
 <li>Fix errors on bad metadata (e.g. when parsing VAST, getting a single ad with <Extension type="waterfall"/> yet having fallback_index&gt;0)</li>
 </ul>
 </li>
@@ -79,18 +79,18 @@ next:
 </ul>
 <h3 id="version-2-10-08-2019">Version 2.10 – 08/2019</h3>
 <ul>
-<li>Added handling of <a href="/docs/developer-program/media-playback/voice-controls/transport-controls.md">voice ETC</a> for ads</li>
+<li>Added handling of [voice ETC](doc:transport-controls) for ads</li>
 <li>Interactive ads improvements</li>
 <li>Bug fixes and performance improvements</li>
 <li>Deployed to devices with Roku OS 9.1 and above</li>
 </ul>
 <h3 id="version-2-9-06-2019">Version 2.9 – 06/2019</h3>
 <ul>
-<li>Added a <a href="/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros">ROKU_ADS_LOCALE macro</a> which returns current locale in same format
-as <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getcurrentlocale-as-string">roDeviceInfo.getCurrentLocale()</a>
+<li>Added a [ROKU_ADS_LOCALE macro](doc:integrating-roku-advertising-framework#url-parameter-macros) which returns current locale in same format
+as [roDeviceInfo.getCurrentLocale()](doc:ifdeviceinfo#getcurrentlocale-as-string)
 (e.g. &quot;en_US&quot;, &quot;es_ES&quot;)</li>
 <li>Library manifests
-internally <a href="/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes">rsg_version=1.2</a>,
+internally [rsg_version=1.2](doc:channel-manifest#special-purpose-attributes),
 which decreases memory use when RAF is included in complex apps. Note this is
 independent from the application-level <em>manifest</em> file, where you may separately
 declare <em>rsg_version=1.2</em> (or assume the default 1.1 [the default is now 1.2 as of Roku OS 9.3])</li>
@@ -133,9 +133,9 @@ re-publishing.</li>
 </ul>
 <h3 id="version-2-5-05-2018">Version 2.5 – 05/2018</h3>
 <ul>
-<li>Major rework of RAF&#39;s diagnostic output to <a href="/docs/developer-program/debugging/debugging-channels.md#accessing-the-debug-console">BrightScript console</a><ul>
+<li>Major rework of RAF&#39;s diagnostic output to [BrightScript console](doc:debugging-channels#accessing-the-debug-console)<ul>
 <li>Warning messages (prefixed with &quot;[RAF.err]&quot;) are always printed for known potential problems. Note that these are just additional diagnostics - they do not change the library&#39;s behavior, as compared to previous versions.</li>
-<li>Substantially more information is printed when in setDebugOutput(true) mode: method call arguments and return values, <a href="/docs/developer-program/advertising/integrating-roku-advertising-framework.md#url-parameter-macros">URL macros</a> expansion, ad XML/parsed, etc.</li>
+<li>Substantially more information is printed when in setDebugOutput(true) mode: method call arguments and return values, [URL macros](doc:integrating-roku-advertising-framework#url-parameter-macros) expansion, ad XML/parsed, etc.</li>
 </ul>
 </li>
 <li>New interactive templates by BrightLine/Innovid</li>
@@ -175,7 +175,7 @@ memory devices</li>
 <ul>
 <li>Added support for comScore vCE campaign measurement service</li>
 <li>Introducing a generalized audience measurement API
-(see <a href="/docs/developer-program/advertising/raf-api.md#general-audience-measurement">enableAdMeasurements()</a> for
+(see [enableAdMeasurements()](doc:raf-api#general-audience-measurement) for
 details)</li>
 <li>Support for a new TrueX SAB interactive ad template</li>
 <li>Fix for a display resolution issue when a FHD-only RSG app was
@@ -188,7 +188,7 @@ playing ad video on a HD UI device</li>
 node</li>
 <li>SceneGraph ad rendering support (video ads and
 Innovid interactive ads)<ul>
-<li>New <code>view</code> parameter for <a href="/docs/developer-program/advertising/raf-api.md#client-ad-insertion">showAds()</a>, which is required for all SceneGraph applications</li>
+<li>New <code>view</code> parameter for [showAds()](doc:raf-api#client-ad-insertion), which is required for all SceneGraph applications</li>
 </ul>
 </li>
 <li>VAST 3.0 &quot;ad buffet&quot; support</li>
@@ -196,9 +196,9 @@ Innovid interactive ads)<ul>
 allow multiple ad renderers for different companion creatives</li>
 <li>New interactive ad template support</li>
 <li>New <code>adCompleted</code> return value for
-<a href="/docs/developer-program/advertising/raf-api.md#server-stitched-ads"><code>stitchedAdHandledEvent()</code></a></li>
+[<code>stitchedAdHandledEvent()</code>](doc:raf-api#server-stitched-ads)</li>
 <li>New <code>provider</code> member for <code>companionAds</code> metadata
-in <a href="/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure">Ad Structure</a></li>
+in [Ad Structure](doc:integrating-roku-advertising-framework#ad-structure)</li>
 <li>Fix in VAST parser to address problem with DFP
 waterfall containing invalid ads</li>
 <li>Multiple bug fixes to address ad rendering in both SDK1 and RSG apps

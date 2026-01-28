@@ -91,13 +91,13 @@ When a deep link is sent to your app, it will include contentId and a mediaType.
     <tr>
       <td>movie</td>
       <td>Movie or long-form film (over 15 minutes).</td>
-      <td>Play the movie identified by the contentId. Use \<a href="/docs/developer-program/media-playback/bookmarking.md">bookmarks\</a> to determine the playback position.</td>
+      <td>Play the movie identified by the contentId. Use \[bookmarks\](doc:bookmarking) to determine the playback position.</td>
     </tr>
 
     <tr>
       <td>episode</td>
       <td>Single content item (an episode of a TV show, for example).</td>
-      <td>Play the episode identified by the contentId. Use \<a href="/docs/developer-program/media-playback/bookmarking.md">bookmarks\</a> to determine the playback position.</td>
+      <td>Play the episode identified by the contentId. Use \[bookmarks\](doc:bookmarking) to determine the playback position.</td>
     </tr>
 
     <tr>
@@ -121,7 +121,7 @@ When a deep link is sent to your app, it will include contentId and a mediaType.
     <tr>
       <td>tvSpecial</td>
       <td>One-time TV programs that are not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).</td>
-      <td>Play the TV special identified by the contentId. Use <a href="/docs/developer-program/media-playback/bookmarking.md">bookmarks</a> to determine the playback position.</td>
+      <td>Play the TV special identified by the contentId. Use [bookmarks](doc:bookmarking) to determine the playback position.</td>
     </tr>
   </tbody>
 </table>
@@ -287,7 +287,7 @@ The following attributes are required:
         <p>Enter one of the following:</p>
         <ul>
           <li><strong>dev</strong>: Sideloaded app.</li>
-          <li><strong>Public/Beta</strong>: Public or <a href="/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines">beta</a> apps. To find your app ID, use the preview page on the Developer Dashboard.</li>
+          <li><strong>Public/Beta</strong>: Public or [beta](doc:channel-publishing-guide#beta-channel-guidelines) apps. To find your app ID, use the preview page on the Developer Dashboard.</li>
         </ul>
         <p>The following examples show how to send ECP commands via cURL HTTP POST requests. The examples are based on a sideloaded app with contentId of 1234 and a mediaType of movie. The <strong>launch</strong> command is used to test deep linking into content when the app is launched; the <strong>input</strong> command is used for when the app is already running. When sending the <strong>input</strong> command, the app(<strong>dev</strong>) is not required.</p>
         <pre><code>curl -d '' 'http://192.168.1.114:8060/launch/dev?contentId=1234&amp;mediaType=movie'</code></pre>

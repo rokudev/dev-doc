@@ -41,11 +41,11 @@ In the demo of the Channel Behavior Analysis tool, the video uses the SceneGraph
 </thead>
 <tbody>
 <tr>
-<td><a href="/docs/developer-program/certification/certification.md">Certification criteria</a></td>
+<td>[Certification criteria](doc:certification)</td>
 <td>Review the Roku app certification criteria before beginning development of your Roku app. Understand requirements for advertising, purchases, performance, fundamental app operation features, deep linking and the app UI.</td>
 </tr>
 <tr>
-<td><a href="/docs/specs/hardware.md">Hardware specifications</a></td>
+<td>[Hardware specifications](doc:hardware)</td>
 <td>View the specs for the current and updatable Roku devices that you can include in your hardware test suite. This document lists the performance capabilities, including CPU and RAM, for Roku streaming players, TVs, and smart soundbars.</td>
 </tr>
 <tr>
@@ -57,7 +57,7 @@ In the demo of the Channel Behavior Analysis tool, the video uses the SceneGraph
 <td>Download Roku's test automation</td>
 </tr>
 <tr>
-<td><a href="/docs/developer-program/dev-tools/automated-channel-testing/automated-testing-overview.md">Automated app testing guide</a></td>
+<td>[Automated app testing guide](doc:automated-testing-overview)</td>
 <td>Read how to use Roku's test automation software tools to write and execute test cases, including app purchasing, performance, deep linking, and other certification-related testing.</td>
 </tr>
 <tr>
@@ -65,7 +65,7 @@ In the demo of the Channel Behavior Analysis tool, the video uses the SceneGraph
 <td>Get more information about the stb-tester, which is a small hardware device that you connect to your Roku device and use for executing automated test scripts. <br /><br />Note that the stb-tester is not a Roku product or in any way affiliated with Roku; however, many Roku developers do use it for automating their test processes.</td>
 </tr>
 <tr>
-<td><a href="/docs/developer-program/dev-tools/static-analysis-tool/static-analysis-tool.md">Static Analysis Tool guide</a></td>
+<td>[Static Analysis Tool guide](doc:static-analysis-tool)</td>
 <td>Read how to use the Static Analysis tool to check the structure and syntax of your app's code for common problems related to RAF, Roku Pay, deep linking, and other certification requirements. Channels must pass Static Analysis testing in order to be published to the Roku Streaming Store.</td>
 </tr>
 <tr>
@@ -73,7 +73,7 @@ In the demo of the Channel Behavior Analysis tool, the video uses the SceneGraph
 <td>Use the BrightScript profiler to find where the performance and memory usage of your app code can be improved.</td>
 </tr>
 <tr>
-<td><a href="/docs/developer-program/dev-tools/brightscript-profiler.md">BrightScript Profiler guide</a></td>
+<td>[BrightScript Profiler guide](doc:brightscript-profiler)</td>
 <td>Read how to use the BrightScript profiler and learn about the different performance and memory usage metrics it collects and analyzes.</td>
 </tr>
 <tr>

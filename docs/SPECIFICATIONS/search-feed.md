@@ -56,7 +56,7 @@ The root of the JSON file contains basic information such as the Roku feed speci
     <tr>
       <td>defaultAvailabilityCountries</td>
       <td>String\[]</td>
-      <td>The list of lowercase <a href="https://www.iso.org/obp/ui/#search">ISO Alpha-2 two-letter country codes</a> to be used when <strong>availabilityInfo.country</strong> is not specified for an asset.<br /><br />Click <a href="/docs/developer-program/discovery/search/implementing-search.md#language-and-regional-support">here</a> for the list of regions where Roku Search is currently supported.</td>
+      <td>The list of lowercase <a href="https://www.iso.org/obp/ui/#search">ISO Alpha-2 two-letter country codes</a> to be used when <strong>availabilityInfo.country</strong> is not specified for an asset.<br /><br />Click [here](doc:implementing-search#language-and-regional-support) for the list of regions where Roku Search is currently supported.</td>
       <td>Required (if you do not provide the available countries for each asset)</td>
     </tr>
 
@@ -94,7 +94,7 @@ An asset represents a specific content item in the app's catalog. It contains al
     <tr>
       <td>type</td>
       <td>Enum</td>
-      <td>The media type of the content item: <br /><ul><li>movie: Movie or long-form film (over 15 minutes).</li><li>tvspecial: One-time TV program that is not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).</li><li>series: Set of related serialized episodes and possibly seasons. Includes TV shows and daily/weekly ongoing shows.</li><li>season: As part of a series, single set of related TV episodes.</li><li>episode: Single content item (an episode of a TV show, for example).</li><li>shortform: Standalone content that is 15 minutes or less that is not a movie or TV show (for example, movie trailers, news clips, comedy clips, food reviews, or other clips).</li><li>externalIdOnly: Validates the <strong>id</strong>, <strong>externalIdSource</strong>, and <strong>playOptions</strong> fields only. For a linear feed, validates the <strong>id</strong> and <strong>externalIdSource</strong> fields only.</li></ul><br />This value is passed into <a href="/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior">deep links</a> that are sent to the app. The app uses the value to determine how to launch the content. For example, if the type is "movie", the app will launch it directly into playback.</td>
+      <td>The media type of the content item: <br /><ul><li>movie: Movie or long-form film (over 15 minutes).</li><li>tvspecial: One-time TV program that is not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).</li><li>series: Set of related serialized episodes and possibly seasons. Includes TV shows and daily/weekly ongoing shows.</li><li>season: As part of a series, single set of related TV episodes.</li><li>episode: Single content item (an episode of a TV show, for example).</li><li>shortform: Standalone content that is 15 minutes or less that is not a movie or TV show (for example, movie trailers, news clips, comedy clips, food reviews, or other clips).</li><li>externalIdOnly: Validates the <strong>id</strong>, <strong>externalIdSource</strong>, and <strong>playOptions</strong> fields only. For a linear feed, validates the <strong>id</strong> and <strong>externalIdSource</strong> fields only.</li></ul><br />This value is passed into [deep links](doc:implementing-deep-linking#mediatype-behavior) that are sent to the app. The app uses the value to determine how to launch the content. For example, if the type is "movie", the app will launch it directly into playback.</td>
       <td>Required</td>
     </tr>
 
@@ -535,7 +535,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
     <tr>
       <td>playId</td>
       <td>String</td>
-      <td>A unique, immutable ID for the content item. When customers search for this content item and select your app to watch it, the <strong>playId</strong> is passed in a <a href="/docs/developer-program/discovery/implementing-deep-linking.md">deep link</a> back to your app.<br /><br />The <strong>playId</strong> must map to the <strong>contentid</strong> in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed.</td>
+      <td>A unique, immutable ID for the content item. When customers search for this content item and select your app to watch it, the <strong>playId</strong> is passed in a [deep link](doc:implementing-deep-linking) back to your app.<br /><br />The <strong>playId</strong> must map to the <strong>contentid</strong> in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed.</td>
       <td>Required</td>
     </tr>
 

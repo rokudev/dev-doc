@@ -897,7 +897,7 @@ An associative array with the following key-value pairs:
 
     <tr>
       <td>mac</td>
-      <td><em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string">roDeviceInfo.GetChannelClientId </a>method to uniquely identify devices.</td>
+      <td><em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the [roDeviceInfo.GetChannelClientId ](doc:ifdeviceinfo#getchannelclientid-as-string)method to uniquely identify devices.</td>
     </tr>
 
     <tr>

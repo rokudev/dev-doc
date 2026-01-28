@@ -1024,8 +1024,7 @@ increase performance of Roku SceneGraph (RSG) apps.</p>
 <h4 id="scenegraph-additions-and-modifications">SceneGraph additions and modifications</h4>
 <ul>
 <li><p><strong>New event added for DASH manifest updates</strong> — A new
-field, <code>manifestData</code>, has been added to the <a href="/docs/references/scenegraph/media-playback-nodes/video.md">Video
-node</a> to detect the
+field, <code>manifestData</code>, has been added to the [Video node](doc:video) to detect the
 periods in a DASH manifest before they are played back. One major
 use case for this is to display ad markers in the trickplay progress
 bar.</p>

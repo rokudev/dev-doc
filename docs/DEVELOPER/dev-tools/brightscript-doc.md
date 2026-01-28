@@ -176,7 +176,7 @@ End Function
 ' @param titlePrefix a static prefix for the video title display line
 ' @param contentAAArray an Array of content meta‐data Aas
 ' @return False if there was an error during creating or running this screen.
-' @see \<a href="/docs/developer-program/getting-started/architecture/content-metadata.md"\>Content Meta‐data\</a\>
+' @see the Content metadata doc
 ' @see .CreateUtils CreateUtils()
 Function ShowCustomScreen(utilsas Object, site as String, titlePrefix as String, contentAAArray as Object)as BooLean
 

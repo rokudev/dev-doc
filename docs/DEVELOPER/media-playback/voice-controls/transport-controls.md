@@ -318,7 +318,7 @@ For a video demonstration of voice controls, see the [Voice overview guide](doc:
 
 ## Voice control required behavior
 
-The following table summarizes the different voice controls, how they may be invoked, and their required behavior: 
+The following table summarizes the different voice controls, how they may be invoked, and their required behavior:
 
 > If your app does not handle one of the listed voice controls (or it is unknown or not implemented in your app), [mark it as "error.generic" or "unhandled"](#errror-handling).  
 
@@ -439,7 +439,7 @@ The following table summarizes the different voice controls, how they may be inv
 \<td\>nowplaying\</td\>
 \<td\>"what's playing?"\<br /\>"what am I watching?"\</td\>
 \<td\>Acknowledge command as success; the Roku OS will display app name as playing.\</td\>
-\<td\>\<ul\>\<li\>Content playing is known to the app: Create an \<a href="/docs/references/brightscript/components/roappmanager.md"\>\<strong\>roAppManager\</strong\>\</a\> node, and then pass the item's title and contentType into a call to the \<a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"\>\<strong\>roAppManager.SetNowPlayingContentMetaData()\</strong\>\</a\> method. Mark the event as successfully handled.\</li\>\<li\>No content playing or content playing is unknown to the app: Pass \<code\>invalid\</code\> into a call to the \<a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"\>\<strong\>roAppManager.SetNowPlayingContentMetaData()\</strong\>\</a\> method, and mark the event as "error.generic" or "unhandled".\</li\>\</ul\>\</td\>
+\<td\>\<ul\>\<li\>Content playing is known to the app: Create an \<strong\>[roAppManager](doc:roappmanager)\</strong\>\</a\> node, and then pass the item's title and contentType into a call to the \<a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"\>\<strong\>roAppManager.SetNowPlayingContentMetaData()\</strong\>\</a\> method. Mark the event as successfully handled.\</li\>\<li\>No content playing or content playing is unknown to the app: Pass \<code\>invalid\</code\> into a call to the \<a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"\>\<strong\>roAppManager.SetNowPlayingContentMetaData()\</strong\>\</a\> method, and mark the event as "error.generic" or "unhandled".\</li\>\</ul\>\</td\>
 \<td\>Use content metadata to display title of content.\</td\>
 \</tr\>
 \<tr\>
@@ -479,18 +479,3 @@ The following table summarizes the different voice controls, how they may be inv
 \</tr\>
 \</tbody\>
 \</table\>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

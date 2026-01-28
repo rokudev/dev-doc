@@ -218,6 +218,138 @@ Each product will include its associated name and description, which were entere
 
 The following table lists the requirements for implementing the personalized product display API:
 
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Item</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line"><strong>Endpoint</strong></td>
+<td class="short-line">/api/offers/rsb/products</td>
+</tr>
+<tr>
+<td class="short-line"><strong>Method</strong></td>
+<td class="short-line">GET</td>
+</tr>
+<tr>
+<td class="short-line"><strong>Headers</strong></td>
+<td class="long-line">The HTTP header of the GET requests includes a JWT token for verifying that the API call is from Roku, and the customer's email hash, locale, and activation date for determining which offers the customer is eligible for: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">Authorization: Bearer</td>
+<td class="short-line">String</td>
+<td class="long-line">A JWT token that enables apps to verify that API calls are from Roku. The JWT is signed with the partner's <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> using the <a href="https://tools.ietf.org/html/rfc7518#section-3.2">HS512 (HMAC using SHA-512)</a> algorithm. To generate the JWT, use the following algorithm, payload, and secret key:<br><br>- <strong>Algorithm</strong>: HS512. <br><br>- <strong>Payload</strong>:<pre><code>"iss": "roku_instant_signup",
+"sub": "instant_signup_elegibility",
+"exp": 1616010343 (1 hour from the current time, in epoch unix timestamp format)
+"aud": "roku_developers" (the app name)
+"iat": 1616006743 (the current time, in epoch unix timestamp format)
+</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> (see the following <a href="/docs/developer-program/roku-pay/quickstart/setting-up-web-services.md#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
+</tr>
+<tr>
+<td class="short-line">roku-reserved-email-hash</td>
+<td class="short-line">String</td>
+<td class="long-line">The unsalted SHA-512 hash of the customer's email address. This can be used to determine which offers customers are eligible. See <a href="#using-email-hashes-to-determine-offer-eligibility">Using email hashes to determine offer eligibility</a> for more information.</td>
+</tr>
+<tr>
+<td class="short-line">locale</td>
+<td class="short-line">String</td>
+<td class="long-line">The location of the customer in language-country format (en-us or es-mx, for example).</td>
+</tr>
+<tr>
+<td class="short-line">activation-date</td>
+<td class="short-line">String</td>
+<td class="long-line">A timestamp in UTC format indicating when the device was originally activated (for example, 2021-07-01T17:04:33Z).</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line"><strong>Response</strong></td>
+<td class="long-line">The API returns a <strong>Products</strong> array, which contains a list of product objects. The following information is included for each product in the array: <br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">Id</td>
+<td class="short-line">String</td>
+<td class="long-line">Identifies the product to be purchased, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-Channel Product page in the Developer Dashboard</a> when the product was created. The name of the in-app product must include the app name.</td>
+</tr>
+<tr>
+<td class="short-line">desc</td>
+<td class="short-line">String</td>
+<td class="long-line">A brief (maximum 100 character) description of the product.<br><br>Do not include any billing information such as pricing and billing cycle in the description. Roku automatically populates this information from the <a href="/docs/developer-program/roku-pay/quickstart/in-channel-products.md">in-app products you've created in the Developer Dashboard</a>.</td>
+</tr>
+<tr>
+<td class="short-line">details</td>
+<td class="short-line">String</td>
+<td class="long-line">Optional. App lineup images in markdown format (for example, <code>"![img](https://www.roku.com/images/roku-developers.svg)"</code>)</td>
+</tr>
+<tr>
+<td class="short-line">name</td>
+<td class="short-line">String</td>
+<td class="long-line">Optional. The name of the offer (for example, "Roku Developers annual subscription")</td>
+</tr>
+<tr>
+<td class="short-line">images</td>
+<td class="short-line">Array of Strings</td>
+<td class="long-line">Optional. An array of images that may be shown in the offer card once an offer is selected.</td>
+</tr>
+</tbody>
+</table></div><br><br><strong>Syntax</strong>:<pre><code>  {
+    "products": "Array.&lt;Product&gt;"
+  }
+
+  Product = {
+    "id": "string",
+    "desc": "string",
+    "details": "string",
+    "name" "string",
+    "images": "Array.&lt;String&gt;"
+  }
+</code></pre><br><strong>Example</strong>: <pre><code>  {
+      "products": [
+          {
+              "id": "roku_developers_monthly",
+              "desc": "Unlimited streaming access to all Roku Developers content"
+          },
+          {
+              "id": "roku_developers_annual",
+              "desc": "Unlimited streaming access to all Roku Developers content."
+          }
+      ]
+  }
+</code></pre><br>If the customer is not eligible for any offers, return an empty array.</td>
+</tr>
+<tr>
+<td class="short-line"><strong>Error</strong></td>
+<td class="long-line"><ul>
+<li>200: OK</li>
+<li>400: Bad request</li>
+<li>500: Error</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
+
+<br />
+
 #### Using email hashes to determine offer eligibility
 
 Apps should leverage the email hash included in the Products API GET requests to verify whether a customer is eligible for a specific offer during activation before returning an offer to Roku (the email hash is based on the email address provided and verified by the customer prior to entering the offers flow).

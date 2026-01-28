@@ -57,7 +57,7 @@ In the demo of the Channel Behavior Analysis tool, the video uses the SceneGraph
 <td>Download Roku's test automation</td>
 </tr>
 <tr>
-<td>[Automated app testing guide](doc:automated-testing-overview)</td>
+<td>[Automated app testing guide](doc:automated-channel-testing)</td>
 <td>Read how to use Roku's test automation software tools to write and execute test cases, including app purchasing, performance, deep linking, and other certification-related testing.</td>
 </tr>
 <tr>

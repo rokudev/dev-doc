@@ -73,8 +73,27 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
    end sub
    ```
 
-3. <br />
+3. Use the [debug console](doc:debugging) to verify that your app is sending authentication events.
 
-<br />
+![roku815px - Search results for an authenticated channel that isn't using the Roku Event Dispatcher](https://image.roku.com/ZHZscHItMTc2/red-3.jpg "red-3")
 
-<br />
+### Integrating the RAF fireRokuMarketingPixel() method in the authentication workflow
+
+To use the RAF **fireRokuMarketingPixel()** method to send authentication events to Roku, follow these steps:
+
+1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
+
+   ```
+   bs_libs_required=roku_ads_lib
+   ```
+
+2. Instantiate the RAF library in the app:
+
+   ```
+   adIface = Roku_Ads()
+   ```
+
+3. When an authenticated customer launches your app, call the **fireRokuMarketingPixel()** method using the following syntax:
+
+   ```
+   adIface.fireRokuMarketingPixel("Roku_Authenticated")

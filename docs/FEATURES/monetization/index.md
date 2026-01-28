@@ -31,7 +31,7 @@ Several important aspects of monetization are covered by separate articles in th
 * [**Subscriptions and one-time purchases**](doc:billing) — Transactional apps use Roku Pay, Roku's proprietary billing platform, for offering viewers subscriptions and one-time purchases such as movie rentals, sporting events, and pay-per-views. This article provides an overview of Roku Pay and explains how it helps publishers drive content monetization.
 * [**Publisher payouts**](doc:payouts) — In order to receive payments from Roku, a publisher must sign up for the Roku Partner Payouts Program. This article covers the requirements and process for signing up and the available options for payment method. It also includes a FAQ section, which answers miscellaneous questions about Roku Partner Payouts Program and the payment process.
 
-In addition, publishers can monitor their apps' monetization activity using [reports that are available through the Developer Dashboard](doc:analytics-reports), including [Sales Activity](doc:sales-activity-report) and [Transaction details](doc:transaction-report).
+In addition, publishers can monitor their apps' monetization activity using [reports that are available through the Developer Dashboard](doc:analytics), including [Sales Activity](doc:sales-activity-report) and [Transaction details](doc:transaction-report).
 
 ## Privacy law compliance
 

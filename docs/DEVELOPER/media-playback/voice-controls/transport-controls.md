@@ -368,7 +368,61 @@ The following table summarizes the different voice controls, how they may be inv
 ### Additional enhanced voice controls
 
 <HTMLBlock>{`
-
+<table>
+<thead>
+<tr>
+<th>Voice control</th>
+<th>Voice command examples</th>
+<th>Required behavior (in menu)</th>
+<th>Required behavior (VOD/Music)</th>
+<th>Required behavior (live linear)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nowplaying</td>
+<td>"what's playing?"<br />"what am I watching?"</td>
+<td>Acknowledge command as success; the Roku OS will display app name as playing.</td>
+<td><ul><li>Content playing is known to the app: Create an <a href="/docs/references/brightscript/components/roappmanager.md"><strong>roAppManager</strong></a> node, and then pass the item's title and contentType into a call to the <a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method. Mark the event as successfully handled.</li><li>No content playing or content playing is unknown to the app: Pass <code>invalid</code> into a call to the <a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method, and mark the event as "error.generic" or "unhandled".</li></ul></td>
+<td>Use content metadata to display title of content.</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>"skip intro" <br />"skip recap"</td>
+<td>Acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td>If the content has an introduction or recap, handle the "skip" command; otherwise, handle it like a "next" command.</td>
+<td>Unless supported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+<tr>
+<td>shuffle</td>
+<td>"shuffle"</td>
+<td>Acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td>Shuffle the content in a playlist.</td>
+<td>Unless supported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>"loop this video"</td>
+<td>Acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td>Repeat playback. Start playback over when finished (for example, loop song, album, playlist).</td>
+<td>Unless supported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+<tr>
+<td>like</td>
+<td>"I like this song"<br />"I like this video"</td>
+<td>Acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td>Execute app-specific action.<br /><br />When handling the "like" and "unlike" commands, you can optionally set one of the following variables to display a song's artist, genre, or track, or playlist title in the Roku heads-up display:<ul><li>"music_artist"</li><li>"music_genre"</li><li>"music_track"</li><li>"playlist_title"</li></ul></td>
+<td>Unless supported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+<tr>
+<td>dislike</td>
+<td>"I hate this"<br />"never play this again"</td>
+<td>Acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+<td>Execute app-specific action.</td>
+<td>Unless supported, acknowledge command as unhandled; the Roku OS will display “Command not available”.</td>
+</tr>
+</tbody>
+</table>
 `}</HTMLBlock>
 
 <br />

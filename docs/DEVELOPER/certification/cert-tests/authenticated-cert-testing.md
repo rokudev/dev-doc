@@ -11,7 +11,7 @@ metadata:
 ---
 Developers of authenticated subscription (SVOD), ad-supported (AVOD), and free apps can write automation scripts with the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool) that navigate the app's on-device sign-in and sign-out flows.
 
-Once the scripts have been written, developers can upload them to the [Channel Behavior Analysis page in the Developer Dashboard](/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes – before submitting the app for certification.
+Once the scripts have been written, developers can upload them to the [Channel Behavior Analysis page in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes – before submitting the app for certification.
 
 <video src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg" width="720" height="480" controls />
 
@@ -107,7 +107,7 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
 2. In the "text" steps within your sign-in script, verify that you have replaced the user name and password with the "script-login" and "script-password" template variables, respectively. The Channel Behavior Analysis tool will replace the template variables with the actual credentials entered in the [Test Credentials page](doc:channel-publishing-guide). Channel Behavior Analysis testing will fail if the actual credentials are in the script.
 
-3. Navigate to the [Channel Behavior Analysis page in the Developer Dashboard](/developer-program/publishing/channel-publishing-guide.md#channel-behavior-analysis-window).
+3. Navigate to the [Channel Behavior Analysis page in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis).
 
 4. In the **Sign In/Out Scripts**, click **Edit**.
 

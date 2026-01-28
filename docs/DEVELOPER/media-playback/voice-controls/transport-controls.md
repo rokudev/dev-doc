@@ -44,16 +44,20 @@ To handle voice commands in your app, your application needs to use
 the [**roInput**](doc:roinput) object to listen for transport control events and process them. To do this, follow
 these steps:
 
-1. Create an **roInput** object, and set the [**roMessagePort**](doc:romessageport) for receiving events.
+1. Create an **roInput** object, and set the [**roMessagePort**](doc:romessageport) for receiving events.  
 
+   ```
    input = CreateObject("roInput")
    port = CreateObject("roMessagePort")
    input.SetMessagePort(port)
+   ```
 
 2. Register the **roInput** component for voice commands by calling
-   its  [**EnableTransportEvents()**](docs/references/brightscript/interfaces/ifinput.md#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.
+   its  [**EnableTransportEvents()**](docs/references/brightscript/interfaces/ifinput.md#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.  
 
+   ```
    input.enableTransportEvents()
+   ```
 
 3. Use a message loop to listen for the voice commands. In the message loop, do the following:
 
@@ -98,7 +102,7 @@ c.  Optionally, for better modularization, you can pass the captured voice comma
    ```
    function handleTransport(evt)
        cmd = evt.command
-       ret = \{status: "unhandled"\}
+       ret = {status: "unhandled"}
 
        if cmd = "play"
            'handle "play" command

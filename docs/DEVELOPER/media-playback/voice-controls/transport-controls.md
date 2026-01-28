@@ -60,17 +60,18 @@ these steps:
    ```
 
 3. Use a message loop to listen for the voice commands. In the message loop, do the following:
-   1. Use the [**roInputEvent.GetInfo()**](doc:roinputevent) method to check for voice control commands sent to your app. This method returns an AssociativeArray with the following fields: **type**, **id, command**.
+      a. Use the [**roInputEvent.GetInfo()**](doc:roinputevent) method to check for voice control commands sent to your app. This method returns an AssociativeArray with the following fields: **type**, **id, command**.
       * You can use the **type** key to verify that the event received is a voice command (transport event), and the **command** key to identify the specific command.
 
       * For the "seek" command, the AssociativeArray will contain two additional fields: **direction** and **duration**. The **direction** field indicates whether the seek command is for skipping "forward" or "backward"; the **duration** field specifies how many seconds to skip forward or backward.
 
       * Seek functionality can also be implemented via trickplay using the [**Video.seek**](doc:video) field. In this case, the app must implement the [Roku Advertising Framework](doc:roku-advertising-framework) (or not include ads). The seek voice control attribute must also be enabled in the [Roku manifest](doc:channel-manifest) (**supports_etc_seek=1**).
-      b.  Call the [**roInput.EventResponse()**](doc:ifinput) method to indicate that you have handled the voice command.
+        b.  Call the [**roInput.EventResponse()**](doc:ifinput) method to indicate that you have handled the voice command.
+
       * This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
 
       * This method should be called immediately after a voice command is received. If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled". See [Error handling](#error-handling) for the complete list of error messages to which the **status** field can be set.
-      c.  Optionally, for better modularization, you can pass the captured voice command to a function for handing.
+        c.  Optionally, for better modularization, you can pass the captured voice command to a function for handing.
       ```
         while m.isPlaying
             msg = wait(0, port)
@@ -176,7 +177,6 @@ these steps:
              return ret
          end function
          ```
-       
 
 ## Error handling
 

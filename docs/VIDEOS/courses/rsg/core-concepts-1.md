@@ -1,5 +1,5 @@
 ---
-title: "Core concepts"
+title: Core concepts
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit3-sgoverview-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit3-core-concepts.png" width="720" height="480" controls />
 
 ## About this lesson
@@ -22,10 +20,10 @@ The lesson continues by providing a high-level overview of several key topics su
 
 ## Resources
 
-| Item                                                         | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [SceneGraph core concepts](doc:core-concepts) | Read in-depth documentation about many of the SceneGraph topics covered in this video. Roku SceneGraph is the object-oriented, XML framework used to design the UI of Roku apps. These documents explain how to handle critical app operations such as data scoping, event handling, node and field observers, multi-thread operations, and so on. |
-| [BrightScript language reference](doc:brightscript-language-reference) | Learn the fundamentals and syntax of Roku BrightScript, which is the scripting language used to program the behavior of Roku apps. |
+| Item                                                                   | Description                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SceneGraph core concepts](doc:core-concepts)                          | Read in-depth documentation about many of the SceneGraph topics covered in this video. Roku SceneGraph is the object-oriented, XML framework used to design the UI of Roku apps. These documents explain how to handle critical app operations such as data scoping, event handling, node and field observers, multi-thread operations, and so on. |
+| [BrightScript language reference](doc:brightscript-language-reference) | Learn the fundamentals and syntax of Roku BrightScript, which is the scripting language used to program the behavior of Roku apps.                                                                                                                                                                                                                 |
 
 ## Related
 
@@ -49,9 +47,9 @@ The lesson continues by providing a high-level overview of several key topics su
 
 [Data scoping](doc:data-scoping)
 
-[Designing Roku apps](doc:design-overview)
+[Designing Roku apps](doc:design)
 
-[Channel performance](doc:development-tips)
+[Channel performance](doc:performance-guide)
 
 ### How to watch
 

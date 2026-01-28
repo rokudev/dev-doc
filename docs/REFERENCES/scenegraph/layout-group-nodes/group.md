@@ -81,7 +81,7 @@ Where:
       <td>float</td>
       <td>0.0</td>
       <td>READ\_WRITE</td>
-      <td>Defines the rotation angle about the scaleRotateCenter point (in radians) of the node local coordinate system. Positive values specify a counterclockwise rotation, negative values specify a clockwise rotation. For some Roku Player hardware, specifically Roku Players without OpenGL graphics support, only rotations of 0, 90, 180 and 270 degrees (in equivalent radians) are supported. (See <a href="/docs/specs/hardware.md#current-models" title="Roku Models and Features">Roku Models and Features</a> for information on OpenGL support)</td>
+      <td>Defines the rotation angle about the scaleRotateCenter point (in radians) of the node local coordinate system. Positive values specify a counterclockwise rotation, negative values specify a clockwise rotation. For some Roku Player hardware, specifically Roku Players without OpenGL graphics support, only rotations of 0, 90, 180 and 270 degrees (in equivalent radians) are supported. (See <a href="https://roku-ent.readme.io/dev/docs/hardware#current-roku-models" title="Roku Models and Features">Roku Models and Features</a> for information on OpenGL support)</td>
     </tr>
 
     <tr>
@@ -137,7 +137,7 @@ Where:
       <td>integer</td>
       <td>0</td>
       <td>READ\_WRITE</td>
-      <td>Used in combination with the numRenderPasses field of nodes extended from the <a href="/docs/references/scenegraph/abstract-nodes/arraygrid.md" title="ArrayGrid">ArrayGrid</a> abstract node class, to optimize rendering of lists and grids. This should never be set to a non-zero value unless you are optimizing the performance of a list or grid rendering by specifying the sequence of rendering operations for sub-elements of the list or grid items, and have set the numRenderPasses field value for the list or grid to a value greater than 1. If the numRenderPasses field value for the list or grid is set to a value greater than 1, you must set this field to a value greater than 0 for all sub-elements of the list or grid items, and not greater than the numRenderPasses field value. If the numRenderPasses field is set to a value greater than 1, and you set this field for a list or grid item sub-element to 0 (the default), or a value greater than the numRenderPasses field value, the list or grid item sub-element will not render</td>
+      <td>Used in combination with the numRenderPasses field of nodes extended from the <a href="https://roku-ent.readme.io/dev/docs/arraygrid" title="ArrayGrid">ArrayGrid</a> abstract node class, to optimize rendering of lists and grids. This should never be set to a non-zero value unless you are optimizing the performance of a list or grid rendering by specifying the sequence of rendering operations for sub-elements of the list or grid items, and have set the numRenderPasses field value for the list or grid to a value greater than 1. If the numRenderPasses field value for the list or grid is set to a value greater than 1, you must set this field to a value greater than 0 for all sub-elements of the list or grid items, and not greater than the numRenderPasses field value. If the numRenderPasses field is set to a value greater than 1, and you set this field for a list or grid item sub-element to 0 (the default), or a value greater than the numRenderPasses field value, the list or grid item sub-element will not render</td>
     </tr>
 
     <tr>
@@ -161,8 +161,10 @@ Where:
       <td>option as string</td>
       <td>disabled</td>
       <td>READ\_WRITE</td>
+
       <td>
         renderTracking is set to "disabled" when enableRenderTracking is set to false. The following options are only available when enableRenderTracking is set to true:
+
         <table>
           <thead>
             <tr>
@@ -170,11 +172,14 @@ Where:
               <th>Description</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td><code>"none"</code></td>
+
               <td>
                 renderTracking is set to: <code>"none"</code> if <strong>one or more</strong> of these conditions is true:
+
                 <ul>
                   <li>the node's <code>visible</code> field is set to <code>false</code>.</li>
                   <li>the node's <code>opacity</code> field is set to <code>0.0</code>.</li>
@@ -183,10 +188,13 @@ Where:
                 </ul>
               </td>
             </tr>
+
             <tr>
               <td><code>"partial"</code></td>
+
               <td>
                 renderTracking is set to <code>"partial"</code> if <strong>all</strong> of the following conditions are true:
+
                 <ul>
                   <li>the node's <code>visible</code> field is set to <code>true</code>.</li>
                   <li>the node's <code>opacity</code> field is greater than <code>0.0</code>.</li>
@@ -195,10 +203,13 @@ Where:
                 </ul>
               </td>
             </tr>
+
             <tr>
               <td><code>"full"</code></td>
+
               <td>
                 renderTracking is set to <code>"full"</code> if <strong>all</strong> of the following conditions are true:
+
                 <ul>
                   <li>the node's <code>visible</code> field is set to <code>true</code>.</li>
                   <li>the node's <code>opacity</code> field is greater than <code>0.0</code>.</li>

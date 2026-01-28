@@ -89,7 +89,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">RSGPalette node</td>
 <td class="short-line">not set</td>
 <td class="short-line">READ_WRITE</td>
-<td class="long-line">Defines the default color palette used by those nodes that have a <strong>palette</strong> field (for example, the <strong>Scene</strong> node, <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md">standard dialogs</a>, <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">dynamic custom voice keyboards</a>, and so on).<br><br>Apps typically set the <strong>Scene.palette</strong> field to consistently color the standard dialogs and keyboards in the app.<br><br>Nodes that include a <strong>palette</strong> field can be set to an <strong>RSGPalette</strong> node to override the default colors specified in the <strong>Scene</strong> node.<br><br>If a node that supports a palette does not set its <strong>palette</strong> filed, the node looks up the scene graph until it finds a node with its <strong>palette</strong> field set.<br><br>If no ancestor node is found with its palette field set, the default color palette is used (grey with white text).<br><br>The RSGPalette color values used by the Scene node are as follows:<br><div class="hscroll"><table>
+<td class="long-line">Defines the default color palette used by those nodes that have a <strong>palette</strong> field (for example, the <strong>Scene</strong> node, [standard dialogs](doc:standard-dialog), [dynamic custom voice keyboards](doc:dynamic-keyboard-base), and so on).<br><br>Apps typically set the <strong>Scene.palette</strong> field to consistently color the standard dialogs and keyboards in the app.<br><br>Nodes that include a <strong>palette</strong> field can be set to an <strong>RSGPalette</strong> node to override the default colors specified in the <strong>Scene</strong> node.<br><br>If a node that supports a palette does not set its <strong>palette</strong> filed, the node looks up the scene graph until it finds a node with its <strong>palette</strong> field set.<br><br>If no ancestor node is found with its palette field set, the default color palette is used (grey with white text).<br><br>The RSGPalette color values used by the Scene node are as follows:<br><div class="hscroll"><table>
 <thead>
 <tr>
 <th class="short-line">Palette Color Name</th>
@@ -116,22 +116,22 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogItemColor</td>
 <td class="long-line">Blend color for the following items:<br><ul>
-<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-progress-item.md">StdDlgProgressItem's</a> spinner bitmap</li>
-<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-determinate-progress-item.md">StdDlgDeterminateProgressItem's</a> graphic</li>
+<li>[StdDlgProgressItem's](doc:std-dlg-progress-item) spinner bitmap</li>
+<li>[StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic</li>
 </ul></td>
 </tr>
 <tr>
 <td class="short-line">DialogTextColor</td>
 <td class="long-line">Color for the text in the following items:<br><ul>
-<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
-<li>All <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md">content area items</a>, except for <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a>.</li>
-<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-title-area.md#fields">Title area</a>. Unfocused button.</li>
+<li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
+<li>All [content area items](doc:std-dlg-item-base), except for [StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item).</li>
+<li>[Title area](doc:std-dlg-title-area#fields). Unfocused button.</li>
 </ul></td>
 </tr>
 <tr>
 <td class="short-line">DialogFocusColor</td>
 <td class="long-line">Blend color for the following:<br><ul>
-<li>The <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md#fields">button area</a> focus bitmap.</li>
+<li>The [button area](doc:std-dlg-button-area#fields) focus bitmap.</li>
 <li>The focused scrollbar thumb.</li>
 </ul></td>
 </tr>
@@ -142,7 +142,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogSecondaryTextColor</td>
 <td class="long-line">Color for the text of in the following items:<br><ul>
-<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
+<li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
 <li>Disabled button.</li>
 </ul></td>
 </tr>
@@ -150,7 +150,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">DialogSecondaryItemColor</td>
 <td class="long-line">Color for the following items:<br><ul>
 <li>The divider displayed below the title area.</li>
-<li>The unfilled portion of the <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-determinate-progress-item.md">StdDlgDeterminateProgressItem's</a> graphic.</li>
+<li>The unfilled portion of the [StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic.</li>
 </ul></td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogFootprintColor</td>
 <td class="long-line">The blend color for the following items:<br><ul>
-<li>The button focus footprint bitmap that is displayed when the <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md#fields">button area</a> does not have focus.</li>
+<li>The button focus footprint bitmap that is displayed when the [button area](doc:std-dlg-button-area#fields) does not have focus.</li>
 <li>Unfocused scrollbar thumb and scrollbar track.</li>
 </ul></td>
 </tr>

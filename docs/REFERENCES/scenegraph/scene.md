@@ -24,65 +24,151 @@ While it is technically possible to have more than one scene per app, we recomme
 ## Fields
 
 <HTMLBlock>{`
-<table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Type</th>
-<th>Default</th>
-<th>Access Permission</th>
-<th>Description</th>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Default</th>
+<th class="short-line">Access Permission</th>
+<th class="short-line">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>backgroundURI</td>
-<td>uri</td>
-<td>invalid</td>
-<td>READ_WRITE</td>
-<td>Specifies a graphic image file to be used for the Scene node background.</td>
+<td class="short-line">backgroundURI</td>
+<td class="short-line">uri</td>
+<td class="short-line">invalid</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Specifies a graphic image file to be used for the Scene node background.</td>
 </tr>
 <tr>
-<td>limitBackgroundToUIResolution</td>
-<td>boolean</td>
-<td>true</td>
-<td>READ_WRITE</td>
-<td>If the scene background URI is overridden with a non-theme value and this field is set to true, the <strong>backgroundURI</strong> image is limited to the current screen size after being loaded.<br /><br />if this field is set to false, the  <strong>backgroundURI</strong> image is loaded without any scaling applied.</td>
+<td class="short-line">limitBackgroundToUIResolution</td>
+<td class="short-line">boolean</td>
+<td class="short-line">true</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">If the scene background URI is overridden with a non-theme value and this field is set to true, the <strong>backgroundURI</strong> image is limited to the current screen size after being loaded.<br><br>if this field is set to false, the  <strong>backgroundURI</strong> image is loaded without any scaling applied.</td>
 </tr>
 <tr>
-<td>backgroundColor</td>
-<td>color</td>
-<td>0x000000FF</td>
-<td>READ_WRITE</td>
-<td>Loads an image using the provided background URI as-is and does not apply any scaling whatsoever when "limitBackgroundToUIResolution" is false. Specifies a background color for the scene. This color is only used if the backgroundURI field is set to an empty string. For example:  <br /><br />scene.backgroundColor="0xEB1010FF"  <br />scene.backgroundUri = ""</td>
+<td class="short-line">backgroundColor</td>
+<td class="short-line">color</td>
+<td class="short-line">0x000000FF</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Loads an image using the provided background URI as-is and does not apply any scaling whatsoever when "limitBackgroundToUIResolution" is false. Specifies a background color for the scene. This color is only used if the backgroundURI field is set to an empty string. For example:  <br><br>scene.backgroundColor="0xEB1010FF"  <br>scene.backgroundUri = ""</td>
 </tr>
 <tr>
-<td>backExitsScene</td>
-<td>Boolean</td>
-<td>true</td>
-<td>READ_WRITE</td>
-<td>If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the [ifSGNodeFocus](doc:ifSGNodeFocus) interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
+<td class="short-line">backExitsScene</td>
+<td class="short-line">Boolean</td>
+<td class="short-line">true</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the <a href="/docs/references/brightscript/interfaces/ifsgnodefocus.md" title="ifSGNodeFocus">ifSGNodeFocus</a> interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
 </tr>
 <tr>
-<td>dialog</td>
-<td>Node</td>
-<td>invalid</td>
-<td></td>
-<td>Setting this field to a node extended from a <strong>Dialog</strong> node causes the dialog to be displayed</td>
+<td class="short-line">dialog</td>
+<td class="short-line">Node</td>
+<td class="short-line">invalid</td>
+<td class="short-line"></td>
+<td class="long-line">Setting this field to a node extended from a <strong>Dialog</strong> node causes the dialog to be displayed</td>
 </tr>
 <tr>
-<td>currentDesignResolution</td>
-<td>assocarray</td>
-<td></td>
-<td>READ_WRITE</td>
-<td>This read-only field is set when the Scene is initialized. It indicates which of an app's design resolutions (per manifest's ui_resolutions value) is being used, based on the player model and connected display type. Previously, a developer could deduct the same information by using both [roDeviceInfo.GetUIResolution](ifdeviceinfo#getuiresolution-as-object) and [roAppInfo.getValue](doc:ifappinfo.md#getvaluekey-as-string-as-string)</a>("ui_resolutions"). This new field simplifies the process.  <br /><br />The field is set to an AA with two numeric-valued keys — width and height — as well as a string value indicating the current design resolution ("HD", "FHD" or "SD"). <br /><br /><pre><code><code>&lt;br /&gt;Brightscript Debugger&gt; ? myNode.getScene().currentDesignResolution&lt;br /&gt;&lt;Component: roAssociativeArray&gt; =&lt;br /&gt;\\\{&lt;br /&gt;    height: 720&lt;br /&gt;    resolution: "HD"&lt;br /&gt;    width: 1280&lt;br /&gt;\\\}&lt;br /&gt;</code></code></pre></td>
+<td class="short-line">currentDesignResolution</td>
+<td class="short-line">assocarray</td>
+<td class="short-line"></td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">This read-only field is set when the Scene is initialized. It indicates which of an app's design resolutions (per manifest's ui_resolutions value) is being used, based on the player model and connected display type. Previously, a developer could deduct the same information by using both <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getuiresolution-as-object()" title="roDeviceInfo.GetUIResolution">roDeviceInfo.GetUIResolution</a> and <a href="/docs/references/brightscript/interfaces/ifappinfo.md#getvaluekey-as-string-as-string" title="roAppInfo.getValue">roAppInfo.getValue</a>("ui_resolutions"). This new field simplifies the process.  <br><br>The field is set to an AA with two numeric-valued keys — width and height — as well as a string value indicating the current design resolution ("HD", "FHD" or "SD"). <br><br><pre><code>Brightscript Debugger&gt; ? myNode.getScene().currentDesignResolution
+&lt;Component: roAssociativeArray&gt; =
+{
+    height: 720
+    resolution: "HD"
+    width: 1280
+}
+</code></pre></td>
 </tr>
 <tr>
-<td>palette</td>
-<td>RSGPalette node</td>
-<td>not set</td>
-<td>READ_WRITE</td>
-<td>Defines the default color palette used by those nodes that have a <strong>palette</strong> field (for example, the <strong>Scene</strong> node, [standard dialogs](doc:standard-dialog), [dynamic custom voice keyboards](doc:dynamic-keyboard-base), and so on).<br /><br />Apps typically set the <strong>Scene.palette</strong> field to consistently color the standard dialogs and keyboards in the app.<br /><br />Nodes that include a <strong>palette</strong> field can be set to an <strong>RSGPalette</strong> node to override the default colors specified in the <strong>Scene</strong> node.<br /><br />If a node that supports a palette does not set its <strong>palette</strong> filed, the node looks up the scene graph until it finds a node with its <strong>palette</strong> field set.<br /><br />If no ancestor node is found with its palette field set, the default color palette is used (grey with white text).<br /><br />The RSGPalette color values used by the Scene node are as follows:<br /><table><thead><tr><th>Palette Color Name</th><th>Usages</th></tr></thead><tbody><tr><td>PrimaryTextColor</td><td>The text color used for the entered text displayed in the VoiceTextEditBox node.</td></tr><tr><td>SecondaryTextColor</td><td>The text color used for the hints displayed in the VoiceTextEditBox.</td></tr><tr><td>InputFieldColor</td><td>The blend color applied to the VoiceTextEditBox background</td></tr><tr><td>DialogBackgroundColor</td><td>Blend color for dialog's background bitmap.</td></tr><tr><td>DialogItemColor</td><td>Blend color for the following items:<br />$\{dialog-item-color-list\}</td></tr><tr><td>DialogTextColor</td><td>Color for the text in the following items:<br />$\{dialog-text-color-list\}</td></tr><tr><td>DialogFocusColor</td><td>Blend color for the following:<br />$\{dialog-focus-color-list\}</td></tr><tr><td>DialogFocusItemColor</td><td>Color for the text of the focused button.</td></tr><tr><td>DialogSecondaryTextColor</td><td>Color for the text of in the following items:<br />$\{dialog-secondary-text-color-list\}</td></tr><tr><td>DialogSecondaryItemColor</td><td>Color for the following items:<br />$\{dialog-secondary-item-color-list\}</td></tr><tr><td>DialogInputFieldColor</td><td>The blend color for the text edit box background bitmap for keyboards used inside dialogs.</td></tr><tr><td>DialogKeyboardColor</td><td>The blend color for the keyboard background bitmap for keyboards used inside dialogs</td></tr><tr><td>DialogFootprintColor</td><td>The blend color for the following items:<br />$\{dialog-footprint-color-list\}</td></tr></tbody></table></td>
+<td class="short-line">palette</td>
+<td class="short-line">RSGPalette node</td>
+<td class="short-line">not set</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Defines the default color palette used by those nodes that have a <strong>palette</strong> field (for example, the <strong>Scene</strong> node, <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog.md">standard dialogs</a>, <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">dynamic custom voice keyboards</a>, and so on).<br><br>Apps typically set the <strong>Scene.palette</strong> field to consistently color the standard dialogs and keyboards in the app.<br><br>Nodes that include a <strong>palette</strong> field can be set to an <strong>RSGPalette</strong> node to override the default colors specified in the <strong>Scene</strong> node.<br><br>If a node that supports a palette does not set its <strong>palette</strong> filed, the node looks up the scene graph until it finds a node with its <strong>palette</strong> field set.<br><br>If no ancestor node is found with its palette field set, the default color palette is used (grey with white text).<br><br>The RSGPalette color values used by the Scene node are as follows:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Palette Color Name</th>
+<th class="short-line">Usages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">PrimaryTextColor</td>
+<td class="long-line">The text color used for the entered text displayed in the VoiceTextEditBox node.</td>
+</tr>
+<tr>
+<td class="short-line">SecondaryTextColor</td>
+<td class="long-line">The text color used for the hints displayed in the VoiceTextEditBox.</td>
+</tr>
+<tr>
+<td class="short-line">InputFieldColor</td>
+<td class="long-line">The blend color applied to the VoiceTextEditBox background</td>
+</tr>
+<tr>
+<td class="short-line">DialogBackgroundColor</td>
+<td class="short-line">Blend color for dialog's background bitmap.</td>
+</tr>
+<tr>
+<td class="short-line">DialogItemColor</td>
+<td class="long-line">Blend color for the following items:<br><ul>
+<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-progress-item.md">StdDlgProgressItem's</a> spinner bitmap</li>
+<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-determinate-progress-item.md">StdDlgDeterminateProgressItem's</a> graphic</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">DialogTextColor</td>
+<td class="long-line">Color for the text in the following items:<br><ul>
+<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
+<li>All <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-base.md">content area items</a>, except for <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a>.</li>
+<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-title-area.md#fields">Title area</a>. Unfocused button.</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">DialogFocusColor</td>
+<td class="long-line">Blend color for the following:<br><ul>
+<li>The <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md#fields">button area</a> focus bitmap.</li>
+<li>The focused scrollbar thumb.</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">DialogFocusItemColor</td>
+<td class="short-line">Color for the text of the focused button.</td>
+</tr>
+<tr>
+<td class="short-line">DialogSecondaryTextColor</td>
+<td class="long-line">Color for the text of in the following items:<br><ul>
+<li><a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
+<li>Disabled button.</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">DialogSecondaryItemColor</td>
+<td class="long-line">Color for the following items:<br><ul>
+<li>The divider displayed below the title area.</li>
+<li>The unfilled portion of the <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-determinate-progress-item.md">StdDlgDeterminateProgressItem's</a> graphic.</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">DialogInputFieldColor</td>
+<td class="long-line">The blend color for the text edit box background bitmap for keyboards used inside dialogs.</td>
+</tr>
+<tr>
+<td class="short-line">DialogKeyboardColor</td>
+<td class="long-line">The blend color for the keyboard background bitmap for keyboards used inside dialogs</td>
+</tr>
+<tr>
+<td class="short-line">DialogFootprintColor</td>
+<td class="long-line">The blend color for the following items:<br><ul>
+<li>The button focus footprint bitmap that is displayed when the <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-button-area.md#fields">button area</a> does not have focus.</li>
+<li>Unfocused scrollbar thumb and scrollbar track.</li>
+</ul></td>
+</tr>
+</tbody>
+</table></div></td>
 </tr>
 </tbody>
 </table>

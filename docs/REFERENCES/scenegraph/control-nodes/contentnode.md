@@ -18,7 +18,7 @@ ContentNodes defined as the specification for a node or component content field 
 
 A ContentNode can also be used to specify the data for custom components with defined interfaces, and for nodes and components that require [Content Meta-Data](doc:content-metadata). Also, you should use a ContentNode for complex structures of data for your application rather than associative arrays. ContentNode objects are passed by reference in the application, while associative array objects are copied. For large complex data structures, passing ContentNode objects is much quicker than passing the equivalent associative array object. You can use associative arrays for simpler data structures with just a few fixed members.
 
-> All of the attributes listed in [Content Meta-Data](doc:content-metadata) can be set as fields in a Content node. However, when creating a Content node, the fields themselves are not created until the valid attributes are set as fields, using either assignment (=), or set using [setField()](doc:ifsgnodefield) or [setFields()](doc:ifsgnodefield.md#setfieldsfields-as-object-as-boolean)
+> All of the attributes listed in [Content Meta-Data](doc:content-metadata) can be set as fields in a Content node. However, when creating a Content node, the fields themselves are not created until the valid attributes are set as fields, using either assignment (=), or set using [setField()](doc:ifsgnodefield) or [setFields()](doc:ifsgnodefield#setfieldfieldname-as-string-value-as-object-as-boolean)
 
 ### Creating ContentNodes
 

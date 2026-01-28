@@ -1,5 +1,5 @@
 ---
-title: "Deprecated APIs"
+title: Deprecated APIs
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,13 +10,11 @@ metadata:
 next:
   description: ''
 ---
-
-
 Roku periodically deprecates nodes, functions, fields, and attributes when releasing new or updated APIs.
 
 Deprecated APIs should no longer be used because they may be removed from future Roku OS releases, and they may also cause your app to fail [certification testing](doc:certification). Proactively updating your app code with the latest APIs ensures that your app is unaffected by the deprecation process.
 
-The [Roku OS release notes](doc:roku-os-release-notes) document which APIs are being deprecated with each release.
+The [Roku OS release notes](doc:release-notes) document which APIs are being deprecated with each release.
 
 > Do not use deprecated APIs. Roku's [Static Analysis tool](doc:static-analysis-tool), which is used for [certification testing](doc:certification) of apps, detects and reports any deprecated APIs in the app code as errors. All reported errors in the app code (including those resulting from the use of deprecated APIs) must be resolved to pass Static Analysis testing and publish the app.
 
@@ -62,15 +60,15 @@ Developers using the **eval()** function to initialize data should use the [pars
 
 As described in [Manifest file](doc:channel-manifest):
 
-- In Roku OS 9.0 with rsg_version=1.2, use of the runtime function Eval() will result in a compile-time error.
-- In Roku OS 9.0 other usage of Eval() is not thread-safe and may result in runtime errors.
+* In Roku OS 9.0 with rsg_version=1.2, use of the runtime function Eval() will result in a compile-time error.
+* In Roku OS 9.0 other usage of Eval() is not thread-safe and may result in runtime errors.
 
 ## [DRM](doc:content-protection)
 
 The following DRMs are no longer supported:
 
-- Verimatrix DRM (deprecated in Roku OS 9.3).
-- Adobe DRM (deprecated in Roku OS 9.3).
+* Verimatrix DRM (deprecated in Roku OS 9.3).
+* Adobe DRM (deprecated in Roku OS 9.3).
 
 Make sure that content in your app is protected using a Roku-supported DRM such as Widevine, PlayReady, or AES-128.
 
@@ -98,14 +96,14 @@ Several properties of ifDeviceInfo were deprecated with the release of Roku OS 8
 
 Those deprecated methods of [ifDeviceInfo](doc:ifdeviceinfo) were replaced with similar methods in Roku OS 8.1 (May 2018).
 
-| **Deprecated method**          | **Replacement method**                                       |
-| ------------------------------ | ------------------------------------------------------------ |
-| GetDrmInfo()                   | [GetDrmInfoEx()](doc:ifdeviceinfo) |
-| GetAdvertisingId()             | [GetRIDA()](doc:ifdeviceinfo) |
-| IsAdIdTrackingDisabled()       | [IsRIDADisabled()](doc:ifdeviceinfo) |
+| **Deprecated method**          | **Replacement method**                   |
+| ------------------------------ | ---------------------------------------- |
+| GetDrmInfo()                   | [GetDrmInfoEx()](doc:ifdeviceinfo)       |
+| GetAdvertisingId()             | [GetRIDA()](doc:ifdeviceinfo)            |
+| IsAdIdTrackingDisabled()       | [IsRIDADisabled()](doc:ifdeviceinfo)     |
 | GetClientTrackingId()          | [GetChannelClientId()](doc:ifdeviceinfo) |
 | GetDeviceUniqueId()            | [GetChannelClientId()](doc:ifdeviceinfo) |
-| GetVideoDecodeInfo() as Object | [CanDecodeVideo()](doc:ifdeviceinfo) |
+| GetVideoDecodeInfo() as Object | [CanDecodeVideo()](doc:ifdeviceinfo)     |
 
 ### [ifUrlTransfer](doc:ifurltransfer)
 
@@ -115,19 +113,19 @@ Deprecated prior to September 2018: UrlEncode(url as String)
 
 The following status values returned by the [roVideoPlayerEvent.IsStatusMessage()](doc:rovideoplayerevent) method are deprecated:
 
-- "end of stream"
-- "end of playlist"
+* "end of stream"
+* "end of playlist"
 
 ### [Content metadata](doc:content-metadata)
 
 Several attributes have been deprecated:
 
-- AudioLanguageSelected  (deprecated in Roku OS 9.2). Users can select their preferred audio language on-device in the Settings > Audio > Audio Preferred Language screen.
-- AudioPIDPref. (users can select their preferred audio language on-device in the Settings > Audio > Audio Preferred Language screen).
-- PlayDuration (deprecated in Roku OS 8.1)
-- encodingKey (use licenseServerURL)
-- encodingType  (use licenseServerURL)
-- "wmv" as a value for the streamformat field.
+* AudioLanguageSelected  (deprecated in Roku OS 9.2). Users can select their preferred audio language on-device in the Settings > Audio > Audio Preferred Language screen.
+* AudioPIDPref. (users can select their preferred audio language on-device in the Settings > Audio > Audio Preferred Language screen).
+* PlayDuration (deprecated in Roku OS 8.1)
+* encodingKey (use licenseServerURL)
+* encodingType  (use licenseServerURL)
+* "wmv" as a value for the streamformat field.
 
 Consult the linked documentation page for details.
 
@@ -147,10 +145,9 @@ Several attributes have been deprecated; consult the linked documentation page f
 
 As of this date, all newly published or re-published apps were required to use SceneGraph or Direct Publisher. Accordingly, all legacy visual screen components and associated event components were deprecated.
 
-> These components were sunset as part of the Roku OS 11.5 release (September 12, 2022). The documentation for these components and events has been removed.   
+> These components were sunset as part of the Roku OS 11.5 release (September 12, 2022). The documentation for these components and events has been removed.
 
 Below is the list of relevant sunset components and events:
-
 
 | **Legacy component**     | **Associated event**          |
 | ------------------------ | ----------------------------- |
@@ -177,7 +174,7 @@ Below is the list of relevant sunset components and events:
 
 Since July 1, 2017, the interfaces listed below have been deprecated and apps using them have been rejected during certification for publication or re-publication.
 
-> These interfaces were sunset as part of the Roku OS 11.5 release (September 12, 2022).  The documentation for these interfaces has been removed.   
+> These interfaces were sunset as part of the Roku OS 11.5 release (September 12, 2022).  The documentation for these interfaces has been removed.
 
 ifCaptionRenderer
 

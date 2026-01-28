@@ -32,7 +32,7 @@ Sideloading is how you install apps on your Roku device outside of adding them f
 
 2. Log in to your Roku device. In the **User Name** field, enter "rokudev", and then enter the password you created when you enabled developer mode.
 
-3. The Development Application Installer in the Roku plug-in opens. You use this tool to sideload apps on your Roku device. See [Roku plug-in tools](https://confluence.portal.roku.com:8443/display/DR/Activating+developer+mode#Activatingdevelopermode-plug-in-tools) for more information on the other utilities available in the Roku plug-in.
+3. The Development Application Installer in the Roku plug-in opens. You use this tool to sideload apps on your Roku device. See [Roku plug-in tools](#roku-plug-in-tools) for more information on the other utilities available in the Roku plug-in.
 
    <Image alt="roku600px dev-app-installer" border={false} src="https://image.roku.com/ZHZscHItMTc2/dev-app-installer-squashfs-v3.png" />
 
@@ -72,7 +72,7 @@ The **Utilities** tab contains several tools essential for Roku app development:
 
 * **Screenshot**. Take HD screenshots highlighting the UI of your sideloaded app.
 
-* **Profiling data**: Collect app performance statistics such as CPU and memory usage, "wall-clock" time, and function call counts. You can then use the [BrightScript Profiler](https://developer.roku.com/docs/developer-program/dev-tools/brightscript-profiler.md) to analyze the collected data and optimize your app.
+* **Profiling data**: Collect app performance statistics such as CPU and memory usage, "wall-clock" time, and function call counts. You can then use the [BrightScript Profiler](doc:brightscript-profiler) to analyze the collected data and optimize your app.
 
 #### Package inspector
 
@@ -80,18 +80,18 @@ The package inspector is a utility to inspect the details of the package such as
 
 #### Rekey utility
 
-The rekey utility allows you to replace the signing key on the current Roku device with a key from an existing package. This utility is most useful when developing multiple apps on the same Roku device. See [Packaging apps](https://developer.roku.com/docs/developer-program/publishing/packaging-channels.md#packaging-with-the-development-application-installer) for how to rekey a Roku device.
+The rekey utility allows you to replace the signing key on the current Roku device with a key from an existing package. This utility is most useful when developing multiple apps on the same Roku device. See [Packaging apps](doc:packaging-channels#packaging-with-the-development-application-installer) for how to rekey a Roku device.
 
 #### Screenshot utility
 
-The screenshot utility enables you to take an HD screenshot (1280 X 720) of your sideloaded app's UI (you cannot take a screenshot of any content playback). FHD (1920x1080) screenshots require a 4K-capable Roku set to 1080p or 4K UHD display type. This is useful for generating images that highlight your app in the Streaming Store. See [App Publishing](https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md#screenshots-window) for more information on uploading the screenshots when submitting your app for publishing to the Streaming Store.
+The screenshot utility enables you to take an HD screenshot (1280 X 720) of your sideloaded app's UI (you cannot take a screenshot of any content playback). FHD (1920x1080) screenshots require a 4K-capable Roku set to 1080p or 4K UHD display type. This is useful for generating images that highlight your app in the Streaming Store. See [App Publishing](doc:channel-publishing-guide.md#streaming-store-assets) for more information on uploading the screenshots when submitting your app for publishing to the Streaming Store.
 
 #### Profiling data utility
 
-The profiling data utility enables you to capture app performance statistics. You can then use the [BrightScript Profiler](https://developer.roku.com/docs/developer-program/dev-tools/brightscript-profiler.md) to analyze the collected data and determine where performance improvements and efficiencies can be made in the app. See the [BrightScript Profiler documentation](https://developer.roku.com/docs/developer-program/dev-tools/brightscript-profiler.md#collecting-the-data) for more information on collecting data with this tool.
+The profiling data utility enables you to capture app performance statistics. You can then use the [BrightScript Profiler](doc:brightscript-profiler.md) to analyze the collected data and determine where performance improvements and efficiencies can be made in the app. See the [BrightScript Profiler documentation](doc:brightscript-profiler#collecting-the-data) for more information on collecting data with this tool.
 
 ### Application Packager
 
-The Application Packager takes the sideloaded app, signs it, and then generates an encrypted package for publication. This enables developers to securely publish apps while keeping all intellectual property safely encrypted. The process of packaging an app uses cryptographic hardware built into Roku devices and creates an encrypted package that can be easily and securely distributed on Roku devices. For more information, see [Packaging Roku apps](https://developer.roku.com/docs/developer-program/publishing/packaging-channels.md).
+The Application Packager takes the sideloaded app, signs it, and then generates an encrypted package for publication. This enables developers to securely publish apps while keeping all intellectual property safely encrypted. The process of packaging an app uses cryptographic hardware built into Roku devices and creates an encrypted package that can be easily and securely distributed on Roku devices. For more information, see [Packaging Roku apps](doc:packaging-channels).
 
 <Image alt="roku600px application-packager" border={false} src="https://image.roku.com/ZHZscHItMTc2/application-packager.png" />

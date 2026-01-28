@@ -154,7 +154,7 @@ The pattern may contain certain special characters:
   character. To match a literal '^' place it elsewhere within the
   class.
 * The characters '?', '*' and '[' lose their special meaning if
-  preceded by a single '\'. A single '\' can be matched as '\\'.
+  preceded by a single ''. A single '' can be matched as '\'.
 
 For example:
 

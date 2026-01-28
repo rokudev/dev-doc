@@ -96,14 +96,14 @@ This table documents all the fields in ZoomRowList:
 <td>ContentNode</td>
 <td>invalid</td>
 <td>READ_WRITE</td>
-<td>Specifies the content for the list. The content should be a single ContentNode that has one child ContentNode for each row. These child ContentNodes for each row should themselves contains child ContentNodes for each item in the row. See <a href="/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md#zoomrowlist-data-model">ZoomRowList data model</a> below for more details.</td>
+<td>Specifies the content for the list. The content should be a single ContentNode that has one child ContentNode for each row. These child ContentNodes for each row should themselves contains child ContentNodes for each item in the row. See [ZoomRowList data model](doc:zoomrowlist#zoomrowlist-data-model) below for more details.</td>
 </tr>
 <tr>
 <td>itemComponentName</td>
 <td>string</td>
 <td>""</td>
 <td>READ_WRITE</td>
-<td>Specifies the name of an XML component for the items in each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed <a href="/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md#item-component-fields">Item component fields</a> below.</td>
+<td>Specifies the name of an XML component for the items in each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed [Item component fields](doc:zoomrowlist#item-component-fields) below.</td>
 </tr>
 <tr>
 <td>rowWidth</td>
@@ -334,7 +334,7 @@ This table documents all the fields in ZoomRowList:
 <td>array of strings</td>
 <td>[]</td>
 <td>READ_WRITE</td>
-<td>Specifies the name of an XML component to decorate each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed in the <a href="/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md#row-decoration-component-fields">Row decoration component fields</a> section below.</td>
+<td>Specifies the name of an XML component to decorate each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed in the [Row decoration component fields](doc:zoomrowlist#row-decoration-component-fields) section below.</td>
 </tr>
 <tr>
 <td>rowSelected</td>

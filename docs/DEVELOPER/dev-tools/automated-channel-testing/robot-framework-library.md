@@ -106,7 +106,7 @@ class RobotLibrary:
 <li><strong>username</strong>: Enter <strong>rokudev</strong>, which is the user name for the Development Application Installer.</li>
 <li><strong>password</strong>: The password for accessing the Development Application Installer on your Roku device.</li>
 </ul></td>
-<td class="long-line">Sideloads an app that has been packaged into a zip file.<br><br>If the <strong>Sideload</strong> command fails, <a href="/docs/developer-program/getting-started/developer-setup.md#sideloading-channels">sideload</a> the app to be tested and use the <strong>Launch the app</strong> command.</td>
+<td class="long-line">Sideloads an app that has been packaged into a zip file.<br><br>If the <strong>Sideload</strong> command fails, [sideload](doc:developer-setup#sideloading-channels) the app to be tested and use the <strong>Launch the app</strong> command.</td>
 <td class="long-line"><code>Sideload myChannel.zip rokudev your_device_password</code></td>
 </tr>
 </tbody>
@@ -126,8 +126,8 @@ class RobotLibrary:
 <td class="short-line">Launch the app</td>
 <td class="long-line"><ul>
 <li><strong>channel_code</strong>: The ID of the app to be launched.</li>
-<li><strong>contentId</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
-<li><strong>mediaType</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
+<li><strong>contentId</strong>: The [contentId](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
+<li><strong>mediaType</strong>: The [mediaType](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
 </ul></td>
 <td class="long-line">Launches the app corresponding to the specified channel ID.</td>
 <td class="short-line"><code>Launch the app dev myMovie123 movie</code></td>
@@ -150,8 +150,8 @@ class RobotLibrary:
 <td class="short-line">Input deep linking data</td>
 <td class="long-line"><ul>
 <li><strong>channelId</strong>: The ID of the app to be launched.</li>
-<li><strong>contentId</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
-<li><strong>mediaType</strong>: The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
+<li><strong>contentId</strong>: The [contentId](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
+<li><strong>mediaType</strong>: The [mediaType](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
 </ul></td>
 <td class="long-line">Launches the app corresponding to the specified app ID.</td>
 <td class="long-line"><code>Input deep linking data dev myMovie123 movie</code></td>
@@ -324,7 +324,7 @@ Send keys   $\{keys} 1
 <tr>
 <td class="short-line">Verify is screen loaded</td>
 <td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> command for more information.</li>
+<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) command for more information.</li>
 <li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li>
 <li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
 </ul></td>
@@ -397,7 +397,7 @@ $\{ParamArray}
 <tr>
 <td class="short-line">Get element</td>
 <td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> for more information.</li>
+<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) for more information.</li>
 <li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
 </ul></td>
 <td class="long-line">Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element.</td>
@@ -426,7 +426,7 @@ $\{ParamArray}
 <tr>
 <td class="short-line">Get elements</td>
 <td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements">WebDriver element command</a> for more information.</li>
+<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) for more information.</li>
 <li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
 </ul></td>
 <td class="long-line">Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements.</td>
@@ -453,7 +453,7 @@ $\{ParamArray}
 <tbody>
 <tr>
 <td class="short-line">Get focused element</td>
-<td class="long-line">Return the element on the screen that currently has focus. See the <a href="/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#get-v1/session/:sessionId/element/active">WebDriver active element command</a> for more information.</td>
+<td class="long-line">Return the element on the screen that currently has focus. See the [WebDriver active element command](doc:web-driver#get-v1/session/:sessionId/element/active) for more information.</td>
 <td class="short-line"><code>&amp;{element}= Get focused element</code></td>
 </tr>
 </tbody>

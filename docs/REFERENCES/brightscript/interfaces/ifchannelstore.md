@@ -93,7 +93,7 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
 <tr>
 <td>code</td>
 <td>string</td>
-<td>The <strong>Product Identifier</strong> that was entered in the <a href="/docs/developer-program/roku-pay/quickstart/in-channel-products.md#product-basics">In-app Products page in the Developer Dashboard</a>.</td>
+<td>The <strong>Product Identifier</strong> that was entered in the [In-app Products page in the Developer Dashboard](doc:in-channel-products#product-basics).</td>
 </tr>
 <tr>
 <td>cost</td>
@@ -133,12 +133,12 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
 <tr>
 <td>purchaseChannel</td>
 <td>string</td>
-<td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="/docs/developer-program/discovery/instant-signup.md">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
+<td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through [Instant Signup](doc:instant-signup) during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
 </tr>
 <tr>
 <td>purchaseContext</td>
 <td>string</td>
-<td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="/docs/developer-program/discovery/instant-signup.md">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
+<td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via [Instant Signup](doc:instant-signup).</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
 </tr>
 <tr>
 <td>purchaseDate</td>
@@ -221,7 +221,7 @@ Sets the current Order (shopping cart) to the elements specified in the paramete
 <tr>
 <td>orderInfo</td>
 <td>roAssociativeArray</td>
-<td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: $\}action-list\}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>&lt;br&gt;m.store = CreateObject("roChannelStore")​&lt;br&gt;' Populate myOrderItems&lt;br&gt;myOrderInfo.action = "Upgrade"&lt;br&gt;m.store.setOrder(myOrderItems, myOrderInfo)&lt;br&gt;</code></code></pre><br />See <a href="/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md#calling-the-roku-web-service-validate-transaction-api">On-device upgrade and downgrade</a> for how to implement Roku Pay web services for upgrades/downgrades.</td>
+<td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: $\}action-list\}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>&lt;br&gt;m.store = CreateObject("roChannelStore")​&lt;br&gt;' Populate myOrderItems&lt;br&gt;myOrderInfo.action = "Upgrade"&lt;br&gt;m.store.setOrder(myOrderItems, myOrderInfo)&lt;br&gt;</code></code></pre><br />See [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade#calling-the-roku-web-service-validate-transaction-api) for how to implement Roku Pay web services for upgrades/downgrades.</td>
 </tr>
 </tbody>
 </table>

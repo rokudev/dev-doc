@@ -72795,7 +72795,7 @@ The BrightScript debugger supports the following debug commands:
     <tr>
       <td>STEP</td>
       <td>Execute one step on a specified thread.</td>
-      <td>Debugger is active. All threads are stopped.<br /><br />As of Roku OS 14.6, you can use the STEP command to step over and out of SceneGraph observer callbacks and functions called via <a href="/docs/developer-program/core-concepts/handling-application-events.md#functional-fields">CallFunc</a>.</td>
+      <td>Debugger is active. All threads are stopped.<br /><br />As of Roku OS 14.6, you can use the STEP command to step over and out of SceneGraph observer callbacks and functions called via [CallFunc](doc:handling-application-events#functional-fields).</td>
       <td><a href="#step-arguments">step arguments</a></td>
       <td><a href="#debugger-response-format">DebuggerResponse</a> with no payload (OK or Error if successful).<br /><br />If the STEP command is valid, the debugging target responds immediately with an OK response. The specified thread will then detach from the debugger, execute briefly as specified by the <strong>step\_type</strong> parameter, and then re-attach to the debugger.<br /><br />The re-attachment causes another <a href="#threadattached">THREAD\_ATTACHED</a> update message to be sent to the debugger client.</td>
     </tr>

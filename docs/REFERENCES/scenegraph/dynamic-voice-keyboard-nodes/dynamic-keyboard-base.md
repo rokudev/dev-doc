@@ -58,10 +58,10 @@ The DynamicKeyboardBase is an abstract class that provides the functionality for
 </tr>
 <tr>
 <td>textEditBox</td>
-<td><a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md"><strong>VoiceTextEditBox</strong> node</a></td>
+<td>[<strong>VoiceTextEditBox</strong> node](doc:voice-text-edit-box)</td>
 <td>The VoiceTextEditBox associated with the keyboard</td>
 <td>READ</td>
-<td>The internal <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md">VoiceTextEditBox node</a> used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different VoiceTextEditBox node; this field should be used only to access the fields of this node's internal VoiceTextEditBox node.</td>
+<td>The internal [VoiceTextEditBox node](doc:voice-text-edit-box) used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different VoiceTextEditBox node; this field should be used only to access the fields of this node's internal VoiceTextEditBox node.</td>
 </tr>
 <tr>
 <td>hideTextBox</td>
@@ -72,10 +72,10 @@ The DynamicKeyboardBase is an abstract class that provides the functionality for
 </tr>
 <tr>
 <td>keyGrid</td>
-<td><strong><a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md">DynamicKeyGrid node</a></strong></td>
+<td><strong>[DynamicKeyGrid node](doc:dynamic-key-grid)</strong></td>
 <td>The DynamicKeyGrid associated with the keyboard</td>
 <td>READ</td>
-<td>The internal <a href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-key-grid.md">DynamicKeyGrid node</a> used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different DynamicKeyGrid node; this field should be only used to access the fields of this node's internal DynamicKeyGrid node, such as the mode or horizWrapping fields.</td>
+<td>The internal [DynamicKeyGrid node](doc:dynamic-key-grid) used by this DynamicKeyboardBase node.<br /><br />Do not set this field to null or to a different DynamicKeyGrid node; this field should be only used to access the fields of this node's internal DynamicKeyGrid node, such as the mode or horizWrapping fields.</td>
 </tr>
 <tr>
 <td>domain</td>

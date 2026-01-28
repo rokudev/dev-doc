@@ -44,7 +44,7 @@ To handle voice commands in your app, your application needs to use
 the [**roInput**](doc:roinput) object to listen for transport control events and process them. To do this, follow
 these steps:
 
-1. Create an **roInput** object, and set the [**roMessagePort**](doc:romessageport) for receiving events.  
+1. Create an **roInput** object, and set the [**roMessagePort**](doc:romessageport) for receiving events.
 
    ```
    input = CreateObject("roInput")
@@ -53,7 +53,7 @@ these steps:
    ```
 
 2. Register the **roInput** component for voice commands by calling
-   its  [**EnableTransportEvents()**](docs/references/brightscript/interfaces/ifinput.md#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.  
+   its  [**EnableTransportEvents()**](docs/references/brightscript/interfaces/ifinput.md#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.
 
    ```
    input.enableTransportEvents()
@@ -236,7 +236,7 @@ The following table summarizes which apps need to implement handling for enhance
 You can test voice controls in an app by sending [External Control Protocol (ECP)](doc:external-control-api) commands via cURL to your Roku device. Specifically, send an HTTP POST request to port 8060 on your Roku device using the following syntax:
 
 ```
-curl -d '' 'http://\<roku-device-ip-address>:8060/input/\<channelId>?id=\<longInteger>&type=transport&command=\<commandValue>'
+curl -d '' 'http://<roku-device-ip-address>:8060/input/<channelId>?id=<longInteger>&type=transport&command=<commandValue>
 ```
 
 The following examples show how to send ECP commands via cURL HTTP POST requests. The examples are based on a sideloaded app handling forward and seek commands.

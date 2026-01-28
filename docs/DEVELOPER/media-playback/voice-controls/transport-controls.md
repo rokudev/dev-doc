@@ -326,4 +326,16 @@ The following table summarizes the different voice controls, how they may be inv
 
 ### Enhanced voice controls
 
+<HTMLBlock>{`
+
+`}</HTMLBlock>
+
+<br />
+
 ### Additional enhanced voice controls
+
+<HTMLBlock>{`
+
+`}</HTMLBlock>
+
+<br />

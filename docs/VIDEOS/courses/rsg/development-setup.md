@@ -45,7 +45,7 @@ This lesson explains how to create the required user and developer accounts for 
 
 [Debugging code](doc:debugging)
 
-[Developer Tools](doc:tools-overview)
+[Developer Tools](doc:dev-tools)
 
 [Eclipse IDE support](doc:ide-support)
 

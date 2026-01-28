@@ -10,20 +10,6 @@ metadata:
 next:
   description: ''
 ---
----
-title: "Scene"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
-
-# Scene
 
 Extends [**Group**](doc:group)
 

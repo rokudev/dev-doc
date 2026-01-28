@@ -1,5 +1,5 @@
 ---
-title: "Prioritizing authenticated apps"
+title: Prioritizing authenticated apps
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 SVOD and TVE apps must communicate the authentication status of customers when they launch your app. Authenticated apps are listed above non-authenticated ones in content discovery features such as the Roku Search; therefore, providing the authentication status prioritizes your app, which helps drive users to your app.
 
 > Apps that require authentication (SVOD, TVE, and other subscription services) must communicate authentication status to pass certification. AVOD apps are exempt from this requirement because they do not benefit from this integration.
@@ -24,7 +22,7 @@ For example, if a movie is available on an SVOD app that the customer has authen
 
 The overall priority of apps in the Roku Search content providers list is based on Roku algorithms that consider a number of factors, including the priority of customer's entitlement to the selected content based on app type (for example, authenticated SVOD, TVE, free AVOD, and so on).
 
-![roku815px - SVOD channels listed in Roku Search](https://image.roku.com/ZHZscHItMTc2/red-authentication-svod.jpg "SVOD channels in Roku Search content provider list")
+<Image alt="roku815px - SVOD channels listed in Roku Search" border={false} src="https://image.roku.com/ZHZscHItMTc2/red-authentication-svod.jpg" title="SVOD channels in Roku Search content provider list" />
 
 ## Sending authentication events
 
@@ -42,16 +40,13 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
    sg_component_libs_required=roku_analytics
    ```
 
-2. Use the [Roku Analytics Component](doc:roku-analytics-component) to send authentication events from your app following these steps:
+2. Use the [Roku Analytics Component](doc:analytics) to send authentication events from your app following these steps:
 
    a. When `roSGScreen` is active, create a "Roku_Analytics:AnalyticsNode" node and persist it by storing in the global node.
 
-
    b. To add the RED library as a provider, include `RED: \{\}` when assigning to its `.init` field.
 
-
    c. To dispatch an event for authentication, assign `\{RED: \{eventName: "Roku_Authenticated"\}\} to the .trackEvent` field.
-
 
    The following example demonstrates how to send authentication events:
 
@@ -75,8 +70,11 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
 
     ' dispatch an event to Roku
     RAC.trackEvent = \{RED: \{eventName: "Roku_Authenticated"\}\}
-end sub
    ```
+
+end sub
+
+```
 
 3. Use the [debug console](doc:debugging) to verify that your app is sending authentication events.
 
@@ -88,18 +86,25 @@ To use the RAF **fireRokuMarketingPixel()** method to send authentication events
 
 1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
-   ```
-   bs_libs_required=roku_ads_lib
-   ```
+```
+
+bs_libs_required=roku_ads_lib
+
+```
 
 2. Instantiate the RAF library in the app:
 
-   ```
-   adIface = Roku_Ads()
-   ```
+```
+
+adIface = Roku_Ads()
+
+```
 
 3. When an authenticated customer launches your app, call the **fireRokuMarketingPixel()** method using the following syntax:
 
-   ```
-   adIface.fireRokuMarketingPixel("Roku_Authenticated")
-   ```
+```
+
+adIface.fireRokuMarketingPixel("Roku_Authenticated")
+
+```
+```

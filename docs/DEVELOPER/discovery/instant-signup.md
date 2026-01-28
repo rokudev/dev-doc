@@ -174,6 +174,34 @@ The images used for the app must meet the requirements for width, height, minimu
 
 The posters/artwork with the content or networks featured in the app are used to highlight the app's offerings. The posters/artwork must meet the following requirements:
 
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Specification</th>
+<th class="short-line">Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">File format</td>
+<td class="short-line">JPG</td>
+</tr>
+<tr>
+<td class="short-line">Aspect ratio</td>
+<td class="long-line">4:3<ul>
+<li><strong>Content-oriented apps</strong> (apps that promote movies, TV shows, music, and other content): A minimum of 10 posters must be included with an offer.</li>
+<li><strong>vMVPD apps</strong> (apps that promote multiple networks/channels): A minimum of 5 artwork images must be included with an offer.</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">Licensing</td>
+<td class="long-line">Posters/artwork must be licensed for usage. Dates that posters may be used must be specified</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
+
 <br />
 
 ### Implementing products API

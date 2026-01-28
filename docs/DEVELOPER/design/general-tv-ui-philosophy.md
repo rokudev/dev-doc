@@ -109,7 +109,7 @@ Always test your app on the low end platforms (Roku Express = Littlefield) to en
 
 ### 9. Properly monetize your app
 
-- If you are monetizing your app with video ads, be sure to integrate it with the Roku Advertising Framework (RAF). RAF is a certification requirement for ad-supported apps. You can refer to the [RAF documentation](doc:roku-advertising-framework) for more information.
+- If you are monetizing your app with video ads, be sure to integrate it with the Roku Advertising Framework (RAF). RAF is a certification requirement for ad-supported apps. You can refer to the [RAF documentation](doc:advertising) for more information.
 - RAF ensures that all ads across your app have a consistent experience and hence can drive higher user engagement.
 - RAF supports a privacy compliant Roku ID for advertisers that enables advanced targeting and frequency capping.
 - RAF also supports advanced and immersive ad formats that many advertisers prefer to use.  

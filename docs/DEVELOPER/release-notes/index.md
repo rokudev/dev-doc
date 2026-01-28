@@ -1636,7 +1636,7 @@ to [ifDeviceInfo](doc:ifdeviceinfo) interface.</li>
 <p><strong>Initial rollout date:</strong> April 9, 2015</p>
 <h4 id="roku-advertising-framework">Roku Advertising Framework</h4>
 <ul>
-<li>Added the [Roku Advertising Framework](doc:roku-advertising-framework) to natively integrate advertising capabilities</li>
+<li>Added the [Roku Advertising Framework](doc:advertising) to natively integrate advertising capabilities</li>
 </ul>
 <h4 id="brightscript-language">BrightScript language</h4>
 <ul>

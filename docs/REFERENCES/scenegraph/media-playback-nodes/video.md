@@ -468,7 +468,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>Boolean</td>
 <td>true</td>
 <td>READ_WRITE</td>
-<td>If set to true (the default), the entire Video node user interface (such as ProgressBar and TrickPlayBar nodes, and BIF navigation) appear in response to stream events and remote control key presses.<br /><br />If set to false, most of the Video node user interface will not be shown, and the application is expected to implement the UI. The one exception is the closed-caption dialog, which always appears when the video is playing fullscreen (either full height or full width) and the user presses the Options (*) button.<br /><br />When using the [Roku Advertising Framework (RAF)](doc:roku-advertising-framework), the RAF library may temporarily set this field to false while playing ads.</td>
+<td>If set to true (the default), the entire Video node user interface (such as ProgressBar and TrickPlayBar nodes, and BIF navigation) appear in response to stream events and remote control key presses.<br /><br />If set to false, most of the Video node user interface will not be shown, and the application is expected to implement the UI. The one exception is the closed-caption dialog, which always appears when the video is playing fullscreen (either full height or full width) and the user presses the Options (*) button.<br /><br />When using the [Roku Advertising Framework (RAF)](doc:advertising), the RAF library may temporarily set this field to false while playing ads.</td>
 </tr>
 <tr>
 <td>enableTrickPlay</td>

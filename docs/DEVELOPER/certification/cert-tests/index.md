@@ -28,9 +28,9 @@ Developers are expected to use these tools, the [certification criteria](doc:cer
 
 **Tests**: App is meeting the criteria specified in 1.1.  
 
-**Expected Result**: All ads are served via the [Roku Advertising Framework (RAF)](doc:roku-advertising-framework) whether the channel is using the Roku default ad server or a third-party ad server (for example, Google DoubleClick for Publishers [DFP]. Freewheel, and so on). Ads render as expected on all Roku devices.
+**Expected Result**: All ads are served via the [Roku Advertising Framework (RAF)](doc:advertising) whether the channel is using the Roku default ad server or a third-party ad server (for example, Google DoubleClick for Publishers [DFP]. Freewheel, and so on). Ads render as expected on all Roku devices.
 
-**RAF 1.1** Apps must integrate the [Roku Advertising Framework (RAF)](doc:roku-advertising-framework)  for all ads without modifying, obstructing, or disabling RAF functionality in any way. Replays of live broadcast streams are exempt from this requirement, unless dynamic ad insertion is used to insert new ads.
+**RAF 1.1** Apps must integrate the [Roku Advertising Framework (RAF)](doc:advertising)  for all ads without modifying, obstructing, or disabling RAF functionality in any way. Replays of live broadcast streams are exempt from this requirement, unless dynamic ad insertion is used to insert new ads.
 
 **RAF 1.2** All measurement beacons must be fired client-side via RAF. See the [Roku Advertising Watermark integration guide](https://developer.roku.com/docs/developer-program/advertising/ad-watermark.md) for more information.
 

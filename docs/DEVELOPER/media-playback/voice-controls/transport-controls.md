@@ -242,11 +242,11 @@ curl -d '' 'http://<roku-device-ip-address>:8060/input/<channelId>?id=<longInteg
 The following examples show how to send ECP commands via cURL HTTP POST requests. The examples are based on a sideloaded app handling forward and seek commands.
 
 ```
-curl -d '' '[http://192.168.1.114:8060/input/dev?id=5&type=transport&command=forward](http://192.168.1.114:8060/input/dev?id=5\&type=transport\&command=forward)'
+curl -d '' ' http://192.168.1.114:8060/input/dev?id=5&type=transport&command=forward
 ```
 
 ```
-curl -d '' '[http://192.168.1.114:8060/input/dev?id=8&type=transport&command=seek&direction=backward&duration=10](http://192.168.1.114:8060/input/dev?id=8\&type=transport\&command=seek\&direction=backward\&duration=10)'
+curl -d '' 'http://192.168.1.114:8060/input/dev?id=8&type=transport&command=seek&direction=backward&duration=10
 ```
 
 ## Sample app

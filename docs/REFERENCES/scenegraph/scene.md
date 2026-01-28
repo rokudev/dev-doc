@@ -24,6 +24,7 @@ While it is technically possible to have more than one scene per app, we recomme
 ## Fields
 
 <HTMLBlock>{`
+<table>
 <thead>
 <tr>
 <th class="short-line">Field</th>

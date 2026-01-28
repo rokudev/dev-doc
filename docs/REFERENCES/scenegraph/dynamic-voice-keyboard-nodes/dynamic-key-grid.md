@@ -33,7 +33,7 @@ The **DynamicKeyGrid** node implements a grid of keys that are defined and organ
       <td>uri</td>
       <td>""</td>
       <td>READ\_WRITE</td>
-      <td>Specifies the <a href="https://roku-ent.readme.io/dev/docs/key-definition-file">Key Definition File</a> to use to define the key layout metadata.</td>
+      <td>Specifies the <a href="https://roku-ent.readme.io/dev/docs/key-definition-file">Key Definition File</a> to use to define the key layout metadata.<br/><a href="doc:key-definition-file">Link test</a></td>
     </tr>
 
     <tr>

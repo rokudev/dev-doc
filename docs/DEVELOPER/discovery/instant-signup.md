@@ -286,7 +286,7 @@ When a customer selects a subscription, they are prompted to grant Roku permissi
 
 > If the user subscribes to your app via an Instant Signup on-device offer, the **purchaseChannel** and **purchaseContext** fields are set to "DEVICE" and "ISU", respectively.
 >
-> ```"purchaseChannel": "WEB",
+> ```"purchaseChannel":
 > "purchaseChannel": "DEVICE",
 > "purchaseContext": "ISU",
 > ```
@@ -307,7 +307,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 
 1. Call the [**ChannelStore.getPurchases**](doc:channelstore) command. This causes the **purchases** field to be set to a **ContentNode** containing the results of the command. The **purchases** contentNode contains a child content node for each purchase.
 
-   myChannelStore.command = "getPurchases"
+   `myChannelStore.command = "getPurchases"`
 
 2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
 
@@ -324,7 +324,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 
 3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service) Roku Pay Web Service API call.
 
-   transactionId = myChannelStore.purchases.getChild(x).purchaseId
+   `transactionId = myChannelStore.purchases.getChild(x).purchaseId`
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 

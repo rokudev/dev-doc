@@ -293,7 +293,7 @@ The following table lists the requirements for implementing the personalized pro
 <tr>
 <td class="short-line">desc</td>
 <td class="short-line">String</td>
-<td class="long-line">A brief (maximum 100 character) description of the product.<br><br>Do not include any billing information such as pricing and billing cycle in the description. Roku automatically populates this information from the <a href="/docs/developer-program/roku-pay/quickstart/in-channel-products.md">in-app products you've created in the Developer Dashboard</a>.</td>
+<td class="long-line">A brief (maximum 100 character) description of the product.<br><br>Do not include any billing information such as pricing and billing cycle in the description. Roku automatically populates this information from the <a href="https://roku-ent.readme.io/dev/docs/product-catalog#adding-products-to-the-catalog">in-app products you've created in the Developer Dashboard</a>.</td>
 </tr>
 <tr>
 <td class="short-line">details</td>

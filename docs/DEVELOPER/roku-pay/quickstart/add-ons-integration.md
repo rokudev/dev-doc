@@ -847,15 +847,311 @@ Lists the products and purchase options linked to the app.
 
 #### request
 
-<br />
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">request</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Includes the request's command and parameters: <br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">command</td>
+<td class="short-line">string</td>
+<td class="short-line">Set to "GetCatalog".</td>
+</tr>
+<tr>
+<td class="short-line">params</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Include the following key-value pair: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">version</td>
+<td class="short-line">integer</td>
+<td class="short-line">Set to 2</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 #### requestStatus.result
+
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">result</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Includes the products and purchase options returned by the GetCatalog command: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">products</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">The list of products linked to the app. Each product has the following fields: <br><ul>
+<li><strong>productId</strong> (string): The developer-specified product ID entered in the Developer Dashboard. </li>
+<li><strong>name</strong> (string): The developer-specified product name entered in the Developer Dashboard.</li>
+<li><strong>purchaseOptions</strong> (roArray of roAssociativeArrays): The list of purchase option SKUs associated with the product.</li>
+<li>
+<p><strong>entitlementIds</strong> (roArray of roAssociativeArrays): The list of entitlement identifiers, which includes the following fields:</p>
+<ul>
+<li>entitlementKey: The developer-specified entitlement scope.</li>
+<li>entitlementScope: The Roku-provided entitlement scope.</li>
+</ul>
+</li>
+<li><strong>addon</strong> (boolean). Indicates whether the product is an add-on (true) or not (false).</li>
+<li><strong>prerequisites</strong> (roArray of string): A list of product IDs from which at least one must have already been purchased in order to be eligible for the add-on.</li>
+<li><strong>productExclusivityGroup</strong> (roArray of string): A list of product IDs from which none may have already been purchased in order to be eligible for the add-on, unless completing an upgrade/downgrade </li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">productsMap</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">A map that contains the <strong>productId</strong> of a product object (the key) and the object itself (the value). You can use this field to iterate through the collection of product objects returned by the <strong>GetCatalog</strong> command, find a product object based on its <strong>productId</strong>, and then access the properties of the product.</td>
+</tr>
+<tr>
+<td class="short-line">purchaseOptions</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">The list of purchase options linked to the app. Each purchase option has the following fields:<br><ul>
+<li><strong>sku</strong> (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>name</strong> (string): The developer-specified name for the purchase option entered in the Developer Dashboard. </li>
+<li><strong>description</strong> (string): The developer-specified description for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>offerStartDate</strong> (string): The first date when the purchase option is available. </li>
+<li><strong>offerEndDate</strong> (string): The date when the purchase option is no longer available. </li>
+<li><strong>cost</strong> (string): Localized regular cost of the purchase option (with local currency symbol).</li>
+<li><strong>type</strong> (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".</li>
+<li><strong>addon</strong> (boolean): A flag indicating whether the purchase option is an add-on. </li>
+<li>
+<p><strong>billingPlans</strong> (roArray of roAssociativeArrays): A list of billing plans associated with the purchase option. Each billing plan contains the following fields:</p>
+<ul>
+<li>billingType (string): Indicates whether a "Subscription" or "DigitalContent" is being billed.</li>
+<li>productIds (roArray of strings): A list of product IDs being billed. </li>
+<li>
+<p>phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan. </p>
+<ul>
+<li>name (string): The developer-specified name for the offer entered in the Developer Dashboard. </li>
+<li>type (string): The type of offer: "FreeTrial", "ReducedPrice", or "RegularPrice"</li>
+<li>cost (string): Localized cost of the offer (with local currency symbol).</li>
+<li>
+<p>duration (roAssociativeArray): Specifies how long the offer is available using the following fields (for example 7 days or 1 month):</p>
+<ul>
+<li>quantity (integer): The length of the duration.</li>
+<li>unit (string): The interval ("Day", "Month", "Quarter", or "Year"). </li>
+</ul>
+</li>
+<li>billingFrequency (string; included only if the type is "ReducedPrice" or "RegularPrice"): Specifies how often the customer is charged for the subscription: "Monthly", "Quarterly", or "Yearly"</li>
+</ul>
+</li>
+<li><strong>cost</strong> (string; included only if the billingType is "DigitalContent"): Localized cost for the digital content (with local currency symbol).</li>
+<li>
+<p><strong>duration</strong> (roAssociativeArray; included only if the billingType is "DigitalContent"): Specifies how long the digital products are available using the following fields:</p>
+<ul>
+<li>quantity (integer): The length of the duration.</li>
+<li>unit (string): The interval ("Day", "Month", "Quarter", or "Year"). </li>
+</ul>
+</li>
+<li><strong>quantity</strong> (integer; included only if the billingType is "DigitalContent"):  The number of times the digital product can be accessed (for example, the number of times a movie can be watched or the number of games that can be installed).</li>
+</ul>
+</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">purchaseOptionsMap</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">A map that contains the <strong>sku</strong> of a purchaseOption object (the key) and the object itself (the value). You can use this field to iterate through the collection of purchaseOption objects returned by the <strong>GetCatalog</strong> command, find a purchase option object based on its <strong>sku</strong>, and then access the properties of the purchase option.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">status</td>
+<td class="short-line">enum</td>
+<td class="long-line">The command completion status, which may be one of the following values: <br><ul>
+<li><strong>2</strong>  Interrupted</li>
+<li><strong>1</strong>  Success</li>
+<li><strong>0</strong>  Network error</li>
+<li><strong>-1</strong> HTTP Error/Timeout</li>
+<li><strong>-2</strong> Timeout</li>
+<li><strong>-3</strong> Unknown Error</li>
+<li><strong>-4</strong> Invalid </li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">statusMessage</td>
+<td class="short-line">string</td>
+<td class="long-line">A text description of the command completion status.</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### **QueryPurchaseOptions**
 
 Returns the collection of purchaseOptionMap objects matching the specified query.
 
 #### request
+
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">result</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Includes the products and purchase options returned by the GetCatalog command: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">products</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">The list of products linked to the app. Each product has the following fields: <br><ul>
+<li><strong>productId</strong> (string): The developer-specified product ID entered in the Developer Dashboard. </li>
+<li><strong>name</strong> (string): The developer-specified product name entered in the Developer Dashboard.</li>
+<li><strong>purchaseOptions</strong> (roArray of roAssociativeArrays): The list of purchase option SKUs associated with the product.</li>
+<li>
+<p><strong>entitlementIds</strong> (roArray of roAssociativeArrays): The list of entitlement identifiers, which includes the following fields:</p>
+<ul>
+<li>entitlementKey: The developer-specified entitlement scope.</li>
+<li>entitlementScope: The Roku-provided entitlement scope.</li>
+</ul>
+</li>
+<li><strong>addon</strong> (boolean). Indicates whether the product is an add-on (true) or not (false).</li>
+<li><strong>prerequisites</strong> (roArray of string): A list of product IDs from which at least one must have already been purchased in order to be eligible for the add-on.</li>
+<li><strong>productExclusivityGroup</strong> (roArray of string): A list of product IDs from which none may have already been purchased in order to be eligible for the add-on, unless completing an upgrade/downgrade </li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">productsMap</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">A map that contains the <strong>productId</strong> of a product object (the key) and the object itself (the value). You can use this field to iterate through the collection of product objects returned by the <strong>GetCatalog</strong> command, find a product object based on its <strong>productId</strong>, and then access the properties of the product.</td>
+</tr>
+<tr>
+<td class="short-line">purchaseOptions</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">The list of purchase options linked to the app. Each purchase option has the following fields:<br><ul>
+<li><strong>sku</strong> (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>name</strong> (string): The developer-specified name for the purchase option entered in the Developer Dashboard. </li>
+<li><strong>description</strong> (string): The developer-specified description for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>offerStartDate</strong> (string): The first date when the purchase option is available. </li>
+<li><strong>offerEndDate</strong> (string): The date when the purchase option is no longer available. </li>
+<li><strong>cost</strong> (string): Localized regular cost of the purchase option (with local currency symbol).</li>
+<li><strong>type</strong> (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".</li>
+<li><strong>addon</strong> (boolean): A flag indicating whether the purchase option is an add-on. </li>
+<li>
+<p><strong>billingPlans</strong> (roArray of roAssociativeArrays): A list of billing plans associated with the purchase option. Each billing plan contains the following fields:</p>
+<ul>
+<li>billingType (string): Indicates whether a "Subscription" or "DigitalContent" is being billed.</li>
+<li>productIds (roArray of strings): A list of product IDs being billed. </li>
+<li>
+<p>phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan. </p>
+<ul>
+<li>name (string): The developer-specified name for the offer entered in the Developer Dashboard. </li>
+<li>type (string): The type of offer: "FreeTrial", "ReducedPrice", or "RegularPrice"</li>
+<li>cost (string): Localized cost of the offer (with local currency symbol).</li>
+<li>
+<p>duration (roAssociativeArray): Specifies how long the offer is available using the following fields (for example 7 days or 1 month):</p>
+<ul>
+<li>quantity (integer): The length of the duration.</li>
+<li>unit (string): The interval ("Day", "Month", "Quarter", or "Year"). </li>
+</ul>
+</li>
+<li>billingFrequency (string; included only if the type is "ReducedPrice" or "RegularPrice"): Specifies how often the customer is charged for the subscription: "Monthly", "Quarterly", or "Yearly"</li>
+</ul>
+</li>
+<li><strong>cost</strong> (string; included only if the billingType is "DigitalContent"): Localized cost for the digital content (with local currency symbol).</li>
+<li>
+<p><strong>duration</strong> (roAssociativeArray; included only if the billingType is "DigitalContent"): Specifies how long the digital products are available using the following fields:</p>
+<ul>
+<li>quantity (integer): The length of the duration.</li>
+<li>unit (string): The interval ("Day", "Month", "Quarter", or "Year"). </li>
+</ul>
+</li>
+<li><strong>quantity</strong> (integer; included only if the billingType is "DigitalContent"):  The number of times the digital product can be accessed (for example, the number of times a movie can be watched or the number of games that can be installed).</li>
+</ul>
+</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">purchaseOptionsMap</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">A map that contains the <strong>sku</strong> of a purchaseOption object (the key) and the object itself (the value). You can use this field to iterate through the collection of purchaseOption objects returned by the <strong>GetCatalog</strong> command, find a purchase option object based on its <strong>sku</strong>, and then access the properties of the purchase option.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">status</td>
+<td class="short-line">enum</td>
+<td class="long-line">The command completion status, which may be one of the following values: <br><ul>
+<li><strong>2</strong>  Interrupted</li>
+<li><strong>1</strong>  Success</li>
+<li><strong>0</strong>  Network error</li>
+<li><strong>-1</strong> HTTP Error/Timeout</li>
+<li><strong>-2</strong> Timeout</li>
+<li><strong>-3</strong> Unknown Error</li>
+<li><strong>-4</strong> Invalid </li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">statusMessage</td>
+<td class="short-line">string</td>
+<td class="long-line">A text description of the command completion status.</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 <br />
 

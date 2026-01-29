@@ -115,7 +115,7 @@ To create a purchase option for an add-on product, follow these steps:
          </td>
 
          <td>
-           Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products.<br />    
+           Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products.<br />
 
            * One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).
            * Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).
@@ -128,7 +128,7 @@ To create a purchase option for an add-on product, follow these steps:
          </td>
 
          <td>
-           The administrator (root account) can create free trial and introductory price offers for an add-on product. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer.Select one of the following base offers: <br />  
+           The administrator (root account) can create free trial and introductory price offers for an add-on product. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer.Select one of the following base offers: <br />
 
            * **None** (default). The purchase option does not include an offer.
            * **Free trial**. Include a free trial period with the purchase option. In the **Trial length** box, enter the number of days or months in the trial offer and then select the unit of time (**Days** or **Months**).
@@ -635,25 +635,66 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 </table>
 `}</HTMLBlock>
 
-  
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">request</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">Includes the request's command and parameters:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">command</td>
+<td class="short-line">string</td>
+<td class="short-line">Set to "GetPurchases".</td>
+</tr>
+<tr>
+<td class="short-line">params</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">Include the following key-value pairs: <br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">version</td>
+<td class="short-line">integer</td>
+<td class="short-line">Set to 2</td>
+</tr>
+<tr>
+<td class="short-line">includeExpired</td>
+<td class="short-line">boolean</td>
+<td class="long-line">Specify whether to return historical purchases (canceled, expired, and terminated subscriptions or digital products), in addition to the active purchases. The default is false (only current purchases are returned).</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
-| Field         | Type              | Description                                                                                                          |
-| ------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------- |
-| command       | string            | Set to the name of the command: "GetCatalog", "QueryPurchaseOptions", "DoOrder", or "GetPurchases".                  |
-| status        | associative array | The command completion status, which may be one of the following values: <br />$\{request-status-status-values-list} |
-| statusMessage | string            | A text description of the command completion status.                                                                 |
-| context       | associative array | Used to match the **requestStatus** with **request**. For example, you can set this to \{"id: DoOrder_1"}.           |
-| result        | associative array | Includes the product, purchase option, purchase, and/or entitlement data returned by the command.                    |
-
-\{#request-status-status-values-list}
-
-* **2**  Interrupted
-* **1**  Success
-* **0**  Network error
-* **-1** HTTP Error/Timeout
-* **-2** Timeout
-* **-3** Unknown Error
-* **-4** Invalid
+<br />
 
 ### **GetPurchases**
 

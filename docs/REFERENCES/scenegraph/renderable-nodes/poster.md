@@ -10,19 +10,6 @@ metadata:
 next:
   description: ''
 ---
----
-title: "Poster"
-excerpt: ''
-deprecated: false
-hidden: true
-metadata:
-  title: ''
-  description: ''
-  robots: index
-next:
-  description: ''
----
-
 Extends [**Group**](doc:group)
 
 The Poster node class draws an image with the top/left corner located at the origin of the node local coordinate system. Because the Poster node class extends the Group node class, a Poster node can have child nodes. For example, a Poster node might have a Label node as a child that draws an annotation on top of the poster.

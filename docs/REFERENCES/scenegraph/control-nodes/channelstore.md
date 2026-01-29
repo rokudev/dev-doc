@@ -44,7 +44,7 @@ Each of the commands starts a sequence of actions associated with the financial 
       <td />
 
       <td>READ\_WRITE</td>
-      <td>Specifies the command to be executed:<br /><ul><li><a href="#getuserdata">getUserData</a></li><li><a href="#getuserregiondata">getUserRegionData</a> ()</li><li><a href="#getcatalog">getCatalog</a> and <a href="#getstorecatalog">getStoreCatalog</a></li><li><a href="#doorder">doOrder</a></li><li><a href="#getpurchases">getPurchases</a> and <a href="#getallpurchases">getAllPurchases</a></li><li><a href="#storechannelcreddata">storeChannelCredData</a></li><li><a href="#getchannelcred">getChannelCred</a></li><li><a href="#getdeviceattestationtoken">getDeviceAttestationToken</a></li><li><a href="#requestpartnerorder">requestPartnerOrder</a></li><li><a href="#confirmpartnerorder">confirmPartnerOrder</a></li></ul></td>
+      <td>Specifies the command to be executed:<br /><ul><li><a href="#getuserdata">getUserData</a></li><li><a href="#getuserregiondata">getUserRegionData</a></li><li><a href="#getcatalog">getCatalog</a> and <a href="#getstorecatalog">getStoreCatalog</a></li><li><a href="#doorder">doOrder</a></li><li><a href="#getpurchases">getPurchases</a> and <a href="#getallpurchases">getAllPurchases</a></li><li><a href="#storechannelcreddata">storeChannelCredData</a></li><li><a href="#getchannelcred">getChannelCred</a></li><li><a href="#getdeviceattestationtoken">getDeviceAttestationToken</a></li><li><a href="#requestpartnerorder">requestPartnerOrder</a></li><li><a href="#confirmpartnerorder">confirmPartnerOrder</a></li></ul></td>
     </tr>
   </tbody>
 </table>

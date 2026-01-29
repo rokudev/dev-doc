@@ -61,7 +61,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">Boolean</td>
 <td class="short-line">true</td>
 <td class="short-line">READ_WRITE</td>
-<td class="long-line">If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the [ifSGNodeFocus](doc:ifsgnodefocus) interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
+<td class="long-line">If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the [ifSGNodeFocus](https://roku-ent.readme.io/dev/docs/ifsgnodefocus) interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
 </tr>
 <tr>
 <td class="short-line">dialog</td>
@@ -75,7 +75,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">assocarray</td>
 <td class="short-line"></td>
 <td class="short-line">READ_WRITE</td>
-<td class="long-line">This read-only field is set when the Scene is initialized. It indicates which of an app's design resolutions (per manifest's ui_resolutions value) is being used, based on the player model and connected display type. Previously, a developer could deduct the same information by using both [roDeviceInfo.GetUIResolution](doc:roDeviceInfo.getuiresolution) and [roAppInfo.getValue](doc:ifappinfo.md#getvaluekey-as-string-as-string). This new field simplifies the process.  <br><br>The field is set to an AA with two numeric-valued keys — width and height — as well as a string value indicating the current design resolution ("HD", "FHD" or "SD"). <br><br><pre><code>Brightscript Debugger&gt; ? myNode.getScene().currentDesignResolution
+<td class="long-line">This read-only field is set when the Scene is initialized. It indicates which of an app's design resolutions (per manifest's ui_resolutions value) is being used, based on the player model and connected display type. Previously, a developer could deduct the same information by using both [roDeviceInfo.GetUIResolution](https://roku-ent.readme.io/dev/docs/roDeviceInfo.getuiresolution) and [roAppInfo.getValue](https://roku-ent.readme.io/dev/docs/ifappinfo.md#getvaluekey-as-string-as-string). This new field simplifies the process.  <br><br>The field is set to an AA with two numeric-valued keys — width and height — as well as a string value indicating the current design resolution ("HD", "FHD" or "SD"). <br><br><pre><code>Brightscript Debugger&gt; ? myNode.getScene().currentDesignResolution
 &lt;Component: roAssociativeArray&gt; =
 {
     height: 720
@@ -89,7 +89,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">RSGPalette node</td>
 <td class="short-line">not set</td>
 <td class="short-line">READ_WRITE</td>
-<td class="long-line">Defines the default color palette used by those nodes that have a <strong>palette</strong> field (for example, the <strong>Scene</strong> node, [standard dialogs](doc:standard-dialog), [dynamic custom voice keyboards](doc:dynamic-keyboard-base), and so on).<br><br>Apps typically set the <strong>Scene.palette</strong> field to consistently color the standard dialogs and keyboards in the app.<br><br>Nodes that include a <strong>palette</strong> field can be set to an <strong>RSGPalette</strong> node to override the default colors specified in the <strong>Scene</strong> node.<br><br>If a node that supports a palette does not set its <strong>palette</strong> filed, the node looks up the scene graph until it finds a node with its <strong>palette</strong> field set.<br><br>If no ancestor node is found with its palette field set, the default color palette is used (grey with white text).<br><br>The RSGPalette color values used by the Scene node are as follows:<br><div class="hscroll"><table>
+<td class="long-line">Defines the default color palette used by those nodes that have a <strong>palette</strong> field (for example, the <strong>Scene</strong> node, [standard dialogs](https://roku-ent.readme.io/dev/docs/standard-dialog), [dynamic custom voice keyboards](https://roku-ent.readme.io/dev/docs/dynamic-keyboard-base), and so on).<br><br>Apps typically set the <strong>Scene.palette</strong> field to consistently color the standard dialogs and keyboards in the app.<br><br>Nodes that include a <strong>palette</strong> field can be set to an <strong>RSGPalette</strong> node to override the default colors specified in the <strong>Scene</strong> node.<br><br>If a node that supports a palette does not set its <strong>palette</strong> filed, the node looks up the scene graph until it finds a node with its <strong>palette</strong> field set.<br><br>If no ancestor node is found with its palette field set, the default color palette is used (grey with white text).<br><br>The RSGPalette color values used by the Scene node are as follows:<br><div class="hscroll"><table>
 <thead>
 <tr>
 <th class="short-line">Palette Color Name</th>
@@ -116,22 +116,22 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogItemColor</td>
 <td class="long-line">Blend color for the following items:<br><ul>
-<li>[StdDlgProgressItem's](doc:std-dlg-progress-item) spinner bitmap</li>
-<li>[StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic</li>
+<li>[StdDlgProgressItem's](https://roku-ent.readme.io/dev/docs/std-dlg-progress-item) spinner bitmap</li>
+<li>[StdDlgDeterminateProgressItem's](https://roku-ent.readme.io/dev/docs/std-dlg-determinate-progress-item) graphic</li>
 </ul></td>
 </tr>
 <tr>
 <td class="short-line">DialogTextColor</td>
 <td class="long-line">Color for the text in the following items:<br><ul>
-<li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
-<li>All [content area items](doc:std-dlg-item-base), except for [StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item).</li>
-<li>[Title area](doc:std-dlg-title-area#fields). Unfocused button.</li>
+<li>[StdDlgTextItem](https://roku-ent.readme.io/dev/docs/std-dlg-text-item) and [StdDlgGraphicItem](https://roku-ent.readme.io/dev/docs/std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
+<li>All [content area items](https://roku-ent.readme.io/dev/docs/std-dlg-item-base), except for [StdDlgTextItem](https://roku-ent.readme.io/dev/docs/std-dlg-text-item) and [StdDlgGraphicItem](https://roku-ent.readme.io/dev/docs/std-dlg-graphic-item).</li>
+<li>[Title area](https://roku-ent.readme.io/dev/docs/std-dlg-title-area#fields). Unfocused button.</li>
 </ul></td>
 </tr>
 <tr>
 <td class="short-line">DialogFocusColor</td>
 <td class="long-line">Blend color for the following:<br><ul>
-<li>The [button area](doc:std-dlg-button-area#fields) focus bitmap.</li>
+<li>The [button area](https://roku-ent.readme.io/dev/docs/std-dlg-button-area#fields) focus bitmap.</li>
 <li>The focused scrollbar thumb.</li>
 </ul></td>
 </tr>
@@ -142,7 +142,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogSecondaryTextColor</td>
 <td class="long-line">Color for the text of in the following items:<br><ul>
-<li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
+<li>[StdDlgTextItem](https://roku-ent.readme.io/dev/docs/std-dlg-text-item) and [StdDlgGraphicItem](https://roku-ent.readme.io/dev/docs/std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
 <li>Disabled button.</li>
 </ul></td>
 </tr>
@@ -150,7 +150,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">DialogSecondaryItemColor</td>
 <td class="long-line">Color for the following items:<br><ul>
 <li>The divider displayed below the title area.</li>
-<li>The unfilled portion of the [StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic.</li>
+<li>The unfilled portion of the [StdDlgDeterminateProgressItem's](https://roku-ent.readme.io/dev/docs/std-dlg-determinate-progress-item) graphic.</li>
 </ul></td>
 </tr>
 <tr>
@@ -164,7 +164,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogFootprintColor</td>
 <td class="long-line">The blend color for the following items:<br><ul>
-<li>The button focus footprint bitmap that is displayed when the [button area](doc:std-dlg-button-area#fields) does not have focus.</li>
+<li>The button focus footprint bitmap that is displayed when the [button area](https://roku-ent.readme.io/dev/docs/std-dlg-button-area#fields) does not have focus.</li>
 <li>Unfocused scrollbar thumb and scrollbar track.</li>
 </ul></td>
 </tr>

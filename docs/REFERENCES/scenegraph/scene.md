@@ -61,7 +61,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">Boolean</td>
 <td class="short-line">true</td>
 <td class="short-line">READ_WRITE</td>
-<td class="long-line">If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the <a href="https://roku-ent.readme.io/dev/docs/ifsgnodefocus">ifSGNodeFocus</a> interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
+<td class="long-line">If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the <a href="doc:ifsgnodefocus">ifSGNodeFocus</a> interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
 </tr>
 <tr>
 <td class="short-line">dialog</td>

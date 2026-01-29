@@ -573,12 +573,6 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 }
 ```
 
-| Field         | Type              | Description                                                            |
-| :------------ | :---------------- | :--------------------------------------------------------------------- |
-| requestStatus | associative array | Returns the request's command and parameters: $\{request-status-table} |
-
-  
-
 <HTMLBlock>{`
 <table>
 <thead>

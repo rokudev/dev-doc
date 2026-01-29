@@ -2,7 +2,7 @@
 
 ## Avails and Committed Title Lists for The Roku Channel
 
-Roku requests an initial launch list of titles/episodes/shortForm videos in the current library that are available to Roku at the time of onboarding and a schedule when the content will be refreshed. For ongoing production, Roku requests that a Committed Title List be provided **60** days prior to licensing window start and the content be delivered in accordance with [The Roku Channel Ingest Specification](https://go.roku.com/ingest-ovp-specs) at least 30 days before licensing window start to allow ample time for selection, ingest, processing, and QC of the content before it goes live on The Roku Channel. 
+Roku requests an initial launch list of titles/episodes/shortForm videos in the current library that are available to Roku at the time of onboarding and a schedule when the content will be refreshed. For ongoing production, Roku requests that a Committed Title List be provided **60** days prior to licensing window start and the content be delivered in accordance with [The Roku Channel Ingest Specification](https://go.roku.com/ingest-ovp-specs) at least 30 days before licensing window start to allow ample time for selection, ingest, processing, and QC of the content before it goes live on The Roku Channel.
 
 ### Roku content policies
 
@@ -317,7 +317,7 @@ When submitting avails and Committed Title Lists via Excel workbook, all require
 </tr>
 <tr>
 <td>Tags</td>
-<td>Free form field to provide keywords, tags, categories, or keywords to be used to surface content on The Roku Channel UI. Please see our <a href="https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md">Best Practices</a> page on how best to provide tags to The Roku Channel</td>
+<td>Free form field to provide keywords, tags, categories, or keywords to be used to surface content on The Roku Channel UI. Please see our <a href="https://roku-ent.readme.io/dev/docs/content-tags-and-metadata">Best Practices</a> page on how best to provide tags to The Roku Channel</td>
 <td>string</td>
 <td>exciting, timely, political</td>
 <td>optional</td>

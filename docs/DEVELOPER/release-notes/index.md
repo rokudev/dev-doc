@@ -231,7 +231,7 @@ number of items. </p>
 <p>Here is the list of key developer-facing Roku OS 12.0 updates:</p>
 <h4 id="brightscript-apis">BrightScript APIs</h4>
 <ul>
-<li><p>[<strong>Localized date and time formats</strong>](doc:ifdatetime#asdatestringlocformat-as-string-as-string) — The <a href="https://roku-ent.readme.io/dev/docs/rodatetime.md">roDateTime</a> component includes new <strong>asDateStringLoc()</strong> and <strong>asTimeStringLoc()</strong> methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.</p>
+<li><p>[<strong>Localized date and time formats</strong>](doc:ifdatetime#asdatestringlocformat-as-string-as-string) — The <a href="https://roku-ent.readme.io/dev/docs/rodatetime">roDateTime</a> component includes new <strong>asDateStringLoc()</strong> and <strong>asTimeStringLoc()</strong> methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.</p>
 </li>
 <li><p>[<strong>IPv6 addresses returned by roDeviceInfo.getConnectionInfo() method</strong>](doc:ifdeviceinfo#getconnectioninfo-as-object) — The [roDeviceInfo.getConnectionInfo() method](doc:ifdeviceinfo#getconnectioninfo-as-object) now returns an <strong>ipv6</strong> field, which is an array listing the IPv6 addresses used for the device connection.</p>
 </li>
@@ -308,7 +308,7 @@ number of items. </p>
 </ul>
 <h4 id="deprecated-sunset-apis">Deprecated/Sunset APIs</h4>
 <ul>
-<li><p>[<strong>SDK1 visual screen components sunset</strong>](doc:deprecated-apis#deprecated-components-january-1-2018) — The <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were deprecated in 2017</a> have been completely removed from the Roku OS. As a result, apps that still had these <a href="https://roku-ent.readme.io/dev/docs/deprecated-apis.md#deprecated-components-january-1-2018">sunset components</a> as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).</p>
+<li><p>[<strong>SDK1 visual screen components sunset</strong>](doc:deprecated-apis#deprecated-components-january-1-2018) — The <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were deprecated in 2017</a> have been completely removed from the Roku OS. As a result, apps that still had these <a href="https://roku-ent.readme.io/dev/docs/deprecated-apis#deprecated-components-january-1-2018">sunset components</a> as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).</p>
 </li>
 <li><p><strong>[roUrlTransfer.enableFreshConnection()](doc:deprecated-apis#rourltransferenablefreshconnection)</strong> — The Roku OS no longer supports the [<strong>roUrlTransfer.enableFreshConnection()</strong> function](doc:ifurltransfer#enablefreshconnectionenable-as-boolean-as-boolean). Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).</p>
 </li>
@@ -333,7 +333,7 @@ number of items. </p>
 </li>
 </ul>
 </li>
-<li><p><strong>[Option for Label and TextEditBox nodes to display the end of overflowing text](doc:label#fields)</strong> — The [<strong>Label</strong>](doc:label#fields) and <a href="docs/references/scenegraph/widget-nodes/texteditbox.md"><strong>TextEditBox</strong></a> nodes now include a <strong>leadingEllipsis</strong> flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, &quot;the quick brown fox jumps over the lazy dog&quot; would be truncated to &quot;...jumps over the lazy dog&quot;. When the flag is false, the start of the text is shown (&quot;the quick brown fox jumps...&quot;).</p>
+<li><p><strong>[Option for Label and TextEditBox nodes to display the end of overflowing text](doc:label#fields)</strong> — The [<strong>Label</strong>](doc:label#fields) and <a href="docs/references/scenegraph/widget-nodes/texteditbox"><strong>TextEditBox</strong></a> nodes now include a <strong>leadingEllipsis</strong> flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, &quot;the quick brown fox jumps over the lazy dog&quot; would be truncated to &quot;...jumps over the lazy dog&quot;. When the flag is false, the start of the text is shown (&quot;the quick brown fox jumps...&quot;).</p>
 </li>
 </ul>
 <ul>
@@ -1183,7 +1183,7 @@ node, and whether it involved a rendezvous. ([Testing and debugging Roku apps](d
 <li><strong>Shorthand debugger commands</strong> — Shorthand alternatives can now be
 used to replace many debugger commands. ([Testing and debugging Roku apps](doc:debugging-channels))</li>
 </ul>
-<h4 id="new-manifest-https-github-com-rokudev-docs-blob-master-develop-specifications-manifest-md-entry">New <a href="https://github.com/rokudev/docs/blob/master/develop/specifications/manifest.md">manifest</a> entry</h4>
+<h4 id="new-manifest-https-github-com-rokudev-docs-blob-master-develop-specifications-manifest-md-entry">New <a href="https://github.com/rokudev/docs/blob/master/develop/specifications/manifest">manifest</a> entry</h4>
 <ul>
 <li>splash_rsg_optimization=1: Remove flicker between the splash
 screen and initial screen during app launch of SceneGraph

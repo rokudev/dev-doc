@@ -24,7 +24,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
 * **Voice request trigger**. Upon launch, apps can call the [roAppManager.StartVoiceActionSelectionRequest()](doc:ifappmanager) function to trigger a voice request for the viewer to select a user profile on devices that are paired with a hands-free Roku Voice remote control, such as the Roku Voice Remote Pro.
 
-  Before calling the **StartVoiceActionSelectionRequest()** function, developers can call the [roDeviceInfo.HasFeature("handsfree_voice")](doc:ifdeviceinfo.md#hasfeaturefeature-as-string-as-boolean) function to check whether a Roku device is paired with a hands-free Roku remote control.
+  Before calling the **StartVoiceActionSelectionRequest()** function, developers can call the [roDeviceInfo.HasFeature("handsfree_voice")](doc:ifdeviceinfo#hasfeaturefeature-as-string-as-boolean) function to check whether a Roku device is paired with a hands-free Roku remote control.
 
   ```
   appMgr = CreateObject("roAppManager")

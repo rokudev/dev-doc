@@ -324,6 +324,6 @@ You can also use the equivalent sgnodes debugger commands (see Special SceneGrap
 
 ## Debugging video lesson
 
-You can learn how to debug apps by watching the [Debugging channels](doc:debugging) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
+You can learn how to debug apps by watching the [Debugging channels](doc:debugging) video lesson in Roku's [SceneGraph: Build a Channel online video course](doc:rsg).
 
 This lesson describes how to view the crash logs, stack traces, and app performance metrics in the console. And it guides you on how to use the interactive debugger to type commands for checking and updating variable values, calling functions, and stepping through the application.

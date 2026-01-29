@@ -8,7 +8,7 @@ This specification describes the ingest specifications and EPG requirements requ
 
 The Roku Channel feed format follows the JSON-Schema Draft 4. All the properties in the schema are case sensitive. Before submitting a feed, make sure it is a valid JSON file. You can do that by using an IDE or free online tools, such as [JSON Schema Validator](https://www.jsonschemavalidator.net/) or [JSON Schema Lint](https://jsonschemalint.com/#!/version/draft-07/markup/json).
 
-For guidelines about presenting your channel's EPG, see [EPG on The Roku Channel](/trc-docs/live-linear/epg-on-trc.md).
+For guidelines about presenting your channel's EPG, see [EPG on The Roku Channel](/trc-docs/live-linear/epg-on-trc).
 
 ### A note about deduplication of metadata
 
@@ -183,7 +183,7 @@ The following additional details are required for Roku discrete live events (DLE
 
 - Ensure all event metadata is delivered to your Roku rep for the event as early as possible
   - **A Gracenote TMS ID for the event is preferred**
-  - Metadata fields can be found here based on event type: https://developer.roku.com/en-gb/trc-docs/live-linear/epg-on-trc.md#metadata-by-content-type
+  - Metadata fields can be found here based on event type: https://developer.roku.com/en-gb/trc-docs/live-linear/epg-on-trc#metadata-by-content-type
 
 ### Recurring events
 
@@ -966,9 +966,7 @@ EPG Requirement
 
 15-minute minimum duration for content block
 
-For full details and guidance on constructing your EPG, please refer this this guide.
-
-https://developer.roku.com/en-ot/trc-docs/live-linear/epg-on-trc.md
+For full details and guidance on constructing your EPG, please refer this this [guide](doc:epg-on-trc).
 
 Notes:
 

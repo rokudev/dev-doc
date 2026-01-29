@@ -82,7 +82,7 @@ The [On-device authentication sample](https://github.com/rokudev/on-device-authe
 
 ## Video lesson
 
-You can learn how to implement Roku Pay in order to offer subscriptions in your app by watching the [Offering Subscriptions](doc:subscriptions) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
+You can learn how to implement Roku Pay in order to offer subscriptions in your app by watching the [Offering Subscriptions](doc:subscriptions) video lesson in Roku's [SceneGraph: Build a Channel online video course](doc:rsg).
 
 This lesson describes how to monetize content by offering subscriptions, directly on-device, through Roku Pay. It explains how to get started with Roku Pay, including how to create an app, in-app products, and test users. It details the Roku Pay workflow from checking entitlements to completing purchases and granting access to content. It also summarizes how to integrate the Roku Pay Web Service  APIs into your backend system for validating, refunding, and canceling subscriptions.
 

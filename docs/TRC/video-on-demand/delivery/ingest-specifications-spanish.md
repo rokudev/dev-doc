@@ -62,12 +62,12 @@ El “contenido dirigido a niños” es contenido que: (i) está dirigido a niñ
 
 - Debe informarse a Roku de la intención de enviar o distribuir contenido dirigido a niños.
 - SE PROHÍBE el envío o la distribución de contenido dirigido a niños sin la aprobación expresa por escrito de Roku.
-- Cuando Roku aprueba el envío o la distribución de contenido dirigido a niños, todos los metadatos del contenido deben incluir lo que se detalla a continuación: 
-  - Para contenido de películas: 
+- Cuando Roku aprueba el envío o la distribución de contenido dirigido a niños, todos los metadatos del contenido deben incluir lo que se detalla a continuación:
+  - Para contenido de películas:
     - La leyenda `<tag>` “kidsdirected” (todo en minúscula) debe incluirse como una de las etiquetas para cada película
     - Debe incluirse una [clasificación](#valores-de-clasificación-por-sistema-de-clasificación-y-país) por edades válida de MPAA, USA_PR o TV. Las clasificaciones “UNRATED” y “Not Rated” no son aceptables para el contenido dirigido a niños.
 
-  - Para contenido de series por episodios: 
+  - Para contenido de series por episodios:
     - La leyenda `<tag>` “kidsdirected” (todo en minúscula) debe incluirse como una de las etiquetas de la serie y los episodios para cada serie y episodio
     - Debe incluirse una [clasificación](#valores-de-clasificación-por-sistema-de-clasificación-y-país) por edades de TV válida. Las clasificaciones “UNRATED” y “Not Rated” no son aceptables para el contenido dirigido a niños.
 
@@ -95,7 +95,7 @@ No envíes hojas de referencia musical con los entregables del paquete de video 
 ## Experiencia de uso en Roku Channel
 
 
-Roku aumenta los metadatos y las ilustraciones que aparecen en Roku Channel en los dispositivos Roku, navegadores web, apps móviles y otros reproductores fuera de la plataforma con datos suministrados por la base de datos de Gracenote, siempre que estén disponibles. Los datos de Gracenote contribuyen a una experiencia unificada de un mismo título en todas las plataformas y en todo el ecosistema de Roku. Roku intentará que todo el contenido entregado por nuestras empresas socias coincida con el registro correspondiente en la base de datos de Gracenote. *En este momento, todos los metadatos e ilustraciones que aparecen en Roku Channel provienen de Gracenote, si dicho contenido se encuentra en su base de datos.* 
+Roku aumenta los metadatos y las ilustraciones que aparecen en Roku Channel en los dispositivos Roku, navegadores web, apps móviles y otros reproductores fuera de la plataforma con datos suministrados por la base de datos de Gracenote, siempre que estén disponibles. Los datos de Gracenote contribuyen a una experiencia unificada de un mismo título en todas las plataformas y en todo el ecosistema de Roku. Roku intentará que todo el contenido entregado por nuestras empresas socias coincida con el registro correspondiente en la base de datos de Gracenote. *En este momento, todos los metadatos e ilustraciones que aparecen en Roku Channel provienen de Gracenote, si dicho contenido se encuentra en su base de datos.*
 
 Gracenote utiliza la “personalización de las ilustraciones”, mediante la cual proporciona imágenes alternativas para diversificar las ilustraciones de los títulos para distintas personas usuarias en función de varios factores (demografía, popularidad, etc.). Este cambio ha aumentado la participación de los usuarios en nuestra plataforma. Gracenote acepta el arte clave oficial de las empresas socias, sin embargo, no todas las personas usuarias verán el arte oficial, a menos que el algoritmo lo muestre.  Gracenote suministra ~3 imágenes únicas y crea versiones alternativas de ilustraciones procedentes de diversos lugares (por ej., emisora original, estudio de producción, agencia creativa). Gracenote le informó a Roku que todas las imágenes están sujetas a una licencia de uso justo y que aplica los mismos estándares de calidad tanto a las imágenes personalizadas como al arte clave suministrado por las empresas socias, por ejemplo, sin grandes revelaciones de la trama, sin imágenes oscuras, borrosas o granuladas, sin imágenes violentas o sugestivas y sin referencias al tabaquismo.
 
@@ -104,12 +104,12 @@ Nuestros sistemas utilizan varios métodos para hacer coincidir un título con s
 - El título exacto de una serie, película, especial de TV o video de formato corto.
 - Las fechas de lanzamiento que correspondan al año de lanzamiento original del título en cualquier plataforma.
 - La numeración exacta de las temporadas y los episodios según el orden de lanzamiento original.
-- Los ID de TMS (Gracenote) precisos según el tipo de contenido. 
+- Los ID de TMS (Gracenote) precisos según el tipo de contenido.
   - El contenido clasificado como un episodio en Gracenote debe entregarse a Roku como un episodio.
   - El contenido clasificado como una película en Gracenote debe entregarse a Roku como una película.
   - El contenido clasificado como un especial de TV en Gracenote debe entregarse a Roku como un especial de TV.
 
-Las empresas socias pueden ayudar en la selección de su contenido en Roku Channel al brindar etiquetas con cada película, episodio o clip. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas y los géneros proporcionados para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan, más formas habrá de seleccionar y presentar el contenido a la persona usuaria final. Consulta [Prácticas recomendadas: etiquetas y metadatos del contenido](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md) para obtener más información.
+Las empresas socias pueden ayudar en la selección de su contenido en Roku Channel al brindar etiquetas con cada película, episodio o clip. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas y los géneros proporcionados para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan, más formas habrá de seleccionar y presentar el contenido a la persona usuaria final. Consulta [Prácticas recomendadas: etiquetas y metadatos del contenido](doc:content-tags-and-metadata) para obtener más información.
 
 ## Pautas de activos multimedia
 
@@ -154,7 +154,7 @@ Roku admite una gran variedad de velocidades de fotogramas y tipos de escaneo. T
 | FHD     | 1920  | 1080 | 1:1 (pixeles cuadrados)          |
 | UHD\*\* | 3840  | 2160 | 1:1 (pixeles cuadrados)          |
 
-*\*\*La resolución UHD solo se admite como resolución de entrada. Actualmente, Roku no codifica ni muestra video en formato 4K UHD en Roku Channel.* 
+*\*\*La resolución UHD solo se admite como resolución de entrada. Actualmente, Roku no codifica ni muestra video en formato 4K UHD en Roku Channel.*
 
 #### Formatos de video
 
@@ -204,7 +204,7 @@ Roku admite una gran variedad de velocidades de fotogramas y tipos de escaneo. T
 - Es preferible el audio PCM de 16 bits o 24 bits a 48 kHz con la tasa de bits más alta.
 - El audio Dolby AC3 es compatible.
 
-**Roku prefiere recibir audio 5.1 y estéreo siempre que sea posible.** 
+**Roku prefiere recibir audio 5.1 y estéreo siempre que sea posible.**
 
 | Sonido envolvente 5.1 y sonido estéreo 2.0 | Etiqueta del canal        |
 | ------------------------------------------ | ------------------------- |
@@ -217,7 +217,7 @@ Roku admite una gran variedad de velocidades de fotogramas y tipos de escaneo. T
 | Canal 7                                    | Estéreo izquierdo (SL)    |
 | Canal 8                                    | Estéreo derecho (SR)      |
 
-**Solo se acepta sonido envolvente 5.1 si no se dispone de 5.1 y estéreo** 
+**Solo se acepta sonido envolvente 5.1 si no se dispone de 5.1 y estéreo**
 
 | Solo sonido envolvente 5.1 | Etiqueta del canal        |
 | -------------------------- | ------------------------- |
@@ -228,7 +228,7 @@ Roku admite una gran variedad de velocidades de fotogramas y tipos de escaneo. T
 | Canal 5                    | Envolvente izquierdo (Ls) |
 | Canal 6                    | Envolvente derecho (Rs)   |
 
-**Solo se acepta sonido estéreo si no se dispone de 5.1 y estéreo o sonido envolvente 5.1 solo.** 
+**Solo se acepta sonido estéreo si no se dispone de 5.1 y estéreo o sonido envolvente 5.1 solo.**
 
 | Estéreo 2.0 | Etiqueta del canal     |
 | ----------- | ---------------------- |
@@ -296,7 +296,7 @@ Para el contenido destinado a territorios fuera de EE. UU., Roku cumplirá con l
 Los subtítulos descriptivos pueden proporcionarse en una de las dos siguientes formas:
 
 - EIA-608 o CEA-708 incrustados en el flujo de video del archivo de video
-- Archivo de subtítulos descriptivos sidecar 
+- Archivo de subtítulos descriptivos sidecar
 - Roku prefiere un archivo de subtítulos sidecar legible por humanos como .ttml, .dfxp, .vtt o .srt.
 - Más adelante, puedes ver una lista de todos los archivos de subtítulos descriptivos sidecar compatibles.
 - Los subtítulos descriptivos sidecar deben comenzar en la hora de código de tiempo 00:00:00:00, ya que el codificador de Roku no respeta el código de tiempo incrustado en el archivo de video.
@@ -304,13 +304,13 @@ Los subtítulos descriptivos pueden proporcionarse en una de las dos siguientes 
 - Se admiten datos de posición TTML y WebVTT.
 - Los datos de posición proporcionados en los subtítulos descriptivos TTML y WebVTT se respetarán tal y como se definen en el archivo proporcionado.
 
-*Solo se admiten los siguientes estilos de texto para los subtítulos descriptivos:* 
+*Solo se admiten los siguientes estilos de texto para los subtítulos descriptivos:*
 
-- *etiquetas en negrita <b> y cursiva <i>* 
-- *color del texto* 
-- *posicionamiento del texto* 
+- *etiquetas en negrita <b> y cursiva <i>*
+- *color del texto*
+- *posicionamiento del texto*
 
-*Los archivos de video de Quicktime deben ir acompañados de un archivo de subtítulos descriptivos sidecar. Roku no admite la pista de texto de Quicktime.* 
+*Los archivos de video de Quicktime deben ir acompañados de un archivo de subtítulos descriptivos sidecar. Roku no admite la pista de texto de Quicktime.*
 
 | **Nombre del formato**-                     | Admite datos de posición | **Extensión del archivo** | Codificación  | **Tipo de entrega**-        | **Idiomas**-                                                 |
 | ------------------------------------------- | ------------------------ | ------------------------- | ------------- | --------------------------- | ------------------------------------------------------------ |
@@ -334,11 +334,11 @@ El contenido que se entregue con audio en un idioma que no sea el principal del 
 - Se admiten datos de posición TTML y WebVTT.
 - Los datos de posición proporcionados en los subtítulos descriptivos TTML y WebVTT se respetarán tal y como se definen en el archivo proporcionado.
 
-*Solo se admiten los siguientes estilos de texto para los subtítulos:* 
+*Solo se admiten los siguientes estilos de texto para los subtítulos:*
 
-- *etiquetas en negrita <b> y cursiva <i>* 
-- *color del texto* 
-- *posicionamiento del texto* 
+- *etiquetas en negrita <b> y cursiva <i>*
+- *color del texto*
+- *posicionamiento del texto*
 
 | **Nombre del formato**                      | Admite datos de posición | **Extensión delarchivo** | Codificación | **Tipo de entrega** | **Idiomas**                                                  |
 | ------------------------------------------- | ------------------------ | ------------------------ | ------------ | ------------------- | ------------------------------------------------------------ |
@@ -398,7 +398,7 @@ Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se uti
 
 #### Requisitos de ilustración mínimos por tipo de contenido
 
-**Requisitos de ilustración para contenido de clips** 
+**Requisitos de ilustración para contenido de clips**
 
 | Ilustración        | Obligatorio o preferido | Notas                                                       |
 | ------------------ | ----------------------- | ----------------------------------------------------------- |
@@ -448,37 +448,37 @@ Ejemplo resaltado de la imagen en 16:9 sin texto
 
 ![roku400px - movieDetails](https://image.roku.com/ZHZscHItMTc2/movieDetail.jpg)
 
-**Ilustraciones de series: experiencia de navegación** 
+**Ilustraciones de series: experiencia de navegación**
 
 Ejemplo resaltado de la imagen de la serie en 16:9 con texto y tratamiento de título
 
 ![roku400px - seriesGrid](https://image.roku.com/ZHZscHItMTc2/seriesBrowse.jpg)
 
-**Ilustraciones de series: experiencia de los detalles** 
+**Ilustraciones de series: experiencia de los detalles**
 
 Ejemplo resaltado de la imagen de la serie en 16:9 sin texto
 
 ![roku400px - seriesDetail](https://image.roku.com/ZHZscHItMTc2/seriesDetails.jpg)
 
-**Ilustraciones de episodios: experiencia del selector de episodios** 
+**Ilustraciones de episodios: experiencia del selector de episodios**
 
 Ejemplo resaltado de las imágenes de los episodios en 16:9 sin texto
 
 ![roku400px - episodePicker](https://image.roku.com/ZHZscHItMTc2/episodePicker.jpg)
 
-**Ilustraciones de episodios: experiencia de los detalles de episodios** 
+**Ilustraciones de episodios: experiencia de los detalles de episodios**
 
 Ejemplo resaltado de la imagen del episodio en 16:9 sin texto
 
 ![roku400px - episodeDetail](https://image.roku.com/ZHZscHItMTc2/episodeDetail.jpg)
 
-**Ilustraciones de clips: experiencia de navegación** 
+**Ilustraciones de clips: experiencia de navegación**
 
 Ejemplo resaltado de la imagen en 16:9 con texto y tratamiento de título
 
 ![roku400px - clipGrid](https://image.roku.com/ZHZscHItMTc2/clipBrowse.jpg)
 
-**Ilustraciones de póster: experiencia de búsqueda** 
+**Ilustraciones de póster: experiencia de búsqueda**
 
 Ejemplo resaltado de la imagen en 2:3 con texto y tratamiento de título de la experiencia de búsqueda. Se prefieren las imágenes en 2:3 para los tipos de contenido de series y películas
 
@@ -508,7 +508,7 @@ Puedes consultar los pasos para crear claves SSH en la [documentación oficial d
 
 Roku proporcionará información sobre el host y el nombre de persona usuaria durante la incorporación.
 
-**Aspera Client** 
+**Aspera Client**
 [Descarga de Aspera Client](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client&release=All&platform=All&function=all)
 
 #### Ancho de banda de transferencia
@@ -531,7 +531,7 @@ Según el cliente que se utilice, hay diferentes configuraciones que pueden afec
 - Todos los archivos de video, subtítulos descriptivos e ilustraciones deben *entregarse antes de entregar los metadatos.*
 - Los archivos de producción DEBEN entregarse en la carpeta **`/prod`** . La automatización depende de la entrega de archivos en la ubicación correcta. Si no se entregan los archivos en la carpeta correcta, se producirán retrasos en el procesamiento o el contenido no se procesará en absoluto.
 - Los archivos de prueba pueden entregarse en la carpeta **`/testing`** .
-- Se prefiere que el contenido no se entregue en subcarpetas. En caso de que sea necesario crear subcarpetas, sigue las siguientes pautas: 
+- Se prefiere que el contenido no se entregue en subcarpetas. En caso de que sea necesario crear subcarpetas, sigue las siguientes pautas:
   - Las subcarpetas **no** deben comenzar con un guion bajo.
   - **No** separes los archivos en subcarpetas por tipo de archivo.
   - Todos los archivos multimedia de un mismo título (episodio, película o formato corto) deben entregarse en el mismo directorio.
@@ -542,7 +542,7 @@ Según el cliente que se utilice, hay diferentes configuraciones que pueden afec
 
 La ubicación de entrega es una ubicación temporal para que nuestras empresas socias carguen archivos para la ingesta en la biblioteca de contenido de Roku Channel. Tras completar la ingesta, la automatización moverá los archivos desde la ubicación de entrega hasta una ubicación de archivo en la que se almacenarán por tiempo indefinido. Se espera que todos los archivos cargados en la ubicación de entrega se ingieran en un plazo razonable que no supere los 30 días. Los metadatos válidos y completos deben entregarse poco después de la entrega de los archivos para garantizar la ingesta oportuna. Los archivos en la ubicación de entrega que no se hayan ingerido al cabo de 30 días están sujetos a eliminación.
 
-*Es posible hacer excepciones a la política de conservación de archivos para los archivos de la carpeta **`/testing`*** 
+*Es posible hacer excepciones a la política de conservación de archivos para los archivos de la carpeta **`/testing`***
 
 #### Denominación de archivos
 
@@ -713,7 +713,7 @@ Las etiquetas para merchandising/curación se pueden enviar a través del nodo d
 
 #### IDs TMS
 
-Los TMS IDs de Gracenote se pueden enviar a través del XML de MovieLabs MEC como un identificador con el Namespace TMSID en el nodo AltIdentifier. Consulte [el esquema MEC de MovieLabs](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link121) para conocer la estructura adecuada del nodo AltIdentifier 
+Los TMS IDs de Gracenote se pueden enviar a través del XML de MovieLabs MEC como un identificador con el Namespace TMSID en el nodo AltIdentifier. Consulte [el esquema MEC de MovieLabs](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link121) para conocer la estructura adecuada del nodo AltIdentifier
 
 <u>Ejemplo:</u>
 
@@ -726,12 +726,12 @@ Los TMS IDs de Gracenote se pueden enviar a través del XML de MovieLabs MEC com
 
 ####  Entrega MMC XML adBreak and cuePoint
 
-adBreak, intro credit, and end credit cuePoints pueden ser entregado en MovieLabs MMC XML in el nodo marcado, Por favor revise la siguiente información  [MovieLabs MMC Schema](https://movielabs.com/md/manifest/v1.10/manifest-v1.10/manifest-v1.10.html#Link184) para una apropiada estructura de los nodos de Markeres 
+adBreak, intro credit, and end credit cuePoints pueden ser entregado en MovieLabs MMC XML in el nodo marcado, Por favor revise la siguiente información  [MovieLabs MMC Schema](https://movielabs.com/md/manifest/v1.10/manifest-v1.10/manifest-v1.10.html#Link184) para una apropiada estructura de los nodos de Markeres
 <u>Ejemplo:</u>
 
 ```
       <manifest:Markers>
-      
+
       <!--Opening credit cuePoint inicio y fin-->
         <manifest:Marker>
           <manifest:Timecode format="seconds">155.071</manifest:Timecode>
@@ -743,9 +743,9 @@ adBreak, intro credit, and end credit cuePoints pueden ser entregado en MovieLab
           <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
           <manifest:Label>LFEI</manifest:Label>
         </manifest:Marker>
-        
+
         <!--End credit cuePoint inicion y fin-->
-        
+
         <manifest:Marker>
           <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
           <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
@@ -756,7 +756,7 @@ adBreak, intro credit, and end credit cuePoints pueden ser entregado en MovieLab
           <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
           <manifest:Label>LFUN</manifest:Label>
         </manifest:Marker>
-        
+
         <!--adBreak cuePoints (Roku solo necesita un punto de inicio. Nuestro reproductor, pausara efectivamente la reproduccion del video en este punto, reproducira el anuncion, y reanudara desde este mismo punto)-->
 
         <manifest:Marker>
@@ -798,13 +798,13 @@ Roku utiliza Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html) 
 5. Uso: valida schema.xsd instance.xml (asegúrate de apuntar schema.xsd a mdmec-v2.9.xsd para MEC, y manifest-v1.10.xsd para MMC)
 6. A partir del resultado de la línea de comandos, puedes saber si ese xml es válido o no.
 
-**Uso de ejemplo** 
+**Uso de ejemplo**
 
 ```
 ./validate ~/dev/movielabsSpec/schema/mdmec-v2.9.xsd /path/to/file/directory/MEC_SAMPLE_123456789.xml
 ```
 
-**Respuesta de ejemplo** 
+**Respuesta de ejemplo**
 
 ```
 XMLBEANS_LIB=./../lib
@@ -841,15 +841,15 @@ Roku utiliza un motor de transformación que puede “normalizar” diferentes f
 
 Roku Channel admite 3 tipos de contenido: tv, películas y clips. Todo el contenido debe entregarse como uno de estos 3 tipos. Los títulos deben entregarse a Roku Channel en el mismo tipo de contenido en el que el programa estaba disponible originalmente. Las siguientes definiciones pueden ser útiles para clasificar el contenido destinado a Roku Channel.
 
-**TV** 
+**TV**
 
 El contenido por episodios que se estructura en una jerarquía de serie --> temporada --> episodio debe entregarse según las especificaciones de TV.
 
-**Película** 
+**Película**
 
 Los títulos completos, de formato largo e independientes deben entregarse según las especificaciones de las películas. Cualquier programa que no está destinado a anidarse en una jerarquía de serie, temporada y episodio y dura más de 15 minutos debe considerarse una película. Esto incluye los especiales de TV independientes.
 
-**Clip** 
+**Clip**
 
 Los títulos de formato corto independientes que duran menos de 15 minutos deben entregarse según las especificaciones de clips.
 
@@ -917,7 +917,7 @@ Nunca deben utilizarse caracteres especiales en los nombres de archivo ni en las
 
 Se prefiere el formato XML. Se debe entregar un XML completo por cada archivo de video de película, clip o episodio de TV entregado. Los metadatos se deben entregar a través de Aspera en la misma carpeta que los archivos de video, subtítulos descriptivos e ilustraciones.
 
-**Formatos de metadatos compatibles** 
+**Formatos de metadatos compatibles**
 
 
 <table>
@@ -980,7 +980,7 @@ Las actualizaciones de metadatos deben entregarse en el mismo formato que los me
 
 Las actualizaciones de metadatos deben incluir **exactamente el mismo asset_id  que se incluyó cuando se realizó la ingesta del contenido por primera vez.**
 
-*Ponte en contacto con [contentoperations@roku.com](mailto:contentoperations@roku.com) si necesitas un listado completo de los asset_id  tal y como aparecen en el sistema de Roku Channel.* 
+*Ponte en contacto con [contentoperations@roku.com](mailto:contentoperations@roku.com) si necesitas un listado completo de los asset_id  tal y como aparecen en el sistema de Roku Channel.*
 
 Todas las referencias a nombres de archivo deben eliminarse de una actualización de solo metadatos. Esto incluye:
 
@@ -1006,15 +1006,15 @@ Algunos campos deben actualizarse en “grupos”. Para que la actualización se
 
 Carga la actualización de metadatos en la carpeta “prod” de Aspera
 
-*Si no ves reflejada la actualización en Roku Channel en un plazo de 24 horas, ponte en contacto con [contentoperations@roku.com](mailto:contentoperations@roku.com)* 
+*Si no ves reflejada la actualización en Roku Channel en un plazo de 24 horas, ponte en contacto con [contentoperations@roku.com](mailto:contentoperations@roku.com)*
 
-**Reemplazos y adiciones de archivos** 
+**Reemplazos y adiciones de archivos**
 
 Los reemplazos y las adiciones de archivos están automatizados y se procesarán de la misma manera que el contenido que necesita incorporarse en la biblioteca de contenido de Roku Channel. Un reemplazo de archivo reemplazará a un archivo que existe actualmente en la biblioteca de Roku Channel. Una adición de archivo agregará un nuevo archivo a un registro existente en la biblioteca de Roku Channel. Una adición de archivo se utiliza para agregar subtítulos o doblaje localizados a un registro existente. Sigue el procedimiento que se detalla a continuación para reemplazar uno o varios archivos.
 
 1. Los reemplazos y adiciones de archivos deben entregarse en el mismo formato que los metadatos para la ingesta.
-2. Los reemplazos y adiciones de archivos deben incluir **exactamente el mismo asset_id** que se incluyó cuando se realizó la ingesta del contenido por primera vez. 
-   - *Ponte en contacto con [contentoperations@roku.com](mailto:contentoperations@roku.com) si necesitas un listado completo de los asset_id tal y como aparecen en el sistema de Roku Channel.* 
+2. Los reemplazos y adiciones de archivos deben incluir **exactamente el mismo asset_id** que se incluyó cuando se realizó la ingesta del contenido por primera vez.
+   - *Ponte en contacto con [contentoperations@roku.com](mailto:contentoperations@roku.com) si necesitas un listado completo de los asset_id tal y como aparecen en el sistema de Roku Channel.*
 3. En el archivo de metadatos solo deben incluirse las referencias a los nombres de los archivos que se reemplazarán o agregarán. Cualquier archivo que no se reemplace o agregue no debe entregarse ni mencionarse en el archivo de metadatos.
 4. Si se reemplaza el archivo de video fuente y hay un cambio en la duración de la fuente, cualquier archivo relacionado (subtítulos descriptivos, subtítulos, doblajes de audio) también deberá reemplazarse.
 5. Los reemplazos de archivos requieren valores de idioma para su correcta actualización.
@@ -1022,7 +1022,7 @@ Los reemplazos y las adiciones de archivos están automatizados y se procesarán
 
 *Se recomienda proporcionar archivos de reemplazo con un nombre único, tanto en los metadatos como en el mismo archivo. Agregar un número de versión (_v2, _v3, etc.) es suficiente. Por ejemplo:* `título de_película_v2.mov`
 
-**Eliminación de contenido** 
+**Eliminación de contenido**
 
 Si los derechos cambian desde el momento en que el contenido se entregó originalmente a Roku y es necesario retirarlo de Roku Channel, ya sea de forma inmediata o programada, la fecha de finalización de la disponibilidad se puede cambiar mediante una actualización de metadatos como se define [más adelante](#actualización-de-metadatos-mdu-y-reemplazos-de-archivos). Se deben proporcionar actualizaciones explícitas para todos los territorios en los que se debe eliminar el contenido. Ten en cuenta que las fechas de finalización proporcionadas sin valores de tiempo específicos caducarán a las 11:59:59 p. m. de dicha fecha.
 
@@ -1048,7 +1048,7 @@ Si los derechos cambian desde el momento en que el contenido se entregó origina
 
 ### XML: campos de metadatos de películas
 
-**package** 
+**package**
 
 Define el tipo de versión del paquete
 
@@ -1056,7 +1056,7 @@ Define el tipo de versión del paquete
 | ------------------- | ----------------- | ----------- |
 | `/package/@version` | film5.0           | Obligatorio |
 
-<u>Ejemplo</u> 
+<u>Ejemplo</u>
 
 ```
 <package version="film5.0">
@@ -1076,7 +1076,7 @@ Nombre del estudio, cadena o propietario del contenido
 <provider>Roku Originals</provider>
 ```
 
-**language** 
+**language**
 
 Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -1090,7 +1090,7 @@ Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajust
 <language>en</language>
 ```
 
-**type** 
+**type**
 
 Define el tipo de contenido del paquete
 
@@ -1104,7 +1104,7 @@ Define el tipo de contenido del paquete
 <type>film</type>
 ```
 
-**asset_id** 
+**asset_id**
 
 Identificador único e inalterable de una película. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
 
@@ -1133,7 +1133,7 @@ ID de EIDR si existe uno
 <eidr></eidr>
 ```
 
-**tmsId** 
+**tmsId**
 
 ID de Gracenote si existe uno
 
@@ -1147,7 +1147,7 @@ ID de Gracenote si existe uno
 <tmsId></tmsId>
 ```
 
-**title** 
+**title**
 
 Título de la película. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
 
@@ -1161,7 +1161,7 @@ Título de la película. Incluye únicamente el nombre del contenido tal y como 
 <title><![CDATA[Título de la película. Obligatorio.]]></title>
 ```
 
-**short_synopsis** 
+**short_synopsis**
 
 Una breve sinopsis del contenido. Sección CDATA compatible. Límite de 250 caracteres.
 
@@ -1175,7 +1175,7 @@ Una breve sinopsis del contenido. Sección CDATA compatible. Límite de 250 cara
 <short_synopsis><![CDATA[Resumen breve de la película. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
-**long_synopsis** 
+**long_synopsis**
 
 Una sinopsis larga del contenido. Sección CDATA compatible. Límite de 500 caracteres.
 
@@ -1189,7 +1189,7 @@ Una sinopsis larga del contenido. Sección CDATA compatible. Límite de 500 cara
 <long_synopsis><![CDATA[Resumen largo de la película. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
-**original_spoken_language** 
+**original_spoken_language**
 
 Define el idioma original de producción del título que se entrega. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -1203,7 +1203,7 @@ Define el idioma original de producción del título que se entrega. Como mínim
 <original_spoken_language>en</original_spoken_language>
 ```
 
-**country_of_origin** 
+**country_of_origin**
 
 Define el país principal donde se produjo la película y donde están establecidos los principales creadores, el equipo de filmación y los productores. El valor debe ajustarse a uno de los códigos de país compatibles definidos en la lista de códigos de país de 2 caracteres [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html).
 
@@ -1217,7 +1217,7 @@ Define el país principal donde se produjo la película y donde están estableci
 <country_of_origin>en</ country_of_origin >
 ```
 
-**closedCaptions** 
+**closedCaptions**
 
 Indica si el título entregado contiene subtítulos descriptivos. Los valores aceptados son Y o N. Este campo es obligatorio para todo el contenido destinado a Roku Channel en EE. UU.
 
@@ -1231,7 +1231,7 @@ Indica si el título entregado contiene subtítulos descriptivos. Los valores ac
 <closedCaptions>Y</closedCaptions>
 ```
 
-**closedCaptionsExemption** 
+**closedCaptionsExemption**
 
 Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es obligatorio si el valor `closedCaptions` = “N”
 
@@ -1240,7 +1240,7 @@ Valores permitidos y sus definiciones:
 
 ### XML: campos de metadatos de TV por episodios
 
-**package** 
+**package**
 
 Define el tipo de versión del paquete
 
@@ -1254,7 +1254,7 @@ Define el tipo de versión del paquete
 <package version="tv1.0">
 ```
 
-**provider** 
+**provider**
 
 Nombre del estudio, cadena o propietario del contenido
 
@@ -1269,7 +1269,7 @@ Nombre del estudio, cadena o propietario del contenido
 <provider>Roku Originals</provider>
 ```
 
-**language** 
+**language**
 
 Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -1283,7 +1283,7 @@ Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajust
 <language>en</language>
 ```
 
-**type** 
+**type**
 
 Define el tipo de contenido del paquete
 
@@ -1297,7 +1297,7 @@ Define el tipo de contenido del paquete
 <type>tv</type>
 ```
 
-**asset_id** 
+**asset_id**
 
 Identificador único e inalterable de un episodio. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
 
@@ -1311,7 +1311,7 @@ Identificador único e inalterable de un episodio. La empresa socia debe generar
 <asset_id>episodeAssetIdHere</asset_id>
 ```
 
-**eidr** 
+**eidr**
 
 ID de EIDR si existe uno
 
@@ -1325,7 +1325,7 @@ ID de EIDR si existe uno
 <eidr></eidr>
 ```
 
-**tmsId** 
+**tmsId**
 
 ID de Gracenote si existe uno
 
@@ -1339,7 +1339,7 @@ ID de Gracenote si existe uno
 <tmsId></tmsId>
 ```
 
-**title** 
+**title**
 
 Título del episodio. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
 
@@ -1353,9 +1353,9 @@ Título del episodio. Incluye únicamente el nombre del contenido tal y como deb
 <title><![CDATA[Título del episodio. Obligatorio.]]></title>
 ```
 
-**episodeNumber** 
+**episodeNumber**
 
-Posición numérica del episodio dentro de una temporada de una serie. Este valor determinará el orden en que se verán los episodios en la plataforma. Los valores de episodeNumber deben entregarse tal y como se emitieron o exhibieron originalmente en cualquier plataforma. No deben 
+Posición numérica del episodio dentro de una temporada de una serie. Este valor determinará el orden en que se verán los episodios en la plataforma. Los valores de episodeNumber deben entregarse tal y como se emitieron o exhibieron originalmente en cualquier plataforma. No deben
 proporcionarse números de producción. Solo se permiten valores numéricos (enteros).
 
 | Xpath XML                      | Valores aceptados    | Obligatorio |
@@ -1368,7 +1368,7 @@ proporcionarse números de producción. Solo se permiten valores numéricos (ent
 <episodeNumber>2</episodeNumber>
 ```
 
-**short_synopsis** 
+**short_synopsis**
 
 Una breve sinopsis del episodio. Sección CDATA compatible. Límite de 250 caracteres.
 
@@ -1382,7 +1382,7 @@ Una breve sinopsis del episodio. Sección CDATA compatible. Límite de 250 carac
 <short_synopsis><![CDATA[Resumen breve del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
-**long_synopsis** 
+**long_synopsis**
 
 Una sinopsis larga del episodio. Sección CDATA compatible. Límite de 500 caracteres.
 
@@ -1396,7 +1396,7 @@ Una sinopsis larga del episodio. Sección CDATA compatible. Límite de 500 carac
 <long_synopsis><![CDATA[Resumen largo del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
-**closedCaptions** 
+**closedCaptions**
 
 Indica si el episodio entregado contiene subtítulos descriptivos. Los valores aceptados son Y o N. Este campo es obligatorio para todo el contenido destinado a Roku Channel en EE. UU.
 
@@ -1410,7 +1410,7 @@ Indica si el episodio entregado contiene subtítulos descriptivos. Los valores a
 <closedCaptions>Y</closedCaptions>
 ```
 
-**closedCaptionsExemption** 
+**closedCaptionsExemption**
 
 Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es obligatorio si el valor `closedCaptions` = “N”
 
@@ -1433,7 +1433,7 @@ Valores permitidos y sus definiciones:
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
-**release_date** 
+**release_date**
 
 Fecha original en la que el episodio estuvo disponible por primera vez en cualquier presentación. Debe incluir, como mínimo, el año correcto del estreno
 
@@ -1447,7 +1447,7 @@ Fecha original en la que el episodio estuvo disponible por primera vez en cualqu
 <release_date>AAAA-MM-DD</release_date>
 ```
 
-**runtime** 
+**runtime**
 
 Tiempo de duración total del contenido en minutos enteros
 
@@ -1461,7 +1461,7 @@ Tiempo de duración total del contenido en minutos enteros
 <runtime>120</runtime>
 ```
 
-**rating** 
+**rating**
 
 Clasificación por edades o de contenido del episodio según una fuente de clasificación. Se facilitará para cada episodio una clasificación válida de TV de parte de la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido. Si el título no ha sido clasificado por la autoridad oficial de clasificación de ese territorio, incluye una clasificación válida del USA_PR ratingSystem. No existe ningún organismo oficial que asigne clasificaciones para el USA_PR ratingSystem. Toma como referencia las pautas que se enumeran en [http://tvguidelines.org/](http://tvguidelines.org/) para asignar la clasificación adecuada. Valor de clasificación múltiple
 
@@ -1479,7 +1479,7 @@ Clasificación por edades o de contenido del episodio según una fuente de clasi
 </ratings>
 ```
 
-**tag** 
+**tag**
 
 La etiqueta es un campo de formato libre que puede utilizarse para categorizar el contenido más allá del número limitado de valores de género compatibles. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas proporcionadas para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan en un clip, episodio o película, más formas habrá de seleccionar el contenido y mostrarlo a la persona usuaria final. No hay límite para el número de etiquetas que pueden entregarse con un título y no hay un conjunto definido de etiquetas. Las etiquetas distinguen entre mayúsculas y minúsculas. Por ejemplo, las etiquetas “Rom-Com” y “rom-com” se considerarían dos etiquetas únicas. Asegúrate de que todas las etiquetas se entreguen de forma consistente.
 
@@ -1497,7 +1497,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 </tags>
 ```
 
-**adBreak start_time** 
+**adBreak start_time**
 
 Se utiliza para determinar[los cortes publicitarios del contenido financiado con anuncios](#cortes-publicitarios). Los valores de adBreak deben tener una precisión de milisegundos. Si el video proporcionado incluye fotogramas en negro para comerciales, proporciona el código de tiempo igual al punto medio de dichos fotogramas. Si bien no es necesario para el contenido SVOD, se pueden ingerir datos adBreak con precisión de fotogramas si están disponibles.
 
@@ -1519,7 +1519,7 @@ Se utiliza para determinar[los cortes publicitarios del contenido financiado con
 </adBreaks>
 ```
 
-**start_time y end_time de cuePoint** 
+**start_time y end_time de cuePoint**
 
 Se utiliza para identificar los puntos de entrada y salida de los créditos iniciales, los resúmenes de contenido, los créditos finales y el material de detrás de escena. Las etiquetas cuePoint deben incluir el atributo de tipo. Los valores start_time y end_time de cuePoint deben tener una precisión de milisegundos.
 
@@ -1555,7 +1555,7 @@ Se utiliza para identificar los puntos de entrada y salida de los créditos inic
 </cuePoints>
 ```
 
-**Atributo de tipo de cuePoint** 
+**Atributo de tipo de cuePoint**
 
 Define el tipo de cuePoint del cuePoint proporcionado dentro del bloque de cuePoints. El atributo de la etiqueta de cuePoint debe ser de tipo y el valor proporcionado debe ser uno de los siguientes valores:
 
@@ -1579,7 +1579,7 @@ Define el tipo de cuePoint del cuePoint proporcionado dentro del bloque de cuePo
 <cuePoint type="intro">
 ```
 
-**cast display_name** 
+**cast display_name**
 
 Nombre de un miembro del reparto del episodio\*\*.\*\* Sección CDATA compatible.
 
@@ -1598,7 +1598,7 @@ Nombre de un miembro del reparto del episodio\*\*.\*\* Sección CDATA compatible
 </cast>
 ```
 
-**crew display_name** 
+**crew display_name**
 
 Nombre de un miembro del equipo de filmación del episodio. Sección CDATA compatible.
 \*NOTA: Por el momento, director es el único miembro del equipo de filmación (crew_member) que se admite para la ingesta en formato Excel
@@ -1613,7 +1613,7 @@ Nombre de un miembro del equipo de filmación del episodio. Sección CDATA compa
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
-**role** 
+**role**
 
 Función del miembro del equipo de filmación que figura en el display_name. Roku requiere que los metadatos incluyan no solo el miembro del equipo de filmación, sino también su función. Consulta la [enumeración](#funciones-del-equipo-de-filmación) de las funciones del equipo de filmación que admite Roku. Las funciones distinguen entre mayúsculas y minúsculas.
 \*NOTA: Por el momento, director es el único miembro del equipo de filmación (crew_member) que se admite para la ingesta en formato Excel
@@ -1628,7 +1628,7 @@ Función del miembro del equipo de filmación que figura en el display_name. Rok
 <role>director</role>
 ```
 
-**localizations** 
+**localizations**
 
 Inicia el bloque de activos que proporciona metadatos localizados del episodio para paquetes con múltiples idiomas. Las localizaciones definen el idioma y proporcionan el título, la short_synopsis y la long_synopsis traducidos del paquete.
 
@@ -1642,7 +1642,7 @@ Inicia el bloque de activos que proporciona metadatos localizados del episodio p
 <localizations>
 ```
 
-**localization name attribute** 
+**localization name attribute**
 
 Define el idioma del título localizado, la short_synopsis y la long_synopsis que se proporcionan dentro del bloque de localización. El atributo de la etiqueta de localización debe ser el nombre y el valor proporcionado en el nombre debe, como mínimo, ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -1656,7 +1656,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 <localization name="es">
 ```
 
-**localized title** 
+**localized title**
 
 Título localizado del episodio en el idioma especificado en el atributo de nombre de la etiqueta de localización. Incluye únicamente el nombre del episodio tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD). El `title` localizado debe estar acompañado de una `short_synopsis` localizada y una `long_synopsis` localizada
 
@@ -1670,7 +1670,7 @@ Título localizado del episodio en el idioma especificado en el atributo de nomb
 <title><![CDATA[Título del episodio localizado. Obligatorio.]]></title>
 ```
 
-**localized short_synopsis** 
+**localized short_synopsis**
 
 Una sinopsis breve localizada del episodio en el idioma especificado en el atributo de nombre de la etiqueta de localización. Sección CDATA compatible. Límite de 250 caracteres. La `short_synopsis` localizada debe estar acompañada de un `title` localizado y una `long_synopsis` localizada
 
@@ -1684,7 +1684,7 @@ Una sinopsis breve localizada del episodio en el idioma especificado en el atrib
 <short_synopsis><![CDATA[Resumen breve localizado del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
-**localized long_synopsis** 
+**localized long_synopsis**
 
 Una sinopsis larga localizada del episodio en el idioma especificado en el atributo de nombre de la etiqueta de localización. Sección CDATA compatible. Límite de 500 caracteres. La `long_synopsis` localizada debe estar acompañada de un `title` localizado y una `short_synopsis` localizada
 
@@ -1698,7 +1698,7 @@ Una sinopsis larga localizada del episodio en el idioma especificado en el atrib
 <long_synopsis><![CDATA[Resumen largo localizado del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
-**series** 
+**series**
 
 Inicia el bloque de la serie que hace referencia a los metadatos del programa al que pertenece el episodio. Roku sigue la definición de serie de EE. UU. Los episodios están anidados dentro de una temporada de una serie con la siguiente jerarquía: serie -> temporada -> episodio
 
@@ -1712,7 +1712,7 @@ Inicia el bloque de la serie que hace referencia a los metadatos del programa al
 <series>
 ```
 
-**series_id** 
+**series_id**
 
 Identificador único e inalterable de una serie. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
 
@@ -1726,7 +1726,7 @@ Identificador único e inalterable de una serie. La empresa socia debe generar y
 <series_id>seriesIdHere</series_id>
 ```
 
-**title** 
+**title**
 
 Título de la serie. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
 
@@ -1740,7 +1740,7 @@ Título de la serie. Incluye únicamente el nombre del contenido tal y como debe
 <title><![CDATA[Título del episodio. Obligatorio.]]></title>
 ```
 
-**short_synopsis** 
+**short_synopsis**
 
 Una breve sinopsis de la serie. Sección CDATA compatible. Límite de 250 caracteres.
 
@@ -1754,7 +1754,7 @@ Una breve sinopsis de la serie. Sección CDATA compatible. Límite de 250 caract
 <short_synopsis><![CDATA[Resumen breve del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
-**long_synopsis** 
+**long_synopsis**
 
 Una sinopsis larga de la serie. Sección CDATA compatible. Límite de 500 caracteres.
 
@@ -1768,7 +1768,7 @@ Una sinopsis larga de la serie. Sección CDATA compatible. Límite de 500 caract
 <long_synopsis><![CDATA[Resumen largo del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
-**original_spoken_language** 
+**original_spoken_language**
 
 Define el idioma original de producción del episodio que se entrega. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -1782,7 +1782,7 @@ Define el idioma original de producción del episodio que se entrega. Como míni
 <original_spoken_language>en</original_spoken_language>
 ```
 
-**country_of_origin** 
+**country_of_origin**
 
 Define el país principal donde se produjo la película y donde están establecidos los principales creadores, el equipo de filmación y los productores. El valor debe ajustarse a uno de los códigos de país compatibles definidos en la lista de códigos de país de 2 caracteres [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html).
 
@@ -1796,7 +1796,7 @@ Define el país principal donde se produjo la película y donde están estableci
 <country_of_origin>US</ country_of_origin>
 ```
 
-**release_date** 
+**release_date**
 
 Fecha original en la que la serie estuvo disponible por primera vez en cualquier presentación. Suele coincidir con la fecha del primer episodio de la serie. Debe incluir, como mínimo, el año correcto del estreno
 
@@ -1810,7 +1810,7 @@ Fecha original en la que la serie estuvo disponible por primera vez en cualquier
 <release_date>AAAA-MM-DD</release_date>
 ```
 
-**genre** 
+**genre**
 
 Clasificación del contenido por género. Roku requiere que cada episodio se entregue con al menos un género compatible. Consulta la [enumeración](#géneros) de los géneros que admite Roku.
 
@@ -1827,7 +1827,7 @@ Clasificación del contenido por género. Roku requiere que cada episodio se ent
 </genres>
 ```
 
-**tag** 
+**tag**
 
 La etiqueta es un campo de formato libre que puede utilizarse para categorizar el contenido más allá del número limitado de valores de género compatibles. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas proporcionadas para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan en un clip, episodio o película, más formas habrá de seleccionar el contenido y mostrarlo a la persona usuaria final. No hay límite para el número de etiquetas que pueden entregarse con un título y no hay un conjunto definido de etiquetas. Las etiquetas distinguen entre mayúsculas y minúsculas. Por ejemplo, las etiquetas “Rom-Com” y “rom-com” se considerarían dos etiquetas únicas. Asegúrate de que todas las etiquetas se entreguen de forma consistente.
 
@@ -1845,7 +1845,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 </tags>
 ```
 
-**cast display_name** 
+**cast display_name**
 
 Nombre de un miembro del reparto de la serie\*\*.\*\* Sección CDATA compatible.
 
@@ -1864,7 +1864,7 @@ Nombre de un miembro del reparto de la serie\*\*.\*\* Sección CDATA compatible.
 </cast>
 ```
 
-**crew display_name** 
+**crew display_name**
 
 Nombre de un miembro del equipo de filmación de la serie. Sección CDATA compatible.
 \*NOTA: Por el momento, director es el único miembro del equipo de filmación (crew_member) que se admite para la ingesta en formato Excel
@@ -1879,7 +1879,7 @@ Nombre de un miembro del equipo de filmación de la serie. Sección CDATA compat
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
-**role** 
+**role**
 
 Función del miembro del equipo de filmación que figura en el display_name. Roku requiere que los metadatos incluyan no solo el miembro del equipo de filmación, sino también su función. Consulta la [enumeración](#funciones-del-equipo-de-filmación) de las funciones del equipo de filmación que admite Roku. Las funciones distinguen entre mayúsculas y minúsculas.
 \*NOTA: Por el momento, director es el único miembro del equipo de filmación (crew_member) que se admite para la ingesta en formato Excel
@@ -1894,7 +1894,7 @@ Función del miembro del equipo de filmación que figura en el display_name. Rok
 <role>director</role>
 ```
 
-**localizations** 
+**localizations**
 
 Inicia el bloque de activos que proporciona metadatos localizados para la serie en paquetes con múltiples idiomas. Las localizaciones definen el idioma y proporcionan el título, la short_synopsis y la long_synopsis traducidos del paquete.
 
@@ -1908,7 +1908,7 @@ Inicia el bloque de activos que proporciona metadatos localizados para la serie 
 <localizations>
 ```
 
-**localization name attribute** 
+**localization name attribute**
 
 Define el idioma del título localizado, la short_synopsis y la long_synopsis que se proporcionan dentro del bloque de localización. El atributo de la etiqueta de localización debe ser el nombre y el valor proporcionado en el nombre debe, como mínimo, ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -1922,7 +1922,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 <localization name="es">
 ```
 
-**localized title** 
+**localized title**
 
 Título localizado de la serie en el idioma especificado en el atributo de nombre de la etiqueta de localización. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD). El `title` localizado debe estar acompañado de una `short_synopsis` localizada y una `long_synopsis` localizada
 
@@ -1936,7 +1936,7 @@ Título localizado de la serie en el idioma especificado en el atributo de nombr
 <title><![CDATA[Título del episodio localizado. Obligatorio.]]></title>
 ```
 
-**localized short_synopsis** 
+**localized short_synopsis**
 
 Una sinopsis breve localizada de la serie en el idioma especificado en el atributo de nombre de la etiqueta de localización. Sección CDATA compatible. Límite de 250 caracteres. La `short_synopsis` localizada debe estar acompañada de un `title` localizado y una `long_synopsis` localizada
 
@@ -1950,7 +1950,7 @@ Una sinopsis breve localizada de la serie en el idioma especificado en el atribu
 <short_synopsis><![CDATA[Resumen breve localizado del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
-**localized long_synopsis** 
+**localized long_synopsis**
 
 Una sinopsis larga localizada de la serie en el idioma especificado en el atributo de nombre de la etiqueta de localización. Sección CDATA compatible. Límite de 500 caracteres. La `long_synopsis` localizada debe estar acompañada de un `title` localizado y una `short_synopsis` localizada
 
@@ -1964,7 +1964,7 @@ Una sinopsis larga localizada de la serie en el idioma especificado en el atribu
 <long_synopsis><![CDATA[Resumen largo localizado del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
-**season** 
+**season**
 
 Inicia el bloque de la temporada que hace referencia a los metadatos para la temporada de la serie a la que pertenece el episodio. Roku sigue la definición de serie de EE. UU. Los episodios están anidados dentro de una temporada de una serie con la siguiente jerarquía: serie -> temporada -> episodio
 
@@ -1978,7 +1978,7 @@ Inicia el bloque de la temporada que hace referencia a los metadatos para la tem
 <season>
 ```
 
-**season_id** 
+**season_id**
 
 Identificador único e inalterable de una temporada. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
 
@@ -1993,7 +1993,7 @@ Identificador único e inalterable de una temporada. La empresa socia debe gener
 ```
 
 
-**seasonNumber** 
+**seasonNumber**
 
 Posición numérica de la temporada dentro de una serie. Este valor determinará el orden en que se verán los episodios subyacentes en la plataforma. Los valores de seasonNumber deben entregarse tal y como se emitieron o exhibieron originalmente en cualquier plataforma. Solo se permiten valores numéricos (enteros).
 
@@ -2007,7 +2007,7 @@ Posición numérica de la temporada dentro de una serie. Este valor determinará
 <seasonNumber>2</seasonNumber>
 ```
 
-**playOptions** 
+**playOptions**
 
 Inicia el bloque de activos que proporciona la información de disponibilidad del paquete. playOptions consiste en la disponibilidad por país o territorio, el tipo de monetización y las fechas de inicio y fin de la disponibilidad del título en el paquete.
 
@@ -2021,7 +2021,7 @@ Inicia el bloque de activos que proporciona la información de disponibilidad de
 <playOptions>
 ```
 
-**country** 
+**country**
 
 Código de país del territorio en el que está disponible el contenido. Se pueden proporcionar varios nodos de países, siempre que el vodType y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los países.
 
@@ -2038,7 +2038,7 @@ Código de país del territorio en el que está disponible el contenido. Se pued
 </playOption>
 ```
 
-**vodType** 
+**vodType**
 
 Tipo de monetización del episodio. Se pueden proporcionar varios nodos vodType, siempre que el país y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los vodType.
 
@@ -2055,7 +2055,7 @@ Tipo de monetización del episodio. Se pueden proporcionar varios nodos vodType,
 </playOption>
 ```
 
-**licensePeriodStart** 
+**licensePeriodStart**
 
 Fecha de inicio de la disponibilidad del contenido para las personas usuarias de Roku Channel. Se permite una fecha de licensePeriodStart por playOption. Las fechas de licensePeriodStart deben ser cronológicamente anteriores a las de licensePeriodEnd. Las fechas de licensePeriodStart y licensePeriodEnd no deben ser idénticas
 
@@ -2071,7 +2071,7 @@ Fecha de inicio de la disponibilidad del contenido para las personas usuarias de
 </playOption>
 ```
 
-**licensePeriodEnd** 
+**licensePeriodEnd**
 
 Fecha de finalización de la disponibilidad del contenido para las personas usuarias de Roku Channel. Se permite una fecha de licensePeriodEnd por playOption. Las fechas de licensePeriodEnd deben ser cronológicamente posteriores a las de licensePeriodStart. Las fechas de licensePeriodStart y licensePeriodEnd no deben ser idénticas
 
@@ -2087,7 +2087,7 @@ Fecha de finalización de la disponibilidad del contenido para las personas usua
 </playOption>
 ```
 
-**assets** 
+**assets**
 
 Inicia el bloque de activos que hace referencia a los archivos entregados en el paquete
 
@@ -2101,8 +2101,8 @@ Inicia el bloque de activos que hace referencia a los archivos entregados en el 
 <assets media_type="video">
 ```
 
-**data_file** 
-**full source** 
+**data_file**
+**full source**
 
 El bloque que describe el archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="source". También se requieren  los nodos <locale> y <file_name>
 
@@ -2117,7 +2117,7 @@ El bloque que describe el archivo de video fuente. El atributo de la etiqueta de
 <data_file role="source">
 ```
 
-**full captions** 
+**full captions**
 
 El bloque que describe los subtítulos descriptivos del archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="captions". También se requieren  los nodos <locale> y <file_name>
 
@@ -2132,7 +2132,7 @@ El bloque que describe los subtítulos descriptivos del archivo de video fuente.
 <data_file role="captions">
 ```
 
-**full audio** 
+**full audio**
 
 El bloque que describe el audio sidecar del archivo de video fuente. El archivo de audio puede ser un doblaje completo para la traducción lingüística o una pista de audio descriptivo para fines de accesibilidad. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="audio" para el doblaje de traducción o role=”audio.descriptive” para fines de accesibilidad. También se requieren  los nodos <locale> y <file_name>
 
@@ -2149,7 +2149,7 @@ El bloque que describe el audio sidecar del archivo de video fuente. El archivo 
 <data_file role="audio">
 ```
 
-**full subtitles** 
+**full subtitles**
 
 El bloque que describe los subtítulos sidecar del archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="subtitles". También se requieren  los nodos <locale> y <file_name>
 
@@ -2165,7 +2165,7 @@ El bloque que describe los subtítulos sidecar del archivo de video fuente. El a
 <data_file role="subtitles">
 ```
 
-**artwork** 
+**artwork**
 
 El bloque que describe los archivos de ilustración. El atributo de la etiqueta del activo debe ser type="artwork". El atributo de la etiqueta data_file puede ser type="episode" para la entrega de imágenes al nivel del episodio, o type="series" para la entrega de imágenes al nivel de la serie. También se requieren  los nodos <locale> y <file_name>. Consulta [Ilustraciones](#ilustraciones) para conocer las especificaciones completas sobre la entrega de imágenes.
 
@@ -2183,7 +2183,7 @@ El bloque que describe los archivos de ilustración. El atributo de la etiqueta 
 <data_file role="series">
 ```
 
-**locale** 
+**locale**
 
 Identifica el idioma del data_file. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 Aplica para las funciones del data_file: fuente, subtítulos descriptivos, audio, subtítulos y para el tipo de activo de ilustración.
@@ -2198,7 +2198,7 @@ Aplica para las funciones del data_file: fuente, subtítulos descriptivos, audio
 <locale name="en"/>
 ```
 
-**file_name** 
+**file_name**
 
 Nombre de archivo del activo indicado en el atributo de tipo o función del data_file. Todos los valores de file_name distinguen entre mayúsculas y minúsculas y deben tener la extensión de archivo adecuada.
 En el caso de los archivos de ilustraciones, el atributo de la etiqueta file_name puede omitirse (para indicar arte clave), o ser type="background_image" o type="thumbnail_boxcover".
@@ -2243,7 +2243,7 @@ En el caso de los archivos de ilustraciones, el atributo de la etiqueta file_nam
 <file_name>VideoFilename.mxf</file_name>
 ```
 
-**audio** 
+**audio**
 
 [Descriptor de diseño de audio](#audio-descriptivo) para el archivo de video entregado. Consulta las pautas más adelante
 
@@ -2261,7 +2261,7 @@ En el caso de los archivos de ilustraciones, el atributo de la etiqueta file_nam
 
 ### XML: campos de metadatos de clips de formato corto
 
-**package** 
+**package**
 
 Define el tipo de versión del paquete
 
@@ -2275,7 +2275,7 @@ Define el tipo de versión del paquete
 <package version="clip1.0">
 ```
 
-**provider** 
+**provider**
 
 Nombre del estudio, cadena o propietario del contenido
 
@@ -2289,7 +2289,7 @@ Nombre del estudio, cadena o propietario del contenido
 <provider>Roku Originals</provider>
 ```
 
-**language** 
+**language**
 
 Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -2303,7 +2303,7 @@ Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajust
 <language>en</language>
 ```
 
-**type** 
+**type**
 
 Define el tipo de contenido del paquete
 
@@ -2317,9 +2317,9 @@ Define el tipo de contenido del paquete
 <type>clip</type>
 ```
 
-**subType** 
+**subType**
 
-Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). *No existe ningún vínculo entre los activos principales y secundarios* 
+Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). *No existe ningún vínculo entre los activos principales y secundarios*
 
 
 <table>
@@ -2346,7 +2346,7 @@ Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite
 <subType>trailer</subType>
 ```
 
-**asset_id** 
+**asset_id**
 
 Identificador único e inalterable de un clip de formato corto La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
 
@@ -2360,7 +2360,7 @@ Identificador único e inalterable de un clip de formato corto La empresa socia 
 <asset_id>clipAssetIdHere</asset_id>
 ```
 
-**eidr** 
+**eidr**
 
 ID de EIDR si existe uno
 
@@ -2374,7 +2374,7 @@ ID de EIDR si existe uno
 <eidr></eidr>
 ```
 
-**tmsId** 
+**tmsId**
 
 ID de Gracenote si existe uno
 
@@ -2388,7 +2388,7 @@ ID de Gracenote si existe uno
 <tmsId></tmsId>
 ```
 
-**title** 
+**title**
 
 Título de clip de formato corto Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
 
@@ -2402,7 +2402,7 @@ Título de clip de formato corto Incluye únicamente el nombre del contenido tal
 <title><![CDATA[Título del clip. Obligatorio.]]></title>
 ```
 
-**short_synopsis** 
+**short_synopsis**
 
 Una breve sinopsis del contenido. Sección CDATA compatible. Límite de 250 caracteres.
 
@@ -2416,7 +2416,7 @@ Una breve sinopsis del contenido. Sección CDATA compatible. Límite de 250 cara
 <short_synopsis><![CDATA[Resumen breve del clip. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
-**long_synopsis** 
+**long_synopsis**
 
 Una sinopsis larga del contenido. Sección CDATA compatible. Límite de 500 caracteres.
 
@@ -2430,7 +2430,7 @@ Una sinopsis larga del contenido. Sección CDATA compatible. Límite de 500 cara
 <long_synopsis><![CDATA[Resumen largo del clip. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
-**original_spoken_language** 
+**original_spoken_language**
 
 Define el idioma original de producción del título que se entrega. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -2444,7 +2444,7 @@ Define el idioma original de producción del título que se entrega. Como mínim
 <original_spoken_language>en</original_spoken_language>
 ```
 
-**country_of_origin** 
+**country_of_origin**
 
 Define el país principal donde se produjo la película y donde están establecidos los principales creadores, el equipo de filmación y los productores. El valor debe ajustarse a uno de los códigos de país compatibles definidos en la lista de códigos de país de 2 caracteres [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html).
 
@@ -2458,7 +2458,7 @@ Define el país principal donde se produjo la película y donde están estableci
 <country_of_origin>en</country_of_origin >
 ```
 
-**closedCaptions** 
+**closedCaptions**
 
 Indica si el título entregado contiene subtítulos descriptivos. Los valores aceptados son Y o N. Este campo es obligatorio para todo el contenido destinado a Roku Channel en EE. UU.
 
@@ -2472,7 +2472,7 @@ Indica si el título entregado contiene subtítulos descriptivos. Los valores ac
 <closedCaptions>Y</closedCaptions>
 ```
 
-**closedCaptionsExemption** 
+**closedCaptionsExemption**
 
 Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es obligatorio si el valor `closedCaptions` = “N”
 
@@ -2495,7 +2495,7 @@ Valores permitidos y sus definiciones:
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
-**release_date** 
+**release_date**
 
 Fecha original en la que el contenido estuvo disponible por primera vez en cualquier presentación. Debe incluir, como mínimo, el año correcto del estreno
 
@@ -2509,7 +2509,7 @@ Fecha original en la que el contenido estuvo disponible por primera vez en cualq
 <release_date>AAAA-MM-DD</release_date>
 ```
 
-**runtime** 
+**runtime**
 
 Tiempo de duración total del contenido en minutos enteros
 
@@ -2523,7 +2523,7 @@ Tiempo de duración total del contenido en minutos enteros
 <runtime>120</runtime>
 ```
 
-**genre** 
+**genre**
 
 Clasificación del contenido por género. Roku requiere que cada clip de formato corto se entregue con al menos un género compatible. Consulta la [enumeración](#géneros) de los géneros que admite Roku.
 
@@ -2540,7 +2540,7 @@ Clasificación del contenido por género. Roku requiere que cada clip de formato
 </genres>
 ```
 
-**rating** 
+**rating**
 
 Clasificación por edades o de contenido del clip de formato corto según una fuente de clasificación. Se facilitará para cada clip de formato corto una clasificación válida de película o TV de parte de la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido. Si el título no ha sido clasificado por la autoridad oficial de clasificación de ese territorio, incluye una clasificación válida del USA_PR ratingSystem. No existe ningún organismo oficial que asigne clasificaciones para el USA_PR ratingSystem. Toma como referencia las pautas que se enumeran en [http://tvguidelines.org/](http://tvguidelines.org/) para asignar la clasificación adecuada. Valor de clasificación múltiple
 
@@ -2558,7 +2558,7 @@ Clasificación por edades o de contenido del clip de formato corto según una fu
 </ratings>
 ```
 
-**tag** 
+**tag**
 
 La etiqueta es un campo de formato libre que puede utilizarse para categorizar el contenido más allá del número limitado de valores de género compatibles. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas proporcionadas para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan en un clip, episodio o película, más formas habrá de seleccionar el contenido y mostrarlo a la persona usuaria final. No hay límite para el número de etiquetas que pueden entregarse con un título y no hay un conjunto definido de etiquetas. Las etiquetas distinguen entre mayúsculas y minúsculas. Por ejemplo, las etiquetas “Rom-Com” y “rom-com” se considerarían dos etiquetas únicas. Asegúrate de que todas las etiquetas se entreguen de forma consistente.
 
@@ -2576,7 +2576,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 </tags>
 ```
 
-**cast display_name** 
+**cast display_name**
 
 Nombre de un miembro del reparto\*\*.\*\* Sección CDATA compatible.
 
@@ -2595,7 +2595,7 @@ Nombre de un miembro del reparto\*\*.\*\* Sección CDATA compatible.
 </cast>
 ```
 
-**crew display_name** 
+**crew display_name**
 
 Nombre de un miembro del equipo de filmación. Sección CDATA compatible.
 \*NOTA: Por el momento, director es el único miembro del equipo de filmación (crew_member) que se admite para la ingesta en formato Excel
@@ -2610,7 +2610,7 @@ Nombre de un miembro del equipo de filmación. Sección CDATA compatible.
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
-**role** 
+**role**
 
 Función del miembro del equipo de filmación que figura en el display_name. Roku requiere que los metadatos incluyan no solo el miembro del equipo de filmación, sino también su función. Consulta la [enumeración](#funciones-del-equipo-de-filmación) de las funciones del equipo de filmación que admite Roku. Las funciones distinguen entre mayúsculas y minúsculas.
 \*NOTA: Por el momento, director es el único miembro del equipo de filmación (crew_member) que se admite para la ingesta en formato Excel
@@ -2625,7 +2625,7 @@ Función del miembro del equipo de filmación que figura en el display_name. Rok
 <role>director</role>
 ```
 
-**localizations** 
+**localizations**
 
 Inicia el bloque de activos que proporciona metadatos localizados para paquetes con múltiples idiomas. Las localizaciones definen el idioma y proporcionan el título, la short_synopsis y la long_synopsis traducidos del paquete.
 
@@ -2639,7 +2639,7 @@ Inicia el bloque de activos que proporciona metadatos localizados para paquetes 
 <localizations>
 ```
 
-**localization name attribute** 
+**localization name attribute**
 
 Define el idioma del título localizado, la short_synopsis y la long_synopsis que se proporcionan dentro del bloque de localización. El atributo de la etiqueta de localización debe ser el nombre y el valor proporcionado en el nombre debe, como mínimo, ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 
@@ -2653,7 +2653,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 <localization name="es">
 ```
 
-**localized title** 
+**localized title**
 
 Título localizado del clip de formato corto en el idioma especificado en el atributo de nombre de la etiqueta de localización. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
 
@@ -2667,7 +2667,7 @@ Título localizado del clip de formato corto en el idioma especificado en el atr
 <title><![CDATA[Título localizado del clip. Obligatorio.]]></title>
 ```
 
-**localized short_synopsis** 
+**localized short_synopsis**
 
 Una sinopsis breve localizada del contenido en el idioma especificado en el atributo de nombre de la etiqueta de localización. Sección CDATA compatible. Límite de 250 caracteres.
 
@@ -2681,7 +2681,7 @@ Una sinopsis breve localizada del contenido en el idioma especificado en el atri
 <short_synopsis><![CDATA[Resumen breve localizado del clip. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
-**localized long_synopsis** 
+**localized long_synopsis**
 
 Una sinopsis larga localizada del contenido en el idioma especificado en el atributo de nombre de la etiqueta de localización. Sección CDATA compatible. Límite de 500 caracteres.
 
@@ -2695,7 +2695,7 @@ Una sinopsis larga localizada del contenido en el idioma especificado en el atri
 <long_synopsis><![CDATA[Resumen largo localizado del clip. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
-**playOptions** 
+**playOptions**
 
 Inicia el bloque de activos que proporciona la información de disponibilidad del paquete. playOptions consiste en la disponibilidad por país o territorio, el tipo de monetización y las fechas de inicio y fin de la disponibilidad del título en el paquete.
 
@@ -2709,7 +2709,7 @@ Inicia el bloque de activos que proporciona la información de disponibilidad de
 <playOptions>
 ```
 
-**country** 
+**country**
 
 Código de país del territorio en el que está disponible el contenido. Se pueden proporcionar varios nodos de países, siempre que el vodType y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los países.
 
@@ -2726,7 +2726,7 @@ Código de país del territorio en el que está disponible el contenido. Se pued
 </playOption>
 ```
 
-**vodType** 
+**vodType**
 
 Tipo de monetización del clip de formato corto Se pueden proporcionar varios nodos vodType, siempre que el país y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los vodType.
 
@@ -2743,7 +2743,7 @@ Tipo de monetización del clip de formato corto Se pueden proporcionar varios no
 </playOption>
 ```
 
-**licensePeriodStart** 
+**licensePeriodStart**
 
 Fecha de inicio de la disponibilidad del contenido para las personas usuarias de Roku Channel. Se permite una fecha de `licensePeriodStart` por playOption. Las fechas de licensePeriodStart deben ser cronológicamente anteriores a las de licensePeriodEnd. Las fechas de licensePeriodStart y licensePeriodEnd no deben ser idénticas
 
@@ -2759,7 +2759,7 @@ Fecha de inicio de la disponibilidad del contenido para las personas usuarias de
 </playOption>
 ```
 
-**licensePeriodEnd** 
+**licensePeriodEnd**
 
 Fecha de finalización de la disponibilidad del contenido para las personas usuarias de Roku Channel. Se permite una fecha de `licensePeriodEnd` por playOption. Las fechas de licensePeriodEnd deben ser cronológicamente posteriores a las de licensePeriodStart. Las fechas de licensePeriodStart y licensePeriodEnd no deben ser idénticas
 
@@ -2775,7 +2775,7 @@ Fecha de finalización de la disponibilidad del contenido para las personas usua
 </playOption>
 ```
 
-**assets** 
+**assets**
 
 Inicia el bloque de activos que hace referencia a los archivos entregados en el paquete
 
@@ -2789,8 +2789,8 @@ Inicia el bloque de activos que hace referencia a los archivos entregados en el 
 <assets media_type="video">
 ```
 
-**data_file** 
-**full source** 
+**data_file**
+**full source**
 
 El bloque que describe el archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="source". También se requieren  los nodos <locale> y <file_name>
 
@@ -2805,7 +2805,7 @@ El bloque que describe el archivo de video fuente. El atributo de la etiqueta de
 <data_file role="source">
 ```
 
-**full captions** 
+**full captions**
 
 El bloque que describe los subtítulos descriptivos del archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="captions". También se requieren  los nodos <locale> y <file_name>
 
@@ -2820,7 +2820,7 @@ El bloque que describe los subtítulos descriptivos del archivo de video fuente.
 <data_file role="captions">
 ```
 
-**full audio** 
+**full audio**
 
 El bloque que describe el audio sidecar del archivo de video fuente. El archivo de audio puede ser un doblaje completo para la traducción lingüística o una pista de audio descriptivo para fines de accesibilidad. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="audio" para el doblaje de traducción o role=”audio.descriptive” para fines de accesibilidad. También se requieren  los nodos <locale> y <file_name>
 
@@ -2837,7 +2837,7 @@ El bloque que describe el audio sidecar del archivo de video fuente. El archivo 
 <data_file role="audio">
 ```
 
-**full subtitles** 
+**full subtitles**
 
 El bloque que describe los subtítulos sidecar del archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="subtitles". También se requieren  los nodos <locale> y <file_name>
 
@@ -2854,7 +2854,7 @@ El bloque que describe los subtítulos sidecar del archivo de video fuente. El a
 <data_file role="subtitles">
 ```
 
-**artwork** 
+**artwork**
 
 El bloque que describe los archivos de ilustración. El atributo de la etiqueta del activo debe ser type="artwork". También se requieren  los nodos <locale> y <file_name>. Consulta [Ilustraciones](#ilustraciones) para conocer las especificaciones completas sobre la entrega de imágenes.
 
@@ -2869,7 +2869,7 @@ El bloque que describe los archivos de ilustración. El atributo de la etiqueta 
 <data_file>
 ```
 
-**locale** 
+**locale**
 Identifica el idioma del data_file. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
 Aplica para las funciones del data_file: fuente, subtítulos descriptivos, audio y subtítulos, y para el tipo de activo de ilustración.
 
@@ -2883,7 +2883,7 @@ Aplica para las funciones del data_file: fuente, subtítulos descriptivos, audio
 <locale name="en"/>
 ```
 
-**file_name** 
+**file_name**
 
 Nombre de archivo del activo indicado en el atributo de tipo o función del data_file. Todos los valores de file_name distinguen entre mayúsculas y minúsculas y deben tener la extensión de archivo adecuada.
 
@@ -2897,7 +2897,7 @@ Nombre de archivo del activo indicado en el atributo de tipo o función del data
 <file_name>VideoFilename.mxf</file_name>
 ```
 
-**audio** 
+**audio**
 
 [Descriptor de diseño de audio](#audio-descriptivo) para el archivo de video entregado. Consulta las pautas más adelante
 
@@ -2911,7 +2911,7 @@ Nombre de archivo del activo indicado en el atributo de tipo o función del data
 <audio>stereoOnly</audio>
 ```
 
-**parentInfo** 
+**parentInfo**
 
 Inicia el bloque de activos que proporciona la información principal del paquete. parentInfo consta del contentType, título del episodio o película, duración del episodio o película, releaseDate, ID de TMS, seriesTitle, seasonNumber y episodeNumber del contenido principal. Se utiliza en combinación con un subType válido
 
@@ -2925,7 +2925,7 @@ Inicia el bloque de activos que proporciona la información principal del paquet
 <parentInfo>
 ```
 
-**contentType** 
+**contentType**
 Tipo de contenido del contenido principal del cual se deriva o describe el clip
 
 | Xpath XML                               | Valores aceptados    | Obligatorio |
@@ -2940,7 +2940,7 @@ Tipo de contenido del contenido principal del cual se deriva o describe el clip
 </parentInfo>
 ```
 
-**title** 
+**title**
 
 Título del programa principal si este es una película o un episodio
 
@@ -2956,7 +2956,7 @@ Título del programa principal si este es una película o un episodio
 </parentInfo>
 ```
 
-**runtime** 
+**runtime**
 
 Duración del programa principal si este es una película o episodio
 
@@ -2972,7 +2972,7 @@ Duración del programa principal si este es una película o episodio
 </parentInfo>
 ```
 
-**releaseDate** 
+**releaseDate**
 
 Fecha de estreno de la película, episodio o serie principal
 
@@ -2988,7 +2988,7 @@ Fecha de estreno de la película, episodio o serie principal
 </parentInfo>
 ```
 
-**tmsId** 
+**tmsId**
 
 ID de TMS de la película, episodio o serie principal
 
@@ -3004,7 +3004,7 @@ ID de TMS de la película, episodio o serie principal
 </parentInfo>
 ```
 
-**seriesTitle** 
+**seriesTitle**
 
 Título de la serie del programa principal si este es un episodio
 
@@ -3020,7 +3020,7 @@ Título de la serie del programa principal si este es un episodio
 </parentInfo>
 ```
 
-**seasonNumber** 
+**seasonNumber**
 
 Número de temporada del programa principal si este es un episodio
 
@@ -3036,7 +3036,7 @@ Número de temporada del programa principal si este es un episodio
 </parentInfo>
 ```
 
-**episodeNumber** 
+**episodeNumber**
 
 Número de episodio del programa principal si este es un episodio
 
@@ -3052,7 +3052,7 @@ Número de episodio del programa principal si este es un episodio
 </parentInfo>
 ```
 
-**sportType** 
+**sportType**
 
 Nombre del deporte que aparece en el clip o momento destacado
 
@@ -3066,7 +3066,7 @@ Nombre del deporte que aparece en el clip o momento destacado
 <sportType>Baseball</sportType>
 ```
 
-**sportLeague** 
+**sportLeague**
 
 Nombre de la liga deportiva que aparece en el clip o momento destacado
 
@@ -3080,10 +3080,10 @@ Nombre de la liga deportiva que aparece en el clip o momento destacado
 <sportLeague>MLB</sportLeague>
 ```
 
-**teams** 
+**teams**
 
 Equipos que aparecen en el clip o momento destacado deportivo. Las condiciones de local y visitante de los equipos se definirán en el atributo de Ubicación
-*En este momento, Roku solo admite metadatos de participantes basados en equipos. Los deportes individuales serán compatibles en el futuro* 
+*En este momento, Roku solo admite metadatos de participantes basados en equipos. Los deportes individuales serán compatibles en el futuro*
 
 | Xpath XML                   | Valores aceptados                                            | Obligatorio                        |
 | --------------------------- | ------------------------------------------------------------ | ---------------------------------- |
@@ -3120,7 +3120,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
 - No agregues columnas adicionales al libro.
 - No elimines la fila de leyenda y consejos (fila 2).
 - No introduzcas los valores “N/A” o “n/a”. Las celdas obligatorias deben contener datos válidos y las opcionales pueden dejarse en blanco.
-- Se pueden incluir varias películas, clips y episodios en un mismo libro de Excel. 
+- Se pueden incluir varias películas, clips y episodios en un mismo libro de Excel.
   - Cada fila se considera una experiencia lingüística única de un episodio, película o clip.
   - No dejes una fila en blanco entre las entradas de una hoja de cálculo. El sistema dará por terminado el procesamiento en la primera fila vacía.
   - No incluyas más de 900 filas en una sola hoja
@@ -4201,7 +4201,7 @@ Recursos
 | Ejemplo de XML ADI para TV                                  | [https://go.roku.com/tv-adi-xml-example](https://go.roku.com/tv-adi-xml-example) |
 | Ejemplo de XML ADI para clips                               | [https://go.roku.com/clip-adi-xml-example](https://go.roku.com/clip-adi-xml-example) |
 | Todas las plantillas, ejemplos y esquemas de metadatos      | [https://go.roku.com/metadata-docs](https://go.roku.com/metadata-docs) |
-| Prácticas recomendadas: etiquetas y metadatos del contenido | [https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md) |
+| Prácticas recomendadas: etiquetas y metadatos del contenido | [https://roku-ent.readme.io/dev/docs/content-tags-and-metadata](https://roku-ent.readme.io/dev/docs/content-tags-and-metadata) |
 | Envío de hojas de referencia musical                        | [https://go.roku.com/music-cue-sheet-submission](https://go.roku.com/music-cue-sheet-submission) |
 | Aspera Client                                               | https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client&release=All&platform=All&function=all |
 | Sistema de clasificaciones de la MPAA de EE. UU.            | [https://www.filmratings.com/](https://www.filmratings.com/) |
@@ -4212,7 +4212,7 @@ Recursos
 
 ## Registro de cambios
 
-**v2.3 - 03-02-2025** 
+**v2.3 - 03-02-2025**
 
 * Se actualizaron todas las referencias a The Roku Channel a Roku Channel.
 * Se agregó la compatibilidad con MovieLabs y EMA.
@@ -4240,7 +4240,7 @@ Recursos
 * Se eliminó el enlace a la plantilla de actualización de archivos.
 * Se actualizaron los documentos XSD para reflejar los cambios anteriores.
 
-**v2.2 - 18-05-2023** 
+**v2.2 - 18-05-2023**
 
 * Se eliminó la compatibilidad con las MDU heredadas.
 * Se eliminaron los requisitos de long_synopsis.
@@ -4255,7 +4255,7 @@ Recursos
 * Se agregó un enlace a un archivo .zip con todos los documentos de muestra.
 * Se corrigieron errores tipográficos.
 
-**v2.1 - 28-10-2022** 
+**v2.1 - 28-10-2022**
 
 * Se actualizó la documentación de MDU, se agregó la compatibilidad con las MDU automatizadas y se cambió el nombre del método heredado.
 * Se separaron las descripciones de campos de metadatos de Excel de las descripciones de campos de metadatos de XML.
@@ -4267,7 +4267,7 @@ Recursos
 * Se agregó la compatibilidad con la ingesta de cuePoints de créditos.
 * Se agregaron las clasificaciones y el sistema de clasificación de contenido de México (RTC)
 
-**v2.0 - 25-04-2022** 
+**v2.0 - 25-04-2022**
 
 * Se identificó al formato .srt como la entrada preferida de subtítulos descriptivos sidecar.
 * Se aclararon los requisitos de número de episodios.
@@ -4277,7 +4277,7 @@ Recursos
 * Se agregó la cantidad aceptable de video en negro al principio y al final.
 * Se actualizaron los requisitos de las películas para permitir release_date en lugar de theatrical_release_date.
 * Se agregó la compatibilidad con información de disponibilidad diferente entre licenseTypes y territorios.
-* Se agregó la compatibilidad con la entrega en varios idiomas, entre los que se incluyen: 
+* Se agregó la compatibilidad con la entrega en varios idiomas, entre los que se incluyen:
   * Language
   * Idioma oral original
   * País de origen

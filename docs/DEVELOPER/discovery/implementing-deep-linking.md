@@ -393,7 +393,7 @@ The one-time TV program identified by the contentId is launched directly into pl
 
 ## Deep linking video lesson
 
-You can learn how to implement deep linking in your app by watching the [Deep linking](doc:deep-linking) video lesson in Roku's [SceneGraph: Build a Channel online video course](https://developer.roku.com/videos/courses/rsg/overview.md).
+You can learn how to implement deep linking in your app by watching the [Deep linking](doc:deep-linking) video lesson in Roku's [SceneGraph: Build a Channel online video course](doc:rsg).
 
 This lesson details how to program your app to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences requried for the various types of content in the app's feed.
 

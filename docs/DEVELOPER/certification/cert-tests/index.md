@@ -18,7 +18,7 @@ To help developers test their channels, Roku provides a suite of tools to ensure
 * [Channel Behavior Analysis tool](doc:channel-publishing-guide#channel-behavior-analysis): For SVOD, AVOD, and free channels, verifies channel performance and deep linking meets certification requirements.
 * [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including channel purchasing, performance, deep linking, and other certification criteria.
 
-Developers are expected to use these tools, the [certification criteria](doc:certification), and the list of certification tests in this document to guide internal quality assurance testing before [submitting an app to Roku for review](doc:channel-publishing-guide.md#publishing-an-app).
+Developers are expected to use these tools, the [certification criteria](doc:certification), and the list of certification tests in this document to guide internal quality assurance testing before [submitting an app to Roku for review](doc:channel-publishing-guide#publishing-an-app).
 
 ## **1. Advertising**
 

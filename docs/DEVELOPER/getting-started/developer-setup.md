@@ -84,11 +84,11 @@ The rekey utility allows you to replace the signing key on the current Roku devi
 
 #### Screenshot utility
 
-The screenshot utility enables you to take an HD screenshot (1280 X 720) of your sideloaded app's UI (you cannot take a screenshot of any content playback). FHD (1920x1080) screenshots require a 4K-capable Roku set to 1080p or 4K UHD display type. This is useful for generating images that highlight your app in the Streaming Store. See [App Publishing](doc:channel-publishing-guide.md#streaming-store-assets) for more information on uploading the screenshots when submitting your app for publishing to the Streaming Store.
+The screenshot utility enables you to take an HD screenshot (1280 X 720) of your sideloaded app's UI (you cannot take a screenshot of any content playback). FHD (1920x1080) screenshots require a 4K-capable Roku set to 1080p or 4K UHD display type. This is useful for generating images that highlight your app in the Streaming Store. See [App Publishing](doc:channel-publishing-guide#streaming-store-assets) for more information on uploading the screenshots when submitting your app for publishing to the Streaming Store.
 
 #### Profiling data utility
 
-The profiling data utility enables you to capture app performance statistics. You can then use the [BrightScript Profiler](doc:brightscript-profiler.md) to analyze the collected data and determine where performance improvements and efficiencies can be made in the app. See the [BrightScript Profiler documentation](doc:brightscript-profiler#collecting-the-data) for more information on collecting data with this tool.
+The profiling data utility enables you to capture app performance statistics. You can then use the [BrightScript Profiler](doc:brightscript-profiler) to analyze the collected data and determine where performance improvements and efficiencies can be made in the app. See the [BrightScript Profiler documentation](doc:brightscript-profiler#collecting-the-data) for more information on collecting data with this tool.
 
 ### Application Packager
 

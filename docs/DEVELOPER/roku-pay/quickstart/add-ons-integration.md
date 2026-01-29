@@ -639,6 +639,8 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 
 Returns the list of current and historical (optional) purchases associated with the Roku customer account.
 
+#### request
+
 <HTMLBlock>{`
 <table>
 <thead>
@@ -698,9 +700,146 @@ Returns the list of current and historical (optional) purchases associated with 
 </table>
 `}</HTMLBlock>
 
-<br />
+#### requestStatus.result
 
-<br />
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">result</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Includes the transaction data returned by the GetPurchases:<br><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">purchases</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">The list of current (and optionally historical) purchases associated with the Roku customer account. Each purchase has the following fields:<br><ul>
+<li><strong>rokuCustomerId</strong> (string): The Roku customer ID associated with the user. </li>
+<li><strong>sku</strong> (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>name</strong> (string): The developer-specified name for the purchase option entered in the Developer Dashboard. </li>
+<li><strong>description</strong> (string): The developer-specified description for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>cost</strong> (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).</li>
+<li><strong>type</strong> (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".</li>
+<li><strong>addon</strong> (boolean): A flag indicating whether the purchase was for an add-on. </li>
+<li><strong>purchaseDate</strong> (string): The purchase date (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format).</li>
+<li><strong>purchaseChannel</strong> (string): Indicates where the Roku Pay subscription purchase was made: <strong>web</strong> (purchased from <a href="http://roku.com/">Roku.com</a> [for example, through <a href="https://developer.roku.com/docs/developer-program/discovery/instant-signup.md">Instant Signup</a> during the device activation]) or <strong>device</strong> (purchased on the Roku device [through the on-device sign-up flow]).</li>
+<li><strong>purchaseContext</strong> (string): Indicates how the subscription purchase was made: <strong>isu</strong> (purchased via Instant Signup) or <strong>iap</strong> (purchased in the app)</li>
+<li>
+<p><strong>billingPlans</strong> (roArray of roAssociativeArrays): A list of billing plans associated with the purchase. Each billing plan contains the following fields:</p>
+<ul>
+<li>billingType (string): Indicates whether a "Subscription" or "DigitalContent" was purchased.</li>
+<li>purchaseId (string): The transaction ID.</li>
+<li>productIds (roArray of strings): The list of product IDs purchased as part of the transaction. </li>
+<li>subscriptionId (string; included only if the billingType is "Subscription): The unique Roku-generated ID for the subscription. </li>
+<li>renewalDate (string; included only if the billingType is "Subscription): The subscription renewal date (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format).</li>
+<li>state (string): The state of the subscription: "ActivePaid" (for DigitalContent only), "ActiveFreeTrial", "ActiveCanceled", "ActiveInGracePeriod", "ActivePaused", "InactiveWaitingActivation", "InactivePaused", "InactiveOnHold", or "InactiveExpired" (for DigitalContent only). </li>
+<li>
+<p>phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan. </p>
+<ul>
+<li>name (string): The developer-specified name for the offer entered in the Developer Dashboard. </li>
+<li>type (string): The type of offer: "FreeTrial", "ReducedPrice", or "RegularPrice"</li>
+<li>cost (string): Localized cost of the offer (with local currency symbol).</li>
+<li>phaseEndDate (string; included only if the type is "FreeTrial" or "ReducedPrice"): The subscription phase end date (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format). </li>
+<li>
+<p>duration (roAssociativeArray): Specifies how long the offer is available using the following fields (for example 7 days or 1 month):</p>
+<ul>
+<li>quantity (integer): The length of the duration.</li>
+<li>unit (string): The interval ("Day", "Month", "Quarter", or "Year"). </li>
+</ul>
+</li>
+<li>billingFrequency (string; included only if the type is "ReducedPrice" or "RegularPrice"): Specifies how often the customer is charged for the subscription: "Monthly", "Quarterly", or "Yearly"</li>
+</ul>
+</li>
+<li>cost (string; included only if the billingType is "DigitalContent"): Localized cost for the digital content (with local currency symbol).</li>
+<li>
+<p>duration (roAssociativeArray; included only if the billingType is "DigitalContent"): Specifies how long the digital products are available using the following fields:</p>
+<ul>
+<li>quantity (integer): The length of the duration.</li>
+<li>unit (string): The interval ("Day", "Month", "Quarter", or "Year"). </li>
+</ul>
+</li>
+<li>quantity (integer; included only if the billingType is "DigitalContent"):  The number of times the digital product can be accessed (for example, the number of times a movie can be watched or the number of games that can be installed).</li>
+</ul>
+</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">purchasesMap</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">A map that contains the <strong>sku</strong> of a purchase object (the key) and the object itself (the value). You can use this field to iterate through the collection of purchase objects returned by the <strong>GetPurchases</strong> command, find a purchase object based on its <strong>sku</strong>, and then access the properties of the purchase.</td>
+</tr>
+<tr>
+<td class="short-line">products</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">The list of current (and optionally historical) products associated with the Roku customer account. Each product has the following fields:<br><ul>
+<li><strong>productId</strong> (string): The developer-specified product ID entered in the Developer Dashboard. </li>
+<li><strong>name</strong> (string): The developer-specified product name entered in the Developer Dashboard.</li>
+<li><strong>purchaseOptions</strong> (roArray of strings): The list of purchase option SKUs associated with the product.</li>
+<li>
+<p><strong>entitlementIds</strong> (roArray of roAssociativeArrays): The list of entitlement identifiers, which includes the following fields:</p>
+<ul>
+<li>entitlementKey: The developer-specified entitlement scope.</li>
+<li>entitlementScope: The Roku-provided entitlement scope.</li>
+</ul>
+</li>
+<li><strong>addon</strong> (boolean). Indicates whether the add-on product is available for purchase (true) or not (false).</li>
+<li><strong>prerequisites</strong> (roArray of string): A list of product IDs from which at least one must have already been purchased in order to be eligible for the add-on.</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">productsMap</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">A map that contains the <strong>productId</strong> of a product object (the key) and the object itself (the value). You can use this field to iterate through the collection of product objects returned by the <strong>GetPurchases</strong> command, find a product object based on its <strong>productId</strong>, and then access the properties of the product.</td>
+</tr>
+<tr>
+<td class="short-line">entitlements</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">The list of current (and optionally historical) entitlements associated with the Roku customer account. Each entitlement has the following fields: <ul>
+<li><strong>entitlementKey</strong> (string): The developer-specified entitlement scope.</li>
+<li><strong>entitlementScope</strong> (string): The Roku-provided entitlement scope.</li>
+<li><strong>expirationDate</strong> (string): The date when the entitlement expires for the customer. </li>
+<li><strong>entitlementQty</strong> (integer): The entitlement quantity available, which is typically 1.</li>
+<li><strong>ownerAppId</strong> (string): The ID of the app that owns the entitlement. If non-seller partner apps receive entitlements included in cross-developer bundles, ownerAppId provides those seller partner apps.</li>
+</ul></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">status</td>
+<td class="short-line">enum</td>
+<td class="long-line">The command completion status, which may be one of the following values: <br><ul>
+<li><strong>2</strong>  Interrupted</li>
+<li><strong>1</strong>  Success</li>
+<li><strong>0</strong>  Network error</li>
+<li><strong>-1</strong> HTTP Error/Timeout</li>
+<li><strong>-2</strong> Timeout</li>
+<li><strong>-3</strong> Unknown Error</li>
+<li><strong>-4</strong> Invalid </li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">statusMessage</td>
+<td class="short-line">string</td>
+<td class="long-line">A text description of the command completion status.</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### **GetCatalog**
 

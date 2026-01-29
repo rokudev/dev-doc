@@ -12,7 +12,7 @@ next:
 ---
 Extends [**Node**](https://roku-ent.readme.io/dev/docs/node)
 
-The **ChannelStore** node class provides an interface to the Streaming Store. It provides functionality equivalent to the [roChannelStore](https://roku-ent.readme.io/dev/docs/ifchannelstore) component. In general, the **ChannelStore** node class allows developers to issue one of several commands, which involves the following steps:
+The **ChannelStore** node class provides an interface to the Streaming Store. It provides functionality equivalent to the [roChannelStore](doc:ifchannelstore) component. In general, the **ChannelStore** node class allows developers to issue one of several commands, which involves the following steps:
 
 1. Set the fields containing the data needed by the command (optional).
 2. Set up an observer of the result field associated with the command.

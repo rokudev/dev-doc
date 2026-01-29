@@ -24,7 +24,9 @@ next:
 
 Returns a unique number for this object that can be used to identify whether a roChannelStoreEvent event originated from this object, by comparing with the roChannelStoreEvent object's GetSourceIdentity() value.
 
-> The value can be any arbitrary value as assigned by the Roku OS, and should only be used for comparison purposes. For example, the value should not be used as an array index.<br /><br />For use as a look-up key, you can use GetIdentity().ToStr() as an associative array key.
+> The value can be any arbitrary value as assigned by the Roku OS, and should only be used for comparison purposes. For example, the value should not be used as an array index.  
+>
+> For use as a look-up key, you can use GetIdentity().ToStr() as an associative array key.
 
 #### Return Value
 

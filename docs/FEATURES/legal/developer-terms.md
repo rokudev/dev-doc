@@ -14,7 +14,7 @@ By becoming a Roku Developer, you are subject to and agree to comply with all ap
 
 ## Developer terms
 
-* [Certification Requirements](doc:certification)
+* [Certification Requirements](doc:certification-overview)
 * [Claimed Copyright Infringement Procedures](https://docs.roku.com/doc/dmca/en-us)
 * [Roku’s Address for Notices](https://docs.roku.com/doc/addressfornotices/en-us)
 * [Roku Advertising Guidelines](https://docs.roku.com/doc/advertisingguidelines/en-us)

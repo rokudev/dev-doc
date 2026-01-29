@@ -847,78 +847,9 @@ Lists the products and purchase options linked to the app.
 
 #### request
 
-| Field   | Type              | Description                                                                        |
-| :------ | :---------------- | :--------------------------------------------------------------------------------- |
-| request | associative array | Includes the request's command and parameters: <br />$\{get-catalog-request-table} |
-
-\{#get-catalog-request-table}
-
-| Field   | Type              | Description                                                        |
-| :------ | :---------------- | :----------------------------------------------------------------- |
-| command | string            | Set to "GetCatalog".                                               |
-| params  | associative array | Include the following key-value pair: $\{get-catalog-params-table} |
-
-\{#get-catalog-params-table}
-
-| Field   | Type    | Description |
-| :------ | :------ | :---------- |
-| version | integer | Set to 2    |
+<br />
 
 #### requestStatus.result
-
-| Field         | Type              | Description                                                                                                          |
-| :------------ | :---------------- | :------------------------------------------------------------------------------------------------------------------- |
-| result        | associative array | Includes the products and purchase options returned by the GetCatalog command: $\{get-catalog-results-table}         |
-| status        | enum              | The command completion status, which may be one of the following values: <br />$\{request-status-status-values-list} |
-| statusMessage | string            | A text description of the command completion status.                                                                 |
-
-\{#get-catalog-results-table}
-
-| Field              | Type                           | Description                                                                                                                                                                                                                                                                                                                                   |
-| :----------------- | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| products           | roArray of roAssociativeArrays | The list of products linked to the app. Each product has the following fields: <br />$\{get-catalog-products}                                                                                                                                                                                                                                 |
-| productsMap        | roAssociativeArray             | A map that contains the **productId** of a product object (the key) and the object itself (the value). You can use this field to iterate through the collection of product objects returned by the **GetCatalog** command, find a product object based on its **productId**, and then access the properties of the product.                   |
-| purchaseOptions    | roArray of roAssociativeArrays | The list of purchase options linked to the app. Each purchase option has the following fields:<br />$\{get-catalog-purchase-options}                                                                                                                                                                                                          |
-| purchaseOptionsMap | roAssociativeArray             | A map that contains the **sku** of a purchaseOption object (the key) and the object itself (the value). You can use this field to iterate through the collection of purchaseOption objects returned by the **GetCatalog** command, find a purchase option object based on its **sku**, and then access the properties of the purchase option. |
-
-\{#get-catalog-products}
-
-* **productId** (string): The developer-specified product ID entered in the Developer Dashboard.
-* **name** (string): The developer-specified product name entered in the Developer Dashboard.
-* **purchaseOptions** (roArray of roAssociativeArrays): The list of purchase option SKUs associated with the product.
-* **entitlementIds** (roArray of roAssociativeArrays): The list of entitlement identifiers, which includes the following fields:
-  * entitlementKey: The developer-specified entitlement scope.
-  * entitlementScope: The Roku-provided entitlement scope.
-* **addon** (boolean). Indicates whether the product is an add-on (true) or not (false).
-* **prerequisites** (roArray of string): A list of product IDs from which at least one must have already been purchased in order to be eligible for the add-on.
-* **productExclusivityGroup** (roArray of string): A list of product IDs from which none may have already been purchased in order to be eligible for the add-on, unless completing an upgrade/downgrade
-
-\{#get-catalog-purchase-options}
-
-* **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
-* **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard.
-* **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
-* **offerStartDate** (string): The first date when the purchase option is available.
-* **offerEndDate** (string): The date when the purchase option is no longer available.
-* **cost** (string): Localized regular cost of the purchase option (with local currency symbol).
-* **type** (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".
-* **addon** (boolean): A flag indicating whether the purchase option is an add-on.
-* **billingPlans** (roArray of roAssociativeArrays): A list of billing plans associated with the purchase option. Each billing plan contains the following fields:
-  * billingType (string): Indicates whether a "Subscription" or "DigitalContent" is being billed.
-  * productIds (roArray of strings): A list of product IDs being billed.
-  * phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan.
-    * name (string): The developer-specified name for the offer entered in the Developer Dashboard.
-    * type (string): The type of offer: "FreeTrial", "ReducedPrice", or "RegularPrice"
-    * cost (string): Localized cost of the offer (with local currency symbol).
-    * duration (roAssociativeArray): Specifies how long the offer is available using the following fields (for example 7 days or 1 month):
-      * quantity (integer): The length of the duration.
-      * unit (string): The interval ("Day", "Month", "Quarter", or "Year").
-    * billingFrequency (string; included only if the type is "ReducedPrice" or "RegularPrice"): Specifies how often the customer is charged for the subscription: "Monthly", "Quarterly", or "Yearly"
-  * **cost** (string; included only if the billingType is "DigitalContent"): Localized cost for the digital content (with local currency symbol).
-  * **duration** (roAssociativeArray; included only if the billingType is "DigitalContent"): Specifies how long the digital products are available using the following fields:
-    * quantity (integer): The length of the duration.
-    * unit (string): The interval ("Day", "Month", "Quarter", or "Year").
-  * **quantity** (integer; included only if the billingType is "DigitalContent"):  The number of times the digital product can be accessed (for example, the number of times a movie can be watched or the number of games that can be installed).
 
 ### **QueryPurchaseOptions**
 
@@ -926,130 +857,7 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 
 #### request
 
-| Field   | Type              | Description                                                                             |
-| :------ | :---------------- | :-------------------------------------------------------------------------------------- |
-| request | associative array | Includes the request's command and parameters: $\{query-purchase-options-request-table} |
-
-\{#query-purchase-options-request-table}
-
-| Field   | Type              | Description                                                                                             |
-| :------ | :---------------- | :------------------------------------------------------------------------------------------------------ |
-| command | string            | Set to "QueryPurchaseOptions".                                                                          |
-| params  | associative array | Include the following key-value pairs to create the query:<br />$\{query-purchase-options-params-table} |
-
-\{#query-purchase-options-params-table}
-
-| Name               | Type                          | Description                                                                                                                                                                                                                                                                                                                                                                                                |
-| :----------------- | :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| purchaseOptionsMap | roAssociativeArrays           | Specify the purchase option map returned by the **GetCatalog**/**GetPurchases** command on which the query is to be executed. This may be one of the following values:<br />$\{query-purchase-options-purchase-options-map-list}                                                                                                                                                                           |
-| productsMap        | roAssociativeArrays           | Specify a product map returned by the **GetCatalog**/**GetPurchases** commands on which the query is to be executed. This may be one of the following values:<br />$\{query-purchase-options-products-map-list}                                                                                                                                                                                            |
-| query              | roArray of roAssociativeArray | Use the following fields to create the query conditions. <br /><br />- Boolean OR logic is used for fields that are roArrays (for example, **referenceProductIds**).<br /><br />- AND logic is applied to the fields included in the query (for example, return purchaseOptions that are monthly subscriptions AND have free trials AND are not add-ons).<br /><br />$\{query-purchase-options-query-list} |
-
-\{#query-purchase-options-purchase-options-map-list}
-
-* **purchaseOptionsMap**: Specify this if you are using the response from the **GetCatalog** command.
-* **purchasesMap**: Specify this if you are using the response from the **GetPurchases** command.
-
-\{#query-purchase-options-products-map-list}
-
-* **productMap**: Specify this if you are using the response from either the **GetCatalog** or **GetPurchases** command.
-
-\{#query-purchase-options-query-list}
-
-| Name                | Type              | Description                                                                                                                                                                                                                                                                                                                                                           |
-| :------------------ | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| referenceSku        | string            | The developer-specified SKU for the purchase option entered in the Developer Dashboard. This corresponds with the **sku** field of a purchase option.                                                                                                                                                                                                                 |
-| referenceProductIds | roArray of string | A list of one or more **productId** entries. The **productId** is a field within a **product**, and is the developer-specified ID entered in the Developer Dashboard.                                                                                                                                                                                                 |
-| referenceCost       | string            | The localized regular cost of the purchase option (with local currency symbol). This corresponds with the **cost** field of a purchase option.                                                                                                                                                                                                                        |
-| type                | string            | The type of purchase option (for example, monthly, quarterly, or annual subscription). This corresponds with the **type** field of a purchase option, and it may be one of the following values: $\{query-type-list}                                                                                                                                                  |
-| billingType         | string            | The billing type of a purchase option (for example, subscription or digital product). This corresponds with the **billingPlan**.**billingtype** field of a purchase option, and it may be one of the following values: $\{query-billing-type-list}                                                                                                                    |
-| phase               | string            | The initial offer (if any) for the billing plan of a purchase option. This corresponds with the **billingPlan**.**phase.type** field of a purchase option, and it may be one of the following values: $\{query-phase-list}                                                                                                                                            |
-| base                | boolean           | A flag indicating whether the purchase option is a base item (does not require a prerequisite product in order to be purchased and is linked to only a single product).<br />$\{query-base-list}                                                                                                                                                                      |
-| addon               | boolean           | A flag indicating whether the purchase option is an add-on (can only be purchased if one of its prerequisite base products has already been purchased).  If you include both **referenceSku** and **addon** in the query, the add-on purchase options that can be purchased after the reference purchase option is purchased are returned.<br />$\{query-add-on-list} |
-| bundle              | boolean           | A flag indicating whether the purchase option is included in a bundle (the purchase option is linked to two or more products included in a single bundle).<br />$\{query-bundle-list}                                                                                                                                                                                 |
-| includeProducts     | string            | Only specify this field if you include the **referenceSku** or **referenceProductIds** in the query. If you include both, **referenceProductIds** is used. This may be one of the following values:<br />$\{query-include-products-list}                                                                                                                              |
-| compareCost         | string            | Only specify this field if you include the **referenceSku** or **referenceCost** in the query. If you include both, **referenceCost** is used. This may be one of the following values:<br />$\{query-compare-cost-list}                                                                                                                                              |
-| sameProductGroup    | boolean           | Only specify this field if you include the **referenceSku** in the query. This flag indicates whether the purchase option cannot be purchased with the reference purchase option (the purchase option and reference purchase option are in the same product exclusivity group).<br />$\{query-same-product-group-list}                                                |
-| state               | string            | Only specify this field if you are querying purchases (using the **purchasesMap** returned by the **GetPurchases** command). This field represents the state of a subscription. It may be one of the following values: <br />$\{query-state-list}                                                                                                                     |
-
-\{#query-type-list}
-
-* "Consumable"
-* "NonConsumable"
-* "MonthlySub"
-* "QuarterlySub"
-* "YearlySub"
-* "PhysicalGood"
-* "Shipping"
-* "Mixed"
-
-\{#query-billing-type-list}
-
-* "Subscription"
-* "DigitalProducts"
-
-\{#query-phase-list}
-
-* "FreeTrial"
-* "ReducedPrice"
-* "RegularPrice"
-
-\{#query-base-list}
-
-* true: The purchase option is a base item.
-* false: The purchase option is not a base item.
-
-\{#query-add-on-list}
-
-* true: The purchase option is an add-on.
-* false: The purchase option is not an add-on.
-
-\{#query-bundle-list}
-
-* true: The purchase option is in a bundle.
-* false: The purchase option is not in a bundle.
-
-\{#query-include-products-list}
-
-* "same":  Returns the purchase options that have the same products as the reference purchase option or reference product list.
-* "more": Returns the purchase options that have all the products that the reference purchase option or reference product list has and more .
-* "less": Return the purchase options that include the base product of the reference purchase option and have a product list with fewer products than the reference purchase option or reference products.
-
-\{#query-compare-cost-list}
-
-* "same":  Returns the purchase options that cost the same as the reference purchase option in the regular price billing phase.
-* "more": Returns the purchase options that cost more than the reference purchase option in the regular price billing phase.
-* "less": Returns the purchase options that cost less than the reference purchase option in the regular price billing phase.
-
-\{#query-same-product-group-list}
-
-* true: The purchase option cannot be purchased with the reference purchase option.
-* false: The purchase option can be purchased with the reference purchase option.
-
-\{#query-state-list}
-
-* "ActivePaid"
-* "ActiveFreeTrial"
-* "ActiveCanceled"
-* "ActiveInGracePeriod"
-* "ActivePaused"
-* "InactiveWaitingActivation"
-* "InactivePaused"
-* "InactiveOnHold"
-* "InactiveMigrated"
-* "InactiveExpired"
-
-#### requestStatus.result
-
-| Field  | Type               | Description                          |
-| :----- | :----------------- | :----------------------------------- |
-| result | roAssociativeArray | $\{query-purchase-options-map-table} |
-
-\{#query-purchase-options-map-table}
-
-| Field              | Type               | Description                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| :----------------- | :----------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| purchaseOptionsMap | roAssociativeArray | For each purchase option that matches the specified query criteria, this map contains the **sku** of the **purchaseOption** object (the key) and the object itself (the value). You can use this field to iterate through the collection of purchaseOption objects returned by the **QueryPurchaseOptions** command, find a purchase option object based on its **sku**, and then access the properties of the purchase option. |
+<br />
 
 ### **DoOrder**
 
@@ -1057,57 +865,9 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 
 #### request
 
-| Field   | Type              | Description                                                                     |
-| :------ | :---------------- | :------------------------------------------------------------------------------ |
-| request | associative array | Includes the request's command and parameters: $\{query-do-order-request-table} |
-
-\{#query-do-order-request-table}
-
-| Field   | Type              | Description                                                                 |
-| :------ | :---------------- | :-------------------------------------------------------------------------- |
-| command | string            | Set to "DoOrder".                                                           |
-| params  | associative array | Include the following key-value pairs:<br />$\{query-do-order-params-table} |
-
-\{#query-do-order-params-table}
-
-| Field      | Type                          | Description                                                                                                                   |
-| ---------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| version    | integer                       | Set to 2                                                                                                                      |
-| orderItems | roArray of roAssociativeArray | The list of purchase options the customer has selected. Each orderItem has the following fields:<br />$\{do-order-items-list} |
-
-\{#do-order-items-list}
-
-* **sku** (string): The developer-specified SKU for the selected purchase option.
-* **qty** (integer): The quantity of the item to be purchased, which is typically 1 for most purchase options.
-* **action** (string; optional; case-sensitive): Specify whether the purchase is related to an "Upgrade" or "Downgrade" (do not pass "upgrade" or "downgrade").
-* **replacedPurchase** (roAssociativeArray; only include if action field is set to "Upgrade" or "Downgrade"): Specify the existing purchase to be replaced by the new purchase using the following field: sku: The existing purchase option to be replaced.
+<br />
 
 #### requestStatus.result
-
-| Field         | Type              | Description                                                                                                           |
-| :------------ | :---------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| result        | associative array | $\{query-do-order-response-table}                                                                                     |
-| status        | enum              | The command completion status, which may be one of the following values:  <br />$\{request-status-status-values-list} |
-| statusMessage | string            | A text description of the command completion status.                                                                  |
-
-\{#query-do-order-response-table}
-
-| Field     | Type                           | Description                                                                                                                                                              |
-| --------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| purchases | roArray of roAssociativeArrays | Includes the purchase data returned by the DoOrder command. Each purchase includes the following set of key-value pairs:<br />$\{query-do-order-response-purchases-list} |
-
-\{#query-do-order-response-purchases-list}
-
-* **rokuCustomerId** (string): The Roku customer ID associated with the user.
-* **purchaseId** (string): The transaction ID generated for the purchase.
-* **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
-* **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard.
-* **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
-* **type** (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".
-* **total** (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).
-* **amount** (string): Localized amount of the item purchased (post transaction; with local currency symbol).
-* **qty** (integer): The quantity of the product purchased, which is typically 1 for subscription purchases.
-* **replacedPurchase** (roAssociativeArray; only included if the purchase is an upgrade/downgrade): Indicates the existing purchase replaced by the new purchase using the following field: sku: The existing purchase option that was replaced.
 
 ## Appendix B: Roku Pay Web Services updates
 

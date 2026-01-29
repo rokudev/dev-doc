@@ -635,6 +635,10 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 </table>
 `}</HTMLBlock>
 
+### **GetPurchases**
+
+Returns the list of current and historical (optional) purchases associated with the Roku customer account.
+
 <HTMLBlock>{`
 <table>
 <thead>
@@ -696,100 +700,7 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 
 <br />
 
-### **GetPurchases**
-
-Returns the list of current and historical (optional) purchases associated with the Roku customer account.
-
-#### request
-
-| Field   | Type               | Description                                                                         |
-| :------ | :----------------- | :---------------------------------------------------------------------------------- |
-| request | roAssociativeArray | Includes the request's command and parameters:<br />$\{get-purchases-request-table} |
-
-\{#get-purchases-request-table}
-
-| Field   | Type               | Description                                                                 |
-| :------ | :----------------- | :-------------------------------------------------------------------------- |
-| command | string             | Set to "GetPurchases".                                                      |
-| params  | roAssociativeArray | Include the following key-value pairs: <br />$\{get-purchases-params-table} |
-
-\{#get-purchases-params-table}
-
-| Field          | Type    | Description                                                                                                                                                                                                            |
-| :------------- | :------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| version        | integer | Set to 2                                                                                                                                                                                                               |
-| includeExpired | boolean | Specify whether to return historical purchases (canceled, expired, and terminated subscriptions or digital products), in addition to the active purchases. The default is false (only current purchases are returned). |
-
-#### requestStatus.result
-
-| Field         | Type              | Description                                                                                                          |
-| :------------ | :---------------- | :------------------------------------------------------------------------------------------------------------------- |
-| result        | associative array | Includes the transaction data returned by the GetPurchases:<br /><br />$\{get-purchases-results-table}               |
-| status        | enum              | The command completion status, which may be one of the following values: <br />$\{request-status-status-values-list} |
-| statusMessage | string            | A text description of the command completion status.                                                                 |
-
-\{#get-purchases-results-table}
-
-| Field        | Type                           | Description                                                                                                                                                                                                                                                                                                                   |
-| :----------- | :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| purchases    | roArray of roAssociativeArrays | The list of current (and optionally historical) purchases associated with the Roku customer account. Each purchase has the following fields:<br />$\{purchases-list}                                                                                                                                                          |
-| purchasesMap | roAssociativeArray             | A map that contains the **sku** of a purchase object (the key) and the object itself (the value). You can use this field to iterate through the collection of purchase objects returned by the **GetPurchases** command, find a purchase object based on its **sku**, and then access the properties of the purchase.         |
-| products     | roArray of roAssociativeArrays | The list of current (and optionally historical) products associated with the Roku customer account. Each product has the following fields:<br />$\{products-list}                                                                                                                                                             |
-| productsMap  | roAssociativeArray             | A map that contains the **productId** of a product object (the key) and the object itself (the value). You can use this field to iterate through the collection of product objects returned by the **GetPurchases** command, find a product object based on its **productId**, and then access the properties of the product. |
-| entitlements | roArray of roAssociativeArrays | The list of current (and optionally historical) entitlements associated with the Roku customer account. Each entitlement has the following fields: $\{entitlements-list}                                                                                                                                                      |
-
-\{#purchases-list}
-
-* **rokuCustomerId** (string): The Roku customer ID associated with the user.
-* **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
-* **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard.
-* **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
-* **cost** (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).
-* **type** (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".
-* **addon** (boolean): A flag indicating whether the purchase was for an add-on.
-* **purchaseDate** (string): The purchase date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format).
-* **purchaseChannel** (string): Indicates where the Roku Pay subscription purchase was made: **web** (purchased from [Roku.com](http://roku.com/) [for example, through [Instant Signup](https://developer.roku.com/docs/developer-program/discovery/instant-signup.md) during the device activation]) or **device** (purchased on the Roku device [through the on-device sign-up flow]).
-* **purchaseContext** (string): Indicates how the subscription purchase was made: **isu** (purchased via Instant Signup) or **iap** (purchased in the app)
-* **billingPlans** (roArray of roAssociativeArrays): A list of billing plans associated with the purchase. Each billing plan contains the following fields:
-  * billingType (string): Indicates whether a "Subscription" or "DigitalContent" was purchased.
-  * purchaseId (string): The transaction ID.
-  * productIds (roArray of strings): The list of product IDs purchased as part of the transaction.
-  * subscriptionId (string; included only if the billingType is "Subscription): The unique Roku-generated ID for the subscription.
-  * renewalDate (string; included only if the billingType is "Subscription): The subscription renewal date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format).
-  * state (string): The state of the subscription: "ActivePaid" (for DigitalContent only), "ActiveFreeTrial", "ActiveCanceled", "ActiveInGracePeriod", "ActivePaused", "InactiveWaitingActivation", "InactivePaused", "InactiveOnHold", or "InactiveExpired" (for DigitalContent only).
-  * phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan.
-    * name (string): The developer-specified name for the offer entered in the Developer Dashboard.
-    * type (string): The type of offer: "FreeTrial", "ReducedPrice", or "RegularPrice"
-    * cost (string): Localized cost of the offer (with local currency symbol).
-    * phaseEndDate (string; included only if the type is "FreeTrial" or "ReducedPrice"): The subscription phase end date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format).
-    * duration (roAssociativeArray): Specifies how long the offer is available using the following fields (for example 7 days or 1 month):
-      * quantity (integer): The length of the duration.
-      * unit (string): The interval ("Day", "Month", "Quarter", or "Year").
-    * billingFrequency (string; included only if the type is "ReducedPrice" or "RegularPrice"): Specifies how often the customer is charged for the subscription: "Monthly", "Quarterly", or "Yearly"
-  * cost (string; included only if the billingType is "DigitalContent"): Localized cost for the digital content (with local currency symbol).
-  * duration (roAssociativeArray; included only if the billingType is "DigitalContent"): Specifies how long the digital products are available using the following fields:
-    * quantity (integer): The length of the duration.
-    * unit (string): The interval ("Day", "Month", "Quarter", or "Year").
-  * quantity (integer; included only if the billingType is "DigitalContent"):  The number of times the digital product can be accessed (for example, the number of times a movie can be watched or the number of games that can be installed).
-
-\{#products-list}
-
-* **productId** (string): The developer-specified product ID entered in the Developer Dashboard.
-* **name** (string): The developer-specified product name entered in the Developer Dashboard.
-* **purchaseOptions** (roArray of strings): The list of purchase option SKUs associated with the product.
-* **entitlementIds** (roArray of roAssociativeArrays): The list of entitlement identifiers, which includes the following fields:
-  * entitlementKey: The developer-specified entitlement scope.
-  * entitlementScope: The Roku-provided entitlement scope.
-* **addon** (boolean). Indicates whether the add-on product is available for purchase (true) or not (false).
-* **prerequisites** (roArray of string): A list of product IDs from which at least one must have already been purchased in order to be eligible for the add-on.
-
-\{#entitlements-list}
-
-* **entitlementKey** (string): The developer-specified entitlement scope.
-* **entitlementScope** (string): The Roku-provided entitlement scope.
-* **expirationDate** (string): The date when the entitlement expires for the customer.
-* **entitlementQty** (integer): The entitlement quantity available, which is typically 1.
-* **ownerAppId** (string): The ID of the app that owns the entitlement. If non-seller partner apps receive entitlements included in cross-developer bundles, ownerAppId provides those seller partner apps.
+<br />
 
 ### **GetCatalog**
 

@@ -53,40 +53,40 @@ these steps:
    ```
 
 2. Register the **roInput** component for voice commands by calling
-   its  [**EnableTransportEvents()**](docs/references/brightscript/interfaces/ifinput.md#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.
+   its  [**EnableTransportEvents()**](https://roku-ent.readme.io/dev/docs/ifinput#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.
 
    ```
    input.enableTransportEvents()
    ```
 
-3. Use a message loop to listen for the voice commands. In the message loop, do the following:  
+3. Use a message loop to listen for the voice commands. In the message loop, do the following:
    1. Use the [**roInputEvent.GetInfo()**](doc:roinputevent) method to check for voice control commands sent to your app. This method returns an AssociativeArray with the following fields: **type**, **id, command**.
       1. You can use the **type** key to verify that the event received is a voice command (transport event), and the **command** key to identify the specific command.
       2. For the "seek" command, the AssociativeArray will contain two additional fields: **direction** and **duration**. The **direction** field indicates whether the seek command is for skipping "forward" or "backward"; the **duration** field specifies how many seconds to skip forward or backward.
       3. Seek functionality can also be implemented via trickplay using the [**Video.seek**](doc:video) field. In this case, the app must implement the [Roku Advertising Framework](doc:advertising) (or not include ads). The seek voice control attribute must also be enabled in the [Roku manifest](doc:channel-manifest) (**supports_etc_seek=1**).
-   2.  Call the [**roInput.EventResponse()**](doc:ifinput) method to indicate that you have handled the voice command.
-      1. This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
-      2. This method should be called immediately after a voice command is received. If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled". See [Error handling](#error-handling) for the complete list of error messages to which the **status** field can be set.
-         c.  Optionally, for better modularization, you can pass the captured voice command to a function for handing.  
-         ```
-         while m.isPlaying
-               msg = wait(0, port)
-               if type(msg) = "roInputEvent" then
-                   info = msg.GetInfo()
-                   if info.type = "transport" then
-                       eventRet = {status: "unhandled"}
-                       player = m.top.getScene().findNode("myVideoPlayer")
-                       if player <> invalid then
-                           eventRet = player.callFunc("handleTransport", info)
-                       end if
-                       eventRet.id = info.id
-                       input.EventResponse(eventRet)
-                   end if
-                   'else if ...
-                   ' ... handling of other events
-              end if
-           end while
-         ```
+   2. Call the [**roInput.EventResponse()**](doc:ifinput) method to indicate that you have handled the voice command.
+   3. This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
+   4. This method should be called immediately after a voice command is received. If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled". See [Error handling](#error-handling) for the complete list of error messages to which the **status** field can be set.
+      c.  Optionally, for better modularization, you can pass the captured voice command to a function for handing.
+      ```
+      while m.isPlaying
+            msg = wait(0, port)
+            if type(msg) = "roInputEvent" then
+                info = msg.GetInfo()
+                if info.type = "transport" then
+                    eventRet = {status: "unhandled"}
+                    player = m.top.getScene().findNode("myVideoPlayer")
+                    if player <> invalid then
+                        eventRet = player.callFunc("handleTransport", info)
+                    end if
+                    eventRet.id = info.id
+                    input.EventResponse(eventRet)
+                end if
+                'else if ...
+                ' ... handling of other events
+           end if
+        end while
+      ```
 
 4. Add business logic for handling each voice command. In this example, a function is used to receive the voice command and implement the required behavior. As a best practice, set the **ret.status** field to "unhandled" by default, and then update it to "success" if your app handles the command, or "error.generic" if the app cannot fulfill it. Setting the status to "error.generic" displays "That is not available" in the Roku Voice heads-up display. The default "unhandled" status results in the Roku OS executing the default behavior.
 
@@ -378,7 +378,7 @@ The following table summarizes the different voice controls, how they may be inv
 <td>nowplaying</td>
 <td>"what's playing?"<br />"what am I watching?"</td>
 <td>Acknowledge command as success; the Roku OS will display app name as playing.</td>
-<td><ul><li>Content playing is known to the app: Create an <a href="/docs/references/brightscript/components/roappmanager.md"><strong>roAppManager</strong></a> node, and then pass the item's title and contentType into a call to the <a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method. Mark the event as successfully handled.</li><li>No content playing or content playing is unknown to the app: Pass <code>invalid</code> into a call to the <a href="/docs/references/brightscript/interfaces/ifappmanager.md#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method, and mark the event as "error.generic" or "unhandled".</li></ul></td>
+<td><ul><li>Content playing is known to the app: Create an <a href="/docs/references/brightscript/components/roappmanager.md"><strong>roAppManager</strong></a> node, and then pass the item's title and contentType into a call to the <a href="https://roku-ent.readme.io/dev/docs/ifappmanager#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method. Mark the event as successfully handled.</li><li>No content playing or content playing is unknown to the app: Pass <code>invalid</code> into a call to the <a href="https://roku-ent.readme.io/dev/docs/ifappmanager#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method, and mark the event as "error.generic" or "unhandled".</li></ul></td>
 <td>Use content metadata to display title of content.</td>
 </tr>
 <tr>

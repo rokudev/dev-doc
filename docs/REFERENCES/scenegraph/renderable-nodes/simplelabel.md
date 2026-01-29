@@ -209,7 +209,7 @@ Rotation of SimpleLabel nodes is supported. The center of rotation is determined
 <td class="short-line">vertOrigin</td>
 <td class="short-line">string</td>
 <td class="short-line">top</td>
-<td class="long-line">See <a href="#verttical-origin"><strong>Vertical Origin</strong></a></td>
+<td class="long-line">See <a href="#vertical-origin"><strong>Vertical Origin</strong></a></td>
 </tr>
 </tbody>
 </table>

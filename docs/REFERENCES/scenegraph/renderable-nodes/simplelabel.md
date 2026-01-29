@@ -215,6 +215,164 @@ Rotation of SimpleLabel nodes is supported. The center of rotation is determined
 </table>
 `}</HTMLBlock>
 
+The following Fields derived from the Group base class can also be used:
+
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Default</th>
+<th class="short-line">Access Permission</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">scaleRotateCenter</td>
+<td class="short-line">vector2d</td>
+<td class="short-line">[0.0,0.0]</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Describes the location of a point in the node local coordinate that serves as the center of the scale and rotation operations</td>
+</tr>
+<tr>
+<td class="short-line">visible</td>
+<td class="short-line">Boolean</td>
+<td class="short-line">true</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">If true, the node and its children are rendered. If false, the node and its children do not render</td>
+</tr>
+<tr>
+<td class="short-line">inheritParentOpacity</td>
+<td class="short-line">Boolean</td>
+<td class="short-line">true</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">If true, the node opacity is determined by multiplying opacity attribute of the node by the opacity of the parent node, which may have been determined by multiplying the opacity of its ancestor nodes. If false, the node opacity is determined by the opacity attribute set for the node or the default opacity attribute value</td>
+</tr>
+<tr>
+<td class="short-line">rotation</td>
+<td class="short-line">float</td>
+<td class="short-line">0.0</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Defines the rotation angle about the scaleRotateCenter point (in radians) of the node local coordinate system. Positive values specify a counterclockwise rotation, negative values specify a clockwise rotation. For some Roku Player hardware, specifically Roku Players without OpenGL graphics support, only rotations of 0, 90, 180 and 270 degrees (in equivalent radians) are supported. (See <a href="/docs/specs/hardware.md#current-models" title="Roku Models and Features">Roku Models and Features</a> for information on OpenGL support)</td>
+</tr>
+<tr>
+<td class="short-line">scale</td>
+<td class="short-line">vector2d</td>
+<td class="short-line">[1.0,1.0]</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Defines the scale factor to be applied to the node local coordinate</td>
+</tr>
+<tr>
+<td class="short-line">renderTracking</td>
+<td class="short-line">option as string</td>
+<td class="short-line">disabled</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">renderTracking is set to "disabled" when enableRenderTracking is set to false. The following options are only available when enableRenderTracking is set to true: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Option</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line"><code>"none"</code></td>
+<td class="long-line">renderTracking is set to <code>"none"</code> if <strong>one or more</strong> of these conditions is true:<br>the node's <code>visible</code> field is set to <code>false</code>the node's <code>opacity</code> field is set to <code>0.0</code>no <code>clippingRect</code> is specified and the node is completely offscreena <code>clippingRect</code> is specified and the node lies completely outside that <code>clippingRect's</code> coordinates or is completely offscreen</td>
+</tr>
+<tr>
+<td class="short-line"><code>"partial"</code></td>
+<td class="long-line">renderTracking is set to <code>"partial"</code> if <strong>all</strong> of the following conditions are true:<br>the node's <code>visible</code> field is set to <code>true</code>the node's <code>opacity</code> field is greater than <code>0.0</code>no <code>clippingRect</code> is specified and the node is partially offscreena <code>clippingRect</code> is specified and the node lies partially inside the <code>clippingRect's</code> coordinates</td>
+</tr>
+<tr>
+<td class="short-line"><code>"full"</code></td>
+<td class="long-line">renderTracking is set to <code>"full"</code> if <strong>all</strong> of the following conditions are true:<br>the node's <code>visible</code> field is set to <code>true</code>the node's <code>opacity</code> field is greater than <code>0.0</code>no <code>clippingRect</code> is specified and the node is completely onscreena <code>clippingRect</code> is specified and the node lies completely inside the <code>clippingRect's</code> coordinates</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">inheritParentTransform</td>
+<td class="short-line">Boolean</td>
+<td class="short-line">true</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">If true, the node overall transformation is determined by combining the accumulated transformation matrix of all of its ancestors in the SceneGraph with the node local 2D transformation matrix described by its translation, rotation, scale and scaleRotateCenter fields. If false, the accumulated transformation of all of its ancestors in the SceneGraph is ignored and only the node local transformation matrix is used. This causes the node to be transformed relative to the root of the SceneGraph (that is, the Scene component)</td>
+</tr>
+<tr>
+<td class="short-line">renderPass</td>
+<td class="short-line">integer</td>
+<td class="short-line">0</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Used in combination with the numRenderPasses field of nodes extended from the <a href="/docs/references/scenegraph/abstract-nodes/arraygrid.md" title="ArrayGrid">ArrayGrid</a> abstract node class, to optimize rendering of lists and grids. This should never be set to a non-zero value unless you are optimizing the performance of a list or grid rendering by specifying the sequence of rendering operations for sub-elements of the list or grid items, and have set the numRenderPasses field value for the list or grid to a value greater than 1. If the numRenderPasses field value for the list or grid is set to a value greater than 1, you must set this field to a value greater than 0 for all sub-elements of the list or grid items, and not greater than the numRenderPasses field value. If the numRenderPasses field is set to a value greater than 1, and you set this field for a list or grid item sub-element to 0 (the default), or a value greater than the numRenderPasses field value, the list or grid item sub-element will not render</td>
+</tr>
+<tr>
+<td class="short-line">childRenderOrder</td>
+<td class="short-line">option as string</td>
+<td class="short-line">renderLast</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line"><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Option</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line"><code>"renderFirst"</code></td>
+<td class="long-line">any drawing done by this node will be done <strong>before</strong> the node children are rendered</td>
+</tr>
+<tr>
+<td class="short-line"><code>"renderLast"</code></td>
+<td class="long-line">any drawing done by this node will be done <strong>after</strong> the node children are rendered</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">clippingRect</td>
+<td class="short-line">array of float</td>
+<td class="short-line">[ 0.0, 0.0, 0.0, 0.0 ]</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Specifies a rectangle in the node local coordinate system that is used to limit the region where this node and its children can render. If a non-empty rectangle is specified, then all drawing by this node and its children will be limited to that rectangular area. <ul>
+<li><code>ClippingRects</code> can be specified by the node or by any of its ancestors in the SceneGraph.</li>
+<li><code>ClippingRects</code> are automatically set by some nodes such as lists and grids.</li>
+<li><code>ClippingRects</code> are always clipped to the screen boundaries, so if a <code>clippingRect</code> is specified that is partially or completely offscreen, it will be clipped to the screen boundaries. With respect to render tracking, although the node could be completely within the bounds of the specified <code>clippingRect</code>, it's <code>renderTracking</code> field could be set to <code>"none"</code> if the portion of the <code>clippingRect</code> it occupies is completely offscreen.</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">enableRenderTracking</td>
+<td class="short-line">Boolean</td>
+<td class="short-line">false</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">If true, renderTracking will be set to a string describing how much of the node is rendered on screen</td>
+</tr>
+<tr>
+<td class="short-line">translation</td>
+<td class="short-line">vector2d</td>
+<td class="short-line">[0.0,0.0]</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Defines the origin of the node local coordinate system relative to its parent node</td>
+</tr>
+<tr>
+<td class="short-line">opacity</td>
+<td class="short-line">float</td>
+<td class="short-line">1.0</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Sets the opacity of the node and its children. Opacity is the opposite of transparency. Opacity values range from 0.0 (fully transparent) to 1.0 (fully opaque). As the SceneGraph is traversed, the opacity values are combined by multiplying the current accumulated opacity with the node opacity, so that if the accumulated opacity of a node ancestors is 0.25 (75% transparent), the node will have opacity of 0.25 or less. This allows entire branches of the SceneGraph to fade in and out by animating the opacity of the node at the root of the branch</td>
+</tr>
+<tr>
+<td class="short-line">muteAudioGuide</td>
+<td class="short-line">Boolean</td>
+<td class="short-line">false</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">Set to true to suppress the default CVAA text to speech. This allows apps to provide their own custom implementation</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
+
 <br />
 
 ## Sample app

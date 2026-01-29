@@ -553,4 +553,4 @@ Some of the ciphers do not have large keys and others have security implications
 
 ## Supported interfaces
 
-* <Anchor label="ifEVPCipher" title="ifEVPCipher" href="/docs/references/brightscript/interfaces/ifevpcipher.md">ifEVPCipher</Anchor>
+[ifEVPCipher](doc:ifevpcipher)

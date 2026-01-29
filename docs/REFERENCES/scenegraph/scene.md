@@ -123,8 +123,8 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogTextColor</td>
 <td class="long-line">Color for the text in the following items:<br><ul>
-<li><a href="https://roku-ent.readme.io/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
-<li>All <a href="https://roku-ent.readme.io/dev/docs/std-dlg-item-base">content area items</a>, except for <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item">StdDlgGraphicItem</a>.</li>
+<li><a href="https://roku-ent.readme.io/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="https://roku-ent.readme.io/dev/docs/std-dlg-graphic-item">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
+<li>All <a href="https://roku-ent.readme.io/dev/docs/std-dlg-item-base">content area items</a>, except for <a href="https://roku-ent.readme.io/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="https://roku-ent.readme.io/dev/docs/std-dlg-graphic-item">StdDlgGraphicItem</a>.</li>
 <li><a href="https://roku-ent.readme.io/dev/docs/std-dlg-title-area#fields">Title area</a>. Unfocused button.</li>
 </ul></td>
 </tr>
@@ -142,7 +142,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <tr>
 <td class="short-line">DialogSecondaryTextColor</td>
 <td class="long-line">Color for the text of in the following items:<br><ul>
-<li><a href="https://roku-ent.readme.io/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
+<li><a href="https://roku-ent.readme.io/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="https://roku-ent.readme.io/dev/docs/std-dlg-graphic-item">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
 <li>Disabled button.</li>
 </ul></td>
 </tr>

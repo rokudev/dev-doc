@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-The abstract base class of all SceneGraph nodes and the equivalent of the BrightScript roSGNode component. See <Anchor label="roSGNode" title="roSGNode" href="/docs/references/brightscript/components/rosgnode.md">roSGNode</Anchor> for supported interfaces.
+The abstract base class of all SceneGraph nodes and the equivalent of the BrightScript roSGNode component. See <Anchor label="roSGNode" title="roSGNode" href="https://roku-ent.readme.io/dev/docs/rosgnode">roSGNode</Anchor> for supported interfaces.
 
 **Node** class objects do not draw anything and are skipped in the render traversal of the SceneGraph node tree. The Node class provides the core parenting and key focus management functionality used by all nodes.
 

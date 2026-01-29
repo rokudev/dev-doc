@@ -10,11 +10,11 @@ metadata:
 next:
   description: ''
 ---
-Extends <Anchor label="**Group**" title="**Group**" href="/docs/references/scenegraph/layout-group-nodes/group.md">**Group**</Anchor>
+Extends <Anchor label="**Group**" title="**Group**" href="https://roku-ent.readme.io/dev/docs/group">**Group**</Anchor>
 
 The **TextEditBox** node class is intended to display a string of characters as they are typed. When focused, it displays a flashing cursor to indicate the text insertion position.
 
-**TextEditBox** nodes are automatically included in the <Anchor label="**Keyboard**" title="**Keyboard**" href="/docs/references/scenegraph/widget-nodes/keyboard.md">**Keyboard**</Anchor> and <Anchor label="**MiniKeyboard**" title="**MiniKeyboard**" href="/docs/references/scenegraph/widget-nodes/minikeyboard.md">**MiniKeyboard**</Anchor> node classes.
+**TextEditBox** nodes are automatically included in the <Anchor label="**Keyboard**" title="**Keyboard**" href="https://roku-ent.readme.io/dev/docs/keyboard">**Keyboard**</Anchor> and <Anchor label="**MiniKeyboard**" title="**MiniKeyboard**" href="https://roku-ent.readme.io/dev/docs/minikeyboard">**MiniKeyboard**</Anchor> node classes.
 
 The default appearance of the **TextEditBox** is very transparent, allowing it to pick up most of its color from what is rendered underneath it. The appearance can be customized by changing the backgroundUri and other fields.
 
@@ -314,7 +314,7 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
       <td>
         Specifies whether to display the end or beginning of text that overflows its available width:<br />  
 
-        * **true**. The end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog". 
+        * **true**. The end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog".
         * **false**. The start of the text is shown (for example, "the quick brown fox jumps...").
       </td>
     </tr>

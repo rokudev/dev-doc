@@ -16,9 +16,9 @@ In May 2022, Roku presented a webinar demonstrating how to integrate trickplay t
 
 - How trickplay thumbnails enhance the playback experience when rewinding, fast-forwarding, and seeking content.
 - Certification requirements for video content that is longer than 15 minutes.
-- Available trickplay formats (HLS, DASH, and Roku’s BIF format). 
+- Available trickplay formats (HLS, DASH, and Roku’s BIF format).
 
-The webinar featured a demo showing how to generate, test, and implement trickplay thumbnails for HLS, DASH, and BIF formats. 
+The webinar featured a demo showing how to generate, test, and implement trickplay thumbnails for HLS, DASH, and BIF formats.
 
 ## Video
 
@@ -27,5 +27,5 @@ The webinar featured a demo showing how to generate, test, and implement trickpl
 
 ## Related documentation
 
-- [Trickplay mode overview](https://developer.roku.com/docs/developer-program/media-playback/trick-mode/trick-mode.md)
-- [Video node: trickplay fields](https://developer.roku.com/docs/references/scenegraph/media-playback-nodes/video.md)
+- [Trickplay mode overview](https://roku-ent.readme.io/dev/docs/trick-mode)
+- [Video node: trickplay fields](https://roku-ent.readme.io/dev/docs/video)

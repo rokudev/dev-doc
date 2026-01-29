@@ -24,7 +24,7 @@ To record a trace, developers need the following:
 * A Roku device with [developer mode enabled](doc:developer-setup).
 * Roku app (you can record a trace with an app running in a [sideloaded](doc:developer-setup), beta, or production environment).
   * For a sideloaded app, the manifest must enable the **run_as_process** attribute (run_as_process=1).
-  * For a [beta](https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md#beta-channel-guidelines) or [production](https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)).
+  * For a [beta](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#beta-channel-guidelines) or [production](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)).
 * Trace recording app. You can record an app trace via ECP and a websocket client.
 
 ## Using ECP to enable and record Perfetto traces

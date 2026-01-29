@@ -12,19 +12,19 @@ next:
 ---
 
 
-Publishers can integrate add-ons in their apps to offer customers premium content, additional apps, and other upgrades and features, and they can bundle add-ons with base subscriptions. By integrating add-ons, customers can complete the purchase of all desired products and features for their subscription online and directly on-device with just a few key presses. This enables publishers to maximize subscription revenue through upsells, without any additional friction in the purchase workflow. 
+Publishers can integrate add-ons in their apps to offer customers premium content, additional apps, and other upgrades and features, and they can bundle add-ons with base subscriptions. By integrating add-ons, customers can complete the purchase of all desired products and features for their subscription online and directly on-device with just a few key presses. This enables publishers to maximize subscription revenue through upsells, without any additional friction in the purchase workflow.
 
-> An add-on is defined as a service purchased on top of a base subscription product. 
+> An add-on is defined as a service purchased on top of a base subscription product.
 
 Integrating add-ons entails the following steps:
 
 1. Creating add-on products in the Developer Dashboard. A product represents a set of content (for example, a premium app or app package) or other features offered by your app. **You must upgrade to Product Catalog 2.0 to create add-ons** (see [Creating the Product Catalog](doc:product-catalog) for how to migrate the In-app purchase workflow in the Developer Dashboard to the new Product Catalog 2.0 experience).
 
-   
+
 
 2. Creating purchase options for the add-on. A purchase option specifies the billing frequency (monthly, quarterly, or annual), price, and any free trial or introductory price offers for the add-on product.
 
-   
+
 
 3. Update the app with new ChannelStore APIs that support add-ons.
 
@@ -32,7 +32,7 @@ Integrating add-ons entails the following steps:
 
 Publishers need to create a product in the Developer Dashboard for each add-on to be offered in their app. To create an add-on product, follow these steps:
 
-1. In the [Developer Dashboard](https://developer.roku.com/developer), select **Product Catalog** under **Monetization**. You can also select **Manage Product Catalog** from the drop-down list on the left side of the pages within the Developer Dashboard. The **Product Catalog** page opens. 
+1. In the [Developer Dashboard](https://developer.roku.com/developer), select **Product Catalog** under **Monetization**. You can also select **Manage Product Catalog** from the drop-down list on the left side of the pages within the Developer Dashboard. The **Product Catalog** page opens.
 
    ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/add-on-add-product.png)
 
@@ -40,7 +40,7 @@ Publishers need to create a product in the Developer Dashboard for each add-on t
 
    ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/add-on-product-details.png?version=1&modificationDate=1700090583000&cacheVersion=1&api=v2&width=600&height=735)
 
-   
+
 
 3. Enter the following information for the add-on product:
 
@@ -54,17 +54,17 @@ Publishers need to create a product in the Developer Dashboard for each add-on t
 
 4. Click **Save and create purchase option** to create one or more purchase options for the add-on immediately after saving the product.
 
-   
 
-5. Accept the default purchase option, which is **Subscription**, and then click **Continue** to create the purchase option for the add-on. 
+
+5. Accept the default purchase option, which is **Subscription**, and then click **Continue** to create the purchase option for the add-on.
 
    ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/rpay-catalog-purchase-type-dialog-no-cross-bundle.png)
 
-   
 
 
 
-You can create a subscription bundle that includes two base products or a single base product and one or more add-ons. To do this, click **Subscription bundle** and then select the products to be packaged together from the **Product** list. You may only select products that are not in the same product group. Click **Add another product to bundle** to include additional products in the bundle. Add-on products can only be bundled with their prerequisite base products. 
+
+You can create a subscription bundle that includes two base products or a single base product and one or more add-ons. To do this, click **Subscription bundle** and then select the products to be packaged together from the **Product** list. You may only select products that are not in the same product group. Click **Add another product to bundle** to include additional products in the bundle. Add-on products can only be bundled with their prerequisite base products.
 
 ## Creating purchase options for add-ons
 
@@ -72,15 +72,15 @@ Once you have created an add-on product, you create one or more purchase options
 
 To create a purchase option for an add-on product, follow these steps:
 
-1. From the **Product** list, select the add-on product for which you are creating a purchase option. 
+1. From the **Product** list, select the add-on product for which you are creating a purchase option.
 
-   
+
 
 2. Configure the following **Purchase Details** settings:
 
     ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/add-on-purchase-details.png?version=1&modificationDate=1700090583000&cacheVersion=1&api=v2&width=600&height=537)
 
-   
+
 
    | Purchase detail setting | Description                                                  |
    | :---------------------- | :----------------------------------------------------------- |
@@ -102,7 +102,7 @@ To create a purchase option for an add-on product, follow these steps:
 
 4. Click **Save as Draft** to save the purchase option without publishing it. Click **Publish** to activate the purchase option on your app.
 
-   
+
 
 5. If you selected **Publish** in step 6, review the **Purchase details** and **Billing plan** settings, and then click **Confirm** to make the purchase option available to customers on your app. After you create an add-on, you can schedule limited-time offers and schedule price changes for it (see [Creating the Product Catalog](doc:product-catalog) for how to do this).
 
@@ -123,36 +123,36 @@ To create a purchase option for an add-on product, follow these steps:
 
 Publishers need to update their app's code to leverage the new **GetAllPurchases**, **GetCatalog**, **QueryPuchaseOptions**, and **DoOrder** ChannelStore APIs, which have been enhanced for supporting add-ons. These APIs are summarized as follows (See [Appendix A](#appendix-a-catalog-20-apis) for the Add-on API reference):
 
-- **GetAllPurchases**: Lists the current (and optionally historical) products and purchase options associated with the Roku customer account. The v2 **GetAllPurchases** command includes a new **includesExpired** flag that enables you to get the historical purchases associated with the customer account. As a result, the **getAllPurchases** command is not used for this integration. 
+- **GetAllPurchases**: Lists the current (and optionally historical) products and purchase options associated with the Roku customer account. The v2 **GetAllPurchases** command includes a new **includesExpired** flag that enables you to get the historical purchases associated with the customer account. As a result, the **getAllPurchases** command is not used for this integration.
 
-  
+
 
 - **GetCatalog**: Retrieves the list of products and purchase options in the app.
 
-  
 
-- **QueryPuchaseOptions**: Takes the new purchase option map and product map objects returned by the **GetPurchases** and **GetCatalog** commands and returns a list of purchase options matching the specified query. This command helps developers determine which purchase options to offer to customers (it replaces the complex BrightScript mapping login used in earlier versions of this integration). 
 
-  
+- **QueryPuchaseOptions**: Takes the new purchase option map and product map objects returned by the **GetPurchases** and **GetCatalog** commands and returns a list of purchase options matching the specified query. This command helps developers determine which purchase options to offer to customers (it replaces the complex BrightScript mapping login used in earlier versions of this integration).
 
-- **DoOrder**: Displays the Roku Pay order confirmation screen where customers complete their subscription and add-on purchase. 
 
-The new versions of these ChannelStore APIs use Roku's generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it. Channels must observe the **requestStatus** field to be notified of changes and fire a callback function to parse and process the Channel Store API commands. 
+
+- **DoOrder**: Displays the Roku Pay order confirmation screen where customers complete their subscription and add-on purchase.
+
+The new versions of these ChannelStore APIs use Roku's generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it. Channels must observe the **requestStatus** field to be notified of changes and fire a callback function to parse and process the Channel Store API commands.
 
 To update your app with the new Channel Store APIs, follow these steps:
 
-1. Initialize the ChannelStore API generic request framework. The following code monitors the **channelStore.requestStatus** field and fires the **onRequestStatus()** callback function when changes to the **requestStatus** field occur. The **onRequestStatus()** function determines which command was sent and sends the results to the dedicated parser for the command. 
+1. Initialize the ChannelStore API generic request framework. The following code monitors the **channelStore.requestStatus** field and fires the **onRequestStatus()** callback function when changes to the **requestStatus** field occur. The **onRequestStatus()** function determines which command was sent and sends the results to the dedicated parser for the command.
 
    ```
    function init()
        m.store = m.parent.FindNode("channelStore")
        m.store.observeField("requestStatus", "onRequestStatus")
    end function
-     
+
    ' Generic SDK API request callback
    function onRequestStatus()
        requestStatus = m.store.requestStatus
-     
+
        if requestStatus = Invalid
            print "Invalid requestStatus"
        else
@@ -161,7 +161,7 @@ To update your app with the new Channel Store APIs, follow these steps:
            print "requestStatus.status", requestStatus.status
            print "requestStatus.statusMessage", requestStatus.statusMessage
            print "requestStatus.context", requestStatus.context
-     
+
            ' requestStatus.status:
            ' 2: Interrupted
            ' 1: Success
@@ -170,7 +170,7 @@ To update your app with the new Channel Store APIs, follow these steps:
            ' -2: Timeout
            ' -3: Unknown error
            ' -4: Invalid request
-     
+
            ' Generic request succeeded
            if requestStatus.status = 1 then
                if requestStatus.command = "GetCatalog" then
@@ -187,7 +187,7 @@ To update your app with the new Channel Store APIs, follow these steps:
    end function
    ```
 
-   
+
 
 2. Send the **GetCatalog** command to get the list of purchase options. In all the requests within the add-on API workflow, the version field must be set to **2**.
 
@@ -202,7 +202,7 @@ To update your app with the new Channel Store APIs, follow these steps:
    end sub
    ```
 
-   
+
 
 3. From the **OnGetCatalog()** callback function, store the **purchaseOptionsMap** and **productsMap** collections returned by the **GetCatalog** command.
 
@@ -210,10 +210,10 @@ To update your app with the new Channel Store APIs, follow these steps:
    sub onGetCatalog(requestResult as object)
        print "requestResult.status", requestResult.status
        print "requestResult.statusMessage", requestResult.statusMessage
-      
+
        m.purchaseOptions = {}
        m.products = {}
-     
+
        ' GetCatalog succeeded
        if requestResult.status = 1 and type(requestResult.result) = "roAssociativeArray" then
            m.purchaseOptions = requestResult.result.purchaseOptionsMap
@@ -222,7 +222,7 @@ To update your app with the new Channel Store APIs, follow these steps:
    end sub
    ```
 
-   
+
 
 4. Use the **QueryPurchaseOptions** command to offer the customer base and bundle purchase options in the UI. The following example creates a map of base and bundle purchase options:
 
@@ -234,7 +234,7 @@ To update your app with the new Channel Store APIs, follow these steps:
        ]
        QueryPurchaseOptions("Base", query)
    end sub
-    
+
    sub QueryPurchaseOptions(queryType as String, query as Object)
        request = {
            "context": {
@@ -249,7 +249,7 @@ To update your app with the new Channel Store APIs, follow these steps:
        }
        m.store.request = request
    end sub
-    
+
    sub onQueryPurchaseOptions(context as object, requestResult as object)
        if context.queryType = "Base" then
            m.basePurchaseOptions = requestResult.purchaseOptionsMap
@@ -261,7 +261,7 @@ To update your app with the new Channel Store APIs, follow these steps:
    end sub
    ```
 
-   
+
 
 5. Offer the customer add-on purchase options in the UI. The following example creates a map of add-on purchase options that are available for the specified SKU of a base purchase option:
 
@@ -272,7 +272,7 @@ To update your app with the new Channel Store APIs, follow these steps:
           ]
           QueryPurchaseOptions("Addon", query)
       end sub
-   
+
       sub onQueryPurchaseOptions(context as object, requestResult as object)
           if context.queryType = "Base" then
               m.basePurchaseOptions = requestResult.purchaseOptionsMap
@@ -284,7 +284,7 @@ To update your app with the new Channel Store APIs, follow these steps:
    end sub
    ```
 
-6. Send the **DoOrder** command to purchase the base prerequisite product and any add-ons, and then check the order status. 
+6. Send the **DoOrder** command to purchase the base prerequisite product and any add-ons, and then check the order status.
 
    ```
    sub DoOrder()
@@ -367,12 +367,12 @@ To update your app with the new Channel Store APIs, follow these steps:
        }
        m.store.request = request
    end sub
-     
+
    function onGetAllPurchases(requestResult as object) as void
        m.purchases = {}
        m.purchasedProducts = {}
        m.entitlements = []
-     
+
        print chr(10) + "onGetAllPurchases"
        dialog = CreateObject("roSGNode", "statusDialog")
        message = ""
@@ -538,7 +538,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 ## Sample app
 
-The provided sample app demonstrates how to integrate add-ons and bundles in your app to offer customers premium content, additional channels, bundled packages, and other upgrades and features. It lets you purchase base subscription products and bundles in your product catalog, and then purchase any eligible add-ons. 
+The provided sample app demonstrates how to integrate add-ons and bundles in your app to offer customers premium content, additional channels, bundled packages, and other upgrades and features. It lets you purchase base subscription products and bundles in your product catalog, and then purchase any eligible add-ons.
 
 ## Appendix A: Catalog 2.0 APIs
 
@@ -584,7 +584,7 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 - **-1** HTTP Error/Timeout
 - **-2** Timeout
 - **-3** Unknown Error
-- **-4** Invalid 
+- **-4** Invalid
 
 ### **GetPurchases**
 
@@ -632,41 +632,41 @@ Returns the list of current and historical (optional) purchases associated with 
 
 \{#purchases-list\}
 
-- **rokuCustomerId** (string): The Roku customer ID associated with the user. 
+- **rokuCustomerId** (string): The Roku customer ID associated with the user.
 - **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
-- **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard. 
+- **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard.
 - **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
 - **cost** (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).
 - **type** (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".
-- **addon** (boolean): A flag indicating whether the purchase was for an add-on. 
+- **addon** (boolean): A flag indicating whether the purchase was for an add-on.
 - **purchaseDate** (string): The purchase date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format).
-- **purchaseChannel** (string): Indicates where the Roku Pay subscription purchase was made: **web** (purchased from [Roku.com](http://roku.com/) [for example, through [Instant Signup](https://developer.roku.com/docs/developer-program/discovery/instant-signup.md) during the device activation]) or **device** (purchased on the Roku device [through the on-device sign-up flow]).
+- **purchaseChannel** (string): Indicates where the Roku Pay subscription purchase was made: **web** (purchased from [Roku.com](http://roku.com/) [for example, through [Instant Signup](https://roku-ent.readme.io/dev/docs/instant-signup) during the device activation]) or **device** (purchased on the Roku device [through the on-device sign-up flow]).
 - **purchaseContext** (string): Indicates how the subscription purchase was made: **isu** (purchased via Instant Signup) or **iap** (purchased in the app)
 - **billingPlans** (roArray of roAssociativeArrays): A list of billing plans associated with the purchase. Each billing plan contains the following fields:
   - billingType (string): Indicates whether a "Subscription" or "DigitalContent" was purchased.
   - purchaseId (string): The transaction ID.
-  - productIds (roArray of strings): The list of product IDs purchased as part of the transaction. 
-  - subscriptionId (string; included only if the billingType is "Subscription): The unique Roku-generated ID for the subscription. 
+  - productIds (roArray of strings): The list of product IDs purchased as part of the transaction.
+  - subscriptionId (string; included only if the billingType is "Subscription): The unique Roku-generated ID for the subscription.
   - renewalDate (string; included only if the billingType is "Subscription): The subscription renewal date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format).
-  - state (string): The state of the subscription: "ActivePaid" (for DigitalContent only), "ActiveFreeTrial", "ActiveCanceled", "ActiveInGracePeriod", "ActivePaused", "InactiveWaitingActivation", "InactivePaused", "InactiveOnHold", or "InactiveExpired" (for DigitalContent only). 
-  - phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan. 
-    - name (string): The developer-specified name for the offer entered in the Developer Dashboard. 
+  - state (string): The state of the subscription: "ActivePaid" (for DigitalContent only), "ActiveFreeTrial", "ActiveCanceled", "ActiveInGracePeriod", "ActivePaused", "InactiveWaitingActivation", "InactivePaused", "InactiveOnHold", or "InactiveExpired" (for DigitalContent only).
+  - phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan.
+    - name (string): The developer-specified name for the offer entered in the Developer Dashboard.
     - type (string): The type of offer: "FreeTrial", "ReducedPrice", or "RegularPrice"
     - cost (string): Localized cost of the offer (with local currency symbol).
-    - phaseEndDate (string; included only if the type is "FreeTrial" or "ReducedPrice"): The subscription phase end date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format). 
+    - phaseEndDate (string; included only if the type is "FreeTrial" or "ReducedPrice"): The subscription phase end date (in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format).
     - duration (roAssociativeArray): Specifies how long the offer is available using the following fields (for example 7 days or 1 month):
       - quantity (integer): The length of the duration.
-      - unit (string): The interval ("Day", "Month", "Quarter", or "Year"). 
+      - unit (string): The interval ("Day", "Month", "Quarter", or "Year").
     - billingFrequency (string; included only if the type is "ReducedPrice" or "RegularPrice"): Specifies how often the customer is charged for the subscription: "Monthly", "Quarterly", or "Yearly"
   - cost (string; included only if the billingType is "DigitalContent"): Localized cost for the digital content (with local currency symbol).
   - duration (roAssociativeArray; included only if the billingType is "DigitalContent"): Specifies how long the digital products are available using the following fields:
     - quantity (integer): The length of the duration.
-    - unit (string): The interval ("Day", "Month", "Quarter", or "Year"). 
+    - unit (string): The interval ("Day", "Month", "Quarter", or "Year").
   - quantity (integer; included only if the billingType is "DigitalContent"):  The number of times the digital product can be accessed (for example, the number of times a movie can be watched or the number of games that can be installed).
 
 \{#products-list\}
 
-- **productId** (string): The developer-specified product ID entered in the Developer Dashboard. 
+- **productId** (string): The developer-specified product ID entered in the Developer Dashboard.
 - **name** (string): The developer-specified product name entered in the Developer Dashboard.
 - **purchaseOptions** (roArray of strings): The list of purchase option SKUs associated with the product.
 - **entitlementIds** (roArray of roAssociativeArrays): The list of entitlement identifiers, which includes the following fields:
@@ -679,13 +679,13 @@ Returns the list of current and historical (optional) purchases associated with 
 
 - **entitlementKey** (string): The developer-specified entitlement scope.
 - **entitlementScope** (string): The Roku-provided entitlement scope.
-- **expirationDate** (string): The date when the entitlement expires for the customer. 
+- **expirationDate** (string): The date when the entitlement expires for the customer.
 - **entitlementQty** (integer): The entitlement quantity available, which is typically 1.
 - **ownerAppId** (string): The ID of the app that owns the entitlement. If non-seller partner apps receive entitlements included in cross-developer bundles, ownerAppId provides those seller partner apps.
 
 ### **GetCatalog**
 
-Lists the products and purchase options linked to the app. 
+Lists the products and purchase options linked to the app.
 
 #### request
 
@@ -725,7 +725,7 @@ Lists the products and purchase options linked to the app.
 
 \{#get-catalog-products\}
 
-- **productId** (string): The developer-specified product ID entered in the Developer Dashboard. 
+- **productId** (string): The developer-specified product ID entered in the Developer Dashboard.
 - **name** (string): The developer-specified product name entered in the Developer Dashboard.
 - **purchaseOptions** (roArray of roAssociativeArrays): The list of purchase option SKUs associated with the product.
 - **entitlementIds** (roArray of roAssociativeArrays): The list of entitlement identifiers, which includes the following fields:
@@ -733,38 +733,38 @@ Lists the products and purchase options linked to the app.
   - entitlementScope: The Roku-provided entitlement scope.
 - **addon** (boolean). Indicates whether the product is an add-on (true) or not (false).
 - **prerequisites** (roArray of string): A list of product IDs from which at least one must have already been purchased in order to be eligible for the add-on.
-- **productExclusivityGroup** (roArray of string): A list of product IDs from which none may have already been purchased in order to be eligible for the add-on, unless completing an upgrade/downgrade 
+- **productExclusivityGroup** (roArray of string): A list of product IDs from which none may have already been purchased in order to be eligible for the add-on, unless completing an upgrade/downgrade
 
 \{#get-catalog-purchase-options\}
 
 - **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
-- **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard. 
+- **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard.
 - **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
-- **offerStartDate** (string): The first date when the purchase option is available. 
-- **offerEndDate** (string): The date when the purchase option is no longer available. 
+- **offerStartDate** (string): The first date when the purchase option is available.
+- **offerEndDate** (string): The date when the purchase option is no longer available.
 - **cost** (string): Localized regular cost of the purchase option (with local currency symbol).
 - **type** (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".
-- **addon** (boolean): A flag indicating whether the purchase option is an add-on. 
+- **addon** (boolean): A flag indicating whether the purchase option is an add-on.
 - **billingPlans** (roArray of roAssociativeArrays): A list of billing plans associated with the purchase option. Each billing plan contains the following fields:
   - billingType (string): Indicates whether a "Subscription" or "DigitalContent" is being billed.
-  - productIds (roArray of strings): A list of product IDs being billed. 
-  - phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan. 
-    - name (string): The developer-specified name for the offer entered in the Developer Dashboard. 
+  - productIds (roArray of strings): A list of product IDs being billed.
+  - phases (roArray of roAssociativeArrays; included only if the billingType is "Subscription): A list of base, free trial, and introductory price offers associated with the billingPlan.
+    - name (string): The developer-specified name for the offer entered in the Developer Dashboard.
     - type (string): The type of offer: "FreeTrial", "ReducedPrice", or "RegularPrice"
     - cost (string): Localized cost of the offer (with local currency symbol).
     - duration (roAssociativeArray): Specifies how long the offer is available using the following fields (for example 7 days or 1 month):
       - quantity (integer): The length of the duration.
-      - unit (string): The interval ("Day", "Month", "Quarter", or "Year"). 
+      - unit (string): The interval ("Day", "Month", "Quarter", or "Year").
     - billingFrequency (string; included only if the type is "ReducedPrice" or "RegularPrice"): Specifies how often the customer is charged for the subscription: "Monthly", "Quarterly", or "Yearly"
   - **cost** (string; included only if the billingType is "DigitalContent"): Localized cost for the digital content (with local currency symbol).
   - **duration** (roAssociativeArray; included only if the billingType is "DigitalContent"): Specifies how long the digital products are available using the following fields:
     - quantity (integer): The length of the duration.
-    - unit (string): The interval ("Day", "Month", "Quarter", or "Year"). 
+    - unit (string): The interval ("Day", "Month", "Quarter", or "Year").
   - **quantity** (integer; included only if the billingType is "DigitalContent"):  The number of times the digital product can be accessed (for example, the number of times a movie can be watched or the number of games that can be installed).
 
 ### **QueryPurchaseOptions**
 
-Returns the collection of purchaseOptionMap objects matching the specified query. 
+Returns the collection of purchaseOptionMap objects matching the specified query.
 
 #### request
 
@@ -853,15 +853,15 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 
 \{#query-include-products-list\}
 
-- "same":  Returns the purchase options that have the same products as the reference purchase option or reference product list. 
+- "same":  Returns the purchase options that have the same products as the reference purchase option or reference product list.
 - "more": Returns the purchase options that have all the products that the reference purchase option or reference product list has and more .
-- "less": Return the purchase options that include the base product of the reference purchase option and have a product list with fewer products than the reference purchase option or reference products. 
+- "less": Return the purchase options that include the base product of the reference purchase option and have a product list with fewer products than the reference purchase option or reference products.
 
 \{#query-compare-cost-list\}
 
-- "same":  Returns the purchase options that cost the same as the reference purchase option in the regular price billing phase. 
-- "more": Returns the purchase options that cost more than the reference purchase option in the regular price billing phase. 
-- "less": Returns the purchase options that cost less than the reference purchase option in the regular price billing phase. 
+- "same":  Returns the purchase options that cost the same as the reference purchase option in the regular price billing phase.
+- "more": Returns the purchase options that cost more than the reference purchase option in the regular price billing phase.
+- "less": Returns the purchase options that cost less than the reference purchase option in the regular price billing phase.
 
 \{#query-same-product-group-list\}
 
@@ -921,7 +921,7 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 
 - **sku** (string): The developer-specified SKU for the selected purchase option.
 - **qty** (integer): The quantity of the item to be purchased, which is typically 1 for most purchase options.
-- **action** (string; optional; case-sensitive): Specify whether the purchase is related to an "Upgrade" or "Downgrade" (do not pass "upgrade" or "downgrade"). 
+- **action** (string; optional; case-sensitive): Specify whether the purchase is related to an "Upgrade" or "Downgrade" (do not pass "upgrade" or "downgrade").
 - **replacedPurchase** (roAssociativeArray; only include if action field is set to "Upgrade" or "Downgrade"): Specify the existing purchase to be replaced by the new purchase using the following field: sku: The existing purchase option to be replaced.
 
 #### requestStatus.result
@@ -940,42 +940,42 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 
 \{#query-do-order-response-purchases-list\}
 
-- **rokuCustomerId** (string): The Roku customer ID associated with the user. 
-- **purchaseId** (string): The transaction ID generated for the purchase. 
+- **rokuCustomerId** (string): The Roku customer ID associated with the user.
+- **purchaseId** (string): The transaction ID generated for the purchase.
 - **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
-- **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard. 
+- **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard.
 - **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
 - **type** (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".
 - **total** (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).
 - **amount** (string): Localized amount of the item purchased (post transaction; with local currency symbol).
-- **qty** (integer): The quantity of the product purchased, which is typically 1 for subscription purchases. 
+- **qty** (integer): The quantity of the product purchased, which is typically 1 for subscription purchases.
 - **replacedPurchase** (roAssociativeArray; only included if the purchase is an upgrade/downgrade): Indicates the existing purchase replaced by the new purchase using the following field: sku: The existing purchase option that was replaced.
 
 ## Appendix B: Roku Pay Web Services updates
 
 The new catalog data structure has not changed any of the Roku Pay web service API contracts. The fields returned by the Roku Pay APIs remain the same. The only change is that the values included in the **productId** and **productName** fields now reference the **purchase option** associated with the transaction, instead of the **product**.
 
-> Publishers should map the values returned in the **productName** and **productId** fields, which reference the purchase option, to the associated products in their backend system 
+> Publishers should map the values returned in the **productName** and **productId** fields, which reference the purchase option, to the associated products in their backend system
 
 ## Appendix C: On-device add-on purchase workflow
 
-When the **DoOrder** command is sent, the Roku Pay order confirmation screen lists each product being purchased, including base subscriptions and add-ons. 
+When the **DoOrder** command is sent, the Roku Pay order confirmation screen lists each product being purchased, including base subscriptions and add-ons.
 
 ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/two-items.jpg)
 
-If the purchase includes two or more add-ons, the customer can press the PLAY button on their Roku remote control to view an itemized list of products before confirming the purchase. 
+If the purchase includes two or more add-ons, the customer can press the PLAY button on their Roku remote control to view an itemized list of products before confirming the purchase.
 
-![img - roku600px](https://image.roku.com/ZHZscHItMTc2/2andmore.jpg) 
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/2andmore.jpg)
 
 ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/fullorder.jpg)
 
 ## Appendix D: Base subscription and add-on management workflow for customers
 
-Customers can cancel their base subscriptions and add-ons either directly on-device or online from Roku's Subscription management page. 
+Customers can cancel their base subscriptions and add-ons either directly on-device or online from Roku's Subscription management page.
 
-At least one base prerequisite product must be active in order for an add-on product to remain active as well. If no base prerequisite products are active, the add-on product is cancelled. For example, if the customer cancels the prerequisite base product (and is not entitled to any other prerequisites), the add-on is also canceled. 
+At least one base prerequisite product must be active in order for an add-on product to remain active as well. If no base prerequisite products are active, the add-on product is cancelled. For example, if the customer cancels the prerequisite base product (and is not entitled to any other prerequisites), the add-on is also canceled.
 
-If a customer upgrades/downgrades a base prerequisite subscription product, the add-on remains active only if the upgrade/downgrade transaction includes a different prerequisite base product and that same add-on. For example, customers can sign up for one base prerequisite and an add-on, and then upgrade to a second base prerequisite product (the upgrade transaction must include the new base product and the same add-on), and then downgrade back to the first (the downgrade transaction must include the new base product and the same add-on), without access to the add-on being interrupted. 
+If a customer upgrades/downgrades a base prerequisite subscription product, the add-on remains active only if the upgrade/downgrade transaction includes a different prerequisite base product and that same add-on. For example, customers can sign up for one base prerequisite and an add-on, and then upgrade to a second base prerequisite product (the upgrade transaction must include the new base product and the same add-on), and then downgrade back to the first (the downgrade transaction must include the new base product and the same add-on), without access to the add-on being interrupted.
 
 When an add-on is canceled, its entitlement is removed from the Roku customer account at the next billing cycle (no refunds are given for partial-term cancellations)
 

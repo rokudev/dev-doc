@@ -39,7 +39,7 @@ For example, accessing a 5.6MB AA can take hundreds of milliseconds. If this cop
 When copying nodes, do not simply call:
 
 ```
-node2.setFields(node1.getFields()) 
+node2.setFields(node1.getFields())
 ```
 
 Setting nonexistent fields in a node will invoke additional internal verification and warning outputs to the debug console, causing UI lag. Instead, do something like:
@@ -79,7 +79,7 @@ An image that needs to be scaled takes more time to process by the GPU. Determin
 
 ## Memory
 
-Roku OS shuts down channels that exceed memory usage limits. You can view these limits in [Roku Resource Monitor](doc:resource-monitor). 
+Roku OS shuts down channels that exceed memory usage limits. You can view these limits in [Roku Resource Monitor](doc:resource-monitor).
 
 It is important to understand that well before these limits are reached, channel performance may degrade due to Roku OS starting to page and swap to meet memory demands. When this happens, you will see these symptoms in Roku Resource Monitor:
 
@@ -87,7 +87,7 @@ It is important to understand that well before these limits are reached, channel
 - Increase in the percentage of CPU cycles spent in the kernel
 - Decrease in the amount of file-backed memory used by the channel
 
-Using too much memory may also impact [cachefs](https://developer.roku.com/fr-fr/docs/developer-program/getting-started/architecture/file-system.md). If the system memory reaches a specific threshold, data stored in cachefs will be dropped. These thresholds vary depending on the device.
+Using too much memory may also impact [cachefs](doc:file-system). If the system memory reaches a specific threshold, data stored in cachefs will be dropped. These thresholds vary depending on the device.
 
 ### Minimize data passed to ParseJSON
 

@@ -30,7 +30,7 @@ Body = roString with "this is some text"
 **Example**
 
 ```
-<emptytag caveman="barney" /> 
+<emptytag caveman="barney" />
 ```
 
 Would parse such that:
@@ -53,7 +53,7 @@ GenXML() takes one parameter (boolean) that indicates whether the generated `<xm
 
 ```
 PrintXML(root, 0)
- 
+
 Sub PrintXML(element As Object, depth As Integer)
     print tab(depth*3);"Name: ";element.GetName()
     if not element.GetAttributes().IsEmpty() then
@@ -99,4 +99,4 @@ print root.GenXML(false)
 
 ## Supported interfaces
 
-* <Anchor label="ifXMLElement" title="ifXMLElement" href="/docs/references/brightscript/interfaces/ifxmlelement.md">ifXMLElement</Anchor>
+[ifXMLElement](doc:ifxmlelement)

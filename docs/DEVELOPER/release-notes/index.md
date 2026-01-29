@@ -231,7 +231,7 @@ number of items. </p>
 <p>Here is the list of key developer-facing Roku OS 12.0 updates:</p>
 <h4 id="brightscript-apis">BrightScript APIs</h4>
 <ul>
-<li><p>[<strong>Localized date and time formats</strong>](doc:ifdatetime#asdatestringlocformat-as-string-as-string) — The <a href="https://developer.roku.com/docs/references/brightscript/components/rodatetime.md">roDateTime</a> component includes new <strong>asDateStringLoc()</strong> and <strong>asTimeStringLoc()</strong> methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.</p>
+<li><p>[<strong>Localized date and time formats</strong>](doc:ifdatetime#asdatestringlocformat-as-string-as-string) — The <a href="https://roku-ent.readme.io/dev/docs/rodatetime.md">roDateTime</a> component includes new <strong>asDateStringLoc()</strong> and <strong>asTimeStringLoc()</strong> methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.</p>
 </li>
 <li><p>[<strong>IPv6 addresses returned by roDeviceInfo.getConnectionInfo() method</strong>](doc:ifdeviceinfo#getconnectioninfo-as-object) — The [roDeviceInfo.getConnectionInfo() method](doc:ifdeviceinfo#getconnectioninfo-as-object) now returns an <strong>ipv6</strong> field, which is an array listing the IPv6 addresses used for the device connection.</p>
 </li>
@@ -308,7 +308,7 @@ number of items. </p>
 </ul>
 <h4 id="deprecated-sunset-apis">Deprecated/Sunset APIs</h4>
 <ul>
-<li><p>[<strong>SDK1 visual screen components sunset</strong>](doc:deprecated-apis#deprecated-components-january-1-2018) — The <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were deprecated in 2017</a> have been completely removed from the Roku OS. As a result, apps that still had these <a href="https://developer.roku.com/docs/references/deprecated-apis.md#deprecated-components-january-1-2018">sunset components</a> as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).</p>
+<li><p>[<strong>SDK1 visual screen components sunset</strong>](doc:deprecated-apis#deprecated-components-january-1-2018) — The <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were deprecated in 2017</a> have been completely removed from the Roku OS. As a result, apps that still had these <a href="https://roku-ent.readme.io/dev/docs/deprecated-apis.md#deprecated-components-january-1-2018">sunset components</a> as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).</p>
 </li>
 <li><p><strong>[roUrlTransfer.enableFreshConnection()](doc:deprecated-apis#rourltransferenablefreshconnection)</strong> — The Roku OS no longer supports the [<strong>roUrlTransfer.enableFreshConnection()</strong> function](doc:ifurltransfer#enablefreshconnectionenable-as-boolean-as-boolean). Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).</p>
 </li>

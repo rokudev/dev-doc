@@ -36,9 +36,9 @@ All SceneGraph nodes have a thread owner. In general, nodes will be owned by the
 
 Task threads can create Node and ContentNode objects that are owned by the Task thread. Entire trees of nodes owned by a Task thread may be created.
 
-Thread ownership of a node can change during app execution. 
+Thread ownership of a node can change during app execution.
 
-- When a node is assigned to a field, the ownership of the node is changed to the thread that owns the node that contains the field. 
+- When a node is assigned to a field, the ownership of the node is changed to the thread that owns the node that contains the field.
 - When a node is added as a child of another node, the ownership is changed to the thread that owns the parent node.
 
 ## Thread rendezvous
@@ -49,12 +49,12 @@ A distinct rendezvous is used on each separate operation invoked by a Task threa
 
 The entire interface to a node, including field creation, setting, and getting, uses this rendezvous mechanism to ensure thread safety, without having to use explicit locks in the application, and without the possibility of deadlock. The rendezvous mechanism does add more overhead than simple field getting and setting, so SceneGraph application programmers should use it carefully, taking into account the following:
 
-- Only the Render thread may serve a rendezvous. 
-- Since Task threads do not have an implicit event loop, they cannot serve a rendezvous. 
-- Nodes owned by a Task thread are not accessible outside that thread. 
+- Only the Render thread may serve a rendezvous.
+- Since Task threads do not have an implicit event loop, they cannot serve a rendezvous.
+- Nodes owned by a Task thread are not accessible outside that thread.
 - Task nodes are owned by the Render thread, so Task nodes and their fields can only be accessed by rendezvous from threads other than the Render thread. This includes threads launched by the Task node itself.
 
-> Use the [**logrendezvous** command](https://developer.roku.com/docs/developer-program/debugging/debugging-channels.md#scenegraph-debug-server-port-8080-commands) in the SceneGraph debug console to identify performance issues in the Task thread caused by a rendezvous. This command indicates whether a rendezvous is occurring and its duration (in milliseconds).
+> Use the [**logrendezvous** command](https://roku-ent.readme.io/dev/docs/debugging#scenegraph-debug-server-port-8080-commands) in the SceneGraph debug console to identify performance issues in the Task thread caused by a rendezvous. This command indicates whether a rendezvous is occurring and its duration (in milliseconds).
 
 ### BrightScript operations without SceneGraph node objects
 
@@ -94,16 +94,16 @@ cn.ObserveField("title", "OnTitleChaned")
 
 ### Re-running a task
 
-A [Task](doc:task) node can contain multiple Task functions and spawn multiple Task threads during its lifetime. A Task node can only have one active Task thread at a time. This is managed by setting the functionName and control fields on the Task node. 
+A [Task](doc:task) node can contain multiple Task functions and spawn multiple Task threads during its lifetime. A Task node can only have one active Task thread at a time. This is managed by setting the functionName and control fields on the Task node.
 
-If a Task node is already in a given state as indicated by its state field, including RUN, setting its control field to that same state value has no effect. To run additional Task threads from a Task node, it must be in the STOP state, either by returning from its function or being commanded to STOP via its control field. 
+If a Task node is already in a given state as indicated by its state field, including RUN, setting its control field to that same state value has no effect. To run additional Task threads from a Task node, it must be in the STOP state, either by returning from its function or being commanded to STOP via its control field.
 
-At the time a Task node’s state transitions to RUN, it will look at its functionName field to determine what function to execute. It will transition to the STOP state automatically when that function returns. 
+At the time a Task node’s state transitions to RUN, it will look at its functionName field to determine what function to execute. It will transition to the STOP state automatically when that function returns.
 
 To run multiple independent threads from the same Task component, create multiple Task instances. There can be several simultaneously executing objects of the same Task component, and each can be running different functions in their Task threads.
 
 ### Component global associative array
 
-All SceneGraph nodes have a component-global associative array designated as `m`, including Task nodes. This associative array is local to the component but global within it. For Task nodes, this associative array is not shared between threads. The Task node m is initially owned by the Render thread. The Task node `init()` function then populates the Task node with references in the associative array. 
+All SceneGraph nodes have a component-global associative array designated as `m`, including Task nodes. This associative array is local to the component but global within it. For Task nodes, this associative array is not shared between threads. The Task node m is initially owned by the Render thread. The Task node `init()` function then populates the Task node with references in the associative array.
 
 On every setting of the Task node control field to `RUN`, a new thread is launched, and the Task node associative array is cloned, with the launched thread receiving the original object associative array, and the Render thread receiving the clone. Only basic object types are cloned: integers, Booleans, strings, floats, nodes, and recursively, arrays and associative arrays. These are generally the same object types that are copied through the fields, plus functions and timespans. Because of this cloning mechanism, some object references, such as a message port created in `init()`, are only passed to the first thread launched from a Task node, and not to subsequent threads launched by the same Task node.

@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor> 
+Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://roku-ent.readme.io/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>
 
-The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
+The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://roku-ent.readme.io/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
 
 <br />
 
@@ -130,7 +130,7 @@ In most cases, the default key selection handlers can be used for modifying the 
 
 ## Fields
 
-See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
+See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://roku-ent.readme.io/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
 
 <HTMLBlock>{`
 <table>

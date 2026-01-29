@@ -86,8 +86,8 @@ Content may also be hosted in an OVP, which partner with CDNs to provide hosting
 
 ## Using the content feed to link your catalog to your app
 
-You can use the content metadata in your feed to programmatically populate your app UI with the titles in your catalog. To do this, you create a [ContentNode](https://developer.roku.com/docs/references/scenegraph/control-nodes/contentnode.md), set its attributes to the metadata in your feed, and then add the ContentNode to the SceneGraph UI components in your app. For example, to populate a grid on your app's home page with your movie catalog, you would do the following:
+You can use the content metadata in your feed to programmatically populate your app UI with the titles in your catalog. To do this, you create a [ContentNode](doc:contentnode), set its attributes to the metadata in your feed, and then add the ContentNode to the SceneGraph UI components in your app. For example, to populate a grid on your app's home page with your movie catalog, you would do the following:
 
-- create a single root [ContentNode](https://developer.roku.com/docs/references/scenegraph/control-nodes/contentnode.md).
+- create a single root [ContentNode](doc:contentnode).
 - iterate through the content feed to add the row title and then thumbnail image, title, description, and other descriptive attributes for each movie in the row to a series of child content nodes.
 - Add the root content node to the grid.

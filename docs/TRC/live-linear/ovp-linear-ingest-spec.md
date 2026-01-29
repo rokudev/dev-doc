@@ -40,7 +40,7 @@ All Linear Partners must utilize one of the **Linear** **Certified Partners** fo
 
 ### Error Reporting
 
-Stream and EPG issue reports go directly to the LCPs. Stream issues and high priority EPG issues are reported as needed. Comprehensive EPG issue reports go out weekly to all LCPs. 
+Stream and EPG issue reports go directly to the LCPs. Stream issues and high priority EPG issues are reported as needed. Comprehensive EPG issue reports go out weekly to all LCPs.
 
 ## Roku OVP
 
@@ -177,7 +177,7 @@ The following additional details are required for Roku discrete live events (DLE
 - All live events must have both a primary and backup source
   - **SRT or Zixi Push preferred;** HLS and RTMP are not supported
 - Live events intended for Roku O&Os must include program start/stop SCTE messages
-  - **Splice Insert messages are preferred**; Time Signal message type must include a splice command 
+  - **Splice Insert messages are preferred**; Time Signal message type must include a splice command
 
 ### Metadata
 
@@ -273,7 +273,7 @@ The Roku Channel Feed Root Object Template:
 
 ## Artwork for all content
 
-Each image must be delivered in the JPEG format (.jpg or .jpeg file extension). 
+Each image must be delivered in the JPEG format (.jpg or .jpeg file extension).
 
 **Make sure your CDN is using the following ContentType headers**
 
@@ -328,7 +328,7 @@ thumbnail: "http://thumbnail.jpg"
 
 - *Content Hours*: minimum of **150 hours of content**
 - *Content per Hour:* minimum of **50 minutes per hour** of content
-- *Daily Refresh:* **2 hours** minimum of refreshed content daily 
+- *Daily Refresh:* **2 hours** minimum of refreshed content daily
 - Content Recommendation
   - *Content Loop:* minimum of **8 hours of content before loop**
 
@@ -346,7 +346,7 @@ thumbnail: "http://thumbnail.jpg"
 - Must be animated & have audio
 - Must include the linear channel logo/branding
 - Must include a countdown timer for the duration of the ad break
-  - *Note: Countdown timer does not satisfy the animation requirement* 
+  - *Note: Countdown timer does not satisfy the animation requirement*
 
 - Must include messaging to indicate a break is in progress and programming will resume shortly
 - No CTA
@@ -361,7 +361,7 @@ thumbnail: "http://thumbnail.jpg"
 
 ### LiveFeed Content Type
 
-Child object of root property liveFeeds. 
+Child object of root property liveFeeds.
 
 This object represents a live linear stream. Please contact your Roku representative if you want to create a channel that streams live linear content.
 
@@ -938,23 +938,23 @@ Schedule object example
 
     \{
         "id": "programId",
-    
+
         "isLive": false,
-    
+
         "date": "2020-01-13",
-    
+
         "times": [
-    
+
             "21:30"
-    
+
         ],
-    
+
         "durationInSeconds": 2760,
-    
+
         "attributes": [
-    
+
             "CC"
-    
+
         ]
     \}
 
@@ -974,7 +974,7 @@ Notes:
 
 - Please include the liveFeed as the first item in a feed.
 - Only a title or a **TMS** ExternalID is required for programs referenced in a schedule. We will reject anything that's not a **valid** ExternalID.
-- When referencing an episode, the parent items must also be in included ([series](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#series) and [season](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#season) when applicable). These parent items must be **<u>fully populated with required fields</u>** as specified in the [Roku Direct Published feed specification](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md) or the series item must contain a valid External **TMS** id.
+- When referencing an episode, the parent items must also be in included ([series](https://roku-ent.readme.io/dev/docs/search-feed) and [season](https://roku-ent.readme.io/dev/docs/search-feed) when applicable). These parent items must be **<u>fully populated with required fields</u>** as specified in the [Roku Direct Published feed specification](/https://roku-ent.readme.io/dev/docs/search-feed) or the series item must contain a valid External **TMS** id.
 
 ![roku400px - feedspecs-1](https://image.roku.com/ZHZscHItMTc2/feed-specs-1-v2.jpg)
 
@@ -999,7 +999,7 @@ For EPG Spine
 For Info HUD
 
 - Logos need to be transparent PNGs
-- Logos need to be monochromatic hex #efefef 
+- Logos need to be monochromatic hex #efefef
 - 260 pixels wide x 147 pixels tall
 - 1x logo center aligned
 
@@ -1148,7 +1148,7 @@ Feed Example:
 
 “**Kids-Directed Content**” means content that either: (i) is directed to children as defined by the applicable law of the jurisdiction in which the content is shown (e.g., The Children's Online Privacy Protection Act); or (ii) was made for viewing primarily by children within the jurisdiction in which the content is shown.
 
-You may NOT submit or distribute Kids-Directed Content unless you have Roku’s express written approval. 
+You may NOT submit or distribute Kids-Directed Content unless you have Roku’s express written approval.
 
 The following additional obligations apply to all Kids-Directed Content:
 

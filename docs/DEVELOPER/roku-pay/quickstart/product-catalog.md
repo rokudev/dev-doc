@@ -101,7 +101,7 @@ Creating the product catalog entails the following steps:
 
 3. [Creating product groups for each set of mutually exclusive subscription products](#creating-product-groups). A product group prevents customers from being double-billed for the same content (for example, ad-supported and ad-free products for an app should be in the same product group).
 
-> This document is intended for SVOD apps, which may offer subscriptions and one-time purchases (for example, movie rentals/purchases, sporting events, pay-per-views). If you are managing the catalog for a TVOD-exclusive app (an app offering only transactional content), see [Creating TVOD apps](https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md). TVOD-exclusive apps need to create a single in-app product for each different price point in the app; therefore, the workflow differs from what is specified herein.
+> This document is intended for SVOD apps, which may offer subscriptions and one-time purchases (for example, movie rentals/purchases, sporting events, pay-per-views). If you are managing the catalog for a TVOD-exclusive app (an app offering only transactional content), see [Creating TVOD apps](doc:tvod-channel). TVOD-exclusive apps need to create a single in-app product for each different price point in the app; therefore, the workflow differs from what is specified herein.
 >
 > Only an administrator (root account or user with the administrator role) or a user with the **Monetization** role and **Products** permission can access the Product Catalog UI and create and manage products.
 
@@ -132,7 +132,7 @@ To create a new product, follow these steps:
   <tbody>
     <tr>
       <td>Product name</td>
-      <td>Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the <a href="https://developer.roku.com/docs/developer-program/publishing/channel-publishing-guide.md#properties-window">Channel Properties window</a>. <br /><br />To provide additional localized product names, click <strong>Add product name in another language</strong>, select a locale, and then enter the localized product name. You can provide one product name per locale.</td>
+      <td>Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the <a href="https://roku-ent.readme.io/dev/docs/channel-publishing-guide#properties-window">Channel Properties window</a>. <br /><br />To provide additional localized product names, click <strong>Add product name in another language</strong>, select a locale, and then enter the localized product name. You can provide one product name per locale.</td>
     </tr>
 
     <tr>
@@ -180,7 +180,7 @@ To create a purchase option for a product, follow these steps:
 
    * **One-Time Purchase:** A movie rental/purchase, sporting event, pay-per-view, or other product that may only be purchased a single time from an SVOD app. The publisher controls entitlements (number of viewings and permitted viewing time) for one-time purchase products in their backend system.
 
-   * **One-Time Purchase, Consumable - Quantity:** A set of identical items (such as game points, number of viewings permitted ). Enter the size of the packet in the **Quantity** field in the **Product and billing plan** settings. If you are creating a [TVOD-exclusive app](https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md), select this option and select **1** for quantity. This is because you create a single generic in-app product per product type for a TVOD app (rather than a product per content item as in a SVOD app), and this setting allows that generic in-app product to be purchased multiple times. For example, if you plan on offering movie rentals, you only need to create a single one-time purchase consumable video product. See [Creating TVOD apps](https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md) for more information.
+   * **One-Time Purchase, Consumable - Quantity:** A set of identical items (such as game points, number of viewings permitted ). Enter the size of the packet in the **Quantity** field in the **Product and billing plan** settings. If you are creating a [TVOD-exclusive app](https://roku-ent.readme.io/dev/docs/tvod-channel), select this option and select **1** for quantity. This is because you create a single generic in-app product per product type for a TVOD app (rather than a product per content item as in a SVOD app), and this setting allows that generic in-app product to be purchased multiple times. For example, if you plan on offering movie rentals, you only need to create a single one-time purchase consumable video product. See [Creating TVOD apps](https://roku-ent.readme.io/dev/docs/tvod-channel) for more information.
 
    * **Subscription** **bundle**: A monthly, quarterly, or annual subscription that combines two base products or a single base product and one or more add-ons. See the [Catalog 2.0 API integration guide](doc:add-ons-integration) for more information.
 
@@ -246,7 +246,7 @@ To create a purchase option for a product, follow these steps:
 <li>The Currency code is the three-letter ISO-4217 code of the currency in which the customer will be billed.</li>
 <li>The Purchase price reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.</li>
 <li>The Net price field displays the pre-tax price. The Proceeds field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.</li>
-</ul>If you are creating a <a href="https://developer.roku.com/docs/developer-program/roku-pay/implementation/tvod-channel.md">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://developer.roku.com/docs/references/scenegraph/control-nodes/channelstore.md">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. </td>
+</ul>If you are creating a <a href="https://roku-ent.readme.io/dev/docs/tvod-channel">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://roku-ent.readme.io/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. </td>
     </tr>
 
     <tr>
@@ -272,7 +272,7 @@ To create a purchase option for a product, follow these steps:
 
 Each set of _mutually exclusive_ subscription products must be added to a product exclusivity group (mutually exclusive means subscription products that customers cannot be subscribed to simultaneously). This enables customers to upgrade or downgrade those subscription products on-device, and avoid being double-billed for access to the same content or service.
 
-* **Upgrade/downgrade**. If an app offers monthly and annual subscriptions, a product group that includes both plans must be created. Similarly, if an app offers ad-supported and ad-free plans, or HD and 4K plans, those sets of products must be added to a product group. For more on how product groups are used to enable customers to easily switch between different service tiers, see the [On-device upgrade and downgrade](https://developer.roku.com/docs/developer-program/roku-pay/implementation/on-device-upgrade-downgrade.md) implementation guide.
+* **Upgrade/downgrade**. If an app offers monthly and annual subscriptions, a product group that includes both plans must be created. Similarly, if an app offers ad-supported and ad-free plans, or HD and 4K plans, those sets of products must be added to a product group. For more on how product groups are used to enable customers to easily switch between different service tiers, see the [On-device upgrade and downgrade](https://roku-ent.readme.io/dev/docs/on-device-upgrade-downgrade) implementation guide.
 
 * **Double billing**. If an app has two in-app products for the same monthly subscription but with different free trial durations, these two products must be added to the same product group to prevent the customer from paying for two separate monthly subscriptions.
 
@@ -280,7 +280,7 @@ From the customer's perspective, if they try to purchase a subscription product 
 
 <Image alt="roku815px - already-subscribed" border={false} src="https://image.roku.com/ZHZscHItMTc2/already-subscribed.jpg" />
 
-> **Certification requirement**: Subscription services must create product groups for all sets of subscription products that customers cannot be subscribed to simultaneously in order to pass [certification](https://developer.roku.com/docs/developer-program/certification/certification.md#2-purchases).
+> **Certification requirement**: Subscription services must create product groups for all sets of subscription products that customers cannot be subscribed to simultaneously in order to pass [certification](doc:certification#2-purchases).
 
 To create a product exclusivity group, follow these steps:
 

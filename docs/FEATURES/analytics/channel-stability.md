@@ -14,7 +14,7 @@ next:
 
 You can use the Channel Stability Report to analyze your app's performance based on BrightScript crashes and memory closures. This report includes a graph for each currently supported Roku device model, and each graph plots these two stability metrics for each device model in weekly intervals over the last 30 days (you can change the default reporting period and the data interval).
 
-This lets you view aggregated memory closure data to identify whether you need to resolve resource consumption issues with your app. If you observe an elevated number of memory closures, you can further pinpoint the problem using the [Roku Resource Monitor](https://developer.roku.com/en-ca/docs/developer-program/dev-tools/resource-monitor.md) and the [BrightScript Profiler](doc:brightscript-profiler).
+This lets you view aggregated memory closure data to identify whether you need to resolve resource consumption issues with your app. If you observe an elevated number of memory closures, you can further pinpoint the problem using the [Roku Resource Monitor](doc:resource-monitor) and the [BrightScript Profiler](doc:brightscript-profiler).
 
 The report also lets you observe whether crashes occur disproportionality on lower-end devices. In this case, it may indicate that you need to improve the graceful degradation aspects of your app to ensure it is performant across all current/updateable device models.
 

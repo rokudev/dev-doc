@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 
-roSystemLogEvents are sent when enabled via <Anchor label="roSystemLog" title="roSystemLog" href="/docs/references/brightscript/components/rosystemlog.md">roSystemLog</Anchor> . roSystemLogEvent has the following method:
+roSystemLogEvents are sent when enabled via <Anchor label="roSystemLog" title="roSystemLog" href="https://roku-ent.readme.io/dev/docs/rosystemlog">roSystemLog</Anchor> . roSystemLogEvent has the following method:
 
 ## Supported methods
 

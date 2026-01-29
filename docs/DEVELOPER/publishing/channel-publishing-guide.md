@@ -523,14 +523,85 @@ To run Channel Behavior Analysis testing on your app, follow these steps:
 
 6. The **Channel Behavior Analysis** table lists the status of each individual test being executed. You can sort the test results by toggling the **Status**, **Severity**, or **Category** column headers. You can filter test results based on the same fields. This table includes the following columns:
 
-| Column                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Test title                 | The name of the test being executed ("Channel Launch Performance", "Channel Deep Linking Basic", "Channel Content Play Performance").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Status                     | The results of the test. Completed tests have a status of "Passed" or "Failed"; tests still to be performed have a status of "Queued".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Severity                   | Any info messages, warnings, or errors related to a completed test.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Category                   | The type of test being performed: "Performance" or "Deep Linking".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Certification requirements | Provides a link to the section in the [Certification Criteria](doc:certification) document, where the criterion in question is located.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Actions                    | Displays information, script, and screenshot icons that you can click to learn more about the test:<br /><ul><li><strong>Test information</strong>: Provides detailed test results including any additional error or warning information, a link to the related certification requirement, and a link to the related documentation.</li><li><strong>Test script</strong>: Provides the actual script executed in the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool)   for the test. You can copy and paste or download and import the script and run it in the Roku Remote tool (a link to the tool is provided in the upper right-hand corner). This provides developers with insight into how their apps are tested and enables them to run the same app performance and deep linking tests Roku executes before trying to pass the certification testing.</li><li><strong>Screenshot</strong>. If a test fails, displays a screenshot of the screen in the app UI where the test failed. This icon may not be available in all test failure cases.</li></ul> |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Column
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Test title
+      </td>
+
+      <td>
+        The name of the test being executed ("Channel Launch Performance", "Channel Deep Linking Basic", "Channel Content Play Performance").
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Status
+      </td>
+
+      <td>
+        The results of the test. Completed tests have a status of "Passed" or "Failed"; tests still to be performed have a status of "Queued".
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Severity
+      </td>
+
+      <td>
+        Any info messages, warnings, or errors related to a completed test.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Category
+      </td>
+
+      <td>
+        The type of test being performed: "Performance" or "Deep Linking".
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Certification requirements
+      </td>
+
+      <td>
+        Provides a link to the section in the [Certification Criteria](doc:certification) document, where the criterion in question is located.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Actions
+      </td>
+
+      <td>
+        Displays information, script, and screenshot icons that you can click to learn more about the test:  
+
+        * **Test information**: Provides detailed test results including any additional error or warning information, a link to the related certification requirement, and a link to the related documentation.
+        * **Test script**: Provides the actual script executed in the Roku Remote Tool for the test. You can copy and paste or download and import the script and run it in the Roku Remote tool (a link to the tool is provided in the upper right-hand corner). This provides developers with insight into how their apps are tested and enables them to run the same app performance and deep linking tests Roku executes before trying to pass the certification testing.
+        * **Screenshot**. If a test fails, displays a screenshot of the screen in the app UI where the test failed. This icon may not be available in all test failure cases.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Publishing an app
 

@@ -61,7 +61,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">Boolean</td>
 <td class="short-line">true</td>
 <td class="short-line">READ_WRITE</td>
-<td class="long-line">If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the [ifSGNodeFocus](doc:ifsgnodefocus) interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
+<td class="long-line">If true, a Back key press causes the scene to exit, back to the last user-focused item. If false, a Back key press does not cause the scene to exit. In order for the Back key to cause the scene to exit, the remote control focus must be explicitly set on the scene, or a child of the scene, using the <a href="/docs/references/brightscript/interfaces/ifsgnodefocus.md" title="ifSGNodeFocus">ifSGNodeFocus</a> interface setFocus(true) function. A Home key press always causes the scene to exit.</td>
 </tr>
 <tr>
 <td class="short-line">dialog</td>
@@ -75,7 +75,7 @@ While it is technically possible to have more than one scene per app, we recomme
 <td class="short-line">assocarray</td>
 <td class="short-line"></td>
 <td class="short-line">READ_WRITE</td>
-<td class="long-line">This read-only field is set when the Scene is initialized. It indicates which of an app's design resolutions (per manifest's ui_resolutions value) is being used, based on the player model and connected display type. Previously, a developer could deduct the same information by using both [roDeviceInfo.GetUIResolution](doc:roDeviceInfo.getuiresolution) and [roAppInfo.getValue](doc:ifappinfo.md#getvaluekey-as-string-as-string). This new field simplifies the process.  <br><br>The field is set to an AA with two numeric-valued keys — width and height — as well as a string value indicating the current design resolution ("HD", "FHD" or "SD"). <br><br><pre><code>Brightscript Debugger&gt; ? myNode.getScene().currentDesignResolution
+<td class="long-line">This read-only field is set when the Scene is initialized. It indicates which of an app's design resolutions (per manifest's ui_resolutions value) is being used, based on the player model and connected display type. Previously, a developer could deduct the same information by using both <a href="/docs/references/brightscript/interfaces/ifdeviceinfo.md#getuiresolution-as-object()" title="roDeviceInfo.GetUIResolution">roDeviceInfo.GetUIResolution</a> and <a href="/docs/references/brightscript/interfaces/ifappinfo.md#getvaluekey-as-string-as-string" title="roAppInfo.getValue">roAppInfo.getValue</a>("ui_resolutions"). This new field simplifies the process.  <br><br>The field is set to an AA with two numeric-valued keys — width and height — as well as a string value indicating the current design resolution ("HD", "FHD" or "SD"). <br><br><pre><code>Brightscript Debugger&gt; ? myNode.getScene().currentDesignResolution
 &lt;Component: roAssociativeArray&gt; =
 {
     height: 720

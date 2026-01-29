@@ -1153,7 +1153,41 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 </table>
 `}</HTMLBlock>
 
-<br />
+#### requestStatus.result
+
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">result</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line"><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">purchaseOptionsMap</td>
+<td class="short-line">roAssociativeArray</td>
+<td class="long-line">For each purchase option that matches the specified query criteria, this map contains the <strong>sku</strong> of the <strong>purchaseOption</strong> object (the key) and the object itself (the value). You can use this field to iterate through the collection of purchaseOption objects returned by the <strong>QueryPurchaseOptions</strong> command, find a purchase option object based on its <strong>sku</strong>, and then access the properties of the purchase option.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### **DoOrder**
 
@@ -1161,9 +1195,134 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 
 #### request
 
-<br />
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">request</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Includes the request's command and parameters: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">command</td>
+<td class="short-line">string</td>
+<td class="short-line">Set to "DoOrder".</td>
+</tr>
+<tr>
+<td class="short-line">params</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Include the following key-value pairs:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">version</td>
+<td class="short-line">integer</td>
+<td class="short-line">Set to 2</td>
+</tr>
+<tr>
+<td class="short-line">orderItems</td>
+<td class="short-line">roArray of roAssociativeArray</td>
+<td class="long-line">The list of purchase options the customer has selected. Each orderItem has the following fields:<br><ul>
+<li><strong>sku</strong> (string): The developer-specified SKU for the selected purchase option.</li>
+<li><strong>qty</strong> (integer): The quantity of the item to be purchased, which is typically 1 for most purchase options.</li>
+<li><strong>action</strong> (string; optional; case-sensitive): Specify whether the purchase is related to an "Upgrade" or "Downgrade" (do not pass "upgrade" or "downgrade"). </li>
+<li><strong>replacedPurchase</strong> (roAssociativeArray; only include if action field is set to "Upgrade" or "Downgrade"): Specify the existing purchase to be replaced by the new purchase using the following field: sku: The existing purchase option to be replaced.</li>
+</ul></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 #### requestStatus.result
+
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">result</td>
+<td class="short-line">associative array</td>
+<td class="long-line"><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">purchases</td>
+<td class="short-line">roArray of roAssociativeArrays</td>
+<td class="long-line">Includes the purchase data returned by the DoOrder command. Each purchase includes the following set of key-value pairs:<br><ul>
+<li><strong>rokuCustomerId</strong> (string): The Roku customer ID associated with the user. </li>
+<li><strong>purchaseId</strong> (string): The transaction ID generated for the purchase. </li>
+<li><strong>sku</strong> (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>name</strong> (string): The developer-specified name for the purchase option entered in the Developer Dashboard. </li>
+<li><strong>description</strong> (string): The developer-specified description for the purchase option entered in the Developer Dashboard.</li>
+<li><strong>type</strong> (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".</li>
+<li><strong>total</strong> (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).</li>
+<li><strong>amount</strong> (string): Localized amount of the item purchased (post transaction; with local currency symbol).</li>
+<li><strong>qty</strong> (integer): The quantity of the product purchased, which is typically 1 for subscription purchases. </li>
+<li><strong>replacedPurchase</strong> (roAssociativeArray; only included if the purchase is an upgrade/downgrade): Indicates the existing purchase replaced by the new purchase using the following field: sku: The existing purchase option that was replaced.</li>
+</ul></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">status</td>
+<td class="short-line">enum</td>
+<td class="long-line">The command completion status, which may be one of the following values:  <br><ul>
+<li><strong>2</strong>  Interrupted</li>
+<li><strong>1</strong>  Success</li>
+<li><strong>0</strong>  Network error</li>
+<li><strong>-1</strong> HTTP Error/Timeout</li>
+<li><strong>-2</strong> Timeout</li>
+<li><strong>-3</strong> Unknown Error</li>
+<li><strong>-4</strong> Invalid </li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">statusMessage</td>
+<td class="short-line">string</td>
+<td class="long-line">A text description of the command completion status.</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ## Appendix B: Roku Pay Web Services updates
 

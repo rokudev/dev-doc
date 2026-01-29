@@ -577,7 +577,71 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 | :------------ | :---------------- | :--------------------------------------------------------------------- |
 | requestStatus | associative array | Returns the request's command and parameters: $\{request-status-table} |
 
-\{#request-status-table}
+  
+
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">requestStatus</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Returns the request's command and parameters: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">command</td>
+<td class="short-line">string</td>
+<td class="long-line">Set to the name of the command: "GetCatalog", "QueryPurchaseOptions", "DoOrder", or "GetPurchases".</td>
+</tr>
+<tr>
+<td class="short-line">status</td>
+<td class="short-line">associative array</td>
+<td class="long-line">The command completion status, which may be one of the following values: <br><ul>
+<li><strong>2</strong>  Interrupted</li>
+<li><strong>1</strong>  Success</li>
+<li><strong>0</strong>  Network error</li>
+<li><strong>-1</strong> HTTP Error/Timeout</li>
+<li><strong>-2</strong> Timeout</li>
+<li><strong>-3</strong> Unknown Error</li>
+<li><strong>-4</strong> Invalid </li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">statusMessage</td>
+<td class="short-line">string</td>
+<td class="long-line">A text description of the command completion status.</td>
+</tr>
+<tr>
+<td class="short-line">context</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Used to match the <strong>requestStatus</strong> with <strong>request</strong>. For example, you can set this to {"id: DoOrder_1"}.</td>
+</tr>
+<tr>
+<td class="short-line">result</td>
+<td class="short-line">associative array</td>
+<td class="long-line">Includes the product, purchase option, purchase, and/or entitlement data returned by the command.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
+
+  
 
 | Field         | Type              | Description                                                                                                          |
 | ------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------- |

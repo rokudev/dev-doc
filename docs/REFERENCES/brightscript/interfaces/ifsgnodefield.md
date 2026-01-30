@@ -414,7 +414,7 @@ The number of nested objects within an object that were copied, rather than move
 ' Can be on Task thread or render thread
   n = CreateObject("roSGNode", "Node")
   n.AddField("aa_field", "assocarray", true)
-  my_aa = &#123; key: "value" &#125;
+  my_aa = {key: "value"}
   n.MoveIntoField("aa_field", my_aa)
   ? n.aa_field
   ? my_aa
@@ -424,12 +424,12 @@ This code will output the following on the port 8085 console:
 
 ```
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 <Component: roAssociativeArray> =
-&#123;
-&#125;
+{
+}
 ```
 
 > **Performance improvement**
@@ -459,7 +459,7 @@ The associative array that was moved from the source field.
 ```
 n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
-n.aa_field = &#123; key: "value"&#125;' or use moveIntoField()
+n.aa_field = {key: "value"}' or use moveIntoField()
 my_aa = n.MoveFromField("aa_field") 
 ? n.aa_field ' invalid
 ? my_aa ' contents of aa_field
@@ -470,7 +470,7 @@ my_aa = n.MoveFromField("aa_field")
 > The _move_ operations (`PostMessage` and `MoveIntoField`) remove the contents from the source object and moves it across to the destination. This clears out the source object. For example:
 >
 > ```
-> aa = &#123;foo: "hello", bar: [1, 2, 3]&#125;
+> aa = {foo: "hello", bar: [1, 2, 3]}
 > node.moveIntoField("myfield", aa)
 > ? aa           ' Prints an empty AA
 > ```
@@ -481,7 +481,7 @@ my_aa = n.MoveFromField("aa_field")
 >
 > ```
 > sub_array = [1, 2, 3]
-> aa = &#123;foo: "hello", bar: sub_array&#125;
+> aa = {foo: "hello", bar: sub_array}
 > ' At this point, there is an external reference into aa
 > node.moveIntoField("myfield", aa)
 > ? aa           ' Prints an empty AA
@@ -553,7 +553,7 @@ This function returns true a reference to the field’s value. This function ret
 ' on render thread:
     n = CreateObject("roSGNode", "Node")
     n.AddField("aa_field", "assocarray", true)
-    my_aa = &#123; key: "value" &#125;
+    my_aa = {key: "value"}
     n.setRef("aa_field", my_aa)
     ? n.aa_field
     ? my_aa
@@ -565,17 +565,17 @@ This code will output the following on the port 8085 console:
 
 ```
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 
 ```
 
@@ -588,15 +588,15 @@ A runtime debugging method for helping minimize Rendezvous spread.  This method 
 The following example demonstrates the information returned by this method:
 
 ```
-&#123;   node: &#123; type: "XXComponent",          
+{   node: { type: "XXComponent",          
     id: "XXID",          
     address: 0x123XXX,          
     willRendezvousFromCurrentThread: "Yes",          
-    owningThread: &#123; type: "Render", name: "newMainScene", id:"123456" &#125;        
-&#125;,
-    currentThread: &#123; type: "Task",   name: "conviva",     id: "234567" &#125;,    
-    renderThread: &#123; type: "Render", name: "newMainScene", id: "123456" &#125;
-&#125;
+    owningThread: { type: "Render", name: "newMainScene", id:"123456" }      
+},
+    currentThread: {type: "Task",   name: "conviva",     id: "234567" },    
+    renderThread: { type: "Render", name: "newMainScene", id: "123456" }
+}
 ```
 
 > Do not call this method from within function main() or any function called by function main()

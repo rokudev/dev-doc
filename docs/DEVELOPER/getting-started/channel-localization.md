@@ -38,7 +38,7 @@ Roku has Streaming Stores in the following countries:
 
 The Roku platform supports the distribution of a single package file across multiple streaming stores. This means that developers only need to build and maintain one app and then handle localization in the application's code. For example, the app can be programmed to have a localized user experience, including multi-language support for the UI (labels, menus, and dialogs) and content metadata (titles and descriptions), and it can control the availability of content for different regions. In addition, the app UI can link to a privacy policy URL corresponding to the country associated with the user's Roku customer account.
 
-To do this, developers can [get the external IP address of a Roku device](doc:ifdeviceinfo##getipaddrs-as-object) client-side, and return it back to the app's backend server. In the backend, the app can get the country ranges mapped to the IP address in order to present a localized experience and determine which content to show and allow access to customers.
+To do this, developers can [get the external IP address of a Roku device](doc:ifdeviceinfo#getipaddrs-as-object) client-side, and return it back to the app's backend server. In the backend, the app can get the country ranges mapped to the IP address in order to present a localized experience and determine which content to show and allow access to customers.
 
 ## Distribution
 

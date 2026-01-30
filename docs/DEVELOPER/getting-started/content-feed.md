@@ -53,7 +53,7 @@ To create the content feed, you first want to determine which metadata you want 
 
 ## Hosting the content feed
 
-When you are done creating the feed, you need to host it on your website, a content delivery network (CDN), online video platform (OVP), or other hosting solution. You can also contact one of Roku's preferred feed creation partners to create and host your feed.
+When you are done creating the feed, you need to host it on your website, a content delivery network (CDN), online video platform (OVP), or other hosting solution. You can also contact one of Roku's preferred feed creation partners below to create and host your feed.
 
 ### Content Delivery Networks (CDNs)
 

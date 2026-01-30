@@ -686,23 +686,23 @@ print listing
 text = "a=%3 b=%1 c=%2"
 text = text.Arg("banana")
 print text
-' >
+' =>
 ' a=%3 b=banana c=%2
 
 text = text.Arg("cherry")
 print text
-' >
+' =>
 ' a=%3 b=banana c=cherry
 
 text = text.Arg("apple")
 print text
-' >
+' =>
 ' a=apple b=banana c=cherry
 
 text = text.Arg("durian")
-'> warning
+' => warning
 ' WARNING: roString.Arg: unused parameters
 print text
-' >
+' =>
 ' a=apple b=banana c=cherry
 ```

@@ -183,38 +183,35 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
    end if
 
 4. Use [roInputEvent](doc:roinputevent) to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.
+   1. The [supports_input_launch](doc:channel-manifest) attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.
 
-a.  The [supports_input_launch](doc:channel-manifest) attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.  
+      For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent—instead of re-launching your app with the parameters.
+   2. A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.
 
-For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent—instead of re-launching your app with the parameters.
-
-b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.  
-
-See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
-
-```
-...
-screen = CreateObject("roSGScreen")
-m.port = CreateObject("roMessagePort")
-screen.setMessagePort(m.port)
-...
-while(true)
-msg = wait(0, m.port)
-msgType = type(msg)
-if msgType = "roSGScreenEvent"
-if msg.isScreenClosed() then return
-end if
-if type(msg) = "roInputEvent"
-if msg.IsInput()
-info = msg.GetInfo()
-if info.DoesExist("mediatype") and info.DoesExist("contentid")
-mediaType = info.mediatype
-contentId = info.contentid
-end if
-end if
-end if
-end while
-```
+      See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
+      ```
+      ...
+      screen = CreateObject("roSGScreen")
+      m.port = CreateObject("roMessagePort")
+      screen.setMessagePort(m.port)
+      ...
+      while(true)
+      msg = wait(0, m.port)
+      msgType = type(msg)
+      if msgType = "roSGScreenEvent"
+      if msg.isScreenClosed() then return
+      end if
+      if type(msg) = "roInputEvent"
+      if msg.IsInput()
+      info = msg.GetInfo()
+      if info.DoesExist("mediatype") and info.DoesExist("contentid")
+      mediaType = info.mediatype
+      contentId = info.contentid
+      end if
+      end if
+      end if
+      end while
+      ```
 
 #### Custom deep linking experiences from ads and Home screen banners
 

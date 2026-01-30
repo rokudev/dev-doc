@@ -80,21 +80,19 @@ The following example demonstrates a custom key handler:
 
 3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:
    ```
-     function keySelected(key as string) as boolean
-               if key = "ChangeCase"
-                   if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
-                       m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
-                   else
-                       m.top.keyGrid.mode = "UpperCase"
-                   end if
-                   return true    ' key selection is handled, return true
-               end if
-               ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
-               return false
-           end function
-
+   function keySelected(key as string) as boolean
+       if key = "ChangeCase"
+           if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
+               m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
+           else
+               m.top.keyGrid.mode = "UpperCase"
+           end if
+           return true    ' key selection is handled, return true
+       end if
+       ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
+       return false
+   end function
    ```
-   <br />
 
 #### Custom key handlers that modify the entered text string
 
@@ -103,29 +101,29 @@ In most cases, the default key selection handlers can be used for modifying the 
 1. The Key Definition File includes a key definition with an action intended to duplicate the character to the left of the cursor position, positioning the cursor after the duplicated character:
    ```
    "keys": [
-               \{ "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" \},
-               <OTHER KEYS>
-           ]
+       { "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" },
+       <OTHER KEYS>
+   ]
    ```
 2. The **keySelected()** function includes the following business logic:
    ```
    function keySelected(key as string) as boolean
-               if key = "DuplicateCharacter"
-                   currString = m.top.text
-                   currStringLen = currString.Len()
-                   cursorPosition = m.top.textEditBox.cursorPosition
-                   charToDuplicate = currString.Mid(cursorPosition, 1)
-                ' set the keyboard's text field to the edited string
-                   if cursorPosition > 0
-                       m.top.text = currString.Left(cursorPosition) + charToDuplicate + currString.Right(currStringLen - cursorPosition)
-                   end if
-                   ' update the VoiceTextEditBox's cursorPosition
-                   m.top.TextEditBox.cursorPosition = cursorPosition + 1
-                   return true   ' DuplicateCharacter key selection is handled
-               end if
-               ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
-               return false
-           end function
+       if key = "DuplicateCharacter"
+           currString = m.top.text
+           currStringLen = currString.Len()
+           cursorPosition = m.top.textEditBox.cursorPosition
+           charToDuplicate = currString.Mid(cursorPosition, 1)
+        ' set the keyboard's text field to the edited string
+           if cursorPosition > 0
+               m.top.text = currString.Left(cursorPosition) + charToDuplicate + currString.Right(currStringLen - cursorPosition)
+           end if
+           ' update the VoiceTextEditBox's cursorPosition
+           m.top.TextEditBox.cursorPosition = cursorPosition + 1
+           return true   ' DuplicateCharacter key selection is handled
+       end if
+       ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
+       return false
+   end function
    ```
 
 ## Fields

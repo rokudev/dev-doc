@@ -226,4 +226,4 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 **6.4** The Roku Streaming Store artwork and splash screen must clearly represent the name or identity of the app using only broadcast-safe colors with proper sizing. The app splash screen must support FHD (1920x1080p) and HD (1280x720p) resolutions. In addition, artwork must not be transparent. The splash screen's URI must be listed in the package manifest file.
 
-**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](doc:legal).
+**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](doc:legal##cvaa).

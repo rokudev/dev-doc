@@ -20,7 +20,7 @@ next:
 <p>Here is the list of key developer-facing Roku OS 15.1 updates:</p>
 <h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
 <h5 id="new-seek-mode-based-on-hls-manifest">New seek mode based on HLS Manifest</h5>
-<p>The [<strong>Video.seekMode</strong> field](doc:video#trickplay-fields) supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
+<p>The <a href="https://roku-ent.readme.io/dev/docs/video#trickplay-fields">Video.seekMode</a> supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
 <h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
 <h5 id="perfetto-app-tracing">Perfetto app tracing</h5>
 <p>You can use <a href="https://perfetto.dev/docs/">Perfetto</a> to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.</p>

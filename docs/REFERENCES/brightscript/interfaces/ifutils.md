@@ -1,5 +1,5 @@
 ---
-title: Ifutils
+title: IfUtils
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,15 +10,12 @@ metadata:
 next:
   description: ''
 ---
-
-## ifUtils
-
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 ## Implemented by
 
-| Name                                                         | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Name                   | Description                                                                                                                                                                                                                                                                               |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [roUtils](doc:routils) | The **roUtils** component provides a unique namespace for a library of global functions, including the **DeepCopy()** function for copying objects and their nested objects and the **isSameObject()** function for checking whether two BrightScript objects refer to the same instance. |
 
 ### DeepCopy(data as Object) as Object
@@ -66,7 +63,7 @@ new_aa.c        invalid
 
 #### Description
 
-Checks whether two BrightScript objects refer to the same instance and returns a flag indicating the result. 
+Checks whether two BrightScript objects refer to the same instance and returns a flag indicating the result.
 
 #### Parameters
 
@@ -77,7 +74,7 @@ Checks whether two BrightScript objects refer to the same instance and returns a
 
 #### Return Value
 
-Returns true if **data1** and **data2** reference the same object; otherwise, this returns false. 
+Returns true if **data1** and **data2** reference the same object; otherwise, this returns false.
 
 #### Example
 

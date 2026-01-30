@@ -28,7 +28,7 @@ Using deprecated APIs may cause your app to fail certification testing. See the 
 
 #### Test apps before submission
 
-Use the certification criteria and the [list of pre-certification tests](doc:certification-testing) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
+Use the certification criteria and the [list of pre-certification tests](doc:cert-tests) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
 
 * [Static Analysis tool](doc:static-analysis-tool): Checks the app's code for certification-related errors.
 

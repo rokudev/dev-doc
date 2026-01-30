@@ -46,39 +46,39 @@ It is recommended that developers create a component that extends the **DynamicC
 
 ## Custom key selection handlers
 
-For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface\> element that has the following signature:
+For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface> element that has the following signature:
 
 ```
     function keySelected(key as string) as boolean
 ```
 
-The *key* parameter is set to the key's "strOut" field, if specified; otherwise, it is set to the key's "label" string.
+The _key_ parameter is set to the key's "strOut" field, if specified; otherwise, it is set to the key's "label" string.
 
-The function should return *true* if it handles the key selection. Returning *false* causes the [default key selection handler](#default-key-selection-handler)  behavior to be used.
+The function should return _true_ if it handles the key selection. Returning _false_ causes the [default key selection handler](#default-key-selection-handler)  behavior to be used.
 
 #### Example custom key select handler
 
 The following example demonstrates a custom key handler:
 
-1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:  
+1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:
    ```
    "keys": [
-               \{ "label": "Aa", "strOut": "ChangeCase" \},
-               <OTHER KEYS>
-           ]
+       { "label": "Aa", "strOut": "ChangeCase" },
+       <OTHER KEYS>
+   ] 
    ```
 
-2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:  
+2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:
    ```
-    <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
-               <interface>
-                   <function name="keySelected" />
-               </interface>
-               <OTHER COMPONENT ELEMENTS>
+   <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
+       <interface>
+           <function name="keySelected" />
+       </interface>
+       <OTHER COMPONENT ELEMENTS>
    </component>
    ```
 
-3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:  
+3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:
    ```
      function keySelected(key as string) as boolean
                if key = "ChangeCase"

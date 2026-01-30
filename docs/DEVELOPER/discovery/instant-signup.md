@@ -381,7 +381,7 @@ Additionally, apps can use the [ChannelStore APIs](doc:channelstore) to create n
 
 Apps can provide an **account** endpoint that accepts POST requests. This enables apps to receive the customer's information that is collected during device activation and use it to create new user accounts in their backend system automatically.
 
-When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](doc:push-notifications) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
+When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](doc:push-notifications#sale) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
 
 ```
 {

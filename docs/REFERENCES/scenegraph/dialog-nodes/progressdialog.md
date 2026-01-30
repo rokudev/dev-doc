@@ -1,5 +1,5 @@
 ---
-title: "ProgressDialog"
+title: ProgressDialog
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,11 +10,15 @@ metadata:
 next:
   description: ''
 ---
-
-
-> Roku OS 10.0 introduced a new [StandardProgressDialog node](doc:standard-progress-dialog), which features updated graphics and color palette support. This enables developers to provide a consistent user experience across the progress dialogs in their app. Developers should replace the legacy ProgressDialog nodes in their app with the new [StandardProgressDialog nodes](doc:standard-progress-dialog). 
+> The [StandardProgressDialog node](doc:standard-progress-dialog) features enhanced graphics and color palette support. This enables developers to provide a consistent user experience across the progress dialogs in their app. Developers should replace the legacy ProgressDialog nodes in their app with the new [StandardProgressDialog nodes](doc:standard-progress-dialog).
 >
-> To upgrade a legacy progress dialog to the standard version, prepend "Standard" to the node type. For example, change `      progressdialog = createObject("roSGNode", "ProgressDialog")` to `      progressdialog = createObject("roSGNode", "StandardProgressDialog")`.
+> To upgrade a legacy progress dialog to the standard version, prepend "Standard" to the node type. For example, change:
+>
+> `progressdialog = createObject("roSGNode", "ProgressDialog")` 
+>
+> to
+>
+> `progressdialog = createObject("roSGNode", "StandardProgressDialog")`.
 
 Extends [**Dialog**](doc:dialog)
 
@@ -26,9 +30,10 @@ The message, bulleted text, graphic, and button regions of the dialog should all
 
 ## Fields
 
-| Field                  | Type              | Default                                   | Access Permission | Description           |
-| ---------------------- | ----------------- | ----------------------------------------- | ----------------- | --------------------- |
-| busySpinner            | BusySpinner       | system default                            | READ_WRITE        | Provides access to the BusySpinner node used by the ProgressDialog node so that the spinner icon and rotation direction can be customized |
+| Field       | Type        | Default        | Access Permission | Description                                                                                                                               |
+| ----------- | ----------- | -------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| busySpinner | BusySpinner | system default | READ_WRITE        | Provides access to the BusySpinner node used by the ProgressDialog node so that the spinner icon and rotation direction can be customized |
 
 ## Sample app
+
 [ProgressDialogExample](https://github.com/rokudev/samples/tree/master/ux%20components/dialogs/ProgressDialogExample) is a sample app demonstrating ProgressDialog in action.

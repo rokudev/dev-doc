@@ -20,12 +20,12 @@ next:
 <p>Here is the list of key developer-facing Roku OS 15.1 updates:</p>
 <h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
 <h5 id="new-seek-mode-based-on-hls-manifest">New seek mode based on HLS Manifest</h5>
-<p>The [<strong>Video.seekMode</strong> field](doc:video#trickplay-fields) supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
+<p>The <a href="https://roku-ent.readme.io/dev/docs/video#trickplay-fields">Video.seekMode</a> supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
 <h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
 <h5 id="perfetto-app-tracing">Perfetto app tracing</h5>
 <p>You can use <a href="https://perfetto.dev/docs/">Perfetto</a> to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.</p>
 <p>With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.</p>
-<p>For more information on using Perfetto to trace your Roku apps, click [here](doc:app-tracing). </p>
+<p>For more information on using Perfetto to trace your Roku apps, click <a href="https://roku-ent.readme.io/dev/docs/app-tracing">here</a>. </p>
 <h4 id="deprecations">Deprecations</h4>
 <h6 id="rostring-appendstring-s-as-string-len-as-integer-as-void">roString.AppendString(s as String, len as Integer) as Void</h6>
 <p>This function has been deprecated. Use the [SetString() function](doc:ifstringops#setstrings-as-string-len-as-integer-as-void) instead. </p>

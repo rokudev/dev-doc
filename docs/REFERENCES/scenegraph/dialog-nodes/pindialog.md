@@ -1,5 +1,5 @@
 ---
-title: "PinDialog"
+title: PinDialog
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,11 +10,15 @@ metadata:
 next:
   description: ''
 ---
-
-
-> Roku OS 10.0 introduced a new [StandardPinPadDialog node](doc:standard-pinpad-dialog), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the PIN pad dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy PinDialog nodes in their app with the new [StandardPinPadDialog node](doc:standard-pinpad-dialog). 
+> The [StandardPinPadDialog node](doc:standard-pinpad-dialog) features enhanced graphics, color palette support, and voice entry support, which enables developers to provide a consistent user experience across the PIN pad dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy PinDialog nodes in their app with the new [StandardPinPadDialog node](doc:standard-pinpad-dialog).
 >
-> To upgrade a legacy pinpad dialog to the standard version, prepend "Standard" to the node type. For example, change `      pindialog = createObject("roSGNode", "PinDialog")` to `      pindialog = createObject("roSGNode", "StandardPinDialog")`.
+> To upgrade a legacy pinpad dialog to the standard version, prepend "Standard" to the node type. For example, change:
+>
+> `pindialog = createObject("roSGNode", "PinDialog")` 
+>
+> to 
+>
+> `pindialog = createObject("roSGNode", "StandardPinDialog")`.
 
 Extends [**Dialog**](doc:dialog)
 
@@ -28,12 +32,13 @@ The PinDialog node displays a privacy hint at the bottom of the dialog instructi
 
 ## Fields
 
-| Field            | Type        | Default        | Access Permission | Description                                                  |
-| ---------------- | ----------- | -------------- | ----------------- | ------------------------------------------------------------ |
-| pin              | string      | ""             | READ_WRITE        | Can be used to explicitly set the internal PinPad node PIN value, as well as to access the PIN value entered by the user |
+| Field            | Type        | Default        | Access Permission | Description                                                                                                                                                                                                                         |
+| ---------------- | ----------- | -------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| pin              | string      | ""             | READ_WRITE        | Can be used to explicitly set the internal PinPad node PIN value, as well as to access the PIN value entered by the user                                                                                                            |
 | pinPad           | PinPad node | system default | READ_ONLY         | Provides access to the PinDialog node internal PinPad node. The field is read-only, but the fields of the PinPad node it refers to can be read and written, allowing you to fully customize the PinPad node appearance and behavior |
-| privacyHintColor | color       | system default | READ_WRITE        | When set, the color of the privacy hint shown at the bottom of the dialog |
-| pinPadFocused    | boolean     | true           | READ_WRITE        | Specifies whether or not PinPad will be focused when PinDialog is created |
+| privacyHintColor | color       | system default | READ_WRITE        | When set, the color of the privacy hint shown at the bottom of the dialog                                                                                                                                                           |
+| pinPadFocused    | boolean     | true           | READ_WRITE        | Specifies whether or not PinPad will be focused when PinDialog is created                                                                                                                                                           |
 
 ## Sample app
+
 [PinDialogExample](https://github.com/rokudev/samples/tree/master/ux%20components/dialogs/PinDialogExample) is a sample app demonstrating PinDialog in action.

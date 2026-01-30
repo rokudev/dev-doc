@@ -12,7 +12,7 @@ next:
 ---
 Extends [**Node**](https://roku-ent.readme.io/dev/docs/node)
 
-The **ChannelStore** node class provides an interface to the Streaming Store. It provides functionality equivalent to the [roChannelStore](https://roku-ent.readme.io/dev/docs/ifchannelstore) component. In general, the **ChannelStore** node class allows developers to issue one of several commands, which involves the following steps:
+The **ChannelStore** node class provides an interface to the Streaming Store. It provides functionality equivalent to the [roChannelStore](doc:ifchannelstore) component. In general, the **ChannelStore** node class allows developers to issue one of several commands, which involves the following steps:
 
 1. Set the fields containing the data needed by the command (optional).
 2. Set up an observer of the result field associated with the command.
@@ -44,7 +44,7 @@ Each of the commands starts a sequence of actions associated with the financial 
       <td />
 
       <td>READ\_WRITE</td>
-      <td>Specifies the command to be executed:<br /><ul><li><a href="#getuserdata">getUserData</a></li><li><a href="#getuserregiondata">getUserRegionData</a> ()</li><li><a href="#getcatalog">getCatalog</a> and <a href="#getstorecatalog">getStoreCatalog</a></li><li><a href="#doorder">doOrder</a></li><li><a href="#getpurchases">getPurchases</a> and <a href="#getallpurchases">getAllPurchases</a></li><li><a href="#storechannelcreddata">storeChannelCredData</a></li><li><a href="#getchannelcred">getChannelCred</a></li><li><a href="#getdeviceattestationtoken">getDeviceAttestationToken</a></li><li><a href="#requestpartnerorder">requestPartnerOrder</a></li><li><a href="#confirmpartnerorder">confirmPartnerOrder</a></li></ul></td>
+      <td>Specifies the command to be executed:<br /><ul><li><a href="#getuserdata">getUserData</a></li><li><a href="#getuserregiondata">getUserRegionData</a></li><li><a href="#getcatalog">getCatalog</a> and <a href="#getstorecatalog">getStoreCatalog</a></li><li><a href="#doorder">doOrder</a></li><li><a href="#getpurchases">getPurchases</a> and <a href="#getallpurchases">getAllPurchases</a></li><li><a href="#storechannelcreddata">storeChannelCredData</a></li><li><a href="#getchannelcred">getChannelCred</a></li><li><a href="#getdeviceattestationtoken">getDeviceAttestationToken</a></li><li><a href="#requestpartnerorder">requestPartnerOrder</a></li><li><a href="#confirmpartnerorder">confirmPartnerOrder</a></li></ul></td>
     </tr>
   </tbody>
 </table>

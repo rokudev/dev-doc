@@ -1,5 +1,5 @@
 ---
-title: "ifSocket"
+title: ifSocket
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,15 +10,12 @@ metadata:
 next:
   description: ''
 ---
-
-
 ## Implemented by
 
-| Name             | Description                                                                                                                            |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                                     | Description                                                                                                                            |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [roDataGramSocket](doc:rodatagramsocket) | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets                                               |
-| [roStreamSocket](doc:rostreamsocket)   | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
-
+| [roStreamSocket](doc:rostreamsocket)     | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
 
 ## Supported methods
 
@@ -32,11 +29,11 @@ Sends up to length bytes of data to the socket.
 
 #### Parameters
 
-| Name       | Type    | Description                                                  |
-| ---------- | ------- | ------------------------------------------------------------ |
+| Name       | Type    | Description                                                      |
+| ---------- | ------- | ---------------------------------------------------------------- |
 | data       | Object  | A [roByteArray](doc:robytearray) containing the data to be sent. |
-| startIndex | Integer | The index of the byte array from which to start sending data. |
-| length     | Integer | The amount of data to be sent to the socket.                 |
+| startIndex | Integer | The index of the byte array from which to start sending data.    |
+| length     | Integer | The amount of data to be sent to the socket.                     |
 
 #### Return Value
 
@@ -62,15 +59,15 @@ The number of bytes sent.
 
 #### Description
 
-Reads data from the socket. 
+Reads data from the socket.
 
 #### Parameters
 
-| Name       | Type    | Description                                                  |
-| ---------- | ------- | ------------------------------------------------------------ |
+| Name       | Type    | Description                                                        |
+| ---------- | ------- | ------------------------------------------------------------------ |
 | data       | Object  | A [roByteArray](doc:robytearray) containing the data to be stored. |
-| startIndex | Integer | The index of the byte array from which to start reading data. |
-| length     | Integer | The amount of data to be read from the socket.               |
+| startIndex | Integer | The index of the byte array from which to start reading data.      |
+| length     | Integer | The amount of data to be read from the socket.                     |
 
 #### Return Value
 
@@ -104,28 +101,39 @@ On non-blocking sockets, both the send and the receive buffer may be read but no
 
 Sets the address using a BSD bind() call
 
-
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Return Type</th>
-<th>Parameters</th>
-<th>Return Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>SetAddress</td>
-<td>Boolean</td>
-<td>$&#123;setaddressparamTable&#125;</td>
-<td>True/False</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Return Type</th>
+      <th>Parameters</th>
+      <th>Return Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <tr>
+      <td>SetAddress</td>
+      <td>Boolean</td>
+      <td><table>
+    <tr>
+        <td>Name</td>
+        <td>Type</td>
+        <td>Description</td>
+    </tr>
+    <tr>
+        <td>sockAddr</td>
+        <td>Object</td>
+        <td>An roSocketAddress.</td>
+    </tr>
+</table></td>
+      <td>True/False</td>
+
+      <td />
+    </tr>
+  </tbody>
+</table>
 
 #### Parameters
 
@@ -135,7 +143,7 @@ Sets the address using a BSD bind() call
 
 #### Return Value
 
-A flag indicating whether the address was successfully set. 
+A flag indicating whether the address was successfully set.
 
 ### GetAddress() as Object
 

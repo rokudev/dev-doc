@@ -1,5 +1,5 @@
 ---
-title: "Creating a content feed"
+title: Creating a content feed
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Every Roku app has a content feed. The content feed is a cloud-hosted file that typically contains hundreds to thousands of titles in a publisher's catalog and detailed metadata about each title such as its unique ID, name, description, artwork, and URL.
 
 The content metadata in the feed is used to transfer the video and audio content from your catalog to your Roku app. It tells your app where to find the movie, television show, or song to be played, and the title, description, artwork, and other information to be used when displaying it.
@@ -55,39 +53,39 @@ To create the content feed, you first want to determine which metadata you want 
 
 ## Hosting the content feed
 
-When you are done creating the feed, you need to host it on your website, a content delivery network (CDN), online video platform (OVP), or other hosting solution. You can also [contact one of Roku's preferred feed creation partners](https://developer.roku.com/feed/partners) to create and host your feed.
+When you are done creating the feed, you need to host it on your website, a content delivery network (CDN), online video platform (OVP), or other hosting solution. You can also [contact one of Roku's preferred feed creation partners](doc:partners) to create and host your feed.
 
 ### Content Delivery Networks (CDNs)
 
 Content is typically hosted on a CDN, which is a group of servers located around the world. Using a CDN ensures that your content can be streamlined to many users at different locations at the same time without any bottlenecks. Apps can use any CDN that is able to stream content. The following list includes some of the CDNs that publishers have used to host content for their Roku apps:
 
-- AdvergentCDN
-- Akamai
-- Amazon Web Services (AWS)
-- BitGravity
-- Boxcast
-- Brightcove
-- Comcast Technology Solutions
-- EdgeCast
-- Level 3
-- Limelight Networks
-- Scale Engine
+* AdvergentCDN
+* Akamai
+* Amazon Web Services (AWS)
+* BitGravity
+* Boxcast
+* Brightcove
+* Comcast Technology Solutions
+* EdgeCast
+* Level 3
+* Limelight Networks
+* Scale Engine
 
 ### Online Video Platforms (OVPs)
 
 Content may also be hosted in an OVP, which partner with CDNs to provide hosting, but also provide specialized, easy-to-use tools for managing video content. The following list includes some of the OVPs that publishers have used to host content for their Roku apps:
 
-- Brightcove
-- Kaltura
-- Ooyala
-- Vimeo Pro
-- Wistia
-- Zype
+* Brightcove
+* Kaltura
+* Ooyala
+* Vimeo Pro
+* Wistia
+* Zype
 
 ## Using the content feed to link your catalog to your app
 
 You can use the content metadata in your feed to programmatically populate your app UI with the titles in your catalog. To do this, you create a [ContentNode](doc:contentnode), set its attributes to the metadata in your feed, and then add the ContentNode to the SceneGraph UI components in your app. For example, to populate a grid on your app's home page with your movie catalog, you would do the following:
 
-- create a single root [ContentNode](doc:contentnode).
-- iterate through the content feed to add the row title and then thumbnail image, title, description, and other descriptive attributes for each movie in the row to a series of child content nodes.
-- Add the root content node to the grid.
+* create a single root [ContentNode](doc:contentnode).
+* iterate through the content feed to add the row title and then thumbnail image, title, description, and other descriptive attributes for each movie in the row to a series of child content nodes.
+* Add the root content node to the grid.

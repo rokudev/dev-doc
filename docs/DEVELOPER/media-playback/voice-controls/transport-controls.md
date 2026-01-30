@@ -249,7 +249,7 @@ You can download and install a [sample app](https://github.com/rokudev/transport
 
 ## Video demo
 
-For a video demonstration of voice controls, see the [Voice overview guide](doc:overview).
+For a video demonstration of voice controls, see the [Voice overview guide](doc:voice).
 
 ## Voice control required behavior
 

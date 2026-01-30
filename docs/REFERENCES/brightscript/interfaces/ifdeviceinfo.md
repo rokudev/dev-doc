@@ -426,7 +426,7 @@ Checks for the supported DRM system and its features.
 
 An associative array with the supported DRM system and features. For example, a device that supports PlayReady inside a trusted environment with secure stop returns:
 
-`\{"playready": "tee;ss"\}`
+`{"playready": "tee;ss"}`
 
 The values for the PlayReady key above are:
 

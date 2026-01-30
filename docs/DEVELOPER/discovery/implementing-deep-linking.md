@@ -28,7 +28,7 @@ Implementing deep linking in an app entails the following steps:
 
 3. **Update the app**. Program the app so it accepts and validates the deep linking parameters and launches into the required experience.
 
-4. **Test deep linking in the app**. Verify that the app handles deep links correctly using the Roku Deep Linking Tester or [External Control Protocol](doc:external-control-api) (ECP) commands sent via cURL.\<br />\<br />
+4. **Test deep linking in the app**. Verify that the app handles deep links correctly using the Roku Deep Linking Tester or [External Control Protocol](doc:external-control-api) (ECP) commands sent via cURL.
 
 5. **Submit deep link samples for certification**. Submit sample
    deep link parameters in the Developer Dashboard for each mediaType in your app.
@@ -182,12 +182,17 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
    'display an appropriate error message for the user and launch home page.
    end if
 
-4. Use [roInputEvent](doc:roinputevent) to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.\<br />\<br />
+4. Use [roInputEvent](doc:roinputevent) to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.
 
-a.  The [supports_input_launch](doc:channel-manifest) attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.\<br />\<br />For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent—instead of re-launching your app with the parameters.
+a.  The [supports_input_launch](doc:channel-manifest) attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.  
 
-b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.\<br />\<br /> See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
+For example, when a voice input request is received (for example, "Play Game of Thrones" while your app is in the foreground), your app can send the deep link parameters through the roInputEvent—instead of re-launching your app with the parameters.
 
+b.  A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.  
+
+See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
+
+```
 ...
 screen = CreateObject("roSGScreen")
 m.port = CreateObject("roMessagePort")
@@ -209,6 +214,7 @@ end if
 end if
 end if
 end while
+```
 
 #### Custom deep linking experiences from ads and Home screen banners
 

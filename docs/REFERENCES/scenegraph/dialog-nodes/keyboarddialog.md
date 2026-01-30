@@ -12,7 +12,13 @@ next:
 ---
 > The [StandardKeyboardDialog node](doc:standard-keyboard-dialog) features enhanced graphics, color palette support, and voice entry support that enable developers to provide a consistent user experience across the keyboard dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy KeyboardDialog nodes in their app with the new [StandardKeyboardDialog node](doc:standard-keyboard-dialog).
 >
-> To upgrade a legacy keyboard dialog to the standard version, prepend "Standard" to the node type. For example, change `      keyboarddialog = createObject("roSGNode", "KeyboardDialog")` to `      keyboarddialog = createObject("roSGNode", "StandardKeyboardDialog")`.
+> To upgrade a legacy keyboard dialog to the standard version, prepend "Standard" to the node type. For example, change:
+>
+> `keyboarddialog = createObject("roSGNode", "KeyboardDialog")` 
+>
+> to 
+>
+> `keyboarddialog = createObject("roSGNode", "StandardKeyboardDialog")`.
 
 Extends [**Dialog**](doc:dialog)
 

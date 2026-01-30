@@ -1,5 +1,5 @@
 ---
-title: "ifDeviceCrypto"
+title: ifDeviceCrypto
 excerpt: ''
 deprecated: false
 hidden: true
@@ -16,7 +16,7 @@ next:
 
 | Name                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roDeviceCrypto](doc:rodevicecrypto) | Encrypts and decrypts data on a device using a key that is unique per app, device, or model. |
+| [roDeviceCrypto](/docs/references/brightscript/components/rodevicecrypto.md) | Encrypts and decrypts data on a device using a key that is unique per app, device, or model. |
 
 ## Supported Methods
 

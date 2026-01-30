@@ -116,18 +116,23 @@ Sets the address using a BSD bind() call
     <tr>
       <td>SetAddress</td>
       <td>Boolean</td>
-      <td><table>
-    <tr>
-        <td>Name</td>
-        <td>Type</td>
-        <td>Description</td>
-    </tr>
-    <tr>
-        <td>sockAddr</td>
-        <td>Object</td>
-        <td>An roSocketAddress.</td>
-    </tr>
-</table></td>
+
+      <td>
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+          </tr>
+
+          <tr>
+            <td>sockAddr</td>
+            <td>Object</td>
+            <td>An roSocketAddress.</td>
+          </tr>
+        </table>
+      </td>
+
       <td>True/False</td>
 
       <td />
@@ -135,11 +140,7 @@ Sets the address using a BSD bind() call
   </tbody>
 </table>
 
-#### Parameters
-
-| Name     | Type   | Description         |
-| -------- | ------ | ------------------- |
-| sockAddr | Object | An roSocketAddress. |
+<br />
 
 #### Return Value
 

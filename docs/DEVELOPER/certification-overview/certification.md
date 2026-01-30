@@ -202,7 +202,7 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 **4.10** Apps must implement [bookmarking](doc:bookmarking) for all VOD content longer than 15 minutes. Apps must store bookmarks for a minimum of 30 days.
 
-**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](doc:transport-controls) that are supported on the Roku platform. Apps must implement proper [error handling](doc:transport-controls) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
+**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](doc:transport-controls) that are supported on the Roku platform. Apps must implement proper [error handling](doc:transport-controls##error-handling) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
 **4.12** Apps must use [Roku voice keyboards](doc:dynamic-keyboard-base) for [email](doc:dynamic-keyboard), [PIN](doc:dynamic-pinpad), and [password](doc:dynamic-keyboard) entry.
 

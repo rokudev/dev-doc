@@ -342,11 +342,11 @@ Returns the string with the following characters replaced with their correspondi
 
 | Character        | Replaced with |
 | ---------------- | ------------- |
-| " (double quote) | &quot;        |
-| ' (single quote) | &apos;        |
-| \<               | &lt;          |
-| >                | &gt;          |
-| &                | &amp;         |
+| " (double quote) | "             |
+| ' (single quote) | '             |
+| \<               | \<            |
+| >                | >             |
+| &                | &             |
 
 #### Return Value
 
@@ -389,7 +389,7 @@ The functionality is essentially the same as [roUrlTransfer](doc:rourltransfer).
 
 If the escaped string includes invalid escape sequences, the decode will fail and an empty string will be returned.
 
->  Consider using the [DecodeUri](#decodeuri-as-string) or [DecodeUriComponent](#decodeuricomponent-as-string) method instead.
+> Consider using the [DecodeUri](#decodeuri-as-string) or [DecodeUriComponent](#decodeuricomponent-as-string) method instead.
 
 #### Return Value
 
@@ -492,8 +492,8 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.StartsWith("Roku") ' =&gt; true
-? s.StartsWith("roku") '=&gt; false
+? s.StartsWith("Roku") ' > true
+? s.StartsWith("roku") ' > false
 ```
 
 ### StartsWith(matchString as String, matchPos as Integer) As Boolean
@@ -508,8 +508,8 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.StartsWith("Rocks", 5) ' =&gt; true
-? s.StartsWith("Roku", 5) ' =&gt; false
+? s.StartsWith("Rocks", 5) ' > true
+? s.StartsWith("Roku", 5)  ' > false
 ```
 
 ### EndsWith(matchString as String) As Boolean
@@ -524,8 +524,8 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.EndsWith("Rocks") ' =&gt; true
-? s.EndsWith("roku") '=&gt; false
+? s.EndsWith("Rocks") ' > true
+? s.EndsWith("roku") '> false
 ```
 
 ### EndsWith(matchString as String, length as Integer) As Boolean
@@ -540,7 +540,7 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.EndsWith("Roku", 4) ' =&gt; true
+? s.EndsWith("Roku", 4) ' > true
 ```
 
 ### Format(...) As String
@@ -612,8 +612,8 @@ print "%0*x".Format(8, &hFACE1)
 ```
 '* example of floating point formatting
 pi = 3.1415 : r = 2.5
-print "r=%4.2f =&gt; c=%4.2f".Format(r, 2 * pi * r)
-'> "r=2.50 =&gt; c=15.71"
+print "r=%4.2f > c=%4.2f".Format(r, 2 * pi * r)
+'> "r=2.50 > c=15.71"
 ```
 
 ##### String

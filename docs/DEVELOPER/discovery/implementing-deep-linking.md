@@ -26,7 +26,7 @@ Implementing deep linking in an app entails the following steps:
 
 2. **Scope required deep linking behavior**. Identify the work required for handling deep link requests based on content classifications.
 
-3. **Update the app**. Program the app so it accepts and validates the deep linking parameters and launches into the required experience. 
+3. **Update the app**. Program the app so it accepts and validates the deep linking parameters and launches into the required experience.
 
 4. **Test deep linking in the app**. Verify that the app handles deep links correctly using the Roku Deep Linking Tester or [External Control Protocol](doc:external-control-api) (ECP) commands sent via cURL.\<br />\<br />
 
@@ -37,17 +37,17 @@ Implementing deep linking in an app entails the following steps:
 
 Deep link requests contain two key parameters: **contentid** and **mediaType**.
 
-* A \<a href="contentid">\</a>contentId is a URL-encoded ASCII string (maximum 255 characters) that uniquely identifies content in your app. The contentId may be an alphanumeric string, URL, or pipe-separated key-value pairs (for example, series=myAwesomeShow|Season=1|Episode=1).
+* A **contentId** is a URL-encoded ASCII string (maximum 255 characters) that uniquely identifies content in your app. The contentId may be an alphanumeric string, URL, or pipe-separated key-value pairs (for example, series=myAwesomeShow|Season=1|Episode=1).
 
-* The \<a href="mediatype">\</a>mediaType specifies how an app should behave when receiving a deep link request. See [MediaType behavior](#mediatype-behavior) for more information.
+* The **mediaType** specifies how an app should behave when receiving a deep link request. See [MediaType behavior](#mediatype-behavior) for more information.
 
-The following example demonstrates a deep link request sent to an app.  The [**source** parameter](doc:dev-environment) specifies the origin of the deep link request (in this case, it is from [Roku Search](doc:implementing-search)):
+The following example demonstrates a deep link request sent to an app.  The [**source** parameter](doc:dev-environment#source-parameter) specifies the origin of the deep link request (in this case, it is from [Roku Search](doc:implementing-search)):
 
 ```
 http://192.168.1.114:8060/launch/50000?contentId=myAwesomeShow|Season=1|Episode=1&mediaType=series&source=hs-search
 ```
 
-The app receives the deep link parameters as an associative array as demonstrated in the following example (see [Implementing Deep Linking](doc:implementing-deep-linking) for more information on handling these parameters; see [Using the debug console for troubleshooting deep linking parameters](#using-the-debug-console-for-troubleshooting-deep-linking-parameters) for how to check the deep linking parameters being sent to your app):
+The app receives the deep link parameters as an associative array as demonstrated in the following example (see [Implementing Deep Linking](#implementing-deep-linking) for more information on handling these parameters; see [Using the debug console for troubleshooting deep linking parameters](#using-the-debug-console-for-troubleshooting-deep-linking-parameters) for how to check the deep linking parameters being sent to your app):
 
 ```
 <Component: roAssociativeArray> =
@@ -63,7 +63,7 @@ The app receives the deep link parameters as an associative array as demonstrate
   }
 ```
 
-> If an app is participating in [Roku Search](doc:roku-search), the contentid in the Roku Search feed (PlayID) must map to the contentid in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed.
+> If an app is participating in [Roku Search](doc:roku-search)///, the contentid in the Roku Search feed (PlayID) must map to the contentid in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed.
 >
 > For episodic content, Roku Search only recognizes the episode contentid. An episode's contentid therefore must remain consistent, regardless if a deep link launches the episode or an episodic picker screen. These different deep link behaviors are determined solely by the mediaType. Separate contentIDs used to identify the season and series of the same content item are therefore ignored.
 

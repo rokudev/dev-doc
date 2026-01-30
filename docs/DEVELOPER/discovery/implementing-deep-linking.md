@@ -26,7 +26,7 @@ Implementing deep linking in an app entails the following steps:
 
 2. **Scope required deep linking behavior**. Identify the work required for handling deep link requests based on content classifications.
 
-3. **Update the app**. Program the app so it accepts and validates the deep linking parameters and launches into the required experience. \<br />\<br />
+3. **Update the app**. Program the app so it accepts and validates the deep linking parameters and launches into the required experience. 
 
 4. **Test deep linking in the app**. Verify that the app handles deep links correctly using the Roku Deep Linking Tester or [External Control Protocol](doc:external-control-api) (ECP) commands sent via cURL.\<br />\<br />
 

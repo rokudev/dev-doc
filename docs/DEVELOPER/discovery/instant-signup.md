@@ -135,7 +135,7 @@ Apps must implement an API that retrieves the images and description of the app 
 </tr>
 <tr>
 <td class="short-line"><strong>Response</strong></td>
-<td class="long-line">The API returns the following:<br><br>- An <strong>images</strong> array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the <a href="#channel-image-specifications">Image specifications</a>.<br><br>- A <strong>description</strong> string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br><br><strong>Syntax</strong>:<pre><code>  {
+<td class="long-line">The API returns the following:<br><br>- An <strong>images</strong> array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the <a href="#image-specifications">Image specifications</a>.<br><br>- A <strong>description</strong> string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br><br><strong>Syntax</strong>:<pre><code>  {
     "images": "Array.&lt;String&gt;",
     "description": "string"
   }

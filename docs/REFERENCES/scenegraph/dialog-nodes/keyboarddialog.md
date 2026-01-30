@@ -1,5 +1,5 @@
 ---
-title: "KeyboardDialog"
+title: KeyboardDialog
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,9 +10,7 @@ metadata:
 next:
   description: ''
 ---
-
-
-> Roku OS 10.0 introduced a new [StandardKeyboardDialog node](doc:standard-keyboard-dialog), which features updated graphics, color palette support, and voice entry support. This enables developers to provide a consistent user experience across the keyboard dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy KeyboardDialog nodes in their app with the new [StandardKeyboardDialog node](doc:standard-keyboard-dialog). 
+> The [StandardKeyboardDialog node](doc:standard-keyboard-dialog) features enhanced graphics, color palette support, and voice entry support that enable developers to provide a consistent user experience across the keyboard dialogs in their app, and help speed up customer sign-ups and sign-ins. Developers must replace the legacy KeyboardDialog nodes in their app with the new [StandardKeyboardDialog node](doc:standard-keyboard-dialog).
 >
 > To upgrade a legacy keyboard dialog to the standard version, prepend "Standard" to the node type. For example, change `      keyboarddialog = createObject("roSGNode", "KeyboardDialog")` to `      keyboarddialog = createObject("roSGNode", "StandardKeyboardDialog")`.
 
@@ -30,10 +28,11 @@ Another typical usage of the KeyboardDialog node class adds a "Hide Text" button
 
 ## Fields
 
-| Field                  | Type              | Default                                   | Access Permission | Description           |
-| ---------------------- | ----------------- | ----------------------------------------- | ----------------- | --------------------- |
-| text                   | string            | ""                                        | READ_WRITE        | Can be used to explicitly set the internal Keyboard node text string, as well as to access the string entered by the user |
-| keyboard               | Keyboard node     | system default                            | READ_ONLY         | Provides access to the internal Keyboard node. The field is read-only, but the fields of the Keyboard node it refers to can be read and written, allowing you to fully customize the Keyboard node appearance and behavior |
+| Field    | Type          | Default        | Access Permission | Description                                                                                                                                                                                                                |
+| -------- | ------------- | -------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| text     | string        | ""             | READ_WRITE        | Can be used to explicitly set the internal Keyboard node text string, as well as to access the string entered by the user                                                                                                  |
+| keyboard | Keyboard node | system default | READ_ONLY         | Provides access to the internal Keyboard node. The field is read-only, but the fields of the Keyboard node it refers to can be read and written, allowing you to fully customize the Keyboard node appearance and behavior |
 
 ## Sample app
+
 [KeyboardDialogExample](https://github.com/rokudev/samples/tree/master/ux%20components/dialogs/KeyboardDialogExample) is a sample app demonstrating KeyboardDialog in action.

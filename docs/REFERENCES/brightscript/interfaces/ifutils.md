@@ -1,5 +1,5 @@
 ---
-title: Ifutils
+title: IfUtils
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,16 +10,15 @@ metadata:
 next:
   description: ''
 ---
-
-## ifUtils
-
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 ## Implemented by
 
-| Name                                                         | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Name                   | Description                                                                                                                                                                                                                                                                               |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [roUtils](doc:routils) | The **roUtils** component provides a unique namespace for a library of global functions, including the **DeepCopy()** function for copying objects and their nested objects and the **isSameObject()** function for checking whether two BrightScript objects refer to the same instance. |
+
+## Supported Methods
 
 ### DeepCopy(data as Object) as Object
 
@@ -42,7 +41,7 @@ This function returns a copy of the specified object.
 ```
 utils = CreateObject("roUtils")
     di = CreateObject("roDeviceInfo")
-    aa = &#123; a: 1, b: &#123; b1: 42 &#125;, c: di &#125;
+    aa = { a: 1, b: { b1: 42 }, c: di }
     new_aa = utils.DeepCopy(aa)
     ? "IsSameObject", utils.IsSameObject(aa, new_aa)
     ? "new_aa.a", new_aa.a
@@ -56,9 +55,9 @@ This code will output the following on the port 8085 console:
 IsSameObject    false
 new_aa.a         1
 new_aa.b        <Component: roAssociativeArray> =
-&#123;
+{
     b1: 42
-&#125;
+}
 new_aa.c        invalid
 ```
 
@@ -66,7 +65,7 @@ new_aa.c        invalid
 
 #### Description
 
-Checks whether two BrightScript objects refer to the same instance and returns a flag indicating the result. 
+Checks whether two BrightScript objects refer to the same instance and returns a flag indicating the result.
 
 #### Parameters
 
@@ -77,15 +76,15 @@ Checks whether two BrightScript objects refer to the same instance and returns a
 
 #### Return Value
 
-Returns true if **data1** and **data2** reference the same object; otherwise, this returns false. 
+Returns true if **data1** and **data2** reference the same object; otherwise, this returns false.
 
 #### Example
 
 ```
-shared = &#123;&#125;
-    aa = &#123;"a": shared, "b": shared&#125;
+shared = {}
+    aa = {"a": shared, "b": shared}
     utils = CreateObject("roUtils")
     utils.isSameObject(aa, aa)   ' returns true
-    utils.isSameObject(aa, &#123;&#125;)   ' returns false
+    utils.isSameObject(aa, {})   ' returns false
     utils.isSameObject(aa.a, aa.b)  ' returns true
 ```

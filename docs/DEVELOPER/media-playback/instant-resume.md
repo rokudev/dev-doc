@@ -1,5 +1,5 @@
 ---
-title: "Instant Resume"
+title: Instant Resume
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,34 +10,25 @@ metadata:
 next:
   description: ''
 ---
-
-
-
-
 Instant Resume enables apps to save their current state upon exit and then continue playback upon relaunch. This improves the user experience by letting viewers quickly get back to the content they were watching without having to find it first. Consider how Instant Resume can help speed up playback upon the relaunch of live and VOD content:
 
-- **Live**. A user is watching a live linear stream and then exits the app by pressing the Home or Back key on their Roku remote control. When they re-launch the app later, it can resume directly into playback of the live video in approximately 1 second.
+* **Live**. A user is watching a live linear stream and then exits the app by pressing the Home or Back key on their Roku remote control. When they re-launch the app later, it can resume directly into playback of the live video in approximately 1 second.
 
-
-- **VOD**. A user is watching a movie and then exits the app (by saying "Home" on their Roku Voice remote). When they re-launch the app later, it can display a Details Screen in just a few seconds The Details Screen gives the user the choice to either resume the video or play it from the beginning.
+* **VOD**. A user is watching a movie and then exits the app (by saying "Home" on their Roku Voice remote). When they re-launch the app later, it can display a Details Screen in just a few seconds The Details Screen gives the user the choice to either resume the video or play it from the beginning.
 
 The following video demonstrates how Instant Resume works for live linear and VOD apps:
 
-\<video title="Instant Resume Demo" poster="https://image.roku.com/ZHZscHItMTc2/instant-resume-demo-v2.jpg"\>
-  \<source src="https://image.roku.com/ZHZscHItMTc2/instant-resume-tubi-demo.mp4"\>
-  \<img src='https://image.roku.com/ZHZscHItMTc2/instant-resume-demo-v2.jpg' alt='Instant Resume Demo' /\>
-\</video\>
+<video src="https://image.roku.com/ZHZscHItMTc2/instant-resume-tubi-demo.mp4" poster="https://image.roku.com/ZHZscHItMTc2/instant-resume-demo-v2.jpg" width="720" height="480" controls />
 
 ## Pre-requisites
 
 To integrate Instant Resume, you must have a Roku test device that meets the following prerequisites:
 
-- **Multi-core ARM processor**. Instant Resume is supported only on Roku devices with multi-core, ARM processors. Although Instant Resume will be enabled on other devices, its effectiveness will vary by platform memory profile. See the [Hardware specifications](doc:hardware) for processor and memory capabilities of all Roku devices.
+* **Multi-core ARM processor**. Instant Resume is supported only on Roku devices with multi-core, ARM processors. Although Instant Resume will be enabled on other devices, its effectiveness will vary by platform memory profile. See the [Hardware specifications](doc:hardware) for processor and memory capabilities of all Roku devices.
 
+* **Roku OS 10.0 (or higher)**. Instant Resume is supported only on devices that can run Roku OS 10.0 or higher. See the [Hardware specifications](doc:hardware) for the list of current and updatable Roku devices.
 
-- **Roku OS 10.0 (or higher)**. Instant Resume is supported only on devices that can run Roku OS 10.0 or higher. See the [Hardware specifications](doc:hardware) for the list of current and updatable Roku devices.
-
-> Implementing Instant Resume in an app does not guarantee that the Roku OS can relaunch it in its suspended state. The Roku OS stores as many suspended apps as possible in memory; however, it removes suspended apps when additional memory is needed by the active app. If a suspended app is removed from memory, re-launching the app is done without Instant Resume.  
+> Implementing Instant Resume in an app does not guarantee that the Roku OS can relaunch it in its suspended state. The Roku OS stores as many suspended apps as possible in memory; however, it removes suspended apps when additional memory is needed by the active app. If a suspended app is removed from memory, re-launching the app is done without Instant Resume.
 
 ## Implementation
 
@@ -47,12 +38,9 @@ To implement Instant Resume in an app, do the following:
 
 1. [Update the manifest with required attributes](#updating-the-channel-manifest).
 
-
 2. [Implement the required suspend and resume handlers](#implementing-suspend-and-resume-handlers).
 
-
 3. [(Optional) Execute background tasks](#background-tasks).
-
 
 4. [Add signal beacons to measure suspend and resume times](#adding-signal-beacons).
 
@@ -60,11 +48,9 @@ To implement Instant Resume in an app, do the following:
 
 The [manifest](doc:channel-manifest) must include the following attributes for an app to leverage Instant Resume:
 
-- **sdk_instant_resume=1**. Indicates the channel's request to participate in Instant Resume. Acknowledges that the channel has implemented all the requirements and protocols described in this document.
+* **sdk_instant_resume=1**. Indicates the channel's request to participate in Instant Resume. Acknowledges that the channel has implemented all the requirements and protocols described in this document.
 
-
-- **run_as_process=1**. Enables the Roku OS to preserve the channel state in the device RAM when the channel is suspended. If this attribute is not enabled, a channel implementing Instant Resume still functions; however, channel relaunches do not leverage this feature. 
-
+* **run_as_process=1**. Enables the Roku OS to preserve the channel state in the device RAM when the channel is suspended. If this attribute is not enabled, a channel implementing Instant Resume still functions; however, channel relaunches do not leverage this feature.
 
 ### Implementing suspend and resume handlers
 
@@ -76,9 +62,9 @@ When the user later returns to the app, the Roku OS invokes the matching **custo
 
 > As of Roku OS 12.0, pressing the "Back" key to exit an app generates an interruption. This means that apps without an Exit Confirmation dialog can support Instant Resume.
 >
-> ------
+> ***
 >
-> Apps should minimize memory usage to increase the probability of their app being re-launched with Instant Resume. Apps can use the [BrightScript Profiler](doc:brightscript-profiler) or the [**chanperf** command in the debug console](doc:debugging) to monitor memory consumption.  
+> Apps should minimize memory usage to increase the probability of their app being re-launched with Instant Resume. Apps can use the [BrightScript Profiler](doc:brightscript-profiler) or the [**chanperf** command in the debug console](doc:debugging) to monitor memory consumption.
 
 #### Example
 
@@ -128,10 +114,9 @@ To maximize the app's chances of remaining in memory while suspended, free as ma
 
 The **arg** parameter is an associative array that provides the source of the interruption. It has a **lastSuspendOrResumeReason** field that may be set to one of the following values:
 
-- **screensaver**. The Roku system screensaver was activated.
+* **screensaver**. The Roku system screensaver was activated.
 
-
-- **home**. The Home key or a labeled app key on the Roku remote control is pressed (or any other source).
+* **home**. The Home key or a labeled app key on the Roku remote control is pressed (or any other source).
 
 #### customResume (arg as dynamic) as Void
 
@@ -143,10 +128,9 @@ When this handler is called, the app needs to update its own internal data with 
 
 The **arg** parameter is an associative array that includes the following fields:
 
-- **lastSuspendOrResumeReason**. The location from which the app is resumed: "screensaver" or "home".
+* **lastSuspendOrResumeReason**. The location from which the app is resumed: "screensaver" or "home".
 
-
-- **launchParams**. [Deep linking](doc:implementing-deep-linking) fields "contentId" and "mediaType", which specify the selected content and required app behavior when receiving a deep link request upon relaunch.
+* **launchParams**. [Deep linking](doc:implementing-deep-linking) fields "contentId" and "mediaType", which specify the selected content and required app behavior when receiving a deep link request upon relaunch.
 
 > [roInputEvents](doc:roinputevent) are not passed to the **customResume** handler upon relaunch to avoid sending the deep linking parameters twice. The **launchParams** field provides access to the deep linking parameters.
 
@@ -203,10 +187,10 @@ You can use the BrightScript console (port 8085) to view a log with your app's I
 
 The following table lists how the resume and suspend beacons are measured and when their initiate and complete beacons are fired.
 
-| Metric      | Start Point                                                  | Stop Point                                                   | Initiate Beacon                                              | Complete Beacon                                              |
-| :---------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| **Suspend** | An app interruption (for example, the user presses the Home button on the Roku remote control).  If the user exits the app using the back key or an exit confirmation dialog, this beacon is not fired. | The app has been suspended to background and the home screen is fully rendered and operational. | AppSuspendInitiate (fired by Roku OS).   The home key handler invokes app suspension. | AppSuspendComplete (fired by Roku OS).  The first render pass completes after the complete beacon has been signaled (when the Roku OS completes application exit) and the Home screen is displayed. |
-| **Resume**  | The user presses the **OK** button to launch an app that had previously been suspended to background from the home screen. | The app is fully rendered and operational on its initial UI screen, or it reaches user-operable video playback. | AppResumeInitiate (fired by Roku OS).  The last keypress before the beacon was signaled. If there was no prior keypress, the initiate beacon signal time. | **AppResumeComplete** (fired by app).  The first render pass completes after the complete beacon has been signaled via the [**signalBeacon()** method](#appresume-beacons). |
+| Metric      | Start Point                                                                                                                                                                                             | Stop Point                                                                                                      | Initiate Beacon                                                                                                                                           | Complete Beacon                                                                                                                                                                                     |
+| :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Suspend** | An app interruption (for example, the user presses the Home button on the Roku remote control).  If the user exits the app using the back key or an exit confirmation dialog, this beacon is not fired. | The app has been suspended to background and the home screen is fully rendered and operational.                 | AppSuspendInitiate (fired by Roku OS).   The home key handler invokes app suspension.                                                                     | AppSuspendComplete (fired by Roku OS).  The first render pass completes after the complete beacon has been signaled (when the Roku OS completes application exit) and the Home screen is displayed. |
+| **Resume**  | The user presses the **OK** button to launch an app that had previously been suspended to background from the home screen.                                                                              | The app is fully rendered and operational on its initial UI screen, or it reaches user-operable video playback. | AppResumeInitiate (fired by Roku OS).  The last keypress before the beacon was signaled. If there was no prior keypress, the initiate beacon signal time. | **AppResumeComplete** (fired by app).  The first render pass completes after the complete beacon has been signaled via the [**signalBeacon()** method](#appresume-beacons).                         |
 
 ## App behavior guidelines
 
@@ -248,10 +232,10 @@ end sub
 
 > Apps may attempt to resume playback at the suspension point; however, the user may not have launched the app for some time and therefore may lack context, which may not be an ideal user experience. In addition, this approach requires the handling of a number of complexities:
 >
-> - preserving ad breaks (if an interruption occurs during an ad break, the app must re-start the ad roll).
-> - maintaining authentication logic during signups (SVOD apps need to ensure their paywalls are not affected by users exiting the app when in the sign-up flow).
-> - bookmarking ( must start the video at last played position).
-> - managing any catalog changes that could affect how the app handles the content feed.
+> * preserving ad breaks (if an interruption occurs during an ad break, the app must re-start the ad roll).
+> * maintaining authentication logic during signups (SVOD apps need to ensure their paywalls are not affected by users exiting the app when in the sign-up flow).
+> * bookmarking ( must start the video at last played position).
+> * managing any catalog changes that could affect how the app handles the content feed.
 
 ## Sample app
 

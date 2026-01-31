@@ -24,7 +24,7 @@ next:
 
 Returns a unique number for this object that can be used to identify whether a roChannelStoreEvent event originated from this object, by comparing with the roChannelStoreEvent object's GetSourceIdentity() value.
 
-> The value can be any arbitrary value as assigned by the Roku OS, and should only be used for comparison purposes. For example, the value should not be used as an array index.  
+> The value can be any arbitrary value as assigned by the Roku OS, and should only be used for comparison purposes. For example, the value should not be used as an array index.
 >
 > For use as a look-up key, you can use GetIdentity().ToStr() as an associative array key.
 
@@ -387,7 +387,10 @@ This function works like GetUserData(), but allows the caller to specify which u
     <tr>
       <td>requestInfo<br /></td>
       <td>roAssociativeArray</td>
-      <td>Specifies whether the RFI screen is used for customer sign-ups or sign-ins. This may be one of the following values:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>context</td><td>string</td><td>"signup"</td><td>Specifies the context of the RFI screen, which may be one of the following values:<br />$}context-list}<br />See the <a href="#sign-in-example">Sign-in example</a> for how to use this field.</td></tr></tbody></table></td>
+      <td>Specifies whether the RFI screen is used for customer sign-ups or sign-ins. This may be one of the following values:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>context</td><td>string</td><td>"signup"</td><td>Specifies the context of the RFI screen, which may be one of the following values:<br /><ul>
+      <li>"signup": The RFI screen displays a "Let's create your account" title and lists the customer information specified in the <a href="#requesteduserdata"><strong>requestedUserData</strong> field</a>. The RFI screen uses the sign-up context by default.</li>
+      <li>"signin: "The RFI screen displays a "Sign in" title and lists only email or phone attributes, if specified in the <a href="#requesteduserdata"><strong>requestedUserData</strong> field</a>. Other attributes are ignored, even if specified.</li>
+      </ul><br />See the <a href="#sign-in-example">Sign-in example</a> for how to use this field.</td></tr></tbody></table></td>
     </tr>
 
     <tr>
@@ -422,7 +425,7 @@ userData = store.GetPartialUserData("email, phone, firstname, lastname")
 store = CreateObject("roChannelStore")
 
 ' Request user's email for sign-in
-userData = store.GetPartialUserData("email", \}context: "signin"\})
+userData = store.GetPartialUserData("email"}context: "signin"})
 ```
 
 ### GetUserRegionData() as Object
@@ -567,12 +570,12 @@ To verify the JWT, developers must [download the Roku device attestation token c
 The decoded JWT contains the following fields:
 
 ```
-"x-roku-attestation-data": \}
+"x-roku-attestation-data":}
     "nonce": "5E0692E0A389F4F6",
     "channelId": "dev",
     "developerId": "caa73fbb5e75a46a4b6114de51a5ada7d616e2ed",
     "timestampMs": 1656377873990
- \}
+ }
 ```
 
 ### RequestPartnerOrder(orderInfo as roAssociativeArray, productID as String) as Object

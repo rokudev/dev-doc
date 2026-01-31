@@ -1,5 +1,5 @@
 ---
-title: "App localization"
+title: App localization
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,41 +10,35 @@ metadata:
 next:
   description: ''
 ---
-
-
 Publishers can distribute their content across the world through the [Streaming Store](https://channelstore.roku.com/). The Streaming Store includes all of North America, many countries in Latin America, and several countries in Europe. The Roku development platform makes it easy to broadly disseminate content; however, publishers should consider localization in the development, distribution, engagement, and monetization of their apps.
 
 Roku has Streaming Stores in the following countries:
 
-
 <table>
-<thead>
-<tr>
-<th>North America</th>
-<th>Europe</th>
-<th>Latin America</th>
-<th>Asia Pacific</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><ul><li>United States</li><li>Canada</li></ul></td>
-<td><ul><li>United Kingdom</li><li>Ireland</li><li>Germany</li></ul></td>
-<td><ul><li>Argentina</li><li>Brazil</li><li>Chile</li><li>Colombia</li><li>Costa Rica</li><li>El Salvador</li><li>Guatemala</li><li>Honduras</li><li>Mexico</li><li>Nicaragua</li><li>Panama</li><li>Peru</li></ul></td>
-<td>Australia</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>North America</th>
+      <th>Europe</th>
+      <th>Latin America</th>
+      <th>Asia Pacific</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><ul><li>United States</li><li>Canada</li></ul></td>
+      <td><ul><li>United Kingdom</li><li>Ireland</li><li>Germany</li></ul></td>
+      <td><ul><li>Argentina</li><li>Brazil</li><li>Chile</li><li>Colombia</li><li>Costa Rica</li><li>El Salvador</li><li>Guatemala</li><li>Honduras</li><li>Mexico</li><li>Nicaragua</li><li>Panama</li><li>Peru</li></ul></td>
+      <td>Australia</td>
+    </tr>
+  </tbody>
 </table>
-
-
-
-
 
 ## Development
 
 The Roku platform supports the distribution of a single package file across multiple streaming stores. This means that developers only need to build and maintain one app and then handle localization in the application's code. For example, the app can be programmed to have a localized user experience, including multi-language support for the UI (labels, menus, and dialogs) and content metadata (titles and descriptions), and it can control the availability of content for different regions. In addition, the app UI can link to a privacy policy URL corresponding to the country associated with the user's Roku customer account.
 
-To do this, developers can [get the external IP address of a Roku device](doc:ifdeviceinfo) client-side, and return it back to the app's backend server. In the backend, the app can get the country ranges mapped to the IP address in order to present a localized experience and determine which content to show and allow access to customers.
+To do this, developers can [get the external IP address of a Roku device](doc:ifdeviceinfo#getipaddrs-as-object) client-side, and return it back to the app's backend server. In the backend, the app can get the country ranges mapped to the IP address in order to present a localized experience and determine which content to show and allow access to customers.
 
 ## Distribution
 
@@ -64,7 +58,7 @@ Apps can be further promoted globally with Roku home screen banner ads, Roku scr
 
 ### Regional availability of in-app products
 
-Apps offering subscriptions and one-time purchases (movie rentals, pay-per-views, special events, and so on) can program the app to control the availability of in-app products in different regions. For example, an app may only be able to legally distribute content in a specific set of countries. To do this, apps can use the ChannelStore [**getUserRegionData**](doc:channelstore) command to determine the country associated with the user's Roku account, and then implement business logic to filter the results of the ChannelStore [**getCatalog** command](doc:channelstore) to only display products that should be available for that country.
+Apps offering subscriptions and one-time purchases (movie rentals, pay-per-views, special events, and so on) can program the app to control the availability of in-app products in different regions. For example, an app may only be able to legally distribute content in a specific set of countries. To do this, apps can use the ChannelStore [**getUserRegionData**](doc:channelstore#getuserregiondata)  command to determine the country associated with the user's Roku account, and then implement business logic to filter the results of the ChannelStore [**getCatalog** command](doc:channelstore#getcatalog) to only display products that should be available for that country.
 
 ### Localized in-app product names
 
@@ -72,4 +66,6 @@ Apps can also localize the names of their [in-app products](doc:in-channel-produ
 
 ### Currency conversions
 
-While localizing product names is a manual process, Roku Pay automatically handles currency conversions and displays prices in the currency associated with the Streaming Store in which the device is located. For example, if a device is located in Brazil, the price of an in-app product that is $9.99 USD is displayed as R$24.9 BRL (Brazilan Real). Apps may also elect to independently handle currency conversion. To do this, apps can create in-app products for each country and filter out products based on the country in which the device is located (using the [ifDeviceInfo.GetCountryCode()](doc:ifdeviceinfo) method).
+While localizing product names is a manual process, Roku Pay automatically handles currency conversions and displays prices in the currency associated with the Streaming Store in which the device is located. For example, if a device is located in Brazil, the price of an in-app product that is $9.99 USD is displayed as R$24.9 BRL (Brazilan Real). Apps may also elect to independently handle currency conversion. To do this, apps can create in-app products for each country and filter out products based on the country in which the device is located (using the [ifDeviceInfo.GetCountryCode()](doc:ifdeviceinfo##getusercountrycode-as-string) method).
+
+<br />

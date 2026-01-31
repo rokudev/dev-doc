@@ -1,5 +1,5 @@
 ---
-title: "ifSocketStatus"
+title: ifSocketStatus
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,14 +10,12 @@ metadata:
 next:
   description: ''
 ---
-
-
 ## Implemented by
 
-| Name             | Description                                                                                                                            |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                                     | Description                                                                                                                            |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [roDataGramSocket](doc:rodatagramsocket) | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets                                               |
-| [roStreamSocket](doc:rostreamsocket)   | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
+| [roStreamSocket](doc:rostreamsocket)     | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
 
 ## Supported methods
 
@@ -25,81 +23,81 @@ next:
 
 #### Description
 
-Checks whether an EAGAIN error has occurred. 
+Checks whether an EAGAIN error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EAGAIN error has occurred. 
+A flag indicating whether an EAGAIN error has occurred.
 
 ### eAlready() as Boolean
 
 #### Description
 
-Checks whether an EALREADY error has occurred. 
+Checks whether an EALREADY error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EALREADY error has occurred. 
+A flag indicating whether an EALREADY error has occurred.
 
 ### eBadAddr() as Boolean
 
 #### Description
 
-Checks whether an EBADADDR error has occurred. 
+Checks whether an EBADADDR error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EBADADDR error has occurred. 
+A flag indicating whether an EBADADDR error has occurred.
 
 ### eDestAddrReq() as Boolean
 
 #### Description
 
-Checks whether an EDESTADDRREQ error has occurred. 
+Checks whether an EDESTADDRREQ error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EDESTADDRREQ error has occurred. 
+A flag indicating whether an EDESTADDRREQ error has occurred.
 
 ### eHostUnreach() as Boolean
 
 #### Description
 
-Checks whether an EHOSTUNREACH error has occurred. 
+Checks whether an EHOSTUNREACH error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EHOSTUNREACH error has occurred. 
+A flag indicating whether an EHOSTUNREACH error has occurred.
 
 ### eInvalid() as Boolean
 
 #### Description
 
-Checks whether an EINVALID error has occurred. 
+Checks whether an EINVALID error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EINVALID error has occurred. 
+A flag indicating whether an EINVALID error has occurred.
 
 ### eInProgress() as Boolean
 
 #### Description
 
-Checks whether an EINPROGRESS error has occurred. 
+Checks whether an EINPROGRESS error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EINPROGRESS error has occurred. 
+A flag indicating whether an EINPROGRESS error has occurred.
 
 ### eWouldBlock() as Boolean
 
 #### Description
 
-Checks whether an EWOULDBLOCK error has occurred. 
+Checks whether an EWOULDBLOCK error has occurred.
 
 #### Return Value
 
-A flag indicating whether an EWOULDBLOCK error has occurred. 
+A flag indicating whether an EWOULDBLOCK error has occurred.
 
 ### eSuccess() as Boolean
 
@@ -109,8 +107,13 @@ Checks whether there are no errors (the error number is 0).
 
 #### Description
 
-Checks whether there is no hard error, but possibly one of the following async conditions: EAGAIN, EALREADY, EINPROGRESS, EWOULDBLOCK.
+Checks whether there is no hard error, but possibly one of the following async conditions: 
+
+* EAGAIN
+* EALREADY
+* EINPROGRESS
+* EWOULDBLOCK.
 
 #### Return Value
 
-A flag indicating whether an EOK error has occurred. 
+A flag indicating whether an EOK error has occurred.

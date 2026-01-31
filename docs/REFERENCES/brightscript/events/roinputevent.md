@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 The roInput component sends the roInputEvent with the following predicates that indicate its valid event types:
 
 ## Supported methods
@@ -23,7 +22,7 @@ Checks if an input event was received. This method returns true if an input even
 
 Returns an roAssociativeArray describing the input event, which may be one of the following values:
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -79,14 +78,14 @@ Returns an roAssociativeArray describing the input event, which may be one of th
       </td>
 
       <td>
-        The type of command:   
+        The type of command:
 
-        * "action()". Indicates that the app has received an utterance matching a name or word previously registered with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager)   
-        * "select()". Indicates that the app has received a command for selecting an item via an ordinal number. 
-        * "forward" 
-        * "next" 
-        * "pause" 
-        * "play" 
+        * "action()". Indicates that the app has received an utterance matching a name or word previously registered with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager)
+        * "select()". Indicates that the app has received a command for selecting an item via an ordinal number.
+        * "forward"
+        * "next"
+        * "pause"
+        * "play"
         * "replay"
         * "resume"
         * "rewind"
@@ -140,7 +139,7 @@ Returns an roAssociativeArray describing the input event, which may be one of th
       </td>
 
       <td>
-        If the **type** is set to "transport" and the **command** is set to "action", this field contains the utterance matching the name or word previously registered for the app with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager) method.
+        If the **type** is set to "transport" and the **command** is set to "action", this field contains the utterance matching the name or word previously registered for the app with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager#setvoiceactionstringsactions-as-object-as-void) method.
       </td>
     </tr>
 

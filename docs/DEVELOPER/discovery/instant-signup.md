@@ -17,7 +17,7 @@ Offers may include free trials, promotional pricing, and standard pricing (the u
 * Free trials and promotions are automatically converted to full paid subscriptions by Roku Pay.
 * Standard pricing may only be offered if the app does not offer free trials or promotional pricing on-device or across other comparable platforms.
 
-> SVOD apps that have streamed more than an average of 10 million hours per month over the last three months (and new SVOD apps expected to meet the threshold shortly after launch) must participate in Roku’s Instant Signup program to pass [certification](doc:certification).
+> SVOD apps that have streamed more than an average of 10 million hours per month over the last three months (and new SVOD apps expected to meet the threshold shortly after launch) must participate in Roku’s Instant Signup program to pass [certification](doc:certification#2-purchases).
 >
 > Apps' ISU integration must include offers for lapsed and canceled subscribers. This requirement is applicable to apps with existing ISU integrations.
 >
@@ -27,7 +27,7 @@ Offers may include free trials, promotional pricing, and standard pricing (the u
 
 When a customer activates their Roku device on my.roku.com, they add their method of payment and then answer survey questions. These questions include which subscriptions they already have and which types of content they are interested in watching.
 
-Roku checks for which offers the customer is eligible (customers that already have a subscription for a specific service are ineligible for free trial offers for that service). Apps leverage a [SHA-512 hashed email address](#using-email-hashes-to-determine-offer-eligibility) included in [API](#implementing-products-api) calls to the app's product endpoint to determine whether customers are eligible for their offers. Roku then retrieves the app's content images and trial products from the publishers' app images and products endpoints, respectively.
+Roku checks for which offers the customer is eligible (customers that already have a subscription for a specific service are ineligible for free trial offers for that service). Apps leverage a [SHA-512 hashed email address](#using-email-hashes-to-determine-offer-eligibility) included in [Product API](#implementing-products-api) calls to the app's product endpoint to determine whether customers are eligible for their offers. Roku then retrieves the app's content images and trial products from the publishers' app images and products endpoints, respectively.
 
 Based on the answers to the survey questions, the customer's eligibility, and other signals, a list of offers from different apps is displayed to customers. For example, if a customer selects music as one of their interests, their offers will likely include a music streaming service (the inclusion of an app in the list, however, cannot be guaranteed; the recommended apps are derived solely from the survey responses). The customer can then select which apps they subscribe to and then select specific offers.
 
@@ -68,7 +68,7 @@ To get started with the Instant Signup integration, follow these steps:
 5. Provide Roku with the following:
    * The production image and product API endpoints (these production URLs are final and may not be changed once provided).
    * The app ID for the beta version of the app.
-   * The app's [Roku Pay API Key](https://developer.roku.com/api/settings), which is used to sign and verify API calls.
+   * The app's [Roku Pay API Key](doc:setting-up-web-services#roku-pay-api-key), which is used to sign and verify API calls.
    * The title, company name, privacy URL, and terms URL to be included in the legal disclaimer text that is displayed directly before the customer signs up for an offer.
 
 ## Integrating Instant Signup
@@ -135,7 +135,7 @@ Apps must implement an API that retrieves the images and description of the app 
 </tr>
 <tr>
 <td class="short-line"><strong>Response</strong></td>
-<td class="long-line">The API returns the following:<br><br>- An <strong>images</strong> array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the <a href="#channel-image-specifications">Image specifications</a>.<br><br>- A <strong>description</strong> string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br><br><strong>Syntax</strong>:<pre><code>  {
+<td class="long-line">The API returns the following:<br><br>- An <strong>images</strong> array. This array contains between 5 to 15 image URLs specifying the app content posters to be displayed. The first image returned must be the app logo (a 160X120 JPG with 72ppi minimum resolution). Other images must be 213X120 JPG with 72ppi minimum resolution, per the <a href="#image-specifications">Image specifications</a>.<br><br>- A <strong>description</strong> string. This is a maximum 200-character string summarizing the app. The description may not include any pricing information. <br><br><strong>Syntax</strong>:<pre><code>  {
     "images": "Array.&lt;String&gt;",
     "description": "string"
   }
@@ -381,7 +381,7 @@ Additionally, apps can use the [ChannelStore APIs](doc:channelstore) to create n
 
 Apps can provide an **account** endpoint that accepts POST requests. This enables apps to receive the customer's information that is collected during device activation and use it to create new user accounts in their backend system automatically.
 
-When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](doc:push-notifications) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
+When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](doc:push-notifications#sale) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
 
 ```
 {

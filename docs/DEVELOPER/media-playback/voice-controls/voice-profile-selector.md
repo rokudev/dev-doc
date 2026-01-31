@@ -39,9 +39,9 @@ To implement voice support for a profile selection screen, integrate the followi
 
   ```
   appMgr = CreateObject("roAppManager")
-  profile1 = \{ text: "kids", link: "d46ge-i8Y5-192"}
-  profile2 = \{ text: "Jane", link: "2a2Nu-u1D4-555"}
-  profile3 = \{ text: "John", link: "6Nu70-N37x-901"}
+  profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
+  profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
+  profile3 = { text: "John", link: "6Nu70-N37x-901"}
 
   actions = [profile1, profile2, profile3]
 
@@ -52,13 +52,13 @@ To implement voice support for a profile selection screen, integrate the followi
 
   ```
   function handleTransport(evt)
-    	cmd = evt.command
-    	ret = \{status: "unhandled"}
-    	if cmd = "action"
-    		print "profile name uttered by user"
-    		print evt.text ' prints "kids", "Jane", or "John"
-    	end if
-    	return ret
+      cmd = evt.command
+      ret = {status: "unhandled"}
+      if cmd = "action"
+          print "profile name uttered by user"
+          print evt.text ' prints "kids", "Jane", or "John"
+      end if
+      return ret
   end function
   ```
 
@@ -70,14 +70,14 @@ To implement voice support for a profile selection screen, integrate the followi
 
   ```
   function handleTransport(evt)
-    	cmd = evt.command
-    	ret = \{status: "unhandled"}
-    	if cmd = "select"
-    		print "Voice ordinal event"
-   			print evt.ordinal ' prints 1
-    	end if
-    	return ret
-  end function
+        cmd = evt.command
+        ret = {status: "unhandled"}
+        if cmd = "select"
+            print "Voice ordinal event"
+            print evt.ordinal ' prints 1
+        end if
+        return ret
+    end function
   ```
 
 ## Sample app

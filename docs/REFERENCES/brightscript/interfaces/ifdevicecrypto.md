@@ -1,6 +1,5 @@
 ---
-title: "ifDeviceCrypto"
-excerpt: ''
+title: ifDeviceCrypto
 deprecated: false
 hidden: true
 metadata:
@@ -10,13 +9,11 @@ metadata:
 next:
   description: ''
 ---
-
-
 ## Implemented By
 
-| Name                                                         | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roDeviceCrypto](doc:rodevicecrypto) | Encrypts and decrypts data on a device using a key that is unique per app, device, or model. |
+| Name                                                                         | Description                                                                                  |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| [roDeviceCrypto](/docs/references/brightscript/components/rodevicecrypto.md) | Encrypts and decrypts data on a device using a key that is unique per app, device, or model. |
 
 ## Supported Methods
 
@@ -28,11 +25,10 @@ Encrypts data on a device that is unique per device, app, or model.
 
 #### Parameters
 
-| Name    | Type        | Description                                                  |
-| ------- | ----------- | ------------------------------------------------------------ |
-| input   | roByteArray | The data to be encrypted.                                    |
+| Name    | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| input   | roByteArray | The data to be encrypted.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | encType | String      | The encryption key type, which is a string that may be set to "channel", "device", or "model": <table><thead><tr><th>encType</th><th>Description</th></tr></thead><tbody><tr><td>device</td><td>Encrypt data with a device unique key. This can be used to implement a secure storage-like algorithm.</td></tr><tr><td>channel</td><td>Encrypt data with an app unique key This enables you to provision credentials, API tokens, or other data from the cloud to devices securely. Apps signed with same signing key will share the encryption key.</td></tr><tr><td>model</td><td>Encrypt app with a model unique key This is similar to the "channel" encryption type, but with the scope limited to a specific model.</td></tr></tbody></table> |
-
 
 #### Return Value
 
@@ -46,37 +42,29 @@ Decrypts data stored on a device that was previously encoded with the [**Encrypt
 
 #### Parameters
 
-
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>EncryptedData</td>
-<td>roByteArray</td>
-<td>The previously encoded data to be decrypted.</td>
-</tr>
-<tr>
-<td>encType</td>
-<td>String</td>
-<td>The encryption key type, which is a string that may be set to "channel", "device", or "model": $&#123;encTypeValues-2&#125;</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>EncryptedData</td>
+      <td>roByteArray</td>
+      <td>The previously encoded data to be decrypted.</td>
+    </tr>
+
+    <tr>
+      <td>encType</td>
+      <td>String</td>
+      <td>The encryption key type, which is a string that may be set to "channel", "device", or "model" (see table below for details).</td>
+    </tr>
+  </tbody>
 </table>
-
-
-$&#123;encTypeValues-2&#125;
-
-| encType | Description                                                  |
-| ------- | ------------------------------------------------------------ |
-| device  | Encrypt data with a device unique key. This can be used to implement a secure storage-like algorithm. |
-| channel | Encrypt data with an app unique key This enables you to provision credentials, API tokens, or other data from the cloud to devices securely. Apps signed with same signing key will share the encryption key. |
-| model   | Encrypt app with a model unique key This is similar to the "channel" encryption type, but with the scope limited to a specific model. |
 
 #### Return Value
 
@@ -85,7 +73,7 @@ An roByteArray containing the decrypted data.
 #### Example
 
 You can use the `Encrypt()` and `Decrypt()` methods to encrypt plaintext on a Roku device
-and then decode it, as demonstrated in the following example:  
+and then decode it, as demonstrated in the following example:
 
 ```
   ' store plaintext to be encrypted in an roByteArray

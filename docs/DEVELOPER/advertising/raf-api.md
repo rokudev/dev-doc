@@ -251,19 +251,7 @@ The content length can also be set independently via [setContentLength()](doc:ra
 
 ### setAdExit(enabled as Boolean)
 
-**Note: setAdExit() is deprecated and disabled - check showAds() return value instead**
-
-~~#### Description~~
-
-~~The default behavior is to enable exiting during ad rendering (for example, via the “Back” button) to return to content selection screen in the application.~~
-
-~~Some use cases may require disabling this behavior if the user should not be allowed to skip ads when there is no applicable content selection mechanism.~~
-
-~~#### Parameters~~
-
-~~| Argument | Type   | Description                                                 |~~
-~~| -------- | ------ | ------------------------------------------------------------ |~~
-~~| enabled | Boolean | Enables ad exit behavior during rendering. |~~
+> setAdExit() is deprecated and disabled - check showAds() return value instead
 
 ### importAds(adPodArray as Object)
 

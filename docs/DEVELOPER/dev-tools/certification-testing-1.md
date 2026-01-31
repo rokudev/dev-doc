@@ -1,5 +1,5 @@
 ---
-title: "Certification testing tool"
+title: Certification testing tool
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Developers can use the self-serve certification testing tool in the [Developer Dashboard](https://developer.roku.com/developer) to verify that their apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements. This enables developers to independently test their apps and update them before formally submitting them for publishing. By identifying any issues prior to submitting their apps, developers can avoid potential delays in the publishing of their apps.
 
 ## Using the certification testing tool
@@ -26,7 +24,7 @@ To upload a package file to the certification testing tool, follow these steps:
 
 1. Go to the [Developer Dashboard](https://developer.roku.com/developer), select **Manage My Channels**, and then click the app to be tested.
 2. Select **Package Upload** from the list.
-3. In the **Package Upload** page, select the **Minimum Firmware** version for devices running your app, click **Upload**, and then select the package file.  
+3. In the **Package Upload** page, select the **Minimum Firmware** version for devices running your app, click **Upload**, and then select the package file.
 
 > You can also upload a package file from the **Deep Linking** and **Certification Testing** pages.
 
@@ -38,22 +36,17 @@ To enter deep linking parameters, follow these steps:
 
 1. Select **Deep Linking** from the **Developer Dashboard > Manage My Channels** page list.
 
-
 2. For each set of deep linking parameters to be included in the certification test, do the following:
 
    a. In the **Media Type** field, select the [media type](doc:implementing-deep-linking) of the content item (for example, movie, television episode, or television series).
 
-
    b. In the **Content ID** field, enter the [content ID](doc:implementing-deep-linking) of the item.
-
 
    c. In the **Valid Until** field, enter the last date when the deep linking parameters will be used in your app.
 
-
    d. In the **Content Title** field, enter a descriptive name that makes it easy to identify the content associated with the deep link parameters.
 
-e. Click **Add**. Repeat these steps for each additional set of deep linking parameters to be tested.
-
+   e.Click **Add**. Repeat these steps for each additional set of deep linking parameters to be tested.
 
 3. Click **Save**.  The **Media Types and Parameters** section lists the content title for each set of deep linking parameters provided. You can expand a content title to view the media type, content ID, and valid until date associated with the content item.
 
@@ -65,12 +58,12 @@ Once you start the certification testing tool, the **Status** field includes a s
 
 The **Certification Tests** table lists the status of each individual test being executed. This table includes the following columns:
 
-| Column                    | Description                                                  |
-| ------------------------- | ------------------------------------------------------------ |
+| Column                    | Description                                                                                                                            |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | Status                    | The results of the test. Completed tests have a status of "Passed" or "Failed"; tests still to be performed have a status of "Queued". |
-| Severity                  | Any info messages, warnings, or errors related to a completed test. |
-| Category                  | The type of test being performed: "Performance" or "Deep Linking". |
-| Certification Requirement | Provides a link to the requirement in the [Certification Criteria](doc:certification) document. |
-| More Info                 | Provides a detailed description of any error or warning, and a link to the related documentation. |
+| Severity                  | Any info messages, warnings, or errors related to a completed test.                                                                    |
+| Category                  | The type of test being performed: "Performance" or "Deep Linking".                                                                     |
+| Certification Requirement | Provides a link to the requirement in the [Certification Criteria](doc:certification) document.                                        |
+| More Info                 | Provides a detailed description of any error or warning, and a link to the related documentation.                                      |
 
 You can sort the test results by toggling the **Status**, **Severity**, or **Category** column headers. You can filter test results based on the same fields.

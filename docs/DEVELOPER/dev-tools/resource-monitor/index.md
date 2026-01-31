@@ -405,7 +405,7 @@ In the tool preferences, you can modify the following **General** and **Session*
 ## Change log
 
 * v4.2 (September 10, 2025)
-  * Added [Data Collection Mode (CLI support for RRM)](\(doc:rrm-data-collection-mode\)) for macOS, Linux, and Windows.
+  * Added [Data Collection Mode (CLI support for RRM)](doc:rrm-data-collection-mode) for macOS, Linux, and Windows.
   * Added Linux-specific build optimized for Docker environments.
   * Updated font for improved consistency with Roku platform.
   * Introduced a native Apple Silicon version.

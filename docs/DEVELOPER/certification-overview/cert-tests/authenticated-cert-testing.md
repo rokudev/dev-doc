@@ -1,5 +1,5 @@
 ---
-title: Channel Behavior Analysis testing for authenticated apps
+title: Authenticated app testing
 deprecated: false
 hidden: true
 link:

@@ -12,6 +12,14 @@ next:
 ---
 Prior to using the Roku developer tools, your Roku device must have Developer Settings enabled.
 
+## Roku app tracing (with Perfetto)
+
+Records, analyzes, and visualizes traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance. This enables you to capture and visualize the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.
+
+With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.
+
+For more information, see the [Roku app tracing (with Perfetto) guide](doc:app-tracing).
+
 ## Roku Resource Monitor
 
 Tracks and visualizes several key metrics, including system and graphics memory usage, CPU consumption, memory allocation for BrightScript objects, counts for SceneGraph nodes, the number of rendezvous events, and the graphics rendering frame rate. This enables developers to test the different screens in their app and identify resource consumption trends and patterns.

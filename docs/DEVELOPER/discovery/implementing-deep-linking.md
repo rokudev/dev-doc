@@ -75,7 +75,7 @@ Understanding and adhering to these deep linking requirements provides a standar
 
 ### MediaType behavior
 
-When a deep link is sent to your app, it will include contentId and a mediaType. The contentId specifies which content to play, and the mediaType tells your app how it must handle the launching of the content item. The following table summarizes the required launch behavior for each mediaType. For examples of the different mediaType behaviors, see [MediaType behavior examples](#mediatype-behavior-examples).
+When a deep link is sent to your app, it will include **contentId** and a **mediaType**. The **contentId** specifies which content to play, and the **mediaType** tells your app how it must handle the launching of the content item. The following table summarizes the required launch behavior for each **mediaType**. For examples of the different mediaType behaviors, see [MediaType behavior examples](#mediatype-behavior-examples).
 
 <table>
   <thead>
@@ -189,6 +189,7 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
    2. A message loop that listens for incoming events is typically used. If that event is an roInputEvent, an action is taken based on the input. If the input is content ID, the app typically finds the stream URL and metadata for that content ID, and then cues and plays the content.
 
       See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
+
       ```
       ...
       screen = CreateObject("roSGScreen")

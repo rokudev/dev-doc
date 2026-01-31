@@ -259,7 +259,7 @@ To complete and validate the new subscription, follow these steps:
 
 6. Create a new account for the customer in your system. Store the validated transaction ID, and the customer's email address, name, and user ID in your system.
 
-7. Generate a new access token in your system and store it in the device registry and in the Roku cloud. To store an access token in the Roku cloud, call the [**ChannelStore.storeChannelCredData **](doc:channelstore) command.
+7. Generate a new access token in your system and store it in the device registry and in the Roku cloud. To store an access token in the Roku cloud, call the [**ChannelStore.storeChannelCredData **](doc:channel-store-1#storechannelcreddata) command.
 
    ```
    myChannelStore.channelCredData = "your access token"
@@ -301,4 +301,4 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/on-device-authentication) that demonstrates how to implement on-device authentication. This sample shows how to use the [**ChannelStore node**](doc:channelstore) and [**Roku Web Service API**](doc:roku-web-service) to check for an active Roku subscription, and how to use the [**roRegistrySection()**](doc:roregistrysection) object and [**ChannelStore node**](doc:channelstore) to check for access tokens in the device registry and Roku Cloud, respectively. If the customer does not have an active subscription or their subscription cannot be validated (because it was purchased on a different platform), the sample shows how to use the Roku Pay [Request for Information (RFI) screen](doc:channelstore) to sign customers up for a new Roku subscription and sign them in to their existing subscription..
+You can download and install a [sample app](https://github.com/rokudev/on-device-authentication) that demonstrates how to implement on-device authentication. This sample shows how to use the [**ChannelStore node**](doc:channelstore) and [**Roku Web Service API**](doc:roku-web-service) to check for an active Roku subscription, and how to use the [**roRegistrySection()**](doc:roregistrysection) object and [**ChannelStore node**](doc:channelstore) to check for access tokens in the device registry and Roku Cloud, respectively. If the customer does not have an active subscription or their subscription cannot be validated (because it was purchased on a different platform), the sample shows how to use the Roku Pay [Request for Information (RFI) screen](doc:channelstore#requesteduserdatainfo) to sign customers up for a new Roku subscription and sign them in to their existing subscription..

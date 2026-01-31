@@ -30,7 +30,7 @@ To upload a package file to the certification testing tool, follow these steps:
 
 ### Entering deep linking parameters
 
-To validate that your app is handling deep link requests properly, provide at least one set of [deep linking parameters](doc:implementing-deep-linking) for each different [media type](doc:implementing-deep-linking) in your app. For example, if your app contains movies and TV episodes, include deep linking parameters for at least one movie and one episode.
+To validate that your app is handling deep link requests properly, provide at least one set of [deep linking parameters](doc:implementing-deep-linking##understanding-deep-linking-parameters) for each different [media type](doc:implementing-deep-linking#mediatype-behavior) in your app. For example, if your app contains movies and TV episodes, include deep linking parameters for at least one movie and one episode.
 
 To enter deep linking parameters, follow these steps:
 
@@ -38,9 +38,9 @@ To enter deep linking parameters, follow these steps:
 
 2. For each set of deep linking parameters to be included in the certification test, do the following:
 
-   a. In the **Media Type** field, select the [media type](doc:implementing-deep-linking) of the content item (for example, movie, television episode, or television series).
+   a. In the **Media Type** field, select the [media type](doc:implementing-deep-linking#mediatype-behavior) of the content item (for example, movie, television episode, or television series).
 
-   b. In the **Content ID** field, enter the [content ID](doc:implementing-deep-linking) of the item.
+   b. In the **Content ID** field, enter the [content ID](doc:implementing-deep-linking##understanding-deep-linking-parameters) of the item.
 
    c. In the **Valid Until** field, enter the last date when the deep linking parameters will be used in your app.
 

@@ -95,7 +95,7 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
        end for
    endif
    ```
-3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service) Roku Pay web service GET API call
+3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service#validate-transaction) Roku Pay web service GET API call
    ```
    https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/transactionid
    ```
@@ -138,7 +138,7 @@ To check for a valid access token in the device registry, follow these steps:
      reg_sec.flush()
      ```
 
-   * Call the [**ChannelStore.storeChannelCredData **](doc:channelstore) command to store an access token in the Roku cloud. You can use the **status** and **response** fields of the **storeChannelCredDataStatus** content node to verify that the command was successful and that the access token stored in the Roku cloud has the specified value.
+   * Call the [**ChannelStore.storeChannelCredData **](doc:channelstore#storechannelcreddata) command to store an access token in the Roku cloud. You can use the **status** and **response** fields of the **storeChannelCredDataStatus** content node to verify that the command was successful and that the access token stored in the Roku cloud has the specified value.
 
      ```
      myChannelStore.channelCredData = "your access token"
@@ -161,7 +161,7 @@ To check for a valid access token in the device registry, follow these steps:
 
    `reg_sec.delete("access_token_key_name")`
 
-   c. If the access token is invalid and the customer has an active subscription billed through Roku Pay, validate the subscription using the [**validate-transaction**](doc:roku-web-service) Roku Pay Web Service API and [business logic](doc:roku-pay-best-practices). Once the subscription is validated, generate a new access token in your system and store it in the device registry and in the Roku cloud (as described in step a), and then grant the customer to access the content.
+   c. If the access token is invalid and the customer has an active subscription billed through Roku Pay, validate the subscription using the [**validate-transaction**](doc:roku-web-service#validate-transaction) Roku Pay Web Service API and [business logic](doc:roku-pay-best-practices). Once the subscription is validated, generate a new access token in your system and store it in the device registry and in the Roku cloud (as described in step a), and then grant the customer to access the content.
 
    d. If the subscription cannot be validated, [get the customer's credentials](#get-and-check-account-credentials) in your app UI and check whether the customer already has an active subscription in your system.
 
@@ -173,7 +173,7 @@ To check for a valid access token in the device registry, follow these steps:
 
 To check for a valid access token in the Roku cloud, follow these steps:
 
-1. Call the [**ChannelStore.getChannelCred**](doc:channelstore) command. This causes the **channelCred** field to be set to a **ContentNode** that includes a **json.channel_data** field.
+1. Call the [**ChannelStore.getChannelCred**](doc:channelstore#getchannelcred) command. This causes the **channelCred** field to be set to a **ContentNode** that includes a **json.channel_data** field.
 
    ```
    myChannelStore.command = "getChannelCred"
@@ -182,7 +182,7 @@ To check for a valid access token in the Roku cloud, follow these steps:
 
 2. If the  **json.channel_data** field contains your access token, check whether the customer is currently signed in using a flag in the device registry. This is a publisher-specific key-value pair that you have previously added to your registry section to track the login status of customers. The value should be toggled when customers sign in and out.
 
-3. If the customer is signed in, get the access token from the device registry and store it in the Roku cloud, and then grant the customer access to the content. In this case, no additional steps are required and authentication is complete. To store an access token in the Roku cloud, call the [**ChannelStore.storeChannelCredData **](doc:channelstore) command.
+3. If the customer is signed in, get the access token from the device registry and store it in the Roku cloud, and then grant the customer access to the content. In this case, no additional steps are required and authentication is complete. To store an access token in the Roku cloud, call the [**ChannelStore.storeChannelCredData **](doc:channelstore#storechannelcreddata) command.
 
    ```
    myChannelStore.channelCredData = "your access token"
@@ -199,7 +199,7 @@ To enable customers to purchase a new subscription from your app UI, you first g
 
 To obtain and validate the customers' account credentials, follow these steps:
 
-1. Set the [**ChannelStore.requestedUserData**](doc:channelstore) field to "email, firstName, lastName" to ask the customer to share their email address and name from their account, and then call the [**ChannelStore.getUserData**](doc:channelstore) command to get the email address and name.
+1. Set the [**ChannelStore.requestedUserData**](doc:channelstore#requesteduserdata) field to "email, firstName, lastName" to ask the customer to share their email address and name from their account, and then call the [**ChannelStore.getUserData**](doc:channelstore#getuserdata) command to get the email address and name.
 
    ```
    myChannelStore.requestedUserData("email, firstName, lastName")
@@ -232,11 +232,11 @@ To obtain and validate the customers' account credentials, follow these steps:
 
 To complete and validate the new subscription, follow these steps:
 
-1. Call the **ChannelStore** [**getCatalog**](doc:channelstore) command to display the list of products that are available for purchase.
+1. Call the **ChannelStore** [**getCatalog**](doc:channelstore#getcatalog) command to display the list of products that are available for purchase.
 
    `myChannelStore.command = getCatalog`
 
-2. Once the customer selects a product, [create an order](doc:channelstore) that contains the product the customer is purchasing. To do this, you set the [**ChannelStore.order**](doc:channelstore) field to a **ContentNode** that has one child **ContentNode** for the item the customer is purchasing
+2. Once the customer selects a product, [create an order](doc:channelstore) that contains the product the customer is purchasing. To do this, you set the [**ChannelStore.order**](doc:channelstore#order) field to a **ContentNode** that has one child **ContentNode** for the item the customer is purchasing
 
    ```
    myOrder = CreateObject("roSGNode", "ContentNode")
@@ -255,11 +255,11 @@ To complete and validate the new subscription, follow these steps:
 
    `transactionId = myChannelStore.orderStatus.getChild(0).purchaseId`
 
-5. Validate the transaction ID via a [**validate-transaction**](doc:roku-web-service) Roku Pay Web Service API call from your server. Check the **isEntitled** field in the response to verify that the user is entitled to the content. If **isEntitled** is true, allow the customer to access the content. If **isEntitled** is false, exit the order flow and return the user to your app's home page.
+5. Validate the transaction ID via a [**validate-transaction**](doc:roku-web-service#validate-transaction) Roku Pay Web Service API call from your server. Check the **isEntitled** field in the response to verify that the user is entitled to the content. If **isEntitled** is true, allow the customer to access the content. If **isEntitled** is false, exit the order flow and return the user to your app's home page.
 
 6. Create a new account for the customer in your system. Store the validated transaction ID, and the customer's email address, name, and user ID in your system.
 
-7. Generate a new access token in your system and store it in the device registry and in the Roku cloud. To store an access token in the Roku cloud, call the [**ChannelStore.storeChannelCredData **](doc:channel-store-1#storechannelcreddata) command.
+7. Generate a new access token in your system and store it in the device registry and in the Roku cloud. To store an access token in the Roku cloud, call the [**ChannelStore.storeChannelCredData **](doc:channel-store#storechannelcreddata) command.
 
    ```
    myChannelStore.channelCredData = "your access token"

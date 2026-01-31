@@ -46,7 +46,7 @@ To enter deep linking parameters, follow these steps:
 
    d. In the **Content Title** field, enter a descriptive name that makes it easy to identify the content associated with the deep link parameters.
 
-   e.Click **Add**. Repeat these steps for each additional set of deep linking parameters to be tested.
+   e. Click **Add**. Repeat these steps for each additional set of deep linking parameters to be tested.
 
 3. Click **Save**.  The **Media Types and Parameters** section lists the content title for each set of deep linking parameters provided. You can expand a content title to view the media type, content ID, and valid until date associated with the content item.
 

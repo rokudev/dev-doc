@@ -16,7 +16,7 @@ Prior to using the Roku developer tools, your Roku device must have Developer Se
 
 Tracks and visualizes several key metrics, including system and graphics memory usage, CPU consumption, memory allocation for BrightScript objects, counts for SceneGraph nodes, the number of rendezvous events, and the graphics rendering frame rate. This enables developers to test the different screens in their app and identify resource consumption trends and patterns.
 
-The Roku Resource Monitor is intended to be used in conjunction with the [BrightScript Profiler](https://developer.roku.com/docs/developer-program/dev-tools/brightscript-profiler.md) to improve app performance. For example, if the Roku Resource Monitor consistently shows increased consumption with a specific action on a screen, developers can use the [BrightScript Profiler](https://developer.roku.com/docs/developer-program/dev-tools/brightscript-profiler.md) to further drill down into the app and pinpoint where to optimize the code.
+The Roku Resource Monitor is intended to be used in conjunction with the [BrightScript Profiler](doc:brightscript-profiler) to improve app performance. For example, if the Roku Resource Monitor consistently shows increased consumption with a specific action on a screen, developers can use the [BrightScript Profiler](doc:brightscript-profiler) to further drill down into the app and pinpoint where to optimize the code.
 
 For more information, see the [Roku Resource Monitor guide](doc:resource-monitor).
 

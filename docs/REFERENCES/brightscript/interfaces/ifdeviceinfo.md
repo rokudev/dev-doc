@@ -24,7 +24,7 @@ next:
 
 #### Description
 
-Returns the model name of the Roku device. See the [Hardware Specification](/docs/specs/hardware.md) for the list of the current, updatable, and legacy Roku models.
+Returns the model name of the Roku device. See the [Hardware Specification](doc:hardware) for the list of the current, updatable, and legacy Roku models.
 
 #### Return Values
 
@@ -102,7 +102,7 @@ An roAssociativeArray containing the following fields:
 
 > **This method is deprecated**.
 >
-> Developers must update their apps to use [GetOSVersion()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getosversion-as-object) method to get the current Roku OS version running on a device.
+> Developers must update their apps to use [GetOSVersion()](doc:ifdeviceinfo) method to get the current Roku OS version running on a device.
 
 #### Description
 
@@ -116,7 +116,7 @@ A 13-character string (for example "034.08E01185A"). The third through sixth cha
 
 > **This method is deprecated**.
 >
-> Developers must update their apps to use the 32-character alphanumeric unique identifier returned by [GetChannelClientId()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string).
+> Developers must update their apps to use the 32-character alphanumeric unique identifier returned by [GetChannelClientId()](doc:ifdeviceinfo).
 
 #### Description
 
@@ -130,7 +130,7 @@ A string of 12 zeros ("000000000000")
 
 > **This method is deprecated**.
 >
-> Developers must update their apps to use the [GetRIDA()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string) method to get the unique identifier.
+> Developers must update their apps to use the [GetRIDA()](doc:ifdeviceinfo) method to get the unique identifier.
 
 #### Description
 
@@ -150,7 +150,7 @@ Returns a unique identifier for the device.
 
 If the user has set "Limit ad tracking" from the **Settings** menu (the user has opted out of targeted advertising), the RIDA is set to a temporary ID. This temporary ID is different than the UUID returned if the user has not opted out, and it expires after 30 days. Apps must still pass this temporary ID on ad server requests to support frequency capping.
 
-> If the user’s country is an EU member country, any data collection must be compliant with the [EU General Data Protection Regulation (GDPR)](/docs/features/legal/compliance.md#gdpr).
+> If the user’s country is an EU member country, any data collection must be compliant with the [EU General Data Protection Regulation (GDPR)](doc:compliance).
 
 #### Return Values
 
@@ -160,7 +160,7 @@ A Universally Unique Identifier (UUID). This identifier is persistent, but it ca
 
 > **This method is deprecated**.
 >
-> Developers must update their apps to use [IsRIDADisabled()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean) to get the Ad Id tracking status.
+> Developers must update their apps to use [IsRIDADisabled()](doc:ifdeviceinfo) to get the Ad Id tracking status.
 
 #### Description
 
@@ -184,7 +184,7 @@ A flag indicating whether RIDA tracking is disabled on the device (RIDA tracking
 
 > **This method is deprecated**.
 >
-> Developers must update their apps to use the [GetChannelClientId](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string) method to get the unique identifier.
+> Developers must update their apps to use the [GetChannelClientId](doc:ifdeviceinfo) method to get the unique identifier.
 
 #### Description
 
@@ -246,11 +246,11 @@ Checks for the user's current system time zone setting.
 
 #### Return Values
 
-A string representing the user's current system time zone setting. For example, this method may return values such as:
+A string representing the user's current system time zone setting:
 
 * "US/Puerto Rico-Virgin Islands"
 * "US/Guam"
-* "US/Samoa"
+* "US/Samoa "
 * "US/Hawaii"
 * "US/Aleutian"
 * "US/Alaska"
@@ -261,20 +261,143 @@ A string representing the user's current system time zone setting. For example, 
 * "US/Eastern"
 * "Canada/Pacific"
 * "Canada/Mountain"
-* "Canada/Central Standard"
 * "Canada/Central"
 * "Canada/Eastern"
+* "Canada/Mountain Standard"
+* "Canada/Central Standard"
 * "Canada/Atlantic"
 * "Canada/Newfoundland"
-* "Europe/Germany"
+* "Mexico/Pacific"
+* "Mexico/Mountain"
+* "Mexico/Central"
+* "Mexico/Eastern"
+* "America/Argentina/Buenos_Aires"
+* "America/Santiago"
+* "America/Bogota"
+* "America/Costa_Rica"
+* "America/El_Salvador"
+* "America/Guatemala"
+* "America/Tegucigalpa"
+* "America/Managua"
+* "America/Panama"
+* "America/Lima"
+* "America/Campo_Grande"
+* "America/Fortaleza"
+* "America/Manaus"
+* "America/Noronha"
+* "America/Rio_Branco"
+* "America/Sao_Paulo"
 * "Europe/Iceland"
 * "Europe/Ireland"
 * "Europe/United Kingdom"
 * "Europe/Portugal"
 * "Europe/Central European Time"
+* "Europe/France"
 * "Europe/Greece/Finland"
-
-> Click [here](/docs/references/brightscript/interfaces/time-zones.md) for the complete list of time zones returned by this method.
+* "Europe/Western European Time"
+* "Australia/WA"
+* "Australia/Eucla"
+* "Australia/NT"
+* "Australia/SA"
+* "Australia/QLD"
+* "Australia/Lord Howe"
+* "Australia/NSW"
+* "Australia/VIC"
+* "Australia/TAS"
+* "Australia/ACT"
+* "Asia/Arabia"
+* "Asia/Afghanistan"
+* "Asia/Alma-Ata"
+* "Asia/Anadyr"
+* "Asia/Aqtobe"
+* "Asia/Armenia"
+* "Asia/Azerbaijan"
+* "Asia/Bangladesh"
+* "Asia/Bhutan"
+* "Asia/Brunei"
+* "Asia/China"
+* "Asia/Choibalsan"
+* "Asia/EastTimor"
+* "Asia/Georgia"
+* "Asia/Gulf"
+* "Asia/Hong Kong"
+* "Asia/Hovd"
+* "Asia/India"
+* "Asia/Indochina"
+* "Asia/Irkutsk"
+* "Asia/Japan"
+* "Asia/Kamchatka"
+* "Asia/Korea"
+* "Asia/Krasnoyarsk"
+* "Asia/Kyrgyzstan"
+* "Asia/Malaysia"
+* "Asia/Magadan"
+* "Asia/Myanmar"
+* "Asia/Nepal"
+* "Asia/Novosibirsk"
+* "Asia/Omsk"
+* "Asia/Oral"
+* "Asia/Pakistan"
+* "Asia/Philippines"
+* "Asia/Qyzylorda"
+* "Asia/Sakhalin"
+* "Asia/Singapore"
+* "Asia/Tajikistan"
+* "Asia/Turkmenistan"
+* "Asia/Uzbekistan"
+* "Asia/Ulaanbaatar"
+* "Asia/Vladivostok"
+* "Asia/Yakutsk"
+* "Asia/Yekaterinburg"
+* "Asia/Eastern Indonesia"
+* "Asia/Central Indonesia"
+* "Asia/Western Indonesia"
+* "Asia/Beirut"
+* "Asia/Damascus"
+* "Asia/Gaza"
+* "Asia/Nicosia"
+* "Africa/CAT"
+* "Africa/CET"
+* "Africa/CVT"
+* "Africa/EAT"
+* "Africa/EET"
+* "Africa/GMT"
+* "Africa/MUT"
+* "Africa/RET"
+* "Africa/SAST"
+* "Africa/SCT"
+* "Africa/WAST"
+* "Africa/WAT"
+* "Africa/WEST"
+* "Africa/WET"
+* "Africa/WST"
+* "Africa/WT"
+* "Other/UTC-11"
+* "Other/UTC-10"
+* "Other/UTC-9"
+* "Other/UTC-8"
+* "Other/UTC-7"
+* "Other/UTC-6"
+* "Other/UTC-5"
+* "Other/UTC-4"
+* "Other/UTC-3"
+* "Other/UTC-2"
+* "Other/UTC-1"
+* "Other/UTC+0"
+* "Other/UTC+1"
+* "Other/UTC+2"
+* "Other/UTC+3"
+* "Other/UTC+4"
+* "Other/UTC+5"
+* "Other/UTC+6"
+* "Other/UTC+7"
+* "Other/UTC+8"
+* "Other/UTC+9"
+* "Other/UTC+10"
+* "Other/UTC+11"
+* "Other/UTC+12"
+* "Other/UTC+13"
+* "Other/UTC+14"
 
 ### HasFeature(feature as String) as Boolean
 
@@ -416,7 +539,7 @@ The number of seconds since the last remote keypress was received.
 
 > **This method is deprecated**.
 >
-> Developers must update their apps to use the replacement API [GetDrmInfoEx()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfoex-as-object) to return the supported DRM system and features.
+> Developers must update their apps to use the replacement API [GetDrmInfoEx()](doc:ifdeviceinfo) to return the supported DRM system and features.
 
 #### Description
 
@@ -426,7 +549,7 @@ Checks for the supported DRM system and its features.
 
 An associative array with the supported DRM system and features. For example, a device that supports PlayReady inside a trusted environment with secure stop returns:
 
-`\{"playready": "tee;ss"\}`
+`{"playready": "tee;ss"}`
 
 The values for the PlayReady key above are:
 
@@ -664,7 +787,7 @@ A flag indicating whether valid system clock events are enabled (true) or disabl
 
 #### Description
 
-Notifies the app when a system overlay event (such as the [confirm partner button HUD](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) or the caption control overlay) is displayed. This notification gives the app the opportunity to do any processing they may want to when the app loses or regains focus.
+Notifies the app when a system overlay event (such as the [confirm partner button HUD](doc:channel-manifest) or the caption control overlay) is displayed. This notification gives the app the opportunity to do any processing they may want to when the app loses or regains focus.
 
 #### Parameters
 
@@ -680,9 +803,9 @@ A flag indicating whether the system overlay event notifications are enabled (tr
 
 #### Description
 
-Notifies the app when a screensaver exit event occurs. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when a user has exited the screensaver.
+Notifies the app when a screensaver exit event occurs. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when a user has exited the screensaver.
 
-To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
 #### Parameters
 
@@ -698,7 +821,7 @@ A flag indicating whether screensaver exit event notifications are enabled (true
 
 > **This method is deprecated**.
 >
-> Developers must use the [ifHdmiStatus](/docs/references/brightscript/interfaces/ifhdmistatus.md) interface functions instead.
+> Developers must use the [ifHdmiStatus](doc:ifhdmistatus) interface functions instead.
 
 #### Description
 
@@ -762,7 +885,7 @@ A flag indicating whether the device has an active connection.
 
 #### Description
 
-Notifies the app when a network connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the network connection status changes. To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+Notifies the app when a network connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the network connection status changes. To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
 #### Parameters
 
@@ -792,7 +915,7 @@ The type of internet connection the device is using. This may be one of the foll
 
 #### Description
 
-Notifies the app when an internet connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the network connection status changes, as indicated by `roDeviceInfoEvent.internetStatus`. To receive events, the app must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events.
+Notifies the app when an internet connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the network connection status changes, as indicated by `roDeviceInfoEvent.internetStatus`. To receive events, the app must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events.
 
 #### Parameters
 
@@ -810,7 +933,7 @@ _Available since Roku OS 15.0_
 
 #### Description
 
-Returns the system's uptime since the last reboot (in milliseconds as a Long). This function is similar to the [global utility Uptime function](/docs/references/brightscript/language/global-utility-functions.md#uptimedummy-as-integer-as-float), but makes it easier for developers to handle monotonic milliseconds.
+Returns the system's uptime since the last reboot (in milliseconds as a Long). This function is similar to the [global utility Uptime function](doc:global-utility-functions), but makes it easier for developers to handle monotonic milliseconds.
 
 #### Return Value
 
@@ -984,9 +1107,9 @@ Gets the text corresponding to the button selection in the Player Info Settings/
 
 The display type, which may be one of the following values:
 
-- "HDTV"
-- "4:3 standard"
-- "16:9 anamorphic"
+* "HDTV"
+* "4:3 standard"
+* "16:9 anamorphic"
 
 ### GetDisplayMode() as String
 
@@ -998,9 +1121,9 @@ Checks the UI resolution of the device.
 
 The configured graphics layer resolution, which may be one of the following values:
 
-- "480i" or "480p" (the **ui_resolutions** manifest entry includes **sd** as a supported resolution).
-- "720p"
-- "1080p" (the **ui_resolutions** manifest file entry includes **fhd** as a supported resolution)
+* "480i" or "480p" (the **ui_resolutions** manifest entry includes **sd** as a supported resolution).
+* "720p"
+* "1080p" (the **ui_resolutions** manifest file entry includes **fhd** as a supported resolution)
 
 ### GetDisplayAspectRatio() as String
 
@@ -1012,8 +1135,8 @@ Checks the aspect ratio for the display screen.
 
 The aspect ratio, which may be one of the following values:
 
--  "4x3"
-- "16x9"
+* "4x3"
+* "16x9"
 
 ### GetDisplaySize() as Object
 
@@ -1025,9 +1148,9 @@ Checks the display size of a screen.
 
 An associative array with the screen width and height. Specifically, the keys "w" and "h" contain the values for the screen width and height respectively. This may be one of the following:
 
-- 720 and 480
-- 1280 and 720
-- 1920 and 1080
+* 720 and 480
+* 1280 and 720
+* 1920 and 1080
 
 ### GetVideoMode() as String
 
@@ -1082,67 +1205,76 @@ Checks for the display properties of the screen.
 
 An associative array with the following key/value pairs for the display properties of the screen:
 
-
 <table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Width</td>
-<td>Integer</td>
-<td>Physical width of the attached display in centimeters</td>
-</tr>
-<tr>
-<td>Height</td>
-<td>Integer</td>
-<td>Physical height of the attached display in centimeters</td>
-</tr>
-<tr>
-<td>Internal</td>
-<td>Boolean</td>
-<td>Set to true if the display is part of the Roku Player (such as a Roku TV), false otherwise</td>
-</tr>
-<tr>
-<td>Hdr10</td>
-<td>Boolean</td>
-<td>Set to true if the attached display supports HDR10, false otherwise</td>
-</tr>
-<tr>
-<td>Hdr10Plus</td>
-<td>Boolean</td>
-<td>Set to true if the attached display supports HDR10+, false otherwise</td>
-</tr>
-<tr>
-<td>HdrSeamless</td>
-<td>Boolean</td>
-<td>Set to true if the attached display supports any type of HDR, such as HDR10, HLG, or<br />Dolby Vision, false otherwise.</td>
-</tr>
-<tr>
-<td>Headless</td>
-<td>Boolean</td>
-<td>Set to true if the attached display supports being powered off while audio continues to play</td>
-</tr>
-<tr>
-<td>HLG</td>
-<td>Boolean</td>
-<td>Set to true if the attached display supports HLG, false otherwise</td>
-</tr>
-<tr>
-<td>DolbyVision</td>
-<td>Boolean</td>
-<td>Set to true if the attached display supports Dolby Vision, false otherwise</td>
-</tr>
-<tr>
-<td>visible</td>
-<td>boolean</td>
-<td>For Roku TVs only. Indicates whether the TV screen is on/off while the Roku device is actively streaming content. This is useful for checking whether customers have muted their TV screen while streaming video in order to continue listening to the audio (for example, when playing music videos, conferences, or podcasts).</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Width</td>
+      <td>Integer</td>
+      <td>Physical width of the attached display in centimeters</td>
+    </tr>
+
+    <tr>
+      <td>Height</td>
+      <td>Integer</td>
+      <td>Physical height of the attached display in centimeters</td>
+    </tr>
+
+    <tr>
+      <td>Internal</td>
+      <td>Boolean</td>
+      <td>Set to true if the display is part of the Roku Player (such as a Roku TV), false otherwise</td>
+    </tr>
+
+    <tr>
+      <td>Hdr10</td>
+      <td>Boolean</td>
+      <td>Set to true if the attached display supports HDR10, false otherwise</td>
+    </tr>
+
+    <tr>
+      <td>Hdr10Plus</td>
+      <td>Boolean</td>
+      <td>Set to true if the attached display supports HDR10+, false otherwise</td>
+    </tr>
+
+    <tr>
+      <td>HdrSeamless</td>
+      <td>Boolean</td>
+      <td>Set to true if the attached display supports any type of HDR, such as HDR10, HLG, or<br />Dolby Vision, false otherwise.</td>
+    </tr>
+
+    <tr>
+      <td>Headless</td>
+      <td>Boolean</td>
+      <td>Set to true if the attached display supports being powered off while audio continues to play</td>
+    </tr>
+
+    <tr>
+      <td>HLG</td>
+      <td>Boolean</td>
+      <td>Set to true if the attached display supports HLG, false otherwise</td>
+    </tr>
+
+    <tr>
+      <td>DolbyVision</td>
+      <td>Boolean</td>
+      <td>Set to true if the attached display supports Dolby Vision, false otherwise</td>
+    </tr>
+
+    <tr>
+      <td>visible</td>
+      <td>boolean</td>
+      <td>For Roku TVs only. Indicates whether the TV screen is on/off while the Roku device is actively streaming content. This is useful for checking whether customers have muted their TV screen while streaming video in order to continue listening to the audio (for example, when playing music videos, conferences, or podcasts).</td>
+    </tr>
+  </tbody>
 </table>
 
 ### GetSupportedGraphicsResolutions() as Object
@@ -1171,22 +1303,22 @@ Checks whether the device can decode and play the specified video format.
 
 #### Parameters
 
-
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>video_format</td>
-<td>Object</td>
-<td>An associative array with the following key/value pairs specifying the video format to be checked.<br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>video\_format</td>
+      <td>Object</td>
+      <td>An associative array with the following key/value pairs specifying the video format to be checked.<br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
+    </tr>
+  </tbody>
 </table>
 
 #### Return Values
@@ -1210,31 +1342,34 @@ Checks for the UI resolution of the screen.
 An associative array with the following key-value pairs describing the current UI resolution:
 
 <table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>SD</td><td>standard definition (720x480 screen pixel dimensions)</td></tr><tr><td>HD</td><td>high-definition (1280x720 screen pixel dimensions)</td></tr><tr><td>FHD</td><td>full high-definition (1920x1080 screen pixel dimensions)</td></tr></tbody></table></td>
-</tr>
-<tr>
-<td>width</td>
-<td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>720</td><td>standard definition screen pixel width</td></tr><tr><td>1280</td><td>high-definition screen pixel width</td></tr><tr><td>1920</td><td>full high-definition screen pixel width</td></tr></tbody></table></td>
-</tr>
-<tr>
-<td>height</td>
-<td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>480</td><td>standard definition screen pixel height</td></tr><tr><td>720</td><td>high-definition screen pixel height</td></tr><tr><td>1080</td><td>full high-definition screen pixel height</td></tr></tbody></table></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>SD</td><td>standard definition (720x480 screen pixel dimensions)</td></tr><tr><td>HD</td><td>high-definition (1280x720 screen pixel dimensions)</td></tr><tr><td>FHD</td><td>full high-definition (1920x1080 screen pixel dimensions)</td></tr></tbody></table></td>
+    </tr>
+
+    <tr>
+      <td>width</td>
+      <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>720</td><td>standard definition screen pixel width</td></tr><tr><td>1280</td><td>high-definition screen pixel width</td></tr><tr><td>1920</td><td>full high-definition screen pixel width</td></tr></tbody></table></td>
+    </tr>
+
+    <tr>
+      <td>height</td>
+      <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>480</td><td>standard definition screen pixel height</td></tr><tr><td>720</td><td>high-definition screen pixel height</td></tr><tr><td>1080</td><td>full high-definition screen pixel height</td></tr></tbody></table></td>
+    </tr>
+  </tbody>
 </table>
 
 ### GetGraphicsFeatures() as Object
 
-*Available since Roku OS 14.0*
+_Available since Roku OS 14.0_
 
 #### Description
 
@@ -1244,31 +1379,29 @@ Checks the graphics features supported by the device.
 
 An associative array containing the following key/value pairs:
 
-
 <table>
-<thead>
-<tr>
-<th><strong>Key</strong></th>
-<th><strong>Type</strong></th>
-<th><strong>Value</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>full_rotation</td>
-<td>boolean</td>
-<td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
-</tr>
-<tr>
-<td>astc_supported</td>
-<td>boolean</td>
-<td><ul><li>true: The device supports <a href="https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression">Adaptive Scalable Texture Compression(ASTC)</a> compressed textures and can load <a href="https://github.com/ARM-software/astc-encoder/blob/main/Docs/FileFormat.md">.astc</a> image files.</li><li>false: The device does not support ASTC.</li></ul></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><strong>Key</strong></th>
+      <th><strong>Type</strong></th>
+      <th><strong>Value</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>full\_rotation</td>
+      <td>boolean</td>
+      <td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
+    </tr>
+
+    <tr>
+      <td>astc\_supported</td>
+      <td>boolean</td>
+      <td><ul><li>true: The device supports <a href="https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression">Adaptive Scalable Texture Compression(ASTC)</a> compressed textures and can load <a href="https://github.com/ARM-software/astc-encoder/blob/main/Docs/FileFormat.md">.astc</a> image files.</li><li>false: The device does not support ASTC.</li></ul></td>
+    </tr>
+  </tbody>
 </table>
-
-
-
 
 ### GetGraphicsPlatform() as String
 
@@ -1280,8 +1413,8 @@ Checks the graphics platform of the device.
 
 The device's graphics platform, which may be one of the following values:
 
-- "opengl"
-- "directfb"
+* "opengl"
+* "directfb"
 
 ### GetVideoDecodeInfo() as Object
 
@@ -1291,7 +1424,7 @@ The device's graphics platform, which may be one of the following values:
 
 #### Description
 
-See http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block for an explanation of the information returned.
+See [http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block](http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block) for an explanation of the information returned.
 
 #### Return Values
 
@@ -1301,12 +1434,12 @@ An associative array with the EDID (EIA.2FCEA-861) information describing the vi
 
 #### Description
 
-Notifies the app when the audio or video codec changes. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the codec changes. To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+Notifies the app when the audio or video codec changes. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the codec changes. To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| ------ | ------- | ------------------------------------------------------------ |
+| Name   | Type    | Description                                                                   |
+| ------ | ------- | ----------------------------------------------------------------------------- |
 | enable | Boolean | A flag indicating whether to enable/disable codec change event notifications. |
 
 #### Return Values
@@ -1325,8 +1458,8 @@ Checks for the type of audio output.
 
 The selected audio output, which may be one of the following values:
 
-- "Stereo"
-- "5.1 surround"
+* "Stereo"
+* "5.1 surround"
 
 ### GetAudioDecodeInfo() as Object
 
@@ -1342,13 +1475,13 @@ Lists each audio decoder supported by the device, with up to four numbers descri
 
 An associative array with EDID (EIA.2FCEA-861) audio decoder information for the device connected to the HDMI port (or the device itself for a Roku TV).
 
-For example, the name "DD+" may have the value "8:6:0:1" where there are 8 independent audio tracks (7.1 audio), 6 is the SAD1 byte, 0 is the SAD2 byte, and 1 is the binary value that indicates this is a pass-through audio device (not a Roku TV). The SAD1 and SAD2 bytes are interpreted differently for different codecs and more information about their values can be found here: http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format
+For example, the name "DD+" may have the value "8:6:0:1" where there are 8 independent audio tracks (7.1 audio), 6 is the SAD1 byte, 0 is the SAD2 byte, and 1 is the binary value that indicates this is a pass-through audio device (not a Roku TV). The SAD1 and SAD2 bytes are interpreted differently for different codecs and more information about their values can be found here: [http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format](http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format)
 
 #### Example
 
 The following example demonstrates how to determine if the attached device supports Dolby Digital Plus audio:
 
-~~~
+```
 di = CreateObject("roDeviceInfo")
 audioDecoders = di.GetAudioDecodeInfo()
 
@@ -1356,7 +1489,7 @@ REM Check for surround sound codecs:
 hasDolbyDigital = audioDecoders.doesexist("AC3")
 hasDTS = audioDecoders.doesexist("DTS")
 hasDDPlus = audioDecoders.doesexist("DD+")
-~~~
+```
 
 > The definition of hasFeature (“5.1_surround_sound”) has changed in Roku OS 6.1. In previous firmware revisions it returned true when the user set the system audio format to "Surround Sound". In Roku OS6.1 and above, it returns true when any of the codecs in the GetAudioDecodeInfo() AA has more than 2 audio channels. Users devices will also be default to the "Auto Detect" system HDMI audio setting in v6.1.
 
@@ -1366,32 +1499,27 @@ hasDDPlus = audioDecoders.doesexist("DD+")
 
 Checks if the device can decode and play the specified audio format.
 
-> Use this method to query the codecs every time before starting playback on content (do not cache  and use the results from a previous call). In addition, use the [**roDeviceInfo.audioCodecCapabilityChanged()**](/docs/references/brightscript/events/rodeviceinfoevent.md) event to identify any codec changes that may occur when the audio output destination is switched. This will help your app to perform well with the Roku mobile app and and private listening.
+> Use this method to query the codecs every time before starting playback on content (do not cache  and use the results from a previous call). In addition, use the [**roDeviceInfo.audioCodecCapabilityChanged()**](doc:rodeviceinfoevent) event to identify any codec changes that may occur when the audio output destination is switched. This will help your app to perform well with the Roku mobile app and and private listening.
 
 #### Parameters
 
-
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>audio_format</td>
-<td>Object</td>
-<td>An associative array with the audio format to be checked. The general format of the associative arrays for CanDecodeAudio() is similar to the parameter and return associative arrays used in <a href="#candecodevideovideo_format-as-object-as-object">CanDecodeVideo()</a>. <br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>audio\_format</td>
+      <td>Object</td>
+      <td>An associative array with the audio format to be checked. The general format of the associative arrays for CanDecodeAudio() is similar to the parameter and return associative arrays used in <a href="#candecodevideovideo_format-as-object-as-object">CanDecodeVideo()</a>. <br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
+    </tr>
+  </tbody>
 </table>
-
-
-
-
-
 
 #### Return Values
 
@@ -1401,15 +1529,15 @@ An associative array that includes a flag indicating whether the audio format ca
 
 #### Description
 
-Indicates whether a passthrough device that owns the codec (a TV, audio receiver, or soundbar connected to a Roku device via HDMI) is rendering audio.  
+Indicates whether a passthrough device that owns the codec (a TV, audio receiver, or soundbar connected to a Roku device via HDMI) is rendering audio.
 
 Apps can call the [CanDecodeAudio()](#candecodevideovideo_format-as-object-as-object) function with the **audioFormat.passthru** field set to 1 to check whether the passthrough device can decode and play the specified audio format, and then call this function to determine whether the passthrough device  is actually rendering the audio.
 
-If the app receives a [**roDeviceInfoEvent.audioCodecCapabilityChanged**](/docs/references/brightscript/events/rodeviceinfoevent.md#isstatusmessage-as-boolean) event, it can call this function again to determine whether the audio output has changed (for example, check whether a different set of codecs are now relevant). The app can also re-query the [CanDecodeAudio()](#candecodevideovideo_format-as-object-as-object) function to determine whether the codecs themselves have changed (for example, an audio receiver has been disconnected).
+If the app receives a [**roDeviceInfoEvent.audioCodecCapabilityChanged**](doc:rodeviceinfoevent) event, it can call this function again to determine whether the audio output has changed (for example, check whether a different set of codecs are now relevant). The app can also re-query the [CanDecodeAudio()](#candecodevideovideo_format-as-object-as-object) function to determine whether the codecs themselves have changed (for example, an audio receiver has been disconnected).
 
 #### Return Values
 
-A flag indicating whether the passthrough device is rendering audio.  
+A flag indicating whether the passthrough device is rendering audio.
 
 ### GetSoundEffectsVolume() as Integer
 
@@ -1439,12 +1567,12 @@ A flag indicating whether the screen reader is enabled.
 
 #### Description
 
-Notifies the app when the screen reader changes. This function enables the sending of an [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md) when the screen reader changes. To receive events, you must have first called [SetMessagePort](/docs/references/brightscript/interfaces/ifsetmessageport.md) on the roDeviceInfo object specifying the message port that is to receive the events
+Notifies the app when the screen reader changes. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the screen reader changes. To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
 #### Parameters
 
-| Name   | Type    | Description                                                  |
-| ------ | ------- | ------------------------------------------------------------ |
+| Name   | Type    | Description                                                                           |
+| ------ | ------- | ------------------------------------------------------------------------------------- |
 | enable | Boolean | A flag indicating whether to enable/disable screen reader change event notifications. |
 
 #### Return Values
@@ -1453,7 +1581,7 @@ A flag indicating whether screen reader change event notifications are enabled (
 
 ### IsAutoplayEnabled() as Boolean
 
-*Available since Roku OS 13.0*
+_Available since Roku OS 13.0_
 
 **Description**
 
@@ -1461,7 +1589,7 @@ Returns a flag indicating whether autoplay is enabled on a device. Developers ca
 
 If autoplay is disabled on a device, apps may not begin any video playback until the customer expressly requests it. Once a user navigates to a video or otherwise explicitly requests the playback of the video to begin, the app may continue playing that video until the user navigates away from it, pauses it, turns the device off, or a screensaver starts.
 
-Apps must adhere to [Roku’s autoplay policy](/docs/developer-program/media-playback/autoplay.md) to pass certification (Effective after October 1, 2024).
+Apps must adhere to [Roku’s autoplay policy](doc:autoplay) to pass certification (Effective after October 1, 2024).
 
 **Return Value**
 
@@ -1469,7 +1597,7 @@ A boolean indicating whether autoplay is enabled on a device.
 
 ### isAutoAdjustRefreshRateEnabled() as Boolean
 
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 **Description**
 
@@ -1478,4 +1606,3 @@ Returns a flag indicating whether the Auto Adjust Display Refresh Rate setting i
 **Return Value**
 
 A boolean indicating whether the Auto Adjust Display Refresh Rate setting is enabled on a device.
-

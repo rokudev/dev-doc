@@ -1,5 +1,5 @@
 ---
-title: "Direct to Play"
+title: Direct to Play
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Apps participating in [Roku Search](doc:implementing-search) can further enhance their user experience and increase engagement by implementing Direct to Play. This feature allows customers to take advantage of the convenience and speed of voice commands to find and start watching content faster.
 
 > Public apps must implement Direct to Play to pass [certification](doc:certification).
@@ -22,7 +20,7 @@ Direct to Play accelerates content delivery by supporting spoken commands to lau
 
 For Direct to Play to directly launch content into playback on your app, the requested content must be in your app's catalog in Roku Search, your app must already be installed, your app must handle deep links to play the requested content, and your app must send the authentication status of customers to Roku.
 
-If customers are entitled to the requested content on multiple apps, the app that is launched is based on the order specified in [Implementing Roku Search](doc:implementing-search). If the requested content is available on multiple apps of the same type (for example, the customer is entitled to content on two or more SVOD apps), the user selects on which app to watch the content.  
+If customers are entitled to the requested content on multiple apps, the app that is launched is based on the order specified in [Implementing Roku Search](doc:implementing-search). If the requested content is available on multiple apps of the same type (for example, the customer is entitled to content on two or more SVOD apps), the user selects on which app to watch the content.
 
 ## Requirements
 
@@ -34,10 +32,12 @@ To participate in Direct to Play, your app must support the following integratio
 
    > Deep linking requires that apps use [bookmarks](doc:bookmarking) to identify the playback position of content. Therefore, apps participating in Direct to Play may not use resume/start over screens when handling voice commands to play content. When a customer tells their device to play content they have already started watching, playback must automatically resume at the stored playback position.
 
-3. [roInput](doc:implementing-deep-linking). Prevents your app from re-launching when it is handling deep link requests and is already running.
+3. [roInput](doc:roinput). Prevents your app from re-launching when it is handling deep link requests and is already running.
 
 4. [Authentication status events](doc:prioritizing-authenticated-channels-in-roku-search) (for SVOD and TVE apps). Communicates the authentication status of customers to prioritize your authenticated app above non-authenticated ones in Roku Search.
 
 ## Video demo
 
 For a video demonstration of Direct to Play, see the [Voice overview guide](doc:overview).
+
+<br />

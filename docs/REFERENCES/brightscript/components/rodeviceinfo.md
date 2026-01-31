@@ -40,10 +40,10 @@ The output from the above code would like the following:
 
 ## Supported interfaces
 
-* [ifDeviceInfo](https://roku-ent.readme.io/dev/docs/references/brightscript/interfaces/ifdeviceinfo.md)
-* <Anchor label="ifSetMessagePort" title="ifSetMessagePort" href="/docs/references/brightscript/interfaces/ifsetmessageport.md">ifSetMessagePort</Anchor>
-* <Anchor label="ifGetMessagePort" title="ifGetMessagePort" href="/docs/references/brightscript/interfaces/ifgetmessageport.md">ifGetMessagePort</Anchor>
+* [ifDeviceInfo](doc:ifdeviceinfo)
+* [ifSetMessagePort](doc:ifsetmessageport)
+* [ifGetMessagePort](doc:ifgetmessageport)
 
 ## Supported events
 
-* <Anchor label="roDeviceInfoEvent" title="roDeviceInfoEvent" href="/docs/references/brightscript/events/rodeviceinfoevent.md">roDeviceInfoEvent</Anchor>
+* [roDeviceInfoEvent](doc:rodeviceinfoevent)

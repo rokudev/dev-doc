@@ -37,7 +37,7 @@ In addition, publishers can monitor their apps' monetization activity using [rep
 
 Regional privacy law can affect how or whether an app can serve video advertisements to its viewers. When an app's programming is aimed at children, for instance, Roku considers it to be a "children's app," subject to a variety of laws, most notably COPPA (the Children's Online Privacy Protection Act) in the United States. Similarly, _any_ apps that are made available in European countries (whether aimed at children or not) are subject to the European Union's GDPR (General Data Protection Regulation).
 
-Apps that have been custom built using Roku's SDK may serve ads through their own (or third-party) servers, subject to [Roku Certification Requirements](doc:certification). This must always be done in a way, however, which complies with applicable regional law, including relevant privacy laws.
+Apps that have been custom built using Roku's SDK may serve ads through their own (or third-party) servers, subject to [Roku Certification Requirements](doc:certification-overview). This must always be done in a way, however, which complies with applicable regional law, including relevant privacy laws.
 
 For more on custom built apps, see the overview of Roku's [two models for app development](doc:channel-development-models).
 

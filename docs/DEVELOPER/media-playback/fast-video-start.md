@@ -1,5 +1,5 @@
 ---
-title: "Fast video start"
+title: Fast video start
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Fast video start is a user interface design technique for apps
 that reduces the amount of time apparent to the user that the video
 stream buffers before actual playback begins.
@@ -25,7 +23,7 @@ video. When the user actually selects the video for playback, calling
 play() on the roVideoScreen or roVideoPlayer object shows a "loading"
 screen before actual playback, while the video stream is buffering.
 **"Fast start"** allows this video stream buffering to take place
-*before* the user has actually selected a video for playback, by
+_before_ the user has actually selected a video for playback, by
 initiating the buffering process while the user is deciding whether to
 play a certain video.
 
@@ -45,9 +43,7 @@ call. If the video has not been specified in one of these ways, calling
 Prebuffer() has no
 effect.
 
-
->SceneGraph apps use the [Video node](doc:video) control field prebuffer option to implement Fast Video Start. See [Fast start media playback](doc:playing-videos) for information on implementing Fast Video Start in a SceneGraph app.
-
+> SceneGraph apps use the [Video node](doc:video) control field prebuffer option to implement Fast Video Start. See [Fast start media playback](doc:playing-videos) for information on implementing Fast Video Start in a SceneGraph app.
 
 ## roVideoPlayer use cases
 
@@ -55,13 +51,13 @@ effect.
 
 The following code demonstrates this use case.
 
-~~~~
+```
 port = CreateObject( "roMessagePort" )
 
-content = \{
-  Stream: \{ url : "http://play.this.url.com/video.m3u8" \}
+content = {
+  Stream: { url : "http://play.this.url.com/video.m3u8" }
   StreamFormat: "hls"
-\}
+}
 
 ' First   create the player and set content list
 player = CreateObject( "roVideoPlayer" )
@@ -85,7 +81,7 @@ while true
   msg = wait( 0, port )
   ' process msg here
 end while
-~~~~
+```
 
 For this use case, the video player event handling has to occur in two
 event loops, one while prebuffering from a content springboard screen, and one during playback. This is necessary since the

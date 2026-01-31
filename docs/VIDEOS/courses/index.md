@@ -18,7 +18,7 @@ Roku currently offers the following online courses:
 
 * **[Getting Started](doc:getting-started-3)**: Get introduced to development on the Roku platform. Learn how streaming works and the benefits of developing streaming applications for the Roku platform.
 
-* **[SceneGraph: Build an app](doc:overview)**: Learn how to develop an app from the ground up with the Roku SDK. This course features a set of 13 video lessons and a comprehensive [sample app](https://github.com/rokudev/scenegraph-master-sample) that walks developers through each step in building a basic, high-performance Roku app that passes certification. This course is ideal for developers that are new to the Roku platform and want a simple, streamlined path for quickly understanding Roku development.
+* **[SceneGraph: Build an app](doc:rsg)**: Learn how to develop an app from the ground up with the Roku SDK. This course features a set of 13 video lessons and a comprehensive [sample app](https://github.com/rokudev/scenegraph-master-sample) that walks developers through each step in building a basic, high-performance Roku app that passes certification. This course is ideal for developers that are new to the Roku platform and want a simple, streamlined path for quickly understanding Roku development.
 
 ## How to watch
 

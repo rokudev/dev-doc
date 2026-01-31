@@ -172,7 +172,7 @@ Once you have validated your search feed, you can submit your feed following the
 
     <tr>
       <td>Feed URL</td>
-      <td>Enter the URL where your search feed is hosted. The search feed is a JSON file with content metadata from one or more sources. See the <a href="https://developer.roku.com/docs/specs/search/search-feed.md"><strong>Roku Search feed</strong></a> specification for how to create your feed.<br /><br />Optionally, you can protect your search feed with basic HTTP authentication and provide the username and password credentials. If your search feed uses basic HTTP authentication, select <strong>Basic Authentication</strong> from the <strong>Feed Authentication Type</strong> field, and then enter the <strong>Username</strong> and <strong>Password</strong> for the feed.</td>
+      <td>Enter the URL where your search feed is hosted. The search feed is a JSON file with content metadata from one or more sources. See the <a href="https://roku-ent.readme.io/dev/docs/search-feed"><strong>Roku Search feed</strong></a> specification for how to create your feed.<br /><br />Optionally, you can protect your search feed with basic HTTP authentication and provide the username and password credentials. If your search feed uses basic HTTP authentication, select <strong>Basic Authentication</strong> from the <strong>Feed Authentication Type</strong> field, and then enter the <strong>Username</strong> and <strong>Password</strong> for the feed.</td>
     </tr>
 
     <tr>
@@ -275,7 +275,7 @@ Before submitting your search feed for review, you need to test your app's [deep
 
 8. Test with unauthenticated accounts.
 
-9. In the **Deep Linking** section, add deep linking parameters for each different media type in your app. Roku Partner Success will use these to verify that deep linking has been integrated into your app per the [implementation guide](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md). To do this, follow these steps:
+9. In the **Deep Linking** section, add deep linking parameters for each different media type in your app. Roku Partner Success will use these to verify that deep linking has been integrated into your app per the [implementation guide](doc:implementing-deep-linking). To do this, follow these steps:
 
    a. Click **Add deep link** (or **Add** if at least one deep link is already listed).
 
@@ -311,7 +311,7 @@ Before submitting your search feed for review, you need to test your app's [deep
 
     <Image alt="roku600px - add-deep-link-dialog" border={false} src="https://image.roku.com/ZHZscHItMTc2/search-feed-submit-review-final.png" />
 
-11. Roku will use the auto-created beta app to test your app's [deep linking implementation](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md) and verify that the app is successfully integrated with Roku Search.
+11. Roku will use the auto-created beta app to test your app's [deep linking implementation](doc:implementing-deep-linking) and verify that the app is successfully integrated with Roku Search.
 
 ### Troubleshooting with a sideloaded app
 

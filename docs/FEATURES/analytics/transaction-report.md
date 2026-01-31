@@ -15,7 +15,7 @@ The data compiled in the Transaction Report enables a number of critical use cas
 
 ## Opening the Transaction Report
 
-To open the Transaction Report, go to the [Developer Dashboard](https://developer.roku.com/developer), click **Sales reports** in the left sidebar, click the **Transactions** tab, and then select the app for which you want to view the transactions. Alternatively, you can directly access the report at {'<https://analytics.roku.com/analytics>'}.
+To open the Transaction Report, go to the [Developer Dashboard](https://developer.roku.com/developer), click **Sales reports** in the left sidebar, click the **Transactions** tab, and then select the app for which you want to view the transactions. Alternatively, you can directly access the report at https://analytics.roku.com/analytics.
 
 ## Running a Transaction Report
 
@@ -309,4 +309,4 @@ You can create a schedule to automatically email a Transaction Report in a recur
 
 ## Sample report
 
-You can view and download a sample report in Excel format here: https://go.roku.com/transaction-report-sample.xlsx
+You can view and download a sample report in Excel format here: [https://go.roku.com/transaction-report-sample.xlsx](https://go.roku.com/transaction-report-sample.xlsx)

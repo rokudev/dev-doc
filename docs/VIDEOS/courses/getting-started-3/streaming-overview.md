@@ -22,7 +22,7 @@ This video summarizes how streaming works on the Roku platform. It explains how 
 
 [Feed specification](doc:search-feed)
 
-[Content Delivery Networks (CDNs) and Online Video Platforms (OVPs)](doc:how-channels-work)
+[Content Delivery Networks (CDNs) and Online Video Platforms (OVPs)](doc:how-channels-work#content-hosting)
 
 ## How to watch
 

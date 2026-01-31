@@ -43,7 +43,7 @@ The External Control Protocol (ECP) enables a Roku device to be controlled over 
 >
 > Apps may still include code for handling incoming ECP commands sent by the Roku OS for [deep links](doc:implementing-deep-linking), [voice controls](doc:transport-controls), and so on.
 >
-> To further leverage ECP commands for testing an app's performance and behavior, it is recommended that developers integrate **[Roku's automation test software](doc:automated-testing-overview)** in their test suite.
+> To further leverage ECP commands for testing an app's performance and behavior, it is recommended that developers integrate **[Roku's automation test software](doc:automated-channel-testing)** in their test suite.
 
 ***
 

@@ -21,7 +21,7 @@ The Roku Remote Tool provides developers a quick and intuitive way to create reu
 
 ![roku815px - rremote-sample-script-roku815px](https://image.roku.com/ZHZscHItMTc2/remote-sample-script-v2.png)
 
-For more robust automated certification testing, refer to the [automated app testing documentation](https://developer.roku.com/docs/developer-program/dev-tools/automated-channel-testing/automated-testing-overview.md).
+For more robust automated certification testing, refer to the [automated app testing documentation](doc:automated-channel-testing).
 
 ## Getting started
 

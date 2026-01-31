@@ -1,5 +1,5 @@
 ---
-title: "Creating the content feed"
+title: Creating the content feed
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,10 +10,7 @@ metadata:
 next:
   description: ''
 ---
-
-
 <video src="https://image.roku.com/ZHZscHItMTc2/rsg-unit4-contentFeed-v3.mp4" poster="https://image.roku.com/ZHZscHItMTc2/rsg-unit4-content-feed.png" width="720" height="480" controls />
-
 
 ## About this lesson
 
@@ -21,39 +18,40 @@ This lesson explains how the content feed is used to load and organize content i
 
 ## Resources
 
-
 <table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://go.roku.com/Bul0OWXct">Sample content feed</a></td>
-<td>Examine the content feed used by the sample app for this course. This content feed includes three content types: shortFormVideos, series, and movies.  <br /><ul><li>The <strong>shortFormVideos</strong> object in the feed contains the shorter Roku developer videos.</li><li>The <strong>series</strong> object contains an <strong>RSG</strong> series all the videos in this SceneGraph Developer's course, and it includes a Roku Tips and Tricks series, with videos highlighting Roku products and features.</li><li>The <strong>movies</strong> object contains the longer Roku developer videos.</li></ul><br />Each video in the feed includes a unique ID, name, description, thumbnail image, and URL used to populate the app UI. In addition, each video includes a genre field that is used to categorize the videos into rows of related content.</td>
-</tr>
-<tr>
-<td>[Feed specification](doc:json-dp-spec)</td>
-<td>You can use the Roku Direct Publisher feed spec as the guideline for your content feed, and then configure it as needed. The sample content feed, which is used by the sample app in this course, is based on this spec. SceneGraph apps built with the Roku SDK, however, are not required to follow a certain feed specification.</td>
-</tr>
-<tr>
-<td>[Roku third-party developers](doc:third-party-devs)</td>
-<td>Publishers needing help developing their app or creating their content feed can contact one of Roku's third-party developers listed in this document. Each  studio in the list has successfully developer and launched Roku apps.</td>
-</tr>
-<tr>
-<td>[Content Delivery Networks (CDNs) and Online Video Platforms (OVPs)](doc:how-channels-work#content-hosting)</td>
-<td>If you need help hosting your content feed, you can contact one of the CDNs or OVPs listed in this document. Each platform has been used by publishers to host content for their Roku apps.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><a href="https://go.roku.com/Bul0OWXct">Sample content feed</a></td>
+      <td>Examine the content feed used by the sample app for this course. This content feed includes three content types: shortFormVideos, series, and movies.  <br /><ul><li>The <strong>shortFormVideos</strong> object in the feed contains the shorter Roku developer videos.</li><li>The <strong>series</strong> object contains an <strong>RSG</strong> series all the videos in this SceneGraph Developer's course, and it includes a Roku Tips and Tricks series, with videos highlighting Roku products and features.</li><li>The <strong>movies</strong> object contains the longer Roku developer videos.</li></ul><br />Each video in the feed includes a unique ID, name, description, thumbnail image, and URL used to populate the app UI. In addition, each video includes a genre field that is used to categorize the videos into rows of related content.</td>
+    </tr>
+
+    <tr>
+      <td>[Feed specification](doc:search-feed)</td>
+      <td>You can use the Roku Direct Publisher feed spec as the guideline for your content feed, and then configure it as needed. The sample content feed, which is used by the sample app in this course, is based on this spec. SceneGraph apps built with the Roku SDK, however, are not required to follow a certain feed specification.</td>
+    </tr>
+
+    <tr>
+      <td>[Roku third-party developers](doc:third-party-devs)</td>
+      <td>Publishers needing help developing their app or creating their content feed can contact one of Roku's third-party developers listed in this document. Each  studio in the list has successfully developer and launched Roku apps.</td>
+    </tr>
+
+    <tr>
+      <td>[Content Delivery Networks (CDNs) and Online Video Platforms (OVPs)](doc:how-channels-work#content-hosting)</td>
+      <td>If you need help hosting your content feed, you can contact one of the CDNs or OVPs listed in this document. Each platform has been used by publishers to host content for their Roku apps.</td>
+    </tr>
+  </tbody>
 </table>
-
-
 
 ## Related
 
-[Content node](doc:contentnode)  
+[Content node](doc:contentnode)
 
 [Content meta data](doc:content-metadata)
 

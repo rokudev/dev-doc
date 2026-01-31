@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor> 
+Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://roku-ent.readme.io/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>
 
-The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
+The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://roku-ent.readme.io/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
 
 <br />
 
@@ -46,55 +46,53 @@ It is recommended that developers create a component that extends the **DynamicC
 
 ## Custom key selection handlers
 
-For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface\> element that has the following signature:
+For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface> element that has the following signature:
 
 ```
     function keySelected(key as string) as boolean
 ```
 
-The *key* parameter is set to the key's "strOut" field, if specified; otherwise, it is set to the key's "label" string.
+The _key_ parameter is set to the key's "strOut" field, if specified; otherwise, it is set to the key's "label" string.
 
-The function should return *true* if it handles the key selection. Returning *false* causes the [default key selection handler](#default-key-selection-handler)  behavior to be used.
+The function should return _true_ if it handles the key selection. Returning _false_ causes the [default key selection handler](#default-key-selection-handler)  behavior to be used.
 
 #### Example custom key select handler
 
 The following example demonstrates a custom key handler:
 
-1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:  
+1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:
    ```
    "keys": [
-               \{ "label": "Aa", "strOut": "ChangeCase" \},
-               <OTHER KEYS>
-           ]
+       { "label": "Aa", "strOut": "ChangeCase" },
+       <OTHER KEYS>
+   ] 
    ```
 
-2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:  
+2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:
    ```
-    <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
-               <interface>
-                   <function name="keySelected" />
-               </interface>
-               <OTHER COMPONENT ELEMENTS>
+   <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
+       <interface>
+           <function name="keySelected" />
+       </interface>
+       <OTHER COMPONENT ELEMENTS>
    </component>
    ```
 
-3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:  
+3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:
    ```
-     function keySelected(key as string) as boolean
-               if key = "ChangeCase"
-                   if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
-                       m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
-                   else
-                       m.top.keyGrid.mode = "UpperCase"
-                   end if
-                   return true    ' key selection is handled, return true
-               end if
-               ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
-               return false
-           end function
-
+   function keySelected(key as string) as boolean
+       if key = "ChangeCase"
+           if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
+               m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
+           else
+               m.top.keyGrid.mode = "UpperCase"
+           end if
+           return true    ' key selection is handled, return true
+       end if
+       ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
+       return false
+   end function
    ```
-   <br />
 
 #### Custom key handlers that modify the entered text string
 
@@ -103,34 +101,34 @@ In most cases, the default key selection handlers can be used for modifying the 
 1. The Key Definition File includes a key definition with an action intended to duplicate the character to the left of the cursor position, positioning the cursor after the duplicated character:
    ```
    "keys": [
-               \{ "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" \},
-               <OTHER KEYS>
-           ]
+       { "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" },
+       <OTHER KEYS>
+   ]
    ```
 2. The **keySelected()** function includes the following business logic:
    ```
    function keySelected(key as string) as boolean
-               if key = "DuplicateCharacter"
-                   currString = m.top.text
-                   currStringLen = currString.Len()
-                   cursorPosition = m.top.textEditBox.cursorPosition
-                   charToDuplicate = currString.Mid(cursorPosition, 1)
-                ' set the keyboard's text field to the edited string
-                   if cursorPosition > 0
-                       m.top.text = currString.Left(cursorPosition) + charToDuplicate + currString.Right(currStringLen - cursorPosition)
-                   end if
-                   ' update the VoiceTextEditBox's cursorPosition
-                   m.top.TextEditBox.cursorPosition = cursorPosition + 1
-                   return true   ' DuplicateCharacter key selection is handled
-               end if
-               ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
-               return false
-           end function
+       if key = "DuplicateCharacter"
+           currString = m.top.text
+           currStringLen = currString.Len()
+           cursorPosition = m.top.textEditBox.cursorPosition
+           charToDuplicate = currString.Mid(cursorPosition, 1)
+        ' set the keyboard's text field to the edited string
+           if cursorPosition > 0
+               m.top.text = currString.Left(cursorPosition) + charToDuplicate + currString.Right(currStringLen - cursorPosition)
+           end if
+           ' update the VoiceTextEditBox's cursorPosition
+           m.top.TextEditBox.cursorPosition = cursorPosition + 1
+           return true   ' DuplicateCharacter key selection is handled
+       end if
+       ' if not handled, return false to use default DynamicCustomKeyboard keySelected handlers
+       return false
+   end function
    ```
 
 ## Fields
 
-See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
+See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://roku-ent.readme.io/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
 
 <HTMLBlock>{`
 <table>

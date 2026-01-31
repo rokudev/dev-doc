@@ -61,7 +61,7 @@ Gets the set of ads to be rendered now. This method may be called with no parame
     <tr>
       <td>msg</td>
       <td>String</td>
-      <td>Optional, depending on use case. Typically, this would be a message returned from a [WaitMessage()](doc:ifmessageport#waitmessagetimeout-as-integer-as-dynamic) call on the message port of the [roVideoScreen](doc:rovideoscreen) or [roVideoPlayer](doc:rovideoplayer) object during content playback.<br /><br />This allows determination of which ads are scheduled for rendering based on playback position, user action, or other conditions.</td>
+      <td>Optional, depending on use case. Typically, this would be a message returned from a [WaitMessage()](doc:ifmessageport#waitmessagetimeout-as-integer-as-dynamic) call on the message port of the [roVideoPlayer](doc:rovideoplayer) object during content playback.<br /><br />This allows determination of which ads are scheduled for rendering based on playback position, user action, or other conditions.</td>
     </tr>
   </tbody>
 </table>
@@ -251,19 +251,7 @@ The content length can also be set independently via [setContentLength()](doc:ra
 
 ### setAdExit(enabled as Boolean)
 
-**Note: setAdExit() is deprecated and disabled - check showAds() return value instead**
-
-~~#### Description~~
-
-~~The default behavior is to enable exiting during ad rendering (for example, via the “Back” button) to return to content selection screen in the application.~~
-
-~~Some use cases may require disabling this behavior if the user should not be allowed to skip ads when there is no applicable content selection mechanism.~~
-
-~~#### Parameters~~
-
-~~| Argument | Type   | Description                                                 |~~
-~~| -------- | ------ | ------------------------------------------------------------ |~~
-~~| enabled | Boolean | Enables ad exit behavior during rendering. |~~
+> setAdExit() is deprecated and disabled - check showAds() return value instead
 
 ### importAds(adPodArray as Object)
 
@@ -433,7 +421,7 @@ The semantics and implementation of targeting based on genre values are dependen
     <tr>
       <td>kidsContent</td>
       <td>Boolean</td>
-      <td>Optional. Specify whether content is targeted towards children (true) or not (false).<br /><blockquote><p>Per Roku's <a href="https://developer.roku.com/docs/developer-program/certification/certification.md#1-advertising">certification requirements</a>, apps with child-directed content must set this flag to <strong>true</strong> if serving ads during child-directed content.</p></blockquote></td>
+      <td>Optional. Specify whether content is targeted towards children (true) or not (false).<br /><blockquote><p>Per Roku's <a href="https://roku-ent.readme.io/dev/docs/certification#1-advertising">certification requirements</a>, apps with child-directed content must set this flag to <strong>true</strong> if serving ads during child-directed content.</p></blockquote></td>
     </tr>
   </tbody>
 </table>
@@ -545,7 +533,7 @@ Merges a video feed and a set of one or more ad pods into a single playlist for 
       <td>ads</td>
       <td>roArray</td>
       <td>Required</td>
-      <td>Array of ad breaks to be combined into the stitched stream using RAF's <a href="https://developer.roku.com/docs/developer-program/advertising/integrating-roku-advertising-framework.md#ad-structure">ad structure</a> format.<br /> <br />The object may been parsed earlier from VMAP/SMRX by calling <br /><code>raf.setAdURL(myAdTag): adBreaks = raf.getAds()</code>.</td>
+      <td>Array of ad breaks to be combined into the stitched stream using RAF's <a href="https://roku-ent.readme.io/dev/docs/integrating-roku-advertising-framework#ad-structure">ad structure</a> format.<br /> <br />The object may been parsed earlier from VMAP/SMRX by calling <br /><code>raf.setAdURL(myAdTag): adBreaks = raf.getAds()</code>.</td>
     </tr>
   </tbody>
 </table>

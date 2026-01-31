@@ -24,7 +24,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
 * **Voice request trigger**. Upon launch, apps can call the [roAppManager.StartVoiceActionSelectionRequest()](doc:ifappmanager) function to trigger a voice request for the viewer to select a user profile on devices that are paired with a hands-free Roku Voice remote control, such as the Roku Voice Remote Pro.
 
-  Before calling the **StartVoiceActionSelectionRequest()** function, developers can call the [roDeviceInfo.HasFeature("handsfree_voice")](doc:ifdeviceinfo.md#hasfeaturefeature-as-string-as-boolean) function to check whether a Roku device is paired with a hands-free Roku remote control.
+  Before calling the **StartVoiceActionSelectionRequest()** function, developers can call the [roDeviceInfo.HasFeature("handsfree_voice")](doc:ifdeviceinfo#hasfeaturefeature-as-string-as-boolean) function to check whether a Roku device is paired with a hands-free Roku remote control.
 
   ```
   appMgr = CreateObject("roAppManager")
@@ -39,9 +39,9 @@ To implement voice support for a profile selection screen, integrate the followi
 
   ```
   appMgr = CreateObject("roAppManager")
-  profile1 = \{ text: "kids", link: "d46ge-i8Y5-192"}
-  profile2 = \{ text: "Jane", link: "2a2Nu-u1D4-555"}
-  profile3 = \{ text: "John", link: "6Nu70-N37x-901"}
+  profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
+  profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
+  profile3 = { text: "John", link: "6Nu70-N37x-901"}
 
   actions = [profile1, profile2, profile3]
 
@@ -52,13 +52,13 @@ To implement voice support for a profile selection screen, integrate the followi
 
   ```
   function handleTransport(evt)
-    	cmd = evt.command
-    	ret = \{status: "unhandled"}
-    	if cmd = "action"
-    		print "profile name uttered by user"
-    		print evt.text ' prints "kids", "Jane", or "John"
-    	end if
-    	return ret
+      cmd = evt.command
+      ret = {status: "unhandled"}
+      if cmd = "action"
+          print "profile name uttered by user"
+          print evt.text ' prints "kids", "Jane", or "John"
+      end if
+      return ret
   end function
   ```
 
@@ -70,14 +70,14 @@ To implement voice support for a profile selection screen, integrate the followi
 
   ```
   function handleTransport(evt)
-    	cmd = evt.command
-    	ret = \{status: "unhandled"}
-    	if cmd = "select"
-    		print "Voice ordinal event"
-   			print evt.ordinal ' prints 1
-    	end if
-    	return ret
-  end function
+        cmd = evt.command
+        ret = {status: "unhandled"}
+        if cmd = "select"
+            print "Voice ordinal event"
+            print evt.ordinal ' prints 1
+        end if
+        return ret
+    end function
   ```
 
 ## Sample app

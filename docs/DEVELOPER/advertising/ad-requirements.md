@@ -34,7 +34,7 @@ This document lists the requirements for displaying video and interactive ads in
 
 | Requirement | Description          | Documentation                                                |                                                              |
 | :---------- | :------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| RAF 1.1     | RAF integration      | Apps must integrate RAF for all ads without modifying, obstructing, or disabling RAF functionality in any way. Replays of live broadcast streams are exempt from this requirement, unless ad insertion is used to insert new ads. | [RAF integration guide](doc:roku-advertising-framework) |
+| RAF 1.1     | RAF integration      | Apps must integrate RAF for all ads without modifying, obstructing, or disabling RAF functionality in any way. Replays of live broadcast streams are exempt from this requirement, unless ad insertion is used to insert new ads. | [RAF integration guide](doc:advertising) |
 | RAF 1.2     | Measurement beacons  | Apps must fire all measurement beacons client-side via RAF.  This requirement is applicable for both client-side and server-side ad insertion. | [Roku Advertising Watermark integration guide](doc:ad-watermark) |
 | RAF 1.3     | Audience measurement | Apps in the U.S. Streaming Store only that are not child-directed must support Roku ad tracking by calling the [enableAdMeasurements()](doc:raf-api) method and passing the required content metadata within the following methods: [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api).  Optionally, apps may use the [setNielsenGenre API](doc:raf-api) to pass specific Nielsen Genre granularity and the [setNielsenAppId API](doc:raf-api) for those who specify a custom Nielsen App ID.  The [enableAdMeasurements](doc:raf-api) method deprecates the [enableNielsenDAR](doc:raf-api) API; therefore, do not use the [enableNielsenDAR](doc:raf-api) API. | [General Audience Measurement](doc:raf-api) |
 | RAF 1.4     | Ad break - numbering | For ads inserted client-side, apps must display the number of ads during ad breaks using the standard Roku-branded label applied by RAF. | [RAF integration guide](doc:integrating-roku-advertising-framework) |
@@ -58,7 +58,7 @@ This document lists the requirements for displaying video and interactive ads in
 <td>ADS 1.1</td>
 <td>SDKs and libraries</td>
 <td>Partners must disclose integration/use of all non-Roku SDKs, libraries, or other software systems and external advertising partners (for example, DSPs) that enable video, audio, or banner ad insertion, and Roku has the right to approve or deny such non-Roku SDKs, libraries, or other software systems.</td>
-<td>[Roku Advertising Framework overview](doc:roku-advertising-framework)</td>
+<td>[Roku Advertising Framework overview](doc:advertising)</td>
 </tr>
 <tr>
 <td>ADS 1.2</td>

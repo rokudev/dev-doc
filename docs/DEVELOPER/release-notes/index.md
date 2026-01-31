@@ -20,12 +20,12 @@ next:
 <p>Here is the list of key developer-facing Roku OS 15.1 updates:</p>
 <h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
 <h5 id="new-seek-mode-based-on-hls-manifest">New seek mode based on HLS Manifest</h5>
-<p>The [<strong>Video.seekMode</strong> field](doc:video#trickplay-fields) supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
+<p>The <a href="https://roku-ent.readme.io/dev/docs/video#trickplay-fields">Video.seekMode</a> supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
 <h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
 <h5 id="perfetto-app-tracing">Perfetto app tracing</h5>
 <p>You can use <a href="https://perfetto.dev/docs/">Perfetto</a> to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.</p>
 <p>With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.</p>
-<p>For more information on using Perfetto to trace your Roku apps, click [here](doc:app-tracing). </p>
+<p>For more information on using Perfetto to trace your Roku apps, click <a href="https://roku-ent.readme.io/dev/docs/app-tracing">here</a>. </p>
 <h4 id="deprecations">Deprecations</h4>
 <h6 id="rostring-appendstring-s-as-string-len-as-integer-as-void">roString.AppendString(s as String, len as Integer) as Void</h6>
 <p>This function has been deprecated. Use the [SetString() function](doc:ifstringops#setstrings-as-string-len-as-integer-as-void) instead. </p>
@@ -231,7 +231,7 @@ number of items. </p>
 <p>Here is the list of key developer-facing Roku OS 12.0 updates:</p>
 <h4 id="brightscript-apis">BrightScript APIs</h4>
 <ul>
-<li><p>[<strong>Localized date and time formats</strong>](doc:ifdatetime#asdatestringlocformat-as-string-as-string) — The <a href="https://developer.roku.com/docs/references/brightscript/components/rodatetime.md">roDateTime</a> component includes new <strong>asDateStringLoc()</strong> and <strong>asTimeStringLoc()</strong> methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.</p>
+<li><p>[<strong>Localized date and time formats</strong>](doc:ifdatetime#asdatestringlocformat-as-string-as-string) — The <a href="https://roku-ent.readme.io/dev/docs/rodatetime">roDateTime</a> component includes new <strong>asDateStringLoc()</strong> and <strong>asTimeStringLoc()</strong> methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.</p>
 </li>
 <li><p>[<strong>IPv6 addresses returned by roDeviceInfo.getConnectionInfo() method</strong>](doc:ifdeviceinfo#getconnectioninfo-as-object) — The [roDeviceInfo.getConnectionInfo() method](doc:ifdeviceinfo#getconnectioninfo-as-object) now returns an <strong>ipv6</strong> field, which is an array listing the IPv6 addresses used for the device connection.</p>
 </li>
@@ -308,7 +308,7 @@ number of items. </p>
 </ul>
 <h4 id="deprecated-sunset-apis">Deprecated/Sunset APIs</h4>
 <ul>
-<li><p>[<strong>SDK1 visual screen components sunset</strong>](doc:deprecated-apis#deprecated-components-january-1-2018) — The <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were deprecated in 2017</a> have been completely removed from the Roku OS. As a result, apps that still had these <a href="https://developer.roku.com/docs/references/deprecated-apis.md#deprecated-components-january-1-2018">sunset components</a> as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).</p>
+<li><p>[<strong>SDK1 visual screen components sunset</strong>](doc:deprecated-apis#deprecated-components-january-1-2018) — The <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were deprecated in 2017</a> have been completely removed from the Roku OS. As a result, apps that still had these <a href="https://roku-ent.readme.io/dev/docs/deprecated-apis#deprecated-components-january-1-2018">sunset components</a> as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).</p>
 </li>
 <li><p><strong>[roUrlTransfer.enableFreshConnection()](doc:deprecated-apis#rourltransferenablefreshconnection)</strong> — The Roku OS no longer supports the [<strong>roUrlTransfer.enableFreshConnection()</strong> function](doc:ifurltransfer#enablefreshconnectionenable-as-boolean-as-boolean). Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).</p>
 </li>
@@ -333,7 +333,7 @@ number of items. </p>
 </li>
 </ul>
 </li>
-<li><p><strong>[Option for Label and TextEditBox nodes to display the end of overflowing text](doc:label#fields)</strong> — The [<strong>Label</strong>](doc:label#fields) and <a href="docs/references/scenegraph/widget-nodes/texteditbox.md"><strong>TextEditBox</strong></a> nodes now include a <strong>leadingEllipsis</strong> flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, &quot;the quick brown fox jumps over the lazy dog&quot; would be truncated to &quot;...jumps over the lazy dog&quot;. When the flag is false, the start of the text is shown (&quot;the quick brown fox jumps...&quot;).</p>
+<li><p><strong>[Option for Label and TextEditBox nodes to display the end of overflowing text](doc:label#fields)</strong> — The [<strong>Label</strong>](doc:label#fields) and <a href="docs/references/scenegraph/widget-nodes/texteditbox"><strong>TextEditBox</strong></a> nodes now include a <strong>leadingEllipsis</strong> flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, &quot;the quick brown fox jumps over the lazy dog&quot; would be truncated to &quot;...jumps over the lazy dog&quot;. When the flag is false, the start of the text is shown (&quot;the quick brown fox jumps...&quot;).</p>
 </li>
 </ul>
 <ul>
@@ -1183,7 +1183,7 @@ node, and whether it involved a rendezvous. ([Testing and debugging Roku apps](d
 <li><strong>Shorthand debugger commands</strong> — Shorthand alternatives can now be
 used to replace many debugger commands. ([Testing and debugging Roku apps](doc:debugging-channels))</li>
 </ul>
-<h4 id="new-manifest-https-github-com-rokudev-docs-blob-master-develop-specifications-manifest-md-entry">New <a href="https://github.com/rokudev/docs/blob/master/develop/specifications/manifest.md">manifest</a> entry</h4>
+<h4 id="new-manifest-https-github-com-rokudev-docs-blob-master-develop-specifications-manifest-md-entry">New <a href="https://github.com/rokudev/docs/blob/master/develop/specifications/manifest">manifest</a> entry</h4>
 <ul>
 <li>splash_rsg_optimization=1: Remove flicker between the splash
 screen and initial screen during app launch of SceneGraph
@@ -1636,7 +1636,7 @@ to [ifDeviceInfo](doc:ifdeviceinfo) interface.</li>
 <p><strong>Initial rollout date:</strong> April 9, 2015</p>
 <h4 id="roku-advertising-framework">Roku Advertising Framework</h4>
 <ul>
-<li>Added the [Roku Advertising Framework](doc:roku-advertising-framework) to natively integrate advertising capabilities</li>
+<li>Added the [Roku Advertising Framework](doc:advertising) to natively integrate advertising capabilities</li>
 </ul>
 <h4 id="brightscript-language">BrightScript language</h4>
 <ul>

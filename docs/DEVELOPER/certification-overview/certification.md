@@ -28,7 +28,7 @@ Using deprecated APIs may cause your app to fail certification testing. See the 
 
 #### Test apps before submission
 
-Use the certification criteria and the [list of pre-certification tests](doc:certification-testing) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
+Use the certification criteria and the [list of pre-certification tests](doc:cert-tests) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
 
 * [Static Analysis tool](doc:static-analysis-tool): Checks the app's code for certification-related errors.
 
@@ -202,7 +202,7 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 **4.10** Apps must implement [bookmarking](doc:bookmarking) for all VOD content longer than 15 minutes. Apps must store bookmarks for a minimum of 30 days.
 
-**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](doc:transport-controls) that are supported on the Roku platform. Apps must implement proper [error handling](doc:transport-controls) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
+**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](doc:transport-controls) that are supported on the Roku platform. Apps must implement proper [error handling](doc:transport-controls##error-handling) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
 **4.12** Apps must use [Roku voice keyboards](doc:dynamic-keyboard-base) for [email](doc:dynamic-keyboard), [PIN](doc:dynamic-pinpad), and [password](doc:dynamic-keyboard) entry.
 
@@ -226,4 +226,4 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 **6.4** The Roku Streaming Store artwork and splash screen must clearly represent the name or identity of the app using only broadcast-safe colors with proper sizing. The app splash screen must support FHD (1920x1080p) and HD (1280x720p) resolutions. In addition, artwork must not be transparent. The splash screen's URI must be listed in the package manifest file.
 
-**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](doc:legal).
+**6.5** Apps that are pre-checked for installation during the device activation flow must be [CVAA compliant](doc:legal##cvaa).

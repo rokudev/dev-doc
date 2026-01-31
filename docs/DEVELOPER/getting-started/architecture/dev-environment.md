@@ -1,5 +1,5 @@
 ---
-title: "Development environment overview"
+title: Development environment overview
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,12 +10,9 @@ metadata:
 next:
   description: ''
 ---
-
-
 ## Architectural overview
 
-![roku815px - Architecture block diagram](https://image.roku.com/ZHZscHItMTc2/devenvironmentarchoverview.png "devenvironmentarchoverview")
-
+<Image alt="roku815px - Architecture block diagram" border={false} src="https://image.roku.com/ZHZscHItMTc2/devenvironmentarchoverview.png" title="devenvironmentarchoverview" />
 
 The diagram above provides a high-level overview of the main system
 components for the Roku Streaming Player platform. Developer
@@ -42,10 +39,10 @@ capabilities such as networking, video playback, user interface, and
 data management. The objects in the Roku SDK are divided into two
 primary areas:
 
-  - Core Objects – Fundamental objects that exist on all Roku platforms
-    and are device independent
-  - Platform Objects – Objects unique to a specific platform, such as
-    the Roku Streaming Player
+* Core Objects – Fundamental objects that exist on all Roku platforms
+  and are device independent
+* Platform Objects – Objects unique to a specific platform, such as
+  the Roku Streaming Player
 
 Developing an application for the Roku Streaming Player consists of
 writing a BrightScript application, packaging the application and
@@ -60,17 +57,17 @@ returned to the user interface "shell".
 
 User interface functionality available in the SDK includes:
 
-  - Top-Level Menu (Launch screen for applications with logo art)
-  - Poster Screen (Horizontally scrolling list of shows with poster art)
-  - Springboard (Detail screen with options for displaying individual shows)
-  - Video Player Screen (Video playback support with progress bar and trick mode support)
-  - PIN Entry Screen (User entry of PIN for purchase/rental verification)
-  - Message/Error Dialog (Dialog for display of errors and other user messages)
-  - Filter Widget (Selection widget for filtering content display by type)
-  - Rendezvous/Code Registration Screen (Display/validate registration codes)
-  - Username/Password Registration Screen
-  - Text Screen ( Display formatted text to the user and allow selection of options)
-  - Search Screen (Keyword based search with progressive disclosure of results)
+* Top-Level Menu (Launch screen for applications with logo art)
+* Poster Screen (Horizontally scrolling list of shows with poster art)
+* Springboard (Detail screen with options for displaying individual shows)
+* Video Player Screen (Video playback support with progress bar and trick mode support)
+* PIN Entry Screen (User entry of PIN for purchase/rental verification)
+* Message/Error Dialog (Dialog for display of errors and other user messages)
+* Filter Widget (Selection widget for filtering content display by type)
+* Rendezvous/Code Registration Screen (Display/validate registration codes)
+* Username/Password Registration Screen
+* Text Screen ( Display formatted text to the user and allow selection of options)
+* Search Screen (Keyword based search with progressive disclosure of results)
 
 Detailed information on all these screens can be found in
 the [BrightScript Component reference](doc:component-architecture).
@@ -82,13 +79,13 @@ The user interface has been designed to support both High Definition
 player starts in SD mode, but allows the user the option to specify
 their display preferences. Display preferences are handled globally for
 all applications by selecting the "display type" option in
-"settings".   
+"settings".
 
 There are three possible modes:
 
-  - 4:3 standard-definition (480i/p)
-  - 16:9 anamorphic widescreen (480i/p)
-  - HDTV (720p)
+* 4:3 standard-definition (480i/p)
+* 16:9 anamorphic widescreen (480i/p)
+* HDTV (720p)
 
 The SDK UI objects are SD/HD aware and will automatically display in the
 correct mode. In some cases, the HD mode will allow the user to see more
@@ -141,27 +138,25 @@ The Main(aa) and RunUserInterface(aa) associative array contains the
 launched from. The values and their meanings are in the table
 below.
 
-
-| Value of "Source"                                    | Launched from                                                |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
-| "homescreen"                                         | "home" section of the main Roku app selection page       |
-| "homescreen-menu"                                    | Launched from a left-hand menu other than Featured Free or Roku Search |
-| "ad"                                                 | Banner ads (for example, a home screen ad, mini ad, or screensaver ad) |
-| "ad:screensaver" | Roku screensaver ad. This is an ad that is displayed within the Roku system screensaver. |
-| "ad:homelist"    | Roku mini ad. This is an ad that appears below the left-hand navigation menu on the home screen. |
-| "external-control"                                   | ECP protocol (typically from the Deep Link tester or Roku mobile app) |
-| "partner-button"                                     | partner button on the Roku remote                            |
-| "other-channel"                                      | another app on the Roku device                           |
-| "auto-run-dev"                                       | sideloaded developer app                                 |
-| "debug-server"                                       | debug server on port 8080.                                   |
-| "purchase-dialog"                                    | Purchase dialog in the Streaming Store                         |
-| "hs-search"                                          | Roku Search                                                  |
-| "voice-search"                                       | Roku Voice search command ([Visual Search Results For Roku Voice](doc:roku-search); for example, "Weird") |
-| "voice-command"                                      | Roku Voice command ([Direct-to-Play](doc:overview); for example, "Play Weird") |
-| "dial"                                               | DIAL protocol                                                |
-| "hs-d"                                               | launched from Featured Free page                             |
-| "channel-store"                                      | Tile for app or associated content selected from Streaming Store. |
-
+| Value of "Source"  | Launched from                                                                                                                                          |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "homescreen"       | "home" section of the main Roku app selection page                                                                                                     |
+| "homescreen-menu"  | Launched from a left-hand menu other than Featured Free or Roku Search                                                                                 |
+| "ad"               | Banner ads (for example, a home screen ad, mini ad, or screensaver ad)                                                                                 |
+| "ad:screensaver"   | Roku screensaver ad. This is an ad that is displayed within the Roku system screensaver.                                                               |
+| "ad:homelist"      | Roku mini ad. This is an ad that appears below the left-hand navigation menu on the home screen.                                                       |
+| "external-control" | ECP protocol (typically from the Deep Link tester or Roku mobile app)                                                                                  |
+| "partner-button"   | partner button on the Roku remote                                                                                                                      |
+| "other-channel"    | another app on the Roku device                                                                                                                         |
+| "auto-run-dev"     | sideloaded developer app                                                                                                                               |
+| "debug-server"     | debug server on port 8080.                                                                                                                             |
+| "purchase-dialog"  | Purchase dialog in the Streaming Store                                                                                                                 |
+| "hs-search"        | Roku Search                                                                                                                                            |
+| "voice-search"     | Roku Voice search command ([Visual Search Results For Roku Voice](doc:implementing-search#visual-search-results-for-roku-voice); for example, "Weird") |
+| "voice-command"    | Roku Voice command ([Direct-to-Play](doc:direct-to-play); for example, "Play Weird")                                                                   |
+| "dial"             | DIAL protocol                                                                                                                                          |
+| "hs-d"             | launched from Featured Free page                                                                                                                       |
+| "channel-store"    | Tile for app or associated content selected from Streaming Store.                                                                                      |
 
 ### "lastExitOrTerminationReason" parameter
 
@@ -171,41 +166,41 @@ Exit codes do not persist across system reboots and system resumptions. The last
 
 > The Roku OS may add additional exit codes in the future. Any code or tooling that processes exit codes should handle unrecognized codes robustly.
 
-| Exit Code                  | Description                                                  |
-| :------------------------- | :----------------------------------------------------------- |
+| Exit Code                  | Description                                                                                                                                                                                                                  |
+| :------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | EXIT_UNKNOWN               | The default exit code if there was no prior exit (for example, the inital app launch after system boot) or no unusual exit reason noted (for example, a scenario other than a BrightScript crash or system resources issue). |
-| EXIT_POWER_MODE            | The app was exited by the system due to the device being powered off by the user (or by user-scheduled power off). |
-| EXIT_DIAL_DELETE           | The app was exited due to the system receiving a DIAL command (for example from a second screen app controlling the app). |
-| EXIT_OUT_OF_MEMORY         | The app was exited due to the system being under low memory conditions. |
-| EXIT_IDLE_AUTO_EXIT        | The app was exited by the system after being detected as idle for a prolonged period of time, per the system policy and/or user settings. |
-| EXIT_BRIGHTSCRIPT_CRASH    | The app was exited due to a BrightScript crash.              |
-| EXIT_BRIGHTSCRIPT_STOP     | The app was exited due to a BrightScript STOP command when running in production mode (non-developer sideloaded). The system treats this the same as a BrightScript runtime error. |
-| EXIT_BRIGHTSCRIPT_UNK_FUNC | The app was exited by the system due to an runtime function resolution error. |
-| EXIT_BRIGHTSCRIPT_TIMEOUT  | The app was exited due to a BrightScript execution timeout error. A timeout error indicates that the app user interface was unresponsive for a prolonged period of time, such as a program lock-up. |
-| EXIT_USER_KILL             | The app was exited due to either due to user shutdown (for example, from App Options) or by the system due to re-installation, re-configuration, or other shutdown. |
-| EXIT_USER_NAV              | The app was exited by user navigation (such as the Home key or using Back to exit the app). |
-| EXIT_AM_LOWRESOURCE        | The app was exited by the system due to low system resources. This typically applies to background apps only. |
-| EXIT_SYSTEM_KILL           | A default exit code used in case of internal system error during app exit. This should not appear in normal usage. |
-| EXIT_GRAPHICS_NOT_RELEASED | A system error occurred while suspending an app related to system graphics resources. This should not appear in normal usage. |
-| EXIT_DECODER_NOT_RELEASED  | A system error occurred while suspending an app related to system video resources. This should not appear in normal usage. |
-| EXIT_RUNNING_AFTER_SUSPEND | A system error occurred while suspending an app. This should not appear in normal usage. |
-| EXIT_NOT_RESUMED           | A system error occurred while resuming an app. This should not appear in normal usage. |
-| EXIT_SIGNAL_TIMEOUT        | A system error occurred while suspending or resuming an app. This should not appear in normal usage. |
-| EXIT_APP_ERROR             | A default exit code used in case of internal system error in app tracking. This should not appear in normal usage. |
-| EXIT_UNLOADED              | The app was exited due to the system offloading it due to low storage. This would typically apply only to background apps. |
-| EXIT_GUEST_MODE_ENABLED    | The app was exited by the system due to the user enabling Guest Mode on the device. |
-| EXIT_GUEST_MODE_DISABLED   | The app was exited by the system due to the user disabling Guest Mode on the device. |
-| EXIT_GUEST_CHECKOUT        | The app was exited by the system due to the user exiting Guest Mode on the device. |
-| EXIT_OS_UPDATE             | The app was exited by the system while applying a system update. |
-| EXIT_CHANNEL_UPDATE        | The app was exited by the system while applying an app update. |
-| EXIT_CHANNEL_SIDELOAD      | The app was exited due to the user installing a sideloaded app. |
-| EXIT_CHANNEL_RESTART       | The app was exited due to an app-initiated restart. This is typically a reserved function in the system. |
-| EXIT_TILE_HIDDEN           | The app was exited due to the user hiding the Soundbar tile on a Roku TV. |
-| EXIT_SETTINGS_UPDATE       | The app was exited by the system due to a device settings update (for exampe, a theme or resolution change that required restart). |
-| EXIT_CHANNEL_MEM_LIMIT_FG  | The app was exited by the system because it exceeded its memory limit while running in the foreground. |
-| EXIT_CHANNEL_MEM_LIMIT_BG  | The app was exited by the system because it exceeded its memory limit while running in the background. |
-| EXIT_ADDON_DEPENDENCY      | The app was exited by the system while applying a system dependency update. This should only apply while running in the background. |
-| EXIT_SOFTFAIL              | The app was exited by the system because of an incompatibility with the runtime environment. In this case, the system may restart the app automatically after resolving the issue. |
+| EXIT_POWER_MODE            | The app was exited by the system due to the device being powered off by the user (or by user-scheduled power off).                                                                                                           |
+| EXIT_DIAL_DELETE           | The app was exited due to the system receiving a DIAL command (for example from a second screen app controlling the app).                                                                                                    |
+| EXIT_OUT_OF_MEMORY         | The app was exited due to the system being under low memory conditions.                                                                                                                                                      |
+| EXIT_IDLE_AUTO_EXIT        | The app was exited by the system after being detected as idle for a prolonged period of time, per the system policy and/or user settings.                                                                                    |
+| EXIT_BRIGHTSCRIPT_CRASH    | The app was exited due to a BrightScript crash.                                                                                                                                                                              |
+| EXIT_BRIGHTSCRIPT_STOP     | The app was exited due to a BrightScript STOP command when running in production mode (non-developer sideloaded). The system treats this the same as a BrightScript runtime error.                                           |
+| EXIT_BRIGHTSCRIPT_UNK_FUNC | The app was exited by the system due to an runtime function resolution error.                                                                                                                                                |
+| EXIT_BRIGHTSCRIPT_TIMEOUT  | The app was exited due to a BrightScript execution timeout error. A timeout error indicates that the app user interface was unresponsive for a prolonged period of time, such as a program lock-up.                          |
+| EXIT_USER_KILL             | The app was exited due to either due to user shutdown (for example, from App Options) or by the system due to re-installation, re-configuration, or other shutdown.                                                          |
+| EXIT_USER_NAV              | The app was exited by user navigation (such as the Home key or using Back to exit the app).                                                                                                                                  |
+| EXIT_AM_LOWRESOURCE        | The app was exited by the system due to low system resources. This typically applies to background apps only.                                                                                                                |
+| EXIT_SYSTEM_KILL           | A default exit code used in case of internal system error during app exit. This should not appear in normal usage.                                                                                                           |
+| EXIT_GRAPHICS_NOT_RELEASED | A system error occurred while suspending an app related to system graphics resources. This should not appear in normal usage.                                                                                                |
+| EXIT_DECODER_NOT_RELEASED  | A system error occurred while suspending an app related to system video resources. This should not appear in normal usage.                                                                                                   |
+| EXIT_RUNNING_AFTER_SUSPEND | A system error occurred while suspending an app. This should not appear in normal usage.                                                                                                                                     |
+| EXIT_NOT_RESUMED           | A system error occurred while resuming an app. This should not appear in normal usage.                                                                                                                                       |
+| EXIT_SIGNAL_TIMEOUT        | A system error occurred while suspending or resuming an app. This should not appear in normal usage.                                                                                                                         |
+| EXIT_APP_ERROR             | A default exit code used in case of internal system error in app tracking. This should not appear in normal usage.                                                                                                           |
+| EXIT_UNLOADED              | The app was exited due to the system offloading it due to low storage. This would typically apply only to background apps.                                                                                                   |
+| EXIT_GUEST_MODE_ENABLED    | The app was exited by the system due to the user enabling Guest Mode on the device.                                                                                                                                          |
+| EXIT_GUEST_MODE_DISABLED   | The app was exited by the system due to the user disabling Guest Mode on the device.                                                                                                                                         |
+| EXIT_GUEST_CHECKOUT        | The app was exited by the system due to the user exiting Guest Mode on the device.                                                                                                                                           |
+| EXIT_OS_UPDATE             | The app was exited by the system while applying a system update.                                                                                                                                                             |
+| EXIT_CHANNEL_UPDATE        | The app was exited by the system while applying an app update.                                                                                                                                                               |
+| EXIT_CHANNEL_SIDELOAD      | The app was exited due to the user installing a sideloaded app.                                                                                                                                                              |
+| EXIT_CHANNEL_RESTART       | The app was exited due to an app-initiated restart. This is typically a reserved function in the system.                                                                                                                     |
+| EXIT_TILE_HIDDEN           | The app was exited due to the user hiding the Soundbar tile on a Roku TV.                                                                                                                                                    |
+| EXIT_SETTINGS_UPDATE       | The app was exited by the system due to a device settings update (for exampe, a theme or resolution change that required restart).                                                                                           |
+| EXIT_CHANNEL_MEM_LIMIT_FG  | The app was exited by the system because it exceeded its memory limit while running in the foreground.                                                                                                                       |
+| EXIT_CHANNEL_MEM_LIMIT_BG  | The app was exited by the system because it exceeded its memory limit while running in the background.                                                                                                                       |
+| EXIT_ADDON_DEPENDENCY      | The app was exited by the system while applying a system dependency update. This should only apply while running in the background.                                                                                          |
+| EXIT_SOFTFAIL              | The app was exited by the system because of an incompatibility with the runtime environment. In this case, the system may restart the app automatically after resolving the issue.                                           |
 
 ### Sub RunScreenSaver()
 
@@ -243,12 +238,12 @@ be customized to provide a unique, developer specific look-and-feel.
 Customization is currently focused on "re-skinning" the application and
 supports the following types of changes:
 
-  - Add an application specific image to the top-level menu
-  - Change the text to be displayed on the main menu to identify the application
-  - Change the application logo to be displayed in the header area for the screen
-  - Change the artwork used on the "overhang" or header area for the screen
-  - Change the background color for the screen
-  - Change the colors used for font rendering on text, buttons, and screens
+* Add an application specific image to the top-level menu
+* Change the text to be displayed on the main menu to identify the application
+* Change the application logo to be displayed in the header area for the screen
+* Change the artwork used on the "overhang" or header area for the screen
+* Change the background color for the screen
+* Change the colors used for font rendering on text, buttons, and screens
 
 Within the application the developer is free to combine the available
 screen types and controls as needed to implement their application. The

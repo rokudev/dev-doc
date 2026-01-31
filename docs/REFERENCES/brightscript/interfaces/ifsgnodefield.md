@@ -1,5 +1,5 @@
 ---
-title: "ifSGNodeField"
+title: ifSGNodeField
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,16 +10,13 @@ metadata:
 next:
   description: ''
 ---
-
-
 The ifSGNodeField interface allows querying, getting, setting, and performing other similar manipulation operations on Scene Graph node fields. This interface also allows you to set and unset event observers on a subject node field.
 
 ## Implemented by
 
-| Name     | Description                                                                             |
-| -------- | --------------------------------------------------------------------------------------- |
+| Name                     | Description                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------- |
 | [roSGNode](doc:rosgnode) | The roSGNode object is the BrightScript equivalent of SceneGraph XML file node creation |
-
 
 ## Supported methods
 
@@ -31,8 +28,8 @@ Checks whether a field exists in the node.
 
 #### Parameters
 
-| Name      | Type   | Description                                                  |
-| --------- | ------ | ------------------------------------------------------------ |
+| Name      | Type   | Description                                                            |
+| --------- | ------ | ---------------------------------------------------------------------- |
 | fieldName | String | The name of the field to be checked for whether it exists in the node. |
 
 #### Return Value
@@ -65,8 +62,8 @@ Returns the names and types of all the fields in the node.
 
 An roAssociativeArray containing key-value pairs with the element names and types.
 
-| Name          | Return Type | Return Value       | Description                                                  |
-| ------------- | ----------- | ------------------ | ------------------------------------------------------------ |
+| Name          | Return Type | Return Value       | Description                                                                                                                       |
+| ------------- | ----------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | getFieldTypes | Object      | roAssociatve Array | Returns an roAssociativeArray for the subject node containing key-value pairs with the field names and field types, respectively. |
 
 ### getField(fieldName as String) as Object
@@ -116,7 +113,7 @@ You can also use the node.field syntax to get the same result as setField(). Spe
 
 A flag indicating whether the field was successfully updated.
 
-*Since Roku OS 9.3*, `observeField()` and `observeFieldScoped()` methods include an optional `infoFields` parameter, which is an array of field names.  Generally, these should be relevant fields in the same object being observed, which are necessary to give context to the field that triggered the field change event. The triggered event object itself will provide a `getInfo()` method, which returns an AA that contains the names and instantaneous values of the requested "context" fields at the point when the observed field changed. For example, use of `videoNode.observeField("position", m.port, ["clipId", "programId"])` to set up an observer for `position` would later allow the call `extraInfo = msg.GetInfo()` to retrieve requested "context" information, given that `msg` is the relevant roSGNodeEvent indicating that `position` has changed. The contents of `extraInfo` would resemble `&#123;"clipid": 1, "programid": 0&#125;`.
+_Since Roku OS 9.3_, `observeField()` and `observeFieldScoped()` methods include an optional `infoFields` parameter, which is an array of field names.  Generally, these should be relevant fields in the same object being observed, which are necessary to give context to the field that triggered the field change event. The triggered event object itself will provide a `getInfo()` method, which returns an AA that contains the names and instantaneous values of the requested "context" fields at the point when the observed field changed. For example, use of `videoNode.observeField("position", m.port, ["clipId", "programId"])` to set up an observer for `position` would later allow the call `extraInfo = msg.GetInfo()` to retrieve requested "context" information, given that `msg` is the relevant roSGNodeEvent indicating that `position` has changed. The contents of `extraInfo` would resemble `{"clipid": 1, "programid": 0}`.
 
 ### setFields(fields as Object) as Boolean
 
@@ -128,8 +125,8 @@ Sets the values for one or more fields.
 
 #### Parameters
 
-| Name   | Type   | Description                                                  |
-| ------ | ------ | ------------------------------------------------------------ |
+| Name   | Type   | Description                                                                    |
+| ------ | ------ | ------------------------------------------------------------------------------ |
 | fields | Object | An roAssociativeArray containing key-value pairs for the fields to be updated. |
 
 #### Return Value
@@ -144,34 +141,35 @@ Adds a field with the specified name and type to the subject node. The added fie
 
 #### Parameters
 
-
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>fieldName</td>
-<td>String</td>
-<td>The name of the field to be added.</td>
-</tr>
-<tr>
-<td>type</td>
-<td>String</td>
-<td>The type of the field to be added.<br /><br />Type declarations must be lowercase or the field will not be added to the node. For example, declaring "Boolean" as the type will prevent the field from being added.</td>
-</tr>
-<tr>
-<td>alwayNotify</td>
-<td>Boolean</td>
-<td>Specifies whether observers of the field are triggered when the field value is updated to the same or new value (true), or only when the field changes to a new value (false).</td>
-</tr>
-</tbody>
-</table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <tr>
+      <td>fieldName</td>
+      <td>String</td>
+      <td>The name of the field to be added.</td>
+    </tr>
+
+    <tr>
+      <td>type</td>
+      <td>String</td>
+      <td>The type of the field to be added.<br /><br />Type declarations must be lowercase or the field will not be added to the node. For example, declaring "Boolean" as the type will prevent the field from being added.</td>
+    </tr>
+
+    <tr>
+      <td>alwayNotify</td>
+      <td>Boolean</td>
+      <td>Specifies whether observers of the field are triggered when the field value is updated to the same or new value (true), or only when the field changes to a new value (false).</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Return Value
 
@@ -185,8 +183,8 @@ Adds the field(s) and corresponding field value(s) defined as key-value pair(s) 
 
 #### Parameters
 
-| Name   | Type   | Description                                                  |
-| ------ | ------ | ------------------------------------------------------------ |
+| Name   | Type   | Description                                                                  |
+| ------ | ------ | ---------------------------------------------------------------------------- |
 | fields | Object | An roAssociativeArray containing key-value pairs for the fields to be added. |
 
 #### Return Value
@@ -227,11 +225,11 @@ From this message in the callback function, you can get the node ID, the field n
 
 #### Parameters
 
-| Name         | Type   | Description                                                  |
-| ------------ | ------ | ------------------------------------------------------------ |
-| fieldName    | String | The name of the field to be monitored.                       |
-| functionName | String | The name of the method to be executed when the value of the field   changes. |
-| infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
+| Name         | Type                  | Description                                                                                              |
+| ------------ | --------------------- | -------------------------------------------------------------------------------------------------------- |
+| fieldName    | String                | The name of the field to be monitored.                                                                   |
+| functionName | String                | The name of the method to be executed when the value of the field   changes.                             |
+| infoFields   | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
 
 #### Return Value
 
@@ -243,19 +241,19 @@ A flag indicating whether this operation was successful.
 
 This overloaded form sends an [roSGNodeEvent](doc:rosgnode) message to the [roMessagePort](doc:romessageport) identified by port when the subject node field identified by fieldName changes value.
 
-- Running GetNode() on the message retrieves the ID of the node that changed.
-- Running GetField() on the message gets the name of the field that changed.
-- Running GetData() on the message gets the new field value at the time of the change.
+* Running GetNode() on the message retrieves the ID of the node that changed.
+* Running GetField() on the message gets the name of the field that changed.
+* Running GetData() on the message gets the new field value at the time of the change.
 
 This allows other threads to react to field changes, and avoids missing a value when the field changes twice before the message handler is able to receive the [roSGNodeEvent](doc:rosgnode) messages.
 
 #### Parameters
 
-| Name      | Type   | Description                                                  |
-| --------- | ------ | ------------------------------------------------------------ |
-| fieldName | String | The name of the field to be monitored.                       |
-| port      | Object | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
-| infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
+| Name       | Type                  | Description                                                                                                                    |
+| ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| fieldName  | String                | The name of the field to be monitored.                                                                                         |
+| port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
+| infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes.                       |
 
 #### Return Value
 
@@ -289,10 +287,10 @@ The callback will be on the thread that owns the observed node. This is usually 
 
 #### Parameters
 
-| Name         | Type                  | Description                                                  |
-| ------------ | --------------------- | ------------------------------------------------------------ |
-| fieldName    | String                | The name of the field to be monitored.                       |
-| functionName | String                | The name of the method to be executed when the value of the field   changes. |
+| Name         | Type                  | Description                                                                                              |
+| ------------ | --------------------- | -------------------------------------------------------------------------------------------------------- |
+| fieldName    | String                | The name of the field to be monitored.                                                                   |
+| functionName | String                | The name of the method to be executed when the value of the field   changes.                             |
 | infoFields   | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
 
 #### Return Value
@@ -313,11 +311,11 @@ The message will be received on the thread that owns the port. This is either a 
 
 #### Parameters
 
-| Name       | Type                  | Description                                                  |
-| ---------- | --------------------- | ------------------------------------------------------------ |
-| fieldName  | String                | The name of the field to be monitored.                       |
+| Name       | Type                  | Description                                                                                                                    |
+| ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| fieldName  | String                | The name of the field to be monitored.                                                                                         |
 | port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
-| infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
+| infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes.                       |
 
 #### Return Value
 
@@ -325,7 +323,7 @@ A flag indicating whether this operation was successful.
 
 ### observeFieldScopedEx(fieldName as String, port as Object[, infoFields as Object]) as Boolean
 
-*Available since Roku OS 12.0*
+_Available since Roku OS 12.0_
 
 #### Description
 
@@ -337,11 +335,11 @@ The message will be received on the thread that owns the port. This is either a 
 
 #### Parameters
 
-| Name       | Type                  | Description                                                  |
-| ---------- | --------------------- | ------------------------------------------------------------ |
-| fieldName  | String                | The name of the field to be monitored.                       |
+| Name       | Type                  | Description                                                                                                                    |
+| ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| fieldName  | String                | The name of the field to be monitored.                                                                                         |
 | port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
-| infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
+| infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes.                       |
 
 #### Return Value
 
@@ -389,7 +387,7 @@ A flag indicating the current state of **queueNode**.
 
 ### moveIntoField(field_name as String, data as Object) as Integer
 
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 #### Description
 
@@ -401,10 +399,10 @@ If the source object has any nested objects with external references, those nest
 
 #### Parameters
 
-| **Name**   | **Type** | **Description**                                              |
-| :--------- | :------- | :----------------------------------------------------------- |
+| **Name**   | **Type** | **Description**                                                                              |
+| :--------- | :------- | :------------------------------------------------------------------------------------------- |
 | field_name | String   | The target field (an associativeArray) of the node where you want to move the source object. |
-| data       | Object   | The source object to be moved.                               |
+| data       | Object   | The source object to be moved.                                                               |
 
 #### Return Value
 
@@ -416,7 +414,7 @@ The number of nested objects within an object that were copied, rather than move
 ' Can be on Task thread or render thread
   n = CreateObject("roSGNode", "Node")
   n.AddField("aa_field", "assocarray", true)
-  my_aa = &#123; key: "value" &#125;
+  my_aa = {key: "value"}
   n.MoveIntoField("aa_field", my_aa)
   ? n.aa_field
   ? my_aa
@@ -426,30 +424,30 @@ This code will output the following on the port 8085 console:
 
 ```
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 <Component: roAssociativeArray> =
-&#123;
-&#125;
+{
+}
 ```
 
 > **Performance improvement**
 >
-> Using the **MoveIntoField()** and **MoveFromField()** functions is significantly faster than standard field copy operations (`node.field = value`, `Update`, `AddFields`, and so on). This is because the data is *moved* and no copies are used (unless external references are present).
+> Using the **MoveIntoField()** and **MoveFromField()** functions is significantly faster than standard field copy operations (`node.field = value`, `Update`, `AddFields`, and so on). This is because the data is _moved_ and no copies are used (unless external references are present).
 
 ### moveFromField(field_name as String) as Object
 
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
-Moves data *out* of a field. The field must be of type *assocarray*. 
+Moves data _out_ of a field. The field must be of type _assocarray_.
 
 Moves an object out of an **roSGNode** field (an associative array). If the source field is not an associative array, the call fails. When the move succeeds, the source field is empty after the call. This function may be called from any thread.
 
 #### Parameters
 
-| **Name**   | **Type** | **Description**                                              |
-| :--------- | :------- | :----------------------------------------------------------- |
+| **Name**   | **Type** | **Description**                                                   |
+| :--------- | :------- | :---------------------------------------------------------------- |
 | field_name | String   | The source field that contains the associative array to be moved. |
 
 #### Return Value
@@ -461,18 +459,18 @@ The associative array that was moved from the source field.
 ```
 n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
-n.aa_field = &#123; key: "value"&#125;' or use moveIntoField()
+n.aa_field = {key: "value"}' or use moveIntoField()
 my_aa = n.MoveFromField("aa_field") 
 ? n.aa_field ' invalid
 ? my_aa ' contents of aa_field
 ```
 
-> **Moving data - when it copies instead** 
+> **Moving data - when it copies instead**
 >
-> The *move* operations (`PostMessage` and `MoveIntoField`) remove the contents from the source object and moves it across to the destination. This clears out the source object. For example:
+> The _move_ operations (`PostMessage` and `MoveIntoField`) remove the contents from the source object and moves it across to the destination. This clears out the source object. For example:
 >
 > ```
-> aa = &#123;foo: "hello", bar: [1, 2, 3]&#125;
+> aa = {foo: "hello", bar: [1, 2, 3]}
 > node.moveIntoField("myfield", aa)
 > ? aa           ' Prints an empty AA
 > ```
@@ -483,7 +481,7 @@ my_aa = n.MoveFromField("aa_field")
 >
 > ```
 > sub_array = [1, 2, 3]
-> aa = &#123;foo: "hello", bar: sub_array&#125;
+> aa = {foo: "hello", bar: sub_array}
 > ' At this point, there is an external reference into aa
 > node.moveIntoField("myfield", aa)
 > ? aa           ' Prints an empty AA
@@ -492,22 +490,22 @@ my_aa = n.MoveFromField("aa_field")
 
 ### setRef(field_name as String, data as Object)
 
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 #### Description
 
-Assigns an associative array to the field of a **roSGNode** via reference. This avoids the expense of copying when directly assigning a field to the value.  
+Assigns an associative array to the field of a **roSGNode** via reference. This avoids the expense of copying when directly assigning a field to the value.
 
-This function may only be called on the render thread. 
+This function may only be called on the render thread.
 
 Field observers are not notified when this function is called.
 
 #### Parameters
 
-| **Name**   | **Type** | **Description**                                              |
-| :--------- | :------- | :----------------------------------------------------------- |
+| **Name**   | **Type** | **Description**                                                    |
+| :--------- | :------- | :----------------------------------------------------------------- |
 | field_name | String   | The name of the node's field to be assigned the associative array. |
-| data       | Object   | The associative array to be referenced by the field.         |
+| data       | Object   | The associative array to be referenced by the field.               |
 
 #### Return Value
 
@@ -515,11 +513,11 @@ This function returns true if successful; otherwise it return false, indicating 
 
 ### canGetRef(field_name as String) as Boolean
 
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 #### Description
 
-Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previoulsy been called on the **field_name**. 
+Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previoulsy been called on the **field_name**.
 
 The specified **field_name** must be an associative array, and it must have previously been given a value via **SetRef()**.
 
@@ -531,7 +529,7 @@ This function returns true if the call to the **GetRef()** function will succeed
 
 ### getRef(field_name as String) as Object
 
-*Available since Roku OS 15.0*
+_Available since Roku OS 15.0_
 
 #### Description
 
@@ -547,7 +545,7 @@ The **GetRef()** function may only be called on the render thread. This function
 
 #### Return Value
 
-This function returns true a reference to the field’s value. This function returns  `<invalid>` if accessing the field via reference is not valid. 
+This function returns true a reference to the field’s value. This function returns  `<invalid>` if accessing the field via reference is not valid.
 
 #### Example
 
@@ -555,7 +553,7 @@ This function returns true a reference to the field’s value. This function ret
 ' on render thread:
     n = CreateObject("roSGNode", "Node")
     n.AddField("aa_field", "assocarray", true)
-    my_aa = &#123; key: "value" &#125;
+    my_aa = {key: "value"}
     n.setRef("aa_field", my_aa)
     ? n.aa_field
     ? my_aa
@@ -567,17 +565,17 @@ This code will output the following on the port 8085 console:
 
 ```
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 <Component: roAssociativeArray> =
-&#123;
+{
     key: "value"
-&#125;
+}
 
 ```
 
@@ -590,15 +588,15 @@ A runtime debugging method for helping minimize Rendezvous spread.  This method 
 The following example demonstrates the information returned by this method:
 
 ```
-&#123;   node: &#123; type: "XXComponent",          
+{   node: { type: "XXComponent",          
     id: "XXID",          
     address: 0x123XXX,          
     willRendezvousFromCurrentThread: "Yes",          
-    owningThread: &#123; type: "Render", name: "newMainScene", id:"123456" &#125;        
-&#125;,
-    currentThread: &#123; type: "Task",   name: "conviva",     id: "234567" &#125;,    
-    renderThread: &#123; type: "Render", name: "newMainScene", id: "123456" &#125;
-&#125;
+    owningThread: { type: "Render", name: "newMainScene", id:"123456" }      
+},
+    currentThread: {type: "Task",   name: "conviva",     id: "234567" },    
+    renderThread: { type: "Render", name: "newMainScene", id: "123456" }
+}
 ```
 
 > Do not call this method from within function main() or any function called by function main()
@@ -607,16 +605,16 @@ The following example demonstrates the information returned by this method:
 
 An roAssociativeArray with the following information:
 
-- What is calling a thread function is being called from.
-- On which component's behalf (what m.top) the current function is executing.
-- The thread ownership of the node in question.
-- Whether or not access to the node from the current thread would cause a rendezvous.
+* What is calling a thread function is being called from.
+* On which component's behalf (what m.top) the current function is executing.
+* The thread ownership of the node in question.
+* Whether or not access to the node from the current thread would cause a rendezvous.
 
 ### signalBeacon(beacon As String) As Integer
 
 #### Description
 
-Signals start and/or stop points for measuring app launch and Electronic Program Grid (EPG) launch times.                                                                                                                     
+Signals start and/or stop points for measuring app launch and Electronic Program Grid (EPG) launch times.
 
 To pass certification, an app must finish launching within the time specified in the [certification performance requirements](doc:certification). The Roku OS automatically fires an **AppLaunchInitiate** event to mark when the user presses the OK button to launch an app from the Roku home screen. The app, however, must fire the corresponding `AppLaunchComplete` to mark when the app home page is fully rendered or when video playback starts after handling a [deep link](doc:ifsgnodefield) and the app can respond to commands sent via the remote control.
 
@@ -630,30 +628,30 @@ myEPGComponent.signalBeacon(“EPGLaunchInitiate”)
 m.top.signalBeacon(“EPGLaunchComplete”)`
 ```
 
->Only the first sequence of EPG launch beacons is recorded.  If a user launches the EPG more than once while the app is running, a warning message is output to the debug console. This warning message, which acknowledges the receipt of the beacon while notifying that subsequent ones will not be recorded, may be ignored.
+> Only the first sequence of EPG launch beacons is recorded.  If a user launches the EPG more than once while the app is running, a warning message is output to the debug console. This warning message, which acknowledges the receipt of the beacon while notifying that subsequent ones will not be recorded, may be ignored.
 >
->Only EPG launch sequences that start within 5 seconds of the `AppLaunchComplete` event being fired qualify as a valid measurements for certification. EPG launch sequences fired after the 5-second window are still recorded so that app performance can be compared against requirements.
+> Only EPG launch sequences that start within 5 seconds of the `AppLaunchComplete` event being fired qualify as a valid measurements for certification. EPG launch sequences fired after the 5-second window are still recorded so that app performance can be compared against requirements.
 
 The following table summarizes when to fire the `AppLaunchComplete`, `AppDialogInitiate/AppDialogComplete`,  and `EPGLauchInitiate`/`EPGLauchComplete` beacons and when their timestamps are recorded:
 
-| Launch Event      | **Placement**                                                | **Timestamping**                                             |
-| ---------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| AppLaunchComplete | When the app home page is fully rendered, or when video playback starts and the app can responds to commands sent via the remote control (if your app is launched to direct playback).The system automatically fires an AppLaunchInitiated beacon to marks when your app is initially launched. | The first render pass completes after the stop point has been signaled. |
-| AppDialogInitiate | Before signaling AppLaunchComplete, when the app enters a login dialog, user selection screen, network error dialog or any other dialog/screen where the app waits for user input. | The dialog is fully displayed and ready for user interaction. |
-| AppDialogComplete | The app exits the last dialog before the home screen is rendered. | The user dismisses the dialog or a timeout occurs that forces the dialog to exit. |
-| EPGLaunchInitiate | Where your app initiates the display of the app guide.   | The last keypress before the start beacon was signaled. If there was no prior keypress, the start beacon signal time. |
-| EPGLaunchComplete | Where the app guide is fully rendered and operational.   | The first render pass completes after the stop point has been signaled. |
+| Launch Event      | **Placement**                                                                                                                                                                                                                                                                                   | **Timestamping**                                                                                                      |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| AppLaunchComplete | When the app home page is fully rendered, or when video playback starts and the app can responds to commands sent via the remote control (if your app is launched to direct playback).The system automatically fires an AppLaunchInitiated beacon to marks when your app is initially launched. | The first render pass completes after the stop point has been signaled.                                               |
+| AppDialogInitiate | Before signaling AppLaunchComplete, when the app enters a login dialog, user selection screen, network error dialog or any other dialog/screen where the app waits for user input.                                                                                                              | The dialog is fully displayed and ready for user interaction.                                                         |
+| AppDialogComplete | The app exits the last dialog before the home screen is rendered.                                                                                                                                                                                                                               | The user dismisses the dialog or a timeout occurs that forces the dialog to exit.                                     |
+| EPGLaunchInitiate | Where your app initiates the display of the app guide.                                                                                                                                                                                                                                          | The last keypress before the start beacon was signaled. If there was no prior keypress, the start beacon signal time. |
+| EPGLaunchComplete | Where the app guide is fully rendered and operational.                                                                                                                                                                                                                                          | The first render pass completes after the stop point has been signaled.                                               |
 
 #### Return Value
 
 When you fire a launch event, the system will return an integer indicating the result of its signaling:
 
-| **Return Code** | **Description**  |                                                              |
-| -------------- | --------------- | ------------------------------------------------------------ |
-| 0               | Success          | The event was successfully signaled.                         |
-| 1               | Not Ready        | The event cannot be fired until after the AppLaunchComplete beacon has been completed. |
-| 2               | Invalid          | An invalid string was passed into the signalBeacon function. |
-| 3               | Already Signaled | An event that can only be fired once (AppLaunchComplete) was signaled again. |
+| **Return Code** | **Description**  |                                                                                                                                                |
+| --------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0               | Success          | The event was successfully signaled.                                                                                                           |
+| 1               | Not Ready        | The event cannot be fired until after the AppLaunchComplete beacon has been completed.                                                         |
+| 2               | Invalid          | An invalid string was passed into the signalBeacon function.                                                                                   |
+| 3               | Already Signaled | An event that can only be fired once (AppLaunchComplete) was signaled again.                                                                   |
 | 4               | Wrong Order      | The completion event was fired before the corresponding initiate event (for example, EPGLaunchComplete was signaled before EPGLaunchInitiate). |
 
->In addition to the app launch, dialog launch, and EPG launch times, the Roku OS automatically measures five other certification performance metrics: app compile time, video start time, live start time, channel change time, and channel exit time. You can use the [BrightScript console](doc:debugging) (port 8085) to view a report detailing your app's performance. See [Measuring app performance](doc:debugging) for more information.
+> In addition to the app launch, dialog launch, and EPG launch times, the Roku OS automatically measures five other certification performance metrics: app compile time, video start time, live start time, channel change time, and channel exit time. You can use the [BrightScript console](doc:debugging) (port 8085) to view a report detailing your app's performance. See [Measuring app performance](doc:debugging) for more information.

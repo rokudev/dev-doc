@@ -10,14 +10,13 @@ metadata:
 next:
   description: ''
 ---
-
 Continue Watching is a content category row within the **What to Watch** home screen navigation on Roku devices and on the Home screen of the Roku mobile app. It displays content from participating apps that customers have already started watching, which empowers customers with the speed and convenience of a single location from which they can resume content from different apps on any Roku device linked to their account. Publishers can integrate into this feature to make their content more accessible to customers, drive users to their apps, and increase engagement. Overall, this helps publishers promote their content in order to retain customers and reduce churn.
 
 <Image alt="roku815px - continue watching row" border={false} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png" />
 
 > The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
-> Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](doc:certification). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
+> Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](doc:certification#4-channel-operation). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 >
 > Continue Watching only supports long-form content such as movies and television episodes. Short-form content (standalone content that is 15 minutes or less that is not a movie or TV show) is not supported.
 
@@ -56,8 +55,8 @@ To get started with the Continue Watching integration, follow these steps:
 ```
    <?xml version="1.0" encoding="UTF-8" ?>
    <TokenCmdResponse>
-   <Command>Install\</Command>
-   <Response>Success\</Response>
+      <Command>Install</Command>
+      <Response>Success</Response>
    </TokenCmdResponse>
 ```
 
@@ -184,7 +183,7 @@ To add new content items and update existing ones to the Continue Watching row, 
       <td>waitForNextEpisodeAvailability</td>
       <td>Boolean</td>
       <td>Optional</td>
-      <td>This field is used for episodic content. Set it to <strong>true</strong> when an episode has been completed and the next episode has not been released yet; otherwise, set it to <strong>false</strong>.<br /><br />Roku can use this information to show the content in the Continue Watching row whenever the next episode becomes available. <br /><br />This feature requires a <a href="https://developer.roku.com/docs/specs/search/search-feed.md">search feed</a> that lists "serial" and "episode" assets.<br /><br />The following matrix demonstrates how to use this field. In this example, E1 and E2 are available, but E3 has not been released yet.<br /><h4>Example</h4><p><strong>URL</strong>:</p><ul><li>POST [https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)</li><li>POST [https://userdata.sr.roku.com/user-data/v1/profile/\\\{profileId\\}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\\\{profileId\\}/content/continueWatching) (app has a profile selection screen)</li></ul><p><strong>JSON body</strong>:</p><pre><code>\{  "items": \[    \{      "contentId": "abc123",      "episodeId": "def123",      "lastInteractionTime": 123456,      "position": 854,      "duration": 1678,      "waitForNextEpisodeAvailability": true    }  ]}</code></pre></td>
+      <td>This field is used for episodic content. Set it to <strong>true</strong> when an episode has been completed and the next episode has not been released yet; otherwise, set it to <strong>false</strong>.<br /><br />Roku can use this information to show the content in the Continue Watching row whenever the next episode becomes available. <br /><br />This feature requires a <a href="https://roku-ent.readme.io/dev/docs/search-feed">search feed</a> that lists "serial" and "episode" assets.<br /><br />The following matrix demonstrates how to use this field. In this example, E1 and E2 are available, but E3 has not been released yet.<br /><h4>Example</h4><p><strong>URL</strong>:</p><ul><li>POST [https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)</li><li>POST [https://userdata.sr.roku.com/user-data/v1/profile/\\\{profileId\\}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\\\{profileId\\}/content/continueWatching) (app has a profile selection screen)</li></ul><p><strong>JSON body</strong>:</p><pre><code>\{  "items": \[    \{      "contentId": "abc123",      "episodeId": "def123",      "lastInteractionTime": 123456,      "position": 854,      "duration": 1678,      "waitForNextEpisodeAvailability": true    }  ]}</code></pre></td>
     </tr>
 
     <tr>

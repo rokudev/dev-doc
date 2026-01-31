@@ -24,15 +24,15 @@ The video concludes by highlighting the key differences between Roku development
 
 ## Related documentation
 
-[Roku platform overview](https://developer.roku.com/docs/features/features-overview.md)
+[Roku platform overview](doc:features-overview)
 
-[Content engagement overview](https://developer.roku.com/docs/features/engagement/overview.md)
+[Content engagement overview](doc:engagement)
 
-[Roku Search](https://developer.roku.com/docs/features/engagement/roku-search.md)
+[Roku Search](doc:search)
 
-[Roku Voice](https://developer.roku.com/docs/features/voice/overview.md)
+[Roku Voice](doc:voice-controls)
 
-[Self-Serve promotions](https://developer.roku.com/docs/features/engagement/self-serve-promotions.md)
+[Self-Serve promotions](doc:self-serve-promotions)
 
 [Roku Streaming Store](https://channelstore.roku.com/)
 

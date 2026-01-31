@@ -77,7 +77,7 @@ The following chart illustrates the key differences between the two monetization
 
 ## How to effectively grow an audience
 
-Roku encourages the growth of all apps on our platform. To help enable this end goal, Roku offers a [robust promotional tool set](https://advertising.roku.com/content-publishers) to our publishers.
+Roku encourages the growth of all apps on our platform. To help enable this end goal, Roku offers a [robust promotional tool set](https://advertising.roku.com/) to our publishers.
 
 The quickest and easiest way to get started promoting your app on our platform is our [self-serve app promotion tool](https://admanager.roku.com/) tool. This tool enables publishers to purchase display ads for their app on Roku's home screen UI. For more information, visit [admanager.roku.com](https://admanager.roku.com/).
 

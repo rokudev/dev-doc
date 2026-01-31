@@ -15,10 +15,10 @@ next:
 
 | Name                                                                                                                                | Description                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| <Anchor label="roArray" title="roArray" href="/docs/references/brightscript/components/roarray.md">roArray</Anchor>                 | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type |
-| <Anchor label="roByteArray" title="roByteArray" href="/docs/references/brightscript/components/robytearray.md">roByteArray</Anchor> | The byte array component is used to contain and manipulate an arbitrary array of bytes                                                          |
-| <Anchor label="roList" title="roList" href="/docs/references/brightscript/components/rolist.md">roList</Anchor>                     | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members      |
-| <Anchor label="roXMLList" title="roXMLList" href="/docs/references/brightscript/components/roxmllist.md">roXMLList</Anchor>         | Contains a list of roXML objects                                                                                                                |
+| <Anchor label="roArray" title="roArray" href="https://roku-ent.readme.io/dev/docs/roarray">roArray</Anchor>                 | An array stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all of the same type |
+| <Anchor label="roByteArray" title="roByteArray" href="https://roku-ent.readme.io/dev/docs/robytearray">roByteArray</Anchor> | The byte array component is used to contain and manipulate an arbitrary array of bytes                                                          |
+| <Anchor label="roList" title="roList" href="https://roku-ent.readme.io/dev/docs/rolist">roList</Anchor>                     | The list object implements the interfaces: ifList, ifArray, ifEnum and therefore can behave like an array that can dynamically add members      |
+| <Anchor label="roXMLList" title="roXMLList" href="https://roku-ent.readme.io/dev/docs/roxmllist">roXMLList</Anchor>         | Contains a list of roXML objects                                                                                                                |
 
 ## Supported methods
 

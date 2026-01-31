@@ -30,7 +30,7 @@ Component libraries can be packaged and signed the same way that apps are packag
 
 ### Manifest
 
-A component library must include a separate [manifest file](doc:channel-manifest) in addition to the one for the app. The component library's manifest must include the [**rsg_version** flag](doc:channel-manifest) (`rsg_version=1.2`) to optimize app performance.
+A component library must include a separate [manifest file](doc:channel-manifest) in addition to the one for the app. The component library's manifest must include the [**rsg_version** flag](doc:channel-manifest) (`rsg_version=1.3`) to optimize app performance.
 
 ## Using Library Components
 
@@ -54,7 +54,7 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
 ## Fields
 
-<Table>
+<Table align={["left","left","left","left","left","left","left","left","left","left","left","left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -75,6 +75,46 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       <th>
         Description
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
       </th>
     </tr>
   </thead>
@@ -98,7 +138,7 @@ Component libraries do not need to be packaged or signed with the same devid as 
       </td>
 
       <td>
-        Indicates the progress of the library download. The possible values are:  
+        Indicates the progress of the library download. The possible values are:
 
         <table>
           <tr>
@@ -127,6 +167,356 @@ Component libraries do not need to be packaged or signed with the same devid as 
           </tr>
         </table>
       </td>
+
+      <td>
+        Value
+      </td>
+
+      <td>
+        Meaning
+      </td>
+
+      <td>
+        none
+      </td>
+
+      <td>
+        The default if the library is not being downloaded
+      </td>
+
+      <td>
+        loading
+      </td>
+
+      <td>
+        Library is downloading
+      </td>
+
+      <td>
+        ready
+      </td>
+
+      <td>
+        Library has downloaded successfully
+      </td>
+
+      <td>
+        failed
+      </td>
+
+      <td>
+        Download of the library has failed
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Value
+      </td>
+
+      <td>
+        Meaning
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        none
+      </td>
+
+      <td>
+        The default if the library is not being downloaded
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        loading
+      </td>
+
+      <td>
+        Library is downloading
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        ready
+      </td>
+
+      <td>
+        Library has downloaded successfully
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        failed
+      </td>
+
+      <td>
+        Download of the library has failed
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -149,6 +539,46 @@ Component libraries do not need to be packaged or signed with the same devid as 
       <td>
         Set to a unique ID for the library for the application
       </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
 
     <tr>
@@ -170,6 +600,46 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       <td>
         The URL of the library to be downloaded
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
       </td>
     </tr>
   </tbody>

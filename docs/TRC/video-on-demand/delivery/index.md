@@ -107,7 +107,7 @@ Our systems use a combination of methods to match a title its correct Gracenote 
 * Content classified as a movie with Gracenote must be delivered as a movie to Roku
 * Content classified as a TV Special with Gracenote can be delivered as a movie to Roku
 
-Partners can aid in the curation of their content on Roku Channel by providing Tags with each movie, episode, or clip. Roku Channel editorial team and recommendations engine will utilize the provided Tags and Genres to help surface content on Roku Channel Platform UI. The more tags that are included, the more ways the content can be curated/surfaced to the end user. Please see [Best practices: content tags and metadata](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md) for more details.
+Partners can aid in the curation of their content on Roku Channel by providing Tags with each movie, episode, or clip. Roku Channel editorial team and recommendations engine will utilize the provided Tags and Genres to help surface content on Roku Channel Platform UI. The more tags that are included, the more ways the content can be curated/surfaced to the end user. Please see [Best practices: content tags and metadata](doc:content-tags-and-metadata) for more details.
 
 ## Media asset guidelines
 
@@ -814,7 +814,7 @@ Ad break, intro credit, and end credit cue points can be supplied in the MovieLa
 
 ```
       <manifest:Markers>
-      
+
       <!--Opening credit cuepoint start and end-->
         <manifest:Marker>
           <manifest:Timecode format="seconds">155.071</manifest:Timecode>
@@ -826,9 +826,9 @@ Ad break, intro credit, and end credit cue points can be supplied in the MovieLa
           <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
           <manifest:Label>LFEI</manifest:Label>
         </manifest:Marker>
-        
+
         <!--End credit cuepoint start and end-->
-        
+
         <manifest:Marker>
           <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
           <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
@@ -839,9 +839,9 @@ Ad break, intro credit, and end credit cue points can be supplied in the MovieLa
           <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
           <manifest:Label>LFUN</manifest:Label>
         </manifest:Marker>
-        
+
         <!--Ad Break cuepoints (Roku only needs a start point. Our player will effectively pause video playback at this point, play the ad pod, and resume from this same point)-->
-         
+
         <manifest:Marker>
           <manifest:Timecode format="seconds">737.111</manifest:Timecode>
           <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
@@ -1061,7 +1061,7 @@ Metadata updates must include **the exact same asset ID** that was included when
 
 All file name references must be removed from a metadata only update. This includes:
 
-- source video file name 
+- source video file name
 - closed captions file name
 - subtitle file name
 - audio dub file name

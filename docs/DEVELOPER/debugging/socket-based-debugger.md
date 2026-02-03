@@ -1318,17 +1318,58 @@ struct VariablesResponse{
 
 ### Step arguments
 
-| Argument     | Type   | Summary                                                                                                                                          |
-| ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| thread_index | uint32 | The index of the thread to step through.                                                                                                         |
-| step_type    | uint8  | Contains an a **StepType** enum, indicating the type of step action to be executed. This may be on the following values:\<br/>$\{step_type_list} |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Argument
+      </th>
 
-\{#step_type_list}
+      <th>
+        Type
+      </th>
 
-* 0 = STEP_TYPE_NONE
-* 1 = STEP_TYPE_LINE
-* 2 = STEP_TYPE_OUT
-* 3 = STEP_TYPE_OVER
+      <th>
+        Summary
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        thread_index
+      </td>
+
+      <td>
+        uint32
+      </td>
+
+      <td>
+        The index of the thread to step through.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        step_type
+      </td>
+
+      <td>
+        uint8
+      </td>
+
+      <td>
+        Contains an a **StepType** enum, indicating the type of step action to be executed. This may be on the following values:   
+
+        * 0 = STEP_TYPE_NONE
+        * 1 = STEP_TYPE_LINE
+        * 2 = STEP_TYPE_OUT
+        * 3 = STEP_TYPE_OVER
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Execute arguments
 

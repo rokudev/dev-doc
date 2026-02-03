@@ -1193,15 +1193,25 @@ struct VariablesResponse{
 };
 ```
 
-| Field         | Type           | Summary                                                                                                                                                                                                                                                                                      |
-| ------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| num_variables | uint32         | The number of variables in the **variables** array.                                                                                                                                                                                                                                          |
-| variables     | VariableInfo[] | An array of VariableInfo structs. A VariableInfo struct has the following syntax: <br />$\{variable_info_struct_syntax}\<br/>$\{variable_info_struct_table}<br />The data segment of a VariableInfo byte stream contains one of the following data sets : <br /><br />$\{variable_info_data} |
-
-\{#variable_info_struct_syntax}
-
-```
-struct VariableInfo{
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">num_variables</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of variables in the <strong>variables</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">variables</td>
+<td class="short-line">VariableInfo[]</td>
+<td class="long-line">An array of VariableInfo structs. A VariableInfo struct has the following syntax: <br><pre><code>struct VariableInfo{
     uint8 flags;           
     uint8 variable_type;   
     utf8z name;           
@@ -1210,95 +1220,101 @@ struct VariableInfo{
     uint32 element_count;
     void* value;
 };
-```
-
-\{#variable_info_struct_table}
-
-| Argument      | Type   | Summary                                                                                                                                                                                                                                                                      |
-| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| flags         | uint8  | The flags that determine which fields are included in the **VariableInfo** struct. This field is always listed, and it may be set to one of the following values: <br />$\{flags_list}                                                                                       |
-| variable_type | Uint8  | Contains an enum, **ValueType**, which indicates the type of variable/value. This field is always listed, and it may be set to one of the following values:<br />$\{variable_type_list}                                                                                      |
-| name          | utf8z  | The variable name. The field is only listed if the **flags** field includes the  IS_NAME_HERE flag.                                                                                                                                                                          |
-| ref_count     | uint32 | The number of references this variable has. The field is only listed if the **flags** field includes the  IS_REF_COUNTED flag.                                                                                                                                               |
-| key_type      | uint8  | The type of keys in the container. The field is only listed if the **flags** field includes the IS_CONTAINER flag.<br /><br />This field contains an enum, **ValueType**, which indicates the type of variable/value (see the **variable_type** field for more information). |
-| element_count | uint32 | The number of elements in the container. The field is only listed if the **flags** field includes the IS_CONTAINER flag                                                                                                                                                      |
-| value         | void*  | A type-dependent value based on the **variable_type** field. It is not present for all types.                                                                                                                                                                                |
-
-\{#variable_type_list}
-
-* 1 = AA
-* 2 = ARRAY
-* 3 = BOOLEAN
-* 4 = DOUBLE
-* 5 = FLOAT
-* 6 = FUNCTION
-* 7 = INTEGER
-* 8 = INTERFACE
-* 9 = INVALID = 9 (literal BrightScript Invalid value)
-* 10 = LIST
-* 11 = LONG_INTEGER
-* 12 = OBJECT
-* 13 = STRING
-* 14 = SUBROUTINE
-* 15 = SUBTYPED_OBJECT
-* 16 = UNINITIALIZED (the variable exists, but it has no value or type)
-* 17 = UNKNOWN (the variable is valid, but its type is unknown yet not undefined)
-
-\{#flags_list}
-
-* 0x01 = IS_CHILD_KEY (the value is a child of the requested variable; for example, an element of an array or field of an AA)
-* 0x02 = IS_CONST (value is constant)
-* 0x04 = IS_CONTAINER (the referenced value is a container; for example, a list or array)
-* 0x08 = IS_NAME_HERE   (the name is included in this VariableInfo)
-* 0x10 = IS_REF_COUNTED (the value is reference-counted).
-* 0x20 = IS_VALUE_HERE  (the value is included in this VariableInfo)
-* 0x40 = IS_KEYS_CASE_SENSITIVE (the value is a container with case-sensitive keys)
-* 0x80 = IS_VIRTUAL (the value is virtual and does not correspond to a real variable)
-
-\{#variable_info_data}
-
-* Value_AA \{no data}  (use GET_CHILD_KEYS in request to get contents)
-* Value_Array \{no data}
-* Value_Boolean \{uint8 value;}        // 0 = false, otherwise true
-* Value_Double \{binary64float value;}
-* Value_Float \{binary32float value;}
-* Value_Function \{uint8 function_name;}
-* Value_Integer \{int32 value;}
-* Value_Interface \{utf8z interface_name;}
-* Value_Invalid \{no data}
-* Value_List \{no data}
-* Value_LongInteger \{int64 value;}
-* Value_Object \{utf8z class_name;}
-* Value_String \{utf8z value;}
-* Value_Subroutine \{utf8z subroutine_name;}
-* Value_SubtypedObject \{utf8z class_name; utf8z subtype_name;}
-* Value_Uninitialized \{no data}
-* Value_Unknown \{no data}
-
-\{#stop_reason_table2}
-
-| Value | Reason         | Summary                                                                                                                        |
-| ----- | -------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | UNDEFINED      | Uninitialized stopReason.                                                                                                      |
-| 1     | NOT_STOPPED    | Thread is running.                                                                                                             |
-| 2     | NORMAL_EXIT    | Thread exited.                                                                                                                 |
-| 3     | STOP_STATEMENT | Stop statement executed.                                                                                                       |
-| 4     | BREAK          | Another thread in the group encountered an error, this thread completed a step operation, or other reason outside this thread. |
-| 5     | RUNTIME_ERROR  | Thread stopped because of an error during execution.                                                                           |
-
-\{#step-command-table}
-
-| Argument     | Type   | Summary                                                                                                                                         |
-| ------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| thread_index | uint32 | The index of the thread to step through.                                                                                                        |
-| step_type    | uint8  | Contains an a **StepType** enum, indicating the type of step action to be executed. This may be one of the following values: $\{step-type-enum} |
-
-\{#step-type-enum}
-
-* 0 = STEP_TYPE_NONE
-* 1 = STEP_TYPE_LINE
-* 2 = STEP_TYPE_OVER
-* 3 = STEP_TYPE_OUT
+</code></pre><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">flags</td>
+<td class="short-line">uint8</td>
+<td class="long-line">The flags that determine which fields are included in the <strong>VariableInfo</strong> struct. This field is always listed, and it may be set to one of the following values: <br><ul>
+<li>0x01 = IS_CHILD_KEY (the value is a child of the requested variable; for example, an element of an array or field of an AA)</li>
+<li>0x02 = IS_CONST (value is constant)</li>
+<li>0x04 = IS_CONTAINER (the referenced value is a container; for example, a list or array)</li>
+<li>0x08 = IS_NAME_HERE   (the name is included in this VariableInfo)</li>
+<li>0x10 = IS_REF_COUNTED (the value is reference-counted).</li>
+<li>0x20 = IS_VALUE_HERE  (the value is included in this VariableInfo)</li>
+<li>0x40 = IS_KEYS_CASE_SENSITIVE (the value is a container with case-sensitive keys)</li>
+<li>0x80 = IS_VIRTUAL (the value is virtual and does not correspond to a real variable)</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">variable_type</td>
+<td class="short-line">Uint8</td>
+<td class="long-line">Contains an enum, <strong>ValueType</strong>, which indicates the type of variable/value. This field is always listed, and it may be set to one of the following values:<br><ul>
+<li>1 = AA</li>
+<li>2 = ARRAY</li>
+<li>3 = BOOLEAN</li>
+<li>4 = DOUBLE</li>
+<li>5 = FLOAT</li>
+<li>6 = FUNCTION</li>
+<li>7 = INTEGER</li>
+<li>8 = INTERFACE</li>
+<li>9 = INVALID = 9 (literal BrightScript Invalid value)</li>
+<li>10 = LIST</li>
+<li>11 = LONG_INTEGER</li>
+<li>12 = OBJECT</li>
+<li>13 = STRING</li>
+<li>14 = SUBROUTINE</li>
+<li>15 = SUBTYPED_OBJECT</li>
+<li>16 = UNINITIALIZED (the variable exists, but it has no value or type)</li>
+<li>17 = UNKNOWN (the variable is valid, but its type is unknown yet not undefined)</li>
+</ul></td>
+</tr>
+<tr>
+<td class="short-line">name</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">The variable name. The field is only listed if the <strong>flags</strong> field includes the  IS_NAME_HERE flag.</td>
+</tr>
+<tr>
+<td class="short-line">ref_count</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of references this variable has. The field is only listed if the <strong>flags</strong> field includes the  IS_REF_COUNTED flag.</td>
+</tr>
+<tr>
+<td class="short-line">key_type</td>
+<td class="short-line">uint8</td>
+<td class="long-line">The type of keys in the container. The field is only listed if the <strong>flags</strong> field includes the IS_CONTAINER flag.<br><br>This field contains an enum, <strong>ValueType</strong>, which indicates the type of variable/value (see the <strong>variable_type</strong> field for more information).</td>
+</tr>
+<tr>
+<td class="short-line">element_count</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of elements in the container. The field is only listed if the <strong>flags</strong> field includes the IS_CONTAINER flag</td>
+</tr>
+<tr>
+<td class="short-line">value</td>
+<td class="short-line">void*</td>
+<td class="long-line">A type-dependent value based on the <strong>variable_type</strong> field. It is not present for all types.</td>
+</tr>
+</tbody>
+</table></div><br>The data segment of a VariableInfo byte stream contains one of the following data sets : <br><br><ul>
+<li>Value_AA {no data}  (use GET_CHILD_KEYS in request to get contents)</li>
+<li>Value_Array {no data}</li>
+<li>Value_Boolean {uint8 value;}        // 0 = false, otherwise true</li>
+<li>Value_Double {binary64float value;}</li>
+<li>Value_Float {binary32float value;}</li>
+<li>Value_Function {uint8 function_name;}</li>
+<li>Value_Integer {int32 value;}</li>
+<li>Value_Interface {utf8z interface_name;}</li>
+<li>Value_Invalid {no data}</li>
+<li>Value_List {no data}</li>
+<li>Value_LongInteger {int64 value;}</li>
+<li>Value_Object {utf8z class_name;}</li>
+<li>Value_String {utf8z value;}</li>
+<li>Value_Subroutine {utf8z subroutine_name;}</li>
+<li>Value_SubtypedObject {utf8z class_name; utf8z subtype_name;}</li>
+<li>Value_Uninitialized {no data}</li>
+<li>Value_Unknown {no data}</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### Step arguments
 

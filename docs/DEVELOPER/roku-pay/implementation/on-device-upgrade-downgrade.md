@@ -1,5 +1,5 @@
 ---
-title: "On-device upgrade and downgrade"
+title: On-device upgrade and downgrade
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Apps with Roku Pay integrations can implement on-device subscription upgrades and downgrades. By doing so, customers can seamlessly switch plans directly from their devices, and apps can ensure that they are billed properly. This enables apps to target different audiences with the best plan in order to maximize content monetization.
 
 > Authenticated transactional apps (SVOD, TVOD, and other subscription services) must complete upgrades and downgrades on the device using Roku Pay, without visiting an external webpage, to pass [certification](doc:certification).
@@ -20,15 +18,15 @@ Apps with Roku Pay integrations can implement on-device subscription upgrades an
 
 To understand how Roku's on-device upgrades and downgrades work, consider a customer who upgrades a subscription (switching to an annual plan, a premium ad-free plan, or a plan that offers ultra-high-definition [UHD] content).
 
-<img src="https://image.roku.com/ZHZscHItMTc2/upgrade-annual-subscription.jpg"  />
+<img src="https://image.roku.com/ZHZscHItMTc2/upgrade-annual-subscription.jpg" />
 
-To upgrade a plan, apps cancel the previous *base plan* and completes the purchase of the *upgraded plan* (causing a prorated service credit for the remaining balance on the base plan to be applied to the purchase of the upgraded plan).
+To upgrade a plan, apps cancel the previous _base plan_ and completes the purchase of the _upgraded plan_ (causing a prorated service credit for the remaining balance on the base plan to be applied to the purchase of the upgraded plan).
 
-To downgrade a plan, apps similarly check the expiration date of the *current plan* being and then mark it for cancellation. A new transaction ID for the *downgraded plan*, which has a $0 price and the same expiration date as the current plan, is returned. On the expiration date, the downgrade is completed and a new transaction ID is created with the purchase price of the downgraded plan.
+To downgrade a plan, apps similarly check the expiration date of the _current plan_ being and then mark it for cancellation. A new transaction ID for the _downgraded plan_, which has a $0 price and the same expiration date as the current plan, is returned. On the expiration date, the downgrade is completed and a new transaction ID is created with the purchase price of the downgraded plan.
 
-Apps must add a [product group](doc:in-channel-products) in the Developer Dashboard to enable and facilitate upgrades and downgrades. A product group contains a set of two or more *mutually exclusive* products, to which customers can upgrade or downgrade. For example, a product group may contain two products for a subscription service with different billing cycles (one that is billed monthly and another annually) or different ad support (one that is ad-based and another that is ad-free). Because they are defined as being mutually-exclusive by their membership in the same product group, Roku can automatically help ensure that the customer is only ever subscribed to one at a time.
+Apps must add a [product group](doc:in-channel-products) in the Developer Dashboard to enable and facilitate upgrades and downgrades. A product group contains a set of two or more _mutually exclusive_ products, to which customers can upgrade or downgrade. For example, a product group may contain two products for a subscription service with different billing cycles (one that is billed monthly and another annually) or different ad support (one that is ad-based and another that is ad-free). Because they are defined as being mutually-exclusive by their membership in the same product group, Roku can automatically help ensure that the customer is only ever subscribed to one at a time.
 
-> Subscription adjustments, such as upgrade and downgrade as described here, are only made available by the Roku system, to users whose subscriptions are *established and maintained* via Roku Pay.
+> Subscription adjustments, such as upgrade and downgrade as described here, are only made available by the Roku system, to users whose subscriptions are _established and maintained_ via Roku Pay.
 >
 > The app's on-device upgrade/downgrade flow should be blocked if the subscription was created through the publisher's system and the customer's sign-in does not match the Roku customer account linked to their device. This is because on-device upgrades/downgrades are automatically billed to the Roku customer account linked to the device, regardless of the authentication mechanism. Blocking the upgrade/downgrade flow in this case prevents the Roku Pay and the publisher services from becoming out of synch on the customer's current subscription plan.
 
@@ -38,11 +36,9 @@ Apps must complete the following steps to handle on-device upgrades and downgrad
 
 1. [Create a product group in the Developer Dashboard](doc:in-channel-products) for the products customers can upgrade or downgrade.
 
-
 2. Apps using the [SceneGraph ChannelStore node (SDK 2)](doc:channelstore): Set the `order.action` field to `Upgrade` or `Downgrade`, and then send a [**doOrder command**](doc:channelstore) to complete the upgrade/downgrade.
 
    Apps using the [BrightScript roChannelStore node (SDK 1)](doc:ifchannelstore): Call the [**SetOrder()** function](doc:ifchannelstore) with the **action** field of the **orderInfo** parameter set to `Upgrade` or `Downgrade`.
-
 
 3. Call the [Roku Pay **validate transaction** API](doc:roku-web-service) with the transaction ID from the `purchaseid` field of the [**doOrder command**](doc:channelstore). Use the data returned by the API to update the backend system with the entitlements and expiration dates of the original and upgraded/downgraded plans. Apps subscribing to [push notifications](doc:push-notifications) will receive both [cancel](doc:push-notifications) and [sale](doc:push-notifications) notifications for upgrades and downgrades.
 
@@ -56,24 +52,24 @@ To send a [**doOrder command**](doc:channelstore) to upgrade or downgrade a plan
 
 1. Set the `order.action` field to `Upgrade` or `Downgrade` (the required values are case-sensitive; do not pass "upgrade" or "downgrade" in the `action` field).
 
-        m.channelStore = CreateObject("roSGNode","ChannelStore")
-        myOrder = CreateObject("roSGNode", "ContentNode")
-        myItem = myOrder.createChild("ContentNode")
-        myItem.addFields(\{ "code": "UPC2397", "qty": 1\})
-        m.channelStore.order = myOrder
-        myOrder.action = "Upgrade"
-
+   ```
+   m.channelStore = CreateObject("roSGNode","ChannelStore")
+   myOrder = CreateObject("roSGNode", "ContentNode")
+   myItem = myOrder.createChild("ContentNode")
+   myItem.addFields(\{ "code": "UPC2397", "qty": 1})
+   m.channelStore.order = myOrder
+   myOrder.action = "Upgrade"
+   ```
 
 2. Send a [**doOrder** command](doc:channelstore) to have the customer confirm the upgrade/downgrade.
 
-        m.channelStore.command = "doOrder"
-
+   m.channelStore.command = "doOrder"
 
 3. The following occurs to the original base plan and the upgraded/downgraded plan based on the specified action.
 
-   - **Upgrade**. The base plan is canceled and the upgraded plan is purchased (a prorated service credit for the remaining balance on the base plan is applied to the upgrade purchase).
+   * **Upgrade**. The base plan is canceled and the upgraded plan is purchased (a prorated service credit for the remaining balance on the base plan is applied to the upgrade purchase).
 
-   - **Downgrade**. The current plan is marked for cancellation on its expiration date. On the expiration date, the purchase of the downgrade is completed and the previous plan is canceled automatically. No service credit is issued as part of a downgrade.
+   * **Downgrade**. The current plan is marked for cancellation on its expiration date. On the expiration date, the purchase of the downgrade is completed and the previous plan is canceled automatically. No service credit is issued as part of a downgrade.
 
 #### BrightScript roChannelStore node (SDK 1)
 
@@ -81,33 +77,33 @@ To call the [**SetOrder()** function](doc:ifchannelstore) to upgrade or downgrad
 
 1. Set the `orderInfo.action` field to `Upgrade` or `Downgrade` (the required values are case-sensitive; do not pass "upgrade" or "downgrade" in the `action` field).
 
-        m.store = CreateObject("roChannelStore")​
-        ' Populate myOrderItems
-        myOrderInfo.action = "Upgrade"
-
+   ```
+   m.store = CreateObject("roChannelStore")​
+   ' Populate myOrderItems
+   myOrderInfo.action = "Upgrade"
+   ```
 
 2. Call the [**SetOrder()** function](doc:ifchannelstore) to have the customer confirm the upgrade/downgrade. The **myOrderItems** parameter specifies the in-channel product to which the customer is upgrading/downgrading; the **myOrderInfo** parameter whether the transaction is an upgrade or downgrade.
 
-        m.store.setOrder(myOrderItems, myOrderInfo)
-
+   m.store.setOrder(myOrderItems, myOrderInfo)
 
 3. The following occurs to the original base plan and the upgraded/downgraded plan based on the specified action.
 
-   - **Upgrade**. The base plan is canceled and the upgraded plan is purchased (a prorated service credit for the remaining balance on the base plan is applied to the upgrade purchase).
+   * **Upgrade**. The base plan is canceled and the upgraded plan is purchased (a prorated service credit for the remaining balance on the base plan is applied to the upgrade purchase).
 
-   - **Downgrade**. The current plan is marked for cancellation on its expiration date. On the expiration date, the purchase of the downgrade is completed and the previous plan is canceled automatically. No service credit is issued as part of a downgrade.
+   * **Downgrade**. The current plan is marked for cancellation on its expiration date. On the expiration date, the purchase of the downgrade is completed and the previous plan is canceled automatically. No service credit is issued as part of a downgrade.
 
 ### Calling the Roku Pay validate transaction API
 
 In order to support upgrade and downgrade transactions, the [**validate transaction** API](doc:roku-web-service) includes the following fields in the response:
 
-- **purchaseType**: The `purchaseType` indicates whether the transaction was an `UPGRADE` or `DOWNGRADE`.
+* **purchaseType**: The `purchaseType` indicates whether the transaction was an `UPGRADE` or `DOWNGRADE`.
 
-- **cancelledTransactionIds**: The `cancelledTransactionIds` field contains the original transaction ID of the base/current plan, that the upgrade or downgrade replaces.
+* **cancelledTransactionIds**: The `cancelledTransactionIds` field contains the original transaction ID of the base/current plan, that the upgrade or downgrade replaces.
 
-- **originalTransactionId**: The `OriginalTransactionId` field contains the new transaction ID generated for the upgraded/downgraded plan purchased.
+* **originalTransactionId**: The `OriginalTransactionId` field contains the new transaction ID generated for the upgraded/downgraded plan purchased.
 
-- **purchaseStatus**: The `purchase_status` field corresponds with definite states of the `isEntitled` and `cancelled` fields, as shown in the following chart:
+* **purchaseStatus**: The `purchase_status` field corresponds with definite states of the `isEntitled` and `cancelled` fields, as shown in the following chart:
 
 | purchase_ status | isEntitled | cancelled |
 | :--------------- | :--------- | :-------- |
@@ -192,9 +188,9 @@ After an upgrade has been completed on-device, responses to [**validate transact
 </result>
 ```
 
-In case of upgrades when *no* free trial is offered with the upgrade subscription then the original subscription is cancelled immediately and the `purchase_status`' is set to `Inactive`.
+In case of upgrades when _no_ free trial is offered with the upgrade subscription then the original subscription is cancelled immediately and the `purchase_status`' is set to `Inactive`.
 
-When a free trial *is* offered with the upgrade subscription, the `purchase_status` of the original subscription becomes `pending_inactive`. Should the user cancel the upgrade subscription, the original subscription will be reinstated (but *will not renew* after the entitlement period). Upon the first successful renewal of the upgraded subscription, the original subscription will be set to `Inactive`.
+When a free trial _is_ offered with the upgrade subscription, the `purchase_status` of the original subscription becomes `pending_inactive`. Should the user cancel the upgrade subscription, the original subscription will be reinstated (but _will not renew_ after the entitlement period). Upon the first successful renewal of the upgraded subscription, the original subscription will be set to `Inactive`.
 
 **Upgrade plan purchase**. The `creditsApplied` field is set to the prorated balance from the base plan; the `expirationDate` is set to the applicable expiration date (for example, if a customer switched from a monthly to an annual plan, the expiration date would be set to one year later).
 
@@ -232,6 +228,7 @@ When a free trial *is* offered with the upgrade subscription, the `purchase_stat
    "transactionId":"a800b90755be491d821aabad017d6674"
 }
 ```
+
 #### XML
 
 ```
@@ -264,7 +261,6 @@ When a free trial *is* offered with the upgrade subscription, the `purchase_stat
   <transactionId>a800b90755be491d821aabad017d6674</transactionId>
 </result>
 ```
-
 
 #### Downgrades
 

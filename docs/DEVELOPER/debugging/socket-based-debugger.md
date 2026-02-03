@@ -654,7 +654,7 @@ struct CompileErrorUpdateData {
 | ------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | flags  | bool         | This field is always set to 0 (reserved for future use).                                                                                                                                                                                                                 |
 | utf8z  | error_string | A text message describing the compiler error.                                                                                                                                                                                                                            |
-| utf8z  | file_spec    | A simple file path indicating where the compiler error occurred. It maps to all matching file paths in the app or its libraries <br /><br />"pkg:/\<filepath>" specifies a file in the app<br /><br />"lib:/\<library_name>//\<filepath>" specifies a file in a library. |
+| utf8z  | file_spec    | A simple file path indicating where the compiler error occurred. It maps to all matching file paths in the app or its libraries <br /><br />`"pkg:/<filepath>"` specifies a file in the app<br /><br />`"lib:/<library_name>/<filepath>"` specifies a file in a library. |
 | uint32 | line_number  | The line number where the compile error occurred.                                                                                                                                                                                                                        |
 | utf8z  | library_name | The name of the library where the compile error occurred.                                                                                                                                                                                                                |
 
@@ -678,17 +678,49 @@ struct VerifiedBreakpointInfo {
 }
 ```
 
-| Field                  | Type   | Summary                                                                                                                    |
-| :--------------------- | :----- | :------------------------------------------------------------------------------------------------------------------------- |
-| flags                  | bool   | This field is always set to 0. It is reserved for future use.                                                              |
-| num_breakpoints        | uint32 | The number of breakpoints in the **breakpoints** array.                                                                    |
-| VerifiedBreakpointInfo | array  | A list of verified breakpoints. Each verified breakpoint has the following syntax:<br />$\{verified-breakpoint-info-table} |
-
-\{#verified-breakpoint-info-table}
-
-| Field         | Type  | Summary                                                                                                                                      |
-| :------------ | :---- | :------------------------------------------------------------------------------------------------------------------------------------------- |
-| breakpoint_id | utf8z | The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error. |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">flags</td>
+<td class="short-line">bool</td>
+<td class="long-line">This field is always set to 0. It is reserved for future use.</td>
+</tr>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoints</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">VerifiedBreakpointInfo</td>
+<td class="short-line">array</td>
+<td class="long-line">A list of verified breakpoints. Each verified breakpoint has the following syntax:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">breakpoint_id</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### ProtocolError
 

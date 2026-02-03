@@ -48,14 +48,14 @@ You can use a hierarchal page numbering system to identify different pages in th
 Developers should use the following syntax for naming signup events:
 
 ```
-* "Sign_Up|pageNumber=1|pageType=landing"
-* "Sign_Up|pageNumber=2|pageType=offer_selection"
-* "Sign_Up|pageNumber=3.1|pageType=basic_plan_cadence sign_up_offer_monthly"
-* "Sign_Up|pageNumber=3.2|pageType=premium_plan_cadence sign_up_offer_annual"
-* "Sign_Up|pageNumber=3|pageType=offer_confirmation"
-* "Sign_Up|pageNumber=4|pageType=registration"
-* "Sign_Up|pageNumber=5|pageType=registration_complete"
-* "Sign_Up|pageNumber=6|pageType=sign_up_complete"
+"Sign_Up|pageNumber=1|pageType=landing"
+"Sign_Up|pageNumber=2|pageType=offer_selection"
+"Sign_Up|pageNumber=3.1|pageType=basic_plan_cadence sign_up_offer_monthly"
+"Sign_Up|pageNumber=3.2|pageType=premium_plan_cadence sign_up_offer_annual"
+"Sign_Up|pageNumber=3|pageType=offer_confirmation"
+"Sign_Up|pageNumber=4|pageType=registration"
+"Sign_Up|pageNumber=5|pageType=registration_complete"
+"Sign_Up|pageNumber=6|pageType=sign_up_complete"
 ```
 
 #### Including form elements

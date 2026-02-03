@@ -510,8 +510,6 @@ struct DebuggerUpdate {
 </table>
 `}</HTMLBlock>
 
-<br />
-
 ### AllThreadsStopped
 
 If the **update_type** in a DebuggerUpdate message is set to ALL_THREADS_STOPPED, the **data** field contains a structure named **AllThreadsStoppedUpdateData** that provides the reason for the stop. The **AllThreadsStoppedUpdateData** structure has the following syntax:
@@ -524,23 +522,79 @@ struct AllThreadsStoppedUpdateData{
 };
 ```
 
-| Field                | Type  | Description                                                                                                        |
-| -------------------- | ----- | ------------------------------------------------------------------------------------------------------------------ |
-| primary_thread_index | int32 | The index of the primary thread that initiated the stop. This is -1 if the thread is unknown.                      |
-| stop_reason          | uint8 | An enum describing why the thread was stopped. This may be one of the following values:<br />$\{stop_reason_table} |
-| stop_reason_detail   | utf8z | Provides extra details (for example, "Divide by Zero", "STOP", "BREAK")                                            |
-
-\{#stop_reason_table}
-
-| Value | Reason               | Summary                                                                                                                              |
-| ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | UNDEFINED            | Uninitialized stopReason.                                                                                                            |
-| 1     | NOT_STOPPED          | Thread is running.                                                                                                                   |
-| 2     | NORMAL_EXIT          | Thread exited.                                                                                                                       |
-| 3     | STOP_STATEMENT       | Stop statement executed.                                                                                                             |
-| 4     | BREAK                | Another thread in the group encountered an error or other reason outside this thread.                                                |
-| 5     | RUNTIME_ERROR        | Thread stopped because of an error during execution.                                                                                 |
-| 6     | CAUGHT_RUNTIME_ERROR | Thread stopped due to a caught runtime error. This only occurs if exception breakpoints are configured to stop on caught exceptions. |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">primary_thread_index</td>
+<td class="short-line">int32</td>
+<td class="long-line">The index of the primary thread that initiated the stop. This is -1 if the thread is unknown.</td>
+</tr>
+<tr>
+<td class="short-line">stop_reason</td>
+<td class="short-line">uint8</td>
+<td class="long-line">An enum describing why the thread was stopped. This may be one of the following values:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Value</th>
+<th class="short-line">Reason</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">UNDEFINED</td>
+<td class="short-line">Uninitialized stopReason.</td>
+</tr>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">NOT_STOPPED</td>
+<td class="short-line">Thread is running.</td>
+</tr>
+<tr>
+<td class="short-line">2</td>
+<td class="short-line">NORMAL_EXIT</td>
+<td class="short-line">Thread exited.</td>
+</tr>
+<tr>
+<td class="short-line">3</td>
+<td class="short-line">STOP_STATEMENT</td>
+<td class="short-line">Stop statement executed.</td>
+</tr>
+<tr>
+<td class="short-line">4</td>
+<td class="short-line">BREAK</td>
+<td class="long-line">Another thread in the group encountered an error or other reason outside this thread.</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">RUNTIME_ERROR</td>
+<td class="long-line">Thread stopped because of an error during execution.</td>
+</tr>
+<tr>
+<td class="short-line">6</td>
+<td class="short-line">CAUGHT_RUNTIME_ERROR</td>
+<td class="long-line">Thread stopped due to a caught runtime error. This only occurs if exception breakpoints are configured to stop on caught exceptions.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">stop_reason_detail</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">Provides extra details (for example, "Divide by Zero", "STOP", "BREAK")</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### ThreadAttached
 

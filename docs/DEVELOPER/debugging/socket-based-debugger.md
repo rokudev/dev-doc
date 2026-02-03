@@ -150,30 +150,102 @@ struct DebuggerRequest {
 };
 ```
 
-| Field                        | Type   | Description                                                                                                                                                                                                 |
-| ---------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| packet_length                | uint32 | The size of the packet to be sent.<br />Example: (4 + 4 + 4 + sizeof(ARGUMENTS))                                                                                                                            |
-| request_id                   | uint32 | The ID of the debugger request (must be >=1). This ID is included in the debugger response.                                                                                                                 |
-| command_code                 | uint32 | An enum representing the debugging command being sent, which may be one of the following values:<br />$\{debug_command_code_table}<br />See [Debugging Commands](#debugging-commands) for more information. |
-| command_arguments (optional) | uint8  | Command-specific arguments (these may not be present for some commands)                                                                                                                                     |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">packet_length</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The size of the packet to be sent.<br>Example: (4 + 4 + 4 + sizeof(ARGUMENTS))</td>
+</tr>
+<tr>
+<td class="short-line">request_id</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
+</tr>
+<tr>
+<td class="short-line">command_code</td>
+<td class="short-line">uint32</td>
+<td class="long-line">An enum representing the debugging command being sent, which may be one of the following values:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">STOP</td>
+</tr>
+<tr>
+<td class="short-line">2</td>
+<td class="short-line">CONTINUE</td>
+</tr>
+<tr>
+<td class="short-line">3</td>
+<td class="short-line">THREADS</td>
+</tr>
+<tr>
+<td class="short-line">4</td>
+<td class="short-line">STACKTRACE</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">VARIABLES</td>
+</tr>
+<tr>
+<td class="short-line">6</td>
+<td class="short-line">STEP</td>
+</tr>
+<tr>
+<td class="short-line">7</td>
+<td class="short-line">ADD_BREAKPOINTS</td>
+</tr>
+<tr>
+<td class="short-line">8</td>
+<td class="long-line">LIST_BREAKPOINTS<br><br>(<em>As of Roku OS 11.5, this command supports both conditional and non-conditional breakpoints</em>)</td>
+</tr>
+<tr>
+<td class="short-line">9</td>
+<td class="short-line">REMOVE_BREAKPOINTS</td>
+</tr>
+<tr>
+<td class="short-line">10</td>
+<td class="short-line">EXECUTE</td>
+</tr>
+<tr>
+<td class="short-line">11</td>
+<td class="short-line">ADD_CONDITIONAL_BREAKPOINTS</td>
+</tr>
+<tr>
+<td class="short-line">12</td>
+<td class="short-line">SET_EXCEPTION_BREAKPOINTS</td>
+</tr>
+<tr>
+<td class="short-line">122</td>
+<td class="short-line">EXIT_CHANNEL</td>
+</tr>
+</tbody>
+</table></div><br>See <a href="#debugging-commands">Debugging Commands</a> for more information.</td>
+</tr>
+<tr>
+<td class="short-line">command_arguments (optional)</td>
+<td class="short-line">uint8</td>
+<td class="long-line">Command-specific arguments (these may not be present for some commands)</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
-\{#debug_command_code_table}
-
-| Code | Command                                                                                                                    |
-| ---- | -------------------------------------------------------------------------------------------------------------------------- |
-| 1    | STOP                                                                                                                       |
-| 2    | CONTINUE                                                                                                                   |
-| 3    | THREADS                                                                                                                    |
-| 4    | STACKTRACE                                                                                                                 |
-| 5    | VARIABLES                                                                                                                  |
-| 6    | STEP                                                                                                                       |
-| 7    | ADD_BREAKPOINTS                                                                                                            |
-| 8    | LIST_BREAKPOINTS<br /><br />(_As of Roku OS 11.5, this command supports both conditional and non-conditional breakpoints_) |
-| 9    | REMOVE_BREAKPOINTS                                                                                                         |
-| 10   | EXECUTE                                                                                                                    |
-| 11   | ADD_CONDITIONAL_BREAKPOINTS                                                                                                |
-| 12   | SET_EXCEPTION_BREAKPOINTS                                                                                                  |
-| 122  | EXIT_CHANNEL                                                                                                               |
+<br />
 
 ## Debugger Response Format
 
@@ -1146,8 +1218,8 @@ You can [download](https://github.com/rokudev/debug-protocol-vscode-ext-beta) th
 
 The following video demonstrates the [Roku Remote Debugger](https://github.com/rokudev/remote-debugger), and it shows how the BrightScript network debug protocol could be used in an integration with an IDE such as Visual Studio Code.
 
-\<video title="Roku BrightScript Network Debug Protocol" poster="[https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg"\>](https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg">)
-\<source src="[https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4"\>](https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4">)
+\<video title="Roku BrightScript Network Debug Protocol" poster="[https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg">](https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg">)
+\<source src="[https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4">](https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4">)
 \</video>
 
 ## Change log

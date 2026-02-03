@@ -1479,7 +1479,77 @@ struct AddBreakpointsResponseData {
 ```
 
 <HTMLBlock>{`
-
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoint_responses</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">breakpoint_responses</td>
+<td class="short-line">BreakpointInfo[]</td>
+<td class="long-line">An array of BreakpointInfo structs. A BreakpointInfo struct has the following syntax: <br><pre><code>struct BreakpointInfo {
+    uint32 breakpoint_id;
+    uint32 error_code;
+    uint32 ignore_count;
+};
+</code></pre><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">breakpoint_id</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error.</td>
+</tr>
+<tr>
+<td class="short-line">error_code</td>
+<td class="short-line">uint32</td>
+<td class="long-line">Indicates whether the breakpoint was successfully added. This may be one of the following values: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Status</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">OK</td>
+<td class="short-line">The <strong>breakpoint_id</strong> is valid.</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">INVALID_ARGS</td>
+<td class="short-line">The breakpoint could not be returned.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">ignore_count</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint.<br><br>This argument is only present if the <strong>breakpoint_id</strong> is valid.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
 `}</HTMLBlock>
 
 ### ListBreakpointsResponseData

@@ -1119,7 +1119,32 @@ struct StackTraceResponse{
 <tr>
 <td class="short-line">variable_request_flags</td>
 <td class="short-line">uint8</td>
-<td class="long-line">Contains one the following <strong>VariableRequestFlags</strong> enums:<br><br>This enum uses a bitwise mask that enables it to fit into 8 bits.</td>
+<td class="long-line">Contains one the following <strong>VariableRequestFlags</strong> enums:<table>
+<thead>
+<tr>
+<th class="short-line">Value</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">GET_CHILD_KEYS</td>
+<td class="long-line">Indicates whether the VARIABLES response includes the child keys for container types like lists and associative arrays. If this is set to true (0x01), the VARIABLES response include the child keys.</td>
+</tr>
+<tr>
+<td class="short-line">CASE_SENSITIVITY_OPTIONS</td>
+<td class="long-line">Enables the client application to send <strong>path_force_case_insensitive</strong> data</td>
+</tr>
+<tr>
+<td class="short-line">GET_VIRTUAL_KEYS</td>
+<td class="long-line">Indicates whether the VARIABLES response includes virtual keys for the requested paths. See <a href="#virtual-variables">Virtual Variables</a></td>
+</tr>
+<tr>
+<td class="long-line">VIRTUAL_PATH_INCLUDED <br> <br><em>Available since Roku OS 14.1</em></td>
+<td class="long-line">Enable the client application to sent <strong>path_is_virtual</strong> data.</td>
+</tr>
+</tbody>
+</table><br><br>This enum uses a bitwise mask that enables it to fit into 8 bits.</td>
 </tr>
 <tr>
 <td class="short-line">thread_index</td>

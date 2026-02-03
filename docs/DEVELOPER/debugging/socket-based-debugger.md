@@ -742,17 +742,49 @@ enum ProtocolErrorCode {
 }
 ```
 
-| Field               | Type   | Summary                                                                                                                                |
-| :------------------ | :----- | :------------------------------------------------------------------------------------------------------------------------------------- |
-| flags               | bool   | This field is always set to 0. It is reserved for future use.                                                                          |
-| protocol_error_code | uint32 | An enum indicating the type of protocol error that has occurred. This may be one of the following values:<br />$\{protocol-error-code} |
-
-\{#protocol-error-code}
-
-| Code | Error           | Description                                                                                                      |
-| :--- | :-------------- | :--------------------------------------------------------------------------------------------------------------- |
-| 0    | UNDEFINED       |                                                                                                                  |
-| 1    | IO_CONSOLE_FAIL | The connection on the I/O port failed (this typically means that the client did not connect within the timeout). |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">flags</td>
+<td class="short-line">bool</td>
+<td class="long-line">This field is always set to 0. It is reserved for future use.</td>
+</tr>
+<tr>
+<td class="short-line">protocol_error_code</td>
+<td class="short-line">uint32</td>
+<td class="long-line">An enum indicating the type of protocol error that has occurred. This may be one of the following values:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Error</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">UNDEFINED</td>
+<td class="short-line"></td>
+</tr>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">IO_CONSOLE_FAIL</td>
+<td class="long-line">The connection on the I/O port failed (this typically means that the client did not connect within the timeout).</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### ExceptionBreakpointError
 

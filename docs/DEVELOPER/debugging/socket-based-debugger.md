@@ -371,33 +371,146 @@ struct DebuggerUpdate {
 };
 ```
 
-| Field         | Type   | Description                                                                                                                                                                                                                                                                          |
-| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| packet_length | uint32 | The length of the packet in bytes, including this field                                                                                                                                                                                                                              |
-| request_id    | uint32 | The ID of the debugger request, which must be **0**. This ID is included in the debugger response. <br />\<br/>**0** is a reserved value for the **request_id** in DebuggerUpdate messages; therefore, a debugging client may not send a DebuggerRequest with a **request_id** of 0. |
-| error_code    | uint32 | An enum indicating the status of the request. If the debugger request was successful, a value of **0** is returned. This may be one of the following values: <br />$\{error_code_table}                                                                                              |
-| update_type   | uint32 | An enum representing the update being sent by the debugger, which may be one of the following values:<br />$\{update_code_table}                                                                                                                                                     |
-| data          | uint8  | The update data returned based on the **update_type**. This may be one of the following values:<br />$\{debugging_update_data}                                                                                                                                                       |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">packet_length</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The length of the packet in bytes, including this field</td>
+</tr>
+<tr>
+<td class="short-line">request_id</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The ID of the debugger request, which must be <strong>0</strong>. This ID is included in the debugger response. <br><br><strong>0</strong> is a reserved value for the <strong>request_id</strong> in DebuggerUpdate messages; therefore, a debugging client may not send a DebuggerRequest with a <strong>request_id</strong> of 0.</td>
+</tr>
+<tr>
+<td class="short-line">error_code</td>
+<td class="short-line">uint32</td>
+<td class="long-line">An enum indicating the status of the request. If the debugger request was successful, a value of <strong>0</strong> is returned. This may be one of the following values: <br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">OK</td>
+</tr>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">OTHER_ERR</td>
+</tr>
+<tr>
+<td class="short-line">2</td>
+<td class="short-line">UNDEFINED_COMMAND</td>
+</tr>
+<tr>
+<td class="short-line">3</td>
+<td class="short-line">CANT_CONTINUE</td>
+</tr>
+<tr>
+<td class="short-line">4</td>
+<td class="short-line">NOT_STOPPED</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">INVALID_ARGS</td>
+</tr>
+<tr>
+<td class="short-line">6</td>
+<td class="short-line">THREAD_DETACHED</td>
+</tr>
+<tr>
+<td class="short-line">7</td>
+<td class="short-line">EXECUTION_TIMEOUT</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">update_type</td>
+<td class="short-line">uint32</td>
+<td class="long-line">An enum representing the update being sent by the debugger, which may be one of the following values:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Update</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">UNDEF</td>
+<td class="short-line"></td>
+</tr>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">IO_PORT_OPENED</td>
+<td class="long-line">The remote debugging client should connect to the port included in the <strong>data</strong> field to retrieve the running script's output. Only reads are allowed on the I/O connection.</td>
+</tr>
+<tr>
+<td class="short-line">2</td>
+<td class="short-line">ALL_THREADS_STOPPED</td>
+<td class="long-line">All threads are stopped and an <a href="#allthreadsstopped">ALL_THREADS_STOPPED</a> message is sent to the debugging client. <br><br>The <strong>data</strong> field includes information on why the threads were stopped.</td>
+</tr>
+<tr>
+<td class="short-line">3</td>
+<td class="short-line">THREAD_ATTACHED</td>
+<td class="long-line">A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br><br>Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a <a href="#threadattached">THREAD_ATTACHED</a> message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br><br>The <strong>data</strong> field includes information on why the threads were stopped.</td>
+</tr>
+<tr>
+<td class="short-line">4</td>
+<td class="short-line">BREAKPOINT_ERROR</td>
+<td class="long-line">A compilation or runtime error occurred when evaluating the <strong>cond_expr</strong> of a conditional breakpoint.</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">COMPILE_ERROR</td>
+<td class="short-line">A compilation error occurred.</td>
+</tr>
+<tr>
+<td class="short-line">6<br><br><em>Available since Roku OS 12.0</em></td>
+<td class="short-line">BREAKPOINT_VERIFIED</td>
+<td class="long-line">A breakpoint has successfully been applied to an executable line of code.</td>
+</tr>
+<tr>
+<td class="short-line">7<br><br><em>Available since Roku OS 12.0</em></td>
+<td class="short-line">PROTOCOL_ERROR</td>
+<td class="long-line">An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.</td>
+</tr>
+<tr>
+<td class="short-line">8<br><br><em>Available since Roku OS 14.1</em></td>
+<td class="short-line">EXCEPTION_BREAKPOINT_ERROR</td>
+<td class="long-line">A compilation or runtime error has occurred when evaluating the <strong>cond_expr</strong> of an exception breakpoint.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">data</td>
+<td class="short-line">uint8</td>
+<td class="long-line">The update data returned based on the <strong>update_type</strong>. This may be one of the following values:<br><ul>
+<li>If the <strong>update_type</strong> is IO_PORT_OPENED, the <strong>data</strong> field contains the port number (uint32) to which the debugging client should connect to read the script's output.</li>
+<li>If the <strong>update_type</strong> is ALL_THREADS_STOPPED, the <strong>data</strong> field contains a structure named <strong>AllThreadsStoppedUpdateData</strong>. See <a href="#allthreadsstopped">AllThreadsStopped</a> for more information.</li>
+<li>If the <strong>update_type</strong> is THREAD_ATTACHED, the <strong>data</strong> field contains a structure named <strong>ThreadAttachedUpdateData</strong>. See <a href="#threadattached">ThreadAttached</a> for more information.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
-\{#update_code_table}
-
-| Code                                        | Update                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0                                           | UNDEF                      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| 1                                           | IO_PORT_OPENED             | The remote debugging client should connect to the port included in the **data** field to retrieve the running script's output. Only reads are allowed on the I/O connection.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| 2                                           | ALL_THREADS_STOPPED        | All threads are stopped and an [ALL_THREADS_STOPPED](#allthreadsstopped) message is sent to the debugging client. <br /><br />The **data** field includes information on why the threads were stopped.                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 3                                           | THREAD_ATTACHED            | A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a [THREAD_ATTACHED](#threadattached) message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The **data** field includes information on why the threads were stopped. |
-| 4                                           | BREAKPOINT_ERROR           | A compilation or runtime error occurred when evaluating the **cond_expr** of a conditional breakpoint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 5                                           | COMPILE_ERROR              | A compilation error occurred.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| 6<br /><br />_Available since Roku OS 12.0_ | BREAKPOINT_VERIFIED        | A breakpoint has successfully been applied to an executable line of code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| 7<br /><br />_Available since Roku OS 12.0_ | PROTOCOL_ERROR             | An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| 8<br /><br />_Available since Roku OS 14.1_ | EXCEPTION_BREAKPOINT_ERROR | A compilation or runtime error has occurred when evaluating the **cond_expr** of an exception breakpoint.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-
-\{#debugging_update_data}
-
-* If the **update_type** is IO_PORT_OPENED, the **data** field contains the port number (uint32) to which the debugging client should connect to read the script's output.
-* If the **update_type** is ALL_THREADS_STOPPED, the **data** field contains a structure named **AllThreadsStoppedUpdateData**. See [AllThreadsStopped](#allthreadsstopped) for more information.
-* If the **update_type** is THREAD_ATTACHED, the **data** field contains a structure named **ThreadAttachedUpdateData**. See [ThreadAttached](#threadattached) for more information.
+<br />
 
 ### AllThreadsStopped
 

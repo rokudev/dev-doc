@@ -1563,16 +1563,6 @@ struct ListBreakpointsResponseData {
 };
 ```
 
-\{#list_breakpoint_info_spec_struct_syntax}
-
-```
-struct BreakpointInfo {
-    uint32 breakpoint_id;
-    uint32 error_code;
-    uint32 ignore_count;
-};
-```
-
 <HTMLBlock>{`
 <table>
 <thead>
@@ -1646,6 +1636,8 @@ struct BreakpointInfo {
 </tbody>
 </table>
 `}</HTMLBlock>
+
+<br />
 
 ### RemoveBreakpointsRequestArgs
 

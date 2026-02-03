@@ -1318,7 +1318,7 @@ struct VariablesResponse{
 
 ### Step arguments
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -1360,7 +1360,7 @@ struct VariablesResponse{
       </td>
 
       <td>
-        Contains an a **StepType** enum, indicating the type of step action to be executed. This may be on the following values:   
+        Contains an a **StepType** enum, indicating the type of step action to be executed. This may be on the following values:
 
         * 0 = STEP_TYPE_NONE
         * 1 = STEP_TYPE_LINE
@@ -1479,57 +1479,7 @@ struct AddBreakpointsResponseData {
 ```
 
 <HTMLBlock>{`
-<table>
-<thead>
-<tr>
-<th class="short-line">Field</th>
-<th class="short-line">Type</th>
-<th class="short-line">Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">num_breakpoints</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The number of breakpoints in the <strong>breakpoints</strong> array.</td>
-</tr>
-<tr>
-<td class="short-line">breakpoints</td>
-<td class="short-line">BreakpointSpec[]</td>
-<td class="long-line">An array of BreakpointSpec structs. A BreakpointSpec struct has the following syntax: <br><pre><code>struct BreakpointSpec {
-    utf8z file_spec;
-    uint32 line_number;
-    uint32 ignore_count;
-};
-</code></pre><br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Argument</th>
-<th class="short-line">Type</th>
-<th class="short-line">Summary</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">file_spec</td>
-<td class="short-line">utf8z</td>
-<td class="long-line">The simple path of the source file where the breakpoint is to be inserted.<br><br>"pkg:/" specifies a file in the app<br><br>"lib:/&lt;library_name&gt;/" specifies a file in a library.</td>
-</tr>
-<tr>
-<td class="short-line">line_number</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The line number in the app code where the breakpoint is to be executed.</td>
-</tr>
-<tr>
-<td class="short-line">ignore_count</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint.</td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-</tbody>
-</table>
+
 `}</HTMLBlock>
 
 ### ListBreakpointsResponseData

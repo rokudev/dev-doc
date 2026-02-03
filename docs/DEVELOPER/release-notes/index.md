@@ -10,190 +10,271 @@ metadata:
 next:
   description: ''
 ---
+# Roku OS developer release notes
+
+> [Join the Roku beta program](https://rokutestingportal.centercode.com/key/rdbp) to implement new features in the latest Roku OS before the general release.
+
+## Roku OS 15.1
+
+Roku OS 15.1 includes support for app tracing with Perfetto, new media playback and content metadata features, and a deprecated API.
+
+Here is the list of key developer-facing Roku OS 15.1 updates:
+
+#### Media playback and content metadata
+
+##### New seek mode based on HLS Manifest
+
+The [**Video.seekMode** field](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest.
+
+#### Developer and debugging tools
+
+##### Perfetto app tracing
+
+You can use [Perfetto](https://perfetto.dev/docs/) to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.
+
+With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.
+
+For more information on using Perfetto to trace your Roku apps, click [here](/docs/developer-program/dev-tools/app-tracing.md).
+
+#### Deprecations
+
+###### roString.AppendString(s as String, len as Integer) as Void
+
+This function has been deprecated. Use the [SetString() function](/docs/references/brightscript/interfaces/ifstringops.md#setstrings-as-string-len-as-integer-as-void) instead.
+
+## Roku OS 15.0
+
+Roku OS 15.0 features major BrightScript updates, including new APIs for transferring node data and handling references, improved JSON parsing with reduced memory overhead, and more robust functions for getting the system uptime and date/time.
+
+In addition, this release includes new media playback and content metadata features and enhancements to the Roku Resource Monitor.
+
+Here is the list of key developer-facing Roku OS 15.0 updates:
+
+#### BrightScript APIs
+
+##### Optimized data transfer and reference handling APIs
+
+This release features a set of new APIs for transferring node data more efficiently than copying. These APIs let you move data in and out of fields, access data by reference, and queue the messages to be consumed by handlers on the render thread. This improves app performance by minimizing memory consumption, especially for handling larger objects.
+
+> Click [here](/docs/developer-program/performance-guide/data-transfer-apis.md) for detailed information on using these APIs.
+
+##### roArray.ifArraySizeInfo()
+
+The new **ifArraySizeInfo()** interface includes set of functions that provide developers with more control over array capacities. These functions reduce the memory overhead when using the [**ParseJSON()** function](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-flags---as-string-as-object) on large JSON body data sets.
+
+###### IsResizable() As Boolean
+
+Returns a flag indicating whether the array will automatically expand to store new items.
+
+###### Capacity() As Integer
+
+Returns the current storage capacity of the array (specifically, how many items could be
+stored without allocating additional storage).
+
+The return value may be 0 if the array is empty and no storage has been allocated yet.
+
+###### Reserve(minSize As Integer)
+
+Sends a request to allocate or increase storage capacity of the array to hold at least the specified
+number of items.
+
+Returns true if the potential capacity update can hold the specified number of items. Otherwise, returns false if the array is not resizable or storage allocation fails.
+
+> The updated capacity of the array may be more than was requested if the extra capacity already existed or how storage was implemented.
+
+###### ShrinkToFit() As Boolean
+
+Request to free or decrease storage to the minimum needed to store the current number of items.
+
+Returns true unless the array is not resizable or storage reallocation fails.
+
+> The updated capacity of the array may be more than the exact number of items in it based on the storage implementation.
+
+##### roDeviceInfo.GetUptimeMillisecondsAsLong() as Long
+
+The **GetUptimeMillisecondsAsLong()** function returns the system's uptime since the last reboot (in milliseconds as a Long). This function is similar to the [global utility Uptime function](/docs/references/brightscript/language/global-utility-functions.md#uptimedummy-as-integer-as-float), but makes it easier for developers to handle monotonic milliseconds.
+
+##### roDateTime.AsMillisecondsLong() as Long
+
+The **roDateTime.AsMillisecondsLong()** function returns a Long representing the date/time as the number of milliseconds from the Unix epoch (00:00:00 1/1/1970 GMT).
+
+#### Media playback and content metadata
+
+##### Widevine license wrapping - license challenge URL support
+
+The [**contentNode.drmParams.requestField**](/docs/developer-program/getting-started/architecture/content-metadata.md#digital-rights-management-drm-control-attributes), which was introduced in Roku OS 14.6, now supports the LICENSE_CHALLENGE field being provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.
+
+##### roDeviceInfo.IsAutoAdjustRefreshRateEnabled()
+
+The **roDeviceInfo.IsAutoAdjustRefreshRateEnabled()** function checks whether the Auto Adjust Display Refresh Rate setting is enabled on a device.
+
+#### Developer and debugging tools
+
+##### ECP commands for checking CEC settings on Roku streaming players
+
+Developers can now use [ECP](/docs/developer-program/dev-tools/external-control-api.md) to check whether CEC settings (TV power and volume control) have been enabled on a Roku streaming player.
+
+The [**query-device-info** command](/docs/developer-program/dev-tools/external-control-api.md#querydevice-info-example) now returns the following fields that indicate whether TV power and audio volume control have been enabled on a player:
+
+* supports-tv-power-control
+* supports-audio-volume-control
+
+##### Roku Resource Monitor 4.2
+
+[Roku Resource Monitor 4.2](/docs/developer-program/dev-tools/resource-monitor.md) features a new **Data Collection Mode** that enables developers to integrate a headless version of the tool into their CLI pipelines. This provides developers with automated data collection and performance monitoring without having to use the RRM UI. The collected data can be used to detect memory leaks, analyze resource utilization trends, and debug issues.
+
+* To download the tool, click [here](https://devtools.web.roku.com/#rrm-tool).
+* For more information, read the [Roku Resource Monitor documentation](/docs/developer-program/dev-tools/resource-monitor.md).
+
+## Roku OS 14.6
+
+Roku OS 14.6 includes BrightScript updates, new media playback and content metadata features, and enhancements to the Roku Resource Monitor and debugging tools. Here is the list of key developer-facing Roku OS 14.6 updates:
+
+#### BrightScript APIs
+
+##### ParseJson() support for double precision numbers
+
+The [parseJson() function](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-flags---as-string-as-object) includes a new “**d”** flag that changes floating point number parsing to use double-precision floating point values (roDouble), when needed, to improve the precision of the parsed numbers. This helps developers handle JSON payloads from server-side ad insertion (SSAI) providers that use floating-point values to represent time values.
+
+#### Media playback and content metadata
+
+##### Widevine license wrapping
+
+The [contentNode.drmParams field](/docs/developer-program/getting-started/architecture/content-metadata.md#digital-rights-management-drm-control-attributes) includes four new parameters that enable developers to wrap the Widevine license challenge payload in the request format (JSON or XML) required by their license server proxy:
+
+#### Developer and debugging tools
+
+##### Roku Resource Monitor 4.1
+
+[Roku Resource Monitor 4.1 (RRM 4.1)](https://devtools.web.roku.com/#rrm-tool) improves scrollbar behavior and provides additional support for large session files. The **SceneGraph nodes** panel now includes shallow memory usage summaries, and the **BrightScript objects** panel now includes object counts and memory usage per thread.
+
+* To download the tool, click [here](https://devtools.web.roku.com/#rrm-tool).
+* For more information, read the [Roku Resource Monitor documentation](/docs/developer-program/dev-tools/resource-monitor.md).
+
+##### Cross-component backtrace in debug console and debug protocol
+
+The debug console and debug protocol both now include cross-component backtraces. This means that you can now navigate and inspect function context frames from different SceneGraph components, instead of just from the active component, if the call chain includes observer callbacks or functions called via `callFunc`
+
+For example, if roSgNode A calls into roSgNode B on the same thread (for example, via [CallFunc](/docs/developer-program/core-concepts/handling-application-events.md#functional-fields)) and then B breaks into the call, you can now view the calls belonging to both A and B in the backtrace of the thread.
+
+###### Debug console
+
+You can use the existing `backtrace`, `up`, `down`, `over`, and `out` commands in the [debug console](/docs/developer-program/debugging/debugging-channels.md) on stack frames entered via `callFunc` or an observer callback, in addition to a normal BrightScript function call.
+
+###### Debug protocol
+
+You can now use the STEP command in the [BrightScript debug protocol](/docs/developer-program/debugging/socket-based-debugger.md) to step over and out of SceneGraph observer callbacks and functions called via `callFunc`.
+
+#### Deprecations
+
+##### Blowfish ciphers
+
+Blowfish (bf*) ciphers are now marked as obsolete in the [roEVPCipher document](/docs/references/brightscript/components/roevpcipher.md). Support for these ciphers may be removed in future Roku OS releases.
+
+## Roku OS 14.5
+
+Roku OS 14.5 includes major updates to Roku Developer Tools, including the Roku Resource Monitor and BrightScript Profiler. Here is the list of key developer-facing Roku OS 14.5 updates:
+
+#### Roku Developer Tools
+
+Essential updates have been made to the following Roku Developer Tools to ensure compatibility and reliability across modern platforms:
+
+* Roku Advanced Layout Editor
+* Roku Remote Tool
+* Roku DeepLinking Tester
+* Roku Stream Tester
+
+This release provides the following improvements, critical bug fixes, and updates to the dependency stack to improve support for current and upcoming operating systems:
+
+* **Updated dependencies**: All major libraries and components have been upgraded to support the latest macOS (incl. Sequoia), Linux, and Windows 11 environments.
+* **Signed macOS build**: Package signing has been updated so tools now launch without warnings on MacOS systems.
+* **Improved cross-platform support**: Enhanced performance and system integration across macOS, Linux distributions, and Windows.
+* **Bug fixes**: Resolved various issues and improved user experience.
+
+##### Roku Resource Monitor 4.0
+
+[Roku Resource Monitor 4.0 (RRM 4.0)](https://devtools.web.roku.com/#rrm-tool) introduces several UI enhancements, including the ability to disable specific metric panels for your channel. This feature stops monitoring and hides the selected metric, allowing for a more streamlined and customized monitoring experience.  Additionally, RRM 4.0 automatically saves your view configuration, ensuring your preferred layout is retained the next time you launch the tool.
+
+RRM 4.0 also consolidates the BrightScript Objects panels into one graph and adds an option for displaying the memory used by different objects, breaks out the SceneGraph metrics into the different node types (similar to the BrightScript Objects panel), and lets you drill down into the source code associated with a rendezvous event.
+
+* To download the tool, click [here](https://devtools.web.roku.com/#rrm-tool).
+* For more information, read the [Roku Resource Monitor documentation](/docs/developer-program/dev-tools/resource-monitor.md).
+
+##### BrightScript Profiler
+
+The BrightScript Profiler features improved performance and stability. The tool uses less CPU and memory resources; therefore, it stays performant as you use it for longer sessions or switch tabs during a session.
+
+* To download the tool, click [here](https://devtools.web.roku.com/#brs-profiler-tool).
+* For more information, read the [BrightScript profiler documentation](/docs/developer-program/dev-tools/brightscript-profiler.md).
+
+#### Media playback and content metadata
+
+The [**drmParams** parameter](/docs/developer-program/getting-started/architecture/content-metadata.md#digital-rights-management-drm-control-attributes) now includes an **ignoreInitDataPssh** control attribute that ignores the PSSH in the initialization segment. This enables support for Harmonic/DTV-GO DASH-IOP v5.0.0 streams with In-Band Key-Rotation Signaling without breaking legacy streams/apps that do not provide the `<ContentProtection>` element with PSSH info in the DASH manifest.
+
+#### Roku SceneGraph (RSG) 1.1 apps sunset
+
+Support for apps using SceneGraph 1.1 (RSG 1.1) has ended on Roku OS 14.5. Apps claiming "rsg_version=1.1" in the manifest file will execute as if rsg_version=1.2 was specified and therefore may stop functioning properly on Roku OS 14.5. Developers must migrate their RSG 1.1 apps to RSG 1.2 to ensure they run on Roku OS 14.5.
+
+In the Roku OS 9.0 release, the **eval()** function was deprecated and developers were instructed to use RSG 1.2 by setting the **rsg_version** flag in their manifest file to “rsg_version=1.2” in order to optimize load time performance and memory usage. In the Roku OS 9.3 release, the **eval()** function was sunset and it was noted that developers had to either remove all usage of the **eval()** function or update the **rsg_version** flag to “rsgversion=1.1”. With the release of Roku OS 14.5, the "rsg_version=1.1" manifest value is no longer an option and will be ignored.
+
+## Roku OS 14.0
+
+**Initial rollout date**: September 24, 2024
+
+Roku OS 14.0 includes new SceneGraph features for displaying monospaced text in your apps. Developers can use the new [**MonospaceLabel** node](/docs/references/scenegraph/label-nodes/monospace-label.md) to draw a single line of text with all characters spaced at a fixed distance from each other. This functions as an alternative to using a monospace font with the **Label** node. In addition, the [**LabelBase** node](/docs/references/scenegraph/label-nodes/label-base.md) includes a new [**monospacedDigits** field](/docs/references/scenegraph/label-nodes/label-base.md#fields) that enables the rendering of tabular digits in overhang time values and countdowns.
+
+In addition, Roku OS 14.0 includes features that enhance the performance of media playback and Roku devices in general and expand platform support for industry standards covering content metadata.
+
+Here is the list of key developer-facing Roku OS 14.0 updates:
+
+* [**MonospaceLabel**](/docs/references/scenegraph/label-nodes/monospace-label.md) — The [**MonospaceLabel** node](/docs/references/scenegraph/label-nodes/monospace-label.md) is used to draw a single line of text with all characters spaced at a fixed distance from each other. It transforms proportional fonts into monospaced fonts. It is a substitute for using a monospace font with the **Label** node.
+* [**LabelBase.monospacedDigits**](/docs/references/scenegraph/label-nodes/label-base.md#fields) — The LabelBase.monospacedDigits field is used to render monospaced digits.
+
+## Roku OS 13.0
+
+**Initial rollout date**: April 10, 2024
+
+Roku OS 13.0 includes a new [**contentClassifier** content metadata attribute](/docs/developer-program/getting-started/architecture/content-metadata.md#content-classification-attributes) that lets developers optimize the sound and picture on Roku TVs based on different content genres. This helps developers increase app engagement by giving customers a simple, convenient way to optimize their playback experience. Other media enhancements include new **Video** node attributes that provide developers with accessibility information about audio and subtitle tracks.
+
+New BrightScript APIs help developers monitor and debug memory issues. The [**roAppMemoryMontor** node](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) includes a new function that returns the maximum amount of background and foreground memory an app may use, and the [**roAppManager** node](/docs/references/brightscript/interfaces/ifappmanager.md#getlastexitinfo-as-object) includes a function that lists the reason an app was terminated. In addition, this release includes new APIs that let developers check whether autoplay is enabled on a device and whether the system clock is valid.
+
+For tools, ECP includes new [**exit-app**](/docs/developer-program/dev-tools/external-control-api.md#exit-app-example) and [**query-app-state**](/docs/developer-program/dev-tools/external-control-api.md#queryapp-state-example) commands that help developers automate the testing of apps that support Instant Resume and a new [**query/app-object-counts** command](/docs/developer-program/dev-tools/external-control-api.md#queryapp-object-counts-example) that helps developers associate memory and CPU usage with changes in BrightScript node object counts in their apps.
+
+Here is the list of key developer-facing Roku OS 13.0 updates:
+
+#### BrightScript APIs
+
+* [**Maximum available memory query**](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) —  The **roAppMemoryMonitor** component includes a new [**GetChannelMemoryLimit** () function](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) that returns how much foreground and background memory the app may use and the maximum amount of memory that the RokuOS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics ). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
+
+* [**App exit query**](/docs/references/brightscript/interfaces/ifappmanager.md#getlastexitinfo-as-object) — The **roAppManager** component includes a new [**GetLastExitInfo**() function](/docs/references/brightscript/interfaces/ifappmanager.md#getlastexitinfo-as-object) that returns an exit code indicating why an app was terminated. This helps developers monitor and debug memory issues with their apps. The last exit information is provided for only the 10 most recent exits across all apps, and exit information does not persist across device reboots.
+
+* [**Autoplay-enabled query**](/docs/references/brightscript/interfaces/ifdeviceinfo.md#isautoplayenabled-as-boolean) — The **roDeviceInfo** component includes a new [**IsAutoplayEnabled**() function](/docs/references/brightscript/interfaces/ifdeviceinfo.md#isautoplayenabled-as-boolean) that lets developers check whether autoplay is enabled on a device. This lets developers ensure that their apps respect this device setting when customers browse content in their app.
+
+* [**Hands-free voice remote check**](/docs/references/brightscript/interfaces/ifremoteinfo.md#hasfeaturefeature-as-string-remoteindex-as-integer-as-boolean) — The [**roRemoteInfo.hasFeature()** function](/docs/references/brightscript/interfaces/ifremoteinfo.md#hasfeaturefeature-as-string-remoteindex-as-integer-as-boolean) now takes a "hasMuteSwitch" parameter, which enables developers to check whether a Roku remote control includes a hands-free voice switch.
+
+#### Media, DRM, and content metadata updates
+
+* [**Optimized sound and picture for Roku TVs based on content genre**](/docs/developer-program/getting-started/architecture/content-metadata.md#content-classification-attributes) — Developers can use the new [**contentClassifier** content metadata attribute](/docs/developer-program/getting-started/architecture/content-metadata.md#content-classification-attributes) to specify the genre of their content (for example, action, sports, or comedy), and the Roku OS will use this attribute to automatically adjust the sound and picture on Roku TVs (if auto mode is selected for the picture or sound settings).
+
+* [**Accessibility information for audio and subtitle tracks**](/docs/references/scenegraph/media-playback-nodes/video.md#closed-caption-fields) —  The **Video** node's [**availableAudioTracks**](/docs/references/scenegraph/media-playback-nodes/video.md#closed-caption-fields) and [**availableSubtitleTracks**](/docs/references/scenegraph/media-playback-nodes/video.md#audio-fields) fields include new key-value pairs that provide accessibility information for audio and subtitle tracks. This helps developers identify whether a given track is an audio description.
+
+* [**Seamless audio track selection**](/docs/references/scenegraph/media-playback-nodes/video.md#audio-fields) — The **Video** node includes a new [**seamlessAudioTrackSelection** field](/docs/references/scenegraph/media-playback-nodes/video.md#audio-fields) that enables apps to continuously play video content when the audio track is switched (provided that the audio format remains the same). This gives developers the choice when the audio track is changed to either pause the video for approximately 1 second (current default behavior) or continue video playback. This feature currently supports HLS only.
+
+#### Tools
+
+**New ECP commands**
+
+Developers can leverage the following ECP new commands in their tools and web services:
+
+* [**Suspend/terminate app command and app state query**](/docs/developer-program/dev-tools/external-control-api.md#general-ecp-commands) — A new [**exit-app** command](/docs/developer-program/dev-tools/external-control-api.md#exit-app-example) enables developers to suspend or terminate their running app, and a new [**query-app-state** command](/docs/developer-program/dev-tools/external-control-api.md#querychannel-state-example) lets developers check whether their app is active, suspended (background), or inactive. These two commands help developers automate the testing of apps that support [Instant Resume](/docs/developer-program/media-playback/instant-resume.md).
+
+* [**BrightScript object counts query**](/docs/developer-program/dev-tools/external-control-api.md#general-ecp-commands) — ECP includes a new [**query/app-object-counts** command](/docs/developer-program/dev-tools/external-control-api.md#queryapp-object-counts-example) that helps developers determine counts of each type of object held by their BrightScript app.
+
+#### Deprecated APIs
+
+* The [**roAppInfo.getSubtitle()** function has been deprecated](/docs/references/deprecated-apis.md#roappinfogetsubtitle).
+
 <HTMLBlock>{`
-<h1 id="roku-os-developer-release-notes">Roku OS developer release notes</h1>
-<blockquote>
-<p><a href="https://rokutestingportal.centercode.com/key/rdbp">Join the Roku beta program</a> to implement new features in the latest Roku OS before the general release.</p>
-</blockquote>
-<h2 id="roku-os-15-1">Roku OS 15.1</h2>
-<p>Roku OS 15.1 includes support for app tracing with Perfetto, new media playback and content metadata features, and a deprecated API. </p>
-<p>Here is the list of key developer-facing Roku OS 15.1 updates:</p>
-<h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
-<h5 id="new-seek-mode-based-on-hls-manifest">New seek mode based on HLS Manifest</h5>
-<p>The <a href="https://roku-ent.readme.io/dev/docs/video#trickplay-fields">Video.seekMode</a> supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
-<h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
-<h5 id="perfetto-app-tracing">Perfetto app tracing</h5>
-<p>You can use <a href="https://perfetto.dev/docs/">Perfetto</a> to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.</p>
-<p>With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.</p>
-<p>For more information on using Perfetto to trace your Roku apps, click <a href="https://roku-ent.readme.io/dev/docs/app-tracing">here</a>. </p>
-<h4 id="deprecations">Deprecations</h4>
-<h6 id="rostring-appendstring-s-as-string-len-as-integer-as-void">roString.AppendString(s as String, len as Integer) as Void</h6>
-<p>This function has been deprecated. Use the [SetString() function](doc:ifstringops#setstrings-as-string-len-as-integer-as-void) instead. </p>
-<h2 id="roku-os-15-0">Roku OS 15.0</h2>
-<p>Roku OS 15.0 features major BrightScript updates, including new APIs for transferring node data and handling references, improved JSON parsing with reduced memory overhead, and more robust functions for getting the system uptime and date/time.</p>
-<p>In addition, this release includes new media playback and content metadata features and enhancements to the Roku Resource Monitor. </p>
-<p>Here is the list of key developer-facing Roku OS 15.0 updates:</p>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<h5 id="optimized-data-transfer-and-reference-handling-apis">Optimized data transfer and reference handling APIs</h5>
-<p>This release features a set of new APIs for transferring node data more efficiently than copying. These APIs let you move data in and out of fields, access data by reference, and queue the messages to be consumed by handlers on the render thread. This improves app performance by minimizing memory consumption, especially for handling larger objects. </p>
-<blockquote>
-<p>Click [here](doc:data-transfer-apis) for detailed information on using these APIs.</p>
-</blockquote>
-<h5 id="roarray-ifarraysizeinfo-">roArray.ifArraySizeInfo()</h5>
-<p>The new <strong>ifArraySizeInfo()</strong> interface includes set of functions that provide developers with more control over array capacities. These functions reduce the memory overhead when using the [<strong>ParseJSON()</strong> function](doc:global-utility-functions#parsejsonjsonstring-as-string-flags---as-string-as-object) on large JSON body data sets. </p>
-<h6 id="isresizable-as-boolean">IsResizable() As Boolean</h6>
-<p>Returns a flag indicating whether the array will automatically expand to store new items.</p>
-<h6 id="capacity-as-integer">Capacity() As Integer</h6>
-<p>Returns the current storage capacity of the array (specifically, how many items could be
-stored without allocating additional storage).</p>
-<p>The return value may be 0 if the array is empty and no storage has been allocated yet.</p>
-<h6 id="reserve-minsize-as-integer-">Reserve(minSize As Integer)</h6>
-<p>Sends a request to allocate or increase storage capacity of the array to hold at least the specified
-number of items. </p>
-<p>Returns true if the potential capacity update can hold the specified number of items. Otherwise, returns false if the array is not resizable or storage allocation fails.</p>
-<blockquote>
-<p> The updated capacity of the array may be more than was requested if the extra capacity already existed or how storage was implemented.</p>
-</blockquote>
-<h6 id="shrinktofit-as-boolean">ShrinkToFit() As Boolean</h6>
-<p>Request to free or decrease storage to the minimum needed to store the current number of items.</p>
-<p>Returns true unless the array is not resizable or storage reallocation fails.</p>
-<blockquote>
-<p>The updated capacity of the array may be more than the exact number of items in it based on the storage implementation.</p>
-</blockquote>
-<h5 id="rodeviceinfo-getuptimemillisecondsaslong-as-long">roDeviceInfo.GetUptimeMillisecondsAsLong() as Long</h5>
-<p>The <strong>GetUptimeMillisecondsAsLong()</strong> function returns the system&#39;s uptime since the last reboot (in milliseconds as a Long). This function is similar to the [global utility Uptime function](doc:global-utility-functions#uptimedummy-as-integer-as-float), but makes it easier for developers to handle monotonic milliseconds.</p>
-<h5 id="rodatetime-asmillisecondslong-as-long">roDateTime.AsMillisecondsLong() as Long</h5>
-<p>The <strong>roDateTime.AsMillisecondsLong()</strong> function returns a Long representing the date/time as the number of milliseconds from the Unix epoch (00:00:00 1/1/1970 GMT).</p>
-<h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
-<h5 id="widevine-license-wrapping-license-challenge-url-support">Widevine license wrapping - license challenge URL support</h5>
-<p>The [<strong>contentNode.drmParams.requestField</strong>](doc:content-metadata#digital-rights-management-drm-control-attributes), which was introduced in Roku OS 14.6, now supports the LICENSE_CHALLENGE field being provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.  </p>
-<h5 id="rodeviceinfo-isautoadjustrefreshrateenabled-">roDeviceInfo.IsAutoAdjustRefreshRateEnabled()</h5>
-<p>The <strong>roDeviceInfo.IsAutoAdjustRefreshRateEnabled()</strong> function checks whether the Auto Adjust Display Refresh Rate setting is enabled on a device. </p>
-<h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
-<h5 id="ecp-commands-for-checking-cec-settings-on-roku-streaming-players">ECP commands for checking CEC settings on Roku streaming players</h5>
-<p>Developers can now use [ECP](doc:external-control-api) to check whether CEC settings (TV power and volume control) have been enabled on a Roku streaming player. </p>
-<p>The [<strong>query-device-info</strong> command](doc:external-control-api#querydevice-info-example) now returns the following fields that indicate whether TV power and audio volume control have been enabled on a player: </p>
-<ul>
-<li>supports-tv-power-control</li>
-<li>supports-audio-volume-control</li>
-</ul>
-<h5 id="roku-resource-monitor-4-2">Roku Resource Monitor 4.2</h5>
-<p>[Roku Resource Monitor 4.2](doc:resource-monitor) features a new <strong>Data Collection Mode</strong> that enables developers to integrate a headless version of the tool into their CLI pipelines. This provides developers with automated data collection and performance monitoring without having to use the RRM UI. The collected data can be used to detect memory leaks, analyze resource utilization trends, and debug issues.</p>
-<ul>
-<li>To download the tool, click <a href="https://devtools.web.roku.com/#rrm-tool">here</a>.</li>
-<li>For more information, read the [Roku Resource Monitor documentation](doc:resource-monitor).</li>
-</ul>
-<h2 id="roku-os-14-6">Roku OS 14.6</h2>
-<p>Roku OS 14.6 includes BrightScript updates, new media playback and content metadata features, and enhancements to the Roku Resource Monitor and debugging tools. Here is the list of key developer-facing Roku OS 14.6 updates:</p>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<h5 id="parsejson-support-for-double-precision-numbers">ParseJson() support for double precision numbers</h5>
-<p>The [parseJson() function](doc:global-utility-functions#parsejsonjsonstring-as-string-flags---as-string-as-object) includes a new “<strong>d”</strong> flag that changes floating point number parsing to use double-precision floating point values (roDouble), when needed, to improve the precision of the parsed numbers. This helps developers handle JSON payloads from server-side ad insertion (SSAI) providers that use floating-point values to represent time values.</p>
-<h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
-<h5 id="widevine-license-wrapping">Widevine license wrapping</h5>
-<p>The [contentNode.drmParams field](doc:content-metadata#digital-rights-management-drm-control-attributes) includes four new parameters that enable developers to wrap the Widevine license challenge payload in the request format (JSON or XML) required by their license server proxy:</p>
-<h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
-<h5 id="roku-resource-monitor-4-1">Roku Resource Monitor 4.1</h5>
-<p><a href="https://devtools.web.roku.com/#rrm-tool">Roku Resource Monitor 4.1 (RRM 4.1)</a> improves scrollbar behavior and provides additional support for large session files. The <strong>SceneGraph nodes</strong> panel now includes shallow memory usage summaries, and the <strong>BrightScript objects</strong> panel now includes object counts and memory usage per thread.</p>
-<ul>
-<li>To download the tool, click <a href="https://devtools.web.roku.com/#rrm-tool">here</a>.</li>
-<li>For more information, read the [Roku Resource Monitor documentation](doc:resource-monitor).</li>
-</ul>
-<h5 id="cross-component-backtrace-in-debug-console-and-debug-protocol">Cross-component backtrace in debug console and debug protocol</h5>
-<p>The debug console and debug protocol both now include cross-component backtraces. This means that you can now navigate and inspect function context frames from different SceneGraph components, instead of just from the active component, if the call chain includes observer callbacks or functions called via <code>callFunc</code></p>
-<p>For example, if roSgNode A calls into roSgNode B on the same thread (for example, via [CallFunc](doc:handling-application-events#functional-fields)) and then B breaks into the call, you can now view the calls belonging to both A and B in the backtrace of the thread.</p>
-<h6 id="debug-console">Debug console</h6>
-<p>You can use the existing <code>backtrace</code>, <code>up</code>, <code>down</code>, <code>over</code>, and <code>out</code> commands in the [debug console](doc:debugging-channels) on stack frames entered via <code>callFunc</code> or an observer callback, in addition to a normal BrightScript function call.</p>
-<h6 id="debug-protocol">Debug protocol</h6>
-<p>You can now use the STEP command in the [BrightScript debug protocol](doc:socket-based-debugger) to step over and out of SceneGraph observer callbacks and functions called via <code>callFunc</code>.</p>
-<h4 id="deprecations">Deprecations</h4>
-<h5 id="blowfish-ciphers">Blowfish ciphers</h5>
-<p>Blowfish (bf*) ciphers are now marked as obsolete in the [roEVPCipher document](doc:roevpcipher). Support for these ciphers may be removed in future Roku OS releases.</p>
-<h2 id="roku-os-14-5">Roku OS 14.5</h2>
-<p>Roku OS 14.5 includes major updates to Roku Developer Tools, including the Roku Resource Monitor and BrightScript Profiler. Here is the list of key developer-facing Roku OS 14.5 updates:</p>
-<h4 id="roku-developer-tools">Roku Developer Tools</h4>
-<p>Essential updates have been made to the following Roku Developer Tools to ensure compatibility and reliability across modern platforms:</p>
-<ul>
-<li>Roku Advanced Layout Editor</li>
-<li>Roku Remote Tool</li>
-<li>Roku DeepLinking Tester</li>
-<li>Roku Stream Tester</li>
-</ul>
-<p>This release provides the following improvements, critical bug fixes, and updates to the dependency stack to improve support for current and upcoming operating systems:</p>
-<ul>
-<li><strong>Updated dependencies</strong>: All major libraries and components have been upgraded to support the latest macOS (incl. Sequoia), Linux, and Windows 11 environments.</li>
-<li><strong>Signed macOS build</strong>: Package signing has been updated so tools now launch without warnings on MacOS systems.</li>
-<li><strong>Improved cross-platform support</strong>: Enhanced performance and system integration across macOS, Linux distributions, and Windows.</li>
-<li><strong>Bug fixes</strong>: Resolved various issues and improved user experience.</li>
-</ul>
-<h5 id="roku-resource-monitor-4-0">Roku Resource Monitor 4.0</h5>
-<p><a href="https://devtools.web.roku.com/#rrm-tool">Roku Resource Monitor 4.0 (RRM 4.0)</a> introduces several UI enhancements, including the ability to disable specific metric panels for your channel. This feature stops monitoring and hides the selected metric, allowing for a more streamlined and customized monitoring experience.  Additionally, RRM 4.0 automatically saves your view configuration, ensuring your preferred layout is retained the next time you launch the tool.</p>
-<p>RRM 4.0 also consolidates the BrightScript Objects panels into one graph and adds an option for displaying the memory used by different objects, breaks out the SceneGraph metrics into the different node types (similar to the BrightScript Objects panel), and lets you drill down into the source code associated with a rendezvous event.</p>
-<ul>
-<li>To download the tool, click <a href="https://devtools.web.roku.com/#rrm-tool">here</a>. </li>
-<li>For more information, read the [Roku Resource Monitor documentation](doc:resource-monitor). </li>
-</ul>
-<h5 id="brightscript-profiler">BrightScript Profiler</h5>
-<p>The BrightScript Profiler features improved performance and stability. The tool uses less CPU and memory resources; therefore, it stays performant as you use it for longer sessions or switch tabs during a session.</p>
-<ul>
-<li>To download the tool, click <a href="https://devtools.web.roku.com/#brs-profiler-tool">here</a>. </li>
-<li>For more information, read the [BrightScript profiler documentation](doc:brightscript-profiler). </li>
-</ul>
-<h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
-<p>The [<strong>drmParams</strong> parameter](doc:content-metadata#digital-rights-management-drm-control-attributes) now includes an <strong>ignoreInitDataPssh</strong> control attribute that ignores the PSSH in the initialization segment. This enables support for Harmonic/DTV-GO DASH-IOP v5.0.0 streams with In-Band Key-Rotation Signaling without breaking legacy streams/apps that do not provide the <code>&lt;ContentProtection&gt;</code> element with PSSH info in the DASH manifest.</p>
-<h4 id="roku-scenegraph-rsg-1-1-apps-sunset">Roku SceneGraph (RSG) 1.1 apps sunset</h4>
-<p>Support for apps using SceneGraph 1.1 (RSG 1.1) has ended on Roku OS 14.5. Apps claiming &quot;rsg_version=1.1&quot; in the manifest file will execute as if rsg_version=1.2 was specified and therefore may stop functioning properly on Roku OS 14.5. Developers must migrate their RSG 1.1 apps to RSG 1.2 to ensure they run on Roku OS 14.5.</p>
-<p>In the Roku OS 9.0 release, the <strong>eval()</strong> function was deprecated and developers were instructed to use RSG 1.2 by setting the <strong>rsg_version</strong> flag in their manifest file to “rsg_version=1.2” in order to optimize load time performance and memory usage. In the Roku OS 9.3 release, the <strong>eval()</strong> function was sunset and it was noted that developers had to either remove all usage of the <strong>eval()</strong> function or update the <strong>rsg_version</strong> flag to “rsgversion=1.1”. With the release of Roku OS 14.5, the &quot;rsg_version=1.1&quot; manifest value is no longer an option and will be ignored.</p>
-<h2 id="roku-os-14-0">Roku OS 14.0</h2>
-<p><strong>Initial rollout date</strong>: September 24, 2024</p>
-<p>Roku OS 14.0 includes new SceneGraph features for displaying monospaced text in your apps. Developers can use the new [<strong>MonospaceLabel</strong> node](doc:monospace-label) to draw a single line of text with all characters spaced at a fixed distance from each other. This functions as an alternative to using a monospace font with the <strong>Label</strong> node. In addition, the [<strong>LabelBase</strong> node](doc:label-base) includes a new [<strong>monospacedDigits</strong> field](doc:label-base#fields) that enables the rendering of tabular digits in overhang time values and countdowns.</p>
-<p>In addition, Roku OS 14.0 includes features that enhance the performance of media playback and Roku devices in general and expand platform support for industry standards covering content metadata.</p>
-<p>Here is the list of key developer-facing Roku OS 14.0 updates:</p>
-<ul>
-<li>[<strong>MonospaceLabel</strong>](doc:monospace-label) — The [<strong>MonospaceLabel</strong> node](doc:monospace-label) is used to draw a single line of text with all characters spaced at a fixed distance from each other. It transforms proportional fonts into monospaced fonts. It is a substitute for using a monospace font with the <strong>Label</strong> node.</li>
-<li>[<strong>LabelBase.monospacedDigits</strong>](doc:label-base#fields) — The LabelBase.monospacedDigits field is used to render monospaced digits.</li>
-</ul>
-<h2 id="roku-os-13-0">Roku OS 13.0</h2>
-<p><strong>Initial rollout date</strong>: April 10, 2024</p>
-<p>Roku OS 13.0 includes a new [<strong>contentClassifier</strong> content metadata attribute](doc:content-metadata#content-classification-attributes) that lets developers optimize the sound and picture on Roku TVs based on different content genres. This helps developers increase app engagement by giving customers a simple, convenient way to optimize their playback experience. Other media enhancements include new <strong>Video</strong> node attributes that provide developers with accessibility information about audio and subtitle tracks.</p>
-<p>New BrightScript APIs help developers monitor and debug memory issues. The [<strong>roAppMemoryMontor</strong> node](doc:ifappmemorymonitor#getchannelmemorylimit-as-object) includes a new function that returns the maximum amount of background and foreground memory an app may use, and the [<strong>roAppManager</strong> node](doc:ifappmanager#getlastexitinfo-as-object) includes a function that lists the reason an app was terminated. In addition, this release includes new APIs that let developers check whether autoplay is enabled on a device and whether the system clock is valid.</p>
-<p>For tools, ECP includes new [<strong>exit-app</strong>](doc:external-control-api#exit-app-example) and [<strong>query-app-state</strong>](doc:external-control-api#queryapp-state-example) commands that help developers automate the testing of apps that support Instant Resume and a new [<strong>query/app-object-counts</strong> command](doc:external-control-api#queryapp-object-counts-example) that helps developers associate memory and CPU usage with changes in BrightScript node object counts in their apps.</p>
-<p>Here is the list of key developer-facing Roku OS 13.0 updates:</p>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<ul>
-<li>[<strong>Maximum available memory query</strong>](doc:ifappmemorymonitor#getchannelmemorylimit-as-object) —  The <strong>roAppMemoryMonitor</strong> component includes a new [<strong>GetChannelMemoryLimit</strong> () function](doc:ifappmemorymonitor#getchannelmemorylimit-as-object) that returns how much foreground and background memory the app may use and the maximum amount of memory that the RokuOS may allocate on behalf of the app (the memory that shows up in the app&#39;s heap memory statistics ). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.</li>
-</ul>
-<ul>
-<li>[<strong>App exit query</strong>](doc:ifappmanager#getlastexitinfo-as-object) — The <strong>roAppManager</strong> component includes a new [<strong>GetLastExitInfo</strong>() function](doc:ifappmanager#getlastexitinfo-as-object) that returns an exit code indicating why an app was terminated. This helps developers monitor and debug memory issues with their apps. The last exit information is provided for only the 10 most recent exits across all apps, and exit information does not persist across device reboots.</li>
-</ul>
-<ul>
-<li>[<strong>Autoplay-enabled query</strong>](doc:ifdeviceinfo#isautoplayenabled-as-boolean) — The <strong>roDeviceInfo</strong> component includes a new [<strong>IsAutoplayEnabled</strong>() function](doc:ifdeviceinfo#isautoplayenabled-as-boolean) that lets developers check whether autoplay is enabled on a device. This lets developers ensure that their apps respect this device setting when customers browse content in their app.</li>
-</ul>
-<ul>
-<li>[<strong>Hands-free voice remote check</strong>](doc:ifremoteinfo#hasfeaturefeature-as-string-remoteindex-as-integer-as-boolean) — The [<strong>roRemoteInfo.hasFeature()</strong> function](doc:ifremoteinfo#hasfeaturefeature-as-string-remoteindex-as-integer-as-boolean) now takes a &quot;hasMuteSwitch&quot; parameter, which enables developers to check whether a Roku remote control includes a hands-free voice switch.</li>
-</ul>
-<h4 id="media-drm-and-content-metadata-updates">Media, DRM, and content metadata updates</h4>
-<ul>
-<li>[<strong>Optimized sound and picture for Roku TVs based on content genre</strong>](doc:content-metadata#content-classification-attributes) — Developers can use the new [<strong>contentClassifier</strong> content metadata attribute](doc:content-metadata#content-classification-attributes) to specify the genre of their content (for example, action, sports, or comedy), and the Roku OS will use this attribute to automatically adjust the sound and picture on Roku TVs (if auto mode is selected for the picture or sound settings).</li>
-</ul>
-<ul>
-<li>[<strong>Accessibility information for audio and subtitle tracks</strong>](doc:video#closed-caption-fields) —  The <strong>Video</strong> node&#39;s [<strong>availableAudioTracks</strong>](doc:video#closed-caption-fields) and [<strong>availableSubtitleTracks</strong>](doc:video#audio-fields) fields include new key-value pairs that provide accessibility information for audio and subtitle tracks. This helps developers identify whether a given track is an audio description.</li>
-</ul>
-<ul>
-<li>[<strong>Seamless audio track selection</strong>](doc:video#audio-fields) — The <strong>Video</strong> node includes a new [<strong>seamlessAudioTrackSelection</strong> field](doc:video#audio-fields) that enables apps to continuously play video content when the audio track is switched (provided that the audio format remains the same). This gives developers the choice when the audio track is changed to either pause the video for approximately 1 second (current default behavior) or continue video playback. This feature currently supports HLS only.</li>
-</ul>
-<h4 id="tools">Tools</h4>
-<p><strong>New ECP commands</strong></p>
-<p>Developers can leverage the following ECP new commands in their tools and web services:</p>
-<ul>
-<li>[<strong>Suspend/terminate app command and app state query</strong>](doc:external-control-api#general-ecp-commands) — A new [<strong>exit-app</strong> command](doc:external-control-api#exit-app-example) enables developers to suspend or terminate their running app, and a new [<strong>query-app-state</strong> command](doc:external-control-api#querychannel-state-example) lets developers check whether their app is active, suspended (background), or inactive. These two commands help developers automate the testing of apps that support [Instant Resume](doc:instant-resume).</li>
-</ul>
-<ul>
-<li>[<strong>BrightScript object counts query</strong>](doc:external-control-api#general-ecp-commands) — ECP includes a new [<strong>query/app-object-counts</strong> command](doc:external-control-api#queryapp-object-counts-example) that helps developers determine counts of each type of object held by their BrightScript app.</li>
-</ul>
-<h4 id="deprecated-apis">Deprecated APIs</h4>
-<ul>
-<li>The [<strong>roAppInfo.getSubtitle()</strong> function has been deprecated](doc:deprecated-apis#roappinfogetsubtitle).</li>
-</ul>
 <h2 id="roku-os-12-5">Roku OS 12.5</h2>
 <p><strong>Initial rollout date</strong>: September 12, 2023</p>
 <p>Roku OS 12.5 includes new APIs for monitoring the current amount of available memory for an app and getting the device user agent. This release also includes features that generally enhance the performance of media playback such as prebuffering for live content, improved closed captioning through ad breaks, and pre-playback audio and subtitle track selection.</p>

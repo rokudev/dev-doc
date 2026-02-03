@@ -1674,35 +1674,79 @@ struct RemoveBreakpointsResponseData {
 };
 ```
 
-| Field            | Type             | Summary                                                                                                                                                                                       |
-| ---------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| num_breakpoints  | uint32           | The number of breakpoints in the **breakpoint_infos** array.                                                                                                                                  |
-| breakpoint_infos | BreakpointInfo[] | An array of BreakpointInfo structs. A BreakpointInfo struct has the following syntax: <br />$\{remove_breakpoint_infos_spec_struct_syntax}\<br/>$\{remove_breakpoint_infos_spec_struct_table} |
-
-\{#remove_breakpoint_infos_spec_struct_syntax}
-
-```
-struct BreakpointInfo {
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoint_infos</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">breakpoint_infos</td>
+<td class="short-line">BreakpointInfo[]</td>
+<td class="long-line">An array of BreakpointInfo structs. A BreakpointInfo struct has the following syntax: <br><pre><code>struct BreakpointInfo {
     uint32 breakpoint_id;
     uint32 error_code;
     uint32 ignore_count;
 };
-```
-
-\{#remove_breakpoint_infos_spec_struct_table}
-
-| Argument      | Type   | Summary                                                                                                                                      |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| breakpoint_id | utf8z  | The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error. |
-| error_code    | uint32 | Indicates whether the breakpoint was successfully removed. This may be one the following values: $\{remove_breakpoint_errors_table}          |
-| ignore_count  | uint32 | Current state, decreases as breakpoint is executed. This argument is only present if the **breakpoint_id** is valid.                         |
-
-\{#remove_breakpoint_errors_table}
-
-| Code | Status       | Description                          |
-| ---- | ------------ | ------------------------------------ |
-| 0    | OK           | The **breakpoint_id** is valid.      |
-| 5    | INVALID_ARGS | The breakpoint could not be deleted. |
+</code></pre><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">breakpoint_id</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error.</td>
+</tr>
+<tr>
+<td class="short-line">error_code</td>
+<td class="short-line">uint32</td>
+<td class="long-line">Indicates whether the breakpoint was successfully removed. This may be one the following values: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Status</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">OK</td>
+<td class="short-line">The <strong>breakpoint_id</strong> is valid.</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">INVALID_ARGS</td>
+<td class="short-line">The breakpoint could not be deleted.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">ignore_count</td>
+<td class="short-line">uint32</td>
+<td class="long-line">Current state, decreases as breakpoint is executed. This argument is only present if the <strong>breakpoint_id</strong> is valid.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ## Conditional Breakpoints
 

@@ -33,20 +33,21 @@ The names of the signup events must include two elements:
 
 #### Syntax
 
-When firing the signup event, pass in "Sign_Up|" along with pipe-separated key-value pairs for the page number and page type.
+When firing the signup event, pass in `"Sign_Up|"` along with pipe-separated key-value pairs for the page number and page type.
 
 The syntax is therefore as follows:
 
-"Sign_Up"|pageNumber=\{_int_}|pageType=\{_type_}.
+`"Sign_Up"|pageNumber=\{_int_}|pageType=\{_type_}`
 
 You can use a hierarchal page numbering system to identify different pages in the signup flow at the same level. This is useful in case your signup flow forks based on different options. For example, you may have separate monthly and annual plan pages that you could number 3.1 and 3.2. If you use hierarchal numbering, the pages must still be uniquely numbered across the sign-up flow. The syntax in this case is therefore as follows:
 
-"Sign_Up"|pageNumber=\{_int_}.\{_int_}|pageType=\{_type_}.
+`"Sign_Up"|pageNumber=\{_int_}.\{_int_}|pageType=\{_type_}`
 
 #### Examples
 
 Developers should use the following syntax for naming signup events:
 
+```
 * "Sign_Up|pageNumber=1|pageType=landing"
 * "Sign_Up|pageNumber=2|pageType=offer_selection"
 * "Sign_Up|pageNumber=3.1|pageType=basic_plan_cadence sign_up_offer_monthly"
@@ -55,12 +56,13 @@ Developers should use the following syntax for naming signup events:
 * "Sign_Up|pageNumber=4|pageType=registration"
 * "Sign_Up|pageNumber=5|pageType=registration_complete"
 * "Sign_Up|pageNumber=6|pageType=sign_up_complete"
+```
 
 #### Including form elements
 
 Optionally, you can add form element data in the signup event to generate more granular feedback on your app's signup flow. To do this, append a key-value pair with the name of the field. For example, you could fire the following event when a user enters their email address on the sign-in page:
 
-"Sign_Up|pageNumber=2|pageType=registration|field=emailAddress"
+`"Sign_Up|pageNumber=2|pageType=registration|field=emailAddress"`
 
 ### Signup form
 
@@ -68,13 +70,13 @@ If your app's signup flow is contained within a form that covers one or more pag
 
 #### Syntax
 
-"Sign_Up"|field=\{_string_}.
+`"Sign_Up"|field=\{_string_}`
 
 #### Examples
 
-"Sign_Up"|field=emailAddress
+`"Sign_Up"|field=emailAddress`
 
-"Sign_Up"|field=creditCardNumber
+`"Sign_Up"|field=creditCardNumber`
 
 > The indexes and types you use to number and classify the pages and fields are arbitrary. However, pages in the signup flow should be uniquely and sequentially numbered and types should clearly identify the corresponding page or field.
 
@@ -100,26 +102,28 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
 
    The following example demonstrates how to send signup events:
 
+   ```
    sub Notify_Roku_UserIsLoggedIn(rsgScreen = invalid as Object)
-   ' get the global node
-   if type(m.top) = "roSGNode"  ' was called from a component script
-   globalNode = m.global
-   else ' must pass roSGScreen when calling from main() thread
-   globalNode = rsgScreen.getGlobalNode()
-   end if
+      ' get the global node
+      if type(m.top) = "roSGNode"  ' was called from a component script
+      		globalNode = m.global
+      else ' must pass roSGScreen when calling from main() thread
+     		 globalNode = rsgScreen.getGlobalNode()
+      end if
 
-   ' get the Roku Analytics Component Library used for RED
-   RAC = globalNode.roku_event_dispatcher
-   if RAC = invalid then
-   RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
-   RAC.debug = true ' for verbose output to BrightScript console, optional
-   RAC.init = \{RED: \{}} ' activate RED as a provider
-   globalNode.addFields(\{roku_event_dispatcher: RAC})
-   end if
+      ' get the Roku Analytics Component Library used for RED
+      RAC = globalNode.roku_event_dispatcher
+      if RAC = invalid then
+      		RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
+      		RAC.debug = true ' for verbose output to BrightScript console, optional
+      		RAC.init = \{RED: \{}} ' activate RED as a provider
+      		globalNode.addFields(\{roku_event_dispatcher: RAC})
+      end if
 
-   ' dispatch an event to Roku
-   RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
+      ' dispatch an event to Roku
+      RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
    end sub
+   ```
 
 3. Use the [debug console](doc:debugging) to verify that your app is sending signup events.
 
@@ -129,10 +133,10 @@ To use the RAF **fireRokuMarketingPixel()** method to send authentication events
 
 1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
-   bs_libs_required=roku_ads_lib
+   `bs_libs_required=roku_ads_lib`
 
 2. Instantiate the RAF library in the app:
 
-   adIface = Roku_Ads()
+   `adIface = Roku_Ads()`
 
 3. When an authenticated customer launches your app, call the **fireRokuMarketingPixel()** method using the following syntax:

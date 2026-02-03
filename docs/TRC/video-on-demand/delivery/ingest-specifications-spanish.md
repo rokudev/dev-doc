@@ -1,6 +1,5 @@
 ---
 title: Especificaciones para la ingesta
-excerpt: ''
 deprecated: false
 hidden: true
 metadata:
@@ -10,3 +9,6 @@ metadata:
 next:
   description: ''
 ---
+<Embed typeOfEmbed="pdf" url="https://roku-sdk-docs.s3.amazonaws.com/trc-docs/ingest-specifications-spanish.pdf" />
+
+<br />

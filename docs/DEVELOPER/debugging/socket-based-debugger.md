@@ -889,8 +889,6 @@ struct ExceptionBreakpointErrorUpdateData {
 </table>
 `}</HTMLBlock>
 
-<br />
-
 ## Debugging Commands
 
 The BrightScript debugger supports the following debug commands:
@@ -921,15 +919,25 @@ struct ThreadsResponse{
 };
 ```
 
-| Field         | Type         | Summary                                                                                                                                             |
-| ------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| threads_count | uint32       | The number of threads in the response.                                                                                                              |
-| threads       | ThreadInfo[] | An array of ThreadInfo structs. A ThreadInfo struct has the following syntax: <br />$\{thread_info_struct_syntax}\<br/>$\{thread_info_struct_table} |
-
-\{#thread_info_struct_syntax}
-
-```
-struct ThreadInfo{
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">threads_count</td>
+<td class="short-line">uint32</td>
+<td class="short-line">The number of threads in the response.</td>
+</tr>
+<tr>
+<td class="short-line">threads</td>
+<td class="short-line">ThreadInfo[]</td>
+<td class="long-line">An array of ThreadInfo structs. A ThreadInfo struct has the following syntax: <br><pre><code>struct ThreadInfo{
     uint8 flags;        
     uint8 stop_reason;  
     utf8z stop_reason_detail;
@@ -938,23 +946,100 @@ struct ThreadInfo{
     utf8z file_path;
     utf8z code_snippet;
 };
-```
+</code></pre><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">flags</td>
+<td class="short-line">uint8</td>
+<td class="long-line">Contains a <strong>ThreadInfoFlags</strong> enum, IS_PRIMARY, which indicates whether this thread likely caused the stop or failure. IS_PRIMARY is set to 0x01 if true. <br><br>This enum uses a bitwise mask that enables it to fit into 8 bits.</td>
+</tr>
+<tr>
+<td class="short-line">stop_reason</td>
+<td class="short-line">uint32</td>
+<td class="long-line">An enum describing why the thread was stopped. This may be one of the following values:<br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Value</th>
+<th class="short-line">Reason</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">UNDEFINED</td>
+<td class="short-line">Uninitialized stopReason.</td>
+</tr>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">NOT_STOPPED</td>
+<td class="short-line">Thread is running.</td>
+</tr>
+<tr>
+<td class="short-line">2</td>
+<td class="short-line">NORMAL_EXIT</td>
+<td class="short-line">Thread exited.</td>
+</tr>
+<tr>
+<td class="short-line">3</td>
+<td class="short-line">STOP_STATEMENT</td>
+<td class="short-line">Stop statement executed.</td>
+</tr>
+<tr>
+<td class="short-line">4</td>
+<td class="short-line">BREAK</td>
+<td class="long-line">Another thread in the group encountered an error, this thread completed a step operation, or other reason outside this thread.</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">RUNTIME_ERROR</td>
+<td class="long-line">Thread stopped because of an error during execution.</td>
+</tr>
+</tbody>
+</table></div><br><blockquote>
+<p>The stop_reason is an 8-bit value (same as in other objects in this protocol); however, it is sent in the ThreadsResponse as a 32-bit value for historical purposes.</p>
+</blockquote></td>
+</tr>
+<tr>
+<td class="short-line">stop_reason_detail</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">Provides extra details about the stop (for example, "Divide by Zero", "STOP", "BREAK")</td>
+</tr>
+<tr>
+<td class="short-line">line_number</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The line number where the stop or failure occurred.</td>
+</tr>
+<tr>
+<td class="short-line">function_name</td>
+<td class="short-line">utf8z</td>
+<td class="short-line">The function where the stop or failure occurred.</td>
+</tr>
+<tr>
+<td class="short-line">file_path</td>
+<td class="short-line">utf8z</td>
+<td class="short-line">The file where the stop or failure occurred.</td>
+</tr>
+<tr>
+<td class="short-line">code_snippet</td>
+<td class="short-line">utf8z</td>
+<td class="short-line">The code causing the stop or failure.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
-\{#thread_info_struct_table}
-
-| Field              | Type   | Summary                                                                                                                                                                                                                                  |
-| ------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| flags              | uint8  | Contains a **ThreadInfoFlags** enum, IS_PRIMARY, which indicates whether this thread likely caused the stop or failure. IS_PRIMARY is set to 0x01 if true. <br /><br />This enum uses a bitwise mask that enables it to fit into 8 bits. |
-| stop_reason        | uint32 | An enum describing why the thread was stopped. This may be one of the following values:<br />$\{stop_reason_table2}<br />$\{bq-stop-reason-data-type}                                                                                    |
-| stop_reason_detail | utf8z  | Provides extra details about the stop (for example, "Divide by Zero", "STOP", "BREAK")                                                                                                                                                   |
-| line_number        | uint32 | The line number where the stop or failure occurred.                                                                                                                                                                                      |
-| function_name      | utf8z  | The function where the stop or failure occurred.                                                                                                                                                                                         |
-| file_path          | utf8z  | The file where the stop or failure occurred.                                                                                                                                                                                             |
-| code_snippet       | utf8z  | The code causing the stop or failure.                                                                                                                                                                                                    |
-
-\{#bq-stop-reason-data-type}
-
-> The stop_reason is an 8-bit value (same as in other objects in this protocol); however, it is sent in the ThreadsResponse as a 32-bit value for historical purposes.
+<br />
 
 ### StackTraceResponse
 

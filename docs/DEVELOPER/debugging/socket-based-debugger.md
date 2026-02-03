@@ -1766,11 +1766,70 @@ struct AddBreakpointsRequestArgs {
 };
 ```
 
-| Field           | Type                        | Summary                                                                                                                                                         |
-| :-------------- | :-------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| flags           | uint32                      | This field is always set to 0 (reserved for future use).                                                                                                        |
-| num_breakpoints | uint32                      | The number of breakpoints in the **breakpoints** array.                                                                                                         |
-| breakpoints     | ConditionalBreakpointSpec[] | An array of ConditonalBreakpointSpec structs. A ConditonalBreakpointSpec struct has the following syntax: $\{breakpoints-code}<br /><br />$\{breakpoints-table} |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">flags</td>
+<td class="short-line">uint32</td>
+<td class="long-line">This field is always set to 0 (reserved for future use).</td>
+</tr>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoints</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">breakpoints</td>
+<td class="short-line">ConditionalBreakpointSpec[]</td>
+<td class="long-line">An array of ConditonalBreakpointSpec structs. A ConditonalBreakpointSpec struct has the following syntax: <pre><code>struct CondtionalBreakpointSpec {
+    utf8z file_spec;
+    uint32 line_number;
+    uint32 ignore_count;
+ &nbsp; &nbsp;utf8z cond_expr;  //available since Debug Protocol v3.1
+};
+</code></pre><br><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">file_spec</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">The path of the source file where the conditional breakpoint is to be inserted. <br><br>"pkg://&lt;filepath&gt;" specifies a file in the app<br><br>"lib:/&lt;library_name&gt;/&lt;filepath&gt;" specifies a file in a library.</td>
+</tr>
+<tr>
+<td class="short-line">line_number</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The line number in the app code where the breakpoint is to be executed.</td>
+</tr>
+<tr>
+<td class="short-line">ignore_count</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint. If <strong>cond_expr</strong> is specified, the <strong>ignore_count</strong> is only updated if it evaluates to true.</td>
+</tr>
+<tr>
+<td class="short-line">cond_expr</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">BrightScript code that evaluates to a boolean value. The <strong>cond_expr</strong> is compiled and executed in the context where the breakpoint is located. If <strong>cond_expr</strong> is specified, the <strong>ignore_count</strong> is only be updated if this evaluates to true.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### AddConditonalBreakpointsResponseData
 

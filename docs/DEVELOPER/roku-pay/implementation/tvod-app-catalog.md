@@ -1,5 +1,5 @@
 ---
-title: "Creating TVOD apps (Catalog 2.0)"
+title: Creating TVOD apps (Catalog 2.0)
 excerpt: ''
 deprecated: false
 hidden: true
@@ -10,11 +10,9 @@ metadata:
 next:
   description: ''
 ---
-
-
 Publishers participating in Roku Pay can monetize content by making it available for rental or purchase. Implementing the transactional video on demand (TVOD) model in a Roku app allows publishers to generate revenue from sporting events, pay-per-views, recent movie releases, and other popular content in their catalog. This enables viewers to enjoy the convenience of consuming a publisher's must-see content on-demand.
 
-![roku815px - tvod-sample-UI](https://image.roku.com/ZHZscHItMTc2/tvod-buy-1.jpg)
+<Image alt="roku815px - tvod-sample-UI" border={false} src="https://image.roku.com/ZHZscHItMTc2/tvod-buy-1.jpg" />
 
 ## Overview
 
@@ -31,36 +29,35 @@ To link transactional content with Roku Pay, you create products and purchase op
 
 To manage multiple transactional content items using the same product, your app can leverage your product feed or publisher-specific API to retrieve the item's metadata from your catalog at runtime. When a user selects the content to be purchased, your app can use the runtime metadata to display the item's title, price, and poster image and pass the item's SKU through the ChannelStore functions in order to identify for which item to grant the user access.
 
-### Product guidelines 
+### Product guidelines
 
 When creating a product for transactional content, make sure to do the following:
 
-- **Product Name**. Enter a name that generically describes the rental or purchase product (for example, "movie rental", "movie purchase", and so on).
+* **Product Name**. Enter a name that generically describes the rental or purchase product (for example, "movie rental", "movie purchase", and so on).
 
-  ![roku600px - tvod-product](https://image.roku.com/ZHZscHItMTc2/tvod-product-edit.jpg)
+  <Image alt="roku600px - tvod-product" border={false} src="https://image.roku.com/ZHZscHItMTc2/tvod-product-edit.jpg" />
 
 ### Purchase option guidelines
 
 When creating a purchase option for a TVOD product, make sure to do the following:
 
-- **Purchase Type**. You must select **One-Time Purchase. consumable**.
+* **Purchase Type**. You must select **One-Time Purchase. consumable**.
 
-  ![roku600px - tvod-purchase-option-consumable-create](https://image.roku.com/ZHZscHItMTc2/tvod-purchase-option-consumable-create.jpg)
+  <Image alt="roku600px - tvod-purchase-option-consumable-create" border={false} src="https://image.roku.com/ZHZscHItMTc2/tvod-purchase-option-consumable-create.jpg" />
 
-- **Quantity** (TVOD-exclusive app only): Select **1**.  
+* **Quantity** (TVOD-exclusive app only): Select **1**.
 
-- **Price Tier**: Select any price tier. The price passed in the ChannelStore APIs overrides the price corresponding to the selected price tier.
+* **Price Tier**: Select any price tier. The price passed in the ChannelStore APIs overrides the price corresponding to the selected price tier.
 
-  ![roku600px - tvod-purchase-option-billing](https://image.roku.com/ZHZscHItMTc2/tvod-purchase-option-billing.jpg)
+  <Image alt="roku600px - tvod-purchase-option-billing" border={false} src="https://image.roku.com/ZHZscHItMTc2/tvod-purchase-option-billing.jpg" />
 
 ## Handling transactional purchases
 
-Publishers need to update their app's code to leverage the new **DoOrder** ChannelStore API, which displays the Roku Pay order confirmation screen where customers complete their purchase of your transactional content. 
+Publishers need to update their app's code to leverage the new **DoOrder** ChannelStore API, which displays the Roku Pay order confirmation screen where customers complete their purchase of your transactional content.
 
 To update your app with the new **DoOrder** API, follow these steps:
 
-
-1. Initialize the ChannelStore API generic request framework. The following code monitors the **channelStore.requestStatus** field and fires the **onRequestStatus()** callback function when changes to the **requestStatus** field occur. The **onRequestStatus()** function determines which command was sent and sends the results to the dedicated parser for the command. 
+1. Initialize the ChannelStore API generic request framework. The following code monitors the **channelStore.requestStatus** field and fires the **onRequestStatus()** callback function when changes to the **requestStatus** field occur. The **onRequestStatus()** function determines which command was sent and sends the results to the dedicated parser for the command.
 
    ```
    function init()
@@ -99,11 +96,8 @@ To update your app with the new **DoOrder** API, follow these steps:
        end if
    end function
    ```
-   
-   
 
-
-2. Send the **DoOrder** command to purchase the transactional content, and then check the order status. 
+2. Send the **DoOrder** command to purchase the transactional content, and then check the order status.
 
    ```
    sub makeTVODPurchase(requestData as dynamic)
@@ -123,7 +117,7 @@ To update your app with the new **DoOrder** API, follow these steps:
        "qty": 1
      }
      newOrder.push(order)
-   
+
      request = {}
      request.params = {
        "orderItems": newOrder,
@@ -133,7 +127,7 @@ To update your app with the new **DoOrder** API, follow these steps:
      m.store.request = request
      m.orderType = "purchaseTVOD"
    end sub
-   
+
    ' DoOrder response parser/helpers
    ' ==================================
    function onOrderStatus(requestResult as object) as void
@@ -177,7 +171,7 @@ To update your app with the new **DoOrder** API, follow these steps:
          end if
      end if
      print "message", message
-   
+
      status = {"status": requestResult.status, "statusMessage": requestResult.statusMessage}
      if m.orderType =  "purchase" or m.orderType = "purchaseTVOD"
        m.top.purchaseResult = {"status": status, "purchases": purchases}
@@ -188,19 +182,19 @@ To update your app with the new **DoOrder** API, follow these steps:
      
    end function
    ```
-   
+
    ## Sample app
-   
+
    You can download and install a [sample app](https://github.com/rokudev/samples/tree/master/roku%20paytvod-catalog-2) that demonstrates how to handle transactional purchases using the new the new **DoOrder** ChannelStore API.
-   
+
    ## Appendix A: TVOD API Reference (Catalog 2.0)
-   
-   The new version of the **DoOrder** API uses Roku's generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it. Channels must observe the **requestStatus** field to be notified of changes and fire a callback function to parse and process the Channel Store API commands. 
-   
+
+   The new version of the **DoOrder** API uses Roku's generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it. Channels must observe the **requestStatus** field to be notified of changes and fire a callback function to parse and process the Channel Store API commands.
+
    ### Generic Framework Request Status
-   
-   The **requestStatus** object returned by the ChannelStore generic request framework is an **roAssociativeArray** that has the following hierarchy. Observe that the products, purchase options, and entitlements returned by the ChannelStore commands are encapsulated in a nested **result.result** associative array.  
-   
+
+   The **requestStatus** object returned by the ChannelStore generic request framework is an **roAssociativeArray** that has the following hierarchy. Observe that the products, purchase options, and entitlements returned by the ChannelStore commands are encapsulated in a nested **result.result** associative array.
+
    ```
    "requestStatus": {
        "command": "DoOrder",
@@ -234,93 +228,92 @@ To update your app with the new **DoOrder** API, follow these steps:
            ]
        }
    }
-   
+
    ```
-   
-   | Field         | Type              | Description                                                  |
-   | :------------ | :---------------- | :----------------------------------------------------------- |
-   | requestStatus | associative array | Returns the request's command and parameters: $\{request-status-table\} |
-   
-   \{#request-status-table\}
-   
-   | Field         | Type              | Description                                                  |
-   | ------------- | ----------------- | ------------------------------------------------------------ |
-   | command       | string            | Set to the name of the command, which is "DoOrder".          |
-   | status        | associative array | The command completion status, which may be one of the following values: <br />$\{request-status-status-values-list\} |
-   | statusMessage | string            | A text description of the command completion status.         |
-   | context       | associative array | Used to match the **requestStatus** with **request**. For example, you can set this to \{"id: DoOrder_1"\}. |
-   | result        | associative array | Includes the product, purchase option, purchase, and/or entitlement data returned by the command. |
-   
-   \{#request-status-status-values-list\}
-   
-   - **2**  Interrupted
-   - **1**  Success
-   - **0**  Network error
-   - **-1** HTTP Error/Timeout
-   - **-2** Timeout
-   - **-3** Unknown Error
-   - **-4** Invalid 
-   
+
+   | Field         | Type              | Description                                                            |
+   | :------------ | :---------------- | :--------------------------------------------------------------------- |
+   | requestStatus | associative array | Returns the request's command and parameters: $\{request-status-table} |
+
+   \{#request-status-table}
+
+   | Field         | Type              | Description                                                                                                          |
+   | ------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------- |
+   | command       | string            | Set to the name of the command, which is "DoOrder".                                                                  |
+   | status        | associative array | The command completion status, which may be one of the following values: <br />$\{request-status-status-values-list} |
+   | statusMessage | string            | A text description of the command completion status.                                                                 |
+   | context       | associative array | Used to match the **requestStatus** with **request**. For example, you can set this to \{"id: DoOrder_1"}.           |
+   | result        | associative array | Includes the product, purchase option, purchase, and/or entitlement data returned by the command.                    |
+
+   \{#request-status-status-values-list}
+
+   * **2**  Interrupted
+   * **1**  Success
+   * **0**  Network error
+   * **-1** HTTP Error/Timeout
+   * **-2** Timeout
+   * **-3** Unknown Error
+   * **-4** Invalid
+
    ### DoOrder
-   
+
    Displays the Roku Pay order confirmation screen, which is populated with information about the current order (product, name, and price). The customer can then either approve and complete the purchase, or cancel the purchase.
-   
-   ![roku815px - tvod-sample-UI](https://image.roku.com/ZHZscHItMTc2/tvod-buy-2.jpg)
-   
+
+   <Image alt="roku815px - tvod-sample-UI" border={false} src="https://image.roku.com/ZHZscHItMTc2/tvod-buy-2.jpg" />
+
    #### request
-   
-   | Field   | Type              | Description                                                  |
-   | :------ | :---------------- | :----------------------------------------------------------- |
-   | request | associative array | Includes the request's command and parameters: $\{query-do-order-request-table\} |
-   
-   \{#query-do-order-request-table\}
-   
-   | Field   | Type              | Description                                                  |
-   | :------ | :---------------- | :----------------------------------------------------------- |
-   | command | string            | Set to "DoOrder".                                            |
-   | params  | associative array | Include the following key-value pairs:<br />$\{query-do-order-params-table\} |
-   
-   \{#query-do-order-params-table\}
-   
-   | Field      | Type                          | Description                                                  |
-   | ---------- | ----------------------------- | ------------------------------------------------------------ |
-   | version    | integer                       | Set to 2                                                     |
-   | orderItems | roArray of roAssociativeArray | The list of purchase options the customer has selected. For TVOD transactions, each orderItem must have the following fields (optional fields are denoted):<br />$\{do-order-items-list\} |
-   
-   \{#do-order-items-list\}
-   
-   - **sku** (string): The developer-specified SKU for the selected purchase option. For TVOD purchases, a single consumable purchase option is used for all order items.
-   - **orderType** (string): Must be set to "TVOD".
-   - **price** (string): The final price of the product, including any discounts. Do not include a currency symbol (for example, set this to "2.99" instead of "$2.99").
-   - **originalPrice** (string): The final original price of the product, including any discounts. Do not include a currency symbol (for example, set this to "3.99" instead of "$3.99"). This field is optional.
-   - **total** (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).
-   - **title** (string): A description of the TVOD order items (for example, the name of a rental movie).
-   - **contentKey** (string): The publisher-specific SKU (or other unique identifier) for the TVOD order items.
-   - **couponCode** (string): An alphanumeric string entered by the customer to receive a discounted price on the TVOD order items.
-   - **qty** (integer): The quantity of the item to be purchased, which should be 1 for most TVOD transactions.
-   
+
+   | Field   | Type              | Description                                                                     |
+   | :------ | :---------------- | :------------------------------------------------------------------------------ |
+   | request | associative array | Includes the request's command and parameters: $\{query-do-order-request-table} |
+
+   \{#query-do-order-request-table}
+
+   | Field   | Type              | Description                                                                 |
+   | :------ | :---------------- | :-------------------------------------------------------------------------- |
+   | command | string            | Set to "DoOrder".                                                           |
+   | params  | associative array | Include the following key-value pairs:<br />$\{query-do-order-params-table} |
+
+   \{#query-do-order-params-table}
+
+   | Field      | Type                          | Description                                                                                                                                                                              |
+   | ---------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | version    | integer                       | Set to 2                                                                                                                                                                                 |
+   | orderItems | roArray of roAssociativeArray | The list of purchase options the customer has selected. For TVOD transactions, each orderItem must have the following fields (optional fields are denoted):<br />$\{do-order-items-list} |
+
+   \{#do-order-items-list}
+
+   * **sku** (string): The developer-specified SKU for the selected purchase option. For TVOD purchases, a single consumable purchase option is used for all order items.
+   * **orderType** (string): Must be set to "TVOD".
+   * **price** (string): The final price of the product, including any discounts. Do not include a currency symbol (for example, set this to "2.99" instead of "$2.99").
+   * **originalPrice** (string): The final original price of the product, including any discounts. Do not include a currency symbol (for example, set this to "3.99" instead of "$3.99"). This field is optional.
+   * **title** (string): A description of the TVOD order items (for example, the name of a rental movie).
+   * **contentKey** (string): The publisher-specific SKU (or other unique identifier) for the TVOD order items.
+   * **couponCode** (string): An alphanumeric string entered by the customer to receive a discounted price on the TVOD order items.
+   * **qty** (integer): The quantity of the item to be purchased, which should be 1 for most TVOD transactions.
+
    #### requestStatus.result
-   
-   | Field         | Type              | Description                                                  |
-   | :------------ | :---------------- | :----------------------------------------------------------- |
-   | result        | associative array | $\{query-do-order-response-table\}                             |
-   | status        | enum              | The command completion status, which may be one of the following values:  <br />$\{request-status-status-values-list\} |
-   | statusMessage | string            | A text description of the command completion status.         |
-   
-   \{#query-do-order-response-table\}
-   
-   | Field     | Type                           | Description                                                  |
-   | --------- | ------------------------------ | ------------------------------------------------------------ |
-   | purchases | roArray of roAssociativeArrays | Includes the purchase data returned by the DoOrder command. Each purchase includes the following set of key-value pairs:<br />$\{query-do-order-response-purchases-list\} |
-   
-   \{#query-do-order-response-purchases-list\}
-   
-   - **rokuCustomerId** (string): The Roku customer ID associated with the user. 
-   - **purchaseId** (string): The transaction ID generated for the purchase. 
-   - **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
-   - **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard. 
-   - **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
-   - **type** (string): Indicates whether the purchase option represents a consumable/non-consumable. This may be set to one of the following values: "Consumable", "NonConsumable".
-   - **total** (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).
-   - **amount** (string): Localized amount of the item purchased (post transaction; with local currency symbol).
-   - **qty** (integer): The quantity of the product purchased, which is typically 1 for TVOD purchases. 
+
+   | Field         | Type              | Description                                                                                                           |
+   | :------------ | :---------------- | :-------------------------------------------------------------------------------------------------------------------- |
+   | result        | associative array | $\{query-do-order-response-table}                                                                                     |
+   | status        | enum              | The command completion status, which may be one of the following values:  <br />$\{request-status-status-values-list} |
+   | statusMessage | string            | A text description of the command completion status.                                                                  |
+
+   \{#query-do-order-response-table}
+
+   | Field     | Type                           | Description                                                                                                                                                              |
+   | --------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | purchases | roArray of roAssociativeArrays | Includes the purchase data returned by the DoOrder command. Each purchase includes the following set of key-value pairs:<br />$\{query-do-order-response-purchases-list} |
+
+   \{#query-do-order-response-purchases-list}
+
+   * **rokuCustomerId** (string): The Roku customer ID associated with the user.
+   * **purchaseId** (string): The transaction ID generated for the purchase.
+   * **sku** (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.
+   * **name** (string): The developer-specified name for the purchase option entered in the Developer Dashboard.
+   * **description** (string): The developer-specified description for the purchase option entered in the Developer Dashboard.
+   * **type** (string): Indicates whether the purchase option represents a consumable/non-consumable. This may be set to one of the following values: "Consumable", "NonConsumable".
+   * **total** (string): Localized total of the item purchased (including tax if applicable; with local currency symbol).
+   * **amount** (string): Localized amount of the item purchased (post transaction; with local currency symbol).
+   * **qty** (integer): The quantity of the product purchased, which is typically 1 for TVOD purchases.

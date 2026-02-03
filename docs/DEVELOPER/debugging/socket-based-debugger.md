@@ -805,18 +805,91 @@ struct ExceptionBreakpointErrorUpdateData {
 }
 ```
 
-| Field              | Type                      | Summary                                                       |
-| ------------------ | ------------------------- | ------------------------------------------------------------- |
-| flags              | bool                      | This field is always set to 0. It is reserved for future use. |
-| filter_id          | uint32                    | The filter ID of the breakpoint $\{exc-filters-table}         |
-| num_compile_errors | uint32                    | The number of compile-time errors.                            |
-| compile_errors     | utf8z[num_compile_errors] | The list of compile-time errors.                              |
-| num_runtime_errors | uint32                    | The number of runtime errors.                                 |
-| runtime_errors     | utf8z[num_runtime_errors] | The list of runtime errors.                                   |
-| num_other_errors   | uint32                    | The number of other errors (for example, permission errors).  |
-| other_errors       | utf8z[num_other_errors]   | The list of other errors.                                     |
-| line_number        | uint32                    | The line number where the condition failed to evaluate.       |
-| file_path          | utf8z                     | the file path where the condition failed to evaluate.         |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">flags</td>
+<td class="short-line">bool</td>
+<td class="long-line">This field is always set to 0. It is reserved for future use.</td>
+</tr>
+<tr>
+<td class="short-line">filter_id</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The filter ID of the breakpoint <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Value</th>
+<th class="short-line">Filter ID</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">CAUGHT</td>
+<td class="short-line">Stop on all caught exceptions.</td>
+</tr>
+<tr>
+<td class="short-line">2</td>
+<td class="short-line">UNCAUGHT</td>
+<td class="short-line">Stop on all uncaught exceptions.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">num_compile_errors</td>
+<td class="short-line">uint32</td>
+<td class="short-line">The number of compile-time errors.</td>
+</tr>
+<tr>
+<td class="short-line">compile_errors</td>
+<td class="short-line">utf8z[num_compile_errors]</td>
+<td class="short-line">The list of compile-time errors.</td>
+</tr>
+<tr>
+<td class="short-line">num_runtime_errors</td>
+<td class="short-line">uint32</td>
+<td class="short-line">The number of runtime errors.</td>
+</tr>
+<tr>
+<td class="short-line">runtime_errors</td>
+<td class="short-line">utf8z[num_runtime_errors]</td>
+<td class="short-line">The list of runtime errors.</td>
+</tr>
+<tr>
+<td class="short-line">num_other_errors</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of other errors (for example, permission errors).</td>
+</tr>
+<tr>
+<td class="short-line">other_errors</td>
+<td class="short-line">utf8z[num_other_errors]</td>
+<td class="short-line">The list of other errors.</td>
+</tr>
+<tr>
+<td class="short-line">line_number</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The line number where the condition failed to evaluate.</td>
+</tr>
+<tr>
+<td class="short-line">file_path</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">the file path where the condition failed to evaluate.</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
+
+<br />
 
 ## Debugging Commands
 

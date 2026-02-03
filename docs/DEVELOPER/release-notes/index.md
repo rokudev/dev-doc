@@ -11,24 +11,6 @@ next:
   description: ''
 ---
 <HTMLBlock>{`
-<h2 id="roku-os-developer-release-notes">Roku OS developer release notes</h2>
-<blockquote>
-<p><a href="https://rokutestingportal.centercode.com/key/rdbp">Join the Roku beta program</a> to implement new features in the latest Roku OS before the general release.</p>
-</blockquote>
-<h2 id="roku-os-15-1">Roku OS 15.1</h2>
-<p>Roku OS 15.1 includes support for app tracing with Perfetto, new media playback and content metadata features, and a deprecated API. </p>
-<p>Here is the list of key developer-facing Roku OS 15.1 updates:</p>
-<h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
-<h5 id="new-seek-mode-based-on-hls-manifest">New seek mode based on HLS Manifest</h5>
-<p>The <a href="https://roku-ent.readme.io/dev/docs/video#trickplay-fields">Video.seekMode</a> supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest. </p>
-<h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
-<h5 id="perfetto-app-tracing">Perfetto app tracing</h5>
-<p>You can use <a href="https://perfetto.dev/docs/">Perfetto</a> to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.</p>
-<p>With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.</p>
-<p>For more information on using Perfetto to trace your Roku apps, click <a href="https://roku-ent.readme.io/dev/docs/app-tracing">here</a>. </p>
-<h4 id="deprecations">Deprecations</h4>
-<h6 id="rostring-appendstring-s-as-string-len-as-integer-as-void">roString.AppendString(s as String, len as Integer) as Void</h6>
-<p>This function has been deprecated. Use the [SetString() function](doc:ifstringops#setstrings-as-string-len-as-integer-as-void) instead. </p>
 <h2 id="roku-os-15-0">Roku OS 15.0</h2>
 <p>Roku OS 15.0 features major BrightScript updates, including new APIs for transferring node data and handling references, improved JSON parsing with reduced memory overhead, and more robust functions for getting the system uptime and date/time.</p>
 <p>In addition, this release includes new media playback and content metadata features and enhancements to the Roku Resource Monitor. </p>

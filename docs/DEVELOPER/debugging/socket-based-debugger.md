@@ -1853,23 +1853,17 @@ struct AddConditonalBreakpointsResponseData {
 </thead>
 <tbody>
 <tr>
-<td class="short-line">flags</td>
-<td class="short-line">uint32</td>
-<td class="long-line">This field is always set to 0 (reserved for future use).</td>
-</tr>
-<tr>
 <td class="short-line">num_breakpoints</td>
 <td class="short-line">uint32</td>
-<td class="long-line">The number of breakpoints in the <strong>breakpoints</strong> array.</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoint_responses</strong> array.</td>
 </tr>
 <tr>
-<td class="short-line">breakpoints</td>
-<td class="short-line">ConditionalBreakpointSpec[]</td>
-<td class="long-line">An array of ConditonalBreakpointSpec structs. A ConditonalBreakpointSpec struct has the following syntax: <pre><code>struct CondtionalBreakpointSpec {
-    utf8z file_spec;
-    uint32 line_number;
+<td class="short-line">breakpoint_responses</td>
+<td class="short-line">ConditonalBreakpointInfo[]</td>
+<td class="long-line">An array of ConditonalBreakpointInfo structs. A ConditonalBreakpointInfo struct has the following syntax: <pre><code>struct ConditionalBreakpointInfo {
+    uint32 breakpoint_id;
+    uint32 error_code;
     uint32 ignore_count;
- &nbsp; &nbsp;utf8z cond_expr;  //available since Debug Protocol v3.1
 };
 </code></pre><br><br><div class="hscroll"><table>
 <thead>
@@ -1881,24 +1875,39 @@ struct AddConditonalBreakpointsResponseData {
 </thead>
 <tbody>
 <tr>
-<td class="short-line">file_spec</td>
+<td class="short-line">breakpoint_id</td>
 <td class="short-line">utf8z</td>
-<td class="long-line">The path of the source file where the conditional breakpoint is to be inserted. <br><br>"pkg://&lt;filepath&gt;" specifies a file in the app<br><br>"lib:/&lt;library_name&gt;/&lt;filepath&gt;" specifies a file in a library.</td>
+<td class="long-line">The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error.</td>
 </tr>
 <tr>
-<td class="short-line">line_number</td>
+<td class="short-line">error_code</td>
 <td class="short-line">uint32</td>
-<td class="long-line">The line number in the app code where the breakpoint is to be executed.</td>
+<td class="long-line">Indicates whether the breakpoint was successfully added. This may be one of the following values: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Status</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">OK</td>
+<td class="short-line">The <strong>breakpoint_id</strong> is valid.</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">INVALID_ARGS</td>
+<td class="short-line">The breakpoint could not be returned.</td>
+</tr>
+</tbody>
+</table></div></td>
 </tr>
 <tr>
 <td class="short-line">ignore_count</td>
 <td class="short-line">uint32</td>
-<td class="long-line">The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint. If <strong>cond_expr</strong> is specified, the <strong>ignore_count</strong> is only updated if it evaluates to true.</td>
-</tr>
-<tr>
-<td class="short-line">cond_expr</td>
-<td class="short-line">utf8z</td>
-<td class="long-line">BrightScript code that evaluates to a boolean value. The <strong>cond_expr</strong> is compiled and executed in the context where the breakpoint is located. If <strong>cond_expr</strong> is specified, the <strong>ignore_count</strong> is only be updated if this evaluates to true.</td>
+<td class="long-line">The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint.  This argument is only present if the <strong>breakpoint_id</strong> is valid.</td>
 </tr>
 </tbody>
 </table></div></td>

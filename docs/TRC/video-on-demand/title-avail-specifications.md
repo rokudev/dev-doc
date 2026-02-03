@@ -1,7 +1,7 @@
 ---
-title: "Avails and Committed Title List specifications"
+title: Avails and Committed Title List specifications
 deprecated: false
-hidden: false
+hidden: true
 robots: index
 ---
 

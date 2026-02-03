@@ -1,7 +1,7 @@
 ---
-title: "The Roku Channel live linear ingest specifications (OVP)"
+title: The Roku Channel live linear ingest specifications (OVP)
 deprecated: false
-hidden: false
+hidden: true
 robots: index
 ---
 

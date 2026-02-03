@@ -1039,8 +1039,6 @@ struct ThreadsResponse{
 </table>
 `}</HTMLBlock>
 
-<br />
-
 ### StackTraceResponse
 
 The **StackTraceReponse** struct has the following syntax:
@@ -1052,28 +1050,59 @@ struct StackTraceResponse{
 };
 ```
 
-| Field      | Type         | Summary                                                                                                                                                                                                                                                                                                                                              |
-| ---------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stack_size | uint32       | The number of stack entries in the **entires** array.                                                                                                                                                                                                                                                                                                |
-| entries    | StackEntry[] | An array of StrackEntry structs. entries[0] contains the last function called; entries[stack_size-1]  contains the first function called. Debugging clients may reverse the entries to match developer expectations.<br /><br />A StrackEntry struct has the following syntax: <br />$\{stack_entry_struct_syntax}\<br/>$\{stack_entry_struct_table} |
-
-\{#stack_entry_struct_syntax}
-
-```
-struct StackEntry{
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">stack_size</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of stack entries in the <strong>entires</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">entries</td>
+<td class="short-line">StackEntry[]</td>
+<td class="long-line">An array of StrackEntry structs. entries[0] contains the last function called; entries[stack_size-1]  contains the first function called. Debugging clients may reverse the entries to match developer expectations.<br><br>A StrackEntry struct has the following syntax: <br><pre><code>struct StackEntry{
     uint32 line_number;
     utf8z function_name;
     utf8z file_name;
 };
-```
-
-\{#stack_entry_struct_table}
-
-| Field         | Type   | Summary                                             |
-| ------------- | ------ | --------------------------------------------------- |
-| line_number   | uint32 | The line number where the stop or failure occurred. |
-| function_name | utf8z  | The function where the stop or failure occurred.    |
-| file_name     | utf8z  | The file where the stop or failure occurred.        |
+</code></pre><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">line_number</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The line number where the stop or failure occurred.</td>
+</tr>
+<tr>
+<td class="short-line">function_name</td>
+<td class="short-line">utf8z</td>
+<td class="short-line">The function where the stop or failure occurred.</td>
+</tr>
+<tr>
+<td class="short-line">file_name</td>
+<td class="short-line">utf8z</td>
+<td class="short-line">The file where the stop or failure occurred.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### Variables arguments
 

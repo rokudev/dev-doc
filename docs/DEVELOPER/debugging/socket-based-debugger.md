@@ -1908,8 +1908,6 @@ struct AddConditonalBreakpointsResponseData {
 </table>
 `}</HTMLBlock>
 
-<br />
-
 ## Exception Breakpoints
 
 _Available since Roku OS 14.1_
@@ -1927,10 +1925,73 @@ struct SetExceptionBreakpointsRequestArgs {
 };
 ```
 
-| Field           | Type                      | Summary                                                                                                                                                                |
-| :-------------- | :------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| num_breakpoints | uint32                    | The number of breakpoints in the **breakpoints** array.                                                                                                                |
-| breakpoints     | ExceptionBreakpointSpec[] | An array of ExceptionBreakpointSpec structs. A ExceptionBreakpointSpec struct has the following syntax: $\{exc-breakpoints-code} <br /><br />$\{exc-breakpoints-table} |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoints</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">breakpoints</td>
+<td class="short-line">ExceptionBreakpointSpec[]</td>
+<td class="long-line">An array of ExceptionBreakpointSpec structs. A ExceptionBreakpointSpec struct has the following syntax: <pre><code>struct ExceptionBreakpointSpec {
+    uint32 filter_id;
+    utf8z cond_expr;
+};
+</code></pre> <br><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">filter_id</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The type of exceptions that should trigger a stop. Note this is not a bitfield. To specify multiple filters, the client must send multiple ExceptionBreakpointSpecs. <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Value</th>
+<th class="short-line">Filter ID</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">1</td>
+<td class="short-line">CAUGHT</td>
+<td class="short-line">Stop on all caught exceptions.</td>
+</tr>
+<tr>
+<td class="short-line">2</td>
+<td class="short-line">UNCAUGHT</td>
+<td class="short-line">Stop on all uncaught exceptions.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="short-line">cond_expr</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">BrightScript code that evaluates to a boolean value. The <strong>cond_expr</strong> is compiled and executed in the context where the breakpoint is located.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### SetExceptionBreakpointsResponseData
 
@@ -1943,56 +2004,73 @@ struct SetExceptionBreakpointsResponseData {
 };
 ```
 
-| Field                | Type                      | Summary                                                                                                                                                                                 |
-| :------------------- | :------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| num_breakpoints      | uint32                    | The number of breakpoints in the **breakpoint_responses** array.                                                                                                                        |
-| breakpoint_responses | ExceptionBreakpointInfo[] | An array of ExceptionBreakpointInfo structs. A ExceptionBreakpointInfo struct has the following syntax: $\{exc-breakpoints-response-code}<br /><br />$\{exc-breakpoints-response-table} |
-
-\{#exc-breakpoints-code}
-
-```
-struct ExceptionBreakpointSpec {
-    uint32 filter_id;
-    utf8z cond_expr;
-};
-```
-
-\{#exc-breakpoints-table}
-
-| Argument  | Type   | Summary                                                                                                                                                                                    |
-| :-------- | :----- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filter_id | uint32 | The type of exceptions that should trigger a stop. Note this is not a bitfield. To specify multiple filters, the client must send multiple ExceptionBreakpointSpecs. $\{exc-filters-table} |
-| cond_expr | utf8z  | BrightScript code that evaluates to a boolean value. The **cond_expr** is compiled and executed in the context where the breakpoint is located.                                            |
-
-\{#exc-filters-table}
-
-| Value | Filter ID | Description                      |
-| :---- | :-------- | :------------------------------- |
-| 1     | CAUGHT    | Stop on all caught exceptions.   |
-| 2     | UNCAUGHT  | Stop on all uncaught exceptions. |
-
-\{#exc-breakpoints-response-code}
-
-```
-struct ExceptionBreakpointInfo {
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoint_responses</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">breakpoint_responses</td>
+<td class="short-line">ExceptionBreakpointInfo[]</td>
+<td class="long-line">An array of ExceptionBreakpointInfo structs. A ExceptionBreakpointInfo struct has the following syntax: <pre><code>struct ExceptionBreakpointInfo {
     uint32 filter_id;
     uint32 error_code;
 };
-```
-
-\{#exc-breakpoints-response-table}
-
-| Argument   | Type   | Summary                                                                                                                                          |
-| :--------- | :----- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| filter_id  | uint32 | The filter_id of the exception breakpoint. $\{exc-filters-table}                                                                                 |
-| error_code | uint32 | Indicates whether the breakpoint was successfully added. This may be one of the following values:  $\{exc-breakpoints-response-error-code-table} |
-
-\{#exc-breakpoints-response-error-code-table}
-
-| Code | Status       | Description                                                                 |
-| :--- | :----------- | :-------------------------------------------------------------------------- |
-| 0    | OK           | The exception breakpoint was set successfully.                              |
-| 5    | INVALID_ARGS | The exception breakpoint could not be set due to an unrecognized filter_id. |
+</code></pre><br><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">filter_id</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The filter_id of the exception breakpoint. </td>
+</tr>
+<tr>
+<td class="short-line">error_code</td>
+<td class="short-line">uint32</td>
+<td class="long-line">Indicates whether the breakpoint was successfully added. This may be one of the following values:  <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Code</th>
+<th class="short-line">Status</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">0</td>
+<td class="short-line">OK</td>
+<td class="short-line">The exception breakpoint was set successfully.</td>
+</tr>
+<tr>
+<td class="short-line">5</td>
+<td class="short-line">INVALID_ARGS</td>
+<td class="long-line">The exception breakpoint could not be set due to an unrecognized filter_id.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ## Virtual Variables
 

@@ -2038,7 +2038,23 @@ struct SetExceptionBreakpointsResponseData {
 <tr>
 <td class="short-line">filter_id</td>
 <td class="short-line">uint32</td>
-<td class="long-line">The filter_id of the exception breakpoint. </td>
+<td class="long-line">The filter_id of the exception breakpoint.<table>
+    <tr>
+        <td>Value</td>
+        <td>Filter ID</td>
+        <td>Description</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>CAUGHT</td>
+        <td>Stop on all caught exceptions.</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>UNCAUGHT</td>
+        <td>Stop on all uncaught exceptions.</td>
+    </tr>
+</table></td>
 </tr>
 <tr>
 <td class="short-line">error_code</td>

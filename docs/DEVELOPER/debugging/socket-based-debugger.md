@@ -1106,22 +1106,56 @@ struct StackTraceResponse{
 
 ### Variables arguments
 
-| Argument                                                    | Type    | Summary                                                                                                                                                                                                                                                                                                                                          |
-| ----------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| variable_request_flags                                      | uint8   | Contains one the following **VariableRequestFlags** enums: $\{variable-request-flags-table}<br /><br />This enum uses a bitwise mask that enables it to fit into 8 bits.                                                                                                                                                                         |
-| thread_index                                                | uint32  | The index of the thread containing the variable.                                                                                                                                                                                                                                                                                                 |
-| stack_frame_index                                           | uint32  | The index of the frame returned from the STACKTRACE command.<br />The 0 index contains the first function called; nframes-1 contains the last. This indexing does not match the order of the frames returned from the STACKTRACE command                                                                                                         |
-| variable_path_len                                           | uint32  | The number of **variable_path** entries. If this is set to 0, the variables that are accessible from the specified stack frame are returned.                                                                                                                                                                                                     |
-| variable_path_entries                                       | utf8z[] | A set of one or more path entries to the variable to be inspected. For example, `m.top.myarray[6]` can be accessed with ` ["m","top","myarray","6"]`. <br /><br />If no path is specified, the variables accessible from the specified stack frame are returned.                                                                                 |
-| path_force_case_insensitive                                 | bool    | Forces a case-insensitive lookup of the corresponding path entry when enabled.<br /><br />Enabling this flag also requires the **variable_request_flags** argument to be set to CASE_SENSITIVITY_OPTIONS. This is useful for debugging scripts using "." notation for associative arrays, which is always case insensitive for all object types. |
-| path_is_virtual  <br /><br />_Available since Roku OS 14.1_ | bool[]  | Indicates that the path entry is virtual and does not correspond to a real variable. <br /><br />Enabling this flag also requires **variable_request_flags** to be set to VIRTUAL_PATH_INCLUDED.                                                                                                                                                 |
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">variable_request_flags</td>
+<td class="short-line">uint8</td>
+<td class="long-line">Contains one the following <strong>VariableRequestFlags</strong> enums:<br><br>This enum uses a bitwise mask that enables it to fit into 8 bits.</td>
+</tr>
+<tr>
+<td class="short-line">thread_index</td>
+<td class="short-line">uint32</td>
+<td class="short-line">The index of the thread containing the variable.</td>
+</tr>
+<tr>
+<td class="short-line">stack_frame_index</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The index of the frame returned from the STACKTRACE command.<br>The 0 index contains the first function called; nframes-1 contains the last. This indexing does not match the order of the frames returned from the STACKTRACE command</td>
+</tr>
+<tr>
+<td class="short-line">variable_path_len</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of <strong>variable_path</strong> entries. If this is set to 0, the variables that are accessible from the specified stack frame are returned.</td>
+</tr>
+<tr>
+<td class="short-line">variable_path_entries</td>
+<td class="short-line">utf8z[]</td>
+<td class="long-line">A set of one or more path entries to the variable to be inspected. For example, <code>m.top.myarray[6]</code> can be accessed with <code>["m","top","myarray","6"]</code>. <br><br>If no path is specified, the variables accessible from the specified stack frame are returned.</td>
+</tr>
+<tr>
+<td class="short-line">path_force_case_insensitive</td>
+<td class="short-line">bool</td>
+<td class="long-line">Forces a case-insensitive lookup of the corresponding path entry when enabled.<br><br>Enabling this flag also requires the <strong>variable_request_flags</strong> argument to be set to CASE_SENSITIVITY_OPTIONS. This is useful for debugging scripts using "." notation for associative arrays, which is always case insensitive for all object types.</td>
+</tr>
+<tr>
+<td class="long-line">path_is_virtual  <br><br><em>Available since Roku OS 14.1</em></td>
+<td class="short-line">bool[]</td>
+<td class="long-line">Indicates that the path entry is virtual and does not correspond to a real variable. <br><br>Enabling this flag also requires <strong>variable_request_flags</strong> to be set to VIRTUAL_PATH_INCLUDED.</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
-| Value                                                             | Summary                                                                                                                                                                                               |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET_CHILD_KEYS                                                    | Indicates whether the VARIABLES response includes the child keys for container types like lists and associative arrays. If this is set to true (0x01), the VARIABLES response include the child keys. |
-| CASE_SENSITIVITY_OPTIONS                                          | Enables the client application to send **path_force_case_insensitive** data                                                                                                                           |
-| GET_VIRTUAL_KEYS                                                  | Indicates whether the VARIABLES response includes virtual keys for the requested paths. See [Virtual Variables](#virtual-variables)                                                                   |
-| VIRTUAL_PATH_INCLUDED <br /> <br />_Available since Roku OS 14.1_ | Enable the client application to sent **path_is_virtual** data.                                                                                                                                       |
+<br />
 
 ### VariablesResponse
 

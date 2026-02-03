@@ -1413,28 +1413,59 @@ struct AddBreakpointsRequestArgs {
 };
 ```
 
-| Field           | Type             | Summary                                                                                                                                                             |
-| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| num_breakpoints | uint32           | The number of breakpoints in the **breakpoints** array.                                                                                                             |
-| breakpoints     | BreakpointSpec[] | An array of BreakpointSpec structs. A BreakpointSpec struct has the following syntax: <br />$\{breakpoint_spec_struct_syntax}\<br/>$\{breakpoint_spec_struct_table} |
-
-\{#breakpoint_spec_struct_syntax}
-
-```
-struct BreakpointSpec {
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoints</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">breakpoints</td>
+<td class="short-line">BreakpointSpec[]</td>
+<td class="long-line">An array of BreakpointSpec structs. A BreakpointSpec struct has the following syntax: <br><pre><code>struct BreakpointSpec {
     utf8z file_spec;
     uint32 line_number;
     uint32 ignore_count;
 };
-```
-
-\{#breakpoint_spec_struct_table}
-
-| Argument     | Type   | Summary                                                                                                                                                                                                           |
-| ------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| file_spec    | utf8z  | The simple path of the source file where the breakpoint is to be inserted.<br /><br />"pkg:/\<filepath>" specifies a file in the app<br /><br />"lib:/\<library_name>/\<filepath>" specifies a file in a library. |
-| line_number  | uint32 | The line number in the app code where the breakpoint is to be executed.                                                                                                                                           |
-| ignore_count | uint32 | The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint.                                                      |
+</code></pre><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">file_spec</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">The simple path of the source file where the breakpoint is to be inserted.<br><br>"pkg:/" specifies a file in the app<br><br>"lib:/&lt;library_name&gt;/" specifies a file in a library.</td>
+</tr>
+<tr>
+<td class="short-line">line_number</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The line number in the app code where the breakpoint is to be executed.</td>
+</tr>
+<tr>
+<td class="short-line">ignore_count</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### AddBreakpointsResponseData
 
@@ -1447,35 +1478,59 @@ struct AddBreakpointsResponseData {
 };
 ```
 
-| Field                | Type             | Summary                                                                                                                                                                       |
-| -------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| num_breakpoints      | uint32           | The number of breakpoints in the **breakpoint_responses** array.                                                                                                              |
-| breakpoint_responses | BreakpointInfo[] | An array of BreakpointInfo structs. A BreakpointInfo struct has the following syntax: <br />$\{breakpoint_info_spec_struct_syntax}\<br/>$\{breakpoint_info_spec_struct_table} |
-
-\{#breakpoint_info_spec_struct_syntax}
-
-```
-struct BreakpointInfo {
-    uint32 breakpoint_id;
-    uint32 error_code;
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Field</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">num_breakpoints</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of breakpoints in the <strong>breakpoints</strong> array.</td>
+</tr>
+<tr>
+<td class="short-line">breakpoints</td>
+<td class="short-line">BreakpointSpec[]</td>
+<td class="long-line">An array of BreakpointSpec structs. A BreakpointSpec struct has the following syntax: <br><pre><code>struct BreakpointSpec {
+    utf8z file_spec;
+    uint32 line_number;
     uint32 ignore_count;
 };
-```
-
-\{#breakpoint_info_spec_struct_table}
-
-| Argument      | Type   | Summary                                                                                                                                                                                                                                  |
-| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| breakpoint_id | utf8z  | The ID assigned to the breakpoint. An ID greater than 0 indicates an active breakpoint. An ID of 0 denotes that the breakpoint has an error.                                                                                             |
-| error_code    | uint32 | Indicates whether the breakpoint was successfully added. This may be one of the following values: $\{add_breakpoint_errors_table}                                                                                                        |
-| ignore_count  | uint32 | The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint.<br /><br />This argument is only present if the **breakpoint_id** is valid. |
-
-\{#add_breakpoint_errors_table}
-
-| Code | Status       | Description                           |
-| ---- | ------------ | ------------------------------------- |
-| 0    | OK           | The **breakpoint_id** is valid.       |
-| 5    | INVALID_ARGS | The breakpoint could not be returned. |
+</code></pre><br><div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line">Argument</th>
+<th class="short-line">Type</th>
+<th class="short-line">Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">file_spec</td>
+<td class="short-line">utf8z</td>
+<td class="long-line">The simple path of the source file where the breakpoint is to be inserted.<br><br>"pkg:/" specifies a file in the app<br><br>"lib:/&lt;library_name&gt;/" specifies a file in a library.</td>
+</tr>
+<tr>
+<td class="short-line">line_number</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The line number in the app code where the breakpoint is to be executed.</td>
+</tr>
+<tr>
+<td class="short-line">ignore_count</td>
+<td class="short-line">uint32</td>
+<td class="long-line">The number of times to ignore the breakpoint condition before executing the breakpoint. This number is decremented each time the app reaches the breakpoint.</td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
 
 ### ListBreakpointsResponseData
 

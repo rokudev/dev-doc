@@ -43,60 +43,6 @@ For more information on using Perfetto to trace your Roku apps, click [here](/do
 This function has been deprecated. Use the [SetString() function](/docs/references/brightscript/interfaces/ifstringops.md#setstrings-as-string-len-as-integer-as-void) instead.
 
 <HTMLBlock>{`
-<h2 id="roku-os-15-0">Roku OS 15.0</h2>
-<p>Roku OS 15.0 features major BrightScript updates, including new APIs for transferring node data and handling references, improved JSON parsing with reduced memory overhead, and more robust functions for getting the system uptime and date/time.</p>
-<p>In addition, this release includes new media playback and content metadata features and enhancements to the Roku Resource Monitor. </p>
-<p>Here is the list of key developer-facing Roku OS 15.0 updates:</p>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<h5 id="optimized-data-transfer-and-reference-handling-apis">Optimized data transfer and reference handling APIs</h5>
-<p>This release features a set of new APIs for transferring node data more efficiently than copying. These APIs let you move data in and out of fields, access data by reference, and queue the messages to be consumed by handlers on the render thread. This improves app performance by minimizing memory consumption, especially for handling larger objects. </p>
-<blockquote>
-<p>Click [here](doc:data-transfer-apis) for detailed information on using these APIs.</p>
-</blockquote>
-<h5 id="roarray-ifarraysizeinfo-">roArray.ifArraySizeInfo()</h5>
-<p>The new <strong>ifArraySizeInfo()</strong> interface includes set of functions that provide developers with more control over array capacities. These functions reduce the memory overhead when using the [<strong>ParseJSON()</strong> function](doc:global-utility-functions#parsejsonjsonstring-as-string-flags---as-string-as-object) on large JSON body data sets. </p>
-<h6 id="isresizable-as-boolean">IsResizable() As Boolean</h6>
-<p>Returns a flag indicating whether the array will automatically expand to store new items.</p>
-<h6 id="capacity-as-integer">Capacity() As Integer</h6>
-<p>Returns the current storage capacity of the array (specifically, how many items could be
-stored without allocating additional storage).</p>
-<p>The return value may be 0 if the array is empty and no storage has been allocated yet.</p>
-<h6 id="reserve-minsize-as-integer-">Reserve(minSize As Integer)</h6>
-<p>Sends a request to allocate or increase storage capacity of the array to hold at least the specified
-number of items. </p>
-<p>Returns true if the potential capacity update can hold the specified number of items. Otherwise, returns false if the array is not resizable or storage allocation fails.</p>
-<blockquote>
-<p> The updated capacity of the array may be more than was requested if the extra capacity already existed or how storage was implemented.</p>
-</blockquote>
-<h6 id="shrinktofit-as-boolean">ShrinkToFit() As Boolean</h6>
-<p>Request to free or decrease storage to the minimum needed to store the current number of items.</p>
-<p>Returns true unless the array is not resizable or storage reallocation fails.</p>
-<blockquote>
-<p>The updated capacity of the array may be more than the exact number of items in it based on the storage implementation.</p>
-</blockquote>
-<h5 id="rodeviceinfo-getuptimemillisecondsaslong-as-long">roDeviceInfo.GetUptimeMillisecondsAsLong() as Long</h5>
-<p>The <strong>GetUptimeMillisecondsAsLong()</strong> function returns the system&#39;s uptime since the last reboot (in milliseconds as a Long). This function is similar to the [global utility Uptime function](doc:global-utility-functions#uptimedummy-as-integer-as-float), but makes it easier for developers to handle monotonic milliseconds.</p>
-<h5 id="rodatetime-asmillisecondslong-as-long">roDateTime.AsMillisecondsLong() as Long</h5>
-<p>The <strong>roDateTime.AsMillisecondsLong()</strong> function returns a Long representing the date/time as the number of milliseconds from the Unix epoch (00:00:00 1/1/1970 GMT).</p>
-<h4 id="media-playback-and-content-metadata">Media playback and content metadata</h4>
-<h5 id="widevine-license-wrapping-license-challenge-url-support">Widevine license wrapping - license challenge URL support</h5>
-<p>The [<strong>contentNode.drmParams.requestField</strong>](doc:content-metadata#digital-rights-management-drm-control-attributes), which was introduced in Roku OS 14.6, now supports the LICENSE_CHALLENGE field being provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.  </p>
-<h5 id="rodeviceinfo-isautoadjustrefreshrateenabled-">roDeviceInfo.IsAutoAdjustRefreshRateEnabled()</h5>
-<p>The <strong>roDeviceInfo.IsAutoAdjustRefreshRateEnabled()</strong> function checks whether the Auto Adjust Display Refresh Rate setting is enabled on a device. </p>
-<h4 id="developer-and-debugging-tools">Developer and debugging tools</h4>
-<h5 id="ecp-commands-for-checking-cec-settings-on-roku-streaming-players">ECP commands for checking CEC settings on Roku streaming players</h5>
-<p>Developers can now use [ECP](doc:external-control-api) to check whether CEC settings (TV power and volume control) have been enabled on a Roku streaming player. </p>
-<p>The [<strong>query-device-info</strong> command](doc:external-control-api#querydevice-info-example) now returns the following fields that indicate whether TV power and audio volume control have been enabled on a player: </p>
-<ul>
-<li>supports-tv-power-control</li>
-<li>supports-audio-volume-control</li>
-</ul>
-<h5 id="roku-resource-monitor-4-2">Roku Resource Monitor 4.2</h5>
-<p>[Roku Resource Monitor 4.2](doc:resource-monitor) features a new <strong>Data Collection Mode</strong> that enables developers to integrate a headless version of the tool into their CLI pipelines. This provides developers with automated data collection and performance monitoring without having to use the RRM UI. The collected data can be used to detect memory leaks, analyze resource utilization trends, and debug issues.</p>
-<ul>
-<li>To download the tool, click <a href="https://devtools.web.roku.com/#rrm-tool">here</a>.</li>
-<li>For more information, read the [Roku Resource Monitor documentation](doc:resource-monitor).</li>
-</ul>
 <h2 id="roku-os-14-6">Roku OS 14.6</h2>
 <p>Roku OS 14.6 includes BrightScript updates, new media playback and content metadata features, and enhancements to the Roku Resource Monitor and debugging tools. Here is the list of key developer-facing Roku OS 14.6 updates:</p>
 <h4 id="brightscript-apis">BrightScript APIs</h4>

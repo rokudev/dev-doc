@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 <HTMLBlock>{`
-<h1 id="roku-os-developer-release-notes">Roku OS developer release notes</h1>
+<h2 id="roku-os-developer-release-notes">Roku OS developer release notes</h2>
 <blockquote>
 <p><a href="https://rokutestingportal.centercode.com/key/rdbp">Join the Roku beta program</a> to implement new features in the latest Roku OS before the general release.</p>
 </blockquote>

@@ -12,6 +12,36 @@ next:
 ---
 # Roku OS developer release notes
 
+> [Join the Roku beta program](https://rokutestingportal.centercode.com/key/rdbp) to implement new features in the latest Roku OS before the general release.
+
+## Roku OS 15.1
+
+Roku OS 15.1 includes support for app tracing with Perfetto, new media playback and content metadata features, and a deprecated API.
+
+Here is the list of key developer-facing Roku OS 15.1 updates:
+
+#### Media playback and content metadata
+
+##### New seek mode based on HLS Manifest
+
+The [**Video.seekMode** field](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) supports a new “manifest” mode that seeks to the start offset time specified in the EXT-X-START tag of the HLS manifest.
+
+#### Developer and debugging tools
+
+##### Perfetto app tracing
+
+You can use [Perfetto](https://perfetto.dev/docs/) to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.
+
+With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.
+
+For more information on using Perfetto to trace your Roku apps, click [here](/docs/developer-program/dev-tools/app-tracing.md).
+
+#### Deprecations
+
+###### roString.AppendString(s as String, len as Integer) as Void
+
+This function has been deprecated. Use the [SetString() function](/docs/references/brightscript/interfaces/ifstringops.md#setstrings-as-string-len-as-integer-as-void) instead.
+
 <HTMLBlock>{`
 <h2 id="roku-os-15-0">Roku OS 15.0</h2>
 <p>Roku OS 15.0 features major BrightScript updates, including new APIs for transferring node data and handling references, improved JSON parsing with reduced memory overhead, and more robust functions for getting the system uptime and date/time.</p>

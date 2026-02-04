@@ -19,13 +19,13 @@ Roku Search allows customers to discover movies, TV shows, and other content acr
 
 Deep linking enables external discovery features—such as search results or home screen banners—to launch an app directly into a specific content springboard or playback session.
 
-## Continue Watching
-
-The Continue Watching row is a specialized content category located within the **What to Watch** navigation on the device and mobile app. It serves as a centralized hub where customers can resume titles they have previously started. Content progress is tracked across all devices linked to a user's account, providing a seamless transition between different viewing environments. By providing a single location to resume content from multiple participating apps, publishers can significantly increase re-engagement and reduce the likelihood of subscriber churn.
-
 ## Instant Signup (ISU)
 
 Instant Signup allows apps using Roku Pay to offer subscription services to customers during the initial device activation process. Customers can subscribe to an app off-device with minimal interaction. Once the app is accessed, the customer is automatically signed in and granted immediate access to content without further signup steps. The program supports free trials, promotional pricing, and standard pricing models, ensuring publishers can capture and convert potential subscribers at the earliest possible touchpoint.
+
+## Continue Watching
+
+The Continue Watching row is a specialized content category located within the **What to Watch** navigation on the device and mobile app. It serves as a centralized hub where customers can resume titles they have previously started. Content progress is tracked across all devices linked to a user's account, providing a seamless transition between different viewing environments. By providing a single location to resume content from multiple participating apps, publishers can significantly increase re-engagement and reduce the likelihood of subscriber churn.
 
 ## Direct to Play
 

@@ -327,7 +327,7 @@ Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se uti
 
 #### Definiciones de tipo de imagen
 
-<Table>
+<Table align={["left","left","left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -671,7 +671,7 @@ El orden de entrega es importante. El servicio MovieLabs de Roku requerirá que 
 
 Las etiquetas para merchandising/curación se pueden enviar a través del nodo de palabras clave compatible con el XML de MovieLabs MEC. Consulte [el esquema MEC de MovieLabs](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link116) para la correcta colocación del nodo de palabra clave.
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <md:LocalizedInfo language=“en”>
@@ -1051,7 +1051,7 @@ Define el tipo de versión del paquete
 | ------------------- | ----------------- | ----------- |
 | `/package/@version` | film5.0           | Obligatorio |
 
-\<u>Ejemplo\</u>
+**Ejemplo:**
 
 ```
 <package version="film5.0">
@@ -1065,7 +1065,7 @@ Nombre del estudio, cadena o propietario del contenido
 | ------------------- | -------------- | ----------- |
 | `/package/provider` | Roku Originals | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <provider>Roku Originals</provider>
@@ -1079,7 +1079,7 @@ Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajust
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | `/package/language` | [Valor de idioma](#códigos-de-idioma) válido (en, es, etc.) También puede incluir códigos de región (en-US, es-MX, etc.) | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <language>en</language>
@@ -1093,7 +1093,7 @@ Define el tipo de contenido del paquete
 | --------------------- | ----------------- | ----------- |
 | `/package/video/type` | film              | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <type>film</type>
@@ -1107,7 +1107,7 @@ Identificador único e inalterable de una película. La empresa socia debe gener
 | ------------------------- | --------------------------------------------------------------------------------- | ----------- |
 | `/package/video/asset_id` | Solo caracteres alfanuméricos, guiones y guiones bajos. 50 caracteres como máximo | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <asset_id>movieAssetIdHere</asset_id>
@@ -1121,7 +1121,7 @@ ID de EIDR si existe uno
 | --------------------- | --------------------------- | ----------- |
 | `/package/video/eidr` | Cualquier ID de EIDR válido | Opcional    |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <eidr></eidr>
@@ -1135,7 +1135,7 @@ ID de Gracenote si existe uno
 | ---------------------- | -------------------------- | ----------- |
 | `/package/video/tmsId` | Cualquier ID de TMS válido | Opcional    |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <tmsId></tmsId>
@@ -1149,7 +1149,7 @@ Título de la película. Incluye únicamente el nombre del contenido tal y como 
 | ---------------------- | --------------------- | ----------- |
 | `/package/video/title` | Título de la película | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <title><![CDATA[Título de la película. Obligatorio.]]></title>
@@ -1163,7 +1163,7 @@ Una breve sinopsis del contenido. Sección CDATA compatible. Límite de 250 cara
 | ------------------------------- | -------------------------- | ----------- |
 | `/package/video/short_synopsis` | sinopsis de 250 caracteres | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <short_synopsis><![CDATA[Resumen breve de la película. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
@@ -1177,7 +1177,7 @@ Una sinopsis larga del contenido. Sección CDATA compatible. Límite de 500 cara
 | ------------------------------ | -------------------------- | ----------- |
 | `/package/video/long_synopsis` | sinopsis de 500 caracteres | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <long_synopsis><![CDATA[Resumen largo de la película. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
@@ -1191,7 +1191,7 @@ Define el idioma original de producción del título que se entrega. Como mínim
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | `/package/video/original_spoken_language` | [Valor de idioma](#códigos-de-idioma) válido (en, es, etc.) También puede incluir códigos de región (en-US, es-MX, etc.) | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <original_spoken_language>en</original_spoken_language>
@@ -1205,7 +1205,7 @@ Define el país principal donde se produjo la película y donde están estableci
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
 | `/package/video/country_of_origin` | Código de país válido de 2 caracteres según [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html) | Preferido   |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <country_of_origin>en</ country_of_origin >
@@ -1219,7 +1219,7 @@ Indica si el título entregado contiene subtítulos descriptivos. Los valores ac
 | ------------------------------- | ----------------- | ---------------------------------------- |
 | `/package/video/closedCaptions` | Y o N             | Obligatorio para el contenido en EE. UU. |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <closedCaptions>Y</closedCaptions>
@@ -1235,7 +1235,7 @@ Valores permitidos y sus definiciones:
 | ---------------------------------------- | ----------------- | --------------------------------- |
 | `/package/video/closedCaptionsExemption` | 1, 2, 3, 4, 5, 6  | Obligatorio si closedCaptions = N |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <closedCaptionsExemption>1</closedCaptionsExemption>
@@ -1249,7 +1249,7 @@ Fecha original en la que el contenido estuvo disponible por primera vez en cualq
 | ----------------------------- | ---------------------------------------- | ----------- |
 | `/package/video/release_date` | Conforme al formato ISO 8601: AAAA-MM-DD | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <release_date>AAAA-MM-DD</release_date>
@@ -1263,7 +1263,7 @@ Tiempo de duración total del contenido en minutos enteros
 | ------------------------ | -------------------- | ----------- |
 | `/package/video/runtime` | Solo números enteros | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <runtime>120</runtime>
@@ -1277,7 +1277,7 @@ Clasificación del contenido por género. Roku requiere que cada película se en
 | ----------------------------- | --------------------------------------------------------------------------------------------- | ----------- |
 | `/package/video/genres/genre` | Consulta la [enumeración](#géneros) más adelante. Pueden enviarse hasta 10 géneros por título | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <genres>
@@ -1294,7 +1294,7 @@ Clasificación por edades o de contenido de la película según una fuente de cl
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | `/package/video/ratings/rating` `debe incluir el atributo del sistema` | Consulta [más adelante](#valores-de-clasificación-por-sistema-de-clasificación-y-país) las clasificaciones permitidas por el sistema de clasificación Se permiten múltiples pares de clasificación y sistemas de clasificación | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <ratings>
@@ -1312,7 +1312,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 | ------------------------- | ------------------------------------------ | ------------------------------- |
 | `/package/video/tags/tag` | cualquier cadena de menos de 50 caracteres | Opcional, pero MUY recomendable |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <tags>
@@ -1330,7 +1330,7 @@ Se utiliza para determinar[los cortes publicitarios del contenido financiado con
 | -------------------------------------------- | ----------------- | -------------------------------------- |
 | `/package/video/adBreaks/adBreak/start_time` | HH:MM:SS.sss      | Preferiblemente para el contenido AVOD |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <adBreaks>
@@ -1353,7 +1353,7 @@ Se utiliza para identificar los puntos de entrada y salida de los créditos inic
 | `/package/video/cuePoints/cuePoint/start_time` | HH:MM:SS.sss      | Preferido   |
 | `/package/video/cuePoints/cuePoint/end_time`   | HH:MM:SS.sss      | Preferido   |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <cuePoints>
@@ -1396,7 +1396,7 @@ Define el tipo de cuePoint del cuePoint proporcionado dentro del bloque de cuePo
 | ----------------------------------- | --------------------------------------------- |
 | `/package/video/cuePoints/cuePoint` | Uno de los valores de la enumeración anterior |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <cuePoint type="intro">
@@ -1410,7 +1410,7 @@ Nombre de un miembro del reparto**.** Sección CDATA compatible.
 | ---------------------------------------------- | ----------------- | ----------- |
 | `/package/video/cast/cast_member/display_name` | Nombre y apellido | Opcional    |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <cast>
@@ -1430,7 +1430,7 @@ Nombre de un miembro del equipo de filmación. Sección CDATA compatible.
 | ---------------------------------------------- | ----------------- | ----------------------------------------- |
 | `/package/video/crew/crew_member/display_name` | Nombre y apellido | Obligatorio si se proporciona crew_member |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <display_name><![CDATA[George Lucas]]></display_name>
@@ -1459,7 +1459,7 @@ Inicia el bloque de activos que proporciona metadatos localizados para paquetes 
 | ------------------------------ | ----------------- | ----------- |
 | `/package/video/localizations` |                   | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <localizations>
@@ -1473,7 +1473,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | `/package/video/localizations/localization` | [Código de idioma](#códigos-de-idioma) válido (en, es, etc.) También puede incluir códigos de región (en-US, es-MX, etc.) | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <localization name="es">
@@ -1487,7 +1487,7 @@ Título localizado de la película en el idioma especificado en el atributo de n
 | ------------------------------------------------- | -------------------------------- | ----------- |
 | `/package/video/localizations/localization/title` | Título localizado de la película | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <title><![CDATA[Título localizado de la película. Obligatorio.]]></title>
@@ -1501,7 +1501,7 @@ Una sinopsis breve localizada del contenido en el idioma especificado en el atri
 | ---------------------------------------------------------- | ----------------- | ----------- |
 | `/package/video/localizations/localization/short_synopsis` | 250 caracteres    | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <short_synopsis><![CDATA[Sinopsis breve localizada de la película. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
@@ -1515,7 +1515,7 @@ Una sinopsis larga localizada del contenido en el idioma especificado en el atri
 | --------------------------------------------------------- | ----------------- | ----------- |
 | `/package/video/localizations/localization/long_synopsis` | 500 caracteres    | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <long_synopsis><![CDATA[Sinopsis larga localizada de la película. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
@@ -1529,7 +1529,7 @@ Inicia el bloque de activos que proporciona la información de disponibilidad de
 | ---------------------------- | ----------------- | ----------- |
 | `/package/video/playOptions` |                   | Obligatorio |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <playOptions>
@@ -1543,7 +1543,7 @@ Código de país del territorio en el que está disponible el contenido. Se pued
 | ----------------------------------------------- | ----------------- | ----------- |
 | `/package/video/playOptions/playOption/country` | US CA GB MX       | Preferido   |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <playOption>
@@ -1560,7 +1560,7 @@ Tipo de monetización de la película. Se pueden proporcionar varios nodos vodTy
 | ----------------------------------------------- | ----------------- | ----------- |
 | `/package/video/playOptions/playOption/vodType` | AVOD SVOD         | Preferido   |
 
-\<u>Ejemplo:\</u>
+**Ejemplo:**
 
 ```
 <playOption>
@@ -1667,7 +1667,7 @@ El bloque que describe el audio sidecar del archivo de video fuente. El archivo 
 
 El bloque que describe los subtítulos sidecar del archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="subtitles". También se requieren  los nodos \<locale> y \<file_name>
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -2700,7 +2700,7 @@ El bloque que describe el audio sidecar del archivo de video fuente. El archivo 
 
 El bloque que describe los subtítulos sidecar del archivo de video fuente. El atributo de la etiqueta del activo debe ser type="full" y el atributo de la etiqueta data_file debe ser role="subtitles". También se requieren  los nodos \<locale> y \<file_name>
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -2884,7 +2884,7 @@ Define el tipo de contenido del paquete
 
 Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). _No existe ningún vínculo entre los activos principales y secundarios_
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -3713,7 +3713,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
 
 ### Excel: campos de metadatos de películas
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -4137,7 +4137,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
       </td>
 
       <td>
-        Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”   
+        Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”  
         1 -  El contenido nunca se emitió por televisión en Estados Unidos.
         2 - El contenido solo se emitió por televisión en Estados Unidos sin subtítulos descriptivos.
         3 - El contenido no se emite por televisión en Estados Unidos con subtítulos descriptivos desde el 30 de septiembre de 2012.
@@ -4395,7 +4395,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
 
 ### Excel: campos de metadatos de TV por episodios
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -5053,7 +5053,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
       </td>
 
       <td>
-        Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”   
+        Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”  
         1 -  El contenido nunca se emitió por televisión en Estados Unidos.
         2 - El contenido solo se emitió por televisión en Estados Unidos sin subtítulos descriptivos.
         3 - El contenido no se emite por televisión en Estados Unidos con subtítulos descriptivos desde el 30 de septiembre de 2012.
@@ -5311,7 +5311,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
 
 ### Excel: campos de metadatos de clips de formato corto
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -5375,7 +5375,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
       </td>
 
       <td>
-        Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). _No existe ningún vínculo entre los activos principales y secundarios_ subTypes compatibles:   
+        Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). _No existe ningún vínculo entre los activos principales y secundarios_ subTypes compatibles:
 
         * trailer
         * highlight
@@ -5762,7 +5762,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
       </td>
 
       <td>
-        Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”   
+        Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”  
         1-  El contenido nunca se emitió por televisión en Estados Unidos.
         2 - El contenido solo se emitió por televisión en Estados Unidos sin subtítulos descriptivos.
         3 - El contenido no se emite por televisión en Estados Unidos con subtítulos descriptivos desde el 30 de septiembre de 2012.

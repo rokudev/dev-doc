@@ -343,7 +343,7 @@ The Roku's Robot Framework Library includes the following keywords:
         <pre><code><p><strong>Variables</strong>*</p>
         <p>@\{keys\}= down down down down select</p>
         <p>***Test cases***</p>
-          <p>Send keys $\{keys\} 1</p></code></pre>
+        <p>Send keys $\{keys\} 1</p></code></pre>
       </td>
     </tr>
   </tbody>
@@ -351,14 +351,48 @@ The Roku's Robot Framework Library includes the following keywords:
 
 ### Send word
 
-| Keyword   | Arguments          | Description                                               | Example            |
-| :-------- | :----------------- | :-------------------------------------------------------- | ------------------ |
-| Send word | $\{send-word-args} | Simulates the press and release of each letter in a word. | `Send word  Hello` |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#send-word-args}
+      <th>
+        Arguments
+      </th>
 
-* **word**: The specified word to be entered.
-* **delay**: The delay (in seconds) before the entry of each letter in the specified word. This argument is optional, and it defaults to 2 seconds if not specified.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Send word
+      </td>
+
+      <td>
+        * **word**: The specified word to be entered.
+        * **delay**: The delay (in seconds) before the entry of each letter in the specified word. This argument is optional, and it defaults to 2 seconds if not specified.
+      </td>
+
+      <td>
+        Simulates the press and release of each letter in a word.
+      </td>
+
+      <td>
+        `Send word  Hello`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Mark timer
 
@@ -378,38 +412,99 @@ The Roku's Robot Framework Library includes the following keywords:
 
 ### Verify is playback started
 
-| Keyword                    | Arguments                | Description                                                                                                         | Example                            |
-| :------------------------- | :----------------------- | :------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
-| Verify is playback started | $\{verify-playback-args} | Verify playback has started on the Roku media player. <br /><br />This keyword fails if player state is not "play". | `Verify is playback started  10 1` |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#verify-playback-args}
+      <th>
+        Arguments
+      </th>
 
-* **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
-* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Verify is playback started
+      </td>
+
+      <td>
+        * **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
+        * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      </td>
+
+      <td>
+        Verify playback has started on the Roku media player. <br /><br />This keyword fails if player state is not "play".
+      </td>
+
+      <td>
+        `Verify is playback started  10 1`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Verify is screen loaded
 
-| Keyword                 | Arguments                     | Description                                                          | Example                       |
-| :---------------------- | :---------------------------- | :------------------------------------------------------------------- | ----------------------------- |
-| Verify is screen loaded | $\{verify-screen-loaded-args} | Verify that the screen is loaded based on the provided element data. | $\{verify-screen-loaded-code} |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#verify-screen-loaded-args}
+      <th>
+        Arguments
+      </th>
 
-* **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) command for more information.
-* **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
-* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      <th>
+        Description
+      </th>
 
-\{#verify-screen-loaded-code}
+      <th>
+        Exa  
+        mple
+      </th>
+    </tr>
+  </thead>
 
-```
-***Variables***
-&{ElementData}=   using=text  value=some text
-@{ElementArray}= 	&{ElementData}
-&{ElementParams}	elementData=${ElementArray}
+  <tbody>
+    <tr>
+      <td>
+        Verify is screen loaded
+      </td>
 
-*** Test Cases ***
-Verify is screen loaded 	${ElementParams}
-```
+      <td>
+        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) command for more information.
+        * **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
+        * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      </td>
+
+      <td>
+        Verify that the screen is loaded based on the provided element data.
+      </td>
+
+      <td>
+          
+
+
+
+        <br />
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get child nodes
 

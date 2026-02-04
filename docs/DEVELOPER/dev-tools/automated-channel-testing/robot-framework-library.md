@@ -76,87 +76,278 @@ The Roku's Robot Framework Library includes the following keywords:
 
 (_available since release 2.0_)
 
-| Keyword  | Argument         | Description                                                                                                                                                                                                                                                     | Example                                                  |
-| -------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| Sideload | $\{sideload-arg} | Sideloads an app that has been packaged into a zip file.<br /><br />If the **Sideload** command fails, [sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the app to be tested and use the **Launch the app** command. | `Sideload  myChannel.zip rokudev   your_device_password` |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#sideload-arg}
+      <th>
+        Argument
+      </th>
 
-* **channel**: A zipped package file.
-* **username**: Enter **rokudev**, which is the user name for the Development Application Installer.
-* **password**: The password for accessing the Development Application Installer on your Roku device.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Sideload
+      </td>
+
+      <td>
+        * **channel**: A zipped package file.
+        * **username**: Enter **rokudev**, which is the user name for the Development Application Installer.
+        * **password**: The password for accessing the Development Application Installer on your Roku device.
+      </td>
+
+      <td>
+        Sideloads an app that has been packaged into a zip file.<br /><br />If the **Sideload** command fails, [sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the app to be tested and use the **Launch the app** command.
+      </td>
+
+      <td>
+        `Sideload  myChannel.zip rokudev   your_device_password`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Launch the app
 
-| Keyword        | Argument                   | Description                                                 | Example                                  |
-| -------------- | -------------------------- | ----------------------------------------------------------- | ---------------------------------------- |
-| Launch the app | $\{launch-the-channel-arg} | Launches the app corresponding to the specified channel ID. | `Launch the app  dev  myMovie123  movie` |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#launch-the-channel-arg}
+      <th>
+        Argument
+      </th>
 
-* **channel_code**: The ID of the app to be launched.
-* **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
-* **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Launch the app
+      </td>
+
+      <td>
+        * **channel_code**: The ID of the app to be launched.
+        * **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
+        * **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+      </td>
+
+      <td>
+        Launches the app corresponding to the specified channel ID.
+      </td>
+
+      <td>
+        `Launch the app  dev  myMovie123  movie`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Input deep linking data
 
 (_available since release 2.0_)
 
-| Keyword                 | Argument                   | Description                                             | Example                                           |
-| ----------------------- | -------------------------- | ------------------------------------------------------- | ------------------------------------------------- |
-| Input deep linking data | $\{input-deep-linking-arg} | Launches the app corresponding to the specified app ID. | `Input deep linking data  dev  myMovie123  movie` |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#input-deep-linking-arg}
+      <th>
+        Argument
+      </th>
 
-* **channelId**: The ID of the app to be launched.
-* **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
-* **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Input deep linking data
+      </td>
+
+      <td>
+        * **channelId**: The ID of the app to be launched.
+        * **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
+        * **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+      </td>
+
+      <td>
+        Launches the app corresponding to the specified app ID.
+      </td>
+
+      <td>
+        `Input deep linking data  dev  myMovie123  movie`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get apps
 
-| Keyword  | Description                                                                                                               | Example            |
-| :------- | :------------------------------------------------------------------------------------------------------------------------ | ------------------ |
-| Get apps | Returns a list of installed apps as an array of objects. Each app object contains the following fields: $\{get-apps-list} | `@{apps}=Get Apps` |
+<Table align={["left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#get-apps-list}
+      <th>
+        Description
+      </th>
 
-* title
-* id
-* type
-* version
-* subtype
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Get apps
+      </td>
+
+      <td>
+        Returns a list of installed apps as an array of objects. Each app object contains the following fields:  
+
+        * title
+        * id
+        * type
+        * version
+        * subtype
+      </td>
+
+      <td>
+        `@{apps}=Get Apps`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Send key
 
-| Keyword  | Arguments         | Description                                           | Example          |
-| :------- | :---------------- | :---------------------------------------------------- | ---------------- |
-| Send key | $\{send-key-args} | Simulates the press and release of the specified key. | `Send key  up 2` |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#send-key-args}
+      <th>
+        Arguments
+      </th>
 
-* **key_press**: The key to be pressed and released, which may be one of the following: "up", "down", "right", "left", "back, "select", "instantreplay", "play", "stop", "rev", "fwd", and "info".
-* **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Send key
+      </td>
+
+      <td>
+        * **key_press**: The key to be pressed and released, which may be one of the following: "up", "down", "right", "left", "back, "select", "instantreplay", "play", "stop", "rev", "fwd", and "info".
+        * **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+      </td>
+
+      <td>
+        Simulates the press and release of the specified key.
+      </td>
+
+      <td>
+        `Send key  up 2`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Send keys
 
-| Keyword   | Arguments          | Description                                        | Example            |
-| :-------- | :----------------- | :------------------------------------------------- | ------------------ |
-| Send keys | $\{send-keys-args} | Simulates the sequence of keypresses and releases. | $\{send-keys-code} |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#send-keys-args}
+      <th>
+        Arguments
+      </th>
 
-* **sequence**: An array containing the sequence of keys to be pressed and released (for example, down, down, down, down, select).
-* **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+      <th>
+        Description
+      </th>
 
-\{#send-keys-code}
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
 
-```
-**Variables***
-@{keys}=	down down down down select
+  <tbody>
+    <tr>
+      <td>
+        Send keys
+      </td>
 
-***Test cases***
-Send keys	${keys}	1
-```
+      <td>
+        * **sequence**: An array containing the sequence of keys to be pressed and released (for example, down, down, down, down, select).
+        * **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+      </td>
+
+      <td>
+        Simulates the sequence of keypresses and releases.
+      </td>
+
+      <td>
+        <p><strong>Variables</strong>*</p>
+        <p>@\{keys\}= down down down down select</p>
+        <p>***Test cases***</p>
+        <p>Send keys $\{keys\} 1</p>
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Send word
 

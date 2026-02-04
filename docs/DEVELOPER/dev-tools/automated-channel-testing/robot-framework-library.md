@@ -513,43 +513,109 @@ The Roku's Robot Framework Library includes the following keywords:
 
 ### Get child nodes
 
-| Keyword         | Arguments               | Description                                          | Example                 |
-| :-------------- | :---------------------- | :--------------------------------------------------- | ----------------------- |
-| Get child nodes | $\{get-child-node-args} | Retrieves the child component of the specified node. | $\{get-child-node-code} |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#get-child-node-args}
+      <th>
+        Arguments
+      </th>
 
-* **parentNode**: The parent node for which the child nodes are to be retrieved.
+      <th>
+        Description
+      </th>
 
-* **locator**: An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
 
-  using=attribute, tag, or text  attribute=specific attribute  value=tag or attribute value
+  <tbody>
+    <tr>
+      <td>
+        Get child nodes
+      </td>
 
-\{#get-child-node-code}
+      <td>
+        * **parentNode**: The parent node for which the child nodes are to be retrieved.
 
-```
-***Variables***
-&{LabelData}=
-using=text	value=Live Gaming
-&{IndexData}=	using=attr	attribute=index	value=1
-@{LabelArray}=	&{LabelData}	&{IndexData}
-@{ParamArray}=	&{PosterData}
+        * **locator**: An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:
 
-***Test Cases***
-&{focusedEl}=
-get focusedElement
+          using=attribute, tag, or text  attribute=specific attribute  value=tag or attribute value
+      </td>
 
-@{Nodes}=
-Get child nodes
-${focusedEl}
-${ParamArray}
-```
+      <td>
+        Retrieves the child component of the specified node.
+      </td>
+
+      <td>
+        $\{get-child-node-code}
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get element
 
-| Keyword     | Arguments            | Description                                                                                                                                           | Example              |
-| :---------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| Get element | $\{get-element-args} | Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element. | $\{get-element-code} |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
+
+      <th>
+        Arguments
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Get element
+      </td>
+
+      <td>
+        $\{get-element-args}
+      </td>
+
+      <td>
+        Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element.
+      </td>
+
+      <td>
+         <pre><code><p>***Variables***
+        &\{LabelData\}=
+        using=text	value=Live Gaming
+        &\{IndexData\}=	using=attr	attribute=index	value=1
+        @\{LabelArray\}=	&\{LabelData\}	&\{IndexData\}
+        @\{ParamArray\}=	&\{PosterData\}
+        ***Test Cases***
+        &\{focusedEl\}=
+        get focusedElement
+        @\{Nodes\}=
+        Get child nodes
+        $\{focusedEl\}
+        $\{ParamArray\}</p></code></pre>
+
+        <br />
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 \{#get-element-args}
 

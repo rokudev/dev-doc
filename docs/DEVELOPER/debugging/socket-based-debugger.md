@@ -2153,9 +2153,11 @@ You can [download](https://github.com/rokudev/debug-protocol-vscode-ext-beta) th
 
 The following video demonstrates the [Roku Remote Debugger](https://github.com/rokudev/remote-debugger), and it shows how the BrightScript network debug protocol could be used in an integration with an IDE such as Visual Studio Code.
 
-\<video title="Roku BrightScript Network Debug Protocol" poster="[https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg">](https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg">)
-\<source src="[https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4">](https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4">)
-\</video>
+<HTMLBlock>{`
+<video src="https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg">" width="720" height="480" controls />
+`}</HTMLBlock>
+
+<br />
 
 ## Change log
 

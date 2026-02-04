@@ -10,935 +10,513 @@ metadata:
 next:
   description: ''
 ---
-<HTMLBlock>{`
-<div class="markdown-body developer-content-body">
-<p>Roku's Robot Framework Library enables keyword-driven testing of apps. The library resides in a Python class that has methods that map directly to keyword names. The keywords take the same arguments as the methods implementing them. The keywords report failures with exceptions, create logs by writing to standard output, and return values using the <code>return</code> statement.</p>
-<h2 id="instantiating-the-library">Instantiating the library</h2>
-<p>To create an instance of the Roku Framework Robot Library, provide the following four arguments:</p>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Argument</th>
-<th class="short-line">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">ip</td>
-<td class="long-line">The IP address of the device to be used for testing.</td>
-</tr>
-<tr>
-<td class="short-line">path</td>
-<td class="short-line">The path to the Roku WebDriver.</td>
-</tr>
-<tr>
-<td class="short-line">timeout</td>
-<td class="long-line">The amount of time (in milliseconds) that commands are allowed to run.</td>
-</tr>
-<tr>
-<td class="short-line">pressDelay</td>
-<td class="long-line">The amount of time (in milliseconds) between keypress commands. This argument works with the <strong>Send keys</strong> command.</td>
-</tr>
-</tbody>
-</table></div>
-<p>The following example demonstrates how to instantiate the Roku Robot Framework Library:</p>
-<pre><code>*** Settings ***
-Library ./../Library/RobotLibrary.py  $\{ip_address}  $\{timeout}  $\{pressDelay}   $\{server_path}
+Roku's Robot Framework Library enables keyword-driven testing of apps. The library resides in a Python class that has methods that map directly to keyword names. The keywords take the same arguments as the methods implementing them. The keywords report failures with exceptions, create logs by writing to standard output, and return values using the `return` statement.
+
+## Instantiating the library
+
+To create an instance of the Roku Framework Robot Library, provide the following four arguments:
+
+| Argument   | Description                                                                                                         |
+| ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| ip         | The IP address of the device to be used for testing.                                                                |
+| path       | The path to the Roku WebDriver.                                                                                     |
+| timeout    | The amount of time (in milliseconds) that commands are allowed to run.                                              |
+| pressDelay | The amount of time (in milliseconds) between keypress commands. This argument works with the **Send keys** command. |
+
+The following example demonstrates how to instantiate the Roku Robot Framework Library:
+
+```
+*** Settings ***
+Library ./../Library/RobotLibrary.py  ${ip_address}  ${timeout}  ${pressDelay}   ${server_path}
 
 *** Variables ***
-$\{ip_address} 127.0.0.1
-$\{server_path} D:/path/to/webDriver/main.exe
-$\{timeout} 20000
-$\{pressDelay} 2000
+${ip_address} 127.0.0.1
+${server_path} D:/path/to/webDriver/main.exe
+${timeout} 20000
+${pressDelay} 2000
 
 .py file:
 class RobotLibrary:
 
     def __init__(self, ip, timeout = 0, pressDelay = 0,  path = ""):
-        &lt;some code&gt;
-</code></pre>
-<h2 id="keywords">Keywords</h2>
-<p>The Roku's Robot Framework Library includes the following keywords:</p>
-<ul>
-<li>Sideload (<em>available since release 2.0</em>)</li>
-<li>Launch the app</li>
-<li>Input deep linking data  (<em>available since release 2.0</em>)</li>
-<li>Get apps</li>
-<li>Send key</li>
-<li>Send keys</li>
-<li>Send word</li>
-<li>Mark timer</li>
-<li>Get timer</li>
-<li>Verify is playback started  (<em>available since release 2.0</em>)</li>
-<li>Verify is screen loaded  (<em>available since release 2.0</em>)</li>
-<li>Get child nodes  (<em>available since release 2.1</em>)</li>
-<li>Get element</li>
-<li>Get elements</li>
-<li>Get focused element</li>
-<li>Verify is app loaded</li>
-<li>Get current app info</li>
-<li>Get device info</li>
-<li>Get player info</li>
-<li>Verify app exists</li>
-<li>Set timeout</li>
-<li>Set press delay</li>
-<li>Get attribute</li>
-</ul>
-<blockquote>
-<p>A keyword will fail if its respective WebDriver endpoint returns a 4xx or 500 error.</p>
-</blockquote>
-<h3 id="sideload">Sideload</h3>
-<p>(<em>available since release 2.0</em>)</p>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Argument</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Sideload</td>
-<td class="long-line"><ul>
-<li><strong>channel</strong>: A zipped package file.</li>
-<li><strong>username</strong>: Enter <strong>rokudev</strong>, which is the user name for the Development Application Installer.</li>
-<li><strong>password</strong>: The password for accessing the Development Application Installer on your Roku device.</li>
-</ul></td>
-<td class="long-line">Sideloads an app that has been packaged into a zip file.<br><br>If the <strong>Sideload</strong> command fails, [sideload](doc:developer-setup#sideloading-channels) the app to be tested and use the <strong>Launch the app</strong> command.</td>
-<td class="long-line"><code>Sideload myChannel.zip rokudev your_device_password</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="launch-the-app">Launch the app</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Argument</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Launch the app</td>
-<td class="long-line"><ul>
-<li><strong>channel_code</strong>: The ID of the app to be launched.</li>
-<li><strong>contentId</strong>: The [contentId](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
-<li><strong>mediaType</strong>: The [mediaType](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
-</ul></td>
-<td class="long-line">Launches the app corresponding to the specified channel ID.</td>
-<td class="short-line"><code>Launch the app dev myMovie123 movie</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="input-deep-linking-data">Input deep linking data</h3>
-<p>(<em>available since release 2.0</em>)</p>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Argument</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Input deep linking data</td>
-<td class="long-line"><ul>
-<li><strong>channelId</strong>: The ID of the app to be launched.</li>
-<li><strong>contentId</strong>: The [contentId](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.</li>
-<li><strong>mediaType</strong>: The [mediaType](doc:implementing-deep-linking#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.</li>
-</ul></td>
-<td class="long-line">Launches the app corresponding to the specified app ID.</td>
-<td class="long-line"><code>Input deep linking data dev myMovie123 movie</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-apps">Get apps</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get apps</td>
-<td class="long-line">Returns a list of installed apps as an array of objects. Each app object contains the following fields: <ul>
-<li>title</li>
-<li>id</li>
-<li>type</li>
-<li>version</li>
-<li>subtype</li>
-</ul></td>
-<td class="short-line"><code>@{apps}=Get Apps</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="send-key">Send key</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Send key</td>
-<td class="long-line"><ul>
-<li><strong>key_press</strong>: The key to be pressed and released, which may be one of the following: "up", "down", "right", "left", "back, "select", "instantreplay", "play", "stop", "rev", "fwd", and "info".</li>
-<li><strong>delay</strong>: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.</li>
-</ul></td>
-<td class="long-line">Simulates the press and release of the specified key.</td>
-<td class="short-line"><code>Send key up 2</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="send-keys">Send keys</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Send keys</td>
-<td class="long-line"><ul>
-<li><strong>sequence</strong>: An array containing the sequence of keys to be pressed and released (for example, down, down, down, down, select).</li>
-<li><strong>delay</strong>: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.</li>
-</ul></td>
-<td class="short-line">Simulates the sequence of keypresses and releases.</td>
-<td class="long-line"><pre><code>**Variables***
-@{keys}=    down down down down select
+        <some code>
+```
+
+## Keywords
+
+The Roku's Robot Framework Library includes the following keywords:
+
+* Sideload (_available since release 2.0_)
+* Launch the app
+* Input deep linking data  (_available since release 2.0_)
+* Get apps
+* Send key
+* Send keys
+* Send word
+* Mark timer
+* Get timer
+* Verify is playback started  (_available since release 2.0_)
+* Verify is screen loaded  (_available since release 2.0_)
+* Get child nodes  (_available since release 2.1_)
+* Get element
+* Get elements
+* Get focused element
+* Verify is app loaded
+* Get current app info
+* Get device info
+* Get player info
+* Verify app exists
+* Set timeout
+* Set press delay
+* Get attribute
+
+> A keyword will fail if its respective WebDriver endpoint returns a 4xx or 500 error.
+
+### Sideload
+
+(_available since release 2.0_)
+
+| Keyword  | Argument         | Description                                                                                                                                                                                                                                                     | Example                                                  |
+| -------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Sideload | $\{sideload-arg} | Sideloads an app that has been packaged into a zip file.<br /><br />If the **Sideload** command fails, [sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the app to be tested and use the **Launch the app** command. | `Sideload  myChannel.zip rokudev   your_device_password` |
+
+\{#sideload-arg}
+
+* **channel**: A zipped package file.
+* **username**: Enter **rokudev**, which is the user name for the Development Application Installer.
+* **password**: The password for accessing the Development Application Installer on your Roku device.
+
+### Launch the app
+
+| Keyword        | Argument                   | Description                                                 | Example                                  |
+| -------------- | -------------------------- | ----------------------------------------------------------- | ---------------------------------------- |
+| Launch the app | $\{launch-the-channel-arg} | Launches the app corresponding to the specified channel ID. | `Launch the app  dev  myMovie123  movie` |
+
+\{#launch-the-channel-arg}
+
+* **channel_code**: The ID of the app to be launched.
+* **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
+* **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+
+### Input deep linking data
+
+(_available since release 2.0_)
+
+| Keyword                 | Argument                   | Description                                             | Example                                           |
+| ----------------------- | -------------------------- | ------------------------------------------------------- | ------------------------------------------------- |
+| Input deep linking data | $\{input-deep-linking-arg} | Launches the app corresponding to the specified app ID. | `Input deep linking data  dev  myMovie123  movie` |
+
+\{#input-deep-linking-arg}
+
+* **channelId**: The ID of the app to be launched.
+* **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
+* **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+
+### Get apps
+
+| Keyword  | Description                                                                                                               | Example            |
+| :------- | :------------------------------------------------------------------------------------------------------------------------ | ------------------ |
+| Get apps | Returns a list of installed apps as an array of objects. Each app object contains the following fields: $\{get-apps-list} | `@{apps}=Get Apps` |
+
+\{#get-apps-list}
+
+* title
+* id
+* type
+* version
+* subtype
+
+### Send key
+
+| Keyword  | Arguments         | Description                                           | Example          |
+| :------- | :---------------- | :---------------------------------------------------- | ---------------- |
+| Send key | $\{send-key-args} | Simulates the press and release of the specified key. | `Send key  up 2` |
+
+\{#send-key-args}
+
+* **key_press**: The key to be pressed and released, which may be one of the following: "up", "down", "right", "left", "back, "select", "instantreplay", "play", "stop", "rev", "fwd", and "info".
+* **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+
+### Send keys
+
+| Keyword   | Arguments          | Description                                        | Example            |
+| :-------- | :----------------- | :------------------------------------------------- | ------------------ |
+| Send keys | $\{send-keys-args} | Simulates the sequence of keypresses and releases. | $\{send-keys-code} |
+
+\{#send-keys-args}
+
+* **sequence**: An array containing the sequence of keys to be pressed and released (for example, down, down, down, down, select).
+* **delay**: The delay (in seconds) before the keypresses are executed. This argument is optional, and it defaults to 2 seconds if not specified.
+
+\{#send-keys-code}
+
+```
+**Variables***
+@{keys}=	down down down down select
 
 ***Test cases***
-Send keys   $\{keys} 1
-</code></pre></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="send-word">Send word</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Send word</td>
-<td class="long-line"><ul>
-<li><strong>word</strong>: The specified word to be entered.</li>
-<li><strong>delay</strong>: The delay (in seconds) before the entry of each letter in the specified word. This argument is optional, and it defaults to 2 seconds if not specified.</li>
-</ul></td>
-<td class="long-line">Simulates the press and release of each letter in a word.</td>
-<td class="short-line"><code>Send word Hello</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="mark-timer">Mark timer</h3>
-<p>(<em>available since release 2.0</em>)</p>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Mark timer</td>
-<td class="short-line">Starts the timer.</td>
-<td class="short-line"><code>Mark timer</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-timer">Get timer</h3>
-<p>(<em>available since release 2.0</em>)</p>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get timer</td>
-<td class="long-line">Returns the number of milliseconds elapsed since the timer was last started.</td>
-<td class="short-line"><code>$\{time} = Get timer</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="verify-is-playback-started">Verify is playback started</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Verify is playback started</td>
-<td class="long-line"><ul>
-<li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li>
-<li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
-</ul></td>
-<td class="long-line">Verify playback has started on the Roku media player. <br><br>This keyword fails if player state is not "play".</td>
-<td class="short-line"><code>Verify is playback started 10 1</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="verify-is-screen-loaded">Verify is screen loaded</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Verify is screen loaded</td>
-<td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) command for more information.</li>
-<li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li>
-<li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
-</ul></td>
-<td class="long-line">Verify that the screen is loaded based on the provided element data.</td>
-<td class="long-line"><pre><code>***Variables***
-&amp;{ElementData}=   using=text  value=some text
-@{ElementArray}=    &amp;{ElementData}
-&amp;{ElementParams}    elementData=$\{ElementArray}
+Send keys	${keys}	1
+```
+
+### Send word
+
+| Keyword   | Arguments          | Description                                               | Example            |
+| :-------- | :----------------- | :-------------------------------------------------------- | ------------------ |
+| Send word | $\{send-word-args} | Simulates the press and release of each letter in a word. | `Send word  Hello` |
+
+\{#send-word-args}
+
+* **word**: The specified word to be entered.
+* **delay**: The delay (in seconds) before the entry of each letter in the specified word. This argument is optional, and it defaults to 2 seconds if not specified.
+
+### Mark timer
+
+(_available since release 2.0_)
+
+| Keyword    | Description       | Example      |
+| :--------- | :---------------- | ------------ |
+| Mark timer | Starts the timer. | `Mark timer` |
+
+### Get timer
+
+(_available since release 2.0_)
+
+| Keyword   | Description                                                                  | Example               |
+| :-------- | :--------------------------------------------------------------------------- | --------------------- |
+| Get timer | Returns the number of milliseconds elapsed since the timer was last started. | `${time} = Get timer` |
+
+### Verify is playback started
+
+| Keyword                    | Arguments                | Description                                                                                                         | Example                            |
+| :------------------------- | :----------------------- | :------------------------------------------------------------------------------------------------------------------ | ---------------------------------- |
+| Verify is playback started | $\{verify-playback-args} | Verify playback has started on the Roku media player. <br /><br />This keyword fails if player state is not "play". | `Verify is playback started  10 1` |
+
+\{#verify-playback-args}
+
+* **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
+* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
+### Verify is screen loaded
+
+| Keyword                 | Arguments                     | Description                                                          | Example                       |
+| :---------------------- | :---------------------------- | :------------------------------------------------------------------- | ----------------------------- |
+| Verify is screen loaded | $\{verify-screen-loaded-args} | Verify that the screen is loaded based on the provided element data. | $\{verify-screen-loaded-code} |
+
+\{#verify-screen-loaded-args}
+
+* **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) command for more information.
+* **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
+* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
+\{#verify-screen-loaded-code}
+
+```
+***Variables***
+&{ElementData}=   using=text  value=some text
+@{ElementArray}= 	&{ElementData}
+&{ElementParams}	elementData=${ElementArray}
 
 *** Test Cases ***
-Verify is screen loaded     $\{ElementParams}
-</code></pre></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-child-nodes">Get child nodes</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get child nodes</td>
-<td class="long-line"><ul>
-<li><strong>parentNode</strong>: The parent node for which the child nodes are to be retrieved.</li>
-</ul></td>
-<td class="long-line">Retrieves the child component of the specified node.</td>
-<td class="long-line"><pre><code>***Variables***
-&amp;{LabelData}=
-using=text  value=Live Gaming
-&amp;{IndexData}=   using=attr  attribute=index value=1
-@{LabelArray}=  &amp;{LabelData}    &amp;{IndexData}
-@{ParamArray}=  &amp;{PosterData}
+Verify is screen loaded 	${ElementParams}
+```
+
+### Get child nodes
+
+| Keyword         | Arguments               | Description                                          | Example                 |
+| :-------------- | :---------------------- | :--------------------------------------------------- | ----------------------- |
+| Get child nodes | $\{get-child-node-args} | Retrieves the child component of the specified node. | $\{get-child-node-code} |
+
+\{#get-child-node-args}
+
+* **parentNode**: The parent node for which the child nodes are to be retrieved.
+
+* **locator**: An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:
+
+  using=attribute, tag, or text  attribute=specific attribute  value=tag or attribute value
+
+\{#get-child-node-code}
+
+```
+***Variables***
+&{LabelData}=
+using=text	value=Live Gaming
+&{IndexData}=	using=attr	attribute=index	value=1
+@{LabelArray}=	&{LabelData}	&{IndexData}
+@{ParamArray}=	&{PosterData}
 
 ***Test Cases***
-&amp;{focusedEl}=
+&{focusedEl}=
 get focusedElement
 
 @{Nodes}=
 Get child nodes
-$\{focusedEl}
-$\{ParamArray}
-</code></pre></td>
-</tr>
-</tbody>
-</table></div>
-<ul>
-<li>
-<p><strong>locator</strong>: An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:</p>
-<pre><code>  using=attribute, tag, or text  attribute=specific attribute  value=tag or attribute value
-</code></pre>
-</li>
-</ul>
-<h3 id="get-element">Get element</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get element</td>
-<td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) for more information.</li>
-<li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
-</ul></td>
-<td class="long-line">Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element.</td>
-<td class="long-line"><pre><code>***Variables***
-&amp;{ElementData}=     using=text  value=some text
-@{ElementArray}=    &amp;{ElementData}
-&amp;{ElementParams}    elementData=$\{ElementArray}
+${focusedEl}
+${ParamArray}
+```
+
+### Get element
+
+| Keyword     | Arguments            | Description                                                                                                                                           | Example              |
+| :---------- | :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| Get element | $\{get-element-args} | Searches for an element on the page based on the specified locator starting from the screen root.  Returns information on the first matching element. | $\{get-element-code} |
+
+\{#get-element-args}
+
+* **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
+* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
+\{#get-element-code}
+
+```
+***Variables***
+&{ElementData}=  	using=text	value=some text
+@{ElementArray}= 	&{ElementData}
+&{ElementParams}	elementData=${ElementArray}
 
 ***Test Cases***
-&amp;{element}= Get element $\{ElementParams}
-</code></pre></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-elements">Get elements</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get elements</td>
-<td class="long-line"><ul>
-<li><strong>data</strong>: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](doc:web-driver#POST-v1/session/:sessionId/elements) for more information.</li>
-<li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
-</ul></td>
-<td class="long-line">Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements.</td>
-<td class="long-line"><pre><code>***Variables***
-&amp;{ElementData}=     using=text  value=some text
-@{ElementArray}=    &amp;{ElementData}
-&amp;{ElementParams}    elementData=$\{ElementArray}
+&{element}=	Get element	${ElementParams}
+```
+
+### Get elements
+
+| Keyword      | Arguments             | Description                                                                                                                                    | Example               |
+| :----------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Get elements | $\{get-elements-args} | Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements. | $\{get-elements-code} |
+
+\{#get-elements-args}
+
+* **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
+* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
+\{#get-elements-code}
+
+```
+***Variables***
+&{ElementData}=  	using=text	value=some text
+@{ElementArray}= 	&{ElementData}
+&{ElementParams}	elementData=${ElementArray}
 
 ***Test Cases***
-@{elements}=    Get elements    $\{locators}
-</code></pre></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-focused-element">Get focused element</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get focused element</td>
-<td class="long-line">Return the element on the screen that currently has focus. See the [WebDriver active element command](doc:web-driver#get-v1/session/:sessionId/element/active) for more information.</td>
-<td class="short-line"><code>&amp;{element}= Get focused element</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="verify-is-channel-loaded">Verify is channel loaded</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Verify is channel loaded</td>
-<td class="long-line"><ul>
-<li><strong>id</strong>: The ID of the app to be launched. Use <code>dev</code> to verify a sideloaded app.</li>
-<li><strong>retries</strong>: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.</li>
-<li><strong>delay</strong>: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.</li>
-</ul></td>
-<td class="long-line">Verify that the specified app has been launched.<br><br>This keyword fails if the provided app ID does not match a valid channel.</td>
-<td class="short-line"><code>Verify is channel loaded dev</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-current-channel-info">Get current channel info</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get current channel info</td>
-<td class="long-line">Returns an object containing information about the app currently loaded. This object has the following fields:<br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line"><strong>Key</strong></th>
-<th class="short-line"><strong>Type</strong></th>
-<th class="short-line"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">sessionId</td>
-<td class="short-line">string</td>
-<td class="short-line">The advertising ID of the device</td>
-</tr>
-<tr>
-<td class="short-line">status</td>
-<td class="short-line">int</td>
-<td class="long-line">A status code summarizing the result of the command.</td>
-</tr>
-<tr>
-<td class="short-line">value</td>
-<td class="short-line">array</td>
-<td class="short-line"></td>
-</tr>
-<tr>
-<td class="short-line">value[i].Title</td>
-<td class="short-line">string</td>
-<td class="short-line">The title of the app.</td>
-</tr>
-<tr>
-<td class="short-line">value[i].ID</td>
-<td class="short-line">string</td>
-<td class="short-line">The ID of the app.</td>
-</tr>
-<tr>
-<td class="short-line">value[i].Version</td>
-<td class="short-line">string</td>
-<td class="short-line">The build version of the app.</td>
-</tr>
-<tr>
-<td class="short-line">value[i].Subtype</td>
-<td class="short-line">string</td>
-<td class="short-line">"ndka"/"rsga"</td>
-</tr>
-<tr>
-<td class="short-line">value[i].Type</td>
-<td class="short-line">string</td>
-<td class="short-line">"menu"/"appl"</td>
-</tr>
-</tbody>
-</table></div></td>
-<td class="long-line"><code>&amp;{channel}=Get current channel info</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-device-info">Get device info</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get device info</td>
-<td class="long-line">Returns an object containing the information about the device. This object has the following fields:<br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line"><strong>Key</strong></th>
-<th class="short-line"><strong>Type</strong></th>
-<th class="short-line"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">sessionId</td>
-<td class="short-line">string</td>
-<td class="short-line">The advertisement ID of the device.</td>
-</tr>
-<tr>
-<td class="short-line">status</td>
-<td class="short-line">int</td>
-<td class="long-line">A status code summarizing the result of the command.</td>
-</tr>
-<tr>
-<td class="short-line">value</td>
-<td class="short-line">object</td>
-<td class="short-line"></td>
-</tr>
-<tr>
-<td class="short-line">value.vendorName</td>
-<td class="short-line">string</td>
-<td class="short-line">The vendor of the device.</td>
-</tr>
-<tr>
-<td class="short-line">value.modelName</td>
-<td class="short-line">string</td>
-<td class="short-line">The model of the device.</td>
-</tr>
-<tr>
-<td class="short-line">value.language</td>
-<td class="short-line">string</td>
-<td class="short-line">The language of the device.</td>
-</tr>
-<tr>
-<td class="short-line">value.country</td>
-<td class="short-line">string</td>
-<td class="short-line">The country of the device.</td>
-</tr>
-<tr>
-<td class="short-line">value.ip</td>
-<td class="short-line">string</td>
-<td class="short-line">The IP address of the device.</td>
-</tr>
-<tr>
-<td class="short-line">value.timeout</td>
-<td class="short-line">int</td>
-<td class="long-line">The specified timeout for WebDriver client requests.</td>
-</tr>
-<tr>
-<td class="short-line">value.pressDelay</td>
-<td class="short-line">int</td>
-<td class="short-line">The specified delay between key presses.</td>
-</tr>
-</tbody>
-</table></div></td>
-<td class="short-line"><code>&amp;{info}=Get device info</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-player-info">Get player info</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get player info</td>
-<td class="long-line">Returns an object containing information about the Roku media player. This object has the following fields:<br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line"><strong>Key</strong></th>
-<th class="short-line"><strong>Type</strong></th>
-<th class="short-line"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">sessionId</td>
-<td class="short-line">string</td>
-<td class="short-line">The advertising ID of the device</td>
-</tr>
-<tr>
-<td class="short-line">status</td>
-<td class="short-line">int</td>
-<td class="long-line">A status code summarizing the result of the command</td>
-</tr>
-<tr>
-<td class="short-line">value</td>
-<td class="short-line">object</td>
-<td class="short-line"></td>
-</tr>
-<tr>
-<td class="short-line">value.error</td>
-<td class="short-line">string</td>
-<td class="long-line">Indicates whether there was a playback error. If no error occurred, this is set to "false"</td>
-</tr>
-<tr>
-<td class="short-line">value.state</td>
-<td class="short-line">string</td>
-<td class="long-line">Indicates the current playback state ("play", "pause", "resume", and so on)</td>
-</tr>
-<tr>
-<td class="short-line">value.format</td>
-<td class="short-line">object</td>
-<td class="long-line">The <strong>format</strong> element contains the following attributes: <em>audio</em>, <em>caption</em>, <em>container</em>, <em>drm</em>, <em>video</em>, and <em>res</em>.</td>
-</tr>
-<tr>
-<td class="short-line">value.format.audio</td>
-<td class="short-line">string</td>
-<td class="long-line">The audio compression method ("aac", "aac_adts", and so on.)</td>
-</tr>
-<tr>
-<td class="short-line">value.format.caption</td>
-<td class="short-line">string</td>
-<td class="long-line">The closed caption format ("608_708", for example). This value is set to "none" if there are no captions.</td>
-</tr>
-<tr>
-<td class="short-line">value.format.container</td>
-<td class="short-line">string</td>
-<td class="short-line">The container format ("hls", for example)</td>
-</tr>
-<tr>
-<td class="short-line">value.format.drm</td>
-<td class="short-line">string</td>
-<td class="long-line">The encoding type. If no encoding is used, this us set to "none".</td>
-</tr>
-<tr>
-<td class="short-line">value.format.video</td>
-<td class="short-line">string</td>
-<td class="long-line">The format of the currently playing video stream ("mpeg4-15", for example)</td>
-</tr>
-<tr>
-<td class="short-line">value.format.res</td>
-<td class="short-line">string</td>
-<td class="long-line">The resolution of the currently playing video stream ("1280X720", for example).</td>
-</tr>
-<tr>
-<td class="short-line">value.buffering</td>
-<td class="short-line">object</td>
-<td class="long-line">The <strong>buffering</strong> element contains the following attributes: <em>current</em>, <em>max</em>, <em>target</em>.</td>
-</tr>
-<tr>
-<td class="short-line">value.buffering.current</td>
-<td class="short-line">string</td>
-<td class="short-line">The current buffering speed (in kbps).</td>
-</tr>
-<tr>
-<td class="short-line">value.buffering.max</td>
-<td class="short-line">string</td>
-<td class="short-line">The maximum possible buffering speed (in kbps).</td>
-</tr>
-<tr>
-<td class="short-line">value.buffering.target</td>
-<td class="short-line">string</td>
-<td class="short-line">The target buffering speed (in kbps).</td>
-</tr>
-<tr>
-<td class="short-line">value.newStream</td>
-<td class="short-line">object</td>
-<td class="long-line">The <strong>newStream</strong> element contains the following attribute: <em>speed</em>.</td>
-</tr>
-<tr>
-<td class="short-line">value.newStream.speed</td>
-<td class="short-line">string</td>
-<td class="short-line">The current playback speed (in bps)</td>
-</tr>
-<tr>
-<td class="short-line">value.position</td>
-<td class="short-line">string</td>
-<td class="long-line">The time of the current position in the stream, expressed as the elapsed time (in ms) since the start of stream or UTC time, depending on the content.</td>
-</tr>
-<tr>
-<td class="short-line">value.duration</td>
-<td class="short-line">string</td>
-<td class="long-line">The duration of the video being played (in seconds). This becomes valid when playback begins and may change if the video is dynamic content, such as a live event.</td>
-</tr>
-<tr>
-<td class="short-line">value.isLive</td>
-<td class="short-line">string</td>
-<td class="long-line">A flag indicating whether the video being played is a live stream.</td>
-</tr>
-<tr>
-<td class="short-line">value.runtime</td>
-<td class="short-line">string</td>
-<td class="long-line">The runtime of the video being played (in seconds).</td>
-</tr>
-<tr>
-<td class="short-line">value.streamSegment</td>
-<td class="short-line">object</td>
-<td class="long-line">The <strong>streamSegment</strong> attribute contains Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS  This element contains the following attributes: <em>bitrate</em>, <em>mediaSequence</em>, <em>segmentType</em>, and <em>time</em>.</td>
-</tr>
-<tr>
-<td class="short-line">value.streamSegment.bitrate</td>
-<td class="short-line">string</td>
-<td class="short-line">The bitrate of the video segment (in bps).</td>
-</tr>
-<tr>
-<td class="short-line">value.streamSegment.mediaSequence</td>
-<td class="short-line">string</td>
-<td class="long-line">The HLS media sequence ID of the segment in the video.</td>
-</tr>
-<tr>
-<td class="short-line">value.streamSegment.segmentType</td>
-<td class="short-line">string</td>
-<td class="long-line">The type of data in the segment, which may be one of the following values: "audio", "video", "captions", "mux".</td>
-</tr>
-<tr>
-<td class="short-line">value.streamSegment.time</td>
-<td class="short-line">string</td>
-<td class="short-line">The chunk start time.</td>
-</tr>
-</tbody>
-</table></div></td>
-<td class="short-line"><code>&amp;{player}=Get player info</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="verify-is-channel-exist">Verify is channel exist</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Verify is channel exist</td>
-<td class="long-line"><ul>
-<li><strong>apps</strong>: An array containing  currently installed on the device.</li>
-<li><strong>id</strong>: The ID of the app to be verified. Use <code>dev</code> to verify a sideloaded app.</li>
-</ul></td>
-<td class="long-line">Verifies the specified app is installed on the device. This keyword fails if the <strong>apps</strong> array does not contain the app specified in the <strong>id</strong> argument.</td>
-<td class="long-line"><pre><code>@{apps}=    Get apps
-Verify is channel exist @{apps} dev
-</code></pre></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="set-timeout">Set timeout</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Set timeout</td>
-<td class="long-line"><ul>
-<li><strong>timeout</strong>: The amount of time (in milliseconds) that Web driver client requests are allowed to run.</li>
-</ul></td>
-<td class="short-line">Sets the timeout for Web driver client requests.</td>
-<td class="short-line"><code>Set timeout 5000</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="set-press-delay">Set press delay</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Set press delay</td>
-<td class="long-line"><ul>
-<li><strong>delay</strong>: The interval (in milliseconds) to be used between key presses.</li>
-</ul></td>
-<td class="long-line">Sets the delay between key presses. This keyword works with the <strong>Send keys</strong> keyword.</td>
-<td class="short-line"><code>Set press delay 2000</code></td>
-</tr>
-</tbody>
-</table></div>
-<h3 id="get-attribute">Get attribute</h3>
-<div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Keyword</th>
-<th class="short-line">Arguments</th>
-<th class="short-line">Description</th>
-<th class="short-line">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Get attribute</td>
-<td class="long-line"><ul>
-<li><strong>element</strong>: An object that contains element information (attributes, child nodes).</li>
-<li><strong>attr</strong>: The name of the attribute to be retrieved.</li>
-</ul></td>
-<td class="long-line">Get attribute value. This keyword fails if an element does not contain the specified attribute.</td>
-<td class="long-line"><pre><code>***Variables***
-&amp;{ElementData}=     using=text  value=some text
-@{ElementArray}=    &amp;{ElementData}
-&amp;{ElementParams}    elementData=$\{ElementArray}
+@{elements}=	Get elements	${locators}
+```
+
+### Get focused element
+
+| Keyword             | Description                                                                                                                                                                                                                                     | Example                           |
+| :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| Get focused element | Return the element on the screen that currently has focus. See the [WebDriver active element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#get-v1/session/:sessionId/element/active) for more information. | `&{element}=	Get focused element` |
+
+### Verify is channel loaded
+
+| Keyword                  | Arguments                   | Description                                                                                                                           | Example                         |
+| :----------------------- | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
+| Verify is channel loaded | $\{get-verify-channel-args} | Verify that the specified app has been launched.<br /><br />This keyword fails if the provided app ID does not match a valid channel. | `Verify is channel loaded  dev` |
+
+\{#get-verify-channel-args}
+
+* **id**: The ID of the app to be launched. Use `dev` to verify a sideloaded app.
+* **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
+* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+
+### Get current channel info
+
+| Keyword                  | Description                                                                                                                                  | Example                               |
+| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| Get current channel info | Returns an object containing information about the app currently loaded. This object has the following fields:<br />$\{current-app-response} | `&{channel}=Get current channel info` |
+
+\{#current-app-response}
+
+| **Key**          | **Type** | **Description**                                      |
+| :--------------- | :------- | :--------------------------------------------------- |
+| sessionId        | string   | The advertising ID of the device                     |
+| status           | int      | A status code summarizing the result of the command. |
+| value            | array    |                                                      |
+| value[i].Title   | string   | The title of the app.                                |
+| value[i].ID      | string   | The ID of the app.                                   |
+| value[i].Version | string   | The build version of the app.                        |
+| value[i].Subtype | string   | "ndka"/"rsga"                                        |
+| value[i].Type    | string   | "menu"/"appl"                                        |
+
+### Get device info
+
+| Keyword         | Description                                                                                                                    | Example                   |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| Get device info | Returns an object containing the information about the device. This object has the following fields:<br />$\{session-response} | `&{info}=Get device info` |
+
+\{#session-response}
+
+| **Key**          | **Type** | **Description**                                      |
+| :--------------- | :------- | :--------------------------------------------------- |
+| sessionId        | string   | The advertisement ID of the device.                  |
+| status           | int      | A status code summarizing the result of the command. |
+| value            | object   |                                                      |
+| value.vendorName | string   | The vendor of the device.                            |
+| value.modelName  | string   | The model of the device.                             |
+| value.language   | string   | The language of the device.                          |
+| value.country    | string   | The country of the device.                           |
+| value.ip         | string   | The IP address of the device.                        |
+| value.timeout    | int      | The specified timeout for WebDriver client requests. |
+| value.pressDelay | int      | The specified delay between key presses.             |
+
+### Get player info
+
+| Keyword         | Description                                                                                                                          | Example                     |
+| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| Get player info | Returns an object containing information about the Roku media player. This object has the following fields:<br />$\{player-response} | `&{player}=Get player info` |
+
+\{#player-response}
+
+| **Key**                           | **Type** | **Description**                                                                                                                                                                                                                                                                                |
+| :-------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sessionId                         | string   | The advertising ID of the device                                                                                                                                                                                                                                                               |
+| status                            | int      | A status code summarizing the result of the command                                                                                                                                                                                                                                            |
+| value                             | object   |                                                                                                                                                                                                                                                                                                |
+| value.error                       | string   | Indicates whether there was a playback error. If no error occurred, this is set to "false"                                                                                                                                                                                                     |
+| value.state                       | string   | Indicates the current playback state ("play", "pause", "resume", and so on)                                                                                                                                                                                                                    |
+| value.format                      | object   | The **format** element contains the following attributes: _audio_, _caption_, _container_, _drm_, _video_, and _res_.                                                                                                                                                                          |
+| value.format.audio                | string   | The audio compression method ("aac", "aac_adts", and so on.)                                                                                                                                                                                                                                   |
+| value.format.caption              | string   | The closed caption format ("608_708", for example). This value is set to "none" if there are no captions.                                                                                                                                                                                      |
+| value.format.container            | string   | The container format ("hls", for example)                                                                                                                                                                                                                                                      |
+| value.format.drm                  | string   | The encoding type. If no encoding is used, this us set to "none".                                                                                                                                                                                                                              |
+| value.format.video                | string   | The format of the currently playing video stream ("mpeg4-15", for example)                                                                                                                                                                                                                     |
+| value.format.res                  | string   | The resolution of the currently playing video stream ("1280X720", for example).                                                                                                                                                                                                                |
+| value.buffering                   | object   | The **buffering** element contains the following attributes: _current_, _max_, _target_.                                                                                                                                                                                                       |
+| value.buffering.current           | string   | The current buffering speed (in kbps).                                                                                                                                                                                                                                                         |
+| value.buffering.max               | string   | The maximum possible buffering speed (in kbps).                                                                                                                                                                                                                                                |
+| value.buffering.target            | string   | The target buffering speed (in kbps).                                                                                                                                                                                                                                                          |
+| value.newStream                   | object   | The **newStream** element contains the following attribute: _speed_.                                                                                                                                                                                                                           |
+| value.newStream.speed             | string   | The current playback speed (in bps)                                                                                                                                                                                                                                                            |
+| value.position                    | string   | The time of the current position in the stream, expressed as the elapsed time (in ms) since the start of stream or UTC time, depending on the content.                                                                                                                                         |
+| value.duration                    | string   | The duration of the video being played (in seconds). This becomes valid when playback begins and may change if the video is dynamic content, such as a live event.                                                                                                                             |
+| value.isLive                      | string   | A flag indicating whether the video being played is a live stream.                                                                                                                                                                                                                             |
+| value.runtime                     | string   | The runtime of the video being played (in seconds).                                                                                                                                                                                                                                            |
+| value.streamSegment               | object   | The **streamSegment** attribute contains Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS  This element contains the following attributes: _bitrate_, _mediaSequence_, _segmentType_, and _time_. |
+| value.streamSegment.bitrate       | string   | The bitrate of the video segment (in bps).                                                                                                                                                                                                                                                     |
+| value.streamSegment.mediaSequence | string   | The HLS media sequence ID of the segment in the video.                                                                                                                                                                                                                                         |
+| value.streamSegment.segmentType   | string   | The type of data in the segment, which may be one of the following values: "audio", "video", "captions", "mux".                                                                                                                                                                                |
+| value.streamSegment.time          | string   | The chunk start time.                                                                                                                                                                                                                                                                          |
+
+### Verify is channel exist
+
+| Keyword                 | Arguments                     | Description                                                                                                                                                | Example                       |
+| :---------------------- | ----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| Verify is channel exist | $\{verify-channel-exist-args} | Verifies the specified app is installed on the device. This keyword fails if the **apps** array does not contain the app specified in the **id** argument. | $\{verify-channel-exist-code} |
+
+\{#verify-channel-exist-args}
+
+* **apps**: An array containing  currently installed on the device.
+* **id**: The ID of the app to be verified. Use `dev` to verify a sideloaded app.
+
+\{#verify-channel-exist-code}
+
+```
+@{apps}=	Get apps
+Verify is channel exist	@{apps}	dev
+```
+
+### Set timeout
+
+| Keyword     | Arguments            | Description                                      | Example             |
+| :---------- | -------------------- | :----------------------------------------------- | ------------------- |
+| Set timeout | $\{set-timeout-args} | Sets the timeout for Web driver client requests. | `Set timeout  5000` |
+
+\{#set-timeout-args}
+
+* **timeout**: The amount of time (in milliseconds) that Web driver client requests are allowed to run.
+
+### Set press delay
+
+| Keyword         | Arguments                | Description                                                                            | Example                 |
+| :-------------- | ------------------------ | :------------------------------------------------------------------------------------- | ----------------------- |
+| Set press delay | $\{set-press-delay-args} | Sets the delay between key presses. This keyword works with the **Send keys** keyword. | `Set press delay  2000` |
+
+\{#set-press-delay-args}
+
+* **delay**: The interval (in milliseconds) to be used between key presses.
+
+### Get attribute
+
+| Keyword       | Arguments              | Description                                                                                     | Example                |
+| :------------ | ---------------------- | :---------------------------------------------------------------------------------------------- | ---------------------- |
+| Get attribute | $\{get-attribute-args} | Get attribute value. This keyword fails if an element does not contain the specified attribute. | $\{get-attribute-code} |
+
+\{#get-attribute-args}
+
+* **element**: An object that contains element information (attributes, child nodes).\<br/>
+* **attr**: The name of the attribute to be retrieved.
+
+\{#get-attribute-code}
+
+```
+***Variables***
+&{ElementData}=  	using=text	value=some text
+@{ElementArray}= 	&{ElementData}
+&{ElementParams}	elementData=${ElementArray}
 
 ***Test Cases***
-&amp;{element}= Get element $\{ElementParams}
-$\{attrValue}=   Get attribute   $\{element}  text
-</code></pre></td>
-</tr>
-</tbody>
-</table></div>
-<h2 id="sample-test-cases">Sample test cases</h2>
-<p>The <a href="https://github.com/rokudev/automated-channel-testing">Roku automated app testing repository</a> includes a set of sample Robot Framework test cases that can be executed on their corresponding <a href="https://github.com/rokudev/SceneGraphDeveloperExtensions/tree/master/samples">SceneGraph Developer Extensions (SGDEX) sample apps</a>. For example, you can execute the SGDEX GridView test case (<strong>test_3_Grid.robot</strong>), which will sideload the corresponding sample app (<strong>3_Grid</strong>) on your device, and then view the test output. You can reference these samples when developing test scripts for the automated testing of your development apps.</p>
-<blockquote>
-<p>Before running a sample test case, you need to update the <strong>sideload</strong> command in the test case with the Roku device password.</p>
-</blockquote>
-<p>The <a href="https://github.com/rokudev/automated-channel-testing/blob/master/RobotLibrary/Tests/Basic_tests.robot"><strong>Basic_tests.robot</strong> sample</a> demonstrates how to create a simple test case that checks whether a user is authenticated before playing content using the Roku Robot Framework Library:</p>
-<pre><code>*** Settings ***
+&{element}=	Get element	${ElementParams}
+${attrValue}=	Get attribute	${element}	text
+```
+
+## Sample test cases
+
+The [Roku automated app testing repository](https://github.com/rokudev/automated-channel-testing) includes a set of sample Robot Framework test cases that can be executed on their corresponding [SceneGraph Developer Extensions (SGDEX) sample apps](https://github.com/rokudev/SceneGraphDeveloperExtensions/tree/master/samples). For example, you can execute the SGDEX GridView test case (**test_3_Grid.robot**), which will sideload the corresponding sample app (**3_Grid**) on your device, and then view the test output. You can reference these samples when developing test scripts for the automated testing of your development apps.
+
+> Before running a sample test case, you need to update the **sideload** command in the test case with the Roku device password.
+
+The [**Basic_tests.robot** sample](https://github.com/rokudev/automated-channel-testing/blob/master/RobotLibrary/Tests/Basic_tests.robot) demonstrates how to create a simple test case that checks whether a user is authenticated before playing content using the Roku Robot Framework Library:
+
+```
+*** Settings ***
 Documentation  Basic smoke tests
 Variables  ./../Library/variables.py
-Library  ./../Library/RobotLibrary.py  $\{ip_address}  $\{timeout}  $\{pressDelay}  $\{server_path}
+Library  ./../Library/RobotLibrary.py  ${ip_address}  ${timeout}  ${pressDelay}  ${server_path}
 Library  Collections
 
 *** Variables ***
-$\{channel_code}  dev
-&amp;{DATA2}=  using=text  value=Barack Gates, Bill Obama
-@{DATA2Array}=  &amp;{DATA2}
-&amp;{Params2}=  elementData=$\{DATA2Array}
-&amp;{DATA3}=  using=text  value=Please enter your username
-@{DATA3Array}=  &amp;{DATA3}
-&amp;{Params3}=  elementData=$\{DATA3Array}
-&amp;{DATA4}=  using=text  value=Please enter your password
-@{DATA4Array}=  &amp;{DATA4}
-&amp;{Params4}=  elementData=$\{DATA4Array}
+${channel_code}  dev
+&{DATA2}=  using=text  value=Barack Gates, Bill Obama
+@{DATA2Array}=  &{DATA2}
+&{Params2}=  elementData=${DATA2Array}
+&{DATA3}=  using=text  value=Please enter your username
+@{DATA3Array}=  &{DATA3}
+&{Params3}=  elementData=${DATA3Array}
+&{DATA4}=  using=text  value=Please enter your password
+@{DATA4Array}=  &{DATA4}
+&{Params4}=  elementData=${DATA4Array}
 @{KEYS}=   down  down  down  down  select
-&amp;{DATA5}=  using=text  value=Authenticate to watch
-@{DATA5Array}=  &amp;{DATA5}
-&amp;{Params5}=  elementData=$\{DATA5Array}
+&{DATA5}=  using=text  value=Authenticate to watch
+@{DATA5Array}=  &{DATA5}
+&{Params5}=  elementData=${DATA5Array}
 
 *** Test Cases ***
 Channel should be launched
     Side load  ../sample/channel.zip   rokudev   aaaa
-    Verify is channel loaded    $\{channel_code}
+    Verify is channel loaded    ${channel_code}
 
 Check if details screen showed
     Send key  select  4
-    Verify is screen loaded    $\{Params2}
+    Verify is screen loaded    ${Params2}
 
 Check if playback started
-    $\{status}  $\{value}=  Run Keyword And Ignore Error  Verify is screen loaded  $\{Params5}  2
-    Run keyword if   "$\{status}"=="PASS"  Do auth
+    ${status}  ${value}=  Run Keyword And Ignore Error  Verify is screen loaded  ${Params5}  2
+    Run keyword if   "${status}"=="PASS"  Do auth
     ...  ELSE  Send key  select
     Verify is playback started  20  2
 
 *** Keywords ***
 Do auth
     Send key  select
-    Verify is screen loaded   $\{Params3}
+    Verify is screen loaded   ${Params3}
     Send word  user
-    Send keys  $\{KEYS}
-    Verify is screen loaded   $\{Params4}
+    Send keys  ${KEYS}
+    Verify is screen loaded   ${Params4}
     Send word  pass
-    Send keys  $\{KEYS}
-</code></pre>
-<h2 id="viewing-the-test-case-report-and-log">Viewing the test case report and log</h2>
-<p>After you run a test case that uses the Roku Robot Framework Library, you can view the generated report and log files in the specified output directory. The report summarizes the test case and provides statistics on the percentage of individual tests that passed/failed. The log details the success/failure of the individual keywords used in each test case.</p>
-<p><img src="https://image.roku.com/ZHZscHItMTc2/basic-robot-test-report-keywords-v2.png" alt="roku815px - robot-test-log-keywords" title="robot-test-log-keywords"></p></div>
-`}</HTMLBlock>
+    Send keys  ${KEYS}
+```
 
-<br />
+## Viewing the test case report and log
+
+After you run a test case that uses the Roku Robot Framework Library, you can view the generated report and log files in the specified output directory. The report summarizes the test case and provides statistics on the percentage of individual tests that passed/failed. The log details the success/failure of the individual keywords used in each test case.
+
+<Image alt="roku815px - robot-test-log-keywords" border={false} src="https://image.roku.com/ZHZscHItMTc2/basic-robot-test-report-keywords-v2.png" title="robot-test-log-keywords" />

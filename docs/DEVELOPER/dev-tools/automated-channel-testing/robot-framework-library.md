@@ -500,7 +500,12 @@ The Roku's Robot Framework Library includes the following keywords:
 
 
 
-        <br />
+        <pre><code><p>***Variables***
+        &\{ElementData\}=   using=text  value=some text
+        @\{ElementArray\}= 	&\{ElementData\}
+        &\{ElementParams\} elementData=$\{ElementArray\}
+        \*** Test Cases ***
+        Verify is screen loaded 	$\{ElementParams\}</p></code></pre>
       </td>
     </tr>
   </tbody>

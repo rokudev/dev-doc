@@ -611,18 +611,10 @@ The Roku's Robot Framework Library includes the following keywords:
 
       <td>
         <pre><code><p>***Variables***
-        &\{LabelData\}=
-        using=text	value=Live Gaming
-        &\{IndexData\}=	using=attr	attribute=index	value=1
-        @\{LabelArray\}=	&\{LabelData\}	&\{IndexData\}
-        @\{ParamArray\}=	&\{PosterData\}
-        ***Test Cases***
-        &\{focusedEl\}=
-        get focusedElement
-        @\{Nodes\}=
-        Get child nodes
-        $\{focusedEl\}
-        $\{ParamArray\}</p></code></pre> 
+        &\{ElementData\}=  	using=text	value=some text
+        @\{ElementArray\}= 	&\{ElementData\}
+        &\{ElementParams\}	elementData=$\{ElementArray\}***Test Cases***
+        &\{element\}=	Get element	$\{ElementParams\}</p></code></pre> 
 
         <br />
       </td>
@@ -632,26 +624,52 @@ The Roku's Robot Framework Library includes the following keywords:
 
 ### Get elements
 
-| Keyword      | Arguments             | Description                                                                                                                                    | Example               |
-| :----------- | :-------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| Get elements | $\{get-elements-args} | Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements. | $\{get-elements-code} |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#get-elements-args}
+      <th>
+        Arguments
+      </th>
 
-* **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
-* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      <th>
+        Description
+      </th>
 
-\{#get-elements-code}
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
 
-```
-***Variables***
-&{ElementData}=  	using=text	value=some text
-@{ElementArray}= 	&{ElementData}
-&{ElementParams}	elementData=${ElementArray}
+  <tbody>
+    <tr>
+      <td>
+        Get elements
+      </td>
 
-***Test Cases***
-@{elements}=	Get elements	${locators}
-```
+      <td>
+        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
+        * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      </td>
+
+      <td>
+        Searches for elements on the page based on the specified locators starting from the screen root. Returns information on the matching elements.
+      </td>
+
+      <td>
+        <pre><code><p>***Variables***
+        &\{ElementData\}=  	using=text	value=some text
+        @\{ElementArray\}= 	&\{ElementData\}
+        &\{ElementParams\}	elementData=$\{ElementArray\}***Test Cases***
+        @\{elements\}=	Get elements	$\{locators\}</p></code></pre>
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get focused element
 

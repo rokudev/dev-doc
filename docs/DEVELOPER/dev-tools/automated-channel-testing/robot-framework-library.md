@@ -725,49 +725,243 @@ The Roku's Robot Framework Library includes the following keywords:
 
 ### Get current channel info
 
-| Keyword                  | Description                                                                                                                                  | Example                               |
-| :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| Get current channel info | Returns an object containing information about the app currently loaded. This object has the following fields:<br />$\{current-app-response} | `&{channel}=Get current channel info` |
+<Table align={["left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-<br />
+      <th>
+        Description
+      </th>
 
-| **Key**          | **Type** | **Description**                                      |
-| :--------------- | :------- | :--------------------------------------------------- |
-| sessionId        | string   | The advertising ID of the device                     |
-| status           | int      | A status code summarizing the result of the command. |
-| value            | array    |                                                      |
-| value[i].Title   | string   | The title of the app.                                |
-| value[i].ID      | string   | The ID of the app.                                   |
-| value[i].Version | string   | The build version of the app.                        |
-| value[i].Subtype | string   | "ndka"/"rsga"                                        |
-| value[i].Type    | string   | "menu"/"appl"                                        |
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Get current channel info
+      </td>
+
+      <td>
+        Returns an object containing information about the app currently loaded. This object has the following fields:  
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising ID of the device</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>array</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value\[i].Title</td>
+            <td>string</td>
+            <td>The title of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].ID</td>
+            <td>string</td>
+            <td>The ID of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].Version</td>
+            <td>string</td>
+            <td>The build version of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].Subtype</td>
+            <td>string</td>
+            <td>"ndka"/"rsga"</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].Type</td>
+            <td>string</td>
+            <td>"menu"/"appl"</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        `&{channel}=Get current channel info`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get device info
 
-| Keyword         | Description                                                                                                                    | Example                   |
-| :-------------- | :----------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| Get device info | Returns an object containing the information about the device. This object has the following fields:<br />$\{session-response} | `&{info}=Get device info` |
+<Table align={["left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#session-response}
+      <th>
+        Description
+      </th>
 
-| **Key**          | **Type** | **Description**                                      |
-| :--------------- | :------- | :--------------------------------------------------- |
-| sessionId        | string   | The advertisement ID of the device.                  |
-| status           | int      | A status code summarizing the result of the command. |
-| value            | object   |                                                      |
-| value.vendorName | string   | The vendor of the device.                            |
-| value.modelName  | string   | The model of the device.                             |
-| value.language   | string   | The language of the device.                          |
-| value.country    | string   | The country of the device.                           |
-| value.ip         | string   | The IP address of the device.                        |
-| value.timeout    | int      | The specified timeout for WebDriver client requests. |
-| value.pressDelay | int      | The specified delay between key presses.             |
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Get device info
+      </td>
+
+      <td>
+        Returns an object containing the information about the device. This object has the following fields:  
+
+
+      </td>
+
+      <td>
+        `&{info}=Get device info`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get player info
 
-| Keyword         | Description                                                                                                                          | Example                     |
-| :-------------- | :----------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| Get player info | Returns an object containing information about the Roku media player. This object has the following fields:<br />$\{player-response} | `&{player}=Get player info` |
+<Table align={["left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Get player info
+      </td>
+
+      <td>
+        Returns an object containing information about the Roku media player. This object has the following fields:<br />  
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertisement ID of the device.</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.vendorName</td>
+            <td>string</td>
+            <td>The vendor of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.modelName</td>
+            <td>string</td>
+            <td>The model of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.language</td>
+            <td>string</td>
+            <td>The language of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.country</td>
+            <td>string</td>
+            <td>The country of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.ip</td>
+            <td>string</td>
+            <td>The IP address of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.timeout</td>
+            <td>int</td>
+            <td>The specified timeout for WebDriver client requests.</td>
+          </tr>
+
+          <tr>
+            <td>value.pressDelay</td>
+            <td>int</td>
+            <td>The specified delay between key presses.</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        `&{player}=Get player info`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 \{#player-response}
 

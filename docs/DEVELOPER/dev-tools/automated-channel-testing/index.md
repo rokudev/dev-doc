@@ -1,5 +1,5 @@
 ---
-title: Automated App Testing Overview
+title: Automated App Testing
 deprecated: false
 hidden: true
 link:

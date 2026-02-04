@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 The following sections provide a technical overview of the media playback features available on the platform, organized by implementation priority. These features are designed to improve user accessibility, streamline the viewing experience, and maintain engagement through sophisticated state management and performance optimizations.
 
 ## Screensavers
@@ -20,6 +19,10 @@ Screensavers are standalone applications automatically invoked when a device has
 ## Closed caption
 
 The platform supports multiple closed-caption formats for rendering text-based timing and format information to ensure compliance with accessibility standards such as the CVAA.
+
+## Trick mode
+
+Trick mode provides visual feedback during playback operations such as seek, forward, and rewind. This function lets a user visualize the timestamp of the content they are seeking.
 
 ## Bookmarking
 

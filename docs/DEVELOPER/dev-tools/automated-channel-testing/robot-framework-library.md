@@ -553,7 +553,19 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
 
       <td>
-        $\{get-child-node-code}
+        <pre><code><p>***Variables***
+        &\{LabelData\}=
+        using=text	value=Live Gaming
+        &\{IndexData\}=	using=attr	attribute=index	value=1
+        @\{LabelArray\}=	&\{LabelData\}	&\{IndexData\}
+        @\{ParamArray\}=	&\{PosterData\}
+        ***Test Cases***
+        &\{focusedEl\}=
+        get focusedElement
+        @\{Nodes\}=
+        Get child nodes
+        $\{focusedEl\}
+        $\{ParamArray\}</p></code></pre>
       </td>
     </tr>
   </tbody>
@@ -597,19 +609,7 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
 
       <td>
-         <pre><code><p>***Variables***
-        &\{LabelData\}=
-        using=text	value=Live Gaming
-        &\{IndexData\}=	using=attr	attribute=index	value=1
-        @\{LabelArray\}=	&\{LabelData\}	&\{IndexData\}
-        @\{ParamArray\}=	&\{PosterData\}
-        ***Test Cases***
-        &\{focusedEl\}=
-        get focusedElement
-        @\{Nodes\}=
-        Get child nodes
-        $\{focusedEl\}
-        $\{ParamArray\}</p></code></pre>
+         
 
         <br />
       </td>

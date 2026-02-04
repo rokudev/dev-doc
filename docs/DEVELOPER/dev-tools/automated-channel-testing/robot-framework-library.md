@@ -76,7 +76,7 @@ The Roku's Robot Framework Library includes the following keywords:
 
 (_available since release 2.0_)
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -122,7 +122,7 @@ The Roku's Robot Framework Library includes the following keywords:
 
 ### Launch the app
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -170,7 +170,7 @@ The Roku's Robot Framework Library includes the following keywords:
 
 (_available since release 2.0_)
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -240,7 +240,7 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
 
       <td>
-        Returns a list of installed apps as an array of objects. Each app object contains the following fields:  
+        Returns a list of installed apps as an array of objects. Each app object contains the following fields:
 
         * title
         * id
@@ -340,10 +340,10 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
 
       <td>
-        <p><strong>Variables</strong>*</p>
+        <pre><code><p><strong>Variables</strong>*</p>
         <p>@\{keys\}= down down down down select</p>
         <p>***Test cases***</p>
-        <p>Send keys $\{keys\} 1</p>
+          <p>Send keys $\{keys\} 1</p></code></pre>
       </td>
     </tr>
   </tbody>

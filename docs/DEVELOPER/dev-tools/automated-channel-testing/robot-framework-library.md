@@ -679,15 +679,49 @@ The Roku's Robot Framework Library includes the following keywords:
 
 ### Verify is channel loaded
 
-| Keyword                  | Arguments                   | Description                                                                                                                           | Example                         |
-| :----------------------- | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
-| Verify is channel loaded | $\{get-verify-channel-args} | Verify that the specified app has been launched.<br /><br />This keyword fails if the provided app ID does not match a valid channel. | `Verify is channel loaded  dev` |
+<Table align={["left","left","left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#get-verify-channel-args}
+      <th>
+        Arguments
+      </th>
 
-* **id**: The ID of the app to be launched. Use `dev` to verify a sideloaded app.
-* **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
-* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Verify is channel loaded
+      </td>
+
+      <td>
+        * **id**: The ID of the app to be launched. Use `dev` to verify a sideloaded app.
+        * **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
+        * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
+      </td>
+
+      <td>
+        Verify that the specified app has been launched.<br /><br />This keyword fails if the provided app ID does not match a valid channel.
+      </td>
+
+      <td>
+        `Verify is channel loaded  dev`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get current channel info
 
@@ -695,7 +729,7 @@ The Roku's Robot Framework Library includes the following keywords:
 | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | Get current channel info | Returns an object containing information about the app currently loaded. This object has the following fields:<br />$\{current-app-response} | `&{channel}=Get current channel info` |
 
-\{#current-app-response}
+<br />
 
 | **Key**          | **Type** | **Description**                                      |
 | :--------------- | :------- | :--------------------------------------------------- |

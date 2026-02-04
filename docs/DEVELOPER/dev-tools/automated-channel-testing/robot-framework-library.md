@@ -601,7 +601,8 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
 
       <td>
-        $\{get-element-args}
+        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
+        * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
       </td>
 
       <td>
@@ -609,30 +610,25 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
 
       <td>
-         
+        <pre><code><p>***Variables***
+        &\{LabelData\}=
+        using=text	value=Live Gaming
+        &\{IndexData\}=	using=attr	attribute=index	value=1
+        @\{LabelArray\}=	&\{LabelData\}	&\{IndexData\}
+        @\{ParamArray\}=	&\{PosterData\}
+        ***Test Cases***
+        &\{focusedEl\}=
+        get focusedElement
+        @\{Nodes\}=
+        Get child nodes
+        $\{focusedEl\}
+        $\{ParamArray\}</p></code></pre> 
 
         <br />
       </td>
     </tr>
   </tbody>
 </Table>
-
-\{#get-element-args}
-
-* **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
-* **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
-
-\{#get-element-code}
-
-```
-***Variables***
-&{ElementData}=  	using=text	value=some text
-@{ElementArray}= 	&{ElementData}
-&{ElementParams}	elementData=${ElementArray}
-
-***Test Cases***
-&{element}=	Get element	${ElementParams}
-```
 
 ### Get elements
 

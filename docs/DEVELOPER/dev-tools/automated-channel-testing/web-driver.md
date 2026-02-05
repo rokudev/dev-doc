@@ -415,17 +415,75 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET v1/session/:sessionId/source
 
-| Method Type | Path                      | Return Value                                                                                          | Description                        |
-| ----------- | ------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| GET         | session/:sessionId/source | A JSON object with the current page source. This object has the following fields: $\{source-response} | Retrieves the current page source. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#source-response}
+      <th>
+        Path
+      </th>
 
-| **Key**   | **Type** | **Description**                                      |
-| :-------- | :------- | :--------------------------------------------------- |
-| sessionId | string   | The advertising ID of the device.                    |
-| status    | int      | A status code summarizing the result of the command. |
-| value     | string   | A base64 string that can be decoded to XML.          |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        session/:sessionId/source
+      </td>
+
+      <td>
+        A JSON object with the current page source. This object has the following fields:   
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising ID of the device.</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>string</td>
+            <td>A base64 string that can be decoded to XML.</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Retrieves the current page source.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## GET v1/session/:sessionId/apps
 

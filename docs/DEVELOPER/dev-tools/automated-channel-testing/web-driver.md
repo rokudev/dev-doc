@@ -448,22 +448,104 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET v1/session/:sessionId/current_app
 
-| Method Type | Path                           | Return Value                                                                                                       | Description                                         |
-| ----------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
-| GET         | session/:sessionId/current_app | A JSON object with the app currently loaded on the device. This object has the following fields: $\{apps-response} | Retrieves the app currently  running on the device. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#current-app-response}
+      <th>
+        Path
+      </th>
 
-| **Key**       | **Type** | **Description**                                      |
-| :------------ | :------- | :--------------------------------------------------- |
-| sessionId     | string   | The advertising ID of the device                     |
-| status        | int      | A status code summarizing the result of the command. |
-| value         | array    |                                                      |
-| value.Title   | string   | The title of the app.                                |
-| value.ID      | string   | The ID of the app.                                   |
-| value.Version | string   | The build version of the app.                        |
-| value.Subtype | string   | "ndka"/"rsga"                                        |
-| value.Type    | string   | "menu"/"appl"                                        |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        session/:sessionId/current_app
+      </td>
+
+      <td>
+        A JSON object with the app currently loaded on the device. This object has the following fields:   
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising ID of the device</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>array</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.Title</td>
+            <td>string</td>
+            <td>The title of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value.ID</td>
+            <td>string</td>
+            <td>The ID of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value.Version</td>
+            <td>string</td>
+            <td>The build version of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value.Subtype</td>
+            <td>string</td>
+            <td>"ndka"/"rsga"</td>
+          </tr>
+
+          <tr>
+            <td>value.Type</td>
+            <td>string</td>
+            <td>"menu"/"appl"</td>
+          </tr>
+        </table>
+      </td>
+
+      <td>
+        Retrieves the app currently  running on the device.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## GET v1/session/:sessionId/player
 

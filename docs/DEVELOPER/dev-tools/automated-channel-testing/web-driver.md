@@ -429,22 +429,106 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET v1/session/:sessionId/apps
 
-| Method Type | Path                    | Return Value                                                                                           | Description                                                  |
-| ----------- | ----------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| GET         | session/:sessionId/apps | A JSON object with an array of installed apps. This object has the following fields: $\{apps-response} | Retrieves a list of apps currently  installed on the device. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#apps-response}
+      <th>
+        Path
+      </th>
 
-| **Key**          | **Type** | **Description**                                      |
-| :--------------- | :------- | :--------------------------------------------------- |
-| sessionId        | string   | The advertising ID of the device                     |
-| status           | int      | A status code summarizing the result of the command. |
-| value            | array    |                                                      |
-| value[i].Title   | string   | The title of the app.                                |
-| value[i].ID      | string   | The ID of the app.                                   |
-| value[i].Version | string   | The build version of the app.                        |
-| value[i].Subtype | string   | "ndka"/"rsga"                                        |
-| value[i].Type    | string   | "menu"/"appl"                                        |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        session/:sessionId/apps
+      </td>
+
+      <td>
+        A JSON object with an array of installed apps. This object has the following fields:   
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising ID of the device</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>array</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value\[i].Title</td>
+            <td>string</td>
+            <td>The title of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].ID</td>
+            <td>string</td>
+            <td>The ID of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].Version</td>
+            <td>string</td>
+            <td>The build version of the app.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].Subtype</td>
+            <td>string</td>
+            <td>"ndka"/"rsga"</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].Type</td>
+            <td>string</td>
+            <td>"menu"/"appl"</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Retrieves a list of apps currently  installed on the device.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## GET v1/session/:sessionId/current_app
 

@@ -188,23 +188,112 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET /status
 
-| Method Type | Path   | Return Value                                                                                                                     | Description                                                                                                                                                                                                                                                                                                                 |
-| ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET         | status | A JSON object with the server's platform and build date. This object contains the following fields:<br />$\{get-status-response} | Queries the server's current status and returns the general state of the server. A 200 OK response is returned if the server is alive and accepting commands. <br /><br />This method returns The server should respond with a general "HTTP 200 OK" response if it . The response body should be a JSON object describing. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#get-status-response}
+      <th>
+        Path
+      </th>
 
-| **Key**             | **Type** | **Description**                                                                                                   |
-| :------------------ | :------- | :---------------------------------------------------------------------------------------------------------------- |
-| sessionId           | string   | The advertising The advertising ID of the device                                                                  |
-| status              | number   | The [status code](#success) summarizing the result of the command.                                                |
-| value               | object   |                                                                                                                   |
-| value.build         | object   | The **build** element contains the following attributes: _version_ and _time_.                                    |
-| value.build.version | string   | A generic release label.                                                                                          |
-| value.build.time    | string   | A timestamp specifying when the server was built.                                                                 |
-| value.os            | object   | The **os** element contains the following attributes: _arch_ and _name_.                                          |
-| value.os.arch       | string   | The current system architecture.                                                                                  |
-| value.os.name       | string   | The name of the operating system the server is currently running on (for example, "windows", "linux", and so on). |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        status
+      </td>
+
+      <td>
+        A JSON object with the server's platform and build date. This object contains the following fields:  
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising The advertising ID of the device</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>number</td>
+            <td>The [status code](#success) summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.build</td>
+            <td>object</td>
+            <td>The **build** element contains the following attributes: *version* and *time*.</td>
+          </tr>
+
+          <tr>
+            <td>value.build.version</td>
+            <td>string</td>
+            <td>A generic release label.</td>
+          </tr>
+
+          <tr>
+            <td>value.build.time</td>
+            <td>string</td>
+            <td>A timestamp specifying when the server was built.</td>
+          </tr>
+
+          <tr>
+            <td>value.os</td>
+            <td>object</td>
+            <td>The **os** element contains the following attributes: *arch* and *name*.</td>
+          </tr>
+
+          <tr>
+            <td>value.os.arch</td>
+            <td>string</td>
+            <td>The current system architecture.</td>
+          </tr>
+
+          <tr>
+            <td>value.os.name</td>
+            <td>string</td>
+            <td>The name of the operating system the server is currently running on (for example, "windows", "linux", and so on).</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Queries the server's current status and returns the general state of the server. A 200 OK response is returned if the server is alive and accepting commands. <br /><br />This method returns The server should respond with a general "HTTP 200 OK" response if it . The response body should be a JSON object describing.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## POST v1/session
 

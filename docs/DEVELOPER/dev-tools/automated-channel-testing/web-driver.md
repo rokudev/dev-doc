@@ -467,41 +467,220 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET v1/session/:sessionId/player
 
-| Method Type | Path                      | Return Value                                                                                                              | Description                                        |
-| ----------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| GET         | session/:sessionId/player | A JSON object with the information about the Roku media player. This object has the following fields: $\{player-response} | Retrieves information about the Roku media player. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#player-response}
+      <th>
+        Path
+      </th>
 
-| **Key**                           | **Type** | **Description**                                                                                                                                                                                                                                                                                          |
-| :-------------------------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sessionId                         | string   | The advertising ID of the device                                                                                                                                                                                                                                                                         |
-| status                            | int      | A status code summarizing the result of the command                                                                                                                                                                                                                                                      |
-| value                             | object   |                                                                                                                                                                                                                                                                                                          |
-| value.error                       | string   | Indicates whether there was a playback error.  If no error occurred, this is set to "false"                                                                                                                                                                                                              |
-| value.state                       | string   | Indicates the current playback state ("play", "pause", "resume", and so on)                                                                                                                                                                                                                              |
-| value.format                      | object   | The **format** element contains the following attributes: _audio_, _caption_, _container_, _drm_, _video_, and _res_.                                                                                                                                                                                    |
-| value.format.audio                | string   | The audio compression method ("aac", "aac_adts", and so on.)                                                                                                                                                                                                                                             |
-| value.format.caption              | string   | The closed caption format ("608_708", for example).   This value is set to "none" if there are no captions.                                                                                                                                                                                              |
-| value.format.container            | string   | The container format ("hls", for example)                                                                                                                                                                                                                                                                |
-| value.format.drm                  | string   | The encoding type. If no encoding is used, this us set to "none".                                                                                                                                                                                                                                        |
-| value.format.video                | string   | The format of the currently playing video stream ("mpeg4-15", for example)                                                                                                                                                                                                                               |
-| value.format.res                  | string   | The resolution of the currently playing video stream ("1280X720", for example).                                                                                                                                                                                                                          |
-| value.buffering                   | object   | The **buffering** element contains the following attributes: _current_, _max_, _target_.                                                                                                                                                                                                                 |
-| value.buffering.current           | string   | The current buffering speed (in kbps).                                                                                                                                                                                                                                                                   |
-| value.buffering.max               | string   | The maximum possible buffering speed (in kbps).                                                                                                                                                                                                                                                          |
-| value.buffering.target            | string   | The target buffering speed (in kbps).                                                                                                                                                                                                                                                                    |
-| value.newStream                   | object   | The **newStream** element contains the following attribute: _speed_.                                                                                                                                                                                                                                     |
-| value.newStream.speed             | string   | The current playback speed (in bps)                                                                                                                                                                                                                                                                      |
-| value.position                    | string   | The time of the current position in the stream, expressed as the elapsed time (in ms) since the start of stream or UTC time, depending on the content.                                                                                                                                                   |
-| value.duration                    | string   | The duration of the video being played (in seconds). This becomes valid when playback begins and may change if the video is dynamic content, such as a live event.                                                                                                                                       |
-| value.isLive                      | string   | A flag indicating whether the video being played is a live stream.                                                                                                                                                                                                                                       |
-| value.runtime                     | string   | The runtime of the video being played (in seconds).                                                                                                                                                                                                                                                      |
-| value.streamSegment               | object   | The **streamSegment** attribute contains Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS<br /><br />This element contains the following attributes: _bitrate_, _mediaSequence_, _segmentType_, and _time_. |
-| value.streamSegment.bitrate       | string   | The bitrate of the video segment (in bps).                                                                                                                                                                                                                                                               |
-| value.streamSegment.mediaSequence | string   | The HLS media sequence ID of the segment in the video.                                                                                                                                                                                                                                                   |
-| value.streamSegment.segmentType   | string   | The type of data in the segment, which may be one of the following values: "audio", "video", "captions",  "mux".                                                                                                                                                                                         |
-| value.streamSegment.time          | string   | The chunk start time.                                                                                                                                                                                                                                                                                    |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        session/:sessionId/player
+      </td>
+
+      <td>
+        A JSON object with the information about the Roku media player. This object has the following fields:   
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising ID of the device</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.error</td>
+            <td>string</td>
+            <td>Indicates whether there was a playback error.  If no error occurred, this is set to "false"</td>
+          </tr>
+
+          <tr>
+            <td>value.state</td>
+            <td>string</td>
+            <td>Indicates the current playback state ("play", "pause", "resume", and so on)</td>
+          </tr>
+
+          <tr>
+            <td>value.format</td>
+            <td>object</td>
+            <td>The **format** element contains the following attributes: *audio*, *caption*, *container*, *drm*, *video*, and *res*.</td>
+          </tr>
+
+          <tr>
+            <td>value.format.audio</td>
+            <td>string</td>
+            <td>The audio compression method ("aac", "aac\_adts", and so on.)</td>
+          </tr>
+
+          <tr>
+            <td>value.format.caption</td>
+            <td>string</td>
+            <td>The closed caption format ("608\_708", for example).   This value is set to "none" if there are no captions.</td>
+          </tr>
+
+          <tr>
+            <td>value.format.container</td>
+            <td>string</td>
+            <td>The container format ("hls", for example)</td>
+          </tr>
+
+          <tr>
+            <td>value.format.drm</td>
+            <td>string</td>
+            <td>The encoding type. If no encoding is used, this us set to "none".</td>
+          </tr>
+
+          <tr>
+            <td>value.format.video</td>
+            <td>string</td>
+            <td>The format of the currently playing video stream ("mpeg4-15", for example)</td>
+          </tr>
+
+          <tr>
+            <td>value.format.res</td>
+            <td>string</td>
+            <td>The resolution of the currently playing video stream ("1280X720", for example).</td>
+          </tr>
+
+          <tr>
+            <td>value.buffering</td>
+            <td>object</td>
+            <td>The **buffering** element contains the following attributes: *current*, *max*, *target*.</td>
+          </tr>
+
+          <tr>
+            <td>value.buffering.current</td>
+            <td>string</td>
+            <td>The current buffering speed (in kbps).</td>
+          </tr>
+
+          <tr>
+            <td>value.buffering.max</td>
+            <td>string</td>
+            <td>The maximum possible buffering speed (in kbps).</td>
+          </tr>
+
+          <tr>
+            <td>value.buffering.target</td>
+            <td>string</td>
+            <td>The target buffering speed (in kbps).</td>
+          </tr>
+
+          <tr>
+            <td>value.newStream</td>
+            <td>object</td>
+            <td>The **newStream** element contains the following attribute: *speed*.</td>
+          </tr>
+
+          <tr>
+            <td>value.newStream.speed</td>
+            <td>string</td>
+            <td>The current playback speed (in bps)</td>
+          </tr>
+
+          <tr>
+            <td>value.position</td>
+            <td>string</td>
+            <td>The time of the current position in the stream, expressed as the elapsed time (in ms) since the start of stream or UTC time, depending on the content.</td>
+          </tr>
+
+          <tr>
+            <td>value.duration</td>
+            <td>string</td>
+            <td>The duration of the video being played (in seconds). This becomes valid when playback begins and may change if the video is dynamic content, such as a live event.</td>
+          </tr>
+
+          <tr>
+            <td>value.isLive</td>
+            <td>string</td>
+            <td>A flag indicating whether the video being played is a live stream.</td>
+          </tr>
+
+          <tr>
+            <td>value.runtime</td>
+            <td>string</td>
+            <td>The runtime of the video being played (in seconds).</td>
+          </tr>
+
+          <tr>
+            <td>value.streamSegment</td>
+            <td>object</td>
+            <td>The **streamSegment** attribute contains Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS\<br />\<br />This element contains the following attributes: *bitrate*, *mediaSequence*, *segmentType*, and *time*.</td>
+          </tr>
+
+          <tr>
+            <td>value.streamSegment.bitrate</td>
+            <td>string</td>
+            <td>The bitrate of the video segment (in bps).</td>
+          </tr>
+
+          <tr>
+            <td>value.streamSegment.mediaSequence</td>
+            <td>string</td>
+            <td>The HLS media sequence ID of the segment in the video.</td>
+          </tr>
+
+          <tr>
+            <td>value.streamSegment.segmentType</td>
+            <td>string</td>
+            <td>The type of data in the segment, which may be one of the following values: "audio", "video", "captions",  "mux".</td>
+          </tr>
+
+          <tr>
+            <td>value.streamSegment.time</td>
+            <td>string</td>
+            <td>The chunk start time.</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Retrieves information about the Roku media player.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Testing production apps
 

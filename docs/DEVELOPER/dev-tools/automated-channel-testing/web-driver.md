@@ -535,9 +535,122 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET v1/session/:sessionId
 
-| Method Type | Path               | Return Value                                                                                           | Description                                                                |
-| ----------- | ------------------ | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| GET         | session/:sessionId | A JSON object with device information. This object has the following fields:<br />$\{session-response} | Returns device information based on the session specified in the URL path. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
+
+      <th>
+        Path
+      </th>
+
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        session/:sessionId
+      </td>
+
+      <td>
+        A JSON object with device information. This object has the following fields:  
+
+        <table>
+          <thead>
+            <tr>
+              <th class="short-line"><strong>Key</strong></th>
+              <th class="short-line"><strong>Type</strong></th>
+              <th class="short-line"><strong>Description</strong></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="short-line">sessionId</td>
+              <td class="short-line">string</td>
+              <td class="short-line">The advertisement ID of the device.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">status</td>
+              <td class="short-line">int</td>
+              <td class="long-line">A status code summarizing the result of the command.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">value</td>
+              <td class="short-line">object</td>
+
+              <td class="short-line" />
+            </tr>
+
+            <tr>
+              <td class="short-line">value.vendorName</td>
+              <td class="short-line">string</td>
+              <td class="short-line">The vendor of the device.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">value.modelName</td>
+              <td class="short-line">string</td>
+              <td class="short-line">The model of the device.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">value.language</td>
+              <td class="short-line">string</td>
+              <td class="short-line">The language of the device.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">value.country</td>
+              <td class="short-line">string</td>
+              <td class="short-line">The country of the device.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">value.ip</td>
+              <td class="short-line">string</td>
+              <td class="short-line">The IP address of the device.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">value.timeout</td>
+              <td class="short-line">int</td>
+              <td class="long-line">The specified timeout for WebDriver client requests.</td>
+            </tr>
+
+            <tr>
+              <td class="short-line">value.pressDelay</td>
+              <td class="short-line">int</td>
+              <td class="short-line">The specified delay between key presses.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Returns device information based on the session specified in the URL path.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## DELETE v1/session/:sessionId
 

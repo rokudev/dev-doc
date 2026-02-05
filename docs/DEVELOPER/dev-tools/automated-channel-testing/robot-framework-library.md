@@ -963,99 +963,189 @@ The Roku's Robot Framework Library includes the following keywords:
   </tbody>
 </Table>
 
-\{#player-response}
-
-| **Key**                           | **Type** | **Description**                                                                                                                                                                                                                                                                                |
-| :-------------------------------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sessionId                         | string   | The advertising ID of the device                                                                                                                                                                                                                                                               |
-| status                            | int      | A status code summarizing the result of the command                                                                                                                                                                                                                                            |
-| value                             | object   |                                                                                                                                                                                                                                                                                                |
-| value.error                       | string   | Indicates whether there was a playback error. If no error occurred, this is set to "false"                                                                                                                                                                                                     |
-| value.state                       | string   | Indicates the current playback state ("play", "pause", "resume", and so on)                                                                                                                                                                                                                    |
-| value.format                      | object   | The **format** element contains the following attributes: _audio_, _caption_, _container_, _drm_, _video_, and _res_.                                                                                                                                                                          |
-| value.format.audio                | string   | The audio compression method ("aac", "aac_adts", and so on.)                                                                                                                                                                                                                                   |
-| value.format.caption              | string   | The closed caption format ("608_708", for example). This value is set to "none" if there are no captions.                                                                                                                                                                                      |
-| value.format.container            | string   | The container format ("hls", for example)                                                                                                                                                                                                                                                      |
-| value.format.drm                  | string   | The encoding type. If no encoding is used, this us set to "none".                                                                                                                                                                                                                              |
-| value.format.video                | string   | The format of the currently playing video stream ("mpeg4-15", for example)                                                                                                                                                                                                                     |
-| value.format.res                  | string   | The resolution of the currently playing video stream ("1280X720", for example).                                                                                                                                                                                                                |
-| value.buffering                   | object   | The **buffering** element contains the following attributes: _current_, _max_, _target_.                                                                                                                                                                                                       |
-| value.buffering.current           | string   | The current buffering speed (in kbps).                                                                                                                                                                                                                                                         |
-| value.buffering.max               | string   | The maximum possible buffering speed (in kbps).                                                                                                                                                                                                                                                |
-| value.buffering.target            | string   | The target buffering speed (in kbps).                                                                                                                                                                                                                                                          |
-| value.newStream                   | object   | The **newStream** element contains the following attribute: _speed_.                                                                                                                                                                                                                           |
-| value.newStream.speed             | string   | The current playback speed (in bps)                                                                                                                                                                                                                                                            |
-| value.position                    | string   | The time of the current position in the stream, expressed as the elapsed time (in ms) since the start of stream or UTC time, depending on the content.                                                                                                                                         |
-| value.duration                    | string   | The duration of the video being played (in seconds). This becomes valid when playback begins and may change if the video is dynamic content, such as a live event.                                                                                                                             |
-| value.isLive                      | string   | A flag indicating whether the video being played is a live stream.                                                                                                                                                                                                                             |
-| value.runtime                     | string   | The runtime of the video being played (in seconds).                                                                                                                                                                                                                                            |
-| value.streamSegment               | object   | The **streamSegment** attribute contains Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS  This element contains the following attributes: _bitrate_, _mediaSequence_, _segmentType_, and _time_. |
-| value.streamSegment.bitrate       | string   | The bitrate of the video segment (in bps).                                                                                                                                                                                                                                                     |
-| value.streamSegment.mediaSequence | string   | The HLS media sequence ID of the segment in the video.                                                                                                                                                                                                                                         |
-| value.streamSegment.segmentType   | string   | The type of data in the segment, which may be one of the following values: "audio", "video", "captions", "mux".                                                                                                                                                                                |
-| value.streamSegment.time          | string   | The chunk start time.                                                                                                                                                                                                                                                                          |
-
 ### Verify is channel exist
 
-| Keyword                 | Arguments                     | Description                                                                                                                                                | Example                       |
-| :---------------------- | ----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| Verify is channel exist | $\{verify-channel-exist-args} | Verifies the specified app is installed on the device. This keyword fails if the **apps** array does not contain the app specified in the **id** argument. | $\{verify-channel-exist-code} |
+<Table align={["left",null,"left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#verify-channel-exist-args}
+      <th>
+        Arguments
+      </th>
 
-* **apps**: An array containing  currently installed on the device.
-* **id**: The ID of the app to be verified. Use `dev` to verify a sideloaded app.
+      <th>
+        Description
+      </th>
 
-\{#verify-channel-exist-code}
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
 
-```
-@{apps}=	Get apps
-Verify is channel exist	@{apps}	dev
-```
+  <tbody>
+    <tr>
+      <td>
+        Verify is channel exist
+      </td>
+
+      <td>
+        * **apps**: An array containing  currently installed on the device.
+        * **id**: The ID of the app to be verified. Use `dev` to verify a sideloaded app.
+      </td>
+
+      <td>
+        Verifies the specified app is installed on the device. This keyword fails if the **apps** array does not contain the app specified in the **id** argument.
+      </td>
+
+      <td>
+        <pre><code><p>@\{apps\}=	Get apps
+        Verify is channel exist	@\{apps\}	dev</p></code></pre>
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Set timeout
 
-| Keyword     | Arguments            | Description                                      | Example             |
-| :---------- | -------------------- | :----------------------------------------------- | ------------------- |
-| Set timeout | $\{set-timeout-args} | Sets the timeout for Web driver client requests. | `Set timeout  5000` |
+<Table align={["left",null,"left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#set-timeout-args}
+      <th>
+        Arguments
+      </th>
 
-* **timeout**: The amount of time (in milliseconds) that Web driver client requests are allowed to run.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Set timeout
+      </td>
+
+      <td>
+        * **timeout**: The amount of time (in milliseconds) that Web driver client requests are allowed to run.
+      </td>
+
+      <td>
+        Sets the timeout for Web driver client requests.
+      </td>
+
+      <td>
+        `Set timeout  5000`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Set press delay
 
-| Keyword         | Arguments                | Description                                                                            | Example                 |
-| :-------------- | ------------------------ | :------------------------------------------------------------------------------------- | ----------------------- |
-| Set press delay | $\{set-press-delay-args} | Sets the delay between key presses. This keyword works with the **Send keys** keyword. | `Set press delay  2000` |
+<Table align={["left",null,"left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#set-press-delay-args}
+      <th>
+        Arguments
+      </th>
 
-* **delay**: The interval (in milliseconds) to be used between key presses.
+      <th>
+        Description
+      </th>
+
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Set press delay
+      </td>
+
+      <td>
+        * **delay**: The interval (in milliseconds) to be used between key presses.
+      </td>
+
+      <td>
+        Sets the delay between key presses. This keyword works with the **Send keys** keyword.
+      </td>
+
+      <td>
+        `Set press delay  2000`
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Get attribute
 
-| Keyword       | Arguments              | Description                                                                                     | Example                |
-| :------------ | ---------------------- | :---------------------------------------------------------------------------------------------- | ---------------------- |
-| Get attribute | $\{get-attribute-args} | Get attribute value. This keyword fails if an element does not contain the specified attribute. | $\{get-attribute-code} |
+<Table align={["left",null,"left",null]}>
+  <thead>
+    <tr>
+      <th>
+        Keyword
+      </th>
 
-\{#get-attribute-args}
+      <th>
+        Arguments
+      </th>
 
-* **element**: An object that contains element information (attributes, child nodes).\<br/>
-* **attr**: The name of the attribute to be retrieved.
+      <th>
+        Description
+      </th>
 
-\{#get-attribute-code}
+      <th>
+        Example
+      </th>
+    </tr>
+  </thead>
 
-```
-***Variables***
-&{ElementData}=  	using=text	value=some text
-@{ElementArray}= 	&{ElementData}
-&{ElementParams}	elementData=${ElementArray}
+  <tbody>
+    <tr>
+      <td>
+        Get attribute
+      </td>
 
-***Test Cases***
-&{element}=	Get element	${ElementParams}
-${attrValue}=	Get attribute	${element}	text
-```
+      <td>
+        * **element**: An object that contains element information (attributes, child nodes).\<br/>
+        * **attr**: The name of the attribute to be retrieved.
+      </td>
+
+      <td>
+        Get attribute value. This keyword fails if an element does not contain the specified attribute.
+      </td>
+
+      <td>
+        <pre><code><p>***Variables***
+        &\{ElementData\}=  	using=text	value=some text
+        @\{ElementArray\}= 	&\{ElementData\}
+        &\{ElementParams\}	elementData=$\{ElementArray\}***Test Cases***
+        &\{element\}=	Get element	$\{ElementParams\}
+        $\{attrValue\}=	Get attribute	$\{element\}	text</p></code></pre>
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Sample test cases
 

@@ -369,26 +369,143 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## POST v1/session/:sessionId/element
 
-| Method Type | Path                       | JSON Parameters                                                                                                                                                                                                                                                                                                                                                                                                                                                | Return Value                                                                                                                       | Description                                                                                                                                 |
-| ----------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| POST        | session/:sessionId/element | An **elementData** array and optional **parentData** array with the following objects that can be used to locate an element: <br /><br />**using** - \{string}: The locator strategy to use. This may be one of the following values: $\{using-values-list}<br /><br />**attribute** - \{string}:  The attribute name (used only for "attr" strategy) <br /><br />**value** - \{string}: The search target.<br /><br />**Example**:<br />$\{post-element-json} | A WebElement JSON object representing the retrieved element. This object has the following fields:<br /> $\{post-element-response} | Searches for an element on the page, starting from the screen root. The first located element will be returned as a WebElement JSON object. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
+
+      <th>
+        Path
+      </th>
+
+      <th>
+        JSON Parameters
+      </th>
+
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        POST
+      </td>
+
+      <td>
+        session/:sessionId/element
+      </td>
+
+      <td>
+        An **elementData** array and optional **parentData** array with the following objects that can be used to locate an element: <br /><br />**using** - \{string}: The locator strategy to use. This may be one of the following values: $\{using-values-list}<br /><br />**attribute** - \{string}:  The attribute name (used only for "attr" strategy) <br /><br />**value** - \{string}: The search target.<br /><br />**Example**:<br />$\{post-element-json}
+      </td>
+
+      <td>
+        A WebElement JSON object representing the retrieved element. This object has the following fields:  
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising ID of the device.</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.XMLName</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.XMLName.Local</td>
+            <td>string</td>
+            <td>The name of the retrieved element.</td>
+          </tr>
+
+          <tr>
+            <td>value.XMLName.Space</td>
+            <td>string</td>
+            <td>The namespace identifier for the element.</td>
+          </tr>
+
+          <tr>
+            <td>value.Attr</td>
+            <td>array</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.Attr.Name</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.Attr.Name.Local</td>
+            <td>string</td>
+            <td>The name of the attribute.</td>
+          </tr>
+
+          <tr>
+            <td>value.Attr.Name.Space</td>
+            <td>string</td>
+            <td>The namespace identifier for the attribute.</td>
+          </tr>
+
+          <tr>
+            <td>value.Attr.Value</td>
+            <td>string</td>
+            <td>The value of the attribute.</td>
+          </tr>
+
+          <tr>
+            <td>value.Nodes</td>
+            <td>array</td>
+            <td>The child elements.</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Searches for an element on the page, starting from the screen root. The first located element will be returned as a WebElement JSON object.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 \{#post-element-response}
-
-| **Key**               | **Type** | **Description**                                      |
-| :-------------------- | :------- | :--------------------------------------------------- |
-| sessionId             | string   | The advertising ID of the device.                    |
-| status                | int      | A status code summarizing the result of the command. |
-| value                 | object   |                                                      |
-| value.XMLName         | object   |                                                      |
-| value.XMLName.Local   | string   | The name of the retrieved element.                   |
-| value.XMLName.Space   | string   | The namespace identifier for the element.            |
-| value.Attr            | array    |                                                      |
-| value.Attr.Name       | object   |                                                      |
-| value.Attr.Name.Local | string   | The name of the attribute.                           |
-| value.Attr.Name.Space | string   | The namespace identifier for the attribute.          |
-| value.Attr.Value      | string   | The value of the attribute.                          |
-| value.Nodes           | array    | The child elements.                                  |
 
 ## GET v1/session/:sessionId/element/active
 

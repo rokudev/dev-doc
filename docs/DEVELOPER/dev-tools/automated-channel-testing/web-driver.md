@@ -728,19 +728,60 @@ If a request maps to a valid command and contains all of the expected parameters
 
 (_available since release 2.0_)
 
-| Method Type | Path                     | JSON Parameters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Return Value                                                       | Description                                               |
-| ----------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
-| POST        | session/:sessionId/input | **channelId** - \{number}: The ID of the app to be launched.<br /><br />**contentId** - \{string} (optional): The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.<br /><br />**contentType** - \{string} (optional): The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.<br /><br />**Example:**<br />$\{input-code} | A JSON object with the following fields: $\{generic-post-response} | Deep links into content while the app is already running. |
-
-\{#input-code}
-
-```
-{
+<HTMLBlock>{`
+<table>
+<thead>
+<tr>
+<th class="short-line">Method Type</th>
+<th class="short-line">Path</th>
+<th class="short-line">JSON Parameters</th>
+<th class="short-line">Return Value</th>
+<th class="short-line">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">POST</td>
+<td class="short-line">session/:sessionId/input</td>
+<td class="long-line"><strong>channelId</strong> - {number}: The ID of the app to be launched.<br><br><strong>contentId</strong> - {string} (optional): The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.<br><br><strong>contentType</strong> - {string} (optional): The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.<br><br><strong>Example:</strong><br><pre><code>{
   "channelId": "dev",
   "contentId": "myMovie123",
   "contentType": "movie"
 }
-```
+</code></pre></td>
+<td class="long-line">A JSON object with the following fields: <div class="hscroll"><table>
+<thead>
+<tr>
+<th class="short-line"><strong>Key</strong></th>
+<th class="short-line"><strong>Type</strong></th>
+<th class="short-line"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="short-line">sessionId</td>
+<td class="short-line">string</td>
+<td class="short-line">The advertising ID of the device.</td>
+</tr>
+<tr>
+<td class="short-line">status</td>
+<td class="short-line">int</td>
+<td class="long-line">A status code summarizing the result of the command.</td>
+</tr>
+<tr>
+<td class="short-line">value</td>
+<td class="short-line">object</td>
+<td class="short-line">null</td>
+</tr>
+</tbody>
+</table></div></td>
+<td class="long-line">Deep links into content while the app is already running.</td>
+</tr>
+</tbody>
+</table>
+`}</HTMLBlock>
+
+<br />
 
 ## POST v1/session/:sessionId/install
 

@@ -392,26 +392,133 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET v1/session/:sessionId/element/active
 
-| Method Type | Path                              | Return Value                                                                                                                         | Description                                                 |
-| ----------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| GET         | session/:sessionId/element/active | A JSON object with the element that currently has focus. This object has the following fields: <br />$\{get-active-element-response} | Retrieves the element on the page that currently has focus. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#get-active-element-response}
+      <th>
+        Path
+      </th>
 
-| **Key**                  | **Type** | **Description**                                      |
-| :----------------------- | :------- | :--------------------------------------------------- |
-| sessionId                | string   | The advertising ID of the device.                    |
-| status                   | int      | A status code summarizing the result of the command. |
-| value                    | object   |                                                      |
-| value.XMLName            | object   |                                                      |
-| value.XMLName.Local      | string   | The name of the element retrieved.                   |
-| value.XMLName.Space      | string   | The namespace identifier of the element retrieved.   |
-| value.Attr               | array    |                                                      |
-| value.Attr[i].Name       | object   |                                                      |
-| value.Attr[i].Name.Local | string   | The name of the attribute.                           |
-| value.Attr[i].Name.Space | string   | The namespace identifier of the attribute.           |
-| value.Attr[i].Value      | string   | The value of the attribute.                          |
-| value.Nodes              | array    | The child elements of the retrieved item.            |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        session/:sessionId/element/active
+      </td>
+
+      <td>
+        A JSON object with the element that currently has focus. This object has the following fields:  
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertising ID of the device.</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.XMLName</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.XMLName.Local</td>
+            <td>string</td>
+            <td>The name of the element retrieved.</td>
+          </tr>
+
+          <tr>
+            <td>value.XMLName.Space</td>
+            <td>string</td>
+            <td>The namespace identifier of the element retrieved.</td>
+          </tr>
+
+          <tr>
+            <td>value.Attr</td>
+            <td>array</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.Attr\[i].Name</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.Attr\[i].Name.Local</td>
+            <td>string</td>
+            <td>The name of the attribute.</td>
+          </tr>
+
+          <tr>
+            <td>value.Attr\[i].Name.Space</td>
+            <td>string</td>
+            <td>The namespace identifier of the attribute.</td>
+          </tr>
+
+          <tr>
+            <td>value.Attr\[i].Value</td>
+            <td>string</td>
+            <td>The value of the attribute.</td>
+          </tr>
+
+          <tr>
+            <td>value.Nodes</td>
+            <td>array</td>
+            <td>The child elements of the retrieved item.</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Retrieves the element on the page that currently has focus.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## GET v1/session/:sessionId/source
 

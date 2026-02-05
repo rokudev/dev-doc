@@ -29,5 +29,3 @@ In July 2022, Roku explained the Roku Advertising Watermark to developers. Topic
 ## Related documentation
 
 - [Roku Advertising Watermark implementation guide](doc:ad-watermark)
-
-- This is a test check-in

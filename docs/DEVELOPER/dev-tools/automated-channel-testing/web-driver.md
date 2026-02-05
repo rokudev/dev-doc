@@ -10,7 +10,7 @@ next:
   description: ''
 ---
 <HTMLBlock>{`
-<div class="markdown-body developer-content-body"><h1 id="roku-webdriver">Roku WebDriver</h1>
+<div class="markdown-body developer-content-body">
 <p>The Roku WebDriver is required to control an app. It can be used in conjunction with the <a href="/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md">Roku Robot Framework Library</a>, <a href="/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md">Roku JavaScript library</a>, another test framework, or a programming language or a programming language such as Python, Java, or Go to execute test cases.</p>
 <h2 id="roku-webdriver-apis">Roku WebDriver APIs</h2>
 <p>Roku's WebDriver includes a set of Selenium-based REST APIs for sending commands to a Roku device. These APIs conform to the <a href="https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol">WebDriver standards</a> specified by the World Wide Web Consortium (W3C). Specifically, the Roku WebDriver provides an HTTP-compliant JSON wire protocol with endpoints that map to their respective commands.</p>

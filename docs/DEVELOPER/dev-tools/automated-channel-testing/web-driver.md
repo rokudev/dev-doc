@@ -420,24 +420,118 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## GET v1/sessions
 
-| Method Type | Path     | Return Value                                                                                                  | Description                                      |
-| ----------- | -------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| GET         | sessions | A JSON object with an array of sessions. This object has the following fields:<br />$\{get-sessions-response} | Returns a list of the currently active sessions. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#get-sessions-response}
+      <th>
+        Path
+      </th>
 
-| **Key**             | **Type** | **Description**                                      |
-| :------------------ | :------- | :--------------------------------------------------- |
-| sessionId           | string   | The advertisement ID of the device.                  |
-| status              | int      | A status code summarizing the result of the command. |
-| value               | object   |                                                      |
-| value[i].vendorName | string   | The vendor of the device.                            |
-| value[i].modelName  | string   | The model of the device.                             |
-| value[i].language   | string   | The language of the device.                          |
-| value[i].country    | string   | The country of the device.                           |
-| value[i].ip         | string   | The IP address of the device.                        |
-| value[i].timeout    | int      | The specified timeout for ECP client requests.       |
-| value[i].pressDelay | int      | The specified delay between key presses.             |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        GET
+      </td>
+
+      <td>
+        sessions
+      </td>
+
+      <td>
+        A JSON object with an array of sessions. This object has the following fields:  
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertisement ID of the device.</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value\[i].vendorName</td>
+            <td>string</td>
+            <td>The vendor of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].modelName</td>
+            <td>string</td>
+            <td>The model of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].language</td>
+            <td>string</td>
+            <td>The language of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].country</td>
+            <td>string</td>
+            <td>The country of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].ip</td>
+            <td>string</td>
+            <td>The IP address of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].timeout</td>
+            <td>int</td>
+            <td>The specified timeout for ECP client requests.</td>
+          </tr>
+
+          <tr>
+            <td>value\[i].pressDelay</td>
+            <td>int</td>
+            <td>The specified delay between key presses.</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Returns a list of the currently active sessions.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## GET v1/session/:sessionId
 

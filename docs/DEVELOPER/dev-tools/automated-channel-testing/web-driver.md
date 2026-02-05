@@ -297,29 +297,126 @@ If a request maps to a valid command and contains all of the expected parameters
 
 ## POST v1/session
 
-| Method Type | Path    | Parameters                                                                                        | Return Value                                                                                                                                      | Description            |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| POST        | session | **ip** - \{string}: The IP address of the device.  <br /><br />**Example**:<br />$\{session-code} | A JSON object with the device's advertisement ID, which is used as the sessionId. This object has the following fields:<br />$\{session-response} | Creates a new session. |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Method Type
+      </th>
 
-\{#session-code}
-\{
-"ip": "117.1.1.1"
-}
+      <th>
+        Path
+      </th>
 
-\{#session-response}
+      <th>
+        Parameters
+      </th>
 
-| **Key**          | **Type** | **Description**                                      |
-| :--------------- | :------- | :--------------------------------------------------- |
-| sessionId        | string   | The advertisement ID of the device.                  |
-| status           | int      | A status code summarizing the result of the command. |
-| value            | object   |                                                      |
-| value.vendorName | string   | The vendor of the device.                            |
-| value.modelName  | string   | The model of the device.                             |
-| value.language   | string   | The language of the device.                          |
-| value.country    | string   | The country of the device.                           |
-| value.ip         | string   | The IP address of the device.                        |
-| value.timeout    | int      | The specified timeout for WebDriver client requests. |
-| value.pressDelay | int      | The specified delay between key presses.             |
+      <th>
+        Return Value
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        POST
+      </td>
+
+      <td>
+        session
+      </td>
+
+      <td>
+        **ip** - \{string}: The IP address of the device.  <br /><br />**Example**:<br />`{ "ip": "117.1.1.1" }`
+      </td>
+
+      <td>
+        A JSON object with the device's advertisement ID, which is used as the sessionId. This object has the following fields  
+
+        <table>
+          <tr>
+            <td>**Key**</td>
+            <td>**Type**</td>
+            <td>**Description**</td>
+          </tr>
+
+          <tr>
+            <td>sessionId</td>
+            <td>string</td>
+            <td>The advertisement ID of the device.</td>
+          </tr>
+
+          <tr>
+            <td>status</td>
+            <td>int</td>
+            <td>A status code summarizing the result of the command.</td>
+          </tr>
+
+          <tr>
+            <td>value</td>
+            <td>object</td>
+
+            <td />
+          </tr>
+
+          <tr>
+            <td>value.vendorName</td>
+            <td>string</td>
+            <td>The vendor of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.modelName</td>
+            <td>string</td>
+            <td>The model of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.language</td>
+            <td>string</td>
+            <td>The language of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.country</td>
+            <td>string</td>
+            <td>The country of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.ip</td>
+            <td>string</td>
+            <td>The IP address of the device.</td>
+          </tr>
+
+          <tr>
+            <td>value.timeout</td>
+            <td>int</td>
+            <td>The specified timeout for WebDriver client requests.</td>
+          </tr>
+
+          <tr>
+            <td>value.pressDelay</td>
+            <td>int</td>
+            <td>The specified delay between key presses.</td>
+          </tr>
+        </table>
+
+        <br />
+      </td>
+
+      <td>
+        Creates a new session.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## GET v1/sessions
 

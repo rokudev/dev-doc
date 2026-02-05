@@ -80,7 +80,7 @@ To maintain separate pricing for new and existing customers, schedule a price ch
 
 **30-day notice required for price increases to existing subscribers**
 
-If you increase the price of a purchase option for existing subscribers, you must give them a 30-day notice.
+If you increase the price of a purchase option for existing subscribers, you must give them a 15-day notice.
 
 **Purchase options for deleted products are in the Purchases>Ended tab**
 
@@ -483,7 +483,7 @@ To schedule a price change for a purchase option, follow these steps:
 
    <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/catalog-2-price-change-new-customers.png" />
 
-   b. To apply the price change to current subscribers, select the **Apply price increase to current customer** check box, and then schedule the effective date of the price increase. The selected date must be 30 days in advance of the listed date. You must give current subscribers 15-days notice per Roku's certification requirements.
+   b. To apply the price change to current subscribers, select the **Apply price increase to current customer** check box, and then schedule the effective date of the price increase. The selected date must be 15 days in advance of the listed date. You must give current subscribers 15-days notice per Roku's certification requirements.
 
    <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/catalog-2-price-change-existing-customers.png" />
 

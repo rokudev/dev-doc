@@ -82,7 +82,7 @@ To provide the basic information for an in-app product, follow these steps:
    >
    > **Certification requirement: **The in-app product names must clearly identify the service being offered by the app. The publisher must have full legal rights or consent for their in-app product names and the rights to all trademarks and copyright expressions associated with the names. The in-app product names may not include the name "Roku", text related to a trial or discount offer**,** or any profanity or derogatory or misleading language.
    >
-   > **Do not include billing information in the product name such as pricing, billing cycle (for example, "monthly" or "annual"), or offers. Do not include text related to a trial or discount offer in the product name.** 
+   > **Do not include billing information in the product name such as pricing, billing cycle (for example, "monthly" or "annual"), or offers. Do not include text related to a trial or discount offer in the product name.**
    >
    > **Do not include "Roku" or any profanity/derogatory language in the product name.**
    >
@@ -94,7 +94,7 @@ To provide the basic information for an in-app product, follow these steps:
    >
    > - "Roku Developers - Premium Ad Free"
    >
-   > 
+   >
    >  ![roku815px - rsg-channelstore-doorder-product-name-highlighted](https://image.roku.com/ZHZscHItMTc2/rsg-channelstore-doorder-product-name-highlighted.jpg)
 
 
@@ -144,8 +144,8 @@ To enter the price of a product, follow these steps:
      - See the [Price tier reference guide](doc:price-tiers) for the complete list of price tiers for each Roku Streaming Store.
 
        If you are creating a [TVOD-exclusive app](doc:tvod-channel), select any price tier. The price passed in the [ChannelStore APIs](doc:channelstore) overrides the price corresponding to the selected price tier.
-     
-       > Certification requirement: SVOD apps must provide 30-days notice to existing customers before changing the price of their service.
+
+       > Certification requirement: SVOD apps must provide 15-days notice to existing customers before changing the price of their service.
 
 
    - A chart under the **Price tier** field displays the price, in appropriate local currency, for each Streaming Store where the product will be available.

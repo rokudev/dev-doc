@@ -20,8 +20,7 @@ If you’re interested in becoming a Roku Channel partner, please complete our [
 
 * The Roku Channel reaches U.S. households with an estimated 80 million people (Q4 2021)
 * Roku is rapidly expanding across the globe
-
-## 1 DTC app distributor
+* \# 1 DTC app distributor
 
 **Growth**
 

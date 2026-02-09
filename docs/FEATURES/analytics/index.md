@@ -1,8 +1,6 @@
 ---
 title: Analytics Reports
-excerpt: >-
-  Access and analyze app analytics and sales reports through Roku's Developer
-  Dashboard. Learn about app health, viewership trends, and more.
+excerpt:
 deprecated: false
 hidden: true
 link:

@@ -1,6 +1,6 @@
 ---
 title: 'StandardDialog '
-hidden: true
+hidden: false
 ---
 Extends [Group](doc:group)
 

@@ -1,7 +1,7 @@
 ---
 title: Implementing Roku Search
 deprecated: false
-hidden: true
+hidden: false
 link:
   new_tab: false
 metadata:

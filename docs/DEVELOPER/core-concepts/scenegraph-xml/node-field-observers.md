@@ -2,7 +2,7 @@
 title: "Node field observers"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

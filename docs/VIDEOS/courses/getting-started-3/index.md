@@ -2,7 +2,7 @@
 title: "Getting started"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

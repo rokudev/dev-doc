@@ -2,7 +2,7 @@
 title: "Key Design Principles"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

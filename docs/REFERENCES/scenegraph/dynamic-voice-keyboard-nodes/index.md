@@ -2,7 +2,7 @@
 title: Dynamic voice keyboard nodes
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: "Implementing Nielsen Digital Content Ratings (DCR) measurement"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

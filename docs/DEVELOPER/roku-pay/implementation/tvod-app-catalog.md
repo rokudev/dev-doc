@@ -2,7 +2,7 @@
 title: Creating TVOD apps (Catalog 2.0)
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

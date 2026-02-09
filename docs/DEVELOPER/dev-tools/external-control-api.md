@@ -2,7 +2,7 @@
 title: External Control Protocol (ECP)
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: "Receiving secured Roku Pay push notifications"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

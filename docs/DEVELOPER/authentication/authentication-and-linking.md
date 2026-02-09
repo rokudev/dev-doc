@@ -2,7 +2,7 @@
 title: "Rendezvous linking"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

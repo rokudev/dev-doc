@@ -2,7 +2,7 @@
 title: How apps work
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

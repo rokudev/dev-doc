@@ -2,7 +2,7 @@
 title: Roku advertising requirements
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''
@@ -14,7 +14,7 @@ next:
 title: Roku advertising requirements
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

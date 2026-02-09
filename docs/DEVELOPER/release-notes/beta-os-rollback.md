@@ -2,7 +2,7 @@
 title: "Reverting Roku beta OS to production on devices"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

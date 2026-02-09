@@ -2,7 +2,7 @@
 title: On-device upgrade and downgrade
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

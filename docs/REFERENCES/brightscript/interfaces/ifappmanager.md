@@ -1,6 +1,6 @@
 ---
 title: ifAppManager
-hidden: true
+hidden: false
 ---
 ## Implemented by
 

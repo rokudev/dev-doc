@@ -2,7 +2,7 @@
 title: "BrightScript Remote Network Debug Protocol"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

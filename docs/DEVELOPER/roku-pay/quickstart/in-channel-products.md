@@ -2,7 +2,7 @@
 title: "Adding in-app products"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

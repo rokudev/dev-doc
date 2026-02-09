@@ -1,6 +1,6 @@
 ---
 title: Roku Voice
-hidden: true
+hidden: false
 link:
   new_tab: false
 ---

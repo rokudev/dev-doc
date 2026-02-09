@@ -2,7 +2,7 @@
 title: Tracking signup abandonment
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

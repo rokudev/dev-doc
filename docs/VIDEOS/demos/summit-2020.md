@@ -2,7 +2,7 @@
 title: Developer Summit 2020
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

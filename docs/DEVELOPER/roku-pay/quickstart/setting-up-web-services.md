@@ -2,7 +2,7 @@
 title: Setting up Roku Pay web services
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

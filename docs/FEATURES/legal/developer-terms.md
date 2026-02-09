@@ -2,7 +2,7 @@
 title: Developer terms and agreements
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

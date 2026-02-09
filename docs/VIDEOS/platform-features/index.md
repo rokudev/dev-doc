@@ -2,7 +2,7 @@
 title: Platform features
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

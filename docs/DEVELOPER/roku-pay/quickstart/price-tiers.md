@@ -2,7 +2,7 @@
 title: Price tier reference guide
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

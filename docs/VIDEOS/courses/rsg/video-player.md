@@ -2,7 +2,7 @@
 title: "Adding the Video Player"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

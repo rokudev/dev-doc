@@ -2,7 +2,7 @@
 title: Activating developer mode
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

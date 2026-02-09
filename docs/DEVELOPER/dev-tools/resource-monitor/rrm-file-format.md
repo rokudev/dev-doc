@@ -2,7 +2,7 @@
 title: Roku Resource Monitor session file specification
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

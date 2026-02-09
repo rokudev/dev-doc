@@ -2,7 +2,7 @@
 title: UI philosophy
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: Roku SceneGraph XML schema (XSD)
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

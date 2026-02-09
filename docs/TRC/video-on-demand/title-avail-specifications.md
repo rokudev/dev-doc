@@ -1,7 +1,7 @@
 ---
 title: Avails and Committed Title List specifications
 deprecated: false
-hidden: true
+hidden: false
 robots: index
 ---
 

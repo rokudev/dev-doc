@@ -1,7 +1,7 @@
 ---
 title: Especificaciones para la ingesta
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

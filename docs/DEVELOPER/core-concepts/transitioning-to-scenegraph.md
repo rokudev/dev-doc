@@ -2,7 +2,7 @@
 title: "Transitioning to SceneGraph"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

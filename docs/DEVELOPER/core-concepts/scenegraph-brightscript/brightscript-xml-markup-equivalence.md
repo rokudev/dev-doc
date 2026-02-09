@@ -1,7 +1,7 @@
 ---
 title: BrightScript/XML markup equivalence
 deprecated: false
-hidden: true
+hidden: false
 link:
   new_tab: false
 metadata:

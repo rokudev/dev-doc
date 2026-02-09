@@ -2,7 +2,7 @@
 title: "Subscriptions and one-time purchases"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

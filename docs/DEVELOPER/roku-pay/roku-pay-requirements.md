@@ -2,7 +2,7 @@
 title: Roku Pay integration requirements
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

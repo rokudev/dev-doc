@@ -2,7 +2,7 @@
 title: Catalog 2.0 API integration guide
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

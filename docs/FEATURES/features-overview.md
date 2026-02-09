@@ -2,7 +2,7 @@
 title: Roku platform overview
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

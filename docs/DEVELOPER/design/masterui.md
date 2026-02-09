@@ -2,7 +2,7 @@
 title: "Roku's master UI"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

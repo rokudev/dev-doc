@@ -2,7 +2,7 @@
 title: "Roku Pay JWT-secured Push Notifications Webinar"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

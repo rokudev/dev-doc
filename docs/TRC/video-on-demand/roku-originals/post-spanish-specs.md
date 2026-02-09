@@ -2,7 +2,7 @@
 title: Spanish language - alternative media delivery specifications
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

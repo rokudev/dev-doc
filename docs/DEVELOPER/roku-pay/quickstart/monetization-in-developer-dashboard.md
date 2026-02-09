@@ -2,7 +2,7 @@
 title: Setting the monetization method
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

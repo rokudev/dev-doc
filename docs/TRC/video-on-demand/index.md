@@ -1,6 +1,6 @@
 ---
 title: Video on Demand
-hidden: true
+hidden: false
 ---
 
 

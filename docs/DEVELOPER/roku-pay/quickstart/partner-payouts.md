@@ -2,7 +2,7 @@
 title: Enrolling in the Roku Partner Payouts Program
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

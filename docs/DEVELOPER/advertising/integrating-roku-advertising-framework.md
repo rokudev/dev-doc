@@ -2,7 +2,7 @@
 title: Integrating the Roku Advertising Framework
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

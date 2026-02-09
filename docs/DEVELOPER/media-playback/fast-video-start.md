@@ -2,7 +2,7 @@
 title: Fast video start
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

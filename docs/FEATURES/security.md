@@ -2,7 +2,7 @@
 title: Security on the Roku platform
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

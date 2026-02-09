@@ -2,7 +2,7 @@
 title: "Roku Resource Monitor Webinar"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

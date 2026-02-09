@@ -2,7 +2,7 @@
 title: "Implementing client-side ad stitching"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

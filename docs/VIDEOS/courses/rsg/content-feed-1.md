@@ -2,7 +2,7 @@
 title: Creating the content feed
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: "SceneGraph Developers: Build an App"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

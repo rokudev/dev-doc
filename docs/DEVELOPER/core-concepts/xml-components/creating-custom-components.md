@@ -2,7 +2,7 @@
 title: Creating custom components
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

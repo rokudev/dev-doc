@@ -2,7 +2,7 @@
 title: "Self-serve app promotion tool"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

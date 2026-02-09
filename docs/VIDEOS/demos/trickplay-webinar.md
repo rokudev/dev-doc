@@ -2,7 +2,7 @@
 title: "Trickplay Thumbnail Webinar"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

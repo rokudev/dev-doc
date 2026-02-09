@@ -1,5 +1,5 @@
 ---
-hidden: true
+hidden: false
 ---
 The \<children\> element contains the SceneGraph node XML markup elements. The \<children\> element allows XML schema validation of your SceneGraph XML components using XSD by wrapping them in a container element (XSD requires that the order of elements be deterministic, and so for validation to work, SceneGraph node elements must be contained in an element themselves).
 

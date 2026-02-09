@@ -2,7 +2,7 @@
 title: Optimized data transfer and reference handling
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

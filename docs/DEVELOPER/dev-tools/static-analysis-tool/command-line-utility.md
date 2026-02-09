@@ -2,7 +2,7 @@
 title: "Command line utility"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

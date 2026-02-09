@@ -2,7 +2,7 @@
 title: "Distributing apps in Europe"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

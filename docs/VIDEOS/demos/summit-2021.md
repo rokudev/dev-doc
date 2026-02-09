@@ -2,7 +2,7 @@
 title: Developer Summit 2021
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: Live event VOD delivery specifications
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

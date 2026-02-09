@@ -2,7 +2,7 @@
 title: "Testing a Roku Pay app"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

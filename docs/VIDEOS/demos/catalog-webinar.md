@@ -2,7 +2,7 @@
 title: "Catalog 2.0 Webinar"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

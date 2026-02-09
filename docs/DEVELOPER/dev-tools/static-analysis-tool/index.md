@@ -2,7 +2,7 @@
 title: Static Analysis Tool
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

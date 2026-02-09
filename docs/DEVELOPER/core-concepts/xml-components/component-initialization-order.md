@@ -2,7 +2,7 @@
 title: "Component initialization order"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

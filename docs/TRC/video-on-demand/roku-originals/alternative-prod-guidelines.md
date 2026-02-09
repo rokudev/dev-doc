@@ -2,7 +2,7 @@
 title: Alternative & documentary production guidelines
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: Using Roku Resouce Monitor in Data Collection Mode
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

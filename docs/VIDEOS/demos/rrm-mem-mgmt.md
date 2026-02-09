@@ -2,7 +2,7 @@
 title: "Roku Resource Monitor Memory Management Webinar"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

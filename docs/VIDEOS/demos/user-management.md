@@ -2,7 +2,7 @@
 title: "Managing user access"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

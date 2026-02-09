@@ -2,7 +2,7 @@
 title: Creating the product catalog
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: "Roku Pay best practices"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

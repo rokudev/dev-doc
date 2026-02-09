@@ -2,7 +2,7 @@
 title: "Distributing a Channel in Germany Webinar"
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

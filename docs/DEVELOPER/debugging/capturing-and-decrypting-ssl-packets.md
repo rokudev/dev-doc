@@ -2,7 +2,7 @@
 title: Capturing and decrypting SSL packets
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: Implementing Server-Side Ad Insertion Using Roku Adapters
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

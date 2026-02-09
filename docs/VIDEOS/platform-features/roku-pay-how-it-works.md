@@ -2,7 +2,7 @@
 title: 'Roku Pay: Simplifying customer payments'
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

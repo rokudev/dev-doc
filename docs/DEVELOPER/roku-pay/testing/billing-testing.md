@@ -2,7 +2,7 @@
 title: Enabling billing testing
 excerpt: ''
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: ''
   description: ''

@@ -18,9 +18,9 @@ When an app enabled for "billing testing" is sideloaded, calls to the ChannelSto
 >
 > To use an app for billing testing:
 >
-> * The app must be sideloaded on the Roku device.
+> * The app must be [sideloaded](doc:developer-setup) on the Roku device.
 > * The app must be the only one in the developer's account designated for billing testing.
-> * The developer account making purchases on the sideloaded app must be designated as a Test User.
+> * The developer account making purchases on the sideloaded app must be designated as a [Test User](doc:test-users).
 > * The Test User's Roku account must be linked to the Roku device on which the app is sideloaded.
 
 ## Enabling billing testing with new app publishing workflow

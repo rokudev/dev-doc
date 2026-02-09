@@ -14,6 +14,8 @@ next:
 
 Roku Pay gives publishers a robust payment platform for increasing conversions and maximizing subscription revenue. Roku Pay features a low-friction signup flow that makes it safe and easy for customers to signup for free trial subscriptions, subscribe to apps, and purchase movie rentals, sporting events, and pay-per-views. After adding a payment method, customers can make purchases right from their TV with just a few presses on their Roku remote control, while managing their subscriptions both online and on-device.
 
+I have another suggested edit.
+
 ![roku815px - roku-pay-feature-v4](https://image.roku.com/ZHZscHItMTc2/roku-pay-feature.jpg)
 
 ## Demonstrated results

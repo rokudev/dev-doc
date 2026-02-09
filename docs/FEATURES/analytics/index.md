@@ -1,6 +1,5 @@
 ---
 title: Analytics Reports
-excerpt:
 deprecated: false
 hidden: true
 link:

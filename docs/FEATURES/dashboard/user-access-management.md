@@ -24,7 +24,7 @@ To add a user to your developer account and assign them roles and permissions, f
 
    <Image alt="roku600px - multi-user-access-2-roles-access" border={false} src="https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-invite-user-button.png" />
 
-2. In the **Invite a user** page, enter the following information: <a id="user-roles" />  
+2. In the **Invite a user** page, enter the following information: <a id="user-roles" />
    <HTMLBlock>{`
    <table>
    <thead>
@@ -59,8 +59,9 @@ To add a user to your developer account and assign them roles and permissions, f
    <li>Create and delete apps</li>
    <li>Electronically approve agreements (such as the Roku Distribution Agreement)</li>
    <li>Enroll in the Roku Partner Payouts Program and view information used for enrollment or eligibility determination</li>
-   <li>Manage users and test users</li>
-   <li>Update developer information.</li>
+     <li>Manage users and test users</li>
+     <li>View and void test transactions.</li>
+     <li>Update developer information.</li>
    </ul></td>
    <td class="short-line">Account</td>
    </tr>
@@ -99,7 +100,9 @@ To add a user to your developer account and assign them roles and permissions, f
    <td class="short-line">Products</td>
    <td class="long-line"><ul>
    <li>Enable the developer to create and manage in-app products (for example, subscriptions, movie rentals, special events).</li>
-   <li>Add, view, edit, and delete test users.</li>
+     <li>Add, view, edit, and delete test users.</li>
+     <li>View and void test transactions.</li>
+
    </ul></td>
    <td class="short-line">Account</td>
    </tr>
@@ -123,10 +126,10 @@ To add a user to your developer account and assign them roles and permissions, f
    `}</HTMLBlock>
    <br />
 
-![](https://image.roku.com/ZHZscHItMTc2/mua-invite-user.png)
-![](https://image.roku.com/ZHZscHItMTc2/mua-admin.png)
-![](https://image.roku.com/ZHZscHItMTc2/mua-app-management.png)
-![](https://image.roku.com/ZHZscHItMTc2/mua-monetization.png)
+<Image border={false} src="https://image.roku.com/ZHZscHItMTc2/mua-invite-user.png" />
+<Image border={false} src="https://image.roku.com/ZHZscHItMTc2/mua-admin.png" />
+<Image border={false} src="https://image.roku.com/ZHZscHItMTc2/mua-app-management.png" />
+<Image border={false} src="https://image.roku.com/ZHZscHItMTc2/mua-monetization.png" />
 
 3. Click **Invite**.
 

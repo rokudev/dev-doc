@@ -45,9 +45,11 @@ To learn more about the GDPR and how you can prepare your business for it, [clic
 
 ## Specific country legal requirements
 
-Apps must adhere to legislation in countries their content is available in. For Roku related documents, please review each country at [roku.com/legal](https://www.roku.com/legal).  
+Apps must adhere to legislation in countries their content is available in. For Roku related documents, please review each country at [roku.com/legal](https://www.roku.com/legal).
 
 ## Developer terms
+
+By becoming a Roku Developer, you are subject to and agree to comply with all applicable Developer Terms, and any other terms, rules, and policies applicable to the Developer Program that Roku makes available to you.
 
 * [Certification Requirements](doc:certification-overview)
 * [Claimed Copyright Infringement Procedures](https://docs.roku.com/doc/dmca/en-us)

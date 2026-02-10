@@ -1,5 +1,5 @@
 ---
-title: Compliance
+title: Legal
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,19 +10,37 @@ metadata:
 next:
   description: ''
 ---
+## Developer terms
+
+By becoming a Roku Developer, you are subject to and agree to comply with all applicable Developer Terms, and any other terms, rules, and policies applicable to the Developer Program that Roku makes available to you.
+
+* [Certification Requirements](doc:certification-overview)
+* [Claimed Copyright Infringement Procedures](https://docs.roku.com/doc/dmca/en-us)
+* [Roku’s Address for Notices](https://docs.roku.com/doc/addressfornotices/en-us)
+* [Roku Advertising Guidelines](https://docs.roku.com/doc/advertisingguidelines/en-us)
+* [Roku Data Processing Policy for Channel and Content Providers](https://docs.roku.com/published/providerdatapolicy/en/us)
+* [Roku Trademark Guidelines](https://docs.roku.com/doc/TrademarkGuidelines/en-us)
+
+## Developer agreements
+
+* [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us)
+* [Developer tools license agreement](https://docs.roku.com/published/developersdk/en/us)
+
+## Compliance
+
 All app developers must comply with the laws and legislation for the countries their content is available in. The following overview covers the most common factors to consider for apps on the Roku Platform in addition to Roku OS features designed to assist in your legal compliance.
 
-## CVAA
+### CVAA
 
 For information on accessibility laws that may be applicable to your app such as the 21st Century Communications and Video Accessibility Act, see [Accessibility Requirements for Channel Partners](https://docs.roku.com/published/channelaccessibility/en/us).
 
-## COPPA
+### COPPA
 
 The [Children's Online Privacy Protection Rule (COPPA)](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule), imposes certain requirements for online streaming content directed to children under 13 years of age or services in addition to restrictions for knowingly collecting personal information from a child under 13 years of age.
 
 **Advertisers and COPPA** - On July 1, 2013 - FTC expanded the COPPA requirements to ad networks and online plugin services. It's important for all ads streamed and tracked to be COPPA compliant. Please refer to the FTC's site for full details: [FTC's site for Children's Privacy](https://www.ftc.gov/tips-advice/business-center/privacy-and-security/children%27s-privacy)
 
-## GDPR
+### GDPR
 
 The General Data Protection Regulation (GDPR) is the primary law governing how the personal data of European Union (EU) residents should be collected and processed. The regulation applies to processing of personal data by all businesses within the EU. It also applies to businesses outside the EU that offer goods or services to individuals in the EU, or monitor the behavior of such EU individuals.
 
@@ -43,22 +61,6 @@ To learn more about the GDPR and how you can prepare your business for it, [clic
 * [Directive 2009/136/EC](http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32009L0136:EN:NOT) (ePrivacy Directive)
 * [Regulation (EU) 2016/679](http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=uriserv:OJ.L_.2016.119.01.0001.01.ENG) (General Data Protection Regulation)
 
-## Specific country legal requirements
+### Specific country legal requirements
 
 Apps must adhere to legislation in countries their content is available in. For Roku related documents, please review each country at [roku.com/legal](https://www.roku.com/legal).
-
-## Developer terms
-
-By becoming a Roku Developer, you are subject to and agree to comply with all applicable Developer Terms, and any other terms, rules, and policies applicable to the Developer Program that Roku makes available to you.
-
-* [Certification Requirements](doc:certification-overview)
-* [Claimed Copyright Infringement Procedures](https://docs.roku.com/doc/dmca/en-us)
-* [Roku’s Address for Notices](https://docs.roku.com/doc/addressfornotices/en-us)
-* [Roku Advertising Guidelines](https://docs.roku.com/doc/advertisingguidelines/en-us)
-* [Roku Data Processing Policy for Channel and Content Providers](https://docs.roku.com/published/providerdatapolicy/en/us)
-* [Roku Trademark Guidelines](https://docs.roku.com/doc/TrademarkGuidelines/en-us)
-
-## Developer agreements
-
-* [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us)
-* [Developer tools license agreement](https://docs.roku.com/published/developersdk/en/us)

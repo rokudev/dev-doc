@@ -60,4 +60,5 @@ By becoming a Roku Developer, you are subject to and agree to comply with all ap
 
 ## Developer agreements
 
-<br />
+* [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us)
+* [Developer tools license agreement](https://docs.roku.com/published/developersdk/en/us)

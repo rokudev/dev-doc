@@ -16,7 +16,7 @@ The Roku OS is built specifically for streaming, which means publishers can seam
 
 As TV viewing continues to shift to streaming platforms, Roku is well-positioned to help content publishers with a sophisticated suite of tools that make it easy to distribute and monetize content. The Roku Developer Program empowers content publishers to build Roku streaming apps. You can use our [developer SDK](doc:getting-started) to build a customized streaming experience.
 
-Our goal is to encourage the success of partners on our platform. We offer multiple paths to monetization, whether you choose to charge a subscription fee, offer free streaming content supported by advertising or even a combination of both, Roku can support many monetization strategies. We have a team that is dedicated to [helping content publishers grow their audience](https://advertising.roku.com/content-publishers) on our platform and capture the increasing number of viewers who are no longer tuning into traditional TV.
+Our goal is to encourage the success of partners on our platform. We offer multiple paths to monetization, whether you choose to charge a subscription fee, offer free streaming content supported by advertising or even a combination of both, Roku can support many monetization strategies. We have a team that is dedicated to [helping content publishers grow their audience](https://advertising.roku.com/solutions/advertise/ad-types) on our platform and capture the increasing number of viewers who are no longer tuning into traditional TV.
 
 ## Introduction to the Roku platform video
 
@@ -36,12 +36,12 @@ In this section, you'll find:
 
 * [Content engagement](doc:channel-store) — Introduction to the various features, programs, and mechanisms available to increase the discoverability of content among target audiences.
 
-* [Monetization](doc:video-advertisements) — Learn about the two overarching monetization models (ads and subscriptions) available to Roku content publishers, including payout terms.
+* [Monetization](doc:monetization) — Learn about the two overarching monetization models (ads and subscriptions) available to Roku content publishers, including payout terms.
 
-* [Analytics & reporting](doc:analytics-reports) — Information about the various reports available to publishers on the platform, including audience demographics analytics, crash reports, sales activity, transactions, and more.
+* [Analytics & reporting](doc:analytics) — Information about the various reports available to publishers on the platform, including audience demographics analytics, crash reports, sales activity, transactions, and more.
 
 * [Security](doc:security) — Introduction to the security protocols that exist on the Roku platform, from system and application security to supported DRM formats and user information protection.
 
-* [Legal](doc:compliance) — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.
+* [Legal](doc:legal) — A review of federal and international regulations to be aware of when developing a Roku streaming app, as well as the contractual terms you'll need to agree to before distributing content on the Roku platform.
 
 To learn more about how Roku apps work, [read on](doc:how-channels-work)!

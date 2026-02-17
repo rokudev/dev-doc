@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-This webinar, presented on February 16th, 2026, demonstrated how you can use Perfetto to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance. 
+This webinar, presented on February 16th, 2026, demonstrated how you can use Perfetto to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.
 
 ## Video
 
@@ -13,4 +13,4 @@ This webinar, presented on February 16th, 2026, demonstrated how you can use Per
 
 ## Related documentation
 
-* [App Tracing (with Perfetto) User's Guide](/docs/developer-program/dev-tools/app-tracing.md) 
+* [App Tracing (with Perfetto) User's Guide](doc:app-tracing)

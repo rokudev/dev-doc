@@ -274,6 +274,64 @@ Developers can leverage the following ECP new commands in their tools and web se
 
 * The [**roAppInfo.getSubtitle()** function has been deprecated](/docs/references/deprecated-apis.md#roappinfogetsubtitle).
 
+## Roku OS 12.5
+
+**Initial rollout date**: September 12, 2023
+
+Roku OS 12.5 includes new APIs for monitoring the current amount of available memory for an app and getting the device user agent. This release also includes features that generally enhance the performance of media playback such as prebuffering for live content, improved closed captioning through ad breaks, and pre-playback audio and subtitle track selection.
+
+Here is the list of key developer-facing Roku OS 12.5 updates:
+
+#### BrightScript APIs
+
+* [**Available memory query**](/docs/references/brightscript/interfaces/ifurltransfer.md#getuseragent-as-string) — The [**roAppMemoryMonitor** node](/docs/references/brightscript/components/roappmemorymonitor.md) includes a new **GetChannelAvailableMemory()** function that provides developers with the estimated kilobytes (Kb) of memory available for their app. This helps developers identify when to release memory when their app receives low-memory warnings.
+
+* [**Device user agent**](/docs/references/brightscript/interfaces/ifurltransfer.md#getuseragent-as-string) — The [**roUrlTransfer** node](/docs/references/brightscript/components/rourltransfer.md) includes a new **GetUserAgent()** function that returns the device user agent. This provides developers with a direct method for getting the user agent in order to pass it into server-side ad requests.
+
+#### Media, DRM, and content metadata updates
+
+* **Prebuffering for live content **— Roku's media player now includes support for prebuffering live content. For video-on-demand (VOD) content, the media player now requires less data to be prebuffered.
+
+* **Improved support for maintaining closed captioning through ad breaks **— If the start-time of a video ad occurs between the buffering and closed captioning start times, Roku's media player now maintains the closed captioning information. This helps recover any close caption sentences that may be missed after an ad break finishes. This is particularly useful for CEA 608/708 caption formatting because caption data is received from video content before ad breaks.
+
+* **Representation filtering based on HDCP level** — When a 4K-capable Roku device is connected to an HD display, the Roku media player now filters out 4K representations to prevent DRM-based decryption failures.
+
+* [**Pre-playback audio and closed captioning track selection **](/docs/references/scenegraph/media-playback-nodes/video.md#playback-fields)— The [**Video** node](/docs/references/scenegraph/media-playback-nodes/video.md) includes new fields for specifying the priority order of different audio track and subtitle track selections.
+
+#### Deprecated APIs
+
+* [**run_as_process** manifest attribute](/docs/references/deprecated-apis.md#run_as_process-channel-manifest-attribute) has been deprecated — All apps now run in a separate process, regardless if the **run_as_process** attribute has been specified in the manifest.
+
+* [Support for the Windows Media Audio (wma) file format on the Roku platform has been sunset](/docs/references/deprecated-apis.md#audio-node-windows-media-audio). The WMA audio format was originally deprecated in the Roku OS 10.5 release.
+
+## Roku OS 12.0
+
+**Initial rollout date**: March 8, 2023
+
+Roku OS 12.0 includes a new BrightScript API for getting localized times and Instant Resume support for apps that do not have exit confirmation dialogs. For tools, this release features new External Control Protocol (ECP) query commands, and it enables developers using the BrightScript Debug Protocol to add breakpoints while the script is running.
+
+Here is the list of key developer-facing Roku OS 12.0 updates:
+
+#### BrightScript APIs
+
+* [**Localized date and time formats**](/docs/references/brightscript/interfaces/ifdatetime.md#asdatestringlocformat-as-string-as-string) — The [roDateTime](https://developer.roku.com/docs/references/brightscript/components/rodatetime.md) component includes new **asDateStringLoc()** and **asTimeStringLoc()** methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.
+
+* [**IPv6 addresses returned by roDeviceInfo.getConnectionInfo() method**](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getconnectioninfo-as-object) — The [roDeviceInfo.getConnectionInfo() method](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getconnectioninfo-as-object) now returns an **ipv6** field, which is an array listing the IPv6 addresses used for the device connection.
+
+#### Integrations
+
+* [**Extended Instant Resume support for apps without exit confirmation dialogs**](/docs/developer-program/media-playback/instant-resume.md) — For apps implementing [Instant Resume](/docs/developer-program/media-playback/instant-resume.md), an interruption event is now generated when the customer exits the app by pressing the back button. For apps that do not have an exit confirmation dialog, developers can now call the **customSuspend** handler when this occurs to save the current app state.
+
+#### Tools
+
+* [**New ECP commands**](/docs/developer-program/dev-tools/external-control-api.md) — [ECP](/docs/developer-program/dev-tools/external-control-api.md) includes a new **query/graphic-frame-rate** command that gets the graphics rendering frame rate, and app and media events can now be now tracked via a set of new **query/fwbeacons** commands (fwbeacons/track, fwbeacons/untrack and query/fwbeacons).
+
+  In addition, calling the **query/registry** ECP command now returns a new **space-available** field that provides developers with the amount of storage currently available in the device's registry, and the **query/sgnodes** command now returns a tree structure representing the app's UI, rather than a flat list of nodes.
+
+  Developers can leverage these commands in their tools and web services.
+
+* [**BrightScript debug protocol (version 3.2)**](/docs/developer-program/debugging/socket-based-debugger.md) — The [BrightScript debug protocol](/docs/developer-program/debugging/socket-based-debugger.md) now supports **ADD_CONDITIONAL_BREAKPOINTS** requests while the script is running. When this occurs, the breakpoints are registered, queued, and then applied as soon as processing allows. This eliminates the need to wait for the script to be paused in order to apply breakpoints. Instead, the breakpoints can now be applied based on the current device state. Developers should now use the **ADD_CONDITIONAL_BREAKPOINTS** command instead of **ADD_BREAKPOINTS** because ADD_CONDITIONAL_BREAKPOINTS is a strict superset of ADD_BREAKPOINTS.
+
 <HTMLBlock>{`
 <h2 id="roku-os-12-5">Roku OS 12.5</h2>
 <p><strong>Initial rollout date</strong>: September 12, 2023</p>

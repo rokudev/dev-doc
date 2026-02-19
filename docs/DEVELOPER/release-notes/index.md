@@ -813,136 +813,34 @@ Below is a list of new APIs, tools, performance enhancements, and media updates 
 
 #### SceneGraph enhancements
 
-<br />
-
 * **New manifest flag for "rsg_version=1.2"** — By adding this new manifest entry, developers enable tremendous memory savings and app launch time improvements in RSG apps. [The "rsg_version=1.2" manifest entry](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)  enables a new internal mechanism for processing component \<script\> tags that optimizes the resulting compiled script code. This results in a major reduction in the app's initial startup time and uses dramatically less memory while preserving total compatibility. Initial startup time is typically reduced by approximately 30% when this manifest flag is set. Memory savings range from 10 - 20MiB in a moderately complex app, with up to 40MiB saved in a complex app with extensive component hierarchies.
-  * **eval() is no longer supported for "rsg_version=1.2"** — In order to realize the load time performance and memory benefits enabled by the "rsg_version=1.2" entry, eval() can no longer be supported. Any use of eval() will cause compilation and runtime errors if "rsg_version=1.2" is in the app’s manifest.
-    * **Faster AssociativeArray access** — Read and write access into and out of AssociativeArray fields on nodes, and retrieval of AssociativeArrays using roSGNodeEvent.getData() has been made 5x faster. The semantics of AssociativeArray fields are copy on read and write, and copy on roSGNodeEvent.getData(). Apps that heavily use AAs can expect dramatic speed increases that directly translate to user-perceivable operations.
-      * **Faster rendezvous** — This change enables an auxiliary thread to handle rendezvous operations when the render thread is occupied with tasks that don't need rendezvous protection. The result is dramatic speed-ups for rendezvous operations, particularly on Roku devices with lesser processing power.
-        * **Faster component creation** — Node creation times have been improved in Roku OS 9.
-          * **ZoomRowList component** — [ZoomRowList](/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md) , a RowList component where the focused item is zoomed in, is now available for developers.
-            * **roSGNode.threadInfo() method** — A new diagnostic function, [threadInfo()](/docs/references/brightscript/interfaces/ifsgnodefield.md) , has been added to the [ifSGNodeField](/docs/references/brightscript/interfaces/ifsgnodefield.md)  interface. With few exceptions, this function may be called from any component, on any thread, in any function, at any time.
-              <br />
+* **eval() is no longer supported for "rsg_version=1.2"** — In order to realize the load time performance and memory benefits enabled by the "rsg_version=1.2" entry, eval() can no longer be supported. Any use of eval() will cause compilation and runtime errors if "rsg_version=1.2" is in the app’s manifest.
+* **Faster AssociativeArray access** — Read and write access into and out of AssociativeArray fields on nodes, and retrieval of AssociativeArrays using roSGNodeEvent.getData() has been made 5x faster. The semantics of AssociativeArray fields are copy on read and write, and copy on roSGNodeEvent.getData(). Apps that heavily use AAs can expect dramatic speed increases that directly translate to user-perceivable operations.
+* **Faster rendezvous** — This change enables an auxiliary thread to handle rendezvous operations when the render thread is occupied with tasks that don't need rendezvous protection. The result is dramatic speed-ups for rendezvous operations, particularly on Roku devices with lesser processing power.
+* **Faster component creation** — Node creation times have been improved in Roku OS 9.
+* **ZoomRowList component** — [ZoomRowList](/docs/references/scenegraph/list-and-grid-nodes/zoomrowlist.md) , a RowList component where the focused item is zoomed in, is now available for developers.
+* **roSGNode.threadInfo() method** — A new diagnostic function, [threadInfo()](/docs/references/brightscript/interfaces/ifsgnodefield.md) , has been added to the [ifSGNodeField](/docs/references/brightscript/interfaces/ifsgnodefield.md)  interface. With few exceptions, this function may be called from any component, on any thread, in any function, at any time.
 
 #### New BrightScript Profiler features
 
-<br />
-
 The [BrightScript Profiler](/docs/developer-program/dev-tools/brightscript-profiler.md)  now includes a memory profiling tool that can be used to help developers identify memory leaks or memory that is allocated during app operation without ever being freed. Roku OS 9 also adds support for streaming of profiling data to a local network host.
-
-<br />
 
 #### Media, DRM, and content meta-data updates
 
-<br />
-
 * **Dash EventStream** - Dash EventStream elements are supported in Roku OS 9.
-  * **[BETA] Opening Widevine DRM CBCS decryption mode** — Roku OS 9 adds CBCS decryption support for [Widevine DRM](/docs/specs/media/content-protection.md#widevine)  in DASH and HLS streams. At this stage, Widevine support is considered in beta on the Roku platform.
-    * **[BETA] DASH XLink support** -  Roku OS 9 adds DASH XLink support, including EventStream events that are surfaced to the app through the [timedMetaData](/docs/references/scenegraph/media-playback-nodes/video.md#fields)  field.
-      * **Widevine key rotation** - Roku OS 9 also adds support for Widevine key rotation and license renewal for Dash and HLS content.
-        <br />
+* **[BETA] Opening Widevine DRM CBCS decryption mode** — Roku OS 9 adds CBCS decryption support for [Widevine DRM](/docs/specs/media/content-protection.md#widevine)  in DASH and HLS streams. At this stage, Widevine support is considered in beta on the Roku platform.
+* **[BETA] DASH XLink support** -  Roku OS 9 adds DASH XLink support, including EventStream events that are surfaced to the app through the [timedMetaData](/docs/references/scenegraph/media-playback-nodes/video.md#fields)  field.
+* **Widevine key rotation** - Roku OS 9 also adds support for Widevine key rotation and license renewal for Dash and HLS content.
 
 #### Miscellaneous
 
-<br />
-
 * New manifest entry for a "game" app — Developers can now set the ["game" manifest entry](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)  (game=1) to avoid audio delays in their game apps.
-  * roList indexing is no longer disturbed by array index access — The behavior of roList indexing has been modified to yield more intuitive results and resolve bugs. As of Roku OS 9, when implementing roList, ifEnum enumeration and ifList enumeration will use a separate and independent internal 'pointers' to the current element, instead of a "current integer index" variable. This has been done to ensure the ifList index position does not corrupt the roList index when the array read/write operators are used.
-    * Programmatic access to BIFs through BrightScript — Two new fields, getNearestFrame and nearestFrame, have been added to the [BifDisplay](/docs/references/scenegraph/media-playback-nodes/video.md#fields)  component so that developers can now access BIFs programmatically in their apps. Previously a BrightScript app had to use the built-in trickplay UI to access these BIFs.
-
-<br />
+* roList indexing is no longer disturbed by array index access — The behavior of roList indexing has been modified to yield more intuitive results and resolve bugs. As of Roku OS 9, when implementing roList, ifEnum enumeration and ifList enumeration will use a separate and independent internal 'pointers' to the current element, instead of a "current integer index" variable. This has been done to ensure the ifList index position does not corrupt the roList index when the array read/write operators are used.
+* Programmatic access to BIFs through BrightScript — Two new fields, getNearestFrame and nearestFrame, have been added to the [BifDisplay](/docs/references/scenegraph/media-playback-nodes/video.md#fields)  component so that developers can now access BIFs programmatically in their apps. Previously a BrightScript app had to use the built-in trickplay UI to access these BIFs.
 
 For an overview of the consumer features added in Roku OS 9, visit the [Roku Blog](https://blog.roku.com/os-9-release-notes) .
 
 <HTMLBlock>{`
-<h2 id="roku-os-9-2">Roku OS 9.2</h2>
-<p><strong>Initial rollout date</strong>: September 24, 2019</p>
-<p>Roku OS 9.2 includes a variety of media updates that allow developers to optimize playback and further secure their protected content. This firmware update also introduces APIs that enable developers to further customize app UIs.</p>
-<p>A list of key developer-facing Roku OS 9.2 updates is included below.</p>
-<h4 id="api">API</h4>
-<ul>
-<li><strong>[ZoomRowList enhancement](doc:zoomrowlist#row-decoration-component-fields)</strong> — Developers can draw a custom row decoration under the items in a ZoomRowList.</li>
-<li><strong>[File System last mounted times](doc:iffilesystem#getvolumeinfopath-as-string-as-object)</strong> — Developers can get the time when a USB drive was last mounted on a Roku device.</li>
-<li>[<strong>New API for getting Roku OS version</strong>](doc:ifdeviceinfo#getosversion-as-object) — Developers can call the <strong>roDeviceInfo.GetOSVersion()</strong> method to get the Roku OS running on a device.</li>
-</ul>
-<h4 id="media-playback">Media playback</h4>
-<ul>
-<li><strong>[CDN switching](doc:content-metadata#cdn-switching)</strong> — Developers can switch Content Delivery Networks (CDNs) during playback to load balance traffic and failover to different servers in order to help optimize performance.</li>
-<li><strong>Forced narrative subtitles</strong> — The Roku OS now supports the display of forced narrative subtitles on the video player. This enables a dialog or on-screen text (for example, newspaper headlines, street signs, and so on) to be translated into alternate languages to help viewers understand the words being spoken or displayed.</li>
-<li><strong>Support for templated DASH streams that have Widevine</strong> — The Roku media player now supports playback of DASH streams that have both templated representation and Widevines licenses.</li>
-<li><strong>DASH/HLS multi-license support</strong> — Developers can protect content with resolution-specific licenses. This means developers can, for example, secure the 4K version of content with a Widevine level 1 license, and the FHD and lower versions with a Widevine level 2 license.</li>
-</ul>
-<h4 id="deprecated-apis">Deprecated APIs</h4>
-<ul>
-<li><strong>Roku device MAC Address via roDeviceInfo.GetConnectionInfo</strong> — The [roDeviceInfo.GetConnectionInfo() ](doc:ifdeviceinfo#getconnectioninfo-as-object)method no longer returns a device&#39;s MAC address. Developers can use the [roDeviceInfo.GetChannelClientId ](doc:ifdeviceinfo#getchannelclientid-as-string)method to uniquely identify devices.</li>
-<li><strong>AudioLanguageSelected attribute</strong> — The [AudioLanguageSelected](doc:content-metadata#track-id-attributesUsers) content metadata attribute no longer  can be used to specify the language track to be used when content has multiple language tracks. Users can select their preferred audio language on-device in the <strong>Settings &gt; Audio &gt; Audio Preferred Language</strong> screen.</li>
-</ul>
-<h2 id="roku-os-9-1">Roku OS 9.1</h2>
-<p><strong>Initial rollout date:</strong> April 9, 2019</p>
-<p>Roku OS 9.1 adds new line-level debugging to the BrightScript Profiler tool, which enables developers to better pinpoint high memory and CPU usage. In addition, this update adds signal beacons to measure video start time, app change time, and app exit times, which helps developers verify that their app&#39;s performance meets certification requirements.</p>
-<p>Below is a list of new APIs, media updates, and tools for developers. Changes to deprecated APIs are listed as well.</p>
-<blockquote>
-<p>The <code>roDeviceInfo.GetDeviceUniqueId()</code> function now returns all zeros instead of a device ID.  Apps that are still using this function in an authentication flow will fail until an app update is published. Developers should migrate to the [<code>roDeviceInfo.GetChannelClientId()</code>](doc:ifdeviceinfo#GetChannelClientId) function to get a device ID for their app.
-Key Roku OS 9.1 features:</p>
-</blockquote>
-<h4 id="apis">APIs</h4>
-<ul>
-<li><p>[<strong>Encryption/decryption API</strong>](doc:rodevicecrypto) – Developers can now encrypt and decrypt data on a device using a key that is unique per app, device, or model. Using an app key, for example, developers can encrypt data for an app so that it may only be decrypted by that same app. In this case, a developer could provision credentials or an API key from the cloud to devices securely. With a device key, for example, a developer could implement a secure-storage algorithm.</p>
-</li>
-<li><p>[<strong>Performance testing</strong>](doc:measuring-channel-performance) – Developers can now measure the performance of user-initiated actions on their apps to validate that their apps meet certification requirements. The Roku OS automatically records key app performance metrics such as video start time, app change time, and app exit times via signal beacons (markers for the start and stop points of user-initiated actions). In addition, developers can manually add signal beacons to their applications to measure and record app launch times, which cannot be detected automatically by the Roku OS.  Developers can then use the debug console to view log entries for these app performance metrics.</p>
-</li>
-<li><p>[<strong>Voice command handling</strong>](doc:transport-controls) – Developers can implement voice controls to respond to voice commands such as &quot;fast forward&quot;, &quot;rewind&quot;, &quot;pause&quot;, &quot;resume&quot;, &quot;start over&quot;, &quot;replay&quot;, and so on. These voice commands may be sent from the Roku voice remote, Roku mobile app, or a virtual assistant such as Amazon Alexa or Google Assistant.</p>
-</li>
-<li><p>[<strong>Purchase history API</strong>](doc:channelstore#getAllPurchases) – Developers can now get a customer&#39;s purchase history, which makes it easier to determine free-trial eligibility in subscription renewal flows.</p>
-</li>
-<li><p>[<strong>Enhanced partner account creation</strong>](doc:channelstore#storechannelcreddata) – Developers can now use the ChannelNode to store an OAuth token, custom token, or other custom data and then retrieve the credential during authentication. This is the same functionality that has been available with the roChannelStore SDK1 component since firmware release 8.1.</p>
-</li>
-<li><p>[<strong>Audio/video codec change detection</strong>](doc:rodeviceinfoevent) – Developers can now detect when the audio or video codec has changed (for example, the Roku is plugged into a different A/V receiver or TV)  and then check the current audio/video playback capability.</p>
-</li>
-</ul>
-<h4 id="media-drm-and-content-meta-data-updates">Media, DRM, and content meta-data updates</h4>
-<ul>
-<li>[<strong>Media player error and diagnostics reporting</strong>](doc:video) – Developers now have access to more detailed error reporting to help diagnose video play errors. When an error occurs, the new reporting will explain why media playback failed and, if applicable, which syntax or feature in the content is incompatible.</li>
-</ul>
-<h4 id="brightscript-profiler-features">BrightScript Profiler features</h4>
-<ul>
-<li>[<strong>Line-level memory and CPU usage diagnostics</strong>](doc:brightscript-doc#line-level-profiling) — Developers can now collect profile data for each line of BrightScript source code to more clearly identify where memory or CPU usage is high.</li>
-</ul>
-<h4 id="changes-to-deprecated-apis">Changes to Deprecated APIs</h4>
-<ul>
-<li>[<strong>roDeviceInfo.GetDeviceUniqueId()</strong>](doc:ifdeviceinfo#getdeviceuniqueid-as-string) – The <code>roDeviceInfo.GetDeviceUniqueId()</code> method now returns a string of zeroes instead of the 12-character alphanumeric string for the device serial number. Developers should use the [<code>roDeviceInfo.GetChannelClientId()</code>](doc:ifdeviceinfo#getchannelclientid-as-string) method to get a 12-character device ID for their app.
-For an overview of the consumer features added in Roku OS 9.1, visit the Roku Blog.</li>
-</ul>
-<h2 id="roku-os-9">Roku OS 9</h2>
-<p><strong>Initial rollout date:</strong> October 23, 2018</p>
-<p>Roku OS 9 introduces a new manifest flag which adds drastic improvements to the memory footprint and launch times of Roku SceneGraph (RSG) apps. All RSG apps should set the &quot;rsg_version=1.2&quot; manifest entry to run the new, higher performing SceneGraph update. This update also adds memory profiling capabilities to the BrightScript Profiler tool, enabling developers to better identify memory leaks in their apps.</p>
-<p>Below is a list of new APIs, tools, performance enhancements, and media updates for developers.</p>
-<h4 id="scenegraph-enhancements">SceneGraph enhancements</h4>
-<ul>
-<li><strong>New manifest flag for &quot;rsg_version=1.2&quot;</strong> — By adding this new manifest entry, developers enable tremendous memory savings and app launch time improvements in RSG apps. [The &quot;rsg_version=1.2&quot; manifest entry](doc:channel-manifest#special-purpose-attributes) enables a new internal mechanism for processing component <script\> tags that optimizes the resulting compiled script code. This results in a major reduction in the app&#39;s initial startup time and uses dramatically less memory while preserving total compatibility. Initial startup time is typically reduced by approximately 30% when this manifest flag is set. Memory savings range from 10 - 20MiB in a moderately complex app, with up to 40MiB saved in a complex app with extensive component hierarchies.</li>
-<li><strong>eval() is no longer supported for &quot;rsg_version=1.2&quot;</strong> — In order to realize the load time performance and memory benefits enabled by the &quot;rsg_version=1.2&quot; entry, eval() can no longer be supported. Any use of eval() will cause compilation and runtime errors if &quot;rsg_version=1.2&quot; is in the app’s manifest.</li>
-<li><strong>Faster AssociativeArray access</strong> — Read and write access into and out of AssociativeArray fields on nodes, and retrieval of AssociativeArrays using roSGNodeEvent.getData() has been made 5x faster. The semantics of AssociativeArray fields are copy on read and write, and copy on roSGNodeEvent.getData(). Apps that heavily use AAs can expect dramatic speed increases that directly translate to user-perceivable operations.</li>
-<li><strong>Faster rendezvous</strong> — This change enables an auxiliary thread to handle rendezvous operations when the render thread is occupied with tasks that don&#39;t need rendezvous protection. The result is dramatic speed-ups for rendezvous operations, particularly on Roku devices with lesser processing power.</li>
-<li><strong>Faster component creation</strong> — Node creation times have been improved in Roku OS 9.</li>
-<li><strong>ZoomRowList component</strong> — [ZoomRowList](doc:zoomrowlist), a RowList component where the focused item is zoomed in, is now available for developers.</li>
-<li><strong>roSGNode.threadInfo() method</strong> — A new diagnostic function, [threadInfo()](doc:ifsgnodefield), has been added to the [ifSGNodeField](doc:ifsgnodefield) interface. With few exceptions, this function may be called from any component, on any thread, in any function, at any time.</li>
-</ul>
-<h4 id="new-brightscript-profiler-features">New BrightScript Profiler features</h4>
-<p>The [BrightScript Profiler](doc:brightscript-profiler) now includes a memory profiling tool that can be used to help developers identify memory leaks or memory that is allocated during app operation without ever being freed. Roku OS 9 also adds support for streaming of profiling data to a local network host.</p>
-<h4 id="media-drm-and-content-meta-data-updates">Media, DRM, and content meta-data updates</h4>
-<ul>
-<li><strong>Dash EventStream</strong> - Dash EventStream elements are supported in Roku OS 9.</li>
-<li><strong>[BETA] Opening Widevine DRM CBCS decryption mode</strong> — Roku OS 9 adds CBCS decryption support for [Widevine DRM](doc:content-protection#widevine) in DASH and HLS streams. At this stage, Widevine support is considered in beta on the Roku platform.</li>
-<li><strong>[BETA] DASH XLink support</strong> -  Roku OS 9 adds DASH XLink support, including EventStream events that are surfaced to the app through the [timedMetaData](doc:video#fields) field.</li>
-<li><strong>Widevine key rotation</strong> - Roku OS 9 also adds support for Widevine key rotation and license renewal for Dash and HLS content.</li>
-</ul>
-<h4 id="miscellaneous">Miscellaneous</h4>
-<ul>
-<li>New manifest entry for a &quot;game&quot; app — Developers can now set the [&quot;game&quot; manifest entry](doc:channel-manifest#special-purpose-attributes) (game=1) to avoid audio delays in their game apps.</li>
-<li>roList indexing is no longer disturbed by array index access — The behavior of roList indexing has been modified to yield more intuitive results and resolve bugs. As of Roku OS 9, when implementing roList, ifEnum enumeration and ifList enumeration will use a separate and independent internal &#39;pointers&#39; to the current element, instead of a &quot;current integer index&quot; variable. This has been done to ensure the ifList index position does not corrupt the roList index when the array read/write operators are used.</li>
-<li>Programmatic access to BIFs through BrightScript — Two new fields, getNearestFrame and nearestFrame, have been added to the [BifDisplay](doc:video#fields) component so that developers can now access BIFs programmatically in their apps. Previously a BrightScript app had to use the built-in trickplay UI to access these BIFs.</li>
-</ul>
-<p>For an overview of the consumer features added in Roku OS 9, visit the <a href="https://blog.roku.com/os-9-release-notes">Roku Blog</a>.</p>
 <h2 id="roku-os-8-2">Roku OS 8.2</h2>
 <p><strong>Initial rollout date:</strong> September 26, 2018</p>
 <p>Roku OS 8.2 is a firmware update focused primarily on firmware optimizations and bug fixes, along with new features that will enable Roku TV models to work seamlessly with the upcoming Roku TV Wireless Speakers. This update introduces no new features, APIs, console logs, or tooling about which developers should be mindful.</p>

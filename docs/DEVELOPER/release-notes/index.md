@@ -704,7 +704,7 @@ Roku OS 9.3 includes features to enhance the performance of media playback and R
 
 Finally, the Roku SceneGraph version defaults to version 1.2 as of Roku OS 9.3. As a result, **use of eval() will result in a compilation error.**
 
-> Apps using eval() will not run on Roku OS 9.3 (unless rsg_version has been set to 1.1, which is **not** recommended).  
+> Apps using eval() will not run on Roku OS 9.3 (unless rsg_version has been set to 1.1, which is **not** recommended).
 >
 > Developers **must** take immediate action to ensure that their apps do not use the eval() function, if at all possible. See "Architecture," below, for more details.
 
@@ -713,9 +713,9 @@ Here is a list of key developer-facing Roku OS 9.3 updates:
 #### API
 
 * **[New signal beacon for login and user selection dialogs](/docs/developer-program/performance-guide/measuring-channel-performance.md#measuring-channel-launch-times) ** — Developers can now measure loading times for dialogs and screens that are displayed before the app's home page (for example, login, user selection, and network error dialogs/screens).
-* **[HasFeature() now allows checking for soundbar hardware](/docs/references/brightscript/interfaces/ifdeviceinfo.md#hasfeaturefeature-as-string-as-boolean) ** — ifDeviceInfo.HasFeature() now accepts the feature string "soundbar_hardware". HasFeature() will return **true** if the device has soundbar hardware (i.e., speakers, the master volume of which can be changed directly by program control) but is *not* a Roku TV.
+* **[HasFeature() now allows checking for soundbar hardware](/docs/references/brightscript/interfaces/ifdeviceinfo.md#hasfeaturefeature-as-string-as-boolean) ** — ifDeviceInfo.HasFeature() now accepts the feature string "soundbar_hardware". HasFeature() will return **true** if the device has soundbar hardware (i.e., speakers, the master volume of which can be changed directly by program control) but is _not_ a Roku TV.
 * **[ifDeviceInfo.GetOSVersion() now includes a "revision" field](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getosversion-as-object) ** in the associative array returned by the method. This field corresponds to the third octet in the return value of the legacy GetVersion() method.
-* **[The SceneGraph RowList node now supports a fixedFocus option](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#fields) ** for the rowFocusAnimationStyle field. This option is similar to the existing fixedFocusWrap option, but *without* the latter's wrapping behavior during navigation.
+* **[The SceneGraph RowList node now supports a fixedFocus option](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#fields) ** for the rowFocusAnimationStyle field. This option is similar to the existing fixedFocusWrap option, but _without_ the latter's wrapping behavior during navigation.
 * **[Single-field observers can capture multiple-field "snapshots"](/docs/references/brightscript/interfaces/ifsgnodefield.md#setfieldfieldname-as-string-value-as-object-as-boolean) ** — The observeField() and observeFieldScoped() methods of SceneGraph nodes can now specify a list of additional fields (that are located in the same node as the primary field), the values of which will be captured when the state of the primary field changes. The corresponding roSGNodeEvent will provide those additional values via its GetInfo() method.
   <br />
 
@@ -733,7 +733,7 @@ Here is a list of key developer-facing Roku OS 9.3 updates:
 
 #### Architecture
 
-* **[rsg_version manifest flag defaults to 1.2](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) ** — The **rsg_version** attribute in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)  now defaults to 1.2 (**rsg_version=1.2**). As of Roku OS 9.0, setting the **rsg_version** attribute to 1.2 enables an internal mechanism for processing component \<script\> tags that optimizes the resulting compiled script code. This results in a reduced initial startup time and lesser memory usage while preserving compatibility.<br/><br/>The deprecated **eval()** function is not compatible with **rsg_version 1.2**; therefore, developers must do one of the following to keep their apps running if their apps use this function:<br/><br/>1. (Recommended) Remove all usage of the deprecated **eval()** function. If you are using the **eval()** function to initialize data, use the [parseJSON()](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-as-object)  function instead.<br/><br/>2. Update the **rsg_version** attribute in the manifest to **1.1** (**rsgversion=1.1**).
+* **[rsg_version manifest flag defaults to 1.2](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) ** — The **rsg_version** attribute in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)  now defaults to 1.2 (**rsg_version=1.2**). As of Roku OS 9.0, setting the **rsg_version** attribute to 1.2 enables an internal mechanism for processing component \<script> tags that optimizes the resulting compiled script code. This results in a reduced initial startup time and lesser memory usage while preserving compatibility.<br /><br />The deprecated **eval()** function is not compatible with **rsg_version 1.2**; therefore, developers must do one of the following to keep their apps running if their apps use this function:<br /><br />1. (Recommended) Remove all usage of the deprecated **eval()** function. If you are using the **eval()** function to initialize data, use the [parseJSON()](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-as-object)  function instead.<br /><br />2. Update the **rsg_version** attribute in the manifest to **1.1** (**rsgversion=1.1**).
   <br />
 
 #### Tools
@@ -779,6 +779,7 @@ Roku OS 9.1 adds new line-level debugging to the BrightScript Profiler tool, whi
 Below is a list of new APIs, media updates, and tools for developers. Changes to deprecated APIs are listed as well.
 
 > The `roDeviceInfo.GetDeviceUniqueId()` function now returns all zeros instead of a device ID.  Apps that are still using this function in an authentication flow will fail until an app update is published. Developers should migrate to the [`roDeviceInfo.GetChannelClientId()`](/docs/references/brightscript/interfaces/ifdeviceinfo.md#GetChannelClientId)  function to get a device ID for their app.
+>
 > > Key Roku OS 9.1 features:
 
 #### APIs
@@ -801,7 +802,7 @@ Below is a list of new APIs, media updates, and tools for developers. Changes to
 #### Changes to Deprecated APIs
 
 * [**roDeviceInfo.GetDeviceUniqueId()**](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdeviceuniqueid-as-string)  – The `roDeviceInfo.GetDeviceUniqueId()` method now returns a string of zeroes instead of the 12-character alphanumeric string for the device serial number. Developers should use the [`roDeviceInfo.GetChannelClientId()`](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string)  method to get a 12-character device ID for their app.
-    For an overview of the consumer features added in Roku OS 9.1, visit the Roku Blog.
+  For an overview of the consumer features added in Roku OS 9.1, visit the Roku Blog.
 
 ## Roku OS 9
 
@@ -813,7 +814,7 @@ Below is a list of new APIs, tools, performance enhancements, and media updates 
 
 #### SceneGraph enhancements
 
-* **New manifest flag for "rsg_version=1.2"** — By adding this new manifest entry, developers enable tremendous memory savings and app launch time improvements in RSG apps. [The "rsg_version=1.2" manifest entry](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)  enables a new internal mechanism for processing component \<script\> tags that optimizes the resulting compiled script code. This results in a major reduction in the app's initial startup time and uses dramatically less memory while preserving total compatibility. Initial startup time is typically reduced by approximately 30% when this manifest flag is set. Memory savings range from 10 - 20MiB in a moderately complex app, with up to 40MiB saved in a complex app with extensive component hierarchies.
+* **New manifest flag for "rsg_version=1.2"** — By adding this new manifest entry, developers enable tremendous memory savings and app launch time improvements in RSG apps. [The "rsg_version=1.2" manifest entry](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)  enables a new internal mechanism for processing component \<script> tags that optimizes the resulting compiled script code. This results in a major reduction in the app's initial startup time and uses dramatically less memory while preserving total compatibility. Initial startup time is typically reduced by approximately 30% when this manifest flag is set. Memory savings range from 10 - 20MiB in a moderately complex app, with up to 40MiB saved in a complex app with extensive component hierarchies.
 * **eval() is no longer supported for "rsg_version=1.2"** — In order to realize the load time performance and memory benefits enabled by the "rsg_version=1.2" entry, eval() can no longer be supported. Any use of eval() will cause compilation and runtime errors if "rsg_version=1.2" is in the app’s manifest.
 * **Faster AssociativeArray access** — Read and write access into and out of AssociativeArray fields on nodes, and retrieval of AssociativeArrays using roSGNodeEvent.getData() has been made 5x faster. The semantics of AssociativeArray fields are copy on read and write, and copy on roSGNodeEvent.getData(). Apps that heavily use AAs can expect dramatic speed increases that directly translate to user-perceivable operations.
 * **Faster rendezvous** — This change enables an auxiliary thread to handle rendezvous operations when the render thread is occupied with tasks that don't need rendezvous protection. The result is dramatic speed-ups for rendezvous operations, particularly on Roku devices with lesser processing power.
@@ -840,11 +841,15 @@ The [BrightScript Profiler](/docs/developer-program/dev-tools/brightscript-profi
 
 For an overview of the consumer features added in Roku OS 9, visit the [Roku Blog](https://blog.roku.com/os-9-release-notes) .
 
+## Roku OS 8.2
+
+**Initial rollout date:** September 26, 2018
+
+Roku OS 8.2 is a firmware update focused primarily on firmware optimizations and bug fixes, along with new features that will enable Roku TV models to work seamlessly with the upcoming Roku TV Wireless Speakers. This update introduces no new features, APIs, console logs, or tooling about which developers should be mindful.
+
+For our consumer release notes, [see here](https://support.roku.com/article/228844467-roku-os-software-release-notes).
+
 <HTMLBlock>{`
-<h2 id="roku-os-8-2">Roku OS 8.2</h2>
-<p><strong>Initial rollout date:</strong> September 26, 2018</p>
-<p>Roku OS 8.2 is a firmware update focused primarily on firmware optimizations and bug fixes, along with new features that will enable Roku TV models to work seamlessly with the upcoming Roku TV Wireless Speakers. This update introduces no new features, APIs, console logs, or tooling about which developers should be mindful.</p>
-<p>For our consumer release notes, <a href="https://support.roku.com/article/228844467-roku-os-software-release-notes">see here</a>.</p>
 <h2 id="roku-os-8-1">Roku OS 8.1</h2>
 <p><strong>Initial rollout date:</strong> May 1, 2018</p>
 <h4 id="media-drm-and-content-meta-data-updates">Media, DRM, and content meta-data updates</h4>

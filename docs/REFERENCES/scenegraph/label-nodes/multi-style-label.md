@@ -14,7 +14,7 @@ Extends [**LabelBase**](doc:label-base)
 
 The MultiStyleLabel node class is used to create labels with mixed styles. For example, this node can be used to create a single label with plain and bold text, different fonts, and/or multiple colors.
 
-![roku815px - img](https://image.roku.com/ZHZscHItMTc2/emoji-multistylelabel-v3.jpg)
+![roku815px - img](https://image.roku.com/ZHZscHItMTc2/emoji-multistylelabel-v3.png)
 
 ## Fields
 

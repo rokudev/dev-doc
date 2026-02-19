@@ -898,6 +898,124 @@ Below is a complete list of the APIs deprecated as of Roku OS 8.1.
 * **Mobile or ECP keypress events now appear in onKeyEvent()** — Literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](/docs/developer-program/dev-tools/external-control-api.md) keydown/keyup commands, now go to the [onKeyEvent()]() handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
 * **SimpleLabel** - Roku OS version 8.1 introduces [SimpleLabel](/docs/references/scenegraph/renderable-nodes/simplelabel.md) which is a lightweight complement node to the [Label](/docs/references/scenegraph/label-nodes/label.md) node. It supports simplified font style specification and is more memory efficient than the Label node.
 
+## Roku OS 8
+
+**Initial rollout date:** October 2, 2017
+
+#### Performance & optimization
+
+* **fps_display command** — A new
+      command, [fps_display](/docs/developer-program/debugging/debugging-channels.md) ,
+      has been added to Telnet port 8080 to display frames-per-second and
+      free memory on-screen. Developers can leverage this tool to optimize
+      their app UI.
+* **Registry ReadMulti and WriteMulti
+      APIs** — [roRegistrySection](/docs/references/brightscript/components/roregistrysection.md)  adds
+      two new APIs, **WriteMulti** and **ReadMulti** — to allow apps
+      to read/write multiple keys at a time.
+* **[BETA] New file system for data caching** — A new file
+      system, [cachefs:](/docs/developer-program/getting-started/architecture/file-system.md) ,
+      has been introduced to allow applications to cache data to volatile
+      or persistent storage. Users who extend the persistent storage
+      available on their device by adding an SD card will see the biggest
+      benefit as application data will survive reboots and benefit from
+      additional cache space to improve performance. Users without
+      extended storage will also benefit from the use of a shared
+      in-memory cache that is automatically managed by the system to
+      optimize for the most recently used assets.
+* **RSG platform performance improvements** — Many improvements have
+      been built into the Roku OS itself, enabling better support for
+      low-end devices. All apps automatically inherit these benefits,
+      with no action required from the developer.
+        - \<script\> include files no longer incur an expensive copy for
+          each component that includes it.
+        - The time penalty for rendezvous has been reduced.
+        - The per-node memory penalty has been significantly reduced.
+        - Image caching has been added for all apps.
+  <br />
+
+#### SceneGraph updates
+
+* **Support for RSG 1.0 functionality is deprecated** — Starting with
+      Roku OS 8, support for the
+      “[rsg\_version=1.0](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) ”
+      manifest flag is deprecated. This deprecation means that the 1.0
+      features continue to work in Roku OS 8, but will no longer be
+      supported (and thus should not be expected to work) starting with
+      our next major firmware release. Apps affected by the change in
+      Roku’s [observer callback model](/docs/developer-program/core-concepts/handling-application-events.md)  introduced
+      in Roku OS 7.5 should be updated accordingly.
+* **Video node updates** — Many new fields have been added to
+      the [Video](/docs/references/scenegraph/media-playback-nodes/video.md)  node:
+        - **captionStyle** allows apps to style closed captions.
+        - **contentBlocked** determines whether the current content is
+          blocked.
+        - **supplementaryAudioVolume** sets the volume of the description
+          tracks separately from the main audio track.
+        - **availableAudioTracks** has been updated to return/include
+          audio description tracks, which are typically seen on broadcast
+          TV.
+  * **itemHasFocus field for item components** — A new optional field
+        "itemHasFocus" has been added for RSG item components:
+        [MarkupList](/docs/references/scenegraph/layout-group-nodes/markuplist.md) ,
+        [MarkupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md) ,
+        [RowList](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md)  and
+        [TargetGroup](/docs/references/scenegraph/layout-group-nodes/targetgroup.md) .
+        It stores a boolean value that indicates whether the item component
+        currently is the focused item. Only one item component of any of the
+        nodes should have itemHasFocus set to true.
+  * **ParentalControlPinPad** — Roku OS 8 contains a new
+        node, [ParentalControlPinPad](/docs/references/scenegraph/renderable-nodes/rectangle.md) .
+        It is a variant of the PinPad component, but with a few key
+        differences:
+          - The pin, pinLength, and secureModefields are made private.
+          - If the user enters the correct pin, a 2-hour override of content
+            blocking begins, similar to the system behavior on Roku TV.
+          - If the user enters an incorrect PIN, the text fields are cleared
+            automatically.
+          - A new field, pinSuccess, exists for blocking content.
+  * **Rectangle node blendingEnabled support** — A blendingEnabled field
+        has been added to the
+        RSG [Rectangle](/docs/references/scenegraph/renderable-nodes/rectangle.md)  component
+        that specifies if the rectangle should be alpha blended with the
+        nodes behind it.
+
+#### System overlay & closed caption updates
+
+* **Improvements to the system overlay** — The behavior of the Roku
+      system overlay has been modified, such that the system overlay now
+      slides in whenever the * button is pressed, the Video node is in
+      focus, and the app does not have its OnKeyEvent() handler
+      fired. When the Video node is not in focus, the system overlay does
+      not slide in and the OnKeyEvent() handler is fired.
+* **System overlay notification event** — A new notification has been
+      added
+      to [roDeviceInfo](/docs/references/brightscript/components/rodeviceinfo.md) .
+      Apps can get notified when a system overlay is displayed.
+* **roDeviceInfoEvent update** — A new event,
+      isCaptionModeChangedEvent, has been added
+      to [roDeviceInfoEvent](/docs/references/brightscript/events/rodeviceinfoevent.md)  to
+      enable developers to check if the user changes the closed caption
+      mode or track.
+* **Closed caption track selection** — It is no longer necessary for a
+      app to partake in the CC track selection, apart from adding any
+      tracks to the list of available tracks. the Roku OS now selects a
+      CC track based on the preferred caption language selection in the
+      system preferences. When the selected language is not available, it
+      defaults to the system's UI language.
+
+#### Miscellaneous
+
+* **Case-preserving quoted keys in Associative Arrays** — The quoted
+      keys in [Associative Array](/docs/references/brightscript/components/roassociativearray.md) 
+      literals are now case-preserving. This change improves the
+      readability of your code and is compatible with JSON usage.
+* **CEC status events** — A [roCECStatusEvent](/docs/references/brightscript/events/rocecstatusevent.md)  has
+      been added for set-top-boxes to determine their active display
+      source status. Apps subscribing to the event will be notified
+      when the active-source status of the device changes per the CEC
+      message traffic.
+
 <HTMLBlock>{`
 <h2 id="roku-os-8">Roku OS 8</h2>
 <p><strong>Initial rollout date:</strong> October 2, 2017</p>

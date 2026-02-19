@@ -332,142 +332,131 @@ Here is the list of key developer-facing Roku OS 12.0 updates:
 
 * [**BrightScript debug protocol (version 3.2)**](/docs/developer-program/debugging/socket-based-debugger.md) — The [BrightScript debug protocol](/docs/developer-program/debugging/socket-based-debugger.md) now supports **ADD_CONDITIONAL_BREAKPOINTS** requests while the script is running. When this occurs, the breakpoints are registered, queued, and then applied as soon as processing allows. This eliminates the need to wait for the script to be paused in order to apply breakpoints. Instead, the breakpoints can now be applied based on the current device state. Developers should now use the **ADD_CONDITIONAL_BREAKPOINTS** command instead of **ADD_BREAKPOINTS** because ADD_CONDITIONAL_BREAKPOINTS is a strict superset of ADD_BREAKPOINTS.
 
+## Roku OS 11.5
+
+**Initial rollout date**: September 12, 2022
+
+Roku OS 11.5 includes new SceneGraph [Video](/docs/references/scenegraph/media-playback-nodes/video.md) and [Content](/docs/developer-program/getting-started/architecture/content-metadata.md) node fields that enhance the trickplay and pause screen experiences during video playback. This release also adds [device attestation tokens](/docs/references/scenegraph/control-nodes/channelstore.md#getdeviceattestationtoken) that developers can incorporate in their web services to verify that messages originated from authentic Roku devices.
+
+In addition, Roku OS 11.5 includes features that enhance the performance of media playback and Roku devices in general and expand platform support for industry standards covering content metadata.
+
+For tools, this release features the [Roku Resource Monitor](/docs/developer-program/dev-tools/resource-monitor.md): a new developer tool that tracks and visualizes the system memory, graphics memory, CPU, and SceneGraph nodes used by an app. Developers can use this tool to test the different screens in their app and identify consumption trends and patterns. In addition, this release includes new [External Control Protocol (ECP) query commands](/docs/developer-program/dev-tools/external-control-api.md#general-ecp-commands) that return rendezvous events and the entries in the device registry. Developers can incorporate these new queries in their test labs for debugging and performance monitoring. The [BrightScript Debug Protocol](/docs/developer-program/debugging/socket-based-debugger.md) now includes events for conditional breakpoints, compile errors in the main application and in component libraries, and improved breakpoint support for component libraries.
+
+It is important to note that Roku OS 11.5 sunsets the [SDK1 visual screen components that were originally deprecated in 2017](https://blog.roku.com/developer/legacy-sdk); these components have been completely removed from the Roku OS. In addition, the **roUrlTransfer.enableFreshConnection()** function has been deprecated—apps should always reuse connections.
+
+Here is the list of key developer-facing Roku OS 11.5 updates:
+
+#### SceneGraph APIs
+
+* **Playback UX** — Roku's SceneGraph [Video](/docs/references/scenegraph/media-playback-nodes/video.md) and [Content](/docs/developer-program/getting-started/architecture/content-metadata.md) nodes include new fields that enable developers to integrate playback features for the trickplay and pause screen experiences such as audio and subtitle selection, playlist features such as skip, next, and queues, and autoplay recommendation features such "More like this"/"Because you watched". Customers have become accustomed to this playback experience on The Roku Channel, and it is now available to apps across the platform.
+
+* **[Content.secondaryTitle](/docs/developer-program/getting-started/architecture/content-metadata.md#descriptive-attributes)**. Adds a secondary title for the video content. This field can be used to display the release year of movies, for example.
+
+* [**Video.playbackActionButtons**](/docs/references/scenegraph/media-playback-nodes/video.md#playback-fields). Shows the buttons and other specified UI elements on the pause screen at the start of playback. This field includes properties for the button text, icon, and status (enabled/disabled). Related fields identify which pause screen button is selected and has key focus, and sets the button color, text color, and background color based on whether the button has key focus.
+
+* [**Video.pivotNode**](/docs/references/scenegraph/media-playback-nodes/video.md#ui-fields). Adds a generic renderable node that can be used to display any SceneGraph component.
+
+* [**Video.trickPlayBackgroundOverlay**](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields). Specifies the background overlay to be displayed whenever the playback UI is visible during the video playback experience.
+
+* [**Option to disable focus animations in ArrayGrid nodes**](/docs/references/scenegraph/abstract-nodes/arraygrid.md) — Developers can use the new **ArrayGrid.skipFocusAnimations** field to completely disable animations on ArrayGrid child nodes such as the **MarkupGrid** and **MarkupList** components. For apps implementing custom focus logic, this field can be used to eliminate the reported ~300ms period in which no component has focus after a keypress.
+
+* [**Device attestation token**](/docs/references/scenegraph/control-nodes/channelstore.md#getdeviceattestationtoken) — Developers can use the new [**ChannelStore** **getDeviceAttestationToken** command](/docs/references/scenegraph/control-nodes/channelstore.md#getdeviceattestationtoken) to generate a signed JSON web token (JWT) in the Roku cloud and return it to the application. This token can then be passed to the publisher's web services to verify that messages originated from genuine Roku devices. A [**getDeviceAttestation()** function](/docs/references/brightscript/interfaces/ifchannelstore.md#getdeviceattestationtokennonce-as-string-as-object) has also been added to **roChannelStore** component. This token is meant to replace the functionality previously provided by the device client certificates.
+
+#### BrightScript APIs
+
+* [**Continue statements**](/docs/references/brightscript/language/program-statements.md#continue-for--continue-while) — Developers can now insert `continue` statements in `for` and `while` loops. This terminates the execution of the statements in the current iteration of the loop, and then continues execution of the loop with the next iteration.
+
+#### Tools
+
+* [**Roku Resource Monitor**](/docs/developer-program/dev-tools/resource-monitor.md) — The Roku Resource Monitor tracks and visualizes the system memory, graphics memory, CPU, and SceneGraph nodes used by an app. This enables developers to test the different screens in their app and identify consumption trends and patterns. This new developer tool is intended to be used in conjunction with the BrightScript Profiler to improve app performance. For example, if the Roku Resource Monitor consistently shows increased consumption with a specific action on a screen, developers can use the BrightScript Profiler to further drill down into the application and pinpoint where to optimize the code.
+
+* [**New ECP query commands for performance monitoring and debugging apps**](/docs/developer-program/dev-tools/external-control-api.md#general-ecp-commands) — Developers can use the following new ECP query commands to monitor the performance of their apps and debug the apps: **query/sgrendezvous** and **query/registry**. These queries return rendezvous events and the entries in the device registry, respectively. Developers can leverage these commands, which were previously only available via the debug console, in their tools and web services.
+
+* [**Enhanced ECP query commands**](/docs/developer-program/dev-tools/external-control-api.md#general-ecp-commands) — The following ECP commands have been improved for the Roku OS 11.5 release:
+
+  * **query/r2d2-bitmaps**. This command now returns the file name for any asset in texture memory that cannot be attributed directly to a plug-in. In Roku OS 11.0, assets that could not be associated with a plug-in were omitted from the response.
+
+  * **query/sgnodes**. This command can now be called with a specific **channel-id**, which enables it to be used on background apps. The response now includes a **node-count** field.
+
+* [**BrightScript debug protocol updates**](/docs/developer-program/debugging/socket-based-debugger.md) — The BrightScript debug protocol (version 3.1) now includes events for compile errors in the main application and in component libraries, conditional breakpoints, and improved breakpoint support for component libraries.
+
+* [**Improved app compression from** **Development Application Installer**](/docs/developer-program/publishing/packaging-channels.md#packaging-with-the-development-application-installer) — The default compression algorithm in the Development Application installer has been changed to **squashfs (zstd)** from **gzip** for sideloaded apps. In addition, the conversion option **squashfs (gzip)** has been changed to **gzip**. This generally reduces the package file size.
+
+#### Architecture
+
+* **Fonts** — The system fonts have been updated to provide better support for monospaced numerals. As a result, the width of characters may have changed slightly. Developers should make sure to leave space for text to expand or collapse some percentage in their app UI. Developers should not rely on exact font metrics to avoid Label nodes from being truncated or multi-line labels having varied line wrapping.
+
+#### Deprecated/Sunset APIs
+
+* [**SDK1 visual screen components sunset**](/docs/references/deprecated-apis.md#deprecated-components-january-1-2018) — The [SDK1 visual screen components that were deprecated in 2017](https://blog.roku.com/developer/legacy-sdk) have been completely removed from the Roku OS. As a result, apps that still had these [sunset components](https://developer.roku.com/docs/references/deprecated-apis.md#deprecated-components-january-1-2018) as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).
+
+* **[roUrlTransfer.enableFreshConnection()](/docs/references/deprecated-apis.md#rourltransferenablefreshconnection)** — The Roku OS no longer supports the [**roUrlTransfer.enableFreshConnection()** function](/docs/references/brightscript/interfaces/ifurltransfer.md#enablefreshconnectionenable-as-boolean-as-boolean). Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).
+
+## Roku OS 11.0
+
+**Initial rollout date**: March 22, 2022
+
+Roku OS 11.0 features new SceneGraph standard dialog framework components for adding multi-style text, images/notes, and button and checkbox icons to custom dialogs; BrightScript optional chaining operators for efficiently accessing possible undefined values; and ChannelStore APIs for displaying a customer's information in the Request for Information (RFI) sign-up screen. Developers of authenticated free and advertising-based video on demand (AVOD) apps can now display the RFI screen without having to first enroll in the Roku Partner Payouts Program.
+
+In addition, Roku OS 11.0 improves trick play for live linear streams, and it includes features that enhance the performance of media playback and Roku devices in general and expand platform support for industry standards covering content metadata.
+
+For tools, this release adds new External Control Protocol (ECP) query commands for debugging apps that developers can incorporate in their web services and then leverage in their test suite, and minor updates to the BrightScript debug protocol.
+
+Below is a list of key developer-facing Roku OS 11.0 updates:
+
+#### SceneGraph APIs
+
+* **New standard dialog framework nodes** — Roku's Standard Dialog Framework includes the following new nodes that enable developers to decorate or annotate custom dialogs and highlight the grouping of radio button and checkbox options in them:
+
+  * **[StdDlgMultiStyleTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-multi-style-text-item.md)**. A line of text with multiple styles in the content area of a custom dialog. The text may include, for example, plain and bold characters, different fonts, multiple colors, and/or emojis.
+
+  * [**StdDlgSideCardArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-side-card-area.md).  A freeform area on the right or left side of a custom dialog that developers can use to display images or notes.
+
+  * **[StdDlgActionCardItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-action-card-item.md)**. Highlighting for the child items in the content area of a custom dialog. This node enables developers to add a "more info" arrow icon, radio button icon, or check box icon to the items in the content area.
+
+  * [**StdDlgItemGroup**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-group.md). Visual grouping for a set of StdDlgAreaBase child nodes in a custom dialog. Developers can use this node to reduce the vertical spacing between the StdDlgItemBase child nodes in the dialog.
+
+* **[Option for Label and TextEditBox nodes to display the end of overflowing text](/docs/references/scenegraph/label-nodes/label.md#fields)** — The [**Label**](/docs/references/scenegraph/label-nodes/label.md#fields) and [**TextEditBox**](docs/references/scenegraph/widget-nodes/texteditbox.md) nodes now include a **leadingEllipsis** flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog". When the flag is false, the start of the text is shown ("the quick brown fox jumps...").
+
+* [**Voice keyboard enhancements**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md#fields) — The SceneGraph [**DynamicKeyboardBase**](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/dynamic-keyboard-base.md#fields)) node class now includes a **hideTextBox** flag that enables developers to hide a voice keyboard's VoiceTextEditBox.
+
+#### BrightScript APIs
+
+* [**BrightScript optional chaining operators**](/docs/references/brightscript/language/expressions-variables-types.md#optional-chaining-operators) — Developers can use optional chaining operators, "?.", "?@", "?[", and "?(", in their BrightScript code to access possibly invalid values. This enables developers to execute more concise, higher-performing code. The optional chaining operators are used to read the value of a property nested within a chain of connected objects without having to first check whether each reference in the chain does not return the BrightScript value of "invalid". If testing a reference results in "invalid", the expression short-circuits and returns "invalid".
+
+* [**Tagging of unused variables**](/docs/references/brightscript/language/expressions-variables-types.md#types) — Developers can now explicitly mark variables as unused in their BrightScript code by prepending an underscore to the value (for example, sub myTask(__x_)). This enables developers to avoid compilation errors when the unused variable has a valid purpose.
+
+#### Roku Pay APIs
+
+* [**RFI sign-up screen option to display requested customer information**](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) — The [**ChannelStore.requestedUserDataInfo**](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) associative array now includes an optional **forceShowData** flag. When this flag is enabled, the RFI sign-up screen displays the actual customer information values to be shared with the app instead of just the types of information. For example, if the email address, first name, and last name are requested for sign-ups and the **forceShowData** flag is enabled, the "Let's create your account" RFI screen explicitly lists the customer's actual email address and name in bold text (for example, **Bob** **Smith**, **[bsmith@roku.com](mailto:bsmith@roku.com)**). If this flag is disabled and the customer is in the United States, the RFI screen displays "share your name and email address".
+
+* **Direct access to RFI screen for authenticated free and AVOD apps** — Developers of authenticated free and AVOD apps can now use the ChannelStore [**getUserData**](/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata) and [**getPartialUserData**](/docs/references/brightscript/interfaces/ifchannelstore.md#getpartialuserdataproperties-as-string-requestinfo-as-object-as-object) APIs to display an RFI screen when customers sign up or sign in to the app—without having to first enroll in the [Roku Partner Payouts Program](/docs/developer-program/roku-pay/quickstart/partner-payouts.md). In this case, the RFI sign-up screen can request or display the customer's email address, phone number, and zip code; the RFI sign-in screen can request or display the customer's email address and phone number.
+
+#### Media, DRM, and content metadata updates
+
+* **Improved trick play for live linear streams** — The [**Video**](/docs/references/scenegraph/media-playback-nodes/video.md) node includes the following new fields to help developers improve the user experience for trick play during live linear streams:
+
+  * A [**trickplay.liveFilledBarBlendColor**](/docs/references/scenegraph/media-playback-nodes/video.md#playback-fields) field that lets developers specify the color for the trick play progress bar during live linear streams. This color is blended with the **filledBarImageUri**.
+
+  * An [**enableLiveAvailabilityWindow**](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) field that lets developers enable scrubbing of the trick play bar during the availability window of live linear streams.
+
+  * An [**enableThumbnailTilesDuringLive**](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) flag that lets developers specify whether the **Video** node should report the thumbnail tiles in the **thumbnailTiles** field for live linear streams (the **thumbnailTiles** field will be added to the Video node documentation as part of the Roku OS 11.0 release).
+
+* [**Video decoder statistics**](/docs/references/scenegraph/media-playback-nodes/video.md#playback-fields) — The [**Video**](/docs/references/scenegraph/media-playback-nodes/video.md) node includes a new **decoderStats** field that provides developers with additional video playback information such as the number of frames rendered, repeated, and dropped, and the number of bit stream errors since playback started. Also included is a new **enableDecoderStats** field that allows the **decoderStats** field to receive updates.
+
+* [**Muting of audio during video playback**](/docs/references/brightscript/interfaces/ifvideoplayer.md#setenableaudioenable-as-boolean-as-void) — The [**roVideoPlayer**](/docs/references/brightscript/interfaces/ifvideoplayer.md#setenableaudioenable-as-boolean-as-void) component now includes a **SetEnableAudio()** function that enables developers to mute the audio during video playback. This is useful, for example, for implementing a video preview feature in an app.
+
+* [**Check whether the TV screen is on/off**](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdisplayproperties-as-object) — The [**ifDeviceInfo.GetDisplayProperties()**](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdisplayproperties-as-object) function now returns a new **visible** field that enables developers to check whether the TV screen is on/off. Customers can turn off their TV display while streaming an app in order to continue listening to the audio (for example, when playing music videos, conferences, or podcasts).
+
+* **ttp:timebase support added for DASH/TTML** — The Roku OS now supports ttp:timebase for activating subtitles.
+
+#### Tools
+
+* [**ECP query commands for debugging channels**](/docs/developer-program/dev-tools/external-control-api.md#general-ecp-commands) — Developers can use the following new ECP query commands to help debug their apps: [**query/chanperf**](/docs/developer-program/dev-tools/external-control-api.md#querychanperf-example), [**query/r2d2-bitmaps**](/docs/developer-program/dev-tools/external-control-api.md#queryr2d2-bitmaps-example), **and [query/sgnodes/[all | root | nodes?node-id=*nodeId*]](/docs/developer-program/dev-tools/external-control-api.md#querysgnodesall-example)**. Developers can leverage these debugging commands, which were previously only available via the debug console, in their web services.
+
+* [**BrightScript debug protocol updates**](/docs/developer-program/debugging/socket-based-debugger.md#debugging-target-startup-sequence) — The BrightScript debug protocol includes the following new features: a **platform_revision_timestamp** field for the initial handshake, a **packet_length** field that is included with all packets from the debugger, and runtime errors for the [EXECUTE debug response format](/docs/developer-program/debugging/socket-based-debugger.md#debugger-response-format).
+
 <HTMLBlock>{`
-<h2 id="roku-os-11-5">Roku OS 11.5</h2>
-<p><strong>Initial rollout date</strong>: September 12, 2022</p>
-<p>Roku OS 11.5 includes new SceneGraph [Video](doc:video) and [Content](doc:content-metadata) node fields that enhance the trickplay and pause screen experiences during video playback. This release also adds [device attestation tokens](doc:channelstore#getdeviceattestationtoken) that developers can incorporate in their web services to verify that messages originated from authentic Roku devices.</p>
-<p>In addition, Roku OS 11.5 includes features that enhance the performance of media playback and Roku devices in general and expand platform support for industry standards covering content metadata.</p>
-<p>For tools, this release features the [Roku Resource Monitor](doc:resource-monitor): a new developer tool that tracks and visualizes the system memory, graphics memory, CPU, and SceneGraph nodes used by an app. Developers can use this tool to test the different screens in their app and identify consumption trends and patterns. In addition, this release includes new [External Control Protocol (ECP) query commands](doc:external-control-api#general-ecp-commands) that return rendezvous events and the entries in the device registry. Developers can incorporate these new queries in their test labs for debugging and performance monitoring. The [BrightScript Debug Protocol](doc:socket-based-debugger) now includes events for conditional breakpoints, compile errors in the main application and in component libraries, and improved breakpoint support for component libraries.</p>
-<p>It is important to note that Roku OS 11.5 sunsets the <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were originally deprecated in 2017</a>; these components have been completely removed from the Roku OS. In addition, the <strong>roUrlTransfer.enableFreshConnection()</strong> function has been deprecated—apps should always reuse connections.</p>
-<p>Here is the list of key developer-facing Roku OS 11.5 updates:</p>
-<h4 id="scenegraph-apis">SceneGraph APIs</h4>
-<ul>
-<li><strong>Playback UX</strong> — Roku&#39;s SceneGraph [Video](doc:video) and [Content](doc:content-metadata) nodes include new fields that enable developers to integrate playback features for the trickplay and pause screen experiences such as audio and subtitle selection, playlist features such as skip, next, and queues, and autoplay recommendation features such &quot;More like this&quot;/&quot;Because you watched&quot;. Customers have become accustomed to this playback experience on The Roku Channel, and it is now available to apps across the platform.</li>
-<li><p><strong>[Content.secondaryTitle](doc:content-metadata#descriptive-attributes)</strong>. Adds a secondary title for the video content. This field can be used to display the release year of movies, for example.</p>
-</li>
-<li><p>[<strong>Video.playbackActionButtons</strong>](doc:video#playback-fields). Shows the buttons and other specified UI elements on the pause screen at the start of playback. This field includes properties for the button text, icon, and status (enabled/disabled). Related fields identify which pause screen button is selected and has key focus, and sets the button color, text color, and background color based on whether the button has key focus.</p>
-</li>
-<li><p>[<strong>Video.pivotNode</strong>](doc:video#ui-fields). Adds a generic renderable node that can be used to display any SceneGraph component.</p>
-</li>
-<li><p>[<strong>Video.trickPlayBackgroundOverlay</strong>](doc:video#trickplay-fields). Specifies the background overlay to be displayed whenever the playback UI is visible during the video playback experience.</p>
-</li>
-</ul>
-<ul>
-<li>[<strong>Option to disable focus animations in ArrayGrid nodes</strong>](doc:arraygrid) — Developers can use the new <strong>ArrayGrid.skipFocusAnimations</strong> field to completely disable animations on ArrayGrid child nodes such as the <strong>MarkupGrid</strong> and <strong>MarkupList</strong> components. For apps implementing custom focus logic, this field can be used to eliminate the reported ~300ms period in which no component has focus after a keypress.</li>
-</ul>
-<ul>
-<li>[<strong>Device attestation token</strong>](doc:channelstore#getdeviceattestationtoken) — Developers can use the new [<strong>ChannelStore</strong> <strong>getDeviceAttestationToken</strong> command](doc:channelstore#getdeviceattestationtoken) to generate a signed JSON web token (JWT) in the Roku cloud and return it to the application. This token can then be passed to the publisher&#39;s web services to verify that messages originated from genuine Roku devices. A [<strong>getDeviceAttestation()</strong> function](doc:ifchannelstore#getdeviceattestationtokennonce-as-string-as-object) has also been added to <strong>roChannelStore</strong> component. This token is meant to replace the functionality previously provided by the device client certificates.</li>
-</ul>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<ul>
-<li>[<strong>Continue statements</strong>](doc:program-statements#continue-for--continue-while) — Developers can now insert <code>continue</code> statements in <code>for</code> and <code>while</code> loops. This terminates the execution of the statements in the current iteration of the loop, and then continues execution of the loop with the next iteration.</li>
-</ul>
-<h4 id="tools">Tools</h4>
-<ul>
-<li>[<strong>Roku Resource Monitor</strong>](doc:resource-monitor) — The Roku Resource Monitor tracks and visualizes the system memory, graphics memory, CPU, and SceneGraph nodes used by an app. This enables developers to test the different screens in their app and identify consumption trends and patterns. This new developer tool is intended to be used in conjunction with the BrightScript Profiler to improve app performance. For example, if the Roku Resource Monitor consistently shows increased consumption with a specific action on a screen, developers can use the BrightScript Profiler to further drill down into the application and pinpoint where to optimize the code.</li>
-</ul>
-<ul>
-<li>[<strong>New ECP query commands for performance monitoring and debugging apps</strong>](doc:external-control-api#general-ecp-commands) — Developers can use the following new ECP query commands to monitor the performance of their apps and debug the apps: <strong>query/sgrendezvous</strong> and <strong>query/registry</strong>. These queries return rendezvous events and the entries in the device registry, respectively. Developers can leverage these commands, which were previously only available via the debug console, in their tools and web services.</li>
-</ul>
-<ul>
-<li><p>[<strong>Enhanced ECP query commands</strong>](doc:external-control-api#general-ecp-commands) — The following ECP commands have been improved for the Roku OS 11.5 release:</p>
-<ul>
-<li><p><strong>query/r2d2-bitmaps</strong>. This command now returns the file name for any asset in texture memory that cannot be attributed directly to a plug-in. In Roku OS 11.0, assets that could not be associated with a plug-in were omitted from the response.</p>
-</li>
-<li><p><strong>query/sgnodes</strong>. This command can now be called with a specific <strong>channel-id</strong>, which enables it to be used on background apps. The response now includes a <strong>node-count</strong> field.</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>[<strong>BrightScript debug protocol updates</strong>](doc:socket-based-debugger) — The BrightScript debug protocol (version 3.1) now includes events for compile errors in the main application and in component libraries, conditional breakpoints, and improved breakpoint support for component libraries.</li>
-</ul>
-<ul>
-<li>[<strong>Improved app compression from</strong> <strong>Development Application Installer</strong>](doc:packaging-channels#packaging-with-the-development-application-installer) — The default compression algorithm in the Development Application installer has been changed to <strong>squashfs (zstd)</strong> from <strong>gzip</strong> for sideloaded apps. In addition, the conversion option <strong>squashfs (gzip)</strong> has been changed to <strong>gzip</strong>. This generally reduces the package file size.</li>
-</ul>
-<h4 id="architecture">Architecture</h4>
-<ul>
-<li><strong>Fonts</strong> — The system fonts have been updated to provide better support for monospaced numerals. As a result, the width of characters may have changed slightly. Developers should make sure to leave space for text to expand or collapse some percentage in their app UI. Developers should not rely on exact font metrics to avoid Label nodes from being truncated or multi-line labels having varied line wrapping.</li>
-</ul>
-<h4 id="deprecated-sunset-apis">Deprecated/Sunset APIs</h4>
-<ul>
-<li><p>[<strong>SDK1 visual screen components sunset</strong>](doc:deprecated-apis#deprecated-components-january-1-2018) — The <a href="https://blog.roku.com/developer/legacy-sdk">SDK1 visual screen components that were deprecated in 2017</a> have been completely removed from the Roku OS. As a result, apps that still had these <a href="https://roku-ent.readme.io/dev/docs/deprecated-apis#deprecated-components-january-1-2018">sunset components</a> as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).</p>
-</li>
-<li><p><strong>[roUrlTransfer.enableFreshConnection()](doc:deprecated-apis#rourltransferenablefreshconnection)</strong> — The Roku OS no longer supports the [<strong>roUrlTransfer.enableFreshConnection()</strong> function](doc:ifurltransfer#enablefreshconnectionenable-as-boolean-as-boolean). Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).</p>
-</li>
-</ul>
-<h2 id="roku-os-11-0">Roku OS 11.0</h2>
-<p><strong>Initial rollout date</strong>: March 22, 2022</p>
-<p>Roku OS 11.0 features new SceneGraph standard dialog framework components for adding multi-style text, images/notes, and button and checkbox icons to custom dialogs; BrightScript optional chaining operators for efficiently accessing possible undefined values; and ChannelStore APIs for displaying a customer&#39;s information in the Request for Information (RFI) sign-up screen. Developers of authenticated free and advertising-based video on demand (AVOD) apps can now display the RFI screen without having to first enroll in the Roku Partner Payouts Program.</p>
-<p>In addition, Roku OS 11.0 improves trick play for live linear streams, and it includes features that enhance the performance of media playback and Roku devices in general and expand platform support for industry standards covering content metadata.</p>
-<p>For tools, this release adds new External Control Protocol (ECP) query commands for debugging apps that developers can incorporate in their web services and then leverage in their test suite, and minor updates to the BrightScript debug protocol.</p>
-<p>Below is a list of key developer-facing Roku OS 11.0 updates:</p>
-<h4 id="scenegraph-apis">SceneGraph APIs</h4>
-<ul>
-<li><p><strong>New standard dialog framework nodes</strong> — Roku&#39;s Standard Dialog Framework includes the following new nodes that enable developers to decorate or annotate custom dialogs and highlight the grouping of radio button and checkbox options in them:</p>
-<ul>
-<li><p><strong>[StdDlgMultiStyleTextItem](doc:std-dlg-multi-style-text-item)</strong>. A line of text with multiple styles in the content area of a custom dialog. The text may include, for example, plain and bold characters, different fonts, multiple colors, and/or emojis.</p>
-</li>
-<li><p>[<strong>StdDlgSideCardArea</strong>](doc:std-dlg-side-card-area).  A freeform area on the right or left side of a custom dialog that developers can use to display images or notes.</p>
-</li>
-<li><p><strong>[StdDlgActionCardItem](doc:std-dlg-action-card-item)</strong>. Highlighting for the child items in the content area of a custom dialog. This node enables developers to add a &quot;more info&quot; arrow icon, radio button icon, or check box icon to the items in the content area.</p>
-</li>
-<li><p>[<strong>StdDlgItemGroup</strong>](doc:std-dlg-item-group). Visual grouping for a set of StdDlgAreaBase child nodes in a custom dialog. Developers can use this node to reduce the vertical spacing between the StdDlgItemBase child nodes in the dialog.</p>
-</li>
-</ul>
-</li>
-<li><p><strong>[Option for Label and TextEditBox nodes to display the end of overflowing text](doc:label#fields)</strong> — The [<strong>Label</strong>](doc:label#fields) and <a href="docs/references/scenegraph/widget-nodes/texteditbox"><strong>TextEditBox</strong></a> nodes now include a <strong>leadingEllipsis</strong> flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, &quot;the quick brown fox jumps over the lazy dog&quot; would be truncated to &quot;...jumps over the lazy dog&quot;. When the flag is false, the start of the text is shown (&quot;the quick brown fox jumps...&quot;).</p>
-</li>
-</ul>
-<ul>
-<li>[<strong>Voice keyboard enhancements</strong>](doc:dynamic-keyboard-base#fields) — The SceneGraph [<strong>DynamicKeyboardBase</strong>](doc:dynamic-keyboard-base#fields)) node class now includes a <strong>hideTextBox</strong> flag that enables developers to hide a voice keyboard&#39;s VoiceTextEditBox.</li>
-</ul>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<ul>
-<li>[<strong>BrightScript optional chaining operators</strong>](doc:expressions-variables-types#optional-chaining-operators) — Developers can use optional chaining operators, &quot;?.&quot;, &quot;?@&quot;, &quot;?[&quot;, and &quot;?(&quot;, in their BrightScript code to access possibly invalid values. This enables developers to execute more concise, higher-performing code. The optional chaining operators are used to read the value of a property nested within a chain of connected objects without having to first check whether each reference in the chain does not return the BrightScript value of &quot;invalid&quot;. If testing a reference results in &quot;invalid&quot;, the expression short-circuits and returns &quot;invalid&quot;.</li>
-</ul>
-<ul>
-<li>[<strong>Tagging of unused variables</strong>](doc:expressions-variables-types#types) — Developers can now explicitly mark variables as unused in their BrightScript code by prepending an underscore to the value (for example, sub myTask(<em>_x</em>)). This enables developers to avoid compilation errors when the unused variable has a valid purpose.</li>
-</ul>
-<h4 id="roku-pay-apis">Roku Pay APIs</h4>
-<ul>
-<li>[<strong>RFI sign-up screen option to display requested customer information</strong>](doc:channelstore#requesteduserdatainfo) — The [<strong>ChannelStore.requestedUserDataInfo</strong>](doc:channelstore#requesteduserdatainfo) associative array now includes an optional <strong>forceShowData</strong> flag. When this flag is enabled, the RFI sign-up screen displays the actual customer information values to be shared with the app instead of just the types of information. For example, if the email address, first name, and last name are requested for sign-ups and the <strong>forceShowData</strong> flag is enabled, the &quot;Let&#39;s create your account&quot; RFI screen explicitly lists the customer&#39;s actual email address and name in bold text (for example, <strong>Bob</strong> <strong>Smith</strong>, <strong>bsmith@roku.com</strong>). If this flag is disabled and the customer is in the United States, the RFI screen displays &quot;share your name and email address&quot;.</li>
-</ul>
-<ul>
-<li><strong>Direct access to RFI screen for authenticated free and AVOD apps</strong> — Developers of authenticated free and AVOD apps can now use the ChannelStore [<strong>getUserData</strong>](doc:channelstore#getuserdata) and [<strong>getPartialUserData</strong>](doc:ifchannelstore#getpartialuserdataproperties-as-string-requestinfo-as-object-as-object) APIs to display an RFI screen when customers sign up or sign in to the app—without having to first enroll in the [Roku Partner Payouts Program](doc:partner-payouts). In this case, the RFI sign-up screen can request or display the customer&#39;s email address, phone number, and zip code; the RFI sign-in screen can request or display the customer&#39;s email address and phone number.</li>
-</ul>
-<h4 id="media-drm-and-content-metadata-updates">Media, DRM, and content metadata updates</h4>
-<ul>
-<li><p><strong>Improved trick play for live linear streams</strong> — The [<strong>Video</strong>](doc:video) node includes the following new fields to help developers improve the user experience for trick play during live linear streams:</p>
-<ul>
-<li><p>A [<strong>trickplay.liveFilledBarBlendColor</strong>](doc:video#playback-fields) field that lets developers specify the color for the trick play progress bar during live linear streams. This color is blended with the <strong>filledBarImageUri</strong>.</p>
-</li>
-<li><p>An [<strong>enableLiveAvailabilityWindow</strong>](doc:video#trickplay-fields) field that lets developers enable scrubbing of the trick play bar during the availability window of live linear streams.</p>
-</li>
-<li><p>An [<strong>enableThumbnailTilesDuringLive</strong>](doc:video#trickplay-fields) flag that lets developers specify whether the <strong>Video</strong> node should report the thumbnail tiles in the <strong>thumbnailTiles</strong> field for live linear streams (the <strong>thumbnailTiles</strong> field will be added to the Video node documentation as part of the Roku OS 11.0 release).</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>[<strong>Video decoder statistics</strong>](doc:video#playback-fields) — The [<strong>Video</strong>](doc:video) node includes a new <strong>decoderStats</strong> field that provides developers with additional video playback information such as the number of frames rendered, repeated, and dropped, and the number of bit stream errors since playback started. Also included is a new <strong>enableDecoderStats</strong> field that allows the <strong>decoderStats</strong> field to receive updates.</li>
-</ul>
-<ul>
-<li>[<strong>Muting of audio during video playback</strong>](doc:ifvideoplayer#setenableaudioenable-as-boolean-as-void) — The [<strong>roVideoPlayer</strong>](doc:ifvideoplayer#setenableaudioenable-as-boolean-as-void) component now includes a <strong>SetEnableAudio()</strong> function that enables developers to mute the audio during video playback. This is useful, for example, for implementing a video preview feature in an app.</li>
-</ul>
-<ul>
-<li>[<strong>Check whether the TV screen is on/off</strong>](doc:ifdeviceinfo#getdisplayproperties-as-object) — The [<strong>ifDeviceInfo.GetDisplayProperties()</strong>](doc:ifdeviceinfo#getdisplayproperties-as-object) function now returns a new <strong>visible</strong> field that enables developers to check whether the TV screen is on/off. Customers can turn off their TV display while streaming an app in order to continue listening to the audio (for example, when playing music videos, conferences, or podcasts).  </li>
-</ul>
-<ul>
-<li><strong>ttp:timebase support added for DASH/TTML</strong> — The Roku OS now supports ttp:timebase for activating subtitles.</li>
-</ul>
-<h4 id="tools">Tools</h4>
-<ul>
-<li>[<strong>ECP query commands for debugging channels</strong>](doc:external-control-api#general-ecp-commands) — Developers can use the following new ECP query commands to help debug their apps: [<strong>query/chanperf</strong>](doc:external-control-api#querychanperf-example), [<strong>query/r2d2-bitmaps</strong>](doc:external-control-api#queryr2d2-bitmaps-example), <strong>and [query/sgnodes/[all | root | nodes?node-id=*nodeId*]](doc:external-control-api#querysgnodesall-example)</strong>. Developers can leverage these debugging commands, which were previously only available via the debug console, in their web services.</li>
-</ul>
-<ul>
-<li>[<strong>BrightScript debug protocol updates</strong>](doc:socket-based-debugger#debugging-target-startup-sequence) — The BrightScript debug protocol includes the following new features: a <strong>platform_revision_timestamp</strong> field for the initial handshake, a <strong>packet_length</strong> field that is included with all packets from the debugger, and runtime errors for the [EXECUTE debug response format](doc:socket-based-debugger#debugger-response-format).</li>
-</ul>
 <h2 id="roku-os-10-5">Roku OS 10.5</h2>
 <p><strong>Initial rollout date</strong>: September 20, 2021</p>
 <p>Roku OS 10.5 includes a SceneGraph component for creating lines of text with different fonts, colors, and sizes; a SceneGraph component for displaying help with app settings; and ChannelStore APIs for checking whether a subscription should be placed on hold because it is in recovery.</p>

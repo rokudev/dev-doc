@@ -849,6 +849,55 @@ Roku OS 8.2 is a firmware update focused primarily on firmware optimizations and
 
 For our consumer release notes, [see here](https://support.roku.com/article/228844467-roku-os-software-release-notes).
 
+## Roku OS 8.1
+
+**Initial rollout date:** May 1, 2018
+
+#### Media, DRM, and content meta-data updates
+
+* **PlayReady 3 Update** — All Roku devices with MStar chips update to the [PlayReady 3](/docs/specs/media/content-protection.md#playready) library with Roku OS 8.1. Previously they included PlayReady 2.5.
+* **[BETA] Opening Access to Widevine DRM** — Roku OS 8.1 adds support for [Widevine DRM](/docs/specs/media/content-protection.md#widevine) for DASH streams. At this stage, Widevine support is considered in beta on the Roku platform.
+* **Digital Rights Management (DRM) control attributes** — [Content metadata control attributes]() for DRM have been added to the Roku OS.
+  * **Passing custom HTTP headers to licensing requests** — Developers looking to pass custom HTTP headers with a licensing request can now set those headers using the [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md) interface methods on the [Video](/docs/references/scenegraph/media-playback-nodes/video.md) node.
+* **Media Player content metadata updates** — Two content metadata attributes of the Media Player have been updated and three new attributes have been added:
+  * [PlayDuration](/docs/developer-program/getting-started/architecture/content-metadata.md#playback-configuration-attributes) is no longer used by the media player.
+  * [BookmarkPosition](/docs/developer-program/getting-started/architecture/content-metadata.md#playback-configuration-attributes) is being deprecated.
+    * The existing PlayStart attribute should be used instead as it has been modified to allow apps to seek to positions prior to PlayStart. the Roku OS will continue to support BookmarkPosition to maintain the backward compatibility, but apps should plan a migration to use PlayStart.
+  * A new content meta-data attribute, [ClipStart](/docs/developer-program/getting-started/architecture/content-metadata.md#playback-configuration-attributes), sets the clip start position.
+  * A new content meta-data attribute, [ClipEnd](/docs/developer-program/getting-started/architecture/content-metadata.md#playback-configuration-attributes), sets the clip end position.
+  * A new content meta-data attribute, [LiveBoundsPauseBehavior](/docs/developer-program/getting-started/architecture/content-metadata.md#playback-configuration-attributes), allows an app to customize Media Player behavior on live streams when playing in the earliest part of a DVR buffer.
+
+#### Deprecated APIs
+
+Five [roDeviceInfo](/docs/references/brightscript/components/rodeviceinfo.md) methods are being deprecated and replaced with similar APIs (as seen in the chart below).
+
+The deprecated APIs will remain in the Roku OS and continue to work for one year; they will be removed from the Roku OS in the Spring 2019 OS update. **Developers must update their apps to use the new APIs within the next year.**
+
+Below is a complete list of the APIs deprecated as of Roku OS 8.1.
+
+| Deprecated API           | Replacement API                                                                                                         |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| GetDrmInfo()             | [GetDrmInfoEx()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfoex-as-object)                       |
+| GetAdvertisingId()       | [GetRIDA()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getrida-as-string)                                 |
+| IsAdIdTrackingDisabled() | [IsRIDADisabled()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#isridadisabled-as-boolean)                  |
+| GetClientTrackingId()    | [GetChannelClientId()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string)           |
+| GetDeviceUniqueId()      | N/A — Use [GetChannelClientId()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string) |
+
+#### General API Enhancements
+
+* **Memory-level notification** — This release adds a memory-level notification API ([generalMemoryLevel](/docs/references/brightscript/components/rodeviceinfo.md)) to roDeviceInfoEvent to fire notifications to the app. Apps can also query the memory level directly using [two new methods](/docs/references/brightscript/interfaces/ifdeviceinfo.md#enablelowgeneralmemoryeventenabled-as-boolean-as-dynamic) of the [roDeviceInfo](/docs/references/brightscript/components/rodeviceinfo.md) component.
+* **GetUserCountryCode() API** — To determine the country associated with a user’s Roku account, a new method [GetUserCountryCode()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getusercountrycode-as-string) as String was added to [roDeviceInfo](/docs/references/brightscript/components/rodeviceinfo.md).
+* **roRegex.MatchAll()** — A new method [MatchAll()](/docs/references/brightscript/interfaces/ifregex.md#matchallstr-as-string-as-object), has been added to [roRegex](/docs/references/brightscript/components/roregex.md). This adds the ability to return all matches of a specific regular expression pattern in the target string.
+* **Getting captions mode from device event** — The developer can now call GetInfo() on a device event to know the current global setting for closed caption mode property using [isCaptionModeChanged()](/docs/references/brightscript/events/rodeviceinfoevent.md).
+* **API to determine if a Roku TV is Energy Star Compliant** — Developers can determine if a Roku powered TV is Energy Star Compliant by using the [roDeviceInfo.HasFeature("energy_star_compliant")](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getusercountrycode-as-string) API.
+* **storeChannelCredData API** — This OS update introduces a new roChannelStore method, [StoreChannelCredData()](/docs/developer-program/authentication/universal-authentication-protocol-for-single-sign-on.md), that allows apps to store information in our backend which they can retrieve later using GetChannelCred(). Calling this new API allows developers to store OAuth tokens for a signed-in user so that when the app is launched on a new Roku device, the app can request the stored information, identify their customer, and automatically sign them in.
+
+#### SceneGraph Updates
+
+* **ReplaceChildren() ignores extra items in the replace list** — When using [replaceChildren()]() to update the content of each item in a [markupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md), if the developer supplies more items than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children.
+* **Mobile or ECP keypress events now appear in onKeyEvent()** — Literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](/docs/developer-program/dev-tools/external-control-api.md) keydown/keyup commands, now go to the [onKeyEvent()]() handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
+* **SimpleLabel** - Roku OS version 8.1 introduces [SimpleLabel](/docs/references/scenegraph/renderable-nodes/simplelabel.md) which is a lightweight complement node to the [Label](/docs/references/scenegraph/label-nodes/label.md) node. It supports simplified font style specification and is more memory efficient than the Label node.
+
 <HTMLBlock>{`
 <h2 id="roku-os-8-1">Roku OS 8.1</h2>
 <p><strong>Initial rollout date:</strong> May 1, 2018</p>

@@ -333,62 +333,6 @@ Here is the list of key developer-facing Roku OS 12.0 updates:
 * [**BrightScript debug protocol (version 3.2)**](/docs/developer-program/debugging/socket-based-debugger.md) — The [BrightScript debug protocol](/docs/developer-program/debugging/socket-based-debugger.md) now supports **ADD_CONDITIONAL_BREAKPOINTS** requests while the script is running. When this occurs, the breakpoints are registered, queued, and then applied as soon as processing allows. This eliminates the need to wait for the script to be paused in order to apply breakpoints. Instead, the breakpoints can now be applied based on the current device state. Developers should now use the **ADD_CONDITIONAL_BREAKPOINTS** command instead of **ADD_BREAKPOINTS** because ADD_CONDITIONAL_BREAKPOINTS is a strict superset of ADD_BREAKPOINTS.
 
 <HTMLBlock>{`
-<h2 id="roku-os-12-5">Roku OS 12.5</h2>
-<p><strong>Initial rollout date</strong>: September 12, 2023</p>
-<p>Roku OS 12.5 includes new APIs for monitoring the current amount of available memory for an app and getting the device user agent. This release also includes features that generally enhance the performance of media playback such as prebuffering for live content, improved closed captioning through ad breaks, and pre-playback audio and subtitle track selection.</p>
-<p>Here is the list of key developer-facing Roku OS 12.5 updates:</p>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<ul>
-<li>[<strong>Available memory query</strong>](doc:ifurltransfer#getuseragent-as-string) — The [<strong>roAppMemoryMonitor</strong> node](doc:roappmemorymonitor) includes a new <strong>GetChannelAvailableMemory()</strong> function that provides developers with the estimated kilobytes (Kb) of memory available for their app. This helps developers identify when to release memory when their app receives low-memory warnings.</li>
-</ul>
-<ul>
-<li>[<strong>Device user agent</strong>](doc:ifurltransfer#getuseragent-as-string) — The [<strong>roUrlTransfer</strong> node](doc:rourltransfer) includes a new <strong>GetUserAgent()</strong> function that returns the device user agent. This provides developers with a direct method for getting the user agent in order to pass it into server-side ad requests.</li>
-</ul>
-<h4 id="media-drm-and-content-metadata-updates">Media, DRM, and content metadata updates</h4>
-<ul>
-<li><strong>Prebuffering for live content </strong>— Roku&#39;s media player now includes support for prebuffering live content. For video-on-demand (VOD) content, the media player now requires less data to be prebuffered.</li>
-</ul>
-<ul>
-<li><strong>Improved support for maintaining closed captioning through ad breaks </strong>— If the start-time of a video ad occurs between the buffering and closed captioning start times, Roku&#39;s media player now maintains the closed captioning information. This helps recover any close caption sentences that may be missed after an ad break finishes. This is particularly useful for CEA 608/708 caption formatting because caption data is received from video content before ad breaks.</li>
-</ul>
-<ul>
-<li><strong>Representation filtering based on HDCP level</strong> — When a 4K-capable Roku device is connected to an HD display, the Roku media player now filters out 4K representations to prevent DRM-based decryption failures.</li>
-</ul>
-<ul>
-<li>[<strong>Pre-playback audio and closed captioning track selection </strong>](doc:video#playback-fields)— The [<strong>Video</strong> node](doc:video) includes new fields for specifying the priority order of different audio track and subtitle track selections.</li>
-</ul>
-<h4 id="deprecated-apis">Deprecated APIs</h4>
-<ul>
-<li>[<strong>run_as_process</strong> manifest attribute](doc:deprecated-apis#run_as_process-channel-manifest-attribute) has been deprecated — All apps now run in a separate process, regardless if the <strong>run_as_process</strong> attribute has been specified in the manifest.</li>
-</ul>
-<ul>
-<li>[Support for the Windows Media Audio (wma) file format on the Roku platform has been sunset](doc:deprecated-apis#audio-node-windows-media-audio). The WMA audio format was originally deprecated in the Roku OS 10.5 release.</li>
-</ul>
-<h2 id="roku-os-12-0">Roku OS 12.0</h2>
-<p><strong>Initial rollout date</strong>: March 8, 2023</p>
-<p>Roku OS 12.0 includes a new BrightScript API for getting localized times and Instant Resume support for apps that do not have exit confirmation dialogs. For tools, this release features new External Control Protocol (ECP) query commands, and it enables developers using the BrightScript Debug Protocol to add breakpoints while the script is running.</p>
-<p>Here is the list of key developer-facing Roku OS 12.0 updates:</p>
-<h4 id="brightscript-apis">BrightScript APIs</h4>
-<ul>
-<li><p>[<strong>Localized date and time formats</strong>](doc:ifdatetime#asdatestringlocformat-as-string-as-string) — The <a href="https://roku-ent.readme.io/dev/docs/rodatetime">roDateTime</a> component includes new <strong>asDateStringLoc()</strong> and <strong>asTimeStringLoc()</strong> methods that developers can use to get the localized date and time of a device. These new methods also enable developers to construct their own custom date and time formats.</p>
-</li>
-<li><p>[<strong>IPv6 addresses returned by roDeviceInfo.getConnectionInfo() method</strong>](doc:ifdeviceinfo#getconnectioninfo-as-object) — The [roDeviceInfo.getConnectionInfo() method](doc:ifdeviceinfo#getconnectioninfo-as-object) now returns an <strong>ipv6</strong> field, which is an array listing the IPv6 addresses used for the device connection.</p>
-</li>
-</ul>
-<h4 id="integrations">Integrations</h4>
-<ul>
-<li>[<strong>Extended Instant Resume support for apps without exit confirmation dialogs</strong>](doc:instant-resume) — For apps implementing [Instant Resume](doc:instant-resume), an interruption event is now generated when the customer exits the app by pressing the back button. For apps that do not have an exit confirmation dialog, developers can now call the <strong>customSuspend</strong> handler when this occurs to save the current app state.</li>
-</ul>
-<h4 id="tools">Tools</h4>
-<ul>
-<li><p>[<strong>New ECP commands</strong>](doc:external-control-api) — [ECP](doc:external-control-api) includes a new <strong>query/graphic-frame-rate</strong> command that gets the graphics rendering frame rate, and app and media events can now be now tracked via a set of new <strong>query/fwbeacons</strong> commands (fwbeacons/track, fwbeacons/untrack and query/fwbeacons).</p>
-<p> In addition, calling the <strong>query/registry</strong> ECP command now returns a new <strong>space-available</strong> field that provides developers with the amount of storage currently available in the device&#39;s registry, and the <strong>query/sgnodes</strong> command now returns a tree structure representing the app&#39;s UI, rather than a flat list of nodes.</p>
-<p> Developers can leverage these commands in their tools and web services.</p>
-</li>
-</ul>
-<ul>
-<li>[<strong>BrightScript debug protocol (version 3.2)</strong>](doc:socket-based-debugger) — The [BrightScript debug protocol](doc:socket-based-debugger) now supports <strong>ADD_CONDITIONAL_BREAKPOINTS</strong> requests while the script is running. When this occurs, the breakpoints are registered, queued, and then applied as soon as processing allows. This eliminates the need to wait for the script to be paused in order to apply breakpoints. Instead, the breakpoints can now be applied based on the current device state. Developers should now use the <strong>ADD_CONDITIONAL_BREAKPOINTS</strong> command instead of <strong>ADD_BREAKPOINTS</strong> because ADD_CONDITIONAL_BREAKPOINTS is a strict superset of ADD_BREAKPOINTS.</li>
-</ul>
 <h2 id="roku-os-11-5">Roku OS 11.5</h2>
 <p><strong>Initial rollout date</strong>: September 12, 2022</p>
 <p>Roku OS 11.5 includes new SceneGraph [Video](doc:video) and [Content](doc:content-metadata) node fields that enhance the trickplay and pause screen experiences during video playback. This release also adds [device attestation tokens](doc:channelstore#getdeviceattestationtoken) that developers can incorporate in their web services to verify that messages originated from authentic Roku devices.</p>

@@ -2,7 +2,7 @@
 title: The Roku Channel overview
 excerpt: ''
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''

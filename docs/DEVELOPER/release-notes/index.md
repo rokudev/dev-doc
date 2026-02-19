@@ -696,6 +696,54 @@ Below is a list of key developer-facing Roku OS 9.4 updates:
 
 * The following keys in the [**manifestData** field of the SceneGraph Video node](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) are deprecated as of Roku OS 9.4: **mpd** and **periods**. Developers can use the **xml** key to acquire information that was provided via the deprecated fields.
 
+## Roku OS 9.3
+
+**Initial rollout date**: April 7, 2020
+
+Roku OS 9.3 includes features to enhance the performance of media playback and Roku devices in general, and expand platform support for industry standards covering content and meta-data. This release also features additional and improved facilities to expedite troubleshooting, performance monitoring, automated testing, and debugging of apps.
+
+Finally, the Roku SceneGraph version defaults to version 1.2 as of Roku OS 9.3. As a result, **use of eval() will result in a compilation error.**
+
+> Apps using eval() will not run on Roku OS 9.3 (unless rsg_version has been set to 1.1, which is **not** recommended).  
+>
+> Developers **must** take immediate action to ensure that their apps do not use the eval() function, if at all possible. See "Architecture," below, for more details.
+
+Here is a list of key developer-facing Roku OS 9.3 updates:
+
+#### API
+
+* **[New signal beacon for login and user selection dialogs](/docs/developer-program/performance-guide/measuring-channel-performance.md#measuring-channel-launch-times) ** — Developers can now measure loading times for dialogs and screens that are displayed before the app's home page (for example, login, user selection, and network error dialogs/screens).
+* **[HasFeature() now allows checking for soundbar hardware](/docs/references/brightscript/interfaces/ifdeviceinfo.md#hasfeaturefeature-as-string-as-boolean) ** — ifDeviceInfo.HasFeature() now accepts the feature string "soundbar_hardware". HasFeature() will return **true** if the device has soundbar hardware (i.e., speakers, the master volume of which can be changed directly by program control) but is *not* a Roku TV.
+* **[ifDeviceInfo.GetOSVersion() now includes a "revision" field](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getosversion-as-object) ** in the associative array returned by the method. This field corresponds to the third octet in the return value of the legacy GetVersion() method.
+* **[The SceneGraph RowList node now supports a fixedFocus option](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md#fields) ** for the rowFocusAnimationStyle field. This option is similar to the existing fixedFocusWrap option, but *without* the latter's wrapping behavior during navigation.
+* **[Single-field observers can capture multiple-field "snapshots"](/docs/references/brightscript/interfaces/ifsgnodefield.md#setfieldfieldname-as-string-value-as-object-as-boolean) ** — The observeField() and observeFieldScoped() methods of SceneGraph nodes can now specify a list of additional fields (that are located in the same node as the primary field), the values of which will be captured when the state of the primary field changes. The corresponding roSGNodeEvent will provide those additional values via its GetInfo() method.
+  <br />
+
+#### Media, DRM, and content meta-data updates
+
+* **Performance enhancements** — These include an increase in effective video bitrate, and reductions in the rates of video start time, re-buffering, and playback failure.
+* **[Get media-player state information using ECP query/media-player](/docs/developer-program/dev-tools/external-control-api.md#querymedia-player-example) ** — This External Control Protocol query returns a collection of information about the state of the media player, which can be useful in debugging and general troubleshooting.
+* **[Support for industry standard thumbnail tiles](/docs/developer-program/media-playback/trick-mode/hls-and-dash.md) ** — For Roku SceneGraph apps, Roku OS now supports the "[DASH Interop spec v4.3](https://dashif.org/docs/DASH-IF-IOP-v4.3.pdf) , Section 6.2.6. Tiles of thumbnail images." VideoNode now has a standard Roku OS rendered UI for DASH or HLS trickplay on VOD content.
+* **[HTTP header control for DRM key/license requests](/docs/developer-program/getting-started/architecture/content-metadata.md#drmhttpagent-for-handling-drm-keylicense-requests-separately) ** — Apps now have the ability to set HTTP headers on DRM key/license requests, independently of other HTTP headers.
+* **[SceneGraph Video node trickplay fields now include positionInfo](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) ** — This read-only Associative Array contains the positions of the last-rendered video and audio samples, respectively. Both positions are expressed as double(-floats), and the unit is one second.
+* **[New content meta-data drmParams attribute to support Widevine](/docs/developer-program/getting-started/architecture/content-metadata.md#digital-rights-management-drm-control-attributes) ** — The serviceCert attribute allows setting the Widevine service certificate.
+* **More granular DASH MPD Manifest data now accessible** — Apps can now obtain all relevant data from the DASH MPD Manifest.
+* **[Verimatrix DRM is deprecated](/docs/specs/media/content-protection.md) ** — As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](/docs/specs/media/content-protection.md)  for more information on implementing these DRMs.
+* **[Adobe DRM is deprecated](/docs/specs/media/content-protection.md) ** — As of Roku OS 9.3, support for Adobe DRM is deprecated.  The plugin will be removed from Roku OS in our Fall firmware update. Please make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](/docs/specs/media/content-protection.md)  for more information on implementing these DRMs.
+
+#### Architecture
+
+* **[rsg_version manifest flag defaults to 1.2](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes) ** — The **rsg_version** attribute in the [manifest](/docs/developer-program/getting-started/architecture/channel-manifest.md#special-purpose-attributes)  now defaults to 1.2 (**rsg_version=1.2**). As of Roku OS 9.0, setting the **rsg_version** attribute to 1.2 enables an internal mechanism for processing component \<script\> tags that optimizes the resulting compiled script code. This results in a reduced initial startup time and lesser memory usage while preserving compatibility.<br/><br/>The deprecated **eval()** function is not compatible with **rsg_version 1.2**; therefore, developers must do one of the following to keep their apps running if their apps use this function:<br/><br/>1. (Recommended) Remove all usage of the deprecated **eval()** function. If you are using the **eval()** function to initialize data, use the [parseJSON()](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-as-object)  function instead.<br/><br/>2. Update the **rsg_version** attribute in the manifest to **1.1** (**rsgversion=1.1**).
+  <br />
+
+#### Tools
+
+* **[Dynamic breakpoints and step commands added to BrightScript Debug Protocol](/docs/developer-program/debugging/socket-based-debugger.md) ** — The socket-based BrightScript debug protocol now includes dynamic breakpoints and step commands. Integrated Development Environments (IDEs) tightly integrated with the BrightScript debug protocol can be enhanced with these features, which enable developers to navigate through and inspect the state of the application and view its execution flow.
+
+#### Miscellaneous
+
+* **[Visual Search Results for Roku Voice](/docs/developer-program/discovery/search/implementing-search.md#roku-voice-search-results) ** (U.S. only) — This new aspect of Roku Voice provides developers who participate in Roku Search with enhanced discovery opportunities. When using Roku Voice to search for movies, shows or popular genres, users will now see a more visual, easy to browse display of movie and TV show artwork rather than a text-based list of options. This new search results screen orders the results in categorized rows that include relevant movies, shows, short-form content and more for simple navigation and quick discovery of entertainment. Once a user selects the specific movie or show they want to watch, they'll see an unbiased list of apps that offer that title, ordered by price (including free when available), so they can choose the viewing option that's best for them.
+
 <HTMLBlock>{`
 <h2 id="roku-os-9-3">Roku OS 9.3</h2>
 <p><strong>Initial rollout date</strong>: April 7, 2020</p>

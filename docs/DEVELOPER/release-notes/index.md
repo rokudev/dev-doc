@@ -697,65 +697,6 @@ Below is a list of key developer-facing Roku OS 9.4 updates:
 * The following keys in the [**manifestData** field of the SceneGraph Video node](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) are deprecated as of Roku OS 9.4: **mpd** and **periods**. Developers can use the **xml** key to acquire information that was provided via the deprecated fields.
 
 <HTMLBlock>{`
-<h2 id="roku-os-9-4">Roku OS 9.4</h2>
-<p><strong>Initial rollout date</strong>: September 29, 2020</p>
-<p>Roku OS 9.4 introduces formal BrightScript exception handling via TRY/CATCH/THROW statements, and it adds a number of media playback features such as whitelisting/blacklisting of audio and caption tracks for different countries; support for OpenSSL 1.1.1, Widevine v16 DRM, and the WebP image format; and enhancements to DASH thumbnails for trick mode.</p>
-<p>Below is a list of key developer-facing Roku OS 9.4 updates:</p>
-<h4 id="api">API</h4>
-<ul>
-<li><strong>[BrightScript now supports exception handling](doc:error-handling)</strong> — Developers can use TRY/CATCH blocks and THROW expressions for handling exceptions in their apps. Developers can define code that may potentially generate errors within a TRY statement, and then provide error handling, such as printing out the error type and message, in a CATCH statement. Developers can also create custom errors with the THROW expression.</li>
-</ul>
-<ul>
-<li>[<strong>New getUserRegionData command added to SceneGraph ChannelStore node</strong>](doc:channelstore#getuserregiondata) — The ChannelStore node now includes a <strong>getUserRegionData</strong> command for retrieving the state, zip code, and country associated with the customer&#39;s Roku account. Developers can use the location information returned by this command to determine a customer&#39;s eligibility for regional-specific subscription products and content.</li>
-</ul>
-<ul>
-<li><strong>[doOrder command status fixed](doc:channelstore#doorder)</strong> — The SceneGraph ChannelStore <strong>doOrder</strong> command now only returns a status of 2 (&quot;interrupted&quot;) if the back button is pressed from a &quot;Confirm Purchase&quot; dialog.</li>
-</ul>
-<ul>
-<li><strong>[ParseJson and FormatJson now accept &quot;flags&quot; parameter as a String](doc:global-utility-functions#parsejsonjsonstring-as-string-flags---as-string-as-object)</strong> — The BrightScript ParseJson and FormatJson global utility functions now accept a String parameter, flags, for specifying the functions&#39; options. (Note that FormatJson already accepted flags as an Integer and now accepts the String version as well.)</li>
-</ul>
-<h4 id="media-drm-and-content-meta-data-updates">Media, DRM, and content meta-data updates</h4>
-<ul>
-<li><strong>Enhanced media player performance</strong> — Numerous improvements in media player performance to minimize video start time, re-buffering, and playback failure rates.</li>
-</ul>
-<ul>
-<li><strong>[Content-specific whitelisting/blacklisting of audio and caption tracks for different languages](doc:content-metadata#playback-configuration-attributes)</strong> —  Audio and captioning tracks can now be blacklisted or whitelisted dynamically for individual content items. The new metadata attributes, <strong>audioBlacklist</strong>, <strong>audioWhitelist</strong>, <strong>captionBlacklist</strong>, and <strong>captionWhitelist</strong>, can be used to make resources in various languages available or unavailable dynamically, under app control, affecting the options that a viewer sees in the UI.</li>
-</ul>
-<ul>
-<li><strong>Open SSL 1.1.1</strong> — Roku OS now supports Open SSL 1.1.1. The OpenSSL version that was previously supported by Roku (1.0.2h) has reached end of life. OpenSSL 1.1.1 offers better performance and greater security, among other benefits.</li>
-</ul>
-<ul>
-<li><strong>[Widevine v16](doc:content-protection#widevine)</strong> — Roku OS now supports Widevine v16 DRM, including on older supported platforms.</li>
-</ul>
-<ul>
-<li><strong>[WebP image format](doc:streaming-specifications#supported-image-formats)</strong> — The Roku platform now supports the WebP image format, which provides smaller compressed image files and faster decoding and rendering.</li>
-</ul>
-<ul>
-<li><strong>[DRM security level reporting](doc:ifdeviceinfo#getdrminfoex-as-object)</strong> — The <strong>ifDeviceInfo.GetDrmInfoEx()</strong> method now returns the security levels of Widevine and PlayReady DRMs.</li>
-</ul>
-<ul>
-<li><strong>[DASH thumbnail improvements](doc:hls-and-dash#dash-standard-thumbnail-tiles)</strong> — The DASH manifest information is now provided more efficiently to the Roku Media Player, especially benefiting low-end devices.</li>
-</ul>
-<ul>
-<li><strong>HLS and DASH trickplay thumbnails in SSAI apps now remain in sync</strong> — A bug in the handling of discontinuities (insertion breaks) for trickplay thumbnails in apps with ads inserted server-side (SSAI) previously caused thumbnails to fall out of synch with the video content over time during playback, as more discontinuities were processed. This bug is resolved in Roku OS 9.4 for HLS and DASH streaming with standard thumbnails, but it remains a problem for apps that use BIF thumbnails. Roku recommends that developers who can switch to standard thumbnails in the context of HLS or DASH streaming should do so.</li>
-</ul>
-<ul>
-<li><strong>[Video node includes DASH manifest information](doc:video#trickplay-fields)</strong> — The DASH manifest is exposed through the SceneGraph Video node and is updated efficiently during live-streams, especially benefitting low-end devices.</li>
-</ul>
-<ul>
-<li>[<strong>HDCP status reporting for HDMI connections improved</strong>](doc:ifhdmistatus#gethdcpversion-as-string) — The <strong>roHdmiStatus.getHdcpVersion()</strong> method now returns an empty string if HDCP is disabled.  </li>
-</ul>
-<blockquote>
-<p>Adobe has discontinued support for Adobe DRM. Roku OS 9.4 is the last firmware release that will support it. apps should switch to one of the following [Roku-supported DRMs](doc:content-protection) to protect content: Widevine, PlayReady, or AES-128.</p>
-</blockquote>
-<h4 id="tools">Tools</h4>
-<ul>
-<li><strong>[Component library compilation errors on port 8085](doc:componentlibrary#loading-component-libraries)</strong> — Compilation info/failure messages for Roku SceneGraph component libraries when running side-loaded apps now appear on port 8085 of the debug console.</li>
-</ul>
-<h4 id="deprecated-apis">Deprecated APIs</h4>
-<ul>
-<li>The following keys in the [<strong>manifestData</strong> field of the SceneGraph Video node](doc:video#trickplay-fields) are deprecated as of Roku OS 9.4: <strong>mpd</strong> and <strong>periods</strong>. Developers can use the <strong>xml</strong> key to acquire information that was provided via the deprecated fields.</li>
-</ul>
 <h2 id="roku-os-9-3">Roku OS 9.3</h2>
 <p><strong>Initial rollout date</strong>: April 7, 2020</p>
 <p>Roku OS 9.3 includes features to enhance the performance of media playback and Roku devices in general, and expand platform support for industry standards covering content and meta-data. This release also features additional and improved facilities to expedite troubleshooting, performance monitoring, automated testing, and debugging of apps.</p>

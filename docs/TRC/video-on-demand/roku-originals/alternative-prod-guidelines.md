@@ -18,6 +18,8 @@ Roku pioneered streaming to the TV. The company operates the No. 1 TV streaming 
 
 The Roku Channel is committed to providing the highest quality content and values its Partners for helping to achieve this goal. The Roku Production Guidelines outline the best practices for the Partner at this time. This document and the requirements are subject to change at Roku’s sole discretion.
 
+This is an edit.
+
 ## 2. Welcome to Roku production
 
 We look forward to working with you! You should have received a “Welcome to Roku Production” email along with the Production Kick-Off documents outlined below. Please review the documents in their entirety, upon series pick-up Roku Production will reach out to schedule a kick-off call. During the call we can address any questions you may have.
@@ -535,7 +537,7 @@ Please reference the closed deal regarding Audit election and timelines.
   * Overages/Breakage
   * Required documentation
 
-_***PLEASE NOTE:***_ The Audit holdback payment will not be released until the audit is complete or waived. In the event Roku elects not to proceed with an audit:
+__**PLEASE NOTE:**__ The Audit holdback payment will not be released until the audit is complete or waived. In the event Roku elects not to proceed with an audit:
 
 * * You will be notified by Roku Production if there will be no audit
   * If the audit is waived, the Audit Holdback payment will be released upon reconciliation of final cost report and submission of the final invoice

@@ -1016,8 +1016,6 @@ Below is a complete list of the APIs deprecated as of Roku OS 8.1.
   when the active-source status of the device changes per the CEC
   message traffic.
 
-<br />
-
 ## Roku OS 7.7
 
 **Initial rollout date:** June 20, 2017

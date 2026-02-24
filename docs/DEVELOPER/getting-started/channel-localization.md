@@ -66,6 +66,8 @@ Apps can also localize the names of their [in-app products](doc:in-channel-produ
 
 ### Currency conversions
 
-While localizing product names is a manual process, Roku Pay automatically handles currency conversions and displays prices in the currency associated with the Streaming Store in which the device is located. For example, if a device is located in Brazil, the price of an in-app product that is $9.99 USD is displayed as R$24.9 BRL (Brazilan Real). Apps may also elect to independently handle currency conversion. To do this, apps can create in-app products for each country and filter out products based on the country in which the device is located (using the [ifDeviceInfo.GetCountryCode()](doc:ifdeviceinfo##getusercountrycode-as-string) method).
+Apps need to independently handle currency conversion. To do this, developers can create in-app products for each country and filter out products based on the country in which the device is located (using the [ifDeviceInfo.GetCountryCode()](doc:ifdeviceinfo##getusercountrycode-as-string) method).
+
+In the Roku platform UI, Roku Pay displays prices in the currency associated with the Streaming Store in which the device is located. For example, if a device is located in Brazil, the price of an in-app product that is $9.99 USD is displayed as R$24.9 BRL (Brazilan Real).
 
 <br />

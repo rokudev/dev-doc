@@ -148,4 +148,4 @@ currently set to.
 > smaller than 4K will default to HDCP 1.4.
 >
 > HDCP versioning can be queried
-> using [ifHdmiStatus.getHDCPVersion()](doc:ifhdmistatus).
+> using [ifHdmiStatus.getHDCPVersion()](doc:ifhdmistatus##gethdcpversion-as-string).

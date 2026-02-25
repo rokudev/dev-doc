@@ -98,7 +98,7 @@ Creating the product catalog entails the following steps:
 
 2. [Creating purchase options for the new product](#creating-purchase-options). A purchase option represents the pricing and billing terms of the product.
 
-3. [Creating product groups for each set of mutually exclusive subscription products](##creating-product-exclusivity-groups). A product group prevents customers from being double-billed for the same content (for example, ad-supported and ad-free products for an app should be in the same product group).
+3. [Creating product groups for each set of mutually exclusive subscription products](#creating-product-exclusivity-groups). A product group prevents customers from being double-billed for the same content (for example, ad-supported and ad-free products for an app should be in the same product group).
 
 > This document is intended for SVOD apps, which may offer subscriptions and one-time purchases (for example, movie rentals/purchases, sporting events, pay-per-views). If you are managing the catalog for a TVOD-exclusive app (an app offering only transactional content), see [Creating TVOD apps](doc:tvod-channel). TVOD-exclusive apps need to create a single in-app product for each different price point in the app; therefore, the workflow differs from what is specified herein.
 >

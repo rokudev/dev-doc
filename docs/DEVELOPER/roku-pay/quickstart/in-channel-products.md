@@ -93,9 +93,9 @@ To provide the basic information for an in-app product, follow these steps:
 
    ![roku815px - inCP-SpanishProductName](https://image.roku.com/ZHZscHItMTc2/inCP-SpanishProductName.jpg)
 
-   > You may want certain products to only be available in specific countries. In the app, you can call the [**getUserRegionData**](doc:channelstore) command to determine the country associated with the user's Roku account. You can then implement business logic to filter the results of the ChannelStore [**getCatalog** command](doc:channelstore) to only display products that should be available for that country.
+   > You may want certain products to only be available in specific countries. In the app, you can call the [**getUserRegionData**](doc:channelstore##getuserregiondata) command to determine the country associated with the user's Roku account. You can then implement business logic to filter the results of the ChannelStore [**getCatalog** command](doc:channelstore#getcatalog) to only display products that should be available for that country.
    >
-   > If you want to offer a specific in-app product in multiple countries, you need to create in-app products for each country and filter out the product by the country in the app business logic. In this scenario, you must handle currency conversion.  
+   > If you want to offer a specific in-app product in multiple countries, you need to create in-app products for each country and filter out the product by the country in the app business logic. In this scenario, you must handle currency conversion.
 
 5. In the **Product identifier** field, enter the internal code for your app. This identifier is used as the `code` field for retrieving catalog items, creating orders, and getting previous purchases with the [SceneGraph ChannelStore node](doc:channelstore).
 

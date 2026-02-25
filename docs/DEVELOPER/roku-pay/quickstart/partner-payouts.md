@@ -10,19 +10,17 @@ metadata:
 next:
   description: ''
 ---
-
-
 Publishers must enroll in the [Roku Partner Payouts Program](https://developer.roku.com/payments/) to monetize content in a Roku app. This enables publishers to receive payouts from video ads, subscriptions, one-time purchases, and pay-to-install apps (games and screensavers). Monetized apps cannot be published without enrollment.
 
->  **Entering your payout settings**
+> **Entering your payout settings**
 >
->  - If you already have an existing Roku developer account, use those account credentials to log in to the Developer Dashboard and enter your payout settings. Do not create a new developer account.
+> * If you already have an existing Roku developer account, use those account credentials to log in to the Developer Dashboard and enter your payout settings. Do not create a new developer account.
 >
->  - If you are already monetizing your app on the Roku platform, you must still enter your payout settings to continue receiving payouts.
+> * If you are already monetizing your app on the Roku platform, you must still enter your payout settings to continue receiving payouts.
 >
->  - If an **Enrolled** status tag appears next to the **Payout Settings** title, you must still enter your up-to-date contact, payout, and tax information.
+> * If an **Enrolled** status tag appears next to the **Payout Settings** title, you must still enter your up-to-date contact, payout, and tax information.
 
-------
+***
 
 > **About maximum tax withholding**
 >
@@ -40,26 +38,21 @@ To enroll in the Roku Partner Payouts Program, enter your payout settings follow
 
 1. Verify that you have [created a Roku account](https://my.roku.com/signup) and [enrolled in the Roku Developer Program](https://developer.roku.com/enrollment/standard).
 
-
-
 2. In the Developer Dashboard, select [**Payout settings**](https://developer.roku.com/developer/billing). If you are using the Payout Settings workflow for the first time, review the steps and then click **Get started**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payout-settings-get-started.png)
 
-
-
 3. Enter or update the following information:
 
-   - Contact information (name, email, address).
+   * Contact information (name, email, address).
 
-   - Entity and payout method (PayPal, ACH [in the US only], or Cross-border wire [non-US only]).
+   * Entity and payout method (PayPal, ACH [in the US only], or Cross-border wire [non-US only]).
 
-   - Tax form (W9, W8-BEN, W8-BEN-E, W–8 ECI, W–8 EXP, W–8 IMY, or form 8233).
+   * Tax form (W9, W8-BEN, W8-BEN-E, W–8 ECI, W–8 EXP, W–8 IMY, or form 8233).
 
      ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-enrolled.png)
 
-
-##### Video demo
+#### Video demo
 
 <video src="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.mp4" poster="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.png" width="720" height="480" controls />
 
@@ -73,27 +66,21 @@ To provide your entity and payout method, follow these steps:
 
 1. Under **Entity & payout method**, select **Verify entity** and then do the following:
 
-
-
 2. Enter your contact information, and then select **Submit**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-contact-info.png)
-
-
 
 3. Enter your **Tax Details**, and then select **Submit**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-tax-info-v2.png)
 
-
-
 4. Enter your **Banking Information**, and then select Submit. You can choose one of the following payout methods:
 
-   - **PayPal:** Your PayPal account must be linked to a valid payout method (for example, a bank account). Payouts are subject to PayPal terms.
+   * **PayPal:** Your PayPal account must be linked to a valid payout method (for example, a bank account). Payouts are subject to PayPal terms.
 
-   - **ACH** (US only): This option is only available to publishers located in the United States. ACH payouts are made in USD only (non-USD transactions are converted to USD using the average foreign exchange rate for the month in which the payment occurs). ACH payouts are subject to additional bank fees. Routing and account numbers must be entered accurately; entering incorrect bank account information will cause payouts to fail.
+   * **ACH** (US only): This option is only available to publishers located in the United States. ACH payouts are made in USD only (non-USD transactions are converted to USD using the average foreign exchange rate for the month in which the payment occurs). ACH payouts are subject to additional bank fees. Routing and account numbers must be entered accurately; entering incorrect bank account information will cause payouts to fail.
 
-   - **Cross-border wire** (non-US only; availability varies by region): This option is only available to publishers located outside the United States, and support for this payout method varies based on the region.  
+   * **Cross-border wire** (non-US only; availability varies by region): This option is only available to publishers located outside the United States, and support for this payout method varies based on the region.
 
      ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-paypal-info.jpg)
 
@@ -105,19 +92,13 @@ Once your entity and payout method have been verified, provide your tax forms fo
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-tax-info-start.png)
 
-
-
 2. Confirm your source of income, select the confirmation checkbox, and then select **Continue**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-account-holders.png)
 
-
-
 3. Record your confirmation code, enter code recovery information, and then select **Continue**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-confirmation-code-2.png)
-
-
 
 4. Select the applicable tax form for your region and entity and then select **Continue**.
 
@@ -129,47 +110,33 @@ Once your entity and payout method have been verified, provide your tax forms fo
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-select-us-tax-status.png)
 
-
-
 6. Enter your exemptions from backup withholding and then select **Continue**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-exemption-withholding.png)
-
-
 
 7. Verify your tax identification number (TIN) and then select **Continue**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-tax-identification-number.png)
 
-
-
 8. Upload the required supporting documentation (affidavit, certificate of incorporation, withholding/allocation statement, and so on) and any other additional documentation, and then select **Confirm & Continue**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-supporting-docs.png)
-
-
 
 9. Select the applicable certification checkboxes and then select **Continue**.
 
    ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-certification-checkbox.png)
 
-
-
 10. Electronically sign your form, enter the confirmation code you received in step b, select the declaration acceptance check box, and then select **Submit Electronically**.
 
     ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-certification-2-w9.png)
-
-
 
 11. A dialog opens confirming that the withholding certification submission process has been completed. Optionally, you can select Download PDF to receive an electronic copy of the submitted forms.
 
     ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-complete-tax-forms.png)
 
-
-
 12. Select **Exit** to return to the Developer Dashboard.
 
-> Once you submit your tax forms, they are reviewed and approved immediately, provided that no manual review is required.  
+> Once you submit your tax forms, they are reviewed and approved immediately, provided that no manual review is required.
 >
 > If your tax forms require a manual review, you will receive an email notification, and it may take 48 to 72 hours for your tax forms to be approved. Manual reviews can result in your tax forms being approved or declined.
 
@@ -179,7 +146,7 @@ Once you have entered payout settings, you can update them anytime.
 
 ## Receiving payouts
 
-Until your enrollment in Roku Pay is complete, Roku will not bill customers for transactions associated with your app. Any pre-enrollment transactions, including those executed via billing test accounts, are treated as test transactions with no fees collected. All pre-enrollment transactions are cancelled once you complete enrollment in Roku Pay, 
+Until your enrollment in Roku Pay is complete, Roku will not bill customers for transactions associated with your app. Any pre-enrollment transactions, including those executed via billing test accounts, are treated as test transactions with no fees collected. All pre-enrollment transactions are cancelled once you complete enrollment in Roku Pay,
 
 Once Roku verifies a publisher's bank information and tax documents, the publisher's account will be enrolled in the Roku Partner Payouts Program. The publisher can then publish a monetized app and begin recognizing revenue immediately.
 

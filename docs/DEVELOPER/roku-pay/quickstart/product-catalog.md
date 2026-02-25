@@ -245,7 +245,7 @@ To create a purchase option for a product, follow these steps:
       <li>The Currency code is the three-letter ISO-4217 code of the currency in which the customer will be billed.</li>
       <li>The Purchase price reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.</li>
       <li>The Net price field displays the pre-tax price. The Proceeds field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.</li>
-      </ul>If you are creating a <a href="https://roku-ent.readme.io/dev/docs/tvod-channel">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://roku-ent.readme.io/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. </td>
+      </ul>If you are creating a <a href="https://roku-ent.readme.io/dev/docs/tvod-app-catalog">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://roku-ent.readme.io/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. </td>
     </tr>
 
     <tr>

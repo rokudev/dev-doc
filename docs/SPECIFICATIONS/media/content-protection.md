@@ -18,7 +18,7 @@ next:
 | Smooth | Y         |         |          |
 | DASH   | Y         |         | Y        |
 
-> Supported DRM info can be queried using [ifDeviceInfo.getDRMInfo()](doc:ifdeviceinfo).
+> Supported DRM info can be queried using [ifDeviceInfo.getDRMInfo()](doc:ifdeviceinfo##getdrminfoex-as-object).
 >
 > If you receive a `BS lib provider not found: <DRM>` error when running a sideloaded app, you can install a production app that uses that DRM to load the missing library. For example, you can install YouTube to load Widevine, and you can install Netflix to load PlayReady.
 

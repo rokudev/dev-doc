@@ -50,7 +50,7 @@ The Product Catalog UI has been enhanced with a number of features that help dev
 
 Once the Catalog 2.0 feature is enabled for your developer account, you can select the **Product Catalog** option from the Developer Dashboard. A dialog summarizes and illustrates the new features of Catalog 2.0. You can review the new features by tabbing through the dialog.
 
-<Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-overview-tutorial-ui.png" />
+![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-overview-tutorial-ui.png)
 
 Once you are ready to upgrade to Catalog 2.0, select the checkbox to acknowledge that you understand that the UI cannot be reverted to the previous version, and then click **Upgrade Now**. To continue using the older version, click **Later**.
 
@@ -98,7 +98,7 @@ Creating the product catalog entails the following steps:
 
 2. [Creating purchase options for the new product](#creating-purchase-options). A purchase option represents the pricing and billing terms of the product.
 
-3. [Creating product groups for each set of mutually exclusive subscription products](#creating-product-groups). A product group prevents customers from being double-billed for the same content (for example, ad-supported and ad-free products for an app should be in the same product group).
+3. [Creating product groups for each set of mutually exclusive subscription products](##creating-product-exclusivity-groups). A product group prevents customers from being double-billed for the same content (for example, ad-supported and ad-free products for an app should be in the same product group).
 
 > This document is intended for SVOD apps, which may offer subscriptions and one-time purchases (for example, movie rentals/purchases, sporting events, pay-per-views). If you are managing the catalog for a TVOD-exclusive app (an app offering only transactional content), see [Creating TVOD apps](doc:tvod-channel). TVOD-exclusive apps need to create a single in-app product for each different price point in the app; therefore, the workflow differs from what is specified herein.
 >
@@ -112,11 +112,11 @@ To create a new product, follow these steps:
 
 1. In the [Developer Dashboard](https://developer.roku.com/developer), select **Product Catalog** under **Monetization**. You can also select **Manage Product Catalog** from the drop-down list on the left side of the pages within the Developer Dashboard. The **Product Catalog** page opens.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-products-ui.png?version=1&modificationDate=1733957755248&cacheVersion=1&api=v2&width=600&height=360" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-products-ui.png?version=1\&modificationDate=1733957755248\&cacheVersion=1\&api=v2\&width=600\&height=360)
 
 2. Click **Add product**. The **Add Product** page opens.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-add-products-v2.png?" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-add-products-v2.png?)
 
 3. Enter the following information for the product:
 
@@ -173,7 +173,7 @@ To create a purchase option for a product, follow these steps:
 
 2. Select the type of purchase option to be created, and then click Continue:
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-create-purchase-option.png?version=1&modificationDate=1713426326000&cacheVersion=1&api=v2&width=600&height=394" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-create-purchase-option.png?version=1\&modificationDate=1713426326000\&cacheVersion=1\&api=v2\&width=600\&height=394)
 
    * **Subscription**. A monthly, quarterly, or annual subscription for a single product.
 
@@ -185,7 +185,7 @@ To create a purchase option for a product, follow these steps:
 
 3. Configure the following **Purchase option** detail settings:
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-details-v2.png?" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-details-v2.png?)
 
 <table>
   <thead>
@@ -220,7 +220,7 @@ To create a purchase option for a product, follow these steps:
 
 4. Configure the following **Billing plan** settings:
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-billing-v2.png?version=1&modificationDate=1713497567000&cacheVersion=1&api=v2&width=600&height=598" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-billing-v2.png?version=1\&modificationDate=1713497567000\&cacheVersion=1\&api=v2\&width=600\&height=598)
 
 <table>
   <thead>
@@ -263,7 +263,7 @@ To create a purchase option for a product, follow these steps:
 
 6. If you selected **Publish** in step 6, review the **Purchase details** and **Billing plan** settings, and then click **Confirm** to make the purchase option available to customers on your app.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-summary.png?version=3&modificationDate=1721077270895&cacheVersion=1&api=v2&width=600&height=524" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-summary.png?version=3\&modificationDate=1721077270895\&cacheVersion=1\&api=v2\&width=600\&height=524)
 
 ### Creating product exclusivity groups
 
@@ -275,7 +275,7 @@ Each set of _mutually exclusive_ subscription products must be added to a produc
 
 From the customer's perspective, if they try to purchase a subscription product when they already have one in the same product group, Roky Pay displays a "You're already subscribed to this channel" dialog.
 
-<Image alt="roku815px - already-subscribed" border={false} src="https://image.roku.com/ZHZscHItMTc2/already-subscribed.jpg" />
+![roku815px - already-subscribed](https://image.roku.com/ZHZscHItMTc2/already-subscribed.jpg)
 
 > **Certification requirement**: Subscription services must create product groups for all sets of subscription products that customers cannot be subscribed to simultaneously in order to pass [certification](doc:roku-pay-requirements#rp-3-payment-requirements).
 
@@ -283,11 +283,11 @@ To create a product exclusivity group, follow these steps:
 
 1. From the **Product catalog** page, click the **Product exclusivity groups** tab, and then click **Create group**.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-groups.png?version=1&modificationDate=1733959034858&cacheVersion=1&api=v2&width=600&height=360" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-groups.png?version=1\&modificationDate=1733959034858\&cacheVersion=1\&api=v2\&width=600\&height=360)
 
 2. In the **New Group** page, click the **Add to group** icon (+) for each mutually exclusive product listed in the **All products** pane on the left to be included in the group. The product is added to the **Products in group** pane on the right. To remove a product from a group, select its check box under **Remove from group** on the left-hand side of the page and then click the remove from group icon (-).
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-product-group.png?version=1&modificationDate=1713502955000&cacheVersion=1&api=v2&width=600&height=351" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-product-group.png?version=1\&modificationDate=1713502955000\&cacheVersion=1\&api=v2\&width=600\&height=351)
 
 3. In the **Product** **Group Name** box, enter a descriptive name for the group that makes it easy to identify. For example, if you are creating a product group containing ad-supported and ad-free plans, it could be named "\<product name> - Ad options group".
 
@@ -299,7 +299,7 @@ You can use the **Product catalog** index page to manage the individual products
 
 You can filter the products by entering a product name in the search box. By default, the products are listed by name in alphabetical order, and you can sort the products by clicking the headers. You can click on an active purchase option link to view and edit it.
 
-<Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-sort-filter.png?version=1&modificationDate=1721069876617&cacheVersion=1&api=v2&width=600&height=306" />
+![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-sort-filter.png?version=1\&modificationDate=1721069876617\&cacheVersion=1\&api=v2\&width=600\&height=306)
 
 ### Editing products
 
@@ -321,7 +321,7 @@ You can use the **Purchase options** tab to manage the purchase options (active,
 
 * **Viewing details and performing actions**: You can click anywhere in a row to view the details of a purchase option. For active and drafted purchase options, you can use the details page to update the settings, add a limited-time offer, and schedule a price change. You can also accomplish these tasks by clicking on the action button on the right side of the purchase option's row.
 
-<Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-tab.png?version=2&modificationDate=1713503044000&cacheVersion=1&api=v2&width=600&height=369" />
+![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-purchase-option-tab.png?version=2\&modificationDate=1713503044000\&cacheVersion=1\&api=v2\&width=600\&height=369)
 
 > The **Unsupported** tab includes products migrated from the legacy In-app products UI that were deleted or not marked ready for sale.
 
@@ -351,7 +351,7 @@ You can create new purchase options by cloning an existing one. For example, you
 
 1. Click the action button for the purchase option, click **Create a similar purchase option** on the shortcut menu.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-clone-purchase-option-shortcut.png?version=2&modificationDate=1713506636000&cacheVersion=1&api=v2&width=600&height=299" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-clone-purchase-option-shortcut.png?version=2\&modificationDate=1713506636000\&cacheVersion=1\&api=v2\&width=600\&height=299)
 
 2. Enter the name and SKU for the purchase option and then configure the billing plan as described in [Creating purchase options](https://roku.atlassian.net/wiki/pages/resumedraft.action?draftId=148500544#Creatingtheproductcatalog-add-purchase).
 
@@ -367,11 +367,11 @@ To end a purchase option, follow these steps:
 
 1. Click the action button for the purchase option, click **End** on the shortcut menu.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-end-purchase-option-shortcut.png?version=1&modificationDate=1713504926000&cacheVersion=1&api=v2&width=600&height=364" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-end-purchase-option-shortcut.png?version=1\&modificationDate=1713504926000\&cacheVersion=1\&api=v2\&width=600\&height=364)
 
 2. Click **Yes, End Purchase Option** in the confirmation dialog.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-end-purchase-option.png?version=1&modificationDate=1713504994000&cacheVersion=1&api=v2&width=500&height=200" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-end-purchase-option.png?version=1\&modificationDate=1713504994000\&cacheVersion=1\&api=v2\&width=500\&height=200)
 
 ### Archiving purchase options
 
@@ -381,11 +381,11 @@ Before you archive a purchase option, notify existing subscribers that their sub
 
 1. Click the **Ended** tab, click the action button for the ended purchase option, and then click **Archive** on the shortcut menu.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-archive-purchase-option.png?version=1&modificationDate=1733444399580&cacheVersion=1&api=v2&width=600&height=338" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-archive-purchase-option.png?version=1\&modificationDate=1733444399580\&cacheVersion=1\&api=v2\&width=600\&height=338)
 
 2. Click **Yes, Archive Purchase Option** in the confirmation dialog.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-archive-purchase-option-confirmation.png?version=1&modificationDate=1733444479248&cacheVersion=1&api=v2&width=500&height=145" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-archive-purchase-option-confirmation.png?version=1\&modificationDate=1733444479248\&cacheVersion=1\&api=v2\&width=500\&height=145)
 
 ### Creating a limited-time offer
 
@@ -395,11 +395,11 @@ To create a lmited-time offer, follow these steps:
 
 1. From the **Purchase options** tab, click the action button for the purchase option, and then click **Add a limited-time offer** on the shortcut menu. Alternatively, click the purchase option row to open the purchase option's details page, and then click **Add limited-time offer** under the **Billing plan** section.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-limited-time-offer-shortcut.png?version=2&modificationDate=1713503668000&cacheVersion=1&api=v2&width=600&height=328" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-limited-time-offer-shortcut.png?version=2\&modificationDate=1713503668000\&cacheVersion=1\&api=v2\&width=600\&height=328)
 
 2. The **Add a limited-time offer** dialog opens. By default, the **Offer type** is set to that of the current base offer.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-limited-time-offer.png?version=1&modificationDate=1713503130000&cacheVersion=1&api=v2&width=600&height=836" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-limited-time-offer.png?version=1\&modificationDate=1713503130000\&cacheVersion=1\&api=v2\&width=600\&height=836)
 
 3. In the **Limited-time offer ID** box, enter an internal label that makes it easy to identify the offer (for example, "new-years-14-days-free").
 
@@ -425,11 +425,11 @@ To create a cancellation offer, follow these steps:
 
 1. Click the action button for the purchase option, and then click **Add cancellation offer** on the shortcut menu.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/add-cancel-offer-shortcut.png" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/add-cancel-offer-shortcut.png)
 
 2. The **Add cancellation offer** page opens.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/add-cancel-offer-page.png?version=1&modificationDate=1744921464263&cacheVersion=1&api=v2&width=800&height=408" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/add-cancel-offer-page.png?version=1\&modificationDate=1744921464263\&cacheVersion=1\&api=v2\&width=800\&height=408)
 
 3. Enter a **Cancellation offer ID**. This is an internal label that makes it easy to identify the cancellation offer. The cancellation offer ID is appended to the purchase option ID.
 
@@ -437,19 +437,19 @@ To create a cancellation offer, follow these steps:
 
 5. In the **Eligibility** setting, select which users can receive this cancellation offer. By default, all subscribers are eligible for the offer every time they cancel a subscription. Optionally, you can configure rules to target specific subscribers based on the current subscription length, the time since they last used a cancellation offer, and the Streaming Store country in which they are located.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/cancel-offer-eligibility.png" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/cancel-offer-eligibility.png)
 
 6. Optionally, in the **Promotional Image** field, upload up to four 16:9 promotional images per language.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/cancel-offer-image.png" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/cancel-offer-image.png)
 
 7. In the **Subscription terms for cancellation offer** field, enter the subscription terms for the cancellation offer in one or more languages. These terms are displayed to customers at the bottom of the offer.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/cancel-offer-terms.png" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/cancel-offer-terms.png)
 
 8. In the Schedule the cancellation offer field, enter when the cancellation offer begins and ends (in your local time). The End time is inclusive. For example, if the start date is Nov 11, 2024, and the end date is Dec 26, 2024, the offer begins on November 11th at 12:00AM, and it ends December 26th at 11:59PM. The End time may not be in the past.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/cancel-offer-schedule.png" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/cancel-offer-schedule.png)
 
 9. Click **Save as Draft** to save the cancellation offer without activating it. Click **Publish** to activate the cancellation offer.
 
@@ -465,15 +465,15 @@ To schedule a price change for a purchase option, follow these steps:
 
 1. Click the action button for the purchase option, and then click **Schedule** **price change** on the shortcut menu.
 
-   <Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-shortcut.png" />
+   ![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-shortcut.png)
 
 2. The **Schedule a** **price change** dialog opens. For the purchase options, the dialog lists the names of the associated product and apps, the SKU, billing cycle (type), regular price, and base offer of the purchase option.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog.png" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog.png)
 
 3. In the **New regular price** field, select the updated price tier for the purchase option.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog-select-new-price.png" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog-select-new-price.png)
 
 4. If you are decreasing the price, schedule the effective date of the price change for all customers.
 
@@ -481,25 +481,25 @@ To schedule a price change for a purchase option, follow these steps:
 
    a. Schedule the effective date of the price increase for new customers. The price change will be applied for new subscribers the next day, at the earliest.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/catalog-2-price-change-new-customers.png" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/catalog-2-price-change-new-customers.png)
 
    b. To apply the price change to current subscribers, select the **Apply price increase to current customer** check box, and then schedule the effective date of the price increase. The selected date must be 15 days in advance of the listed date. You must give current subscribers 15-days notice per Roku's certification requirements.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/catalog-2-price-change-existing-customers.png" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/catalog-2-price-change-existing-customers.png)
 
 6. Click **Review and publish** to review the price change before publishing it.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change.png" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change.png)
 
 7. Review and select the acknowledge check box and then click **Confirm** to schedule the price change.
 
-   <Image alt="img -  roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog-confirm.png" />
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog-confirm.png)
 
 ## Managing product groups
 
 You can use the **Product groups** tab to manage the product groups in your catalog. The tab lists the name and associated products for each purchase group. You can filter the product groups by entering a name in the search box. By default, the product groups are listed by name in alphabetical order, and you can sort the product groups by clicking the headers. You can click anywhere in a row to view the details of a product group and edit it.
 
-<Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-group-tab.png" />
+![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-group-tab.png)
 
 ### Editing product groups
 
@@ -507,7 +507,7 @@ You can add and remove products from a product group. Modifying a product group 
 
 To edit a product group, click anywhere in the row of a product group, update the product group as described in [Creating product groups](https://roku.atlassian.net/wiki/pages/resumedraft.action?draftId=148500544#Creatingtheproductcatalog-add-group), click **Save**, and then click **Confirm** in the confirmation dialog.
 
-<Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-edit-product-group.png" />
+![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-edit-product-group.png)
 
 ### Deleting product groups
 
@@ -515,7 +515,7 @@ You can delete a product group listed in the **Product groups** tab. Deleting a 
 
 To delete a product group, click the garbage can icon on the right side of the product group row, and then click **Delete** (or **Delete and Publish** if the products contain purchase options) in the confirmation dialog.
 
-<Image alt="img -  roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/product-catalog-delete-product-group.png?version=1&modificationDate=1713504485000&cacheVersion=1&api=v2&width=500&height=341" />
+![img -  roku815px](https://image.roku.com/ZHZscHItMTc2/product-catalog-delete-product-group.png?version=1\&modificationDate=1713504485000\&cacheVersion=1\&api=v2\&width=500\&height=341)
 
 ## Testing in-app product purchases
 

@@ -1,0 +1,9 @@
+- devices-list_devices
+- devices-create_device
+- devices-get_device
+- devices-update_device
+- devices-delete_device
+- devices-start_device
+- devices-stop_device
+- devices-get_device_runs
+- devices-read_logs

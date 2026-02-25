@@ -1,0 +1,5 @@
+- personal-access-tokens-list_personal_access_tokens
+- personal-access-tokens-create_personal_access_token
+- personal-access-tokens-revoke_personal_access_token
+- personal-access-tokens-get_personal_access_token_scopes
+- personal-access-tokens-refresh_personal_access_token

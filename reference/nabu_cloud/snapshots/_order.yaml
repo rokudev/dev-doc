@@ -1,0 +1,5 @@
+- snapshots-list_snapshots
+- snapshots-create_snapshot
+- snapshots-get_snapshot
+- snapshots-update_snapshot
+- snapshots-delete_snapshot

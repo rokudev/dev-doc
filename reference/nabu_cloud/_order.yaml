@@ -1,0 +1,12 @@
+- healthz
+- users
+- personal-access-tokens
+- builds
+- organisation-roles
+- organisations
+- groups
+- projects
+- serviceaccounts
+- devices
+- snapshots
+- asyncapi

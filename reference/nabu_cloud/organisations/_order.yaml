@@ -1,0 +1,10 @@
+- organisations-list_organisations
+- organisations-get_organisation
+- organisations-list_organisation_members
+- organisations-get_organisation_member
+- organisations-list_organisation_regions
+- organisations-get_organisation_region
+- organisations-list_project_roles
+- organisations-get_project_role
+- organisations-list_group_roles
+- organisations-get_group_role

@@ -153,9 +153,9 @@ The administrator (root account) can create free-trials offers, discount pricing
 
      ![roku815px - inCP-TrialsAndOffers2](https://image.roku.com/ZHZscHItMTc2/inCP-TrialsAndOffers2.jpg)
 
-2. If the product is ready to be made available to customers for purchase, select the **Cleared for Sale** check box. This makes the product visible to the ChanelStore node (specifically, the node's [**getCatalog** field](doc:channelstore) will return this product). Selecting this check box also enables you to schedule limited-time free trial and discount offers for the product.
+2. If the product is ready to be made available to customers for purchase, select the **Cleared for Sale** check box. This makes the product visible to the ChanelStore node (specifically, the node's [**getCatalog** field](doc:channelstore#getcatalog) will return this product). Selecting this check box also enables you to schedule limited-time free trial and discount offers for the product.
 
-   If the product is still being tested, keep the check box cleared (it is cleared by default). In this case, the **ChannelStore** node's [**getCatalog** field](doc:channelstore) will not return this product.
+   If the product is still being tested, keep the check box cleared (it is cleared by default). In this case, the **ChannelStore** node's [**getCatalog** field](doc:channelstore#getcatalog) will not return this product.
 
 3. Click **Save** to add the in-app product to the **Manage In-Channel Products** index page.
 

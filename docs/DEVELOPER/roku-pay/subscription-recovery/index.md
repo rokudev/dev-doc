@@ -18,8 +18,8 @@ While both the basic and enhanced subscription recovery solutions include renewa
 
 | **Feature**                       | **Basic Subscription Recovery**                                                                                                                                                                                             | **Enhanced Subscription Recovery**                                                                                                      |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **Availability**                  | Apps streaming \< 5M hours/month already using this solution. It is recommended to migrate to Enhanced Recovery. <br /><br /> **Note:** Effective Oct 1, 2024, all apps must implement Enhanced Recovery for certification. | Apps streaming > 5M hours/month must implement this solution. All new apps, regardless of hours, must use this to pass certification.1  |
-| **Recovery period2**              | 3 days3                                                                                                                                                                                                                     | 60 days4                                                                                                                                |
+| **Availability**                  | Apps streaming \< 5M hours/month already using this solution. It is recommended to migrate to Enhanced Recovery. <br /><br /> **Note:** Effective Oct 1, 2024, all apps must implement Enhanced Recovery for certification. | Apps streaming > 5M hours/month must implement this solution. All new apps, regardless of hours, must use this to pass certification.   |
+| **Recovery period2**              | 3 days                                                                                                                                                                                                                      | 60 days                                                                                                                                 |
 | **Grace period5**                 | Yes (3 days). Access remains while Roku notifies the user. Subscription is canceled after 3 days if payment fails.                                                                                                          | Yes (3 days). After 3 days, subscription is placed on **hold**. Access is blocked during hold. Canceled after 60 days if payment fails. |
 | **On-screen notifications**       | No                                                                                                                                                                                                                          | Yes                                                                                                                                     |
 | **Push notifications**            | Yes                                                                                                                                                                                                                         | Yes                                                                                                                                     |
@@ -28,7 +28,7 @@ While both the basic and enhanced subscription recovery solutions include renewa
 
 ### Basic subscription recovery
 
-> **Migration Notice:** Effective October 1, 2024, all apps using Roku Pay must implement Enhanced Subscription Recovery to pass [certification](doc:certification). Apps currently using the basic solution must migrate to the [Enhanced Recovery](doc:subscription-on-hold) solution.
+> **Migration Notice:** Effective October 1, 2024, all apps using Roku Pay must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements#rp-4-authentication-and-entitlement-requirements). Apps currently using the basic solution must migrate to the [Enhanced Recovery](doc:subscription-on-hold) solution.
 
 When the auto-renewal of a customer's subscription fails, Roku Pay automatically places the subscription in recovery. The customer is given a grace period where they may continue accessing content for **3 days**. During this window, the customer is notified daily via email to update their MOP.
 
@@ -42,7 +42,7 @@ When auto-renewal fails, the customer enters a **3-day grace period** with full 
 
 * **Hold State:** Customers are blocked from accessing content.
 * **Notifications:** Users see prompts on the Roku home screen, upon app launch, and via email.
-* **In-App Recovery:** Publishers should use the [ChannelStore DoRecovery API](#in-channel-subscription-renewal-dialog) to trigger a renewal dialog when a user attempts to play content.
+* **In-App Recovery:** Publishers should use the [ChannelStore DoRecovery API](doc:subscription-on-hold#dorecovery-api) to trigger a renewal dialog when a user attempts to play content.
 
 If payment is recovered, entitlement is restored. If recovered during grace, the billing cycle remains unchanged; if recovered while on hold, the billing cycle resets to the payment date.
 
@@ -63,3 +63,5 @@ Use the **Subscription recovery** page in the Developer Dashboard to configure t
 Use the `subscription-recovery` test API to manually force subscriptions into specific states (Active, In-Grace, On-Hold, Canceled, or Recovered). This allows you to verify your app's UI and backend logic without waiting for real billing cycles.
 
 **For more information:** [Subscription recovery testing](doc:testing-1)
+
+<br />

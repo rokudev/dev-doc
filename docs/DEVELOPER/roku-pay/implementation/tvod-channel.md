@@ -42,7 +42,7 @@ When creating an in-app product for transactional content, make sure to do the f
 
 ## Handling transactional purchases
 
-To handle purchases of transactional content in your app, your app must send the [ChannelStore node's](doc:channelstore) [requestPartnerOrder](doc:channelstore) and [confirmPartnerOrder](doc:channelstore) commands to check the user's billing status and complete the transaction.
+To handle purchases of transactional content in your app, your app must send the [ChannelStore node's](doc:channelstore) [requestPartnerOrder](doc:channelstore#requestpartnerorder) and [confirmPartnerOrder](doc:channelstore#confirmpartnerorder) commands to check the user's billing status and complete the transaction.
 
 To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow these steps:
 

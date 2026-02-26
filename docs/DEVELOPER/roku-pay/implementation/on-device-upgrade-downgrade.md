@@ -48,7 +48,7 @@ Apps must complete the following steps to handle on-device upgrades and downgrad
 
 #### SceneGraph ChannelStore node (SDK 2)
 
-To send a [**doOrder command**](doc:channelstore) to upgrade or downgrade a plan with the SceneGraph ChannelStore node, follow these steps:
+To send a [**doOrder command**](doc:channelstore#doorder) to upgrade or downgrade a plan with the SceneGraph ChannelStore node, follow these steps:
 
 1. Set the `order.action` field to `Upgrade` or `Downgrade` (the required values are case-sensitive; do not pass "upgrade" or "downgrade" in the `action` field).
 
@@ -61,7 +61,7 @@ To send a [**doOrder command**](doc:channelstore) to upgrade or downgrade a plan
    myOrder.action = "Upgrade"
    ```
 
-2. Send a [**doOrder** command](doc:channelstore) to have the customer confirm the upgrade/downgrade.
+2. Send a [**doOrder** command](doc:channelstore#doorder) to have the customer confirm the upgrade/downgrade.
 
    m.channelStore.command = "doOrder"
 
@@ -73,7 +73,7 @@ To send a [**doOrder command**](doc:channelstore) to upgrade or downgrade a plan
 
 #### BrightScript roChannelStore node (SDK 1)
 
-To call the [**SetOrder()** function](doc:ifchannelstore) to upgrade or downgrade a plan with the BrightScript roChannelStore node, follow these steps:
+To call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object-orderinfo-as-object-as-void) to upgrade or downgrade a plan with the BrightScript roChannelStore node, follow these steps:
 
 1. Set the `orderInfo.action` field to `Upgrade` or `Downgrade` (the required values are case-sensitive; do not pass "upgrade" or "downgrade" in the `action` field).
 
@@ -83,7 +83,7 @@ To call the [**SetOrder()** function](doc:ifchannelstore) to upgrade or downgrad
    myOrderInfo.action = "Upgrade"
    ```
 
-2. Call the [**SetOrder()** function](doc:ifchannelstore) to have the customer confirm the upgrade/downgrade. The **myOrderItems** parameter specifies the in-channel product to which the customer is upgrading/downgrading; the **myOrderInfo** parameter whether the transaction is an upgrade or downgrade.
+2. Call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object-orderinfo-as-object-as-void) to have the customer confirm the upgrade/downgrade. The **myOrderItems** parameter specifies the in-channel product to which the customer is upgrading/downgrading; the **myOrderInfo** parameter whether the transaction is an upgrade or downgrade.
 
    m.store.setOrder(myOrderItems, myOrderInfo)
 
@@ -95,7 +95,7 @@ To call the [**SetOrder()** function](doc:ifchannelstore) to upgrade or downgrad
 
 ### Calling the Roku Pay validate transaction API
 
-In order to support upgrade and downgrade transactions, the [**validate transaction** API](doc:roku-web-service) includes the following fields in the response:
+In order to support upgrade and downgrade transactions, the [**validate transaction** API](doc:roku-web-service#validate-transaction) includes the following fields in the response:
 
 * **purchaseType**: The `purchaseType` indicates whether the transaction was an `UPGRADE` or `DOWNGRADE`.
 
@@ -112,13 +112,13 @@ In order to support upgrade and downgrade transactions, the [**validate transact
 | Pending_Active   | true       | false     |
 | Pending_Inactive | true       | true      |
 
-Once an upgrade or downgrade has been completed on-device, apps should call the [**validate transaction** API](doc:roku-web-service) with the transaction ID from the `purchaseid` field of the `doOrder` command to update their system.
+Once an upgrade or downgrade has been completed on-device, apps should call the [**validate transaction** API](doc:roku-web-service#validate-transaction) with the transaction ID from the `purchaseid` field of the `doOrder` command to update their system.
 
 The API responses for the original purchase and upgrades/downgrades are as follows:
 
 #### Upgrades
 
-After an upgrade has been completed on-device, responses to [**validate transaction** API](doc:roku-web-service) calls made with the transaction IDs of the original base plan and the upgrade will result in the following:
+After an upgrade has been completed on-device, responses to [**validate transaction** API](doc:roku-web-service#validate-transaction) calls made with the transaction IDs of the original base plan and the upgrade will result in the following:
 
 **Original base plan purchase**. The `cancelled` field is set to true (no renewal will therefore happen); the `expirationDate` field remains unchanged.
 
@@ -264,7 +264,7 @@ When a free trial _is_ offered with the upgrade subscription, the `purchase_stat
 
 #### Downgrades
 
-After a downgrade has been completed on-device, responses to [**validate transaction** API](doc:roku-web-service) calls made with the transaction IDs of the original plan and the downgrade will result in the following:
+After a downgrade has been completed on-device, responses to [**validate transaction** API](doc:roku-web-service#validate-transaction) calls made with the transaction IDs of the original plan and the downgrade will result in the following:
 
 **Original plan purchase**. The `cancelled` field is set to true (no renewal will therefore happen); the `expirationDate` field remains unchanged.
 

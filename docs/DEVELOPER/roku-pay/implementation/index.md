@@ -1,5 +1,5 @@
 ---
-title: "Implementing Roku Pay"
+title: Implementing Roku Pay
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Implementing Roku Pay in an app entails creating low-friction authentication, signup, and sign-in workflows with the [SceneGraph ChannelStore node](doc:channelstore) and [Roku Pay web services](doc:roku-web-service). These flows enable customers to access content and purchase subscriptions with minimal interaction. This document provides a high-level overview of how to create these workflows through Roku Pay. See [On-device authentication](doc:on-device-authentication) for complete, step-by-step instructions that include how to manage subscriptions  created through both Roku Pay and the publisher's system.
 
 ![roku-pay-flow](https://image.roku.com/ZHZscHItMTc2/roku-pay-flow-v8.png)
@@ -22,7 +20,7 @@ Implementing Roku Pay in an app entails creating low-friction authentication, si
 
 ## Authentication and entitlement checks
 
-The ChannelStore node and Roku Pay web services are used together to manage the [on-device authentication](doc:on-device-authentication) and entitlements in apps. When the app is launched, the app sends the ChannelStore node's [**getAllPurchases** command](doc:channelstore) to retrieve the customer's existing subscription purchase (if any). The transaction ID for that subscription is passed into Roku Pay's **[validate-transaction API](doc:roku-web-service)** to confirm whether the customer is still entitled to it. If the `isEntitled` flag included in the API response is "true", the app grants the customer access to content; if it's "false", the app prompts the customer to sign up for a subscription product (see the next section for how to implement the signup workflow). The result is a seamless, authentication workflow that requires no user interaction.
+The ChannelStore node and Roku Pay web services are used together to manage the [on-device authentication](doc:on-device-authentication) and entitlements in apps. When the app is launched, the app sends the ChannelStore node's [**getAllPurchases** command](doc:channelstore#getallpurchases) to retrieve the customer's existing subscription purchase (if any). The transaction ID for that subscription is passed into Roku Pay's **[validate-transaction API](doc:roku-web-service)** to confirm whether the customer is still entitled to it. If the `isEntitled` flag included in the API response is "true", the app grants the customer access to content; if it's "false", the app prompts the customer to sign up for a subscription product (see the next section for how to implement the signup workflow). The result is a seamless, authentication workflow that requires no user interaction.
 
 ![roku815px - roku-pay-entitlement-check](https://image.roku.com/ZHZscHItMTc2/roku-pay-entitlement-v3.png)
 
@@ -42,7 +40,7 @@ The app displays an RFI screen in order for customers to grant the app access to
 
 The user account should be created after the customer completes the subscription purchase. After which, apps should create a temporary password for the customer in the backend system and then send the customer an email instructing them to reset it. This eliminates the need for an account creation screen and numerous additional customer keypresses, which slow down the signup flow and increase the risk of abandonment.
 
-Sending the ChannelStore node's [**getUserData** command](doc:channelstore) displays the RFI screen with the customer's Roku account information, which is used for creating an account in the publisher's system.
+Sending the ChannelStore node's [**getUserData** command](doc:channelstore#getuserdata) displays the RFI screen with the customer's Roku account information, which is used for creating an account in the publisher's system.
 
 > **Certification requirement**: Apps must display the RFI screen in the sign-up flow to pass certification.
 
@@ -50,13 +48,13 @@ Sending the ChannelStore node's [**getUserData** command](doc:channelstore) disp
 
 If an app offers, for example, monthly and annual subscriptions or ad-supported and ad-free plans, the app displays a dialog or screen listing the different plans in the app's product catalog. If an app only has a single plan, no plan selection screen is needed; clicking content that is behind a paywall can initiate the next step in the workflow, which is to create the customer's account.
 
-The ChannelStore node's [**getCatalog** command](doc:channelstore) is used to get the subscription and one-time purchase products in the app's catalog.
+The ChannelStore node's [**getCatalog** command](doc:channelstore#getcatalog) is used to get the subscription and one-time purchase products in the app's catalog.
 
 ### Order creation and confirmation
 
 The app displays Roku Pay’s order confirmation screen, which lists the terms of the purchase and the method of payment.
 
-The ChannelStore node's [**doOrder** command](doc:channelstore) is used to display the order confirmation screen, which lets customers start their subscription or confirm their one-time purchase.
+The ChannelStore node's [**doOrder** command](doc:channelstore#doorder) is used to display the order confirmation screen, which lets customers start their subscription or confirm their one-time purchase.
 
 > The signup workflow for apps with a single subscription product only requires the two built-in Roku Pay screens: Request for Information (RFI) and order creation/confirmation. Similarly, apps with two or more subscription plans require only a plan selection UI in addition to the built-in RFI and order creation/confirmation screens.
 >

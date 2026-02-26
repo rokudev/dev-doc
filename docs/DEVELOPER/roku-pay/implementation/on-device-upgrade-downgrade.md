@@ -12,7 +12,7 @@ next:
 ---
 Apps with Roku Pay integrations can implement on-device subscription upgrades and downgrades. By doing so, customers can seamlessly switch plans directly from their devices, and apps can ensure that they are billed properly. This enables apps to target different audiences with the best plan in order to maximize content monetization.
 
-> Authenticated transactional apps (SVOD, TVOD, and other subscription services) must complete upgrades and downgrades on the device using Roku Pay, without visiting an external webpage, to pass [certification](doc:certification).
+> Authenticated transactional apps (SVOD, TVOD, and other subscription services) must complete upgrades and downgrades on the device using Roku Pay, without visiting an external webpage, to pass [certification](doc:certification#2-purchases).
 
 ## Overview
 
@@ -20,11 +20,11 @@ To understand how Roku's on-device upgrades and downgrades work, consider a cust
 
 <img src="https://image.roku.com/ZHZscHItMTc2/upgrade-annual-subscription.jpg" />
 
-To upgrade a plan, apps cancel the previous _base plan_ and completes the purchase of the _upgraded plan_ (causing a prorated service credit for the remaining balance on the base plan to be applied to the purchase of the upgraded plan).
+To upgrade a plan, apps cancel the previous _base plan_ and complete the purchase of the _upgraded plan_ (causing a prorated service credit for the remaining balance on the base plan to be applied to the purchase of the upgraded plan).
 
 To downgrade a plan, apps similarly check the expiration date of the _current plan_ being and then mark it for cancellation. A new transaction ID for the _downgraded plan_, which has a $0 price and the same expiration date as the current plan, is returned. On the expiration date, the downgrade is completed and a new transaction ID is created with the purchase price of the downgraded plan.
 
-Apps must add a [product group](doc:in-channel-products) in the Developer Dashboard to enable and facilitate upgrades and downgrades. A product group contains a set of two or more _mutually exclusive_ products, to which customers can upgrade or downgrade. For example, a product group may contain two products for a subscription service with different billing cycles (one that is billed monthly and another annually) or different ad support (one that is ad-based and another that is ad-free). Because they are defined as being mutually-exclusive by their membership in the same product group, Roku can automatically help ensure that the customer is only ever subscribed to one at a time.
+Apps must add a [product group](doc:product-catalog#creating-product-exclusivity-groups) in the Developer Dashboard to enable and facilitate upgrades and downgrades. A product group contains a set of two or more _mutually exclusive_ products, to which customers can upgrade or downgrade. For example, a product group may contain two products for a subscription service with different billing cycles (one that is billed monthly and another annually) or different ad support (one that is ad-based and another that is ad-free). Because they are defined as being mutually-exclusive by their membership in the same product group, Roku can automatically help ensure that the customer is only ever subscribed to one at a time.
 
 > Subscription adjustments, such as upgrade and downgrade as described here, are only made available by the Roku system, to users whose subscriptions are _established and maintained_ via Roku Pay.
 >
@@ -34,13 +34,13 @@ Apps must add a [product group](doc:in-channel-products) in the Developer Dashbo
 
 Apps must complete the following steps to handle on-device upgrades and downgrades via Roku Pay:
 
-1. [Create a product group in the Developer Dashboard](doc:in-channel-products) for the products customers can upgrade or downgrade.
+1. [Create a product group in the Developer Dashboard](doc:product-catalog#creating-product-exclusivity-groups) for the products customers can upgrade or downgrade.
 
-2. Apps using the [SceneGraph ChannelStore node (SDK 2)](doc:channelstore): Set the `order.action` field to `Upgrade` or `Downgrade`, and then send a [**doOrder command**](doc:channelstore) to complete the upgrade/downgrade.
+2. Apps using the [SceneGraph ChannelStore node (SDK 2)](doc:channelstore): Set the `order.action` field to `Upgrade` or `Downgrade`, and then send a [**doOrder command**](doc:channelstore#doorder) to complete the upgrade/downgrade.
 
-   Apps using the [BrightScript roChannelStore node (SDK 1)](doc:ifchannelstore): Call the [**SetOrder()** function](doc:ifchannelstore) with the **action** field of the **orderInfo** parameter set to `Upgrade` or `Downgrade`.
+   Apps using the [BrightScript roChannelStore node (SDK 1)](doc:ifchannelstore): Call the [**SetOrder()** function](doc:ifchannelstore##setorderorder-as-object-orderinfo-as-object-as-void) with the **action** field of the **orderInfo** parameter set to `Upgrade` or `Downgrade`.
 
-3. Call the [Roku Pay **validate transaction** API](doc:roku-web-service) with the transaction ID from the `purchaseid` field of the [**doOrder command**](doc:channelstore). Use the data returned by the API to update the backend system with the entitlements and expiration dates of the original and upgraded/downgraded plans. Apps subscribing to [push notifications](doc:push-notifications) will receive both [cancel](doc:push-notifications) and [sale](doc:push-notifications) notifications for upgrades and downgrades.
+3. Call the [Roku Pay **validate transaction** API](doc:roku-web-service#validate-transaction) with the transaction ID from the `purchaseid` field of the [**doOrder command**](doc:channelstore#doorder). Use the data returned by the API to update the backend system with the entitlements and expiration dates of the original and upgraded/downgraded plans. Apps subscribing to [push notifications](doc:push-notifications) will receive both [cancel](doc:push-notifications#cancel) and [sale](doc:push-notifications#sale) notifications for upgrades and downgrades.
 
 ## Handling upgrade/downgrade transactions
 

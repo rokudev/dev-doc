@@ -9,10 +9,9 @@ metadata:
   description: ''
   robots: index
 ---
-
 When payment for a subscription auto-renewal fails, Roku's Enhanced Subscription Recovery feature (formerly referred to as "Passive Subscription on Hold" or "Subscription on Hold") notifies the customer on-device and via email to update their method of payment (MOP) on file for 60 days. This helps the publisher improve the chance of recovering payments and thereby reduce passive cancellations.
 
-> All apps offering subscriptions must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements).
+> All apps offering subscriptions must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements#rp-4-authentication-and-entitlement-requirements).
 
 ## Overview
 
@@ -39,7 +38,7 @@ To integrate Enhanced Subscription recovery in your app, you must complete the f
 
 **App publishing and enabling enhanced recovery**
 
-6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](doc:channel-publishing-guide), and then [Enable Enhanced Subscription Recovery](#subscription-recovery-settings) for it.
+6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](doc:channel-publishing-guide#publishing-an-app), and then [Enable Enhanced Subscription Recovery](#subscription-recovery-settings) for it.
 
 ### Enabling enhanced subscription recovery
 
@@ -62,9 +61,9 @@ You must use the Roku Pay APIs to check whether a subscription is current, in re
 
 #### Product Catalog 2.0 (ChannelStore generic request framework)
 
-When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases](doc:add-ons-integration) API (with **version**=2 and **includeExpired**=true), as part of the required on-device authentication, to determine whether to block access to content.
+When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API (with **version**=2 and **includeExpired**=true), as part of the required on-device authentication, to determine whether to block access to content.
 
-The [v2 getAllPurchases](doc:add-ons-integration) API returns an **purchases.billingPlan.state** field that reports the status of a subscription, which may be one of the following values:
+The [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API returns an **purchases.billingPlan.state** field that reports the status of a subscription, which may be one of the following values:
 
 <table>
   <thead>
@@ -73,9 +72,11 @@ The [v2 getAllPurchases](doc:add-ons-integration) API returns an **purchases.bil
       <th>**purchases.billingPlan.state**</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>Current</td>
+
       <td>
         <ul>
           <li>"ActivePaid"</li>
@@ -84,14 +85,17 @@ The [v2 getAllPurchases](doc:add-ons-integration) API returns an **purchases.bil
         </ul>
       </td>
     </tr>
+
     <tr>
       <td>In Recovery</td>
       <td>"ActiveInGracePeriod" (in 3-day grace period)</td>
     </tr>
+
     <tr>
       <td>On Hold</td>
       <td>"InactiveOnHold"</td>
     </tr>
+
     <tr>
       <td>Cancelled</td>
       <td>"InactiveExpired"</td>
@@ -101,7 +105,7 @@ The [v2 getAllPurchases](doc:add-ons-integration) API returns an **purchases.bil
 
 #### Product Catalog 1.0 (ChannelStore API)
 
-When customers launch an app, the app calls the ChannelStore [getAllPurchases](doc:channelstore) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](doc:channelstore) API returns an **inDunning** flag that is used along with the **status** field to get the status of a subscription:
+When customers launch an app, the app calls the ChannelStore [getAllPurchases](doc:channelstore#getallpurchases) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](doc:channelstore#getallpurchases) API returns an **inDunning** flag that is used along with the **status** field to get the status of a subscription:
 
 | Subscription state                  | **"inDunning"** | **"status"** |
 | :---------------------------------- | :-------------- | :----------- |
@@ -112,7 +116,7 @@ When customers launch an app, the app calls the ChannelStore [getAllPurchases](d
 
 #### Roku Pay web service APIs
 
-You should routinely synchronize your entitlement service with the Roku Pay web services to make sure your system has up-to-date entitlement data (this also provides a backup in case your backend system occasionally does not receive or process a batch of push notifications sent by Roku). Call the [validate-transaction API](doc:roku-web-service) as part of a nightly batch routine to get the updated status of your customers' subscriptions. This API returns an **isEntitled** flag that is used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
+You should routinely synchronize your entitlement service with the Roku Pay web services to make sure your system has up-to-date entitlement data (this also provides a backup in case your backend system occasionally does not receive or process a batch of push notifications sent by Roku). Call the [validate-transaction API](doc:roku-web-service#validate-transaction) as part of a nightly batch routine to get the updated status of your customers' subscriptions. This API returns an **isEntitled** flag that is used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
 
 | Subscription state                                                 | **"isEntitled"** | **"expirationDate"** | **"cancelled"** |
 | :----------------------------------------------------------------- | :--------------- | :------------------- | :-------------- |
@@ -126,7 +130,7 @@ You should routinely synchronize your entitlement service with the Roku Pay web 
 
 ### DoRecovery API
 
-You must use the ChannelStore [DoRecovery API](#dorecovery-api) to display the Roku Pay subscription renewal dialog in your app when customers select content, navigate to or land on a specific screen, or upon other specific interactions. This API lets developers configure the last option in the in-app subscription renewal dialog to either "Continue Watching" (if the subscription is in grace) or "Close" (if the subscription is on hold; this is the default and it closes the dialog and returns the customer to the previous screen).
+You must use the ChannelStore DoRecovery API to display the Roku Pay subscription renewal dialog in your app when customers select content, navigate to or land on a specific screen, or upon other specific interactions. This API lets developers configure the last option in the in-app subscription renewal dialog to either "Continue Watching" (if the subscription is in grace) or "Close" (if the subscription is on hold; this is the default and it closes the dialog and returns the customer to the previous screen).
 
 The ChannelStore DoRecovery API uses Roku's Streaming Store generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it.
 
@@ -144,12 +148,15 @@ This reference summarizes the **request** and **requestStatus** fields used by t
       <th>Description</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>request</td>
       <td>associative array</td>
+
       <td>
         Includes the request's command and context.
+
         <table>
           <thead>
             <tr>
@@ -158,22 +165,27 @@ This reference summarizes the **request** and **requestStatus** fields used by t
               <th>Description</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>command</td>
               <td>string</td>
               <td>Set to "DoRecovery"</td>
             </tr>
+
             <tr>
               <td>context</td>
               <td>associative array</td>
-              <td>Used to match the **requestStatus** with **request**. For example, you can set this to "id: DoRecovery_1".</td>
+              <td>Used to match the **requestStatus** with **request**. For example, you can set this to "id: DoRecovery\_1".</td>
             </tr>
+
             <tr>
               <td>params</td>
               <td>associative array</td>
+
               <td>
                 Optional. Used to configure the in-app Roku Pay subscription renewal dialog. If this parameter is not included, the in-app Roku Pay subscription renewal dialog does not allow customers to watch content while their subscription is in recovery.
+
                 <table>
                   <thead>
                     <tr>
@@ -182,6 +194,7 @@ This reference summarizes the **request** and **requestStatus** fields used by t
                       <th>Description</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     <tr>
                       <td>recoveryContext</td>
@@ -209,12 +222,15 @@ This reference summarizes the **request** and **requestStatus** fields used by t
       <th>Description</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>requestStatus</td>
       <td>associative array</td>
+
       <td>
         Includes the status of the DoRecovery command and the recovery status data returned by it.
+
         <table>
           <thead>
             <tr>
@@ -223,12 +239,15 @@ This reference summarizes the **request** and **requestStatus** fields used by t
               <th>Description</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>result</td>
               <td>associative array</td>
+
               <td>
                 Contains the following key-value pairs for the recovery status of the subscription:
+
                 <ul>
                   <li>**3**. A subscription, which was in recovery (Roku was attempting to charge their method of payment over a period of days), has been canceled by the user. As a result, the subscription is no longer valid.</li>
                   <li>**2**. One or more subscriptions are still in recovery.</li>
@@ -236,11 +255,14 @@ This reference summarizes the **request** and **requestStatus** fields used by t
                 </ul>
               </td>
             </tr>
+
             <tr>
               <td>status</td>
               <td>enum</td>
+
               <td>
                 The command completion status, which may be one of the following values:
+
                 <ul>
                   <li>**2**  Interrupted</li>
                   <li>**1**  Success</li>
@@ -252,20 +274,23 @@ This reference summarizes the **request** and **requestStatus** fields used by t
                 </ul>
               </td>
             </tr>
+
             <tr>
               <td>statusMessage</td>
               <td>string</td>
               <td>A text description of the command completion status.</td>
             </tr>
+
             <tr>
               <td>command</td>
               <td>string</td>
               <td>The command passed into the request, which is "DoRecovery".</td>
             </tr>
+
             <tr>
               <td>context</td>
               <td>associative array</td>
-              <td>The context passed into the request (for example, id: "DoRecovery_1").</td>
+              <td>The context passed into the request (for example, id: "DoRecovery\_1").</td>
             </tr>
           </tbody>
         </table>
@@ -452,16 +477,16 @@ Each of the on-device and email renewal notifications that Roku automatically se
 
 * **Roku home screen renewal notifications**. By default, Roku automatically presents a heads-up display on the Roku home screen. It informs the customer that their subscription could not be renewed and prompts them to either update their MOP or be reminded to do so later.
 
-  <Image alt="roku600px on-hold-hud" border={false} src="https://image.roku.com/ZHZscHItMTc2/on-hold-hud.png" />
+  ![roku600px on-hold-hud](https://image.roku.com/ZHZscHItMTc2/on-hold-hud.png)
 
 * **App launch renewal notifications**. When the customer launches the app (via tile, Roku Search, or Roku Voice), Roku by default automatically displays a dialog once a day that gives the customer the option to update their MOP, cancel their subscription, or continue launching the app.
 
-  <Image alt="roku600px - channel-launch-notification" src="https://image.roku.com/ZHZscHItMTc2/channel-launch-notification.png" />
+  ![roku600px - channel-launch-notification](https://image.roku.com/ZHZscHItMTc2/channel-launch-notification.png)
 
 * **Email renewal notification**. Roku sends email notifications prompting the customer to update their MOP or manage their subscription online at [my.roku.com](http://my.roku.com/). The following images demonstrate the emails customers receive when Roku is trying to recover their subscriptions.
 
-  <Image alt="roku600px - recovery-email" src="https://image.roku.com/ZHZscHItMTc2/recovery-email.png" />
+  ![roku600px - recovery-email](https://image.roku.com/ZHZscHItMTc2/recovery-email.png)
 
-  <Image alt="roku600px - recovery-email-last" src="https://image.roku.com/ZHZscHItMTc2/recovery-email-last.png" />
+  ![roku600px - recovery-email-last](https://image.roku.com/ZHZscHItMTc2/recovery-email-last.png)
 
-  <Image alt="roku600px - recovery-email-cancellation" src="https://image.roku.com/ZHZscHItMTc2/recovery-email-cancellation.png" />
+  ![roku600px - recovery-email-cancellation](https://image.roku.com/ZHZscHItMTc2/recovery-email-cancellation.png)

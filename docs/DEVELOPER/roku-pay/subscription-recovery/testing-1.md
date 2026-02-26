@@ -10,16 +10,15 @@ metadata:
 next:
   description: ''
 ---
-
 If you are using [enhanced subscription recovery](doc:subscription-on-hold), you can use the **subscription-recovery** test API to manually force subscriptions into different states (active, in-grace period, on-hold, passively canceled, and recovered). This helps expedite the testing of your enhanced subscription recovery integration.
 
 ## Prerequisites
 
-Making subscription-recovery test API calls requires a beta app, test user account, and transaction validation method ([push notifications](doc:push-notifications-jwt) or [API calls](doc:channel-publishing-guide)). Complete the following steps so that you can generate new subscriptions, and receive and verify state changes:
+Making subscription-recovery test API calls requires a beta app, test user account, and transaction validation method ([push notifications](doc:push-notifications-jwt) or [API calls](doc:roku-web-service#validate-transaction)). Complete the following steps so that you can generate new subscriptions, and receive and verify state changes:
 
 1. Create a [beta version of your app](doc:channel-publishing-guide).
 2. [Create a test user](doc:test-users) and link it to your beta app.
-3. (Recommended) Integrate [Roku Pay push notifications](doc:push-notifications-jwt) in your backend system. This enables you to receive and verify subscription state changes in near real-time. Otherwise, you can verify changes by pulling transaction data via Roku Pay [validate-transaction API calls](doc:channel-publishing-guide).
+3. (Recommended) Integrate [Roku Pay push notifications](doc:push-notifications-jwt) in your backend system. This enables you to receive and verify subscription state changes in near real-time. Otherwise, you can verify changes by pulling transaction data via Roku Pay [validate-transaction API calls](doc:roku-web-service#validate-transaction).
 4. Enable [Enhanced Subscription Recovery](doc:settings) in the Developer Dashboard for your beta app.
 
 Once you have successfully tested Enhanced Subscription Recovery with the beta version of your app,  you can [publish the updated production version of your app](doc:channel-publishing-guide) and then enable [Enhanced Subscription Recovery](doc:settings) for it.
@@ -48,7 +47,7 @@ To move subscriptions into different states and verify your subscription recover
 
    e. recovered (from in-grace or on-hold states)
 
-4. Use Roku Pay push notifications or Roku Pay [validate-transaction API calls](doc:channel-publishing-guide) to verify that your back-end system is receiving and processing subscription state changes.
+4. Use Roku Pay push notifications or Roku Pay [validate-transaction API calls](doc:roku-web-service#validate-transaction) to verify that your back-end system is receiving and processing subscription state changes.
 
 5. Void transactions before starting another subscription test with the same user and product. Do not reuse already-tested subscriptions; testing must be done on new signups.
 
@@ -102,7 +101,7 @@ The **subscription-recovery** test API includes a set of POST methods for changi
       </td>
 
       <td>
-        [https://apipub.roku.com/test/subscription-recovery/grace-period-state/\{partnerApiKey\}/\{transactionId\}](https://apipub.roku.com/test/subscription-recovery/grace-period-state/\{partnerApiKey}/\{transactionId})
+        [https://apipub.roku.com/test/subscription-recovery/grace-period-state/\{partnerApiKey}/\{transactionId}](https://apipub.roku.com/test/subscription-recovery/grace-period-state/\{partnerApiKey}/\{transactionId})
       </td>
     </tr>
 
@@ -124,7 +123,7 @@ The **subscription-recovery** test API includes a set of POST methods for changi
       </td>
 
       <td>
-        [https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/\{partnerApiKey\}/\{transactionId\}](https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/\{partnerApiKey}/\{transactionId})
+        [https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/\{partnerApiKey}/\{transactionId}](https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/\{partnerApiKey}/\{transactionId})
       </td>
     </tr>
 
@@ -147,7 +146,7 @@ The **subscription-recovery** test API includes a set of POST methods for changi
       </td>
 
       <td>
-        [https://apipub.roku.com/test/subscription-recovery/deactivated-state/\{partnerApiKey\}/\{transactionId\}](https://apipub.roku.com/test/subscription-recovery/deactivated-state/\{partnerApiKey}/\{transactionId})
+        [https://apipub.roku.com/test/subscription-recovery/deactivated-state/\{partnerApiKey}/\{transactionId}](https://apipub.roku.com/test/subscription-recovery/deactivated-state/\{partnerApiKey}/\{transactionId})
       </td>
     </tr>
 

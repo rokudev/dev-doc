@@ -28,11 +28,11 @@ Publishers need to create a product in the Developer Dashboard for each add-on t
 
 1. In the [Developer Dashboard](https://developer.roku.com/developer), select **Product Catalog** under **Monetization**. You can also select **Manage Product Catalog** from the drop-down list on the left side of the pages within the Developer Dashboard. The **Product Catalog** page opens.
 
-   <Image alt="img - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/add-on-add-product.png" />
+   ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/add-on-add-product.png)
 
 2. From the **Product List** tab, click **Add Product**. The **Add Product** page opens.
 
-   <Image alt="img - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/add-on-product-details.png?version=1&modificationDate=1700090583000&cacheVersion=1&api=v2&width=600&height=735" />
+   ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/add-on-product-details.png?version=1\&modificationDate=1700090583000\&cacheVersion=1\&api=v2\&width=600\&height=735)
 
 3. Enter the following information for the add-on product:
 
@@ -48,7 +48,7 @@ Publishers need to create a product in the Developer Dashboard for each add-on t
 
 5. Accept the default purchase option, which is **Subscription**, and then click **Continue** to create the purchase option for the add-on.
 
-   <Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/rpay-catalog-purchase-type-dialog-no-cross-bundle.png" />
+   ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/rpay-catalog-purchase-type-dialog-no-cross-bundle.png)
 
 You can create a subscription bundle that includes two base products or a single base product and one or more add-ons. To do this, click **Subscription bundle** and then select the products to be packaged together from the **Product** list. You may only select products that are not in the same product group. Click **Add another product to bundle** to include additional products in the bundle. Add-on products can only be bundled with their prerequisite base products.
 
@@ -62,7 +62,7 @@ To create a purchase option for an add-on product, follow these steps:
 
 2. Configure the following **Purchase Details** settings:
 
-   <Image alt="img - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/add-on-purchase-details.png?version=1&modificationDate=1700090583000&cacheVersion=1&api=v2&width=600&height=537" />
+   ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/add-on-purchase-details.png?version=1\&modificationDate=1700090583000\&cacheVersion=1\&api=v2\&width=600\&height=537)
 
    | Purchase detail setting | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
    | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ To create a purchase option for an add-on product, follow these steps:
 
 3. Configure the following **Products and billing plan** settings:
 
-   <Image alt="img - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/add-on-billing-plan-v2.png?version=1&modificationDate=1700090583000&cacheVersion=1&api=v2&width=600&height=397" />
+   ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/add-on-billing-plan-v2.png?version=1\&modificationDate=1700090583000\&cacheVersion=1\&api=v2\&width=600\&height=397)
 
    <Table align={["left","left"]}>
      <thead>
@@ -142,7 +142,7 @@ To create a purchase option for an add-on product, follow these steps:
 
 5. If you selected **Publish** in step 6, review the **Purchase details** and **Billing plan** settings, and then click **Confirm** to make the purchase option available to customers on your app. After you create an add-on, you can schedule limited-time offers and schedule price changes for it (see [Creating the Product Catalog](doc:product-catalog) for how to do this).
 
-   <Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/add-on-purchase-detail-confirmation.png" />
+   ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/add-on-purchase-detail-confirmation.png)
 
 ## Updating the app
 
@@ -549,7 +549,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 ## Sample app
 
-The provided sample app demonstrates how to integrate add-ons and bundles in your app to offer customers premium content, additional channels, bundled packages, and other upgrades and features. It lets you purchase base subscription products and bundles in your product catalog, and then purchase any eligible add-ons.
+The [add-ons sample app](https://github.com/rokudev/samples/tree/master/roku%20pay/add-ons) demonstrates how to integrate add-ons and bundles in your app to offer customers premium content, additional channels, bundled packages, and other upgrades and features. It lets you purchase base subscription products and bundles in your product catalog, and then purchase any eligible add-ons.
 
 ## Appendix A: Catalog 2.0 APIs
 
@@ -1334,13 +1334,13 @@ The new catalog data structure has not changed any of the Roku Pay web service A
 
 When the **DoOrder** command is sent, the Roku Pay order confirmation screen lists each product being purchased, including base subscriptions and add-ons.
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/two-items.jpg" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/two-items.jpg)
 
 If the purchase includes two or more add-ons, the customer can press the PLAY button on their Roku remote control to view an itemized list of products before confirming the purchase.
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/2andmore.jpg" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/2andmore.jpg)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/fullorder.jpg" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/fullorder.jpg)
 
 ## Appendix D: Base subscription and add-on management workflow for customers
 
@@ -1358,24 +1358,24 @@ When an add-on is canceled, its entitlement is removed from the Roku customer ac
 
 The following images demonstrate how the on-device add-on management and cancelation workflow can be used to cancel base subscription products and add-ons:
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/managesub.jpg" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/managesub.jpg)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/cancelsub.jpg" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/cancelsub.jpg)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/cancelbase.jpg" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/cancelbase.jpg)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/canceladdon.jpg" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/canceladdon.jpg)
 
 #### Online subscription management
 
 The following images demonstrate the online add-on management and cancellation workflow:
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/manage-subscription-bundle.png" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/manage-subscription-bundle.png)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/manage-subscription-no-pause.png" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/manage-subscription-no-pause.png)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/manage-add-on.png" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/manage-add-on.png)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/cancel-add-on.png" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/cancel-add-on.png)
 
-<Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/remove-add-on.png" />
+![img - roku600px](https://image.roku.com/ZHZscHItMTc2/remove-add-on.png)

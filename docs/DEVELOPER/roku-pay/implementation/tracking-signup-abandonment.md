@@ -90,7 +90,7 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
 
 1. Enable the RED library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
-   sg_component_libs_required=roku_analytics
+   `sg_component_libs_required=roku_analytics`
 
 2. Use the [Roku Analytics Component](doc:libraries) to send signup events from your app following these steps:
 

@@ -12,7 +12,7 @@ next:
 ---
 When payment for a subscription auto-renewal fails, Roku's basic subscription recovery feature gives customers a 3-day grace period where they can continue accessing content, while Roku Pay notifies them daily via email to update their method of payment (MOP). Once the 3-day grace period expires, the subscription is canceled. This solution helps the publisher improve the chance of recovering payments and thereby reduce passive cancelations.
 
-> Effective October 1, 2024, all apps using Roku Pay must implement Enhanced Subscription Recovery to pass [certification](doc:certification). As a result, apps using basic subscription recovery solution must migrate to [Enhanced Subscription Recovery](doc:subscription-on-hold).
+> Effective October 1, 2024, all apps using Roku Pay must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements#rp-4-authentication-and-entitlement-requirements). As a result, apps using basic subscription recovery solution must migrate to [Enhanced Subscription Recovery](doc:subscription-on-hold).
 
 ## Overview
 
@@ -24,7 +24,7 @@ If Roku receives a payment during the 3-day grace period, it is processed and en
 
 Roku sends email notifications prompting the customer to update their MOP or manage their subscription online at [my.roku.com](http://my.roku.com/).
 
-<Image alt="roku600px - email-hold-notification" border={false} src="https://image.roku.com/ZHZscHItMTc2/email-hold-notification.jpg" />
+![roku600px - email-hold-notification](https://image.roku.com/ZHZscHItMTc2/email-hold-notification.jpg)
 
 ## Entitlement checks
 
@@ -32,7 +32,7 @@ Publishers can use the Roku Pay APIs to check whether a subscription is current,
 
 ### ChannelStore API
 
-When customers launch an app, the app should call the ChannelStore [getAllPurchases](doc:channelstore) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](doc:channelstore) API returns an **inDunning** flag that can be used along with the **status** field to get the status of a subscription:
+When customers launch an app, the app should call the ChannelStore [getAllPurchases](doc:channelstore#getallpurchases) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](doc:channelstore#getallpurchases) API returns an **inDunning** flag that can be used along with the **status** field to get the status of a subscription:
 
 | Subscription state               | **"inDunning"** | **"status"** |
 | :------------------------------- | :-------------- | :----------- |
@@ -42,7 +42,7 @@ When customers launch an app, the app should call the ChannelStore [getAllPurcha
 
 ### Roku Pay web service APIs
 
-The publisher should routinely synchronize their entitlement service with the Roku Pay web services to make sure their system has up-to-date entitlement data. Publishers can call the [validate-transaction API](doc:roku-web-service) as part of a nightly batch routine to get the updated status of customers' subscriptions. This API returns an **isEntitled** flag that can be used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
+The publisher should routinely synchronize their entitlement service with the Roku Pay web services to make sure their system has up-to-date entitlement data. Publishers can call the [validate-transaction API](doc:roku-web-service#validate-transaction) as part of a nightly batch routine to get the updated status of customers' subscriptions. This API returns an **isEntitled** flag that can be used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
 
 | Subscription state               | **"isEntitled"** | **"expirationDate"** | **"cancelled"** |
 | :------------------------------- | :--------------- | :------------------- | :-------------- |
@@ -54,7 +54,7 @@ The publisher should routinely synchronize their entitlement service with the Ro
 
 ## Push notifications
 
-Roku Pay sends a [GraceInitiated push notification](doc:push-notifications) when a subscription is put on hold, it sends a [GraceRecovered](doc:push-notifications) notification when the subscription is recovered (renewed after being put in a grace period):
+Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-grace-period) when a subscription is put on hold, it sends a [GraceRecovered](doc:push-notifications#in-grace-period) notification when the subscription is recovered (renewed after being put in a grace period):
 
 ### GraceInitiated
 

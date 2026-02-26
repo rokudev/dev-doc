@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Implementing Roku Pay in an app entails creating low-friction authentication, signup, and sign-in workflows with the [SceneGraph ChannelStore node](doc:channelstore) and [Roku Pay web services](doc:roku-web-service). These flows enable customers to access content and purchase subscriptions with minimal interaction. This document provides a high-level overview of how to create these workflows through Roku Pay. See [On-device authentication](doc:on-device-authentication) for complete, step-by-step instructions that include how to manage subscriptions  created through both Roku Pay and the publisher's system.
+Implementing Roku Pay in an app entails creating low-friction authentication, signup, and sign-in workflows with the [SceneGraph ChannelStore node](doc:channelstore) and [Roku Pay web services](doc:roku-web-service). These flows enable customers to access content and purchase subscriptions with minimal interaction. This document provides a high-level overview of how to create these workflows through Roku Pay. See [On-device authentication](doc:on-device-authentication) for complete, step-by-step instructions that include how to manage subscriptions created through both Roku Pay and the publisher's system.
 
 ![roku-pay-flow](https://image.roku.com/ZHZscHItMTc2/roku-pay-flow-v8.png)
 

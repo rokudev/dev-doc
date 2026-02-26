@@ -14,11 +14,11 @@ next:
 
 Publishers participating in Roku Pay can monetize content by making it available for rental or purchase. Implementing the transactional video on demand (TVOD) model in a Roku app allows publishers to generate revenue from sporting events, pay-per-views, recent movie releases, and other popular content in their catalog. This enables viewers to enjoy the convenience of consuming a publisher's must-see content on-demand.
 
-<Image alt="roku815px - tvod-sample-UI" border={false} src="https://image.roku.com/ZHZscHItMTc2/tvod-movie-v2.png" />
+![roku815px - tvod-sample-UI](https://image.roku.com/ZHZscHItMTc2/tvod-movie-v2.png)
 
 ## Overview
 
-Offering transactional content in an app entails [creating in-app products](doc:in-channel-products) for the content in the Developer Dashboard and using the [ChannelStore node](doc:channelstore) to [check the user's billing status](doc:channelstore) and [complete the rental or purchase transaction](doc:channelstore).
+Offering transactional content in an app entails [creating in-app products](doc:product-catalog) for the content in the Developer Dashboard and using the [ChannelStore node](doc:channelstore) to [check the user's billing status](doc:channelstore#requestpartnerorder) and [complete the rental or purchase transaction](doc:channelstore#confirmpartnerorder).
 
 > This workflow is intended for:
 >
@@ -38,7 +38,7 @@ When creating an in-app product for transactional content, make sure to do the f
 * **Quantity**. Select **1**.
 * **Price Tier**. Select any price tier. The price passed in the ChannelStore APIs overrides the price corresponding to the selected price tier.
 
-<Image alt="roku400px -  - tvod-product-pricing" border={false} src="https://image.roku.com/ZHZscHItMTc2/tvod-product-pricing.jpg" />
+![roku400px -  - tvod-product-pricing](https://image.roku.com/ZHZscHItMTc2/tvod-product-pricing.jpg)
 
 ## Handling transactional purchases
 

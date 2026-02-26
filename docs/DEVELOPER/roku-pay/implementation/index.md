@@ -60,7 +60,7 @@ The ChannelStore node's [**doOrder** command](doc:channelstore#doorder) is used 
 >
 > These are the recommended approaches as they minimize customer keypresses and therefore decrease the risk of abandonment.
 
-The ChannelStore node also includes a [**storeChannelCred** command](doc:channelstore) for storing a publisher's access token in the Roku cloud. This enables customers to access their entitled content on all the devices linked to their Roku account—without requiring any additional authentication.
+The ChannelStore node also includes a [**storeChannelCred** command](doc:channelstore#storechannelcreddata) for storing a publisher's access token in the Roku cloud. This enables customers to access their entitled content on all the devices linked to their Roku account—without requiring any additional authentication.
 
 ### Subscription processing
 

@@ -94,11 +94,11 @@ To ensure success in creating a Public app, you will need to:
 
 1. In the **[Developer Dashboard](https://developer.roku.com/developer)**, click **Public channels** or **Beta channels** based on the type of channel you want to create.
 
-   <Image alt="channel-builder-2-create-channel - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-create-channel.png" />
+   ![channel-builder-2-create-channel - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-create-channel.png)
 
 2. Click **Create channel**. The **New channel** dialog opens. Enter the following information:
 
-   <Image alt="channel-builder-2-new-public-channel - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-new-public-channel.png" />
+   ![channel-builder-2-new-public-channel - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-new-public-channel.png)
 
 | Field                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -108,7 +108,7 @@ To ensure success in creating a Public app, you will need to:
 
 3. Click **Create Channel**. A new management page is created for your app. The top of the page includes a breadcrumb for navigating the app pages, the name of the app, and the following fields that provide basic and status information for the app:
 
-   <Image alt="img - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-ui.png?version=1&modificationDate=1702940715000&api=v2" />
+   ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-ui.png?version=1\&modificationDate=1702940715000\&api=v2)
 
 | Field                     | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -127,7 +127,7 @@ To ensure success in creating a Public app, you will need to:
 
 Configure how your app is listed in the Streaming Store, including the app's home region, made-for-kids setting, genre, and age rating. To do this, click **Listing Setup**, enter the following properties, and then click **Save**:
 
-<Image alt="channel-builder-2-listing-setup - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-listing-setup.png" />
+![channel-builder-2-listing-setup - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-listing-setup.png)
 
 | Field              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -143,23 +143,23 @@ Provide localized names, descriptions, and artwork for your listing in the Strea
 
 1. From the app's management page, click **Store Assets**.
 
-   <Image alt="img - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-selection.png?version=2&modificationDate=1686868049000&api=v2" />
+   ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-selection.png?version=2\&modificationDate=1686868049000\&api=v2)
 
 2. In the **Languages** field, select one or more languages for which you will provide localized names, descriptions, and artwork. The assets displayed in the Streaming Store are based on the device's language settings. Providing localized app information helps increase the chances that customers will install your app.
 
    If you select multiple languages, a separate tab for each language is used for entering the properties (the currently selected tab is marked with a purple underline).
 
-   <Image alt="channel-builder-2-store-assets-languages - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-languages.png" />
+   ![channel-builder-2-store-assets-languages - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-languages.png)
 
 3. Enter the following properties for each language supported by your app:
 
-   <Image alt="channel-builder-2-store-assets-localized-properties - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-localized-properties.png" />
+   ![channel-builder-2-store-assets-localized-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-localized-properties.png)
 
-| Field                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Channel name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>Channel name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>Channel description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>Channel description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)    .</li></ul> |
-| Channel poster               | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Screenshots                  | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Field                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>Channel name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>Channel description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>Channel description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)     .</li></ul> |
+| Channel poster               | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Screenshots                  | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 4. Click **Save**.
 
@@ -171,11 +171,11 @@ Select the type of app you are creating and provide your contact information fol
 
 1. From the app's management page, click **Channel profile**.
 
-   <Image alt="channel-builder-2-channel-profile-selection - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-selection.png" />
+   ![channel-builder-2-channel-profile-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-selection.png)
 
 2. Enter the following properties:
 
-   <Image alt="channel-builder-2-channel-profile-properties - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-properties.png" />
+   ![channel-builder-2-channel-profile-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-properties.png)
 
 | Field                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -195,11 +195,11 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
 
 1. From the app's management page, click **Monetization setup**.
 
-   <Image alt="channel-builder-2-monetization-selection - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-selection.png" />
+   ![channel-builder-2-monetization-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-selection.png)
 
 2. Select one or more of the following monetization methods:
 
-   <Image alt="channel-builder-2-monetization-options - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options.png" />
+   ![channel-builder-2-monetization-options - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options.png)
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -243,7 +243,7 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
       </td>
 
       <td>
-        The app must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:certification).
+        The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
       </td>
     </tr>
 
@@ -257,7 +257,7 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
       </td>
 
       <td>
-        The app must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:certification).
+        The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
       </td>
     </tr>
 
@@ -339,11 +339,11 @@ Generate an encrypted package file (.pkg) for testing, publishing, and distribut
 
 1. From the app's management page, click **Channel package**.
 
-   <Image alt="channel-builder-2-channel-package-selection - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-selection.png" />
+   ![channel-builder-2-channel-package-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-selection.png)
 
 2. Enter the following properties:
 
-   <Image alt="channel-builder-2-channel-package-options - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-options.png" />
+   ![channel-builder-2-channel-package-options - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-options.png)
 
 | Field                         | Description                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -363,15 +363,15 @@ To enter deep linking parameters, follow these steps:
 
 1. From the app's management page, click **Deep Linking**.
 
-   <Image alt="channel-builder-2-deep-linking-selection - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-selection.png" />
+   ![channel-builder-2-deep-linking-selection - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-selection.png)
 
 2. For each set of deep linking parameters to be included in the certification test, click **Add deep link** (or **Add** if at least one deep link is already listed).
 
-   <Image alt="channel-builder-2-deep-linking-start - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-start.png" />
+   ![channel-builder-2-deep-linking-start - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-start.png)
 
 3. Enter the following information in the **Add new deep link parameter** dialog, and then click **Save**:
 
-   <Image alt="channel-builder-2-deep-linking-new-dialog - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-new-dialog.png" />
+   ![channel-builder-2-deep-linking-new-dialog - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-new-dialog.png)
 
 | Field         | Description                                                                                                                                                                                                                                                                                                                         |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -382,7 +382,7 @@ To enter deep linking parameters, follow these steps:
 
 4. The deep linking parameters are added to the list. You can edit and delete deep linking parameters in the list.
 
-   <Image alt="channel-builder-2-deep-linking-added - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-added.png" />
+   ![channel-builder-2-deep-linking-added - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-added.png)
 
 ### Static Analysis
 
@@ -390,15 +390,15 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
 
 1. From the app's management page, click **Static Analysis**.
 
-   <Image alt="channel-builder-2-static-analysis-selection - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-selection.png" />
+   ![channel-builder-2-static-analysis-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-selection.png)
 
 2. Click **Run analysis**.
 
-   <Image alt="channel-builder-2-static-analysis-run-analysis - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-run-analysis.png" />
+   ![channel-builder-2-static-analysis-run-analysis - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-run-analysis.png)
 
 3. The window will update to indicate that analysis is underway and may take a few minutes to complete. When testing has been completed, the **Analysis results** screen opens and lists any error, warning, and info messages.
 
-   <Image alt="channel-builder-2-static-analysis-results - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-results.png" />
+   ![channel-builder-2-static-analysis-results - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-results.png)
 
 4. For each message, the following information is provided. You can filter the test results based on the **Severity** or **Category**.
 
@@ -474,7 +474,7 @@ To provide the credentials for one or more test accounts, follow these steps:
 
 1. From the app's management page, click **Test Credentials**.
 
-   <Image alt="test-credentials-cb2 - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/test-credentials-cb2.png" />
+   ![test-credentials-cb2 - roku600px](https://image.roku.com/ZHZscHItMTc2/test-credentials-cb2.png)
 
 2. In the **Credentials Title** field, enter a descriptive name that makes the test account easy to identify.
 
@@ -505,21 +505,21 @@ To run Channel Behavior Analysis testing on your app, follow these steps:
 
 1. From the app's management page, click **Channel Behavior Analysis**.
 
-   <Image alt="channel-builder-2-cba-selection.png - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-selection.png" />
+   ![channel-builder-2-cba-selection.png - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-selection.png)
 
 2. If customers are required to sign in to your app, upload your [sign-in and sign-out test scripts](doc:authenticated-cert-testing) (unauthenticated apps can skip this step).
 
 3. Click **Run**. Alternatively, you can scroll to the bottom of the **Preview and Publish** page that opens after you submit your deep linking parameters, click **Channel Behavior Analysis**, and then run the Channel Behavior Analysis test.
 
-   <Image alt="channel-builder-2-cba-run-analysis - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-run-analysis.png" />
+   ![channel-builder-2-cba-run-analysis - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-run-analysis.png)
 
 4. Once you start the certification testing tool, the **Device** and **Firmware** fields lists the Roku test device in the cloud that is being used and the Roku OS running on it, respectively. The **Test progress** field includes a spinner indicating that the test is running, and the number of tests completed and the total tests to be run. Testing of apps is done in a first-in, first-out method; therefore, the certification testing of your app may be queued.
 
-   <Image alt="img - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-running.png?version=1&modificationDate=1687218897000&api=v2" />
+   ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-running.png?version=1\&modificationDate=1687218897000\&api=v2)
 
 5. When testing has been completed, the **Status** field displays "DONE" and shows that all the tests have been completed. If the **Status** field, displays "CANCELLED", "ERROR", or "UNAVAILABLE", click **Run** to re-run the test.
 
-   <Image alt="img - roku815px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-analysis-complete.png?version=1&modificationDate=1687219624000&api=v2" />
+   ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-analysis-complete.png?version=1\&modificationDate=1687219624000\&api=v2)
 
 6. The **Channel Behavior Analysis** table lists the status of each individual test being executed. You can sort the test results by toggling the **Status**, **Severity**, or **Category** column headers. You can filter test results based on the same fields. This table includes the following columns:
 
@@ -611,7 +611,7 @@ Once your public app has passed [Static Analysis](doc:static-analysis-tool) an
 
 2. In the **Schedule app publishing** dialog, enter the date and time when you want your app to be published to the Streaming Store, and then click **Continue**. The earliest possible publishing time is the second business day from the current time, and is the default. Publishing can not be scheduled for Fridays or weekends.
 
-   <Image alt="schedule-publish - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/schedule-publish.png" />
+   ![schedule-publish - roku600px](https://image.roku.com/ZHZscHItMTc2/schedule-publish.png)
 
 3. Optionally, enter any release notes for this app version (maximum 1,500 characters), and then do the following:
 
@@ -621,7 +621,7 @@ Once your public app has passed [Static Analysis](doc:static-analysis-tool) an
 
    c. Click **Submit**.
 
-   <Image alt="schedule-publish-2 - roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/schedule-publish-2.png" />
+   ![schedule-publish-2 - roku600px](https://image.roku.com/ZHZscHItMTc2/schedule-publish-2.png)
 
 4. The app will automatically be published at the specified time. During the app publishing process, you may receive the following emails:
 
@@ -682,11 +682,11 @@ To rollback an app release, follow these steps:
 
 1. Click the options menu in the upper right-hand corner and click **Rollback channel** in the shortcut menu.
 
-   <Image alt="channel-rollback-shortcut roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-rollback-shortcut.png" />
+   ![channel-rollback-shortcut roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-shortcut.png)
 
 2. The confirmation dialog displays the current channel version and the previous version to which the app will be rolled back.
 
-   <Image alt="channel-rollback-confirmation-dialog roku600px" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-rollback-confirmation-v2.png" />
+   ![channel-rollback-confirmation-dialog roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-confirmation-v2.png)
 
 3. If the previous channel version was made for kids, click **Yes**.
 

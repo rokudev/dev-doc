@@ -5,9 +5,11 @@ hidden: true
 metadata:
   robots: index
 ---
+> Publishers who have not implemented Continue Watching by April 1, 2026, must follow this document to complete their integration. If you completed the integration before April 1, 2026 (or were in progress at the time), refer to the [legacy documentation](doc:continue-watching). 
+
 Continue Watching is a content category row within the **What to Watch** home screen navigation on Roku devices and on the Home screen of the Roku mobile app. It displays content from participating apps that customers have already started watching, which empowers customers with the speed and convenience of a single location from which they can resume content from different apps on any Roku device linked to their account. Publishers can integrate into this feature to make their content more accessible to customers, drive users to their apps, and increase engagement. Overall, this helps publishers promote their content in order to retain customers and reduce churn.
 
-<Image alt="roku815px - continue watching row" border={false} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png" />
+![roku815px - continue watching row](https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png)
 
 > The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
@@ -61,7 +63,7 @@ To get started with the Continue Watching integration, follow these steps:
 
 Integrating into Continue Watching entails calling the Roku Continue Watching APIs when a playback event occurs. Playback events occur when the customer exits the video player or finishes watching content. Sending events identifies which content the customers can keep watching and where to resume playback. Publishers can use the Roku Continue Watching APIs to add, update, and remove content items. The workflow is illustrated and summarized as follows:
 
-<Image alt="roku815px - cw-api-flow" border={false} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-api-flow-v1.jpeg" />
+![roku815px - cw-api-flow](https://image.roku.com/ZHZscHItMTc2/continue-watching-api-flow-v1.jpeg)
 
 <table>
   <thead>

@@ -5,11 +5,11 @@ hidden: true
 metadata:
   robots: index
 ---
-> Publishers who have not implemented Continue Watching by April 1, 2026, must follow this document to complete their integration. If you completed the integration before April 1, 2026 (or were in progress at the time), refer to the [legacy documentation](doc:continue-watching). 
+> Publishers who have not implemented Continue Watching by April 1, 2026, must follow this document to complete their integration. If you completed the integration before April 1, 2026 (or were in progress at the time), refer to the [legacy documentation](doc:continue-watching).
 
 Continue Watching is a content category row within the **What to Watch** home screen navigation on Roku devices and on the Home screen of the Roku mobile app. It displays content from participating apps that customers have already started watching, which empowers customers with the speed and convenience of a single location from which they can resume content from different apps on any Roku device linked to their account. Publishers can integrate into this feature to make their content more accessible to customers, drive users to their apps, and increase engagement. Overall, this helps publishers promote their content in order to retain customers and reduce churn.
 
-![roku815px - continue watching row](https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png)
+<Image align="center" alt="roku815px - continue watching row" border={true} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png" className="border" />
 
 > The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
@@ -34,30 +34,25 @@ Apps must have completed the following integrations to participate in Roku Conti
 1. [Roku Search](doc:implementing-search). Enables customers to find content on your app.
 2. [Deep linking](doc:implementing-deep-linking). Enables the requested content to be launched directly into playback on your app.
 3. [Bookmarking](doc:bookmarking). Resumes playback of the requested content at its last watched position.
+4. [API key](#generating-an-api-key). App must generate an API key using the API key workflow in the Developer Dashboard.  The API key is used to send authenticated Continue Watching API calls to Roku when playback events occur.
 
-## Getting started
+## Generating an API key
 
-To get started with the Continue Watching integration, follow these steps:
+Continue Watching API calls use the Bearer Authentication scheme, in which the bearer token is a JSON Web Token (JWT). The token must include the header, payload, and signature specified in Appendix A. To generate the signature, you must use a private API key from your developer account.
 
-1. Verify that your app meets the listed [prerequisites](#prerequisites).
+To generate an API key, follow these steps:
 
-2. Contact the [Roku Partner Success team](https://developer.roku.com/contact). They will determine whether your app is eligible for Continue Watching and enable your app to access the Continue Watching service endpoints.
+1. Verify that your Roku account has the "Admin' or "DevOps" user role. The "DevOps" user role controls access to API key management tasks in the Developer Dashboard. See User Access Management in the Developer Dashboard for more information on managing user roles.
+2. In the Developer Dashboard, click API access under Account from the sidebar.
+3. In the API access page, click Create API key to create a private/public key pair (collectively referred to as the "API key"). The private key is used for signing messages and encrypting data; the associated public key is used for verifying message signatures and decrypting data.
+4. In the Create API key dialog, enter a Key name for your API key that makes it easy to identify (for example, you can enter the name of your Beta channel) and a Description, and then click Create & Download API key. The private key is only available for download upon being created; you can download the corresponding public key from the Developer Dashboard anytime.  The API key has a time-to-live (TTL) of 90 days.
+5. Secure and/or encrypt the downloaded private API key per your company's policies. If you lose your private key, you will need to create and use a new one.
+6. The generated API key is listed under Active keys in the API access page. This section lists the key ID, name, description, and expiration date (in UTC) for each API key you have generated. To download the public key, click the download icon under Public key.
+7. As part of your API key rotation practices, you can regenerate and deactivate your keys (keys have a 90-day TTL). You can do this programmatically via Roku's Key Rotation APIs as described in Appendix B (this is recommended to save time and mitigate the risk of your keys inadvertently lapsing), or you can manage your keys manually in the Developer Dashboard.  
 
-3. Request device tokens for testing the Continue Watching integration in a sideloaded environment. Provide Roku Partner Engineering with the serial numbers of the Roku devices to be used for testing during development. Upon receiving the device tokens, install them on their respective test devices by entering the following cURL command in a terminal application:
-
-   `curl --data-binary @<token-file> http://<Roku_IP>:8060/token/install`
-
-   The response from the terminal application should be as follows:
-
-```
-   <?xml version="1.0" encoding="UTF-8" ?>
-   <TokenCmdResponse>
-      <Command>Install</Command>
-      <Response>Success</Response>
-   </TokenCmdResponse>
-```
-
-4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](doc:channel-manifest) (channel_token=\<token>). The **channel authentication token** will also be used in your production application.
+   To execute key rotation tasks in the Developer Dashboard, click the shortcut icon under Actions and select the desired command:
+   1. Regenerate: Generates a new API key with the same configuration as the current one. The private key is downloaded to your local machine; the public key is saved in the Developer Dashboard.
+   2. Deactivate: Disables the API key (the key can no longer be used to authenticate API calls). Once you regenerate a new API key based on an existing one, you can deactivate the original. You can also use this option if you believe your key has been compromised.
 
 ## Integrating into Continue Watching
 
@@ -248,6 +243,16 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
   ]
 }
 ```
+
+## Adding a 24/7 live linear stream to Continue Watching
+
+As of Apr 1, 2026, the Continue Watching integration supports 24/7 live linear streams (liveFeed mediaType). The live linear stream must be included in your search feed, and you must make the following adjustments to your Continue Watching integration:
+
+Events: A live linear stream requires a single playback event that is sent via a POST request after 60 seconds of playback. Do not make any other API calls to send events.
+
+ContentId: The contentId is the ID of the live linear stream itself, not the currently playing program.
+
+Deep links: When your app receives a deep link from Continue Watching, the contentId is is the ID of the live linear stream (not the currently running program), and the mediaType is “liveFeed”.  The required playback behavior is to resume with the currently running program in the stream.
 
 ## Managing user consent
 

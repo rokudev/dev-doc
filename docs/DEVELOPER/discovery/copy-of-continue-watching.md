@@ -1,7 +1,7 @@
 ---
-title: Copy of Continue Watching
+title: Continue Watching (cloud-to-cloud integration)
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

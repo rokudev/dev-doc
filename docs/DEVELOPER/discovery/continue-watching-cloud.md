@@ -44,13 +44,17 @@ To generate an API key, follow these steps:
 
 1. Verify that your Roku account has the "Admin' or "DevOps" user role. The "DevOps" user role controls access to API key management tasks in the Developer Dashboard. See User Access Management in the Developer Dashboard for more information on managing user roles.
 2. In the Developer Dashboard, click API access under Account from the sidebar.
+
+<Image align="center" alt="roku815px - cw-c2c-api-access" border={true} src="https://image.roku.com/ZHZscHItMTc2/cw-c2c-api-access.png" className="border" />
+
 3. In the API access page, click Create API key to create a private/public key pair (collectively referred to as the "API key"). The private key is used for signing messages and encrypting data; the associated public key is used for verifying message signatures and decrypting data.
 4. In the Create API key dialog, enter a Key name for your API key that makes it easy to identify (for example, you can enter the name of your Beta channel) and a Description, and then click Create & Download API key. The private key is only available for download upon being created; you can download the corresponding public key from the Developer Dashboard anytime.  The API key has a time-to-live (TTL) of 90 days.
 5. Secure and/or encrypt the downloaded private API key per your company's policies. If you lose your private key, you will need to create and use a new one.
 6. The generated API key is listed under Active keys in the API access page. This section lists the key ID, name, description, and expiration date (in UTC) for each API key you have generated. To download the public key, click the download icon under Public key.
-7. As part of your API key rotation practices, you can regenerate and deactivate your keys (keys have a 90-day TTL). You can do this programmatically via Roku's Key Rotation APIs as described in Appendix B (this is recommended to save time and mitigate the risk of your keys inadvertently lapsing), or you can manage your keys manually in the Developer Dashboard.  
+7. As part of your API key rotation practices, you can regenerate and deactivate your keys (keys have a 90-day TTL). You can do this programmatically via Roku's Key Rotation APIs as described in Appendix B (this is recommended to save time and mitigate the risk of your keys inadvertently lapsing), or you can manage your keys manually in the Developer Dashboard.
 
    To execute key rotation tasks in the Developer Dashboard, click the shortcut icon under Actions and select the desired command:
+
    1. Regenerate: Generates a new API key with the same configuration as the current one. The private key is downloaded to your local machine; the public key is saved in the Developer Dashboard.
    2. Deactivate: Disables the API key (the key can no longer be used to authenticate API calls). Once you regenerate a new API key based on an existing one, you can deactivate the original. You can also use this option if you believe your key has been compromised.
 

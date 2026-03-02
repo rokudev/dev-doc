@@ -133,7 +133,7 @@ The following table summarizes the basic information for the Continue Watching R
   <tbody>
     <tr>
       <td><strong>Endpoint</strong></td>
-      <td>The URL for the Continue Watching APIs is <code>https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching</code>. User profile data is sent as part of the encrypted payload included in the API call. A separate endpoint for receiving profile-specific continue-watching data is not used.</td>
+      <td>The URL for the Continue Watching APIs is <code>[https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching](https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching)</code>. User profile data is sent as part of the encrypted payload included in the API call. A separate endpoint for receiving profile-specific continue-watching data is not used.</td>
     </tr>
 
     <tr>
@@ -148,7 +148,10 @@ The following table summarizes the basic information for the Continue Watching R
 
     <tr>
       <td><strong>Header</strong></td>
-      <td>Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):<ul><li><strong>Content-Type:</strong> application/json</li><li><strong>x-roku-reserved-jwt</strong>: ""</li><li><strong>x-roku-reserved-channel-id</strong>: "\<channelId>" (the production app ID is required to sideload and test the app during development because it is linked to the search feed. In production, the Roku OS will override this value, which means you can continue passing it after development has been completed).</li><li><strong>x-roku-reserved-channel-store-code</strong>: ""</li><li><strong>x-roku-reserved-virtual-user-id</strong>: ""</li><li><strong>x-roku-reserved-device-id</strong>: ""</li><li><strong>x-roku-reserved-serial-number</strong>: ""</li></ul><blockquote>See <a href="#appendix-a-sample-brightscript-code-for-adding-http-headers">Appendix A</a> for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](doc:ifhttpagent#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.</blockquote></td>
+      <td>Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):<ul>
+<li><p><strong>Authorization bearer</strong>: The JWT-encrypted payload, which includes the continue watching event data.</p></li><li><p><strong>Content-Type</strong>: application/json</p></li>
+<li><p><strong>Accept</strong>: application/json</p></li><li><p><strong>x-roku-reserved-federation-token</strong>: An encrypted payload that includes the channel ID and customer&#39;s unique user ID (UUID)</p>
+</li></ul><blockquote>See <a href="#appendix-a-sample-brightscript-code-for-adding-http-headers">Appendix A</a> for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](doc:ifhttpagent#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.</blockquote></td>
     </tr>
 
     <tr>

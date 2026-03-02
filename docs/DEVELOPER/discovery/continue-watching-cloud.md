@@ -48,13 +48,13 @@ To generate an API key, follow these steps:
 <Image align="left" alt="roku815px - cw-c2c-api-access" border={true} src="https://image.roku.com/ZHZscHItMTc2/cw-c2c-api-access.png" className="border" />
 
 3. In the API access page, click Create API key to create a private/public key pair (collectively referred to as the "API key"). The private key is used for signing messages and encrypting data; the associated public key is used for verifying message signatures and decrypting data.
-4. In the Create API key dialog, enter a Key name for your API key that makes it easy to identify (for example, you can enter the name of your Beta channel) and a Description, and then click Create & Download API key. The private key is only available for download upon being created; you can download the corresponding public key from the Developer Dashboard anytime.  The API key has a time-to-live (TTL) of 90 days.  
+4. In the Create API key dialog, enter a Key name for your API key that makes it easy to identify (for example, you can enter the name of your Beta channel) and a Description, and then click Create & Download API key. The private key is only available for download upon being created; you can download the corresponding public key from the Developer Dashboard anytime.  The API key has a time-to-live (TTL) of 90 days.
 
    <br />
 
    <Image align="left" alt="roku815px - cw-c2c-create-key" border={true} src="https://image.roku.com/ZHZscHItMTc2/cw-c2c-create-key.png" className="border" />
 5. Secure and/or encrypt the downloaded private API key per your company's policies. If you lose your private key, you will need to create and use a new one.
-6. The generated API key is listed under Active keys in the API access page. This section lists the key ID, name, description, and expiration date (in UTC) for each API key you have generated. To download the public key, click the download icon under Public key.  
+6. The generated API key is listed under Active keys in the API access page. This section lists the key ID, name, description, and expiration date (in UTC) for each API key you have generated. To download the public key, click the download icon under Public key.
 
    <br />
 
@@ -64,7 +64,7 @@ To generate an API key, follow these steps:
    To execute key rotation tasks in the Developer Dashboard, click the shortcut icon under Actions and select the desired command:
 
    1. Regenerate: Generates a new API key with the same configuration as the current one. The private key is downloaded to your local machine; the public key is saved in the Developer Dashboard.
-   2. Deactivate: Disables the API key (the key can no longer be used to authenticate API calls). Once you regenerate a new API key based on an existing one, you can deactivate the original. You can also use this option if you believe your key has been compromised.    
+   2. Deactivate: Disables the API key (the key can no longer be used to authenticate API calls). Once you regenerate a new API key based on an existing one, you can deactivate the original. You can also use this option if you believe your key has been compromised.
 
       ![cw-c2c-key-generated](https://image.roku.com/ZHZscHItMTc2/cw-c2c-key-deactivated.png)
 
@@ -133,7 +133,7 @@ The following table summarizes the basic information for the Continue Watching R
   <tbody>
     <tr>
       <td><strong>Endpoint</strong></td>
-      <td>The base URLs for the Continue Watching APIs are as follows:<br /><ul><li>[https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)</li><li>[https://userdata.sr.roku.com/user-data/v1/profile/\\\{](https://userdata.sr.roku.com/user-data/v1/profile/\\\{)<strong>profileId</strong>}/content/continueWatching (use this endpoint if your app has a profile selection screen and the content being passed is specific to the provided <strong>profileId</strong> (the unique user ID \[UUID] of the user profile). The <strong>profileId</strong> is passed back to the app in a deep link request from the Continue Watching feature.</li></ul><blockquote><p>Do not send kids profile data to Roku when calling these endpoints.</p></blockquote></td>
+      <td>The URL for the Continue Watching APIs is <code>https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching</code>. User profile data is sent as part of the encrypted payload included in the API call. A separate endpoint for receiving profile-specific continue-watching data is not used.</td>
     </tr>
 
     <tr>

@@ -7,9 +7,7 @@ metadata:
 ---
 <br />
 
-Burrow and Chase Stun Rams in Super Bowl 56 Thriller
-
-
+## Burrow and Chase Stun Rams in Super Bowl 56 Thriller
 
 <Image align="center" src="https://files.readme.io/40e942ec79f20aa625a3cbb82f2accde2af3336216e347ca0385a8ee958fbf10-Gemini_Generated_Image_zcqzjuzcqzjuzcqz.png" />
 

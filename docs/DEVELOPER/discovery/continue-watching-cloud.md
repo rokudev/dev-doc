@@ -270,7 +270,7 @@ To retrieve the list of content items in the Continue Watching row, send a **GET
 **URL**:
 
 * GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/content/continueWatching
-* GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/profile/\{profileId\}/content/continueWatching (channel has a profile selection screen)
+* GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/profile/\{profileId}/content/continueWatching (channel has a profile selection screen)
 
 **Example (cURL):**
 
@@ -376,20 +376,165 @@ request.AddHeader("x-roku-reserved-device-id", "")
 request.AddHeader("x-roku-reserved-serial-number", "")
 ```
 
-## Appendix B: Integration testing notes
+## Appendix B: Authenticating Continue Watching API calls
 
-Developers can test the Continue Watching integration in both sideloaded and beta environments. Testing should verify that each step in the [integration workflow](#integrating-into-continue-watching) is completed successfully.
+You can use Roku's external API service ([apipub.roku.com](http://apipub.roku.com/)) to send authenticated messages to Roku. The service authenticates HTTPS requests and ingests them into Roku’s cloud services.
 
-#### End-to-end testing
+### Request body
 
-When doing end-to-end testing, launching content from the Continue Watching row will always launch the production app instead of the sideloaded or beta version—even if the production version is not currently integrated with Continue Watching. This is because the app's search feed, which is used by Roku to load content into the Continue Watching row, is always associated with the production app. Testing therefore should focus on adding content to the Continue Watching row when playback starts, updating bookmarks as users stop and resume watching, and removing content when it has been completed.
+The HTTPS request body may be any arbitrary array of bytes. Roku's gateway calculates an SHA-256 hash and compares it with the digest in the JWT claim of the request. The PUT and PATCH methods require a request body.
 
-#### Activating the Continue Watching row on new test devices
+### Authorization header
 
-When using a Roku device that has not previously been used for testing the Continue Watching integration, the Continue Watching row is not displayed on the **What to Watch** screen until content on the app has been watched. The required watch time for adding the first content item to the Continue Watching row and therefore activating the feature on a new test device is as follows:
+Inbound requests must use the Bearer Authentication scheme. The bearer token must be a [JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519) with the following header, payload, and signature :
 
-* If the app has a pixel-sharing agreement with Roku, you can watch a few minutes of content. The Continue Watching row should be active after 24 hours.
+#### JWT header
 
-* If the app does not have a pixel-sharing agreement with Roku, you should watch two hours of content. The Continue Watching row should be active after 24 hours.
+The JWT header must have the following parameters (all other parameters are ignored):
 
-Once the Continue Watching row has displayed the first content item on that device, it will subsequently be updated as different content is watched.
+```
+{
+  "typ":"JWT",
+  "alg":"RS256",
+  "kid":"key-thumbprint"
+}
+```
+
+| **Parameter** | **Type** | **Description**                                                                                                                                                                                                                                                                                                                    |
+| :------------ | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| typ           | string   | Set to "JWT"                                                                                                                                                                                                                                                                                                                       |
+| alg           | string   | Set to "[RS256](https://datatracker.ietf.org/doc/html/rfc7518#section-3.1)"                                                                                                                                                                                                                                                        |
+| kid           | string   | The key ID (thumbprint) for the public key that is used to verify the message's signature. You can get the key ID from the API access page. It is also included in the public key that you can download from that page. The key ID is also included in the PUT and GET responses of the Key Rotation APIs described in Appendix B. |
+
+**Generating the token:** The following Python3 code demonstrates how to create the JWT.
+
+```
+# key is private key. Specify payload as per the specification.
+token = jwt.encode(payload=payload, key=key, algorithm='RS256', headers=headers)
+jwt_token = token.decode('utf-8')
+```
+
+#### JWT payload
+
+The JWT payload must have the following claims:
+
+```
+{
+  "exp":1639524781,
+  "nbf":1639524000,
+  "x-roku-request-key":"some-unique-key-for-the-request",
+  "x-roku-request-spec": {
+                            "serviceUrn":"urn:roku:group:service",
+                            "httpMethod":"POST",
+                            "path":"/user-data/v1/content/continueWatching",
+                            "bodySha256Base64":"AAAAB3NzaC1yc2EAAAADAQABAAABgQCsngzCcay+lQ+..."
+                          }
+}
+```
+
+| **Claim**           | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| :------------------ | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Registered**      |          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| exp                 | number   | Required. The time (a unix timestamp) after which this message should be considered invalid and discarded[.](https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number) Requests with a token that have an expiration time greater than 24 hours in the future are rejected.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| nbf                 | number   | Optional. The time (a unix timestamp) before which this message should be considered invalid and discarded.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Private**         |          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| x-roku-request-key  | string   | A string that uniquely identifies this request. This is used for request tracing when troubleshooting.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| x-roku-request-spec | string   | A JSON object that specifies how to build the internal request. The spec is transformed into a URL with the following syntax: "[https://apipub.roku.com/developer/v1/external?param1=param1Va&param2=param2Val".**serviceUrn](https://apipub.roku.com/developer/v1/external?param1=param1Va\&param2=param2Val".**serviceUrn)**: The serviceURN specifies the internal Roku service that should handle this request. This may be one of the following values:  urn:roku:cloud-services:publickey-serviceurn:roku:cloud-services:chanprovsvc  **httpMethod**: The Continue Watching API supports the following methods: GET, PUT, POST, and DELETE (all other methods will result in an error response).  **path**: The service resource being called, which is **/user-data/v1/content/continueWatching**.  **bodySha256Base64**: The body is an SHA-256 hash calculated over the raw bytes of the HTTP request body that is encoded using Base 64. Do not include the body for GET and DELETE requests (Roku's inbound request service ignores the body for these requests). |
+
+The HTTP method must match the method invoked on the internal service.
+
+The path and parameters sent to Roku's inbound request service are ignored; however, they should still match the internal request for clarity.
+
+#### JWT signature
+
+The JWT must be signed with the private part of the public key specified in the JOSE header. The public key is used to verify the JWT signature and authenticate your API calls.
+
+## Appendix C: Sample code for sending authenticated Continue Watching API calls
+
+This section demonstrates how to send Continue Watching API calls to Roku using Python.
+
+#### Prerequisites
+
+The following packages must be installed to run this sample:
+
+```
+pip install requests
+pip install pycryptodome
+```
+
+**Token generation**
+
+```
+import json
+import jwt
+from datetime import datetime, timedelta, timezone
+import uuid
+class GenerateToken:
+    """
+    generate tokens for various paths and methods
+    """
+    def __init__(self, key_file, kid):
+        """
+        """
+        self.key_file = key_file
+        self.kid = kid
+        with open(self.key_file) as f:
+            private_key_jwk = f.read()
+        self.existing_jwk_key = json.loads(private_key_jwk)
+        self.existing_private_key = jwt.algorithms.RSAAlgorithm.from_jwk(json.dumps(self.existing_jwk_key))
+    def get_token(self, method="GET", path="/user-data/v1/content/continueWatching", hours=1, body=None):
+        x_roku_request_key = str(uuid.uuid4())
+        x_roku_request_spec = {}
+        if method == "GET":
+            x_roku_request_spec = {
+                "serviceUrn": "urn:roku:sr:userdata",
+                "httpMethod": method,
+                "path": path
+            }
+        if method == "POST":
+            x_roku_request_spec = {
+                "serviceUrn": "urn:roku:sr:userdata",
+                "httpMethod": method,
+                "path": path,
+                "bodySha256Base64": body
+            }
+        if method == "PUT":
+            x_roku_request_spec = {
+                "serviceUrn": "urn:roku:sr:userdata",
+                "httpMethod": method,
+                "path": path,
+                "bodySha256Base64": body
+            }
+        if method == "DELETE":
+            x_roku_request_spec = {
+                "serviceUrn": "urn:roku:sr:userdata",
+                "httpMethod": method,
+                "path": path,
+                "bodySha256Base64": body
+            }
+        payload = {
+            "exp": datetime.now(timezone.utc) + timedelta(hours=hours),
+            "x-roku-request-key": x_roku_request_key,
+            "x-roku-request-spec": x_roku_request_spec
+        }
+        # JWT header
+        headers = {
+            "typ": "JWT",
+            "alg": "RS256",
+            "kid": self.kid
+        }
+        token = jwt.encode(payload=payload, key=self.existing_private_key, algorithm='RS256', headers=headers)
+        return token
+if __name__ == '__main__':
+    g = GenerateToken("developer_key.json", "uiCEF9WIAS7_USadPZyX-CFLLcfPA1IXnrEp3sicV24")
+    token = g.get_token(hours=20)
+    jwt_get= token.decode('utf-8')
+    # Generate headers.
+    headers = {'Authorization': "Bearer %s" % jwt_get, 'Content-Type': 'application/json',
+               'Accept': 'application/json',
+               'x-roku-reserved-federation-token': '8adb6673-8cf0-5743-a797-70bbf7f654a6'}
+    url = 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching'
+    response = requests.get(url, headers=headers,
+                              verify=False,
+                              timeout=60)
+```

@@ -7,7 +7,12 @@ metadata:
 ---
 <br />
 
-The Queen City Reigns: Burrow and Chase Stun Rams in Super Bowl 56 Thriller
+Burrow and Chase Stun Rams in Super Bowl 56 Thriller
+
+
+
+<Image align="center" src="https://files.readme.io/40e942ec79f20aa625a3cbb82f2accde2af3336216e347ca0385a8ee958fbf10-Gemini_Generated_Image_zcqzjuzcqzjuzcqz.png" />
+
 LOS ANGELES — In the final moments of Super Bowl 56, Joe Burrow didn’t look like a second-year quarterback under siege; he looked like a man finishing a masterpiece.
 
 With five seconds remaining and the Cincinnati Bengals trailing by four, Burrow escaped the grasp of Aaron Donald, rolled to his right, and lofted a ball toward the back pylon of the end zone. As the clock hit zero, Ja’Marr Chase hauled it in, collapsing into the turf as the Bengals secured a 27–23 victory and their first Lombardi Trophy in franchise history.

@@ -149,14 +149,14 @@ The following table summarizes the basic information for the Continue Watching R
     <tr>
       <td><strong>Header</strong></td>
       <td>Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):<ul>
-<li><p><strong>Authorization bearer</strong>: The JWT-encrypted payload, which includes the continue watching event data.</p></li><li><p><strong>Content-Type</strong>: application/json</p></li>
-<li><p><strong>Accept</strong>: application/json</p></li><li><p><strong>x-roku-reserved-federation-token</strong>: An encrypted payload that includes the channel ID and customer&#39;s unique user ID (UUID)</p>
-</li></ul><blockquote>See <a href="#appendix-a-sample-brightscript-code-for-adding-http-headers">Appendix A</a> for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](doc:ifhttpagent#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.</blockquote></td>
+      <li><p><strong>Authorization bearer</strong>: The JWT-encrypted payload, which includes the continue watching event data.</p></li><li><p><strong>Content-Type</strong>: application/json</p></li>
+      <li><p><strong>Accept</strong>: application/json</p></li><li><p><strong>x-roku-reserved-federation-token</strong>: An encrypted payload that includes the channel ID and customer's unique user ID (UUID)</p>
+      </li></ul><blockquote>See <a href="#appendix-a-sample-brightscript-code-for-adding-http-headers">Appendix A</a> for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](doc:ifhttpagent#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.</blockquote></td>
     </tr>
 
     <tr>
       <td><strong>Response</strong></td>
-      <td>The Continue Watching APIs return one of the following response codes:<br /><pre><code>- <strong>200</strong>: OK<br />- <strong>204</strong>: No content (DELETE requests only)<br />- <strong>400</strong>: Bad request  (required fields are missing from the payload; a description of the error is returned)<br />- <strong>401</strong>: Unauthorized (DELETE requests only)<br />- <strong>403</strong>: Forbidden (if an invalid partner)</code></pre></td>
+      <td>The Continue Watching APIs return one of the following response codes:<ul><li><strong>200</strong>: OK</li><li><strong>204</strong>: No content (DELETE requests only)</li><li><strong>400</strong>: Bad request (required fields are missing from the payload; a description of the error is returned)</li><li><strong>401</strong>: Unauthorized (DELETE requests only)</li><li><strong>403</strong>: Forbidden (if an invalid partner)</li><li><strong>424</strong>: A Roku web service that the Continue Watching API depends on returned an error. </li><li><strong>500</strong>: An internal Roku web service error.</li></ul></td>
     </tr>
   </tbody>
 </table>

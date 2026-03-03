@@ -227,6 +227,42 @@ To add new content items and update existing ones to the Continue Watching row, 
   </tbody>
 </table>
 
+#### Example
+
+**URL**:
+
+* POST [https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)
+* POST [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (channel has a profile selection screen)
+
+**JSON body**:
+
+```
+{
+  "items": [
+    {
+      "contentId": "abc123",
+      "episodeId": "def123",
+      "lastInteractionTime": 123456,
+      "position": 854,
+      "duration": 1678,
+      "waitForNextEpisodeAvailability": true
+    }
+  ]
+}
+```
+
+**Example (cURL):**
+
+```
+curl --location --reque
+st POST 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
+--header 'Authorization: Bearer <encrypted payload with raw JSON data>' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'x-roku-reserved-federation-token: 8adb6673-8cf0-5743-a797-70bbf7f654a6' \
+--data-raw '{"items": [{"episodeId": "52bbbb5d-e6ec-483c-8df1-65e5393d610f", "waitForNextEpisodeAvailability": true, "contentId": "f933a73d-893e-4e58-82da-3eb290f5535d", "duration": 91, "position": 109, "kidsProfile": false, "lastInteractionTime": 1711697951, "profileId": "test-profile-1"]
+```
+
 ### Retrieve API
 
 To retrieve the list of content items in the Continue Watching row, send a **GET** request to the Continue Watching API:
@@ -234,11 +270,32 @@ To retrieve the list of content items in the Continue Watching row, send a **GET
 **URL**:
 
 * GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/content/continueWatching
-* GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/profile/\{profileId}/content/continueWatching (app has a profile selection screen)
+* GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/profile/\{profileId\}/content/continueWatching (channel has a profile selection screen)
+
+**Example (cURL):**
+
+```
+curl --location --request GET 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
+--header 'Authorization: Bearer <encrypted payload>'\
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'x-roku-reserved-federation-token: <payload with encrypted channel and user IDs>'
+```
 
 ### Update API
 
-To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](#add-api):
+To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md#add-api).
+
+**Example (cURL):**
+
+```
+curl --location --request PUT 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
+--header 'Authorization: Bearer <encrypted payload with raw JSON data>' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'x-roku-reserved-federation-token: <payload with encrypted channel and user IDs>' \
+--data-raw '{"items": [{"episodeId": "52bbbb5d-e6ec-483c-8df1-65e5393d610f", "waitForNextEpisodeAvailability": true, "contentId": "f933a73d-893e-4e58-82da-3eb290f5535d", "duration": 115, "position": 120, "kidsProfile": false, "lastInteractionTime": 1711697951, "profileId": "test-profile-1"}]}'
+```
 
 ### Delete API
 
@@ -249,7 +306,7 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
 **URL**:
 
 * DELETE [https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)
-* DELETE [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (app has a profile selection screen)
+* DELETE [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (channel has a profile selection screen)
 
 **JSON body**:
 
@@ -263,15 +320,25 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
 }
 ```
 
+**Example (cURL):**
+
+```
+curl --location --request DELETE 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
+--header 'Authorization: Bearer <encrypted payload with raw JSON data>' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'x-roku-reserved-federation-token: 8adb6673-8cf0-5743-a797-70bbf7f654a6' \
+--data-raw '{
+    "items": [{"contentId": "f933a73d-893e-4e58-82da-3eb290f5535d"}]}'
+```
+
 ## Adding a 24/7 live linear stream to Continue Watching
 
 As of Apr 1, 2026, the Continue Watching integration supports 24/7 live linear streams (liveFeed mediaType). The live linear stream must be included in your search feed, and you must make the following adjustments to your Continue Watching integration:
 
-Events: A live linear stream requires a single playback event that is sent via a POST request after 60 seconds of playback. Do not make any other API calls to send events.
-
-ContentId: The contentId is the ID of the live linear stream itself, not the currently playing program.
-
-Deep links: When your app receives a deep link from Continue Watching, the contentId is is the ID of the live linear stream (not the currently running program), and the mediaType is “liveFeed”.  The required playback behavior is to resume with the currently running program in the stream.
+* **Events**: A live linear stream requires a single playback event that is sent via a POST request after 60 seconds of playback. Do not make any other API calls to send events.
+* **ContentId**: The contentId is the ID of the live linear stream itself, not the currently playing program.
+* **Deep links**: When your app receives a deep link from Continue Watching, the contentId is is the ID of the live linear stream (not the currently running program), and the mediaType is “liveFeed”.  The required playback behavior is to resume with the currently running program in the stream.
 
 ## Managing user consent
 

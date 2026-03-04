@@ -1,7 +1,7 @@
 ---
 title: Internal KB
 fullscreen: false
-hidden: false
+hidden: true
 metadata:
   title: ''
   description: ''

@@ -127,7 +127,42 @@ The BrightScript stack size has been increased for the Roku OS 15.2 release.
 
 ##### BrightScript heap graph visualization in Perfetto
 
-Roku’s [Perfetto-based app tracing tool](docs:app-tracing) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
+Roku’s [Perfetto-based app tracing tool](/docs/developer-program/dev-tools/app-tracing.md) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory. 
+
+![roku815px - perfetto-heap-trace](https://image.roku.com/ZHZscHItMTc2/perfetto-heap-trace.png)
+
+The Roku OS uses Perfetto’s Java heap graph viewer model to represent the SceneGraph and BrightScript objects as a [flamegraph](https://www.brendangregg.com/flamegraphs.html). You can sort the objects either by allocation size or object count, ordering callstacks from left-to-right according to which have the largest size or count. A single Perfetto trace can hold multiple heap graphs, with each heap graph represented by a selectable **Heap Profile** event.
+
+To generate a heap graph, follow these steps:
+
+###### Enable app tracing
+
+Read [Roku's app tracing documentation](/docs/developer-program/release-notes/app-tracing.md#enabling-perfetto) to enable perfetto tracing and setup a websocket destination.
+
+###### Add heap snapshots to the trace
+
+Once you have enabled app tracing, send the following ECP command to add heap snapshots to the trace:
+
+```
+curl -d '' http://$ip:8060/perfetto/heapgraph/trigger/dev
+```
+
+> Shortest Path used to display heap graph
+>
+> The heap graph is always shown as the shortest path from a *root* to any given object. This can sometimes lead to charts that might have unexpected structure. For example, if you have a Scene that owns a Grid which in turn owns a ContentNode, you might expect a chart reflecting this:
+>
+> ```
+> == MyScene ==========
+>   -- MyGrid ---------
+>     - MyContentNode -
+> ```
+>
+> However, if there is also a reference to the content node from directly from the domain - perhaps because it is referenced by a local variable, then this path will be preferentially displayed:
+>
+> ```
+> == $bsProc-MyScene-Render ====   == MyScene ==
+>   - MyContentNode -               -- MyGrid --
+> ```
 
 ##### ECP chanperf command returns raw Linux performance stats
 

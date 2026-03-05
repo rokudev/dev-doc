@@ -127,11 +127,11 @@ The BrightScript stack size has been increased for the Roku OS 15.2 release.
 
 ##### BrightScript heap graph visualization in Perfetto
 
-Roku’s [Perfetto-based app tracing tool](docs:app-tracing-with-perfetto) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
+Roku’s [Perfetto-based app tracing tool](docs:app-tracing) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
 
 ##### ECP chanperf command returns raw Linux performance stats
 
-The ECP **chanperf** command returns a new **\<proc-stat>** field that reports the raw Linux CPU and processing status information ([/proc/pid/stat](https://www.man7.org/linux/man-pages//man5/proc_pid_stat.5.html)).  Developers can use this data in their own monitoring and debugging tools to optimize app performance.
+The [ECP](doc:external-control-api) **chanperf** command returns a new **\<proc-stat>** field that reports the raw Linux CPU and processing status information ([/proc/pid/stat](https://www.man7.org/linux/man-pages//man5/proc_pid_stat.5.html)).  Developers can use this data in their own monitoring and debugging tools to optimize app performance.
 
 **Example**
 
@@ -175,7 +175,7 @@ The ECP **chanperf** command returns a new **\<proc-stat>** field that reports t
 
 ##### Debug protocol support for new virtual variables
 
-Developers can now retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime** values with the [Debug Protocol](doc:debug-protocol). This improves stepping performance when these virtual variables are expanded.
+Developers can now retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime** values with the [Debug Protocol](doc:socket-based-debugger). This improves stepping performance when these virtual variables are expanded.
 
 | Object Type  | Name                  | Type                       | Description                                                                                                                                                                                                                                                                                                            |
 | ------------ | --------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -185,7 +185,7 @@ Developers can now retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime**
 | roUrlEvent   | $responseCode         | .GetResponseCode()         | Returns the protocol response code associated with this event.                                                                                                                                                                                                                                                         |
 | roUrlEvent   | $failureReason        | .GetFailureReason()        | Returns a description of the failure that occurred.                                                                                                                                                                                                                                                                    |
 | roUrlEvent   | $string               | .GetString()               | For transfer complete AsyncGetToString, AsyncPostFromString and AsnycPostFromFile requests this will be the actual response body from the server. This method returns the string associated with the event.                                                                                                            |
-| roUrlEvent   | $sourceIdentity       | .GetSourceIdentity()       | Returns a magic number that can be matched with the value returned by the [roUrlTransfer.GetIdentity()](doc:rourltransfer#getidentity) method to determine the source of the roUrlTransfer event.                                                                                                                      |
+| roUrlEvent   | $sourceIdentity       | .GetSourceIdentity()       | Returns a magic number that can be matched with the value returned by the [roUrlTransfer.GetIdentity()](doc:ifurltransfer#getidentity-as-integer) method to determine the source of the roUrlTransfer event.                                                                                                           |
 | roUrlEvent   | $responseHeaders      | .GetResponseHeaders()      | Return an roAssociativeArray containing all the headers returned by the server for appropriate protocols (such as HTTP). Headers are only returned when the status code is greater than or equal to 200 and less than 300                                                                                              |
 | roUrlEvent   | $targetIpAddress      | .GetTargetIpAddress()      | Returns the IP address of the destination.                                                                                                                                                                                                                                                                             |
 | roUrlEvent   | $responseHeadersArray | .GetResponseHeadersArray() | Returns an roArray of roAssociativeArrays, where each associative array contains a single header name/value pair. Use this function if you need access to duplicate headers, since GetResponseHeaders() returns only the last name/value pair for a given name. All headers are returned regardless of the status code |

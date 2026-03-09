@@ -489,9 +489,8 @@ To schedule a price change for a purchase option, follow these steps:
 
 7. Review and select the acknowledge check box and then click **Confirm** to schedule the price change.  
 
-   ![](https://files.readme.io/8bfacfd6f781560fb62e01e8f4269fa6f83847a6bb5fda4f9414ac9c4cc1e470-image.png)
+   ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog-confirm.png)
 
-   <br />
 
 ## Managing product groups
 

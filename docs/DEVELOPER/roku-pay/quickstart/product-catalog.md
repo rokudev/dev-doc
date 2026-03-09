@@ -471,7 +471,7 @@ To schedule a price change for a purchase option, follow these steps:
 
    ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog-v2.png)
 
-3. Select whether the price change is for **New subscribers** or **Current subscribers**.
+3. Select whether the price change is for **New subscribers** or **Existing subscribers**.
 
 4. In the **New regular price** field, select the updated price tier for the purchase option.
 
@@ -479,18 +479,17 @@ To schedule a price change for a purchase option, follow these steps:
 
 5. In the **Effective date** field, select when the price change will occur.
 
-   a. For existing subscribers, the selected date must be 15 days in advance of the listed date. You must give current subscribers 15-days notice per Roku's certification requirements.
+   a. For new subscribers, the earliest that a price change can go into effect is midnight the next day.
 
-   b. For new subscribers, the earliest that a price change can go into effect is midnight the next day.
+   b. For existing subscribers, the selected date must be 15 days in advance of the listed date. You must give current subscribers 15-days notice per Roku's certification requirements..
 
 6. Click **Review and publish** to review the price change before publishing it.
 
 ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-v2.png)
 
-7. Review and select the acknowledge check box and then click **Confirm** to schedule the price change.  
+7. Review and select the acknowledge check box and then click **Confirm** to schedule the price change.
 
    ![img -  roku600px](https://image.roku.com/ZHZscHItMTc2/product-catalog-price-change-dialog-confirm.png)
-
 
 ## Managing product groups
 

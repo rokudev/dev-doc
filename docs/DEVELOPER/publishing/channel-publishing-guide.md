@@ -129,13 +129,77 @@ Configure how your app is listed in the Streaming Store, including the app's hom
 
 ![channel-builder-2-listing-setup - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-listing-setup.png)
 
-| Field              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Countries          | Add or remove the countries where your app is distributed. Only add countries where you have the rights to distribute your app's content. The "Rest of World" Streaming Store includes regions not serviced by other Streaming Stores.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Domestic region    | Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streming Stores that include your app and are outside your domestic region.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Made for kids?     | If your app is made for kids you must select **Yes** and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published. When you select **Yes**, the **Category** field is automatically fixed to "Kids" and cannot be changed, and you cannot set the **App Age Rating** to "Adult". If you select **No**, you cannot select the "Kids" category<br /><br /><br />Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the [Roku Advertising Framework (RAF) setContentGenre() method](doc:raf-api). For more information, see [Channels Made for Kids](https://docs.roku.com/published/madeforkids).<br /><br />If you select the **Is your app made for kids?** check box, targeted ads cannot be served in the app. |
-| Category           | Select how your app is categorized in the Streaming Store. When customers search for apps in the selected category, your app will be included in the results.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Channel age rating | Specify the age rating that best describes your app. The selected rating is displayed on the app's details page in the on-device Streaming Store. This provides parents with information to help them determine whether your app is appropriate for their children.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Countries
+      </td>
+
+      <td>
+        Add or remove the countries where your app is distributed. Only add countries where you have the rights to distribute your app's content. The "Rest of World" Streaming Store includes regions not serviced by other Streaming Stores.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Domestic region
+      </td>
+
+      <td>
+        Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streming Stores that include your app and are outside your domestic region.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Made for kids?
+      </td>
+
+      <td>
+        If your app is made for kids you must select **Yes** and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.  
+
+        When you select **Yes**, the **Category** field is automatically fixed to "Kids" and cannot be changed, and you cannot set the **App Age Rating** to "Adult".  
+
+        If you select **No**, you cannot select the "Kids" category.   
+
+        Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the 
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Category
+      </td>
+
+      <td>
+        Select how your app is categorized in the Streaming Store. When customers search for apps in the selected category, your app will be included in the results.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Channel age rating
+      </td>
+
+      <td>
+        Specify the age rating that best describes your app. The selected rating is displayed on the app's details page in the on-device Streaming Store. This provides parents with information to help them determine whether your app is appropriate for their children.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### Streaming store assets
 
@@ -155,11 +219,11 @@ Provide localized names, descriptions, and artwork for your listing in the Strea
 
    ![channel-builder-2-store-assets-localized-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-localized-properties.png)
 
-| Field                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Channel name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>Channel name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>Channel description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>Channel description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)      .</li></ul> |
-| Channel poster               | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Screenshots                  | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Field                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>Channel name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>Channel description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>Channel description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)       .</li></ul> |
+| Channel poster               | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Screenshots                  | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 4. Click **Save**.
 

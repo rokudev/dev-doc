@@ -1,5 +1,5 @@
 ---
-title: "Content delivery"
+title: Content delivery
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 ## Ingest specifications
 
 Below is a comprehensive list of formatting requirements for partner media assets and metadata, including file templates and delivery guidelines. Roku's ingest platform is fully automated and full compliance with this specification will ensure timely and error-free processing of content for distribution to Roku Channel. Should any changes need to be made to the workflow established during onboarding, please inform a Roku representative as early as possible to arrange for any new testing or configuration. Roku expects content and metadata to be delivered in a manner that was agreed upon during the onboarding and testing phase. Please ensure delivery knowledge is transferred to new personnel in the event that teams are updated or changed.
@@ -291,6 +290,42 @@ In the event video files cannot be created to include proper audio channel label
 | stereoPlusSurround | 8 channel audio with stereo on channels 1 and 2 followed by 5.1 surround on channels 3 through 8 |
 | surroundPlusStereo | 8 channel audio with 5.1 on channels 1 through 6 followed by stereo on channels 7 and 8          |
 
+### Closed captions and subtitles
+
+Closed captions (also known as subtitles for the deaf or hard of hearing or SDH subtitles) and subtitles, while similar, serve separate distinct functions:
+
+**Closed captions/SDH subtitles/subtitles for the deaf or hard of hearing**
+
+* Transcribes the spoken dialogue and the sounds heard in an audio track
+* Intended as an accessibility device for the deaf or hard of hearing
+* Can be enabled/disabled (toggled on/off) by the viewer during playback
+* Includes text that describes sound effects and/or music cues and lyrics
+* Must include a full transcription of all spoken dialogue and narrative text that needs to be understood by the viewer, including forced narratives as the Roku player will only display a single text track at a time
+* Are companions to an audio track and must be provided in the same language and locale as that audio track
+* Will not be made available to the viewer if a companion audio track in the same language is not provided
+* May be required per regulatory agencies in certain territories
+
+**Full subtitles**
+
+* Translates all narratively important spoken dialogue and on-screen text from one language to another
+* Intended as a localization device when an audio track is in a language that the viewer does not understand
+* Must include a full translation of all spoken dialogue and narrative text that needs to be understood by the viewer, including forced narratives as the Roku player will only display a single text track at a time
+* Can be enabled/disabled (toggled on/off) by the viewer during playback
+* Does not include text that describes sound effects or music cues, but may translate song lyrics if narratively important to the viewer or as a creative choice
+* Can be made available to the viewer regardless of the audio track language(s) delivered
+
+**Forced narrative subtitles**
+
+* Translates narratively important spoken dialogue and/or on-screen text for the purpose of conveying information that may not be understood by the viewer. This information could include:
+  * Spoken dialogue in a language different from the audio track language selected by the viewer
+  * On-screen text in a language different from the audio track selected by the viewer
+  * Inaudible or difficult to hear audio (such as an overly noisy scene or poor-quality audio recordings)
+* Intended as a localization device when a portion of a program is presented in a language different from the main audio track language selected by the viewer or is otherwise unintelligible
+* Can NOT be enabled/disabled (toggled on/off) by the viewer during playback
+  * _Forced narrative playback WILL be disabled when the viewer enables a CC/SDH/Subtitle track as the Roku player will only display a single text track at a time. For this reason, it is required that CC/SDH and full subtitles contain all forced narrative elements_
+* Are companions to an audio track and must be provided in the same language and locale as that audio track
+* Will automatically display based on the audio language track selected by the viewer
+
 ### Closed captions
 
 Roku prefers to receive closed captioning for all content to provide the best user experience possible.
@@ -505,49 +540,49 @@ Roku supports three image types for each piece of content. Each image type will 
 
 Highlighted example of the 16:9 texted image with title treatment
 
-<Image alt="roku400px - movieGrid" border={false} src="https://image.roku.com/ZHZscHItMTc2/movieBrowse.jpg" />
+![roku400px - movieGrid](https://image.roku.com/ZHZscHItMTc2/movieBrowse.jpg)
 
 **Movie artwork -details experience**
 
 Highlighted example of the 16:9 textless image
 
-<Image alt="roku400px - movieDetails" border={false} src="https://image.roku.com/ZHZscHItMTc2/movieDetail.jpg" />
+![roku400px - movieDetails](https://image.roku.com/ZHZscHItMTc2/movieDetail.jpg)
 
 **Series artwork - browse experience**
 
 Highlighted example of the 16:9 texted series image with title treatment
 
-<Image alt="roku400px - seriesGrid" border={false} src="https://image.roku.com/ZHZscHItMTc2/seriesBrowse.jpg" />
+![roku400px - seriesGrid](https://image.roku.com/ZHZscHItMTc2/seriesBrowse.jpg)
 
 **Series artwork - details experience**
 
 Highlighted example of the 16:9 textless series image
 
-<Image alt="roku400px - seriesDetail" border={false} src="https://image.roku.com/ZHZscHItMTc2/seriesDetails.jpg" />
+![roku400px - seriesDetail](https://image.roku.com/ZHZscHItMTc2/seriesDetails.jpg)
 
 **Episode artwork - episode picker experience**
 
 Highlighted example of the 16:9 textless episode images
 
-<Image alt="roku400px - episodePicker" border={false} src="https://image.roku.com/ZHZscHItMTc2/episodePicker.jpg" />
+![roku400px - episodePicker](https://image.roku.com/ZHZscHItMTc2/episodePicker.jpg)
 
 **Episode artwork - episode details experience**
 
 Highlighted example of the 16:9 textless episode image
 
-<Image alt="roku400px - episodeDetail" border={false} src="https://image.roku.com/ZHZscHItMTc2/episodeDetail.jpg" />
+![roku400px - episodeDetail](https://image.roku.com/ZHZscHItMTc2/episodeDetail.jpg)
 
 **Clip artwork - browse experience**
 
 Highlighted example of the 16:9 texted image with title treatment
 
-<Image alt="roku400px - clipGrid" border={false} src="https://image.roku.com/ZHZscHItMTc2/clipBrowse.jpg" />
+![roku400px - clipGrid](https://image.roku.com/ZHZscHItMTc2/clipBrowse.jpg)
 
 **Poster artwork - search experience**
 
 Highlighted example of the 2:3 texted image with title treatment from the Search experience. 2:3 images are preferred for series and movie content types
 
-<Image alt="posterSearch" border={false} src="https://image.roku.com/ZHZscHItMTc2/posterSearch.jpg" />
+![posterSearch](https://image.roku.com/ZHZscHItMTc2/posterSearch.jpg)
 
 ## Delivery guidelines
 
@@ -581,7 +616,7 @@ Roku will provide host and username information during onboarding.
 
 Roku recommends verifying or updating the global and user preferences of the Aspera Client to align with your preferred upload bandwidth. Please note Roku applies a global bandwidth cap of 300Mbps.
 
-<Image alt="asperaPreferences" border={false} src="https://image.roku.com/ZHZscHItMTc2/asperaPreferences.jpg" />
+![asperaPreferences](https://image.roku.com/ZHZscHItMTc2/asperaPreferences.jpg)
 
 Depending on what client is being used, there are different settings that can affect transfer speeds.
 
@@ -620,12 +655,10 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 * File names must match the reference to the file name in the metadata supplied for the title delivered
 * File names are case-sensitive
 * File names must end with a proper file extension. File extensions are expected to be lowercase
-
-<ul>
-  <li>Whitespace and special characters <code>!@#$%^&\*()\{}|\[];:’”?/>\<,</code> must not be included in any file name</li>
-</ul>
-
+* Whitespace and special characters !@#$%^&*()\{}|[];:\’\”?/>,\< must not be included in any file name
 * The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
+
+<br />
 
 ##### Characters allowed in file names
 
@@ -972,7 +1005,7 @@ While time settings are dictated by the content owner, Roku will need the metada
 
 ### Special characters
 
-<p>Roku utilizes CDATA sections to allow special characters (e.g. !@#$%^&<em>()\{\}|[];:’”?/\>\<, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the </em><em>only</em>* nodes that support CDATA sections:</p>
+<p>Roku utilizes CDATA sections to allow special characters (e.g. !@#$%^&*()\{}|[];:\’\”?/>\<, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the <em>only</em> nodes that support CDATA sections:</p>
 
 * title
 * long_synopsis
@@ -983,11 +1016,11 @@ Certain characters in an XML will render the document unreadable by the Roku ing
 
 | Character Name | Character | Escaped Form |
 | -------------- | --------- | ------------ |
-| Ampersand      | &         | `&amp;`      |
-| Less-than      | \<         | `&lt;`       |
-| Greater-than   | \>         | `&gt;`       |
-| Quotes         | "         | `&quot;`     |
-| Apostrophe     | '         | `&apos;`     |
+| Ampersand      | \&        | `&amp;`      |
+| Less-than      | \<        | `&lt;`       |
+| Greater-than   | \>        | `&gt;`       |
+| Quotes         | \"        | `&quot;`     |
+| Apostrophe     | \'        | `&apos;`     |
 
 Special characters should never be used in file names or file name references within the XML or Excel metadata. [See File Naming Guidelines](#file-naming) for more on this.
 
@@ -997,30 +1030,32 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
 
 **Supported metadata formats**
 
-
 <table>
-<thead>
-<tr>
-<th>Format Name</th>
-<th>Format Extension</th>
-<th>Encoding</th>
-<th>Package Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>XML (preferred)</td>
-<td>.xml</td>
-<td>UTF-8</td>
-<td>clip1.0<br />film5.0<br />tv1.0<br />Cablelabs ADI 1.1<br /><br /><strong><em>Additional XML schemas supported on a case-by-case basis</em></strong></td>
-</tr>
-<tr>
-<td>Excel</td>
-<td>.xlsx</td>
-<td>See below for <a href="#roku-excel-metadata-guildelines">Roku Excel Metadata Templates</a> and <a href="#roku-excel-metadata-guidelines-and-templates">Excel Metadata Guidelines</a></td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Format Name</th>
+      <th>Format Extension</th>
+      <th>Encoding</th>
+      <th>Package Version</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>XML (preferred)</td>
+      <td>.xml</td>
+      <td>UTF-8</td>
+      <td>clip1.0<br />film5.0<br />tv1.0<br />Cablelabs ADI 1.1<br /><br /><strong><em>Additional XML schemas supported on a case-by-case basis</em></strong></td>
+    </tr>
+
+    <tr>
+      <td>Excel</td>
+      <td>.xlsx</td>
+      <td>See below for <a href="#roku-excel-metadata-guildelines">Roku Excel Metadata Templates</a> and <a href="#roku-excel-metadata-guidelines-and-templates">Excel Metadata Guidelines</a></td>
+
+      <td />
+    </tr>
+  </tbody>
 </table>
 
 ### Metadata updates (MDU) and file replacements
@@ -1029,25 +1064,25 @@ Updates are automated and can be sent if there is a need to change metadata or a
 
 Roku currently supports updating the below metadata fields via automated MDU:
 
-- TMS ID
-- EIDR ID
-- Titles (primary and localized)
-- Short Descriptions (primary and localized)
-- Long Descriptions (primary and localized)
-- Release Date
-- Series Titles
-- Season Number
-- Episode Number
-- Language (and localized languages)
-- Availability Windows
-- License Types
-- Countries
-- Genres
-- Provider Tags
-- Content Ratings (system & rating)
-- Credits
-- Ad Breaks
-- Cue Points
+* TMS ID
+* EIDR ID
+* Titles (primary and localized)
+* Short Descriptions (primary and localized)
+* Long Descriptions (primary and localized)
+* Release Date
+* Series Titles
+* Season Number
+* Episode Number
+* Language (and localized languages)
+* Availability Windows
+* License Types
+* Countries
+* Genres
+* Provider Tags
+* Content Ratings (system & rating)
+* Credits
+* Ad Breaks
+* Cue Points
 
 **Metadata update (MDU)**
 
@@ -1057,33 +1092,41 @@ Metadata updates must be delivered in the same format as the ingest metadata
 
 Metadata updates must include **the exact same asset ID** that was included when the content was originally ingested
 
-*Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system*
+_Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system_
 
 All file name references must be removed from a metadata only update. This includes:
 
-- source video file name
-- closed captions file name
-- subtitle file name
-- audio dub file name
-- key, background, and/or poster art file names
+* source video file name
+* closed captions file name
+* subtitle file name
+* audio dub file name
+* key, background, and/or poster art file names
 
 Some fields need to be updated in "groups". All required fields in a group must be provided for the update to process successfully. Below are the current groups:
 
--  Metadata group (all of the required fields must be present in order to update one of these)
- -  Language (required)
- -  Title (required)
- -  Short description (required)
- -  Long description (optional)
+* Metadata group (all of the required fields must be present in order to update one of these)
 
--  Availability group (all of the required fields must be present in order to update one of these)
- -  License Type (required)
- -  Country (required)
- -  Start Date (required)
- -  End Date (required)
+* Language (required)
+
+* Title (required)
+
+* Short description (required)
+
+* Long description (optional)
+
+* Availability group (all of the required fields must be present in order to update one of these)
+
+* License Type (required)
+
+* Country (required)
+
+* Start Date (required)
+
+* End Date (required)
 
 Upload the metadata update to the "prod" folder in Aspera
 
-*If you do not see the update reflected on Roku Channel within 24 hours, please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com)*
+_If you do not see the update reflected on Roku Channel within 24 hours, please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com)_
 
 **File replacements and additions**
 
@@ -1092,14 +1135,14 @@ File replacements and additions are automated and will be processed in the same 
 1. File replacements and additions must be delivered in the same format as the ingest metadata
 2. File replacements and additions must include **the exact same asset ID** that was included when the content was originally ingested
 
- - *Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system*
+* _Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system_
 
 3. Only the file name references of the files that are being replaced or added should be included in the metadata file. Any file that is not being replaced or added should not be delivered or referenced in the metadata file.
 4. If the source video file is being replaced and there is a change in the duration of the source, any related files (captions, subtitles, audio dubs) should also be replaced.
 5. File replacements require language values in order to update properly
 6. Upload the file replacement or addition metadata to the "prod" folder in Aspera
 
-*As a best practice, please provide replacement files with a unique name both in the metadata and on the file itself. Simply adding a versionnumber (_v2, _v3, etc.) would suffice. For example:* `movie_title_v2.mov`
+_As a best practice, please provide replacement files with a unique name both in the metadata and on the file itself. Simply adding a versionnumber (_v2, _v3, etc.) would suffice. For example:_ `movie_title_v2.mov`
 
 **Content takedown**
 
@@ -1123,4 +1166,4 @@ If rights change from when the content was originally delivered to Roku and cont
 
 **NOTE:** Cablelabs ADI samples are intended for illustrative purposes and not necessarily as templates. The required data must be supplied in a static node in each XML.
 
-------
+***

@@ -26,6 +26,10 @@ Here is the list of key developer-facing Roku OS 15.2 updates:
 
 #### BrightScript APIs
 
+##### Configurable low-memory events
+
+When you use the **roAppMemoryMonitor** node to subscribe your app to low-memory events, you can now specify the threshold percentages that trigger ntofications (by default, 80%, 85%, 90%, 95% of the per-app memory limit). Notifications are throttled to prevent excessive events.
+
 ##### Automatic line continuation
 
 BrightScript now supports the following line breaks and whitespace to improve code readability and maintenance:
@@ -127,7 +131,7 @@ The BrightScript stack size has been increased for the Roku OS 15.2 release.
 
 ##### BrightScript heap graph visualization in Perfetto
 
-Roku’s [Perfetto-based app tracing tool](/docs/developer-program/dev-tools/app-tracing.md) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory. 
+Roku’s [Perfetto-based app tracing tool](/docs/developer-program/dev-tools/app-tracing.md) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
 
 ![roku815px - perfetto-heap-trace](https://image.roku.com/ZHZscHItMTc2/perfetto-heap-trace.png)
 
@@ -149,7 +153,7 @@ curl -d '' http://$ip:8060/perfetto/heapgraph/trigger/dev
 
 > Shortest Path used to display heap graph
 >
-> The heap graph is always shown as the shortest path from a *root* to any given object. This can sometimes lead to charts that might have unexpected structure. For example, if you have a Scene that owns a Grid which in turn owns a ContentNode, you might expect a chart reflecting this:
+> The heap graph is always shown as the shortest path from a _root_ to any given object. This can sometimes lead to charts that might have unexpected structure. For example, if you have a Scene that owns a Grid which in turn owns a ContentNode, you might expect a chart reflecting this:
 >
 > ```
 > == MyScene ==========

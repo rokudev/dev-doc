@@ -173,7 +173,7 @@ Configure how your app is listed in the Streaming Store, including the app's hom
 
         When you select **Yes**, the **Category** field is automatically fixed to "Kids" and cannot be changed, and you cannot set the **App Age Rating** to "Adult".  
 
-        If you select **No**, you cannot select the "Kids" category.   
+        If you select **No**, you cannot set the **Category** to "Kids".   
 
         Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the 
       </td>

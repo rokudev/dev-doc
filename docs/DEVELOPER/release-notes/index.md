@@ -28,7 +28,7 @@ Here is the list of key developer-facing Roku OS 15.2 updates:
 
 ##### Configurable low-memory events
 
-When you use the [**roAppMemoryMonitor** node ](doc:roappmemorymonitor)to subscribe your app to low-memory events, you can now specify the threshold percentages that trigger ntofications (by default, 80%, 85%, 90%, 95% of the per-app memory limit). Notifications are throttled to prevent excessive events.
+When you use the [**roAppMemoryMonitor** node ](doc:roappmemorymonitor)to subscribe your app to low-memory events, you can now specify the threshold percentages that trigger notifications (by default, 80%, 85%, 90%, 95% of the per-app memory limit). Notifications are throttled to prevent excessive events.
 
 ##### Automatic line continuation
 

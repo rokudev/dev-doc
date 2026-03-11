@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 All apps with transactional content or in-app purchases (SVOD, TVOD, and other subscription services) must integrate and enable Roku Pay services. This document lists the requirements for integrating Roku Pay services in an app. Apps must adhere to all of these requirements to pass certification.
 
 ## RP 1 Channel setup requirements
@@ -30,7 +29,7 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <td>RP 1.1</td>
       <td>Channel name</td>
       <td>Apps must provide a name, description, and poster (a 540x405 JPEG or PNG image) in each language supported by the channel.<br /><br />The app name must clearly identify the company associated with the service, and the publisher must have full legal rights or consent for their app names and the rights to all trademarks and copyright expressions associated with the name.<br /><br />The app name may not include the name "Roku", and it may not contain any profanity, or derogatory or misleading language.</td>
-      <td>[App publishing](doc:channel-publishing-guide#create-a-channel)</td>
+      <td>[App publishing](doc:channel-publishing-guide#create-an-app)</td>
     </tr>
   </tbody>
 </table>

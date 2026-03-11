@@ -73,14 +73,14 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <td>RP 3.1</td>
       <td>Product groups</td>
       <td>Subscription services must create product groups in the <a href="https://developer.roku.com/developer">Developer Dashboard</a> for any set of subscription products that the consumer should not be able to be subscribed to simultaneously.<br /><br />For example, if an app has two in-channel products for the same monthly subscription but with different free trial durations, these two products must be added to the same product group to prevent the customer from paying for two separate monthly subscriptions</td>
-      <td>[In-app purchases - Product groups](doc:product-catalog#creating-product-exclusivity-group)</td>
+      <td>[In-app purchases - Product groups](doc:product-catalog#creating-product-exclusivity-groups)</td>
     </tr>
 
     <tr>
       <td>RP 3.2</td>
       <td>Multiple purchase protection</td>
       <td>Apps must protect against multiple purchases of content or subscriptions through Roku Pay before passing new orders to the Streaming Store service.<br /><br />The Streaming Store service inherently protects against purchasing the same subscription code multiple times, but preventing, for example, the purchase of a free trial subscription and a non-free trial subscription must be done in the channel.</td>
-      <td>[In-app purchases -Product Groups](doc:product-catalog#creating-product-exclusivity-group)</td>
+      <td>[In-app purchases -Product Groups](doc:product-catalog#creating-product-exclusivity-groups)</td>
     </tr>
 
     <tr>

@@ -73,28 +73,28 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <td>RP 3.1</td>
       <td>Product groups</td>
       <td>Subscription services must create product groups in the <a href="https://developer.roku.com/developer">Developer Dashboard</a> for any set of subscription products that the consumer should not be able to be subscribed to simultaneously.<br /><br />For example, if an app has two in-channel products for the same monthly subscription but with different free trial durations, these two products must be added to the same product group to prevent the customer from paying for two separate monthly subscriptions</td>
-      <td>[In-app purchases - Product groups](doc:in-channel-products#adding-product-groups)</td>
+      <td>[In-app purchases - Product groups](doc:product-catalog#creating-product-exclusivity-group)</td>
     </tr>
 
     <tr>
       <td>RP 3.2</td>
       <td>Multiple purchase protection</td>
       <td>Apps must protect against multiple purchases of content or subscriptions through Roku Pay before passing new orders to the Streaming Store service.<br /><br />The Streaming Store service inherently protects against purchasing the same subscription code multiple times, but preventing, for example, the purchase of a free trial subscription and a non-free trial subscription must be done in the channel.</td>
-      <td>[In-app purchases -Product Groups](doc:in-channel-products#adding-product-groups)</td>
+      <td>[In-app purchases -Product Groups](doc:product-catalog#creating-product-exclusivity-group)</td>
     </tr>
 
     <tr>
       <td>RP 3.3</td>
       <td>Price changes</td>
       <td>SVOD apps must provide notice and otherwise comply with all applicable laws before changing the price of their service. <br /><br />In all cases, Roku requires that SVOD apps provide at least 15 days notice to all existing customers before a price increase.</td>
-      <td>[In-app purchases - Product pricing](doc:in-channel-products#product-pricing)</td>
+      <td>[In-app purchases - Product pricing](doc:product-catalog#scheduling-a-price-change-for-a-purchase-option)</td>
     </tr>
 
     <tr>
       <td>RP 3.4</td>
       <td>In-channel product naming</td>
       <td>Apps must name in-app products so that the service being offered is clearly identifiable. The publisher must have full legal rights or consent for their in-app product names and the rights to all trademarks and copyright expressions associated with the names. The in-app product names may not include the name "Roku", text related to a trial or discount offer<strong>,</strong> or any profane, derogatory, or misleading language.</td>
-      <td>[In-app purchases - Product basics](doc:in-channel-products#product-basics)</td>
+      <td>[In-app purchases - Product basics](doc:product-catalog##creating-products)</td>
     </tr>
   </tbody>
 </table>
@@ -169,12 +169,12 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       </td>
 
       <td>
-        Apps must automatically entitle content or subscriptions purchased through Roku Pay across all devices tied to the purchasing Roku account.<br /><br />Apps can use the [getAllPurchases](doc:channelstore) API can upon launch to return the transactionID for an active subscription, and they can use an entitlement server to look up an account via a call to the [validate-transaction API](doc:roku-web-service).
+        Apps must automatically entitle content or subscriptions purchased through Roku Pay across all devices tied to the purchasing Roku account.<br /><br />Apps can use the [getAllPurchases](doc:channelstore#getallpurchases) API can upon launch to return the transactionID for an active subscription, and they can use an entitlement server to look up an account via a call to the [validate-transaction API](doc:roku-web-service#validate-transaction).
       </td>
 
       <td>
-        * [getPurchases ChannelStore API](doc:channelstore)
-        * [validate-transaction  Roku Pay Web service API](doc:roku-web-service)
+        * [getAllPurchases ChannelStore API](doc:channelstore#getallpurchases)
+        * [validate-transaction  Roku Pay Web service API](doc:roku-web-service#validate-transaction)
       </td>
     </tr>
 
@@ -206,7 +206,7 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       </td>
 
       <td>
-        All apps offering subscriptions must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements)
+        All apps offering subscriptions must implement Enhanced Subscription Recovery to pass certification
       </td>
 
       <td>

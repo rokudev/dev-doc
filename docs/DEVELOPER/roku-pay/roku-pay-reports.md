@@ -1,5 +1,5 @@
 ---
-title: "Roku Pay reports"
+title: Roku Pay reports
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,13 +10,11 @@ metadata:
 next:
   description: ''
 ---
-
-
 Roku Pay includes a suite of analytical, sales, and transactional reports to help publishers manage and track payouts. These reports can be accessed from the Developer Dashboard, and they can be viewed in your web browser, or exported or emailed as a spreadsheet, tab-separated text (TXT) file, comma-separated value (CSV) file, or as a chart.
 
 ## Transaction Report
 
-The [Roku Pay Transaction Report](doc:transaction-report) displays the historical purchases, refunds, renewals, and cancellations in their app. The data compiled in the Transaction Report can be used for [estimating annual and monthly subscription revenue](doc:transaction-report), which can then be used to reconcile the payouts received.
+The [Roku Pay Transaction Report](doc:transaction-report) displays the historical purchases, refunds, renewals, and cancellations in their app. The data compiled in the Transaction Report can be used for [estimating annual and monthly subscription revenue](doc:transaction-report#estimating-monthly-subscription-revenue-with-the-transaction-report), which can then be used to reconcile the payouts received.
 
 ![roku815px - transaction-report](https://image.roku.com/ZHZscHItMTc2/transaction-report.jpg)
 

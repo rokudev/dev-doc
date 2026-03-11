@@ -1,5 +1,5 @@
 ---
-title: "Signup requirements and best practices"
+title: Signup requirements and best practices
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 SVOD and TVOD apps (and other subscription services) participating in Roku Pay can maximize subscription revenue by minimizing the number of screens and keypresses in the on-device sign-up workflow. Otherwise, customers may abandon the sign-up workflow if prompted to enter their email address or other personal information in an account creation screen because it requires too many keypresses.
 
 The following graphic demonstrates the standard Roku on-device sign-up workflow, which includes just a maximum of four screens: the landing page, the request for information (RFI) screen, the plan selection screen (if your app has multiple subscription products such as monthly and annual plans), and the order confirmation screen. Using this workflow requires as few as three or four keypresses.
@@ -34,14 +32,11 @@ As explained in the introduction, the on-device sign-up workflow should typicall
 
 1. **Landing page**. Provides call-to-action for subscribing. Includes entry to the sign-up and sign-in flows.
 
-
 2. **RFI screen** (Roku Pay built-in). Enables customers to grant the app access to their Roku account information (name, email address, street address, zip code, phone number, and so on). This makes it so apps can (1) check whether the user has an existing account before the purchase and (2) create a user account in their backend system on the behalf of the customer after the purchase has been completed. Only request the minimum information needed to create a user account in your system.
 
    > **Certification requirement**: Apps must display the RFI screen in the sign-up flow to pass certification.
 
-
 3. **Plan selection screen**. Provides the pricing and features of subscription products offered by . If a plan has additional features that the customer can purchase (for example, an MVPD app may offer sports or movie add-ons for a base package), a separate screen may be used to list the features available for purchase.
-
 
 4. **Order confirmation screen** (Roku Pay built-in).  Enables customers to confirm their method of payment, review the terms of the subscription, enter a PIN code (if required), and complete the purchase. Once the customer has completed the purchase, access to content should be granted without any additional steps. In addition, the app can then create a user account for the customer in their system.
 
@@ -53,32 +48,30 @@ The RFI and order confirmation screens are provided by Roku Pay. The text displa
 
 The publisher provides the copy used for the landing page and the plan selection screen. The language in these pages should be clear, concise, and persuasive. Specifically, apps should adhere to the following best practices for the text in these pages:
 
-- **Landing page**. The landing page should have a clear call-to-action to subscribe. It should be clear about any price points, and highlight any free trial or promotional pricing offers.
+* **Landing page**. The landing page should have a clear call-to-action to subscribe. It should be clear about any price points, and highlight any free trial or promotional pricing offers.
 
-
-- **Plan selection screen**. The plan selection screen should disclose all material terms and provide a summary of services and charges (apps are responsible for disclosing obligations about their service and fees). This screen should clearly articulate the benefits of each plan. For example, if an app offers monthly and annual plans, this screen can highlight the percentage savings of the annual plan compared to the monthly one. For apps that do have monthly and annual plans, default to the monthly plan to reduce potential refund requests.
+* **Plan selection screen**. The plan selection screen should disclose all material terms and provide a summary of services and charges (apps are responsible for disclosing obligations about their service and fees). This screen should clearly articulate the benefits of each plan. For example, if an app offers monthly and annual plans, this screen can highlight the percentage savings of the annual plan compared to the monthly one. For apps that do have monthly and annual plans, default to the monthly plan to reduce potential refund requests.
 
 ### Checking and creating user accounts
 
 As previously described, the RFI screen enables customers to grant the app access to their Roku account information. Apps can use this information to check whether the user has an existing account before the purchase and create a user account in their backend system after the purchase. The specific timing to be used and information to be sent for checking and creating user accounts is as follows:
 
-- **When to check for an existing user account.** Once the customer clicks **Continue** in the RFI screen, the app can get the user's email address and send it to their backend system to check whether that email address is already linked to an active subscription for which the publisher is already handling billing.
+* **When to check for an existing user account.** Once the customer clicks **Continue** in the RFI screen, the app can get the user's email address and send it to their backend system to check whether that email address is already linked to an active subscription for which the publisher is already handling billing.
 
-
-- **When to create a new user account**.  Only once the customer has completed the order confirmation screen and purchased a subscription may the app use the customer's information (name, email address, street address, zip code, phone number, and so on) to create a new user account in their backend system. Apps can then auto-generate a temporary password and then email customers with instructions to reset it.
+* **When to create a new user account**.  Only once the customer has completed the order confirmation screen and purchased a subscription may the app use the customer's information (name, email address, street address, zip code, phone number, and so on) to create a new user account in their backend system. Apps can then auto-generate a temporary password and then email customers with instructions to reset it.
 
 ## Integrations
 
-Roku offers a number of integrations that enable apps to provide customers with a seamless on-device sign-up experience. Implementing these integrations helps apps increase the number of successful subscriptions and purchases, and it ensures that your app complies with Roku's [app certification requirements related to purchasing](doc:certification).
+Roku offers a number of integrations that enable apps to provide customers with a seamless on-device sign-up experience. Implementing these integrations helps apps increase the number of successful subscriptions and purchases, and it ensures that your app complies with Roku's [app certification requirements related to purchasing](doc:roku-pay-requirements).
 
 Some integrations are required only if your app meets the stated streaming thresholds; however, implementing all of these integrations is recommended for all apps.
 
-| Integration                                                | Streaming threshold                                          |
-| ---------------------------------------------------------- | ------------------------------------------------------------ |
-| [On-device authentication](#on-device-authentication)      | Required for all SVOD and TVOD apps.                     |
-| [On-device upgrade/downgrade](#on-device-upgradedowngrade) | Required for all SVOD and TVOD apps.                     |
+| Integration                                                | Streaming threshold                                                                                                                           |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [On-device authentication](#on-device-authentication)      | Required for all SVOD and TVOD apps.                                                                                                          |
+| [On-device upgrade/downgrade](#on-device-upgradedowngrade) | Required for all SVOD and TVOD apps.                                                                                                          |
 | [Automatic Account Link](#automatic-account-link)          | Required for all apps with user accounts that have streamed more than an average of **1 million hours** per month over the last three months. |
-| [Abandonment tracking](#abandonment-tracking)              | Required for SVOD apps that have streamed more than an average of **5 million hours** per month over the last three months. |
+| [Abandonment tracking](#abandonment-tracking)              | Required for SVOD apps that have streamed more than an average of **5 million hours** per month over the last three months.                   |
 
 ### On-device authentication
 
@@ -108,10 +101,9 @@ Automatic account link automatically signs customers into your app when they act
 
 For more information, click [here](doc:universal-authentication-protocol-for-single-sign-on).
 
-> **Certification requirement**: All apps requiring a user account to login and that have streamed more than an average of 5 million hours per month over the last three months must implement Automatic Account Link.  
+> **Certification requirement**: All apps requiring a user account to login and that have streamed more than an average of 5 million hours per month over the last three months must implement Automatic Account Link.
 >
 > This requirement is also applicable to new subscription services projected to reach the specified streaming hour threshold shortly after launch.
-
 
 ### Abandonment tracking
 

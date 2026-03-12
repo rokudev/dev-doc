@@ -30,7 +30,7 @@ For more information, see the [Roku Resource Monitor guide](doc:resource-monitor
 
 ## BrightScript Profiler
 
-Indicates where performance improvements and efficiencies can be made in your Roku app. The tool enables you to collect and analyze CPU usage, wall-clock time, function call counts, and memory usgae, including memory leak detection).
+Indicates where performance improvements and efficiencies can be made in your Roku app. The tool enables you to collect and analyze CPU usage, wall-clock time, function call counts, and memory usage, including memory leak detection.
 
 For more information, see the [BrightScript Profiler guide](doc:brightscript-profiler).
 
@@ -46,7 +46,7 @@ Describes each SceneGraph component, defines the relationship between nodes, and
 
 Every Roku device can be configured to support developer tasks such as installing apps, packaging apps, and creating your app's screenshots. The Developmemnt Application Installer enables installing or "sideloading" an app to a Roku device to test and QA before submitting for publication.
 
-<Image alt="roku815px - developersettings" border={false} src="https://image.roku.com/ZHZscHItMTc2/developersettings.png" title="developersettings" />
+![roku815px - developersettings](https://image.roku.com/ZHZscHItMTc2/developersettings.png "developersettings")
 
 ## Application Packager
 
@@ -56,7 +56,7 @@ This enables developers to securely publish apps while keeping all intellectual 
 
 For a step-by-step walkthrough, see [Packaging Roku Apps](doc:packaging-channels).
 
-<Image alt="roku815px - packagingchannels10" border={false} src="https://image.roku.com/ZHZscHItMTc2/packagingchannels10.png" title="packagingchannels10" />
+![roku815px - packagingchannels10](https://image.roku.com/ZHZscHItMTc2/packagingchannels10.png "packagingchannels10")
 
 ## SceneGraph Developer Extensions
 
@@ -66,7 +66,7 @@ For a step-by-step walkthrough, see [Packaging Roku Apps](doc:packaging-channels
 
 Control any Roku device using this online remote. Useful for recording and automating commands on Roku OS.
 
-<Image alt="roku600px -  Roku Remote Web Tool" border={false} src="https://image.roku.com/ZHZscHItMTc2/dt2.jpg" title="dt2" />
+![roku600px -  Roku Remote Web Tool](https://image.roku.com/ZHZscHItMTc2/dt2.jpg "dt2")
 
 ## Deep Linking Tester
 
@@ -74,7 +74,7 @@ Test how to link directly into content within Roku apps using Roku's External Co
 
 Note: This tool requires a [companion Roku app](https://my.roku.com/account/add?channel=KX3UPK) to be installed on your device.
 
-<Image alt="roku600px - deep linking tester" border={false} src="https://image.roku.com/ZHZscHItMTc2/dt3.jpg" title="dt3" />
+![roku600px - deep linking tester](https://image.roku.com/ZHZscHItMTc2/dt3.jpg "dt3")
 
 ## Stream Testing Tool
 
@@ -82,7 +82,7 @@ Test playback from media URLs for content and ad servers. In addition, this tool
 
 Note: This tool requires a [companion Roku app](https://my.roku.com/account/add?channel=ZJMQ6D5) to be installed on your device.
 
-<Image alt="roku600px - stream testing tool" border={false} src="https://image.roku.com/ZHZscHItMTc2/dt4.jpg" title="dt4" />
+![roku600px - stream testing tool](https://image.roku.com/ZHZscHItMTc2/dt4.jpg "dt4")
 
 ## Automated app testing tools
 

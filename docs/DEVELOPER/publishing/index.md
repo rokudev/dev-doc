@@ -26,7 +26,7 @@ Publishers can review this basic pre-publishing checklist provided to help ensur
 * Review and comply with [local legal regulations](doc:legal), such as any relevant laws pertaining to data privacy or restricting targeted advertisements to children. Note, this is not intended to be a comprehensive list of applicable laws and regulations applicable in each new territory.
 * Apply [local content ratings](doc:content-metadata) to the content metadata.
 * Ensure any [video advertisements](doc:integrating-roku-advertising-framework) running within the app are relevant to the audience.
-* Ensure any [subscription pricing models](doc:in-channel-products) have been adjusted for the territory.
+* Ensure any [subscription pricing models](doc:product-catalog) have been adjusted for the territory.
 
 #### Discovery and support
 

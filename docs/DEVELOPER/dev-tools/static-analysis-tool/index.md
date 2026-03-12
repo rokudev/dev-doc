@@ -20,7 +20,7 @@ The app publishing flow includes a Static Analysis Tool used to analyze the app'
 
 The Static Analysis Tool is available from the [Developer Dashboard](https://developer.roku.com/developer).
 
-1. From the **Developer Dashboard > Manage My Channels** tool, [upload a package file](doc:channel-publishing).
+1. From the **Developer Dashboard > Manage My Channels** tool, [upload a package file](doc:channel-publishing-guide#package-and-testing).
 
 2. Select **Static Analysis** from the drop-down menu.  This option is only available after a package file has been uploaded.
 

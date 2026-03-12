@@ -9,12 +9,11 @@ metadata:
   description: ''
   robots: index
 ---
-
 Starting with Roku OS 15.1, you can use [Perfetto](https://perfetto.dev/docs/) to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance. Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.
 
 With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.
 
-<Image alt="perfetto-ui-overview" border={false} src="https://image.roku.com/ZHZscHItMTc2/perfetto-ui-overview.png" />
+![perfetto-ui-overview](https://image.roku.com/ZHZscHItMTc2/perfetto-ui-overview.png)
 
 ## Prerequisites
 
@@ -22,7 +21,7 @@ To record a trace, developers need the following:
 
 * Roku OS 15.1 (or later)
 * A Roku device with [developer mode enabled](doc:developer-setup).
-* Roku app (you can record a trace with an app running in a [sideloaded](doc:developer-setup), beta, or production environment).
+* Roku app (you can record a trace with an app running in a [sideloaded](doc:developer-setup#sideloading-apps), beta, or production environment).
   * For a sideloaded app, the manifest must enable the **run_as_process** attribute (run_as_process=1).
   * For a [beta](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#beta-channel-guidelines) or [production](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)).
 * Trace recording app. You can record an app trace via ECP and a websocket client.
@@ -122,7 +121,7 @@ You can open trace files with the [Perfetto UI](https://ui.perfetto.dev/) to ana
 
 You can use the W,A,S,D keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks.
 
-<Image alt="perfetto-visualize" border={false} src="https://image.roku.com/ZHZscHItMTc2/perfetto-visualize.png" />
+![perfetto-visualize](https://image.roku.com/ZHZscHItMTc2/perfetto-visualize.png)
 
 ## Using PerfettoSQL to query traces
 
@@ -132,7 +131,7 @@ You can query the data in a trace using [PerfettoSQL](https://perfetto.dev/docs/
 2. Enter your query in the editor.
 3. Click **Run Query**.
 
-<Image alt="perfetto-sql" border={false} src="https://image.roku.com/ZHZscHItMTc2/perfetto-sql.png" />
+![perfetto-sql](https://image.roku.com/ZHZscHItMTc2/perfetto-sql.png)
 
 The following examples demonstrate some of the use cases for querying your trace data:
 
@@ -148,15 +147,15 @@ The following examples demonstrate some of the use cases for querying your trace
 
 Roku's Perfetto-based app tracing solution exposes a number of terms that Roku developers may be unfamiliar with:
 
-| Term               | Defintion                                                                                                                                                                                                                                                                                |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SdkLauncher        | A Roku OS plugin that provides an environment for running SDK apps in a sandboxed process.                                                                                                                                                                                               |
-| PR_ui              | The main BrightScript thread.                                                                                                                                                                                                                                                            |
-| RenderThread       | The primary SceneGraph render thread.                                                                                                                                                                                                                                                    |
-| AuxRenderThread    | A Roku OS thread used to offload some rendering tasks from the main UI thread. This helps improve the responsiveness and smoothness of the user interface.                                                                                                                               |
-| TN:[function name] | A Task thread spawned by a [**Task** node](doc:task) . The function name represents the name of the Task function defined by the app.                                                                                                           |
-| ExecBrightScript   | A slice representing the BrightScript engine processing app code.                                                                                                                                                                                                                        |
-| render             | A slice representing the process of drawing or composing a frame for display.                                                                                                                                                                                                            |
-| swapBuffers        | A slice representing the operation of presenting a newly rendered frame to the display.                                                                                                                                                                                                  |
+| Term               | Defintion                                                                                                                                                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SdkLauncher        | A Roku OS plugin that provides an environment for running SDK apps in a sandboxed process.                                                                                                                                                       |
+| PR_ui              | The main BrightScript thread.                                                                                                                                                                                                                    |
+| RenderThread       | The primary SceneGraph render thread.                                                                                                                                                                                                            |
+| AuxRenderThread    | A Roku OS thread used to offload some rendering tasks from the main UI thread. This helps improve the responsiveness and smoothness of the user interface.                                                                                       |
+| TN:[function name] | A Task thread spawned by a [**Task** node](doc:task) . The function name represents the name of the Task function defined by the app.                                                                                                            |
+| ExecBrightScript   | A slice representing the BrightScript engine processing app code.                                                                                                                                                                                |
+| render             | A slice representing the process of drawing or composing a frame for display.                                                                                                                                                                    |
+| swapBuffers        | A slice representing the operation of presenting a newly rendered frame to the display.                                                                                                                                                          |
 | consumeAllTasks    | A slice representing the render thread as it is processing messages from the Render Thread Queue that are waiting. These can include rendezvous as well as messages sent using the [**roRenderThreadQueue** component](doc:rorenderthreadqueue). |
-| bscCopyToDomainEx  | A slice representing data being copied. For example, when getting or setting a field on a [**Task** node](doc:task) from the Render thread.                                                                                                     |
+| bscCopyToDomainEx  | A slice representing data being copied. For example, when getting or setting a field on a [**Task** node](doc:task) from the Render thread.                                                                                                      |

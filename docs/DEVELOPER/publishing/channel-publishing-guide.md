@@ -62,11 +62,11 @@ Additional differences between beta and public apps are summarized as follows:
 To create and start testing a beta app, you will need to:
 
 1. [Package your Roku app](doc:packaging-channels).
-2. [Create an app](#create-a-channel) (select **Beta**).
+2. [Create an app](#create-an-app) (select **Beta**).
 3. [Upload the package](#upload-a-package) associated with this app.
 4. Provide the Access Code (from the Preview and Publish window) to your beta testers.
 
-For additional revision cycles before moving to a Public app, simply repackage your project using the same key and re-upload it to the same Beta app (if within the 120 day life of the app).
+For additional revision cycles before moving to a Public app, simply repackage your project using the same key and re-upload it to the same Beta app (if within the 120-day life of the app).
 
 ### Public app guidelines
 
@@ -85,10 +85,10 @@ To ensure success in creating a Public app, you will need to:
 1. [Package your Roku app](doc:packaging-channels).
 2. Create your design assets following [Design and User Experience Guidelines](doc:design-overview).
 3. Go through the [Pre-certification Check List](doc:certification).
-4. [Create an app](#create-a-channel) (select **Public**).
+4. [Create an app](#create-an-app) (select **Public**).
 5. [Upload the package](#upload-a-package) associated with this app.
 6. Follow the [App certification](#channel-certification) procedure.
-7. Publish your app (submit it for deployment) using the [Publishing an app](#publishing-a-channel) procedure.
+7. Publish your app (submit it for deployment) using the [Publishing an app](#publishing-an-app) procedure.
 
 ## Create an app
 
@@ -121,7 +121,7 @@ To ensure success in creating a Public app, you will need to:
 | Installs (Beta apps only) | The number of users that have installed the beta app. A beta app may be installed by up to 20 users at any time.                                                                                                                                                                                                                                                                                                    |
 | Expiry (Beta apps only)   | The date when the beta app will expire and the number of days before the expiration. A beta app may exist for a maximum of 120 days after creation. After the expiration, the app is: (1) deleted and removed from your Developer Dashboard and (2) disabled for all users who have installed it.                                                                                                                   |
 
-## Channel store listing
+## App store listing
 
 ### Listing setup
 
@@ -169,13 +169,13 @@ Configure how your app is listed in the Streaming Store, including the app's hom
       </td>
 
       <td>
-        If your app is made for kids you must select **Yes** and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.  
+        If your app is made for kids you must select **Yes** and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.
 
-        When you select **Yes**, the **Category** field is automatically fixed to "Kids" and cannot be changed, and you cannot set the **App Age Rating** to "Adult".  
+        When you select **Yes**, the **Category** field is automatically fixed to "Kids" and cannot be changed, and you cannot set the **App Age Rating** to "Adult".
 
-        If you select **No**, you cannot set the **Category** to "Kids".   
+        If you select **No**, you cannot set the **Category** to "Kids".
 
-        Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the 
+        Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the
       </td>
     </tr>
 
@@ -219,21 +219,21 @@ Provide localized names, descriptions, and artwork for your listing in the Strea
 
    ![channel-builder-2-store-assets-localized-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-localized-properties.png)
 
-| Field                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Channel name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>Channel name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>Channel description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>Channel description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)       .</li></ul> |
-| Channel poster               | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Screenshots                  | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Field                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>Channel name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>Channel description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>Channel description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)        .</li></ul> |
+| Channel poster               | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Screenshots                  | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 4. Click **Save**.
 
-## Channel properties
+## App properties
 
-### Channel profile
+### App profile
 
 Select the type of app you are creating and provide your contact information following these steps:
 
-1. From the app's management page, click **Channel profile**.
+1. From the app's management page, click **App profile**.
 
    ![channel-builder-2-channel-profile-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-selection.png)
 

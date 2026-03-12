@@ -10,9 +10,10 @@ metadata:
 next:
   description: ''
 ---
-
 The External Control Protocol (ECP) enables a Roku device to be controlled over a local area network by providing a number of external control services. The Roku devices offering these external control services are discoverable using SSDP (Simple Service Discovery Protocol). ECP is a simple RESTful API that can be accessed by programs in virtually any programming environment.
 
+> **Commands requiring "Control by mobile apps" enabled  **
+>
 > As of Roku OS 14.1, the **Settings > System > Advanced system settings > Control by mobile apps** feature must be set to "Enabled" for a Roku device to receive the following ECP commands:
 >
 > * keypress
@@ -21,6 +22,8 @@ The External Control Protocol (ECP) enables a Roku device to be controlled over 
 > * query/icon
 > * query/tv-channels
 > * query/tv-active-channel
+>
+>   **Commands requiring "Control by mobile apps" and Developer Mode enabled  **
 >
 > In addition, the following ECP commands require the Roku device to be in [developer mode](doc:developer-setup) and the **Control by mobile apps** setting to be "Enabled":
 >
@@ -35,7 +38,11 @@ The External Control Protocol (ECP) enables a Roku device to be controlled over 
 > * query/app-state
 > * exit-app
 >
+> **Search command sunset**
+>
 > As of Roku OS 12.0, the "search" command is no longer available.
+>
+> **Support for in-app ECP commands sunset**
 >
 > Support for sending ECP commands from within a Roku app has been discontinued. Apps may no longer include code in their app that is designed to issue any type of ECP command. [Static Analysis testing](doc:static-analysis-tool) has been updated to check apps for ECP commands. Apps that include ECP commands in their code will automatically be blocked from publishing to the Streaming Store.
 >
@@ -856,9 +863,9 @@ run in a variety of environments including Firefox, IE, and other
 browser plugins, iPhone, iPad, and other mobile device environments.
 
 The SDK also includes a couple of Java applications. There is an Android
-remote application in examples/source/ecp\_client/android\_remote, and a
+remote application in examples/source/ecp_client/android_remote, and a
 simple application to find Roku devices on the local area network in
-examples/source/ecp\_client/Roku\_Finder.
+examples/source/ecp_client/Roku_Finder.
 
 ## DIAL (Discovery and Launch)
 

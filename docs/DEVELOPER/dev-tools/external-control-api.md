@@ -12,7 +12,7 @@ next:
 ---
 The External Control Protocol (ECP) enables a Roku device to be controlled over a local area network by providing a number of external control services. The Roku devices offering these external control services are discoverable using SSDP (Simple Service Discovery Protocol). ECP is a simple RESTful API that can be accessed by programs in virtually any programming environment.
 
-> **Commands requiring "Control by mobile apps" enabled  **
+> **Commands requiring "Control by mobile apps" enabled**
 >
 > As of Roku OS 14.1, the **Settings > System > Advanced system settings > Control by mobile apps** feature must be set to "Enabled" for a Roku device to receive the following ECP commands:
 >
@@ -23,7 +23,7 @@ The External Control Protocol (ECP) enables a Roku device to be controlled over 
 > * query/tv-channels
 > * query/tv-active-channel
 >
->   **Commands requiring "Control by mobile apps" and Developer Mode enabled  **
+> **Commands requiring "Control by mobile apps" and Developer Mode enabled**
 >
 > In addition, the following ECP commands require the Roku device to be in [developer mode](doc:developer-setup) and the **Control by mobile apps** setting to be "Enabled":
 >

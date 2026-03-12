@@ -14,7 +14,7 @@ The Roku Resource Monitor tracks and visualizes several key metrics, including s
 
 The Roku Resource Monitor is intended to be used in conjunction with the [BrightScript Profiler](doc:brightscript-profiler) to improve app performance. For example, if the Roku Resource Monitor consistently shows increased consumption with a specific action on a screen, developers can use the [BrightScript Profiler](doc:brightscript-profiler) to further drill down into the app and pinpoint where to optimize the code.
 
-> **Roku Resource Monitor 4.2**: The latest version of the tool features a new **Data Collection Mode** that enables developers to integrate a headless version of the tool into their CI/CD pipelines. This provides developers with automated data collection and performance monitoring without having to use the RRM UI. The collected data is saved as a JSON file and it can be attached to bug tickets, opened in the RRM UI for visualization, or post-processed to detect memory leaks and other trends.
+> **Roku Resource Monitor 4.2**: The latest version of the tool features a new **[Data Collection Mode](doc:rrm-data-collection-mode)** that enables developers to integrate a headless version of the tool into their CI/CD pipelines. This provides developers with automated data collection and performance monitoring without having to use the RRM UI. The collected data is saved as a JSON file and it can be attached to bug tickets, opened in the RRM UI for visualization, or post-processed to detect memory leaks and other trends.
 >
 > Click [here](doc:rrm-data-collection-mode) to learn how to use RRM in Data Collection Mode.
 
@@ -40,17 +40,17 @@ To run the Roku Resource Monitor, follow these steps:
 
 2. In the **Device Manager > Online** panel, select your test device that is running Roku OS 11.5 (or higher) by toggling the On/Off button and then clicking **Select device**. You can also manually add your device by clicking **Add a Device**, entering its IP address, entering a name to be used to identify it, and then clicking **Add**. To test sideloaded apps, click the settings icon under **Options**, enter the user name (rokudev) and password for your device, and then click **Save**.
 
-   <Image alt="roku400px - rrmselectdevice" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm-device-manager-v2.png" />
+   ![roku400px - rrmselectdevice](https://image.roku.com/ZHZscHItMTc2/rrm-device-manager-v2.png)
 
 3. Select the app to be monitored and then click **Select channel**. For production apps, the Roku device must be keyed with the same developer key that was used to sign the app for publishing to the Streaming Store.
 
-   <Image alt="roku400px - rrmselectchannel" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm-select-channel.png" />
+   ![roku400px - rrmselectchannel](https://image.roku.com/ZHZscHItMTc2/rrm-select-channel.png)
 
 4. The left side of the tool displays the device's IP address, app name, and session start time (you can click the links on the device and app values to change them).
 
    The tool also lists the device model number, serial number, Roku OS version, app version, and the app's registry usage. You can click the link on the registry usage value to open a dialog that lists the registry sections and the key and values in each of them (you can click the copy icon in the upper right-hand corner of the dialog and paste the registry section data to a text file or other document).
 
-   <Image alt="roku600px - rrm3-ui-session-not-started" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-ui-session-not-started.png" />
+   ![roku600px - rrm3-ui-session-not-started](https://image.roku.com/ZHZscHItMTc2/rrm4-ui-session-not-started.png)
 
    The tool then lists the following settings for configuring the tool's graphs and panels:
 
@@ -70,15 +70,15 @@ To run the Roku Resource Monitor, follow these steps:
 
    * **Panel configuration**: Enable/disable individual panels. In live mode. Disabling a panel stops data collection and hides it. In file mode, only panels that were enabled during the session are displayed.
 
-     <Image alt="roku600px - rrm4-panel-config-v2.png" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-panel-config-v2.png" />
+     ![roku600px - rrm4-panel-config-v2.png](https://image.roku.com/ZHZscHItMTc2/rrm4-panel-config-v2.png)
 
 5. Click **New Session**. The Roku Resource Monitor launches in **Live mode** and begins tracking the app's resource usage in real-time in a series of graphs. To import and then analyze the metrics collected from a previous session, click **[File mode](#using-file-mode)**.
 
-   <Image alt="roku600px - rrm3-ui-session-started" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-ui-session-started.png" />
+   ![roku600px - rrm3-ui-session-started](https://image.roku.com/ZHZscHItMTc2/rrm4-ui-session-started.png)
 
 6. When you have finished monitoring your app, click **Stop**. By default, the **End session configuration** dialog opens. Optionally, you can select the **Download this session** check box to download the session file to your computer. The last five sessions are automatically stored by the tool, and the session files can be selected and viewed from the [**File Mode** panel](#using-file-mode). To prevent newer sessions from overwriting an older one you want to preserve, download the session file to your computer. You can select the **Don't warn me again** check box to skip this dialog when ending future sessions (you can also disable this dialog from the [**File mode**](#using-file-mode)).
 
-   <Image alt="roku600px - rrm-stop-session" border={false} src="https://image.roku.com/ZHZscHItMTc2/end-session-config-v2.png" />
+   ![roku600px - rrm-stop-session](https://image.roku.com/ZHZscHItMTc2/end-session-config-v2.png)
 
 ### Saving graph and session settings
 
@@ -99,7 +99,7 @@ As of RRM 4.0, the tool automatically saves the graph and session settings and u
 
 The Roku Resource Monitor displays app events (red) and media events (blue) on the x-axis of the graphs. An event is represented by a bar indicating the duration of the event and a pair of _initiate_ and _complete_ [beacons](doc:measuring-channel-performance) that denote the start and end of the event (for example, the compiling of the app, the playback of video content, and so on). You can hover your mouse pointer over an event to display an information box with the name and timestamp of the event, and the metrics at the time the event occurred.
 
-<Image alt="roku815px - rrm-beacons" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-beacons.png" />
+![roku815px - rrm-beacons](https://image.roku.com/ZHZscHItMTc2/rrm4-beacons.png)
 
 The following app and media events are displayed:
 
@@ -160,13 +160,13 @@ The left pane of a panel lists the current values associated with metrics in it.
 
 You can save the currently visible portion of a graph to an image file. To do this, press and hold CONTROL on your keyboard and click, and then click **Save visible part as PNG**. The image is saved as a PNG file in your **Downloads** folder. The name of the file has the following syntax: `<graph-name>_<timestamp>` (for example, sgrendezvous_1689136979932.png).
 
-<Image alt="roku815px - rrm-save-graph-image" border={false} src="https://image.roku.com/ZHZscHItMTc2/save-graph-image.png" />
+![roku815px - rrm-save-graph-image](https://image.roku.com/ZHZscHItMTc2/save-graph-image.png)
 
 ### System memory usage
 
 The System memory usage graph tracks the amount of **resident** and **swap** memory used by the app (in MB). The **used** value is the sum of these two values.
 
-<Image alt="roku815px - rrm3-system-memory" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-system-memory.png" />
+![roku815px - rrm3-system-memory](https://image.roku.com/ZHZscHItMTc2/rrm4-system-memory.png)
 
 Each of the values listed in the graph is described as follows:
 
@@ -231,7 +231,7 @@ Each of the values listed in the graph is described as follows:
 
 The CPU memory usage graph tracks the percentage of total CPU processing (across all device cores) used by the app in the user and kernel spaces.
 
-<Image alt="roku815px - rrmcpu" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-cpu-usage.png" />
+![roku815px - rrmcpu](https://image.roku.com/ZHZscHItMTc2/rrm4-cpu-usage.png)
 
 Each of the values listed in the graph is described as follows:
 
@@ -245,7 +245,7 @@ Each of the values listed in the graph is described as follows:
 
 The Frame rate graph tracks the number of graphics frames rendered by the app per second.
 
-<Image alt="roku815px - rrm-frame-rate" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-frame-rate.png" />
+![roku815px - rrm-frame-rate](https://image.roku.com/ZHZscHItMTc2/rrm4-frame-rate.png)
 
 ### BrightScript objects
 
@@ -253,13 +253,13 @@ The BrightScript objects count graph tracks the **Top 10** BrightScript objects 
 
 You can click the **Thread/Object configuration** setting, manually select up to 10 objects to track, and then click **Custom objects selection** from the **Show** drop-down list to plot the selected objects on the graph.
 
-<Image alt="roku815px - rrm4-brs-objects" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects.png" />
+![roku815px - rrm4-brs-objects](https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects.png)
 
 #### Filtering objects by threads
 
 You can select the **Thread/Object configuration** setting to monitor the memory consumption of the task threads in your app. When you select this setting, the **Threads** tab lists the various task threads in your app, the number of objectinstances in each thread or the amount of memory consumed by each one, and the percentage of the count/memory to the total group (the **Count**/**Memory** option selected in the graph determines which metric is used in the table). Select one or more check boxes for the task threads to be plotted on the graph and then click **Save**. This enables you to prioritize which threads to optimize and helps you identify how consumptive any 3rd-party libraries in your app are.
 
-<Image alt="roku600px - rrm4-brs-objects-filtering-threads" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects-filtering-threads.png" />
+![roku600px - rrm4-brs-objects-filtering-threads](https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects-filtering-threads.png)
 
 #### Selecting BrightScript objects to be monitored
 
@@ -267,13 +267,13 @@ You can click the **Objects** tab to list all the BrightScript objects used by t
 
 You can select the check boxes for up to 10 objects to plot and track on the graph, and then click **Save**. To plot the selected objects on the graph, click **Custom objects selection** from the **Show** drop-down list.
 
-<Image alt="roku600px - rrm4-brs-objects-selection" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects-selection.png" />
+![roku600px - rrm4-brs-objects-selection](https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects-selection.png)
 
 ### SceneGraph rendezvous
 
 The SceneGraph rendezvous graph tracks the number of rendezvous events that have occurred on the app, the total time spent in rendezvous events, and the number of dropped events (displayed on the graph only).
 
-<Image alt="roku600px - rrm-rendezvous" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-rendezvous.png" />
+![roku600px - rrm-rendezvous](https://image.roku.com/ZHZscHItMTc2/rrm4-rendezvous.png)
 
 Each of the values listed in the graph is described as follows:
 
@@ -287,7 +287,7 @@ Each of the values listed in the graph is described as follows:
 
 You can click on a rendezvous (denoted with a red dot on the graph) to view the timestamp of the event and the following details:
 
-<Image alt="roku600px - rrm-rendezvous" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-rendezvous-details.png" />
+![roku600px - rrm-rendezvous](https://image.roku.com/ZHZscHItMTc2/rrm4-rendezvous-details.png)
 
 | **Field**                  | **Description**                                                                                                                               |
 | :------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -304,13 +304,13 @@ You can click the copy icon in the upper right-hand corner of the dialog and pas
 
 You can click on a row in the rendezvous dialog to view the start and end times of an event (unix timestamps) and the duration of the event (in milliseconds). You can click the copy icon in the upper right-hand corner of the dialog and paste the rendezvous data to a text file or other document.
 
-<Image alt="roku600px - rrm-rendezvous" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-1-rendezvous-timestamps.png" />
+![roku600px - rrm-rendezvous](https://image.roku.com/ZHZscHItMTc2/rrm4-1-rendezvous-timestamps.png)
 
 #### Viewing the source code associated with an event (sideloaded apps)
 
 If you are monitoring a sideloaded app in live mode, you can drill down into the source code associated with a rendezvous event. When you view the details of an event, you can click on the source file/line number and the tool will show the code associated with that event. This feature is not available for production apps.
 
-<Image alt="roku600px - rrm4-rendezvous-source-code.png" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-1-rendezvous-code-v2.png" />
+![roku600px - rrm4-rendezvous-source-code.png](https://image.roku.com/ZHZscHItMTc2/rrm4-1-rendezvous-code-v2.png)
 
 ### SceneGraph nodes
 
@@ -318,21 +318,21 @@ The SceneGraph nodes graph tracks the **Top 10 nodes** used by the app and the t
 
 You can click the **Node configuration** setting, manually select up to 10 objects to track, and then click **Custom objects selection** from the **Show** drop-down list to plot the selected objects on the graph.
 
-<Image alt="roku815px - rrm4-rsg-nodes" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-1-rsg-count.png" />
+![roku815px - rrm4-rsg-nodes](https://image.roku.com/ZHZscHItMTc2/rrm4-1-rsg-count.png)
 
-<Image alt="roku815px - rrm4-rsg-nodes" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-1-rsg-memory.png" />
+![roku815px - rrm4-rsg-nodes](https://image.roku.com/ZHZscHItMTc2/rrm4-1-rsg-memory.png)
 
 #### Selecting SceneGraph nodes to be monitored
 
 You can click the **Node configuration** setting to view the count/memory usage of the SceneGraph nodes in your app, manually select up to 10 nodes to track, and then click **Save** to plot the selected nodes on the graph. The **Count**/**Memory** option selected in the graph determines which metric is used in the table.
 
-<Image alt="roku815px - rrm4-rsg-nodes" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-1-rsg-nodes-selected.png" />
+![roku815px - rrm4-rsg-nodes](https://image.roku.com/ZHZscHItMTc2/rrm4-1-rsg-nodes-selected.png)
 
 ### Graphics memory usage
 
 The Graphics memory usage graph tracks the amount of **texture** and **system** memory (in MB) used by the app and the bitmaps. You can select the bitmap collection interval, which is set to **1** minute by default.
 
-<Image alt="roku815px - rrmgraphics" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-graphics-memory.png" />
+![roku815px - rrmgraphics](https://image.roku.com/ZHZscHItMTc2/rrm4-graphics-memory.png)
 
 Each of the values listed in the graph is described as follows:
 
@@ -343,13 +343,13 @@ Each of the values listed in the graph is described as follows:
 
 You can click on a bitmap icon on the graph to open the **Bitmaps details** dialog, which lists the dimensions, bits per pixel (bpp),  and size (KB) of the assets being used by the app. You can click on truncated file names (indicated with ellipsis) to display the full path. You can click the copy icon in the upper right-hand corner of the dialog and paste the bitmap data to a text file or other document.
 
-<Image alt="roku600px - rrmbitmaps" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm4-bitmaps-stats.png" />
+![roku600px - rrmbitmaps](https://image.roku.com/ZHZscHItMTc2/rrm4-bitmaps-stats.png)
 
 ### Registry usage
 
 The Registry usage graph tracks the amount of registry space used by the app.
 
-<Image alt="roku815px - rrm-registry-usage" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm-registry-usage.png" />
+![roku815px - rrm-registry-usage](https://image.roku.com/ZHZscHItMTc2/rrm-registry-usage.png)
 
 Each of the values listed in the graph is described as follows:
 
@@ -360,7 +360,7 @@ Each of the values listed in the graph is described as follows:
 
 You can click a blue bar in the graph, which denotes a change in the registry, to view the registry sections and their keys and values at the time of the change. You can click the copy icon in the upper right-hand corner of the dialog and paste the registry section data to a text file or other document.
 
-<Image alt="roku600px - rrm-registry-details" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm-registry-details.png" />
+![roku600px - rrm-registry-details](https://image.roku.com/ZHZscHItMTc2/rrm-registry-details.png)
 
 ## Using File mode
 
@@ -374,7 +374,7 @@ To use **File mode** follow these steps:
 
 1. To view one or more of your previous five sessions, click **File mode** and then click **Open History**.
 
-   <Image alt="roku400px - rrm-file-mode-selected" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm3-file-mode-selected.png" />
+   ![roku400px - rrm-file-mode-selected](https://image.roku.com/ZHZscHItMTc2/rrm3-file-mode-selected.png)
 
 2. In the **Sessions history** dialog, select the session to be viewed, and then click **Open Session**.
 
@@ -382,15 +382,15 @@ To use **File mode** follow these steps:
 
    > To automatically export sessions as soon as you end them, go the tool's settings, click **Session**, and then toggle **Sessions Download** to "ON".
 
-   <Image alt="roku400px - rrm-session-history" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm-session-history-v3.png" />
+   ![roku400px - rrm-session-history](https://image.roku.com/ZHZscHItMTc2/rrm-session-history-v3.png)
 
 3. To upload a session file from your computer, click **File mode**, click **Upload file**, and then select the session file to be imported.
 
-   <Image alt="roku400px - rrm-import-file.png" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm3-import-file.png" />
+   ![roku400px - rrm-import-file.png](https://image.roku.com/ZHZscHItMTc2/rrm3-import-file.png)
 
 4. To upload a different session, click the **Upload from history** icon, and then select the session file. To upload a different session file from your computer, click the **Upload from file** icon, and then select the session file.
 
-   <Image alt="roku400px - rrm-file-mode-switch-session" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm3-file-mode-new-session.png" />
+   ![roku400px - rrm-file-mode-switch-session](https://image.roku.com/ZHZscHItMTc2/rrm3-file-mode-new-session.png)
 
 ## Setting tool preferences
 
@@ -400,7 +400,7 @@ In the tool preferences, you can modify the following **General** and **Session*
 * whether warnings are displayed when the device or app changes, when live/file mode changes, when the tool is closed, and when sessions are stopped.
 * whether completed sessions are automatically downloaded to your computer.
 
-<Image alt="roku600px - rrm-import-file.png" border={false} src="https://image.roku.com/ZHZscHItMTc2/rrm3-tool-preferences-general.png" />
+![roku600px - rrm-import-file.png](https://image.roku.com/ZHZscHItMTc2/rrm3-tool-preferences-general.png)
 
 ## Change log
 

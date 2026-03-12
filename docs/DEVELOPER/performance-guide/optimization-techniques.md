@@ -95,7 +95,7 @@ Using too much memory may also impact [cachefs](doc:file-system#cachefs). If the
 
 Typically, BrightScript objects are deleted when their reference count drops to zero. However, this will not happen there are circular references within an object.
 
-Circular references can be detected by calling [RunGarbageCollector](doc:component-architecture). This is relatively slow to run, and so should only be used as a debug strategy. It reports the number of objects that it found and cleaned up, and can be used during development to ensure that your channel is not creating circular references, and then turned off in production. Note that our garbage collection does not detect cycles where the cycle involves BrightScript objects in different domains (for example, owned by different threads) or involves both SceneGraph nodes and BrightScript objects.
+Circular references can be detected by calling [RunGarbageCollector](doc:component-architecture#garbage-collection). This is relatively slow to run, and so should only be used as a debug strategy. It reports the number of objects that it found and cleaned up, and can be used during development to ensure that your channel is not creating circular references, and then turned off in production. Note that our garbage collection does not detect cycles where the cycle involves BrightScript objects in different domains (for example, owned by different threads) or involves both SceneGraph nodes and BrightScript objects.
 
 ## More development tips
 

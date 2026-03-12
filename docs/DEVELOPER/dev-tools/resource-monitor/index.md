@@ -28,7 +28,7 @@ To run the Roku Resource Monitor, you need the following:
   * RRM 3.1: Roku OS 13.5 or Roku OS 13.0.
   > As of Roku OS 14.1, the **Settings > System > Advanced system settings > Control by mobile apps** feature must be set to "Enabled" or "Permissive" for RRM to get data from your device.
 
-* Roku app (the Roku Resource Monitor works with apps running in [sideloaded](doc:developer-setup##sideloading-apps), beta, or production environments).
+* Roku app (the Roku Resource Monitor works with apps running in [sideloaded](doc:developer-setup#sideloading-apps), beta, or production environments).
   * To use the Roku Resource Monitor on an app running in a [beta](doc:channel-publishing-guide#beta-app-guidelines) or [production](doc:channel-publishing-guide#public-app-guidelines) environment, the developer must own the app.
   * The Roku Resource Monitor is compatible with apps that use the [Instant Resume feature](doc:instant-resume) and will show background memory consumption.
 

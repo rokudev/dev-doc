@@ -20,7 +20,7 @@ Roku OS 15.2, which is being shared with developer beta partners under non-discl
 
 Developers can now get raw Linux CPU and processing statistics with the **chanperf** ECP command and integrate it into their first-party app monitoring tools. Other new Developer Tool features include new Debug Protocol virtual variables for retrieving **roInputEvent**, **roUrlEvent**, and **roDateTime** values.
 
-In addition, this release includes new BrightScript APIs that get remote control repeat delay/rate information, support AES-GCM cyphers, and return roTimeSpan data as LongIntegers. The BrightScript language itself now supports automatic line continuation.
+In addition, this release includes new BrightScript APIs that configure low-memory event notificatons, get remote control repeat delay/rate information, and support AES-GCM cyphers. The BrightScript language itself now supports automatic line continuation.
 
 Here is the list of key developer-facing Roku OS 15.2 updates:
 
@@ -109,13 +109,6 @@ cipher.Setup(false, "aes-128-gcm", key, iv, false)  ' false = decrypt mode
 cipher.SetTag(expectedTag)  ' Set the expected tag
 plaintext = cipher.Process(ciphertext)  ' Decryption will verify the tag
 ```
-
-##### roTimespan functions return LongInteger values
-
-The [roTimeSpan node](doc:rotimespan) now includes the following functions that return the total milliseconds and microseconds from the “Mark” point as LongInteger values.
-
-* **totalMillisecondsLong() as LongInteger**
-* **totalMicrosecondsLong() as LongInteger**
 
 ##### roUtils.HasComponent function
 

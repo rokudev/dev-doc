@@ -20,7 +20,7 @@ Roku OS 15.2, which is being shared with developer beta partners under non-discl
 
 Developers can now get raw Linux CPU and processing statistics with the **chanperf** ECP command and integrate it into their first-party app monitoring tools. Other new Developer Tool features include new Debug Protocol virtual variables for retrieving **roInputEvent**, **roUrlEvent**, and **roDateTime** values.
 
-In addition, this release includes new BrightScript APIs that configure low-memory event notificatons, get remote control repeat delay/rate information, and support AES-GCM cyphers. The BrightScript language itself now supports automatic line continuation.
+In addition, this release includes new BrightScript APIs that configure low-memory event notificatons, get remote control repeat delay/rate information, and support AES-GCM cyphers. 
 
 Here is the list of key developer-facing Roku OS 15.2 updates:
 
@@ -29,49 +29,6 @@ Here is the list of key developer-facing Roku OS 15.2 updates:
 ##### Configurable low-memory events
 
 When you use the [**roAppMemoryMonitor** node ](doc:roappmemorymonitor)to subscribe your app to low-memory events, you can now specify the threshold percentages that trigger notifications (by default, 80%, 85%, 90%, 95% of the per-app memory limit). Notifications are throttled to prevent excessive events.
-
-##### Automatic line continuation
-
-BrightScript now supports the following line breaks and whitespace to improve code readability and maintenance:
-
-* After opening delimiters (`(`, `[`, `{`): Allows formatting with an opening delimiter on one line.
-* Before closing delimiters (`)`, `]`, `}): Allows formatting with a closing delimiter on its own line.
-* After commas: Allows each list item on its own line.
-* After binary operators: Allows breaking long expressions across multiple lines.
-
-**Examples**
-
-```
-result = someFunction(
-    arg1,
-    arg2,
-    arg3
-)
-myArray = [
-    "item1",
-    "item2",
-    "item3"
-]
-myObject = {
-    key1: "value1",
-    key2: "value2",
-    key3: "value3"
-}
-result = value1 +
-         value2 *
-         value3
-condition = isValid AND
-            isEnabled OR
-            isRequired
-result = calculateValue(
-    param1 +
-    param2,
-    {
-        option1: true,
-        option2: false
-    }
-)
-```
 
 ##### roDeviceInfo remote control repeat delay/rate APIs
 

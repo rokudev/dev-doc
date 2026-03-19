@@ -84,9 +84,9 @@ To add a user to your developer account and assign them roles and permissions, f
    <tr>
    <td class="short-line">Non-financial Reports</td>
    <td class="long-line">Access the following app analytics and health reports: <ul>
-   <li>Channel Health</li>
-   <li>Channel Engagement</li>
-   <li>Channel Stability</li>
+   <li>App Health</li>
+   <li>App Engagement</li>
+   <li>App Stability</li>
    <li>Viewership Summary</li>
    </ul><br><br>Select apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to view the financial reports for all existing apps (as you create new apps, you will need to manually add them to grant access to their financial reports).</td>
    <td class="short-line">App</td>

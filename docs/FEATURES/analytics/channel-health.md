@@ -1,5 +1,5 @@
 ---
-title: "Channel Health Report"
+title: "App Health Report"
 excerpt: ''
 deprecated: false
 hidden: false
@@ -12,7 +12,7 @@ next:
 ---
 
 
-You can use the Channel Health Report to examine the number and type of crashes for your app to understand how the app is performing. This report can be especially helpful around the time of a new release for your app when a spike in errors may indicate the need to either rollback or quickly update your app version to prevent the user experience from degrading substantially. Included in this report is a crash log showing BrightScript errors.
+You can use the App Health Report to examine the number and type of crashes for your app to understand how the app is performing. This report can be especially helpful around the time of a new release for your app when a spike in errors may indicate the need to either rollback or quickly update your app version to prevent the user experience from degrading substantially. Included in this report is a crash log showing BrightScript errors.
 
 This reports helps you identify products experiencing the most BrightScript crashes. Crashes are measured in total counts as well as normalized for the total number of devices and streaming hours.  The higher the count and normalized  measurement, the more opportunity for improvement.  Counts and normalized measurements should always be interpreted together.  A relatively high count alone may be more indicative of the size of the install base, while a high normalized measurement could be indicative of a particularly problematic minority of the install base.
 

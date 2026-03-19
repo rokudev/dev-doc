@@ -1,5 +1,5 @@
 ---
-title: "Channel Engagement Report"
+title: "App Engagement Report"
 excerpt: ''
 deprecated: false
 hidden: false
@@ -12,7 +12,7 @@ next:
 ---
 
 
-You can use the Channel Engagement Report to grow your audience by analyzing data about streaming activity and the size of your install base.
+You can use the App Engagement Report to grow your audience by analyzing data about streaming activity and the size of your install base.
 
 ![roku815px - analytics-report-tabs](https://image.roku.com/ZHZscHItMTc2/channel-engagement-report.png "analytics-report-tabs")
 

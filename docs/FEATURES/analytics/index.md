@@ -33,10 +33,10 @@ Roku automatically generates the following app analytics and sales reports as [L
 
 **Analytics:**
 
-* [Channel Engagement](doc:channel-engagement) - installs, visits and streaming data for all apps
-* [Channel Health](doc:channel-health) - BrightScript crashes and buffering data for all apps
+* [App Engagement](doc:channel-engagement) - installs, visits and streaming data for all apps
+* [App Health](doc:channel-health) - BrightScript crashes and buffering data for all apps
 * [Viewership Summary](doc:viewership-summary) - small selection of app engagement and app health data.
-* [Channel Stability](doc:channel-stability): BrightScript crashes and memory closures for all apps across all Roku device models.
+* [App Stability](doc:channel-stability): BrightScript crashes and memory closures for all apps across all Roku device models.
 
 **Sales reports:**
 
@@ -56,7 +56,7 @@ To open an app analytics report in the Developer Dashboard, follow these steps:
 
 1. Click **Analytics** in the left sidebar.
 
-2. Click the tab for the report you want to view (the **Channel Health** report is selected by default).
+2. Click the tab for the report you want to view (the **App Health** report is selected by default).
 
 3. Select the app you want to analyze from the drop-down list. Alternatively, you can click **Public channels** or **Beta app** and then click the analytics icon for the app or select an app and then click **View analytics**.
 
@@ -95,7 +95,7 @@ Information on available filters is also included in the discussion of individua
 * **Time Period** - Sets the data sample period for the entire report. Changing this filter changes measurements for the entire report.  By default, Time Period is set to "8 days ago for 7 days" in most reports to include the most recent 7 complete day period; the most recent day is always an incomplete day.
 * **Time Grain** - Changing this filter changes the values of metrics with a time dimensions, such as visitors or viewers.  The "day" Time Grain equates to a daily aggregate measurement, "week" to a weekly aggregate and "month" to a monthly aggregate.  Any conflicts between Time Grain and Time Period (e.g. a Time Grain longer than the Time Period specified) will prevent data from displaying correctly.
 * **Streaming Store Code** - Identifies the [code for a market](https://developer.roku.com/publish/analytics-metrics/analytics-index#usingchannelstorecodes), usually a country code, where your app can legally be distributed (i.e. made available for download to a Roku device). More than one code is allowed. Leave Streaming Store Code blank to include all markets where your app is currently published or enter one or more codes to display only data on specific markets.
-* **Device Type** - Available in the Channel Health dashboard, this filters data to specific types of Roku devices.
+* **Device Type** - Available in the App Health dashboard, this filters data to specific types of Roku devices.
 
 ## Exporting reports
 
@@ -138,7 +138,7 @@ You can create a schedule to automatically email a report in a recurring daily, 
   <tbody>
     <tr>
       <td>Schedule name</td>
-      <td>By default, the report name is based on the report type (for example, "Channel Engagement" or "Channel Health"). <br /><br />It is recommended that you enter a descriptive name for the schedule that makes it easy to identify in your list of schedules. For example, you can include the app name, format, frequency, time period or any other relevant information that distinguishes the schedule.</td>
+      <td>By default, the report name is based on the report type (for example, "App Engagement" or "App Health"). <br /><br />It is recommended that you enter a descriptive name for the schedule that makes it easy to identify in your list of schedules. For example, you can include the app name, format, frequency, time period or any other relevant information that distinguishes the schedule.</td>
     </tr>
 
     <tr>

@@ -1,5 +1,5 @@
 ---
-title: "Channel Stability Report"
+title: "App Stability Report"
 excerpt: ''
 deprecated: false
 hidden: false
@@ -12,7 +12,7 @@ next:
 ---
 
 
-You can use the Channel Stability Report to analyze your app's performance based on BrightScript crashes and memory closures. This report includes a graph for each currently supported Roku device model, and each graph plots these two stability metrics for each device model in weekly intervals over the last 30 days (you can change the default reporting period and the data interval).
+You can use the App Stability Report to analyze your app's performance based on BrightScript crashes and memory closures. This report includes a graph for each currently supported Roku device model, and each graph plots these two stability metrics for each device model in weekly intervals over the last 30 days (you can change the default reporting period and the data interval).
 
 This lets you view aggregated memory closure data to identify whether you need to resolve resource consumption issues with your app. If you observe an elevated number of memory closures, you can further pinpoint the problem using the [Roku Resource Monitor](doc:resource-monitor) and the [BrightScript Profiler](doc:brightscript-profiler).
 
@@ -22,4 +22,4 @@ The report also lets you observe whether crashes occur disproportionality on low
 
 > When a new Roku OS version is being deployed, there is a period of time when some devices will start receiving the new OS version while others remain on the current one. During this time, the graphs will include two sets of line plots for both the current and new Roku OS versions until the new OS has been rolled out to all devices.
 >
-> You should monitor the Channel Stability Report during this time to ensure your app's performance remains consistent on the new Roku OS.
+> You should monitor the App Stability Report during this time to ensure your app's performance remains consistent on the new Roku OS.

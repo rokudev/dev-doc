@@ -380,7 +380,7 @@ Specifies the timedMetaData keys that the BrightScript app is interested in rece
 
 This method returns the roCaptionRenderer instance associated with this roVideoPlayer.
 
-Channels that render their own captions need to call this method to get the caption renderer for their video player. This is required for doing capture rendering. See roCaptionRenderer for details.
+Apps that render their own captions need to call this method to get the caption renderer for their video player. This is required for doing capture rendering. See roCaptionRenderer for details.
 
 #### Return Value
 

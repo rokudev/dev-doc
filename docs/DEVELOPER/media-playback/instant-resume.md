@@ -48,9 +48,9 @@ To implement Instant Resume in an app, do the following:
 
 The [manifest](doc:channel-manifest) must include the following attributes for an app to leverage Instant Resume:
 
-* **sdk_instant_resume=1**. Indicates the channel's request to participate in Instant Resume. Acknowledges that the channel has implemented all the requirements and protocols described in this document.
+* **sdk_instant_resume=1**. Indicates the app's request to participate in Instant Resume. Acknowledges that the app has implemented all the requirements and protocols described in this document.
 
-* **run_as_process=1**. Enables the Roku OS to preserve the channel state in the device RAM when the channel is suspended. If this attribute is not enabled, a channel implementing Instant Resume still functions; however, channel relaunches do not leverage this feature.
+* **run_as_process=1**. Enables the Roku OS to preserve the app state in the device RAM when the app is suspended. If this attribute is not enabled, an app implementing Instant Resume still functions; however, app relaunches do not leverage this feature.
 
 ### Implementing suspend and resume handlers
 
@@ -213,7 +213,7 @@ The following code snippet illustrates logic that could be used to resume an app
 ' In this example, we are only printing to the brightscript console
 ' that the app is being suspended.
 sub onMainSceneSuspend(arg as dynamic)  
-  print "***** Suspending Channel ***** CALLED FROM"; arg.lastSuspendOrResumeReason
+  print "***** Suspending App ***** CALLED FROM"; arg.lastSuspendOrResumeReason
 end sub  
 
 ' Callback function when the app resumes after an app exit. The
@@ -222,7 +222,7 @@ end sub
 ' screen. Otherwise, it will resume with the last screen the user was previously
 ' on before the app was suspended.
 sub onMainSceneResume(arg as dynamic) as boolean
-  print "***** Resuming Channel ***** CALLED FROM"; arg.lastSuspendOrResumeReason  
+  print "***** Resuming App ***** CALLED FROM"; arg.lastSuspendOrResumeReason  
   if m.videoPlayer <> invalid and lcase(m.videoPlayer.subtype()) = "video"
       print "***** Closing video screen... *****"
       CloseScreen(m.videoPlayer)  

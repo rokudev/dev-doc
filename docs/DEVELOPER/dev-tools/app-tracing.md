@@ -138,10 +138,10 @@ The following examples demonstrate some of the use cases for querying your trace
 | **Use case**                                                                                                                           | **Query**                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | Find all rendezvous in order of duration (long rendezvous often cause dropped frames and may indicate inefficient observer functions). | `SELECT * FROM slices WHERE name = 'rendezvous' ORDER BY dur DESC;`       |
-| Find long executions of swapBuffers which indicate places where the channel may be dropping frames                                     | `SELECT * FROM slice WHERE name = 'swapBuffers' ORDER BY dur DESC;`       |
-| Find places where the channel is handling a key press with `OnKeyEvent()`                                                              | `SELECT * FROM slice WHERE name = 'keyEvent' ORDER BY dur DESC;`          |
+| Find long executions of swapBuffers which indicate places where the app may be dropping frames                                     | `SELECT * FROM slice WHERE name = 'swapBuffers' ORDER BY dur DESC;`       |
+| Find places where the app is handling a key press with `OnKeyEvent()`                                                              | `SELECT * FROM slice WHERE name = 'keyEvent' ORDER BY dur DESC;`          |
 | Find all of the observers being called in the app.                                                                                     | `SELECT * FROM slice WHERE name = 'observer.callback' ORDER BY dur DESC;` |
-| Find all of the places where the channel is calling `setField`.                                                                        | `SELECT * FROM slice WHERE name = 'roSGNode.setField' ORDER BY dur DESC;` |
+| Find all of the places where the app is calling `setField`.                                                                        | `SELECT * FROM slice WHERE name = 'roSGNode.setField' ORDER BY dur DESC;` |
 
 ## Glossary
 

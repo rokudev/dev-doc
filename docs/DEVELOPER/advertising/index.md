@@ -161,6 +161,6 @@ To get started with your RAF integration, do the following:
 
 ## RAF video lesson
 
-You can learn how to implement RAF in order to display video ads in your app by watching the [Displaying video ads](doc:video-ads) video lesson in Roku's [SceneGraph: Build a channel online video course](doc:rsg).
+You can learn how to implement RAF in order to display video ads in your app by watching the [Displaying video ads](doc:video-ads) video lesson in Roku's [SceneGraph: Build an app online video course](doc:rsg).
 
 This lesson describes how to implement RAF in order to seamlessly insert video ads into content. It highlights the different client and server-side ad insertion and stitching solutions provided by RAF, and explains how to get started with RAF in order to display video ads in your app.

@@ -160,7 +160,7 @@ Apps must return a product offer to Roku for all current non-subscribers. This e
 
 Apps must meet requirements 3.2–3.6 when measured specifically on the Roku Streaming Stick+ (Amarillo-2019 3810X) or the Roku Premiere+ (Gilbert 4K 3921X). If the performance requirement is not met on these specified devices, Roku reserves the right to block launch on all other Roku device types.
 
-**3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the app to measure launch times. The debug console can then be used to verify that the app's launch time is meeting this requirement. See [Measuring channel performance](doc:measuring-channel-performance) on how to measure app launch times.
+**3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the app to measure launch times. The debug console can then be used to verify that the app's launch time is meeting this requirement. See [Measuring app performance](doc:measuring-channel-performance) on how to measure app launch times.
 
 **3.3** Apps must have screen-to-screen (scene-to-scene) transitions that are within 3 seconds.
 
@@ -178,7 +178,7 @@ Roku's [Fast Video Start](doc:fast-video-start) is available to pre-buffer conte
 
 **3.7** The app's file size must be 4 MB or less.
 
-### 4. Channel operation
+### 4. App operation
 
 **4.1** App updates are prohibited from requiring reactivation/re-linking/re-login, and must persist saved data.
 

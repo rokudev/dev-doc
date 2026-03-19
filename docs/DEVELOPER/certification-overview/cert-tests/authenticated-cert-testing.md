@@ -151,7 +151,7 @@ You can [download the on-device authentication sample app ](https://github.com/r
 
 2. Complete the **Properties** and **Channel store info** pages. There are no specific requirements for completing these pages in order to run the sample app.
 
-3. In the **Monetization** page, select the **My channel contains in-channel subscriptions** check box.
+3. In the **Monetization** page, select the **My app contains in-channel subscriptions** check box.
 
 4. [Package the sample app with the Packager tool in the Development Application Installer](doc:packaging-channels), and then upload the package in the Developer Dashboard **Package** **Upload** page.
 

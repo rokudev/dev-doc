@@ -1,5 +1,5 @@
 ---
-title: "Distributing a Channel in Germany Webinar"
+title: "Distributing an App in Germany Webinar"
 excerpt: ''
 deprecated: false
 hidden: false

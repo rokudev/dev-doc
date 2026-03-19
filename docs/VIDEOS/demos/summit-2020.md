@@ -66,7 +66,7 @@ This section provides links to the major topics covered within each presentation
 * [BrightScript exception handling](doc:error-handling)
 * [Static Analysis testing](doc:static-analysis-tool)
 * [Channel behavior testing publishing window](doc:channel-publishing-guide)
-* [Channel publishing scheduler](doc:channel-publishing-guide)
+* [App publishing scheduler](doc:channel-publishing-guide)
 * [Deep linking app publishing window](doc:channel-publishing-guide)
 
 #### Certification update

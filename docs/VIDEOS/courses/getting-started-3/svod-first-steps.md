@@ -72,7 +72,7 @@ After watching this video, publishers can complete the initial requirements and 
 
 [Roku Developers online video course](doc:overview)
 
-[Roku Developers master sample channel](https://github.com/rokudev/scenegraph-master-sample)
+[Roku Developers master sample app](https://github.com/rokudev/scenegraph-master-sample)
 
 [Roku Developer tools](http://devtools.web.roku.com/)
 

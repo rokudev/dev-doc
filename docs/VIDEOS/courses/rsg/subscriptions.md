@@ -22,7 +22,7 @@ The lesson then covers how to offer subscriptions in an app by integrating the R
 
 This lesson also summarizes some of the app certification requirements for offering transactional content in an app.
 
-> Channels offering subscriptions and one-time purchases must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:certification). Channels must integrate Roku Pay in all scenarios in which recurring or one-time payments are received.
+> Apps offering subscriptions and one-time purchases must [implement Roku Pay](doc:overview) and adhere to all [Roku Pay certification requirements](doc:certification). Apps must integrate Roku Pay in all scenarios in which recurring or one-time payments are received.
 
 ## Sample app notes
 

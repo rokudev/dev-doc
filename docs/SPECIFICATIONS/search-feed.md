@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Channels participate in Roku Search by creating and submitting a search feed. The search feed is a single JSON file that includes the content metadata for an app's video catalog. Content meta data includes the unique ID, title, description, duration, rating, language, artwork, and so on. Once the feed has been configured following this spec, it can be submitted to [Roku's feed validation tool](https://developer.roku.com/apps/search/validator), and the integration into Roku Search can then be completed.
+Apps participate in Roku Search by creating and submitting a search feed. The search feed is a single JSON file that includes the content metadata for an app's video catalog. Content meta data includes the unique ID, title, description, duration, rating, language, artwork, and so on. Once the feed has been configured following this spec, it can be submitted to [Roku's feed validation tool](https://developer.roku.com/apps/search/validator), and the integration into Roku Search can then be completed.
 
 The Roku search feed includes the following key features:
 

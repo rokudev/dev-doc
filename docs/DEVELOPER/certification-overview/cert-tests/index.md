@@ -10,13 +10,13 @@ metadata:
 next:
   description: ''
 ---
-These tests describe the specific behavior and attributes an app must demonstrate to pass Roku's certification process. Use this list to create tests for your channel during development. See [Certification](doc:certification) for more information on policies and processes as you prepare for certification.
+These tests describe the specific behavior and attributes an app must demonstrate to pass Roku's certification process. Use this list to create tests for your app during development. See [Certification](doc:certification) for more information on policies and processes as you prepare for certification.
 
-To help developers test their channels, Roku provides a suite of tools to ensure your channel complies with the certification criteria. The test suite includes the following tools:
+To help developers test their apps, Roku provides a suite of tools to ensure your app complies with the certification criteria. The test suite includes the following tools:
 
-* [Static Analysis tool](doc:static-analysis-tool): Checks the channel's code for certification-related errors.
-* [Channel Behavior Analysis tool](doc:channel-publishing-guide#channel-behavior-analysis): For SVOD, AVOD, and free channels, verifies channel performance and deep linking meets certification requirements.
-* [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including channel purchasing, performance, deep linking, and other certification criteria.
+* [Static Analysis tool](doc:static-analysis-tool): Checks the app's code for certification-related errors.
+* [Channel Behavior Analysis tool](doc:channel-publishing-guide#channel-behavior-analysis): For SVOD, AVOD, and free apps, verifies app performance and deep linking meets certification requirements.
+* [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including app purchasing, performance, deep linking, and other certification criteria.
 
 Developers are expected to use these tools, the [certification criteria](doc:certification), and the list of certification tests in this document to guide internal quality assurance testing before [submitting an app to Roku for review](doc:channel-publishing-guide#publishing-an-app).
 
@@ -26,13 +26,13 @@ Developers are expected to use these tools, the [certification criteria](doc:cer
 
 **Tests**: App is meeting the criteria specified in 1.1.
 
-**Expected Result**: All ads are served via the [Roku Advertising Framework (RAF)](doc:advertising) whether the channel is using the Roku default ad server or a third-party ad server (for example, Google DoubleClick for Publishers [DFP]. Freewheel, and so on). Ads render as expected on all Roku devices.
+**Expected Result**: All ads are served via the [Roku Advertising Framework (RAF)](doc:advertising) whether the app is using the Roku default ad server or a third-party ad server (for example, Google DoubleClick for Publishers [DFP]. Freewheel, and so on). Ads render as expected on all Roku devices.
 
 **RAF 1.1** Apps must integrate the [Roku Advertising Framework (RAF)](doc:advertising)  for all ads without modifying, obstructing, or disabling RAF functionality in any way. Replays of live broadcast streams are exempt from this requirement, unless dynamic ad insertion is used to insert new ads.
 
 **RAF 1.2** All measurement beacons must be fired client-side via RAF. See the [Roku Advertising Watermark integration guide](https://roku-ent.readme.io/dev/docs/ad-watermark) for more information.
 
-**RAF 1.3** Apps in the U.S. Roku Streaming Store only that are not child-directed must support Roku ad tracking by calling the [enableAdMeasurements()](doc:raf-api) method and passing the required content metadata within the following methods: [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api). Optionally, channels may use the [setNielsenGenre API](doc:raf-api) to pass specific Nielsen Genre granularity and the [setNielsenChannelId API](doc:raf-api) for those who specify a custom Nielsen Channel ID. The [enableAdMeasurements](doc:raf-api) method deprecates the [enableNielsenDAR](doc:raf-api) API; therefore, do not use the [enableNielsenDAR](doc:raf-api) API.
+**RAF 1.3** Apps in the U.S. Roku Streaming Store only that are not child-directed must support Roku ad tracking by calling the [enableAdMeasurements()](doc:raf-api) method and passing the required content metadata within the following methods: [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api). Optionally, apps may use the [setNielsenGenre API](doc:raf-api) to pass specific Nielsen Genre granularity and the [setNielsenChannelId API](doc:raf-api) for those who specify a custom Nielsen Channel ID. The [enableAdMeasurements](doc:raf-api) method deprecates the [enableNielsenDAR](doc:raf-api) API; therefore, do not use the [enableNielsenDAR](doc:raf-api) API.
 
 **Tests**:
 
@@ -72,43 +72,43 @@ The number of ads in the ad break are displayed during the ad break using the st
 
 **Expected Result**: App does not contain any undisclosed third-party SDKs, libraries, or other software systems that enable video, audio, or banner ad insertion.
 
-**ADS 1.2** Apps that have an inventory relationship with Roku must meet the advertising terms specified in all applicbale agreements. See [Video Advertisements](doc:video-advertisements) for more information.
+**ADS 1.2** Apps that have an inventory relationship with Roku must meet the advertising terms specified in all applicable agreements. See [Video Advertisements](doc:video-advertisements) for more information.
 
 **Tests**: App is meeting the criteria specified in 1.3.
 
-**Expected Result**: App is meeting the contactually-specified terms for ad requests and performance. You can review your contract with [publisheradservices@roku.com](mailto:publisheradservices@roku.com?Subject=New%20application%20Request%20for%20Admittance%20to%20Roku%20Ad%20Revenue%20Share) to ensure the channel is meeting the specified terms.
+**Expected Result**: App is meeting the contactually-specified terms for ad requests and performance. You can review your contract with [publisheradservices@roku.com](mailto:publisheradservices@roku.com?Subject=New%20application%20Request%20for%20Admittance%20to%20Roku%20Ad%20Revenue%20Share) to ensure the app is meeting the specified terms.
 
 **ADS 1.3** Apps selling ads must comply with Roku's ad load, ad frequency, and acceptable ad requirements. See [Roku Advertising Guidelines](http://www.roku.com/adguidelines) for more information.
 
 **Tests**: Apps can obtain the user agent from the client-side call made to their ad stitcher or ad server, and then pass it into the User-Agent header in the server-side ad request, without any modifications.
 
-**Expected Result**: Per the [Roku Advertising Guidelines](http://www.roku.com/adguidelines), ad breaks are at least 7 minutes apart and contain no more than 2 minutes of ads. This helps ensure a positive viewing experience of content that is being monitized with ads (regardless if the ads are supplied by Roku or a third-party provider).
+**Expected Result**: Per the [Roku Advertising Guidelines](http://www.roku.com/adguidelines), ad breaks are at least 7 minutes apart and contain no more than 2 minutes of ads. This helps ensure a positive viewing experience of content that is being monetized with ads (regardless if the ads are supplied by Roku or a third-party provider).
 
-**ADS 1.4** Apps in the U.S. Roku Streaming Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months may be required to implement the Demand API as part of their integration (this requirement may also be applicbale to new channels projected to reach the specified thresholds shortly after launch).
+**ADS 1.4** Apps in the U.S. Roku Streaming Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months may be required to implement the Demand API as part of their integration (this requirement may also be applicable to new apps projected to reach the specified thresholds shortly after launch).
 
-Apps outside the U.S. Roku Streaming Store that have streamed more than an average of 200,000 hours per month over the last three months, and new channels outside the U.S. Roku Streaming Store that are projected to reach this threshold, may also be required to implement the Demand API. See [Implementing the Demand API](doc:demand-api).
+Apps outside the U.S. Roku Streaming Store that have streamed more than an average of 200,000 hours per month over the last three months, and new apps outside the U.S. Roku Streaming Store that are projected to reach this threshold, may also be required to implement the Demand API. See [Implementing the Demand API](doc:demand-api).
 
 **Tests**: App is meeting the criteria specified in ADS 1.1.
 
 **Expected Result**: Apps meeting the streaming hours threshold have integrated the Demand API.
 
-**ADS 1.5**  Authenticated ad-monetized channels must use the [getUserData](doc:channelstore) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the channel. Only if the user declines the request may channels require the customer to manually enter their information.
+**ADS 1.5**  Authenticated ad-monetized apps must use the [getUserData](doc:channelstore) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the app. Only if the user declines the request may apps require the customer to manually enter their information.
 
 **Tests**:
 
-1. Follow the instructions within the channel on how to sign up and sign in.
+1. Follow the instructions within the app on how to sign up and sign in.
 2. Verify whether the Request For Information (RFI) screen appears during the sign-up and sign-in flows.
 
-**Expected Result**: The RFI screen is displayed on the channel, prompting the user to grant Roku access to share their information with the channel. A form for customers to manually enter their information is only displayed if the user declines to share their information.
+**Expected Result**: The RFI screen is displayed on the app, prompting the user to grant Roku access to share their information with the app. A form for customers to manually enter their information is only displayed if the user declines to share their information.
 
-**ADS 2.1** App must pass Roku's ID for Advertisers (RIDA) and "limit ad tracking" (LAT) value on ad server requests. If the user has opted out, channels must still pass the temporary ID returned by the rodeviceInfo.GetRida() function to support frequency cchanneling (this temporary ID is different than the UUID returned if the user has not opted out; it expires after 30 days). See [GetRida()](doc:ifdeviceinfo),  [IsRIDADisabled()asBoolean](doc:ifdeviceinfo), and the [URL parameter macros populated by RAF](doc:integrating-roku-advertising-framework)
+**ADS 2.1** App must pass Roku's ID for Advertisers (RIDA) and "limit ad tracking" (LAT) value on ad server requests. If the user has opted out, apps must still pass the temporary ID returned by the rodeviceInfo.GetRida() function to support frequency capping (this temporary ID is different than the UUID returned if the user has not opted out; it expires after 30 days). See [GetRida()](doc:ifdeviceinfo),  [IsRIDADisabled()asBoolean](doc:ifdeviceinfo), and the [URL parameter macros populated by RAF](doc:integrating-roku-advertising-framework)
 
 **Tests**: RIDA and LAT values may be passed on ad server requests client-side via RAF or server-side. Use one of the following tests corresponding to how you pass RIDA and LAT values in ad server requests:
 
 * Client-side via RAF:
   * Place [the URL parameter macros populated by RAF](doc:integrating-roku-advertising-framework) in ad request urls to populate the RIDA and LAT in the appropriate spot.
-  * [Sideload the channel](doc:packaging-channels), [Telnet into the Roku device](doc:debugging), and then [enable RAF debug mode](doc:raf-api).
-  * Observe that RAF requests a test url and dispatches trackers on sideloaded channels when [setAdUrl](doc:raf-api) is passed an empty value.
+  * [Sideload the app](doc:packaging-channels), [Telnet into the Roku device](doc:debugging), and then [enable RAF debug mode](doc:raf-api).
+  * Observe that RAF requests a test url and dispatches trackers on sideloaded apps when [setAdUrl](doc:raf-api) is passed an empty value.
 * Server-side: For server-side ad requests, the ad server's runtime macros are typically used to pass the RIDA and LAT values in the ad requests instead of the RAF macros. In this case, the RIDA and LAT values are usually passed to the ad server via Roku API calls.
   * Check your ad server for the runtime macros to be used to pass the RIDA and LAT values. Email [adsupport@roku.com](mailto:adsupport@roku.com) for help with this process.
   * Call the [GetRida()](doc:ifdeviceinfo) and [IsRidaDisabled()](doc:ifdeviceinfo) methods to pass the RIDA and LAT values to your ad server, respectively.
@@ -133,13 +133,13 @@ Apps outside the U.S. Roku Streaming Store that have streamed more than an avera
 
 * Client-side via RAF:
   * Place the [ROKU_ADS_APP_ID URL parameter macro populated by RAF](doc:integrating-roku-advertising-framework) in ad request urls to populate the Roku channel ID in the appropriate spot.
-  * [Sideload the channel](doc:packaging-channels), [Telnet into the roku device](doc:debugging), and then [enable RAF debug mode](doc:raf-api).
-  * Observe that RAF requests a test url and dispatches trackers on sideloaded channels when [setAdUrl](doc:raf-api) is passed an empty value.
+  * [Sideload the app](doc:packaging-channels), [Telnet into the roku device](doc:debugging), and then [enable RAF debug mode](doc:raf-api).
+  * Observe that RAF requests a test url and dispatches trackers on sideloaded apps when [setAdUrl](doc:raf-api) is passed an empty value.
 * Server-side: For server-side ad requests, the ad server's runtime macros are typically used to pass the Roku channel ID in the ad requests instead of the RAF macros. In this case, the Roku channel ID is usually passed to the ad server via Roku API calls.
   * Check your ad server for the runtime macros to be used to pass the Roku channel ID. Email [adsupport@roku.com](mailto:adsupport@roku.com) for help with this process.
   * Call the [roChannelInfo.getId() method](doc:ifappinfo#getid-as-string) methods to pass the Roku channel ID to your ad server.
 
-**Expected Result**: The Roku channel ID ("dev") is passed on all client-side and server-side ad requests to Roku when testing your sideloaded channel.
+**Expected Result**: The Roku channel ID ("dev") is passed on all client-side and server-side ad requests to Roku when testing your sideloaded app.
 
 **ADS 3.2** Apps must use the Roku-generated device user agent in all server-side ad requests. See the [RAF integration guide](doc:integrating-roku-advertising-framework) for more details.
 
@@ -151,34 +151,34 @@ Apps outside the U.S. Roku Streaming Store that have streamed more than an avera
 
 **Expected Result**: All server-side ad requests include the Roku-generated device user agent, without any modification.
 
-**ADS 4.1** All channels (except those streaming live content or replaying live broadcast streams) must return to the previous screen when the back button is pressed during an ad break (if the channel can't return to the previous screen, the channel displays an exit confirmation dialog). Apps must attempt to initiate an ad break to preserve the previously exited ad experience when playback resumes (with the same or different content).
+**ADS 4.1** All apps (except those streaming live content or replaying live broadcast streams) must return to the previous screen when the back button is pressed during an ad break (if the app can't return to the previous screen, the app displays an exit confirmation dialog). Apps must attempt to initiate an ad break to preserve the previously exited ad experience when playback resumes (with the same or different content).
 
-**Tests**: Verify ads in the channel cannot be skipped by any mechanism, such as pressing the back button to exit a video and then resuming it.
+**Tests**: Verify ads in the app cannot be skipped by any mechanism, such as pressing the back button to exit a video and then resuming it.
 
 **Expected Result**: Ads may not be skipped by pressing the back button or any other mechanism.
 
-**ADS 4.2** All channels (except those streaming live content or replaying live broadcast streams) must ignore FF/REW commands received during an ad break (via either key presses or voice commands).
+**ADS 4.2** All apps (except those streaming live content or replaying live broadcast streams) must ignore FF/REW commands received during an ad break (via either key presses or voice commands).
 
-**Tests**: Verify ads in the channel cannot be skipped by any mechanism, such as pressing the FF/REW buttons or sending a FF/REW voice command.
+**Tests**: Verify ads in the app cannot be skipped by any mechanism, such as pressing the FF/REW buttons or sending a FF/REW voice command.
 
 **Expected Result**: Ads may not be skipped by pressing the FF/REW buttons, sending a FF/REW voice command, or any other mechansim.
 
 ## **2. Purchases**
 
-**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their channel. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements). Apps must disclose integration/use of all non-Roku SDKs and libraries, and channel features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and channel features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their channel other than Roku Pay.
+**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements). Apps must disclose integration/use of all non-Roku SDKs and libraries, and app features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and app features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their app other than Roku Pay.
 
 **Tests**
 
-To verify the monetization model for the channel:
+To verify the monetization model for the app:
 
-1. If the channel has been monetized for in-channel purchasing, login to the channel with a valid account that allows you to make purchases.
-2. From within the channel, purchase any form of content.
+1. If the app has been monetized for in-app purchasing, login to the app with a valid account that allows you to make purchases.
+2. From within the app, purchase any form of content.
 3. Verify the billing flow works properly for the entire purchase.
-4. From the channel, rent any form of content.
+4. From the app, rent any form of content.
 5. Wait until rental expires.
 6. Verify that the content is no longer available for playing, but can be re-rented or bought.
 
-**Expected Result** Roku Pay works properly for in-channel purchases, such as subscriptions and rentals.
+**Expected Result** Roku Pay works properly for in-app purchases, such as subscriptions and rentals.
 
 **2.2** Apps that include authentication must complete account sign-ups and sign-ins on the device using [On-device authentication](doc:on-device-authentication). Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms.
 
@@ -186,16 +186,16 @@ Apps must complete upgrades and downgrades on the device using [On-device upgrad
 
 **Tests**:
 
-1. Confirm you can successfully log in to your channel on your device, without visiting an external webpage.
-2. Confirm you can successfully complete a purchase in your channel on the device, without visiting an external webpage.
+1. Confirm you can successfully log in to your app on your device, without visiting an external webpage.
+2. Confirm you can successfully complete a purchase in your app on the device, without visiting an external webpage.
 3. Confirm you can successfully upgrade and downgrade product on the device, without visiting an external webpage.
 
 **Expected Result**:
 A purchase is successfully made and content can be played.
 
-**2.3** SVOD channels that have streamed more than an average of 10 million hours per month over the last three months must implement Roku's [Instant Signup (ISU)](doc:instant-signup) feature. This requirement is also applicbale to new SVOD channels projected to reach the specified streaming hours threshold shortly after launch. Apps offering Premium Subscriptions on The Roku Channel are exempt from this requirement.
+**2.3** SVOD apps that have streamed more than an average of 10 million hours per month over the last three months must implement Roku's [Instant Signup (ISU)](doc:instant-signup) feature. This requirement is also applicable to new SVOD apps projected to reach the specified streaming hours threshold shortly after launch. Apps offering Premium Subscriptions on The Roku Channel are exempt from this requirement.
 
-Apps' ISU integration must include offers for lapsed and canceled subscribers. This requirement is applicbale to channels with existing ISU integrations.
+Apps' ISU integration must include offers for lapsed and canceled subscribers. This requirement is applicable to apps with existing ISU integrations.
 
 Apps must return a product offer to Roku for all current non-subscribers. This ensures that all non-subscribed customers receive a product offer on all touchpoints. This helps drive subscription sign-ups, particularly for lapsed and cancelled customers.
 
@@ -203,33 +203,33 @@ Apps must return a product offer to Roku for all current non-subscribers. This e
 
 **Expected Result**: Apps that have integrated Instant Signup are performing in accordance with the [implementation document](doc:instant-signup).
 
-**2.4** Apps are prohibited from including nested content or applications, additional content via browsers or embedded screens, deep links to other applications, or any cross-channel functionality.
+**2.4** Apps are prohibited from including nested content or applications, additional content via browsers or embedded screens, deep links to other applications, or any cross-app functionality.
 
 **Tests**:
 
-1. Navigate through the menus within the channel.
-2. Verify no content is being made available to outside channels.
-3. Verify no outside, third-party channel's content is available within the channel.
+1. Navigate through the menus within the app.
+2. Verify no content is being made available to outside apps.
+3. Verify no outside, third-party app's content is available within the app.
 
 **Expected Result**:
 
-* You have not shared access to your channel with outside parties.
-* Your channel offers no 3rd-party channel, content, applications or browsers.
+* You have not shared access to your app with outside parties.
+* Your app offers no 3rd-party app, content, applications or browsers.
 
-**RP1.1** Apps must provide a name, description, and poster (a 540x405 JPEG or PNG image) in each language supported by the channel. The channel name must clearly identify the company associated with the service, and the publisher must have full legal rights or consent for their channel names and the rights to all trademarks and copyright expressions associated with the name. The channel name may not include the name "Roku", and it may not contain any profanity, or derogatory or misleading language.
+**RP1.1** Apps must provide a name, description, and poster (a 540x405 JPEG or PNG image) in each language supported by the app. The app name must clearly identify the company associated with the service, and the publisher must have full legal rights or consent for their app names and the rights to all trademarks and copyright expressions associated with the name. The app name may not include the name "Roku", and it may not contain any profanity, or derogatory or misleading language.
 
 **Expected Result**: App is meeting the criteria specified in RP1.1.
 
-**RP2.1** All authenticated transactional channels (SVOD, TVOD, and other subscription services) must use the [getUserData](doc:channelstore) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the channel. Only if the user declines the request, may channels require the customer to manually enter information other than a password.
+**RP2.1** All authenticated transactional apps (SVOD, TVOD, and other subscription services) must use the [getUserData](doc:channelstore) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the app. Only if the user declines the request, may apps require the customer to manually enter information other than a password.
 
 **Tests**:
 
-1. Follow the instructions within the channel on how to sign in.
+1. Follow the instructions within the app on how to sign in.
 2. Verify whether the Request For Information (RFI) screen appears during sign-in flow.
 
-**Expected Result**: The RFI screen is displayed on the channel, prompting the user to grant Roku access to share their information with the channel. A form for customers to manually enter their information is only displayed if the user declines to share their information.
+**Expected Result**: The RFI screen is displayed on the app, prompting the user to grant Roku access to share their information with the app. A form for customers to manually enter their information is only displayed if the user declines to share their information.
 
-**RP3.1** Subscription services must create product groups in the [Developer Dashboard](https://developer.roku.com/developer) for any set of subscription products that the consumer should not be able to be subscribed to simultaneously. For example, if an app has two in-channel products for the same monthly subscription but with different free trial durations, these two products must be added to the same product group to prevent the customer from paying for two separate monthly subscriptions.
+**RP3.1** Subscription services must create product groups in the [Developer Dashboard](https://developer.roku.com/developer) for any set of subscription products that the consumer should not be able to be subscribed to simultaneously. For example, if an app has two in-app products for the same monthly subscription but with different free trial durations, these two products must be added to the same product group to prevent the customer from paying for two separate monthly subscriptions.
 
 **Tests**:
 
@@ -238,30 +238,30 @@ Apps must return a product offer to Roku for all current non-subscribers. This e
 3. Create a product group with at least two mutually exclusive subscription products.
 4. Purchase one product in the product group with your test user.
 5. Attempt to purchase a second product in the product group.
-6. Roku Pay displays a "You're already subscribed to the channel" dialog.
+6. Roku Pay displays a "You're already subscribed to the app" dialog.
 
 **Expected Result**:
 
-* You cannot purchase an in-channel product when another product in the same product group has already been purchased.
+* You cannot purchase an in-app product when another product in the same product group has already been purchased.
 
-**RP3.2** Apps must protect against multiple purchases of content or subscriptions through Roku Pay before passing new orders to the Roku Streaming Store service. The Roku Streaming Store service inherently protects against purchasing the same subscription code multiple times, but preventing, for example, the purchase of a free trial subscription and a non-free trial subscription must be done in the channel.
+**RP3.2** Apps must protect against multiple purchases of content or subscriptions through Roku Pay before passing new orders to the Roku Streaming Store service. The Roku Streaming Store service inherently protects against purchasing the same subscription code multiple times, but preventing, for example, the purchase of a free trial subscription and a non-free trial subscription must be done in the app.
 
 **Tests**:
 
 1. Create a test Roku customer account.
 2. Activate and link Roku device to the account.
-3. Install and sign up to the channel
+3. Install and sign up to the app
 4. Purchase a subscription using test account and verify it works.
 5. Attempt to make several purchases and verify it does not work.
 
 **Expected Result**:
-The channel handles multiple purchases properly.
+The app handles multiple purchases properly.
 
-**RP3.3** SVOD channels must provide 15-days notice to existing customers before changing the price of their service.
+**RP3.3** SVOD apps must provide 15-days notice to existing customers before changing the price of their service.
 
 **Expected Result**: App is meeting the criteria specified in RP3.3.
 
-**RP3.4** Apps must name in-channel products so that the service being offered is clearly identifiable. The publisher must have full legal rights or consent for their in-channel product names and the rights to all trademarks and copyright expressions associated with the names. The in-channel product names may not include the name "Roku", text related to a trial or discount offer**,** or any profane, derogatory, or misleading language.
+**RP3.4** Apps must name in-app products so that the service being offered is clearly identifiable. The publisher must have full legal rights or consent for their in-app product names and the rights to all trademarks and copyright expressions associated with the names. The in-app product names may not include the name "Roku", text related to a trial or discount offer**,** or any profane, derogatory, or misleading language.
 
 **Expected Result**: App is meeting the criteria specified in RP3.4.
 
@@ -270,25 +270,25 @@ The channel handles multiple purchases properly.
 **Tests**:
 
 1. Select 'Subscribe' button or navigate to content that requires subscription.
-2. Select 'Share'/'Don't share' option (if applicbale).
-3. Navigate through email and password screens (if applicbale) to purchase.
+2. Select 'Share'/'Don't share' option (if applicable).
+3. Navigate through email and password screens (if applicable) to purchase.
 4. Purchase available subscriptions.
 5. Verify the purchase worked immediately on the Roku device.
-6. Verify the subscription status of the channel on [https://my.roku.com/account/subscriptions](https://my.roku.com/account/subscriptions) web page shows the purchase.
-7. Verification on channel's web site:
+6. Verify the subscription status of the app on [https://my.roku.com/account/subscriptions](https://my.roku.com/account/subscriptions) web page shows the purchase.
+7. Verification on app's web site:
 
-* Open channel's/provider's website.
+* Open app's/provider's website.
 * Observe if any type of subscription is available.
 * Verify if the same subscription can be purchased on your Roku device.
 
 **Expected Result**:
-On channel launch a transactionID is returned for an active subscription.
+On app launch a transactionID is returned for an active subscription.
 
 **RP4.4** All subscription services that have streamed more than an average of 5 million hours per month over the last three months (and new subscription services projected to reach the specified streaming hour threshold shortly after launch) must implement Roku Event Dispatcher (RED) in the signup workflow.
 
 Apps must fire a RED event upon loading each page within the signup flow and submission of the final page to help track where users are abandoning the process. This includes, but is not limited to, the following pages: landing, sign up, registration, device activation, subscription selection, payment, purchase confirmation, and cancellation.
 
-If the channel's sign-up flow is contained within a form that covers one or more pages, Apps must fire a RED event when each element in the form is completed. Streaming hours per month information is available in the Developer Dashboard.
+If the app's sign-up flow is contained within a form that covers one or more pages, Apps must fire a RED event when each element in the form is completed. Streaming hours per month information is available in the Developer Dashboard.
 
 **Tests**:
 
@@ -298,7 +298,7 @@ If the channel's sign-up flow is contained within a form that covers one or more
 **Expected Result**:
 RED events are fired upon each page load and the submission of the final page, or RED events are fired upon each field in the form being completed.
 
-**RP4.5**  Apps using Roku Pay that have streamed more than an average of 5 million hours per month over the last three months must implement Roku's [Enhanced Subscription Recovery](doc:subscription-on-hold) feature to reduce involuntary churn. This requirement is also applicbale to new channels projected to reach the specified streaming hours threshold shortly after launch.
+**RP4.5**  Apps using Roku Pay that have streamed more than an average of 5 million hours per month over the last three months must implement Roku's [Enhanced Subscription Recovery](doc:subscription-on-hold) feature to reduce involuntary churn. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
 **Tests**: App is meeting the criteria specified in RP4.5.
 
@@ -314,22 +314,22 @@ Apps must meet requirements 3.2–3.6 when measured specifically on the Roku Str
 
 **Tests**:
 
-1. Add the channel in testing to your Roku player.
-2. Navigate to the channel on the home screen and launch it.
+1. Add the app in testing to your Roku player.
+2. Navigate to the app on the home screen and launch it.
 
 **Expected Result**:
 App is responsive to user navigation, find, and playback of content at a reasonable speed.
 
-**3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the channel to measure launch times. The debug console can then be used to verify that the channel's launch time is meeting this requirement. See [Measuring channel performance](doc:measuring-channel-performance) on how to measure channel launch times.
+**3.2** Apps must launch to a **fully rendered** home screen within 15 seconds. A signal beacon must be added to the app to measure launch times. The debug console can then be used to verify that the app's launch time is meeting this requirement. See [Measuring app performance](doc:measuring-channel-performance) on how to measure app launch times.
 
 **Tests**:
 
-1. Select your channel from the Roku home screen.
-2. Use the [BrightScript console (port 8085)](doc:debugging) to check the channel launch time.
+1. Select your app from the Roku home screen.
+2. Use the [BrightScript console (port 8085)](doc:debugging) to check the app launch time.
 3. To retest, reboot your device and wait 30 seconds before testing again.
 
 **Expected Result**:
-App is launched within 15 seconds of being selected from the Roku home screen. If you need to modify your application to meet this requirement, you can retest it by uninstalling your channel, rebooting your Roku device, and reinstalling the channel.
+App is launched within 15 seconds of being selected from the Roku home screen. If you need to modify your application to meet this requirement, you can retest it by uninstalling your app, rebooting your Roku device, and reinstalling the app.
 
 **3.3** Apps must have screen-to-screen (scene-to-scene) transitions that are within 3 seconds.
 
@@ -357,17 +357,17 @@ Transition time is within 3 seconds.
 
 **Tests**:
 
-1. Navigate channel UI with Roku remote button presses and time the response.
-2. Navigate channel UI tile-to-tile and time the response.
+1. Navigate app UI with Roku remote button presses and time the response.
+2. Navigate app UI tile-to-tile and time the response.
 
 **Expected Results**:
 A response to a remote button press or tile-to-tile navigation do not exceed 250 milliseconds.
 
 **3.6** Apps must start playing content within 8 seconds of initiation.
 
-Apps with custom video players must fire video start beacons to measure video start times (if the channel is using the Roku video player, the Roku OS automatically fires beacons to measure and record the video start time).
+Apps with custom video players must fire video start beacons to measure video start times (if the app is using the Roku video player, the Roku OS automatically fires beacons to measure and record the video start time).
 
-The debug console can be used to verify that video start times are compliant. See [Measuring channel performance](doc:measuring-channel-performance) for more information.
+The debug console can be used to verify that video start times are compliant. See [Measuring app performance](doc:measuring-channel-performance) for more information.
 
 Roku's [Fast Video Start](doc:fast-video-start) is available to pre-buffer content and help improve playback performance.
 
@@ -377,16 +377,16 @@ Roku's [Fast Video Start](doc:fast-video-start) is available to pre-buffer c
 2. Use the BrightScript console (port 8085) to check the VOD launch time.
 
 **Expected Result**:
-Content will start playing within 8 seconds of initiation. If you need to modify your application to meet this requirement, you can retest it by uninstalling your channel, rebooting your Roku device, and reinstalling the channel.
+Content will start playing within 8 seconds of initiation. If you need to modify your application to meet this requirement, you can retest it by uninstalling your app, rebooting your Roku device, and reinstalling the app.
 
-**3.7** The channel's file size must be 4 MB or less.
+**3.7** The app's file size must be 4 MB or less.
 
 **Tests**
 
-1. The file size of your channel is 4MB or less.
+1. The file size of your app is 4MB or less.
 
 **Expected Result**:
-File size of the channel is no larger than 4MB.
+File size of the app is no larger than 4MB.
 
 ## **4. App operation**
 
@@ -394,30 +394,30 @@ File size of the channel is no larger than 4MB.
 
 **Tests**:
 
-1. Remove all versions of the channel from the Roku player.
+1. Remove all versions of the app from the Roku player.
 2. Reboot Roku device.
-3. Install the currently published version of the channel from the Roku Streaming Store.
-4. Launch the channel and link to a valid production account.
-5. Exit the channel.
-6. Install the version of the channel under test using the channel code specified in the tracking ticket.
-7. Launch the version of the channel under test.
-8. After relaunching the channel and rebooting the device, verify the linking to the channel persists.
+3. Install the currently published version of the app from the Roku Streaming Store.
+4. Launch the app and link to a valid production account.
+5. Exit the app.
+6. Install the version of the app under test using the app code specified in the tracking ticket.
+7. Launch the version of the app under test.
+8. After relaunching the app and rebooting the device, verify the linking to the app persists.
 9. Verify this error is not present: "dev_id of submitted package does not match dev_id of previously submitted package".
 
 **Expected Result**:
 
-* If you are updating an existing channel, it will use existing data without requiring any re-activation or re-linking.
-* The dev_id of the channel under test matches the dev_id of the existing published version of the channel.
+* If you are updating an existing app, it will use existing data without requiring any re-activation or re-linking.
+* The dev_id of the app under test matches the dev_id of the existing published version of the app.
 
-**4.2** Apps that require a user to log in and that have streamed more than an average of 1 million hours per month over the last three months must integrate [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on). This requirement is also applicbale to new channels projected to reach the specified streaming hours threshold shortly after launch.
+**4.2** Apps that require a user to log in and that have streamed more than an average of 1 million hours per month over the last three months must integrate [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on). This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
 **Tests**:
 
 1. Create a test user Roku customer account.
 2. Activate and link Roku device to the account.
-3. Install and sign up to the channel.
+3. Install and sign up to the app.
 4. Link another Roku device to the account.
-5. Try to load the channel. It should sign the test user in automatically.
+5. Try to load the app. It should sign the test user in automatically.
 
 **Expected Result**:
 User can be authenticated and sign in successfully from other devices.
@@ -433,7 +433,7 @@ User can be authenticated and sign in successfully from other devices.
 
 The debug console displays a print statement showing a successful firing of the Event Dispatcher pixel upon entitlement.
 
-**4.4** Roku [reserves use of the Options](doc:masterui) ("*") button during video playback for the sole purpose of Roku system displays. Apps may use the Options button for additional in-channel options while UI components are displayed on top of the video.
+**4.4** Roku [reserves use of the Options](doc:masterui) ("*") button during video playback for the sole purpose of Roku system displays. Apps may use the Options button for additional in-app options while UI components are displayed on top of the video.
 
 **Tests**:
 
@@ -441,25 +441,25 @@ The debug console displays a print statement showing a successful firing of the 
 2. Press "*" key on your remote control during playback.
 
 **Expected Result**:
-During video playback with no obscuring UI components, the "*" button is not used for any additional in-channel options.
+During video playback with no obscuring UI components, the "*" button is not used for any additional in-app options.
 
 **4.5** Apps are prohibited from overriding or interfering with Roku's system screensaver. See [Roku’s Screensaver Policy](doc:screensavers).
 
 **Tests**:
 
-1. Launch the channel.
+1. Launch the app.
 2. Do not use the Roku device until the duration of the screensaver time is met.
 3. Verify the screensaver behaves properly.
 
 **Expected Result** Screensaver works properly.
 
-**4.6** Apps must directly return the user to the previous screen and/or state when the [back button](doc:remote-control-buttons) on the Roku remote is pressed. When the back button is pressed on the channel's home screen, channels must exit the channel and return the user to the Roku home screen. Apps may display a single confirmation dialog immediately before the user exits the channel—and then return the user to the Roku home screen upon receiving confirmation that they want to leave the channel.
+**4.6** Apps must directly return the user to the previous screen and/or state when the [back button](doc:remote-control-buttons) on the Roku remote is pressed. When the back button is pressed on the app's home screen, apps must exit the app and return the user to the Roku home screen. Apps may display a single confirmation dialog immediately before the user exits the app—and then return the user to the Roku home screen upon receiving confirmation that they want to leave the app.
 
 **Tests**:
 
-1. Launch the channel and navigate to content and menus.
+1. Launch the app and navigate to content and menus.
 2. Press back button on your remote.
-3. Navigate to channel homescreen.
+3. Navigate to app homescreen.
 4. Press back button on your remote until you land on Roku's Home screen.
 
 **Expected Result**:
@@ -475,7 +475,7 @@ All back buttons behave properly.
 **Expected Result**:
 Thumbnails are displayed during VOD trick play.
 
-**4.8** Apps must comply with [all applicbale accessibility laws](https://docs.roku.com/published/channelaccessibility/en/us) and global settings related to accessibility and user experience. Apps must provide [closed captions](doc:closed-caption) and audio descriptions for content where required by law. If including closed captions, the channel must follow the user global settings for closed captioning, and support the following closed captioning settings in the Options menu: On, Off, On instant replay, and On mute (Roku TVs only). For VOD content, channels must synchronize the captions with the audio.
+**4.8** Apps must comply with [all applicable accessibility laws](https://docs.roku.com/published/channelaccessibility/en/us) and global settings related to accessibility and user experience. Apps must provide [closed captions](doc:closed-caption) and audio descriptions for content where required by law. If including closed captions, the app must follow the user global settings for closed captioning, and support the following closed captioning settings in the Options menu: On, Off, On instant replay, and On mute (Roku TVs only). For VOD content, apps must synchronize the captions with the audio.
 
 Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
@@ -509,23 +509,23 @@ Video rewinds between 10 to 25 seconds.
 1. Begin playing a video. Let it play for a few minutes, or fast forward to a new position in the video.
 2. Press Back to exit playback. Verify that resume option appears.
 3. Press the Home button on the remote to return to the Roku Home screen.
-4. Navigate to the channel on the Home screen and launch it.
+4. Navigate to the app on the Home screen and launch it.
 5. Navigate back to the video that was played in step #1.
-6. Select the resume option. Verify that the clip begins to play at a close channelroximation of where it last played.
+6. Select the resume option. Verify that the clip begins to play at a close approximation of where it last played.
 
 **Expected Result**:
 
 * Longer form content (15 minutes or over) have bookmark functionality.
 * Apps with video bookmarks functionality behave as expected and allow user to resume playback from a specific location.
-* The resume option should work before and after relaunching the channel.
+* The resume option should work before and after relaunching the app.
 
-**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](doc:transport-controls) that are supported on the Roku platform. Apps must implement proper [error handling](doc:transport-controls) for unsupported voice commands. These requirements are also applicbale to new channels projected to reach the specified streaming hours threshold shortly after launch.
+**4.11** Apps that have streamed more than an average of 5 million hours per month over the last three months must implement all [voice controls](doc:transport-controls) that are supported on the Roku platform. Apps must implement proper [error handling](doc:transport-controls) for unsupported voice commands. These requirements are also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch.
 
 **Tests**:
 
-1. Launch the channel
-2. Log in into the channel (if needed)
-3. Verify that the channel can handle the following voice commands (transport events):
+1. Launch the app
+2. Log in into the app (if needed)
+3. Verify that the app can handle the following voice commands (transport events):
    * Skip/Fast Forward/Rewind
    * Play/Pause/OK
    * Replay
@@ -543,15 +543,15 @@ App successfully handles all voice commands.
 
 **Tests**:
 
-1. Launch the channel
-2. If channel sign-in is required, a [dynamic voice keyboard](doc:dynamic-keyboard) or [dynamic custom voice keyboard](doc:dynamic-custom-keyboard) is used for entering an email address and password.
+1. Launch the app
+2. If app sign-in is required, a [dynamic voice keyboard](doc:dynamic-keyboard) or [dynamic custom voice keyboard](doc:dynamic-custom-keyboard) is used for entering an email address and password.
 3. If PIN entry is required (for example, when entering a parental access code), a [dynamic voice PinPad](doc:dynamic-pinpad) or [dynamic custom voice keyboard](doc:dynamic-custom-keyboard) is used.
 
 **Expected Result:**
 
 App displays a voice keyboard when customers need to enter an email address, PIN, or password.
 
-**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Continue Watching](doc:continue-watching) feature. This requirement is also applicbale to new channels projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids channels are excluded from this requirement.
+**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Continue Watching](doc:continue-watching) feature. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 
 **Tests**: App is meeting the criteria specified in 4.13.
 
@@ -566,8 +566,8 @@ App has properly implemented the Continue Watching feature per the integration g
 **Tests**:
 
 1. Your Roku device and PC must be connected to the same sub-network.
-2. Do not login to the channel.
-3. In your browser, launch [Roku Deep linking Tester tool](https://devtools.web.roku.com/DeepLinkingTester/). Follow the instructions to select the channel ID and channel name.
+2. Do not login to the app.
+3. In your browser, launch [Roku Deep linking Tester tool](https://devtools.web.roku.com/DeepLinkingTester/). Follow the instructions to select the channel ID and app name.
 4. Do not enter any parameters and click "Send".
 5. Verify content can be launched properly as defined in Roku's deep linking policy.
 
@@ -580,26 +580,26 @@ Content can be launched through deep links properly based on mediaType.
 
 1. Verify that the manifest includes the roInput flag (_supports_input_launch=1_).
 2. Connect your Roku device and computer to the same sub-network.
-3. Launch the channel.
+3. Launch the app.
 4. Send an [External Control Protocol (ECP)](doc:external-control-api) **input** command via cURL to your Roku device using the following syntax: curl -d '' 'http://\<Roku Device IP Address>:8060/input?contentId=\<_contentIdValue_>&mediaType=\<_mediaTypeValue_>'
 5. Repeat test for unauthenticated and authenticated users.
 
 **Expected Result**:
 Content is launched as specified for the following conditions:
 
-* **App Running**:  The video content item is launched, without re-launching the channel.
+* **App Running**:  The video content item is launched, without re-launching the app.
 * **Unauthenticated**:  The video content item is launched after authentication has been completed.
 * **Authenticated**:  The video content item is launched.
 
-**5.3** Apps are prohibited from deep linking into other channels or directing users to exit the channel to purchase content, goods or other services.
+**5.3** Apps are prohibited from deep linking into other apps or directing users to exit the app to purchase content, goods or other services.
 
 **Tests**:
 
-1. Navigate through the menus within the channel.
-2. Ensure that within the channel there is no option to deep link into any third-party channels.
+1. Navigate through the menus within the app.
+2. Ensure that within the app there is no option to deep link into any third-party apps.
 
 **Expected Result**:
-Your channel does not deep link into any third-party channels.
+Your app does not deep link into any third-party apps.
 
 ## **6. UI and graphics**
 
@@ -607,8 +607,8 @@ Your channel does not deep link into any third-party channels.
 
 **Tests**:
 
-1. Navigate to the channel on the Roku device's Home screen and focus it.
-2. Select * (star) key on your remote to invoke the pop-up with channel information.
+1. Navigate to the app on the Roku device's Home screen and focus it.
+2. Select * (star) key on your remote to invoke the pop-up with app information.
 3. Verify the version number is not zero.
 
 **Expected Result**:
@@ -618,21 +618,21 @@ Version number is greater than zero.
 
 **Tests**:
 
-1. Navigate through the channel and examine for inappropriate content.
+1. Navigate through the app and examine for inappropriate content.
 
 **Expected Result**:
 The Kids & Family category displays no inappropriate content.
 
-**6.3** Public channels are prohibited from containing content deemed to be pornographic. With respect to channel information that may appear outside of the application (for example, in search results, in the platform user interface, or on Roku’s website), content and descriptions must be appropriate for all ages. This includes the channel name, artwork, and descriptions appearing in the Roku Streaming Store and web. This also pertains to content titles, artwork, and descriptions appearing in Roku Search.
+**6.3** Public apps are prohibited from containing content deemed to be pornographic. With respect to app information that may appear outside of the application (for example, in search results, in the platform user interface, or on Roku’s website), content and descriptions must be appropriate for all ages. This includes the app name, artwork, and descriptions appearing in the Roku Streaming Store and web. This also pertains to content titles, artwork, and descriptions appearing in Roku Search.
 
 **Tests**:
 
-1. Navigate through the channel and examine content for pornography.
+1. Navigate through the app and examine content for pornography.
 
 **Expected Result**:
-Your public channel does not contain pornographic content.
+Your public app does not contain pornographic content.
 
-**6.4** The Roku Streaming Store artwork and splash screen must clearly represent the name or identity of the channel using only broadcast-safe colors with proper sizing. The channel splash screen must support FHD (1920x1080p) and HD (1280x720p) resolutions. In addition, artwork must not be transparent. The splash screen's URI must be listed in the package manifest file.
+**6.4** The Roku Streaming Store artwork and splash screen must clearly represent the name or identity of the app using only broadcast-safe colors with proper sizing. The app splash screen must support FHD (1920x1080p) and HD (1280x720p) resolutions. In addition, artwork must not be transparent. The splash screen's URI must be listed in the package manifest file.
 
 **Tests**:
 
@@ -650,4 +650,4 @@ All Roku Streaming Store artwork and splash screens display correctly.
 1. Device activation pre-check is CVAA compliant.
 
 **Expected Result**:
-Your channel complies with CVAA, if required.
+Your app complies with CVAA, if required.

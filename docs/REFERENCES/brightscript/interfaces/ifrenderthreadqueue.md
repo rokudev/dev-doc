@@ -25,7 +25,7 @@ next:
 
 #### Description
 
-Registers a handler for messages received on the async message channel with the given message ID. The handler is called on the render thread for each message received. 
+Registers a handler for messages received on the async message channel with the given message ID. The handler is called on the render thread for each message received.
 
 You can register multiple handlers for a single ID. In this case, the handlers are called in the order they were registered.
 
@@ -50,7 +50,7 @@ Returns an object that can be used to unregister the handler, if required.
 > sub MyMessagehandler(data, msgInfo)
 > ```
 >
-> - **data** contains the value that was passed into the **PostMessage()** or **CopyMessage()** functions. 
+> - **data** contains the value that was passed into the **PostMessage()** or **CopyMessage()** functions.
 > - **msgInfo** contains the metadata about the message, including the message ID and creation time
 >
 > In general, handlers should be written to be as fast as possible to avoid dropping frames.
@@ -78,7 +78,7 @@ This function may be called from any thread.
 <tr>
 <td>message_id</td>
 <td>String</td>
-<td>The ID of the channel to which this message should be posted.</td>
+<td>The ID of the app to which this message should be posted.</td>
 </tr>
 <tr>
 <td>data</td>

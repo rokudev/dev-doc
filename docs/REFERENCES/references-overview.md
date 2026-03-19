@@ -65,4 +65,4 @@ or object/component z vary significantly with system version?
 
 Aspects of the last question are specially covered in the separate [Deprecated APIs](doc:deprecated-apis) document,
 which developers should revisit periodically, or whenever notified by Roku,
-in order to keep their channels current for certification purposes.
+in order to keep their apps current for certification purposes.

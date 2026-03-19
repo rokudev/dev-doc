@@ -1036,7 +1036,7 @@ The decoded JWT contains the following fields:
 
 ### requestPartnerOrder
 
-> See [Creating TVOD channels](https://roku-ent.readme.io/dev/docs/tvod-channel) for how to use this command for transactional purchases.
+> See [Creating TVOD Apps](https://roku-ent.readme.io/dev/docs/tvod-channel) for how to use this command for transactional purchases.
 
 Checks the user's billing status for transactional purchases. This is a prerequisite for sending the [confirmPartnerOrder command](#confirmpartnerorder).
 
@@ -1059,7 +1059,7 @@ If this command fails, the [**requestPartnerOrderStatus** field](#requestpartner
 
 ### confirmPartnerOrder
 
-> See [Creating TVOD channels](https://roku-ent.readme.io/dev/docs/tvod-channel) for how to use this command for transactional purchases.
+> See [Creating TVOD Apps](https://roku-ent.readme.io/dev/docs/tvod-channel) for how to use this command for transactional purchases.
 
 This command is equivalent to the **doOrder** command for transaction purchases. The user's billing status must first be confirmed with the [requestPartnerOrder command](#requestpartnerorder) before sending this command.
 

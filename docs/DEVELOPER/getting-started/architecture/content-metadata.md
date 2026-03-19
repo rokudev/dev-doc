@@ -1240,7 +1240,7 @@ each value.</p>
 </tbody>
 </table></div>
 <h2 id="content-feed-video-lesson">Content feed video lesson</h2>
-<p>You can learn how to link the content metadata in your app's feed to a ContentNode by watching the <a href="https://roku-ent.readme.io/dev/docs/content-feed-1">Creating the content feed</a> video lesson in Roku's <a href="https://roku-ent.readme.io/dev/docs/rsg">SceneGraph: Build a Channel online video course</a>.</p></div>
+<p>You can learn how to link the content metadata in your app's feed to a ContentNode by watching the <a href="https://roku-ent.readme.io/dev/docs/content-feed-1">Creating the content feed</a> video lesson in Roku's <a href="https://roku-ent.readme.io/dev/docs/rsg">SceneGraph: Build an App online video course</a>.</p></div>
 `}</HTMLBlock>
 
 <br />

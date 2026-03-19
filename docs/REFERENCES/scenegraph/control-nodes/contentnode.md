@@ -192,7 +192,7 @@ iteminfo.componentname
 
 ## Content feed video lesson
 
-You can learn how to link the content metadata in your app's feed to a ContentNode by watching the [Creating the content feed](doc:debugging) video lesson in Roku's [SceneGraph: Build a Channel online video course](doc:rsg).
+You can learn how to link the content metadata in your app's feed to a ContentNode by watching the [Creating the content feed](doc:debugging) video lesson in Roku's [SceneGraph: Build an App online video course](doc:rsg).
 
 ## Sample app
 

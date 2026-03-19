@@ -24,7 +24,7 @@ next:
 ---
 
 
-This document lists the requirements for displaying video and interactive ads in a channel. These requirements are applicable for both client-side and server-side ad requests. Apps must adhere to these requirements to pass certification, including those related to the Roku Advertising Framework (RAF).
+This document lists the requirements for displaying video and interactive ads in an app. These requirements are applicable for both client-side and server-side ad requests. Apps must adhere to these requirements to pass certification, including those related to the Roku Advertising Framework (RAF).
 
 ## Roku advertising framework (RAF) requirements
 

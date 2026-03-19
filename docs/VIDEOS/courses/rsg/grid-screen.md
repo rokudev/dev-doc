@@ -27,8 +27,8 @@ This lesson describes how to create the directory structure and manifest require
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Grid Screen sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/GridScreen) | Download and review the code used in this lesson to create a grid screen. |
 | [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Grid Screen app created in this lesson. |
-| [Channel directory](doc:developing-scenegraph-applications) | Learn to how to create the directory structure required by Roku apps. |
-| [Channel manifest](doc:channel-manifest) | Read how to create the manifest required by Roku apps (every app must have a manifest so the Roku OS knows which features your app supports). Learn about all the mandatory attributes that must be included in the manifest,  and the different optional features can be enabled in it. |
+| [App directory](doc:developing-scenegraph-applications) | Learn to how to create the directory structure required by Roku apps. |
+| [Manifest](doc:channel-manifest) | Read how to create the manifest required by Roku apps (every app must have a manifest so the Roku OS knows which features your app supports). Learn about all the mandatory attributes that must be included in the manifest,  and the different optional features can be enabled in it. |
 
 ## Related
 

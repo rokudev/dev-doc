@@ -65,7 +65,7 @@ For content metadata to be added to the Roku Search master database, the search 
 
 #### Third-party support for integrating Roku Search
 
-Apps can work with third-party vendors such as [Universal Search and Discovery](https://universalsearch.io/get-started) (USAND) or [Instant TV Channel](https://www.instanttvchannel.com/roku/search-feed) to onboard their content feed into Roku Search. These services provide outsourced feed ingestion and metadata delivery services for the Roku platform.
+Apps can work with third-party vendors such as [Universal Search and Discovery](https://universalsearch.io/get-started) (USAND) or [Instant TV App](https://www.instanttvchannel.com/roku/search-feed) to onboard their content feed into Roku Search. These services provide outsourced feed ingestion and metadata delivery services for the Roku platform.
 
 ### Validating the search feed
 

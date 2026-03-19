@@ -59,7 +59,7 @@ This lesson then guides you through implementing Roku's [client-side ad stitchin
 
 [ifSGNodeChildren interface](doc:ifsgnodechildren)
 
-[Channel manifest](doc:channel-manifest)
+[App manifest](doc:channel-manifest)
 
 ## How to watch
 

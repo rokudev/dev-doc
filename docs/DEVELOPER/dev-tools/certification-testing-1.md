@@ -22,7 +22,7 @@ To use the certification testing tool, you upload a [package file](doc:packaging
 
 To upload a package file to the certification testing tool, follow these steps:
 
-1. Go to the [Developer Dashboard](https://developer.roku.com/developer), select **Manage My Channels**, and then click the app to be tested.
+1. Go to the [Developer Dashboard](https://developer.roku.com/developer), select **Manage My Apps**, and then click the app to be tested.
 2. Select **Package Upload** from the list.
 3. In the **Package Upload** page, select the **Minimum Firmware** version for devices running your app, click **Upload**, and then select the package file.
 
@@ -34,7 +34,7 @@ To validate that your app is handling deep link requests properly, provide at le
 
 To enter deep linking parameters, follow these steps:
 
-1. Select **Deep Linking** from the **Developer Dashboard > Manage My Channels** page list.
+1. Select **Deep Linking** from the **Developer Dashboard > Manage My Apps** page list.
 
 2. For each set of deep linking parameters to be included in the certification test, do the following:
 
@@ -52,7 +52,7 @@ To enter deep linking parameters, follow these steps:
 
 ### Viewing certification testing results
 
-To run the certification test, select **Certification Testing** from the **Developer Dashboard > Manage My Channels** page list, and then click **Run**.
+To run the certification test, select **Certification Testing** from the **Developer Dashboard > Manage My Apps** page list, and then click **Run**.
 
 Once you start the certification testing tool, the **Status** field includes a spinner indicating that the testing is ongoing. To track the progress of the testing, the number of tests completed and total tests to be run are displayed. When testing has been completed, the **Status** field displays "DONE" and shows that all the tests have been completed. If the **Status** field, displays "CANCELLED", "ERROR", or "UNAVAILABLE", click **Run** to re-run the test.
 

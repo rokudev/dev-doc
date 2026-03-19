@@ -105,7 +105,7 @@ Returns the current request method.
 
 #### Return Value
 
-The request method. 
+The request method.
 
 ### GetToString() as String
 
@@ -137,13 +137,13 @@ The HTTP response code.
 
 #### Description
 
-Starts a GET request to a server, but does not wait for the transfer to complete. 
+Starts a GET request to a server, but does not wait for the transfer to complete.
 
 When the GET request completes, a [roUrlEvent](doc:rourlevent) will be sent to the message port associated with the object. The event will contain a roString with the body of the response. If false is returned then the request could not be issued and no events will be delivered.
 
 #### Return Value
 
-A flag indicating whether the request was issued. 
+A flag indicating whether the request was issued.
 
 ### AsyncGetToFile(filename as String) as Boolean
 
@@ -159,7 +159,7 @@ When the GET request completes, an [roUrlEvent](doc:rourlevent) will be sent to 
 
 #### Return Value
 
-A flag indicating whether the request was issued. 
+A flag indicating whether the request was issued.
 
 ### Head() as Dynamic
 
@@ -179,7 +179,7 @@ Begins an HTTP HEAD request without waiting for it to complete. When the HEAD co
 
 #### Return Value
 
-A flag indicating whether the request was issued. 
+A flag indicating whether the request was issued.
 
 ### PostFromString(request as String) as Integer
 
@@ -227,7 +227,7 @@ Uses the HTTP POST method to send the supplied string to the current URL. When t
 
 #### Return Value
 
-A flag indicating whether the request was issued. 
+A flag indicating whether the request was issued.
 
 ### AsyncPostFromFile(filename as String) as Boolean
 
@@ -243,7 +243,7 @@ Uses the HTTP POST method to send the contents of the specified file to the curr
 
 #### Return Value
 
-A flag indicating whether the request was issued. 
+A flag indicating whether the request was issued.
 
 ### AsyncPostFromFileToFile(fromFile as String, toFile as String) as Boolean
 
@@ -260,7 +260,7 @@ Uses the HTTP POST method to send the contents of the specified file (fromFile) 
 
 #### Return Value
 
-A flag indicating whether the request was issued. 
+A flag indicating whether the request was issued.
 
 ### AsyncCancel() as Boolean
 
@@ -282,13 +282,13 @@ Returns the body of the response even if the HTTP status code indicates that an 
 
 #### Return Value
 
-A flag indicating whether the operation was successful. 
+A flag indicating whether the operation was successful.
 
 ### SetUserAndPassword(user as String, password as String) as Boolean
 
 #### Description
 
-Enables HTTP authentication using the specified user name and password. 
+Enables HTTP authentication using the specified user name and password.
 
 > HTTP basic authentication is intentionally disabled because it is inherently insecure. [HTTP digest authentication](https://tools.ietf.org/html/rfc2617 "HTTP digest authentication") is supported.
 
@@ -301,7 +301,7 @@ Enables HTTP authentication using the specified user name and password.
 
 #### Return Value
 
-A flag indicating whether the operation was successful. 
+A flag indicating whether the operation was successful.
 
 ### SetMinimumTransferRate(bytes_per_second as Integer, period_in_seconds as Integer) as Boolean
 
@@ -337,7 +337,7 @@ Terminates the transfer automatically if the transfer rate drops below the speci
 
 #### Return Value
 
-A flag indicating whether the operation was successful. 
+A flag indicating whether the operation was successful.
 
 ### GetFailureReason() as String
 
@@ -395,7 +395,7 @@ Decodes the specified string per [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt
 
 #### Return Value
 
-The decoded string. 
+The decoded string.
 
 ### UrlEncode(url as String) as String
 
@@ -452,7 +452,7 @@ Enables automatic resumption of `AsyncGetToFile` and `GetToFile` requests
 
 #### Return Value
 
-A flag indicating whether the operation was successful. 
+A flag indicating whether the operation was successful.
 
 ### EnablePeerVerification(enable as Boolean) as Boolean
 
@@ -468,7 +468,7 @@ Verifies that the certificate has a chain of trust up to a valid root certificat
 
 #### Return Value
 
-A flag indicating whether the operation was successful. 
+A flag indicating whether the operation was successful.
 
 ### EnableHostVerification(enable as Boolean) as Boolean
 
@@ -484,11 +484,11 @@ Verifies that the certificate belongs to the host using CURLOPT_SSL_VERIFYHOST.
 
 #### Return Value
 
-A flag indicating whether the operation was successful. 
+A flag indicating whether the operation was successful.
 
 ### EnableFreshConnection(enable as Boolean) as Boolean
 
-> The Roku OS no longer supports this function. Channels should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU). 
+> The Roku OS no longer supports this function. Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU). 
 
 #### Description
 
@@ -502,15 +502,15 @@ Enables a fresh connection using CURLOPT_FRESH_CONNECT.
 
 #### Return Value
 
-A flag indicating whether the operation was successful. 
+A flag indicating whether the operation was successful.
 
 ### SetHttpVersion(version as String) as Void
 
 #### Description
 
-An optional function that enables HTTP/2 support. If version is set to `"http2"`, HTTP/2 will be used for all underlying transfers. 
+An optional function that enables HTTP/2 support. If version is set to `"http2"`, HTTP/2 will be used for all underlying transfers.
 
-This must be set on a roUrlTransfer instance prior to any data transfer. The HTTP version used by an instance cannot be changed  after the instance's first use. 
+This must be set on a roUrlTransfer instance prior to any data transfer. The HTTP version used by an instance cannot be changed  after the instance's first use.
 
 For the HTTP/2 connection sharing feature, all roUrlTransfers should be made from the same thread.
 

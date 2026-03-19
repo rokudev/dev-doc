@@ -48,7 +48,7 @@ To generate an API key, follow these steps:
 <Image align="left" alt="roku815px - cw-c2c-api-access" border={true} src="https://image.roku.com/ZHZscHItMTc2/cw-c2c-api-access.png" className="border" />
 
 3. In the API access page, click Create API key to create a private/public key pair (collectively referred to as the "API key"). The private key is used for signing messages and encrypting data; the associated public key is used for verifying message signatures and decrypting data.
-4. In the Create API key dialog, enter a Key name for your API key that makes it easy to identify (for example, you can enter the name of your Beta channel) and a Description, and then click Create & Download API key. The private key is only available for download upon being created; you can download the corresponding public key from the Developer Dashboard anytime.  The API key has a time-to-live (TTL) of 90 days.
+4. In the Create API key dialog, enter a Key name for your API key that makes it easy to identify (for example, you can enter the name of your Beta app) and a Description, and then click Create & Download API key. The private key is only available for download upon being created; you can download the corresponding public key from the Developer Dashboard anytime.  The API key has a time-to-live (TTL) of 90 days.
 
    <br />
 
@@ -232,7 +232,7 @@ To add new content items and update existing ones to the Continue Watching row, 
 **URL**:
 
 * POST [https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)
-* POST [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (channel has a profile selection screen)
+* POST [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (app has a profile selection screen)
 
 **JSON body**:
 
@@ -270,7 +270,7 @@ To retrieve the list of content items in the Continue Watching row, send a **GET
 **URL**:
 
 * GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/content/continueWatching
-* GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/profile/\{profileId}/content/continueWatching (channel has a profile selection screen)
+* GET [https://userdata.sr.roku.com](https://userdata.sr.roku.com/)/user-data/v1/profile/\{profileId}/content/continueWatching (app has a profile selection screen)
 
 **Example (cURL):**
 
@@ -306,7 +306,7 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
 **URL**:
 
 * DELETE [https://userdata.sr.roku.com/user-data/v1/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/content/continueWatching)
-* DELETE [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (channel has a profile selection screen)
+* DELETE [https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching](https://userdata.sr.roku.com/user-data/v1/profile/\{profileId}/content/continueWatching) (app has a profile selection screen)
 
 **JSON body**:
 
@@ -536,7 +536,7 @@ The JWT payload must have the following claims:
           * urn:roku:cloud-services:publickey-service
           * urn:roku:cloud-services:chanprovsvc
         * **httpMethod**: The Continue Watching API supports the following methods: GET, PUT, POST, and DELETE (all other methods will result in an error response).
-        * **path**: The service resource being called, which is `/user-data/v1/content/continueWatching`. 
+        * **path**: The service resource being called, which is `/user-data/v1/content/continueWatching`.
         * **bodySha256Base64**: The body is an SHA-256 hash calculated over the raw bytes of the HTTP request body that is encoded using Base 64. Do not include the body for GET and DELETE requests (Roku's inbound request service ignores the body for these requests).  
       </td>
     </tr>

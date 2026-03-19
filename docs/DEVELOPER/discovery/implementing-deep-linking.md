@@ -169,13 +169,13 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
    if valid_contentId(contentId) ' You define this function in your back-end
    'play content directly, starting at last bookmarked position
    else
-   'pop an error message and launch channel home page.
+   'pop an error message and launch app home page.
    end if
    else if (args.mediaType = “season”)
    if valid_contentId(contentId) ' You define this function in your back-end
    'display an episodic picker screen with the episode of the contentId selected
    else
-   'pop an error message and launch channel home page.
+   'pop an error message and launch app home page.
    end if
    else
    'deep linking issue such as contentId not matching any content in the partner's catalog
@@ -363,7 +363,7 @@ To submit deep links for certification, follow these steps:
 
 1. Verify that your app meets all [certification requirements](doc:certification).
 
-2. Open the [Developer Dashboard](https://developer.roku.com/developer) and click **Manage My Channels**. Click your app, and then select **Deep Linking** from the list on the right.
+2. Open the [Developer Dashboard](https://developer.roku.com/developer) and click **Manage My Apps**. Click your app, and then select **Deep Linking** from the list on the right.
 
 3. Follow the instructions in the [Deep Linking window documentation](doc:channel-publishing-guide).
 
@@ -409,7 +409,7 @@ The one-time TV program identified by the contentId is launched directly into pl
 
 ## Deep linking video lesson
 
-You can learn how to implement deep linking in your app by watching the [Deep linking](doc:deep-linking) video lesson in Roku's [SceneGraph: Build a Channel online video course](doc:rsg).
+You can learn how to implement deep linking in your app by watching the [Deep linking](doc:deep-linking) video lesson in Roku's [SceneGraph: Build a App online video course](doc:rsg).
 
 This lesson details how to program your app to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences requried for the various types of content in the app's feed.
 

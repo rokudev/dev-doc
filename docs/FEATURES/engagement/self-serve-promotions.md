@@ -100,9 +100,9 @@ To create a new ad campaign, follow these steps:
    d. If you are creating a display ad, click **Select placement**, and then select whether you are creating a home screen or screensaver ad.
 
 
-4. In the **My channel** panel, click **Select channel** and then do the following:
+4. In the **My app** panel, click **Select app** and then do the following:
 
-   a. From the **Channel** list, select the name or ID of the app to be advertised. The list of apps is automatically filtered as you type (2-character minimum). If your app was recently published, it may take up to 1 business week for your app to be included in the list.
+   a. From the **App** list, select the name or ID of the app to be advertised. The list of apps is automatically filtered as you type (2-character minimum). If your app was recently published, it may take up to 1 business week for your app to be included in the list.
 
    b. From the **Channel category** list, select one of the pre-defined categories (for example, general viewing, sports, or horror). You can create multiple listings to use the same app with different categories. For example, your app may typically fall into "General Viewing"; however, if you are promoting a horror movie, you can use the "Horror" app category.
 
@@ -110,7 +110,7 @@ To create a new ad campaign, follow these steps:
 
       ![roku815px - roku-ad-mgr-select-channel](https://image.roku.com/ZHZscHItMTc2/roku-ad-mgr-select-channel-v1.jpg?)
 
-   d. The next time you create an ad, the selected app will be included in the **Recently Used** list and can be chosen with a single click. You can add other apps by clicking **New Channel**; you can delete an app by clicking **Manage**, and then clicking the garbage can icon.
+   d. The next time you create an ad, the selected app will be included in the **Recently Used** list and can be chosen with a single click. You can add other apps by clicking **New App**; you can delete an app by clicking **Manage**, and then clicking the garbage can icon.
 
 
 5. In the **Targeting options** panel, you can optionally select the audience segments (CPM campaigns only) and geographic data to be used for advanced targeting. In order for viewers to be targeted with an ad, they need to be one of the selected audience segments AND in one of the selected locations.

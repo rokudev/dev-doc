@@ -81,7 +81,7 @@ Once the search feed has been created and is hosted online, verify that the [JSO
 
 3. Use Roku's search feed validator in the Developer Dashboard to verify that your feed includes all the required metadata following these steps:
 
-   a. In the Developer Dashboard, click **Search feed validator** under **Channel**.
+   a. In the Developer Dashboard, click **Search feed validator** under **App**.
 
    <Image alt="roku600px - search-feed-validator-select" border={false} src="https://image.roku.com/ZHZscHItMTc2/search-feed-validator-select.png" />
 
@@ -105,7 +105,7 @@ Once the search feed has been created and is hosted online, verify that the [JSO
 
 Once you have validated your search feed, you can submit your feed following these steps:
 
-1. Go to the [Developer Dashboard](https://developer.roku.com/dev/dashboard), and then click **Search feeds** under **Channel**.
+1. Go to the [Developer Dashboard](https://developer.roku.com/dev/dashboard), and then click **Search feeds** under **App**.
 
 2. The **Search feeds** page opens. It lists the following information for all of your search feeds.
 

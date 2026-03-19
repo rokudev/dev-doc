@@ -42,7 +42,7 @@ To run the Roku Resource Monitor, follow these steps:
 
    ![roku400px - rrmselectdevice](https://image.roku.com/ZHZscHItMTc2/rrm-device-manager-v2.png)
 
-3. Select the app to be monitored and then click **Select channel**. For production apps, the Roku device must be keyed with the same developer key that was used to sign the app for publishing to the Streaming Store.
+3. Select the app to be monitored and then click **Select app**. For production apps, the Roku device must be keyed with the same developer key that was used to sign the app for publishing to the Streaming Store.
 
    ![roku400px - rrmselectchannel](https://image.roku.com/ZHZscHItMTc2/rrm-select-channel.png)
 

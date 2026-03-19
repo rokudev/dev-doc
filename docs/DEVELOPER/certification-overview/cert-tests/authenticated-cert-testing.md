@@ -44,7 +44,7 @@ To launch the Roku Remote Tool and add your device and development app to it, fo
 
    <Image alt="roku600px - roku-remote-add-device-toggle-on" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-add-device-toggle-on-v2.png" />
 
-4. Add your development app. Click **Add channel**, and then enter the name of the app that is specified in the **title** attribute of the [manifest](doc:channel-manifest), enter the app ID, which is "dev" if you sideloaded the app, and then click **Add to table**. Click the add icon for the app under **Add to script** so the Roku OS can identify the app to be automated.
+4. Add your development app. Click **Add app**, and then enter the name of the app that is specified in the **title** attribute of the [manifest](doc:channel-manifest), enter the app ID, which is "dev" if you sideloaded the app, and then click **Add to table**. Click the add icon for the app under **Add to script** so the Roku OS can identify the app to be automated.
 
    <Image alt="roku600px - roku-remote-add-channel" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-add-channel-v1.png" />
 

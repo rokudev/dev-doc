@@ -20,13 +20,13 @@ This lesson highlights how your Roku device test suite should not only include t
 
 It explains how you can write state-driven UI test cases for app purchasing, performance, deep linking, and other certification-related criteria using the [Roku Robot Framework Library](doc:robot-framework-library), [Roku JavaScript library](doc:javascript-library), another test framework, or a programming language such as Python, Java, or Go.
 
-It provides a quick demo of Roku's Static Analysis tool, which detects certification-related issues with your app's code and must be passed in order for your app to be published to the Streamimg Store. It also summarizes the Channel Behavior Analysis tool, which can be used for free and ad-based apps to verify that they meet certification criteria related to performance and deep linking. It briefly covers the BrightScript Profiler, which you can use to identify parts of your app's code where you can improve performance and memory usage.
+It provides a quick demo of Roku's Static Analysis tool, which detects certification-related issues with your app's code and must be passed in order for your app to be published to the Streamimg Store. It also summarizes the App Behavior Analysis tool, which can be used for free and ad-based apps to verify that they meet certification criteria related to performance and deep linking. It briefly covers the BrightScript Profiler, which you can use to identify parts of your app's code where you can improve performance and memory usage.
 
 This lesson concludes by reviewing key tips for optimizing an app's performance.
 
 ## Notes
 
-In the demo of the Channel Behavior Analysis tool, the video uses the SceneGraph Developer's sample app, which includes subscriptions. However, the Channel Behavior Analysis tool is only intended for free and ad-based apps. As a result, the tool will report failures when trying to verify the app's video launch times and deep links. This is because the playback of video requires the test device to be linked to the developer's in-app products.
+In the demo of the App Behavior Analysis tool, the video uses the SceneGraph Developer's sample app, which includes subscriptions. However, the App Behavior Analysis tool is only intended for free and ad-based apps. As a result, the tool will report failures when trying to verify the app's video launch times and deep links. This is because the playback of video requires the test device to be linked to the developer's in-app products.
 
 ## Resources
 

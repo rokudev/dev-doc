@@ -17,7 +17,7 @@ When your app is tested and ready to deploy, you publish it using the Developer 
 
 > When publishing an app, use the Roku developer account that belongs to the organization that owns the app content. If you hired a third-party app development company to build your app for you, do _not_ allow them to publish the app under their own account, otherwise ownership of the app will belong to them according to the terms of the [Roku Distribution Agreement](https://docs.roku.com/doc/DeveloperDistribution/en-us).
 >
-> In other words, when publishing an app, make sure that your own account is the **root account** associated with the app, and that your third-party developer has simply been granted the role of "Administrator" or "Channel management." Our document on [user access management in the Developer Dashboard](doc:user-access-management) provides more information on root accounts and role-based permissions.
+> In other words, when publishing an app, make sure that your own account is the **root account** associated with the app, and that your third-party developer has simply been granted the role of "Administrator" or "App management." Our document on [user access management in the Developer Dashboard](doc:user-access-management) provides more information on root accounts and role-based permissions.
 
 ## App creation overview
 
@@ -35,7 +35,7 @@ A beta app allows the developer to instantly revise an app for test users to try
 
 Beta app usage is **limited** to its intended purpose of quality assurance, as follows:
 
-* **120 days.** A beta app can exist for only 120 days after you create it (using [Add Channel](#create-a-channel)). After the expiration of that period, the app is: (1) deleted and removed from your Developer Dashboard and (2) disabled for all users who have installed it.
+* **120 days.** A beta app can exist for only 120 days after you create it (using [Add App](#create-a-channel)). After the expiration of that period, the app is: (1) deleted and removed from your Developer Dashboard and (2) disabled for all users who have installed it.
 
 * **10 apps.** Your developer account permits up to 10 beta apps at a time. For each beta app, you can:
 
@@ -92,7 +92,7 @@ To ensure success in creating a Public app, you will need to:
 
 ## Create an app
 
-1. In the **[Developer Dashboard](https://developer.roku.com/developer)**, click **Public channels** or **Beta channels** based on the type of channel you want to create.
+1. In the **[Developer Dashboard](https://developer.roku.com/developer)**, click **Public apps** or **Beta apps** based on the type of app you want to create.
 
    ![channel-builder-2-create-channel - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-create-channel.png)
 
@@ -113,7 +113,7 @@ To ensure success in creating a Public app, you will need to:
 | Field                     | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Channel ID                | The unique ID generated for your app.                                                                                                                                                                                                                                                                                                                                                                               |
-| Access code               | A six-character alphanumeric code that is included in the URL for installing your app. The URL is used to install beta apps, and it can be used to add public apps once they have been published.<br /><br />You can click the link to install the app on a Roku device linked to your developer account. In the **Channel Profile** page, you can enter a descriptive custom code (for example, "MyVideoChannel"). |
+| Access code               | A six-character alphanumeric code that is included in the URL for installing your app. The URL is used to install beta apps, and it can be used to add public apps once they have been published.<br /><br />You can click the link to install the app on a Roku device linked to your developer account. In the **App Profile** page, you can enter a descriptive custom code (for example, "MyVideoApp"). |
 | Type                      | The type of app, which may be one of the following values: <ul><li><strong>SDK</strong>: An app to be published to the Streaming Store.</li><li><strong>SDK (Beta)</strong>: An app to be used for QA testing.</li></ul>                                                                                                                                                                                            |
 | Version                   | The version number of the app.                                                                                                                                                                                                                                                                                                                                                                                      |
 | Created                   | The date the app was created in the Developer Dashboard.                                                                                                                                                                                                                                                                                                                                                            |
@@ -191,7 +191,7 @@ Configure how your app is listed in the Streaming Store, including the app's hom
 
     <tr>
       <td>
-        Channel age rating
+        App age rating
       </td>
 
       <td>
@@ -221,8 +221,8 @@ Provide localized names, descriptions, and artwork for your listing in the Strea
 
 | Field                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| App name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>Channel name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>App description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>App description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)         .</li></ul> |
-| Channel poster           | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+  | App name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>App name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>App description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>App description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)         .</li></ul> |
+| App poster           | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Screenshots              | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 4. Click **Save**.
@@ -245,7 +245,7 @@ Select the type of app you are creating and provide your contact information fol
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | App type                              | Select the type of app you are creating:<br /><ul><li><strong>Video</strong>: Movies, television shows, special events, and other video content (including music videos).</li><li><strong>Audio</strong>: Streaming music services, podcasts, and other audio content that does not include video.</li><li><strong>Game</strong>: Interactive games.</li><li><strong>App/Utility</strong>: Weather apps, and other tools and utilities.</li><li><strong>Theme</strong>: Customizes the Roku home-screen wallpaper, screensaver, and system sounds.</li></ul> |
 | Privacy and terms                     | Enter the URLs of your app's privacy policy and terms and conditions agreement.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Vanity access code                    | A six-character alphanumeric code that is included in the URL for installing your app. The URL is used to install beta apps, and it can be used to add public vs once they have been published.You can use the auto-generated code or enter a descriptive custom code, which may be a maximum of 20 alphanumeric characters (for example, "MyVideoChannel")                                                                                                                                                                                                  |
+| Vanity access code                    | A six-character alphanumeric code that is included in the URL for installing your app. The URL is used to install beta apps, and it can be used to add public vs once they have been published.You can use the auto-generated code or enter a descriptive custom code, which may be a maximum of 20 alphanumeric characters (for example, "MyVideoApp")                                                                                                                                                                                                  |
 | Do customers sign in to your app?     | Authenticated SVOD, AVOD, TVE, and free apps must select 'Yes.' If you select 'Yes,' you'll need to later provide login credentials that Roku can use to test the parts of your app that can only be accessed after signing in.                                                                                                                                                                                                                                                                                                                              |
 | Customer support contact information  | Enter your customer support URL, email address, and phone number.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Learn more URL                        | Enter the URL where customers can learn more about your app (for example, the homepage of your app's website).                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -349,7 +349,7 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
       </td>
 
       <td>
-        If you select this option, you must enter the URL path to an app-ads.txt file in the **Developer URL** field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [Channel Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The **Channel ID** and **Bundle ID** values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags `appstore:store_id` and `appstore:bundle_id` to provide channel ID information in the http header of an app's Streaming Store page. <br />
+        If you select this option, you must enter the URL path to an app-ads.txt file in the **Developer URL** field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [App Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The **Channel ID** and **Bundle ID** values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags `appstore:store_id` and `appstore:bundle_id` to provide channel ID information in the http header of an app's Streaming Store page. <br />
         Using the values from the illustration above as examples, the meta-tags would appear in the `<head>` section, as so:
 
         ```html
@@ -401,7 +401,7 @@ Packaging is the process of encrypting the contents of your app (for example, th
 
 Generate an encrypted package file (.pkg) for testing, publishing, and distributing your app following these steps:
 
-1. From the app's management page, click **Channel package**.
+1. From the app's management page, click **App package**.
 
    ![channel-builder-2-channel-package-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-selection.png)
 
@@ -411,7 +411,7 @@ Generate an encrypted package file (.pkg) for testing, publishing, and distribut
 
 | Field                         | Description                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Upload your .pkg or .zip file | Upload the package file (.pkg) file that you created with the [Development Application Installer](doc:packaging-channels).                                                                                                                                                                                                                         |
+| Upload your .pkg or .zip file | Upload the package file (.pkg) file that you created with the [Development Application Installer](doc:packaging-  ).                                                                                                                                                                                                                         |
 | App version                   | Select the version number for your app.                                                                                                                                                                                                                                                                                                            |
 | Minimum firmware              | Roku supports multiple [package file formats](doc:packaging-channels). Each package format requires a different minimum firmware version to be run on Roku devices, based on when the format was introduced to the OS. Enter a minimum firmware version that is equal to or greater than the one required for the package format used by your app. |
 
@@ -559,21 +559,21 @@ To provide the credentials for one or more test accounts, follow these steps:
 
 9. Repeat steps 2–8 for each additional set of account credentials to be provided for testing.
 
-### Channel Behavior Analysis
+### App Behavior Analysis
 
-Developers of SVOD, AVOD, and free apps can use the self-serve Channel Behavior Analysis tool to verify that their apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
+Developers of SVOD, AVOD, and free apps can use the self-serve App Behavior Analysis tool to verify that their apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
 
 > To run the app launch performance test, your app must have the required [AppLaunchComplete signal beacon](doc:measuring-channel-performance).
 
-To run Channel Behavior Analysis testing on your app, follow these steps:
+To run App Behavior Analysis testing on your app, follow these steps:
 
-1. From the app's management page, click **Channel Behavior Analysis**.
+1. From the app's management page, click **App Behavior Analysis**.
 
    ![channel-builder-2-cba-selection.png - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-selection.png)
 
 2. If customers are required to sign in to your app, upload your [sign-in and sign-out test scripts](doc:authenticated-cert-testing) (unauthenticated apps can skip this step).
 
-3. Click **Run**. Alternatively, you can scroll to the bottom of the **Preview and Publish** page that opens after you submit your deep linking parameters, click **Channel Behavior Analysis**, and then run the Channel Behavior Analysis test.
+3. Click **Run**. Alternatively, you can scroll to the bottom of the **Preview and Publish** page that opens after you submit your deep linking parameters, click **App Behavior Analysis**, and then run the App Behavior Analysis test.
 
    ![channel-builder-2-cba-run-analysis - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-run-analysis.png)
 
@@ -585,7 +585,7 @@ To run Channel Behavior Analysis testing on your app, follow these steps:
 
    ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-analysis-complete.png?version=1\&modificationDate=1687219624000\&api=v2)
 
-6. The **Channel Behavior Analysis** table lists the status of each individual test being executed. You can sort the test results by toggling the **Status**, **Severity**, or **Category** column headers. You can filter test results based on the same fields. This table includes the following columns:
+6. The **App Behavior Analysis** table lists the status of each individual test being executed. You can sort the test results by toggling the **Status**, **Severity**, or **Category** column headers. You can filter test results based on the same fields. This table includes the following columns:
 
 <Table>
   <thead>
@@ -669,7 +669,7 @@ To run Channel Behavior Analysis testing on your app, follow these steps:
 
 ## Publishing an app
 
-Once your public app has passed [Static Analysis](doc:static-analysis-tool) and [Channel Behavior Analysis](doc:channel-publishing-guide) testing, you can schedule it for publishing by following these steps:
+Once your public app has passed [Static Analysis](doc:static-analysis-tool) and [App Behavior Analysis](doc:channel-publishing-guide) testing, you can schedule it for publishing by following these steps:
 
 1. Click **Schedule Publish** in the upper-right corner of the app management page. For beta apps, click **Publish**; this publishes the app and makes it available for up to 20 users to install it.
 
@@ -679,7 +679,7 @@ Once your public app has passed [Static Analysis](doc:static-analysis-tool) an
 
 3. Optionally, enter any release notes for this app version (maximum 1,500 characters), and then do the following:
 
-   a. Select the **I confirm that** check box to confirm that you have tested your app per Roku Channel Publishing Checklist and your app complies with the listed agreements.
+   a. Select the **I confirm that** check box to confirm that you have tested your app per Roku App Publishing Checklist and your app complies with the listed agreements.
 
    b. Select the **I certify that** check box to confirm that you have the authority the submit the app, the provided listing information is accurate, and that you have the rights to distribute your app in the selected countries.
 
@@ -748,11 +748,11 @@ To rollback an app release, follow these steps:
 
    ![channel-rollback-shortcut roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-shortcut.png)
 
-2. The confirmation dialog displays the current channel version and the previous version to which the app will be rolled back.
+2. The confirmation dialog displays the current app version and the previous version to which the app will be rolled back.
 
    ![channel-rollback-confirmation-dialog roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-confirmation-v2.png)
 
-3. If the previous channel version was made for kids, click **Yes**.
+3. If the previous app version was made for kids, click **Yes**.
 
 4. Click **Yes** to complete the rollback.
 
@@ -763,8 +763,8 @@ To rollback an app release, follow these steps:
 To update an app, follow these steps:
 
 1. On the **[Developer Dashboard](https://developer.roku.com/developer)**, select the public or beta app that needs to be updated.
-2. Update any **Store listing** information and **Channel Properties**.
-3. If the app code has changed, you need to generate a new package file and upload it from the **Channel package** page. Make sure to increment the app version number.
-4. Run Static Analysis and Channel Behavior Analysis (if applicable) testing.
-5. Schedule the app for publishing (public channels). If you are updating a beta app, publish the update.
-6. If the updated channel passes Roku's review, it is added to the Streaming Store on the scheduled publishing date. If the app fails the review, you will receive an email notification with the issues that need to be resolved in order for the app to be published.
+2. Update any **Store listing** information and **App Properties**.
+3. If the app code has changed, you need to generate a new package file and upload it from the **App package** page. Make sure to increment the app version number.
+4. Run Static Analysis and App Behavior Analysis (if applicable) testing.
+5. Schedule the app for publishing (public apps). If you are updating a beta app, publish the update.
+6. If the updated app passes Roku's review, it is added to the Streaming Store on the scheduled publishing date. If the app fails the review, you will receive an email notification with the issues that need to be resolved in order for the app to be published.

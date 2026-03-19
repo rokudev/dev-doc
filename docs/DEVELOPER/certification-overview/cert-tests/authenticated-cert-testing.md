@@ -11,13 +11,13 @@ metadata:
 ---
 Developers of authenticated subscription (SVOD), ad-supported (AVOD), and free apps can write automation scripts with the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool) that navigate the app's on-device sign-in and sign-out flows.
 
-Once the scripts have been written, developers can upload them to the [Channel Behavior Analysis page in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes – before submitting the app for certification.
+Once the scripts have been written, developers can upload them to the [App Behavior Analysis page in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis) and run Roku's automated performance and deep linking certification tests on the app. This enables developers to verify that their authenticated app passes the same tests that Roku executes – before submitting the app for certification.
 
 <video src="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v4.mp4" poster="https://image.roku.com/ZHZscHItMTc2/auth-cert-testing-v2.jpg" width="720" height="480" controls />
 
 ## Prerequisites
 
-To run Channel Behavior Analysis testing on authenticated apps, developers must first do the following:
+To run App Behavior Analysis testing on authenticated apps, developers must first do the following:
 
 * Create a **Public** app. The developer sign-in/out scripts cannot be used with [beta apps](doc:channel-publishing-guide).
 * [Upload a package file](doc:channel-publishing-guide).
@@ -30,7 +30,7 @@ This document demonstrates how to write these scripts with the [Roku Remote tool
 
 ## Writing automated sign-in and sign-out scripts
 
-Developers can write test scripts with the [Roku Remote Tool](http://devtools.web.roku.com/RokuRemote/) that automate sign-ins and sign-outs. This enables authenticated apps to be submitted for Channel Behavior Analysis as the Roku test devices in the cloud will use the provided scripts to log in to the app. Once signed in, the Roku test devices can run the suite of deep linking and performance tests on the app. When testing has been completed, the sign-out script is run on the app to return it to its logged-out state for any subsequent automation testing.
+Developers can write test scripts with the [Roku Remote Tool](http://devtools.web.roku.com/RokuRemote/) that automate sign-ins and sign-outs. This enables authenticated apps to be submitted for App Behavior Analysis as the Roku test devices in the cloud will use the provided scripts to log in to the app. Once signed in, the Roku test devices can run the suite of deep linking and performance tests on the app. When testing has been completed, the sign-out script is run on the app to return it to its logged-out state for any subsequent automation testing.
 
 ### Getting started with the Roku Remote Tool
 
@@ -64,7 +64,7 @@ To create the automated sign-in script, follow these steps:
 
 > You may need to insert a "pause" step (by pressing the pause icon) for any action in the UI that takes time to be completed before another step in the script can be executed. For example, it may take a few seconds for the app UI to be populated after being launched. This ensures that the subsequent steps are actually navigating the UI. Do not include more than 10 pause steps in a script.
 >
-> Do not include steps that exit the app or Channel Behavior Analysis will fail. For example, do not include a "home" step, and do not include a "back" step if it results in the app being exited.
+> Do not include steps that exit the app or App Behavior Analysis will fail. For example, do not include a "home" step, and do not include a "back" step if it results in the app being exited.
 
 4. When you have finished testing the script, replace the credentials with the following template variables (the actual credentials to be used should have already been provided in the Test Credentials page as part of the [prerequisites](#prerequisites)):
 
@@ -97,17 +97,17 @@ To create the automated sign-out script, follow these steps:
 
 3. Export the sign-out script to your desktop.
 
-## Running Channel Behavior Analysis testing on authenticated apps
+## Running App Behavior Analysis testing on authenticated apps
 
-Developers can use the self-serve Channel Behavior Analysis tool to verify that their authenticated apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
+Developers can use the self-serve App Behavior Analysis tool to verify that their authenticated apps meet [performance](doc:certification) and [deep linking](doc:certification) certification requirements before submitting them for certification. This allows developers to get instant feedback on whether their apps meet specific deep linking and performance requirements, which reduces the wait time between submitting and publishing apps.
 
-To run Channel Behavior Analysis testing on an authenticated app, follow these steps:
+To run App Behavior Analysis testing on an authenticated app, follow these steps:
 
 1. Verify that all the [prerequisites](#prerequisites) have been completed.
 
-2. In the "text" steps within your sign-in script, verify that you have replaced the user name and password with the "script-login" and "script-password" template variables, respectively. The Channel Behavior Analysis tool will replace the template variables with the actual credentials entered in the [Test Credentials page](doc:channel-publishing-guide). Channel Behavior Analysis testing will fail if the actual credentials are in the script.
+2. In the "text" steps within your sign-in script, verify that you have replaced the user name and password with the "script-login" and "script-password" template variables, respectively. The App Behavior Analysis tool will replace the template variables with the actual credentials entered in the [Test Credentials page](doc:channel-publishing-guide). App Behavior Analysis testing will fail if the actual credentials are in the script.
 
-3. Navigate to the [Channel Behavior Analysis page in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis).
+3. Navigate to the [App Behavior Analysis page in the Developer Dashboard](doc:channel-publishing-guide#channel-behavior-analysis).
 
 4. In the **Sign In/Out Scripts**, click **Edit**.
 
@@ -115,7 +115,7 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
    a. On the Developer Dashboard, click **Manage My Apps**.
 
-   b. Navigate to the app you'd like to run Channel Behavior Analysis on.
+   b. Navigate to the app you'd like to run App Behavior Analysis on.
 
    c. Click **Preview and Update** next to the app and click **Properties** in the dropdown.
 
@@ -125,11 +125,11 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
    f. Click **Save**.
 
-   g. Navigate to **Channel Behavior Analysis**. You should now see the option to upload your .rasp script file.
+   g. Navigate to **App Behavior Analysis**. You should now see the option to upload your .rasp script file.
 
    <Image alt="roku815px - cert-test-home" border={false} src="https://image.roku.com/ZHZscHItMTc2/cert-test-home-cba.png" />
 
-5. Select the [test credentials](doc:channel-publishing-guide) title that contains the user name and password to be used to sign-in into the app. The Channel Behavior Analysis tool will automatically replace the "script-login" and "script-password" template variables in the script with the user name and password entered for the selected test credentials title.
+5. Select the [test credentials](doc:channel-publishing-guide) title that contains the user name and password to be used to sign-in into the app. The App Behavior Analysis tool will automatically replace the "script-login" and "script-password" template variables in the script with the user name and password entered for the selected test credentials title.
 
 6. In the **Upload Sign In/Sign Out Scripts** dialog, click **Upload** to upload the exported sign-in and sign-out scripts (**.rasp** files) on your desktop.
 
@@ -139,9 +139,9 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
    <Image alt="roku815px - cert-test-script-highlight" border={false} src="https://image.roku.com/ZHZscHItMTc2/cert-test-script-highlight.jpg" />
 
-8. Click **Save** to return to the Channel Behavior Analysis page.
+8. Click **Save** to return to the App Behavior Analysis page.
 
-9. Click **Run Channel Behavior Analysis**.
+9. Click **Run App Behavior Analysis**.
 
 ## Sample app
 
@@ -165,6 +165,6 @@ You can [download the on-device authentication sample app ](https://github.com/r
 
 7. Complete the **Test Credentials** page. There are no specific requirements for completing this page in order to run the sample app; the sample app accepts any user name/password to grant access to content.
 
-8. In the **Channel Behavior Analysis** page, upload the sign-in and sign-out scripts from the **rasp** folder in the sample app, and then run Channel Behavior Analysis. The app should pass all three tests.
+8. In the **App Behavior Analysis** page, upload the sign-in and sign-out scripts from the **rasp** folder in the sample app, and then run App Behavior Analysis. The app should pass all three tests.
 
 > Do not schedule the app for publishing.

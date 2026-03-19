@@ -32,7 +32,7 @@ Use the certification criteria and the [list of pre-certification tests](doc:cer
 
 * [Static Analysis tool](doc:static-analysis-tool): Checks the app's code for certification-related errors.
 
-* [Channel Behavior Analysis tool](doc:channel-publishing-guide): For SVOD, AVOD, and free apps, verifies whether app performance and deep linking meet applicable certification requirements.
+* [App Behavior Analysis tool](doc:channel-publishing-guide): For SVOD, AVOD, and free apps, verifies whether app performance and deep linking meet applicable certification requirements.
 
 * [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including app purchasing, performance, deep linking, and other certification criteria.
 
@@ -66,9 +66,9 @@ As part of the app publishing flow, you must provide the following resources to 
 
 #### Run certification tests
 
-Once you’ve finished QA testing your app and have packaged it, you can begin the certification process by running [Static Analysis](doc:static-analysis-tool) and [Channel Behavior Analysis Testing](doc:channel-publishing-guide) on your app in the Developer Dashboard. The Static Analysis tool checks the structure and syntax of your app's code for common problems related to certification requirements. This tool lists any errors requiring resolution before the app can be scheduled for publishing. The Channel Behavior Analysis tool, which is only available to free, ad-supported, and subscription apps, launches the app and checks for state-driven results to verify compliance with Roku's certification criteria. TVE, TVOD, PVOD, and vMVPD apps must include login credentials with their app certification submission.
+Once you’ve finished QA testing your app and have packaged it, you can begin the certification process by running [Static Analysis](doc:static-analysis-tool) and [App Behavior Analysis Testing](doc:channel-publishing-guide) on your app in the Developer Dashboard. The Static Analysis tool checks the structure and syntax of your app's code for common problems related to certification requirements. This tool lists any errors requiring resolution before the app can be scheduled for publishing. The App Behavior Analysis tool, which is only available to free, ad-supported, and subscription apps, launches the app and checks for state-driven results to verify compliance with Roku's certification criteria. TVE, TVOD, PVOD, and vMVPD apps must include login credentials with their app certification submission.
 
-For self-published apps, once your app has passed Static Analysis and Channel Behavior Analysis Testing, you can schedule the publishing process start date.
+For self-published apps, once your app has passed Static Analysis and App Behavior Analysis Testing, you can schedule the publishing process start date.
 
 Once your app is scheduled for publishing, it is submitted to Roku for final review. If Roku does not find any issues with your app, it will be published on the date and time you have scheduled. If issues are found, an email that lists them is forwarded to the developer account associated with the app.
 

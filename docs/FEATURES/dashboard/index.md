@@ -72,7 +72,7 @@ The financial reports section makes available Roku Pay reports, containing infor
 
 This section provides tools that enable developers to promote their apps to Roku end-users to help grow their audience and drive engagement.
 
-* **Display ads –** Developers can use [Roku's self-serve promotion tool](https://admanager.roku.com/) to programmatically purchase Roku home screen banner ads, Roku screensaver ads, and video ads in order to reach users across the Roku platform. Refer to the [documentation](doc:self-serve-promotions) article for more information.
+* **Display ads –** Developers can use [Roku's self-serve promotion tool](https://ad.roku.com/) to programmatically purchase Roku home screen banner ads, Roku screensaver ads, and video ads in order to reach users across the Roku platform. Refer to the [documentation](doc:self-serve-promotions) article for more information.
 
 ### Account
 

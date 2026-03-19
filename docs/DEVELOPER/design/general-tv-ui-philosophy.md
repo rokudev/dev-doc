@@ -87,7 +87,7 @@ Always test your app on the low end platforms (Roku Express = Littlefield) to en
 * When running on-device promotional ads, ensure that you use relevant
   targeting to show the right promotional ad to the right user.
 * Once the app is ready to be promoted, the app can purchase their own ad
-  campaigns at [https://admanager.roku.com/](https://admanager.roku.com/).
+  campaigns at [https://ad.roku.com/](https://ad.roku.com/).
 
 ### 7. Try before you buy
 

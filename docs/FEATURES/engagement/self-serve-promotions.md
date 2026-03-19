@@ -12,7 +12,7 @@ next:
 ---
 
 
-Publishers and agencies can use [Roku's self-serve app promotion tool](https://admanager.roku.com/) to programmatically purchase Roku home screen banner ads, Roku screensaver ads, and video ads in order to promote apps, increase viewership, and reach users on the Roku platform. This single tool enables the targeting of viewers with Roku's exclusive audience data, launching ad campaigns to convert viewers, and then measuring and optimizing campaign performance in real-time.
+Publishers and agencies can use [Roku's self-serve app promotion tool](https://ad.roku.com/) to programmatically purchase Roku home screen banner ads, Roku screensaver ads, and video ads in order to promote apps, increase viewership, and reach users on the Roku platform. This single tool enables the targeting of viewers with Roku's exclusive audience data, launching ad campaigns to convert viewers, and then measuring and optimizing campaign performance in real-time.
 
 ![roku815px - tool dashboard](https://image.roku.com/ZHZscHItMTc2/roku-ad-mgr-dasboard-example.jpg)
 
@@ -20,7 +20,7 @@ Publishers and agencies can use [Roku's self-serve app promotion tool](https://a
 
 To sign up for Roku's self-serve app promotion tool, follow these steps:
 
-1. Go to [admanager.roku.com](https://admanager.roku.com/), and then click **Sign up**.
+1. Go to [ad.roku.com](https://ad.roku.com/), and then click **Sign up**.
 
    ![roku815px - roku-ad-mgr-signup](https://image.roku.com/ZHZscHItMTc2/roku-ad-mgr-signup.jpg?)
 
@@ -329,7 +329,7 @@ You can view your activity notifications by clicking the **Notification** icon i
 
 ## Resources
 
-- To get started building a promotional campaign, [click here](https://admanager.roku.com/).
+- To get started building a promotional campaign, [click here](https://ad.roku.com/).
 
 - Visit [Roku’s advertising site](https://advertising.roku.com/) for an overview of the advertising solutions available to publishers as well as brands and agencies.
 

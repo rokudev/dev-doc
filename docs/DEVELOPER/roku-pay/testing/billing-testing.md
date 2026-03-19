@@ -49,7 +49,7 @@ To enable billing testing on an app with the new app builder UI, follow these st
 
 To enable billing testing on an app with the legacy app builder UI, follow these steps:
 
-1. In the [Developer Dashboard](https://developer.roku.com/developer), select **My Channels**.
+1. In the [Developer Dashboard](https://developer.roku.com/developer), select **My Apps**.
 
    ![roku815px - manage-my-channels](https://image.roku.com/ZHZscHItMTc2/manage-my-channels-v2a.png)
 

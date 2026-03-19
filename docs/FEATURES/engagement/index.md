@@ -82,7 +82,7 @@ In addition, Roku offers self-serve tools that you can use to purchase display a
 
 ### Roku home screen display ads
 
-Apps can purchase targeted display ads that appear on the Roku home screen to the right of the My Channels section. This provides apps with an opportunity to target specific groups of Roku users with relevant ads in order to increase their visibility on the Roku platform and drive engagement and sign-ups.
+Apps can purchase targeted display ads that appear on the Roku home screen to the right of the My Apps section. This provides apps with an opportunity to target specific groups of Roku users with relevant ads in order to increase their visibility on the Roku platform and drive engagement and sign-ups.
 
 See [Self-Serve Promotions](doc:self-serve-promotions) for more information on purchasing display ads on the Roku home screen.
 

@@ -113,7 +113,7 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
    If you can't find the Sign In/Out Scripts button shown below for your Public app, make sure your app Customer Account Requirement field is accurate. For more information, follow the steps below:
 
-   a. On the Developer Dashboard, click **Manage My Channels**.
+   a. On the Developer Dashboard, click **Manage My Apps**.
 
    b. Navigate to the app you'd like to run Channel Behavior Analysis on.
 
@@ -147,7 +147,7 @@ To run Channel Behavior Analysis testing on an authenticated app, follow these s
 
 You can [download the on-device authentication sample app ](https://github.com/rokudev/on-device-authentication)and [sideload it on your Roku device](doc:developer-setup) to test the certification flow for authenticated apps. The sample app includes a **rasp** folder with sign-in and sign-out scripts that you can import and run in the Roku Remote tool. You can run certification testing on the app following these steps:
 
-1. Open the [Developer Dashboard](https://developer.roku.com/developer), click **Manage My Channels**, click **Add Channel**, and then create a new SDK app.
+1. Open the [Developer Dashboard](https://developer.roku.com/developer), click **Manage My Apps**, click **Add Channel**, and then create a new SDK app.
 
 2. Complete the **Properties** and **Channel store info** pages. There are no specific requirements for completing these pages in order to run the sample app.
 

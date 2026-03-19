@@ -200,6 +200,6 @@ Each Streaming Store code consists of two or more letters, such as "US" for Unit
 * SV - El Salvador
 * US - United States
 
-In Developer Dashboard you can find out which countries your app has been published in by navigating to **Manage My Channels** > **Preview and Publish** > **Properties**.
+In Developer Dashboard you can find out which countries your app has been published in by navigating to **Manage My Apps** > **Preview and Publish** > **Properties**.
 
 <Image alt="roku815px - analytics-6-published-countries" border={false} src="https://image.roku.com/ZHZscHItMTc2/analytics-6b.png" title="analytics-6" />

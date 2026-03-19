@@ -12,11 +12,11 @@ next:
 ---
 The [Developer Dashboard](http://developer.roku.com/dev/dashboard) serves as the central control center from which a developer can manage apps, Roku Pay products, or search feeds, as well as view analytics and enroll in the partner payouts program.
 
-## My channels
+## My apps
 
-The **My channels** section provides easy access to recently updated apps, enabling developers to quickly click into their most high-touch projects.
+The **My apps** section provides easy access to recently updated apps, enabling developers to quickly click into their most high-touch projects.
 
-<Image alt="roku815px - My channels screen shot" border={false} src="https://image.roku.com/ZHZscHItMTc2/My-Channels.png" />
+<Image alt="roku815px - My apps screen shot" border={false} src="https://image.roku.com/ZHZscHItMTc2/My-Channels.png" />
 
 Clicking on any of these apps will take the user to the Preview & Publish page for the app, from which they can edit the app metadata. Refer to [App publishing](doc:channel-publishing-guide) for information on managing app settings.
 
@@ -42,7 +42,7 @@ In addition to the utilities found on the Developer Dashboard itself, developers
 
 The app section allows developers to manage their apps, Streaming Store listings, and Roku Search feed configurations.
 
-* **My channels –** This is where developers can create new apps or update existing apps. Here, developers can configure an app's settings, Streaming Store metadata listing, or update new application packages. Read the documentation on [App publishing](doc:channel-publishing-guide) for information.
+* **My apps –** This is where developers can create new apps or update existing apps. Here, developers can configure an app's settings, Streaming Store metadata listing, or update new application packages. Read the documentation on [App publishing](doc:channel-publishing-guide) for information.
 * **Search feeds –** The search feed validator allows developers to submit a search feed URL to Roku, in order to begin the process of integrating their apps into Roku Search. Read the documentation on [Implementing Roku Search](doc:implementing-search) for more information.
 
 ### Monetization

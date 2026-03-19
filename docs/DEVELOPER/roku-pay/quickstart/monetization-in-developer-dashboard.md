@@ -22,7 +22,7 @@ To add products to a subscription video on demand (SVOD) or transactional video 
 
 To select the monetization methods for an app, follow these steps:
 
-1. In the [Developer Dashboard](https://developer.roku.com/developer), select **Manage My Channels**, click **Preview and** **Update** on your test app, and then select **Monetization** from the drop-down list.
+1. In the [Developer Dashboard](https://developer.roku.com/developer), select **Manage My Apps**, click **Preview and** **Update** on your test app, and then select **Monetization** from the drop-down list.
 
    If you have not created a test app yet, click **Add Channel**, select **Developer SDK**, mark the app as **public** or **beta**, enter an app name, and then select **Monetization** from the drop-down list.
 

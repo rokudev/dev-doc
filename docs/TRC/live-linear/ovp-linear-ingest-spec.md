@@ -719,7 +719,7 @@ Schedule object example
     "isLive": false,
     "date": "2020-01-13",
     "times": [
-        "21:30"
+        "21:30:00"
     ],
     "durationInSeconds": 2760,
     "attributes": [
@@ -791,7 +791,7 @@ Feed Example:
                         "isLive": false,
                         "date": "2018-04-05",
                         "times": [
-                            "10:00"                       
+                            "10:00:00"                       
                         ]                       
                     \},
                     \{
@@ -800,8 +800,8 @@ Feed Example:
                         "isLive": false,
                         "date": "2018-04-05",
                         "times": [                           
-                            "12:00",                           
-                            "16:00"
+                            "12:00:00",                           
+                            "16:00:00"
                         ]                       
                     \},
                     \{
@@ -810,7 +810,7 @@ Feed Example:
                         "isLive": false,
                         "date": "2018-04-05",
                         "times": [                   
-                            "14:00"                           
+                            "14:00:00"                           
                         ]                       
                     \},
                     \{
@@ -819,7 +819,7 @@ Feed Example:
                         "isLive": true,
                         "date": "2018-04-05",
                         "times": [
-                            "18:00"
+                            "18:00:00"
                         ]                       
                     \},
                     \{
@@ -828,7 +828,7 @@ Feed Example:
                         "isLive": false,
                         "date": "2018-04-05",
                         "times": [
-                            "20:00"
+                            "20:00:00"
                         ]                       
                     \},
                     \{
@@ -837,7 +837,7 @@ Feed Example:
                         "isLive": false,
                         "date": "2018-04-05",
                         "times": [
-                            "21:00"
+                            "21:00:00"
                         ]                       
                     \}
                 ]
@@ -862,7 +862,8 @@ Feed Example:
             "id": "movie-id-2",
             "title": "Between Worlds 2",
             "thumbnail": "https://<imageUrl>.jpg",
-            "shortDescription": "A truck driver whose life spirals out of control after the spirit of his deceased wife comes to life.",
+         "shortDescription": "A truck driver whose life spirals out of control after the spirit of his deceased wife comes to life.",
+						"releaseDate": "1999-02-13",
             "advisoryRatings": [
                 \{
                 "source": "MPAA",

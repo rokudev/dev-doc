@@ -20,7 +20,7 @@ Roku OS 15.2, which is being shared with developer beta partners under non-discl
 
 Developers can now get raw Linux CPU and processing statistics with the **chanperf** ECP command and integrate it into their first-party app monitoring tools. Other new Developer Tool features include new Debug Protocol virtual variables for retrieving **roInputEvent**, **roUrlEvent**, and **roDateTime** values.
 
-In addition, this release includes new BrightScript APIs that configure low-memory event notificatons, get remote control repeat delay/rate information, and support AES-GCM cyphers. 
+In addition, this release includes new BrightScript APIs that configure low-memory event notificatons, get remote control repeat delay/rate information, and support AES-GCM cyphers.
 
 Here is the list of key developer-facing Roku OS 15.2 updates:
 
@@ -81,7 +81,7 @@ The BrightScript stack size has been increased for the Roku OS 15.2 release.
 
 ##### BrightScript heap graph visualization in Perfetto
 
-Roku’s [Perfetto-based app tracing tool](/docs/developer-program/dev-tools/app-tracing.md) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
+Roku’s [Perfetto-based app tracing tool](doc:app-tracing) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
 
 ![roku815px - perfetto-heap-trace](https://image.roku.com/ZHZscHItMTc2/perfetto-heap-trace.png)
 

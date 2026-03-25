@@ -52,9 +52,9 @@ Roku now requires all live linear channels on TRC to run through their Online Vi
 
 ### Collection of Linear Channel Input Data
 
-Please fill out the Excel template located here:
+Roku Live Operations team provides templates to LCPs for channel acquisition details.
 
-[https://roku.box.com/v/roku-linear-channel-input-data](https://roku.box.com/v/roku-linear-channel-input-data)
+For Live events and Special integrations, a custom ingest document will be provided.
 
 ### **Supported Video and Audio Tech Specs**
 

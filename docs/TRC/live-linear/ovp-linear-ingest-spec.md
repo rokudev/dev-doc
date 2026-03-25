@@ -60,7 +60,7 @@ For Live events and Special integrations, a custom ingest document will be provi
 
 The following outlines what we support. A preferred video set up is outlined in the referenced column.
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -84,7 +84,15 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * AWS Media Connect Entitlement<br />- Zixi Push<br />- SRT<br />- Push IP and Port number will be provided to LCP/partner<br />- RTP w/FEC Push<br />- RTMP Push<br />- Push URL will be provided to LCP/partner<br />_Support AES Decryption_
+        * AWS Media Connect Entitlement*
+        * Zixi Push*
+        * SRT
+          * Push IP and Port number will be provided to LCP/partner
+        * RTP w/FEC Push
+        * RTMP Push
+          * Push URL will be provided to LCP/partner
+
+        *_Support AES Decryption_
       </td>
 
       <td>
@@ -112,7 +120,9 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * MPEG-2<br /><br /><br />- H.264<br /><br /><br />- H.265
+        * MPEG-2
+        * H.264
+        * H.265
       </td>
 
       <td>
@@ -126,7 +136,10 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * AAC<br /><br /><br />- MPEG Audio<br /><br /><br />- Dolby Digital (AC3 2.0 + 5.1)<br /><br /><br />- PCM
+        * AAC
+        * MPEG Audio
+        * Dolby Digital (AC3 2.0 + 5.1)
+        * PCM
       </td>
 
       <td>
@@ -140,7 +153,8 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * HD - 1920 x 1080<br />- SD 720 x 480
+        * HD - 1920 x 1080
+        * SD 720 x 480
       </td>
 
       <td>
@@ -154,7 +168,13 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * 23.97<br />- 24<br />- 25<br />- 29.97<br />- 30<br />- 59.94<br />- 60
+        * 23.97
+        * 24
+        * 25
+        * 29.97
+        * 30
+        * 59.94
+        * 60
       </td>
 
       <td>
@@ -168,7 +188,8 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * 128 Kbps (min)<br />- 320 Kbps (max)
+        * 128 Kbps (min)
+        * 320 Kbps (max)
       </td>
 
       <td>
@@ -182,7 +203,8 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * HD - 12 Mbps (min)<br />- SD - 6 Mbps (min)
+        * HD - 12 Mbps (min)
+        * SD - 6 Mbps (min)
       </td>
 
       <td>
@@ -266,7 +288,8 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * HD - 16:9<br />- SD - 4:3
+        * HD - 16:9
+        * SD - 4:3
       </td>
 
       <td>
@@ -276,11 +299,40 @@ The following outlines what we support. A preferred video set up is outlined in 
 
     <tr>
       <td>
+        Other video details
+      </td>
+
+      <td>
+        * Content should be free of the following technical errors:
+          * Windowboxing and stretching
+          * Excess video content such as excessive black screen and color bars
+          * Visible interlacing and artifacts/macroblocking
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         Ad Insertion Points (if applicable)
       </td>
 
       <td>
-        SCTE-35 Markers In Stream via any of the following:<br />- **Splice_Insertion**<br />- Start and Duration is required<br />- If scte35:SpliceInsert, outOfNetworkIndicator must be set to  **true**<br />- **Time Signal**<br />- Start and Duration is required<br />- If scte35:TimeSignal, then accompany by scte35:SegmentationDescriptor scte35:SegmentationUpid with segmentationTypeId set to  **one**  of the following cue-out numbers: 0x22 (start break) 0x30 (provider advertisement start) 0x32 (distributor advertisement start) 0x34 (provider placement opportunity start) 0x36 (distributor placement opportunity start)
+        SCTE-35 Markers In Stream via any of the following:  
+
+        * **Splice_Insertion**
+          * Start and Duration is required
+          * If scte35:SpliceInsert, outOfNetworkIndicator must be set to  **true**
+        * **Time Signal**
+          * Start and Duration is required
+          * If scte35:TimeSignal, then accompany by scte35:SegmentationDescriptor scte35:SegmentationUpid with segmentationTypeId set to  **one**  of the following cue-out numbers:
+            * 0x22 (start break)
+            * 0x30 (provider advertisement start)
+            * 0x32 (distributor advertisement start)
+            * 0x34 (provider placement opportunity start)
+            * 0x36 (distributor placement opportunity start)
       </td>
 
       <td>
@@ -294,7 +346,9 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        Squeezebacks * (coming soon) * **Requires Roku approval**
+        TripleLift DBI support*
+
+        *_Requires Roku approval_
       </td>
 
       <td>
@@ -308,7 +362,21 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        * Partners should not serve any ads in the channel other than the ones returned by the Roku SSAI, unless explicitly agreed in the contract.<br />- Partners should adhere to the below ad length requirements:<br />- General Audience 8 minutes of ads per hour Minimum 4 ads and maximum of 6 ads per pod Ad pod length of 2 minutes Duration between ad breaks of at least 10 minutes<br />- Kids 6 minutes of ads per hour Minimum 3 ads and maximum of 6 ads per pods Ad pod length of 90 seconds Duration between ad breaks of at least 10 minutes Bumper/lead-in identifying ad break before AND after ad pods occur (6 second maximum) Example: "We'll be right back after this break", "Now back to the show"<br />- Flexibility around the ad policy is provided during live events. Please discuss this with your Roku rep. \{#adqueuepoints} - Avoid placing ad breaks that interrupt dialogue<br />- Avoid ad breaks that interrupt a major action/dramatic scene<br />- Ad breaks should be placed with frame accuracy in logical ad break points (ex. fades to black, scene transitions, etc)<br />** * Do not include pixels, third-party tags, or Software Development Kits of any kind without express prior written approval and certification by Roku.*
+        * Partners should not serve any ads in the channel other than the ones returned by the Roku SSAI, unless explicitly agreed in the contract.
+        * Partners should adhere to the below ad length requirements:
+          * General Audience
+            * 8 minutes of ads per hour 
+            * Minimum 4 ads and maximum of 6 ads per pod 
+            * Ad pod length of 2 minutes
+        * Kids
+          * 6 minutes of ads per hour 
+          * Minimum 3 ads and maximum of 6 ads per pods
+          * Ad pod length of 90 seconds
+          * Bumper/lead-in identifying ad break before AND after ad pods occur (6 second maximum)
+            * Example: "We'll be right back after this break", "Now back to the show"
+          * Flexibility around the ad policy is provided during live events. Please discuss this with your Roku rep.
+
+        ** _Do not include pixels, third-party tags, or Software Development Kits of any kind without express prior written approval and certification by Roku._
       </td>
 
       <td>
@@ -323,6 +391,22 @@ The following outlines what we support. A preferred video set up is outlined in 
 
       <td>
         $\{adqueuepoints}
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Blackouts and Regional restrictions
+      </td>
+
+      <td>
+        * Roku supports regional restrictions on a channel level basis
+          * Currently US ZIP codes only
+        * SCTE 224 support for program level blackouts and restrictions (coming soon)
       </td>
 
       <td>
@@ -493,7 +577,7 @@ This object represents a movie.
 
 | **Field**        | **Type**                                             | **Required** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ---------------- | ---------------------------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id               | string                                               | Required     | Your immutable string reference ID for the movie. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| id               | string                                               | Required     | Your immutable string reference ID for the movie. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales and feeds from the same provider.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | title            | string                                               | Required     | Movie title. Roku uses this value for matching in Roku Search. Please use plain text and do not include extra information like year, version label, etc. No Emojis. Mixed case.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | genres           | string                                               | Required     | Array of genre strings for the movie. Must be one or more of the values listed in [genres](#genres-property) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | thumbnail        | string                                               | Required     | The URL of the primary thumbnail for the live stream. This is used within your channel and in search results.<br /><br />Landscape key art with the full title of the asset visible in a JPEG file. Image dimensions must be 1920x1080 (width x height, 16x9 aspect ratio)<br /><br />**Make sure your CDN is using the following ContentType headers**<br />- image/jpeg<br />- image/jpg Movie Object Example: \{ "id": "1509428502952", "title": "Sample Movie", "content": \{ ... }, "genres": [ "drama", "comedy", "horror" ], "thumbnail": "[https://example.org/cdn/thumbnails/1509428502952/1](https://example.org/cdn/thumbnails/1509428502952/1)", "releaseDate": "2016-01-01", "shortDescription": "Incredible movie description", "longDescription": "Even more incredible and longer movie description", "tags": [ "amazing", "drama", "comedy", "horror" ] } |
@@ -511,7 +595,7 @@ This object represents a series, such as a season of a TV show or a mini-series.
 
 | **Field**        | **Type**                                             | **Required** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------- | ---------------------------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id               | string                                               | Required     | Your immutable string reference ID for the series. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| id               | string                                               | Required     | Your immutable string reference ID for the series. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales and feeds from the same provider.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | title            | string                                               | Required     | The title of the series. Roku uses this field for matching in Roku Search. No Emojis. Mixed case.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | seasons          | [Season Object](#season-content-type)                | Required*    | One or more seasons of the series. Seasons should be used if episodes are grouped by seasons.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | episodes         | [Episode Object](#episode-content-type)              | Required*    | One or more episodes of the series. Episodes should be used if they are not grouped by seasons (e.g., a mini-series).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -561,7 +645,7 @@ Content length longer than 15 minutes:
 
 | **Field**        | **Type**                                             | **Required** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------- | ---------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| id               | string                                               | Required     | Your immutable string reference ID for the episode. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| id               | string                                               | Required     | Your immutable string reference ID for the episode. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales and feeds from the same provider.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | title            | string                                               | Required     | Episode title. Roku uses this value for matching in Roku Search. Please don’t include extra information like year, version label, etc. No Emojis. Mixed case.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | thumbnail        | string                                               | Required     | The URL of the thumbnail for the episode. This is used within your channel as a backup to series artwork and in search results where applicable.<br /><br />Landscape untitled key art in a JPEG file. Recommended image dimensions: 1920x1080 (width x height, 16x9 aspect ratio)<br /><br />**Make sure your CDN is using the following ContentType headers**<br />- image/jpeg<br />- image/jpg Episode Object Example: \{ "id": "1509428502952", "title": "The Amazing First Episode Title", "content": \{ ... }, "thumbnail": "[https://example.org/cdn/thumbnails/1509428502952/1](https://example.org/cdn/thumbnails/1509428502952/1)", "episodeNumber": 1, "shortDescription": "Marvelous episode description" } |
 | releaseDate      | string                                               | Required     | The date the episode first aired. Used to match program data to Gracenote counterpart. Conforms to the [ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm) format: \{YYYY}-\{MM}-\{DD}. E.g.: 2015-11-11                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -579,7 +663,7 @@ Short-form videos are generally less than 15 minutes long, and are not TV Shows 
 
 | **Field**        | **Type**                                             | **Required** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ---------------- | ---------------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| id               | string                                               | Required     | Your immutable string reference ID for the video. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| id               | string                                               | Required     | Your immutable string reference ID for the video. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales and feeds from the same provider.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | title            | string                                               | Required     | Video title. Roku uses this value for matching in Roku Search. Please don’t include extra information like year, version label, etc. No Emojis. Mixed case.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | thumbnail        | string                                               | Required     | The URL of the primary thumbnail for the live stream. This is used within your channel and in search results.<br /><br />Landscape key art with the full title of the asset visible in a JPEG file. Image dimensions must be 1920x1080 (width x height, 16x9 aspect ratio)<br /><br />**Make sure your CDN is using the following ContentType headers**<br />- image/jpeg<br />- image/jpg Short-form Video Object Example: \{ "id": "1509428502952", "title": "The Amazing Short-form Video", "content": \{ ... }, "thumbnail": "[https://example.org/cdn/thumbnails/1509428502952/1](https://example.org/cdn/thumbnails/1509428502952/1)", "shortDescription": "Astonishing short-form video", "releaseDate": "2016-01-01" } |
 | shortDescription | string                                               | Required     | A description of the video that does not exceed 110 characters. The text will be clipped if longer. No emojis.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -604,7 +688,7 @@ Content length longer than 15 minutes:
 
 | **Field**        | **Type**                                             | **Required** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ---------------- | ---------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id               | string                                               | Required     | Your immutable string reference ID for the TV Special. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| id               | string                                               | Required     | Your immutable string reference ID for the TV Special. THIS CANNOT CHANGE. This should serve as a unique identifier for the movie across different locales and feeds from the same provider.<br />**Note** : The ID for an asset must not exceed 50 characters and must be alphanumeric.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | title            | string                                               | Required     | Episode title. Roku uses this value for matching in Roku Search. Please don’t include extra information like year, version label, etc. No Emojis. Mixed case.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | thumbnail        | string                                               | Required     | The URL of the primary thumbnail for the live stream. This is used within your channel and in search results.<br /><br />Landscape key art with the full title of the asset visible in a JPEG file. Image dimensions must be 1920x1080 (width x height, 16x9 aspect ratio)<br /><br />**Make sure your CDN is using the following ContentType headers**<br />- image/jpeg<br />- image/jpg TV Special Object Example: \{ "id": "1509428502952", "title": "The Amazing First Episode Title", "content": \{ ... }, "genres": [ "animals", "animated", "fantasy", ], "thumbnail": "[https://example.org/cdn/thumbnails/1509428502952/1](https://example.org/cdn/thumbnails/1509428502952/1)", "shortDescription": "Unusual episode description" } |
 | genres           | string                                               | Required     | Array of genre strings for the special. Must be one or more of the values listed in [genres](#genres-property) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -871,31 +955,31 @@ Content Object Example:
 
 The following genres are supported:
 
-<Table>
+<Table align={["left","left","left","left","left","left"]}>
   <thead>
     <tr>
       <th>
-        1.
+        1. <br />
       </th>
 
       <th>
-        2.
+        2. <br />
       </th>
 
       <th>
-        3.
+        3. <br />
       </th>
 
       <th>
-        4.
+        4. <br />
       </th>
 
       <th>
-        5.
+        5. <br />
       </th>
 
       <th>
-        6.
+        6. <br />
       </th>
     </tr>
   </thead>
@@ -970,7 +1054,7 @@ The following parental ratings can be used to better help your viewers find age-
 
 Note: No content can be targeted specifically to children. No pornographic or porn industry-related content is allowed.
 
-<Table>
+<Table align={["left","left","left","left","left"]}>
   <thead>
     <tr>
       <th>

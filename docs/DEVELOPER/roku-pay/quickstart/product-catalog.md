@@ -10,12 +10,6 @@ metadata:
 next:
   description: ''
 ---
-> This document covers the new version of the in-app products UI, which is referred to as Catalog 2.0.
->
-> * If your developer account was created before April 30, 2025, Roku may upgrade your account to Catalog 2.0 to take advantage of the new complex products and improved workflow. If you are selected, you will receive a notification from Roku. If you have not been selected to upgrade to Catalog 2.0, continue to use the [legacy in-product catalog UI](doc:in-channel-products).
->
-> * If your developer account was created after April 30, 2025, it uses Catalog 2.0. Continue reading this document for how to use Catalog 2.0.
-
 ## What's new in Catalog 2.0
 
 ###### New features
@@ -78,7 +72,7 @@ In Catalog 2.0, when you schedule a price change for a purchase option, it is al
 
 To maintain separate pricing for new and existing customers, schedule a price change for new customers at the new price (the earliest price changes can go into effect is the next calendar day after you upgrade to Catalog 2.0).
 
-**30-day notice required for price increases to existing subscribers**
+**15-day notice required for price increases to existing subscribers**
 
 If you increase the price of a purchase option for existing subscribers, you must give them a 15-day notice.
 
@@ -457,7 +451,7 @@ To create a cancellation offer, follow these steps:
 
 ### Scheduling a price change for a purchase option
 
-You can schedule a price increase/decrease of a purchase option. The price change may be applied to new subscribers only or both new and existing subscribers. If you increase the price for existing subscribers, you must give them 30-days notice.
+You can schedule a price increase/decrease of a purchase option. The price change may be applied to new subscribers only or both new and existing subscribers. If you increase the price for existing subscribers, you must give them 15-days notice.
 
 > The price change goes into effect based on the the location associated with your developer account; therefore, you may need to consider time zones for when you want the price change to start.
 

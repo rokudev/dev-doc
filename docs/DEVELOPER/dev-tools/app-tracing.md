@@ -166,7 +166,7 @@ Roku's Perfetto-based app tracing solution exposes a number of terms that Roku d
 
 This following video demonstrates how you can use Perfetto to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.
 
-<video title="Catalog 2.0 Webinar" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/app-tracing-webinar-poster.png" src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/webinar-perfetto-yt.mp4"/>
+<video title="Perfetto Webinar" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/app-tracing-webinar-poster.png" src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/webinar-perfetto-yt.mp4"/>
 
 
 

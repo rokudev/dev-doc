@@ -138,10 +138,10 @@ The following examples demonstrate some of the use cases for querying your trace
 | **Use case**                                                                                                                           | **Query**                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | Find all rendezvous in order of duration (long rendezvous often cause dropped frames and may indicate inefficient observer functions). | `SELECT * FROM slices WHERE name = 'rendezvous' ORDER BY dur DESC;`       |
-| Find long executions of swapBuffers which indicate places where the app may be dropping frames                                     | `SELECT * FROM slice WHERE name = 'swapBuffers' ORDER BY dur DESC;`       |
-| Find places where the app is handling a key press with `OnKeyEvent()`                                                              | `SELECT * FROM slice WHERE name = 'keyEvent' ORDER BY dur DESC;`          |
+| Find long executions of swapBuffers which indicate places where the app may be dropping frames                                         | `SELECT * FROM slice WHERE name = 'swapBuffers' ORDER BY dur DESC;`       |
+| Find places where the app is handling a key press with `OnKeyEvent()`                                                                  | `SELECT * FROM slice WHERE name = 'keyEvent' ORDER BY dur DESC;`          |
 | Find all of the observers being called in the app.                                                                                     | `SELECT * FROM slice WHERE name = 'observer.callback' ORDER BY dur DESC;` |
-| Find all of the places where the app is calling `setField`.                                                                        | `SELECT * FROM slice WHERE name = 'roSGNode.setField' ORDER BY dur DESC;` |
+| Find all of the places where the app is calling `setField`.                                                                            | `SELECT * FROM slice WHERE name = 'roSGNode.setField' ORDER BY dur DESC;` |
 
 ## Glossary
 
@@ -159,3 +159,15 @@ Roku's Perfetto-based app tracing solution exposes a number of terms that Roku d
 | swapBuffers        | A slice representing the operation of presenting a newly rendered frame to the display.                                                                                                                                                          |
 | consumeAllTasks    | A slice representing the render thread as it is processing messages from the Render Thread Queue that are waiting. These can include rendezvous as well as messages sent using the [**roRenderThreadQueue** component](doc:rorenderthreadqueue). |
 | bscCopyToDomainEx  | A slice representing data being copied. For example, when getting or setting a field on a [**Task** node](doc:task) from the Render thread.                                                                                                      |
+
+## Video tutorial
+
+<br />
+
+This following video demonstrates how you can use Perfetto to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.
+
+<video title="Catalog 2.0 Webinar" poster="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/posters/app-tracing-webinar-poster.png" src="https://roku-sdk-docs.s3.amazonaws.com/videos/webinars/webinar-perfetto-yt.mp4"/>
+
+
+
+<br />

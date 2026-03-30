@@ -111,7 +111,7 @@ If both the device registry and Roku cloud do not contain a valid access token, 
    myChannelStore.command = "getUserData"
    ```
 
-2. When you call the the **ChannelStore.getUserData** command, a "Request for information" screen is displayed automatically. It asks the customer whether your app can access the account information linked to their email address and name.
+2. When you call the **ChannelStore.getUserData** command, a "Request for information" screen is displayed automatically. It asks the customer whether your app can access the account information linked to their email address and name.
 
 
 

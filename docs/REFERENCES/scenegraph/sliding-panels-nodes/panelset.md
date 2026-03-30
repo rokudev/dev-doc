@@ -65,7 +65,7 @@ The PanelSet node assumes that:
 | Field         | Type    | Default | Access Permission | Description                                                                                                                                                      |
 |---------------|---------|---------|-------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | width         | float   | 1280    | READ_WRITE        | Specifies the width of the PanelSet node. In most cases, this is set to the display width (such as 1280 for HD).                                         |
-| height        | float   | 605     | READ_WRITE        | Specifies the height of the PanelSet node. In most cases, this is set to the the display height minus the overhang height.                               |
+| height        | float   | 605     | READ_WRITE        | Specifies the height of the PanelSet node. In most cases, this is set to the display height minus the overhang height.                               |
 | slideDuration | integer | 500     | READ_WRITE        | Milliseconds of the slide transition. The default is 1/2 second.                                                                                         |
 | numPanels     | integer | 0       | READ_ONLY         | Contains the current number of Panel nodes that are children of the PanelSet node.                                                             |
 | isGoingBack   | Boolean | false   | READ_ONLY         | Set to true when the PanelSet node panels are sliding right, *back* towards the original home position, as a result of a **Left** or **Back** key press. |

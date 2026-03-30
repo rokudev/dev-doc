@@ -453,7 +453,7 @@ To create a cancellation offer, follow these steps:
 
 You can schedule a price increase/decrease of a purchase option. The price change may be applied to new subscribers only or both new and existing subscribers. If you increase the price for existing subscribers, you must give them 15-days notice.
 
-> The price change goes into effect based on the the location associated with your developer account; therefore, you may need to consider time zones for when you want the price change to start.
+> The price change goes into effect based on the location associated with your developer account; therefore, you may need to consider time zones for when you want the price change to start.
 
 To schedule a price change for a purchase option, follow these steps:
 

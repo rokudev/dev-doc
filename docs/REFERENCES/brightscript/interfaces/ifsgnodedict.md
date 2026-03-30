@@ -184,4 +184,4 @@ Checks whether the specified callable function exists.
 
 #### Return Value
 
-A flag indicating whether the the specified callable function exists.
+A flag indicating whether the specified callable function exists.

@@ -937,7 +937,7 @@ Returns the system's uptime since the last reboot (in milliseconds as a Long). T
 
 #### Return Value
 
-A Long indicating the the system's uptime since the last reboot (in milliseconds).
+A Long indicating the system's uptime since the last reboot (in milliseconds).
 
 ### GetInternetStatus() as Boolean
 
@@ -1065,7 +1065,7 @@ An associative array with the following key-value pairs:
 
     <tr>
       <td>expectedThroughput</td>
-      <td>The actual speed of the connection.  This rate may be significantly lower than the theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.</td>
+      <td>The actual speed of the connection.  This rate may be significantly lower than theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.</td>
     </tr>
 
     <tr>

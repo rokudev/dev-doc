@@ -206,7 +206,7 @@ To obtain and validate the customers' account credentials, follow these steps:
    myChannelStore.command = "getUserData"
    ```
 
-2. When you call the the **ChannelStore.getUserData** command, a "Request for information" (RFI) screen is displayed automatically. It guides the customer to create an account in your system using their Roku account information.
+2. When you call the **ChannelStore.getUserData** command, a "Request for information" (RFI) screen is displayed automatically. It guides the customer to create an account in your system using their Roku account information.
 
    <Image alt="roku815px - signup-2-rfi" border={false} src="https://image.roku.com/ZHZscHItMTc2/signup-rfi-getuserdata-v2.jpg" />
 
@@ -285,7 +285,7 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
 
    `myChannelStore.command = "getUserData"`
 
-3. When you call the the **ChannelStore.getUserData** command, a "Request for information" (RFI) screen is displayed automatically. It guides the customer to share the email address and/or phone number in their Roku customer account with the app in order to sign in.
+3. When you call the **ChannelStore.getUserData** command, a "Request for information" (RFI) screen is displayed automatically. It guides the customer to share the email address and/or phone number in their Roku customer account with the app in order to sign in.
 
    <Image alt="roku815px - signin-2-rfi-splash" border={false} src="https://image.roku.com/ZHZscHItMTc2/signin-2-rfi-splash-v2.jpg" />
 

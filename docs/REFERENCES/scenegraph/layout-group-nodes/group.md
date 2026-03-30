@@ -18,9 +18,9 @@ Each Group defines a local coordinate system relative to the coordinate system o
 The 2D matrix is computed using the values of these four fields in the following order:
 
 * translating by the negative of the scaleRotateCenter field value
-* scaling by the the scale field value
+* scaling by the scale field value
 * rotating by the rotation field value
-* translating by the the scaleRotateCenter field value
+* translating by the scaleRotateCenter field value
 * translating by the translation field value
 
 In matrix math terms, the overall 2D matrix is:

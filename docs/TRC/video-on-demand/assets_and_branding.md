@@ -252,7 +252,7 @@ Below is a list of details, best practices, and dimensions sizes for each partne
 <td><img alt="roku400px - premium-asset-49" src="https://image.roku.com/ZHZscHItMTc2/premium-asset-49-v2.jpg" /></td>
 </tr>
 <tr>
-<td><strong>Dimensions</strong><br /><br />Depending on the design of your brand’s logo, scale it to fit the the canvas provided.<br /><br />After re-sizing your logo, please crop the logo so there is no margin between your logo and the edge of canvas.<br /><br />Link to PSD source files:<br /><strong><a href="https://devtools.web.roku.com/samples/PS_AssetsTRC_Tile_540x405.psd">Large</a></strong> | <strong><a href="https://devtools.web.roku.com/samples/PS_AssetsTRC_Tile_290x218.psd">Small</a></strong></td>
+<td><strong>Dimensions</strong><br /><br />Depending on the design of your brand’s logo, scale it to fit the canvas provided.<br /><br />After re-sizing your logo, please crop the logo so there is no margin between your logo and the edge of canvas.<br /><br />Link to PSD source files:<br /><strong><a href="https://devtools.web.roku.com/samples/PS_AssetsTRC_Tile_540x405.psd">Large</a></strong> | <strong><a href="https://devtools.web.roku.com/samples/PS_AssetsTRC_Tile_290x218.psd">Small</a></strong></td>
 <td><img alt="roku400px - premium-asset-50" src="https://image.roku.com/ZHZscHItMTc2/premium-asset-50.jpg" /><br /><br /><img alt="roku400px - premium-asset-51" src="https://image.roku.com/ZHZscHItMTc2/premium-asset-51.jpg" /><br /><img alt="roku400px - premium-asset-52" src="https://image.roku.com/ZHZscHItMTc2/premium-asset-52.jpg" /><br /><strong>Both sizes required.</strong></td>
 </tr>
 </tbody>

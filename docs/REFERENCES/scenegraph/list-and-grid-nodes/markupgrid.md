@@ -544,7 +544,7 @@ The section root ContentNodes use the following attributes:
     <tr>
       <td><code>H</code></td>
       <td>integer</td>
-      <td>When the fixedLayout field is set to true, this specifies how many rows the grid item occupies. If not specified, the default value of 1 is used.<br /><br />For example, if a grid item is to occupy the the third, fourth and fifth rows, Y would be set to 2 and W would be set to 3.</td>
+      <td>When the fixedLayout field is set to true, this specifies how many rows the grid item occupies. If not specified, the default value of 1 is used.<br /><br />For example, if a grid item is to occupy the third, fourth and fifth rows, Y would be set to 2 and W would be set to 3.</td>
     </tr>
   </tbody>
 </table>

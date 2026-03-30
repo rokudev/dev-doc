@@ -15,7 +15,7 @@ next:
 Lists and grids are important screen elements for the application user
 interface. Lists and grids allow the user to choose from a selection of
 items that, for example, can include the title of movie to rent or
-purchase, and a graphic image of the theater poster for the movie. The
+purchase, and a graphic image of theater poster for the movie. The
 SceneGraph API allows you to include several data items for each item in
 the list or grid, such as the price to rent or buy the movie, and to
 display this information to the user when the user selects the item.

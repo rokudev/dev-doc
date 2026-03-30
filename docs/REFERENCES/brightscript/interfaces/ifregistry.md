@@ -38,7 +38,7 @@ end if
 
 #### Return Value
 
-An integer representing the the number of bytes available in the device registry.
+An integer representing the number of bytes available in the device registry.
 
 ### GetSectionList() as Object
 

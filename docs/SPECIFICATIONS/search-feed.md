@@ -626,6 +626,375 @@ Provide a list of IDs and sources to be used for linking external metadata to th
   </tbody>
 </table>
 
+<br />
+
+## Live feed specification
+
+Apps in the U.S. Streaming Store with 24/7 live linear streams can participate in Roku's Live Search by creating and submitting a web-hosted JSON feed that includes the 24/7 live channels in their service. The Roku Live Search feed is modeled after Roku's Search feed JSON specification above, but requires only a small subset of fields. One of the fields is the **externalIds** field, which contains the Gracenote station IDs for the live channels to be discoverable.
+
+Your search feed may only include channels directly distributed by your app. Do not include channels offered through third-party channel subscriptions (subscriptions or add-ons that require a separate publisher account).
+
+> The live liner integration requires Gracenote Station IDs. Individual live events or channels without Gracenote Station IDs are currently not supported. Roku uses Gracenote EPG and GSD data (schedule of event IDs). Publishers are responsiiblwe for contacting Gracenote to get their Station IDs.
+
+### Specifications
+
+#### Root
+
+The root of the JSON file contains basic information such as the feed specification version, the default language, default availability for different regions, and the list of live channels.
+
+| **Field**                    | **Type**                                                                                                    | **Description**                                                                                                                                                    | **Required/Optional**                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| version                      | String                                                                                                      | Roku JSON feed version (use "1").                                                                                                                                  | Required                                                                    |
+| defaultLanguage              | String                                                                                                      | The [ISO 639-1 two-letter language code](https://www.loc.gov/standards/iso639-2/php/code_list.php) to be used when the language is not specified for an asset.     | Required (if you do not provide the language for each asset).               |
+| defaultAvailabilityCountries | String[]                                                                                                    | The list of [ISO Alpha-2 two-letter country codes](https://www.iso.org/obp/ui/#search) to be used when **availabilityInfo.country** is not specified for an asset. | Required (if you do not provide the availability countries for each asset). |
+| assets                       | [Asset](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Asset)[] | The list of live channels in the distributor's service to be surfaced in Roku's Search.                                                                            | Required                                                                    |
+
+#### Asset
+
+An asset represents a specific live channel in the distributor's service. It contains all the metadata for displaying the live channel in the Roku Search UI and directly launching the channel via deeplinking when selected.
+
+| **Field**   | **Type**                                                                                                              | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | **Required/Optional** |
+| ----------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| id          | String                                                                                                                | A maximum 50-character immutable unique ID for the live channel. This ID is used by the distributor for reference.Once an ID is created for a channel, it may not be changed. The id must be unique within the feed. If the feed contains duplicate IDs, only one of the items with the duplicated ID is preserved.                                                                                                                                                                                                                                                                     | Required              |
+| type        | Enum                                                                                                                  | The media type of the live channel, which is **liveStream**. Channels use the type to determine how to launch content.Typically, the type specified in the search feed is directly passed into deep link requests to channels. In this integration, however, the "liveStream" type specified in the feed is sent as a "livefeed" mediaType in deep link requests. Channels participating in Roku's Live Search Feed must therefore launch the channel specified in the **playId** field directly into playback upon receiving a deep link request with the mediaType set to "livefeed". | Required              |
+| externalIds | [ExternalId](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#ExternalId)[] | The list of Gracenote tech IDs (prgSvcID) for the live channels to be discoverable through the Roku Search customer experience.   Roku uses Gracenote stationIDs to obtain EPG and GSD data. Partners need to contact Gracenote directly to obtain stationIDs for their livelinear channels.                                                                                                                                                                                                                                                                                            | Required              |
+| content     | [Content](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Content)         | Contains options for playing the live channel. The Content object includes a **playOptions** field that specifies the availability, pricing, licensing, quality, and playId (for deep linking into content from Roku Search) for the live channel.                                                                                                                                                                                                                                                                                                                                      | Required              |
+| tags        | String[]                                                                                                              | A list of one or more distributor-specific strings for categorizing the channel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Optional              |
+
+#### ExternalId
+
+The Gracenote tech ID (prgSvcId) for the live channel to be made discoverable through the Roku Search customer experience.
+
+| **Field**   | **Type** | **Description**                                                                                                                                    | **Required** |
+| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| id          | String   | The prgSvcId for the channel.                                                                                                                      | Required     |
+| channelName | String   | A human-readable channel name associated with the channel specified in the **externalId.id** field. This helps Roku debug your Search integration. | Required     |
+| source      | String   | The source of the ID, which must be set to the following value: **GRACENOTE_STATION_ID**                                                           | Required     |
+
+#### Content
+
+| **Field**   | **Type**                                                                                                              | **Description**                                   | **Required** |
+| ----------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------ |
+| playOptions | [PlayOption](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#PlayOption)[] | The list of options for playing the live channel. | Required     |
+
+#### PlayOption
+
+In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md) into content from Roku Search) for the live channel.
+
+<Table>
+  <thead>
+    <tr>
+      <th>
+        **Field**
+      </th>
+
+      <th>
+        **Type**
+      </th>
+
+      <th>
+        **Description**
+      </th>
+
+      <th>
+        **Required**
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        license
+      </td>
+
+      <td>
+        Enum
+      </td>
+
+      <td>
+        The type of licensing terms for the channel.  
+
+        * **free**: Channel is directly playable upon being deep linked.
+        * **subscription**: Channel is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the channel typically displays a subscription sign-up page when receiving deep links into channels that are behind a paywall. This integration does not consider whether a channel is part of a basic or premium package. Channels that are only accessible via a premium package should be considered as "subscription".
+      </td>
+
+      <td>
+        Required
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        quality
+      </td>
+
+      <td>
+        Enum
+      </td>
+
+      <td>
+        The playback resolution of the live channel:  
+
+        * SD
+        * HD
+        * HD+
+        * FHD
+        * UHD.
+      </td>
+
+      <td>
+        Required
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        playId
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        A unique, immutable ID for the live channel that is used for deep linking. When customers search for this content item and select your channel to watch it, the **playId** is passed in a [deep link](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) back to your channel. The playId may not be a URL. If you require this ID to be a URL please talk to your partner manager.
+      </td>
+
+      <td>
+        Required
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        availabilityInfo
+      </td>
+
+      <td>
+        [AvailabilityInfo](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#AvailabilityInfo)
+      </td>
+
+      <td>
+        May include following: countryrestriction
+      </td>
+
+      <td>
+        Required if defaults are not specified.
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+#### AvailabilityInfo
+
+| **Field**   | **Type**                                                                                                                | **Description**                      | **Required** |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
+| country     | String[]                                                                                                                | countries where playOption available | Required     |
+| restriction | [Restriction](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Restriction)[] | any restriction information          |              |
+
+#### Restriction
+
+| **Field** | **Type**                                                                                                                                | **Description**                         | **Required** |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
+| allow     | boolean                                                                                                                                 | true for allowlist, false for blocklist |              |
+| type      | [RestrictionType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionType)           | geo                                     | Required     |
+| valueType | [RestrictionValueType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionValueType) | type of the values (postal_code or dma) |              |
+| values    | String[]                                                                                                                                |                                         |              |
+
+### Live stream sample feed
+
+The following example demonstrates the proper implementation of the various feed segments and fields for a live stream:
+
+```
+{ 
+ "version": "1", 
+ "defaultLanguage": "en", 
+ "defaultAvailabilityCountries": [ 
+  "US" 
+ ], 
+ "assets": [ 
+  { 
+   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020", 
+   "type": "liveStream", 
+   "content": { 
+    "playOptions": [ 
+     { 
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
+      "license": "free", 
+      "quality": "HD" 
+     }, 
+     { 
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)", 
+      "license": "free", 
+      "quality": "UHD" 
+     } 
+    ] 
+   }, 
+   "externalIds": [ 
+    { 
+     "source": "GRACENOTE_STATION_ID", 
+     "id": "ABCDE" 
+    } 
+   ], 
+   "tags": [ 
+    "partner_channel" 
+   ] 
+  }, 
+  { 
+   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020", 
+   "type": "liveStream", 
+   "content": { 
+    "playOptions": [ 
+     { 
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
+      "license": "free", 
+      "quality": "HD", 
+      "availabilityInfo": { 
+       "country": [ 
+        "us" 
+       ], 
+       "restrictions": [ 
+        { 
+         "allow": true, 
+         "type": "geo", 
+         "valueType": "postal_code", 
+         "values": [ 
+          "19468", 
+          "19462", 
+          "19465", 
+          "19464" 
+         ] 
+        } 
+       ] 
+      } 
+     }, 
+     { 
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)", 
+      "license": "free", 
+      "quality": "UHD", 
+      "availabilityInfo": { 
+       "country": [ 
+        "us" 
+       ], 
+       "restrictions": [ 
+        { 
+         "allow": false, 
+         "type": "geo", 
+         "valueType": "postal_code", 
+         "values": [ 
+          "19468", 
+          "19462", 
+          "19465", 
+          "19464" 
+         ] 
+        } 
+       ] 
+      } 
+     } 
+    ] 
+   }, 
+   "externalIds": [ 
+    { 
+     "source": "GRACENOTE_STATION_ID", 
+     "id": "RegionalABCDE" 
+    } 
+   ], 
+   "tags": [ 
+    "regional_partner_channel" 
+   ] 
+  } 
+ ] 
+} 
+```
+
+### Managing a feed that includes VOD content
+
+You can maintain a single feed that includes both Livestream and VOD content. To add VOD content to your feed, follow the [Roku Search feed specification](https://developer.roku.com/docs/specs/search/search-feed.md). In addition, make sure that your combined feed includes a **defaultAvailabiliityPlatforms** field and that it accurately specifies in which countries content is available (using the **root.defaultAvailabilityCountries** and **asset.availabilityInfo** fields).
+
+The following example demonstrates a feed that includes both Live and VOD content:
+
+```
+{ 
+ "version": "1", 
+ "defaultLanguage": "en", 
+ "defaultAvailabilityCountries": [ 
+  "us", "mx" 
+ ], 
+ "defaultAvailabilityPlatforms": [ 
+  "all" 
+ ], 
+ "assets": [{ 
+  "id": "shortform-voice-control", 
+  "type": "shortForm", 
+  "titles": [{ 
+   "value": "Voice Features", 
+   "language": "en" 
+  }], 
+  "shortDescriptions": [{ 
+   "value": "A video highlighting Direct to Play and Enhanced Voice Control features", 
+   "language": "en" 
+  }], 
+  "releaseDate": "2020-01-17", 
+  "genres": [ 
+   "educational" 
+  ], 
+  "advisoryRatings": [{ 
+   "source": "USA_PR", 
+   "value": "TVG" 
+   }, 
+   { 
+   "source": "RTC", 
+   "value": "A" 
+   } 
+  ], 
+  "images": [{ 
+   "type": "main", 
+   "url": "https://image.roku.com/ZHZscHItMTc2/roku-dev-search.png", 
+   "languages": [ 
+   "en", 
+   "es" 
+   ] 
+  }], 
+  "durationInSeconds": 98, 
+  "content": { 
+   "playOptions": [{ 
+   "license": "free", 
+   "quality": "UHD", 
+   "playId": "shortform-voice-control", 
+   "availabilityStartTimeStamp": 1565085600000, 
+   "availabilityEndTimeStamp": 1593597600000, 
+   "availabilityInfo": { 
+    "country": [ 
+    "us", 
+    "mx" 
+    ] 
+   } 
+   }] 
+  } 
+  }, 
+  { 
+  "id": "liveshow", 
+  "type": "liveStream", 
+  "content": { 
+   "playOptions": [{ 
+   "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
+   "license": "free", 
+   "quality": "HD" 
+   }] 
+  }, 
+  "externalIds": [{ 
+   "source": "GRACENOTE_STATION_ID", 
+   "id": "ABCDE" 
+  }], 
+  "tags": [ 
+   "partner_channel" 
+  ] 
+  } 
+ ] 
+} 
+```
+
 ## Pagination
 
 Pagination can be used to separate a single search feed into multiple discrete pages of smaller size (250MB maximum). This reduces the payload of the feed, which improves the performance of the publisher's and Roku's servers and optimizes the download frequency.

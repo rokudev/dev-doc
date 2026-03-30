@@ -14,9 +14,15 @@ Continue Watching is a content category row within the **What to Watch** home sc
 
 ![roku815px - continue watching row](https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png)
 
-> The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
+<br />
+
+> The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canada, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
-> Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](doc:certification#4-app-operation). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
+> **Certification requirement**:
+>
+> * Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](/docs/developer-program/certification/certification.md#4-channel-operation).
+> * Effective October 1st, 2026, apps outside the U.S. Streaming Store that have streamed more than an average of 1 million hours per month over the last three months must participate in Roku’s Continue Watching program.
+> * This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 >
 > Continue Watching only supports long-form content such as movies and television episodes. Short-form content (standalone content that is 15 minutes or less that is not a movie or TV show) is not supported.
 

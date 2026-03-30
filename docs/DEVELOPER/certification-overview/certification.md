@@ -128,7 +128,7 @@ Certification criteria may be applicable to one or more app model types supporte
 
 ## Certification criteria
 
-**Last updated**: October, 2025
+**Last updated**: April, 2026
 
 Certification criteria are listed by functionality. <br />
 
@@ -138,9 +138,9 @@ Certification criteria are listed by functionality. <br />
 
 ### 2. Purchases
 
-**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements). Apps must disclose integration/use of all non-Roku SDKs and libraries, and app features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and app features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their app other than Roku Pay.
+**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements). 
 
-**2.2** Apps that include authentication must complete account sign-ups and sign-ins on the device using [On-device authentication](doc:on-device-authentication). Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms.
+**2.2** Apps must integrate [On-device authentication](doc:on-device-authentication). Sign-up/sign-in workflows are prohibited from using external webpages, links to off-device promotional or marketing materials, or any other 1st or 3rd-party sign-up/sign-in/authentication mechanism.
 
 Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade). The upgrade/downgrade workflows are prohibited from including external webpages.
 
@@ -150,9 +150,9 @@ Apps' ISU integration must include offers for lapsed and canceled subscribers. T
 
 Apps must return a product offer to Roku for all current non-subscribers. This ensures that all non-subscribed customers receive a product offer on all touchpoints. This helps drive subscription sign-ups, particularly for lapsed and cancelled customers.
 
-<br />
-
 **2.4** Apps are prohibited from including nested content or applications, additional content via browsers or embedded screens, deep links to other applications, or any cross-app functionality.
+
+**2.5** Apps must disclose integration/use of all non-Roku SDKs, libraries, and/or app features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and/or app features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their app other than Roku Pay.
 
 ### 3. Performance
 
@@ -206,11 +206,13 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 **4.12** Apps must use [Roku voice keyboards](doc:dynamic-keyboard-base) for [email](doc:dynamic-keyboard), [PIN](doc:dynamic-pinpad), and [password](doc:dynamic-keyboard) entry.
 
-**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Continue Watching](doc:continue-watching) feature. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
+**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months and apps outside the U.S. Streaming Store that have streamed more than an average of 1million hours per month over the last three months (effective October 1, 2026) must implement Roku’s [Continue Watching](doc:continue-watching) feature. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
+
+**4.14** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Instant Resume feature](doc:instant-resume) (effective October 1, 2026).
 
 ### 5. Deep linking
 
-**5.1** Apps must support deep linking for all media types, per Roku's [deep linking policy](doc:implementing-deep-linking). Live streams (and replays of live broadcast streams) may be exempt from this requirement.
+**5.1** Apps must support deep linking for all media types, per Roku's [deep linking policy](doc:implementing-deep-linking). 
 
 **5.2**  Apps must implement [Direct to Play](doc:direct-to-play) to support direct voice playback commands for launching and playing content.
 

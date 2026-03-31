@@ -1,7 +1,7 @@
 ---
 title: This is a test
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

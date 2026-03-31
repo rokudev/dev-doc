@@ -26,6 +26,94 @@ To record a trace, developers need the following:
   * For a [beta](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#beta-channel-guidelines) or [production](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)). 
 * Trace recording app. You can record an app trace using [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript) or ECP and a websocket client.
 
+## Using VSCode to enable and record Perfetto traces
+
+You can enable and record a Perfetto trace with the [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript) following these steps:
+
+### Enabling Perfetto
+
+1. Verify that you have done the following:
+
+   1. Installed VSCode.
+   2. Installed the latest version of [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript).
+   3. Created a [**launch.json** configuration file](https://rokucommunity.github.io/vscode-brightscript-language/Debugging/index.html) in your app directory.
+   4. Updated your Roku device to Roku OS 15.2 (or later)
+
+2. In the **launch.json** file, add the following **profiling** object to the **configurations** object:
+
+   ```
+   {
+       "version": "0.2.0",
+       "configurations": [
+         {
+           "type": "brightscript",
+           "request": "launch",
+           "name": "BrightScript Debug: Launch",
+           "host": "<Roku device IP address>",
+           "password": "<Roku device password>",
+
+            //add the following to enable Perfetto tracing   
+           "profiling": {
+               "tracing": {
+                   "enable": true,
+               }
+             }
+           }
+       ]
+   }
+   ```
+
+### Recording a Perfetto trace
+
+To record trace data for a session in VSCode, follow these steps:
+
+1. In VS Code, add your app folder (select **File** > **Open Folder**).
+
+   ![perfetto-ui-overview - roku600px](https://image.roku.com/ZHZscHItMTc2/vscode-open-folder.png)
+
+2. Select **Run>Start Debugging** (or press F5) to sideload your app. Tracing begins automatically.
+
+3. Test your app.
+
+4. When you are done testing, click the red **Stop Perfetto Tracing** button.
+
+   ![perfetto-ui-overview - roku400px](https://image.roku.com/ZHZscHItMTc2/stop-perfetto.png)
+
+5. The recorded Perfetto trace opens in a new window. Use the WASD keys on your keyboard to zoom and pan, and use your mouse to expand process tracks (rows) into their constituent thread tracks.
+
+   ![perfetto-ui-overview - roku600px](https://image.roku.com/ZHZscHItMTc2/vscode-peretto-visual.png)
+
+### Capturing heap graphs
+
+To capture the BrightScript heap graph, follow these steps:
+
+1. Start recording a trace and test your app.
+
+2. Click the **Capture heap snapshot** button one or more times during the recording.
+
+   ![perfetto-ui-overview - roku400px](https://image.roku.com/ZHZscHItMTc2/capture-heap-snapshot.png)
+
+3. Click the **Stop Perfetto Tracing** button when you are done testing.
+
+4. The **Java heap graph** in the **Current Selection** tab displays the SceneGraph and BrightScript objects as a [flamegraph](https://www.brendangregg.com/flamegraphs.html). You can sort the objects either by allocation size or object count, ordering callstacks from left-to-right according to which have the largest size or count.
+
+   ![perfetto-ui-overview - roku600px](https://image.roku.com/ZHZscHItMTc2/capture-heap-snapshot-2.png)
+
+5. A single Perfetto trace can hold multiple heap graphs, with each heap graph represented by a selectable **Heap Profile** event.
+
+   ![perfetto-ui-overview - roku600px](https://image.roku.com/ZHZscHItMTc2/select-heap-profile.png)
+
+> **Shortest Path used to display heap graph**
+> The heap graph is always shown as the shortest path from a _root_ to any given object. This can sometimes lead to charts that might have unexpected structure. For example, if you have a Scene that owns a Grid which in turn owns a ContentNode, you might expect a chart reflecting this:
+>
+> ```
+> == MyScene ==========
+> -- MyGrid ---------
+>     - MyContentNode -
+> ```
+>
+> However, if there is also a reference to the content node from directly from the domain - perhaps because it is referenced by a local variable, then this path will be preferentially displayed:
+
 ## Using ECP to enable and record Perfetto traces
 
 You can enable and record a Perfetto trace with ECP following these steps:
@@ -66,7 +154,17 @@ websocat --binary ws://$ip:8060/perfetto-session > perfetto_data.trace
 
 Data stops streaming when the client disconnects. If the client reconnects, the stream resumes.
 
-> * Roku only supports a single websocket connection at a time.
+> Roku only supports a single websocket connection at a time.
+
+### Visualizing trace files in Perfetto
+
+You can open trace files with the [Perfetto UI](https://ui.perfetto.dev/) to analyze them and pinpoint potential optimizations. Perfetto features a timeline view that provides a visual representation of the trace.
+
+You can use the W,A,S,D keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks.
+
+![perfetto-visualize](https://image.roku.com/ZHZscHItMTc2/perfetto-visualize.png)
+
+##
 
 ## Adding custom trace data
 
@@ -114,12 +212,6 @@ You can use the roPerfetto BrightScript component to capture custom events in a 
     </tr>
   </tbody>
 </table>
-
-## Visualizing trace files in Perfetto
-
-You can open trace files with the [Perfetto UI](https://ui.perfetto.dev/) to analyze them and pinpoint potential optimizations. Perfetto features a timeline view that provides a visual representation of the trace.
-
-You can use the W,A,S,D keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks.
 
 ![perfetto-visualize](https://image.roku.com/ZHZscHItMTc2/perfetto-visualize.png)
 

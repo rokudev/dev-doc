@@ -9,11 +9,11 @@ metadata:
   description: ''
   robots: index
 ---
-Starting with Roku OS 15.1, you can use [Perfetto](https://perfetto.dev/docs/) to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance. Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.
+You can use [Perfetto](https://perfetto.dev/docs/) to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.
 
-With Roku ECP and a Websocket client, you can launch your app, record and save a trace, and then open it in Perfetto. You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.
+The [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript) lets you launch your app, record and save a trace, and then view it in Perfetto directly (alternatively, you can use ECP to record a trace and view it in Perfetto). You can then explore the trace in Perfetto by using the WASD keys on your keyboard to zoom and pan, and your mouse to expand process tracks (rows) into their constituent thread tracks. You can also execute SQL-based queries in Perfetto.
 
-![perfetto-ui-overview](https://image.roku.com/ZHZscHItMTc2/perfetto-ui-overview.png)
+![perfetto-ui-overview](https://image.roku.com/ZHZscHItMTc2/perfetto-ui.png)
 
 ## Prerequisites
 
@@ -23,8 +23,8 @@ To record a trace, developers need the following:
 * A Roku device with [developer mode enabled](doc:developer-setup).
 * Roku app (you can record a trace with an app running in a [sideloaded](doc:developer-setup#sideloading-apps), beta, or production environment).
   * For a sideloaded app, the manifest must enable the **run_as_process** attribute (run_as_process=1).
-  * For a [beta](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#beta-channel-guidelines) or [production](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)).
-* Trace recording app. You can record an app trace via ECP and a websocket client.
+  * For a [beta](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#beta-channel-guidelines) or [production](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)). 
+* Trace recording app. You can record an app trace using [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript) or ECP and a websocket client.
 
 ## Using ECP to enable and record Perfetto traces
 

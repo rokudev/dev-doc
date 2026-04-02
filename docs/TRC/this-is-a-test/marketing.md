@@ -32,6 +32,10 @@ If your organization has a Premium Subscription storefront but does not yet have
 
 ## What You Can Do
 
+### Featured Row
+
+The top row on your channel storefront. By default, this row is populated by Roku’s recommendation system and enhanced with partner-pinned titles.
+
 ### Manage the Featured Row
 
 View and edit all titles currently pinned in your Featured row, including their positions and metadata.
@@ -39,9 +43,9 @@ View and edit all titles currently pinned in your Featured row, including their 
 [Screenshot Placeholder: Featured Row Management UI]
 Description: Full-page view of the Featured Row editor showing pinned titles in order (positions labeled #1–#40), including metadata such as title name, thumbnail, and position. Include the “X of 40 slots pinned” indicator.
 
-### Pin Titles to Specific Positions
+### Pinned Titles
 
-Assign titles to fixed positions (for example, position #1 or #5) to control layout and visibility.
+Titles you assign to specific positions in the Featured row for a limited time. These override recommendation-driven placements in those positions while active.
 
 ### Schedule Featured Titles
 
@@ -58,6 +62,10 @@ Preview both current and future Featured rows to understand how your storefront 
 ### Search and Select Eligible Titles
 
 Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.
+
+### Recommendation-Filled Positions
+
+Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete and personalized row.
 
 ### Track Changes and Ownership
 

@@ -272,7 +272,7 @@ The following table explains each column in the title table.
       </td>
 
       <td>
-        A service represents how your content is distributed and monetized on The Roku Channel. Examples include **TRC AVOD**, **TRC O&O FAST**, and **Premium subscription**. A single title may appear under multiple services depending on its rights.
+        A service represents how your content is distributed and monetized on The Roku Channel. Examples include **TRC AVOD**, **TRC O&O FAST**, and one of your Premium subscriptions such as **Howdy**. A single title may appear under multiple services depending on its rights.
       </td>
     </tr>
 

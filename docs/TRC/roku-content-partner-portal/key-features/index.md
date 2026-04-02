@@ -18,7 +18,7 @@ The Content Partner Portal brings together the core tools you need to manage, mo
 
 Track the progress of your content from delivery through publication. Title Tracking Status provides clear visibility into where each title is in the pipeline, helping you quickly identify delays, resolve issues, and stay aligned with launch timelines.
 
-Want to learn more, check out [Title Tracking](doc:title-tracking).
+Want to learn more, check out [Title Tracking](doc:title-tracking-status).
 
 # Storefront
 

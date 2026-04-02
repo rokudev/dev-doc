@@ -14,6 +14,16 @@ The Creatives section is where you upload, manage, and organize the visual asset
 
 <br />
 
+## Getting access
+
+To use this feature, get the appropriate role assigned to your account.
+
+1. Request **Marketing Manager** access from your company’s account administrator.
+2. Ask your administrator to grant access based on your responsibilities, such as storefront and creative management.
+3. Contact your internal team if you are not sure who your administrator is.
+
+<br />
+
 ## What You Can Do
 
 ### Upload and Manage Brand Assets

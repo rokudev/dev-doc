@@ -14,7 +14,7 @@ While you control which titles are featured, unpinned positions are automaticall
 
 <br />
 
-# Who This Is For
+## Who This Is For
 
 This feature is designed for partners responsible for marketing, merchandising, and audience growth.
 

@@ -109,7 +109,39 @@ Once dailies have been uploaded to [Frame.io](http://frame.io/), please send a n
 
 #### 3.3.3 Dailies memo
 
-A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution.
+A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution. Please include at least the following information:
+
+CAPTURE
+
+Camera(s) utilized
+
+For each camera model, please provide:
+
+Video Resolution
+
+Acquisition Codec
+
+Frame rate(s)
+
+Audio sample rate and bit depth
+
+Please confirm that video will be captured log/flat and that no LUT/color grade will be baked into the footage at capture
+
+OFFLOAD
+
+Utility/Process used for offload
+
+Checksum Algorithm used
+
+DAILIES & EDIT PROXY PROCESS
+
+Program utilized for creation
+
+Processing method & workflow utilized, including where in process LUT/color applied
+
+Edit Proxies codec & frame rate and Dailies codec & frame rate
+
+Raster/Resolution
 
 ## 4. Security
 

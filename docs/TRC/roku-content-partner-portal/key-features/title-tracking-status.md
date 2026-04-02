@@ -367,7 +367,7 @@ The following table explains each column in the title table.
 
 <br />
 
-# How to read a row
+## How to read a row
 
 When reviewing a title:
 
@@ -388,7 +388,7 @@ To investigate territory-level differences, expand the row.
 
 <br />
 
-# Default sorting
+## Default sorting
 
 By default, titles are sorted by the date they were added, with the most recently added titles shown first.
 
@@ -409,7 +409,7 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 
 <br />
 
-# Viewing status by territory
+## Viewing status by territory
 
 Some titles have different statuses across regions.
 
@@ -422,7 +422,7 @@ To view details:
 
 Show a title expanded with 2–3 territory cards, including mixed statuses (for example, **Live** + **Unfulfilled**).
 
-## How to read the Territories panel
+### How to read the Territories panel
 
 Each card shows:
 
@@ -431,7 +431,7 @@ Each card shows:
 * License type
 * Availability window
 
-## Understanding mixed status
+### Understanding mixed status
 
 **Example**
 
@@ -449,7 +449,7 @@ Use the panel to:
 
 <br />
 
-# Using search and filters
+## Using search and filters
 
 Use search to find titles by:
 
@@ -466,7 +466,7 @@ Use filters to narrow results by:
 * Expected start period
 * Expected end period
 
-## Expected start period
+### Expected start period
 
 This filter shows titles whose **Expected start date** falls within a selected timeframe.
 
@@ -484,7 +484,7 @@ Use this filter to:
 * prepare for upcoming releases
 * monitor near-term availability
 
-## Expected end period
+### Expected end period
 
 This filter shows titles whose **Expected end date** falls within a selected timeframe.
 

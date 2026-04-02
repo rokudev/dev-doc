@@ -392,9 +392,9 @@ For TV content, additional sorting rules apply:
 This ensures that:
 
 * episodes appear in the correct chronological sequence
+
 * seasons and episodes display in a logical viewing order
 
-  
 [IMAGE PLACEHOLDER: TV series expanded with sorted seasons and episodes]
 
 Show a TV series with multiple seasons and episodes expanded, highlighting correct chronological ordering (for example, Season 1 → Season 2, Episode 1 → Episode N).
@@ -524,7 +524,7 @@ Check the status:
 
 <br />
 
-<Callout icon="fa-info-circle" theme="info">
+<Callout icon="🤔">
   If rights are missing, fields such as territory, service, or dates may display as blank or `-`. This is expected until the required data is provided.
 </Callout>
 

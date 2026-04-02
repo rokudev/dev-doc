@@ -8,6 +8,10 @@ metadata:
 ---
 Monitor where your titles are in The Roku Channel publishing pipeline and identify which titles need action.
 
+<ContentPartnerAvailability />
+
+<br />
+
 ## Who this is for
 
 Use the **Title Status** view if you are responsible for delivering or managing Video On Demand content on **The Roku Channel**.

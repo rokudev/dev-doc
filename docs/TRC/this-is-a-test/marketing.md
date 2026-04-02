@@ -100,3 +100,21 @@ Only titles that are production-ready, have valid availability dates, and includ
 Description: Composite or annotated UI showing the main workflow: selecting a title → pinning → scheduling → previewing → publishing.
 
 <br />
+
+## System Rules and Limits
+
+To maintain a consistent storefront experience, the following rules apply:
+
+* A Featured row contains up to 40 titles
+* A minimum number of titles is required to publish (for example, at least 13)
+* Duplicate titles are not allowed
+* Only eligible titles can be pinned
+* Conflicting pins (same position or overlapping schedules) must be resolved before publishing
+* Scheduled pins cannot exceed the 40-title limit at any given time
+
+If these conditions are not met, the system will block publishing until issues are resolved.
+
+[Screenshot Placeholder: Validation Error State]
+Description: Error message or warning UI showing a conflict (for example, overlapping pins or duplicate titles) with clear guidance.
+
+<br />

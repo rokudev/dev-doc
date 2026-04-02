@@ -441,17 +441,6 @@ Use the panel to:
 
 <br />
 
-## How issue counts work
-
-Issue counts are aggregated across all parts of a title.
-
-* Errors and warnings originate at the lowest level.
-* Counts roll up across territories and content hierarchy.
-
-This means a title or series may show higher counts if issues exist in multiple areas.
-
-<br />
-
 ## Using search and filters
 
 Use search to find titles by:

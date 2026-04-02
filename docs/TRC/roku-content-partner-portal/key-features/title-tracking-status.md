@@ -409,46 +409,6 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 
 <br />
 
-## Viewing status by territory
-
-Some titles have different statuses across regions.
-
-To view details:
-
-1. Click the expand arrow next to a title.
-2. The **Territories** panel appears.
-
-[IMAGE PLACEHOLDER: Expanded row with Territories panel]
-
-Show a title expanded with 2–3 territory cards, including mixed statuses (for example, **Live** + **Unfulfilled**).
-
-### How to read the Territories panel
-
-Each card shows:
-
-* Territory
-* Status
-* License type
-* Availability window
-
-### Understanding mixed status
-
-**Example**
-
-**1 of 3 unfulfilled**
-
-This means:
-
-* some territories are ready or live
-* others require action
-
-Use the panel to:
-
-* identify affected territories
-* focus only where action is needed
-
-<br />
-
 ## Using search and filters
 
 Use search to find titles by:
@@ -511,6 +471,46 @@ Show the filter UI expanded, with both period filters visible and one selected (
 * These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
 * Filters apply to the full title list and update results immediately.
 * A title appears if its date falls within the selected period.
+
+<br />
+
+## Viewing status by territory
+
+Some titles have different statuses across regions.
+
+To view details:
+
+1. Click the expand arrow next to a title.
+2. The **Territories** panel appears.
+
+[IMAGE PLACEHOLDER: Expanded row with Territories panel]
+
+Show a title expanded with 2–3 territory cards, including mixed statuses (for example, **Live** + **Unfulfilled**).
+
+### How to read the Territories panel
+
+Each card shows:
+
+* Territory
+* Status
+* License type
+* Availability window
+
+### Understanding mixed status
+
+**Example**
+
+**1 of 3 unfulfilled**
+
+This means:
+
+* some territories are ready or live
+* others require action
+
+Use the panel to:
+
+* identify affected territories
+* focus only where action is needed
 
 <br />
 

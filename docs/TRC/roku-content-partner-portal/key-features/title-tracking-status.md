@@ -476,7 +476,7 @@ Show the filter UI expanded, with both period filters visible and one selected (
 
 ## Viewing status by territory
 
-Some titles have different statuses across regions.
+Some titles have different statuses across channel store locations.
 
 To view details:
 

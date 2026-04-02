@@ -16,7 +16,7 @@ next:
 ---
 The Roku Content Partner Portal is a self-service platform designed to give TRC content partners greater visibility, control, and efficiency in managing their content lifecycle. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, and access the information they need without relying on manual support or back-and-forth communication.
 
-What the Portal Enables
+## What the Portal Enables
 
 At its core, the Content Partner Portal is built to simplify how partners interact with Roku’s content operations. Instead of operating through fragmented tools or delayed updates, partners can:
 •	Track title status in real time across the full lifecycle, from ingestion through availability and expiration
@@ -27,7 +27,7 @@ At its core, the Content Partner Portal is built to simplify how partners intera
 
 This transparency reduces uncertainty and empowers partners to take action faster.
 
-Why It Matters
+## Why It Matters
 
 Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
 
@@ -39,7 +39,7 @@ The Content Partner Portal shifts that model by:
 
 The result is a more scalable and efficient partnership model.
 
-Who It’s For
+## Who It's For
 
 The portal is designed for business and operational stakeholders within partner organizations who need visibility into content performance and delivery status. This includes teams responsible for:
 •	Content operations
@@ -48,7 +48,7 @@ The portal is designed for business and operational stakeholders within partner 
 
 To get started, users must have the appropriate access role, typically Business Manager or Operations Manager, assigned by their company’s account administrator.
 
-Getting Started
+## Getting Started
 
 Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:
 [https://my.roku.com/signin](https://my.roku.com/signin)

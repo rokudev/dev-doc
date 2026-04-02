@@ -16,10 +16,12 @@ While you control which titles are featured, unpinned positions are automaticall
 
 ## Who This Is For
 
-This feature is designed for partners responsible for marketing, merchandising, and audience growth.
+Storefront Marketing is available to Content Partners who manage Premium Subscription storefronts on the platform.
+
+This feature is designed for teams responsible for marketing, merchandising, and audience growth, enabling them to control how titles are promoted within their Premium Subscription pages.
 
 To get started, request Marketing Manager access from your company’s account Administrator.
 
 Storefront Marketing access is managed separately from other features and requires the Marketing Manager role.
 
-If your organization is not yet enabled, reach out to your Partner Support team to express interest.
+If your organization has a Premium Subscription storefront but does not yet have access to this feature, reach out to your Partner Support team to express interest.

@@ -202,16 +202,109 @@ Show the full table header row and 2–3 example rows. Visually call out each co
 
 The following table explains each column in the title table.
 
-| Column                  | Description                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Title**               | Displays the title name. Includes the **Title ID**, which can be copied on click. Use the Title ID for support, troubleshooting, and internal tracking.                                                                                                                                                                                                                                                            |
-| **Content type**        | Indicates the type of content. Each title has one type: **Movie**, **Short-form clip**, **TV episode**, **TV season**, or **TV series**. TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes. |
-| **License types**       | A title may have one or more license types, including **Ad-supported**, **Linear O&O FAST**, and **Premium subscription**.                                                                                                                                                                                                                                                                                         |
-| **Services**            | A service represents how your content is distributed and monetized on The Roku Channel. Examples include **TRC AVOD**, **TRC O&O FAST**, and **Premium subscription**. A single title may appear under multiple services depending on its rights.                                                                                                                                                                  |
-| **Status**              | Displays the overall status of the title, such as **Unfulfilled**, **Failed**, **Rights under review**, **Processing**, **Scheduled**, **Live**, or **Expired**. For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.                                                                                                                       |
-| **Territories**         | Displays the countries where the title is available or targeted. Territories appear as country flags and codes, such as **US**, **CA**, and **MX**. A title may be available in multiple territories, and status may vary by territory.                                                                                                                                                                            |
-| **Expected start date** | Shows when the title is expected to become available. It reflects the next upcoming start date across all territories. If all start dates are in the past, it shows the most recent start date. Dates are based on your local timezone.                                                                                                                                                                            |
-| **Expected end date**   | Shows when the title is expected to expire. It reflects the next upcoming expiration date. If all dates are in the past, it shows the most recent expiration date. Dates are based on your local timezone.                                                                                                                                                                                                         |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        Column
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **Title**
+      </td>
+
+      <td>
+        Displays the title name. Includes the **Title ID**, which can be copied on click. Use the Title ID for support, troubleshooting, and internal tracking.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Content type**
+      </td>
+
+      <td>
+        Indicates the type of content. Each title has one type:   
+        **Movie**  
+        **Short-form clip**  
+        **TV episode**  
+        **TV season**  
+        **TV series**
+
+        **Important:**
+        TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **License types**
+      </td>
+
+      <td>
+        A title may have one or more license types, including **Ad-supported**, **Linear O&O FAST**, and **Premium subscription**.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Services**
+      </td>
+
+      <td>
+        A service represents how your content is distributed and monetized on The Roku Channel. Examples include **TRC AVOD**, **TRC O&O FAST**, and **Premium subscription**. A single title may appear under multiple services depending on its rights.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Status**
+      </td>
+
+      <td>
+        Displays the overall status of the title, such as **Unfulfilled**, **Failed**, **Rights under review**, **Processing**, **Scheduled**, **Live**, or **Expired**. For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Territories**
+      </td>
+
+      <td>
+        Displays the countries where the title is available or targeted. Territories appear as country flags and codes, such as **US**, **CA**, and **MX**. A title may be available in multiple territories, and status may vary by territory.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Expected start date**
+      </td>
+
+      <td>
+        Shows when the title is expected to become available. It reflects the next upcoming start date across all territories. If all start dates are in the past, it shows the most recent start date. Dates are based on your local timezone.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **Expected end date**
+      </td>
+
+      <td>
+        Shows when the title is expected to expire. It reflects the next upcoming expiration date. If all dates are in the past, it shows the most recent expiration date. Dates are based on your local timezone.
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## Status definitions
 

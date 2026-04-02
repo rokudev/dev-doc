@@ -60,7 +60,7 @@ To use this feature, get the appropriate role assigned to your account.
 
 Show the full page including: licensor dropdown (if present), metric cards row, search + filters, and the title table. Highlight the relationship between cards and table filtering.
 
-walkthrough-gif-test-ezgif.com-video-to-gif-converter (1).gif
+<Image align="center" border={true} width="100% " src="https://files.readme.io/1d7fe41041e2a73777f31c4d73b309ae0db5f67110b6bf7fa0832ba95e24ca2c-walkthrough-gif-test-ezgif.com-video-to-gif-converter_1.gif" className="border" />
 
 <br />
 

@@ -242,7 +242,7 @@ The following table explains each column in the title table.
       </td>
 
       <td>
-        Displays the title name. Includes the **Title ID**, which can be copied on click. Use the Title ID for support, troubleshooting, and internal tracking.
+        Displays the title name. Includes your **Title ID**, which can be copied on click. Use the Title ID for support, troubleshooting, and internal tracking.
       </td>
     </tr>
 

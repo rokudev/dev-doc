@@ -1,0 +1,6 @@
+---
+name: ContentPartnerAvailability
+---
+## Availability
+
+<br />

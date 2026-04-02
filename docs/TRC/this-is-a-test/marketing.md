@@ -1,6 +1,6 @@
 ---
 title: Marketing
-excerpt: Storefront management overview
+excerpt: Marketing Storefront management overview
 deprecated: false
 hidden: true
 metadata:

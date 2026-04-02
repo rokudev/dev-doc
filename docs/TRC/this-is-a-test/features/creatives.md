@@ -1,5 +1,6 @@
 ---
 title: Creatives
+excerpt: Creatives overview
 deprecated: false
 hidden: true
 metadata:

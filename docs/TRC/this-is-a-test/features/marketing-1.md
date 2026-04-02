@@ -92,11 +92,11 @@ Description: Tile or detail panel showing “Pinned By” or “Last Modified By
 
 ### Featured Row
 
-The top row on your channel storefront. This row is fixed in position and highlights promoted content.
+The top row on your channel storefront. By default, this row is populated by Roku’s recommendation system and enhanced with partner-pinned titles.
 
 ### Pinned Titles
 
-Titles you assign to specific positions in the Featured row. These override recommendation-driven placements.
+Titles you assign to specific positions in the Featured row for a limited time. These override recommendation-driven placements in those positions while active.
 
 ### Scheduled Pins
 
@@ -104,7 +104,7 @@ Titles configured to appear during a defined start and end time.
 
 ### Recommendation-Filled Positions
 
-Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete row.
+Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete and personalized row.
 
 ### Eligible Titles
 

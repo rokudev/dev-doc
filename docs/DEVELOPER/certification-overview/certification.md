@@ -136,7 +136,7 @@ Certification criteria are listed by functionality. <br />
 
 1.1 Apps that include video advertising must comply with all the integration requirements listed in the [Roku advertising requirements document](doc:ad-requirements).
 
-### 2. Purchases
+### 2. Accounts and purchases
 
 **2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements).
 

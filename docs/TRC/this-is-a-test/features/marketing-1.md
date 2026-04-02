@@ -40,6 +40,30 @@ To use this feature, get the appropriate role assigned to your account.
 
 <br />
 
+## Key Concepts
+
+### Featured Row
+
+The top row on your channel storefront. This row is fixed in position and highlights promoted content.
+
+### Pinned Titles
+
+Titles you assign to specific positions in the Featured row. These override recommendation-driven placements.
+
+### Scheduled Pins
+
+Titles configured to appear during a defined start and end time.
+
+### Recommendation-Filled Positions
+
+Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete row.
+
+### Eligible Titles
+
+Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
+
+<br />
+
 ## Page layout
 
 The Storefront Marketing interface is designed to help you quickly view, manage, and update your Featured row.
@@ -159,30 +183,6 @@ Any positions not pinned are automatically filled by Roku’s recommendation sys
 ### Track Changes and Ownership
 
 See who created or last modified each pinned title, providing visibility across your team.
-
-<br />
-
-## Key Concepts
-
-### Featured Row
-
-The top row on your channel storefront. This row is fixed in position and highlights promoted content.
-
-### Pinned Titles
-
-Titles you assign to specific positions in the Featured row. These override recommendation-driven placements.
-
-### Scheduled Pins
-
-Titles configured to appear during a defined start and end time.
-
-### Recommendation-Filled Positions
-
-Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete row.
-
-### Eligible Titles
-
-Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
 
 <br />
 

@@ -260,7 +260,7 @@ The following table explains each column in the title table.
         * **TV season**
         * **TV series**
 
-        **Important:**
+        **Important notes:**
         TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
       </td>
     </tr>
@@ -398,7 +398,7 @@ This ensures that:
 
 Show a TV series with multiple seasons and episodes expanded, highlighting correct chronological ordering (for example, Season 1 → Season 2, Episode 1 → Episode N).
 
-### Important notes
+**Important notes**
 
 * Sorting by added date applies at the top-level title list.
 * Chronological ordering applies within TV hierarchies: **Series → Season → Episode**.
@@ -514,7 +514,7 @@ Use this filter to:
 
 Show the filter UI expanded, with both period filters visible and one selected (for example, **This week**), and the table results updated accordingly.
 
-### Important notes
+**Important notes**
 
 * These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
 * Filters apply to the full title list and update results immediately.

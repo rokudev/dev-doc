@@ -30,7 +30,7 @@ At its core, the Content Partner Portal is built to simplify how partners intera
 * **Manage Storefront & Creative marketing** to control how content appears and is promoted for your Premium Subscriptions on The Roku Channel
 * **Access analytics** to gain insights on content performance, viewership trends, and engagement
 
-This transparency reduces uncertainty and empowers partners to take action faster.
+This transparency reduces uncertainty and empowers your teams to take action faster.
 
 <br />
 

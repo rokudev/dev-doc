@@ -26,7 +26,7 @@ Want to learn more, check out [Storefront](doc:storefront).
 
 # Creatives
 
-Upload and manage the assets that represent your content. Creatives enables you to submit artwork and promotional materials, ensuring your titles are visually compelling and meet platform specifications.
+Upload and manage the assets that represent your content. Creatives allows you to upload and manage brand assets such as tiles, banners, and call-to-action (CTA) images, as well as manage subscription offer creatives like side cards to support merchandising and promotion.
 
 Want to learn more, check out [Creatives](doc:creatives).
 

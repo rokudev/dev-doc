@@ -109,7 +109,7 @@ This means:
 * A single blocking issue, such as **Failed** or **Unfulfilled**, overrides all other states.
 * The status shown here represents the overall health of the title.
 
-### Status priority
+#### Status priority
 
 From most restrictive to least restrictive:
 
@@ -121,7 +121,7 @@ From most restrictive to least restrictive:
 6. Live
 7. Expired
 
-#### Examples
+##### Examples
 
 | Scenario                                | Result      |
 | --------------------------------------- | ----------- |
@@ -130,7 +130,7 @@ From most restrictive to least restrictive:
 | Some territories Live, some Expired     | Live        |
 | All territories Expired                 | Expired     |
 
-### Why a title may show a restrictive status
+#### Why a title may show a restrictive status
 
 Even if most of a title is **Live**, a single **Failed** or **Unfulfilled** component overrides the overall status.
 

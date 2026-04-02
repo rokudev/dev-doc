@@ -8,7 +8,7 @@ metadata:
 next:
   description: Explore key features available in the Roku Content Partner Portal
   pages:
-    - slug: features
+    - slug: key-features
       title: Key Features
       type: basic
 ---

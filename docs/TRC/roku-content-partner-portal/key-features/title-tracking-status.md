@@ -72,16 +72,16 @@ Show the full page including: licensor dropdown (if present), metric cards row, 
 
 <br />
 
-# How to use this page
+## How to use this page
 
-## 1. Select a licensor
+### 1. Select a licensor (if applicable)
 
 If your organization includes multiple licensors, use the dropdown in the top-left to switch views.
 
 * Only titles for the selected licensor are displayed.
 * If you have a single licensor, this control is hidden.
 
-## 2. Use status cards as a primary filter
+### 2. Use status cards as a primary filter
 
 At the top of the page, status cards let you quickly filter and assess your catalog.
 

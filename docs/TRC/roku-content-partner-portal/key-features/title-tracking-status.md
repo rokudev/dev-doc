@@ -144,7 +144,9 @@ Even if most of a title is **Live**, a single **Failed** or **Unfulfilled** comp
 
 Use the **Territories** panel to identify where the issue exists.
 
-### How the other status cards work
+<br />
+
+## How the other status cards work
 
 Each status-specific card, such as **Failed** or **Expired**, highlights titles that are actively in that state.
 
@@ -179,6 +181,8 @@ This title appears in:
 * Expired
 
 But in the **All titles** view, the **Status** column shows the most restrictive status. In this case, that status is **Scheduled**.
+
+<br />
 
 ## Why this matters
 

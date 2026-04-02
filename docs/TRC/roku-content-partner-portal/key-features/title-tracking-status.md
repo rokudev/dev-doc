@@ -16,13 +16,13 @@ Monitor where your titles are in The Roku Channel publishing pipeline and identi
 
 <br />
 
-## Who this is for
+# Who this is for
 
 Use the **Title Status** view if you are responsible for delivering or managing Video On Demand content on **The Roku Channel**.
 
 This view is most useful for:
 
-### Operations Managers (Asset Delivery)
+## Operations Managers (Asset Delivery)
 
 Use this view to:
 
@@ -36,7 +36,7 @@ Focus on these statuses:
 * **Failed**: processing or QC issues
 * **Processing**: assets are actively being prepared
 
-### Business Managers (Rights Delivery)
+## Business Managers (Rights Delivery)
 
 Use this view to:
 
@@ -52,7 +52,7 @@ Focus on these statuses:
 
 <br />
 
-## Getting access
+# Getting access
 
 To use this feature, get the appropriate role assigned to your account.
 
@@ -62,7 +62,7 @@ To use this feature, get the appropriate role assigned to your account.
 
 <br />
 
-## Page layout
+# Page layout
 
 [IMAGE PLACEHOLDER: Title Status page overview]
 
@@ -72,16 +72,16 @@ Show the full page including: licensor dropdown (if present), metric cards row, 
 
 <br />
 
-## How to use this page
+# How to use this page
 
-### 1. Select a licensor
+## 1. Select a licensor
 
 If your organization includes multiple licensors, use the dropdown in the top-left to switch views.
 
 * Only titles for the selected licensor are displayed.
 * If you have a single licensor, this control is hidden.
 
-### 2. Use status cards as a primary filter
+## 2. Use status cards as a primary filter
 
 At the top of the page, status cards let you quickly filter and assess your catalog.
 
@@ -104,9 +104,9 @@ Show a selected card state (for example, **Failed**) and how the table updates t
 
 <br />
 
-## How status is determined
+# How status is determined
 
-### How the **All titles** card works
+## How the **All titles** card works
 
 The **All titles** card shows every title in your catalog.
 
@@ -117,7 +117,7 @@ This means:
 * A single blocking issue, such as **Failed** or **Unfulfilled**, overrides all other states.
 * The status shown here represents the overall health of the title.
 
-#### Status priority
+### Status priority
 
 From most restrictive to least restrictive:
 
@@ -129,7 +129,7 @@ From most restrictive to least restrictive:
 6. Live
 7. Expired
 
-##### Examples
+**Examples**
 
 | Scenario                                | Result      |
 | --------------------------------------- | ----------- |
@@ -138,7 +138,7 @@ From most restrictive to least restrictive:
 | Some territories Live, some Expired     | Live        |
 | All territories Expired                 | Expired     |
 
-#### Why a title may show a restrictive status
+### Why a title may show a restrictive status
 
 Even if most of a title is **Live**, a single **Failed** or **Unfulfilled** component overrides the overall status.
 
@@ -153,7 +153,7 @@ A title appears in a status card if:
 * at least one territory matches that status, or
 * at least one component matches that status
 
-#### Example
+**Example**
 
 * The **Expired** card shows any title that has at least one territory where availability has expired.
 * The **Live** card shows any title that is live in at least one territory.
@@ -166,7 +166,7 @@ A title appears in a status card if:
 
 Because status is evaluated at the territory level, a single title can appear under multiple cards.
 
-#### Example
+**Example**
 
 * **US** → Live
 * **CA** → Scheduled
@@ -180,7 +180,7 @@ This title appears in:
 
 But in the **All titles** view, the **Status** column shows the most restrictive status. In this case, that status is **Scheduled**.
 
-### Why this matters
+## Why this matters
 
 * Use **All titles** to understand overall readiness.
 * Use individual status cards to find and act on specific conditions.
@@ -189,11 +189,11 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 <br />
 
-## What requires your attention
+# What requires your attention
 
 Focus on these two statuses first:
 
-### Unfulfilled
+## Unfulfilled
 
 > Waiting for ordered rights, assets, or a match between the two. Requires your attention.
 
@@ -204,7 +204,7 @@ This means required inputs are missing or not linked by the same **Title ID**.
 * Deliver rights and assets.
 * Make sure the **Rights ID** and **Asset ID** match the same **Title ID**.
 
-### Failed
+## Failed
 
 > One or more issues occurred while processing your files and are preventing this title from going live. Requires your attention.
 
@@ -216,7 +216,7 @@ This means blocking errors occurred during processing.
 
 <br />
 
-## Understanding the title status table
+# Understanding the title status table
 
 Each row represents a single title and its current status across territories.
 
@@ -363,7 +363,7 @@ The following table explains each column in the title table.
 
 <br />
 
-## How to read a row
+# How to read a row
 
 When reviewing a title:
 
@@ -384,7 +384,7 @@ To investigate territory-level differences, expand the row.
 
 <br />
 
-## Default sorting
+# Default sorting
 
 By default, titles are sorted by the date they were added, with the most recently added titles shown first.
 
@@ -405,7 +405,7 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 
 <br />
 
-## Viewing status by territory
+# Viewing status by territory
 
 Some titles have different statuses across regions.
 
@@ -418,7 +418,7 @@ To view details:
 
 Show a title expanded with 2–3 territory cards, including mixed statuses (for example, **Live** + **Unfulfilled**).
 
-### How to read the Territories panel
+## How to read the Territories panel
 
 Each card shows:
 
@@ -427,9 +427,9 @@ Each card shows:
 * License type
 * Availability window
 
-### Understanding mixed status
+## Understanding mixed status
 
-Example:
+**Example**
 
 **1 of 3 unfulfilled**
 
@@ -445,7 +445,7 @@ Use the panel to:
 
 <br />
 
-## Using search and filters
+# Using search and filters
 
 Use search to find titles by:
 
@@ -462,7 +462,7 @@ Use filters to narrow results by:
 * Expected start period
 * Expected end period
 
-### Expected start period
+## Expected start period
 
 This filter shows titles whose **Expected start date** falls within a selected timeframe.
 
@@ -480,7 +480,7 @@ Use this filter to:
 * prepare for upcoming releases
 * monitor near-term availability
 
-### Expected end period
+## Expected end period
 
 This filter shows titles whose **Expected end date** falls within a selected timeframe.
 
@@ -510,15 +510,15 @@ Show the filter UI expanded, with both period filters visible and one selected (
 
 <br />
 
-## Common scenarios
+# Common scenarios
 
-### Which titles need attention?
+## Which titles need attention?
 
 Click **Unfulfilled** or **Failed**.
 
 Prioritize titles with **Errors**.
 
-### Why isn’t my title live?
+## Why isn’t my title live?
 
 Check the status:
 
@@ -528,13 +528,13 @@ Check the status:
 
 <br />
 
-<Callout icon="🤔">
+<Callout icon="🤔" theme="default">
   If rights are missing, fields such as territory, service, or dates may display as blank or `-`. This is expected until the required data is provided.
 </Callout>
 
 <br />
 
-## Some final notes
+# Some final notes
 
 * This view provides summary-level visibility only.
 * Issue details are not shown here.

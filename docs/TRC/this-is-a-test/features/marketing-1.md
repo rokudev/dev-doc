@@ -5,6 +5,12 @@ deprecated: false
 hidden: true
 metadata:
   robots: index
+next:
+  description: Interested in managing your creatives? We have that too!
+  pages:
+    - slug: creatives
+      title: Creatives
+      type: basic
 ---
 Storefront marketing allows you to manage the Featured row on your channel storefront directly within the Content Partner Portal.
 

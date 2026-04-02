@@ -17,8 +17,6 @@ The Creatives section is where you upload, manage, and organize the visual asset
 This feature is designed for users responsible for managing the visual presentation and promotion of content on The Roku Channel. This typically includes:
 
 * Marketing teams managing brand and campaign assets
-* Merchandising teams optimizing content placement and engagement
-* Business stakeholders overseeing subscription performance and promotions
 
 <br />
 

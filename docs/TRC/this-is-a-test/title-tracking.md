@@ -248,12 +248,12 @@ The following table explains each column in the title table.
       </td>
 
       <td>
-        Indicates the type of content. Each title has one type:  
+        Indicates the type of content. Each title has one type:
 
-        * **Movie**    
-        * **Short-form clip**  
-        * **TV episode**  
-        * **TV season**  
+        * **Movie**
+        * **Short-form clip**
+        * **TV episode**
+        * **TV season**
         * **TV series**
 
         **Important:**
@@ -368,11 +368,17 @@ When reviewing a title:
 
 Highlight a single row and visually walk through how to interpret it step-by-step (license → service → status → territories → dates).
 
-### Important notes
+<br />
 
-* A title may appear fully ready in one territory but blocked in another.
-* The **Status** column reflects the most restrictive condition across all territories.
-* Expand the row to view territory-level details.
+<Callout icon="fa-exclamation-triangle" theme="warning">
+  To investigate territory-level differences, expand the row.  
+
+  * A title can appear ready in one territory but blocked in another.
+  * The **Status** column shows the most restrictive condition across all territories.
+  * Expand the row to view territory-level details.
+</Callout>
+
+<br />
 
 <br />
 

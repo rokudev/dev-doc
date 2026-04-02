@@ -12,6 +12,12 @@ By default, the Featured row is populated by Roku’s recommendation system to d
 
 Pinned titles appear alongside Roku recommendations, giving you a balance of control and automated optimization to keep your storefront engaging and relevant.
 
+<Callout icon="fa-info-circle" theme="info">
+  **Tip:** The Featured row works best when used sparingly. Pin a small number of high-impact titles for short durations to maximize visibility and engagement.
+</Callout>
+
+<br />
+
 <ContentPartnerAvailability />
 
 <br />
@@ -135,8 +141,10 @@ Description: Error message or warning UI showing a conflict (for example, overla
 
 ## Best Practices
 
-* Focus on a small number of high-impact titles for key positions
-* Use scheduling to plan campaigns in advance
+* Focus on a small number of high-impact titles rather than filling the entire row
+* Pin no more than 5 titles at a time to maintain effectiveness
+* Limit pin duration to no more than 3 days to keep content fresh
+* Align pinned titles with key moments such as launches, promotions, or live events
+* Use scheduling to plan ahead rather than making last-minute changes
 * Preview changes before publishing to avoid conflicts
-* Regularly update your Featured row to keep content fresh
-* Monitor pinned titles to ensure they remain relevant and timely
+* Regularly refresh your Featured row to maintain engagement

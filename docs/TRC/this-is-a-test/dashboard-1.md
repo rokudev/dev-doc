@@ -32,8 +32,6 @@ Use these cards to quickly:
 * Jump into workflows relevant to your role
 * Navigate the portal efficiently without needing to browse through menus
 
-<br />
-
 <Callout icon="🤔" theme="default">
   If you do not see a feature card, your account may not have access. Contact your company Administrator to request additional permissions.
 </Callout>

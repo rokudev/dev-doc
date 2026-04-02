@@ -303,7 +303,7 @@ The following table explains each column in the title table.
 
         #### Rights under review
 
-        Rights are being reviewed for approval by the Roku team. Turnaround time may vary based on catalogue volume.
+        Rights are being reviewed for approval by the Roku team. Turnaround time may vary based on catalog volume.
 
         #### Processing
 

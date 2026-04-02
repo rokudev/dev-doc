@@ -1,6 +1,6 @@
 ---
 title: Title Tracking
-excerpt: Title Tracking Status Overview
+excerpt: Title tracking status overview
 deprecated: false
 hidden: true
 metadata:

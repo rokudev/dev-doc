@@ -112,9 +112,7 @@ Only titles that are production-ready, have valid availability dates, and includ
 
 <br />
 
-<br />
-
-How It Works
+## How It Works
 
 1. Select a Premium Subscription service (if applicable)
    * If you manage multiple services, choose which storefront you want to edit

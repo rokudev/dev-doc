@@ -394,15 +394,10 @@ This ensures that:
 * episodes appear in the correct chronological sequence
 * seasons and episodes display in a logical viewing order
 
+  
 [IMAGE PLACEHOLDER: TV series expanded with sorted seasons and episodes]
 
 Show a TV series with multiple seasons and episodes expanded, highlighting correct chronological ordering (for example, Season 1 → Season 2, Episode 1 → Episode N).
-
-**Important notes**
-
-* Sorting by added date applies at the top-level title list.
-* Chronological ordering applies within TV hierarchies: **Series → Season → Episode**.
-* This behavior keeps episodic content consistent and easier to review.
 
 <br />
 

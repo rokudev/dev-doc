@@ -7,8 +7,8 @@ metadata:
   robots: index
 next:
   description: >-
-    Get started with tracking the status of your content library on The Roku
-    Channel
+    Explore the next step: Begin your experience from the Content Partner
+    Dashboard
   pages:
     - slug: dashboard-1
       title: Dashboard

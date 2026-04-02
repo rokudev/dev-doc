@@ -1,7 +1,7 @@
 ---
 name: ContentPartnerAvailability
 ---
-## Availability
+# Availability
 
 The Content Partner Portal is currently in a limited Alpha and Beta phase and is available by invitation only. Access is being rolled out in stages to ensure a high-quality experience while incorporating partner feedback into ongoing development.
 

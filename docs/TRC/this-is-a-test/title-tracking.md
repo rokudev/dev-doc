@@ -368,17 +368,11 @@ When reviewing a title:
 
 Highlight a single row and visually walk through how to interpret it step-by-step (license → service → status → territories → dates).
 
-<br />
-
 <Callout icon="fa-exclamation-triangle" theme="warning">
-  To investigate territory-level differences, expand the row.  
-
-  * A title can appear ready in one territory but blocked in another.
-  * The **Status** column shows the most restrictive condition across all territories.
-  * Expand the row to view territory-level details.
+  A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.
 </Callout>
 
-<br />
+To investigate territory-level differences, expand the row.
 
 <br />
 
@@ -540,11 +534,11 @@ Check the status:
 * **Failed**: blocking errors
 * **Processing** or **Rights under review**: still in progress
 
-### Why are some fields blank?
+<br />
 
-If rights are missing, fields such as territory, service, or dates may not yet be available.
-
-This is expected until the required data is provided.
+<Callout icon="fa-info-circle" theme="info">
+  If rights are missing, fields such as territory, service, or dates may display as blank or `-`. This is expected until the required data is provided.
+</Callout>
 
 <br />
 

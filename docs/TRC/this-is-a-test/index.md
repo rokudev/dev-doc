@@ -16,6 +16,8 @@ next:
 ---
 The Roku Content Partner Portal is a self-service platform designed to give TRC content partners greater visibility, control, and efficiency in managing their content lifecycle. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, and access the information they need without relying on manual support or back-and-forth communication.
 
+<ContentPartnerAvailability />
+
 ## What the Portal Enables
 
 At its core, the Content Partner Portal is built to simplify how partners interact with Roku’s content operations. Instead of operating through fragmented tools or delayed updates, partners can:
@@ -40,10 +42,6 @@ The Content Partner Portal shifts that model by:
 •	Enabling partners to self-serve critical insights
 
 The result is a more scalable and efficient partnership model.
-
-<br />
-
-<ContentPartnerAvailability />
 
 <br />
 

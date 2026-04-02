@@ -193,12 +193,12 @@ Focus on these two statuses first:
 
 > Waiting for ordered rights, assets, or a match between the two. Requires your attention.
 
-This means required inputs are missing or not linked.
+This means required inputs are missing or not linked by the same **Title ID**.
 
 **Action:**
 
 * Deliver rights and assets.
-* Make sure the **Rights ID** and **Asset ID** match.
+* Make sure the **Rights ID** and **Asset ID** match the same **Title ID**.
 
 ### Failed
 

@@ -28,7 +28,7 @@ Storefront Marketing is available to Content Partners who manage **Premium Subsc
 
 This feature is designed for teams responsible for marketing, merchandising, and audience growth, enabling them to control how titles are promoted within their Premium Subscription pages.
 
-To get started, request Marketing Manager access from your company’s account Administrator.
+To get started, request **Marketing Manager** access from your company’s account Administrator.
 
 Storefront Marketing access is managed separately from other features and requires the Marketing Manager role.
 

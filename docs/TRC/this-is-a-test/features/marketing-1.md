@@ -18,6 +18,8 @@ Pinned titles appear alongside Roku recommendations, giving you a balance of con
 
 <ContentPartnerAvailability />
 
+<br />
+
 ## Who This Is For
 
 Storefront Marketing is available to Content Partners who manage **Premium Subscription** storefronts on the platform.
@@ -29,6 +31,8 @@ To get started, request **Marketing Manager** access from your company’s accou
 Storefront Marketing access is managed separately from other features and requires the Marketing Manager role.
 
 If your organization has a Premium Subscription storefront but does not yet have access to this feature, reach out to your Partner Support team to express interest.
+
+<br />
 
 ## What You Can Do
 
@@ -93,6 +97,8 @@ Any positions not pinned are automatically filled by Roku’s recommendation sys
 
 Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
 
+<br />
+
 ## How It Works
 
 1. Select a Premium Subscription service (if applicable)
@@ -109,6 +115,8 @@ Only titles that are production-ready, have valid availability dates, and includ
 [Screenshot Placeholder: Service Selector]
 Description: Dropdown or selector showing multiple Premium Subscription services available to the user, with one selected. If only one exists, show it pre-selected or non-editable.
 
+<br />
+
 ## System Rules and Limits
 
 To maintain a consistent storefront experience, the following rules apply:
@@ -124,6 +132,8 @@ If these conditions are not met, the system will block publishing until issues a
 
 [Screenshot Placeholder: Validation Error State]
 Description: Error message or warning UI showing a conflict (for example, overlapping pins or duplicate titles) with clear guidance.
+
+<br />
 
 ## Best Practices
 

@@ -28,7 +28,7 @@ Use these cards to quickly:
 
 <br />
 
-<Callout icon="fa-info-circle" theme="info">
+<Callout icon="🤔">
   If you do not see a feature card, your account may not have access. Contact your company Administrator to request additional permissions.
 </Callout>
 

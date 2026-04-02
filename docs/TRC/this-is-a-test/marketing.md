@@ -12,7 +12,7 @@ By default, the Featured row is populated by Roku’s recommendation system to d
 
 Pinned titles appear alongside Roku recommendations, giving you a balance of control and automated optimization to keep your storefront engaging and relevant.
 
-<Callout icon="fa-info-circle" theme="info">
+<Callout icon="📘">
   **Tip:** The Featured row works best when used sparingly. Pin a small number of high-impact titles for short durations to maximize visibility and engagement.
 </Callout>
 

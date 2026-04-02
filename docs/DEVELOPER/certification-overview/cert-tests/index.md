@@ -163,7 +163,7 @@ Apps outside the U.S. Roku Streaming Store that have streamed more than an avera
 
 **Expected Result**: Ads may not be skipped by pressing the FF/REW buttons, sending a FF/REW voice command, or any other mechansim.
 
-## **2. Purchases**
+## **2. Accounts and purchases**
 
 **2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements). Apps must disclose integration/use of all non-Roku SDKs and libraries, and app features that enable, facilitate, or link to monetary transactions or external webpages related to such transactions. Roku has the right to approve or deny such non-Roku SDKs, libraries, and app features. Apps may not facilitate or direct customers to use any method of payment and/or method of payment interface in connection with their app other than Roku Pay.
 

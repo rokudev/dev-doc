@@ -16,7 +16,7 @@ The Dashboard is your starting point in the Content Partner Portal. It introduce
 
 ## The Roku Channel Content Partner Program
 
-The Content Partner Portal supports the The Roku Channel content partner program, which provides tools to directly manage your content on The Roku Channel. This includes managing your brand presence, promotional assets, and subscription offerings.
+The Roku Content Partner Portal supports the The Roku Channel content partner program, which provides tools to directly manage your content on The Roku Channel. This includes managing your brand presence, promotional assets, and subscription offerings.
 
 ## Navigate with Feature Cards
 
@@ -30,7 +30,7 @@ Use these cards to quickly:
 
 <br />
 
-<Callout icon="🤔">
+<Callout icon="🤔" theme="default">
   If you do not see a feature card, your account may not have access. Contact your company Administrator to request additional permissions.
 </Callout>
 

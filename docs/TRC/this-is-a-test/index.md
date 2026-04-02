@@ -27,6 +27,8 @@ At its core, the Content Partner Portal is built to simplify how partners intera
 
 This transparency reduces uncertainty and empowers partners to take action faster.
 
+<br />
+
 ## Why It Matters
 
 Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
@@ -39,6 +41,16 @@ The Content Partner Portal shifts that model by:
 
 The result is a more scalable and efficient partnership model.
 
+<br />
+
+## Availability
+
+The Content Partner Portal is currently in a limited Alpha and Beta phase and is available by invitation only. Access is being rolled out in stages to ensure a high-quality experience while incorporating partner feedback into ongoing development.
+
+Partners who are interested in participating can reach out to their Partner Support team to express interest in joining the program. Eligible participants will be onboarded as capacity allows.
+
+<br />
+
 ## Who It's For
 
 The portal is designed for business and operational stakeholders within partner organizations who need visibility into content performance and delivery status. This includes teams responsible for:
@@ -47,6 +59,8 @@ The portal is designed for business and operational stakeholders within partner 
 •	Partner account management
 
 To get started, users must have the appropriate access role, typically Business Manager or Operations Manager, assigned by their company’s account administrator.
+
+<br />
 
 ## Getting Started
 
@@ -58,5 +72,3 @@ Once access is granted, users can immediately begin exploring their content libr
 ⸻
 
 The Roku Content Partner Portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.
-
-<br />

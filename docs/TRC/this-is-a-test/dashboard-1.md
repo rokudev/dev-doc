@@ -9,7 +9,7 @@ next:
   description: Explore features available in the Roku Content Partner Portal
   pages:
     - slug: features
-      title: Features
+      title: Key Features
       type: basic
 ---
 The Dashboard is your starting point in the Content Partner Portal. It introduces the platform and provides quick access to key features based on your account permissions.

@@ -249,11 +249,12 @@ The following table explains each column in the title table.
 
       <td>
         Indicates the type of content. Each title has one type:  
-        **Movie**  
-        **Short-form clip**  
-        **TV episode**  
-        **TV season**  
-        **TV series**
+
+        * **Movie**    
+        * **Short-form clip**  
+        * **TV episode**  
+        * **TV season**  
+        * **TV series**
 
         **Important:**
         TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
@@ -286,33 +287,33 @@ The following table explains each column in the title table.
       </td>
 
       <td>
-        Displays the overall status of the title, such as:  
+        Displays the overall status of the title, such as:
 
         #### Unfulfilled
 
-        Waiting for ordered rights, assets, or a match between the two. **Requires your attention.**  
+        Waiting for ordered rights, assets, or a match between the two. **Requires your attention.**
 
-        #### Failed    
+        #### Failed
 
-        One or more issues occurred while processing your files and are preventing this title from going live. **Requires your attention.**  
+        One or more issues occurred while processing your files and are preventing this title from going live. **Requires your attention.**
 
-        #### Rights under review  
+        #### Rights under review
 
         Rights are being reviewed for approval by the Roku team. Turnaround time may vary based on catalogue volume.
 
-        #### Processing  
+        #### Processing
 
-        The Roku pipeline is preparing your assets for publishing.  
+        The Roku pipeline is preparing your assets for publishing.
 
-        #### Scheduled  
+        #### Scheduled
 
-        Ready for go-live as scheduled.  
+        Ready for go-live as scheduled.
 
-        #### Live  
+        #### Live
 
-        The title is available to viewers.  
+        The title is available to viewers.
 
-        #### Expired  
+        #### Expired
 
         Update windows to reactivate.
 

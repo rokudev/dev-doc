@@ -1,5 +1,5 @@
 ---
-title: Features
+title: Key Features
 excerpt: Explore available features in the Roku Content Partner Portal
 deprecated: false
 hidden: true

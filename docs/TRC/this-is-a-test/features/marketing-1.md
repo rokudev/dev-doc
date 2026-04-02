@@ -34,18 +34,6 @@ If your organization has a Premium Subscription storefront but does not yet have
 
 ## What You Can Do
 
-### Featured Row
-
-The top row on your channel storefront. By default, this row is populated by Roku’s recommendation system and enhanced with partner-pinned titles.
-
-<br />
-
-### Pinned Titles
-
-Titles you assign to specific positions in the Featured row for a limited time. These override recommendation-driven placements in those positions while active.
-
-<br />
-
 ### Manage the Featured Row
 
 View and edit all titles currently pinned in your Featured row, including their positions and metadata.
@@ -53,16 +41,12 @@ View and edit all titles currently pinned in your Featured row, including their 
 [Screenshot Placeholder: Featured Row Management UI]
 Description: Full-page view of the Featured Row editor showing pinned titles in order (positions labeled #1–#40), including metadata such as title name, thumbnail, and position. Include the “X of 40 slots pinned” indicator.
 
-<br />
-
 ### Pin Titles to Specific Positions
 
 Assign titles to fixed positions (for example, position #1 or #5) to control layout and visibility.
 
 [Screenshot Placeholder: Pin to Position Interaction]
 Description: UI showing a title being assigned to a specific position via drag-and-drop or position selector. Include visual indicator of pinned state.
-
-<br />
 
 ### Schedule Featured Titles
 
@@ -74,16 +58,12 @@ Description: Date/time picker with start and end times for a pinned title. Inclu
 [Screenshot Placeholder: Date View / Future State]
 Description: View showing selected future date or date range with corresponding active pins displayed.
 
-<br />
-
 ### Customize by Territory
 
 Configure different Featured rows per territory (channel store). Changes made in one territory do not affect others.
 
 [Screenshot Placeholder: Territory Selector]
 Description: Dropdown or selector showing multiple territories (for example, “US Channel Store”) with clear indication of the active selection.
-
-<br />
 
 ### Preview Before Publishing
 
@@ -92,16 +72,12 @@ Preview both current and future Featured rows to understand how your storefront 
 [Screenshot Placeholder: Preview Mode]
 Description: Preview view showing a rendered Featured row with a mix of pinned and recommendation-driven titles. Include toggle between “Active” and “Scheduled” views.
 
-<br />
-
 ### Search and Select Eligible Titles
 
 Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.
 
 [Screenshot Placeholder: Title Search UI]
 Description: Search interface displaying results with filters (title name, content type). Include eligibility indicators such as “Staged” or “Private” if applicable.
-
-<br />
 
 ### Track Changes and Ownership
 
@@ -112,9 +88,65 @@ Description: Tile or detail panel showing “Pinned By” or “Last Modified By
 
 <br />
 
+## Key Concepts
+
+### Featured Row
+
+The top row on your channel storefront. This row is fixed in position and highlights promoted content.
+
+### Pinned Titles
+
+Titles you assign to specific positions in the Featured row. These override recommendation-driven placements.
+
+### Scheduled Pins
+
+Titles configured to appear during a defined start and end time.
+
 ### Recommendation-Filled Positions
 
-Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete and personalized row.
+Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete row.
+
+### Eligible Titles
+
+Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
+
+<br />
+
+<br />
+
+How It Works
+
+1. Select a Premium Subscription service (if applicable)
+   * If you manage multiple services, choose which storefront you want to edit
+   * If you only have one service, it is automatically selected
+2. Select a territory (if applicable)
+   * Choose the territory representing the channel store you want to manage (for example, US, UK, etc.)
+3. View current pinned titles in the Featured row
+4. Search and select eligible titles
+5. Pin titles to positions or schedule them for future dates
+6. Preview your changes
+7. Publish updates (changes take effect immediately)
+
+[Screenshot Placeholder: Service Selector]
+Description: Dropdown or selector showing multiple Premium Subscription services available to the user, with one selected. If only one exists, show it pre-selected or non-editable.
+
+<br />
+
+## System Rules and Limits
+
+To maintain a consistent storefront experience, the following rules apply:
+
+* A Featured row contains up to 40 titles
+* A minimum number of titles is required to publish (for example, at least 13)
+* Duplicate titles are not allowed
+* Only eligible titles can be pinned
+* Conflicting pins (same position or overlapping schedules) must be resolved before publishing
+* Scheduled pins cannot exceed the 40-title limit at any given time
+
+If these conditions are not met, the system will block publishing until issues are resolved.
+
+[Screenshot Placeholder: Validation Error State]
+Description: Error message or warning UI showing a conflict (for example, overlapping pins or duplicate titles) with clear guidance.
 
 <br />
 

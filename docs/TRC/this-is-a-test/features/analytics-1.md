@@ -6,15 +6,14 @@ hidden: true
 metadata:
   robots: index
 ---
-<br />
+The Analytics section provides insights into how your content and storefront experiences are performing on The Roku Channel. It helps you understand audience engagement, measure the impact of merchandising decisions, and identify opportunities to optimize your catalog and promotions.
 
 ## Who This Is For
 
-Storefront marketing is available to Content Partners who manage **Premium Subscription** storefronts on the platform.
-
-This feature is designed for teams responsible for marketing, merchandising, and audience growth, enabling them to control how titles are promoted within their Premium Subscription pages.
-
-If your organization has a Premium Subscription storefront but does not yet have access to this feature, reach out to your Partner Support team to express interest.
+The Analytics section is designed for stakeholders who need visibility into content performance and audience behavior, including:
+•	Business and strategy teams
+•	Content and operations teams
+•	Marketing and merchandising teams
 
 ## Getting access
 

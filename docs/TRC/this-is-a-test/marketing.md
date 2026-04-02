@@ -118,3 +118,11 @@ If these conditions are not met, the system will block publishing until issues a
 Description: Error message or warning UI showing a conflict (for example, overlapping pins or duplicate titles) with clear guidance.
 
 <br />
+
+## Best Practices
+
+* Focus on a small number of high-impact titles for key positions
+* Use scheduling to plan campaigns in advance
+* Preview changes before publishing to avoid conflicts
+* Regularly update your Featured row to keep content fresh
+* Monitor pinned titles to ensure they remain relevant and timely

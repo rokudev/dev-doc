@@ -42,6 +42,8 @@ Focus on these statuses:
 * **Rights under review**: pending approval
 * **Expired**: rights windows need updating
 
+<br />
+
 ## Getting access
 
 To use this feature, get the appropriate role assigned to your account.
@@ -50,6 +52,8 @@ To use this feature, get the appropriate role assigned to your account.
 2. Ask your administrator to grant access based on your responsibilities, such as rights management or asset delivery.
 3. Contact your internal team if you are not sure who your administrator is.
 
+<br />
+
 ## Page layout
 
 [IMAGE PLACEHOLDER: Title Status page overview]
@@ -57,6 +61,8 @@ To use this feature, get the appropriate role assigned to your account.
 Show the full page including: licensor dropdown (if present), metric cards row, search + filters, and the title table. Highlight the relationship between cards and table filtering.
 
 walkthrough-gif-test-ezgif.com-video-to-gif-converter (1).gif
+
+<br />
 
 ## How to use this page
 
@@ -87,6 +93,8 @@ Click any card to filter the table.
 [IMAGE PLACEHOLDER: Metric cards with one selected]
 
 Show a selected card state (for example, **Failed**) and how the table updates to reflect only those titles.
+
+<br />
 
 ## How status is determined
 
@@ -167,6 +175,8 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 * Do not assume a title belongs to only one status.
 * Expand the title to see where issues exist.
 
+<br />
+
 ## What requires your attention
 
 Focus on these two statuses first:
@@ -191,6 +201,8 @@ This means blocking errors occurred during processing.
 **Action:**
 
 * Resolve the errors before the title can proceed.
+
+<br />
 
 ## Understanding the title status table
 
@@ -232,7 +244,7 @@ The following table explains each column in the title table.
       </td>
 
       <td>
-        Indicates the type of content. Each title has one type:   
+        Indicates the type of content. Each title has one type:  
         **Movie**  
         **Short-form clip**  
         **TV episode**  
@@ -306,6 +318,8 @@ The following table explains each column in the title table.
   </tbody>
 </Table>
 
+<br />
+
 ## Status definitions
 
 ### Unfulfilled
@@ -336,6 +350,8 @@ The title is available to viewers.
 
 Update windows to reactivate.
 
+<br />
+
 ## How to read a row
 
 When reviewing a title:
@@ -354,6 +370,8 @@ Highlight a single row and visually walk through how to interpret it step-by-ste
 * A title may appear fully ready in one territory but blocked in another.
 * The **Status** column reflects the most restrictive condition across all territories.
 * Expand the row to view territory-level details.
+
+<br />
 
 ## Default sorting
 
@@ -378,6 +396,8 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 * Sorting by added date applies at the top-level title list.
 * Chronological ordering applies within TV hierarchies: **Series → Season → Episode**.
 * This behavior keeps episodic content consistent and easier to review.
+
+<br />
 
 ## Viewing status by territory
 
@@ -417,6 +437,8 @@ Use the panel to:
 * identify affected territories
 * focus only where action is needed
 
+<br />
+
 ## How issue counts work
 
 Issue counts are aggregated across all parts of a title.
@@ -425,6 +447,8 @@ Issue counts are aggregated across all parts of a title.
 * Counts roll up across territories and content hierarchy.
 
 This means a title or series may show higher counts if issues exist in multiple areas.
+
+<br />
 
 ## Using search and filters
 
@@ -489,6 +513,8 @@ Show the filter UI expanded, with both period filters visible and one selected (
 * Filters apply to the full title list and update results immediately.
 * A title appears if its date falls within the selected period.
 
+<br />
+
 ## Common scenarios
 
 ### Which titles need attention?
@@ -510,6 +536,8 @@ Check the status:
 If rights are missing, fields such as territory, service, or dates may not yet be available.
 
 This is expected until the required data is provided.
+
+<br />
 
 ## Notes
 

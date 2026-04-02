@@ -324,11 +324,11 @@ The following table explains each column in the title table.
 
 ### Unfulfilled
 
-Waiting for ordered rights, assets, or a match between the two. Requires your attention.
+Waiting for ordered rights, assets, or a match between the two. **Requires your attention.**
 
 ### Failed
 
-One or more issues occurred while processing your files and are preventing this title from going live. Requires your attention.
+One or more issues occurred while processing your files and are preventing this title from going live. **Requires your attention.**
 
 ### Rights under review
 

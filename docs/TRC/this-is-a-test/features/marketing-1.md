@@ -81,6 +81,8 @@ Any positions not pinned are automatically filled by Roku’s recommendation sys
 
 See who created or last modified each pinned title, providing visibility across your team.
 
+<br />
+
 ## Key Concepts
 
 ### Featured Row

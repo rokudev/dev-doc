@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-_Version 3.0 - August 2025_
+_Version 4.0 - March 2026_
 
 ## 1. General overview
 
@@ -145,9 +145,7 @@ Raster/Resolution
 
 ### 3.4 Sizzle
 
-
 #### 3.4.1 Sizzle overview
-
 
 Each project will be required to create a 60-90 second sizzle for your project to be used for business-to-business purposes.
 
@@ -174,7 +172,6 @@ Sizzle does not need to include full scenes.
 Please reach out to your Roku Post Manager if you would like to see an example of a previous sizzle.
 
 ### 3.4.2 Sizzle deliverables
-
 
 An HD primary video deliverable is required as follows:
 

@@ -530,9 +530,9 @@ Check the status:
 
 <br />
 
-## Notes
+## Some final notes
 
 * This view provides summary-level visibility only.
 * Issue details are not shown here.
-* A dedicated **Title Tracking Issues** view will be provided in the future for detailed diagnostics.
+* A dedicated **Title Tracking Issues** view will be provided in the future for detailed diagnostics and resolution paths.
 * Some fields may display `-` when data is unavailable.

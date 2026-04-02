@@ -86,11 +86,15 @@ Roku’s Localization Team will handle the creation of Latin Spanish subtitles a
 
 #### 3.3.1 Dailies distribution
 
-Allow for dailies and/or weekly selects. Dailies are requested for visibility and early Marketing preparation. Roku Post will provide a user list for Dailies prior to Production.
+Dailies are requested for visibility and early Marketing preparation. Roku Post will provide a user list for Dailies prior to production.
 
-Roku’s approved platform for dailies, rough cut release, and final archive is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, so if you are working with a partner who utilizes a different review platform, this may not require an extra render (pending specifications for each).
+Scripted projects: Allow for dailies across all days of production.
 
-The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
+Documentary projects: Allow for three total 5-10 minute dailies-selects reels, one from each of three discrete shooting days. These do not all need to be from the first three days of principal, but please utilize at least one of the initial few days. Prioritize diversity of environments, subjects, etc. when choosing which days to send.
+
+Roku’s approved platform for dailies, rough cut release, and final archive is Frame.io. All content being sent for review by the Roku team will need to be shared via this platform. Frame.io’s platform is compatible with most commonly used codecs, so if you are working with a partner who utilizes a different review platform, this may not require an extra render (pending specifications for each).
+
+The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the Frame.io team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
 
 #### 3.3.2 Dailies formatting
 

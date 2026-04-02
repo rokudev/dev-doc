@@ -286,7 +286,37 @@ The following table explains each column in the title table.
       </td>
 
       <td>
-        Displays the overall status of the title, such as **Unfulfilled**, **Failed**, **Rights under review**, **Processing**, **Scheduled**, **Live**, or **Expired**. For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
+        Displays the overall status of the title, such as:  
+
+        #### Unfulfilled
+
+        Waiting for ordered rights, assets, or a match between the two. **Requires your attention.**  
+
+        #### Failed    
+
+        One or more issues occurred while processing your files and are preventing this title from going live. **Requires your attention.**  
+
+        #### Rights under review  
+
+        Rights are being reviewed for approval by the Roku team. Turnaround time may vary based on catalogue volume.
+
+        #### Processing  
+
+        The Roku pipeline is preparing your assets for publishing.  
+
+        #### Scheduled  
+
+        Ready for go-live as scheduled.  
+
+        #### Live  
+
+        The title is available to viewers.  
+
+        #### Expired  
+
+        Update windows to reactivate.
+
+        For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
       </td>
     </tr>
 
@@ -321,38 +351,6 @@ The following table explains each column in the title table.
     </tr>
   </tbody>
 </Table>
-
-<br />
-
-## Status definitions
-
-### Unfulfilled
-
-Waiting for ordered rights, assets, or a match between the two. **Requires your attention.**
-
-### Failed
-
-One or more issues occurred while processing your files and are preventing this title from going live. **Requires your attention.**
-
-### Rights under review
-
-Rights are being reviewed for approval by the Roku team.
-
-### Processing
-
-The Roku pipeline is preparing your assets for publishing.
-
-### Scheduled
-
-Ready for go-live as scheduled.
-
-### Live
-
-The title is available to viewers.
-
-### Expired
-
-Update windows to reactivate.
 
 <br />
 

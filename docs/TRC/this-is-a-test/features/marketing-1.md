@@ -122,10 +122,6 @@ Description: Publish button with disabled state and visible validation error mes
 
 ## What You Can Do
 
-### Featured Row
-
-The top row on your channel storefront. By default, this row is populated by Roku’s recommendation system and enhanced with partner-pinned titles.
-
 ### Manage the Featured Row
 
 View and edit all titles currently pinned in your Featured row, including their positions and metadata.
@@ -133,9 +129,12 @@ View and edit all titles currently pinned in your Featured row, including their 
 [Screenshot Placeholder: Featured Row Management UI]
 Description: Full-page view of the Featured Row editor showing pinned titles in order (positions labeled #1–#40), including metadata such as title name, thumbnail, and position. Include the “X of 40 slots pinned” indicator.
 
-### Pinned Titles
+### Pin Titles to Specific Positions
 
-Titles you assign to specific positions in the Featured row for a limited time. These override recommendation-driven placements in those positions while active.
+Assign titles to fixed positions (for example, position #1 or #5) to control layout and visibility.
+
+[Screenshot Placeholder: Pin to Position Interaction]
+Description: UI showing a title being assigned to a specific position via drag-and-drop or position selector. Include visual indicator of pinned state.
 
 ### Schedule Featured Titles
 

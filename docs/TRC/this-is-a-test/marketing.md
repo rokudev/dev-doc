@@ -3,7 +3,7 @@ title: Marketing
 excerpt: Marketing Storefront management overview
 deprecated: false
 hidden: true
-metadata:
+metadata: trc-marketing
   robots: index
 ---
 Storefront Marketing allows you to manage the Featured row on your channel storefront directly within the Content Partner Portal.

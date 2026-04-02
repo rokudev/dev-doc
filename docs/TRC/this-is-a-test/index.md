@@ -57,7 +57,7 @@ The portal is designed for business, operation, and marketing stakeholders withi
 * Marketing and merchandisers
 * Partner account management
 
-To get started, users must have the appropriate access role, typically Business Manager or Operations Manager, assigned by their company’s account administrator.
+To get started, users must have the appropriate access role, typically Business Manager, Operations Manager, or Marketing Manager assigned by their company’s account administrator.
 
 <br />
 

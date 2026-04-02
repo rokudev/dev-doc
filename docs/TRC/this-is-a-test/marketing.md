@@ -86,3 +86,17 @@ Any positions not pinned are automatically filled by Roku’s recommendation sys
 Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
 
 <br />
+
+## How It Works
+
+1. Select a territory (if applicable)
+2. View current pinned titles in the Featured row
+3. Search and select eligible titles
+4. Pin titles to positions or schedule them for future dates
+5. Preview your changes
+6. Publish updates (changes take effect immediately)
+
+[Screenshot Placeholder: End-to-End Flow]
+Description: Composite or annotated UI showing the main workflow: selecting a title → pinning → scheduling → previewing → publishing.
+
+<br />

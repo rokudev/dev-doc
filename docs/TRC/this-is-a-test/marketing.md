@@ -89,15 +89,19 @@ Only titles that are production-ready, have valid availability dates, and includ
 
 ## How It Works
 
-1. Select a territory (if applicable)
-2. View current pinned titles in the Featured row
-3. Search and select eligible titles
-4. Pin titles to positions or schedule them for future dates
-5. Preview your changes
-6. Publish updates (changes take effect immediately)
+1. Select a Premium Subscription service (if applicable)
+   1. If you manage multiple services, choose which storefront you want to edit
+   2. If you only have one service, it is automatically selected
+2. Select a territory (if applicable)
+   1. Choose the channel store you want to manage (for example, US, UK, etc.)
+3. View current pinned titles in the Featured row
+4. Search and select eligible titles
+5. Pin titles to positions or schedule them for future dates
+6. Preview your changes
+7. Publish updates (changes take effect immediately)
 
-[Screenshot Placeholder: End-to-End Flow]
-Description: Composite or annotated UI showing the main workflow: selecting a title → pinning → scheduling → previewing → publishing.
+[Screenshot Placeholder: Service Selector]
+Description: Dropdown or selector showing multiple Premium Subscription services available to the user, with one selected. If only one exists, show it pre-selected or non-editable.
 
 <br />
 

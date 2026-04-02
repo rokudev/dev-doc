@@ -40,6 +40,86 @@ To use this feature, get the appropriate role assigned to your account.
 
 <br />
 
+## Page layout
+
+The Storefront Marketing interface is designed to help you quickly view, manage, and update your Featured row.
+
+[Screenshot Placeholder: Full Page Layout Overview]
+Description: Full-page screenshot labeled with key regions called out below (Service Selector, Territory Selector, Featured Row Editor, Search Panel, Actions/Publish area).
+
+1. ### Service Selector (if applicable)
+
+Located at the top of the page, this selector allows you to choose which Premium Subscription service you are managing.
+
+* Visible only if you manage multiple services
+* Automatically set if only one service is available
+
+2. ### Territory Selector
+
+Allows you to switch between channel stores (for example, US, UK, etc.).
+
+* Each territory has its own independent Featured row
+* Changes made in one territory do not affect others
+
+[Screenshot Placeholder: Service + Territory Selectors]
+Description: Top navigation area showing both selectors with one service and one territory selected.
+
+3. ### Featured Row Editor
+
+The main workspace where you view and manage pinned titles.
+
+* Displays titles in position order (for example, #1–#40)
+* Shows how many titles are currently pinned (for example, “5 of 40 slots pinned”)
+* Allows you to add, remove, or reposition titles
+
+[Screenshot Placeholder: Featured Row Editor]
+Description: Row view showing pinned titles in order with position labels and visual indicators for pinned vs recommendation-filled slots.
+
+4. ### Search and Title Selection Panel
+
+Used to find and select eligible titles to pin.
+
+* Search by title name
+* Filter by content type (Movie, TV series, etc.)
+* Displays eligibility indicators (for example, staged or private content)
+
+[Screenshot Placeholder: Search Panel]
+Description: Search results panel with filters and selectable titles.
+
+5. ### Scheduling and Details Panel
+
+Appears when selecting or editing a pinned title.
+
+* Set start and end dates for scheduled pins
+* View position, timing, and status details
+* See who created or last modified the pin
+
+[Screenshot Placeholder: Scheduling Panel]
+Description: Side panel or modal showing date/time controls and pin details.
+
+6. ### Preview Mode
+
+Allows you to visualize how your Featured row will appear.
+
+* Toggle between current (active) and future (scheduled) views
+* Displays both pinned and recommendation-driven titles
+
+[Screenshot Placeholder: Preview Mode]
+Description: Preview screen showing rendered storefront row with mixed pinned and recommended content.
+
+7. ### Publish and Validation Controls
+
+Located near the top or bottom of the page, depending on layout.
+
+* Publish changes to make them live immediately
+* Displays validation errors (for example, conflicts or missing requirements)
+* Prevents publishing until issues are resolved
+
+[Screenshot Placeholder: Publish + Validation State]
+Description: Publish button with disabled state and visible validation error message.
+
+<br />
+
 ## What You Can Do
 
 ### Featured Row

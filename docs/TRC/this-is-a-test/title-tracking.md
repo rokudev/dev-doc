@@ -154,7 +154,11 @@ A title appears in a status card if:
 * The **Expired** card shows any title that has at least one territory where availability has expired.
 * The **Live** card shows any title that is live in at least one territory.
 
-### Titles can appear in multiple status cards
+<br />
+
+<Callout icon="fa-info-circle" theme="info">
+  A single title can appear in multiple status cards because status is evaluated at the territory level. Use **All titles** to see the rolled-up overall status.
+</Callout>
 
 Because status is evaluated at the territory level, a single title can appear under multiple cards.
 

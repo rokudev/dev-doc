@@ -5,4 +5,51 @@ hidden: true
 metadata:
   robots: index
 ---
-this is a test
+Roku Content Partner Portal Overview
+
+The Roku Content Partner Portal is a self-service platform designed to give TRC content partners greater visibility, control, and efficiency in managing their content lifecycle. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, and access the information they need without relying on manual support or back-and-forth communication.
+
+What the Portal Enables
+
+At its core, the Content Partner Portal is built to simplify how partners interact with Roku’s content operations. Instead of operating through fragmented tools or delayed updates, partners can:
+•	Track title status in real time across the full lifecycle, from ingestion through availability and expiration
+•	Understand processing outcomes with clear, actionable status indicators
+•	Identify issues early such as failed or unfulfilled deliveries
+•	Monitor rights windows and availability across territories
+•	Access a consolidated view of all titles in one place
+
+This transparency reduces uncertainty and empowers partners to take action faster.
+
+Why It Matters
+
+Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
+
+The Content Partner Portal shifts that model by:
+•	Reducing dependency on support teams
+•	Improving turnaround time for issue resolution
+•	Providing consistent and reliable data
+•	Enabling partners to self-serve critical insights
+
+The result is a more scalable and efficient partnership model.
+
+Who It’s For
+
+The portal is designed for business and operational stakeholders within partner organizations who need visibility into content performance and delivery status. This includes teams responsible for:
+•	Content operations
+•	Distribution and rights management
+•	Partner account management
+
+To get started, users must have the appropriate access role, typically Business Manager or Operations Manager, assigned by their company’s account administrator.
+
+Getting Started
+
+Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:
+[https://my.roku.com/signin](https://my.roku.com/signin)
+
+Once access is granted, users can immediately begin exploring their content library and leveraging the portal’s self-service capabilities.
+
+⸻
+
+The Roku Content Partner Portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.
+
+<br />

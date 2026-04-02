@@ -90,7 +90,7 @@ Only titles that are production-ready, have valid availability dates, and includ
 ## How It Works
 
 1. Select a Premium Subscription service (if applicable)
-   1. If you manage multiple services, choose which storefront you want to edit
+   1. If you manage multiple services, choose which storefront you want to manage
    2. If you only have one service, it is automatically selected
 2. Select a territory (if applicable)
    1. Choose the channel store you want to manage (for example, US, UK, etc.)

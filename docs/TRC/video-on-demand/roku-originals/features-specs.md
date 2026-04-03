@@ -842,12 +842,6 @@ From each Texted Master created, please export following (2) proxy files:
   </tbody>
 </table>
 
-#### 8.4.6 Final DCP
-
-For features, Roku requests a DCP. Please reach out at the start of your project to see if a DCP will be required for delivery. Full DCP specifications to follow.
-
-All DCPs will need to be both [DCI compliant](https://www.dcimovies.com/specification/DCI-DCSS-v141_2021-1013.pdf) and labeled per [ISDCF specifications](https://registry-page.isdcf.com/).
-
 ### 8.5 Audio stem delivery
 
 Prior to the commencement of principal photography, please reach out to Roku Post Production in order to determine the necessary audio deliverables for your series. As content, formatting, and style will differ from one series to the next, Roku understands that stem delivery may also vary. Please upload to your Archive folder on [Frame.io](http://frame.io/).
@@ -865,10 +859,10 @@ Provided below are the stems required for delivery of each episode/project:
 * Stereo & 5.1 Sound Effects
 * Pro Tools Session Files (.ptx)
 
-Provided below are the stems Roku would like to receive, if available (and applicable):
+Provided below are additional required elements:
 
-* Stereo & 5.1 Mix minus narration
-* Score or Original Composition (pending rights)
+* Stereo & 5.1 Mix minus narration stems
+* Original Score or Original Composition provided as a flattened .WAV for each discrete cue
 * Mono M&E Stems - Opticals, Backgrounds, etc.
 
 All audio should be archived as 24-bit, 48kHz WAV files.
@@ -879,7 +873,7 @@ ShowCode_ProdNumber_Vers_LangCode_MaterialType_Channel#_SampleRate_BitRate_TC_Ch
 
 **Examples:**
 
-MAMA_102_v04_enUS_PM_Nearfield_2ch_48k_24b_23976.L.wav
+MAMA_102_v04_enUS_PM_Nearfield_2ch_48k_24b_23976.Lt.wav
 
 _Roku Best Practices_
 

@@ -140,7 +140,7 @@ Certification criteria are listed by functionality. <br />
 
 **2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements).
 
-**2.2** Apps must integrate [On-device authentication](doc:on-device-authentication). Sign-up/sign-in workflows are prohibited from using external webpages, links to off-device promotional or marketing materials, or any other 1st or 3rd-party off-device sign-up/sign-in/authentication mechanism.
+**2.2** Apps must integrate [On-device authentication](doc:on-device-authentication). Sign-up/sign-in workflows are prohibited from using external webpages, links to off-device promotional or marketing materials, or any other 1st or 3rd-party off-device sign-up/sign-in/authentication/activation mechanism.
 
 Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade). The upgrade/downgrade workflows are prohibited from including external webpages.
 

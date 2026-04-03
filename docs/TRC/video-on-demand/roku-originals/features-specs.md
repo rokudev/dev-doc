@@ -396,7 +396,7 @@ After Roku has approved all in-show graphics and the first cut is locked, no cha
 
 #### 6.1.1 Uncompressed masters
 
-Roku prefers to receive both the un-graded and graded high-resolution master sequences as part of final delivery. These files should be exported in DPX format or TIFF format, at the highest bitrate possible (16-bit preferred).
+Roku prefers to receive both the un-graded and graded high-resolution master sequences as part of final delivery for wholly-owned Roku projects. These files should be exported in DPX format or TIFF format, at the highest bitrate possible (16-bit preferred). Please package DPX or TIFF image sequence folders into a single .zip file for delivery.
 
 If your vendor is unable to export these sequences, please reach out to Roku Post Production.
 
@@ -418,13 +418,15 @@ For Productions whose budgets and schedules permit HDR 10 or Dolby Vision gradin
 
 Roku requires that all Scripted and Alternative projects mix in 5.1 Surround, and then downmix to create Stereo deliverables as well.
 
+Roku Policy/Preference is for live, remote playback of the mix for Roku Creative and Roku Post Managers prior to conclusion of the mix. Please include provisions (remote view client/seat licensing, remote view capable stages, etc.) to accommodate when budgeting.
+
 #### 6.1.5 Promotional assets (images and trailers)
 
 As each production will differ with regards to promotional assets, please reach out to Roku Marketing to determine the specific asks for your show.
 
 ## 7. Credits
 
-**All opening and end credits must be submitted to Roku Post using the Roku Scripted Credits Approval Form (see 8.7.2) for approval with delivery of the first Fine Cut.**
+**All opening and end credits must be submitted to Roku Post using the Roku Scripted Credits Approval Form (see 8.8.2) for approval with delivery of the first Fine Cut.**
 
 ### 7.1 Opening credits
 
@@ -436,48 +438,54 @@ If your show contains sensitive content, please reach out to your Roku Legal Exe
 
 **For any other opening cards or disclaimers, please reach out to Roku Post Production for approval.**
 
-#### 7.1.2 Presentation card
+#### 7.1.2 Main title card
 
-Roku requires a 'Roku Originals Presents' credit at the top of each episode, special, or feature. This credit should be a minimum of 2 seconds in length and formatted in the style of the show.
+During the initial design phase of any title treatments please reach out to your Roku Creative Executives; Roku Production ([production@roku.com](mailto:production@roku.com)); Roku Marketing ([dlrokuoriginalmarketingcreative@roku.com](mailto:dlrokuoriginalmarketingcreative@roku.com)) and Roku Post: ([dlropost@roku.com](mailto:dlropost@roku.com)).
 
-#### 7.1.3 Main title option 1: title card
-
-During the initial design phase of any title treatments please reach out to your Roku Creative Executives; Roku Production ([altprod@roku.com);](mailto:altprod@roku.com) Roku Marketing ([dlrokuoriginalmarketingcreative@roku.com](mailto:dlrokuoriginalmarketingcreative@roku.com)) and Roku Post: ([dlropost@roku.com](mailto:dlropost@roku.com)).
-
-For shows that choose to utilize a main title card, please follow the formatting requirements below:
+Please follow the formatting requirements below:
 
 * The title card will display the show title/logo, burned into picture as part of each final video master.
 * The Production Company/Producer will have full creative control over how the title appears, subject to size requirements and provided that it is within the 16x9 title safe zones.
   * Duration of this card will be a maximum of 5 seconds
-  * The title card can include a credit block of up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
-  * No other “Presentation”, possessory, or origination credits permitted anywhere on the program.
-  * 'Created By' and 'Written By' credits can be swapped, but ‘Directed By’ must be the last credit.
-  * Each of these credits may only contain one name unless otherwise approved by Roku Business Affairs.
+* Deliverables: Series Logo (Static File)
+  * Dimensions:
+    * Scripted:
+      * 1920x1080px Transparent PNG
+      * 3840x2160px Transparent PNG
+    * Documentary
+      * 1920x1080px
+      * UHD resolution may also be applicable pending show’s specs
+  * Project Files (where applicable):
+    * PSD with hi-res textured layers
+    * AI Vector File
+    * Original font file with license receipt (Adobe/Google font link, .tff or .otf
 
-In addition to the title card credit block, a limited number of main title overlaid credits (as set forth below) may appear immediately after the show title/logo card.
+#### 7.1.3 Opening Credits
 
-* Credit blocks will consist of up to 10 individuals who rendered lead on-camera services for the program, as determined by the Production Company/Producer.
-* Only one credit block can be shown on screen at a time.
-* Each credit block will have a total time of 2.5 seconds.
-* The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one or two names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process. The Production Company/Producer may elect to use some, all or none of the provided credit blocks.
-* The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
-  * Fonts have to be large enough to be legible.
-  * Fonts used for names should be the same size.
+Each project, whether scripted or documentary, is required to include (2) Roku presentation cards at the top of the program as follows:
 
-#### 7.1.4 Main title option 2: sequence
+* ‘Roku Presents’, followed by a subsequent card reading ‘A Roku Original’
+* Duration: Minimum of 2 seconds per card
+* Please utilize the same font and style that is specific to each project.
+* Roku prefers these be integrated into the opening of each program, rather than added as separate cards.
 
-For shows that choose to utilize a main title sequence, please follow the formatting requirements below:
+Further opening credits specifications by project type:
 
-* The main title sequence can be no longer than 60 total seconds.
-* No other “Presentation”, possessory, or origination credits permitted anywhere on the program.
-* All credits should be contained within the main title sequence (i.e. no credits over picture after the sequence is complete).
-* Credits that are approved to be included within the main title sequence are outlined below:
-  * Up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer
-  * Up to 10 individuals who rendered lead on-camera services for the program, as determined by the Production Company/Producer.
-    * The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one or two names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process. The Production Company/Producer may elect to use some, all or none of the provided credit blocks.
-  * The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
-    * Fonts have to be large enough to be legible.
-    * Fonts used for names should be the same size.
+* Scripted:
+  * Credits may appear over picture at the top of each project, provided the following criteria are met:
+    * Full duration of these credits does not exceed 1:15 in length
+    * Up to three names per credit block
+    * Up to 12 total credits/credit blocks can be utilized
+  * Credits that are approved to be included within the show opening are outlined below:
+    * Up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
+    * 'Created By' and 'Written By' credits can be swapped, but ‘Directed By’ must be the last credit.
+    * Production Companies, Executive Producers, and Producers are permitted
+    * The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
+      * Fonts have to be large enough to be legible.
+      * Fonts used for names should be the same size.
+    * The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one, two, or three names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process.
+  * Documentary:
+    * No credits outside of Roku presentation cards and main title logo are permitted at the top of each project
 
 ### 7.2 End credit sequence
 

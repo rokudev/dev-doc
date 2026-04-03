@@ -18,7 +18,7 @@ The Roku Content Partner Portal is a self-service platform designed to give TRC 
 
 <br />
 
-## What the Portal Enables
+# What the Portal Enables
 
 At its core, the Content Partner Portal is built to simplify how partners interact with Roku’s content operations, and marketing. Instead of operating through fragmented tools or delayed updates, partners can:
 
@@ -34,7 +34,7 @@ This transparency reduces uncertainty and empowers your teams to take action fas
 
 <br />
 
-## Why It Matters
+# Why It Matters
 
 Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
 
@@ -49,7 +49,7 @@ The result is a more scalable and efficient partnership model.
 
 <br />
 
-## Who It's For
+# Who It's For
 
 The portal is designed for business, operation, and marketing stakeholders within partner organizations who need visibility into content performance, delivery, and marketing status. This includes teams responsible for:
 
@@ -62,7 +62,7 @@ To get started, users must have the appropriate access role, typically **Busines
 
 <br />
 
-## Getting Started
+# Getting Started
 
 Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:
 [https://my.roku.com/signin](https://my.roku.com/signin)

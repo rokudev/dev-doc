@@ -110,6 +110,64 @@ Once dailies have been uploaded to [Frame.io](http://frame.io/), please send a n
 
 A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution.
 
+CAPTURE
+
+* Camera(s) utilized
+  * For each camera model, please provide:
+    * Video Resolution
+    * Acquisition Codec
+    * Frame rate(s)
+* Audio sample rate and bit depth
+* Please confirm that video will be captured log/flat and that no LUT/color grade will be baked into the footage at capture
+
+OFFLOAD
+
+* Utility/Process used for offload
+* Checksum Algorithm used
+
+DAILIES & EDIT PROXY PROCESS
+
+* Program utilized for creation
+* Processing method & workflow utilized, including where in process LUT/color applied
+* Edit Proxies codec & frame rate and Dailies codec & frame rate
+* Raster/Resolution
+
+### 3.4 Sizzle
+
+#### 3.4.1 Sizzle overview
+
+Each project will be required to create a 60-90 second sizzle for your project to be used for business-to-business purposes.
+
+Please note that the sizzle does not require formal finishing, i.e. final assembly, conform, color, or mix. As it is for B2B use, it does not require clearances or music licensing.
+
+Process:
+
+* Please include sizzle milestones in overall calendar deliverable.
+* Please account for two rounds of notes from Roku Creative, plus an approval review.
+* Please reach out to your Roku Post Manager for the delivery date, as the sizzle might be required prior to the end of principal photography for some projects.
+
+Sizzle should include:
+
+* Two cards: 'Roku Presents', followed by ‘A Roku Original’, for a minimum of two seconds each
+* Temp Main Title treatment
+* Clips that represent the story and showcase talent involved
+* Sizzle does not need to include full scenes.
+
+Please reach out to your Roku Post Manager if you would like to see an example of a previous sizzle.
+
+### 3.4.2 Sizzle deliverables
+
+An HD primary video deliverable is required as follows:
+
+* Please do not include any head/tail formatting or slate.
+* Program should start at 00:00:00:00.
+* File Specs:
+  * (1) H.264
+  * 1920 x 1080
+  * 23.98 (or native framerate of Production, if different)
+  * Temp Stereo Mix
+* Delivery Destination: Frame.io  (Final Archive > Sizzle)
+
 ## 4. Security
 
 Security is of the utmost importance to Roku. As such, access to all of the exciting content we are creating together must be limited. Please review Roku’s security requirements noted below and reach out to Roku Post Production with any questions.
@@ -164,6 +222,7 @@ Once you begin the rough-cut process, your Roku Post Manager will reach out to s
 * There may be discussions around pre-roll, mid-roll, or post-roll advertising cue points. Regardless, please deliver each file as a seamless master.
 * Roku requires rough versions of graphics starting at the RC1 stage, and near final graphics by the FC stage. See Section 5.6 for a full breakdown of Roku’s graphics milestones (if applicable).
 * Blurring un-cleared video content requires Roku Creative approval beforehand.
+* Temp ADR must be added to all in-progress cuts where applicable, including all add-lines and alts.
 
 #### 5.2.2 Music
 
@@ -274,6 +333,7 @@ Video Specifications:
 * Target Bitrate: ~ 10mbps
 * Aspect: Square Pixels (1.0)
 * Visible Timecode Upper Right
+* Please mark ad breaks in white text over one sec of black as either “Ad Break #” or incoming act number, i.e. “Act 2”.
 
 Audio Specifications:
 

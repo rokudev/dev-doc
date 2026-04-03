@@ -26,7 +26,7 @@ Pinned titles appear alongside Roku recommendations, giving you a balance of con
 
 <br />
 
-## Who This Is For
+# Who This Is For
 
 Storefront marketing is available to Content Partners who manage **Premium Subscription** storefronts on the platform.
 
@@ -36,7 +36,7 @@ If your organization has a Premium Subscription storefront but does not yet have
 
 <br />
 
-## Getting access
+# Getting access
 
 To use this feature, get the appropriate role assigned to your account.
 
@@ -46,45 +46,45 @@ To use this feature, get the appropriate role assigned to your account.
 
 <br />
 
-## Key Concepts
+# Key Concepts
 
-### Featured Row
+## Featured Row
 
 The top row on your channel storefront. This row is fixed in position and highlights promoted content.
 
-### Pinned Titles
+## Pinned Titles
 
 Titles you assign to specific positions in the Featured row. These override recommendation-driven placements.
 
-### Scheduled Pins
+## Scheduled Pins
 
 Titles configured to appear during a defined start and end time.
 
-### Recommendation-Filled Positions
+## Recommendation-Filled Positions
 
 Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete row.
 
-### Eligible Titles
+## Eligible Titles
 
 Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
 
 <br />
 
-## Page layout
+# Page layout
 
 The Storefront Marketing interface is designed to help you quickly view, manage, and update your Featured row.
 
 [Screenshot Placeholder: Full Page Layout Overview]
 Description: Full-page screenshot labeled with key regions called out below (Service Selector, Territory Selector, Featured Row Editor, Search Panel, Actions/Publish area).
 
-1. ### Service Selector (if applicable)
+## 1. Service Selector (if applicable)
 
 Located at the top of the page, this selector allows you to choose which Premium Subscription service you are managing.
 
 * Visible only if you manage multiple services
 * Automatically set if only one service is available
 
-2. ### Territory Selector
+## 2. Territory Selector
 
 Allows you to switch between channel stores (for example, US, UK, etc.).
 
@@ -94,7 +94,7 @@ Allows you to switch between channel stores (for example, US, UK, etc.).
 [Screenshot Placeholder: Service + Territory Selectors]
 Description: Top navigation area showing both selectors with one service and one territory selected.
 
-3. ### Featured Row Editor
+## 3. Featured Row Editor
 
 The main workspace where you view and manage pinned titles.
 
@@ -105,7 +105,7 @@ The main workspace where you view and manage pinned titles.
 [Screenshot Placeholder: Featured Row Editor]
 Description: Row view showing pinned titles in order with position labels and visual indicators for pinned vs recommendation-filled slots.
 
-4. ### Search and Title Selection Panel
+## 4. Search and Title Selection Panel
 
 Used to find and select eligible titles to pin.
 
@@ -116,7 +116,7 @@ Used to find and select eligible titles to pin.
 [Screenshot Placeholder: Search Panel]
 Description: Search results panel with filters and selectable titles.
 
-5. ### Scheduling and Details Panel
+## 5. Scheduling and Details Panel
 
 Appears when selecting or editing a pinned title.
 
@@ -127,7 +127,7 @@ Appears when selecting or editing a pinned title.
 [Screenshot Placeholder: Scheduling Panel]
 Description: Side panel or modal showing date/time controls and pin details.
 
-6. ### Preview Mode
+## 6. Preview pins
 
 Allows you to visualize how your Featured row will appear.
 
@@ -137,7 +137,7 @@ Allows you to visualize how your Featured row will appear.
 [Screenshot Placeholder: Preview Mode]
 Description: Preview screen showing rendered storefront row with mixed pinned and recommended content.
 
-7. ### Publish and Validation Controls
+## 7. Publish and Validation Controls
 
 Located near the top or bottom of the page, depending on layout.
 
@@ -150,49 +150,49 @@ Description: Publish button with disabled state and visible validation error mes
 
 <br />
 
-## What You Can Do
+# What You Can Do
 
-### Manage the Featured Row
+## Manage the Featured Row
 
 View and edit all titles currently pinned in your Featured row, including their positions and metadata.
 
 [Screenshot Placeholder: Featured Row Management UI]
 Description: Full-page view of the Featured Row editor showing pinned titles in order (positions labeled #1–#40), including metadata such as title name, thumbnail, and position. Include the “X of 40 slots pinned” indicator.
 
-### Pin Titles to Specific Positions
+## Pin Titles to Specific Positions
 
 Assign titles to fixed positions (for example, position #1 or #5) to control layout and visibility.
 
 [Screenshot Placeholder: Pin to Position Interaction]
 Description: UI showing a title being assigned to a specific position via drag-and-drop or position selector. Include visual indicator of pinned state.
 
-### Schedule Featured Titles
+## Schedule Featured Titles
 
 Plan ahead by scheduling titles to go live or expire at specific dates and times. You can also view which titles will be active on any future date or date range.
 
-### Customize by Territory
+## Customize by Territory
 
 Configure different Featured rows per territory (channel store). Changes made in one territory do not affect others.
 
-### Preview Before Publishing
+## Preview Before Publishing
 
 Preview both current and future Featured rows to understand how your storefront will appear before changes go live.
 
-### Search and Select Eligible Titles
+## Search and Select Eligible Titles
 
 Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.
 
-### Recommendation-Filled Positions
+## Recommendation-Filled Positions
 
 Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete and personalized row.
 
-### Track Changes and Ownership
+## Track Changes and Ownership
 
 See who created or last modified each pinned title, providing visibility across your team.
 
 <br />
 
-## How It Works
+# How It Works
 
 1. Select a Premium Subscription service (if applicable)
    1. If you manage multiple services, choose which storefront you want to manage
@@ -210,7 +210,7 @@ Description: Dropdown or selector showing multiple Premium Subscription services
 
 <br />
 
-## System Rules and Limits
+# System Rules and Limits
 
 To maintain a consistent storefront experience, the following rules apply:
 
@@ -228,7 +228,7 @@ Description: Error message or warning UI showing a conflict (for example, overla
 
 <br />
 
-## Best Practices
+# Best Practices
 
 * Focus on a small number of high-impact titles rather than filling the entire row
 * Pin no more than 5 titles at a time to maintain effectiveness

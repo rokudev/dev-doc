@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-_Version 3.0 - August 2025_
+_Version 4.0 - March 2026_
 
 ## 1. General overview
 
@@ -81,6 +81,61 @@ Each production will be required to submit a Dailies Memo prior to the commencem
 * Please choose select takes that confirm production is proceeding as intended. It is not necessary to post all media from each day.
 * Dailies should be posted to [Frame.io](http://frame.io/). Roku Post Production will provide a distribution list prior to the first day of dailies.
 
+### 3.3 Dailies memo
+
+A Dailies Memo should be submitted to both the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution. Please include at least the following information:
+
+CAPTURE
+
+* Camera(s) utilized
+  * For each camera model, please provide:
+    * Video Resolution
+    * Acquisition Codec
+    * Frame rate(s)
+  * Audio sample rate and bit depth
+  * Please confirm that video will be log/flat and that no LUT/color grade will be baked into the footage at capture
+
+OFFLOAD
+
+* Utility/Process used for offload
+* Checksum Algorithm used
+
+DAILIES & EDIT PROXY PROCESS
+
+* Program utilized for creation
+* Processing method & workflow utilized, including where in process LUT/color applied
+* Edit Proxies Codec and Dailies Codec
+* Raster/Resolution
+
+<br />
+
+### 3.4. Show Explainer or Sizzle###
+
+
+Each project will be required to deliver either a clip-out of the show explainer or, where this is not available, will be required to cut together a short sizzle showcasing the theme and talent of each project. This will need to be delivered early in each schedule, so please reach out to Roku Post to discuss timing.
+
+Show Explainer:
+
+This deliverable will be a direct clip-out from the beginning of the first episode of the program, from the the cold open through the title sequence. The clip-out will end once the title sequence has completed and before the main action of the program has begun.
+
+Sizzle:
+
+* Assume 2 passes of notes by Roku Creative
+* Delivery date: Please check with Roku Post & Production
+* Length: 60-90 seconds
+* Include ‘Roku Presents’ and temp Main Title
+* Should include show explainer or clips that represent story
+* No full scenes required
+* No final assembly, color, or mix
+
+Technical Specs for Either Deliverable:
+
+* (1) H.264
+* No head or tail formatting
+* 1920 x 1080
+* 23.98 (or native framerate of Production, if different)
+* Temp Stereo Mix
+
 ## 4. Security
 
 Security is of the utmost importance to Roku. As such, access to all of the exciting content we are creating together must be limited. Please review Roku’s security requirements noted below and reach out to Roku Post Production with any questions.
@@ -136,6 +191,7 @@ Below are the basic parameters to keep in mind as you begin the rough cut proces
   * Hour long - Each episode’s run time should be between 44-48 minutes.
   * **For All Locked Cuts** - QT's must include a slug for the end credits so that the exact timing is locked to match the final master.
 * Roku requires rough versions of graphics starting at the RC1 stage, and near final graphics by the FC stage. See Section 5.6 for a full breakdown of Roku’s graphics milestones.
+* _It is not permitted to send rough cuts longer than either formats maximum without prior approval from the Roku Content Team._
 * Episodes should be cut, mastered, and delivered as separate episodes; not a long-play master.
 * There may be discussions around pre-roll, mid-roll, or post-roll advertising cue points. Regardless, please deliver each episode as a seamless master.
 * The use of blurs on un-cleared video content is not permitted without Roku Creative approval beforehand.
@@ -143,6 +199,8 @@ Below are the basic parameters to keep in mind as you begin the rough cut proces
 #### 5.2.2 Music
 
 Roku distributes content worldwide. Music should be cleared in perpetuity (or for licensed projects, the full length of the license), and allow for in-context promotional use, unless approved in writing by Roku Production Legal. Please source music that is covered by the following PROs: BMI, ASCAP, SESAC, and GMR.
+
+Wholly owned Roku Alternative projects have access to Universal Production Music (UPM) as a music provider. However, each project should confirm UPM availability with Roku Production prior to the commencement of Principal Photography.
 
 #### 5.2.3 Ad breaks
 
@@ -434,7 +492,7 @@ For end credits, Roku will utilize traditional burned-in credits. Please follow 
   * Animated logos/credits are permitted.
   * Logos can include audio provided there is no cost to Roku to license such audio.
     * Audio ring outs from the end of the episode are also acceptable.
-  * _***The end of the last logo card will signify your last frame of picture.***_
+  * __**The end of the last logo card will signify your last frame of picture.**__
   * No credits may appear after the end logo cards.
 
 ### 7.3 Other credit requirements

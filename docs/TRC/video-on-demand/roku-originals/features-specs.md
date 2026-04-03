@@ -774,7 +774,7 @@ _Roku Best Practices_
 
 #### 8.4.5 Final proxy files (clean & visible timecode)
 
-From each Texted Master created, please export following (2) proxy files::
+From each Texted Master created, please export following (2) proxy files:
 
 <table>
   <thead>

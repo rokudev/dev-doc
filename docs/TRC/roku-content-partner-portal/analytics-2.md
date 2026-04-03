@@ -10,7 +10,7 @@ The Analytics section provides insights into how your content and storefront exp
 
 <br />
 
-## Who This Is For
+# Who This Is For
 
 The Analytics section is designed for stakeholders who need visibility into content performance and audience behavior, including:
 
@@ -20,7 +20,7 @@ The Analytics section is designed for stakeholders who need visibility into cont
 
 <br />
 
-## Getting access
+# Getting access
 
 To use this feature, get the appropriate role assigned to your account.
 

@@ -524,7 +524,7 @@ The Delivery Phase begins as soon as the feature is ready for Quality Control, a
 
 * Due 1 Week Before Delivery to Quality Control Vendor
   * Let Roku Post know which vendor you’re proceeding with
-  * Metadata Ingest Document due to the Hub [See 8.7.1]
+  * Metadata Ingest Document due to the Hub [See 8.8.1]
 
 * Due With Delivery to Quality Control Vendor
   * Texted Master
@@ -581,7 +581,7 @@ Air Order = Please list even if the Air Order is the same as the Production Numb
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | Version           | TXTD (Texted), TXLS (Textless), or PROXY                                                        |
 | Language          | enUS (American English)                                                                         |
-| Resolution        | UHD or HD + Color Space = SDR or HDR                                                            |
+| Resolution        | UHD (scripted)  or HD (documentary) + Color Space = SDR or HDR                                  |
 | Forced Narratives | FN (Present), NC (none present)                                                                 |
 | Audio             | 2CH (Interleaved) or 8CH (5.1 and Stereo) – 7.1 audio not permitted on any masters at this time |
 | Frame Rate        | 23976p, 24p, 25p, 2997p, 30p, 50p, 5994p, 60p                                                   |
@@ -598,7 +598,7 @@ ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#_SampleRate_BitRate_
 
 **Examples:**
 
-MAMA_102_v04_20220919_enUS_PM_Nearfield_2ch_48k_24b_23976.L.wav
+MAMA_102_v04_20220919_enUS_PM_Nearfield_2chCH_48k_24b_23976.Lt.wav
 
 | **Material Type**                             | **Abbreviation**                  |
 | --------------------------------------------- | --------------------------------- |

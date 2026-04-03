@@ -535,7 +535,7 @@ Roku content will utilize traditional burned-in credits. All end credits must be
 * Production Company/Producer shall ensure that all credits conform to applicable third-party requirements.
 * Roku will have approval over all credits in each program, including all credits accorded to third parties.
 
-Adherence to the credit requirements in this document will be part of Roku’s Quality Check. If any specifications are not met, the asset will be passed back to the Production Company/Producer to modify. Roku’s Content Operation team can advise on how to upload assets for Roku review.
+**Adherence to the credit requirements in this document will be part of Roku’s Quality Check. If any specifications are not met, the asset will be passed back to the Production Company/Producer to modify. Roku’s Content Operation team can advise on how to upload assets for Roku review.**
 
 ## 8. Final delivery
 
@@ -661,7 +661,7 @@ All files should be formatted to start at 00:00:00:00.
 
 Files should begin with the cold open and end on the last frame of the Roku Originals logo end card.
 
-All video files <u>MUST NOT</u> contain any of the following: bars and tone, bumpers, segment recaps or previews, Vertical Interval time code time code, advertisements, slates, rating cards, FBI warning cards, placards, overlay branding, promotional bugs, informational bugs, watermarks, or website link callouts.
+All video files **<u>MUST NOT</u>** contain any of the following: bars and tone, bumpers, segment recaps or previews, Vertical Interval time code time code, advertisements, slates, rating cards, FBI warning cards, placards, overlay branding, promotional bugs, informational bugs, watermarks, or website link callouts.
 
 If promotional bugs or watermarks are required by a 3rd party, Roku Content Legal should be notified.
 
@@ -697,17 +697,17 @@ Mixing Specifications:
 
     <tr>
       <td>Profile</td>
-      <td>4444XQ (4444 okay if exporting from Premiere)</td>
+      <td>4444XQ (4444 okay if exporting from Premiere)<br />Scripted : 4444 XQ (4444 Ok if exporting from Premiere) if source is 4:4:4; or 422 H</td>
     </tr>
 
     <tr>
       <td>Minimum Bitrate</td>
-      <td>400 mbit/s or higher</td>
+      <td>50 mbit/s or higher</td>
     </tr>
 
     <tr>
       <td>Landscape aspect ratio</td>
-      <td>16:9 (1.77:1) - (no black bars)<br />W3840 x H2160 (UHD)</td>
+      <td>16:9 (1.77:1) - (no black bars)<br />Scripted Series: W3840 x H2160 (UHD)</td>
     </tr>
 
     <tr>
@@ -722,12 +722,12 @@ Mixing Specifications:
 
     <tr>
       <td>Chroma Subsampling</td>
-      <td>4:4:4</td>
+      <td>4:4:4 or 4.2.2</td>
     </tr>
 
     <tr>
       <td>Color Space</td>
-      <td>BT.709 Legal Video Range (16 to 940)</td>
+      <td>BT.709 Legal Video Range (64 to 940)</td>
     </tr>
 
     <tr>
@@ -801,19 +801,132 @@ _Roku Best Practices_
 
 From each Texted Master created, please export following proxy files:
 
-| **Video Codec**     | **H.264**                                                                                                                                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Container           | MOV or MP4                                                                                                                                                                                            |
-| Picture             | (1) Clean & (1) w/ Vis.TC UR (1) Series Opener Only                                                                                                                                                   |
-| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                               |
-| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                    |
-| Scan Type           | Progressive scan type                                                                                                                                                                                 |
-| Color Space         | BT.709 Legal Video Range                                                                                                                                                                              |
-| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                      |
-| Constant Frame Rate | Should Match Master                                                                                                                                                                                   |
-| Native Frame Rate   | Should Match Master                                                                                                                                                                                   |
-| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                   |
-| Filename            | ShowCode_ProdNumber_AirOrder_Language_Proxy_HD_ FN(if applicable)_Audio_Timecode(Clean or VisTC)_RevisionDate-v#_(Final or Pre-QC).movTHAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov |
+<Table>
+  <thead>
+    <tr>
+      <th>
+        **Video Codec**
+      </th>
+
+      <th>
+        **H.264**
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Container
+      </td>
+
+      <td>
+        MOV or MP4
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Picture
+      </td>
+
+      <td>
+        (1) Clean & (1) w/ Vis.TC UR (1) Series Opener Only
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Bitrate
+      </td>
+
+      <td>
+        5mbit/s (total file size \< 1gb to 2gb)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Dimensions
+      </td>
+
+      <td>
+        W1920 x H1080 (HD)
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Scan Type
+      </td>
+
+      <td>
+        Progressive scan type
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Color Space
+      </td>
+
+      <td>
+        BT.709 Legal Video Range
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Bit Depth
+      </td>
+
+      <td>
+        10-bit or 12-bit
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Constant Frame Rate
+      </td>
+
+      <td>
+        Should Match Master
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Native Frame Rate
+      </td>
+
+      <td>
+        Should Match Master
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Audio
+      </td>
+
+      <td>
+        Ch.1 Stereo Left, Ch.2 Stereo Right
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Filename
+      </td>
+
+      <td>
+        ShowCode_ProdNumber_AirOrder_Language_Proxy_HD_ FN(if applicable)_Audio_Timecode(Clean or VisTC)_RevisionDate-v#_(Final or Pre-QC).mov  
+        THAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ### 8.5 Audio delivery
 
@@ -865,6 +978,8 @@ All files are required in an effort to support customers that are deaf or hard o
 
 Roku requires closed captions and subtitles in **2** formats: SRT and WebVTT. The files have to have the same timecode and frame rate as the video and audio delivered. Character encoding MUST be UTF-8.
 
+All timed text should be delivered to the show's archival folder on S3 via Aspera.
+
 **Languages & Formats Required:**
 
 English (American, Code: enUS): Subtitles, SDH, & FN
@@ -879,11 +994,30 @@ NION-101-enUS_SDH-20190701
 
 NION-101-enUS_FN-20190701
 
-### 8.7 Paper deliverables
+### 8.7 Breakdown of final locations for media deliverables
+
+<br />
+
+| Media                                          | Final Location |
+| :--------------------------------------------- | :------------- |
+| TXTD Master                                    | S3             |
+| TXLS Master                                    | S3             |
+| Clean Proxy                                    | Frame.io       |
+| Vis. TC Proxy                                  | Frame.io       |
+| Mono Audio Stems                               | S3             |
+| Stereo & 5.1 Printmaster Stems                 | S3             |
+| Stereo & 5.1 Stems (M&E, Music, Dialogue, SFX) | S3             |
+| Pro Tools Session Files (.ptx)                 | S3             |
+| VAM Image Sequence (in .zip container)         | S3             |
+| CTM Image Sequence (in .zip container)         | S3             |
+| Timed Text Files (.srt and .vtt)               | S3             |
+| Paper Deliverables (Credits, Metadata, etc.)   | The Hub        |
+
+### 8.8 Paper deliverables
 
 Roku’s External Deliverables Hub (“Hub”) is a centralized location for all wrap deliverables documents. If you have not been granted access and will be handling this portion of delivery, please reach out to your Post Manager.
 
-#### 8.7.1 Roku metadata ingest template
+#### 8.8.1 Roku metadata ingest template
 
 Metadata allows Roku to ingest and display all series related information for our customers. Marketing and/or the Roku Content Executive may tweak the information to ensure it’s as effective as possible on the Roku platform.
 
@@ -898,7 +1032,7 @@ The required details will include, but are not limited to, the following:
 
 Please note that air order and episode titles must be a decision made with your Content Executive. The episode titles must be creatively driven (e.g. not “Episode 1”) and should be written with the show writers or receive writer approval. <u>Episode Titles should be locked after Rough Cut 1s.</u>
 
-**8.7.2 Credits documents**
+**8.8.2 Credits documents**
 
 Please deliver all of the following items as part of Final Delivery:
 
@@ -908,29 +1042,29 @@ Please deliver all of the following items as part of Final Delivery:
 
 Short form shows may require an additional Credits template, so please reach out to Roku to determine if this is necessary.
 
-#### 8.7.3 Segment rundowns
+#### 8.8.3 Segment rundowns
 
 You will be required to deliver a detailed breakdown of the timecodes pertaining to all segments in each episode. Please utilize the Roku Segment Rundown Template provided in your Kick-Off Delivery Packet.
 
 Roku requires that the timecodes within this document be delivered in HH:MM:SS:FF format. Any spreadsheets submitted without this formatting will not be accepted by Roku.
 
-#### 8.7.4 As broadcast scripts
+#### 8.8.4 As broadcast scripts
 
 Please deliver one set of As Broadcast Scripts for each series to the Hub. As Broadcast Script files should have a timecode-based breakdown of each line of dialogue. You are approved to submit the As Broadcast Script’s in any format that a Roku approved vendor utilizes.
 
-#### 8.7.5 Final font memo
+#### 8.8.5 Final font memo
 
 Please deliver one document that details the font name and size utilized for opening credits, identifiers and/or other on-screen text added to each episode (where applicable) to the Hub. If applicable, please also note which vendor created the show logo.
 
-#### 8.7.6 Final vendor list
+#### 8.8.6 Final vendor list
 
 Please deliver your final version of the Roku Vendor List that you received in the Kick-Off Delivery Packet to the Hub.
 
-#### 8.7.7 Final text spotting list
+#### 8.8.7 Final text spotting list
 
 Please deliver the Text Spotting List that was used to Quality Control the final episodes to the Hub. Please ensure that any changes made during Quality Control are reflected in the final document that is delivered to Roku via The Hub.  Please deliver a single excel, via Roku’s template, with episodes separated onto their own tabs.
 
-#### 8.7.8 Episodic delivery checklist
+#### 8.8.8 Episodic delivery checklist
 
 Please deliver the final version of the Roku Delivery Checklist that you received in the Kick-Off Delivery Packet to the Hub. All of the following must be completed:
 
@@ -939,13 +1073,13 @@ Please deliver the final version of the Roku Delivery Checklist that you receive
 * Any assets not being delivered to Roku, as approved by Roku Post, should be identified as such within the “Delivery Destination/Notes” section of each deliverable
 * If archival delivery will trail wrap, please indicate when it will be completed and who the primary point person will be to confirm for Roku Post
 
-#### 8.7.9 Music cue sheets
+#### 8.8.9 Music cue sheets
 
 Music Cue Sheets are required for all projects. Please use the cue sheet template found on the American Society of Composers, Authors and Publishers (ASCAP) website linked [here](https://www.ascap.com/help/royalties-and-payment/cue-sheets) or similar cue sheet template when submitting to Roku. The ASCAP template is also available via the Hub in the Production Legal – Scripted folder.
 
-Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Grossberg at [sgrossberg@roku.com](mailto:sgrossberg@roku.com).
+Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Vosper at [svosper@roku.com](mailto:svosper@roku.com).
 
-#### 8.7.10 Not applicable form
+#### 8.8.10 Not applicable form
 
 In cases where a paper deliverable is non-applicable to the project, please upload the Roku Not Applicable Form to the Hub with a written explanation of why this deliverable does not apply.
 
@@ -953,22 +1087,22 @@ In cases where a paper deliverable is non-applicable to the project, please uplo
 
 ### 9.1 High resolution masters & source material
 
-Reach out to Roku Post if you do not see a pre-existing folder structure on [Frame.io](http://frame.io/) for Final Archive. It is required that you utilize the [Frame.io Transfer App](https://support.frame.io/en/articles/3978929-frame-io-transfer-download-and-upload-files-folders-and-projects) for your uploads.
+Roku’s platform for archiving projects is to an AWS S3 bucket. This can be accessed via Aspera Shares. Note that this is separate from the Aspera Ingest upload. A Roku Post Manager will request email addresses and names of those who will be uploading archival assets to the designated archival show folder for credentialing.
 
-When adding video assets to [Frame.io](http://frame.io/), do not create additional sub-folders. Keep all media (proxies, texted/textless masters) only in the folders provided. Audio files should be grouped by episode (where applicable).
+When adding video assets to S3 do not create additional sub-folders. Keep all media (proxies, texted/textless masters) only in the folders provided. Audio files should be grouped by episode (where applicable).
 
-The following are required deliverables that must be uploaded to the Final Archive folder on [Frame.io](http://frame.io/):
+The following are required deliverables that must be uploaded to the Final Archive folder on S3:
 
 Required:
 
 * Final Texted Masters
 * Final Textless Masters
-* H.264 Proxies
 * Final Audio Stems
 * Pro Tools Sessions
 * Graphic Elements – Main title card, credit PNGs, end credit PNGs, on-screen graphics, interstitials, etc.
+* Timed Text Files
 
-Any and all series that are wholly owned by Roku will require delivery of VAMS, CTMS, and final Visual Effects shots (where applicable) via LTO9 or greater. LTOs should be formatted LTFs and include a digital manifest for each tape. These manifests should be uploaded to The Hub.
+Any and all series that are wholly owned by Roku will require delivery of VAMS, CTMS, and final Visual Effects shots (where applicable) via Aspera upload to S3, or, in some cases, LTO9 or greater. LTOs should be formatted LTFs and include a digital manifest for each tape. These manifests should be uploaded to The Hub.
 
 For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series.
 
@@ -980,13 +1114,30 @@ For all licensed or co-produced content, please reach out to your Roku Post Prod
 
 #### 9.1.1 Dailies archival
 
-Any and all series that are wholly owned by Roku will require delivery of dailies/OCF via LTO9 or greater. LTOs should be formatted LTFs and include a manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series.
+Any and all series that are wholly owned by Roku will require delivery of dailies/OCF via LTO10 or greater. LTOs should be formatted LTFs and include a manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series.
 
 ### 9.2 Offline editorial masters
 
 Please be sure that all consolidated avid media is archived and removed from [Frame.io](http://frame.io/) prior to wrap. Once each project’s wrap is complete, all media still contained within the [Frame.io](http://frame.io/) platform will be **deleted** and the series users will be disabled.
 
 ## 10. Change log
+
+### V4.0
+
+* 3.3.1 Dailies selects and Frame.io set-up.
+* 3.3.3 - Dailies Memo requirements updated.
+* 3.4.1 - Sizzle requirements and Roku’s main title presentation cards.
+* 3.4.2 - Sizzle Post deliverables.
+* 5.2.1 - Temp ADR required in all in-progress cuts.
+* 5.4 - Ad breaks specifications
+* 6.1.1  - Uncompressed masters - packaging DPX and TIFF folders into one .zip file.
+* 6.1.4 - Live, remote playback policy for Roku Creative and Post Production.
+* 7.1.3 - Roku Presentation Card requirements added.
+* 8.4.3 - UHD Texted Video Master specifications
+* 8.6 - Timed Text files will now be delivered to the AWS S3 Archival Bucket.
+* 8.7 - Final destination chart for all deliverables.
+* 9.1 - Final Archival Media will now be uploaded to AWS S3, rather than Frame.io.
+* 9.1 - LTO archive updated to LTO10 requirement.
 
 ### V3.0
 

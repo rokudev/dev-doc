@@ -672,7 +672,7 @@ Mixing Specifications:
 
     <tr>
       <td>Profile</td>
-      <td>422</td>
+      <td>Scripted Features: 4444 XQ (4444 Ok if exporting from Premiere) if source is 4:4:4; or 422 HQ<br />Documentary Features: 422 HQ; or 4444 if source is 4:4:4</td>
     </tr>
 
     <tr>
@@ -682,7 +682,7 @@ Mixing Specifications:
 
     <tr>
       <td>Landscape aspect ratio</td>
-      <td>16:9 (1.77:1) - (widescreen permitted within this AR)<br />W1920x H1080 (HD)</td>
+      <td>16:9 (1.77:1) - (widescreen permitted within this AR)<br /><br />Scripted: W3840x H2160 (UHD)<br />Documentary: W1920xH1080 (HD)</td>
     </tr>
 
     <tr>
@@ -697,12 +697,12 @@ Mixing Specifications:
 
     <tr>
       <td>Chroma Subsampling</td>
-      <td>4:2:2</td>
+      <td>4:2:2 or None/4:4:4 if acquired at 4:4:4</td>
     </tr>
 
     <tr>
       <td>Color Space</td>
-      <td>BT.709 Legal Video Range (16 to 940)</td>
+      <td>BT.709 Legal Video Range (64 to 940)</td>
     </tr>
 
     <tr>
@@ -753,108 +753,7 @@ Mixing Specifications:
   </tbody>
 </table>
 
-#### 8.4.4 UHD Texted video protection master
-
-Please reach out to Roku Post Production to determine if this master is a requirement for unscripted projects.
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Video Codec</strong></th>
-      <th><strong>ProRes</strong></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Container</td>
-      <td>MOV</td>
-    </tr>
-
-    <tr>
-      <td>Profile</td>
-      <td>4444XQ (4444 okay if exporting from Premiere)</td>
-    </tr>
-
-    <tr>
-      <td>Minimum Bitrate</td>
-      <td>400 mbit/s or higher</td>
-    </tr>
-
-    <tr>
-      <td>Landscape aspect ratio</td>
-      <td>16:9 (1.77:1) - (no black bars)<br />W3840 x H2160 (UHD)</td>
-    </tr>
-
-    <tr>
-      <td>Pixel aspect ratio</td>
-      <td>Square pixels (1:1)</td>
-    </tr>
-
-    <tr>
-      <td>Scan type</td>
-      <td>Progressive scan type</td>
-    </tr>
-
-    <tr>
-      <td>Chroma Subsampling</td>
-      <td>4:4:4</td>
-    </tr>
-
-    <tr>
-      <td>Color Space</td>
-      <td>BT.709 Legal Video Range (16 to 940)</td>
-    </tr>
-
-    <tr>
-      <td>Bit depth</td>
-      <td>10-bit or 12-bit</td>
-    </tr>
-
-    <tr>
-      <td>Constant Frame Rate</td>
-      <td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
-    </tr>
-
-    <tr>
-      <td>Native frame rate</td>
-      <td>No 3:2 pulldown flags</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Audio Codec</strong></th>
-      <th><strong>PCM</strong></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Format</td>
-      <td>2 Interleaved Tracks or 8 Mono Tracks</td>
-    </tr>
-
-    <tr>
-      <td>Track Layout</td>
-      <td><u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
-    </tr>
-
-    <tr>
-      <td>Sample Rate/Bit Depth</td>
-      <td>48000Hz/24-bit</td>
-    </tr>
-
-    <tr>
-      <td>Channel Mapping & Metadata Tagging</td>
-      <td>See 8.4.2 -Verify correct audio channel mapping and metadata tagging.</td>
-    </tr>
-  </tbody>
-</table>
-
-#### 8.4.5 Textless delivery
+#### 8.4.4 Textless delivery
 
 If your content includes burned-in on screen text, you will be required to deliver a separate Textless Reel. This reel should include clean, text-free versions of any shots that contain burned-in subtitles or graphic text elements. If the show contains a comprehensive graphics package, please strip all graphics and supply the graphics package or elements in Archival. Video and Audio specs should mirror the UHD Protection Texted Master noted above.
 
@@ -875,7 +774,7 @@ _Roku Best Practices_
 
 #### 8.4.5 Final proxy files (clean & visible timecode)
 
-From each Texted Master created, please export following proxy files:
+From each Texted Master created, please export following (2) proxy files::
 
 <table>
   <thead>

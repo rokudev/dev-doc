@@ -53,12 +53,12 @@ The result is a more scalable and efficient partnership model.
 
 The portal is designed for business, operation, and marketing stakeholders within partner organizations who need visibility into content performance, delivery, and marketing status. This includes teams responsible for:
 
-* Content operations
-* Business operations
-* Marketing and merchandising
+* Content and operations teams
+* Business and strategy teams
+* Marketing and merchandising teams
 * Partner account management
 
-To get started, users must have the appropriate access role, typically **Business Manager**, **Operations Manager**, or **Marketing Manager** — assigned by your company’s account administrator.
+To get started, users must have the appropriate access role, typically **Business Manager**, **Operations Manager**, **Marketing Manager**, or **Analytics** — assigned by your company’s account administrator.
 
 <br />
 
@@ -67,8 +67,8 @@ To get started, users must have the appropriate access role, typically **Busines
 Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:
 [https://my.roku.com/signin](https://my.roku.com/signin)
 
-Once access is granted, users can immediately begin exploring their content library and leveraging the portal’s self-service capabilities.
+Once access is granted, you can immediately begin exploring your content library and leveraging the portal’s self-service capabilities.
 
-⸻
+<br />
 
 The Roku Content Partner Portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.

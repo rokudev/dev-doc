@@ -59,7 +59,7 @@ Please note that the Post Grid template provides columns for multiple types of s
 
 ### 2.4 Roku marketing
 
-Marketing will be requesting an early creative sizzle reel and they will be directly involved in the Main Title treatment creative process. Marketing will require both a texted and textless version of the sizzle.
+Marketing will be requesting an early creative sizzle reel and they will be directly involved in the Main Title treatment creative process.
 
 ### 2.5 Roku localization
 
@@ -69,7 +69,11 @@ Roku’s Localization Team will handle the creation of Latin Spanish subtitles a
 
 ### 3.1 Capture specifications
 
-* Unless otherwise approved by Roku production prior to the commencement of principal photography, you will be required to capture at a minimum resolution of UHD (3840x2160) and an Aspect Ratio of 16:9 to match final deliverables specs. Any changes to the required resolution or aspect ratio must be approved by Roku.
+* Content Type
+  * Scripted
+    * Unless otherwise approved by Roku Production prior to the commencement of principal photography, you will be required to capture at a minimum resolution of UHD (3840x2160) and an Aspect Ratio of 16:9 to match final deliverables specs. Any changes to the required resolution or aspect ratio must be approved by Roku.
+  * Unscripted
+    * Unless otherwise approved by Roku Production prior to the commencement of principal photography, you will be required to capture at a minimum resolution of HD (1920x1080) and an Aspect Ratio of 16:9 to match final deliverables specs. Any changes to the required resolution or aspect ratio must be approved by Roku.
 * All material should be captured, transferred, and mastered in a progressive frame rate. Please do not apply any cross-conversions to content.
 * Please do not apply in-camera upscaling or de-squeezing to any camera masters. If your desire is to work with cameras that do not natively capture in 4k, please reach out to Roku Post Production to discuss workflow options.
 * Any material that is being shot or used for Visual Effects must match capture resolution. This resolution must remain consistent throughout the Visual Effects creation and final delivery process.
@@ -85,11 +89,13 @@ Roku’s Localization Team will handle the creation of Latin Spanish subtitles a
 
 #### 3.3.1 Dailies distribution
 
-Allow for dailies and/or weekly selects. Dailies are requested for visibility and early Marketing preparation. Roku Post will provide a user list for Dailies prior to Production.
+Dailies are requested for visibility and early Marketing preparation. Roku Post will provide a user list for Dailies prior to production.
 
-Roku’s approved platform for dailies, rough cut release, and final archive is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, so if you are working with a partner who utilizes a different review platform, this may not require an extra render (pending specifications for each).
+* Scripted projects: Allow for dailies across all days of production.
 
-The Roku Post team will initiate onboarding prior to the first day of production. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
+Roku’s approved platform for dailies, rough cut release, and final archive is Frame.io. All content being sent for review by the Roku team will need to be shared via this platform. Frame.io’s platform is compatible with most commonly used codecs, so if you are working with a partner who utilizes a different review platform, this may not require an extra render (pending specifications for each).
+
+The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the Frame.io team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
 
 #### 3.3.2 Dailies formatting
 
@@ -104,7 +110,65 @@ Once dailies have been uploaded to [Frame.io](http://frame.io/), please send a n
 
 #### 3.3.3 Dailies memo
 
-A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution.
+A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution. Please include at least the following information:
+
+CAPTURE
+
+* Camera(s) utilized
+  * For each camera model, please provide:
+    * Video Resolution
+    * Acquisition Codec
+    * Frame rate(s)
+* Audio sample rate and bit depth
+* Please confirm that video will be captured log/flat and that no LUT/color grade will be baked into the footage at capture
+
+OFFLOAD
+
+* Utility/Process used for offload
+* Checksum Algorithm used
+
+DAILIES & EDIT PROXY PROCESS
+
+* Program utilized for creation
+* Processing method & workflow utilized, including where in process LUT/color applied
+* Edit Proxies codec & frame rate and Dailies codec & frame rate
+* Raster/Resolution
+
+### 3.4 Sizzle
+
+#### 3.4.1 Sizzle overview
+
+Each project will be required to create a 60-90 second sizzle for your project to be used for business-to-business purposes.
+
+Please note that the sizzle does not require formal finishing, i.e. final assembly, conform, color, or mix. As it is for B2B use, it does not require clearances or music licensing.
+
+Process:
+
+* Please include sizzle milestones in overall calendar deliverable.
+* Please account for two rounds of notes from Roku Creative, plus an approval review.
+* Please reach out to your Roku Post Manager for the delivery date, as the sizzle might be required prior to the end of principal photography for some projects.
+
+Sizzle should include:
+
+* Two cards: 'Roku Presents', followed by ‘A Roku Original’, for a minimum of two seconds each
+* Temp Main Title treatment
+* Clips that represent the story and showcase talent involved
+* Sizzle does not need to include full scenes.
+
+Please reach out to your Roku Post Manager if you would like to see an example of a previous sizzle.
+
+### 3.4.2 Sizzle deliverables
+
+An HD primary video deliverable is required as follows:
+
+* Please do not include any head/tail formatting or slate.
+* Program should start at 00:00:00:00.
+* File Specs:
+  * (1) H.264
+  * 1920 x 1080
+  * 23.98 (or native framerate of Production, if different)
+  * Temp Stereo Mix
+* Delivery Destination: Frame.io  (Final Archive > Sizzle)
 
 ## 4. Security
 
@@ -127,6 +191,8 @@ For team members who require reference QuickTimes in order to complete their wor
   * It is the responsibility of each show's Post team to request vendor deletion of these files at show wrap.
 
 ### 4.3 Content review
+
+It is never permitted to share rough cuts via Public Links. Review Links require user login and are the only approved method for content review.
 
 [Frame.io](http://frame.io/)’s Roku Partner Playbook is shared with the Post team at the start of each project. This workflow must be followed for both cuts released to Roku and also cuts released prior (Editor, Director, Producers, etc.). If you have not received this document, please reach out to Roku Post Production.
 
@@ -160,6 +226,9 @@ Below are the basic parameters to keep in mind as you begin the rough cut proces
   * **For All Locked Cuts** - QT's must include a slug for the end credits so that the exact timing is locked to match the final master.
 * Each episode of content should commence with a “cold open” prior to any logos, credits or title sequence in order to immediately engage the viewer.
 * There may be discussions around pre-roll, mid-roll, or post-roll advertising cue points. Regardless, please deliver each episode as a seamless master.
+* Roku requires rough versions of graphics starting at the RC1 stage, and near final graphics by the FC stage. See Section 5.6 for a full breakdown of Roku’s graphics milestones (if applicable).
+* Blurring un-cleared video content requires Roku Creative approval beforehand.
+* Temp ADR must be added to all in-progress cuts where applicable, including all add-lines and alts.
 
 #### 5.2.2 Music
 
@@ -278,6 +347,7 @@ Video Specifications:
 * Target Bitrate: ~ 10mbps
 * Aspect: Square Pixels (1.0)
 * Visible Timecode Upper Right
+* Please mark ad breaks in white text over one sec of black as either “Ad Break #” or incoming act number, i.e. “Act 2”.
 
 Audio Specifications:
 
@@ -315,6 +385,25 @@ Example: FLIP_102_AIR_2_FC_20191115
 
 All rough cut links should be confined to viewing only (i.e. no download access). When sharing cuts, please do not create any folders, or copy any folders into the Roku Review projects.
 
+### 5.6 Graphics milestones & review process
+
+For Scripted and Alternative features, the Roku Content & Post Production teams should be involved in key discussions related to graphics, from title treatments to overall episodic graphics packages.
+
+All graphics work (title treatment, lower thirds, interstitials, etc.) must be completed by a Roku approved graphics company. The use of freelance staff or in-house graphics teams is not permitted. Please reach out to Roku Post to obtain the list of approved vendors.
+
+The following milestones require Roku notification and review:
+
+* **Six Weeks Prior to 1st Rough Cut:** A minimum of three graphics vendor options must be sent to Roku for review and approval
+* **Four Weeks Prior to 1st Rough Cut:** Due to Roku: Mood board, color palette, title sketches, font, etc.
+* **Two Weeks Prior to 1st Rough Cut:** Due to Roku: First round of design and/or animation examples
+* **One Week Prior to 1st Rough Cut:** Due to Roku: Second round of design and/or animation examples
+* **1st Rough Cut Release**
+  * Temp graphics implemented into the cut that is distributed to Roku
+  * All temp graphics must be based on creative input from Roku. Any changes from the agreed upon look of in-show graphics will need to be outlined in an email to the Roku Content team.
+* **1st Fine Cut Release:** Final Graphics must be implemented into the cut that is distributed to Roku
+
+After Roku has approved all in-show graphics and the first cut is locked, no changes should be made without written approval from the Roku Content team.
+
 ## 6. Final mastering & marketing
 
 ### 6.1 Picture & audio mastering
@@ -343,6 +432,8 @@ For Productions whose budgets and schedules permit HDR10 or Dolby Vision grading
 
 Roku requires that all Scripted series mix in 5.1 Surround, and then downmix to create Stereo deliverables as well.
 
+Roku Policy/Preference is for live, remote playback of the mix for Roku Creative and Roku Post Managers prior to conclusion of the mix. Please include provisions (remote view client/seat licensing, remote view capable stages, etc.) to accommodate when budgeting.
+
 #### 6.1.5 Promotional assets (images and trailers)
 
 As each production will differ with regards to promotional assets, please reach out to to determine the specific asks for your show.
@@ -361,52 +452,64 @@ If your show contains sensitive content, please reach out to your Roku Legal Exe
 
 **For any other opening cards or disclaimers, please reach out to Roku Post Production for approval.**
 
-#### 7.1.2 Presentation card
+#### 7.1.2 Main title card
 
-Roku requires a 'Roku Originals Presents' credit at the top of each episode, special, or feature. This credit should be a minimum of 2 seconds in length and formatted in the style of the show.
+During the initial design phase of any title treatments please reach out to your Roku Creative Executives; Roku Production ([production@roku.com](mailto:production@roku.com)); Roku Marketing ([dlrokuoriginalmarketingcreative@roku.com](mailto:dlrokuoriginalmarketingcreative@roku.com)) and Roku Post: ([dlropost@roku.com](mailto:dlropost@roku.com)).
 
-#### 7.1.3 Main title option 1: title card
+Please follow the formatting requirements below:
 
-During the initial design phase of any title treatments please reach out to your Roku Creative Executives; Roku Production ([altprod@roku.com);](mailto:altprod@roku.com) Roku Marketing ([dlrokuoriginalmarketingcreative@roku.com](mailto:dlrokuoriginalmarketingcreative@roku.com)) and Roku Post: ([dlropost@roku.com](mailto:dlropost@roku.com)).
-
-For shows that choose to utilize a main title card, please follow the formatting requirements below:
-
-* Each episode of content should commence with a “cold open” prior to any logos, credits or title sequence in order to immediately engage the viewer.
 * The title card will display the show title/logo, burned into picture as part of each final video master.
 * The Production Company/Producer will have full creative control over how the title appears, subject to size requirements and provided that it is within the 16x9 title safe zones.
-  * Duration of this card will be a maximum of 5 seconds.
-  * No other “Presentation” or possessory credits permitted anywhere on the program.
-* The title card can include a credit block of up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
-  * 'Created By' and 'Written By' credits can be swapped, but ‘Directed By’ must be the last credit.
-  * Each of these credits may only contain one name unless otherwise approved by Roku Business Affairs.
+  * Duration of this card will be a maximum of 5 seconds
+* Deliverables: Series Logo (Static File)
+  * Dimensions:
+    * Scripted:
+      * 1920x1080px Transparent PNG
+      * 3840x2160px Transparent PNG
+    * Documentary
+      * 1920x1080px
+      * UHD resolution may also be applicable pending show’s specs
+  * Project Files (where applicable):
+    * PSD with hi-res textured layers
+    * AI Vector File
+    * Original font file with license receipt (Adobe/Google font link, .tff or .otf
 
-In addition to the title card credit block, a limited number of main title overlaid credits (as set forth below) may appear immediately after the show title/logo card.
+#### 7.1.3 Opening Credits
 
-* Credit blocks will consist of up to 10 individuals who rendered lead on-camera services for the program, as determined by the Production Company/Producer. If applicable, these credits would be placed on five separate cards, with a maximum of two names on each card.
-* Only one credit block can be shown on screen at a time.
-* Up to 6 credit blocks can be overlaid sequentially on the content.
-* Each credit block will have a total time of 2.5 seconds and a transition time of 1 second.
-* The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one or two names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process. The Production Company/Producer may elect to use some, all or none of the provided credit blocks.
-* The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
-  * Fonts have to be large enough to be legible
-  * Fonts should not distract from the visual content
-  * Fonts used for names should be the same size
+Each project, whether scripted or documentary, is required to include (2) Roku presentation cards at the top of the program as follows:
 
-#### 7.1.4 Main title option 2: main title sequence
+* ‘Roku Presents’, followed by a subsequent card reading ‘A Roku Original’
+* Duration: Minimum of 2 seconds per card
+* Please utilize the same font and style that is specific to each project.
+* Roku prefers these be integrated into the opening of each program, rather than added as separate cards.
 
-For shows that choose to utilize a main title sequence, please follow the formatting requirements below:
+Further opening credits specifications by project type:
 
-* Each episode of content should commence with a “cold open” prior to any logos, credits or title sequence in order to immediately engage the viewer.
-* The main title sequence can be no longer than 15 total seconds.
-* No other “Presentation”, possessory, or origination credits permitted anywhere on the program.
-* All credits must be contained within the main title sequence (i.e. no credits over picture after the sequence is complete).
-* Credits that are approved to be included within the main title sequence are outlined below:
-  * Up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
-  * Up to 10 individuals who rendered lead on-camera services for the program, as determined by the Production Company/Producer.
-    * The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one or two names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process. The Production Company/Producer may elect to use some, all or none of the provided credit blocks.
-  * The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
-    * Fonts have to be large enough to be legible.
-    * Fonts used for names should be the same size.
+Scripted:
+
+Credits may appear over picture at the top of each project, provided the following criteria are met:
+
+Full duration of these credits does not exceed 1:15 in length
+
+Up to three names per credit block
+
+Up to 12 total credits/credit blocks can be utilized
+
+Credits that are approved to be included within the show opening are outlined below:
+
+Up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
+
+'Created By' and 'Written By' credits can be swapped, but ‘Directed By’ must be the last credit.
+
+Production Companies, Executive Producers, and Producers are permitted
+
+The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
+
+Fonts have to be large enough to be legible.
+
+Fonts used for names should be the same size.
+
+The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one, two, or three names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process.
 
 ### 7.2 End credit sequence
 

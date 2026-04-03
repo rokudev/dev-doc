@@ -485,31 +485,19 @@ Each project, whether scripted or documentary, is required to include (2) Roku p
 
 Further opening credits specifications by project type:
 
-Scripted:
-
-Credits may appear over picture at the top of each project, provided the following criteria are met:
-
-Full duration of these credits does not exceed 1:15 in length
-
-Up to three names per credit block
-
-Up to 12 total credits/credit blocks can be utilized
-
-Credits that are approved to be included within the show opening are outlined below:
-
-Up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
-
-'Created By' and 'Written By' credits can be swapped, but ‘Directed By’ must be the last credit.
-
-Production Companies, Executive Producers, and Producers are permitted
-
-The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
-
-Fonts have to be large enough to be legible.
-
-Fonts used for names should be the same size.
-
-The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one, two, or three names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process.
+* Scripted:
+  * Credits may appear over picture at the top of each project, provided the following criteria are met:
+    * Full duration of these credits does not exceed 1:15 in length
+    * Up to three names per credit block
+    * Up to 12 total credits/credit blocks can be utilized
+  * Credits that are approved to be included within the show opening are outlined below:
+    * Up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
+    * 'Created By' and 'Written By' credits can be swapped, but ‘Directed By’ must be the last credit.
+    * Production Companies, Executive Producers, and Producers are permitted
+    * The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
+      * Fonts have to be large enough to be legible.
+      * Fonts used for names should be the same size.
+    * The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one, two, or three names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process.
 
 ### 7.2 End credit sequence
 
@@ -538,7 +526,7 @@ Roku content will utilize traditional burned-in credits. All end credits must be
   * Animated logos/credits are permitted.
   * Logos can include audio provided there is no cost to Roku to license such audio.
     * Audio ring outs from the end of the episode are also acceptable.
-  * The end of the last logo card will signify your LFOP (last frame of picture).
+  * **The end of the last logo card will signify your LFOP (last frame of picture).**
   * No credits may appear after the end logo cards.
 
 ### 7.3 Other credit requirements

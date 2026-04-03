@@ -533,7 +533,7 @@ Check the status:
 <br />
 
 <Callout icon="🤔" theme="default">
-  If rights are missing, fields such as territory, service, or dates may display as blank or `-`. This is expected until the required data is provided.
+  If rights are missing, fields such as license types, services, territories, or expected dates may display as blank or `-`. This is expected until the required data is provided and matched.
 </Callout>
 
 <br />

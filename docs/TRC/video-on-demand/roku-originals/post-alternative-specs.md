@@ -582,7 +582,7 @@ Air Order = Please list even if the Air Order is the same as the Production Numb
 | Date                  | Please list in the following format: YYYYMMDD                                                           |
 | Version Number        | To indicate the current or previous passes of Quality Control and track the latest version for delivery |
 
-*See 8.4.5 for Proxy file naming.
+*See 8.5.5 for Proxy file naming.
 
 #### 8.3.3 Master audio deliverables
 

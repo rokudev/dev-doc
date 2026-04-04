@@ -209,6 +209,8 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 <br />
 
+<br />
+
 Focus on these two statuses first:
 
 ## Unfulfilled

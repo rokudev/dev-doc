@@ -551,9 +551,7 @@ To view details:
 1. Click the expand arrow next to a title.
 2. The **Territories** panel appears.
 
-[IMAGE PLACEHOLDER: Expanded row with Territories panel]
-
-Show a title expanded with 2–3 territory cards, including mixed statuses (for example, **Live** + **Unfulfilled**).
+![](https://files.readme.io/2e946945e0dda50df1ef2efa2f1ed3e25349a976d13bdbcf4e60ea1e3f976d8e-image.png)
 
 ### How to read the Territories panel
 

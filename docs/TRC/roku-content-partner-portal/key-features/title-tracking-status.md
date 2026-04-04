@@ -313,35 +313,37 @@ The following table explains each column in the title table.
       <td>
         Displays the overall status of the title, such as:
 
-        #### Unfulfilled
+        **Unfulfilled**
 
-        Waiting for ordered rights, assets, or a match between the two. **Requires your attention.**
+        Waiting for ordered rights, assets, or a match between the two. Requires your attention.
 
-        #### Failed
+        **Failed**
 
-        One or more issues occurred while processing your files and are preventing this title from going live. **Requires your attention.**
+        One or more issues occurred while processing your files and are preventing this title from going live. Requires your attention.
 
-        #### Rights under review
+        **Rights under review**
 
         Rights are being reviewed for approval by the Roku team. Turnaround time may vary based on catalog volume.
 
-        #### Processing
+        **Processing**
 
         The Roku pipeline is preparing your assets for publishing.
 
-        #### Scheduled
+        **Scheduled**
 
         Ready for go-live as scheduled.
 
-        #### Live
+        **Live**
 
         The title is available to viewers.
 
-        #### Expired
+        **Expired**
 
         Update windows to reactivate.
 
-        For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
+        <Callout icon="fa-info-circle" theme="info">
+          For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
+        </Callout>
       </td>
     </tr>
 
@@ -445,6 +447,7 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   This filter shows titles whose **Expected start date** falls within a selected timeframe.
 
   Available options:
+
   * Tomorrow
   * This week
   * This month
@@ -452,6 +455,7 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   * Next month
 
   Use this filter to:
+
   * identify titles launching soon
   * prepare for upcoming releases
   * monitor near-term availability
@@ -460,6 +464,7 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   This filter shows titles whose **Expected end date** falls within a selected timeframe.
 
   Available options:
+
   * Tomorrow
   * This week
   * This month
@@ -467,6 +472,7 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   * Next month
 
   Use this filter to:
+
   * identify titles that are expiring soon
   * take action to extend availability
   * monitor upcoming expirations across your catalog

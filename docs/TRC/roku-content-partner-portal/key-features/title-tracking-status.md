@@ -199,6 +199,14 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 # What requires your attention
 
+<Image align="left" width="50% " src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" />
+
+<br />
+
+<br />
+
+<br />
+
 Focus on these two statuses first:
 
 ## Unfulfilled
@@ -376,13 +384,12 @@ The following table explains each column in the title table.
 When reviewing a title:
 
 1. Start with **Status** to understand overall readiness.
-2. Check **Error** and **Warning** counts, if present, to understand severity.
-3. Review **Territories** to understand regional coverage.
-4. Use **Expected** dates to understand timing.
+2. Review **Territories** to understand rights coverage.
+3. Use **Expected** dates to understand timing.
 
 [IMAGE PLACEHOLDER: Annotated row walkthrough]
 
-Highlight a single row and visually walk through how to interpret it step-by-step (license → service → status → territories → dates).
+Highlight a single row and visually walk through how to interpret it step-by-step (license types → services → status → territories → expected dates).
 
 <Callout icon="fa-exclamation-triangle" theme="warning">
   A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.

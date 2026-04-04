@@ -445,7 +445,6 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   This filter shows titles whose **Expected start date** falls within a selected timeframe.
 
   Available options:
-
   * Tomorrow
   * This week
   * This month
@@ -453,7 +452,6 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   * Next month
 
   Use this filter to:
-
   * identify titles launching soon
   * prepare for upcoming releases
   * monitor near-term availability
@@ -462,7 +460,6 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   This filter shows titles whose **Expected end date** falls within a selected timeframe.
 
   Available options:
-
   * Tomorrow
   * This week
   * This month
@@ -470,7 +467,6 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
   * Next month
 
   Use this filter to:
-
   * identify titles that are expiring soon
   * take action to extend availability
   * monitor upcoming expirations across your catalog

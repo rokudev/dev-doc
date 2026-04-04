@@ -166,7 +166,7 @@ A title appears in a status card if:
 
 <br />
 
-<Callout icon="📘">
+<Callout icon="📘" theme="info">
   A single title can appear in multiple status cards because status is evaluated at the territory level. Use **All titles** to see the rolled-up overall status.
 </Callout>
 
@@ -200,6 +200,8 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 # What requires your attention
 
 <Image align="left" width="50% " src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" />
+
+<br />
 
 <br />
 
@@ -280,8 +282,7 @@ The following table explains each column in the title table.
         * **TV season**
         * **TV series**
 
-
-        <Callout icon="📘">
+        <Callout icon="📘" theme="info">
           TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
         </Callout>
       </td>
@@ -343,7 +344,7 @@ The following table explains each column in the title table.
 
         Update windows to reactivate.
 
-        <Callout icon="📘">
+        <Callout icon="📘" theme="info">
           For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
         </Callout>
       </td>
@@ -395,7 +396,7 @@ When reviewing a title:
 
 Highlight a single row and visually walk through how to interpret it step-by-step (license types → services → status → territories → expected dates).
 
-<Callout icon="🧐">
+<Callout icon="🧐" theme="default">
   A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.
 </Callout>
 

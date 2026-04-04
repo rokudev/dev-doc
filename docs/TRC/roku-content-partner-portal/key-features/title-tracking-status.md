@@ -211,6 +211,10 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 <br />
 
+<br />
+
+<br />
+
 Focus on these two statuses first:
 
 ## Unfulfilled
@@ -430,6 +434,36 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 ## Using search and filters
 
 <Image align="left" width="40% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
 
 <br />
 

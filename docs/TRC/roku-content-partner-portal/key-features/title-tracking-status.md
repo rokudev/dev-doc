@@ -228,9 +228,9 @@ This means blocking errors occurred during processing.
 
 Each row represents a single title and its current status across territories.
 
-[IMAGE PLACEHOLDER: Full table with column labels]
+<Image align="center" src="https://files.readme.io/fe20faa7f6dabf5d966489bee56880a71d7f11618bacfc6ca727cea3194c9dbd-image.png" />
 
-Show the full table header row and 2–3 example rows. Visually call out each column from left to right.
+<br />
 
 The following table explains each column in the title table.
 

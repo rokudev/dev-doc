@@ -462,56 +462,44 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 
 <br />
 
-Use search to find titles by:
+### Use search to find titles
 
-* Title name
-* Series name
-* Title ID
+* #### Title name
+* #### Series name
+* #### Title ID
 
-Use filters to narrow results by:
+### Use filters to narrow results
 
-* Content type
-* License type
-* Service
-* Territory
-* Expected start period
-* Expected end period
+* #### Content type
+* #### License type
+* #### Service
+* #### Territory
+* #### Expected start period  
+  This filter shows titles whose **Expected start date** falls within a selected timeframe.
 
-### Expected start period
+  Available options:
+  * Tomorrow
+  * This week
+  * This month
+  * Next week
+  * Next month
+  Use this filter to:
+  * identify titles launching soon
+  * prepare for upcoming releases
+  * monitor near-term availability
+* #### Expected end period  
+  This filter shows titles whose **Expected end date** falls within a selected timeframe.
 
-This filter shows titles whose **Expected start date** falls within a selected timeframe.
-
-Available options:
-
-* Tomorrow
-* This week
-* This month
-* Next week
-* Next month
-
-Use this filter to:
-
-* identify titles launching soon
-* prepare for upcoming releases
-* monitor near-term availability
-
-### Expected end period
-
-This filter shows titles whose **Expected end date** falls within a selected timeframe.
-
-Available options:
-
-* Tomorrow
-* This week
-* This month
-* Next week
-* Next month
-
-Use this filter to:
-
-* identify titles that are expiring soon
-* take action to extend availability
-* monitor upcoming expirations across your catalog
+  Available options:
+  * Tomorrow
+  * This week
+  * This month
+  * Next week
+  * Next month
+  Use this filter to:
+  * identify titles that are expiring soon
+  * take action to extend availability
+  * monitor upcoming expirations across your catalog
 
 [IMAGE PLACEHOLDER: Filters panel with Expected Start Period and Expected End Period highlighted]
 

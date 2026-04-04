@@ -462,11 +462,15 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 
 <br />
 
+<br />
+
 ### Use search to find titles
 
 * #### Title name
 * #### Series name
 * #### Title ID
+
+<br />
 
 ### Use filters to narrow results
 
@@ -474,29 +478,37 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 * #### License type
 * #### Service
 * #### Territory
-* #### Expected start period  
+* #### Expected start period
+
   This filter shows titles whose **Expected start date** falls within a selected timeframe.
 
   Available options:
+
   * Tomorrow
   * This week
   * This month
   * Next week
   * Next month
+
   Use this filter to:
+
   * identify titles launching soon
   * prepare for upcoming releases
   * monitor near-term availability
-* #### Expected end period  
+* #### Expected end period
+
   This filter shows titles whose **Expected end date** falls within a selected timeframe.
 
   Available options:
+
   * Tomorrow
   * This week
   * This month
   * Next week
   * Next month
+
   Use this filter to:
+
   * identify titles that are expiring soon
   * take action to extend availability
   * monitor upcoming expirations across your catalog

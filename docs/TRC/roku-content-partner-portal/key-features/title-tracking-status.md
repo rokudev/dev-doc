@@ -280,6 +280,7 @@ The following table explains each column in the title table.
         * **TV season**
         * **TV series**
 
+
         <Callout icon="📘">
           TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
         </Callout>
@@ -545,8 +546,6 @@ Check the status:
 * **Unfulfilled**: missing or unmatched inputs
 * **Failed**: blocking errors
 * **Processing** or **Rights under review**: still in progress
-
-<br />
 
 <Callout icon="🤔" theme="default">
   If rights are missing, fields such as license types, services, territories, or expected dates may display as blank or `-`. This is expected until the required data is provided and matched.

@@ -166,7 +166,7 @@ A title appears in a status card if:
 
 <br />
 
-<Callout icon="fa-info-circle" theme="info">
+<Callout icon="📘">
   A single title can appear in multiple status cards because status is evaluated at the territory level. Use **All titles** to see the rolled-up overall status.
 </Callout>
 
@@ -280,8 +280,9 @@ The following table explains each column in the title table.
         * **TV season**
         * **TV series**
 
-        **Important notes:**
-        TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
+        <Callout icon="📘">
+          TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
+        </Callout>
       </td>
     </tr>
 
@@ -341,7 +342,7 @@ The following table explains each column in the title table.
 
         Update windows to reactivate.
 
-        <Callout icon="fa-info-circle" theme="info">
+        <Callout icon="📘">
           For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
         </Callout>
       </td>

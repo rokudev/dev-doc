@@ -98,9 +98,13 @@ Available cards:
 
 Click any card to filter the table.
 
-[IMAGE PLACEHOLDER: Metric cards with one selected]
+<br />
 
-Show a selected card state (for example, **Failed**) and how the table updates to reflect only those titles.
+<Image align="center" caption="Selecting the Failed status card displays titles that are failed for at least one territory." src="https://files.readme.io/988d59541b4bd2223fe860108e1cfb73cd1b61d3f171121a123a714db2d973c9-image.png" />
+
+<br />
+
+<Image align="center" caption="Tap the Live status card to view titles currently live in at least one territory." src="https://files.readme.io/1edfc4c2e015726a41e8aa665c37cc48565b5f634091c54b2f5cb91aa1c77419-image.png" />
 
 <br />
 

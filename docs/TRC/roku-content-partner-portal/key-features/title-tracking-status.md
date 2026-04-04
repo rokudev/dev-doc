@@ -482,11 +482,11 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 
 Show the filter UI expanded, with both period filters visible and one selected (for example, **This week**), and the table results updated accordingly.
 
-**Important notes**
-
-* These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
-* Filters apply to the full title list and update results immediately.
-* A title appears if its date falls within the selected period.
+<Callout icon="🧐" theme="default">
+  * These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
+  * Filters apply to the full title list and update results immediately.
+  * A title appears if its date falls within the selected period.
+</Callout>
 
 <br />
 

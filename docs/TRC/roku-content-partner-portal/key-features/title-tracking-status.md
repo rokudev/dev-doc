@@ -422,6 +422,46 @@ Show a TV series with multiple seasons and episodes expanded, highlighting corre
 
 ## Using search and filters
 
+<Image align="left" width="60% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
 Use search to find titles by:
 
 * Title name

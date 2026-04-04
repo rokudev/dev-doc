@@ -394,7 +394,7 @@ When reviewing a title:
 
 Highlight a single row and visually walk through how to interpret it step-by-step (license types → services → status → territories → expected dates).
 
-<Callout icon="fa-exclamation-triangle" theme="warning">
+<Callout icon="🧐">
   A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.
 </Callout>
 

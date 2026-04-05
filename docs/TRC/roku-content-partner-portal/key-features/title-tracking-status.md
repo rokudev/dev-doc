@@ -66,11 +66,54 @@ To use this feature, get the appropriate role assigned to your account.
 
 # Page layout
 
-[IMAGE PLACEHOLDER: Title Status page overview]
+<Image align="center" caption="Each labeled element corresponds to the components described in the table below." src="https://files.readme.io/1ed4cc5b13035360b0174c9ef93b863161c2010c8ed6c4c432bd6e252fe0bef1-image.png" />
 
-Show the full page including: licensor dropdown (if present), metric cards row, search + filters, and the title table. Highlight the relationship between cards and table filtering.
+<br />
 
-<Image align="center" border={true} width="100% " src="https://files.readme.io/1d7fe41041e2a73777f31c4d73b309ae0db5f67110b6bf7fa0832ba95e24ca2c-walkthrough-gif-test-ezgif.com-video-to-gif-converter_1.gif" className="border" />
+{/* Example Usage */}
+<RokuTable
+  columns={[
+    { header: 'Name', accessor: 'name' },
+    { header: 'Email', accessor: 'email' },
+    { header: 'Role', accessor: 'role' }
+  ]}
+  data={[
+    { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+    { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+    { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
+  ]}
+/>
+
+<br />
+
+Key
+Page Component
+A
+Documentation & Help Guides – Access the Content Partner documentation space, including feature guides and help topics.
+B
+Contact Us (Partner Support) – Opens support options for reaching out to Roku for assistance.
+C
+Dashboard Navigation (Top Nav) – Navigates to the main Dashboard view from the top navigation bar.
+D
+Profile – Provides access to user profile settings and account-related options.
+E
+Licensor Switcher (if applicable) – Allows users to switch between licensors within the same organization to view associated titles.
+F
+Status Cards – Displays a summary of titles by status and acts as a primary filter for the table below.
+G
+Dashboard Navigation (Left Nav) – Navigates to the Dashboard using the left-hand navigation panel.
+H
+Title Status Page – The active page where users track title readiness and status across the pipeline.
+I
+Search Field – Enables searching for titles by name, series, or Title ID.
+J
+Filter Panel – Provides filtering options to refine the title list based on selected criteria.
+K
+Title Table – Displays detailed information for each title, including status, territories, and availability dates.
+L
+Switch Accounts – Allows users to switch between different accounts they have access to.
+M
+Collapse Left Navigation – Toggles the visibility of the left-hand navigation panel to expand workspace.
 
 <br />
 

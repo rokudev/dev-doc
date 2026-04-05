@@ -1,6 +1,6 @@
 ---
 title: Roku Content Partner Portal
-excerpt: Roku Content Partner Portal Overview
+excerpt: Roku content partner portal overview
 deprecated: false
 hidden: true
 metadata:

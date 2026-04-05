@@ -77,12 +77,12 @@ To use this feature, get the appropriate role assigned to your account.
 | **C** | Dashboard Navigation (Top Nav) – Navigates to the main Dashboard view from the top navigation bar.                                   |
 | **D** | Profile – Provides access to user profile settings and account-related options.                                                      |
 | **E** | Licensor Switcher (if applicable) – Allows users to switch between licensors within the same organization to view associated titles. |
-| **F** | Status Cards – Displays a summary of titles by status and acts as a primary filter for the table below.                              |
+| **F** | Title Status Cards – Displays a summary of titles by status and acts as a primary filter for the table below.                        |
 | **G** | Dashboard Navigation (Left Nav) – Navigates to the Dashboard using the left-hand navigation panel.                                   |
 | **H** | Title Status Page – The active page where users track title readiness and status across the pipeline.                                |
-| **I** | Search Field – Enables searching for titles by name, series, or Title ID.                                                            |
-| **J** | Filter Panel – Provides filtering options to refine the title list based on selected criteria.                                       |
-| **K** | Title Table – Displays detailed information for each title, including status, territories, and availability dates.                   |
+| **I** | Title Status Search Field – Enables searching for titles by name, series, or Title ID.                                               |
+| **J** | Title Status Filter Panel – Provides filtering options to refine the title list based on selected criteria.                          |
+| **K** | Title Status Table – Displays detailed information for each title, including status, territories, and availability dates.            |
 | **L** | Switch Accounts – Allows users to switch between different accounts they have access to.                                             |
 | **M** | Collapse Left Navigation – Toggles the visibility of the left-hand navigation panel to expand workspace.                             |
 

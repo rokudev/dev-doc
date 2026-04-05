@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 next:
-  description: Explore features that are relevant to you.
+  description: Explore the features that are relevant to you.
 ---
 The Content Partner Portal brings together the core tools you need to manage, monitor, and promote your content on The Roku Channel. Each feature is designed to give you greater visibility, control, and flexibility across your content lifecycle.
 

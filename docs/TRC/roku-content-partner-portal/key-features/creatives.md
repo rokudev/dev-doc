@@ -8,6 +8,8 @@ metadata:
 ---
 The Creatives section is where you upload, manage, and organize the visual assets that represent your content and subscription offers across The Roku Channel. These assets help drive discovery, engagement, and conversion by ensuring your titles and offers are presented with high-quality, up-to-date visuals.
 
+<br />
+
 <ContentPartnerAvailability />
 
 <br />

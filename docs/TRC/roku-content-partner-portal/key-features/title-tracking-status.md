@@ -252,11 +252,9 @@ This means blocking errors occurred during processing.
 
 Each row represents a single title and its current status across territories.
 
-<Image align="center" src="https://files.readme.io/fe20faa7f6dabf5d966489bee56880a71d7f11618bacfc6ca727cea3194c9dbd-image.png" />
+<Image align="center" caption="The following table below explains each column in the title table illustrated above." src="https://files.readme.io/fe20faa7f6dabf5d966489bee56880a71d7f11618bacfc6ca727cea3194c9dbd-image.png" />
 
 <br />
-
-The following table explains each column in the title table.
 
 <Table>
   <thead>
@@ -406,6 +404,8 @@ When reviewing a title:
 2. Review **Territories** to understand rights coverage.
 3. Use **Expected** dates to understand timing.
 
+![](https://files.readme.io/188a32cc62ee6f082b97470205b4753dae747e59eaac7bf0966cf4441df8d2c0-image.png)
+
 [IMAGE PLACEHOLDER: Annotated row walkthrough]
 
 Highlight a single row and visually walk through how to interpret it step-by-step (license types → services → status → territories → expected dates).
@@ -413,6 +413,8 @@ Highlight a single row and visually walk through how to interpret it step-by-ste
 <Callout icon="🧐" theme="default">
   A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.
 </Callout>
+
+<br />
 
 To investigate territory-level differences, expand the row.
 

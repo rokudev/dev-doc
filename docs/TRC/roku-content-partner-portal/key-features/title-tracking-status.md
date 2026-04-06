@@ -66,25 +66,17 @@ To use this feature, get the appropriate role assigned to your account.
 
 # Page layout
 
-<Image align="center" caption="Each labeled element corresponds to the components described in the table below." src="https://files.readme.io/1ed4cc5b13035360b0174c9ef93b863161c2010c8ed6c4c432bd6e252fe0bef1-image.png" />
+<Image align="center" caption="Each labeled element corresponds to the components described in the table below." src="https://files.readme.io/562797f2fcdb83f59caa9de4f89dfa67647517fac5a93fa373e3ad8c9d6b1221-image.png" />
 
-<br />
-
-| Key   | Page Component                                                                                                                             |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **A** | **Documentation & Help Guides** – Access the Content Partner documentation space, including feature guides and help topics.                |
-| **B** | **Contact Us _(Partner Support))** – Opens support options for reaching out to Roku for assistance.                                        |
-| **C** | **Dashboard Navigation _(Top Nav)_** – Navigates to the main Dashboard view from the top navigation bar.                                   |
-| **D** | **Profile** – Provides access to user profile settings and account-related options.                                                        |
-| **E** | **Licensor Switcher _(if applicable)_** – Allows users to switch between licensors within the same organization to view associated titles. |
-| **F** | **Title Status Cards** – Displays a summary of titles by status and acts as a primary filter for the table below.                          |
-| **G** | **Dashboard Navigation _(Left Nav)_** – Navigates to the Dashboard using the left-hand navigation panel.                                   |
-| **H** | **Title Status Page** – The active page where users track title readiness and status across the pipeline.                                  |
-| **I** | **Title Status Search Field** – Enables searching for titles by name, series, or Title ID.                                                 |
-| **J** | **Title Status Filter Panel** – Provides filtering options to refine the title list based on selected criteria.                            |
-| **K** | **Title Status Table** – Displays detailed information for each title, including status, territories, and availability dates.              |
-| **L** | **Switch Accounts** – Allows users to switch between different accounts they have access to.                                               |
-| **M** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                               |
+| Key   | Page Component                                                                                                                                                                                                                                                 |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Feature Navigation** – Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
+| **B** | **Page Header & Feature Description** – Displays the current page title and a brief description of the feature. Provides context on what the page is used for and what actions users can take.                                                                 |
+| **C** | **Title Status Cards** – Displays a summary of titles by status and acts as a primary filter for the table below.                                                                                                                                              |
+| **D** | **Title Status Table** – Displays detailed information for each title, including status, territories, and availability dates.                                                                                                                                  |
+| **E** | **Title Status Search Field** – Enables searching for titles by name, series, or Title ID.                                                                                                                                                                     |
+| **F** | **Title Status Filter Panel** – Provides filtering options to refine the title list based on selected criteria.                                                                                                                                                |
+| **G** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
 
 <br />
 

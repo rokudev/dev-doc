@@ -64,6 +64,27 @@ To get started, users must have the appropriate access role, typically **Busines
 
 <br />
 
+# Portal layout
+
+<Image align="center" caption="Each labeled element corresponds to the components described in the table below" src="https://files.readme.io/dc89e9b34c1f008302f3212138512aec2963be41ebf434427d8b9c81cfdf832e-image.png" />
+
+<br />
+
+| Key   | Page Component                                                                                                                                                                                                                                                       |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Documentation & Help Guides** – Access the Content Partner documentation space, including feature guides and help topics.                                                                                                                                          |
+| **B** | **Contact Us _(Partner Support))** – Opens support options for reaching out to Roku for assistance.                                                                                                                                                                  |
+| **C** | **Dashboard Navigation _(Top Nav)_** – Navigates to the main Dashboard view from the top navigation bar.                                                                                                                                                             |
+| **D** | **Profile** – Provides access to user profile settings and account-related options.                                                                                                                                                                                  |
+| **E** | **Licensor Switcher _(if applicable)_** – Allows users to switch between licensors within the same organization to view associated titles.                                                                                                                           |
+| **F** | **Dashboard Navigation _(Left Nav)_** – Navigates to the Dashboard using the left-hand navigation panel.                                                                                                                                                             |
+| **G** | **Switch Accounts** – Allows users to switch between different accounts they have access to.                                                                                                                                                                         |
+| **H** | **Partner Guide** – Access the Content Partner documentation space, including feature guides and help topics.                                                                                                                                                        |
+| **I** | **Feature Pages** – The main application workspace where selected features are displayed and interacted with. This area updates based on navigation and is where users view and manage feature-specific data, such as Title Status, Storefront, Creatives, and more. |
+| **J** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                         |
+
+<br />
+
 # Getting Started
 
 Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:

@@ -209,8 +209,6 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 <Image align="center" caption="Focus on these two statuses first" src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" width="50% " />
 
-<br />
-
 ## Unfulfilled
 
 > Waiting for ordered rights, assets, or a match between the two. Requires your attention.

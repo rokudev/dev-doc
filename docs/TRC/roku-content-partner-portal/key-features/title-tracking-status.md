@@ -399,7 +399,7 @@ When reviewing a title:
 
    This helps you understand how and where the title will be surfaced to viewers.
 3. Check the overall **Status** to understand overall readiness.
-4. Review **Territories** to understand rights coverage.  
+4. Review **Territories** to understand rights coverage.
 
    If the status shows something like:
    “1 of 3 unfulfilled”
@@ -445,7 +445,7 @@ This ensures that:
 
 ## Using search and filters
 
-<Image align="left" width="40% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />
+<Image align="center" width="50% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />
 
 <br />
 

@@ -443,8 +443,6 @@ This ensures that:
 
 <br />
 
-<br />
-
 ## Using search and filters
 
 <Image align="left" width="40% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />

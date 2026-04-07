@@ -451,7 +451,7 @@ Use search and filtering to limit results and improve your focus.
 
 <br />
 
-### Use search to find titles
+### Use search to find a specific title
 
 * **Title name**
 * **Series name**

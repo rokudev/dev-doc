@@ -211,18 +211,6 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 <br />
 
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
 ## Unfulfilled
 
 > Waiting for ordered rights, assets, or a match between the two. Requires your attention.

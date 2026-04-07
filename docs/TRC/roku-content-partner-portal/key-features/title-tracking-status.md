@@ -207,7 +207,7 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 # What requires your attention
 
-<Image align="center" caption="Focus on these two statuses first" src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" width="50% " />
+<Image align="center" caption="Focus on these two statuses first" src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" width="40% " />
 
 ## Unfulfilled
 
@@ -445,51 +445,9 @@ This ensures that:
 
 ## Using search and filters
 
-<Image align="center" width="50% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />
+Use search and filtering to limit results and improve your focus.
 
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
-
-<br />
+<Image align="center" width="40% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />
 
 <br />
 

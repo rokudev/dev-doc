@@ -384,23 +384,43 @@ Each row represents a single title and its current status across territories.
 
 When reviewing a title:
 
-1. Start with **Status** to understand overall readiness.
-2. Review **Territories** to understand rights coverage.
-3. Use **Expected** dates to understand timing.
+1. Start with **License types**by identifying how the title is licensed:
+   •	Ad-supported
+   •	Linear O&O FAST
+   •	Premium subscription
+
+   This tells you what types of distribution the title is eligible for.
+2. Next, review **Services** where the title will appear:
+   •	TRC AVOD
+   •	TRC O&O FAST
+   •	Premium subscription services
+
+   A title may be associated with multiple services depending on its rights.
+
+   This helps you understand how and where the title will be surfaced to viewers.
+3. Check the overall **Status** to understand overall readiness.
+4. Review **Territories** to understand rights coverage.  
+
+   If the status shows something like:
+   “1 of 3 unfulfilled”
+
+   Expand the row to identify which territories are impacted.
+5. Finally, check the **Expected**timing:
+   •	**Expected start date** → when the title will become available
+   •	**Expected end date** → when availability will expire
+
+   These dates reflect:
+   •	The next upcoming change across all territories
+   •	Your local timezone
 
 ![](https://files.readme.io/188a32cc62ee6f082b97470205b4753dae747e59eaac7bf0966cf4441df8d2c0-image.png)
 
-[IMAGE PLACEHOLDER: Annotated row walkthrough]
-
-Highlight a single row and visually walk through how to interpret it step-by-step (license types → services → status → territories → expected dates).
-
-<Callout icon="🧐" theme="default">
-  A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.
-</Callout>
-
 <br />
 
-To investigate territory-level differences, expand the row.
+<Callout icon="🧐" theme="default">
+  A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.  
+  To investigate territory-level differences, expand the row.
+</Callout>
 
 <br />
 

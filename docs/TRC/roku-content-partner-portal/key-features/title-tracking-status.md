@@ -572,7 +572,7 @@ Check the status:
 
 <br />
 
-# Some final notes
+# Some final callouts
 
 * This view provides summary-level visibility only.
 * Issue details are not shown here.

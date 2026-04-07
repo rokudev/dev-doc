@@ -439,9 +439,9 @@ This ensures that:
 
 * seasons and episodes display in a logical viewing order
 
-[IMAGE PLACEHOLDER: TV series expanded with sorted seasons and episodes]
+<Image align="center" caption="Seasons and episodes appear to chronological sequence for a logical viewing order." src="https://files.readme.io/e925873200a455ce0cff81ae86a1549578e1e93c485eb527783d197bae1b2545-image.png" />
 
-Show a TV series with multiple seasons and episodes expanded, highlighting correct chronological ordering (for example, Season 1 → Season 2, Episode 1 → Episode N).
+<br />
 
 <br />
 

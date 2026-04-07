@@ -439,7 +439,7 @@ This ensures that:
 
 * seasons and episodes display in a logical viewing order
 
-<Image align="center" caption="Seasons and episodes appear to chronological sequence for a logical viewing order." src="https://files.readme.io/e925873200a455ce0cff81ae86a1549578e1e93c485eb527783d197bae1b2545-image.png" />
+<Image align="center" caption="Seasons and episodes appear in chronological sequence for a logical viewing order." src="https://files.readme.io/e925873200a455ce0cff81ae86a1549578e1e93c485eb527783d197bae1b2545-image.png" />
 
 <br />
 

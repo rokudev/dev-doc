@@ -88,3 +88,21 @@ shared = {}
     utils.isSameObject(aa, {})   ' returns false
     utils.isSameObject(aa.a, aa.b)  ' returns true
 ```
+
+### HasComponent(componentName as String) as Boolean
+
+_Available since Roku OS 15.2_
+
+#### Description
+
+Verifies whether a component name is already registered. Developers can call this method before trying to create an instance.
+
+#### Parameters
+
+| **Name**      | **Type** | **Description**                                           |
+| :------------ | :------- | :-------------------------------------------------------- |
+| componentName | String   | The component name to check for an existing registration. |
+
+#### Return Value
+
+A flag indicating whether the specified component name has already been registered.

@@ -341,7 +341,7 @@ The following command returns the current memory and CPU utilization of an app (
 The response includes the following fields:
 
 ```
- <chanperf>
+<chanperf>
 	<timestamp>1672980398506</timestamp>
 	<plugin>
 		<cpu-percent>
@@ -349,6 +349,19 @@ The response includes the following fields:
 			<user>12.2</user>
 			<sys>5.5</sys>
 		</cpu-percent>
+    <proc-stat>
+      <utime>1459</utime>
+      <stime>216</stime>
+      <cutime>0</cutime>
+      <cstime>0</cstime>
+      <minflt>32616</minflt>
+      <majflt>3584</majflt>
+      <cminflt>0</cminflt>
+      <cmajflt>0</cmajflt>
+      <state>S</state>
+      <starttime>63109</starttime>
+      <clk-tck>100</clk-tck>
+    </proc-stat>
 		<memory>
 			<used>87785472</used>
 			<res>87785472</res>

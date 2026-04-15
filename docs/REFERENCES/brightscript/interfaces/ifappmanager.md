@@ -14,7 +14,7 @@ hidden: false
 
 #### Description
 
-Returns an [roTimespan](doc:rotimespan) object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started.
+Returns an [roTimespan](doc:rotimespan) object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started. ddd
 
 #### Return Value
 

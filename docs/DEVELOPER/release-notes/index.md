@@ -16,11 +16,11 @@ next:
 
 ## Roku OS 15.2 Beta
 
-Roku OS 15.2, which is being shared with developer beta partners under non-disclosure agreements (NDAs), enhances Roku’s Perfetto-based app tracing tool, which can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
+Roku OS 15.2 enhances Roku’s Perfetto-based app tracing tool, which can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
 
 Developers can now get raw Linux CPU and processing statistics with the **chanperf** ECP command and integrate it into their first-party app monitoring tools. Other new Developer Tool features include new Debug Protocol virtual variables for retrieving **roInputEvent**, **roUrlEvent**, and **roDateTime** values.
 
-In addition, this release includes new BrightScript APIs that configure low-memory event notificatons, get remote control repeat delay/rate information, and support AES-GCM cyphers.
+In addition, this release includes new BrightScript APIs that expand low-memory event notifications, get remote control repeat delay/rate information, and support AES-GCM cyphers.
 
 Here is the list of key developer-facing Roku OS 15.2 updates:
 
@@ -28,54 +28,19 @@ Here is the list of key developer-facing Roku OS 15.2 updates:
 
 ##### Configurable low-memory events
 
-When you use the [**roAppMemoryMonitor** node ](doc:roappmemorymonitor)to subscribe your app to low-memory events, you can now specify the threshold percentages that trigger notifications (by default, 80%, 85%, 90%, 95% of the per-app memory limit). Notifications are throttled to prevent excessive events.
+Apps subscribed to low-memory events with the  [**roAppMemoryMonitor** node](doc:roappmemorymonitor) will now receive [roAppMemoryNotificationEvent](doc:roappmemorynotificationevent) alerts when memory usage exceeds or falls below specific thresholds (currently 80%, 85%, 90%, 95% of the per-app limit).
 
 ##### roDeviceInfo remote control repeat delay/rate APIs
 
-The [roDeviceInfo node](doc:rodeviceinfo) includes the following functions for querying and monitoring [EN 301 549 accessibility-related remote repeat settings](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf):
-
-* **GetRemoteRepeatDelay() as Integer**: Returns the current remote key repeat delay in seconds (0–5). 0 is the default behavior.
-
-* **GetRemoteRepeatRate() as String**: Returns the current remote key repeat rate as a string (“slow“, “medium” or “fast”). "medium" is the default.
-
-* **EnableRemoteRepeatSettingsChangedEvent(enable as Boolean) as Boolean**: Toggles whether a notification event is sent when the user changes remote repeat delay or remote repeat rate settings. When enabled, the event is delivered via the message port as a **roDeviceInfoEvent** with the following fields in the info associative array:
-
-  * **remoteRepeatDelay(Integer)**: Returns the updated repeat delay value
-
-  * **remoteRepeatRate(String)**: Returns the updated repeat rate value.
-
-    This function returns true on success; false if no message port is set or the framework is unavailable.
+The [roDeviceInfo node](doc:rodeviceinfo) includes functions for querying and monitoring [EN 301 549 accessibility-related remote repeat settings](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf)
 
 ##### roEVPCipher AES-GCM support
 
-AES-GCM is an authenticated encryption mode. It generates an authentication tag during encryption that must be verified during decryption. This tag ensures data integrity and authenticity. To support GCM, the following setTag and getTag functions have been added to [roEVPCipher](doc:roevpcipher):
-
-* **roEVPCipher.setTag (tag as roByteArray) as Boolean**
-* **roEVPCipher.getTag() as roByteArray**
-
-**Example:**
-
-```
-cipher = CreateObject("roEVPCipher")
-cipher.Setup(true, "aes-128-gcm", key, iv, false)
-ciphertext = cipher.Process(plaintext)
-tag = cipher.GetTag()  ' Retrieve the authentication tag
-
-... decryption
-cipher.Setup(false, "aes-128-gcm", key, iv, false)  ' false = decrypt mode
-cipher.SetTag(expectedTag)  ' Set the expected tag
-plaintext = cipher.Process(ciphertext)  ' Decryption will verify the tag
-```
+To support AES-GCM (authenticated encryption mode), the [roEVPCipher](doc:roevpcipher) node include new **setTag** and **getTag** functions.
 
 ##### roUtils.HasComponent function
 
-The [roUtils node](doc:routils) now includes the following **hasComponent** function that developers can call to verify whether a component name is registered before trying to create an instance:
-
-* **hasComponent(componentName as String) as Boolean**
-
-##### Increased stack size
-
-The BrightScript stack size has been increased for the Roku OS 15.2 release.
+The [roUtils node](doc:routils) now includes the following **hasComponent** function that developers can call to verify whether a component name is registered before trying to create an instance.
 
 #### Developer and debugging tools
 
@@ -83,107 +48,13 @@ The BrightScript stack size has been increased for the Roku OS 15.2 release.
 
 Roku’s [Perfetto-based app tracing tool](doc:app-tracing) can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
 
-![roku815px - perfetto-heap-trace](https://image.roku.com/ZHZscHItMTc2/perfetto-heap-trace.png)
-
-The Roku OS uses Perfetto’s Java heap graph viewer model to represent the SceneGraph and BrightScript objects as a [flamegraph](https://www.brendangregg.com/flamegraphs.html). You can sort the objects either by allocation size or object count, ordering callstacks from left-to-right according to which have the largest size or count. A single Perfetto trace can hold multiple heap graphs, with each heap graph represented by a selectable **Heap Profile** event.
-
-To generate a heap graph, follow these steps:
-
-###### Enable app tracing
-
-Read [Roku's app tracing documentation](/docs/developer-program/release-notes/app-tracing.md#enabling-perfetto) to enable perfetto tracing and setup a websocket destination.
-
-###### Add heap snapshots to the trace
-
-Once you have enabled app tracing, send the following ECP command to add heap snapshots to the trace:
-
-```
-curl -d '' http://$ip:8060/perfetto/heapgraph/trigger/dev
-```
-
-> Shortest Path used to display heap graph
->
-> The heap graph is always shown as the shortest path from a _root_ to any given object. This can sometimes lead to charts that might have unexpected structure. For example, if you have a Scene that owns a Grid which in turn owns a ContentNode, you might expect a chart reflecting this:
->
-> ```
-> == MyScene ==========
->   -- MyGrid ---------
->     - MyContentNode -
-> ```
->
-> However, if there is also a reference to the content node from directly from the domain - perhaps because it is referenced by a local variable, then this path will be preferentially displayed:
->
-> ```
-> == $bsProc-MyScene-Render ====   == MyScene ==
->   - MyContentNode -               -- MyGrid --
-> ```
-
 ##### ECP chanperf command returns raw Linux performance stats
 
 The [ECP](doc:external-control-api) **chanperf** command returns a new **\<proc-stat>** field that reports the raw Linux CPU and processing status information ([/proc/pid/stat](https://www.man7.org/linux/man-pages//man5/proc_pid_stat.5.html)).  Developers can use this data in their own monitoring and debugging tools to optimize app performance.
 
-**Example**
-
-```
-<?xml version="1.0" encoding="UTF-8" ?>
-<chanperf>
-        <timestamp>1762577295412</timestamp>
-        <plugin>
-                <cpu-percent>
-                        <duration-seconds>1.000000</duration-seconds>
-                        <user>5.0</user>
-                        <sys>1.5</sys>
-                </cpu-percent>
-                <proc-stat>
-                        <utime>1459</utime>
-                        <stime>216</stime>
-                        <cutime>0</cutime>
-                        <cstime>0</cstime>
-                        <minflt>32616</minflt>
-                        <majflt>3584</majflt>
-                        <cminflt>0</cminflt>
-                        <cmajflt>0</cmajflt>
-                        <state>S</state>
-                        <starttime>63109</starttime>
-                        <clk-tck>100</clk-tck>
-                </proc-stat>
-                <memory>
-                        <used>108630016</used>
-                        <res>108630016</res>
-                        <anon>63479808</anon>
-                        <swap>0</swap>
-                        <file>45023232</file>
-                        <shared>126976</shared>
-                        <limit>343932928</limit>
-                </memory>
-                <id>581251id>
-        </plugin>
-        <status>OK</status>
-</chanperf>
-```
-
 ##### Debug protocol support for new virtual variables
 
 Developers can now retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime** values with the [Debug Protocol](doc:socket-based-debugger). This improves stepping performance when these virtual variables are expanded.
-
-| Object Type  | Name                  | Type                       | Description                                                                                                                                                                                                                                                                                                            |
-| ------------ | --------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| roInputEvent | $isInput              | .IsInput()                 | Returns a flag indicating whether an input event was received                                                                                                                                                                                                                                                          |
-| roInputEvent | $info                 | .GetInfo()                 | Returns an roAssociativeArray describing the input event.                                                                                                                                                                                                                                                              |
-| roUrlEvent   | $int                  | .GetInt()                  | Returns the type of event                                                                                                                                                                                                                                                                                              |
-| roUrlEvent   | $responseCode         | .GetResponseCode()         | Returns the protocol response code associated with this event.                                                                                                                                                                                                                                                         |
-| roUrlEvent   | $failureReason        | .GetFailureReason()        | Returns a description of the failure that occurred.                                                                                                                                                                                                                                                                    |
-| roUrlEvent   | $string               | .GetString()               | For transfer complete AsyncGetToString, AsyncPostFromString and AsnycPostFromFile requests this will be the actual response body from the server. This method returns the string associated with the event.                                                                                                            |
-| roUrlEvent   | $sourceIdentity       | .GetSourceIdentity()       | Returns a magic number that can be matched with the value returned by the [roUrlTransfer.GetIdentity()](doc:ifurltransfer#getidentity-as-integer) method to determine the source of the roUrlTransfer event.                                                                                                           |
-| roUrlEvent   | $responseHeaders      | .GetResponseHeaders()      | Return an roAssociativeArray containing all the headers returned by the server for appropriate protocols (such as HTTP). Headers are only returned when the status code is greater than or equal to 200 and less than 300                                                                                              |
-| roUrlEvent   | $targetIpAddress      | .GetTargetIpAddress()      | Returns the IP address of the destination.                                                                                                                                                                                                                                                                             |
-| roUrlEvent   | $responseHeadersArray | .GetResponseHeadersArray() | Returns an roArray of roAssociativeArrays, where each associative array contains a single header name/value pair. Use this function if you need access to duplicate headers, since GetResponseHeaders() returns only the last name/value pair for a given name. All headers are returned regardless of the status code |
-| roDateTime   | $asSecondLong         | .GetAsSecondLong()         | Returns a LongInteger representing the date/time as the number of seconds from the Unix epoch (00:00:00 1/1/1970 GMT).                                                                                                                                                                                                 |
-| roDateTime   | $date                 | .GetDate()                 | Returns the localized date of the device.                                                                                                                                                                                                                                                                              |
-| roDateTime   | $iso                  | .GetIso()                  | Returns an ISO 8601 representation of the date/time value with milliseconds precision.                                                                                                                                                                                                                                 |
-| roDateTime   | $milliseconds         | .GetMilliseconds()         | Returns the date/time value's millisecond within the second.                                                                                                                                                                                                                                                           |
-| roDateTime   | $lastDayOfMonth       | .GetLastDayOfMonth()       | Returns the date/time value's last day of the month.                                                                                                                                                                                                                                                                   |
-| roDateTime   | $dayOfWeek            | .GetDayOfWeek()            | Returns the date/time value's day of week.                                                                                                                                                                                                                                                                             |
 
 ## Roku OS 15.1
 

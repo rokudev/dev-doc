@@ -20,7 +20,7 @@ _Available since Roku OS 15.0_
 
 ## Supported Methods
 
-### DeepCopy(data as Object) as Object
+### DeepCopy(data as Object) as Object test
 
 #### Description
 
@@ -74,7 +74,7 @@ Checks whether two BrightScript objects refer to the same instance and returns a
 | data1    | Object   | First object    |
 | data2    | Object   | Second object   |
 
-#### Return Value 
+#### Return Value
 
 Returns true if **data1** and **data2** reference the same object; otherwise, this returns false.
 

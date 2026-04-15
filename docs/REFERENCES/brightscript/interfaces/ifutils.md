@@ -20,7 +20,7 @@ _Available since Roku OS 15.0_
 
 ## Supported Methods
 
-### DeepCopy(data as Object) as Object test
+### DeepCopy(data as Object) as Object test 
 
 #### Description
 

@@ -76,7 +76,7 @@ Checks whether two BrightScript objects refer to the same instance and returns a
 
 #### Return Value 
 
-Returns true if **data1** and **data2** reference the same object; otherwise, this returns false. test
+Returns true if **data1** and **data2** reference the same object; otherwise, this returns false.
 
 #### Example
 

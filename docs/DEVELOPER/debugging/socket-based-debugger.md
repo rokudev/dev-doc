@@ -2092,7 +2092,11 @@ struct SetExceptionBreakpointsResponseData {
 
 _Available since Roku OS 14.1_
 
-Virtual variables are values that can be retrieved with a VARIABLES request but do not correspond to actual variables (for example, the length of a container). By convention, variables start with a `$` character.  The following virtual variables are supported:
+Virtual variables are values that can be retrieved with a VARIABLES request but do not correspond to actual variables (for example, the length of a container). By convention, variables start with a `$` character.  
+
+>  As of Roku OS 15.2, developers can use virtal variables to retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime** values. This improves stepping performance when these virtual variables are expanded.
+
+The following virtual variables are supported:
 
 | Object Type     | Name        | Type               | Description                                                                                         |
 | :-------------- | :---------- | :----------------- | :-------------------------------------------------------------------------------------------------- |

@@ -14,7 +14,7 @@ next:
 
 > [Join the Roku beta program](https://rokutestingportal.centercode.com/key/rdbp) to implement new features in the latest Roku OS before the general release.
 
-## Roku OS 15.2 Beta
+## Roku OS 15.2
 
 Roku OS 15.2 enhances Roku’s Perfetto-based app tracing tool, which can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
 

@@ -58,7 +58,7 @@ Focus on these statuses:
 
 To use this feature, get the appropriate role assigned to your account.
 
-1. Request **Business Manager** or **Operations Manager** access from your company’s account administrator.
+1. Request **Business Manager** or **Operations Manager** access from one of your company’s account administrators.
 2. Ask your administrator to grant access based on your responsibilities, such as rights management or asset delivery.
 3. Contact your internal team if you are not sure who your administrator is.
 

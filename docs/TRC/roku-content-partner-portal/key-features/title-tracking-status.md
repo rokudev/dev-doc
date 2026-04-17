@@ -502,10 +502,9 @@ Use search and filtering to limit results and improve your focus.
 
 <Image align="center" caption="Filter titles by “This month” while viewing Failed to prioritize fixes for titles that are scheduled to go live soon." src="https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png" />
 
-<br />
+These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
 
 <Callout icon="🧐" theme="default">
-  * These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
   * Filters apply to the full title list and update results immediately.
   * A title appears if its date falls within the selected period.
 </Callout>

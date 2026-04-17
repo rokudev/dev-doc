@@ -79,6 +79,16 @@ The Storefront Marketing interface is designed to help you quickly view, manage,
 [Screenshot Placeholder: Full Page Layout Overview]
 Description: Full-page screenshot labeled with key regions called out below (Service Selector, Territory Selector, Featured Row Editor, Search Panel, Actions/Publish area).
 
+| Key   | Page Component                                                                                                                                                                                                                                                 |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Feature Navigation** – Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
+| **B** | **Page Header & Feature Description** – Displays the current page title and a brief description of the feature. Provides context on what the page is used for and what actions users can take.                                                                 |
+| **C** | **Title Status Cards** – Displays a summary of titles by status and acts as a primary filter for the table below.                                                                                                                                              |
+| **D** | **Title Status Table** – Displays detailed information for each title, including status, territories, availability dates, and more.                                                                                                                            |
+| **E** | **Title Status Search Field** – Enables searching for titles by name, series, or Title ID.                                                                                                                                                                     |
+| **F** | **Title Status Filter Panel** – Provides filtering options to refine the title list based on selected criteria.                                                                                                                                                |
+| **G** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
+
 ## 1. Service Selector (if applicable)
 
 Located at the top of the page, this selector allows you to choose which Premium Subscription service you are managing.

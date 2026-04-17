@@ -104,15 +104,19 @@ The Storefront Marketing interface is designed to help you quickly view, manage,
 
 View and edit all titles currently pinned in your Featured row, including their positions and metadata.
 
-[Screenshot Placeholder: Featured Row Management UI]
-Description: Full-page view of the Featured Row editor showing pinned titles in order (positions labeled #1–#40), including metadata such as title name, thumbnail, and position. Include the “X of 40 slots pinned” indicator.
+<Image align="center" caption="View, edit, or remove existing pinned titles from the row." src="https://files.readme.io/0f334c8800a9e79875abb85207e53213b88761d81e7c7fb7fda52b52242be577-image.png" />
+
+## Filter Pinned Titles
+
+Filter pinned titles by content type, status, and position. 
+
+<Image align="center" width="40% " src="https://files.readme.io/2e92c17742cfaf6821622ec5fcb057940fb35ca096e815e61791d4263ddae8b4-image.png" />
 
 ## Pin Titles to Specific Positions
 
 Assign titles to fixed positions (for example, position #1 or #5) to control layout and visibility.
 
-[Screenshot Placeholder: Pin to Position Interaction]
-Description: UI showing a title being assigned to a specific position via drag-and-drop or position selector. Include visual indicator of pinned state.
+![](https://files.readme.io/5faab399ba9ffdbd22fb86b5e556fa0103a163e0e86ec39937d0281a7873c8b3-image.png)
 
 ## Schedule Featured Titles
 
@@ -130,6 +134,8 @@ Preview both current and future Featured rows to understand how your storefront 
 
 Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.
 
+![](https://files.readme.io/7a3dddec55708dfa666fe5671b17d3bf95bb5cf15de65453b64ac2a4a33a6f34-image.png)
+
 ## Recommendation-Filled Positions
 
 Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete and personalized row.
@@ -146,15 +152,12 @@ See who created or last modified each pinned title, providing visibility across 
    1. If you manage multiple services, choose which storefront you want to manage
    2. If you only have one service, it is automatically selected
 2. Select a territory (if applicable)
-   1. Choose the channel store you want to manage (for example, US, UK, etc.)
+   1. Choose the territory you want to manage (for example, US, UK, etc.)
 3. View current pinned titles in the Featured row
 4. Search and select eligible titles
 5. Pin titles to positions or schedule them for future dates
 6. Preview your changes
 7. Publish updates (changes take effect immediately)
-
-[Screenshot Placeholder: Service Selector]
-Description: Dropdown or selector showing multiple Premium Subscription services available to the user, with one selected. If only one exists, show it pre-selected or non-editable.
 
 <br />
 
@@ -171,8 +174,11 @@ To maintain a consistent storefront experience, the following rules apply:
 
 If these conditions are not met, the system will block publishing until issues are resolved.
 
-[Screenshot Placeholder: Validation Error State]
-Description: Error message or warning UI showing a conflict (for example, overlapping pins or duplicate titles) with clear guidance.
+<Image align="center" caption="Helps identify and prevent conflicts when multiple titles are pinned to the same position." src="https://files.readme.io/6133d28e246cb27b49f00c5e4a191cd2d5db08bb8f36491ff88f155a674daf4f-image.png" width="60% " />
+
+<Image align="center" caption="Recommends limiting pin duration to no more than 3 days to maximize customer engagement." src="https://files.readme.io/156f5310fedee3ffb7cc370247321abef0ed320f594a8ee9951a9bec3e93e93d-image.png" width="70% " />
+
+<br />
 
 <br />
 

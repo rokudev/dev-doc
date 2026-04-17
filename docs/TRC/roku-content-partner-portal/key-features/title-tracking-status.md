@@ -384,7 +384,7 @@ Each row represents a single title and its current status across territories.
 
 When reviewing a title:
 
-1. Start with **License types**by identifying how the title is licensed:
+1. Start with **License types** by identifying how the title is licensed:
    •	Ad-supported
    •	Linear O&O FAST
    •	Premium subscription
@@ -405,7 +405,7 @@ When reviewing a title:
    “1 of 3 unfulfilled”
 
    Expand the row to identify which territories are impacted.
-5. Finally, check the **Expected**timing:
+5. Finally, check the **Expected** timing:
    •	**Expected start date** → when the title will become available
    •	**Expected end date** → when availability will expire
 

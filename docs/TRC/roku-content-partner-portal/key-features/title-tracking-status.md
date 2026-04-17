@@ -500,9 +500,9 @@ Use search and filtering to limit results and improve your focus.
   * take action to extend availability
   * monitor upcoming expirations across your catalog
 
-[IMAGE PLACEHOLDER: Filters panel with Expected Start Period and Expected End Period highlighted]
+![](https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png)
 
-Show the filter UI expanded, with both period filters visible and one selected (for example, **This week**), and the table results updated accordingly.
+<br />
 
 <Callout icon="🧐" theme="default">
   * These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.

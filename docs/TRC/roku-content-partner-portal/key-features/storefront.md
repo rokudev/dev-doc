@@ -134,7 +134,7 @@ Preview both current and future Featured rows to understand how your storefront 
 
 Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.
 
-![](https://files.readme.io/7a3dddec55708dfa666fe5671b17d3bf95bb5cf15de65453b64ac2a4a33a6f34-image.png)
+<Image align="center" caption="Search for eligible titles by content type and title name." src="https://files.readme.io/7a3dddec55708dfa666fe5671b17d3bf95bb5cf15de65453b64ac2a4a33a6f34-image.png" />
 
 ## Recommendation-Filled Positions
 

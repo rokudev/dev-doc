@@ -500,7 +500,7 @@ Use search and filtering to limit results and improve your focus.
   * take action to extend availability
   * monitor upcoming expirations across your catalog
 
-![](https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png)
+<Image align="center" caption="Filter titles by “This month” while viewing Failed to prioritize fixes for titles that are scheduled to go live soon." src="https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png" />
 
 <br />
 

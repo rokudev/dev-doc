@@ -76,18 +76,25 @@ Only titles that are production-ready, have valid availability dates, and includ
 
 The Storefront Marketing interface is designed to help you quickly view, manage, and update your Featured row.
 
-[Screenshot Placeholder: Full Page Layout Overview]
-Description: Full-page screenshot labeled with key regions called out below (Service Selector, Territory Selector, Featured Row Editor, Search Panel, Actions/Publish area).
+![](https://files.readme.io/38601c39707e8596ae5515455056dfffe8b73eb9ed90563c17aa7a0c3a947ea1-image.png)
+
+<br />
 
 | Key   | Page Component                                                                                                                                                                                                                                                 |
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **A** | **Feature Navigation** – Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
-| **B** | **Page Header & Feature Description** – Displays the current page title and a brief description of the feature. Provides context on what the page is used for and what actions users can take.                                                                 |
-| **C** | **Title Status Cards** – Displays a summary of titles by status and acts as a primary filter for the table below.                                                                                                                                              |
-| **D** | **Title Status Table** – Displays detailed information for each title, including status, territories, availability dates, and more.                                                                                                                            |
-| **E** | **Title Status Search Field** – Enables searching for titles by name, series, or Title ID.                                                                                                                                                                     |
-| **F** | **Title Status Filter Panel** – Provides filtering options to refine the title list based on selected criteria.                                                                                                                                                |
-| **G** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
+| **B** | **Service Field** – Select the Premium Subscription service you want to manage. If you only have access to one service, it is automatically selected.                                                                                                          |
+| **C** | **Territory Field** – Choose the territory (channel store) you want to view or edit. Each territory has its own independent Featured row configuration.                                                                                                        |
+| **D** | **Feature Description** – Displays a brief description of the feature, explaining its purpose, how it should be used, the actions available, and any guidance to help you get the most value from it.                                                          |
+| **E** | **Date Range Filter** – Filter the Featured row to view which titles are active or scheduled within a selected date or date range.                                                                                                                             |
+| **F** | **Today** – Quickly return to the current date view to see which titles are pinned today.                                                                                                                                                                      |
+| **G** | **Date Navigation Cards** – Browse Featured row configurations across different dates. Each card represents a specific date or time period, showing the titles pinned during that window.                                                                      |
+| **H** | **Pinned Titles Search Field** – Enables searching for titles by name.                                                                                                                                                                                         |
+| **I** | **Pinned Titles Filter Panel** – Provides filtering options to refine the pinned title list based on selected criteria.                                                                                                                                        |
+| **J** | **Pin Title Control** – Add a title to the Featured row by selecting its position and, if needed, defining when it should be active.                                                                                                                           |
+| **K** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
+| **L** | **Pinned Titles Table** – Displays detailed information for each pinned title, including status, position, availability dates, actions, and more.                                                                                                              |
+| **M** | **Pinned Title Action Control** – Manage an existing pinned title by editing its position or schedule, or removing it from the Featured row.                                                                                                                   |
 
 ## 1. Service Selector (if applicable)
 

@@ -90,7 +90,7 @@ To get started, users must have the appropriate access role, typically **Busines
 Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:
 [https://my.roku.com/signin](https://my.roku.com/signin)
 
-Once access is granted, you can immediately begin exploring your content library and leveraging the portal’s self-service capabilities.
+Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the Content Partner Portal itself must be granted before it becomes available within Launchpad.
 
 <br />
 

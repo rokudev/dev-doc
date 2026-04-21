@@ -5,6 +5,11 @@ deprecated: false
 hidden: true
 metadata:
   robots: index
+next:
+  pages:
+    - slug: key-features
+      title: Key Features
+      type: basic
 ---
 The Analytics section provides insights into how your content and storefront experiences are performing on The Roku Channel. It helps you understand audience engagement, measure the impact of merchandising decisions, and identify opportunities to optimize your catalog and promotions.
 

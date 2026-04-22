@@ -221,8 +221,6 @@ An ISO 3166-1 (2-letter) country code.
 | Sky Italy                    | skyit                                   | IT      |
 | Sky UK                       | skyuk                                   | UK      |
 
-> A future enhancement to GetUserCountryCode() will return the 2-letter country code instead of the Roku Powered Streaming Store Identifier. It is therefore recommended that apps use both to avoid having to update later.
-
 ### GetRandomUUID() as String
 
 #### Description

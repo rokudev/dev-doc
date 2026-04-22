@@ -73,7 +73,7 @@ To get started, users must have the appropriate access role, typically **Busines
 | Key   | Page Component                                                                                                                                                                                                                                                       |
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **A** | **Documentation & Help Guides** – Access the Content Partner documentation space, including feature guides and help topics.                                                                                                                                          |
-| **B** | **Contact Us _(Partner Support))** – Opens support options for reaching out to Roku for assistance.                                                                                                                                                                  |
+| **B** | **Contact Us _(Partner Support)_** – Opens support options for reaching out to Roku for assistance.                                                                                                                                                                  |
 | **C** | **Dashboard Navigation _(Top Nav)_** – Navigates to the main Dashboard view from the top navigation bar.                                                                                                                                                             |
 | **D** | **Profile** – Provides access to user profile settings and account-related options.                                                                                                                                                                                  |
 | **E** | **Licensor Switcher _(if applicable)_** – Allows users to switch between licensors within the same organization to view associated titles.                                                                                                                           |
@@ -90,7 +90,7 @@ To get started, users must have the appropriate access role, typically **Busines
 Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:
 [https://my.roku.com/signin](https://my.roku.com/signin)
 
-Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the Content Partner Portal itself must be granted before it becomes available within Launchpad. 
+Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the Content Partner Portal itself must be granted before it becomes available within Launchpad.
 
 1. Ask your company's administrator to grant access based on your responsibilities.
 2. Contact your internal team if you are not sure who your administrator is.

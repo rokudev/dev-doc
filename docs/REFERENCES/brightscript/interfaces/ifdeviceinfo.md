@@ -216,15 +216,10 @@ An ISO 3166-1 (2-letter) country code.
 
 | Roku Powered Streaming Store | Roku Powered Streaming Store Identifier | Country |
 | ---------------------------- | --------------------------------------- | ------- |
-| Econet                       | Econet                                  | ZW      |
-| Globe                        | globe                                   | PH      |
-| PLDT                         | PLDT                                    | PH      |
 | Sky Germany                  | skyde                                   | DE      |
-| Sky Spain                    | skyes                                   | ES      |
 | Sky Ireland                  | skyie                                   | IE      |
 | Sky Italy                    | skyit                                   | IT      |
 | Sky UK                       | skyuk                                   | UK      |
-| Telstra                      | Telstra                                 | AU      |
 
 > A future enhancement to GetUserCountryCode() will return the 2-letter country code instead of the Roku Powered Streaming Store Identifier. It is therefore recommended that apps use both to avoid having to update later.
 

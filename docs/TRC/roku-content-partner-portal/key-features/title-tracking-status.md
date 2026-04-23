@@ -382,6 +382,8 @@ Each row represents a single title and its current status across territories.
 
 ## How to read a row
 
+![](https://files.readme.io/188a32cc62ee6f082b97470205b4753dae747e59eaac7bf0966cf4441df8d2c0-image.png)
+
 When reviewing a title:
 
 1. Start with **License types** by identifying how the title is licensed:
@@ -421,10 +423,6 @@ When reviewing a title:
 
    * Expected start and end dates for a TV series (and seasons) are derived by rolling up dates from all associated TV episodes
    * This means the dates represent the earliest upcoming availability or expiration across all episodes
-
-![](https://files.readme.io/188a32cc62ee6f082b97470205b4753dae747e59eaac7bf0966cf4441df8d2c0-image.png)
-
-<br />
 
 <Callout icon="🧐" theme="default">
   A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.  

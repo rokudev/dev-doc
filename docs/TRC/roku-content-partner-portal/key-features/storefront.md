@@ -12,7 +12,7 @@ next:
       title: Creatives
       type: basic
 ---
-Storefront allows you to manage the Featured row on your channel storefront directly within the Content Partner Portal.
+Storefront allows you to manage the Featured row on your channel storefront directly within the Roku content partner portal.
 
 By default, the Featured row is populated by Roku’s recommendation system to deliver personalized content to viewers. With Storefront, you can pin titles to specific positions for a defined period of time, ensuring key content is prominently displayed.
 
@@ -30,7 +30,7 @@ Pinned titles appear alongside Roku recommendations, giving you a balance of con
 
 # Who this is for
 
-Storefront is available to Content Partners who manage **Premium Subscription** storefronts on the platform.
+Storefront is available to content partners who manage **Premium Subscription** storefronts on the platform.
 
 This feature is designed for teams responsible for marketing, merchandising, and audience growth, enabling them to control how titles are promoted within their Premium Subscription pages.
 
@@ -66,7 +66,7 @@ Titles configured to appear during a defined start and end time.
 
 Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete row.
 
-## Eligible itles
+## Eligible titles
 
 Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
 

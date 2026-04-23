@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 next:
-  description: Explore key features available in the Roku Content Partner Portal
+  description: Explore key features available in the Roku content partner portal
   pages:
     - slug: key-features
       title: Key Features

@@ -126,10 +126,6 @@ Plan ahead by scheduling titles to go live or expire at specific dates and times
 
 Configure different Featured rows per territory (channel store). Changes made in one territory do not affect others.
 
-## Preview Before Publishing
-
-Preview both current and future Featured rows to understand how your storefront will appear before changes go live.
-
 ## Search and Select Eligible Titles
 
 Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.

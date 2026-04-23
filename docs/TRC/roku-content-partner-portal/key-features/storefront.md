@@ -28,7 +28,7 @@ Pinned titles appear alongside Roku recommendations, giving you a balance of con
 
 <br />
 
-# Who This Is For
+# Who this is for
 
 Storefront is available to Content Partners who manage **Premium Subscription** storefronts on the platform.
 
@@ -48,25 +48,25 @@ To use this feature, get the appropriate role assigned to your account.
 
 <br />
 
-# Key Concepts
+# Key concepts
 
-## Featured Row
+## Featured row
 
 The top row on your channel storefront. This row is fixed in position and highlights promoted content.
 
-## Pinned Titles
+## Pinned titles
 
 Titles you assign to specific positions in the Featured row. These override recommendation-driven placements.
 
-## Scheduled Pins
+## Scheduled pins
 
 Titles configured to appear during a defined start and end time.
 
-## Recommendation-Filled Positions
+## Recommendation-filled positions
 
 Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete row.
 
-## Eligible Titles
+## Eligible itles
 
 Only titles that are production-ready, have valid availability dates, and include required metadata and artwork can be pinned.
 
@@ -98,51 +98,51 @@ The Storefront interface is designed to help you quickly view, manage, and updat
 
 <br />
 
-# What You Can Do
+# What you can do
 
-## Manage the Featured Row
+## Manage the Featured row
 
 View and edit all titles currently pinned in your Featured row, including their positions and metadata.
 
 <Image align="center" caption="View, edit, or remove existing pinned titles from the row." src="https://files.readme.io/0f334c8800a9e79875abb85207e53213b88761d81e7c7fb7fda52b52242be577-image.png" />
 
-## Filter Pinned Titles
+## Filter pinned titles
 
 Filter pinned titles by content type, status, and position.
 
 <Image align="center" width="40% " src="https://files.readme.io/2e92c17742cfaf6821622ec5fcb057940fb35ca096e815e61791d4263ddae8b4-image.png" />
 
-## Pin Titles to Specific Positions
+## Pin titles to specific positions
 
 Assign titles to fixed positions (for example, position #1 or #5) to control layout and visibility.
 
 ![](https://files.readme.io/5faab399ba9ffdbd22fb86b5e556fa0103a163e0e86ec39937d0281a7873c8b3-image.png)
 
-## Schedule Featured Titles
+## Schedule Featured titles
 
 Plan ahead by scheduling titles to go live or expire at specific dates and times. You can also view which titles will be active on any future date or date range.
 
-## Customize by Territory
+## Customize by territory
 
 Configure different Featured rows per territory (channel store). Changes made in one territory do not affect others.
 
-## Search and Select Eligible Titles
+## Search and select eligible titles
 
 Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.
 
 <Image align="center" caption="Search for eligible titles by content type and title name." src="https://files.readme.io/7a3dddec55708dfa666fe5671b17d3bf95bb5cf15de65453b64ac2a4a33a6f34-image.png" />
 
-## Recommendation-Filled Positions
+## Recommendation-filled positions
 
 Any positions not pinned are automatically filled by Roku’s recommendation system to ensure a complete and personalized row.
 
-## Track Changes and Ownership
+## Track changes and ownership
 
 See who created or last modified each pinned title, providing visibility across your team.
 
 <br />
 
-# How It Works
+# How it works
 
 1. Select a Premium Subscription service (if applicable)
    1. If you manage multiple services, choose which storefront you want to manage
@@ -157,7 +157,7 @@ See who created or last modified each pinned title, providing visibility across 
 
 <br />
 
-# System Rules and Limits
+# System rules and limits
 
 To maintain a consistent storefront experience, the following rules apply:
 
@@ -177,7 +177,7 @@ If these conditions are not met, the system will block publishing until issues a
 
 <br />
 
-# Best Practices
+# Best practices
 
 * Focus on a small number of high-impact titles rather than filling the entire row
 * Pin no more than 5 titles at a time to maintain effectiveness

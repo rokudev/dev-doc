@@ -1,5 +1,5 @@
 ---
-title: Title Tracking Status
+title: Title tracking status
 excerpt: Title tracking status overview
 deprecated: false
 hidden: true

@@ -14,7 +14,7 @@ next:
 ---
 The Dashboard is your starting point in the Content Partner Portal. It introduces the platform and provides quick access to key features based on your account permissions.
 
-![](https://files.readme.io/b3632282cab88d72778dd09fb8a0fc358816ea0f8670be69a8cbd2ffba838d0e-image.png)
+![Dashboard](https://files.readme.io/b3632282cab88d72778dd09fb8a0fc358816ea0f8670be69a8cbd2ffba838d0e-image.png)
 
 <br />
 

@@ -14,7 +14,7 @@ The Creatives section is where you upload, manage, and organize the visual asset
 
 <br />
 
-# Who This Is For
+# Who this is for
 
 This feature is designed for users responsible for managing the visual presentation and promotion of content on The Roku Channel. This typically includes:
 
@@ -32,9 +32,9 @@ To use this feature, get the appropriate role assigned to your account.
 
 <br />
 
-# What You Can Do
+# What you can do
 
-## Upload and Manage Brand Assets
+## Upload and manage brand assets
 
 Add and maintain visual elements that represent your content, including:
 
@@ -44,7 +44,7 @@ Add and maintain visual elements that represent your content, including:
 
 Keeping these assets current ensures your content appears polished and aligned with your brand.
 
-## Manage Call-to-Action (CTA) Images
+## Manage Call-to-Action (CTA) images
 
 Upload and update images that encourage users to take specific actions, such as:
 
@@ -54,7 +54,7 @@ Upload and update images that encourage users to take specific actions, such as:
 
 Clear and compelling CTA images can directly impact user engagement and conversions.
 
-## Manage Subscription Offer Creatives
+## Manage subscription offer creatives
 
 Customize visuals tied to subscription offers, including:
 
@@ -65,7 +65,7 @@ These creatives help communicate value and drive sign-ups for your subscription 
 
 <br />
 
-# How It Works
+# How it works
 
 1. Upload Assets
    Add creatives based on required specifications (dimensions, formats, file size).
@@ -76,7 +76,7 @@ These creatives help communicate value and drive sign-ups for your subscription 
 
 <br />
 
-# Why It Matters
+# Why it matters
 
 Strong creative assets are a key lever for performance. Well-designed visuals:
 
@@ -86,7 +86,7 @@ Strong creative assets are a key lever for performance. Well-designed visuals:
 
 <br />
 
-# Best Practices
+# Best practices
 
 * Use high-resolution, platform-compliant images
 * Keep branding consistent across all assets

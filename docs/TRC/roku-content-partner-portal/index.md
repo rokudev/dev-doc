@@ -6,7 +6,7 @@ hidden: true
 metadata:
   robots: index
 next:
-  description: Begin your experience from the Roku Content Partner Portal Dashboard
+  description: Begin your experience from the Roku content partner portal dashboard
   pages:
     - slug: dashboard-1
       title: Dashboard

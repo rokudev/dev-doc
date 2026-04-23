@@ -24,7 +24,7 @@ Use the **Title Status** view if you are responsible for delivering or managing 
 
 This view is most useful for:
 
-## Operations Managers (Asset Delivery)
+## Operations Managers (asset delivery)
 
 Use this view to:
 
@@ -38,7 +38,7 @@ Focus on these statuses:
 * **Failed**: processing or QC issues
 * **Processing**: assets are actively being prepared
 
-## Business Managers (Rights Delivery)
+## Business Managers (rights delivery)
 
 Use this view to:
 

@@ -1,5 +1,5 @@
 ---
-title: Key Features
+title: Key features
 excerpt: Explore available features in the Roku content partner portal
 deprecated: false
 hidden: true
@@ -16,11 +16,11 @@ The Content Partner Portal brings together the core tools you need to manage, mo
 
 <br />
 
-# Title Tracking Status
+# Title tracking status
 
 Track the progress of your content from delivery through publication. Title Tracking Status provides clear visibility into where each title is in the pipeline, helping you quickly identify delays, resolve issues, and stay aligned with launch timelines.
 
-Want to learn more, check out [Title Tracking Status](doc:title-tracking-status).
+Want to learn more, check out [Title tracking status](doc:title-tracking-status).
 
 # Storefront
 

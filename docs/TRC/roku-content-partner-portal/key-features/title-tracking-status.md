@@ -385,15 +385,17 @@ Each row represents a single title and its current status across territories.
 When reviewing a title:
 
 1. Start with **License types** by identifying how the title is licensed:
-   •	Ad-supported
-   •	Linear O&O FAST
-   •	Premium subscription
+
+   * Ad-supported
+   * Linear O&O FAST
+   * Premium subscription
 
    This tells you what types of distribution the title is eligible for.
 2. Next, review **Services** where the title will appear:
-   •	TRC AVOD
-   •	TRC O&O FAST
-   •	Premium subscription services
+
+   * TRC AVOD
+   * TRC O&O FAST
+   * Premium subscription services
 
    A title may be associated with multiple services depending on its rights.
 
@@ -406,12 +408,19 @@ When reviewing a title:
 
    Expand the row to identify which territories are impacted.
 5. Finally, check the **Expected** timing:
-   •	**Expected start date** → when the title will become available
-   •	**Expected end date** → when availability will expire
+
+   * **Expected start date** → when the title will become available
+   * **Expected end date** → when availability will expire
 
    These dates reflect:
-   •	The next upcoming change across all territories
-   •	Your local timezone
+
+   * The next upcoming change across all territories
+   * Your local timezone
+
+   For TV content:
+
+   * Expected start and end dates for a TV series (and seasons) are derived by rolling up dates from all associated TV episodes
+   * This means the dates represent the earliest upcoming availability or expiration across all episodes
 
 ![](https://files.readme.io/188a32cc62ee6f082b97470205b4753dae747e59eaac7bf0966cf4441df8d2c0-image.png)
 

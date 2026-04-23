@@ -12,9 +12,9 @@ next:
       title: Creatives
       type: basic
 ---
-Storefront marketing allows you to manage the Featured row on your channel storefront directly within the Content Partner Portal.
+Storefront allows you to manage the Featured row on your channel storefront directly within the Content Partner Portal.
 
-By default, the Featured row is populated by Roku’s recommendation system to deliver personalized content to viewers. With Storefront Marketing, you can pin titles to specific positions for a defined period of time, ensuring key content is prominently displayed.
+By default, the Featured row is populated by Roku’s recommendation system to deliver personalized content to viewers. With Storefront, you can pin titles to specific positions for a defined period of time, ensuring key content is prominently displayed.
 
 Pinned titles appear alongside Roku recommendations, giving you a balance of control and automated optimization to keep your storefront engaging and relevant.
 
@@ -30,7 +30,7 @@ Pinned titles appear alongside Roku recommendations, giving you a balance of con
 
 # Who This Is For
 
-Storefront marketing is available to Content Partners who manage **Premium Subscription** storefronts on the platform.
+Storefront is available to Content Partners who manage **Premium Subscription** storefronts on the platform.
 
 This feature is designed for teams responsible for marketing, merchandising, and audience growth, enabling them to control how titles are promoted within their Premium Subscription pages.
 
@@ -74,7 +74,7 @@ Only titles that are production-ready, have valid availability dates, and includ
 
 # Page layout
 
-The Storefront Marketing interface is designed to help you quickly view, manage, and update your Featured row.
+The Storefront interface is designed to help you quickly view, manage, and update your Featured row.
 
 <Image align="center" caption="Each labeled element corresponds to the components described in the table below." src="https://files.readme.io/38601c39707e8596ae5515455056dfffe8b73eb9ed90563c17aa7a0c3a947ea1-image.png" />
 
@@ -108,7 +108,7 @@ View and edit all titles currently pinned in your Featured row, including their 
 
 ## Filter Pinned Titles
 
-Filter pinned titles by content type, status, and position. 
+Filter pinned titles by content type, status, and position.
 
 <Image align="center" width="40% " src="https://files.readme.io/2e92c17742cfaf6821622ec5fcb057940fb35ca096e815e61791d4263ddae8b4-image.png" />
 

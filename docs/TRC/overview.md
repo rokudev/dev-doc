@@ -20,7 +20,7 @@ If you’re interested in becoming a Roku Channel partner, please complete our [
 
 * The Roku Channel now reaches ~145 million streamers in U.S. households (2025)
 * Roku is rapidly expanding across the globe
-* `#`1 DTC app distributor
+* \#1 DTC app distributor
 
 **Growth**
 

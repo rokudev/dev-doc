@@ -22,7 +22,7 @@ The Roku content partner portal is a self-service platform designed to give TRC 
 
 # What the portal enables
 
-At its core, the Content Partner Portal is built to simplify how partners interact with Roku’s content operations, and marketing. Instead of operating through fragmented tools or delayed updates, partners can:
+At its core, the Roku content partner portal is built to simplify how partners interact with Roku’s content operations, and marketing. Instead of operating through fragmented tools or delayed updates, partners can:
 
 * **Track title status in real time** across the full lifecycle, from ingestion through availability and expiration
 * **Understand processing outcomes** with clear, actionable status indicators
@@ -87,14 +87,14 @@ To get started, users must have the appropriate access role, typically **Busines
 
 # Getting started
 
-Access to the Content Partner Portal requires a Roku account. Partners can sign in or create an account at:
+Access to the portal requires a Roku account. Partners can sign in or create an account at:
 [https://my.roku.com/signin](https://my.roku.com/signin)
 
-Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the Content Partner Portal itself must be granted before it becomes available within Launchpad.
+Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before it becomes available within Roku Launchpad.
 
 1. Ask your company's administrator to grant access based on your responsibilities.
 2. Contact your internal team if you are not sure who your administrator is.
 
 <br />
 
-The Roku Content Partner Portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.
+The Roku content partner portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.

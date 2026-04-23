@@ -166,7 +166,6 @@ See who created or last modified each pinned title, providing visibility across 
 To maintain a consistent storefront experience, the following rules apply:
 
 * A Featured row contains up to 40 titles
-* A minimum number of titles is required to publish (for example, at least 13)
 * Duplicate titles are not allowed
 * Only eligible titles can be pinned
 * Conflicting pins (same position or overlapping schedules) must be resolved before publishing

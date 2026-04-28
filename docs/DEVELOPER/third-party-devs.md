@@ -16,7 +16,6 @@ Many digital media development studios have incorporated Roku development into t
 
 Below is a list of studios that have demonstrated success effectively developing and launching apps on the Roku platform:
 
-
 <HTMLBlock>{`
 <table>
 <thead>
@@ -612,10 +611,11 @@ Below is a list of studios that have demonstrated success effectively developing
 <p><a href="https://channelstore.roku.com/details/1e731702e7d9401eb1e7c0124ea8fa45/outside-tv">Outside TV</a></p>
 </td>
 <td class="long-line" colspan="1" rowspan="1">
-<p><a href="http://www.mazsystems.com/ott/">Visit</a></p>
+<p><a href="https://www.zype.com/">Visit</a></p>
 </td>
 </tr>
 </tbody>
-</table>`}</HTMLBlock>
+</table>
+`}</HTMLBlock>
 
 <br />

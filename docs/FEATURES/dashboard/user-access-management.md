@@ -146,9 +146,9 @@ To add a user to your developer account and assign them roles and permissions, f
 
    ![roku600px - mua\_app\_mgmt](https://image.roku.com/ZHZscHItMTc2/roku-user-access-accept-invite.png)
 
-## Managing TRC user accounts
+## TRC roles and permissions
 
-To add TRC users and assign them roles and permissions, follow the steps in [Adding Users](#adding-users). TRC has the following roles and permissions:
+To add TRC users and assign them roles and permissions, follow the steps in [Adding Users](#adding-users). TRC users can have the following roles and permissions:
 
 <Table align={["left","left"]}>
   <thead>
@@ -170,7 +170,7 @@ To add TRC users and assign them roles and permissions, follow the steps in [Add
       </td>
 
       <td>
-        Maintain administrative control over The Roku Channel Partner Portal. This user can:  
+        Maintain administrative control over The Roku Channel Partner Portal. This user can:
 
         * Manage company account information.
         * Manage users, roles, and permissions
@@ -201,7 +201,7 @@ To add TRC users and assign them roles and permissions, follow the steps in [Add
       </td>
 
       <td>
-        Manage title assets and operational reports. This user can:  
+        Manage title assets and operational reports. This user can:
 
         * Access title status and issue reports for assets.
       </td>

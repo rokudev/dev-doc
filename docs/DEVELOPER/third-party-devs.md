@@ -16,7 +16,8 @@ Many digital media development studios have incorporated Roku development into t
 
 Below is a list of studios that have demonstrated success effectively developing and launching apps on the Roku platform:
 
-<p>{`</p>
+
+<HTMLBlock>{`
 <table>
 <thead>
 <tr>
@@ -615,5 +616,6 @@ Below is a list of studios that have demonstrated success effectively developing
 </td>
 </tr>
 </tbody>
-</table>
-<p>`}</p>
+</table>`}</HTMLBlock>
+
+<br />

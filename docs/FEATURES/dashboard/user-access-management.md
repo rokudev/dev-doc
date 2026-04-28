@@ -134,18 +134,9 @@ To add a user to your developer account and assign them roles and permissions, f
 <td class="long-line">Grant the developer access to the Roku Pay transaction, sales activity, and payout reports for one or more apps.<br><br>Select apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to view the financial reports for all existing apps (as you create new apps, you will need to manually add them to grant access to their financial reports).</td>
 <td class="short-line">Account</td>
 </tr>
-<tr>
-<td class="short-line"><strong>Payout admin</strong></td>
-<td class="long-line"><ul>
-<li>Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the <a href="https://developer.roku.com/payments/">Roku Partner Payouts Program</a> in order to monetize content in a Roku app. </li>
-</ul></td>
-<td class="short-line">Account</td>
-</tr>
 </tbody>
 </table>
 `}</HTMLBlock>
-
-<br />
 
 ### TRC roles and permissions
 
@@ -229,6 +220,37 @@ To add TRC users and assign them roles and permissions, follow the steps in [Add
         View Roku analytics reports. This user can:
 
         * Access audience, engagement, and performance analytics.
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+### Account roles and permissions:
+
+<Table align={["left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Role
+      </th>
+
+      <th>
+        Permissions
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Payout admin
+      </td>
+
+      <td>
+        * Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the 
+          [Roku Partner Payouts Program](https://developer.roku.com/payments/)
+           in order to monetize content in a Roku app.
+        * Access the Roku Pay transaction, sales activity, and payout financial reports.
       </td>
     </tr>
   </tbody>

@@ -225,7 +225,7 @@ To add TRC users and assign them roles and permissions, follow the steps in [Add
   </tbody>
 </Table>
 
-### Account roles and permissions:
+### Account roles and permissions
 
 <Table align={["left","left"]}>
   <thead>
@@ -247,9 +247,7 @@ To add TRC users and assign them roles and permissions, follow the steps in [Add
       </td>
 
       <td>
-        * Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the 
-          [Roku Partner Payouts Program](https://developer.roku.com/payments/)
-           in order to monetize content in a Roku app.
+        * Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the [Roku Partner Payouts Program](https://developer.roku.com/payments/) in order to monetize content in a Roku app.
         * Access the Roku Pay transaction, sales activity, and payout financial reports.
       </td>
     </tr>

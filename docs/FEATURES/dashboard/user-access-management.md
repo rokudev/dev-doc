@@ -148,7 +148,7 @@ To add a user to your developer account and assign them roles and permissions, f
 
 ## TRC roles and permissions
 
-To add TRC users and assign them roles and permissions, follow the steps in [Adding Users](#adding-users). TRC users can have the following roles and permissions:
+To add TRC users and assign them roles and permissions, follow the steps in [Adding users](#adding-users). TRC users can have the following roles and permissions:
 
 <Table align={["left","left"]}>
   <thead>

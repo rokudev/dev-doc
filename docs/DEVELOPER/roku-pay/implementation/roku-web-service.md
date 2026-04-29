@@ -56,7 +56,7 @@ The following table summarizes the basic information for the Roku Pay web servic
       </td>
 
       <td>
-        Roku Pay APIs support both JSON and XML-formatted data. Format the `accept` header as follows:  
+        Roku Pay APIs support both JSON and XML-formatted data. Format the `accept` header as follows:
 
         * **JSON**: accept: application/json
         * **XML**: accept: application/xml
@@ -69,7 +69,7 @@ The following table summarizes the basic information for the Roku Pay web servic
       </td>
 
       <td>
-        Roku Pay APIs support GET and POST methods for retrieving and managing transaction data:  
+        Roku Pay APIs support GET and POST methods for retrieving and managing transaction data:
 
         * **GET**: All GET requests must include the Roku Pay API key and the ID of the item being validated in the URL (transaction or refund ID).
         * **POST**: All POST requests require JSON or XML-formatted data in the body. The Roku Pay API key must be included in the body.
@@ -133,7 +133,6 @@ GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/
     <channelId>251682</channelId>
     <channelName>Pizzazzy Channel</channelName>
     <couponCode i:nil="true"/>
-    <creditsApplied i:nil="true"/>
     <currency>usd</currency>
     <expirationDate>2020-02-06T23:51:02</expirationDate>
     <isEntitled>true</isEntitled>
@@ -167,7 +166,6 @@ GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/
     "channelId": 251682,
     "channelName": "Pizzazzy Channel",
     "couponCode": null,
-    "creditsApplied": null,
     "currency": "usd",
     "expirationDate": "/Date(1581033062000+0000)/",
     "isEntitled": true,

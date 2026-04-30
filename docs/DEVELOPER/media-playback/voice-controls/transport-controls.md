@@ -255,7 +255,7 @@ For a video demonstration of voice controls, see the [Voice overview guide](doc:
 
 The following table summarizes the different voice controls, how they may be invoked, and their required behavior:
 
-> If your app does not handle one of the listed voice controls (or it is unknown or not implemented in your app), [mark it as "error.generic" or "unhandled"](#errror-handling).
+> If your app does not handle one of the listed voice controls (or it is unknown or not implemented in your app), [mark it as "error.generic" or "unhandled"](#error-handling).
 
 ### Basic voice controls
 

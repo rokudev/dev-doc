@@ -51,7 +51,7 @@ The result is a more scalable and efficient partnership model.
 
 <br />
 
-# Who it's for
+# Who this is for
 
 The portal is designed for business, operation, and marketing stakeholders within partner organizations who need visibility into content performance, delivery, and marketing status. This includes teams responsible for:
 
@@ -87,8 +87,7 @@ To get started, users must have the appropriate access role, typically **Busines
 
 # Getting started
 
-Access to the portal requires a Roku account. Partners can sign in or create an account at:
-[https://my.roku.com/signin](https://my.roku.com/signin)
+Access to the portal requires a Roku account. Partners can sign in or create an account at: [https://my.roku.com/signin](https://my.roku.com/signin)
 
 Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before it becomes available within Roku Launchpad.
 

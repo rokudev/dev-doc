@@ -57,7 +57,7 @@ Apps must have completed the following integrations to participate in Roku Insta
 
 To get started with the Instant Signup integration, follow these steps:
 
-1. Verify that your app meets the listed [prerequisites](#prerequisities).
+1. Verify that your app meets the listed [prerequisites](#prerequisites).
 
 2. Contact the <Anchor label="Roku Partner Success team" title="https://developer.roku.com/contact" href="https://developer.roku.com/contact">Roku Partner Success team</Anchor>. They will determine whether your app is eligible for Instant Signup.
 

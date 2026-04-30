@@ -36,7 +36,7 @@ Instant Resume entails suspending the app state in the device RAM and then resum
 
 To implement Instant Resume in an app, do the following:
 
-1. [Update the manifest with required attributes](#updating-the-channel-manifest).
+1. [Update the manifest with required attributes](#updating-the-manifest).
 
 2. [Implement the required suspend and resume handlers](#implementing-suspend-and-resume-handlers).
 

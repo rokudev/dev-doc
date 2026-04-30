@@ -1425,7 +1425,7 @@ the key press and release events ([roUniversalControlEvent](doc:rouniversalcontr
 <h4 id="brightscript-debugger-updates">BrightScript debugger updates</h4>
 <ul>
 <li>Commands to step over and out of functions have been added
-([Debugging Your Application](doc:debugging-channels)).</li>
+([Debugging Your Application](doc:debugging)).</li>
 <li>Special commands to debug SceneGraph applications have been added
 (<a href="Debugging-SceneGraph-Applications_3736509.html">Debugging SceneGraph Applications</a>).</li>
 </ul>

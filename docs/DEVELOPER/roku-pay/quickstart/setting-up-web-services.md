@@ -86,7 +86,7 @@ To receive  JWT/JWS-secured push notifications, follow these steps:
 
    > The payload for JWT/JWS-secured messages is significantly different than the one used for unauthenticated messages; therefore, you must configure your push notification endpoint properly to avoid disrupting your system
 
-2. Configure a test endpoint and verify whether it can receive and process the JWT/JWS-secured messages. To do this, go to the [**Test push notification** settings](#test-push-notification-settings) and then provide an HTTPS test notification URL and test end date. JWT/JWS-secured messages will automatically start being sent to the specified test endpoint.
+2. Configure a test endpoint and verify whether it can receive and process the JWT/JWS-secured messages. To do this, go to the [**Test push notification** settings](#configuring-test-push-notification-settings) and then provide an HTTPS test notification URL and test end date. JWT/JWS-secured messages will automatically start being sent to the specified test endpoint.
 
 3. Optionally, you can manually send test payloads to your test endpoint by clicking [**Send test message**](#sending-test-messages) and entering a test payload.
 
@@ -114,7 +114,7 @@ To automatically send JWT/JWS-secured Roku Pay push notification messages to a t
 
 ### Sending test messages
 
-Publishers can manually send a test JWT/JWS-secured message with a generic payload to the test push notification endpoint configured in the [**Test Configuration For Push Notification** settings](#test-configuration-for-push-notification). This enables publishers to verify that their test endpoint can receive a JWT/JWS-secured message without generating Roku Pay transactions.
+Publishers can manually send a test JWT/JWS-secured message with a generic payload to the test push notification endpoint configured in the [**Test Configuration For Push Notification** settings](#configuring-test-push-notification-settings). This enables publishers to verify that their test endpoint can receive a JWT/JWS-secured message without generating Roku Pay transactions.
 
 To manually send a test JWT/JWS-secured notification message to a test endpoint, follow these steps:
 

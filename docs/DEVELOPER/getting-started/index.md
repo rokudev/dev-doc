@@ -42,6 +42,6 @@ The journey from novice to guru may not be without challenges, but Roku is here 
 
 ## Terms for development tools and apps
 
-When publishing development tools and apps for the Roku platform, observe the [developer terms](doc:developer-terms) to ensure compliance with the specified legal responsibilities, best practices, and guidelines. The developer terms includes a link to the [Roku Trademark Guidelines](https://docs.roku.com/published/trademarkguidelines), which specify rules for using Roku Marks and Roku Design Marks that must be adhered to.
+When publishing development tools and apps for the Roku platform, observe the [developer terms](doc:legal#developer-terms) to ensure compliance with the specified legal responsibilities, best practices, and guidelines. The developer terms includes a link to the [Roku Trademark Guidelines](https://docs.roku.com/published/trademarkguidelines), which specify rules for using Roku Marks and Roku Design Marks that must be adhered to.
 
 [^1]: (Circana, LLC, Retail Tracking Service, US, CA, and MX, Smart TV by Software Service, Unit Sales, July - September 2025)

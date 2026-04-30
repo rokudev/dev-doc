@@ -590,7 +590,7 @@ Below is a list of key developer-facing Roku OS 10.5 updates:
 
 Roku OS 10.0 adds a new [**chanperf** command](/docs/developer-program/debugging/debugging-channels.md#scenegraph-debug-server-port-8080-commands) to the debug console that displays the memory and CPU usage of a sideloaded app. This provides developers with a quick, convenient way to find performance issues in different parts of their application.
 
-In addition, developers can now upgrade the keyboards, mini keyboards, PIN pads in their apps to the new [dynamic voice-enabled keyboards](), which allow customers to use their voice to enter information. This release also makes Roku's [standard dialog framework]() available to developers, which provides enhanced pre-built dialogs and the flexibility to design custom dialogs.
+In addition, developers can now upgrade the keyboards, mini keyboards, PIN pads in their apps to the new [dynamic voice-enabled keyboards](doc:dynamic-voice-keyboard-nodes), which allow customers to use their voice to enter information. This release also makes Roku's [standard dialog framework](doc:standard-dialog-framework-nodes) available to developers, which provides enhanced pre-built dialogs and the flexibility to design custom dialogs.
 
 Other highlights include an enhancement to the [ChannelStore API](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) that optimizes the text displayed in the [Request for Information (RFI) screen](/docs/developer-program/roku-pay/implementation/channel-store.md#getuserdata) based on whether the customer is signing up for a subscription or signing in to their account, updates to the [ChannelStore API](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdata) for getting additional customer information such as their birth, gender, and location (country, state, zip code), and new functions for checking the internet connectivity status on a Roku device.
 
@@ -890,7 +890,7 @@ For our consumer release notes, [see here](https://support.roku.com/article/2288
 
 * **PlayReady 3 Update** — All Roku devices with MStar chips update to the [PlayReady 3](/docs/specs/media/content-protection.md#playready) library with Roku OS 8.1. Previously they included PlayReady 2.5.
 * **[BETA] Opening Access to Widevine DRM** — Roku OS 8.1 adds support for [Widevine DRM](/docs/specs/media/content-protection.md#widevine) for DASH streams. At this stage, Widevine support is considered in beta on the Roku platform.
-* **Digital Rights Management (DRM) control attributes** — [Content metadata control attributes]() for DRM have been added to the Roku OS.
+* **Digital Rights Management (DRM) control attributes** — [Content metadata control attributes](doc:content-metadata#digital-rights-management-drm-control-attributes) for DRM have been added to the Roku OS.
 * **Passing custom HTTP headers to licensing requests** — Developers looking to pass custom HTTP headers with a licensing request can now set those headers using the [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md) interface methods on the [Video](/docs/references/scenegraph/media-playback-nodes/video.md) node.
 * **Media Player content metadata updates** — Two content metadata attributes of the Media Player have been updated and three new attributes have been added:
   * [PlayDuration](/docs/developer-program/getting-started/architecture/content-metadata.md#playback-configuration-attributes) is no longer used by the media player.
@@ -927,8 +927,8 @@ Below is a complete list of the APIs deprecated as of Roku OS 8.1.
 
 #### SceneGraph Updates
 
-* **ReplaceChildren() ignores extra items in the replace list** — When using [replaceChildren()]() to update the content of each item in a [markupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md), if the developer supplies more items than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children.
-* **Mobile or ECP keypress events now appear in onKeyEvent()** — Literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](/docs/developer-program/dev-tools/external-control-api.md) keydown/keyup commands, now go to the [onKeyEvent()]() handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
+* **ReplaceChildren() ignores extra items in the replace list** — When using [replaceChildren()](doc:ifsgnodechildren#replacechildrenchild_nodes-as-object-index-as-integer-as-boolean) to update the content of each item in a [markupGrid](/docs/references/scenegraph/list-and-grid-nodes/markupgrid.md), if the developer supplies more items than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children.
+* **Mobile or ECP keypress events now appear in onKeyEvent()** — Literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](/docs/developer-program/dev-tools/external-control-api.md) keydown/keyup commands, now go to the [onKeyEvent()](doc:onkeyevent) handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
 * **SimpleLabel** - Roku OS version 8.1 introduces [SimpleLabel](/docs/references/scenegraph/renderable-nodes/simplelabel.md) which is a lightweight complement node to the [Label](/docs/references/scenegraph/label-nodes/label.md) node. It supports simplified font style specification and is more memory efficient than the Label node.
 
 ## Roku OS 8
@@ -1298,7 +1298,7 @@ the key press and release events ([roUniversalControlEvent](doc:rouniversalcontr
 <h4 id="brightscript-debugger-updates">BrightScript debugger updates</h4>
 <ul>
 <li>Commands to step over and out of functions have been added
-([Debugging Your Application](doc:debugging-channels)).</li>
+([Debugging Your Application](doc:debugging)).</li>
 <li>Special commands to debug SceneGraph applications have been added
 (<a href="Debugging-SceneGraph-Applications_3736509.html">Debugging SceneGraph Applications</a>).</li>
 </ul>

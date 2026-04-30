@@ -16,7 +16,7 @@ To get started with a Roku Pay integration and test it in an app without incurri
 
 * [Enroll in the Roku Partner Payouts Program](#roku-partner-payouts-program)
 * [Specify the monetization methods for the app](#monetization)
-* [Add in-app products](#product-catalog)
+* [Add in-app products](#in-app-products)
 * [Create test users](#test-users)
 * [Set up Roku Pay web services](#roku-pay-web-services)
 

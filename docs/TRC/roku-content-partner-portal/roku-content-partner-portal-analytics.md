@@ -69,10 +69,11 @@ Analytics includes a range of reports that surface performance across different 
 
 Below is an overview of the types of insights available:
 
-* **Views / Streams** – Total number of times content is watched
-* **Impressions** – How often your content is shown to users
-* **Engagement Rate** – How frequently users interact with surfaced content
-* **Conversion Signals** – Actions taken after discovery (e.g., starting a stream)
+* **Streaming Activity** – How much content is being watched (streaming hours, stream starts)
+* **Audience Engagement** – How users interact with content (starts, completion rates, session duration)
+* **Content Performance** – Which titles, episodes, or channels are driving viewership and retention
+* **Subscriber Behavior** – How users convert, retain, and churn across subscription offerings _(SVOD only)_
+* **Platform & Distribution** – Where and how users are watching (device, platform, channel, or storefront)
 
 <br />
 

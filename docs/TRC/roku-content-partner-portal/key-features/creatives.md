@@ -6,7 +6,9 @@ hidden: true
 metadata:
   robots: index
 ---
-The Creatives section is where you upload, manage, and organize the visual assets that represent your content and subscription offers across The Roku Channel. These assets help drive discovery, engagement, and conversion by ensuring your titles and offers are presented with high-quality, up-to-date visuals.
+The Creatives section is where you manage a limited set of publisher-level visual assets used across The Roku Channel subscription experience. These assets are not title-specific. Instead, they represent your service branding and are displayed in key user journeys such as subscription entry points and publisher collection pages.
+
+At this stage, creative control is intentionally scoped to a small number of high-impact assets to ensure consistency across the platform.
 
 <br />
 
@@ -16,9 +18,98 @@ The Creatives section is where you upload, manage, and organize the visual asset
 
 # Who this is for
 
-This feature is designed for users responsible for managing the visual presentation and promotion of content on The Roku Channel. This typically includes:
+This feature is intended for users responsible for maintaining brand consistency and subscription presentation, including:
 
-* Marketing teams managing brand and campaign assets
+* Marketing teams managing service-level branding
+* Merchandising teams optimizing subscription entry points
+* Business stakeholders responsible for subscription performance
+
+<br />
+
+# What you can manage
+
+Currently, the Creatives section supports management of the following assets:
+
+## CTA Banner
+
+A large banner displayed within the publisher collection home that promotes your service and encourages users to take action.
+
+* Used for subscription discovery and engagement
+* Supports high-visibility promotional messaging
+* One asset per service and territory
+
+Specifications:
+
+* Size: 1538 × 424
+* Format: JPEG
+
+## Partner Tile (4:3)
+
+A core brand tile used across multiple surfaces, including subscription and trial initiation screens, as well as grid placements.
+
+* Represents your service in UI surfaces
+* Must be clear and recognizable at smaller sizes
+* One asset per service and territory
+
+Specifications:
+
+* Size: 540 × 405
+* Format: JPEG
+
+<br />
+
+# How it works
+
+1. **Select Context**
+   Choose the Service and Territory to manage creatives for that specific configuration.
+2. **View Current Assets**
+   Review the currently published images for each creative type.
+3. **Upload New Assets**
+   Drag and drop or browse to upload a replacement image.
+4. **Update**
+   Apply changes to replace the existing creative.
+
+<br />
+
+# Important limitations
+
+Creative management is currently limited to:
+
+* One CTA banner per service and territory
+* One partner tile per service and territory
+* No support for multiple variants, A/B testing, or scheduling
+
+This means updates will immediately replace the existing asset and apply universally within that context.
+
+<br />
+
+# Creative guidelines
+
+All assets must meet Roku’s branding and technical requirements. For full specifications, safe zones, and design recommendations, refer to the official documentation:
+
+* <Anchor label="CTA Banner Guidelines" target="_blank" href="https://developer.roku.com/dev/docs/assets_and_branding#cta-call-to-action-banner">CTA Banner Guidelines</Anchor>
+* <Anchor label="Partner Tile (4:3) Guidelines" target="_blank" href="https://developer.roku.com/dev/docs/assets_and_branding#partner-tile-43">Partner Tile (4:3) Guidelines</Anchor>
+
+Failure to meet these requirements may result in assets being rejected or rendered incorrectly in the UI.
+
+<br />
+
+# Why it matters
+
+These creatives directly impact how users perceive your service and whether they choose to subscribe. Strong, clear visuals:
+
+* Improve brand recognition
+* Increase click-through rates on subscription entry points
+* Drive higher conversion
+
+<br />
+
+# Best practices
+
+* Keep branding simple and legible, especially for smaller tile formats
+* Avoid cluttered layouts or excessive text
+* Ensure key messaging is centered and within safe zones
+* Regularly refresh creatives to align with campaigns or seasonal promotions
 
 <br />
 
@@ -29,66 +120,3 @@ To use this feature, get the appropriate role assigned to your account.
 1. Request **Marketing Manager** access from your company’s account administrator.
 2. Ask your administrator to grant access based on your responsibilities, such as storefront and creative management.
 3. Contact your internal team if you are not sure who your administrator is.
-
-<br />
-
-# What you can do
-
-## Upload and manage brand assets
-
-Add and maintain visual elements that represent your content, including:
-
-* Title artwork (tiles, posters)
-* Banners for featured placements
-* Background or promotional imagery
-
-Keeping these assets current ensures your content appears polished and aligned with your brand.
-
-## Manage Call-to-Action (CTA) images
-
-Upload and update images that encourage users to take specific actions, such as:
-
-* “Watch Now”
-* “Subscribe”
-* “Learn More”
-
-Clear and compelling CTA images can directly impact user engagement and conversions.
-
-## Manage subscription offer creatives
-
-Customize visuals tied to subscription offers, including:
-
-* Side cards displayed alongside content
-* Promotional imagery supporting subscription messaging
-
-These creatives help communicate value and drive sign-ups for your subscription offerings.
-
-<br />
-
-# How it works
-
-1. Upload Assets
-   Add creatives based on required specifications (dimensions, formats, file size).
-2. Assign to Use Cases
-   Associate creatives with specific titles, storefront placements, or subscription offers.
-3. Review and Update
-   Replace outdated assets or optimize visuals based on performance or campaign needs.
-
-<br />
-
-# Why it matters
-
-Strong creative assets are a key lever for performance. Well-designed visuals:
-
-* Improve content discoverability
-* Increase click-through rates
-* Drive higher engagement and subscriptions
-
-<br />
-
-# Best practices
-
-* Use high-resolution, platform-compliant images
-* Keep branding consistent across all assets
-* Rotate creatives regularly to support campaigns or seasonal promotions
-* Align CTA imagery with clear, actionable messaging

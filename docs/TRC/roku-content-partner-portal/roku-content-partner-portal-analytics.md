@@ -65,7 +65,9 @@ Depending on your access level, you may be able to:
 
 # Key metrics you may see
 
-While metrics may vary based on your account and feature availability, common indicators include:
+Analytics includes a range of reports that surface performance across different business models, including AVOD, SVOD, Live, and FAST. The specific reports and metrics available to you will depend on your partner type, subscription tier, and feature eligibility.
+
+Below is an overview of the types of insights available:
 
 * **Views / Streams** – Total number of times content is watched
 * **Impressions** – How often your content is shown to users

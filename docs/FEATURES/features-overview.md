@@ -12,7 +12,7 @@ next:
 ---
 Roku is an open streaming platform that is revolutionizing how consumers watch video content. Roku is at the forefront of the streaming age, having pioneered video streaming in the United States and rapidly expanding its reach across the globe. Roku produces award-winning [streaming players and soundbars](https://www.roku.com/products/players), and has developed what is now the #1 selling smart TV streaming OS in the US, Canada, and Mexico.
 
-The Roku OS is built specifically for streaming, which means publishers can seamlessly develop intuitive, high-performance apps designed especially for the TV. With 100 million streaming households worldwide and 37.9 billion hours watched last quarter, publishers can distribute their apps around the globe to expand their reach and monetize their content.
+The Roku OS is built specifically for streaming, which means publishers can seamlessly develop intuitive, high-performance apps designed especially for the TV. With 100 million streaming households worldwide and 38.7 billion hours watched last quarter, publishers can distribute their apps around the globe to expand their reach and monetize their content.
 
 As TV viewing continues to shift to streaming platforms, Roku is well-positioned to help content publishers with a sophisticated suite of tools that make it easy to distribute and monetize content. The Roku Developer Program empowers content publishers to build Roku streaming apps. You can use our [developer SDK](doc:getting-started) to build a customized streaming experience.
 

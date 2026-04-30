@@ -1360,15 +1360,7 @@ An associative array with the following key-value pairs describing the current U
   </tbody>
 </table>
 
-### GetGraphicsFeatures() as Object
-
-_Available since Roku OS 14.0_
-
-#### Description
-
-Checks the graphics features supported by the device.
-
-#### Return Values
+<br />
 
 An associative array containing the following key/value pairs:
 

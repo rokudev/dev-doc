@@ -40,7 +40,7 @@ This transparency reduces uncertainty and empowers your teams to take action fas
 
 Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
 
-The Content Partner Portal shifts that model by:
+The Roku content partner portal shifts that model by:
 
 * Reducing dependency on support teams
 * Improving turnaround time for issue resolution

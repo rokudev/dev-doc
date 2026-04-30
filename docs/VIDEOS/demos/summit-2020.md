@@ -77,7 +77,7 @@ This section provides links to the major topics covered within each presentation
 * [AppDialog signal beacon](doc:measuring-channel-performance)
 * [Trickplay thumbnails](doc:trick-mode)
 * [Demand API](doc:demand-api)
-* [Subscription product groups](doc:in-channel-products)
+* [Subscription product groups](doc:product-catalog)
 * [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)
 * [Voice controls](doc:transport-controls)
 
@@ -87,7 +87,7 @@ This section provides links to the major topics covered within each presentation
 * [Roku Pay training video](doc:subscriptions)
 * [Instant Signup](doc:instant-signup)
 * [Subscription upgrade/downgrade](doc:on-device-upgrade-downgrade)
-* [Subscription product groups](doc:in-channel-products)
+* [Subscription product groups](doc:product-catalog)
 * [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)
 
 #### Demand API

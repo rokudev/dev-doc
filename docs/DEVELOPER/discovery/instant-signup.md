@@ -208,7 +208,7 @@ The posters/artwork with the content or networks featured in the app are used to
 
 Apps must implement an API that retrieves the product offers to be displayed to the customer when they click an app image. Apps may return offers for up to three unique products (for example, for example, an ad-supported plan, monthly limited-ads plan, and monthly premium ad-free plan). Apps may not return different offers for the same product (for example, returning 7-day and 30-day free trials for the same product is not allowed).
 
-Each product will include its associated name and description, which were entered in the **Product Name** field on the [**Manage In-app Products** page](doc:in-channel-products) within the Developer Dashboard.
+Each product will include its associated name and description, which were entered in the **Product Name** field on the [**Manage In-app Products** page](doc:product-catalog) within the Developer Dashboard.
 
 > To change the product offers that are displayed to customers, apps must contact the <Anchor label="Roku Partner Success team" title="https://developer.roku.com/contact" href="https://developer.roku.com/contact">Roku Partner Success team</Anchor> before making any updates.
 >

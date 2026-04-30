@@ -36,7 +36,7 @@ Specify the monetization methods for your app by selecting which in-app products
 
 ## In-app products
 
-Once your app is enabled for billing testing, you need subscription and one-time purchase products to test with. You can add one or more products to your app in a few steps. Provide basic information such as the name, unique code, and app for the product, and configure its pricing. You can also offer free trial periods and discounts for subscription products. See [Adding in-app products](doc:in-channel-products) for more information.
+Once your app is enabled for billing testing, you need subscription and one-time purchase products to test with. You can add one or more products to your app in a few steps. Provide basic information such as the name, unique code, and app for the product, and configure its pricing. You can also offer free trial periods and discounts for subscription products. See [Adding in-app products](doc:product-catalog) for more information.
 
 ![roku815px - in-channel-product.jpg](https://image.roku.com/ZHZscHItMTc2/in-channel-product-v3.png)
 

@@ -32,7 +32,7 @@ To play the videos in the [Subscriptions sample app](https://github.com/rokudev/
 
 1. [Create a test app](doc:channel-publishing-guide).
 2. [Enable the app for billing testing](doc:billing-testing).
-3. [Create in-app products](doc:in-channel-products). You must create at least one in-app product that has a [free trial offer](doc:in-channel-products).
+3. [Create in-app products](doc:product-catalog). You must create at least one in-app product that has a [free trial offer](doc:product-catalog).
 4. [Add a test user](doc:test-users).
 
 ### Voiding test user transactions
@@ -56,7 +56,7 @@ In addition, to keep the app demonstration segments in this lesson concise and m
 | [Certification criteria for purchases](doc:certification) | Read the certification criteria for transactional apps (SVOD apps, TVOD apps, and other subscription services). |
 | [On-device authentication](doc:on-device-authentication) | Read how to validate subscriptions and purchases before granting access to content. Learn how to enable customers to sign-in to an app directly on their Roku devices—without having to visit an external webpage. |
 | [On-device authentication sample app](https://github.com/rokudev/on-device-authentication) | Download and test a sample app demonstrating the on-device authentication workflow. |
-| [In-app purchasing](doc:in-channel-products) | Read how to create in-app products for the subscription and transactional services offered by your app. |
+| [In-app purchasing](doc:product-catalog) | Read how to create in-app products for the subscription and transactional services offered by your app. |
 | [Billing testing](doc:billing-testing) | Read how to enable your app for billing testing.         |
 
 ## Related

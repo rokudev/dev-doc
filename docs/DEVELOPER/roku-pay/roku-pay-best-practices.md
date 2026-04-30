@@ -34,8 +34,8 @@ Review the following checklist to make sure your app is adhering to best practic
 
     <tr>
       <td>Add free trials and discount offers to subscription products instead of creating separate products</td>
-      <td>The [In-App Products page](doc:in-channel-products) in the Developer Dashboard enables publishers to offer free trials and discount offers on in-app subscription products for a specific number of days or months.<br /><br />Roku Pay then automatically renews the subscription at the regular base price once the free trial or discount period ends. This makes it easy to provide customers with introductory pricing incentives. <br /><br />Separate products do not need to be created for free-trial or discounted subscription products.</td>
-      <td>[Adding in-app products](doc:in-channel-products#trials-and-offers)</td>
+      <td>The [In-App Products page](doc:product-catalog) in the Developer Dashboard enables publishers to offer free trials and discount offers on in-app subscription products for a specific number of days or months.<br /><br />Roku Pay then automatically renews the subscription at the regular base price once the free trial or discount period ends. This makes it easy to provide customers with introductory pricing incentives. <br /><br />Separate products do not need to be created for free-trial or discounted subscription products.</td>
+      <td>[Adding in-app products](doc:product-catalog#creating-purchase-options)</td>
     </tr>
   </tbody>
 </table>

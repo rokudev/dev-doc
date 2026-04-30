@@ -18,6 +18,8 @@ At this stage, creative control is intentionally scoped to a small number of hig
 
 # Who this is for
 
+Creatives is available to content partners who manage **Premium Subscription** storefronts on the platform.
+
 This feature is intended for users responsible for maintaining brand consistency and subscription presentation, including:
 
 * Marketing teams managing service-level branding
@@ -60,14 +62,10 @@ Specifications:
 
 # How it works
 
-1. **Select Context**
-   Choose the Service and Territory to manage creatives for that specific configuration.
-2. **View Current Assets**
-   Review the currently published images for each creative type.
-3. **Upload New Assets**
-   Drag and drop or browse to upload a replacement image.
-4. **Update**
-   Apply changes to replace the existing creative.
+1. **Select Context** Choose the Service and Territory to manage creatives for that specific configuration.
+2. **View Current Assets** Review the currently published images for each creative type.
+3. **Upload New Assets** Drag and drop or browse to upload a replacement image.
+4. **Update** Apply changes to replace the existing creative.
 
 <br />
 

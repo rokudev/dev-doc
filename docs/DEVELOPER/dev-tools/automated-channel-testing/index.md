@@ -36,7 +36,7 @@ The following diagram illustrates the automated app testing workflow:
 
 ## App UI testing
 
-The Roku WebDriver includes a set of [APIs](doc:web-driver) that enable developers to run state-driven UI tests. For example, the RokuWebDriver has an [**element** API](doc:element) to check if a specific SceneGraph component is present on the screen in order to determine whether a specific screen has been loaded. In addition, the Roku Robot Framework and JavaScript libraries have [keywords](doc:robot-framework-library) that are mapped to the Roku WebDriver APIs so that developers can execute app UI-based test cases with them.
+The Roku WebDriver includes a set of [APIs](doc:web-driver) that enable developers to run state-driven UI tests. For example, the RokuWebDriver has an [**element** API](doc:web-driver#post-v1sessionsessionidelement) to check if a specific SceneGraph component is present on the screen in order to determine whether a specific screen has been loaded. In addition, the Roku Robot Framework and JavaScript libraries have [keywords](doc:robot-framework-library) that are mapped to the Roku WebDriver APIs so that developers can execute app UI-based test cases with them.
 
 ## Getting started
 

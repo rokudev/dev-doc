@@ -32,7 +32,7 @@ In this section, you'll find:
 
 * [How apps work](doc:how-channels-work) — A high-level overview of different components required to distribute content on the Roku platform.
 
-* [App development with the Roku SDK](doc:channel-development-models) — A summary of the app development features offered by the [Roku SDK](doc:roku-dev-prog).
+* [App development with the Roku SDK](doc:channel-development-models) — A summary of the app development features offered by the [Roku SDK](doc:getting-started).
 
 * [Content engagement](doc:channel-store) — Introduction to the various features, programs, and mechanisms available to increase the discoverability of content among target audiences.
 

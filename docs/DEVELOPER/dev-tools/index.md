@@ -90,4 +90,4 @@ Roku's test automation tools enable automated state-driven UI testing of apps. W
 
 ## Terms for publishing development tools
 
-When publishing development tools for the Roku platform, observe the [developer terms](doc:developer-terms) to ensure compliance with the specified legal responsibilities, best practices, and guidelines. The developer terms includes the [Roku Trademark Guidelines](https://docs.roku.com/published/trademarkguidelines), which specify rules for using Roku Marks and Roku Design Marks that must be adhered to.
+When publishing development tools for the Roku platform, observe the [developer terms](doc:legal#developer-terms) to ensure compliance with the specified legal responsibilities, best practices, and guidelines. The developer terms includes the [Roku Trademark Guidelines](https://docs.roku.com/published/trademarkguidelines), which specify rules for using Roku Marks and Roku Design Marks that must be adhered to.

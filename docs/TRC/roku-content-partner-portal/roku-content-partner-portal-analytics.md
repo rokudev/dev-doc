@@ -18,6 +18,16 @@ The Analytics section provides insights into how your content and storefront exp
 
 # Who this is for
 
+<Callout icon="🔒" theme="default">
+  ## Access and Availability
+
+  Analytics reports and metrics vary based on your partner type and subscription level. Not all data is available to all partners.
+
+  For example, merchandising and storefront performance insights are only available to Premium Subscription partners, since these features are tied to storefront and promotional capabilities that are exclusive to that tier.
+
+  If you do not see certain reports or metrics in your Analytics view, it is likely due to your current access level or feature eligibility.
+</Callout>
+
 The Analytics section is designed for stakeholders who need visibility into content performance and audience behavior, including:
 
 * Business and strategy teams
@@ -43,10 +53,9 @@ Analytics data is organized into dashboards and visualizations designed to give 
 
 Depending on your access level, you may be able to:
 
-1. **View summary metrics:**   
+1. **View summary metrics:**  
    Get a snapshot of overall performance across your catalog.
-2. **Filter and segment data**
-   Refine insights by territory, time range, or specific titles.
+2. **Filter and segment data** Refine insights by territory, time range, or specific titles.
 3. **Drill into detailed views**  
    Explore performance at the title or campaign level.
 4. **Track changes over time**  

@@ -30,7 +30,7 @@ This feature is intended for users responsible for maintaining brand consistency
 
 Currently, the Creatives section supports management of the following assets:
 
-## CTA Banner
+## CTA banner
 
 A large banner displayed within the publisher collection home that promotes your service and encourages users to take action.
 
@@ -43,7 +43,7 @@ Specifications:
 * Size: 1538 × 424
 * Format: JPEG
 
-## Partner Tile (4:3)
+## Partner tile (4:3)
 
 A core brand tile used across multiple surfaces, including subscription and trial initiation screens, as well as grid placements.
 

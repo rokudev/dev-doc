@@ -12,7 +12,7 @@ next:
 ---
 ## Introduction to Roku Search 
 
-Roku Search is listed in the main menu of the Roku home screen. Users can use their Roku remote control or Roku mobile app to enter or say their search, and then Roku Search displays content matching the query. If the search is for an actor, actress, or director, users can select content related to the person or view their filmography and then select content. The search results also include [Roku Zones](#roku-zones), which users can select to view a curated selection of content related to the query from apps across the Roku platform.
+Roku Search is listed in the main menu of the Roku home screen. Users can use their Roku remote control or Roku mobile app to enter or say their search, and then Roku Search displays content matching the query. If the search is for an actor, actress, or director, users can select content related to the person or view their filmography and then select content. The search results also include [Roku Zones](doc:implementing-search#roku-zones), which users can select to view a curated selection of content related to the query from apps across the Roku platform.
 
 <Image alt="roku815px - search results" border={false} src="https://image.roku.com/ZHZscHItMTc2/search-young-rock-query.jpg" title="searchresults" />
 

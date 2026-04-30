@@ -35,7 +35,7 @@ A beta app allows the developer to instantly revise an app for test users to try
 
 Beta app usage is **limited** to its intended purpose of quality assurance, as follows:
 
-* **120 days.** A beta app can exist for only 120 days after you create it (using [Add App](#create-a-channel)). After the expiration of that period, the app is: (1) deleted and removed from your Developer Dashboard and (2) disabled for all users who have installed it.
+* **120 days.** A beta app can exist for only 120 days after you create it (using [Add App](#create-an-app)). After the expiration of that period, the app is: (1) deleted and removed from your Developer Dashboard and (2) disabled for all users who have installed it.
 
 * **10 apps.** Your developer account permits up to 10 beta apps at a time. For each beta app, you can:
 
@@ -63,7 +63,7 @@ To create and start testing a beta app, you will need to:
 
 1. [Package your Roku app](doc:packaging-channels).
 2. [Create an app](#create-an-app) (select **Beta**).
-3. [Upload the package](#upload-a-package) associated with this app.
+3. [Upload the package](#package-and-testing) associated with this app.
 4. Provide the Access Code (from the Preview and Publish window) to your beta testers.
 
 For additional revision cycles before moving to a Public app, simply repackage your project using the same key and re-upload it to the same Beta app (if within the 120-day life of the app).
@@ -86,8 +86,8 @@ To ensure success in creating a Public app, you will need to:
 2. Create your design assets following [Design and User Experience Guidelines](doc:design).
 3. Go through the [Pre-certification Check List](doc:certification).
 4. [Create an app](#create-an-app) (select **Public**).
-5. [Upload the package](#upload-a-package) associated with this app.
-6. Follow the [App certification](#channel-certification) procedure.
+5. [Upload the package](#package-and-testing) associated with this app.
+6. Follow the [App certification](doc:certification) procedure.
 7. Publish your app (submit it for deployment) using the [Publishing an app](#publishing-an-app) procedure.
 
 ## Create an app
@@ -727,7 +727,7 @@ Apps and their individual content items are typically added to Roku Search withi
 
 #### Device installation
 
-Once a public app is published to the Streaming Store, it is available for installation on Roku devices immediately using the app's vanity access code, which is specified in the [Properties window](#properties-window). To get the latest version of the app, users can do a System Update (Home > Settings > System > System update > Check now) or update the individual app (press the options key [*] on the app tile > Check for updates).
+Once a public app is published to the Streaming Store, it is available for installation on Roku devices immediately using the app's vanity access code, which is specified in the [Properties window](#app-properties). To get the latest version of the app, users can do a System Update (Home > Settings > System > System update > Check now) or update the individual app (press the options key [*] on the app tile > Check for updates).
 
 ## Rolling back an app to the previous release
 

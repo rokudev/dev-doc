@@ -83,7 +83,7 @@ Moreover, the Deep Linking and Roku Search feed information required for certifi
 To ensure success in creating a Public app, you will need to:
 
 1. [Package your Roku app](doc:packaging-channels).
-2. Create your design assets following [Design and User Experience Guidelines](doc:design-overview).
+2. Create your design assets following [Design and User Experience Guidelines](doc:design).
 3. Go through the [Pre-certification Check List](doc:certification).
 4. [Create an app](#create-an-app) (select **Public**).
 5. [Upload the package](#upload-a-package) associated with this app.

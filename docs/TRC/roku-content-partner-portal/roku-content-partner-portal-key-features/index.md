@@ -30,7 +30,7 @@ Manage how your content is presented to customers. The Storefront feature allows
   Available only to premium subscription partners.
 </Callout>
 
-Want to learn more, check out [Storefront](doc:storefront).
+Want to learn more, check out [Storefront](doc:roku-content-partner-portal-storefront).
 
 # Creatives
 

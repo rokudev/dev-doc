@@ -40,7 +40,7 @@ Upload and manage the assets that represent your content. Creatives allows you t
   Available only to premium subscription partners.
 </Callout>
 
-Want to learn more, check out [Creatives](doc:creatives).
+Want to learn more, check out [Creatives](doc:roku-content-partner-portal-creatives).
 
 <br />
 

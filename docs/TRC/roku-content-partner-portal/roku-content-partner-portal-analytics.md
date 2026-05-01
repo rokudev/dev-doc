@@ -72,8 +72,8 @@ Below is an overview of the types of insights available:
 * **Streaming Activity** – How much content is being watched (streaming hours, stream starts)
 * **Audience Engagement** – How users interact with content (starts, completion rates, session duration)
 * **Content Performance** – Which titles, episodes, or channels are driving viewership and retention
-* **Subscriber Behavior** – How users convert, retain, and churn across subscription offerings _(Premium Subscriptions only)_
 * **Platform & Distribution** – Where and how users are watching (device, platform, channel, or storefront)
+* **Subscriber Behavior** – How users convert, retain, and churn across subscription offerings _(Premium Subscriptions only)_
 
 <br />
 

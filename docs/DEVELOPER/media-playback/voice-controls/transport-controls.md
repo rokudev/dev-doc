@@ -121,48 +121,44 @@ these steps:
 
        else if cmd = "seek"
            duration = evt.duration.toInt()
-           if evt.direction = "backward" then
-               duration = -duration
-               seekPosition = m.videoplayer.position + duration
-               if seekPosition > m.videoplayer.duration then
-                   ret.status = "success.seek-end"
-                   seekPosition = m.videoplayer.duration - 30
-               else if seekPosition < 0
-                   then ret.status = "success.seek-start"
-                   seekPosition = 0
-               end if
-           m.seekPosition = seekPosition playVideoFrom()
-           ret.status = "success"
+           if evt.direction = "backward" then duration = -duration
+           seekPosition = m.videoplayer.position + duration
+           if seekPosition > m.videoplayer.duration then
+               ret.status = "success.seek-end"
+               seekPosition = m.videoplayer.duration - 30
+           else if seekPosition < 0 then
+               ret.status = "success.seek-start"
+               seekPosition = 0
+           else
+               ret.status = "success"
+           end if
+           m.seekPosition = seekPosition
+           playVideoFrom()
 
        else if cmd = "next"
-           'skip to next content item in playlist'
+           'skip to next content item in playlist
            ret.status = "success"
-       end if
 
        else if cmd = "nowplaying"
-           'handle nowplaying command
+           'handle "nowplaying" command
            appmgr = CreateObject("roAppManager")
            appmgr.SetNowPlayingContentMetaData({
                title: "<title>",
                contentType: "<contentType>"
            })
            ret.status = "success"
-       end if
 
        else if cmd = "loop"
            'handle "loop" command
-            ret.status = "success"
-       end if
+           ret.status = "success"
 
        else if cmd = "shuffle"
            'handle "shuffle" command
            ret.status = "success"
-       end if
 
        else if cmd = "skip"
-           'handle "skip intro" command OR handle same as "next" if channel have no into/recap to skip
+           'handle "skip intro"/"skip recap" command, or fall through to "next" behavior if there is nothing to skip
            ret.status = "success"
-       end if
 
        else if cmd = "like"
            'handle "like" command

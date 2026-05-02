@@ -68,13 +68,9 @@ There are a variety of ways Conditional compilation can be used:
 
 ```
 #if someFlag
-
     'code to execute when someFlag is true
-
 #else if anotherFlag
-
     'code to execute when anotherFlag is true
-
 #end if
 ```
 
@@ -86,17 +82,11 @@ There are a variety of ways Conditional compilation can be used:
 #const FeatureB = false
 
 #if FeatureA
-
     'code for Feature A
-
 #else if FeatureB
-
     'code for Feature B
-
 #else
-
     'production code
-
 #end if
 ```
 
@@ -126,19 +116,13 @@ Conditional compilation can also be used to form block comments. Previously, eac
 
 ```
 #if false
-
     This is a function that does nothing.
-
     This function takes no parameters.
-
     This function does not return anything.
-
 #end if
 
 Function foo() as void
-
     'do nothing
-
 End Function
 ```
 
@@ -147,13 +131,9 @@ End Function
 
 ```
 #if false
-
-Function Order66() as void
-
-    'code for Order66
-
-End Function
-
+    Function Order66() as void
+        'code for Order66
+    End Function
 #end if
 ```
 

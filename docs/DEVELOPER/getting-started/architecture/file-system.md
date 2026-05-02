@@ -90,10 +90,7 @@ nor any whitespace or non-printable character.
 
 ```
 theme.OverhangSliceSD = "pkg:/images/Overhang_Slice_SD43.png"
-
 http.Http.GetToFile("tmp:/categorylist")
-
 DeleteFile("tmp:/categorylist")
-
 obj.SetCertificatesFile("common:/certs/ca-bundle.crt")
 ```

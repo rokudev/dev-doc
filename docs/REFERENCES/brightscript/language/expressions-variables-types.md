@@ -201,11 +201,8 @@ Arrays can be specified in multi-line form:
 
 ```
 a = [
-
-"able"
-
-"baker"
-
+    "able"
+    "baker"
 ]
 ```
 
@@ -213,11 +210,8 @@ a = [
 
 ```
 a = [
-
-3.1415,
-
-2.71828
-
+    3.1415,
+    2.71828
 ]
 ```
 
@@ -229,7 +223,6 @@ The { } operator can be used to define an Associative Array. It can contain lite
 
 ```
 aa = { }
-
 aa = { key1: "value", key2: 55, key3: 5+3 }
 ```
 
@@ -249,11 +242,8 @@ Associative Arrays can be specified in multi-line form:
 
 ```
 aa = {
-
-Myfunc1: aFunction
-
-Myval1: "the value"
-
+    Myfunc1: aFunction
+    Myval1: "the value"
 }
 ```
 
@@ -261,11 +251,8 @@ Myval1: "the value"
 
 ```
 aa = {
-
-alpha: 1,
-
-zulu: 26
-
+    alpha: 1,
+    zulu: 26
 }
 ```
 
@@ -483,19 +470,15 @@ function reference, it calls the function.
 
 ```
 function five() as Integer
-
-return 5
-
+    return 5
 end function
 
 print five()
 
 fivevar = five
-
 print fivevar()
 
 array[1] = fivevar
-
 print array[1]()
 ```
 
@@ -575,15 +558,11 @@ described above).
 
 ```
 array = CreateObject("roArray", 10, true)
-
 array[2] = "two"
-
 print array[2]
 
 aa = CreateObject("roAssociativeArray")
-
 aa["newkey"] = "the value"
-
 print aa["newkey"]
 ```
 
@@ -595,11 +574,8 @@ name.
 
 ```
 aa = {}
-
 aa.name = 1
-
 aa["name"] = 1 ' same as previous line
-
 aa["name with spaces"] = 2 ' cannot do this with dot operator
 ```
 

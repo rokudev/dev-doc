@@ -142,12 +142,11 @@ When there is a match (the name uttered by the user matches the registered text 
 ```
 appMgr = CreateObject("roAppManager")
 
-profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
-profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
-profile3 = { text: "John", link: "6Nu70-N37x-901"}
+profile1 = { text: "kids", link: "d46ge-i8Y5-192" }
+profile2 = { text: "Jane", link: "2a2Nu-u1D4-555" }
+profile3 = { text: "John", link: "6Nu70-N37x-901" }
 
 actions = [profile1, profile2, profile3]
-
 appMgr.SetVoiceActionStrings(actions)
 ```
 

@@ -21,7 +21,7 @@ You can use the BrightScript Profiler to pinpoint where performance improvements
 
 You can use each of these metrics to diagnose problems and get insights where you can improve the app's performance.
 
-> Developers can build a custom profiling tool by following the [BrightScript profiler file format specification](doc:brs-profiler-file-format). This specification describes the entries in the header, body, and footer of a BrightScript profiler file (**.bsprof**) file.  
+> Developers can build a custom profiling tool by following the [BrightScript profiler file format specification](doc:brs-profiler-file-format). This specification describes the entries in the header, body, and footer of a BrightScript profiler file (**.bsprof**) file.
 
 ## Usage
 

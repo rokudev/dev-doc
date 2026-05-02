@@ -89,7 +89,7 @@ Specifies the digest algorithm to be used for signing and verification.
 
 | Name       | Type   | Description                                                  |
 | :--------- | :----- | :----------------------------------------------------------- |
-| algorithim | String | An OpenSSL string with the algorithm to be used: "sha1""sha224""sha256" (default)"sha384""sha512". When using Ed25519 signing, the only supported digest algorithm is "sha512". |
+| algorithm | String | An OpenSSL string with the algorithm to be used: "sha1""sha224""sha256" (default)"sha384""sha512". When using Ed25519 signing, the only supported digest algorithm is "sha512". |
 
 #### Return Value
 
@@ -170,11 +170,9 @@ Indicates the result of the validation. This may be one of the following values:
 
 ```
 msg_ba = CreateObject("roByteArray")
-
 ' ...populate bytearray with the message...
 
 dsa = CreateObject("roDSA")
-
 ' ... save private key to tmp:/privateKey.txt
 
 dsa.SetDigestAlgorithm("sha256")
@@ -188,15 +186,12 @@ signature = dsa.Sign(msg_ba)
 
 ```
 msg_ba = CreateObject("roByteArray")
-
 ' ...populate bytearray with the message...
 
 sig_ba = CreateObject("roByteArray")
-
 ' ...populate bytearray with the signature...
 
 dsa = CreateObject("roDSA")
-
 ' ... save public key to tmp:/publicKey.txt
 
 dsa.SetDigestAlgorithm("sha256")
@@ -218,11 +213,9 @@ end if
 
 ```
 msg_ba = CreateObject("roByteArray")
-
 ' ...populate bytearray with the message...
 
 dsa = CreateObject("roDSA")
-
 ' ... save private key to tmp:/privateKey.txt
 
 dsa.SetDigestAlgorithm("sha512")
@@ -236,15 +229,12 @@ signature = dsa.Sign(msg_ba)
 
 ```
 msg_ba = CreateObject("roByteArray")
-
 ' ...populate bytearray with the message...
 
 sig_ba = CreateObject("roByteArray")
-
 ' ...populate bytearray with the signature...
 
 dsa = CreateObject("roDSA")
-
 ' ... save public key to tmp:/publicKey.txt
 
 dsa.SetDigestAlgorithm("sha512")

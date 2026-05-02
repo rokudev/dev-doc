@@ -555,11 +555,9 @@ Function add(a as Integer, b as Integer) As Integer
     Return a+b
 End function
 
-
 Function add2(a as Integer, b=5 as Integer) As Integer
     Return a+b
 End Function
-
 
 Function add3(a as Integer, b=a+5 as Integer) as Integer
     Return a+b

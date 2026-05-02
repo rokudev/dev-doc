@@ -40,7 +40,7 @@ A String containing the array elements.
 
 #### Examples
 
-~~~
+```
     a = ["ant","bat","cat"] 
     s = a.Join(",")
     print """" + s + """"
@@ -50,6 +50,6 @@ A String containing the array elements.
     s = a.Join("--")
     print """" + s + """"
     REM "a--b--c"
-~~~
+```
 
 

@@ -19,7 +19,7 @@ This object is created with no parameters.
 
 **Implementation**
 
-~~~~
+```
 brush: vb; gutter: false; theme: Confluence
 appInfo = CreateObject("roAppInfo")
 
@@ -29,11 +29,11 @@ print "  DevID: " ; appInfo.GetDevID()
 print "  Title: " ; appInfo.GetTitle()
 print "Version: " ; appInfo.GetVersion()
 print "MajVers: " ; appInfo.GetValue("major_version")
-~~~~
+```
 
 **Output**
 
-~~~~
+```
 brush: plain; gutter: false; theme: Confluence
 '      ID: 41089_bd3a
 '   IsDev: false
@@ -41,7 +41,7 @@ brush: plain; gutter: false; theme: Confluence
 '   Title: BrightScript Test
 ' Version: 1.0.0
 ' MajVers: 1 
-~~~~
+```
 
 
 ## Supported interfaces

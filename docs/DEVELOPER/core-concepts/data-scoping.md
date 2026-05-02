@@ -36,13 +36,13 @@ reference. For example, the following creates and defines several fields
 for a `dialog` object that can only be accessed within the function in
 which it is created and defined:
 
-~~~
+```
 dialog = createObject("RoSGNode","Dialog")  
 dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
 dialog.title = "Example Dialog" 
 dialog.optionsDialog = true  
 dialog.message = "Press * To Dismiss"
-~~~
+```
 
 ## Component scope
 
@@ -52,7 +52,7 @@ file. For example, if you wanted to create the same `dialog` object
 above in one function, but define it, or otherwise access it, in another
 function in the same component XML file:
 
-~~~
+```
 sub createdialog()  
 
     m.dialog = createObject("RoSGNode","Dialog")  
@@ -68,7 +68,7 @@ sub definedialog()
     m.dialog.optionsDialog = true   
 
     m.dialog.message = "Press * To Dismiss" end sub
-~~~
+```
 
 ## m.top component scope reference
 
@@ -81,7 +81,7 @@ file (which is the required usage of the Dialog node class), assign
 the `dialog` object to the `dialog` field using the `m.top` object
 reference:
 
-~~~
+```
 dialog = createObject("RoSGNode","Dialog")  
 
 dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
@@ -93,15 +93,15 @@ dialog.optionsDialog = true
 dialog.message = "Press * To Dismiss"
 
 m.top.dialog = dialog`
-~~~
+```
 
 Likewise, if you want to use `findNode()` to find a SceneGraph node
 object anywhere in the SceneGraph tree for a component XML file, use the
 `m.top` reference to start at the top of the tree:
 
-~~~
+```
 m.categorieslist = m.top.findNode("categorieslist")
-~~~
+```
 
 ## Global scope
 
@@ -122,7 +122,7 @@ m.categorieslist = m.top.findNode("categorieslist")
 
 For example:
 
-~~~
+```
 screen = CreateObject("roSGScreen") 
 
 m.port = CreateObject("roMessagePort")  
@@ -132,7 +132,7 @@ screen.setMessagePort(m.port)
 m.global = screen.getGlobalNode()  
 
 m.global.id = "GlobalNode"
-~~~
+```
 
 As noted, this is not necessary in component script, as `m.global` is predefined.
 
@@ -147,7 +147,7 @@ get its special global element:
 
 You will need to take the associative array, modify it and save it back into the field.
 
-~~~
+```
 m.global.addFields( \{red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff\} ) 
 ... 
 
@@ -167,4 +167,4 @@ else
   m.rect.color = m.global.red  
   
 end if
-~~~
+```

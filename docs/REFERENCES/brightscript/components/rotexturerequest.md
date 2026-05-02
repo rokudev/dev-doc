@@ -22,7 +22,7 @@ An roTextureRequest object is created using the CreateObject() method and passin
 
 **Example: Requesting a URL from the roTextureManager**
 
-~~~
+```
 Sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
@@ -46,12 +46,12 @@ Sub Main()
         end if
    end if
 End Sub
-~~~
+```
 
 
 **Example: Requesting a scaled image from the roTextureManager**
 
-~~~
+```
 Sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
@@ -62,12 +62,12 @@ Sub Main()
     request.SetScaleMode(1)
     mgr.RequestTexture(request)
 End Sub
-~~~
+```
 
 
 **Example: Making an HTTPS request from the roTextureManager**
 
-~~~
+```
 Sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
@@ -79,7 +79,7 @@ Sub Main()
  
     mgr.RequestTexture(request)
 End Sub
-~~~
+```
 
 
 ## Supported interfaces

@@ -56,7 +56,7 @@ For reference here are all the fields from an image taken from my camera (with t
 
 The format is IFD#, Tag#[Tag Name], Data Format, Value. The Value is a string representation of data. 
 
-~~~~
+```
 0, 272[ Model], ASCII,Canon PowerShot SD700 IS
 0, 274[ Orientation], Short,top - left
 0, 283[ YResolution], Rational,180.00
@@ -110,11 +110,11 @@ The format is IFD#, Tag#[Tag Name], Data Format, Value. The Value is a string re
 4, 2[ InteroperabilityVersion], Undefined,0100
 4, 4097[ RelatedImageWidth], Short,2816
 4, 4098[ RelatedImageLength], Short,2112
-~~~~
+```
 
 **Example**
 
-~~~~
+```
 REM printAA() is from generalUtils.brs in our sample apps
 REM and used to print an associative Array
 Sub SaveExifImage(filename As String)
@@ -151,7 +151,7 @@ Sub SaveExifImage(filename As String)
         thumbnail.bytes.Writefile(tmp_img)
     end if
 End Sub
-~~~~
+```
 
 
 ## Supported interfaces

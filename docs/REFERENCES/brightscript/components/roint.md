@@ -32,7 +32,7 @@ This is useful in the following situations:
 
 **Example**
 
-~~~
+```
 BrightScript> o=CreateObject("roInt")
 BrightScript> o.SetInt(555)
 BrightScript> print o
@@ -41,7 +41,7 @@ BrightScript> print o.GetInt()
 555
 BrightScript> print o-55
 500
-~~~
+```
 
 
 ## Supported interfaces

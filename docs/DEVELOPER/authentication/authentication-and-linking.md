@@ -83,24 +83,24 @@ has expired (`retryDuration`).
 
 **Pre-registration request:**
 
-~~~~
+```
 <preRegistration>
   <deviceID>(unique id/serial number for the device)</deviceID>
   <deviceTypeID>(optional opaque string identifying device type)</deviceTypeID>
   <firmwareVersion>(optional major.minor.build)</firmwareVersion>
 </preRegistration>
-~~~~
+```
 
 **Response:**
 
-~~~~
+```
 <result>
   <status>success/failure</status>
   <regCode>(small ~5 character code customer will enter onto web site)</regCode>
   <retryInterval>(polling interval in secs to detect completion (e.g. 30)</retryInterval>
   <retryDuration>(max duration in secs for retries (e.g. 900) )</retryDuration>
 </result>
-~~~~
+```
 
 ### Step 2: Device linking
 
@@ -114,13 +114,13 @@ request/response is shown below in XML format:
 
 **Link request:**
 
-~~~~
+```
 <linkAccount>
   <regCode>(current registration code from PreRegistration request)</regCode>
   <deviceID>(unique id/serial number for the device)</deviceID>
   <deviceTypeID>(opaque string identifying device type)</deviceTypeID>
 </linkAccount>
-~~~~
+```
 
 > Note: The device ID **should not** be used as the authentication token as is.
 You can however hash the device ID to create an auth token as long as it
@@ -131,11 +131,11 @@ generates a unique value each time.
 
 ![roku815px - authenticationandlinking2](https://image.roku.com/ZHZscHItMTc2/authenticationandlinking2.jpg "authenticationandlinking2")
 
-~~~~
+```
 <result>
   <status>incomplete</status>
 </result>
-~~~~
+```
 
 The device linking request may fail for several reasons, such as:
 
@@ -164,11 +164,11 @@ discarded.
 
 **Final response:**
 
-~~~~
+```
 <result>
   <status>success/failure</status>
   <deviceToken>(opaque string to identify account for future requests)</deviceToken>
   <customerId>(optional customer ID if required by partner)</customerId>
   <creationTime>(optional ISO8601 date/time value)</creationTime>
 </result>
-~~~~
+```

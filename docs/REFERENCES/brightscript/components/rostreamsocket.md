@@ -22,7 +22,7 @@ This object is created without any arguments:
 
 **Example: Open TCP Connection to Server**
 
-~~~
+```
 sendAddress = CreateObject("roSocketAddress")
 sendAddress.SetAddress("www.google.com:80")
 socket = CreateObject("roStreamSocket")
@@ -30,11 +30,11 @@ socket.setSendToAddress(sendAddress)
 If socket.Connect()
     Print "Connected Successfully"
 End If
-~~~
+```
 
 **Example: Echo Server**
 
-~~~
+```
 function main()
     messagePort = CreateObject("roMessagePort")
     connections = {}
@@ -98,7 +98,7 @@ function main()
         connections[id].close()
     end for
 End Function
-~~~
+```
 
 
 ## Supported interfaces

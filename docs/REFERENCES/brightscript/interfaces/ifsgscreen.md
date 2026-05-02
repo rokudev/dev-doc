@@ -55,7 +55,7 @@ A global reference object.
 
 #### Example: Starting Scene Graph Applications
 
-~~~~
+```
 sub showChannelSGScreen()
   print "in showChannelSGScreen"
   screen = CreateObject("roSGScreen")
@@ -81,7 +81,7 @@ sub showChannelSGScreen()
   end while
 
 end sub
-~~~~
+```
 
 ### Show() as Boolean
 

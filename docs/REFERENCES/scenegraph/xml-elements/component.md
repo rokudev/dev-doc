@@ -25,7 +25,7 @@ The following attributes define a \<component\> XML element:
 The following \<component\> element defines a component named `GridPanelExample`, that contains \<interface\>, \<script\>, and \<children\> elements.
 
 **\<component\> element example**
-~~~~
+```
 <component name = "GridPanelExample" extends = "GridPanel" initialFocus = "examplePosterGrid" >
  
   <interface >
@@ -74,4 +74,4 @@ The following \<component\> element defines a component named `GridPanelExample`
   </children>
  
 </component>
-~~~~
+```

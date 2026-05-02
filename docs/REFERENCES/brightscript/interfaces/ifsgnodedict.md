@@ -104,11 +104,11 @@ A flag indicating whether the nodes refer to the same SceneGraph node object.
 
 The following example should print "same":
 
-~~~
+```
 n = createObject("roSGNode", "Node")
 c = n.createChild("Node")
 if c.isSameNode(n.getChild(0)) then print "same"
-~~~
+```
 
 ### clone(isDeepCopy as Boolean) as Object
 

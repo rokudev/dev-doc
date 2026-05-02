@@ -22,7 +22,7 @@ This object is created with no parameters:
 
 **Example**
 
-~~~
+```
 Sub Main()
     audioPlayer = CreateObject("roAudioPlayer")
     port = CreateObject("roMessagePort")
@@ -42,7 +42,7 @@ Sub Main()
             endif
         end while
 End Sub
-~~~
+```
 
 
 ## Supported interfaces

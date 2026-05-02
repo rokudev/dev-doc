@@ -247,7 +247,7 @@ We start with the following code example:
 
 The scene has the following parenting structure:
 
-~~~~
+```
 Scene
 RectangleGroup
 Rectangle (Green)
@@ -259,7 +259,7 @@ Rectangle (Yellow)
         </Rectangle>
    </Group>
 </Scene>
-~~~~
+```
 
 
 Initially, the illustration shows the local coordinates systems of each of these nodes.

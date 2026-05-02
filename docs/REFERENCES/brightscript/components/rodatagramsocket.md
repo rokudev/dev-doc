@@ -20,7 +20,7 @@ This object is created without any arguments:
 
 **Example**
 
-~~~
+```
 ' UDP 2-way peer-to-peer asynchronous comm on port 54321
 ' periodically sends out a message to a specific address and port
 ' prints any message it receives
@@ -56,7 +56,7 @@ Function UDPPeer()
     udp.close() ' would happen automatically as udp goes out of scope
 
 End Function
-~~~
+```
 
 > GetDeviceUniqueId() was deprecated in Spring OS 2019.
 

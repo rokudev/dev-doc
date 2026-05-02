@@ -42,7 +42,7 @@ list.
 
 **Static ContentNode configuration**
 
-~~~
+```
 <LabelList
   id = "moviemenu"
   translation = "[160,92]"
@@ -58,7 +58,7 @@ list.
   </ContentNode>
 
 </LabelList>
-~~~
+```
 
 ## Configuring a ContentNode with dynamic content
 
@@ -123,13 +123,13 @@ downloaded:
 
 **Example Task node configuration and launch**
 
-~~~
+```
 m.getHomeOptionsList = createObject("roSGNode", "getLabelListContent")
 m.getHomeOptionsList.setField("uri", "http://www.sdktestinglab.com/homeoptionslistcontent.xml")
 m.getHomeOptionsList.observeField("content", "showhomeoptionslist")
 m.getHomeOptionsList.functionName = "showhomeoptionslist"
 m.getHomeOptionsList.control = "RUN"
-~~~
+```
 
 
 And here's the actual Task node itself that does the work of

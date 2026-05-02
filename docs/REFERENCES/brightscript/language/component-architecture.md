@@ -103,7 +103,7 @@ type results in two copies of the same value, which can be modified
 independently of each other.
 
 
-~~~~
+```
 a = 42  ' a contains an intrinsic Integer
 b = a   ' b contains a copy of a
 a = 43  ' does not modify b
@@ -113,7 +113,7 @@ a = [ 1,2,3 ]   ' a contains a reference to an array
 b = a           ' b contains another reference to the same array
 a[0] = 5        ' now both a[0] and b[0] equal 5
 b[1] = 6        ' now both a[1] and b[1] equal 6
-~~~~
+```
 
 
 The same thing holds true when variables are passed as function
@@ -126,7 +126,7 @@ intrinsic variables are "passed by value", while object variables are
 
 **Example**
 
-~~~~
+```
 function Modify(a as Integer, b as Object) as Void
     a = 43
     b.first = 6
@@ -138,7 +138,7 @@ end function
     y = { first: 1, second: 2 }
     Modify(x, y)
     ' now x is still 42 but y.first is 6
-~~~~
+```
 
 
 Each object maintains a "reference count", which is the number of
@@ -150,14 +150,14 @@ is destroyed.
 
 **Example**
 
-~~~~
+```
 a = CreateObject("roArray")   ' array has a ref count of 1
 b = a                         ' array has a ref count of 2
 a = invalid                   ' array has a ref count of 1 (a no longer refers to it)
 c = b                         ' array has a ref count of 2
 b = 100                       ' array has a ref count of 1 (b no longer refers to it)
 c = invalid                   ' array has a ref count of 0 and is destroyed
-~~~~
+```
 
 
 Note that after the last statement, since no variables refer to the
@@ -177,7 +177,7 @@ object is sometimes referred to as "autoboxing".
 
 **Example**
 
-~~~~
+```
 Function Main()
     MyFunA(4)
     MyFunB(4)
@@ -190,20 +190,20 @@ End Function
 Function MyFunB(p as Integer) as Void
     print "B",p,type(p)
 End Function
-~~~~
+```
 
 **Will Print:**
 
-~~~~
+```
   A 4 roInt  
   B 4
 Integer
-~~~~
+```
 
 
 **Example**
 
-~~~~
+```
 Print 5.tostr()+"th"   ' prints 5th
 Print "5".toint()+5    ' prints 10
 If type(5.tostr())<> "String" Then Stop
@@ -227,7 +227,7 @@ If "01234567".mid(3,1)<>"3" Then Stop
 If "01234567".instr("56")<>5 Then Stop
 If "01234567".instr(6,"56")<>-1 Then Stop
 If "01234567".instr(0,"0")<>0 Then Stop
-~~~~
+```
 
 Note that ```-5.tostr()``` will cause an error since the dot operator binds tighter than unary
 negation.  
@@ -268,7 +268,7 @@ will return a value only if the list contains exactly one element.
 
 For example, if the file "example.xml" contains the following:
 
-~~~~
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <rsp stat="ok">
   <photos page="1" pages="5" perpage="100" total="500">
@@ -277,14 +277,14 @@ For example, if the file "example.xml" contains the following:
     <photo id="3131040291" owner="27651538@N06" secret="ae25ff3942" server="3286" farm="4" title="172 • 365 :: Someone once told me..." ispublic="1" isfriend="0"
   </photos>
 </rsp>
-~~~~
+```
 
 Then
 
-~~~~
+```
  rsp=CreateObject("roXMLElement")
  rsp.Parse(ReadAsciiFile("tmp:/example.xml"))
-~~~~
+```
 
 ? rsp.photos.photo will return an roXMLList with three entries.
 
@@ -297,34 +297,34 @@ rsp.photos@perpage will return the string 100.
 Use the GetText() method to return an element's text.  
 For example, if the variable booklist contains this roXMLElement:
 
-~~~~
+```
  <booklist>
  <book lang=eng>The Dawn of Man</book>
  </booklist>
-~~~~
+```
 
 then
 
-~~~~
+```
  print booklist.book.gettext()
-~~~~
+```
 
 Will print "The Dawn of Man", and
 
-~~~~
+```
  print booklist.book@lang
-~~~~
+```
 
 will print
 
-~~~~
+```
 "eng"
-~~~~
+```
 
 
 **Example: flikr**
 
-~~~~
+```
 REM
 REM Interestingness
 REM pass an (optional) page of value 1 - 5 to get 100 photos
@@ -383,7 +383,7 @@ Function pGetURL() as String
     url="http://farm"a.farm".static.flickr.com/"a.server"/"a.id"_"a.secret".jpg"
     Return url
 End Function
-~~~~
+```
 
 #### Parsing colons in namespace element and attribute tags
 
@@ -419,12 +419,12 @@ collection).
 
 **Example**
 
-~~~~
+```
 i=roCreateObject("roInt")
 j=i ' reference incremented
 i=invalid ' reference decremented
 j=0 ' roInt just free'd.
-~~~~
+```
 
 
 ## Events
@@ -438,7 +438,7 @@ type roFilesystemEvent.
 
 **Example**
 
-~~~~
+```
 fs = CreateObject("roFilesystem")
 port = CreateObject("roMessagePort")
 fs.SetMessagePort(port)
@@ -448,7 +448,7 @@ while true
         if msg.isStorageDeviceAdded() then print "device added"
     end if
 End While
-~~~~
+```
 
 
 ## Threading model
@@ -527,7 +527,7 @@ AssociativeArray object.
 
 **Example**
 
-~~~~
+```
 function Main()
      obj = ConstructMyObject()
      obj.Set("hi!")
@@ -545,7 +545,7 @@ function ConstructMyObject()
      }
      return obj
 end function
-~~~~
+```
 
 
 Output:
@@ -578,11 +578,11 @@ Library "v30/bslCore.brs"
 
 The common library file sources can be viewed from the debug console:
 
-~~~~
+```
 BrightScript> bslCore =
 ReadAsciiFile("common:/LibCore/v30/bslCore.brs")  
 BrightScript> print bslCore
-~~~~
+```
 
 ### v30/bslCore.brs
 
@@ -711,7 +711,7 @@ sprites sheets (multiple images in a single png file).
 
 If spriteMap.xml contains the following:
 
-~~~~
+```
 <DefenderBitmapSet>
 <ExtraInfo cellsize="40"/>
 <Bitmap name="Background" filespec="pkg:/images/background.png" />
@@ -726,11 +726,11 @@ If spriteMap.xml contains the following:
 <frame use="water_strip.b" />
 </Animation>
 </DefenderBitmapSet>
-~~~~
+```
 
 Then
 
-~~~~
+```
  BrightScript> xml = ReadAsciiFile("pkg:/images/map.xml")
  BrightScript> bitmapset = dfNewBitmapSet(xml)
  BrightScript> cellwidth=app.bitmapset.extrainfo.cellsize.toint()
@@ -746,4 +746,4 @@ Then
  <Component: roRegion>
  BrightScript> dfDrawMessage(screen, bitmapset.regions["game-over"])
  BrightScript> REM screen now shows gameover.png image centered on screen
-~~~~
+```

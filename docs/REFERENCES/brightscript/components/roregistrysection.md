@@ -22,7 +22,7 @@ This object must be supplied with a "section" name on creation. If no such secti
 
 **Example: Get and set some user authentication in the registry**
 
-~~~
+```
 Function GetAuthData() As Dynamic
      sec = CreateObject("roRegistrySection", "Authentication")
      if sec.Exists("UserRegistrationToken")
@@ -36,7 +36,7 @@ Function SetAuthData(userToken As String) As Void
     sec.Write("UserRegistrationToken", userToken)
     sec.Flush()
 End Function
-~~~
+```
 
 
 ## Supported interfaces

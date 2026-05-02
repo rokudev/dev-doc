@@ -18,7 +18,7 @@ The list object implements the interfaces: ifList, ifArray, ifEnum and therefore
 
 Implementation:
 
-~~~
+```
 list = CreateObject("roList")
 list.AddTail("a")
 list.AddTail("b")
@@ -33,17 +33,17 @@ end while
  
  
 print list[2]
-~~~
+```
 
 Output:
 
-~~~
+```
 a
 b
 c
 d
 c 
-~~~
+```
 
 
 ## Supported Interfaces

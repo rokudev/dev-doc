@@ -14,21 +14,21 @@ BrightScript files can be imported using relative URIs. If the uri does not spec
 
 For example, given an XML file called MainScene.xml located at:
 
-~~~~
+```
 pkg:/components/framework/MainScene.xml
-~~~~
+```
 
 A `.brs` file can have the following uri:
 
-~~~~
+```
 <script type="text/brightscript" uri="Task.brs" />
-~~~~
+```
 
 and resolve to:
 
-~~~~
+```
 pkg:/components/framework/Task.brs
-~~~~
+```
 
 ## Attributes
 
@@ -45,18 +45,18 @@ Here's an example of a BrightScript function that creates a component named Stop
 
 **BrightScript component creation**
 
-~~~~
+```
 function createStopwatch(parent as object) as object
   stopWatch = m.top.createChild("StopWatch")
   stopWatch.translation = [100, 200]
   return stopWatch
 end function
-~~~~
+```
 
 The \<script\> element contains zero or more BrightScript functions. Because BrightScript can contain special characters reserved for XML, the body of the \<script\> element must be enclosed in an XML `CDATA` section. For example:
 
 **Embedding BrightScript code in XML**
-~~~~
+```
 <script type = "text/brightscript" >
  
   <![CDATA[
@@ -70,14 +70,14 @@ The \<script\> element contains zero or more BrightScript functions. Because Bri
   ]]>
  
 </script>
-~~~~
+```
 
 The `CDATA` section can contain any valid BrightScript code, including any BrightScript library.
 
 BrightScript code can also be included from an external file using the uri attribute of the \<script\> element:
 
-~~~~
+```
 <script type = "text/brightscript" uri = "pkg:/components/VideoTheater.brs" />
-~~~~
+```
 
 XML component files may include more than one \<script\> element. This allows for the dividing the BrightScript code into logical groupings, as well as including BrightScript source from more than one external file.

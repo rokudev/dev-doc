@@ -128,13 +128,13 @@ An array of associative array keys/value pairs.
 
 #### Example
 
-~~~
+```
     aa = {one:1, two:2, three:3}
     for each item in aa.Items()
         print item.key, item.value
     end for
     REM prints "one  1", "three  3", "two  2"
-~~~
+```
 
 ### SetModeCaseSensitive() as Void
 

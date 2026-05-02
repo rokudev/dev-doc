@@ -58,13 +58,13 @@ Below is the list of all the possible system font values:
 
 The font can also be specified in BrightScript, for example:
 
-~~~
+```
 label = CreateObject("roSGNode", "Label")
 font  = CreateObject("roSGNode", "Font")
 font.uri = "pkg:/fonts/font.ttf"
 font.size = 24
 label.font = font
-~~~
+```
 
 ## Fields
 

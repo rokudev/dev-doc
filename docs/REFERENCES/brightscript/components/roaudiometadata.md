@@ -24,7 +24,7 @@ This object is created without any arguments:
 
 **Example**
 
-~~~
+```
 REM printAA() is from generalUtils.brs in our sample apps
 REM and used to print an associative Array
  
@@ -59,7 +59,7 @@ Sub SaveCoverArtFile(filename As String)
         thumbnail.bytes.Writefile(tmp_img)
     end if
 End Sub
-~~~
+```
 
 ## Supported interfaces
 

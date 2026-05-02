@@ -104,7 +104,7 @@ An roByteArray object containing PNG image data for the specified area of the bi
 
 #### Example
 
-~~~
+```
 Function SaveTestPng()
     w = 200 : h = 100
     bm = CreateObject("roBitmap", &#123;width: w, height: h, AlphaEnable: true&#125;)
@@ -113,7 +113,7 @@ Function SaveTestPng()
     ba = bm.GetPng(0, 0, w, h)
     ba.WriteFile("tmp:/test.png")
  End Function
-~~~
+```
 
 ### GetAlphaEnable() as Boolean
 
@@ -143,7 +143,7 @@ By default, alpha blending is off. Even when alpha blending is off, the alpha va
 
 #### Example
 
-~~~
+```
 Function Main()
     s=CreateObject("roScreen")
     ' Clear to White with alpha fully opaque
@@ -169,7 +169,7 @@ Function Main()
     s.Finish()
     Sleep(2000)
  End Function
-~~~
+```
 
 ### DrawRect(x as Integer, y as Integer, width as Integer, height as Integer, rgba as Integer) as Void
 

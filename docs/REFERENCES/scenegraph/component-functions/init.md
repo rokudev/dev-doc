@@ -30,7 +30,7 @@ If the XML file contains a Poster node element with id="MyPoster", the XML file 
 
 **Using the init() function in XML**
 
-~~~~
+```
 <?xml version="1.0" encoding="utf-8" ?>
 
 <component>
@@ -57,4 +57,4 @@ end function
 </children>
 
 </component>
-~~~~
+```

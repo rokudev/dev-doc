@@ -80,7 +80,7 @@ An [roAssociativeArray](doc:roassociativearray) that contains the following keys
 
 #### Example (Brightscript Debugger Interactive Shell)
 
-~~~
+```
 > mypath = CreateObject("roPath", "pkg:/source/appMain.brs")
 > ? myPath.Split()
 parent: pkg:/source/
@@ -88,4 +88,4 @@ extension: .brs
 phy: pkg:
 basename: appMain
 filename: appMain.brs
-~~~
+```

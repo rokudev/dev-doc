@@ -22,10 +22,10 @@ It is created with no parameters:
 
 **Example**
 
-~~~
+```
 loc = CreateObject("roLocalization")
 image = loc.GetLocalizedAsset("images", "splash.png")
-~~~
+```
 
 
 ## Supported interfaces

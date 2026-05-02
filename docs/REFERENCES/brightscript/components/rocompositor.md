@@ -18,7 +18,7 @@ This object can create and manage roSprites in a z-ordered list. The sprites can
 
 **Example: Scrolling a bitmap**
 
-~~~
+```
 Library "v30/bslCore.brs"
 Function main()
         black=&hFF'RGBA
@@ -65,7 +65,7 @@ Function Zip(screen, view_sprite, compositor, xd, yd)
                 screen.SwapBuffers()
         End For
 End Function
-~~~
+```
 
 
 ## Supported interfaces

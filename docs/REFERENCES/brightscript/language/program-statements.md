@@ -21,19 +21,19 @@ passed to Dim is the index of the maximum entry to be allocated (the
 array initial size = dimension+1); the array will be resized larger
 automatically if needed.
 
-~~~
+```
 Dim array[5]
-~~~
+```
 
 Is the same as:
 
-~~~
+```
 array=CreateObject("roArray",6,true)
-~~~
+```
 
 Note that x\[a,b\] is the same as x\[a\]\[b\].
 
-~~~
+```
  Dim c[5, 4, 6]
  For x = 1 To 5
     For y = 1 To 4
@@ -55,7 +55,7 @@ Note that x\[a,b\] is the same as x\[a\]\[b\].
         End for
     End for
  End for
-~~~
+```
 
 
 ## variable = expression
@@ -65,11 +65,11 @@ value.
 
 **Example**
 
-~~~
+```
 a$="a rose is a rose"
 b1=1.23
 x=x-z1
-~~~
+```
 
 In each case, the variable on the left side of the equals sign is
 assigned the value of the constant or expression on the right side.
@@ -92,11 +92,11 @@ on a line by itself.
 
 For example:
 
-~~~
+```
 mylabel:
 print "Anthony was here!"
 Goto mylabel
-~~~
+```
 
 ## RETURN \[expression\]
 
@@ -135,11 +135,11 @@ assumed.
 
 For example:
 
-~~~
+```
 For i=10 To 1 Step -1
     print i
 End For
-~~~
+```
 
 "EXIT FOR" is used to exit a FOR block
 prematurely.
@@ -161,14 +161,14 @@ roMessagePort.
 
 For example:
 
-~~~
+```
 aa = { joe: 10, fred: 11, sue:9 }
 
 For Each n In aa
     Print n;aa[n]
     aa.delete(n)
 End For
-~~~
+```
 
 ## WHILE expression / EXIT WHILE / END WHILE
 
@@ -178,7 +178,7 @@ prematurely.
 
 For example:
 
-~~~
+```
 k = 0
 while k = 0
     k = 1
@@ -189,7 +189,7 @@ while true
     print "loop once"
     if k <> 0 then exit while
 end while
-~~~
+```
 
 ## CONTINUE FOR / CONTINUE WHILE
 
@@ -199,7 +199,7 @@ The "continue" statement terminates the execution of the statements in the curre
 
 For example:
 
-~~~
+```
 fruits = ["orange", "lemon", "lime"]
 for each fruit in fruits
     if fruit = "lemon" then continue for
@@ -215,7 +215,7 @@ while counter < 3
     ? counter
     counter++
 end while
-~~~
+```
 
 ## TRY / CATCH variable / END TRY
 
@@ -351,10 +351,10 @@ REM.
 
 For example:
 
-~~~
+```
 Rem ** this remark introduces the program **
 ' this too is a remark
-~~~
+```
 
 ## IF expression THEN statements \[ELSE statements\]
 
@@ -368,10 +368,10 @@ program line.
 
 For example:
 
-~~~
+```
 if x > 127 then print "out of range"
 If caveman = "fred" then print "flintstone" else print "rubble"
-~~~
+```
 
 THEN is optional in the above and similar statements.
 
@@ -380,7 +380,7 @@ THEN is optional in the above and similar statements.
 The multi-line or block form of IF THEN ELSE is more flexible. It has
 the form:
 
-~~~
+```
  if BooleanExpression then
    statements
  elseif BooleanExpression then
@@ -388,7 +388,7 @@ the form:
  else
    statements
  end if
-~~~
+```
 
 There may be any number of elseif statements, or there may be none. The
 else statement may also be omitted. "elseif" can also be written as two
@@ -396,7 +396,7 @@ words: "else if".
 
 For example:
 
-~~~
+```
 msg = wait(0, p)
 if type(msg) = "roVideoPlayerEvent" then
     if debug then print "video event"
@@ -411,7 +411,7 @@ elseif msg = invalid then
     if debug print "timeout"
     return 6
 end if
-~~~
+```
 
 ## PRINT item list
 
@@ -431,7 +431,7 @@ strings.
 
 For example:
 
-~~~
+```
 x=5:print 25; " is equal to"; x^2
  25 is equal to 25
 
@@ -440,7 +440,7 @@ stringstring    string string
 
 print "zone 1","zone 2","zone 3","zone 4"
 zone 1          zone 2          zone 3          zone 4
-~~~
+```
 
 > `?` is a short cut for the `print` statement. For example:
 >
@@ -451,17 +451,17 @@ zone 1          zone 2          zone 3          zone 4
 Each print zone is 16 char wide. The cursor moves to the next print zone
 each time a comma is encountered.
 
-~~~
+```
 print "print statement #1 "; "print statement #2"
 
 Output: print statement #1 print statement #2
-~~~
+```
 
 Semi-colons can be dropped in some cases. For example, this is legal:
 
-~~~
+```
 Print "this is a five " 5 "!!"
-~~~
+```
 
 A trailing semi-colon over-rides the cursor-return so that the next
 PRINT begins where the last one left off. If no trailing punctuation is
@@ -473,7 +473,7 @@ objects:
 
 **Printing Enumerable Objects**
 
-~~~
+```
 Print {}
 ' this will print: <Component: roAssociativeArray> =  { }
 
@@ -485,7 +485,7 @@ Print []
 
 Print [5]
 ' this will print: <Component: roArray> = [ 5 ]
-~~~
+```
 
 
 **TAB (expression)**  
@@ -493,9 +493,9 @@ Moves the cursor to the specified position on the current line (modulo
 the width of your console if you specify TAB positions greater than the
 console width). TAB may be used several times in a PRINT list.  
 
-~~~
+```
 print tab(5)"tabbed 5";tab(25)"tabbed 25"
-~~~
+```
 
 No punctuation is required after a TAB modifier. Numerical expressions
 may be used to specify a TAB position. TAB cannot be used to move the
@@ -507,10 +507,10 @@ Returns a number from 0 to window width, indicating the current cursor
 position on the cursor. Requires a "dummy argument" (any numeric
 expression).
 
-~~~
+```
 print tab(40) pos(0) 'prints 40 at position 40
 print "these" tab(pos(0)+5)"words" tab(pos(0)+5)"are"; tab(pos(0)+5)"evenly" tab(pos(0)+5)"spaced"
-~~~
+```
 
 ## FUNCTION(\[parameter \[= default\] AS type, …\]) AS type / END FUNCTION
 
@@ -542,7 +542,7 @@ parameters.
 
 For example:
 
-~~~
+```
 Function cat(a, b)
     Return a+b 'a, b could be numbers or strings
 End Function
@@ -564,7 +564,7 @@ End Function
 Function add3(a as Integer, b=a+5 as Integer) as Integer
     Return a+b
 End Function
-~~~
+```
 
 Functions have their own scope.
 
@@ -577,7 +577,7 @@ in.
 
 For example:
 
-~~~
+```
 Sub main()
     obj={
         add: add
@@ -593,7 +593,7 @@ End Sub
 Function add() as void
     m.result = m.a + m.b
 End Function
-~~~
+```
 
 If a function is not called from an AssociativeArray, then its "m" is
 set to an AssociativeArray that is global to the module, and persists
@@ -605,17 +605,17 @@ A function is anonymous if it does not have a name. Note that Anonymous
 Functions do not currently create closures. An Anonymous Function can be
 declared like this:
 
-~~~
+```
 myfunc = Function (a, b)
     Return a+b
 End Function
 
 print myfunc(1,2)
-~~~
+```
 
 They can be used with associative array literals like this:
 
-~~~
+```
 q = {
     starring : Function(o, e)
         str = e.GetBody()
@@ -633,4 +633,4 @@ q = {
 }
 
 q.starring(myobj, myxml)
-~~~
+```

@@ -25,11 +25,11 @@ and has the form:
 
 **Examples of valid expressions**
 
-~~~~
+```
 #const someFlag = true
 #const anotherFlag = false
 #const someOtherFlag = someFlag
-~~~~
+```
 
 -----
 
@@ -66,7 +66,7 @@ There are a variety of ways Conditional compilation can be used:
 
 **Example demonstrating use of manifest constants**
 
-~~~
+```
 #if someFlag
 
     'code to execute when someFlag is true
@@ -76,12 +76,12 @@ There are a variety of ways Conditional compilation can be used:
     'code to execute when anotherFlag is true
 
 #end if
-~~~
+```
 
 
 **Example demonstrating locally scoped constants**
 
-~~~~
+```
 #const FeatureA = true
 #const FeatureB = false
 
@@ -98,7 +98,7 @@ There are a variety of ways Conditional compilation can be used:
     'production code
 
 #end if
-~~~~
+```
 
 
 An `#error` constant can also be used to force a compilation error with an error message:
@@ -106,7 +106,7 @@ An `#error` constant can also be used to force a compilation error with an error
 
 **Example demonstrating usage of \#error constant**
 
-~~~~
+```
 #const FeatureAImplemented = true
 
 #if FeatureAImplemented
@@ -114,7 +114,7 @@ An `#error` constant can also be used to force a compilation error with an error
 #else
     #error TO DO: implement feature A
 #end if
-~~~~
+```
 
 
 ### Block comments
@@ -124,7 +124,7 @@ Conditional compilation can also be used to form block comments. Previously, eac
 
 **Example of code block comments**
 
-~~~~
+```
 #if false
 
     This is a function that does nothing.
@@ -140,12 +140,12 @@ Function foo() as void
     'do nothing
 
 End Function
-~~~~
+```
 
 
 **Example of commenting out code**
 
-~~~~
+```
 #if false
 
 Function Order66() as void
@@ -155,7 +155,7 @@ Function Order66() as void
 End Function
 
 #end if
-~~~~
+```
 
 
 Calling this function would result in a compile time error. To re-enable this function, change `#if false` to `#if true`.

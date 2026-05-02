@@ -113,10 +113,10 @@ If you set the list field to a MarkupList node, because the MarkupList is by nat
 
 > If you are creating the list field(either a LabelList or MarkupList) associated with a ListPanel in script of a component that extends ListPanel, you also need to add the list as a child of the ListPanel. For example, in a component that extends ListPanel, where m.top is that component, you would associate the list field with a LabelList as follows:
 
-~~~~
+```
 list = m.top.createChild("LabelList")
 m.top.list = list
-~~~~
+```
 
 ## Data bindings
 

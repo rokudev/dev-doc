@@ -22,7 +22,7 @@ The supported digest algorithms are the same as those supported by [roEVPDigest]
 
 **Example**
 
-~~~
+```
 hmac = CreateObject("roHMAC")
 signature_key = CreateObject("roByteArray")
 signature_key.fromAsciiString(getKey())
@@ -47,7 +47,7 @@ If hmac.setup("sha1", signature_key) = 0
     result = hmac.final()
     print result.toBase64String()
 End If
-~~~
+```
 
 
 ## Supported interfaces

@@ -19,7 +19,7 @@ roByteArray supports the [ifArray](doc:ifarray) interface, and so can be accesse
 
 **Example**
 
-~~~
+```
 ba=CreateObject("roByteArray")
 ba.FromAsciiString("leasure.")
 if ba.ToBase64String()<>"bGVhc3VyZS4=" then stop
@@ -46,7 +46,7 @@ if ba2.count()<>100 then stop
 for x=10 to 100
     if ba2[x-10]<>x then stop
 end for
-~~~
+```
 
 
 ## Supported interfaces

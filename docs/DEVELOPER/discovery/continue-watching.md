@@ -58,13 +58,13 @@ To get started with the Continue Watching integration, follow these steps:
 
    The response from the terminal application should be as follows:
 
-```
+   ```xml
    <?xml version="1.0" encoding="UTF-8" ?>
    <TokenCmdResponse>
       <Command>Install</Command>
       <Response>Success</Response>
    </TokenCmdResponse>
-```
+   ```
 
 4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](doc:channel-manifest) (channel_token=\<token>). The **channel authentication token** will also be used in your production application.
 
@@ -248,7 +248,7 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
 
 **JSON body**:
 
-```
+```json
 {
   "items": [
     {

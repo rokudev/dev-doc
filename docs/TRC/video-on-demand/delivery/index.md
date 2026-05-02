@@ -816,7 +816,7 @@ Tags for merchandising/curation can be delivered via the Keyword node supported 
 
 <u>Example:</u>
 
-```
+```xml
 <md:LocalizedInfo language="en">
 	<md:TitleDisplayUnlimited>Great Title of My Show</md:TitleDisplayUnlimited>
 	<md:Summary190>Short summary of my show.</md:Summary190>
@@ -832,7 +832,7 @@ Gracenote TMS IDs can be delivered via the MovieLabs MEC XML as an Identifier wi
 
 <u>Example:</u>
 
-```
+```xml
 <md:AltIdentifier>
 	<md:Namespace>TMSID</md:Namespace>
 	<md:Identifier>EP012345678910</md:Identifier>
@@ -845,7 +845,7 @@ Ad break, intro credit, and end credit cue points can be supplied in the MovieLa
 
 <u>Example:</u>
 
-```
+```xml
       <manifest:Markers>
 
       <!--Opening credit cuepoint start and end-->
@@ -916,7 +916,7 @@ Roku is using Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html)
 
 **Example usage**
 
-```
+```bash
 ./validate ~/dev/movielabsSpec/schema/mdmec-v2.9.xsd /path/to/file/directory/MEC_SAMPLE_123456789.xml
 ```
 

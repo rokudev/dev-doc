@@ -46,7 +46,7 @@ Roku Pay push notifications use the JavaScript Object Signing and Encryption (JO
 
 The JOSE header and the set of JWT claims are each base64url-encoded. The two are then concatenated with a period (".") separator and a JWS (also a base64url-encoded string) is then calculated across the resulting string. The JWS is attached to the end of the header/payload string, again separated by a period. The following demonstrates the format of the un-encoded HTTP body:
 
-```
+```json
 ' JOSE header
 {
     "typ":"JWT",  // the signing algorithm to use (RSA 2048 with SHA 256)
@@ -106,7 +106,7 @@ To receive the contents of Roku Pay push notifications, publishers must do the f
 
 The **x-Roku-message** field within the JWT claim payload is a base64url-encoded string that contains the contents of the push notification message. The following example demonstrates the decoded **x-Roku-message** field for a [Sale notification message](doc:push-notifications):
 
-```
+```json
 {
     "customerId":"4e5812f5b00b4f5b90f768d22a7de170",
     "transactionType":"Sale",
@@ -137,7 +137,7 @@ To acknowledge the receipt of a Roku Pay push notification message, send a **200
 
 ### Header
 
-```
+```http
 HTTP/1.1 200 OK
 ```
 
@@ -147,7 +147,7 @@ Publishers must use Roku-provided public keys, which are located [here](https://
 
 **Public keys in JWK format**
 
-```
+```json
 {
   "keys": [
      {

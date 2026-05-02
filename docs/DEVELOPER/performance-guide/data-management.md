@@ -47,7 +47,7 @@ m.global
 
 Getting some or all of this data into a Task node can be done as follows:
 
-```
+```xml
 <component name="DataTask" extends="Task">
 <interface>
     <field id="settings" ... />

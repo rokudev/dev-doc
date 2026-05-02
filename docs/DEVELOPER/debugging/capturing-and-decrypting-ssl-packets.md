@@ -90,6 +90,6 @@ These settings can be set in the Web GUI of your router. If this is not possible
 1. The previous method can also be viewed using **tcpdump**.
 2. After going through steps 1 through 4 in the section above, you can open the cap file.
 
-    ```
+    ```bash
     $ tcpdump -r /path/to/packetfile.cap
     ```

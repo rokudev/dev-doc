@@ -58,7 +58,7 @@ Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-gr
 
 ### GraceInitiated
 
-```
+```json
 {
     "customerId": "9aa37bd6f970578294cea4783af08560",
     "transactionType": "GraceInitiated",
@@ -78,7 +78,8 @@ Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-gr
 
 ### GraceRecovered
 
-```
+```json
+{
     "customerId": "9d425957549250dcba71e03dacf426b5",
     "transactionType": "GraceRecovered",
     "transactionId": "f0864331c7b611eea3c40a58a9fead9c",

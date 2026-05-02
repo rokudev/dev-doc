@@ -236,7 +236,7 @@ To add new content items and update existing ones to the Continue Watching row, 
 
 **JSON body**:
 
-```
+```json
 {
   "items": [
     {
@@ -253,7 +253,7 @@ To add new content items and update existing ones to the Continue Watching row, 
 
 **Example (cURL):**
 
-```
+```bash
 curl --location --reque
 st POST 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
 --header 'Authorization: Bearer <encrypted payload with raw JSON data>' \
@@ -274,7 +274,7 @@ To retrieve the list of content items in the Continue Watching row, send a **GET
 
 **Example (cURL):**
 
-```
+```bash
 curl --location --request GET 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
 --header 'Authorization: Bearer <encrypted payload>'\
 --header 'Content-Type: application/json' \
@@ -288,7 +288,7 @@ To replace the list of content items in the Continue Watching row with a new lis
 
 **Example (cURL):**
 
-```
+```bash
 curl --location --request PUT 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
 --header 'Authorization: Bearer <encrypted payload with raw JSON data>' \
 --header 'Content-Type: application/json' \
@@ -310,7 +310,7 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
 
 **JSON body**:
 
-```
+```json
 {
   "items": [
     {
@@ -322,7 +322,7 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
 
 **Example (cURL):**
 
-```
+```bash
 curl --location --request DELETE 'https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching' \
 --header 'Authorization: Bearer <encrypted payload with raw JSON data>' \
 --header 'Content-Type: application/json' \
@@ -392,7 +392,7 @@ Inbound requests must use the Bearer Authentication scheme. The bearer token mus
 
 The JWT header must have the following parameters (all other parameters are ignored):
 
-```
+```json
 {
   "typ":"JWT",
   "alg":"RS256",
@@ -408,7 +408,7 @@ The JWT header must have the following parameters (all other parameters are igno
 
 **Generating the token:** The following Python3 code demonstrates how to create the JWT.
 
-```
+```python
 # key is private key. Specify payload as per the specification.
 token = jwt.encode(payload=payload, key=key, algorithm='RS256', headers=headers)
 jwt_token = token.decode('utf-8')
@@ -418,17 +418,17 @@ jwt_token = token.decode('utf-8')
 
 The JWT payload must have the following claims:
 
-```
+```json
 {
   "exp":1639524781,
   "nbf":1639524000,
   "x-roku-request-key":"some-unique-key-for-the-request",
   "x-roku-request-spec": {
-                            "serviceUrn":"urn:roku:group:service",
-                            "httpMethod":"POST",
-                            "path":"/user-data/v1/content/continueWatching",
-                            "bodySha256Base64":"AAAAB3NzaC1yc2EAAAADAQABAAABgQCsngzCcay+lQ+..."
-                          }
+      "serviceUrn":"urn:roku:group:service",
+      "httpMethod":"POST",
+      "path":"/user-data/v1/content/continueWatching",
+      "bodySha256Base64":"AAAAB3NzaC1yc2EAAAADAQABAAABgQCsngzCcay+lQ+..."
+    }
 }
 ```
 

@@ -222,17 +222,17 @@ The following table summarizes which apps need to implement handling for enhance
 
 You can test voice controls in an app by sending [External Control Protocol (ECP)](doc:external-control-api) commands via cURL to your Roku device. Specifically, send an HTTP POST request to port 8060 on your Roku device using the following syntax:
 
-```
+```bash
 curl -d '' 'http://<roku-device-ip-address>:8060/input/<channelId>?id=<longInteger>&type=transport&command=<commandValue>
 ```
 
 The following examples show how to send ECP commands via cURL HTTP POST requests. The examples are based on a sideloaded app handling forward and seek commands.
 
-```
+```bash
 curl -d '' ' http://192.168.1.114:8060/input/dev?id=5&type=transport&command=forward
 ```
 
-```
+```bash
 curl -d '' 'http://192.168.1.114:8060/input/dev?id=8&type=transport&command=seek&direction=backward&duration=10
 ```
 

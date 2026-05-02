@@ -20,7 +20,7 @@ pkg:/components/framework/MainScene.xml
 
 A `.brs` file can have the following uri:
 
-```
+```xml
 <script type="text/brightscript" uri="Task.brs" />
 ```
 
@@ -72,7 +72,7 @@ The `CDATA` section can contain any valid BrightScript code, including any Brigh
 
 BrightScript code can also be included from an external file using the uri attribute of the \<script\> element:
 
-```
+```xml
 <script type = "text/brightscript" uri = "pkg:/components/VideoTheater.brs" />
 ```
 

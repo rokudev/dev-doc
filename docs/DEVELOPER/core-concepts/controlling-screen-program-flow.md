@@ -102,7 +102,7 @@ item:
 For the VOD category list example, the first step might be to write a
 SceneGraph component outline similar to the following:
 
-```
+```xml
 <component name = "VODCategoriesList" extends = "MarkupList">
 
 </component>
@@ -192,13 +192,13 @@ the right, when the item is focused. So, for example, we set the
 initial `opacity` field setting of 0.0 to make it invisible until
 focused:
 
-```
+```xml
 <Poster
-  id = "itemPoster"
-  width = "98"
-  height = "140
-  opacity = "0.0"
-  translation = "[ 192, 4 ]"  />
+  id="itemPoster"
+  width="98"
+  height="140"
+  opacity="0.0"
+  translation="[ 192, 4 ]" />
 ```
 
 Then we can write the \<script\> element callback function
@@ -219,7 +219,7 @@ list:
 
 **MarkupList custom component outline**
 
-```
+```xml
 <component name = "VODCategoriesList" extends = "MarkupList" >
   <script type="text/brightscript" >
     <![CDATA[

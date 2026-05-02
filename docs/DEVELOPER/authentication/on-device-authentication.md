@@ -101,7 +101,7 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
    ```
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
-   ```
+   ```xml
    <result>
        <transactionId>{transactionId}</transactionId>
        ...

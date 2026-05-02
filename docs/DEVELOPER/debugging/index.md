@@ -21,7 +21,7 @@ The debug console can be accessed using telnet through a shell
 application such as [PuTTY](http://www.putty.org/) for Windows or
 _terminal_ on Mac and Linux:
 
-```
+```bash
 telnet roku-ip-address 8085
 ```
 

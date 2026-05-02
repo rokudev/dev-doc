@@ -49,31 +49,31 @@ and ifGetMessagePort.
 
 ## BrightScript statements that work with BrightScript Component Interfaces
 
-**For each**  
+**For each**
 The for-each statement works on any object that has an
 [ifEnum](doc:ifenum) interface. These include: Array,
 Associative Array, List, ByteArray, and MessagePort.
 
-**Print**  
+**Print**
 If the expression being printed evaluates to an object that has an
 [ifEnum](doc:ifenum) interface, print will print every item
-that can be enumerated.  
+that can be enumerated.
 In addition to printing the values of intrinsic types, PRINT will also
 print any object that exposes one of these interfaces:
 [ifString](doc:ifstring), [ifInt](doc:ifint),
 [ifFloat](doc:iffloat).
 
-**Wait**  
+**Wait**
 The wait function will work on any object that has an
 [ifMessagePort](doc:ifmessageport) interface.
 
-**Array operator –"\[\]"**  
+**Array operator –"\[\]"**
 The array operator works on any object that has an
 [ifArrayGet](doc:ifarrayget) or
 [ifArraySet](doc:ifarrayset) interface. This includes Array,
 AssociativeArray, ByteArray, and Lists.
 
-**Member access operator "."**  
+**Member access operator "."**
 The "." Operator works on any object that has an
 [ifAssociativeArray](doc:ifassociativearray) interface (as well
 as on any BrightScript Component (when calling a member function)). It
@@ -81,7 +81,7 @@ also has special meaning when used on
 [roXMLElement](doc:roxmlelement) or
 [roXMLList](doc:roxmllist).
 
-**Expression parsing**  
+**Expression parsing**
 Any expression that is expecting an Integer, Float, Double, Boolean or
 String, can take an object with the [ifInt](doc:ifint),
 [ifFloat](doc:iffloat), [ifDouble](doc:ifdouble),
@@ -230,7 +230,7 @@ If "01234567".instr(0,"0")<>0 Then Stop
 ```
 
 Note that ```-5.tostr()``` will cause an error since the dot operator binds tighter than unary
-negation.  
+negation.
 
 Use: ```(-5).tostr()```
 
@@ -268,13 +268,13 @@ will return a value only if the list contains exactly one element.
 
 For example, if the file "example.xml" contains the following:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <rsp stat="ok">
   <photos page="1" pages="5" perpage="100" total="500">
     <photo id="3131875696" owner="21963906@N06" secret="f248c84625" server="3125" farm="4" title="VNY 16R" ispublic="1" isfriend="0" isfamily="0" />
     <photo id="3131137552" owner="8979045@N07" secret="b22cfde7c4" server="3078" farm="4" title="hoot" ispublic="1" isfriend="0" isfamily="0" />
-    <photo id="3131040291" owner="27651538@N06" secret="ae25ff3942" server="3286" farm="4" title="172 • 365 :: Someone once told me..." ispublic="1" isfriend="0"
+    <photo id="3131040291" owner="27651538@N06" secret="ae25ff3942" server="3286" farm="4" title="172 • 365 :: Someone once told me..." ispublic="1" isfriend="0" />
   </photos>
 </rsp>
 ```
@@ -294,12 +294,12 @@ Then
 
 rsp.photos@perpage will return the string 100.
 
-Use the GetText() method to return an element's text.  
+Use the GetText() method to return an element's text.
 For example, if the variable booklist contains this roXMLElement:
 
-```
+```xml
  <booklist>
- <book lang=eng>The Dawn of Man</book>
+   <book lang=eng>The Dawn of Man</book>
  </booklist>
 ```
 
@@ -389,7 +389,7 @@ End Function
 
 For elements and attributes with namespaces, you can use the [roXMLElement interface](doc:ifxmlelement) to parse the colons in their tags. Consider the following XML:
 
-```
+```xml
 <media:thumbnail xmlns:media='http://something.something.com/mrss/' url='http://blahblablah.com' width='72' height='72' />
 ```
 
@@ -563,16 +563,16 @@ In addition to the platform BrightScript components discussed in [Brief
 summary of BrightScript
 Components](doc:component-architecture),
 BrightScript enables platform BrightScript libraries to be used in your
-scripts.  
+scripts.
 BrightScript libraries are .brs files that are provided by the platform
 and compiled into your application when directed via the "Library"
-keyword to make additional functions available.  
+keyword to make additional functions available.
 The Roku OS provides some common libraries under the system library
-directory "common:/LibCore".  
+directory "common:/LibCore".
 Additional libraries may be provided by the platform for specific usage
 purposes.
 
-**Example**  
+**Example**
 
 Library "v30/bslCore.brs"
 
@@ -619,7 +619,7 @@ common utility functions.
 
   - Returns the integer value of the passed in hex string.
 
-This library includes 2D graphics helper functions on top of the native components.  
+This library includes 2D graphics helper functions on top of the native components.
 
 #### Object dfNewBitmapSet(String filename)
 
@@ -681,12 +681,12 @@ sprites sheets (multiple images in a single png file).
   - Width and height is the size of the main drawing region
   - Returns an associative array containing the following roRegions
 
-    Main: main drawable region  
-    Left: left region if there is pillar box area on the left  
-    Right: right region if there is a pillar box area on the right  
-    Upper: upper region if there is a letterbox area at thetop  
-    Lower: lower region if there is a letterbox area at the bottom  
-    When using these regions as drawables, your graphics will be translated and clipped to these regions.  
+    Main: main drawable region
+    Left: left region if there is pillar box area on the left
+    Right: right region if there is a pillar box area on the right
+    Upper: upper region if there is a letterbox area at thetop
+    Lower: lower region if there is a letterbox area at the bottom
+    When using these regions as drawables, your graphics will be translated and clipped to these regions.
 
 #### Object dfSetBackground(String backgroundName, Object backgrounds)
 
@@ -711,20 +711,20 @@ sprites sheets (multiple images in a single png file).
 
 If spriteMap.xml contains the following:
 
-```
+```xml
 <DefenderBitmapSet>
-<ExtraInfo cellsize="40"/>
-<Bitmap name="Background" filespec="pkg:/images/background.png" />
-<Bitmap name="game-over" filespec="pkg:/images/gameover.png" />
-<Bitmap name="title-screen" filespec="pkg:/images/Splash.gif" />
-<Bitmap name="water_strip" filespec="pkg:/images/water_sprite.png">
-<Region name="a" x="0" y="" w="40" h="40" t="225" />
-<Region name="b" x="40" y="0" w="40" h="40" t="225" />
-</Bitmap>
-<Animation name="water">
-<frame use="water_strip.a" />
-<frame use="water_strip.b" />
-</Animation>
+  <ExtraInfo cellsize="40" />
+  <Bitmap name="Background" filespec="pkg:/images/background.png" />
+  <Bitmap name="game-over" filespec="pkg:/images/gameover.png" />
+  <Bitmap name="title-screen" filespec="pkg:/images/Splash.gif" />
+  <Bitmap name="water_strip" filespec="pkg:/images/water_sprite.png">
+    <Region name="a" x="0" y="" w="40" h="40" t="225" />
+    <Region name="b" x="40" y="0" w="40" h="40" t="225" />
+  </Bitmap>
+  <Animation name="water">
+    <frame use="water_strip.a" />
+    <frame use="water_strip.b" />
+  </Animation>
 </DefenderBitmapSet>
 ```
 

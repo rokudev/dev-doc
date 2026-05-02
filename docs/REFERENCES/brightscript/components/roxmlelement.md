@@ -15,7 +15,7 @@ roXMLElement is used to contain an XML tree.
 
 For instance,
 
-```
+```xml
 <tag1>this is some text</tag1>
 ```
 
@@ -29,7 +29,7 @@ Body = roString with "this is some text"
 
 **Example**
 
-```
+```xml
 <emptytag caveman="barney" />
 ```
 

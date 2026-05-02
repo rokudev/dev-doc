@@ -223,7 +223,7 @@ correct, **Invalid** will be returned. A few other things to note:
 For example, lets say your service returns a JSON object that contains a
 list of photo URLs:
 
-```
+```json
 {
       "photos" : [
            {

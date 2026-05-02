@@ -121,7 +121,7 @@ GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/
 
 **XML**:
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <errorCode i:nil="true" xmlns=""/>
     <errorDetails i:nil="true" xmlns=""/>
@@ -154,7 +154,7 @@ GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/
 
 **JSON**:
 
-```
+```json
 {
     "errorCode": null,
     "errorDetails": null,
@@ -236,7 +236,7 @@ Roku Pay supports on-device upgrades and downgrades between subscription product
 
 **Upgrade Response Example (JSON)**:
 
-```
+```json
   {
      "errorCode":null,
      "errorDetails":null,
@@ -271,7 +271,7 @@ Roku Pay supports on-device upgrades and downgrades between subscription product
 
 **Downgrade Response Example (JSON)**
 
-```
+```json
 {
      "errorCode":null,
      "errorDetails":null,
@@ -318,7 +318,7 @@ GET https://apipub.roku.com/listen/transaction-service.svc/validate-refund/{part
 
 **XML**
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <errorCode i:nil="true" xmlns=""/>
     <errorDetails i:nil="true" xmlns=""/>
@@ -349,7 +349,7 @@ GET https://apipub.roku.com/listen/transaction-service.svc/validate-refund/{part
 
 **JSON**
 
-```
+```json
 {
     "errorCode": null,
     "errorDetails": null,
@@ -392,7 +392,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/cancel-subscription
 
 **XML body**
 
-```
+```xml
 <cancel>
    <cancellationDate>2020-01-10T18:34:51.380355</cancellationDate>
    <dontNotifyUser>false</dontNotifyUser>
@@ -404,7 +404,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/cancel-subscription
 
 **JSON body**
 
-```
+```json
 {
    "cancellationDate": "2020-01-10T18:44:01.034020",
    "dontNotifyUser": false,
@@ -418,7 +418,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/cancel-subscription
 
 **XML**
 
-```
+```xml
 <result xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
    <errorCode i:nil="true" />
    <errorDetails i:nil="true" />
@@ -429,7 +429,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/cancel-subscription
 
 **JSON**
 
-```
+```json
 {
     "errorCode": null,
     "errorDetails": null,
@@ -465,7 +465,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/refund-subscription
 
 **XML body**
 
-```
+```xml
 <refund>
     <amount>0.99</amount>
     <comments>Customer was not impressed</comments>
@@ -477,7 +477,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/refund-subscription
 
 **JSON body**
 
-```
+```json
 {
     "amount": 0.99,
     "comments": "Customer was not impressed",
@@ -491,7 +491,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/refund-subscription
 
 **XML**
 
-```
+```xml
 <RefundResponseData xmlns="http://schemas.datacontract.org/2004/07/ASConnect.MessageData.v2" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <errorCode i:nil="true" xmlns=""/>
     <errorDetails i:nil="true" xmlns=""/>
@@ -503,7 +503,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/refund-subscription
 
 **JSON**
 
-```
+```json
 {
     "errorCode": null,
     "errorDetails": null,
@@ -529,7 +529,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/update-bill-cycle
 
 **XML body**
 
-```
+```xml
 <billCycleUpdate>
     <partnerAPIKey>F05447A57F8DF275FC30EC835FCAD10A19B6</partnerAPIKey>
     <newBillCycleDate>2020-02-12T08:17:09</newBillCycleDate>
@@ -539,7 +539,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/update-bill-cycle
 
 **JSON body**
 
-```
+```json
 {
     "transactionId": "fc51c9b9ba324923ae6dab3e01449eb5",
     "newBillCycleDate": "2020-02-12T08:17:09",
@@ -552,7 +552,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/update-bill-cycle
 
 **XML**:
 
-```
+```xml
 <result xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <errorCode i:nil="true"/>
     <errorDetails i:nil="true"/>
@@ -563,7 +563,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/update-bill-cycle
 
 **JSON**:
 
-```
+```json
 {
     "errorCode": null,
     "errorDetails": null,
@@ -593,7 +593,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
 
 **XML**:
 
-```
+```xml
 <serviceCredit>
     <partnerAPIKey>F05447A57F8DF275FC30EC835FCAD10A19B6</partnerAPIKey>
     <amount>9.99</amount>
@@ -607,7 +607,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
 
 **JSON**:
 
-```
+```json
 {
   "partnerAPIKey":"F05447A57F8DF275FC30EC835FCAD10A19B6",
   "amount":5.00,
@@ -623,7 +623,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
 
 **XML**:
 
-```
+```xml
 <TransactionReferenceResponseData xmlns="http://schemas.datacontract.org/2004/07/ASConnect.MessageData.v2" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <errorCode i:nil="true" xmlns=""/>
     <errorDetails i:nil="true" xmlns=""/>
@@ -635,7 +635,7 @@ POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
 
 **JSON**:
 
-```
+```json
 {
     "errorCode": null,
     "errorDetails": null,

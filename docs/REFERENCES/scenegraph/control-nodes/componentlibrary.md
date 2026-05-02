@@ -36,7 +36,7 @@ A component library must include a separate [manifest file](doc:channel-manifest
 
 Components declared in a component library can be used inside the app just like custom components. Make sure to specify it in format _libraryName_:_componentName_. So say if a component named LoadingIndicator is defined in the SampleComponentLib library, then it may be used like this:
 
-```
+```xml
 <SampleComponentLib:LoadingIndicator imageUri="pkg:/images/loader.png" translation="[700, 200]"/>
 ```
 

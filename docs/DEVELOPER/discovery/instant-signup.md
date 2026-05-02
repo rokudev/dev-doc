@@ -383,7 +383,7 @@ Apps can provide an **account** endpoint that accepts POST requests. This enable
 
 When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](doc:push-notifications#sale) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
 
-```
+```json
 {
 	"customerId": "168c2bda168854bb805f24ab296390a3",
 	"transactionType": "Sale",
@@ -460,7 +460,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
-   ```
+   ```xml
    <result>
       <transactionId>aa3f3a2479ea4e0c88d9a2d500f33e74<transactionId>
       ...

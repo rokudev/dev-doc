@@ -83,7 +83,7 @@ has expired (`retryDuration`).
 
 **Pre-registration request:**
 
-```
+```xml
 <preRegistration>
   <deviceID>(unique id/serial number for the device)</deviceID>
   <deviceTypeID>(optional opaque string identifying device type)</deviceTypeID>
@@ -93,7 +93,7 @@ has expired (`retryDuration`).
 
 **Response:**
 
-```
+```xml
 <result>
   <status>success/failure</status>
   <regCode>(small ~5 character code customer will enter onto web site)</regCode>
@@ -114,7 +114,7 @@ request/response is shown below in XML format:
 
 **Link request:**
 
-```
+```xml
 <linkAccount>
   <regCode>(current registration code from PreRegistration request)</regCode>
   <deviceID>(unique id/serial number for the device)</deviceID>
@@ -131,7 +131,7 @@ generates a unique value each time.
 
 ![roku815px - authenticationandlinking2](https://image.roku.com/ZHZscHItMTc2/authenticationandlinking2.jpg "authenticationandlinking2")
 
-```
+```xml
 <result>
   <status>incomplete</status>
 </result>
@@ -164,7 +164,7 @@ discarded.
 
 **Final response:**
 
-```
+```xml
 <result>
   <status>success/failure</status>
   <deviceToken>(opaque string to identify account for future requests)</deviceToken>

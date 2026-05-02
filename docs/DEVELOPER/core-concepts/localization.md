@@ -114,13 +114,13 @@ directory in the following order to find the localized graphical image.
 The first graphical image of the specified name found in this search
 sequence is returned to be rendered by the SceneGraph application.
 
-1.  not localized  
+1.  not localized
     `pkg:/locale/images/image_name `
-2.  current locale  
+2.  current locale
     `pkg:/locale/locale_id/images/image_name `
-3.  default  
+3.  default
     `pkg:/locale/default/images/image_name `
-4.  US English  
+4.  US English
     `pkg:/locale/en_US/images/image_name `
 
 If none of those files exist, the URL access will fail to return a file.
@@ -194,21 +194,21 @@ French:
 
 **Example of a translations.xml file in the XLIFF XML format**
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-<file source-language="en-US" target-language="fr-CA" >
-<body>
-  <trans-unit id="0">
-    <source>Hello</source>
-    <target>Bonjour</target>
-  </trans-unit>
-  <trans-unit id="1">
-    <source>Goodbye</source>
-    <target>Au revoir</target>
-  </trans-unit>
-</body>
-</file>
+  <file source-language="en-US" target-language="fr-CA" >
+    <body>
+      <trans-unit id="0">
+        <source>Hello</source>
+        <target>Bonjour</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Goodbye</source>
+        <target>Au revoir</target>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>
 ```
 

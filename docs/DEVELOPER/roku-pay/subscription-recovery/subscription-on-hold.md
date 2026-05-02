@@ -393,7 +393,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### GraceInitiated
 
-```
+```json
 {
     "customerId": "9aa37bd6f970578294cea4783af08560",
     "transactionType": "GraceInitiated",
@@ -413,7 +413,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### GraceRecovered
 
-```
+```json
 {
     "customerId": "9d425957549250dcba71e03dacf426b5",
     "transactionType": "GraceRecovered",
@@ -433,7 +433,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### OnHoldInitiated
 
-```
+```json
 {
     "customerId": "8446ceff30e952349bcd9d3b78bc94a0",
     "transactionType": "OnHoldInitiated",
@@ -453,7 +453,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### OnHoldRecovered
 
-```
+```json
 {
     "customerId": "8446ceff30e952349bcd9d3b78bc94a0",
     "transactionType": "OnHoldRecovered",

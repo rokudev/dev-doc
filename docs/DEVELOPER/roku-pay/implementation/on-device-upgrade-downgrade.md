@@ -126,7 +126,7 @@ After an upgrade has been completed on-device, responses to [**validate transact
 
 #### JSON
 
-```
+```json
 {
    "errorCode":null,
    "errorDetails":null,
@@ -159,7 +159,7 @@ After an upgrade has been completed on-device, responses to [**validate transact
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -198,7 +198,7 @@ When a free trial _is_ offered with the upgrade subscription, the `purchase_stat
 
 #### JSON
 
-```
+```json
 {
    "errorCode":null,
    "errorDetails":null,
@@ -233,7 +233,7 @@ When a free trial _is_ offered with the upgrade subscription, the `purchase_stat
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -272,7 +272,7 @@ After a downgrade has been completed on-device, responses to [**validate transac
 
 #### JSON
 
-```
+```json
 {
    "errorCode":null,
    "errorDetails":null,
@@ -305,7 +305,7 @@ After a downgrade has been completed on-device, responses to [**validate transac
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -340,7 +340,7 @@ After a downgrade has been completed on-device, responses to [**validate transac
 
 #### JSON
 
-```
+```json
 {
    "errorCode":null,
    "errorDetails":null,
@@ -377,7 +377,7 @@ Since the "downgrade" subscription will be activated sometime in the future (i.e
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -426,7 +426,7 @@ The following sample demonstrates an **UpgradeSale** notification:
 
 #### JSON
 
-```
+```json
 {
    "customerId":"ab080b5f1c5650d9ae0d7f595d0be886",
    "transactionType":"UpgradeSale",

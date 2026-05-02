@@ -72,7 +72,7 @@ When the user later returns to the app, the Roku OS invokes the matching **custo
 
 In the SceneGraph XML file of the app's Scene node, insert `customization suspendhandler` and `customization resumehandler` tags and set them to `customSuspend` and `customResume`, respectively:
 
-```
+```xml
 <customization suspendhandler="customSuspend" />
 <customization resumehandler="customResume" />
 ```

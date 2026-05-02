@@ -151,7 +151,7 @@ To call the function, use the `callFunc` field with the required method signatur
 
 **Functional field declaration**
 
-```
+```xml
 <interface>
     <function name="addSomeValue" />
 </interface>

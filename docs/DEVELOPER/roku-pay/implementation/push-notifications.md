@@ -42,7 +42,7 @@ Publishers must acknowledge the receipt of a Roku Pay notification message by se
 
 * **Content-Length**: The Roku Pay API key must have a content length of 36.
 
-```
+```http
 HTTP/1.1 200 OK
 ApiKey: {partnerAPIKey}
 Content-Length: 36
@@ -367,7 +367,7 @@ When a renewal occurs, the **comments** field in the notification is set to "Rec
 
 #### Purchase example
 
-```
+```json
 {
     "customerId": "2df58f54b4f7540ca3aa31ce8bec1fe7",
     "transactionType": "Sale",
@@ -393,7 +393,7 @@ When a renewal occurs, the **comments** field in the notification is set to "Rec
 
 #### Renewal example
 
-```
+```json
 {
     "customerId": "2df58f54b4f7540ca3aa31ce8bec1fe7",
     "transactionType": "Sale",
@@ -407,7 +407,7 @@ When a renewal occurs, the **comments** field in the notification is set to "Rec
     "tax": 0.0,
     "currency": "usd",
     "originalTransactionId": "447a43489c354b129dbe64e5ed79cd9e",
-    "originalPurchaseDate: '2022-03-03T02:51:33Z',
+    "originalPurchaseDate": "2022-03-03T02:51:33Z",
     "eventDate": "2024-02-03T11:27:16Z",
     "expirationDate": "2024-03-03T02:51:33Z",
     "comments": "Recurring subscription processed",
@@ -434,7 +434,7 @@ See [Basic Subscription Recovery](doc:basic-recovery) for more information.
 
 #### GraceInitiated example
 
-```
+```json
 {
     "customerId": "9aa37bd6f970578294cea4783af08560",
     "transactionType": "GraceInitiated",
@@ -454,7 +454,7 @@ See [Basic Subscription Recovery](doc:basic-recovery) for more information.
 
 #### GraceRecovered example
 
-```
+```json
 {
     "customerId": "9d425957549250dcba71e03dacf426b5",
     "transactionType": "GraceRecovered",
@@ -486,7 +486,7 @@ See [Enhanced Subscription Recovery](doc:subscription-on-hold) for more informat
 
 #### OnHoldInitiated example
 
-```
+```json
 {
     "customerId": "8446ceff30e952349bcd9d3b78bc94a0",
     "transactionType": "OnHoldInitiated",
@@ -506,7 +506,7 @@ See [Enhanced Subscription Recovery](doc:subscription-on-hold) for more informat
 
 #### OnHoldRecovered example
 
-```
+```json
 {
     "customerId": "8446ceff30e952349bcd9d3b78bc94a0",
     "transactionType": "OnHoldRecovered",
@@ -530,41 +530,41 @@ A **CancellationOfferInitated** event is fired when the customer accepts a [canc
 
 #### CancellationOfferInitated
 
-```
+```json
 {
-  customerId: a659926a3769514ab2292fc8d7c2da5b,
-  transactionType: CancellationOfferInitiated,
-  transactionId: 13f2b572-ceb2-5708-a8c8-dee8d546767e,
-  channelId: 1688604,
-  productCode: VR8IqPLBJ7VeWD7bvIHH_MonthlySub,
-  productName: DefaultText,
-  isFreeTrial: False,
-  originalTransactionId: 0ea63a4b-7236-11ef-93cb-0a58a9feae68,
-  originalPurchaseDate: 2024-09-14T01:09:58Z,
-  eventDate: 2024-09-14T01:10:37Z,
-  expirationDate: 2024-12-14T01:09:58Z,
-  comments: Initiated cancellation offer for the subscription.,
-  responseKey: 13f2b572-ceb2-5708-a8c8-dee8d546767e
+  "customerId": "a659926a3769514ab2292fc8d7c2da5b",
+  "transactionType": "CancellationOfferInitiated",
+  "transactionId": "13f2b572-ceb2-5708-a8c8-dee8d546767e",
+  "channelId": "1688604",
+  "productCode": "VR8IqPLBJ7VeWD7bvIHH_MonthlySub",
+  "productName": "DefaultText",
+  "isFreeTrial": false,
+  "originalTransactionId": "0ea63a4b-7236-11ef-93cb-0a58a9feae68",
+  "originalPurchaseDate": "2024-09-14T01:09:58Z",
+  "eventDate": "2024-09-14T01:10:37Z",
+  "expirationDate": "2024-12-14T01:09:58Z",
+  "comments": "Initiated cancellation offer for the subscription.",
+  "responseKey": "13f2b572-ceb2-5708-a8c8-dee8d546767e"
 }
 ```
 
 #### CancellationOfferEnded
 
-```
+```json
 {
-  customerId: a659926a3769514ab2292fc8d7c2da5b,
-  transactionType: CancellationOfferEnded,
-  transactionId: 76a6a1ae-c4fa-50e0-8cea-28647bfccbf1,
-  channelId: 1688604,
-  productCode: VR8IqPLBJ7VeWD7bvIHH_MonthlySub,
-  productName: DefaultText,
-  isFreeTrial: False,
-  originalTransactionId: 0ea63a4b-7236-11ef-93cb-0a58a9feae68,
-  originalPurchaseDate: 2024-09-14T01:09:58Z,
-  eventDate: 2024-09-14T01:26:36Z,
-  expirationDate: 2025-02-14T01:09:58Z,
-  comments: Cancellation offer for the subscription ended.,
-  responseKey: 76a6a1ae-c4fa-50e0-8cea-28647bfccbf1
+  "customerId": "a659926a3769514ab2292fc8d7c2da5b",
+  "transactionType": "CancellationOfferEnded",
+  "transactionId": "76a6a1ae-c4fa-50e0-8cea-28647bfccbf1",
+  "channelId": "1688604",
+  "productCode": "VR8IqPLBJ7VeWD7bvIHH_MonthlySub",
+  "productName": "DefaultText",
+  "isFreeTrial": false,
+  "originalTransactionId": "0ea63a4b-7236-11ef-93cb-0a58a9feae68",
+  "originalPurchaseDate": "2024-09-14T01:09:58Z",
+  "eventDate": "2024-09-14T01:26:36Z",
+  "expirationDate": "2025-02-14T01:09:58Z",
+  "comments": "Cancellation offer for the subscription ended.",
+  "responseKey": "76a6a1ae-c4fa-50e0-8cea-28647bfccbf1"
 }
 ```
 
@@ -580,7 +580,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 
 #### Active cancelation/decativation example
 
-```
+```json
 {
     "customerId": "493d0c919a9d547086baaccd2a80daf0",
     "transactionType": "Cancellation",
@@ -600,7 +600,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 
 #### Passive cancelation example
 
-```
+```json
 {
     "customerId": "493d0c919a9d547086baaccd2a80daf0",
     "transactionType": "Cancellation",
@@ -624,7 +624,7 @@ A **Refund** push notification is sent when the publisher or Roku Pay initiates 
 
 #### Example
 
-```
+```json
 {
     "customerId": "cb570816d25c547ca881cfae77dc4068",
     "transactionType": "Refund",
@@ -652,7 +652,7 @@ A **Credit** push notification is sent when the publisher or Roku Pay issues a s
 
 #### Example
 
-```
+```json
 {
     "customerId": "e54246dd10405b159f4799ef60d791ce",
     "transactionType": "Credit",
@@ -678,7 +678,7 @@ A **Resubscribe** push notification is sent when a customer opts to keep a subsc
 
 #### Example
 
-```
+```json
 {
     "customerId": "12d3ddf4509c5bc5bbcfee76bd97f58e",
     "transactionType": "Resubscribe",
@@ -722,7 +722,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 
 #### UpgradeSale example
 
-```
+```json
 {
     "customerId": "8c805ea26be25915a6c15e4545f592a4",
     "transactionType": "UpgradeSale",
@@ -745,7 +745,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 
 #### UpgradeCancellation example
 
-```
+```json
 {
     "customerId": "8c805ea26be25915a6c15e4545f592a4",
     "transactionType": "UpgradeCancellation",
@@ -765,7 +765,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 
 #### DowngradeSale example
 
-```
+```json
 {
     "customerId": "7993a78f2922550589654e4dbe21404a",
     "transactionType": "DowngradeSale",
@@ -788,7 +788,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 
 #### DowngradeCancellation example
 
-```
+```json
 {
     "customerId": "7993a78f2922550589654e4dbe21404a",
     "transactionType": "DowngradeCancellation",
@@ -817,7 +817,7 @@ A **Chargeback** push notification is sent when a customer initiates a transacti
 
 #### Example
 
-```
+```json
 {
     "customerId": "cb570816d25c547ca881cfae77dc4068",
     "transactionType": "Chargeback",
@@ -829,7 +829,7 @@ A **Chargeback** push notification is sent when a customer initiates a transacti
     "total": -2.99,
     "tax": -0.00,
     "currency": "usd",
-    "partnerReferenceId": ",
+    "partnerReferenceId": "",
     "originalTransactionId": "856b408a65e54c439d3720fd7b33e650",
     "originalPurchaseDate": "2024-01-13T18:52:48Z",
     "eventDate": "2024-01-25T17:38:14Z",
@@ -846,7 +846,7 @@ No publisher action is required when this event occurs.
 
 **Example**
 
-```
+```json
 {
     "customerId": "cb570816d25c547ca881cfae77dc4068",
     "transactionType": "ChargebackReversed",
@@ -857,7 +857,7 @@ No publisher action is required when this event occurs.
     "total": 2.99,
     "tax": 0.00,
     "currency": "usd",
-    "partnerReferenceId": ",
+    "partnerReferenceId": "",
     "originalTransactionId": "5b9272e393c0438aa5edb8da5df17b5f",
     "originalPurchaseDate": "2021-12-02T03:21:36Z",
     "eventDate": "2024-02-07T17:41:51Z",
@@ -874,7 +874,7 @@ No publisher action is required when this event occurs.
 
 **Example**
 
-```
+```json
 {
     "customerId": "cb570816d25c547ca881cfae77dc4068",
     "transactionType": "SecondChargeback",
@@ -885,7 +885,7 @@ No publisher action is required when this event occurs.
     "total": -2.99,
     "tax": 0.00,
     "currency": "usd",
-    "partnerReferenceId": ",
+    "partnerReferenceId": "",
     "originalTransactionId": "6ee32cd3-fd68-4997-b279-1438ea4d8177",
     "originalPurchaseDate": "2023-09-09T01:00:52Z",
     "eventDate": "2024-02-20T19:58:53Z",

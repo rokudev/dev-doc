@@ -47,13 +47,13 @@ Returns the subtype of the subject node as specified when it was created.
 
 #### Return Value
 
-The subtype of the subject node. 
+The subtype of the subject node.
 
 ### parentSubtype(nodeType as String) as String
 
 #### Description
 
-Returns the subtype of the parent of the nodeType in the SceneGraph node class hierarchy. 
+Returns the subtype of the parent of the nodeType in the SceneGraph node class hierarchy.
 
 > This method does not actually reference the subject node.
 
@@ -89,7 +89,7 @@ A flag indicating whether the subtype of the subject node is a descendant of the
 
 Checks whether a specific roSGNode refers to the same SceneGraph node object as the subject node.
 
-This can be useful when the RoSGNode objects come from two different sources, for example when one is stored in an associative array, and the other is obtained from an RoSGNode interface method that returns an RoSGNode object, like getChild(). It may be that the application needs to know whether the two RoSGNode objects are actually referring to the same underlying SceneGraph node. 
+This can be useful when the RoSGNode objects come from two different sources, for example when one is stored in an associative array, and the other is obtained from an RoSGNode interface method that returns an RoSGNode object, like getChild(). It may be that the application needs to know whether the two RoSGNode objects are actually referring to the same underlying SceneGraph node.
 
 | Name       | Return Type    | Parameters              | Return Value | Description           |
 | ---------- | ------- | ----------------------- | --------------- | --------------------- |
@@ -163,9 +163,9 @@ To call the function, use the `callFunc` field with the required method signatur
 function addSomeValue(params as Object) as Object
     passedDataLabel = m.top.findNode("passedDataLabel")
     passedDataLabel.text = params.passedString
-    result = &#123;
+    result = {
         resultString : "Returned Value " + stri(params.passedInt + 4)
-    &#125;
+    }
 
     return result
 end function
@@ -174,7 +174,7 @@ end function
 **callFunc with parameters**
 
 ```
-params = &#123;passedString:"", passedInt:12&#125;
+params = {passedString:"", passedInt:12}
 result = node.callFunc("addSomeValue", params)
 ```
 

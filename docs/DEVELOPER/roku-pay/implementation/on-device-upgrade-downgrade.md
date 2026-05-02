@@ -78,14 +78,16 @@ To call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object
 1. Set the `orderInfo.action` field to `Upgrade` or `Downgrade` (the required values are case-sensitive; do not pass "upgrade" or "downgrade" in the `action` field).
 
    ```
-   m.store = CreateObject("roChannelStore")​
+   m.store = CreateObject("roChannelStore")
    ' Populate myOrderItems
    myOrderInfo.action = "Upgrade"
    ```
 
 2. Call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object-orderinfo-as-object-as-void) to have the customer confirm the upgrade/downgrade. The **myOrderItems** parameter specifies the in-channel product to which the customer is upgrading/downgrading; the **myOrderInfo** parameter whether the transaction is an upgrade or downgrade.
 
+   ```
    m.store.setOrder(myOrderItems, myOrderInfo)
+   ```
 
 3. The following occurs to the original base plan and the upgraded/downgraded plan based on the specified action.
 

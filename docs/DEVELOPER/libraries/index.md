@@ -116,17 +116,18 @@ Analytics vendors using Model #2 use `trackEvent` rather than `setContentMetadat
 ```
 m.global.RSG_analytics.init = {
     ga4: {
-        api_secret: "apisecret_value"
-        measurement_id: "measurementid_value"         
+        api_secret: "apisecret_value",
+        measurement_id: "measurementid_value",
         defaultParams: {
-            // Applied to the root level of every payload constructed by trackEvent
-            client_id: “client_id”
+            ' Applied to the root level of every payload constructed by trackEvent
+            client_id: "client_id"
 
-        }
+        },
         defaultEventParams: {
-            // Applied to all events contained within payloads constructed by trackEvent
-            currency: “USD”
+            ' Applied to all events contained within payloads constructed by trackEvent
+            currency: "USD"
         }
+    }
 }
 ```
 
@@ -155,8 +156,8 @@ To use RACL, add a field, "RSG_analytics,"
 to `m.global` and then create an roSGNode object like so:
 
 ```
-m.global.addField("RSG_analytics","node",false)
-m.global.RSG_analytics = CreateObject("roSGNode","Roku_Analytics:AnalyticsNode")
+m.global.addField("RSG_analytics", "node", false)
+m.global.RSG_analytics = CreateObject("roSGNode", "Roku_Analytics:AnalyticsNode")
 ```
 
 [`addField`](doc:ifsgnodefield) takes three parameters:
@@ -179,9 +180,9 @@ vendor-specific configuration data.
 m.global.RSG_analytics.init = {
     IQ : {
         PCODE : "pcode_value"
-    }
+    },
     omniture : {
-        baseURL : “https://omniture.suite.url/”
+        baseURL : "https://omniture.suite.url/",
         ' For convenience, this allows developers to define a set of parameters and values that will be sent with every omniture call
         defaultParams : {}
     }
@@ -224,8 +225,8 @@ for analytics providers and are optional.
 
 ```
 myContent = {
-    streamFormat = "mp4"
-    streamUrl = "www.mycontent.com/video.mp4"
+    streamFormat: "mp4",
+    streamUrl: "www.mycontent.com/video.mp4"
 }
 
 m.global.RSG_analytics.setContentMetadata = {
@@ -237,8 +238,8 @@ m.global.RSG_analytics.setContentMetadata = {
 
 ```
 myContent = {
-    streamFormat = "mp4"
-    streamUrl = "www.mycontent.com/video.mp4"
+    streamFormat: "mp4",
+    streamUrl: "www.mycontent.com/video.mp4"
 }
 
 metadata = {
@@ -248,7 +249,7 @@ metadata = {
 }
 
 m.global.RSG_analytics.setContentMetadata = {
-    content: myContent
+    content: myContent,
     IQ : metadata
 }
 ```
@@ -321,9 +322,9 @@ m.global.RSG_analytics.trackEvent = {
     GA4: {
         events: [
             {
-                name: "test_event"
+                name: "test_event",
                 params: {
-                    "param1": "value1"
+                    "param1": "value1",
                     "param2": 222
                     ' here RAC will append defaultEventParams. For instance, currency from the init example above
                 }
@@ -332,9 +333,9 @@ m.global.RSG_analytics.trackEvent = {
         ' here RAC will append defaultParams, For instance, client_id, api_secret, and measurement_id from the init example above
      }
     omniture: {
-        events: “event15,event17”,
-        page_name: “splash_screen”,
-        c17: “channel_launch”
+        events: "event15,event17",
+        page_name: "splash_screen",
+        c17: "channel_launch"
     }
 }
 ```

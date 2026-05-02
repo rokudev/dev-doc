@@ -76,19 +76,19 @@ Since Task nodes are owned by the Render thread, setting Task node fields from a
 
 ```
 my_task = CreateObject("roSGNode", "MyTask")
-# setting fields from the Render thread WILL NOT rendezvous
+' setting fields from the Render thread WILL NOT rendezvous
 my_task.my_field = "some value"
-# observer will run on the Render thread
+' observer will run on the Render thread
 my_task.ObserveField("my_field", "OnMyFieldChanged")
 ```
 
 #### Task Thread
 
 ```
-# setting fields from the Task thread WILL rendezvous
+' setting fields from the Task thread WILL rendezvous
 m.top.my_field = "some value"
 cn = CreateObject("roSGNode", "ContentNode")
-# observer will run on the Task thread
+' observer will run on the Task thread
 cn.ObserveField("title", "OnTitleChaned")
 ```
 

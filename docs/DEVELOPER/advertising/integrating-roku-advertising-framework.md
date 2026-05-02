@@ -104,10 +104,10 @@ while shouldPlayContent
     contentVideoScreen.Close() ' stop playback of content
     shouldPlayContent = adIface.showAds(adPods) ' render current ad pod
     if shouldPlayContent
-      ' *** Insert client app’s resume-playback code here
+      ' *** Insert client app's resume-playback code here
     end if
   end if
-  ' *** Insert client app’s video event handler code here
+  ' *** Insert client app's video event handler code here
 end while
 ```
 
@@ -121,9 +121,9 @@ following code snippet:
 
 ```
 sub init()
-m.top.setFocus(true)
-setVideo()
-sub
+  m.top.setFocus(true)
+  setVideo()
+end sub
 ```
 
 ## Use cases
@@ -208,10 +208,10 @@ while shouldPlayContent
     contentVideoScreen.Close() ' stop playback of content
     shouldPlayContent = adIface.showAds(adPods) ' render current ad pod
     if shouldPlayContent
-      ' *** Insert client app’s resume-playback code here
+      ' *** Insert client app's resume-playback code here
     end if
   end if
-  ' *** Insert client app’s video event handler code here
+  ' *** Insert client app's video event handler code here
 end while
 ```
 
@@ -238,12 +238,13 @@ scheduledPods = []
 adBreakIndex = 0
 for each ad in adPods[0].ad
   ' schedule one ad per ad break
-  scheduledPods.Push([{viewed : false,
-                      renderSequence : "midroll",
-                      duration : ad.duration,
-                      renderTime : adBreakSchedule[adBreakIndex],
-                      ads : [ad]
-                      })
+  scheduledPods.Push([{
+    viewed : false,
+    renderSequence : "midroll",
+    duration : ad.duration,
+    renderTime : adBreakSchedule[adBreakIndex],
+    ads : [ad]
+  }])
   adBreakIndex = adBreakIndex + 1
 end for
 ```
@@ -272,11 +273,11 @@ while shouldPlayContent
       shouldPlayContent = adIface.showAds(nextPod) ' render next ad pod
       adBreakIndex = adBreakIndex + 1
       if shouldPlayContent
-        ' *** Insert client app’s resume-playback code here
+        ' *** Insert client app's resume-playback code here
       end if
     end if
   end if
-  ' *** Insert client app’s video event handler code here
+  ' *** Insert client app's video event handler code here
 end while
 ```
 

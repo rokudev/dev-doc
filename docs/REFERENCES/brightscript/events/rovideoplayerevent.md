@@ -174,9 +174,9 @@ Function showVideoScreen(episode As Object)
   'some video stream
   '...
   'etc...
-  episode.SubtitleConfig : {
+  episode.SubtitleConfig = {
     TrackName : "eia608/1"
-    }
+  }
   screen.SetContent(episode)
   screen.SetMessagePort(port)
   screen.Show()

@@ -165,22 +165,24 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
 
 3. If the contentId and mediaType are valid, launch the specified content item using the appropriate [launch behavior for the mediaType](doc:implementing-deep-linking). If either the contentId or mediaType are invalid, launch the app home page.
 
-   if (args.mediaType = "movie" or args.mediaType = "episode" or args.mediaType = "shortFormVideo" or args.mediaType = "series" or args.mediaType = "tvSpecial")
-   if valid_contentId(contentId) ' You define this function in your back-end
-   'play content directly, starting at last bookmarked position
-   else
-   'pop an error message and launch app home page.
-   end if
-   else if (args.mediaType = “season”)
-   if valid_contentId(contentId) ' You define this function in your back-end
-   'display an episodic picker screen with the episode of the contentId selected
-   else
-   'pop an error message and launch app home page.
-   end if
-   else
-   'deep linking issue such as contentId not matching any content in the partner's catalog
-   'display an appropriate error message for the user and launch home page.
-   end if
+    ```
+    if (args.mediaType = "movie" or args.mediaType = "episode" or args.mediaType = "shortFormVideo" or args.mediaType = "series" or args.mediaType = "tvSpecial")
+      if valid_contentId(contentId) ' You define this function in your back-end
+        'play content directly, starting at last bookmarked position
+      else
+        'pop an error message and launch app home page.
+      end if
+    else if (args.mediaType = "season")
+      if valid_contentId(contentId) ' You define this function in your back-end
+        'display an episodic picker screen with the episode of the contentId selected
+      else
+        'pop an error message and launch app home page.
+      end if
+    else
+      'deep linking issue such as contentId not matching any content in the partner's catalog
+      'display an appropriate error message for the user and launch home page.
+    end if
+    ```
 
 4. Use [roInputEvent](doc:roinputevent) to check whether a deep link has been passed into the app while your app is running. This enables your app to deep link into content without re-launching your app.
    1. The [supports_input_launch](doc:channel-manifest) attribute (**supports_input_launch=1**) must be added to the manifest for this functionality to work.
@@ -191,26 +193,28 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
       See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
 
       ```
-      ...
+      '...
       screen = CreateObject("roSGScreen")
       m.port = CreateObject("roMessagePort")
       screen.setMessagePort(m.port)
-      ...
+      '...
+
       while(true)
-      msg = wait(0, m.port)
-      msgType = type(msg)
-      if msgType = "roSGScreenEvent"
-      if msg.isScreenClosed() then return
-      end if
-      if type(msg) = "roInputEvent"
-      if msg.IsInput()
-      info = msg.GetInfo()
-      if info.DoesExist("mediatype") and info.DoesExist("contentid")
-      mediaType = info.mediatype
-      contentId = info.contentid
-      end if
-      end if
-      end if
+        msg = wait(0, m.port)
+        msgType = type(msg)
+        if msgType = "roSGScreenEvent"
+          if msg.isScreenClosed() then return
+
+          if type(msg) = "roInputEvent"
+            if msg.IsInput()
+              info = msg.GetInfo()
+              if info.DoesExist("mediatype") and info.DoesExist("contentid")
+                mediaType = info.mediatype
+                contentId = info.contentid
+              end if
+            end if
+          end if
+        end if
       end while
       ```
 
@@ -341,14 +345,16 @@ The following example demonstrates how to output the associative array containin
 
 ```
 sub Main(args)
-    ...
+    '...
     if (args.mediaType <> invalid) and (args.contentId <> invalid)
-        ...
+        '...
         'print deep linking paramaters in args
-        "args= "; formatjson(args)  'pretty print AA'
+        print "args= "; formatjson(args)  'pretty print AA'
         'output
         ' args= {action: "display", contentid: "myAwesomeShow|Season=1|Episode=1", instant_on_run_mode: "foreground", isexternal: true, lastExitOrTerminationReason: "EXIT_UNKNOWN", mediatype: "series", source: "hs-search", splashTime: "0"}
-        ...
+        '...
+    end if
+end sub
 ```
 
 ### Submitting deep linking samples for certification

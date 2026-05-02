@@ -92,7 +92,7 @@ requires_verimatrix_version=1.0
 drmParams = createObject("roAssociativeArray")
 drmParams.name = "Verimatrix"
 drmParams.authDomain = "auth-value-from-streaming-provider"
-drmParams.serializationUrl = "hostname-url-from-streaming-provider"`
+drmParams.serializationUrl = "hostname-url-from-streaming-provider"
 ```
 
 **Setup ContentNode and set to Video node:**

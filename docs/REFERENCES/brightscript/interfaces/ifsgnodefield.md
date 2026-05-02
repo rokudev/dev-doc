@@ -460,7 +460,7 @@ The associative array that was moved from the source field.
 n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
 n.aa_field = {key: "value"}' or use moveIntoField()
-my_aa = n.MoveFromField("aa_field") 
+my_aa = n.MoveFromField("aa_field")
 ? n.aa_field ' invalid
 ? my_aa ' contents of aa_field
 ```
@@ -588,13 +588,13 @@ A runtime debugging method for helping minimize Rendezvous spread.  This method 
 The following example demonstrates the information returned by this method:
 
 ```
-{   node: { type: "XXComponent",          
-    id: "XXID",          
-    address: 0x123XXX,          
-    willRendezvousFromCurrentThread: "Yes",          
-    owningThread: { type: "Render", name: "newMainScene", id:"123456" }      
+{   node: { type: "XXComponent",
+    id: "XXID",
+    address: 0x123XXX,
+    willRendezvousFromCurrentThread: "Yes",
+    owningThread: { type: "Render", name: "newMainScene", id:"123456" }
 },
-    currentThread: {type: "Task",   name: "conviva",     id: "234567" },    
+    currentThread: {type: "Task",   name: "conviva",     id: "234567" },
     renderThread: { type: "Render", name: "newMainScene", id: "123456" }
 }
 ```
@@ -623,9 +623,9 @@ Starting in Roku OS 9.3, if the app UI displays a login or user selection dialog
 To fire signal beacons within your application, call the `signalBeacon()` function on any node as demonstrated in the following examples:
 
 ```
-myScene.signalBeacon(“AppLaunchComplete”)
-myEPGComponent.signalBeacon(“EPGLaunchInitiate”)
-m.top.signalBeacon(“EPGLaunchComplete”)`
+myScene.signalBeacon("AppLaunchComplete")
+myEPGComponent.signalBeacon("EPGLaunchInitiate")
+m.top.signalBeacon("EPGLaunchComplete")
 ```
 
 > Only the first sequence of EPG launch beacons is recorded.  If a user launches the EPG more than once while the app is running, a warning message is output to the debug console. This warning message, which acknowledges the receipt of the beacon while notifying that subsequent ones will not be recorded, may be ignored.

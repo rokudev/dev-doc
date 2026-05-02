@@ -18,7 +18,7 @@ next:
 - The Global node is owned by the Render thread.
 - Instances of Node, ContentNode, and components extended from them are owned by the thread that created them.
 - Task nodes created from within a task thread are owned by the Render thread and accessed via rendezvous.
-- If the Render thread interacts with a node, the Render thread will automatically take ownership of that node. When a node is set as a child or field of another node owned by the Render thread, the referenced node becomes owned by the Render thread. 
+- If the Render thread interacts with a node, the Render thread will automatically take ownership of that node. When a node is set as a child or field of another node owned by the Render thread, the referenced node becomes owned by the Render thread.
 - This transfer of ownership is recursively performed on all nodes and fields referenced by a transferred node, and it is even performed on nodes referenced in AA or array fields.
 
 ## Use of m.global
@@ -33,15 +33,15 @@ Given the rendezvous penalties, don't repeatedly reference the same fields in `m
 ```
 m.global
 {
-        config
+    config
+    {
+        settings
         {
-            settings
-            {
-            }
-            analytics
-            {
-            }
         }
+        analytics
+        {
+        }
+    }
 }
 ```
 
@@ -63,20 +63,20 @@ end function
 </component>
 ```
 
-The Task makes a local copy of the config global data which it then references via that local variable, avoiding a rendezvous and a copy for subsequent references. Generally speaking a Task should locally copy only what it needs from `m.global`, so there is a design trade-off in grouping data in subtrees versus spreading it all out at the top level. Each such copy will expand the memory footprint of your channel. 
+The Task makes a local copy of the config global data which it then references via that local variable, avoiding a rendezvous and a copy for subsequent references. Generally speaking a Task should locally copy only what it needs from `m.global`, so there is a design trade-off in grouping data in subtrees versus spreading it all out at the top level. Each such copy will expand the memory footprint of your channel.
 
 ## Task to render thread rendezvous
 
 - When a Task thread operates on nodes it owns, it does so directly, and it does not trigger a rendezvous.
-- When a Task thread operates on a Render-thread-owned node, it triggers a rendezvous. 
+- When a Task thread operates on a Render-thread-owned node, it triggers a rendezvous.
 - When a rendezvous happens:
-  - The Task thread adds a requested operation to the Render thread's queue and blocks, waiting for completion of the operation. 
-  - The Render thread eventually pulls the requested operation off of its queue, executes it, and returns the results. 
-  - The Task thread sees the results of the operation and unblocks from the rendezvous. Thus, it appears as a synchronous call to the Task thread. 
+  - The Task thread adds a requested operation to the Render thread's queue and blocks, waiting for completion of the operation.
+  - The Render thread eventually pulls the requested operation off of its queue, executes it, and returns the results.
+  - The Task thread sees the results of the operation and unblocks from the rendezvous. Thus, it appears as a synchronous call to the Task thread.
   - From the Task thread's point of view, both the syntax and the semantics of the call are the same as if the Task thread owned the node itself.
-  
+
     ![rendezvous-graph](https://image.roku.com/ZHZscHItMTc2/rendezvous-graph.png "Rendezvous Graph")
-  
+
 - While rendezvous are designed to be invisible to syntax and semantics, **a rendezvous is at least an order of magnitude more expensive than a direct access.** For this reason, rendezvous should be used sparingly.
 
 ## Data modeling

@@ -15,7 +15,7 @@ Bookmarking refers to saving a user's playback position in the content on your a
 
 It is recommended that all services with content longer than 15 minutes build bookmarking functionality into their service, as it will enhance the end-user's experience — not just on Roku, but across all interactions they have with your service on any platform. For example, if your service implements bookmarks, then users who begin watching a television show on Roku before switching over to their mobile device can pick up where they left off. In addition, bookmarks must be saved for a minimum of 30 days.
 
-> Apps must implement bookmarking in VOD content that is longer that 15 minutes to pass [certification](doc:certification). 
+> Apps must implement bookmarking in VOD content that is longer that 15 minutes to pass [certification](doc:certification).
 
 This guide provides simple instructions on two different ways to bookmark media content, either in your service's backend or locally in the device's registry.
 
@@ -40,7 +40,7 @@ It is recommended that the app makes the request to store this timestamp on the 
   url = ('url with timestamp to send to developer end')
   curl = createObject("roUrlTransfer")
   curl.setUrl(url)
-  curl.postFromString(TimeStamp as String)
+  curl.postFromString(timeStamp)
 ```
 
 This should be done on a 30 second timer to ensure functionality across all devices.

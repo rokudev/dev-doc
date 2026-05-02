@@ -83,13 +83,11 @@ beacon. When you exit your app, the console displays a report summarizing the st
       <td>Initiate</td>
       <td>A timestamp for the beacon based on milliseconds elapsed since the initiate beacon for the app launch was recorded.</td>
     </tr>
-
     <tr>
       <td>Duration</td>
       <td>Complete</td>
       <td>Milliseconds between the initiate and complete beacons.</td>
     </tr>
-
     <tr>
       <td>Memory Points (MiP, KiP, or p)</td>
       <td>Complete</td>
@@ -103,3 +101,82 @@ beacon. When you exit your app, the console displays a report summarizing the st
 ## Performance metrics reference
 
 The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start,  change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Metric</strong></th>
+      <th><strong>Start Point</strong></th>
+      <th><strong>Stop Point</strong></th>
+      <th><strong>Initiate Beacon</strong></th>
+      <th><strong>Complete Beacon</strong></th>
+      <th><strong>Fired by</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>App compile</td>
+      <td>The app compilation starts.</td>
+      <td>The app compilation finishes.</td>
+      <td><strong>AppCompileInitiate</strong><br /><br />The app compilation starts after the app is launched.</td>
+      <td><strong>AppCompileComplete</strong><br /><br />The app compilation finishes.</td>
+      <td>Roku OS</td>
+    </tr>
+    <tr>
+      <td>App launch</td>
+      <td>The user presses the OK button to launch an app from the home screen.</td>
+      <td>The app is fully rendered and operational on its initial UI screen, or it reaches user-operable video playback.</td>
+      <td><strong>AppLaunchInitiate</strong><br /><br />The last keypress before the beacon was signaled. If there was no prior keypress, the Initiate beacon signal time.</td>
+      <td><strong>AppLaunchComplete</strong><br /><br />The first render pass completes after the Complete beacon has been signaled via the signalBeacon() method.</td>
+      <td>Initiate: Roku OS<br /><br />Complete: Application</td>
+    </tr>
+    <tr>
+      <td>Dialog launch</td>
+      <td>A dialog (for example, a login, user selection, or network error screen that the user must dismiss) is loaded.</td>
+      <td>The dialog exits.</td>
+      <td><strong>AppDialogInitiate</strong><br /><br />The app enters a dialog before rendering the home screen where the app waits for user input.</td>
+      <td><strong>AppDialogComplete</strong><br /><br />The user dismisses the dialog.</td>
+      <td>Application</td>
+    </tr>
+    <tr>
+      <td>EPG launch</td>
+      <td>The user initiates a keypress to bring up the EPG.</td>
+      <td>The EPG is fully rendered and navigable.</td>
+      <td><strong>EPGLaunchInitiate</strong><br /><br />The last keypress before the initiate beacon was signaled. If there was no prior keypress, the Initiate beacon signal time.</td>
+      <td><strong>EPGLaunchComplete</strong><br /><br />The first render pass completes after the Complete beacon has been signaled via the signalBeacon() method.</td>
+      <td>Application</td>
+    </tr>
+    <tr>
+      <td>Video start</td>
+      <td>The user initiates a keypress to play a video.</td>
+      <td>Video playback has started and is visible to the user.</td>
+      <td><strong>VODStartInitiate</strong><br /><br />The last keypress that occurred between play events. If there was no prior keypress, the Initiate beacon signal time.</td>
+      <td><strong>VODStartComplete</strong><br /><br />The first render pass completes after the Complete beacon has been signaled (when the video node receives the "firstFramePresented" event from the Media Player).</td>
+      <td>Roku OS</td>
+    </tr>
+    <tr>
+      <td>Live start</td>
+      <td>After bringing up the EPG, the user initiates a keypress to play a video.</td>
+      <td>Video playback has started and is visible to the user.</td>
+      <td><strong>LiveStartInitiate</strong><br /><br />The last keypress that occurred between play events. If there was no prior keypress, the Initiate beacon signal time.</td>
+      <td><strong>LiveStartComplete</strong><br /><br />The first render pass completes after the Complete beacon has been signaled (when the video node receives the "firstFramePresented" event from the Media Player).</td>
+      <td>Roku OS</td>
+    </tr>
+    <tr>
+      <td>Channel change</td>
+      <td>The user initiates a keypress to change the app.</td>
+      <td>The new video playback has started and is visible to the user.</td>
+      <td><strong>LiveChannelChangeInitiate</strong><br /><br />The time of the last keypress that occurred between play events, which must both be live streams as reported by the media player session object when the firstFramePresented event is received. In addition, the previous keypress must have happened before the video player was destroyed for a live channel change event to have occurred.</td>
+      <td><strong>LiveChannelChangeComplete</strong><br /><br />The first render pass completes after the Complete beacon has been signaled (when the video node receives the "firstFramePresented" event from the Media Player upon a live channel change occurring).</td>
+      <td>Roku OS</td>
+    </tr>
+    <tr>
+      <td>Channel exit</td>
+      <td>The user presses the Home button to exit an app.</td>
+      <td>The app has exited and the home screen is fully rendered and operational.</td>
+      <td><strong>AppExitInitiated</strong><br /><br />The home key handler engages app shutdown.</td>
+      <td><strong>AppExitComplete</strong><br /><br />The first render pass completes after the Complete beacon has been signaled (when the Roku OS completes application exit) and the Home screen is displayed.</td>
+      <td>Roku OS</td>
+    </tr>
+  </tbody>
+</table>

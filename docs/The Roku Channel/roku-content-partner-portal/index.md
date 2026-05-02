@@ -12,7 +12,7 @@ next:
       title: Dashboard
       type: basic
 ---
-The Roku content partner portal is a self-service platform designed to give TRC content partners greater visibility, control, and efficiency in managing their content lifecycle. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, access analytics to understand performance and engagement, and manage Storefront and Creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
+The Roku content partner portal is a self-service platform designed to give content partners greater visibility, control, and efficiency in managing their content lifecycle on The Roku Channel. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, access analytics to understand performance and engagement, and manage Storefront and Creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
 
 <br />
 
@@ -40,7 +40,7 @@ This transparency reduces uncertainty and empowers your teams to take action fas
 
 Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
 
-The Content Partner Portal shifts that model by:
+The Roku content partner portal shifts that model by:
 
 * Reducing dependency on support teams
 * Improving turnaround time for issue resolution
@@ -51,7 +51,7 @@ The result is a more scalable and efficient partnership model.
 
 <br />
 
-# Who it's for
+# Who this is for
 
 The portal is designed for business, operation, and marketing stakeholders within partner organizations who need visibility into content performance, delivery, and marketing status. This includes teams responsible for:
 
@@ -87,8 +87,7 @@ To get started, users must have the appropriate access role, typically **Busines
 
 # Getting started
 
-Access to the portal requires a Roku account. Partners can sign in or create an account at:
-[https://my.roku.com/signin](https://my.roku.com/signin)
+Access to the portal requires a Roku account. Partners can sign in or create an account at: [https://my.roku.com/signin](https://my.roku.com/signin)
 
 Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before it becomes available within Roku Launchpad.
 

@@ -38,7 +38,7 @@ To integrate Enhanced Subscription recovery in your app, you must complete the f
 
 **App publishing and enabling enhanced recovery**
 
-6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](doc:channel-publishing-guide#publishing-an-app), and then [Enable Enhanced Subscription Recovery](#subscription-recovery-settings) for it.
+6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](doc:channel-publishing-guide#publishing-an-app), and then [Enable Enhanced Subscription Recovery](#enabling-enhanced-subscription-recovery) for it.
 
 ### Enabling enhanced subscription recovery
 

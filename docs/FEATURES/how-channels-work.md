@@ -18,7 +18,7 @@ The three main requirements for creating a Roku app are:
 
 * Original and/or licensed video content.
 * A place to [host your content](#content-hosting) on the web (for example, an OVP, CDN, and so on).
-* A [feed](#playing-hosted-videos-in-a-roku-channel), which brings your content onto the Roku platform.
+* A [feed](#playing-hosted-videos-in-a-roku-app), which brings your content onto the Roku platform.
 
 ### Content hosting
 

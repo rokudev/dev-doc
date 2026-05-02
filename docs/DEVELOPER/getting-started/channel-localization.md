@@ -62,7 +62,7 @@ Apps offering subscriptions and one-time purchases (movie rentals, pay-per-views
 
 ### Localized in-app product names
 
-Apps can also localize the names of their [in-app products](doc:in-channel-products) (the name that is displayed to customers in the app's on-device purchasing workflow and in subscription emails sent by Roku). This helps customers identify the subscriptions and content they have purchased and reduces potential refund requests from unrecognizable charges.
+Apps can also localize the names of their [in-app products](doc:product-catalog) (the name that is displayed to customers in the app's on-device purchasing workflow and in subscription emails sent by Roku). This helps customers identify the subscriptions and content they have purchased and reduces potential refund requests from unrecognizable charges.
 
 ### Currency conversions
 

@@ -487,7 +487,7 @@ Provide the poster and background images to be displayed for the content item in
 
 | Field       | Type           | Description                                       | Required |
 | :---------- | :------------- | :------------------------------------------------ | :------- |
-| playOptions | [PlayOption][] | The list of options for playing the content item. | Required |
+| playOptions | [PlayOption](#playoption) | The list of options for playing the content item. | Required |
 
 #### playOptions
 

@@ -133,7 +133,7 @@ re-publishing.</li>
 </ul>
 <h3 id="version-2-5-05-2018">Version 2.5 – 05/2018</h3>
 <ul>
-<li>Major rework of RAF&#39;s diagnostic output to [BrightScript console](doc:debugging-channels#accessing-the-debug-console)<ul>
+<li>Major rework of RAF&#39;s diagnostic output to [BrightScript console](doc:debugging#accessing-the-debug-console)<ul>
 <li>Warning messages (prefixed with &quot;[RAF.err]&quot;) are always printed for known potential problems. Note that these are just additional diagnostics - they do not change the library&#39;s behavior, as compared to previous versions.</li>
 <li>Substantially more information is printed when in setDebugOutput(true) mode: method call arguments and return values, [URL macros](doc:integrating-roku-advertising-framework#url-parameter-macros) expansion, ad XML/parsed, etc.</li>
 </ul>

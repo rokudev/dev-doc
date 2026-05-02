@@ -54,7 +54,7 @@ function keySelected(key as string) as boolean
 
 The _key_ parameter is set to the key's "strOut" field, if specified; otherwise, it is set to the key's "label" string.
 
-The function should return _true_ if it handles the key selection. Returning _false_ causes the [default key selection handler](#default-key-selection-handler)  behavior to be used.
+The function should return _true_ if it handles the key selection. Returning _false_ causes the [default key selection handler](#default-key-selection-handlers)  behavior to be used.
 
 #### Example custom key select handler
 

@@ -18,7 +18,7 @@ See [Implementing Roku Search](doc:implementing-search) to integrate your app in
 
 ![roku815px - roku-search-overview](https://image.roku.com/ZHZscHItMTc2/roku-search-overview-v2.png)
 
-By participating in Roku Search, your app is eligible for three more discovery programs that provide additional exposure: [Visual Search Results for Roku Voice](#visual-search-results-for-roku-voice), [Roku Zones](#roku-zones) and [My Feed](#my-feed).
+By participating in Roku Search, your app is eligible for three more discovery programs that provide additional exposure: [Visual Search Results for Roku Voice](#visual-search-results-for-roku-voice), [Roku Zones](#roku-zones) and [Save List](#save-list).
 
 ### Visual Search Results for Roku Voice
 

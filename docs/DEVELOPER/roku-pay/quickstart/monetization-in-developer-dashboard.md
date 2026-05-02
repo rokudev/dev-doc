@@ -30,7 +30,7 @@ To select the monetization methods for an app, follow these steps:
 
    ![roku815px - monetization-method.jpg](https://image.roku.com/ZHZscHItMTc2/monetization-method-v4c.png)
 
-   * **Customers will pay before installing my channel (pay-to-install)**. Pay-to-install apps are typically only used on the Roku platform for games and screensavers. Pay-to-install apps are not typically used for SVOD apps—they do not enable customers to browse the content before installing the app, and they do not support free trial offers. See [In-app products](doc:in-channel-products) for more information on configuring these fields.
+   * **Customers will pay before installing my channel (pay-to-install)**. Pay-to-install apps are typically only used on the Roku platform for games and screensavers. Pay-to-install apps are not typically used for SVOD apps—they do not enable customers to browse the content before installing the app, and they do not support free trial offers. See [In-app products](doc:product-catalog) for more information on configuring these fields.
 
    * **My channel contains in-channel subscriptions (SVOD)**. The app includes a monthly or annual subscription offering. Select this option for SVOD apps. See **In-app products** for more information on creating subscription products.
 

@@ -42,7 +42,7 @@ Returns the last entry (highest index) from the array and removes it from the ar
 
 The last (highest index) array entry.
 
-### Push(tvalue As Dynamic) As Void
+### Push(value As Dynamic) As Void
 
 #### Description
 
@@ -52,29 +52,29 @@ Adds the specified value to the end of the array.
 
 | Name   | Type    | Description                                    |
 | ------ | ------- | ---------------------------------------------- |
-| tvalue | Dynamic | The value to be added to the end of the array. |
+| value  | Dynamic | The value to be added to the end of the array. |
 
 ### Shift() As Dynamic
 
 #### Description
 
-Removes the first entry (zero index) from the beginning of the array and shifts the other entries up. This method is similar to the [Pop method](#pushtvalue-as-dynamic-as-void), but removes the first entry in the array instead of the last one.
+Removes the first entry (zero index) from the beginning of the array and shifts the other entries up. This method is similar to the [Pop method](#pop-as-dynamic), but removes the first entry in the array instead of the last one.
 
 #### Return Value
 
 The first entry (zero index) removed from the array.
 
-### Unshift(tvalue As Dynamic) As Void
+### Unshift(value As Dynamic) As Void
 
 #### Description
 
-Adds the specified value to the beginning of the array (at the zero index) and shifts the other entries down. This method is similar to the [Push method](#push-as-dynamic), but adds the new entry to the beginning of the array instead of to the end.
+Adds the specified value to the beginning of the array (at the zero index) and shifts the other entries down. This method is similar to the [Push method](#pushvalue-as-dynamic-as-void), but adds the new entry to the beginning of the array instead of to the end.
 
 #### Parameters
 
 | Name   | Type    | Description                                          |
 | ------ | ------- | ---------------------------------------------------- |
-| tvalue | Dynamic | The value to be added to the beginning of the array. |
+| value  | Dynamic | The value to be added to the beginning of the array. |
 
 ### Delete(index as Integer) As Boolean
 

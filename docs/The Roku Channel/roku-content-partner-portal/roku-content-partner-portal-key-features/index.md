@@ -20,19 +20,27 @@ The Roku content partner portal brings together the core tools you need to manag
 
 Track the progress of your content from delivery through publication. Title Tracking Status provides clear visibility into where each title is in the pipeline, helping you quickly identify delays, resolve issues, and stay aligned with launch timelines.
 
-Want to learn more, check out [Title tracking status](doc:title-tracking-status).
+Want to learn more, check out [Title tracking status](doc:roku-content-partner-portal-title-tracking-status).
 
 # Storefront
 
 Manage how your content is presented to customers. The Storefront feature allows you to curate featured titles, pin content for promotion, and influence merchandising within your channel experience to drive engagement.
 
-Want to learn more, check out [Storefront](doc:storefront).
+<Callout icon="🔒" theme="default">
+  Available only to premium subscription partners.
+</Callout>
+
+Want to learn more, check out [Storefront](doc:roku-content-partner-portal-storefront).
 
 # Creatives
 
 Upload and manage the assets that represent your content. Creatives allows you to upload and manage brand assets such as tiles, banners, and call-to-action (CTA) images, as well as manage subscription offer creatives like side cards to support merchandising and promotion.
 
-Want to learn more, check out [Creatives](doc:creatives).
+<Callout icon="🔒" theme="default">
+  Available only to premium subscription partners.
+</Callout>
+
+Want to learn more, check out [Creatives](doc:roku-content-partner-portal-creatives).
 
 <br />
 

@@ -170,7 +170,7 @@ Some of the ciphers do not have large keys and others have security implications
 
     <tr>
       <td>
-        aes-gcm-128<br />_Available since Roku OS 15.2_
+        aes-gcm-128<br />_Available since [Roku OS 15.2](doc:release-notes#roku-os-152)_
       </td>
 
       <td>

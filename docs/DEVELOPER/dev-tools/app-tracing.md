@@ -19,7 +19,7 @@ The [BrightScript Language extension for VSCode](https://marketplace.visualstudi
 
 To record a trace, developers need the following:
 
-* Roku OS 15.1 (or later)
+* [Roku OS 15.1](doc:release-notes#roku-os-151) (or later)
 * A Roku device with [developer mode enabled](doc:developer-setup).
 * Roku app (you can record a trace with an app running in a [sideloaded](doc:developer-setup#sideloading-apps), beta, or production environment).
   * For a sideloaded app, the manifest must enable the **run_as_process** attribute (run_as_process=1).
@@ -37,7 +37,7 @@ You can enable and record a Perfetto trace with the [BrightScript Language exten
    1. Installed VSCode.
    2. Installed the latest version of [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript).
    3. Created a [**launch.json** configuration file](https://rokucommunity.github.io/vscode-brightscript-language/Debugging/index.html) in your app directory.
-   4. Updated your Roku device to Roku OS 15.2 (or later)
+   4. Updated your Roku device to [Roku OS 15.2](doc:release-notes#roku-os-152) (or later)
 
 2. In the **launch.json** file, add the following **profiling** object to the **configurations** object:
 

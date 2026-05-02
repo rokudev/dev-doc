@@ -181,7 +181,7 @@ As described in [Handling voice commands](#handling-voice-commands), apps must i
 
 For convenience, the list of possible values for the **status** field of the associative array taken by the [**roInput.EventResponse()**](doc:ifinput) method is as follows:
 
-* "error.generic" (_Available since Roku OS 10.0_). No active media is available to fulfill the voice command. Passing this status displays "That is not available" in the Roku Voice heads-up display. This can be used in cases, for example, when an app receives a "forward" or "next" command, but there is no content to fast forward or play next, respectively.
+* "error.generic" (_Available since [Roku OS 10.0](doc:release-notes#roku-os-100)_). No active media is available to fulfill the voice command. Passing this status displays "That is not available" in the Roku Voice heads-up display. This can be used in cases, for example, when an app receives a "forward" or "next" command, but there is no content to fast forward or play next, respectively.
 
 * "unhandled". The app is not handling the event. The default behavior is executed by the Roku OS, if defined.
 

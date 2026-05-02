@@ -363,7 +363,7 @@ For a new purchase, publishers should create a user account and add the entitlem
 
 When a renewal occurs, the **comments** field in the notification is set to "Recurring subscription processed".
 
-> As of Roku OS 10.0, the Sale push notification includes **purchaseChannel** and **purchaseContext** fields that identify whether a Roku Pay subscription purchase originated from Instant Signup. For purchases made via Instant Signup, the **purchaseChannel** field is set to "web" and  **purchaseContext** field is set to "isu". For on-device purchases, these fields are set to "device" and "iap", respectively.
+> As of [Roku OS 10.0](doc:release-notes#roku-os-100), the Sale push notification includes **purchaseChannel** and **purchaseContext** fields that identify whether a Roku Pay subscription purchase originated from Instant Signup. For purchases made via Instant Signup, the **purchaseChannel** field is set to "web" and  **purchaseContext** field is set to "isu". For on-device purchases, these fields are set to "device" and "iap", respectively.
 
 #### Purchase example
 

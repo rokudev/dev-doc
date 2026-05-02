@@ -12,7 +12,7 @@ next:
 ---
 
 
-*Available since Roku OS 15.0*
+*Available since [Roku OS 15.0](doc:release-notes#roku-os-150)*
 
 The **ifArraySizeInfo()** interface includes set of functions that provide developers with more control over array capacities. These functions reduce the memory overhead when using the [**ParseJSON()** function](doc:global-utility-functions) on large JSON body data sets. 
 
@@ -48,7 +48,7 @@ An integer indicating the  current storage capacity of the array.
 
 ### Reserve(minSize As Integer) As Boolean
 
-> *As of Roku OS 15.0, the roByteArray node does not support this function.*
+> *As of [Roku OS 15.0](doc:release-notes#roku-os-150), the roByteArray node does not support this function.*
 
 #### Description
 
@@ -68,7 +68,7 @@ Returns true if the potential capacity update can hold the specified number of i
 
 ### ShrinkToFit() As Boolean
 
-> *As of Roku OS 15.0, the roByteArray node does not support this function.*
+> *As of [Roku OS 15.0](doc:release-notes#roku-os-150), the roByteArray node does not support this function.*
 
 #### Description
 

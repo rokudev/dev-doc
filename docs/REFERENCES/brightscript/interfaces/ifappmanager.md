@@ -153,7 +153,7 @@ appMgr.SetVoiceActionStrings(actions)
 
 ### GetLastExitInfo() as Object
 
-_Available since Roku OS 13.0_
+_Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 **Description**
 

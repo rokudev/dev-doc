@@ -43,7 +43,7 @@ Print type("my string", 3) 'return a Roku OS 3.0 type
 Each script has a global Associative Array. It can be fetched with this
 function.   
 
-**New in Roku OS 3.0**
+**New in [Roku OS 3.0](doc:release-notes#roku-os-3-0)**
 
 ## Box(x as Dynamic) as Object
 

@@ -96,23 +96,23 @@ struct HandshakeFromDVP {
 <td class="short-line">3.3.0</td>
 </tr>
 <tr>
-<td class="short-line">Roku OS 12.0</td>
+<td class="short-line">[Roku OS 12.0](doc:release-notes#roku-os-120)</td>
 <td class="short-line">3.2.0</td>
 </tr>
 <tr>
-<td class="short-line">Roku OS 11.5</td>
+<td class="short-line">[Roku OS 11.5](doc:release-notes#roku-os-115)</td>
 <td class="short-line">3.1.0</td>
 </tr>
 <tr>
-<td class="short-line">Roku OS 11.0</td>
+<td class="short-line">[Roku OS 11.0](doc:release-notes#roku-os-110)</td>
 <td class="short-line">3.0.0</td>
 </tr>
 <tr>
-<td class="short-line">Roku OS 9.3, 9.4, 10.0, 10.5</td>
+<td class="short-line">[Roku OS 9.3](doc:release-notes#roku-os-93), [9.4](doc:release-notes#roku-os-94), [10.0](doc:release-notes#roku-os-100), [10.5](doc:release-notes#roku-os-105)</td>
 <td class="short-line">2.0.0</td>
 </tr>
 <tr>
-<td class="short-line">Roku OS 9.2</td>
+<td class="short-line">[Roku OS 9.2](doc:release-notes#roku-os-92)</td>
 <td class="short-line">1.0.1</td>
 </tr>
 </tbody>
@@ -121,12 +121,12 @@ struct HandshakeFromDVP {
 <tr>
 <td class="short-line">remaining_packet_length</td>
 <td class="short-line">uint32</td>
-<td class="long-line">The length in bytes of the remaining data, including the <strong>remaining_packet_length</strong> itself. The debugger client must read this number of bytes.<br><br>As of BrightScript debug protocol 3.0.0 (Roku OS 11.0), all packets from the debugging target include a <strong>packet_length</strong>. The length is always in bytes, and includes the <strong>packet_length</strong> field, itself. <br><br>This field avoids the need for changes to the major version of the protocol because it allows a debugger client to read past data it does not understand and is not critical to debugger operations.<br><br>The debug target may intentionally send a <strong>packet_length</strong> longer than the actual data, with a small number of trailing padding bytes to complete the length. Clients must read the entire <strong>packet_length</strong> before expecting the next packet.</td>
+<td class="long-line">The length in bytes of the remaining data, including the <strong>remaining_packet_length</strong> itself. The debugger client must read this number of bytes.<br><br>As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), all packets from the debugging target include a <strong>packet_length</strong>. The length is always in bytes, and includes the <strong>packet_length</strong> field, itself. <br><br>This field avoids the need for changes to the major version of the protocol because it allows a debugger client to read past data it does not understand and is not critical to debugger operations.<br><br>The debug target may intentionally send a <strong>packet_length</strong> longer than the actual data, with a small number of trailing padding bytes to complete the length. Clients must read the entire <strong>packet_length</strong> before expecting the next packet.</td>
 </tr>
 <tr>
 <td class="short-line">platform_revision_timestamp</td>
 <td class="short-line">int64</td>
-<td class="long-line">A platform-specific implementation timestamp (in milliseconds                                         since epoch [1970-01-01T00:00:00.000Z]). <br><br>As of BrightScript debug protocol 3.0.0 (Roku OS 11.0), a timestamp is sent to the debugger client in the initial handshake.  This timestamp is platform-specific data that is included in the system software of the platform being debugged. It is changed by the platform's vendor when there is any change that affects the behavior of the debugger.<br><br>The value can be used in manners similar to a build number, and is primarily used to differentiate between pre-release builds of the platform being debugged.</td>
+<td class="long-line">A platform-specific implementation timestamp (in milliseconds                                         since epoch [1970-01-01T00:00:00.000Z]). <br><br>As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), a timestamp is sent to the debugger client in the initial handshake.  This timestamp is platform-specific data that is included in the system software of the platform being debugged. It is changed by the platform's vendor when there is any change that affects the behavior of the debugger.<br><br>The value can be used in manners similar to a build number, and is primarily used to differentiate between pre-release builds of the platform being debugged.</td>
 </tr>
 </tbody>
 </table>
@@ -211,7 +211,7 @@ struct DebuggerRequest {
 </tr>
 <tr>
 <td class="short-line">8</td>
-<td class="long-line">LIST_BREAKPOINTS<br><br>(<em>As of Roku OS 11.5, this command supports both conditional and non-conditional breakpoints</em>)</td>
+<td class="long-line">LIST_BREAKPOINTS<br><br>(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
 </tr>
 <tr>
 <td class="short-line">9</td>
@@ -321,7 +321,7 @@ struct DebuggerResponse {
 </tr>
 <tr>
 <td class="short-line">8</td>
-<td class="long-line">LIST_BREAKPOINTS<br><br>(<em>As of Roku OS 11.5, this command supports both conditional and non-conditional breakpoints</em>)</td>
+<td class="long-line">LIST_BREAKPOINTS<br><br>(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
 </tr>
 <tr>
 <td class="short-line">9</td>
@@ -480,12 +480,12 @@ struct DebuggerUpdate {
 <td class="short-line">A compilation error occurred.</td>
 </tr>
 <tr>
-<td class="short-line">6<br><br><em>Available since Roku OS 12.0</em></td>
+<td class="short-line">6<br><br><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
 <td class="short-line">BREAKPOINT_VERIFIED</td>
 <td class="long-line">A breakpoint has successfully been applied to an executable line of code.</td>
 </tr>
 <tr>
-<td class="short-line">7<br><br><em>Available since Roku OS 12.0</em></td>
+<td class="short-line">7<br><br><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
 <td class="short-line">PROTOCOL_ERROR</td>
 <td class="long-line">An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.</td>
 </tr>
@@ -660,7 +660,7 @@ struct CompileErrorUpdateData {
 
 ### BreakpointVerified
 
-_Available since Roku OS 12.0_
+_Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
 A BREAKPOINT_VERIFIED message is sent when a breakpoint has successfully been applied to an executable line of code. Breakpoints may be added at any time; however, the changes may not be applied immediately if the debug target is running.  In this case, the **update_type** field in a DebuggerUpdate message is set to BREAKPOINT_VERIFIED, and the **data** field contains a structure named **BreakpointVerifiedUpdateData** that provides the ID assigned to the verified breakpoint. The **BreakpointVerifiedUpdateData** structure has the following syntax:
 
@@ -724,7 +724,7 @@ struct VerifiedBreakpointInfo {
 
 ### ProtocolError
 
-_Available since Roku OS 12.0_
+_Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
 A PROTOCOL_ERROR message is sent when an unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated. In this case, the **update_type** field in a DebuggerUpdate message is set to PROTOCOL_ERROR, and the **data** field contains a structure named **ProtocolErrorUpdateData** that provides the reason for the protocol error. The **ProtocolErrorUpdateData** structure has the following syntax:
 
@@ -900,7 +900,7 @@ The BrightScript debugger supports the following debug commands:
 | THREADS                     | Application threads info                                                                                        | Debugger is active. All threads are stopped.                                                                                                                                                                                                                                                | none                                                                                    | A [ThreadsResponse](#threadsresponse) struct.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | STACKTRACE                  | Get the stack trace of a specific thread.                                                                       | Debugger is active. All threads are stopped.                                                                                                                                                                                                                                                | uint32 thread_index                                                                     | A [StackTraceResponse](#stacktraceresponse) struct.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | VARIABLES                   | Listing of variables accessible from selected thread and stack frame.                                           | Debugger is active, all thread                                                                                                                                                                                                                                                              | [variables arguments](#variables-arguments)                                             | A [VariablesResponse](#variablesresponse) struct.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| STEP                        | Execute one step on a specified thread.                                                                         | Debugger is active. All threads are stopped.<br /><br />As of Roku OS 14.6, you can use the STEP command to step over and out of SceneGraph observer callbacks and functions called via [CallFunc](/docs/developer-program/core-concepts/handling-application-events.md#functional-fields). | [step arguments](#step-arguments)                                                       | [DebuggerResponse](#debugger-response-format) with no payload (OK or Error if successful).<br /><br />If the STEP command is valid, the debugging target responds immediately with an OK response. The specified thread will then detach from the debugger, execute briefly as specified by the **step_type** parameter, and then re-attach to the debugger.<br /><br />The re-attachment causes another [THREAD_ATTACHED](#threadattached) update message to be sent to the debugger client. |
+| STEP                        | Execute one step on a specified thread.                                                                         | Debugger is active. All threads are stopped.<br /><br />As of [Roku OS 14.6](doc:release-notes#roku-os-146), you can use the STEP command to step over and out of SceneGraph observer callbacks and functions called via [CallFunc](/docs/developer-program/core-concepts/handling-application-events.md#functional-fields). | [step arguments](#step-arguments)                                                       | [DebuggerResponse](#debugger-response-format) with no payload (OK or Error if successful).<br /><br />If the STEP command is valid, the debugging target responds immediately with an OK response. The specified thread will then detach from the debugger, execute briefly as specified by the **step_type** parameter, and then re-attach to the debugger.<br /><br />The re-attachment causes another [THREAD_ATTACHED](#threadattached) update message to be sent to the debugger client. |
 | ADD_BREAKPOINTS             | Add a dynamic breakpoint.                                                                                       | Debugger is active. Application is active (may be stopped or running).                                                                                                                                                                                                                      | An [AddBreakpointsRequestArgs](#addbreakpointsrequestargs) struct.                      | An [AddBreakpointsResponseData](#addbreakpointsresponsedata) struct.<br /><br />If a redundant breakpoint is attempted to be added, the ID of the previous breakpoint is returned and the debugging target is not affected.                                                                                                                                                                                                                                                                   |
 | LIST_BREAKPOINTS            | Lists existing dynamic and conditional breakpoints and their status.                                            | Debugger is active. All threads in script group are stopped.                                                                                                                                                                                                                                | none                                                                                    | A [ListBreakpointsResponseData](#listbreakpointsresponsedata) struct.                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | REMOVE_BREAKPOINTS          | Removes dynamic breakpoints.                                                                                    | Debugger is active. All threads in script group are stopped.                                                                                                                                                                                                                                | A [RemoveBreakpointsRequestArgs](#removebreakpointsrequestargs) struct.                 | A [RemoveBreakpointsResponseData](#removebreakpointsrequestargs) struct.                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -2094,7 +2094,7 @@ _Available since Roku OS 14.1_
 
 Virtual variables are values that can be retrieved with a VARIABLES request but do not correspond to actual variables (for example, the length of a container). By convention, variables start with a `$` character.  
 
->  As of Roku OS 15.2, developers can use virtal variables to retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime** values. This improves stepping performance when these virtual variables are expanded.
+>  As of [Roku OS 15.2](doc:release-notes#roku-os-152), developers can use virtal variables to retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime** values. This improves stepping performance when these virtual variables are expanded.
 
 The following virtual variables are supported:
 

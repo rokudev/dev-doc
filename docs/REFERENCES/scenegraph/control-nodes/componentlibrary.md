@@ -20,7 +20,7 @@ In addition to the custom components you create specifically for your applicatio
 
 To do this, define a ComponentLibrary node in the Scene node for your application. Set the id field of the node to a unique library ID for your application, and specify the URL to download the library from in the uri field of the node. As the SceneGraph scene is constructed, the library will be downloaded from the specified URL, and component instances will be created as needed for the application.
 
-> _Since Roku OS 9.4_, compilation info/failure messages for Roku SceneGraph component libraries when running side-loaded apps appear on the developer console, port 8085. (Previously, such messages were sent to port 8885.)
+> _Since [Roku OS 9.4](doc:release-notes#roku-os-94)_, compilation info/failure messages for Roku SceneGraph component libraries when running side-loaded apps appear on the developer console, port 8085. (Previously, such messages were sent to port 8885.)
 
 Component libraries can be packaged and signed the same way that apps are packaged and signed. You sideload your library, package it using the packaging tool, and then host it on the server of your choosing.
 

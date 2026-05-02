@@ -32,7 +32,7 @@ If the screen is single buffered, this method returns immediately after this ope
 
 ### GetGraphicsFeatures() as Object
 
-_Available since Roku OS 14.0_
+_Available since [Roku OS 14.0](doc:release-notes#roku-os-140)_
 
 #### Description
 

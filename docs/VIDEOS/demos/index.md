@@ -30,7 +30,7 @@ This webinars and demos section includes the following videos:
 
 * **[Roku Resoure Monitor 3.0 Webinar](doc:rrm-3-0)**: In May 2024, Roku's Developer Platform team explained how developers can use the Roku Resource Monitor to identify memory and CPU consumption trends and patterns in their apps. This webinar highlights the latest features in the tool, including new graphs that track BrightScript object allocation patterns in apps.
 
-* **[Roku OS 13.0 Developer Features Webinar](doc:roku-os-13-0)**: In April 2024, Roku's Advanced Tech team reviewed the new SceneGraph and BrightScript APIs, media and content metadata enhancements, and developer tool updates included in Roku OS 13.0.
+* **[Roku OS 13.0 Developer Features Webinar](doc:roku-os-13-0)**: In April 2024, Roku's Advanced Tech team reviewed the new SceneGraph and BrightScript APIs, media and content metadata enhancements, and developer tool updates included in [Roku OS 13.0](doc:release-notes#roku-os-130).
 
 * **[Roku Pay JWT-secured Push Notifications Webinar](doc:jwt-push-notification-webinar)**: In March 2024, Roku explained how developers can integrate JWT-secured push notifications to securely receive Roku Pay transaction data in near-real time. Topics covered in this webinar included how to use Roku Pay push notifications to manage entitlements, the difference between JWT-secured and non-authenticated messages, and the workflow for implementing JWT-secured push notifications in your system. The webinar also featured a demo of a JavaScript app for implementing JWT-secured push notifications.
 
@@ -54,7 +54,7 @@ This webinars and demos section includes the following videos:
 
 * **[BrightScript Profiler Webinar](doc:brightscript-profiler-webinar)**: In November 2020, Roku presented a two-part webinar series on using the BrightScript Profiler to optimize app performance. In part one, Roku explained the importance of memory management for Roku apps, demonstrated how to use the BrightScript Profiler to collect memory and CPU usage data on an app, and answered questions about the BrightScript Profiler from attendees.
 
-* **[Developer Summit 2020](doc:summit-2020)**: Roku held its annual developer summit online in mid-October 2020. Topics covered included the Fall 2020 product lineup, new features in Roku OS 9.4, channel certification updates, and app growth and monetization strategies.
+* **[Developer Summit 2020](doc:summit-2020)**: Roku held its annual developer summit online in mid-October 2020. Topics covered included the Fall 2020 product lineup, new features in [Roku OS 9.4](doc:release-notes#roku-os-94), channel certification updates, and app growth and monetization strategies.
 
 * **[Automated app testing](doc:auto-channel-test)**: This video demonstrates the Roku automated app testing software. It provides a brief overview of the technology stack, and it shows how both the Roku WebDriver and Robot Framework Library can be used for state-driven app UI automation testing.
 

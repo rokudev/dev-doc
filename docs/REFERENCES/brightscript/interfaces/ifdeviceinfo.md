@@ -760,7 +760,7 @@ A flag indicating whether the system clock on the device is valid.
 
 ### EnableValidClockEvent(enable as Boolean) as Dynamic
 
-_Available since Roku OS 13.0_
+_Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 #### Description
 
@@ -922,7 +922,7 @@ A flag indicating whether network connection status event notifications are enab
 
 ### GetUptimeMillisecondsAsLong() as Long
 
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 #### Description
 
@@ -1007,7 +1007,7 @@ An associative array with the following key-value pairs:
     </tr>
 
     <tr>
-      <td>ipv6<br /><br /><em>Available since Roku OS 12.0</em></td>
+      <td>ipv6<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
       <td>A list of IPv6 addresses used by the connection.</td>
     </tr>
 
@@ -1476,7 +1476,7 @@ hasDTS = audioDecoders.doesexist("DTS")
 hasDDPlus = audioDecoders.doesexist("DD+")
 ```
 
-> The definition of hasFeature (“5.1_surround_sound”) has changed in Roku OS 6.1. In previous firmware revisions it returned true when the user set the system audio format to "Surround Sound". In Roku OS6.1 and above, it returns true when any of the codecs in the GetAudioDecodeInfo() AA has more than 2 audio channels. Users devices will also be default to the "Auto Detect" system HDMI audio setting in v6.1.
+> The definition of hasFeature (“5.1_surround_sound”) has changed in [Roku OS 6.1](doc:release-notes#roku-os-6-1). In previous firmware revisions it returned true when the user set the system audio format to "Surround Sound". In Roku OS6.1 and above, it returns true when any of the codecs in the GetAudioDecodeInfo() AA has more than 2 audio channels. Users devices will also be default to the "Auto Detect" system HDMI audio setting in v6.1.
 
 ### CanDecodeAudio(audio_format as Object) as Object
 
@@ -1536,7 +1536,7 @@ The UI sounds effects volume as a percentage. A return value of 0 indicates that
 
 ### IsAudioGuideEnabled() as Dynamic
 
-> The screen reader is available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running Roku OS version 7.5 and later.
+> The screen reader is available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running [Roku OS version 7.5](doc:release-notes#roku-os-7-5) and later.
 
 #### Description
 
@@ -1548,7 +1548,7 @@ A flag indicating whether the screen reader is enabled.
 
 ### EnableAudioGuideChangedEvent(enable as Boolean) as Dynamic
 
-> The screen reader is available on: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running Roku OS version 7.5 and above
+> The screen reader is available on: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running [Roku OS version 7.5](doc:release-notes#roku-os-7-5) and above
 
 #### Description
 
@@ -1566,7 +1566,7 @@ A flag indicating whether screen reader change event notifications are enabled (
 
 ### IsAutoplayEnabled() as Boolean
 
-_Available since Roku OS 13.0_
+_Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 **Description**
 
@@ -1582,7 +1582,7 @@ A boolean indicating whether autoplay is enabled on a device.
 
 ### isAutoAdjustRefreshRateEnabled() as Boolean
 
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 **Description**
 

@@ -39,7 +39,7 @@ myScene.signalBeacon(“AppLaunchComplete”)
 
 If the app UI displays a login, user selection, or end-user license agreement (EULA) dialog before the home page, the app must fire **AppDialogInitiate** and **AppDialogComplete** beacons when the dialog loads and exits, respectively.
 
-These beacons, which were introduced in Roku OS 9.3, enable more accurate measurements of app launch times as the time spent on any dialogs requiring user input prior to rendering the home page are subtracted from the overall app launch time. If the app displays more that one dialog before the home page, multiple pairs of **AppDialogInitiate**/**AppDialogComplete** beacons may be fired.  Do not fire AppDialog beacons on message dialogs that do not involve any user interaction (for example, a "please wait" or "loading" dialog).
+These beacons, which were introduced in [Roku OS 9.3](doc:release-notes#roku-os-93), enable more accurate measurements of app launch times as the time spent on any dialogs requiring user input prior to rendering the home page are subtracted from the overall app launch time. If the app displays more that one dialog before the home page, multiple pairs of **AppDialogInitiate**/**AppDialogComplete** beacons may be fired.  Do not fire AppDialog beacons on message dialogs that do not involve any user interaction (for example, a "please wait" or "loading" dialog).
 
 To fire the **AppDialogInitiate**/**AppDialogComplete** beacons from the app, call the **signalBeacon()** function on any node as demonstrated in the following example:
 

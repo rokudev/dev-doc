@@ -26,7 +26,7 @@ To integrate Instant Resume, you must have a Roku test device that meets the fol
 
 * **Multi-core ARM processor**. Instant Resume is supported only on Roku devices with multi-core, ARM processors. Although Instant Resume will be enabled on other devices, its effectiveness will vary by platform memory profile. See the [Hardware specifications](doc:hardware) for processor and memory capabilities of all Roku devices.
 
-* **Roku OS 10.0 (or higher)**. Instant Resume is supported only on devices that can run Roku OS 10.0 or higher. See the [Hardware specifications](doc:hardware) for the list of current and updatable Roku devices.
+* **[Roku OS 10.0](doc:release-notes#roku-os-100) (or higher)**. Instant Resume is supported only on devices that can run [Roku OS 10.0](doc:release-notes#roku-os-100) or higher. See the [Hardware specifications](doc:hardware) for the list of current and updatable Roku devices.
 
 > Implementing Instant Resume in an app does not guarantee that the Roku OS can relaunch it in its suspended state. The Roku OS stores as many suspended apps as possible in memory; however, it removes suspended apps when additional memory is needed by the active app. If a suspended app is removed from memory, re-launching the app is done without Instant Resume.
 
@@ -60,7 +60,7 @@ When the Home key or labeled app key on the Roku remote control is pressed, the 
 
 When the user later returns to the app, the Roku OS invokes the matching **customResume** handler. In the **customResume** handler, apps implement logic to determine the playback experience upon re-launch. Using VOD content for example, the **customResume** handler can check whether a Video node is on the screen stack and remove it if it is in order to display the content's Details screen.
 
-> As of Roku OS 12.0, pressing the "Back" key to exit an app generates an interruption. This means that apps without an Exit Confirmation dialog can support Instant Resume.
+> As of [Roku OS 12.0](doc:release-notes#roku-os-120), pressing the "Back" key to exit an app generates an interruption. This means that apps without an Exit Confirmation dialog can support Instant Resume.
 >
 > ***
 >
@@ -239,6 +239,6 @@ end sub
 
 ## Sample app
 
-If your device is running Roku OS 10.0 (or later), you can download and install a [sample app](https://github.com/rokudev/instant-resume) that demonstrates how to implement Instant Resume in an app. You can customize the handling of suspend and resume events in the sample to meet your app's needs.
+If your device is running [Roku OS 10.0](doc:release-notes#roku-os-100) (or later), you can download and install a [sample app](https://github.com/rokudev/instant-resume) that demonstrates how to implement Instant Resume in an app. You can customize the handling of suspend and resume events in the sample to meet your app's needs.
 
 The `onMainSceneSuspend()` and `onMainSceneResume()` methods shown in the VOD playback code sample are taken from the **components/UILogic/VideoPlayerLogic.brs** file in the sample app. They are used as the controlling the `customSuspend()` and `customResume()` methods in the **components/MainScene.xml** file.

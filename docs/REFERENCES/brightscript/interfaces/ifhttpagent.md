@@ -168,7 +168,7 @@ Returns any cookies from the cookie cache that match the specified domain and pa
 <td>The path of the cookies to be retrieved.</td>
 </tr>
 <tr>
-<td>secure<br /><br /><em>Available since Roku OS 12.0</em></td>
+<td>secure<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
 <td>Boolean</td>
 <td>Indicates whether the cookie is to be retrieved via HTTPS (true) or HTTP (false).</td>
 </tr>
@@ -210,7 +210,7 @@ Adds the specified cookies to the cookie cache.
 <tr>
 <td>cookies</td>
 <td>Object</td>
-<td>An roArray of roAssociativeArrays, where each associative array represents a cookie to be added. Each associative array must contain the following key-value pairs: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Version</td><td>Integer</td><td>Cookie version number</td></tr><tr><td>Domain</td><td>String</td><td>Domain to which cookie applies</td></tr><tr><td>Path</td><td>String</td><td>Path to which cookie applies</td></tr><tr><td>Name</td><td>String</td><td>Name of the cookie</td></tr><tr><td>Value</td><td>String</td><td>Value of the cookie</td></tr><tr><td>Expires</td><td>roDateTime</td><td>Cookie expiration date, if any</td></tr><tr><td>Secure<br /><br /><em>Available since Roku OS 12.0</em></td><td>Boolean</td><td>Indicates whether the cookie is to be sent over HTTPS (true) or HTTP (false).</td></tr></tbody></table></td>
+<td>An roArray of roAssociativeArrays, where each associative array represents a cookie to be added. Each associative array must contain the following key-value pairs: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Version</td><td>Integer</td><td>Cookie version number</td></tr><tr><td>Domain</td><td>String</td><td>Domain to which cookie applies</td></tr><tr><td>Path</td><td>String</td><td>Path to which cookie applies</td></tr><tr><td>Name</td><td>String</td><td>Name of the cookie</td></tr><tr><td>Value</td><td>String</td><td>Value of the cookie</td></tr><tr><td>Expires</td><td>roDateTime</td><td>Cookie expiration date, if any</td></tr><tr><td>Secure<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td><td>Boolean</td><td>Indicates whether the cookie is to be sent over HTTPS (true) or HTTP (false).</td></tr></tbody></table></td>
 </tr>
 </tbody>
 </table>

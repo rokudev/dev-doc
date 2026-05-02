@@ -131,7 +131,7 @@ For example, if starting video playback is slow or seems to cause memory leaks, 
 
 ### Port 8080 Commands
 
-These profiling commands exist on port 8080 (Roku OS Versions 9 and later):
+These profiling commands exist on port 8080 ([Roku OS Versions 9](doc:release-notes#roku-os-9) and later):
 
 | **Command**   | **Purpose**                              |
 |---------------|------------------------------------------|

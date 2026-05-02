@@ -525,7 +525,7 @@ For the HTTP/2 connection sharing feature, all roUrlTransfers should be made fro
 
 ### GetUserAgent() as String
 
-*Available since Roku OS 12.5*
+*Available since [Roku OS 12.5](doc:release-notes#roku-os-125)*
 
 #### Description
 

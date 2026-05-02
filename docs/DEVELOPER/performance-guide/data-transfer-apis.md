@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Roku OS 15.0 includes new APIs for populating node fields by _moving_ rather than _copying_ associative arrays. These new APIs overcome the traditional performance issues posed by setting or getting the large associative array fields of nodes. On the render thread, data can now be efficiently accessed by _reference_ rather than copying. In addition, rendezvous blocking in task node threads can now be avoided by passing messages asynchronously to the queue of the render thread.
+[Roku OS 15.0](doc:release-notes#roku-os-150) includes new APIs for populating node fields by _moving_ rather than _copying_ associative arrays. These new APIs overcome the traditional performance issues posed by setting or getting the large associative array fields of nodes. On the render thread, data can now be efficiently accessed by _reference_ rather than copying. In addition, rendezvous blocking in task node threads can now be avoided by passing messages asynchronously to the queue of the render thread.
 
-The following list breaks down these new data transfer and reference handling APIs introduced in Roku OS 15.0:
+The following list breaks down these new data transfer and reference handling APIs introduced in [Roku OS 15.0](doc:release-notes#roku-os-150):
 
 * **Moving data**
   * roSGNode.MoveIntoField(field_name as String, data as Object) as Integer
@@ -302,7 +302,7 @@ shared = {}
 
 ## Queueing messages
 
-Roku OS 15.0 provides a new **roRenderThreadQueue** node for queuing messages to be consumed by handlers on the render thread. This enables asynchronous communication between Task nodes and the render thread. Messages passed using this mechanism will not block the render thread like a rendezvous.
+[Roku OS 15.0](doc:release-notes#roku-os-150) provides a new **roRenderThreadQueue** node for queuing messages to be consumed by handlers on the render thread. This enables asynchronous communication between Task nodes and the render thread. Messages passed using this mechanism will not block the render thread like a rendezvous.
 
 ### Message Handlers
 

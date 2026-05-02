@@ -14,7 +14,7 @@ next:
 
 Extends [**LabelBase**](doc:label-base)
 
-> As of Roku OS 10.5, the Label node inherits most of its functionality from [LabelBase](doc:label-base) node class. Developers, however, do not need to update their app code to account for this refactoring. 
+> As of [Roku OS 10.5](doc:release-notes#roku-os-105), the Label node inherits most of its functionality from [LabelBase](doc:label-base) node class. Developers, however, do not need to update their app code to account for this refactoring. 
 
 The Label node class is used to display a string of text.
 

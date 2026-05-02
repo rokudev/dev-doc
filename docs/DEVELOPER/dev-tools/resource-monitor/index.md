@@ -23,9 +23,9 @@ The Roku Resource Monitor is intended to be used in conjunction with the [Bright
 To run the Roku Resource Monitor, you need the following:
 
 * A Roku device with [developer mode enabled](doc:developer-setup). The Roku Resource Monitor does not support Littlefield or Liberty device models. The compatible Roku OS for the different versions of the tool are as follows:
-  * RRM 4.x: Roku OS 14.5 (or higher) or Roku OS 14.1.
+  * RRM 4.x: [Roku OS 14.5](doc:release-notes#roku-os-145) (or higher) or Roku OS 14.1.
 
-  * RRM 3.1: Roku OS 13.5 or Roku OS 13.0.
+  * RRM 3.1: Roku OS 13.5 or [Roku OS 13.0](doc:release-notes#roku-os-130).
   > As of Roku OS 14.1, the **Settings > System > Advanced system settings > Control by mobile apps** feature must be set to "Enabled" or "Permissive" for RRM to get data from your device.
 
 * Roku app (the Roku Resource Monitor works with apps running in [sideloaded](doc:developer-setup#sideloading-apps), beta, or production environments).
@@ -38,7 +38,7 @@ To run the Roku Resource Monitor, follow these steps:
 
 1. [Download the Roku Resource Monitor](https://devtools.web.roku.com/#rrm-tool) and install it on your desktop.
 
-2. In the **Device Manager > Online** panel, select your test device that is running Roku OS 11.5 (or higher) by toggling the On/Off button and then clicking **Select device**. You can also manually add your device by clicking **Add a Device**, entering its IP address, entering a name to be used to identify it, and then clicking **Add**. To test sideloaded apps, click the settings icon under **Options**, enter the user name (rokudev) and password for your device, and then click **Save**.
+2. In the **Device Manager > Online** panel, select your test device that is running [Roku OS 11.5](doc:release-notes#roku-os-115) (or higher) by toggling the On/Off button and then clicking **Select device**. You can also manually add your device by clicking **Add a Device**, entering its IP address, entering a name to be used to identify it, and then clicking **Add**. To test sideloaded apps, click the settings icon under **Options**, enter the user name (rokudev) and password for your device, and then click **Save**.
 
    ![roku400px - rrmselectdevice](https://image.roku.com/ZHZscHItMTc2/rrm-device-manager-v2.png)
 

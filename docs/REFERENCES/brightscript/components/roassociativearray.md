@@ -29,7 +29,7 @@ CreateObject("roAssociativeArray")
 
 It can also be created implicitly by using an Associative Array literal.
 
-Starting from Roku OS 8, the quoted keys in Associative Array literals are now case-preserving. This change improves the readability of your code and is compatible with JSON usage.
+Starting from [Roku OS 8](doc:release-notes#roku-os-8), the quoted keys in Associative Array literals are now case-preserving. This change improves the readability of your code and is compatible with JSON usage.
 
 **Example**
 

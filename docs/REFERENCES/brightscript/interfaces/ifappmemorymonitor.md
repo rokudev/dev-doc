@@ -14,7 +14,7 @@ next:
 
 | Name                                         | Description                                                                                                                                                                                                                                                                |
 | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [roAppMemoryMonitor](doc:roappmemorymonitor) | Subscribes apps to low-memory notifications. As of Roku OS 15.2, subscribed apps receive [roAppMemoryNotificationEvent](doc:roappmemorynotificationevent)  alerts when memory usage exceeds or falls below thresholds (currently 80%, 85%, 90%, 95% of the per-app limit). |
+| [roAppMemoryMonitor](doc:roappmemorymonitor) | Subscribes apps to low-memory notifications. As of [Roku OS 15.2](doc:release-notes#roku-os-152), subscribed apps receive [roAppMemoryNotificationEvent](doc:roappmemorynotificationevent)  alerts when memory usage exceeds or falls below thresholds (currently 80%, 85%, 90%, 95% of the per-app limit). |
 
 > The roAppMemoryMonitor functions are supported on all [current and updatable device models](doc:hardware), except for Liberty, Austin, Mustang and Littlefield.
 >
@@ -82,7 +82,7 @@ end while
 
 ### GetChannelAvailableMemory() as Int
 
-_Available since Roku OS 12.5_
+_Available since [Roku OS 12.5](doc:release-notes#roku-os-125)_
 
 #### Description
 
@@ -94,7 +94,7 @@ An integer indicating the estimated available memory remaining for the app or th
 
 ### GetChannelMemoryLimit() as Object
 
-_Available since Roku OS 13.0_
+_Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 **Description**
 

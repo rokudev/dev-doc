@@ -279,7 +279,7 @@ END TRY
 
 
 
-> TRY and CATCH were introduced into BrightScript with Roku OS version 9.4, and any app that uses them must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
+> TRY and CATCH were introduced into BrightScript with [Roku OS version 9.4](doc:release-notes#roku-os-94), and any app that uses them must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
 
 ### Nested TRY/CATCH statements
 
@@ -312,7 +312,7 @@ The expression given in the THROW statement should evaluate to an exception obje
 
 
 
-> THROW was introduced into BrightScript with Roku OS version 9.4, and any app that uses it must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
+> THROW was introduced into BrightScript with [Roku OS version 9.4](doc:release-notes#roku-os-94), and any app that uses it must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
 
 **Example code**
 

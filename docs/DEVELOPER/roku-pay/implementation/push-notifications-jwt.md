@@ -125,7 +125,7 @@ The **x-Roku-message** field within the JWT claim payload is a base64url-encoded
     "comments":"New order processed.",
     "eventDate":"2020-03-05T18:45:04.8762198Z",
     "creditsApplied":0.00,
-    "responseKey”:“d4dd12df0c8445afa8860895061e72f9"
+    "responseKey":"d4dd12df0c8445afa8860895061e72f9"
 }
 ```
 

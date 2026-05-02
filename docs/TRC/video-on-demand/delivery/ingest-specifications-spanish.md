@@ -674,11 +674,11 @@ Las etiquetas para merchandising/curación se pueden enviar a través del nodo d
 *Ejemplo:*
 
 ```
-<md:LocalizedInfo language=“en”>
+<md:LocalizedInfo language="en">
 <md:TitleDisplayUnlimited>Gran título de mi programa</md:TitleDisplayUnlimited>
 <md:Summary190>Resumen breve de mi programa.</md:Summary190>
 <md:Summary400>Resumen más extenso de mi programa.</md:Summary400>
-<md:Genre id=“genero”/>
+<md:Genre id="genero"/>
 <md:Keyword>palabra clave</md:Keyword>
 </md:LocalizedInfo>
 ```

@@ -276,8 +276,8 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
 
    ```
    myChannelStore.requestedUserData("email")
-   info = CreateObject(“roSGNode”, “ContentNode”)
-   info.addFields(\{context: “signin”})
+   info = CreateObject("roSGNode", "ContentNode")
+   info.addFields(\{context: "signin"})
    myChannelStore.requestedUserDataInfo = info
    ```
 

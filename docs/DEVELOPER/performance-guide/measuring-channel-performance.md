@@ -30,7 +30,7 @@ Apps must fire an **AppLaunchComplete** beacon when the app home page is fully r
 To fire the **AppLaunchComplete** beacon from the app, call the **signalBeacon()** function on any node as demonstrated in the following example:
 
 ```
-myScene.signalBeacon(“AppLaunchComplete”)
+myScene.signalBeacon("AppLaunchComplete")
 ```
 
 > For your app to pass certification, your application must fire the **AppLaunchComplete** beacon to measure app launch time.
@@ -44,8 +44,8 @@ These beacons, which were introduced in Roku OS 9.3, enable more accurate measur
 To fire the **AppDialogInitiate**/**AppDialogComplete** beacons from the app, call the **signalBeacon()** function on any node as demonstrated in the following example:
 
 ```
-myScene.signalBeacon(“AppDialogInitiate”)
-myScene.signalBeacon(“AppDialogComplete”)
+myScene.signalBeacon("AppDialogInitiate")
+myScene.signalBeacon("AppDialogComplete")
 ```
 
 > For your app to pass certification, your application must fire the **AppDialogInitiate** and **AppDialogComplete** beacons if the app UI displays a login, user selection, EULA, or any other dialog before the home page.
@@ -55,8 +55,8 @@ myScene.signalBeacon(“AppDialogComplete”)
 If your app contains an EPG, the application must also fire beacons when the user initiates a keypress to display the EPG (**EPGLaunchInitiate**) and when the EPG is fully rendered and navigable (**EPGLaunchComplete**). The following example demonstrates how to do this:
 
 ```
-myEPGComponent.signalBeacon(“EPGLaunchInitiate”)
-m.top.signalBeacon(“EPGLaunchComplete”)
+myEPGComponent.signalBeacon("EPGLaunchInitiate")
+m.top.signalBeacon("EPGLaunchComplete")
 ```
 
 Only the first sequence of EPG launch beacons is recorded.  If a user launches the EPG more than once while the app is running, a warning message is output to the debug console. This warning message, which acknowledges the receipt of the beacon while notifying that subsequent ones will not be recorded, may be ignored.

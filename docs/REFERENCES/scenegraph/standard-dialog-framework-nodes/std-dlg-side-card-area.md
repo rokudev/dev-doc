@@ -85,53 +85,48 @@ In this example, the **StdDlgSideCardArea** has a child **Poster** node with its
 
 ![roku815px - SideCardGlamourShot](https://image.roku.com/ZHZscHItMTc2/SideCardGlamourShot.jpg)
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<component name="SideCardGlamourShotDialog" extends="StandardDialog" initialFocus="buttonArea" >
- 
-<script type="text/brightscript" >
-<![CDATA[
-function init()
-    m.top.width  = "1380"
- 
-    m.buttonArea = m.top.findNode("buttonArea")
-    m.top.observeFieldScoped("buttonFocused", "printFocusButton")
-    m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
-    m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
-end function
- 
-sub printFocusButton()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonFocused).text;" focused"
-end sub
- 
-sub printSelectedButtonAndClose()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonSelected).text;" selected"
-    m.top.close = true
-end sub
- 
-sub wasClosedChanged()
-    print "SideCardRightDialog Closed"
-end sub
- 
-]]>
-</script>
- 
-<children>
-  <StdDlgTitleArea primaryTitle="Glamour Shot Side Card" />
-  <StdDlgContentArea>
-     <StdDlgTextItem text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien massa, efficitur a accumsan a, commodo eget justo. In id ante elementum, posuere diam quis, lobortis magna." />
-  </StdDlgContentArea>
-  <StdDlgButtonArea id="buttonArea" >
-    <StdDlgButton text="OK" />
-    <StdDlgButton text="Cancel" />
-  </StdDlgButtonArea>
-  <StdDlgSideCardArea id="buttonArea" horizAlign="left" extendToDialogEdge="true" showDivider="false"  >
+<component name="SideCardGlamourShotDialog" extends="StandardDialog" initialFocus="buttonArea">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        m.top.width = "1380"
+        m.buttonArea = m.top.findNode("buttonArea")
+        m.top.observeFieldScoped("buttonFocused", "printFocusButton")
+        m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
+        m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
+      end function
+
+      sub printFocusButton()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonFocused).text; " focused"
+      end sub
+
+      sub printSelectedButtonAndClose()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonSelected).text; " selected"
+        m.top.close = true
+      end sub
+
+      sub wasClosedChanged()
+        print "SideCardRightDialog Closed"
+      end sub
+    ]]>
+  </script>
+
+  <children>
+    <StdDlgTitleArea primaryTitle="Glamour Shot Side Card" />
+    <StdDlgContentArea>
+      <StdDlgTextItem text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien massa, efficitur a accumsan a, commodo eget justo. In id ante elementum, posuere diam quis, lobortis magna." />
+    </StdDlgContentArea>
+    <StdDlgButtonArea id="buttonArea">
+      <StdDlgButton text="OK" />
+      <StdDlgButton text="Cancel" />
+    </StdDlgButtonArea>
+    <StdDlgSideCardArea id="buttonArea" horizAlign="left" extendToDialogEdge="true" showDivider="false">
       <Poster id="sideCardPoster" loadSync="true" loadDisplayMode="limitSize" uri="pkg:/images/MountainLakeSideCard.jpg" translation="[0.0f, 0.0f]" />
-      <SimpleLabel text="Photo Credit: Jeff Anderson" vertOrigin="bottom" horizOrigin="right" translation="[575, 775]" color="0xFFFFFFFF" fontUri="font:SystemFontFile" fontSize="24"/>        
-  </StdDlgSideCardArea>
-</children>
- 
+      <SimpleLabel text="Photo Credit: Jeff Anderson" vertOrigin="bottom" horizOrigin="right" translation="[575, 775]" color="0xFFFFFFFF" fontUri="font:SystemFontFile" fontSize="24" />
+    </StdDlgSideCardArea>
+  </children>
 </component>
 ```
 
@@ -141,51 +136,47 @@ In this example, the **StdDlgSideCardArea** has a child **Label** node ("Show th
 
 ![roku815px - SideCardAnnotation](https://image.roku.com/ZHZscHItMTc2/SideCardAnnotation.jpg)
 
-```
-<component name="SideCardAnnotationDialog" extends="StandardDialog" initialFocus="buttonArea" >
- 
-<script type="text/brightscript" >
-<![CDATA[
-function init()
-    m.top.width  = "1380"
- 
-    m.buttonArea = m.top.findNode("buttonArea")
-    m.top.observeFieldScoped("buttonFocused", "printFocusButton")
-    m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
-    m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
-end function
- 
-sub printFocusButton()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonFocused).text;" focused"
-end sub
- 
-sub printSelectedButtonAndClose()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonSelected).text;" selected"
-    m.top.close = true
-end sub
- 
-sub wasClosedChanged()
-    print "SideCardRightDialog Closed"
-end sub
- 
-]]>
-</script>
- 
-<children>
-  <StdDlgTitleArea primaryTitle="Annotation Side Card" />
-  <StdDlgContentArea>
-     <StdDlgTextItem text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien massa, efficitur a accumsan a, commodo eget justo. In id ante elementum, posuere diam quis, lobortis magna." />   
-  </StdDlgContentArea>
-  <StdDlgButtonArea id="buttonArea" >
-    <StdDlgButton text="OK" />
-    <StdDlgButton text="Cancel" />
-  </StdDlgButtonArea>
-  <StdDlgSideCardArea id="buttonArea" horizAlign="right" width="500" extendToDialogEdge="false" showDivider="true"  >
-      <Label text="Scan the QR Code to get a bunch of free stuff" horizAlign="center" wrap="true" width="500" translation="[0, 0]" fontUri="font:SystemFontFile" fontSize="36"/>
+```xml
+<component name="SideCardAnnotationDialog" extends="StandardDialog" initialFocus="buttonArea">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        m.top.width = "1380"
+        m.buttonArea = m.top.findNode("buttonArea")
+        m.top.observeFieldScoped("buttonFocused", "printFocusButton")
+        m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
+        m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
+      end function
+
+      sub printFocusButton()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonFocused).text; " focused"
+      end sub
+
+      sub printSelectedButtonAndClose()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonSelected).text; " selected"
+        m.top.close = true
+      end sub
+
+      sub wasClosedChanged()
+        print "SideCardRightDialog Closed"
+      end sub
+    ]]>
+  </script>
+
+  <children>
+    <StdDlgTitleArea primaryTitle="Annotation Side Card" />
+    <StdDlgContentArea>
+      <StdDlgTextItem text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien massa, efficitur a accumsan a, commodo eget justo. In id ante elementum, posuere diam quis, lobortis magna." />
+    </StdDlgContentArea>
+    <StdDlgButtonArea id="buttonArea">
+      <StdDlgButton text="OK" />
+      <StdDlgButton text="Cancel" />
+    </StdDlgButtonArea>
+    <StdDlgSideCardArea id="buttonArea" horizAlign="right" width="500" extendToDialogEdge="false" showDivider="true">
+      <Label text="Scan the QR Code to get a bunch of free stuff" horizAlign="center" wrap="true" width="500" translation="[0, 0]" fontUri="font:SystemFontFile" fontSize="36" />
       <Poster translation="[30, 120]" uri="pkg:/images/RokuQRCode441x441.png" />
-  </StdDlgSideCardArea>
-</children>
- 
+    </StdDlgSideCardArea>
+  </children>
 </component>
 ```
 

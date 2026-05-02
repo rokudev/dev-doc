@@ -25,39 +25,24 @@ First, a component that uses XML markup exclusively:
 
 **Rectangle XML markup**
 
-```
-<component name="rectangleexample" extends="Scene" >
+```xml
+<component name="rectangleexample" extends="Scene">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.setFocus(true)
+      end sub
+    ]]>
+  </script>
 
-<script type = "text/brightscript" >
-
-<![CDATA[
-
-sub init()
-
-m.top.setFocus(true)
-
-end sub
-
-]]>
-
-</script>
-
-<children>
-
-<Rectangle
-
-id = "exampleRectangle"
-
-color = "0x0000CCFF"
-
-width = "886"
-
-height = "44"
-
-translation = "[290,34]" />
-
-</children>
-
+  <children>
+    <Rectangle
+      id="exampleRectangle"
+      color="0x0000CCFF"
+      width="886"
+      height="44"
+      translation="[290,34]" />
+  </children>
 </component>
 ```
 
@@ -65,39 +50,24 @@ The blue rectangle is automatically created, and made a child of the component, 
 
 **Setting node attributes in BrightScript**
 
-```
-<component name="rectangleexample" extends="Scene" >
+```xml
+<component name="rectangleexample" extends="Scene">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.examplerectangle = m.top.findNode("exampleRectangle")
+        m.examplerectangle.color = "0x0000CCFF"
+        m.examplerectangle.width = "886"
+        m.examplerectangle.height = "44"
+        m.examplerectangle.translation = "[290,34]"
+        m.top.setFocus(true)
+      end sub
+    ]]>
+  </script>
 
-<script type = "text/brightscript" >
-
-<![CDATA[
-
-sub init()
-
-m.examplerectangle = m.top.findNode("exampleRectangle")
-
-m.examplerectangle.color = "0x0000CCFF"
-
-m.examplerectangle.width = "886"
-
-m.examplerectangle.height = "44"
-
-m.examplerectangle.translation = "[290,34]"
-
-m.top.setFocus(true)
-
-end sub
-
-]]>
-
-</script>
-
-<children>
-
-<Rectangle id="exampleRectangle" />
-
-</children>
-
+  <children>
+    <Rectangle id="exampleRectangle" />
+  </children>
 </component>
 ```
 
@@ -107,45 +77,26 @@ But a node can be created in BrightScript at any time, using functions like Crea
 
 **BrightScript creation of SceneGraph nodes**
 
-```
-<component name="rectangleexample" extends="Scene" >
-
-<script type = "text/brightscript" >
-
-<![CDATA[
-
-sub init()
-
-m.top.backgroundURI = "pkg:/images/purplebg.jpg"
-
-rectattribs = CreateObject("roAssociativeArray")
-
-rectattribs.color = "0x1998CFFF"
-
-rectattribs.width = "886"
-
-rectattribs.height = "44"
-
-rectattribs.translation = "[290,34]"
-
-m.examplerectangle = m.top.createChild("Rectangle")
-
-m.examplerectangle.color = rectattribs.color
-
-m.examplerectangle.width = rectattribs.width
-
-m.examplerectangle.height = rectattribs.height
-
-m.examplerectangle.translation = rectattribs.translation
-
-m.top.setFocus(true)
-
-end sub
-
-]]>
-
-</script>
-
+```xml
+<component name="rectangleexample" extends="Scene">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.backgroundURI = "pkg:/images/purplebg.jpg"
+        rectattribs = CreateObject("roAssociativeArray")
+        rectattribs.color = "0x1998CFFF"
+        rectattribs.width = "886"
+        rectattribs.height = "44"
+        rectattribs.translation = "[290,34]"
+        m.examplerectangle = m.top.createChild("Rectangle")
+        m.examplerectangle.color = rectattribs.color
+        m.examplerectangle.width = rectattribs.width
+        m.examplerectangle.height = rectattribs.height
+        m.examplerectangle.translation = rectattribs.translation
+        m.top.setFocus(true)
+      end sub
+    ]]>
+  </script>
 </component>
 ```
 
@@ -153,65 +104,42 @@ In this example, setting up an associative array to configure a simple rectangle
 
 **Server node configuration XML file**
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-
 <RectAttribs
-
-color="0x0000CCFF"
-
-width="886"
-
-height="44"
-
-translation="[290,34]" />
+  color="0x0000CCFF"
+  width="886"
+  height="44"
+  translation="[290,34]" />
 ```
 
 These are the same attributes set in all the other examples, only the location of the XML attributes has changed to your server. Now you need to set up a **Task** node to download the XML attributes file from your server (see [**Downloading Server Content**](doc:downloading-server-content) and [**Task**](doc:task), and convert the attributes to an associative array, as was set up manually in the previous example:
 
 **Task node to download server XML node configuration file**
 
-```
-<component name="getrectconfig" extends="Task" >
+```xml
+<component name="getrectconfig" extends="Task">
+  <interface>
+    <field id="uri" type="string" />
+    <field id="rectconfig" type="assocarray" />
+  </interface>
 
-<interface>
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.functionName = "getConfig"
+      end sub
 
-  <field id = "uri" type = "string" />
-
-  <field id = "rectconfig" type = "assocarray" />
-
-</interface>
-
-<script type = "text/brightscript" >
-
-<![CDATA[
-
-sub init()
-
-  m.top.functionName = "getConfig"
-
-end sub
-
-sub getConfig()
-
-  rectconfigxml = createObject("roXMLElement")
-
-  readInternet = createObject("roUrlTransfer")
-
-  readInternet.setUrl(m.top.uri)
-
-  rectconfigxml.parse(readInternet.getToString())
-
-  rectconfig = rectconfigxml.GetAttributes()
-
-  m.top.rectconfig = rectconfig
-
-end sub
-
-]]>
-
-</script>
-
+      sub getConfig()
+        rectconfigxml = createObject("roXMLElement")
+        readInternet = createObject("roUrlTransfer")
+        readInternet.setUrl(m.top.uri)
+        rectconfigxml.parse(readInternet.getToString())
+        rectconfig = rectconfigxml.GetAttributes()
+        m.top.rectconfig = rectconfig
+      end sub
+    ]]>
+  </script>
 </component>
 ```
 
@@ -219,46 +147,27 @@ And then you can assign the attributes from the associative array to the rectang
 
 **Configuring SceneGraph nodes using downloaded configuration file**
 
-```
-<component name="rectangleexample" extends="Scene" >
+```xml
+<component name="rectangleexample" extends="Scene">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.examplerectangle = m.top.createChild("Rectangle")
+        m.readerTask = createObject("roSGNode", "getrectconfig")
+        m.readerTask.setField("uri", "http://www.sdktestinglab.com/rectconfig.xml")
+        m.readerTask.observeField("rectconfig", "configureRectangle")
+        m.readerTask.control = "RUN"
+        m.top.setFocus(true)
+      end sub
 
-<script type = "text/brightscript" >
-
-<![CDATA[
-
-sub init()
-
-m.examplerectangle = m.top.createChild("Rectangle")
-
-m.readerTask = createObject("roSGNode","getrectconfig")
-
-m.readerTask.setField("uri","http://www.sdktestinglab.com/rectconfig.xml")
-
-m.readerTask.observeField("rectconfig","configureRectangle")
-
-m.readerTask.control = "RUN"
-
-m.top.setFocus(true)
-
-end sub
-
-sub configureRectangle()
-
-rectconfig = m.readerTask.rectconfig
-
-m.examplerectangle.color = rectconfig.color
-
-m.examplerectangle.width = rectconfig.width
-
-m.examplerectangle.height = rectconfig.height
-
-m.examplerectangle.translation = rectconfig.translation
-
-end sub
-
-]]>
-
-</script>
-
+      sub configureRectangle()
+        rectconfig = m.readerTask.rectconfig
+        m.examplerectangle.color = rectconfig.color
+        m.examplerectangle.width = rectconfig.width
+        m.examplerectangle.height = rectconfig.height
+        m.examplerectangle.translation = rectconfig.translation
+      end sub
+    ]]>
+  </script>
 </component>
 ```

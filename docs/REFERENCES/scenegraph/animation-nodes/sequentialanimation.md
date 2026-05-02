@@ -24,60 +24,54 @@ The following example animates a group of rectangles to expand and change opacit
 
 #### SequentialAnimation Node Class Example
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
- 
-<component name="animationsequentialtest" extends="Group" >
-    <script type="text/brightscript" >
-        <![CDATA[
-            function init()
-              m.testsequentialanimation = m.top.FindNode("testSequentialAnimation")
-              m.testsequentialanimation.repeat = "true"
-              m.testsequentialanimation.control = "start"
-              m.top.setFocus(true)
-            end function
-         ]]>
-    </script>
- 
-<children>
- 
-    <LayoutGroup   id = "dancingbars"  translation = "[640,360]"  itemSpacings = "[10]"  layoutDirection = "horizontal"  horizAlignment = "center"  vertAlignment = "center" >
-        <Rectangle      id="R1"      color="0x00FF00FF"      opacity = ".2"     width = "50"      height = "100"      scaleRotateCenter = "[25, 50]"     translation = "[0, 0]"/>
-        <Rectangle      id="R2"      color="0x00FF00FF"      opacity = ".2"     width = "50"      height = "100"      scaleRotateCenter = "[25, 50]"     translation = "[60, 0]"/>
-        <Rectangle      id="R3"      color="0x00FF00FF"      opacity = ".2"     width = "50"      height = "100"      scaleRotateCenter = "[25, 50]"     translation = "[120, 0]"/>
-        <Rectangle      id="R4"      color="0x00FF00FF"      opacity = ".2"     width = "50"      height = "100"      scaleRotateCenter = "[25, 50]"     translation = "[180, 0]"/>
-        <Rectangle      id="R5"      color="0x00FF00FF"      opacity = ".2"     width = "50"      height = "100"      scaleRotateCenter = "[25, 50]"     translation = "[240, 0]"/>
+<component name="animationsequentialtest" extends="Group">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        m.testsequentialanimation = m.top.FindNode("testSequentialAnimation")
+        m.testsequentialanimation.repeat = "true"
+        m.testsequentialanimation.control = "start"
+        m.top.setFocus(true)
+      end function
+    ]]>
+  </script>
+
+  <children>
+    <LayoutGroup id="dancingbars" translation="[640,360]" itemSpacings="[10]" layoutDirection="horizontal" horizAlignment="center" vertAlignment="center">
+      <Rectangle id="R1" color="0x00FF00FF" opacity=".2" width="50" height="100" scaleRotateCenter="[25, 50]" translation="[0, 0]" />
+      <Rectangle id="R2" color="0x00FF00FF" opacity=".2" width="50" height="100" scaleRotateCenter="[25, 50]" translation="[60, 0]" />
+      <Rectangle id="R3" color="0x00FF00FF" opacity=".2" width="50" height="100" scaleRotateCenter="[25, 50]" translation="[120, 0]" />
+      <Rectangle id="R4" color="0x00FF00FF" opacity=".2" width="50" height="100" scaleRotateCenter="[25, 50]" translation="[180, 0]" />
+      <Rectangle id="R5" color="0x00FF00FF" opacity=".2" width="50" height="100" scaleRotateCenter="[25, 50]" translation="[240, 0]" />
     </LayoutGroup>
-    <Label   text = "Bars Should Be Dancing"  width = "1280"  translation = "[0,500]"  horizAlign = "center"  vertAlign = "center"  />
-    <SequentialAnimation   id = "testSequentialAnimation" >
-    <Animation        id = "R1Animation"       duration = "2"       easeFunction = "linear" >
-        <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [1, 2], [1, 1] ]"    fieldToInterp="R1.scale" />        
-        <FloatFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ 0.2, 1, 0.2 ]"    fieldToInterp="R1.opacity" />
-    </Animation>
-    <Animation        id = "R2Animation"       duration = "2"       easeFunction = "linear" >
-         <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [1, 2], [1, 1] ]"    fieldToInterp="R2.scale" />
-         <FloatFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ 0.2, 1, 0.2 ]"    fieldToInterp="R2.opacity" />
-    </Animation>
-    <Animation        id = "R3Animation"       duration = "2"       easeFunction = "linear" >
-        <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [1, 2], [1, 1] ]"    fieldToInterp="R3.scale" />
-        <FloatFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ 0.2, 1, 0.2 ]"    fieldToInterp="R3.opacity" />
-    </Animation>
-    <Animation        id = "R4Animation"       duration = "2"       easeFunction = "linear" >
-        <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [1, 2], [1, 1] ]"    fieldToInterp="R4.scale" />
-        <FloatFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ 0.2, 1, 0.2 ]"    fieldToInterp="R4.opacity" />
-    </Animation>
-    <Animation       id = "R5Animation"      duration = "2"      easeFunction = "linear" >
-        <Vector2DFieldInterpolator   key= "[0, 0.5, 1]"   keyValue= "[ [1, 1], [1, 2], [1, 1] ]"   fieldToInterp="R5.scale" />
-        <FloatFieldInterpolator   key= "[0, 0.5, 1]"   keyValue= "[ 0.2, 1, 0.2 ]"   fieldToInterp="R5.opacity" />
-    </Animation>
+    <Label text="Bars Should Be Dancing" width="1280" translation="[0,500]" horizAlign="center" vertAlign="center" />
+    <SequentialAnimation id="testSequentialAnimation">
+      <Animation id="R1Animation" duration="2" easeFunction="linear">
+        <Vector2DFieldInterpolator key="[0, 0.5, 1]" keyValue="[ [1, 1], [1, 2], [1, 1] ]" fieldToInterp="R1.scale" />
+        <FloatFieldInterpolator key="[0, 0.5, 1]" keyValue="[ 0.2, 1, 0.2 ]" fieldToInterp="R1.opacity" />
+      </Animation>
+      <Animation id="R2Animation" duration="2" easeFunction="linear">
+        <Vector2DFieldInterpolator key="[0, 0.5, 1]" keyValue="[ [1, 1], [1, 2], [1, 1] ]" fieldToInterp="R2.scale" />
+        <FloatFieldInterpolator key="[0, 0.5, 1]" keyValue="[ 0.2, 1, 0.2 ]" fieldToInterp="R2.opacity" />
+      </Animation>
+      <Animation id="R3Animation" duration="2" easeFunction="linear">
+        <Vector2DFieldInterpolator key="[0, 0.5, 1]" keyValue="[ [1, 1], [1, 2], [1, 1] ]" fieldToInterp="R3.scale" />
+        <FloatFieldInterpolator key="[0, 0.5, 1]" keyValue="[ 0.2, 1, 0.2 ]" fieldToInterp="R3.opacity" />
+      </Animation>
+      <Animation id="R4Animation" duration="2" easeFunction="linear">
+        <Vector2DFieldInterpolator key="[0, 0.5, 1]" keyValue="[ [1, 1], [1, 2], [1, 1] ]" fieldToInterp="R4.scale" />
+        <FloatFieldInterpolator key="[0, 0.5, 1]" keyValue="[ 0.2, 1, 0.2 ]" fieldToInterp="R4.opacity" />
+      </Animation>
+      <Animation id="R5Animation" duration="2" easeFunction="linear">
+        <Vector2DFieldInterpolator key="[0, 0.5, 1]" keyValue="[ [1, 1], [1, 2], [1, 1] ]" fieldToInterp="R5.scale" />
+        <FloatFieldInterpolator key="[0, 0.5, 1]" keyValue="[ 0.2, 1, 0.2 ]" fieldToInterp="R5.opacity" />
+      </Animation>
     </SequentialAnimation>
- 
-</children>
- 
+  </children>
 </component>
-~~~
+```
 
 ## Sample app
 

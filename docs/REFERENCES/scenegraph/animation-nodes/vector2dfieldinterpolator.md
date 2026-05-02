@@ -34,50 +34,42 @@ The following scrolls the text string "Application Development Made Easy!" back 
 
 #### Vector2DFieldInterpolator Node Class Example
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
- 
-<component name="animationv2dtest" extends="Group" >
- 
-    <script type="text/brightscript" >
-        <![CDATA[
-            function init()
-                m.top.setFocus(true)
-            end function
-        ]]>
-    </script>
- 
-<children>
- 
+<component name="animationv2dtest" extends="Group">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        m.top.setFocus(true)
+      end function
+    ]]>
+  </script>
+
+  <children>
     <Label
-        id="testLabel"
-        height="44"
-        width="0"
-        font="font:MediumBoldSystemFont"
-        text = "Application Development Made Easy!"
-        horizAlign = "left"
-        vertAlign = "center"
-        translation="[318,8]" />
- 
-        <Animation
-            id="testAnimation"
-            duration="10"
-            repeat="true"
-            control="start"
-            easeFunction="linear">
-            <Vector2DFieldInterpolator
-                id = "testVector2D"
-                key="[0.0, 0.5, 1.0]"
-                keyValue="[ [318.0, 8.0], [656.0, 8.0], [318.0, 8.0] ]"
-                fieldToInterp="testLabel.translation"   />
- 
-        </Animation>
-</children>
- 
+      id="testLabel"
+      height="44"
+      width="0"
+      font="font:MediumBoldSystemFont"
+      text="Application Development Made Easy!"
+      horizAlign="left"
+      vertAlign="center"
+      translation="[318,8]" />
+    <Animation
+      id="testAnimation"
+      duration="10"
+      repeat="true"
+      control="start"
+      easeFunction="linear">
+      <Vector2DFieldInterpolator
+        id="testVector2D"
+        key="[0.0, 0.5, 1.0]"
+        keyValue="[ [318.0, 8.0], [656.0, 8.0], [318.0, 8.0] ]"
+        fieldToInterp="testLabel.translation" />
+    </Animation>
+  </children>
 </component>
-~~~
+```
 
 ## Fields
 

@@ -20,22 +20,17 @@ In most cases, you will want to populate the content of a LabelList (or other si
 
 **Static LabelList configuration**
 
-```
-
+```xml
 <LabelList
-  id = "moviemenu"
-  translation = "[160,92]"
-  itemSize = "[440,48]" >
-
-  <ContentNode id = "moviemenucontent" role = "content" >
-
-    <ContentNode title = "Drama" />
-    <ContentNode title = "Action" />
-    <ContentNode title = "Horror" />
-    <ContentNode title = "Comedy" />
-
+  id="moviemenu"
+  translation="[160,92]"
+  itemSize="[440,48]">
+  <ContentNode id="moviemenucontent" role="content">
+    <ContentNode title="Drama" />
+    <ContentNode title="Action" />
+    <ContentNode title="Horror" />
+    <ContentNode title="Comedy" />
   </ContentNode>
-
 </LabelList>
 ```
 

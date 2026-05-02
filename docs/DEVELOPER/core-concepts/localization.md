@@ -105,9 +105,9 @@ pkg:/locale/images/localized_image
 For example, to provide a localized version of `myPoster.jpg`, set the
 Poster node `uri` field as follows:
 
-~~~
-<Poster uri = pkg:/locale/images/myPoster.jpg />
-~~~
+```xml
+<Poster uri="pkg:/locale/images/myPoster.jpg" />
+```
 
 This causes the application to search through the `pkg:/locale`
 directory in the following order to find the localized graphical image.
@@ -161,28 +161,28 @@ The following is an example of a
 French:
 
 **Example of a translations.ts file in the TS XML format**
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="fr_CA" sourcelanguage="en_US">
-<defaultcodec>UTF-8</defaultcodec>
-<context>
-  <name>default</name>
-  <message>
-    <source>Hello</source>
-    <translation>Bonjour</translation>
-  </message>
-  <message>
-    <source>Goodbye</source>
-    <translation>Au revoir</translation>
-  </message>
-  <message>
-    <source>Christmas</source>
-    <translation>Noel</translation>
-  </message>
-</context>
+  <defaultcodec>UTF-8</defaultcodec>
+  <context>
+    <name>default</name>
+    <message>
+      <source>Hello</source>
+      <translation>Bonjour</translation>
+    </message>
+    <message>
+      <source>Goodbye</source>
+      <translation>Au revoir</translation>
+    </message>
+    <message>
+      <source>Christmas</source>
+      <translation>Noel</translation>
+    </message>
+  </context>
 </TS>
-~~~
+```
 
 
 ## XLIFF file example

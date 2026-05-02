@@ -398,80 +398,75 @@ Note that the `index` and `focusPercent` interface fields are not used by the co
 
 **MarkupGrid XML component example**
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-
 <component name="SimpleGridItem" extends="Group">
+  <interface>
+    <field id="width" type="float" onChange="widthChanged" />
+    <field id="height" type="float" onChange="heightChanged" />
+    <field id="itemContent" type="node" onChange="itemContentChanged" />
+  </interface>
 
-<interface>
-  <field id="width" type="float" onChange="widthChanged"/>
-  <field id="height" type="float" onChange="heightChanged"/>
-  <field id="itemContent" type="node" onChange="itemContentChanged"/>
-</interface>
+  <script type="text/brightscript">
+    <![CDATA[
+      function itemContentChanged()
+        m.gridPoster.uri = m.top.itemContent.HDPOSTERURL
+        if m.top.itemContent.GOTITEMCONTENT
+          m.priceBox.visible = false
+          m.priceLabel.visible = false
+          m.ownedIcon.visible = true
+        else
+          m.priceLabel.text = m.top.itemContent.PRICE
+          m.priceBox.visible = true
+          m.priceLabel.visible = true
+          m.ownedIcon.visible = false
+        end if
+        updateLayout()
+      end function
 
-<script type="text/brightscript" >
-<![CDATA[
-  function itemContentChanged()
-    m.gridPoster.uri = m.top.itemContent.HDPOSTERURL
-    if m.top.itemContent.GOTITEMCONTENT
-      m.priceBox.visible = false
-      m.priceLabel.visible = false
-      m.ownedIcon.visible = true
-    else
-      m.priceLabel.text = m.top.itemContent.PRICE
-      m.priceBox.visible = true
-      m.priceLabel.visible = true
-      m.ownedIcon.visible = false
-    end if
-    updateLayout()
-  end function
+      function widthChanged()
+        updateLayout()
+      end function
 
-  function widthChanged()
-    updateLayout()
-  end function
+      function heightChanged()
+        updateLayout()
+      end function
 
-  function heightChanged()
-    updateLayout()
-  end function
+      function updateLayout()
+        if m.top.height > 0 and m.top.width > 0
+          posterSize = m.top.height
+          m.gridPoster.width = m.top.width
+          m.gridPoster.height = m.top.height
+          ' position the ownedIcon in the bottom/right corner
+          m.ownedIcon.translation = [ m.top.width - m.ownedIcon.bitmapWidth, m.top.height - m.ownedIcon.bitmapHeight ]
+          m.priceBox.width = m.top.width
+          m.priceBox.height = m.ownedIcon.bitmapHeight
+          m.priceBox.translation = [ 0, m.top.height - m.priceBox.height ]
+          m.priceLabel.width = m.top.width
+          m.priceLabel.height = m.priceBox.height
+          m.priceLabel.vertAlign = "center"
+          m.priceLabel.horizAlign = "center"
+          m.priceLabel.translation = m.priceBox.translation
+        end if
+      end function
 
-  function updateLayout()
-    if m.top.height > 0 and m.top.width > 0
-      posterSize = m.top.height
-      m.gridPoster.width = m.top.width
-      m.gridPoster.height = m.top.height
-      ' position the ownedIcon in the bottom/right corner
-      m.ownedIcon.translation = [ m.top.width - m.ownedIcon.bitmapWidth, m.top.height - m.ownedIcon.bitmapHeight ]
-      m.priceBox.width = m.top.width
-      m.priceBox.height = m.ownedIcon.bitmapHeight
-      m.priceBox.translation = [ 0, m.top.height - m.priceBox.height ]
-      m.priceLabel.width = m.top.width
-      m.priceLabel.height = m.priceBox.height
-      m.priceLabel.vertAlign = "center"
-      m.priceLabel.horizAlign = "center"
-      m.priceLabel.translation = m.priceBox.translation
-    end if
-  end function
+      function init()
+        m.gridPoster = m.top.findNode("gridPoster")
+        m.priceBox = m.top.findNode("priceBox")
+        m.priceLabel = m.top.findNode("priceLabel")
+        m.ownedIcon = m.top.findNode("ownedIcon")
+        m.ownedIcon.loadSync = true
+        m.ownedIcon.uri = "pkg:/images/greenCheck.png"
+      end function
+    ]]>
+  </script>
 
-  function init()
-    m.gridPoster = m.top.findNode("gridPoster")
-    m.priceBox = m.top.findNode("priceBox")
-    m.priceLabel = m.top.findNode("priceLabel")
-    m.ownedIcon = m.top.findNode("ownedIcon")
-    m.ownedIcon.loadSync = true
-    m.ownedIcon.uri = "pkg:/images/greenCheck.png"
-  end function
-]]>
-</script>
-
-<children>
-
-<Poster id="gridPoster" renderPass="1" />
-<Rectangle id="priceBox" color="0x00000080" renderPass="2" />
-<Label id="priceLabel" renderPass="3" />
-<Poster id="ownedIcon" renderPass="4" />
-
-</children>
-
+  <children>
+    <Poster id="gridPoster" renderPass="1" />
+    <Rectangle id="priceBox" color="0x00000080" renderPass="2" />
+    <Label id="priceLabel" renderPass="3" />
+    <Poster id="ownedIcon" renderPass="4" />
+  </children>
 </component>
 ```
 

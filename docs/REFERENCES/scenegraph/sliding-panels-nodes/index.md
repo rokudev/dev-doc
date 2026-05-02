@@ -197,71 +197,67 @@ the same was done for the `categoryinfoPanel` component. For example,
 the `categoriesListPanel` component was defined as
 follows:
 
-```
-<component name="categoriesListPanel" extends="ListPanel" >
-<script type="text/brightscript" >
-<![CDATA[
-sub init()
-  m.top.panelSize = "medium"
-  m.top.focusable = true
-  m.top.hasNextPanel = true
-  m.top.leftOnly = true
-  m.top.createNextPanelOnItemFocus = false
-  m.top.selectButtonMovesPanelForward = true
-  m.top.overhangTitle = "SceneGraph Examples"
-  m.categorieslist = m.top.findNode("categorieslist")
-  m.top.list = m.categorieslist
-end sub
+```xml
+<component name="categoriesListPanel" extends="ListPanel">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.panelSize = "medium"
+        m.top.focusable = true
+        m.top.hasNextPanel = true
+        m.top.leftOnly = true
+        m.top.createNextPanelOnItemFocus = false
+        m.top.selectButtonMovesPanelForward = true
+        m.top.overhangTitle = "SceneGraph Examples"
+        m.categorieslist = m.top.findNode("categorieslist")
+        m.top.list = m.categorieslist
+      end sub
+    ]]>
+  </script>
 
-]]>
-</script>
-
-<children>
-
-<LabelList id = "categorieslist" >
-
-  <ContentNode role = "content" >
-    <ContentNode  
-      title = "Renderable Nodes"  
-      description = "Basic Nodes That Show Things  
-      &#xA;  
-      &#xA;  &#8226; Rectangle
-      &#xA;  &#8226; Label
-      &#xA;  &#8226; Poster  
-      &#xA;  &#8226; Video"
-      shortdescriptionline1="Renderable Node Markup"  
-      Url = "http://www.sdktestinglab.com/renderablegrid.xml" />
-    <ContentNode  
-      title = "Z-Order/Parent-Child"  
-      description = "SceneGraph Tree Order Matters  
-      &#xA;  
-      &#xA;Demonstrates the basic concepts of SceneGraph element layering
+  <children>
+    <LabelList id="categorieslist">
+      <ContentNode role="content">
+        <ContentNode
+          title="Renderable Nodes"
+          description="Basic Nodes That Show Things
+          &#xA;
+          &#xA;  &#8226; Rectangle
+          &#xA;  &#8226; Label
+          &#xA;  &#8226; Poster
+          &#xA;  &#8226; Video"
+          shortdescriptionline1="Renderable Node Markup"
+          Url="http://www.sdktestinglab.com/renderablegrid.xml" />
+        <ContentNode
+          title="Z-Order/Parent-Child"
+          description="SceneGraph Tree Order Matters
+          &#xA;
+          &#xA;Demonstrates the basic concepts of SceneGraph element layering
 and inheritance. In Roku SceneGraph, what's on the bottom of your XML tree goes
-on top!"  
-      shortdescriptionline1="Z-Order/Parent-Child Markup"  
-      Url = "http://www.sdktestinglab.com/zordergrid.xml" />  
-    <ContentNode title = "Animations"  
-      description = "Fly Things Around and Flash Lights  
-      &#xA;  
-      &#xA;This shows you how to make your application more moving, by animating
+on top!"
+          shortdescriptionline1="Z-Order/Parent-Child Markup"
+          Url="http://www.sdktestinglab.com/zordergrid.xml" />
+        <ContentNode
+          title="Animations"
+          description="Fly Things Around and Flash Lights
+          &#xA;
+          &#xA;This shows you how to make your application more moving, by animating
 screen elements. There are examples for all of the field interpolator nodes, plus
-sequential and parallel animations."  
-      shortdescriptionline1="Animation Markup"   
-      Url = "http://www.sdktestinglab.com/animationgrid.xml" />
-    <ContentNode title = "Events and Observers"  
-      description = "React When Stuff Happens  
-      &#xA;  
-      &#xA;You need to handle events that come from both the user, and program
+sequential and parallel animations."
+          shortdescriptionline1="Animation Markup"
+          Url="http://www.sdktestinglab.com/animationgrid.xml" />
+        <ContentNode
+          title="Events and Observers"
+          description="React When Stuff Happens
+          &#xA;
+          &#xA;You need to handle events that come from both the user, and program
 actions. You'll learn to use the onKeyEvent() and observeField() SceneGraph
-functions to do this."   
-      shortdescriptionline1="Events and Observers Markup"  
-      Url = "http://www.sdktestinglab.com/eventsobserversgrid.xml" />
-  </ContentNode>
-
-</LabelList>
-
-</children>
-
+functions to do this."
+          shortdescriptionline1="Events and Observers Markup"
+          Url="http://www.sdktestinglab.com/eventsobserversgrid.xml" />
+      </ContentNode>
+    </LabelList>
+  </children>
 </component>
 ```
 Since both the `categoriesListPanel` and `categoryinfoPanel` components
@@ -275,53 +271,43 @@ field:
 
 **Simple Tombstone Panel XML Markup Example**
 
-```
-<component name="categoryinfoPanel" extends="Panel" >
+```xml
+<component name="categoryinfoPanel" extends="Panel">
+  <interface>
+    <field id="description" type="string" onChange="showdescription" />
+  </interface>
 
-<interface>
-  <field id = "description" type = "string" onChange = "showdescription" />
-</interface>
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.panelSize = "medium"
+        m.top.focusable = true
+        m.top.hasNextPanel = true
+        m.infolabel = m.top.findNode("infoLabel")
+      end sub
 
-<script type="text/brightscript" >
-<![CDATA[
+      sub showdescription()
+        m.infolabel.text = m.top.description
+      end sub
+    ]]>
+  </script>
 
-sub init()
-  m.top.panelSize = "medium"
-  m.top.focusable = true
-  m.top.hasNextPanel = true
-
-  m.infolabel = m.top.findNode("infoLabel")
-end sub
-
-sub showdescription()
-  m.infolabel.text = m.top.description
-end sub
-
-]]>
-</script>
-
-<children>
-
-<Rectangle
-  id = "infoRectangle"
-  translation = "[0,40]"
-  height = "420"
-  width = "520"
-  color = "0x00000099" >
-
-  <Label
-    id = "infoLabel"
-    translation = "[15,15]"
-    height = "595"
-    width = "510"
-    font = "font:MediumBoldSystemFont"   />
-
-</Rectangle>
-
-</children>
-
+  <children>
+    <Rectangle
+      id="infoRectangle"
+      translation="[0,40]"
+      height="420"
+      width="520"
+      color="0x00000099">
+      <Label
+        id="infoLabel"
+        translation="[15,15]"
+        height="595"
+        width="510"
+        font="font:MediumBoldSystemFont" />
+    </Rectangle>
+  </children>
 </component>
-
 ```
 
 So when a user focuses on an item in the `m.categoriespanel` component
@@ -348,53 +334,47 @@ setting the `isFullScreen` field to true to automatically slide the
 panel when added to the panel set and
 focused:
 
-```
-<component name="examplesGridPanel" extends="GridPanel" >
+```xml
+<component name="examplesGridPanel" extends="GridPanel">
+  <interface>
+    <field id="overhangtext" type="string" />
+    <field id="gridcontenturi" type="string" onChange="readpostergrid" />
+  </interface>
 
-<interface>
-  <field id = "overhangtext" type = "string" />
-  <field id = "gridcontenturi" type = "string" onChange = "readpostergrid" />
-</interface>
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.panelSize = "full"
+        m.top.isFullScreen = true
+        m.top.focusable = true
+        m.top.hasNextPanel = false
+        m.top.createNextPanelOnItemFocus = false
+        m.top.optionsAvailable = true
+        m.top.grid = m.top.findNode("examplesPosterGrid")
+      end sub
 
-<script type="text/brightscript" >
-<![CDATA[
+      sub readpostergrid()
+        m.readPosterGridTask = createObject("roSGNode", "postergridCR")
+        m.readPosterGridTask.postergriduri = m.top.gridcontenturi
+        m.readPosterGridTask.observeField("postergridcontent", "showpostergrid")
+        m.readPosterGridTask.control = "RUN"
+      end sub
 
-sub init()
-  m.top.panelSize = "full"
-  m.top.isFullScreen = true
-  m.top.focusable = true
-  m.top.hasNextPanel = false
-  m.top.createNextPanelOnItemFocus = false
-  m.top.optionsAvailable = true
-  m.top.grid = m.top.findNode("examplesPosterGrid")
-end sub
+      sub showpostergrid()
+        m.top.grid.content = m.readPosterGridTask.postergridcontent
+        m.top.overhangTitle = m.top.overhangtext
+      end sub
+    ]]>
+  </script>
 
-sub readpostergrid()
-  m.readPosterGridTask = createObject("roSGNode","postergridCR")
-  m.readPosterGridTask.postergriduri = m.top.gridcontenturi
-  m.readPosterGridTask.observeField("postergridcontent","showpostergrid")
-  m.readPosterGridTask.control = "RUN"
-end sub
-
-sub showpostergrid()
-  m.top.grid.content = m.readPosterGridTask.postergridcontent
-  m.top.overhangTitle = m.top.overhangtext
-end sub
-
-]]>
-</script>
-
-<children>
-
-<PosterGrid
-  id = "examplesPosterGrid"
-  basePosterSize = "[520,296]"
-  caption1NumLines = "1"
-  numColumns = "2"
-  numRows = "5"
-  itemSpacing = "[15,15]" />
-
-</children>
-
+  <children>
+    <PosterGrid
+      id="examplesPosterGrid"
+      basePosterSize="[520,296]"
+      caption1NumLines="1"
+      numColumns="2"
+      numRows="5"
+      itemSpacing="[15,15]" />
+  </children>
 </component>
 ```

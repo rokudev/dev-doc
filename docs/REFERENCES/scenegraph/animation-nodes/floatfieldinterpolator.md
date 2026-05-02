@@ -32,32 +32,25 @@ The following changes the opacity of a graphical image, gradually making it invi
 
 #### FloatFieldInterpolator Node Class Example
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
- 
-    <component name="animationfloattest" extends="Group" >
- 
-        <script type="text/brightscript" >
-            <![CDATA[
-                function init()
-                    m.top.setFocus(true)
-                end function
-            ]]>
-        </script>
- 
-<children>
- 
-    <Poster  id="testPoster"  uri="pkg:/images/rokuowds.png"  width="0.0"  height="0.0"  translation="[160,8]"  opacity="0.0" />
-    <Animation   id="testAnimation"  duration="10"  repeat="true"  control="start"  easeFunction="linear" >
-        <FloatFieldInterpolator    id = "testFloat"   key="[0.0, 0.5, 1.0]"    keyValue="[ 1.0, 0.0, 1.0 ]"       fieldToInterp="testPoster.opacity"   />
+<component name="animationfloattest" extends="Group">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        m.top.setFocus(true)
+      end function
+    ]]>
+  </script>
+
+  <children>
+    <Poster id="testPoster" uri="pkg:/images/rokuowds.png" width="0.0" height="0.0" translation="[160,8]" opacity="0.0" />
+    <Animation id="testAnimation" duration="10" repeat="true" control="start" easeFunction="linear">
+      <FloatFieldInterpolator id="testFloat" key="[0.0, 0.5, 1.0]" keyValue="[ 1.0, 0.0, 1.0 ]" fieldToInterp="testPoster.opacity" />
     </Animation>
- 
-</children>
- 
+  </children>
 </component>
-~~~
+```
 
 ## Fields
 

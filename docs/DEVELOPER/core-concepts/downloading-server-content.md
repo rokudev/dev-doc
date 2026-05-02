@@ -103,18 +103,15 @@ parses:
 
 **Example server XML file**
 
-~~~
-<?xml version = "1.0" encoding = "UTF-8" standalone="yes" ?>
-
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <listcontent>
-
-  <item text = "Comedy" />
-  <item text = "Drama" />
-  <item text = "Action" />
-  <item text = "Horror" /> 
-
+  <item text="Comedy" />
+  <item text="Drama" />
+  <item text="Action" />
+  <item text="Horror" />
 </listcontent>
-~~~
+```
 
 
 And here is how the component XML file configures and starts the
@@ -142,54 +139,45 @@ data:
 
 **Downloading LabelList node content**
 
-~~~
-<?xml version = "1.0" encoding = "utf-8" ?>
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="getLabelListContent" extends="Task">
+  <interface>
+    <field id="uri" type="uri" />
+    <field id="content" type="node" />
+  </interface>
 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.functionName = "getContent"
+      end sub
 
-<component name = "getLabelListContent" extends = "Task" >
- 
-<interface>
-  <field id = "uri" type = "uri" />
-  <field id = "content" type = "node" />
-</interface> 
+      sub getContent()
+        content = createObject("roSGNode", "ContentNode")
+        contentxml = createObject("roXMLElement")
 
-<script type = "text/brightscript" >
+        readInternet = createObject("roUrlTransfer")
+        readInternet.setUrl(m.top.uri)
+        contentxml.parse(readInternet.GetToString())
 
-  <![CDATA[
+        if contentxml.getName() = "listcontent"
+          for each item in contentxml.GetNamedElements("item")
+            attributes = item.getAttributes()
+            item = \{
+              text: attributes.text
+            \}
+            listitem = content.createChild("ContentNode")
+            listitem.title = item.text
+          end for
+        end if
 
-  sub init()
-    m.top.functionName = "getContent"
-  end sub
-
-  sub getContent()
-    content = createObject("roSGNode", "ContentNode")
-    contentxml = createObject("roXMLElement")
-
-    readInternet = createObject("roUrlTransfer")
-    readInternet.setUrl(m.top.uri)
-    contentxml.parse(readInternet.GetToString())
-
-    if contentxml.getName() = "listcontent"
-      for each item in contentxml.GetNamedElements("item")
-        attributes = item.getAttributes()
-        item = \{
-          text: attributes.text
-          \}
-        listitem = content.createChild("ContentNode")
-        listitem.title = item.text
-      end for
-    end if
-
-    m.top.content = content
-  end sub
-
-  ]]>
-
+        m.top.content = content
+      end sub
+    ]]>
   </script>
-
 </component>
-~~~
+```
 
 
 Note that this example could be used to download strings for

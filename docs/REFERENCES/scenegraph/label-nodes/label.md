@@ -26,35 +26,28 @@ The following example shows a text layout derived from the Label node.
 
 The following displays the text string "Application Development Made Easy!" in the medium bold system font near the left top of the display screen.
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
+<component name="labeltest" extends="Group">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.setFocus(true)
+      end sub
+    ]]>
+  </script>
 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
-
-<component name="labeltest" extends="Group" >
-
-<script type="text/brightscript" >
-<![CDATA[
-
-  sub init()
-    m.top.setFocus(true)
-  end sub
-
-]]>
-</script>
-
-<Label
-  id="testLabel"
-  height="44"
-  width="0"
-  font="font:MediumBoldSystemFont"
-  text = "Application Development Made Easy!"
-  horizAlign = "left"
-  vertAlign = "center"
-  translation="[318,8]" />
-
+  <Label
+    id="testLabel"
+    height="44"
+    width="0"
+    font="font:MediumBoldSystemFont"
+    text="Application Development Made Easy!"
+    horizAlign="left"
+    vertAlign="center"
+    translation="[318,8]" />
 </component>
-~~~
+```
 
 ## Fields
 

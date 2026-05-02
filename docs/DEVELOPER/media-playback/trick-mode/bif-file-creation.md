@@ -92,7 +92,7 @@ There are two caveats here:
 - FFmpeg generates the JPG files starting with index 1. This means that all the timestamps will be off by 10 seconds. To fix this, use the following command (Make sure you are in the directory containing the `.bif` files):
 
   ```bash
-  $ % j=00000000.jpg; for i in *; do mv $\{i\} $\{j\}; j=$\{i\}; done;
+  $ % j=00000000.jpg; for i in *; do mv ${i} ${j}; j=${i}; done;
   ```
 
 - The SD frames should have a width of 240, and the HD frames should have a width of 320. Their height should be specified to coincide with their aspect ratio. The commands above assume a 4x3 aspect ratio. Unfortunately, FFmpeg doesn't let you specify only a width, keeping the original aspect ratio. If your source file is not 4:3, you should calculate the height used in the commands above using the width and the aspect ratio.

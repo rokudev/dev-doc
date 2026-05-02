@@ -192,7 +192,7 @@ myarray = [] ' empty array
 
 myarray = [ 1, 2, 3 ] ' array of three members
 
-myarray = [ x+5, true, 1\<\>2, ["a","b"] ] ' array of four members
+myarray = [ x+5, true, 1<>2, ["a","b"] ] ' array of four members
 ```
 
 Arrays can be specified in multi-line form:

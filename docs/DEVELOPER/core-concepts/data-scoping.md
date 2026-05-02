@@ -25,7 +25,7 @@ to traditional programming languages. You have:
 
 These different levels of scoping are identified by the use of the `m`
 object reference which can be used to disambiguate and access objects at
-different levels, similar to the use of `m` in BrightScript. 
+different levels, similar to the use of `m` in BrightScript.
 
 ----
 
@@ -102,7 +102,7 @@ m.categorieslist = m.top.findNode("categorieslist")
     field or child of the global node. This global node may be accessed
     from the entire SceneGraph application.
   - To access the **global node** in **components**, use the
-    predefined `m.global`, much like `m.top`. 
+    predefined `m.global`, much like `m.top`.
   - For access to the **global node** from **non-component** **script** as
     in `source/main.brs`, use **`getGlobalNode()`** called on
     the **`roSGScreen`** object.
@@ -135,7 +135,7 @@ get its special global element:
 You will need to take the associative array, modify it and save it back into the field.
 
 ```
-m.global.addFields( \{red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff\} )
+m.global.addFields({red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff})
 ' ...
 
 m.rect = m.top.findNode("Rect1")

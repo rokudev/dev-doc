@@ -116,12 +116,12 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
        if RAC = invalid then
            RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
            RAC.debug = true ' for verbose output to BrightScript console, optional
-           RAC.init = \{RED: \{}} ' activate RED as a provider
-           globalNode.addFields(\{roku_event_dispatcher: RAC})
+           RAC.init = {RED: {}} ' activate RED as a provider
+           globalNode.addFields({roku_event_dispatcher: RAC})
        end if
 
        ' dispatch an event to Roku
-       RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
+       RAC.trackEvent = {RED: {eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
    end sub
    ```
 

@@ -56,7 +56,7 @@ To send a [**doOrder command**](doc:channelstore#doorder) to upgrade or downgrad
    m.channelStore = CreateObject("roSGNode","ChannelStore")
    myOrder = CreateObject("roSGNode", "ContentNode")
    myItem = myOrder.createChild("ContentNode")
-   myItem.addFields(\{ "code": "UPC2397", "qty": 1})
+   myItem.addFields({ "code": "UPC2397", "qty": 1})
    m.channelStore.order = myOrder
    myOrder.action = "Upgrade"
    ```

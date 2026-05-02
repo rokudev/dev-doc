@@ -52,7 +52,7 @@ Click for more information on how to create a [self-signed SSL certificate](http
 3. Launch **Wireshark**, select **Capture** from the top menu, and add the following capture filter with the **IP address** of the device that you want to capture. Select **OK** when done.
 
     ```
-    Field 1: IP address <IP Address>                         Field 2: host \<IP Address\>
+    Field 1: IP address <IP Address>                         Field 2: host <IP Address>
     ```
 
     ![roku815px - capturing-and-decrypting-2](https://image.roku.com/ZHZscHItMTc2/capturing-and-decrypting-2.png "capturing-and-decrypting-2.png")

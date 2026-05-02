@@ -160,9 +160,9 @@ data:
         if contentxml.getName() = "listcontent"
           for each item in contentxml.GetNamedElements("item")
             attributes = item.getAttributes()
-            item = \{
+            item = {
               text: attributes.text
-            \}
+            }
             listitem = content.createChild("ContentNode")
             listitem.title = item.text
           end for

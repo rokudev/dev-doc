@@ -241,7 +241,7 @@ To complete and validate the new subscription, follow these steps:
    ```
    myOrder = CreateObject("roSGNode", "ContentNode")
    itemPurchased = myOrder.createChild("ContentNode")
-   itemPurchased.addFields(\{ "code": "UPC3L5A", "qty": 1})
+   itemPurchased.addFields({ "code": "UPC3L5A", "qty": 1})
    myChannelStore.order = myOrder
    ```
 
@@ -277,7 +277,7 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
    ```
    myChannelStore.requestedUserData("email")
    info = CreateObject("roSGNode", "ContentNode")
-   info.addFields(\{context: "signin"})
+   info.addFields({context: "signin"})
    myChannelStore.requestedUserDataInfo = info
    ```
 

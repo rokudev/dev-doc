@@ -375,8 +375,8 @@ Function CanPlay4K() as Boolean
   end if
 
   ' Check if the Roku player can decode 4K 60fps HEVC streams or 4K 30fps vp9 streams
-  hevc_video = \{ Codec: "hevc", Profile: "main", Level: "5.1" \}
-  vp9_video = \{ Codec: "vp9", Profile: "profile 0" \}
+  hevc_video = { Codec: "hevc", Profile: "main", Level: "5.1" }
+  vp9_video = { Codec: "vp9", Profile: "profile 0" }
   can_decode_hevc = dev_info.CanDecodeVideo(hevc_video)
   can_decode_vp9 = dev_info.CanDecodeVideo(vp9_video)
   if can_decode_hevc.result <> true OR can_decode_vp9.result <> true

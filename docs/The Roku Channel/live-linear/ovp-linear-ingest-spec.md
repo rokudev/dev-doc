@@ -461,8 +461,8 @@ _**Note:**_ Partners should not make programming updates to content scheduled to
 The Roku Channel Feed Root Object Template:
 
 ```json
-\{ "providerName": "Acme Productions", "lastUpdated": "2015-11-11T22:21:37+00:00", "language": "en-US", "categories": [ ... ], "playlists": [ ... ], "movies": [ ... ], "series": [ ... ], "shortFormVideos": [ ... ], "tvSpecials": [ ... ],"liveFeeds": [ ... ]
- \}
+{ "providerName": "Acme Productions", "lastUpdated": "2015-11-11T22:21:37+00:00", "language": "en-US", "categories": [ ... ], "playlists": [ ... ], "movies": [ ... ], "series": [ ... ], "shortFormVideos": [ ... ], "tvSpecials": [ ... ],"liveFeeds": [ ... ]
+ }
 ```
 
 ## Artwork for all content
@@ -621,7 +621,7 @@ This object represents a single season of a series.
 Season Object Example:
 
 ```json
-\{ "seasonNumber": 1, "episodes": [ ... ] \}
+{ "seasonNumber": 1, "episodes": [ ... ] }
 ```
 
 ### Episode content type
@@ -714,7 +714,7 @@ All linear feeds require a schedule as part of the livefeed content object.
 Schedule object example
 
 ```json
-\{
+{
     "id": "programId",
     "isLive": false,
     "date": "2020-01-13",
@@ -725,7 +725,7 @@ Schedule object example
     "attributes": [
         "CC"
     ]
-\}
+}
 ```
 
 ### EPG
@@ -776,16 +776,16 @@ For Info HUD
 Feed Example:
 
 ```json
-\{
+{
     "liveFeeds": [
-        \{
+        {
             "id": "providerx-live",
             "title": "Provider X Live",
-            "content": \{
+            "content": {
                 "dateAdded": "2019-06-01",
                 "language": "en",
                 "schedule": [
-                    \{
+                    {
                         "id": "movie-id-1",
                         "durationInSeconds": 7200,
                         "isLive": false,
@@ -793,8 +793,8 @@ Feed Example:
                         "times": [
                             "10:00:00"
                         ]
-                    \},
-                    \{
+                    },
+                    {
                         "id": "episode-id-1",
                         "durationInSeconds": 7200,
                         "isLive": false,
@@ -803,8 +803,8 @@ Feed Example:
                             "12:00:00",
                             "16:00:00"
                         ]
-                    \},
-                    \{
+                    },
+                    {
                         "id": "shortformvideo-id-1",
                         "durationInSeconds": 7200,
                         "isLive": false,
@@ -812,8 +812,8 @@ Feed Example:
                         "times": [
                             "14:00:00"
                         ]
-                    \},
-                    \{
+                    },
+                    {
                         "id": "tvspecial-id-1",
                         "durationInSeconds": 7200,
                         "isLive": true,
@@ -821,8 +821,8 @@ Feed Example:
                         "times": [
                             "18:00:00"
                         ]
-                    \},
-                    \{
+                    },
+                    {
                         "id": "movie-id-2",
                         "durationInSeconds": 3600,
                         "isLive": false,
@@ -830,8 +830,8 @@ Feed Example:
                         "times": [
                             "20:00:00"
                         ]
-                    \},
-                    \{
+                    },
+                    {
                         "id": "movie-id-3",
                         "durationInSeconds": 7200,
                         "isLive": false,
@@ -839,40 +839,40 @@ Feed Example:
                         "times": [
                             "21:00:00"
                         ]
-                    \}
+                    }
                 ]
-            \},
+            },
             "thumbnail": "https://<imageUrl>.jpg",
             "shortDescription": "Live business and national news, with top executives interviews and coverage of the technologies transforming our lives and economy.",
             "longDescription": "Live business and national news, with top executives interviews and coverage of the technologies transforming our lives and economy."
-        \}
+        }
     ],
     "movies": [
-        \{
+        {
         "id": "movie-id-1",
         "title": "Between Worlds",
         "externalIds": [
-            \{
+            {
                 "id": "MV015001100000",
                 "idType": "TMS"
-                \}
+                }
             ]
-        \},
-        \{
+        },
+        {
             "id": "movie-id-2",
             "title": "Between Worlds 2",
             "thumbnail": "https://<imageUrl>.jpg",
             "shortDescription": "A truck driver whose life spirals out of control after the spirit of his deceased wife comes to life.",
             "releaseDate": "1999-02-13",
             "advisoryRatings": [
-                \{
+                {
                 "source": "MPAA",
                 "value": "R"
-                \},
-                \{
+                },
+                {
                 "source": "CPR",
                 "value": "14+"
-                \}
+                }
                   ],
             "genres":
                 [
@@ -880,39 +880,39 @@ Feed Example:
                 "animated",
                 "fantasy",
                 ]
-        \},
+        },
     ],
     "series": [
-        \{
+        {
             "id": "series-id-1",
             "title": "series1",
             "seasons": [
-                \{
+                {
                      "seasonNumber": 6,
                         "episodes": [
-                        \{
+                        {
                             "id": "episode-id-1",
                             "title": "episode1",
                             "episodeNumber": 59
-                        \}
+                        }
                     ]
-                \}
+                }
             ]
-        \}
+        }
     ],
     "tvSpecials": [
-        \{
+        {
             "id": "tvspecial-id-1",
             "title": "tvspecial1"
-        \}
+        }
     ],
     "shortFormVideos": [
-        \{
+        {
             "id": "shortformvideo-id-1",
             "title": "shortformvideo1"
-        \}
+        }
     ]
-\}
+}
 ```
 
 ## Kids-directed content
@@ -949,7 +949,7 @@ This object represents the details about the liveFeed
 Content Object Example:
 
 ```json
-\{ "dateAdded": "2015-11-11T22:21:37+00:00", "language": "es", "schedule": [...], "validityPeriodStart": "2020-03-13", "validityPeriodEnd": "2100-03-12"\}
+{ "dateAdded": "2015-11-11T22:21:37+00:00", "language": "es", "schedule": [...], "validityPeriodStart": "2020-03-13", "validityPeriodEnd": "2100-03-12"}
 ```
 
 ### Genres property

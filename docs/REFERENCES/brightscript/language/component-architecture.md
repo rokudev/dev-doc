@@ -553,8 +553,8 @@ Output:
 hi\!
 \--------
 value: hi\!
-get: <bsTypedValue: Function\>
-set: <bsTypedValue: Function\>
+get: <bsTypedValue: Function>
+set: <bsTypedValue: Function>
 ```
 
 ## Script libraries

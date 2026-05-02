@@ -444,7 +444,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
 
    ```
-   if (myChannelStore.purchases \<> invalid)
+   if (myChannelStore.purchases <> invalid)
        count = myChannelStore.purchases.GetChildCount()
        for x = 0 to count - 1
            if (myChannelStore.purchases.getChild(x).code = "monthlySubscription")

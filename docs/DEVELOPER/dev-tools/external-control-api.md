@@ -440,16 +440,16 @@ The response includes the following fields:
 <sgnodes>
   <All_Nodes>
     <Default children="0" focusable="false" focused="false" index="0" name="" opacity="100" thread="render" visible="true" />
-    <MainScene _sn="1" bounds="\{0, 0, 1920, 1080}" bscref="1" children="0" extends="Scene" focusable="true" focused="true" osref="3" rcid="0">
-      <Poster _sn="2" bounds="\{0, 0, 1920, 1080}" bscref="0" inheritParentOpacity="false" inheritParentTransform="false" loadStatus="3" osref="2" rcid="0" uri="/RokuOS/Artwork/SceneGraph/GenevaTheme/Base/FHD/background.png" />
+    <MainScene _sn="1" bounds="{0, 0, 1920, 1080}" bscref="1" children="0" extends="Scene" focusable="true" focused="true" osref="3" rcid="0">
+      <Poster _sn="2" bounds="{0, 0, 1920, 1080}" bscref="0" inheritParentOpacity="false" inheritParentTransform="false" loadStatus="3" osref="2" rcid="0" uri="/RokuOS/Artwork/SceneGraph/GenevaTheme/Base/FHD/background.png" />
     </MainScene>
     <Node _psn="1" _sn="9" bscref="1" osref="1" rcid="0" />
-    <LayoutGroup _psn="1" _sn="3" bounds="\{50, 50, 631, 536}" bscref="0" children="2" osref="1" rcid="0" translation="\{50, 50}" />
-    <RenderableNode _psn="3" _sn="4" bounds="\{0, 0, 520, 440}" bscref="0" children="3" name="posterGroup" osref="1" rcid="0" />
-    <Poster _psn="4" _sn="5" bounds="\{0, 0, 320, 240}" bscref="0" loadStatus="3" osref="1" rcid="0" uri="pkg:/images/splash-screen_sd.jpg" />
-    <Poster _psn="4" _sn="6" bounds="\{100, 100, 320, 240}" bscref="0" loadStatus="3" osref="1" rcid="0" translation="\{100, 100}" uri="pkg:/images/splash-screen_sd.jpg" />
-    <Poster _psn="4" _sn="7" bounds="\{200, 200, 320, 240}" bscref="0" loadStatus="3" osref="1" rcid="0" translation="\{200, 200}" uri="pkg:/images/splash-screen_sd.jpg" />
-    <Label _psn="3" _sn="8" bounds="\{0, 490, 631, 46}" bscref="0" color="#ffff00ff" osref="1" rcid="0" text="Press OK to change Z order" translation="\{-0, 490}" />
+    <LayoutGroup _psn="1" _sn="3" bounds="{50, 50, 631, 536}" bscref="0" children="2" osref="1" rcid="0" translation="{50, 50}" />
+    <RenderableNode _psn="3" _sn="4" bounds="{0, 0, 520, 440}" bscref="0" children="3" name="posterGroup" osref="1" rcid="0" />
+    <Poster _psn="4" _sn="5" bounds="{0, 0, 320, 240}" bscref="0" loadStatus="3" osref="1" rcid="0" uri="pkg:/images/splash-screen_sd.jpg" />
+    <Poster _psn="4" _sn="6" bounds="{100, 100, 320, 240}" bscref="0" loadStatus="3" osref="1" rcid="0" translation="{100, 100}" uri="pkg:/images/splash-screen_sd.jpg" />
+    <Poster _psn="4" _sn="7" bounds="{200, 200, 320, 240}" bscref="0" loadStatus="3" osref="1" rcid="0" translation="{200, 200}" uri="pkg:/images/splash-screen_sd.jpg" />
+    <Label _psn="3" _sn="8" bounds="{0, 490, 631, 46}" bscref="0" color="#ffff00ff" osref="1" rcid="0" text="Press OK to change Z order" translation="{-0, 490}" />
   </All_Nodes>
   <status>OK</status>
 </sgnodes>

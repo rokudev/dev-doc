@@ -351,7 +351,7 @@ Handling deep links sent to your app from the Continue Watching row is essential
 **Syntax:**
 
 ```
-http://<roku-device-ip-address>:8060/launch|input/\<channelId\>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>&profileId=<profileIdValue>
+http://<roku-device-ip-address>:8060/launch|input/<channelId>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>&profileId=<profileIdValue>
 ```
 
 **Example:**

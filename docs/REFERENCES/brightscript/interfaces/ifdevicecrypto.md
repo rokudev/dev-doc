@@ -81,13 +81,14 @@ and then decode it, as demonstrated in the following example:
   ba.FromAsciiString("plain text1")
 
   ' create roDeviceCrypto object and specify a device key
-  dc = CreateObject("roDeviceCrypto") encType = "device"
+  dc = CreateObject("roDeviceCrypto")
+  encType = "device"
 
   ' encrypt plaintext using the device key and store the encoded data in an roByteArray
   encrypted = dc.Encrypt(ba, encType)
 
   ' decode the encrypted data and store the decrypted data in an roByteArray
   if encrypted <> invalid then
-  	decrypted = dc.Decrypt(encrypted,encType)
+      decrypted = dc.Decrypt(encrypted, encType)
   end if
 ```

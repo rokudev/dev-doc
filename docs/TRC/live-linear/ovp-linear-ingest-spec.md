@@ -862,8 +862,8 @@ Feed Example:
             "id": "movie-id-2",
             "title": "Between Worlds 2",
             "thumbnail": "https://<imageUrl>.jpg",
-         "shortDescription": "A truck driver whose life spirals out of control after the spirit of his deceased wife comes to life.",
-						"releaseDate": "1999-02-13",
+            "shortDescription": "A truck driver whose life spirals out of control after the spirit of his deceased wife comes to life.",
+            "releaseDate": "1999-02-13",
             "advisoryRatings": [
                 \{
                 "source": "MPAA",

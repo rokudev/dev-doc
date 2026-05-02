@@ -199,28 +199,31 @@ Here is an example of a field observer and the associated event handler function
 
 **Field observer XML BrightScript example**
 
-\<script type = "text/brightscript" \>
-  \<![CDATA[
-  sub init()
-    m.top.setFocus(true)
-    m.bottomlabel = m.top.findNode("bottomLabel")
-    m.texttimer = m.top.findNode("textTimer")
-    m.defaulttext = "All The Best Videos!"
-    m.alternatetext = "All The Time!!!"
-    m.textchange = false
-    m.texttimer.ObserveField("fire", "changetext")
-  end sub
-  sub changetext()
-    if (m.textchange = false) then
-      m.bottomlabel.text = m.alternatetext
-      m.textchange = true
-    else
-      m.bottomlabel.text = m.defaulttext
+```xml
+<script type="text/brightscript">
+  <![CDATA[
+    sub init()
+      m.top.setFocus(true)
+      m.bottomlabel = m.top.findNode("bottomLabel")
+      m.texttimer = m.top.findNode("textTimer")
+      m.defaulttext = "All The Best Videos!"
+      m.alternatetext = "All The Time!!!"
       m.textchange = false
-    end if
-  end sub
-  ]]\>
-\</script\>
+      m.texttimer.ObserveField("fire", "changetext")
+    end sub
+
+    sub changetext()
+      if (m.textchange = false) then
+        m.bottomlabel.text = m.alternatetext
+        m.textchange = true
+      else
+        m.bottomlabel.text = m.defaulttext
+        m.textchange = false
+      end if
+    end sub
+  ]]>
+</script>
+```
 
 > **Optional roSGNodeEvent Callback Function** Argument Field observer callback functions can specify an [roSGNodeEvent](doc:rosgnodeevent) argument. For example, the changetext() callback function signature in the example above could have been written as sub changetext(event as roSGNodeEvent). In this case, the callback function can call the [roSGNodeEvent](doc:rosgnodeevent) functions to extract information about the node that triggered the callback, specific field that triggered the callback, etc.
 

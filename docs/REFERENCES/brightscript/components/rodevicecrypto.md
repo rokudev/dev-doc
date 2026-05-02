@@ -39,6 +39,6 @@ and then decode it, as demonstrated in the following example:
 
   ' decode the encrypted data and store the decrypted data in an roByteArray
   if encrypted <> invalid then
-  	decrypted = dc.Decrypt(encrypted,encType)
+      decrypted = dc.Decrypt(encrypted, encType)
   end if
 ```

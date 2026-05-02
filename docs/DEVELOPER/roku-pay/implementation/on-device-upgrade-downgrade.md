@@ -450,9 +450,9 @@ The following sample demonstrates an **UpgradeSale** notification:
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<customerId>ab080b5f1c5650d9ae0d7f595d0be886</customerId>
+  <customerId>ab080b5f1c5650d9ae0d7f595d0be886</customerId>
   <transactionType>UpgradeSale</transactionType>
   <transactionId>187fb8f7b3a24883a245ab5d0171fadd</transactionId>
   <channelId>713788</channelId>

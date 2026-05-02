@@ -52,7 +52,7 @@ You can enable and record a Perfetto trace with the [BrightScript Language exten
            "host": "<Roku device IP address>",
            "password": "<Roku device password>",
 
-            //add the following to enable Perfetto tracing   
+            //add the following to enable Perfetto tracing
            "profiling": {
                "tracing": {
                    "enable": true,

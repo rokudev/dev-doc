@@ -30,7 +30,7 @@ Function GetAuthData() As Dynamic
      endif
      return invalid
 End Function
-  
+
 Function SetAuthData(userToken As String) As Void
     sec = CreateObject("roRegistrySection", "Authentication")
     sec.Write("UserRegistrationToken", userToken)

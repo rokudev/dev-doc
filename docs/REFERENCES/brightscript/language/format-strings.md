@@ -27,7 +27,7 @@ The `flags`, `width`, and `precision` fields are optional, and they may control 
 ##### Example
 
 ```
-"%02x%02x%02x".Format(255, 0, 128) ' returns "ff0080" 
+"%02x%02x%02x".Format(255, 0, 128) ' returns "ff0080"
 ```
 
 See the [ifToStr interface](doc:iftostr) for more examples.

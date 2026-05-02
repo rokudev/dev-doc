@@ -33,7 +33,7 @@ Function main()
         bigbm=CreateObject("roBitmap","tmp:/VeryBigPng.png")
         region=CreateObject("roRegion", bigbm, 0, 0, 1280, 720)
         region.SetWrap(True)
-         
+
         view_sprite=compositor.NewSprite(0, 0, region)
         compositor.draw()
         screen.SwapBuffers()

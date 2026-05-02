@@ -46,7 +46,7 @@ list.
 <LabelList
   id = "moviemenu"
   translation = "[160,92]"
-  itemSize = "[440,48]" > 
+  itemSize = "[440,48]" >
 
   <ContentNode id = "moviemenucontent" role = "content" >
 

@@ -30,8 +30,8 @@ while x <> invalid
     print x
     x = list.GetIndex()
 end while
- 
- 
+
+
 print list[2]
 ```
 
@@ -42,7 +42,7 @@ a
 b
 c
 d
-c 
+c
 ```
 
 

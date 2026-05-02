@@ -170,17 +170,17 @@ Indicates the result of the validation. This may be one of the following values:
 
 ```
 msg_ba = CreateObject("roByteArray")
- 
+
 ' ...populate bytearray with the message...
- 
+
 dsa = CreateObject("roDSA")
- 
+
 ' ... save private key to tmp:/privateKey.txt
- 
+
 dsa.SetDigestAlgorithm("sha256")
 dsa.SetSignAlgorithm("ECDSA")
 dsa.SetPrivateKey("tmp:/privateKey.txt")
- 
+
 signature = dsa.Sign(msg_ba)
 ```
 
@@ -188,23 +188,23 @@ signature = dsa.Sign(msg_ba)
 
 ```
 msg_ba = CreateObject("roByteArray")
- 
+
 ' ...populate bytearray with the message...
- 
+
 sig_ba = CreateObject("roByteArray")
- 
+
 ' ...populate bytearray with the signature...
- 
+
 dsa = CreateObject("roDSA")
- 
+
 ' ... save public key to tmp:/publicKey.txt
- 
+
 dsa.SetDigestAlgorithm("sha256")
 dsa.SetSignAlgorithm("ECDSA")
 dsa.SetPublicKey("tmp:/publicKey.txt")
- 
+
 result = dsa.Verify(msg_ba, sig_ba)
- 
+
 if (result = 1)
     print "Verified"
 else
@@ -218,17 +218,17 @@ end if
 
 ```
 msg_ba = CreateObject("roByteArray")
- 
+
 ' ...populate bytearray with the message...
- 
+
 dsa = CreateObject("roDSA")
- 
+
 ' ... save private key to tmp:/privateKey.txt
- 
+
 dsa.SetDigestAlgorithm("sha512")
 dsa.SetSignAlgorithm("Ed25519")
 dsa.SetPrivateKey("tmp:/privateKey.txt")
- 
+
 signature = dsa.Sign(msg_ba)
 ```
 
@@ -236,23 +236,23 @@ signature = dsa.Sign(msg_ba)
 
 ```
 msg_ba = CreateObject("roByteArray")
- 
+
 ' ...populate bytearray with the message...
- 
+
 sig_ba = CreateObject("roByteArray")
- 
+
 ' ...populate bytearray with the signature...
- 
+
 dsa = CreateObject("roDSA")
- 
+
 ' ... save public key to tmp:/publicKey.txt
- 
+
 dsa.SetDigestAlgorithm("sha512")
 dsa.SetSignAlgorithm("Ed25519")
 dsa.SetPublicKey("tmp:/publicKey.txt")
- 
+
 result = dsa.Verify(msg_ba, sig_ba)
- 
+
 if (result = 1)
     print "Verified"
 else

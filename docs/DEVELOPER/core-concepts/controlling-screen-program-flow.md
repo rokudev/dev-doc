@@ -205,11 +205,11 @@ initial `opacity` field setting of 0.0 to make it invisible until
 focused:
 
 ```
-<Poster   
-  id = "itemPoster"    
-  width = "98"   
+<Poster
+  id = "itemPoster"
+  width = "98"
   height = "140
-  opacity = "0.0"  
+  opacity = "0.0"
   translation = "[ 192, 4 ]"  />
 ```
 
@@ -218,9 +218,9 @@ Then we can write the \<script\> element callback function
 \<interface\> field changes:
 
 ```
-sub showfocus()  
-  m.itemcursor.opacity = m.top.focusPercent    
-  m.itemposter.opacity = m.top.focusPercent   
+sub showfocus()
+  m.itemcursor.opacity = m.top.focusPercent
+  m.itemposter.opacity = m.top.focusPercent
 end sub
 ```
 

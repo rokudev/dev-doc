@@ -36,8 +36,8 @@ functions or interfaces (appear after a ".")) have the following rules.
 For example:
 
 ```
-a  
-boy5  
+a
+boy5
 super_man$
 ```
 
@@ -277,7 +277,7 @@ the variable accepting the result must be dynamic, since it may get
 "invalid" or it may get an "object".
 
 ```
-l=[]  
+l=[]
 a$=l.pop()
 ```
 
@@ -778,10 +778,10 @@ integer increment and decrement to have effect on a variable. A few
 examples:
 
 ```
-x=1  
-x++  
-' x = 2  
-x--  
+x=1
+x++
+' x = 2
+x--
 ' x = 1
 ```
 
@@ -809,28 +809,28 @@ and bitshift operations that take a numeric operand:
 A few examples:
 
 ```
-x=1  
-x+=1  
-' x = 2  
-x+=2  
-' x = 4  
-x-=1  
-' x = 3  
-x/=2  
+x=1
+x+=1
+' x = 2
+x+=2
+' x = 4
+x-=1
+' x = 3
+x/=2
 ' x = 1.5
 
-x=9  
-x\=2  
-' x = 4 (integer divide)  
-x*=3  
+x=9
+x\=2
+' x = 4 (integer divide)
+x*=3
 ' x = 12
 
-x=1  
-x<<=8  
-' x = 256  
-x-=1  
-' x = 255  
-x>>=4  
+x=1
+x<<=8
+' x = 256
+x-=1
+' x = 255
+x>>=4
 ' x = 15
 ```
 

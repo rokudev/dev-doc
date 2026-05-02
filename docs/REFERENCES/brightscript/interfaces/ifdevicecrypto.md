@@ -78,7 +78,7 @@ and then decode it, as demonstrated in the following example:
 ```
   ' store plaintext to be encrypted in an roByteArray
   ba = CreateObject("roByteArray")
-  ba.FromAsciiString("plain text1")  
+  ba.FromAsciiString("plain text1")
 
   ' create roDeviceCrypto object and specify a device key
   dc = CreateObject("roDeviceCrypto") encType = "device"

@@ -79,14 +79,14 @@ Sub Main()
     Print Run("test2.brs", "arg 1", "arg 2")
     if Run(["pkg:/file1.brs","pkg:/file2.brs"])<>4 then stop
     BreakIfRunError(LINE_NUM)     stop
-End Sub 
+End Sub
 
 
 Sub BreakIfRunError(ln)
     el=GetLastRunCompileError()
     if el=invalid then
         el=GetLastRunRuntimeError()
-        if el=&hFC or el=&hE2 then return 
+        if el=&hFC or el=&hE2 then return
         'FC==ERR_NORMAL_END, E2=ERR_VALUE_RETURN
         print "Runtime Error (line ";ln;"): ";el
         stop
@@ -96,9 +96,9 @@ Sub BreakIfRunError(ln)
             for each i in e
                 print i;": ";e[i]
             end for
-        end for 
+        end for
         stop
-   end if 
+   end if
 End Sub
 ```
 
@@ -132,7 +132,7 @@ runtime error, but you don't want code execution to stop.
 Example:
 
 ```
-Print Eval("n=1/0") 
+Print Eval("n=1/0")
 ```
 
 Outputs:
@@ -161,8 +161,8 @@ Returns an error code result after the last script Run().
 These two are normal:  
 
 ```
-&hFC==ERR_NORMAL_END  
-&hE2==ERR_VALUE_RETURN   
+&hFC==ERR_NORMAL_END
+&hE2==ERR_VALUE_RETURN
 ```
 
 **Example: Assign variables to common runtime errors**

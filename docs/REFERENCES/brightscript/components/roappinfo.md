@@ -40,7 +40,7 @@ brush: plain; gutter: false; theme: Confluence
 '   DevID: 990df3584920876b7e74fe7b29e1f505f148373b
 '   Title: BrightScript Test
 ' Version: 1.0.0
-' MajVers: 1 
+' MajVers: 1
 ```
 
 

@@ -107,7 +107,7 @@ An roByteArray object containing PNG image data for the specified area of the bi
 ```
 Function SaveTestPng()
     w = 200 : h = 100
-    bm = CreateObject("roBitmap", &#123;width: w, height: h, AlphaEnable: true&#125;)
+    bm = CreateObject("roBitmap", {width: w, height: h, AlphaEnable: true})
     bm.DrawRect(10, 10, w-20, h-20, &hFF0000FF)
     bm.Finish()
     ba = bm.GetPng(0, 0, w, h)
@@ -153,7 +153,7 @@ Function Main()
 
     ' AlphaEnable must be enabled in the destination surface to have effect.
     s.SetAlphaEnable(true)
-    bm=CreateObject("roBitmap", &#123;width:100, height: 100, alphaenable: false&#125; )
+    bm=CreateObject("roBitmap", {width:100, height: 100, alphaenable: false} )
     bm.Clear(&h0000FFFF) 'blue, fully opaque alpha
 
     ' draw a blue rect in the upper left corner

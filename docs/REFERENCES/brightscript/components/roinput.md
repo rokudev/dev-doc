@@ -40,10 +40,10 @@ The following will be printed:
 
 ```
 msgPort = CreateObject("roMessagePort")
- 
+
 input = CreateObject("roInput")
 input.SetMessagePort(msgPort)
- 
+
 print "Waiting for messages..."
 while true
   msg = wait(0, msgPort)

@@ -27,15 +27,15 @@ The following \<component\> element defines a component named `GridPanelExample`
 **\<component\> element example**
 ```
 <component name = "GridPanelExample" extends = "GridPanel" initialFocus = "examplePosterGrid" >
- 
+
   <interface >
     <field id = "gridcontenturi" type = "uri" onChange = "readpostergrid" />
   </interface>
- 
+
   <script type = "text/brightscript" >
- 
+
     <![CDATA[
- 
+
     sub init()
       m.top.panelSize = "full"
       m.top.isFullScreen = true
@@ -45,24 +45,24 @@ The following \<component\> element defines a component named `GridPanelExample`
       m.top.createNextPanelOnItemFocus = false
       m.top.grid = m.top.findNode("examplePosterGrid")
     end sub
- 
+
     sub readpostergrid()
       m.readPosterGridTask = createObject("roSGNode", "ContentReader")
       m.readPosterGridTask.contenturi = m.top.gridcontenturi
       m.readPosterGridTask.observeField("content", "showpostergrid")
       m.readPosterGridTask.control = "RUN"
     end sub
- 
+
     sub showpostergrid()
       m.top.grid.content = m.readPosterGridTask.content
     end sub
- 
+
     ]]>
- 
+
   </script>
- 
+
   <children >
- 
+
     <PosterGrid
       id = "examplePosterGrid"
       basePosterSize = "[ 512, 288 ]"
@@ -70,8 +70,8 @@ The following \<component\> element defines a component named `GridPanelExample`
       numColumns = "2"
       numRows = "2"
       itemSpacing = "[ 20, 20 ]" />
- 
+
   </children>
- 
+
 </component>
 ```

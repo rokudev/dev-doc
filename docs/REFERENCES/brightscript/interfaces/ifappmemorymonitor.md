@@ -70,7 +70,7 @@ while(true)
     if msgType = "roSGScreenEvent"
         if msg.isScreenClosed() then return
     else if msgType = "roAppMemoryNotificationEvent"
-        print "Event MemoryUsagePercent = "            
+        print "Event MemoryUsagePercent = "
         msg.getInfo().lookup("MemoryUsagePercent")
         m.global.getEvent="true"
     else if msgType = "roDeviceInfoEvent"

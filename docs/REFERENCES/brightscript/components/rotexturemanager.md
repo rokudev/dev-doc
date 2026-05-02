@@ -23,10 +23,10 @@ Sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
     mgr.SetMessagePort(msgport)
- 
+
     request = CreateObject("roTextureRequest","pkg:/assets/comet.jpg")
     mgr.RequestTexture(request)
- 
+
     msg=wait(0, msgport)
     if type(msg)="roTextureRequestEvent" then
         print "request id";msg.GetId()

@@ -104,7 +104,7 @@ The associative array that was moved from the source field.
 n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
 n.aa_field = { key: "value"}' or use moveIntoField()
-my_aa = n.MoveFromField("aa_field") 
+my_aa = n.MoveFromField("aa_field")
 ? n.aa_field ' invalid
 ? my_aa ' contents of aa_field
 ```

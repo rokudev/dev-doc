@@ -44,7 +44,7 @@ signature = rsa.Sign(hashBA)
 
 ```
 rsa = CreateObject("roRSA")
-rsa.SetPublicKey(:tmp:/publicKey.txt")
+rsa.SetPublicKey("tmp:/publicKey.txt")
 rsa.SetDigestAlgorithm("sha1")
 
 ' see hashBA and signature from above example

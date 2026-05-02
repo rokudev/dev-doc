@@ -88,7 +88,7 @@ Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-gr
     "originalTransactionId": "d4c4da85c7b611eea3c40a58a9fead9c",
     "originalPurchaseDate": "2024-01-12T01:51:39Z",
     "eventDate": "2024-02-10T01:51:46Z",
-    "expirationDate": "2024-03-10T01:51:39Z",  
+    "expirationDate": "2024-03-10T01:51:39Z",
     "comments": "Subscription recovered from dunning state.",
     "responseKey": "d915ab762a3752e7bf112e7903958f52",
     "isFreeTrial": false

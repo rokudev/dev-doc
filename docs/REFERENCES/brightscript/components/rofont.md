@@ -22,7 +22,7 @@ white = &hFFFFFFFF
 blue = &h0000FFFF
 font_registry = CreateObject("roFontRegistry")
 font = font_registry.GetDefaultFont()
- 
+
 ' Draw white text in a blue rectangle
 text = "Hello world"
 w = font.GetOneLineWidth(text, screen.GetWidth())

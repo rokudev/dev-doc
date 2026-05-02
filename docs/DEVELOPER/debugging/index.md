@@ -116,11 +116,11 @@ Thread selected:  0*   pkg:/source/Main.brs(19)                msg = wait(0, m.p
 Current Function:
 011:      m.port = CreateObject("roMessagePort")
 012:      screen.setMessagePort(m.port)
-013:  
+013:
 014:      'Create a scene and load /components/helloworld.xml'
 015:      scene = screen.CreateScene("HelloWorld")
 016:      screen.show()
-017:  
+017:
 018:      while(true)
 019:*         msg = wait(0, m.port)
 020:          msgType = type(msg)

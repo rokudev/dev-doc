@@ -19,8 +19,8 @@ The `onKeyEvent()` function receives remote control key events from the Roku OS,
 #### Syntax
 
 ```
-function onKeyEvent(_key_ as String, _press_ as Boolean) as Boolean  
-    ...  
+function onKeyEvent(_key_ as String, _press_ as Boolean) as Boolean
+    ...
 end function
 ```
 

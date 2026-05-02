@@ -292,7 +292,7 @@ The calculated CRC-32 checksum.
 #### Example
 
 ```
-    ba = CreateObject("roByteArray") 
+    ba = CreateObject("roByteArray")
     ba.FromAsciiString("Hello world!")
     n = ba.GetCrc32()
     print n, "0x" ; StrI(n, 16)

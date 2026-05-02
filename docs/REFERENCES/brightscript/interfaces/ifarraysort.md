@@ -36,27 +36,27 @@ next:
 #### Examples
 
 ```
-    a=[3, 1, 2] 
+    a=[3, 1, 2]
     a.Sort()
-    print a  
+    print a
     REM sets the array to [1, 2, 3]
 
-    a=[3, 1, 2.5] 
+    a=[3, 1, 2.5]
     a.Sort("r")  REM reverse order sort
     print a
     REM sets the array to [3, 2.5, 1]
 
-    a=["cat", "DOG", "bee"] 
+    a=["cat", "DOG", "bee"]
     a.Sort()  REM case-sensitive sort by default
     print a
     REM sets the array to ["DOG", "bee", "cat"]
 
-    a=["cat", "DOG", "bee"]  
+    a=["cat", "DOG", "bee"]
     a.Sort("i")  REM case-insensitive sort
     print a
     REM sets the array to ["bee", "cat", "DOG"]
 
-    a=["cat", "DOG", "bee"]  
+    a=["cat", "DOG", "bee"]
     a.Sort("ir")  REM case-insensitive, reverse order sort
     print a
     REM sets the array to ["DOG", "cat", "bee"]
@@ -79,9 +79,9 @@ Performs a stable sort of an array of associative arrays by value of a common fi
 
 ```
     a=[ {id:3, name:"Betty"}, {id:1, name:"Carol"}, {id:2, name:"Anne"} ]
-    a.SortBy("name") 
+    a.SortBy("name")
     REM sets the array to [ {id:2, name:"Anne"}, {id:3, name:"Betty"}, {id:1, name:"Carol"} ]
-    a.SortBy("id") 
+    a.SortBy("id")
     REM sets the array to [ {id:1, name:"Carol"}, {id:2, name:"Anne"}, {id:3, name:"Betty"} ]
     a.SortBy("name", "r")  REM reverse order sort
     REM sets the array to [ {id:1, name:"Carol"}, {id:3, name:"Betty"}, {id:2, name:"Anne"} ]
@@ -96,7 +96,7 @@ Reverses the order of elements in an array.
 #### Example
 
 ```
-    a=[1, "one", 2, "two"] 
-    a.Reverse() 
+    a=[1, "one", 2, "two"]
+    a.Reverse()
     REM sets the array to ["two", 2, "one", 1]
 ```

@@ -27,10 +27,10 @@ Sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
     mgr.SetMessagePort(msgport)
- 
+
     request = CreateObject("roTextureRequest","http://192.168.1.10/ball.png")
     mgr.RequestTexture(request)
- 
+
     msg=wait(0, msgport)
     if type(msg)="roTextureRequestEvent" then
         print "request id";msg.GetId()
@@ -56,7 +56,7 @@ Sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
     mgr.SetMessagePort(msgport)
- 
+
     request = CreateObject("roTextureRequest","pkg:/assets/ball.png")
     request.SetSize(100, 100)
     request.SetScaleMode(1)
@@ -72,11 +72,11 @@ Sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
     mgr.SetMessagePort(msgport)
- 
+
     request = CreateObject("roTextureRequest","https://192.168.1.10/ball.png")
     request.SetCertificatesFile("common:/certs/ca-bundle.crt")
     request.InitClientCertificates()
- 
+
     mgr.RequestTexture(request)
 End Sub
 ```

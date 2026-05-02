@@ -167,11 +167,11 @@ To update your app with the new Channel Store APIs, follow these steps:
        m.store = m.parent.FindNode("channelStore")
        m.store.observeField("requestStatus", "onRequestStatus")
    end function
-     
+
    ' Generic SDK API request callback
    function onRequestStatus()
        requestStatus = m.store.requestStatus
-     
+
        if requestStatus = Invalid
            print "Invalid requestStatus"
        else
@@ -180,7 +180,7 @@ To update your app with the new Channel Store APIs, follow these steps:
            print "requestStatus.status", requestStatus.status
            print "requestStatus.statusMessage", requestStatus.statusMessage
            print "requestStatus.context", requestStatus.context
-     
+
            ' requestStatus.status:
            ' 2: Interrupted
            ' 1: Success
@@ -189,7 +189,7 @@ To update your app with the new Channel Store APIs, follow these steps:
            ' -2: Timeout
            ' -3: Unknown error
            ' -4: Invalid request
-     
+
            ' Generic request succeeded
            if requestStatus.status = 1 then
                if requestStatus.command = "GetCatalog" then
@@ -225,10 +225,10 @@ To update your app with the new Channel Store APIs, follow these steps:
    sub onGetCatalog(requestResult as object)
        print "requestResult.status", requestResult.status
        print "requestResult.statusMessage", requestResult.statusMessage
-      
+
        m.purchaseOptions = {}
        m.products = {}
-     
+
        ' GetCatalog succeeded
        if requestResult.status = 1 and type(requestResult.result) = "roAssociativeArray" then
            m.purchaseOptions = requestResult.result.purchaseOptionsMap
@@ -247,7 +247,7 @@ To update your app with the new Channel Store APIs, follow these steps:
        ]
        QueryPurchaseOptions("Base", query)
    end sub
-    
+
    sub QueryPurchaseOptions(queryType as String, query as Object)
        request = {
            "context": {
@@ -262,7 +262,7 @@ To update your app with the new Channel Store APIs, follow these steps:
        }
        m.store.request = request
    end sub
-    
+
    sub onQueryPurchaseOptions(context as object, requestResult as object)
        if context.queryType = "Base" then
            m.basePurchaseOptions = requestResult.purchaseOptionsMap
@@ -378,12 +378,12 @@ To update your app with the new Channel Store APIs, follow these steps:
        }
        m.store.request = request
    end sub
-     
+
    function onGetAllPurchases(requestResult as object) as void
        m.purchases = {}
        m.purchasedProducts = {}
        m.entitlements = []
-     
+
        print chr(10) + "onGetAllPurchases"
        dialog = CreateObject("roSGNode", "statusDialog")
        message = ""

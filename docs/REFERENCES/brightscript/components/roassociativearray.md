@@ -36,31 +36,31 @@ Starting from Roku OS 8, the quoted keys in Associative Array literals are now c
 ```
 ' Creation of associative arrays
 
-aa1 = CreateObject("roAssociativeArray")   ' Explicitly 
+aa1 = CreateObject("roAssociativeArray")   ' Explicitly
 aa2 = {}                                   ' Implicitly
 aa3 = {                                    ' With some initial values
    foo : 12,
    bar : 13
 }
- 
+
 ' Assigning values
 
 aa1.AddReplace("Bright", "Script")  ' With explicit function calls
 aa1.AddReplace("TMOL", 42)
 aa1.boo = 112                       ' With dot operator
 aa1["baz"] = "abcdefg"              ' With bracket operator
- 
+
 ' Accessing values
 
 print aa1.Bright           ' With dot operator (will print 'Script')
 print aa1.Lookup("TMOL")   ' With function call (will print 42)
 print aa1["boo"]           ' With bracket operator (will print 112)
- 
+
 ' Using ifEnum interface to walk through keys in an associative array
 for each key in aa1
 
     print "  " key "=" aa1[key]
-    
+
 end for
 ```
 

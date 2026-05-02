@@ -27,7 +27,7 @@ This object is created without any arguments:
 ```
 REM printAA() is from generalUtils.brs in our sample apps
 REM and used to print an associative Array
- 
+
 Sub SaveCoverArtFile(filename As String)
     meta = CreateObject("roAudioMetadata")
     meta.SetUrl(filename)

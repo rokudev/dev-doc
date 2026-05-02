@@ -41,11 +41,11 @@ A String containing the array elements.
 #### Examples
 
 ```
-    a = ["ant","bat","cat"] 
+    a = ["ant","bat","cat"]
     s = a.Join(",")
     print """" + s + """"
     REM "ant,bat,cat"
-    
+
     a = "abc".Split("")
     s = a.Join("--")
     print """" + s + """"

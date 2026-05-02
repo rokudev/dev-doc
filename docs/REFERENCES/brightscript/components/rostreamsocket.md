@@ -91,7 +91,7 @@ function main()
             end if
         end if
     end while
-     
+
     print "Main loop exited"
     tcpListen.close()
     for each id in connections

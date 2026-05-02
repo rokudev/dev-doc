@@ -36,28 +36,28 @@ This method can be used for in/out function parameters. If you have a boxed obje
 Function Main()
     f1 = Foo
     print "f1 "; Type(f1); "="; f1
- 
+
     f2 = Box(Foo)
     print "f2 "; Type(f2); "="; f2
- 
+
     print "adjusting f2"
     AdjustFun(f2)
- 
+
     print "f2 "; Type(f2); "="; f2
     print "f2()"; "="; f2()
- 
+
     f3 = f2.GetSub()
     print "f3 "; Type(f3); "="; f3
 End Function
- 
+
 Function AdjustFun(f)
     f.SetSub(Bar)
 End Function
- 
+
 Function Foo()
     return "--Foo--"
 End Function
- 
+
 Function Bar()
     return "--Bar--"
 End Function

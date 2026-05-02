@@ -43,7 +43,7 @@ are received. In this case, Wait returns a type "invalid".
 p = CreateObject("roMessagePort")
 s = CreateObject("roScreen")
 s.SetPort(p)
-msg = Wait(0, p) 
+msg = Wait(0, p)
 print Type(msg) ' e.g. roUniversalControlEvent
 print msg.GetInt() ' button number
 ```
@@ -193,12 +193,12 @@ this function.
 For example:
 
 ```
-BrightScript Debugger> a=[]  
-BrightScript Debugger> a[0]=a  
-BrightScript Debugger> a=invalid  
-BrightScript Debugger> print RunGarbageCollector()  
-COUNT: 3  
-ORPHANED: 1  
+BrightScript Debugger> a=[]
+BrightScript Debugger> a[0]=a
+BrightScript Debugger> a=invalid
+BrightScript Debugger> print RunGarbageCollector()
+COUNT: 3
+ORPHANED: 1
 ROOT: 2
 ```
 
@@ -226,17 +226,17 @@ list of photo URLs:
 ```
 {
       "photos" : [
-           {  
+           {
                  "title" : "View from the hotel",
-                 "url" : "http://example.com/images/00012.jpg" 
+                 "url" : "http://example.com/images/00012.jpg"
            },
-           { 
+           {
                  "title" : "Relaxing at the beach",
-                 "url" : "http://example.com/images/00222.jpg" 
+                 "url" : "http://example.com/images/00222.jpg"
            },
-           { 
+           {
                  "title" : "Flat tire",
-                 "url" : "http://example.com/images/00314.jpg" 
+                 "url" : "http://example.com/images/00314.jpg"
            }
       ]
 }
@@ -310,13 +310,13 @@ obj = {list:list, n:1}
 
 '* If specified, unsupported values can be output as JSON 'null' values.
 '* (In this case, no error diagnostics are printed to the console).
-? FormatJSON(obj, &h0100) 
+? FormatJSON(obj, &h0100)
 ' => {"list":null,"n":1}
 
 '* If specified, unsupported values can be output as diagnostic string values.
 '* The diagnostic string is the component type in angle brackets.
 '* (In this case, no error diagnostics are printed to the console).
-? FormatJSON(obj, &h0200) 
+? FormatJSON(obj, &h0200)
 ' => {"list":"<roList>","n":1}
 ```
 
@@ -345,5 +345,5 @@ For example:
 
 ```
 `text = Tr("Video will start in %1 seconds").Replace("%1",
-numSeconds.ToStr())` 
+numSeconds.ToStr())`
 ```

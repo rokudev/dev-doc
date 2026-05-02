@@ -791,27 +791,27 @@ Feed Example:
                         "isLive": false,
                         "date": "2018-04-05",
                         "times": [
-                            "10:00:00"                       
-                        ]                       
+                            "10:00:00"
+                        ]
                     \},
                     \{
                         "id": "episode-id-1",
                         "durationInSeconds": 7200,
                         "isLive": false,
                         "date": "2018-04-05",
-                        "times": [                           
-                            "12:00:00",                           
+                        "times": [
+                            "12:00:00",
                             "16:00:00"
-                        ]                       
+                        ]
                     \},
                     \{
                         "id": "shortformvideo-id-1",
                         "durationInSeconds": 7200,
                         "isLive": false,
                         "date": "2018-04-05",
-                        "times": [                   
-                            "14:00:00"                           
-                        ]                       
+                        "times": [
+                            "14:00:00"
+                        ]
                     \},
                     \{
                         "id": "tvspecial-id-1",
@@ -820,7 +820,7 @@ Feed Example:
                         "date": "2018-04-05",
                         "times": [
                             "18:00:00"
-                        ]                       
+                        ]
                     \},
                     \{
                         "id": "movie-id-2",
@@ -829,7 +829,7 @@ Feed Example:
                         "date": "2018-04-05",
                         "times": [
                             "20:00:00"
-                        ]                       
+                        ]
                     \},
                     \{
                         "id": "movie-id-3",
@@ -838,13 +838,13 @@ Feed Example:
                         "date": "2018-04-05",
                         "times": [
                             "21:00:00"
-                        ]                       
+                        ]
                     \}
                 ]
             \},
             "thumbnail": "https://<imageUrl>.jpg",
             "shortDescription": "Live business and national news, with top executives interviews and coverage of the technologies transforming our lives and economy.",
-            "longDescription": "Live business and national news, with top executives interviews and coverage of the technologies transforming our lives and economy."           
+            "longDescription": "Live business and national news, with top executives interviews and coverage of the technologies transforming our lives and economy."
         \}
     ],
     "movies": [
@@ -880,7 +880,7 @@ Feed Example:
                 "animated",
                 "fantasy",
                 ]
-        \},        
+        \},
     ],
     "series": [
         \{
@@ -894,7 +894,7 @@ Feed Example:
                             "id": "episode-id-1",
                             "title": "episode1",
                             "episodeNumber": 59
-                        \}                       
+                        \}
                     ]
                 \}
             ]

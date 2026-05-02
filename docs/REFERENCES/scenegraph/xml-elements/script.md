@@ -58,17 +58,17 @@ The \<script\> element contains zero or more BrightScript functions. Because Bri
 **Embedding BrightScript code in XML**
 ```
 <script type = "text/brightscript" >
- 
+
   <![CDATA[
- 
+
   function createStopwatch(parent as object) as object
     stopWatch = m.top.createChild("StopWatch")
     stopWatch.translation = [100, 200]
     return stopwatch
   end function
- 
+
   ]]>
- 
+
 </script>
 ```
 

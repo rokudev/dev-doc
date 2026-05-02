@@ -15,18 +15,18 @@ next:
 BrightScript supports the following familiar looking statement types:
 
 ```
-If / Then / Else If / Else / End If  
-For / To / End For / Step / Exit For  
-For Each / In / End For / Exit For  
+If / Then / Else If / Else / End If
+For / To / End For / Step / Exit For
+For Each / In / End For / Exit For
 While / End While / Exit While
 Try / Catch / End Try
 Throw
-Function / End Function / As / Return  
+Function / End Function / As / Return
 Print (or ?)
-Rem (or ')  
-Goto  
-Dim  
-End  
+Rem (or ')
+Goto
+Dim
+End
 Stop
 ```
 
@@ -37,15 +37,15 @@ Each statement's syntax is documented precisely later in the manual.
 For example:
 
 ```
-function Main() as Void 
-    dim cavemen[10] 
+function Main() as Void
+    dim cavemen[10]
     cavemen.push("fred")
     cavemen.push("barney")
     cavemen.push("wilma")
-    cavemen.push("betty") 
+    cavemen.push("betty")
     for each caveman in cavemen
         print caveman
-    end for 
+    end for
 end function
 ```
 

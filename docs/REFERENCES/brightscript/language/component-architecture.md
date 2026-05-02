@@ -195,7 +195,7 @@ End Function
 **Will Print:**
 
 ```
-  A 4 roInt  
+  A 4 roInt
   B 4
 Integer
 ```
@@ -338,7 +338,7 @@ Function GetInterestingnessPhotoList(http as Object, page=1 as Integer) as Objec
     xml=http.GetToString()
     rsp=CreateObject("roXMLElement")
     If Not rsp.Parse(xml) Then Stop
-    Return helperPhotoListFromXML(http, rsp.photos.photo) 'rsp.GetBody().Peek().GetBody())  
+    Return helperPhotoListFromXML(http, rsp.photos.photo) 'rsp.GetBody().Peek().GetBody())
 End Function
 
 Function helperPhotoListFromXML(http as Object, xmllist as Object,
@@ -550,10 +550,10 @@ end function
 
 Output:
 ```
-hi\!  
-\--------  
-value: hi\!  
-get: <bsTypedValue: Function\>  
+hi\!
+\--------
+value: hi\!
+get: <bsTypedValue: Function\>
 set: <bsTypedValue: Function\>
 ```
 
@@ -580,7 +580,7 @@ The common library file sources can be viewed from the debug console:
 
 ```
 BrightScript> bslCore =
-ReadAsciiFile("common:/LibCore/v30/bslCore.brs")  
+ReadAsciiFile("common:/LibCore/v30/bslCore.brs")
 BrightScript> print bslCore
 ```
 

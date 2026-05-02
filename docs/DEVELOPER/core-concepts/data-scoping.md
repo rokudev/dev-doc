@@ -37,10 +37,10 @@ for a `dialog` object that can only be accessed within the function in
 which it is created and defined:
 
 ```
-dialog = createObject("RoSGNode","Dialog")  
-dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
-dialog.title = "Example Dialog" 
-dialog.optionsDialog = true  
+dialog = createObject("RoSGNode","Dialog")
+dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
+dialog.title = "Example Dialog"
+dialog.optionsDialog = true
 dialog.message = "Press * To Dismiss"
 ```
 
@@ -53,21 +53,22 @@ above in one function, but define it, or otherwise access it, in another
 function in the same component XML file:
 
 ```
-sub createdialog()  
+sub createdialog()
 
-    m.dialog = createObject("RoSGNode","Dialog")  
+    m.dialog = createObject("RoSGNode","Dialog")
 
 end sub
 
 sub definedialog()
 
-    m.dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
+    m.dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
 
-    m.dialog.title = "ExampleDialog"  
+    m.dialog.title = "ExampleDialog"
 
-    m.dialog.optionsDialog = true   
+    m.dialog.optionsDialog = true
 
-    m.dialog.message = "Press * To Dismiss" end sub
+    m.dialog.message = "Press * To Dismiss"
+end sub
 ```
 
 ## m.top component scope reference
@@ -82,17 +83,17 @@ the `dialog` object to the `dialog` field using the `m.top` object
 reference:
 
 ```
-dialog = createObject("RoSGNode","Dialog")  
+dialog = createObject("RoSGNode","Dialog")
 
-dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
+dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
 
-dialog.title = "Example Dialog" 
+dialog.title = "Example Dialog"
 
-dialog.optionsDialog = true  
+dialog.optionsDialog = true
 
 dialog.message = "Press * To Dismiss"
 
-m.top.dialog = dialog`
+m.top.dialog = dialog
 ```
 
 Likewise, if you want to use `findNode()` to find a SceneGraph node
@@ -123,13 +124,13 @@ m.categorieslist = m.top.findNode("categorieslist")
 For example:
 
 ```
-screen = CreateObject("roSGScreen") 
+screen = CreateObject("roSGScreen")
 
-m.port = CreateObject("roMessagePort")  
+m.port = CreateObject("roMessagePort")
 
-screen.setMessagePort(m.port) 
+screen.setMessagePort(m.port)
 
-m.global = screen.getGlobalNode()  
+m.global = screen.getGlobalNode()
 
 m.global.id = "GlobalNode"
 ```
@@ -148,23 +149,23 @@ get its special global element:
 You will need to take the associative array, modify it and save it back into the field.
 
 ```
-m.global.addFields( \{red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff\} ) 
-... 
+m.global.addFields( \{red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff\} )
+...
 
-m.rect = m.top.findNode("Rect1") 
+m.rect = m.top.findNode("Rect1")
 m.rect.color = m.global.red
-... 
+...
 
-color = m.rect.color  
+color = m.rect.color
 
-if m.rect.color = m.global.red  
-  m.rect.color = m.global.green 
-  
-else if m.rect.color = m.global.green 
-  m.rect.color = m.global.blue 
-  
-else 
-  m.rect.color = m.global.red  
-  
+if m.rect.color = m.global.red
+  m.rect.color = m.global.green
+
+else if m.rect.color = m.global.green
+  m.rect.color = m.global.blue
+
+else
+  m.rect.color = m.global.red
+
 end if
 ```

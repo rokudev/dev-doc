@@ -807,105 +807,105 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
 The following example demonstrates the proper implementation of the various feed segments and fields for a live stream:
 
 ```
-{ 
- "version": "1", 
- "defaultLanguage": "en", 
- "defaultAvailabilityCountries": [ 
-  "US" 
- ], 
- "assets": [ 
-  { 
-   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020", 
-   "type": "liveStream", 
-   "content": { 
-    "playOptions": [ 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
-      "license": "free", 
-      "quality": "HD" 
-     }, 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)", 
-      "license": "free", 
-      "quality": "UHD" 
-     } 
-    ] 
-   }, 
-   "externalIds": [ 
-    { 
-     "source": "GRACENOTE_STATION_ID", 
-     "id": "ABCDE" 
-    } 
-   ], 
-   "tags": [ 
-    "partner_channel" 
-   ] 
-  }, 
-  { 
-   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020", 
-   "type": "liveStream", 
-   "content": { 
-    "playOptions": [ 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
-      "license": "free", 
-      "quality": "HD", 
-      "availabilityInfo": { 
-       "country": [ 
-        "us" 
-       ], 
-       "restrictions": [ 
-        { 
-         "allow": true, 
-         "type": "geo", 
-         "valueType": "postal_code", 
-         "values": [ 
-          "19468", 
-          "19462", 
-          "19465", 
-          "19464" 
-         ] 
-        } 
-       ] 
-      } 
-     }, 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)", 
-      "license": "free", 
-      "quality": "UHD", 
-      "availabilityInfo": { 
-       "country": [ 
-        "us" 
-       ], 
-       "restrictions": [ 
-        { 
-         "allow": false, 
-         "type": "geo", 
-         "valueType": "postal_code", 
-         "values": [ 
-          "19468", 
-          "19462", 
-          "19465", 
-          "19464" 
-         ] 
-        } 
-       ] 
-      } 
-     } 
-    ] 
-   }, 
-   "externalIds": [ 
-    { 
-     "source": "GRACENOTE_STATION_ID", 
-     "id": "RegionalABCDE" 
-    } 
-   ], 
-   "tags": [ 
-    "regional_partner_channel" 
-   ] 
-  } 
- ] 
-} 
+{
+ "version": "1",
+ "defaultLanguage": "en",
+ "defaultAvailabilityCountries": [
+  "US"
+ ],
+ "assets": [
+  {
+   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020",
+   "type": "liveStream",
+   "content": {
+    "playOptions": [
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
+      "license": "free",
+      "quality": "HD"
+     },
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)",
+      "license": "free",
+      "quality": "UHD"
+     }
+    ]
+   },
+   "externalIds": [
+    {
+     "source": "GRACENOTE_STATION_ID",
+     "id": "ABCDE"
+    }
+   ],
+   "tags": [
+    "partner_channel"
+   ]
+  },
+  {
+   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020",
+   "type": "liveStream",
+   "content": {
+    "playOptions": [
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
+      "license": "free",
+      "quality": "HD",
+      "availabilityInfo": {
+       "country": [
+        "us"
+       ],
+       "restrictions": [
+        {
+         "allow": true,
+         "type": "geo",
+         "valueType": "postal_code",
+         "values": [
+          "19468",
+          "19462",
+          "19465",
+          "19464"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)",
+      "license": "free",
+      "quality": "UHD",
+      "availabilityInfo": {
+       "country": [
+        "us"
+       ],
+       "restrictions": [
+        {
+         "allow": false,
+         "type": "geo",
+         "valueType": "postal_code",
+         "values": [
+          "19468",
+          "19462",
+          "19465",
+          "19464"
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "externalIds": [
+    {
+     "source": "GRACENOTE_STATION_ID",
+     "id": "RegionalABCDE"
+    }
+   ],
+   "tags": [
+    "regional_partner_channel"
+   ]
+  }
+ ]
+}
 ```
 
 ### Managing a feed that includes VOD content
@@ -915,84 +915,84 @@ You can maintain a single feed that includes both Livestream and VOD content. To
 The following example demonstrates a feed that includes both Live and VOD content:
 
 ```
-{ 
- "version": "1", 
- "defaultLanguage": "en", 
- "defaultAvailabilityCountries": [ 
-  "us", "mx" 
- ], 
- "defaultAvailabilityPlatforms": [ 
-  "all" 
- ], 
- "assets": [{ 
-  "id": "shortform-voice-control", 
-  "type": "shortForm", 
-  "titles": [{ 
-   "value": "Voice Features", 
-   "language": "en" 
-  }], 
-  "shortDescriptions": [{ 
-   "value": "A video highlighting Direct to Play and Enhanced Voice Control features", 
-   "language": "en" 
-  }], 
-  "releaseDate": "2020-01-17", 
-  "genres": [ 
-   "educational" 
-  ], 
-  "advisoryRatings": [{ 
-   "source": "USA_PR", 
-   "value": "TVG" 
-   }, 
-   { 
-   "source": "RTC", 
-   "value": "A" 
-   } 
-  ], 
-  "images": [{ 
-   "type": "main", 
-   "url": "https://image.roku.com/ZHZscHItMTc2/roku-dev-search.png", 
-   "languages": [ 
-   "en", 
-   "es" 
-   ] 
-  }], 
-  "durationInSeconds": 98, 
-  "content": { 
-   "playOptions": [{ 
-   "license": "free", 
-   "quality": "UHD", 
-   "playId": "shortform-voice-control", 
-   "availabilityStartTimeStamp": 1565085600000, 
-   "availabilityEndTimeStamp": 1593597600000, 
-   "availabilityInfo": { 
-    "country": [ 
-    "us", 
-    "mx" 
-    ] 
-   } 
-   }] 
-  } 
-  }, 
-  { 
-  "id": "liveshow", 
-  "type": "liveStream", 
-  "content": { 
-   "playOptions": [{ 
-   "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
-   "license": "free", 
-   "quality": "HD" 
-   }] 
-  }, 
-  "externalIds": [{ 
-   "source": "GRACENOTE_STATION_ID", 
-   "id": "ABCDE" 
-  }], 
-  "tags": [ 
-   "partner_channel" 
-  ] 
-  } 
- ] 
-} 
+{
+ "version": "1",
+ "defaultLanguage": "en",
+ "defaultAvailabilityCountries": [
+  "us", "mx"
+ ],
+ "defaultAvailabilityPlatforms": [
+  "all"
+ ],
+ "assets": [{
+  "id": "shortform-voice-control",
+  "type": "shortForm",
+  "titles": [{
+   "value": "Voice Features",
+   "language": "en"
+  }],
+  "shortDescriptions": [{
+   "value": "A video highlighting Direct to Play and Enhanced Voice Control features",
+   "language": "en"
+  }],
+  "releaseDate": "2020-01-17",
+  "genres": [
+   "educational"
+  ],
+  "advisoryRatings": [{
+   "source": "USA_PR",
+   "value": "TVG"
+   },
+   {
+   "source": "RTC",
+   "value": "A"
+   }
+  ],
+  "images": [{
+   "type": "main",
+   "url": "https://image.roku.com/ZHZscHItMTc2/roku-dev-search.png",
+   "languages": [
+   "en",
+   "es"
+   ]
+  }],
+  "durationInSeconds": 98,
+  "content": {
+   "playOptions": [{
+   "license": "free",
+   "quality": "UHD",
+   "playId": "shortform-voice-control",
+   "availabilityStartTimeStamp": 1565085600000,
+   "availabilityEndTimeStamp": 1593597600000,
+   "availabilityInfo": {
+    "country": [
+    "us",
+    "mx"
+    ]
+   }
+   }]
+  }
+  },
+  {
+  "id": "liveshow",
+  "type": "liveStream",
+  "content": {
+   "playOptions": [{
+   "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
+   "license": "free",
+   "quality": "HD"
+   }]
+  },
+  "externalIds": [{
+   "source": "GRACENOTE_STATION_ID",
+   "id": "ABCDE"
+  }],
+  "tags": [
+   "partner_channel"
+  ]
+  }
+ ]
+}
 ```
 
 ## Pagination

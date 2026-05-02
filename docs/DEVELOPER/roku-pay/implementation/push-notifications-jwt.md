@@ -57,11 +57,11 @@ The JOSE header and the set of JWT claims are each base64url-encoded. The two ar
 "."
 
 ' payload (JWT claims)
-{  
-    "iss":"Roku, Inc. urn:roku:apps:partner-service.roku.com",   
+{
+    "iss":"Roku, Inc. urn:roku:apps:partner-service.roku.com",
     "exp":1300819380, // This is set to 24 hours after the token generation
     "nbf":1300818380, // This is set to one hour before the token was generated
-    "x-Roku-message":"eyJpc3MiOiJqb2Ui...LA0KICJleHAiOjEz", // base64url(utf8(message))   
+    "x-Roku-message":"eyJpc3MiOiJqb2Ui...LA0KICJleHAiOjEz", // base64url(utf8(message))
     "x-Roku-message-encoding":"base64-utf8",
     "x-Roku-message-key":"some-unique-key-for-the-message", // used to de-duplicate messages
     "x-Roku-message-type":"roku.rpay.push" //identifies that message is a Roku Pay push notification.
@@ -158,7 +158,7 @@ Publishers must use Roku-provided public keys, which are located [here](https://
        "kid":"ROKU-PARTNER-SERVICE-2021-04-29"
      },
      {
-       "kty":"RSA",     
+       "kty":"RSA",
        "n": "0vx7agoebGcQSuuPiLJXZpt...N9nndrQmbXEps2aiAFbWhM78LhWxgb",
        "e":"AQAB",
        "alg":"RS256",

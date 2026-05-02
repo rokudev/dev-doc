@@ -284,7 +284,7 @@ To call the Continue Watching APIs, the app must include BrightScript code that 
 
 ```
 'SetUrl needs to be called first
-request.SetUrl("https://userdata.sr.roku.com/user-data/v1/content/continueWatching");
+request.SetUrl("https://userdata.sr.roku.com/user-data/v1/content/continueWatching")
 request.AddHeader("Content-Type","application/json")
 request.AddHeader("x-roku-reserved-jwt", "")
 request.AddHeader("x-roku-reserved-channel-id", "<production app ID>") 'pass the production app ID

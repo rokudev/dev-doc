@@ -703,7 +703,7 @@ Ejemplo:
 
 ```
       <manifest:Markers>
-      
+
       <!--Opening credit cuePoint inicio y fin-->
         <manifest:Marker>
           <manifest:Timecode format="seconds">155.071</manifest:Timecode>
@@ -715,9 +715,9 @@ Ejemplo:
           <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
           <manifest:Label>LFEI</manifest:Label>
         </manifest:Marker>
-        
+
         <!--End credit cuePoint inicion y fin-->
-        
+
         <manifest:Marker>
           <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
           <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
@@ -728,7 +728,7 @@ Ejemplo:
           <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
           <manifest:Label>LFUN</manifest:Label>
         </manifest:Marker>
-        
+
         <!--adBreak cuePoints (Roku solo necesita un punto de inicio. Nuestro reproductor, pausara efectivamente la reproduccion del video en este punto, reproducira el anuncion, y reanudara desde este mismo punto)-->
 
         <manifest:Marker>

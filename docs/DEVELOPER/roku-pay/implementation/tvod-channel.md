@@ -141,7 +141,7 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
    'callback function
    function confirmPartnerOrderStatusChanged()
    		if m.store.confirmPartnerOrderStatus.status = "Success"
-   				displayOrderStatusDialog(m.store.confirmPartnerOrderStatus	
+   				displayOrderStatusDialog(m.store.confirmPartnerOrderStatus
    		else
    				'display an appropriate error message
    		end if

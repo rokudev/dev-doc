@@ -7,8 +7,8 @@ The SceneGraph node markup elements contained in the \<children\> element may in
 
 ```
 <ParentNode >
-  <ChildNode 
-    role = "parentnode_fieldname" 
+  <ChildNode
+    role = "parentnode_fieldname"
     ... />
 </ParentNode>
 ```

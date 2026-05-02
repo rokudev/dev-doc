@@ -389,7 +389,7 @@ When a customer selects a subscription, they are prompted to grant Roku permissi
 	"transactionType": "Sale",
 	"transactionId": "bf9af441015311ed810f0a58a9feac11",
 	"channelId": "1143791",
-	"channelName": "1p6d9g0o7k7w9a1m",	
+	"channelName": "1p6d9g0o7k7w9a1m",
 	"productCode": "UQcEYh2fVuKqS6cTuR3X_MonthlySub",
 	"productName": "UQcEYh2fVuKqS6cTuR3X_MonthlySub_name",
 	"price": 0.99,
@@ -490,7 +490,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
      if status = 0
           ...
      end if
-       
+
      'check if access token stored in Roku cloud has specifed value
       response = myChannelStore.storeChannelCredDataStatus.response
       if response.json.channel_data = myChannelStore.channelCredData

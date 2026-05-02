@@ -282,31 +282,31 @@ Removes all cookies from the cookie cache.
     sudo cp /opt/openssl/testCA/server/certificates/testWEB.CRT /etc/httpd/certs
     sudo cp /opt/openssl/testCA/server/keys/testWEB.KEY /etc/httpd/certs
     sudo cp sudo cp /opt/openssl/testCA/CA/testCA.CRT /etc/httpd/certs
-    
+
     # Remove the passwd from the keyfile (to avoid entering it for testWEB every time Apache starts)
     sudo cp /etc/httpd/certs/testWEB.KEY
     /etc/httpd/certs/testWEB.KEY.orig
     sudo openssl rsa -in /etc/httpd/certs/testWEB.KEY.orig -out /etc/httpd/certs/testWEB.KEY
-    
+
     # Editing ssl.conf
-    
+
     # Configure your server cert:
     SSLCertificateFile /etc/httpd/certs/testWEB.CRT
     SSLCertificateKeyFile /etc/httpd/certs/testWEB.KEY
-    
+
     # Configure client cert authentication:
     SSLCACertificateFile /etc/httpd/certs/cacert.pem
-    
+
     # from roku sdk
     SSLVerifyClient require
     SSLVerifyDepth 1
-    
+
     # Editing httpd.conf
-    
+
     # In <Directory> </Directory> tags where your video resides:`
     # Checking the x-roku-reserved-dev-id header value assures that it is
     # your package trying to connect to this directory.
-    
+
     # You can find the dev-id of your brightscript package by going to the developer page on your Roku box, and selecting "Utilities".
     # On the "Utilities" page, select "Choose File", enter the passwd for that pkg, and click "Inspect"
     # Copy the value for the "Dev ID:" parameter and paste it here:
@@ -315,7 +315,7 @@ Removes all cookies from the cookie cache.
     Order Deny,Allow`
     Deny from all`
     Allow from env=let_roku_in`
-    
+
     # Restarting Apache
     sudo service httpd restart
     ```

@@ -675,11 +675,11 @@ Las etiquetas para merchandising/curación se pueden enviar a través del nodo d
 
 ```xml
 <md:LocalizedInfo language="en">
-<md:TitleDisplayUnlimited>Gran título de mi programa</md:TitleDisplayUnlimited>
-<md:Summary190>Resumen breve de mi programa.</md:Summary190>
-<md:Summary400>Resumen más extenso de mi programa.</md:Summary400>
-<md:Genre id="genero"/>
-<md:Keyword>palabra clave</md:Keyword>
+  <md:TitleDisplayUnlimited>Gran título de mi programa</md:TitleDisplayUnlimited>
+  <md:Summary190>Resumen breve de mi programa.</md:Summary190>
+  <md:Summary400>Resumen más extenso de mi programa.</md:Summary400>
+  <md:Genre id="genero"/>
+  <md:Keyword>palabra clave</md:Keyword>
 </md:LocalizedInfo>
 ```
 
@@ -691,8 +691,8 @@ Ejemplo:
 
 ```xml
 <md:AltIdentifier>
-	<md:Namespace>TMSID</md:Namespace>
-	<md:Identifier>EP012345678910</md:Identifier>
+  <md:Namespace>TMSID</md:Namespace>
+  <md:Identifier>EP012345678910</md:Identifier>
 </md:AltIdentifier>
 ```
 
@@ -702,61 +702,61 @@ adBreak, intro credit, and end credit cuePoints pueden ser entregado en MovieLab
 Ejemplo:
 
 ```xml
-      <manifest:Markers>
+<manifest:Markers>
 
-      <!--Opening credit cuePoint inicio y fin-->
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">155.071</manifest:Timecode>
-          <manifest:DisplayLabel>FIRST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
-          <manifest:Label>FFEI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">200.867</manifest:Timecode>
-          <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
-          <manifest:Label>LFEI</manifest:Label>
-        </manifest:Marker>
+  <!--Opening credit cuePoint inicio y fin-->
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">155.071</manifest:Timecode>
+    <manifest:DisplayLabel>FIRST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
+    <manifest:Label>FFEI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">200.867</manifest:Timecode>
+    <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
+    <manifest:Label>LFEI</manifest:Label>
+  </manifest:Marker>
 
-        <!--End credit cuePoint inicion y fin-->
+  <!--End credit cuePoint inicion y fin-->
 
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
-          <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
-          <manifest:Label>FFUN</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">3812.517</manifest:Timecode>
-          <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
-          <manifest:Label>LFUN</manifest:Label>
-        </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
+    <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
+    <manifest:Label>FFUN</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">3812.517</manifest:Timecode>
+    <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
+    <manifest:Label>LFUN</manifest:Label>
+  </manifest:Marker>
 
-        <!--adBreak cuePoints (Roku solo necesita un punto de inicio. Nuestro reproductor, pausara efectivamente la reproduccion del video en este punto, reproducira el anuncion, y reanudara desde este mismo punto)-->
+  <!--adBreak cuePoints (Roku solo necesita un punto de inicio. Nuestro reproductor, pausara efectivamente la reproduccion del video en este punto, reproducira el anuncion, y reanudara desde este mismo punto)-->
 
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">737.111</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">1361.276</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">1948.821</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">2841.421</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">3270.100</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-      </manifest:Markers>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">737.111</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">1361.276</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">1948.821</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">2841.421</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">3270.100</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+</manifest:Markers>
 ```
 
 ### Validación del esquema de MovieLabs
@@ -1281,8 +1281,8 @@ Clasificación del contenido por género. Roku requiere que cada película se en
 
 ```xml
 <genres>
-<genre>drama</genre>
-<!-- Géneros adicionales aquí-->
+  <genre>drama</genre>
+  <!-- Géneros adicionales aquí-->
 </genres>
 ```
 
@@ -1298,9 +1298,9 @@ Clasificación por edades o de contenido de la película según una fuente de cl
 
 ```xml
 <ratings>
-<rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
-<rating system="bbfc">12A</rating>
-<rating system="chvrs">14A</rating>
+  <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
+  <rating system="bbfc">12A</rating>
+  <rating system="chvrs">14A</rating>
 </ratings>
 ```
 
@@ -1316,9 +1316,9 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 
 ```xml
 <tags>
-<tag>energy</tag>
-<tag>dance</tag>
-<!-- Etiquetas adicionales aquí-->
+  <tag>energy</tag>
+  <tag>dance</tag>
+  <!-- Etiquetas adicionales aquí-->
 </tags>
 ```
 
@@ -1334,13 +1334,13 @@ Se utiliza para determinar[los cortes publicitarios del contenido financiado con
 
 ```xml
 <adBreaks>
-<adBreak>
-<start_time>00:03:15.000</start_time>
-</adBreak>
-<adBreak>
-<start_time>00:07:45.425</start_time>
-</adBreak>
-<!-- adBreaks adicionales aquí-->
+  <adBreak>
+    <start_time>00:03:15.000</start_time>
+  </adBreak>
+  <adBreak>
+    <start_time>00:07:45.425</start_time>
+  </adBreak>
+  <!-- adBreaks adicionales aquí-->
 </adBreaks>
 ```
 
@@ -1357,26 +1357,26 @@ Se utiliza para identificar los puntos de entrada y salida de los créditos inic
 
 ```xml
 <cuePoints>
-	<cuePoint type="ad overlay">
-		<start_time>00:09:10.456</start_time>
-		<end_time>00:09:12.678</end_time>
-	</cuePoint>
-	<cuePoint type="behind the scenes">
-		<start_time>00:07:08.123</start_time>
-		<end_time>00:07:59.123</end_time>
-	</cuePoint>
-	<cuePoint type="intro">
-		<start_time>00:01:08.123</start_time>
-		<end_time>00:01:59.123</end_time>
-	</cuePoint>
-	<cuePoint type="recap">
-		<start_time>00:21:08.123</start_time>
-		<end_time>00:21:59.123</end_time>
-	</cuePoint>
-	<cuePoint type="end">
-		<start_time>00:41:08.123</start_time>
-		<end_time>00:41:59.123</end_time>
-	</cuePoint>
+  <cuePoint type="ad overlay">
+    <start_time>00:09:10.456</start_time>
+    <end_time>00:09:12.678</end_time>
+  </cuePoint>
+  <cuePoint type="behind the scenes">
+    <start_time>00:07:08.123</start_time>
+    <end_time>00:07:59.123</end_time>
+  </cuePoint>
+  <cuePoint type="intro">
+    <start_time>00:01:08.123</start_time>
+    <end_time>00:01:59.123</end_time>
+  </cuePoint>
+  <cuePoint type="recap">
+    <start_time>00:21:08.123</start_time>
+    <end_time>00:21:59.123</end_time>
+  </cuePoint>
+  <cuePoint type="end">
+    <start_time>00:41:08.123</start_time>
+    <end_time>00:41:59.123</end_time>
+  </cuePoint>
 </cuePoints>
 ```
 
@@ -1414,10 +1414,10 @@ Nombre de un miembro del reparto**.** Sección CDATA compatible.
 
 ```xml
 <cast>
-<cast_member>
-<display_name><![CDATA[Harrison Ford]]></display_name>
-</cast_member>
-<!-- Otros miembros del reparto aquí-->
+  <cast_member>
+    <display_name><![CDATA[Harrison Ford]]></display_name>
+  </cast_member>
+  <!-- Otros miembros del reparto aquí-->
 </cast>
 ```
 
@@ -1547,8 +1547,8 @@ Código de país del territorio en el que está disponible el contenido. Se pued
 
 ```xml
 <playOption>
-<country>US</country>
-<!-- Otros nodos de país aquí -->
+  <country>US</country>
+  <!-- Otros nodos de país aquí -->
 </playOption>
 ```
 
@@ -1564,8 +1564,8 @@ Tipo de monetización de la película. Se pueden proporcionar varios nodos vodTy
 
 ```xml
 <playOption>
-<vodType>AVOD</vodType>
-<!-- Otros nodos vodType aquí -->
+  <vodType>AVOD</vodType>
+  <!-- Otros nodos vodType aquí -->
 </playOption>
 ```
 
@@ -1581,7 +1581,7 @@ Ejemplo:
 
 ```xml
 <playOption>
-<licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
+  <licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
 ```
 
@@ -1597,7 +1597,7 @@ Ejemplo:
 
 ```xml
 <playOption>
-<licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
+  <licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
 ```
 
@@ -1628,7 +1628,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="source">
+  <data_file role="source">
 ```
 
 **full captions**
@@ -1643,7 +1643,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="captions">
+  <data_file role="captions">
 ```
 
 **full audio**
@@ -1660,7 +1660,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="audio">
+  <data_file role="audio">
 ```
 
 **full subtitles**
@@ -1719,7 +1719,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="subtitles">
+  <data_file role="subtitles">
 ```
 
 **artwork**
@@ -1734,11 +1734,11 @@ El bloque que describe los archivos de ilustración. El atributo de la etiqueta 
 
 ```xml
 <asset type="artwork">
-<data_file>
-<asset type="artwork">
-<data_file type="background_image">
-<asset type="artwork">
-<data_file type="thumbnail_boxcover">
+  <data_file>
+    <asset type="artwork">
+      <data_file type="background_image">
+        <asset type="artwork">
+          <data_file type="thumbnail_boxcover">
 ```
 
 **locale**
@@ -2023,9 +2023,9 @@ Ejemplo:
 
 ```xml
 <ratings>
-<rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
-<rating system="bbfc">12A</rating>
-<rating system="chvrs">14A</rating>
+  <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
+  <rating system="bbfc">12A</rating>
+  <rating system="chvrs">14A</rating>
 </ratings>
 ```
 
@@ -2041,9 +2041,9 @@ Ejemplo:
 
 ```xml
 <tags>
-<tag>energy</tag>
-<tag>dance</tag>
-<!-- Etiquetas adicionales aquí-->
+  <tag>energy</tag>
+  <tag>dance</tag>
+  <!-- Etiquetas adicionales aquí-->
 </tags>
 ```
 
@@ -2059,13 +2059,13 @@ Ejemplo:
 
 ```xml
 <adBreaks>
-<adBreak>
-<start_time>00:03:15.000</start_time>
-</adBreak>
-<adBreak>
-<start_time>00:07:45.425</start_time>
-</adBreak>
-<!-- adBreaks adicionales aquí-->
+  <adBreak>
+    <start_time>00:03:15.000</start_time>
+  </adBreak>
+  <adBreak>
+    <start_time>00:07:45.425</start_time>
+  </adBreak>
+  <!-- adBreaks adicionales aquí-->
 </adBreaks>
 ```
 
@@ -2082,26 +2082,26 @@ Ejemplo:
 
 ```xml
 <cuePoints>
-	<cuePoint type="ad overlay">
-		<start_time>00:09:10.456</start_time>
-		<end_time>00:09:12.678</end_time>
-	</cuePoint>
-	<cuePoint type="behind the scenes">
-		<start_time>00:07:08.123</start_time>
-		<end_time>00:07:59.123</end_time>
-	</cuePoint>
-	<cuePoint type="intro">
-		<start_time>00:01:08.123</start_time>
-		<end_time>00:01:59.123</end_time>
-	</cuePoint>
-	<cuePoint type="recap">
-		<start_time>00:21:08.123</start_time>
-		<end_time>00:21:59.123</end_time>
-	</cuePoint>
-	<cuePoint type="end">
-		<start_time>00:41:08.123</start_time>
-		<end_time>00:41:59.123</end_time>
-	</cuePoint>
+  <cuePoint type="ad overlay">
+    <start_time>00:09:10.456</start_time>
+    <end_time>00:09:12.678</end_time>
+  </cuePoint>
+  <cuePoint type="behind the scenes">
+    <start_time>00:07:08.123</start_time>
+    <end_time>00:07:59.123</end_time>
+  </cuePoint>
+  <cuePoint type="intro">
+    <start_time>00:01:08.123</start_time>
+    <end_time>00:01:59.123</end_time>
+  </cuePoint>
+  <cuePoint type="recap">
+    <start_time>00:21:08.123</start_time>
+    <end_time>00:21:59.123</end_time>
+  </cuePoint>
+  <cuePoint type="end">
+    <start_time>00:41:08.123</start_time>
+    <end_time>00:41:59.123</end_time>
+  </cuePoint>
 </cuePoints>
 ```
 
@@ -2139,10 +2139,10 @@ Ejemplo:
 
 ```xml
 <cast>
-<cast_member>
-<display_name><![CDATA[Harrison Ford]]></display_name>
-</cast_member>
-<!-- Otros miembros del reparto aquí-->
+  <cast_member>
+    <display_name><![CDATA[Harrison Ford]]></display_name>
+  </cast_member>
+  <!-- Otros miembros del reparto aquí-->
 </cast>
 ```
 
@@ -2370,8 +2370,8 @@ Ejemplo:
 
 ```xml
 <genres>
-<genre>drama</genre>
-<!-- Géneros adicionales aquí-->
+  <genre>drama</genre>
+  <!-- Géneros adicionales aquí-->
 </genres>
 ```
 
@@ -2387,9 +2387,9 @@ Ejemplo:
 
 ```xml
 <tags>
-<tag>energy</tag>
-<tag>dance</tag>
-<!-- Etiquetas adicionales aquí-->
+  <tag>energy</tag>
+  <tag>dance</tag>
+  <!-- Etiquetas adicionales aquí-->
 </tags>
 ```
 
@@ -2405,10 +2405,10 @@ Ejemplo:
 
 ```xml
 <cast>
-<cast_member>
-<display_name><![CDATA[Harrison Ford]]></display_name>
-</cast_member>
-<!-- Otros miembros del reparto aquí-->
+  <cast_member>
+    <display_name><![CDATA[Harrison Ford]]></display_name>
+  </cast_member>
+  <!-- Otros miembros del reparto aquí-->
 </cast>
 ```
 
@@ -2580,8 +2580,8 @@ Ejemplo:
 
 ```xml
 <playOption>
-<country>US</country>
-<!-- Otros nodos de país aquí -->
+  <country>US</country>
+  <!-- Otros nodos de país aquí -->
 </playOption>
 ```
 
@@ -2597,8 +2597,8 @@ Ejemplo:
 
 ```xml
 <playOption>
-<vodType>AVOD</vodType>
-<!-- Otros nodos vodType aquí -->
+  <vodType>AVOD</vodType>
+  <!-- Otros nodos vodType aquí -->
 </playOption>
 ```
 
@@ -2614,7 +2614,7 @@ Ejemplo:
 
 ```xml
 <playOption>
-<licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
+  <licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
 ```
 
@@ -2630,7 +2630,7 @@ Ejemplo:
 
 ```xml
 <playOption>
-<licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
+  <licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
 ```
 
@@ -2661,7 +2661,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="source">
+  <data_file role="source">
 ```
 
 **full captions**
@@ -2676,7 +2676,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="captions">
+  <data_file role="captions">
 ```
 
 **full audio**
@@ -2693,7 +2693,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="audio">
+  <data_file role="audio">
 ```
 
 **full subtitles**
@@ -2752,7 +2752,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="subtitles">
+  <data_file role="subtitles">
 ```
 
 **artwork**
@@ -2768,9 +2768,9 @@ Ejemplo:
 
 ```xml
 <asset type="artwork">
-<data_file role="episode">
-<asset type="artwork">
-<data_file role="series">
+  <data_file role="episode">
+    <asset type="artwork">
+      <data_file role="series">
 ```
 
 **locale**
@@ -3120,8 +3120,8 @@ Ejemplo:
 
 ```xml
 <genres>
-<genre>drama</genre>
-<!-- Géneros adicionales aquí-->
+  <genre>drama</genre>
+  <!-- Géneros adicionales aquí-->
 </genres>
 ```
 
@@ -3137,9 +3137,9 @@ Ejemplo:
 
 ```xml
 <ratings>
-<rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
-<rating system="bbfc">12A</rating>
-<rating system="chvrs">14A</rating>
+  <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
+  <rating system="bbfc">12A</rating>
+  <rating system="chvrs">14A</rating>
 </ratings>
 ```
 
@@ -3155,9 +3155,9 @@ Ejemplo:
 
 ```xml
 <tags>
-<tag>energy</tag>
-<tag>dance</tag>
-<!-- Etiquetas adicionales aquí-->
+  <tag>energy</tag>
+  <tag>dance</tag>
+  <!-- Etiquetas adicionales aquí-->
 </tags>
 ```
 
@@ -3173,10 +3173,10 @@ Ejemplo:
 
 ```xml
 <cast>
-<cast_member>
-<display_name><![CDATA[Harrison Ford]]></display_name>
-</cast_member>
-<!-- Otros miembros del reparto aquí-->
+  <cast_member>
+    <display_name><![CDATA[Harrison Ford]]></display_name>
+  </cast_member>
+  <!-- Otros miembros del reparto aquí-->
 </cast>
 ```
 
@@ -3306,8 +3306,8 @@ Ejemplo:
 
 ```xml
 <playOption>
-<country>US</country>
-<!-- Otros nodos de país aquí -->
+  <country>US</country>
+  <!-- Otros nodos de país aquí -->
 </playOption>
 ```
 
@@ -3323,8 +3323,8 @@ Ejemplo:
 
 ```xml
 <playOption>
-<vodType>AVOD</vodType>
-<!-- Otros nodos vodType aquí -->
+  <vodType>AVOD</vodType>
+  <!-- Otros nodos vodType aquí -->
 </playOption>
 ```
 
@@ -3340,7 +3340,7 @@ Ejemplo:
 
 ```xml
 <playOption>
-<licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
+  <licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
 ```
 
@@ -3356,7 +3356,7 @@ Ejemplo:
 
 ```xml
 <playOption>
-<licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
+  <licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
 ```
 
@@ -3387,7 +3387,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="source">
+  <data_file role="source">
 ```
 
 **full captions**
@@ -3402,7 +3402,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="captions">
+  <data_file role="captions">
 ```
 
 **full audio**
@@ -3419,7 +3419,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="audio">
+  <data_file role="audio">
 ```
 
 **full subtitles**
@@ -3436,7 +3436,7 @@ Ejemplo:
 
 ```xml
 <asset type="full">
-<data_file role="subtitles">
+  <data_file role="subtitles">
 ```
 
 **artwork**
@@ -3451,7 +3451,7 @@ Ejemplo:
 
 ```xml
 <asset type="artwork">
-<data_file>
+  <data_file>
 ```
 
 **locale**
@@ -3521,7 +3521,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<contentType>episode</contentType>
+  <contentType>episode</contentType>
 </parentInfo>
 ```
 
@@ -3537,7 +3537,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<title>Título de la película o serie principal</title>
+  <title>Título de la película o serie principal</title>
 </parentInfo>
 ```
 
@@ -3553,7 +3553,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<runtime>45</runtime>
+  <runtime>45</runtime>
 </parentInfo>
 ```
 
@@ -3569,7 +3569,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<releaseDate>AAAA-MM-DD</releaseDate>
+  <releaseDate>AAAA-MM-DD</releaseDate>
 </parentInfo>
 ```
 
@@ -3585,7 +3585,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<tmsId>TMSID</tmsId>
+  <tmsId>TMSID</tmsId>
 </parentInfo>
 ```
 
@@ -3601,7 +3601,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<seriesTitle>Título de la serie principal</seriesTitle>
+  <seriesTitle>Título de la serie principal</seriesTitle>
 </parentInfo>
 ```
 
@@ -3617,7 +3617,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<seasonNumber>2</seasonNumber>
+  <seasonNumber>2</seasonNumber>
 </parentInfo>
 ```
 
@@ -3633,7 +3633,7 @@ Ejemplo:
 
 ```xml
 <parentInfo>
-<episodeNumber>14</episodeNumber>
+  <episodeNumber>14</episodeNumber>
 </parentInfo>
 ```
 
@@ -3678,8 +3678,8 @@ Ejemplo:
 
 ```xml
 <teams>
-	<team location="away">Chicago Cubs</team>
-	<team location="home">St. Louis Cardinals</team>
+  <team location="away">Chicago Cubs</team>
+  <team location="home">St. Louis Cardinals</team>
 </teams>
 ```
 

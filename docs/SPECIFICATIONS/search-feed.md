@@ -713,7 +713,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
       </td>
 
       <td>
-        The type of licensing terms for the channel.  
+        The type of licensing terms for the channel.
 
         * **free**: Channel is directly playable upon being deep linked.
         * **subscription**: Channel is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the channel typically displays a subscription sign-up page when receiving deep links into channels that are behind a paywall. This integration does not consider whether a channel is part of a basic or premium package. Channels that are only accessible via a premium package should be considered as "subscription".
@@ -734,7 +734,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
       </td>
 
       <td>
-        The playback resolution of the live channel:  
+        The playback resolution of the live channel:
 
         * SD
         * HD
@@ -806,7 +806,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
 
 The following example demonstrates the proper implementation of the various feed segments and fields for a live stream:
 
-```
+```json
 {
  "version": "1",
  "defaultLanguage": "en",
@@ -914,7 +914,7 @@ You can maintain a single feed that includes both Livestream and VOD content. To
 
 The following example demonstrates a feed that includes both Live and VOD content:
 
-```
+```json
 {
  "version": "1",
  "defaultLanguage": "en",
@@ -1018,7 +1018,7 @@ Developers can use the Roku Search feed schema to validate the format of their s
 >
 > Click [here](https://github.com/rokudev/search-feed-json) to download Roku's Search feed schema.
 
-```
+```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
@@ -2684,7 +2684,6 @@ Developers can use the Roku Search feed schema to validate the format of their s
 		}
 	}
 }
-
 ```
 
 ## Sample feeds
@@ -2695,7 +2694,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 > Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
 
-```
+```json
 {
   "version": "1",
   "defaultLanguage": "en",
@@ -2788,7 +2787,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 > Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
 
-```
+```json
 {
   "version": "1",
   "defaultLanguage": "en",
@@ -3004,7 +3003,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 > Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed. The prefixes in the IDs indicate the content type (MV=movie, SH=series, EP=episode).
 
-```
+```json
 {
   "version": "1.0",
   "defaultLanguage": "en",

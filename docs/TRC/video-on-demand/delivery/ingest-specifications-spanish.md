@@ -673,7 +673,7 @@ Las etiquetas para merchandising/curación se pueden enviar a través del nodo d
 
 *Ejemplo:*
 
-```
+```xml
 <md:LocalizedInfo language="en">
 <md:TitleDisplayUnlimited>Gran título de mi programa</md:TitleDisplayUnlimited>
 <md:Summary190>Resumen breve de mi programa.</md:Summary190>
@@ -689,7 +689,7 @@ Los TMS IDs de Gracenote se pueden enviar a través del XML de MovieLabs MEC com
 
 Ejemplo:
 
-```
+```xml
 <md:AltIdentifier>
 	<md:Namespace>TMSID</md:Namespace>
 	<md:Identifier>EP012345678910</md:Identifier>
@@ -701,7 +701,7 @@ Ejemplo:
 adBreak, intro credit, and end credit cuePoints pueden ser entregado en MovieLabs MMC XML in el nodo marcado, Por favor revise la siguiente información  [MovieLabs MMC Schema](https://movielabs.com/md/manifest/v1.10/manifest-v1.10/manifest-v1.10.html#Link184) para una apropiada estructura de los nodos de Markeres
 Ejemplo:
 
-```
+```xml
       <manifest:Markers>
 
       <!--Opening credit cuePoint inicio y fin-->
@@ -772,13 +772,13 @@ Roku utiliza Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html) 
 
 **Uso de ejemplo**
 
-```
+```bash
 ./validate ~/dev/movielabsSpec/schema/mdmec-v2.9.xsd /path/to/file/directory/MEC_SAMPLE_123456789.xml
 ```
 
 **Respuesta de ejemplo**
 
-```
+```bash
 XMLBEANS_LIB=./../lib
 ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
 /path/to/file/directory /MEC_SAMPLE_123456789.xml valid
@@ -1053,7 +1053,7 @@ Define el tipo de versión del paquete
 
 *Ejemplo:*
 
-```
+```xml
 <package version="film5.0">
 ```
 
@@ -1067,7 +1067,7 @@ Nombre del estudio, cadena o propietario del contenido
 
 *Ejemplo:*
 
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 
@@ -1081,7 +1081,7 @@ Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajust
 
 *Ejemplo:*
 
-```
+```xml
 <language>en</language>
 ```
 
@@ -1095,7 +1095,7 @@ Define el tipo de contenido del paquete
 
 *Ejemplo:*
 
-```
+```xml
 <type>film</type>
 ```
 
@@ -1109,7 +1109,7 @@ Identificador único e inalterable de una película. La empresa socia debe gener
 
 *Ejemplo:*
 
-```
+```xml
 <asset_id>movieAssetIdHere</asset_id>
 ```
 
@@ -1123,7 +1123,7 @@ ID de EIDR si existe uno
 
 *Ejemplo:*
 
-```
+```xml
 <eidr></eidr>
 ```
 
@@ -1137,7 +1137,7 @@ ID de Gracenote si existe uno
 
 *Ejemplo:*
 
-```
+```xml
 <tmsId></tmsId>
 ```
 
@@ -1151,7 +1151,7 @@ Título de la película. Incluye únicamente el nombre del contenido tal y como 
 
 *Ejemplo:*
 
-```
+```xml
 <title><![CDATA[Título de la película. Obligatorio.]]></title>
 ```
 
@@ -1165,7 +1165,7 @@ Una breve sinopsis del contenido. Sección CDATA compatible. Límite de 250 cara
 
 *Ejemplo:*
 
-```
+```xml
 <short_synopsis><![CDATA[Resumen breve de la película. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -1179,7 +1179,7 @@ Una sinopsis larga del contenido. Sección CDATA compatible. Límite de 500 cara
 
 *Ejemplo:*
 
-```
+```xml
 <long_synopsis><![CDATA[Resumen largo de la película. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -1193,7 +1193,7 @@ Define el idioma original de producción del título que se entrega. Como mínim
 
 *Ejemplo:*
 
-```
+```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 
@@ -1207,7 +1207,7 @@ Define el país principal donde se produjo la película y donde están estableci
 
 *Ejemplo:*
 
-```
+```xml
 <country_of_origin>en</ country_of_origin >
 ```
 
@@ -1221,7 +1221,7 @@ Indica si el título entregado contiene subtítulos descriptivos. Los valores ac
 
 *Ejemplo:*
 
-```
+```xml
 <closedCaptions>Y</closedCaptions>
 ```
 
@@ -1237,7 +1237,7 @@ Valores permitidos y sus definiciones:
 
 *Ejemplo:*
 
-```
+```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
@@ -1251,7 +1251,7 @@ Fecha original en la que el contenido estuvo disponible por primera vez en cualq
 
 *Ejemplo:*
 
-```
+```xml
 <release_date>AAAA-MM-DD</release_date>
 ```
 
@@ -1265,7 +1265,7 @@ Tiempo de duración total del contenido en minutos enteros
 
 *Ejemplo:*
 
-```
+```xml
 <runtime>120</runtime>
 ```
 
@@ -1279,7 +1279,7 @@ Clasificación del contenido por género. Roku requiere que cada película se en
 
 *Ejemplo:*
 
-```
+```xml
 <genres>
 <genre>drama</genre>
 <!-- Géneros adicionales aquí-->
@@ -1296,7 +1296,7 @@ Clasificación por edades o de contenido de la película según una fuente de cl
 
 *Ejemplo:*
 
-```
+```xml
 <ratings>
 <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
 <rating system="bbfc">12A</rating>
@@ -1314,7 +1314,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 
 *Ejemplo:*
 
-```
+```xml
 <tags>
 <tag>energy</tag>
 <tag>dance</tag>
@@ -1332,7 +1332,7 @@ Se utiliza para determinar[los cortes publicitarios del contenido financiado con
 
 *Ejemplo:*
 
-```
+```xml
 <adBreaks>
 <adBreak>
 <start_time>00:03:15.000</start_time>
@@ -1355,7 +1355,7 @@ Se utiliza para identificar los puntos de entrada y salida de los créditos inic
 
 *Ejemplo:*
 
-```
+```xml
 <cuePoints>
 	<cuePoint type="ad overlay">
 		<start_time>00:09:10.456</start_time>
@@ -1398,7 +1398,7 @@ Define el tipo de cuePoint del cuePoint proporcionado dentro del bloque de cuePo
 
 *Ejemplo:*
 
-```
+```xml
 <cuePoint type="intro">
 ```
 
@@ -1412,7 +1412,7 @@ Nombre de un miembro del reparto**.** Sección CDATA compatible.
 
 *Ejemplo:*
 
-```
+```xml
 <cast>
 <cast_member>
 <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -1432,7 +1432,7 @@ Nombre de un miembro del equipo de filmación. Sección CDATA compatible.
 
 *Ejemplo:*
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -1447,7 +1447,7 @@ Función del miembro del equipo de filmación que figura en el display_name. Rok
 
 Ejemplo:
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -1461,7 +1461,7 @@ Inicia el bloque de activos que proporciona metadatos localizados para paquetes 
 
 *Ejemplo:*
 
-```
+```xml
 <localizations>
 ```
 
@@ -1475,7 +1475,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 
 *Ejemplo:*
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -1489,7 +1489,7 @@ Título localizado de la película en el idioma especificado en el atributo de n
 
 *Ejemplo:*
 
-```
+```xml
 <title><![CDATA[Título localizado de la película. Obligatorio.]]></title>
 ```
 
@@ -1503,7 +1503,7 @@ Una sinopsis breve localizada del contenido en el idioma especificado en el atri
 
 *Ejemplo:*
 
-```
+```xml
 <short_synopsis><![CDATA[Sinopsis breve localizada de la película. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -1517,7 +1517,7 @@ Una sinopsis larga localizada del contenido en el idioma especificado en el atri
 
 *Ejemplo:*
 
-```
+```xml
 <long_synopsis><![CDATA[Sinopsis larga localizada de la película. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -1531,7 +1531,7 @@ Inicia el bloque de activos que proporciona la información de disponibilidad de
 
 *Ejemplo:*
 
-```
+```xml
 <playOptions>
 ```
 
@@ -1545,7 +1545,7 @@ Código de país del territorio en el que está disponible el contenido. Se pued
 
 *Ejemplo:*
 
-```
+```xml
 <playOption>
 <country>US</country>
 <!-- Otros nodos de país aquí -->
@@ -1562,7 +1562,7 @@ Tipo de monetización de la película. Se pueden proporcionar varios nodos vodTy
 
 *Ejemplo:*
 
-```
+```xml
 <playOption>
 <vodType>AVOD</vodType>
 <!-- Otros nodos vodType aquí -->
@@ -1579,7 +1579,7 @@ Fecha de inicio de la disponibilidad del contenido para las personas usuarias de
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
@@ -1595,7 +1595,7 @@ Fecha de finalización de la disponibilidad del contenido para las personas usua
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
@@ -1611,7 +1611,7 @@ Inicia el bloque de activos que hace referencia a los archivos entregados en el 
 
 Ejemplo:
 
-```
+```xml
 <assets media_type="video">
 ```
 
@@ -1626,7 +1626,7 @@ El bloque que describe el archivo de video fuente. El atributo de la etiqueta de
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="source">
 ```
@@ -1641,7 +1641,7 @@ El bloque que describe los subtítulos descriptivos del archivo de video fuente.
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="captions">
 ```
@@ -1658,7 +1658,7 @@ El bloque que describe el audio sidecar del archivo de video fuente. El archivo 
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="audio">
 ```
@@ -1717,7 +1717,7 @@ El bloque que describe los subtítulos sidecar del archivo de video fuente. El a
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="subtitles">
 ```
@@ -1732,7 +1732,7 @@ El bloque que describe los archivos de ilustración. El atributo de la etiqueta 
 
 \<u>Ejemplos\</u>
 
-```
+```xml
 <asset type="artwork">
 <data_file>
 <asset type="artwork">
@@ -1752,7 +1752,7 @@ Aplica para las funciones del data_file: fuente, subtítulos descriptivos, audio
 
 Ejemplo:
 
-```
+```xml
 <locale name="en"/>
 ```
 
@@ -1769,7 +1769,7 @@ Nombre de archivo del activo indicado en el atributo de tipo o función del data
 
 Ejemplo:
 
-```
+```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
@@ -1783,7 +1783,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```xml
 <audio>stereoOnly</audio>
 ```
 
@@ -1801,7 +1801,7 @@ Define el tipo de versión del paquete
 
 Ejemplo:
 
-```
+```xml
 <package version="tv1.0">
 ```
 
@@ -1815,7 +1815,7 @@ Nombre del estudio, cadena o propietario del contenido
 
 Ejemplo:
 
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 
@@ -1829,7 +1829,7 @@ Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajust
 
 Ejemplo:
 
-```
+```xml
 <language>en</language>
 ```
 
@@ -1843,7 +1843,7 @@ Define el tipo de contenido del paquete
 
 Ejemplo:
 
-```
+```xml
 <type>tv</type>
 ```
 
@@ -1857,7 +1857,7 @@ Identificador único e inalterable de un episodio. La empresa socia debe generar
 
 Ejemplo:
 
-```
+```xml
 <asset_id>episodeAssetIdHere</asset_id>
 ```
 
@@ -1871,7 +1871,7 @@ ID de EIDR si existe uno
 
 Ejemplo:
 
-```
+```xml
 <eidr></eidr>
 ```
 
@@ -1885,7 +1885,7 @@ ID de Gracenote si existe uno
 
 Ejemplo:
 
-```
+```xml
 <tmsId></tmsId>
 ```
 
@@ -1899,7 +1899,7 @@ Título del episodio. Incluye únicamente el nombre del contenido tal y como deb
 
 Ejemplo:
 
-```
+```xml
 <title><![CDATA[Título del episodio. Obligatorio.]]></title>
 ```
 
@@ -1914,7 +1914,7 @@ proporcionarse números de producción. Solo se permiten valores numéricos (ent
 
 Ejemplo:
 
-```
+```xml
 <episodeNumber>2</episodeNumber>
 ```
 
@@ -1928,7 +1928,7 @@ Una breve sinopsis del episodio. Sección CDATA compatible. Límite de 250 carac
 
 Ejemplo:
 
-```
+```xml
 <short_synopsis><![CDATA[Resumen breve del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -1942,7 +1942,7 @@ Una sinopsis larga del episodio. Sección CDATA compatible. Límite de 500 carac
 
 Ejemplo:
 
-```
+```xml
 <long_synopsis><![CDATA[Resumen largo del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -1956,7 +1956,7 @@ Indica si el episodio entregado contiene subtítulos descriptivos. Los valores a
 
 Ejemplo:
 
-```
+```xml
 <closedCaptions>Y</closedCaptions>
 ```
 
@@ -1979,7 +1979,7 @@ Valores permitidos y sus definiciones:
 
 Ejemplo:
 
-```
+```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
@@ -1993,7 +1993,7 @@ Fecha original en la que el episodio estuvo disponible por primera vez en cualqu
 
 Ejemplo:
 
-```
+```xml
 <release_date>AAAA-MM-DD</release_date>
 ```
 
@@ -2007,7 +2007,7 @@ Tiempo de duración total del contenido en minutos enteros
 
 Ejemplo:
 
-```
+```xml
 <runtime>120</runtime>
 ```
 
@@ -2021,7 +2021,7 @@ Clasificación por edades o de contenido del episodio según una fuente de clasi
 
 Ejemplo:
 
-```
+```xml
 <ratings>
 <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
 <rating system="bbfc">12A</rating>
@@ -2039,7 +2039,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 
 Ejemplo:
 
-```
+```xml
 <tags>
 <tag>energy</tag>
 <tag>dance</tag>
@@ -2057,7 +2057,7 @@ Se utiliza para determinar[los cortes publicitarios del contenido financiado con
 
 Ejemplo:
 
-```
+```xml
 <adBreaks>
 <adBreak>
 <start_time>00:03:15.000</start_time>
@@ -2080,7 +2080,7 @@ Se utiliza para identificar los puntos de entrada y salida de los créditos inic
 
 Ejemplo:
 
-```
+```xml
 <cuePoints>
 	<cuePoint type="ad overlay">
 		<start_time>00:09:10.456</start_time>
@@ -2123,7 +2123,7 @@ Define el tipo de cuePoint del cuePoint proporcionado dentro del bloque de cuePo
 
 Ejemplo:
 
-```
+```xml
 <cuePoint type="intro">
 ```
 
@@ -2137,7 +2137,7 @@ Nombre de un miembro del reparto del episodio**.** Sección CDATA compatible.
 
 Ejemplo:
 
-```
+```xml
 <cast>
 <cast_member>
 <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -2157,7 +2157,7 @@ Nombre de un miembro del equipo de filmación del episodio. Sección CDATA compa
 
 Ejemplo:
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -2172,7 +2172,7 @@ Función del miembro del equipo de filmación que figura en el display_name. Rok
 
 Ejemplo:
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -2186,7 +2186,7 @@ Inicia el bloque de activos que proporciona metadatos localizados del episodio p
 
 Ejemplo:
 
-```
+```xml
 <localizations>
 ```
 
@@ -2200,7 +2200,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 
 Ejemplo:
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -2214,7 +2214,7 @@ Título localizado del episodio en el idioma especificado en el atributo de nomb
 
 Ejemplo:
 
-```
+```xml
 <title><![CDATA[Título del episodio localizado. Obligatorio.]]></title>
 ```
 
@@ -2228,7 +2228,7 @@ Una sinopsis breve localizada del episodio en el idioma especificado en el atrib
 
 Ejemplo:
 
-```
+```xml
 <short_synopsis><![CDATA[Resumen breve localizado del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -2242,7 +2242,7 @@ Una sinopsis larga localizada del episodio en el idioma especificado en el atrib
 
 Ejemplo:
 
-```
+```xml
 <long_synopsis><![CDATA[Resumen largo localizado del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -2256,7 +2256,7 @@ Inicia el bloque de la serie que hace referencia a los metadatos del programa al
 
 Ejemplo:
 
-```
+```xml
 <series>
 ```
 
@@ -2270,7 +2270,7 @@ Identificador único e inalterable de una serie. La empresa socia debe generar y
 
 Ejemplo:
 
-```
+```xml
 <series_id>seriesIdHere</series_id>
 ```
 
@@ -2284,7 +2284,7 @@ Título de la serie. Incluye únicamente el nombre del contenido tal y como debe
 
 Ejemplo:
 
-```
+```xml
 <title><![CDATA[Título del episodio. Obligatorio.]]></title>
 ```
 
@@ -2298,7 +2298,7 @@ Una breve sinopsis de la serie. Sección CDATA compatible. Límite de 250 caract
 
 Ejemplo:
 
-```
+```xml
 <short_synopsis><![CDATA[Resumen breve del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -2312,7 +2312,7 @@ Una sinopsis larga de la serie. Sección CDATA compatible. Límite de 500 caract
 
 Ejemplo:
 
-```
+```xml
 <long_synopsis><![CDATA[Resumen largo del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -2326,7 +2326,7 @@ Define el idioma original de producción del episodio que se entrega. Como míni
 
 Ejemplo:
 
-```
+```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 
@@ -2340,7 +2340,7 @@ Define el país principal donde se produjo la película y donde están estableci
 
 Ejemplo:
 
-```
+```xml
 <country_of_origin>US</ country_of_origin>
 ```
 
@@ -2354,7 +2354,7 @@ Fecha original en la que la serie estuvo disponible por primera vez en cualquier
 
 Ejemplo:
 
-```
+```xml
 <release_date>AAAA-MM-DD</release_date>
 ```
 
@@ -2368,7 +2368,7 @@ Clasificación del contenido por género. Roku requiere que cada episodio se ent
 
 Ejemplo:
 
-```
+```xml
 <genres>
 <genre>drama</genre>
 <!-- Géneros adicionales aquí-->
@@ -2385,7 +2385,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 
 Ejemplo:
 
-```
+```xml
 <tags>
 <tag>energy</tag>
 <tag>dance</tag>
@@ -2403,7 +2403,7 @@ Nombre de un miembro del reparto de la serie**.** Sección CDATA compatible.
 
 Ejemplo:
 
-```
+```xml
 <cast>
 <cast_member>
 <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -2423,7 +2423,7 @@ Nombre de un miembro del equipo de filmación de la serie. Sección CDATA compat
 
 Ejemplo:
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -2438,7 +2438,7 @@ Función del miembro del equipo de filmación que figura en el display_name. Rok
 
 Ejemplo:
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -2452,7 +2452,7 @@ Inicia el bloque de activos que proporciona metadatos localizados para la serie 
 
 Ejemplo:
 
-```
+```xml
 <localizations>
 ```
 
@@ -2466,7 +2466,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 
 Ejemplo:
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -2480,7 +2480,7 @@ Título localizado de la serie en el idioma especificado en el atributo de nombr
 
 Ejemplo:
 
-```
+```xml
 <title><![CDATA[Título del episodio localizado. Obligatorio.]]></title>
 ```
 
@@ -2494,7 +2494,7 @@ Una sinopsis breve localizada de la serie en el idioma especificado en el atribu
 
 Ejemplo:
 
-```
+```xml
 <short_synopsis><![CDATA[Resumen breve localizado del episodio. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -2508,7 +2508,7 @@ Una sinopsis larga localizada de la serie en el idioma especificado en el atribu
 
 Ejemplo:
 
-```
+```xml
 <long_synopsis><![CDATA[Resumen largo localizado del episodio. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -2522,7 +2522,7 @@ Inicia el bloque de la temporada que hace referencia a los metadatos para la tem
 
 Ejemplo:
 
-```
+```xml
 <season>
 ```
 
@@ -2536,7 +2536,7 @@ Identificador único e inalterable de una temporada. La empresa socia debe gener
 
 Ejemplo:
 
-```
+```xml
 <season_id>seasonIdHere</season_id>
 ```
 
@@ -2550,7 +2550,7 @@ Posición numérica de la temporada dentro de una serie. Este valor determinará
 
 Ejemplo:
 
-```
+```xml
 <seasonNumber>2</seasonNumber>
 ```
 
@@ -2564,7 +2564,7 @@ Inicia el bloque de activos que proporciona la información de disponibilidad de
 
 Ejemplo:
 
-```
+```xml
 <playOptions>
 ```
 
@@ -2578,7 +2578,7 @@ Código de país del territorio en el que está disponible el contenido. Se pued
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <country>US</country>
 <!-- Otros nodos de país aquí -->
@@ -2595,7 +2595,7 @@ Tipo de monetización del episodio. Se pueden proporcionar varios nodos vodType,
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <vodType>AVOD</vodType>
 <!-- Otros nodos vodType aquí -->
@@ -2612,7 +2612,7 @@ Fecha de inicio de la disponibilidad del contenido para las personas usuarias de
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
@@ -2628,7 +2628,7 @@ Fecha de finalización de la disponibilidad del contenido para las personas usua
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
@@ -2644,7 +2644,7 @@ Inicia el bloque de activos que hace referencia a los archivos entregados en el 
 
 Ejemplo:
 
-```
+```xml
 <assets media_type="video">
 ```
 
@@ -2659,7 +2659,7 @@ El bloque que describe el archivo de video fuente. El atributo de la etiqueta de
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="source">
 ```
@@ -2674,7 +2674,7 @@ El bloque que describe los subtítulos descriptivos del archivo de video fuente.
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="captions">
 ```
@@ -2691,7 +2691,7 @@ El bloque que describe el audio sidecar del archivo de video fuente. El archivo 
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="audio">
 ```
@@ -2750,7 +2750,7 @@ El bloque que describe los subtítulos sidecar del archivo de video fuente. El a
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="subtitles">
 ```
@@ -2766,7 +2766,7 @@ El bloque que describe los archivos de ilustración. El atributo de la etiqueta 
 
 Ejemplo:
 
-```
+```xml
 <asset type="artwork">
 <data_file role="episode">
 <asset type="artwork">
@@ -2784,7 +2784,7 @@ Aplica para las funciones del data_file: fuente, subtítulos descriptivos, audio
 
 Ejemplo:
 
-```
+```xml
 <locale name="en"/>
 ```
 
@@ -2802,7 +2802,7 @@ En el caso de los archivos de ilustraciones, el atributo de la etiqueta file_nam
 
 Ejemplo:
 
-```
+```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
@@ -2816,7 +2816,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```xml
 <audio>stereoOnly</audio>
 ```
 
@@ -2834,7 +2834,7 @@ Define el tipo de versión del paquete
 
 Ejemplo:
 
-```
+```xml
 <package version="clip1.0">
 ```
 
@@ -2848,7 +2848,7 @@ Nombre del estudio, cadena o propietario del contenido
 
 Ejemplo:
 
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 
@@ -2862,7 +2862,7 @@ Idioma principal de los metadatos del paquete. Como mínimo, el valor debe ajust
 
 Ejemplo:
 
-```
+```xml
 <language>en</language>
 ```
 
@@ -2876,7 +2876,7 @@ Define el tipo de contenido del paquete
 
 Ejemplo:
 
-```
+```xml
 <type>clip</type>
 ```
 
@@ -2927,7 +2927,7 @@ Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite
 
 Ejemplo:
 
-```
+```xml
 <subType>trailer</subType>
 ```
 
@@ -2941,7 +2941,7 @@ Identificador único e inalterable de un clip de formato corto La empresa socia 
 
 Ejemplo:
 
-```
+```xml
 <asset_id>clipAssetIdHere</asset_id>
 ```
 
@@ -2955,7 +2955,7 @@ ID de EIDR si existe uno
 
 Ejemplo:
 
-```
+```xml
 <eidr></eidr>
 ```
 
@@ -2969,7 +2969,7 @@ ID de Gracenote si existe uno
 
 Ejemplo:
 
-```
+```xml
 <tmsId></tmsId>
 ```
 
@@ -2983,7 +2983,7 @@ Título de clip de formato corto Incluye únicamente el nombre del contenido tal
 
 Ejemplo:
 
-```
+```xml
 <title><![CDATA[Título del clip. Obligatorio.]]></title>
 ```
 
@@ -2997,7 +2997,7 @@ Una breve sinopsis del contenido. Sección CDATA compatible. Límite de 250 cara
 
 Ejemplo:
 
-```
+```xml
 <short_synopsis><![CDATA[Resumen breve del clip. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -3011,7 +3011,7 @@ Una sinopsis larga del contenido. Sección CDATA compatible. Límite de 500 cara
 
 Ejemplo:
 
-```
+```xml
 <long_synopsis><![CDATA[Resumen largo del clip. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -3025,7 +3025,7 @@ Define el idioma original de producción del título que se entrega. Como mínim
 
 Ejemplo:
 
-```
+```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 
@@ -3039,7 +3039,7 @@ Define el país principal donde se produjo la película y donde están estableci
 
 Ejemplo:
 
-```
+```xml
 <country_of_origin>en</country_of_origin >
 ```
 
@@ -3053,7 +3053,7 @@ Indica si el título entregado contiene subtítulos descriptivos. Los valores ac
 
 Ejemplo:
 
-```
+```xml
 <closedCaptions>Y</closedCaptions>
 ```
 
@@ -3076,7 +3076,7 @@ Valores permitidos y sus definiciones:
 
 Ejemplo:
 
-```
+```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
@@ -3090,7 +3090,7 @@ Fecha original en la que el contenido estuvo disponible por primera vez en cualq
 
 Ejemplo:
 
-```
+```xml
 <release_date>AAAA-MM-DD</release_date>
 ```
 
@@ -3104,7 +3104,7 @@ Tiempo de duración total del contenido en minutos enteros
 
 Ejemplo:
 
-```
+```xml
 <runtime>120</runtime>
 ```
 
@@ -3118,7 +3118,7 @@ Clasificación del contenido por género. Roku requiere que cada clip de formato
 
 Ejemplo:
 
-```
+```xml
 <genres>
 <genre>drama</genre>
 <!-- Géneros adicionales aquí-->
@@ -3135,7 +3135,7 @@ Clasificación por edades o de contenido del clip de formato corto según una fu
 
 Ejemplo:
 
-```
+```xml
 <ratings>
 <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
 <rating system="bbfc">12A</rating>
@@ -3153,7 +3153,7 @@ La etiqueta es un campo de formato libre que puede utilizarse para categorizar e
 
 Ejemplo:
 
-```
+```xml
 <tags>
 <tag>energy</tag>
 <tag>dance</tag>
@@ -3171,7 +3171,7 @@ Nombre de un miembro del reparto**.** Sección CDATA compatible.
 
 Ejemplo:
 
-```
+```xml
 <cast>
 <cast_member>
 <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -3191,7 +3191,7 @@ Nombre de un miembro del equipo de filmación. Sección CDATA compatible.
 
 Ejemplo:
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -3206,7 +3206,7 @@ Función del miembro del equipo de filmación que figura en el display_name. Rok
 
 Ejemplo:
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -3220,7 +3220,7 @@ Inicia el bloque de activos que proporciona metadatos localizados para paquetes 
 
 Ejemplo:
 
-```
+```xml
 <localizations>
 ```
 
@@ -3234,7 +3234,7 @@ Define el idioma del título localizado, la short_synopsis y la long_synopsis qu
 
 Ejemplo:
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -3248,7 +3248,7 @@ Título localizado del clip de formato corto en el idioma especificado en el atr
 
 Ejemplo:
 
-```
+```xml
 <title><![CDATA[Título localizado del clip. Obligatorio.]]></title>
 ```
 
@@ -3262,7 +3262,7 @@ Una sinopsis breve localizada del contenido en el idioma especificado en el atri
 
 Ejemplo:
 
-```
+```xml
 <short_synopsis><![CDATA[Resumen breve localizado del clip. 250 caracteres como máximo. Obligatorio]]></short_synopsis>
 ```
 
@@ -3276,7 +3276,7 @@ Una sinopsis larga localizada del contenido en el idioma especificado en el atri
 
 Ejemplo:
 
-```
+```xml
 <long_synopsis><![CDATA[Resumen largo localizado del clip. 500 caracteres como máximo. Obligatorio.]]></long_synopsis>
 ```
 
@@ -3290,7 +3290,7 @@ Inicia el bloque de activos que proporciona la información de disponibilidad de
 
 Ejemplo:
 
-```
+```xml
 <playOptions>
 ```
 
@@ -3304,7 +3304,7 @@ Código de país del territorio en el que está disponible el contenido. Se pued
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <country>US</country>
 <!-- Otros nodos de país aquí -->
@@ -3321,7 +3321,7 @@ Tipo de monetización del clip de formato corto Se pueden proporcionar varios no
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <vodType>AVOD</vodType>
 <!-- Otros nodos vodType aquí -->
@@ -3338,7 +3338,7 @@ Fecha de inicio de la disponibilidad del contenido para las personas usuarias de
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <licensePeriodStart>AAAA-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
@@ -3354,7 +3354,7 @@ Fecha de finalización de la disponibilidad del contenido para las personas usua
 
 Ejemplo:
 
-```
+```xml
 <playOption>
 <licensePeriodEnd>AAAA-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
@@ -3370,7 +3370,7 @@ Inicia el bloque de activos que hace referencia a los archivos entregados en el 
 
 Ejemplo:
 
-```
+```xml
 <assets media_type="video">
 ```
 
@@ -3385,7 +3385,7 @@ El bloque que describe el archivo de video fuente. El atributo de la etiqueta de
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="source">
 ```
@@ -3400,7 +3400,7 @@ El bloque que describe los subtítulos descriptivos del archivo de video fuente.
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="captions">
 ```
@@ -3417,7 +3417,7 @@ _el audio sidecar puede requerirse si se necesitan activos localizados cuando el
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="audio">
 ```
@@ -3434,7 +3434,7 @@ _los subtítulos sidecar pueden requerirse si se necesitan activos localizados c
 
 Ejemplo:
 
-```
+```xml
 <asset type="full">
 <data_file role="subtitles">
 ```
@@ -3449,7 +3449,7 @@ El bloque que describe los archivos de ilustración. El atributo de la etiqueta 
 
 Ejemplo:
 
-```
+```xml
 <asset type="artwork">
 <data_file>
 ```
@@ -3464,7 +3464,7 @@ Aplica para las funciones del data_file: fuente, subtítulos descriptivos, audio
 
 Ejemplo:
 
-```
+```xml
 <locale name="en"/>
 ```
 
@@ -3478,7 +3478,7 @@ Nombre de archivo del activo indicado en el atributo de tipo o función del data
 
 Ejemplo:
 
-```
+```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
@@ -3492,7 +3492,7 @@ Ejemplo:
 
 Ejemplo:
 
-```
+```xml
 <audio>stereoOnly</audio>
 ```
 
@@ -3506,7 +3506,7 @@ Inicia el bloque de activos que proporciona la información principal del paquet
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 ```
 
@@ -3519,7 +3519,7 @@ Tipo de contenido del contenido principal del cual se deriva o describe el clip
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <contentType>episode</contentType>
 </parentInfo>
@@ -3535,7 +3535,7 @@ Título del programa principal si este es una película o un episodio
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <title>Título de la película o serie principal</title>
 </parentInfo>
@@ -3551,7 +3551,7 @@ Duración del programa principal si este es una película o episodio
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <runtime>45</runtime>
 </parentInfo>
@@ -3567,7 +3567,7 @@ Fecha de estreno de la película, episodio o serie principal
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <releaseDate>AAAA-MM-DD</releaseDate>
 </parentInfo>
@@ -3583,7 +3583,7 @@ ID de TMS de la película, episodio o serie principal
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <tmsId>TMSID</tmsId>
 </parentInfo>
@@ -3599,7 +3599,7 @@ Título de la serie del programa principal si este es un episodio
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <seriesTitle>Título de la serie principal</seriesTitle>
 </parentInfo>
@@ -3615,7 +3615,7 @@ Número de temporada del programa principal si este es un episodio
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <seasonNumber>2</seasonNumber>
 </parentInfo>
@@ -3631,7 +3631,7 @@ Número de episodio del programa principal si este es un episodio
 
 Ejemplo:
 
-```
+```xml
 <parentInfo>
 <episodeNumber>14</episodeNumber>
 </parentInfo>
@@ -3647,7 +3647,7 @@ Nombre del deporte que aparece en el clip o momento destacado
 
 Ejemplo:
 
-```
+```xml
 <sportType>Baseball</sportType>
 ```
 
@@ -3661,7 +3661,7 @@ Nombre de la liga deportiva que aparece en el clip o momento destacado
 
 Ejemplo:
 
-```
+```xml
 <sportLeague>MLB</sportLeague>
 ```
 
@@ -3676,7 +3676,7 @@ _En este momento, Roku solo admite metadatos de participantes basados en equipos
 
 Ejemplo:
 
-```
+```xml
 <teams>
 	<team location="away">Chicago Cubs</team>
 	<team location="home">St. Louis Cardinals</team>

@@ -158,16 +158,13 @@ presses.
 ```
 sub init()
   m.top.backgroundURI = "pkg:/images/rsgetbg.jpg"
-
   m.top.overhang.showClock = false
   m.top.overhang.showOptions = true
 
   m.categoriespanel = m.top.panelSet.createChild("categoriesListPanel")
-
   m.categoryinfopanel = m.top.panelset.createChild("categoryinfoPanel")
-
-  m.categoriespanel.list.observeField("itemFocused","showcategoryinfo")
-  m.categoryinfopanel.observeField("focusedChild","slideexamplesgridpanel")
+  m.categoriespanel.list.observeField("itemFocused", "showcategoryinfo")
+  m.categoryinfopanel.observeField("focusedChild", "slideexamplesgridpanel")
 
   m.categoriespanel.setFocus(true)
 end sub
@@ -175,7 +172,7 @@ end sub
 sub showcategoryinfo()
   categorycontent = m.categoriespanel.list.content.getChild(m.categoriespanel.list.itemFocused)
   m.categoryinfopanel.description = categorycontent.description
-  m.examplespanel = createObject("RoSGNode","examplesGridPanel")
+  m.examplespanel = createObject("RoSGNode", "examplesGridPanel")
   m.examplespanel.overhangtext = categorycontent.shortdescriptionline1
   m.examplespanel.gridcontenturi = categorycontent.Url
 end sub
@@ -188,7 +185,6 @@ sub slideexamplesgridpanel()
     m.categoriespanel.setFocus(true)
   end if
 end sub
-
 ```
 
 The `categoriesListPanel` component object created as a child of the

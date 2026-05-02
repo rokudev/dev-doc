@@ -135,51 +135,39 @@ moves from item to item. So we start with the following
 outline:
 
 **MarkupList item component outline**
-```
-<component name = "VODCategoriesListItem" extends = "Group" >
-
+```xml
+<component name="VODCategoriesListItem" extends="Group">
   <interface>
-    <field id = "itemContent" type = "node" onChange = "showcontent" />
-    <field id = "focusPercent" type = "float" onChange = "showfocus" />
+    <field id="itemContent" type="node" onChange="showcontent" />
+    <field id="focusPercent" type="float" onChange="showfocus" />
   </interface>
 
-  <script type="text/brightscript" >
-
+  <script type="text/brightscript">
     <![CDATA[
-    sub init()
-      m.itemicon = m.top.findNode("itemicon")
-      m.itemlabel = m.top.findNode("itemLabel")
-      m.itemcursor = m.top.findNode("itemcursor")
-      m.itemposter = m.top.findNode("itemPoster")
-    end sub
+      sub init()
+        m.itemicon = m.top.findNode("itemicon")
+        m.itemlabel = m.top.findNode("itemLabel")
+        m.itemcursor = m.top.findNode("itemcursor")
+        m.itemposter = m.top.findNode("itemPoster")
+      end sub
 
-    sub showcontent()
-      itemcontent = m.top.itemContent
-      m.itemicon.uri = itemcontent.url
-      m.itemlabel.text = itemcontent.title
-      m.itemposter.uri = itemcontent.HDPosterUrl
-    end sub
+      sub showcontent()
+        itemcontent = m.top.itemContent
+        m.itemicon.uri = itemcontent.url
+        m.itemlabel.text = itemcontent.title
+        m.itemposter.uri = itemcontent.HDPosterUrl
+      end sub
     ]]>
-
   </script>
 
   <children>
-
     <Group>
-
-      <Poster
-        id = "itemicon" />
-      <Label
-        id = "itemLabel" />
-      <Rectangle
-        id = "itemcursor" />
-      <Poster
-        id = "itemPoster" />
-
+      <Poster id="itemicon" />
+      <Label id="itemLabel" />
+      <Rectangle id="itemcursor" />
+      <Poster id="itemPoster" />
     </Group>
-
   </children>
-
 </component>
 ```
 

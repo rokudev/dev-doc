@@ -23,7 +23,6 @@ Typically, you would use the roEVPDigest component to create a message digest, t
 
 ```
 ba = CreateObject("roByteArray")
-
 ' ...populate bytearray...
 
 digest = CreateObject("roEVPDigest")
@@ -31,8 +30,8 @@ digest.Setup("sha1")
 hashString = digest.Process(ba)
 hashBA = CreateObject("roByteArray")
 hashBA.FromHexString(hashString)
-rsa = CreateObject("roRSA")
 
+rsa = CreateObject("roRSA")
 ' ... save private key to tmp:/privateKey.txt
 
 rsa.SetPrivateKey("tmp:/privateKey.txt")

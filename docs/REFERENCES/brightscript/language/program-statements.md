@@ -577,16 +577,14 @@ For example:
 
 ```
 Sub main()
-    obj={
+    obj = {
         add: add
         a: 5
         b: 10
     }
-
     obj.add()
     print obj.result
 End Sub
-
 
 Function add() as void
     m.result = m.a + m.b

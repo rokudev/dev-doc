@@ -18,7 +18,7 @@ Extends [**Group**](doc:group)
 
 The LabelBase node is an abstract base class for the [**Label**](doc:label) and [**MultiStyleLabel**](doc:multi-style-label) nodes. The Label node is used to display a string of text with a single style; the MultiStyleLabel node is used display a string of text with mixed styles (for example, plain and bold text, different fonts, and/or multiple colors). The LabelBase node provides the dimensions, text alignment, wrapping, auto-truncating, and other common functionality for its child nodes.
 
-> The LabelBase node was introduced in Roku OS 10.5 to provide a single base class for the Label node and the new MultiStyleLabel node, which was added as part of the Roku OS 10.5 release. The Label node now inherits most of its functionality from LabelBase node class. Developers, however, do not need to update their app code to account for this refactoring. 
+> The LabelBase node was introduced in [Roku OS 10.5](doc:release-notes#roku-os-105) to provide a single base class for the Label node and the new MultiStyleLabel node, which was added as part of the [Roku OS 10.5](doc:release-notes#roku-os-105) release. The Label node now inherits most of its functionality from LabelBase node class. Developers, however, do not need to update their app code to account for this refactoring.
 
 ### Text Alignment
 
@@ -135,7 +135,7 @@ Fields derived from the [Group](doc:group) base class can also be used.
             <td>Specifies the text color</td>
         </tr>
         <tr>
-            <td>monospacedDigits<br /><br /><em>Available since Roku OS 14.0</em></td>
+            <td>monospacedDigits<br /><br /><em>Available since [Roku OS 14.0](doc:release-notes#roku-os-140)</em></td>
             <td>Boolean</td>
             <td>false</td>
             <td>READ_WRITE</td>

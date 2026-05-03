@@ -33,7 +33,12 @@ curl -d '' '<roku_target_device>:8060/input?my_event=My%20Test&x=100&y=200&actio
 The following will be printed:
 
 ```json
-{"action":"start","my_event":"My Test","x":"100","y":"200"}
+{
+  "action": "start",
+  "my_event": "My Test",
+  "x": "100",
+  "y": "200"
+}
 ```
 
 **roInput Example**

@@ -41,7 +41,7 @@ You can enable and record a Perfetto trace with the [BrightScript Language exten
 
 2. In the **launch.json** file, add the following **profiling** object to the **configurations** object:
 
-   ```json
+   ```jsonc
    {
       "version": "0.2.0",
       "configurations": [

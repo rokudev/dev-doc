@@ -49,22 +49,22 @@ The JOSE header and the set of JWT claims are each base64url-encoded. The two ar
 ```json
 ' JOSE header
 {
-    "typ":"JWT",  // the signing algorithm to use (RSA 2048 with SHA 256)
-    "alg":"RS256",
-    "kid":"ROKU-PARTNER-SERVICE-2021-04-29" // the key ID corresponding to the private key used to sign the message (refer to the Public Keys section below)
+    "typ": "JWT",  // the signing algorithm to use (RSA 2048 with SHA 256)
+    "alg": "RS256",
+    "kid": "ROKU-PARTNER-SERVICE-2021-04-29" // the key ID corresponding to the private key used to sign the message (refer to the Public Keys section below)
 }
 
 "."
 
 ' payload (JWT claims)
 {
-    "iss":"Roku, Inc. urn:roku:apps:partner-service.roku.com",
-    "exp":1300819380, // This is set to 24 hours after the token generation
-    "nbf":1300818380, // This is set to one hour before the token was generated
-    "x-Roku-message":"eyJpc3MiOiJqb2Ui...LA0KICJleHAiOjEz", // base64url(utf8(message))
-    "x-Roku-message-encoding":"base64-utf8",
-    "x-Roku-message-key":"some-unique-key-for-the-message", // used to de-duplicate messages
-    "x-Roku-message-type":"roku.rpay.push" //identifies that message is a Roku Pay push notification.
+    "iss": "Roku, Inc. urn:roku:apps:partner-service.roku.com",
+    "exp": 1300819380, // This is set to 24 hours after the token generation
+    "nbf": 1300818380, // This is set to one hour before the token was generated
+    "x-Roku-message": "eyJpc3MiOiJqb2Ui...LA0KICJleHAiOjEz", // base64url(utf8(message))
+    "x-Roku-message-encoding": "base64-utf8",
+    "x-Roku-message-key": "some-unique-key-for-the-message", // used to de-duplicate messages
+    "x-Roku-message-type": "roku.rpay.push" //identifies that message is a Roku Pay push notification.
 }
 
 "."
@@ -108,24 +108,24 @@ The **x-Roku-message** field within the JWT claim payload is a base64url-encoded
 
 ```json
 {
-    "customerId":"4e5812f5b00b4f5b90f768d22a7de170",
-    "transactionType":"Sale",
-    "transactionId":"d9dbdfecc5cc41cbb881ab750135029b",
-    "channelId":"581251",
-    "channelName":"Roku Developers",
-    "productCode":"yN4JEfTmjhRP3IpbuWiJ_MonthlySub",
-    "productName":"Monthly Subscription",
-    "price":9.99,
-    "tax":0.0,
-    "total":9.99,
-    "currency":"usd",
-    "isFreeTrial":false,
-    "expirationDate":"2020-04-05T18:45:04.3142198Z",
-    "originalTransactionId":"d9dbdfecc5cc41cbb881ab750135029b",
-    "comments":"New order processed.",
-    "eventDate":"2020-03-05T18:45:04.8762198Z",
-    "creditsApplied":0.00,
-    "responseKey":"d4dd12df0c8445afa8860895061e72f9"
+    "customerId": "4e5812f5b00b4f5b90f768d22a7de170",
+    "transactionType": "Sale",
+    "transactionId": "d9dbdfecc5cc41cbb881ab750135029b",
+    "channelId": "581251",
+    "channelName": "Roku Developers",
+    "productCode": "yN4JEfTmjhRP3IpbuWiJ_MonthlySub",
+    "productName": "Monthly Subscription",
+    "price": 9.99,
+    "tax": 0.0,
+    "total": 9.99,
+    "currency": "usd",
+    "isFreeTrial": false,
+    "expirationDate": "2020-04-05T18:45:04.3142198Z",
+    "originalTransactionId": "d9dbdfecc5cc41cbb881ab750135029b",
+    "comments": "New order processed.",
+    "eventDate": "2020-03-05T18:45:04.8762198Z",
+    "creditsApplied": 0.00,
+    "responseKey": "d4dd12df0c8445afa8860895061e72f9"
 }
 ```
 
@@ -151,18 +151,18 @@ Publishers must use Roku-provided public keys, which are located [here](https://
 {
   "keys": [
      {
-       "kty":"RSA",
+       "kty": "RSA",
        "n": "0vx7agoebGcQSuuPiLJXZpt...N9nndrQmbXEps2aiAFbWhM78LhWxga",
-       "e":"AQAA",
-       "alg":"RS256",
-       "kid":"ROKU-PARTNER-SERVICE-2021-04-29"
+       "e": "AQAA",
+       "alg": "RS256",
+       "kid": "ROKU-PARTNER-SERVICE-2021-04-29"
      },
      {
-       "kty":"RSA",
+       "kty": "RSA",
        "n": "0vx7agoebGcQSuuPiLJXZpt...N9nndrQmbXEps2aiAFbWhM78LhWxgb",
-       "e":"AQAB",
-       "alg":"RS256",
-       "kid":"ROKU-PARTNER-SERVICE-2021-05-29"
+       "e": "AQAB",
+       "alg": "RS256",
+       "kid": "ROKU-PARTNER-SERVICE-2021-05-29"
      }
   ]
 }

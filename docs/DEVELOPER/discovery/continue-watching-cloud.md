@@ -394,9 +394,9 @@ The JWT header must have the following parameters (all other parameters are igno
 
 ```json
 {
-  "typ":"JWT",
-  "alg":"RS256",
-  "kid":"key-thumbprint"
+  "typ": "JWT",
+  "alg": "RS256",
+  "kid": "key-thumbprint"
 }
 ```
 
@@ -420,14 +420,14 @@ The JWT payload must have the following claims:
 
 ```json
 {
-  "exp":1639524781,
-  "nbf":1639524000,
-  "x-roku-request-key":"some-unique-key-for-the-request",
+  "exp": 1639524781,
+  "nbf": 1639524000,
+  "x-roku-request-key": "some-unique-key-for-the-request",
   "x-roku-request-spec": {
-      "serviceUrn":"urn:roku:group:service",
-      "httpMethod":"POST",
-      "path":"/user-data/v1/content/continueWatching",
-      "bodySha256Base64":"AAAAB3NzaC1yc2EAAAADAQABAAABgQCsngzCcay+lQ+..."
+      "serviceUrn": "urn:roku:group:service",
+      "httpMethod": "POST",
+      "path": "/user-data/v1/content/continueWatching",
+      "bodySha256Base64": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCsngzCcay+lQ+..."
     }
 }
 ```

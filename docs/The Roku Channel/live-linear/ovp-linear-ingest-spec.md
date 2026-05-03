@@ -320,7 +320,7 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
 
       <td>
-        SCTE-35 Markers In Stream via any of the following:  
+        SCTE-35 Markers In Stream via any of the following:
 
         * **Splice_Insertion**
           * Start and Duration is required
@@ -365,11 +365,11 @@ The following outlines what we support. A preferred video set up is outlined in 
         * Partners should not serve any ads in the channel other than the ones returned by the Roku SSAI, unless explicitly agreed in the contract.
         * Partners should adhere to the below ad length requirements:
           * General Audience
-            * 8 minutes of ads per hour 
-            * Minimum 4 ads and maximum of 6 ads per pod 
+            * 8 minutes of ads per hour
+            * Minimum 4 ads and maximum of 6 ads per pod
             * Ad pod length of 2 minutes
         * Kids
-          * 6 minutes of ads per hour 
+          * 6 minutes of ads per hour
           * Minimum 3 ads and maximum of 6 ads per pods
           * Ad pod length of 90 seconds
           * Bumper/lead-in identifying ad break before AND after ad pods occur (6 second maximum)
@@ -495,7 +495,9 @@ Each image must be delivered in the JPEG format (.jpg or .jpeg file extension).
 Object Example:
 
 ```json
-thumbnail: "http://thumbnail.jpg"
+{
+  "thumbnail": "http://thumbnail.jpg"
+}
 ```
 
 ## Linear Channel Branding and Policies
@@ -849,12 +851,12 @@ Feed Example:
     ],
     "movies": [
         {
-        "id": "movie-id-1",
-        "title": "Between Worlds",
-        "externalIds": [
-            {
-                "id": "MV015001100000",
-                "idType": "TMS"
+            "id": "movie-id-1",
+            "title": "Between Worlds",
+            "externalIds": [
+                {
+                    "id": "MV015001100000",
+                    "idType": "TMS"
                 }
             ]
         },
@@ -866,21 +868,20 @@ Feed Example:
             "releaseDate": "1999-02-13",
             "advisoryRatings": [
                 {
-                "source": "MPAA",
-                "value": "R"
+                    "source": "MPAA",
+                    "value": "R"
                 },
                 {
-                "source": "CPR",
-                "value": "14+"
+                    "source": "CPR",
+                    "value": "14+"
                 }
-                  ],
-            "genres":
-                [
+            ],
+            "genres": [
                 "animals",
                 "animated",
-                "fantasy",
-                ]
-        },
+                "fantasy"
+            ]
+        }
     ],
     "series": [
         {
@@ -888,8 +889,8 @@ Feed Example:
             "title": "series1",
             "seasons": [
                 {
-                     "seasonNumber": 6,
-                        "episodes": [
+                    "seasonNumber": 6,
+                    "episodes": [
                         {
                             "id": "episode-id-1",
                             "title": "episode1",

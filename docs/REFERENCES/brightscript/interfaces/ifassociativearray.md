@@ -133,7 +133,7 @@ An array of associative array keys/value pairs.
     for each item in aa.Items()
         print item.key, item.value
     end for
-    REM prints "one  1", "three  3", "two  2"
+    ' prints "one  1", "three  3", "two  2"
 ```
 
 ### SetModeCaseSensitive() as Void

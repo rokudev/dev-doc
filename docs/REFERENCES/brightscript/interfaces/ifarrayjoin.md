@@ -44,12 +44,12 @@ A String containing the array elements.
     a = ["ant","bat","cat"]
     s = a.Join(",")
     print """" + s + """"
-    REM "ant,bat,cat"
+    ' "ant,bat,cat"
 
     a = "abc".Split("")
     s = a.Join("--")
     print """" + s + """"
-    REM "a--b--c"
+    ' "a--b--c"
 ```
 
 

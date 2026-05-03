@@ -25,8 +25,8 @@ This object is created without any arguments:
 **Example**
 
 ```
-REM printAA() is from generalUtils.brs in our sample apps
-REM and used to print an associative Array
+' printAA() is from generalUtils.brs in our sample apps
+' and used to print an associative Array
 
 sub SaveCoverArtFile(filename as String)
     meta = CreateObject("roAudioMetadata")

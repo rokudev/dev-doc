@@ -19,17 +19,17 @@ The Timespan object provides an interface to a simple timer for tracking the dur
 **Example: Timing an activity**
 
 ```
-REM ******************************************************
-REM Compute the number of millisecs to perform a task
-REM ******************************************************
+' ******************************************************
+' Compute the number of millisecs to perform a task
+' ******************************************************
 timer = CreateObject("roTimespan")
 timer.Mark()
 DoTimeConsumingTask()
 print "Task took: " + timer.TotalMilliseconds().ToStr()
 
-REM ******************************************************
-REM Compute how many seconds until rental expires
-REM ******************************************************
+' ******************************************************
+' Compute how many seconds until rental expires
+' ******************************************************
 function secondsLeft(String expirationDate) as Integer
     str = expirationDate
     if str = invalid return -1

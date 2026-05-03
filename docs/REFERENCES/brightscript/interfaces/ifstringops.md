@@ -370,13 +370,13 @@ The URL-encoded version of the specified string.
 s = "@&=+/#!*"
 t = s.Escape()
 print """" + t + """"
-REM "%40%26%3D%2B%2F%23%21%2A"
+' "%40%26%3D%2B%2F%23%21%2A"
 
 ' escaped characters are encoded as UTF-8 sequences
 s = Chr(&h2022)
 t = s.Escape()
 print """" + t + """"
-REM "%E2%80%A2"
+' "%E2%80%A2"
 ```
 
 ### Unescape() as String
@@ -401,7 +401,7 @@ The URL-decoded string.
 t = "%3B%3F%3A%24%2C%28%29"
 s = t.Unescape()
 print """" + s + """"
-REM ";?:$,()"
+' ";?:$,()"
 ```
 
 ### EncodeUri() as String
@@ -420,7 +420,7 @@ The provided string encoded as a Uniform Resource Identifier (URI).
 s = "http://roku.com/my test.asp?first=jane&last=doe"
 t = s.EncodeUri()
 print """" + t + """"
-REM "http://roku.com/my%20test.asp?first=jane&last=doe"
+' "http://roku.com/my%20test.asp?first=jane&last=doe"
 ```
 
 ### DecodeUri() as String
@@ -439,7 +439,7 @@ An unencoded version of the provided encoded Uniform Resource Identifier (URI).
 t = "http://roku.com/my%20test.asp?first=jane&last=doe"
 s = t.DecodeUri()
 print """" + s + """"
-REM "http://roku.com/my test.asp?first=jane&last=doe"
+' "http://roku.com/my test.asp?first=jane&last=doe"
 ```
 
 ### EncodeUriComponent() as String
@@ -458,7 +458,7 @@ The provided string encoded as a Uniform Resource Identifier (URI).
 s = "http://roku.com/my test.asp?first=jane&last=doe"
 t = s.EncodeUriComponent()
 print """" + t + """"
-REM "http%3A%2F%2Froku.com%2Fmy%20test.asp%3Ffirst%3Djane%26last%3Ddoe"
+' "http%3A%2F%2Froku.com%2Fmy%20test.asp%3Ffirst%3Djane%26last%3Ddoe"
 ```
 
 ### DecodeUriComponent() as String
@@ -477,7 +477,7 @@ An unencoded version of the provided encoded Uniform Resource Identifier (URI).
 t = "http%3A%2F%2Froku.com%2Fmy%20test.asp%3Ffirst%3Djane%26last%3Ddoe"
 s = t.DecodeUriComponent()
 print """" + s + """"
-REM "http://roku.com/my test.asp?first=jane&last=doe"
+' "http://roku.com/my test.asp?first=jane&last=doe"
 ```
 
 ### StartsWith(matchString as String) As Boolean

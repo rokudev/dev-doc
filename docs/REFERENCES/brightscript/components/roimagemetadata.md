@@ -115,8 +115,8 @@ The format is IFD#, Tag#[Tag Name], Data Format, Value. The Value is a string re
 **Example**
 
 ```
-REM printAA() is from generalUtils.brs in our sample apps
-REM and used to print an associative Array
+' printAA() is from generalUtils.brs in our sample apps
+' and used to print an associative Array
 sub SaveExifImage(filename as String)
     meta = CreateObject("roImageMetadata")
     meta.SetUrl(filename)

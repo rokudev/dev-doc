@@ -325,13 +325,11 @@ will print
 **Example: flikr**
 
 ```
-REM
-REM Interestingness
-REM pass an (optional) page of value 1 - 5 to get 100 photos
-REM starting at 0/100/200/300/400
-REM
-REM returns a list of "Interestingness" photos with 100 entries
-REM
+' Interestingness
+' pass an (optional) page of value 1 - 5 to get 100 photos
+' starting at 0/100/200/300/400
+'
+' returns a list of "Interestingness" photos with 100 entries
 function GetInterestingnessPhotoList(http as Object, page=1 as Integer) as Object
     print "page=";page
     http.SetUrl("http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=YOURKEYGOESHERE&page="+mid(stri(page),2))
@@ -350,16 +348,14 @@ function helperPhotoListFromXML(http as Object, xmllist as Object,
     return photolist
 end function
 
-REM
-REM newPhotoFromXML
-REM
-REM Takes an roXMLElement Object that is an <photo> ... </photo>
-REM Returns an brs object of type Photo
-REM photo.GetTitle()
-REM photo.GetID()
-REM photo.GetURL()
-REM photo.GetOwner()
-REM
+' newPhotoFromXML
+'
+' Takes an roXMLElement Object that is an <photo> ... </photo>
+' Returns an brs object of type Photo
+' photo.GetTitle()
+' photo.GetID()
+' photo.GetURL()
+' photo.GetOwner()
 function newPhotoFromXML(http as Object, xml as Object, owner as dynamic) as Object
     photo = CreateObject("roAssociativeArray")
     photo.http=http

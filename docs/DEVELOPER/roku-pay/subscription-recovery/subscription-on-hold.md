@@ -315,7 +315,7 @@ end function
 function onRequestStatus()
     print "onRequestStatus"
     requestStatus = m.store.requestStatus
-    if requestStatus = Invalid
+    if requestStatus = invalid
         print "Invalid requestStatus"
         print "DoRecovery failed"
     else if requestStatus.status <> 1
@@ -345,7 +345,7 @@ function DoRecovery() as void
     if FindMemberFunction(m.store, "DoRequest") <> invalid then
         m.store.DoRequest(request)
     else
-        m.top.requestStatus = Invalid
+        m.top.requestStatus = invalid
         return
     end if
     while true
@@ -355,7 +355,7 @@ function DoRecovery() as void
             status = msg.GetStatus()
             statusMessage = msg.GetStatusMessage()
             context = msg.GetContext()
-            if context <> Invalid then
+            if context <> invalid then
                 print "Received roChannelStoreEvent:"
                 print "- command:", command
                 print "- status:", status

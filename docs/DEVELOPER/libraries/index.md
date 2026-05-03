@@ -284,7 +284,7 @@ sub onVideoState()
         }
         hideVideo() 'implement this to restore prev screen
     end if
-end Sub
+end sub
 ```
 
 ***
@@ -360,7 +360,7 @@ Following is a simple example of using RACL with a
 service that supports Model #1.
 
 ```
-Sub VerySimpleShowVideo(item)
+sub VerySimpleShowVideo(item)
     m.global.addField("RSG_analytics","node",false)
     m.global.RSG_analytics = CreateObject("roSGNode","Roku_Analytics:AnalyticsNode")
 
@@ -393,9 +393,9 @@ Sub VerySimpleShowVideo(item)
 
     m.video.observeField("state","onVideoState")
     m.video.control = "start"
-End Sub
+end sub
 
-Sub onVideoState()
+sub onVideoState()
     closeStates = {
         finished : "",
         error : ""
@@ -407,7 +407,7 @@ Sub onVideoState()
         }
         hideVideo() 'implement this to restore prev screen
     end if
-end Sub
+end sub
 ```
 
 ## Expected Output

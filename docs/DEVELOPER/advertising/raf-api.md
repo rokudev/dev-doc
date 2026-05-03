@@ -322,7 +322,7 @@ Allows library client to set a callback function to be called when ad tracking e
 Callback functions must have the following signature:
 
 ```
-Sub CallbackFunc(obj = Invalid as Dynamic, eventType = Invalid as Dynamic, ctx = Invalid as Dynamic)
+sub CallbackFunc(obj = invalid as Dynamic, eventType = invalid as Dynamic, ctx = invalid as Dynamic)
 ```
 
 * The obj parameter is an opaque object always passed through to the callback.

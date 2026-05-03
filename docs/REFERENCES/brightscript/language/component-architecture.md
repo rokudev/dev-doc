@@ -178,18 +178,18 @@ object is sometimes referred to as "autoboxing".
 **Example**
 
 ```
-Function Main()
+function Main()
     MyFunA(4)
     MyFunB(4)
-End Function
+end function
 
-Function MyFunA(p as Object) as Void
+function MyFunA(p as Object) as Void
     print "A",p,type(p)
-End Function
+end function
 
-Function MyFunB(p as Integer) as Void
+function MyFunB(p as Integer) as Void
     print "B",p,type(p)
-End Function
+end function
 ```
 
 **Will Print:**
@@ -204,29 +204,29 @@ Integer
 **Example**
 
 ```
-Print 5.tostr()+"th"   ' prints 5th
-Print "5".toint()+5    ' prints 10
-If type(5.tostr())<> "String" Then Stop
-If (-5).tostr()<>"-5" Then Stop
-If (1+2).tostr()<>"3" Then Stop
-If 5.tostr()<>"5" Then Stop
+print 5.tostr()+"th"   ' prints 5th
+print "5".toint()+5    ' prints 10
+if type(5.tostr())<> "String" then stop
+if (-5).tostr()<>"-5" then stop
+if (1+2).tostr()<>"3" then stop
+if 5.tostr()<>"5" then stop
 i=-55
-If i.tostr()<>"-55" Then Stop
-If 100%.tostr()<>"100" Then Stop
-If (-100%).tostr()<>"-100" Then Stop
+if i.tostr()<>"-55" then stop
+if 100%.tostr()<>"100" then stop
+if (-100%).tostr()<>"-100" then stop
 y%=10
-If y%.tostr()<>"10" Then Stop
-If "5".toint()<>5 Or type("5".toint())<>"Integer" Then Stop
-If "5".tofloat()<>5.0 Or type("5".tofloat())<>"Float" Then Stop
+if y%.tostr()<>"10" then stop
+if "5".toint()<>5 Or type("5".toint())<>"Integer" then stop
+if "5".tofloat()<>5.0 Or type("5".tofloat())<>"Float" then stop
 fs="-1.1"
-If fs.tofloat()<>-1.1 Or fs.toint()<>-1 Then Stop
-If "01234567".left(3)<>"012" Then Stop
-If "01234567".right(4)<>"4567" Then Stop
-If "01234567".mid(3)<>"34567" Then Stop
-If "01234567".mid(3,1)<>"3" Then Stop
-If "01234567".instr("56")<>5 Then Stop
-If "01234567".instr(6,"56")<>-1 Then Stop
-If "01234567".instr(0,"0")<>0 Then Stop
+if fs.tofloat()<>-1.1 Or fs.toint()<>-1 then stop
+if "01234567".left(3)<>"012" then stop
+if "01234567".right(4)<>"4567" then stop
+if "01234567".mid(3)<>"34567" then stop
+if "01234567".mid(3,1)<>"3" then stop
+if "01234567".instr("56")<>5 then stop
+if "01234567".instr(6,"56")<>-1 then stop
+if "01234567".instr(0,"0")<>0 then stop
 ```
 
 Note that ```-5.tostr()``` will cause an error since the dot operator binds tighter than unary
@@ -332,23 +332,23 @@ REM starting at 0/100/200/300/400
 REM
 REM returns a list of "Interestingness" photos with 100 entries
 REM
-Function GetInterestingnessPhotoList(http as Object, page=1 as Integer) as Object
+function GetInterestingnessPhotoList(http as Object, page=1 as Integer) as Object
     print "page=";page
     http.SetUrl("http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=YOURKEYGOESHERE&page="+mid(stri(page),2))
     xml=http.GetToString()
     rsp=CreateObject("roXMLElement")
-    If Not rsp.Parse(xml) Then Stop
-    Return helperPhotoListFromXML(http, rsp.photos.photo) 'rsp.GetBody().Peek().GetBody())
-End Function
+    if not rsp.Parse(xml) then stop
+    return helperPhotoListFromXML(http, rsp.photos.photo) 'rsp.GetBody().Peek().GetBody()
+end function
 
-Function helperPhotoListFromXML(http as Object, xmllist as Object,
+function helperPhotoListFromXML(http as Object, xmllist as Object,
     owner=invalid as dynamic) as Object
     photolist=CreateObject("roList")
-    For Each photo In xmllist
+    for each photo In xmllist
         photolist.Push(newPhotoFromXML(http, photo, owner))
-    End For
-    Return photolist
-End Function
+    end for
+    return photolist
+end function
 
 REM
 REM newPhotoFromXML
@@ -360,7 +360,7 @@ REM photo.GetID()
 REM photo.GetURL()
 REM photo.GetOwner()
 REM
-Function newPhotoFromXML(http as Object, xml as Object, owner as dynamic) as Object
+function newPhotoFromXML(http as Object, xml as Object, owner as dynamic) as Object
     photo = CreateObject("roAssociativeArray")
     photo.http=http
     photo.xml=xml
@@ -369,20 +369,20 @@ Function newPhotoFromXML(http as Object, xml as Object, owner as dynamic) as Obj
     photo.GetID=function():return m.xml@id:end function
     photo.GetOwner=pGetOwner
     photo.GetURL=pGetURL
-    Return photo
-End Function
+    return photo
+end function
 
 
-Function pGetOwner() as String
-    If m.owner <> Invalid Return m.owner
-        Return m.xml@owner
-End Function
+function pGetOwner() as String
+    if m.owner <> invalid then return m.owner
+    return m.xml@owner
+end function
 
-Function pGetURL() as String
+function pGetURL() as String
     a=m.xml.GetAttributes()
     url="http://farm"a.farm".static.flickr.com/"a.server"/"a.id"_"a.secret".jpg"
-    Return url
-End Function
+    return url
+end function
 ```
 
 #### Parsing colons in namespace element and attribute tags
@@ -447,7 +447,7 @@ while true
     if type(msg)="roFileSystemEvent" then
         if msg.isStorageDeviceAdded() then print "device added"
     end if
-End While
+end while
 ```
 
 

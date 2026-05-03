@@ -34,8 +34,8 @@ Component specification for a list of types.
 For example:
 
 ```
-Print type(5) 'returns a 2.1 compatible type
-Print type("my string", 3) 'return a Roku OS 3.0 type
+print type(5) 'returns a 2.1 compatible type
+print type("my string", 3) 'return a Roku OS 3.0 type
 ```
 
 ## GetGlobalAA() as Object
@@ -73,16 +73,16 @@ If an array of files are passed instead of a single filename, then each file is 
 For example:
 
 ```
-Sub Main()
+sub Main()
     Run("pkg:/test.brs")
     BreakIfRunError(LINE_NUM)
-    Print Run("test2.brs", "arg 1", "arg 2")
+    print Run("test2.brs", "arg 1", "arg 2")
     if Run(["pkg:/file1.brs","pkg:/file2.brs"])<>4 then stop
     BreakIfRunError(LINE_NUM)     stop
-End Sub
+end sub
 
 
-Sub BreakIfRunError(ln)
+sub BreakIfRunError(ln)
     el=GetLastRunCompileError()
     if el=invalid then
         el=GetLastRunRuntimeError()
@@ -99,7 +99,7 @@ Sub BreakIfRunError(ln)
         end for
         stop
    end if
-End Sub
+end sub
 ```
 
 ## Eval(code as String) as Dynamic
@@ -132,7 +132,7 @@ runtime error, but you don't want code execution to stop.
 Example:
 
 ```
-Print Eval("n=1/0")
+print Eval("n=1/0")
 ```
 
 Outputs:

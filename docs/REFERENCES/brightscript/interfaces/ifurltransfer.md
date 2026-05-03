@@ -39,26 +39,26 @@ A unique number for the object.
 #### Example
 
 ```
-Function Setup()
+function Setup()
     m.pendingXfers = {}
-End Function
+end function
 
-Function GetAsync(url as String)
+function GetAsync(url as String)
     newXfer = CreateObject("roUrlTransfer")
     newXfer.SetUrl(url)
     newXfer.AsyncGetToString()
     requestId = newXfer.GetIdentity().ToStr()
     m.pendingXfers[requestId] = newXfer
-End Function
+end function
 
-Function HandleUrlEvent(event as Object)
+function HandleUrlEvent(event as Object)
     requestId = event.GetSourceIdentity().ToStr()
     xfer = m.pendingXfers[requestId]
     if xfer <> invalid then
         ' process it
         m.pendingXfers.Delete(requestId)
     end if
-End Function
+end function
 ```
 
 ### SetUrl(url as String) as Void

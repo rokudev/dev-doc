@@ -23,19 +23,19 @@ This object must be supplied with a "section" name on creation. If no such secti
 **Example: Get and set some user authentication in the registry**
 
 ```
-Function GetAuthData() As Dynamic
+function GetAuthData() as Dynamic
      sec = CreateObject("roRegistrySection", "Authentication")
      if sec.Exists("UserRegistrationToken")
          return sec.Read("UserRegistrationToken")
-     endif
+     end if
      return invalid
-End Function
+end function
 
-Function SetAuthData(userToken As String) As Void
+function SetAuthData(userToken as String) as Void
     sec = CreateObject("roRegistrySection", "Authentication")
     sec.Write("UserRegistrationToken", userToken)
     sec.Flush()
-End Function
+end function
 ```
 
 

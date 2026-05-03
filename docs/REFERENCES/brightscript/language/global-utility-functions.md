@@ -246,9 +246,9 @@ list of photo URLs:
 searchRequest = CreateObject("roUrlTransfer")
 searchRequest.SetURL("http://api.example.com/services/rest/getPhotos")
 response = ParseJson(searchRequest.GetToString())
-For Each photo In response.photos
+for each photo in response.photos
     GetImage(photo.title, photo.url)
-End For
+end for
 ```
 
 ## FormatJson(json as Object, flags = 0 as Integer) as String

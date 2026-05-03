@@ -150,17 +150,17 @@ The field portion is optional, refers to variables within the specified function
 ```
 ' Gets a false value in a convoluted way
 ' @deprecated Replaced by {@link .Foo2 Foo2} as of version 11.42
-Function Foo() as BooLean
+function Foo() as BooLean
     x = false
     y = x
     return y
-End Function
+end function
 
 ' Replaces the old Foo function with a more efficient algorithm
 ' @since version 11.42
-Function Foo2() as BooLean
+function Foo2() as BooLean
     return false
-End Function
+end function
 
 '
 ' Embodies the creation and running of a single custom screen for XYZ‐hosted content
@@ -169,10 +169,10 @@ End Function
 ' @param site the site string
 ' @param titlePrefix a static prefix for the video title display line
 ' @param contentAAArray an Array of content meta‐data Aas
-' @return False if there was an error during creating or running this screen.
+' @return false if there was an error during creating or running this screen.
 ' @see the Content metadata doc
 ' @see .CreateUtils CreateUtils()
-Function ShowCustomScreen(utils as Object, site as String, titlePrefix as String, contentAAArray as Object) as BooLean
+function ShowCustomScreen(utils as Object, site as String, titlePrefix as String, contentAAArray as Object) as BooLean
     ' This is the z variable.  It does nothing useful...
     ' except as the target of a @see or @{link}
     ' BrightScriptDoc tag
@@ -190,12 +190,12 @@ Function ShowCustomScreen(utils as Object, site as String, titlePrefix as String
         ' @param bar an integer that's apparently useful in calculating foo
         ' @param baz who knows what kind of object this is
         ' @return A string of some sort
-        getFoo : Function(bar as Integer, baz as Object) as String
-        End Function
+        getFoo : function(bar as Integer, baz as Object) as String
+        end function
     }
 
     z = CreateObject("roFoo")
-End Function
+end function
 
 ' Creates an {@link roAssociativeArray associative array} of useful general utility functions.
 ' {@literal <bold> and </bold> are presented as is in this literal tag, rather than causing "and" to be bolded}
@@ -209,10 +209,10 @@ End Function
 ' And so on...
 ' @see .ShowCustomScreen#z The z variable in the ShowCustomScreen method is rather uninteresting
 ' @return an AA containing useful utility functions
-Function CreateUtils() as Object
+function CreateUtils() as Object
     aa = CreateObject("roAssociativeArray")
     aa.showcustom = ShowCustomScreen
     aa.foo = foo2
     return aa
-End Function
+end function
 ```

@@ -359,7 +359,7 @@ There are several conditions that must be checked to see if 4K UHD content can b
 
 
 ```
-Function CanPlay4K() as Boolean
+function CanPlay4K() as Boolean
   dev_info = CreateObject("roDeviceInfo")
   hdmi_status = CreateObject("roHdmiStatus")
 
@@ -390,7 +390,7 @@ Function CanPlay4K() as Boolean
   end if
 
   return true
-End Function
+end function
 ```
 
 >  This example returns true only if both 4K HEVC and 4K VP9 decoding is supported. If your 4K UHD content is only encoded in one of these codecs, modify the third conditional statement as necessary.
@@ -400,10 +400,10 @@ End Function
 HDR10 playback requires HDMI version 2.0a. HDCP version 2.2, and an HDR10 capable player and display. Apps can check if the Roku device and connected display support HDR10 with **GetDisplayProperties().hdr10** field of the [roDeviceInfo](doc:ifdeviceinfo) component.
 
 ```
-Function canPlayHDR() as Boolean
+function canPlayHDR() as Boolean
   dev_info = createObject("roDeviceInfo")
   return dev_info.getDisplayProperties().hdr10
-End Function
+end function
 ```
 
 

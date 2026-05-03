@@ -117,7 +117,7 @@ The format is IFD#, Tag#[Tag Name], Data Format, Value. The Value is a string re
 ```
 REM printAA() is from generalUtils.brs in our sample apps
 REM and used to print an associative Array
-Sub SaveExifImage(filename As String)
+sub SaveExifImage(filename as String)
     meta = CreateObject("roImageMetadata")
     meta.SetUrl(filename)
     print "------------- GetRawExif() ----------------------"
@@ -150,7 +150,7 @@ Sub SaveExifImage(filename As String)
         end if
         thumbnail.bytes.Writefile(tmp_img)
     end if
-End Sub
+end sub
 ```
 
 

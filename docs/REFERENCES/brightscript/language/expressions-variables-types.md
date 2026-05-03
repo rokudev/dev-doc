@@ -619,25 +619,25 @@ In this example, the `?` variant checks whether the left-hand side of the expres
 ##### No optional chaining operators
 
 ```
-IF array <> invalid THEN
+if array <> invalid then
     el = array[3]
-    IF el <> invalid THEN
+    if el <> invalid then
         foo = el.foo
-        IF foo <> invalid THEN
-            IF foo.bar <> invalid THEN
+        if foo <> invalid then
+            if foo.bar <> invalid then
                 x = foo.bar()
-            ELSE
+            else
                 x = invalid
-            END IF
-        ELSE
+            end if
+        else
             x = invalid
-        END IF
-    ELSE
+        end if
+    else
         x = invalid
-    END IF
-ELSE
+    end if
+else
     x = invalid
-END IF
+end if
 ```
 
 #### Notes

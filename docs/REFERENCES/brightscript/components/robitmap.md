@@ -42,12 +42,12 @@ bm1=CreateObject("roBitmap", "pkg:/images/myphoto1.jpg")
 bm2=CreateObject("roBitmap", "pkg:/images/myphoto2.jpg")
 bm3=CreateObject("roBitmap", "pkg:/images/myphoto3.jpg")
 bmarray=[bm1, bm2, bm3]
-While true
-    For each bitmap in bmarray
+while true
+    for each bitmap in bmarray
         Screen.DrawObject(0,0, bitmap)
         Screen.Finish()
-    End for
-End While
+    end for
+end while
 ```
 
 **Example: Double buffering with roBitmap**

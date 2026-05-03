@@ -69,7 +69,7 @@ To update your app with the new **DoOrder** API, follow these steps:
    function onRequestStatus()
        requestStatus = m.store.requestStatus
 
-       if requestStatus = Invalid
+       if requestStatus = invalid
            print "Invalid requestStatus"
        else
            print "requestStatus", requestStatus
@@ -156,7 +156,7 @@ To update your app with the new **DoOrder** API, follow these steps:
                      keys = item.Keys()
                      for each key in keys
                          strField = AnyToString(item[key])
-                         if strField <> Invalid
+                         if strField <> invalid
                              if strField.len() > 0
                                  message += key + " = " + strField + chr(10)
                              else

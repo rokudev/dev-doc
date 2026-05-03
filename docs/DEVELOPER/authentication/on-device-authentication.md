@@ -93,7 +93,7 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
               transactionId = myChannelStore.purchases.getChild(x).purchaseId
            end if
        end for
-   endif
+   end if
    ```
 3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service#validate-transaction) Roku Pay web service GET API call
    ```

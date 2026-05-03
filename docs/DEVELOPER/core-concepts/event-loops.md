@@ -54,14 +54,14 @@ while true
 	if type(msg) = "roSGScreenEvent" then
 		if msg.isScreenClosed() then
 			return -1
-		elseif msg.isButtonPressed()
+		else if msg.isButtonPressed()
 			print "button pressed: ";msg.GetIndex()
 		else
 			' ignore other unknown or uninteresting screen events
-		endif
+		end if
 	else
 		' ignore other events non-screen events
-	endif
+	end if
 end while
 ```
 
@@ -85,7 +85,7 @@ while true
 	msg = port.GetMessage() ' get a message, if available
 	if type(msg) = "roUniversalControlEvent" then
 		print "button pressed: ";msg.GetInt()
-	endif
+	end if
 	DrawOntoScreen(screen) ' call some ifDraw2D methods to draw on screen
 	screen.SwapBuffers()
 end while
@@ -105,14 +105,14 @@ while true
 	if type(msg) = "roSpringboardScreenEvent" then
 		if msg.isScreenClosed() then
 			return -1
-		elseif msg.isButtonPressed()
+		else if msg.isButtonPressed()
 			print "button pressed: ";msg.GetIndex()
 		else
 			' ignore other unknown or uninteresting roSpringBoardScreenEvents
-		endif
+		end if
 	else
 		' ignore other events, not type roSpringboardScreenEvent
-	endif
+	end if
 	if clock.TotalMilliseconds() > next_call then
 		DoSomething()
 		next_call = clock.TotalMilliseconds() + 5000

@@ -336,14 +336,14 @@ Apps can use the [GetRIDA()](doc:ifdeviceinfo) API to get the RIDA of a device a
 **Retrieving RIDA example**
 
 ```
-Function getAdID() as String
+function getAdID() as String
     adId = ""
     dev_info = createObject("roDeviceInfo")
     if dev_info <> invalid then
       adId = dev_info.GetRIDA()
     end if
     return adId
-End Function
+end function
 ```
 
 #### RIDA specific parameters
@@ -643,7 +643,7 @@ while playContent
   msg = Wait(0, videoPlayer.GetMessagePort())
   currentAd = adIface.stitchedAdHandledEvent(msg, videoPlayer)
 
-  if currentAd <> Invalid and currentAd.evtHandled
+  if currentAd <> invalid and currentAd.evtHandled
     ' ad handled event, take no further action
     if currentAd.adExited
       ' user exited, return to content selection

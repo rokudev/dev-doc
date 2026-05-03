@@ -140,10 +140,10 @@ Apps must implement an API that retrieves the images and description of the app 
     "description": "string"
   }
 </code></pre><br><strong>Example</strong>: <pre><code>  {
-    "images": [ "https://myChannelImage/item1.jpg",  
+    "images": [ "https://myChannelImage/item1.jpg",
                 "https://myChannelContentPosterImages/item2.jpg",
                 "https://myChannelContentPosterImages/item3.jpg"],
-    "description": "Your favorite movies from your favorite decade"            
+    "description": "Your favorite movies from your favorite decade"
   }
 </code></pre></td>
 </tr>
@@ -451,7 +451,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
                transactionId = myChannelStore.purchases.getChild(x).purchaseId
            end if
        end for
-   endif
+   end if
    ```
 
 3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service) Roku Pay Web Service API call.

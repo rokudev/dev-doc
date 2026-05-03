@@ -172,7 +172,7 @@ To update your app with the new Channel Store APIs, follow these steps:
    function onRequestStatus()
        requestStatus = m.store.requestStatus
 
-       if requestStatus = Invalid
+       if requestStatus = invalid
            print "Invalid requestStatus"
        else
            print "requestStatus", requestStatus
@@ -346,7 +346,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                        keys = item.Keys()
                        for each key in keys
                            strField = AnyToString(item[key])
-                           if strField <> Invalid
+                           if strField <> invalid
                                if strField.len() > 0
                                    message += key + " = " + strField + chr(10)
                                else
@@ -410,7 +410,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                for each field in fields
                    strKey = AnyToString(field.key)
                    strValue = AnyToString(field.value)
-                   if strValue <> Invalid
+                   if strValue <> invalid
                        if strValue.len() > 0
                            message += strKey + " = " + strValue + chr(10)
                        else
@@ -424,7 +424,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                            for each field1 in fields1
                                strKey1 = AnyToString(field1.key)
                                strValue1 = AnyToString(field1.value)
-                               if strValue1 <> Invalid
+                               if strValue1 <> invalid
                                    if strValue1.len() > 0
                                        message += "- " + strKey1 + " = " + strValue1 + chr(10)
                                    else
@@ -439,7 +439,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                                            for each field2 in fields2
                                                strKey2 = AnyToString(field2.key)
                                                strValue2 = AnyToString(field2.value)
-                                               if strValue2 <> Invalid
+                                               if strValue2 <> invalid
                                                    if strValue2.len() > 0
                                                        message += "--- " + strKey2 + " = " + strValue2 + chr(10)
                                                    else
@@ -452,7 +452,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                                                    for each field3 in fields3
                                                        strKey3 = AnyToString(field3.key)
                                                        strValue3 = AnyToString(field3.value)
-                                                       if strValue3 <> Invalid
+                                                       if strValue3 <> invalid
                                                            if strValue3.len() > 0
                                                                message += "---- " + strKey3 + " = " + strValue3 + chr(10)
                                                            else
@@ -487,7 +487,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                for each field in fields
                    strKey = AnyToString(field.key)
                    strValue = AnyToString(field.value)
-                   if strValue <> Invalid
+                   if strValue <> invalid
                        if strValue.len() > 0
                            message += strKey + " = " + strValue + chr(10)
                        else
@@ -502,7 +502,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                                for each field1 in fields1
                                    strKey1 = AnyToString(field1.key)
                                    strValue1 = AnyToString(field1.value)
-                                   if strValue1 <> Invalid
+                                   if strValue1 <> invalid
                                        if strValue1.len() > 0
                                            message += "-- " + strKey1 + " = " + strValue1 + chr(10)
                                        else
@@ -531,7 +531,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                for each field in fields
                    strKey = AnyToString(field.key)
                    strValue = AnyToString(field.value)
-                   if strValue <> Invalid
+                   if strValue <> invalid
                        if strValue.len() > 0
                            message += strKey + " = " + strValue + chr(10)
                        else
@@ -540,7 +540,7 @@ To update your app with the new Channel Store APIs, follow these steps:
                    end if
                end for
            end for
-       endif
+       end if
        print "message", message
        dialog.message = message
        m.top.getScene().dialog = dialog

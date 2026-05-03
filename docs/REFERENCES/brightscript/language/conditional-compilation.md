@@ -121,9 +121,9 @@ Conditional compilation can also be used to form block comments. Previously, eac
     This function does not return anything.
 #end if
 
-Function foo() as void
+function foo() as void
     'do nothing
-End Function
+end function
 ```
 
 
@@ -131,9 +131,9 @@ End Function
 
 ```
 #if false
-    Function Order66() as void
+    function Order66() as void
         'code for Order66
-    End Function
+    end function
 #end if
 ```
 

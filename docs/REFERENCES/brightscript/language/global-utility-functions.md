@@ -282,11 +282,11 @@ character value.
 euroStr = Chr(&h20AC)
 
 '* By default, non-ASCII Unicode characters are escaped in JSON style
-? FormatJSON(euroStr)
+print FormatJSON(euroStr)
 ' => "\u20AC"
 
 '* If specified, non-ASCII Unicode characters are not escaped.
-? FormatJSON(euroStr, &h0001)
+print FormatJSON(euroStr, &h0001)
 ' => "€"
 ```
 
@@ -305,18 +305,18 @@ list = CreateObject("roList")
 obj = {list:list, n:1}
 
 '* By default, attempting to format with any unsupported type fails and returns an empty string.
-? FormatJSON(obj)
+print FormatJSON(obj)
 ' => BRIGHTSCRIPT: BRIGHTSCRIPT: ERROR: FormatJSON: list: Value type not supported: roList
 
 '* If specified, unsupported values can be output as JSON 'null' values.
 '* (In this case, no error diagnostics are printed to the console).
-? FormatJSON(obj, &h0100)
+print FormatJSON(obj, &h0100)
 ' => {"list":null,"n":1}
 
 '* If specified, unsupported values can be output as diagnostic string values.
 '* The diagnostic string is the component type in angle brackets.
 '* (In this case, no error diagnostics are printed to the console).
-? FormatJSON(obj, &h0200)
+print FormatJSON(obj, &h0200)
 ' => {"list":"<roList>","n":1}
 ```
 

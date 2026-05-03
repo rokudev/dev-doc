@@ -112,22 +112,22 @@ byteArr = [99, 26, 26, 36, 42]
 
 ' get the 3rd (index 2) and subsequent elements
 byteArr2 = byteArr.Slice(2)
-? FormatJSON(byteArr2)
+print FormatJSON(byteArr2)
 ' => [26,36,42]
 
 ' get the 2nd (index 1) through 3rd (index 2) elements
 byteArr2 = byteArr.Slice(1, 3)
-? FormatJSON(byteArr2)
+print FormatJSON(byteArr2)
 ' => [26,26]
 
 ' get the last 2 elements
 byteArr2 = byteArr.Slice(-2)
-? FormatJSON(byteArr2)
+print FormatJSON(byteArr2)
 ' => [36,42]
 
 ' empty range
 byteArr2 = byteArr.Slice(1, 1)
-? FormatJSON(byteArr2)
+print FormatJSON(byteArr2)
 ' => []
 ```
 

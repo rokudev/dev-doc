@@ -24,7 +24,7 @@ You can pass data between threads without incurring rendezvous or blocking a Tas
 my_array = { str_key: "my_string", int_key: 42 }
 rtq = CreateObject("roRenderThreadQueue")
 rtq.PostMessage("result_array", my_array)
-? my_array
+print my_array
 ```
 
 This will result in the following being printed to the console. The array is empty because passing it to `PostMessage()` caused its contents to be moved to the Render thread. Also note that the print happens immediately and is not blocked by the handler running on the Render thread.
@@ -44,7 +44,7 @@ rtq = CreateObject("roRenderThreadQueue")
 rtq.AddMessageHandler("result_array", "OnTaskResultArrayRTQ")
 
 sub OnTaskResultArrayRTQ(data, msg_info)
-    ? data
+    print data
     ' do stuff
 end sub
 ```

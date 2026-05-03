@@ -416,8 +416,8 @@ The number of nested objects within an object that were copied, rather than move
   n.AddField("aa_field", "assocarray", true)
   my_aa = {key: "value"}
   n.MoveIntoField("aa_field", my_aa)
-  ? n.aa_field
-  ? my_aa
+  print n.aa_field
+  print my_aa
 ```
 
 This code will output the following on the port 8085 console:
@@ -461,8 +461,8 @@ n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
 n.aa_field = {key: "value"}' or use moveIntoField()
 my_aa = n.MoveFromField("aa_field")
-? n.aa_field ' invalid
-? my_aa ' contents of aa_field
+print n.aa_field ' invalid
+print my_aa ' contents of aa_field
 ```
 
 > **Moving data - when it copies instead**
@@ -555,9 +555,9 @@ This function returns true a reference to the field’s value. This function ret
     n.AddField("aa_field", "assocarray", true)
     my_aa = {key: "value"}
     n.setRef("aa_field", my_aa)
-    ? n.aa_field
-    ? my_aa
-    ? n.GetRef("aa_field")
+    print n.aa_field
+    print my_aa
+    print n.GetRef("aa_field")
 
 ```
 

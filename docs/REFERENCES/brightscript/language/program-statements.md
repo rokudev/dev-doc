@@ -203,7 +203,7 @@ For example:
 fruits = ["orange", "lemon", "lime"]
 for each fruit in fruits
     if fruit = "lemon" then continue for
-    ? fruit
+    print fruit
 end for
 ...
 counter = 0
@@ -212,7 +212,7 @@ while counter < 3
         counter++
         continue while
     end if
-    ? counter
+    print counter
     counter++
 end while
 ```

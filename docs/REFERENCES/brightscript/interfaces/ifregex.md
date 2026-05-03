@@ -61,7 +61,7 @@ An roArray of matched substrings from str. If no match was made, an empty array 
 
 ```
  r = CreateObject("roRegex", "(a|(z))(bc)","")
- ? r.Match("abcd")
+ print r.Match("abcd")
  abc
  a
 
@@ -111,7 +111,7 @@ Replaces the first occurrence of a matching pattern in str with replacement and 
 
 ```
  r = CreateObject("roRegex", "(\d+)\s+(\w+)", "")
- ? r.Replace("123 abc", "word:\2 number:\1")
+ print r.Replace("123 abc", "word:\2 number:\1")
  word:abc number:123
 ```
 
@@ -140,11 +140,11 @@ A string with the result of the replace all operation.
 
 ```
   r = CreateObject("roRegex", "a", "i")
-  ? r.ReplaceAll("Abracadabra", "x")
+  print r.ReplaceAll("Abracadabra", "x")
  xbrxcxdxbrx
 
   r = CreateObject("roRegex", "a", "")
-  ? r.ReplaceAll("Abracadabra", "x")
+  print r.ReplaceAll("Abracadabra", "x")
  Abrxcxdxbrx
 ```
 
@@ -168,12 +168,12 @@ An roList of substrings of str that were separated by strings which match the pa
 
 ```
  r = CreateObject("roRegex", ",", "") ' split on comma
- ? r.Split("first, second, third and fourth")
+ print r.Split("first, second, third and fourth")
  first
   second
   third and fourth
  r = CreateObject("roRegex", "/+", "") ' split on one or more slashes
- ? r.Split("example.com/images///2012/cat.jpg")
+ print r.Split("example.com/images///2012/cat.jpg")
   example.com
   images
   2012

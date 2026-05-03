@@ -43,10 +43,10 @@ utils = CreateObject("roUtils")
     di = CreateObject("roDeviceInfo")
     aa = { a: 1, b: { b1: 42 }, c: di }
     new_aa = utils.DeepCopy(aa)
-    ? "IsSameObject", utils.IsSameObject(aa, new_aa)
-    ? "new_aa.a", new_aa.a
-    ? "new_aa.b", new_aa.b
-    ? "new_aa.c", new_aa.c ' invalid, roDeviceInfo is not copyable
+    print "IsSameObject", utils.IsSameObject(aa, new_aa)
+    print "new_aa.a", new_aa.a
+    print "new_aa.b", new_aa.b
+    print "new_aa.c", new_aa.c ' invalid, roDeviceInfo is not copyable
 ```
 
 This code will output the following on the port 8085 console:

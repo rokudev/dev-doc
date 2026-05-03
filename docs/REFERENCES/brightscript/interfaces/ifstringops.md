@@ -492,8 +492,8 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.StartsWith("Roku") ' => true
-? s.StartsWith("roku") ' => false
+print s.StartsWith("Roku") ' => true
+print s.StartsWith("roku") ' => false
 ```
 
 ### StartsWith(matchString as String, matchPos as Integer) As Boolean
@@ -508,8 +508,8 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.StartsWith("Rocks", 5) ' => true
-? s.StartsWith("Roku", 5)  ' => false
+print s.StartsWith("Rocks", 5) ' => true
+print s.StartsWith("Roku", 5)  ' => false
 ```
 
 ### EndsWith(matchString as String) As Boolean
@@ -524,8 +524,8 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.EndsWith("Rocks") ' => true
-? s.EndsWith("roku") ' => false
+print s.EndsWith("Rocks") ' => true
+print s.EndsWith("roku") ' => false
 ```
 
 ### EndsWith(matchString as String, length as Integer) As Boolean
@@ -540,7 +540,7 @@ A flag indicating whether a matching substring was found.
 
 ```
 s = "Roku Rocks"
-? s.EndsWith("Roku", 4) ' => true
+print s.EndsWith("Roku", 4) ' => true
 ```
 
 ### Format(...) As String

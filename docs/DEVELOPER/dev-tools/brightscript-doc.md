@@ -120,7 +120,7 @@ The general format of a comment that is processed by the BrightScriptDoc process
 
 ### General format and sequence of the processed output
 
-As a general rule for processing, all main and tag argument “descriptive text” is scanned for inline tags, which are converted to their respective HTML ouput “in-place”.
+As a general rule for processing, all main and tag argument “descriptive text” is scanned for inline tags, which are converted to their respective HTML output “in-place”.
 
 All instances of multi-instance block tags are grouped together in the processed output under a single paragraph with a title indicative of the specific tag type.
 
@@ -165,7 +165,7 @@ End Function
 '
 ' Embodies the creation and running of a single custom screen for XYZ‐hosted content
 '
-' @param utils an instance of the AA utils object created from calling the {@link .CreateUtils Utils Contructor}
+' @param utils an instance of the AA utils object created from calling the {@link .CreateUtils Utils Constructor}
 ' @param site the site string
 ' @param titlePrefix a static prefix for the video title display line
 ' @param contentAAArray an Array of content meta‐data Aas
@@ -174,7 +174,7 @@ End Function
 ' @see .CreateUtils CreateUtils()
 Function ShowCustomScreen(utils as Object, site as String, titlePrefix as String, contentAAArray as Object) as BooLean
     ' This is the z variable.  It does nothing useful...
-    ' except as the target of a &#x0040;see or &#x0040;&#x007B;link&#x007D;
+    ' except as the target of a @see or @{link}
     ' BrightScriptDoc tag
     z = "something"
 
@@ -185,7 +185,7 @@ Function ShowCustomScreen(utils as Object, site as String, titlePrefix as String
 
     y = {
         ' Anonymous functions comments are best placed above the field assignment
-        ' So that all the relevent tags can be used
+        ' So that all the relevant tags can be used
         '
         ' @param bar an integer that's apparently useful in calculating foo
         ' @param baz who knows what kind of object this is

@@ -12,6 +12,11 @@ next:
 ---
 The Roku platform has thousands of apps, streaming billions of hours of content to our audience per year. As the industry leader in streaming devices and app offerings, it’s helpful to understand how a Roku app is developed and distributed to users around the world.
 
+You can distribute your content in two ways:
+
+1. [Build a streaming app](#new-app-requirements).
+2. [Distribute content on The Roku Channel](doc:overview), which is Roku's own streaming app for linear and on-demand content. 
+
 ### New app requirements
 
 The three main requirements for creating a Roku app are:
@@ -43,7 +48,7 @@ CDN (Content Delivery Networks):
 * Comcast Technology Solutions
 * Amazon Web Services (AWS)
 
-<Image alt="roku815px - videoplayback" border={false} src="https://image.roku.com/ZHZscHItMTc2/videoplayback.png" title="videoplayback" />
+![roku815px - videoplayback](https://image.roku.com/ZHZscHItMTc2/videoplayback.png "videoplayback")
 
 ### Playing hosted videos in a Roku app
 

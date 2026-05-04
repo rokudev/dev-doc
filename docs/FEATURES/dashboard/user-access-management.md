@@ -1,5 +1,5 @@
 ---
-title: User access management in the Developer Dashboard
+title: User access management
 excerpt: ''
 deprecated: false
 hidden: false

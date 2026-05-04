@@ -18,7 +18,7 @@ Extends [**Group**](doc:group)
 
 The LabelBase node is an abstract base class for the [**Label**](doc:label) and [**MultiStyleLabel**](doc:multi-style-label) nodes. The Label node is used to display a string of text with a single style; the MultiStyleLabel node is used display a string of text with mixed styles (for example, plain and bold text, different fonts, and/or multiple colors). The LabelBase node provides the dimensions, text alignment, wrapping, auto-truncating, and other common functionality for its child nodes.
 
-> The LabelBase node was introduced in Roku OS 10.5 to provide a single base class for the Label node and the new MultiStyleLabel node, which was added as part of the Roku OS 10.5 release. The Label node now inherits most of its functionality from LabelBase node class. Developers, however, do not need to update their app code to account for this refactoring. 
+> The LabelBase node was introduced in [Roku OS 10.5](doc:release-notes#roku-os-105) to provide a single base class for the Label node and the new MultiStyleLabel node, which was added as part of the [Roku OS 10.5](doc:release-notes#roku-os-105) release. The Label node now inherits most of its functionality from LabelBase node class. Developers, however, do not need to update their app code to account for this refactoring.
 
 ### Text Alignment
 
@@ -108,3 +108,122 @@ Rotation of LabelBase nodes is supported. On platforms that do not support OpenG
 ## Fields
 
 Fields derived from the [Group](doc:group) base class can also be used.
+
+<table>
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Access Permission</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>text</td>
+            <td>string</td>
+            <td></td>
+            <td>READ_WRITE</td>
+            <td>Specifies the text to be displayed</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>color</td>
+            <td>0xddddddff</td>
+            <td>READ_WRITE</td>
+            <td>Specifies the text color</td>
+        </tr>
+        <tr>
+            <td>monospacedDigits<br /><br /><em>Available since [Roku OS 14.0](doc:release-notes#roku-os-140)</em></td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>READ_WRITE</td>
+            <td>Renders numeric values using tabular (fixed-width) fonts.</td>
+        </tr>
+        <tr>
+            <td>horizAlign</td>
+            <td>string</td>
+            <td>left</td>
+            <td>READ_WRITE</td>
+            <td>See <a href="#horizontal-alignment">Horizontal Alignment</a></td>
+        </tr>
+        <tr>
+            <td>vertAlign</td>
+            <td>string</td>
+            <td>top</td>
+            <td>READ_WRITE</td>
+            <td>See <a href="#vertical-alignment">Vertical Alignment</a></td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>float</td>
+            <td>0</td>
+            <td>READ_WRITE</td>
+            <td>Specifies the width of the label. If set to zero, the text is always displayed as a single line</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>float</td>
+            <td>0</td>
+            <td>READ_WRITE</td>
+            <td>Specifies the height of the label. If set to zero, the actual height is determined by the value of the numLines field if it is greater than zero. See <a href="#vertical-alignment">Vertical Alignment</a> and <a href="#wrapping-text">Wrapping</a> for more details.</td>
+        </tr>
+        <tr>
+            <td>numLines</td>
+            <td>integer</td>
+            <td>0</td>
+            <td>READ_WRITE</td>
+            <td>If the height field value is zero, provides an alternate way to specify the height of the bounding rectangle of the label. See <a href="#vertical-alignment">Vertical Alignment</a> and <a href="#wrapping-text">Wrapping</a> for more details.</td>
+        </tr>
+        <tr>
+            <td>maxLines</td>
+            <td>integer</td>
+            <td>0</td>
+            <td>READ_WRITE</td>
+            <td>If the height and numLines field values are both zero, specifies the maximum number of lines of text to be displayed. See <a href="#vertical-alignment">Vertical Alignment</a> and <a href="#wrapping-text">Wrapping</a> for more details.</td>
+        </tr>
+        <tr>
+            <td>wrap</td>
+            <td>boolean</td>
+            <td>false</td>
+            <td>READ_WRITE</td>
+            <td>See <a href="#wrapping-text">Wrapping Text</a></td>
+        </tr>
+        <tr>
+            <td>displayPartialLines</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>READ_WRITE</td>
+            <td>If the height field value is greater than zero, used to determine whether or not the last line of visible text is displayed if it would be clipped vertically.</td>
+        </tr>
+        <tr>
+            <td>ellipsizeOnBoundary</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>READ_WRITE</td>
+            <td>If the width field value is greater than zero, controls whether or not the last line of text displayed should be ellipsized if it extends beyond the specified width. It is ignored if the truncateOnDelimiter field value is set to a non-empty string.<br /><ul><li>When set to <strong>true</strong>, text will be ellipsized by whole words. Example: "This is the last line of..."</li><li>When set to <strong>false</strong>, text will be ellipsized by characters. Example: "This is the last line of tex..."</li></ul></td>
+        </tr>
+        <tr>
+            <td>wordBreakChars</td>
+            <td>string</td>
+            <td></td>
+            <td>READ_WRITE</td>
+            <td>By default, space and hyphen characters are used to determine where lines can be divided. In addition, this field can specify additional characters to be used to determine where the text can be broken into lines</td>
+        </tr>
+        <tr>
+            <td>ellipsisText</td>
+            <td>string</td>
+            <td></td>
+            <td>READ_WRITE</td>
+            <td>By default, three dots (...) are used to ellipsize the last line of text that extends beyond the bounding rectangle. This field specifies alternate characters to be displayed when the last line of text is ellipsized</td>
+        </tr>
+        <tr>
+            <td>isTextEllipsized</td>
+            <td>Boolean</td>
+            <td>false</td>
+            <td>READ_ONLY</td>
+            <td>Indicates whether the last line of text has been ellipsized</td>
+        </tr>
+    </tbody>
+</table>

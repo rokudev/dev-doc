@@ -141,6 +141,14 @@ for i = 10 to 1 Step -1
 end for
 ```
 
+`NEXT` is supported as an alternative terminator to `END FOR` for legacy compatibility, but `END FOR` is the preferred form:
+
+```
+for i=10 to 1 step -1
+    print i
+next
+```
+
 "EXIT FOR" is used to exit a FOR block
 prematurely.
 
@@ -170,6 +178,14 @@ for each n in aa
 end for
 ```
 
+As with `FOR`, `NEXT` is supported as an alternative terminator to `END FOR` for legacy compatibility, but `END FOR` is the preferred form:
+
+```
+for each n in aa
+    print n;aa[n]
+next
+```
+
 ## WHILE expression / EXIT WHILE / END WHILE
 
 The While loop executes until expression is false. The "exit while"
@@ -190,6 +206,8 @@ while true
     if k <> 0 then exit while
 end while
 ```
+
+> Unlike `FOR` loops, `WHILE` loops cannot be terminated with `NEXT`. A `WHILE` block must end with `END WHILE`.
 
 ## CONTINUE FOR / CONTINUE WHILE
 

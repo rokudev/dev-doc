@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-You can use the [**Roles and access** page in the Developer Dashboard](https://developer.roku.com/account/user-access-list) to enable team members to manage your developer account or specific apps within it. A _**role**_ gives a user a set of one or more _**permissions**_ to complete specific tasks in your account. Each role has an _**access level**_, which determines whether the user can complete tasks for all the apps in your account or just one or more selected apps.
+You can use the [**Roles and access** page in the Launchpad](https://developer.roku.com/account/user-access-list) to enable team members to manage your developer account or specific apps within it. A _**role**_ gives a user a set of one or more _**permissions**_ to complete specific tasks in your account. Each role has an _**access level**_, which determines whether the user can complete tasks for all the apps in your account or just one or more selected apps.
 
 For example, the _app management_ role lets users manage and publish one or more apps, the _financial reports_ role lets users view transaction and sales activity reports for one or more apps in the account, and the _administrative_ role lets users complete all tasks for all apps in the account.
 

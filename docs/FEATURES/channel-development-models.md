@@ -23,3 +23,5 @@ Once you've begun [hosting your content on the web](doc:how-channels-work), you'
 * **User authentication** — Allow users to authenticate into their account to restore their preferences, bookmarked content, and better understand their streaming behaviors.
 
 * **Third-party analytics** — All Roku apps receive audience engagement reports from Roku to better understand how users are engaging with their content. In addition, you can integrate third-party analytics providers into your app, such as Google Analytics or Brightcove.
+
+> If you are interested in distributing your content on The Roku Channel instead of building an app, see [The Roku Channel overview doc](doc:overview).  The Roku Channel is Roku's own streaming app for linear and on-demand content.

@@ -49,31 +49,31 @@ and ifGetMessagePort.
 
 ## BrightScript statements that work with BrightScript Component Interfaces
 
-**For each**  
+**For each**
 The for-each statement works on any object that has an
 [ifEnum](doc:ifenum) interface. These include: Array,
 Associative Array, List, ByteArray, and MessagePort.
 
-**Print**  
+**Print**
 If the expression being printed evaluates to an object that has an
 [ifEnum](doc:ifenum) interface, print will print every item
-that can be enumerated.  
+that can be enumerated.
 In addition to printing the values of intrinsic types, PRINT will also
 print any object that exposes one of these interfaces:
 [ifString](doc:ifstring), [ifInt](doc:ifint),
 [ifFloat](doc:iffloat).
 
-**Wait**  
+**Wait**
 The wait function will work on any object that has an
 [ifMessagePort](doc:ifmessageport) interface.
 
-**Array operator –"\[\]"**  
+**Array operator –"\[\]"**
 The array operator works on any object that has an
 [ifArrayGet](doc:ifarrayget) or
 [ifArraySet](doc:ifarrayset) interface. This includes Array,
 AssociativeArray, ByteArray, and Lists.
 
-**Member access operator "."**  
+**Member access operator "."**
 The "." Operator works on any object that has an
 [ifAssociativeArray](doc:ifassociativearray) interface (as well
 as on any BrightScript Component (when calling a member function)). It
@@ -81,7 +81,7 @@ also has special meaning when used on
 [roXMLElement](doc:roxmlelement) or
 [roXMLList](doc:roxmllist).
 
-**Expression parsing**  
+**Expression parsing**
 Any expression that is expecting an Integer, Float, Double, Boolean or
 String, can take an object with the [ifInt](doc:ifint),
 [ifFloat](doc:iffloat), [ifDouble](doc:ifdouble),
@@ -103,7 +103,7 @@ type results in two copies of the same value, which can be modified
 independently of each other.
 
 
-~~~~
+```
 a = 42  ' a contains an intrinsic Integer
 b = a   ' b contains a copy of a
 a = 43  ' does not modify b
@@ -113,7 +113,7 @@ a = [ 1,2,3 ]   ' a contains a reference to an array
 b = a           ' b contains another reference to the same array
 a[0] = 5        ' now both a[0] and b[0] equal 5
 b[1] = 6        ' now both a[1] and b[1] equal 6
-~~~~
+```
 
 
 The same thing holds true when variables are passed as function
@@ -126,7 +126,7 @@ intrinsic variables are "passed by value", while object variables are
 
 **Example**
 
-~~~~
+```
 function Modify(a as Integer, b as Object) as Void
     a = 43
     b.first = 6
@@ -138,7 +138,7 @@ end function
     y = { first: 1, second: 2 }
     Modify(x, y)
     ' now x is still 42 but y.first is 6
-~~~~
+```
 
 
 Each object maintains a "reference count", which is the number of
@@ -150,14 +150,14 @@ is destroyed.
 
 **Example**
 
-~~~~
+```
 a = CreateObject("roArray")   ' array has a ref count of 1
 b = a                         ' array has a ref count of 2
 a = invalid                   ' array has a ref count of 1 (a no longer refers to it)
 c = b                         ' array has a ref count of 2
 b = 100                       ' array has a ref count of 1 (b no longer refers to it)
 c = invalid                   ' array has a ref count of 0 and is destroyed
-~~~~
+```
 
 
 Note that after the last statement, since no variables refer to the
@@ -177,60 +177,60 @@ object is sometimes referred to as "autoboxing".
 
 **Example**
 
-~~~~
-Function Main()
+```
+function Main()
     MyFunA(4)
     MyFunB(4)
-End Function
+end function
 
-Function MyFunA(p as Object) as Void
+function MyFunA(p as Object) as Void
     print "A",p,type(p)
-End Function
+end function
 
-Function MyFunB(p as Integer) as Void
+function MyFunB(p as Integer) as Void
     print "B",p,type(p)
-End Function
-~~~~
+end function
+```
 
 **Will Print:**
 
-~~~~
-  A 4 roInt  
+```
+  A 4 roInt
   B 4
 Integer
-~~~~
+```
 
 
 **Example**
 
-~~~~
-Print 5.tostr()+"th"   ' prints 5th
-Print "5".toint()+5    ' prints 10
-If type(5.tostr())<> "String" Then Stop
-If (-5).tostr()<>"-5" Then Stop
-If (1+2).tostr()<>"3" Then Stop
-If 5.tostr()<>"5" Then Stop
+```
+print 5.tostr()+"th"   ' prints 5th
+print "5".toint()+5    ' prints 10
+if type(5.tostr())<> "String" then stop
+if (-5).tostr()<>"-5" then stop
+if (1+2).tostr()<>"3" then stop
+if 5.tostr()<>"5" then stop
 i=-55
-If i.tostr()<>"-55" Then Stop
-If 100%.tostr()<>"100" Then Stop
-If (-100%).tostr()<>"-100" Then Stop
+if i.tostr()<>"-55" then stop
+if 100%.tostr()<>"100" then stop
+if (-100%).tostr()<>"-100" then stop
 y%=10
-If y%.tostr()<>"10" Then Stop
-If "5".toint()<>5 Or type("5".toint())<>"Integer" Then Stop
-If "5".tofloat()<>5.0 Or type("5".tofloat())<>"Float" Then Stop
+if y%.tostr()<>"10" then stop
+if "5".toint()<>5 Or type("5".toint())<>"Integer" then stop
+if "5".tofloat()<>5.0 Or type("5".tofloat())<>"Float" then stop
 fs="-1.1"
-If fs.tofloat()<>-1.1 Or fs.toint()<>-1 Then Stop
-If "01234567".left(3)<>"012" Then Stop
-If "01234567".right(4)<>"4567" Then Stop
-If "01234567".mid(3)<>"34567" Then Stop
-If "01234567".mid(3,1)<>"3" Then Stop
-If "01234567".instr("56")<>5 Then Stop
-If "01234567".instr(6,"56")<>-1 Then Stop
-If "01234567".instr(0,"0")<>0 Then Stop
-~~~~
+if fs.tofloat()<>-1.1 Or fs.toint()<>-1 then stop
+if "01234567".left(3)<>"012" then stop
+if "01234567".right(4)<>"4567" then stop
+if "01234567".mid(3)<>"34567" then stop
+if "01234567".mid(3,1)<>"3" then stop
+if "01234567".instr("56")<>5 then stop
+if "01234567".instr(6,"56")<>-1 then stop
+if "01234567".instr(0,"0")<>0 then stop
+```
 
 Note that ```-5.tostr()``` will cause an error since the dot operator binds tighter than unary
-negation.  
+negation.
 
 Use: ```(-5).tostr()```
 
@@ -268,23 +268,23 @@ will return a value only if the list contains exactly one element.
 
 For example, if the file "example.xml" contains the following:
 
-~~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <rsp stat="ok">
   <photos page="1" pages="5" perpage="100" total="500">
     <photo id="3131875696" owner="21963906@N06" secret="f248c84625" server="3125" farm="4" title="VNY 16R" ispublic="1" isfriend="0" isfamily="0" />
     <photo id="3131137552" owner="8979045@N07" secret="b22cfde7c4" server="3078" farm="4" title="hoot" ispublic="1" isfriend="0" isfamily="0" />
-    <photo id="3131040291" owner="27651538@N06" secret="ae25ff3942" server="3286" farm="4" title="172 • 365 :: Someone once told me..." ispublic="1" isfriend="0"
+    <photo id="3131040291" owner="27651538@N06" secret="ae25ff3942" server="3286" farm="4" title="172 • 365 :: Someone once told me..." ispublic="1" isfriend="0" />
   </photos>
 </rsp>
-~~~~
+```
 
 Then
 
-~~~~
+```
  rsp=CreateObject("roXMLElement")
  rsp.Parse(ReadAsciiFile("tmp:/example.xml"))
-~~~~
+```
 
 ? rsp.photos.photo will return an roXMLList with three entries.
 
@@ -294,73 +294,69 @@ Then
 
 rsp.photos@perpage will return the string 100.
 
-Use the GetText() method to return an element's text.  
+Use the GetText() method to return an element's text.
 For example, if the variable booklist contains this roXMLElement:
 
-~~~~
+```xml
  <booklist>
- <book lang=eng>The Dawn of Man</book>
+   <book lang=eng>The Dawn of Man</book>
  </booklist>
-~~~~
+```
 
 then
 
-~~~~
+```
  print booklist.book.gettext()
-~~~~
+```
 
 Will print "The Dawn of Man", and
 
-~~~~
+```
  print booklist.book@lang
-~~~~
+```
 
 will print
 
-~~~~
+```
 "eng"
-~~~~
+```
 
 
 **Example: flikr**
 
-~~~~
-REM
-REM Interestingness
-REM pass an (optional) page of value 1 - 5 to get 100 photos
-REM starting at 0/100/200/300/400
-REM
-REM returns a list of "Interestingness" photos with 100 entries
-REM
-Function GetInterestingnessPhotoList(http as Object, page=1 as Integer) as Object
+```
+' Interestingness
+' pass an (optional) page of value 1 - 5 to get 100 photos
+' starting at 0/100/200/300/400
+'
+' returns a list of "Interestingness" photos with 100 entries
+function GetInterestingnessPhotoList(http as Object, page=1 as Integer) as Object
     print "page=";page
     http.SetUrl("http://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=YOURKEYGOESHERE&page="+mid(stri(page),2))
     xml=http.GetToString()
     rsp=CreateObject("roXMLElement")
-    If Not rsp.Parse(xml) Then Stop
-    Return helperPhotoListFromXML(http, rsp.photos.photo) 'rsp.GetBody().Peek().GetBody())  
-End Function
+    if not rsp.Parse(xml) then stop
+    return helperPhotoListFromXML(http, rsp.photos.photo) 'rsp.GetBody().Peek().GetBody()
+end function
 
-Function helperPhotoListFromXML(http as Object, xmllist as Object,
+function helperPhotoListFromXML(http as Object, xmllist as Object,
     owner=invalid as dynamic) as Object
     photolist=CreateObject("roList")
-    For Each photo In xmllist
+    for each photo In xmllist
         photolist.Push(newPhotoFromXML(http, photo, owner))
-    End For
-    Return photolist
-End Function
+    end for
+    return photolist
+end function
 
-REM
-REM newPhotoFromXML
-REM
-REM Takes an roXMLElement Object that is an <photo> ... </photo>
-REM Returns an brs object of type Photo
-REM photo.GetTitle()
-REM photo.GetID()
-REM photo.GetURL()
-REM photo.GetOwner()
-REM
-Function newPhotoFromXML(http as Object, xml as Object, owner as dynamic) as Object
+' newPhotoFromXML
+'
+' Takes an roXMLElement Object that is an <photo> ... </photo>
+' Returns an brs object of type Photo
+' photo.GetTitle()
+' photo.GetID()
+' photo.GetURL()
+' photo.GetOwner()
+function newPhotoFromXML(http as Object, xml as Object, owner as dynamic) as Object
     photo = CreateObject("roAssociativeArray")
     photo.http=http
     photo.xml=xml
@@ -369,27 +365,27 @@ Function newPhotoFromXML(http as Object, xml as Object, owner as dynamic) as Obj
     photo.GetID=function():return m.xml@id:end function
     photo.GetOwner=pGetOwner
     photo.GetURL=pGetURL
-    Return photo
-End Function
+    return photo
+end function
 
 
-Function pGetOwner() as String
-    If m.owner <> Invalid Return m.owner
-        Return m.xml@owner
-End Function
+function pGetOwner() as String
+    if m.owner <> invalid then return m.owner
+    return m.xml@owner
+end function
 
-Function pGetURL() as String
+function pGetURL() as String
     a=m.xml.GetAttributes()
     url="http://farm"a.farm".static.flickr.com/"a.server"/"a.id"_"a.secret".jpg"
-    Return url
-End Function
-~~~~
+    return url
+end function
+```
 
 #### Parsing colons in namespace element and attribute tags
 
 For elements and attributes with namespaces, you can use the [roXMLElement interface](doc:ifxmlelement) to parse the colons in their tags. Consider the following XML:
 
-```
+```xml
 <media:thumbnail xmlns:media='http://something.something.com/mrss/' url='http://blahblablah.com' width='72' height='72' />
 ```
 
@@ -419,12 +415,12 @@ collection).
 
 **Example**
 
-~~~~
+```
 i=roCreateObject("roInt")
 j=i ' reference incremented
 i=invalid ' reference decremented
 j=0 ' roInt just free'd.
-~~~~
+```
 
 
 ## Events
@@ -438,7 +434,7 @@ type roFilesystemEvent.
 
 **Example**
 
-~~~~
+```
 fs = CreateObject("roFilesystem")
 port = CreateObject("roMessagePort")
 fs.SetMessagePort(port)
@@ -447,8 +443,8 @@ while true
     if type(msg)="roFileSystemEvent" then
         if msg.isStorageDeviceAdded() then print "device added"
     end if
-End While
-~~~~
+end while
+```
 
 
 ## Threading model
@@ -527,7 +523,7 @@ AssociativeArray object.
 
 **Example**
 
-~~~~
+```
 function Main()
      obj = ConstructMyObject()
      obj.Set("hi!")
@@ -545,16 +541,16 @@ function ConstructMyObject()
      }
      return obj
 end function
-~~~~
+```
 
 
 Output:
 ```
-hi\!  
-\--------  
-value: hi\!  
-get: <bsTypedValue: Function\>  
-set: <bsTypedValue: Function\>
+hi\!
+\--------
+value: hi\!
+get: <bsTypedValue: Function>
+set: <bsTypedValue: Function>
 ```
 
 ## Script libraries
@@ -563,26 +559,26 @@ In addition to the platform BrightScript components discussed in [Brief
 summary of BrightScript
 Components](doc:component-architecture),
 BrightScript enables platform BrightScript libraries to be used in your
-scripts.  
+scripts.
 BrightScript libraries are .brs files that are provided by the platform
 and compiled into your application when directed via the "Library"
-keyword to make additional functions available.  
+keyword to make additional functions available.
 The Roku OS provides some common libraries under the system library
-directory "common:/LibCore".  
+directory "common:/LibCore".
 Additional libraries may be provided by the platform for specific usage
 purposes.
 
-**Example**  
+**Example**
 
 Library "v30/bslCore.brs"
 
 The common library file sources can be viewed from the debug console:
 
-~~~~
+```
 BrightScript> bslCore =
-ReadAsciiFile("common:/LibCore/v30/bslCore.brs")  
+ReadAsciiFile("common:/LibCore/v30/bslCore.brs")
 BrightScript> print bslCore
-~~~~
+```
 
 ### v30/bslCore.brs
 
@@ -619,7 +615,7 @@ common utility functions.
 
   - Returns the integer value of the passed in hex string.
 
-This library includes 2D graphics helper functions on top of the native components.  
+This library includes 2D graphics helper functions on top of the native components.
 
 #### Object dfNewBitmapSet(String filename)
 
@@ -681,12 +677,12 @@ sprites sheets (multiple images in a single png file).
   - Width and height is the size of the main drawing region
   - Returns an associative array containing the following roRegions
 
-    Main: main drawable region  
-    Left: left region if there is pillar box area on the left  
-    Right: right region if there is a pillar box area on the right  
-    Upper: upper region if there is a letterbox area at thetop  
-    Lower: lower region if there is a letterbox area at the bottom  
-    When using these regions as drawables, your graphics will be translated and clipped to these regions.  
+    Main: main drawable region
+    Left: left region if there is pillar box area on the left
+    Right: right region if there is a pillar box area on the right
+    Upper: upper region if there is a letterbox area at thetop
+    Lower: lower region if there is a letterbox area at the bottom
+    When using these regions as drawables, your graphics will be translated and clipped to these regions.
 
 #### Object dfSetBackground(String backgroundName, Object backgrounds)
 
@@ -711,26 +707,26 @@ sprites sheets (multiple images in a single png file).
 
 If spriteMap.xml contains the following:
 
-~~~~
+```xml
 <DefenderBitmapSet>
-<ExtraInfo cellsize="40"/>
-<Bitmap name="Background" filespec="pkg:/images/background.png" />
-<Bitmap name="game-over" filespec="pkg:/images/gameover.png" />
-<Bitmap name="title-screen" filespec="pkg:/images/Splash.gif" />
-<Bitmap name="water_strip" filespec="pkg:/images/water_sprite.png">
-<Region name="a" x="0" y="" w="40" h="40" t="225" />
-<Region name="b" x="40" y="0" w="40" h="40" t="225" />
-</Bitmap>
-<Animation name="water">
-<frame use="water_strip.a" />
-<frame use="water_strip.b" />
-</Animation>
+  <ExtraInfo cellsize="40" />
+  <Bitmap name="Background" filespec="pkg:/images/background.png" />
+  <Bitmap name="game-over" filespec="pkg:/images/gameover.png" />
+  <Bitmap name="title-screen" filespec="pkg:/images/Splash.gif" />
+  <Bitmap name="water_strip" filespec="pkg:/images/water_sprite.png">
+    <Region name="a" x="0" y="" w="40" h="40" t="225" />
+    <Region name="b" x="40" y="0" w="40" h="40" t="225" />
+  </Bitmap>
+  <Animation name="water">
+    <frame use="water_strip.a" />
+    <frame use="water_strip.b" />
+  </Animation>
 </DefenderBitmapSet>
-~~~~
+```
 
 Then
 
-~~~~
+```
  BrightScript> xml = ReadAsciiFile("pkg:/images/map.xml")
  BrightScript> bitmapset = dfNewBitmapSet(xml)
  BrightScript> cellwidth=app.bitmapset.extrainfo.cellsize.toint()
@@ -746,4 +742,4 @@ Then
  <Component: roRegion>
  BrightScript> dfDrawMessage(screen, bitmapset.regions["game-over"])
  BrightScript> REM screen now shows gameover.png image centered on screen
-~~~~
+```

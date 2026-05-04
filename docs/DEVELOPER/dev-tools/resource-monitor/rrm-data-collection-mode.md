@@ -20,19 +20,19 @@ To use RRM in Data Collection Mode, open a console application and enter the fol
 
 ### Linux
 
-```
+```bash
 ./roku-resource-monitor-linux64.AppImage --help
 ```
 
 ### MacOS
 
-```
+```bash
 ./roku-resource-monitor.app/Contents/MacOS/roku-resource-monitor --help
 ```
 
 ### Windows
 
-```
+```bash
 roku-resource-monitor.bat --help
 ```
 
@@ -48,7 +48,7 @@ You can add RRM in a Docker image and run data collection mode.
 
 ### Docker file
 
-The following Dockerfile creates a containerized environment for running the Roku Resource Monitor (RRM). 
+The following Dockerfile creates a containerized environment for running the Roku Resource Monitor (RRM).
 
 #### Build Command:
 `docker build -t rrm:latest .`
@@ -56,7 +56,7 @@ The following Dockerfile creates a containerized environment for running the Rok
 #### Run Command:
 `docker run --shm-size=2g -v [docker host output dir]:/output --env-file=[env file path] rrm:latest`
 
-```
+```bash
 # ==============================================================================
 # Roku Resource Monitor Docker Image
 # ==============================================================================
@@ -105,7 +105,7 @@ CMD ["/bin/sh", "/bin/startup.sh"]
 
 The following script handles the setup and execution of RRM. It downloads the latest RRM release, extracts it, configures the necessary services, and launches the application in headless mode.
 
-```
+```bash
 #!/bin/sh
 # ==============================================================================
 # Roku Resource Monitor Startup Script
@@ -152,7 +152,7 @@ xvfb-run -a \
 
 The following Docker Compose file enables you to run the Roku Resource Monitor in a containerized environment:
 
-```
+```bash
 # ==============================================================================
 # Roku Resource Monitor Docker Compose Configuration
 # ==============================================================================
@@ -204,12 +204,12 @@ Configure your environment variables and local output directory directly in the 
 
 #### Docker Compose usage
 
-```
+```bash
 docker compose up --build
 ```
 
 #### Docker usage
 
-```
+```bash
 docker build -t roku-resource-monitor:latest . docker run --shm-size=2g -v [docker host output dir]:/output --env-file=[env file path] roku-resource-monitor
 ```

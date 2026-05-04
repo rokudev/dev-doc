@@ -35,37 +35,39 @@ end function
 
 #### Animation XML example
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="SimpleScaleAnimation" extends="Group" >
-<script type="text/brightscript" uri="pkg:/xml/SimpleAnimation.brs" />
+<component name="SimpleScaleAnimation" extends="Group">
+  <script type="text/brightscript" uri="pkg:/xml/SimpleAnimation.brs" />
 
-<children>
-
-<Poster id="myPoster"
-    opacity="1.0"
-    uri="pkg:/images/myImage.jpg" />
-<Animation id="scaleAnimation"
-       duration="1"
-       repeat="true"
-       easeFunction="linear" >
-    <Vector2DFieldInterpolator id = "myInterp"
-    key="[0.0, 0.25, 0.5, 0.75, 1.0]"
-    keyValue="[ [0.0, 0.0], [0.25, 0.25], [0.5, 0.5], [0.75, 0.75], [1.0, 1.0]]"
-    fieldToInterp="myPoster.scale" />
-</Animation>
-<Animation id="transAnimation"
-       duration="1"
-       repeat="true"
-       easeFunction="linear" >
-    <Vector2DFieldInterpolator id = "myInterp2"
+  <children>
+    <Poster
+      id="myPoster"
+      opacity="1.0"
+      uri="pkg:/images/myImage.jpg" />
+    <Animation
+      id="scaleAnimation"
+      duration="1"
+      repeat="true"
+      easeFunction="linear">
+      <Vector2DFieldInterpolator
+        id="myInterp"
+        key="[0.0, 0.25, 0.5, 0.75, 1.0]"
+        keyValue="[ [0.0, 0.0], [0.25, 0.25], [0.5, 0.5], [0.75, 0.75], [1.0, 1.0]]"
+        fieldToInterp="myPoster.scale" />
+    </Animation>
+    <Animation
+      id="transAnimation"
+      duration="1"
+      repeat="true"
+      easeFunction="linear">
+      <Vector2DFieldInterpolator
+        id="myInterp2"
         key="[0.0, 1.0]"
         keyValue="[ [640.0, 320.0], [100.0, 100.0] ]"
-    fieldToInterp="myPoster.translation" />
-</Animation>
-
-</children>
-
+        fieldToInterp="myPoster.translation" />
+    </Animation>
+  </children>
 </component>
 ```
 

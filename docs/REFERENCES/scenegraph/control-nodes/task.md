@@ -42,49 +42,40 @@ The following reads attributes from an XML file on a server containing the conte
 
 #### Task Node Example
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-
-<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
-
-<component name = "postergridCR" extends = "Task" >
-
+<component name="postergridCR" extends="Task">
   <interface>
-    <field id = "postergriduri" type = "string" />
-    <field id = "postergridcontent" type = "node" />
+    <field id="postergriduri" type="string" />
+    <field id="postergridcontent" type="node" />
   </interface>
 
-  <script type = "text/brightscript" >
+  <script type="text/brightscript">
     <![CDATA[
+      sub init()
+        m.top.functionName = "getContent"
+      end sub
 
-    sub init()
-      m.top.functionName = "getContent"
-    end sub
+      sub getContent()
+        postergridcontent = createObject("RoSGNode", "ContentNode")
+        postergridxml = createObject("roXMLElement")
+        readInternet = createObject("roUrlTransfer")
+        readInternet.setUrl(m.top.postergriduri)
+        postergridxml.parse(readInternet.GetToString())
 
-    sub getContent()
-      postergridcontent = createObject("RoSGNode","ContentNode")
+        if postergridxml.getName() = "PosterGrid"
+          for each poster in postergridxml.GetNamedElements("poster")
+            postercontent = postergridcontent.createChild("ContentNode")
+            postercontent.setFields(poster.getAttributes())
+          end for
+        end if
 
-      postergridxml = createObject("roXMLElement")
-
-      readInternet = createObject("roUrlTransfer")
-      readInternet.setUrl(m.top.postergriduri)
-      postergridxml.parse(readInternet.GetToString())
-
-      if postergridxml.getName()="PosterGrid"
-        for each poster in postergridxml.GetNamedElements("poster")
-          postercontent = postergridcontent.createChild("ContentNode")
-          postercontent.setFields(poster.getAttributes())
-        end for
-      end if
-
-      m.top.postergridcontent = postergridcontent
-    end sub
-
+        m.top.postergridcontent = postergridcontent
+      end sub
     ]]>
   </script>
-
 </component>
-~~~
+```
 
 In addition to this example, a much simpler, complete example, including the scene that creates the Task node, can be found here: [SimpleTask example](https://github.com/rokudev/samples/tree/master/ux%20components/control). That example simply uses a Task node to increment a counter and display the current counter value on the screen.
 

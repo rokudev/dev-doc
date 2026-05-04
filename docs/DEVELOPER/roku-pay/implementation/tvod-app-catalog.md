@@ -64,12 +64,12 @@ To update your app with the new **DoOrder** API, follow these steps:
        m.store = m.parent.FindNode("channelStore")
        m.store.observeField("requestStatus", "onRequestStatus")
    end function
-     
+
    ' Generic SDK API request callback
    function onRequestStatus()
        requestStatus = m.store.requestStatus
-     
-       if requestStatus = Invalid
+
+       if requestStatus = invalid
            print "Invalid requestStatus"
        else
            print "requestStatus", requestStatus
@@ -77,7 +77,7 @@ To update your app with the new **DoOrder** API, follow these steps:
            print "requestStatus.status", requestStatus.status
            print "requestStatus.statusMessage", requestStatus.statusMessage
            print "requestStatus.context", requestStatus.context
-     
+
            ' requestStatus.status:
            ' 2: Interrupted
            ' 1: Success
@@ -86,7 +86,7 @@ To update your app with the new **DoOrder** API, follow these steps:
            ' -2: Timeout
            ' -3: Unknown error
            ' -4: Invalid request
-     
+
            ' Generic request succeeded
            if requestStatus.status = 1 then
                if requestStatus.command = "DoOrder" then
@@ -104,7 +104,7 @@ To update your app with the new **DoOrder** API, follow these steps:
      print  "calling makeTVODPurchase"
      'myOrder = { "code": request.productCode, "name": request.productName, "qty": 1}
      'myOrder = CreateObject("roSGNode", "ContentNode")
-     
+
      print "request.sku: "; requestData.productCode
      newOrder = []
      order = {
@@ -156,7 +156,7 @@ To update your app with the new **DoOrder** API, follow these steps:
                      keys = item.Keys()
                      for each key in keys
                          strField = AnyToString(item[key])
-                         if strField <> Invalid
+                         if strField <> invalid
                              if strField.len() > 0
                                  message += key + " = " + strField + chr(10)
                              else
@@ -179,7 +179,7 @@ To update your app with the new **DoOrder** API, follow these steps:
        print "Error - can't happen, orderType= "; m.orderType
      end if
      m.orderType = ""
-     
+
    end function
    ```
 

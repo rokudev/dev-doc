@@ -34,9 +34,9 @@ had a set of functions to manipulate URLs, you could add the following
 **\<script\>** element to allow a SceneGraph component to call the
 functions:
 
-~~~
-<script type = "text/brightscript" uri = "pkg:/components/uriutils.brs"/>
-~~~
+```xml
+<script type="text/brightscript" uri="pkg:/components/uriutils.brs" />
+```
 
 If these calls relied on application global data, you would have to set
 up a *global node* as described in [Data scoping](doc:data-scoping)

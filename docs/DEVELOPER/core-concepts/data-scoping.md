@@ -25,7 +25,7 @@ to traditional programming languages. You have:
 
 These different levels of scoping are identified by the use of the `m`
 object reference which can be used to disambiguate and access objects at
-different levels, similar to the use of `m` in BrightScript. 
+different levels, similar to the use of `m` in BrightScript.
 
 ----
 
@@ -36,13 +36,13 @@ reference. For example, the following creates and defines several fields
 for a `dialog` object that can only be accessed within the function in
 which it is created and defined:
 
-~~~
-dialog = createObject("RoSGNode","Dialog")  
-dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
-dialog.title = "Example Dialog" 
-dialog.optionsDialog = true  
+```
+dialog = createObject("RoSGNode","Dialog")
+dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
+dialog.title = "Example Dialog"
+dialog.optionsDialog = true
 dialog.message = "Press * To Dismiss"
-~~~
+```
 
 ## Component scope
 
@@ -52,23 +52,18 @@ file. For example, if you wanted to create the same `dialog` object
 above in one function, but define it, or otherwise access it, in another
 function in the same component XML file:
 
-~~~
-sub createdialog()  
-
-    m.dialog = createObject("RoSGNode","Dialog")  
-
+```
+sub createdialog()
+    m.dialog = createObject("RoSGNode", "Dialog")
 end sub
 
 sub definedialog()
-
-    m.dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
-
-    m.dialog.title = "ExampleDialog"  
-
-    m.dialog.optionsDialog = true   
-
-    m.dialog.message = "Press * To Dismiss" end sub
-~~~
+    m.dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
+    m.dialog.title = "ExampleDialog"
+    m.dialog.optionsDialog = true
+    m.dialog.message = "Press * To Dismiss"
+end sub
+```
 
 ## m.top component scope reference
 
@@ -81,27 +76,23 @@ file (which is the required usage of the Dialog node class), assign
 the `dialog` object to the `dialog` field using the `m.top` object
 reference:
 
-~~~
-dialog = createObject("RoSGNode","Dialog")  
-
-dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"  
-
-dialog.title = "Example Dialog" 
-
-dialog.optionsDialog = true  
-
+```
+dialog = createObject("RoSGNode", "Dialog")
+dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
+dialog.title = "Example Dialog"
+dialog.optionsDialog = true
 dialog.message = "Press * To Dismiss"
 
-m.top.dialog = dialog`
-~~~
+m.top.dialog = dialog
+```
 
 Likewise, if you want to use `findNode()` to find a SceneGraph node
 object anywhere in the SceneGraph tree for a component XML file, use the
 `m.top` reference to start at the top of the tree:
 
-~~~
+```
 m.categorieslist = m.top.findNode("categorieslist")
-~~~
+```
 
 ## Global scope
 
@@ -111,7 +102,7 @@ m.categorieslist = m.top.findNode("categorieslist")
     field or child of the global node. This global node may be accessed
     from the entire SceneGraph application.
   - To access the **global node** in **components**, use the
-    predefined `m.global`, much like `m.top`. 
+    predefined `m.global`, much like `m.top`.
   - For access to the **global node** from **non-component** **script** as
     in `source/main.brs`, use **`getGlobalNode()`** called on
     the **`roSGScreen`** object.
@@ -122,17 +113,13 @@ m.categorieslist = m.top.findNode("categorieslist")
 
 For example:
 
-~~~
-screen = CreateObject("roSGScreen") 
-
-m.port = CreateObject("roMessagePort")  
-
-screen.setMessagePort(m.port) 
-
-m.global = screen.getGlobalNode()  
-
+```
+screen = CreateObject("roSGScreen")
+m.port = CreateObject("roMessagePort")
+screen.setMessagePort(m.port)
+m.global = screen.getGlobalNode()
 m.global.id = "GlobalNode"
-~~~
+```
 
 As noted, this is not necessary in component script, as `m.global` is predefined.
 
@@ -147,24 +134,21 @@ get its special global element:
 
 You will need to take the associative array, modify it and save it back into the field.
 
-~~~
-m.global.addFields( \{red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff\} ) 
-... 
+```
+m.global.addFields({red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff})
+' ...
 
-m.rect = m.top.findNode("Rect1") 
+m.rect = m.top.findNode("Rect1")
 m.rect.color = m.global.red
-... 
+' ...
 
-color = m.rect.color  
+color = m.rect.color
 
-if m.rect.color = m.global.red  
-  m.rect.color = m.global.green 
-  
-else if m.rect.color = m.global.green 
-  m.rect.color = m.global.blue 
-  
-else 
-  m.rect.color = m.global.red  
-  
+if m.rect.color = m.global.red
+  m.rect.color = m.global.green
+else if m.rect.color = m.global.green
+  m.rect.color = m.global.blue
+else
+  m.rect.color = m.global.red
 end if
-~~~
+```

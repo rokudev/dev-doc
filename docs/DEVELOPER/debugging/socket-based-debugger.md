@@ -55,8 +55,8 @@ struct HandshakeToDVP {    // DVP = Digital Video Player (Roku device)
     uint64 magic_number;   // 0x0067756265647362LU
 };
 
-struct HandshakeFromDVP {    
-    uint64 magic_number  
+struct HandshakeFromDVP {
+    uint64 magic_number
     uint32 protocol_major_version;
     uint32 protocol_minor_version;
     uint32 protocol_patch_version;
@@ -144,8 +144,8 @@ Remote debugging clients can send a debugger request to the debugging target (fo
 ```
 struct DebuggerRequest {
     uint32 packet_length;
-    uint32 request_id;        
-    uint32 command_code;      
+    uint32 request_id;
+    uint32 command_code;
     uint8 command_arguments;
 };
 ```
@@ -251,8 +251,8 @@ The debugger sends responses to DebuggerRequest messages in the following format
 
 ```
 struct DebuggerResponse {
-    uint32 packet_length;  
-    uint32 request_id;  
+    uint32 packet_length;
+    uint32 request_id;
     uint32 error_code;
     uint32 error_flags;
     uint8[] error_data;
@@ -603,7 +603,7 @@ If the **update_type** in a DebuggerUpdate message is set to THREAD_ATTACHED, th
 ```
 struct ThreadAttachedUpdateData{
      int32 thread_index;
-     uint8 stop_reason;   
+     uint8 stop_reason;
      utf8z stop_reason_detail;
 }
 ```
@@ -614,7 +614,7 @@ A BREAKPOINT_ERROR is sent if a compilation or runtime error occurs while evalua
 
 ```
 struct BreakpointErrorUpdateData {
-    uint32                    flags;            
+    uint32                    flags;
     uint32                    breakpoint_id;
     uint32                    num_compile_errors;
     utf8z[num_compile_errors] compile_errors;

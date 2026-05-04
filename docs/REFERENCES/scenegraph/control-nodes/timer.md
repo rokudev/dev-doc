@@ -22,62 +22,50 @@ The following changes the text string on the display screen every five seconds a
 
 #### Timer Node Class Example
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
- 
-<component   name="timertest"   extends="Group" >
- 
-<script type="text/brightscript" >
-<![CDATA[
- 
-sub init()
-  m.testtimer = m.top.findNode("testTimer")
-  m.testtimer.control = "start"
-  m.defaulttext = "Wait for it, wait for it..."
-  m.alternatetext = "Timer fired!!!"
- 
-  m.testtimerlabel = m.top.FindNode("testTimerLabel")
-  m.testtimerlabel.text = m.defaulttext
-  m.textchange = false
-  m.testtimer.ObserveField("fire","changetext")
-  m.top.setFocus(true)
-end sub
- 
-sub changetext()
-  if (m.textchange = false) then
-    m.testtimerlabel.text = m.alternatetext
-    m.textchange = true
-   else
-     m.testtimerlabel.text = m.defaulttext
-     m.textchange = false
-   end if
-end sub
- 
-]]>
-</script>
- 
-<children>
- 
-<Label
-  id="testTimerLabel"
-  width = "1280"
-  translation = "[0,500]"
-  horizAlign = "center"
-  vertAlign = "center"
-/>
- 
-<Timer
-  id="testTimer"
-  repeat="true"
-  duration="5"
-/>
- 
-</children>
- 
+<component name="timertest" extends="Group">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.testtimer = m.top.findNode("testTimer")
+        m.testtimer.control = "start"
+        m.defaulttext = "Wait for it, wait for it..."
+        m.alternatetext = "Timer fired!!!"
+
+        m.testtimerlabel = m.top.FindNode("testTimerLabel")
+        m.testtimerlabel.text = m.defaulttext
+        m.textchange = false
+        m.testtimer.ObserveField("fire", "changetext")
+        m.top.setFocus(true)
+      end sub
+
+      sub changetext()
+        if (m.textchange = false) then
+          m.testtimerlabel.text = m.alternatetext
+          m.textchange = true
+        else
+          m.testtimerlabel.text = m.defaulttext
+          m.textchange = false
+        end if
+      end sub
+    ]]>
+  </script>
+
+  <children>
+    <Label
+      id="testTimerLabel"
+      width="1280"
+      translation="[0,500]"
+      horizAlign="center"
+      vertAlign="center" />
+    <Timer
+      id="testTimer"
+      repeat="true"
+      duration="5" />
+  </children>
 </component>
-~~~
+```
 
 ## Fields
 

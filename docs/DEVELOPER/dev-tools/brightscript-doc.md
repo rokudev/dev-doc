@@ -120,7 +120,7 @@ The general format of a comment that is processed by the BrightScriptDoc process
 
 ### General format and sequence of the processed output
 
-As a general rule for processing, all main and tag argument “descriptive text” is scanned for inline tags, which are converted to their respective HTML ouput “in-place”.
+As a general rule for processing, all main and tag argument “descriptive text” is scanned for inline tags, which are converted to their respective HTML output “in-place”.
 
 All instances of multi-instance block tags are grouped together in the processed output under a single paragraph with a title indicative of the specific tag type.
 
@@ -147,75 +147,59 @@ The field portion is optional, refers to variables within the specified function
 
 ## Example
 
-~~~~
+```
 ' Gets a false value in a convoluted way
-' @deprecated Replaced by \{@link .Foo2 Foo2\} as of version 11.42
+' @deprecated Replaced by {@link .Foo2 Foo2} as of version 11.42
+function Foo() as BooLean
+    x = false
+    y = x
+    return y
+end function
 
-Function Foo() as BooLean
-
-x = false
-
-y=x
-
-return y
-
-End Function
-
-' Replaces the old Foo function with a more efficient algorithm ' @since version 11.42
-Function Foo2() as BooLean
-
-return false
-
-End Function
+' Replaces the old Foo function with a more efficient algorithm
+' @since version 11.42
+function Foo2() as BooLean
+    return false
+end function
 
 '
 ' Embodies the creation and running of a single custom screen for XYZ‐hosted content
 '
-' @param utils an instance of the AA utils object created from calling the \{@link .CreateUtils Utils Contructor\}
+' @param utils an instance of the AA utils object created from calling the {@link .CreateUtils Utils Constructor}
 ' @param site the site string
 ' @param titlePrefix a static prefix for the video title display line
 ' @param contentAAArray an Array of content meta‐data Aas
-' @return False if there was an error during creating or running this screen.
+' @return false if there was an error during creating or running this screen.
 ' @see the Content metadata doc
 ' @see .CreateUtils CreateUtils()
-Function ShowCustomScreen(utilsas Object, site as String, titlePrefix as String, contentAAArray as Object)as BooLean
-
+function ShowCustomScreen(utils as Object, site as String, titlePrefix as String, contentAAArray as Object) as BooLean
     ' This is the z variable.  It does nothing useful...
+    ' except as the target of a @see or @{link}
+    ' BrightScriptDoc tag
+    z = "something"
 
-    ' except as the target of a &#x0040;see or &#x0040;&#x007B;link&#x007D;
+    ' This is an example of top comments winning out over same‐line.
+    ' BrightScriptDoc prefers above comments over same‐line comments.
+    ' This is the set of lines that'll be used in hover‐docs and auto‐completion.
+    x = 1 ' This comment won't be used by BrightScriptDoc
 
-BrightScriptDoc tag
+    y = {
+        ' Anonymous functions comments are best placed above the field assignment
+        ' So that all the relevant tags can be used
+        '
+        ' @param bar an integer that's apparently useful in calculating foo
+        ' @param baz who knows what kind of object this is
+        ' @return A string of some sort
+        getFoo : function(bar as Integer, baz as Object) as String
+        end function
+    }
 
- z = "something"
+    z = CreateObject("roFoo")
+end function
 
-' This is an example of top comments winning out over same‐line.
-' BrightScriptDoc prefers above comments over same‐line comments.
-' This is the set of lines that'll be used in hover‐docs and auto‐completion.
-
-x = 1 ' This comment won't be used by BrightScriptDoc
-
-y=\{
-
-' Anonymous functions comments are best placed above the field assignment ' So that all the relevent tags can be used
-'
-' @param bar an integer that's apparently useful in calculating foo
-
-' @param baz who knows what kind of object this is
-' @return A string of some sort
-getFoo : Function(baras Integer, baz as Object)as String
-
-End Function
-
-\}
-
-z = CreateObject("roFoo")
-
-End Function
-
-' Creates an \{@link roAssociativeArray associative array\} of useful general utility functions.
-' \{@literal \<bold\> and \</bold\> are presented as is in this literal tag, rather than causing "and" to be bolded\}
-
-' \{@code of course, the same thing is true in this code tag, but the font face is different ‐ \<bold\> and the matching \</bold\> tags are shown rather than cause the "and the matching" to be bolded\}
+' Creates an {@link roAssociativeArray associative array} of useful general utility functions.
+' {@literal <bold> and </bold> are presented as is in this literal tag, rather than causing "and" to be bolded}
+' {@code of course, the same thing is true in this code tag, but the font face is different ‐ <bold> and the matching </bold> tags are shown rather than cause the "and the matching" to be bolded}
 ' <br />
 ' And any old HTML you want to throw in is also valid, although equivalent BrightScriptDoc tags are more efficient...
 ' <table border=1>
@@ -225,15 +209,10 @@ End Function
 ' And so on...
 ' @see .ShowCustomScreen#z The z variable in the ShowCustomScreen method is rather uninteresting
 ' @return an AA containing useful utility functions
-Function CreateUtils()as Object
-
-aa = CreateObject("roAssociativeArray")
-
-aa.showcustom = ShowCustomScreen
-
-aa.foo = foo2
-
-return aa
-
-End Function
-~~~~
+function CreateUtils() as Object
+    aa = CreateObject("roAssociativeArray")
+    aa.showcustom = ShowCustomScreen
+    aa.foo = foo2
+    return aa
+end function
+```

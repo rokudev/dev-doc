@@ -713,7 +713,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
       </td>
 
       <td>
-        The type of licensing terms for the channel.  
+        The type of licensing terms for the channel.
 
         * **free**: Channel is directly playable upon being deep linked.
         * **subscription**: Channel is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the channel typically displays a subscription sign-up page when receiving deep links into channels that are behind a paywall. This integration does not consider whether a channel is part of a basic or premium package. Channels that are only accessible via a premium package should be considered as "subscription".
@@ -734,7 +734,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
       </td>
 
       <td>
-        The playback resolution of the live channel:  
+        The playback resolution of the live channel:
 
         * SD
         * HD
@@ -806,106 +806,106 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
 
 The following example demonstrates the proper implementation of the various feed segments and fields for a live stream:
 
-```
-{ 
- "version": "1", 
- "defaultLanguage": "en", 
- "defaultAvailabilityCountries": [ 
-  "US" 
- ], 
- "assets": [ 
-  { 
-   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020", 
-   "type": "liveStream", 
-   "content": { 
-    "playOptions": [ 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
-      "license": "free", 
-      "quality": "HD" 
-     }, 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)", 
-      "license": "free", 
-      "quality": "UHD" 
-     } 
-    ] 
-   }, 
-   "externalIds": [ 
-    { 
-     "source": "GRACENOTE_STATION_ID", 
-     "id": "ABCDE" 
-    } 
-   ], 
-   "tags": [ 
-    "partner_channel" 
-   ] 
-  }, 
-  { 
-   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020", 
-   "type": "liveStream", 
-   "content": { 
-    "playOptions": [ 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
-      "license": "free", 
-      "quality": "HD", 
-      "availabilityInfo": { 
-       "country": [ 
-        "us" 
-       ], 
-       "restrictions": [ 
-        { 
-         "allow": true, 
-         "type": "geo", 
-         "valueType": "postal_code", 
-         "values": [ 
-          "19468", 
-          "19462", 
-          "19465", 
-          "19464" 
-         ] 
-        } 
-       ] 
-      } 
-     }, 
-     { 
-      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)", 
-      "license": "free", 
-      "quality": "UHD", 
-      "availabilityInfo": { 
-       "country": [ 
-        "us" 
-       ], 
-       "restrictions": [ 
-        { 
-         "allow": false, 
-         "type": "geo", 
-         "valueType": "postal_code", 
-         "values": [ 
-          "19468", 
-          "19462", 
-          "19465", 
-          "19464" 
-         ] 
-        } 
-       ] 
-      } 
-     } 
-    ] 
-   }, 
-   "externalIds": [ 
-    { 
-     "source": "GRACENOTE_STATION_ID", 
-     "id": "RegionalABCDE" 
-    } 
-   ], 
-   "tags": [ 
-    "regional_partner_channel" 
-   ] 
-  } 
- ] 
-} 
+```json
+{
+ "version": "1",
+ "defaultLanguage": "en",
+ "defaultAvailabilityCountries": [
+  "US"
+ ],
+ "assets": [
+  {
+   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020",
+   "type": "liveStream",
+   "content": {
+    "playOptions": [
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
+      "license": "free",
+      "quality": "HD"
+     },
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)",
+      "license": "free",
+      "quality": "UHD"
+     }
+    ]
+   },
+   "externalIds": [
+    {
+     "source": "GRACENOTE_STATION_ID",
+     "id": "ABCDE"
+    }
+   ],
+   "tags": [
+    "partner_channel"
+   ]
+  },
+  {
+   "id": "f182d1ce-d635-4538-aa8c-fb25efd6c020",
+   "type": "liveStream",
+   "content": {
+    "playOptions": [
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
+      "license": "free",
+      "quality": "HD",
+      "availabilityInfo": {
+       "country": [
+        "us"
+       ],
+       "restrictions": [
+        {
+         "allow": true,
+         "type": "geo",
+         "valueType": "postal_code",
+         "values": [
+          "19468",
+          "19462",
+          "19465",
+          "19464"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "playId": "[https://rokudevelopers.com%3Fchannel_id%3D222222](https://rokudevelopers.com%3Fchannel_id=222222/)",
+      "license": "free",
+      "quality": "UHD",
+      "availabilityInfo": {
+       "country": [
+        "us"
+       ],
+       "restrictions": [
+        {
+         "allow": false,
+         "type": "geo",
+         "valueType": "postal_code",
+         "values": [
+          "19468",
+          "19462",
+          "19465",
+          "19464"
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "externalIds": [
+    {
+     "source": "GRACENOTE_STATION_ID",
+     "id": "RegionalABCDE"
+    }
+   ],
+   "tags": [
+    "regional_partner_channel"
+   ]
+  }
+ ]
+}
 ```
 
 ### Managing a feed that includes VOD content
@@ -914,85 +914,85 @@ You can maintain a single feed that includes both Livestream and VOD content. To
 
 The following example demonstrates a feed that includes both Live and VOD content:
 
-```
-{ 
- "version": "1", 
- "defaultLanguage": "en", 
- "defaultAvailabilityCountries": [ 
-  "us", "mx" 
- ], 
- "defaultAvailabilityPlatforms": [ 
-  "all" 
- ], 
- "assets": [{ 
-  "id": "shortform-voice-control", 
-  "type": "shortForm", 
-  "titles": [{ 
-   "value": "Voice Features", 
-   "language": "en" 
-  }], 
-  "shortDescriptions": [{ 
-   "value": "A video highlighting Direct to Play and Enhanced Voice Control features", 
-   "language": "en" 
-  }], 
-  "releaseDate": "2020-01-17", 
-  "genres": [ 
-   "educational" 
-  ], 
-  "advisoryRatings": [{ 
-   "source": "USA_PR", 
-   "value": "TVG" 
-   }, 
-   { 
-   "source": "RTC", 
-   "value": "A" 
-   } 
-  ], 
-  "images": [{ 
-   "type": "main", 
-   "url": "https://image.roku.com/ZHZscHItMTc2/roku-dev-search.png", 
-   "languages": [ 
-   "en", 
-   "es" 
-   ] 
-  }], 
-  "durationInSeconds": 98, 
-  "content": { 
-   "playOptions": [{ 
-   "license": "free", 
-   "quality": "UHD", 
-   "playId": "shortform-voice-control", 
-   "availabilityStartTimeStamp": 1565085600000, 
-   "availabilityEndTimeStamp": 1593597600000, 
-   "availabilityInfo": { 
-    "country": [ 
-    "us", 
-    "mx" 
-    ] 
-   } 
-   }] 
-  } 
-  }, 
-  { 
-  "id": "liveshow", 
-  "type": "liveStream", 
-  "content": { 
-   "playOptions": [{ 
-   "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)", 
-   "license": "free", 
-   "quality": "HD" 
-   }] 
-  }, 
-  "externalIds": [{ 
-   "source": "GRACENOTE_STATION_ID", 
-   "id": "ABCDE" 
-  }], 
-  "tags": [ 
-   "partner_channel" 
-  ] 
-  } 
- ] 
-} 
+```json
+{
+ "version": "1",
+ "defaultLanguage": "en",
+ "defaultAvailabilityCountries": [
+  "us", "mx"
+ ],
+ "defaultAvailabilityPlatforms": [
+  "all"
+ ],
+ "assets": [{
+  "id": "shortform-voice-control",
+  "type": "shortForm",
+  "titles": [{
+   "value": "Voice Features",
+   "language": "en"
+  }],
+  "shortDescriptions": [{
+   "value": "A video highlighting Direct to Play and Enhanced Voice Control features",
+   "language": "en"
+  }],
+  "releaseDate": "2020-01-17",
+  "genres": [
+   "educational"
+  ],
+  "advisoryRatings": [{
+   "source": "USA_PR",
+   "value": "TVG"
+   },
+   {
+   "source": "RTC",
+   "value": "A"
+   }
+  ],
+  "images": [{
+   "type": "main",
+   "url": "https://image.roku.com/ZHZscHItMTc2/roku-dev-search.png",
+   "languages": [
+   "en",
+   "es"
+   ]
+  }],
+  "durationInSeconds": 98,
+  "content": {
+   "playOptions": [{
+   "license": "free",
+   "quality": "UHD",
+   "playId": "shortform-voice-control",
+   "availabilityStartTimeStamp": 1565085600000,
+   "availabilityEndTimeStamp": 1593597600000,
+   "availabilityInfo": {
+    "country": [
+    "us",
+    "mx"
+    ]
+   }
+   }]
+  }
+  },
+  {
+  "id": "liveshow",
+  "type": "liveStream",
+  "content": {
+   "playOptions": [{
+   "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
+   "license": "free",
+   "quality": "HD"
+   }]
+  },
+  "externalIds": [{
+   "source": "GRACENOTE_STATION_ID",
+   "id": "ABCDE"
+  }],
+  "tags": [
+   "partner_channel"
+  ]
+  }
+ ]
+}
 ```
 
 ## Pagination
@@ -1018,7 +1018,7 @@ Developers can use the Roku Search feed schema to validate the format of their s
 >
 > Click [here](https://github.com/rokudev/search-feed-json) to download Roku's Search feed schema.
 
-```
+```json
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"type": "object",
@@ -2684,7 +2684,6 @@ Developers can use the Roku Search feed schema to validate the format of their s
 		}
 	}
 }
-
 ```
 
 ## Sample feeds
@@ -2695,7 +2694,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 > Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
 
-```
+```json
 {
   "version": "1",
   "defaultLanguage": "en",
@@ -2788,7 +2787,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 > Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
 
-```
+```json
 {
   "version": "1",
   "defaultLanguage": "en",
@@ -3004,7 +3003,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 > Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed. The prefixes in the IDs indicate the content type (MV=movie, SH=series, EP=episode).
 
-```
+```json
 {
   "version": "1.0",
   "defaultLanguage": "en",

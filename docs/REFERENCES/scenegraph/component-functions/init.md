@@ -30,31 +30,24 @@ If the XML file contains a Poster node element with id="MyPoster", the XML file 
 
 **Using the init() function in XML**
 
-~~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-
 <component>
+  <script type="text/brightscript">
+    <![CDATA[
+      function posterTranslationChanged()
+        print "MyPoster's translation field changed to "; m.poster.GetField("translation")
+      end function
 
-<script type="text/brightscript" >
-<![CDATA[
+      function init()
+        m.poster = m.top.FindNode("MyPoster")
+        m.poster.ObserveField("translation", "posterTranslationChanged")
+      end function
+    ]]>
+  </script>
 
-function posterTranslationChanged()
-    print "MyPoster's translation field changed to "; m.poster.GetField("translation")
-end function
-
-function init()
-    m.poster = m.top.FindNode("MyPoster")
-    m.poster.ObserveField("translation", "posterTranslationChanged")
-end function
-
-]]>
-</script>
-
-<children>
-
-<Poster id = "MyPoster" />
-
-</children>
-
+  <children>
+    <Poster id="MyPoster" />
+  </children>
 </component>
-~~~~
+```

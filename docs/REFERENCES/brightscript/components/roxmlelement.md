@@ -15,7 +15,7 @@ roXMLElement is used to contain an XML tree.
 
 For instance,
 
-```
+```xml
 <tag1>this is some text</tag1>
 ```
 
@@ -29,7 +29,7 @@ Body = roString with "this is some text"
 
 **Example**
 
-```
+```xml
 <emptytag caveman="barney" />
 ```
 
@@ -54,7 +54,7 @@ GenXML() takes one parameter (boolean) that indicates whether the generated `<xm
 ```
 PrintXML(root, 0)
 
-Sub PrintXML(element As Object, depth As Integer)
+sub PrintXML(element as Object, depth as Integer)
     print tab(depth*3);"Name: ";element.GetName()
     if not element.GetAttributes().IsEmpty() then
         print tab(depth*3);"Attributes: ";

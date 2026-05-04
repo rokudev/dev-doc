@@ -104,16 +104,16 @@ An roByteArray object containing PNG image data for the specified area of the bi
 
 #### Example
 
-~~~
-Function SaveTestPng()
+```
+function SaveTestPng()
     w = 200 : h = 100
-    bm = CreateObject("roBitmap", &#123;width: w, height: h, AlphaEnable: true&#125;)
+    bm = CreateObject("roBitmap", {width: w, height: h, AlphaEnable: true})
     bm.DrawRect(10, 10, w-20, h-20, &hFF0000FF)
     bm.Finish()
     ba = bm.GetPng(0, 0, w, h)
     ba.WriteFile("tmp:/test.png")
- End Function
-~~~
+ end function
+```
 
 ### GetAlphaEnable() as Boolean
 
@@ -143,8 +143,8 @@ By default, alpha blending is off. Even when alpha blending is off, the alpha va
 
 #### Example
 
-~~~
-Function Main()
+```
+function Main()
     s=CreateObject("roScreen")
     ' Clear to White with alpha fully opaque
     ' but alpha not actually ever used since it is the bottom most plane
@@ -153,7 +153,7 @@ Function Main()
 
     ' AlphaEnable must be enabled in the destination surface to have effect.
     s.SetAlphaEnable(true)
-    bm=CreateObject("roBitmap", &#123;width:100, height: 100, alphaenable: false&#125; )
+    bm=CreateObject("roBitmap", {width:100, height: 100, alphaenable: false} )
     bm.Clear(&h0000FFFF) 'blue, fully opaque alpha
 
     ' draw a blue rect in the upper left corner
@@ -168,8 +168,8 @@ Function Main()
     s.DrawObject(0, 0, bm)
     s.Finish()
     Sleep(2000)
- End Function
-~~~
+ end function
+```
 
 ### DrawRect(x as Integer, y as Integer, width as Integer, height as Integer, rgba as Integer) as Void
 

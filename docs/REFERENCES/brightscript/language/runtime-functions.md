@@ -21,10 +21,10 @@ after *name*.
 
 For example:
 
-~~~
+```
 app_mgr = CreateObject("roAppManager")
 section = CreateObject("roRegistrySection", "Data")
-~~~
+```
 
 ## Type(variable, \[optional version\]) as String
 
@@ -33,10 +33,10 @@ Component specification for a list of types.
 
 For example:
 
-~~~
-Print type(5) 'returns a 2.1 compatible type
-Print type("my string", 3) 'return a Roku OS 3.0 type
-~~~
+```
+print type(5) 'returns a 2.1 compatible type
+print type("my string", 3) 'return a Roku OS 3.0 type
+```
 
 ## GetGlobalAA() as Object
 
@@ -50,10 +50,10 @@ function.
 Box() will return an object version of an intrinsic type, or pass
 through an object if given one.
 
-~~~ 
+``` 
  bo = box("string")
  bo = box(bo) ' no change to bo
-~~~
+```
 
 ## Run(filename as String \[ , Args…\]) As dynamic
 
@@ -72,21 +72,21 @@ If an array of files are passed instead of a single filename, then each file is 
 
 For example:
 
-~~~
-Sub Main()
+```
+sub Main()
     Run("pkg:/test.brs")
     BreakIfRunError(LINE_NUM)
-    Print Run("test2.brs", "arg 1", "arg 2")
+    print Run("test2.brs", "arg 1", "arg 2")
     if Run(["pkg:/file1.brs","pkg:/file2.brs"])<>4 then stop
     BreakIfRunError(LINE_NUM)     stop
-End Sub 
+end sub
 
 
-Sub BreakIfRunError(ln)
+sub BreakIfRunError(ln)
     el=GetLastRunCompileError()
     if el=invalid then
         el=GetLastRunRuntimeError()
-        if el=&hFC or el=&hE2 then return 
+        if el=&hFC or el=&hE2 then return
         'FC==ERR_NORMAL_END, E2=ERR_VALUE_RETURN
         print "Runtime Error (line ";ln;"): ";el
         stop
@@ -96,11 +96,11 @@ Sub BreakIfRunError(ln)
             for each i in e
                 print i;": ";e[i]
             end for
-        end for 
+        end for
         stop
-   end if 
-End Sub
-~~~
+   end if
+end sub
+```
 
 ## Eval(code as String) as Dynamic
 
@@ -131,15 +131,15 @@ runtime error, but you don't want code execution to stop.
 
 Example:
 
-~~~
-Print Eval("n=1/0") 
-~~~
+```
+print Eval("n=1/0")
+```
 
 Outputs:
 
-~~~
+```
 20
-~~~
+```
 
 That 20 = &h14 = ERR\_DIV\_ZERO = Divide by Zero error.
 
@@ -160,14 +160,14 @@ Returns an error code result after the last script Run().
 
 These two are normal:  
 
-~~~
-&hFC==ERR_NORMAL_END  
-&hE2==ERR_VALUE_RETURN   
-~~~
+```
+&hFC==ERR_NORMAL_END
+&hE2==ERR_VALUE_RETURN
+```
 
 **Example: Assign variables to common runtime errors**
 
-~~~
+```
 ERR_USE_OF_UNINIT_VAR = &hE9
 ERR_DIV_ZERO = &h14
 ERR_TM = &h18
@@ -176,4 +176,4 @@ ERR_RO2 = &hF4
 ERR_RO4 = &hEC
 ERR_SYNTAX = 2
 ERR_WRONG_NUM_PARAM = &hF1
-~~~
+```

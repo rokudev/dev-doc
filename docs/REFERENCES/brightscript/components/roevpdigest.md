@@ -29,18 +29,18 @@ roEVPDigest processes an arbitrary amount of data and generates a hash of the da
 
 **Example: SHA1 Message Digest with roEVPDigest**
 
-~~~
+```
 ba = CreateObject("roByteArray")
 ' ...populate bytearray...
 digest = CreateObject("roEVPDigest")
 digest.Setup("sha1")
 result = digest.Process(ba)
 print result
-~~~
+```
 
 **Example: MD5 Message Digest with roEVPDigest**
 
-~~~
+```
 ba1 = CreateOjbect("roByteArray")
 ' ...populate ba1...
 ba2 = CreateObject("roByteArray")
@@ -51,7 +51,7 @@ digest.Update(ba1)
 digest.Update(ba2)
 result = digest.Final()
 print result
-~~~
+```
 
 
 ## Supported interfaces

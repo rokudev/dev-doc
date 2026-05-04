@@ -85,53 +85,45 @@ In this example, two drawing styles named "default" and "url" have been defined 
 
 ![roku815px - StdDlgMultiStyleTextItemFHD](https://image.roku.com/ZHZscHItMTc2/StdDlgMultiStyleTextItemFHD.jpg)
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<component name="MultiStyleTextItemDialog" extends="StandardDialog" initialFocus="buttonArea" >
- 
-<script type="text/brightscript" >
-<![CDATA[
-function init()
-    m.top.width = {fhd:1380,hd:920}
- 
-    msTextItem = m.top.findNode("msTextItem")
- 
-    msTextItem.drawingStyles = {
-      "default": {
-        "fontSize": {fhd:33,hd:22}
-        "fontUri": "font:SystemFontFile"
-        "color": "#EFEFEFFF"
-      }
-      "url": {
-        "fontSize": {fhd:33,hd:22}
-        "fontUri": "font:SystemFontFile"
-        "color": "#00FF00FF"
-      }
-    }
- 
-    msTextItem.text="This StdDlgMultiStyleTextItem renders the URL <url>http://www.roku.com</url> in bright green."
- 
-end function
- 
-sub printSelectedButtonAndClose()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonSelected).text;" selected"
-    m.top.close = true
-end sub
- 
-]]>
-</script>
- 
-<children>
+<component name="MultiStyleTextItemDialog" extends="StandardDialog" initialFocus="buttonArea">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        m.top.width = { fhd: 1380, hd: 920 }
+        msTextItem = m.top.findNode("msTextItem")
+        msTextItem.drawingStyles = {
+          "default": {
+            "fontSize": { fhd: 33, hd: 22 }
+            "fontUri": "font:SystemFontFile"
+            "color": "#EFEFEFFF"
+          }
+          "url": {
+            "fontSize": { fhd: 33, hd: 22 }
+            "fontUri": "font:SystemFontFile"
+            "color": "#00FF00FF"
+          }
+        }
+        msTextItem.text = "This StdDlgMultiStyleTextItem renders the URL <url>http://www.roku.com</url> in bright green."
+      end function
+
+      sub printSelectedButtonAndClose()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonSelected).text; " selected"
+        m.top.close = true
+      end sub
+    ]]>
+  </script>
+
+  <children>
     <StdDlgTitleArea primaryTitle="StdDlgMultiStyleTextItem Example" />
     <StdDlgContentArea>
-        <StdDlgMultiStyleTextItem id="msTextItem" />
+      <StdDlgMultiStyleTextItem id="msTextItem" />
     </StdDlgContentArea>
     <StdDlgButtonArea id="buttonArea">
-        <StdDlgButton text="OK" />
+      <StdDlgButton text="OK" />
     </StdDlgButtonArea>
-</children>
- 
+  </children>
 </component>
 ```
 

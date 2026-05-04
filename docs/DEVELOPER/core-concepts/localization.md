@@ -36,9 +36,9 @@ you want to include a `translations.ts` localization file in the TS
 format for Canadian French, place the file in the `pkg:/locale/`
 subdirectory named for the locale ID `fr_CA`:
 
-~~~
+```
 pkg:/locale/fr_CA/translations.ts
-~~~
+```
 
 For strings defined in XML markup in a
 \<children\> element, or \<interface\> element field strings,
@@ -64,15 +64,15 @@ string in the `translations.xml` file, then finds the
 corresponding string translation in the file for the current locale. To
 use the `tr()` function to localize a specific *source* string:
 
-~~~
+```
 tr(String source) as String
-~~~
+```
 
 For example, to translate the string "hello world" in BrightScript:
 
-~~~
+```
 m.greetinglabel.text = tr("hello world")
-~~~
+```
 
 The `tr()` function will look for the
 `pkg:/locale/locale_ID/translations.xml` file, and look in the file for
@@ -86,9 +86,9 @@ assigned to the `text` field.
 
 The `tr()` function also supports string substitutions. For example:
 
-~~~
+```
 text = tr("Video will start in %1 seconds").Replace("%1", numSeconds.ToStr())
-~~~
+```
 
 ## Localizing graphical images in the application package
 
@@ -98,29 +98,29 @@ as many languages as you want that are currently supported by Roku. Then
 use the following format for the value of the `uri` field of the
 [Poster](doc:poster) node:
 
-~~~
+```
 pkg:/locale/images/localized_image
-~~~
+```
 
 For example, to provide a localized version of `myPoster.jpg`, set the
 Poster node `uri` field as follows:
 
-~~~
-<Poster uri = pkg:/locale/images/myPoster.jpg />
-~~~
+```xml
+<Poster uri="pkg:/locale/images/myPoster.jpg" />
+```
 
 This causes the application to search through the `pkg:/locale`
 directory in the following order to find the localized graphical image.
 The first graphical image of the specified name found in this search
 sequence is returned to be rendered by the SceneGraph application.
 
-1.  not localized  
+1.  not localized
     `pkg:/locale/images/image_name `
-2.  current locale  
+2.  current locale
     `pkg:/locale/locale_id/images/image_name `
-3.  default  
+3.  default
     `pkg:/locale/default/images/image_name `
-4.  US English  
+4.  US English
     `pkg:/locale/en_US/images/image_name `
 
 If none of those files exist, the URL access will fail to return a file.
@@ -140,18 +140,18 @@ graphical image.
 
 For example:
 
-~~~
+```
 localize = createObject("RoLocalization")
 bannerposter = m.top.findNode("bannerPoster")
 bannerposter.uri = localize.GetLocalizedAsset("images", "banner.png")
-~~~
+```
 
 Is equivalent to:
 
-~~~
+```
 bannerposter = m.top.findNode("bannerPoster")
 bannerposter.uri = "pkg:/locale/images/banner.png"
-~~~
+```
 
 ## TS file example
 
@@ -161,28 +161,28 @@ The following is an example of a
 French:
 
 **Example of a translations.ts file in the TS XML format**
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="fr_CA" sourcelanguage="en_US">
-<defaultcodec>UTF-8</defaultcodec>
-<context>
-  <name>default</name>
-  <message>
-    <source>Hello</source>
-    <translation>Bonjour</translation>
-  </message>
-  <message>
-    <source>Goodbye</source>
-    <translation>Au revoir</translation>
-  </message>
-  <message>
-    <source>Christmas</source>
-    <translation>Noel</translation>
-  </message>
-</context>
+  <defaultcodec>UTF-8</defaultcodec>
+  <context>
+    <name>default</name>
+    <message>
+      <source>Hello</source>
+      <translation>Bonjour</translation>
+    </message>
+    <message>
+      <source>Goodbye</source>
+      <translation>Au revoir</translation>
+    </message>
+    <message>
+      <source>Christmas</source>
+      <translation>Noel</translation>
+    </message>
+  </context>
 </TS>
-~~~
+```
 
 
 ## XLIFF file example
@@ -194,23 +194,23 @@ French:
 
 **Example of a translations.xml file in the XLIFF XML format**
 
-~~~~
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-<file source-language="en-US" target-language="fr-CA" >
-<body>
-  <trans-unit id="0">
-    <source>Hello</source>
-    <target>Bonjour</target>
-  </trans-unit>
-  <trans-unit id="1">
-    <source>Goodbye</source>
-    <target>Au revoir</target>
-  </trans-unit>
-</body>
-</file>
+  <file source-language="en-US" target-language="fr-CA" >
+    <body>
+      <trans-unit id="0">
+        <source>Hello</source>
+        <target>Bonjour</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Goodbye</source>
+        <target>Au revoir</target>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>
-~~~~
+```
 
 ## Localizing content
 

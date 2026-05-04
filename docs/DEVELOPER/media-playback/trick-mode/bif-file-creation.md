@@ -26,7 +26,7 @@ Roku provides command-line tools for Mac, Linux, and Windows, enabling you to ge
 
 After you have Xcode and Homebrew installed, open your terminal application and run the following:
 
-```
+```bash
 $ brew install ffmpeg
 ```
 
@@ -50,7 +50,7 @@ The BIF tool will automatically generate three `.bif` files: one for SD, one for
 
 ### Example:
 
-```
+```bash
 $ path/to/biftool ~/public_html/Movies/HarryPotter/HLS/600000/*.ts
 Finding candidate frames in 917 files
 Detected stream PTS offset of 10033ms
@@ -77,7 +77,7 @@ We recommend generating two `.bif` archives for each piece of content, one for S
 
 #### Example:
 
-```
+```bash
 $ mkdir abc-sd abc-hd
 $ ffmpeg -i abc.mp4 -r .1 -s 240x180 abc-sd/08d.jpg
 $ ffmpeg -i abc.mp4 -r .1 -s 320x240 abc-hd/08d.jpg
@@ -91,8 +91,8 @@ There are two caveats here:
 
 - FFmpeg generates the JPG files starting with index 1. This means that all the timestamps will be off by 10 seconds. To fix this, use the following command (Make sure you are in the directory containing the `.bif` files):
 
-  ```
-  $ % j=00000000.jpg; for i in *; do mv $\{i\} $\{j\}; j=$\{i\}; done;
+  ```bash
+  $ % j=00000000.jpg; for i in *; do mv ${i} ${j}; j=${i}; done;
   ```
 
 - The SD frames should have a width of 240, and the HD frames should have a width of 320. Their height should be specified to coincide with their aspect ratio. The commands above assume a 4x3 aspect ratio. Unfortunately, FFmpeg doesn't let you specify only a width, keeping the original aspect ratio. If your source file is not 4:3, you should calculate the height used in the commands above using the width and the aspect ratio.
@@ -111,13 +111,13 @@ Here are some common resolutions:
 1. Load and install ffmpeg to break mp4 to set of images.
 
 2. Generate preview files:
-   ```
+   ```bash
    ffmpeg -i bif\1.mp4 -r .1 -s 320x240 bif\bif_files%08d.jpg
    ```
 
 3. Optionally, bulk rename next bat may be used:
 
-   ```
+   ```bash
    @echo off
    setlocal EnableDelayedExpansion
    set suffix=10000000
@@ -129,7 +129,7 @@ Here are some common resolutions:
 
 4. Use biftool to combine these images to bif file:
 
-   ```
+   ```bash
    biftool.exe -t 10000 bif\bif_files
    ```
 
@@ -237,7 +237,7 @@ The absolute timstamps of the BIF captures can be obtained by multiplying the fr
 
 This section contains the BIF images. It begins after the index, though it is not necessary that the first image appear immediately after the index. Each image in the data section must begin at the offset specified in the BIF index.
 
-```
+```bash
 $ path/to/biftool ~/public_html/Movies/HarryPotter/HLS/600000/*.ts
 Finding candidate frames in 917 files
 Detected stream PTS offset of 10033ms

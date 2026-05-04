@@ -371,48 +371,42 @@ a Video node that plays the video.
 
 **Example video Content Meta-Data Task node**
 
-```
-<component name = "MetaDataCR" extends = "Task" >
-
+```xml
+<component name="MetaDataCR" extends="Task">
   <interface>
-    <field id = "metadatauri" type = "uri" value = "" />
-    <field id = "videocontent" type = "node" />
+    <field id="metadatauri" type="uri" value="" />
+    <field id="videocontent" type="node" />
   </interface>
 
-  <script type = "text/brightscript" >
-
+  <script type="text/brightscript">
     <![CDATA[
+      sub init()
+        m.top.functionName = "getContent"
+      end sub
 
-    sub init()
-      m.top.functionName = "getContent"
-    end sub
+      sub getContent()
+        videocontent = createObject("RoSGNode", "ContentNode")
+        metadataxml = createObject("roXMLElement")
 
-    sub getContent()
-      videocontent = createObject("RoSGNode","ContentNode")
-      metadataxml = createObject("roXMLElement")
+        ' uncomment/conditionalize for development package XML transfers (pkg:/server/foo.xml)
+        xmlstring = ReadAsciiFile(m.top.metadatauri)
+        metadataxml.parse(xmlstring)
 
-      ' uncomment/conditionalize for development package XML transfers (pkg:/server/foo.xml)
-      xmlstring = ReadAsciiFile(m.top.metadatauri)
-      metadataxml.parse(xmlstring)
+        ' uncomment/conditionalize for published channel Internet XML transfers (http://serverdomain/foo.xml)
+        ' readInternet = createObject("roUrlTransfer")
+        ' readInternet.setUrl(m.top.metadatauri)
+        ' metadataxml.parse(readInternet.GetToString())
 
-      ' uncomment/conditionalize for published channel Internet XML transfers (http://serverdomain/foo.xml)
-      ' readInternet = createObject("roUrlTransfer")
-      ' readInternet.setUrl(m.top.metadatauri)
-      ' metadataxml.parse(readInternet.GetToString())
-
-      if metadataxml.getName()="MetaData"
-        for each video in metadataxml.GetNamedElements("video")
-          videoitem = videocontent.createChild("ContentNode")
-          videoItem.setFields(video.getAttributes())
-        end for
-      end if
-      m.top.videocontent = videocontent
-    end sub
-
+        if metadataxml.getName() = "MetaData"
+          for each video in metadataxml.GetNamedElements("video")
+            videoitem = videocontent.createChild("ContentNode")
+            videoItem.setFields(video.getAttributes())
+          end for
+        end if
+        m.top.videocontent = videocontent
+      end sub
     ]]>
-
   </script>
-
 </component>
 ```
 

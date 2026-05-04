@@ -75,114 +75,110 @@ In this example, the dialog has a **StdDlgContentArea** node with a StdDlgTextIt
 
 ![roku815px - actionCards-normal](https://image.roku.com/ZHZscHItMTc2/actionCards-normal.jpg)
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<component name="ActionCardsDialog" extends="StandardDialog" initialFocus="buttonArea" >
- 
-<script type="text/brightscript" >
-<![CDATA[
-function init()
-    print "Creating ActionCards"
- 
-    setUpPalette()
- 
-    m.buttonArea = m.top.findNode("buttonArea")
-    m.top.observeFieldScoped("buttonFocused", "printFocusButton")
-    m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
-    m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
- 
-    m.top.findNode("actionCardNormal").observeField("selected", "handleActionCardNormal")
-    m.top.findNode("actionCardMoreInfo").observeField("selected", "handleActionCardMoreInfo")
-    m.top.findNode("actionCardCheckBox").observeField("selected", "handleActionCardCheckBox")
-end function
- 
-sub setUpPalette()
-    ' set a default palette to access the DialogTextColor to use
-    ' for the color of text of the SimpleLabel node's that are
-    ' children of the StdDlgActionItem's
-   
-    m.top.palette = createObject("roSGNode", "RSGPalette")
- 
-    m.top.palette.colors = {    DialogBackgroundColor: "0x002040FF",
-                                DialogItemColor: "0x007FEFFF",
-'                                DialogTextColor: "0x007FEFFF",
-                                DialogTextColor: "0xC0C0C0FF",
-'                                DialogFocusColor: "0x007FEFFF",
-                                DialogFocusColor: "0xC0C0C0FF",
-                                DialogFocusItemColor: "0x003E7EFF",
-                                DialogSecondaryTextColor: "0x007FEF66",
-                                DialogSecondaryItemColor: "0x807FFF4D",
-                                DialogInputFieldColor: "0x807FFF80",
-                                DialogKeyboardColor: "0x807FFF4D",
-                                DialogFootprintColor: "0x807FFF4D" }
- 
-    dialogTextColor = m.top.palette.colors["DialogTextColor"]
- 
-    ' set all SimpleLabel colors to use the palette's dialogTextColor
-    m.top.findNode("noneLabel").color = dialogTextColor
-    m.top.findNode("moreInfoLabel1").color = dialogTextColor
-    m.top.findNode("moreInfoLabel2").color = dialogTextColor
-    m.top.findNode("moreInfoLabel3").color = dialogTextColor
-    m.top.findNode("moreInfoLabel4").color = dialogTextColor
-    m.top.findNode("checkboxLabel").color = dialogTextColor
-end sub
- 
-sub printFocusButton()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonFocused).text;" focused"
-end sub
- 
-sub printSelectedButtonAndClose()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonSelected).text;" selected"
-    m.top.close = true
-end sub
- 
-sub wasClosedChanged()
-    print "ActionCards Closed"
-end sub
- 
-sub handleActionCardNormal()
-    print "Normal Action Card Selected"
-    m.top.close = true
-end sub
- 
-sub handleActionCardMoreInfo()
-    print "More Info Action Card Selected"
-end sub
- 
-sub handleActionCardCheckBox()
-    print "Check Box Action Card Selected"
-    actionCard = m.top.findNode("actionCardCheckBox")
-    actionCard.iconStatus = not actionCard.iconStatus
-end sub
- 
-]]>
-</script>
- 
-<children>
+<component name="ActionCardsDialog" extends="StandardDialog" initialFocus="buttonArea">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        print "Creating ActionCards"
+
+        setUpPalette()
+
+        m.buttonArea = m.top.findNode("buttonArea")
+        m.top.observeFieldScoped("buttonFocused", "printFocusButton")
+        m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
+        m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
+
+        m.top.findNode("actionCardNormal").observeField("selected", "handleActionCardNormal")
+        m.top.findNode("actionCardMoreInfo").observeField("selected", "handleActionCardMoreInfo")
+        m.top.findNode("actionCardCheckBox").observeField("selected", "handleActionCardCheckBox")
+      end function
+
+      sub setUpPalette()
+        ' set a default palette to access the DialogTextColor to use
+        ' for the color of text of the SimpleLabel node's that are
+        ' children of the StdDlgActionItem's
+        m.top.palette = createObject("roSGNode", "RSGPalette")
+        m.top.palette.colors = {
+          DialogBackgroundColor: "0x002040FF",
+          DialogItemColor: "0x007FEFFF",
+          ' DialogTextColor: "0x007FEFFF",
+          DialogTextColor: "0xC0C0C0FF",
+          ' DialogFocusColor: "0x007FEFFF",
+          DialogFocusColor: "0xC0C0C0FF",
+          DialogFocusItemColor: "0x003E7EFF",
+          DialogSecondaryTextColor: "0x007FEF66",
+          DialogSecondaryItemColor: "0x807FFF4D",
+          DialogInputFieldColor: "0x807FFF80",
+          DialogKeyboardColor: "0x807FFF4D",
+          DialogFootprintColor: "0x807FFF4D"
+        }
+
+        dialogTextColor = m.top.palette.colors["DialogTextColor"]
+
+        ' set all SimpleLabel colors to use the palette's dialogTextColor
+        m.top.findNode("noneLabel").color = dialogTextColor
+        m.top.findNode("moreInfoLabel1").color = dialogTextColor
+        m.top.findNode("moreInfoLabel2").color = dialogTextColor
+        m.top.findNode("moreInfoLabel3").color = dialogTextColor
+        m.top.findNode("moreInfoLabel4").color = dialogTextColor
+        m.top.findNode("checkboxLabel").color = dialogTextColor
+      end sub
+
+      sub printFocusButton()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonFocused).text; " focused"
+      end sub
+
+      sub printSelectedButtonAndClose()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonSelected).text; " selected"
+        m.top.close = true
+      end sub
+
+      sub wasClosedChanged()
+        print "ActionCards Closed"
+      end sub
+
+      sub handleActionCardNormal()
+        print "Normal Action Card Selected"
+        m.top.close = true
+      end sub
+
+      sub handleActionCardMoreInfo()
+        print "More Info Action Card Selected"
+      end sub
+
+      sub handleActionCardCheckBox()
+        print "Check Box Action Card Selected"
+        actionCard = m.top.findNode("actionCardCheckBox")
+        actionCard.iconStatus = not actionCard.iconStatus
+      end sub
+    ]]>
+  </script>
+
+  <children>
     <StdDlgTitleArea primaryTitle="Action Cards" />
     <StdDlgContentArea>
-        <StdDlgTextItem text="Here are some nice action cards." />
-        <StdDlgActionCardItem id="actionCardNormal" iconType = "none">
-            <SimpleLabel id="noneLabel" text="Normal Action Card" />
-        </StdDlgActionCardItem>
-        <StdDlgActionCardItem id="actionCardMoreInfo" iconType = "more_info">
-            <LayoutGroup itemSpacings="[20,10]" layoutDirection="vert">
-                <SimpleLabel id="moreInfoLabel1" text="Address" />
-                <SimpleLabel id="moreInfoLabel2" text="Darth Vader" />
-                <SimpleLabel id="moreInfoLabel3" text="42 Deeth Drive" />
-                <SimpleLabel id="moreInfoLabel4" text="Starr Valley AZ 85541" />
-            </LayoutGroup>
-        </StdDlgActionCardItem>
-        <StdDlgActionCardItem id="actionCardCheckBox" iconType = "checkbox">
-            <SimpleLabel id="checkboxLabel" text="Check Box Action Card" />
-        </StdDlgActionCardItem>
+      <StdDlgTextItem text="Here are some nice action cards." />
+      <StdDlgActionCardItem id="actionCardNormal" iconType="none">
+        <SimpleLabel id="noneLabel" text="Normal Action Card" />
+      </StdDlgActionCardItem>
+      <StdDlgActionCardItem id="actionCardMoreInfo" iconType="more_info">
+        <LayoutGroup itemSpacings="[20,10]" layoutDirection="vert">
+          <SimpleLabel id="moreInfoLabel1" text="Address" />
+          <SimpleLabel id="moreInfoLabel2" text="Darth Vader" />
+          <SimpleLabel id="moreInfoLabel3" text="42 Deeth Drive" />
+          <SimpleLabel id="moreInfoLabel4" text="Starr Valley AZ 85541" />
+        </LayoutGroup>
+      </StdDlgActionCardItem>
+      <StdDlgActionCardItem id="actionCardCheckBox" iconType="checkbox">
+        <SimpleLabel id="checkboxLabel" text="Check Box Action Card" />
+      </StdDlgActionCardItem>
     </StdDlgContentArea>
     <StdDlgButtonArea id="buttonArea">
-        <StdDlgButton text="OK" />
+      <StdDlgButton text="OK" />
     </StdDlgButtonArea>
-</children>
- 
+  </children>
 </component>
 ```
 
@@ -196,107 +192,103 @@ This example configures an [**RSGPalette** node](doc:standard-dialog) for the di
 
 ![roku815px - actionCards-radio-checkbox-items](https://image.roku.com/ZHZscHItMTc2/actionCards-radio-checkbox-items.jpg)
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<component name="RadioButtonActionCardsDialog" extends="StandardDialog" initialFocus="buttonArea" >
- 
-<script type="text/brightscript" >
-<![CDATA[
-function init()
-    print "Creating RadioButtonActionCards"
- 
-    setUpPalette()
- 
-    m.buttonArea = m.top.findNode("buttonArea")
-    m.top.observeFieldScoped("buttonFocused", "printFocusButton")
-    m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
-    m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
- 
-    m.top.findNode("actionCardRadioButtons").observeField("itemSelected", "handleActionCardRadioButtons")
-    m.top.findNode("actionCardCheckBox").observeField("selected", "handleActionCardCheckBox")
-end function
- 
-sub setUpPalette()
-    ' set a default palette to access the DialogTextColor to use
-    ' for the color of text of the SimpleLabel node's that are
-    ' children of the StdDlgActionItem's
-   
-    m.top.palette = createObject("roSGNode", "RSGPalette")
- 
-    m.top.palette.colors = {    DialogBackgroundColor: "0x002040FF",
-                                DialogItemColor: "0x007FEFFF",
-'                                DialogTextColor: "0x007FEFFF",
-                                DialogTextColor: "0xC0C0C0FF",
-'                                DialogFocusColor: "0x007FEFFF",
-                                DialogFocusColor: "0xC0C0C0FF",
-                                DialogFocusItemColor: "0x003E7EFF",
-                                DialogSecondaryTextColor: "0x007FEF66",
-                                DialogSecondaryItemColor: "0x807FFF4D",
-                                DialogInputFieldColor: "0x807FFF80",
-                                DialogKeyboardColor: "0x807FFF4D",
-                                DialogFootprintColor: "0x807FFF4D" }
- 
-    dialogTextColor = m.top.palette.colors["DialogTextColor"]
- 
-    ' set all SimpleLabel colors to use the palette's dialogTextColor
-    m.top.findNode("radioLabel1").color = dialogTextColor
-    m.top.findNode("radioLabel2").color = dialogTextColor
-    m.top.findNode("radioLabel3").color = dialogTextColor
-    m.top.findNode("checkboxLabel").color = dialogTextColor
-end sub
- 
-sub printFocusButton()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonFocused).text;" focused"
-end sub
- 
-sub printSelectedButtonAndClose()
-    print "m.buttonArea button ";m.buttonArea.getChild(m.top.buttonSelected).text;" selected"
-    m.top.close = true
-end sub
- 
-sub wasClosedChanged()
-    print "ActionCards Closed"ac
-end sub
- 
-sub handleActionCardRadioButtons()
-    actionCard = m.top.findNode("actionCardRadioButtons")
-    print "Radio Button Group Action Card "; actionCard.itemSelected; " selected"
-end sub
- 
-sub handleActionCardCheckBox()
-    print "Check Box Action Card Selected"
-    actionCard = m.top.findNode("actionCardCheckBox")
-    actionCard.iconStatus = not actionCard.iconStatus
-end sub
- 
-]]>
-</script>
- 
-<children>
+<component name="RadioButtonActionCardsDialog" extends="StandardDialog" initialFocus="buttonArea">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        print "Creating RadioButtonActionCards"
+
+        setUpPalette()
+
+        m.buttonArea = m.top.findNode("buttonArea")
+        m.top.observeFieldScoped("buttonFocused", "printFocusButton")
+        m.top.observeFieldScoped("buttonSelected", "printSelectedButtonAndClose")
+        m.top.observeFieldScoped("wasClosed", "wasClosedChanged")
+
+        m.top.findNode("actionCardRadioButtons").observeField("itemSelected", "handleActionCardRadioButtons")
+        m.top.findNode("actionCardCheckBox").observeField("selected", "handleActionCardCheckBox")
+      end function
+
+      sub setUpPalette()
+        ' set a default palette to access the DialogTextColor to use
+        ' for the color of text of the SimpleLabel node's that are
+        ' children of the StdDlgActionItem's
+        m.top.palette = createObject("roSGNode", "RSGPalette")
+        m.top.palette.colors = {
+          DialogBackgroundColor: "0x002040FF",
+          DialogItemColor: "0x007FEFFF",
+          ' DialogTextColor: "0x007FEFFF",
+          DialogTextColor: "0xC0C0C0FF",
+          ' DialogFocusColor: "0x007FEFFF",
+          DialogFocusColor: "0xC0C0C0FF",
+          DialogFocusItemColor: "0x003E7EFF",
+          DialogSecondaryTextColor: "0x007FEF66",
+          DialogSecondaryItemColor: "0x807FFF4D",
+          DialogInputFieldColor: "0x807FFF80",
+          DialogKeyboardColor: "0x807FFF4D",
+          DialogFootprintColor: "0x807FFF4D"
+        }
+
+        dialogTextColor = m.top.palette.colors["DialogTextColor"]
+
+        ' set all SimpleLabel colors to use the palette's dialogTextColor
+        m.top.findNode("radioLabel1").color = dialogTextColor
+        m.top.findNode("radioLabel2").color = dialogTextColor
+        m.top.findNode("radioLabel3").color = dialogTextColor
+        m.top.findNode("checkboxLabel").color = dialogTextColor
+      end sub
+
+      sub printFocusButton()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonFocused).text; " focused"
+      end sub
+
+      sub printSelectedButtonAndClose()
+        print "m.buttonArea button "; m.buttonArea.getChild(m.top.buttonSelected).text; " selected"
+        m.top.close = true
+      end sub
+
+      sub wasClosedChanged()
+        print "ActionCards Closed"
+      end sub
+
+      sub handleActionCardRadioButtons()
+        actionCard = m.top.findNode("actionCardRadioButtons")
+        print "Radio Button Group Action Card "; actionCard.itemSelected; " selected"
+      end sub
+
+      sub handleActionCardCheckBox()
+        print "Check Box Action Card Selected"
+        actionCard = m.top.findNode("actionCardCheckBox")
+        actionCard.iconStatus = not actionCard.iconStatus
+      end sub
+    ]]>
+  </script>
+
+  <children>
     <StdDlgTitleArea primaryTitle="RadioButton and Checkbox Items" />
     <StdDlgContentArea>
-        <StdDlgItemGroup id="actionCardRadioButtons">
-            <StdDlgActionCardItem iconType = "radiobutton">
-                <SimpleLabel id="radioLabel1" text="First Choice" />
-            </StdDlgActionCardItem>
-            <StdDlgActionCardItem iconType = "radiobutton">
-                <SimpleLabel id="radioLabel2" text="Second Choice" />
-            </StdDlgActionCardItem>
-            <StdDlgActionCardItem iconType = "radiobutton">
-                <SimpleLabel id="radioLabel3" text="Third Choice" />
-            </StdDlgActionCardItem>
-        </StdDlgItemGroup>
-        <StdDlgActionCardItem id="actionCardCheckBox" iconType = "checkbox">
-            <SimpleLabel id="checkboxLabel" text="Check Box Action Card" />
+      <StdDlgItemGroup id="actionCardRadioButtons">
+        <StdDlgActionCardItem iconType="radiobutton">
+          <SimpleLabel id="radioLabel1" text="First Choice" />
         </StdDlgActionCardItem>
+        <StdDlgActionCardItem iconType="radiobutton">
+          <SimpleLabel id="radioLabel2" text="Second Choice" />
+        </StdDlgActionCardItem>
+        <StdDlgActionCardItem iconType="radiobutton">
+          <SimpleLabel id="radioLabel3" text="Third Choice" />
+        </StdDlgActionCardItem>
+      </StdDlgItemGroup>
+      <StdDlgActionCardItem id="actionCardCheckBox" iconType="checkbox">
+        <SimpleLabel id="checkboxLabel" text="Check Box Action Card" />
+      </StdDlgActionCardItem>
     </StdDlgContentArea>
     <StdDlgButtonArea id="buttonArea">
-        <StdDlgButton text="OK" />
-        <StdDlgButton text="Cancel" />
+      <StdDlgButton text="OK" />
+      <StdDlgButton text="Cancel" />
     </StdDlgButtonArea>
-</children>
- 
+  </children>
 </component>
 ```
 

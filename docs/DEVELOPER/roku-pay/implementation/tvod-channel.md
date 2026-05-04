@@ -85,11 +85,11 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
    'callback function
    function requestPartnerOrderStatusChanged()
-   	if m.store.requestPartnerOrderStatus.status = "Success"
-      	'user's billing status is valid - prompt the user to purchase
-      else
-      	'display an appropriate error message
-   	end if
+       if m.store.requestPartnerOrderStatus.status = "Success"
+           'user's billing status is valid - prompt the user to purchase
+       else
+           'display an appropriate error message
+       end if
    end function
    ```
 
@@ -140,11 +140,11 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
    'callback function
    function confirmPartnerOrderStatusChanged()
-   		if m.store.confirmPartnerOrderStatus.status = "Success"
-   				displayOrderStatusDialog(m.store.confirmPartnerOrderStatus	
-   		else
-   				'display an appropriate error message
-   		end if
+       if m.store.confirmPartnerOrderStatus.status = "Success"
+           displayOrderStatusDialog(m.store.confirmPartnerOrderStatus)
+       else
+           'display an appropriate error message
+       end if
    end function
    ```
 

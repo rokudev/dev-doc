@@ -1470,7 +1470,7 @@ The following example demonstrates how to determine if the attached device suppo
 di = CreateObject("roDeviceInfo")
 audioDecoders = di.GetAudioDecodeInfo()
 
-REM Check for surround sound codecs:
+' Check for surround sound codecs:
 hasDolbyDigital = audioDecoders.doesexist("AC3")
 hasDTS = audioDecoders.doesexist("DTS")
 hasDDPlus = audioDecoders.doesexist("DD+")

@@ -40,33 +40,25 @@ The following changes the color of a rectangle, from blue to very dark blue, and
 
 #### ColorFieldInterpolator Node Class Example
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
- 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
- 
-    <component name="animationcolortest" extends="Group" >
- 
-        <script type="text/brightscript" >
-            <![CDATA[
-                function init()
-                   m.top.setFocus(true)
-                end function
-            ]]>
-        </script>
- 
-<children>
- 
-    <Rectangle   id="testRectangle"   color="0x0000CCFF"   width="810"   height="44"   translation="[310,8]" />
-    <Animation   id="testAnimation"  duration="10"  repeat="true"  control="start"  easeFunction="linear" >
-        <ColorFieldInterpolator id = "testColor"   key="[0.0, 0.5, 1.0]"    keyValue="[ 0x0000CCFF, 0x00000FFF, 0x0000CCFF ]"       fieldToInterp="testRectangle.color"   />
+<component name="animationcolortest" extends="Group">
+  <script type="text/brightscript">
+    <![CDATA[
+      function init()
+        m.top.setFocus(true)
+      end function
+    ]]>
+  </script>
+
+  <children>
+    <Rectangle id="testRectangle" color="0x0000CCFF" width="810" height="44" translation="[310,8]" />
+    <Animation id="testAnimation" duration="10" repeat="true" control="start" easeFunction="linear">
+      <ColorFieldInterpolator id="testColor" key="[0.0, 0.5, 1.0]" keyValue="[ 0x0000CCFF, 0x00000FFF, 0x0000CCFF ]" fieldToInterp="testRectangle.color" />
     </Animation>
- 
- 
-</children>
- 
+  </children>
 </component>
-~~~
+```
 
 ## Fields
 

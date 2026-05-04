@@ -62,8 +62,8 @@ The number of nested objects within an object that were copied, rather than move
   n.AddField("aa_field", "assocarray", true)
   my_aa = { key: "value" }
   n.MoveIntoField("aa_field", my_aa)
-  ? n.aa_field
-  ? my_aa
+  print n.aa_field
+  print my_aa
 ```
 
 This code will output the following on the port 8085 console:
@@ -104,9 +104,9 @@ The associative array that was moved from the source field.
 n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
 n.aa_field = { key: "value"}' or use moveIntoField()
-my_aa = n.MoveFromField("aa_field") 
-? n.aa_field ' invalid
-? my_aa ' contents of aa_field
+my_aa = n.MoveFromField("aa_field")
+print n.aa_field ' invalid
+print my_aa ' contents of aa_field
 ```
 
 > **Moving data - when it copies instead**
@@ -203,9 +203,9 @@ This function returns a reference to the field’s value. This function returns 
     n.AddField("aa_field", "assocarray", true)
     my_aa = { key: "value" }
     n.setRef("aa_field", my_aa)
-    ? n.aa_field
-    ? my_aa
-    ? n.GetRef("aa_field")
+    print n.aa_field
+    print my_aa
+    print n.GetRef("aa_field")
 
 ```
 
@@ -254,10 +254,10 @@ utils = CreateObject("roUtils")
     di = CreateObject("roDeviceInfo")
     aa = { a: 1, b: { b1: 42 }, c: di }
     new_aa = utils.DeepCopy(aa)
-    ? "IsSameObject", utils.IsSameObject(aa, new_aa)
-    ? "new_aa.a", new_aa.a
-    ? "new_aa.b", new_aa.b
-    ? "new_aa.c", new_aa.c ' invalid, roDeviceInfo is not copyable
+    print "IsSameObject", utils.IsSameObject(aa, new_aa)
+    print "new_aa.a", new_aa.a
+    print "new_aa.b", new_aa.b
+    print "new_aa.c", new_aa.c ' invalid, roDeviceInfo is not copyable
 ```
 
 This code will output the following on the port 8085 console:

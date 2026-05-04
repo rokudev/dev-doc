@@ -102,11 +102,11 @@ item:
 For the VOD category list example, the first step might be to write a
 SceneGraph component outline similar to the following:
 
-~~~~
+```xml
 <component name = "VODCategoriesList" extends = "MarkupList">
 
 </component>
-~~~~
+```
 
 You can then select the nodes to comprise your custom component from the
 SceneGraph API node classes, to either create or modify them using
@@ -135,53 +135,41 @@ moves from item to item. So we start with the following
 outline:
 
 **MarkupList item component outline**
-~~~~
-<component name = "VODCategoriesListItem" extends = "Group" >
-
+```xml
+<component name="VODCategoriesListItem" extends="Group">
   <interface>
-    <field id = "itemContent" type = "node" onChange = "showcontent" />
-    <field id = "focusPercent" type = "float" onChange = "showfocus" />
+    <field id="itemContent" type="node" onChange="showcontent" />
+    <field id="focusPercent" type="float" onChange="showfocus" />
   </interface>
 
-  <script type="text/brightscript" >
-
+  <script type="text/brightscript">
     <![CDATA[
-    sub init()
-      m.itemicon = m.top.findNode("itemicon")
-      m.itemlabel = m.top.findNode("itemLabel")
-      m.itemcursor = m.top.findNode("itemcursor")
-      m.itemposter = m.top.findNode("itemPoster")
-    end sub
+      sub init()
+        m.itemicon = m.top.findNode("itemicon")
+        m.itemlabel = m.top.findNode("itemLabel")
+        m.itemcursor = m.top.findNode("itemcursor")
+        m.itemposter = m.top.findNode("itemPoster")
+      end sub
 
-    sub showcontent()
-      itemcontent = m.top.itemContent
-      m.itemicon.uri = itemcontent.url
-      m.itemlabel.text = itemcontent.title
-      m.itemposter.uri = itemcontent.HDPosterUrl
-    end sub
+      sub showcontent()
+        itemcontent = m.top.itemContent
+        m.itemicon.uri = itemcontent.url
+        m.itemlabel.text = itemcontent.title
+        m.itemposter.uri = itemcontent.HDPosterUrl
+      end sub
     ]]>
-
   </script>
 
   <children>
-
     <Group>
-
-      <Poster
-        id = "itemicon" />
-      <Label
-        id = "itemLabel" />
-      <Rectangle
-        id = "itemcursor" />
-      <Poster
-        id = "itemPoster" />
-
+      <Poster id="itemicon" />
+      <Label id="itemLabel" />
+      <Rectangle id="itemcursor" />
+      <Poster id="itemPoster" />
     </Group>
-
   </children>
-
 </component>
-~~~~
+```
 
 The outline includes the Poster nodes we will use for graphic
 images, a Label node for the item string, and a Rectangle node
@@ -204,25 +192,25 @@ the right, when the item is focused. So, for example, we set the
 initial `opacity` field setting of 0.0 to make it invisible until
 focused:
 
-~~~~
-<Poster   
-  id = "itemPoster"    
-  width = "98"   
-  height = "140
-  opacity = "0.0"  
-  translation = "[ 192, 4 ]"  />
-~~~~
+```xml
+<Poster
+  id="itemPoster"
+  width="98"
+  height="140"
+  opacity="0.0"
+  translation="[ 192, 4 ]" />
+```
 
 Then we can write the \<script\> element callback function
 `showfocus()` to indicate focus when the `focusPercent`
 \<interface\> field changes:
 
-~~~~
-sub showfocus()  
-  m.itemcursor.opacity = m.top.focusPercent    
-  m.itemposter.opacity = m.top.focusPercent   
+```
+sub showfocus()
+  m.itemcursor.opacity = m.top.focusPercent
+  m.itemposter.opacity = m.top.focusPercent
 end sub
-~~~~
+```
 
 Then you assign your item component to the `itemComponentName` field for
 your MarkupList node component, as part of completely defining your
@@ -231,7 +219,7 @@ list:
 
 **MarkupList custom component outline**
 
-~~~~
+```xml
 <component name = "VODCategoriesList" extends = "MarkupList" >
   <script type="text/brightscript" >
     <![CDATA[
@@ -248,7 +236,7 @@ list:
   </script>
 
 </component>
-~~~~
+```
 
 [MarkupList](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/MarkupListExample) is an example
 application of the completed custom list configuration. In the example

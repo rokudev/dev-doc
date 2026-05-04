@@ -70,15 +70,12 @@ adapter.init()
 
 ```
 request = {
-
     type: adapter.SreamType.VOD  ' Required, VOD or LIVE
-
     url:  "http://admanifest.ssai.com/api?assetid=abcdefg"' Ad metadata URL, provided by SSAI
-
 }
 
 result = adapter.requestStream(request)
-The value of the parameter URL depends on which SSAI manifest servers to integrate and which type of stream it is. (The app may query the initial request to SSAI manifest server by itself rather than using the adapter.requestStream() call). Valid values of the parameter type are VOD or LIVE. VOD is when Ad metadata is fetched before the playback starts, LIVE is when Ad metadata is provided as ping/poll/in-stream (such as X-MARKER) content playback.
+'The value of the parameter URL depends on which SSAI manifest servers to integrate and which type of stream it is. (The app may query the initial request to SSAI manifest server by itself rather than using the adapter.requestStream() call). Valid values of the parameter type are VOD or LIVE. VOD is when Ad metadata is fetched before the playback starts, LIVE is when Ad metadata is provided as ping/poll/in-stream (such as X-MARKER) content playback.
 ```
 
 ### 3. Read stream info
@@ -117,7 +114,7 @@ By default, params.useStitched is set to true. In this case:
 #### **a) Optional: enable ads without stitchedAdHandledEvent**
 
 ```
- params = {  
+ params = {
      player: {sgnode:m.top.video, port:port},
      useStitched: false
  }
@@ -152,33 +149,22 @@ When params.useStitched = false, it is required to set callbacks and the app MUS
 
 ```
 ' Set adapter callback functions
-
 adapter.addEventListener(adapter.AdEvent.POD_START, rafxCallback)
-
 adapter.addEventListener(adapter.AdEvent.POD_END, rafxCallback)
-
 adapter.addEventListener(adapter.AdEvent.IMPRESSION, rafxCallback)
+```
 
-...
-
-...
-
+Example callback function:
+```
 function rafxCallback(eventInfo as object) as void
-
     if adapter.AdEvent.POD_START = eventInfo.event
-
         m.top.adPlaying = true
-
     else if adapter.AdEvent.POD_COMPLETE = eventInfo.event
-
         m.top.adPlaying = false
-
     end if
 
     print "Callback at : ";eventInfo.position
-
 end function
-
 ```
 
 ### 5) Enable ad measurements
@@ -188,18 +174,11 @@ When you are ready to start playback, you need to configure RAF by enabling ad m
 Note: It is recommended to use [enableAdMeasurements](doc:raf-api).
 
 ```
-
 adIface = Roku_Ads()
-
 adIface.enableAdMeasurements(true) ' Required
-
 adIface.setContentGenre(...) ' Set app/content genre info
-
 adIface.setContentLength(...) ' Set app/content length info
-
 adIface.setContentId(...) ' Set app/content specific info
-
-
 ```
 
 ### 6) Playback Loop
@@ -207,27 +186,19 @@ adIface.setContentId(...) ' Set app/content specific info
 The developer can now start the playback and run the message loop:
 
 ```
-
 video.control = "play"  ' start playback
 
 while true
-
    msg = wait(1000, port)
-
    curAd = adapter.onMessage(msg)
 
    if invalid = curAd
-
        video.setFocus(true)  ' recommended
-
    end if
 
    '  exit while loop when condition met
-
    ...
-
 end while
-
 ```
 
 adapter.onMessage() calls RAF.stitchedAdHandledEvent() and returns the object as it is. It is thus recommended to evaluate the returned value and call setFocus() on the video node in case the interactive ad changes focus while playing.

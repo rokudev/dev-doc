@@ -15,7 +15,7 @@ Bookmarking refers to saving a user's playback position in the content on your a
 
 It is recommended that all services with content longer than 15 minutes build bookmarking functionality into their service, as it will enhance the end-user's experience — not just on Roku, but across all interactions they have with your service on any platform. For example, if your service implements bookmarks, then users who begin watching a television show on Roku before switching over to their mobile device can pick up where they left off. In addition, bookmarks must be saved for a minimum of 30 days.
 
-> Apps must implement bookmarking in VOD content that is longer that 15 minutes to pass [certification](doc:certification). 
+> Apps must implement bookmarking in VOD content that is longer that 15 minutes to pass [certification](doc:certification).
 
 This guide provides simple instructions on two different ways to bookmark media content, either in your service's backend or locally in the device's registry.
 
@@ -23,10 +23,10 @@ This guide provides simple instructions on two different ways to bookmark media 
 
 It is important to know that video playback position (or "timestamp") can be retrieved via the position field in the video node.
 
-~~~
+```
   m.video = m.top.findNode("MyVideo")
   TimeStamp = m.video.position
-~~~
+```
 
 ## Storing timestamps for cross-platform retrieval
 
@@ -36,12 +36,12 @@ To do this, the app must first retrieve the timestamp as outlined above, then ma
 
 It is recommended that the app makes the request to store this timestamp on the backend once every 30 seconds, but the frequency can be increased on devices with more memory. This concept is very similar to beacons fired by the Roku Ad Framework. The best way to approach this is through roUrlTransfer.
 
-~~~
+```
   url = ('url with timestamp to send to developer end')
   curl = createObject("roUrlTransfer")
   curl.setUrl(url)
-  curl.postFromString(TimeStamp as String)
-~~~
+  curl.postFromString(timeStamp)
+```
 
 This should be done on a 30 second timer to ensure functionality across all devices.
 
@@ -51,27 +51,27 @@ While it is ideal to store timestamps in your backend service, it is also possib
 
 To write to the registry, use the [roRegistrySection](doc:roregistrysection) component.
 
-~~~
+```
   sec = createObject("roRegistrySection", "MySection")
   if sec.Exists("PlaybackBookmark")
     BookmarkTime =  sec.Read("PlaybackBookmark")
   end if
-~~~
+```
 
 If the roku device has a previously stored value that matches the PlaybackBookmark key, then it will return the value stored inside the registry. The function below shows how to create a key value pair to store the timestamp of a bookmark. The timestamp must be done in seconds.
 
-~~~
+```
   TimeStamp = 360
   sec = createObject("roRegistrySection", "MySection")
   sec.Write("PlaybackBookmark", TimeStamp)
   sec.Flush()
-~~~
+```
 
 This will save the media playback position inside the registry and the Flush() method will save it to persistent storage in the case of a reboot. Note that if you are running this multiple times on a timer, it will overwrite any previous value associated with the same key. Once this is done, all that's left is to find run the seek() function from the video node to resume playback from the last point.
 
-~~~
+```
   m.video = m.top.findNode("MyVideo")
   m.video.content = videoContent
   m.video.control = "play"
   m.video.seek = BookmarkTime
-~~~
+```

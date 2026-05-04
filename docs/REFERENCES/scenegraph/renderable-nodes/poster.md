@@ -39,30 +39,23 @@ The following example is a poster image placed using Poster node:
 
 The following displays a graphic image from the application images directory near the top left of the display screen.
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
+<component name="postertest" extends="Group">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.setFocus(true)
+      end sub
+    ]]>
+  </script>
 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
-
-<component name="postertest" extends="Group" >
-
-<script type="text/brightscript" >
-<![CDATA[
-
-sub init()
-  m.top.setFocus(true)
-end sub
-
-]]>
-</script>
-
-<Poster
-  id="testPoster"
-  uri="pkg:/images/rokuowds.png"
-  width="0.0"
-  height="0.0"
-  translation="[160,8]" />
-
+  <Poster
+    id="testPoster"
+    uri="pkg:/images/rokuowds.png"
+    width="0.0"
+    height="0.0"
+    translation="[160,8]" />
 </component>
 ```
 

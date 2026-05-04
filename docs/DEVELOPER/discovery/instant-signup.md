@@ -140,10 +140,10 @@ Apps must implement an API that retrieves the images and description of the app 
     "description": "string"
   }
 </code></pre><br><strong>Example</strong>: <pre><code>  {
-    "images": [ "https://myChannelImage/item1.jpg",  
+    "images": [ "https://myChannelImage/item1.jpg",
                 "https://myChannelContentPosterImages/item2.jpg",
                 "https://myChannelContentPosterImages/item3.jpg"],
-    "description": "Your favorite movies from your favorite decade"            
+    "description": "Your favorite movies from your favorite decade"
   }
 </code></pre></td>
 </tr>
@@ -383,13 +383,13 @@ Apps can provide an **account** endpoint that accepts POST requests. This enable
 
 When a customer selects a subscription, they are prompted to grant Roku permission to share their information with the app. If the customer consents, the [sale notification](doc:push-notifications#sale) will additionally include the customer's name, email address, billing zip code, and app-specific unique id.  The following sample purchase notification demonstrates this:
 
-```
+```json
 {
 	"customerId": "168c2bda168854bb805f24ab296390a3",
 	"transactionType": "Sale",
 	"transactionId": "bf9af441015311ed810f0a58a9feac11",
 	"channelId": "1143791",
-	"channelName": "1p6d9g0o7k7w9a1m",	
+	"channelName": "1p6d9g0o7k7w9a1m",
 	"productCode": "UQcEYh2fVuKqS6cTuR3X_MonthlySub",
 	"productName": "UQcEYh2fVuKqS6cTuR3X_MonthlySub_name",
 	"price": 0.99,
@@ -444,14 +444,14 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
 
    ```
-   if (myChannelStore.purchases \<> invalid)
-      count = myChannelStore.purchases.GetChildCount()
-      for x = 0 to count - 1
-      		if (myChannelStore.purchases.getChild(x).code = "monthlySubscription")
-      			transactionId = myChannelStore.purchases.getChild(x).purchaseId
-      		end if
-   		end for
-   endif
+   if (myChannelStore.purchases <> invalid)
+       count = myChannelStore.purchases.GetChildCount()
+       for x = 0 to count - 1
+           if (myChannelStore.purchases.getChild(x).code = "monthlySubscription")
+               transactionId = myChannelStore.purchases.getChild(x).purchaseId
+           end if
+       end for
+   end if
    ```
 
 3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service) Roku Pay Web Service API call.
@@ -460,7 +460,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
-   ```
+   ```xml
    <result>
       <transactionId>aa3f3a2479ea4e0c88d9a2d500f33e74<transactionId>
       ...
@@ -490,7 +490,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
      if status = 0
           ...
      end if
-       
+
      'check if access token stored in Roku cloud has specifed value
       response = myChannelStore.storeChannelCredDataStatus.response
       if response.json.channel_data = myChannelStore.channelCredData

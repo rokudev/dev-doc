@@ -36,7 +36,7 @@ sizes, and are:
 For example, to specify the bolded small default font for a **Label**
 node in XML markup:
 
-```
+```xml
 <Label id="mySmallLabel"
     width="200" height="200"
     text="Can you read this?"

@@ -72,7 +72,7 @@ When the user later returns to the app, the Roku OS invokes the matching **custo
 
 In the SceneGraph XML file of the app's Scene node, insert `customization suspendhandler` and `customization resumehandler` tags and set them to `customSuspend` and `customResume`, respectively:
 
-```
+```xml
 <customization suspendhandler="customSuspend" />
 <customization resumehandler="customResume" />
 ```
@@ -212,9 +212,9 @@ The following code snippet illustrates logic that could be used to resume an app
 ' Callback function when the app is suspended from an app exit.
 ' In this example, we are only printing to the brightscript console
 ' that the app is being suspended.
-sub onMainSceneSuspend(arg as dynamic)  
+sub onMainSceneSuspend(arg as dynamic)
   print "***** Suspending App ***** CALLED FROM"; arg.lastSuspendOrResumeReason
-end sub  
+end sub
 
 ' Callback function when the app resumes after an app exit. The
 ' sample will check if a video node has been created. If it has, then we
@@ -222,10 +222,10 @@ end sub
 ' screen. Otherwise, it will resume with the last screen the user was previously
 ' on before the app was suspended.
 sub onMainSceneResume(arg as dynamic) as boolean
-  print "***** Resuming App ***** CALLED FROM"; arg.lastSuspendOrResumeReason  
+  print "***** Resuming App ***** CALLED FROM"; arg.lastSuspendOrResumeReason
   if m.videoPlayer <> invalid and lcase(m.videoPlayer.subtype()) = "video"
       print "***** Closing video screen... *****"
-      CloseScreen(m.videoPlayer)  
+      CloseScreen(m.videoPlayer)
   end if
 end sub
 ```

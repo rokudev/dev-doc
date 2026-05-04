@@ -49,7 +49,7 @@ It is recommended that developers create a component that extends the **DynamicC
 For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface> element that has the following signature:
 
 ```
-    function keySelected(key as string) as boolean
+function keySelected(key as string) as boolean
 ```
 
 The _key_ parameter is set to the key's "strOut" field, if specified; otherwise, it is set to the key's "label" string.
@@ -61,16 +61,16 @@ The function should return _true_ if it handles the key selection. Returning _fa
 The following example demonstrates a custom key handler:
 
 1. The Key Definition File for the component that extends **DynamicCustomKeyboard** node has a row that defines the following keys:
-   ```
+   ```json
    "keys": [
        { "label": "Aa", "strOut": "ChangeCase" },
        <OTHER KEYS>
-   ] 
+   ]
    ```
 
 2. When this key is selected, the keyboard's mode is changed from "UpperCase" to "LowerCase" (the Key Definition File would need to include grids for both modes). In this case, the child **DynamicCustomKeyboard** component includes a **keySelected()** function in its interface:
-   ```
-   <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard>
+   ```xml
+   <component name="MyCustomKeyboard" extends="DynamicCustomKeyboard">
        <interface>
            <function name="keySelected" />
        </interface>
@@ -82,7 +82,7 @@ The following example demonstrates a custom key handler:
    ```
    function keySelected(key as string) as boolean
        if key = "ChangeCase"
-           if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()                                                
+           if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()
                m.top.keyGrid.mode = "LowerCase"  ' function just after m.top.keyGrid.keyDefinitionUri is set to the Key Definition File to use
            else
                m.top.keyGrid.mode = "UpperCase"
@@ -99,7 +99,7 @@ The following example demonstrates a custom key handler:
 In most cases, the default key selection handlers can be used for modifying the entered text string. However, if a custom key handler is used to do this, it must update the **cursorPosition** of the **DynamicCustomKeyboard**. The following example demonstrates a custom key handler that changes the text string:
 
 1. The Key Definition File includes a key definition with an action intended to duplicate the character to the left of the cursor position, positioning the cursor after the duplicated character:
-   ```
+   ```json
    "keys": [
        { "icon": "pkg:/images/Duplicate.png", "strOut": "DuplicateCharacter" },
        <OTHER KEYS>
@@ -168,7 +168,7 @@ See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="ht
 
 The following sample demonstrates a Key Definition File that defines five grids for **DynamicCustomKeyboard** node. See the [Key Definition File specification](doc:key-definition-file) for more information.
 
-```
+```json
 {
   "keyboardWidthFHD": 576,
   "keyboardHeightFHD": 432,
@@ -364,8 +364,8 @@ The following sample demonstrates a Key Definition File that defines five grids 
                   "strOut": "Delete"
                 },
                 {
-"label": "0"
-},
+                  "label": "0"
+                },
                 {
                   "icon": "theme:KeyboardClearOnBitmap",
                   "focusIcon": "theme:KeyboardClearOffBitmap",

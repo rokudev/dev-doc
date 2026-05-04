@@ -239,7 +239,7 @@ The following attributes define each \<function> XML element:
 
 | Attribute | Required | Description                                                                                                                                                          |
 | --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name      | required | A string containing the name of the function which can be called using the [callFunc() function](doc:ifsgnodedict). |
+| name      | required | A string containing the name of the function which can be called using the [callFunc() function](doc:ifsgnodedict). |
 
 ## Examples
 
@@ -247,7 +247,7 @@ The following adds two fields as the interface to a component: a `uri` field, an
 
 **\<interface> element example**
 
-```
+```xml
 <interface>
     <field id="contenturi" type="uri" />
     <field id="content" type="node" />
@@ -256,7 +256,7 @@ The following adds two fields as the interface to a component: a `uri` field, an
 
 The following defines a function named 'doSomething' on the corresponding component interface.
 
-```
+```xml
 <interface>
     <function name="doSomething" />
 </interface>

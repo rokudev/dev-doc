@@ -93,7 +93,7 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
               transactionId = myChannelStore.purchases.getChild(x).purchaseId
            end if
        end for
-   endif
+   end if
    ```
 3. Pass the transaction ID into a [**validate-transaction**](doc:roku-web-service#validate-transaction) Roku Pay web service GET API call
    ```
@@ -101,7 +101,7 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
    ```
 4. Check the **isEntitled** field in the response to verify that the user is entitled to the content.
 
-   ```
+   ```xml
    <result>
        <transactionId>{transactionId}</transactionId>
        ...
@@ -241,7 +241,7 @@ To complete and validate the new subscription, follow these steps:
    ```
    myOrder = CreateObject("roSGNode", "ContentNode")
    itemPurchased = myOrder.createChild("ContentNode")
-   itemPurchased.addFields(\{ "code": "UPC3L5A", "qty": 1})
+   itemPurchased.addFields({ "code": "UPC3L5A", "qty": 1})
    myChannelStore.order = myOrder
    ```
 
@@ -276,8 +276,8 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
 
    ```
    myChannelStore.requestedUserData("email")
-   info = CreateObject(“roSGNode”, “ContentNode”)
-   info.addFields(\{context: “signin”})
+   info = CreateObject("roSGNode", "ContentNode")
+   info.addFields({context: "signin"})
    myChannelStore.requestedUserDataInfo = info
    ```
 

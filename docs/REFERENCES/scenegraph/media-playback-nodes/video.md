@@ -966,38 +966,34 @@ These attributes must be set to handle secure HTTP transfers of video files. Not
 
 To play video in an application, you first need to create a Video node, either in BrightScript using the roSGNode [ifSGNodeChildren](doc:ifsgnodechildren) interface, or in XML markup. For example, in XML markup:
 
-```
-
+```xml
 <Video
   id="musicvideos"
   width="1280"
   height="720"
-  translation="[0,0]"
-/>
+  translation="[0,0]" />
 ```
 
 The Video node is then scripted to specify the URL of the video stream, streaming format, video title, and any other [Content Meta-Data](doc:content-metadata) attributes needed for the particular playback. Once the video properties are specified, the video can be played by setting the Video node `control` field value to `play`.
 
-```
-<script type="text/brightscript" >
-<![CDATA[
+```xml
+<script type="text/brightscript">
+  <![CDATA[
+    sub init()
+      m.top.setFocus(true)
+      setVideo()
+    end sub
 
-sub init()
-  m.top.setFocus(true)
-  setVideo()
-end sub
+    function setVideo() as void
+      videoContent = createObject("RoSGNode", "ContentNode")
+      videoContent.url = "https://roku.s.cpl.delvenetworks.com/media/59021fabe3b645968e382ac726cd6c7b/60b4a471ffb74809beb2f7d5a15b3193/roku_ep_111_segment_1_final-cc_mix_033015-a7ec8a288c4bcec001c118181c668de321108861.m3u8"
+      videoContent.title = "Test Video"
+      videoContent.streamformat = "hls"
 
-function setVideo() as void
-  videoContent = createObject("RoSGNode", "ContentNode")
-  videoContent.url = "https://roku.s.cpl.delvenetworks.com/media/59021fabe3b645968e382ac726cd6c7b/60b4a471ffb74809beb2f7d5a15b3193/roku_ep_111_segment_1_final-cc_mix_033015-a7ec8a288c4bcec001c118181c668de321108861.m3u8"
-  videoContent.title = "Test Video"
-  videoContent.streamformat = "hls"
-
-  m.video = m.top.findNode("musicvideos")
-  m.video.content = videoContent
-  m.video.control = "play"
-end function
-
-]]>
+      m.video = m.top.findNode("musicvideos")
+      m.video.content = videoContent
+      m.video.control = "play"
+    end function
+  ]]>
 </script>
 ```

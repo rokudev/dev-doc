@@ -44,22 +44,22 @@ arr = ["ape", "bat", "cow", "dog", "elk"]
 
 ' get the 3rd (index 2) and subsequent elements
 arr2 = arr.Slice(2)
-? FormatJSON(arr2)
+print FormatJSON(arr2)
 ' => ["cow","dog","elk"]
 
 ' get the 2nd (index 1) through 3rd (index 2) elements
 arr2 = arr.Slice(1, 3)
-? FormatJSON(arr2)
+print FormatJSON(arr2)
 ' => ["bat","cow"]
 
 ' get the last 2 elements
 arr2 = arr.Slice(-2)
-? FormatJSON(arr2)
+print FormatJSON(arr2)
 ' => ["dog","elk"]
 
 ' empty range
 arr2 = arr.Slice(1, 1)
-? FormatJSON(arr2)
+print FormatJSON(arr2)
 ' => []
 ```
 

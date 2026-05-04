@@ -121,48 +121,44 @@ these steps:
 
        else if cmd = "seek"
            duration = evt.duration.toInt()
-           if evt.direction = "backward" then
-               duration = -duration
-               seekPosition = m.videoplayer.position + duration
-               if seekPosition > m.videoplayer.duration then
-                   ret.status = "success.seek-end"
-                   seekPosition = m.videoplayer.duration - 30
-               else if seekPosition < 0
-                   then ret.status = "success.seek-start"
-                   seekPosition = 0
-               end if
-           m.seekPosition = seekPosition playVideoFrom()
-           ret.status = "success"
+           if evt.direction = "backward" then duration = -duration
+           seekPosition = m.videoplayer.position + duration
+           if seekPosition > m.videoplayer.duration then
+               ret.status = "success.seek-end"
+               seekPosition = m.videoplayer.duration - 30
+           else if seekPosition < 0 then
+               ret.status = "success.seek-start"
+               seekPosition = 0
+           else
+               ret.status = "success"
+           end if
+           m.seekPosition = seekPosition
+           playVideoFrom()
 
        else if cmd = "next"
-           'skip to next content item in playlist'
+           'skip to next content item in playlist
            ret.status = "success"
-       end if
 
        else if cmd = "nowplaying"
-           'handle nowplaying command
+           'handle "nowplaying" command
            appmgr = CreateObject("roAppManager")
            appmgr.SetNowPlayingContentMetaData({
                title: "<title>",
                contentType: "<contentType>"
            })
            ret.status = "success"
-       end if
 
        else if cmd = "loop"
            'handle "loop" command
-            ret.status = "success"
-       end if
+           ret.status = "success"
 
        else if cmd = "shuffle"
            'handle "shuffle" command
            ret.status = "success"
-       end if
 
        else if cmd = "skip"
-           'handle "skip intro" command OR handle same as "next" if channel have no into/recap to skip
+           'handle "skip intro"/"skip recap" command, or fall through to "next" behavior if there is nothing to skip
            ret.status = "success"
-       end if
 
        else if cmd = "like"
            'handle "like" command
@@ -226,17 +222,17 @@ The following table summarizes which apps need to implement handling for enhance
 
 You can test voice controls in an app by sending [External Control Protocol (ECP)](doc:external-control-api) commands via cURL to your Roku device. Specifically, send an HTTP POST request to port 8060 on your Roku device using the following syntax:
 
-```
+```bash
 curl -d '' 'http://<roku-device-ip-address>:8060/input/<channelId>?id=<longInteger>&type=transport&command=<commandValue>
 ```
 
 The following examples show how to send ECP commands via cURL HTTP POST requests. The examples are based on a sideloaded app handling forward and seek commands.
 
-```
+```bash
 curl -d '' ' http://192.168.1.114:8060/input/dev?id=5&type=transport&command=forward
 ```
 
-```
+```bash
 curl -d '' 'http://192.168.1.114:8060/input/dev?id=8&type=transport&command=seek&direction=backward&duration=10
 ```
 

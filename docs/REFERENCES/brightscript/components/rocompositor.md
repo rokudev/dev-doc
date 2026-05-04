@@ -18,9 +18,10 @@ This object can create and manage roSprites in a z-ordered list. The sprites can
 
 **Example: Scrolling a bitmap**
 
-~~~
+```
 Library "v30/bslCore.brs"
-Function main()
+
+function main()
         black=&hFF'RGBA
         screen=CreateObject("roScreen")
         compositor=CreateObject("roCompositor")
@@ -32,40 +33,41 @@ Function main()
         wait(0, http.GetPort())
         bigbm=CreateObject("roBitmap","tmp:/VeryBigPng.png")
         region=CreateObject("roRegion", bigbm, 0, 0, 1280, 720)
-        region.SetWrap(True)
-         
+        region.SetWrap(true)
+
         view_sprite=compositor.NewSprite(0, 0, region)
         compositor.draw()
         screen.SwapBuffers()
         msgport = CreateObject("roMessagePort")
         screen.SetMessagePort(msgport)
         codes = bslUniversalControlEventCodes()
-        While True
+        while true
                 msg=wait(0, msgport) ' wait for a button
                 print "Msg: "; type(msg); " event: "; msg.GetInt()
-                If type(msg)="roUniversalControlEvent" Then
-                        If msg.GetInt()=codes.BUTTON_UP_PRESSED Then
+                if type(msg)="roUniversalControlEvent" then
+                        if msg.GetInt()=codes.BUTTON_UP_PRESSED then
                                 Zip(screen, view_sprite, compositor, 0,-4) 'up
-                        Else If msg.GetInt()=codes.BUTTON_DOWN_PRESSED Then
+                        else if msg.GetInt()=codes.BUTTON_DOWN_PRESSED then
                                 Zip(screen, view_sprite, compositor, 0,+4) ' down
-                        Else If msg.GetInt()=codes.BUTTON_RIGHT_PRESSED Then
+                        else if msg.GetInt()=codes.BUTTON_RIGHT_PRESSED then
                                 Zip(screen, view_sprite, compositor, +4,0) ' right
-                        Else If msg.GetInt()=codes.BUTTON_LEFT_PRESSED Then
+                        else if msg.GetInt()=codes.BUTTON_LEFT_PRESSED then
                                 Zip(screen, view_sprite, compositor, -4, 0) ' left
-                        Else If msg.GetInt() = codes.BUTTON_BACK_PRESSED ' back button
-                                Exit While
-                        End If
-                End If
-        End While
-End Function
-Function Zip(screen, view_sprite, compositor, xd, yd)
-        For x=1 To 60
+                        else if msg.GetInt() = codes.BUTTON_BACK_PRESSED ' back button
+                                exit while
+                        end if
+                end if
+        end while
+end function
+
+function Zip(screen, view_sprite, compositor, xd, yd)
+        for x=1 To 60
                 view_sprite.OffsetRegion(xd, yd, 0, 0)
                 compositor.draw()
                 screen.SwapBuffers()
-        End For
-End Function
-~~~
+        end for
+end function
+```
 
 
 ## Supported interfaces

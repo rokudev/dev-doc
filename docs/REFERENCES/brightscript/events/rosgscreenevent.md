@@ -24,7 +24,7 @@ Apps respond to this event by exiting the main BrightScript thread to exit the a
 
 #### Example: Handling the isScreenClosed event to terminate an app in source/main.brs
 
-~~~~
+```
 sub Main()
     showChannelSGScreen()
 end sub
@@ -43,4 +43,4 @@ sub showChannelSGScreen()
         end if
     end while
 end sub
-~~~~
+```

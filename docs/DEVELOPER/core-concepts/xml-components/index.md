@@ -23,7 +23,7 @@ the built-in SceneGraph node types. For example, if a XML component
 named `Gizmo` has been defined, an instance of the component can be
 created by either declaring it in another XML component file:
 
-```
+```xml
 <Gizmo id="MyGizmo" />
 ```
 

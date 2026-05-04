@@ -816,13 +816,13 @@ Tags for merchandising/curation can be delivered via the Keyword node supported 
 
 <u>Example:</u>
 
-```
+```xml
 <md:LocalizedInfo language="en">
-	<md:TitleDisplayUnlimited>Great Title of My Show</md:TitleDisplayUnlimited>
-	<md:Summary190>Short summary of my show.</md:Summary190>
-	<md:Summary400>Longer summary of my show.</md:Summary400>
-	<md:Genre id="genre"/>
-	<md:Keyword>keyword</md:Keyword>
+  <md:TitleDisplayUnlimited>Great Title of My Show</md:TitleDisplayUnlimited>
+  <md:Summary190>Short summary of my show.</md:Summary190>
+  <md:Summary400>Longer summary of my show.</md:Summary400>
+  <md:Genre id="genre"/>
+  <md:Keyword>keyword</md:Keyword>
 </md:LocalizedInfo>
 ```
 
@@ -832,10 +832,10 @@ Gracenote TMS IDs can be delivered via the MovieLabs MEC XML as an Identifier wi
 
 <u>Example:</u>
 
-```
+```xml
 <md:AltIdentifier>
-	<md:Namespace>TMSID</md:Namespace>
-	<md:Identifier>EP012345678910</md:Identifier>
+  <md:Namespace>TMSID</md:Namespace>
+  <md:Identifier>EP012345678910</md:Identifier>
 </md:AltIdentifier>
 ```
 
@@ -845,62 +845,62 @@ Ad break, intro credit, and end credit cue points can be supplied in the MovieLa
 
 <u>Example:</u>
 
-```
-      <manifest:Markers>
+```xml
+<manifest:Markers>
 
-      <!--Opening credit cuepoint start and end-->
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">155.071</manifest:Timecode>
-          <manifest:DisplayLabel>FIRST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
-          <manifest:Label>FFEI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">200.867</manifest:Timecode>
-          <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
-          <manifest:Label>LFEI</manifest:Label>
-        </manifest:Marker>
+  <!--Opening credit cuepoint start and end-->
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">155.071</manifest:Timecode>
+    <manifest:DisplayLabel>FIRST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
+    <manifest:Label>FFEI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">200.867</manifest:Timecode>
+    <manifest:DisplayLabel>LAST_FRAME_EPISODE_INTRO</manifest:DisplayLabel>
+    <manifest:Label>LFEI</manifest:Label>
+  </manifest:Marker>
 
-        <!--End credit cuepoint start and end-->
+  <!--End credit cuepoint start and end-->
 
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
-          <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
-          <manifest:Label>FFUN</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">3812.517</manifest:Timecode>
-          <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
-          <manifest:Label>LFUN</manifest:Label>
-        </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">3669.207</manifest:Timecode>
+    <manifest:DisplayLabel>FIRST_FRAME_UP_NEXT</manifest:DisplayLabel>
+    <manifest:Label>FFUN</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">3812.517</manifest:Timecode>
+    <manifest:DisplayLabel>LAST_FRAME_UP_NEXT</manifest:DisplayLabel>
+    <manifest:Label>LFUN</manifest:Label>
+  </manifest:Marker>
 
-        <!--Ad Break cuepoints (Roku only needs a start point. Our player will effectively pause video playback at this point, play the ad pod, and resume from this same point)-->
+  <!--Ad Break cuepoints (Roku only needs a start point. Our player will effectively pause video playback at this point, play the ad pod, and resume from this same point)-->
 
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">737.111</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">1361.276</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">1948.821</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">2841.421</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-        <manifest:Marker>
-          <manifest:Timecode format="seconds">3270.100</manifest:Timecode>
-          <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
-          <manifest:Label>FPCI</manifest:Label>
-        </manifest:Marker>
-      </manifest:Markers>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">737.111</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">1361.276</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">1948.821</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">2841.421</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+  <manifest:Marker>
+    <manifest:Timecode format="seconds">3270.100</manifest:Timecode>
+    <manifest:DisplayLabel>FIXED_POINT_CANDIDATE_INSERTION</manifest:DisplayLabel>
+    <manifest:Label>FPCI</manifest:Label>
+  </manifest:Marker>
+</manifest:Markers>
 ```
 
 ### MovieLabs schema validation
@@ -916,7 +916,7 @@ Roku is using Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html)
 
 **Example usage**
 
-```
+```bash
 ./validate ~/dev/movielabsSpec/schema/mdmec-v2.9.xsd /path/to/file/directory/MEC_SAMPLE_123456789.xml
 ```
 

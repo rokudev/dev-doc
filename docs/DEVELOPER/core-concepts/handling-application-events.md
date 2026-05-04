@@ -103,7 +103,7 @@ init(): v2
 
 The `rsg_version` entry in your the manifest file defaults to 1.2. To check and test different SceneGraph versions without refactoring your app, see the guide on [Debugging](doc:debugging)
 
-> Support for the [“rsg_version=1.0"](doc:channel-manifest) manifest flag is deprecated as of Roku OS 8. This deprecation means that the 1.0 features continue to work in Roku OS 8, but will no longer be supported (and thus should not be expected to work) starting with the next major firmware release. All apps must adopt the [current observer callback](doc:handling-application-events) model in successive firmware updates.
+> Support for the [“rsg_version=1.0"](doc:channel-manifest) manifest flag is deprecated as of [Roku OS 8](doc:release-notes#roku-os-8). This deprecation means that the 1.0 features continue to work in [Roku OS 8](doc:release-notes#roku-os-8), but will no longer be supported (and thus should not be expected to work) starting with the next major firmware release. All apps must adopt the [current observer callback](doc:handling-application-events) model in successive firmware updates.
 
 ### Event handling
 
@@ -139,7 +139,7 @@ The `onKeyEvent()` function takes two parameters, `key` and `press`. The `press`
 
 The `onKeyEvent()` function must return true if the component handled the event, or false if it did not handle the event. Returning false allows the event to continue bubbling up the focus chain (see [Remote control events](doc:remote-control-events)) so that ancestors of the component can handle the event.
 
-Starting from Roku OS 8, the behavior of the Roku system overlay is such that the system overlay now slides in whenever the * button is pressed, the Video node is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the system overlay does not slide in and the OnKeyEvent() handler is fired.
+Starting from [Roku OS 8](doc:release-notes#roku-os-8), the behavior of the Roku system overlay is such that the system overlay now slides in whenever the * button is pressed, the Video node is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the system overlay does not slide in and the OnKeyEvent() handler is fired.
 
 There are one or more keys on any Roku remote control which are not handled by the `onKeyEvent()` function (or any Roku application event handler), such as the **Home** key. Presses of these keys are handled by the global Roku firmware event handler in a default manner that cannot be modified by application code. Also note that several node classes handle certain remote control key events automatically, so `onKeyEvent()` is not required to handle those events, and should not be used for those events in those nodes. As an example of node classes that automatically handle certain remote control key events, grid node classes such as [PosterGrid](doc:postergrid) automatically handle **Up**, **Down**, **Right**, and **Left** key presses when the poster grid has focus. Typically, you should use the [ifSGNodeField](doc:ifsgnodefield) `observeField()` method to handle changes in the subject node fields caused by automatic key event handling of the node.
 
@@ -241,7 +241,7 @@ Setting the value of a field triggers any field observer functions that may be a
 
 For example, if the width field of a Rectangle that contains a Label is set, an observer of that width field might set the width field of the Label. The width field of the Label might have an observer function that sets the Label’s wrap field. The chain of field settings and observer callback functions that result from setting a field (in this case, the Rectangle’s width field) is an event cascade.
 
-With the release of Roku OS 7.5, nested observer callbacks are no longer deferred. Observer callbacks now happen recursively. See the [Queued Callback Model](doc:handling-application-events) section above for details.
+With the release of [Roku OS 7.5](doc:release-notes#roku-os-7-5), nested observer callbacks are no longer deferred. Observer callbacks now happen recursively. See the [Queued Callback Model](doc:handling-application-events) section above for details.
 
 ## Handling component \<interface\> field value changes
 

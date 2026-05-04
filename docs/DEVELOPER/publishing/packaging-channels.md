@@ -114,9 +114,9 @@ First-time users: You must first enable its **Packager** utility option using th
 
 3. **Compress the sideloaded app using Cramfs or Squashfs.** Compression is optional.
 
-   * Cramfs is a file system format that loads faster than zip. Use cramfs for Roku OS versions 7.7 and lower. ?
+   * Cramfs is a file system format that loads faster than zip. Use cramfs for [Roku OS versions 7.7](doc:release-notes#roku-os-77) and lower. ?
 
-   * Squashfs is a file format that saves flash storage space and it decompresses faster. Note that squashfs works only for Roku OS 8.0 and above. **Make sure you set a minFirmware dependency of v8.0 or higher when uploading a squashfs pkg to the Streaming Store.**
+   * Squashfs is a file format that saves flash storage space and it decompresses faster. Note that squashfs works only for [Roku OS 8.0](doc:release-notes#roku-os-8) and above. **Make sure you set a minFirmware dependency of v8.0 or higher when uploading a squashfs pkg to the Streaming Store.**
 
    ![roku815px - packagingchannels8-roku815px](https://image.roku.com/ZHZscHItMTc2/packaging-channels-v8.png "packagingchannels8")
 

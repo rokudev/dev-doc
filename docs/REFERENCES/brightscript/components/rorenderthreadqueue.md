@@ -12,7 +12,7 @@ next:
 ---
 
 
-*Available since Roku OS 15.0*
+*Available since [Roku OS 15.0](doc:release-notes#roku-os-150)*
 
 
 The **roRenderThreadQueue** node queues messages to be consumed by handlers on the render thread. This enables asynchronous communication between Task nodes and the render thread. Messages passed using this mechanism will not block the render thread like a rendezvous.

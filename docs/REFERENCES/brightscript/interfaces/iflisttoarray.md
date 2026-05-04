@@ -24,7 +24,7 @@ next:
 
 ### ToArray() As Object
 
-> This function is available in Roku OS 8.0 or later
+> This function is available in [Roku OS 8.0](doc:release-notes#roku-os-8) or later
 
 #### Description
 

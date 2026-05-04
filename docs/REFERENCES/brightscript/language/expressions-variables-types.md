@@ -56,7 +56,7 @@ The following types are supported in BrightScript:
 * **Boolean** – Either true or false.
 * **Integer** – A 32-bit signed integer number.
 * **LongInteger** – A 64-bit signed integer number. **This is
-  available in Roku OS 7.0 or above.**
+  available in [Roku OS 7.0](doc:release-notes#roku-os-7-0) or above.**
 * **Float** – A 32-bit IEEE floating point number.
 * **Double** – A 64-bit IEEE floating point number. (Although Double
   is an intrinsically understood type, it is implemented internally
@@ -285,7 +285,7 @@ all different variables.
 | %         | Integer     | A%, SUM%, 125%      |                                              |
 | !         | Float       | A!, value!, 125!    | Single-precision                             |
 | #         | Double      | A#, distance#, 125# | Double-precision                             |
-| &         | LongInteger | A&, ID&             | _This is available in Roku OS 7.0 or later._ |
+| &         | LongInteger | A&, ID&             | _This is available in [Roku OS 7.0](doc:release-notes#roku-os-7-0) or later._ |
 
 ## Type conversion (promotion)
 
@@ -602,7 +602,7 @@ are not automatically set to roArray.
 
 Developers can use optional chaining operators, "?.", "?@", "?[", and "?(", in their BrightScript code to access possibly invalid values. This enables developers to execute more concise, higher-performing code. The optional chaining operators are used to read the value of a property nested within a chain of connected objects without having to first check whether each reference in the chain does not return the BrightScript value of "invalid". If the expression to the left of the chaining operator is invalid, the operator to the right of the chaining operator is skipped.
 
-> The optional chaining operators feature is not supported on devices running firmware earlier than Roku OS 11.0 (doing so generates syntax errors). If the app does use the optional chaining operators feature, specify Roku OS 11.0 (or later) as the minimum version when [uploading your package file](doc:channel-publishing-guide) in order to publish to the Streaming Store.
+> The optional chaining operators feature is not supported on devices running firmware earlier than [Roku OS 11.0](doc:release-notes#roku-os-110) (doing so generates syntax errors). If the app does use the optional chaining operators feature, specify [Roku OS 11.0](doc:release-notes#roku-os-110) (or later) as the minimum version when [uploading your package file](doc:channel-publishing-guide) in order to publish to the Streaming Store.
 
 #### Example
 
@@ -761,7 +761,7 @@ x--
 ' x = 1
 ```
 
-**These operators are available in Roku OS 7.1 and above.**
+**These operators are available in [Roku OS 7.1](doc:release-notes#roku-os-7-1) and above.**
 
 ### Mathematical and bitshift assignment operators
 
@@ -810,7 +810,7 @@ x>>=4
 ' x = 15
 ```
 
-**These operators are available in Roku OS 7.1 and above.**
+**These operators are available in [Roku OS 7.1](doc:release-notes#roku-os-7-1) and above.**
 
 ### Integer bitshift operators
 

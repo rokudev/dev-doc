@@ -13,7 +13,7 @@ next:
 
 ## ifRenderThreadQueue
 
-*Available since Roku OS 15.0*
+*Available since [Roku OS 15.0](doc:release-notes#roku-os-150)*
 
 ## Implemented by
 

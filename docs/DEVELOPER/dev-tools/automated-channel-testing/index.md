@@ -18,7 +18,7 @@ All test cases can be run simultaneously on multiple Roku devices. This is usefu
 
 Implementing automated testing speeds up app development by reducing the number of manual UI tests that need to be run for simple to complex test cases.
 
-> Roku's test automation tools require Roku OS 9.1 or higher.
+> Roku's test automation tools require [Roku OS 9.1](doc:release-notes#roku-os-91) or higher.
 
 > To test production apps with the Roku test automation tools, you must [package the app](doc:packaging-channels) on your Roku device using the same Roku developer account linked to the production version of the app.
 

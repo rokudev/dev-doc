@@ -259,7 +259,7 @@ A memory operation is a stream of bytes.
 
 ### CPU measurement entry
 
-A CPU measurement entry is a stream of bytes. The custom tool should treat CPU entries as incremental values, and it should sum all CPU entries for a given call path (for devices Roku OS 9.0 or lower, only one CPU entry is generated for each unique call path).
+A CPU measurement entry is a stream of bytes. The custom tool should treat CPU entries as incremental values, and it should sum all CPU entries for a given call path (for devices [Roku OS 9.0](doc:release-notes#roku-os-9) or lower, only one CPU entry is generated for each unique call path).
 
 
 <table>
@@ -286,7 +286,7 @@ A CPU measurement entry is a stream of bytes. The custom tool should treat CPU e
 
 ### Path call count entry
 
-A count of calls made into a specific call path. The custom tool should treat each call count entry as an incremental value. One or more call count entries may appear for each unique call path  (for devices Roku OS 9.0 or lower, only one call count entry is generated for each unique call path).
+A count of calls made into a specific call path. The custom tool should treat each call count entry as an incremental value. One or more call count entries may appear for each unique call path  (for devices [Roku OS 9.0](doc:release-notes#roku-os-9) or lower, only one call count entry is generated for each unique call path).
 
 
 <table>

@@ -35,7 +35,7 @@ The support for DASH-IF in Roku OS is based on ["Guidelines for Implementation: 
 
 ### UTCTiming
 
-As of Roku OS 10.0, the Roku OS supports the use of **UTCTiming** elements in DASH MPDs (manifests), as described in Section 4.7.2 of ["Guidelines for Implementation: DASH-IF Interoperability Points" (Version 4.3: November, 2018](https://dashif.org/docs/DASH-IF-IOP-v4.3.pdf). A **UTCTiming** element declares a mechanism that the player can use to keep its clock in synchronization with that of the streaming server. Here is an example:
+As of [Roku OS 10.0](doc:release-notes#roku-os-100), the Roku OS supports the use of **UTCTiming** elements in DASH MPDs (manifests), as described in Section 4.7.2 of ["Guidelines for Implementation: DASH-IF Interoperability Points" (Version 4.3: November, 2018](https://dashif.org/docs/DASH-IF-IOP-v4.3.pdf). A **UTCTiming** element declares a mechanism that the player can use to keep its clock in synchronization with that of the streaming server. Here is an example:
 
 ```xml
 <UTCTiming schemeIDUri=" urn:mpeg:dash:utc:ntp:2014" value="time.nist.gov"/>
@@ -45,11 +45,11 @@ The `schemeIDUri` parameter indicates the mechanism selected (one of several ava
 
 ### Initialization segment format for multi-period server-stitched manifests
 
-As of Roku OS 10.5, the Roku OS supports the use of the initialization segment format for server-stitched DASH manifests formatted with multi-periods.
+As of [Roku OS 10.5](doc:release-notes#roku-os-105), the Roku OS supports the use of the initialization segment format for server-stitched DASH manifests formatted with multi-periods.
 
 ### SegmentTimeline
 
-As of Roku OS 10.5, the Roku OS supports the use of the SegmentTimeline to precisely identify segment availability. This supports the in-progress playback of content while it is being recorded.
+As of [Roku OS 10.5](doc:release-notes#roku-os-105), the Roku OS supports the use of the SegmentTimeline to precisely identify segment availability. This supports the in-progress playback of content while it is being recorded.
 
 Specifically, the Roku OS DASH implementation now supports:
 

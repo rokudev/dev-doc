@@ -16,7 +16,7 @@ The Video node class provides a controlled play of live or VOD video.
 
 The Video node includes a wide variety of internal nodes to support trick play, playback buffering indicators, and so forth. Playback buffering indicators, to indicate buffering before initial playback as well as re-buffering, use an internal instance of a ProgressBar node. For trick play, an internal instance of a TrickPlayBar node is provided. For display of BIF images for DVD-like chapter selection, an internal instance of a BIFDisplay node is provided.
 
-Starting from Roku OS 8, the behavior of the Roku system overlay is such that the system overlay now slides in whenever the * button is pressed, the Video node is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the system overlay does not slide in and the OnKeyEvent() handler is fired.
+Starting from [Roku OS 8](doc:release-notes#roku-os-8), the behavior of the Roku system overlay is such that the system overlay now slides in whenever the * button is pressed, the Video node is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the system overlay does not slide in and the OnKeyEvent() handler is fired.
 
 ## Fields
 
@@ -101,7 +101,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
     </tr>
 
     <tr>
-      <td>asyncStopSemantics<br /><br /><em>Available since Roku OS 12.5</em></td>
+      <td>asyncStopSemantics<br /><br /><em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em></td>
       <td>boolean</td>
       <td>false</td>
       <td>WRITE</td>
@@ -113,7 +113,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>value string</td>
       <td>none</td>
       <td>READ\_ONLY</td>
-      <td>Describes the current video play state, such as if the video play has been paused.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>none</td><td>No current play state</td></tr><tr><td>buffering</td><td>Video stream is currently buffering</td></tr><tr><td>playing</td><td>Video is currently playing</td></tr><tr><td>paused</td><td>Video is currently paused</td></tr><tr><td>stopping<br /><br /><em>Available since Roku OS 12.5</em></td><td>Video is in the process of being stopped. This value is only returned if the <code>asyncStopSemantics</code> field is enabled.</td></tr><tr><td>stopped</td><td>Video is currently stopped</td></tr><tr><td>finished</td><td>Video has successfully completed playback</td></tr><tr><td>error</td><td>An error has occurred in the video play. The error code, message, and diagnostics can be found in the <code>errorCode</code>, <code>errorMsg</code>, and <code>errorStr</code> fields respectively.</td></tr></tbody></table></td>
+      <td>Describes the current video play state, such as if the video play has been paused.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>none</td><td>No current play state</td></tr><tr><td>buffering</td><td>Video stream is currently buffering</td></tr><tr><td>playing</td><td>Video is currently playing</td></tr><tr><td>paused</td><td>Video is currently paused</td></tr><tr><td>stopping<br /><br /><em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em></td><td>Video is in the process of being stopped. This value is only returned if the <code>asyncStopSemantics</code> field is enabled.</td></tr><tr><td>stopped</td><td>Video is currently stopped</td></tr><tr><td>finished</td><td>Video has successfully completed playback</td></tr><tr><td>error</td><td>An error has occurred in the video play. The error code, message, and diagnostics can be found in the <code>errorCode</code>, <code>errorMsg</code>, and <code>errorStr</code> fields respectively.</td></tr></tbody></table></td>
     </tr>
 
     <tr>
@@ -240,7 +240,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
     </tr>
 
     <tr>
-      <td>subtitleSelectionPreferences<br /><br />(<em>Available since Roku OS 12.5</em>)</td>
+      <td>subtitleSelectionPreferences<br /><br />(<em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em>)</td>
       <td>oAssociativeArray</td>
       <td>\{ }</td>
       <td>WRITE\_ONLY</td>
@@ -248,7 +248,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
     </tr>
 
     <tr>
-      <td>audioSelectionPreferences<br /><br />(<em>Available since Roku OS 12.5</em>)</td>
+      <td>audioSelectionPreferences<br /><br />(<em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em>)</td>
       <td>roAssociativeArray</td>
       <td>\{ }</td>
       <td>WRITE\_ONLY</td>
@@ -292,7 +292,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>time</td>
       <td>invalid</td>
       <td>READ\_ONLY</td>
-      <td>Time of the current position in the stream. Either UTC time or elapsed since start of stream depending on content type. <br /><br />As of Roku OS 9.3, when the video is paused, the position is recorded for that pause event. This means that playing, pausing, and resuming a video generates three separate positions.</td>
+      <td>Time of the current position in the stream. Either UTC time or elapsed since start of stream depending on content type. <br /><br />As of [Roku OS 9.3](doc:release-notes#roku-os-93), when the video is paused, the position is recorded for that pause event. This means that playing, pausing, and resuming a video generates three separate positions.</td>
     </tr>
 
     <tr>
@@ -486,7 +486,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>roAssociativeArray</td>
       <td>\[]</td>
       <td>READ\_WRITE</td>
-      <td>Contains the information about HLS and DASH standard thumbnail tiles as they are discovered within the manifest for streams which contain them.<br /><br />This field was first introduced (for VOD only) starting in Roku OS 9.1. Starting with Roku OS 11.0, the app can enable this field for HLS and DASH live streams containing standard thumbnails by setting enableThumbnailTilesDuringLive to true.<br /><br /><blockquote><p>For Roku OS releases before 9.4, the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: tile\_set}(string to associative array)</p><p>For Roku OS 9.4 and later,  the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: \[tile\_set, tile\_set, tile\_set,...]}(string to array of associative arrays). This format allows discontinuous tile\_sets of the same resolution to be grouped together as a "choice" for display.</p></blockquote><br /><br />The <strong>tile\_id</strong> field is a unique string identifier for the <strong>tile\_set</strong>, which is an associative array containing the attributes of the tile set as well as information about the thumbnails.<br /><br />The <strong>tile\_set</strong> field contains the following fields:<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>htiles</td><td>integer</td><td>0</td><td>Horizontal number of thumbnails in a tile (columns.)</td></tr><tr><td>vtiles</td><td>integer</td><td>0</td><td>Vertical number of thumbnails in a tile (rows.)</td></tr><tr><td>width</td><td>integer</td><td>0</td><td>Number of horizontal pixels in a thumbnail (this is not the tile as the one in the DASH spec).</td></tr><tr><td>height</td><td>integer</td><td>0</td><td>Number of vertical pixels in a thumbnail (this is not the same tile as the one in the DASH spec).</td></tr><tr><td>bandwidth</td><td>integer</td><td>0</td><td>Max tile size in bits / duration.</td></tr><tr><td>duration</td><td>float</td><td>0.0</td><td>Duration of one tile in seconds (assuming a full tile).</td></tr><tr><td>initial\_time<br /></td><td>float</td><td>0.0</td><td>Presentation start time of current <strong>tile\_set</strong> in seconds. Thumbnails in tiles beginning before this time should be skipped, and the first relevant thumbnail duration should be updated accordingly.</td></tr><tr><td>final\_time</td><td>float</td><td>0.0</td><td>End time of current tile\_set in seconds.</td></tr><tr><td>tiles</td><td>roArray</td><td>\[]</td><td>Contains information about each tile in the <strong>tile\_set</strong>. This contains the following fields: <br />$\{tiles-list}</td></tr></tbody></table></td>
+      <td>Contains the information about HLS and DASH standard thumbnail tiles as they are discovered within the manifest for streams which contain them.<br /><br />This field was first introduced (for VOD only) starting in [Roku OS 9.1](doc:release-notes#roku-os-91). Starting with [Roku OS 11.0](doc:release-notes#roku-os-110), the app can enable this field for HLS and DASH live streams containing standard thumbnails by setting enableThumbnailTilesDuringLive to true.<br /><br /><blockquote><p>For Roku OS releases before 9.4, the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: tile\_set}(string to associative array)</p><p>For [Roku OS 9.4](doc:release-notes#roku-os-94) and later,  the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: \[tile\_set, tile\_set, tile\_set,...]}(string to array of associative arrays). This format allows discontinuous tile\_sets of the same resolution to be grouped together as a "choice" for display.</p></blockquote><br /><br />The <strong>tile\_id</strong> field is a unique string identifier for the <strong>tile\_set</strong>, which is an associative array containing the attributes of the tile set as well as information about the thumbnails.<br /><br />The <strong>tile\_set</strong> field contains the following fields:<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>htiles</td><td>integer</td><td>0</td><td>Horizontal number of thumbnails in a tile (columns.)</td></tr><tr><td>vtiles</td><td>integer</td><td>0</td><td>Vertical number of thumbnails in a tile (rows.)</td></tr><tr><td>width</td><td>integer</td><td>0</td><td>Number of horizontal pixels in a thumbnail (this is not the tile as the one in the DASH spec).</td></tr><tr><td>height</td><td>integer</td><td>0</td><td>Number of vertical pixels in a thumbnail (this is not the same tile as the one in the DASH spec).</td></tr><tr><td>bandwidth</td><td>integer</td><td>0</td><td>Max tile size in bits / duration.</td></tr><tr><td>duration</td><td>float</td><td>0.0</td><td>Duration of one tile in seconds (assuming a full tile).</td></tr><tr><td>initial\_time<br /></td><td>float</td><td>0.0</td><td>Presentation start time of current <strong>tile\_set</strong> in seconds. Thumbnails in tiles beginning before this time should be skipped, and the first relevant thumbnail duration should be updated accordingly.</td></tr><tr><td>final\_time</td><td>float</td><td>0.0</td><td>End time of current tile\_set in seconds.</td></tr><tr><td>tiles</td><td>roArray</td><td>\[]</td><td>Contains information about each tile in the <strong>tile\_set</strong>. This contains the following fields: <br />$\{tiles-list}</td></tr></tbody></table></td>
     </tr>
 
     <tr>
@@ -746,7 +746,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>array of associative arrays</td>
       <td>\[ ] empty array</td>
       <td>READ\_ONLY</td>
-      <td>The list of subtitle tracks available in the video stream. The array is initially populated with the tracks specified in the Content Meta-Data, and additional tracks are added if they are detected by the digital video player. Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Description</td><td>string</td><td>Descriptive name of the subtitle track</td></tr><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>TrackName</td><td>string</td><td>The track identifier. The value of this field may be used to select the subtitle track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-music-and-sound."</td></tr><tr><td>HasAccessibilityCaption<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>HLS: represents "public.accessibility.transcribes-spoken-dialog." <br /><br />DASH: Subtitle track contains captions</td></tr><tr><td>HasAccessibilitySign<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>DASH: Subtitle track contains a sign-language interpretation of an audio component info.</td></tr></tbody></table></td>
+      <td>The list of subtitle tracks available in the video stream. The array is initially populated with the tracks specified in the Content Meta-Data, and additional tracks are added if they are detected by the digital video player. Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Description</td><td>string</td><td>Descriptive name of the subtitle track</td></tr><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>TrackName</td><td>string</td><td>The track identifier. The value of this field may be used to select the subtitle track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-music-and-sound."</td></tr><tr><td>HasAccessibilityCaption<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>HLS: represents "public.accessibility.transcribes-spoken-dialog." <br /><br />DASH: Subtitle track contains captions</td></tr><tr><td>HasAccessibilitySign<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>DASH: Subtitle track contains a sign-language interpretation of an audio component info.</td></tr></tbody></table></td>
     </tr>
 
     <tr>
@@ -806,11 +806,11 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>array of associative arrays</td>
       <td>\[ ] empty array</td>
       <td>READ\_ONLY</td>
-      <td>Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>Name</td><td>string</td><td>Descriptive name of the audio track</td></tr><tr><td>Track</td><td>string</td><td>The track identifier. The value of this field may be used to select the audio track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-video." <br /><br />DASH: Audio track contains a textual description (intended for audio synthesis) or an audio description describing a visual component.</td></tr><tr><td>HasAccessibilityEAI<br /><br /><em>Available since Roku OS 13.0</em></td><td>boolean</td><td>DASH: Audio track contains an element for improved intelligibility of the dialogue \[Enhanced Audio Intelligibility].</td></tr></tbody></table><br /><br />The field also retrieves audio description tracks which are typically seen on broadcast TV. An audio description track is mixed with the main audio track.</td>
+      <td>Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>Name</td><td>string</td><td>Descriptive name of the audio track</td></tr><tr><td>Track</td><td>string</td><td>The track identifier. The value of this field may be used to select the audio track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-video." <br /><br />DASH: Audio track contains a textual description (intended for audio synthesis) or an audio description describing a visual component.</td></tr><tr><td>HasAccessibilityEAI<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>DASH: Audio track contains an element for improved intelligibility of the dialogue \[Enhanced Audio Intelligibility].</td></tr></tbody></table><br /><br />The field also retrieves audio description tracks which are typically seen on broadcast TV. An audio description track is mixed with the main audio track.</td>
     </tr>
 
     <tr>
-      <td>seamlessAudioTrackSelection<br /><br /><em>Available since Roku OS 13.0</em></td>
+      <td>seamlessAudioTrackSelection<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_WRITE</td>
@@ -824,7 +824,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td />
 
       <td>READ\_ONLY</td>
-      <td>In all other cases they shouldn't .Contains the format of the currently playing audio.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>""</td><td>No stream playing</td></tr><tr><td>none</td><td>Stream contains no playable audio</td></tr><tr><td>unknown</td><td>Stream contains unknown audio</td></tr><tr><td>aac</td><td>ISO/IEC 14496-3, Advanced Audio Coding</td></tr><tr><td>aac\_adif</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td></tr><tr><td>aac\_adts</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td></tr><tr><td>aac\_latm</td><td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td></tr><tr><td>ac3</td><td>Dolby Digital</td></tr><tr><td>ac4</td><td>Dolby Audio - AC-4</td></tr><tr><td>alac</td><td>Apple Lossless</td></tr><tr><td>dts</td><td>DTS Coherent Acoustics</td></tr><tr><td>eac3</td><td>Dolby Digital Plus</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>mat</td><td>Dolby Audio - TrueHD</td></tr><tr><td>mp3</td><td>ISO/IEC 11172-3, MPEG Audio Layer III</td></tr><tr><td>pcm</td><td>linear PCM</td></tr><tr><td>vorbis</td><td>Ogg Vorbis</td></tr><tr><td>wma</td><td>Microsoft Windows Media Audio (sunset as of Roku OS 12.5)</td></tr><tr><td>wmapro</td><td>Microsoft Windows Media Pro Audio (sunset as of Roku OS 12.5)</td></tr></tbody></table></td>
+      <td>In all other cases they shouldn't .Contains the format of the currently playing audio.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>""</td><td>No stream playing</td></tr><tr><td>none</td><td>Stream contains no playable audio</td></tr><tr><td>unknown</td><td>Stream contains unknown audio</td></tr><tr><td>aac</td><td>ISO/IEC 14496-3, Advanced Audio Coding</td></tr><tr><td>aac\_adif</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td></tr><tr><td>aac\_adts</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td></tr><tr><td>aac\_latm</td><td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td></tr><tr><td>ac3</td><td>Dolby Digital</td></tr><tr><td>ac4</td><td>Dolby Audio - AC-4</td></tr><tr><td>alac</td><td>Apple Lossless</td></tr><tr><td>dts</td><td>DTS Coherent Acoustics</td></tr><tr><td>eac3</td><td>Dolby Digital Plus</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>mat</td><td>Dolby Audio - TrueHD</td></tr><tr><td>mp3</td><td>ISO/IEC 11172-3, MPEG Audio Layer III</td></tr><tr><td>pcm</td><td>linear PCM</td></tr><tr><td>vorbis</td><td>Ogg Vorbis</td></tr><tr><td>wma</td><td>Microsoft Windows Media Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td></tr><tr><td>wmapro</td><td>Microsoft Windows Media Pro Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td></tr></tbody></table></td>
     </tr>
 
     <tr>
@@ -942,7 +942,7 @@ Developers can receive event-based notifications when the CDN is switched during
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_ONLY</td>
-      <td><em>Available since Roku OS 8.</em><br /><br />Determines whether the current content is blocked.</td>
+      <td><em>Available since [Roku OS 8](doc:release-notes#roku-os-8).</em><br /><br />Determines whether the current content is blocked.</td>
     </tr>
   </tbody>
 </table>
@@ -960,7 +960,7 @@ For HTTPS access, note the following Content Meta-Data attributes:
 
 These attributes must be set to handle secure HTTP transfers of video files. Note that this is a different HTTPS mechanism than used for other SceneGraph nodes as described in [roHttpAgent](doc:rohttpagent).
 
-> Prior to Roku OS 7.2, each Audio and Video node created and configured an `HttpAgent` only when the first content was played in a given Audio or Video node instance. This sometimes meant that additional content would fail to play in the same node because headers, cookies, and certificates were not updated or correctly replaced from the new content record. Apps that are dependent upon this behavior will need to be updated to set the required data into the Content Meta-Data for each piece of content, or to programmatically set those values into the `HttpAgent` before playing each piece of content.
+> Prior to [Roku OS 7.2](doc:release-notes#roku-os-7-2), each Audio and Video node created and configured an `HttpAgent` only when the first content was played in a given Audio or Video node instance. This sometimes meant that additional content would fail to play in the same node because headers, cookies, and certificates were not updated or correctly replaced from the new content record. Apps that are dependent upon this behavior will need to be updated to set the required data into the Content Meta-Data for each piece of content, or to programmatically set those values into the `HttpAgent` before playing each piece of content.
 
 ## Example
 

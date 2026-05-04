@@ -352,7 +352,7 @@ cn.update(aa,false)
 
 Replaces the child nodes in the subject node, starting at the position specified by index, with new child nodes specified by child_nodes
 
-> Starting from Roku OS 8.1, when using this method to update the content of each item in a markupGrid, if more items are supplied than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children. The [appendChildren()](#appendchildchild-as-rosgnode-as-boolean) function can be used to add the extra items.
+> Starting from [Roku OS 8.1](doc:release-notes#roku-os-81), when using this method to update the content of each item in a markupGrid, if more items are supplied than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children. The [appendChildren()](#appendchildchild-as-rosgnode-as-boolean) function can be used to add the extra items.
 
 #### Parameters
 

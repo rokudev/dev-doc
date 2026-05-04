@@ -12,7 +12,7 @@ next:
 ---
 
 
-> This component is only available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running Roku OS version 7.5 and later.
+> This component is only available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running [Roku OS version 7.5](doc:release-notes#roku-os-7-5) and later.
 
 The roAudioGuide component provides screen reader support for applications that require custom speech beyond what is provided by the automatic screen reader in SDK and Scene Graph components.
 

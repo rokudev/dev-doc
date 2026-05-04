@@ -55,7 +55,7 @@ The `onKeyEvent()` function must return `true` if the XML component handled the 
 
 The behavior of the Roku Options overlay has been modified, such that the Options overlay now slides in whenever the **Options** button is pressed, the [Video node](doc:video) is in focus, and the app does not have its OnKeyEvent() handler fired. When the Video node is not in focus, the Options overlay does not slide in and the OnKeyEvent() handler is fired.
 
-> Starting from Roku OS version 8.1, literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](doc:external-control-api) keydown/keyup commands, now go to the onKeyEvent() handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
+> Starting from [Roku OS version 8.1](doc:release-notes#roku-os-81), literal key keypress events (such as keyboard letters, and so forth) that are sent to  via the mobile app or [ECP](doc:external-control-api) keydown/keyup commands, now go to the onKeyEvent() handler. Previously, only keys that corresponded to remote keys went to the onKeyEvent handler.
 
 Such keys are now sent at "Lit_" followed by the actual keypress ("A," "B," "C," etc.).
 

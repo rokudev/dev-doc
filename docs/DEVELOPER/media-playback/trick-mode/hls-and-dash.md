@@ -631,7 +631,7 @@ content-131.jpg
 
 #### ASSOC-LANGUAGE audio rendition attribute
 
-As of Roku OS 10.0, the HLS **ASSOC-LANGUAGE** audio rendition attribute is supported. This optional attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect, is represented in forced subtitles by a different but associated language.
+As of [Roku OS 10.0](doc:release-notes#roku-os-100), the HLS **ASSOC-LANGUAGE** audio rendition attribute is supported. This optional attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect, is represented in forced subtitles by a different but associated language.
 
 In the following example manifest, Cantonese audio (language=yue) should use Traditional Chinese (LANGUAGE=zh_HANT) forced subtitles. This is indicated by an ASSOC-LANGUAGE=zh_HANT on the audio track.
 

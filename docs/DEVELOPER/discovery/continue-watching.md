@@ -16,7 +16,7 @@ Continue Watching is a content category row within the **What to Watch** home sc
 
 <br />
 
-> The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canada, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
+> The Continue Watching feature is available on all Roku devices running [Roku OS 11.0](doc:release-notes#roku-os-110) or higher in the United States, Canada, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
 > **Certification requirement**:
 >

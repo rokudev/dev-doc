@@ -272,7 +272,7 @@ The following image formats are currently supported. The use of PNG is recommend
 - JPG/JPEG
 - GIF
 - BMP
-- [WebP](https://developers.google.com/speed/webp/) (since Roku OS 9.4)
+- [WebP](https://developers.google.com/speed/webp/) (since [Roku OS 9.4](doc:release-notes#roku-os-94))
 
 ### Special WebP considerations
 
@@ -282,7 +282,7 @@ SceneGraph [Poster nodes](doc:poster) can now accept URIs that provide WebP imag
 
 For image assets delivered from a web server (or CDN), conditionally request WebP instead of JPEG/PNG if Roku OS version is first confirmed to be >= 9.4.
 
-Although it is technically possible to bundle WebP image assets with JPEG/PNG assets containing the same images in the package file, doing so will increase the size of the package; best practice for WebP is to restrict its use to assets fetched from the web, while bundling only JPEG/PNG assets within the package file itself. Also, do not use WebP for any artwork that must be specified directly in the manifest, which will preserve compatibility with legacy hardware that cannot run Roku OS 9.4 or later.
+Although it is technically possible to bundle WebP image assets with JPEG/PNG assets containing the same images in the package file, doing so will increase the size of the package; best practice for WebP is to restrict its use to assets fetched from the web, while bundling only JPEG/PNG assets within the package file itself. Also, do not use WebP for any artwork that must be specified directly in the manifest, which will preserve compatibility with legacy hardware that cannot run [Roku OS 9.4](doc:release-notes#roku-os-94) or later.
 
 ## Encoding guidelines
 

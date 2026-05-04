@@ -15,13 +15,13 @@ next:
 > This feature is only available on the following devices: Roku
 Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku
 Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku
-TV running Roku OS 7.2 and later.
+TV running [Roku OS 7.2](doc:release-notes#roku-os-7-2) and later.
 
 -----
 
 ## Text to speech components
 
-*Components available since Roku OS 7.2*
+*Components available since [Roku OS 7.2](doc:release-notes#roku-os-7-2)*
 
 Text to speech (TTS) allows the developer to provide an audible spoken version of
 the strings shown to the user in the app. For platforms that
@@ -37,7 +37,7 @@ interfaces, and events:
   - [ifTextToSpeech](doc:iftexttospeech)
   - [roTextToSpeechEvent](doc:rotexttospeechevent)
 
-Components available since Roku OS 7.5
+Components available since [Roku OS 7.5](doc:release-notes#roku-os-7-5)
 
   - [roAudioGuide](doc:roaudioguide)
   - [ifAudioGuide](doc:ifaudioguide)

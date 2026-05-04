@@ -210,7 +210,7 @@ integer and floating point numbers, strings, roArray, and
 roAssociativeArray objects). If the string is not syntactically
 correct, **Invalid** will be returned. A few other things to note:
 
-* As of Roku OS 14.6, you can use the `d` option in order to use double-precision floating point values (roDouble) to improve the precision of the parsed numbers. This helps developers handle JSON payloads from server-side ad insertion (SSAI) providers that use floating-point values to represent time values.
+* As of [Roku OS 14.6](doc:release-notes#roku-os-146), you can use the `d` option in order to use double-precision floating point values (roDouble) to improve the precision of the parsed numbers. This helps developers handle JSON payloads from server-side ad insertion (SSAI) providers that use floating-point values to represent time values.
 
 * By default, any roAssociativeArray objects in the returned objects will be
   **case sensitive**.  To return a **case-insensitive** structure, set the `flags` parameter to `"i"`.

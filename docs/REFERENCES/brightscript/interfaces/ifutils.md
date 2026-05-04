@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 ## Implemented by
 
@@ -91,7 +91,7 @@ shared = {}
 
 ### HasComponent(componentName as String) as Boolean
 
-_Available since Roku OS 15.2_
+_Available since [Roku OS 15.2](doc:release-notes#roku-os-152)_
 
 #### Description
 

@@ -134,7 +134,7 @@ Sets the date/time using a string in the ISO 8601 format. For example "YYYY-MM-D
 
 ### asDateStringLoc(format as String) as String
 
-*Available since Roku OS 12.0*
+*Available since [Roku OS 12.0](doc:release-notes#roku-os-120)*
 
 #### Description
 
@@ -191,7 +191,7 @@ A date string corresponding to the specified format:
 
 ### asTimeStringLoc(format as String) as String
 
-*Available since Roku OS 12.0*
+*Available since [Roku OS 12.0](doc:release-notes#roku-os-120)*
 
 #### Description
 
@@ -292,7 +292,7 @@ A date/time string in long-date format (for example, Tuesday October 9, 2012)
 
 ### AsMillisecondsLong() as Long
 
-*Available since Roku OS 15.0*
+*Available since [Roku OS 15.0](doc:release-notes#roku-os-150)*
 
 #### Description
 

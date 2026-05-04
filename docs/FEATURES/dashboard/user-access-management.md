@@ -54,9 +54,9 @@ To add a user to your developer account and assign them roles and permissions, f
 
 ![](https://image.roku.com/ZHZscHItMTc2/mua-invite-user.png)
 
-3. Click **Invite**.
+4. Click **Invite**.
 
-4. If the user already has a Roku developer account, they are immediately granted access to your account with their specified role.
+5. If the user already has a Roku developer account, they are immediately granted access to your account with their specified role.
 
    If the user does not have a Roku developer account, they receive an email notification from Roku informing them that they have been granted access to your account.
 

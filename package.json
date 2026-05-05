@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint:tables": "node .github/scripts/lint-tables.mjs"
+    "lint:docs": "node .github/scripts/docs-lint/index.mjs"
   },
   "devDependencies": {
     "glob": "^11.0.0",

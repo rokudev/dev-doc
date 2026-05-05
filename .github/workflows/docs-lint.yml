@@ -1,4 +1,4 @@
-name: Table lint
+name: Docs lint
 
 on:
   pull_request:
@@ -7,14 +7,14 @@ on:
       - 'reference/**/*.md'
       - 'custom_pages/**/*.md'
       - 'custom_blocks/**/*.md'
-      - '.github/scripts/lint-tables.mjs'
-      - '.github/workflows/lint-tables.yml'
+      - '.github/scripts/docs-lint/**'
+      - '.github/workflows/docs-lint.yml'
       - 'package.json'
       - 'package-lock.json'
 
 jobs:
-  lint-tables:
-    name: Lint markdown tables
+  docs-lint:
+    name: Lint changed docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,12 +39,12 @@ jobs:
           echo "Markdown files in synced paths changed in this PR:"
           cat /tmp/changed.txt || true
 
-      - name: Run table linter
+      - name: Run docs lint
         run: |
           if [ -s /tmp/changed.txt ]; then
             # -d '\n' handles paths with spaces (e.g. "The Roku Channel/...").
             # Annotations are emitted because GITHUB_ACTIONS=true in CI.
-            xargs -d '\n' -r node .github/scripts/lint-tables.mjs < /tmp/changed.txt
+            xargs -d '\n' -r node .github/scripts/docs-lint/index.mjs < /tmp/changed.txt
           else
             echo "No markdown files in synced paths changed; nothing to lint."
           fi

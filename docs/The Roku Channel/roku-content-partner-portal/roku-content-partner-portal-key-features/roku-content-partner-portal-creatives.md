@@ -10,6 +10,10 @@ The creatives section is where you manage a limited set of publisher-level visua
 
 At this stage, creative control is intentionally scoped to a small number of high-impact assets to ensure consistency across the platform.
 
+<Callout icon="🔒" theme="default">
+  Available only to premium subscription partners.
+</Callout>
+
 <br />
 
 <ContentPartnerAvailability />

@@ -1392,6 +1392,8 @@ Define el tipo de cuePoint del cuePoint proporcionado dentro del bloque de cuePo
 | `recap`             | Identifica el cuePoint como un resumen de contenido anterior, típico de los programas de televisión por episodios. En caso de proporcionarse, es obligatorio incluir start_time y end_time       |
 | `end`               | Identifica el cuePoint como los créditos finales de un programa. En caso de proporcionarse, es obligatorio incluir start_time y end_time                                                         |
 
+**Atributo XPath**
+
 | Xpath XML                           | Valores aceptados                             |
 | ----------------------------------- | --------------------------------------------- |
 | `/package/video/cuePoints/cuePoint` | Uno de los valores de la enumeración anterior |

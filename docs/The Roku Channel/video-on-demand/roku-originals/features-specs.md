@@ -608,11 +608,15 @@ MAMA_102_v04_20220919_enUS_PM_Nearfield_2chCH_48k_24b_23976.Lt.wav
 | Optional Tracks                               | OPT, OPTA, OPTB, GRP              |
 | Add’l Detail (Dialogue Guide Track, ADR, etc) | GUIDE, ADR                        |
 
+**Channel types**
+
 | **Channel Type** | **Abbreviation** |
 | ---------------- | ---------------- |
 | Mono             | Mono             |
 | Stereo           | 2CH              |
 | 5.1 Surround     | 6CH              |
+
+**Track assignments**
 
 | **Track Assignment** | **Abbreviation**     |
 | -------------------- | -------------------- |

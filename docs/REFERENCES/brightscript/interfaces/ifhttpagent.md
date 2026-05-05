@@ -168,7 +168,7 @@ Returns any cookies from the cookie cache that match the specified domain and pa
 <td>The path of the cookies to be retrieved.</td>
 </tr>
 <tr>
-<td>secure<br /><br /><em>Available since Roku OS 12.0</em></td>
+<td>secure<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
 <td>Boolean</td>
 <td>Indicates whether the cookie is to be retrieved via HTTPS (true) or HTTP (false).</td>
 </tr>
@@ -210,7 +210,7 @@ Adds the specified cookies to the cookie cache.
 <tr>
 <td>cookies</td>
 <td>Object</td>
-<td>An roArray of roAssociativeArrays, where each associative array represents a cookie to be added. Each associative array must contain the following key-value pairs: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Version</td><td>Integer</td><td>Cookie version number</td></tr><tr><td>Domain</td><td>String</td><td>Domain to which cookie applies</td></tr><tr><td>Path</td><td>String</td><td>Path to which cookie applies</td></tr><tr><td>Name</td><td>String</td><td>Name of the cookie</td></tr><tr><td>Value</td><td>String</td><td>Value of the cookie</td></tr><tr><td>Expires</td><td>roDateTime</td><td>Cookie expiration date, if any</td></tr><tr><td>Secure<br /><br /><em>Available since Roku OS 12.0</em></td><td>Boolean</td><td>Indicates whether the cookie is to be sent over HTTPS (true) or HTTP (false).</td></tr></tbody></table></td>
+<td>An roArray of roAssociativeArrays, where each associative array represents a cookie to be added. Each associative array must contain the following key-value pairs: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Version</td><td>Integer</td><td>Cookie version number</td></tr><tr><td>Domain</td><td>String</td><td>Domain to which cookie applies</td></tr><tr><td>Path</td><td>String</td><td>Path to which cookie applies</td></tr><tr><td>Name</td><td>String</td><td>Name of the cookie</td></tr><tr><td>Value</td><td>String</td><td>Value of the cookie</td></tr><tr><td>Expires</td><td>roDateTime</td><td>Cookie expiration date, if any</td></tr><tr><td>Secure<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td><td>Boolean</td><td>Indicates whether the cookie is to be sent over HTTPS (true) or HTTP (false).</td></tr></tbody></table></td>
 </tr>
 </tbody>
 </table>
@@ -276,46 +276,43 @@ Removes all cookies from the cookie cache.
     * Edit /etc/httpd/conf/httpd.conf
     * Restart Apache
 
-    ```
+    ```bash
     # Install Cert in Apache
     sudo mkdir /etc/httpd/certs
     sudo cp /opt/openssl/testCA/server/certificates/testWEB.CRT /etc/httpd/certs
     sudo cp /opt/openssl/testCA/server/keys/testWEB.KEY /etc/httpd/certs
-    sudo cp sudo cp /opt/openssl/testCA/CA/testCA.CRT /etc/httpd/certs
-    
+    sudo cp /opt/openssl/testCA/CA/testCA.CRT /etc/httpd/certs
+
     # Remove the passwd from the keyfile (to avoid entering it for testWEB every time Apache starts)
-    sudo cp /etc/httpd/certs/testWEB.KEY
-    /etc/httpd/certs/testWEB.KEY.orig
+    sudo cp /etc/httpd/certs/testWEB.KEY /etc/httpd/certs/testWEB.KEY.orig
     sudo openssl rsa -in /etc/httpd/certs/testWEB.KEY.orig -out /etc/httpd/certs/testWEB.KEY
-    
+
     # Editing ssl.conf
-    
     # Configure your server cert:
     SSLCertificateFile /etc/httpd/certs/testWEB.CRT
     SSLCertificateKeyFile /etc/httpd/certs/testWEB.KEY
-    
+
     # Configure client cert authentication:
     SSLCACertificateFile /etc/httpd/certs/cacert.pem
-    
+
     # from roku sdk
     SSLVerifyClient require
     SSLVerifyDepth 1
-    
+
     # Editing httpd.conf
-    
-    # In <Directory> </Directory> tags where your video resides:`
+    # In <Directory> </Directory> tags where your video resides:
     # Checking the x-roku-reserved-dev-id header value assures that it is
     # your package trying to connect to this directory.
-    
+
     # You can find the dev-id of your brightscript package by going to the developer page on your Roku box, and selecting "Utilities".
     # On the "Utilities" page, select "Choose File", enter the passwd for that pkg, and click "Inspect"
     # Copy the value for the "Dev ID:" parameter and paste it here:
-    SetEnvIf x-roku-reserved-dev-id 6bb22ba64125f6da56fa4b7d6f2199a970d06672 let_roku_in`
-    SSLRequireSSL`
-    Order Deny,Allow`
-    Deny from all`
-    Allow from env=let_roku_in`
-    
+    SetEnvIf x-roku-reserved-dev-id 6bb22ba64125f6da56fa4b7d6f2199a970d06672 let_roku_in
+    SSLRequireSSL
+    Order Deny,Allow
+    Deny from all
+    Allow from env=let_roku_in
+
     # Restarting Apache
     sudo service httpd restart
     ```

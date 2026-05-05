@@ -22,7 +22,7 @@ next:
 
 ## Supported methods
 
-> Each roUrlTransfer object can perform only one asynchronous operation at one time. After starting an asynchronous operation, you cannot perform any other data transfer operations using that object until the asynchronous operation has completed, as indicated by receiving an roUrlEvent message whose GetSourceIdentity value matches the GetIdentity value of the roUrlTransfer.  
+> Each roUrlTransfer object can perform only one asynchronous operation at one time. After starting an asynchronous operation, you cannot perform any other data transfer operations using that object until the asynchronous operation has completed, as indicated by receiving an roUrlEvent message whose GetSourceIdentity value matches the GetIdentity value of the roUrlTransfer.
 >
 > Furthermore, the roUrlTransfer object must remain referenced until the transfer has completed. That means that there must be at least one variable containing a reference to the object during the transfer.  Allowing the variable to go out of scope (for example, by returning from a function where the variable is declared, or reusing the variable to hold a different value) will stop the asynchronous transfer.
 
@@ -39,26 +39,26 @@ A unique number for the object.
 #### Example
 
 ```
-Function Setup()
-    m.pendingXfers = &#123;&#125;
-End Function
+function Setup()
+    m.pendingXfers = {}
+end function
 
-Function GetAsync(url as String)
+function GetAsync(url as String)
     newXfer = CreateObject("roUrlTransfer")
     newXfer.SetUrl(url)
     newXfer.AsyncGetToString()
     requestId = newXfer.GetIdentity().ToStr()
     m.pendingXfers[requestId] = newXfer
-End Function
+end function
 
-Function HandleUrlEvent(event as Object)
+function HandleUrlEvent(event as Object)
     requestId = event.GetSourceIdentity().ToStr()
     xfer = m.pendingXfers[requestId]
     if xfer <> invalid then
         ' process it
         m.pendingXfers.Delete(requestId)
     end if
-End Function
+end function
 ```
 
 ### SetUrl(url as String) as Void
@@ -307,7 +307,7 @@ A flag indicating whether the operation was successful.
 
 #### Description
 
-Terminates the transfer automatically if the transfer rate drops below the specified rate (bytes_per_second) over a specific interval (period_in_seconds).  
+Terminates the transfer automatically if the transfer rate drops below the specified rate (bytes_per_second) over a specific interval (period_in_seconds).
 
 #### Parameters
 
@@ -488,7 +488,7 @@ A flag indicating whether the operation was successful.
 
 ### EnableFreshConnection(enable as Boolean) as Boolean
 
-> The Roku OS no longer supports this function. Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU). 
+> The Roku OS no longer supports this function. Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).
 
 #### Description
 
@@ -525,7 +525,7 @@ For the HTTP/2 connection sharing feature, all roUrlTransfers should be made fro
 
 ### GetUserAgent() as String
 
-*Available since Roku OS 12.5*
+*Available since [Roku OS 12.5](doc:release-notes#roku-os-125)*
 
 #### Description
 

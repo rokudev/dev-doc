@@ -32,7 +32,7 @@ The MultiStyleLabel **text** field uses a simple markup style. Markup tags with 
 
 ```
 m.MultiStyleLabel.drawingStyles = {
- 
+
     "HandprintedRed": {
         "fontSize": 36
         "fontUri": "pkg:/fonts/vSHandprinted.otf"
@@ -48,7 +48,7 @@ m.MultiStyleLabel.drawingStyles = {
         "color": "#000000FF"
     }
 }
- 
+
 m.MultiStyleLabel.text = "Default Text <HandprintedRed>Red text followed by</HandprintedRed><HandprintedGreen>more text in a funny style thaty the world has never seen before...</HandprintedGreen>"
 ```
 

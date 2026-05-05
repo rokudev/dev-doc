@@ -1,5 +1,5 @@
 ---
-title: "ifAppMemoryMonitor"
+title: ifAppMemoryMonitor
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,17 +10,15 @@ metadata:
 next:
   description: ''
 ---
-
-
 ## Implemented by
 
-| Name                                                         | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [roAppMemoryMonitor](doc:roappmemorymonitor) | Subscribes channels to low-memory notifications. When an app is subscribed, it receives a [roAppMemoryNotificationEvent](doc:roappmemorynotificationevent) when it reaches a specific percentage of the per-app memory limit (80%). |
+| Name                                         | Description                                                                                                                                                                                                                                                                |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [roAppMemoryMonitor](doc:roappmemorymonitor) | Subscribes apps to low-memory notifications. As of [Roku OS 15.2](doc:release-notes#roku-os-152), subscribed apps receive [roAppMemoryNotificationEvent](doc:roappmemorynotificationevent)  alerts when memory usage exceeds or falls below thresholds (currently 80%, 85%, 90%, 95% of the per-app limit). |
 
 > The roAppMemoryMonitor functions are supported on all [current and updatable device models](doc:hardware), except for Liberty, Austin, Mustang and Littlefield.
-
-
+>
+> Starting October 1, 2026, all apps must integrate the ifAppMemoryMonitor functions to pass certification testing. If your app does not include these APIs, Static Analysis Testing will report an error and block the publishing of your app.
 
 ## Supported methods
 
@@ -28,12 +26,12 @@ next:
 
 #### Description
 
-Enables an app to be alerted when it has reached 80% of its memory usage limit.
+Enables an app to be alerted when memory usage exceeds or falls below thresholds (currently 80%, 85%, 90%, 95% of the per-app limit). These thresholds may change in future releases. Notifications are throttled to prevent excessive events.
 
 #### Parameter
 
-| Name   | Type    | Description                                                  |
-| :----- | :------ | :----------------------------------------------------------- |
+| Name   | Type    | Description                                               |
+| :----- | :------ | :-------------------------------------------------------- |
 | enable | Boolean | A flag that enables or disables memory alerts on the app. |
 
 #### Return Values
@@ -72,7 +70,7 @@ while(true)
     if msgType = "roSGScreenEvent"
         if msg.isScreenClosed() then return
     else if msgType = "roAppMemoryNotificationEvent"
-        print "Event MemoryUsagePercent = "            
+        print "Event MemoryUsagePercent = "
         msg.getInfo().lookup("MemoryUsagePercent")
         m.global.getEvent="true"
     else if msgType = "roDeviceInfoEvent"
@@ -84,7 +82,7 @@ end while
 
 ### GetChannelAvailableMemory() as Int
 
-*Available since Roku OS 12.5*
+_Available since [Roku OS 12.5](doc:release-notes#roku-os-125)_
 
 #### Description
 
@@ -96,7 +94,7 @@ An integer indicating the estimated available memory remaining for the app or th
 
 ### GetChannelMemoryLimit() as Object
 
-*Available since Roku OS 13.0*
+_Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 **Description**
 
@@ -106,8 +104,8 @@ Returns the amount of foreground and background memory the app may use and the m
 
 An roAssociativeArray that contains the following fields:
 
-| Field                    | Kind    | Description                                                  |
-| :----------------------- | :------ | :----------------------------------------------------------- |
-| maxForegroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the foreground. |
-| maxBackgroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the background. |
+| Field                    | Kind    | Description                                                                                                                  |
+| :----------------------- | :------ | :--------------------------------------------------------------------------------------------------------------------------- |
+| maxForegroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the foreground.                                       |
+| maxBackgroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the background.                                       |
 | maxRokuManagedHeapMemory | Integer | The maximum amount of memory that the RokuOS may allocate on behalf of the app that shows up in the app's heap memory stats. |

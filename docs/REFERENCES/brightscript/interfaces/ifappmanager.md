@@ -14,7 +14,7 @@ hidden: false
 
 #### Description
 
-Returns an [roTimespan](doc:rotimespan) object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started.
+Returns an [roTimespan](doc:rotimespan) object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started. ddd
 
 #### Return Value
 
@@ -142,18 +142,17 @@ When there is a match (the name uttered by the user matches the registered text 
 ```
 appMgr = CreateObject("roAppManager")
 
-profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
-profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
-profile3 = { text: "John", link: "6Nu70-N37x-901"}
+profile1 = { text: "kids", link: "d46ge-i8Y5-192" }
+profile2 = { text: "Jane", link: "2a2Nu-u1D4-555" }
+profile3 = { text: "John", link: "6Nu70-N37x-901" }
 
 actions = [profile1, profile2, profile3]
-
 appMgr.SetVoiceActionStrings(actions)
 ```
 
 ### GetLastExitInfo() as Object
 
-_Available since Roku OS 13.0_
+_Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 **Description**
 

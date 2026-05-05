@@ -59,14 +59,14 @@ An roArray of matched substrings from str. If no match was made, an empty array 
 
 #### Example (from Brightscript Debugger Interactive Shell)
 
-~~~
+```
  r = CreateObject("roRegex", "(a|(z))(bc)","")
- ? r.Match("abcd")
+ print r.Match("abcd")
  abc
  a
 
  bc
-~~~
+```
 
 ### MatchAll(str as String) as Object
 
@@ -86,13 +86,13 @@ An roArray where the first element is the full matched string and if there are a
 
 #### Example
 
-~~~
+```
   r = CreateObject("roRegex", "\d+", "")
   arr = r.MatchAll("123 456 789")
   print FormatJSON(arr)
 
  [["123"],["456"],["789"]]
-~~~
+```
 
 ### Replace(str as String, replacement as String) as String
 
@@ -109,11 +109,11 @@ Replaces the first occurrence of a matching pattern in str with replacement and 
 
 #### Example (from Brightscript Debugger Interactive Shell)
 
-~~~
+```
  r = CreateObject("roRegex", "(\d+)\s+(\w+)", "")
- ? r.Replace("123 abc", "word:\2 number:\1")
+ print r.Replace("123 abc", "word:\2 number:\1")
  word:abc number:123
-~~~
+```
 
 #### Return Value
 
@@ -138,15 +138,15 @@ A string with the result of the replace all operation.
 
 #### Example (from Brightscript Debugger Interactive Shell)
 
-~~~
+```
   r = CreateObject("roRegex", "a", "i")
-  ? r.ReplaceAll("Abracadabra", "x")
+  print r.ReplaceAll("Abracadabra", "x")
  xbrxcxdxbrx
 
   r = CreateObject("roRegex", "a", "")
-  ? r.ReplaceAll("Abracadabra", "x")
+  print r.ReplaceAll("Abracadabra", "x")
  Abrxcxdxbrx
-~~~
+```
 
 ### Split(str as String) as Object
 
@@ -166,16 +166,16 @@ An roList of substrings of str that were separated by strings which match the pa
 
 **Examples from Brightscript Debugger Interactive Shell**
 
-~~~
+```
  r = CreateObject("roRegex", ",", "") ' split on comma
- ? r.Split("first, second, third and fourth")
+ print r.Split("first, second, third and fourth")
  first
   second
   third and fourth
  r = CreateObject("roRegex", "/+", "") ' split on one or more slashes
- ? r.Split("example.com/images///2012/cat.jpg")
+ print r.Split("example.com/images///2012/cat.jpg")
   example.com
   images
   2012
   cat.jpg
-~~~
+```

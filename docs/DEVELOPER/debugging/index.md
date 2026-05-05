@@ -21,7 +21,7 @@ The debug console can be accessed using telnet through a shell
 application such as [PuTTY](http://www.putty.org/) for Windows or
 _terminal_ on Mac and Linux:
 
-```
+```bash
 telnet roku-ip-address 8085
 ```
 
@@ -84,17 +84,17 @@ publication.
 
 ### Cross-component backtrace
 
-As of Roku OS 14.6, you can use the `backtrace`, `up`, `down`, `over`, and `out` commands in the debug console on stack frames entered via `callFunc` or an observer callback, in addition to a normal BrightScript function call.
+As of [Roku OS 14.6](doc:release-notes#roku-os-146), you can use the `backtrace`, `up`, `down`, `over`, and `out` commands in the debug console on stack frames entered via `callFunc` or an observer callback, in addition to a normal BrightScript function call.
 
 For example, if roSgNode A calls into roSgNode B on the same thread (for example, via [CallFunc](doc:handling-application-events)) and then B breaks into the call, you can now view the calls belonging to both A and B in the backtrace of the thread.
 
 ### Type mismatch reporting
 
-As of Roku OS 10.5, the BrightScript debug console provides more specific reporting of "type mismatch" errors to help developers identify and resolve these types of bugs in their code. For example, attempting to evaluate whether an integer value equals a string in an expression (for example, if 12 = "number") results in the following error message: `Type mismatch. Operator "=" cannot be applied to "Integer" and "String"`.
+As of [Roku OS 10.5](doc:release-notes#roku-os-105), the BrightScript debug console provides more specific reporting of "type mismatch" errors to help developers identify and resolve these types of bugs in their code. For example, attempting to evaluate whether an integer value equals a string in an expression (for example, if 12 = "number") results in the following error message: `Type mismatch. Operator "=" cannot be applied to "Integer" and "String"`.
 
 ## SceneGraph applications
 
-Beginning with **Roku OS 7.5** and above, the main BrightScript
+Beginning with **[Roku OS 7.5](doc:release-notes#roku-os-7-5)** and above, the main BrightScript
 console (port 8085) provides context for all threads. This
 eliminates the need to have multiple telnet sessions open for each
 running thread and **ports 8089 - 8093** will no longer be used.
@@ -116,11 +116,11 @@ Thread selected:  0*   pkg:/source/Main.brs(19)                msg = wait(0, m.p
 Current Function:
 011:      m.port = CreateObject("roMessagePort")
 012:      screen.setMessagePort(m.port)
-013:  
+013:
 014:      'Create a scene and load /components/helloworld.xml'
 015:      scene = screen.CreateScene("HelloWorld")
 016:      screen.show()
-017:  
+017:
 018:      while(true)
 019:*         msg = wait(0, m.port)
 020:          msgType = type(msg)
@@ -183,7 +183,7 @@ ID    Location                                Source Code
 
     <tr>
       <td>r2d2\_bitmaps</td>
-      <td>Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively. Starting with Roku OS 9.3, the name of each bitmap is included</td>
+      <td>Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively. Starting with [Roku OS 9.3](doc:release-notes#roku-os-93), the name of each bitmap is included</td>
     </tr>
 
     <tr>
@@ -193,7 +193,7 @@ ID    Location                                Source Code
 
     <tr>
       <td>sgnodes all</td>
-      <td>Prints every existing node created by the currently running app. <br /><br />As of Roku OS 14.5, you can use this command on your published app if the device is keyed with the same developer ID/key used to generate the app's package file.<br /><br />As of Roku OS 10.0, this prints the number of <strong>osref</strong> references to the node (held in the Roku platform) and <strong>bscref</strong> references (held in the app). The <strong>bcsref</strong> count includes references from "m." variable and local variables. Child references and field references do not increase <strong>bscref</strong> counts. <br /><br />The <strong>osref</strong> count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one <strong>osref</strong> on the child. Additionally, any field of type <strong>node</strong>, <strong>nodearray</strong>, or <strong>assocarray</strong> will add one <strong>osref</strong> to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.<br /><br />The reported <strong>osref</strong> count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes. The <strong>bscref</strong> count provides a more relevant and accurate indication of the resources that the app itself controls.<br /><br />The <code>sgnodes all</code>, <code>sgnodes roots</code>, and <code>sgnodes node\_ID</code> commands are similar to the getAll() , getRoots() , getRootsMeta(), and getAllMeta() <a href="https://roku-ent.readme.io/dev/docs/ifsgnodechildren">ifSGNodeChildren</a> methods, which can be called on any SceneGraph node.</td>
+      <td>Prints every existing node created by the currently running app. <br /><br />As of [Roku OS 14.5](doc:release-notes#roku-os-145), you can use this command on your published app if the device is keyed with the same developer ID/key used to generate the app's package file.<br /><br />As of [Roku OS 10.0](doc:release-notes#roku-os-100), this prints the number of <strong>osref</strong> references to the node (held in the Roku platform) and <strong>bscref</strong> references (held in the app). The <strong>bcsref</strong> count includes references from "m." variable and local variables. Child references and field references do not increase <strong>bscref</strong> counts. <br /><br />The <strong>osref</strong> count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one <strong>osref</strong> on the child. Additionally, any field of type <strong>node</strong>, <strong>nodearray</strong>, or <strong>assocarray</strong> will add one <strong>osref</strong> to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.<br /><br />The reported <strong>osref</strong> count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes. The <strong>bscref</strong> count provides a more relevant and accurate indication of the resources that the app itself controls.<br /><br />The <code>sgnodes all</code>, <code>sgnodes roots</code>, and <code>sgnodes node\_ID</code> commands are similar to the getAll() , getRoots() , getRootsMeta(), and getAllMeta() <a href="https://roku-ent.readme.io/dev/docs/ifsgnodechildren">ifSGNodeChildren</a> methods, which can be called on any SceneGraph node.</td>
     </tr>
 
     <tr>

@@ -55,7 +55,7 @@ A global reference object.
 
 #### Example: Starting Scene Graph Applications
 
-~~~~
+```
 sub showChannelSGScreen()
   print "in showChannelSGScreen"
   screen = CreateObject("roSGScreen")
@@ -63,7 +63,7 @@ sub showChannelSGScreen()
   screen.setMessagePort(m.port)
   m.global = screen.getGlobalNode()
   m.global.id = "GlobalNode"
-  m.global.addFields( &#123;red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff&#125; )
+  m.global.addFields( {red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff} )
   scene = screen.CreateScene("TrivialScene")
   screen.show()
   scene.setFocus(true)
@@ -81,7 +81,7 @@ sub showChannelSGScreen()
   end while
 
 end sub
-~~~~
+```
 
 ### Show() as Boolean
 

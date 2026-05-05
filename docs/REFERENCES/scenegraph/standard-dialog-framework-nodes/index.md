@@ -145,19 +145,19 @@ To create the confirmation dialog with a custom standard dialog and detect butto
 
 ##### SceneGraph
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="AccountDialog" extends="StandardDialog" >
-    <children>
-        <StdDlgTitleArea primaryTitle="Let's create your account!" />
-        <StdDlgContentArea>
-            <StdDlgTextItem text="Sign up for a free account to start streaming today." />
-        </StdDlgContentArea>
-        <StdDlgButtonArea id="buttonArea">
-            <StdDlgButton text="Continue" />
-            <StdDlgButton text="Cancel" />
-        </StdDlgButtonArea>
-    </children>
+<component name="AccountDialog" extends="StandardDialog">
+  <children>
+    <StdDlgTitleArea primaryTitle="Let's create your account!" />
+    <StdDlgContentArea>
+      <StdDlgTextItem text="Sign up for a free account to start streaming today." />
+    </StdDlgContentArea>
+    <StdDlgButtonArea id="buttonArea">
+      <StdDlgButton text="Continue" />
+      <StdDlgButton text="Cancel" />
+    </StdDlgButtonArea>
+  </children>
 </component>
 ```
 

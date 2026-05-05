@@ -27,7 +27,7 @@ When you "sideload" your app to a Roku device during development, you have the o
 
 **When to use a new signing key.** If you are developing multiple apps, you would typically generate a new key for every app. If the key for each app is different, each will have its own registry on the user device. You could, instead, choose to use the same key for multiple apps you develop -- in this case, the registry information for all same-keyed apps is shared on the Roku user's device when they install more than one of your apps.
 
-**When to "rekey" from a previous signing key.** What happens when you need to make changes to your app, but you have since generated a new key and your Roku development device no longer has the key associated with the app you packaged previously? You simply upload the previous package, enter its password, and select the [Rekey](#rekeying-from-existing-package) operation (all on the Utilities page). The Roku device is now keyed to that package, so when you sideload the updated app, you can again package it using the original key.
+**When to "rekey" from a previous signing key.** What happens when you need to make changes to your app, but you have since generated a new key and your Roku development device no longer has the key associated with the app you packaged previously? You simply upload the previous package, enter its password, and select the [Rekey](#rekeying-from-an-existing-package) operation (all on the Utilities page). The Roku device is now keyed to that package, so when you sideload the updated app, you can again package it using the original key.
 
 Using the Rekey feature is also the way to share your work with another trusted developer. Providing them the package and its password lets them recreate the correct development environment on a different Roku device.
 
@@ -39,9 +39,9 @@ If you are
 
 * Starting a new app development project: Follow the [New key generation](#new-key-generation) instructions.
 
-* Modifying an existing app: Follow the [Rekey](#rekeying-from-existing-package) instructions.
+* Modifying an existing app: Follow the [Rekey](#rekeying-from-an-existing-package) instructions.
 
-* Adding a new app to your lineup, but want user installations to share registry information among all of your existing apps: Follow the [Rekey](#rekeying-from-existing-package) instructions.
+* Adding a new app to your lineup, but want user installations to share registry information among all of your existing apps: Follow the [Rekey](#rekeying-from-an-existing-package) instructions.
 
 * Setting up a new Roku device that has not yet been used for development: Follow the [New key generation](#new-key-generation) instructions to store an initial key on the device. Otherwise, **the Packager link will not be active**.
 
@@ -54,7 +54,7 @@ Follow this procedure to generate a new key on your Roku development device. You
 
 > When you run `genkey`, you'll get the password and also its associated Developer ID (Dev ID). Save both, and keep the Dev ID associated with each package you generate so you can easily determine the correct password to enter when called for.
 
-If you are modifying and repackaging source code for an existing app, follow the [Rekey](#rekeying-from-existing-package)  procedure.
+If you are modifying and repackaging source code for an existing app, follow the [Rekey](#rekeying-from-an-existing-package)  procedure.
 
 ### Generate key using Windows
 
@@ -105,7 +105,7 @@ The steps below allow you to package your app for submission and eventual distri
 
 First-time users: You must first enable its **Packager** utility option using the  [New key generation](#new-key-generation) instructions.
 
-1. **Store the appropriate signing key on the Roku device.** Either generate a new key [(`genkey`)](#new-key-generation) or retrieve a previously generated key from an existing package ([Rekey](#rekeying-from-existing-package)). If the correct key is already stored, no action is needed. (Don't remember whether it's the correct key? Just look at the Dev ID on the Packager page to see if it matches the one associated with the package and password.)
+1. **Store the appropriate signing key on the Roku device.** Either generate a new key [(`genkey`)](#new-key-generation) or retrieve a previously generated key from an existing package ([Rekey](#rekeying-from-an-existing-package)). If the correct key is already stored, no action is needed. (Don't remember whether it's the correct key? Just look at the Dev ID on the Packager page to see if it matches the one associated with the package and password.)
 
 2. **Install (or “sideload”) the app on the Roku device.**
    Use the Installer page of the Development Application to "sideload" the app to your Roku device. Refer to [Developer environment setup](doc:developer-setup) about how to sideload apps.
@@ -114,9 +114,9 @@ First-time users: You must first enable its **Packager** utility option using th
 
 3. **Compress the sideloaded app using Cramfs or Squashfs.** Compression is optional.
 
-   * Cramfs is a file system format that loads faster than zip. Use cramfs for Roku OS versions 7.7 and lower. ?
+   * Cramfs is a file system format that loads faster than zip. Use cramfs for [Roku OS versions 7.7](doc:release-notes#roku-os-77) and lower. ?
 
-   * Squashfs is a file format that saves flash storage space and it decompresses faster. Note that squashfs works only for Roku OS 8.0 and above. **Make sure you set a minFirmware dependency of v8.0 or higher when uploading a squashfs pkg to the Streaming Store.**
+   * Squashfs is a file format that saves flash storage space and it decompresses faster. Note that squashfs works only for [Roku OS 8.0](doc:release-notes#roku-os-8) and above. **Make sure you set a minFirmware dependency of v8.0 or higher when uploading a squashfs pkg to the Streaming Store.**
 
    ![roku815px - packagingchannels8-roku815px](https://image.roku.com/ZHZscHItMTc2/packaging-channels-v8.png "packagingchannels8")
 

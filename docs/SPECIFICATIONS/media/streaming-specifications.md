@@ -272,7 +272,7 @@ The following image formats are currently supported. The use of PNG is recommend
 - JPG/JPEG
 - GIF
 - BMP
-- [WebP](https://developers.google.com/speed/webp/) (since Roku OS 9.4)
+- [WebP](https://developers.google.com/speed/webp/) (since [Roku OS 9.4](doc:release-notes#roku-os-94))
 
 ### Special WebP considerations
 
@@ -282,7 +282,7 @@ SceneGraph [Poster nodes](doc:poster) can now accept URIs that provide WebP imag
 
 For image assets delivered from a web server (or CDN), conditionally request WebP instead of JPEG/PNG if Roku OS version is first confirmed to be >= 9.4.
 
-Although it is technically possible to bundle WebP image assets with JPEG/PNG assets containing the same images in the package file, doing so will increase the size of the package; best practice for WebP is to restrict its use to assets fetched from the web, while bundling only JPEG/PNG assets within the package file itself. Also, do not use WebP for any artwork that must be specified directly in the manifest, which will preserve compatibility with legacy hardware that cannot run Roku OS 9.4 or later.
+Although it is technically possible to bundle WebP image assets with JPEG/PNG assets containing the same images in the package file, doing so will increase the size of the package; best practice for WebP is to restrict its use to assets fetched from the web, while bundling only JPEG/PNG assets within the package file itself. Also, do not use WebP for any artwork that must be specified directly in the manifest, which will preserve compatibility with legacy hardware that cannot run [Roku OS 9.4](doc:release-notes#roku-os-94) or later.
 
 ## Encoding guidelines
 
@@ -358,8 +358,8 @@ There are several conditions that must be checked to see if 4K UHD content can b
   - (Optional) Check if the device decrypts within a trusted execution environment (TEE).
 
 
-~~~~
-Function CanPlay4K() as Boolean
+```
+function CanPlay4K() as Boolean
   dev_info = CreateObject("roDeviceInfo")
   hdmi_status = CreateObject("roHdmiStatus")
 
@@ -375,8 +375,8 @@ Function CanPlay4K() as Boolean
   end if
 
   ' Check if the Roku player can decode 4K 60fps HEVC streams or 4K 30fps vp9 streams
-  hevc_video = \{ Codec: "hevc", Profile: "main", Level: "5.1" \}
-  vp9_video = \{ Codec: "vp9", Profile: "profile 0" \}
+  hevc_video = { Codec: "hevc", Profile: "main", Level: "5.1" }
+  vp9_video = { Codec: "vp9", Profile: "profile 0" }
   can_decode_hevc = dev_info.CanDecodeVideo(hevc_video)
   can_decode_vp9 = dev_info.CanDecodeVideo(vp9_video)
   if can_decode_hevc.result <> true OR can_decode_vp9.result <> true
@@ -390,8 +390,8 @@ Function CanPlay4K() as Boolean
   end if
 
   return true
-End Function
-~~~~
+end function
+```
 
 >  This example returns true only if both 4K HEVC and 4K VP9 decoding is supported. If your 4K UHD content is only encoded in one of these codecs, modify the third conditional statement as necessary.
 
@@ -399,12 +399,12 @@ End Function
 
 HDR10 playback requires HDMI version 2.0a. HDCP version 2.2, and an HDR10 capable player and display. Apps can check if the Roku device and connected display support HDR10 with **GetDisplayProperties().hdr10** field of the [roDeviceInfo](doc:ifdeviceinfo) component.
 
-~~~~
-Function canPlayHDR() as Boolean
+```
+function canPlayHDR() as Boolean
   dev_info = createObject("roDeviceInfo")
   return dev_info.getDisplayProperties().hdr10
-End Function
-~~~~
+end function
+```
 
 
 This function should only be called after detecting 4K UHD Compatibility.

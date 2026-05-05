@@ -34,7 +34,7 @@ The DASH Industry Forum describes standard thumbnail tiles in ["Guidelines for I
 
 ### DASH manifest example
 
-```
+```xml
 <MPD mediaPresentationDuration="PT634.566S" minBufferTime="PT2.00S" profiles="urn:hbbtv:dash:profile:isoff-live:2012,urn:mpeg:dash:profile:isoff-live:2011" type="static" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
  <BaseURL>.</BaseURL>
  <Period>
@@ -167,13 +167,13 @@ All three scripts must be run in sequence, which the `run_scripts_hls.sh` file d
 
 The following command generates 320x180 thumbnails and 5x4 tiles with 10 second intervals:
 
-```
+```bash
 $ ./run_scripts_hls.sh master.m3u8 thumb-tile 320x180 5 4 10
 ```
 
 Here is a command that generates 640x360 thumbnails and 5x4 tiles with 10 seconds intervals:
 
-```
+```bash
 $ ./run_scripts_hls.sh master.m3u8 thumb-tile 640x360 5 4 10
 ```
 
@@ -221,13 +221,13 @@ All three scripts must be run in sequence, a process that is automated by the `r
 
 The following command generates 256x144 thumbnails and 5x2 tiles with 10-second intervals.
 
-```
+```bash
 $ ./run_scripts_dash.sh master.mpd tile 256x144 5 2 10
 ```
 
 After the thumbnails manifest snippet(s) are generated, they should be entered into the master manifest, as in the example below:
 
-```
+```xml
 <AdaptationSet id="3" mimeType="image/jpeg" contentType="image">
     <SegmentTemplate media="$RepresentationID$/tile_$Number$.jpg" duration="100" startNumber="1"/>
       <Representation bandwidth="24000" id="thumbnails_256x144" width="2048" height="1024">
@@ -631,7 +631,7 @@ content-131.jpg
 
 #### ASSOC-LANGUAGE audio rendition attribute
 
-As of Roku OS 10.0, the HLS **ASSOC-LANGUAGE** audio rendition attribute is supported. This optional attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect, is represented in forced subtitles by a different but associated language.
+As of [Roku OS 10.0](doc:release-notes#roku-os-100), the HLS **ASSOC-LANGUAGE** audio rendition attribute is supported. This optional attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect, is represented in forced subtitles by a different but associated language.
 
 In the following example manifest, Cantonese audio (language=yue) should use Traditional Chinese (LANGUAGE=zh_HANT) forced subtitles. This is indicated by an ASSOC-LANGUAGE=zh_HANT on the audio track.
 

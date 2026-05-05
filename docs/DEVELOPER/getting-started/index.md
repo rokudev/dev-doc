@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-With the #1 selling smart TV streaming OS in the US, Canada, and Mexico [^1] and 37.9 billion hours watched last quarter, Roku is at the forefront of the streaming revolution. The Roku OS is built specifically for streaming, which means developers can seamlessly build intuitive, high-performance streaming apps designed especially for the TV. If you have a video catalog ready for distribution, this document will help you get started building a Roku app.
+With the #1 selling smart TV streaming OS in the US, Canada, and Mexico [^1] and 100 million streaming households worldwide, Roku is at the forefront of the streaming revolution. The Roku OS is built specifically for streaming, which means developers can seamlessly build intuitive, high-performance streaming apps designed especially for the TV. If you have a video catalog ready for distribution, this document will help you get started building a Roku app.
 
 ![roku600px - roku-dev-hero roku](https://image.roku.com/ZHZscHItMTc2/idk-hero.jpg)
 
@@ -42,6 +42,6 @@ The journey from novice to guru may not be without challenges, but Roku is here 
 
 ## Terms for development tools and apps
 
-When publishing development tools and apps for the Roku platform, observe the [developer terms](doc:developer-terms) to ensure compliance with the specified legal responsibilities, best practices, and guidelines. The developer terms includes a link to the [Roku Trademark Guidelines](https://docs.roku.com/published/trademarkguidelines), which specify rules for using Roku Marks and Roku Design Marks that must be adhered to.
+When publishing development tools and apps for the Roku platform, observe the [developer terms](doc:legal#developer-terms) to ensure compliance with the specified legal responsibilities, best practices, and guidelines. The developer terms includes a link to the [Roku Trademark Guidelines](https://docs.roku.com/published/trademarkguidelines), which specify rules for using Roku Marks and Roku Design Marks that must be adhered to.
 
 [^1]: (Circana, LLC, Retail Tracking Service, US, CA, and MX, Smart TV by Software Service, Unit Sales, July - September 2025)

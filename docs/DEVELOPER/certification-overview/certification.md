@@ -28,7 +28,7 @@ Using deprecated APIs may cause your app to fail certification testing. See the 
 
 #### Test apps before submission
 
-Use the certification criteria and the [list of pre-certification tests](doc:certification-testing) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
+Use the certification criteria and the [list of pre-certification tests](doc:cert-tests) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
 
 * [Static Analysis tool](doc:static-analysis-tool): Checks the app's code for certification-related errors.
 
@@ -136,11 +136,11 @@ Certification criteria are listed by functionality. <br />
 
 1.1 Apps that include video advertising must comply with all the integration requirements listed in the [Roku advertising requirements document](doc:ad-requirements).
 
-### 2. Purchases
+### 2. Accounts and purchases
 
-**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements). 
+**2.1** Apps offering transactional content or services must integrate and enable Roku Pay services including, but not limited to, signup/sign-in, payment, and entitlements/transactions within their app. Apps must comply with all requirements listed in the [Roku Pay integration requirements document](doc:roku-pay-requirements).
 
-**2.2** Apps must integrate [On-device authentication](doc:on-device-authentication). Sign-up/sign-in workflows are prohibited from using external webpages, links to off-device promotional or marketing materials, or any other 1st or 3rd-party sign-up/sign-in/authentication mechanism.
+**2.2** Apps must integrate [On-device authentication](doc:on-device-authentication). Sign-up/sign-in workflows are prohibited from using external webpages, links to off-device promotional or marketing materials, or any other 1st or 3rd-party off-device sign-up/sign-in/authentication/activation mechanism.
 
 Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade). The upgrade/downgrade workflows are prohibited from including external webpages.
 
@@ -212,7 +212,7 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 ### 5. Deep linking
 
-**5.1** Apps must support deep linking for all media types, per Roku's [deep linking policy](doc:implementing-deep-linking). 
+**5.1** Apps must support deep linking for all media types, per Roku's [deep linking policy](doc:implementing-deep-linking).
 
 **5.2**  Apps must implement [Direct to Play](doc:direct-to-play) to support direct voice playback commands for launching and playing content.
 

@@ -20,15 +20,15 @@ The roDeviceCrypto component enables you to encrypt and decrypt data on a device
 
 ## Description
 
-roDeviceCrypto has two methods: `Encrypt()` and `Decrypt()`. Both methods take a `roByteArray` and the encryption key type (`encType`), which is a string that may be set to "channel", "device", or "model".  
+roDeviceCrypto has two methods: `Encrypt()` and `Decrypt()`. Both methods take a `roByteArray` and the encryption key type (`encType`), which is a string that may be set to "channel", "device", or "model".
 
-Both methods return a `roByteArray` so that you can encrypt plaintext on a Roku device
-and then decode it, as demonstrated in the following example:  
+Both methods return a `roByteArray` so that you can encrypt plaintext on a Roku device
+and then decode it, as demonstrated in the following example:
 
 ```
   ' store plaintext to be encrypted in an roByteArray
   ba = CreateObject("roByteArray")
-  ba.FromAsciiString("plain text1")  
+  ba.FromAsciiString("plain text1")
 
   ' create roDeviceCrypto object and specify a device key
   dc = CreateObject("roDeviceCrypto")
@@ -39,6 +39,6 @@ and then decode it, as demonstrated in the following example:
 
   ' decode the encrypted data and store the decrypted data in an roByteArray
   if encrypted <> invalid then
-  	decrypted = dc.Decrypt(encrypted,encType)
+      decrypted = dc.Decrypt(encrypted, encType)
   end if
 ```

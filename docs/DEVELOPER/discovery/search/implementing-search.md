@@ -147,7 +147,7 @@ Once you have validated your search feed, you can submit your feed following the
 
     <tr>
       <td>Next (right-arrow) icon</td>
-      <td>View the details of your search feed, including validation results, vanity code for installing the search beta version of your app, and UI for <a href="#testingandsubmittingtheapp">adding deep linking parameters for testing your app's search integration</a>, click the right arrow icon.</td>
+      <td>View the details of your search feed, including validation results, vanity code for installing the search beta version of your app, and UI for <a href="#testing-and-submitting-the-app">adding deep linking parameters for testing your app's search integration</a>, click the right arrow icon.</td>
     </tr>
   </tbody>
 </table>
@@ -218,7 +218,7 @@ Once you have validated your search feed, you can submit your feed following the
 
    <Image alt="roku600px - roku-search-feed-validation-ui-v2" border={false} src="https://image.roku.com/ZHZscHItMTc2/feed-validation-row-revalidate.png" />
 
-8. Once your search feed has been validated, [test your search feed integration](#testingandsubmittingtheapp).
+8. Once your search feed has been validated, [test your search feed integration](#testing-and-submitting-the-app).
 
 ### Testing and submitting the app
 

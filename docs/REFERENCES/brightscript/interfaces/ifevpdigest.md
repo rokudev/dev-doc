@@ -65,17 +65,17 @@ A Hex string (Digested array data).
 
 #### Example
 
-~~~
+```
   x = evp.Process(bytes)
-~~~
+```
 
 is equivalent to
 
-~~~
+```
   evp.Reinit()
   evp.Update(bytes)
   x = evp.Final()
-~~~
+```
 
 ### Update(bytes as Object) as Void
 

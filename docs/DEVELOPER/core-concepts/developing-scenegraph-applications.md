@@ -206,31 +206,25 @@ For example:
 
 **Example SceneGraph XML component file**
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
+<component name="rectangleScene" extends="Scene">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.top.setFocus(true)
+      end sub
+    ]]>
+  </script>
 
-<component name="rectangleScene" extends="Scene" >
-
-<script type="text/brightscript" >
-<![CDATA[
-
-
-sub init()
-  m.top.setFocus(true)
-end sub
-]]>
-</script>
-
-<children>
-<Rectangle
-  id="bottomRectangle"
-  color="0x0000FFFF"
-  width="1280"
-  height="60"
-  translation="[0,620]"
-/>
-</children>
-
+  <children>
+    <Rectangle
+      id="bottomRectangle"
+      color="0x0000FFFF"
+      width="1280"
+      height="60"
+      translation="[0,620]" />
+  </children>
 </component>
 ```
 

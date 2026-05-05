@@ -305,7 +305,7 @@ select the item.</p>
 <td class="short-line">Required for all</td>
 <td class="short-line">String</td>
 <td class="long-line">"playready" or "widevine". This value is case-insensitive. The default is an empty string.<br><br><blockquote>
-<p>As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click <a href="https://roku-ent.readme.io/dev/docs/content-protection">here</a> for more information on implementing these DRMs.</p>
+<p>As of [Roku OS 9.3](doc:release-notes#roku-os-93), support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click <a href="https://roku-ent.readme.io/dev/docs/content-protection">here</a> for more information on implementing these DRMs.</p>
 </blockquote></td>
 <td class="short-line">"widevine"</td>
 </tr>
@@ -345,35 +345,35 @@ select the item.</p>
 <td class="short-line">1000</td>
 </tr>
 <tr>
-<td class="long-line">ignoreInitDataPssh<br><br><em>Available since Roku OS 14.5</em></td>
+<td class="long-line">ignoreInitDataPssh<br><br><em>Available since [Roku OS 14.5](doc:release-notes#roku-os-145)</em></td>
 <td class="short-line">Widevine: Optional</td>
 <td class="short-line">String</td>
 <td class="long-line">Ignores the PSSH in the initialization segment. This enables support for Harmonic/DTV-GO DASH-IOP v5.0.0 streams with In-Band Key-Rotation Signaling without breaking legacy streams/apps that do not provide the <code>&lt;ContentProtection&gt;</code> element with PSSH info in the DASH manifest. <br><br>The default value is <code>"false"</code>.</td>
 <td class="short-line">"true"</td>
 </tr>
 <tr>
-<td class="long-line">licReqTemplate<br><br><em>Available since Roku OS 14.6</em></td>
+<td class="long-line">licReqTemplate<br><br><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
 <td class="short-line">Widevine</td>
 <td class="short-line"></td>
 <td class="long-line">Contains the license request "template, which is the entire license request without the license challenge filled-in<br><br>JSON or XML formats are supported.<br><br>Use this parameter and the <strong>templateType</strong>, <strong>requestField</strong>, and <strong>responseField</strong> parameters to wrap the Widevine license challenge payload in the request format (JSON or XML) required by your license server proxy. <br><br>See <a href="#example-of-wrapping-the-widevine-license-challenge-payload">Example of wrapping the Widevine license challenge payload</a> for more information.</td>
 <td class="short-line">"JSON"</td>
 </tr>
 <tr>
-<td class="long-line">templateType<br><br><em>Available since Roku OS 14.6</em></td>
+<td class="long-line">templateType<br><br><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
 <td class="short-line">Widevine</td>
 <td class="short-line">String</td>
 <td class="long-line">Set to "JSON", "XML" or "BASE64"<br>-  JSON: licReqTemplate is in json format<br>- XML: licReqTemplate is in XML format<br>- BASE64 - Does not use licReqTemplate Instead, base64 encode the challenge and send it in POST body<br> If no value is specified, the license template is not used</td>
 <td class="short-line">"JSON"</td>
 </tr>
 <tr>
-<td class="long-line">requestField<br><br><em>Available since Roku OS 14.6</em></td>
+<td class="long-line">requestField<br><br><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
 <td class="short-line">Widevine</td>
 <td class="short-line">String</td>
-<td class="long-line">jsonpath or xpath to the element whose value must contain the fixed token LICENSE_CHALLENGE<br>- jsonpath if templateType is "JSON" <br>- xpath if templateType is "XML"<br><br>The Roku OS Roku replaces the  LICENSE_CHALLENGE token with the base64 encoded license challenge.<br><br>As of Roku OS 15.0, the LICENSE_CHALLENGE token can be provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.</td>
+<td class="long-line">jsonpath or xpath to the element whose value must contain the fixed token LICENSE_CHALLENGE<br>- jsonpath if templateType is "JSON" <br>- xpath if templateType is "XML"<br><br>The Roku OS Roku replaces the  LICENSE_CHALLENGE token with the base64 encoded license challenge.<br><br>As of [Roku OS 15.0](doc:release-notes#roku-os-150), the LICENSE_CHALLENGE token can be provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.</td>
 <td class="short-line">".parameters[0].body"</td>
 </tr>
 <tr>
-<td class="long-line">responseField<br><br><em>Available since Roku OS 14.6</em></td>
+<td class="long-line">responseField<br><br><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
 <td class="short-line">Widevine</td>
 <td class="short-line">String</td>
 <td class="long-line">json-path or xpath to the element that         contains the base64 encoded license response<br>- jsonpath if templateType is "JSON" <br>- xpath if templateType is "XML"<br><br>The Roku OS extracts the license response, base64 decodes it, and provides it to the DRM client in the Roku firmware.<br><br>After setting the license response in the DRM agent , the license response is made available in the <strong>licenseStatus</strong> Playback field, which is an associative array. The <strong>response</strong> field in the associative array contains the entire license response.</td>
@@ -428,7 +428,7 @@ videocontent.drmParams = {
 m.video.content = videocontent   
 </code></pre>
 <h2 id="content-classification-attributes">Content classification attributes</h2>
-<p><em>Available since Roku OS 13.0</em></p>
+<p><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></p>
 <p>Developers can use the <strong>contentClassifier</strong> content metadata attribute to specify the genre of their content (for example, action, sports, or comedy), and the Roku OS will use this attribute to automatically adjust the sound and picture on Roku TVs (if auto mode is selected for the picture or sound settings).</p>
 <h6 id="content-classifier-value">Content classifier value</h6>
 <div class="hscroll"><table>
@@ -729,7 +729,7 @@ m.video.content = videocontent
 <tr>
 <td class="short-line">PlayStart</td>
 <td class="short-line">Float</td>
-<td class="long-line">PlayStart defines the start position of the content, in seconds.<br><br>Starting from Roku OS 8.0, content metadata supports negative PlayStart values. This feature allows the media players to start playbacks distanced from the edge of the live stream</td>
+<td class="long-line">PlayStart defines the start position of the content, in seconds.<br><br>Starting from [Roku OS 8.0](doc:release-notes#roku-os-8), content metadata supports negative PlayStart values. This feature allows the media players to start playbacks distanced from the edge of the live stream</td>
 <td class="short-line">0</td>
 </tr>
 <tr>
@@ -852,19 +852,19 @@ m.video.content = videocontent
 <tr>
 <td class="short-line">LiveBoundsPauseBehavior</td>
 <td class="short-line">String</td>
-<td class="long-line">Allows an app to customize Media Player behavior on live streams when playing in the earliest part of a DVR buffer.<br><br>The stream remains paused even though it is playing in the earliest part of the buffer of a live stream when the value of the attribute is set to "pause." This enables the Roku OS to distinguish between live streams and live streams that eventually transition to video on demand.<br><br>The possible values of this attribute are "resume", "stop", "pause", with resume being the default value.<br><br><strong>Currently, this attribute will work only with Smooth and Dash streams.</strong>  (Available since Roku OS 8.1)</td>
+<td class="long-line">Allows an app to customize Media Player behavior on live streams when playing in the earliest part of a DVR buffer.<br><br>The stream remains paused even though it is playing in the earliest part of the buffer of a live stream when the value of the attribute is set to "pause." This enables the Roku OS to distinguish between live streams and live streams that eventually transition to video on demand.<br><br>The possible values of this attribute are "resume", "stop", "pause", with resume being the default value.<br><br><strong>Currently, this attribute will work only with Smooth and Dash streams.</strong>  (Available since [Roku OS 8.1](doc:release-notes#roku-os-81))</td>
 <td class="short-line">Resume</td>
 </tr>
 <tr>
 <td class="short-line">ClipStart</td>
 <td class="short-line">Float</td>
-<td class="long-line">ClipStart sets the clip start position of the playback. The unit of ClipStart is seconds (Available since Roku OS 8.1).</td>
+<td class="long-line">ClipStart sets the clip start position of the playback. The unit of ClipStart is seconds (Available since [Roku OS 8.1](doc:release-notes#roku-os-81)).</td>
 <td class="short-line">00.0</td>
 </tr>
 <tr>
 <td class="short-line">ClipEnd</td>
 <td class="short-line">Float</td>
-<td class="long-line">ClipEnd sets the clip end position. The unit of ClipEnd is seconds (Available since Roku OS 8.1).</td>
+<td class="long-line">ClipEnd sets the clip end position. The unit of ClipEnd is seconds (Available since [Roku OS 8.1](doc:release-notes#roku-os-81)).</td>
 <td class="short-line">00.0</td>
 </tr>
 <tr>
@@ -882,7 +882,7 @@ m.video.content = videocontent
 <tr>
 <td class="short-line">AudioBlacklist</td>
 <td class="short-line">String</td>
-<td class="long-line">Comma-separated list of audio tracks (based on ISO 639-1 or 639-2 language code) that may not be selected from the <strong>Audio track</strong> setting for the content. <br><br>(Available since Roku OS 9.4)<br><br>If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
+<td class="long-line">Comma-separated list of audio tracks (based on ISO 639-1 or 639-2 language code) that may not be selected from the <strong>Audio track</strong> setting for the content. <br><br>(Available since [Roku OS 9.4](doc:release-notes#roku-os-94))<br><br>If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
 <td class="short-line">"ita, fr"</td>
 </tr>
 <tr>
@@ -894,7 +894,7 @@ m.video.content = videocontent
 <tr>
 <td class="short-line">CaptionBlacklist</td>
 <td class="short-line">String</td>
-<td class="long-line">Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may not be selected from the <strong>Accessibility&gt;Captioning track</strong> setting for the content.<br><br>(Available since Roku OS 9.4)<br><br>If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
+<td class="long-line">Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may not be selected from the <strong>Accessibility&gt;Captioning track</strong> setting for the content.<br><br>(Available since [Roku OS 9.4](doc:release-notes#roku-os-94))<br><br>If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
 <td class="short-line">"deu, dan"</td>
 </tr>
 </tbody>
@@ -1028,7 +1028,7 @@ video.setHttpAgent(httpAgent)
 </tbody>
 </table></div>
 <h3 id="drmhttpagent-for-handling-drm-keylicense-requests-separately">drmHttpAgent for handling DRM key/license requests separately</h3>
-<p>Since Roku OS 9.3, you can create a separate agent to handle DRM key and license requests, apart from other types
+<p>Since [Roku OS 9.3](doc:release-notes#roku-os-93), you can create a separate agent to handle DRM key and license requests, apart from other types
 of requests.</p>
 <p>Once you have created your agent, you can set the Video node's <code>drmHttpAgent</code> field directly to designate that the special
 agent is to supersede any currently-set agent in the case of DRM key and license requests. The <code>drmHttpAgent</code> field must be configured before setting the content in the Video node.</p>

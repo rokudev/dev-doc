@@ -168,15 +168,15 @@ Returns the index of the captions mode, which may be one of the following values
 #### Example: isCaptionModeChanged() Event
 
 ```
-Function showVideoScreen(episode As Object)
+function showVideoScreen(episode as Object)
   port = CreateObject("roMessagePort")
   screen = CreateObject("roVideoScreen")
   'some video stream
   '...
   'etc...
-  episode.SubtitleConfig : {
+  episode.SubtitleConfig = {
     TrackName : "eia608/1"
-    }
+  }
   screen.SetContent(episode)
   screen.SetMessagePort(port)
   screen.Show()
@@ -190,7 +190,7 @@ Function showVideoScreen(episode As Object)
       end if
     end if
   end while
-End Function
+end function
 ```
 
 ### isTimedMetaData() as Boolean

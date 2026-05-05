@@ -26,7 +26,7 @@ To integrate Instant Resume, you must have a Roku test device that meets the fol
 
 * **Multi-core ARM processor**. Instant Resume is supported only on Roku devices with multi-core, ARM processors. Although Instant Resume will be enabled on other devices, its effectiveness will vary by platform memory profile. See the [Hardware specifications](doc:hardware) for processor and memory capabilities of all Roku devices.
 
-* **Roku OS 10.0 (or higher)**. Instant Resume is supported only on devices that can run Roku OS 10.0 or higher. See the [Hardware specifications](doc:hardware) for the list of current and updatable Roku devices.
+* **[Roku OS 10.0](doc:release-notes#roku-os-100) (or higher)**. Instant Resume is supported only on devices that can run [Roku OS 10.0](doc:release-notes#roku-os-100) or higher. See the [Hardware specifications](doc:hardware) for the list of current and updatable Roku devices.
 
 > Implementing Instant Resume in an app does not guarantee that the Roku OS can relaunch it in its suspended state. The Roku OS stores as many suspended apps as possible in memory; however, it removes suspended apps when additional memory is needed by the active app. If a suspended app is removed from memory, re-launching the app is done without Instant Resume.
 
@@ -36,7 +36,7 @@ Instant Resume entails suspending the app state in the device RAM and then resum
 
 To implement Instant Resume in an app, do the following:
 
-1. [Update the manifest with required attributes](#updating-the-channel-manifest).
+1. [Update the manifest with required attributes](#updating-the-manifest).
 
 2. [Implement the required suspend and resume handlers](#implementing-suspend-and-resume-handlers).
 
@@ -60,7 +60,7 @@ When the Home key or labeled app key on the Roku remote control is pressed, the 
 
 When the user later returns to the app, the Roku OS invokes the matching **customResume** handler. In the **customResume** handler, apps implement logic to determine the playback experience upon re-launch. Using VOD content for example, the **customResume** handler can check whether a Video node is on the screen stack and remove it if it is in order to display the content's Details screen.
 
-> As of Roku OS 12.0, pressing the "Back" key to exit an app generates an interruption. This means that apps without an Exit Confirmation dialog can support Instant Resume.
+> As of [Roku OS 12.0](doc:release-notes#roku-os-120), pressing the "Back" key to exit an app generates an interruption. This means that apps without an Exit Confirmation dialog can support Instant Resume.
 >
 > ***
 >
@@ -72,7 +72,7 @@ When the user later returns to the app, the Roku OS invokes the matching **custo
 
 In the SceneGraph XML file of the app's Scene node, insert `customization suspendhandler` and `customization resumehandler` tags and set them to `customSuspend` and `customResume`, respectively:
 
-```
+```xml
 <customization suspendhandler="customSuspend" />
 <customization resumehandler="customResume" />
 ```
@@ -212,9 +212,9 @@ The following code snippet illustrates logic that could be used to resume an app
 ' Callback function when the app is suspended from an app exit.
 ' In this example, we are only printing to the brightscript console
 ' that the app is being suspended.
-sub onMainSceneSuspend(arg as dynamic)  
+sub onMainSceneSuspend(arg as dynamic)
   print "***** Suspending App ***** CALLED FROM"; arg.lastSuspendOrResumeReason
-end sub  
+end sub
 
 ' Callback function when the app resumes after an app exit. The
 ' sample will check if a video node has been created. If it has, then we
@@ -222,10 +222,10 @@ end sub
 ' screen. Otherwise, it will resume with the last screen the user was previously
 ' on before the app was suspended.
 sub onMainSceneResume(arg as dynamic) as boolean
-  print "***** Resuming App ***** CALLED FROM"; arg.lastSuspendOrResumeReason  
+  print "***** Resuming App ***** CALLED FROM"; arg.lastSuspendOrResumeReason
   if m.videoPlayer <> invalid and lcase(m.videoPlayer.subtype()) = "video"
       print "***** Closing video screen... *****"
-      CloseScreen(m.videoPlayer)  
+      CloseScreen(m.videoPlayer)
   end if
 end sub
 ```
@@ -239,6 +239,6 @@ end sub
 
 ## Sample app
 
-If your device is running Roku OS 10.0 (or later), you can download and install a [sample app](https://github.com/rokudev/instant-resume) that demonstrates how to implement Instant Resume in an app. You can customize the handling of suspend and resume events in the sample to meet your app's needs.
+If your device is running [Roku OS 10.0](doc:release-notes#roku-os-100) (or later), you can download and install a [sample app](https://github.com/rokudev/instant-resume) that demonstrates how to implement Instant Resume in an app. You can customize the handling of suspend and resume events in the sample to meet your app's needs.
 
 The `onMainSceneSuspend()` and `onMainSceneResume()` methods shown in the VOD playback code sample are taken from the **components/UILogic/VideoPlayerLogic.brs** file in the sample app. They are used as the controlling the `customSuspend()` and `customResume()` methods in the **components/MainScene.xml** file.

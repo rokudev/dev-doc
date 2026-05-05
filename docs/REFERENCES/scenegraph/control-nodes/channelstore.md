@@ -566,7 +566,7 @@ If this command is successful, the [**orderStatus** field](#orderstatus) Content
 | qty        | integer | The quantity purchased                                                                                                                                                                            |
 | total      | string  | Localized total of the item purchased (including tax if applicable) with local currency symbol                                                                                                    |
 
-> As of Roku OS 9.4, if the back button is pressed from the **Order Confirmation** dialog, the **doOrder** command returns only a status of 2 ("interrupted"). Error handling in apps may need to be updated based on this behavior.
+> As of [Roku OS 9.4](doc:release-notes#roku-os-94), if the back button is pressed from the **Order Confirmation** dialog, the **doOrder** command returns only a status of 2 ("interrupted"). Error handling in apps may need to be updated based on this behavior.
 
 ### getPurchases
 

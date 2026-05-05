@@ -104,24 +104,24 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
 
    ```
    sub Notify_Roku_UserIsLoggedIn(rsgScreen = invalid as Object)
-      ' get the global node
-      if type(m.top) = "roSGNode"  ' was called from a component script
-      		globalNode = m.global
-      else ' must pass roSGScreen when calling from main() thread
-     		 globalNode = rsgScreen.getGlobalNode()
-      end if
+       ' get the global node
+       if type(m.top) = "roSGNode"  ' was called from a component script
+           globalNode = m.global
+       else ' must pass roSGScreen when calling from main() thread
+           globalNode = rsgScreen.getGlobalNode()
+       end if
 
-      ' get the Roku Analytics Component Library used for RED
-      RAC = globalNode.roku_event_dispatcher
-      if RAC = invalid then
-      		RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
-      		RAC.debug = true ' for verbose output to BrightScript console, optional
-      		RAC.init = \{RED: \{}} ' activate RED as a provider
-      		globalNode.addFields(\{roku_event_dispatcher: RAC})
-      end if
+       ' get the Roku Analytics Component Library used for RED
+       RAC = globalNode.roku_event_dispatcher
+       if RAC = invalid then
+           RAC = createObject("roSGNode", "Roku_Analytics:AnalyticsNode")
+           RAC.debug = true ' for verbose output to BrightScript console, optional
+           RAC.init = {RED: {}} ' activate RED as a provider
+           globalNode.addFields({roku_event_dispatcher: RAC})
+       end if
 
-      ' dispatch an event to Roku
-      RAC.trackEvent = \{RED: \{eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
+       ' dispatch an event to Roku
+       RAC.trackEvent = {RED: {eventName: "Sign_Up|pageNumber=1|pageType=landing"}}
    end sub
    ```
 

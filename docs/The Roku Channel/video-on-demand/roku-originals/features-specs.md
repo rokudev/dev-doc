@@ -56,7 +56,7 @@ Please note that the Post Grid template provides columns for multiple types of s
 
 ### 2.4 Roku marketing
 
-Marketing will be requesting an early creative sizzle reel and they will be directly involved in the Main Title treatment creative process. Marketing will require both a texted and textless version of the sizzle.
+Marketing will be requesting an early creative sizzle reel and they will be directly involved in the Main Title treatment creative process.
 
 ### 2.5 Roku Localization
 
@@ -88,13 +88,12 @@ Roku’s Localization Team will handle the creation of Latin Spanish subtitles a
 
 Dailies are requested for visibility and early Marketing preparation. Roku Post will provide a user list for Dailies prior to production.
 
-Scripted projects: Allow for dailies across all days of production.
+* Scripted projects: Allow for dailies across all days of production.
+* Documentary projects: Allow for three total 5-10 minute dailies-selects reels, one from each of three discrete shooting days. These do not all need to be from the first three days of principal, but please utilize at least one of the initial few days. Prioritize diversity of environments, subjects, etc. when choosing which days to send.
 
-Documentary projects: Allow for three total 5-10 minute dailies-selects reels, one from each of three discrete shooting days. These do not all need to be from the first three days of principal, but please utilize at least one of the initial few days. Prioritize diversity of environments, subjects, etc. when choosing which days to send.
+Roku’s approved platform for dailies, rough cut release, and final archive is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, so if you are working with a partner who utilizes a different review platform, this may not require an extra render (pending specifications for each).
 
-Roku’s approved platform for dailies, rough cut release, and final archive is Frame.io. All content being sent for review by the Roku team will need to be shared via this platform. Frame.io’s platform is compatible with most commonly used codecs, so if you are working with a partner who utilizes a different review platform, this may not require an extra render (pending specifications for each).
-
-The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the Frame.io team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
+The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
 
 #### 3.3.2 Dailies formatting
 
@@ -102,47 +101,36 @@ Dailies should be posted and organized according to their corresponding shoot da
 
 Each take should be uploaded as one clip within the overall day’s dailies folder. Please ensure that the camera roll source and scene/take information is available for every clip uploaded, either via burn-in windows or file naming. Source camera timecode should be burned into picture.
 
-Once dailies have been uploaded to Frame.io, please send a notification email to those reviewing Dailies, per the Distribution List provided by your Roku Originals Post Manager. Please include the following in each email:
+Once dailies have been uploaded to [Frame.io](http://frame.io/), please send a notification email to those reviewing Dailies, per the Distribution List provided by your Roku Originals Post Manager. Please include the following in each email:
 
-In the subject line include the show title, episode # and dailies day.
-
-In the body of the email include the link from the address bar to the Frame.io dailies project.
+* In the subject line include the show title, episode # and dailies day.
+* In the body of the email include the link from the address bar to the [Frame.io](http://frame.io/) dailies project.
 
 #### 3.3.3 Dailies memo
 
-A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution. Please include at least the following information:
+A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution.
 
 CAPTURE
 
-Camera(s) utilized
-
-For each camera model, please provide:
-
-Video Resolution
-
-Acquisition Codec
-
-Frame rate(s)
-
-Audio sample rate and bit depth
-
-Please confirm that video will be captured log/flat and that no LUT/color grade will be baked into the footage at capture
+* Camera(s) utilized
+  * For each camera model, please provide:
+    * Video Resolution
+    * Acquisition Codec
+    * Frame rate(s)
+* Audio sample rate and bit depth
+* Please confirm that video will be captured log/flat and that no LUT/color grade will be baked into the footage at capture
 
 OFFLOAD
 
-Utility/Process used for offload
-
-Checksum Algorithm used
+* Utility/Process used for offload
+* Checksum Algorithm used
 
 DAILIES & EDIT PROXY PROCESS
 
-Program utilized for creation
-
-Processing method & workflow utilized, including where in process LUT/color applied
-
-Edit Proxies codec & frame rate and Dailies codec & frame rate
-
-Raster/Resolution
+* Program utilized for creation
+* Processing method & workflow utilized, including where in process LUT/color applied
+* Edit Proxies codec & frame rate and Dailies codec & frame rate
+* Raster/Resolution
 
 ### 3.4 Sizzle
 
@@ -438,7 +426,7 @@ As each production will differ with regards to promotional assets, please reach 
 
 ## 7. Credits
 
-**All opening and end credits must be submitted to Roku Post using the Roku Scripted Credits Approval Form (see 8.7.2) for approval with delivery of the first Fine Cut.**
+**All opening and end credits must be submitted to Roku Post using the Roku Scripted Credits Approval Form (see 8.8.2) for approval with delivery of the first Fine Cut.**
 
 ### 7.1 Opening credits
 
@@ -496,8 +484,8 @@ Further opening credits specifications by project type:
       * Fonts have to be large enough to be legible.
       * Fonts used for names should be the same size.
     * The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one, two, or three names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process.
-* Documentary:
-  * No credits outside of Roku presentation cards and main title logo are permitted at the top of each project
+  * Documentary:
+    * No credits outside of Roku presentation cards and main title logo are permitted at the top of each project
 
 ### 7.2 End credit sequence
 
@@ -536,7 +524,7 @@ The Delivery Phase begins as soon as the feature is ready for Quality Control, a
 
 * Due 1 Week Before Delivery to Quality Control Vendor
   * Let Roku Post know which vendor you’re proceeding with
-  * Metadata Ingest Document due to the Hub [See 8.7.1]
+  * Metadata Ingest Document due to the Hub [See 8.8.1]
 
 * Due With Delivery to Quality Control Vendor
   * Texted Master
@@ -593,7 +581,7 @@ Air Order = Please list even if the Air Order is the same as the Production Numb
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | Version           | TXTD (Texted), TXLS (Textless), or PROXY                                                        |
 | Language          | enUS (American English)                                                                         |
-| Resolution        | UHD or HD + Color Space = SDR or HDR                                                            |
+| Resolution        | UHD (scripted)  or HD (documentary) + Color Space = SDR or HDR                                  |
 | Forced Narratives | FN (Present), NC (none present)                                                                 |
 | Audio             | 2CH (Interleaved) or 8CH (5.1 and Stereo) – 7.1 audio not permitted on any masters at this time |
 | Frame Rate        | 23976p, 24p, 25p, 2997p, 30p, 50p, 5994p, 60p                                                   |
@@ -610,7 +598,7 @@ ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#_SampleRate_BitRate_
 
 **Examples:**
 
-MAMA_102_v04_20220919_enUS_PM_Nearfield_2ch_48k_24b_23976.L.wav
+MAMA_102_v04_20220919_enUS_PM_Nearfield_2chCH_48k_24b_23976.Lt.wav
 
 | **Material Type**                             | **Abbreviation**                  |
 | --------------------------------------------- | --------------------------------- |
@@ -750,7 +738,7 @@ Mixing Specifications:
 
     <tr>
       <td>Track Layout</td>
-      <td><u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs    Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
+      <td><u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
     </tr>
 
     <tr>
@@ -765,108 +753,7 @@ Mixing Specifications:
   </tbody>
 </table>
 
-#### 8.4.4 UHD Texted video protection master
-
-Please reach out to Roku Post Production to determine if this master is a requirement for unscripted projects.
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Video Codec</strong></th>
-      <th><strong>ProRes</strong></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Container</td>
-      <td>MOV</td>
-    </tr>
-
-    <tr>
-      <td>Profile</td>
-      <td>4444XQ (4444 okay if exporting from Premiere)</td>
-    </tr>
-
-    <tr>
-      <td>Minimum Bitrate</td>
-      <td>400 mbit/s or higher</td>
-    </tr>
-
-    <tr>
-      <td>Landscape aspect ratio</td>
-      <td>16:9 (1.77:1) - (no black bars)<br />W3840 x H2160 (UHD)</td>
-    </tr>
-
-    <tr>
-      <td>Pixel aspect ratio</td>
-      <td>Square pixels (1:1)</td>
-    </tr>
-
-    <tr>
-      <td>Scan type</td>
-      <td>Progressive scan type</td>
-    </tr>
-
-    <tr>
-      <td>Chroma Subsampling</td>
-      <td>4:4:4</td>
-    </tr>
-
-    <tr>
-      <td>Color Space</td>
-      <td>BT.709 Legal Video Range (16 to 940)</td>
-    </tr>
-
-    <tr>
-      <td>Bit depth</td>
-      <td>10-bit or 12-bit</td>
-    </tr>
-
-    <tr>
-      <td>Constant Frame Rate</td>
-      <td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
-    </tr>
-
-    <tr>
-      <td>Native frame rate</td>
-      <td>No 3:2 pulldown flags</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Audio Codec</strong></th>
-      <th><strong>PCM</strong></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>Format</td>
-      <td>2 Interleaved Tracks or 8 Mono Tracks</td>
-    </tr>
-
-    <tr>
-      <td>Track Layout</td>
-      <td><u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
-    </tr>
-
-    <tr>
-      <td>Sample Rate/Bit Depth</td>
-      <td>48000Hz/24-bit</td>
-    </tr>
-
-    <tr>
-      <td>Channel Mapping & Metadata Tagging</td>
-      <td>See 8.4.2 -Verify correct audio channel mapping and metadata tagging.</td>
-    </tr>
-  </tbody>
-</table>
-
-#### 8.4.5 Textless delivery
+#### 8.4.4 Textless delivery
 
 If your content includes burned-in on screen text, you will be required to deliver a separate Textless Reel. This reel should include clean, text-free versions of any shots that contain burned-in subtitles or graphic text elements. If the show contains a comprehensive graphics package, please strip all graphics and supply the graphics package or elements in Archival. Video and Audio specs should mirror the UHD Protection Texted Master noted above.
 
@@ -887,7 +774,7 @@ _Roku Best Practices_
 
 #### 8.4.5 Final proxy files (clean & visible timecode)
 
-From each Texted Master created, please export following proxy files:
+From each Texted Master created, please export following (2) proxy files:
 
 <table>
   <thead>
@@ -955,12 +842,6 @@ From each Texted Master created, please export following proxy files:
   </tbody>
 </table>
 
-#### 8.4.6 Final DCP
-
-For features, Roku requests a DCP. Please reach out at the start of your project to see if a DCP will be required for delivery. Full DCP specifications to follow.
-
-All DCPs will need to be both [DCI compliant](https://www.dcimovies.com/specification/DCI-DCSS-v141_2021-1013.pdf) and labeled per [ISDCF specifications](https://registry-page.isdcf.com/).
-
 ### 8.5 Audio stem delivery
 
 Prior to the commencement of principal photography, please reach out to Roku Post Production in order to determine the necessary audio deliverables for your series. As content, formatting, and style will differ from one series to the next, Roku understands that stem delivery may also vary. Please upload to your Archive folder on [Frame.io](http://frame.io/).
@@ -978,10 +859,10 @@ Provided below are the stems required for delivery of each episode/project:
 * Stereo & 5.1 Sound Effects
 * Pro Tools Session Files (.ptx)
 
-Provided below are the stems Roku would like to receive, if available (and applicable):
+Provided below are additional required elements:
 
-* Stereo & 5.1 Mix minus narration
-* Score or Original Composition (pending rights)
+* Stereo & 5.1 Mix minus narration stems
+* Original Score or Original Composition provided as a flattened .WAV for each discrete cue
 * Mono M&E Stems - Opticals, Backgrounds, etc.
 
 All audio should be archived as 24-bit, 48kHz WAV files.
@@ -992,7 +873,7 @@ ShowCode_ProdNumber_Vers_LangCode_MaterialType_Channel#_SampleRate_BitRate_TC_Ch
 
 **Examples:**
 
-MAMA_102_v04_enUS_PM_Nearfield_2ch_48k_24b_23976.L.wav
+MAMA_102_v04_enUS_PM_Nearfield_2ch_48k_24b_23976.Lt.wav
 
 _Roku Best Practices_
 
@@ -1012,13 +893,11 @@ All files are required in an effort to support customers that are deaf or hard o
 
 Roku requires closed captions and subtitles in **2** formats: SRT and WebVTT. The files have to have the same timecode and frame rate as the video and audio delivered. Character encoding MUST be UTF-8.
 
-All timed text should be delivered to the show's archival folder on S3 via Aspera.
-
 **Languages & formats required:**
 
 English (American, Code: enUS): Subtitles, SDH, & Forced Narrative
 
-All files should be labeled as follows:
+**All files should be labeled as follows:**
 
 ShowCode-ProdNumber-LanguageCode_Format-RevisionDate.srt
 
@@ -1030,20 +909,22 @@ NION-101-enUS_FN-20190701
 
 ### 8.7 Breakdown of final locations for media deliverables
 
-| **Media**                                      | **Final Location** |
-| ---------------------------------------------- | ------------------ |
-| TXTD Master                                    | S3                 |
-| TXLS Master                                    | S3                 |
-| Clean Proxy                                    | Frame.io           |
-| Vis. TC Proxy                                  | Frame.io           |
-| Mono Audio Stems                               | S3                 |
-| Stereo & 5.1 Printmaster Stems                 | S3                 |
-| Stereo & 5.1 Stems (M&E, Music, Dialogue, SFX) | S3                 |
-| Pro Tools Session Files (.ptx)                 | S3                 |
-| VAM Image Sequence (in .zip container)         | S3                 |
-| CTM Image Sequence (in .zip container)         | S3                 |
-| Timed Text Files (.srt and .vtt)               | S3                 |
-| Paper Deliverables (Credits, Metadata, etc.)   | The Hub            |
+<br />
+
+| Media                                          | Final Location |
+| :--------------------------------------------- | :------------- |
+| TXTD Master                                    | S3             |
+| TXLS Master                                    | S3             |
+| Clean Proxy                                    | Frame.io       |
+| Vis. TC Proxy                                  | Frame.io       |
+| Mono Audio Stems                               | S3             |
+| Stereo & 5.1 Printmaster Stems                 | S3             |
+| Stereo & 5.1 Stems (M&E, Music, Dialogue, SFX) | S3             |
+| Pro Tools Session Files (.ptx)                 | S3             |
+| VAM Image Sequence (in .zip container)         | S3             |
+| CTM Image Sequence (in .zip container)         | S3             |
+| Timed Text Files (.srt and .vtt)               | S3             |
+| Paper Deliverables (Credits, Metadata, etc.)   | The Hub        |
 
 ### 8.8 Paper deliverables
 
@@ -1107,7 +988,7 @@ Please deliver the final version of the Roku Delivery Checklist that you receive
 
 Music Cue Sheets are required for all projects. Please use the cue sheet template found on the American Society of Composers, Authors and Publishers (ASCAP) website linked [here](https://www.ascap.com/help/royalties-and-payment/cue-sheets) or similar cue sheet template when submitting to Roku. The ASCAP template is also available via the Hub in the Production Legal – Scripted folder.
 
-Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Grossberg at [sgrossberg@roku.com](mailto:sgrossberg@roku.com).
+Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Vosper at [svosper@roku.com](mailto:svosper@roku.com).
 
 #### 8.8.10 Not applicable form
 
@@ -1131,7 +1012,7 @@ Required:
 * Graphic Elements – Main title card, credit PNGs, end credit PNGs, on-screen graphics, interstitials, etc.
 * Timed Text Files
 
-Any and all series that are wholly owned by Roku will require delivery of VAMs, CTMs, and final Visual Effects shots (where applicable) via Aspera upload to S3, or, in some cases, LTO9 or greater. LTOs should be formatted LTFs and include a digital manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series. These manifests should be uploaded to The Hub.
+Any and all series that are wholly owned by Roku will require delivery of VAMs, CTMs, and final Visual Effects shots (where applicable) via Aspera upload to S3, or, in some cases, LTO10 or greater. LTOs should be formatted LTFs and include a digital manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series. These manifests should be uploaded to The Hub.
 
 For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series.
 
@@ -1166,6 +1047,7 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 * 8.6 - Timed Text files will now be delivered to the AWS S3 Archival Bucket.
 * 8.7 - Final destination chart for all deliverables.
 * 9.1 - Final Archival Media will now be uploaded to AWS S3, rather than Frame.io.
+* 9.1 - LTO archive updated to LTO10 requirement.
 
 ### V3.0
 

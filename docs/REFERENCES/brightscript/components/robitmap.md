@@ -34,7 +34,7 @@ An roBitmap can also load its image data from a file:
 
 **Example**
 
-~~~
+```
 ' Draw three bitmaps as fast as we can
 '
 Screen=CreateObject("roScreen")
@@ -42,17 +42,17 @@ bm1=CreateObject("roBitmap", "pkg:/images/myphoto1.jpg")
 bm2=CreateObject("roBitmap", "pkg:/images/myphoto2.jpg")
 bm3=CreateObject("roBitmap", "pkg:/images/myphoto3.jpg")
 bmarray=[bm1, bm2, bm3]
-While true
-    For each bitmap in bmarray
+while true
+    for each bitmap in bmarray
         Screen.DrawObject(0,0, bitmap)
         Screen.Finish()
-    End for
-End While
-~~~
+    end for
+end while
+```
 
 **Example: Double buffering with roBitmap**
 
-~~~
+```
 screen1=CreateObject("roScreen")
 off=CreateObject("roBitmap", {width:1280, height:720, AlphaEnable:false})
 off.Clear(white)
@@ -60,7 +60,7 @@ dfDrawImage(off, "pkg:/images/myimage.png", 50, 50)
 off.DrawRect(150, 150, 200, 200, &hFF) ' black, alpha: all source
 screen1.DrawObject(0, 0, off)
 Screen1.Finish()
-~~~
+```
 
 ## Supported image formats
 

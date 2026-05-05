@@ -12,7 +12,7 @@ next:
 ---
 
 
-Formal support for error handling  came to BrightScript in Roku OS 9.4, with the introduction of exception trapping. BrightScript's `TRY`/`CATCH`/`THROW` model may be familiar to developers who have worked with other popular programming languages, such as Java or Python. This article provides an overview of error handling under BrightScript, especially as achieved through the exception trapping feature. Detailed statement syntax is discussed in the Reference article about [Program statements](doc:program-statements).
+Formal support for error handling  came to BrightScript in [Roku OS 9.4](doc:release-notes#roku-os-94), with the introduction of exception trapping. BrightScript's `TRY`/`CATCH`/`THROW` model may be familiar to developers who have worked with other popular programming languages, such as Java or Python. This article provides an overview of error handling under BrightScript, especially as achieved through the exception trapping feature. Detailed statement syntax is discussed in the Reference article about [Program statements](doc:program-statements).
 
 ## Proper usage of exceptions
 
@@ -29,14 +29,15 @@ It is important for the developer to view BrightScript's exception trapping feat
 The code that handles an exceptional situation resides in a `TRY`/`CATCH` block. Here is an example:
 
 ```
-PRINT "I'm about to try something that might not work"
-TRY
+print "I'm about to try something that might not work"
+try
     do_something_that_might_throw_an_exception()
-    PRINT "It worked!"
-CATCH e
-    PRINT "It went wrong:",e.message
-END TRY
-PRINT "I've finished the attempt. (This is printed whether or not an exception was caught.)"
+    print "It worked!"
+catch e
+    print "It went wrong:",e.message
+end try
+
+print "I've finished the attempt. (This is printed whether or not an exception was caught.)"
 ```
 
 BrightScript will treat the block as follows:
@@ -60,10 +61,10 @@ When an exception is caught, information concerning the circumstances is collect
 The number is the same as printed when a program crashes. For example, consider this code:
 
 ```
-SUB main()
+sub main()
     x = 1
-    PRINT x.foo
-END SUB
+    print x.foo
+end sub
 ```
 
 Execution produces the following output, due to an exception that is *not* caught:
@@ -75,14 +76,14 @@ Syntax Error. (runtime error &h02) in /tmp/dev/example.brs(3)
 Note that the system's standard error reporting format may not provide information that is most meaningful to the user, or present it in the most useful format. The following version of `main()` is written to catch exceptions and report them to the user in a form that the programmer has defined:
 
 ```
-SUB main()
+sub main()
     x = 1
-    TRY
-        PRINT x.foo
-    CATCH e
-        PRINT e.number,e.message
-    END TRY
-END SUB
+    try
+        print x.foo
+    catch e
+        print e.number,e.message
+    end try
+end sub
 ```
 
 Here is the "programmer-approved" output produced by the enhanced `main()`:
@@ -109,7 +110,7 @@ The `function` prototype text ("signature") will be something like `"main() As V
 CATCH e
     prototype = e.backtrace[e.backtrace.count()-1].function
     name = LEFT(prototype,INSTR(prototype,"(")-1)
-    PRINT "Error in function ";name
+    print "Error in function ";name
 END TRY
 ```
 
@@ -192,15 +193,15 @@ THROW { backtrace: [ {function: "main()", line_number: "Five"} ] }
 Custom information fields can be added to an exception without invalidating the `THROW`, so long as system-defined fields are left undisturbed. The custom fields can then be read by the `CATCH`-block that handles the exception. Roku recommends that any custom fields have names that begin with "`custom`"; fields with such names will not accidentally overwrite either existing system-defined fields, or any fields that Roku may eventually add to exception objects.
 
 ```
-TRY
+try
     fetch_web_page()
-CATCH e
-    IF e.custom_http_response_code = 404 THEN
-        PRINT "The page didn't exist"
-    ELSE
-        THROW e      ' a re-throw – see relevant documentation for explanation
-    END IF
-END TRY
+catch e
+    if e.custom_http_response_code = 404 then
+        print "The page didn't exist"
+    else
+        throw e      ' a re-throw – see relevant documentation for explanation
+    end if
+end try
 ```
 
 ### Re-throwing an exception
@@ -210,12 +211,12 @@ An exception object that has been caught is a valid argument to `THROW`. This is
 #### Reacting to an error without handling it
 
 ```
-TRY
-    IF m.already_failed_once <> TRUE THEN do_something_which_might_fail()
-CATCH e
-    m.already_failed_once = TRUE
-    THROW e
-END TRY
+try
+    if m.already_failed_once <> true then do_something_which_might_fail()
+catch e
+    m.already_failed_once = true
+    throw e
+end try
 ```
 
 #### Handling only some errors
@@ -223,18 +224,18 @@ END TRY
 ```
 LIBRARY "v30/bslCore.brs"
 
-SUB main()
-    ERR = bslBrightScriptErrorCodes()
-    TRY
+sub main()
+    err = bslbrightscripterrorcodes()
+    try
         do_something_which_might_fail()
-    CATCH e
-        IF e.number = ERR.ERR_DIV_ZERO THEN
-            PRINT "Divided by zero. A pity, but let's proceed."
-        ELSE
-            THROW e
-        END IF
-    END TRY
-END SUB
+    catch e
+        if e.number = err.ERR_DIV_ZERO then
+            print "Divided by zero. A pity, but let's proceed."
+        else
+            throw e
+        end if
+    end try
+end sub
 ```
 
 The above snippet handles only division by zero in `do_something_which_might_fail()`; all other errors are handled as though that `TRY`...`CATCH` were not there - either being handled by another `TRY`...`CATCH`, or terminating the program.
@@ -263,105 +264,105 @@ For example, `TRY`/`CATCH` blocks can be nested arbitrarily to provide multiple 
 Below, although calling `reciprocal(0)` causes a division by zero, the function handles that exception itself, so the `TRY`/`CATCH` block in `main` *never* catches anything:
 
 ```
-FUNCTION reciprocal(x)
-    TRY
-        RETURN 1/x
-    CATCH e
-        RETURN 1e1000000  'This is so big it will be infinity
-    END TRY
-END FUNCTION
+function reciprocal(x)
+    try
+        return 1/x
+    catch e
+        return 1e1000000  'This is so big it will be infinity
+    end try
+end function
 
-SUB main()
-    PRINT "Starting"
-    TRY
-        FOR i = -10 TO +10
-            PRINT "1/";i;"=";reciprocal(i)
-        NEXT
-    CATCH e
-        PRINT "This never happens"
-    END TRY
-    PRINT "Ending"
-END SUB
+sub main()
+    print "Starting"
+    try
+        for i = -10 to +10
+            print "1/";i;"=";reciprocal(i)
+        end for
+    catch e
+        print "This never happens"
+    end try
+    print "Ending"
+end sub
 ```
 
 Here is an alternative that calculates the reciprocal directly in `main`:
 
 ```
-SUB main()
-    PRINT "Starting"
-    TRY
-        FOR i = -10 TO +10
-            TRY
-                PRINT "1/";i;"=";1/i
-        CATCH e
-            PRINT "1/";i;" gives ";e.message
-        END TRY
-        NEXT
-    CATCH e
-        PRINT "This never happens"
-    END TRY
-    PRINT "Ending"
-END SUB
+sub main()
+    print "Starting"
+    try
+        for i = -10 to +10
+            try
+                print "1/";i;"=";1/i
+            catch e
+                print "1/";i;" gives ";e.message
+            end try
+        end for
+    catch e
+        print "This never happens"
+    end try
+    print "Ending"
+end sub
 ```
 
 An outer `TRY`/`CATCH` block can handle errors caused in an inner `CATCH`:
 
 ```
-SUB main()
-    PRINT "Starting"
+sub main()
+    print "Starting"
     x = "I'm not an array"
-    TRY
-        TRY
-            PRINT "x[0]*2=";x[0]*2
-        CATCH e
+    try
+        try
+            print "x[0]*2=";x[0]*2
+        catch e
             ' Spoiler: evaluating x[0] is about to cause an error
-            PRINT "I think that failed because ";x[0];" isn't a number"
-    END TRY
-    CATCH e
-        PRINT "Nope, I guessed wrong: ";e.message
-    END TRY
-    PRINT "Ending"
-END SUB
+            print "I think that failed because ";x[0];" isn't a number"
+    end try
+    catch e
+        print "Nope, I guessed wrong: ";e.message
+    end try
+    print "Ending"
+end sub
 ```
 
 Here is a variation, in which a `CATCH` itself contains a `TRY`/`CATCH` block, which, in turn catches any errors that *it* produces:
 
 ```
-SUB main()
-    PRINT "Starting"
+sub main()
+    print "Starting"
     x = "I'm not an array"
-    TRY
-        PRINT "x[0]*2=";x[0]*2
-    CATCH e
-        TRY
-            PRINT "I think that failed because ";x[0];" isn't a number"
-        CATCH e
-            PRINT "Nope, I guessed wrong: ";e.message
-        END TRY
-    END TRY
-    PRINT "Ending"
-END SUB
+    try
+        print "x[0]*2=";x[0]*2
+    catch e
+        try
+            print "I think that failed because ";x[0];" isn't a number"
+        catch e
+            print "Nope, I guessed wrong: ";e.message
+        end try
+    end try
+    print "Ending"
+end sub
 ```
 
 Extracting the diagnostic portion into a separate subroutine yields the same results:
 
 ```
-SUB diagnose(x)
-    TRY
-        PRINT "I think that failed because ";x[0];" isn't a number"
-    CATCH e
-        PRINT "Nope, I guessed wrong: ";e.message
-    END TRY
-END SUB
+sub diagnose(x)
+    try
+        print "I think that failed because ";x[0];" isn't a number"
+    catch e
+        print "Nope, I guessed wrong: ";e.message
+    end try
+end sub
 
-SUB main()
-    PRINT "Starting"
+sub main()
+    print "Starting"
     x = "I'm not an array"
-    TRY
-        PRINT "x[0]*2=";x[0]*2
-    CATCH e
+    try
+        print "x[0]*2=";x[0]*2
+    catch e
         diagnose(x)
-    END TRY
-    PRINT "Ending"
-END SUB
+    end try
+    print "Ending"
+end sub
 ```

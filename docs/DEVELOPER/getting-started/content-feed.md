@@ -16,7 +16,7 @@ The content metadata in the feed is used to transfer the video and audio content
 
 The following example demonstrates the types of metadata included in the feed for a single content item:
 
-```
+```json
 {
     "id": "dev-summit-21-keynote-welcome-address",
     "title": "Keynote - Welcome address",

@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 ## Implemented by
 
@@ -43,10 +43,10 @@ utils = CreateObject("roUtils")
     di = CreateObject("roDeviceInfo")
     aa = { a: 1, b: { b1: 42 }, c: di }
     new_aa = utils.DeepCopy(aa)
-    ? "IsSameObject", utils.IsSameObject(aa, new_aa)
-    ? "new_aa.a", new_aa.a
-    ? "new_aa.b", new_aa.b
-    ? "new_aa.c", new_aa.c ' invalid, roDeviceInfo is not copyable
+    print "IsSameObject", utils.IsSameObject(aa, new_aa)
+    print "new_aa.a", new_aa.a
+    print "new_aa.b", new_aa.b
+    print "new_aa.c", new_aa.c ' invalid, roDeviceInfo is not copyable
 ```
 
 This code will output the following on the port 8085 console:
@@ -88,3 +88,21 @@ shared = {}
     utils.isSameObject(aa, {})   ' returns false
     utils.isSameObject(aa.a, aa.b)  ' returns true
 ```
+
+### HasComponent(componentName as String) as Boolean
+
+_Available since [Roku OS 15.2](doc:release-notes#roku-os-152)_
+
+#### Description
+
+Verifies whether a component name is already registered. Developers can call this method before trying to create an instance.
+
+#### Parameters
+
+| **Name**      | **Type** | **Description**                                           |
+| :------------ | :------- | :-------------------------------------------------------- |
+| componentName | String   | The component name to check for an existing registration. |
+
+#### Return Value
+
+A flag indicating whether the specified component name has already been registered.

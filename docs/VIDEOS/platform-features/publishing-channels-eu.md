@@ -32,4 +32,4 @@ This video explains how developers can surface their Roku apps to relevant viewe
 
 [Search feed spec](doc:search-feed)
 
-[Roku Pay in-app products](doc:in-channel-products)
+[Roku Pay in-app products](doc:product-catalog)

@@ -33,7 +33,7 @@ Testing your own app starts by sideloading the app to your Roku test device. Use
 
 The Roku Remote Tool application is available for download and installation on Windows, Mac, and Linux. It can receive all responses from the a Roku device.
 
-**Starting step 3: [Add your Roku development device](#Deviceconnection)**
+**Starting step 3: Add your Roku development device**
 
 1. Start the Device Manager. If the Device Manager is not shown at tool startup, begin by clicking **Select a Device** in the upper left corner. Then:
 
@@ -87,7 +87,7 @@ The Roku Remote Tools records button press and text entry sequences as "steps" i
 
 ### params
 
-Begin by specifying your app information in the `params` section. You must use **[Add Channel](#AddChannel)** to add at least one app before continuing.
+Begin by specifying your app information in the `params` section. You must use **Add Channel** to add at least one app before continuing.
 
 <table>
   <thead>
@@ -122,8 +122,8 @@ Begin by specifying your app information in the `params` section. You must use *
 
     <tr>
       <td><code>channels</code></td>
-      <td><strong><a href="#AddChannel">Add Channel</a></strong></td>
-      <td>Use the <strong><a href="#AddChannel">Add Channel</a></strong> macro as a convenient way of entering app listings in the script. <br />(You could instead type the entries in manually.)  To add app(s) using the macro, repeat these steps as needed:<br /><br />1. Provide a Channel Name<br />2. Enter Channel ID<br />3. Click <strong>Add to table</strong><br />then click the <img alt="roku815px - (plus)" src="https://confluence.portal.roku.com:8443/s/i0p0pk/8502/1ef1526ca6e62f10d6a1c5f77fccb30527d7d4d1/_/images/icons/emoticons/add.svg" /> next to each table entry to be inserted.<br /><br /><img alt="roku400px - rremote-advanced-mode-add-channel-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-add-channel.png" /></td>
+      <td><strong>Add Channel</strong></td>
+      <td>Use the <strong>Add Channel</strong> macro as a convenient way of entering app listings in the script. <br />(You could instead type the entries in manually.)  To add app(s) using the macro, repeat these steps as needed:<br /><br />1. Provide a Channel Name<br />2. Enter Channel ID<br />3. Click <strong>Add to table</strong><br />then click the <img alt="roku815px - (plus)" src="https://confluence.portal.roku.com:8443/s/i0p0pk/8502/1ef1526ca6e62f10d6a1c5f77fccb30527d7d4d1/_/images/icons/emoticons/add.svg" /> next to each table entry to be inserted.<br /><br /><img alt="roku400px - rremote-advanced-mode-add-channel-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-add-channel.png" /></td>
       <td><strong><code>channels:</code></strong> <br /><strong><code>'My First Channel': 12345</code></strong> <br /><strong><code>'My Second Channel': 12346</code></strong> <br /><strong><code>'My Third Channel': 12347</code></strong></td>
     </tr>
   </tbody>

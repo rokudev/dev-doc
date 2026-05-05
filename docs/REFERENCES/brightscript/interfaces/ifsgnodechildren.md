@@ -20,21 +20,21 @@ The ifSGNodeChildren interface allows querying and manipulation of nodes in a Sc
 
 To use the methods in this interface to manipulate child nodes at the scene level, the subject nodes must be wrapped in another element, typically a Group node. For example:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<component name = "myScene" extends = "Scene" >
-  <script type = "text/brightscript" >
+<component name="myScene" extends="Scene">
+  <script type="text/brightscript">
     <![CDATA[
-    sub init()
-      m.myGroup = m.top.FindNode("myGroup")
-      m.label = m.myGroup.getChild(0)
-    end sub
+      sub init()
+        m.myGroup = m.top.FindNode("myGroup")
+        m.label = m.myGroup.getChild(0)
+      end sub
     ]]>
   </script>
 
   <children>
-    <Group id = "myGroup">
-      <Label id = "myLabel" ... />
+    <Group id="myGroup">
+      <Label id="myLabel" ... />
     </Group>
   </children>
 </component>
@@ -42,19 +42,19 @@ To use the methods in this interface to manipulate child nodes at the scene leve
 
 In the example above, m.label will contain the roSGNode corresponding to the Label node after the getChild() call. On the other hand, the following will not work:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<component name = "myScene" extends = "Scene" >
-  <script type = "text/brightscript" >
+<component name="myScene" extends="Scene">
+  <script type="text/brightscript">
     <![CDATA[
-    sub init()
-      m.label = m.top.getChild(0)
-    end sub
+      sub init()
+        m.label = m.top.getChild(0)
+      end sub
     ]]>
   </script>
 
   <children>
-    <Label id = "myLabel" ... />
+    <Label id="myLabel" ... />
   </children>
 </component>
 ```
@@ -352,7 +352,7 @@ cn.update(aa,false)
 
 Replaces the child nodes in the subject node, starting at the position specified by index, with new child nodes specified by child_nodes
 
-> Starting from Roku OS 8.1, when using this method to update the content of each item in a markupGrid, if more items are supplied than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children. The [appendChildren()](#appendchildchild-as-rosgnode-as-boolean) function can be used to add the extra items.
+> Starting from [Roku OS 8.1](doc:release-notes#roku-os-81), when using this method to update the content of each item in a markupGrid, if more items are supplied than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children. The [appendChildren()](#appendchildchild-as-rosgnode-as-boolean) function can be used to add the extra items.
 
 #### Parameters
 

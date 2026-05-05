@@ -5,10 +5,10 @@ The \<children\> element contains the SceneGraph node XML markup elements. The \
 
 The SceneGraph node markup elements contained in the \<children\> element may include a special XML element attribute, `role`. The `role` attribute allows a node element to be defined as a child node of a parent node, and the child node to be assigned as the value of the parent node field identified by the `role` attribute value:
 
-~~~~
+```xml
 <ParentNode >
-  <ChildNode 
-    role = "parentnode_fieldname" 
+  <ChildNode
+    role = "parentnode_fieldname"
     ... />
 </ParentNode>
-~~~~
+```

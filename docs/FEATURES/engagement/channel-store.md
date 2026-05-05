@@ -12,11 +12,11 @@ next:
 ---
 <br />
 
-<Image alt="roku815px - channelstore1" border={false} src="https://image.roku.com/ZHZscHItMTc2/channelstore1.png" title="channelstore1" />
+![roku815px - channelstore1](https://image.roku.com/ZHZscHItMTc2/channelstore1.png "channelstore1")
 
 ## Overview
 
-The Streaming Store is where Roku users can search, discover, and download [public channels](doc:channel-publishing-guide) on the Roku Platform.
+The Streaming Store is where Roku users can search, discover, and download [apps](doc:channel-publishing-guide) on the Roku Platform.
 
 ## What is the Streaming Store?
 
@@ -28,7 +28,7 @@ All public apps have been [reviewed and certified](doc:certification) for qualit
 
 ## Accessing the Streaming Store
 
-<Image alt="roku815px - channelstore2-accessing" border={false} src="https://image.roku.com/ZHZscHItMTc2/channelstore2.png" title="channelstore2" />
+![roku815px - channelstore2-accessing](https://image.roku.com/ZHZscHItMTc2/channelstore2.png "channelstore2")
 
 The Streaming Store can be found on the home screen of any Roku device by navigating to the “Streaming Store" section in the menu on the left-hand side. Additionally, users based in the United States can access the Streaming Store from the web by going to [channelstore.roku.com](https://channelstore.roku.com) from any browser.
 
@@ -38,7 +38,7 @@ Once in the Streaming Store, there are a variety of ways for users to find an ap
 
 Users can also use the Roku Search feature in the left navigation bar of the Roku home screen (or the “Search channel” bar from the web) to find specific apps they’re looking for. Roku Search can also accept key terms, such as entering the words “news,” “sports,” or “weather” followed by a date.
 
-<Image alt="roku815px - channelstore3-finding-channels" border={false} src="https://image.roku.com/ZHZscHItMTc2/channelstore3.png" title="channelstore3" />
+![roku815px - channelstore3-finding-channels](https://image.roku.com/ZHZscHItMTc2/channelstore3.png "channelstore3")
 
 ## Downloading apps
 
@@ -46,7 +46,7 @@ Depending on how you’ve found the app you’re looking for, it can be installe
 
 ## Installing via Roku device
 
-<Image alt="roku815px - channelstore4-installing-via-device" border={false} src="https://image.roku.com/ZHZscHItMTc2/channelstore4.png" title="channelstore4" />
+![roku815px - channelstore4-installing-via-device](https://image.roku.com/ZHZscHItMTc2/channelstore4.png "channelstore4")
 
 When viewing an app from your Roku device, you’ll see the following information:
 
@@ -60,13 +60,13 @@ The page will also contain an “Add channel” button, which will automatically
 
 ## Installing via web store
 
-<Image alt="roku815px - channelstore5-installing-via-webstore" border={false} src="https://image.roku.com/ZHZscHItMTc2/channelstore5.png" title="channelstore5" />
+![roku815px - channelstore5-installing-via-webstore](https://image.roku.com/ZHZscHItMTc2/channelstore5.png "channelstore5")
 
 Users in the US can also find similar information by searching for the app on the [web store](https://channelstore.roku.com/browse). As with the Roku Player, click the “+ Add Channel” button while logged in to your Roku account to add the app to your Roku device.
 
 ## Installing via vanity code
 
-<Image alt="roku815px - channelstore6-installing-via-vanity-code" border={false} src="https://image.roku.com/ZHZscHItMTc2/channelstore6.png" title="channelstore6" />
+![roku815px - channelstore6-installing-via-vanity-code](https://image.roku.com/ZHZscHItMTc2/channelstore6.png "channelstore6")
 
 Every app has an access code that can be accessed from the web to quickly install an app. To install an app this way:
 

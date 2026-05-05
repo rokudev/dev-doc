@@ -19,8 +19,8 @@ create a screen and set up its Scene node.
 
 ```
 screen = CreateObject("roSGScreen")     ' create the roSGScreen
-m.port = CreateObject("roMessagePort")     
+m.port = CreateObject("roMessagePort")
 screen.setMessagePort(m.port)
 scene = screen.CreateScene("Scene")     ' create a Scene node
-screen.show()                           ' display the screen 
+screen.show()                           ' display the screen
 ```

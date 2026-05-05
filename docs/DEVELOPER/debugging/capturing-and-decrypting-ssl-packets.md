@@ -44,16 +44,16 @@ Click for more information on how to create a [self-signed SSL certificate](http
 1. SSH into DD-WRT as root root.
 2. Add DD-WRT to monitor traffic by entering the following console commands:
 
-    ~~~
+    ```
     root@DD-WRT:~# iptables -t mangle -A POSTROUTING -d <Device-To-Monitor-IP> -j ROUTE --tee --gw <Listening-Device-IP>
     root@DD-WRT:~# iptables -t mangle -A PREROUTING -s <Device-To-Monitor-IP> -j ROUTE --tee --gw <Listening-Device-IP>
-    ~~~
+    ```
 
 3. Launch **Wireshark**, select **Capture** from the top menu, and add the following capture filter with the **IP address** of the device that you want to capture. Select **OK** when done.
 
-    ~~~
-    Field 1: IP address <IP Address>                         Field 2: host \<IP Address\>
-    ~~~
+    ```
+    Field 1: IP address <IP Address>                         Field 2: host <IP Address>
+    ```
 
     ![roku815px - capturing-and-decrypting-2](https://image.roku.com/ZHZscHItMTc2/capturing-and-decrypting-2.png "capturing-and-decrypting-2.png")
 
@@ -90,6 +90,6 @@ These settings can be set in the Web GUI of your router. If this is not possible
 1. The previous method can also be viewed using **tcpdump**.
 2. After going through steps 1 through 4 in the section above, you can open the cap file.
 
-    ~~~
+    ```bash
     $ tcpdump -r /path/to/packetfile.cap
-    ~~~
+    ```

@@ -19,11 +19,11 @@ The [BrightScript Language extension for VSCode](https://marketplace.visualstudi
 
 To record a trace, developers need the following:
 
-* Roku OS 15.1 (or later)
+* [Roku OS 15.1](doc:release-notes#roku-os-151) (or later)
 * A Roku device with [developer mode enabled](doc:developer-setup).
 * Roku app (you can record a trace with an app running in a [sideloaded](doc:developer-setup#sideloading-apps), beta, or production environment).
   * For a sideloaded app, the manifest must enable the **run_as_process** attribute (run_as_process=1).
-  * For a [beta](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#beta-channel-guidelines) or [production](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)). 
+  * For a [beta](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#beta-channel-guidelines) or [production](https://roku-ent.readme.io/dev/docs/channel-publishing-guide#public-channel-guidelines) app, the developer must own the app (your [device must be keyed with key used to sign the app package](doc:packaging-channels)).
 * Trace recording app. You can record an app trace using [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript) or ECP and a websocket client.
 
 ## Using VSCode to enable and record Perfetto traces
@@ -37,29 +37,29 @@ You can enable and record a Perfetto trace with the [BrightScript Language exten
    1. Installed VSCode.
    2. Installed the latest version of [BrightScript Language extension for VSCode](https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript).
    3. Created a [**launch.json** configuration file](https://rokucommunity.github.io/vscode-brightscript-language/Debugging/index.html) in your app directory.
-   4. Updated your Roku device to Roku OS 15.2 (or later)
+   4. Updated your Roku device to [Roku OS 15.2](doc:release-notes#roku-os-152) (or later)
 
 2. In the **launch.json** file, add the following **profiling** object to the **configurations** object:
 
-   ```
+   ```jsonc
    {
-       "version": "0.2.0",
-       "configurations": [
-         {
-           "type": "brightscript",
-           "request": "launch",
-           "name": "BrightScript Debug: Launch",
-           "host": "<Roku device IP address>",
-           "password": "<Roku device password>",
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "type": "brightscript",
+          "request": "launch",
+          "name": "BrightScript Debug: Launch",
+          "host": "<Roku device IP address>",
+          "password": "<Roku device password>",
 
-            //add the following to enable Perfetto tracing   
-           "profiling": {
-               "tracing": {
-                   "enable": true,
-               }
-             }
-           }
-       ]
+          //add the following to enable Perfetto tracing
+          "profiling": {
+              "tracing": {
+                  "enable": true,
+              }
+            }
+          }
+      ]
    }
    ```
 
@@ -122,21 +122,21 @@ You can enable and record a Perfetto trace with ECP following these steps:
 
 To enable tracing for an app, send the enable Perfetto command with the channel ID:
 
-```
+```bash
 curl -X POST "http://192.168.1.86:8060/perfetto/enable/dev"
 ```
 
 The ECP response will have the following syntax:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <perfetto-enable>
- <enabled-channels>
- <channel>dev</channel>
- </enabled-channels>
- <timestamp>1762473265350</timestamp>
- <timestamp-end>1762473265350</timestamp-end>
- <status>OK</status>
+  <enabled-channels>
+  <channel>dev</channel>
+  </enabled-channels>
+  <timestamp>1762473265350</timestamp>
+  <timestamp-end>1762473265350</timestamp-end>
+  <status>OK</status>
 </perfetto-enable>
 ```
 
@@ -148,7 +148,7 @@ Once enabled, tracing starts automatically each time the app is launched
 
 To record trace data for a session, using a websocket client to connect to the device (for example, [websocat](https://github.com/vi/websocat)). The websocket emits a stream of bytes, which is the Protobuf-encoded Perfetto trace from the device.
 
-```
+```bash
 websocat --binary ws://$ip:8060/perfetto-session > perfetto_data.trace
 ```
 

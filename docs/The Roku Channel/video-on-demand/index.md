@@ -8,7 +8,7 @@ If you have content that you would like to submit for The Roku Channel, please f
 
 ## Specifications
 
-* [Roku-Hosted (Ingest) Specs](doc:ingest-specifications)
+* [Roku-Hosted (Ingest) Specs](doc:delivery#ingest-specifications)
 * [Partner-Hosted (Feed) Specs](doc:live-feed-specifications)
 
 ## Analytics & reporting

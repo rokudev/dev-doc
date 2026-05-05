@@ -27,7 +27,7 @@ Offering transactional content in an app entails [creating in-app products](doc:
 
 ## Creating in-app products for TVOD
 
-To link transactional content with Roku Pay, you create in-app products in the Developer Dashboard. With the TVOD model, in-app products only need to be created for each [product category](doc:in-channel-products) (video, audio, game, or app/utility). For example, if you plan on offering movie rentals, you only need to create a single product that has the video category.
+To link transactional content with Roku Pay, you create in-app products in the Developer Dashboard. With the TVOD model, in-app products only need to be created for each [product category](doc:product-catalog) (video, audio, game, or app/utility). For example, if you plan on offering movie rentals, you only need to create a single product that has the video category.
 
 To manage multiple transactional content items using the same in-app product, your app can leverage your product feed or publisher-specific API to retrieve the item's metadata from your catalog at runtime. When a user selects the content to be purchased, your app can use the runtime metadata to display the item's title, price, and poster image and pass the item's SKU through the ChannelStore functions in order to identify for which item to grant the user access.
 
@@ -85,11 +85,11 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
    'callback function
    function requestPartnerOrderStatusChanged()
-   	if m.store.requestPartnerOrderStatus.status = "Success"
-      	'user's billing status is valid - prompt the user to purchase
-      else
-      	'display an appropriate error message
-   	end if
+       if m.store.requestPartnerOrderStatus.status = "Success"
+           'user's billing status is valid - prompt the user to purchase
+       else
+           'display an appropriate error message
+       end if
    end function
    ```
 
@@ -140,11 +140,11 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
    'callback function
    function confirmPartnerOrderStatusChanged()
-   		if m.store.confirmPartnerOrderStatus.status = "Success"
-   				displayOrderStatusDialog(m.store.confirmPartnerOrderStatus	
-   		else
-   				'display an appropriate error message
-   		end if
+       if m.store.confirmPartnerOrderStatus.status = "Success"
+           displayOrderStatusDialog(m.store.confirmPartnerOrderStatus)
+       else
+           'display an appropriate error message
+       end if
    end function
    ```
 

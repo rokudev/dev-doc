@@ -565,72 +565,63 @@ The following creates a grid of posters with two captions below each poster grap
 
 **PosterGrid Node class example**
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
+<component name="postergridtest" extends="Group" initialFocus="testPosterGrid">
+  <script type="text/brightscript">
+    <![CDATA[
+      sub init()
+        m.testlabel = m.top.FindNode("testLabel")
+        m.testpostergrid = m.top.FindNode("testPosterGrid")
+        m.testpostergridcontent = createObject("roSGNode", "ContentNode")
+        m.readPosterGridTask = createObject("roSGNode", "postergridCR")
+        m.readPosterGridTask.setField("postergriduri", "pkg:/server/postergrid.xml")
+        m.readPosterGridTask.observeField("gotitem", "buildpostergrid")
+        m.readPosterGridTask.observeField("gotcontent", "showpostergrid")
+        m.readPosterGridTask.control = "RUN"
+        m.top.setFocus(true)
+      end sub
 
-<!--********** Copyright 2015 Roku Corp.  All Rights Reserved. **********-->
+      sub buildpostergrid()
+        gridposter = createObject("roSGNode", "ContentNode")
+        gridposter.hdgridposterurl = m.readPosterGridTask.hdgridposterurl
+        gridposter.hdposterurl = m.readPosterGridTask.hdposterurl
+        gridposter.sdgridposterurl = m.readPosterGridTask.sdgridposterurl
+        gridposter.sdposterurl = m.readPosterGridTask.sdposterurl
+        gridposter.shortdescriptionline1 = m.readPosterGridTask.shortdescriptionline1
+        gridposter.shortdescriptionline2 = m.readPosterGridTask.shortdescriptionline2
+        gridposter.x = m.readPosterGridTask.xposterpos
+        gridposter.y = m.readPosterGridTask.yposterpos
+        gridposter.w = m.readPosterGridTask.wnumcols
+        gridposter.h = m.readPosterGridTask.hnumrows
+        m.testpostergridcontent.appendChild(gridposter)
+      end sub
 
-<component   name="postergridtest"   extends="Group"   initialFocus="testPosterGrid" >
+      sub showpostergrid()
+        m.testlabel.text = "Here's the PosterGrid: "
+        m.testpostergrid.content = m.testpostergridcontent
+        m.testpostergrid.visible = true
+        m.testpostergrid.setFocus(true)
+      end sub
+    ]]>
+  </script>
 
-<script type="text/brightscript" >
-<![CDATA[
-sub init()
-  m.testlabel = m.top.FindNode("testLabel")
-  m.testpostergrid = m.top.FindNode("testPosterGrid")
-  m.testpostergridcontent = createObject("roSGNode","ContentNode")
-  m.readPosterGridTask = createObject("roSGNode","postergridCR")
-  m.readPosterGridTask.setField("postergriduri","pkg:/server/postergrid.xml")
-  m.readPosterGridTask.observeField("gotitem","buildpostergrid")
-  m.readPosterGridTask.observeField("gotcontent","showpostergrid")
-  m.readPosterGridTask.control = "RUN"
-  m.top.setFocus(true)
-end sub
+  <children>
+    <Label
+      id="testLabel"
+      translation="[100,32]"
+      text="Building PosterGrid... " />
 
-sub buildpostergrid()
-  gridposter = createObject("roSGNode","ContentNode")
-  gridposter.hdgridposterurl = m.readPosterGridTask.hdgridposterurl
-  gridposter.hdposterurl = m.readPosterGridTask.hdposterurl
-  gridposter.sdgridposterurl = m.readPosterGridTask.sdgridposterurl
-  gridposter.sdposterurl = m.readPosterGridTask.sdposterurl
-  gridposter.shortdescriptionline1 = m.readPosterGridTask.shortdescriptionline1
-  gridposter.shortdescriptionline2 = m.readPosterGridTask.shortdescriptionline2
-  gridposter.x = m.readPosterGridTask.xposterpos
-  gridposter.y = m.readPosterGridTask.yposterpos
-  gridposter.w = m.readPosterGridTask.wnumcols
-  gridposter.h = m.readPosterGridTask.hnumrows
-  m.testpostergridcontent.appendChild(gridposter)
-end sub
-
-sub showpostergrid()
-  m.testlabel.text = "Here's the PosterGrid: "
-  m.testpostergrid.content=m.testpostergridcontent
-  m.testpostergrid.visible=true
-  m.testpostergrid.setFocus(true)
-end sub
-]]>
-</script>
-
-<children>
-
-<Label
-  id="testLabel"
-  translation="[100,32]"
-  text="Building PosterGrid... "
-  />
-
-<PosterGrid
-  id="testPosterGrid"
-  translation="[100,100]"
-  basePosterSize="[240,240]"
-  itemSpacing="[32,32]"
-  caption1NumLines="1"
-  caption2NumLines="1"
-  numColumns="4"
-  numRows="3"
-  />
-
-</children>
-
+    <PosterGrid
+      id="testPosterGrid"
+      translation="[100,100]"
+      basePosterSize="[240,240]"
+      itemSpacing="[32,32]"
+      caption1NumLines="1"
+      caption2NumLines="1"
+      numColumns="4"
+      numRows="3" />
+  </children>
 </component>
 ```
 

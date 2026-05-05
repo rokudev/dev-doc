@@ -9,7 +9,7 @@ metadata:
   description: ''
   robots: index
 ---
-Apps have access to web-based app analytics and sales reports through Roku's Developer Dashboard. This allows you to analyze your app's health, viewership trends, and metrics for specific titles and devices. The following video highlights the different app analytics available to you.
+You can use Roku's web-based app analytics and sales reports to analyze your app's health, viewership trends, and metrics for specific titles and devices. The following video highlights the different app analytics available to you.
 
 <video title="Roku Channel Analytic Reports" poster="https://image.roku.com/ZHZscHItMTc2/channel-analytics-poster.png" src="https://image.roku.com/ZHZscHItMTc2/channel-analytics.mp4" width="720" height="480" controls />
 
@@ -27,7 +27,7 @@ Reports also distinguish between "visitors" and "viewers" according to the follo
 
 * Unique visitor and unique viewer counts depend on the time period of measurement, so adding up daily visitors over the course of the week will differ from taking a weekly visitor measurement because some accounts may visit an app multiple times per week.
 
-## Available reports in Developer Dashboard
+## Available reports
 
 Roku automatically generates the following app analytics and sales reports as [Looker](https://looker.com/guide) dashboards for your app (Looker is the business intelligence platform that Roku uses for providing app analytics):
 
@@ -52,7 +52,7 @@ Roku automatically generates the following app analytics and sales reports as [L
 
 ### App Analytics
 
-To open an app analytics report in the Developer Dashboard, follow these steps:
+To open an app analytics report, follow these steps:
 
 1. Click **Analytics** in the left sidebar.
 
@@ -60,7 +60,7 @@ To open an app analytics report in the Developer Dashboard, follow these steps:
 
 3. Select the app you want to analyze from the drop-down list. Alternatively, you can click **Public channels** or **Beta app** and then click the analytics icon for the app or select an app and then click **View analytics**.
 
-   <Image alt="roku815px - analytics-report-tabs" border={false} src="https://image.roku.com/ZHZscHItMTc2/channel-stability-report-v4.png" title="analytics-report-tabs" />
+   ![roku815px - analytics-report-tabs](https://image.roku.com/ZHZscHItMTc2/channel-stability-report-v4.png "analytics-report-tabs")
 
 ### Sales reports
 
@@ -72,7 +72,7 @@ To open a sales report in the Developer Dashboard, follow these steps:
 
 3. Select the app you want to analyze from the drop-down list.
 
-   <Image alt="roku815px - sales-reports-list" border={false} src="https://image.roku.com/ZHZscHItMTc2/sales-reports-left-nav.png" title="financial-reports-list" />
+   ![roku815px - sales-reports-list](https://image.roku.com/ZHZscHItMTc2/sales-reports-left-nav.png "financial-reports-list")
 
 ## Updating and saving reports
 
@@ -88,7 +88,7 @@ All reports contain a FILTERS section at the top where you can select the app da
 
 Dashboards may contain several sections and changing filters will cause some sections to update the values displayed while others may not. This depends on what is being measured and how it relates to the changed filter. For instance, total installs is a point-in-time measurement, so changing the Time Grain filter will not change the value displayed for that metric while changing the Time Period will.  Users must click on the "Run" button to update values after changing a filter.
 
-<Image alt="roku815px - analytics-2-filter-section" border={false} src="https://image.roku.com/ZHZscHItMTc2/analytics-report-filters.png" title="analytics-2" />
+![roku815px - analytics-2-filter-section](https://image.roku.com/ZHZscHItMTc2/analytics-report-filters.png "analytics-2")
 
 Information on available filters is also included in the discussion of individual dashboards, and not all of the same filters will be available on all reports.  The most common filters include:
 
@@ -105,11 +105,11 @@ To export data from a report, follow the steps below:
 
 2. Click the "three-dot" (**...**) button in the upper-right portion of the report's table-heading, and then click **Download**.
 
-   <Image alt="roku815px - Trans Main showing three-dot" border={false} src="https://image.roku.com/ZHZscHItMTc2/download-analytics-report-1.png" />
+   ![roku815px - Trans Main showing three-dot](https://image.roku.com/ZHZscHItMTc2/download-analytics-report-1.png)
 
 3. The Download dialog appears. The **File Format** field provides PDF (default) and CSV output options. If you select PDF, optionally configure the report layout settings (paper size, table row visibility, and dashboard tiles arrangement).
 
-   <Image alt="roku815px - Trans Download Dialog" border={false} src="https://image.roku.com/ZHZscHItMTc2/download-analytics-report-2.png" />
+   ![roku815px - Trans Download Dialog](https://image.roku.com/ZHZscHItMTc2/download-analytics-report-2.png)
 
 4. Click **Download** to export the report to your local machine. If you are downloading the report as a PDF, you can alternatively click **Open in Browser** to open the report in a new tab in your web browser.
 
@@ -119,11 +119,11 @@ You can create a schedule to automatically email a report in a recurring daily, 
 
 1. Click the "three-dot" (**...**) button in the upper-right portion of the generated report's table-heading, and then click **Schedule Delivery**.
 
-   <Image alt="roku815px - roku_pay_transactions_schedule" border={false} src="https://image.roku.com/ZHZscHItMTc2/schedule-analytics-report-1.png" title="roku-pay-transactions-schedule" />
+   ![roku815px - roku\_pay\_transactions\_schedule](https://image.roku.com/ZHZscHItMTc2/schedule-analytics-report-1.png "roku-pay-transactions-schedule")
 
 2. The **Schedule Delivery** dialog opens.
 
-   <Image alt="roku600px - roku_pay_transactions_schedule" border={false} src="https://image.roku.com/ZHZscHItMTc2/engagement-report-destinations-s3.png" title="roku-pay-transactions-schedule" />
+   ![roku600px - roku\_pay\_transactions\_schedule](https://image.roku.com/ZHZscHItMTc2/engagement-report-destinations-s3.png "roku-pay-transactions-schedule")
 
 3. In the **Settings** tab, enter the following properties:
 
@@ -160,11 +160,11 @@ You can create a schedule to automatically email a report in a recurring daily, 
 
 4. Optionally, click the **Filters** tab to edit the currently configured time periods to include in the report.
 
-   <Image alt="roku600px - roku_pay_transactions_schedule" border={false} src="https://image.roku.com/ZHZscHItMTc2/schedule-delivery-filters-tab.png" title="roku-pay-transactions-schedule" />
+   ![roku600px - roku\_pay\_transactions\_schedule](https://image.roku.com/ZHZscHItMTc2/schedule-delivery-filters-tab.png "roku-pay-transactions-schedule")
 
 5. Optionally, expand **Advanced Options** to configure the visualizations, data formatting, and hyperlinks in the email and the attached report.
 
-   <Image alt="roku600px - roku_pay_transactions_schedule" border={false} src="https://image.roku.com/ZHZscHItMTc2/schedule-delivery-adanced-tab.png" title="roku-pay-transactions-schedule" />
+   ![roku600px - roku\_pay\_transactions\_schedule](https://image.roku.com/ZHZscHItMTc2/schedule-delivery-adanced-tab.png "roku-pay-transactions-schedule")
 
 6. Optionally, click **Send Test** to send the report to the list of email recipients in the selected format.
 
@@ -202,4 +202,4 @@ Each Streaming Store code consists of two or more letters, such as "US" for Unit
 
 In Developer Dashboard you can find out which countries your app has been published in by navigating to **Manage My Apps** > **Preview and Publish** > **Properties**.
 
-<Image alt="roku815px - analytics-6-published-countries" border={false} src="https://image.roku.com/ZHZscHItMTc2/analytics-6b.png" title="analytics-6" />
+![roku815px - analytics-6-published-countries](https://image.roku.com/ZHZscHItMTc2/analytics-6b.png "analytics-6")

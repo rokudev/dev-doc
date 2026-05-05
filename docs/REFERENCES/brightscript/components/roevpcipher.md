@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 The EVP Cipher component provides an interface to the OpenSSL EVP library of symmetric cipher commands. The EVP library provides a high-level interface to cryptographic functions to implement digital "envelopes".
 
 These commands allow data to be encrypted or decrypted using various block and stream ciphers using keys based on passwords or explicitly provided.
@@ -21,7 +20,7 @@ Some of the ciphers do not have large keys and others have security implications
 
 **List of supported ciphers**
 
-<Table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -171,11 +170,29 @@ Some of the ciphers do not have large keys and others have security implications
 
     <tr>
       <td>
+        aes-gcm-128<br />_Available since [Roku OS 15.2](doc:release-notes#roku-os-152)_
+      </td>
+
+      <td>
+        128 bit AES in GCM mode
+      </td>
+
+      <td>
+        128
+      </td>
+
+      <td>
+        128
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         bf-cbc
       </td>
 
       <td>
-        Blowfish in CBC mode   
+        Blowfish in CBC mode
 
         > Blowfish (bf*) ciphers are obsolete. Support for these ciphers may be removed in future Roku OS releases.
       </td>

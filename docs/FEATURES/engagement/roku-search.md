@@ -10,15 +10,13 @@ metadata:
 next:
   description: ''
 ---
-
-
-Roku Search provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement. The lift provided by Roku Search makes it essential for reaching and expanding your audience on the Roku platform.  
-
-See [Implementing Roku Search](doc:implementing-search) to integrate your app into Roku Search.
+Roku Search provides opportunities to convert searches into subscriptions and rentals, drive users to your app, and increase engagement. The lift provided by Roku Search makes it essential for reaching and expanding your audience on the Roku platform.
 
 ![roku815px - roku-search-overview](https://image.roku.com/ZHZscHItMTc2/roku-search-overview-v2.png)
 
-By participating in Roku Search, your app is eligible for three more discovery programs that provide additional exposure: [Visual Search Results for Roku Voice](#visual-search-results-for-roku-voice), [Roku Zones](#roku-zones) and [My Feed](#my-feed).
+If you are distributing content via an app, see [Implementing Roku Search](doc:implementing-search) to integrate your app into Roku Search. If you are distributing content via The Roku Channel, your content is automatically included in Roku Search. 
+
+By participating in Roku Search, your app is eligible for three more discovery programs that provide additional exposure: [Visual Search Results for Roku Voice](#visual-search-results-for-roku-voice), [Roku Zones](#roku-zones) and [Save List](#save-list).
 
 ### Visual Search Results for Roku Voice
 

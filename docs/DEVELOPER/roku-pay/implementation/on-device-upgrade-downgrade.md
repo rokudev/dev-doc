@@ -56,7 +56,7 @@ To send a [**doOrder command**](doc:channelstore#doorder) to upgrade or downgrad
    m.channelStore = CreateObject("roSGNode","ChannelStore")
    myOrder = CreateObject("roSGNode", "ContentNode")
    myItem = myOrder.createChild("ContentNode")
-   myItem.addFields(\{ "code": "UPC2397", "qty": 1})
+   myItem.addFields({ "code": "UPC2397", "qty": 1})
    m.channelStore.order = myOrder
    myOrder.action = "Upgrade"
    ```
@@ -78,14 +78,16 @@ To call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object
 1. Set the `orderInfo.action` field to `Upgrade` or `Downgrade` (the required values are case-sensitive; do not pass "upgrade" or "downgrade" in the `action` field).
 
    ```
-   m.store = CreateObject("roChannelStore")​
+   m.store = CreateObject("roChannelStore")
    ' Populate myOrderItems
    myOrderInfo.action = "Upgrade"
    ```
 
 2. Call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object-orderinfo-as-object-as-void) to have the customer confirm the upgrade/downgrade. The **myOrderItems** parameter specifies the in-channel product to which the customer is upgrading/downgrading; the **myOrderInfo** parameter whether the transaction is an upgrade or downgrade.
 
+   ```
    m.store.setOrder(myOrderItems, myOrderInfo)
+   ```
 
 3. The following occurs to the original base plan and the upgraded/downgraded plan based on the specified action.
 
@@ -124,40 +126,40 @@ After an upgrade has been completed on-device, responses to [**validate transact
 
 #### JSON
 
-```
+```json
 {
-   "errorCode":null,
-   "errorDetails":null,
-   "errorMessage":"",
-   "status":0,
-   "OriginalTransactionId":"b0f7e477e89e48d0aa13abad017d4ee9",
-   "amount":2.99,
-   "cancelled":true,
-   "cancelledTransactionIds":null,
-   "channelId":000000,
-   "channelName":"ESPRIMU",
-   "couponCode":null,
-   "currency":"usd",
-   "expirationDate":"\/Date(1588892898000+0000)\/",
-   "isEntitled":true,
-   "originalPurchaseDate":"\/Date(1588288095000+0000)\/",
-   "partnerReferenceId":"1969",
-   "productId":"KFevcXDIo96kmmsy9wh7_MonthlySubFreeTrial",
-   "productName":"KFevcXDIo96kmmsy9wh7_MonthlySubFreeTrial",
-   "purchaseDate":"\/Date(1588288095000+0000)\/",
-   "purchaseStatus":"PendingInactive",
-   "purchaseType":null,
-   "quantity":1,
-   "rokuCustomerId":"99999999999999999999999999999999",
-   "tax":0.0000,
-   "total":0.0000,
-   "transactionId":"b0f7e477e89e48d0aa13abad017d4ee9"
+   "errorCode": null,
+   "errorDetails": null,
+   "errorMessage": "",
+   "status": 0,
+   "OriginalTransactionId": "b0f7e477e89e48d0aa13abad017d4ee9",
+   "amount": 2.99,
+   "cancelled": true,
+   "cancelledTransactionIds": null,
+   "channelId": "000000",
+   "channelName": "ESPRIMU",
+   "couponCode": null,
+   "currency": "usd",
+   "expirationDate": "\/Date(1588892898000+0000)\/",
+   "isEntitled": true,
+   "originalPurchaseDate": "\/Date(1588288095000+0000)\/",
+   "partnerReferenceId": "1969",
+   "productId": "KFevcXDIo96kmmsy9wh7_MonthlySubFreeTrial",
+   "productName": "KFevcXDIo96kmmsy9wh7_MonthlySubFreeTrial",
+   "purchaseDate": "\/Date(1588288095000+0000)\/",
+   "purchaseStatus": "PendingInactive",
+   "purchaseType": null,
+   "quantity": 1,
+   "rokuCustomerId": "99999999999999999999999999999999",
+   "tax": 0.0000,
+   "total": 0.0000,
+   "transactionId": "b0f7e477e89e48d0aa13abad017d4ee9"
 }
 ```
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -196,42 +198,42 @@ When a free trial _is_ offered with the upgrade subscription, the `purchase_stat
 
 #### JSON
 
-```
+```json
 {
-   "errorCode":null,
-   "errorDetails":null,
-   "errorMessage":"",
-   "status":0,
-   "OriginalTransactionId":"a800b90755be491d821aabad017d6674",
-   "amount":4.99,
-   "cancelled":false,
-   "cancelledTransactionIds":[
+   "errorCode": null,
+   "errorDetails": null,
+   "errorMessage": "",
+   "status": 0,
+   "OriginalTransactionId": "a800b90755be491d821aabad017d6674",
+   "amount": 4.99,
+   "cancelled": false,
+   "cancelledTransactionIds": [
       "b0f7e477e89e48d0aa13abad017d4ee9"
    ],
-   "channelId":000000,
-   "channelName":"ESPRIMU",
-   "couponCode":null,
-   "currency":"usd",
-   "expirationDate":"\/Date(1588892919000+0000)\/",
-   "isEntitled":true,
-   "originalPurchaseDate":"\/Date(1588288117000+0000)\/",
-   "partnerReferenceId":"1969",
-   "productId":"Y6ZFym7Xl2agLakTcxMB_MonthlySubFreeTrial",
-   "productName":"Y6ZFym7Xl2agLakTcxMB_MonthlySubFreeTrial",
-   "purchaseDate":"\/Date(1588288117000+0000)\/",
-   "purchaseStatus":"Active",
-   "purchaseType":"UPGRADE",
-   "quantity":1,
-   "rokuCustomerId":"99999999999999999999999999999999",
-   "tax":0.0000,
-   "total":0.0000,
-   "transactionId":"a800b90755be491d821aabad017d6674"
+   "channelId": "000000",
+   "channelName": "ESPRIMU",
+   "couponCode": null,
+   "currency": "usd",
+   "expirationDate": "\/Date(1588892919000+0000)\/",
+   "isEntitled": true,
+   "originalPurchaseDate": "\/Date(1588288117000+0000)\/",
+   "partnerReferenceId": "1969",
+   "productId": "Y6ZFym7Xl2agLakTcxMB_MonthlySubFreeTrial",
+   "productName": "Y6ZFym7Xl2agLakTcxMB_MonthlySubFreeTrial",
+   "purchaseDate": "\/Date(1588288117000+0000)\/",
+   "purchaseStatus": "Active",
+   "purchaseType": "UPGRADE",
+   "quantity": 1,
+   "rokuCustomerId": "99999999999999999999999999999999",
+   "tax": 0.0000,
+   "total": 0.0000,
+   "transactionId": "a800b90755be491d821aabad017d6674"
 }
 ```
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -270,40 +272,40 @@ After a downgrade has been completed on-device, responses to [**validate transac
 
 #### JSON
 
-```
+```json
 {
-   "errorCode":null,
-   "errorDetails":null,
-   "errorMessage":"",
-   "status":0,
-   "OriginalTransactionId":"03c3ac6f50864601b87aabac0165abed",
-   "amount":4.99,
-   "cancelled":true,
-   "cancelledTransactionIds":null,
-   "channelId":000000,
-   "channelName":"ESPRIMU",
-   "couponCode":null,
-   "currency":"usd",
-   "expirationDate":"\/Date(1588801334000+0000)\/",
-   "isEntitled":true,
-   "originalPurchaseDate":"\/Date(1588196534000+0000)\/",
-   "partnerReferenceId":"1969",
-   "productId":"QynVhYtdThAg7wcfTkgi_MonthlySubFreeTrial",
-   "productName":"QynVhYtdThAg7wcfTkgi_MonthlySubFreeTrial",
-   "purchaseDate":"\/Date(1588196534000+0000)\/",
-   "purchaseStatus":"Active",
-   "purchaseType":null,
-   "quantity":1,
-   "rokuCustomerId":"99999999999999999999999999999999",
-   "tax":0.0000,
-   "total":0.0000,
-   "transactionId":"03c3ac6f50864601b87aabac0165abed"
+   "errorCode": null,
+   "errorDetails": null,
+   "errorMessage": "",
+   "status": 0,
+   "OriginalTransactionId": "03c3ac6f50864601b87aabac0165abed",
+   "amount": 4.99,
+   "cancelled": true,
+   "cancelledTransactionIds": null,
+   "channelId": "000000",
+   "channelName": "ESPRIMU",
+   "couponCode": null,
+   "currency": "usd",
+   "expirationDate": "\/Date(1588801334000+0000)\/",
+   "isEntitled": true,
+   "originalPurchaseDate": "\/Date(1588196534000+0000)\/",
+   "partnerReferenceId": "1969",
+   "productId": "QynVhYtdThAg7wcfTkgi_MonthlySubFreeTrial",
+   "productName": "QynVhYtdThAg7wcfTkgi_MonthlySubFreeTrial",
+   "purchaseDate": "\/Date(1588196534000+0000)\/",
+   "purchaseStatus": "Active",
+   "purchaseType": null,
+   "quantity": 1,
+   "rokuCustomerId": "99999999999999999999999999999999",
+   "tax": 0.0000,
+   "total": 0.0000,
+   "transactionId": "03c3ac6f50864601b87aabac0165abed"
 }
 ```
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -338,36 +340,36 @@ After a downgrade has been completed on-device, responses to [**validate transac
 
 #### JSON
 
-```
+```json
 {
-   "errorCode":null,
-   "errorDetails":null,
-   "errorMessage":"",
-   "status":0,
-   "OriginalTransactionId":"e8515e538c2b4e9e9039abac0165b4e1",
-   "amount":2.99,
-   "cancelled":false,
-   "cancelledTransactionIds":[
+   "errorCode": null,
+   "errorDetails": null,
+   "errorMessage": "",
+   "status": 0,
+   "OriginalTransactionId": "e8515e538c2b4e9e9039abac0165b4e1",
+   "amount": 2.99,
+   "cancelled": false,
+   "cancelledTransactionIds": [
       "03c3ac6f50864601b87aabac0165abed"
    ],
-   "channelId":000000,
-   "channelName":"ESPRIMU",
-   "couponCode":null,
-   "currency":"usd",
-   "expirationDate":"\/Date(1588801334000+0000)\/",
-   "isEntitled":true,
-   "originalPurchaseDate":"\/Date(1588196542000+0000)\/",
-   "partnerReferenceId":"1969",
-   "productId":"ZTtL0DvuGNX1sO4tJGNp_MonthlySubFreeTrial",
-   "productName":"ZTtL0DvuGNX1sO4tJGNp_MonthlySubFreeTrial",
-   "purchaseDate":"\/Date(1588196542000+0000)\/",
-   "purchaseStatus":"PendingActive",
-   "purchaseType":"DOWNGRADE",
-   "quantity":1,
-   "rokuCustomerId":"99999999999999999999999999999999",
-   "tax":0.0000,
-   "total":0.0000,
-   "transactionId":"e8515e538c2b4e9e9039abac0165b4e1"
+   "channelId": "000000",
+   "channelName": "ESPRIMU",
+   "couponCode": null,
+   "currency": "usd",
+   "expirationDate": "\/Date(1588801334000+0000)\/",
+   "isEntitled": true,
+   "originalPurchaseDate": "\/Date(1588196542000+0000)\/",
+   "partnerReferenceId": "1969",
+   "productId": "ZTtL0DvuGNX1sO4tJGNp_MonthlySubFreeTrial",
+   "productName": "ZTtL0DvuGNX1sO4tJGNp_MonthlySubFreeTrial",
+   "purchaseDate": "\/Date(1588196542000+0000)\/",
+   "purchaseStatus": "PendingActive",
+   "purchaseType": "DOWNGRADE",
+   "quantity": 1,
+   "rokuCustomerId": "99999999999999999999999999999999",
+   "tax": 0.0000,
+   "total": 0.0000,
+   "transactionId": "e8515e538c2b4e9e9039abac0165b4e1"
 }
 ```
 
@@ -375,7 +377,7 @@ Since the "downgrade" subscription will be activated sometime in the future (i.e
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <errorCode/>
   <errorDetails/>
@@ -424,33 +426,33 @@ The following sample demonstrates an **UpgradeSale** notification:
 
 #### JSON
 
-```
+```json
 {
-   "customerId":"ab080b5f1c5650d9ae0d7f595d0be886",
-   "transactionType":"UpgradeSale",
-   "transactionId":"187fb8f7b3a24883a245ab5d0171fadd",
-   "channelId":"713788",
-   "channelName":"Roku Channel",
-   "productCode":"5tahs9bYB9jM5FJtz3DW_YearlySub",
-   "productName":"5tahs9bYB9jM5FJtz3DW_YearlySub",
-   "price":13.99,
-   "tax":0.0,
-   "total":13.99,
-   "currency":"usd",
-   "isFreeTrial":false,
-   "expirationDate":"2021-02-10T22:27:03.7657086Z",
-   "originalTransactionId":"187fb8f7b3a24883a245ab5d0171fadd",
-   "comments":"New order processed.",
-   "eventDate":"2020-02-10T22:27:03.8597086Z",
-   "responseKey":"ce5e3c2ae1c242c2bfd136ac36580112"
+   "customerId": "ab080b5f1c5650d9ae0d7f595d0be886",
+   "transactionType": "UpgradeSale",
+   "transactionId": "187fb8f7b3a24883a245ab5d0171fadd",
+   "channelId": "713788",
+   "channelName": "Roku Channel",
+   "productCode": "5tahs9bYB9jM5FJtz3DW_YearlySub",
+   "productName": "5tahs9bYB9jM5FJtz3DW_YearlySub",
+   "price": 13.99,
+   "tax": 0.0,
+   "total": 13.99,
+   "currency": "usd",
+   "isFreeTrial": false,
+   "expirationDate": "2021-02-10T22:27:03.7657086Z",
+   "originalTransactionId": "187fb8f7b3a24883a245ab5d0171fadd",
+   "comments": "New order processed.",
+   "eventDate": "2020-02-10T22:27:03.8597086Z",
+   "responseKey": "ce5e3c2ae1c242c2bfd136ac36580112"
 }
 ```
 
 #### XML
 
-```
+```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<customerId>ab080b5f1c5650d9ae0d7f595d0be886</customerId>
+  <customerId>ab080b5f1c5650d9ae0d7f595d0be886</customerId>
   <transactionType>UpgradeSale</transactionType>
   <transactionId>187fb8f7b3a24883a245ab5d0171fadd</transactionId>
   <channelId>713788</channelId>

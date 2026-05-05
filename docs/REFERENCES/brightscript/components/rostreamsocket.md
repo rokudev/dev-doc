@@ -22,19 +22,19 @@ This object is created without any arguments:
 
 **Example: Open TCP Connection to Server**
 
-~~~
+```
 sendAddress = CreateObject("roSocketAddress")
 sendAddress.SetAddress("www.google.com:80")
 socket = CreateObject("roStreamSocket")
 socket.setSendToAddress(sendAddress)
-If socket.Connect()
-    Print "Connected Successfully"
-End If
-~~~
+if socket.Connect()
+    print "Connected Successfully"
+end if
+```
 
 **Example: Echo Server**
 
-~~~
+```
 function main()
     messagePort = CreateObject("roMessagePort")
     connections = {}
@@ -51,14 +51,14 @@ function main()
         print "Error creating listen socket"
         stop
     end if
-    while True
+    while true
         event = wait(0, messagePort)
         if type(event) = "roSocketEvent"
             changedID = event.getSocketID()
             if changedID = tcpListen.getID() and tcpListen.isReadable()
                 ' New
                 newConnection = tcpListen.accept()
-                if newConnection = Invalid
+                if newConnection = invalid
                     print "accept failed"
                 else
                     print "accepted new connection " newConnection.getID()
@@ -69,18 +69,18 @@ function main()
             else
                 ' Activity on an open connection
                 connection = connections[Stri(changedID)]
-                closed = False
+                closed = false
                 if connection.isReadable()
                     received = connection.receive(buffer, 0, 512)
                     print "received is " received
                     if received > 0
                         print "Echo input: '"; buffer.ToAsciiString(); "'"
-                        ' If we are unable to send, just drop data for now.
+                        ' if we are unable to send, just drop data for now.
                         ' You could use notifywritable and buffer data, but that is
                         ' omitted for clarity.
                         connection.send(buffer, 0, received)
                     else if received=0 ' client closed
-                        closed = True
+                        closed = true
                     end if
                 end if
                 if closed or not connection.eOK()
@@ -91,14 +91,14 @@ function main()
             end if
         end if
     end while
-     
+
     print "Main loop exited"
     tcpListen.close()
     for each id in connections
         connections[id].close()
     end for
-End Function
-~~~
+end function
+```
 
 
 ## Supported interfaces

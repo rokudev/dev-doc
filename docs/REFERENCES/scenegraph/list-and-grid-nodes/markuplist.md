@@ -288,75 +288,71 @@ Also note how the `focusPercent` interface field has an `onChange` function defi
 
 **Markup List XML Component Example**
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-
 <component name="SimpleListItem" extends="Group">
+  <interface>
+    <field id="width" type="float" onChange="widthChanged" />
+    <field id="height" type="float" onChange="heightChanged" />
+    <field id="itemContent" type="node" onChange="itemContentChanged" />
+    <field id="focusPercent" type="float" onChange="focusPercentChanged" />
+    <field id="listHasFocus" type="bool" onChange="focusPercentChanged" />
+  </interface>
 
-<interface> 
-  <field id="width" type="float" onChange="widthChanged"/> 
-  <field id="height" type="float" onChange="heightChanged"/> 
-  <field id="itemContent" type="node" onChange="itemContentChanged"/> 
-  <field id="focusPercent" type="float" onChange="focusPercentChanged"/> 
-  <field id="listHasFocus" type="bool" onChange="focusPercentChanged"/> 
-</interface>
+  <script type="text/brightscript">
+    <![CDATA[
+      function itemContentChanged()
+        m.itemImage.uri = m.top.itemContent.HDPOSTERURL
+        m.itemText.text = m.top.itemContent.TITLE
+        m.itemArtist.text = m.top.itemContent.ARTISTS[0]
+        updateLayout()
+      end function
 
-<script type="text/brightscript" >
-<![CDATA[ 
-  function itemContentChanged() 
-    m.itemImage.uri = m.top.itemContent.HDPOSTERURL
-    m.itemText.text = m.top.itemContent.TITLE
-    m.itemArtist.text = m.top.itemContent.ARTISTS[0] 
-    updateLayout()
-  end function
+      function widthChanged()
+        updateLayout()
+      end function
 
-  function widthChanged() 
-    updateLayout()
-  end function
+      function heightChanged()
+        updateLayout()
+      end function
 
-  function heightChanged() 
-    updateLayout()
-  end function
+      function focusPercentChanged()
+        if m.top.listHasFocus and m.top.focusPercent > 0.5
+          m.itemText.color = "0x000000FF"
+        else
+          m.itemText.color = "0xFFFFFFFF"
+        end if
+        m.itemArtist.color = m.itemText.color
+      end function
 
-  function focusPercentChanged() 
-    if m.top.listHasFocus and m.top.focusPercent > 0.5 
-      m.itemText.color = "0x000000FF" 
-    else 
-      m.itemText.color = "0xFFFFFFFF" 
-    end if 
-    m.itemArtist.color = m.itemText.color
-  end function
+      function updateLayout()
+        if m.top.height > 0 and m.top.width > 0
+          posterSize = m.top.height
+          m.itemImage.width = m.top.height - 20 ' make the posters square
+          m.itemImage.height = m.top.height - 20
+          m.itemText.width = m.top.width - m.itemImage.width - 20
+          m.itemArtist.width = m.top.width - m.itemImage.width - 20
+        end if
+      end function
 
-  function updateLayout() 
-    if m.top.height > 0 and m.top.width > 0 
-      posterSize = m.top.height
-      m.itemImage.width = m.top.height - 20 ' make the posters square 
-      m.itemImage.height = m.top.height - 20
-      m.itemText.width = m.top.width - m.itemImage.width - 20 
-      m.itemArtist.width = m.top.width - m.itemImage.width - 20 
-    end if
-  end function
+      function init()
+        m.itemText = m.top.findNode("itemText")
+        m.itemArtist = m.top.findNode("itemArtist")
+        m.itemImage = m.top.findNode("itemImage")
+        m.playIcon = m.top.findNode("playIcon")
+      end function
+    ]]>
+  </script>
 
-  function init() 
-    m.itemText = m.top.findNode("itemText") 
-    m.itemArtist = m.top.findNode("itemArtist") 
-    m.itemImage = m.top.findNode("itemImage")
-    m.playIcon = m.top.findNode("playIcon")
-  end function
-]]>
-</script>
-
-<children>
-
-<LayoutGroup layoutDirection="horizontal" vertAlignment="center" itemSpacings="20" translation="[0,34]" > 
-  <Poster id="itemImage" /> 
-  <LayoutGroup layoutDirection="vertical" horizAlignment="left" itemSpacings="0" > 
-     <Label id="itemText" font="theme:MediumSystemFont" /> 
-     <Label id="itemArtist" font="theme:SmallestSystemFont" /> 
-   </LayoutGroup>
-</LayoutGroup>
-
-</children>
+  <children>
+    <LayoutGroup layoutDirection="horizontal" vertAlignment="center" itemSpacings="20" translation="[0,34]">
+      <Poster id="itemImage" />
+      <LayoutGroup layoutDirection="vertical" horizAlignment="left" itemSpacings="0">
+        <Label id="itemText" font="theme:MediumSystemFont" />
+        <Label id="itemArtist" font="theme:SmallestSystemFont" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </children>
 </component>
 ```
 

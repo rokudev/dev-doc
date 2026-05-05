@@ -26,7 +26,7 @@ A scene-based trick mode is based on the availability of scene information in th
 
 Consult [BIF file creation using the Roku BIF tool](doc:bif-file-creation), to learn how to generate BIF-format thumbnail for trick mode purposes.
 
-> As of Roku OS 9.4, Roku recommends that ad-supported apps employing [Server-Side Ad Insertion (SSAI)](doc:ssai-adapters) use *only* HLS or DASH "standard" thumbnails, as an incompatibility in the BIF-support mechanism can cause thumbnails and video to fall out of synch during SSAI operation. Developers should convert existing apps that use BIF and SSAI to use "standard" thumbnails instead, at the earliest opportunity.
+> As of [Roku OS 9.4](doc:release-notes#roku-os-94), Roku recommends that ad-supported apps employing [Server-Side Ad Insertion (SSAI)](doc:ssai-adapters) use *only* HLS or DASH "standard" thumbnails, as an incompatibility in the BIF-support mechanism can cause thumbnails and video to fall out of synch during SSAI operation. Developers should convert existing apps that use BIF and SSAI to use "standard" thumbnails instead, at the earliest opportunity.
 
 Consult [HLS and DASH](doc:hls-and-dash), to learn how to use standard thumbnail files – including those that follow the DASH-IF Interoperability Points Guidelines document Version 4.3 – with HLS and DASH playlists.
 

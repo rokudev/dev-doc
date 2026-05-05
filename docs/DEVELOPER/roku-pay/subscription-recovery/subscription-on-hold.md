@@ -38,7 +38,7 @@ To integrate Enhanced Subscription recovery in your app, you must complete the f
 
 **App publishing and enabling enhanced recovery**
 
-6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](doc:channel-publishing-guide#publishing-an-app), and then [Enable Enhanced Subscription Recovery](#subscription-recovery-settings) for it.
+6. Once you have successfully completed and tested the Enhanced Subscription Recovery integration, you can [publish the updated **public** version of your app](doc:channel-publishing-guide#publishing-an-app), and then [Enable Enhanced Subscription Recovery](#enabling-enhanced-subscription-recovery) for it.
 
 ### Enabling enhanced subscription recovery
 
@@ -315,7 +315,7 @@ end function
 function onRequestStatus()
     print "onRequestStatus"
     requestStatus = m.store.requestStatus
-    if requestStatus = Invalid
+    if requestStatus = invalid
         print "Invalid requestStatus"
         print "DoRecovery failed"
     else if requestStatus.status <> 1
@@ -345,7 +345,7 @@ function DoRecovery() as void
     if FindMemberFunction(m.store, "DoRequest") <> invalid then
         m.store.DoRequest(request)
     else
-        m.top.requestStatus = Invalid
+        m.top.requestStatus = invalid
         return
     end if
     while true
@@ -355,7 +355,7 @@ function DoRecovery() as void
             status = msg.GetStatus()
             statusMessage = msg.GetStatusMessage()
             context = msg.GetContext()
-            if context <> Invalid then
+            if context <> invalid then
                 print "Received roChannelStoreEvent:"
                 print "- command:", command
                 print "- status:", status
@@ -370,7 +370,7 @@ function DoRecovery() as void
             end if
             exit while
         end if
-    exit while
+    end while
 end function
 ```
 
@@ -393,7 +393,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### GraceInitiated
 
-```
+```json
 {
     "customerId": "9aa37bd6f970578294cea4783af08560",
     "transactionType": "GraceInitiated",
@@ -413,7 +413,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### GraceRecovered
 
-```
+```json
 {
     "customerId": "9d425957549250dcba71e03dacf426b5",
     "transactionType": "GraceRecovered",
@@ -424,7 +424,7 @@ You must ingest and process the following additional [push notifications](doc:pu
     "originalTransactionId": "d4c4da85c7b611eea3c40a58a9fead9c",
     "originalPurchaseDate": "2024-01-12T01:51:39Z",
     "eventDate": "2024-02-10T01:51:46Z",
-    "expirationDate": "2024-03-10T01:51:39Z",  
+    "expirationDate": "2024-03-10T01:51:39Z",
     "comments": "Subscription recovered from dunning state.",
     "responseKey": "d915ab762a3752e7bf112e7903958f52",
     "isFreeTrial": false
@@ -433,7 +433,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### OnHoldInitiated
 
-```
+```json
 {
     "customerId": "8446ceff30e952349bcd9d3b78bc94a0",
     "transactionType": "OnHoldInitiated",
@@ -453,7 +453,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 
 #### OnHoldRecovered
 
-```
+```json
 {
     "customerId": "8446ceff30e952349bcd9d3b78bc94a0",
     "transactionType": "OnHoldRecovered",

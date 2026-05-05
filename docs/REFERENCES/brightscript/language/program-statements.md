@@ -21,41 +21,41 @@ passed to Dim is the index of the maximum entry to be allocated (the
 array initial size = dimension+1); the array will be resized larger
 automatically if needed.
 
-~~~
+```
 Dim array[5]
-~~~
+```
 
 Is the same as:
 
-~~~
+```
 array=CreateObject("roArray",6,true)
-~~~
+```
 
 Note that x\[a,b\] is the same as x\[a\]\[b\].
 
-~~~
- Dim c[5, 4, 6]
- For x = 1 To 5
-    For y = 1 To 4
-        For z = 1 To 6
+```
+ dim c[5, 4, 6]
+ for x = 1 to 5
+    for y = 1 to 4
+        for z = 1 to 6
             c[x, y, z] = k
             k = k + 1
-        End for
-    End for
- End for
+        end for
+    end for
+ end for
 
 
  k=0
- For x = 1 To 5
-    For y = 1 To 4
-        For z = 1 To 6
-            If c[x, y, z] <> k Then print"error" : Stop
-            If c[x][y][z] <> k Then print "error": Stop
+ for x = 1 to 5
+    for y = 1 to 4
+        for z = 1 to 6
+            if c[x, y, z] <> k then print"error" : stop
+            if c[x][y][z] <> k then print "error": stop
             k = k + 1
-        End for
-    End for
- End for
-~~~
+        end for
+    end for
+ end for
+```
 
 
 ## variable = expression
@@ -65,11 +65,11 @@ value.
 
 **Example**
 
-~~~
+```
 a$="a rose is a rose"
 b1=1.23
 x=x-z1
-~~~
+```
 
 In each case, the variable on the left side of the equals sign is
 assigned the value of the constant or expression on the right side.
@@ -92,11 +92,11 @@ on a line by itself.
 
 For example:
 
-~~~
+```
 mylabel:
 print "Anthony was here!"
 Goto mylabel
-~~~
+```
 
 ## RETURN \[expression\]
 
@@ -107,11 +107,11 @@ not of type Void, return can return a value to the caller.
 
 Creates an iterative (repetitive) loop so that a sequence of program
 statements may be executed over and over a specified number of times.
-The general form is (brackets indicate optional material):  
+The general form is (brackets indicate optional material):
 FOR *counter-variable = initial value* TO *final value* \[STEP
-*increment*\]  
-\[*program statements*\]  
-END FOR  
+*increment*\]
+\[*program statements*\]
+END FOR
 In the FOR statement, *initial value, final value* and *increment* can
 be any expression. The first time the FOR statement is executed, these
 three are evaluated and the values are saved; if the variables are
@@ -119,14 +119,14 @@ changed by the loop, it will have no effect on the loop's operation.
 However, the counter variable must not be changed or the loop will not
 operate normally. The first time the FOR statement is executed the
 counter is set to the "initial value" and to the type of "initial
-value".  
+value".
 At the top of the loop, the counter is compared with the *final value*
 specified in the FOR statement. If the counter is greater than the
 *final value*, the loop is completed and execution continues with the
 statement following the END FOR statement. (If *increment* was a
 negative number, loop ends when counter is less than *final value*.) If
 the counter has not yet exceeded the *final value*, control passes to
-the first statement after the FOR statement.  
+the first statement after the FOR statement.
 When program flow reaches the END FOR statement, the counter is
 incremented by the amount specified in the STEP *increment*. (If the
 *increment* has a negative value, then the counter is actually
@@ -135,11 +135,19 @@ assumed.
 
 For example:
 
-~~~
-For i=10 To 1 Step -1
+```
+for i = 10 to 1 Step -1
     print i
-End For
-~~~
+end for
+```
+
+`NEXT` is supported as an alternative terminator to `END FOR` for legacy compatibility, but `END FOR` is the preferred form:
+
+```
+for i=10 to 1 step -1
+    print i
+next
+```
 
 "EXIT FOR" is used to exit a FOR block
 prematurely.
@@ -154,21 +162,29 @@ List) are enumerated in order. Objects that have no intrinsic order
 (like AssociativeArray) are enumerated in apparent random order. It is
 okay to delete entries as you enumerate them.
 
-"EXIT FOR" is used to exit a FOR block prematurely.  
+"EXIT FOR" is used to exit a FOR block prematurely.
 The following objects can be enumerated: roList, roArray,
 roAssociativeArray,
 roMessagePort.
 
 For example:
 
-~~~
+```
 aa = { joe: 10, fred: 11, sue:9 }
 
-For Each n In aa
-    Print n;aa[n]
+for each n in aa
+    print n;aa[n]
     aa.delete(n)
-End For
-~~~
+end for
+```
+
+As with `FOR`, `NEXT` is supported as an alternative terminator to `END FOR` for legacy compatibility, but `END FOR` is the preferred form:
+
+```
+for each n in aa
+    print n;aa[n]
+next
+```
 
 ## WHILE expression / EXIT WHILE / END WHILE
 
@@ -178,7 +194,7 @@ prematurely.
 
 For example:
 
-~~~
+```
 k = 0
 while k = 0
     k = 1
@@ -189,7 +205,9 @@ while true
     print "loop once"
     if k <> 0 then exit while
 end while
-~~~
+```
+
+> Unlike `FOR` loops, `WHILE` loops cannot be terminated with `NEXT`. A `WHILE` block must end with `END WHILE`.
 
 ## CONTINUE FOR / CONTINUE WHILE
 
@@ -199,11 +217,11 @@ The "continue" statement terminates the execution of the statements in the curre
 
 For example:
 
-~~~
+```
 fruits = ["orange", "lemon", "lime"]
 for each fruit in fruits
     if fruit = "lemon" then continue for
-    ? fruit
+    print fruit
 end for
 ...
 counter = 0
@@ -212,21 +230,21 @@ while counter < 3
         counter++
         continue while
     end if
-    ? counter
+    print counter
     counter++
 end while
-~~~
+```
 
 ## TRY / CATCH variable / END TRY
 
 Use to trap exceptions, which enables the implementation of error handling in BrightScript programs. Schematically, the syntax is as follows:
 
 ```
-TRY
+try
     ' Zero or more statements ("TRY block")
-CATCH exception_object_variable_name
+catch exception_object_variable_name
     ' Zero or more statements ("CATCH block")
-END TRY
+end try
 ```
 
 > END TRY and ENDTRY are equivalent
@@ -268,36 +286,36 @@ Information about the exception is contained within an exception object that is 
 The following example sends an error message, including the contents of the exception record, to the debug console.
 
 ```
-TRY
-    PRINT 1/0
-CATCH e
-    PRINT "Division failed: ", e
-END TRY
+try
+    print 1/0
+catch e
+    print "Division failed: ", e
+end try
 ```
 
 > TRY and CATCH are *not* keywords in BrightScript. Programmers should treat them as reserved identifiers and avoid using them. In particular, legacy code that may already employ them as ordinary identifiers should be rewritten to use different identifiers instead.
 
 
 
-> TRY and CATCH were introduced into BrightScript with Roku OS version 9.4, and any app that uses them must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
+> TRY and CATCH were introduced into BrightScript with [Roku OS version 9.4](doc:release-notes#roku-os-94), and any app that uses them must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
 
 ### Nested TRY/CATCH statements
 
 TRY/CATCH statements can be nested within TRY or CATCH blocks, as needed. Here is an example:
 
 ```
-PRINT "Starting"
+print "Starting"
 x = "I'm not an array"
-TRY
-    PRINT "x[0]*2=";x[0]*2
-CATCH e
-    TRY
-        PRINT "I think that failed because ";x[0];" isn't a number"
-    CATCH e
-        PRINT "Nope, I guessed wrong: ";e.message
-    END TRY
-END TRY
-PRINT "Ending"
+try
+    print "x[0]*2=";x[0]*2
+catch e
+    try
+        print "I think that failed because ";x[0];" isn't a number"
+    catch e
+        print "Nope, I guessed wrong: ";e.message
+    end try
+end try
+print "Ending"
 ```
 
 > The STOP statement produces an uncatchable error, consistent with its intended use in debugging.
@@ -312,34 +330,34 @@ The expression given in the THROW statement should evaluate to an exception obje
 
 
 
-> THROW was introduced into BrightScript with Roku OS version 9.4, and any app that uses it must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
+> THROW was introduced into BrightScript with [Roku OS version 9.4](doc:release-notes#roku-os-94), and any app that uses it must declare a minimum OS version of 9.4 in the Package Upload Developer Dashboard page during app submission.
 
 **Example code**
 
 ```
-FUNCTION reciprocal(x)
-    RETURN 1/x
-END FUNCTION
+function reciprocal(x)
+    return 1/x
+end function
 
-FUNCTION factorial(n)
-    IF n < 0 THEN
-        THROW "Cannot calculate negative factorial."
-    ELSE IF n = 0 THEN
-        RETURN 1
-    ELSE
-        RETURN n * factorial(n-1)
-    END IF
-END FUNCTION
+function factorial(n)
+    if n < 0 then
+        throw "Cannot calculate negative factorial."
+    else if n = 0 then
+        return 1
+    else
+        return n * factorial(n-1)
+    end if
+end function
 
-SUB main()
-    TRY
-        PRINT reciprocal(0)
-    CATCH e
-        PRINT "reciprocal() failed: ", e.message
-    END TRY
+sub main()
+    try
+        print reciprocal(0)
+    catch e
+        print "reciprocal() failed: ", e.message
+    end try
 
-    PRINT factorial(-2) ' Error will be reported by BrightScript runtime/debugger
-END SUB
+    print factorial(-2) ' Error will be reported by BrightScript runtime/debugger
+end sub
 ```
 
 ## REM
@@ -351,10 +369,10 @@ REM.
 
 For example:
 
-~~~
+```
 Rem ** this remark introduces the program **
 ' this too is a remark
-~~~
+```
 
 ## IF expression THEN statements \[ELSE statements\]
 
@@ -368,10 +386,10 @@ program line.
 
 For example:
 
-~~~
+```
 if x > 127 then print "out of range"
-If caveman = "fred" then print "flintstone" else print "rubble"
-~~~
+if caveman = "fred" then print "flintstone" else print "rubble"
+```
 
 THEN is optional in the above and similar statements.
 
@@ -380,7 +398,7 @@ THEN is optional in the above and similar statements.
 The multi-line or block form of IF THEN ELSE is more flexible. It has
 the form:
 
-~~~
+```
  if BooleanExpression then
    statements
  elseif BooleanExpression then
@@ -388,7 +406,7 @@ the form:
  else
    statements
  end if
-~~~
+```
 
 There may be any number of elseif statements, or there may be none. The
 else statement may also be omitted. "elseif" can also be written as two
@@ -396,7 +414,7 @@ words: "else if".
 
 For example:
 
-~~~
+```
 msg = wait(0, p)
 if type(msg) = "roVideoPlayerEvent" then
     if debug then print "video event"
@@ -411,7 +429,7 @@ elseif msg = invalid then
     if debug print "timeout"
     return 6
 end if
-~~~
+```
 
 ## PRINT item list
 
@@ -431,7 +449,7 @@ strings.
 
 For example:
 
-~~~
+```
 x=5:print 25; " is equal to"; x^2
  25 is equal to 25
 
@@ -440,7 +458,7 @@ stringstring    string string
 
 print "zone 1","zone 2","zone 3","zone 4"
 zone 1          zone 2          zone 3          zone 4
-~~~
+```
 
 > `?` is a short cut for the `print` statement. For example:
 >
@@ -451,17 +469,17 @@ zone 1          zone 2          zone 3          zone 4
 Each print zone is 16 char wide. The cursor moves to the next print zone
 each time a comma is encountered.
 
-~~~
+```
 print "print statement #1 "; "print statement #2"
 
 Output: print statement #1 print statement #2
-~~~
+```
 
 Semi-colons can be dropped in some cases. For example, this is legal:
 
-~~~
-Print "this is a five " 5 "!!"
-~~~
+```
+print "this is a five " 5 "!!"
+```
 
 A trailing semi-colon over-rides the cursor-return so that the next
 PRINT begins where the last one left off. If no trailing punctuation is
@@ -473,44 +491,44 @@ objects:
 
 **Printing Enumerable Objects**
 
-~~~
-Print {}
+```
+print {}
 ' this will print: <Component: roAssociativeArray> =  { }
 
-Print {a:1}
+print {a:1}
 ' this will print: <Component: roAssociativeArray> =  { a: 1 }
 
-Print []
+print []
 ' this will print: <Component: roArray> = [ ]
 
-Print [5]
+print [5]
 ' this will print: <Component: roArray> = [ 5 ]
-~~~
+```
 
 
-**TAB (expression)**  
+**TAB (expression)**
 Moves the cursor to the specified position on the current line (modulo
 the width of your console if you specify TAB positions greater than the
-console width). TAB may be used several times in a PRINT list.  
+console width). TAB may be used several times in a PRINT list.
 
-~~~
+```
 print tab(5)"tabbed 5";tab(25)"tabbed 25"
-~~~
+```
 
 No punctuation is required after a TAB modifier. Numerical expressions
 may be used to specify a TAB position. TAB cannot be used to move the
 cursor to the left. If the cursor is beyond the specified position, the
 TAB is ignored.
 
-**POS ( x )**  
+**POS ( x )**
 Returns a number from 0 to window width, indicating the current cursor
 position on the cursor. Requires a "dummy argument" (any numeric
 expression).
 
-~~~
+```
 print tab(40) pos(0) 'prints 40 at position 40
 print "these" tab(pos(0)+5)"words" tab(pos(0)+5)"are"; tab(pos(0)+5)"evenly" tab(pos(0)+5)"spaced"
-~~~
+```
 
 ## FUNCTION(\[parameter \[= default\] AS type, …\]) AS type / END FUNCTION
 
@@ -542,29 +560,27 @@ parameters.
 
 For example:
 
-~~~
-Function cat(a, b)
-    Return a+b 'a, b could be numbers or strings
-End Function
+```
+function cat(a, b)
+    return a+b 'a, b could be numbers or strings
+end function
 
-Function five() as Integer
-    Return 5
-End function
+function five() as Integer
+    return 5
+end function
 
-Function add(a as Integer, b as Integer) As Integer
-    Return a+b
-End function
+function add(a as Integer, b as Integer) as Integer
+    return a+b
+end function
 
+function add2(a as Integer, b=5 as Integer) as Integer
+    return a+b
+end function
 
-Function add2(a as Integer, b=5 as Integer) As Integer
-    Return a+b
-End Function
-
-
-Function add3(a as Integer, b=a+5 as Integer) as Integer
-    Return a+b
-End Function
-~~~
+function add3(a as Integer, b=a+5 as Integer) as Integer
+    return a+b
+end function
+```
 
 Functions have their own scope.
 
@@ -577,23 +593,21 @@ in.
 
 For example:
 
-~~~
-Sub main()
-    obj={
+```
+sub main()
+    obj = {
         add: add
         a: 5
         b: 10
     }
-
     obj.add()
     print obj.result
-End Sub
+end sub
 
-
-Function add() as void
+function add() as void
     m.result = m.a + m.b
-End Function
-~~~
+end function
+```
 
 If a function is not called from an AssociativeArray, then its "m" is
 set to an AssociativeArray that is global to the module, and persists
@@ -605,32 +619,32 @@ A function is anonymous if it does not have a name. Note that Anonymous
 Functions do not currently create closures. An Anonymous Function can be
 declared like this:
 
-~~~
-myfunc = Function (a, b)
-    Return a+b
-End Function
+```
+myfunc = function (a, b)
+    return a+b
+end function
 
 print myfunc(1,2)
-~~~
+```
 
 They can be used with associative array literals like this:
 
-~~~
+```
 q = {
-    starring : Function(o, e)
+    starring : function(o, e)
         str = e.GetBody()
         print "Starring: " + str
         toks = box(str).tokenize(",")
-        For Each act In tok
+        for each act in tok
             actx = box(act).trim()
-            If actx <> "" Then
+            if actx <> "" then
                 print "Actor: [" + actx + "]"
                 o.Actors.Push(actx)
-            End If
-        End For
-        Return 0
-    End Function
+            end if
+        end for
+        return 0
+    end function
 }
 
 q.starring(myobj, myxml)
-~~~
+```

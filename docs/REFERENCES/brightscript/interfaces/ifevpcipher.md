@@ -1,5 +1,5 @@
 ---
-title: "ifEVPCipher"
+title: ifEVPCipher
 excerpt: ''
 deprecated: false
 hidden: false
@@ -70,17 +70,17 @@ An [roByteArray](doc:robytearray) containing the result.
 
 #### Example
 
-~~~
+```
   x = evp.Process(bytes)
-~~~
+```
 
 is equivalent to
 
-~~~
+```
   evp.Reinit()
   x = evp.Update(bytes)
   x = x + evp.Final()
-~~~
+```
 
 ### Update(bytes as Object) as Object
 

@@ -25,53 +25,45 @@ The following attributes define a \<component\> XML element:
 The following \<component\> element defines a component named `GridPanelExample`, that contains \<interface\>, \<script\>, and \<children\> elements.
 
 **\<component\> element example**
-~~~~
-<component name = "GridPanelExample" extends = "GridPanel" initialFocus = "examplePosterGrid" >
- 
-  <interface >
-    <field id = "gridcontenturi" type = "uri" onChange = "readpostergrid" />
+```xml
+<component name="GridPanelExample" extends="GridPanel" initialFocus="examplePosterGrid">
+  <interface>
+    <field id="gridcontenturi" type="uri" onChange="readpostergrid" />
   </interface>
- 
-  <script type = "text/brightscript" >
- 
+
+  <script type="text/brightscript">
     <![CDATA[
- 
-    sub init()
-      m.top.panelSize = "full"
-      m.top.isFullScreen = true
-      m.top.leftPosition = 130
-      m.top.focusable = true
-      m.top.hasNextPanel = false
-      m.top.createNextPanelOnItemFocus = false
-      m.top.grid = m.top.findNode("examplePosterGrid")
-    end sub
- 
-    sub readpostergrid()
-      m.readPosterGridTask = createObject("roSGNode", "ContentReader")
-      m.readPosterGridTask.contenturi = m.top.gridcontenturi
-      m.readPosterGridTask.observeField("content", "showpostergrid")
-      m.readPosterGridTask.control = "RUN"
-    end sub
- 
-    sub showpostergrid()
-      m.top.grid.content = m.readPosterGridTask.content
-    end sub
- 
+      sub init()
+        m.top.panelSize = "full"
+        m.top.isFullScreen = true
+        m.top.leftPosition = 130
+        m.top.focusable = true
+        m.top.hasNextPanel = false
+        m.top.createNextPanelOnItemFocus = false
+        m.top.grid = m.top.findNode("examplePosterGrid")
+      end sub
+
+      sub readpostergrid()
+        m.readPosterGridTask = createObject("roSGNode", "ContentReader")
+        m.readPosterGridTask.contenturi = m.top.gridcontenturi
+        m.readPosterGridTask.observeField("content", "showpostergrid")
+        m.readPosterGridTask.control = "RUN"
+      end sub
+
+      sub showpostergrid()
+        m.top.grid.content = m.readPosterGridTask.content
+      end sub
     ]]>
- 
   </script>
- 
-  <children >
- 
+
+  <children>
     <PosterGrid
-      id = "examplePosterGrid"
-      basePosterSize = "[ 512, 288 ]"
-      caption1NumLines = "1"
-      numColumns = "2"
-      numRows = "2"
-      itemSpacing = "[ 20, 20 ]" />
- 
+      id="examplePosterGrid"
+      basePosterSize="[ 512, 288 ]"
+      caption1NumLines="1"
+      numColumns="2"
+      numRows="2"
+      itemSpacing="[ 20, 20 ]" />
   </children>
- 
 </component>
-~~~~
+```

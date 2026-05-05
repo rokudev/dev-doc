@@ -103,7 +103,7 @@ In the demo of the App Behavior Analysis tool, the video uses the SceneGraph Dev
 
 [SceneGraph threads](doc:threads)
 
-[SceneGraph development tips for performance](doc:peformance-guide)
+[SceneGraph development tips for performance](doc:performance-guide)
 
 [SceneGraph development tips for data management](doc:data-management)
 

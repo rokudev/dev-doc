@@ -33,34 +33,34 @@ You can get a plain (non-referenced) version of the value by calling the this me
 This method can be used for in/out function parameters. If you have a boxed object, you can change the value in the object via this method, without changing the variable reference itself.
 
 ```
-Function Main()
+function Main()
     f1 = Foo
     print "f1 "; Type(f1); "="; f1
- 
+
     f2 = Box(Foo)
     print "f2 "; Type(f2); "="; f2
- 
+
     print "adjusting f2"
     AdjustFun(f2)
- 
+
     print "f2 "; Type(f2); "="; f2
     print "f2()"; "="; f2()
- 
+
     f3 = f2.GetSub()
     print "f3 "; Type(f3); "="; f3
-End Function
- 
-Function AdjustFun(f)
+end function
+
+function AdjustFun(f)
     f.SetSub(Bar)
-End Function
- 
-Function Foo()
+end function
+
+function Foo()
     return "--Foo--"
-End Function
- 
-Function Bar()
+end function
+
+function Bar()
     return "--Bar--"
-End Function
+end function
 ==>
 f1 Function=<Function: foo>
 f2 roFunction=<Function: foo>

@@ -16,7 +16,7 @@ Continue Watching is a content category row within the **What to Watch** home sc
 
 <br />
 
-> The Continue Watching feature is available on all Roku devices running Roku OS 11.0 or higher in the United States, Canada, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
+> The Continue Watching feature is available on all Roku devices running [Roku OS 11.0](doc:release-notes#roku-os-110) or higher in the United States, Canada, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
 > **Certification requirement**:
 >
@@ -58,13 +58,13 @@ To get started with the Continue Watching integration, follow these steps:
 
    The response from the terminal application should be as follows:
 
-```
+   ```xml
    <?xml version="1.0" encoding="UTF-8" ?>
    <TokenCmdResponse>
       <Command>Install</Command>
       <Response>Success</Response>
    </TokenCmdResponse>
-```
+   ```
 
 4. Once development has been completed, request authentication tokens for testing the Continue Watching integration in a beta environment. This enables you to complete QA testing before releasing your updated app to production. Provide Roku Partner Engineering with the list of the app IDs to be used for QA testing. Upon receiving the app token, add it to the [manifest](doc:channel-manifest) (channel_token=\<token>). The **channel authentication token** will also be used in your production application.
 
@@ -248,7 +248,7 @@ To remove content items from the Continue Watching row, send a **DELETE** reques
 
 **JSON body**:
 
-```
+```json
 {
   "items": [
     {
@@ -269,7 +269,7 @@ Handling deep links sent to your app from the Continue Watching row is essential
 **Syntax:**
 
 ```
-http://<roku-device-ip-address>:8060/launch|input/\<channelId\>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>&profileId=<profileIdValue>
+http://<roku-device-ip-address>:8060/launch|input/<channelId>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>&profileId=<profileIdValue>
 ```
 
 **Example:**
@@ -284,7 +284,7 @@ To call the Continue Watching APIs, the app must include BrightScript code that 
 
 ```
 'SetUrl needs to be called first
-request.SetUrl("https://userdata.sr.roku.com/user-data/v1/content/continueWatching");
+request.SetUrl("https://userdata.sr.roku.com/user-data/v1/content/continueWatching")
 request.AddHeader("Content-Type","application/json")
 request.AddHeader("x-roku-reserved-jwt", "")
 request.AddHeader("x-roku-reserved-channel-id", "<production app ID>") 'pass the production app ID

@@ -21,7 +21,7 @@ You can use the BrightScript Profiler to pinpoint where performance improvements
 
 You can use each of these metrics to diagnose problems and get insights where you can improve the app's performance.
 
-> Developers can build a custom profiling tool by following the [BrightScript profiler file format specification](doc:brs-profiler-file-format). This specification describes the entries in the header, body, and footer of a BrightScript profiler file (**.bsprof**) file.  
+> Developers can build a custom profiling tool by following the [BrightScript profiler file format specification](doc:brs-profiler-file-format). This specification describes the entries in the header, body, and footer of a BrightScript profiler file (**.bsprof**) file.
 
 ## Usage
 
@@ -131,7 +131,7 @@ For example, if starting video playback is slow or seems to cause memory leaks, 
 
 ### Port 8080 Commands
 
-These profiling commands exist on port 8080 (Roku OS Versions 9 and later):
+These profiling commands exist on port 8080 ([Roku OS Versions 9](doc:release-notes#roku-os-9) and later):
 
 | **Command**   | **Purpose**                              |
 |---------------|------------------------------------------|
@@ -307,19 +307,19 @@ functions as a whole or for individuals lines of code in the functions
 
 If any of these metrics appear in a call path, they are specific to that call path. For example, in this call path:
 
-~~~~
+```
 <root>: cpu.self=0,cpu.callees=14700,tm.self=0.000,tm.callees=1.989,mem.self=0,mem.callees=324452,calls=0
 
 +- func1(): pkg:/components/file1.brs:83,cpu.self=200,cpu.callees=14500,tm.self=0.728,tm.callees=1.261,mem.self=5840,mem.callees=318612,calls=1
 
 |  +- func2(): pkg:/components/file2.brs:22,cpu.self=14500,cpu.callees=0,tm.self=1.261,tm.callees=0.000,mem.self=31800,mem.callees=612,calls=1
-~~~~
+```
 
 The metrics for func2() are specific to when it is called from func1().
 
 However, in the table below:
 
-~~~~
+```
 ------------- BEGIN: TOP CONSUMERS: CPU.SELF -----------------
 
   1: func1(): pkg:/components/file1.brs:83,cpu.self=300,cpu.total=450,tm.self=0.001,tm.total=0.001,mem.self=0,mem.total=0,calls=5
@@ -327,7 +327,7 @@ However, in the table below:
   2: func2(): pkg:/components/file2.brs:22,cpu.self=55430,cpu.total=80500,tm.self=0.126,tm.total=0.126,mem.self=0,mem.total=0,calls=3
 
 -------------- END: TOP CONSUMERS: CPU.SELF -----------------
-~~~~
+```
 
 The metrics displayed are the totals for all calls to each function, on any call path.
 

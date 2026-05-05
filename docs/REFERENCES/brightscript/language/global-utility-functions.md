@@ -43,7 +43,7 @@ are received. In this case, Wait returns a type "invalid".
 p = CreateObject("roMessagePort")
 s = CreateObject("roScreen")
 s.SetPort(p)
-msg = Wait(0, p) 
+msg = Wait(0, p)
 print Type(msg) ' e.g. roUniversalControlEvent
 print msg.GetInt() ' button number
 ```
@@ -193,12 +193,12 @@ this function.
 For example:
 
 ```
-BrightScript Debugger> a=[]  
-BrightScript Debugger> a[0]=a  
-BrightScript Debugger> a=invalid  
-BrightScript Debugger> print RunGarbageCollector()  
-COUNT: 3  
-ORPHANED: 1  
+BrightScript Debugger> a=[]
+BrightScript Debugger> a[0]=a
+BrightScript Debugger> a=invalid
+BrightScript Debugger> print RunGarbageCollector()
+COUNT: 3
+ORPHANED: 1
 ROOT: 2
 ```
 
@@ -210,7 +210,7 @@ integer and floating point numbers, strings, roArray, and
 roAssociativeArray objects). If the string is not syntactically
 correct, **Invalid** will be returned. A few other things to note:
 
-* As of Roku OS 14.6, you can use the `d` option in order to use double-precision floating point values (roDouble) to improve the precision of the parsed numbers. This helps developers handle JSON payloads from server-side ad insertion (SSAI) providers that use floating-point values to represent time values.
+* As of [Roku OS 14.6](doc:release-notes#roku-os-146), you can use the `d` option in order to use double-precision floating point values (roDouble) to improve the precision of the parsed numbers. This helps developers handle JSON payloads from server-side ad insertion (SSAI) providers that use floating-point values to represent time values.
 
 * By default, any roAssociativeArray objects in the returned objects will be
   **case sensitive**.  To return a **case-insensitive** structure, set the `flags` parameter to `"i"`.
@@ -223,20 +223,20 @@ correct, **Invalid** will be returned. A few other things to note:
 For example, lets say your service returns a JSON object that contains a
 list of photo URLs:
 
-```
+```json
 {
       "photos" : [
-           {  
+           {
                  "title" : "View from the hotel",
-                 "url" : "http://example.com/images/00012.jpg" 
+                 "url" : "http://example.com/images/00012.jpg"
            },
-           { 
+           {
                  "title" : "Relaxing at the beach",
-                 "url" : "http://example.com/images/00222.jpg" 
+                 "url" : "http://example.com/images/00222.jpg"
            },
-           { 
+           {
                  "title" : "Flat tire",
-                 "url" : "http://example.com/images/00314.jpg" 
+                 "url" : "http://example.com/images/00314.jpg"
            }
       ]
 }
@@ -246,9 +246,9 @@ list of photo URLs:
 searchRequest = CreateObject("roUrlTransfer")
 searchRequest.SetURL("http://api.example.com/services/rest/getPhotos")
 response = ParseJson(searchRequest.GetToString())
-For Each photo In response.photos
+for each photo in response.photos
     GetImage(photo.title, photo.url)
-End For
+end for
 ```
 
 ## FormatJson(json as Object, flags = 0 as Integer) as String
@@ -282,11 +282,11 @@ character value.
 euroStr = Chr(&h20AC)
 
 '* By default, non-ASCII Unicode characters are escaped in JSON style
-? FormatJSON(euroStr)
+print FormatJSON(euroStr)
 ' => "\u20AC"
 
 '* If specified, non-ASCII Unicode characters are not escaped.
-? FormatJSON(euroStr, &h0001)
+print FormatJSON(euroStr, &h0001)
 ' => "€"
 ```
 
@@ -305,18 +305,18 @@ list = CreateObject("roList")
 obj = {list:list, n:1}
 
 '* By default, attempting to format with any unsupported type fails and returns an empty string.
-? FormatJSON(obj)
+print FormatJSON(obj)
 ' => BRIGHTSCRIPT: BRIGHTSCRIPT: ERROR: FormatJSON: list: Value type not supported: roList
 
 '* If specified, unsupported values can be output as JSON 'null' values.
 '* (In this case, no error diagnostics are printed to the console).
-? FormatJSON(obj, &h0100) 
+print FormatJSON(obj, &h0100)
 ' => {"list":null,"n":1}
 
 '* If specified, unsupported values can be output as diagnostic string values.
 '* The diagnostic string is the component type in angle brackets.
 '* (In this case, no error diagnostics are printed to the console).
-? FormatJSON(obj, &h0200) 
+print FormatJSON(obj, &h0200)
 ' => {"list":"<roList>","n":1}
 ```
 
@@ -345,5 +345,5 @@ For example:
 
 ```
 `text = Tr("Video will start in %1 seconds").Replace("%1",
-numSeconds.ToStr())` 
+numSeconds.ToStr())`
 ```

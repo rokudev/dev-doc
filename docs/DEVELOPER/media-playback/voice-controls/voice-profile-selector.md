@@ -31,7 +31,7 @@ To implement voice support for a profile selection screen, integrate the followi
   deviceInfo = CreateObject("roDeviceInfo")
   ' channel is launched and profile selection screen is displayed
   if deviceInfo.HasFeature("handsfree_voice")
-   	 appMgr.StartVoiceActionSelectionRequest()
+      appMgr.StartVoiceActionSelectionRequest()
   end if
   ```
 

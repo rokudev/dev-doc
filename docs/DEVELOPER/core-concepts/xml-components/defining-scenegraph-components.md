@@ -112,11 +112,11 @@ fields.
 
 **Defining a Node in XML**
 
-```
-<Poster 
-  id = "myPoster" 
-  uri = "pkg:/images/myPoster.jpg" 
-  translation = "[ 200, 100 ]" />
+```xml
+<Poster
+  id="myPoster"
+  uri="pkg:/images/myPoster.jpg"
+  translation="[ 200, 100 ]" />
 ```
 
 Nodes can include children by simply including them in the body of a
@@ -126,16 +126,14 @@ it.
 
 **Adding a Child Node in XML**
 
-```
-<Poster 
-  id = "myPoster" 
-  uri = "pkg:/images/myPoster.jpg" 
-  translation = "[ 200, 100 ]" >
-
-  <Label 
-    id = "FirstName" 
-    text = "John" />
-
+```xml
+<Poster
+  id="myPoster"
+  uri="pkg:/images/myPoster.jpg"
+  translation="[ 200, 100 ]">
+  <Label
+    id="FirstName"
+    text="John" />
 </Poster>
 ```
 
@@ -153,13 +151,13 @@ parent **\<Label\> **node `font` field to be set to the
 
 **Defining the role Attribute of a Node**
 
-```
-<Label text = "John Doe" >
-  <Font 
-    id = "TypewriterFont" 
-    role = "font" 
-    uri = "pkg:/fonts/BohemianTypewriter.ttf" 
-    size = "36" />
+```xml
+<Label text="John Doe">
+  <Font
+    id="TypewriterFont"
+    role="font"
+    uri="pkg:/fonts/BohemianTypewriter.ttf"
+    size="36" />
 </Label>
 ```
 
@@ -172,10 +170,10 @@ follows:
 
 **Using dictionary to Set an Attribute Value**
 
-```
-<Label 
-  text = "John Doe"
-  font = "dictionary:TypewriterFont" />
+```xml
+<Label
+  text="John Doe"
+  font="dictionary:TypewriterFont" />
 ```
 
 ## Extending Built-In Node Classes
@@ -199,14 +197,12 @@ classes, such as [**Scene**](doc:scene) or
 them in order to use them. So every SceneGraph application *must*
 include an XML component file in the following format:
 
-~~~
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<component name = "MyApplicationScene" extends = "Scene" >
-
-customized_scene_definitions
-
+<component name="MyApplicationScene" extends="Scene">
+  customized_scene_definitions
 </component>
-~~~
+```
 
 The built-in abstract **Scene** node is extended by setting the `name`
 and `extends` attributes of the
@@ -226,13 +222,12 @@ application by extending the built-in
 [**RowList**](doc:rowlist) node class component in an XML
 component file:
 
-~~~
-<?xml version = "1.0" encoding = "utf-8" ?>
-
-<component name = "MyCustomRowList" extends = "RowList" >
-customized_rowlist_definitions
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyCustomRowList" extends="RowList">
+  customized_rowlist_definitions
 </component>
-~~~
+```
 
 Once this XML component file is created, you can now add the custom row
 list component to your **Scene** component, or any other SceneGraph
@@ -241,38 +236,31 @@ custom row list to the application **Scene** component using the
 `createChild()` function using BrightScript in a
 **\<script\>** element:
 
-~~~
-<?xml version = "1.0" encoding = "utf-8" ?>
-
-<component name = "MyApplicationScene" extends = "Scene" >
-
-    <script type="text/brightscript" >
-      <![CDATA[
-      
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyApplicationScene" extends="Scene">
+  <script type="text/brightscript">
+    <![CDATA[
       sub init()
         rowlist = m.top.createChild("MyCustomRowList")
       end sub
-      
-      ]]>
-    </script>
-    
+    ]]>
+  </script>
 </component>
-~~~
+```
 
 Or you can add the custom component using XML markup in the
 [**\<children\>**](doc:children) element of the XML component
 file:
 
-~~~
-<?xml version = "1.0" encoding = "utf-8" ?>
-
-<component name = "MyApplicationScene" extends = "Scene" >
-  <children>   
-
-    <MyCustomRowList/>
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MyApplicationScene" extends="Scene">
+  <children>
+    <MyCustomRowList />
   </children>
 </component>
-~~~
+```
 
 In either case, you have added your custom component to the SceneGraph
 node tree as a child node of the Scene node, by specifying the component

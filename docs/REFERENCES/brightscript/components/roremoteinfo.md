@@ -20,12 +20,12 @@ This object is created with no parameters:
 
 **Example**
 
-~~~
+```
 remoteInfo = CreateObject("roRemoteInfo")
 print remoteInfo.GetModel(0)
 print remoteInfo.IsAwake(0)
 print remoteInfo.hasFeature("voicecapture", 0)
-~~~
+```
 
 **Output**
 

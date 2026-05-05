@@ -60,15 +60,15 @@ The number of seconds.
 
 #### Example
 
-~~~
+```
 x = timespan.TotalSeconds()
-~~~
+```
 
 is equivalent to
 
-~~~
+```
 x = Int(timespan.TotalMilliseconds() / 1000)
-~~~
+```
 
 ### GetSecondsToISO8601Date(date as String) as Integer
 

@@ -20,22 +20,22 @@ Nodes that use fonts include a field that stores a Font node. The font to use is
 
 The uri field can be set to any TrueType/OpenType font file. For example, to specify a font in XML markup:
 
-~~~
+```xml
 <Label>
-  <Font role = "font" uri = "pkg:/fonts/font.ttf" size = "24" />
+  <Font role="font" uri="pkg:/fonts/font.ttf" size="24" />
 </Label>
-~~~
+```
 
 A default system font can also be specified, such as in the following:
 
-~~~
-<Label id = "myLabel"
-  width = "200"
-  height = "200"
-  text = "Hello Label"
-  font = "font:MediumBoldSystemFont" 
-  />
-~~~
+```xml
+<Label
+  id="myLabel"
+  width="200"
+  height="200"
+  text="Hello Label"
+  font="font:MediumBoldSystemFont" />
+```
 
 Below is the list of all the possible system font values:
 
@@ -58,13 +58,13 @@ Below is the list of all the possible system font values:
 
 The font can also be specified in BrightScript, for example:
 
-~~~
+```
 label = CreateObject("roSGNode", "Label")
 font  = CreateObject("roSGNode", "Font")
 font.uri = "pkg:/fonts/font.ttf"
 font.size = 24
 label.font = font
-~~~
+```
 
 ## Fields
 

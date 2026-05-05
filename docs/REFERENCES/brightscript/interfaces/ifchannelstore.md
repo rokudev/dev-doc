@@ -42,7 +42,7 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
 
 | Parameter         | Type    | Description                                                                                                                                           |
 | ----------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| code              | string  | The **Product Identifier** that was entered in the [In-App Products page in the Developer Dashboard](doc:in-channel-products).                        |
+| code              | string  | The **Product Identifier** that was entered in the [In-App Products page in the Developer Dashboard](doc:product-catalog).                        |
 | name              | string  | The item name (this name will also be set as the description).                                                                                        |
 | quantity          | Integer | For one-time purchase/consumable products only. The number of the product purchased (for example "1000" game points, "3" viewings of a movie rental). |
 | productType       | string  | The product type (ex. "MonthlySub")                                                                                                                   |
@@ -93,7 +93,7 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
     <tr>
       <td>code</td>
       <td>string</td>
-      <td>The <strong>Product Identifier</strong> that was entered in the [In-app Products page in the Developer Dashboard](doc:in-channel-products#product-basics).</td>
+      <td>The <strong>Product Identifier</strong> that was entered in the [In-app Products page in the Developer Dashboard](doc:product-catalog#creating-products).</td>
     </tr>
 
     <tr>

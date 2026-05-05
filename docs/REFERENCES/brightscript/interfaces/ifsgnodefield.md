@@ -113,7 +113,7 @@ You can also use the node.field syntax to get the same result as setField(). Spe
 
 A flag indicating whether the field was successfully updated.
 
-_Since Roku OS 9.3_, `observeField()` and `observeFieldScoped()` methods include an optional `infoFields` parameter, which is an array of field names.  Generally, these should be relevant fields in the same object being observed, which are necessary to give context to the field that triggered the field change event. The triggered event object itself will provide a `getInfo()` method, which returns an AA that contains the names and instantaneous values of the requested "context" fields at the point when the observed field changed. For example, use of `videoNode.observeField("position", m.port, ["clipId", "programId"])` to set up an observer for `position` would later allow the call `extraInfo = msg.GetInfo()` to retrieve requested "context" information, given that `msg` is the relevant roSGNodeEvent indicating that `position` has changed. The contents of `extraInfo` would resemble `{"clipid": 1, "programid": 0}`.
+_Since [Roku OS 9.3](doc:release-notes#roku-os-93)_, `observeField()` and `observeFieldScoped()` methods include an optional `infoFields` parameter, which is an array of field names.  Generally, these should be relevant fields in the same object being observed, which are necessary to give context to the field that triggered the field change event. The triggered event object itself will provide a `getInfo()` method, which returns an AA that contains the names and instantaneous values of the requested "context" fields at the point when the observed field changed. For example, use of `videoNode.observeField("position", m.port, ["clipId", "programId"])` to set up an observer for `position` would later allow the call `extraInfo = msg.GetInfo()` to retrieve requested "context" information, given that `msg` is the relevant roSGNodeEvent indicating that `position` has changed. The contents of `extraInfo` would resemble `{"clipid": 1, "programid": 0}`.
 
 ### setFields(fields as Object) as Boolean
 
@@ -323,7 +323,7 @@ A flag indicating whether this operation was successful.
 
 ### observeFieldScopedEx(fieldName as String, port as Object[, infoFields as Object]) as Boolean
 
-_Available since Roku OS 12.0_
+_Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
 #### Description
 
@@ -387,7 +387,7 @@ A flag indicating the current state of **queueNode**.
 
 ### moveIntoField(field_name as String, data as Object) as Integer
 
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 #### Description
 
@@ -416,8 +416,8 @@ The number of nested objects within an object that were copied, rather than move
   n.AddField("aa_field", "assocarray", true)
   my_aa = {key: "value"}
   n.MoveIntoField("aa_field", my_aa)
-  ? n.aa_field
-  ? my_aa
+  print n.aa_field
+  print my_aa
 ```
 
 This code will output the following on the port 8085 console:
@@ -438,7 +438,7 @@ This code will output the following on the port 8085 console:
 
 ### moveFromField(field_name as String) as Object
 
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 Moves data _out_ of a field. The field must be of type _assocarray_.
 
@@ -460,9 +460,9 @@ The associative array that was moved from the source field.
 n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
 n.aa_field = {key: "value"}' or use moveIntoField()
-my_aa = n.MoveFromField("aa_field") 
-? n.aa_field ' invalid
-? my_aa ' contents of aa_field
+my_aa = n.MoveFromField("aa_field")
+print n.aa_field ' invalid
+print my_aa ' contents of aa_field
 ```
 
 > **Moving data - when it copies instead**
@@ -490,7 +490,7 @@ my_aa = n.MoveFromField("aa_field")
 
 ### setRef(field_name as String, data as Object)
 
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 #### Description
 
@@ -513,7 +513,7 @@ This function returns true if successful; otherwise it return false, indicating 
 
 ### canGetRef(field_name as String) as Boolean
 
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 #### Description
 
@@ -529,7 +529,7 @@ This function returns true if the call to the **GetRef()** function will succeed
 
 ### getRef(field_name as String) as Object
 
-_Available since Roku OS 15.0_
+_Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 #### Description
 
@@ -555,9 +555,9 @@ This function returns true a reference to the field’s value. This function ret
     n.AddField("aa_field", "assocarray", true)
     my_aa = {key: "value"}
     n.setRef("aa_field", my_aa)
-    ? n.aa_field
-    ? my_aa
-    ? n.GetRef("aa_field")
+    print n.aa_field
+    print my_aa
+    print n.GetRef("aa_field")
 
 ```
 
@@ -588,13 +588,13 @@ A runtime debugging method for helping minimize Rendezvous spread.  This method 
 The following example demonstrates the information returned by this method:
 
 ```
-{   node: { type: "XXComponent",          
-    id: "XXID",          
-    address: 0x123XXX,          
-    willRendezvousFromCurrentThread: "Yes",          
-    owningThread: { type: "Render", name: "newMainScene", id:"123456" }      
+{   node: { type: "XXComponent",
+    id: "XXID",
+    address: 0x123XXX,
+    willRendezvousFromCurrentThread: "Yes",
+    owningThread: { type: "Render", name: "newMainScene", id:"123456" }
 },
-    currentThread: {type: "Task",   name: "conviva",     id: "234567" },    
+    currentThread: {type: "Task",   name: "conviva",     id: "234567" },
     renderThread: { type: "Render", name: "newMainScene", id: "123456" }
 }
 ```
@@ -618,14 +618,14 @@ Signals start and/or stop points for measuring app launch and Electronic Program
 
 To pass certification, an app must finish launching within the time specified in the [certification performance requirements](doc:certification). The Roku OS automatically fires an **AppLaunchInitiate** event to mark when the user presses the OK button to launch an app from the Roku home screen. The app, however, must fire the corresponding `AppLaunchComplete` to mark when the app home page is fully rendered or when video playback starts after handling a [deep link](doc:ifsgnodefield) and the app can respond to commands sent via the remote control.
 
-Starting in Roku OS 9.3, if the app UI displays a login or user selection dialog before the home page, the app can fire **AppDialogInitiate** and **AppDialogComplete** beacons when the dialog loads and exits, respectively. These new beacons enable more accurate measurements of app launch times as the time spent on any dialogs requiring user input prior to rendering the home page are subtracted from the overall app launch time. If the app displays more that one dialog before the home page, multiple pairs of **AppDialogInitiate**/**AppDialogComplete** beacons may be fired. Do not fire AppDialog beacons on message dialogs that do not involve any user interaction (for example, a "please wait" or "loading" dialog).
+Starting in [Roku OS 9.3](doc:release-notes#roku-os-93), if the app UI displays a login or user selection dialog before the home page, the app can fire **AppDialogInitiate** and **AppDialogComplete** beacons when the dialog loads and exits, respectively. These new beacons enable more accurate measurements of app launch times as the time spent on any dialogs requiring user input prior to rendering the home page are subtracted from the overall app launch time. If the app displays more that one dialog before the home page, multiple pairs of **AppDialogInitiate**/**AppDialogComplete** beacons may be fired. Do not fire AppDialog beacons on message dialogs that do not involve any user interaction (for example, a "please wait" or "loading" dialog).
 
 To fire signal beacons within your application, call the `signalBeacon()` function on any node as demonstrated in the following examples:
 
 ```
-myScene.signalBeacon(“AppLaunchComplete”)
-myEPGComponent.signalBeacon(“EPGLaunchInitiate”)
-m.top.signalBeacon(“EPGLaunchComplete”)`
+myScene.signalBeacon("AppLaunchComplete")
+myEPGComponent.signalBeacon("EPGLaunchInitiate")
+m.top.signalBeacon("EPGLaunchComplete")
 ```
 
 > Only the first sequence of EPG launch beacons is recorded.  If a user launches the EPG more than once while the app is running, a warning message is output to the debug console. This warning message, which acknowledges the receipt of the beacon while notifying that subsequent ones will not be recorded, may be ignored.

@@ -1,18 +1,18 @@
 ---
 title: Analytics
-excerpt: Analytics overview
+excerpt: Overview
 deprecated: false
 hidden: true
 metadata:
   robots: index
 next:
-  description: Explore key features available in the Roku content partner portal
+  description: Explore key features available in the Roku Content Partner Portal
   pages:
-    - slug: key-features
-      title: Key Features
+    - slug: roku-content-partner-portal-key-features
+      title: Key features
       type: basic
 ---
-The Analytics section provides insights into how your content and storefront experiences are performing on The Roku Channel. It helps you understand audience engagement, measure the impact of merchandising decisions, and identify opportunities to optimize your catalog and promotions.
+The analytics section provides insights into how your content and storefront experiences are performing on The Roku Channel. It helps you understand audience engagement, measure the impact of merchandising decisions, and identify opportunities to optimize your catalog and promotions.
 
 <br />
 
@@ -25,10 +25,10 @@ The Analytics section provides insights into how your content and storefront exp
 
   For example, merchandising and storefront performance insights are only available to Premium Subscription partners, since these features are tied to storefront and promotional capabilities that are exclusive to that tier.
 
-  If you do not see certain reports or metrics in your Analytics view, it is likely due to your current access level or feature eligibility.
+  If you do not see certain reports or metrics in your analytics view, it is likely due to your current access level or feature eligibility.
 </Callout>
 
-The Analytics section is designed for stakeholders who need visibility into content performance and audience behavior, including:
+The analytics section is designed for stakeholders who need visibility into content performance and audience behavior, including:
 
 * Business and strategy teams
 * Content and operations teams
@@ -69,11 +69,11 @@ Analytics includes a range of reports that surface performance across different 
 
 Below is an overview of the types of insights available:
 
-* **Streaming Activity** – How much content is being watched (streaming hours, stream starts)
-* **Audience Engagement** – How users interact with content (starts, completion rates, session duration)
-* **Content Performance** – Which titles, episodes, or channels are driving viewership and retention
-* **Platform & Distribution** – Where and how users are watching (device, platform, channel, or storefront)
-* **Subscriber Behavior** – How users convert, retain, and churn across subscription offerings _(Premium Subscriptions only)_
+* **Streaming activity** – How much content is being watched (streaming hours, stream starts)
+* **Audience engagement** – How users interact with content (starts, completion rates, session duration)
+* **Content performance** – Which titles, episodes, or channels are driving viewership and retention
+* **Platform & distribution** – Where and how users are watching (device, platform, channel, or storefront)
+* **Subscriber behavior** – How users convert, retain, and churn across subscription offerings _(Premium Subscriptions only)_
 
 <br />
 
@@ -81,7 +81,7 @@ Below is an overview of the types of insights available:
 
 To use this feature, get the appropriate role assigned to your account.
 
-1. Request **Analytics** access from your company’s account administrator.
+1. Request **analytics** access from your company’s account administrator.
 2. Ask your administrator to grant access based on your responsibilities, such as understanding performance of your content.
 3. Contact your internal team if you are not sure who your administrator is.
 
@@ -91,5 +91,5 @@ To use this feature, get the appropriate role assigned to your account.
 
 * Regularly review performance trends to stay ahead of changes in audience behavior
 * Use filters to isolate what is driving performance in specific territories or time periods
-* Pair Analytics insights with Storefront updates to continuously improve engagement
+* Pair analytics insights with storefront updates to continuously improve engagement
 * Focus on a small set of key metrics to guide decisions rather than tracking everything at once

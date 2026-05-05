@@ -27,7 +27,7 @@ Want to learn more, check out [Title tracking status](doc:roku-content-partner-p
 Manage how your content is presented to customers. The storefront feature allows you to curate featured titles, pin content for promotion, and influence merchandising within your channel experience to drive engagement.
 
 <Callout icon="🔒" theme="default">
-  Available only to premium subscription partners.
+  Available only to Premium Subscription partners.
 </Callout>
 
 Want to learn more, check out [Storefront](doc:roku-content-partner-portal-storefront).
@@ -37,7 +37,7 @@ Want to learn more, check out [Storefront](doc:roku-content-partner-portal-store
 Upload and manage the assets that represent your content. Creatives allows you to upload and manage brand assets such as tiles, banners, and call-to-action (CTA) images, as well as manage subscription offer creatives like side cards to support merchandising and promotion.
 
 <Callout icon="🔒" theme="default">
-  Available only to premium subscription partners.
+  Available only to Premium Subscription partners.
 </Callout>
 
 Want to learn more, check out [Creatives](doc:roku-content-partner-portal-creatives).

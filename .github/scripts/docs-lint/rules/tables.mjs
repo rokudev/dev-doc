@@ -91,41 +91,74 @@ function checkPipe(mdast, file, sourceLines, reporter) {
 }
 
 function checkHtml(file, sourceLines, codeFenceMask, reporter) {
-  // Source-text scan: a </tr> immediately followed by a blank line within a table block.
-  // Remark fragments multi-line HTML on blank lines into separate `html` nodes, so AST
-  // walks miss this. Direct source scan is simpler and more reliable.
-  let prevTrCloseLine = 0
+  // Source-text scan: any blank line inside an HTML <table> block. CommonMark/GFM
+  // ends an HTML block at the first blank line, so a blank inside a <table> breaks
+  // the rest of the block in stricter renderers (GitHub, IDE previews) regardless
+  // of what surrounds it. We split this into two rules so the fixer can auto-handle
+  // the easy case and surface the harder one for manual review:
+  //
+  //   html-blank-between-tags  prev ends with `>` AND next starts with `<` — safe
+  //                            to delete (auto-fixable).
+  //   html-blank-in-cell       blank between cell content (text/blockquote/list) —
+  //                            needs editorial judgment to convert to <br />,
+  //                            inline emphasis, etc.
+  //
+  // Remark fragments multi-line HTML on blank lines into separate `html` nodes, so
+  // AST walks miss this — direct source scan is simpler and more reliable.
+  let inTable = false
   for (let i = 0; i < sourceLines.length; i++) {
     if (codeFenceMask[i]) continue
     const line = sourceLines[i]
-    if (/<\/tr\s*>/i.test(line)) {
-      prevTrCloseLine = i + 1
+    const opensHere = /<table[\s>]/i.test(line)
+    const closesHere = /<\/table\s*>/i.test(line)
+    if (!inTable) {
+      // A single-line <table>...</table> opens and closes on the same line —
+      // don't enter inTable state.
+      if (opensHere && !closesHere) inTable = true
       continue
     }
-    if (prevTrCloseLine && line.trim() === '') {
-      let inTable = false
-      for (let j = i + 1; j < sourceLines.length; j++) {
-        const ahead = sourceLines[j]
-        if (/<\/table\s*>/i.test(ahead)) break
-        if (/<tr[\s>]/i.test(ahead)) {
-          inTable = true
-          break
-        }
-        if (ahead.trim() !== '' && !/<\/?\w+/.test(ahead)) break
+    if (closesHere) {
+      inTable = false
+      continue
+    }
+    if (line.trim() !== '') continue
+
+    let prev = ''
+    for (let j = i - 1; j >= 0; j--) {
+      if (codeFenceMask[j]) continue
+      if (sourceLines[j].trim() !== '') {
+        prev = sourceLines[j].trimEnd()
+        break
       }
-      if (inTable) {
-        reporter.add({
-          file,
-          line: i + 1,
-          col: 1,
-          rule: 'html-blank-row',
-          severity: 'warning',
-          message: `blank line after </tr> on line ${prevTrCloseLine} (breaks GitHub/IDE preview)`,
-        })
+    }
+    let next = ''
+    for (let j = i + 1; j < sourceLines.length; j++) {
+      if (codeFenceMask[j]) continue
+      if (sourceLines[j].trim() !== '') {
+        next = sourceLines[j].trimStart()
+        break
       }
-      prevTrCloseLine = 0
-    } else if (line.trim() !== '') {
-      prevTrCloseLine = 0
+    }
+
+    if (prev.endsWith('>') && next.startsWith('<')) {
+      reporter.add({
+        file,
+        line: i + 1,
+        col: 1,
+        rule: 'html-blank-between-tags',
+        severity: 'warning',
+        message: 'blank line between tags inside HTML table (breaks GitHub/IDE preview)',
+      })
+    } else {
+      reporter.add({
+        file,
+        line: i + 1,
+        col: 1,
+        rule: 'html-blank-in-cell',
+        severity: 'warning',
+        message:
+          'blank line inside HTML table cell content (breaks GitHub/IDE preview) — replace with <br /> or restructure',
+      })
     }
   }
 }

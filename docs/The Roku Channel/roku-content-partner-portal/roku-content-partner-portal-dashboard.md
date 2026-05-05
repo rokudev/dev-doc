@@ -1,6 +1,6 @@
 ---
 title: Dashboard
-excerpt: Dashboard overview
+excerpt: Overview
 deprecated: false
 hidden: true
 metadata:
@@ -12,7 +12,7 @@ next:
       title: Key features
       type: basic
 ---
-The Dashboard is your starting point in the Roku content partner portal. It introduces the platform and provides quick access to key features based on your account permissions.
+The dashboard is your starting point in the Roku Content Partner Portal. It introduces the platform and provides quick access to key features based on your account permissions.
 
 ![Dashboard](https://files.readme.io/b3632282cab88d72778dd09fb8a0fc358816ea0f8670be69a8cbd2ffba838d0e-image.png)
 

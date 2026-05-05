@@ -1,0 +1,50 @@
+name: Table lint
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'reference/**/*.md'
+      - 'custom_pages/**/*.md'
+      - 'custom_blocks/**/*.md'
+      - '.github/scripts/lint-tables.mjs'
+      - '.github/workflows/lint-tables.yml'
+      - 'package.json'
+      - 'package-lock.json'
+
+jobs:
+  lint-tables:
+    name: Lint markdown tables
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Collect changed markdown files
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git diff --name-only --diff-filter=ACMR "$BASE_SHA" "$HEAD_SHA" \
+            | grep -E '^(docs|reference|custom_pages|custom_blocks)/.*\.md$' \
+            > /tmp/changed.txt || true
+          echo "Markdown files in synced paths changed in this PR:"
+          cat /tmp/changed.txt || true
+
+      - name: Run table linter
+        run: |
+          if [ -s /tmp/changed.txt ]; then
+            # -d '\n' handles paths with spaces (e.g. "The Roku Channel/...").
+            # Annotations are emitted because GITHUB_ACTIONS=true in CI.
+            xargs -d '\n' -r node .github/scripts/lint-tables.mjs < /tmp/changed.txt
+          else
+            echo "No markdown files in synced paths changed; nothing to lint."
+          fi

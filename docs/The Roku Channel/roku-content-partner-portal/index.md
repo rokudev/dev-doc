@@ -1,18 +1,18 @@
 ---
-title: Roku content partner portal
-excerpt: Roku content partner portal overview
+title: Roku Content Partner Portal
+excerpt: Overview
 deprecated: false
 hidden: true
 metadata:
   robots: index
 next:
-  description: Begin your experience from the Roku content partner portal dashboard
+  description: Begin your experience from the Roku Content Partner Portal dashboard
   pages:
-    - slug: dashboard-1
+    - slug: roku-content-partner-portal-dashboard
       title: Dashboard
       type: basic
 ---
-The Roku content partner portal is a self-service platform designed to give content partners greater visibility, control, and efficiency in managing their content lifecycle on The Roku Channel. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, access analytics to understand performance and engagement, and manage Storefront and Creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
+The Roku Content Partner Portal is a self-service platform designed to give content partners greater visibility, control, and efficiency in managing their content lifecycle on The Roku Channel. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, access analytics to understand performance and engagement, and manage Storefront and Creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
 
 <br />
 
@@ -22,7 +22,7 @@ The Roku content partner portal is a self-service platform designed to give cont
 
 # What the portal enables
 
-At its core, the Roku content partner portal is built to simplify how partners interact with Roku’s content operations, and marketing. Instead of operating through fragmented tools or delayed updates, partners can:
+At its core, the Roku Content Partner Portal is built to simplify how partners interact with Roku’s content operations, and marketing. Instead of operating through fragmented tools or delayed updates, partners can:
 
 * **Track title status in real time** across the full lifecycle, from ingestion through availability and expiration
 * **Understand processing outcomes** with clear, actionable status indicators
@@ -40,7 +40,7 @@ This transparency reduces uncertainty and empowers your teams to take action fas
 
 Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
 
-The Roku content partner portal shifts that model by:
+The Roku Content Partner Portal shifts that model by:
 
 * Reducing dependency on support teams
 * Improving turnaround time for issue resolution
@@ -96,4 +96,4 @@ Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/d
 
 <br />
 
-The Roku content partner portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.
+The Roku Content Partner Portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.

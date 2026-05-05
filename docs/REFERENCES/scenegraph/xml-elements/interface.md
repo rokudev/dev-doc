@@ -46,7 +46,7 @@ The following attributes define each \<field> XML element:
       </td>
       <td>
         A case-insensitive string containing the type of the field. The allowable types are BrightScript fundamental types, a SceneGraph node object reference, and a URL identifier type, as follows:
-
+        <br /><br />
         <table>
           <tr>
             <td>Type</td>

@@ -110,7 +110,7 @@ Component libraries do not need to be packaged or signed with the same devid as 
       </td>
       <td>
         Indicates the progress of the library download. The possible values are:
-
+        <br /><br />
         <table>
           <tr>
             <td>Value</td>

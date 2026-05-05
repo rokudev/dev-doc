@@ -4964,16 +4964,18 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
         subType
       </td>
       <td>
-        Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). _No existe ningún vínculo entre los activos principales y secundarios_ subTypes compatibles:
-
-        * trailer
-        * highlight
-        * making_of
-        * behind_scenes
-        * interview
-        * related
-        * recap
-        * extra
+        Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). <em>No existe ningún vínculo entre los activos principales y secundarios</em> subTypes compatibles:
+        <br /><br />
+        <ul>
+          <li>trailer</li>
+          <li>highlight</li>
+          <li>making_of</li>
+          <li>behind_scenes</li>
+          <li>interview</li>
+          <li>related</li>
+          <li>recap</li>
+          <li>extra</li>
+        </ul>
       </td>
       <td>
         Valores permitidos: <br />trailer<br />highlight<br />making_of<br />behind_scenes<br />interview<br />related<br />recap<br />extra

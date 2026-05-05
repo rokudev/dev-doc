@@ -171,15 +171,17 @@ Returns an associative array with the following information about the stream seg
         HdrMode
       </td>
       <td>
-        Indicates the HDR format of the content, which may be one of the following values:  
-
-        * 0: UNKNOWN
-        * 1: NONE (SDR)
-        * 2: HDR10
-        * 3: DOLBY_VISION
-        * 4: HLG10
-        * 5: HDR10_PLUS
-        * 6: SL_HDR2
+        Indicates the HDR format of the content, which may be one of the following values:
+        <br /><br />
+        <ul>
+          <li>0: UNKNOWN</li>
+          <li>1: NONE (SDR)</li>
+          <li>2: HDR10</li>
+          <li>3: DOLBY_VISION</li>
+          <li>4: HLG10</li>
+          <li>5: HDR10_PLUS</li>
+          <li>6: SL_HDR2</li>
+        </ul>
       </td>
     </tr>
   </tbody>

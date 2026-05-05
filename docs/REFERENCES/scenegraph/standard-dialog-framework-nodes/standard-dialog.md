@@ -44,9 +44,11 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
       <td style={{ textAlign: "left" }}>
         Sets the width of the dialog:
-
-        * If set to 0, the standard system dialog width is used (1038 for FHD, 692 for HD). If the title or any button text is too wide to fit within the standard width, the dialog width will be automatically increased to show the full title or button text up to a preset maximum (1380 for FHD and 920 for HD).
-        * If set to greater than 0, the specified width is used as the overall width of the dialog.
+        <br /><br />
+        <ul>
+          <li>If set to 0, the standard system dialog width is used (1038 for FHD, 692 for HD). If the title or any button text is too wide to fit within the standard width, the dialog width will be automatically increased to show the full title or button text up to a preset maximum (1380 for FHD and 920 for HD).</li>
+          <li>If set to greater than 0, the specified width is used as the overall width of the dialog.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -149,10 +151,12 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
       <td style={{ textAlign: "left" }}>
         An event that indicates the dialog was dismissed. This event is triggered when one of the following occurs:
-
-        * The **close** field is set.
-        * The Back, Home, or Options key is pressed.
-        * Another dialog is displayed.
+        <br /><br />
+        <ul>
+          <li>The <strong>close</strong> field is set.</li>
+          <li>The Back, Home, or Options key is pressed.</li>
+          <li>Another dialog is displayed.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -186,11 +190,11 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
       <td>
         Blend color for the following items:
-
-        * [StdDlgProgressItem's](doc:std-dlg-progress-item)
-          spinner bitmap
-        * [StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item)
-          graphic
+        <br /><br />
+        <ul>
+          <li>[StdDlgProgressItem's](doc:std-dlg-progress-item) spinner bitmap</li>
+          <li>[StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -199,20 +203,12 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
       <td>
         Color for the text in the following items:
-
-        * [StdDlgTextItem](doc:std-dlg-text-item)
-          and
-          [StdDlgGraphicItem](doc:std-dlg-graphic-item)
-          if the **namedTextStyle** field is set to "normal" or "bold".
-        * All
-          [content area items](doc:std-dlg-item-base)
-          , except for
-          [StdDlgTextItem](doc:std-dlg-text-item)
-          and
-          [StdDlgGraphicItem](doc:std-dlg-graphic-item)
-          .
-        * [Title area](doc:std-dlg-title-area)
-          . Unfocused button.
+        <br /><br />
+        <ul>
+          <li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
+          <li>All [content area items](doc:std-dlg-item-base), except for [StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item).</li>
+          <li>[Title area](doc:std-dlg-title-area). Unfocused button.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -221,11 +217,11 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
       <td>
         Blend color for the following:
-
-        * The
-          [button area](doc:std-dlg-button-area)
-          focus bitmap.
-        * The focused scrollbar thumb.
+        <br /><br />
+        <ul>
+          <li>The [button area](doc:std-dlg-button-area) focus bitmap.</li>
+          <li>The focused scrollbar thumb.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -241,13 +237,12 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         DialogSecondaryTextColor
       </td>
       <td>
-        Color for the text of in the following items:
-
-        * [StdDlgTextItem](doc:std-dlg-text-item)
-          and
-          [StdDlgGraphicItem](doc:std-dlg-graphic-item)
-          if the **namedTextStyle** field is set to "secondary".
-        * Disabled button.
+        Color for the text in the following items:
+        <br /><br />
+        <ul>
+          <li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
+          <li>Disabled button.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -256,11 +251,11 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
       <td>
         Color for the following items:
-
-        * The divider displayed below the title area.
-        * The unfilled portion of the
-          [StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item)
-          graphic.
+        <br /><br />
+        <ul>
+          <li>The divider displayed below the title area.</li>
+          <li>The unfilled portion of the [StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -285,11 +280,11 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
       </td>
       <td>
         The blend color for the following items:
-
-        * The button focus footprint bitmap that is displayed when the
-          [button area](doc:std-dlg-button-area)
-          does not have focus.
-        * Unfocused scrollbar thumb and scrollbar track.
+        <br /><br />
+        <ul>
+          <li>The button focus footprint bitmap that is displayed when the [button area](doc:std-dlg-button-area) does not have focus.</li>
+          <li>Unfocused scrollbar thumb and scrollbar track.</li>
+        </ul>
       </td>
     </tr>
   </tbody>

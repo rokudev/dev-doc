@@ -162,13 +162,13 @@ Configure how your app is listed in the Streaming Store, including the app's hom
         Made for kids?
       </td>
       <td>
-        If your app is made for kids you must select **Yes** and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.
-
-        When you select **Yes**, the **Category** field is automatically fixed to "Kids" and cannot be changed, and you cannot set the **App Age Rating** to "Adult".
-
-        If you select **No**, you cannot set the **Category** to "Kids".
-
-        Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the
+        If your app is made for kids you must select <strong>Yes</strong> and comply with the applicable children's privacy laws and youth protection laws in the countries in which your app is published.
+        <br /><br />
+        When you select <strong>Yes</strong>, the <strong>Category</strong> field is automatically fixed to "Kids" and cannot be changed, and you cannot set the <strong>App Age Rating</strong> to "Adult".
+        <br /><br />
+        If you select <strong>No</strong>, you cannot set the <strong>Category</strong> to "Kids".
+        <br /><br />
+        Selecting "Yes" automatically enables the <strong>kidsContent</strong> parameter in calls to the
       </td>
     </tr>
     <tr>
@@ -320,29 +320,19 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
         My app displays video ads.
       </td>
       <td>
-        If you select this option, you must enter the URL path to an app-ads.txt file in the **Developer URL** field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [App Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The **Channel ID** and **Bundle ID** values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags `appstore:store_id` and `appstore:bundle_id` to provide channel ID information in the http header of an app's Streaming Store page. <br />
-        Using the values from the illustration above as examples, the meta-tags would appear in the `<head>` section, as so:
-
-        ```html
-        <meta name="appstore:store_id" content="633666">
-        <meta name="appstore:bundle_id" content="633666">
-        ```
-
+        If you select this option, you must enter the URL path to an app-ads.txt file in the <strong>Developer URL</strong> field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [App Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The <strong>Channel ID</strong> and <strong>Bundle ID</strong> values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags <code>appstore:store_id</code> and <code>appstore:bundle_id</code> to provide channel ID information in the http header of an app's Streaming Store page.
+        <br /><br />
+        Using the values from the illustration above as examples, the meta-tags would appear in the <code>&lt;head&gt;</code> section, as so:
+        <pre><code class="language-html">&lt;meta name="appstore:store_id" content="633666"&gt;
+&lt;meta name="appstore:bundle_id" content="633666"&gt;</code></pre>
         Consider a scenario where you want to identify your app in an OpenRTB 2.5 Bid Request. You could use the following sequence for example:
-
-        ```json
-        "app": {
-           "bundle": "633666",
-           "storeurl": "https://channelstore.roku.com/details/7c34d32446def64db7eb2cc359749fe5/tv-for-cats",
-                 …  <additional fields>
-        }
-        ```
-
-        The **Developer URL** field is also provided (and discoverable) in an app's Streaming Store page `<head>` section:
-
-        ```html
-        <meta name="appstore:developer_url" content="https://www.path.to/path">
-        ```
+        <pre><code class="language-json">"app": {
+   "bundle": "633666",
+   "storeurl": "https://channelstore.roku.com/details/7c34d32446def64db7eb2cc359749fe5/tv-for-cats",
+         …  &lt;additional fields&gt;
+}</code></pre>
+        The <strong>Developer URL</strong> field is also provided (and discoverable) in an app's Streaming Store page <code>&lt;head&gt;</code> section:
+        <pre><code class="language-html">&lt;meta name="appstore:developer_url" content="https://www.path.to/path"&gt;</code></pre>
       </td>
     </tr>
     <tr>
@@ -460,10 +450,12 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
       </td>
       <td>
         The type of message: error, warning, or info.
-
-        * **Error**:  Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.
-        * **Warning**: Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.
-        * **Info**: Info messages provide tips that may be helpful in the development of the app.
+        <br /><br />
+        <ul>
+          <li><strong>Error</strong>: Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.</li>
+          <li><strong>Warning</strong>: Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.</li>
+          <li><strong>Info</strong>: Info messages provide tips that may be helpful in the development of the app.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -604,10 +596,12 @@ To run App Behavior Analysis testing on your app, follow these steps:
       </td>
       <td>
         Displays information, script, and screenshot icons that you can click to learn more about the test:
-
-        * **Test information**: Provides detailed test results including any additional error or warning information, a link to the related certification requirement, and a link to the related documentation.
-        * **Test script**: Provides the actual script executed in the Roku Remote Tool for the test. You can copy and paste or download and import the script and run it in the Roku Remote tool (a link to the tool is provided in the upper right-hand corner). This provides developers with insight into how their apps are tested and enables them to run the same app performance and deep linking tests Roku executes before trying to pass the certification testing.
-        * **Screenshot**. If a test fails, displays a screenshot of the screen in the app UI where the test failed. This icon may not be available in all test failure cases.
+        <br /><br />
+        <ul>
+          <li><strong>Test information</strong>: Provides detailed test results including any additional error or warning information, a link to the related certification requirement, and a link to the related documentation.</li>
+          <li><strong>Test script</strong>: Provides the actual script executed in the Roku Remote Tool for the test. You can copy and paste or download and import the script and run it in the Roku Remote tool (a link to the tool is provided in the upper right-hand corner). This provides developers with insight into how their apps are tested and enables them to run the same app performance and deep linking tests Roku executes before trying to pass the certification testing.</li>
+          <li><strong>Screenshot</strong>. If a test fails, displays a screenshot of the screen in the app UI where the test failed. This icon may not be available in all test failure cases.</li>
+        </ul>
       </td>
     </tr>
   </tbody>

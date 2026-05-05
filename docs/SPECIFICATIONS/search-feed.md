@@ -647,9 +647,11 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
       </td>
       <td>
         The type of licensing terms for the channel.
-
-        * **free**: Channel is directly playable upon being deep linked.
-        * **subscription**: Channel is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the channel typically displays a subscription sign-up page when receiving deep links into channels that are behind a paywall. This integration does not consider whether a channel is part of a basic or premium package. Channels that are only accessible via a premium package should be considered as "subscription".
+        <br /><br />
+        <ul>
+          <li><strong>free</strong>: Channel is directly playable upon being deep linked.</li>
+          <li><strong>subscription</strong>: Channel is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the channel typically displays a subscription sign-up page when receiving deep links into channels that are behind a paywall. This integration does not consider whether a channel is part of a basic or premium package. Channels that are only accessible via a premium package should be considered as "subscription".</li>
+        </ul>
       </td>
       <td>
         Required
@@ -664,12 +666,14 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
       </td>
       <td>
         The playback resolution of the live channel:
-
-        * SD
-        * HD
-        * HD+
-        * FHD
-        * UHD.
+        <br /><br />
+        <ul>
+          <li>SD</li>
+          <li>HD</li>
+          <li>HD+</li>
+          <li>FHD</li>
+          <li>UHD</li>
+        </ul>
       </td>
       <td>
         Required

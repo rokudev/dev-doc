@@ -216,12 +216,14 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
       <td>
         Returns a list of installed apps as an array of objects. Each app object contains the following fields:
-
-        * title
-        * id
-        * type
-        * version
-        * subtype
+        <br /><br />
+        <ul>
+          <li>title</li>
+          <li>id</li>
+          <li>type</li>
+          <li>version</li>
+          <li>subtype</li>
+        </ul>
       </td>
       <td>
         `@{apps}=Get Apps`
@@ -471,11 +473,13 @@ The Roku's Robot Framework Library includes the following keywords:
         Get child nodes
       </td>
       <td>
-        * **parentNode**: The parent node for which the child nodes are to be retrieved.
-
-        * **locator**: An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:
-
-          using=attribute, tag, or text  attribute=specific attribute  value=tag or attribute value
+        <ul>
+          <li><strong>parentNode</strong>: The parent node for which the child nodes are to be retrieved.</li>
+          <li><strong>locator</strong>: An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:
+            <br /><br />
+            using=attribute, tag, or text  attribute=specific attribute  value=tag or attribute value
+          </li>
+        </ul>
       </td>
       <td>
         Retrieves the child component of the specified node.
@@ -651,8 +655,8 @@ The Roku's Robot Framework Library includes the following keywords:
         Get current channel info
       </td>
       <td>
-        Returns an object containing information about the app currently loaded. This object has the following fields:  
-
+        Returns an object containing information about the app currently loaded. This object has the following fields:
+        <br /><br />
         <table>
           <tr>
             <td>**Key**</td>
@@ -733,9 +737,7 @@ The Roku's Robot Framework Library includes the following keywords:
         Get device info
       </td>
       <td>
-        Returns an object containing the information about the device. This object has the following fields:  
-
-
+        Returns an object containing the information about the device. This object has the following fields:
       </td>
       <td>
         `&{info}=Get device info`

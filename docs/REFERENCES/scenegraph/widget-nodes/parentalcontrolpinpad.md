@@ -78,10 +78,12 @@ ParentalControlPinPad includes a new field, pinSuccess for blocking content:
         incomplete
       </td>
       <td>
-        **Read-only**  
-
-        * "true": Content is now unblocked  
-        * "false": Pin incorrect, "incomplete": a full pin is not entered
+        <strong>Read-only</strong>
+        <br /><br />
+        <ul>
+          <li>"true": Content is now unblocked</li>
+          <li>"false": Pin incorrect, "incomplete": a full pin is not entered</li>
+        </ul>
       </td>
     </tr>
     <tr>

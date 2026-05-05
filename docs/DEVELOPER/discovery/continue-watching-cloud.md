@@ -489,14 +489,19 @@ The JWT payload must have the following claims:
         string
       </td>
       <td>
-        A JSON object that specifies how to build the internal request. The spec is transformed into a URL with the following syntax: "[https://apipub.roku.com/developer/v1/external?param1=param1Va&param2=param2Val".**serviceUrn](https://apipub.roku.com/developer/v1/external?param1=param1Va\&param2=param2Val".**serviceUrn)**: The serviceURN specifies the internal Roku service that should handle this request. This may be one of the following values:
-
-        * **serviceUrn**: The serviceURN specifies the internal Roku service that should handle this request. This may be one of the following values:
-          * urn:roku:cloud-services:publickey-service
-          * urn:roku:cloud-services:chanprovsvc
-        * **httpMethod**: The Continue Watching API supports the following methods: GET, PUT, POST, and DELETE (all other methods will result in an error response).
-        * **path**: The service resource being called, which is `/user-data/v1/content/continueWatching`.
-        * **bodySha256Base64**: The body is an SHA-256 hash calculated over the raw bytes of the HTTP request body that is encoded using Base 64. Do not include the body for GET and DELETE requests (Roku's inbound request service ignores the body for these requests).
+        A JSON object that specifies how to build the internal request. The spec is transformed into a URL with the following syntax: <code>https://apipub.roku.com/developer/v1/external?param1=param1Val&amp;param2=param2Val</code>. The object contains the following fields:
+        <br /><br />
+        <ul>
+          <li><strong>serviceUrn</strong>: The serviceURN specifies the internal Roku service that should handle this request. This may be one of the following values:
+            <ul>
+              <li>urn:roku:cloud-services:publickey-service</li>
+              <li>urn:roku:cloud-services:chanprovsvc</li>
+            </ul>
+          </li>
+          <li><strong>httpMethod</strong>: The Continue Watching API supports the following methods: GET, PUT, POST, and DELETE (all other methods will result in an error response).</li>
+          <li><strong>path</strong>: The service resource being called, which is <code>/user-data/v1/content/continueWatching</code>.</li>
+          <li><strong>bodySha256Base64</strong>: The body is an SHA-256 hash calculated over the raw bytes of the HTTP request body that is encoded using Base 64. Do not include the body for GET and DELETE requests (Roku's inbound request service ignores the body for these requests).</li>
+        </ul>
       </td>
     </tr>
   </tbody>

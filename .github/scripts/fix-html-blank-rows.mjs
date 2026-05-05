@@ -48,6 +48,7 @@ async function fixFile(file) {
   const fence = buildCodeFenceMask(lines)
   const out = []
   let inTable = false
+  let inPre = false
   let removed = 0
 
   for (let i = 0; i < lines.length; i++) {
@@ -56,15 +57,31 @@ async function fixFile(file) {
       continue
     }
     const line = lines[i]
-    const opensHere = /<table[\s>]/i.test(line)
-    const closesHere = /<\/table\s*>/i.test(line)
+    const opensTable = /<table[\s>]/i.test(line)
+    const closesTable = /<\/table\s*>/i.test(line)
+    const opensPre = /<pre[\s>]/i.test(line)
+    const closesPre = /<\/pre\s*>/i.test(line)
     if (!inTable) {
-      if (opensHere && !closesHere) inTable = true
+      if (opensTable && !closesTable) inTable = true
       out.push(line)
       continue
     }
-    if (closesHere) {
+    if (closesTable) {
       inTable = false
+      inPre = false
+      out.push(line)
+      continue
+    }
+    // Don't touch blanks inside <pre>...</pre> — code formatting is meaningful,
+    // and CommonMark HTML block type 1 doesn't terminate at blank lines anyway.
+    if (!inPre) {
+      if (opensPre && !closesPre) {
+        inPre = true
+        out.push(line)
+        continue
+      }
+    } else {
+      if (closesPre) inPre = false
       out.push(line)
       continue
     }

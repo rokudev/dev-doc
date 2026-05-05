@@ -145,9 +145,10 @@ Roku Pay sends push notifications for the following transactions:
         The customer accepts a [cancellation offer](doc:product-catalog) and its specified pricing and billing terms for the subscription go into effect.
       </td>
       <td>
-        * New purchase: Create account (if not already created) and add entitlement.
-
-        * Renewal: Check entitlement and verify subscription is not marked for cancellation.
+        <ul>
+          <li>New purchase: Create account (if not already created) and add entitlement.</li>
+          <li>Renewal: Check entitlement and verify subscription is not marked for cancellation.</li>
+        </ul>
       </td>
     </tr>
     <tr>

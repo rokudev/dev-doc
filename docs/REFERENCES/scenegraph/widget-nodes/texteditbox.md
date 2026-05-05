@@ -140,11 +140,11 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
         Read-Write
       </td>
       <td>
-        When active is set to true, the cursor is displayed.   
-
-        When set to false, the cursor is hidden.   
-
-        When used internal to the **Keyboard** and **MiniKeyboard** nodes, those nodes set this field to true when the keyboard has focus, and false when it does not.
+        When active is set to true, the cursor is displayed.
+        <br /><br />
+        When set to false, the cursor is hidden.
+        <br /><br />
+        When used internal to the <strong>Keyboard</strong> and <strong>MiniKeyboard</strong> nodes, those nodes set this field to true when the keyboard has focus, and false when it does not.
       </td>
     </tr>
     <tr>
@@ -161,9 +161,9 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
         Read-Write
       </td>
       <td>
-        When set to true, the characters entered are briefly displayed, then replaced with an asterisk. When set to false, the characters entered are always displayed.   
-
-        When used internal to the **Keyboard** and **MiniKeyboard** nodes, you can access the keyboard **textEditBox** field to set its secureMode field. For example: `myKeyboard.textEditBox.secureMode = true`
+        When set to true, the characters entered are briefly displayed, then replaced with an asterisk. When set to false, the characters entered are always displayed.
+        <br /><br />
+        When used internal to the <strong>Keyboard</strong> and <strong>MiniKeyboard</strong> nodes, you can access the keyboard <strong>textEditBox</strong> field to set its secureMode field. For example: <code>myKeyboard.textEditBox.secureMode = true</code>
       </td>
     </tr>
     <tr>
@@ -248,10 +248,12 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
         READ_WRITE
       </td>
       <td>
-        Specifies whether to display the end or beginning of text that overflows its available width:<br />  
-
-        * **true**. The end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog".
-        * **false**. The start of the text is shown (for example, "the quick brown fox jumps...").
+        Specifies whether to display the end or beginning of text that overflows its available width:
+        <br /><br />
+        <ul>
+          <li><strong>true</strong>. The end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog".</li>
+          <li><strong>false</strong>. The start of the text is shown (for example, "the quick brown fox jumps...").</li>
+        </ul>
       </td>
     </tr>
   </tbody>

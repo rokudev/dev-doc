@@ -106,19 +106,33 @@ function checkHtml(file, sourceLines, codeFenceMask, reporter) {
   // Remark fragments multi-line HTML on blank lines into separate `html` nodes, so
   // AST walks miss this — direct source scan is simpler and more reliable.
   let inTable = false
+  let inPre = false
   for (let i = 0; i < sourceLines.length; i++) {
     if (codeFenceMask[i]) continue
     const line = sourceLines[i]
-    const opensHere = /<table[\s>]/i.test(line)
-    const closesHere = /<\/table\s*>/i.test(line)
+    const opensTable = /<table[\s>]/i.test(line)
+    const closesTable = /<\/table\s*>/i.test(line)
+    const opensPre = /<pre[\s>]/i.test(line)
+    const closesPre = /<\/pre\s*>/i.test(line)
     if (!inTable) {
-      // A single-line <table>...</table> opens and closes on the same line —
-      // don't enter inTable state.
-      if (opensHere && !closesHere) inTable = true
+      if (opensTable && !closesTable) inTable = true
       continue
     }
-    if (closesHere) {
+    if (closesTable) {
       inTable = false
+      inPre = false
+      continue
+    }
+    // Track <pre> separately. CommonMark HTML block type 1 (<pre>/<script>/
+    // <style>) does NOT terminate at a blank line, so blanks inside a <pre>
+    // are valid (typically code formatting). Skip them.
+    if (!inPre) {
+      if (opensPre && !closesPre) {
+        inPre = true
+        continue
+      }
+    } else {
+      if (closesPre) inPre = false
       continue
     }
     if (line.trim() !== '') continue

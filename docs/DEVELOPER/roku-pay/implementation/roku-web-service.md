@@ -49,10 +49,12 @@ The following table summarizes the basic information for the Roku Pay web servic
         Format
       </td>
       <td>
-        Roku Pay APIs support both JSON and XML-formatted data. Format the `accept` header as follows:
-
-        * **JSON**: accept: application/json
-        * **XML**: accept: application/xml
+        Roku Pay APIs support both JSON and XML-formatted data. Format the <code>accept</code> header as follows:
+        <br /><br />
+        <ul>
+          <li><strong>JSON</strong>: accept: application/json</li>
+          <li><strong>XML</strong>: accept: application/xml</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -61,9 +63,11 @@ The following table summarizes the basic information for the Roku Pay web servic
       </td>
       <td>
         Roku Pay APIs support GET and POST methods for retrieving and managing transaction data:
-
-        * **GET**: All GET requests must include the Roku Pay API key and the ID of the item being validated in the URL (transaction or refund ID).
-        * **POST**: All POST requests require JSON or XML-formatted data in the body. The Roku Pay API key must be included in the body.
+        <br /><br />
+        <ul>
+          <li><strong>GET</strong>: All GET requests must include the Roku Pay API key and the ID of the item being validated in the URL (transaction or refund ID).</li>
+          <li><strong>POST</strong>: All POST requests require JSON or XML-formatted data in the body. The Roku Pay API key must be included in the body.</li>
+        </ul>
       </td>
     </tr>
     <tr>

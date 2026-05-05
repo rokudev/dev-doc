@@ -266,13 +266,14 @@ Each row represents a single title and its current status across territories.
       </td>
       <td>
         Indicates the type of content. Each title has one type:
-
-        * **Movie**
-        * **Short-form clip**
-        * **TV episode**
-        * **TV season**
-        * **TV series**
-
+        <br /><br />
+        <ul>
+          <li><strong>Movie</strong></li>
+          <li><strong>Short-form clip</strong></li>
+          <li><strong>TV episode</strong></li>
+          <li><strong>TV season</strong></li>
+          <li><strong>TV series</strong></li>
+        </ul>
         <Callout icon="📘" theme="info">
           TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
         </Callout>
@@ -300,37 +301,25 @@ Each row represents a single title and its current status across territories.
       </td>
       <td>
         Displays the overall status of the title, such as:
-
-        **Unfulfilled**
-
-        Waiting for ordered rights, assets, or a match between the two. Requires your attention.
-
-        **Failed**
-
-        One or more issues occurred while processing your files and are preventing this title from going live. Requires your attention.
-
-        **Rights under review**
-
-        Rights are being reviewed for approval by the Roku team. Turnaround time may vary based on catalog volume.
-
-        **Processing**
-
-        The Roku pipeline is preparing your assets for publishing.
-
-        **Scheduled**
-
-        Ready for go-live as scheduled.
-
-        **Live**
-
-        The title is available to viewers.
-
-        **Expired**
-
-        Update windows to reactivate.
-
+        <br /><br />
+        <dl>
+          <dt><strong>Unfulfilled</strong></dt>
+          <dd>Waiting for ordered rights, assets, or a match between the two. Requires your attention.</dd>
+          <dt><strong>Failed</strong></dt>
+          <dd>One or more issues occurred while processing your files and are preventing this title from going live. Requires your attention.</dd>
+          <dt><strong>Rights under review</strong></dt>
+          <dd>Rights are being reviewed for approval by the Roku team. Turnaround time may vary based on catalog volume.</dd>
+          <dt><strong>Processing</strong></dt>
+          <dd>The Roku pipeline is preparing your assets for publishing.</dd>
+          <dt><strong>Scheduled</strong></dt>
+          <dd>Ready for go-live as scheduled.</dd>
+          <dt><strong>Live</strong></dt>
+          <dd>The title is available to viewers.</dd>
+          <dt><strong>Expired</strong></dt>
+          <dd>Update windows to reactivate.</dd>
+        </dl>
         <Callout icon="📘" theme="info">
-          For multi-territory titles, you may see values like **1 of 3 unfulfilled**, which means only some territories are impacted.
+          For multi-territory titles, you may see values like <strong>1 of 3 unfulfilled</strong>, which means only some territories are impacted.
         </Callout>
       </td>
     </tr>

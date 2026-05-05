@@ -938,8 +938,8 @@ struct ThreadsResponse{
 <td class="short-line">threads</td>
 <td class="short-line">ThreadInfo[]</td>
 <td class="long-line">An array of ThreadInfo structs. A ThreadInfo struct has the following syntax: <br><pre><code>struct ThreadInfo{
-    uint8 flags;        
-    uint8 stop_reason;  
+    uint8 flags;
+    uint8 stop_reason;
     utf8z stop_reason_detail;
     uint32 line_number;
     utf8z function_name;
@@ -1212,9 +1212,9 @@ struct VariablesResponse{
 <td class="short-line">variables</td>
 <td class="short-line">VariableInfo[]</td>
 <td class="long-line">An array of VariableInfo structs. A VariableInfo struct has the following syntax: <br><pre><code>struct VariableInfo{
-    uint8 flags;           
-    uint8 variable_type;   
-    utf8z name;           
+    uint8 flags;
+    uint8 variable_type;
+    utf8z name;
     uint32 ref_count;
     uint8 key_type;
     uint32 element_count;
@@ -1352,12 +1352,14 @@ struct VariablesResponse{
         uint8
       </td>
       <td>
-        Contains an a **StepType** enum, indicating the type of step action to be executed. This may be on the following values:
-
-        * 0 = STEP_TYPE_NONE
-        * 1 = STEP_TYPE_LINE
-        * 2 = STEP_TYPE_OUT
-        * 3 = STEP_TYPE_OVER
+        Contains a <strong>StepType</strong> enum, indicating the type of step action to be executed. This may be one of the following values:
+        <br /><br />
+        <ul>
+          <li>0 = STEP_TYPE_NONE</li>
+          <li>1 = STEP_TYPE_LINE</li>
+          <li>2 = STEP_TYPE_OUT</li>
+          <li>3 = STEP_TYPE_OVER</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -2084,7 +2086,7 @@ struct SetExceptionBreakpointsResponseData {
 
 _Available since Roku OS 14.1_
 
-Virtual variables are values that can be retrieved with a VARIABLES request but do not correspond to actual variables (for example, the length of a container). By convention, variables start with a `$` character.  
+Virtual variables are values that can be retrieved with a VARIABLES request but do not correspond to actual variables (for example, the length of a container). By convention, variables start with a `$` character.
 
 >  As of [Roku OS 15.2](doc:release-notes#roku-os-152), developers can use virtal variables to retrieve **roInputEvent**, **roUrlEvent**, and **roDateTime** values. This improves stepping performance when these virtual variables are expanded.
 

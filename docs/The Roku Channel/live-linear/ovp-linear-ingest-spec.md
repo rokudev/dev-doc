@@ -80,15 +80,22 @@ The following outlines what we support. A preferred video set up is outlined in 
         Delivery Method
       </td>
       <td>
-        * AWS Media Connect Entitlement*
-        * Zixi Push*
-        * SRT
-          * Push IP and Port number will be provided to LCP/partner
-        * RTP w/FEC Push
-        * RTMP Push
-          * Push URL will be provided to LCP/partner
-
-        *_Support AES Decryption_
+        <ul>
+          <li>AWS Media Connect Entitlement*</li>
+          <li>Zixi Push*</li>
+          <li>SRT
+            <ul>
+              <li>Push IP and Port number will be provided to LCP/partner</li>
+            </ul>
+          </li>
+          <li>RTP w/FEC Push</li>
+          <li>RTMP Push
+            <ul>
+              <li>Push URL will be provided to LCP/partner</li>
+            </ul>
+          </li>
+        </ul>
+        <em>*Support AES Decryption</em>
       </td>
       <td>
         AWS Media Connect Entitlement
@@ -271,18 +278,29 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
       <td>
         SCTE-35 Markers In Stream via any of the following:
-
-        * **Splice_Insertion**
-          * Start and Duration is required
-          * If scte35:SpliceInsert, outOfNetworkIndicator must be set to  **true**
-        * **Time Signal**
-          * Start and Duration is required
-          * If scte35:TimeSignal, then accompany by scte35:SegmentationDescriptor scte35:SegmentationUpid with segmentationTypeId set to  **one**  of the following cue-out numbers:
-            * 0x22 (start break)
-            * 0x30 (provider advertisement start)
-            * 0x32 (distributor advertisement start)
-            * 0x34 (provider placement opportunity start)
-            * 0x36 (distributor placement opportunity start)
+        <br /><br />
+        <ul>
+          <li><strong>Splice_Insertion</strong>
+            <ul>
+              <li>Start and Duration is required</li>
+              <li>If scte35:SpliceInsert, outOfNetworkIndicator must be set to <strong>true</strong></li>
+            </ul>
+          </li>
+          <li><strong>Time Signal</strong>
+            <ul>
+              <li>Start and Duration is required</li>
+              <li>If scte35:TimeSignal, then accompany by scte35:SegmentationDescriptor scte35:SegmentationUpid with segmentationTypeId set to <strong>one</strong> of the following cue-out numbers:
+                <ul>
+                  <li>0x22 (start break)</li>
+                  <li>0x30 (provider advertisement start)</li>
+                  <li>0x32 (distributor advertisement start)</li>
+                  <li>0x34 (provider placement opportunity start)</li>
+                  <li>0x36 (distributor placement opportunity start)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </td>
       <td>
         Splice_Insertion
@@ -294,8 +312,8 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
       <td>
         TripleLift DBI support*
-
-        *_Requires Roku approval_
+        <br /><br />
+        <em>*Requires Roku approval</em>
       </td>
       <td>
       </td>
@@ -305,21 +323,34 @@ The following outlines what we support. A preferred video set up is outlined in 
         Ad policy
       </td>
       <td>
-        * Partners should not serve any ads in the channel other than the ones returned by the Roku SSAI, unless explicitly agreed in the contract.
-        * Partners should adhere to the below ad length requirements:
-          * General Audience
-            * 8 minutes of ads per hour
-            * Minimum 4 ads and maximum of 6 ads per pod
-            * Ad pod length of 2 minutes
-        * Kids
-          * 6 minutes of ads per hour
-          * Minimum 3 ads and maximum of 6 ads per pods
-          * Ad pod length of 90 seconds
-          * Bumper/lead-in identifying ad break before AND after ad pods occur (6 second maximum)
-            * Example: "We'll be right back after this break", "Now back to the show"
-          * Flexibility around the ad policy is provided during live events. Please discuss this with your Roku rep.
-
-        ** _Do not include pixels, third-party tags, or Software Development Kits of any kind without express prior written approval and certification by Roku._
+        <ul>
+          <li>Partners should not serve any ads in the channel other than the ones returned by the Roku SSAI, unless explicitly agreed in the contract.</li>
+          <li>Partners should adhere to the below ad length requirements:
+            <ul>
+              <li>General Audience
+                <ul>
+                  <li>8 minutes of ads per hour</li>
+                  <li>Minimum 4 ads and maximum of 6 ads per pod</li>
+                  <li>Ad pod length of 2 minutes</li>
+                </ul>
+              </li>
+              <li>Kids
+                <ul>
+                  <li>6 minutes of ads per hour</li>
+                  <li>Minimum 3 ads and maximum of 6 ads per pods</li>
+                  <li>Ad pod length of 90 seconds</li>
+                  <li>Bumper/lead-in identifying ad break before AND after ad pods occur (6 second maximum)
+                    <ul>
+                      <li>Example: "We'll be right back after this break", "Now back to the show"</li>
+                    </ul>
+                  </li>
+                  <li>Flexibility around the ad policy is provided during live events. Please discuss this with your Roku rep.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <em>**Do not include pixels, third-party tags, or Software Development Kits of any kind without express prior written approval and certification by Roku.</em>
       </td>
       <td>
       </td>

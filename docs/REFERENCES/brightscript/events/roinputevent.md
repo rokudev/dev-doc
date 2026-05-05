@@ -68,25 +68,27 @@ Returns an roAssociativeArray describing the input event, which may be one of th
       </td>
       <td>
         The type of command:
-
-        * "action()". Indicates that the app has received an utterance matching a name or word previously registered with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager)
-        * "select()". Indicates that the app has received a command for selecting an item via an ordinal number.
-        * "forward"
-        * "next"
-        * "pause"
-        * "play"
-        * "replay"
-        * "resume"
-        * "rewind"
-        * "seek"
-        * "stop"
-        * "startover"
-        * "nowplaying"
-        * "skip"
-        * "shuffle"
-        * "loop"
-        * "like"
-        * "dislike"
+        <br /><br />
+        <ul>
+          <li>"action()". Indicates that the app has received an utterance matching a name or word previously registered with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager)</li>
+          <li>"select()". Indicates that the app has received a command for selecting an item via an ordinal number.</li>
+          <li>"forward"</li>
+          <li>"next"</li>
+          <li>"pause"</li>
+          <li>"play"</li>
+          <li>"replay"</li>
+          <li>"resume"</li>
+          <li>"rewind"</li>
+          <li>"seek"</li>
+          <li>"stop"</li>
+          <li>"startover"</li>
+          <li>"nowplaying"</li>
+          <li>"skip"</li>
+          <li>"shuffle"</li>
+          <li>"loop"</li>
+          <li>"like"</li>
+          <li>"dislike"</li>
+        </ul>
       </td>
     </tr>
     <tr>

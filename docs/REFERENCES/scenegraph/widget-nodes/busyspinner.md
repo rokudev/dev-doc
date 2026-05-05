@@ -74,11 +74,13 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
         READ_WRITE
       </td>
       <td>
-        Sets the operational state of the busy spinner:  
-
-        * **none**: No operational state set. The busy spinner will run if not set to `"stop"`.
-        * **start**: Starts the busy spinner if not running.
-        * **stop**:  Stops the busy spinner if running.
+        Sets the operational state of the busy spinner:
+        <br /><br />
+        <ul>
+          <li><strong>none</strong>: No operational state set. The busy spinner will run if not set to <code>"stop"</code>.</li>
+          <li><strong>start</strong>: Starts the busy spinner if not running.</li>
+          <li><strong>stop</strong>: Stops the busy spinner if running.</li>
+        </ul>
       </td>
     </tr>
     <tr>

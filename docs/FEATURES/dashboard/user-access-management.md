@@ -163,12 +163,14 @@ TRC users can have the following roles and permissions:
       </td>
       <td>
         Maintain administrative control over The Roku Channel Partner Portal. This user can:
-
-        * Manage company account information.
-        * Manage users, roles, and permissions
-        * Manage payout and tax documents
-        * Manage featured rows, brand assets, and promotional creatives
-        * Access audience, engagement, and performance analytics
+        <br /><br />
+        <ul>
+          <li>Manage company account information.</li>
+          <li>Manage users, roles, and permissions</li>
+          <li>Manage payout and tax documents</li>
+          <li>Manage featured rows, brand assets, and promotional creatives</li>
+          <li>Access audience, engagement, and performance analytics</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -177,11 +179,13 @@ TRC users can have the following roles and permissions:
       </td>
       <td>
         Manage merchandising and creative assets. This user can:
-
-        * Manage featured rows, brand assets, and promotional creatives.
-        * Pin titles to featured rows
-        * Upload and manage brand assets (tiles, banners, CTA images)
-        * Manage subscription offer creatives (side cards)
+        <br /><br />
+        <ul>
+          <li>Manage featured rows, brand assets, and promotional creatives.</li>
+          <li>Pin titles to featured rows</li>
+          <li>Upload and manage brand assets (tiles, banners, CTA images)</li>
+          <li>Manage subscription offer creatives (side cards)</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -190,8 +194,10 @@ TRC users can have the following roles and permissions:
       </td>
       <td>
         Manage title assets and operational reports. This user can:
-
-        * Access title status and issue reports for assets.
+        <br /><br />
+        <ul>
+          <li>Access title status and issue reports for assets.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -200,8 +206,10 @@ TRC users can have the following roles and permissions:
       </td>
       <td>
         Manage title rights, partner deals, and business performance reporting. This user can:
-
-        * Access title status and issue reports for rights.
+        <br /><br />
+        <ul>
+          <li>Access title status and issue reports for rights.</li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -210,8 +218,10 @@ TRC users can have the following roles and permissions:
       </td>
       <td>
         View Roku analytics reports. This user can:
-
-        * Access audience, engagement, and performance analytics.
+        <br /><br />
+        <ul>
+          <li>Access audience, engagement, and performance analytics.</li>
+        </ul>
       </td>
     </tr>
   </tbody>

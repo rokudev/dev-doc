@@ -163,7 +163,7 @@ Where:
               <td><code>"none"</code></td>
               <td>
                 renderTracking is set to: <code>"none"</code> if <strong>one or more</strong> of these conditions is true:
-
+                <br /><br />
                 <ul>
                   <li>the node's <code>visible</code> field is set to <code>false</code>.</li>
                   <li>the node's <code>opacity</code> field is set to <code>0.0</code>.</li>
@@ -176,7 +176,7 @@ Where:
               <td><code>"partial"</code></td>
               <td>
                 renderTracking is set to <code>"partial"</code> if <strong>all</strong> of the following conditions are true:
-
+                <br /><br />
                 <ul>
                   <li>the node's <code>visible</code> field is set to <code>true</code>.</li>
                   <li>the node's <code>opacity</code> field is greater than <code>0.0</code>.</li>
@@ -189,7 +189,7 @@ Where:
               <td><code>"full"</code></td>
               <td>
                 renderTracking is set to <code>"full"</code> if <strong>all</strong> of the following conditions are true:
-
+                <br /><br />
                 <ul>
                   <li>the node's <code>visible</code> field is set to <code>true</code>.</li>
                   <li>the node's <code>opacity</code> field is greater than <code>0.0</code>.</li>

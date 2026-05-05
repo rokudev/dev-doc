@@ -6,10 +6,10 @@ hidden: true
 metadata:
   robots: index
 next:
-  description: Explore key features available in the Roku content partner portal
+  description: Explore key features available in the Roku Content Partner Portal
   pages:
-    - slug: key-features
-      title: Key Features
+    - slug: roku-content-partner-portal-key-features
+      title: Key features
       type: basic
 ---
 The Dashboard is your starting point in the Roku content partner portal. It introduces the platform and provides quick access to key features based on your account permissions.
@@ -20,13 +20,13 @@ The Dashboard is your starting point in the Roku content partner portal. It intr
 
 # The Roku Channel content partner program
 
-The Roku content partner portal supports the The Roku Channel content partner program, which provides tools to directly manage your content on The Roku Channel. This includes managing your brand presence, promotional assets, and subscription offerings.
+The Roku Content Partner Portal supports the The Roku Channel content partner program, which provides tools to directly manage your content on The Roku Channel. This includes managing your brand presence, promotional assets, and subscription offerings.
 
 <br />
 
 # Navigate with feature cards
 
-Depending on your role and access level, the Dashboard displays feature cards that link directly to available areas of the portal.
+Depending on your role and access level, the dashboard displays feature cards that link directly to available areas of the portal.
 
 Use these cards to quickly:
 
@@ -35,7 +35,7 @@ Use these cards to quickly:
 * Navigate the portal efficiently without needing to browse through menus
 
 <Callout icon="🤔" theme="default">
-  If you do not see a feature card, your account may not have access. Contact your company Administrator to request additional permissions.
+  If you do not see a feature card, your account may not have access. Contact your company administrator to request additional permissions.
 </Callout>
 
 <br />

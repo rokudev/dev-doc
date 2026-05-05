@@ -1,6 +1,6 @@
 ---
 title: Storefront
-excerpt: Storefront overview
+excerpt: Overview
 deprecated: false
 hidden: true
 metadata:
@@ -8,18 +8,18 @@ metadata:
 next:
   description: Interested in managing your creatives? We have that too!
   pages:
-    - slug: creatives
+    - slug: roku-content-partner-portal-creatives
       title: Creatives
       type: basic
 ---
-Storefront allows you to manage the Featured row on your channel storefront directly within the Roku content partner portal.
+Storefront allows you to manage the featured row on your channel storefront directly within the Roku Content Partner Portal. Available to Premium Subscription partners.
 
 By default, the Featured row is populated by Roku’s recommendation system to deliver personalized content to viewers. With Storefront, you can pin titles to specific positions for a defined period of time, ensuring key content is prominently displayed.
 
 Pinned titles appear alongside Roku recommendations, giving you a balance of control and automated optimization to keep your storefront engaging and relevant.
 
 <Callout icon="📘" theme="info">
-  **Tip:** The Featured row works best when used sparingly. Pin a small number of high-impact titles for short durations to maximize visibility and engagement.
+  **Tip:** The featured row works best when used sparingly. Pin a small number of high-impact titles for short durations to maximize visibility and engagement.
 </Callout>
 
 <br />
@@ -42,7 +42,7 @@ If your organization has a Premium Subscription storefront but does not yet have
 
 To use this feature, get the appropriate role assigned to your account.
 
-1. Request **Marketing Manager** access from your company’s account administrator.
+1. Request **marketing manager** access from your company’s account administrator.
 2. Ask your administrator to grant access based on your responsibilities, such as storefront and creative management.
 3. Contact your internal team if you are not sure who your administrator is.
 
@@ -74,7 +74,7 @@ Only titles that are production-ready, have valid availability dates, and includ
 
 # Page layout
 
-The Storefront interface is designed to help you quickly view, manage, and update your Featured row.
+The storefront interface is designed to help you quickly view, manage, and update your Featured row.
 
 <Image align="center" caption="Each labeled element corresponds to the components described in the table below." src="https://files.readme.io/38601c39707e8596ae5515455056dfffe8b73eb9ed90563c17aa7a0c3a947ea1-image.png" />
 
@@ -100,7 +100,7 @@ The Storefront interface is designed to help you quickly view, manage, and updat
 
 # What you can do
 
-## Manage the Featured row
+## Manage the featured row
 
 View and edit all titles currently pinned in your Featured row, including their positions and metadata.
 
@@ -118,13 +118,13 @@ Assign titles to fixed positions (for example, position #1 or #5) to control lay
 
 ![](https://files.readme.io/5faab399ba9ffdbd22fb86b5e556fa0103a163e0e86ec39937d0281a7873c8b3-image.png)
 
-## Schedule Featured titles
+## Schedule featured titles
 
 Plan ahead by scheduling titles to go live or expire at specific dates and times. You can also view which titles will be active on any future date or date range.
 
 ## Customize by territory
 
-Configure different Featured rows per territory (channel store). Changes made in one territory do not affect others.
+Configure different featured rows per territory (channel store). Changes made in one territory do not affect others.
 
 ## Search and select eligible titles
 

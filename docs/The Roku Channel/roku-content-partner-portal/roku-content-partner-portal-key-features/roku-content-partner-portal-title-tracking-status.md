@@ -1,6 +1,6 @@
 ---
 title: Title tracking status
-excerpt: Title tracking status overview
+excerpt: Overview
 deprecated: false
 hidden: true
 metadata:
@@ -24,7 +24,7 @@ Use the **Title Status** view if you are responsible for delivering or managing 
 
 This view is most useful for:
 
-## Operations Managers (asset delivery)
+## Operations managers (asset delivery)
 
 Use this view to:
 
@@ -38,7 +38,7 @@ Focus on these statuses:
 * **Failed**: processing or QC issues
 * **Processing**: assets are actively being prepared
 
-## Business Managers (rights delivery)
+## Business managers (rights delivery)
 
 Use this view to:
 
@@ -58,7 +58,7 @@ Focus on these statuses:
 
 To use this feature, get the appropriate role assigned to your account.
 
-1. Request **Business Manager** or **Operations Manager** access from one of your company’s account administrators.
+1. Request **business manager** or **operations manager** access from one of your company’s account administrators.
 2. Ask your administrator to grant access based on your responsibilities, such as rights management or asset delivery.
 3. Contact your internal team if you are not sure who your administrator is.
 
@@ -405,8 +405,7 @@ When reviewing a title:
 3. Check the overall **Status** to understand overall readiness.
 4. Review **Territories** to understand rights coverage.
 
-   If the status shows something like:
-   “1 of 3 unfulfilled”
+   If the status shows something like: “1 of 3 unfulfilled”
 
    Expand the row to identify which territories are impacted.
 5. Finally, check the **Expected** timing:
@@ -529,7 +528,7 @@ To view details:
 
 ![](https://files.readme.io/2e946945e0dda50df1ef2efa2f1ed3e25349a976d13bdbcf4e60ea1e3f976d8e-image.png)
 
-### How to read the Territories panel
+### How to read the territories panel
 
 Each card shows:
 

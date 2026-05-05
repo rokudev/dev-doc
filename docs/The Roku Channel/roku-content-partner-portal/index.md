@@ -91,8 +91,8 @@ Access to the portal requires a Roku account. Partners can sign in or create an 
 
 Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before you see it in the Roku Launchpad.
 
-1. Ask your company's administrator to grant access based on your responsibilities.
-2. Contact your internal team if you are not sure who your administrator is.
+* Ask your company's administrator to grant access based on your responsibilities.  
+  Contact your internal team if you are not sure who your administrator is.
 
 <br />
 

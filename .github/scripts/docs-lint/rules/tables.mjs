@@ -4,8 +4,8 @@
  * Rules and severity:
  *   error    pipe-col-count         Pipe row has different column count than header.
  *   error    pipe-no-blank-above    Pipe table has no blank line before it (won't render).
- *   error    pipe-split             Pipe table split by a blank line.
  *   error    escaped-html-in-cell   Cell content like \<ul> renders as literal text.
+ *   warning  adjacent-tables        Two pipe tables with same column count and no heading between them.
  *   warning  html-blank-row         Blank line after </tr> breaks GitHub/IDE preview.
  */
 
@@ -52,7 +52,9 @@ function checkPipe(mdast, file, sourceLines, reporter) {
       }
     }
 
-    // 3. consecutive tables (split)
+    // 3. adjacent tables with the same shape — sometimes a true split, sometimes
+    //    distinct tables that should have a heading between them. Either way the
+    //    reader sees two unintroduced tables stacked, so flag it.
     if (parent && index > 0) {
       const prev = parent.children[index - 1]
       if (prev.type === 'table' && prev.children[0].children.length === expected) {
@@ -60,10 +62,10 @@ function checkPipe(mdast, file, sourceLines, reporter) {
           file,
           line: node.position.start.line,
           col: 1,
-          rule: 'pipe-split',
-          severity: 'error',
+          rule: 'adjacent-tables',
+          severity: 'warning',
           message:
-            'pipe table immediately follows another with same column count — likely a single table split by a blank line',
+            'pipe table follows another with the same column count — likely missing a heading between them, or a single table accidentally split by a blank line',
         })
       }
     }

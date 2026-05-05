@@ -12,7 +12,11 @@ next:
       title: Creatives
       type: basic
 ---
-Storefront allows you to manage the featured row on your channel storefront directly within the Roku Content Partner Portal. Available to Premium Subscription partners.
+Storefront allows you to manage the featured row on your channel storefront directly within the Roku Content Partner Portal.
+
+<Callout icon="🔒" theme="default">
+  Available only to premium subscription partners.
+</Callout>
 
 By default, the Featured row is populated by Roku’s recommendation system to deliver personalized content to viewers. With Storefront, you can pin titles to specific positions for a defined period of time, ensuring key content is prominently displayed.
 

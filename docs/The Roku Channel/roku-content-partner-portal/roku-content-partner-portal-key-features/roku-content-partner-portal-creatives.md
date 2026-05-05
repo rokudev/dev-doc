@@ -1,12 +1,12 @@
 ---
 title: Creatives
-excerpt: Creatives overview
+excerpt: Overview
 deprecated: false
 hidden: true
 metadata:
   robots: index
 ---
-The Creatives section is where you manage a limited set of publisher-level visual assets used across The Roku Channel subscription experience. These assets are not title-specific. Instead, they represent your service branding and are displayed in key user journeys such as subscription entry points and publisher collection pages.
+The creatives section is where you manage a limited set of publisher-level visual assets used across The Roku Channel subscription experience. These assets are not title-specific. Instead, they represent your service branding and are displayed in key user journeys such as subscription entry points and publisher collection pages.
 
 At this stage, creative control is intentionally scoped to a small number of high-impact assets to ensure consistency across the platform.
 
@@ -30,7 +30,7 @@ This feature is intended for users responsible for maintaining brand consistency
 
 # What you can manage
 
-Currently, the Creatives section supports management of the following assets:
+Currently, the creatives section supports management of the following assets:
 
 ## CTA banner
 
@@ -62,7 +62,7 @@ Specifications:
 
 # How it works
 
-1. **Select Context** Choose the Service and Territory to manage creatives for that specific configuration.
+1. **Select Context** Choose the **Service** and **Territory** to manage creatives for that specific configuration.
 2. **View Current Assets** Review the currently published images for each creative type.
 3. **Upload New Assets** Drag and drop or browse to upload a replacement image.
 4. **Update** Apply changes to replace the existing creative.
@@ -115,6 +115,6 @@ These creatives directly impact how users perceive your service and whether they
 
 To use this feature, get the appropriate role assigned to your account.
 
-1. Request **Marketing Manager** access from your company’s account administrator.
+1. Request **marketing manager** access from your company’s account administrator.
 2. Ask your administrator to grant access based on your responsibilities, such as storefront and creative management.
 3. Contact your internal team if you are not sure who your administrator is.

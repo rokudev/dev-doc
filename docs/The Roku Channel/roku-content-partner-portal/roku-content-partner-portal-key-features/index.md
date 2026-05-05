@@ -1,6 +1,6 @@
 ---
 title: Key features
-excerpt: Explore available features in the Roku content partner portal
+excerpt: Explore available features in the Roku Content Partner Portal
 deprecated: false
 hidden: true
 metadata:
@@ -8,7 +8,7 @@ metadata:
 next:
   description: Explore the features that are relevant to you.
 ---
-The Roku content partner portal brings together the core tools you need to manage, monitor, and promote your content on The Roku Channel. Each feature is designed to give you greater visibility, control, and flexibility across your content lifecycle.
+The Roku Content Partner Portal brings together the core tools you need to manage, monitor, and promote your content on The Roku Channel. Each feature is designed to give you greater visibility, control, and flexibility across your content lifecycle.
 
 <br />
 
@@ -18,13 +18,13 @@ The Roku content partner portal brings together the core tools you need to manag
 
 # Title tracking status
 
-Track the progress of your content from delivery through publication. Title Tracking Status provides clear visibility into where each title is in the pipeline, helping you quickly identify delays, resolve issues, and stay aligned with launch timelines.
+Track the progress of your content from delivery through publication. Title tracking status provides clear visibility into where each title is in the pipeline, helping you quickly identify delays, resolve issues, and stay aligned with launch timelines.
 
 Want to learn more, check out [Title tracking status](doc:roku-content-partner-portal-title-tracking-status).
 
 # Storefront
 
-Manage how your content is presented to customers. The Storefront feature allows you to curate featured titles, pin content for promotion, and influence merchandising within your channel experience to drive engagement.
+Manage how your content is presented to customers. The storefront feature allows you to curate featured titles, pin content for promotion, and influence merchandising within your channel experience to drive engagement.
 
 <Callout icon="🔒" theme="default">
   Available only to premium subscription partners.

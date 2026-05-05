@@ -12,7 +12,7 @@ next:
       title: Dashboard
       type: basic
 ---
-The Roku Content Partner Portal is a self-service platform designed to give content partners greater visibility, control, and efficiency in managing their content lifecycle on The Roku Channel. It serves as a centralized destination where partners can track the status of their titles, monitor key milestones, access analytics to understand performance and engagement, and manage Storefront and Creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
+The Roku Content Partner Portal is a self-service platform designed to give content partners greater visibility, control, and efficiency in managing their content lifecycle on The Roku Channel. It serves as a centralized destination where partners can track the status of titles, monitor key milestones, access analytics to understand performance and engagement, and manage storefront and creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
 
 <br />
 
@@ -29,7 +29,7 @@ At its core, the Roku Content Partner Portal is built to simplify how partners i
 * **Identify issues early** such as failed or unfulfilled deliveries
 * **Monitor rights windows and availability** across territories
 * **Access a consolidated view** of all titles in one place
-* **Manage Storefront & Creative marketing** to control how content appears and is promoted for your Premium Subscriptions on The Roku Channel
+* **Manage storefront & creative marketing** to control how content appears and is promoted for your Premium Subscriptions on The Roku Channel
 * **Access analytics** to gain insights on content performance, viewership trends, and engagement
 
 This transparency reduces uncertainty and empowers your teams to take action faster.
@@ -60,7 +60,7 @@ The portal is designed for business, operation, and marketing stakeholders withi
 * Marketing and merchandising teams
 * Partner account management
 
-To get started, users must have the appropriate access role, typically **Business Manager**, **Operations Manager**, **Marketing Manager**, or **Analytics** — assigned by one of your company’s account administrators.
+To get started, users must have the appropriate access role, typically **business manager**, **operations manager**, **marketing manager**, or **analytics** — assigned by one of your company’s account administrators.
 
 <br />
 
@@ -89,7 +89,7 @@ To get started, users must have the appropriate access role, typically **Busines
 
 Access to the portal requires a Roku account. Partners can sign in or create an account at: [https://my.roku.com/signin](https://my.roku.com/signin)
 
-Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before it becomes available within Roku Launchpad.
+Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before you see it in the Roku Launchpad.
 
 1. Ask your company's administrator to grant access based on your responsibilities.
 2. Contact your internal team if you are not sure who your administrator is.

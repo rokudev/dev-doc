@@ -34,12 +34,39 @@ The Static Analysis Tool is available from the [Developer Dashboard](https://dev
 
    ![roku815px - static-analysis-test-results](https://image.roku.com/ZHZscHItMTc2/static-analysis-test-results-v2.png "static-analysis-test-results")
 
-| Column                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Message                   | A description of the issue related to the app.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Severity                  | The type of message: error, warning, or info.\<br />\<br />\<ul>\<li>\<strong>Error\</strong>.  Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.\</li>\<li>\<strong>Warning\</strong>. Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.\</li>\<li>\<strong>Info\</strong>. Info messages provide tips that may be helpful in the development of the app.\</li>\</ul> |
-| Category                  | The type of issue (for example, package, performance, billing, manifest, and so on).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Certification Requirement | Provides a link to any related certification requirements in the [Certification Criteria](doc:certification) document.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Message</td>
+      <td>A description of the issue related to the app.</td>
+    </tr>
+    <tr>
+      <td>Severity</td>
+      <td>
+        The type of message: error, warning, or info.
+        <ul>
+          <li><strong>Error</strong>. Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.</li>
+          <li><strong>Warning</strong>. Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.</li>
+          <li><strong>Info</strong>. Info messages provide tips that may be helpful in the development of the app.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Category</td>
+      <td>The type of issue (for example, package, performance, billing, manifest, and so on).</td>
+    </tr>
+    <tr>
+      <td>Certification Requirement</td>
+      <td>Provides a link to any related certification requirements in the [Certification Criteria](doc:certification) document.</td>
+    </tr>
+  </tbody>
+</table>
 
 You can filter the test results based on the **Severity** or **Category**.
 

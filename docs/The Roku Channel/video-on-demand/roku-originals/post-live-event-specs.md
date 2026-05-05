@@ -204,83 +204,67 @@ The formatting requested below is a subset of [The Roku Channel Ingest Specifica
       <th><strong>ProRes</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Container</td>
       <td>MOV</td>
     </tr>
-
     <tr>
       <td>Profile</td>
       <td>422 HQ</td>
     </tr>
-
     <tr>
       <td>Minimum Bitrate</td>
       <td>175 mbit/s or higher</td>
     </tr>
-
     <tr>
       <td>Landscape aspect ratio</td>
       <td>16:9 (1.77:1) - (no black bars)<br />W1920 x H1080 (HD)</td>
     </tr>
-
     <tr>
       <td>Pixel aspect ratio</td>
       <td>Square pixels (1:1)</td>
     </tr>
-
     <tr>
       <td>Scan type</td>
       <td>Progressive scan type</td>
     </tr>
-
     <tr>
       <td>Chroma Subsampling</td>
       <td>4:2:2</td>
     </tr>
-
     <tr>
       <td>Color Space</td>
       <td>BT.709 Legal Video Range (16 to 940)</td>
     </tr>
-
     <tr>
       <td>Bit depth</td>
       <td>10-bit or 12-bit</td>
     </tr>
-
     <tr>
       <td>Constant Frame Rate</td>
       <td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
     </tr>
-
     <tr>
       <td>Native frame rate</td>
       <td>No 3:2 pulldown flags</td>
     </tr>
-
     <tr>
       <td><strong>Audio Codec</strong></td>
       <td><strong>PCM</strong></td>
     </tr>
-
     <tr>
       <td>Format</td>
       <td>1 Interleaved Track or 2 Mono Tracks</td>
     </tr>
-
     <tr>
       <td>Track Layout</td>
       <td>Interleaved: Track 1: Stereo, LT/RT<br />Mono: Track 1: Stereo LT, Track 2: Stereo RT<br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
     </tr>
-
     <tr>
       <td>Sample Rate/Bit Depth</td>
       <td>48000Hz/24-bit</td>
     </tr>
-
     <tr>
       <td>Channel Mapping & Metadata Tagging</td>
       <td>See 2.4.2 -Verify correct audio channel mapping and metadata tagging.</td>
@@ -311,58 +295,47 @@ From each Texted Master created, please export following proxy files:
       <th><strong>H.264</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Container</td>
       <td>MOV or MP4</td>
     </tr>
-
     <tr>
       <td>Picture</td>
       <td>(1) Clean & (1) w/Vis.TC UR</td>
     </tr>
-
     <tr>
       <td>Bitrate</td>
       <td>5mbit/s (total file size \< 1gb to 2gb)</td>
     </tr>
-
     <tr>
       <td>Dimensions</td>
       <td>W1920 x H1080 (HD)</td>
     </tr>
-
     <tr>
       <td>Scan Type</td>
       <td>Progressive scan type</td>
     </tr>
-
     <tr>
       <td>Color Space</td>
       <td>BT.709 Legal Video Range</td>
     </tr>
-
     <tr>
       <td>Bit Depth</td>
       <td>10-bit or 12-bit</td>
     </tr>
-
     <tr>
       <td>Constant Frame Rate</td>
       <td>Should Match Master</td>
     </tr>
-
     <tr>
       <td>Native Frame Rate</td>
       <td>Should Match Master</td>
     </tr>
-
     <tr>
       <td>Audio</td>
       <td>Ch.1 Stereo Left, Ch.2 Stereo Right</td>
     </tr>
-
     <tr>
       <td>Filename</td>
       <td>ShowCode\_ProdNumber\_AirOrder\_Language\_Proxy\_HD\_ FN(if applicable)\_Audio\_Timecode(Clean or VisTC)*RevisionDate-v#*(Final or Pre-QC).mov<br /><br /> THAM\_101\_AIR\_1\_PROXY\_enUS\_HD\_FN\_2CH\_CLEAN\_20200916\_V4\_FINAL.mov</td>

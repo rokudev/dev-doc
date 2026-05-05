@@ -72,11 +72,9 @@ The [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API returns an **
       <th>**purchases.billingPlan.state**</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Current</td>
-
       <td>
         <ul>
           <li>"ActivePaid"</li>
@@ -85,17 +83,14 @@ The [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API returns an **
         </ul>
       </td>
     </tr>
-
     <tr>
       <td>In Recovery</td>
       <td>"ActiveInGracePeriod" (in 3-day grace period)</td>
     </tr>
-
     <tr>
       <td>On Hold</td>
       <td>"InactiveOnHold"</td>
     </tr>
-
     <tr>
       <td>Cancelled</td>
       <td>"InactiveExpired"</td>
@@ -148,12 +143,10 @@ This reference summarizes the **request** and **requestStatus** fields used by t
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>request</td>
       <td>associative array</td>
-
       <td>
         Includes the request's command and context.
 
@@ -165,24 +158,20 @@ This reference summarizes the **request** and **requestStatus** fields used by t
               <th>Description</th>
             </tr>
           </thead>
-
           <tbody>
             <tr>
               <td>command</td>
               <td>string</td>
               <td>Set to "DoRecovery"</td>
             </tr>
-
             <tr>
               <td>context</td>
               <td>associative array</td>
               <td>Used to match the **requestStatus** with **request**. For example, you can set this to "id: DoRecovery\_1".</td>
             </tr>
-
             <tr>
               <td>params</td>
               <td>associative array</td>
-
               <td>
                 Optional. Used to configure the in-app Roku Pay subscription renewal dialog. If this parameter is not included, the in-app Roku Pay subscription renewal dialog does not allow customers to watch content while their subscription is in recovery.
 
@@ -194,7 +183,6 @@ This reference summarizes the **request** and **requestStatus** fields used by t
                       <th>Description</th>
                     </tr>
                   </thead>
-
                   <tbody>
                     <tr>
                       <td>recoveryContext</td>
@@ -222,12 +210,10 @@ This reference summarizes the **request** and **requestStatus** fields used by t
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>requestStatus</td>
       <td>associative array</td>
-
       <td>
         Includes the status of the DoRecovery command and the recovery status data returned by it.
 
@@ -239,12 +225,10 @@ This reference summarizes the **request** and **requestStatus** fields used by t
               <th>Description</th>
             </tr>
           </thead>
-
           <tbody>
             <tr>
               <td>result</td>
               <td>associative array</td>
-
               <td>
                 Contains the following key-value pairs for the recovery status of the subscription:
 
@@ -255,11 +239,9 @@ This reference summarizes the **request** and **requestStatus** fields used by t
                 </ul>
               </td>
             </tr>
-
             <tr>
               <td>status</td>
               <td>enum</td>
-
               <td>
                 The command completion status, which may be one of the following values:
 
@@ -274,19 +256,16 @@ This reference summarizes the **request** and **requestStatus** fields used by t
                 </ul>
               </td>
             </tr>
-
             <tr>
               <td>statusMessage</td>
               <td>string</td>
               <td>A text description of the command completion status.</td>
             </tr>
-
             <tr>
               <td>command</td>
               <td>string</td>
               <td>The command passed into the request, which is "DoRecovery".</td>
             </tr>
-
             <tr>
               <td>context</td>
               <td>associative array</td>

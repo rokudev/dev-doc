@@ -129,7 +129,6 @@ Roku develooper accounts can have the following roles and permissions:
 <li>Enable the developer to create and manage in-app products (for example, subscriptions, movie rentals, special events).</li>
   <li>Add, view, edit, and delete test users.</li>
   <li>View and void test transactions.</li>
-
 </ul></td>
 <td class="short-line">Account</td>
 </tr>
@@ -152,19 +151,16 @@ TRC users can have the following roles and permissions:
       <th>
         Role
       </th>
-
       <th>
         Permissions
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Administrator
       </td>
-
       <td>
         Maintain administrative control over The Roku Channel Partner Portal. This user can:
 
@@ -175,12 +171,10 @@ TRC users can have the following roles and permissions:
         * Access audience, engagement, and performance analytics
       </td>
     </tr>
-
     <tr>
       <td>
         Marketing Manager
       </td>
-
       <td>
         Manage merchandising and creative assets. This user can:
 
@@ -190,36 +184,30 @@ TRC users can have the following roles and permissions:
         * Manage subscription offer creatives (side cards)
       </td>
     </tr>
-
     <tr>
       <td>
         Operations manager
       </td>
-
       <td>
         Manage title assets and operational reports. This user can:
 
         * Access title status and issue reports for assets.
       </td>
     </tr>
-
     <tr>
       <td>
         Business manager
       </td>
-
       <td>
         Manage title rights, partner deals, and business performance reporting. This user can:
 
         * Access title status and issue reports for rights.
       </td>
     </tr>
-
     <tr>
       <td>
         Analytics
       </td>
-
       <td>
         View Roku analytics reports. This user can:
 
@@ -237,19 +225,16 @@ TRC users can have the following roles and permissions:
       <th>
         Role
       </th>
-
       <th>
         Permissions
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Payout admin
       </td>
-
       <td>
         * Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the [Roku Partner Payouts Program](https://developer.roku.com/payments/) in order to monetize content in a Roku app.
         * Access the Roku Pay transaction, sales activity, and payout financial reports.

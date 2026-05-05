@@ -50,14 +50,12 @@ Decrypts data stored on a device that was previously encoded with the [**Encrypt
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>EncryptedData</td>
       <td>roByteArray</td>
       <td>The previously encoded data to be decrypted.</td>
     </tr>
-
     <tr>
       <td>encType</td>
       <td>String</td>

@@ -408,7 +408,6 @@ Checks if the current device/firmware supports the passed in feature string.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>feature</td>
@@ -612,7 +611,6 @@ Sets the current global setting for the Mode property.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>mode</td>
@@ -642,7 +640,6 @@ Checks the current value of the specified global setting property.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Option</td>
@@ -663,53 +660,43 @@ The value of the specified global setting property, which may be as follows:
       <th>Possible Values</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Mode</td>
       <td><ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
     </tr>
-
     <tr>
       <td>Text style</td>
       <td><ul><li>Default</li><li>Serif Fixed Width</li><li>Serif Proportional</li><li>Sans Serif Fixed Width</li><li>Sans Serif Proportional</li><li>Casual</li><li>Cursive</li><li>Small Caps</li></ul></td>
     </tr>
-
     <tr>
       <td>Text edge effect</td>
       <td><ul><li>Default</li><li>None</li><li>Raised</li><li>Depressed</li><li>Uniform</li><li>Drop shadow (left)</li><li>Drop shadow (right)</li></ul></td>
     </tr>
-
     <tr>
       <td>Text size</td>
       <td><ul><li>Default</li><li>Extra large</li><li>Large</li><li>Medium</li><li>Small</li><li>Extra small</li></ul></td>
     </tr>
-
     <tr>
       <td>Text color</td>
       <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
     </tr>
-
     <tr>
       <td>Text opacity</td>
       <td><ul><li>Default</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
     </tr>
-
     <tr>
       <td>Background Color</td>
       <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
     </tr>
-
     <tr>
       <td>Background Opacity</td>
       <td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
     </tr>
-
     <tr>
       <td>Window Color</td>
       <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
     </tr>
-
     <tr>
       <td>Window Opacity</td>
       <td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
@@ -989,98 +976,79 @@ An associative array with the following key-value pairs:
       <th>Value</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>type</td>
       <td>Same as the value returned from GetConnectionType(). Indicated whether the device is using a WiFiConnection or WiredConnection.</td>
     </tr>
-
     <tr>
       <td>name</td>
       <td>Name of the connection interface.</td>
     </tr>
-
     <tr>
       <td>ip</td>
       <td>IP address used by the connection.</td>
     </tr>
-
     <tr>
       <td>ipv6<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
       <td>A list of IPv6 addresses used by the connection.</td>
     </tr>
-
     <tr>
       <td>mac</td>
       <td><em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the [roDeviceInfo.GetChannelClientId ](doc:ifdeviceinfo#getchannelclientid-as-string)method to uniquely identify devices.</td>
     </tr>
-
     <tr>
       <td>ssid</td>
       <td>The SSID of the Access Point (present only if type = "WiFiConnection").</td>
     </tr>
-
     <tr>
       <td>gateway</td>
       <td>IP Address of the connection gateway (usually the router).</td>
     </tr>
-
     <tr>
       <td>dns.0</td>
       <td>IP Address of first DNS server associated with the connection.</td>
     </tr>
-
     <tr>
       <td>dns.1</td>
       <td>IP Address of the second DNS server, if any (Similarly for any subsequent DNS servers).</td>
     </tr>
-
     <tr>
       <td>dns.2</td>
       <td>IP Address of the third DNS server, if any (Similarly for any subsequent DNS servers).</td>
     </tr>
-
     <tr>
       <td>dns.3</td>
       <td>IP Address of the fourth DNS server, if any (Similarly for any subsequent DNS servers).</td>
     </tr>
-
     <tr>
       <td>active</td>
       <td>A flag indicating the network status.</td>
     </tr>
-
     <tr>
       <td>default</td>
       <td>A flag indicating whether the default WiFi connection is being used.</td>
     </tr>
-
     <tr>
       <td>expectedThroughput</td>
       <td>The actual speed of the connection.  This rate may be significantly lower than theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.</td>
     </tr>
-
     <tr>
       <td>protocol</td>
       <td>The Wifi protocol name (IEEE 802.11g).</td>
     </tr>
-
     <tr>
       <td>signal</td>
       <td>The received signal strength indicator (RSSI) on a logarithmic scale. Values closer to 0 indicate a stronger signal; values closer to -100 indicate a weaker signal.</td>
     </tr>
-
     <tr>
       <td>ssid</td>
       <td>The service set identifier (SSID). The name of the WiFi network to which the device is connected.</td>
     </tr>
-
     <tr>
       <td>txFailed</td>
       <td>The number of dropped frames.</td>
     </tr>
-
     <tr>
       <td>txRetries</td>
       <td>The number of retries to send frames.</td>
@@ -1206,62 +1174,52 @@ An associative array with the following key/value pairs for the display properti
       <th>Value</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Width</td>
       <td>Integer</td>
       <td>Physical width of the attached display in centimeters</td>
     </tr>
-
     <tr>
       <td>Height</td>
       <td>Integer</td>
       <td>Physical height of the attached display in centimeters</td>
     </tr>
-
     <tr>
       <td>Internal</td>
       <td>Boolean</td>
       <td>Set to true if the display is part of the Roku Player (such as a Roku TV), false otherwise</td>
     </tr>
-
     <tr>
       <td>Hdr10</td>
       <td>Boolean</td>
       <td>Set to true if the attached display supports HDR10, false otherwise</td>
     </tr>
-
     <tr>
       <td>Hdr10Plus</td>
       <td>Boolean</td>
       <td>Set to true if the attached display supports HDR10+, false otherwise</td>
     </tr>
-
     <tr>
       <td>HdrSeamless</td>
       <td>Boolean</td>
       <td>Set to true if the attached display supports any type of HDR, such as HDR10, HLG, or<br />Dolby Vision, false otherwise.</td>
     </tr>
-
     <tr>
       <td>Headless</td>
       <td>Boolean</td>
       <td>Set to true if the attached display supports being powered off while audio continues to play</td>
     </tr>
-
     <tr>
       <td>HLG</td>
       <td>Boolean</td>
       <td>Set to true if the attached display supports HLG, false otherwise</td>
     </tr>
-
     <tr>
       <td>DolbyVision</td>
       <td>Boolean</td>
       <td>Set to true if the attached display supports Dolby Vision, false otherwise</td>
     </tr>
-
     <tr>
       <td>visible</td>
       <td>boolean</td>
@@ -1304,7 +1262,6 @@ Checks whether the device can decode and play the specified video format.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>video\_format</td>
@@ -1341,18 +1298,15 @@ An associative array with the following key-value pairs describing the current U
       <th>Value</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>name</td>
       <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>SD</td><td>standard definition (720x480 screen pixel dimensions)</td></tr><tr><td>HD</td><td>high-definition (1280x720 screen pixel dimensions)</td></tr><tr><td>FHD</td><td>full high-definition (1920x1080 screen pixel dimensions)</td></tr></tbody></table></td>
     </tr>
-
     <tr>
       <td>width</td>
       <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>720</td><td>standard definition screen pixel width</td></tr><tr><td>1280</td><td>high-definition screen pixel width</td></tr><tr><td>1920</td><td>full high-definition screen pixel width</td></tr></tbody></table></td>
     </tr>
-
     <tr>
       <td>height</td>
       <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>480</td><td>standard definition screen pixel height</td></tr><tr><td>720</td><td>high-definition screen pixel height</td></tr><tr><td>1080</td><td>full high-definition screen pixel height</td></tr></tbody></table></td>
@@ -1372,14 +1326,12 @@ An associative array containing the following key/value pairs:
       <th><strong>Value</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>full\_rotation</td>
       <td>boolean</td>
       <td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
     </tr>
-
     <tr>
       <td>astc\_supported</td>
       <td>boolean</td>
@@ -1496,7 +1448,6 @@ Checks if the device can decode and play the specified audio format.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>audio\_format</td>

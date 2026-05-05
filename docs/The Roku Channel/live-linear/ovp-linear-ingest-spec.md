@@ -66,23 +66,19 @@ The following outlines what we support. A preferred video set up is outlined in 
       <th>
         **Description**
       </th>
-
       <th>
         **Specification**
       </th>
-
       <th>
         **Preferred**
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Delivery Method
       </td>
-
       <td>
         * AWS Media Connect Entitlement*
         * Zixi Push*
@@ -94,79 +90,64 @@ The following outlines what we support. A preferred video set up is outlined in 
 
         *_Support AES Decryption_
       </td>
-
       <td>
         AWS Media Connect Entitlement
       </td>
     </tr>
-
     <tr>
       <td>
         Container
       </td>
-
       <td>
         TS over IP
       </td>
-
       <td>
         TS over IP
       </td>
     </tr>
-
     <tr>
       <td>
         Video Codec
       </td>
-
       <td>
         * MPEG-2
         * H.264
         * H.265
       </td>
-
       <td>
         H.264
       </td>
     </tr>
-
     <tr>
       <td>
         Audio Codec
       </td>
-
       <td>
         * AAC
         * MPEG Audio
         * Dolby Digital (AC3 2.0 + 5.1)
         * PCM
       </td>
-
       <td>
         AAC
       </td>
     </tr>
-
     <tr>
       <td>
         Video Resolution
       </td>
-
       <td>
         * HD - 1920 x 1080
         * SD 720 x 480
       </td>
-
       <td>
         HD - 1920 x 1080
       </td>
     </tr>
-
     <tr>
       <td>
         Video Frame Rate
       </td>
-
       <td>
         * 23.97
         * 24
@@ -176,149 +157,118 @@ The following outlines what we support. A preferred video set up is outlined in 
         * 59.94
         * 60
       </td>
-
       <td>
         any
       </td>
     </tr>
-
     <tr>
       <td>
         Audio Bitrate
       </td>
-
       <td>
         * 128 Kbps (min)
         * 320 Kbps (max)
       </td>
-
       <td>
         within range
       </td>
     </tr>
-
     <tr>
       <td>
         Overall Bitrate
       </td>
-
       <td>
         * HD - 12 Mbps (min)
         * SD - 6 Mbps (min)
       </td>
-
       <td>
         Above 12 Mbps
       </td>
     </tr>
-
     <tr>
       <td>
         Bitrate Mode
       </td>
-
       <td>
         CBR
       </td>
-
       <td>
         CBR
       </td>
     </tr>
-
     <tr>
       <td>
         Video Interlacing
       </td>
-
       <td>
         Progressive Scan
       </td>
-
       <td>
         Progressive Scan
       </td>
     </tr>
-
     <tr>
       <td>
         Audio Sampling Rate
       </td>
-
       <td>
         48 kHz
       </td>
-
       <td>
         48 kHz
       </td>
     </tr>
-
     <tr>
       <td>
         Audio Channels
       </td>
-
       <td>
         Stereo
       </td>
-
       <td>
         Stereo
       </td>
     </tr>
-
     <tr>
       <td>
         Closed Captions
       </td>
-
       <td>
         CEA 608/708 (embedded)
       </td>
-
       <td>
         CEA 608/708 (embedded)
       </td>
     </tr>
-
     <tr>
       <td>
         Aspect Ratio
       </td>
-
       <td>
         * HD - 16:9
         * SD - 4:3
       </td>
-
       <td>
         HD - 16:9
       </td>
     </tr>
-
     <tr>
       <td>
         Other video details
       </td>
-
       <td>
         * Content should be free of the following technical errors:
           * Windowboxing and stretching
           * Excess video content such as excessive black screen and color bars
           * Visible interlacing and artifacts/macroblocking
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         Ad Insertion Points (if applicable)
       </td>
-
       <td>
         SCTE-35 Markers In Stream via any of the following:
 
@@ -334,33 +284,26 @@ The following outlines what we support. A preferred video set up is outlined in 
             * 0x34 (provider placement opportunity start)
             * 0x36 (distributor placement opportunity start)
       </td>
-
       <td>
         Splice_Insertion
       </td>
     </tr>
-
     <tr>
       <td>
         Special ad support
       </td>
-
       <td>
         TripleLift DBI support*
 
         *_Requires Roku approval_
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         Ad policy
       </td>
-
       <td>
         * Partners should not serve any ads in the channel other than the ones returned by the Roku SSAI, unless explicitly agreed in the contract.
         * Partners should adhere to the below ad length requirements:
@@ -378,39 +321,29 @@ The following outlines what we support. A preferred video set up is outlined in 
 
         ** _Do not include pixels, third-party tags, or Software Development Kits of any kind without express prior written approval and certification by Roku._
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         Ad queue points quality
       </td>
-
       <td>
         $\{adqueuepoints}
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         Blackouts and Regional restrictions
       </td>
-
       <td>
         * Roku supports regional restrictions on a channel level basis
           * Currently US ZIP codes only
         * SCTE 224 support for program level blackouts and restrictions (coming soon)
       </td>
-
       <td>
-
       </td>
     </tr>
   </tbody>
@@ -963,51 +896,40 @@ The following genres are supported:
       <th>
         1. <br />
       </th>
-
       <th>
         2. <br />
       </th>
-
       <th>
         3. <br />
       </th>
-
       <th>
         4. <br />
       </th>
-
       <th>
         5. <br />
       </th>
-
       <th>
         6. <br />
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         * action<br />- action sports<br />- adventure<br />- aerobics<br />- agriculture<br />- animals<br />- animated<br />- anime<br />- anthology<br />- archery<br />- arm wrestling<br />- art<br />- arts/crafts<br />- artistic gymnastics<br />- artistic swimming<br />- athletics<br />- auction<br />- auto<br />- auto racing<br />- aviation<br />- awards<br />- badminton<br />- ballet<br />- baseball<br />- basketball<br />- 3x3 basketball<br />- beach soccer<br />- beach volleyball<br />- biathlon<br />- bicycle<br />- bicycle racing<br />- billiards<br />- biography<br />- blackjack<br />- bmx racing<br />- boat<br />- boat racing<br />- bobsled
       </td>
-
       <td>
         * bodybuilding<br />- bowling<br />- boxing<br />- bullfighting<br />- bus./financial<br />- canoe<br />- card games<br />- ceremony<br />- cheerleading<br />- children<br />- children-music<br />- children-special<br />- children-talk<br />- collectibles<br />- comedy<br />- comedy drama<br />- community<br />- computers<br />- canoe/kayak<br />- consumer<br />- cooking<br />- cricket<br />- crime<br />- crime drama<br />- curling<br />- cycling<br />- dance<br />- dark comedy<br />- darts<br />- debate<br />- diving<br />- docudrama<br />- documentary<br />- dog racing<br />- dog show<br />- dog sled<br />- drag racing<br />- drama
       </td>
-
       <td>
         * educational<br />- entertainment<br />- environment<br />- equestrian<br />- erotic<br />- event<br />- exercise<br />- fantasy<br />- faith<br />- fashion<br />- fencing<br />- field hockey<br />- figure skating<br />- fishing<br />- football<br />- food<br />- fundraiser<br />- gaelic football<br />- game show<br />- gaming<br />- gay/lesbian<br />- golf<br />- gymnastics<br />- handball<br />- health<br />- historical drama<br />- history<br />- hockey<br />- holiday<br />- holiday music<br />- holiday music special<br />- holiday special<br />- holiday-children<br />- holiday-children special<br />- home improvement<br />- horror<br />- horse<br />- house/garden
       </td>
-
       <td>
         * how-to<br />- hunting<br />- hurling<br />- hydroplane racing<br />- indoor soccer<br />- interview<br />- intl soccer<br />- judo<br />- karate<br />- kayaking<br />- lacrosse<br />- law<br />- live<br />- luge<br />- martial arts<br />- medical<br />- military<br />- miniseries<br />- mixed martial arts<br />- modern pentathlon<br />- motorcycle<br />- motorcycle racing<br />- motorsports<br />- mountain biking<br />- music<br />- music special<br />- music talk<br />- musical<br />- musical comedy<br />- mystery<br />- nature<br />- news<br />- newsmagazine<br />- olympics<br />- opera<br />- outdoors<br />- parade<br />- paranormal
       </td>
-
       <td>
         * parenting<br />- performing arts<br />- playoff sports<br />- poker<br />- politics<br />- polo<br />- pool<br />- pro wrestling<br />- public affairs<br />- racquet<br />- reality<br />- religious<br />- ringuette<br />- road cycling<br />- rodeo<br />- roller derby<br />- romance<br />- romantic comedy<br />- rowing<br />- rugby<br />- running<br />- rhythmic gymnastics<br />- sailing<br />- science<br />- science fiction<br />- self improvement<br />- shooting<br />- shopping<br />- sitcom<br />- skateboarding<br />- skating<br />- skeleton<br />- skiing<br />- snooker<br />- snowboarding<br />- snowmobile<br />- soap<br />- soap special
       </td>
-
       <td>
         * soap talk<br />- soccer<br />- softball<br />- special<br />- speed skating<br />- sport climbing<br />- sports<br />- sports talk<br />- squash<br />- standup<br />- sumo wrestling<br />- surfing<br />- suspense<br />- swimming<br />- table tennis<br />- taekwondo<br />- talk<br />- technology<br />- tennis<br />- theater<br />- thriller<br />- track/field<br />- track cycling<br />- travel<br />- trampoline<br />- triathlon<br />- variety<br />- volleyball<br />- war<br />- water polo<br />- water skiing<br />- watersports<br />- weather<br />- weightlifting<br />- western<br />- wrestling<br />- yacht racing
       </td>
@@ -1062,87 +984,68 @@ Note: No content can be targeted specifically to children. No pornographic or po
       <th>
         Source
       </th>
-
       <th>
         USA_PR (USA Parental Rating)
       </th>
-
       <th>
         MPAA (Motion Picture Association of America)
       </th>
-
       <th>
         CHVRS (Canadian Home Video Rating System)
       </th>
-
       <th>
         CPR (Canadian Parental Rating)
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Rating
       </td>
-
       <td>
         * TV-Y<br />- TVY<br />- TV-Y7<br />- TVY7<br />- TV-G<br />- TVG<br />- TV-PG<br />- TVPG<br />- TV-14<br />- TV14<br />- TV-MA<br />- TVMA
       </td>
-
       <td>
         * G<br />- PG<br />- PG13<br />- PG-13<br />- R<br />- NC-17<br />- NC17<br />- UR
       </td>
-
       <td>
         * G<br />- PG<br />- 14A<br />- 14-A<br />- 18A<br />- 18-A<br />- R<br />- E
       </td>
-
       <td>
         * 14+<br />- 18+<br />- C<br />- C8<br />- C-8<br />- G<br />- PG<br />- E
       </td>
     </tr>
-
     <tr>
       <td>
         **Source**
       </td>
-
       <td>
         **RTC (General Directorate of Radio Television and Cinematography) - Mexico**
       </td>
-
       <td>
         **BBFC (British Board of Film Classification)**
       </td>
-
       <td>
         **ACB (Australian Classification Board)**
       </td>
-
       <td>
         **CLASSIND (Classificação Indicativa) - Brazil**
       </td>
     </tr>
-
     <tr>
       <td>
         Rating
       </td>
-
       <td>
         * AA<br />- A<br />- B<br />- B-15<br />- B15<br />- C<br />- D
       </td>
-
       <td>
         * U<br />- PG<br />- 12A<br />- 12-A<br />- 12<br />- 15<br />- 18<br />- R18<br />- R-18
       </td>
-
       <td>
         * E<br />- G<br />- PG<br />- M<br />- MA 15+<br />- R 18+<br />- X 18+<br />- AV 15+<br />- C<br />- NC<br />- RC
       </td>
-
       <td>
         * L<br />- 10<br />- 12<br />- 14<br />- 16<br />- 18<br />- AL<br />- A10<br />- A12<br />- A14<br />- A16<br />- A18
       </td>

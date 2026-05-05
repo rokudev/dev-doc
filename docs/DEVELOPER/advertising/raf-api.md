@@ -56,7 +56,6 @@ Gets the set of ads to be rendered now. This method may be called with no parame
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>msg</td>
@@ -91,7 +90,6 @@ Client applications should always check the return value. If it is false, an app
       <th><strong>Description</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>ads</td>
@@ -99,14 +97,12 @@ Client applications should always check the return value. If it is false, an app
       <td>required</td>
       <td>Ads to be rendered. Can represent either a single pod of ads or an array of ad pods.</td>
     </tr>
-
     <tr>
       <td>ctx</td>
       <td>associative array</td>
       <td>optional</td>
       <td>An associative array that allows client code to provide new offset and total to ad counter to support use cases involving interleaving RAF rendering with custom rendering within a single pod of ads. When used, it should be in the form of:  <br /><br /><code>\{ start: Integer, total: Integer }</code> <br /><br />For example, <code>\{ start: 1, total: 4 }</code> would display as: "Ad 1 of 4"  in the top left corner during ad playback.</td>
     </tr>
-
     <tr>
       <td>view</td>
       <td>renderable node</td>
@@ -166,14 +162,12 @@ The default is for Roku to backfill ads if this method is not called or **useRok
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>useRokuAdsAsFallback<br /><br /><em>Deprecated</em></td>
       <td>Boolean</td>
       <td>Indicates whether the default Roku backfill ad service URL should be used in case the client-configured URL fails to return any renderable ads.<br /><br /><em>This parameter has been deprecated and will be ignored in future updates to the RAF library.</em></td>
     </tr>
-
     <tr>
       <td>maxRequests</td>
       <td>Integer</td>
@@ -202,26 +196,22 @@ Any additional known types can be mapped to their stream format by setting this 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>maxHeight</td>
       <td>Integer</td>
       <td>Maximum vertical dimension of renderable ad (in pixels).</td>
     </tr>
-
     <tr>
       <td>maxWidth</td>
       <td>Integer</td>
       <td>Maximum horizontal dimension of renderable ad (in pixels).</td>
     </tr>
-
     <tr>
       <td>maxBitrate</td>
       <td>Integer</td>
       <td>Maximum allowable bitrate for renderable ad streams (in Kbps)</td>
     </tr>
-
     <tr>
       <td>supportedMimeTypes</td>
       <td>Object</td>
@@ -410,14 +400,12 @@ The semantics and implementation of targeting based on genre values are dependen
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>genres</td>
       <td>String</td>
       <td>Comma-delimited string or array of genre tag strings.</td>
     </tr>
-
     <tr>
       <td>kidsContent</td>
       <td>Boolean</td>
@@ -520,7 +508,6 @@ Merges a video feed and a set of one or more ad pods into a single playlist for 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>contentMetaData</td>
@@ -528,7 +515,6 @@ Merges a video feed and a set of one or more ad pods into a single playlist for 
       <td>Required</td>
       <td>The content metadata of the video feed to be combined into the stitched stream.</td>
     </tr>
-
     <tr>
       <td>ads</td>
       <td>roArray</td>
@@ -562,14 +548,12 @@ For client-side stitched streams, the app will also get tracking events during c
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>csasStream</td>
       <td>Object</td>
       <td>The video stream returned by <a href="#constructstitchedstreamcontentmetadata-as-object-ads-as-object-as-object">constructStitchedStream()</a> method.</td>
     </tr>
-
     <tr>
       <td>view</td>
       <td>Object</td>
@@ -620,14 +604,12 @@ The advertising framework must first be initialized using the stitchedAdsInit() 
       <th><strong>Description</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>player</td>
       <td>Object</td>
       <td>Player interface to allow ad renderer to control stitched video stream. If invalid or not specified, only beacons will be fired, and no interaction will be allowed or additional UI rendered during ad display.<br /><br />This parameter may be either the <a href="">roVideoPlayer</a> instance used to play the stitched stream, or an roAssociativeArray that contains methods congruent to the ifVideoPlayer interface. The roAssociativeArray is used in case there is additional client code that should be executed when an ad renderer controls the stream (for example, analytics).<br /><br />If the player parameter is passed as an roAssociativeArray in an app where video is played with roVideoPlayer (non-RSG), the app must contain the following methods: <pre><code>\{  ' Returns message port for player  GetMessagePort : Function() as Object,  ' Pauses a stitched video stream  Pause : Function() as Boolean,  ' Resumes a paused stitched stream  Resume : Function() as Boolean,  ' Seeks to absolute position (in ms) within stream  Seek : Function(offsetMs as Integer) as Boolean,  ' Plays stitched video stream  Play : Function() as Boolean,  ' Stops stitched video stream  Stop : Function() as Boolean}</code></pre><br /><br />For SceneGraph apps that use a Video node for stitched ad playback, the <strong>player</strong> parameter should be an roAssociativeArray of the following form: <pre><code>\{  sgNode : video, ' the video node which will render the stitched stream  port : port ' the message port on which (at least) the "position" and "state" fields of  the above video node are observed}</code></pre></td>
     </tr>
-
     <tr>
       <td>msg</td>
       <td>Object</td>
@@ -727,20 +709,17 @@ Enables the client application to set a callback function and timeout value for 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>callback</td>
       <td>Function</td>
       <td>The callback function to receive ad buffer events. The default value is Invalid. This function must have the following signature: <br /><code>Function(obj as Dynamic, eventType as String, ctx as Dynamic) as Void</code><br /><br />The <strong>eventType</strong> parameter can take the following values:<br /><ul><li>BufferingStart</li><li>BufferingEnd</li><li>ReBufferingStart</li><li>ReBufferingEnd</li><li>Progress</li><li>Timeout</li></ul><br />The <strong>ctx</strong> parameter is an roAssociativeArray that can contain the following:<pre><code>\{    'array of content metadata set via setAdBufferScreenLayer, or Invalid     canvasLayers : roArray of roAssociativeArrays,    'progress percentage \[0-100]. Optional, only for "Progress" event type     progress : Integer    'ad metadata for currently buffering ad    ad : roAssociativeArray,    'index of current ad within pod    adIndex : Integer}</code></pre></td>
     </tr>
-
     <tr>
       <td>obj</td>
       <td>Object</td>
       <td>The object to be passed to the callback function. The default value is Invalid.</td>
     </tr>
-
     <tr>
       <td>timeout</td>
       <td>Integer</td>

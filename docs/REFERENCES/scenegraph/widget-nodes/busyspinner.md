@@ -28,65 +28,51 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
       <th>
         Field
       </th>
-
       <th>
         Type
       </th>
-
       <th>
         Default
       </th>
-
       <th>
         Access Permission
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         poster
       </td>
-
       <td>
         Poster node
       </td>
-
       <td>
         internal instance default
       </td>
-
       <td>
         READ_WRITE
       </td>
-
       <td>
         Set the uri field of the Poster node to select the bitmap for the busy spinner
       </td>
     </tr>
-
     <tr>
       <td>
         control
       </td>
-
       <td>
         option string
       </td>
-
       <td>
         none
       </td>
-
       <td>
         READ_WRITE
       </td>
-
       <td>
         Sets the operational state of the busy spinner:  
 
@@ -95,46 +81,36 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
         * **stop**:  Stops the busy spinner if running.
       </td>
     </tr>
-
     <tr>
       <td>
         clockwise
       </td>
-
       <td>
         Boolean
       </td>
-
       <td>
         true
       </td>
-
       <td>
         READ_WRITE
       </td>
-
       <td>
         Specifies whether the bitmap rotates in a clockwise or counterclockwise direction
       </td>
     </tr>
-
     <tr>
       <td>
         spinInterval
       </td>
-
       <td>
         time
       </td>
-
       <td>
         2
       </td>
-
       <td>
         READ_WRITE
       </td>
-
       <td>
         The number of seconds to complete a 360-degree rotation of the spinner image. A value of 0 will cause the spinner to remain stationary and not spin
       </td>
@@ -143,19 +119,15 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
       <td>
         uri
       </td>
-
       <td>
         uri
       </td>
-
       <td>
         ""
       </td>
-
       <td>
         READ_WRITE
       </td>
-
       <td>
         The uri of the bitmap to be used for the busy spinner. This is an alias for the uri field of the internal Poster node instance, and setting this field is equivalent to setting the uri field of the internal Poster node instance.
       </td>

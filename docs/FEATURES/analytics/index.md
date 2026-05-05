@@ -134,23 +134,19 @@ You can create a schedule to automatically email a report in a recurring daily, 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Schedule name</td>
       <td>By default, the report name is based on the report type (for example, "App Engagement" or "App Health"). <br /><br />It is recommended that you enter a descriptive name for the schedule that makes it easy to identify in your list of schedules. For example, you can include the app name, format, frequency, time period or any other relevant information that distinguishes the schedule.</td>
     </tr>
-
     <tr>
       <td>Recurrence</td>
       <td>Configure the cadence used to email the report. You can send the report <strong>Daily</strong>, <strong>Weekly</strong>, <strong>Monthly</strong>, <strong>Hourly</strong>, or <strong>By Minute</strong>, or on specific months or days:<ul><li><strong>Daily</strong>. Email the report every day, every weekday, or one ore more specific days. The report is emailed every day at 8:00AM by default.</li><li><strong>Weekly</strong>. Email the report once a week on a specific day and time. The report is emailed every Monday at 8:00AM by default.</li><li><strong>Monthly</strong>. Email the report once a month on a specific date and time, every quarter (January, April, July, and October), or one or more specific months. The report is emailed on the 1st of each month at 6:00AM by default.</li><li><strong>Hourly</strong>. Email the report every 1, 2, 3, 4, 6, 8, or 12 hours within a specific time range. You can configure on which 5-minute interval the report is sent. The report is emailed every hour on the hour between 6:00AM and 6:00PM by default.</li><li><strong>By Minute</strong>. Email the report every 5, 10, 15, 20, 25, 30 minutes within a specific time range. The report is emailed every 5 minutes between 6:00AM and 6:00PM by default.</li></ul>Once you select a cadence, configure the <strong>Time</strong> to send the report.</td>
     </tr>
-
     <tr>
       <td>Destination</td>
       <td>Select one of the following destinations to send the report:<ul><li><strong>Email</strong>: Send the report to one on more recipients by entering their email address and then clicking <strong>Add</strong>. Optionally, select the <strong>Include a Custom Message</strong> check box to include any additional information in the body of the email message.</li><li><strong>Webhook</strong>: Enter the Webhook URL.</li><li><strong>Amazon S3</strong>: Enter the S3 bucket, path (optional), access key, secrey key, and region.</li><li><strong>SFTP</strong>: Enter the address, username, password, and preferred key exchange algorithm.</li></ul>The SFTP, S3, and Webhook options enable you to create automation pipelines for ingesting Roku analytics into your backend systems.</td>
     </tr>
-
     <tr>
       <td>Format</td>
       <td>Select whether to attach the Transaction Report as a <strong>PDF</strong> (tiled or single column), <strong>PNG Visualization</strong> (tiled or single-column chart in a PNG file), or CSV zip file.</td>

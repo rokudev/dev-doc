@@ -35,14 +35,11 @@ Each of the commands starts a sequence of actions associated with the financial 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>command</td>
       <td>string</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the command to be executed:<br /><ul><li><a href="#getuserdata">getUserData</a></li><li><a href="#getuserregiondata">getUserRegionData</a></li><li><a href="#getcatalog">getCatalog</a> and <a href="#getstorecatalog">getStoreCatalog</a></li><li><a href="#doorder">doOrder</a></li><li><a href="#getpurchases">getPurchases</a> and <a href="#getallpurchases">getAllPurchases</a></li><li><a href="#storechannelcreddata">storeChannelCredData</a></li><li><a href="#getchannelcred">getChannelCred</a></li><li><a href="#getdeviceattestationtoken">getDeviceAttestationToken</a></li><li><a href="#requestpartnerorder">requestPartnerOrder</a></li><li><a href="#confirmpartnerorder">confirmPartnerOrder</a></li></ul></td>
     </tr>
@@ -61,7 +58,6 @@ Each of the commands starts a sequence of actions associated with the financial 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>requestedUserData</td>
@@ -85,7 +81,6 @@ Each of the commands starts a sequence of actions associated with the financial 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>requestedUserDataInfo</td>
@@ -145,7 +140,6 @@ store.command = "getUserData"
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>userData</td>
@@ -169,7 +163,6 @@ store.command = "getUserData"
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>order</td>
@@ -216,16 +209,13 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>deltaOrder</td>
       <td>associative array</td>
-
       <td>
         {}
       </td>
-
       <td>WRITE\_ONLY</td>
       <td>Enables the <a href="#order"><strong>order</strong></a> field to be populated incrementally. Each time this field is set, the <strong>order</strong> field is modified.<br /><br />The <strong>deltaOrder</strong> associative array should contain a "code" string that identifies an available item, and a "qty" integer value to indicate how the children of the order field <strong>ContentNode</strong> should be modified.  <br /><br />For example, if the order is invalid, setting the deltaOrder field to the following associative array:  <br /><br />  <code>\{ "code": "Merchandise1", "qty": 1 }</code>  <br /><br />Would cause an order field to be set to a <strong>ContentNode</strong>, with one child <strong>ContentNode</strong> with a "code" field set to "Merchandise1", and a "qty" field set to 1.  <br /><br />If the deltaOrder field was then set to:  <br /><br />  <code>\{ "code": "MyItem2", "qty": 1 }</code>  <br /><br />The order field <strong>ContentNode</strong> would have a second <strong>ContentNode</strong> child appended to it, with the specified "code" and "qty" field values.  <br /><br />The "qty" field can be set to a negative value to remove an item from an order. For example, if the order field was set as above, and the deltaOrder field was set to:  <br /><br />  <code>\{ "code" MyItem2", "qty": -1 }</code>  <br /><br />The order field <strong>ContentNode</strong> would have the second child <strong>ContentNode</strong> removed.</td>
     </tr>
@@ -246,7 +236,6 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>requestPartnerOrder</td>
@@ -272,7 +261,6 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>confirmPartnerOrder</td>
@@ -332,7 +320,6 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>fakeServer</td>
@@ -388,74 +375,62 @@ Overall, the [**userData** field](#userdata) field may contain the following Rok
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>firstName</td>
       <td>string</td>
       <td>The user first name</td>
     </tr>
-
     <tr>
       <td>lastName</td>
       <td>string</td>
       <td>The user last name</td>
     </tr>
-
     <tr>
       <td>email</td>
       <td>string</td>
       <td>The user email address</td>
     </tr>
-
     <tr>
       <td>street1</td>
       <td>string</td>
       <td>The first line of the user street address</td>
     </tr>
-
     <tr>
       <td>street2</td>
       <td>string</td>
       <td>The second line of the user street address</td>
     </tr>
-
     <tr>
       <td>city</td>
       <td>string</td>
       <td>The city where the user lives</td>
     </tr>
-
     <tr>
       <td>state</td>
       <td>string</td>
       <td>The state where the user lives</td>
     </tr>
-
     <tr>
       <td>zip</td>
       <td>string</td>
       <td>The user postal code</td>
     </tr>
-
     <tr>
       <td>country</td>
       <td>string</td>
       <td>The country where the user lives</td>
     </tr>
-
     <tr>
       <td>phone</td>
       <td>string</td>
       <td>The user phone number</td>
     </tr>
-
     <tr>
       <td>birth</td>
       <td>string</td>
       <td><br /><br />The user birthdate (YYYY-MM).</td>
     </tr>
-
     <tr>
       <td>gender</td>
       <td>string</td>
@@ -493,14 +468,12 @@ Lists the [In-App Products](https://roku-ent.readme.io/dev/docs/in-channel-produ
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>status</td>
       <td>integer</td>
       <td>Contains the command completion status. which may be one of the following values:<br /> <ul><li>2:  Interrupted</li><li>1:  Success</li><li>0:  Network error</li><li>-1: HTTP Error/Timeout</li><li>-2: Timeout</li><li>-3: Unknown Error</li><li>-4: Invalid request</li></ul></td>
     </tr>
-
     <tr>
       <td>statusMessage</td>
       <td>string</td>
@@ -546,7 +519,6 @@ When the command completes, the [**orderStatus** field](#orderstatus) is set to 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>status</td>
@@ -582,7 +554,6 @@ When this command completes, the [**purchases** field](#purchases) is set to a C
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>status</td>
@@ -602,110 +573,92 @@ If this command is successful, the [**purchases** field](#purchases) ContentNode
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>code</td>
       <td>string</td>
       <td>The product identifier, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-App Product page in the Developer Dashboard</a> when the product was created.</td>
     </tr>
-
     <tr>
       <td>cost</td>
       <td>string</td>
       <td>Localized cost of the item (prior to purchase) with local currency symbol</td>
     </tr>
-
     <tr>
       <td>expirationDate</td>
       <td>string</td>
       <td>The subscription expiration date (<a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format)</td>
     </tr>
-
     <tr>
       <td>freeTrialQuantity</td>
       <td>integer</td>
       <td>The free trial amount associated with the freeTrialType. For example, <strong>1</strong> for a 1-month free trial or <strong>7</strong> for a 7-day free trial.</td>
     </tr>
-
     <tr>
       <td>freeTrialType</td>
       <td>string</td>
       <td>The free trial type ("Days" or "Months")</td>
     </tr>
-
     <tr>
       <td>inDunning</td>
       <td>string</td>
       <td>A flag that indicates whether the purchased subscription is past due state because of an invalid method of payment.<br /><br />This flag is set to "true" if the subscription is in the dunning state. In this case, check the <strong>status</strong> field to determine whether to grant the customer access to content:<br /><ul><li>If the <strong>status</strong> field is set to "Valid", the subscription is in a grace period and the viewer can access content.  </li><li>If the <strong>status</strong> field is set to "Invalid", the subscription is on hold and the viewer cannot access content. If the viewer adds a valid method of payment, the subscription will be automatically renewed and the status will become "Valid".</li></ul></td>
     </tr>
-
     <tr>
       <td>name</td>
       <td>string</td>
       <td>The item name (this name will also be set as the description).</td>
     </tr>
-
     <tr>
       <td>productType</td>
       <td>string</td>
       <td>The product type (ex. "MonthlySub")</td>
     </tr>
-
     <tr>
       <td>purchaseChannel</td>
       <td>string</td>
       <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="https://roku-ent.readme.io/dev/docs/instant-signup">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
     </tr>
-
     <tr>
       <td>purchaseContext</td>
       <td>string</td>
       <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="https://roku-ent.readme.io/dev/docs/instant-signup">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
     </tr>
-
     <tr>
       <td>purchaseDate</td>
       <td>string</td>
       <td>The purchase date (<a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format)</td>
     </tr>
-
     <tr>
       <td>purchaseId</td>
       <td>string</td>
       <td>The transaction ID</td>
     </tr>
-
     <tr>
       <td>qty</td>
       <td>integer</td>
       <td>The quantity purchased</td>
     </tr>
-
     <tr>
       <td>renewalDate</td>
       <td>string</td>
       <td>The subscription renewal date (<a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format)</td>
     </tr>
-
     <tr>
       <td>status</td>
       <td>string</td>
       <td>Indicates whether the purchase is for a current subscription ("Valid") or for a subscription that has been canceled, expired, or terminated ("Invalid")</td>
     </tr>
-
     <tr>
       <td>trialCost</td>
       <td>integer</td>
       <td>If the product uses introductory pricing, the discounted price.</td>
     </tr>
-
     <tr>
       <td>trialQuantity</td>
       <td>integer</td>
       <td>If the product uses introductory pricing, the number of months the discounted pricing is applicable.</td>
     </tr>
-
     <tr>
       <td>trialType</td>
       <td>string</td>
@@ -728,7 +681,6 @@ When this command completes, the [**purchases** field](#purchases) is set to a C
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>status</td>
@@ -748,110 +700,92 @@ If this command is successful, the [**purchases** field](#purchases) ContentNode
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>code</td>
       <td>string</td>
       <td>The product identifier, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-App Product page in the Developer Dashboard</a> when the product was created.</td>
     </tr>
-
     <tr>
       <td>cost</td>
       <td>string</td>
       <td>Localized cost of the item (prior to purchase) with local currency symbol</td>
     </tr>
-
     <tr>
       <td>expirationDate</td>
       <td>string</td>
       <td>The subscription expiration date (<a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format)</td>
     </tr>
-
     <tr>
       <td>freeTrialQuantity</td>
       <td>integer</td>
       <td>If the product has a free trial offer, the length of the trial period. For example, <strong>1</strong> for a 1-month free trial or <strong>7</strong> for a 7-day free trial.</td>
     </tr>
-
     <tr>
       <td>freeTrialType</td>
       <td>string</td>
       <td>If the product has a free trial offer, the unit of time used by the trial ("Days" or "Months")</td>
     </tr>
-
     <tr>
       <td>inDunning</td>
       <td>string</td>
       <td>A flag that indicates whether the purchased subscription is past due state because of an invalid method of payment.<br /><br />This flag is set to "true" if the subscription is in the dunning state. In this case, check the <strong>status</strong> field to determine whether to grant the customer access to content:<br /><ul><li>If the <strong>status</strong> field is set to "Valid", the subscription is in a grace period and the viewer can access content.  </li><li>If the <strong>status</strong> field is set to "Invalid", the subscription is on hold and the viewer cannot access content. If the viewer adds a valid method of payment, the subscription will be automatically renewed and the status will become "Valid".</li></ul></td>
     </tr>
-
     <tr>
       <td>name</td>
       <td>string</td>
       <td>The item name (this name will also be set as the description).</td>
     </tr>
-
     <tr>
       <td>productType</td>
       <td>string</td>
       <td>The product type (ex. "MonthlySub")</td>
     </tr>
-
     <tr>
       <td>purchaseChannel</td>
       <td>string</td>
       <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="https://roku-ent.readme.io/dev/docs/instant-signup">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
     </tr>
-
     <tr>
       <td>purchaseContext</td>
       <td>string</td>
       <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="https://roku-ent.readme.io/dev/docs/instant-signup">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
     </tr>
-
     <tr>
       <td>purchaseDate</td>
       <td>string</td>
       <td>The purchase date (<a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format)</td>
     </tr>
-
     <tr>
       <td>purchaseId</td>
       <td>string</td>
       <td>The transaction ID</td>
     </tr>
-
     <tr>
       <td>qty</td>
       <td>integer</td>
       <td>The quantity purchased</td>
     </tr>
-
     <tr>
       <td>renewalDate</td>
       <td>string</td>
       <td>The subscription renewal date (<a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format)</td>
     </tr>
-
     <tr>
       <td>status</td>
       <td>string</td>
       <td>Indicates whether the purchase is for a current subscription ("Valid") or for a subscription that has been canceled, expired, or terminated ("Invalid")</td>
     </tr>
-
     <tr>
       <td>trialCost</td>
       <td>Integer</td>
       <td>If the product uses introductory pricing, the discounted price.</td>
     </tr>
-
     <tr>
       <td>trialQuantity</td>
       <td>integer</td>
       <td>If the product uses introductory pricing, the number of months the discounted pricing is applicable.</td>
     </tr>
-
     <tr>
       <td>trialType</td>
       <td>string</td>
@@ -928,14 +862,12 @@ This command returns an roAssociativeArray with the following values:
       <th>Value</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>response</td>
       <td>json</td>
       <td>A string in JSON format, with the following key-value pairs: <br /><table><thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>status</td><td>string</td><td>The request status, which may be "success" or "failure".</td></tr><tr><td>error</td><td>string</td><td>A description of the error (if any). This will be set to "none" for a successful request.</td></tr><tr><td>error\_detail</td><td>string</td><td>A detailed description of the service error (if any). This value will be null (uninitialized) for a successful request.</td></tr></tbody></table><br /><br />if billing is not enabled for the app, this field will include a string with a service error message.</td>
     </tr>
-
     <tr>
       <td>status</td>
       <td>Integer</td>
@@ -956,32 +888,27 @@ Retrieves an oAuth token, custom token, or other authentication artifact (`chann
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>channelID</td>
       <td>string</td>
       <td>A string representing the app ID (ex. "2213" for Roku Media Player)</td>
     </tr>
-
     <tr>
       <td>errorCode</td>
       <td>string</td>
       <td>A description of the service error (if any). This will be an empty string for a successful request.</td>
     </tr>
-
     <tr>
       <td>json</td>
       <td>string</td>
       <td>A string in JSON format, with the following key-value pairs: <br /><table><thead><tr><th>Key</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>error</td><td>string</td><td>A string containing an error message (if any). This value will be null (uninitialized) for a successful request.</td></tr><tr><td>roku\_pucid</td><td>string</td><td>An agnostic ID (in UUID format) representing the user. This value will be identical when retrieved in the same app across devices linked to the same Roku account. <br /><br />If an app is storing an access token in the Roku cloud, this field does not contain a PUCID value.</td></tr><tr><td>token\_type</td><td>string</td><td>Type of the returned token, e.g. "urn:roku:pucid:token\_type:pucid\_token"</td></tr><tr><td>channel\_data</td><td>String</td><td>The access token, oAuth token, or other authentication artifact stored by the app in the Roku cloud via the <a href="#storechannelcreddata">StoreChannelCredData</a> command. <br /><br />This field is not returned if the <a href="#storechannelcreddata">StoreChannelCredData</a> command is not used to store an artifact in the Roku cloud.</td></tr></tbody></table><br /> If the request fails, this json string will be empty.</td>
     </tr>
-
     <tr>
       <td>publisherDeviceID</td>
       <td>string</td>
       <td>A unique identifier of the device.</td>
     </tr>
-
     <tr>
       <td>status</td>
       <td>integer</td>

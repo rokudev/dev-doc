@@ -22,39 +22,32 @@ The following table summarizes the basic information for the Roku Pay web servic
       <th>
         Item
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         URL
       </td>
-
       <td>
         The base URL for the Roku Pay APIs is **[https://apipub.roku.com/listen/transaction-service.svc](https://apipub.roku.com/listen/transaction-service.svc)**. The resource name for the API is then appended to the URL.<br /><br />For example, the URL for the `validate-transaction` API is **[https://apipub.roku.com/listen/transaction-service.svc/validate-transaction](https://apipub.roku.com/listen/transaction-service.svc/validate-transaction)**.
       </td>
     </tr>
-
     <tr>
       <td>
         Protocol
       </td>
-
       <td>
         Roku Pay API calls may be sent using either HTTP or HTTPS.
       </td>
     </tr>
-
     <tr>
       <td>
         Format
       </td>
-
       <td>
         Roku Pay APIs support both JSON and XML-formatted data. Format the `accept` header as follows:
 
@@ -62,12 +55,10 @@ The following table summarizes the basic information for the Roku Pay web servic
         * **XML**: accept: application/xml
       </td>
     </tr>
-
     <tr>
       <td>
         HTTP Methods
       </td>
-
       <td>
         Roku Pay APIs support GET and POST methods for retrieving and managing transaction data:
 
@@ -75,12 +66,10 @@ The following table summarizes the basic information for the Roku Pay web servic
         * **POST**: All POST requests require JSON or XML-formatted data in the body. The Roku Pay API key must be included in the body.
       </td>
     </tr>
-
     <tr>
       <td>
         API Key
       </td>
-
       <td>
         All Roku Pay API requests must include the developer's API key. See [Setting up Roku Pay web services](doc:setting-up-web-services) for more information about getting and managing the key. For all requests, the app associated with the transaction ID or refund ID passed into the call must be owned by the developer associated with the Roku Pay API Key.
       </td>

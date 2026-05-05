@@ -76,7 +76,6 @@ beacon. When you exit your app, the console displays a report summarizing the st
       <th><strong>Description</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>TimeBase</td>

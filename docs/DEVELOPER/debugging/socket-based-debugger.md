@@ -1324,41 +1324,33 @@ struct VariablesResponse{
       <th>
         Argument
       </th>
-
       <th>
         Type
       </th>
-
       <th>
         Summary
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         thread_index
       </td>
-
       <td>
         uint32
       </td>
-
       <td>
         The index of the thread to step through.
       </td>
     </tr>
-
     <tr>
       <td>
         step_type
       </td>
-
       <td>
         uint8
       </td>
-
       <td>
         Contains an a **StepType** enum, indicating the type of step action to be executed. This may be on the following values:
 

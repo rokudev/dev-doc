@@ -215,14 +215,12 @@ Moves the subject node to another parent node.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>newParent</td>
       <td>roSGNode</td>
       <td>The new parent node where the child node is to be moved.</td>
     </tr>
-
     <tr>
       <td>adjustTransform</td>
       <td>Boolean</td>

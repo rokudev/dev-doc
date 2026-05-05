@@ -36,465 +36,291 @@ Each node class extended from the ArrayGrid abstract node class will have custom
       <th style={{ textAlign: "left" }}>
         Field
       </th>
-
       <th style={{ textAlign: "left" }}>
         Type
       </th>
-
       <th style={{ textAlign: "left" }}>
         Default
       </th>
-
       <th style={{ textAlign: "left" }}>
         Access Permission
       </th>
-
       <th style={{ textAlign: "left" }}>
         Description
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td style={{ textAlign: "left" }}>
         content
       </td>
-
       <td style={{ textAlign: "left" }}>
         ContentNode
       </td>
-
       <td style={{ textAlign: "left" }}>
         none
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         Specifies the content meta-data for the list or grid. This field must be set with a ContentNode that specifies the content meta-data for the list or grid in order for the list or grid to be displayed. See the Data Bindings section of each list or grid reference description for details on the content meta-data that must be specified in the ContentNode
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         itemSize
       </td>
-
       <td style={{ textAlign: "left" }}>
         vector2d
       </td>
-
       <td style={{ textAlign: "left" }}>
         [0,0]
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         Specifies the width and height of each item in the list or grid. For list or grid items that are posters, itemSize is the value of a basePosterSize field and any sub-elements included with the poster
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         itemSpacing
       </td>
-
       <td style={{ textAlign: "left" }}>
         vector2d
       </td>
-
       <td style={{ textAlign: "left" }}>
         [0,0]
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         Specifies the horizontal and vertical spacing between the list or grid items. For lists, the vector2d Y-value specifies the vertical spacing between items in the list, and the vector2d X-value is ignored
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         numRows
       </td>
-
       <td style={{ textAlign: "left" }}>
         integer
       </td>
-
       <td style={{ textAlign: "left" }}>
         0
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         Specifies the number of visible rows displayed. Note that the actual number of rows may be more or less than the number specified depending on the number of items in the list or grid content
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         numColumns
       </td>
-
       <td style={{ textAlign: "left" }}>
         integer
       </td>
-
       <td style={{ textAlign: "left" }}>
         0
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         Specifies the number of columns in a grid. This field is not used for lists
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         focusRow
       </td>
-
       <td style={{ textAlign: "left" }}>
         integer
       </td>
-
       <td style={{ textAlign: "left" }}>
         0
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         Specifies the row that will have fixed focus if the vertFocusAnimationStyle field value is set to fixedFocusWrap
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         focusColumn
       </td>
-
       <td style={{ textAlign: "left" }}>
         integer
       </td>
-
       <td style={{ textAlign: "left" }}>
         0
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         Specifies the column that will have fixed focus for grids if the horizFocusAnimationStyle field value is set to fixedFocusWrap. This field is not used for lists
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
-
       <td style={{ textAlign: "left" }}>
-
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         horizFocusAnimationStyle
       </td>
-
       <td style={{ textAlign: "left" }}>
         option string
       </td>
-
       <td style={{ textAlign: "left" }}>
         floatingFocus
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         <table>
           <tr>
             <td>Option</td>
             <td>Effect</td>
           </tr>
-
           <tr>
             <td>floatingFocus</td>
             <td>Causes the focus indicator to float left or right until it reaches the end of the row, at which point the focus indicator will stay fixed on the first or last item in the row, and the items will scroll left or right if there were items that were not visible.</td>
           </tr>
-
           <tr>
             <td>fixedFocusWrap</td>
             <td>Causes the row to wrap around when the focus indicator reaches the first or last item in the row, as long as the row contains enough items to fill the row. If the row does not contain enough items to fill the row, the focus indicator will float left and right.</td>
@@ -534,7 +360,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         Option
@@ -588,7 +413,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         floatingFocus
@@ -642,7 +466,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         fixedFocusWrap
@@ -696,7 +519,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         vertFocusAnimationStyle
@@ -720,17 +542,14 @@ Each node class extended from the ArrayGrid abstract node class will have custom
             <td>Option</td>
             <td>Effect</td>
           </tr>
-
           <tr>
             <td>floatingFocus</td>
             <td>Causes the focus indicator to float up or down until it reaches the end of the list or grid column, at which point the focus indicator will stay fixed on the first or last item in the list or grid column, and the items will scroll up or down if there are items that were not visible. Note that when this style is set, section dividers are not rendered.</td>
           </tr>
-
           <tr>
             <td>fixedFocusWrap</td>
             <td>Causes the column to wrap around when the focus indicator reaches the first or last item in the list or grid column, as long as the list or grid column contains enough items to fill the list or grid column. If the list or grid column does not contain enough items to fill the list or grid column, the focus indicator will float up and down.</td>
           </tr>
-
           <tr>
             <td>fixedFocus</td>
             <td>Causes the focus to stay fixed on the upper leftmost item. As the user scrolls down, the row containing the previously selected item scrolls up off screen. Scrolling continues until the last row is reached.</td>
@@ -770,7 +589,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
         Causes the focus to stay fixed on the upper leftmost item. As the user scrolls down, the row containing the previously selected item scrolls up off screen. Scrolling continues until the last row is reached.
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         Option
@@ -824,7 +642,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         floatingFocus
@@ -878,7 +695,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         fixedFocusWrap
@@ -932,7 +748,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         fixedFocus
@@ -986,7 +801,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         drawFocusFeedbackOnTop
@@ -1040,7 +854,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         drawFocusFeedback
@@ -1094,7 +907,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         fadeFocusFeedbackWhenAutoScrolling
@@ -1148,7 +960,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         itemcurrFocusFeedbackOpacity
@@ -1202,7 +1013,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         currFocusFeedbackOpacity
@@ -1256,7 +1066,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         focusBitmapUri
@@ -1310,7 +1119,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         focusFootprintBitmapUri
@@ -1364,7 +1172,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         focusBitmapBlendColor
@@ -1418,7 +1225,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         focusFootprintBlendColor
@@ -1472,7 +1278,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         skipFocusAnimations
@@ -1526,7 +1331,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         wrapDividerBitmapUri
@@ -1580,7 +1384,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         wrapDividerWidth
@@ -1634,7 +1437,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         wrapDividerHeight
@@ -1688,7 +1490,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         fixedLayout
@@ -1742,7 +1543,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         numRenderPasses
@@ -1796,7 +1596,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         rowHeights
@@ -1850,7 +1649,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         columnWidths
@@ -1904,7 +1702,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         rowSpacings
@@ -1958,7 +1755,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         columnSpacings
@@ -2012,7 +1808,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerBitmapUri
@@ -2066,7 +1861,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerFont
@@ -2120,7 +1914,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerTextColor
@@ -2174,7 +1967,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerSpacing
@@ -2228,7 +2020,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerWidth
@@ -2282,7 +2073,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerHeight
@@ -2336,7 +2126,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerMinWidth
@@ -2390,7 +2179,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         sectionDividerLeftOffset
@@ -2444,7 +2232,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         itemClippingRect
@@ -2498,7 +2285,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         itemSelected
@@ -2552,7 +2338,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         itemFocused
@@ -2606,7 +2391,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         itemUnfocused
@@ -2660,7 +2444,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         jumpToItem
@@ -2714,7 +2497,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         animateToItem
@@ -2768,7 +2550,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         currFocusRow
@@ -2822,7 +2603,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         currFocusColumn
@@ -2876,7 +2656,6 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         currFocusSection

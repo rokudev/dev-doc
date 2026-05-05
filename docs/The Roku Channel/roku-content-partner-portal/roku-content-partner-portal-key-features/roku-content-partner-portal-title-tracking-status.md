@@ -246,29 +246,24 @@ Each row represents a single title and its current status across territories.
       <th>
         Column
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         **Title**
       </td>
-
       <td>
         Displays the title name. Includes your **Title ID**, which can be copied on click. Use the Title ID for support, troubleshooting, and internal tracking.
       </td>
     </tr>
-
     <tr>
       <td>
         **Content type**
       </td>
-
       <td>
         Indicates the type of content. Each title has one type:
 
@@ -283,32 +278,26 @@ Each row represents a single title and its current status across territories.
         </Callout>
       </td>
     </tr>
-
     <tr>
       <td>
         **License types**
       </td>
-
       <td>
         A title may have one or more license types, including **Ad-supported**, **Linear O&O FAST**, and **Premium subscription**.
       </td>
     </tr>
-
     <tr>
       <td>
         **Services**
       </td>
-
       <td>
         A service represents how your content is distributed and monetized on The Roku Channel. Examples include **TRC AVOD**, **TRC O&O FAST**, or one of your own or participating Premium subscriptions such as **Howdy**. A single title may appear under multiple services depending on its rights.
       </td>
     </tr>
-
     <tr>
       <td>
         **Status**
       </td>
-
       <td>
         Displays the overall status of the title, such as:
 
@@ -345,32 +334,26 @@ Each row represents a single title and its current status across territories.
         </Callout>
       </td>
     </tr>
-
     <tr>
       <td>
         **Territories**
       </td>
-
       <td>
         Displays the countries where the title is available or targeted. Territories appear as country flags and codes, such as **US**, **CA**, and **MX**. A title may be available in multiple territories, and status may vary by territory.
       </td>
     </tr>
-
     <tr>
       <td>
         **Expected start date**
       </td>
-
       <td>
         Shows when the title is expected to become available. It reflects the next upcoming start date across all territories. If all start dates are in the past, it shows the most recent start date. Dates are based on your local timezone.
       </td>
     </tr>
-
     <tr>
       <td>
         **Expected end date**
       </td>
-
       <td>
         Shows when the title is expected to expire. It reflects the next upcoming expiration date. If all dates are in the past, it shows the most recent expiration date. Dates are based on your local timezone.
       </td>

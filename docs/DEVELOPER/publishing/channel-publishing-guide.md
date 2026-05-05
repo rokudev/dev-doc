@@ -135,39 +135,32 @@ Configure how your app is listed in the Streaming Store, including the app's hom
       <th>
         Field
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Countries
       </td>
-
       <td>
         Add or remove the countries where your app is distributed. Only add countries where you have the rights to distribute your app's content. The "Rest of World" Streaming Store includes regions not serviced by other Streaming Stores.
       </td>
     </tr>
-
     <tr>
       <td>
         Domestic region
       </td>
-
       <td>
         Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streming Stores that include your app and are outside your domestic region.
       </td>
     </tr>
-
     <tr>
       <td>
         Made for kids?
       </td>
-
       <td>
         If your app is made for kids you must select **Yes** and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.
 
@@ -178,22 +171,18 @@ Configure how your app is listed in the Streaming Store, including the app's hom
         Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the
       </td>
     </tr>
-
     <tr>
       <td>
         Category
       </td>
-
       <td>
         Select how your app is categorized in the Streaming Store. When customers search for apps in the selected category, your app will be included in the results.
       </td>
     </tr>
-
     <tr>
       <td>
         App age rating
       </td>
-
       <td>
         Specify the age rating that best describes your app. The selected rating is displayed on the app's details page in the on-device Streaming Store. This provides parents with information to help them determine whether your app is appropriate for their children.
       </td>
@@ -271,83 +260,65 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
       <th>
         App type
       </th>
-
       <th>
         Monetization option
       </th>
-
       <th>
         Notes
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Free
       </td>
-
       <td>
         I will not be monetizing my app.
       </td>
-
       <td>
         If you select this option, all other options are unavailable.
       </td>
     </tr>
-
     <tr>
       <td>
         Subscription Video on Demand (SVOD)
       </td>
-
       <td>
         My app offers subscriptions.
       </td>
-
       <td>
         The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
       </td>
     </tr>
-
     <tr>
       <td>
         Transactional Video on Demand (TVOD)
       </td>
-
       <td>
         My app offers one-time purchases (movie rentals/purchases, PPVs, sporting events, and other transactional content).
       </td>
-
       <td>
         The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
       </td>
     </tr>
-
     <tr>
       <td>
         TV Everywhere (TVE)
       </td>
-
       <td>
         My app requires a cable or satellite subscription to access content.
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         Ad-supported
       </td>
-
       <td>
         My app displays video ads.
       </td>
-
       <td>
         If you select this option, you must enter the URL path to an app-ads.txt file in the **Developer URL** field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [App Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The **Channel ID** and **Bundle ID** values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags `appstore:store_id` and `appstore:bundle_id` to provide channel ID information in the http header of an app's Streaming Store page. <br />
         Using the values from the illustration above as examples, the meta-tags would appear in the `<head>` section, as so:
@@ -374,16 +345,13 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
         ```
       </td>
     </tr>
-
     <tr>
       <td>
         Pay-to-install
       </td>
-
       <td>
         My app requires customers to pay to install it.
       </td>
-
       <td>
         If you’ve enrolled in the Roku Partner Payouts Program, select the cost to install your app from the **One-time payment price tier** drop-down list.<br /><br />Price tiers are used to enforce 99 cent or 49 cent pricing on app products.<br /><br />One to three-digit tier numbers are used for 99 cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).<br /><br />Four-digit tier numbers are used for 49 cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49 and so on. The highest tier is 1030 ($30.49).<br /><br /><img alt="channel-builder-2-monetization-pay-to-install - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-pay-to-install.png" />
       </td>
@@ -472,29 +440,24 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
       <th>
         Column
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Message
       </td>
-
       <td>
         A description of the issue related to the app.
       </td>
     </tr>
-
     <tr>
       <td>
         Severity
       </td>
-
       <td>
         The type of message: error, warning, or info.
 
@@ -503,22 +466,18 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
         * **Info**: Info messages provide tips that may be helpful in the development of the app.
       </td>
     </tr>
-
     <tr>
       <td>
         Category
       </td>
-
       <td>
         The type of issue (for example, package, performance, billing, manifest, and so on).
       </td>
     </tr>
-
     <tr>
       <td>
         Certification Requirement
       </td>
-
       <td>
         Provides a link to any related certification requirements in the [Certification Criteria](doc:certification) document.
       </td>
@@ -593,69 +552,56 @@ To run App Behavior Analysis testing on your app, follow these steps:
       <th>
         Column
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Test title
       </td>
-
       <td>
         The name of the test being executed ("Channel Launch Performance", "Channel Deep Linking Basic", "Channel Content Play Performance").
       </td>
     </tr>
-
     <tr>
       <td>
         Status
       </td>
-
       <td>
         The results of the test. Completed tests have a status of "Passed" or "Failed"; tests still to be performed have a status of "Queued".
       </td>
     </tr>
-
     <tr>
       <td>
         Severity
       </td>
-
       <td>
         Any info messages, warnings, or errors related to a completed test.
       </td>
     </tr>
-
     <tr>
       <td>
         Category
       </td>
-
       <td>
         The type of test being performed: "Performance" or "Deep Linking".
       </td>
     </tr>
-
     <tr>
       <td>
         Certification requirements
       </td>
-
       <td>
         Provides a link to the section in the [Certification Criteria](doc:certification) document, where the criterion in question is located.
       </td>
     </tr>
-
     <tr>
       <td>
         Actions
       </td>
-
       <td>
         Displays information, script, and screenshot icons that you can click to learn more about the test:
 

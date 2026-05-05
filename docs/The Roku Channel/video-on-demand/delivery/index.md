@@ -177,7 +177,6 @@ _**UHD is supported as an input resolution only. Roku does not currently encode 
       <th>Bitrate</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Apple® ProRes</td>
@@ -185,25 +184,18 @@ _**UHD is supported as an input resolution only. Roku does not currently encode 
       <td>.mov</td>
       <td>50 Mbps or greater</td>
     </tr>
-
     <tr>
       <td>XDCam</td>
-
       <td />
-
       <td>.mxf</td>
       <td>50 Mbps or greater</td>
     </tr>
-
     <tr>
       <td>MPEG-2</td>
-
       <td />
-
       <td>.ts.mpg</td>
       <td>HD = 15Mbps or greaterSD = 3.75Mbps or greater</td>
     </tr>
-
     <tr>
       <td>MPEG-4</td>
       <td>H.264</td>
@@ -417,7 +409,6 @@ Roku supports three image types for each piece of content. Each image type will 
       <th>Aspect Ratio</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
@@ -427,7 +418,6 @@ Roku supports three image types for each piece of content. Each image type will 
       <td>1920x1080</td>
       <td>16:9</td>
     </tr>
-
     <tr>
       <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
       <td>.jpg<br />.jpeg<br />.png</td>
@@ -436,7 +426,6 @@ Roku supports three image types for each piece of content. Each image type will 
       <td>1920x1080</td>
       <td>16:9</td>
     </tr>
-
     <tr>
       <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
       <td>.jpg<br />.jpeg<br />.png</td>
@@ -470,52 +459,41 @@ Roku supports three image types for each piece of content. Each image type will 
   <thead>
     <tr>
       <th><strong><em>Series Content Type</em></strong></th>
-
       <th />
-
       <th />
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><strong>Art</strong></td>
       <td><strong>Required/Preferred</strong></td>
       <td><strong>Notes</strong></td>
     </tr>
-
     <tr>
       <td>16:9 Key Art</td>
       <td>Required</td>
       <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
     </tr>
-
     <tr>
       <td>2:3 Box Cover</td>
       <td>Preferred</td>
       <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
     </tr>
-
     <tr>
       <td>16:9 Background</td>
       <td>Preferred</td>
       <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
     </tr>
-
     <tr>
       <td><strong><em>Episode Content Type</em></strong></td>
-
       <td />
-
       <td />
     </tr>
-
     <tr>
       <td><strong>Art</strong></td>
       <td><strong>Required/Preferred</strong></td>
       <td><strong>Notes</strong></td>
     </tr>
-
     <tr>
       <td>16:9 Background</td>
       <td>Required</td>
@@ -668,7 +646,6 @@ Source video, closed captions, and artwork files delivered for ingest must adher
       <th>Character sets</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><ul><li>0-9</li><li>a-z</li><li>A-Z</li></ul><p><em>Correct file delivery location, proper file delivery cadence, and proper file naming is the responsibility of our Partners as the Partner is the expert in their own content and we do not always have insight into individual Partner delivery schedules.</em></p></td>
@@ -695,7 +672,6 @@ Source video, closed captions, and artwork files delivered for ingest must adher
       <th>Character</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>"At" symbol</td>
@@ -703,87 +679,74 @@ Source video, closed captions, and artwork files delivered for ingest must adher
       <td>Left square bracket</td>
       <td>\[</td>
     </tr>
-
     <tr>
       <td>Ampersand</td>
       <td>&</td>
       <td>Less than</td>
       <td>\<</td>
     </tr>
-
     <tr>
       <td>Asterisk</td>
       <td>\*</td>
       <td>Percent</td>
       <td>%</td>
     </tr>
-
     <tr>
       <td>Backslash</td>
       <td>\\</td>
       <td>Plus</td>
       <td>+</td>
     </tr>
-
     <tr>
       <td>Caret</td>
       <td>^</td>
       <td>Pound/hashtag</td>
       <td>#</td>
     </tr>
-
     <tr>
       <td>Colon</td>
       <td>:</td>
       <td>Question mark</td>
       <td>?</td>
     </tr>
-
     <tr>
       <td>Comma</td>
       <td>,</td>
       <td>Quotation marks/double quote</td>
       <td>"</td>
     </tr>
-
     <tr>
       <td>Dollar</td>
       <td>$</td>
       <td>Right curly brace</td>
       <td>}</td>
     </tr>
-
     <tr>
       <td>Equals</td>
       <td>=</td>
       <td>Right square bracket</td>
       <td>]</td>
     </tr>
-
     <tr>
       <td>Forward slash</td>
       <td>/</td>
       <td>Semicolon</td>
       <td>;</td>
     </tr>
-
     <tr>
       <td>Grave accent</td>
       <td>\`</td>
       <td>Space</td>
-
       <td>
         <code />
       </td>
     </tr>
-
     <tr>
       <td>Greater than</td>
       <td>></td>
       <td>Tilde</td>
       <td>\~</td>
     </tr>
-
     <tr>
       <td>Left curly brace</td>
       <td>\{</td>
@@ -941,7 +904,6 @@ Roku utilizes a transform engine that can “normalize” different metadata for
       <th>TV Requirements</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><ul><li>provider</li><li>content type</li><li>asset\_id</li><li>title</li><li>release\_date</li><li>runtime</li><li>genres</li><li>rating</li><li>rating system</li><li>short\_synopsis</li><li>video file\_name</li><li>captions file\_name (if captions are required)</li><li>key art file\_name</li></ul></td>
@@ -1039,7 +1001,6 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
       <th>Package Version</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>XML (preferred)</td>
@@ -1047,12 +1008,10 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
       <td>UTF-8</td>
       <td>clip1.0<br />film5.0<br />tv1.0<br />Cablelabs ADI 1.1<br /><br /><strong><em>Additional XML schemas supported on a case-by-case basis</em></strong></td>
     </tr>
-
     <tr>
       <td>Excel</td>
       <td>.xlsx</td>
       <td>See below for <a href="#roku-excel-metadata-guildelines">Roku Excel Metadata Templates</a> and <a href="#roku-excel-metadata-guidelines-and-templates">Excel Metadata Guidelines</a></td>
-
       <td />
     </tr>
   </tbody>

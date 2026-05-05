@@ -38,123 +38,99 @@ To run a Transaction Report, follow these steps:
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>event\_date</td>
       <td>The date of the transaction (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format; timestamps are in UTC).</td>
     </tr>
-
     <tr>
       <td>invoice\_number</td>
       <td>The Roku-generated unique ID for the transaction. This invoice number is included in purchase confirmation emails sent to customers. It can be used as a lookup key for customer queries or requests.</td>
     </tr>
-
     <tr>
       <td>transaction\_type</td>
       <td>The type of transaction, which may be one of the following values: <table><thead><tr><th>Type</th><th>Meaning</th></tr></thead><tbody><tr><td>Purchase</td><td>A successful purchase transaction (historically used to indicate purchases under Roku Standard Billing: RSB). Such transactions include 1) one-time purchases. and 2) initial and recurring subscription charges.</td></tr><tr><td>Cancellation</td><td>Either an end user actively canceled a subscription or Roku is unable to successfully capture the end user's subscription event.</td></tr><tr><td>Renewal</td><td>An end user, who actively cancelled a subscription, successfully signed up again before the previously scheduled expiration of the subscription.</td></tr><tr><td>DowngradeCancel</td><td>A successful downgrade transaction's cancellation of the outgoing (base) subscription.</td></tr><tr><td>DowngradeSale</td><td>A successful downgrade transaction's sale of a new (downgraded) subscription, to replace the outgoing (base) plan.</td></tr><tr><td>UpgradeCancel</td><td>A successful upgrade transaction's cancellation of the outgoing (base) subscription.</td></tr><tr><td>UpgradeSale</td><td>A successful upgrade transaction's sale of a new (upgraded) subscription, replacing the outgoing (base) subscription.</td></tr><tr><td>CancellationOfferInitiated</td><td>An offer was successfully sent to a customer trying to cancel their subscription.</td></tr><tr><td>Charge</td><td>A successful purchase transaction (historically used to indicate purchases under Roku as Payment Method: RPM).</td></tr><tr><td>Refund</td><td>A successful refund transaction (historically used to indicate refunds under Roku as Payment Method: RPM).</td></tr><tr><td>Reversal</td><td>A successful refund transaction (historically used to indicate refunds under Roku Standard Billing: RSB).</td></tr><tr><td>GraceInitiated</td><td>Payment for a subscription auto-renewal fails. Customer may still access content while Roku attempts to charge the MOP.</td></tr><tr><td>GraceRecovered</td><td>Payment is received for a subscription that was in a grace period. Customer maintains access to content and the billing period remains the same.</td></tr><tr><td>OnHoldInitiated</td><td>Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.</td></tr><tr><td>Chargeback</td><td>The customer has initiated a transaction dispute. <br /><br />For apps in the Germany Streaming Store only, a SEPA chargeback may occur when the customer disputes a transaction made through Roku Pay that results in a chargeback or their bank account has insufficient funds.</td></tr><tr><td>ChargebackReversed</td><td>Roku successfully reversed the chargeback claim.</td></tr><tr><td>SecondChargeback</td><td>The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback).</td></tr></tbody></table></td>
     </tr>
-
     <tr>
       <td>developer\_transaction\_id</td>
       <td>The partner-specific unique ID for the transaction.</td>
     </tr>
-
     <tr>
       <td>user\_transaction\_id</td>
       <td>The user-based ID for the transaction. If this transaction is a purchase, it will be the same as the <strong>original\_transaction\_id</strong>. If this transaction is a renewal, it will be different.</td>
     </tr>
-
     <tr>
       <td>user\_id</td>
       <td>The unique ID of the customer.</td>
     </tr>
-
     <tr>
       <td>zip\_code</td>
       <td>The zip code of the customer.</td>
     </tr>
-
     <tr>
       <td>channel\_name</td>
       <td>The name of the app.</td>
     </tr>
-
     <tr>
       <td>product\_code</td>
       <td>The product identifier as entered on the Developer Dashboard when the product was created.</td>
     </tr>
-
     <tr>
       <td>product\_name</td>
       <td>The name of the product as entered on the Developer Dashboard when the product was created.</td>
     </tr>
-
     <tr>
       <td>quantity</td>
       <td>The number of items purchased.</td>
     </tr>
-
     <tr>
       <td>amount</td>
       <td>The localized dollar amount of the purchase.<br /><br />If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction.<br /><br />All cancellation and downgrade transaction types should have a $0 amount.</td>
     </tr>
-
     <tr>
       <td>service\_credits</td>
       <td>Amount $0 is expected for all cancellation & downgrade transaction typesAny credits applied to the transaction. If the <strong>transaction\_type</strong> is UpgradeSale, this field will contain the prorated amount of the current subscription that is still unused.</td>
     </tr>
-
     <tr>
       <td>net\_amount</td>
       <td>Localized total of the item purchased (including tax if applicable) with local currency symbol, after subtracting <strong>service\_credits</strong>.<br /><br />If the amount is $0 and the transaction type is “Purchase”, the transaction is for a free trial or is a test transaction.<br /><br />All cancellation and downgrade transaction types should have a $0 amount.</td>
     </tr>
-
     <tr>
       <td>currency</td>
       <td>The currency used for the transaction: USD, CAD, EUR, or GBP.</td>
     </tr>
-
     <tr>
       <td>expiration\_date</td>
       <td>The subscription end date (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format).</td>
     </tr>
-
     <tr>
       <td>original\_transaction\_id</td>
       <td>The ID of the original subscription purchase.</td>
     </tr>
-
     <tr>
       <td>original\_purchase\_date</td>
       <td>The date of the original subscription purchase (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format).</td>
     </tr>
-
     <tr>
       <td>partner\_reference\_id</td>
       <td>The partner-specific internal ID for an in-app product.</td>
     </tr>
-
     <tr>
       <td>refund\_description</td>
       <td>Roku-specified explanation for refund transactions.</td>
     </tr>
-
     <tr>
       <td>comments</td>
       <td>Any Roku-entered comments for the transaction.</td>
     </tr>
-
     <tr>
       <td>channel\_store\_code</td>
       <td>The <a href="https://www.iso.org/obp/ui/#search">ISO Alpha-2 two-letter country code</a> of the Streaming Store associated with the app from which the purchase was made.</td>
     </tr>
-
     <tr>
       <td>purchase\_channel</td>
       <td>Where the Roku Pay subscription purchase was made: <ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through [Instant Signup](doc:instant-signup) during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
     </tr>
-
     <tr>
       <td>purchase\_context</td>
       <td>How the subscription purchase was made: <ul><li><strong>isu</strong>. Subscription was purchased via [Instant Signup](doc:instant-signup).</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>

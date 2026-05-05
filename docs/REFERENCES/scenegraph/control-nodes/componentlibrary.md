@@ -60,83 +60,54 @@ Component libraries do not need to be packaged or signed with the same devid as 
       <th>
         Field
       </th>
-
       <th>
         Type
       </th>
-
       <th>
         Default
       </th>
-
       <th>
         Access Permission
       </th>
-
       <th>
         Description
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
-
       <th>
-
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         loadStatus
       </td>
-
       <td>
         value string
       </td>
-
       <td>
         "none"
       </td>
-
       <td>
         READ_ONLY
       </td>
-
       <td>
         Indicates the progress of the library download. The possible values are:
 
@@ -145,22 +116,18 @@ Component libraries do not need to be packaged or signed with the same devid as 
             <td>Value</td>
             <td>Meaning</td>
           </tr>
-
           <tr>
             <td>none</td>
             <td>The default if the library is not being downloaded</td>
           </tr>
-
           <tr>
             <td>loading</td>
             <td>Library is downloading</td>
           </tr>
-
           <tr>
             <td>ready</td>
             <td>Library has downloaded successfully</td>
           </tr>
-
           <tr>
             <td>failed</td>
             <td>Download of the library has failed</td>
@@ -208,7 +175,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
         Download of the library has failed
       </td>
     </tr>
-
     <tr>
       <td>
         Value
@@ -270,7 +236,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       </td>
     </tr>
-
     <tr>
       <td>
         none
@@ -332,7 +297,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       </td>
     </tr>
-
     <tr>
       <td>
         loading
@@ -394,7 +358,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       </td>
     </tr>
-
     <tr>
       <td>
         ready
@@ -456,7 +419,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       </td>
     </tr>
-
     <tr>
       <td>
         failed
@@ -518,7 +480,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       </td>
     </tr>
-
     <tr>
       <td>
         id
@@ -580,7 +541,6 @@ Component libraries do not need to be packaged or signed with the same devid as 
 
       </td>
     </tr>
-
     <tr>
       <td>
         uri

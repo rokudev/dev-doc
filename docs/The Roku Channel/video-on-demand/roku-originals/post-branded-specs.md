@@ -169,14 +169,12 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
   <thead>
     <tr>
       <th />
-
       <th>VIOLENCE</th>
       <th>SEX/NUDITY</th>
       <th>SUBSTANCE USE/ABUSE</th>
       <th>LANGUAGE</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><strong>TV-PG</strong></td>
@@ -185,7 +183,6 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
       <td><strong>✔</strong>  Implied drug use (not glorified or must show consequences)</td>
       <td><strong>✔</strong>  Limited use of bleeping/dropping strong language. Ass, damn, hell, and bitch</td>
     </tr>
-
     <tr>
       <td><strong>TV-14</strong></td>
       <td><strong>✔</strong>  Brief violence, OK with some blood shown<br /><strong>✕</strong> No gore</td>
@@ -193,7 +190,6 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
       <td><strong>✔</strong>  Visuals/use of drug abuse (not glorified, must show consequences)<br /><strong>✖</strong> No smoking minors</td>
       <td><strong>✔</strong>  Shit, asshole, bastard (when used in a pejorative matter), goddamn, bitch, dick and pussy (as an insult)</td>
     </tr>
-
     <tr>
       <td><strong>TV-MA</strong></td>
       <td><strong>✔</strong>  On-screen graphic violence, gore</td>
@@ -529,83 +525,67 @@ Mixing Specifications:
       <th><strong>ProRes</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Container</td>
       <td>MOV</td>
     </tr>
-
     <tr>
       <td>Profile</td>
       <td>422 HQ</td>
     </tr>
-
     <tr>
       <td>Minimum Bitrate</td>
       <td>175 mbits or higher</td>
     </tr>
-
     <tr>
       <td>Landscape aspect ratio</td>
       <td>16:9 (1.77:1) - (no black bars)<br />W1920 x H1080 (HD)</td>
     </tr>
-
     <tr>
       <td>Pixel aspect ratio</td>
       <td>Square pixels (1:1)</td>
     </tr>
-
     <tr>
       <td>Scan type</td>
       <td>Progressive scan type</td>
     </tr>
-
     <tr>
       <td>Chroma Subsampling</td>
       <td>4:2:2</td>
     </tr>
-
     <tr>
       <td>Color Space</td>
       <td>BT.709 Legal Video Range (16 to 940)</td>
     </tr>
-
     <tr>
       <td>Bit depth</td>
       <td>10-bit or 12-bit</td>
     </tr>
-
     <tr>
       <td>Constant Frame Rate</td>
       <td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
     </tr>
-
     <tr>
       <td>Native frame rate</td>
       <td>No 3:2 pulldown flags</td>
     </tr>
-
     <tr>
       <td><strong>Audio Codec</strong></td>
       <td><strong>PCM</strong></td>
     </tr>
-
     <tr>
       <td>Format</td>
       <td>Stereo</td>
     </tr>
-
     <tr>
       <td>Track Layout</td>
       <td><u>Interleaved</u>:   Track 1: Stereo, LT/RT</td>
     </tr>
-
     <tr>
       <td>Sample Rate</td>
       <td>48000Hz</td>
     </tr>
-
     <tr>
       <td>Bit Depth</td>
       <td>24-bit</td>
@@ -647,58 +627,47 @@ From each Texted Master created, please export the following proxy files:
       <th><strong>H.264</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Container</td>
       <td>MOV or MP4</td>
     </tr>
-
     <tr>
       <td>Picture</td>
       <td>(1) Clean & (1) w/ visible timecode</td>
     </tr>
-
     <tr>
       <td>Bitrate</td>
       <td>5mbit/s (total file size \< 1gb)</td>
     </tr>
-
     <tr>
       <td>Dimensions</td>
       <td>W1920 x H1080 (HD)</td>
     </tr>
-
     <tr>
       <td>Scan Type</td>
       <td>Progressive scan type</td>
     </tr>
-
     <tr>
       <td>Color Space</td>
       <td>BT.709 Legal Video Range</td>
     </tr>
-
     <tr>
       <td>Bit Depth</td>
       <td>10-bit or 12-bit</td>
     </tr>
-
     <tr>
       <td>Constant Frame  Rate</td>
       <td>Should Match Master</td>
     </tr>
-
     <tr>
       <td>Native Frame Rate</td>
       <td>Should Match Master</td>
     </tr>
-
     <tr>
       <td>Audio</td>
       <td>Ch.1 Stereo Left, Ch.2 Stereo Right</td>
     </tr>
-
     <tr>
       <td>Filename</td>
       <td>Brand\_ShowName\_AirOrder\_PROXY\_TextVersion\_Resolution\_ColorSpace\_FN\_Audio\_FrameRate\_Date-v#.mov.<br />Ex: Nike\_ShowName\_101\_Proxy\_TXTD\_HD\_SDR\_ Stereo\_23976p\_20240701-v2.mov</td>

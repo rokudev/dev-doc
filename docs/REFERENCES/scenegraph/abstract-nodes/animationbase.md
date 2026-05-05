@@ -24,187 +24,116 @@ AnimationBase is an abstract node class that contains the fields common to the [
       <th style={{ textAlign: "left" }}>
         Field
       </th>
-
       <th style={{ textAlign: "left" }}>
         Type
       </th>
-
       <th style={{ textAlign: "left" }}>
         Default
       </th>
-
       <th style={{ textAlign: "left" }}>
         Access Permission
       </th>
-
       <th style={{ textAlign: "left" }}>
         Description
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
-
       <th style={{ textAlign: "left" }}>
-
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td style={{ textAlign: "left" }}>
         control
       </td>
-
       <td style={{ textAlign: "left" }}>
         option string
       </td>
-
       <td style={{ textAlign: "left" }}>
         none
       </td>
-
       <td style={{ textAlign: "left" }}>
         READ_WRITE
       </td>
-
       <td style={{ textAlign: "left" }}>
         <table>
           <tr>
             <td>Option</td>
             <td>Effect</td>
           </tr>
-
           <tr>
             <td>none</td>
             <td>Initial state with no associated action</td>
           </tr>
-
           <tr>
             <td>start</td>
             <td>Always plays the animation from the beginning</td>
           </tr>
-
           <tr>
             <td>stop</td>
             <td>Stops the animation in its current state</td>
           </tr>
-
           <tr>
             <td>pause</td>
             <td>Pauses the animation in its current state</td>
           </tr>
-
           <tr>
             <td>resume</td>
             <td>If paused, resumes the animation from its current state. If the animation is not paused, plays the animation from the beginning.</td>
           </tr>
-
           <tr>
             <td>finish</td>
             <td>Jumps to the end of the animation, then stops. All animated fields will be immediately set to their final values as if the animation had completed.</td>
@@ -324,7 +253,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
         Jumps to the end of the animation, then stops. All animated fields will be immediately set to their final values as if the animation had completed.
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         Option
@@ -458,7 +386,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         none
@@ -592,7 +519,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         start
@@ -726,7 +652,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         stop
@@ -860,7 +785,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         pause
@@ -994,7 +918,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         resume
@@ -1128,7 +1051,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         finish
@@ -1262,7 +1184,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         Option
@@ -1396,7 +1317,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         none
@@ -1530,7 +1450,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         start
@@ -1664,7 +1583,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         stop
@@ -1798,7 +1716,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         pause
@@ -1932,7 +1849,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         resume
@@ -2066,7 +1982,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         finish
@@ -2200,7 +2115,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         state
@@ -2224,17 +2138,14 @@ AnimationBase is an abstract node class that contains the fields common to the [
             <td>Value</td>
             <td>Meaning</td>
           </tr>
-
           <tr>
             <td>running</td>
             <td>Indicates that the animation is in progress</td>
           </tr>
-
           <tr>
             <td>paused</td>
             <td>Indicates that the animation has been paused</td>
           </tr>
-
           <tr>
             <td>stopped</td>
             <td>Indicates that the animation has either run to completion or has been explicitly stopped</td>
@@ -2354,7 +2265,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         Value
@@ -2488,7 +2398,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         running
@@ -2622,7 +2531,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         paused
@@ -2756,7 +2664,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         stopped
@@ -2890,7 +2797,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         Value
@@ -3024,7 +2930,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         running
@@ -3158,7 +3063,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         paused
@@ -3292,7 +3196,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         stopped
@@ -3426,7 +3329,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         repeat
@@ -3560,7 +3462,6 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
       </td>
     </tr>
-
     <tr>
       <td style={{ textAlign: "left" }}>
         delay

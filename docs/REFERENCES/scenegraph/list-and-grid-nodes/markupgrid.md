@@ -62,18 +62,14 @@ There are three general categories of layouts:
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>itemComponentName</td>
       <td>string</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the name of a XML component for the grid items. An instance of this component is created on demand for each visible item of the grid. The XML component must define a specific interface as detailed in <a href="#markupgrid-xml-component">MarkupGrid XML component</a> below.</td>
     </tr>
-
     <tr>
       <td>content</td>
       <td>ContentNode</td>
@@ -81,7 +77,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the content for the list. See <a href="#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
     </tr>
-
     <tr>
       <td>itemSize</td>
       <td>vector2d</td>
@@ -89,7 +84,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the width and height of the default size for the grid items.</td>
     </tr>
-
     <tr>
       <td>numColumns</td>
       <td>integer</td>
@@ -97,7 +91,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the number of columns in the grid</td>
     </tr>
-
     <tr>
       <td>numRows</td>
       <td>integer</td>
@@ -105,7 +98,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the number of visible rows displayed. The actual number of rows may be more or less than the number of visible rows specified depending on the number of items in the list content.</td>
     </tr>
-
     <tr>
       <td>rowHeights</td>
       <td>array of floats</td>
@@ -113,7 +105,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>When specified, the rowHeights field specifies the heights of the poster for each row of the grid. This allows the height of each row of the grid to vary from row to row.<br /><br />The rowHeights values override the height specified in element 1 of the basePosterSize field. If the rowHeights array contains fewer elements than the number of rows needed to display all the items in the grid, element 1 of the basePosterSize field is used as the height of the excess rows.</td>
     </tr>
-
     <tr>
       <td>columnWidths</td>
       <td>array of floats</td>
@@ -121,7 +112,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>When specified, the columnWidths field specifies the widths of the poster for each column of the grid. This allows the width of each column of the grid to vary from column to column.<br /><br />The columnWidths values override the width specified in element 0 of the basePosterSize field. If the columnWidths array contains fewer elements than the number of columns specified by the numColumns field, element 0 of the basePosterSize field is used as the width of the excess columns.</td>
     </tr>
-
     <tr>
       <td>rowSpacings</td>
       <td>array of floats</td>
@@ -129,7 +119,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>When specified, the rowSpacings field specifies the spacing after each row of the grid. This allows the spacing between rows to vary from row to row.<br /><br />The rowSpacings values override the vertical spacing specified in element 1 of the itemSpacing field. If the rowSpacings array contains fewer elements than the number of rows needed to display all the items in the grid, element 1 of the itemSpacing field is used as the spacing after the excess rows.</td>
     </tr>
-
     <tr>
       <td>columnSpacings</td>
       <td>array of floats</td>
@@ -137,7 +126,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>When specified, the columnSpacings field specifies the spacing after each column of the grid. This allows the spacing between columns to vary from column to column.<br /><br />The columnSpacings values override the horizontal spacing specified in element 0 of the itemSpacing field. If the columnSpacings array contains fewer elements than the number of columns specified by the numColumns field, element 0 of the itemSpacing field is used as the spacing after the excess columns.</td>
     </tr>
-
     <tr>
       <td>fixedLayout</td>
       <td>Boolean</td>
@@ -145,17 +133,13 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>When fixedLayout is false, the MarkupGrid assigns each item in the data model to sequential cells in the grid (or the section if the data model includes section information).<br /><br />When fixedLayout is true, the data models using the X, Y, W and H attributes to specify which cells of the grid each item should occupy, where X is the column number, Y is the row number, W is the number of columns the item occupies and H is the number of rows the item occupies.<br /><br />Fixed layout should only be set to true for cases where one or more items in the grid should span multiple rows or columns.</td>
     </tr>
-
     <tr>
       <td>imageWellBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the bitmap file to use to suggest where images would appear for empty grids and empty sections of grids. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
     </tr>
-
     <tr>
       <td>drawFocusFeedback</td>
       <td>Boolean</td>
@@ -163,7 +147,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies whether or not the focus indicator bitmap is displayed</td>
     </tr>
-
     <tr>
       <td>drawFocusFeedbackOnTop</td>
       <td>Boolean</td>
@@ -171,27 +154,20 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies whether the focus indicator bitmap is drawn below or on top of the list items</td>
     </tr>
-
     <tr>
       <td>focusBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the bitmap file used for the focus indicator when the list has focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
     </tr>
-
     <tr>
       <td>focusFootprintBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the bitmap file used for the focus indicator when the list does not have focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
     </tr>
-
     <tr>
       <td>focusBitmapBlendColor</td>
       <td>color</td>
@@ -199,7 +175,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Blend the graphic image specified by <code>focusBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus indicator graphic image with a different color than the image specified by <code>focusBitmapUri.</code></td>
     </tr>
-
     <tr>
       <td>focusFootprintBlendColor</td>
       <td>color</td>
@@ -207,17 +182,13 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Blend the graphic image specified by <code>focusFootprintBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus footprint indicator graphic image with a different color than the image specified by <code>focusFootprintBitmapUri</code>.</td>
     </tr>
-
     <tr>
       <td>wrapDividerBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the bitmap file to use as a wrap divider, the visual separator between the last and first list items when the list wraps. In most cases, this should be a 9-patch image that specifies both expandable regions. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
     </tr>
-
     <tr>
       <td>wrapDividerHeight</td>
       <td>float</td>
@@ -225,17 +196,13 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the height of the wrap divider, the visual separator between the last and first list items when the list wraps. The bitmap for the wrap divider is scaled to this height. The width of the wrap divider is set to the width of the list items as specified by the <code>itemSize</code> field width value.</td>
     </tr>
-
     <tr>
       <td>sectionDividerBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>If the ContentNode specifies sections for a list or grid, specifies a custom bitmap to use as a visual divider between the sections of the list or grid. Only set this field to use a bitmap with a different appearance than the system default. For sections that do not include an icon or a title, the system default or custom bitmap specified as the <code>wrapDividerBitmapUri</code> field value is used for the section dividers. In most cases, you will want to use a 9-patch PNG bitmap with both expandable regions, which is the type of bitmap used as the system default.</td>
     </tr>
-
     <tr>
       <td>sectionDividerFont</td>
       <td>font</td>
@@ -243,7 +210,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the font for section divider labels</td>
     </tr>
-
     <tr>
       <td>sectionDividerTextColor</td>
       <td>color</td>
@@ -251,7 +217,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the text color for section divider labels</td>
     </tr>
-
     <tr>
       <td>sectionDividerSpacing</td>
       <td>float</td>
@@ -259,7 +224,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the spacing between the items appearing in the section divider (e.g. the spacing between the section divider icon, the section divider label, and the section divider bitmap). Note the section divider does not always include an icon and/or a title.</td>
     </tr>
-
     <tr>
       <td>sectionDividerHeight</td>
       <td>float</td>
@@ -267,7 +231,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the height of the section dividers. The width of the section dividers is determined by the width of the list items as specified by the itemSize field width value.</td>
     </tr>
-
     <tr>
       <td>sectionDividerMinWidth</td>
       <td>float</td>
@@ -275,7 +238,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Specifies the minimum width of the section divider bitmap. The section divider label will be ellipsized if necessary in order to ensure that the section divider bitmap meets the minimum width.</td>
     </tr>
-
     <tr>
       <td>sectionDividerLeftOffset</td>
       <td>float</td>
@@ -283,7 +245,6 @@ There are three general categories of layouts:
       <td>READ\_WRITE</td>
       <td>Number of pixels to offset the left edge of the section divider relative to the left edge of the list items.</td>
     </tr>
-
     <tr>
       <td>itemSelected</td>
       <td>integer</td>
@@ -291,7 +252,6 @@ There are three general categories of layouts:
       <td>READ\_ONLY</td>
       <td>When a list item is selected, itemSelected is set to the index of the selected item.</td>
     </tr>
-
     <tr>
       <td>itemFocused</td>
       <td>integer</td>
@@ -299,7 +259,6 @@ There are three general categories of layouts:
       <td>READ\_ONLY</td>
       <td>When a list item gains the key focus, set to the index of the focused item.</td>
     </tr>
-
     <tr>
       <td>itemUnfocused</td>
       <td>integer</td>
@@ -307,7 +266,6 @@ There are three general categories of layouts:
       <td>READ\_ONLY</td>
       <td>When a list item loses the key focus, set to the index of the unfocused item.</td>
     </tr>
-
     <tr>
       <td>jumpToItem</td>
       <td>integer</td>
@@ -315,7 +273,6 @@ There are three general categories of layouts:
       <td>WRITE\_ONLY</td>
       <td>When set to a valid item index, this causes the list to immediately update so that the specified index moves into the focus position.</td>
     </tr>
-
     <tr>
       <td>animateToItem</td>
       <td>integer</td>
@@ -342,44 +299,37 @@ Note that the fields are updated in the order presented in the table below. Any 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>width</td>
       <td>float</td>
       <td><strong>Read-Only</strong><br />Set to the width of the grid item.</td>
     </tr>
-
     <tr>
       <td>height</td>
       <td>float</td>
       <td><strong>Read-Only</strong><br />Set to the height of the grid item</td>
     </tr>
-
     <tr>
       <td>index</td>
       <td>integer</td>
       <td><strong>Read-Only</strong><br />Set to the index of this item in the data model.</td>
     </tr>
-
     <tr>
       <td>gridHasFocus</td>
       <td>Boolean</td>
       <td><strong>Read-Only</strong><br />Set to true if the MarkupGrid node has focus, false otherwise.</td>
     </tr>
-
     <tr>
       <td>itemContent</td>
       <td>ContentNode</td>
       <td>Contains the data to be displayed by the grid item. The relationship between data in the ContentNode and the visual elements of the grid item is determined by the scripts in the item XML component. Typically, an observer callback function of the <code>itemContent</code> field is used to update the grid item when the content changes.</td>
     </tr>
-
     <tr>
       <td>focusPercent</td>
       <td>float</td>
       <td><strong>Read-Only</strong><br />The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from one item to the next. The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused item, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused item. This value can be used as a timing key to smoothly animate the appearance of the focused item as well as the previously-focused item, to indicate the movement of focus to the user.</td>
     </tr>
-
     <tr>
       <td>itemHasFocus</td>
       <td>Boolean</td>
@@ -492,50 +442,42 @@ The section root ContentNodes use the following attributes:
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><code>CONTENTTYPE</code></td>
       <td>string</td>
       <td>Must be set to <code>SECTION</code></td>
     </tr>
-
     <tr>
       <td><code>TITLE</code></td>
       <td>string</td>
       <td>Label for the section divider</td>
     </tr>
-
     <tr>
       <td><code>HDGRIDPOSTERURL</code></td>
       <td>uri</td>
       <td>The image file for the icon to be displayed to the left of the section label when the screen resolution is set to HD.</td>
     </tr>
-
     <tr>
       <td><code>SDGRIDPOSTERURL</code></td>
       <td>uri</td>
       <td>The image file for the icon to be displayed to the left of the section label when the screen resolution is set to SD.</td>
     </tr>
-
     <tr>
       <td><code>X</code></td>
       <td>integer</td>
       <td>When the fixedLayout field is set to true, this specifies the first row of the grid occupied by this item, where 0 refers to the first row. Note that there can be more rows in the data than visible rows, where the number of visible rows is specified by the numRows field.<br /><br />For example, if the data model contains enough data to fill 12 rows, X would be set to a value from 0 to 11.</td>
     </tr>
-
     <tr>
       <td><code>Y</code></td>
       <td>integer</td>
       <td>When the fixedLayout field is set to true, this specifies the first column of the grid occupied by this item, where 0 refers to the first column. Note that the number of columns is always specified by the numColumns field, regardless of how many items are in the data model.<br /><br />For example, if the numColumns field is set to 3, Y would be set to 0, 1 or 2.</td>
     </tr>
-
     <tr>
       <td><code>W</code></td>
       <td>integer</td>
       <td>When the fixedLayout field is set to true, this specifies how many columns the grid item occupies. If not specified, the default value of 1 is used.<br /><br />For example, if the numColumns field were set to 3 and a grid item is to occupy the rightmost two columns, X would be set to 1 and W would be set to 2.</td>
     </tr>
-
     <tr>
       <td><code>H</code></td>
       <td>integer</td>

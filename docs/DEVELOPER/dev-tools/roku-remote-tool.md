@@ -98,7 +98,6 @@ Begin by specifying your app information in the `params` section. You must use *
       <th>Example (in <code>params</code> section)</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><code>rasp\_version</code></td>
@@ -106,20 +105,16 @@ Begin by specifying your app information in the `params` section. You must use *
       <td>Define the scripting version; default is inserted for you.</td>
       <td><strong><code>rasp\_version: 1</code></strong></td>
     </tr>
-
     <tr>
       <td><code>default\_</code><br /><code>keypress\_wait</code></td>
-
       <td>
         <a href="#Configure">
           <img alt="roku200px - rremote-advanced-mode-gear" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-gear.png?version=3&modificationDate=1626142003000&api=v2" />
         </a>
       </td>
-
       <td>Use the gear button to set the integer value of global delay between button presses. <br />For non-integer values: <br />- Manually position the cursor at the end of the line<br />- Backspace to delete the old value<br />- Type in the new value and hit Enter.</td>
       <td><strong><code>default\_keypress\_wait: 2</code></strong><br /><strong><code>default\_keypress\_wait: 0.25</code></strong></td>
     </tr>
-
     <tr>
       <td><code>channels</code></td>
       <td><strong>Add Channel</strong></td>
@@ -142,7 +137,6 @@ Continue by creating operational steps, using a concise set of commands. Steps c
       <th>Example</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><code>press</code></td>
@@ -150,49 +144,39 @@ Continue by creating operational steps, using a concise set of commands. Steps c
       <td>Button press</td>
       <td><pre><code><code>\<br />- press: home\<br />- press: up\<br />- press: reverse\<br /></code></code></pre></td>
     </tr>
-
     <tr>
       <td><code>text</code></td>
       <td><a href="#Keyboardinput"><img alt="roku200px - rremote-keyboard-input" src="https://image.roku.com/ZHZscHItMTc2/rremote-keyboard-input.png?version=1&modificationDate=1626301445000&api=v2" /></a><br />Text entry box below keypad</td>
       <td>Alphanumeric keystroke entry, where permitted by the Roku TV device interface<br /><br />Static input <br />– Checked: Keystrokes withheld until the adjacent <strong>\[>]</strong> button is clicked <br />– Unchecked: Each keystroke is sent out as it is entered</td>
       <td><strong><code>Developer</code></strong><br />(typed in box)</td>
     </tr>
-
     <tr>
       <td><code>pause</code></td>
-
       <td>
         <a href="#Pause/Sleep">
           <img alt="roku200px - rremote-advanced-mode-sleep" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-sleep.png?version=3&modificationDate=1626141994000&api=v2" />
         </a>
       </td>
-
       <td>A pause (or delay or sleep) may be inserted at a specified point between steps.<br />1. Position the cursor in the script where the pause should occur.<br />2. Click the lower-right corner of Sleep and set the number of seconds to pause.<br />3. Click the main part of Sleep to insert the command.<br /><br />You may need to insert a pause step for any action in the UI that takes time to be completed before another step in the script can be executed. For example, it may take a few seconds for the app UI to be populated after being launched. This ensures that the subsequent steps are actually navigating the UI. Do not include more than 10 pause steps in a script.</td>
       <td><pre><code><code>\<br />- press: reverse\<br />- pause: 3\<br />- press: play\<br /></code></code></pre></td>
     </tr>
-
     <tr>
       <td><code>loop</code></td>
-
       <td>
         <a href="#AddLoop">
           <img alt="roku200px - rremote-advanced-mode-loop" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-loop.png?version=3&modificationDate=1626143345000&api=v2" />
         </a>
       </td>
-
       <td>One or more steps can be made into a loop. This button remains grayed-out until more than one line of code has been highlighted.Using the mouse, select a two or more steps in the editor.<br />1. Click the lower right corner of the Add Loop button and select the number of iterations.<br />2. Click the main part of Add Loop to surround the steps with the appropriate <code>loop</code> commands.</td>
       <td><pre><code><code>\<br />- loop:  \<br />    iterations: 2\<br />    steps:\<br />    (loop steps go here)\<br />\<br /></code></code></pre></td>
     </tr>
-
     <tr>
       <td><code>wait\_for\_</code><br /><code>player\_state</code></td>
-
       <td>
         <a href="#WaitforPlayerState">
           <img alt="roku200px - rremote-advanced-mode-slate" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-slate.png?version=3&modificationDate=1626143323000&api=v2" />
         </a>
       </td>
-
       <td>Pause to wait on player state to be selected by user press of Play, Stop, or Pause.Put the cursor in the script where the wait should occur.Click the Wait for Player State button.Select Play, Stop, or Pause.</td>
       <td><pre><code><code>\<br />wait\_for\_player\_state: play\<br /></code></code></pre></td>
     </tr>
@@ -212,7 +196,6 @@ Creation of the following blocks is aided by macros. Click on each label for det
       <th>Example</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><code>launch</code></td>
@@ -220,14 +203,12 @@ Creation of the following blocks is aided by macros. Click on each label for det
       <td>Launch one of  entered with Add Channel in the <code>params</code> section. <br /><br />To launch an app, repeat these steps as needed to enter channel information for  you plan to use:<br />1. Select an app<br />2. Enter <strong>Content ID</strong> and <strong>Media type</strong><br />3. Click <strong>Add</strong><br />then click <strong>Add to script</strong> <img alt="roku815px - (plus)" src="https://confluence.portal.roku.com:8443/s/i0p0pk/8502/1ef1526ca6e62f10d6a1c5f77fccb30527d7d4d1/_/images/icons/emoticons/add.svg" /> on the app(s) to be launched.<br /><br /><img alt="roku400px - rremote-advanced-mode-launch-channel-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-launch-channel.png" /></td>
       <td><pre><code><code>\<br />- launch:\<br />    channel\_name: My Test Channel\<br />    content\_id: 12345\<br />    media\_type: movie\<br />    query: options.contentID=12345\&mediatype=movie\<br />    timeout: 35\<br /></code></code></pre></td>
     </tr>
-
     <tr>
       <td><code>validate\_streaming</code></td>
       <td><strong><a href="#ValidateStreaming">Validate Streaming</a></strong></td>
       <td>Verify that the specified stream functions as expected. <br />Select:  <br />- the desired Video codec<br />- the audio codec in use<br />- the DRM method<br />then click <strong>Add to script</strong> to insert script commands to validate the indicated stream type.<br /><br /><img alt="roku400px - rremote-advanced-mode-validate-streaming-roku700px" src="https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-validate-streaming-v1.png" /></td>
       <td><pre><code><code>\<br />- validate\_streaming:\<br />    audio\_codec: ac3\<br />    video\_codec: mpeg4\_2\<br />    drm: aes-128\<br />    on\_error:\<br />      - press: right\<br /></code></code></pre></td>
     </tr>
-
     <tr>
       <td><code>channel\_tile\_order</code></td>
       <td><strong><a href="#ChannelTileOrder">Channel Tile Order</a></strong></td>
@@ -250,7 +231,6 @@ For sequences of steps that you have to follow in multiple places within your sc
       <th>Example</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><code>step: \&idxxxx</code></td>
@@ -258,7 +238,6 @@ For sequences of steps that you have to follow in multiple places within your sc
       <td>Two or more steps can be defined as a block with an identifier.<br />Using the mouse or cursor control keys, highlight a step or group of steps in the editor.<br />Click the <strong><a href="#BlockIDs">Add Block</a></strong> button to create the block and generate its ID in the form <strong><code>\&id</code></strong><code>1234</code></td>
       <td><pre><code><code>\<br />- step: \&id9027\<br />    - press: up\<br />    - press: right\<br /></code></code></pre></td>
     </tr>
-
     <tr>
       <td><code>\*idxxxx</code></td>
       <td><strong><a href="#BlockIDs">Block IDs</a></strong></td>

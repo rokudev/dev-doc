@@ -356,14 +356,12 @@ This function may be called from any thread.
       <th><strong>Description</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>message\_id</td>
       <td>String</td>
       <td>The ID of the channel to which this message should be posted.</td>
     </tr>
-
     <tr>
       <td>data</td>
       <td>Object</td>

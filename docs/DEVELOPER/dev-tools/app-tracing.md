@@ -179,7 +179,6 @@ You can use the roPerfetto BrightScript component to capture custom events in a 
       <th><strong>Snippet</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Instantaneous</td>
@@ -187,23 +186,18 @@ You can use the roPerfetto BrightScript component to capture custom events in a 
       <td>keypress</td>
       <td><pre><code>tracer = CreateObject("roPerfetto")<br />tracer.instantEvent("my\_instant\_event")<br />tracer.instantEvent("my\_instant\_event", {'{'}debug\_1: 42, debug\_2: "hello"{'}'})<br /></code></pre></td>
     </tr>
-
     <tr>
       <td>Duration</td>
       <td>Events with a beginning and an end</td>
       <td>long function</td>
       <td><pre><code>sub myfunc()<br /> tracer = CreateObject("roPerfetto")<br /> params = {'{'}debug\_1: 42, debug\_2: "hello"{'}'}<br /> tracer.beginEvent("my\_duration\_event", params)<br /> do\_stuff()<br /> tracer.endEvent()<br />end sub<br /></code></pre></td>
     </tr>
-
     <tr>
       <td>Scoped</td>
       <td>Similar to duration events, but the end-event is generated automatically when the object returned from the call is released.</td>
-
       <td />
-
       <td><pre><code>sub myfunc()<br /> tracer = CreateObject("roPerfetto")<br /> params = {'{'}debug\_1: 42, debug\_2: "hello"{'}'}<br /> scoped\_event = tracer.createScopedEvent("my\_scoped\_event", params)<br /> do\_stuff()<br /> ' end event auto-created when scoped\_event is released.<br />end sub<br /></code></pre></td>
     </tr>
-
     <tr>
       <td>Flow</td>
       <td>Creation of a “flow” of events from one piece of code to another.</td>

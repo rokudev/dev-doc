@@ -111,12 +111,10 @@ Sets the address using a BSD bind() call
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>SetAddress</td>
       <td>Boolean</td>
-
       <td>
         <table>
           <tr>
@@ -124,7 +122,6 @@ Sets the address using a BSD bind() call
             <td>Type</td>
             <td>Description</td>
           </tr>
-
           <tr>
             <td>sockAddr</td>
             <td>Object</td>

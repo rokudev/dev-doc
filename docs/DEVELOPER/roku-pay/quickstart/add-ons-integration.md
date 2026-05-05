@@ -81,39 +81,32 @@ To create a purchase option for an add-on product, follow these steps:
          <th>
            Billing plan setting
          </th>
-
          <th>
            Description
          </th>
        </tr>
      </thead>
-
      <tbody>
        <tr>
          <td>
            Product
          </td>
-
          <td>
            Select the add-on product for which you are creating a purchase option. Add-on products are tagged with a blue "ADD-ON" label in the drop-down list.
          </td>
        </tr>
-
        <tr>
          <td>
            Billing periods
          </td>
-
          <td>
            Select the billing period for the add-on product: **monthly**, **quarterly**, or **annual**. The billing period for the add-on must be the same as the base product.
          </td>
        </tr>
-
        <tr>
          <td>
            Regular price
          </td>
-
          <td>
            Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products.<br />
 
@@ -121,12 +114,10 @@ To create a purchase option for an add-on product, follow these steps:
            * Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).
          </td>
        </tr>
-
        <tr>
          <td>
            Base offer
          </td>
-
          <td>
            The administrator (root account) can create free trial and introductory price offers for an add-on product. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer.Select one of the following base offers: <br />
 

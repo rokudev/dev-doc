@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint:docs": "node .github/scripts/docs-lint/index.mjs",
-    "fix:html-blank-rows": "node .github/scripts/fix-html-blank-rows.mjs"
+    "lint:docs": "node .github/scripts/docs-lint/index.mjs"
   },
   "devDependencies": {
     "glob": "^11.0.0",

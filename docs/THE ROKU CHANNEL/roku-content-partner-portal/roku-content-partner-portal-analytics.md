@@ -53,14 +53,10 @@ Analytics data is organized into dashboards and visualizations designed to give 
 
 Depending on your access level, you may be able to:
 
-1. **View summary metrics:**  
-   Get a snapshot of overall performance across your catalog.
-2. **Filter and segment data:**  
-   Refine insights by territory, time range, or specific titles.
-3. **Drill into detailed views:**  
-   Explore performance at the title or campaign level.
-4. **Track changes over time:**  
-   Compare performance before and after merchandising or content updates.
+1. **View summary metrics:** Get a snapshot of overall performance across your catalog.
+2. **Filter and segment data:** Refine insights by territory, time range, or specific titles.
+3. **Drill into detailed views:** Explore performance at the title or campaign level.
+4. **Track changes over time:** Compare performance before and after merchandising or content updates.
 
 <br />
 

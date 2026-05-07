@@ -10,11 +10,11 @@ metadata:
 | see the following [doc](doc:setting-up-web-services#roku-pay-api-key) for more information on setting up web key |    |    |
 |                                                                                                                  |    |    |
 
+Custom HTML
+
 <HTMLBlock>{`
 <p>see the following <a target="_self" href="/dev/docs/setting-up-web-services#roku-pay-api-key">doc</a> for more information on setting up web key</p>
 `}</HTMLBlock>
-
-<br />
 
 <br />
 

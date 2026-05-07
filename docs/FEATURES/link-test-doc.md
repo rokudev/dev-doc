@@ -13,7 +13,7 @@ metadata:
 Custom HTML
 
 <HTMLBlock>{`
-<p>see the following <a target="_self" href="/dev/docs/setting-up-web-services#roku-pay-api-key">doc</a> for more information on setting up web key</p>
+<p>see the following <a target="_blank" href="/dev/docs/setting-up-web-services#roku-pay-api-key">doc</a> for more information on setting up web key</p>
 `}</HTMLBlock>
 
 <br />

@@ -7,7 +7,7 @@ metadata:
   robots: index
 next:
   description: >-
-    Title Tracking Issues for detailed diagnostics and resolution paths, coming
+    Title tracking issues for detailed diagnostics and resolution paths, coming
     soon!
 ---
 Monitor where your titles are in The Roku Channel publishing pipeline and identify which titles need action.
@@ -521,7 +521,7 @@ Some titles have different statuses across channel store locations.
 
 To view details:
 
-1. Click the expand arrow next to a title.
+1. Select the expand arrow next to a title.
 2. The **Territories** panel appears.
 
 ![](https://files.readme.io/2e946945e0dda50df1ef2efa2f1ed3e25349a976d13bdbcf4e60ea1e3f976d8e-image.png)
@@ -543,13 +543,13 @@ Each card shows:
 
 This means:
 
-* some territories are ready or live
-* others require action
+* Some territories are ready or live
+* Others require action
 
 Use the panel to:
 
-* identify affected territories
-* focus only where action is needed
+* Identify affected territories
+* Focus only where action is needed
 
 <br />
 
@@ -557,7 +557,7 @@ Use the panel to:
 
 ## Which titles need attention?
 
-Click **Unfulfilled** or **Failed**.
+Select **Unfulfilled** or **Failed**.
 
 Prioritize titles with **Errors**.
 
@@ -565,12 +565,12 @@ Prioritize titles with **Errors**.
 
 Check the status:
 
-* **Unfulfilled**: missing or unmatched inputs
-* **Failed**: blocking errors
-* **Processing** or **Rights under review**: still in progress
+* **Unfulfilled:** Missing or unmatched inputs
+* **Failed:** Blocking errors
+* **Processing** or **Rights under review:** Still in progress
 
 <Callout icon="🤔" theme="default">
-  If rights are missing, fields such as license types, services, territories, or expected dates may display as blank or `-`. This is expected until the required data is provided and matched.
+  If rights are missing, fields such as license types, services, territories, or expected dates may display as blank or `'-'`. This is expected until the required data is provided and matched.
 </Callout>
 
 <br />
@@ -579,5 +579,5 @@ Check the status:
 
 * This view provides summary-level visibility only.
 * Issue details are not shown here.
-* A dedicated **Title Tracking Issues** view will be provided in the future for detailed diagnostics and resolution paths.
-* Some fields may display `-` when data is unavailable.
+* A dedicated **Title tracking issues** view will be provided in the future for detailed diagnostics and resolution paths.
+* Some fields may display `'-'` when data is unavailable.

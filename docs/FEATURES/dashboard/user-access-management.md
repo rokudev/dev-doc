@@ -166,11 +166,10 @@ TRC users can have the following roles and permissions:
       </td>
 
       <td>
-        Maintain administrative control over The Roku Channel Partner Portal. This user can:
+        Maintain administrative control over the Roku Content Partner Portal. This user can:
 
         * Manage company account information.
         * Manage users, roles, and permissions
-        * Manage payout and tax documents
         * Manage featured rows, brand assets, and promotional creatives
         * Access audience, engagement, and performance analytics
       </td>

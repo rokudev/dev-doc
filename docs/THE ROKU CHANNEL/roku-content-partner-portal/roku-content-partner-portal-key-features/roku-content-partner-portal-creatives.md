@@ -9,10 +9,10 @@ metadata:
 The creatives section is where you manage a limited set of publisher-level visual assets used across The Roku Channel subscription experience.
 
 <Callout icon="🔒" theme="default">
-  Available only to premium subscription partners.
+  Available only to Premium Subscription partners.
 </Callout>
 
-These assets are not title-specific. Instead, they represent your service branding and are displayed in key consumer journeys such as subscription entry points and publisher collection pages.
+These assets are not title specific. Instead, they represent your service branding and are displayed in key consumer journeys such as subscription entry points and publisher collection pages.
 
 At this stage, creative control is intentionally scoped to a small number of high-impact assets to ensure consistency across the platform.
 

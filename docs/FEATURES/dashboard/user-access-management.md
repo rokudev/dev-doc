@@ -281,7 +281,7 @@ If you have the Admin role (or are the root account owner), you can remove a use
 
 ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-remove-user.png)
 
-Removing a user does not affect the user's own Roku developer account. If you need to add the removed user in the future, you must re-invite them.
+Removing a user does not affect the user's own Roku account. If you need to add the removed user in the future, you must re-invite them.
 
 ## Viewing user activity logs
 

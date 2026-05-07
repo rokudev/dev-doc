@@ -2,7 +2,7 @@
 title: Dashboard
 excerpt: Overview
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 next:

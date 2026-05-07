@@ -277,7 +277,7 @@ If you have the Admin role (or are the root account owner), you can re-send an i
 
 ### Removing users
 
-If you have the Admin role (or are the root account owner), you can remove a user from the developer account. To do this, click the menu icon on the right-hand side of the user’s row, click **Remove user** in the shortcut menu, and then click **Yes** in the confirmation dialog.
+If you have the Admin role (or are the root account owner), you can remove a user from the account. To do this, click the menu icon on the right-hand side of the user’s row, click **Remove user** in the shortcut menu, and then click **Yes** in the confirmation dialog.
 
 ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-remove-user.png)
 

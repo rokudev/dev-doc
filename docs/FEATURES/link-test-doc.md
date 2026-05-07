@@ -7,7 +7,7 @@ metadata:
 ---
 see the following [doc](doc:setting-up-web-services#roku-pay-api-key) for more information on setting up web key
 
-Table - full URL
+Table - full URL (https://roku-ent.readme.io/dev/docs/setting-up-web-services#roku-pay-api-key)
 
 <HTMLBlock>{`
 <table>
@@ -37,7 +37,7 @@ Table - full URL
 </table>
 `}</HTMLBlock>
 
-Table - relative URL
+Table - relative URL (/docs/setting-up-web-services#roku-pay-api-key)
 
 <HTMLBlock>{`
 <table>
@@ -56,7 +56,7 @@ Table - relative URL
 "exp": 1616010343 (1 hour from the current time, in epoch unix timestamp format)
 "aud": "roku_developers" (the app name)
 "iat": 1616006743 (the current time, in epoch unix timestamp format)
-</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a>(see the following <a href="https://roku-ent.readme.io/dev/docs/setting-up-web-services#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
+</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a>(see the following <a href="/docs/setting-up-web-services#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
 </tr>
 <tr>
 <td class="short-line">locale</td>

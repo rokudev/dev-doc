@@ -66,7 +66,7 @@ To add a user to your account and assign them roles and permissions, follow thes
 
    ![roku600px - mua\_app\_mgmt](https://image.roku.com/ZHZscHItMTc2/roku-user-access-accept-invite.png)
 
-### Roles and permissions for Roku Developers
+### Roles and permissions for Roku developers
 
 Roku developer accounts can have the following roles and permissions:
 
@@ -142,7 +142,7 @@ Roku developer accounts can have the following roles and permissions:
 </table>
 `}</HTMLBlock>
 
-### Roles and permissions for Roku Content Partners
+### Roles and permissions for Roku content partners
 
 Roku Content Partner accounts can have the following roles and permissions:
 
@@ -228,7 +228,7 @@ Roku Content Partner accounts can have the following roles and permissions:
   </tbody>
 </Table>
 
-### Roles and permissions for Roku Partner Payouts
+### Roles and permissions for Roku partner payouts
 
 <Table align={["left","left"]}>
   <thead>

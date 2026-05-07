@@ -68,10 +68,10 @@ Specifications:
 
 # How it works
 
-1. **Select Context** Choose the **Service** and **Territory** to manage creatives for that specific configuration.
-2. **View Current Assets** Review the currently published images for each creative type.
-3. **Upload New Assets** Drag and drop or browse to upload a replacement image.
-4. **Update** Apply changes to replace the existing creative.
+1. **Select Context:** Choose the **Service** and **Territory** to manage creatives for that specific configuration.
+2. **View Current Assets:** Review the currently published images for each creative type.
+3. **Upload New Assets:** Drag and drop or browse to upload a replacement image.
+4. **Update:** Apply changes to replace the existing creative.
 
 <br />
 

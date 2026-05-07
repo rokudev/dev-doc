@@ -123,7 +123,7 @@ Apps must implement an API that retrieves the images and description of the app 
 "exp": 1616010343 (1 hour from the current time, in epoch unix timestamp format)
 "aud": "roku_developers" (the app name)
 "iat": 1616006743 (the current time, in epoch unix timestamp format)
-</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a>(see the following <a href="https://roku-ent.readme.io/dev/docs/setting-up-web-services#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
+</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a>(see the following <a href="/dev/docs/setting-up-web-services#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
 </tr>
 <tr>
 <td class="short-line">locale</td>
@@ -254,7 +254,7 @@ The following table lists the requirements for implementing the personalized pro
 "exp": 1616010343 (1 hour from the current time, in epoch unix timestamp format)
 "aud": "roku_developers" (the app name)
 "iat": 1616006743 (the current time, in epoch unix timestamp format)
-</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> (see the following <a href="https://roku-ent.readme.io/dev/docs/setting-up-web-services#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
+</code></pre><br>- <strong>Secret key</strong>: <a href="https://developer.roku.com/api/settings">Roku Pay API Key</a> (see the following <a href="/dev/docs/setting-up-web-services#roku-pay-api-key">document</a> for more information).<br><br>Apps can use <a href="https://jwt.io/">JWT debugger</a> or other online tool to verify generated JWTs.</td>
 </tr>
 <tr>
 <td class="short-line">roku-reserved-email-hash</td>
@@ -293,7 +293,7 @@ The following table lists the requirements for implementing the personalized pro
 <tr>
 <td class="short-line">desc</td>
 <td class="short-line">String</td>
-<td class="long-line">A brief (maximum 100 character) description of the product.<br><br>Do not include any billing information such as pricing and billing cycle in the description. Roku automatically populates this information from the <a href="https://roku-ent.readme.io/dev/docs/product-catalog#adding-products-to-the-catalog">in-app products you've created in the Developer Dashboard</a>.</td>
+<td class="long-line">A brief (maximum 100 character) description of the product.<br><br>Do not include any billing information such as pricing and billing cycle in the description. Roku automatically populates this information from the <a href="/dev/docs/product-catalog#adding-products-to-the-catalog">in-app products you've created in the Developer Dashboard</a>.</td>
 </tr>
 <tr>
 <td class="short-line">details</td>

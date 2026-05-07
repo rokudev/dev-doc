@@ -39,7 +39,7 @@ Waits until an event object is available or timeout milliseconds have passed.
     <tr>
       <td>timeout</td>
       <td>Integer</td>
-      <td>The number of milliseconds to wait for a message. If this parameter is set to 0, this method waits indefinitely for a message, with no timeout.<br /><br />The native <a href="https://roku-ent.readme.io/dev/docs/global-utility-functions#waittimeout-as-integer-port-as-object-as-object">wait()</a> function can also be used to get the event object which WaitMessage() would return.  This means that the following two statements have the same effect:<br /><pre><code>\~\~\~<br />msg = port.WaitMessage(timeout)<br />msg = wait(timeout, port)<br />\~\~\~</code></pre></td>
+      <td>The number of milliseconds to wait for a message. If this parameter is set to 0, this method waits indefinitely for a message, with no timeout.<br /><br />The native <a href="/dev/docs/global-utility-functions#waittimeout-as-integer-port-as-object-as-object">wait()</a> function can also be used to get the event object which WaitMessage() would return.  This means that the following two statements have the same effect:<br /><pre><code>\~\~\~<br />msg = port.WaitMessage(timeout)<br />msg = wait(timeout, port)<br />\~\~\~</code></pre></td>
     </tr>
   </tbody>
 </table>

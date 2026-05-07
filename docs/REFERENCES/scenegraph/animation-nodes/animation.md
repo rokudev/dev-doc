@@ -122,7 +122,7 @@ end function
       <td>boolean</td>
       <td>false</td>
       <td>READ\_WRITE</td>
-      <td>Set to true to skip animations on lower performing Roku devices. See <a href="https://roku-ent.readme.io/dev/docs/hardware#current-roku-models" title="Roku Devices">Roku Devices</a> for model numbers and code names. When an Animation has optional set to true, setting the control field to start will cause the state field to change to running and immediately change again to finished. These state changes allow any logic tied to state field observers that run at the start and end of the Animation to be properly called</td>
+      <td>Set to true to skip animations on lower performing Roku devices. See <a href="/dev/docs/hardware#current-roku-models" title="Roku Devices">Roku Devices</a> for model numbers and code names. When an Animation has optional set to true, setting the control field to start will cause the state field to change to running and immediately change again to finished. These state changes allow any logic tied to state field observers that run at the start and end of the Animation to be properly called</td>
     </tr>
 
     <tr>

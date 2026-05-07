@@ -90,7 +90,7 @@ Rotation of Posters is supported. On platforms that do not support OpenGL, only 
       <td />
 
       <td>READ\_WRITE</td>
-      <td>Specifies the URI of the image file. Images included as part of the application package can be referenced using the pkg:/images prefix. Images included as part of the application package that are to be localized can be referenced using the pkg:/locale/images/ prefix (see <a href="https://roku-ent.readme.io/dev/docs/localization#localizing-graphical-images-in-the-application-package" title="Localizing Graphical Images in the Application Package">Localizing Graphical Images in the Application Package</a>)</td>
+      <td>Specifies the URI of the image file. Images included as part of the application package can be referenced using the pkg:/images prefix. Images included as part of the application package that are to be localized can be referenced using the pkg:/locale/images/ prefix (see <a href="/dev/docs/localization#localizing-graphical-images-in-the-application-package" title="Localizing Graphical Images in the Application Package">Localizing Graphical Images in the Application Package</a>)</td>
     </tr>
 
     <tr>

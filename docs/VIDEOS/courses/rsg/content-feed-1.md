@@ -28,7 +28,7 @@ This lesson explains how the content feed is used to load and organize content i
 
   <tbody>
     <tr>
-      <td><a href="https://roku-ent.readme.io/dev/docs/search-feed">Sample content feed</a></td>
+      <td><a href="/dev/docs/search-feed">Sample content feed</a></td>
       <td>Examine the content feed used by the sample app for this course. This content feed includes three content types: shortFormVideos, series, and movies.  <br /><ul><li>The <strong>shortFormVideos</strong> object in the feed contains the shorter Roku developer videos.</li><li>The <strong>series</strong> object contains an <strong>RSG</strong> series all the videos in this SceneGraph Developer's course, and it includes a Roku Tips and Tricks series, with videos highlighting Roku products and features.</li><li>The <strong>movies</strong> object contains the longer Roku developer videos.</li></ul><br />Each video in the feed includes a unique ID, name, description, thumbnail image, and URL used to populate the app UI. In addition, each video includes a genre field that is used to categorize the videos into rows of related content.</td>
     </tr>
 

@@ -413,7 +413,7 @@ The node's root Scene.
 
 The following methods can be called on any subject node and return the same global results. They can be used in a development app for debugging purposes, but should not be used in a production app.
 
-<p>>These methods are similar to the debugger sgnodes commands. See <a href="https://roku-ent.readme.io/dev/docs/debugging#scenegraph-debug-server-port-8080-commands">Special SceneGraph Debugging Commands</a> for information on the debugger sgnodes commands. Also please note that calling these functions from code should only be done for debugging purposes. Any calls to <a href="#getall-as-object">getAll()</a>, <a href="#getroots-as-object">getRoots()</a>, <a href="#getrootsmeta-as-object">getRootsMeta()</a> and <a href="#getallmeta-as-object">getAllMeta()</a> should be removed from your production channels. |</p>
+<p>>These methods are similar to the debugger sgnodes commands. See <a href="/dev/docs/debugging#scenegraph-debug-server-port-8080-commands">Special SceneGraph Debugging Commands</a> for information on the debugger sgnodes commands. Also please note that calling these functions from code should only be done for debugging purposes. Any calls to <a href="#getall-as-object">getAll()</a>, <a href="#getroots-as-object">getRoots()</a>, <a href="#getrootsmeta-as-object">getRootsMeta()</a> and <a href="#getallmeta-as-object">getAllMeta()</a> should be removed from your production channels. |</p>
 
 ### getAll() as Object
 

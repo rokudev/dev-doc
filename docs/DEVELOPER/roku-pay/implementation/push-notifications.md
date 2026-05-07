@@ -129,7 +129,7 @@ Roku Pay sends push notifications for the following transactions:
       </td>
 
       <td>
-        The grace period elapsed (renewal payment was still not received) and the subscription was placed on hold. This notification is only sent to publishers using [Enhanced Subscription Recovery](https://roku-ent.readme.io/dev/docs/subscription-on-hold).
+        The grace period elapsed (renewal payment was still not received) and the subscription was placed on hold. This notification is only sent to publishers using [Enhanced Subscription Recovery](/dev/docs/subscription-on-hold).
       </td>
 
       <td>

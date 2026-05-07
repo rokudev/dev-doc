@@ -73,7 +73,7 @@ There are three general categories of layouts.
       <td>ContentNode</td>
       <td>none</td>
       <td>READ\_WRITE</td>
-      <td>Specifies the content for the list. See <a href="https://roku-ent.readme.io/dev/docs/markuplist#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
+      <td>Specifies the content for the list. See <a href="/dev/docs/markuplist#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
     </tr>
 
     <tr>

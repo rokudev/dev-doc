@@ -51,7 +51,7 @@ Checks the current status of the device. This method returns an roAssociativeArr
       </td>
 
       <td>
-        True if the screen reader is enabled. The audioGuideEnabled event will only ever get fired if <Anchor label="ifDeviceInfo.EnableAudioGuideChangedEvent(true)" title="ifDeviceInfo.EnableAudioGuideChangedEvent(true)" href="https://roku-ent.readme.io/dev/docs/ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableAudioGuideChangedEvent(true)</Anchor> called before entering the message loop
+        True if the screen reader is enabled. The audioGuideEnabled event will only ever get fired if <Anchor label="ifDeviceInfo.EnableAudioGuideChangedEvent(true)" title="ifDeviceInfo.EnableAudioGuideChangedEvent(true)" href="/dev/docs/ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableAudioGuideChangedEvent(true)</Anchor> called before entering the message loop
       </td>
     </tr>
 
@@ -65,7 +65,7 @@ Checks the current status of the device. This method returns an roAssociativeArr
       </td>
 
       <td>
-        True if the screensaver was exited. The exitedScreensaver event will only ever get fired if <Anchor label="ifDeviceInfo.EnableScreensaverExitedEvent(true)" title="ifDeviceInfo.EnableScreensaverExitedEvent(true)" href="https://roku-ent.readme.io/dev/docs/ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableScreensaverExitedEvent(true)</Anchor> is called before entering the message loop
+        True if the screensaver was exited. The exitedScreensaver event will only ever get fired if <Anchor label="ifDeviceInfo.EnableScreensaverExitedEvent(true)" title="ifDeviceInfo.EnableScreensaverExitedEvent(true)" href="/dev/docs/ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableScreensaverExitedEvent(true)</Anchor> is called before entering the message loop
       </td>
     </tr>
 
@@ -93,7 +93,7 @@ Checks the current status of the device. This method returns an roAssociativeArr
       </td>
 
       <td>
-        True if the device currently seems to have an active network connection. The linkStatus event will only ever get fired if <Anchor label="ifDeviceInfo.EnableLinkStatusEvent(true)" title="ifDeviceInfo.EnableLinkStatusEvent(true)" href="https://roku-ent.readme.io/dev/docs/ifdeviceinfo#enablelinkstatuseventenable-as-boolean-as-boolean">ifDeviceInfo.EnableLinkStatusEvent(true)</Anchor>  is called before entering the message loop
+        True if the device currently seems to have an active network connection. The linkStatus event will only ever get fired if <Anchor label="ifDeviceInfo.EnableLinkStatusEvent(true)" title="ifDeviceInfo.EnableLinkStatusEvent(true)" href="/dev/docs/ifdeviceinfo#enablelinkstatuseventenable-as-boolean-as-boolean">ifDeviceInfo.EnableLinkStatusEvent(true)</Anchor>  is called before entering the message loop
       </td>
     </tr>
 

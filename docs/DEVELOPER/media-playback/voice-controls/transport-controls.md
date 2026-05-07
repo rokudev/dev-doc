@@ -53,7 +53,7 @@ these steps:
    ```
 
 2. Register the **roInput** component for voice commands by calling
-   its  [**EnableTransportEvents()**](https://roku-ent.readme.io/dev/docs/ifinput#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.
+   its  [**EnableTransportEvents()**](/dev/docs/ifinput#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.
 
    ```
    input.enableTransportEvents()
@@ -374,7 +374,7 @@ The following table summarizes the different voice controls, how they may be inv
 <td>nowplaying</td>
 <td>"what's playing?"<br />"what am I watching?"</td>
 <td>Acknowledge command as success; the Roku OS will display app name as playing.</td>
-<td><ul><li>Content playing is known to the app: Create an <a href="https://roku-ent.readme.io/dev/docs/roappmanager"><strong>roAppManager</strong></a> node, and then pass the item's title and contentType into a call to the <a href="https://roku-ent.readme.io/dev/docs/ifappmanager#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method. Mark the event as successfully handled.</li><li>No content playing or content playing is unknown to the app: Pass <code>invalid</code> into a call to the <a href="https://roku-ent.readme.io/dev/docs/ifappmanager#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method, and mark the event as "error.generic" or "unhandled".</li></ul></td>
+<td><ul><li>Content playing is known to the app: Create an <a href="/dev/docs/roappmanager"><strong>roAppManager</strong></a> node, and then pass the item's title and contentType into a call to the <a href="/dev/docs/ifappmanager#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method. Mark the event as successfully handled.</li><li>No content playing or content playing is unknown to the app: Pass <code>invalid</code> into a call to the <a href="/dev/docs/ifappmanager#setnowplayingcontentmetadatacontentmetadata-as-object-as-void"><strong>roAppManager.SetNowPlayingContentMetaData()</strong></a> method, and mark the event as "error.generic" or "unhandled".</li></ul></td>
 <td>Use content metadata to display title of content.</td>
 </tr>
 <tr>

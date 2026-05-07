@@ -54,7 +54,7 @@ The entire interface to a node, including field creation, setting, and getting, 
 - Nodes owned by a Task thread are not accessible outside that thread.
 - Task nodes are owned by the Render thread, so Task nodes and their fields can only be accessed by rendezvous from threads other than the Render thread. This includes threads launched by the Task node itself.
 
-> Use the [**logrendezvous** command](https://roku-ent.readme.io/dev/docs/debugging#scenegraph-debug-server-port-8080-commands) in the SceneGraph debug console to identify performance issues in the Task thread caused by a rendezvous. This command indicates whether a rendezvous is occurring and its duration (in milliseconds).
+> Use the [**logrendezvous** command](/dev/docs/debugging#scenegraph-debug-server-port-8080-commands) in the SceneGraph debug console to identify performance issues in the Task thread caused by a rendezvous. This command indicates whether a rendezvous is occurring and its duration (in milliseconds).
 
 ### BrightScript operations without SceneGraph node objects
 

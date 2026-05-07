@@ -120,17 +120,17 @@ When a deep link is sent to your app, it will include **contentId** and a **medi
       <td>tvSpecial</td>
       <td>One-time TV programs that are not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).</td>
       <td>Play the TV special identified by the contentId. Use [bookmarks](doc:bookmarking) to determine the playback position.</td>
-<tr>
+		</tr>
+      <tr>
         <td>liveFeed</td>
         <td>Live linear stream</td>
         <td>Play the live linear stream identified by the contentId.</td>
-    </tr>
-    <tr>
+      </tr>
+      <tr>
         <td>sportsEvent</td>
         <td>Live sports event</td>
         <td>Play the live sports event identified by the contentId.</td>
-    </tr>
-    </tr>
+      </tr>
   </tbody>
 </table>
 

@@ -192,7 +192,7 @@ Roku Content Partner accounts can have the following roles and permissions:
 
     <tr>
       <td>
-        Operations manager
+        Operations Manager
       </td>
 
       <td>
@@ -204,7 +204,7 @@ Roku Content Partner accounts can have the following roles and permissions:
 
     <tr>
       <td>
-        Business manager
+        Business Manager
       </td>
 
       <td>

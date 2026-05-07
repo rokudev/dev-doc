@@ -45,7 +45,7 @@ The Roku Content Partner Portal shifts that model by:
 * Reducing dependency on support teams
 * Improving turnaround time for issue resolution
 * Providing consistent and reliable data
-* Enabling partners to self-serve critical insights
+* Enabling you to self-serve critical insights
 
 The result is a more scalable and efficient partnership model.
 
@@ -53,7 +53,7 @@ The result is a more scalable and efficient partnership model.
 
 # Who this is for
 
-The portal is designed for business, operation, and marketing stakeholders within partner organizations who need visibility into content performance, delivery, and marketing status. This includes teams responsible for:
+The portal is designed for business, operation, and marketing stakeholders within your organizations who need visibility into content performance, delivery, and marketing status. This includes teams responsible for:
 
 * Content and operations teams
 * Business and strategy teams
@@ -70,24 +70,24 @@ To get started, users must have the appropriate access role, typically **busines
 
 <br />
 
-| Key   | Page Component                                                                                                                                                                                                                                                       |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A** | **Documentation & Help Guides** – Access the Content Partner documentation space, including feature guides and help topics.                                                                                                                                          |
-| **B** | **Contact Us _(Partner Support)_** – Opens support options for reaching out to Roku for assistance.                                                                                                                                                                  |
-| **C** | **Dashboard Navigation _(Top Nav)_** – Navigates to the main Dashboard view from the top navigation bar.                                                                                                                                                             |
-| **D** | **Profile** – Provides access to user profile settings and account-related options.                                                                                                                                                                                  |
-| **E** | **Licensor Switcher _(if applicable)_** – Allows users to switch between licensors within the same organization to view associated titles.                                                                                                                           |
-| **F** | **Dashboard Navigation _(Left Nav)_** – Navigates to the Dashboard using the left-hand navigation panel.                                                                                                                                                             |
-| **G** | **Switch Accounts** – Allows users to switch between different accounts they have access to.                                                                                                                                                                         |
-| **H** | **Partner Guide** – Access the Content Partner documentation space, including feature guides and help topics.                                                                                                                                                        |
-| **I** | **Feature Pages** – The main application workspace where selected features are displayed and interacted with. This area updates based on navigation and is where users view and manage feature-specific data, such as Title Status, Storefront, Creatives, and more. |
-| **J** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                         |
+| Key   | Page Component                                                                                                                                                                                                                                                     |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **A** | **Documentation & Help Guides** – Access the Content Partner documentation space, including feature guides and help topics.                                                                                                                                        |
+| **B** | **Contact Us _(Partner Support)_** – Opens support options for reaching out to Roku for assistance.                                                                                                                                                                |
+| **C** | **Dashboard Navigation _(Top Nav)_** – Navigates to the main Dashboard view from the top navigation bar.                                                                                                                                                           |
+| **D** | **Profile** – Provides access to user profile settings and account-related options.                                                                                                                                                                                |
+| **E** | **Licensor Switcher _(if applicable)_** – Allows users to switch between licensors within the same organization to view associated titles.                                                                                                                         |
+| **F** | **Dashboard Navigation _(Left Nav)_** – Navigates to the Dashboard using the left-hand navigation panel.                                                                                                                                                           |
+| **G** | **Switch Accounts** – Allows you to switch between different accounts you may have access to.                                                                                                                                                                      |
+| **H** | **Partner Guide** – Access the Content Partner documentation space, including feature guides and help topics.                                                                                                                                                      |
+| **I** | **Feature Pages** – The main application workspace where selected features are displayed and interacted with. This area updates based on navigation and is where you view and manage feature-specific data, such as Title Status, Storefront, Creatives, and more. |
+| **J** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                       |
 
 <br />
 
 # Getting started
 
-Access to the portal requires a Roku account. Partners can sign in or create an account at: [https://my.roku.com/signin](https://my.roku.com/signin)
+Access to the portal requires a Roku account. You can sign in or create an account at: [https://my.roku.com/signin](https://my.roku.com/signin)
 
 Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before you see it in the Roku Launchpad.
 
@@ -96,4 +96,4 @@ Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/d
 
 <br />
 
-The Roku Content Partner Portal represents a shift toward greater transparency and operational independence, giving partners the tools they need to manage their content with confidence and speed.
+The Roku Content Partner Portal represents a shift toward greater transparency and operational independence, giving you the tools you need to manage your content with confidence and speed.

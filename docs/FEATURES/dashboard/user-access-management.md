@@ -261,7 +261,7 @@ Roku Content Partner accounts can have the following roles and permissions:
 
 You can use the **Roles and access** page to edit, re-invite, and remove users and view their activity logs.
 
-The page lists the email, name, and organization of each user who has been invited to your developer account, their roles, and their current status.
+The page lists the email, name, and organization of each user who has been invited to your account, their roles, and their current status.
 
 You can search the listed user accounts by email address or user name.
 

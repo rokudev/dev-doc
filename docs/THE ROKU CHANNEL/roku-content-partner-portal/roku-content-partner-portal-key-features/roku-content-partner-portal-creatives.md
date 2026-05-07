@@ -24,7 +24,7 @@ At this stage, creative control is intentionally scoped to a small number of hig
 
 # Who this is for
 
-Creatives is available to content partners who manage **Premium Subscription** storefronts on the platform.
+Creatives is available to content partners who manage **Premium Subscription** storefronts on The Roku Channel.
 
 This feature is intended for users responsible for maintaining brand consistency and subscription presentation, including:
 

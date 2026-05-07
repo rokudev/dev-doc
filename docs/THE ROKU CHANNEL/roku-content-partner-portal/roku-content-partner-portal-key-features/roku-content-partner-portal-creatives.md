@@ -100,7 +100,7 @@ Failure to meet these requirements may result in assets being rejected or render
 
 # Why it matters
 
-These creatives directly impact how users perceive your service and whether they choose to subscribe. Strong, clear visuals:
+These creatives directly impact how consumers perceive your service and whether they choose to subscribe. Strong, clear visuals:
 
 * Improve brand recognition
 * Increase click-through rates on subscription entry points

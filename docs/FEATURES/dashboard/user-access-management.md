@@ -285,7 +285,7 @@ Removing a user does not affect the user's own Roku developer account. If you ne
 
 ## Viewing user activity logs
 
-If you have the Admin role (or are the root account owner), you can access the user activity log, which tracks the actions taken by each user in the developer account.
+If you have the Admin role (or are the root account owner), you can access the user activity log, which tracks the actions taken by each user in the account.
 
 The log lists the user’s email address, page they accessed, action taken, subject app, and the date and time of the action.
 

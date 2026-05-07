@@ -20,7 +20,7 @@ Monitor where your titles are in The Roku Channel publishing pipeline and identi
 
 # Who this is for
 
-Use the **Title Status** view if you are responsible for delivering or managing Video on Demand (VOD) content on **The Roku Channel**.
+Use the **Title status** view if you are responsible for delivering or managing Video on Demand (VOD) content on **The Roku Channel**.
 
 This view is most useful for:
 

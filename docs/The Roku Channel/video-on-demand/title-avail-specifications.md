@@ -2,7 +2,10 @@
 title: Avails and Committed Title List specifications
 deprecated: false
 hidden: false
-robots: index
+metadata:
+  title: ''
+  description: ''
+  robots: index
 ---
 
 ## Avails and Committed Title Lists for The Roku Channel

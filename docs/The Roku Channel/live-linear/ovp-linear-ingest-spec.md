@@ -2,7 +2,10 @@
 title: The Roku Channel live linear ingest specifications (OVP)
 deprecated: false
 hidden: false
-robots: index
+metadata:
+  title: ''
+  description: ''
+  robots: index
 ---
 _Version 3.2_
 

@@ -20,7 +20,7 @@ Monitor where your titles are in The Roku Channel publishing pipeline and identi
 
 # Who this is for
 
-Use the **Title Status** view if you are responsible for delivering or managing Video On Demand content on **The Roku Channel**.
+Use the **Title Status** view if you are responsible for delivering or managing Video on Demand (VOD) content on **The Roku Channel**.
 
 This view is most useful for:
 
@@ -34,9 +34,9 @@ Use this view to:
 
 Focus on these statuses:
 
-* **Unfulfilled**: missing or unmatched assets
-* **Failed**: processing or QC issues
-* **Processing**: assets are actively being prepared
+* **Unfulfilled**: Missing or unmatched assets
+* **Failed**: Processing or QC issues
+* **Processing**: Assets are actively being prepared
 
 ## Business managers (rights delivery)
 
@@ -48,9 +48,9 @@ Use this view to:
 
 Focus on these statuses:
 
-* **Unfulfilled**: missing or unmatched rights
-* **Rights under review**: pending approval
-* **Expired**: rights windows need updating
+* **Unfulfilled**: Missing or unmatched rights
+* **Rights under review**: Pending approval
+* **Expired**: Rights windows need updating
 
 <br />
 
@@ -68,15 +68,15 @@ To use this feature, get the appropriate role assigned to your account.
 
 <Image align="center" caption="Each labeled element corresponds to the components described in the table below." src="https://files.readme.io/562797f2fcdb83f59caa9de4f89dfa67647517fac5a93fa373e3ad8c9d6b1221-image.png" />
 
-| Key   | Page Component                                                                                                                                                                                                                                                 |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A** | **Feature Navigation** – Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
-| **B** | **Page Header & Feature Description** – Displays the current page title and a brief description of the feature. Provides context on what the page is used for and what actions users can take.                                                                 |
-| **C** | **Title Status Cards** – Displays a summary of titles by status and acts as a primary filter for the table below.                                                                                                                                              |
-| **D** | **Title Status Table** – Displays detailed information for each title, including status, territories, availability dates, and more.                                                                                                                            |
-| **E** | **Title Status Search Field** – Enables searching for titles by name, series, or Title ID.                                                                                                                                                                     |
-| **F** | **Title Status Filter Panel** – Provides filtering options to refine the title list based on selected criteria.                                                                                                                                                |
-| **G** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
+| Key   | Page component                                                                                                                                                                                                                                                |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Feature navigation:** Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
+| **B** | **Page header & feature description:** Displays the current page title and a brief description of the feature. Provides context on what the page is used for and what actions users can take.                                                                 |
+| **C** | **Title status cards:** Displays a summary of titles by status and acts as a primary filter for the table below.                                                                                                                                              |
+| **D** | **Title status table:** Displays detailed information for each title, including status, territories, availability dates, and more.                                                                                                                            |
+| **E** | **Title status search field:** Enables searching for titles by name, series, or title ID.                                                                                                                                                                     |
+| **F** | **Title status filter panel:** Provides filtering options to refine the title list based on selected criteria.                                                                                                                                                |
+| **G** | **Collapse left navigation:** Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
 
 <br />
 

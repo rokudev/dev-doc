@@ -108,17 +108,17 @@ Click any card to filter the table.
 
 <br />
 
-<Image align="center" caption="Selecting the Failed status card displays titles that are failed for at least one territory." src="https://files.readme.io/988d59541b4bd2223fe860108e1cfb73cd1b61d3f171121a123a714db2d973c9-image.png" />
+<Image align="center" caption="Selecting the 'Failed' status card displays titles that are failed for at least one territory." src="https://files.readme.io/988d59541b4bd2223fe860108e1cfb73cd1b61d3f171121a123a714db2d973c9-image.png" />
 
 <br />
 
-<Image align="center" caption="Tap the Live status card to view titles currently live in at least one territory." src="https://files.readme.io/1edfc4c2e015726a41e8aa665c37cc48565b5f634091c54b2f5cb91aa1c77419-image.png" />
+<Image align="center" caption="Select the 'Live' status card to view titles currently live in at least one territory." src="https://files.readme.io/1edfc4c2e015726a41e8aa665c37cc48565b5f634091c54b2f5cb91aa1c77419-image.png" />
 
 <br />
 
 # How status is determined
 
-## How the **All titles** card works
+## How the **'All titles'** card works
 
 The **All titles** card shows every title in your catalog.
 
@@ -164,8 +164,8 @@ Each status-specific card, such as **Failed** or **Expired**, highlights titles 
 
 A title appears in a status card if:
 
-* at least one territory matches that status, or
-* at least one component matches that status
+* At least one territory matches that status, or
+* At least one component matches that status
 
 **Example**
 
@@ -207,7 +207,7 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 # What requires your attention
 
-<Image align="center" caption="Focus on these two statuses first" src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" width="40% " />
+<Image align="center" caption="Focus on these two statuses first." src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" width="40% " />
 
 ## Unfulfilled
 
@@ -397,7 +397,7 @@ When reviewing a title:
 
    * TRC AVOD
    * TRC O&O FAST
-   * Premium subscription services
+   * Premium Subscription services
 
    A title may be associated with multiple services depending on its rights.
 
@@ -405,23 +405,21 @@ When reviewing a title:
 3. Check the overall **Status** to understand overall readiness.
 4. Review **Territories** to understand rights coverage.
 
-   If the status shows something like: “1 of 3 unfulfilled”
-
-   Expand the row to identify which territories are impacted.
+   If the status shows something like: “1 of 3 unfulfilled”, expand the row to identify which territories are impacted.
 5. Finally, check the **Expected** timing:
 
-   * **Expected start date** → when the title will become available
-   * **Expected end date** → when availability will expire
+   * **Expected start date** → When the title will become available
+   * **Expected end date** → When availability will expire
 
    These dates reflect:
 
    * The next upcoming change across all territories
-   * Your local timezone
+   * Your local time zone
 
    For TV content:
 
-   * Expected start and end dates for a TV series (and seasons) are derived by rolling up dates from all associated TV episodes
-   * This means the dates represent the earliest upcoming availability or expiration across all episodes
+   * Expected start and end dates for a TV series (and seasons) are derived by rolling up dates from all associated TV episodes.
+   * This means the dates represent the earliest upcoming availability or expiration across all episodes.
 
 <Callout icon="🧐" theme="default">
   A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.  
@@ -441,9 +439,9 @@ For TV content, additional sorting rules apply:
 
 This ensures that:
 
-* episodes appear in the correct chronological sequence
+* Episodes appear in the correct chronological sequence
 
-* seasons and episodes display in a logical viewing order
+* Seasons and episodes display in a logical viewing order
 
 <Image align="center" caption="Seasons and episodes appear in chronological sequence for a logical viewing order." src="https://files.readme.io/e925873200a455ce0cff81ae86a1549578e1e93c485eb527783d197bae1b2545-image.png" />
 
@@ -485,9 +483,9 @@ Use search and filtering to limit results and improve your focus.
 
   Use this filter to:
 
-  * identify titles launching soon
-  * prepare for upcoming releases
-  * monitor near-term availability
+  * Identify titles launching soon
+  * Prepare for upcoming releases
+  * Monitor near-term availability
 * **Expected end period**
 
   This filter shows titles whose **Expected end date** falls within a selected timeframe.
@@ -502,11 +500,11 @@ Use search and filtering to limit results and improve your focus.
 
   Use this filter to:
 
-  * identify titles that are expiring soon
-  * take action to extend availability
-  * monitor upcoming expirations across your catalog
+  * Identify titles that are expiring soon
+  * Take action to extend availability
+  * Monitor upcoming expirations across your catalog
 
-<Image align="center" caption="Filter titles by “This month” while viewing Failed to prioritize fixes for titles that are scheduled to go live soon." src="https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png" />
+<Image align="center" caption="Filter titles by 'This month' while viewing 'Failed' to prioritize fixes for titles that are scheduled to go live soon." src="https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png" />
 
 These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
 

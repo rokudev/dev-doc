@@ -56,9 +56,9 @@ To add a user to your account and assign them roles and permissions, follow thes
 
 4. Click **Invite**.
 
-5. If the user already has a Roku developer account, they are immediately granted access to your account with their specified role.
+5. If the user already has a Roku account, they are immediately granted access to your account with their specified role.
 
-   If the user does not have a Roku developer account, they receive an email notification from Roku informing them that they have been granted access to your account.
+   If the user does not have a Roku account, they receive an email notification from Roku informing them that they have been granted access to your account.
 
    ![roku600px - mua\_app\_mgmt](https://image.roku.com/ZHZscHItMTc2/roku-user-access-invite.png)
 

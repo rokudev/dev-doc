@@ -66,9 +66,9 @@ To add a user to your developer account and assign them roles and permissions, f
 
    ![roku600px - mua\_app\_mgmt](https://image.roku.com/ZHZscHItMTc2/roku-user-access-accept-invite.png)
 
-### Developer roles and permissions
+### Roles and permissions for Roku Developers
 
-Roku develooper accounts can have the following roles and permissions:
+Roku developer accounts can have the following roles and permissions:
 
 <HTMLBlock>{`
 <table>
@@ -142,9 +142,9 @@ Roku develooper accounts can have the following roles and permissions:
 </table>
 `}</HTMLBlock>
 
-### TRC roles and permissions
+### Roles and permissions for Roku Content Partners
 
-TRC users can have the following roles and permissions:
+Roku Content Partner users can have the following roles and permissions:
 
 <Table align={["left","left"]}>
   <thead>
@@ -228,7 +228,7 @@ TRC users can have the following roles and permissions:
   </tbody>
 </Table>
 
-### Account roles and permissions
+### Roles and permissions for Roku Partner Payouts
 
 <Table align={["left","left"]}>
   <thead>
@@ -300,13 +300,13 @@ You can search log entries by email address, page name, action, or app name, and
 
   ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-activity-logs-shortcut.png)
 
-## Switching developer accounts
+## Switching accounts
 
-If you have been granted access to another developer account, you can change the developer account you are currently managing. To do this, follow these steps:
+If you have been granted access to another account, you can change the account you are currently managing. To do this, follow these steps:
 
 1. Click the **Switch account** option from the left sidebar.
 
    ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-switch-account.png)
-2. In the **Choose an account** page, select the desired developer account from the list. Your root account is listed at the top, and the accounts shared with you are listed below.
+2. In the **Choose an account** page, select the desired account from the list. Your root account is listed at the top, and the accounts shared with you are listed below.
 
    ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-switch-account-list.png)

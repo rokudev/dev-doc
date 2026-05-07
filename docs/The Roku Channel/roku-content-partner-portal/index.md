@@ -12,7 +12,7 @@ next:
       title: Dashboard
       type: basic
 ---
-The Roku Content Partner Portal is a self-service platform designed to give content partners greater visibility, control, and efficiency in managing their content lifecycle on The Roku Channel. It serves as a centralized destination where partners can track the status of titles, monitor key milestones, access analytics to understand performance and engagement, and manage storefront and creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
+The Roku Content Partner Portal is a self-service platform designed to give you greater visibility, control, and efficiency in managing your content lifecycle on The Roku Channel. It serves as a centralized destination where you can track the status of titles, monitor key milestones, access analytics to understand performance and engagement, and manage storefront and creatives marketing for Premium Subscriptions—all without relying on manual support or back-and-forth communication.
 
 <br />
 
@@ -22,7 +22,7 @@ The Roku Content Partner Portal is a self-service platform designed to give cont
 
 # What the portal enables
 
-At its core, the Roku Content Partner Portal is built to simplify how partners interact with Roku’s content operations, and marketing. Instead of operating through fragmented tools or delayed updates, partners can:
+At its core, the Roku Content Partner Portal is built to simplify how you interact with Roku’s content operations, and marketing. Instead of operating through fragmented tools or delayed updates, you can:
 
 * **Track title status in real time** across the full lifecycle, from ingestion through availability and expiration
 * **Understand processing outcomes** with clear, actionable status indicators
@@ -38,7 +38,7 @@ This transparency reduces uncertainty and empowers your teams to take action fas
 
 # Why it matters
 
-Historically, content partners have depended on manual workflows, support tickets, or internal contacts to understand what is happening with their content. This slows down decision-making and creates unnecessary operational overhead.
+Historically, you have depended on manual workflows, support tickets, or internal contacts to understand what is happening with your content. This slows down decision-making and creates unnecessary operational overhead.
 
 The Roku Content Partner Portal shifts that model by:
 

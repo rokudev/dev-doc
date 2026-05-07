@@ -5,7 +5,9 @@ hidden: true
 metadata:
   robots: index
 ---
-<br />
+see the following [doc](doc:setting-up-web-services#roku-pay-api-key) for more information on setting up web key
+
+Table - full URL
 
 <HTMLBlock>{`
 <table>
@@ -34,3 +36,5 @@ metadata:
 </tbody>
 </table>
 `}</HTMLBlock>
+
+<br />

@@ -328,7 +328,7 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
         Consider a scenario where you want to identify your app in an OpenRTB 2.5 Bid Request. You could use the following sequence for example:
         <pre><code class="language-json">"app": {
    "bundle": "633666",
-   "storeurl": "https://channelstore.roku.com/details/7c34d32446def64db7eb2cc359749fe5/tv-for-cats",
+   "storeurl": "https://channelstore.roku.com/details/374854f41bc07ae79db5f49add87d24c:673c4b59965ffef7ac2e74eefdaf94e6/roku-developers",
          …  &lt;additional fields&gt;
 }</code></pre>
         The <strong>Developer URL</strong> field is also provided (and discoverable) in an app's Streaming Store page <code>&lt;head&gt;</code> section:

@@ -405,7 +405,7 @@ When reviewing a title:
 3. Check the overall **Status** to understand overall readiness.
 4. Review **Territories** to understand rights coverage.
 
-   If the status shows something like: “1 of 3 unfulfilled”, expand the row to identify which territories are impacted.
+   If the status shows something like “1 of 3 unfulfilled,” expand the row to identify which territories are impacted.
 5. Finally, check the **Expected** timing:
 
    * **Expected start date** → When the title will become available

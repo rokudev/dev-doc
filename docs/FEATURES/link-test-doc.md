@@ -5,6 +5,13 @@ hidden: true
 metadata:
   robots: index
 ---
+|                                                                                                                  |    |    |
+| :--------------------------------------------------------------------------------------------------------------- | :- | :- |
+| see the following [doc](doc:setting-up-web-services#roku-pay-api-key) for more information on setting up web key |    |    |
+|                                                                                                                  |    |    |
+
+<br />
+
 see the following [doc](doc:setting-up-web-services#roku-pay-api-key) for more information on setting up web key
 
 Table - full URL ([https://roku-ent.readme.io/dev/docs/setting-up-web-services#roku-pay-api-key](https://roku-ent.readme.io/dev/docs/setting-up-web-services#roku-pay-api-key))

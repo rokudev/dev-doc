@@ -434,8 +434,8 @@ By default, titles are sorted by the date they were added, with the most recentl
 
 For TV content, additional sorting rules apply:
 
-* TV seasons are ordered by **Season number**.
-* TV episodes are ordered by **Episode number** within each season.
+* TV seasons are ordered by **season number**.
+* TV episodes are ordered by **episode number** within each season.
 
 This ensures that:
 

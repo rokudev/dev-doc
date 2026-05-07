@@ -175,7 +175,7 @@ If these conditions are not met, the system will block publishing until issues a
 
 <Image align="center" caption="Helps identify and prevent conflicts when multiple titles are pinned to the same position." src="https://files.readme.io/6133d28e246cb27b49f00c5e4a191cd2d5db08bb8f36491ff88f155a674daf4f-image.png" width="60% " />
 
-<Image align="center" caption="Recommends limiting pin duration to no more than 3 days to maximize customer engagement." src="https://files.readme.io/156f5310fedee3ffb7cc370247321abef0ed320f594a8ee9951a9bec3e93e93d-image.png" width="70% " />
+<Image align="center" caption="Recommends limiting pin duration to no more than 3 days to maximize consumer engagement." src="https://files.readme.io/156f5310fedee3ffb7cc370247321abef0ed320f594a8ee9951a9bec3e93e93d-image.png" width="70% " />
 
 <br />
 

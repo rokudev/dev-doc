@@ -34,7 +34,7 @@ Pinned titles appear alongside Roku recommendations, giving you a balance of con
 
 # Who this is for
 
-Storefront is available to content partners who manage **Premium Subscription** storefronts on the platform.
+Storefront is available to eligible content partners who manage **Premium Subscription** storefronts on the platform.
 
 This feature is designed for teams responsible for marketing, merchandising, and audience growth, enabling them to control how titles are promoted within their Premium Subscription pages.
 

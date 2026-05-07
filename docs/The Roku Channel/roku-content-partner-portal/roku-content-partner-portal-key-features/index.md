@@ -24,7 +24,7 @@ Want to learn more, check out [Title tracking status](doc:roku-content-partner-p
 
 # Storefront
 
-Manage how your content is presented to customers. The storefront feature allows you to curate featured titles, pin content for promotion, and influence merchandising within your channel experience to drive engagement.
+Manage how your content is presented to consumers. The storefront feature allows you to curate featured titles, pin content for promotion, and influence merchandising within your channel experience to drive engagement.
 
 <Callout icon="🔒" theme="default">
   Available only to Premium Subscription partners.

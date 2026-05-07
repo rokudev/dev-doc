@@ -18,7 +18,7 @@ The Roku Content Partner Portal brings together the core tools you need to manag
 
 # Title tracking status
 
-Track the progress of your content from delivery through publication. Title tracking status provides clear visibility into where each title is in the pipeline, helping you quickly identify delays, resolve issues, and stay aligned with launch timelines.
+Track the progress of your content from delivery through publication. Title tracking status provides clear visibility into where each title is in the Roku content pipeline, helping you quickly identify delays, resolve issues, and stay aligned with launch timelines.
 
 Want to learn more, check out [Title tracking status](doc:roku-content-partner-portal-title-tracking-status).
 

@@ -1,11 +1,11 @@
 ---
 title: How apps work
-excerpt: ''
+excerpt: 'Overview of how Roku apps are built, hosted, and distributed to users'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'How apps work | Roku Developer Docs'
+  description: 'Learn how a Roku app is developed and distributed, covering content hosting with OVPs and CDNs, feed formats, and the two app development models.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Monetization
-excerpt: ''
+excerpt: 'Explore monetization options including ads, subscriptions, and Roku Pay payouts'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Monetization | Roku Developer Docs'
+  description: 'Overview of app monetization options on the Roku platform, including video advertisements, subscriptions, in-app purchases, and publisher payouts via Roku Pay.'
   robots: index
 next:
   description: ''

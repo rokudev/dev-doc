@@ -1,11 +1,11 @@
 ---
 title: Developer Dashboard
-excerpt: ''
+excerpt: 'Central hub for managing apps, Roku Pay products, analytics, and more'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Developer Dashboard | Roku Developer Docs'
+  description: 'The Developer Dashboard is the central hub for managing apps, Roku Pay products, search feeds, analytics, and the partner payouts program.'
   robots: index
 next:
   description: ''

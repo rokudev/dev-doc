@@ -1,11 +1,11 @@
 ---
 title: Sales Activity Report
-excerpt: ''
+excerpt: 'View app revenue from transactions, refunds, and subscription cancellations'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Sales Activity Report | Roku Developer Docs'
+  description: 'The Sales Activity Report displays app revenue from transactions, refunds, and subscription cancellations over a given month for a selected app.'
   robots: index
 next:
   description: ''

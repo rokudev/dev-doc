@@ -1,11 +1,11 @@
 ---
 title: User access management
-excerpt: ''
+excerpt: 'Invite team members and assign roles and permissions to your developer account'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'User access management | Roku Developer Docs'
+  description: 'Use the Roles and access page to invite team members, assign roles and permissions, manage user accounts, and view activity logs for your developer account.'
   robots: index
 next:
   description: ''

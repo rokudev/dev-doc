@@ -1,11 +1,11 @@
 ---
 title: "App Engagement Report"
-excerpt: ''
+excerpt: 'Analyze streaming activity, installs, and viewer engagement data for your app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'App Engagement Report | Roku Developer Docs'
+  description: 'The App Engagement Report helps you grow your audience by analyzing streaming activity, install base size, bounce rate, and minutes streamed over time.'
   robots: index
 next:
   description: ''

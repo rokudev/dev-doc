@@ -1,11 +1,11 @@
 ---
 title: "Tax Withholding Report"
-excerpt: ''
+excerpt: 'Monthly payout breakdown covering revenue share, tax withholding, and currency conversion'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Tax Withholding Report | Roku Developer Docs'
+  description: 'The Tax Withholding Report lists monthly payouts from Roku, showing gross revenue, revenue share, tax withheld, and net payable amount for your app.'
   robots: index
 next:
   description: ''

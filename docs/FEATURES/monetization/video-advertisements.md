@@ -1,11 +1,11 @@
 ---
 title: Video advertisements
-excerpt: ''
+excerpt: 'Overview of Roku video ad monetization models and RAF implementation requirements'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Video advertisements | Roku Developer Docs'
+  description: 'Apps on the Roku platform use either the Inventory Split model or the Roku Sales Representation Program, and must implement RAF for video advertisements.'
   robots: index
 next:
   description: ''

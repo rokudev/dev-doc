@@ -1,11 +1,11 @@
 ---
 title: Content engagement
-excerpt: ''
+excerpt: 'Overview of promotional and discovery tools for driving app engagement on Roku'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Content engagement | Roku Developer Docs'
+  description: 'Documents the content engagement tools available to app publishers, including Roku Search, Instant Signup, Featured Free, and home screen display ads.'
   robots: index
 next:
   description: ''

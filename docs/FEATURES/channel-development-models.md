@@ -1,11 +1,11 @@
 ---
 title: App development models
-excerpt: ''
+excerpt: 'Overview of Roku SDK app development models, features, and API capabilities'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'App development models | Roku Developer Docs'
+  description: 'Build a Roku app using the Roku SDK, which provides UI customization, DRM support, billing models, user authentication, and third-party analytics.'
   robots: index
 next:
   description: ''

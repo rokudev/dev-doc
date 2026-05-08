@@ -1,12 +1,13 @@
 ---
 title: Transaction Report
+excerpt: 'Query and export Roku Pay purchases, refunds, renewals, and cancellations'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Transaction Report | Roku Developer Docs'
+  description: 'Use the Roku Pay Transaction Report in the Developer Dashboard to query purchases, refunds, renewals, and cancellations, then export as CSV.'
   robots: index
 ---
 You can use the Roku Pay Transaction Report in the Developer Dashboard to view and analyze transactions on your app. The report lets you query and analyze historical purchases, refunds, renewals, and cancellations. You can view the generated report in your web browser, or you can export or email the report as a spreadsheet, tab-separated text (TXT) file, comma-separated value (CSV) file, or as a chart.

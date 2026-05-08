@@ -1,11 +1,11 @@
 ---
 title: Roku platform overview
-excerpt: ''
+excerpt: 'Key resources for distributing and monetizing content on the Roku platform'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku platform overview | Roku Developer Docs'
+  description: 'Overview of the Roku platform for content publishers, covering apps, The Roku Channel, monetization, analytics, security, and the Roku Developer Program.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: SceneGraph XML
-excerpt: ''
+excerpt: 'How SceneGraph uses nodes, XML fields, and tree traversal to render and animate scenes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph XML | Roku Developer Docs'
+  description: 'SceneGraph uses a tree structure of nodes and XML files to define fields, rendering order, animations, and key event propagation.'
   robots: index
 next:
   description: ''

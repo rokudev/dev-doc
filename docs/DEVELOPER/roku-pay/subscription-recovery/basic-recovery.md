@@ -1,11 +1,11 @@
 ---
 title: Basic Subscription Recovery
-excerpt: ''
+excerpt: 'Handle failed auto-renewals with a 3-day grace period and daily emails'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Basic Subscription Recovery | Roku Developer Docs'
+  description: 'Basic subscription recovery gives customers a 3-day grace period when auto-renewal fails, while Roku Pay emails them daily to update their MOP.'
   robots: index
 next:
   description: ''

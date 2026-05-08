@@ -1,11 +1,11 @@
 ---
 title: Voice controls
-excerpt: ''
+excerpt: 'Handle voice commands for playback control and profile selection in your app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Voice controls | Roku Developer Docs'
+  description: 'Voice controls enable apps to handle commands from the Roku voice remote and mobile app to control content playback and select user profiles.'
   robots: index
 next:
   description: ''

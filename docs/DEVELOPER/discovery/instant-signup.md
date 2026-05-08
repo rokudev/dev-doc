@@ -1,11 +1,11 @@
 ---
 title: Instant Signup
-excerpt: ''
+excerpt: 'Let customers subscribe to your app during Roku device activation with no extra steps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Instant Signup | Roku Developer Docs'
+  description: 'Integrate Roku''s Instant Signup program to let customers subscribe to your app during device activation and access content without additional steps.'
   robots: index
 next:
   description: ''

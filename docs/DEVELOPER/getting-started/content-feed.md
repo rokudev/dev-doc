@@ -1,11 +1,11 @@
 ---
 title: Creating a content feed
-excerpt: ''
+excerpt: 'Build a cloud-hosted content feed to connect your catalog to your Roku app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating a content feed | Roku Developer Docs'
+  description: 'Learn how to create and host a content feed for your Roku app, including metadata fields like title, description, artwork, and URL for each catalog item.'
   robots: index
 next:
   description: ''

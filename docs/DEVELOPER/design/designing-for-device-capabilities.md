@@ -1,11 +1,11 @@
 ---
 title: Designing for devices
-excerpt: ''
+excerpt: 'Build apps that adapt across Roku devices from entry-level to 4K HDR'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Designing for devices | Roku Developer Docs'
+  description: 'Learn how to build apps that adapt to different Roku device capabilities, from entry-level set-top-boxes to 4K HDR TVs, and gracefully degrade on older models.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "SceneGraph core concepts"
-excerpt: ''
+excerpt: 'Core concepts of the SceneGraph framework for Roku app development'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph core concepts | Roku Developer Docs'
+  description: 'Learn the SceneGraph framework''s core concepts, including XML configuration of screens, threading, event handling, data scoping, and graceful degradation.'
   robots: index
 next:
   description: ''

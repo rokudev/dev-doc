@@ -1,11 +1,11 @@
 ---
 title: Packaging Roku apps
-excerpt: ''
+excerpt: 'Package, sign, and rekey Roku apps for Streaming Store distribution'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Packaging Roku apps | Roku Developer Docs'
+  description: 'Package a sideloaded Roku app for distribution using the Development Application Installer, generate a signing key with genkey, and rekey the device.'
   robots: index
 next:
   description: ''

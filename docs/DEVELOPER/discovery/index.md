@@ -1,10 +1,11 @@
 ---
 title: Discovery
+excerpt: 'Overview of content discovery features for driving app engagement and retention'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Discovery | Roku Developer Docs'
+  description: 'Explore Roku''s content discovery features, including Roku Search, deep linking, Instant Signup, Continue Watching, and Direct to Play, to drive app engagement.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Advertising
-excerpt: ''
+excerpt: 'Overview of RAF features for integrating video ads into Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Advertising | Roku Developer Docs'
+  description: 'The Roku Advertising Framework (RAF) integrates video advertising into apps, supporting VAST2, VAST3, VMAP, client-side ad stitching, and audience measurement.'
   robots: index
 next:
   description: ''

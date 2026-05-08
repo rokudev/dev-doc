@@ -1,11 +1,11 @@
 ---
 title: Certification testing tool
-excerpt: ''
+excerpt: 'Verify app performance and deep linking requirements before submitting for publishing'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Certification testing tool | Roku Developer Docs'
+  description: 'Use the self-serve certification testing tool in the Developer Dashboard to verify that your apps meet performance and deep linking certification requirements.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Sign-in requirements and best practices
-excerpt: ''
+excerpt: 'Streamline on-device sign-in workflows for SVOD and TVOD apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Sign-in requirements and best practices | Roku Developer Docs'
+  description: 'Streamline SVOD and TVOD app sign-ins using the RFI screen and on-device authentication via ChannelStore APIs to meet Roku Pay certification.'
   robots: index
 next:
   description: ''

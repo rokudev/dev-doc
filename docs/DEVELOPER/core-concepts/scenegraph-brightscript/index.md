@@ -1,10 +1,11 @@
 ---
 title: SceneGraph BrightScript
+excerpt: 'Using roSGScreen and roSGNode to integrate SceneGraph into BrightScript'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph BrightScript | Roku Developer Docs'
+  description: 'Reference page for SceneGraph BrightScript. Two BrightScript objects, roSGScreen and roSGNode, enable SceneGraph scripting.'
   robots: index
 next:
   description: ''

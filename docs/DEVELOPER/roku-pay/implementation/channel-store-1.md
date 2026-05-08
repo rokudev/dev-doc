@@ -1,11 +1,11 @@
 ---
 title: SceneGraph ChannelStore
-excerpt: ''
+excerpt: 'ChannelStore node commands for purchasing, entitlements, and authentication'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph ChannelStore | Roku Developer Docs'
+  description: 'Use the ChannelStore node to manage on-device purchasing, entitlement, and authentication workflows in your app via commands like getCatalog and doOrder.'
   robots: index
 next:
   description: ''

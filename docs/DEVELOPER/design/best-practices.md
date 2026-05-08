@@ -1,11 +1,11 @@
 ---
 title: "Best practices"
-excerpt: ''
+excerpt: 'Guidelines covering performance, navigation, ads, and content organization for Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Best practices | Roku Developer Docs'
+  description: 'Apply best practices for performance, navigation, content organization, and ad experience to build apps that keep users engaged and trust your app.'
   robots: index
 next:
   description: ''

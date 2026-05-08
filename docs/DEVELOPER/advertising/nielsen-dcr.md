@@ -1,11 +1,11 @@
 ---
 title: "Implementing Nielsen Digital Content Ratings (DCR) measurement"
-excerpt: ''
+excerpt: 'Enable Nielsen DCR analytics and reporting for Roku app viewership'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Nielsen DCR measurement | Roku Developer Docs'
+  description: 'Integrate Nielsen Digital Content Ratings (DCR) measurement in Roku apps to report audience, reach, frequency, GRP, and time spent metrics to publishers.'
   robots: index
 next:
   description: ''

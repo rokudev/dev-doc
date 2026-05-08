@@ -1,11 +1,11 @@
 ---
 title: Enabling billing testing
-excerpt: ''
+excerpt: 'Designate a public or beta app for billing testing with Roku Pay'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Enabling billing testing | Roku Developer Docs'
+  description: 'Enable billing testing on a public or beta app to observe ChannelStore node output and avoid incurring charges by adding yourself as a Test User.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Optimization techniques
-excerpt: ''
+excerpt: 'Reduce SGNode copies, limit formatJSON, and manage memory for smoother frames'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Optimization techniques | Roku Developer Docs'
+  description: 'Apply techniques to improve channel performance by minimizing SGNode field access, limiting formatJSON use, and reducing memory to avoid frame drops.'
   robots: index
 next:
   description: ''

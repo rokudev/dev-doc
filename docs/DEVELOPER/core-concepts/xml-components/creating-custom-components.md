@@ -1,11 +1,11 @@
 ---
 title: Creating custom components
-excerpt: ''
+excerpt: 'Define and extend custom SceneGraph components using XML markup'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating custom components | Roku Developer Docs'
+  description: 'Define custom SceneGraph components in XML by extending Scene, Group, or built-in node classes and adding interface fields, scripts, and child nodes.'
   robots: index
 next:
   description: ''

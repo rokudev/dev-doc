@@ -1,11 +1,11 @@
 ---
 title: Roku Search
-excerpt: ''
+excerpt: 'Overview of Roku Search, including content discovery, deep linking, and My Feed'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Search | Roku Developer Docs'
+  description: 'Roku Search lets users find content by actor, director, or title, then launch an app directly to that content via deep linking or add results to My Feed.'
   robots: index
 next:
   description: ''

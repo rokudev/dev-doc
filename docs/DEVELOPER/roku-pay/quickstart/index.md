@@ -1,11 +1,11 @@
 ---
 title: Getting started
-excerpt: ''
+excerpt: 'Set up Roku Pay in an app and test purchases without incurring charges'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Getting started | Roku Developer Docs'
+  description: 'Set up Roku Pay in your app by enrolling in Partner Payouts, specifying monetization, adding in-app products, creating test users, and web services.'
   robots: index
 next:
   description: ''

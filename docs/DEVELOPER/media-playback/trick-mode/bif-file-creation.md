@@ -1,11 +1,11 @@
 ---
 title: "BIF file creation using the Roku BIF tool"
-excerpt: ''
+excerpt: 'Generate BIF files for trick mode thumbnails using the Roku command-line BIF tool'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BIF file creation using the Roku BIF tool | Roku Developer Docs'
+  description: 'Use the Roku BIF tool on Mac, Linux, or Windows to generate BIF files containing still images that support video trick modes in your channel.'
   robots: index
 next:
   description: ''

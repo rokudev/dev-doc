@@ -1,11 +1,11 @@
 ---
 title: Roku Advertising Framework release notes
-excerpt: ''
+excerpt: 'Changelog for Roku Advertising Framework versions 1.4 through 3.1'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Advertising Framework release notes | Roku Developer Docs'
+  description: 'Version history for the Roku Advertising Framework, covering new features, bug fixes, and the minimum Roku OS version required for each release.'
   robots: index
 next:
   description: ''

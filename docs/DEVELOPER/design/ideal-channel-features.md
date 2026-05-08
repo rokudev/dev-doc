@@ -1,11 +1,11 @@
 ---
 title: "Ideal app features"
-excerpt: ''
+excerpt: 'Capabilities and features that enhance the value of your Roku app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Ideal app features | Roku Developer Docs'
+  description: 'Explore app capabilities users expect, including content search, bookmarking, resuming playback, video scrubbing, and one-click Roku Pay transactions.'
   robots: index
 next:
   description: ''

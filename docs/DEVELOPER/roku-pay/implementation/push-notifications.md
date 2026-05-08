@@ -1,11 +1,11 @@
 ---
 title: Roku Pay push notifications reference
-excerpt: ''
+excerpt: 'Reference for Roku Pay push notification transaction types and JSON payload examples'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Pay push notifications reference | Roku Developer Docs'
+  description: 'Roku Pay push notifications send billing data to a publisher''s web server when transactions occur, including purchases, cancellations, refunds, and credits.'
   robots: index
 next:
   description: ''

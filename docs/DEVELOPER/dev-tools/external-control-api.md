@@ -1,11 +1,11 @@
 ---
 title: External Control Protocol (ECP)
-excerpt: ''
+excerpt: 'Control a Roku device over your local network using ECP commands and SSDP discovery'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'External Control Protocol (ECP) | Roku Developer Docs'
+  description: 'Use ECP to control a Roku device over a local area network via a RESTful API on port 8060, supporting keypress, device info queries, and deep linking.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Roku advertising requirements
-excerpt: ''
+excerpt: 'Certification requirements for video and interactive ads in Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku advertising requirements | Roku Developer Docs'
+  description: 'Review the requirements for displaying video and interactive ads in an app, covering RAF integration, measurement beacons, privacy, and ad break playback rules.'
   robots: index
 next:
   description: ''

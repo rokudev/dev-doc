@@ -1,11 +1,11 @@
 ---
 title: Catalog 2.0 API integration guide
-excerpt: ''
+excerpt: 'Step-by-step guide to integrating add-ons and purchase options using Catalog 2.0 APIs'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Catalog 2.0 API integration guide | Roku Developer Docs'
+  description: 'Integrate add-ons in your app using the Catalog 2.0 APIs, including GetCatalog, QueryPurchaseOptions, DoOrder, and GetAllPurchases ChannelStore commands.'
   robots: index
 next:
   description: ''

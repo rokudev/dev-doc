@@ -1,11 +1,11 @@
 ---
 title: "Automatic Account Link"
-excerpt: ''
+excerpt: 'Authenticate customers automatically across Roku devices using stored access tokens'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Automatic Account Link | Roku Developer Docs'
+  description: 'Implement Automatic Account Link to authenticate customers using an access token stored in the device registry or Roku cloud across multiple Roku devices.'
   robots: index
 next:
   description: ''

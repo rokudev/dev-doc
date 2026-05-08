@@ -1,11 +1,11 @@
 ---
 title: Manifest file
-excerpt: ''
+excerpt: 'Required and optional manifest attributes for every Roku app package'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Manifest file | Roku Developer Docs'
+  description: 'Configure the manifest file required at the root level of every Roku app, covering required attributes like title, version, app icons, and splash screen images.'
   robots: index
 next:
   description: ''

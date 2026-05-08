@@ -1,11 +1,11 @@
 ---
 title: Controlling screen program flow
-excerpt: ''
+excerpt: 'Structure custom components and manage screen element flow in your app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Controlling screen program flow | Roku Developer Docs'
+  description: 'Learn how to control screen program flow using custom components, remote control focus, and z-order changes to build a VOD category list with MarkupList nodes.'
   robots: index
 next:
   description: ''

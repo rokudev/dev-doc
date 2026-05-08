@@ -1,11 +1,11 @@
 ---
 title: "Remote control buttons"
-excerpt: ''
+excerpt: 'Overview of Roku remote buttons, their commands, and expected user behavior'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Remote control buttons | Roku Developer Docs'
+  description: 'Learn the standard behavior for each Roku remote button, including the dPad, Back, Star, Play/Pause, Instant Replay, and Rewind/Fast-forward controls.'
   robots: index
 next:
   description: ''

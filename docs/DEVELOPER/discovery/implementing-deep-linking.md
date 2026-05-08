@@ -1,11 +1,11 @@
 ---
 title: Deep linking
-excerpt: ''
+excerpt: 'Accept and handle deep link parameters to launch content directly from the Roku UI'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Deep linking | Roku Developer Docs'
+  description: 'Implement deep linking in your app by accepting contentId and mediaType parameters to launch content directly from Roku Search and home screen banners.'
   robots: index
 next:
   description: ''

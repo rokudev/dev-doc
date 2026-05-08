@@ -1,11 +1,11 @@
 ---
 title: Taking the online video course
-excerpt: ''
+excerpt: 'A 13-lesson video course guiding developers through building a Roku app from scratch'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Taking the online video course | Roku Developer Docs'
+  description: 'Learn to build a Roku app through the SceneGraph: Build an app video course, featuring 13 lessons and a sample app covering each step to certification.'
   robots: index
 next:
   description: ''

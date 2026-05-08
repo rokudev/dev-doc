@@ -1,11 +1,11 @@
 ---
 title: Continue Watching
-excerpt: ''
+excerpt: 'Display and resume in-progress content from the What to Watch home screen row'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Continue Watching | Roku Developer Docs'
+  description: 'Integrate your app with Continue Watching to display in-progress content on the What to Watch screen and let customers resume playback across Roku devices.'
   robots: index
 next:
   description: ''

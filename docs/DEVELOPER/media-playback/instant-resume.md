@@ -1,11 +1,11 @@
 ---
 title: Instant Resume
-excerpt: ''
+excerpt: 'Save app state on exit and restore live or VOD playback on relaunch'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Instant Resume | Roku Developer Docs'
+  description: 'Implement Instant Resume to save app state on exit and restore live or VOD playback within seconds when users relaunch the app on their Roku device.'
   robots: index
 next:
   description: ''

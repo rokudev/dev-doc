@@ -1,11 +1,11 @@
 ---
 title: Testing a Roku Pay app
-excerpt: ''
+excerpt: 'Step-by-step verification of Roku Pay purchase and entitlement workflows'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Testing a Roku Pay app | Roku Developer Docs'
+  description: 'Verify entitlement, purchase, and subscription workflows in your Roku Pay app by testing getAllPurchases, getChannelCred, and validate-transaction calls.'
   robots: index
 next:
   description: ''

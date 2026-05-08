@@ -1,12 +1,13 @@
 ---
 title: Specifying display resolution
+excerpt: 'Set target resolutions and enable automatic scaling across SD, HD, and FHD'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Specifying display resolution | Roku Developer Docs'
+  description: 'Specify intended display resolutions in the manifest file and use automatic scaling across SD, HD, and FHD displays for your application.'
   robots: index
 ---
 

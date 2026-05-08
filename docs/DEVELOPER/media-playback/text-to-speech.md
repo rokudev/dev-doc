@@ -1,11 +1,11 @@
 ---
 title: "Text to speech"
-excerpt: ''
+excerpt: 'Add audible spoken output to your app using the TTS components and screen reader behaviors'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Text to speech | Roku Developer Docs'
+  description: 'Use text to speech (TTS) in your app to provide audible spoken versions of UI strings, supporting different languages, voices, rates of speech, and volume.'
   robots: index
 next:
   description: ''

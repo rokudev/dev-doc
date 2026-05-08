@@ -1,11 +1,11 @@
 ---
 title: Activating developer mode
-excerpt: ''
+excerpt: 'Enable developer mode and sideload apps on your Roku device using the web plug-in'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Activating developer mode | Roku Developer Docs'
+  description: 'Activate developer mode on your Roku device, sideload apps using the Development Application Installer, and use plug-in tools for packaging and profiling.'
   robots: index
 next:
   description: ''

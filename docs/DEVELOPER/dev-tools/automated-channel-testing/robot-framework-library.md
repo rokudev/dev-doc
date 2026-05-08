@@ -1,11 +1,11 @@
 ---
 title: Roku Robot Framework Library
-excerpt: ''
+excerpt: 'Keyword-driven testing library for automating app tests on Roku devices'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Robot Framework Library | Roku Developer Docs'
+  description: 'Use the Roku Robot Framework Library to build keyword-driven tests that sideload apps, send keys, verify playback, and inspect elements on your device.'
   robots: index
 next:
   description: ''

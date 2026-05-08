@@ -1,11 +1,11 @@
 ---
 title: Creating TVOD apps (Catalog 1.0)
-excerpt: ''
+excerpt: 'Implement transactional video on demand with Roku Pay and the ChannelStore node'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating TVOD apps (Catalog 1.0) | Roku Developer Docs'
+  description: 'Create TVOD apps using Roku Pay by setting up in-app products and using the ChannelStore node to handle rental and purchase transactions.'
   robots: index
 next:
   description: ''

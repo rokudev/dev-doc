@@ -1,11 +1,11 @@
 ---
 title: Eclipse IDE support
-excerpt: ''
+excerpt: 'Discontinued Roku plugin for Eclipse for developing and packaging apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Eclipse IDE support | Roku Developer Docs'
+  description: 'Install the Roku plugin for Eclipse to develop, test, package, and install apps on Roku devices with syntax coloring and code completion.'
   robots: index
 next:
   description: ''

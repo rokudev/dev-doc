@@ -1,11 +1,11 @@
 ---
 title: "Static Analysis tests"
-excerpt: ''
+excerpt: 'Verify app BrightScript code against Roku certification criteria'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Static Analysis tests | Roku Developer Docs'
+  description: 'Apps must pass Static Analysis testing to be published to the Streaming Store; the tool verifies BrightScript code against certification criteria.'
   robots: index
 next:
   description: ''

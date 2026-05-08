@@ -1,11 +1,11 @@
 ---
 title: On-device upgrade and downgrade
-excerpt: ''
+excerpt: 'Switch subscription plans on-device using Roku Pay upgrade and downgrade actions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'On-device upgrade and downgrade | Roku Developer Docs'
+  description: 'Implement on-device subscription upgrades and downgrades in apps with Roku Pay using the doOrder command and validate transaction API responses.'
   robots: index
 next:
   description: ''

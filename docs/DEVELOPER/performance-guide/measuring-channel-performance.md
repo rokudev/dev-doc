@@ -1,11 +1,11 @@
 ---
 title: Measuring app performance
-excerpt: ''
+excerpt: 'Track app launch, video start, and EPG performance using signal beacons'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Measuring app performance | Roku Developer Docs'
+  description: 'Use signal beacons and the BrightScript console to measure app launch, video start, EPG launch, and other performance metrics required for certification.'
   robots: index
 next:
   description: ''

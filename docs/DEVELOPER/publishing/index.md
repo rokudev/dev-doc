@@ -1,11 +1,11 @@
 ---
 title: Publishing
-excerpt: ''
+excerpt: 'Pre-publishing checklist covering content rights, compliance, and regional discovery'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Publishing | Roku Developer Docs'
+  description: 'Review the pre-publishing checklist to ensure your app complies with content rights, regional regulations, localization, and discovery requirements.'
   robots: index
 next:
   description: ''

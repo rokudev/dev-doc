@@ -1,11 +1,11 @@
 ---
 title: Playing Videos
-excerpt: ''
+excerpt: 'Play videos using the Video node, ContentNode, and Content Meta-Data'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Playing Videos | Roku Developer Docs'
+  description: 'Play videos in your app using the Video node, a ContentNode, and Content Meta-Data attributes to configure playback, buffering, playlists, and trick play.'
   robots: index
 next:
   description: ''

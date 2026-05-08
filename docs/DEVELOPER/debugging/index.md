@@ -1,11 +1,11 @@
 ---
 title: Debugging
-excerpt: ''
+excerpt: 'Access debug console commands, telnet ports, and troubleshooting tools for Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Debugging | Roku Developer Docs'
+  description: 'Use the debug console, telnet ports, and interactive debugger to view crash logs, stack traces, and app performance metrics while developing your Roku app.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Bookmarking"
-excerpt: ''
+excerpt: 'Two methods for saving and retrieving media playback position in your app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Bookmarking | Roku Developer Docs'
+  description: 'Save and restore a user''s playback position in VOD content using the service backend or the device registry, with timestamps stored every 30 seconds.'
   robots: index
 next:
   description: ''

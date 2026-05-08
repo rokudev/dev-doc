@@ -1,11 +1,11 @@
 ---
 title: "Transitioning to SceneGraph"
-excerpt: ''
+excerpt: 'Guidance for migrating existing Roku API apps to SceneGraph node-based architecture'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Transitioning to SceneGraph | Roku Developer Docs'
+  description: 'Learn how to migrate from the older Roku API to SceneGraph by replacing BrightScript component interface calls with node class field reads and writes.'
   robots: index
 next:
   description: ''

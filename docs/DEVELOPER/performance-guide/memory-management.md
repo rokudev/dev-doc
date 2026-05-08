@@ -1,11 +1,11 @@
 ---
 title: "Memory management"
-excerpt: ''
+excerpt: 'Diagnose and resolve texture memory and DRAM issues on Roku devices'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Memory management | Roku Developer Docs'
+  description: 'Learn how texture memory and DRAM affect app performance on Roku devices, and use r2d2_bitmaps or loaded_textures commands to diagnose and fix memory issues.'
   robots: index
 next:
   description: ''

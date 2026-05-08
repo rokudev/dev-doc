@@ -1,11 +1,11 @@
 ---
 title: "Trick mode"
-excerpt: ''
+excerpt: 'Visual feedback during seek, forward, and rewind playback operations'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Trick mode | Roku Developer Docs'
+  description: 'Trick mode provides visual feedback during seek, forward, and rewind, using scene-based thumbnails from BIF, HLS, or DASH files or a time-based fallback.'
   robots: index
 next:
   description: ''

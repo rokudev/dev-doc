@@ -1,11 +1,11 @@
 ---
 title: Selecting user profiles with Roku Voice
-excerpt: ''
+excerpt: 'Prompt viewers to select a user profile via Roku Voice'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Selecting user profiles with Roku Voice | Roku Developer Docs'
+  description: 'Add hands-free voice profile selection to your app using StartVoiceActionSelectionRequest and SetVoiceActionStrings with the roInput voice command handler.'
   robots: index
 next:
   description: ''

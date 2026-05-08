@@ -1,11 +1,11 @@
 ---
 title: DRM & content protection
-excerpt: ''
+excerpt: 'Supported DRM schemes and HDCP copy protection details for Roku devices'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'DRM & content protection | Roku Developer Docs'
+  description: 'Lists supported DRM schemes including PlayReady, Widevine, and AES-128 across HLS, DASH, and Smooth, plus HDCP copy protection details for Roku devices.'
   robots: index
 next:
   description: ''

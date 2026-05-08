@@ -1,11 +1,11 @@
 ---
 title: Roku OS support for DASH-IF
-excerpt: ''
+excerpt: 'Known discrepancies between DASH-IF Interoperability Points and Roku OS'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku OS support for DASH-IF | Roku Developer Docs'
+  description: 'Lists known discrepancies between the DASH-IF Interoperability Points version 4.3 and Roku OS support, covering IOPs, UTCTiming, and SegmentTimeline.'
   robots: index
 next:
   description: ''

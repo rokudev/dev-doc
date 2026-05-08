@@ -1,11 +1,11 @@
 ---
 title: "Streaming Store graphics"
-excerpt: ''
+excerpt: 'Graphic specifications for app posters, splash screens, and TV safe zones'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Streaming Store graphics | Roku Developer Docs'
+  description: 'Specifies graphic requirements for app posters, splash screens, and safe zones, including Title Safe Zone and Action Safe Zone dimensions for FHD, HD, and SD.'
   robots: index
 next:
   description: ''

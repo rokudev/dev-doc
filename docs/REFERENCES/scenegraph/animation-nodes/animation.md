@@ -1,11 +1,11 @@
 ---
 title: Animation
-excerpt: ''
+excerpt: 'Animates renderable node fields using interpolator functions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Animation'
+  description: 'The Animation node animates renderable node fields by applying interpolator functions such as linear, quadratic, exponential, or piecewise easing.'
   robots: index
 next:
   description: ''

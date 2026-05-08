@@ -1,11 +1,11 @@
 ---
 title: ifMessagePort
-excerpt: ''
+excerpt: 'Interface providing WaitMessage, GetMessage, and PeekMessage methods'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifMessagePort'
+  description: 'Describes the ifMessagePort interface, which provides WaitMessage, GetMessage, and PeekMessage methods for retrieving event objects from a message queue.'
   robots: index
 next:
   description: ''

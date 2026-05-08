@@ -1,11 +1,11 @@
 ---
 title: "Adding the Video Player"
-excerpt: ''
+excerpt: 'Learn to integrate the Video node, manage playback, and handle back button events'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Adding the Video Player | Roku Developer Docs'
+  description: 'Video walkthrough showing how to add a Video node to your app, link it to content, and handle playback and back button events on the Roku remote.'
   robots: index
 next:
   description: ''

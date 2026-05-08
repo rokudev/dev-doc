@@ -1,11 +1,11 @@
 ---
 title: "Enhanced Subscription Recovery Webinar"
-excerpt: ''
+excerpt: 'July 2024 webinar on implementing the Enhanced Subscription Recovery feature'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Enhanced Subscription Recovery Webinar | Roku Developer Docs'
+  description: 'Reference page for Enhanced Subscription Recovery Webinar. A July 2024 webinar covering how to implement, test, and enable this feature.'
   robots: index
 next:
   description: ''

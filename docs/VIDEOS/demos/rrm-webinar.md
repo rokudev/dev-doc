@@ -1,11 +1,11 @@
 ---
 title: "Roku Resource Monitor Webinar"
-excerpt: ''
+excerpt: 'Video webinar on using the Roku Resource Monitor to track resource consumption'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Resource Monitor Webinar | Roku Developer Docs'
+  description: 'Video walkthrough from September 2022 covering how to use the Roku Resource Monitor to identify resource consumption trends and patterns in apps.'
   robots: index
 next:
   description: ''

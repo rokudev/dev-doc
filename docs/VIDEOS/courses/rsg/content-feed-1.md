@@ -1,11 +1,11 @@
 ---
 title: Creating the content feed
-excerpt: ''
+excerpt: 'Learn how the content feed loads and organizes content in the app UI'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating the content feed | Roku Developer Docs'
+  description: 'Video lesson explaining how the content feed is used to load and organize content in the app UI, including tips for creating and hosting your own feed.'
   robots: index
 next:
   description: ''

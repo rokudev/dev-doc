@@ -1,11 +1,11 @@
 ---
 title: "Roku Advertising Watermark Webinar"
-excerpt: ''
+excerpt: 'Video webinar on the Roku Advertising Watermark for publishers and developers'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Advertising Watermark Webinar | Roku Developer Docs'
+  description: 'Reference page for Roku Advertising Watermark Webinar. Video covering watermark integration for publishers, advertisers, and partners.'
   robots: index
 next:
   description: ''

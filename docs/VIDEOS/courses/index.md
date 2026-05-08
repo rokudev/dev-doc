@@ -1,11 +1,11 @@
 ---
 title: Development courses
-excerpt: ''
+excerpt: 'Instructor-led video courses covering Roku app development from the ground up'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Development courses | Roku Developer Docs'
+  description: 'Index of online development courses for Roku developers, featuring instructor-led video lessons on building apps, integrating features, and testing.'
   robots: index
 next:
   description: ''

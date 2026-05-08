@@ -1,11 +1,11 @@
 ---
 title: "Introduction to the course"
-excerpt: ''
+excerpt: 'Video lesson introducing the Roku SceneGraph development course'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Introduction to the course | Roku Developer Docs'
+  description: 'Video introduction to the Roku SceneGraph development course, covering requirements such as a Roku user account, developer program, and a Roku device.'
   robots: index
 next:
   description: ''

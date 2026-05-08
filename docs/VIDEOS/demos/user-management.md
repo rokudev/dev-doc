@@ -1,11 +1,11 @@
 ---
 title: "Managing user access"
-excerpt: ''
+excerpt: 'Video walkthrough of the User Management feature in the Developer Dashboard'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Managing user access | Roku Developer Docs'
+  description: 'Reference page for Managing user access. Video explaining how to use the User Management feature to assign roles to team members.'
   robots: index
 next:
   description: ''

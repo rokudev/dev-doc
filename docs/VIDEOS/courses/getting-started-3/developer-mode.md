@@ -1,11 +1,11 @@
 ---
 title: "Enabling Developer Mode"
-excerpt: ''
+excerpt: 'How to enable Developer Mode on your Roku device to sideload and test apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Enabling Developer Mode | Roku Developer Docs'
+  description: 'Video walkthrough demonstrating how to enable Developer Mode on your Roku device so you can sideload and test your development apps.'
   robots: index
 next:
   description: ''

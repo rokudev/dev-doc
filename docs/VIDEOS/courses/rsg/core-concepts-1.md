@@ -1,11 +1,11 @@
 ---
 title: Core concepts
-excerpt: ''
+excerpt: 'Video overview of core design principles and key concepts for Roku app development'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Core concepts | Roku Developer Docs'
+  description: 'Video lesson covering core concepts for Roku app development, including threading, event handling, data scoping, and graceful degradation in app design.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Trickplay Thumbnail Webinar"
-excerpt: ''
+excerpt: 'Webinar covering trickplay thumbnail integration, formats, and certification requirements'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Trickplay Thumbnail Webinar | Roku Developer Docs'
+  description: 'Video webinar from May 2022 demonstrating how to integrate trickplay thumbnails in an app, covering HLS, DASH, and BIF formats with certification requirements.'
   robots: index
 next:
   description: ''

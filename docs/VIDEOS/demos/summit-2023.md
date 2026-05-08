@@ -1,11 +1,11 @@
 ---
 title: "Developer Summit 2023"
-excerpt: ''
+excerpt: 'Keynote, panels, and demos from the Roku Developer Summit 2023'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Developer Summit 2023 | Roku Developer Docs'
+  description: 'Video recordings from the Roku Developer Summit 2023, held September 12-13, covering the keynote, panels on Roku Pay, video ads, and demos.'
   robots: index
 next:
   description: ''

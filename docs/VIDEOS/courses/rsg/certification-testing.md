@@ -1,11 +1,11 @@
 ---
 title: Certification testing
-excerpt: ''
+excerpt: 'Video lesson on preparing your app to pass Roku certification testing'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Certification testing | Roku Developer Docs'
+  description: 'Video lesson on preparing your app for publication using test automation, the Static Analysis tool, and the App Behavior Analysis tool for certification.'
   robots: index
 next:
   description: ''

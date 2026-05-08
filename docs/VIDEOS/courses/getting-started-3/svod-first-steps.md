@@ -1,11 +1,11 @@
 ---
 title: 'Creating an SVOD app: First steps'
-excerpt: ''
+excerpt: 'First steps for building a subscription app on the Roku streaming platform'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating an SVOD app: First steps | Roku Developer Docs'
+  description: 'Video walkthrough covering the first steps for creating a subscription app on Roku, including enrolling in the Roku developer program and integrating Roku Pay.'
   robots: index
 next:
   description: ''

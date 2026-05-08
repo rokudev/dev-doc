@@ -1,11 +1,11 @@
 ---
 title: "Creating a Grid Screen"
-excerpt: ''
+excerpt: 'Video lesson on displaying content feed videos in a grid of posters'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating a Grid Screen | Roku Developer Docs'
+  description: 'Video lesson on building an app that reads videos from a content feed and displays them in a grid of poster rows with metadata shown above the row.'
   robots: index
 next:
   description: ''

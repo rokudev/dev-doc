@@ -1,11 +1,11 @@
 ---
 title: "roRenderThreadQueue"
-excerpt: ''
+excerpt: 'Queues messages to be consumed by handlers on the render thread'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roRenderThreadQueue'
+  description: 'Reference page for roRenderThreadQueue. It queues messages for handlers on the render thread.'
   robots: index
 next:
   description: ''

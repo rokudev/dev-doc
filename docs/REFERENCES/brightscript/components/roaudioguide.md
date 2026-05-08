@@ -1,11 +1,11 @@
 ---
 title: "roAudioGuide"
-excerpt: ''
+excerpt: 'Screen reader support for custom speech in apps using roAudioGuide'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roAudioGuide'
+  description: 'The roAudioGuide component provides screen reader support for apps requiring custom speech beyond what the automatic screen reader in SDK components offers.'
   robots: index
 next:
   description: ''

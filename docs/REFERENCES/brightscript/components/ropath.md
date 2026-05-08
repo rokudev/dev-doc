@@ -1,11 +1,11 @@
 ---
 title: "roPath"
-excerpt: ''
+excerpt: 'Create and validate file system paths with convenience path inspection'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roPath'
+  description: 'The roPath component provides a way to create and validate file system paths, implementing ifString and additional path inspection via ifPath.'
   robots: index
 next:
   description: ''

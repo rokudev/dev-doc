@@ -1,11 +1,11 @@
 ---
 title: AnimationBase
-excerpt: ''
+excerpt: 'Abstract node class providing common fields for animation nodes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'AnimationBase'
+  description: 'AnimationBase is an abstract node class containing fields common to the Animation, SequentialAnimation, and ParallelAnimation nodes for animating elements.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "ifSocketConnectionStatus"
-excerpt: ''
+excerpt: 'Interface for checking socket connection error states on roStreamSocket'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSocketConnectionStatus'
+  description: 'Documents the ifSocketConnectionStatus interface, which provides methods to check socket connection errors including ECONNABORTED, ECONNRESET, and EISCONN.'
   robots: index
 next:
   description: ''

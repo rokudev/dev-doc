@@ -1,11 +1,11 @@
 ---
 title: ifHttpAgent
-excerpt: ''
+excerpt: 'Interface providing HTTP header, cookie, and SSL certificate management methods'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifHttpAgent'
+  description: 'Documents the ifHttpAgent interface, which provides methods for adding headers, managing cookies, and configuring SSL certificates for HTTP requests.'
   robots: index
 next:
   description: ''

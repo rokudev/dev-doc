@@ -1,11 +1,11 @@
 ---
 title: "ifFloat"
-excerpt: ''
+excerpt: 'Interface for getting and setting float values on a Float object'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifFloat'
+  description: 'Documents the ifFloat interface, which provides GetFloat and SetFloat methods for getting and setting the float value stored in a calling Float object.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "ifAudioMetadata"
-excerpt: ''
+excerpt: 'Interface for reading audio file tags, properties, and cover art'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifAudioMetadata'
+  description: 'Interface implemented by roAudioMetadata that sets the URL to an audio file and returns tags, audio properties, and cover art from the file.'
   robots: index
 next:
   description: ''

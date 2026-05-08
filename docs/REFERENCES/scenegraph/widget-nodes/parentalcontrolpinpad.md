@@ -1,11 +1,11 @@
 ---
 title: ParentalControlPinPad
-excerpt: ''
+excerpt: 'Variant of PinPad with private fields and a pinSuccess field'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ParentalControlPinPad'
+  description: 'ParentalControlPinPad is a variant of the PinPad with private pin, pinLength, and secureMode fields, and a pinSuccess field for blocking content.'
   robots: index
 next:
   description: ''

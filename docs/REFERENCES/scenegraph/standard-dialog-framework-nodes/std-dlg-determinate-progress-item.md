@@ -1,11 +1,11 @@
 ---
 title: "StdDlgDeterminateProgressItem"
-excerpt: ''
+excerpt: 'Node for displaying a determinate progress indicator in a dialog content area'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgDeterminateProgressItem'
+  description: 'StdDlgDeterminateProgressItem displays a progress indicator in a dialog''s content area, showing the completion percentage for a limited-time task.'
   robots: index
 next:
   description: ''

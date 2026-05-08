@@ -1,11 +1,11 @@
 ---
 title: TimeGrid
-excerpt: ''
+excerpt: 'Electronic Program Guide node with channel rows and program cells'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'TimeGrid'
+  description: 'The TimeGrid node implements an Electronic Program Guide with channels as horizontal rows and program cells sized by duration, plus a Now/Next mode.'
   robots: index
 next:
   description: ''

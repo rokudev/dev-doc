@@ -1,11 +1,11 @@
 ---
 title: "ifSocketOption"
-excerpt: ''
+excerpt: 'Methods for configuring TTL, buffer sizes, timeouts, and socket address options'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSocketOption'
+  description: 'Documents the ifSocketOption interface, which provides methods for getting and setting TTL, buffer sizes, timeouts, and address reuse options on sockets.'
   robots: index
 next:
   description: ''

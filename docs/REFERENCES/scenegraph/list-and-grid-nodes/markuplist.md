@@ -1,11 +1,11 @@
 ---
 title: MarkupList
-excerpt: ''
+excerpt: 'Generic list node rendering items via a custom XML component'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'MarkupList'
+  description: 'The MarkupList node is a generic list that displays items using an XML component specified by the itemComponentName field, with section divider support.'
   robots: index
 next:
   description: ''

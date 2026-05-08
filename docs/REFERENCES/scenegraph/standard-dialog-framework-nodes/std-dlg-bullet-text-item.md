@@ -1,11 +1,11 @@
 ---
 title: "StdDlgBulletTextItem"
-excerpt: ''
+excerpt: 'Node for rendering bulleted or numbered text lists in a dialog content area'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgBulletTextItem'
+  description: 'StdDlgBulletTextItem displays a bulleted list of text in a dialog''s content area and must be used as a child of a StdDlgContentArea node.'
   robots: index
 next:
   description: ''

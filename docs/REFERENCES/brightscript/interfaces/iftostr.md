@@ -1,11 +1,11 @@
 ---
 title: "ifToStr"
-excerpt: ''
+excerpt: 'Interface providing ToStr() methods for converting values to formatted strings'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifToStr'
+  description: 'Documents the ifToStr interface, which provides ToStr() methods to convert object values to strings, with optional printf-like format string support.'
   robots: index
 next:
   description: ''

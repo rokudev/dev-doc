@@ -1,11 +1,11 @@
 ---
 title: "ifProgramGuide"
-excerpt: ''
+excerpt: 'Interface for querying channels, programs, and version data from a program guide'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifProgramGuide'
+  description: 'Documents the ifProgramGuide interface, which provides methods to retrieve channel lists, program details, and version information from the program guide.'
   robots: index
 next:
   description: ''

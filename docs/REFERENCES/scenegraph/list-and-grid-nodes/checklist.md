@@ -1,11 +1,11 @@
 ---
 title: "CheckList"
-excerpt: ''
+excerpt: 'List node with per-item checkboxes for selecting or unselecting entries'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'CheckList'
+  description: 'The CheckList node class displays a list of items, some of which include checkboxes that allow the user to select or unselect that item in the list.'
   robots: index
 next:
   description: ''

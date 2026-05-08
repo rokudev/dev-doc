@@ -1,11 +1,11 @@
 ---
 title: "StdDlgActionCardItem"
-excerpt: ''
+excerpt: 'Action card item node with optional arrow, checkbox, or radio button icon'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgActionCardItem'
+  description: 'StdDlgActionCardItem highlights StdDlgItemBase child nodes in a custom dialog content area and adds a more_info, checkbox, or radiobutton icon.'
   robots: index
 next:
   description: ''

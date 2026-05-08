@@ -1,11 +1,11 @@
 ---
 title: "Global string functions"
-excerpt: ''
+excerpt: 'Global functions for string conversion, search, and formatting'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Global string functions | Roku Developer Docs'
+  description: 'Global string functions including UCase, LCase, Asc, Chr, Instr, Left, Len, Mid, Right, Str, StrI, Val, String, StringI, Substitute, and related helpers.'
   robots: index
 next:
   description: ''

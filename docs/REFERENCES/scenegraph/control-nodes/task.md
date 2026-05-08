@@ -1,11 +1,11 @@
 ---
 title: Task
-excerpt: ''
+excerpt: 'Spawns functions asynchronously in a separate thread for server and file operations'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Task'
+  description: 'The Task node class spawns a function in a separate thread, running asynchronously with respect to the scene rendering thread and the main application thread.'
   robots: index
 next:
   description: ''

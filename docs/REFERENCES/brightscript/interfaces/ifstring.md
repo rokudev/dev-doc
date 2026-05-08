@@ -1,11 +1,11 @@
 ---
 title: "ifString"
-excerpt: ''
+excerpt: 'Interface equivalent for the intrinsic String type'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifString'
+  description: 'The ifString interface is the interface equivalent for the intrinsic String type, providing GetString, SetString, and IsEmpty methods on String objects.'
   robots: index
 next:
   description: ''

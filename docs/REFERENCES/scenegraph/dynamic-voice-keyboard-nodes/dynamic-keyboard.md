@@ -1,11 +1,11 @@
 ---
 title: "DynamicKeyboard"
-excerpt: ''
+excerpt: 'Node supporting text and voice entry of alphanumeric and Latin characters'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'DynamicKeyboard'
+  description: 'Documents the DynamicKeyboard node, which enables text and voice entry of alphanumeric and Latin characters, typically used for email addresses or passwords.'
   robots: index
 next:
   description: ''

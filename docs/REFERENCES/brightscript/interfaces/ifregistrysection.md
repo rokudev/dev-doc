@@ -1,11 +1,11 @@
 ---
 title: "ifRegistrySection"
-excerpt: ''
+excerpt: 'Interface for reading, writing, deleting, and flushing registry key-value pairs'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifRegistrySection'
+  description: 'Documents the ifRegistrySection interface, which provides methods to read, write, delete, and flush key-value pairs within a registry section.'
   robots: index
 next:
   description: ''

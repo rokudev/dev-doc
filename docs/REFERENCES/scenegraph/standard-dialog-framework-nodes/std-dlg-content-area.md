@@ -1,11 +1,11 @@
 ---
 title: "StdDlgContentArea"
-excerpt: ''
+excerpt: 'Dialog content area node holding StdDlgItemBase child nodes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgContentArea'
+  description: 'The StdDlgContentArea node contains the main body of the dialog, positioned between the title area and the button area, and holds StdDlgItemBase nodes.'
   robots: index
 next:
   description: ''

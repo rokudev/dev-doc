@@ -1,11 +1,11 @@
 ---
 title: "ScrollableText"
-excerpt: ''
+excerpt: 'Interactive vertically scrolling text node with scrollbar and alignment controls'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ScrollableText'
+  description: 'Documents the ScrollableText node, which provides an interactive, vertically scrolling pane of text for displaying long content such as a license agreement.'
   robots: index
 next:
   description: ''

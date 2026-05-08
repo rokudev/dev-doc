@@ -1,11 +1,11 @@
 ---
 title: "ColorFieldInterpolator"
-excerpt: ''
+excerpt: 'Keyframe animation node for interpolating color field values across frames'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ColorFieldInterpolator'
+  description: 'ColorFieldInterpolator specifies a keyframe animation sequence applied to the color field of a node, using linear interpolation in the HSV color space.'
   robots: index
 next:
   description: ''

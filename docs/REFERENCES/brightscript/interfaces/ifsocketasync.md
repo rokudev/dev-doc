@@ -1,11 +1,11 @@
 ---
 title: "ifSocketAsync"
-excerpt: ''
+excerpt: 'Asynchronous socket interface using a select loop and message port'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSocketAsync'
+  description: 'The ifSocketAsync interface provides asynchronous socket features using a select loop that communicates with the app via a message port on socket objects.'
   robots: index
 next:
   description: ''

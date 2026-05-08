@@ -1,6 +1,11 @@
 ---
 title: 'StandardDialog '
+excerpt: 'Base node for standard and custom Roku dialog layouts'
 hidden: false
+metadata:
+  title: 'StandardDialog'
+  description: 'The StandardDialog node is the base for Roku''s pre-built message, keyboard, pinpad, and progress dialogs, or custom dialogs via StdDialogItem nodes.'
+  robots: index
 ---
 Extends [Group](doc:group)
 

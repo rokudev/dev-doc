@@ -1,11 +1,11 @@
 ---
 title: "StdDlgProgressItem"
-excerpt: ''
+excerpt: 'Node for displaying a spinning progress indicator in a dialog content area'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgProgressItem'
+  description: 'StdDlgProgressItem displays a spinning progress indicator in a dialog''s content area, providing status for tasks that take an indeterminate amount of time.'
   robots: index
 next:
   description: ''

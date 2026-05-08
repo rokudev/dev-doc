@@ -1,11 +1,11 @@
 ---
 title: ifSGNodeField
-excerpt: ''
+excerpt: 'Methods for querying, setting, and observing fields on a subject node'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSGNodeField'
+  description: 'Documents the ifSGNodeField interface, which provides methods for querying, getting, setting, and observing fields on a subject node.'
   robots: index
 next:
   description: ''

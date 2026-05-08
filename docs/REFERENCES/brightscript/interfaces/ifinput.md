@@ -1,11 +1,11 @@
 ---
 title: "ifInput"
-excerpt: ''
+excerpt: 'Interface for receiving transport events and voice commands via roInput'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifInput'
+  description: 'Documents the ifInput interface, which enables apps to receive transport events from voice commands sent via the Roku remote control or a virtual assistant.'
   robots: index
 next:
   description: ''

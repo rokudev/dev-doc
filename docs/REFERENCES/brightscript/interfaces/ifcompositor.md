@@ -1,11 +1,11 @@
 ---
 title: "ifCompositor"
-excerpt: ''
+excerpt: 'Interface for composing and animating sprites from roRegion frames'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifCompositor'
+  description: 'Documents the ifCompositor interface, which provides methods to compose sprites from roRegion objects, animate frames, and draw to a destination bitmap.'
   robots: index
 next:
   description: ''

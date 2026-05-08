@@ -1,11 +1,11 @@
 ---
 title: BusySpinner
-excerpt: ''
+excerpt: 'Widget node that displays a continuously rotating bitmap with configurable spin controls'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BusySpinner'
+  description: 'Documents the BusySpinner node class, a widget that displays a continuously rotating bitmap, with fields for uri, control, clockwise, and spinInterval.'
   robots: index
 next:
   description: ''

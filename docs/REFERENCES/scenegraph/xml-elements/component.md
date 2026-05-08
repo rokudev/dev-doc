@@ -1,5 +1,14 @@
 ---
+title: 'component'
+excerpt: 'Defines the root XML element that declares a SceneGraph component''s structure'
+deprecated: false
 hidden: false
+metadata:
+  title: 'component'
+  description: 'The <component> element defines all aspects of a component in an XML file, specifying its name, extends, initialFocus, and version attributes.'
+  robots: index
+next:
+  description: ''
 ---
 The \<component\> element defines all aspects of the component defined in a SceneGraph XML component file. Every SceneGraph XML component file must have exactly one \<component\> element that contains all other XML elements in the file, which may include:
 

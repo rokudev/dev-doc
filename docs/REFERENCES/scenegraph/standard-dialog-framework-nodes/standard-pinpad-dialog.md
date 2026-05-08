@@ -1,11 +1,11 @@
 ---
 title: "StandardPinPadDialog"
-excerpt: ''
+excerpt: 'Dialog node for text and voice entry of numeric PIN codes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StandardPinPadDialog'
+  description: 'The StandardPinPadDialog node enables text and voice entry of numeric PIN codes through internal DynamicPinPad and VoiceTextEditBox nodes.'
   robots: index
 next:
   description: ''

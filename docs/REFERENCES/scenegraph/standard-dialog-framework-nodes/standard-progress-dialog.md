@@ -1,11 +1,11 @@
 ---
 title: "StandardProgressDialog"
-excerpt: ''
+excerpt: 'Node that displays a spinning progress indicator with a short message'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StandardProgressDialog'
+  description: 'StandardProgressDialog displays a spinning progress indicator with a short progress message, extending StandardDialog and containing a StdDlgProgressItem.'
   robots: index
 next:
   description: ''

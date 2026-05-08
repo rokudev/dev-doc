@@ -1,11 +1,11 @@
 ---
 title: "Rectangle"
-excerpt: ''
+excerpt: 'Draws a solid color rectangle that supports child nodes and rotation'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Rectangle'
+  description: 'The Rectangle node draws a solid color rectangle at the origin of the node local coordinate system, and can have child nodes such as a Label node.'
   robots: index
 next:
   description: ''

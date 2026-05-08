@@ -1,11 +1,11 @@
 ---
 title: "ifGetMessagePort"
-excerpt: ''
+excerpt: 'Interface providing GetMessagePort() to retrieve an object''s associated message port'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifGetMessagePort'
+  description: 'Documents the ifGetMessagePort interface, which exposes GetMessagePort() to return the message port currently associated with an object.'
   robots: index
 next:
   description: ''

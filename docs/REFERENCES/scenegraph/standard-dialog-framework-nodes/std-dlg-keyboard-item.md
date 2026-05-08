@@ -1,11 +1,11 @@
 ---
 title: "StdDlgKeyboardItem"
-excerpt: ''
+excerpt: 'Content-area item that displays a keyboard or PINpad in a dialog'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgKeyboardItem'
+  description: 'StdDlgKeyboardItem displays a keyboard or PINpad in a dialog content area, supporting text and voice entry of alphanumeric characters and digits.'
   robots: index
 next:
   description: ''

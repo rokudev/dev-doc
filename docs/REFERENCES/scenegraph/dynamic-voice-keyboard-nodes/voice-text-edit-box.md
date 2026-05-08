@@ -1,11 +1,11 @@
 ---
 title: "VoiceTextEditBox"
-excerpt: ''
+excerpt: 'Text edit box node with voice dictation and configurable entry modes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'VoiceTextEditBox'
+  description: 'VoiceTextEditBox extends TextEditBox with voice entry functionality, exposing voiceEnabled, voiceEntryType, isDictating, and voiceInputRegexFilter fields.'
   robots: index
 next:
   description: ''

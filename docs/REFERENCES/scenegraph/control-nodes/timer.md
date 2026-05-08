@@ -1,11 +1,11 @@
 ---
 title: "Timer"
-excerpt: ''
+excerpt: 'Timer node that fires observable events after a specified duration elapses'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Timer'
+  description: 'The Timer node class generates an observable event after a specified duration elapses, supporting repeat firing and millisecond granularity via the fire field.'
   robots: index
 next:
   description: ''

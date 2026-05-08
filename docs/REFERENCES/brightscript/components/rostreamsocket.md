@@ -1,11 +1,11 @@
 ---
 title: "roStreamSocket"
-excerpt: ''
+excerpt: 'Accept, connect, and exchange data over TCP streams using roStreamSocket'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roStreamSocket'
+  description: 'roStreamSocket enables apps to accept and connect to TCP streams, and send and receive data using an interface modeled on Berkeley sockets.'
   robots: index
 next:
   description: ''

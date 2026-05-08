@@ -1,11 +1,11 @@
 ---
 title: "StdDlgItemBase"
-excerpt: ''
+excerpt: 'Base class providing common functionality for all StdDlg item nodes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgItemBase'
+  description: 'Reference page for StdDlgItemBase. StdDlgItemBase is the base class for all content area items.'
   robots: index
 next:
   description: ''

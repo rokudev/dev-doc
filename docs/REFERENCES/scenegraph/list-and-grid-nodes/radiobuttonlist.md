@@ -1,11 +1,11 @@
 ---
 title: "RadioButtonList"
-excerpt: ''
+excerpt: 'List node for mutually exclusive radio buttons with optional check mark'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'RadioButtonList'
+  description: 'RadioButtonList extends LabelList to display a list of mutually exclusive radio buttons, each with a text string and optional check mark icon.'
   robots: index
 next:
   description: ''

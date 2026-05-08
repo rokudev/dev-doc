@@ -1,11 +1,11 @@
 ---
 title: "BrightScript language reference"
-excerpt: ''
+excerpt: 'Syntax, typing, and bytecode compilation for embedded device scripting'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScript language reference | Roku Developer Docs'
+  description: 'Documents the BrightScript language reference, covering syntax, dynamic typing, bytecode compilation, and component-based APIs for embedded device applications.'
   robots: index
 next:
   description: ''

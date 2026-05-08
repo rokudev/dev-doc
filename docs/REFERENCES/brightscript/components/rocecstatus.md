@@ -1,11 +1,11 @@
 ---
 title: "roCECStatus"
-excerpt: ''
+excerpt: 'Identifies active-source status for set boxes via the ifCECStatus interface'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roCECStatus'
+  description: 'Reference page for roCECStatus. roCECStatus enables apps to identify the active-source status for set boxes.'
   robots: index
 next:
   description: ''

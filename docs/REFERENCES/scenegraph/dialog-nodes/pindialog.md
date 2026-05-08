@@ -1,11 +1,11 @@
 ---
 title: PinDialog
-excerpt: ''
+excerpt: 'Dialog node that prompts users to enter a numeric PIN value'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'PinDialog'
+  description: 'The PinDialog node is a Dialog type that prompts the user to enter a numeric string, with an internal PinPad node for PIN input and action buttons.'
   robots: index
 next:
   description: ''

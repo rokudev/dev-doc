@@ -1,11 +1,11 @@
 ---
 title: Video
-excerpt: ''
+excerpt: 'Node class that provides controlled playback of live or VOD video'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Video'
+  description: 'Documents the Video node, which provides controlled playback of live or VOD video, with fields for trickplay, closed captions, and audio tracks.'
   robots: index
 next:
   description: ''

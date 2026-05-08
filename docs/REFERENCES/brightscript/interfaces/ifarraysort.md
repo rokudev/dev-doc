@@ -1,11 +1,11 @@
 ---
 title: "ifArraySort"
-excerpt: ''
+excerpt: 'Sort, SortBy, and Reverse methods for roArray stable sorting'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifArraySort'
+  description: 'Documents the ifArraySort interface, which provides Sort, SortBy, and Reverse methods for performing stable sorts on arrays implemented by roArray.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "roSocketAddress"
-excerpt: ''
+excerpt: 'Represents an IP address for use with TCP and UDP socket components'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSocketAddress'
+  description: 'Reference page for roSocketAddress. roSocketAddress represents an IP address used with roStreamSocket and roDataGramSocket.'
   robots: index
 next:
   description: ''

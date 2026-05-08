@@ -1,11 +1,11 @@
 ---
 title: "ifListToArray"
-excerpt: ''
+excerpt: 'Interface providing ToArray() to convert a list into an roArray object'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifListToArray'
+  description: 'Documents the ifListToArray interface, which provides the ToArray() method that returns an roArray containing the same elements as the list.'
   robots: index
 next:
   description: ''

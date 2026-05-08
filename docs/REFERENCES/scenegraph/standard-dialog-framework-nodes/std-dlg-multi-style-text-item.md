@@ -1,11 +1,11 @@
 ---
 title: StdDlgMultiStyleTextItem
-excerpt: ''
+excerpt: 'Text item node supporting multiple font styles in a custom dialog'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgMultiStyleTextItem'
+  description: 'The StdDlgMultiStyleTextItem node adds a line of text with multiple styles to the content area of a custom dialog, supporting fonts, colors, and emojis.'
   robots: index
 next:
   description: ''

@@ -1,5 +1,14 @@
 ---
+title: 'children'
+excerpt: 'XML container element that enables XSD schema validation of node markup'
+deprecated: false
 hidden: false
+metadata:
+  title: 'children'
+  description: 'The <children> element wraps node XML markup elements in a container, enabling XSD schema validation by ensuring deterministic element order in XML components.'
+  robots: index
+next:
+  description: ''
 ---
 The \<children\> element contains the SceneGraph node XML markup elements. The \<children\> element allows XML schema validation of your SceneGraph XML components using XSD by wrapping them in a container element (XSD requires that the order of elements be deterministic, and so for validation to work, SceneGraph node elements must be contained in an element themselves).
 

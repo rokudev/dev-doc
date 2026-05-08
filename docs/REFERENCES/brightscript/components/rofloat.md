@@ -1,11 +1,11 @@
 ---
 title: "roFloat"
-excerpt: ''
+excerpt: 'Object equivalent of the intrinsic Float type, supporting ifFloat and ifToStr'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roFloat'
+  description: 'Reference page for roFloat. roFloat is the object equivalent of the intrinsic Float type.'
   robots: index
 next:
   description: ''

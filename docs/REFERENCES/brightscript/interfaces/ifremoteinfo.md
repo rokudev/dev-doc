@@ -1,11 +1,11 @@
 ---
 title: "ifRemoteInfo"
-excerpt: ''
+excerpt: 'Interface for querying model, wake state, and features of a Roku remote'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifRemoteInfo'
+  description: 'Documents the ifRemoteInfo interface, which provides methods to get the model number, check wake state, and query features of a Roku remote control.'
   robots: index
 next:
   description: ''

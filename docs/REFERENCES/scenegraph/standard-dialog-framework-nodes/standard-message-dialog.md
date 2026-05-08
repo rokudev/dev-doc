@@ -1,11 +1,11 @@
 ---
 title: "StandardMessageDialog"
-excerpt: ''
+excerpt: 'Node for displaying messages with text blocks, lists, and buttons in a dialog'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StandardMessageDialog'
+  description: 'StandardMessageDialog displays a message to the user and may contain text blocks, a bulleted or numbered list, and buttons in a dialog.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: ifDeviceInfo
-excerpt: ''
+excerpt: 'Interface for querying device model, network status, display properties, and DRM support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifDeviceInfo'
+  description: 'Documents the ifDeviceInfo interface, which provides methods to query device model, OS version, network status, display properties, and DRM support.'
   robots: index
 next:
   description: ''

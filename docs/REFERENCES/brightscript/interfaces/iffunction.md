@@ -1,11 +1,11 @@
 ---
 title: "ifFunction"
-excerpt: ''
+excerpt: 'Interface equivalent for the intrinsic Function type with GetSub and SetSub methods'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifFunction'
+  description: 'ifFunction is the interface equivalent for the intrinsic type Function, providing GetSub and SetSub methods to get and set function values on boxed objects.'
   robots: index
 next:
   description: ''

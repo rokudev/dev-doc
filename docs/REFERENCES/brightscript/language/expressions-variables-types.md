@@ -1,11 +1,11 @@
 ---
 title: Expressions, variables, and types
-excerpt: ''
+excerpt: 'Covers identifiers, types, literals, operators, and type conversion rules'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Expressions, variables, and types | Roku Developer Docs'
+  description: 'Documents identifiers, dynamic typing, type declaration characters, literals, operators, and type conversion rules used in expressions and variables.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Panel"
-excerpt: ''
+excerpt: 'Sliding panel node with configurable size, position, and PanelSet behavior'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Panel'
+  description: 'The Panel node creates sliding panels for app UI, extending Group with fields for size, position, overhang title, focus control, and PanelSet interaction.'
   robots: index
 next:
   description: ''

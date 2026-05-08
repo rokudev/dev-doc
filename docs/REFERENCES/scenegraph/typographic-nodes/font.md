@@ -1,11 +1,11 @@
 ---
 title: "Font"
-excerpt: ''
+excerpt: 'Node class specifying the font used by Label and other text nodes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Font'
+  description: 'The Font node specifies the font used by a Label node or other nodes that render text, via uri and size fields accepting TrueType or OpenType files.'
   robots: index
 next:
   description: ''

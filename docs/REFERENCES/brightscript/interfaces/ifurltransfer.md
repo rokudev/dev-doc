@@ -1,11 +1,11 @@
 ---
 title: "ifUrlTransfer"
-excerpt: ''
+excerpt: 'Interface for HTTP transfers to remote servers specified by URLs'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifUrlTransfer'
+  description: 'Documents the ifUrlTransfer interface, which provides methods for synchronous and asynchronous HTTP GET, POST, and HEAD requests to remote URLs.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "roArray"
-excerpt: ''
+excerpt: 'Indexed collection component with dynamic resizing and multi-dimensional support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roArray'
+  description: 'roArray stores an indexed collection of objects, supports dynamic resizing, and is created via CreateObject or the dim statement for multi-dimensional arrays.'
   robots: index
 next:
   description: ''

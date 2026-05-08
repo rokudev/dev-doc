@@ -1,11 +1,11 @@
 ---
 title: "Runtime functions"
-excerpt: ''
+excerpt: 'Core runtime functions for creating objects, inspecting types, and handling script errors'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Runtime functions | Roku Developer Docs'
+  description: 'Documents runtime functions including CreateObject, Type, GetGlobalAA, Box, Eval, GetLastRunCompileError, and GetLastRunRuntimeError for use in scripts.'
   robots: index
 next:
   description: ''

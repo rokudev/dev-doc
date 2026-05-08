@@ -1,11 +1,11 @@
 ---
 title: ifScreen
-excerpt: ''
+excerpt: 'Interface covering screen buffer swapping and graphics feature queries for roScreen'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifScreen'
+  description: 'Documents the ifScreen interface, which provides SwapBuffers for frame rendering and GetGraphicsFeatures for querying rotation and ASTC support.'
   robots: index
 next:
   description: ''

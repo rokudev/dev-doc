@@ -1,11 +1,11 @@
 ---
 title: "roHttpAgent"
-excerpt: ''
+excerpt: 'Component providing cookies, custom HTTP headers, and certificate support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roHttpAgent'
+  description: 'The roHttpAgent component supports cookies, custom HTTP headers, and secure HTTP file transfer protocols such as passing certificates to the server.'
   robots: index
 next:
   description: ''

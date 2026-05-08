@@ -1,11 +1,11 @@
 ---
 title: "ifSGNodeHttpAgentAccess"
-excerpt: ''
+excerpt: 'Interface for getting and setting an roHttpAgent object on a node'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSGNodeHttpAgentAccess'
+  description: 'Documents the ifSGNodeHttpAgentAccess interface, which provides getHttpAgent() and setHttpAgent() methods to get or set an roHttpAgent object for a node.'
   robots: index
 next:
   description: ''

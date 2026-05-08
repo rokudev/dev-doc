@@ -1,11 +1,11 @@
 ---
 title: "roDateTime"
-excerpt: ''
+excerpt: 'Obtain and manipulate date/time values, with GMT and local timezone support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roDateTime'
+  description: 'roDateTime provides an interface to obtain the current date and time for the player, manipulate date/times, and convert times to the system timezone.'
   robots: index
 next:
   description: ''

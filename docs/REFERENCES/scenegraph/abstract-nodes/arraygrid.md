@@ -1,11 +1,11 @@
 ---
 title: ArrayGrid
-excerpt: ''
+excerpt: 'Abstract base class providing shared fields for list and grid node classes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ArrayGrid'
+  description: 'ArrayGrid is an abstract base class that provides shared functionality to list and grid node classes such as LabelList, PosterGrid, MarkupGrid, and RowList.'
   robots: index
 next:
   description: ''

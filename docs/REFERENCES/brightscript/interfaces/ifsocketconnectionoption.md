@@ -1,11 +1,11 @@
 ---
 title: "ifSocketConnectionOption"
-excerpt: ''
+excerpt: 'Interface for getting and setting TCP socket connection options'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSocketConnectionOption'
+  description: 'Documents the ifSocketConnectionOption interface, which provides methods to get and set TCP socket options including keep alive, linger, and no delay.'
   robots: index
 next:
   description: ''

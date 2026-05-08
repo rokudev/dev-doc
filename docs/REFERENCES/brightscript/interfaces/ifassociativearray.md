@@ -1,11 +1,11 @@
 ---
 title: "ifAssociativeArray"
-excerpt: ''
+excerpt: 'Interface for managing key/value pairs in an associative array'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifAssociativeArray'
+  description: 'Documents the ifAssociativeArray interface, which provides methods to add, look up, delete, and iterate over key/value pairs in an associative array.'
   robots: index
 next:
   description: ''

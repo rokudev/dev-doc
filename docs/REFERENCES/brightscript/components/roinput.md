@@ -1,11 +1,11 @@
 ---
 title: "roInput"
-excerpt: ''
+excerpt: 'Receives ECP network events and deep-link parameters while an app is running'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roInput'
+  description: 'roInput receives events sent from a network client using the External Control Protocol (ECP), enabling deep linking into content without relaunching the app.'
   robots: index
 next:
   description: ''

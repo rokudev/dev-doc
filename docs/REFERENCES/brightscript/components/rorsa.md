@@ -1,11 +1,11 @@
 ---
 title: "roRSA"
-excerpt: ''
+excerpt: 'RSA signing and verification component using the OpenSSL RSA library'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roRSA'
+  description: 'Reference page for roRSA. roRSA provides an interface to the OpenSSL RSA library for signing and verification.'
   robots: index
 next:
   description: ''

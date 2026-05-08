@@ -1,11 +1,11 @@
 ---
 title: "roUrlTransfer"
-excerpt: ''
+excerpt: 'Transfers data to or from remote servers and supports mutual authentication'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roUrlTransfer'
+  description: 'roUrlTransfer transfers data to or from remote servers specified by URLs and can perform mutual authentication with a web server.'
   robots: index
 next:
   description: ''

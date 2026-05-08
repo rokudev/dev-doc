@@ -1,11 +1,11 @@
 ---
 title: "ifAppInfo"
-excerpt: ''
+excerpt: 'Interface for retrieving app ID, version, title, and manifest values'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifAppInfo'
+  description: 'Documents the ifAppInfo interface, which provides methods to retrieve the app''s channel ID, version, title, developer ID, and manifest values.'
   robots: index
 next:
   description: ''

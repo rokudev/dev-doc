@@ -1,11 +1,11 @@
 ---
 title: "StdDlgGraphicItem"
-excerpt: ''
+excerpt: 'Node for displaying an image with an optional label in a dialog content area'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgGraphicItem'
+  description: 'Reference page for StdDlgGraphicItem. StdDlgGraphicItem displays an image in a dialog content area with an optional text label.'
   robots: index
 next:
   description: ''

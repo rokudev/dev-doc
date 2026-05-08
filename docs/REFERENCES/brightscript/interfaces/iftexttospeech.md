@@ -1,11 +1,11 @@
 ---
 title: "ifTextToSpeech"
-excerpt: ''
+excerpt: 'Interface for controlling text-to-speech playback, voice, and language'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifTextToSpeech'
+  description: 'Documents the ifTextToSpeech interface, which provides methods for controlling text-to-speech playback, including language, voice, volume, and rate.'
   robots: index
 next:
   description: ''

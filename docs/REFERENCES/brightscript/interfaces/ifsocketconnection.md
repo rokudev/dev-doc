@@ -1,11 +1,11 @@
 ---
 title: "ifSocketConnection"
-excerpt: ''
+excerpt: 'Interface providing listen, connect, accept, and connection-state methods for sockets'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSocketConnection'
+  description: 'Documents the ifSocketConnection interface, which provides methods to listen, connect, accept, and check connection state on a socket.'
   robots: index
 next:
   description: ''

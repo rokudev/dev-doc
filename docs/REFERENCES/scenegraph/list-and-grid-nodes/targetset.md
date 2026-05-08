@@ -1,11 +1,11 @@
 ---
 title: "TargetSet"
-excerpt: ''
+excerpt: 'Defines target regions and focus index for items rendered in a TargetGroup node'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'TargetSet'
+  description: 'TargetSet specifies a set of target regions where items in a TargetGroup node are rendered, using an array of rectangles for location and size.'
   robots: index
 next:
   description: ''

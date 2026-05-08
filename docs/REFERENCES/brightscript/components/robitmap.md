@@ -1,11 +1,11 @@
 ---
 title: "roBitmap"
-excerpt: ''
+excerpt: 'Image data component with ifDraw2D support for offscreen drawing operations'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roBitmap'
+  description: 'roBitmap stores image data with 32-bits per pixel and provides the ifDraw2D interface for drawing, compositing, sprites, and double buffers up to 2048x2048.'
   robots: index
 next:
   description: ''

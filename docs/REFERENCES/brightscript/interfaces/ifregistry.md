@@ -1,11 +1,11 @@
 ---
 title: "ifRegistry"
-excerpt: ''
+excerpt: 'Interface for querying, managing, and flushing the device registry'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifRegistry'
+  description: 'Documents the ifRegistry interface, which provides methods to query available storage space, list sections, delete a registry section, and flush to storage.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Error handling in BrightScript"
-excerpt: ''
+excerpt: 'Exception trapping in BrightScript using TRY, CATCH, and THROW'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Error handling in BrightScript | Roku Developer Docs'
+  description: 'Describes error handling in BrightScript, covering the TRY/CATCH/THROW model, exception objects with number, message, and backtrace fields, and re-throws.'
   robots: index
 next:
   description: ''

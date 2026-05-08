@@ -1,11 +1,11 @@
 ---
 title: "roHMAC"
-excerpt: ''
+excerpt: 'Interface to OpenSSL HMAC functions for generating a Message Authentication Code'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roHMAC'
+  description: 'The roHMAC component provides an interface to the OpenSSL HMAC functions, generating a Message Authentication Code based on a key using a digest algorithm.'
   robots: index
 next:
   description: ''

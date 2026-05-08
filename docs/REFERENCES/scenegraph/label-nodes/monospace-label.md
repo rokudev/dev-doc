@@ -1,11 +1,11 @@
 ---
 title: "MonospaceLabel"
-excerpt: ''
+excerpt: 'Node for rendering text with fixed character spacing using proportional fonts'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'MonospaceLabel'
+  description: 'The MonospaceLabel node draws a single line of text with all characters spaced at a fixed distance, transforming proportional fonts into monospaced fonts.'
   robots: index
 next:
   description: ''

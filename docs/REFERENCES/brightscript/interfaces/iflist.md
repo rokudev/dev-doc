@@ -1,11 +1,11 @@
 ---
 title: "ifList"
-excerpt: ''
+excerpt: 'Interface for linked-list operations including head, tail, and index management'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifList'
+  description: 'Documents the ifList interface, which provides methods to add, remove, and retrieve elements at the head or tail of a list, and to manage the current index.'
   robots: index
 next:
   description: ''

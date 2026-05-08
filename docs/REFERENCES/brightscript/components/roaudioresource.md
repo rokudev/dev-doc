@@ -1,11 +1,11 @@
 ---
 title: "roAudioResource"
-excerpt: ''
+excerpt: 'Cache and play .wav files or system sound effects with low latency'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roAudioResource'
+  description: 'roAudioResource caches .wav files to memory for low-latency playback and supports system sound effects such as select, navsingle, navmulti, and deadend.'
   robots: index
 next:
   description: ''

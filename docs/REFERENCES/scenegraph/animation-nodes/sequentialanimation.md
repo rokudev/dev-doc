@@ -1,11 +1,11 @@
 ---
 title: "SequentialAnimation"
-excerpt: ''
+excerpt: 'Node class that runs a set of child animations in sequence'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SequentialAnimation'
+  description: 'The SequentialAnimation node class runs a set of child animations sequentially, with the state field set to running while any child animation is in progress.'
   robots: index
 next:
   description: ''

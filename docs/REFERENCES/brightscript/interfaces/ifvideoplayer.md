@@ -1,11 +1,11 @@
 ---
 title: "ifVideoPlayer"
-excerpt: ''
+excerpt: 'Interface implemented by roVideoPlayer for video playback control'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifVideoPlayer'
+  description: 'Documents the ifVideoPlayer interface implemented by roVideoPlayer, providing methods to control playback, seek position, audio tracks, and captions.'
   robots: index
 next:
   description: ''

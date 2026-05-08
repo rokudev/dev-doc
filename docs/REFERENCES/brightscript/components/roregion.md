@@ -1,11 +1,11 @@
 ---
 title: "roRegion"
-excerpt: ''
+excerpt: 'Represents a bitmap subsection used by drawing and compositor operations'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roRegion'
+  description: 'The roRegion component represents a subsection of a bitmap, specified with x, y, width, and height plus time and wrap fields used by roBitmap and roCompositor.'
   robots: index
 next:
   description: ''

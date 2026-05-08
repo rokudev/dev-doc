@@ -1,11 +1,11 @@
 ---
 title: "ifSetMessagePort"
-excerpt: ''
+excerpt: 'Interface for assigning an roMessagePort to capture screen events'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSetMessagePort'
+  description: 'Documents the ifSetMessagePort interface, which provides the SetMessagePort method for assigning an roMessagePort to receive events from a screen.'
   robots: index
 next:
   description: ''

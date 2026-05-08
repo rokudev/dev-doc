@@ -1,11 +1,11 @@
 ---
 title: "roCECStatusEvent"
-excerpt: ''
+excerpt: 'Event that reports active-source status changes via CEC message traffic'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roCECStatusEvent'
+  description: 'roCECStatusEvent reports changes to the active-source status of a device by monitoring CEC message traffic and notifying subscribed apps via GetInfo().'
   robots: index
 next:
   description: ''

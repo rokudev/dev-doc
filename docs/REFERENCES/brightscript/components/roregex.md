@@ -1,11 +1,11 @@
 ---
 title: "roRegex"
-excerpt: ''
+excerpt: 'Regular expression processing using the PCRE library with behavior flags'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roRegex'
+  description: 'The roRegex component provides regular expression processing via the PCRE library, supporting most Perl compatible regular expressions with behavior flags.'
   robots: index
 next:
   description: ''

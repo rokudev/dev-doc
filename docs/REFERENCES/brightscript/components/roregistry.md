@@ -1,11 +1,11 @@
 ---
 title: "roRegistry"
-excerpt: ''
+excerpt: 'Non-volatile encrypted storage for persisting small amounts of app data'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roRegistry'
+  description: 'roRegistry provides access to a non-volatile, encrypted storage area where an app can persist small amounts of data across reboots and user sessions.'
   robots: index
 next:
   description: ''

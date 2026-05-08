@@ -1,11 +1,11 @@
 ---
 title: roAudioPlayerEvent
-excerpt: ''
+excerpt: 'Event type sent by roAudioPlayer to report audio playback state changes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roAudioPlayerEvent'
+  description: 'Documents roAudioPlayerEvent, sent by roAudioPlayer to report playback state changes including paused, resumed, failed, and segment download events.'
   robots: index
 next:
   description: ''

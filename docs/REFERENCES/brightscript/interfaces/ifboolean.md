@@ -1,11 +1,11 @@
 ---
 title: "ifBoolean"
-excerpt: ''
+excerpt: 'Interface for getting and setting boolean values on boolean objects'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifBoolean'
+  description: 'Documents the ifBoolean interface, which provides GetBoolean and SetBoolean methods for getting and setting the boolean value stored in a boolean object.'
   robots: index
 next:
   description: ''

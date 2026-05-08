@@ -1,11 +1,11 @@
 ---
 title: ifLocalization
-excerpt: ''
+excerpt: 'Interface providing locale-based string and asset path resolution methods'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifLocalization'
+  description: 'Documents the ifLocalization interface, which provides GetPluralString and GetLocalizedAsset methods for returning locale-based strings and asset paths.'
   robots: index
 next:
   description: ''

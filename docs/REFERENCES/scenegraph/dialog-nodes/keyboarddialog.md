@@ -1,11 +1,11 @@
 ---
 title: KeyboardDialog
-excerpt: ''
+excerpt: 'A Dialog node that prompts users to enter an alphanumeric text string'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'KeyboardDialog'
+  description: 'The KeyboardDialog node class is a Dialog node that prompts the user to enter an alphanumeric text string using an internal Keyboard node.'
   robots: index
 next:
   description: ''

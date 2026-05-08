@@ -1,11 +1,11 @@
 ---
 title: "roDsa"
-excerpt: ''
+excerpt: 'DSA component supporting ECDSA and EdDSA digital signature algorithms'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roDsa'
+  description: 'Reference page for roDsa. roDsa supports the ECDSA and EdDSA digital signature algorithms via the ifDsa interface.'
   robots: index
 next:
   description: ''

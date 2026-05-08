@@ -1,11 +1,11 @@
 ---
 title: "roTextToSpeech"
-excerpt: ''
+excerpt: 'Provides text to speech capabilities to applications via ifTextToSpeech'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roTextToSpeech'
+  description: 'The roTextToSpeech component provides text to speech capabilities to applications and is created with no parameters using CreateObject("roTextToSpeech").'
   robots: index
 next:
   description: ''

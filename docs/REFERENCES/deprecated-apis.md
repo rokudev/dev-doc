@@ -1,11 +1,11 @@
 ---
 title: Deprecated APIs
-excerpt: ''
+excerpt: 'APIs removed or deprecated across Roku OS releases, with replacement guidance'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Deprecated APIs | Roku Developer Docs'
+  description: 'Lists APIs deprecated or removed from Roku OS, including components, interfaces, functions, and fields that must not be used to pass certification testing.'
   robots: index
 next:
   description: ''

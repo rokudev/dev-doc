@@ -1,11 +1,11 @@
 ---
 title: "ifSystemLog"
-excerpt: ''
+excerpt: 'Interface for enabling system log message types on a message port'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSystemLog'
+  description: 'Documents the ifSystemLog interface, which enables log message types such as http.connect, http.error, and bandwidth.minute via a message port.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Overhang"
-excerpt: ''
+excerpt: 'Information bar node displayed at the top of a screen in Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Overhang'
+  description: 'The Overhang node provides an information bar at the top of a screen, supporting a logo, title, clock, and options prompt on left and right sides.'
   robots: index
 next:
   description: ''

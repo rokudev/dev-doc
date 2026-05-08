@@ -1,11 +1,11 @@
 ---
 title: "Keyboard"
-excerpt: ''
+excerpt: 'Node for entering alphanumeric strings via an on-screen keyboard'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Keyboard'
+  description: 'The Keyboard node allows a user to enter a string of alphanumeric characters, displayed in an internal TextEditBox node with customizable appearance.'
   robots: index
 next:
   description: ''

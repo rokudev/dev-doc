@@ -1,11 +1,11 @@
 ---
 title: "Dynamic voice keyboard nodes"
-excerpt: ''
+excerpt: 'Abstract class for dynamic voice-enabled keyboard nodes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Dynamic voice keyboard nodes'
+  description: 'Documents the DynamicKeyboardBase abstract class, which combines DynamicKeyGrid and VoiceTextEditBox nodes for text and voice entry.'
   robots: index
 next:
   description: ''

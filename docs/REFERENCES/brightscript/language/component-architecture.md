@@ -1,11 +1,11 @@
 ---
 title: Component architecture
-excerpt: ''
+excerpt: 'How BrightScript components, interfaces, and intrinsic types fit together'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Component architecture | Roku Developer Docs'
+  description: 'Describes the BrightScript component architecture, covering interfaces, intrinsic and object types, reference counting, XML support, and garbage collection.'
   robots: index
 next:
   description: ''

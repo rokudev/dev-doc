@@ -409,7 +409,7 @@ The semantics and implementation of targeting based on genre values are dependen
     <tr>
       <td>kidsContent</td>
       <td>Boolean</td>
-      <td>Optional. Specify whether content is targeted towards children (true) or not (false).<br /><blockquote><p>Per Roku's <a href="https://roku-ent.readme.io/dev/docs/certification#1-advertising">certification requirements</a>, apps with child-directed content must set this flag to <strong>true</strong> if serving ads during child-directed content.</p></blockquote></td>
+      <td>Optional. Specify whether content is targeted towards children (true) or not (false).<br /><blockquote><p>Per Roku's <a href="/dev/docs/certification#1-advertising">certification requirements</a>, apps with child-directed content must set this flag to <strong>true</strong> if serving ads during child-directed content.</p></blockquote></td>
     </tr>
   </tbody>
 </table>
@@ -519,7 +519,7 @@ Merges a video feed and a set of one or more ad pods into a single playlist for 
       <td>ads</td>
       <td>roArray</td>
       <td>Required</td>
-      <td>Array of ad breaks to be combined into the stitched stream using RAF's <a href="https://roku-ent.readme.io/dev/docs/integrating-roku-advertising-framework#ad-structure">ad structure</a> format.<br /> <br />The object may been parsed earlier from VMAP/SMRX by calling <br /><code>raf.setAdURL(myAdTag): adBreaks = raf.getAds()</code>.</td>
+      <td>Array of ad breaks to be combined into the stitched stream using RAF's <a href="/dev/docs/integrating-roku-advertising-framework#ad-structure">ad structure</a> format.<br /> <br />The object may been parsed earlier from VMAP/SMRX by calling <br /><code>raf.setAdURL(myAdTag): adBreaks = raf.getAds()</code>.</td>
     </tr>
   </tbody>
 </table>

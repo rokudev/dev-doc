@@ -71,7 +71,7 @@ A **Section** may contain one or more **Grid** objects. A **Section** typically 
     <tr>
       <td>modes</td>
       <td>string/array of strings</td>
-      <td>The keyboard mode when this grid is shown.If the <strong>mode</strong> field of a <strong><a href="https://roku-ent.readme.io/dev/docs/dynamic-key-grid">DynamicKeyGrid</a></strong> node is set, the <strong>Grid</strong> object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's WiFi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes.</td>
+      <td>The keyboard mode when this grid is shown.If the <strong>mode</strong> field of a <strong><a href="/dev/docs/dynamic-key-grid">DynamicKeyGrid</a></strong> node is set, the <strong>Grid</strong> object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's WiFi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes.</td>
     </tr>
     <tr>
       <td>rows</td>

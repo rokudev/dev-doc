@@ -27,5 +27,5 @@ The webinar featured a demo showing how to generate, test, and implement trickpl
 
 ## Related documentation
 
-- [Trickplay mode overview](https://roku-ent.readme.io/dev/docs/trick-mode)
-- [Video node: trickplay fields](https://roku-ent.readme.io/dev/docs/video)
+- [Trickplay mode overview](/dev/docs/trick-mode)
+- [Video node: trickplay fields](/dev/docs/video)

@@ -2,7 +2,7 @@
 title: Storefront
 excerpt: Overview
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 next:
@@ -15,7 +15,7 @@ next:
 Storefront allows you to manage the featured row on your channel storefront directly within the Roku Content Partner Portal.
 
 <Callout icon="🔒" theme="default">
-  Available only to Premium Subscription partners.
+  Available only to eligible Premium Subscription partners.
 </Callout>
 
 By default, the featured row is populated by Roku’s recommendation system to deliver personalized content to viewers. With Storefront, you can pin titles to specific positions for a defined period of time, ensuring key content is prominently displayed.
@@ -34,7 +34,7 @@ Pinned titles appear alongside Roku recommendations, giving you a balance of con
 
 # Who this is for
 
-Storefront is available to content partners who manage **Premium Subscription** storefronts on the platform.
+Storefront is available to eligible content partners who manage **Premium Subscription** storefronts on The Roku Channel.
 
 This feature is designed for teams responsible for marketing, merchandising, and audience growth, enabling them to control how titles are promoted within their Premium Subscription pages.
 
@@ -84,21 +84,21 @@ The storefront interface is designed to help you quickly view, manage, and updat
 
 <br />
 
-| Key   | Page Component                                                                                                                                                                                                                                                 |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A** | **Feature Navigation** – Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
-| **B** | **Service Field** – Select the Premium Subscription service you want to manage. If you only have access to one service, it is automatically selected.                                                                                                          |
-| **C** | **Territory Field** – Choose the territory (channel store) you want to view or edit. Each territory has its own independent Featured row configuration.                                                                                                        |
-| **D** | **Feature Description** – Displays a brief description of the feature, explaining its purpose, how it should be used, the actions available, and any guidance to help you get the most value from it.                                                          |
-| **E** | **Date Range Filter** – Filter the Featured row to view which titles are active or scheduled within a selected date or date range.                                                                                                                             |
-| **F** | **Today** – Quickly return to the current date view to see which titles are pinned today.                                                                                                                                                                      |
-| **G** | **Date Navigation Cards** – Browse Featured row configurations across different dates. Each card represents a specific date or time period, showing the titles pinned during that window.                                                                      |
-| **H** | **Pinned Titles Search Field** – Enables searching for titles by name.                                                                                                                                                                                         |
-| **I** | **Pinned Titles Filter Panel** – Provides filtering options to refine the pinned title list based on selected criteria.                                                                                                                                        |
-| **J** | **Pin Title Control** – Add a title to the Featured row by selecting its position and, if needed, defining when it should be active.                                                                                                                           |
-| **K** | **Collapse Left Navigation** – Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
-| **L** | **Pinned Titles Table** – Displays detailed information for each pinned title, including status, position, availability dates, actions, and more.                                                                                                              |
-| **M** | **Pinned Title Action Control** – Manage an existing pinned title by editing its position or schedule, or removing it from the Featured row.                                                                                                                   |
+| Key   | Page component                                                                                                                                                                                                                                                |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Feature navigation:** Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
+| **B** | **Service field:** Select the Premium Subscription service you want to manage. If you only have access to one service, it is automatically selected.                                                                                                          |
+| **C** | **Territory field:** Choose the territory (channel store) you want to view or edit. Each territory has its own independent Featured row configuration.                                                                                                        |
+| **D** | **Feature description:** Displays a brief description of the feature, explaining its purpose, how it should be used, the actions available, and any guidance to help you get the most value from it.                                                          |
+| **E** | **Date range filter:** Filter the Featured row to view which titles are active or scheduled within a selected date or date range.                                                                                                                             |
+| **F** | **Today:** Quickly return to the current date view to see which titles are pinned today.                                                                                                                                                                      |
+| **G** | **Date navigation cards:** Browse Featured row configurations across different dates. Each card represents a specific date or time period, showing the titles pinned during that window.                                                                      |
+| **H** | **Pinned titles search field:** Enables searching for titles by name.                                                                                                                                                                                         |
+| **I** | **Pinned titles filter panel:** Provides filtering options to refine the pinned title list based on selected criteria.                                                                                                                                        |
+| **J** | **Pin title control:** Add a title to the Featured row by selecting its position and, if needed, defining when it should be active.                                                                                                                           |
+| **K** | **Collapse left navigation:** Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
+| **L** | **Pinned titles table:** Displays detailed information for each pinned title, including status, position, availability dates, actions, and more.                                                                                                              |
+| **M** | **Pinned title action control:** Manage an existing pinned title by editing its position or schedule, or removing it from the Featured row.                                                                                                                   |
 
 <br />
 
@@ -132,7 +132,7 @@ Configure different featured rows per territory (channel store). Changes made in
 
 ## Search and select eligible titles
 
-Search for titles that are eligible to be featured, including Movies, TV series, TV specials, Sports events, and Linear channels.
+Search for titles that are eligible to be featured, including movies, TV series, TV specials, sports events, and linear channels.
 
 <Image align="center" caption="Search for eligible titles by content type and title name." src="https://files.readme.io/7a3dddec55708dfa666fe5671b17d3bf95bb5cf15de65453b64ac2a4a33a6f34-image.png" />
 
@@ -175,7 +175,7 @@ If these conditions are not met, the system will block publishing until issues a
 
 <Image align="center" caption="Helps identify and prevent conflicts when multiple titles are pinned to the same position." src="https://files.readme.io/6133d28e246cb27b49f00c5e4a191cd2d5db08bb8f36491ff88f155a674daf4f-image.png" width="60% " />
 
-<Image align="center" caption="Recommends limiting pin duration to no more than 3 days to maximize customer engagement." src="https://files.readme.io/156f5310fedee3ffb7cc370247321abef0ed320f594a8ee9951a9bec3e93e93d-image.png" width="70% " />
+<Image align="center" caption="Recommends limiting pin duration to no more than 3 days to maximize consumer engagement." src="https://files.readme.io/156f5310fedee3ffb7cc370247321abef0ed320f594a8ee9951a9bec3e93e93d-image.png" width="70% " />
 
 <br />
 

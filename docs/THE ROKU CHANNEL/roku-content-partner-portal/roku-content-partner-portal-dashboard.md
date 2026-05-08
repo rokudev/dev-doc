@@ -2,7 +2,7 @@
 title: Dashboard
 excerpt: Overview
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 next:
@@ -20,7 +20,7 @@ The dashboard is your starting point in the Roku Content Partner Portal. It intr
 
 # The Roku Channel content partner program
 
-The Roku Content Partner Portal supports the The Roku Channel content partner program, which provides tools to directly manage your content on The Roku Channel. This includes managing your brand presence, promotional assets, and subscription offerings.
+The Roku Content Partner Portal supports The Roku Channel content partner program, which provides tools to directly manage your content on The Roku Channel. This includes managing your brand presence, promotional assets, and subscription offerings.
 
 <br />
 

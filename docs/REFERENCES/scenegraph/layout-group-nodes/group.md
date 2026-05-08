@@ -77,7 +77,7 @@ Where:
       <td>float</td>
       <td>0.0</td>
       <td>READ\_WRITE</td>
-      <td>Defines the rotation angle about the scaleRotateCenter point (in radians) of the node local coordinate system. Positive values specify a counterclockwise rotation, negative values specify a clockwise rotation. For some Roku Player hardware, specifically Roku Players without OpenGL graphics support, only rotations of 0, 90, 180 and 270 degrees (in equivalent radians) are supported. (See <a href="https://roku-ent.readme.io/dev/docs/hardware#current-roku-models" title="Roku Models and Features">Roku Models and Features</a> for information on OpenGL support)</td>
+      <td>Defines the rotation angle about the scaleRotateCenter point (in radians) of the node local coordinate system. Positive values specify a counterclockwise rotation, negative values specify a clockwise rotation. For some Roku Player hardware, specifically Roku Players without OpenGL graphics support, only rotations of 0, 90, 180 and 270 degrees (in equivalent radians) are supported. (See <a href="/dev/docs/hardware#current-roku-models" title="Roku Models and Features">Roku Models and Features</a> for information on OpenGL support)</td>
     </tr>
     <tr>
       <td>scale</td>
@@ -126,7 +126,7 @@ Where:
       <td>integer</td>
       <td>0</td>
       <td>READ\_WRITE</td>
-      <td>Used in combination with the numRenderPasses field of nodes extended from the <a href="https://roku-ent.readme.io/dev/docs/arraygrid" title="ArrayGrid">ArrayGrid</a> abstract node class, to optimize rendering of lists and grids. This should never be set to a non-zero value unless you are optimizing the performance of a list or grid rendering by specifying the sequence of rendering operations for sub-elements of the list or grid items, and have set the numRenderPasses field value for the list or grid to a value greater than 1. If the numRenderPasses field value for the list or grid is set to a value greater than 1, you must set this field to a value greater than 0 for all sub-elements of the list or grid items, and not greater than the numRenderPasses field value. If the numRenderPasses field is set to a value greater than 1, and you set this field for a list or grid item sub-element to 0 (the default), or a value greater than the numRenderPasses field value, the list or grid item sub-element will not render</td>
+      <td>Used in combination with the numRenderPasses field of nodes extended from the <a href="/dev/docs/arraygrid" title="ArrayGrid">ArrayGrid</a> abstract node class, to optimize rendering of lists and grids. This should never be set to a non-zero value unless you are optimizing the performance of a list or grid rendering by specifying the sequence of rendering operations for sub-elements of the list or grid items, and have set the numRenderPasses field value for the list or grid to a value greater than 1. If the numRenderPasses field value for the list or grid is set to a value greater than 1, you must set this field to a value greater than 0 for all sub-elements of the list or grid items, and not greater than the numRenderPasses field value. If the numRenderPasses field is set to a value greater than 1, and you set this field for a list or grid item sub-element to 0 (the default), or a value greater than the numRenderPasses field value, the list or grid item sub-element will not render</td>
     </tr>
     <tr>
       <td>muteAudioGuide</td>

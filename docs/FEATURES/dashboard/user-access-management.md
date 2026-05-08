@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-You can use the [**Roles and access** page in the Launchpad](https://developer.roku.com/account/user-access-list) to enable team members to manage your developer account or specific apps within it. A _**role**_ gives a user a set of one or more _**permissions**_ to complete specific tasks in your account. Each role has an _**access level**_, which determines whether the user can complete tasks for all the apps in your account or just one or more selected apps.
+You can use the [**Roles and access** page in the Roku Launchpad](https://developer.roku.com/account/user-access-list) to enable team members to manage your  account or specific apps within it. A _**role**_ gives a user a set of one or more _**permissions**_ to complete specific tasks in your account. Each role has an _**access level**_, which determines whether the user can complete tasks for all the apps in your account or just one or more selected apps.
 
 For example, the _app management_ role lets users manage and publish one or more apps, the _financial reports_ role lets users view transaction and sales activity reports for one or more apps in the account, and the _administrative_ role lets users complete all tasks for all apps in the account.
 
@@ -18,9 +18,9 @@ For example, the _app management_ role lets users manage and publish one or more
 
 ## Adding users
 
-To add a user to your developer account and assign them roles and permissions, follow these steps:
+To add a user to your account and assign them roles and permissions, follow these steps:
 
-1. From the Roku Developer Dashboard, click **User Access** on the left sidebar; from the Roku Lunchpad, click **Roles and Access**.
+1. From the Roku Developer Dashboard, click **User access** on the left sidebar; from the Roku Launchpad, click **Roles and access**.
 
 2. Click **Invite a user**.
 
@@ -56,9 +56,9 @@ To add a user to your developer account and assign them roles and permissions, f
 
 4. Click **Invite**.
 
-5. If the user already has a Roku developer account, they are immediately granted access to your account with their specified role.
+5. If the user already has a Roku account, they are immediately granted access to your account with their specified role.
 
-   If the user does not have a Roku developer account, they receive an email notification from Roku informing them that they have been granted access to your account.
+   If the user does not have a Roku account, they receive an email notification from Roku informing them that they have been granted access to your account.
 
    ![roku600px - mua\_app\_mgmt](https://image.roku.com/ZHZscHItMTc2/roku-user-access-invite.png)
 
@@ -66,9 +66,9 @@ To add a user to your developer account and assign them roles and permissions, f
 
    ![roku600px - mua\_app\_mgmt](https://image.roku.com/ZHZscHItMTc2/roku-user-access-accept-invite.png)
 
-### Developer roles and permissions
+### Roles and permissions for Roku developers
 
-Roku develooper accounts can have the following roles and permissions:
+Roku developer accounts can have the following roles and permissions:
 
 <HTMLBlock>{`
 <table>
@@ -141,9 +141,9 @@ Roku develooper accounts can have the following roles and permissions:
 </table>
 `}</HTMLBlock>
 
-### TRC roles and permissions
+### Roles and permissions for Roku content partners
 
-TRC users can have the following roles and permissions:
+Roku Content Partner accounts can have the following roles and permissions:
 
 <Table align={["left","left"]}>
   <thead>
@@ -162,12 +162,11 @@ TRC users can have the following roles and permissions:
         Administrator
       </td>
       <td>
-        Maintain administrative control over The Roku Channel Partner Portal. This user can:
+        Maintain administrative control over the Roku Content Partner Portal. This user can:
         <br /><br />
         <ul>
           <li>Manage company account information.</li>
           <li>Manage users, roles, and permissions</li>
-          <li>Manage payout and tax documents</li>
           <li>Manage featured rows, brand assets, and promotional creatives</li>
           <li>Access audience, engagement, and performance analytics</li>
         </ul>
@@ -190,7 +189,7 @@ TRC users can have the following roles and permissions:
     </tr>
     <tr>
       <td>
-        Operations manager
+        Operations Manager
       </td>
       <td>
         Manage title assets and operational reports. This user can:
@@ -202,7 +201,7 @@ TRC users can have the following roles and permissions:
     </tr>
     <tr>
       <td>
-        Business manager
+        Business Manager
       </td>
       <td>
         Manage title rights, partner deals, and business performance reporting. This user can:
@@ -227,7 +226,7 @@ TRC users can have the following roles and permissions:
   </tbody>
 </Table>
 
-### Account roles and permissions
+### Roles and permissions for Roku partner payouts
 
 <Table align={["left","left"]}>
   <thead>
@@ -257,7 +256,7 @@ TRC users can have the following roles and permissions:
 
 You can use the **Roles and access** page to edit, re-invite, and remove users and view their activity logs.
 
-The page lists the email, name, and organization of each user who has been invited to your developer account, their roles, and their current status.
+The page lists the email, name, and organization of each user who has been invited to your account, their roles, and their current status.
 
 You can search the listed user accounts by email address or user name.
 
@@ -273,15 +272,15 @@ If you have the Admin role (or are the root account owner), you can re-send an i
 
 ### Removing users
 
-If you have the Admin role (or are the root account owner), you can remove a user from the developer account. To do this, click the menu icon on the right-hand side of the user’s row, click **Remove user** in the shortcut menu, and then click **Yes** in the confirmation dialog.
+If you have the Admin role (or are the root account owner), you can remove a user from the account. To do this, click the menu icon on the right-hand side of the user’s row, click **Remove user** in the shortcut menu, and then click **Yes** in the confirmation dialog.
 
 ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-remove-user.png)
 
-Removing a user does not affect the user's own Roku developer account. If you need to add the removed user in the future, you must re-invite them.
+Removing a user does not affect the user's own Roku account. If you need to add the removed user in the future, you must re-invite them.
 
 ## Viewing user activity logs
 
-If you have the Admin role (or are the root account owner), you can access the user activity log, which tracks the actions taken by each user in the developer account.
+If you have the Admin role (or are the root account owner), you can access the user activity log, which tracks the actions taken by each user in the account.
 
 The log lists the user’s email address, page they accessed, action taken, subject app, and the date and time of the action.
 
@@ -296,13 +295,13 @@ You can search log entries by email address, page name, action, or app name, and
 
   ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-activity-logs-shortcut.png)
 
-## Switching developer accounts
+## Switching accounts
 
-If you have been granted access to another developer account, you can change the developer account you are currently managing. To do this, follow these steps:
+If you have been granted access to another account, you can change the account you are currently managing. To do this, follow these steps:
 
 1. Click the **Switch account** option from the left sidebar.
 
    ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-switch-account.png)
-2. In the **Choose an account** page, select the desired developer account from the list. Your root account is listed at the top, and the accounts shared with you are listed below.
+2. In the **Choose an account** page, select the desired account from the list. Your root account is listed at the top, and the accounts shared with you are listed below.
 
    ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-switch-account-list.png)

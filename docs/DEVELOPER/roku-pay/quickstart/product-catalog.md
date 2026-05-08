@@ -124,7 +124,7 @@ To create a new product, follow these steps:
   <tbody>
     <tr>
       <td>Product name</td>
-      <td>Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the <a href="https://roku-ent.readme.io/dev/docs/channel-publishing-guide#channel-properties">Channel Properties window</a>. <br /><br />To provide additional localized product names, click <strong>Add product name in another language</strong>, select a locale, and then enter the localized product name. You can provide one product name per locale.</td>
+      <td>Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the <a href="/dev/docs/channel-publishing-guide#channel-properties">Channel Properties window</a>. <br /><br />To provide additional localized product names, click <strong>Add product name in another language</strong>, select a locale, and then enter the localized product name. You can provide one product name per locale.</td>
     </tr>
     <tr>
       <td>Product Id</td>
@@ -227,7 +227,7 @@ To create a purchase option for a product, follow these steps:
       <li>The Currency code is the three-letter ISO-4217 code of the currency in which the customer will be billed.</li>
       <li>The Purchase price reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.</li>
       <li>The Net price field displays the pre-tax price. The Proceeds field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.</li>
-      </ul>If you are creating a <a href="https://roku-ent.readme.io/dev/docs/tvod-app-catalog">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://roku-ent.readme.io/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. </td>
+      </ul>If you are creating a <a href="/dev/docs/tvod-app-catalog">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. </td>
     </tr>
     <tr>
       <td>Base offer</td>

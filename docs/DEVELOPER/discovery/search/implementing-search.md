@@ -164,7 +164,7 @@ Once you have validated your search feed, you can submit your feed following the
     </tr>
     <tr>
       <td>Feed URL</td>
-      <td>Enter the URL where your search feed is hosted. The search feed is a JSON file with content metadata from one or more sources. See the <a href="https://roku-ent.readme.io/dev/docs/search-feed"><strong>Roku Search feed</strong></a> specification for how to create your feed.<br /><br />Optionally, you can protect your search feed with basic HTTP authentication and provide the username and password credentials. If your search feed uses basic HTTP authentication, select <strong>Basic Authentication</strong> from the <strong>Feed Authentication Type</strong> field, and then enter the <strong>Username</strong> and <strong>Password</strong> for the feed.</td>
+      <td>Enter the URL where your search feed is hosted. The search feed is a JSON file with content metadata from one or more sources. See the <a href="/dev/docs/search-feed"><strong>Roku Search feed</strong></a> specification for how to create your feed.<br /><br />Optionally, you can protect your search feed with basic HTTP authentication and provide the username and password credentials. If your search feed uses basic HTTP authentication, select <strong>Basic Authentication</strong> from the <strong>Feed Authentication Type</strong> field, and then enter the <strong>Username</strong> and <strong>Password</strong> for the feed.</td>
     </tr>
     <tr>
       <td>Provider list logo</td>

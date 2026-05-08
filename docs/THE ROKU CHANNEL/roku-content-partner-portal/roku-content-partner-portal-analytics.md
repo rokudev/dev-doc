@@ -19,13 +19,13 @@ The analytics section provides insights into how your content and storefront exp
 # Who this is for
 
 <Callout icon="🔒" theme="default">
-  ## Access and Availability
+  ## Access and availability
 
   Analytics reports and metrics vary based on your partner type and subscription level. Not all data is available to all partners.
 
   For example, merchandising and storefront performance insights are only available to Premium Subscription partners, since these features are tied to storefront and promotional capabilities that are exclusive to that tier.
 
-  If you do not see certain reports or metrics in your analytics view, it is likely due to your current access level or feature eligibility.
+  If you do not see certain reports or metrics in your analytics view, it is likely due to your current access level or report eligibility.
 </Callout>
 
 The analytics section is designed for stakeholders who need visibility into content performance and audience behavior, including:
@@ -38,7 +38,7 @@ The analytics section is designed for stakeholders who need visibility into cont
 
 # What you can do
 
-Use Analytics to:
+Use analytics to:
 
 * **Monitor performance trends:** Track how your titles and storefront are performing over time.
 * **Measure audience engagement:** Understand how users are interacting with your content, including viewing behavior and discovery patterns.
@@ -53,27 +53,24 @@ Analytics data is organized into dashboards and visualizations designed to give 
 
 Depending on your access level, you may be able to:
 
-1. **View summary metrics:**  
-   Get a snapshot of overall performance across your catalog.
-2. **Filter and segment data** Refine insights by territory, time range, or specific titles.
-3. **Drill into detailed views**  
-   Explore performance at the title or campaign level.
-4. **Track changes over time**  
-   Compare performance before and after merchandising or content updates.
+1. **View summary metrics:** Get a snapshot of overall performance across your catalog.
+2. **Filter and segment data:** Refine insights by territory, time range, or specific titles.
+3. **Drill into detailed views:** Explore performance at the title or campaign level.
+4. **Track changes over time:** Compare performance before and after merchandising or content updates.
 
 <br />
 
 # Key metrics you may see
 
-Analytics includes a range of reports that surface performance across different business models, including AVOD, SVOD, Live, and FAST. The specific reports and metrics available to you will depend on your partner type, subscription tier, and feature eligibility.
+Analytics includes a range of reports that surface performance across different business models, including AVOD, SVOD, Live, and FAST. The specific reports and metrics available to you will depend on your partner type, subscription tier, and report eligibility.
 
 Below is an overview of the types of insights available:
 
-* **Streaming activity** – How much content is being watched (streaming hours, stream starts)
-* **Audience engagement** – How users interact with content (starts, completion rates, session duration)
-* **Content performance** – Which titles, episodes, or channels are driving viewership and retention
-* **Platform and distribution** – Where and how users are watching (device, platform, channel, or storefront)
-* **Subscriber behavior** – How users convert, retain, and churn across subscription offerings _(Premium Subscriptions only)_
+* **Streaming activity:** How much content is being watched (streaming hours, stream starts).
+* **Audience engagement:** How consumers interact with content (starts, completion rates, session duration).
+* **Content performance:** Which titles, episodes, or channels are driving viewership and retention.
+* **Platform and distribution:** Where and how consumers are watching (device, platform, channel, or storefront).
+* **Subscriber behavior:** How consumers convert, retain, and churn across subscription offerings _(Premium Subscriptions only)_.
 
 <br />
 

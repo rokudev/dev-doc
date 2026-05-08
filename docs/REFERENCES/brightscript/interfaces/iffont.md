@@ -15,7 +15,7 @@ next:
 
 | Name                                                                                                            | Description                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <Anchor label="roFont" title="roFont" href="https://roku-ent.readme.io/dev/docs/rofont">roFont</Anchor> | roFont represents a particular font, from a font-family (eg. Arial), with a particular pixel size (e.g 20), and a particular boldness or italicness |
+| <Anchor label="roFont" title="roFont" href="/dev/docs/rofont">roFont</Anchor> | roFont represents a particular font, from a font-family (eg. Arial), with a particular pixel size (e.g 20), and a particular boldness or italicness |
 
 ## Supported methods
 

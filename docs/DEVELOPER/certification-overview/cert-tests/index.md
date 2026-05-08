@@ -30,7 +30,7 @@ Developers are expected to use these tools, the [certification criteria](doc:cer
 
 **RAF 1.1** Apps must integrate the [Roku Advertising Framework (RAF)](doc:advertising)  for all ads without modifying, obstructing, or disabling RAF functionality in any way. Replays of live broadcast streams are exempt from this requirement, unless dynamic ad insertion is used to insert new ads.
 
-**RAF 1.2** All measurement beacons must be fired client-side via RAF. See the [Roku Advertising Watermark integration guide](https://roku-ent.readme.io/dev/docs/ad-watermark) for more information.
+**RAF 1.2** All measurement beacons must be fired client-side via RAF. See the [Roku Advertising Watermark integration guide](/dev/docs/ad-watermark) for more information.
 
 **RAF 1.3** Apps in the U.S. Roku Streaming Store only that are not child-directed must support Roku ad tracking by calling the [enableAdMeasurements()](doc:raf-api) method and passing the required content metadata within the following methods: [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api). Optionally, apps may use the [setNielsenGenre API](doc:raf-api) to pass specific Nielsen Genre granularity and the [setNielsenChannelId API](doc:raf-api) for those who specify a custom Nielsen Channel ID. The [enableAdMeasurements](doc:raf-api) method deprecates the [enableNielsenDAR](doc:raf-api) API; therefore, do not use the [enableNielsenDAR](doc:raf-api) API.
 

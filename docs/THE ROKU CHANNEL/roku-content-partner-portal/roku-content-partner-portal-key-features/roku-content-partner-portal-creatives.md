@@ -2,17 +2,17 @@
 title: Creatives
 excerpt: Overview
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
-The creatives section is where you manage a limited set of publisher-level visual assets used across The Roku Channel subscription experience. 
+The creatives section is where you manage a limited set of publisher-level visual assets used across The Roku Channel subscription experience.
 
 <Callout icon="🔒" theme="default">
-  Available only to premium subscription partners.
+  Available only to eligible Premium Subscription partners.
 </Callout>
 
-These assets are not title-specific. Instead, they represent your service branding and are displayed in key user journeys such as subscription entry points and publisher collection pages.
+These assets are not title specific. Instead, they represent your service branding and are displayed in key consumer journeys such as subscription entry points and publisher collection pages.
 
 At this stage, creative control is intentionally scoped to a small number of high-impact assets to ensure consistency across the platform.
 
@@ -24,7 +24,7 @@ At this stage, creative control is intentionally scoped to a small number of hig
 
 # Who this is for
 
-Creatives is available to content partners who manage **Premium Subscription** storefronts on the platform.
+Creatives is available to eligible content partners who manage **Premium Subscription** storefronts on The Roku Channel.
 
 This feature is intended for users responsible for maintaining brand consistency and subscription presentation, including:
 
@@ -68,10 +68,10 @@ Specifications:
 
 # How it works
 
-1. **Select Context** Choose the **Service** and **Territory** to manage creatives for that specific configuration.
-2. **View Current Assets** Review the currently published images for each creative type.
-3. **Upload New Assets** Drag and drop or browse to upload a replacement image.
-4. **Update** Apply changes to replace the existing creative.
+1. **Select Context:** Choose the **Service** and **Territory** to manage creatives for that specific configuration.
+2. **View Current Assets:** Review the currently published images for each creative type.
+3. **Upload New Assets:** Drag and drop or browse to upload a replacement image.
+4. **Update:** Apply changes to replace the existing creative.
 
 <br />
 
@@ -100,7 +100,7 @@ Failure to meet these requirements may result in assets being rejected or render
 
 # Why it matters
 
-These creatives directly impact how users perceive your service and whether they choose to subscribe. Strong, clear visuals:
+These creatives directly impact how consumers perceive your service and whether they choose to subscribe. Strong, clear visuals:
 
 * Improve brand recognition
 * Increase click-through rates on subscription entry points

@@ -83,7 +83,6 @@ end function
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>duration</td>
@@ -92,7 +91,6 @@ end function
       <td>READ\_WRITE</td>
       <td>Sets the duration of the animation in seconds</td>
     </tr>
-
     <tr>
       <td>easeFunction</td>
       <td>string</td>
@@ -100,7 +98,6 @@ end function
       <td>READ\_WRITE</td>
       <td>Specifies the interpolator function to be used for the animation: <table><thead><tr><th>Value</th><th>Ease-In/Ease-Out Function</th></tr></thead><tbody><tr><td>linear</td><td>No ease-in or ease-out</td></tr><tr><td>inQuad</td><td>Quadratic ease-in function, no ease-out</td></tr><tr><td>inCubic</td><td>Cubic ease-in function, no ease-out</td></tr><tr><td>inQuartic</td><td>Quartic ease-in function, no ease-out</td></tr><tr><td>inQuintic</td><td>Quintic ease-in function, no ease-out</td></tr><tr><td>inExpo</td><td>Exponential ease-in function, no ease-out</td></tr><tr><td>outQuad</td><td>Quadratic ease-out function, no ease-in</td></tr><tr><td>outCubic</td><td>Cubic ease-out function, no ease-in</td></tr><tr><td>outQuartic</td><td>Quartic ease-out function, no ease-in</td></tr><tr><td>outQuintic</td><td>Quintic ease-out function, no ease-in</td></tr><tr><td>outExpo</td><td>Exponential ease-out function, no ease-in</td></tr><tr><td>inOutQuad</td><td>Quadratic ease-in and ease-out function</td></tr><tr><td>inOutCubic</td><td>Cubic ease-in and ease-out function</td></tr><tr><td>inOutQuartic</td><td>Quartic ease-in and ease-out function</td></tr><tr><td>inOutQuintic</td><td>Quintic ease-in and ease-out function</td></tr><tr><td>inOutExpo</td><td>Exponential ease-in and ease-out function</td></tr><tr><td>piecewise</td><td>Quadratic ease-in and ease-out function with extra control over the percentage of the duration during which ease-in and ease-out occurs. The extra control is specified using the <code>easeInPercent</code> and <code>easeOutPercent</code> fields.</td></tr></tbody></table></td>
     </tr>
-
     <tr>
       <td>easeInPercent</td>
       <td>float</td>
@@ -108,7 +105,6 @@ end function
       <td>READ\_WRITE</td>
       <td>If easeFunction is set to piecewise, easeInPercent sets the percentage of the animation duration during which ease-in is applied. Note that the values of easeInPercent plus easeOutPercent must be less than or equal to 1. For all other values of easeFunction, easeInPercent is ignored</td>
     </tr>
-
     <tr>
       <td>easeOutPercent</td>
       <td>float</td>
@@ -116,7 +112,6 @@ end function
       <td>READ\_WRITE</td>
       <td>If easeFunction is set to piecewise, easeOutPercent sets the percentage of the animation duration during which ease-out is applied. Note that the values of easeInPercent plus easeOutPercent must be less than or equal to 1. For all other values of easeFunction, easeOutPercent is ignored</td>
     </tr>
-
     <tr>
       <td>optional</td>
       <td>boolean</td>
@@ -124,7 +119,6 @@ end function
       <td>READ\_WRITE</td>
       <td>Set to true to skip animations on lower performing Roku devices. See <a href="/dev/docs/hardware#current-roku-models" title="Roku Devices">Roku Devices</a> for model numbers and code names. When an Animation has optional set to true, setting the control field to start will cause the state field to change to running and immediately change again to finished. These state changes allow any logic tied to state field observers that run at the start and end of the Animation to be properly called</td>
     </tr>
-
     <tr>
       <td>willBeSkipped</td>
       <td>boolean</td>

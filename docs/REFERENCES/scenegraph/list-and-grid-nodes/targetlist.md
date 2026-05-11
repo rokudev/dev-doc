@@ -127,7 +127,6 @@ focusedTargetSet4.focusIndex = 4
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>focusedTargetSet</td>
@@ -136,7 +135,6 @@ focusedTargetSet4.focusIndex = 4
       <td>READ\_WRITE</td>
       <td>Specifies one or more TargetSet's to be used when the TargetList has the focus. If a single TargetSet is specified, focus will stay fixed on the targetRect of that TargetSet that corresponds to the TargetGroup's focus index. The focus index will come from the TargetSet if explicitly specified or from the TargetGroup's defaultTargetSetFocusIndex field if not.<br /><br />If focusedTargetSet includes more than one TargetSet node, that defines a sequence of TargetSet's that will be advanced through as the user presses the advance or reverse key. When advancing, the focus floats from one TargetSet's to the next TargetSet in the array until the last element of the focusedTargetSet is reached, at which point the focus is fixed to the last element and the items begin to scroll.<br /><br />When reversing, the focus floats from one TargetSet to the previous TargetSet in the array until the first element of the focusedTargetSet is reached, at which point the focus is fixed to the first element and the items begin to scroll.<br /><br />See above for more discussion of setting up fixed and floating focus use cases.</td>
     </tr>
-
     <tr>
       <td>unfocusedTargetSet</td>
       <td>TargetSet</td>
@@ -144,7 +142,6 @@ focusedTargetSet4.focusIndex = 4
       <td>READ\_WRITE</td>
       <td>Specifies the TargetSet to be used when the TargetList does not have the focus.</td>
     </tr>
-
     <tr>
       <td>advanceKey</td>
       <td>string</td>
@@ -152,7 +149,6 @@ focusedTargetSet4.focusIndex = 4
       <td>READ\_WRITE</td>
       <td>Specifies which remote button will move the focus forward. For vertical lists, this will typically be set to "down". For horizontal rows, this will typically be set to "right".</td>
     </tr>
-
     <tr>
       <td>reverseKey</td>
       <td>string</td>

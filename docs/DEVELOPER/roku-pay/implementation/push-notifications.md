@@ -66,278 +66,223 @@ Roku Pay sends push notifications for the following transactions:
       <th>
         Transaction Type
       </th>
-
       <th>
         Description
       </th>
-
       <th>
         Action Required by Publisher
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         [Sale](#sale)
       </td>
-
       <td>
         A purchase or renewal occurs, or a free trial starts. Renewals are denoted with the **comment** field set to"Recurring subscription processed".
       </td>
-
       <td>
         * New purchase: Create account (if not already created) and add entitlement.
         * Renewal: Check entitlement and verify subscription is not marked for cancellation.
       </td>
     </tr>
-
     <tr>
       <td>
         [GraceInitiated](#in-grace-period)
       </td>
-
       <td>
         The payment for a subscription auto-renewal fails and the subscription was placed in a grace period.
       </td>
-
       <td>
         * Use DoRecovery API to display in-app notice prompting customer to update their method of payment.
         * Continue granting access to content in app.
       </td>
     </tr>
-
     <tr>
       <td>
         [GraceRecovered](#in-grace-period)
       </td>
-
       <td>
         A payment is received for a subscription that was in a grace period.
       </td>
-
       <td>
         * Stop prompting the customer to update their method of payment.
         * Maintain current billing cycle.
       </td>
     </tr>
-
     <tr>
       <td>
         [OnHoldInitiated](#on-hold)
       </td>
-
       <td>
         The grace period elapsed (renewal payment was still not received) and the subscription was placed on hold. This notification is only sent to publishers using [Enhanced Subscription Recovery](/dev/docs/subscription-on-hold).
       </td>
-
       <td>
         * Use the DoRecovery API to display an in-app notice prompting customers to update their method of payment.
         * Block access to content in app.
         * Update entitlement system to denote that access to content should be denied.
       </td>
     </tr>
-
     <tr>
       <td>
         [OnHoldRecovered](#on-hold)
       </td>
-
       <td>
         A payment is received for a subscription that was placed on-hold. This notification is only sent to
       </td>
-
       <td>
         * Stop prompting the customer to update their method of payment.
         * Update billing system with the new billing period.
         * Update entitlement system to denote that access to content should be granted.
       </td>
     </tr>
-
     <tr>
       <td>
         [CancellationOfferIntiated](#cancellationoffers)
       </td>
-
       <td>
         The customer accepts a [cancellation offer](doc:product-catalog) and its specified pricing and billing terms for the subscription go into effect.
       </td>
-
       <td>
-        * New purchase: Create account (if not already created) and add entitlement.
-
-        * Renewal: Check entitlement and verify subscription is not marked for cancellation.
+        <ul>
+          <li>New purchase: Create account (if not already created) and add entitlement.</li>
+          <li>Renewal: Check entitlement and verify subscription is not marked for cancellation.</li>
+        </ul>
       </td>
     </tr>
-
     <tr>
       <td>
         [CancellationOfferEnded](#cancellationoffers)
       </td>
-
       <td>
         The pricing and billing terms specified in the [cancellation offer](doc:product-catalog) elapse.
       </td>
-
       <td>
         * expirationDate is a future date: no action is required until the expiration date.
         * expirationDate is today's date: remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
         * expirationDate is a past date: remove entitlement (passive cancellation; subscription could not be recovered).
       </td>
     </tr>
-
     <tr>
       <td>
         [Cancellation](#cancellation)
       </td>
-
       <td>
         A subscription is canceled by the customer, deactivated becuase  the customer opted out of automatic renewal, or is passively canceled because payment could not be recovered.<br /><br />Active cancellations: The **expirationDate** field is set to the current or future date<br /><br />Deactivations: The **expirationDate** field is set to the decactivation date<br /><br />Passive cancellations: The **expirationDate** field is set to a past date.
       </td>
-
       <td>
         * expirationDate is a future date: no action is required until the expiration date.
         * expirationDate is today's date: remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
         * expirationDate is a past date: remove entitlement (passive cancellation; subscription could not be recovered).
       </td>
     </tr>
-
     <tr>
       <td>
         [Refund](#refund)
       </td>
-
       <td>
         A refund was initiated by the publisher or Roku Pay.
       </td>
-
       <td>
         If the refund was a result of an unauthorized purchase, Roku cancels the subscription. Remove the entitlement upon receiving the cancellation notification from Roku.
       </td>
     </tr>
-
     <tr>
       <td>
         [Credit](#credit)
       </td>
-
       <td>
         A service credit was issued to a Roku customer by the publisher or Roku Pay.
       </td>
-
       <td>
         No action required.
       </td>
     </tr>
-
     <tr>
       <td>
         [Resubscribe](#resubscribe)
       </td>
-
       <td>
         A subscription previously canceled by the customer is reinstated during the current billing period.
       </td>
-
       <td>
         Revert any action taken based on the cancellation.
       </td>
     </tr>
-
     <tr>
       <td>
         [UpgradeSale](#upgradesdowngrades)
       </td>
-
       <td>
         An upgraded subscription is purchased.
       </td>
-
       <td>
         Add entitlement for upgraded product.
       </td>
     </tr>
-
     <tr>
       <td>
         [UpgradeCancellation](#upgradesdowngrades)
       </td>
-
       <td>
         An original subscription is canceled as a result of being upgraded.
       </td>
-
       <td>
         Remove entitlement for original product.
       </td>
     </tr>
-
     <tr>
       <td>
         [DowngradeSale](#upgradesdowngrades)
       </td>
-
       <td>
         A downgraded subscription is purchased.
       </td>
-
       <td>
         On the expiration date of the current subscription, move entitlement to the downgrade subscription.
       </td>
     </tr>
-
     <tr>
       <td>
         [DowngradeCancellation](upgradesdowngrades)
       </td>
-
       <td>
         An original subscription is canceled as a result of being downgraded.
       </td>
-
       <td>
         Remove entitlement for original subscription on the expiration date.
       </td>
     </tr>
-
     <tr>
       <td>
         [Chargeback](#chargeback)
       </td>
-
       <td>
         The customer has initiated a transaction dispute. The transaction will be deducted from the partner's payout.
       </td>
-
       <td>
         No action required.
       </td>
     </tr>
-
     <tr>
       <td>
         [ChargebackReversed](#chargebackreversed)
       </td>
-
       <td>
         Roku successfully reversed the chargeback claim. The revenue share will be returned to the partner payout.
       </td>
-
       <td>
         No action required.
       </td>
     </tr>
-
     <tr>
       <td>
         [SecondChargeback](#secondchargeback)
       </td>
-
       <td>
         The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback). The transaction will be deducted from the partner's payout.
       </td>
-
       <td>
         No action required
       </td>

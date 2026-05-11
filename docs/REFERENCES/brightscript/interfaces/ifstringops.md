@@ -309,28 +309,23 @@ Returns the string with the following characters replaced with their correspondi
       <th>Replaced with</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>" (double quote)</td>
       <td>\&quot;</td>
     </tr>
-
     <tr>
       <td>' (single quote)</td>
       <td>\&apos;</td>
     </tr>
-
     <tr>
       <td>\<</td>
       <td>\&lt;</td>
     </tr>
-
     <tr>
       <td>></td>
       <td>\&gt;</td>
     </tr>
-
     <tr>
       <td>&</td>
       <td>\&amp;</td>

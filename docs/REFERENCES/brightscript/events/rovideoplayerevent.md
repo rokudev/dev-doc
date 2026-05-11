@@ -257,28 +257,23 @@ Returns an associative array with the following information about the stream seg
       <th>Value</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>StreamBandwidth</td>
       <td>Bandwidth of the stream being played in kbps</td>
     </tr>
-
     <tr>
       <td>SegStartTime</td>
       <td>Segment start time (offset from start of stream) in milliseconds</td>
     </tr>
-
     <tr>
       <td>Sequence</td>
       <td>Stream segment sequence number</td>
     </tr>
-
     <tr>
       <td>SegUrl</td>
       <td>Stream segment URL (i.e., .ts file for HLS, stream fragment URL for smooth)</td>
     </tr>
-
     <tr>
       <td>HdrMode</td>
       <td>Indicates the HDR format of the content, which may be one of the following values:<ul><li>0: UNKNOWN</li><li>1: NONE (SDR)</li><li>2: HDR10</li><li>3: DOLBY\_VISION</li><li>4: HLG10</li><li>5: HDR10\_PLUS</li><li>6: SL\_HDR2</li></ul><h3>isDownloadSegmentInfo() as Boolean</h3><p>Checks whether a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded. This method returns true if a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex() and GetInfo() methods on the event.</p><h4>GetMessage() as String</h4><p>Returns a description of the message (for example, "Download segment info").</p><h4>GetIndex() as Integer</h4><p>Returns the segment sequence number.</p><h4>GetInfo() as Object</h4><p>Returns an associative array containing the following information about the segment download:</p></td>

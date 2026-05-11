@@ -127,7 +127,6 @@ When there is a match (the name uttered by the user matches the registered text 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>actions</td>
@@ -170,38 +169,32 @@ An roAssociativeArray the following information about the most recent app exits.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>timestamp</td>
       <td>String</td>
       <td>An ISO 8601 date string that specifies the time of the app exit.</td>
     </tr>
-
     <tr>
       <td>exit\_code</td>
       <td>String</td>
       <td>The exit code, which denotes the cause of the app termination. See <a href="/dev/docs/dev-environment#lastexitorterminationreason-parameter">lastExitOrTerminationReason</a> for the list of possible exit codes. For memory-related app exits, this value will be one of the following: <ul><li><strong>EXIT\_CHANNEL\_MEM\_LIMIT\_FG</strong>: The app exceeded the per-app memory limit while running in the foreground.</li><li><strong>EXIT\_CHANNEL\_MEM\_LIMIT\_BG</strong>: The app exceeded the per-app memory limit while running in the background.</li><li><strong>EXIT\_OUT\_OF\_MEMORY</strong>: The device was running under low-memory conditions.</li><li><strong>EXIT\_AM\_LOWRESOURCE</strong>: System resources were low.</li><li><strong>EXIT\_SYSTEM\_KILL</strong>: The app was preemptively closed by the Roku OS.</li><li><strong>EXIT\_UNKNOWN:</strong> This is the default exit code if there was no prior exit (for example, the inital app launch after system boot) or no unusual exit reason noted (for example, a scenario other than a BrightScript crash or system resources issue).</li></ul></td>
     </tr>
-
     <tr>
       <td>mem\_limit</td>
       <td>Integer</td>
       <td>The applicable per-app memory limit that was exceeded (in Mb). This attribute is only included If the <strong>exitCode</strong> is EXIT\_CHANNEL\_MEM\_LIMIT\_FG or EXIT\_CHANNEL\_MEM\_LIMIT\_BG.</td>
     </tr>
-
     <tr>
       <td>app\_state</td>
       <td>String</td>
       <td>The state of the app when it was terminated: <ul><li><strong>foreground</strong>: The application was running in the foreground.</li><li><strong>background</strong>: The application was running in the background.</li></ul></td>
     </tr>
-
     <tr>
       <td>console\_log</td>
       <td>String</td>
       <td>The last 20 lines of text written to the BrightScript console before termination. The console output includes BrightScript print statements, BrightScript errors and warnings, and any system messages. The availability of this attribute depends on the platform and app configuration.</td>
     </tr>
-
     <tr>
       <td>media\_player\_state</td>
       <td>String</td>

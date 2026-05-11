@@ -63,111 +63,87 @@ The **subscription-recovery** test API includes a set of POST methods for changi
       <th>
         #
       </th>
-
       <th>
         Usecase
       </th>
-
       <th>
         Subscription state change
       </th>
-
       <th>
         Method
       </th>
-
       <th>
         URL
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         1
       </td>
-
       <td>
         Move an active subscription to the in-grace state
       </td>
-
       <td>
         active → in-grace
       </td>
-
       <td>
         POST
       </td>
-
       <td>
         [https://apipub.roku.com/test/subscription-recovery/grace-period-state/\{partnerApiKey}/\{transactionId}](https://apipub.roku.com/test/subscription-recovery/grace-period-state/\{partnerApiKey}/\{transactionId})
       </td>
     </tr>
-
     <tr>
       <td>
         2
       </td>
-
       <td>
         Move an in-grace subscription to the on-hold state
       </td>
-
       <td>
         in-grace → on-hold
       </td>
-
       <td>
         POST
       </td>
-
       <td>
         [https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/\{partnerApiKey}/\{transactionId}](https://apipub.roku.com/test/subscription-recovery/passive-onhold-state/\{partnerApiKey}/\{transactionId})
       </td>
     </tr>
-
     <tr>
       <td>
         3
       </td>
-
       <td>
         Passively cancel a subscription
       </td>
-
       <td>
         * in-grace → canceled
         * on-hold → canceled
       </td>
-
       <td>
         POST
       </td>
-
       <td>
         [https://apipub.roku.com/test/subscription-recovery/deactivated-state/\{partnerApiKey}/\{transactionId}](https://apipub.roku.com/test/subscription-recovery/deactivated-state/\{partnerApiKey}/\{transactionId})
       </td>
     </tr>
-
     <tr>
       <td>
         4
       </td>
-
       <td>
         Recover a subscription
       </td>
-
       <td>
         * in-grace → recovered
         * on-hold → recovered
       </td>
-
       <td>
         POST
       </td>
-
       <td>
         [https://apipub.roku.com/test/subscription-recovery/recover/\{](https://apipub.roku.com/test/subscription-recovery/recover/\{devToken}/\{transactionId)[partnerApiKey](https://apipub.roku.com/test/subscription-recovery/deactivated-state/\{partnerApiKey}/\{transactionId)}/\{transactionId}
       </td>

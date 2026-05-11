@@ -71,7 +71,6 @@ Note that the fields are updated in the order presented in the table below. Any 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>currTarget</td>
@@ -79,44 +78,36 @@ Note that the fields are updated in the order presented in the table below. Any 
       <td>READ\_ONLY</td>
       <td>Set to index of the current TargetSet's targetRect that should contain the item. If currTarget is an integer value, the item's currRect field will be the value of currTarget'th item in the TargetGroup node's currTargetSet field's targetRect's array. If currTarget is not an integer, it indicates that the item is animating from one targetRect index to another. <br /><br />For example, if the value is 5.7, the item is between the rectangles at index 5 and 6 of the TargetGroup node's currTargetSet's targetRect field. The item if 70% occupying the rectangle at index 6 and 30% occupying the rectangle at index 5.</td>
     </tr>
-
     <tr>
       <td>currRect</td>
       <td>rectangle</td>
       <td>READ\_ONLY</td>
       <td>Set to the rectangle that the item should occupy. The rectangle values can be accessed either as an associative array with "x", "y", "width" and "height" elements or as an array of four float's containing the x, y, width and height values of the rectangles.<br /><br />Note that the item will be automatically translated so that its origin is at the (x,y) location of this rectangle relative to the origin of the TargetGroup node. Typically, the width and height of currRect is used to dynamically adjust the size of the item as it animates from one target to another.</td>
     </tr>
-
     <tr>
       <td>index</td>
       <td>integer</td>
       <td>READ\_ONLY</td>
       <td>Set to the index of this item in the data model.</td>
     </tr>
-
     <tr>
       <td>groupHasFocus</td>
       <td>Boolean</td>
       <td>READ\_ONLY</td>
       <td>Set to true if the <strong>TargetGroup</strong> node has focus, false otherwise.</td>
     </tr>
-
     <tr>
       <td>itemContent</td>
       <td><strong>ContentNode</strong></td>
-
       <td />
-
       <td>Contains the data to be displayed by the group item. The relationship between data in the <strong>ContentNode</strong> node and the visual elements of the grid item is determined by the markup and scripts in the item XML component. <br /><br />Typically, an observer callback function of the <code>itemContent</code> field is used to update the grid item when the content changes.</td>
     </tr>
-
     <tr>
       <td>focusPercent</td>
       <td>float</td>
       <td>READ\_ONLY</td>
       <td>The fractional value, from 0.0 to 1.0, of a time delay after focus has moved from one item to the next. <br /><br />The fractional value increases incrementally from 0.0 to 1.0 for the newly-focused item, while simultaneously decreasing from 1.0 to 0.0 for the previously-focused item. <br /><br />This value can be used as a timing key to smoothly animate the appearance of the focused item as well as the previously-focused item, to indicate the movement of focus to the user.</td>
     </tr>
-
     <tr>
       <td>itemHasFocus</td>
       <td>Boolean</td>

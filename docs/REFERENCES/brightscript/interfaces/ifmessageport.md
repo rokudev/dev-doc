@@ -34,7 +34,6 @@ Waits until an event object is available or timeout milliseconds have passed.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>timeout</td>

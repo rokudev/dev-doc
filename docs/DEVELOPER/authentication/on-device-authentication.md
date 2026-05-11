@@ -26,7 +26,6 @@ To implement on-device authentication, you first verify whether a customer shoul
       <th>Next Steps</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>YES</td>
@@ -34,35 +33,30 @@ To implement on-device authentication, you first verify whether a customer shoul
       <td>—</td>
       <td>Get a refresh token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.</td>
     </tr>
-
     <tr>
       <td>YES</td>
       <td>NO</td>
       <td>YES</td>
       <td>Store an access token in the device registry. Grant access to content.</td>
     </tr>
-
     <tr>
       <td>YES</td>
       <td>NO</td>
       <td>NO</td>
       <td>The next steps depend on whether the customer originally created their account through Roku Pay or your own service ("publisher service)":<br /> <ul><li><strong>Created through Roku Pay</strong>: Validate the previous transaction. Get a new access token from your entitlement server and store in device registry and Roku cloud. Grant access to content.<br /><br /></li><li><strong>Created through publisher service</strong>: Check whether the Roku cloud has an access token. If it does and the customer is signed in, store the access token in the device registry, and then grant access to content.</li></ul><p>If the customer is not signed up or is signed out, display your app UI, get the customer's email address, and have them sign up or sign back in. Once the customer has successfully authenticated, generate a new access token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.</p><p>If the Roku cloud does not have an access token, display your app UI and then get the customer's email address. Use the email address to check whether the customer is linked to an active subscription in your system. If there is already an active subscription, generate a new access token from your entitlement server and store it in the device registry and Roku cloud. Grant access to content.</p><blockquote><p>For SVOD and TVOD apps (and other subscription services), on-device authentication deprecates the <a href="/dev/docs/authentication-and-linking">"rendezvous" registration method</a>. With this method, a customer was shown a registration code on their device and had to enter it on an external website. An authentication service then linked the customer's device to their account via an access token that was downloaded and stored on the device.</p><p>Authentication via a third-party oAuth provider such as Google or Facebook is not supported.</p></blockquote></td>
     </tr>
-
     <tr>
       <td>NO</td>
       <td>YES</td>
       <td>—</td>
       <td>Grant access to content.</td>
     </tr>
-
     <tr>
       <td>NO</td>
       <td>NO</td>
       <td>YES</td>
       <td>If the customer is signed in, store the access token in the device registry, and grant access to content. If the customer is signing up (or has signed out), have them re-authenticate.</td>
     </tr>
-
     <tr>
       <td>NO</td>
       <td>NO</td>

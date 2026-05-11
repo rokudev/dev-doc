@@ -42,23 +42,19 @@ A monitoring session file contains the following objects (listed in order):
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>device</td>
       <td>The name, model, serial number, and OS version of the test device.</td>
     </tr>
-
     <tr>
       <td>channel</td>
       <td>The ID, name, and version of the test app.</td>
     </tr>
-
     <tr>
       <td>metadata</td>
       <td>The unique ID, timestamp, and version of the monitoring file.</td>
     </tr>
-
     <tr>
       <td>session</td>
       <td>A stream of multiple entries of the following types: <ul><li><strong>static</strong>. The background and foreground DRAM usage limits (for supported devices only; this field is set to "null" on unsupported devices).</li><li><strong>live</strong>. The resource usage statistics. This contains arrays of objects for the following metrics: <strong>channel\_system\_memory\_usage</strong>, <strong>channel\_cpu\_usage</strong>, <strong>channel\_graphics\_memory\_usage</strong>, <strong>channel\_graph\_metrics, graphics\_rendering\_frame\_rate,  sgrendezvous</strong> and <strong>fw\_beacons</strong>.</li></ul></td>
@@ -116,7 +112,6 @@ The **static** object contains the following persistent data:
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>foreground\_limit</td>
@@ -124,7 +119,6 @@ The **static** object contains the following persistent data:
       <td>Bytes</td>
       <td>The maximum amount of DRAM that may be used by the app when browsing and selecting content in the app UI and during playback. If an app exceeds the limit displayed in the app system memory usage pane while running in the foreground, the Roku OS terminates the app. The foreground limit varies by device, and it is subject to change.<br /><br />On devices that do not support per-app memory limits, the Roku Resource Monitor displays "N/A". The Roku OS, however, does terminate apps running in the foreground when specific system memory levels are reached on those devices.<br /><blockquote><p>The foreground limit may be decreased in the near future; therefore, apps should consume only 75% of the displayed limit. The reduced limit will be enforced by the Roku OS in the near future.</p></blockquote></td>
     </tr>
-
     <tr>
       <td>background\_limit</td>
       <td>number/null</td>

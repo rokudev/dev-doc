@@ -84,32 +84,27 @@ Integrating into Continue Watching entails calling the Roku Continue Watching AP
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><strong>Retrieve bookmarks when app is launched</strong></td>
       <td>Publisher backend system</td>
       <td>The publisher maintains the playback position of content. Roku does not maintain bookmarks because content may be watched across multiple platforms (for example, web and Roku). This ensures that deep links from the Continue Watching row return the customer to the actual playback position.</td>
     </tr>
-
     <tr>
       <td><strong>Update bookmark</strong></td>
       <td>PUT request to Continue Watching API</td>
       <td>Once the publisher retrieves the current playback position from their backend system, the app makes a <strong>PUT</strong> request to update the Continue Watching row with that bookmark.</td>
     </tr>
-
     <tr>
       <td><strong>Add content to Continue Watching row when content playback starts</strong></td>
       <td>POST request to Continue Watching API</td>
       <td>The publisher controls how long content has been watched (for example, one minute) before it is added to the Continue Watching row. Once the publisher-configured interval has been reached, the app makes a POST request to add the content to the Continue Watching row.<br />During playback, do not make Continue Watching API calls to update the playback position. The main purpose of the Continue Watching user experience is to aggregate in-progress content and streamline resumption. The progress bar used to reflect the current bookmark in the Continue Watching row is an approximation. If the customer presses the Home button after the POST request has been sent, the content will still be listed in the Continue Watching row, which is the primary goal of the feature.</td>
     </tr>
-
     <tr>
       <td><strong>Update content playback position when content playback ends</strong></td>
       <td>POST request to Continue Watching API</td>
       <td>Once the customer stops content playback, the app makes a <strong>POST</strong> request to update the Continue Watching row the current bookmark for that content.</td>
     </tr>
-
     <tr>
       <td><strong>Remove content from Continue Watching row when content has been completed</strong></td>
       <td>DELETE request to Continue Watching API</td>
@@ -129,23 +124,19 @@ The following table summarizes the basic information for the Continue Watching R
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><strong>Endpoint</strong></td>
       <td>The URL for the Continue Watching APIs is <code>[https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching](https://apipub.roku.com/developer/v1/user-data/v1/content/continueWatching)</code>. User profile data is sent as part of the encrypted payload included in the API call. A separate endpoint for receiving profile-specific continue-watching data is not used.</td>
     </tr>
-
     <tr>
       <td><strong>Protocol</strong></td>
       <td>Continue Watching API calls may only be sent using HTTPS.</td>
     </tr>
-
     <tr>
       <td><strong>Methods</strong></td>
       <td>The Continue Watching APIs support the following REST methods for adding, retrieving, updating, and deleting content items:<br /><ul><li><strong>POST</strong>. Add one or more new content items; update existing items.</li><li><strong>GET</strong>. Retrieve the existing list of content items.</li><li><strong>PUT</strong>. Replace the entire existing list of content items. When making this request, include all the content that should remain in the Continue Watching row (for example, a PUT request with a single item replaces the current list with that one item). Passing an empty body removes all content from the list.</li><li><strong>DELETE</strong>. Remove one or more content items.</li></ul></td>
     </tr>
-
     <tr>
       <td><strong>Header</strong></td>
       <td>Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):<ul>
@@ -153,7 +144,6 @@ The following table summarizes the basic information for the Continue Watching R
       <li><p><strong>Accept</strong>: application/json</p></li><li><p><strong>x-roku-reserved-federation-token</strong>: An encrypted payload that includes the channel ID and customer's unique user ID (UUID)</p>
       </li></ul><blockquote>See <a href="#appendix-a-sample-brightscript-code-for-adding-http-headers">Appendix A</a> for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](doc:ifhttpagent#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.</blockquote></td>
     </tr>
-
     <tr>
       <td><strong>Response</strong></td>
       <td>The Continue Watching APIs return one of the following response codes:<ul><li><strong>200</strong>: OK</li><li><strong>204</strong>: No content (DELETE requests only)</li><li><strong>400</strong>: Bad request (required fields are missing from the payload; a description of the error is returned)</li><li><strong>401</strong>: Unauthorized (DELETE requests only)</li><li><strong>403</strong>: Forbidden (if an invalid partner)</li><li><strong>424</strong>: A Roku web service that the Continue Watching API depends on returned an error. </li><li><strong>500</strong>: An internal Roku web service error.</li></ul></td>
@@ -174,7 +164,6 @@ To add new content items and update existing ones to the Continue Watching row, 
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>contentId</td>
@@ -182,42 +171,36 @@ To add new content items and update existing ones to the Continue Watching row, 
       <td>Required</td>
       <td>The ASCII string (maximum 255 characters) used to uniquely identify the content in your app. <br /><br />This maps directly to the playID (contentId) field in the [Roku Search feed specification](doc:search-feed) or contentId for any search implementations using externalId providers.<br /><br />For a TV series, the seriesId maps to the corresponding seriesId field in Search feed spec. <br /><blockquote><p>For a TV series, you must pass (1) the seriesId (the ID of series asset) in the <strong>contentId</strong> field and (2) the playID of the episode in the <strong>episodeId</strong> field.</p></blockquote></td>
     </tr>
-
     <tr>
       <td>episodeId</td>
       <td>String</td>
       <td>Optional</td>
       <td>If the content is a TV episode that is part of a series, pass the following:<br /><ul><li>contentId: Pass the <strong>seriesId</strong> in this field. This should be the same as the seriesId in the app's Roku Search feed.</li><li>episodeId: Pass the <strong>episodeId</strong> in this field. This should be the same as the "playId" in the app's Roku Search Feed, or "contentId" in externalID implementations</li></ul><br />This enables Roku to enhance the UX presentation of the series resume point.<br /><br />If the <strong>waitForNextEpisodeAvailability</strong> field is set to true, the series will only be shown in the Continue Watching row after the subsequent episode is available in the app's search feed.</td>
     </tr>
-
     <tr>
       <td>waitForNextEpisodeAvailability</td>
       <td>Boolean</td>
       <td>Optional</td>
       <td>This field is used for episodic content. Set it to <strong>true</strong> when an episode has been completed and the next episode has not been released yet; otherwise, set it to <strong>false</strong>.<br /><br />Roku can use this information to show the content in the Continue Watching row whenever the next episode becomes available. <br /><br />This feature requires a <a href="/dev/docs/search-feed">search feed</a> that lists "serial" and "episode" assets.<br /><br />The following matrix demonstrates how to use this field. In this example, E1 and E2 are available, but E3 has not been released yet.<br /><table><tr><td>Event</td><td>episodeId value</td><td>waitForNextEpisodeAvailability flag</td><td>Episode shown in Continue Watching row</td></tr><tr><td>Start E1</td><td>E1</td><td>false</td><td>E1</td></tr><tr><td>Complete E1</td><td>E1</td><td>true</td><td>E2</td></tr><tr><td>Start E2</td><td>E2</td><td>false</td><td>E2</td></tr><tr><td>Complete E2</td><td>E2</td><td>true</td><td>none</td></tr><tr><td>E3 becomes available later</td><td>-</td><td>-</td><td>E3</td></tr><tr><td>Start E3</td><td>E3</td><td>false</td><td>E3</td></tr><tr><td>Complete E3</td><td>E3</td><td>true</td><td>none</td></tr></table></td>
     </tr>
-
     <tr>
       <td>profileLabel</td>
       <td>String</td>
       <td>Optional</td>
       <td>Enables Roku to label content in the Continue Watching row to identify which profile was watching the content item (this is different than the profileId in the endpoint URL, which is the UUID of the profile used to watch the content).</td>
     </tr>
-
     <tr>
       <td>lastInteractionTime</td>
       <td>Integer</td>
       <td>Required</td>
       <td>The unix timestamp of the playback event. This is used to help determine the ordering of items in the Continue Watching row. If data is unavailable, use the current epoch time.</td>
     </tr>
-
     <tr>
       <td>position</td>
       <td>Integer</td>
       <td>Optional</td>
       <td>The timestamp of the content item (in seconds) when the playback event occurred. <br /><br />Providing the <strong>position</strong> and <strong>duration</strong> enables a progress bar that approximates the playback position to be displayed on the content thumbnail in the Continue Watching row (as long as playback has started, but not completed).</td>
     </tr>
-
     <tr>
       <td>duration</td>
       <td>Integer</td>
@@ -438,106 +421,87 @@ The JWT payload must have the following claims:
       <th>
         **Claim**
       </th>
-
       <th>
         **Type**
       </th>
-
       <th>
         **Description**
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         **Registered**
       </td>
-
       <td>
-
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         exp
       </td>
-
       <td>
         number
       </td>
-
       <td>
         Required. The time (a unix timestamp) after which this message should be considered invalid and discarded[.](https://en.wikipedia.org/wiki/Unix_time#Encoding_time_as_a_number) Requests with a token that have an expiration time greater than 24 hours in the future are rejected.
       </td>
     </tr>
-
     <tr>
       <td>
         nbf
       </td>
-
       <td>
         number
       </td>
-
       <td>
         Optional. The time (a unix timestamp) before which this message should be considered invalid and discarded.
       </td>
     </tr>
-
     <tr>
       <td>
         **Private**
       </td>
-
       <td>
-
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         x-roku-request-key
       </td>
-
       <td>
         string
       </td>
-
       <td>
         A string that uniquely identifies this request. This is used for request tracing when troubleshooting.
       </td>
     </tr>
-
     <tr>
       <td>
         x-roku-request-spec
       </td>
-
       <td>
         string
       </td>
-
       <td>
-        A JSON object that specifies how to build the internal request. The spec is transformed into a URL with the following syntax: "[https://apipub.roku.com/developer/v1/external?param1=param1Va&param2=param2Val".**serviceUrn](https://apipub.roku.com/developer/v1/external?param1=param1Va\&param2=param2Val".**serviceUrn)**: The serviceURN specifies the internal Roku service that should handle this request. This may be one of the following values:
-
-        * **serviceUrn**: The serviceURN specifies the internal Roku service that should handle this request. This may be one of the following values:
-          * urn:roku:cloud-services:publickey-service
-          * urn:roku:cloud-services:chanprovsvc
-        * **httpMethod**: The Continue Watching API supports the following methods: GET, PUT, POST, and DELETE (all other methods will result in an error response).
-        * **path**: The service resource being called, which is `/user-data/v1/content/continueWatching`.
-        * **bodySha256Base64**: The body is an SHA-256 hash calculated over the raw bytes of the HTTP request body that is encoded using Base 64. Do not include the body for GET and DELETE requests (Roku's inbound request service ignores the body for these requests).
+        A JSON object that specifies how to build the internal request. The spec is transformed into a URL with the following syntax: <code>https://apipub.roku.com/developer/v1/external?param1=param1Val&amp;param2=param2Val</code>. The object contains the following fields:
+        <br /><br />
+        <ul>
+          <li><strong>serviceUrn</strong>: The serviceURN specifies the internal Roku service that should handle this request. This may be one of the following values:
+            <ul>
+              <li>urn:roku:cloud-services:publickey-service</li>
+              <li>urn:roku:cloud-services:chanprovsvc</li>
+            </ul>
+          </li>
+          <li><strong>httpMethod</strong>: The Continue Watching API supports the following methods: GET, PUT, POST, and DELETE (all other methods will result in an error response).</li>
+          <li><strong>path</strong>: The service resource being called, which is <code>/user-data/v1/content/continueWatching</code>.</li>
+          <li><strong>bodySha256Base64</strong>: The body is an SHA-256 hash calculated over the raw bytes of the HTTP request body that is encoded using Base 64. Do not include the body for GET and DELETE requests (Roku's inbound request service ignores the body for these requests).</li>
+        </ul>
       </td>
     </tr>
   </tbody>

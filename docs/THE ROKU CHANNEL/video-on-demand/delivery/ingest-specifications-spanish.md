@@ -333,29 +333,23 @@ Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se uti
       <th>
         Formato
       </th>
-
       <th>
         Extensión
       </th>
-
       <th>
         Tipo de imagen
       </th>
-
       <th>
         Resolución mínima
       </th>
-
       <th>
         Resolución preferida
       </th>
-
       <th>
         Relación de aspecto
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
@@ -363,79 +357,62 @@ Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se uti
         * RGB
         * 72 ppp
       </td>
-
       <td>
         .jpg <br />.jpeg<br />.png
       </td>
-
       <td>
         Arte clave Imagen con tratamiento de título
       </td>
-
       <td>
         800x450
       </td>
-
       <td>
         1920x1080
       </td>
-
       <td>
         16:9
       </td>
     </tr>
-
     <tr>
       <td>
         * JPEG o PNG
         * RGB
         * 72 ppp
       </td>
-
       <td>
         .jpg<br />.jpeg<br />.png
       </td>
-
       <td>
         Fondo Imagen sin texto utilizada en el fondo de la página del programa
       </td>
-
       <td>
         800x450
       </td>
-
       <td>
         1920x1080
       </td>
-
       <td>
         16:9
       </td>
     </tr>
-
     <tr>
       <td>
         * JPEG o PNG
         * RGB
         * 72 ppp
       </td>
-
       <td>
         .jpg<br />.jpeg<br />.png
       </td>
-
       <td>
         Portada Imagen de póster vertical con tratamiento del título
       </td>
-
       <td>
         534x801
       </td>
-
       <td>
         2000x3000
       </td>
-
       <td>
         2:3
       </td>
@@ -612,7 +589,6 @@ Los archivos de video fuente, subtítulos descriptivos e ilustraciones entregado
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
@@ -796,13 +772,11 @@ Roku utiliza un motor de transformación que puede “normalizar” diferentes f
       <th>
         Requisitos de películas y clips
       </th>
-
       <th>
         Requisitos de TV
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
@@ -820,7 +794,6 @@ Roku utiliza un motor de transformación que puede “normalizar” diferentes f
         * captions file_name (si se requieren subtítulos descriptivos)
         * key art file_name
       </td>
-
       <td>
         * provider
         * content type
@@ -1392,6 +1365,8 @@ Define el tipo de cuePoint del cuePoint proporcionado dentro del bloque de cuePo
 | `recap`             | Identifica el cuePoint como un resumen de contenido anterior, típico de los programas de televisión por episodios. En caso de proporcionarse, es obligatorio incluir start_time y end_time       |
 | `end`               | Identifica el cuePoint como los créditos finales de un programa. En caso de proporcionarse, es obligatorio incluir start_time y end_time                                                         |
 
+**Atributo XPath**
+
 | Xpath XML                           | Valores aceptados                             |
 | ----------------------------------- | --------------------------------------------- |
 | `/package/video/cuePoints/cuePoint` | Uno de los valores de la enumeración anterior |
@@ -1673,43 +1648,33 @@ El bloque que describe los subtítulos sidecar del archivo de video fuente. El a
       <th>
         Xpath XML
       </th>
-
       <th>
         Valores aceptados
       </th>
-
       <th>
         Obligatorio
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         `/package/video/assets/asset/data_file`
       </td>
-
       <td>
         Valores de atributos: `asset type="full"` `data_file role="subtitles"`
       </td>
-
       <td>
         Opcional*
       </td>
     </tr>
-
     <tr>
       <td>
         * _los subtítulos sidecar pueden requerirse si se necesitan activos localizados cuando el audio original del archivo fuente no es nativo del territorio de distribución._
       </td>
-
       <td>
-
       </td>
-
       <td>
-
       </td>
     </tr>
   </tbody>
@@ -2706,43 +2671,33 @@ El bloque que describe los subtítulos sidecar del archivo de video fuente. El a
       <th>
         Xpath XML
       </th>
-
       <th>
         Valores aceptados
       </th>
-
       <th>
         Obligatorio
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         `/package/video/assets/asset/data_file`
       </td>
-
       <td>
         Valores de atributos: `asset type="full` `data_file role="subtitles"`
       </td>
-
       <td>
         Opcional*
       </td>
     </tr>
-
     <tr>
       <td>
         * _los subtítulos sidecar pueden requerirse si se necesitan activos localizados cuando el audio original del archivo fuente no es nativo del territorio de distribución._
       </td>
-
       <td>
-
       </td>
-
       <td>
-
       </td>
     </tr>
   </tbody>
@@ -2890,23 +2845,19 @@ Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite
       <th>
         Xpath XML
       </th>
-
       <th>
         Valores aceptados
       </th>
-
       <th>
         Obligatorio
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         `/package/video/subType`
       </td>
-
       <td>
         * trailer
         * highlight
@@ -2917,7 +2868,6 @@ Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite
         * recap
         * extra
       </td>
-
       <td>
         Opcional
       </td>
@@ -3719,423 +3669,330 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
       <th>
         Campo
       </th>
-
       <th>
         Descripción
       </th>
-
       <th>
         Valores aceptados
       </th>
-
       <th>
         Obligatorio
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         provider
       </td>
-
       <td>
         Nombre del estudio, cadena o propietario del contenido
       </td>
-
       <td>
         Ejemplo: Roku Originals
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         contentType
       </td>
-
       <td>
         Define el tipo de contenido del paquete
       </td>
-
       <td>
         film
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         language
       </td>
-
       <td>
         Idioma del título, las sinopsis, el video, los subtítulos descriptivos, los subtítulos, los doblajes de audio y las ilustraciones que se enumeran en la fila. El valor debe ajustarse a un [código de idioma](#códigos-de-idioma) compatible. Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES). Solo se permite un idioma.
       </td>
-
       <td>
         [Valor de idioma](#códigos-de-idioma) válido
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         original_spoken_language
       </td>
-
       <td>
         Define el idioma original de producción del título que se entrega. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
       </td>
-
       <td>
         [Valor de idioma](#códigos-de-idioma) válido
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         country_of_origin
       </td>
-
       <td>
         Define el país principal donde se produjo la película y donde están establecidos los principales creadores, el equipo de filmación y los productores. El valor debe ajustarse a uno de los códigos de país compatibles definidos en la lista de códigos de país de 2 caracteres [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html).
       </td>
-
       <td>
         Código de país válido de 2 caracteres según [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html)
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         asset_id
       </td>
-
       <td>
         Identificador único e inalterable de una película. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID del título proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
       </td>
-
       <td>
         Solo caracteres alfanuméricos, guiones y guiones bajos. 50 caracteres como máximo
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         title
       </td>
-
       <td>
         Título de la película en el idioma definido en la columna de idioma. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
       </td>
-
       <td>
         Ejemplo:<br />Título de película
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         genres
       </td>
-
       <td>
         Clasificación del contenido por género. Roku requiere que cada película se entregue con al menos un género compatible. Consulta la [enumeración](#géneros) de los géneros que admite Roku.
       </td>
-
       <td>
         Consulta la [enumeración](#géneros) más adelante. Pueden enviarse hasta 10 géneros por título
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         tags
       </td>
-
       <td>
         Las etiquetas son campos de formato libre que pueden utilizarse para categorizar el contenido más allá del número limitado de valores de género compatibles. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas proporcionadas para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan en un clip, episodio o película, más formas habrá de seleccionar el contenido y mostrarlo a la persona usuaria final. No hay límite para el número de etiquetas que pueden entregarse con un título y no hay un conjunto definido de etiquetas. Las etiquetas distinguen entre mayúsculas y minúsculas. Por ejemplo, las etiquetas “Rom-Com” y “rom-com” se considerarían dos etiquetas únicas. Asegúrate de que todas las etiquetas se entreguen de forma consistente.
       </td>
-
       <td>
         cualquier cadena de menos de 50 caracteres
       </td>
-
       <td>
         MUY recomendado
       </td>
     </tr>
-
     <tr>
       <td>
         runtime
       </td>
-
       <td>
         Tiempo de duración total del contenido en minutos enteros
       </td>
-
       <td>
         Solo números enteros.<br />Ejemplo: 90
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         release_date
       </td>
-
       <td>
         Fecha original en la que el contenido estuvo disponible por primera vez en cualquier presentación. Debe incluir, como mínimo, el año correcto del estreno
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DD
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         adBreaks
       </td>
-
       <td>
         Se utiliza para determinar[los cortes publicitarios del contenido financiado con anuncios](#cortes-publicitarios). Los valores de adBreak deben tener una precisión de milisegundos. Si el video proporcionado incluye fotogramas en negro para comerciales, proporciona el código de tiempo igual al punto medio de dichos fotogramas. Si bien no es necesario para el contenido SVOD, se pueden ingerir datos adBreak con precisión de fotogramas si están disponibles.
       </td>
-
       <td>
         HH:MM:SS.sss
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         cuePoints
       </td>
-
       <td>
         Se utiliza para identificar los horarios de inicio y de finalización de los créditos iniciales, los resúmenes de contenido, los créditos finales y el material de detrás de escena. Los valores de los horarios de inicio y finalización de cuePoint deben tener una precisión de milisegundos. lista separada por comas con el siguiente formato: `type`=`startTime`>`endTime` Ejemplo: intro=00:05:10.253>00:07:15:123, recap=00:01:12.456>00:03:12.052
       </td>
-
       <td>
         Formato:<br />type=HH:MM:SS.sss<br />HH:MM:SS.sss <br />Valores de tipos permitidos:<br />`ad overlay`<br /> `behind the scenes`<br /> `intro`<br /> `recap`<br /> `end`
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         ratingSystem
       </td>
-
       <td>
         Para cada película, se proporcionará la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido.
       </td>
-
       <td>
         Consulta [más adelante](#valores-de-clasificación-por-sistema-de-clasificación-y-país) las clasificaciones permitidas por el sistema de clasificación.
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         ratings
       </td>
-
       <td>
         Clasificación por edades o de contenido de la película según una fuente de clasificación. Se facilitará para cada película una clasificación válida de película o TV de parte de la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido. Si el título no ha sido clasificado por la autoridad oficial de clasificación de ese territorio, incluye una clasificación válida del USA_PR ratingSystem. No existe ningún organismo oficial que asigne clasificaciones para el USA_PR ratingSystem. Toma como referencia las pautas que se enumeran en [http://tvguidelines.org/](http://tvguidelines.org/) para asignar la clasificación adecuada.
       </td>
-
       <td>
         Consulta [más adelante](#valores-de-clasificación-por-sistema-de-clasificación-y-país) las clasificaciones permitidas por el sistema de clasificación.
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         cast
       </td>
-
       <td>
         Nombres de los miembros del reparto
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         director
       </td>
-
       <td>
         Nombre(s) del director de la película. Por el momento, director es la única función dentro del equipo de filmación que se admite para la ingesta de metadatos de Excel.
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         short_synopsis
       </td>
-
       <td>
         Una sinopsis breve del contenido en el idioma definido en la columna de idioma. Límite de 250 caracteres.
       </td>
-
       <td>
         sinopsis de 250 caracteres
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         long_synopsis
       </td>
-
       <td>
         Una sinopsis larga del contenido en el idioma definido en la columna de idioma. Límite de 500 caracteres.
       </td>
-
       <td>
         sinopsis de 500 caracteres
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         eidr
       </td>
-
       <td>
         ID de EIDR si existe uno
       </td>
-
       <td>
         Cualquier ID de EIDR válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         tms_id
       </td>
-
       <td>
         ID de Gracenote si existe uno
       </td>
-
       <td>
         Cualquier ID de TMS válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         closed_captions
       </td>
-
       <td>
         Indica si el título entregado contiene subtítulos descriptivos. Los valores aceptados son Y o N. Este campo es obligatorio para todo el contenido destinado a Roku Channel en EE. UU.
       </td>
-
       <td>
         Y o N
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         closed_captions_exemption
       </td>
-
       <td>
         Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”  
         1 -  El contenido nunca se emitió por televisión en Estados Unidos.
@@ -4145,245 +4002,190 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
         5 - El contenido no pertenece a una categoría de programación en línea que requiera subtítulos descriptivos según la normativa de la FCC (49 C.F.R. § 79.4(b)).
         6 - La FCC o el Congreso de EE. UU. concedieron una exención de los requisitos de subtítulos descriptivos para este contenido.
       </td>
-
       <td>
-
       </td>
-
       <td>
         obligatorio en EE. UU. si closed_captions = N
       </td>
     </tr>
-
     <tr>
       <td>
         video_file_name
       </td>
-
       <td>
         El nombre de archivo del video en el idioma definido en la columna de idioma que se entregó a través de Aspera. Solo se permite 1 video por asset_id. El video_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo:<br />movieVideoFile.mov
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         audio_layout
       </td>
-
       <td>
         [Descriptor de diseño de audio](#audio-descriptivo) para el archivo de video entregado.
       </td>
-
       <td>
         Valores permitidos:<br />stereoOnly <br />surroundOnly <br />stereoPlusSurround <br />surroundPlusStereo<br />
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         sidecar_audio_file_name
       </td>
-
       <td>
         El nombre del archivo de audio sidecar en el idioma definido en la columna de idioma que se entregó a través de Aspera. El sidecar_audio_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieDubFile.wav
       </td>
-
       <td>
         opcional Para la entrega de archivos de audio sidecar con fines de traducción o accesibilidad
       </td>
     </tr>
-
     <tr>
       <td>
         sidecar_audio_label
       </td>
-
       <td>
         Para uso exclusivo con archivos de descripción de audio. Dejar esta columna en blanco para doblajes de audio.
       </td>
-
       <td>
         Valor permitido: <br />descripción de audio
       </td>
-
       <td>
         obligatorio para archivos de audio descriptivo
       </td>
     </tr>
-
     <tr>
       <td>
         caption_file_name
       </td>
-
       <td>
         El nombre de archivo de los subtítulos descriptivos en el idioma definido en la columna de idioma que se entregó a través de Aspera. El caption_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieCaptions.srt
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         subtitle_file_name
       </td>
-
       <td>
         El nombre de archivo de los subtítulos completos en el idioma definido en la columna de idioma que se entregó a través de Aspera. El localized_subtitle_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieSubtitle.srt
       </td>
-
       <td>
         obligatorio al proporcionar metadatos localizados o activos localizados
       </td>
     </tr>
-
     <tr>
       <td>
         keyart_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de arte clave con texto en el idioma definido en la columna de idioma que se entregó a través de Aspera. El keyart_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieKeyArt.jpg
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         background_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de fondo sin texto que se entregó a través de Aspera. El background_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieBGimage.jpg
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         boxcover_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de la portada en el idioma definido en la columna de idioma que se entregó a través de Aspera. boxcover_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieBoxArt.jpg
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         territory
       </td>
-
       <td>
         Los códigos de país del territorio en el que está disponible el contenido. Se pueden proporcionar varios nodos de países separados por comas, siempre que el vodType y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los países.
       </td>
-
       <td>
         Valores permitidos:<br />US<br />CA<br />GB<br />MX
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         vodType
       </td>
-
       <td>
         Tipo de monetización de la película. Se pueden proporcionar varios nodos vodType separados por comas, siempre que el país y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los vodType.
       </td>
-
       <td>
         Ejemplo: avod<br />svod<br />avod,svod
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         license_start_date
       </td>
-
       <td>
         Fecha de inicio de la disponibilidad del contenido para las personas usuarias de Roku Channel. La license_start_date debe ser cronológicamente anterior a la license_end_date. Las license_start_date y license_end_date no deben ser idénticas.
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DDTHH:MM:SS
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         license_end_date
       </td>
-
       <td>
         Fecha de finalización de la disponibilidad del contenido para las personas usuarias de Roku Channel. La license_end_date debe ser cronológicamente posterior a la license_start_date. Las license_start_date y license_end_date no deben ser idénticas.
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DDTHH:MM:SS
       </td>
-
       <td>
         preferido
       </td>
@@ -4401,657 +4203,512 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
       <th>
         Campo
       </th>
-
       <th>
         Descripción
       </th>
-
       <th>
         Valores aceptados
       </th>
-
       <th>
         Obligatorio
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         provider
       </td>
-
       <td>
         Nombre del estudio, cadena o propietario del contenido
       </td>
-
       <td>
         Ejemplo:<br />Roku Originals
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         contentType
       </td>
-
       <td>
         Define el tipo de contenido del paquete
       </td>
-
       <td>
         episodio
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         Language
       </td>
-
       <td>
         Idioma del título, las sinopsis, el video, los subtítulos descriptivos, los subtítulos, los doblajes de audio y las ilustraciones que se enumeran en la fila. El valor debe ajustarse a un [código de idioma](#códigos-de-idioma) compatible. Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES). Solo se permite un idioma.
       </td>
-
       <td>
         Un [valor de idioma](#códigos-de-idioma) válido
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         original_spoken_language
       </td>
-
       <td>
         Define el idioma original de producción del título que se entrega. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
       </td>
-
       <td>
         Un [valor de idioma](#códigos-de-idioma) válido
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         country_of_origin
       </td>
-
       <td>
         Define el país principal donde se produjo la película y donde están establecidos los principales creadores, el equipo de filmación y los productores. El valor debe ajustarse a uno de los códigos de país compatibles definidos en la lista de códigos de país de 2 caracteres [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html).
       </td>
-
       <td>
         Un código de país válido de 2 caracteres según [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html)
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         series_id
       </td>
-
       <td>
         Identificador único e inalterable de una serie. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID de la serie proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
       </td>
-
       <td>
         Solo caracteres alfanuméricos, guiones y guiones bajos. 50 caracteres como máximo
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         series_title
       </td>
-
       <td>
         Título de la serie en el idioma definido en la columna de idioma. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
       </td>
-
       <td>
         Ejemplo:<br />Título de la serie
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         series_tmsId
       </td>
-
       <td>
         ID de Gracenote si existe uno
       </td>
-
       <td>
         Cualquier ID de TMS de programa válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         series_release_date
       </td>
-
       <td>
         Fecha original en que la serie estuvo disponible por primera vez en cualquier presentación. Debe incluir, como mínimo, el año correcto del estreno
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DD
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         series_genres
       </td>
-
       <td>
         Clasificación del contenido por género. Roku requiere que cada película se entregue con al menos un género compatible. Consulta la [enumeración](#géneros) de los géneros que admite Roku.
       </td>
-
       <td>
         Consulta la [enumeración](#géneros) más adelante. Pueden enviarse hasta 10 géneros por título
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         series_tags
       </td>
-
       <td>
         Las etiquetas son campos de formato libre que pueden utilizarse para categorizar el contenido más allá del número limitado de valores de género compatibles. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas proporcionadas para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan en un clip, episodio o película, más formas habrá de seleccionar el contenido y mostrarlo a la persona usuaria final. No hay límite para el número de etiquetas que pueden entregarse con un título y no hay un conjunto definido de etiquetas. Las etiquetas distinguen entre mayúsculas y minúsculas. Por ejemplo, las etiquetas “Rom-Com” y “rom-com” se considerarían dos etiquetas únicas. Asegúrate de que todas las etiquetas se entreguen de forma consistente.
       </td>
-
       <td>
         cualquier cadena de menos de 50 caracteres
       </td>
-
       <td>
         MUY recomendado
       </td>
     </tr>
-
     <tr>
       <td>
         series_cast
       </td>
-
       <td>
         Nombres de los miembros del reparto de la serie
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         series_directors
       </td>
-
       <td>
         Nombre(s) del director de la serie. Por el momento, director es la única función dentro del equipo de filmación que se admite para la ingesta de metadatos de Excel.
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         series_short_synopsis
       </td>
-
       <td>
         Una sinopsis breve de la serie en el idioma definido en la columna de idioma. Límite de 250 caracteres.
       </td>
-
       <td>
         sinopsis de 250 caracteres
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         series_long_synopsis
       </td>
-
       <td>
         Una sinopsis larga de la serie en el idioma definido en la columna de idioma. Límite de 500 caracteres.
       </td>
-
       <td>
         sinopsis de 500 caracteres
       </td>
-
       <td>
         Opcional
       </td>
     </tr>
-
     <tr>
       <td>
         season_id
       </td>
-
       <td>
         Identificador único e inalterable de una temporada. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. Límite de 50 caracteres
       </td>
-
       <td>
         Solo caracteres alfanuméricos, guiones y guiones bajos. 50 caracteres como máximo
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         season_number
       </td>
-
       <td>
         Posición numérica de la temporada dentro de una serie. Este valor determinará el orden en que se verán los episodios subyacentes en la plataforma. Los valores de seasonNumber deben entregarse tal y como se emitieron o exhibieron originalmente en cualquier plataforma. Solo se permiten valores numéricos (enteros).
       </td>
-
       <td>
         Solo números enteros
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         season_tmsIdo
       </td>
-
       <td>
         ID de Gracenote si existe uno
       </td>
-
       <td>
         Cualquier ID de TMS de temporada válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         asset_id
       </td>
-
       <td>
         Identificador único e inalterable de un episodio. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID del título proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
       </td>
-
       <td>
         Solo caracteres alfanuméricos, guiones y guiones bajos. 50 caracteres como máximo
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_title
       </td>
-
       <td>
         Título del episodio en el idioma definido en la columna de idioma. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
       </td>
-
       <td>
         Ejemplo:<br />Título de película
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_number
       </td>
-
       <td>
         Posición numérica del episodio dentro de una temporada de una serie. Este valor determinará el orden en que se verán los episodios en la plataforma. Los valores de episodeNumber deben entregarse tal y como se emitieron o exhibieron originalmente en cualquier plataforma. No deben proporcionarse números de producción. Solo se permiten valores numéricos (enteros).
       </td>
-
       <td>
         Solo números enteros
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_release_date
       </td>
-
       <td>
         Fecha original en la que el contenido estuvo disponible por primera vez en cualquier presentación. Debe incluir, como mínimo, el año correcto del estreno
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DD
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_runtime
       </td>
-
       <td>
         Tiempo de duración total del contenido en minutos enteros
       </td>
-
       <td>
         Solo números enteros.<br />Ejemplo: 22
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_adBreaks
       </td>
-
       <td>
         Se utiliza para determinar[los cortes publicitarios del contenido financiado con anuncios](#cortes-publicitarios). Los valores de adBreak deben tener una precisión de milisegundos. Si el video proporcionado incluye fotogramas en negro para comerciales, proporciona el código de tiempo igual al punto medio de dichos fotogramas. Si bien no es necesario para el contenido SVOD, se pueden ingerir datos adBreak con precisión de fotogramas si están disponibles.
       </td>
-
       <td>
         HH:MM:SS.sss
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         episode_cuePoints
       </td>
-
       <td>
         Se utiliza para identificar los horarios de inicio y de finalización de los créditos iniciales, los resúmenes de contenido, los créditos finales y el material de detrás de escena. Los valores de los horarios de inicio y finalización de cuePoint deben tener una precisión de milisegundos. lista separada por comas con el siguiente formato: `type`=`startTime`>`endTime` Ejemplo: intro=00:05:10.253>00:07:15:123, recap=00:01:12.456>00:03:12.052
       </td>
-
       <td>
         Formato:<br />type=HH:MM:SS.sss<br /> HH:MM:SS.sss<br /> Valores de tipos permitidos:<br /> `ad overlay`<br /> `behind the scenes`<br /> `intro`<br /> `recap`<br /> `end`
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         ratingSystem
       </td>
-
       <td>
         Para cada película, se proporcionará la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido.
       </td>
-
       <td>
         Consulta [más adelante](#valores-de-clasificación-por-sistema-de-clasificación-y-país) las clasificaciones permitidas por el sistema de clasificación.
       </td>
-
       <td>
         Obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_ratings
       </td>
-
       <td>
         Clasificación por edades o de contenido para el contenido según una fuente de clasificación. Se facilitará para cada película una clasificación válida de película o TV de parte de la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido. Si el título no ha sido clasificado por la autoridad oficial de clasificación de ese territorio, incluye una clasificación válida del USA_PR ratingSystem. No existe ningún organismo oficial que asigne clasificaciones para el USA_PR ratingSystem. Toma como referencia las pautas que se enumeran en [http://tvguidelines.org/](http://tvguidelines.org/) para asignar la clasificación adecuada.
       </td>
-
       <td>
         Consulta [más adelante](#valores-de-clasificación-por-sistema-de-clasificación-y-país) las clasificaciones permitidas por el sistema de clasificación.
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_tags
       </td>
-
       <td>
         Las etiquetas son campos de formato libre que pueden utilizarse para categorizar el contenido más allá del número limitado de valores de género compatibles. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas proporcionadas para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan en un clip, episodio o película, más formas habrá de seleccionar el contenido y mostrarlo a la persona usuaria final. No hay límite para el número de etiquetas que pueden entregarse con un título y no hay un conjunto definido de etiquetas. Las etiquetas distinguen entre mayúsculas y minúsculas. Por ejemplo, las etiquetas “Rom-Com” y “rom-com” se considerarían dos etiquetas únicas. Asegúrate de que todas las etiquetas se entreguen de forma consistente.
       </td>
-
       <td>
         cualquier cadena de menos de 50 caracteres
       </td>
-
       <td>
         MUY recomendado
       </td>
     </tr>
-
     <tr>
       <td>
         episode_cast
       </td>
-
       <td>
         Nombres de los miembros del reparto
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         episode_director
       </td>
-
       <td>
         Nombre(s) del director del episodio. Por el momento, director es la única función dentro del equipo de filmación que se admite para la ingesta de metadatos de Excel.
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         episode_short_synopsis
       </td>
-
       <td>
         Una sinopsis breve del episodio en el idioma definido en la columna de idioma. Límite de 250 caracteres.
       </td>
-
       <td>
         sinopsis de 250 caracteres
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         episode_long_synopsis
       </td>
-
       <td>
         Una sinopsis larga del episodio en el idioma definido en la columna de idioma. Límite de 500 caracteres.
       </td>
-
       <td>
         sinopsis de 500 caracteres
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         episode_eidr
       </td>
-
       <td>
         ID de EIDR si existe uno
       </td>
-
       <td>
         Cualquier ID de EIDR de episodio válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         episode_tmsId
       </td>
-
       <td>
         ID de Gracenote si existe uno
       </td>
-
       <td>
         Cualquier ID de TMS de episodio válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         closed_captions
       </td>
-
       <td>
         Indica si el título entregado contiene subtítulos descriptivos. Los valores aceptados son Y o N. Este campo es obligatorio para todo el contenido destinado a Roku Channel en EE. UU.
       </td>
-
       <td>
         Y o N
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         closed_captions_exemption
       </td>
-
       <td>
         Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”  
         1 -  El contenido nunca se emitió por televisión en Estados Unidos.
@@ -5061,245 +4718,190 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
         5 - El contenido no pertenece a una categoría de programación en línea que requiera subtítulos descriptivos según la normativa de la FCC (49 C.F.R. § 79.4(b)).
         6 - La FCC o el Congreso de EE. UU. concedieron una exención de los requisitos de subtítulos descriptivos para este contenido.
       </td>
-
       <td>
-
       </td>
-
       <td>
         obligatorio en EE. UU. si closed_captions = N
       </td>
     </tr>
-
     <tr>
       <td>
         video_file_name
       </td>
-
       <td>
         El nombre de archivo del video en el idioma definido en la columna de idioma que se entregó a través de Aspera. Solo se permite 1 video por asset_id. El video_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />episodeVideoFile.mov
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         audio_layout
       </td>
-
       <td>
         [Descriptor de diseño de audio](#audio-descriptivo) para el archivo de video entregado.
       </td>
-
       <td>
         Valores permitidos: <br />stereoOnly <br />surroundOnly <br />stereoPlusSurround <br />surroundPlusStereo
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         sidecar_audio_file_name
       </td>
-
       <td>
         El nombre del archivo de audio sidecar en el idioma definido en la columna de idioma que se entregó a través de Aspera. El sidecar_audio_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieDubFile.wav
       </td>
-
       <td>
         opcional Para la entrega de archivos de audio sidecar con fines de traducción o accesibilidad
       </td>
     </tr>
-
     <tr>
       <td>
         sidecar_audio_label
       </td>
-
       <td>
         Para uso exclusivo con archivos de descripción de audio. Dejar esta columna en blanco para doblajes de audio.
       </td>
-
       <td>
         Valor permitido: <br />descripción de audio
       </td>
-
       <td>
         obligatorio para archivos de audio descriptivo
       </td>
     </tr>
-
     <tr>
       <td>
         closed_caption_file_name
       </td>
-
       <td>
         El nombre de archivo de los subtítulos descriptivos en el idioma definido en la columna de idioma que se entregó a través de Aspera. El caption_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />episodeCaptions.srt
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         series_keyart_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de arte clave con texto en el idioma definido en la columna de idioma que se entregó a través de Aspera. El keyart_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />episodeKeyArt.jpg
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         series_boxcover_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de la portada en el idioma definido en la columna de idioma que se entregó a través de Aspera. boxcover_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />episodeBoxArt.jpg
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         series_background_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de fondo sin texto que se entregó a través de Aspera. El background_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />episodeBGimage.jpg
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         episode_background_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de fondo sin texto que se entregó a través de Aspera. El background_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />episodeBGimage.jpg
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         vodType
       </td>
-
       <td>
         Tipo de monetización de la película. Se pueden proporcionar varios nodos vodType separados por comas, siempre que el país y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los vodType.
       </td>
-
       <td>
         Ejemplo: <br />avod <br />svod <br />avod,svod
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         territory
       </td>
-
       <td>
         Los códigos de país del territorio en el que está disponible el contenido. Se pueden proporcionar varios nodos de países separados por comas, siempre que el vodType y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los países.
       </td>
-
       <td>
         Valores permitidos:<br />US<br />CA<br />GB<br />MX
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         episode_startDate
       </td>
-
       <td>
         Fecha de inicio de la disponibilidad del contenido para las personas usuarias de Roku Channel. La episode_startDate debe ser cronológicamente anterior a la episode_endDate. Las episode_startDate y episode_endDate no deben ser idénticas.
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DDTHH:MM:SS
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         episode_endDate
       </td>
-
       <td>
         Fecha de finalización de la disponibilidad del contenido para las personas usuarias de Roku Channel. La episode_endDate debe ser cronológicamente posterior a la episode_startDate. Las episode_startDate y episode_endDate no deben ser idénticas.
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DDTHH:MM:SS
       </td>
-
       <td>
         preferido
       </td>
@@ -5317,450 +4919,353 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
       <th>
         Campo
       </th>
-
       <th>
         Descripción
       </th>
-
       <th>
         Valores aceptados
       </th>
-
       <th>
         Obligatorio
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         provider
       </td>
-
       <td>
         Nombre del estudio, cadena o propietario del contenido
       </td>
-
       <td>
         Ejemplo:<br />Roku Originals
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         contentType
       </td>
-
       <td>
         Define el tipo de contenido del paquete
       </td>
-
       <td>
         clip
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         subType
       </td>
-
       <td>
-        Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). _No existe ningún vínculo entre los activos principales y secundarios_ subTypes compatibles:
-
-        * trailer
-        * highlight
-        * making_of
-        * behind_scenes
-        * interview
-        * related
-        * recap
-        * extra
+        Define el subType (subtipo) de contenido del paquete. Actualmente Roku no admite conexiones principales y secundarias de forma nativa. El contenido auxiliar o relacionado puede entregarse e identificarse con uno de los siguientes subtipos (subTypes). <em>No existe ningún vínculo entre los activos principales y secundarios</em> subTypes compatibles:
+        <br /><br />
+        <ul>
+          <li>trailer</li>
+          <li>highlight</li>
+          <li>making_of</li>
+          <li>behind_scenes</li>
+          <li>interview</li>
+          <li>related</li>
+          <li>recap</li>
+          <li>extra</li>
+        </ul>
       </td>
-
       <td>
         Valores permitidos: <br />trailer<br />highlight<br />making_of<br />behind_scenes<br />interview<br />related<br />recap<br />extra
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         language
       </td>
-
       <td>
         Idioma del título, las sinopsis, el video, los subtítulos descriptivos, los subtítulos, los doblajes de audio y las ilustraciones que se enumeran en la fila. El valor debe ajustarse a un [código de idioma](#códigos-de-idioma) compatible. Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES). Solo se permite un idioma.
       </td>
-
       <td>
         [Valor de idioma](#códigos-de-idioma) válido
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         original_spoken_language
       </td>
-
       <td>
         Define el idioma original de producción del título que se entrega. Como mínimo, el valor debe ajustarse a un [código de idioma compatible](#códigos-de-idioma). Se recomienda que, al proporcionar el idioma, incluyas también un código de región para brindar información útil, como la distinción entre el español que se habla en México (es-MX) y el que se habla en España (es-ES).
       </td>
-
       <td>
         [Valor de idioma](#códigos-de-idioma) válido
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         country_of_origin
       </td>
-
       <td>
         Define el país principal donde se produjo la película y donde están establecidos los principales creadores, el equipo de filmación y los productores. El valor debe ajustarse a uno de los códigos de país compatibles definidos en la lista de códigos de país de 2 caracteres [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html).
       </td>
-
       <td>
         Código de país válido de 2 caracteres según [ISO 3166-1 alfa 2](https://www.iso.org/iso-3166-country-codes.html)
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         asset_id
       </td>
-
       <td>
         Identificador único e inalterable de una película. La empresa socia debe generar y suministrar los ID para el contenido que se entrega a Roku. El ID en los metadatos de ingesta debe coincidir con el ID del título proporcionado en el documento de avails. Esto será de gran ayuda en el seguimiento del contenido a lo largo de todo el proceso de Roku, desde el envío de Avails hasta su publicación en Roku Channel. Límite de 50 caracteres
       </td>
-
       <td>
         Solo caracteres alfanuméricos, guiones y guiones bajos. 50 caracteres como máximo
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         title
       </td>
-
       <td>
         Título del clip en el idioma definido en la columna de idioma. Incluye únicamente el nombre del contenido tal y como debe aparecer en la plataforma. No incluyas datos aparte del título entre paréntesis, como un indicador de versión original o nueva, el año de estreno, la temporada o el formato de video, por ejemplo: (Clásica), (1987), (Temporada 1) o (HD)
       </td>
-
       <td>
         Ejemplo:<br />Título de película
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         genres
       </td>
-
       <td>
         Clasificación del contenido por género. Roku requiere que cada película se entregue con al menos un género compatible. Consulta la [enumeración](#géneros) de los géneros que admite Roku.
       </td>
-
       <td>
         Consulta la [enumeración](#géneros) más adelante. Pueden enviarse hasta 10 géneros por título
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         tags
       </td>
-
       <td>
         Las etiquetas son campos de formato libre que pueden utilizarse para categorizar el contenido más allá del número limitado de valores de género compatibles. El equipo editorial y el motor de recomendaciones de Roku Channel utilizarán las etiquetas proporcionadas para ayudar a mostrar el contenido en la interfaz de uso de la plataforma de Roku Channel. Cuantas más etiquetas se incluyan en un clip, episodio o película, más formas habrá de seleccionar el contenido y mostrarlo a la persona usuaria final. No hay límite para el número de etiquetas que pueden entregarse con un título y no hay un conjunto definido de etiquetas. Las etiquetas distinguen entre mayúsculas y minúsculas. Por ejemplo, las etiquetas “Rom-Com” y “rom-com” se considerarían dos etiquetas únicas. Asegúrate de que todas las etiquetas se entreguen de forma consistente.
       </td>
-
       <td>
         cualquier cadena de menos de 50 caracteres
       </td>
-
       <td>
         MUY recomendado
       </td>
     </tr>
-
     <tr>
       <td>
         runtime
       </td>
-
       <td>
         Tiempo de duración total del contenido en minutos enteros
       </td>
-
       <td>
         Solo números enteros.<br />Ejemplo: 90
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         release_date
       </td>
-
       <td>
         Fecha original en la que el contenido estuvo disponible por primera vez en cualquier presentación. Debe incluir, como mínimo, el año correcto del estreno
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DD
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         adBreaks
       </td>
-
       <td>
         Se utiliza para determinar[los cortes publicitarios del contenido financiado con anuncios](#cortes-publicitarios). Los valores de adBreak deben tener una precisión de milisegundos. Si bien no es necesario para el contenido SVOD, se pueden ingerir datos adBreak con precisión de fotogramas si están disponibles.
       </td>
-
       <td>
         HH:MM:SS.sss
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         cuePoints
       </td>
-
       <td>
-
       </td>
-
       <td>
-
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         ratingSystem
       </td>
-
       <td>
         Para cada película, se proporcionará la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido.
       </td>
-
       <td>
         Consulta [más adelante](#valores-de-clasificación-por-sistema-de-clasificación-y-país) las clasificaciones permitidas por el sistema de clasificación.
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         ratings
       </td>
-
       <td>
         Clasificación por edades o de contenido de la película según una fuente de clasificación. Se facilitará para cada película una clasificación válida de película o TV de parte de la autoridad de clasificación (ratingSystem) del territorio en el cual estará disponible el contenido. Si el título no ha sido clasificado por la autoridad oficial de clasificación de ese territorio, incluye una clasificación válida del USA_PR ratingSystem. No existe ningún organismo oficial que asigne clasificaciones para el USA_PR ratingSystem. Toma como referencia las pautas que se enumeran en [http://tvguidelines.org/](http://tvguidelines.org/) para asignar la clasificación adecuada.
       </td>
-
       <td>
         Consulta [más adelante](#valores-de-clasificación-por-sistema-de-clasificación-y-país) las clasificaciones permitidas por el sistema de clasificación.
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         cast
       </td>
-
       <td>
         Nombres de los miembros del reparto
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         director
       </td>
-
       <td>
         Nombre(s) del director de la película. Por el momento, director es la única función dentro del equipo de filmación que se admite para la ingesta de metadatos de Excel.
       </td>
-
       <td>
         Lista de nombres y apellidos separados por comas
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         short_synopsis
       </td>
-
       <td>
         Una sinopsis breve del contenido en el idioma definido en la columna de idioma. Límite de 250 caracteres.
       </td>
-
       <td>
         sinopsis de 250 caracteres
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         long_synopsis
       </td>
-
       <td>
         Una sinopsis larga del contenido en el idioma definido en la columna de idioma. Límite de 500 caracteres.
       </td>
-
       <td>
         sinopsis de 500 caracteres
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         eidr
       </td>
-
       <td>
         ID de EIDR si existe uno
       </td>
-
       <td>
         Cualquier ID de EIDR válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         tms_id
       </td>
-
       <td>
         ID de Gracenote si existe uno
       </td>
-
       <td>
         Cualquier ID de TMS válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         closed_captions
       </td>
-
       <td>
         Indica si el título entregado contiene subtítulos descriptivos. Los valores aceptados son Y o N. Este campo es obligatorio para todo el contenido destinado a Roku Channel en EE. UU.
       </td>
-
       <td>
         Y o N
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         closed_captions_exemption
       </td>
-
       <td>
         Código de exención de la FCC para el requisito de subtítulos descriptivos. Este nodo es necesario si el valor `closedCaptions` = “N”  
         1-  El contenido nunca se emitió por televisión en Estados Unidos.
@@ -5770,425 +5275,330 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
         5 - El contenido no pertenece a una categoría de programación en línea que requiera subtítulos descriptivos según la normativa de la FCC (49 C.F.R. § 79.4(b)).
         6 - La FCC o el Congreso de EE. UU. concedieron una exención de los requisitos de subtítulos descriptivos para este contenido.
       </td>
-
       <td>
-
       </td>
-
       <td>
         obligatorio en EE. UU. si closed_captions = N
       </td>
     </tr>
-
     <tr>
       <td>
         video_file_name
       </td>
-
       <td>
         El nombre de archivo del video en el idioma definido en la columna de idioma que se entregó a través de Aspera. Solo se permite 1 video por asset_id. El video_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieVideoFile.mov
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         audio_layout
       </td>
-
       <td>
         [Descriptor de diseño de audio](#audio-descriptivo) para el archivo de video entregado.
       </td>
-
       <td>
         Valores permitidos: <br />stereoOnly <br />surroundOnly <br />stereoPlusSurround<br />surroundPlusStereo
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         sidecar_audio_file_name
       </td>
-
       <td>
         El nombre del archivo de audio sidecar en el idioma definido en la columna de idioma que se entregó a través de Aspera. El sidecar_audio_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieDubFile.wav
       </td>
-
       <td>
         opcional Para la entrega de archivos de audio sidecar con fines de traducción o accesibilidad
       </td>
     </tr>
-
     <tr>
       <td>
         sidecar_audio_label
       </td>
-
       <td>
         Para uso exclusivo con archivos de descripción de audio. Dejar esta columna en blanco para doblajes de audio.
       </td>
-
       <td>
         Valor permitido: <br />descripción de audio
       </td>
-
       <td>
         obligatorio para archivos de audio descriptivo
       </td>
     </tr>
-
     <tr>
       <td>
         caption_file_name
       </td>
-
       <td>
         El nombre de archivo de los subtítulos descriptivos en el idioma definido en la columna de idioma que se entregó a través de Aspera. El caption_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieCaptions.srt
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         keyart_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de arte clave con texto en el idioma definido en la columna de idioma que se entregó a través de Aspera. El keyart_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieKeyArt.jpg
       </td>
-
       <td>
         obligatorio
       </td>
     </tr>
-
     <tr>
       <td>
         background_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de fondo sin texto que se entregó a través de Aspera. El background_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieBGimage.jpg
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         boxcover_file_name
       </td>
-
       <td>
         El nombre de archivo de la imagen de la portada en el idioma definido en la columna de idioma que se entregó a través de Aspera. boxcover_file_name debe coincidir exactamente con el archivo entregado. Los nombres de archivo distinguen entre mayúsculas y minúsculas y no deben contener espacios en blanco ni caracteres especiales
       </td>
-
       <td>
         Ejemplo: <br />movieBoxArt.jpg
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         territory
       </td>
-
       <td>
         Los códigos de país del territorio en el que está disponible el contenido. Se pueden proporcionar varios nodos de países separados por comas, siempre que el vodType y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los países.
       </td>
-
       <td>
         Valores permitidos:<br />US<br />CA<br />GB<br />MX
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         vodType
       </td>
-
       <td>
         Tipo de monetización de la película. Se pueden proporcionar varios nodos vodType separados por comas, siempre que el país y las fechas de licensePeriodStart y licensePeriodEnd sean iguales en todos los vodType.
       </td>
-
       <td>
         Ejemplo:<br />avod<br />svod<br />avod,svod
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         license_start_date
       </td>
-
       <td>
         Fecha de inicio de la disponibilidad del contenido para las personas usuarias de Roku Channel. La license_start_date debe ser cronológicamente anterior a la license_end_date. Las license_start_date y license_end_date no deben ser idénticas.
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DDTHH:MM:SS
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         license_end_date
       </td>
-
       <td>
         Fecha de finalización de la disponibilidad del contenido para las personas usuarias de Roku Channel. La license_end_date debe ser cronológicamente posterior a la license_start_date. Las license_start_date y license_end_date no deben ser idénticas.
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DDTHH:MM:SS
       </td>
-
       <td>
         preferido
       </td>
     </tr>
-
     <tr>
       <td>
         parent_type
       </td>
-
       <td>
         Tipo de contenido del contenido principal del cual se deriva o describe el clip
       </td>
-
       <td>
         Valores permitidos: episode movie series
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         parent_title
       </td>
-
       <td>
         Título del programa principal si se trata de contenido principal
       </td>
-
       <td>
         Ejemplo:<br />Título de la película o serie principal
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         parent_runtime
       </td>
-
       <td>
         Duración del programa principal si este es una película o episodio
       </td>
-
       <td>
         Números enteros
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         parent_release_date
       </td>
-
       <td>
         Fecha de estreno de la película, episodio o serie principal
       </td>
-
       <td>
         Conforme al formato ISO 8601: AAAA-MM-DD
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         parent_tms_id
       </td>
-
       <td>
         ID de TMS de la película, episodio o serie principal
       </td>
-
       <td>
         Cualquier ID de TMS válido
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         parent_series
       </td>
-
       <td>
         Título de la serie del programa principal si este es un episodio
       </td>
-
       <td>
         Ejemplo:<br />Título de la serie principal
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         parent_season
       </td>
-
       <td>
         Número de temporada del programa principal si este es un episodio
       </td>
-
       <td>
         Números enteros
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         parent_episode
       </td>
-
       <td>
         Número de episodio del programa principal si este es un episodio
       </td>
-
       <td>
         Números enteros
       </td>
-
       <td>
         opcional
       </td>
     </tr>
-
     <tr>
       <td>
         sport_type
       </td>
-
       <td>
         Nombre del deporte que aparece en el clip o momento destacado
       </td>
-
       <td>
         Nombre del deporte
       </td>
-
       <td>
         obligatorio para clips de deportes
       </td>
     </tr>
-
     <tr>
       <td>
         sport_league
       </td>
-
       <td>
         Nombre de la liga deportiva que aparece en el clip o momento destacado
       </td>
-
       <td>
         Nombre de la liga deportiva
       </td>
-
       <td>
         obligatorio para clips de deportes
       </td>
     </tr>
-
     <tr>
       <td>
         sport_teams
       </td>
-
       <td>
         Equipos que aparecen en el clip o momento destacado deportivo. Pueden proporcionarse varios equipos separados por comas. _En este momento, Roku solo admite metadatos de participantes basados en equipos. Los deportes individuales serán compatibles en el futuro._
       </td>
-
       <td>
         Lista separada por comas. Ejemplo:<br />Chicago Cubs,St. Louis Cardinals
       </td>
-
       <td>
         obligatorio para clips de deportes
       </td>
@@ -6217,7 +5627,7 @@ La plantilla de metadatos de Excel de Roku debe enviarse con todos los campos ob
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3x3 basketball\<br/>action\<br/>action sports\<br/>adventure\<br/>aerobics\<br/>agriculture\<br/>animals\<br/>animated\<br/>anime\<br/>anthology\<br/>archery\<br/>arm wrestling\<br/>art\<br/>artistic gymnastics\<br/>artistic swimming\<br/>arts/crafts\<br/>athletics\<br/>auction\<br/>auto\<br/>auto racing\<br/>aviation\<br/>awards\<br/>badminton\<br/>ballet\<br/>baseball\<br/>basketball\<br/>beach soccer\<br/>beach volleyball\<br/>biathlon\<br/>bicycle\<br/>bicycle racing\<br/>billiards\<br/>biography\<br/>blackjack\<br/>bmx racing\<br/>boat\<br/>boat racing\<br/>bobsled\<br/>bodybuilding\<br/>bowling\<br/>boxing\<br/>bullfighting\<br/>bus./financial\<br/>canoe\<br/>canoe/kayak\<br/>card games\<br/>ceremony\<br/>cheerleading\<br/>children\<br/>children-music\<br/>children-special\<br/>children-talk\<br/>collectibles\<br/>comedy\<br/>comedy drama\<br/>community\<br/>computers\<br/>consumer\<br/>cooking\<br/>cricket\<br/>crime\<br/>crime drama\<br/>curling\<br/>cycling\<br/>dance\<br/>dark comedy\<br/>darts\<br/>debate\<br/>diving\<br/>docudrama\<br/>documentary\<br/>dog racing\<br/>dog show\<br/>dog sled\<br/>drag racing\<br/>drama | educational\<br/>entertainment\<br/>environment\<br/>equestrian\<br/>erotic\<br/>event\<br/>exercise\<br/>faith\<br/>fantasy\<br/>fashion\<br/>fencing\<br/>field hockey\<br/>figure skating\<br/>fishing\<br/>food\<br/>football\<br/>fundraiser\<br/>gaelic football\<br/>game show\<br/>gaming\<br/>gay/lesbian\<br/>golf\<br/>gymnastics\<br/>handball\<br/>health\<br/>historical drama\<br/>history\<br/>hockey\<br/>holiday\<br/>holiday music\<br/>holiday music special\<br/>holiday special\<br/>holiday-children\<br/>holiday-children special\<br/>home improvement\<br/>horror\<br/>horse\<br/>house/garden\<br/>how-to\<br/>hunting\<br/>hurling\<br/>hydroplane racing\<br/>indoor soccer\<br/>interview\<br/>intl soccer\<br/>judo\<br/>karate\<br/>kayaking\<br/>lacrosse\<br/>law\<br/>live\<br/>luge\<br/>martial arts\<br/>medical\<br/>military\<br/>miniseries\<br/>mixed martial arts\<br/>modern pentathlon\<br/>motorcycle\<br/>motorcycle racing\<br/>motorsports\<br/>mountain biking\<br/>music\<br/>music special\<br/>music talk\<br/>musical\<br/>musical comedy\<br/>mystery\<br/>nature\<br/>news\<br/>newsmagazine\<br/>olympics\<br/>opera\<br/>outdoors<br />parade\<br/>paranormal | parenting\<br/>performing arts\<br/>playoff sports\<br/>poker\<br/>politics\<br/>polo\<br/>pool\<br/>pro wrestling\<br/>public affairs\<br/>racquet\<br/>reality\<br/>religious\<br/>rhythmic gymnastics\<br/>ringuette\<br/>road cycling\<br/>rodeo\<br/>roller derby\<br/>romance\<br/>romantic comedy\<br/>rowing\<br/>rugby\<br/>running\<br/>sailing\<br/>science\<br/>science fiction\<br/>self improvement\<br/>shooting\<br/>shopping\<br/>sitcom\<br/>skateboarding\<br/>skating\<br/>skeleton\<br/>skiing\<br/>snooker\<br/>snowboarding\<br/>snowmobile\<br/>soap\<br/>soap special\<br/>soap talk\<br/>soccer\<br/>softball\<br/>special\<br/>speed skating\<br/>sport climbing\<br/>sports\<br/>sports talk\<br/>squash\<br/>standup\<br/>sumo wrestling\<br/>surfing\<br/>suspense\<br/>swimming\<br/>table tennis\<br/>taekwondo\<br/>talk\<br/>technology\<br/>tennis\<br/>theater\<br/>thriller\<br/>track cycling\<br/>track/field\<br/>trampoline\<br/>travel\<br/>triathlon\<br/>variety\<br/>volleyball\<br/>war\<br/>water polo\<br/>water skiing\<br/>watersports\<br/>weather\<br/>weightlifting\<br/>western\<br/>wrestling\<br/>yacht racing |
+| 3x3 basketball<br/>action<br/>action sports<br/>adventure<br/>aerobics<br/>agriculture<br/>animals<br/>animated<br/>anime<br/>anthology<br/>archery<br/>arm wrestling<br/>art<br/>artistic gymnastics<br/>artistic swimming<br/>arts/crafts<br/>athletics<br/>auction<br/>auto<br/>auto racing<br/>aviation<br/>awards<br/>badminton<br/>ballet<br/>baseball<br/>basketball<br/>beach soccer<br/>beach volleyball<br/>biathlon<br/>bicycle<br/>bicycle racing<br/>billiards<br/>biography<br/>blackjack<br/>bmx racing<br/>boat<br/>boat racing<br/>bobsled<br/>bodybuilding<br/>bowling<br/>boxing<br/>bullfighting<br/>bus./financial<br/>canoe<br/>canoe/kayak<br/>card games<br/>ceremony<br/>cheerleading<br/>children<br/>children-music<br/>children-special<br/>children-talk<br/>collectibles<br/>comedy<br/>comedy drama<br/>community<br/>computers<br/>consumer<br/>cooking<br/>cricket<br/>crime<br/>crime drama<br/>curling<br/>cycling<br/>dance<br/>dark comedy<br/>darts<br/>debate<br/>diving<br/>docudrama<br/>documentary<br/>dog racing<br/>dog show<br/>dog sled<br/>drag racing<br/>drama | educational<br/>entertainment<br/>environment<br/>equestrian<br/>erotic<br/>event<br/>exercise<br/>faith<br/>fantasy<br/>fashion<br/>fencing<br/>field hockey<br/>figure skating<br/>fishing<br/>food<br/>football<br/>fundraiser<br/>gaelic football<br/>game show<br/>gaming<br/>gay/lesbian<br/>golf<br/>gymnastics<br/>handball<br/>health<br/>historical drama<br/>history<br/>hockey<br/>holiday<br/>holiday music<br/>holiday music special<br/>holiday special<br/>holiday-children<br/>holiday-children special<br/>home improvement<br/>horror<br/>horse<br/>house/garden<br/>how-to<br/>hunting<br/>hurling<br/>hydroplane racing<br/>indoor soccer<br/>interview<br/>intl soccer<br/>judo<br/>karate<br/>kayaking<br/>lacrosse<br/>law<br/>live<br/>luge<br/>martial arts<br/>medical<br/>military<br/>miniseries<br/>mixed martial arts<br/>modern pentathlon<br/>motorcycle<br/>motorcycle racing<br/>motorsports<br/>mountain biking<br/>music<br/>music special<br/>music talk<br/>musical<br/>musical comedy<br/>mystery<br/>nature<br/>news<br/>newsmagazine<br/>olympics<br/>opera<br/>outdoors<br />parade<br/>paranormal | parenting<br/>performing arts<br/>playoff sports<br/>poker<br/>politics<br/>polo<br/>pool<br/>pro wrestling<br/>public affairs<br/>racquet<br/>reality<br/>religious<br/>rhythmic gymnastics<br/>ringuette<br/>road cycling<br/>rodeo<br/>roller derby<br/>romance<br/>romantic comedy<br/>rowing<br/>rugby<br/>running<br/>sailing<br/>science<br/>science fiction<br/>self improvement<br/>shooting<br/>shopping<br/>sitcom<br/>skateboarding<br/>skating<br/>skeleton<br/>skiing<br/>snooker<br/>snowboarding<br/>snowmobile<br/>soap<br/>soap special<br/>soap talk<br/>soccer<br/>softball<br/>special<br/>speed skating<br/>sport climbing<br/>sports<br/>sports talk<br/>squash<br/>standup<br/>sumo wrestling<br/>surfing<br/>suspense<br/>swimming<br/>table tennis<br/>taekwondo<br/>talk<br/>technology<br/>tennis<br/>theater<br/>thriller<br/>track cycling<br/>track/field<br/>trampoline<br/>travel<br/>triathlon<br/>variety<br/>volleyball<br/>war<br/>water polo<br/>water skiing<br/>watersports<br/>weather<br/>weightlifting<br/>western<br/>wrestling<br/>yacht racing |
 
 ### Valores de clasificación por sistema de clasificación y país
 

@@ -149,20 +149,17 @@ Adds a field with the specified name and type to the subject node. The added fie
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>fieldName</td>
       <td>String</td>
       <td>The name of the field to be added.</td>
     </tr>
-
     <tr>
       <td>type</td>
       <td>String</td>
       <td>The type of the field to be added.<br /><br />Type declarations must be lowercase or the field will not be added to the node. For example, declaring "Boolean" as the type will prevent the field from being added.</td>
     </tr>
-
     <tr>
       <td>alwayNotify</td>
       <td>Boolean</td>

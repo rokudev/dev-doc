@@ -55,103 +55,83 @@ To get started with your RAF integration, do the following:
       <th>Supported</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Linear Ads</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>Wrapper and Inline Ads</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>Tracking Events</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>ClickThrough (interactive ads)</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>Companion Ads</td>
       <td><em>apiFramework</em> handled: <ul><li>"innovid"</li><li>"brightline"</li><li>"brightline\_RSG"</li></ul></td>
     </tr>
-
     <tr>
       <td>MediaFile type</td>
       <td><ul><li>"video/mp4"</li><li>"video/x-mp4"</li><li>"video/mp4-h264"</li><li>"application/x-mpegurl"</li><li>"application/vnd.apple.mpegurl"</li><li>"application/json"</li></ul></td>
     </tr>
-
     <tr>
       <td>Extension elements</td>
       <td><ul><li>DFP waterfall</li><li>TrueX</li></ul></td>
     </tr>
-
     <tr>
       <td>Non-Linear Ads</td>
       <td>No</td>
     </tr>
-
     <tr>
       <td>VAST 3.0 Feature</td>
       <td>Supported</td>
     </tr>
-
     <tr>
       <td>Ad pods via sequence attribute</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>Extended error tracking</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>VAST tracking macros</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>Ad “buffet” selection</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>Skippable linear ads</td>
       <td>No</td>
     </tr>
-
     <tr>
       <td>OBA industry icon</td>
       <td>No</td>
     </tr>
-
     <tr>
       <td>VMAP Feature</td>
       <td>Supported</td>
     </tr>
-
     <tr>
       <td>Ad pods playlists</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>Tracking events</td>
       <td>Yes</td>
     </tr>
-
     <tr>
       <td>‘repeatAfter’ AdBreak attribute</td>
       <td>No</td>
     </tr>
-
     <tr>
       <td>Extension elements</td>
       <td>No</td>

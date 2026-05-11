@@ -23,7 +23,6 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <th>Documentation</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>RP 1.1</td>
@@ -45,7 +44,6 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <th>Documentation</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>RP 2.1</td>
@@ -67,7 +65,6 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <th>Documentation</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>RP 3.1</td>
@@ -75,21 +72,18 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <td>Subscription services must create product groups in the <a href="https://developer.roku.com/developer">Developer Dashboard</a> for any set of subscription products that the consumer should not be able to be subscribed to simultaneously.<br /><br />For example, if an app has two in-channel products for the same monthly subscription but with different free trial durations, these two products must be added to the same product group to prevent the customer from paying for two separate monthly subscriptions</td>
       <td>[In-app purchases - Product groups](doc:product-catalog#creating-product-exclusivity-groups)</td>
     </tr>
-
     <tr>
       <td>RP 3.2</td>
       <td>Multiple purchase protection</td>
       <td>Apps must protect against multiple purchases of content or subscriptions through Roku Pay before passing new orders to the Streaming Store service.<br /><br />The Streaming Store service inherently protects against purchasing the same subscription code multiple times, but preventing, for example, the purchase of a free trial subscription and a non-free trial subscription must be done in the channel.</td>
       <td>[In-app purchases -Product Groups](doc:product-catalog#creating-product-exclusivity-groups)</td>
     </tr>
-
     <tr>
       <td>RP 3.3</td>
       <td>Price changes</td>
       <td>SVOD apps must provide notice and otherwise comply with all applicable laws before changing the price of their service. <br /><br />In all cases, Roku requires that SVOD apps provide at least 15 days notice to all existing customers before a price increase.</td>
       <td>[In-app purchases - Product pricing](doc:product-catalog#scheduling-a-price-change-for-a-purchase-option)</td>
     </tr>
-
     <tr>
       <td>RP 3.4</td>
       <td>In-channel product naming</td>
@@ -107,108 +101,85 @@ All apps with transactional content or in-app purchases (SVOD, TVOD, and other s
       <th>
         Requirement
       </th>
-
       <th>
         Name
       </th>
-
       <th>
         Description
       </th>
-
       <th>
         Documentation
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         RP 4.1
       </td>
-
       <td>
         On-device authentication
       </td>
-
       <td>
         Apps that include authentication must complete account sign-ups and sign-ins on the device using [On-device authentication](doc:on-device-authentication). <br /><br />Sign-up and sign-in workflows are prohibited from including external webpages, links to off-device promotional or marketing materials, or utilizing off-device sign-up or sign-in mechanisms such as rendezvous linking.
       </td>
-
       <td>
         [On-device authentication](doc:on-device-authentication)
       </td>
     </tr>
-
     <tr>
       <td>
         RP 4.2
       </td>
-
       <td>
         On-device upgrades and downgrades
       </td>
-
       <td>
         Apps must complete upgrades and downgrades on the device using [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade). The upgrade/downgrade workflows are prohibited from including external webpages.
       </td>
-
       <td>
         [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade)
       </td>
     </tr>
-
     <tr>
       <td>
         RP 4.3
       </td>
-
       <td>
         Account-based entitlements
       </td>
-
       <td>
         Apps must automatically entitle content or subscriptions purchased through Roku Pay across all devices tied to the purchasing Roku account.<br /><br />Apps can use the [getAllPurchases](doc:channelstore#getallpurchases) API can upon launch to return the transactionID for an active subscription, and they can use an entitlement server to look up an account via a call to the [validate-transaction API](doc:roku-web-service#validate-transaction).
       </td>
-
       <td>
         * [getAllPurchases ChannelStore API](doc:channelstore#getallpurchases)
         * [validate-transaction  Roku Pay Web service API](doc:roku-web-service#validate-transaction)
       </td>
     </tr>
-
     <tr>
       <td>
         RP 4.4
       </td>
-
       <td>
         Abandonment tracking
       </td>
-
       <td>
         All subscription services that have streamed more than an average of 5 million hours per month over the last three months (and new subscription services projected to reach the specified streaming hour threshold shortly after launch) must implement Roku Event Dispatcher (RED) in the signup workflow.<br /><br />Apps must fire a RED event upon loading each page within the signup flow and submission of the final page to help track where users are abandoning the process. This includes, but is not limited to, the following pages: landing, sign up, registration, device activation, subscription selection, payment, purchase confirmation, and cancellation.<br /><br />If the app's sign-up flow is contained within a form that covers one or more pages, channels must fire a RED event when each element in the form is completed. Streaming hours per month information is available in the Developer Dashboard.
       </td>
-
       <td>
         [Tracking signup abandonment](doc:tracking-signup-abandonment).
       </td>
     </tr>
-
     <tr>
       <td>
         RP 4.5
       </td>
-
       <td>
         Enhanced Subscription Recovery (churn mitigation)
       </td>
-
       <td>
         All apps offering subscriptions must implement Enhanced Subscription Recovery to pass certification
       </td>
-
       <td>
         [Enhanced Subscription Recovery](doc:subscription-on-hold)
       </td>

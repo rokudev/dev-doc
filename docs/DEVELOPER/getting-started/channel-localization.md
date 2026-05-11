@@ -23,7 +23,6 @@ Roku has Streaming Stores in the following countries:
       <th>Asia Pacific</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><ul><li>United States</li><li>Canada</li></ul></td>

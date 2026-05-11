@@ -66,34 +66,27 @@ The following table summarizes the standard dialog nodes used to build custom di
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Group</td>
-
       <td />
     </tr>
-
     <tr>
       <td>++ StdDlgAreaBase</td>
       <td>Provides common functionality for the <strong>StdDlgTitleArea</strong>, <strong>StdDlgContentArea</strong> and <strong>StdDlgButtonArea</strong> classes.</td>
     </tr>
-
     <tr>
       <td>++++ StdDlgTitleArea</td>
       <td>Contains the title information and/or icons at the top of the dialog.</td>
     </tr>
-
     <tr>
       <td>++++ StdDlgContentArea</td>
       <td>Contains the main body of the dialog, which may include zero to multiple content area items (<strong>StdDlgItemBase</strong> nodes), which are as follows: <table><thead><tr><th>Node</th><th>Description</th><th>Example</th></tr></thead><tbody><tr><td>StdDlgItemBase</td><td>Provides common functionality for all content area items.</td><td /></tr><tr><td>++StdDlgItemGroup</td><td>Visually groups a set of StdDlgAreaBase child nodes in a custom dialog</td><td /></tr><tr><td>++StdDlgActionCardItem</td><td>Highlights the StdDlgItemBase child nodes in the content area of a custom dialog.</td><td><img alt="roku400px - StdDlgBulletTextItem" src="https://image.roku.com/ZHZscHItMTc2/action-cards-example.png" /></td></tr><tr><td>++ StdDlgBulletTextItem</td><td>A bulleted list of text.</td><td><img alt="roku400px - StdDlgBulletTextItem" src="https://image.roku.com/ZHZscHItMTc2/StdDlgBulletTextItem-v2.jpg" /></td></tr><tr><td>++ StdDlgDeterminateProgressItem</td><td>A progress indicator that represents the percentage of the progress that has been completed.</td><td><img alt="roku400px - std-dlg-determinate-progress-item" src="https://image.roku.com/ZHZscHItMTc2/std-dlg-determinate-progress-item-2.jpg" /></td></tr><tr><td>++ StdDlgGraphicItem</td><td>An image with an optional text label.</td><td><img alt="roku400px - v" src="https://image.roku.com/ZHZscHItMTc2/std-dlg-graphic-item.jpg" /></td></tr><tr><td>++ StdDlgKeyboardItem</td><td>Either a keyboard or PIN pad for the text and voice entry of alphanumeric/symbol strings or numeric digits (typically, short numeric PIN codes), respectively.</td><td><img alt="roku400px - std-dlg-keyboard-item" src="https://image.roku.com/ZHZscHItMTc2/std-dlg-keyboard-item.jpg" /></td></tr><tr><td>++ StdDlgMultiStyleTextItem</td><td>A line of text with multiple styles (for example, plain and bold characters, different fonts, multiple colors, and/or emojis).</td><td><img alt="roku400px - std-dlg-progress-item" src="https://image.roku.com/ZHZscHItMTc2/stdDlgMultiStyleTextItem-green-text.png" /></td></tr><tr><td>++ StdDlgProgressItem</td><td>A spinning progress indicator for tasks that take an indeterminate amount of time.</td><td><img alt="roku400px - std-dlg-progress-item" src="https://image.roku.com/ZHZscHItMTc2/std-dlg-progress-item.jpg" /></td></tr><tr><td>++ StdDlgTextItem</td><td>A block of text.</td><td><img alt="roku400px - std-dlg-text-item" src="https://image.roku.com/ZHZscHItMTc2/std-dlg-text-item.jpg" /></td></tr><tr><td>++ StdDlgCustomItem</td><td>A free-form custom item.</td><td><img alt="roku400px - custom-item-roku250px" src="https://image.roku.com/ZHZscHItMTc2/std-dlg-custom-item-multi-column.jpeg" /></td></tr></tbody></table></td>
     </tr>
-
     <tr>
       <td>++++ StdDlgButtonArea</td>
       <td>Contains any buttons (<strong>StdDlgButton</strong> nodes) in the button area located at the bottom of the dialog:</td>
     </tr>
-
     <tr>
       <td>++++ StdDlgSideCardArea</td>
       <td>A freeform area to the right or left side of a custom standard framework dialog that contains  decorative images or annotative text.</td>

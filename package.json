@@ -1,0 +1,16 @@
+{
+  "name": "dev-doc-tools",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint:docs": "node .github/scripts/docs-lint/index.mjs"
+  },
+  "devDependencies": {
+    "glob": "^11.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0"
+  }
+}

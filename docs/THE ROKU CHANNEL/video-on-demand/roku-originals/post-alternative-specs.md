@@ -232,14 +232,12 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
   <thead>
     <tr>
       <th />
-
       <th>VIOLENCE</th>
       <th>SEX/NUDITY</th>
       <th>SUBSTANCE USE/ABUSE</th>
       <th>LANGUAGE</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><strong>TV-PG</strong></td>
@@ -248,7 +246,6 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
       <td><strong>✔</strong>  Implied drug use (not glorified or must show consequences)</td>
       <td><strong>✔</strong>  Limited use of bleeping/dropping strong language. Ass, damn, hell, and bitch</td>
     </tr>
-
     <tr>
       <td><strong>TV-14</strong></td>
       <td><strong>✔</strong>  Brief violence, OK with some blood shown<br /><strong>✕</strong> No gore</td>
@@ -256,7 +253,6 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
       <td><strong>✔</strong>  Visuals/use of drug abuse (not glorified, must show consequences)<br /><strong>✖</strong> No smoking minors</td>
       <td><strong>✔</strong>  Shit, asshole, bastard (when used in a pejorative matter), goddamn, bitch, dick and pussy (as an insult)</td>
     </tr>
-
     <tr>
       <td><strong>TV-MA</strong></td>
       <td><strong>✔</strong>  On-screen graphic violence, gore</td>
@@ -602,11 +598,15 @@ MAMA_102_v04_20220919_enUS_PM_Nearfield_2ch_48k_24b_23976.L.wav
 | Optional Tracks                               | OPT, OPTA, OPTB, GRP              |
 | Add’l Detail (Dialogue Guide Track, ADR, etc) | GUIDE, ADR                        |
 
+**Channel types**
+
 | **Channel Type** | **Abbreviation** |
 | ---------------- | ---------------- |
 | Mono             | Mono             |
 | Stereo           | 2CH              |
 | 5.1 Surround     | 6CH              |
+
+**Track assignments**
 
 | Track Assignment | Abbreviation         |
 | ---------------- | -------------------- |
@@ -676,58 +676,47 @@ Mixing Specifications:
       <th><strong>ProRes</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Container</td>
       <td>MOV</td>
     </tr>
-
     <tr>
       <td>­­­Profile</td>
       <td>422 HQ</td>
     </tr>
-
     <tr>
       <td>Minimum Bitrate</td>
       <td>175 mbits or higher</td>
     </tr>
-
     <tr>
       <td>Landscape aspect ratio</td>
       <td>16:9 (1.77:1) - (no black bars)<br />W1920 x H1080 (HD)</td>
     </tr>
-
     <tr>
       <td>Pixel aspect ratio</td>
       <td>Square pixels (1:1)</td>
     </tr>
-
     <tr>
       <td>Scan type</td>
       <td>Progressive scan type</td>
     </tr>
-
     <tr>
       <td>Chroma Subsampling</td>
       <td>4:2:2</td>
     </tr>
-
     <tr>
       <td>Color Space</td>
       <td>BT.709 Legal Video Range (16 to 940)</td>
     </tr>
-
     <tr>
       <td>Bit depth</td>
       <td>10-bit or 12-bit</td>
     </tr>
-
     <tr>
       <td>Constant Frame Rate</td>
       <td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
     </tr>
-
     <tr>
       <td>Native frame rate</td>
       <td>No 3:2 pulldown flags</td>
@@ -742,23 +731,19 @@ Mixing Specifications:
       <th><strong>PCM</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Format</td>
       <td>2 Interleaved Tracks or 8 Mono Tracks</td>
     </tr>
-
     <tr>
       <td>Track Layout</td>
       <td>Interleaved: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br />Mono:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
     </tr>
-
     <tr>
       <td>Sample Rate/Bit Depth</td>
       <td>48000Hz/24-bit</td>
     </tr>
-
     <tr>
       <td>Channel Mapping & Metadata Tagging</td>
       <td>See 8.4.2 -Verify correct audio channel mapping and metadata tagging.</td>

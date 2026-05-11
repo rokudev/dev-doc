@@ -332,129 +332,104 @@ except for exponentiation, which is right associative.
       <th>
         ()
       </th>
-
       <th>
         Function call, or parentheses
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         .
       </td>
-
       <td>
         Dot operator
       </td>
     </tr>
-
     <tr>
       <td>
         [ ]
       </td>
-
       <td>
         Array operator
       </td>
     </tr>
-
     <tr>
       <td>
         "?.", "?@", "?[", "?("
       </td>
-
       <td>
         Optional chaining operators
       </td>
     </tr>
-
     <tr>
       <td>
         ^
       </td>
-
       <td>
         Exponentiation
       </td>
     </tr>
-
     <tr>
       <td>
         – , +
       </td>
-
       <td>
         Negation (unary)
       </td>
     </tr>
-
     <tr>
       <td>
         * ,  / , MOD, \
       </td>
-
       <td>
         Multiplicative operators
       </td>
     </tr>
-
     <tr>
       <td>
         – , +
       </td>
-
       <td>
         Additive operators
       </td>
     </tr>
-
     <tr>
       <td>
         \<\<, >>
       </td>
-
       <td>
         Integer bitshift operators
       </td>
     </tr>
-
     <tr>
       <td>
         \<, >, = , \<\>, \<=, >=
       </td>
-
       <td>
         Comparisons
       </td>
     </tr>
-
     <tr>
       <td>
         NOT
       </td>
-
       <td>
         Unary logical NOT or bitwise
       </td>
     </tr>
-
     <tr>
       <td>
         AND
       </td>
-
       <td>
         Logical or bitwise
       </td>
     </tr>
-
     <tr>
       <td>
         OR
       </td>
-
       <td>
         Logical or bitwise
       </td>

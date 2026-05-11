@@ -36,37 +36,31 @@ The following chart illustrates the key differences between the two monetization
   <thead>
     <tr>
       <th />
-
       <th>Inventory Split</th>
       <th>Roku Sales Representation Program</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>Monetary terms</td>
       <td>The app controls 70% of its advertising inventory, and keeps 100% of the gross revenue earned on these ads. The remaining 30% of the app's inventory routes to Roku, in which case Roku retains 100% of gross revenue earned on the ads it delivers.</td>
       <td>Roku manages 100% of the app's advertising inventory and will share 60% of net revenue earned on paid ads served in the app with the publisher (net of a 15% operational and serving fee). Publishers should be aware that Roku-branded advertisements ("house ads") are not considered as paid ads. If participating in a revenue share arrangement, Roku will attempt to fill ad inventory trafficked through the app and maximize the publisher's monetary returns, but makes no guarantee of a minimum delivery.</td>
     </tr>
-
     <tr>
       <td>Eligibility requirements</td>
       <td>All ad-supported apps will default to the Inventory Split option, regardless of audience size or hours streamed. However, Roku may not begin filling the 30% of ad inventory it manages until it has concluded its content appropriateness review of the app.</td>
       <td>Apps will be considered for participation by Roku after meeting both of the following thresholds:<br /><ul><li>5,000 new installs over the last calendar month</li><li>50,000 streaming hours over the last calendar month</li></ul>Reaching these thresholds does not guarantee an app entry into the program; Roku reserves the right to select or decline any publisher. Apps with a seasonal theme may be considered against their past several months' engagement levels rather than the immediately preceding calendar month. For example, a Halloween-themed app may meet these thresholds due to a surge in viewership activity in October, but may fall short in August or September.<br /><br />See <a href="/dev/docs/video-advertisements#how-to-effectively-grow-an-audience">How to effectively grow an audience</a> for information about the promotional tool set available to publishers to help meet these eligibility requirements.</td>
     </tr>
-
     <tr>
       <td>Backend requirements</td>
       <td>App sets up its own ad server and manages its own advertising demand. 30% of all advertising inventory is routed to Roku to be filled.</td>
       <td>App uses a revenue-share tag provided by Roku on ads delivered on the platform. Roku will have first right to fill advertising inventory. The app publisher can also configure their own advertising server as a fallback for instances when Roku does not fill inventory.</td>
     </tr>
-
     <tr>
       <td>Payout period</td>
       <td>Apps retain 100% of the revenue on advertisements they manage. Publishers should not expect payments from Roku.</td>
       <td>Apps are paid quarterly, no later than 60 days after the end of each quarter. Publishers will only be paid in a given quarter when the sums due to them for such quarter equal or exceed $100.</td>
     </tr>
-
     <tr>
       <td>Ad impression reporting</td>
       <td>Not currently supported.</td>

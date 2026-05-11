@@ -141,7 +141,6 @@ See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/d
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>keyGrid</td>

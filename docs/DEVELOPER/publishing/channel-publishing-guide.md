@@ -111,16 +111,16 @@ To ensure success in creating a Public app, you will need to:
 
    ![img - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-ui.png?version=1\&modificationDate=1702940715000\&api=v2)
 
-| Field                     | Description                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Channel ID                | The unique ID generated for your app.                                                                                                                                                                                                                                                                                                                                                                       |
+| Field                     | Description                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel ID                | The unique ID generated for your app.                                                                                                                                                                                                                                                                                                                                                                               |
 | Access code               | A six-character alphanumeric code that is included in the URL for installing your app. The URL is used to install beta apps, and it can be used to add public apps once they have been published.<br /><br />You can click the link to install the app on a Roku device linked to your developer account. In the **App Profile** page, you can enter a descriptive custom code (for example, "MyVideoApp"). |
-| Type                      | The type of app, which may be one of the following values: <ul><li><strong>SDK</strong>: An app to be published to the Streaming Store.</li><li><strong>SDK (Beta)</strong>: An app to be used for QA testing.</li></ul>                                                                                                                                                                                    |
-| Version                   | The version number of the app.                                                                                                                                                                                                                                                                                                                                                                              |
-| Created                   | The date the app was created in the Developer Dashboard.                                                                                                                                                                                                                                                                                                                                                    |
-| Last publish              | The date the app was last published.                                                                                                                                                                                                                                                                                                                                                                        |
-| Installs (Beta apps only) | The number of users that have installed the beta app. A beta app may be installed by up to 20 users at any time.                                                                                                                                                                                                                                                                                            |
-| Expiry (Beta apps only)   | The date when the beta app will expire and the number of days before the expiration. A beta app may exist for a maximum of 120 days after creation. After the expiration, the app is: (1) deleted and removed from your Developer Dashboard and (2) disabled for all users who have installed it.                                                                                                           |
+| Type                      | The type of app, which may be one of the following values: <ul><li><strong>SDK</strong>: An app to be published to the Streaming Store.</li><li><strong>SDK (Beta)</strong>: An app to be used for QA testing.</li></ul>                                                                                                                                                                                            |
+| Version                   | The version number of the app.                                                                                                                                                                                                                                                                                                                                                                                      |
+| Created                   | The date the app was created in the Developer Dashboard.                                                                                                                                                                                                                                                                                                                                                            |
+| Last publish              | The date the app was last published.                                                                                                                                                                                                                                                                                                                                                                                |
+| Installs (Beta apps only) | The number of users that have installed the beta app. A beta app may be installed by up to 20 users at any time.                                                                                                                                                                                                                                                                                                    |
+| Expiry (Beta apps only)   | The date when the beta app will expire and the number of days before the expiration. A beta app may exist for a maximum of 120 days after creation. After the expiration, the app is: (1) deleted and removed from your Developer Dashboard and (2) disabled for all users who have installed it.                                                                                                                   |
 
 ## App store listing
 
@@ -136,65 +136,54 @@ Configure how your app is listed in the Streaming Store, including the app's hom
       <th>
         Field
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Countries
       </td>
-
       <td>
         Add or remove the countries where your app is distributed. Only add countries where you have the rights to distribute your app's content. The "Rest of World" Streaming Store includes regions not serviced by other Streaming Stores.
       </td>
     </tr>
-
     <tr>
       <td>
         Domestic region
       </td>
-
       <td>
         Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streming Stores that include your app and are outside your domestic region.
       </td>
     </tr>
-
     <tr>
       <td>
         Made for kids?
       </td>
-
       <td>
-        If your app is made for kids you must select **Yes** and comply with the applicable children’s privacy laws and youth protection laws in the countries in which your app is published.
-
-        When you select **Yes**, the **Category** field is automatically fixed to "Kids" and cannot be changed, and you cannot set the **App Age Rating** to "Adult".
-
-        If you select **No**, you cannot set the **Category** to "Kids".
-
-        Selecting "Yes" automatically enables the **kidsContent** parameter in calls to the
+        If your app is made for kids you must select <strong>Yes</strong> and comply with the applicable children's privacy laws and youth protection laws in the countries in which your app is published.
+        <br /><br />
+        When you select <strong>Yes</strong>, the <strong>Category</strong> field is automatically fixed to "Kids" and cannot be changed, and you cannot set the <strong>App Age Rating</strong> to "Adult".
+        <br /><br />
+        If you select <strong>No</strong>, you cannot set the <strong>Category</strong> to "Kids".
+        <br /><br />
+        Selecting "Yes" automatically enables the <strong>kidsContent</strong> parameter in calls to the
       </td>
     </tr>
-
     <tr>
       <td>
         Category
       </td>
-
       <td>
         Select how your app is categorized in the Streaming Store. When customers search for apps in the selected category, your app will be included in the results.
       </td>
     </tr>
-
     <tr>
       <td>
         App age rating
       </td>
-
       <td>
         Specify the age rating that best describes your app. The selected rating is displayed on the app's details page in the on-device Streaming Store. This provides parents with information to help them determine whether your app is appropriate for their children.
       </td>
@@ -220,11 +209,11 @@ Provide localized names, descriptions, and artwork for your listing in the Strea
 
    ![channel-builder-2-store-assets-localized-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-localized-properties.png)
 
-| Field                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| App name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>App name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>App description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>App description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)          .</li></ul> |
-| App poster               | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Screenshots              | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Field                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | App name and description | Enter a localized app name, short on-device description, and long online description for each language selected:<br /><ul><li><strong>App name</strong>: The localized name of your app based on the selected language. You can provide different localized app names for each language you support.</li><li><strong>App description (on-device)</strong>: The short app description (300-character maximum) that is included in your app's details screen, which is displayed when customers browse the Streaming Store on their device and select your app.</li><li><strong>App description (online)</strong>: The long app description (1,500-character maximum) that is included in your app's detail page on [channelstore.roku.com](https://channelstore.roku.com/)         .</li></ul> |
+| App poster           | Upload an app poster (540x405 JPEG or PNG). The poster is displayed within your app's listing in the on-device and online Streaming Store. You can provide different localized app posters for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Screenshots              | Upload up to six screenshots (1920x1080 JPEG or PNG) that highlight your app's user experience and content. The screenshots are displayed within your app's listing in the Streaming Store. You can provide different localized screenshots for each language you support.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 4. Click **Save**.
 
@@ -246,7 +235,7 @@ Select the type of app you are creating and provide your contact information fol
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | App type                              | Select the type of app you are creating:<br /><ul><li><strong>Video</strong>: Movies, television shows, special events, and other video content (including music videos).</li><li><strong>Audio</strong>: Streaming music services, podcasts, and other audio content that does not include video.</li><li><strong>Game</strong>: Interactive games.</li><li><strong>App/Utility</strong>: Weather apps, and other tools and utilities.</li><li><strong>Theme</strong>: Customizes the Roku home-screen wallpaper, screensaver, and system sounds.</li></ul> |
 | Privacy and terms                     | Enter the URLs of your app's privacy policy and terms and conditions agreement.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Vanity access code                    | A six-character alphanumeric code that is included in the URL for installing your app. The URL is used to install beta apps, and it can be used to add public vs once they have been published.You can use the auto-generated code or enter a descriptive custom code, which may be a maximum of 20 alphanumeric characters (for example, "MyVideoApp")                                                                                                                                                                                                      |
+| Vanity access code                    | A six-character alphanumeric code that is included in the URL for installing your app. The URL is used to install beta apps, and it can be used to add public vs once they have been published.You can use the auto-generated code or enter a descriptive custom code, which may be a maximum of 20 alphanumeric characters (for example, "MyVideoApp")                                                                                                                                                                                                  |
 | Do customers sign in to your app?     | Authenticated SVOD, AVOD, TVE, and free apps must select 'Yes.' If you select 'Yes,' you'll need to later provide login credentials that Roku can use to test the parts of your app that can only be accessed after signing in.                                                                                                                                                                                                                                                                                                                              |
 | Customer support contact information  | Enter your customer support URL, email address, and phone number.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Learn more URL                        | Enter the URL where customers can learn more about your app (for example, the homepage of your app's website).                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -272,118 +261,88 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
       <th>
         App type
       </th>
-
       <th>
         Monetization option
       </th>
-
       <th>
         Notes
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Free
       </td>
-
       <td>
         I will not be monetizing my app.
       </td>
-
       <td>
         If you select this option, all other options are unavailable.
       </td>
     </tr>
-
     <tr>
       <td>
         Subscription Video on Demand (SVOD)
       </td>
-
       <td>
         My app offers subscriptions.
       </td>
-
       <td>
         The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
       </td>
     </tr>
-
     <tr>
       <td>
         Transactional Video on Demand (TVOD)
       </td>
-
       <td>
         My app offers one-time purchases (movie rentals/purchases, PPVs, sporting events, and other transactional content).
       </td>
-
       <td>
         The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
       </td>
     </tr>
-
     <tr>
       <td>
         TV Everywhere (TVE)
       </td>
-
       <td>
         My app requires a cable or satellite subscription to access content.
       </td>
-
       <td>
-
       </td>
     </tr>
-
     <tr>
       <td>
         Ad-supported
       </td>
-
       <td>
         My app displays video ads.
       </td>
-
       <td>
-        If you select this option, you must enter the URL path to an app-ads.txt file in the **Developer URL** field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [App Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The **Channel ID** and **Bundle ID** values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags `appstore:store_id` and `appstore:bundle_id` to provide channel ID information in the http header of an app's Streaming Store page. <br /> Using the values from the illustration above as examples, the meta-tags would appear in the `<head>` section, as so:
-
-        ```html
-        <meta name="appstore:store_id" content="633666">
-        <meta name="appstore:bundle_id" content="633666">
-        ```
-
+        If you select this option, you must enter the URL path to an app-ads.txt file in the <strong>Developer URL</strong> field to secure your app's ad inventory. If you do not sell ads via third parties or run programmatic ads on your app's inventory, it's recommended that you include the following line in the app-ads.txt file: "# [App Name] does not authorize programmatic sellers". For more information, see the [IAB documentation](https://iabtechlab.com/ads-txt/).<br /><img alt="channel-builder-2-monetization-options-video-ads - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options-video-ads.png" /><br />The <strong>Channel ID</strong> and <strong>Bundle ID</strong> values identify an app to the publisher's ad partners in the advertising ecosystem. These values can also be found via the meta-tags on the app's Streaming Store page. Following IAB App-Ads guidelines, Roku uses the meta-tags <code>appstore:store_id</code> and <code>appstore:bundle_id</code> to provide channel ID information in the http header of an app's Streaming Store page.
+        <br /><br />
+        Using the values from the illustration above as examples, the meta-tags would appear in the <code>&lt;head&gt;</code> section, as so:
+        <pre><code class="language-html">&lt;meta name="appstore:store_id" content="633666"&gt;
+&lt;meta name="appstore:bundle_id" content="633666"&gt;</code></pre>
         Consider a scenario where you want to identify your app in an OpenRTB 2.5 Bid Request. You could use the following sequence for example:
-
-        ```json
-        "app": {
-           "bundle": "633666",
-           "storeurl": "https://channelstore.roku.com/details/374854f41bc07ae79db5f49add87d24c:673c4b59965ffef7ac2e74eefdaf94e6/roku-developers",
-                 …  <additional fields>
-        }
-        ```
-
-        The **Developer URL** field is also provided (and discoverable) in an app's Streaming Store page `<head>` section:
-
-        ```html
-        <meta name="appstore:developer_url" content="https://www.path.to/path">
-        ```
+        <pre><code class="language-json">"app": {
+   "bundle": "633666",
+   "storeurl": "https://channelstore.roku.com/details/374854f41bc07ae79db5f49add87d24c:673c4b59965ffef7ac2e74eefdaf94e6/roku-developers",
+         …  &lt;additional fields&gt;
+}</code></pre>
+        The <strong>Developer URL</strong> field is also provided (and discoverable) in an app's Streaming Store page <code>&lt;head&gt;</code> section:
+        <pre><code class="language-html">&lt;meta name="appstore:developer_url" content="https://www.path.to/path"&gt;</code></pre>
       </td>
     </tr>
-
     <tr>
       <td>
         Pay-to-install
       </td>
-
       <td>
         My app requires customers to pay to install it.
       </td>
-
       <td>
         If you’ve enrolled in the Roku Partner Payouts Program, select the cost to install your app from the **One-time payment price tier** drop-down list.<br /><br />Price tiers are used to enforce 99 cent or 49 cent pricing on app products.<br /><br />One to three-digit tier numbers are used for 99 cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).<br /><br />Four-digit tier numbers are used for 49 cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49 and so on. The highest tier is 1030 ($30.49).<br /><br /><img alt="channel-builder-2-monetization-pay-to-install - roku400px" src="https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-pay-to-install.png" />
       </td>
@@ -472,53 +431,46 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
       <th>
         Column
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Message
       </td>
-
       <td>
         A description of the issue related to the app.
       </td>
     </tr>
-
     <tr>
       <td>
         Severity
       </td>
-
       <td>
         The type of message: error, warning, or info.
-
-        * **Error**:  Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.
-        * **Warning**: Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.
-        * **Info**: Info messages provide tips that may be helpful in the development of the app.
+        <br /><br />
+        <ul>
+          <li><strong>Error</strong>: Errors block the app from passing certification. All errors must be resolved to pass static analysis testing and schedule the app for publishing.</li>
+          <li><strong>Warning</strong>: Warnings do not currently block the app from passing certification; however, they should be resolved to ensure the app can pass static analysis testing in the future. In addition, resolving warnings helps optimize app performance.</li>
+          <li><strong>Info</strong>: Info messages provide tips that may be helpful in the development of the app.</li>
+        </ul>
       </td>
     </tr>
-
     <tr>
       <td>
         Category
       </td>
-
       <td>
         The type of issue (for example, package, performance, billing, manifest, and so on).
       </td>
     </tr>
-
     <tr>
       <td>
         Certification Requirement
       </td>
-
       <td>
         Provides a link to any related certification requirements in the [Certification Criteria](doc:certification) document.
       </td>
@@ -546,7 +498,8 @@ To provide the credentials for one or more test accounts, follow these steps:
 
 4. In the **Authentication Type** field, select the type of app: **SVOD** or **Cable/Satellite**. If you select **Cable/Satellite**, do the following:
 
-   a. In the **Link URL** field, enter the URL for linking devices to the test account. b. From the **Provider** list, select the cable/satellite provider.
+   a. In the **Link URL** field, enter the URL for linking devices to the test account.
+   b. From the **Provider** list, select the cable/satellite provider.
 
 5. In the **Username** field, enter the user name to be used for static analysis testing.
 
@@ -592,75 +545,64 @@ To run App Behavior Analysis testing on your app, follow these steps:
       <th>
         Column
       </th>
-
       <th>
         Description
       </th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         Test title
       </td>
-
       <td>
         The name of the test being executed ("Channel Launch Performance", "Channel Deep Linking Basic", "Channel Content Play Performance").
       </td>
     </tr>
-
     <tr>
       <td>
         Status
       </td>
-
       <td>
         The results of the test. Completed tests have a status of "Passed" or "Failed"; tests still to be performed have a status of "Queued".
       </td>
     </tr>
-
     <tr>
       <td>
         Severity
       </td>
-
       <td>
         Any info messages, warnings, or errors related to a completed test.
       </td>
     </tr>
-
     <tr>
       <td>
         Category
       </td>
-
       <td>
         The type of test being performed: "Performance" or "Deep Linking".
       </td>
     </tr>
-
     <tr>
       <td>
         Certification requirements
       </td>
-
       <td>
         Provides a link to the section in the [Certification Criteria](doc:certification) document, where the criterion in question is located.
       </td>
     </tr>
-
     <tr>
       <td>
         Actions
       </td>
-
       <td>
         Displays information, script, and screenshot icons that you can click to learn more about the test:
-
-        * **Test information**: Provides detailed test results including any additional error or warning information, a link to the related certification requirement, and a link to the related documentation.
-        * **Test script**: Provides the actual script executed in the Roku Remote Tool for the test. You can copy and paste or download and import the script and run it in the Roku Remote tool (a link to the tool is provided in the upper right-hand corner). This provides developers with insight into how their apps are tested and enables them to run the same app performance and deep linking tests Roku executes before trying to pass the certification testing.
-        * **Screenshot**. If a test fails, displays a screenshot of the screen in the app UI where the test failed. This icon may not be available in all test failure cases.
+        <br /><br />
+        <ul>
+          <li><strong>Test information</strong>: Provides detailed test results including any additional error or warning information, a link to the related certification requirement, and a link to the related documentation.</li>
+          <li><strong>Test script</strong>: Provides the actual script executed in the Roku Remote Tool for the test. You can copy and paste or download and import the script and run it in the Roku Remote tool (a link to the tool is provided in the upper right-hand corner). This provides developers with insight into how their apps are tested and enables them to run the same app performance and deep linking tests Roku executes before trying to pass the certification testing.</li>
+          <li><strong>Screenshot</strong>. If a test fails, displays a screenshot of the screen in the app UI where the test failed. This icon may not be available in all test failure cases.</li>
+        </ul>
       </td>
     </tr>
   </tbody>

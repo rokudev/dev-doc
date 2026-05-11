@@ -32,32 +32,27 @@ After watching this video, publishers can complete the initial requirements and 
       <th>Summary</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>1</td>
       <td><a href="https://www.roku.com/products/">Get a Roku device</a></td>
       <td>Publishers need a Roku device to develop their Roku app. <br /><br />When progressing to testing, a suite of devices is needed to ensure that an app meets certification requirements and performs well across different Roku's hardware models, which have varying performance specifications.</td>
     </tr>
-
     <tr>
       <td>2</td>
       <td><a href="https://my.roku.com/signup">Create a Roku customer account</a></td>
       <td>A Roku customer account is required for enrolling in the Roku developer program. It also enables publishers to test their subscription apps without incurring charges.</td>
     </tr>
-
     <tr>
       <td>3</td>
       <td><a href="https://developer.roku.com/enrollment/standard">Enroll in the Roku developer program</a></td>
       <td>Enrolling the Roku developer program provides publishers access to the Roku Developer Dashboard, which is needed for creating, testing, and publishing apps.<br /><br />To enroll, you must provide contact information and then read and agree to the <a href="https://docs.roku.com/doc/developerdistribution/en-us">Roku distribution agreement</a>. This agreement is required for publishers to distribute apps on the Roku platform. It also explains payout information, including how revenue is split between Roku and the publisher and how frequently payouts are made.</td>
     </tr>
-
     <tr>
       <td>4</td>
       <td>[Enroll in the Roku Partner Payouts program](doc:partner-payouts)</td>
       <td>Enrolling in the Roku Partner Payouts program is required for publishers to monetize content on the Roku platform. As part of this steps, you need to do provide the following:<br /><ul><li>Contact information.</li><li>Payout method: direct deposit/ACH (US only), wire transfer, PayPal.</li><li>Tax forms (W9, W8-BEN-E, or W8-BEN), which are required for publishers to receive payout from Roku.  </li><li>Publishers in the United States complete a W9.</li><li>Publishers (entities \[businesses/corporations]) outside the United States complete a W8-BEN-E.</li><li>Publishers (individuals/sole proprietors) outside the United States complete a W8-BEN.</li></ul><blockquote><p>If your app is based in Brazil, you must contact <a href="dlpartnermanagement@roku.com">Roku Partner Management</a> to get set up with payouts, instead of enrolling in the Roku Partner Payouts Program.</p></blockquote></td>
     </tr>
-
     <tr>
       <td>5</td>
       <td>[Develop a Roku app](doc:getting-started)</td>

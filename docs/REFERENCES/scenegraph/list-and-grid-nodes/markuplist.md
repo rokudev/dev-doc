@@ -36,18 +36,14 @@ The following example displays the use of the MarkupList node.
       <th>Description</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>itemComponentName</td>
       <td>string</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the name of a XML component for the list items. An instance of this component is created on demand for each visible item of the list. The XML component must define a specific interface as detailed in <a href="#markuplist-xml-component">MarkupList XML component</a> below.</td>
     </tr>
-
     <tr>
       <td>content</td>
       <td>ContentNode</td>
@@ -55,7 +51,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the content for the list. See <a href="#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
     </tr>
-
     <tr>
       <td>itemSize</td>
       <td>vector2d</td>
@@ -63,7 +58,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the width and height of each item in the list</td>
     </tr>
-
     <tr>
       <td>itemSpacing</td>
       <td>vector2d</td>
@@ -71,7 +65,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>The second value of the vector specifies the vertical spacing between items in the list. The first value of the vector is ignored.</td>
     </tr>
-
     <tr>
       <td>numRows</td>
       <td>integer</td>
@@ -79,7 +72,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the number of visible rows displayed. The actual number of rows may be more or less than the number of visible rows specified depending on the number of items in the list content.</td>
     </tr>
-
     <tr>
       <td>drawFocusFeedback</td>
       <td>Boolean</td>
@@ -87,7 +79,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies whether or not the focus indicator bitmap is displayed</td>
     </tr>
-
     <tr>
       <td>drawFocusFeedbackOnTop</td>
       <td>Boolean</td>
@@ -95,27 +86,20 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies whether the focus indicator bitmap is drawn below or on top of the list items</td>
     </tr>
-
     <tr>
       <td>focusBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the bitmap file used for the focus indicator when the list has focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
     </tr>
-
     <tr>
       <td>focusFootprintBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the bitmap file used for the focus indicator when the list does not have focus. In most cases, this should be a 9-patch image that specifies both expandable regions as well as margins. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
     </tr>
-
     <tr>
       <td>focusBitmapBlendColor</td>
       <td>color</td>
@@ -123,7 +107,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Blend the graphic image specified by <code>focusBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus indicator graphic image with a different color than the image specified by <code>focusBitmapUri.</code></td>
     </tr>
-
     <tr>
       <td>focusFootprintBlendColor</td>
       <td>color</td>
@@ -131,17 +114,13 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Blend the graphic image specified by <code>focusFootprintBitmapUri</code> with the specified color. If set to the default, 0xFFFFFFFF, no color blending will occur. Set this field to show a focus footprint indicator graphic image with a different color than the image specified by <code>focusFootprintBitmapUri</code>.</td>
     </tr>
-
     <tr>
       <td>wrapDividerBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>Specifies the bitmap file to use as a wrap divider, the visual separator between the last and first list items when the list wraps. In most cases, this should be a 9-patch image that specifies both expandable regions. Only set this field to specify a custom bitmap that differs in appearance from the default bitmap.</td>
     </tr>
-
     <tr>
       <td>wrapDividerHeight</td>
       <td>float</td>
@@ -149,17 +128,13 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the height of the wrap divider, the visual separator between the last and first list items when the list wraps. The bitmap for the wrap divider is scaled to this height. The width of the wrap divider is set to the width of the list items as specified by the <code>itemSize</code> field width value.</td>
     </tr>
-
     <tr>
       <td>sectionDividerBitmapUri</td>
       <td>uri</td>
-
       <td />
-
       <td>READ\_WRITE</td>
       <td>If the ContentNode specifies sections for a list or grid, specifies a custom bitmap to use as a visual divider between the sections of the list or grid. Only set this field to use a bitmap with a different appearance than the system default. For sections that do not include an icon or a title, the system default or custom bitmap specified as the <code>wrapDividerBitmapUri</code> field value is used for the section dividers. In most cases, you will want to use a 9-patch PNG bitmap with both expandable regions, which is the type of bitmap used as the system default.</td>
     </tr>
-
     <tr>
       <td>sectionDividerFont</td>
       <td>font</td>
@@ -167,7 +142,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the font for section divider labels</td>
     </tr>
-
     <tr>
       <td>sectionDividerTextColor</td>
       <td>color</td>
@@ -175,7 +149,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the text color for section divider labels</td>
     </tr>
-
     <tr>
       <td>sectionDividerSpacing</td>
       <td>float</td>
@@ -183,7 +156,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>If the ContentNode specifies sections for a list or grid, and the section dividers are specified to include an icon and/or a label, specifies the spacing between the icon, label, and section divider bitmap.</td>
     </tr>
-
     <tr>
       <td>sectionDividerHeight</td>
       <td>float</td>
@@ -191,7 +163,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the height of the section dividers. The width of the section dividers is determined by the width of the list items as specified by the itemSize field width value.</td>
     </tr>
-
     <tr>
       <td>sectionDividerMinWidth</td>
       <td>float</td>
@@ -199,7 +170,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Specifies the minimum width of the section divider bitmap. The section divider label will be ellipsized if necessary in order to ensure that the section divider bitmap meets the minimum width.</td>
     </tr>
-
     <tr>
       <td>sectionDividerLeftOffset</td>
       <td>float</td>
@@ -207,7 +177,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_WRITE</td>
       <td>Number of pixels to offset the left edge of the section divider relative to the left edge of the list items.</td>
     </tr>
-
     <tr>
       <td>itemSelected</td>
       <td>integer</td>
@@ -215,7 +184,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_ONLY</td>
       <td>When a list item is selected, itemSelected is set to the index of the selected item.</td>
     </tr>
-
     <tr>
       <td>itemFocused</td>
       <td>integer</td>
@@ -223,7 +191,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_ONLY</td>
       <td>When a list item gains the key focus, set to the index of the focused item.</td>
     </tr>
-
     <tr>
       <td>itemUnfocused</td>
       <td>integer</td>
@@ -231,7 +198,6 @@ The following example displays the use of the MarkupList node.
       <td>READ\_ONLY</td>
       <td>When a list item loses the key focus, set to the index of the unfocused item.</td>
     </tr>
-
     <tr>
       <td>jumpToItem</td>
       <td>integer</td>
@@ -239,7 +205,6 @@ The following example displays the use of the MarkupList node.
       <td>WRITE\_ONLY</td>
       <td>When set to a valid item index, this causes the list to immediately update so that the specified index moves into the focus position.</td>
     </tr>
-
     <tr>
       <td>animateToItem</td>
       <td>integer</td>
@@ -247,7 +212,6 @@ The following example displays the use of the MarkupList node.
       <td>WRITE\_ONLY</td>
       <td>When set to a valid item index, this causes the list to quickly scroll so that the specified index moves into the focus position.</td>
     </tr>
-
     <tr>
       <td>itemClippingRect</td>
       <td>rect2d</td>

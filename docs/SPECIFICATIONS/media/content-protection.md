@@ -122,7 +122,6 @@ The Widevine support security levels for the different Roku devices is as follow
       <th>L2 Players</th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td><ul><li>FtWorth</li><li>Longview</li><li>Reno/Bandera</li><li>Liberty</li><li>Midland/El Paso</li><li>Malone/Camden</li><li>Roma</li><li>Athens</li><li>Miami</li><li>Trinidad</li><li>Roxton</li><li>Sandia</li><li>Damon</li><li>Shiner</li></ul></td>

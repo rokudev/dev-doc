@@ -10,6 +10,7 @@ metadata:
 next:
   description: ''
 ---
+
 | Name                     | Description                                                                                                                  |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | [roScreen](doc:roscreen) | The roScreen component provides a full screen drawing surface that can be stacked and that you can receive input events from |
@@ -50,14 +51,12 @@ An associative array containing the following key/value pairs:
       <th><strong>Value</strong></th>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>full\_rotation</td>
       <td>boolean</td>
       <td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
     </tr>
-
     <tr>
       <td>astc\_supported</td>
       <td>boolean</td>

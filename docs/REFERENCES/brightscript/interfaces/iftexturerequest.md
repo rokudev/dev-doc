@@ -1,11 +1,11 @@
 ---
 title: "ifTextureRequest"
-excerpt: ''
+excerpt: 'Interface for managing texture requests with async, size, and scaling options'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifTextureRequest'
+  description: 'Documents the ifTextureRequest interface, which provides methods to get the ID and state of a request, and to set async mode, size, and scaling mode.'
   robots: index
 next:
   description: ''

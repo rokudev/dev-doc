@@ -1,11 +1,11 @@
 ---
 title: "roDataGramSocket"
-excerpt: ''
+excerpt: 'Component for sending and receiving UDP packets via Berkeley-style sockets'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roDataGramSocket'
+  description: 'The roDataGramSocket component enables apps to send and receive UDP packets through an interface modeled on standard Berkeley sockets, with roSocketEvent.'
   robots: index
 next:
   description: ''

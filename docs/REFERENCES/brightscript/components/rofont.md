@@ -1,11 +1,11 @@
 ---
 title: roFont
-excerpt: ''
+excerpt: 'Font object with family, pixel size, and boldness created via roFontRegistry'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roFont'
+  description: 'roFont represents a particular font from a font-family such as Arial, with a particular pixel size and boldness or italicness, created via roFontRegistry.'
   robots: index
 next:
   description: ''

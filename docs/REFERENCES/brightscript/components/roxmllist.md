@@ -1,11 +1,11 @@
 ---
 title: "roXMLList"
-excerpt: ''
+excerpt: 'Contains a list of roXML objects returned by ifXMLElement functions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roXMLList'
+  description: 'Reference page for roXMLList. roXMLList contains a list of roXML objects returned by ifXMLElement functions.'
   robots: index
 next:
   description: ''

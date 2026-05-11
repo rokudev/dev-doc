@@ -1,11 +1,11 @@
 ---
 title: "Layout group nodes"
-excerpt: ''
+excerpt: 'Arranges child nodes in rows or columns with configurable spacing and alignment'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Layout group nodes'
+  description: 'The LayoutGroup node arranges child nodes in a horizontal row or vertical column, with fields to control spacing, alignment, and margins around the group.'
   robots: index
 next:
   description: ''

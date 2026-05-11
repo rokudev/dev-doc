@@ -1,11 +1,11 @@
 ---
 title: ifSocket
-excerpt: ''
+excerpt: 'Core socket interface for send, receive, and address operations'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSocket'
+  description: 'ifSocket defines the binding, sending, and receiving methods shared by roStreamSocket and roDataGramSocket for TCP and UDP socket communication.'
   robots: index
 next:
   description: ''

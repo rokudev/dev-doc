@@ -1,11 +1,11 @@
 ---
 title: "roTextureManager"
-excerpt: ''
+excerpt: 'API for managing an roBitmap cache with request-based texture loading'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roTextureManager'
+  description: 'Reference page for roTextureManager. roTextureManager manages an roBitmap cache via request-based texture loading.'
   robots: index
 next:
   description: ''

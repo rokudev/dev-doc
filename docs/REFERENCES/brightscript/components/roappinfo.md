@@ -1,11 +1,11 @@
 ---
 title: "roAppInfo"
-excerpt: ''
+excerpt: 'Retrieves developer ID and manifest values like title and version number'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roAppInfo'
+  description: 'Reference page for roAppInfo. roAppInfo retrieves developer ID and manifest values such as title and version.'
   robots: index
 next:
   description: ''

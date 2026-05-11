@@ -1,11 +1,11 @@
 ---
 title: "roBoolean"
-excerpt: ''
+excerpt: 'Object wrapper for the intrinsic Boolean type with ifBoolean and ifToStr support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roBoolean'
+  description: 'roBoolean is the object equivalent of the intrinsic Boolean type, used when an object is required and exposing the ifBoolean and ifToStr interfaces.'
   robots: index
 next:
   description: ''

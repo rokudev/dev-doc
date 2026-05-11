@@ -1,11 +1,11 @@
 ---
 title: "roMessagePort"
-excerpt: ''
+excerpt: 'Reference for roMessagePort, where messages and events are received'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roMessagePort'
+  description: 'Reference page for roMessagePort. roMessagePort is the place messages and events are sent, created via CreateObject.'
   robots: index
 next:
   description: ''

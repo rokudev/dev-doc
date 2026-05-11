@@ -1,11 +1,11 @@
 ---
 title: "ifArrayJoin"
-excerpt: ''
+excerpt: 'Interface providing Join to concatenate array elements into a single string'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifArrayJoin'
+  description: 'The ifArrayJoin interface provides the Join method, which concatenates all string elements of an array into a single string separated by a specified separator.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "roFunction"
-excerpt: ''
+excerpt: 'Object equivalent for the intrinsic Function type, with ifFunction and ifToStr'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roFunction'
+  description: 'Reference page for roFunction. roFunction is the object equivalent for intrinsic type Function.'
   robots: index
 next:
   description: ''

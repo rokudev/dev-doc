@@ -1,11 +1,11 @@
 ---
 title: "roByteArray"
-excerpt: ''
+excerpt: 'Contains and manipulates an arbitrary array of bytes with conversion support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roByteArray'
+  description: 'The roByteArray component contains and manipulates an arbitrary array of bytes, supporting string, hex, and base 64 conversions via multiple interfaces.'
   robots: index
 next:
   description: ''

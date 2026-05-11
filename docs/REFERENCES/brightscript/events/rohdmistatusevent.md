@@ -1,11 +1,11 @@
 ---
 title: "roHdmiStatusEvent"
-excerpt: ''
+excerpt: 'Event fired when an HDMI device is plugged or unplugged on a port'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roHdmiStatusEvent'
+  description: 'roHdmiStatusEvent is sent by roHdmiStatus to report HDMI plug and unplug occurrences, providing port type, port number, and plug state via GetInfo().'
   robots: index
 next:
   description: ''

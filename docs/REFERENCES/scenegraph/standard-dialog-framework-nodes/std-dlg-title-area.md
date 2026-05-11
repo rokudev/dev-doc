@@ -1,11 +1,11 @@
 ---
 title: "StdDlgTitleArea"
-excerpt: ''
+excerpt: 'Node that holds title information and optional icons for a StandardDialog'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgTitleArea'
+  description: 'StdDlgTitleArea contains the dialog''s title information, displayed at the top of the dialog, and supports optional icons that appear left or right justified.'
   robots: index
 next:
   description: ''

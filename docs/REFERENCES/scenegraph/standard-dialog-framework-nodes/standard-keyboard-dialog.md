@@ -1,11 +1,11 @@
 ---
 title: "StandardKeyboardDialog"
-excerpt: ''
+excerpt: 'Dialog node for text and voice entry via an internal DynamicKeyboard'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StandardKeyboardDialog'
+  description: 'StandardKeyboardDialog enables text and voice entry of alphanumeric strings via an internal DynamicKeyboard node, extending the StandardDialog node.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: MultiStyleLabel
-excerpt: ''
+excerpt: 'Node class for creating labels with mixed fonts, colors, and text styles'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'MultiStyleLabel'
+  description: 'The MultiStyleLabel node class creates labels with mixed styles, supporting plain and bold text, different fonts, and multiple colors in a single label.'
   robots: index
 next:
   description: ''

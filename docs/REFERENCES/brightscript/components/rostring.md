@@ -1,11 +1,11 @@
 ---
 title: "roString"
-excerpt: ''
+excerpt: 'Object equivalent of the intrinsic String type with ifString and ifStringOps support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roString'
+  description: 'roString is the object equivalent for the intrinsic String type, supporting the ifString, ifStringOps, and ifToStr interfaces.'
   robots: index
 next:
   description: ''

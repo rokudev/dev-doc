@@ -1,11 +1,11 @@
 ---
 title: "roCompositor"
-excerpt: ''
+excerpt: 'Composes and animates roBitmaps and roRegions using z-ordered sprites'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roCompositor'
+  description: 'roCompositor manages composition and animation of multiple roBitmaps and roRegions, supporting sprites, collision detection, and scrolling.'
   robots: index
 next:
   description: ''

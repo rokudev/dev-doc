@@ -1,11 +1,11 @@
 ---
 title: "roTextureRequest"
-excerpt: ''
+excerpt: 'Request object passed to roTextureManager for texture loading'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roTextureRequest'
+  description: 'An roTextureRequest is used to make requests to the roTextureManager, and supports the ifTextureRequest and ifHttpAgent interfaces for texture loading.'
   robots: index
 next:
   description: ''

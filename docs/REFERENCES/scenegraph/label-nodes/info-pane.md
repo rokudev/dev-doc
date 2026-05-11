@@ -1,11 +1,11 @@
 ---
 title: "InfoPane"
-excerpt: ''
+excerpt: 'Opaque rounded label for displaying configuration help text'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'InfoPane'
+  description: 'The InfoPane node class displays an opaque, white-bordered, rounded rectangular label with text providing help for a specific setting in an app.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: ScrollingLabel
-excerpt: ''
+excerpt: 'Displays text that automatically scrolls horizontally when it exceeds the maximum width'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ScrollingLabel'
+  description: 'The ScrollingLabel node displays a string that scrolls horizontally when it exceeds the maxWidth field, showing an ellipsis before and after each scroll cycle.'
   robots: index
 next:
   description: ''

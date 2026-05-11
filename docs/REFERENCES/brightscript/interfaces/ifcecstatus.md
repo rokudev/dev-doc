@@ -1,11 +1,11 @@
 ---
 title: "ifCECStatus"
-excerpt: ''
+excerpt: 'Interface providing active source status detection via IsActiveSource'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifCECStatus'
+  description: 'Documents the ifCECStatus interface, which provides the IsActiveSource method to determine whether the device is the active source.'
   robots: index
 next:
   description: ''

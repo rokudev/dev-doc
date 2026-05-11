@@ -1,11 +1,11 @@
 ---
 title: "ifSocketCastOption"
-excerpt: ''
+excerpt: 'Interface for broadcast and multicast socket options on roDataGramSocket'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSocketCastOption'
+  description: 'Describes the ifSocketCastOption interface implemented by roDataGramSocket for controlling broadcast and multicast options, group membership, loopback, and TTL.'
   robots: index
 next:
   description: ''

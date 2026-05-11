@@ -1,11 +1,11 @@
 ---
 title: "StdDlgCustomItem"
-excerpt: ''
+excerpt: 'Node for displaying free-form dialog items with a custom layout'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgCustomItem'
+  description: 'StdDlgCustomItem displays free-form dialog items in the content area that require a custom layout, supporting configurable width fields and optional focus.'
   robots: index
 next:
   description: ''

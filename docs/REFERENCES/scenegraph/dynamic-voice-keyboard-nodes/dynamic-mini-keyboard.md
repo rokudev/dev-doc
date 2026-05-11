@@ -1,11 +1,11 @@
 ---
 title: "DynamicMiniKeyboard"
-excerpt: ''
+excerpt: 'A keyboard node supporting voice and text entry for search queries'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'DynamicMiniKeyboard'
+  description: 'The DynamicMiniKeyboard node enables text and voice entry of letters A-Z and digits 0-9, and is typically used for entering a search query.'
   robots: index
 next:
   description: ''

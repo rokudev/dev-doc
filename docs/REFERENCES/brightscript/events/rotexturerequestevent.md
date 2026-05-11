@@ -1,11 +1,11 @@
 ---
 title: "roTextureRequestEvent"
-excerpt: ''
+excerpt: 'Event sent by roTextureManager after a texture request completes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roTextureRequestEvent'
+  description: 'roTextureRequestEvent is sent by roTextureManager after completing a request, exposing GetId, GetState, GetURI, and GetBitmap methods to inspect the result.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "roSocketEvent"
-excerpt: ''
+excerpt: 'Event sent by roStreamSocket or roDataGramSocket on socket status changes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSocketEvent'
+  description: 'roSocketEvent is sent by an roStreamSocket or roDataGramSocket to signal a socket status change, with notifications enabled via ifSocketAsync.'
   robots: index
 next:
   description: ''

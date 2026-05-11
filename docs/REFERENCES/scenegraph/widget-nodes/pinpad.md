@@ -1,11 +1,11 @@
 ---
 title: "PinPad"
-excerpt: ''
+excerpt: 'Widget node for entering a fixed length numeric string with a keyboard'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'PinPad'
+  description: 'The PinPad node is a widget for entering a fixed length numeric string, displaying each digit in boxes above the keyboard with support for secureMode.'
   robots: index
 next:
   description: ''

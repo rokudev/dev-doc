@@ -1,11 +1,11 @@
 ---
 title: SimpleLabel
-excerpt: ''
+excerpt: 'Lightweight single-line text node with font and origin control'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SimpleLabel'
+  description: 'SimpleLabel is a lightweight node for displaying a single line of text, supporting built-in system fonts, TrueType/OpenType font files, and customizable origin.'
   robots: index
 next:
   description: ''

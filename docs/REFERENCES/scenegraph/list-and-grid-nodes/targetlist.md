@@ -1,11 +1,11 @@
 ---
 title: TargetList
-excerpt: ''
+excerpt: 'TargetGroup extension with focus transitions and key handling'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'TargetList'
+  description: 'Extends the TargetGroup node with built-in focused and unfocused transitions, focus management policies, and default key handling for lists and rows.'
   robots: index
 next:
   description: ''

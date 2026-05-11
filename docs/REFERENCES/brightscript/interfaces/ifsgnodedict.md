@@ -1,11 +1,11 @@
 ---
 title: "ifSGNodeDict"
-excerpt: ''
+excerpt: 'Access node tree information and locate nodes by ID within a component'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSGNodeDict'
+  description: 'Interface that provides access to information about nodes in a SceneGraph node tree and supports methods like findNode, subtype, clone, and callFunc.'
   robots: index
 next:
   description: ''

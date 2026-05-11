@@ -1,11 +1,11 @@
 ---
 title: ifEVPCipher
-excerpt: ''
+excerpt: 'Interface for symmetric cipher operations via the OpenSSL EVP library'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifEVPCipher'
+  description: 'Documents the ifEVPCipher interface, which provides methods to configure, initialize, and process symmetric cipher operations using the OpenSSL EVP library.'
   robots: index
 next:
   description: ''

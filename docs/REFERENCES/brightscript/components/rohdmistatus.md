@@ -1,11 +1,11 @@
 ---
 title: "roHdmiStatus"
-excerpt: ''
+excerpt: 'Query HDMI connection status on Roku streaming players via ifHdmiStatus'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roHdmiStatus'
+  description: 'Reference page for roHdmiStatus. roHdmiStatus provides an interface to the current HDMI operational status.'
   robots: index
 next:
   description: ''

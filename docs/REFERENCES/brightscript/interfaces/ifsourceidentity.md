@@ -1,11 +1,11 @@
 ---
 title: "ifSourceIdentity"
-excerpt: ''
+excerpt: 'Interface providing GetSourceIdentity() to retrieve the source or event object ID'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSourceIdentity'
+  description: 'Documents the ifSourceIdentity interface, which provides GetSourceIdentity() to return the ID associated with a source or event object.'
   robots: index
 next:
   description: ''

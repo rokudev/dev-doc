@@ -1,11 +1,11 @@
 ---
 title: "roLocalization"
-excerpt: ''
+excerpt: 'Provides functions to assist in localizing assets via ifLocalization'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roLocalization'
+  description: 'Reference page for roLocalization. roLocalization provides functions to assist in localization of assets.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "ifMicrophone"
-excerpt: ''
+excerpt: 'Interface for recording audio from microphone-supported remote control devices'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifMicrophone'
+  description: 'Documents the ifMicrophone interface, which provides methods to record audio via CanRecord, SetPrompt, RecordToFile, StartRecording, and StopRecording.'
   robots: index
 next:
   description: ''

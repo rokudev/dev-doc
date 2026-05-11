@@ -1,11 +1,11 @@
 ---
 title: "ifEnum"
-excerpt: ''
+excerpt: 'Interface providing enumeration methods for iterating over collections'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifEnum'
+  description: 'Documents the ifEnum interface, which provides Reset, Next, IsNext, and IsEmpty methods for iterating over enumerable objects such as roArray and roList.'
   robots: index
 next:
   description: ''

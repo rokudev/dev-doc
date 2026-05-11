@@ -1,11 +1,11 @@
 ---
 title: "roMicrophone"
-excerpt: ''
+excerpt: 'Receive audio data from a microphone-enabled remote control or mobile phone'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roMicrophone'
+  description: 'The roMicrophone API allows apps to receive audio data from the user''s microphone-supported remote control device or mobile phone, subject to user permission.'
   robots: index
 next:
   description: ''

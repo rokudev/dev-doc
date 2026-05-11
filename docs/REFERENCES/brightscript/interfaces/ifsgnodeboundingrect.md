@@ -1,11 +1,11 @@
 ---
 title: "ifSGNodeBoundingRect"
-excerpt: ''
+excerpt: 'Queries the bounding rectangle of a subject node as an associative array'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSGNodeBoundingRect'
+  description: 'The ifSGNodeBoundingRect interface queries the bounding rectangle of a subject node, returning an associative array with x, y, width, and height elements.'
   robots: index
 next:
   description: ''

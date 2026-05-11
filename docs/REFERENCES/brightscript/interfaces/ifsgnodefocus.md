@@ -1,11 +1,11 @@
 ---
 title: "ifSGNodeFocus"
-excerpt: ''
+excerpt: 'Interface for querying and setting remote control focus on SceneGraph nodes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSGNodeFocus'
+  description: 'Documents the ifSGNodeFocus interface used to query and manipulate the remote control focus of nodes in a SceneGraph node tree via setFocus and hasFocus.'
   robots: index
 next:
   description: ''

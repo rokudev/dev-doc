@@ -1,11 +1,11 @@
 ---
 title: Poster
-excerpt: ''
+excerpt: 'Draws images with scaling options including scaleToFit, scaleToFill, and scaleToZoom'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Poster'
+  description: 'The Poster node draws an image at the origin of its local coordinate system, supporting JPEG, PNG, and WebP files with automatic scaling via loadDisplayMode.'
   robots: index
 next:
   description: ''

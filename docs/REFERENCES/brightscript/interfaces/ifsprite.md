@@ -1,11 +1,11 @@
 ---
 title: "ifSprite"
-excerpt: ''
+excerpt: 'Interface for controlling sprite position, z-order, regions, and collision detection'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifSprite'
+  description: 'Documents the ifSprite interface, which provides methods for moving, positioning, and collision-testing sprites managed by an roCompositor object.'
   robots: index
 next:
   description: ''

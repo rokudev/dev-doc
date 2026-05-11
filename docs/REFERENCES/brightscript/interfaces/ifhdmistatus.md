@@ -1,11 +1,11 @@
 ---
 title: "ifHdmiStatus"
-excerpt: ''
+excerpt: 'Interface for HDMI connection state and HDCP link version on Roku players'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifHdmiStatus'
+  description: 'Documents the ifHdmiStatus interface, which checks HDMI or MHL output connection and returns the HDCP link version on Roku streaming players.'
   robots: index
 next:
   description: ''

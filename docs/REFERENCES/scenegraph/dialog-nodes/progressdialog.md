@@ -1,11 +1,11 @@
 ---
 title: ProgressDialog
-excerpt: ''
+excerpt: 'A Dialog node that displays a spinning icon as its body content'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ProgressDialog'
+  description: 'The ProgressDialog node class is a Dialog node that displays a title region and a spinning icon via a BusySpinner node as the dialog body.'
   robots: index
 next:
   description: ''

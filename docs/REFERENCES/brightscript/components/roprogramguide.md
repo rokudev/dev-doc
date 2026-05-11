@@ -1,11 +1,11 @@
 ---
 title: "roProgramGuide"
-excerpt: ''
+excerpt: 'Electronic Program Guide data from the Roku device tuner'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roProgramGuide'
+  description: 'roProgramGuide represents Electronic Program Guide (EPG) data from the tuner, providing access to currently-broadcasting and upcoming programs.'
   robots: index
 next:
   description: ''

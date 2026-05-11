@@ -1,11 +1,11 @@
 ---
 title: roSystemLogEvent
-excerpt: ''
+excerpt: 'Event fired by roSystemLog, carrying HTTP and bandwidth log details'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSystemLogEvent'
+  description: 'roSystemLogEvent is sent when enabled via roSystemLog and provides GetInfo(), returning an AssociativeArray with event details such as LogType, Url, and Status.'
   robots: index
 next:
   description: ''

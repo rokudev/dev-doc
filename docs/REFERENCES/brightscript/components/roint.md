@@ -1,11 +1,11 @@
 ---
 title: "roInt"
-excerpt: ''
+excerpt: 'Object wrapper for the intrinsic Integer type with ifInt and ifIntOps support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roInt'
+  description: 'roInt is the object equivalent of the intrinsic Integer type, exposing the ifInt, ifIntOps, and ifToStr interfaces for integer operations.'
   robots: index
 next:
   description: ''

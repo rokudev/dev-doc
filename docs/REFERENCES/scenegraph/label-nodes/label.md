@@ -1,11 +1,11 @@
 ---
 title: "Label"
-excerpt: ''
+excerpt: 'Reference for the Label node used to display a string of text on screen'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Label'
+  description: 'The Label node class is used to display a string of text, with fields for font, lineSpacing, truncateOnDelimiter, leadingEllipsis, and wrappedLines.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "roAppMemoryNotificationEvent"
-excerpt: ''
+excerpt: 'Event reporting app memory usage as a percentage of the per-app limit'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roAppMemoryNotificationEvent'
+  description: 'roAppMemoryNotificationEvent is sent by roAppMemoryMonitor and reports the percentage of memory consumed by the app compared to the per-app memory limit.'
   robots: index
 next:
   description: ''

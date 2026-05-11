@@ -1,11 +1,11 @@
 ---
 title: "roDouble"
-excerpt: ''
+excerpt: 'Object equivalent of the intrinsic Double type, supporting ifDouble and ifToStr'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roDouble'
+  description: 'Reference page for roDouble. roDouble is the object equivalent for the intrinsic Double type.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Program statements"
-excerpt: ''
+excerpt: 'Reference for control flow, loop, function, and exception-handling statements'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Program statements | Roku Developer Docs'
+  description: 'Documents the program statements available in BrightScript, including DIM, FOR, WHILE, IF, PRINT, FUNCTION, TRY/CATCH, THROW, GOTO, and RETURN.'
   robots: index
 next:
   description: ''

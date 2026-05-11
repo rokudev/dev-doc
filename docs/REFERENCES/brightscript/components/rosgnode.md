@@ -1,11 +1,11 @@
 ---
 title: "roSGNode"
-excerpt: ''
+excerpt: 'BrightScript object for creating SceneGraph nodes via CreateObject'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSGNode'
+  description: 'roSGNode is the BrightScript equivalent of SceneGraph XML node creation, created via CreateObject with a nodetype string such as Poster.'
   robots: index
 next:
   description: ''

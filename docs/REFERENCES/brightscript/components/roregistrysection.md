@@ -1,11 +1,11 @@
 ---
 title: "roRegistrySection"
-excerpt: ''
+excerpt: 'Organizes registry keys into named, case-sensitive sections for scoped storage'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roRegistrySection'
+  description: 'roRegistrySection organizes registry settings into named sections, where key names are scoped to their section and section names are case sensitive.'
   robots: index
 next:
   description: ''

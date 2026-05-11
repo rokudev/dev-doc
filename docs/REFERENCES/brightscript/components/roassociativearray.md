@@ -1,11 +1,11 @@
 ---
 title: "roAssociativeArray"
-excerpt: ''
+excerpt: 'A map, dictionary, or hash table for associating objects with string keys'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roAssociativeArray'
+  description: 'roAssociativeArray associates objects with string keys, accessible via dot or bracket operators or ifAssociativeArray interface functions.'
   robots: index
 next:
   description: ''

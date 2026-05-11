@@ -1,11 +1,11 @@
 ---
 title: "StdDlgButtonArea"
-excerpt: ''
+excerpt: 'Node that holds StdDlgButton children at the bottom of a StandardDialog'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgButtonArea'
+  description: 'StdDlgButtonArea is a node positioned at the bottom of a StandardDialog, containing zero or more StdDlgButton child nodes arranged vertically.'
   robots: index
 next:
   description: ''

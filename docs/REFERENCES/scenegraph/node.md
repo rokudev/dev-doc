@@ -1,11 +1,11 @@
 ---
 title: Node
-excerpt: ''
+excerpt: 'Abstract base class providing parenting and key focus management'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Node'
+  description: 'The abstract base class of all SceneGraph nodes, equivalent to the roSGNode component, providing core parenting and key focus management for all nodes.'
   robots: index
 next:
   description: ''

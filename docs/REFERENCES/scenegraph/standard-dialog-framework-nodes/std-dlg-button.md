@@ -1,11 +1,11 @@
 ---
 title: StdDlgButton
-excerpt: ''
+excerpt: 'Node class for individual dialog buttons with text and focus control'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgButton'
+  description: 'StdDlgButton represents each button in the button area of a dialog, with fields for button text and a disabled state that prevents focus.'
   robots: index
 next:
   description: ''

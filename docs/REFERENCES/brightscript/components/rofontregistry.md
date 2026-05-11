@@ -1,11 +1,11 @@
 ---
 title: "roFontRegistry"
-excerpt: ''
+excerpt: 'Creates roFont objects from default or packaged TrueType and OpenType font files'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roFontRegistry'
+  description: 'The roFontRegistry object creates roFont objects using the default font or fonts from TrueType or OpenType files packaged with your application.'
   robots: index
 next:
   description: ''

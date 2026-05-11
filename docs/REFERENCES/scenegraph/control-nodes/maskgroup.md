@@ -1,11 +1,11 @@
 ---
 title: "MaskGroup"
-excerpt: ''
+excerpt: 'Applies an alpha mask bitmap to child node rendering with offset and scale control'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'MaskGroup'
+  description: 'The MaskGroup node applies an alpha mask bitmap to the rendering of its children, using maskUri, maskSize, and maskOffset fields to control mapping and scaling.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "ifPath"
-excerpt: ''
+excerpt: 'Interface methods for validating and manipulating file system paths'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifPath'
+  description: 'Documents the ifPath interface, which provides Change, IsValid, and Split methods for working with relative and absolute file system paths.'
   robots: index
 next:
   description: ''

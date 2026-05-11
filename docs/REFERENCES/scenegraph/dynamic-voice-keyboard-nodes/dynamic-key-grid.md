@@ -1,11 +1,11 @@
 ---
 title: DynamicKeyGrid
-excerpt: ''
+excerpt: 'Grid node for keyboard layouts defined by a Key Definition File'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'DynamicKeyGrid'
+  description: 'DynamicKeyGrid implements a grid of keys defined in a Key Definition File, supporting text and voice entry with fields for focus, palette, and key layout.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: TextEditBox
-excerpt: ''
+excerpt: 'Node class that displays typed characters with a flashing cursor'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'TextEditBox'
+  description: 'Documents the TextEditBox node class, which displays a string of characters as they are typed and shows a flashing cursor at the text insertion position.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Vector2DFieldInterpolator"
-excerpt: ''
+excerpt: 'Keyframe interpolator for animating Vector2D fields such as node translation'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Vector2DFieldInterpolator'
+  description: 'Vector2DFieldInterpolator defines a keyframe animation sequence applied to a Vector2D field, most typically used to animate the translation field of a node.'
   robots: index
 next:
   description: ''

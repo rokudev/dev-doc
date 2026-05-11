@@ -1,11 +1,11 @@
 ---
 title: "ifInt"
-excerpt: ''
+excerpt: 'Interface for getting and setting integer values on Integer objects'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifInt'
+  description: 'Documents the ifInt interface, which provides GetInt() and SetInt() methods for reading and writing the integer value stored in an Integer object.'
   robots: index
 next:
   description: ''

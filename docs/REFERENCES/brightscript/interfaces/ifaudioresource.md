@@ -1,11 +1,11 @@
 ---
 title: "ifAudioResource"
-excerpt: ''
+excerpt: 'Interface for triggering and controlling audio resource sound playback'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifAudioResource'
+  description: 'Documents the ifAudioResource interface, which provides methods to trigger, stop, and monitor playback of cached audio resource sounds at a specified volume.'
   robots: index
 next:
   description: ''

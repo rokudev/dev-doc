@@ -1,11 +1,11 @@
 ---
 title: Sliding panels
-excerpt: ''
+excerpt: 'Panel node classes that group elements into sliding panel sets'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Sliding panels'
+  description: 'Documents the sliding panels nodes, including Panel, ListPanel, GridPanel, PanelSet, and OverhangPanelSetScene, used to group elements into panels.'
   robots: index
 next:
   description: ''

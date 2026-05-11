@@ -1,11 +1,11 @@
 ---
 title: roAppMemoryMonitor
-excerpt: ''
+excerpt: 'Subscribe apps to low-memory notifications via threshold-based alerts'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roAppMemoryMonitor'
+  description: 'The roAppMemoryMonitor component subscribes apps to low-memory notifications, firing roAppMemoryNotificationEvent alerts when usage exceeds defined thresholds.'
   robots: index
 next:
   description: ''

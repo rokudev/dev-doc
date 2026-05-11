@@ -1,11 +1,11 @@
 ---
 title: "ifArraySizeInfo"
-excerpt: ''
+excerpt: 'Interface exposing array capacity controls implemented by roArray'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifArraySizeInfo'
+  description: 'The ifArraySizeInfo interface provides functions that control array capacity, including IsResizable, Capacity, Reserve, and ShrinkToFit for roArray storage.'
   robots: index
 next:
   description: ''

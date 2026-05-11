@@ -1,11 +1,11 @@
 ---
 title: "ifTimeSpan"
-excerpt: ''
+excerpt: 'Interface for tracking elapsed time via Mark, TotalMilliseconds, and TotalSeconds methods'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifTimeSpan'
+  description: 'Documents the ifTimeSpan interface, which provides methods to set a Mark point and measure elapsed microseconds, milliseconds, and seconds from that point.'
   robots: index
 next:
   description: ''

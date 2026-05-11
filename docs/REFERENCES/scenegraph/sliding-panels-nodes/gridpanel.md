@@ -1,11 +1,11 @@
 ---
 title: "GridPanel"
-excerpt: ''
+excerpt: 'GridPanel node for panels containing a PosterGrid or MarkupGrid with focus handling'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'GridPanel'
+  description: 'Documents the GridPanel node, which creates a Panel containing a PosterGrid or MarkupGrid with automatic focus handling and next-panel creation support.'
   robots: index
 next:
   description: ''

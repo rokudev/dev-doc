@@ -1,11 +1,11 @@
 ---
 title: DynamicCustomKeyboard
-excerpt: ''
+excerpt: 'Voice-enabled keyboard node with a custom layout driven by a Key Definition File'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'DynamicCustomKeyboard'
+  description: 'The DynamicCustomKeyboard node enables developers to create a voice-enabled keyboard with a custom layout defined by a JSON-formatted Key Definition File.'
   robots: index
 next:
   description: ''

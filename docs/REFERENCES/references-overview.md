@@ -1,11 +1,11 @@
 ---
 title: "Reference overview"
-excerpt: ''
+excerpt: 'Detailed syntactic and semantic reference for nodes, components, interfaces, and events'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Reference overview | Roku Developer Docs'
+  description: 'Overview of the reference section covering detailed syntactic and semantic information about nodes, components, interfaces, events, and methods.'
   robots: index
 next:
   description: ''

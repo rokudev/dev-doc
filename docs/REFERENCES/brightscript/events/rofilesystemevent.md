@@ -1,11 +1,11 @@
 ---
 title: "roFileSystemEvent"
-excerpt: ''
+excerpt: 'Event type for detecting USB storage device insertion and removal'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roFileSystemEvent'
+  description: 'roFileSystemEvent is sent by the roFileSystem component and provides predicates to detect storage device insertion or removal via the USB port.'
   robots: index
 next:
   description: ''

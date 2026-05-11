@@ -1,11 +1,11 @@
 ---
 title: "PanelSet"
-excerpt: ''
+excerpt: 'Container node that manages child Panel nodes and sliding transitions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'PanelSet'
+  description: 'The PanelSet node manages the position of a set of child Panel nodes and implements the left and right panel sliding behavior seen on the home screen.'
   robots: index
 next:
   description: ''

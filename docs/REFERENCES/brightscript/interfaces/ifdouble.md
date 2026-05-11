@@ -1,11 +1,11 @@
 ---
 title: "ifDouble"
-excerpt: ''
+excerpt: 'Interface for getting and setting double values on a Double object'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifDouble'
+  description: 'Documents the ifDouble interface, which provides GetDouble and SetDouble methods for reading and writing the double value stored in the calling Double object.'
   robots: index
 next:
   description: ''

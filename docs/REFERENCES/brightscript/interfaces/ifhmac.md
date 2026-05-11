@@ -1,11 +1,11 @@
 ---
 title: "ifHMAC"
-excerpt: ''
+excerpt: 'Interface exposing OpenSSL HMAC methods for generating message authentication codes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifHMAC'
+  description: 'Documents the ifHMAC interface, which provides Setup, Reinit, Process, Update, and Final methods for generating a MAC using OpenSSL HMAC functions.'
   robots: index
 next:
   description: ''

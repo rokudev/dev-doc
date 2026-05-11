@@ -1,11 +1,11 @@
 ---
 title: "ifFontRegistry"
-excerpt: ''
+excerpt: 'Interface for registering font files and retrieving roFont objects'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifFontRegistry'
+  description: 'Documents the ifFontRegistry interface, which registers font files and returns roFont objects from font families by size, bold, and italic variants.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "RowList"
-excerpt: ''
+excerpt: 'Vertically-scrollable list of rows containing horizontally-scrollable items'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'RowList'
+  description: 'The RowList node class provides a vertically-scrollable list containing rows of horizontally-scrollable items, with interface fields for customizing appearance.'
   robots: index
 next:
   description: ''

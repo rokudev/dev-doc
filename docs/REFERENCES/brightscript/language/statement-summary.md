@@ -1,11 +1,11 @@
 ---
 title: "Statement summary"
-excerpt: ''
+excerpt: 'Overview of supported statement types including If, For, While, and Function'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Statement summary | Roku Developer Docs'
+  description: 'Reference page for Statement summary. Lists supported statement types such as If, For, While, Try, Function, Print, and Goto.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "FloatFieldInterpolator"
-excerpt: ''
+excerpt: 'Keyframe animation sequence for a floating point field of a node'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'FloatFieldInterpolator'
+  description: 'The FloatFieldInterpolator node specifies a keyframe animation sequence applied to a floating point field of a node, such as opacity, width, or height.'
   robots: index
 next:
   description: ''

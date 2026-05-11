@@ -1,11 +1,11 @@
 ---
 title: "roRemoteInfo"
-excerpt: ''
+excerpt: 'Retrieve attributes about the Roku remote control connected to the device'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roRemoteInfo'
+  description: 'The roRemoteInfo component provides an interface to obtain attributes about the Roku remote control currently connected to the Roku device.'
   robots: index
 next:
   description: ''

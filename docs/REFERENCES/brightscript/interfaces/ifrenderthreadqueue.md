@@ -1,11 +1,11 @@
 ---
 title: Ifrenderthreadqueue
-excerpt: ''
+excerpt: 'Interface for queuing async messages between Task nodes and the render thread'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifRenderThreadQueue'
+  description: 'Documents the ifRenderThreadQueue interface, which provides AddMessageHandler, PostMessage, and CopyMessage for async messaging to the render thread.'
   robots: index
 next:
   description: ''

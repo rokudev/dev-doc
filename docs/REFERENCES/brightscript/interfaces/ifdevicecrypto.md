@@ -1,10 +1,11 @@
 ---
 title: ifDeviceCrypto
+excerpt: 'Encrypt and decrypt data using device-, app-, or model-scoped keys'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifDeviceCrypto'
+  description: 'ifDeviceCrypto provides Encrypt and Decrypt methods for securing data using a key scoped to a device, app, or model on a Roku device.'
   robots: index
 next:
   description: ''

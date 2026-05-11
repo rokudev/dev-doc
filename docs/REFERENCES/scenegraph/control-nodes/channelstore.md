@@ -1,11 +1,11 @@
 ---
 title: ChannelStore
-excerpt: ''
+excerpt: 'Node interface to the Streaming Store for purchases and account data'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ChannelStore'
+  description: 'The ChannelStore node provides an interface to the Streaming Store, enabling apps to issue commands for purchases, orders, and customer data.'
   robots: index
 next:
   description: ''

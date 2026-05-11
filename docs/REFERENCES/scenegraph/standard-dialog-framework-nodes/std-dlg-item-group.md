@@ -1,11 +1,11 @@
 ---
 title: "StdDlgItemGroup"
-excerpt: ''
+excerpt: 'Groups StdDlgItemBase child nodes and manages radiobutton selection'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgItemGroup'
+  description: 'StdDlgItemGroup groups StdDlgItemBase child nodes in a custom dialog and enforces the radiobutton selection rule for StdDlgActionCardItem nodes.'
   robots: index
 next:
   description: ''

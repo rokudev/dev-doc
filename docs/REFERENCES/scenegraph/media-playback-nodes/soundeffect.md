@@ -1,11 +1,11 @@
 ---
 title: SoundEffect
-excerpt: ''
+excerpt: 'Plays short audio sound effects from WAV files triggered by UI events'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SoundEffect'
+  description: 'The SoundEffect node plays audio sound effects triggered by UI events, supporting WAV files from local packages or network sources.'
   robots: index
 next:
   description: ''

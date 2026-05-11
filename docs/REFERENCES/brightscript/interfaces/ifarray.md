@@ -1,11 +1,11 @@
 ---
 title: ifArray
-excerpt: ''
+excerpt: 'Interface providing Push, Pop, Peek, Shift, and other array manipulation methods'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifArray'
+  description: 'Documents the ifArray interface, which provides methods such as Push, Pop, Peek, Shift, Unshift, Delete, Count, Clear, and Append for manipulating arrays.'
   robots: index
 next:
   description: ''

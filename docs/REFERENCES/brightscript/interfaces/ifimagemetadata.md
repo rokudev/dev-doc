@@ -1,11 +1,11 @@
 ---
 title: "ifImageMetadata"
-excerpt: ''
+excerpt: 'Interface for retrieving image metadata and EXIF tags from image files'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifImageMetadata'
+  description: 'Documents the ifImageMetadata interface, which provides methods to retrieve image metadata including width, height, orientation, and raw EXIF tags.'
   robots: index
 next:
   description: ''

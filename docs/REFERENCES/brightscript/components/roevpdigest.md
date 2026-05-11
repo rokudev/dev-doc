@@ -1,11 +1,11 @@
 ---
 title: "roEVPDigest"
-excerpt: ''
+excerpt: 'Interface to OpenSSL EVP message digest algorithms for cryptographic hashing'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roEVPDigest'
+  description: 'roEVPDigest provides an interface to the OpenSSL EVP library of message digest algorithms, processing arbitrary data to generate a cryptographic hash.'
   robots: index
 next:
   description: ''

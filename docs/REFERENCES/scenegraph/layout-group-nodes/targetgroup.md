@@ -1,11 +1,11 @@
 ---
 title: TargetGroup
-excerpt: ''
+excerpt: 'Group node that maps child items to TargetSet rectangular regions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'TargetGroup'
+  description: 'TargetGroup associates rectangular target regions with child items, using a TargetSet to define where items render and animate between focus targets.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "roSGScreenEvent"
-excerpt: ''
+excerpt: 'Events sent to a roSGScreen to signal screen closure and app termination'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSGScreenEvent'
+  description: 'roSGScreenEvents are sent to a roSGScreen by the framework, primarily to notify the app''s main thread that the screen is closed and the app should terminate.'
   robots: index
 next:
   description: ''

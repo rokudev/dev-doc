@@ -1,11 +1,11 @@
 ---
 title: "ifAudioGuide"
-excerpt: ''
+excerpt: 'Interface providing Say, Flush, and Silence methods for text to speech control'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifAudioGuide'
+  description: 'Documents the ifAudioGuide interface, which provides Say, Flush, and Silence methods for text to speech playback and screen reader control.'
   robots: index
 next:
   description: ''

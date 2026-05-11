@@ -1,11 +1,11 @@
 ---
 title: "ifTextureManager"
-excerpt: ''
+excerpt: 'Interface for requesting and managing roBitmap textures via roTextureManager'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifTextureManager'
+  description: 'Interface implemented by roTextureManager that exposes RequestTexture, CancelRequest, UnloadBitmap, and Cleanup methods for managing roBitmap requests.'
   robots: index
 next:
   description: ''

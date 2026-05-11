@@ -1,11 +1,11 @@
 ---
 title: "StdDlgSideCardArea"
-excerpt: ''
+excerpt: 'Adds a freeform side area to a custom dialog for images or annotative text'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'StdDlgSideCardArea'
+  description: 'The StdDlgSideCardArea node adds a freeform area to the left or right side of a dialog for displaying decorative images or annotative text.'
   robots: index
 next:
   description: ''

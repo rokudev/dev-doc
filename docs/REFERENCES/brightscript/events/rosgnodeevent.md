@@ -1,11 +1,11 @@
 ---
 title: "roSGNodeEvent"
-excerpt: ''
+excerpt: 'Event sent by roSGNode objects when node field changes occur'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSGNodeEvent'
+  description: 'An roSGNode object sends roSGNodeEvent messages to a specified port when node changes occur, and passes them to field observer callback functions.'
   robots: index
 next:
   description: ''

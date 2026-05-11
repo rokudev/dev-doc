@@ -1,11 +1,11 @@
 ---
 title: "ifArrayGet"
-excerpt: ''
+excerpt: 'Interface supporting the array indexing operator and index-based entry retrieval'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifArrayGet'
+  description: 'The ifArrayGet interface supports the array indexing operator [ ] and provides GetEntry, which returns an array entry by index or invalid if not set.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: roVideoPlayerEvent
-excerpt: ''
+excerpt: 'Event sent by roVideoPlayer identifying playback state and stream changes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roVideoPlayerEvent'
+  description: 'Event object sent by roVideoPlayer with predicates such as isPaused, isStreamStarted, isRequestFailed, and isPlaybackPosition that identify the event type.'
   robots: index
 next:
   description: ''

@@ -1,10 +1,11 @@
 ---
 title: SceneGraph
+excerpt: 'UI framework for styling Roku apps, covering core concepts and operations'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph'
+  description: 'Reference page for SceneGraph. SceneGraph is the UI framework used to style all Roku apps.'
   robots: index
 next:
   description: ''

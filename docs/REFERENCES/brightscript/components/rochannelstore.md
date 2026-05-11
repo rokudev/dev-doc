@@ -1,11 +1,11 @@
 ---
 title: roChannelStore
-excerpt: ''
+excerpt: 'Component for initiating In-App Product purchases and app upgrades'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roChannelStore'
+  description: 'The roChannelStore component enables an app to purchase In-App Products or upgrade an app, with the purchase flow handled by the Roku OS.'
   robots: index
 next:
   description: ''

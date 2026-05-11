@@ -1,11 +1,11 @@
 ---
 title: "roSystemLog"
-excerpt: ''
+excerpt: 'Receives log events from the Roku Streaming Player for error and trend reporting'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSystemLog'
+  description: 'The roSystemLog component enables an application to receive log events from the Roku Streaming Player for reporting errors and trends via roSystemLogEvent.'
   robots: index
 next:
   description: ''

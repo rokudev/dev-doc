@@ -1,11 +1,11 @@
 ---
 title: "roSprite"
-excerpt: ''
+excerpt: 'roSprite objects managed by roCompositor via NewSprite or NewAnimatedSprite'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roSprite'
+  description: 'Reference page for roSprite. roSprite is created via roCompositor methods NewSprite() or NewAnimatedSprite().'
   robots: index
 next:
   description: ''

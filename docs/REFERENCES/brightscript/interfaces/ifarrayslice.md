@@ -1,11 +1,11 @@
 ---
 title: "ifArraySlice"
-excerpt: ''
+excerpt: 'Interface providing the Slice method for extracting portions of an array'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifArraySlice'
+  description: 'Documents the ifArraySlice interface, which provides the Slice method for copying a specified portion of an array into a new array object using 0-based indices.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "ListPanel"
-excerpt: ''
+excerpt: 'ListPanel node for panels containing a LabelList or MarkupList with focus handling'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ListPanel'
+  description: 'Documents the ListPanel node, which creates a Panel containing a LabelList or MarkupList with automatic key focus handling and create-next-panel functionality.'
   robots: index
 next:
   description: ''

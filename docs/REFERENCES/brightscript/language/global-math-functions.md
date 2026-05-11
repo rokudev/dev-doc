@@ -1,11 +1,11 @@
 ---
 title: "Global math functions"
-excerpt: ''
+excerpt: 'Reference for global math functions including trig, rounding, and random number generation'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Global math functions | Roku Developer Docs'
+  description: 'Documents the global math functions available in BrightScript, including Abs, Sin, Cos, Tan, Log, Exp, Rnd, and Sqr, with trig functions using radians.'
   robots: index
 next:
   description: ''

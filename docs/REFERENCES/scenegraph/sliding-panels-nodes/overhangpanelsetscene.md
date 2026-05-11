@@ -1,11 +1,11 @@
 ---
 title: "OverhangPanelSetScene"
-excerpt: ''
+excerpt: 'Scene node preconfigured with default Overhang and PanelSet children'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'OverhangPanelSetScene'
+  description: 'The OverhangPanelSetScene node class creates a Scene node with default Overhang and PanelSet nodes sized for SDK2 apps, exposed via read-only fields.'
   robots: index
 next:
   description: ''

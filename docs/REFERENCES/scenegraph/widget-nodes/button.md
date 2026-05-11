@@ -1,11 +1,11 @@
 ---
 title: "Button"
-excerpt: ''
+excerpt: 'Selectable widget with label, icon, and focus-state bitmap customization'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Button'
+  description: 'The Button node fires a buttonSelected event when selected and supports label, icon, and background bitmap customization for focused and unfocused states.'
   robots: index
 next:
   description: ''

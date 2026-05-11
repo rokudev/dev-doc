@@ -1,11 +1,11 @@
 ---
 title: "ifLongInt"
-excerpt: ''
+excerpt: 'Interface with GetLongInt and SetLongInt methods on roLongInteger'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ifLongInt'
+  description: 'Documents the ifLongInt interface, which provides GetLongInt and SetLongInt methods for reading and writing the LongInteger value of a roLongInteger object.'
   robots: index
 next:
   description: ''

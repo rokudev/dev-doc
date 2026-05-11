@@ -1,11 +1,11 @@
 ---
 title: ComponentLibrary
-excerpt: ''
+excerpt: 'Node type for downloading custom component libraries into an application'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ComponentLibrary'
+  description: 'The ComponentLibrary node downloads a library of custom components to an application, with fields for uri, id, and a loadStatus indicating download progress.'
   robots: index
 next:
   description: ''

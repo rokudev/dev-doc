@@ -1,11 +1,11 @@
 ---
 title: roEVPCipher
-excerpt: ''
+excerpt: 'Symmetric cipher component wrapping the OpenSSL EVP library'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roEVPCipher'
+  description: 'roEVPCipher provides an interface to the OpenSSL EVP library of symmetric cipher commands for encrypting and decrypting data with block and stream ciphers.'
   robots: index
 next:
   description: ''

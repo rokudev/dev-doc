@@ -1,11 +1,11 @@
 ---
 title: ContentNode
-excerpt: ''
+excerpt: 'Specifies data used to configure a node or component content field'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'ContentNode'
+  description: 'ContentNode specifies the data used to configure a node or component, and is required as the content field for lists, grids, and panels.'
   robots: index
 next:
   description: ''

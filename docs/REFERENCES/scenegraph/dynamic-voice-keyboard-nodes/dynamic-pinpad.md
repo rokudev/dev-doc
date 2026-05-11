@@ -1,11 +1,11 @@
 ---
 title: "DynamicPinPad"
-excerpt: ''
+excerpt: 'Node for numeric PIN entry with voice and text input support'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'DynamicPinPad'
+  description: 'The DynamicPinPad node enables text and voice entry of numeric characters and is typically used for entering short numeric PIN codes, with a fixed key layout.'
   robots: index
 next:
   description: ''

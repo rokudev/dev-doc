@@ -1,11 +1,11 @@
 ---
 title: "roUniversalControlEvent"
-excerpt: ''
+excerpt: 'Event sent by roScreen for remote control and keyboard key presses'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'roUniversalControlEvent'
+  description: 'The roScreen object sends the roUniversalControlEvent to report remote control and keyboard key press and release events via GetID, GetKey, and IsPress.'
   robots: index
 next:
   description: ''

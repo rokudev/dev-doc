@@ -1,11 +1,11 @@
 ---
 title: Global utility functions
-excerpt: ''
+excerpt: 'Standard module-scope functions stored in the global object for file I/O, JSON, and more'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Global utility functions | Roku Developer Docs'
+  description: 'Documents the global utility functions stored in the global object, including Sleep, Wait, ParseJson, FormatJson, ReadAsciiFile, and Tr.'
   robots: index
 next:
   description: ''

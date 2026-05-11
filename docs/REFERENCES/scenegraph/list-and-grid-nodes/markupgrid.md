@@ -1,11 +1,11 @@
 ---
 title: MarkupGrid
-excerpt: ''
+excerpt: 'Grid node that renders each item using a custom XML component'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'MarkupGrid'
+  description: 'The MarkupGrid node displays items in a 2D grid, where each item is rendered by an XML component specified via the itemComponentName field.'
   robots: index
 next:
   description: ''

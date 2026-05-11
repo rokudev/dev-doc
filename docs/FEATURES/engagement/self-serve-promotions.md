@@ -1,11 +1,11 @@
 ---
 title: Self-serve app promotion tool
-excerpt: ''
+excerpt: 'Purchase in-stream CTV video ads and measure campaign performance with Roku Ads Manager'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Self-serve app promotion tool | Roku Developer Docs'
+  description: 'Publishers and agencies can use Roku Ads Manager to purchase in-stream CTV video ads, target viewers with audience data, and measure campaign performance.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Payout Audit Report
-excerpt: ''
+excerpt: 'Reconcile app revenue activity with Roku payments using transaction and payout data'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Payout Audit Report | Roku Developer Docs'
+  description: 'The Payout Audit Report displays monthly transaction amounts and deferred payouts, enabling partners to reconcile app revenue activity with receipts from Roku.'
   robots: index
 next:
   description: ''

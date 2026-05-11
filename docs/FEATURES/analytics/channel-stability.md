@@ -1,11 +1,11 @@
 ---
 title: "App Stability Report"
-excerpt: ''
+excerpt: 'Analyze app crashes and memory closures across Roku device models'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'App Stability Report | Roku Developer Docs'
+  description: 'Use the App Stability Report to analyze your app''s performance by tracking crashes and memory closures across device models over the last 30 days.'
   robots: index
 next:
   description: ''

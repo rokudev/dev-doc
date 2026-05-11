@@ -1,12 +1,13 @@
 ---
 title: Analytics Reports
+excerpt: 'Access analytics and sales report dashboards for app health, viewership, and transactions'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Analytics Reports | Roku Developer Docs'
+  description: 'Roku''s web-based analytics and sales reports provide standardized dashboards covering app health, viewership, engagement, and transaction data for your app.'
   robots: index
 ---
 You can use Roku's web-based app analytics and sales reports to analyze your app's health, viewership trends, and metrics for specific titles and devices. The following video highlights the different app analytics available to you.

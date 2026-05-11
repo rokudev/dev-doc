@@ -1,11 +1,11 @@
 ---
 title: Streaming Store
-excerpt: ''
+excerpt: 'Browse, discover, and install apps on the Roku Platform via the Streaming Store'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Streaming Store | Roku Developer Docs'
+  description: 'The Streaming Store is the home for all public apps on the Roku Platform, where users can search, discover, and download apps.'
   robots: index
 next:
   description: ''

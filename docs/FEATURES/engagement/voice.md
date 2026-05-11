@@ -1,8 +1,13 @@
 ---
 title: Roku Voice
+excerpt: 'Integrate voice features including Direct to Play, voice keyboards, and playback controls'
 hidden: false
 link:
   new_tab: false
+metadata:
+  title: 'Roku Voice | Roku Developer Docs'
+  description: 'Roku Voice enables publishers to build voice-enabled apps with Direct to Play, voice keyboards, voice-enabled profile selection, and playback voice controls.'
+  robots: index
 ---
 
 Roku Voice enables publishers to build voice-enabled apps that empower customers with the convenience of using their voice to launch, access, and control the playback of content. With Roku Voice, publishers can integrate the following features to accelerate content delivery and simplify playback:

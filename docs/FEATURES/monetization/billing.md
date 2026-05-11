@@ -1,11 +1,11 @@
 ---
 title: "Subscriptions and one-time purchases"
-excerpt: ''
+excerpt: 'Overview of Roku Pay billing for subscriptions and one-time purchases'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Subscriptions and one-time purchases | Roku Developer Docs'
+  description: 'Roku Pay provides a low-friction payment platform for subscriptions and one-time purchases, handling conversions, retention, and disbursement for publishers.'
   robots: index
 next:
   description: ''

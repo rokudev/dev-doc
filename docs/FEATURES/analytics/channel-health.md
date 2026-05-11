@@ -1,11 +1,11 @@
 ---
 title: "App Health Report"
-excerpt: ''
+excerpt: 'Examine app crashes and BrightScript errors to improve app stability'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'App Health Report | Roku Developer Docs'
+  description: 'The App Health Report examines app crashes, BrightScript errors, video start times, rebuffers, and bitrate to help developers improve app stability.'
   robots: index
 next:
   description: ''

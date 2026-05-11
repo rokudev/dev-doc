@@ -1,11 +1,11 @@
 ---
 title: Email preferences
-excerpt: ''
+excerpt: 'Manage your Roku Developer Program email subscriptions from the Launchpad'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Email preferences | Roku Developer Docs'
+  description: 'The Roku Launchpad email preferences center lets you choose which Developer Program emails to receive, including newsletters, events, and platform updates.'
   robots: index
 next:
   description: ''

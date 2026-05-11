@@ -1,11 +1,11 @@
 ---
 title: Roku Search
-excerpt: ''
+excerpt: 'Convert searches into subscriptions, rentals, and app engagement on Roku'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Search | Roku Developer Docs'
+  description: 'Roku Search converts searches into subscriptions and rentals and drives users to your app, unlocking discovery programs like Roku Zones and Save List.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Security on the Roku platform
-excerpt: ''
+excerpt: 'Overview of system, app, and content security provisions on the Roku platform'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Security on the Roku platform | Roku Developer Docs'
+  description: 'Documents the security provisions on the Roku platform, covering system hardening, SSL, app encryption, code signing, DRM, and HDCP content protection.'
   robots: index
 next:
   description: ''

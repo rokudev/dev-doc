@@ -44,7 +44,7 @@ AnimationBase is an abstract node class that contains the fields common to the [
 <td>value string</td>
 <td>stopped</td>
 <td>READ_ONLY</td>
-<td>Indicates the state of the animation. Values include:</td>
+<td>Indicates the state of the animation. Values include: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>running</td><td>Indicates that the animation is in progress</td></tr><tr><td>paused</td><td>Indicates that the animation has been paused</td></tr><tr><td>stopped</td><td>Indicates that the animation has either run to completion or has been explicitly stopped</td></tr></tbody></table></td>
 </tr>
 <tr>
 <td>repeat</td>

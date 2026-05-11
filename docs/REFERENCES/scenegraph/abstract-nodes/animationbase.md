@@ -21,9 +21,44 @@ AnimationBase is an abstract node class that contains the fields common to the [
 
 ## Fields
 
-| Field   | Type          | Default | Access Permission | Description                                                                                        |
-| ------- | ------------- | ------- | ----------------- | -------------------------------------------------------------------------------------------------- |
-| control | option string | none    | READ_WRITE        | Controls the animation. Supported options include:                                                 |
-| state   | value string  | stopped | READ_ONLY         | Indicates the state of the animation. Values include:                                              |
-| repeat  | Boolean       | false   | READ_WRITE        | Controls whether the animation stops when it finishes (false) or repeats from the beginning (true) |
-| delay   | time          | 0       | READ_WRITE        | Delays the start of the animation by the specified number of seconds                               |
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>control</td>
+<td>option string</td>
+<td>none</td>
+<td>READ_WRITE</td>
+<td>Controls the animation. Supported options include:</td>
+</tr>
+<tr>
+<td>state</td>
+<td>value string</td>
+<td>stopped</td>
+<td>READ_ONLY</td>
+<td>Indicates the state of the animation. Values include:</td>
+</tr>
+<tr>
+<td>repeat</td>
+<td>Boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Controls whether the animation stops when it finishes (false) or repeats from the beginning (true)</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>time</td>
+<td>0</td>
+<td>READ_WRITE</td>
+<td>Delays the start of the animation by the specified number of seconds</td>
+</tr>
+</tbody>
+</table>

@@ -65,9 +65,42 @@ AnimationBase is an abstract node class that contains the fields common to the [
       </td>
 
       <td>
-        Controls the animation. Supported options include:   
+        Controls the animation. Supported options include: 
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>Initial state with no associated action</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Always plays the animation from the beginning</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>Stops the animation in its current state</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>Pauses the animation in its current state</td>
+</tr>
+<tr>
+<td>resume</td>
+<td>If paused, resumes the animation from its current state. If the animation is not paused, plays the animation from the beginning.</td>
+</tr>
+<tr>
+<td>finish</td>
+<td>Jumps to the end of the animation, then stops. All animated fields will be immediately set to their final values as if the animation had completed.</td>
+</tr>
+</tbody>
+</table>
 
-        <br />
       </td>
     </tr>
 

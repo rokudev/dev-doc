@@ -1,11 +1,11 @@
 ---
 title: Developer Summit 2022
-excerpt: ''
+excerpt: 'Keynote and panel session recordings from the Roku Developer Summit 2022'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Developer Summit 2022 | Roku Developer Docs'
+  description: 'Video recordings from the Roku Developer Summit 2022, covering the keynote address and panel discussions on Roku Pay, Roku Voice, video ads, and Roku Search.'
   robots: index
 next:
   description: ''

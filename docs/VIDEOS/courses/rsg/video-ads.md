@@ -1,11 +1,11 @@
 ---
 title: Displaying video ads
-excerpt: ''
+excerpt: 'Video lesson on implementing video ads and the Roku Advertising Framework'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Displaying video ads | Roku Developer Docs'
+  description: 'Video walkthrough covering how to monetize content with video ads using the Roku Advertising Framework, client-side ad stitching, and certification criteria.'
   robots: index
 next:
   description: ''

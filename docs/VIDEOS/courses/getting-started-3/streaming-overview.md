@@ -1,11 +1,11 @@
 ---
 title: Streaming overview
-excerpt: ''
+excerpt: 'Video overview of how content is delivered from a CDN to a Roku device'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Streaming overview | Roku Developer Docs'
+  description: 'Video walkthrough explaining how streaming works on the Roku platform, covering content delivery from a CDN to a Roku device via a content feed.'
   robots: index
 next:
   description: ''

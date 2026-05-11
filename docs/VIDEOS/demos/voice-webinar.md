@@ -1,11 +1,11 @@
 ---
 title: "Roku Voice Webinar"
-excerpt: ''
+excerpt: 'June 2022 webinar covering voice keyboards, voice control, and certification requirements'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Voice Webinar | Roku Developer Docs'
+  description: 'Video webinar from June 2022 covering Roku Voice features, including voice keyboards, voice control, certification requirements, and voice profile selection.'
   robots: index
 next:
   description: ''

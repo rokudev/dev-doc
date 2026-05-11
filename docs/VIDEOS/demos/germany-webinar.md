@@ -1,11 +1,11 @@
 ---
 title: "Distributing an App in Germany Webinar"
-excerpt: ''
+excerpt: 'Webinar covering app distribution in Germany''s Streaming Store and localization'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Distributing an App in Germany Webinar | Roku Developer Docs'
+  description: 'Video webinar from September 2021 covering how to publish apps to Roku''s Germany Streaming Store, including localization and Roku Pay in-app products.'
   robots: index
 next:
   description: ''

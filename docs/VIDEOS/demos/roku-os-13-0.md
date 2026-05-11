@@ -1,11 +1,11 @@
 ---
 title: Roku OS 13.0 Developer Features Webinar
-excerpt: ''
+excerpt: 'Video webinar covering new developer features introduced in Roku OS 13.0'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku OS 13.0 Developer Features Webinar | Roku Developer Docs'
+  description: 'Reference page for Roku OS 13.0 Developer Features Webinar. This webinar covers new APIs and developer tool updates in Roku OS 13.0.'
   robots: index
 next:
   description: ''

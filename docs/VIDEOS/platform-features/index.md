@@ -1,11 +1,11 @@
 ---
 title: Platform features
-excerpt: ''
+excerpt: 'Video tutorials covering key platform features for building and monetizing apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Platform features | Roku Developer Docs'
+  description: 'Video index covering platform features for app developers, including Roku Pay, App Behavior Analysis testing, distributing apps in Europe, and Roku Voice.'
   robots: index
 next:
   description: ''

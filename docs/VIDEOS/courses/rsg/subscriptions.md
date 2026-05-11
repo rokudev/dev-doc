@@ -1,11 +1,11 @@
 ---
 title: "Offering subscriptions"
-excerpt: ''
+excerpt: 'Video lesson on offering subscriptions through Roku Pay'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Offering subscriptions | Roku Developer Docs'
+  description: 'Video lesson on monetizing content by offering subscriptions through Roku Pay, covering entitlements, purchases, ChannelStore APIs, and testing.'
   robots: index
 next:
   description: ''

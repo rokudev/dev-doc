@@ -1,11 +1,11 @@
 ---
 title: "Roku development overview"
-excerpt: ''
+excerpt: 'Video introduction to Roku app development and the platform'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku development overview | Roku Developer Docs'
+  description: 'Video overview of Roku development, covering the developer program, the Streaming Store, SceneGraph UI, BrightScript, and how it differs from web and mobile.'
   robots: index
 next:
   description: ''

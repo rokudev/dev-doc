@@ -1,11 +1,11 @@
 ---
 title: Developer Summit 2020
-excerpt: ''
+excerpt: 'Recorded sessions from the 2020 Roku developer summit held online on October 13'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Developer Summit 2020 | Roku Developer Docs'
+  description: 'Video recordings from the Roku Developer Summit 2020, covering Roku OS 9.4, certification updates, Roku Pay, the Demand API, and channel growth strategies.'
   robots: index
 next:
   description: ''

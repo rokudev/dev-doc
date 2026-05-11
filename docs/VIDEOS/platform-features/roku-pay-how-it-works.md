@@ -1,11 +1,11 @@
 ---
 title: 'Roku Pay: Simplifying customer payments'
-excerpt: ''
+excerpt: 'Video on how Roku Pay streamlines customer purchases on the platform'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Pay: Simplifying customer payments | Roku Developer Docs'
+  description: 'Reference page for Roku Pay. Video on simplifying the customer payment experience.'
   robots: index
 next:
   description: ''

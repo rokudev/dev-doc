@@ -1,11 +1,11 @@
 ---
 title: "Debugging apps"
-excerpt: ''
+excerpt: 'Walkthrough of debug console access, crash logs, and interactive debugger commands'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Debugging apps | Roku Developer Docs'
+  description: 'Video lesson on debugging apps using the debug console via Telnet, crash logs, stack traces, performance metrics, and the interactive debugger.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Submitting a Roku Search feed"
-excerpt: ''
+excerpt: 'Video walkthrough of validating and submitting a Roku Search feed'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Submitting a Roku Search feed | Roku Developer Docs'
+  description: 'Reference page for Submitting a Roku Search feed. Video shows how to validate and submit a search feed using the Roku Developer Dashboard.'
   robots: index
 next:
   description: ''

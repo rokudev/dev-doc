@@ -1,11 +1,11 @@
 ---
 title: "BrightScript Remote Network Debug Protocol"
-excerpt: ''
+excerpt: 'Video demo of the BrightScript network debug protocol and Remote Debugger'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScript Remote Network Debug Protocol | Roku Developer Docs'
+  description: 'Reference page for BrightScript Remote Network Debug Protocol. Video demonstrating the Roku Remote Debugger and IDE integration.'
   robots: index
 next:
   description: ''

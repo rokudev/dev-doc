@@ -1,11 +1,11 @@
 ---
 title: Automated app testing
-excerpt: ''
+excerpt: 'Video overview of Roku automated app testing with WebDriver and Robot Framework'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Automated app testing | Roku Developer Docs'
+  description: 'Reference page for Automated app testing. Video demonstrating the Roku automated app testing software and UI automation testing.'
   robots: index
 next:
   description: ''

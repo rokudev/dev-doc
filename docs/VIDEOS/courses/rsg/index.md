@@ -1,11 +1,11 @@
 ---
 title: "SceneGraph Developers: Build an App"
-excerpt: ''
+excerpt: '13-lesson video course for building a certification-ready Roku app from scratch'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph Developers: Build an App | Roku Developer Docs'
+  description: 'Video course teaching novice Roku developers how to build an app from the ground up using the Roku SDK, covering 13 lessons and a master sample app.'
   robots: index
 next:
   description: ''

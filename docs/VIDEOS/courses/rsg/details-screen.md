@@ -1,11 +1,11 @@
 ---
 title: "Creating a Details Screen"
-excerpt: ''
+excerpt: 'Learn how to build a Details Screen with nested components and content metadata'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating a Details Screen | Roku Developer Docs'
+  description: 'Video lesson on building a Details Screen that shows release date, rating, genre, cast, and a Play button for launching content into playback.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: BrightScript Profiler Webinar
-excerpt: ''
+excerpt: 'Two-part video series on collecting and analyzing BrightScript Profiler data'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScript Profiler Webinar | Roku Developer Docs'
+  description: 'Video webinar series on using the BrightScript Profiler to collect and analyze memory and CPU usage data to optimize app performance.'
   robots: index
 next:
   description: ''

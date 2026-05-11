@@ -1,11 +1,11 @@
 ---
 title: "Deep linking"
-excerpt: ''
+excerpt: 'Two-part video lesson covering deep linking implementation and testing in an app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Deep linking | Roku Developer Docs'
+  description: 'Video lesson on implementing deep linking in an app to launch directly to content, handle bookmarks, and test with the Roku Deep Linking Tester.'
   robots: index
 next:
   description: ''

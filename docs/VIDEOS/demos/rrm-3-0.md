@@ -1,11 +1,11 @@
 ---
 title: "Roku Resource Monitor 3.0 Webinar"
-excerpt: ''
+excerpt: 'May 2024 webinar on using Roku Resource Monitor to track memory and CPU trends'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Resource Monitor 3.0 Webinar | Roku Developer Docs'
+  description: 'Video walkthrough from May 2024 covering how developers use the Roku Resource Monitor to identify memory and CPU consumption trends and patterns in apps.'
   robots: index
 next:
   description: ''

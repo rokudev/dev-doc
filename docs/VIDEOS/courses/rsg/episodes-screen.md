@@ -1,11 +1,11 @@
 ---
 title: "Creating an Episodes Screen"
-excerpt: ''
+excerpt: 'Learn to build an Episodes Screen with seasons, episodes, and MarkupList components'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating an Episodes Screen | Roku Developer Docs'
+  description: 'Video lesson on building an Episodes Screen that organizes television series into seasons and episodes, using MarkupList and layered components.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Getting started"
-excerpt: ''
+excerpt: 'Introductory videos covering streaming, SVOD apps, and enabling Developer Mode'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Getting started | Roku Developer Docs'
+  description: 'Video series introducing developers to the Roku platform, covering streaming, SVOD app monetization, development overview, and enabling Developer Mode.'
   robots: index
 next:
   description: ''

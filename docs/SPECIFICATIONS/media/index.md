@@ -1,11 +1,11 @@
 ---
 title: "Streaming specifications"
-excerpt: ''
+excerpt: 'Container formats, codecs, adaptive protocols, and encoding ladders for Roku'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Streaming specifications | Roku Developer Docs'
+  description: 'Lists supported container formats, adaptive streaming protocols (DASH, HLS, Smooth), video codecs, audio codecs, and encoding guidelines for Roku devices.'
   robots: index
 next:
   description: ''

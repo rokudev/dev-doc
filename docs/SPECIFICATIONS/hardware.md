@@ -1,11 +1,11 @@
 ---
 title: Hardware specifications
-excerpt: ''
+excerpt: 'Key specs for Roku streaming players and Roku TVs, grouped by production status'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Hardware specifications | Roku Developer Docs'
+  description: 'Lists CPU, RAM, max UI resolution, max playback resolution, and HDR support for current, updatable, and legacy Roku streaming players and Roku TVs.'
   robots: index
 next:
   description: ''

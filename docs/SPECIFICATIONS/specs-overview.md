@@ -1,11 +1,11 @@
 ---
 title: Specifications overview
-excerpt: ''
+excerpt: 'Index of hardware, streaming, DRM, and Roku Search feed specifications'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Specifications overview | Roku Developer Docs'
+  description: 'Overview of Roku device specifications covering hardware characteristics, streaming formats, DRM, Roku Search feed formatting, and Streaming Store graphics.'
   robots: index
 next:
   description: ''

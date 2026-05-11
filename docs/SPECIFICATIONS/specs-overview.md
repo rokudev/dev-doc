@@ -21,7 +21,7 @@ This section contains the following types of information:
   system clock speed, onboard RAM and flash memory, maximum video resolution for
   UI and video playback, highest level of WiFi support, supported video output
   modes, power requirements, and many more);
-* [Streaming specifications](doc:streaming-specifications) — Video and audio file
+* [Streaming specifications](doc:media) — Video and audio file
   formats and streaming protocols;
 * [DRM & content protections](doc:content-protection) — Guidelines
   and recommendations for stream

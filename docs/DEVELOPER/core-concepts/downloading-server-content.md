@@ -1,11 +1,11 @@
 ---
 title: Downloading server content
-excerpt: ''
+excerpt: 'Configure ContentNodes with dynamic server data using Task nodes and roUrlTransfer'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Downloading server content | Roku Developer Docs'
+  description: 'Use a Task node and roUrlTransfer to download XML or JSON data from your server, parse it, and populate a ContentNode for use in a LabelList node.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Implementing the Demand API"
-excerpt: ''
+excerpt: 'Connect with demand partners and control inventory allocation using the Demand API'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Implementing the Demand API | Roku Developer Docs'
+  description: 'Integrate the Demand API to create a direct automated connection with demand partners, unify inventory, and monetize video ad inventory more efficiently.'
   robots: index
 next:
   description: ''

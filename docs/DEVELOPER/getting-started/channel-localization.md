@@ -1,11 +1,11 @@
 ---
 title: App localization
-excerpt: ''
+excerpt: 'Localize your app for global Streaming Stores across regions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'App localization | Roku Developer Docs'
+  description: 'Distribute your app across global Streaming Stores using multi-language UI support, localized metadata, regional content filtering, and Roku Pay currency.'
   robots: index
 next:
   description: ''

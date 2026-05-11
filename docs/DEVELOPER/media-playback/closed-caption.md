@@ -1,11 +1,11 @@
 ---
 title: Closed caption
-excerpt: ''
+excerpt: 'Implement closed caption formats and meet certification requirements in your app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Closed caption | Roku Developer Docs'
+  description: 'Configure closed caption support in your app using SMPTE-TT, EIA-608/708, and WebVTT formats, meeting certification requirements for caption tracks.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Building your first app
-excerpt: ''
+excerpt: 'Modify, sideload, and debug the Hello World sample app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Building your first app | Roku Developer Docs'
+  description: 'Modify the Hello World sample app, sideload it through the Development Application Installer, and view runtime output using the Roku debug console.'
   robots: index
 next:
   description: ''

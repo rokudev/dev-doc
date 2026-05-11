@@ -1,11 +1,11 @@
 ---
 title: Roku JavaScript Library
-excerpt: ''
+excerpt: 'Keyword-driven testing library for automating app test cases on Roku devices'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku JavaScript Library | Roku Developer Docs'
+  description: 'Use the Roku JavaScript Library to write keyword-driven tests that sideload apps, send key sequences, verify playback, and retrieve device and player info.'
   robots: index
 next:
   description: ''

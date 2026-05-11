@@ -1,11 +1,11 @@
 ---
 title: "SceneGraph coordinate systems"
-excerpt: ''
+excerpt: 'How node translation, scale, rotation, and scaleRotateCenter fields combine'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph coordinate systems | Roku Developer Docs'
+  description: 'Each renderable node has a local coordinate system shaped by translation, scale, rotation, and scaleRotateCenter fields combined into a 2D matrix.'
   robots: index
 next:
   description: ''

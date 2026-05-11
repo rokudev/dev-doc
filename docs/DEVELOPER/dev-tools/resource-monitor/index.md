@@ -1,11 +1,11 @@
 ---
 title: Roku Resource Monitor
-excerpt: ''
+excerpt: 'Track app memory, CPU, frame rate, and SceneGraph node usage in real time'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Resource Monitor | Roku Developer Docs'
+  description: 'Use the Roku Resource Monitor to track memory usage, CPU consumption, frame rate, rendezvous events, and SceneGraph nodes across live and file modes.'
   robots: index
 next:
   description: ''

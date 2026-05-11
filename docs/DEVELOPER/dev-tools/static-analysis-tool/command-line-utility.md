@@ -1,11 +1,11 @@
 ---
 title: "Command line utility"
-excerpt: ''
+excerpt: 'Run sca-cmd to analyze your app for certification issues and deprecated API usage'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Command line utility | Roku Developer Docs'
+  description: 'Run the sca-cmd utility to perform static analysis on your app, filtering results by severity level, category, and output format.'
   robots: index
 next:
   description: ''

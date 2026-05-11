@@ -1,11 +1,11 @@
 ---
 title: "App Behavior Analysis tests"
-excerpt: ''
+excerpt: 'Run automated certification tests on your app using the App Behavior Analysis tool'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'App Behavior Analysis tests | Roku Developer Docs'
+  description: 'The App Behavior Analysis tool lets developers run self-serve automated certification tests to verify performance and deep linking requirements for their apps.'
   robots: index
 next:
   description: ''

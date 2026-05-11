@@ -1,11 +1,11 @@
 ---
 title: "HLS and DASH"
-excerpt: ''
+excerpt: 'Use HLS and DASH standard thumbnail tiles for trick mode playback'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'HLS and DASH | Roku Developer Docs'
+  description: 'Configure HLS and DASH standard thumbnail tiles for trick mode playback, using image media playlists, EXT-X-TILES tags, and Roku-provided scripts.'
   robots: index
 next:
   description: ''

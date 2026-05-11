@@ -1,11 +1,11 @@
 ---
 title: Capturing and decrypting SSL packets
-excerpt: ''
+excerpt: 'Capture and decrypt SSL traffic from your Roku device using Wireshark or DD-WRT'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Capturing and decrypting SSL packets | Roku Developer Docs'
+  description: 'Learn how to capture and decrypt SSL packets from your Roku streaming device using Wireshark, DD-WRT IPtables, or the Mac OS Wireless Diagnostics tool.'
   robots: index
 next:
   description: ''

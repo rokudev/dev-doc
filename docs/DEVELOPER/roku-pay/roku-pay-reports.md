@@ -1,11 +1,11 @@
 ---
 title: Roku Pay reports
-excerpt: ''
+excerpt: 'Analytical, sales, and transactional reports for tracking Roku Pay payouts'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Pay reports | Roku Developer Docs'
+  description: 'Access Transaction, Sales Activity, and Payout Audit reports from the Developer Dashboard to track purchases, refunds, renewals, and reconcile payouts.'
   robots: index
 next:
   description: ''

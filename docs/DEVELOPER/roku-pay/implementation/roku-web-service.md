@@ -1,11 +1,11 @@
 ---
 title: Roku Pay web services reference
-excerpt: ''
+excerpt: 'RESTful APIs for managing Roku Pay billing transactions and entitlements'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Pay web services reference | Roku Developer Docs'
+  description: 'Use the Roku Pay APIs to validate transactions, cancel and refund subscriptions, update billing cycles, and issue service credits to Roku accounts.'
   robots: index
 next:
   description: ''

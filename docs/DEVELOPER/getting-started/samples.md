@@ -1,11 +1,11 @@
 ---
 title: Samples
-excerpt: ''
+excerpt: 'Categorized sample apps from the Roku Developers GitHub repo for building Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Samples | Roku Developer Docs'
+  description: 'Browse categorized sample apps from the Roku Developers GitHub repo, covering SceneGraph, authentication, deep linking, testing, and more.'
   robots: index
 next:
   description: ''

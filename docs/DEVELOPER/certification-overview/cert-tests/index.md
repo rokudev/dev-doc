@@ -1,11 +1,11 @@
 ---
 title: Certification testing
-excerpt: ''
+excerpt: 'Specific behavioral and technical tests apps must pass to earn Roku certification'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Certification testing | Roku Developer Docs'
+  description: 'Review the certification tests your app must pass, covering advertising, accounts, Roku Pay, performance, deep linking, and UI requirements before submission.'
   robots: index
 next:
   description: ''

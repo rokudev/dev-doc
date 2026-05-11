@@ -1,11 +1,11 @@
 ---
 title: Developer Tools
-excerpt: ''
+excerpt: 'Tools for installing, profiling, testing, and publishing Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Developer Tools | Roku Developer Docs'
+  description: 'Overview of Roku developer tools for building and testing apps, including the app tracing, Resource Monitor, Remote Tool, and Deep Linking Tester.'
   robots: index
 next:
   description: ''

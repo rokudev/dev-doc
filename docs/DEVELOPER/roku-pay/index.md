@@ -1,11 +1,11 @@
 ---
 title: Roku Pay
-excerpt: ''
+excerpt: 'Overview of Roku Pay''s on-device purchasing and subscription workflow'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Pay | Roku Developer Docs'
+  description: 'Roku Pay is Roku''s proprietary payment platform, enabling customers to subscribe to apps, rent movies, and purchase pay-per-views on-device.'
   robots: index
 next:
   description: ''

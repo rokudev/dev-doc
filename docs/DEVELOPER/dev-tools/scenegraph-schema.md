@@ -1,11 +1,11 @@
 ---
 title: Roku SceneGraph XML schema (XSD)
-excerpt: ''
+excerpt: 'Machine-readable XSD defining SceneGraph nodes, fields, types, and default values'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku SceneGraph XML schema (XSD) | Roku Developer Docs'
+  description: 'The Roku SceneGraph XML schema describes each component, defines node relationships, and provides types, default values, and field descriptions for use in IDEs.'
   robots: index
 next:
   description: ''

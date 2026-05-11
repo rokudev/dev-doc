@@ -1,11 +1,11 @@
 ---
 title: Static Analysis Tool
-excerpt: ''
+excerpt: 'Analyze your app''s source code and detect issues before certification'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Static Analysis Tool | Roku Developer Docs'
+  description: 'Use the Static Analysis Tool from the Developer Dashboard to analyze your app''s source code, detect errors, and ensure it passes certification.'
   robots: index
 next:
   description: ''

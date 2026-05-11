@@ -1,11 +1,11 @@
 ---
 title: "BrightScript Profiler"
-excerpt: ''
+excerpt: 'Pinpoint CPU, memory, and wall-clock bottlenecks in your Roku app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScript Profiler | Roku Developer Docs'
+  description: 'Use the BrightScript Profiler to collect CPU usage, wall-clock time, function call counts, and memory metrics to diagnose performance issues in your app.'
   robots: index
 next:
   description: ''

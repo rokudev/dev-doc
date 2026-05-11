@@ -1,12 +1,13 @@
 ---
 title: Roku app tracing (with Perfetto)
+excerpt: 'Record and visualize Roku app traces with Perfetto using VSCode or ECP'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku app tracing (with Perfetto) | Roku Developer Docs'
+  description: 'Use Perfetto to record, analyze, and visualize traces of your Roku apps, pinpointing resource consumption and performance issues via ECP or VSCode.'
   robots: index
 ---
 You can use [Perfetto](https://perfetto.dev/docs/) to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.  Tracing captures and visualizes the events in your app on a timeline, which provides you with a detailed graphical view of what your app is doing over time.

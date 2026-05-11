@@ -1,11 +1,11 @@
 ---
 title: Roku Pay best practices
-excerpt: ''
+excerpt: 'Checklists and tips for implementing Roku Pay correctly in your app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Pay best practices | Roku Developer Docs'
+  description: 'Follow these Roku Pay best practices to optimize your user acquisition funnel, prevent duplicate billing, and improve the precision of entitlements in your app.'
   robots: index
 next:
   description: ''

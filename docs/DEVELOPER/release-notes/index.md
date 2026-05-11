@@ -1,11 +1,11 @@
 ---
 title: Release notes
-excerpt: ''
+excerpt: 'Developer-facing API, tools, and media playback changes by Roku OS version'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Release notes | Roku Developer Docs'
+  description: 'Cumulative developer release notes for Roku OS, covering new APIs, media playback features, debugging tools, and deprecated functions from OS 5.0 through 15.2.'
   robots: index
 next:
   description: ''

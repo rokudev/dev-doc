@@ -1,6 +1,11 @@
 ---
 title: On-Device Authentication
+excerpt: 'Sign customers up and in on the device using ChannelStore and access tokens'
 hidden: false
+metadata:
+  title: 'On-Device Authentication | Roku Developer Docs'
+  description: 'Implement on-device authentication so customers can sign up and sign in on their Roku devices using the ChannelStore node, access tokens, and Roku Pay.'
+  robots: index
 ---
 Apps implement on-device authentications so that customers can complete sign-ups and sign-ins entirely on their Roku devices—without having to visit an external webpage. Additionally, once a customer authenticates on one device, they can automatically be signed in when they activate additional Roku devices linked to their same Roku account.
 

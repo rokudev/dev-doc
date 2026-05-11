@@ -1,11 +1,11 @@
 ---
 title: "Data management"
-excerpt: ''
+excerpt: 'Thread ownership, rendezvous, and data modeling strategies for channel performance'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Data management | Roku Developer Docs'
+  description: 'Learn how thread ownership, rendezvous costs, and data modeling choices affect channel performance, and how to use Task nodes and AA fields efficiently.'
   robots: index
 next:
   description: ''

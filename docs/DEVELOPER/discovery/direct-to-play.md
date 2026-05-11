@@ -1,11 +1,11 @@
 ---
 title: Direct to Play
-excerpt: ''
+excerpt: 'Launch app content directly from voice commands via Roku Search'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Direct to Play | Roku Developer Docs'
+  description: 'Direct to Play lets customers use voice commands to launch an app and begin playback of content found via Roku Search, with deep linking required.'
   robots: index
 next:
   description: ''

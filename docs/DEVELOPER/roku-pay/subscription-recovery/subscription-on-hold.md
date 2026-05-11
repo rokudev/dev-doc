@@ -1,12 +1,13 @@
 ---
 title: Enhanced Subscription Recovery
+excerpt: 'Recover failed subscription auto-renewals with grace and on-hold states'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Enhanced Subscription Recovery | Roku Developer Docs'
+  description: 'Integrate Enhanced Subscription Recovery to handle failed auto-renewals using entitlement checks, the DoRecovery API, and Roku Pay push notifications.'
   robots: index
 ---
 When payment for a subscription auto-renewal fails, Roku's Enhanced Subscription Recovery feature (formerly referred to as "Passive Subscription on Hold" or "Subscription on Hold") notifies the customer on-device and via email to update their method of payment (MOP) on file for 60 days. This helps the publisher improve the chance of recovering payments and thereby reduce passive cancellations.

@@ -1,11 +1,11 @@
 ---
 title: "Key Design Principles"
-excerpt: ''
+excerpt: 'Core questions to evaluate usability, legibility, and flow in your app UI'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Key Design Principles | Roku Developer Docs'
+  description: 'Apply key design principles to keep your app UI invisible, legible, and forgiving, covering navigation, visual hierarchy, animations, and overscan safety.'
   robots: index
 next:
   description: ''

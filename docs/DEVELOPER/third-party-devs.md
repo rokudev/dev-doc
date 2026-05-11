@@ -1,11 +1,11 @@
 ---
 title: Development partners
-excerpt: ''
+excerpt: 'A directory of third-party studios experienced in building Roku apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Development partners | Roku Developer Docs'
+  description: 'Browse a directory of digital media development studios that have demonstrated success building and launching apps on the Roku platform across global regions.'
   robots: index
 next:
   description: ''

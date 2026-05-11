@@ -1,11 +1,11 @@
 ---
 title: Certification
-excerpt: ''
+excerpt: 'Overview of app certification requirements and testing tools for the Roku Streaming Store'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Certification | Roku Developer Docs'
+  description: 'All public apps must meet Roku''s certification criteria to be published to the Roku Streaming Store, using tools like Static Analysis to verify compliance.'
   robots: index
 next:
   description: ''

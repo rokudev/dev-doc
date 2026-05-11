@@ -1,11 +1,11 @@
 ---
 title: "Event loops"
-excerpt: ''
+excerpt: 'How to structure event loops using roMessagePort and message handling'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Event loops | Roku Developer Docs'
+  description: 'Learn how event loops work in channel scripts: use roMessagePort to receive events, wait or GetMessage to process them, and roTimespan for timed actions.'
   robots: index
 next:
   description: ''

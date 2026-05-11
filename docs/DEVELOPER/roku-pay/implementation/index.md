@@ -1,11 +1,11 @@
 ---
 title: Implementing Roku Pay
-excerpt: ''
+excerpt: 'Build on-device signup, sign-in, and entitlement flows with ChannelStore'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Implementing Roku Pay | Roku Developer Docs'
+  description: 'Implement Roku Pay signup, sign-in, and entitlement workflows in your app using the SceneGraph ChannelStore node and Roku Pay web services for on-device auth.'
   robots: index
 next:
   description: ''

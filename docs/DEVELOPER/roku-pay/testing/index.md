@@ -1,11 +1,11 @@
 ---
 title: Testing Roku Pay
-excerpt: ''
+excerpt: 'Verify purchase and entitlement workflows for your Roku Pay app'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Testing Roku Pay | Roku Developer Docs'
+  description: 'Test purchase and entitlement workflows in your Roku Pay app by verifying subscription access, adding in-app products, and enabling billing testing.'
   robots: index
 next:
   description: ''

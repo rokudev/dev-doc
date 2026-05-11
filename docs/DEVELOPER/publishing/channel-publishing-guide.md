@@ -1,12 +1,13 @@
 ---
 title: App Publishing
+excerpt: 'Create, test, and schedule beta or public apps for the Streaming Store'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'App Publishing | Roku Developer Docs'
+  description: 'Publish beta and public apps using the Developer Dashboard, including packaging, Streaming Store listing setup, certification, Static Analysis, and scheduling.'
   robots: index
 ---
 When your app is tested and ready to deploy, you publish it using the Developer Dashboard. There are two types of app you can work with.

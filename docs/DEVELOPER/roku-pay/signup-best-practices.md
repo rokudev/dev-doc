@@ -1,11 +1,11 @@
 ---
 title: Signup requirements and best practices
-excerpt: ''
+excerpt: 'On-device sign-up UI standards and Roku Pay integrations for SVOD and TVOD apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Signup requirements and best practices | Roku Developer Docs'
+  description: 'Standards for the on-device sign-up UI and Roku Pay integrations SVOD and TVOD apps must implement to pass certification and grow subscriptions.'
   robots: index
 next:
   description: ''

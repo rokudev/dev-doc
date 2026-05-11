@@ -1,11 +1,11 @@
 ---
 title: Setting up Roku Pay web services
-excerpt: ''
+excerpt: 'Set up Roku Pay API keys, push notifications, and IP address allow lists'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Setting up Roku Pay web services | Roku Developer Docs'
+  description: 'Configure your Roku Pay API key, push notifications, and allowed IP address ranges in the Developer Dashboard to validate and manage transactions.'
   robots: index
 next:
   description: ''

@@ -1,12 +1,13 @@
 ---
 title: BrightScriptDoc
+excerpt: 'Generate formatted HTML docs from inline code comments using BrightScriptDoc tags'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScriptDoc | Roku Developer Docs'
+  description: 'BrightScriptDoc is the documentation generator for inline code comments, using block and inline tags to produce formatted HTML output via the Eclipse plug-in.'
   robots: index
 ---
 

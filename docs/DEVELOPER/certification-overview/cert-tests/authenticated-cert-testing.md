@@ -1,12 +1,13 @@
 ---
 title: Authenticated app testing
+excerpt: 'Use the Roku Remote Tool to automate sign-in flows for certified app testing'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Authenticated app testing | Roku Developer Docs'
+  description: 'Write automated sign-in and sign-out scripts with the Roku Remote Tool to run App Behavior Analysis certification tests on authenticated apps.'
   robots: index
 ---
 Developers of authenticated subscription (SVOD), ad-supported (AVOD), and free apps can write automation scripts with the [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool) that navigate the app's on-device sign-in and sign-out flows.

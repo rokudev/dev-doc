@@ -1,11 +1,11 @@
 ---
 title: Settings
-excerpt: ''
+excerpt: 'Enable Enhanced Subscription Recovery and set the grace period for apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Settings | Roku Developer Docs'
+  description: 'Use the Subscription recovery page in the Developer Dashboard to enable Enhanced Subscription Recovery for your apps and configure the grace period.'
   robots: index
 next:
   description: ''

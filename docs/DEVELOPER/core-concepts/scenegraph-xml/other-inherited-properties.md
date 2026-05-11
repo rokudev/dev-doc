@@ -1,11 +1,11 @@
 ---
 title: "Other inherited properties"
-excerpt: ''
+excerpt: 'How nodes inherit visibility and opacity from parent nodes'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Other inherited properties | Roku Developer Docs'
+  description: 'Each node inherits visibility and opacity from its parent; the visible field toggles rendering and the opacity field multiplies with parent opacity.'
   robots: index
 next:
   description: ''

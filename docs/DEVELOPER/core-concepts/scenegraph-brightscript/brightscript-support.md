@@ -1,11 +1,11 @@
 ---
 title: "BrightScript support"
-excerpt: ''
+excerpt: 'Covers BrightScript functions and components restricted in SceneGraph component scripts'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScript support | Roku Developer Docs'
+  description: 'Learn which BrightScript functions and components cannot be used in SceneGraph component scripts and which require a Task node instead.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Setting the monetization method
-excerpt: ''
+excerpt: 'Select subscriptions or one-time purchases for an app using Roku Pay'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Setting the monetization method | Roku Developer Docs'
+  description: 'Specify the monetization methods for an SVOD or TVOD app implementing Roku Pay, including subscriptions and one-time purchases, in the Developer Dashboard.'
   robots: index
 next:
   description: ''

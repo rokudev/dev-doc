@@ -1,11 +1,11 @@
 ---
 title: "Node field observers"
-excerpt: ''
+excerpt: 'Monitor node and component field state changes using observer callback functions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Node field observers | Roku Developer Docs'
+  description: 'Attach observers to node and component fields to monitor state changes and trigger a callback function whenever a specified field value changes.'
   robots: index
 next:
   description: ''

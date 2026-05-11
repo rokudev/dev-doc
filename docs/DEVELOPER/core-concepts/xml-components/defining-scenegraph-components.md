@@ -1,11 +1,11 @@
 ---
 title: "Defining SceneGraph components"
-excerpt: ''
+excerpt: 'Structure XML component files with name, extends, and child elements'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Defining SceneGraph components | Roku Developer Docs'
+  description: 'Define SceneGraph components in XML files using the <component> element with required name and extends attributes, plus <interface> and <script> tags.'
   robots: index
 next:
   description: ''

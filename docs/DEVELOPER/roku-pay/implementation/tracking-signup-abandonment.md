@@ -1,11 +1,11 @@
 ---
 title: Tracking signup abandonment
-excerpt: ''
+excerpt: 'Fire signup events on each page to identify where users abandon your app''s signup flow'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Tracking signup abandonment | Roku Developer Docs'
+  description: 'Track customers'' progress through your app''s signup workflow by firing events on each page to identify where users are abandoning the sign-up process.'
   robots: index
 next:
   description: ''

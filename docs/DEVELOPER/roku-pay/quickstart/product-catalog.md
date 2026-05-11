@@ -1,11 +1,11 @@
 ---
 title: Creating the product catalog
-excerpt: ''
+excerpt: 'Add products, purchase options, and exclusivity groups to your Roku Pay catalog'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Creating the product catalog | Roku Developer Docs'
+  description: 'Create and manage the Roku Pay product catalog by adding products, configuring purchase options, and setting up product exclusivity groups for subscriptions.'
   robots: index
 next:
   description: ''

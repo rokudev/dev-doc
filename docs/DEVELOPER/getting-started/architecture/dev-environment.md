@@ -1,11 +1,11 @@
 ---
 title: Development environment overview
-excerpt: ''
+excerpt: 'Understand the Roku Streaming Player platform architecture and app entry points'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Development environment overview | Roku Developer Docs'
+  description: 'Covers the Roku Streaming Player architecture, entry points, display modes, exit codes, and the event-oriented model for building apps.'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: "Rendezvous linking"
-excerpt: ''
+excerpt: 'Three-step rendezvous flow for linking a Roku device to an authentication service'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Rendezvous linking | Roku Developer Docs'
+  description: 'Rendezvous linking lets TVE apps authenticate by displaying a registration code on-device, which the user enters on the provider''s website to link the device.'
   robots: index
 next:
   description: ''

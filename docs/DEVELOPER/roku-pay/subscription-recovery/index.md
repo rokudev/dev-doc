@@ -1,11 +1,11 @@
 ---
 title: Introduction to Subscription Recovery
-excerpt: ''
+excerpt: 'Compare basic and enhanced subscription recovery solutions for Roku Pay apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Introduction to Subscription Recovery | Roku Developer Docs'
+  description: 'Roku Pay offers basic and enhanced subscription recovery solutions to reduce passive cancellations, with recovery periods of 3 days and 60 days respectively.'
   robots: index
 next:
   description: ''

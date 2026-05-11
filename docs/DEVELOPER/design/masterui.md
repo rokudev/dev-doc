@@ -1,11 +1,11 @@
 ---
 title: "Roku's master UI"
-excerpt: ''
+excerpt: 'Entry pathways, exit controls, and UI conventions within the Roku Master UI'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku''s master UI | Roku Developer Docs'
+  description: 'Understand how the Roku Master UI affects your app through entry pathways, exit behaviors, settings queries, and Star/Options button restrictions.'
   robots: index
 next:
   description: ''

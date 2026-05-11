@@ -1,11 +1,11 @@
 ---
 title: Integrating the Roku Advertising Framework
-excerpt: ''
+excerpt: 'Integrate the RAF library to render preroll, midroll, and postroll ads'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Integrating the Roku Advertising Framework | Roku Developer Docs'
+  description: 'Integrate the RAF library into your app using the manifest entry, getAds() to fetch ad pods, and showAds() to render preroll, midroll, and postroll ads.'
   robots: index
 next:
   description: ''

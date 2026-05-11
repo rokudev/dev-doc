@@ -1,11 +1,11 @@
 ---
 title: "Controlling screen layout"
-excerpt: ''
+excerpt: 'Techniques for positioning and grouping renderable nodes on screen'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Controlling screen layout | Roku Developer Docs'
+  description: 'Learn how screen layout is controlled using translation fields, z-order, parent-child relationships, and Group or LayoutGroup node classes in your app.'
   robots: index
 next:
   description: ''

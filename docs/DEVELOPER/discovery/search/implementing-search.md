@@ -1,12 +1,13 @@
 ---
 title: Implementing Roku Search
+excerpt: 'Steps to create, validate, and submit a search feed for Roku Search integration'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Implementing Roku Search | Roku Developer Docs'
+  description: 'Learn how to create, validate, and submit a search feed to integrate your app with Roku Search, enabling content discovery and deep linking for users.'
   robots: index
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Implementing voice controls
-excerpt: ''
+excerpt: 'Handle voice commands from the Roku voice remote using roInput transport events'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Implementing voice controls | Roku Developer Docs'
+  description: 'Implement voice controls in your app using roInput to handle transport commands such as play, pause, seek, skip, and next from the Roku voice remote.'
   robots: index
 next:
   description: ''

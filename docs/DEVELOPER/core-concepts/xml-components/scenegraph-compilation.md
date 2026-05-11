@@ -1,11 +1,11 @@
 ---
 title: "SceneGraph compilation"
-excerpt: ''
+excerpt: 'How SceneGraph component files in pkg:/components are compiled at startup'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SceneGraph compilation | Roku Developer Docs'
+  description: 'SceneGraph component files in pkg:/components are compiled at application startup, and component names from the name attribute are matched case-sensitively.'
   robots: index
 next:
   description: ''

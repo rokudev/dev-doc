@@ -1,11 +1,11 @@
 ---
 title: Media playback
-excerpt: ''
+excerpt: 'Overview of media playback features organized by implementation priority'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Media playback | Roku Developer Docs'
+  description: 'Explore media playback features including closed caption, bookmarking, instant resume, fast video start, trick mode, screensavers, and voice controls.'
   robots: index
 next:
   description: ''

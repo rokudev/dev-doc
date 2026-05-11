@@ -1,11 +1,11 @@
 ---
 title: BrightScript debug protocol
-excerpt: ''
+excerpt: 'Socket-based protocol for integrating Roku app debugging into IDEs'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScript debug protocol | Roku Developer Docs'
+  description: 'Use the BrightScript debug protocol to integrate Roku app debugging into Visual Studio Code, Eclipse, and other IDEs, supporting breakpoints and stack traces.'
   robots: index
 next:
   description: ''

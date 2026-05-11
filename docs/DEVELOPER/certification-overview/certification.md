@@ -1,11 +1,11 @@
 ---
 title: Certification criteria
-excerpt: ''
+excerpt: 'Design, performance, and compliance requirements for publishing apps'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Certification criteria | Roku Developer Docs'
+  description: 'Review the certification criteria for submitting apps to the Roku Streaming Store, including performance, advertising, deep linking, and UI requirements.'
   robots: index
 next:
   description: ''

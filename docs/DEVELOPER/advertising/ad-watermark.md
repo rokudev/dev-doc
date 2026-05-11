@@ -1,11 +1,11 @@
 ---
 title: Roku Advertising Watermark
-excerpt: ''
+excerpt: 'Verify ad measurement beacons originate from authentic Roku devices using a signed JWT'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Advertising Watermark | Roku Developer Docs'
+  description: 'Use the Roku Advertising Watermark to attach a signed JWT to ad measurement beacons, verifying they originated from an authentic Roku device via RAF.'
   robots: index
 next:
   description: ''

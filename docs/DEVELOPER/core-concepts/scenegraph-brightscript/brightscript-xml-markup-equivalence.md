@@ -1,12 +1,13 @@
 ---
 title: BrightScript/XML markup equivalence
+excerpt: 'Equivalent ways to build SceneGraph node trees in XML or BrightScript'
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: ''
-  description: ''
+  title: 'BrightScript/XML markup equivalence | Roku Developer Docs'
+  description: 'Compare methods of creating and configuring a Rectangle node using XML markup, BrightScript, an associative array, or a Task node downloading attributes.'
   robots: index
 ---
 

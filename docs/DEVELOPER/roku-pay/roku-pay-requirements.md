@@ -1,11 +1,11 @@
 ---
 title: Roku Pay integration requirements
-excerpt: ''
+excerpt: 'Requirements for integrating Roku Pay in apps with in-app purchases or subscriptions'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Pay integration requirements | Roku Developer Docs'
+  description: 'Review the Roku Pay integration requirements that apps with in-app purchases or subscriptions must meet to pass certification on the Roku platform.'
   robots: index
 next:
   description: ''

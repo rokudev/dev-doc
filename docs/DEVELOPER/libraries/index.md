@@ -1,11 +1,11 @@
 ---
 title: Roku Analytics Component Library (RACL)
-excerpt: ''
+excerpt: 'Integrate third-party analytics vendors into your Roku app using RACL'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Roku Analytics Component Library (RACL) | Roku Developer Docs'
+  description: 'The Roku Analytics Component Library (RACL) integrates Google Analytics, Omniture, and Ooyala Analytics into your app using three vendor support models.'
   robots: index
 next:
   description: ''

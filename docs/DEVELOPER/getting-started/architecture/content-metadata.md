@@ -1,10 +1,11 @@
 ---
 title: Content metadata
+excerpt: 'Reference for content metadata attributes covering playback, DRM, and CDN configuration'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Content metadata | Roku Developer Docs'
+  description: 'Content metadata describes a viewable title stored in an associative array, covering descriptive, DRM, playback configuration, and CDN switching attributes.'
   robots: index
 next:
   description: ''

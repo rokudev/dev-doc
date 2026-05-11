@@ -99,6 +99,18 @@ Checks the current status of the device. This method returns an roAssociativeArr
 
     <tr>
       <td>
+        internetStatus
+      </td>
+      <td>
+        Boolean
+      </td>
+      <td>
+        True if the device currently has a valid connection to the external internet. This status is determined by the device's ability to reach Roku's backend services. The internetStatus event will only be fired if <Anchor label="ifDeviceInfo.EnableInternetStatusEvent(true)" title="ifDeviceInfo.EnableInternetStatusEvent(true)" href="https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#enableinternetstatuseventenable-as-boolean-as-boolean">ifDeviceInfo.EnableInternetStatusEvent(true)</Anchor> is called. Note that a device may have <code>linkStatus</code> as true (connected to a router) while <code>internetStatus</code> remains false (no ISP connectivity).
+      </td>
+    </tr>
+
+    <tr>
+      <td>
         generalMemoryLevel
       </td>
 

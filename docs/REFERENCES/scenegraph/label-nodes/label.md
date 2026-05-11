@@ -12,9 +12,9 @@ next:
 ---
 
 
-Extends [**LabelBase**](doc:label-base)
+Extends [**LabelBase**](doc:labelbase)
 
-> As of [Roku OS 10.5](doc:release-notes#roku-os-105), the Label node inherits most of its functionality from [LabelBase](doc:label-base) node class. Developers, however, do not need to update their app code to account for this refactoring. 
+> As of [Roku OS 10.5](doc:release-notes#roku-os-105), the Label node inherits most of its functionality from [LabelBase](doc:labelbase) node class. Developers, however, do not need to update their app code to account for this refactoring. 
 
 The Label node class is used to display a string of text.
 
@@ -51,7 +51,7 @@ The following displays the text string "Application Development Made Easy!" in t
 
 ## Fields
 
-Fields derived from the [Group](doc:group) and [LabelBase](doc:label-base) classes can be used.
+Fields derived from the [Group](doc:group) and [LabelBase](doc:labelbase) classes can be used.
 
 
 <table>

@@ -261,14 +261,14 @@ In the Roku OS 9.0 release, the **eval()** function was deprecated and developer
 
 **Initial rollout date**: September 24, 2024
 
-Roku OS 14.0 includes new SceneGraph features for displaying monospaced text in your apps. Developers can use the new [**MonospaceLabel** node](/docs/references/scenegraph/label-nodes/monospace-label.md) to draw a single line of text with all characters spaced at a fixed distance from each other. This functions as an alternative to using a monospace font with the **Label** node. In addition, the [**LabelBase** node](/docs/references/scenegraph/label-nodes/label-base.md) includes a new [**monospacedDigits** field](/docs/references/scenegraph/label-nodes/label-base.md#fields) that enables the rendering of tabular digits in overhang time values and countdowns.
+Roku OS 14.0 includes new SceneGraph features for displaying monospaced text in your apps. Developers can use the new [**MonospaceLabel** node](/docs/references/scenegraph/label-nodes/monospace-label.md) to draw a single line of text with all characters spaced at a fixed distance from each other. This functions as an alternative to using a monospace font with the **Label** node. In addition, the [**LabelBase** node](/docs/references/scenegraph/abstract-nodes/labelbase.md) includes a new [**monospacedDigits** field](/docs/references/scenegraph/abstract-nodes/labelbase.md#fields) that enables the rendering of tabular digits in overhang time values and countdowns.
 
 In addition, Roku OS 14.0 includes features that enhance the performance of media playback and Roku devices in general and expand platform support for industry standards covering content metadata.
 
 Here is the list of key developer-facing Roku OS 14.0 updates:
 
 * [**MonospaceLabel**](/docs/references/scenegraph/label-nodes/monospace-label.md) — The [**MonospaceLabel** node](/docs/references/scenegraph/label-nodes/monospace-label.md) is used to draw a single line of text with all characters spaced at a fixed distance from each other. It transforms proportional fonts into monospaced fonts. It is a substitute for using a monospace font with the **Label** node.
-* [**LabelBase.monospacedDigits**](/docs/references/scenegraph/label-nodes/label-base.md#fields) — The LabelBase.monospacedDigits field is used to render monospaced digits.
+* [**LabelBase.monospacedDigits**](/docs/references/scenegraph/abstract-nodes/labelbase.md#fields) — The LabelBase.monospacedDigits field is used to render monospaced digits.
 
 ## Roku OS 13.0
 

@@ -708,7 +708,7 @@ Below is a list of key developer-facing Roku OS 9.4 updates:
 
 * **[Widevine v16](/docs/specs/media/content-protection.md#widevine)** — Roku OS now supports Widevine v16 DRM, including on older supported platforms.
 
-* **[WebP image format](/docs/specs/media/streaming-specifications.md#supported-image-formats)** — The Roku platform now supports the WebP image format, which provides smaller compressed image files and faster decoding and rendering.
+* **[WebP image format](/docs/specs/media/index.md#supported-image-formats)** — The Roku platform now supports the WebP image format, which provides smaller compressed image files and faster decoding and rendering.
 
 * **[DRM security level reporting](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfoex-as-object)** — The **ifDeviceInfo.GetDrmInfoEx()** method now returns the security levels of Widevine and PlayReady DRMs.
 

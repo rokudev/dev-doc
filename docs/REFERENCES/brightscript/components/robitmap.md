@@ -64,7 +64,7 @@ Screen1.Finish()
 
 ## Supported image formats
 
-See the [Roku streaming specification](doc:streaming-specifications) for the image formats supported by this component.
+See the [Roku streaming specification](doc:media#supported-image-formats) for the image formats supported by this component.
 
 ## Supported interfaces
 

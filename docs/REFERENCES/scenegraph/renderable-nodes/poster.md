@@ -14,7 +14,7 @@ Extends [**Group**](doc:group)
 
 The Poster node class draws an image with the top/left corner located at the origin of the node local coordinate system. Because the Poster node class extends the Group node class, a Poster node can have child nodes. For example, a Poster node might have a Label node as a child that draws an annotation on top of the poster.
 
-The Poster node class supports JPEG, PNG and (since [Roku OS 9.4](doc:release-notes#roku-os-94)) [WebP](https://developers.google.com/speed/webp/) image files. Please observe [Special WebP considerations](doc:streaming-specifications) when using the latter.
+The Poster node class supports JPEG, PNG and (since [Roku OS 9.4](doc:release-notes#roku-os-94)) [WebP](https://developers.google.com/speed/webp/) image files. Please observe [Special WebP considerations](doc:media#special-webp-considerations) when using the latter.
 
 The Poster node class includes the capability to automatically scale graphical images to different sizes as they are loaded, by setting the loadWidth and loadHeight field values. After the graphical images are loaded, the images can be scaled to fit within the target screen element area specified by the width and height field values. To use this capability, select the scaling option you want as the value of the loadDisplayMode field.
 

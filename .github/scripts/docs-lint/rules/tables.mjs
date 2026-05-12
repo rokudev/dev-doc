@@ -2,11 +2,14 @@
  * Table rules for docs-lint.
  *
  * Rules and severity:
- *   error    pipe-col-count         Pipe row has different column count than header.
- *   error    pipe-no-blank-above    Pipe table has no blank line before it (won't render).
- *   error    escaped-html-in-cell   Cell content like \<ul> renders as literal text.
- *   warning  adjacent-tables        Two pipe tables with same column count and no heading between them.
- *   warning  html-blank-row         Blank line after </tr> breaks GitHub/IDE preview.
+ *   error    pipe-col-count                  Pipe row has different column count than header.
+ *   error    pipe-no-blank-above             Pipe table has no blank line before it (won't render).
+ *   error    escaped-html-in-cell            Cell content like \<ul> renders as literal text.
+ *   error    empty-table-header-cell        Empty <th></th> creates a phantom column when rendered.
+ *   error    html-row-cell-count-mismatch    A row in an HTML table has a different number of cells than the first row.
+ *   warning  adjacent-tables                 Two pipe tables with same column count and no heading between them.
+ *   warning  html-blank-between-tags         Blank line between tags inside an HTML <table>.
+ *   warning  html-blank-in-cell              Blank line inside an HTML cell content block.
  */
 
 import { visit } from 'unist-util-visit'
@@ -16,6 +19,7 @@ export const id = 'tables'
 export function check({ file, sourceLines, mdast, codeFenceMask, reporter }) {
   checkPipe(mdast, file, sourceLines, reporter)
   checkHtml(file, sourceLines, codeFenceMask, reporter)
+  checkHtmlCells(file, sourceLines, codeFenceMask, reporter)
 }
 
 function checkPipe(mdast, file, sourceLines, reporter) {
@@ -175,4 +179,114 @@ function checkHtml(file, sourceLines, codeFenceMask, reporter) {
       })
     }
   }
+}
+
+function checkHtmlCells(file, sourceLines, codeFenceMask, reporter) {
+  // Two related HTML-table bugs that aren't caught by the AST-based pipe rules:
+  //
+  //   empty-table-header-cell       <th></th> (whitespace-only). Even one creates
+  //                                 a phantom blank column in the rendered table.
+  //                                 ArrayGrid hit this with 8 trailing empty <th>
+  //                                 cells (May 11 fix).
+  //   html-row-cell-count-mismatch  <tr> rows in the same table with different
+  //                                 cell counts. Fallback for the same class of
+  //                                 bug when the rogue cells aren't empty.
+  //
+  // Row-header table exception: a table that uses <th scope="row"> in its body
+  // rows is a comparison/cross-tab table where the top-left corner cell is the
+  // intersection of column-headers and row-headers. An empty <th> there is the
+  // semantically correct corner cell, not a phantom column. Skip empty-th flags
+  // for tables that use scope="row".
+  //
+  // Rule B is conservative: skipped on tables that contain nested <table> elements,
+  // since counting cells per row would otherwise sweep in nested-table cells.
+
+  // Build single string with code fences blanked; preserves line numbers.
+  const source = sourceLines.map((line, i) => (codeFenceMask[i] ? '' : line)).join('\n')
+  const lineOf = (idx) => source.slice(0, idx).split('\n').length
+
+  for (const t of findTopLevelTables(source)) {
+    const inner = source.slice(t.start, t.end)
+
+    // Row-header table heuristic: any <th scope="row"...> inside the table.
+    const isRowHeaderTable = /<th\s[^>]*scope\s*=\s*["']?row["']?/i.test(inner)
+
+    // Rule A: empty <th>. Skip on row-header tables.
+    if (!isRowHeaderTable) {
+      const thPattern = /<th(?:\s[^>]*)?>([\s\S]*?)<\/th\s*>/gi
+      let m
+      while ((m = thPattern.exec(inner)) !== null) {
+        if (m[1].trim() === '') {
+          const lineWithinInner = inner.slice(0, m.index).split('\n').length - 1
+          reporter.add({
+            file,
+            line: lineOf(t.start) + lineWithinInner,
+            col: 1,
+            rule: 'empty-table-header-cell',
+            severity: 'error',
+            message: 'empty <th> creates a phantom column when rendered',
+          })
+        }
+      }
+    }
+
+    // Rule B: cell count mismatch. Skip if nested tables would confuse the count,
+    // or if the table uses rowspan/colspan > 1 (legitimate cell merging that a
+    // raw cell-count comparison can't reason about).
+    if (t.hasNesting) continue
+    if (/\b(?:row|col)span\s*=\s*["']?(?!0|1["'\s>])/i.test(inner)) continue
+    const trPattern = /<tr(?:\s[^>]*)?>([\s\S]*?)<\/tr\s*>/gi
+    const rows = []
+    let tr
+    while ((tr = trPattern.exec(inner)) !== null) {
+      const cellCount = (tr[1].match(/<t[hd][\s>]/gi) || []).length
+      const lineWithinInner = inner.slice(0, tr.index).split('\n').length - 1
+      rows.push({ line: lineOf(t.start) + lineWithinInner, count: cellCount })
+    }
+    if (rows.length < 2) continue
+    const expected = rows[0].count
+    for (const row of rows.slice(1)) {
+      if (row.count !== expected) {
+        reporter.add({
+          file,
+          line: row.line,
+          col: 1,
+          rule: 'html-row-cell-count-mismatch',
+          severity: 'error',
+          message: `row has ${row.count} cells; first row of table has ${expected}`,
+        })
+      }
+    }
+  }
+}
+
+function findTopLevelTables(source) {
+  // Walk <table>/</table> tags tracking depth. Records each top-level
+  // (depth==1) <table>...</table> span and whether nesting was observed inside.
+  const tables = []
+  const tagRegex = /<(\/?)table[\s>]/gi
+  let depth = 0
+  let openStart = -1
+  let maxDepth = 0
+  let m
+  while ((m = tagRegex.exec(source)) !== null) {
+    const isClose = m[1] === '/'
+    if (!isClose) {
+      depth++
+      if (depth === 1) {
+        openStart = m.index
+        maxDepth = 1
+      } else if (depth > maxDepth) {
+        maxDepth = depth
+      }
+    } else {
+      if (depth === 1) {
+        const endIdx = source.indexOf('>', m.index) + 1
+        tables.push({ start: openStart, end: endIdx, hasNesting: maxDepth > 1 })
+        openStart = -1
+      }
+      depth--
+    }
+  }
+  return tables
 }

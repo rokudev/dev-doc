@@ -51,52 +51,52 @@ Roku supports the following widely-used standard formats for adaptive bit rate s
 
 
 <table>
-<thead>
-<tr>
-<th></th>
-<th>DASH</th>
-<th>HLS</th>
-<th>Smooth</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Audio Codecs</td>
-<td>AAC, DTS, DD, DD+</td>
-<td>AAC, MP3, DTS, DD, DD+</td>
-<td>AAC, MP3, DTS, DD, DD+</td>
-</tr>
-<tr>
-<td>Video Codecs</td>
-<td>AVC, HEVC</td>
-<td>AVC, HEVC, VP9</td>
-<td>AVC, HEVC</td>
-</tr>
-<tr>
-<td>Subtitle formats</td>
-<td>TTML, fragmented ISMT<br />TTML, unfragmented TTML text<br />TTML, side-loaded TTML text<br /><br />WebVTT, fragmented WebVTT text<br />WebVTT, unfragmented WebVTT text<br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
-<td>TTML, side-loaded TTML text<br /><br />WebVTT, fragmented WebVTT text<br />WebVTT, unfragmented WebVTT text<br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
-<td>TTML, fragmented ISMT<br />TTML, side-loaded TTML text<br /><br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
-</tr>
-<tr>
-<td>Audio/video chunk format</td>
-<td>Fragmented MP4, CMAF (muxing audio and video not supported for CMAF)</td>
-<td>video: TS, CMAF (muxing audio and video not supported for CMAF)<br />audio: aac, ac3, eac3</td>
-<td>PIFF</td>
-</tr>
-<tr>
-<td>DRM</td>
-<td>PlayReady, Widevine</td>
-<td>AES-128, Widevine, Verimatrix</td>
-<td>PlayReady</td>
-</tr>
-<tr>
-<td>HDR support</td>
-<td>Dolby Vision, HDR10</td>
-<td>Dolby Vision, HDR10</td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">DASH</th>
+      <th scope="col">HLS</th>
+      <th scope="col">Smooth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Audio Codecs</th>
+      <td>AAC, DTS, DD, DD+</td>
+      <td>AAC, MP3, DTS, DD, DD+</td>
+      <td>AAC, MP3, DTS, DD, DD+</td>
+    </tr>
+    <tr>
+      <th scope="row">Video Codecs</th>
+      <td>AVC, HEVC</td>
+      <td>AVC, HEVC, VP9</td>
+      <td>AVC, HEVC</td>
+    </tr>
+    <tr>
+      <th scope="row">Subtitle formats</th>
+      <td>TTML, fragmented ISMT<br />TTML, unfragmented TTML text<br />TTML, side-loaded TTML text<br /><br />WebVTT, fragmented WebVTT text<br />WebVTT, unfragmented WebVTT text<br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
+      <td>TTML, side-loaded TTML text<br /><br />WebVTT, fragmented WebVTT text<br />WebVTT, unfragmented WebVTT text<br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
+      <td>TTML, fragmented ISMT<br />TTML, side-loaded TTML text<br /><br />WebVTT, side-loaded WebVTT text<br /><br />SRT, side-loaded SRT text</td>
+    </tr>
+    <tr>
+      <th scope="row">Audio/video chunk format</th>
+      <td>Fragmented MP4, CMAF (muxing audio and video not supported for CMAF)</td>
+      <td>video: TS, CMAF (muxing audio and video not supported for CMAF)<br />audio: aac, ac3, eac3</td>
+      <td>PIFF</td>
+    </tr>
+    <tr>
+      <th scope="row">DRM</th>
+      <td>PlayReady, Widevine</td>
+      <td>AES-128, Widevine, Verimatrix</td>
+      <td>PlayReady</td>
+    </tr>
+    <tr>
+      <th scope="row">HDR support</th>
+      <td>Dolby Vision, HDR10</td>
+      <td>Dolby Vision, HDR10</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -134,94 +134,94 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
 
 
 <table>
-<thead>
-<tr>
-<th></th>
-<th>AVC (H.264)</th>
-<th>HEVC (H.265)[^1]</th>
-<th>VP9[^2]</th>
-<th>AV1 (DASH only)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Aspect Ratio 2[^3]</td>
-<td>Various</td>
-<td>Various</td>
-<td>Various</td>
-<td></td>
-</tr>
-<tr>
-<td>Dimension</td>
-<td>Various up to 1920x1080</td>
-<td>Various up to 3840x2160</td>
-<td>Various up to 3840x2160</td>
-<td>Various up to 7680 x 4320</td>
-</tr>
-<tr>
-<td>Input Frame Rate[^4]</td>
-<td>24p, 25p, 30p, 50p, 60p</td>
-<td>24p, 25p, 30p, 50p, 60p</td>
-<td>24p, 25p, 30p, 60p[^6]</td>
-<td>24p,25p,30p,50p,60p</td>
-</tr>
-<tr>
-<td>Color Space</td>
-<td>Rec.709</td>
-<td>Rec.709, Rec.2020</td>
-<td>Rec.709, Rec.2020</td>
-<td>Rec.709, Rec.2020</td>
-</tr>
-<tr>
-<td>Profile</td>
-<td>main, high</td>
-<td>main, main 10</td>
-<td>profile 0, profile 2</td>
-<td>main, main 10</td>
-</tr>
-<tr>
-<td>Level</td>
-<td>4.1, 4.2</td>
-<td>4.1, 5.0, 5.1</td>
-<td></td>
-<td>4.1, 5.0, 5.1</td>
-</tr>
-<tr>
-<td>Video Mode</td>
-<td>Constrained VBR</td>
-<td>Constrained VBR</td>
-<td>Constrained VBR</td>
-<td>Constrained VBR</td>
-</tr>
-<tr>
-<td>Video Bitrate</td>
-<td>Up to 10Mbps</td>
-<td>Up to 40Mbps</td>
-<td>Up to 40Mbps</td>
-<td>Up to 40Mbps</td>
-</tr>
-<tr>
-<td>Peak Video Bit rate</td>
-<td>1.5x average</td>
-<td>1.5x average</td>
-<td>1.5x average</td>
-<td>1.5x average</td>
-</tr>
-<tr>
-<td>Key Frame Interval [^5]</td>
-<td>&lt; 10s</td>
-<td>&lt; 10s</td>
-<td>&lt; 10s</td>
-<td>&lt; 10s</td>
-</tr>
-<tr>
-<td>HDR support</td>
-<td>Dolby Vision: dvav.09</td>
-<td>Dolby Vision: dvhe.05<br />HDR10 (HEVC profile Main 10)<br />HLG</td>
-<td>HDR10</td>
-<td>Dolby Vision<br />HDR10 <br />HDR10+</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col">AVC (H.264)</th>
+      <th scope="col">HEVC (H.265)[^1]</th>
+      <th scope="col">VP9[^2]</th>
+      <th scope="col">AV1 (DASH only)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Aspect Ratio 2[^3]</th>
+      <td>Various</td>
+      <td>Various</td>
+      <td>Various</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Dimension</th>
+      <td>Various up to 1920x1080</td>
+      <td>Various up to 3840x2160</td>
+      <td>Various up to 3840x2160</td>
+      <td>Various up to 7680 x 4320</td>
+    </tr>
+    <tr>
+      <th scope="row">Input Frame Rate[^4]</th>
+      <td>24p, 25p, 30p, 50p, 60p</td>
+      <td>24p, 25p, 30p, 50p, 60p</td>
+      <td>24p, 25p, 30p, 60p[^6]</td>
+      <td>24p,25p,30p,50p,60p</td>
+    </tr>
+    <tr>
+      <th scope="row">Color Space</th>
+      <td>Rec.709</td>
+      <td>Rec.709, Rec.2020</td>
+      <td>Rec.709, Rec.2020</td>
+      <td>Rec.709, Rec.2020</td>
+    </tr>
+    <tr>
+      <th scope="row">Profile</th>
+      <td>main, high</td>
+      <td>main, main 10</td>
+      <td>profile 0, profile 2</td>
+      <td>main, main 10</td>
+    </tr>
+    <tr>
+      <th scope="row">Level</th>
+      <td>4.1, 4.2</td>
+      <td>4.1, 5.0, 5.1</td>
+      <td></td>
+      <td>4.1, 5.0, 5.1</td>
+    </tr>
+    <tr>
+      <th scope="row">Video Mode</th>
+      <td>Constrained VBR</td>
+      <td>Constrained VBR</td>
+      <td>Constrained VBR</td>
+      <td>Constrained VBR</td>
+    </tr>
+    <tr>
+      <th scope="row">Video Bitrate</th>
+      <td>Up to 10Mbps</td>
+      <td>Up to 40Mbps</td>
+      <td>Up to 40Mbps</td>
+      <td>Up to 40Mbps</td>
+    </tr>
+    <tr>
+      <th scope="row">Peak Video Bit rate</th>
+      <td>1.5x average</td>
+      <td>1.5x average</td>
+      <td>1.5x average</td>
+      <td>1.5x average</td>
+    </tr>
+    <tr>
+      <th scope="row">Key Frame Interval [^5]</th>
+      <td>&lt; 10s</td>
+      <td>&lt; 10s</td>
+      <td>&lt; 10s</td>
+      <td>&lt; 10s</td>
+    </tr>
+    <tr>
+      <th scope="row">HDR support</th>
+      <td>Dolby Vision: dvav.09</td>
+      <td>Dolby Vision: dvhe.05<br />HDR10 (HEVC profile Main 10)<br />HLG</td>
+      <td>HDR10</td>
+      <td>Dolby Vision<br />HDR10 <br />HDR10+</td>
+    </tr>
+  </tbody>
 </table>
 
 

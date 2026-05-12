@@ -23,87 +23,45 @@ Checks if the device status has changed. This method returns true if the device 
 
 Checks the current status of the device. This method returns an roAssociativeArray containing one of the following members:
 
-<Table>
+<table>
   <thead>
     <tr>
-      <th>
-        Member
-      </th>
-      <th>
-        Type
-      </th>
-      <th>
-        Description
-      </th>
+      <th scope="col">Member</th>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>
-        audioGuideEnabled
-      </td>
-      <td>
-        Boolean
-      </td>
-      <td>
-        True if the screen reader is enabled. The audioGuideEnabled event will only ever get fired if <Anchor label="ifDeviceInfo.EnableAudioGuideChangedEvent(true)" title="ifDeviceInfo.EnableAudioGuideChangedEvent(true)" href="/dev/docs/ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableAudioGuideChangedEvent(true)</Anchor> called before entering the message loop
-      </td>
+      <td>audioGuideEnabled</td>
+      <td>Boolean</td>
+      <td>True if the screen reader is enabled. The audioGuideEnabled event will only ever get fired if [ifDeviceInfo.EnableAudioGuideChangedEvent(true)](doc:ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic) is called before entering the message loop.</td>
     </tr>
     <tr>
-      <td>
-        exitedScreensaver
-      </td>
-      <td>
-        Boolean
-      </td>
-      <td>
-        True if the screensaver was exited. The exitedScreensaver event will only ever get fired if <Anchor label="ifDeviceInfo.EnableScreensaverExitedEvent(true)" title="ifDeviceInfo.EnableScreensaverExitedEvent(true)" href="/dev/docs/ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableScreensaverExitedEvent(true)</Anchor> is called before entering the message loop
-      </td>
+      <td>exitedScreensaver</td>
+      <td>Boolean</td>
+      <td>True if the screensaver was exited. The exitedScreensaver event will only ever get fired if [ifDeviceInfo.EnableScreensaverExitedEvent(true)](doc:ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic) is called before entering the message loop.</td>
     </tr>
     <tr>
-      <td>
-        appFocused
-      </td>
-      <td>
-        Boolean
-      </td>
-      <td>
-        It is set to False when the System Overlay takes focus and True when the app regains focus
-      </td>
+      <td>appFocused</td>
+      <td>Boolean</td>
+      <td>It is set to False when the System Overlay takes focus and True when the app regains focus.</td>
     </tr>
     <tr>
-      <td>
-        linkStatus
-      </td>
-      <td>
-        Boolean
-      </td>
-      <td>
-        True if the device currently seems to have an active network connection. The linkStatus event will only ever get fired if <Anchor label="ifDeviceInfo.EnableLinkStatusEvent(true)" title="ifDeviceInfo.EnableLinkStatusEvent(true)" href="/dev/docs/ifdeviceinfo#enablelinkstatuseventenable-as-boolean-as-boolean">ifDeviceInfo.EnableLinkStatusEvent(true)</Anchor>  is called before entering the message loop
-      </td>
+      <td>linkStatus</td>
+      <td>Boolean</td>
+      <td>True if the device currently seems to have an active network connection. The linkStatus event will only ever get fired if [ifDeviceInfo.EnableLinkStatusEvent(true)](doc:ifdeviceinfo#enablelinkstatuseventenable-as-boolean-as-boolean) is called before entering the message loop.</td>
     </tr>
     <tr>
-      <td>
-        internetStatus
-      </td>
-      <td>
-        Boolean
-      </td>
-      <td>
-        True if the device currently has a valid connection to the external internet. This status is determined by the device's ability to reach Roku's backend services. The internetStatus event will only be fired if <Anchor label="ifDeviceInfo.EnableInternetStatusEvent(true)" title="ifDeviceInfo.EnableInternetStatusEvent(true)" href="https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#enableinternetstatuseventenable-as-boolean-as-boolean">ifDeviceInfo.EnableInternetStatusEvent(true)</Anchor> is called. Note that a device may have <code>linkStatus</code> as true (connected to a router) while <code>internetStatus</code> remains false (no ISP connectivity).
-      </td>
+      <td>internetStatus</td>
+      <td>Boolean</td>
+      <td>True if the device currently has a valid connection to the external internet. This status is determined by the device's ability to reach Roku's backend services. The internetStatus event will only be fired if [ifDeviceInfo.EnableInternetStatusEvent(true)](doc:ifdeviceinfo#enableinternetstatuseventenable-as-boolean-as-boolean) is called. Note that a device may have <code>linkStatus</code> as true (connected to a router) while <code>internetStatus</code> remains false (no ISP connectivity).</td>
     </tr>
-
     <tr>
-      <td>
-        generalMemoryLevel
-      </td>
-      <td>
-        String
-      </td>
+      <td>generalMemoryLevel</td>
+      <td>String</td>
       <td>
         Fires notifications to the app about memory levels. This event will be sent first when the OS transitions from "normal" to "low" state and will continue to be sent while in "low" or "critical" states.<br /><br />The events will be throttled so as to not overwhelm the application listening for these events. The application may voluntarily free up memory by invalidating references to objects (e.g. release ContentNodes held in a cache, release offscreen renderable nodes, etc.).<br /><br />The "low" and "critical" events will be sent to the OS forces the application to exit.
-        <br /><br />
         <ul>
           <li>"normal" means that the general memory is within acceptable levels</li>
           <li>"low" means that the general memory is below acceptable levels but not critical</li>
@@ -112,29 +70,17 @@ Checks the current status of the device. This method returns an roAssociativeArr
       </td>
     </tr>
     <tr>
-      <td>
-        audioCodecCapabilityChanged
-      </td>
-      <td>
-        Boolean
-      </td>
-      <td>
-        The audio codec capability has changed if true. If your application receives this event, you can check the current audio playback capability using the [`roDeviceInfo.CanDecodeAudio`](doc:ifdeviceinfo)asObject) and [`roDeviceInfo.GetAudioDecodeInfo`](doc:ifdeviceinfo)asObject) methods. <br /><br />This event is only fired if the [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo)) is called before entering the message loop.
-      </td>
+      <td>audioCodecCapabilityChanged</td>
+      <td>Boolean</td>
+      <td>The audio codec capability has changed if true. If your application receives this event, you can check the current audio playback capability using the [`roDeviceInfo.CanDecodeAudio(audio_format as Object)`](doc:ifdeviceinfo#candecodeaudioaudio_format-as-object-as-object) and [`roDeviceInfo.GetAudioDecodeInfo()`](doc:ifdeviceinfo#getaudiodecodeinfo-as-object) methods.<br /><br />This event is only fired if [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo#enablecodeccapchangedeventenable-as-boolean) is called before entering the message loop.</td>
     </tr>
     <tr>
-      <td>
-        videoCodecCapabilityChanged
-      </td>
-      <td>
-        Boolean
-      </td>
-      <td>
-        The video codec capability has changed if true. If your application receives this event, you can check the current video playback capability using the [`roDeviceInfo.CanDecodeVideo`](doc:ifdeviceinfo)asObject) method.<br /><br />This event is only fired if [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo)) is called before entering the message loop.
-      </td>
+      <td>videoCodecCapabilityChanged</td>
+      <td>Boolean</td>
+      <td>The video codec capability has changed if true. If your application receives this event, you can check the current video playback capability using the [`roDeviceInfo.CanDecodeVideo(video_format as Object)`](doc:ifdeviceinfo#candecodevideovideo_format-as-object-as-object) method.<br /><br />This event is only fired if [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo#enablecodeccapchangedeventenable-as-boolean) is called before entering the message loop.</td>
     </tr>
   </tbody>
-</Table>
+</table>
 
 ### isCaptionModeChanged() as Boolean
 

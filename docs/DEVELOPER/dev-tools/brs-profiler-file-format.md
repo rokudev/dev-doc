@@ -12,7 +12,7 @@ next:
 ---
 
 
-Developers can follow this specification to build a custom profiling tool that analyzes app performance metrics such as CPU and memory usage. This specification describes the entries in the header, body, and footer of a BrightScript profiler file (**.bsprof**) file.  
+Developers can follow this specification to build a custom profiling tool that analyzes app performance metrics such as CPU and memory usage. This specification describes the entries in the header, body, and footer of a BrightScript profiler file (**.bsprof**) file.
 
 ## Basic information
 
@@ -30,7 +30,7 @@ The following section details the encoding, data types, and indexes used in the 
 
 ### Data types
 
-The fields in the file format may be one of the following data types, which can hold any encoded value for a field: 
+The fields in the file format may be one of the following data types, which can hold any encoded value for a field:
 
 | Data type | Definition                                                   |
 | :-------- | :----------------------------------------------------------- |
@@ -45,16 +45,16 @@ The fields in the file format may be one of the following data types, which can 
 
 ### Indexes
 
-All indexes are 1-based (rather than 0-based). A value of 0 indicates a null or invalid ID. 
+All indexes are 1-based (rather than 0-based). A value of 0 indicates a null or invalid ID.
 
 ## Data structure
 
-BrightScript profiling data is provided in a streaming format that contains a series of record types that can appear anywhere in the file. This allows the streaming of data to the network while the app runs. Overall, the file format incudes the following: 
+BrightScript profiling data is provided in a streaming format that contains a series of record types that can appear anywhere in the file. This allows the streaming of data to the network while the app runs. Overall, the file format incudes the following:
 
 - header
 - body (the body contains the stream of data entries)
 - end of entries marker
-- footer 
+- footer
 
 ### Header
 
@@ -98,20 +98,21 @@ Each entry is a stream of bytes, beginning with a varint-encoded unsigned 64-bit
 
 
 <table>
-<thead>
-<tr>
-<th>Entry tag (variant-encoded uint64)</th>
-<th></th>
-<th>Following bytes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 63..3 (most significant 61 bits)<br />This is the "entry tag payload". The meaning of this payload is determined by entry tag type.</td>
-<td>Bits 2..0 (least significant 3 bits) <br />This is the entry tag type.</td>
-<td>Multiple bytes, determined by entry tag type.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (variant-encoded uint64)</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">Following bytes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 63..3 (most significant 61 bits)
+      <br />This is the "entry tag payload". The meaning of this payload is determined by entry tag type.</td>
+      <td>Bits 2..0 (least significant 3 bits)<br />This is the entry tag type.</td>
+      <td>Multiple bytes, determined by entry tag type.</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -123,78 +124,78 @@ String IDs are stored in several fields within the profiling data. The indexes a
 
 
 <table>
-<thead>
-<tr>
-<th>Entry tag (variant-encoded uint64)</th>
-<th></th>
-<th>String</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 34..3<br />string ID (uint32)</td>
-<td>Bits 2..0 (least significant 3 bits)<br />Literal 0x0</td>
-<td>utf8z string</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (variant-encoded uint64)</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">String</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 34..3<br />string ID (uint32)</td>
+      <td>Bits 2..0 (least significant 3 bits)<br />Literal 0x0</td>
+      <td>utf8z string</td>
+    </tr>
+  </tbody>
 </table>
 
 
 ### Executable module entry
 
-Each executable module is a stream of bytes that represents a block of code that runs independently of other modules. 
+Each executable module is a stream of bytes that represents a block of code that runs independently of other modules.
 
 The modules listed in a profiler file are run simultaneously within a single profiler target. For example, each SceneGraph component is represented by a separate executable module.
 
 
 <table>
-<thead>
-<tr>
-<th>Entry Tag (variant-encoded uint64)</th>
-<th></th>
-<th>Thread name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 34..3<br />module ID (uint32)</td>
-<td>Bits 2..0 (least significant bits) <br />Literal 0x1</td>
-<td>varint-encoded String ID (strid)</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (variant-encoded uint64)</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">Thread name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 34..3<br />module ID (uint32)</td>
+      <td>Bits 2..0 (least significant 3 bits)<br />Literal 0x1</td>
+      <td>varint-encoded String ID (strid)</td>
+    </tr>
+  </tbody>
 </table>
 
 
-### Path element entry 
+### Path element entry
 
 A path element represents a single entry in a call path that is typically a function name. The path element ID is a uint32, where 0 is explicitly invalid and is used to mark a null value.
 
-#### Root 
+#### Root
 
 
 <table>
-<thead>
-<tr>
-<th>Entry tag (varint-encoded uint64)</th>
-<th></th>
-<th>Calling path element ID</th>
-<th>Executive module ID</th>
-<th>File name</th>
-<th>Line number</th>
-<th>Function name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 34..3<br />The path element ID (uint32).</td>
-<td>Bits 0..2 (least significant 3 bits) <br />Literal 0x2</td>
-<td>varint-encoded literal 0 value. <br /><br />This null calling path element ID specifies that this is a root entry for its executive module.</td>
-<td>varint-encoded uint32<br /><br />The module ID for which this element is a root entry.</td>
-<td>varint-encoded String ID<br /><br />The source file where this function was defined.</td>
-<td>Varint-encoded uint32<br /><br />Line number in the source file, where this function is defined.<br /><br />This a 1-based value (the first line of source is 1, not 0).</td>
-<td>varint-encoded String ID</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (varint-encoded uint64)</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">Calling path element ID</th>
+      <th scope="col">Executive module ID</th>
+      <th scope="col">File name</th>
+      <th scope="col">Line number</th>
+      <th scope="col">Function name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 34..3<br />The path element ID (uint32).</td>
+      <td>Bits 2..0 (least significant 3 bits)<br />Literal 0x2</td>
+      <td>varint-encoded literal 0 value.<br /><br />This null calling path element ID specifies that this is a root entry for its executive module.</td>
+      <td>varint-encoded uint32<br /><br />The module ID for which this element is a root entry.</td>
+      <td>varint-encoded String ID<br /><br />The source file where this function was defined.</td>
+      <td>Varint-encoded uint32<br /><br />Line number in the source file, where this function is defined.<br /><br />This is a 1-based value (the first line of source is 1, not 0).</td>
+      <td>varint-encoded String ID</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -202,28 +203,28 @@ A path element represents a single entry in a call path that is typically a func
 
 
 <table>
-<thead>
-<tr>
-<th>Entry tag (varint-encoded uint64)</th>
-<th></th>
-<th>Calling path element ID</th>
-<th>Line offset in caller</th>
-<th>File name</th>
-<th>Line number</th>
-<th>Function name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 34..3<br />The path element ID (uint32).</td>
-<td>Bits 0..2 (least significant 3 bits)<br />Literal 0x2</td>
-<td>varint-encoded path element ID of caller</td>
-<td>varint-encoded uint32<br /><br />A 1-based offset of the calling line of code, into the function at the end of the calling path.<br /><br />To calculate the actual line number in the source file, a custom tool should use the following formula : pathEntry.lineNumber + memoryEntry.lineOffset - 1.<br /><br />This value is only present if the file header specifies that line data is included.</td>
-<td>varint-encoded String ID<br /><br />The source file where this function was defined.</td>
-<td>Varint-encoded uint32<br /><br />The line number in the source file, where this function is defined.<br /><br />This is a 1-based value (the first line of source is 1, not 0).</td>
-<td>varint-encoded String ID</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (varint-encoded uint64)</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">Calling path element ID</th>
+      <th scope="col">Line offset in caller</th>
+      <th scope="col">File name</th>
+      <th scope="col">Line number</th>
+      <th scope="col">Function name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 34..3<br />The path element ID (uint32).</td>
+      <td>Bits 2..0 (least significant 3 bits)<br />Literal 0x2</td>
+      <td>varint-encoded path element ID of caller</td>
+      <td>varint-encoded uint32<br /><br />A 1-based offset of the calling line of code, into the function at the end of the calling path.<br /><br />To calculate the actual line number in the source file, a custom tool should use the following formula: pathEntry.lineNumber + memoryEntry.lineOffset - 1.<br /><br />This value is only present if the file header specifies that line data is included.</td>
+      <td>varint-encoded String ID<br /><br />The source file where this function was defined.</td>
+      <td>Varint-encoded uint32<br /><br />The line number in the source file, where this function is defined.<br /><br />This is a 1-based value (the first line of source is 1, not 0).</td>
+      <td>varint-encoded String ID</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -233,26 +234,26 @@ A memory operation is a stream of bytes.
 
 
 <table>
-<thead>
-<tr>
-<th>Entry tag (varint-encoded uint64)</th>
-<th></th>
-<th></th>
-<th>Line offset</th>
-<th>Memory address</th>
-<th>Allocation size</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 36..5<br />The path element ID (the uint32) that generated this operation).</td>
-<td>Bits 4..3<br />Operation type, which may be on the following values: <ul><li>0: alloc</li><li>1: free</li><li>2: free_realloc (a <strong>free_realloc</strong> operation is a free operation that occurs as part of a <strong>realloc</strong>, and should be immediately followed by an <strong>alloc</strong> operation).</li></ul></td>
-<td>Bits 2..0 (least significant 3 bits)<br />Literal 0x3</td>
-<td>varint-encoded uint32<br /><br />A 1-based offset of the line of code, into the function at the end of the call path. <br /><br />To calculate the actual line number in the source file, a custom tool should use the following formula : pathEntry.lineNumber + memoryEntry.lineOffset - 1.<br /><br />This value is only present if the file header specifies that line data is included.</td>
-<td>varint-encoded uint32</td>
-<td>Varint-encoded uint32<br /><br />This value is only present for <strong>alloc</strong> operations.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (varint-encoded uint64)</th>
+      <th scope="col">Operation type</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">Line offset</th>
+      <th scope="col">Memory address</th>
+      <th scope="col">Allocation size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 36..5<br />The path element ID (the uint32) that generated this operation.</td>
+      <td>Bits 4..3<br />Operation type, which may be one of the following values:<ul><li>0: alloc</li><li>1: free</li><li>2: free_realloc (a <strong>free_realloc</strong> operation is a free operation that occurs as part of a <strong>realloc</strong>, and should be immediately followed by an <strong>alloc</strong> operation).</li></ul></td>
+      <td>Bits 2..0 (least significant 3 bits)<br />Literal 0x3</td>
+      <td>varint-encoded uint32<br /><br />A 1-based offset of the line of code, into the function at the end of the call path.<br /><br />To calculate the actual line number in the source file, a custom tool should use the following formula: pathEntry.lineNumber + memoryEntry.lineOffset - 1.<br /><br />This value is only present if the file header specifies that line data is included.</td>
+      <td>varint-encoded uint32</td>
+      <td>Varint-encoded uint32<br /><br />This value is only present for <strong>alloc</strong> operations.</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -263,24 +264,24 @@ A CPU measurement entry is a stream of bytes. The custom tool should treat CPU e
 
 
 <table>
-<thead>
-<tr>
-<th>Entry tag (varint-encoded uint64)</th>
-<th></th>
-<th>Line offset</th>
-<th>CPU self</th>
-<th>Time self</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 34..3<br />The path element ID (the uint32) that generated this operation).</td>
-<td>Bits 2..0 (least significant 3 bits)<br />Literal 0x4</td>
-<td>varint-encoded uint32<br /><br />A 1-based offset of the line of code, into the function at the end of the call path.<br /><br />To calculate the actual line number in the source file, a custom tool should use the following formula : pathEntry.lineNumber + memoryEntry.lineOffset - 1.<br /><br />This value is only present if the file header specifies that line data is included.</td>
-<td>varint-encoded uint32<br /><br />The incremental CPU time spent on the call path.</td>
-<td>varint-encoded uint32<br /><br />The incremental wall-clock time spent on the call path.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (varint-encoded uint64)</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">Line offset</th>
+      <th scope="col">CPU self</th>
+      <th scope="col">Time self</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 34..3<br />The path element ID (the uint32) that generated this operation.</td>
+      <td>Bits 2..0 (least significant 3 bits)<br />Literal 0x4</td>
+      <td>varint-encoded uint32<br /><br />A 1-based offset of the line of code, into the function at the end of the call path.<br /><br />To calculate the actual line number in the source file, a custom tool should use the following formula: pathEntry.lineNumber + memoryEntry.lineOffset - 1.<br /><br />This value is only present if the file header specifies that line data is included.</td>
+      <td>varint-encoded uint32<br /><br />The incremental CPU time spent on the call path.</td>
+      <td>varint-encoded uint32<br /><br />The incremental wall-clock time spent on the call path.</td>
+    </tr>
+  </tbody>
 </table>
 
 
@@ -290,20 +291,20 @@ A count of calls made into a specific call path. The custom tool should treat ea
 
 
 <table>
-<thead>
-<tr>
-<th>Entry tag (varint-encoded uint64)</th>
-<th></th>
-<th>Call count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bits 34..3<br />The path element ID (uint32) that was called.</td>
-<td>Bits 2..0 (least significant 3 bits)<br />Literal 0x5</td>
-<td>Varint-encoded uint32<br /><br />The number of times a function was called on the specified call path (incremental value).</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Entry tag (varint-encoded uint64)</th>
+      <th scope="col">Entry type</th>
+      <th scope="col">Call count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bits 34..3<br />The path element ID (uint32) that was called.</td>
+      <td>Bits 2..0 (least significant 3 bits)<br />Literal 0x5</td>
+      <td>Varint-encoded uint32<br /><br />The number of times a function was called on the specified call path (incremental value).</td>
+    </tr>
+  </tbody>
 </table>
 
 

@@ -1,11 +1,13 @@
 ---
 title: Sign-in requirements and best practices
-excerpt: 'Streamline on-device sign-in workflows for SVOD and TVOD apps'
+excerpt: Streamline on-device sign-in workflows for SVOD and TVOD apps
 deprecated: false
 hidden: false
 metadata:
-  title: 'Sign-in requirements and best practices | Roku Developer Docs'
-  description: 'Streamline SVOD and TVOD app sign-ins using the RFI screen and on-device authentication via ChannelStore APIs to meet Roku Pay certification.'
+  title: Sign-in requirements and best practices | Roku Developer Docs
+  description: >-
+    Streamline SVOD and TVOD app sign-ins using the RFI screen and on-device
+    authentication via ChannelStore APIs to meet Roku Pay certification.
   robots: index
 next:
   description: ''
@@ -36,4 +38,4 @@ The on-device sign-in workflow should  typically have a maximum of three screens
 
 For customers who already have a valid subscription for an app, [on-device authentication](doc:on-device-authentication) enables them to sign in to the app directly on-device. This integration uses the [ChannelStore APIs](doc:channelstore) to manage the on-device sign-in experience through Roku Pay. It includes a complete suite of APIs for implementing the entitlement and authentication workflows.
 
-> **Certification requirement**: All authenticated apps must implement on-device authentication to pass [certification](doc:certification#2-purchases). Account sign-ins must be completed on-device, without visiting an external webpage. The sign-in workflow may not include links to off-device promotional or marketing materials, nor may it utilize off-device sign-in mechanisms such as rendezvous linking.
+> **Certification requirement**: Apps must integrate [On-device authentication](doc:on-device-authentication). Sign-up/sign-in workflows are prohibited from using external webpages, links to off-device promotional or marketing materials, or any other 1st or 3rd-party off-device sign-up/sign-in/authentication/activation mechanism.

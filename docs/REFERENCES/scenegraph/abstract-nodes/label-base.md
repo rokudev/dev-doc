@@ -1,11 +1,11 @@
 ---
 title: "LabelBase"
-excerpt: ''
+excerpt: 'The abstract base class for the Label and MultiStyleLabel nodes, providing text alignment, wrapping, auto-truncating, and other shared text-display behavior'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'LabelBase'
+  description: 'The LabelBase node is an abstract base class for the Label and MultiStyleLabel nodes. It provides dimensions, text alignment, wrapping, auto-truncating, and other common functionality shared by its child nodes.'
   robots: index
 next:
   description: ''

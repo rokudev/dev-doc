@@ -1,11 +1,11 @@
 ---
 title: "Label nodes"
-excerpt: ''
+excerpt: 'SceneGraph nodes for rendering text on screen: Label, MultiStyleLabel, MonospaceLabel, and InfoPane'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Label nodes'
+  description: 'Label nodes let you render text on screen in your SceneGraph apps. This page covers Label, MultiStyleLabel, MonospaceLabel, and InfoPane, and points to related text-rendering nodes elsewhere in the SceneGraph docs.'
   robots: index
 next:
   description: ''

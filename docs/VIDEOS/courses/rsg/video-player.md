@@ -16,7 +16,7 @@ next:
 
 ## About this lesson
 
-This lesson explains how to add the [SceneGraph Video node](doc:video) to your app and link it to the content in other components. It describes how to open the video screen when content is selected, and close it when playback finishes or the back button is pressed on the Roku remote control. This lesson also includes the [requirements for streaming videos](doc:streaming-specifications) on the Roku platform.
+This lesson explains how to add the [SceneGraph Video node](doc:video) to your app and link it to the content in other components. It describes how to open the video screen when content is selected, and close it when playback finishes or the back button is pressed on the Roku remote control. This lesson also includes the [requirements for streaming videos](doc:media) on the Roku platform.
 
 ## Resources
 
@@ -25,7 +25,7 @@ This lesson explains how to add the [SceneGraph Video node](doc:video) to your a
 | [Video Player sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/VideoPlayer) | Download and review the code used in this lesson to implement a Video node in a Roku app . |
 | [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Video Player app created in this lesson. |
 | [Video hosting](doc:how-channels-work) | View the list  content delivery networks (CDNs) and online video platforms (OVPs) that have worked with publishers to host content for their Roku apps. |
-| [Streaming spec](doc:streaming-specifications)                   | Understand the required file formats and encoding methods for streaming video content on Roku devices. |
+| [Streaming spec](doc:media)                   | Understand the required file formats and encoding methods for streaming video content on Roku devices. |
 | [SceneGraph Video node](doc:video) | Read how to configure the different attributes of the SceneGraph Video node, including its playback, UI, trick play, and captioning parameters. |
 
 ## Related

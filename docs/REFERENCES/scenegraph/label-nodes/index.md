@@ -1,11 +1,11 @@
 ---
 title: "Label nodes"
-excerpt: ''
+excerpt: 'SceneGraph nodes for rendering text on screen: Label, MultiStyleLabel, MonospaceLabel, and InfoPane'
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Label nodes'
+  description: 'Label nodes let you render text on screen in your SceneGraph apps. This page covers Label, MultiStyleLabel, MonospaceLabel, and InfoPane, and points to related text-rendering nodes elsewhere in the SceneGraph docs.'
   robots: index
 next:
   description: ''
@@ -51,8 +51,8 @@ MultiStyleLabel and InfoPane in action:
 * **For long passages of scrollable text** like license agreements, use [ScrollableText](doc:scrollabletext).
 * **For lines that auto-scroll when they overflow**, use [ScrollingLabel](doc:scrollinglabel). It ellipsizes then scrolls horizontally on a loop.
 * **For a lighter, more memory-efficient label**, use [SimpleLabel](doc:simplelabel) in [Renderable nodes](doc:renderable-nodes), a stripped-down single-line label with a simplified font model.
-* **For alignment, wrapping, truncation, or rotation controls**, see [LabelBase](doc:labelbase), the abstract base class shared by Label and MultiStyleLabel.
+* **For alignment, wrapping, truncation, or rotation controls**, see [LabelBase](doc:label-base), the abstract base class shared by Label and MultiStyleLabel.
 
 ## Inheritance
 
-Label and MultiStyleLabel both extend [**LabelBase**](doc:labelbase), so most of their field reference (alignment, wrapping, ellipsis behavior, rotation) is documented on the LabelBase page rather than repeated on each. MonospaceLabel and InfoPane do not extend LabelBase and define their own fields directly.
+Label and MultiStyleLabel both extend [**LabelBase**](doc:label-base), so most of their field reference (alignment, wrapping, ellipsis behavior, rotation) is documented on the LabelBase page rather than repeated on each. MonospaceLabel and InfoPane do not extend LabelBase and define their own fields directly.

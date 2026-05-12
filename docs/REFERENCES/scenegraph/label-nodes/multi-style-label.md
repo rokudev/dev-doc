@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Extends [**LabelBase**](doc:labelbase)
+Extends [**LabelBase**](doc:label-base)
 
 The MultiStyleLabel node class is used to create labels with mixed styles. For example, this node can be used to create a single label with plain and bold text, different fonts, and/or multiple colors.
 
@@ -18,7 +18,7 @@ The MultiStyleLabel node class is used to create labels with mixed styles. For e
 
 ## Fields
 
-Fields derived from the [Group](doc:group) and [LabelBase](doc:labelbase) classes can be used.
+Fields derived from the [Group](doc:group) and [LabelBase](doc:label-base) classes can be used.
 
 | Field         | Type                                    | Description                                                                                       |
 | :------------ | :-------------------------------------- | :------------------------------------------------------------------------------------------------ |

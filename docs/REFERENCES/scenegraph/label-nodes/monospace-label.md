@@ -23,8 +23,8 @@ The **MonospaceLabel** node is used to draw a single line of text with all chara
 | text                   | string   |                | READ_WRITE            | Specifies the text to be displayed                           |
 | color                  | color    | 0xddddddff     | READ_WRITE            | Specifies the text color                                     |
 | font                   | Font     | system default | READ_WRITE            | Specifies the Font node to be used                           |
-| horizAlign             | string   | left           | READ_WRITE            | See [Horizontal Alignment](doc:labelbase#horizontal-alignment) |
-| vertAlign              | string   | top            | READ_WRITE            | See [Vertical Alignment](doc:labelbase#vertical-alignment) |
+| horizAlign             | string   | left           | READ_WRITE            | See [Horizontal Alignment](doc:label-base#horizontal-alignment) |
+| vertAlign              | string   | top            | READ_WRITE            | See [Vertical Alignment](doc:label-base#vertical-alignment) |
 | width                  | float    | 0              | READ_WRITE            | Specifies the width of the label. If set to zero, the width of the label will be set automatically |
 | height                 | float    | 0              | READ_WRITE            | Specifies the height of the label. If set to zero, the height of the label will be set automatically |
 | characterWidth         | float    | 0              | READ_WRITE            | Specifies the width of the label characters. If set to zero, width of font’s character 'M' will be used |

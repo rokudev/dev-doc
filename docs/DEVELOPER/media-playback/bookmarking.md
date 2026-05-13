@@ -1,19 +1,18 @@
 ---
-title: "Bookmarking"
-excerpt: 'Two methods for saving and retrieving media playback position in your app'
+title: Bookmarking
+excerpt: Two methods for saving and retrieving media playback position in your app
 deprecated: false
 hidden: false
 metadata:
-  title: 'Bookmarking | Roku Developer Docs'
-  description: 'Save and restore a user''s playback position in VOD content using the service backend or the device registry, with timestamps stored every 30 seconds.'
+  title: Bookmarking | Roku Developer Docs
+  description: >-
+    Save and restore a user's playback position in VOD content using the service
+    backend or the device registry, with timestamps stored every 30 seconds.
   robots: index
 next:
   description: ''
 ---
-
-Bookmarking refers to saving a user's playback position in the content on your app so that they can continue watching later on from precisely where they left off.
-
-It is recommended that all services with content longer than 15 minutes build bookmarking functionality into their service, as it will enhance the end-user's experience — not just on Roku, but across all interactions they have with your service on any platform. For example, if your service implements bookmarks, then users who begin watching a television show on Roku before switching over to their mobile device can pick up where they left off. In addition, bookmarks must be saved for a minimum of 30 days.
+Bookmarking refers to saving a user's playback position in the content on your app so that they can continue watching later on from precisely where they left off. It enhances the end-user's experience — not just on Roku, but across all interactions they have with your service on any platform. For example, if your service implements bookmarks, then users who begin watching a television show on Roku before switching over to their mobile device can pick up where they left off. In addition, bookmarks must be saved for a minimum of 30 days.
 
 > Apps must implement bookmarking in VOD content that is longer that 15 minutes to pass [certification](doc:certification).
 

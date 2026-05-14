@@ -1,16 +1,19 @@
 ---
 title: ifScreen
-excerpt: 'Interface covering screen buffer swapping and graphics feature queries for roScreen'
+excerpt: >-
+  Interface covering screen buffer swapping and graphics feature queries for
+  roScreen
 deprecated: false
 hidden: false
 metadata:
-  title: 'ifScreen'
-  description: 'Documents the ifScreen interface, which provides SwapBuffers for frame rendering and GetGraphicsFeatures for querying rotation and ASTC support.'
+  title: ifScreen
+  description: >-
+    Documents the ifScreen interface, which provides SwapBuffers for frame
+    rendering and GetGraphicsFeatures for querying rotation and ASTC support.
   robots: index
 next:
   description: ''
 ---
-
 | Name                     | Description                                                                                                                  |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | [roScreen](doc:roscreen) | The roScreen component provides a full screen drawing surface that can be stacked and that you can receive input events from |
@@ -51,14 +54,16 @@ An associative array containing the following key/value pairs:
       <th><strong>Value</strong></th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>full\_rotation</td>
       <td>boolean</td>
       <td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
     </tr>
+
     <tr>
-      <td>astc\_supported</td>
+      <td>gfx\_astc\_supported </td>
       <td>boolean</td>
       <td><ul><li>true: The device supports <a href="https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression">Adaptive Scalable Texture Compression(ASTC)</a> compressed textures and can load <a href="https://github.com/ARM-software/astc-encoder/blob/main/Docs/FileFormat.md">.astc</a> image files.</li><li>false: The device does not support ASTC.</li></ul></td>
     </tr>

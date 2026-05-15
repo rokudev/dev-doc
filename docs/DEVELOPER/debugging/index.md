@@ -94,7 +94,7 @@ As of [Roku OS 10.5](doc:release-notes#roku-os-105), the BrightScript debug cons
 
 ## SceneGraph applications
 
-Beginning with **[Roku OS 7.5](doc:release-notes#roku-os-7-5)** and above, the main BrightScript
+Beginning with **[Roku OS 7.5](doc:release-notes#roku-os-75)** and above, the main BrightScript
 console (port 8085) provides context for all threads. This
 eliminates the need to have multiple telnet sessions open for each
 running thread and **ports 8089 - 8093** will no longer be used.

@@ -241,7 +241,7 @@ Setting the value of a field triggers any field observer functions that may be a
 
 For example, if the width field of a Rectangle that contains a Label is set, an observer of that width field might set the width field of the Label. The width field of the Label might have an observer function that sets the Label’s wrap field. The chain of field settings and observer callback functions that result from setting a field (in this case, the Rectangle’s width field) is an event cascade.
 
-With the release of [Roku OS 7.5](doc:release-notes#roku-os-7-5), nested observer callbacks are no longer deferred. Observer callbacks now happen recursively. See the [Queued Callback Model](doc:handling-application-events) section above for details.
+With the release of [Roku OS 7.5](doc:release-notes#roku-os-75), nested observer callbacks are no longer deferred. Observer callbacks now happen recursively. See the [Queued Callback Model](doc:handling-application-events) section above for details.
 
 ## Handling component \<interface\> field value changes
 

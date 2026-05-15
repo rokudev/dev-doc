@@ -68,7 +68,6 @@ struct HandshakeFromDVP {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -141,7 +140,6 @@ struct HandshakeFromDVP {
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 The behavior after the handshake has been executed, depends on the version of the BrightScript debug protocol being used:
 
@@ -161,7 +159,6 @@ struct DebuggerRequest {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -262,7 +259,6 @@ struct DebuggerRequest {
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 ## Debugger Response Format
 
@@ -279,7 +275,6 @@ struct DebuggerResponse {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -380,7 +375,6 @@ struct DebuggerResponse {
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 <br />
 
@@ -398,7 +392,6 @@ struct DebuggerUpdate {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -547,7 +540,6 @@ struct DebuggerUpdate {
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 ### AllThreadsStopped
 

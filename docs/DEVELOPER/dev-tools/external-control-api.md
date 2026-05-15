@@ -128,7 +128,6 @@ commands to the Roku device.
 
 ### General ECP commands
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr><th class="short-line">Command</th><th class="short-line">Description</th><th class="short-line">Required Device Settings</th></tr>
@@ -179,7 +178,6 @@ commands to the Roku device.
     <tr><td class="short-line">input</td><td class="long-line">Sends custom events to the current application. It takes a user defined list of name-value pairs sent as query string URI parameters. The external control server places these name-value pairs into an associative array, and passes them directly through to the currently executing app script using a Message Port attached to a created roInput object.<br /><br />[Input Command Conventions](doc:external-control-api#input-command-conventions) includes detailed recommendations on how to pass your data.<br /><br />Messages of type [roInputEvent](doc:roinputevent) have a GetInfo() method that will obtain the associative array. The arguments must be URL-encoded. <br /><br />This command is sent using an HTTP POST with no body. Example: <code>POST /input?acceleration.x=0.0&acceleration.y=0.0&acceleration.z=9.8</code></td><td class="short-line" /></tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 ## Input command conventions
 

@@ -45,7 +45,7 @@ Appends the specified first set of characters of the provided string to the end 
 
 The AppendString() function modifies the object on which it is called, which can result in unexpected results if called on a literal string constant rather than a string object. Consider the following example:
 
-```
+```brightscript
 x = "one"
 print type(x) ' prints "String"
 x.AppendString("two", 3)

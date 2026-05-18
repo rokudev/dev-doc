@@ -56,7 +56,7 @@ The following types are supported in BrightScript:
 * **Boolean** – Either true or false.
 * **Integer** – A 32-bit signed integer number.
 * **LongInteger** – A 64-bit signed integer number. **This is
-  available in [Roku OS 7.0](doc:release-notes#roku-os-7-0) or above.**
+  available in [Roku OS 7.0](doc:release-notes#roku-os-70) or above.**
 * **Float** – A 32-bit IEEE floating point number.
 * **Double** – A 64-bit IEEE floating point number. (Although Double
   is an intrinsically understood type, it is implemented internally
@@ -285,7 +285,7 @@ all different variables.
 | %         | Integer     | A%, SUM%, 125%      |                                              |
 | !         | Float       | A!, value!, 125!    | Single-precision                             |
 | #         | Double      | A#, distance#, 125# | Double-precision                             |
-| &         | LongInteger | A&, ID&             | _This is available in [Roku OS 7.0](doc:release-notes#roku-os-7-0) or later._ |
+| &         | LongInteger | A&, ID&             | _This is available in [Roku OS 7.0](doc:release-notes#roku-os-70) or later._ |
 
 ## Type conversion (promotion)
 
@@ -736,7 +736,7 @@ x--
 ' x = 1
 ```
 
-**These operators are available in [Roku OS 7.1](doc:release-notes#roku-os-7-1) and above.**
+**These operators are available in [Roku OS 7.1](doc:release-notes#roku-os-71) and above.**
 
 ### Mathematical and bitshift assignment operators
 
@@ -785,7 +785,7 @@ x>>=4
 ' x = 15
 ```
 
-**These operators are available in [Roku OS 7.1](doc:release-notes#roku-os-7-1) and above.**
+**These operators are available in [Roku OS 7.1](doc:release-notes#roku-os-71) and above.**
 
 ### Integer bitshift operators
 

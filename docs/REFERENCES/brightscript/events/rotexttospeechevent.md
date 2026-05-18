@@ -14,7 +14,7 @@ next:
 
 
 
-> Please note this component is only available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running [Roku OS version 7.2](doc:release-notes#roku-os-7-2) and later.
+> Please note this component is only available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running [Roku OS version 7.2](doc:release-notes#roku-os-72) and later.
 
 
 The [roTextToSpeech](doc:rotexttospeech) component sends the roTextToSpeechEvent with the following predicates that indicate its valid event types.

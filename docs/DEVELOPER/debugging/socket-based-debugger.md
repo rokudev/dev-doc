@@ -1,11 +1,14 @@
 ---
 title: BrightScript debug protocol
-excerpt: 'Socket-based protocol for integrating Roku app debugging into IDEs'
+excerpt: Socket-based protocol for integrating Roku app debugging into IDEs
 deprecated: false
 hidden: false
 metadata:
-  title: 'BrightScript debug protocol | Roku Developer Docs'
-  description: 'Use the BrightScript debug protocol to integrate Roku app debugging into Visual Studio Code, Eclipse, and other IDEs, supporting breakpoints and stack traces.'
+  title: BrightScript debug protocol | Roku Developer Docs
+  description: >-
+    Use the BrightScript debug protocol to integrate Roku app debugging into
+    Visual Studio Code, Eclipse, and other IDEs, supporting breakpoints and
+    stack traces.
   robots: index
 next:
   description: ''
@@ -65,6 +68,7 @@ struct HandshakeFromDVP {
 };
 ```
 
+<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -137,6 +141,7 @@ struct HandshakeFromDVP {
     </tr>
   </tbody>
 </table>
+`}</HTMLBlock>
 
 The behavior after the handshake has been executed, depends on the version of the BrightScript debug protocol being used:
 
@@ -156,6 +161,7 @@ struct DebuggerRequest {
 };
 ```
 
+<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -256,6 +262,7 @@ struct DebuggerRequest {
     </tr>
   </tbody>
 </table>
+`}</HTMLBlock>
 
 ## Debugger Response Format
 
@@ -272,6 +279,7 @@ struct DebuggerResponse {
 };
 ```
 
+<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -372,6 +380,7 @@ struct DebuggerResponse {
     </tr>
   </tbody>
 </table>
+`}</HTMLBlock>
 
 <br />
 
@@ -389,6 +398,7 @@ struct DebuggerUpdate {
 };
 ```
 
+<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -537,6 +547,7 @@ struct DebuggerUpdate {
     </tr>
   </tbody>
 </table>
+`}</HTMLBlock>
 
 ### AllThreadsStopped
 

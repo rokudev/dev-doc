@@ -65,72 +65,78 @@ struct HandshakeFromDVP {
 };
 ```
 
-<HTMLBlock>{`
 <table>
-<thead>
-<tr>
-<th class="short-line">Field</th>
-<th class="short-line">Type</th>
-<th class="short-line">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">magic_number</td>
-<td class="short-line">uint64</td>
-<td class="long-line">The Roku Brightscript debug protocol identifier, which is the following 64-bit value :<code>0x0067756265647362LU</code>. <br><br>This is equal to <code>29120988069524322LU</code> or the following little-endian value: <code>b'bsdebug\0</code>.</td>
-</tr>
-<tr>
-<td class="long-line">protocol_major_version<br>protocol_minor_version<br>protocol_patch_version</td>
-<td class="short-line">uint32</td>
-<td class="long-line">Each Roku OS release supports only a single version of the Roku Brightscript debug protocol: <br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Roku OS</th>
-<th class="short-line">Supported Debug Protocol Version</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">Roku OS 14.1</td>
-<td class="short-line">3.3.0</td>
-</tr>
-<tr>
-<td class="short-line">[Roku OS 12.0](doc:release-notes#roku-os-120)</td>
-<td class="short-line">3.2.0</td>
-</tr>
-<tr>
-<td class="short-line">[Roku OS 11.5](doc:release-notes#roku-os-115)</td>
-<td class="short-line">3.1.0</td>
-</tr>
-<tr>
-<td class="short-line">[Roku OS 11.0](doc:release-notes#roku-os-110)</td>
-<td class="short-line">3.0.0</td>
-</tr>
-<tr>
-<td class="short-line">[Roku OS 9.3](doc:release-notes#roku-os-93), [9.4](doc:release-notes#roku-os-94), [10.0](doc:release-notes#roku-os-100), [10.5](doc:release-notes#roku-os-105)</td>
-<td class="short-line">2.0.0</td>
-</tr>
-<tr>
-<td class="short-line">[Roku OS 9.2](doc:release-notes#roku-os-92)</td>
-<td class="short-line">1.0.1</td>
-</tr>
-</tbody>
-</table></div><br>The debugger client must be updated to the protocol version number or disconnect. A change in the major version number indicates that changes that are not backwards-compatible have been made since the previous release.</td>
-</tr>
-<tr>
-<td class="short-line">remaining_packet_length</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The length in bytes of the remaining data, including the <strong>remaining_packet_length</strong> itself. The debugger client must read this number of bytes.<br><br>As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), all packets from the debugging target include a <strong>packet_length</strong>. The length is always in bytes, and includes the <strong>packet_length</strong> field, itself. <br><br>This field avoids the need for changes to the major version of the protocol because it allows a debugger client to read past data it does not understand and is not critical to debugger operations.<br><br>The debug target may intentionally send a <strong>packet_length</strong> longer than the actual data, with a small number of trailing padding bytes to complete the length. Clients must read the entire <strong>packet_length</strong> before expecting the next packet.</td>
-</tr>
-<tr>
-<td class="short-line">platform_revision_timestamp</td>
-<td class="short-line">int64</td>
-<td class="long-line">A platform-specific implementation timestamp (in milliseconds                                         since epoch [1970-01-01T00:00:00.000Z]). <br><br>As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), a timestamp is sent to the debugger client in the initial handshake.  This timestamp is platform-specific data that is included in the system software of the platform being debugged. It is changed by the platform's vendor when there is any change that affects the behavior of the debugger.<br><br>The value can be used in manners similar to a build number, and is primarily used to differentiate between pre-release builds of the platform being debugged.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th class="short-line">Field</th>
+      <th class="short-line">Type</th>
+      <th class="short-line">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="short-line">magic_number</td>
+      <td class="short-line">uint64</td>
+      <td class="long-line">The Roku Brightscript debug protocol identifier, which is the following 64-bit value :<code>0x0067756265647362LU</code>. <br /><br />This is equal to <code>29120988069524322LU</code> or the following little-endian value: <code>b'bsdebug\0</code>.</td>
+    </tr>
+    <tr>
+      <td class="long-line">protocol_major_version<br />protocol_minor_version<br />protocol_patch_version</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">
+        Each Roku OS release supports only a single version of the Roku Brightscript debug protocol:
+        <br />
+        <div class="hscroll">
+          <table>
+            <thead>
+              <tr>
+                <th class="short-line">Roku OS</th>
+                <th class="short-line">Supported Debug Protocol Version</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="short-line">Roku OS 14.1</td>
+                <td class="short-line">3.3.0</td>
+              </tr>
+              <tr>
+                <td class="short-line">[Roku OS 12.0](doc:release-notes#roku-os-120)</td>
+                <td class="short-line">3.2.0</td>
+              </tr>
+              <tr>
+                <td class="short-line">[Roku OS 11.5](doc:release-notes#roku-os-115)</td>
+                <td class="short-line">3.1.0</td>
+              </tr>
+              <tr>
+                <td class="short-line">[Roku OS 11.0](doc:release-notes#roku-os-110)</td>
+                <td class="short-line">3.0.0</td>
+              </tr>
+              <tr>
+                <td class="short-line">[Roku OS 9.3](doc:release-notes#roku-os-93), [9.4](doc:release-notes#roku-os-94), [10.0](doc:release-notes#roku-os-100), [10.5](doc:release-notes#roku-os-105)</td>
+                <td class="short-line">2.0.0</td>
+              </tr>
+              <tr>
+                <td class="short-line">[Roku OS 9.2](doc:release-notes#roku-os-92)</td>
+                <td class="short-line">1.0.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        The debugger client must be updated to the protocol version number or disconnect. A change in the major version number indicates that changes that are not backwards-compatible have been made since the previous release.
+      </td>
+    </tr>
+    <tr>
+      <td class="short-line">remaining_packet_length</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">The length in bytes of the remaining data, including the <strong>remaining_packet_length</strong> itself. The debugger client must read this number of bytes.<br /><br />As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), all packets from the debugging target include a <strong>packet_length</strong>. The length is always in bytes, and includes the <strong>packet_length</strong> field, itself. <br /><br />This field avoids the need for changes to the major version of the protocol because it allows a debugger client to read past data it does not understand and is not critical to debugger operations.<br /><br />The debug target may intentionally send a <strong>packet_length</strong> longer than the actual data, with a small number of trailing padding bytes to complete the length. Clients must read the entire <strong>packet_length</strong> before expecting the next packet.</td>
+    </tr>
+    <tr>
+      <td class="short-line">platform_revision_timestamp</td>
+      <td class="short-line">int64</td>
+      <td class="long-line">A platform-specific implementation timestamp (in milliseconds since epoch \[1970-01-01T00:00:00.000Z]). <br /><br />As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), a timestamp is sent to the debugger client in the initial handshake.  This timestamp is platform-specific data that is included in the system software of the platform being debugged. It is changed by the platform's vendor when there is any change that affects the behavior of the debugger.<br /><br />The value can be used in manners similar to a build number, and is primarily used to differentiate between pre-release builds of the platform being debugged.</td>
+    </tr>
+  </tbody>
 </table>
-`}</HTMLBlock>
 
 The behavior after the handshake has been executed, depends on the version of the BrightScript debug protocol being used:
 
@@ -150,100 +156,106 @@ struct DebuggerRequest {
 };
 ```
 
-<HTMLBlock>{`
 <table>
-<thead>
-<tr>
-<th class="short-line">Field</th>
-<th class="short-line">Type</th>
-<th class="short-line">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">packet_length</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The size of the packet to be sent.<br>Example: (4 + 4 + 4 + sizeof(ARGUMENTS))</td>
-</tr>
-<tr>
-<td class="short-line">request_id</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
-</tr>
-<tr>
-<td class="short-line">command_code</td>
-<td class="short-line">uint32</td>
-<td class="long-line">An enum representing the debugging command being sent, which may be one of the following values:<br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Code</th>
-<th class="short-line">Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">1</td>
-<td class="short-line">STOP</td>
-</tr>
-<tr>
-<td class="short-line">2</td>
-<td class="short-line">CONTINUE</td>
-</tr>
-<tr>
-<td class="short-line">3</td>
-<td class="short-line">THREADS</td>
-</tr>
-<tr>
-<td class="short-line">4</td>
-<td class="short-line">STACKTRACE</td>
-</tr>
-<tr>
-<td class="short-line">5</td>
-<td class="short-line">VARIABLES</td>
-</tr>
-<tr>
-<td class="short-line">6</td>
-<td class="short-line">STEP</td>
-</tr>
-<tr>
-<td class="short-line">7</td>
-<td class="short-line">ADD_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">8</td>
-<td class="long-line">LIST_BREAKPOINTS<br><br>(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
-</tr>
-<tr>
-<td class="short-line">9</td>
-<td class="short-line">REMOVE_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">10</td>
-<td class="short-line">EXECUTE</td>
-</tr>
-<tr>
-<td class="short-line">11</td>
-<td class="short-line">ADD_CONDITIONAL_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">12</td>
-<td class="short-line">SET_EXCEPTION_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">122</td>
-<td class="short-line">EXIT_CHANNEL</td>
-</tr>
-</tbody>
-</table></div><br>See <a href="#debugging-commands">Debugging Commands</a> for more information.</td>
-</tr>
-<tr>
-<td class="short-line">command_arguments (optional)</td>
-<td class="short-line">uint8</td>
-<td class="long-line">Command-specific arguments (these may not be present for some commands)</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th class="short-line">Field</th>
+      <th class="short-line">Type</th>
+      <th class="short-line">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="short-line">packet_length</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">The size of the packet to be sent.<br />Example: (4 + 4 + 4 + sizeof(ARGUMENTS))</td>
+    </tr>
+    <tr>
+      <td class="short-line">request_id</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
+    </tr>
+    <tr>
+      <td class="short-line">command_code</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">
+        An enum representing the debugging command being sent, which may be one of the following values:
+        <br />
+        <div class="hscroll">
+          <table>
+            <thead>
+              <tr>
+                <th class="short-line">Code</th>
+                <th class="short-line">Command</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="short-line">1</td>
+                <td class="short-line">STOP</td>
+              </tr>
+              <tr>
+                <td class="short-line">2</td>
+                <td class="short-line">CONTINUE</td>
+              </tr>
+              <tr>
+                <td class="short-line">3</td>
+                <td class="short-line">THREADS</td>
+              </tr>
+              <tr>
+                <td class="short-line">4</td>
+                <td class="short-line">STACKTRACE</td>
+              </tr>
+              <tr>
+                <td class="short-line">5</td>
+                <td class="short-line">VARIABLES</td>
+              </tr>
+              <tr>
+                <td class="short-line">6</td>
+                <td class="short-line">STEP</td>
+              </tr>
+              <tr>
+                <td class="short-line">7</td>
+                <td class="short-line">ADD_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">8</td>
+                <td class="long-line">LIST_BREAKPOINTS<br /><br />(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
+              </tr>
+              <tr>
+                <td class="short-line">9</td>
+                <td class="short-line">REMOVE_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">10</td>
+                <td class="short-line">EXECUTE</td>
+              </tr>
+              <tr>
+                <td class="short-line">11</td>
+                <td class="short-line">ADD_CONDITIONAL_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">12</td>
+                <td class="short-line">SET_EXCEPTION_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">122</td>
+                <td class="short-line">EXIT_CHANNEL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        See [Debugging Commands](#debugging-commands) for more information.
+      </td>
+    </tr>
+    <tr>
+      <td class="short-line">command_arguments (optional)</td>
+      <td class="short-line">uint8</td>
+      <td class="long-line">Command-specific arguments (these may not be present for some commands)</td>
+    </tr>
+  </tbody>
 </table>
-`}</HTMLBlock>
 
 ## Debugger Response Format
 
@@ -260,100 +272,106 @@ struct DebuggerResponse {
 };
 ```
 
-<HTMLBlock>{`
 <table>
-<thead>
-<tr>
-<th class="short-line">Field</th>
-<th class="short-line">Type</th>
-<th class="short-line">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">packet_length</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The size of the packet to be sent.<br>Example: (4 + 4 + 4 + sizeof(ARGUMENTS))</td>
-</tr>
-<tr>
-<td class="short-line">request_id</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
-</tr>
-<tr>
-<td class="short-line">command_code</td>
-<td class="short-line">uint32</td>
-<td class="long-line">An enum representing the debugging command being sent, which may be one of the following values:<br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Code</th>
-<th class="short-line">Command</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">1</td>
-<td class="short-line">STOP</td>
-</tr>
-<tr>
-<td class="short-line">2</td>
-<td class="short-line">CONTINUE</td>
-</tr>
-<tr>
-<td class="short-line">3</td>
-<td class="short-line">THREADS</td>
-</tr>
-<tr>
-<td class="short-line">4</td>
-<td class="short-line">STACKTRACE</td>
-</tr>
-<tr>
-<td class="short-line">5</td>
-<td class="short-line">VARIABLES</td>
-</tr>
-<tr>
-<td class="short-line">6</td>
-<td class="short-line">STEP</td>
-</tr>
-<tr>
-<td class="short-line">7</td>
-<td class="short-line">ADD_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">8</td>
-<td class="long-line">LIST_BREAKPOINTS<br><br>(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
-</tr>
-<tr>
-<td class="short-line">9</td>
-<td class="short-line">REMOVE_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">10</td>
-<td class="short-line">EXECUTE</td>
-</tr>
-<tr>
-<td class="short-line">11</td>
-<td class="short-line">ADD_CONDITIONAL_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">12</td>
-<td class="short-line">SET_EXCEPTION_BREAKPOINTS</td>
-</tr>
-<tr>
-<td class="short-line">122</td>
-<td class="short-line">EXIT_CHANNEL</td>
-</tr>
-</tbody>
-</table></div><br>See <a href="#debugging-commands">Debugging Commands</a> for more information.</td>
-</tr>
-<tr>
-<td class="short-line">command_arguments (optional)</td>
-<td class="short-line">uint8</td>
-<td class="long-line">Command-specific arguments (these may not be present for some commands)</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th class="short-line">Field</th>
+      <th class="short-line">Type</th>
+      <th class="short-line">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="short-line">packet_length</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">The size of the packet to be sent.<br />Example: (4 + 4 + 4 + sizeof(ARGUMENTS))</td>
+    </tr>
+    <tr>
+      <td class="short-line">request_id</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">The ID of the debugger request (must be &gt;=1). This ID is included in the debugger response.</td>
+    </tr>
+    <tr>
+      <td class="short-line">command_code</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">
+        An enum representing the debugging command being sent, which may be one of the following values:
+        <br />
+        <div class="hscroll">
+          <table>
+            <thead>
+              <tr>
+                <th class="short-line">Code</th>
+                <th class="short-line">Command</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="short-line">1</td>
+                <td class="short-line">STOP</td>
+              </tr>
+              <tr>
+                <td class="short-line">2</td>
+                <td class="short-line">CONTINUE</td>
+              </tr>
+              <tr>
+                <td class="short-line">3</td>
+                <td class="short-line">THREADS</td>
+              </tr>
+              <tr>
+                <td class="short-line">4</td>
+                <td class="short-line">STACKTRACE</td>
+              </tr>
+              <tr>
+                <td class="short-line">5</td>
+                <td class="short-line">VARIABLES</td>
+              </tr>
+              <tr>
+                <td class="short-line">6</td>
+                <td class="short-line">STEP</td>
+              </tr>
+              <tr>
+                <td class="short-line">7</td>
+                <td class="short-line">ADD_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">8</td>
+                <td class="long-line">LIST_BREAKPOINTS<br /><br />(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
+              </tr>
+              <tr>
+                <td class="short-line">9</td>
+                <td class="short-line">REMOVE_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">10</td>
+                <td class="short-line">EXECUTE</td>
+              </tr>
+              <tr>
+                <td class="short-line">11</td>
+                <td class="short-line">ADD_CONDITIONAL_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">12</td>
+                <td class="short-line">SET_EXCEPTION_BREAKPOINTS</td>
+              </tr>
+              <tr>
+                <td class="short-line">122</td>
+                <td class="short-line">EXIT_CHANNEL</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br />
+        See [Debugging Commands](#debugging-commands) for more information.
+      </td>
+    </tr>
+    <tr>
+      <td class="short-line">command_arguments (optional)</td>
+      <td class="short-line">uint8</td>
+      <td class="long-line">Command-specific arguments (these may not be present for some commands)</td>
+    </tr>
+  </tbody>
 </table>
-`}</HTMLBlock>
 
 <br />
 
@@ -371,144 +389,154 @@ struct DebuggerUpdate {
 };
 ```
 
-<HTMLBlock>{`
 <table>
-<thead>
-<tr>
-<th class="short-line">Field</th>
-<th class="short-line">Type</th>
-<th class="short-line">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">packet_length</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The length of the packet in bytes, including this field</td>
-</tr>
-<tr>
-<td class="short-line">request_id</td>
-<td class="short-line">uint32</td>
-<td class="long-line">The ID of the debugger request, which must be <strong>0</strong>. This ID is included in the debugger response. <br><br><strong>0</strong> is a reserved value for the <strong>request_id</strong> in DebuggerUpdate messages; therefore, a debugging client may not send a DebuggerRequest with a <strong>request_id</strong> of 0.</td>
-</tr>
-<tr>
-<td class="short-line">error_code</td>
-<td class="short-line">uint32</td>
-<td class="long-line">An enum indicating the status of the request. If the debugger request was successful, a value of <strong>0</strong> is returned. This may be one of the following values: <br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Code</th>
-<th class="short-line">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">0</td>
-<td class="short-line">OK</td>
-</tr>
-<tr>
-<td class="short-line">1</td>
-<td class="short-line">OTHER_ERR</td>
-</tr>
-<tr>
-<td class="short-line">2</td>
-<td class="short-line">UNDEFINED_COMMAND</td>
-</tr>
-<tr>
-<td class="short-line">3</td>
-<td class="short-line">CANT_CONTINUE</td>
-</tr>
-<tr>
-<td class="short-line">4</td>
-<td class="short-line">NOT_STOPPED</td>
-</tr>
-<tr>
-<td class="short-line">5</td>
-<td class="short-line">INVALID_ARGS</td>
-</tr>
-<tr>
-<td class="short-line">6</td>
-<td class="short-line">THREAD_DETACHED</td>
-</tr>
-<tr>
-<td class="short-line">7</td>
-<td class="short-line">EXECUTION_TIMEOUT</td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="short-line">update_type</td>
-<td class="short-line">uint32</td>
-<td class="long-line">An enum representing the update being sent by the debugger, which may be one of the following values:<br><div class="hscroll"><table>
-<thead>
-<tr>
-<th class="short-line">Code</th>
-<th class="short-line">Update</th>
-<th class="short-line">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="short-line">0</td>
-<td class="short-line">UNDEF</td>
-<td class="short-line"></td>
-</tr>
-<tr>
-<td class="short-line">1</td>
-<td class="short-line">IO_PORT_OPENED</td>
-<td class="long-line">The remote debugging client should connect to the port included in the <strong>data</strong> field to retrieve the running script's output. Only reads are allowed on the I/O connection.</td>
-</tr>
-<tr>
-<td class="short-line">2</td>
-<td class="short-line">ALL_THREADS_STOPPED</td>
-<td class="long-line">All threads are stopped and an <a href="#allthreadsstopped">ALL_THREADS_STOPPED</a> message is sent to the debugging client. <br><br>The <strong>data</strong> field includes information on why the threads were stopped.</td>
-</tr>
-<tr>
-<td class="short-line">3</td>
-<td class="short-line">THREAD_ATTACHED</td>
-<td class="long-line">A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br><br>Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a <a href="#threadattached">THREAD_ATTACHED</a> message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br><br>The <strong>data</strong> field includes information on why the threads were stopped.</td>
-</tr>
-<tr>
-<td class="short-line">4</td>
-<td class="short-line">BREAKPOINT_ERROR</td>
-<td class="long-line">A compilation or runtime error occurred when evaluating the <strong>cond_expr</strong> of a conditional breakpoint.</td>
-</tr>
-<tr>
-<td class="short-line">5</td>
-<td class="short-line">COMPILE_ERROR</td>
-<td class="short-line">A compilation error occurred.</td>
-</tr>
-<tr>
-<td class="short-line">6<br><br><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
-<td class="short-line">BREAKPOINT_VERIFIED</td>
-<td class="long-line">A breakpoint has successfully been applied to an executable line of code.</td>
-</tr>
-<tr>
-<td class="short-line">7<br><br><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
-<td class="short-line">PROTOCOL_ERROR</td>
-<td class="long-line">An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.</td>
-</tr>
-<tr>
-<td class="short-line">8<br><br><em>Available since Roku OS 14.1</em></td>
-<td class="short-line">EXCEPTION_BREAKPOINT_ERROR</td>
-<td class="long-line">A compilation or runtime error has occurred when evaluating the <strong>cond_expr</strong> of an exception breakpoint.</td>
-</tr>
-</tbody>
-</table></div></td>
-</tr>
-<tr>
-<td class="short-line">data</td>
-<td class="short-line">uint8</td>
-<td class="long-line">The update data returned based on the <strong>update_type</strong>. This may be one of the following values:<br><ul>
-<li>If the <strong>update_type</strong> is IO_PORT_OPENED, the <strong>data</strong> field contains the port number (uint32) to which the debugging client should connect to read the script's output.</li>
-<li>If the <strong>update_type</strong> is ALL_THREADS_STOPPED, the <strong>data</strong> field contains a structure named <strong>AllThreadsStoppedUpdateData</strong>. See <a href="#allthreadsstopped">AllThreadsStopped</a> for more information.</li>
-<li>If the <strong>update_type</strong> is THREAD_ATTACHED, the <strong>data</strong> field contains a structure named <strong>ThreadAttachedUpdateData</strong>. See <a href="#threadattached">ThreadAttached</a> for more information.</li>
-</ul></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th class="short-line">Field</th>
+      <th class="short-line">Type</th>
+      <th class="short-line">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="short-line">packet_length</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">The length of the packet in bytes, including this field</td>
+    </tr>
+    <tr>
+      <td class="short-line">request_id</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">The ID of the debugger request, which must be <strong>0</strong>. This ID is included in the debugger response. <br /><br /><strong>0</strong> is a reserved value for the <strong>request_id</strong> in DebuggerUpdate messages; therefore, a debugging client may not send a DebuggerRequest with a <strong>request_id</strong> of 0.</td>
+    </tr>
+    <tr>
+      <td class="short-line">error_code</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">
+        An enum indicating the status of the request. If the debugger request was successful, a value of <strong>0</strong> is returned. This may be one of the following values:
+        <br />
+        <div class="hscroll">
+          <table>
+            <thead>
+              <tr>
+                <th class="short-line">Code</th>
+                <th class="short-line">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="short-line">0</td>
+                <td class="short-line">OK</td>
+              </tr>
+              <tr>
+                <td class="short-line">1</td>
+                <td class="short-line">OTHER_ERR</td>
+              </tr>
+              <tr>
+                <td class="short-line">2</td>
+                <td class="short-line">UNDEFINED_COMMAND</td>
+              </tr>
+              <tr>
+                <td class="short-line">3</td>
+                <td class="short-line">CANT_CONTINUE</td>
+              </tr>
+              <tr>
+                <td class="short-line">4</td>
+                <td class="short-line">NOT_STOPPED</td>
+              </tr>
+              <tr>
+                <td class="short-line">5</td>
+                <td class="short-line">INVALID_ARGS</td>
+              </tr>
+              <tr>
+                <td class="short-line">6</td>
+                <td class="short-line">THREAD_DETACHED</td>
+              </tr>
+              <tr>
+                <td class="short-line">7</td>
+                <td class="short-line">EXECUTION_TIMEOUT</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="short-line">update_type</td>
+      <td class="short-line">uint32</td>
+      <td class="long-line">
+        An enum representing the update being sent by the debugger, which may be one of the following values:
+        <br />
+        <div class="hscroll">
+          <table>
+            <thead>
+              <tr>
+                <th class="short-line">Code</th>
+                <th class="short-line">Update</th>
+                <th class="short-line">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="short-line">0</td>
+                <td class="short-line">UNDEF</td>
+                <td class="short-line"></td>
+              </tr>
+              <tr>
+                <td class="short-line">1</td>
+                <td class="short-line">IO_PORT_OPENED</td>
+                <td class="long-line">The remote debugging client should connect to the port included in the <strong>data</strong> field to retrieve the running script's output. Only reads are allowed on the I/O connection.</td>
+              </tr>
+              <tr>
+                <td class="short-line">2</td>
+                <td class="short-line">ALL_THREADS_STOPPED</td>
+                <td class="long-line">All threads are stopped and an <a href="#allthreadsstopped">ALL_THREADS_STOPPED</a> message is sent to the debugging client. <br /><br />The <strong>data</strong> field includes information on why the threads were stopped.</td>
+              </tr>
+              <tr>
+                <td class="short-line">3</td>
+                <td class="short-line">THREAD_ATTACHED</td>
+                <td class="long-line">A new thread attempts to execute a script when all threads have already been stopped. The new thread is immediately stopped and is "attached" to the debugger so that the debugger can inspect the thread, its stack frames, and local variables. <br /><br />Additionally, when a thread executes a step operation, that thread detaches from the debugger temporarily, and a <a href="#threadattached">THREAD_ATTACHED</a> message is sent to the debugging client when the thread has completed its step operation and has re-attached to the debugger.<br /><br />The <strong>data</strong> field includes information on why the threads were stopped.</td>
+              </tr>
+              <tr>
+                <td class="short-line">4</td>
+                <td class="short-line">BREAKPOINT_ERROR</td>
+                <td class="long-line">A compilation or runtime error occurred when evaluating the <strong>cond_expr</strong> of a conditional breakpoint.</td>
+              </tr>
+              <tr>
+                <td class="short-line">5</td>
+                <td class="short-line">COMPILE_ERROR</td>
+                <td class="short-line">A compilation error occurred.</td>
+              </tr>
+              <tr>
+                <td class="short-line">6<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
+                <td class="short-line">BREAKPOINT_VERIFIED</td>
+                <td class="long-line">A breakpoint has successfully been applied to an executable line of code.</td>
+              </tr>
+              <tr>
+                <td class="short-line">7<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
+                <td class="short-line">PROTOCOL_ERROR</td>
+                <td class="long-line">An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.</td>
+              </tr>
+              <tr>
+                <td class="short-line">8<br /><br /><em>Available since Roku OS 14.1</em></td>
+                <td class="short-line">EXCEPTION_BREAKPOINT_ERROR</td>
+                <td class="long-line">A compilation or runtime error has occurred when evaluating the <strong>cond_expr</strong> of an exception breakpoint.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="short-line">data</td>
+      <td class="short-line">uint8</td>
+      <td class="long-line">The update data returned based on the <strong>update_type</strong>. This may be one of the following values:<br /><ul>
+          <li>If the <strong>update_type</strong> is IO_PORT_OPENED, the <strong>data</strong> field contains the port number (uint32) to which the debugging client should connect to read the script's output.</li>
+          <li>If the <strong>update_type</strong> is ALL_THREADS_STOPPED, the <strong>data</strong> field contains a structure named <strong>AllThreadsStoppedUpdateData</strong>. See <a href="#allthreadsstopped">AllThreadsStopped</a> for more information.</li>
+          <li>If the <strong>update_type</strong> is THREAD_ATTACHED, the <strong>data</strong> field contains a structure named <strong>ThreadAttachedUpdateData</strong>. See <a href="#threadattached">ThreadAttached</a> for more information.</li>
+      </ul></td>
+    </tr>
+  </tbody>
 </table>
-`}</HTMLBlock>
 
 ### AllThreadsStopped
 

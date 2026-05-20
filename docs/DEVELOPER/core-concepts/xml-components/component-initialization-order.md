@@ -15,17 +15,17 @@ next:
 Instances of components defined in an XML file follow a well-defined
 initialization order when they are created.
 
-1.  The [**\<children\>**](children_1608551.html) element nodes defined
+1.  The [**\<children\>**](/docs/references/scenegraph/xml-elements/children.md) element nodes defined
     in XML markup are created, and their fields are set to their initial
     values, either to a default value, or to the value specified in the
     XML markup.
 
-2.  The **[\<interface\>](interface_1608549.html)** element fields of
+2.  The **[\<interface\>](/docs/references/scenegraph/xml-elements/interface.md)** element fields of
     the XML component are created, and their initial values are set,
     either to a default value, or to the value specified by the `value`
     attribute.
 
-3.  The [**\<script\>**](script_1608550.html) element `init()` function
+3.  The [**\<script\>**](/docs/references/scenegraph/xml-elements/script.md) element `init()` function
     is called, and all initializations contained in the function are
     performed.
 
@@ -55,7 +55,7 @@ using **`createObject()`** or **`createChild()`**. This means that a
 component object may not have been completely constructed immediately
 after those calls. For certain nodes that may rely on
 dynamically-downloaded content to construct the node, such as
-[**PosterGrid**](PosterGrid_1607203.html), subsequent object function
+[**PosterGrid**](/docs/references/scenegraph/list-and-grid-nodes/postergrid.md), subsequent object function
 calls may return an object reference to an unconstructed object.
 
 ## Parenting and the Focus Chain
@@ -63,8 +63,8 @@ calls may return an object reference to an unconstructed object.
 For nodes that are defined in the **\<children\>** XML markup of the
 component file, the parent node is set after the node is created, and
 **`init()`** is called. This has implications for the focus chain (see
-[**Remote Control Events**](Remote-Control-Events_1607636.html)), which
-must end at a node derived from **[Scene](Scene_1607315.html)**. Until
+[**Remote Control Events**](../scenegraph-xml/remote-control-events.md)), which
+must end at a node derived from **[Scene](/docs/references/scenegraph/scene.md)**. Until
 the newly-created node is parented to a node that is either derived from
 **Scene**, or parented to a node in a focus chain that ends on a node
 derived from **Scene**, you will not be able to set remote control focus

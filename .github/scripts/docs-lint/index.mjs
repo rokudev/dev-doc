@@ -22,8 +22,9 @@ import remarkGfm from 'remark-gfm'
 
 import { Reporter, printReport } from './lib/report.mjs'
 import * as tables from './rules/tables.mjs'
+import * as links from './rules/links.mjs'
 
-const RULES = [tables]
+const RULES = [tables, links]
 
 const SYNC_PATHS = [
   'docs/**/*.md',

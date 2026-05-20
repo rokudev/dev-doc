@@ -63,4 +63,4 @@ Payments and revenue reports are sent out quarterly, 60 days post-quarter closin
 | Q3      | By November 30th |
 | Q4      | By February 28th |
 
-Not that partners will not be paid until the aggregate sums due are equal to or exceed $100.00. Detailed payout terms are found in the Commercial Terms Exhibit of the [Roku Distribution Agreement](https://docs.roku.com/doc/developerdistribution/en-us).
+Note that partners will not be paid until the aggregate sums due are equal to or exceed $100.00. Detailed payout terms are found in the Commercial Terms Exhibit of the [Roku Distribution Agreement](https://docs.roku.com/doc/developerdistribution/en-us).

@@ -28,7 +28,7 @@ next:
 
 **Setup ContentNode and set to Video node:**
 
-```
+```brightscript
 contentNode = createObject("roSGNode", "contentNode")
 contentNode.streamFormat = "smooth"
 contentNode.url = "wwww.myvideo.com/content.ism"
@@ -42,7 +42,7 @@ If your PlayReady implementation requires custom request
 data, `encodingType` and `encodingKey` should be formatted like the
 following:
 
-```
+```brightscript
 contentNode = createObject("roSGNode", "contentNode")
 contentNode.streamFormat = "ism"
 contentNode.url = "wwww.myvideo.com/content.ism"
@@ -81,14 +81,14 @@ As of [Roku OS 9.3](doc:release-notes#roku-os-93), support for Verimatrix DRM ha
 
 **Required Roku manifest entries:**
 
-```
+```text
 requires_verimatrix_drm=1
 requires_verimatrix_version=1.0
 ```
 
 **Configure DRM parameters in an roAssociativeArray:**
 
-```
+```brightscript
 drmParams = createObject("roAssociativeArray")
 drmParams.name = "Verimatrix"
 drmParams.authDomain = "auth-value-from-streaming-provider"
@@ -97,7 +97,7 @@ drmParams.serializationUrl = "hostname-url-from-streaming-provider"
 
 **Setup ContentNode and set to Video node:**
 
-```
+```brightscript
 contentNode = createObject("roSGNode", "contentNode")
 contentNode.streamFormat = "hls"
 contentNode.url = "wwww.myvideo.com/content.m3u8"

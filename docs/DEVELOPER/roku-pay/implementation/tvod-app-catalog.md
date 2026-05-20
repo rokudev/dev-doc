@@ -59,7 +59,7 @@ To update your app with the new **DoOrder** API, follow these steps:
 
 1. Initialize the ChannelStore API generic request framework. The following code monitors the **channelStore.requestStatus** field and fires the **onRequestStatus()** callback function when changes to the **requestStatus** field occur. The **onRequestStatus()** function determines which command was sent and sends the results to the dedicated parser for the command.
 
-   ```
+   ```brightscript
    function init()
        m.store = m.parent.FindNode("channelStore")
        m.store.observeField("requestStatus", "onRequestStatus")
@@ -99,7 +99,7 @@ To update your app with the new **DoOrder** API, follow these steps:
 
 2. Send the **DoOrder** command to purchase the transactional content, and then check the order status.
 
-   ```
+   ```brightscript
    sub makeTVODPurchase(requestData as dynamic)
      print  "calling makeTVODPurchase"
      'myOrder = { "code": request.productCode, "name": request.productName, "qty": 1}

@@ -74,7 +74,7 @@ An roByteArray containing the decrypted data.
 You can use the `Encrypt()` and `Decrypt()` methods to encrypt plaintext on a Roku device
 and then decode it, as demonstrated in the following example:
 
-```
+```brightscript
   ' store plaintext to be encrypted in an roByteArray
   ba = CreateObject("roByteArray")
   ba.FromAsciiString("plain text1")

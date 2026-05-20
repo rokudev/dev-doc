@@ -32,7 +32,7 @@ This is useful in the following situations:
 
 **Example**
 
-```
+```brightscript
 BrightScript> o=CreateObject("roInt")
 BrightScript> o.SetInt(555)
 BrightScript> print o

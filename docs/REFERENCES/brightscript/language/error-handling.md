@@ -28,7 +28,7 @@ It is important for the developer to view BrightScript's exception trapping feat
 
 The code that handles an exceptional situation resides in a `TRY`/`CATCH` block. Here is an example:
 
-```
+```brightscript
 print "I'm about to try something that might not work"
 try
     do_something_that_might_throw_an_exception()
@@ -60,7 +60,7 @@ When an exception is caught, information concerning the circumstances is collect
 
 The number is the same as printed when a program crashes. For example, consider this code:
 
-```
+```brightscript
 sub main()
     x = 1
     print x.foo
@@ -69,13 +69,13 @@ end sub
 
 Execution produces the following output, due to an exception that is *not* caught:
 
-```
+```brightscript
 Syntax Error. (runtime error &h02) in /tmp/dev/example.brs(3)
 ```
 
 Note that the system's standard error reporting format may not provide information that is most meaningful to the user, or present it in the most useful format. The following version of `main()` is written to catch exceptions and report them to the user in a form that the programmer has defined:
 
-```
+```brightscript
 sub main()
     x = 1
     try
@@ -88,7 +88,7 @@ end sub
 
 Here is the "programmer-approved" output produced by the enhanced `main()`:
 
-```
+```brightscript
 2              Syntax Error.
 ```
 
@@ -106,7 +106,7 @@ Element 0 of the array is the outermost function; element `count()-1` is the inn
 
 The `function` prototype text ("signature") will be something like `"main() As Void"` or `"foo(x As Float, y As Float) As Float"`. Here is an example of custom error display code that extracts the function name for a more concise display:
 
-```
+```brightscript
 CATCH e
     prototype = e.backtrace[e.backtrace.count()-1].function
     name = LEFT(prototype,INSTR(prototype,"(")-1)
@@ -120,13 +120,13 @@ The collection of keys present in the backtrace array may vary. The function pro
 
 The app may *throw* an exception to indicate something unexpected has gone wrong in app code. The simplest form is:
 
-```
+```brightscript
 THROW "One of the cross beams has gone out of skew on the treadle."
 ```
 
 This causes an exception with error number `ERR_USER` (`&h28`) as the number, and the supplied string as the message. If not caught, it will reach the crash dump or debugger, as with any other error:
 
-```
+```brightscript
 Current Function:
 001:  SUB demo()
 002:*     THROW "One of the cross beams has gone out of skew on the treadle"
@@ -154,13 +154,13 @@ A `roAssociativeArray` that describes the exception is also an acceptable argume
 
 Consider this example, which produces a division by zero error, along with a message that helpfully directs the user to the assumed source of fault:
 
-```
+```brightscript
 THROW {number: ERR_DIV_ZERO, message: "Division by zero in complex number library"}
 ```
 
 The ability to `THROW` an associative array, coupled with the system's default assumptions about the values of missing elements in such arrays, implies that the two following `THROW` statements are equivalent:
 
-```
+```brightscript
 THROW "My error message"
 THROW {message: "My error message"}
 ```
@@ -179,7 +179,7 @@ Note that execution will *never* continue past a `THROW`; the statement will eit
 
 The following are just a few examples of invalid throws:
 
-```
+```brightscript
 THROW 1
 THROW []
 THROW { number: "I am not a number!" }
@@ -192,7 +192,7 @@ THROW { backtrace: [ {function: "main()", line_number: "Five"} ] }
 
 Custom information fields can be added to an exception without invalidating the `THROW`, so long as system-defined fields are left undisturbed. The custom fields can then be read by the `CATCH`-block that handles the exception. Roku recommends that any custom fields have names that begin with "`custom`"; fields with such names will not accidentally overwrite either existing system-defined fields, or any fields that Roku may eventually add to exception objects.
 
-```
+```brightscript
 try
     fetch_web_page()
 catch e
@@ -210,7 +210,7 @@ An exception object that has been caught is a valid argument to `THROW`. This is
 
 #### Reacting to an error without handling it
 
-```
+```brightscript
 try
     if m.already_failed_once <> true then do_something_which_might_fail()
 catch e
@@ -221,7 +221,7 @@ end try
 
 #### Handling only some errors
 
-```
+```brightscript
 LIBRARY "v30/bslCore.brs"
 
 sub main()
@@ -263,7 +263,7 @@ For example, `TRY`/`CATCH` blocks can be nested arbitrarily to provide multiple 
 
 Below, although calling `reciprocal(0)` causes a division by zero, the function handles that exception itself, so the `TRY`/`CATCH` block in `main` *never* catches anything:
 
-```
+```brightscript
 function reciprocal(x)
     try
         return 1/x
@@ -287,7 +287,7 @@ end sub
 
 Here is an alternative that calculates the reciprocal directly in `main`:
 
-```
+```brightscript
 sub main()
     print "Starting"
     try
@@ -307,7 +307,7 @@ end sub
 
 An outer `TRY`/`CATCH` block can handle errors caused in an inner `CATCH`:
 
-```
+```brightscript
 sub main()
     print "Starting"
     x = "I'm not an array"
@@ -327,7 +327,7 @@ end sub
 
 Here is a variation, in which a `CATCH` itself contains a `TRY`/`CATCH` block, which, in turn catches any errors that *it* produces:
 
-```
+```brightscript
 sub main()
     print "Starting"
     x = "I'm not an array"
@@ -346,7 +346,7 @@ end sub
 
 Extracting the diagnostic portion into a separate subroutine yields the same results:
 
-```
+```brightscript
 sub diagnose(x)
     try
         print "I think that failed because ";x[0];" isn't a number"

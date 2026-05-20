@@ -358,7 +358,7 @@ There are several conditions that must be checked to see if 4K UHD content can b
   - (Optional) Check if the device decrypts within a trusted execution environment (TEE).
 
 
-```
+```brightscript
 function CanPlay4K() as Boolean
   dev_info = CreateObject("roDeviceInfo")
   hdmi_status = CreateObject("roHdmiStatus")
@@ -399,7 +399,7 @@ end function
 
 HDR10 playback requires HDMI version 2.0a. HDCP version 2.2, and an HDR10 capable player and display. Apps can check if the Roku device and connected display support HDR10 with **GetDisplayProperties().hdr10** field of the [roDeviceInfo](doc:ifdeviceinfo) component.
 
-```
+```brightscript
 function canPlayHDR() as Boolean
   dev_info = createObject("roDeviceInfo")
   return dev_info.getDisplayProperties().hdr10

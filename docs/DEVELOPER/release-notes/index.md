@@ -1340,7 +1340,7 @@ ReadAsciiFile() now supports UTF-16 files ([**Global Utility Functions**](doc:gl
 
   Example:
 
-```
+```brightscript
   aa = { a: 2, b: 1, c: 3 }
   for each x in aa
     print x;" from ";aa

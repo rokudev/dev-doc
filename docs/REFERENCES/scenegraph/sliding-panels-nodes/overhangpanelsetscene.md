@@ -16,7 +16,7 @@ Extends [**Scene**](doc:scene)
 
 The OverhangPanelSetScene node class provides a convenient way to create a Scene node that has set with default Overhang and PanelSet nodes. The layout of the Overhang and PanelSet use the default sizes for SDK2 apps. The node provides access to the PanelSet and Overhang via fields that contain the node objects.
 
-```
+```brightscript
 scene = screen.CreateScene("OverhangPanelSetScene")
 ```
 

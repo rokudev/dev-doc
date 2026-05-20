@@ -104,7 +104,7 @@ An roByteArray object containing PNG image data for the specified area of the bi
 
 #### Example
 
-```
+```brightscript
 function SaveTestPng()
     w = 200 : h = 100
     bm = CreateObject("roBitmap", {width: w, height: h, AlphaEnable: true})
@@ -143,7 +143,7 @@ By default, alpha blending is off. Even when alpha blending is off, the alpha va
 
 #### Example
 
-```
+```brightscript
 function Main()
     s=CreateObject("roScreen")
     ' Clear to White with alpha fully opaque

@@ -167,7 +167,7 @@ Returns the index of the captions mode, which may be one of the following values
 
 #### Example: isCaptionModeChanged() Event
 
-```
+```brightscript
 function showVideoScreen(episode as Object)
   port = CreateObject("roMessagePort")
   screen = CreateObject("roVideoScreen")

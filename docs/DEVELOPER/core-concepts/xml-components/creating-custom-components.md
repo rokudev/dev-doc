@@ -94,7 +94,7 @@ focus.
 
 **MainScene.brs file**
 
-```
+```brightscript
 function init() as void
     customView = CreateObject("roSGNode", "CustomView")
     m.top.appendChild(customView)

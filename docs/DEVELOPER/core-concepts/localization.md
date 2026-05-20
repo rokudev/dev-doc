@@ -64,13 +64,13 @@ string in the `translations.xml` file, then finds the
 corresponding string translation in the file for the current locale. To
 use the `tr()` function to localize a specific *source* string:
 
-```
+```brightscript
 tr(String source) as String
 ```
 
 For example, to translate the string "hello world" in BrightScript:
 
-```
+```brightscript
 m.greetinglabel.text = tr("hello world")
 ```
 
@@ -86,7 +86,7 @@ assigned to the `text` field.
 
 The `tr()` function also supports string substitutions. For example:
 
-```
+```brightscript
 text = tr("Video will start in %1 seconds").Replace("%1", numSeconds.ToStr())
 ```
 
@@ -140,7 +140,7 @@ graphical image.
 
 For example:
 
-```
+```brightscript
 localize = createObject("RoLocalization")
 bannerposter = m.top.findNode("bannerPoster")
 bannerposter.uri = localize.GetLocalizedAsset("images", "banner.png")
@@ -148,7 +148,7 @@ bannerposter.uri = localize.GetLocalizedAsset("images", "banner.png")
 
 Is equivalent to:
 
-```
+```brightscript
 bannerposter = m.top.findNode("bannerPoster")
 bannerposter.uri = "pkg:/locale/images/banner.png"
 ```

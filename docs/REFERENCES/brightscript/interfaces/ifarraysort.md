@@ -35,7 +35,7 @@ next:
 
 #### Examples
 
-```
+```brightscript
     a=[3, 1, 2]
     a.Sort()
     print a
@@ -77,7 +77,7 @@ Performs a stable sort of an array of associative arrays by value of a common fi
 
 #### Examples
 
-```
+```brightscript
     a=[ {id:3, name:"Betty"}, {id:1, name:"Carol"}, {id:2, name:"Anne"} ]
     a.SortBy("name")
     ' sets the array to [ {id:2, name:"Anne"}, {id:3, name:"Betty"}, {id:1, name:"Carol"} ]
@@ -95,7 +95,7 @@ Reverses the order of elements in an array.
 
 #### Example
 
-```
+```brightscript
     a=[1, "one", 2, "two"]
     a.Reverse()
     ' sets the array to ["two", 2, "one", 1]

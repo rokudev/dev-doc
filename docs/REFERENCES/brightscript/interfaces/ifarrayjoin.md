@@ -40,7 +40,7 @@ A String containing the array elements.
 
 #### Examples
 
-```
+```brightscript
     a = ["ant","bat","cat"]
     s = a.Join(",")
     print """" + s + """"

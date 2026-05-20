@@ -20,7 +20,7 @@ This object is created with no parameters:
 
 **Example**
 
-```
+```brightscript
 remoteInfo = CreateObject("roRemoteInfo")
 print remoteInfo.GetModel(0)
 print remoteInfo.IsAwake(0)
@@ -31,7 +31,7 @@ print remoteInfo.hasFeature("voicecapture", 0)
 
 The output from the above code could be as follows:
 
-```
+```brightscript
 538
 false
 true

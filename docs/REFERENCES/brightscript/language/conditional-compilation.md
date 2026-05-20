@@ -25,7 +25,7 @@ and has the form:
 
 **Examples of valid expressions**
 
-```
+```brightscript
 #const someFlag = true
 #const anotherFlag = false
 #const someOtherFlag = someFlag
@@ -66,7 +66,7 @@ There are a variety of ways Conditional compilation can be used:
 
 **Example demonstrating use of manifest constants**
 
-```
+```brightscript
 #if someFlag
     'code to execute when someFlag is true
 #else if anotherFlag
@@ -77,7 +77,7 @@ There are a variety of ways Conditional compilation can be used:
 
 **Example demonstrating locally scoped constants**
 
-```
+```brightscript
 #const FeatureA = true
 #const FeatureB = false
 
@@ -96,7 +96,7 @@ An `#error` constant can also be used to force a compilation error with an error
 
 **Example demonstrating usage of \#error constant**
 
-```
+```brightscript
 #const FeatureAImplemented = true
 
 #if FeatureAImplemented
@@ -114,7 +114,7 @@ Conditional compilation can also be used to form block comments. Previously, eac
 
 **Example of code block comments**
 
-```
+```brightscript
 #if false
     This is a function that does nothing.
     This function takes no parameters.
@@ -129,7 +129,7 @@ end function
 
 **Example of commenting out code**
 
-```
+```brightscript
 #if false
     function Order66() as void
         'code for Order66

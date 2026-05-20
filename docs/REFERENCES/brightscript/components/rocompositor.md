@@ -18,7 +18,7 @@ This object can create and manage roSprites in a z-ordered list. The sprites can
 
 **Example: Scrolling a bitmap**
 
-```
+```brightscript
 Library "v30/bslCore.brs"
 
 function main()

@@ -26,7 +26,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
   Before calling the **StartVoiceActionSelectionRequest()** function, developers can call the [roDeviceInfo.HasFeature("handsfree_voice")](doc:ifdeviceinfo#hasfeaturefeature-as-string-as-boolean) function to check whether a Roku device is paired with a hands-free Roku remote control.
 
-  ```
+  ```brightscript
   appMgr = CreateObject("roAppManager")
   deviceInfo = CreateObject("roDeviceInfo")
   ' channel is launched and profile selection screen is displayed
@@ -37,7 +37,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
 * **Profile selection via registered/matched text strings**. Apps can call  the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager) function to register a list of text strings, such as user profile names, that can be matched to voice requests.
 
-  ```
+  ```brightscript
   appMgr = CreateObject("roAppManager")
   profile1 = { text: "kids", link: "d46ge-i8Y5-192"}
   profile2 = { text: "Jane", link: "2a2Nu-u1D4-555"}
@@ -50,7 +50,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
   When the name uttered by the user matches the registered text string, the matched text string is provided to the app via the [roInput voice command handler](doc:ifinput). Specifically, if the **command** received by the handler is "action", the associative array returned by the [**roInputEvent.GetInfo()**](doc:roinputevent) method includes a **text** field that is set to the matched text string.
 
-  ```
+  ```brightscript
   function handleTransport(evt)
       cmd = evt.command
       ret = {status: "unhandled"}
@@ -68,7 +68,7 @@ To implement voice support for a profile selection screen, integrate the followi
 
   Specifically, if the **command** received by the handler is "select", the associative array returned by the [**roInputEvent.GetInfo()**](doc:roinputevent) method includes a **ordinal** field that is set to a numerical value corresponding to the ordinal number spoken by the user. Values may range between 1–6 (one-based indexing is used).
 
-  ```
+  ```brightscript
   function handleTransport(evt)
         cmd = evt.command
         ret = {status: "unhandled"}

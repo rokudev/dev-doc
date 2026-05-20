@@ -30,7 +30,7 @@ next:
 
 Given the rendezvous penalties, don't repeatedly reference the same fields in `m.global` to get data subsections. Use temporaries to hold references to successive parts of the tree. For example, assume that you have a large set of app configuration data stored in `m.global.config`. This data is a large web with elements (AAs or node trees) for settings, analytics, etc.:
 
-```
+```brightscript
 m.global
 {
     config

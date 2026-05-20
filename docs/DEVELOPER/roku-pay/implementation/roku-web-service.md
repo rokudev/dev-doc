@@ -106,7 +106,7 @@ For TVOD apps,  the `isEntitled` flag is set to "false"; therefore, your entitle
 
 #### Request example:
 
-```
+```http
 GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/{transactionid}
 ```
 
@@ -303,7 +303,7 @@ The `validate-refund` API is used to verify that a Roku Pay purchase has been re
 
 **Request syntax:**
 
-```
+```http
 GET https://apipub.roku.com/listen/transaction-service.svc/validate-refund/{partnerAPIKey}/{refundId}
 ```
 
@@ -379,7 +379,7 @@ The `cancel-subscription` API cancels the subscription corresponding to the spec
 
 **Method/URL**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/cancel-subscription
 ```
 
@@ -452,7 +452,7 @@ The sum of all partial refunds applied against any given transaction cannot exce
 
 **Method/URL**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/refund-subscription
 ```
 
@@ -516,7 +516,7 @@ Set the `newBillCycleDate` to the updated date on which the user should be bille
 
 **Method/URL**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/update-bill-cycle
 ```
 
@@ -578,7 +578,7 @@ The response will include a `partnerReferenceId` that can be used later to find 
 
 **Request example:**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
 ```
 

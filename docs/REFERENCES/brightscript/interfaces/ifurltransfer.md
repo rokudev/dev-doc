@@ -38,7 +38,7 @@ A unique number for the object.
 
 #### Example
 
-```
+```brightscript
 function Setup()
     m.pendingXfers = {}
 end function

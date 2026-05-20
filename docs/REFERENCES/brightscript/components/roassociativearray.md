@@ -14,7 +14,7 @@ next:
 
 An associative array (also known as a map, dictionary or hash table) allows objects to be associated with string keys. Associative arrays are built into the language. They can be accessed implicitly by using the dot or bracket operators, or by calling functions from the [ifAssociativeArray](doc:ifassociativearray) interface. For example, the last three lines in this example are equivalent:
 
-```
+```brightscript
 aa = { one : 1, two : 2, three : 3 }
 x = aa["two"]
 x = aa.two
@@ -23,7 +23,7 @@ x = aa.Lookup("two")
 
 This object is created with no parameters:
 
-```
+```brightscript
 CreateObject("roAssociativeArray")
 ```
 
@@ -33,7 +33,7 @@ Starting from [Roku OS 8](doc:release-notes#roku-os-8), the quoted keys in Assoc
 
 **Example**
 
-```
+```brightscript
 ' Creation of associative arrays
 aa1 = CreateObject("roAssociativeArray")   ' Explicitly
 aa2 = {}                                   ' Implicitly

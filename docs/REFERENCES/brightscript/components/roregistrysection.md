@@ -22,7 +22,7 @@ This object must be supplied with a "section" name on creation. If no such secti
 
 **Example: Get and set some user authentication in the registry**
 
-```
+```brightscript
 function GetAuthData() as Dynamic
      sec = CreateObject("roRegistrySection", "Authentication")
      if sec.Exists("UserRegistrationToken")

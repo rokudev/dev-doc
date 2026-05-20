@@ -389,7 +389,7 @@ An roAssociativeArray containing the Roku account information passed in the meth
 
 #### Sign-up example
 
-```
+```brightscript
 store = CreateObject("roChannelStore")
 
 ' Request user's email, phone, first name, and last name for sign-up
@@ -398,7 +398,7 @@ userData = store.GetPartialUserData("email, phone, firstname, lastname")
 
 #### Sign-in example
 
-```
+```brightscript
 store = CreateObject("roChannelStore")
 
 ' Request user's email for sign-in
@@ -510,7 +510,7 @@ An associative array that contains the following fields:
 
 Generates a signed JSON web token (JWT) in the Roku cloud and returns it to the app. This token can then be used by the publisher's web services to verify that a message originated from a genuine Roku device. The following example demonstrates how to generate the device attestation token:
 
-```
+```brightscript
 store  = CreateObject("roChannelStore")
 nonce = GetRandomHexString(16)
 token = store.GetDeviceAttestation(nonce)
@@ -526,7 +526,7 @@ token = store.GetDeviceAttestation(nonce)
 
 The generated JWT token. The following demonstrates a sample JWT that is returned to the app. Developers can use a [JWT debugger](https://jwt.io/#debugger-io) to decode this token.
 
-```
+```text
 eyJ4NXUiOiJodHRwczovL2V4YW1wbGUucm9rdS5jb20vc2FtcGxlY2VydCIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJuYmYiOjE2NTYzNzQyNzQsIngtcm9rdS1hdHRlc3RhdGlvbi1kYXRhIjp7Im5vbmNlIjoiNUUwNjkyRTBBMzg5RjRGNiIsImNoYW5uZWxJZCI6ImRldiIsImRldmVsb3BlcklkIjoiY2FhNzNmYmI1ZTc1YTQ2YTRiNjExNGRlNTFhNWFkYTdkNjE2ZTJlZCIsInRpbWVzdGFtcE1zIjoxNjU2Mzc3ODczOTkwfSwiaXNzIjoidXJuOnJva3U6Y2xvdWQtc2VydmljZXM6ZGV2aWNlLWF0dGVzdGF0aW9uIiwiZXhwIjoxNjU2NDY0Mjc0fQ.nywDvSUys27oeaQZ3yXwNBfOnXbO-TUDuekOPZYjSssfZhNhWwRXvPLbJKHcNMR5Z0vFOQLVDFeqEVGauIMxMEke5UFLuCRxhr3ayBJJPt_BPfrEFbAvYjFEGdKkxJqYUhuFE38R8lU2k7dhO0iFxDw1Qq7W4w8_7CjmDy4YFf7IfyhV7Vf2kGiOx5C94Niw5N2td3s21F3z77Rq_bofQ51DOKIwo_cDVuvPQnDyxG-CNEydZKCZZwGPYCKEHMPrIOOXJ-S9ZjArgaEpBUpMXWJibFxnkpVUVzbC22GEaqz_SjOJXFMQU7TaCKkDeCYVKylgKwCvbvHRDlgogf7kqg
 
 ```
@@ -539,7 +539,7 @@ To verify the JWT, developers must [download the Roku device attestation token c
 
 The decoded JWT contains the following fields:
 
-```
+```brightscript
 "x-roku-attestation-data":}
     "nonce": "5E0692E0A389F4F6",
     "channelId": "dev",

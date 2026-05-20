@@ -323,7 +323,7 @@ Takes the key-value pairs in an roAssociativeArray and maps the values to the re
 
 The following example demonstrates how to use this method:
 
-```
+```brightscript
 aa = {"a":"1", "b":"2", "c":"3", "d":"4"}
 cn = createObject("roSGNode", "contentNode")
 cn.addfield("a","string",false)

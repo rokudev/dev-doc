@@ -18,7 +18,7 @@ The `onKeyEvent()` function receives remote control key events from the Roku OS,
 
 #### Syntax
 
-```
+```brightscript
 function onKeyEvent(_key_ as String, _press_ as Boolean) as Boolean
     ...
 end function
@@ -65,7 +65,7 @@ The following `onKeyEvent()` example handles supported remote control key presse
 
 **onKeyEvent() event handling example**
 
-```
+```brightscript
 function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
   if press then

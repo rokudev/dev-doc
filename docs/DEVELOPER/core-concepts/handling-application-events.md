@@ -20,7 +20,7 @@ You can pass data between threads without incurring rendezvous or blocking a Tas
 
 #### Task thread
 
-```
+```brightscript
 my_array = { str_key: "my_string", int_key: 42 }
 rtq = CreateObject("roRenderThreadQueue")
 rtq.PostMessage("result_array", my_array)
@@ -29,7 +29,7 @@ print my_array
 
 This will result in the following being printed to the console. The array is empty because passing it to `PostMessage()` caused its contents to be moved to the Render thread. Also note that the print happens immediately and is not blocked by the handler running on the Render thread.
 
-```
+```text
 <Component: roAssociativeArray> =
 {
 }
@@ -39,7 +39,7 @@ This will result in the following being printed to the console. The array is emp
 
 Setting up a message handler is very similar to setting up a field observer.
 
-```
+```brightscript
 rtq = CreateObject("roRenderThreadQueue")
 rtq.AddMessageHandler("result_array", "OnTaskResultArrayRTQ")
 
@@ -51,7 +51,7 @@ end sub
 
 This will result in the following being printed to the console. The data parameter will contain the same values that were passed to `PostMessage()` on the Task thread.
 
-```
+```text
 <Component: roAssociativeArray> =
 {
     int_key: 42
@@ -63,7 +63,7 @@ This will result in the following being printed to the console. The data paramet
 
 **Nested functions example**
 
-```
+```brightscript
 function init()
     m.top.observeField("f1", "c1")
     m.top.observeField("f2", "c2")
@@ -149,7 +149,7 @@ The following `onKeyEvent()` example handles supported remote control key presse
 
 **onKeyEvent() event handling example**
 
-```
+```brightscript
 function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
   if press then
@@ -181,13 +181,13 @@ There are two [ifSGNodeField](doc:ifsgnodefield) methods that allow you to creat
 
 `observeField()` is an overloaded method with two versions, useful for different purposes. The first allows you to trigger a specified callback function in response to any change in the value of the observed node field. For example, to set up an observer of a [Timer](doc:timer) node `fire` field that calls a `handleexampletimerfire()` event handler function that you write:
 
-```
+```brightscript
 exampletimer.ObserveField("fire", "handleexampletimerfire")
 ```
 
 Once this observer is set up, the component will continuously monitor the `exampletimer` node object `fire` field for the remaining existence of the component or node, or until `unobserveField()` is called (perhaps as part of the event handler function itself):
 
-```
+```brightscript
 exampletimer.unobserveField("fire")
 ```
 
@@ -229,7 +229,7 @@ Here is an example of a field observer and the associated event handler function
 
 The second version of `observeField()` lets you specify a message port to notify when the observed field changes:
 
-```
+```brightscript
 m.texttimer.ObserveField("fire", m.port)
 ```
 

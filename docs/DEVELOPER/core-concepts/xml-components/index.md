@@ -30,7 +30,7 @@ created by either declaring it in another XML component file:
 Or using the `createObject()` function to create an
 [**roSGNode**](doc:rosgnode) object:
 
-```
+```brightscript
 createObject("roSGNode", "Gizmo")
 ```
 

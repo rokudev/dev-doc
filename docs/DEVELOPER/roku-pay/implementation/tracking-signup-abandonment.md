@@ -102,7 +102,7 @@ To use the Roku Event Dispatcher in your app's signup workflow to send events, f
 
    The following example demonstrates how to send signup events:
 
-   ```
+   ```brightscript
    sub Notify_Roku_UserIsLoggedIn(rsgScreen = invalid as Object)
        ' get the global node
        if type(m.top) = "roSGNode"  ' was called from a component script

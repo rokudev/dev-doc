@@ -85,7 +85,7 @@ Updates video or audio [content metadata](doc:content-metadata) during playback.
 
 #### Example
 
-```
+```brightscript
 appmgr = CreateObject("roAppManager")
 appmgr.SetNowPlayingContentMetaData({
  title: "The Gambler",
@@ -95,7 +95,7 @@ appmgr.SetNowPlayingContentMetaData({
 
 To revert an update, pass `invalid` in this method:
 
-```
+```brightscript
 appmgr.SetNowPlayingContentMetaData(invalid)
 ```
 
@@ -138,7 +138,7 @@ When there is a match (the name uttered by the user matches the registered text 
 
 #### Example
 
-```
+```brightscript
 appMgr = CreateObject("roAppManager")
 
 profile1 = { text: "kids", link: "d46ge-i8Y5-192" }
@@ -207,7 +207,7 @@ An roAssociativeArray the following information about the most recent app exits.
 
 The following sample demonstrates how to use the **GetLastExitInfo()** function.
 
-```
+```brightscript
 appManager = CreateObject("roAppManager")
 closureDump = appManager.GetLastExitInfo()
 

@@ -53,7 +53,7 @@ The network format of the protocol adheres to the following rules:
 
 After an app is launched with a request to enable remote debugging, the firmware waits for a connection from the remote debugger client. Immediately after a connection is established, an initial handshake is then performed. The handshake consists of the following data being sent by each end of the connection:
 
-```
+```c
 struct HandshakeToDVP {    // DVP = Digital Video Player (Roku device)
     uint64 magic_number;   // 0x0067756265647362LU
 };
@@ -152,7 +152,7 @@ The behavior after the handshake has been executed, depends on the version of th
 
 Remote debugging clients can send a debugger request to the debugging target (for example, the script group) using the following packet structure for the network byte stream:
 
-```
+```c
 struct DebuggerRequest {
     uint32 packet_length;
     uint32 request_id;
@@ -268,7 +268,7 @@ struct DebuggerRequest {
 
 The debugger sends responses to DebuggerRequest messages in the following format:
 
-```
+```c
 struct DebuggerResponse {
     uint32 packet_length;
     uint32 request_id;
@@ -388,7 +388,7 @@ struct DebuggerResponse {
 
 The debugger sends an update message when a state change occurs in the application being debugged, which may or may not have been requested by the debugging client or user. DebuggerUpdate messages have a similar format as DebuggerResponse messages, except that the **request_id** is always **0**, and it includes an **update_type** field, which specifies the type of update being sent.
 
-```
+```c
 struct DebuggerUpdate {
 		uint32 packet_length;
 		uint32 request_id;
@@ -553,7 +553,7 @@ struct DebuggerUpdate {
 
 If the **update_type** in a DebuggerUpdate message is set to ALL_THREADS_STOPPED, the **data** field contains a structure named **AllThreadsStoppedUpdateData** that provides the reason for the stop. The **AllThreadsStoppedUpdateData** structure has the following syntax:
 
-```
+```c
 struct AllThreadsStoppedUpdateData{
 		int32 primary_thread_index;
 		uint8 stop_reason;
@@ -639,7 +639,7 @@ struct AllThreadsStoppedUpdateData{
 
 If the **update_type** in a DebuggerUpdate message is set to THREAD_ATTACHED, the **data** field contains a structure named **ThreadAttachedUpdateData** that provides the reason for the stop. The **ThreadAttachedUpdateData** structure has the following syntax (see [AllThreadsStopped](#allthreadsstopped) for the details of each field):
 
-```
+```c
 struct ThreadAttachedUpdateData{
      int32 thread_index;
      uint8 stop_reason;
@@ -651,7 +651,7 @@ struct ThreadAttachedUpdateData{
 
 A BREAKPOINT_ERROR is sent if a compilation or runtime error occurs while evaluating the cond_expr of a conditional breakpoint. In this case, the **update_type** field in a DebuggerUpdate message is set to BREAKPOINT_ERROR, and the **data** field contains a structure named **BreakpointErrorUpdateData** that provides the reason for the error. The **BreakpointErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct BreakpointErrorUpdateData {
     uint32                    flags;
     uint32                    breakpoint_id;
@@ -679,7 +679,7 @@ struct BreakpointErrorUpdateData {
 
 A COMPILE_ERROR is sent if a compilation error occurs. In this case, the **update_type** field in a DebuggerUpdate message is set to COMPILE_ERROR, and the **data** field contains a structure named **CompileErrorUpdateData** that provides the reason for the error. The **CompileErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct CompileErrorUpdateData {
     uint32 flags;
     utf8z  error_string;
@@ -703,7 +703,7 @@ _Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
 A BREAKPOINT_VERIFIED message is sent when a breakpoint has successfully been applied to an executable line of code. Breakpoints may be added at any time; however, the changes may not be applied immediately if the debug target is running.  In this case, the **update_type** field in a DebuggerUpdate message is set to BREAKPOINT_VERIFIED, and the **data** field contains a structure named **BreakpointVerifiedUpdateData** that provides the ID assigned to the verified breakpoint. The **BreakpointVerifiedUpdateData** structure has the following syntax:
 
-```
+```c
 struct BreakpointVerifiedUpdateData {
     uint32 flags // Reserved for future use
     uint32 num_breakpoints
@@ -711,7 +711,7 @@ struct BreakpointVerifiedUpdateData {
 }
 ```
 
-```
+```c
 struct VerifiedBreakpointInfo {
     uint32 breakpoint_id
 }
@@ -767,14 +767,14 @@ _Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
 A PROTOCOL_ERROR message is sent when an unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated. In this case, the **update_type** field in a DebuggerUpdate message is set to PROTOCOL_ERROR, and the **data** field contains a structure named **ProtocolErrorUpdateData** that provides the reason for the protocol error. The **ProtocolErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct ProtocolErrorUpdateData {
     uint32 flags // Reserved for future use
     uint32 protocol_error_code
 }
 ```
 
-```
+```c
 enum ProtocolErrorCode {
     UNDEFINED = 0,
     IO_CONSOLE_FAIL = 1
@@ -829,7 +829,7 @@ enum ProtocolErrorCode {
 
 An EXCEPTION_BREAKPOINT_ERROR is sent if a compilation or runtime error occurs while evaluating the cond_expr of an exception breakpoint. In this case, the **update_type** field in a DebuggerUpdate message is set to EXCEPTION_BREAKPOINT_ERROR, and the **data** field contains a structure named **ExceptionBreakpointErrorUpdateData** that provides the reason for the error. The **ExceptionBreakpointErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct ExceptionBreakpointErrorUpdateData {
     uint32                    flags;
     uint32                    filter_id;
@@ -951,7 +951,7 @@ The BrightScript debugger supports the following debug commands:
 
 The **ThreadsResponse** struct has the following syntax:
 
-```
+```c
 struct ThreadsResponse{
     uint32 threads_count;
     ThreadInfo[] threads;
@@ -1082,7 +1082,7 @@ struct ThreadsResponse{
 
 The **StackTraceReponse** struct has the following syntax:
 
-```
+```c
 struct StackTraceResponse{
     uint32 stack_size;
     StackEntry[] entries;
@@ -1225,7 +1225,7 @@ struct StackTraceResponse{
 
 The **VariablesResponse** struct has the following syntax:
 
-```
+```c
 struct VariablesResponse{
     uint32 num_variables;
     VariableInfo[] variables;
@@ -1439,7 +1439,7 @@ Dynamic breakpoints enable developers to navigate through the app, inspect its s
 
 The **AddBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct AddBreakpointsRequestArgs {
     uint32 num_breakpoints;
     BreakpointSpec[] breakpoints;
@@ -1504,7 +1504,7 @@ struct AddBreakpointsRequestArgs {
 
 The **AddBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct AddBreakpointsResponseData {
     uint32 num_breakpoints;
     BreakpointInfo[] breakpoint_responses;
@@ -1589,7 +1589,7 @@ struct AddBreakpointsResponseData {
 
 The **ListBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct ListBreakpointsResponseData {
     uint32 num_breakpoints;
     BreakpointInfo[] breakpoints;
@@ -1676,7 +1676,7 @@ struct ListBreakpointsResponseData {
 
 The **RemoveBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct RemoveBreakpointsRequestArgs {
     uint32 num_breakpoints;
     uint32[] breakpoint_ids;
@@ -1692,7 +1692,7 @@ struct RemoveBreakpointsRequestArgs {
 
 The **RemoveBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct RemoveBreakpointsResponseData {
     uint32 num_breakpoints;
     BreakpointInfo[] breakpoint_infos;
@@ -1783,7 +1783,7 @@ Use the LIST_BREAKPOINTS debugging command to get the existing conditional break
 
 The **AddConditonalBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct AddBreakpointsRequestArgs {
     uint32 flags;
     uint32 num_breakpoints;
@@ -1860,7 +1860,7 @@ struct AddBreakpointsRequestArgs {
 
 The **AddConditonalBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct AddConditonalBreakpointsResponseData {
     uint32 num_breakpoints;
     ConditionalBreakpointInfo[] breakpoint_responses;
@@ -1951,7 +1951,7 @@ Exception breakpoints enable developers to pause the debugger whenever a runtime
 
 The **SetExceptionBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct SetExceptionBreakpointsRequestArgs {
     uint32 num_breakpoints;
     ExceptionBreakpointSpec[] breakpoints;
@@ -2030,7 +2030,7 @@ struct SetExceptionBreakpointsRequestArgs {
 
 The **SetExceptionBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct SetExceptionBreakpointsResponseData {
     uint32 num_breakpoints;
     ExceptionBreakpointInfo[] breakpoint_responses;

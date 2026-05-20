@@ -143,7 +143,7 @@ Three types of `<target(s)>` are allowed:
 
 Available options:
 
-```
+```brightscript
 --target arg                      The file(s) or directory on which to operate.
 -t [ --timestamp-multiplier ] arg The absolute presentation timestamp (PTS)
                                   in milliseconds is the filename multiplied

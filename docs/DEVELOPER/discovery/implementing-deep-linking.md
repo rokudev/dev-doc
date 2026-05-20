@@ -42,13 +42,13 @@ Deep link requests contain two key parameters: **contentid** and **mediaType**.
 
 The following example demonstrates a deep link request sent to an app.  The [**source** parameter](doc:dev-environment#source-parameter) specifies the origin of the deep link request (in this case, it is from [Roku Search](doc:implementing-search)):
 
-```
+```text
 http://192.168.1.114:8060/launch/50000?contentId=myAwesomeShow|Season=1|Episode=1&mediaType=series&source=hs-search
 ```
 
 The app receives the deep link parameters as an associative array as demonstrated in the following example (see [Implementing Deep Linking](#implementing-deep-linking) for more information on handling these parameters; see [Using the debug console for troubleshooting deep linking parameters](#using-the-debug-console-for-troubleshooting-deep-linking-parameters) for how to check the deep linking parameters being sent to your app):
 
-```
+```text
 <Component: roAssociativeArray> =
   {
       action: "display"
@@ -168,7 +168,7 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
 
 3. If the contentId and mediaType are valid, launch the specified content item using the appropriate [launch behavior for the mediaType](doc:implementing-deep-linking). If either the contentId or mediaType are invalid, launch the app home page.
 
-   ```
+   ```brightscript
    if (args.mediaType = "movie" or args.mediaType = "episode" or args.mediaType = "shortFormVideo" or args.mediaType = "series" or args.mediaType = "tvSpecial")
      if valid_contentId(contentId) ' You define this function in your back-end
        'play content directly, starting at last bookmarked position
@@ -195,7 +195,7 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
 
       See [Sample app](doc:implementing-deep-linking) to download and install a sample app that demonstrates how to use [roInputEvent](doc:roinputevent) to handle deep links while your app is running.
 
-      ```
+      ```brightscript
       '...
       screen = CreateObject("roSGScreen")
       m.port = CreateObject("roMessagePort")
@@ -263,7 +263,7 @@ You can test deep linking in an app by sending ECP commands via cURL to your Rok
 
 To test deep linking using ECP/cURL, send an HTTP POST request to port 8060 on your Roku device using the following syntax:
 
-```
+```text
 http://<roku-device-ip-address>:8060/<EcpCommand>/<channelId>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>
 ```
 
@@ -331,7 +331,7 @@ This is useful when troubleshooting deep links because it helps you identify the
 
 The following example demonstrates how to output the associative array containing the deep linking parameters:
 
-```
+```brightscript
 sub Main(args)
     '...
     if (args.mediaType <> invalid) and (args.contentId <> invalid)

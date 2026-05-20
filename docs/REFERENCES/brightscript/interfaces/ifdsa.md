@@ -168,7 +168,7 @@ Indicates the result of the validation. This may be one of the following values:
 
 #### Signing
 
-```
+```brightscript
 msg_ba = CreateObject("roByteArray")
 ' ...populate bytearray with the message...
 
@@ -184,7 +184,7 @@ signature = dsa.Sign(msg_ba)
 
 #### Verification
 
-```
+```brightscript
 msg_ba = CreateObject("roByteArray")
 ' ...populate bytearray with the message...
 
@@ -211,7 +211,7 @@ end if
 
 #### Signing
 
-```
+```brightscript
 msg_ba = CreateObject("roByteArray")
 ' ...populate bytearray with the message...
 
@@ -227,7 +227,7 @@ signature = dsa.Sign(msg_ba)
 
 #### Verification
 
-```
+```brightscript
 msg_ba = CreateObject("roByteArray")
 ' ...populate bytearray with the message...
 

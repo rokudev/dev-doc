@@ -555,9 +555,9 @@ Below is a list of key developer-facing Roku OS 10.5 updates:
 
 * [**New hdrMode field for getting the HDR playback state of content**](/docs/references/brightscript/events/rovideoplayerevent.md#isstreamsegmentinfo-as-boolean) — The [roVideoPlayerEvent.isStreamSegmentInfo](/docs/references/brightscript/events/rovideoplayerevent.md#isstreamsegmentinfo-as-boolean) function now provides the HDR playback state. An **hdrMode** field is now returned by the event's **GetInfo()** method. This field indicates whether playback is in SDR, HDR10, Dolby Vision, HLG10, HDR10+, or advanced HDR.
 
-* [**Initial segment format for multi-period server-stitched DASH manifest**](/docs/specs/media/dash-if.md#updates) — Support for DASH-IF in the Roku OS has been expanded to include the initial segment format for server-stitched manifests formatted with multi-periods.
+* [**Initial segment format for multi-period server-stitched DASH manifest**](/docs/specifications/media/dash-if.md#updates) — Support for DASH-IF in the Roku OS has been expanded to include the initial segment format for server-stitched manifests formatted with multi-periods.
 
-* [**SegmentTimeline for calculating time/duration in a DASH stream**](/docs/specs/media/dash-if.md#updates) — Support for DASH-IF in the Roku OS now includes using the SegmentTimeline to precisely identify segment availability. This supports the in-progress playback of content while it is being recorded. Specifically, the Roku OS DASH implementation now supports:
+* [**SegmentTimeline for calculating time/duration in a DASH stream**](/docs/specifications/media/dash-if.md#updates) — Support for DASH-IF in the Roku OS now includes using the SegmentTimeline to precisely identify segment availability. This supports the in-progress playback of content while it is being recorded. Specifically, the Roku OS DASH implementation now supports:
 
   * Initialization element with sourceURL attribute in under SegmentBase element.
   * RepresentationIndex element.
@@ -618,7 +618,7 @@ Below is a list of key developer-facing Roku OS 10.0 updates:
 
 * **Roku SceneGraph (RSG) performance enhancements** — Various RSG data structures have been optimized, and off-screen content nodes are now being managed on an app's behalf. This reduces app memory consumption, allowing internal cache mechanisms to be more effective in improving performance.
 
-* **[Support for UTCTiming in DASH](/docs/specs/media/dash-if.md#utctiming)** — The UTCTiming element is used in DASH manifests to allow the clocks employed by the server and player to remain in close synchronization. Without this, when there is a timing discrepancy of even as little as 100ms between the local and server clocks live video play can freeze, and audio and video can fall out of sync, as the player requests unavailable, out-of-window segments.
+* **[Support for UTCTiming in DASH](/docs/specifications/media/dash-if.md#utctiming)** — The UTCTiming element is used in DASH manifests to allow the clocks employed by the server and player to remain in close synchronization. Without this, when there is a timing discrepancy of even as little as 100ms between the local and server clocks live video play can freeze, and audio and video can fall out of sync, as the player requests unavailable, out-of-window segments.
 
 * [**ForwardDashQueryStringParams content metadata field**](/docs/developer-program/getting-started/architecture/content-metadata.md#playback-configuration-attributes) — This field enables apps to forward DASH manifest query parameters to segment URLS.
 
@@ -630,7 +630,7 @@ Below is a list of key developer-facing Roku OS 10.0 updates:
 
 * **[New SceneGraph Animation node field willBeSkipped](/docs/references/scenegraph/animation-nodes/animation.md#fields)**. This field indicates whether an animation runs or jumps to the end (effectively skipping the animation and rendering it in its final state).
 
-* **[DRM is no longer required for AES-128 key exchange using HLS and DASH](/docs/specs/media/content-protection.md).**
+* **[DRM is no longer required for AES-128 key exchange using HLS and DASH](/docs/specifications/media/content-protection.md).**
 
 * **[The HLS ASSOC-LANGUAGE audio rendition attribute is now supported](/docs/developer-program/media-playback/trick-mode/hls-and-dash.md#assoc-language-audio-rendition-attribute).** This **optional** attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect (e.g., Cantonese/"yue"), is represented in forced subtitles by a different but associated language (e.g., Traditional Chinese/"zh_HANT").
 
@@ -706,9 +706,9 @@ Below is a list of key developer-facing Roku OS 9.4 updates:
 
 * **Open SSL 1.1.1** — Roku OS now supports Open SSL 1.1.1. The OpenSSL version that was previously supported by Roku (1.0.2h) has reached end of life. OpenSSL 1.1.1 offers better performance and greater security, among other benefits.
 
-* **[Widevine v16](/docs/specs/media/content-protection.md#widevine)** — Roku OS now supports Widevine v16 DRM, including on older supported platforms.
+* **[Widevine v16](/docs/specifications/media/content-protection.md#widevine)** — Roku OS now supports Widevine v16 DRM, including on older supported platforms.
 
-* **[WebP image format](/docs/specs/media/index.md#supported-image-formats)** — The Roku platform now supports the WebP image format, which provides smaller compressed image files and faster decoding and rendering.
+* **[WebP image format](/docs/specifications/media/index.md#supported-image-formats)** — The Roku platform now supports the WebP image format, which provides smaller compressed image files and faster decoding and rendering.
 
 * **[DRM security level reporting](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfoex-as-object)** — The **ifDeviceInfo.GetDrmInfoEx()** method now returns the security levels of Widevine and PlayReady DRMs.
 
@@ -720,7 +720,7 @@ Below is a list of key developer-facing Roku OS 9.4 updates:
 
 * [**HDCP status reporting for HDMI connections improved**](/docs/references/brightscript/interfaces/ifhdmistatus.md#gethdcpversion-as-string) — The **roHdmiStatus.getHdcpVersion()** method now returns an empty string if HDCP is disabled.
 
-> Adobe has discontinued support for Adobe DRM. Roku OS 9.4 is the last firmware release that will support it. apps should switch to one of the following [Roku-supported DRMs](/docs/specs/media/content-protection.md) to protect content: Widevine, PlayReady, or AES-128.
+> Adobe has discontinued support for Adobe DRM. Roku OS 9.4 is the last firmware release that will support it. apps should switch to one of the following [Roku-supported DRMs](/docs/specifications/media/content-protection.md) to protect content: Widevine, PlayReady, or AES-128.
 
 #### Tools
 
@@ -762,8 +762,8 @@ Here is a list of key developer-facing Roku OS 9.3 updates:
 * **[SceneGraph Video node trickplay fields now include positionInfo](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) ** — This read-only Associative Array contains the positions of the last-rendered video and audio samples, respectively. Both positions are expressed as double(-floats), and the unit is one second.
 * **[New content meta-data drmParams attribute to support Widevine](/docs/developer-program/getting-started/architecture/content-metadata.md#digital-rights-management-drm-control-attributes) ** — The serviceCert attribute allows setting the Widevine service certificate.
 * **More granular DASH MPD Manifest data now accessible** — Apps can now obtain all relevant data from the DASH MPD Manifest.
-* **[Verimatrix DRM is deprecated](/docs/specs/media/content-protection.md) ** — As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](/docs/specs/media/content-protection.md)  for more information on implementing these DRMs.
-* **[Adobe DRM is deprecated](/docs/specs/media/content-protection.md) ** — As of Roku OS 9.3, support for Adobe DRM is deprecated.  The plugin will be removed from Roku OS in our Fall firmware update. Please make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](/docs/specs/media/content-protection.md)  for more information on implementing these DRMs.
+* **[Verimatrix DRM is deprecated](/docs/specifications/media/content-protection.md) ** — As of Roku OS 9.3, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](/docs/specifications/media/content-protection.md)  for more information on implementing these DRMs.
+* **[Adobe DRM is deprecated](/docs/specifications/media/content-protection.md) ** — As of Roku OS 9.3, support for Adobe DRM is deprecated.  The plugin will be removed from Roku OS in our Fall firmware update. Please make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](/docs/specifications/media/content-protection.md)  for more information on implementing these DRMs.
 
 #### Architecture
 
@@ -862,7 +862,7 @@ The [BrightScript Profiler](/docs/developer-program/dev-tools/brightscript-profi
 #### Media, DRM, and content meta-data updates
 
 * **Dash EventStream** - Dash EventStream elements are supported in Roku OS 9.
-* **[BETA] Opening Widevine DRM CBCS decryption mode** — Roku OS 9 adds CBCS decryption support for [Widevine DRM](/docs/specs/media/content-protection.md#widevine)  in DASH and HLS streams. At this stage, Widevine support is considered in beta on the Roku platform.
+* **[BETA] Opening Widevine DRM CBCS decryption mode** — Roku OS 9 adds CBCS decryption support for [Widevine DRM](/docs/specifications/media/content-protection.md#widevine)  in DASH and HLS streams. At this stage, Widevine support is considered in beta on the Roku platform.
 * **[BETA] DASH XLink support** -  Roku OS 9 adds DASH XLink support, including EventStream events that are surfaced to the app through the [timedMetaData](/docs/references/scenegraph/media-playback-nodes/video.md#fields)  field.
 * **Widevine key rotation** - Roku OS 9 also adds support for Widevine key rotation and license renewal for Dash and HLS content.
 
@@ -888,8 +888,8 @@ For our consumer release notes, [see here](https://support.roku.com/article/2288
 
 #### Media, DRM, and content meta-data updates
 
-* **PlayReady 3 Update** — All Roku devices with MStar chips update to the [PlayReady 3](/docs/specs/media/content-protection.md#playready) library with Roku OS 8.1. Previously they included PlayReady 2.5.
-* **[BETA] Opening Access to Widevine DRM** — Roku OS 8.1 adds support for [Widevine DRM](/docs/specs/media/content-protection.md#widevine) for DASH streams. At this stage, Widevine support is considered in beta on the Roku platform.
+* **PlayReady 3 Update** — All Roku devices with MStar chips update to the [PlayReady 3](/docs/specifications/media/content-protection.md#playready) library with Roku OS 8.1. Previously they included PlayReady 2.5.
+* **[BETA] Opening Access to Widevine DRM** — Roku OS 8.1 adds support for [Widevine DRM](/docs/specifications/media/content-protection.md#widevine) for DASH streams. At this stage, Widevine support is considered in beta on the Roku platform.
 * **Digital Rights Management (DRM) control attributes** — [Content metadata control attributes](doc:content-metadata#digital-rights-management-drm-control-attributes) for DRM have been added to the Roku OS.
 * **Passing custom HTTP headers to licensing requests** — Developers looking to pass custom HTTP headers with a licensing request can now set those headers using the [ifHttpAgent](/docs/references/brightscript/interfaces/ifhttpagent.md) interface methods on the [Video](/docs/references/scenegraph/media-playback-nodes/video.md) node.
 * **Media Player content metadata updates** — Two content metadata attributes of the Media Player have been updated and three new attributes have been added:

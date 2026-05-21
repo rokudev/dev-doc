@@ -31,11 +31,11 @@ To create a test user and add apps to it, follow these steps:
 
    ![roku600px - manage-test-user-index](https://image.roku.com/ZHZscHItMTc2/manage-test-user-index-v3.png)
 
-3.   In the **Add new test user** dialog, enter the email address of the test user. The test user must be the app's [root account user](doc:user-access-management). From the **Apps** list, select one or more apps on which the test user can make free purchases.
+3. In the **Add new test user** dialog, enter the email address of the test user. The test user must be the app's [root account user](doc:user-access-management). From the **Apps** list, select one or more apps on which the test user can make free purchases.
 
-   ![](https://files.readme.io/748c84f1a257be6e2465ed37517feabcdea6cdf76f267da51382142e7243177a-image.png)
+![](https://image.roku.com/ZHZscHItMTc2/add-new-test-user.png)
 
-   <br />
+<br />
 
 4. Click **Add test user**. The test user is listed in the **Manage test users** index page.
 

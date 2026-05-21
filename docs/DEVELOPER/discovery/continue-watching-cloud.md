@@ -267,7 +267,7 @@ curl --location --request GET 'https://apipub.roku.com/developer/v1/user-data/v1
 
 ### Update API
 
-To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md#add-api).
+To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](https://developer.roku.com/docs/developer/discovery/continue-watching.md#add-api).
 
 **Example (cURL):**
 

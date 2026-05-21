@@ -1,23 +1,23 @@
 ---
-title: "Creating test users"
-excerpt: 'Set up test users to make free in-app purchases and manage their transactions'
+title: Creating test users
+excerpt: Set up test users to make free in-app purchases and manage their transactions
 deprecated: false
 hidden: false
 metadata:
-  title: 'Creating test users | Roku Developer Docs'
-  description: 'Create test users in the Developer Dashboard to make free in-app purchases, then view or void transactions to re-test purchase workflows in your app.'
+  title: Creating test users | Roku Developer Docs
+  description: >-
+    Create test users in the Developer Dashboard to make free in-app purchases,
+    then view or void transactions to re-test purchase workflows in your app.
   robots: index
 next:
   description: ''
 ---
-
-
 Test users can make in-app purchases free-of-charge for testing purposes. This is useful for testing the Roku Pay integration in an app.
 
 > In order for a test user to make free in-app purchases on an app:
 >
-> - The test user must be associated with the app being tested.
-> - The test user's Roku account must be linked to the Roku device on which the app is installed.
+> * The test user must be associated with the app being tested.
+> * The test user's Roku account must be linked to the Roku device on which the app is installed.
 
 ## Adding a test user
 
@@ -27,24 +27,19 @@ To create a test user and add apps to it, follow these steps:
 
    ![roku600px -  - test users](https://image.roku.com/ZHZscHItMTc2/test-user-dashboard-2-v3.jpg)
 
+2. The **Manage test users** index page lists the email addresses and apps for each test user. Click **Add a new test user**.
 
-2. The **Manage test users** index page lists the email addresses and apps for each test user. Click **Add New Test User**.
+   ![roku600px - manage-test-user-index](https://image.roku.com/ZHZscHItMTc2/manage-test-user-index-v3.png)
 
-   ![roku600px - manage-test-user-index](https://image.roku.com/ZHZscHItMTc2/manage-test-user-index-v2.png)
+3.   In the **Add new test user** dialog, enter the email address of the test user. The test user must be the app's [root account user](doc:user-access-management). From the **Apps** list, select one or more apps on which the test user can make free purchases.
 
+   ![](https://files.readme.io/748c84f1a257be6e2465ed37517feabcdea6cdf76f267da51382142e7243177a-image.png)
 
-3. In the **Test User Email** box, enter the email address of the test user. The test user must be the app's [root account user](doc:user-access-management).
+   <br />
 
+4. Click **Add test user**. The test user is listed in the **Manage test users** index page.
 
-4. From the **Channels** list, select one or more apps on which the test user can make free purchases.
-
-   ![roku600px - add-test-user](https://image.roku.com/ZHZscHItMTc2/add-test-user-v2.png)
-
-
-5. Click **Add**. The test user is listed in the **Manage test users** index page.
-
-
-6. To edit the email address or apps of the test user, click **Edit**, make changes, and then click **Update**.
+5. To edit the email address or apps of the test user, click **Edit**, make changes, and then click **Update**.
 
 ## Viewing and voiding transactions
 
@@ -52,10 +47,8 @@ You can view all the transactions made by test users on your apps. You can also 
 
 1. Under the **Transactions** column in the test user's row, click **View**.
 
-
 2. The **Test user transaction** page lists each transaction made by the test user per app, including the purchase date, app name, transaction ID (used by the Roku Pay Web Service API for validating, refunding, and canceling purchases), and product name.
 
-   ![roku815px - void-test-user-transaction](https://image.roku.com/ZHZscHItMTc2/void-test-user-transaction-v2a.png)
+   ![roku815px - void-test-user-transaction](https://image.roku.com/ZHZscHItMTc2/void-test-user-transaction-v3.png)
 
-
-3. To void the transactions made by the test user on a specific app, click **Void transactions**. All transactions made by the test user on that app are permanently deleted. The transaction IDs of the voided transactions are not accessible via the Roku Pay Web Service API.
+3. To void the transactions made by the test user on a specific app, click **Void**. All transactions made by the test user on that app are permanently deleted. The transaction IDs of the voided transactions are not accessible via the Roku Pay Web Service API.

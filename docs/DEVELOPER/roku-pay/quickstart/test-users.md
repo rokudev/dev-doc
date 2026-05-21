@@ -43,7 +43,7 @@ To create a test user and add apps to it, follow these steps:
 
 ## Viewing and voiding transactions
 
-You can view all the transactions made by test users on your apps. You can also void all the transactions made by the test user on a specific to re-test the purchase workflows on that app with that test user. To view and void the transactions of a test user, follow these steps:
+You can view all the transactions made by test users on your apps. You can also void all the transactions made by the test user on a specific app to re-test the purchase workflows on that app with that test user. To view and void the transactions of a test user, follow these steps:
 
 1. Under the **Transactions** column in the test user's row, click **View**.
 

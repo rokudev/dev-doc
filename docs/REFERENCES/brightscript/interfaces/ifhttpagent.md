@@ -99,7 +99,7 @@ A flag indicating whether the HTTP header was successfully set.
 
 #### Description
 
-Initializes the object to be sent to the Roku client certificate.
+Initializes the Roku device's built-in client certificate for use in mutual TLS (mTLS) authentication. When called, the device will present its Roku-issued client certificate during the TLS handshake (if server requests it), allowing the server to verify that the request originates from a genuine Roku device running your specific app. For backend service verification purposes it is recommended to use [GetDeviceAttestation(nonce as String) as String](https://developer.roku.com/dev/docs/ifchannelstore#getdeviceattestationnonce-as-string-as-string) 
 
 > The Roku Developer Dashboard includes a link for downloading the [RokuTV Certification Authority](https://developer.roku.com/certificate). This CA can be passed to an app through this function.
 

@@ -96,7 +96,7 @@ When a deep link is sent to your app, it will include **contentId** and a **medi
       <td>Play the episode identified by the contentId. Use \[bookmarks]\(doc:bookmarking) to determine the playback position.</td>
     </tr>
     <tr>
-      <td>season (optional)</td>
+      <td>season</td>
       <td>As part of a series, single set of related TV episodes.</td>
       <td>Optionally, launch a content springboard that displays episodes organized by season; highlight the episode mapped to the contentid.<br />Season deep links are no longer being sent from Roku Search.</td>
     </tr>

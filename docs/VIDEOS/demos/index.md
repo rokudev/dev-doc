@@ -16,6 +16,8 @@ Demos provide in-depth walk-throughs of various tools and software that help dev
 
 This webinars and demos section includes the following videos:
 
+* [**Doc Portal Upgrades**](doc:doc-portal-upgrades): This webinar, presented on June 1st, 2026, demonstrated how you can use the new features added to the developer documentation portal in April: Intelligent Search, Ask AI, and Suggested Edits.
+
 * [**App Tracing (with Perfetto)**](doc:app-tracing-with-perfetto-webinar): This webinar, presented on February 16th, 2026, demonstrated how you can use Perfetto to record, analyze, and visualize traces of your Roku apps to pinpoint where you can reduce resource consumption and optimize performance.
 
 * [**Developer Summit 2025**](doc:summit-2025): Roku held its annual developer summit online on September 16–17, 2025. The Developer Summit opened with the keynote address, which included a welcome address from CEO Anthony Wood, the traditional recap of the past year in streaming and key industry trends, new product and feature announcements, and a summary of new features recently added to the Roku Developer Portal. Announcements made during the keynote included: Roku Cloud Emulator (scheduled for release in 2026), Phased App Rollout, and Optimized data transfer and reference handling APIs. After the keynote, a series of panel discussions were held over two days that included: Developer Tools, App Performance, Platform Stability, Beta Program, Community Tools, Content Discovery, Audience Growth, Roku Pay, Localization, and SceneGraph.

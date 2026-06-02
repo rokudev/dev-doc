@@ -1,5 +1,5 @@
 ---
-title: Feature - scripted & alternative media delivery specifications
+title: Feature/doc/special - media delivery specifications
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-_Version 4.0 - March 2026_
+_Version 4.0 - May 2026_
 
 ## 1. General overview
 
@@ -20,7 +20,7 @@ The Roku Channel is committed to providing the highest quality content and value
 
 ## 2. Post kick-off
 
-Post Producer resumes should be sent to Roku for prior approval. One week prior to Production start, please reach out to Roku Post Production to set up a kick-off call. In prep for this call, please review this full specification document so that we can address any follow up questions you may have.
+Post Producer resumes should be sent to Roku for prior approval. 1 week prior to Production start, please reach out to Roku Post Production to set up a kick-off call. In prep for this call, please review this full specification document so that we can address any follow up questions you may have.
 
 ### 2.1 Startup documents
 
@@ -31,7 +31,7 @@ Additionally, please make sure to send the preliminary versions of all documents
 3. Preliminary Vendor List
 4. Dailies Memo
 
-#### 2.1.1 Show numbering & post grid workflow
+#### 2.1.1 Show numbering and post grid workflow
 
 Post Grids accuracy must be confirmed weekly, either via revised grid or an email reflecting that no changes have been made. For distribution, Roku requires these grids to be both uploaded to The Hub and emailed to a distribution list that Roku Post Production will provide prior to Production.
 
@@ -46,7 +46,7 @@ Please note that the Post Grid template provides columns for multiple types of s
 * At the below milestones please set a call with the Roku Post Production Manager at the email address provided on the contact sheet:
   * 1 week prior to Production
   * 1 week prior to the first scheduled rough cut release date
-  * Within one week of production wrap
+  * Within 1 week of production wrap
 
 ### 2.3 Misc.
 
@@ -56,9 +56,9 @@ Please note that the Post Grid template provides columns for multiple types of s
 
 ### 2.4 Roku marketing
 
-Marketing will be requesting an early creative sizzle reel and they will be directly involved in the Main Title treatment creative process.
+Marketing will be directly involved in the Main Title treatment creative process.
 
-### 2.5 Roku Localization
+### 2.5 Roku localization
 
 Roku’s Localization Team will handle the creation of Latin Spanish subtitles and Audio Descriptions files (AD).
 
@@ -68,18 +68,18 @@ Roku’s Localization Team will handle the creation of Latin Spanish subtitles a
 
 * Content Type
   * Scripted
-    * Unless otherwise approved by Roku production prior to the commencement of principal photography, you will be required to capture at a minimum resolution of UHD (3840x2160) and an Aspect Ratio of 16:9 to match final deliverables specs. Any changes to the required resolution or aspect ratio must be approved by Roku.
+    * Unless otherwise approved by Roku Production prior to the commencement of principal photography, you will be required to capture at a minimum resolution of UHD (3840x2160) and an Aspect Ratio of 16:9 to match final deliverables specs. Any changes to the required resolution or aspect ratio must be approved by Roku.
   * Unscripted
-    * Unless otherwise approved by Roku production prior to the commencement of principal photography, you will be required to capture at a minimum resolution of HD (1920x1080) and an Aspect Ratio of 16:9 to match final deliverables specs. Any changes to the required resolution or aspect ratio must be approved by Roku.
+    * Unless otherwise approved by Roku Production prior to the commencement of principal photography, you will be required to capture at a minimum resolution of HD (1920x1080) and an Aspect Ratio of 16:9 to match final deliverables specs. Any changes to the required resolution or aspect ratio must be approved by Roku.
 * All material should be captured, transferred, and mastered in a progressive frame rate. Please do not apply any cross-conversions to content.
 * Please do not apply in-camera upscaling or de-squeezing to any camera masters. If your desire is to work with cameras that do not natively capture in 4k, please reach out to Roku Post Production to discuss workflow options.
 * Any material that is being shot or used for Visual Effects must match capture resolution. This resolution must remain consistent throughout the Visual Effects creation and final delivery process.
 
 ### 3.2 Camera tests
 
-* Prior to principal photography, please plan to shoot camera tests and post to [Frame.io](http://frame.io/) (Rough Cut 1 folder) for Roku review.
+* Prior to principal photography, please plan to shoot camera tests and post to [Frame.io](http://frame.io/) (Rough Cut 1 folder) for Roku review
 * These do not need to contain talent, final lighting, or even audio. They will solely be utilized to confirm the efficacy of camera capture and dailies workflows.
-* Camera test material can be a quick compilation of various shots and angles; it is not necessary to cut a full scene together.
+* Camera test material can be a quick compilation of various shots and angles; it is not necessary to cut a full scene together
 * Roku Post Production will provide a distribution list for all camera test material. If you have not received it, please reach out to your Roku Post Manager.
 
 ### 3.3 Dailies
@@ -89,11 +89,11 @@ Roku’s Localization Team will handle the creation of Latin Spanish subtitles a
 Dailies are requested for visibility and early Marketing preparation. Roku Post will provide a user list for Dailies prior to production.
 
 * Scripted projects: Allow for dailies across all days of production.
-* Documentary projects: Allow for three total 5-10 minute dailies-selects reels, one from each of three discrete shooting days. These do not all need to be from the first three days of principal, but please utilize at least one of the initial few days. Prioritize diversity of environments, subjects, etc. when choosing which days to send.
+* Documentary projects: Allow for 3 total 5-10 minute dailies-selects reels, 1 from each of 3 discrete shooting days. These do not all need to be from the first 3 days of principal, but please utilize at least 1 of the initial few days. Prioritize diversity of environments, subjects, etc. when choosing which days to send.
 
 Roku’s approved platform for dailies, rough cut release, and final archive is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, so if you are working with a partner who utilizes a different review platform, this may not require an extra render (pending specifications for each).
 
-The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
+The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted 1 ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
 
 #### 3.3.2 Dailies formatting
 
@@ -103,12 +103,12 @@ Each take should be uploaded as one clip within the overall day’s dailies fold
 
 Once dailies have been uploaded to [Frame.io](http://frame.io/), please send a notification email to those reviewing Dailies, per the Distribution List provided by your Roku Originals Post Manager. Please include the following in each email:
 
-* In the subject line include the show title, episode # and dailies day.
-* In the body of the email include the link from the address bar to the [Frame.io](http://frame.io/) dailies project.
+* In the subject line include the show title, episode # and dailies day
+* In the body of the email include the link from the address bar to the [Frame.io](http://frame.io/) dailies project
 
 #### 3.3.3 Dailies memo
 
-A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution.
+A Dailies Memo should be submitted to the Roku Production and Post Production teams for approval prior to the commencement of principal photography. This document should include the proposed dailies workflow process, from camera capture through dailies distribution. Please include at least the following information:
 
 CAPTURE
 
@@ -117,12 +117,15 @@ CAPTURE
     * Video Resolution
     * Acquisition Codec
     * Frame rate(s)
+
 * Audio sample rate and bit depth
+
 * Please confirm that video will be captured log/flat and that no LUT/color grade will be baked into the footage at capture
 
 OFFLOAD
 
 * Utility/Process used for offload
+
 * Checksum Algorithm used
 
 DAILIES & EDIT PROXY PROCESS
@@ -136,31 +139,35 @@ DAILIES & EDIT PROXY PROCESS
 
 #### 3.4.1 Sizzle overview
 
-Each project will be required to create a 60-90 second sizzle for your project to be used for business-to-business purposes.
+Roku may request your team create a 60-90 second sizzle for your project to be used for business-to-business purposes.
 
 Please note that the sizzle does not require formal finishing, i.e. final assembly, conform, color, or mix. As it is for B2B use, it does not require clearances or music licensing.
 
 Process:
 
-* Please include sizzle milestones in overall calendar deliverable.
-* Please account for two rounds of notes from Roku Creative, plus an approval review.
-* Please reach out to your Roku Post Manager for the delivery date, as the sizzle might be required prior to the end of principal photography for some projects.
+* Your Roku Production Executive will inform you if a sizzle is needed for your project
+* Please include sizzle milestones in overall calendar deliverable once due date has been provided by your Roku Post Manager
+* Please account for 2 rounds of notes from Roku Creative
+* Please reach out to your Roku Post Manager for the delivery date
 
 Sizzle should include:
 
-* Two cards: 'Roku Presents', followed by ‘A Roku Original’, for a minimum of two seconds each
+* Two cards for a minimum of two seconds each:
+  * Roku Presents
+  * A Roku Original Film / A Roku Original Documentary / A Roku Original
 * Temp Main Title treatment
 * Clips that represent the story and showcase talent involved
-* Sizzle does not need to include full scenes.
+* Please include lower third IDs for any interview footage included
+* Sizzle does not need to include full scenes
 
 Please reach out to your Roku Post Manager if you would like to see an example of a previous sizzle.
 
-### 3.4.2 Sizzle deliverables
+#### 3.4.2 Sizzle deliverables
 
 An HD primary video deliverable is required as follows:
 
-* Please do not include any head/tail formatting or slate.
-* Program should start at 00:00:00:00.
+* Please do not include any head/tail formatting or slate
+* Program should start at 00:00:00:00
 * File Specs:
   * (1) H.264
   * 1920 x 1080
@@ -174,7 +181,7 @@ Security is of the utmost importance to Roku. As such, access to all of the exci
 
 ### 4.1 Review platform
 
-Roku’s approved platform for content sharing and final archive is [Frame.io](http://frame.io/). Roku and [Frame.io](http://frame.io/) have developed a content review workflow that both ensures security and limits access to all pre-launched content. In this workflow, anyone viewing Roku content will be required to set up a user account within [Frame.io](http://frame.io/) so that their activity can be tracked.
+Roku’s approved platform for content sharing is [Frame.io](http://frame.io/). Roku and [Frame.io](http://frame.io/) have developed a content review workflow that both ensures security and limits access to all pre-launched content. In this workflow, anyone viewing Roku content will be required to set up a user account within [Frame.io](http://frame.io/) so that their activity can be tracked.
 
 **No material should be shared on any other platform without written approval from Roku.**
 
@@ -198,15 +205,15 @@ It is never permitted to share rough cuts via Public Links. Review Links require
 
 All guidelines below must be followed when sharing review links:
 
-* It is not permitted for any rough cut viewing links to be download-enabled.
-* All viewing links must include an expiration date that confines access to seven days or less.
-* **All cuts uploaded for review must be watermarked.**
+* It is not permitted for any rough cut viewing links to be download-enabled
+* All viewing links must include an expiration date that confines access to 7 days or less
+* **All cuts uploaded for review must be watermarked**
 
-### 4.4 Non-Standard requests
+### 4.4 Non-standard requests
 
 It is not permitted to send content to anyone who is not a [Frame.io](http://frame.io/) user without written approval from Roku.
 
-## 5. Rough Cuts and Viewables
+## 5. Rough cuts and viewables
 
 ### 5.1 Post weekly sync
 
@@ -216,89 +223,76 @@ Once you begin the rough-cut process, your Roku Post Manager will reach out to s
 
 #### 5.2.1 General requirements
 
-* Feature content run time should be between 75-120 minutes, based on the creative for each project.
-  * **Locked Cut** - QT's must include a slug for the end credits so that the exact timing is locked to match the final master.
-* It is not permitted to send rough cuts longer than the 120-minute maximum without prior approval from the Roku Content Team.
-* There may be discussions around pre-roll, mid-roll, or post-roll advertising cue points. Regardless, please deliver each file as a seamless master.
-* Roku requires rough versions of graphics starting at the RC1 stage, and near final graphics by the FC stage. See Section 5.6 for a full breakdown of Roku’s graphics milestones (if applicable).
-* Blurring un-cleared video content requires Roku Creative approval beforehand.
-* Temp ADR must be added to all in-progress cuts where applicable, including all add-lines and alts.
+* There may be discussions around pre-roll, mid-roll, or post-roll advertising cue points. Regardless, please deliver each file as a seamless master
+* Roku requires rough versions of graphics starting at the RC1 stage, and near final graphics by the FC stage. See Section 5.6 for a full breakdown of Roku’s graphics milestones (if applicable)
+* Blurring un-cleared video content requires Roku Creative approval beforehand
+* Temp ADR must be added to all in-progress cuts where applicable, including all add-lines and alts
 
-#### 5.2.2 Music
+#### 5.2.2 Timing requirements and ad breaks
 
-Roku distributes content worldwide. Music should be cleared in perpetuity (or for licensed projects, the full length of the license), and allow for in-context promotional use, unless approved in writing by Roku Production Legal. Please source music that is covered by the following PROs: BMI, ASCAP, SESAC, and GMR.
+Timing requirements are as follows:
 
-#### 5.2.3 Ad breaks
+* Scripted Feature
+  * Feature content run time should be between 85-89 minutes, unless instructed or permitted otherwise by Roku.
+    * **Locked Cut** - QT’s must include a slug for the end credits so that the exact timing is locked to match the final master.
+    * Rough Cut 1 is permitted to be up to 15 min longer than the maximum allowable TRT (89 min.). Rough Cut 2 may be up to 2 min. longer than the maximum allowable TRT.
+    * Fine Cut and above must be within allowable TRT.
+    * A minimum of 7 ad breaks required.
+    * Roku’s general preference is that ad breaks be spaced anywhere from 10-14 minutes apart, dependent on the creative.
 
-Each feature will be required to include ad breaks as follows:
+* Documentary
+  * Feature content run time should be between 44-50 minutes, unless instructed or permitted otherwise by Roku.
+    * **Locked Cut** - QT’s must include a slug for the end credits so that the exact timing is locked to match the final master.
+    * Rough Cut 1 is permitted to be up to 15 min longer than the maximum allowable TRT assigned. Rough Cut 2 may be up to 2 min. longer than the maximum allowable TRT.
+    * Fine Cut and above must be within allowable TRT.
+    * 5 total ad breaks required.
+    * All ad breaks should be spaced anywhere from 6-10 minutes apart, dependent on the creative.
 
-Total Run Time:
+* Alternative Specials
+  * Feature content run time should be between 65-90 minutes, based on the creative for each project. Your Roku Creative Executive or your Roku Post Manager will convey the appropriate TRT for your project.
+    * **Locked Cut** - QT’s must include a slug for the end credits so that the exact timing is locked to match the final master.
+    * Rough Cut 1 is permitted to be up to 15 min longer than the maximum allowable TRT assigned. Rough Cut 2 may be up to 2 min. longer than the maximum allowable TRT.
+    * Fine Cut and above must be within allowable TRT.
+    * 65-90 minute specials will require a minimum of 6-7 ad breaks.
+    * Roku’s general preference is that ad breaks be spaced anywhere from 10-14 minutes apart, dependent on the creative.
 
-* 75-89 minutes will require a minimum of 7 ad breaks
-* 90-105 minutes will require a minimum 8 ad breaks
-* 106-120 minutes will require a minimum of 9 ad breaks
+Ad break guidelines for all content types:
 
-Formatting & Timing
+* The ad breaks should not appear until at least five minutes of content have elapsed
+* The final ad break must appear before the last three minutes of the feature, which will remain ad-free
+* Ad breaks should be formatted as 1 second of black (no text permitted). Fade outs/ins are permitted
 
-* **The ad breaks should not appear until at least five minutes of content have elapsed.**
-* Roku's general preference is that ad breaks be spaced anywhere from 10-14 minutes apart, dependent on the creative.
-* The final ad break must appear before the last three minutes of the feature, which will remain ad-free.
-* Ad breaks should be formatted as one second of black (no text permitted). Fade outs/ins are permitted.
+All Fine and Locked cuts sent to Roku must adhere to the specifications above. They will not be deemed acceptable otherwise. Please see the guidelines above for more detail on permissible TRT exceptions on earlier cut releases.
 
-If a feature does not fall within the total run time guidance above, and this has been previously approved by Roku’s Content team, please reach out to Roku Post Production to discuss ad break implications.
+If your project does not fall within the total run time guidance above, and this has been previously approved by Roku’s Content team, please reach out to Roku Post Production to discuss ad break implications.
 
 The exact timecode of each ad break, in (HH:MM:SS:FF) format, will be required in both the Segment Rundown and Metadata deliverables. Both templates were provided in the Post Kickoff Deliverables Packet. Please reach out to Roku Post if you did not receive one.
 
+#### 5.2.3 Music
+
+Roku distributes content worldwide. Music should be cleared in perpetuity (or for licensed projects, the full length of the license), and allow for in-context promotional use, unless approved in writing by Roku Production Legal. Please source music that is covered by the following PROs: BMI, ASCAP, SESAC, and GMR.
+
 #### 5.2.4 Rating guidelines
 
-Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ratings guidance has been provided below for you to keep in mind as the creative story progresses in editorial. Please note, however, this is a very subjective process and the rating tiers below are regularly reviewed and may be modified in response to shifts in industry standards. So please be sure to reach out to your Roku Legal contact if you have any questions or clarifications.
+Roku Originals content must fall within a TV-PG or TV-14 rating. Some general ratings guidance has been provided below for you to keep in mind as the creative story progresses in editorial. Please note, however, this is a very subjective process and the rating tiers below are regularly reviewed and may be modified in response to shifts in industry standards. So please be sure to reach out to your Roku Legal contact if you have any questions or clarifications.
 
 **Rating Tiers**
 
-<table>
-  <thead>
-    <tr>
-      <th />
-      <th>VIOLENCE</th>
-      <th>SEX/NUDITY</th>
-      <th>SUBSTANCE USE/ABUSE</th>
-      <th>LANGUAGE</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>TV-PG</strong></td>
-      <td><strong>✔</strong> Shootings, brawls, fist fights<br /><strong>✖</strong> No blood</td>
-      <td><strong>✔</strong>  Limited to kissing, couples in bed, implied sexual situations<br /><strong>✖</strong> No nudity at all<br /><strong>✖</strong> No sexual violence</td>
-      <td><strong>✔</strong>  Implied drug use (not glorified or must show consequences)</td>
-      <td><strong>✔</strong>  Limited use of bleeping/dropping strong language. Ass, damn, hell, and bitch</td>
-    </tr>
-    <tr>
-      <td><strong>TV-14</strong></td>
-      <td><strong>✔</strong>  Brief violence, OK with some blood shown<br /><strong>✕</strong> No gore</td>
-      <td><strong>✔</strong>  Covered sex is allowed, brief thrusting, implied sexual abuse OK<br /><strong>✔</strong> Exposed butt/side breast OK<br /><strong>✖</strong> No full nudity</td>
-      <td><strong>✔</strong>  Visuals/use of drug abuse (not glorified, must show consequences)<br /><strong>✖</strong> No smoking minors</td>
-      <td><strong>✔</strong>  Shit, asshole, bastard (when used in a pejorative matter), goddamn, bitch, dick and pussy (as an insult)</td>
-    </tr>
-    <tr>
-      <td><strong>TV-MA</strong></td>
-      <td><strong>✔</strong>  On-screen graphic violence, gore</td>
-      <td><strong>✔</strong>  Depictions of graphic sexual activity or sexual violence<br /><strong>✔</strong>  Full male or female nudity</td>
-      <td><strong>✔</strong>  Graphic visuals of substance use/abuse, injection, etc. (both. minors and adults)<br /><strong>✖</strong> No smoking minors</td>
-      <td><strong>✔</strong>  Use of fuck, tits, twat, cum, pussy, and cunt<br /><strong>✖</strong> Racial slurs and hate speech on a case-by-case basis</td>
-    </tr>
-  </tbody>
-</table>
+|           |                              VIOLENCE                              |                                                                SEX/NUDITY                                                                |                                                  SUBSTANCE USE/ABUSE                                                  |                                                       LANGUAGE                                                       |
+| :-------- | :----------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
+| **TV-PG** |      **✔** Shootings, brawls, fist fights<br />**✖** No blood      |      **✔**  Limited to kissing, couples in bed, implied sexual situations<br />**✖** No nudity at all<br />**✖** No sexual violence      |                           **✔**  Implied drug use (not glorified or must show consequences)                           |                  **✔**  Limited use of bleeping/dropping strong language. Ass, damn, hell, and bitch                 |
+| **TV-14** | **✔**  Brief violence, OK with some blood shown<br />**✕** No gore | **✔**  Covered sex is allowed, brief thrusting, implied sexual abuse OK<br />**✔** Exposed butt/side breast OK<br />**✖** No full nudity |         **✔**  Visuals/use of drug abuse (not glorified, must show consequences)<br />**✖** No smoking minors         |    **✔**  Shit, asshole, bastard (when used in a pejorative matter), goddamn, bitch, dick and pussy (as an insult)   |
+| **TV-MA** |               **✔**  On-screen graphic violence, gore              |                  **✔**  Depictions of graphic sexual activity or sexual violence<br />**✔**  Full male or female nudity                  | **✔**  Graphic visuals of substance use/abuse, injection, etc. (both. minors and adults)<br />**✖** No smoking minors | **✔**  Use of fuck, tits, twat, cum, pussy, and cunt<br />**✖** Racial slurs and hate speech on a case-by-case basis |
 
 ### 5.3 Rough cut review
 
 #### 5.3.1 Review platform
 
-Roku’s approved platform for dailies, rough cut release, and final archive is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. If you are working with a partner who utilizes a different internal platform, there will not be a need to render out separate files just for use with [Frame.io](http://frame.io/); [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, which allows the same file to be uploaded to both platforms.
+Roku’s approved platform for dailies and rough cut release is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. If you are working with a partner who utilizes a different internal platform, there will not be a need to render out separate files just for use with [Frame.io](http://frame.io/); [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, which allows the same file to be uploaded to both platforms.
 
-The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
+The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted 1 ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
 
-#### 5.3.2 Review process & turnaround timing
+#### 5.3.2 Review process and turnaround timing
 
 Roku will provide notes within 48-72 business hours after receipt, whether the Production Company is based in the United States or outside the United States. Cuts received by Roku after 6:00 pm PST will be deemed received the following business day. When sending cuts earlier than the scheduled release date, please note that the original notes return timing will need to be honored unless otherwise approved by Roku Creative.
 
@@ -329,7 +323,7 @@ Video Specifications:
 * Target Bitrate: ~ 10mbps
 * Aspect: Square Pixels (1.0)
 * Visible Timecode Upper Right
-* Please mark ad breaks in white text over one sec of black as either “Ad Break #” or incoming act number, i.e. “Act 2”.
+* Please mark ad breaks in white text over 1 sec of black as either “Ad Break #” or incoming act number, i.e. “Act 2”.
 
 Audio Specifications:
 
@@ -341,7 +335,7 @@ Graphics:
 
 * Remember to adhere to Broadcast Title Safe Zones when adding any burned-in graphics or text.
 
-### 5.5 Rough & locked cut delivery
+### 5.5 Rough and locked cut delivery
 
 Roku Post Production will provide a recipient list for all rough cuts prior to the scheduled release of the first cut. The [Frame.io](http://frame.io/) team will walk each project through Roku’s preferred rough cut release workflow, which involves:
 
@@ -363,11 +357,11 @@ Cut filenames must follow the proper naming convention below:
 * Cut version (RC1, FC, etc.)
 * Date the cut was released to Roku (YYYYMMDD)
 
-Example: FLIP_MV100 _FC_111519
+Example: FLIP_MV100 _FC_20260413
 
 All rough cut links should be confined to viewing only (i.e. no download access). When sharing cuts, please do not create any folders, or copy any folders into the Roku Review projects.
 
-### 5.6 Graphics milestones & review process
+### 5.6 Graphics milestones and review process
 
 For Scripted and Alternative features, the Roku Content & Post Production teams should be involved in key discussions related to graphics, from title treatments to overall episodic graphics packages.
 
@@ -386,9 +380,9 @@ The following milestones require Roku notification and review:
 
 After Roku has approved all in-show graphics and the first cut is locked, no changes should be made without written approval from the Roku Content team.
 
-## 6. Final mastering & marketing
+## 6. Final mastering and marketing
 
-### 6.1 Picture & audio mastering
+### 6.1 Picture and audio mastering
 
 #### 6.1.1 Uncompressed masters
 
@@ -402,7 +396,7 @@ Please alert Roku Post Production if any content contains flashing/strobing ligh
 
 Please refer to the [Ofcom ITC Guidelines](https://www.ofcom.org.uk/__data/assets/pdf_file/0021/16248/gn_flash.pdf) for further information.
 
-#### 6.1.3 HDR10 & dolby vision
+#### 6.1.3 HDR10 and Dolby Vision
 
 Currently, Roku Scripted and Alternative projects are only required to complete an SDR (Rec709) grade. Please keep in mind your final deliverables will need to be in legal video range.
 
@@ -422,7 +416,7 @@ As each production will differ with regards to promotional assets, please reach 
 
 ## 7. Credits
 
-**All opening and end credits must be submitted to Roku Post using the Roku Scripted Credits Approval Form (see 8.8.2) for approval with delivery of the first Fine Cut.**
+**All opening and end credits must be submitted to Roku Post for approval with delivery of the first Fine Cut.**
 
 ### 7.1 Opening credits
 
@@ -456,48 +450,56 @@ Please follow the formatting requirements below:
     * AI Vector File
     * Original font file with license receipt (Adobe/Google font link, .tff or .otf
 
-#### 7.1.3 Opening Credits
+#### 7.1.3 Opening credits
 
-Each project, whether scripted or documentary, is required to include (2) Roku presentation cards at the top of the program as follows:
+Each project, whether scripted or unscripted, is required to include (2) Roku presentation cards at the top of the program as follows:
 
-* ‘Roku Presents’, followed by a subsequent card reading ‘A Roku Original’
-* Duration: Minimum of 2 seconds per card
+* Series: **Roku Presents / A Roku Original Series**
+* Feature: **Roku Presents / A Roku Original Film**
+* Documentary: **Roku Presents / A Roku Original Documentary**
+  * This includes the presentation card for a docu-series.
+
+In addition please follow the below spec on duration and style of the Roku presentation cards:
+
+* Duration: Minimum of 2 seconds per card.
 * Please utilize the same font and style that is specific to each project.
-* Roku prefers these be integrated into the opening of each program, rather than added as separate cards.
+* Roku prefers these be integrated into the opening of each program, rather than added as separate cards over black.
 
 Further opening credits specifications by project type:
 
 * Scripted:
   * Credits may appear over picture at the top of each project, provided the following criteria are met:
     * Full duration of these credits does not exceed 1:15 in length
-    * Up to three names per credit block
+    * Up to 3 names per credit block
     * Up to 12 total credits/credit blocks can be utilized
   * Credits that are approved to be included within the show opening are outlined below:
-    * Up to three “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
-    * 'Created By' and 'Written By' credits can be swapped, but ‘Directed By’ must be the last credit.
-    * Production Companies, Executive Producers, and Producers are permitted
+    * Up to 3 “Union” credits (i.e., “Created by,” “Written by,” and “Directed by”), as determined by the Production Company/Producer.
+    * ‘Created By’ and ‘Written By’ credits can be swapped, but ‘Directed By’ must be the last credit.
+    * Production Companies, Executive Producers, and Producers are permitted.
     * The size and style of type for these credits will be determined by the Production Company/Producer, provided that:
       * Fonts have to be large enough to be legible.
       * Fonts used for names should be the same size.
-    * The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether one, two, or three names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process.
-  * Documentary:
-    * No credits outside of Roku presentation cards and main title logo are permitted at the top of each project
+    * The individuals who receive these credits, the order of credits, the size and style of type (subject to the restrictions noted below), and whether 1, 2, or 3 names appear in the credit block will all be determined by the Production Company/Producer and notified to Roku as part of the delivery process.
+* Documentaries & Specials:
+  * No “Presentation”, possessory, or origination credits permitted anywhere on the program.
+  * Any request to include on-screen credits on the main title card will require approval by the Roku Content and Post Production teams.
+  * No other credits are permitted in the opening of the show.
 
 ### 7.2 End credit sequence
 
 Roku feature length content will utilize traditional burned-in credits. All end credits must be submitted to Roku Post Production for approval before picture is locked.
 
 * End Credits
-  * End credits can be no longer than five total minutes in length, inclusive of production company logos.
+  * End credits can be no longer than 5 total minutes in length, inclusive of production company logos.
   * The Roku Originals Logo should be placed last in the end credits.
     * **Please reach out directly to Roku Post for access to the most current Roku Original Logo at: [dlropost@roku.com](mailto:dlropost@roku.com).**
-      * The 2025 logo is available in UHD or HD (both at 23.98fps), and with either Stereo or 5.1 Audio.
+      * The 2025 logo is available in UHD or HD (both at 23.98fps), and with either Stereo or 5.1 Audio or both.
   * End credits may be formatted as separate end cards or as an end scroll.
   * Must be within 16x9 Title Safe.
 * Production Company Logo Card / Studio Credits - Optional
-  * Up to three production company or studio logos/credits can be included in the end credits, in addition to the mandatory Roku Originals end credit logo.
-  * Separate end cards can have a maximum total length of three seconds each.
-  * For shared cards, no more than two logos can be combined onto the same end card.
+  * Up to 3 production company or studio logos/credits can be included in the end credits, in addition to the mandatory Roku Originals end credit logo.
+  * Separate end cards can have a maximum total length of 3 seconds each.
+  * For shared cards, no more than 2 logos can be combined onto the same end card.
   * Animated logos/credits are permitted.
   * Logos can include audio provided there is no cost to Roku to license such audio.
     * Audio ring outs from the end of the program are also acceptable.
@@ -512,7 +514,7 @@ Roku feature length content will utilize traditional burned-in credits. All end 
 
 **Adherence to the credit requirements in this document will be part of Roku’s Quality Check. If any specifications are not met, the asset will be passed back to the Production Company/Producer to modify. Roku’s Content Operation team can advise on how to upload assets for Roku review.**
 
-## 8.  Final delivery
+## 8. Final delivery
 
 The specifications below detail all deliverables required for each Roku production. A production will not be considered wrapped until all assets below are delivered and approved by the Roku Post Production team. If you have any questions, please do not hesitate to reach out to Roku Post Production.
 
@@ -540,7 +542,7 @@ Each Production is responsible for covering the cost of and delivering 100% QC a
 
 All required versions should be delivered to the Quality Control facility on the same day. This will ensure the Quality Control operator is able to verify that there is no variation between the texted/textless timings.
 
-Please be sure to build time into your delivery schedule to account for the Roku Quality Control process. Roku advises that you set aside three weeks to complete the Quality Control on both horizontal masters. Delivery will not be considered ‘Final’ unless all masters have received a passing report from one of Roku’s approved vendors. A list of these vendors will be provided in the Post Kickoff Packet.
+Please be sure to build time into your delivery schedule to account for the Roku Quality Control process. Roku advises that you set aside 3 weeks to complete the Quality Control on both horizontal masters. Delivery will not be considered ‘Final’ unless all masters have received a passing report from one of Roku’s approved vendors. A list of these vendors will be provided in the Post Kickoff Packet.
 
 If a file has passed Quality Control but a revision is necessary (incorrect titles, production card modification, etc.) you **<u>must</u>** reach out to Roku Post before any redelivery is made. Please send an email with a detailed and time coded breakdown of what fixes are being requested so that Roku can review and determine the impact it will have on each team and the show premiere itself.
 
@@ -569,15 +571,17 @@ Example:
 
 ZOEC_MV100_AIR_1_TXTD_enUS_UHD_SDR_FN_2CH_23976p_20190701-v2.mov
 
-Production Number = As listed on Post Grids (MV100, MV200, etc.)
+Production Number = As listed on Post Grids (MV100, MV200, SP100, SP200, etc.)
 
 Air Order = Please list even if the Air Order is the same as the Production Number
+
+<br />
 
 | File Name Segment | File Name Abbreviation                                                                          |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
 | Version           | TXTD (Texted), TXLS (Textless), or PROXY                                                        |
 | Language          | enUS (American English)                                                                         |
-| Resolution        | UHD (scripted)  or HD (documentary) + Color Space = SDR or HDR                                  |
+| Resolution        | UHD (scripted) or HD (documentary & alternative special) + Color Space = SDR or HDR             |
 | Forced Narratives | FN (Present), NC (none present)                                                                 |
 | Audio             | 2CH (Interleaved) or 8CH (5.1 and Stereo) – 7.1 audio not permitted on any masters at this time |
 | Frame Rate        | 23976p, 24p, 25p, 2997p, 30p, 50p, 5994p, 60p                                                   |
@@ -594,7 +598,7 @@ ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#_SampleRate_BitRate_
 
 **Examples:**
 
-MAMA_102_v04_20220919_enUS_PM_Nearfield_2chCH_48k_24b_23976.Lt.wav
+MAMA_102_v04_20220919_enUS_PM_Nearfield_2CH_48k_24b_23976_LT.wav
 
 | **Material Type**                             | **Abbreviation**                  |
 | --------------------------------------------- | --------------------------------- |
@@ -604,15 +608,11 @@ MAMA_102_v04_20220919_enUS_PM_Nearfield_2chCH_48k_24b_23976.Lt.wav
 | Optional Tracks                               | OPT, OPTA, OPTB, GRP              |
 | Add’l Detail (Dialogue Guide Track, ADR, etc) | GUIDE, ADR                        |
 
-**Channel types**
-
 | **Channel Type** | **Abbreviation** |
 | ---------------- | ---------------- |
 | Mono             | Mono             |
 | Stereo           | 2CH              |
 | 5.1 Surround     | 6CH              |
-
-**Track assignments**
 
 | **Track Assignment** | **Abbreviation**     |
 | -------------------- | -------------------- |
@@ -624,7 +624,7 @@ MAMA_102_v04_20220919_enUS_PM_Nearfield_2chCH_48k_24b_23976.Lt.wav
 
 All video should be delivered at specification unless agreed to with the Roku production team ahead of production.
 
-If your image capture settings are not at the same data rate or higher of the export settings mentioned in 8.4.3, please reach out to Roku Post or let your Post Manager know. In order to prevent up-sampling, your final export should match the data rate that was captured (for example, if the camera captured ProRes 422, then final export should be ProRes 422 or equivalent instead of 4444 XQ).
+If your image capture settings are not at the same data rate or higher of the export settings mentioned in 8.4.3, please reach out to Roku Post or let your Post Manager know. In order to prevent up-sampling, your final export should match the data rate and chroma information that was captured (for example, if the camera captured ProRes 422 HQ, then final export should be ProRes 422 HQ or equivalent, instead of 4444 XQ).
 
 **Roku Best Practices**
 
@@ -646,101 +646,40 @@ For the Final Texted Masters, all audio should be contained within the delivered
 
 **The audio channel mapping and tagging of metadata must be verified via a program like QuickTime 7, QuickTime Pro, Telestream Switch or Adobe Media Encoder for all texted and textless masters.**
 
-* If the audio is not labeled with the correct metadata (for instance if all channels are labeled as “C” or “Mono”) this will prevent ingest on Roku’s end and will need to be corrected and re-delivered.
-* Incorrectly labeled audio can be manually adjusted in QuickTime Pro without a re-export.
+* If the audio is not labeled with the correct metadata (for instance if all channels are labeled as “C” or “Mono”) this will prevent ingest on Roku’s end and will need to be corrected and re-delivered
+* Incorrectly labeled audio can be manually adjusted in QuickTime Pro without a re-export
 
 Mixing Specifications:
 
 * Target - 24 LKFS +/- 2 (any average between -22 & -26). Based on ITU-R 1170-3 measurement.
 * Audio should not peak above -2 dBfs (True Peak)
 
-#### 8.4.3 HD Texted video master
+#### 8.4.3 Texted video master
 
-<table>
-  <thead>
-    <tr>
-      <th>Video Codec</th>
-      <th>ProRes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Container</td>
-      <td>MOV</td>
-    </tr>
-    <tr>
-      <td>Profile</td>
-      <td>Scripted Features: 4444 XQ (4444 Ok if exporting from Premiere) if source is 4:4:4; or 422 HQ<br />Documentary Features: 422 HQ; or 4444 if source is 4:4:4</td>
-    </tr>
-    <tr>
-      <td>Minimum Bitrate</td>
-      <td>50 mbit/s or higher</td>
-    </tr>
-    <tr>
-      <td>Landscape aspect ratio</td>
-      <td>16:9 (1.77:1) - (widescreen permitted within this AR)<br /><br />Scripted: W3840x H2160 (UHD)<br />Documentary: W1920xH1080 (HD)</td>
-    </tr>
-    <tr>
-      <td>Pixel aspect ratio</td>
-      <td>Square pixels (1:1)</td>
-    </tr>
-    <tr>
-      <td>Scan type</td>
-      <td>Progressive scan type</td>
-    </tr>
-    <tr>
-      <td>Chroma Subsampling</td>
-      <td>4:2:2 or None/4:4:4 if acquired at 4:4:4</td>
-    </tr>
-    <tr>
-      <td>Color Space</td>
-      <td>BT.709 Legal Video Range (64 to 940)</td>
-    </tr>
-    <tr>
-      <td>Bit depth</td>
-      <td>10-bit or 12-bit</td>
-    </tr>
-    <tr>
-      <td>Constant Frame Rate</td>
-      <td>23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p</td>
-    </tr>
-    <tr>
-      <td>Native frame rate</td>
-      <td>No 3:2 pulldown flags</td>
-    </tr>
-  </tbody>
-</table>
+| Video Codec            | ProRes                                                                                                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container              | MOV                                                                                                                                                                         |
+| Profile                | Scripted Features: 4444 XQ (4444 Ok if exporting from Premiere) if source is 4:4:4; or 422 HQ<br />Documentaries & Alternative Specials: 422 HQ; or 4444 if source is 4:4:4 |
+| Minimum Bitrate        | 50 mbit/s or higher                                                                                                                                                         |
+| Landscape aspect ratio | 16:9 (1.77:1) - (widescreen permitted within this AR)<br /><br />Scripted: W3840x H2160 (UHD)<br />Documentary & Alternative Special: W1920xH1080 (HD)                      |
+| Pixel aspect ratio     | Square pixels (1:1)                                                                                                                                                         |
+| Scan type              | Progressive scan type                                                                                                                                                       |
+| Chroma Subsampling     | 4:2:2 or None/4:4:4 if acquired at 4:4:4                                                                                                                                    |
+| Color Space            | BT.709 Legal Video Range (64 to 940)                                                                                                                                        |
+| Bit depth              | 10-bit or 12-bit                                                                                                                                                            |
+| Constant Frame Rate    | 23.976p, 24p, 25p, 29.97p, 30p, 50p, 59.94p, 60p                                                                                                                            |
+| Native frame rate      | No 3:2 pulldown flags                                                                                                                                                       |
 
-<table>
-  <thead>
-    <tr>
-      <th>Audio Code</th>
-      <th>PCM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Format</td>
-      <td>2 Interleaved Tracks or 8 Mono Tracks</td>
-    </tr>
-    <tr>
-      <td>Track Layout</td>
-      <td><u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><br /><strong>7.1 audio is not permitted on any masters at this time</strong></td>
-    </tr>
-    <tr>
-      <td>Sample Rate/Bit Depth</td>
-      <td>48000Hz/24-bit</td>
-    </tr>
-    <tr>
-      <td>Channel Mapping & Metadata Tagging</td>
-      <td>See 8.4.2 -Verify correct audio channel mapping and metadata tagging.</td>
-    </tr>
-  </tbody>
-</table>
+| Audio Code                | PCM                                                                                                                                                                                                            |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Format                    | 2 Interleaved Tracks or 8 Mono Tracks                                                                                                                                                                          |
+| Track Layout              | <u>Interleaved</u>: Track 1: 5.1, L-R-C-LFE-Ls-Rs  Track 2: Stereo, LT/RT<br /><u>Mono</u>:   L, R, C, LFE, Ls, Rs, Stereo LT, Stereo RT<br /><br />**7.1 audio is not permitted on any masters at this time** |
+| Sample Rate/Bit Depth     | 48000Hz/24-bit                                                                                                                                                                                                 |
+| Channel Mapping & Tagging | See 8.4.2 -Verify correct audio channel mapping and tagging.                                                                                                                                                   |
 
 #### 8.4.4 Textless delivery
 
-If your content includes burned-in on screen text, you will be required to deliver a separate Textless Reel. This reel should include clean, text-free versions of any shots that contain burned-in subtitles or graphic text elements. If the show contains a comprehensive graphics package, please strip all graphics and supply the graphics package or elements in Archival. Video and Audio specs should mirror the UHD Protection Texted Master noted above.
+If your content includes burned-in on screen text, you will be required to deliver a separate Textless Reel. This reel should include clean, text-free versions of any shots that contain burned-in subtitles or graphic text elements. If the show contains a comprehensive graphics package, please strip all graphics and supply the graphics package or elements in Archival. Video and Audio specs should mirror the Texted Video Master noted above.
 
 Audio mapping label verification as noted in 8.4.2 must be verified in textless master.
 
@@ -748,83 +687,42 @@ Additionally, if foreign language subtitles cover 30% or more of the feature, yo
 
 Examples of what to remove for the Textless Masters:
 
-| **Forced Narratives**                                         | **Credits**                                                   | **Text-Based Graphics**                                        |
-| ------------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------- |
-| ![](https://image.roku.com/ZHZscHItMTc2/post-alt-specs-1.png) | ![](https://image.roku.com/ZHZscHItMTc2/post-alt-specs-2.png) | ![](https://image.roku.com/ZHZscHItMTc2/post-alt-specs-3.jpeg) |
+| **Forced Narratives**                                                                    | **Credits**                                                                              | **Text-Based Graphics**                                                                   |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ![roku400px - premium-asset-1](https://image.roku.com/ZHZscHItMTc2/post-alt-specs-1.png) | ![roku400px - premium-asset-1](https://image.roku.com/ZHZscHItMTc2/post-alt-specs-2.png) | ![roku400px - premium-asset-1](https://image.roku.com/ZHZscHItMTc2/post-alt-specs-3.jpeg) |
 
 _Roku Best Practices_
 
-* Background elements with text, such as street signs, do not need to be included in the Textless Reel.
-* ‘Forced Narratives’ refers to on-screen text that is used in one of two ways: to translate foreign dialogue into English or to clarify dialogue that may be inaudible.
+* Background elements with text, such as street signs, do not need to be included in the Textless Reel
+* ‘Forced Narratives’ refers to on-screen text that is used in one of two ways: to translate foreign dialogue into English or to clarify dialogue that may be inaudible
 
-#### 8.4.5 Final proxy files (clean & visible timecode)
+#### 8.4.5 Final proxy files (clean and visible timecode)
 
-From each Texted Master created, please export following (2) proxy files:
+From each Texted Master created, please export following proxy files (2 total per episode + 1 series opener):
 
-<table>
-  <thead>
-    <tr>
-      <th><strong>Video Codec</strong></th>
-      <th><strong>H.264</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Container</td>
-      <td>MOV or MP4</td>
-    </tr>
-    <tr>
-      <td>Picture</td>
-      <td>(1) Clean & (1) w/ Vis.TC UR (1) Series Opener Only</td>
-    </tr>
-    <tr>
-      <td>Bitrate</td>
-      <td>5mbit/s (total file size \< 1gb to 2gb)</td>
-    </tr>
-    <tr>
-      <td>Dimensions</td>
-      <td>W1920 x H1080 (HD)</td>
-    </tr>
-    <tr>
-      <td>Scan Type</td>
-      <td>Progressive scan type</td>
-    </tr>
-    <tr>
-      <td>Color Space</td>
-      <td>BT.709 Legal Video Range</td>
-    </tr>
-    <tr>
-      <td>Bit Depth</td>
-      <td>10-bit or 12-bit</td>
-    </tr>
-    <tr>
-      <td>Constant Frame Rate</td>
-      <td>Should Match Master</td>
-    </tr>
-    <tr>
-      <td>Native Frame Rate</td>
-      <td>Should Match Master</td>
-    </tr>
-    <tr>
-      <td>Audio</td>
-      <td>Ch.1 Stereo Left, Ch.2 Stereo Right</td>
-    </tr>
-    <tr>
-      <td>Filename</td>
-      <td>ShowCode\_ProdNumber\_AirOrder\_Language\_Proxy\_HD\_ <br />FN(if applicable)\_Audio\_Timecode(Clean or VisTC)*RevisionDate-v#*(Final or Pre-QC).mov <br /><br />THAM\_101\_AIR\_1\_PROXY\_enUS\_HD\_FN\_2CH\_CLEAN\_20200916\_V4\_FINAL.mov</td>
-    </tr>
-  </tbody>
-</table>
+| **Video Codec**     | **H.264**                                                                                                                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Container           | MOV or MP4                                                                                                                                                                                                               |
+| Picture             | (1) Clean (1) w/ Vis.TC UR (1) Series Opener Only (where applicable)                                                                                                                                                     |
+| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                                                  |
+| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                                       |
+| Scan Type           | Progressive scan type                                                                                                                                                                                                    |
+| Color Space         | BT.709 Legal Video Range                                                                                                                                                                                                 |
+| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                                         |
+| Constant Frame Rate | Should Match Master                                                                                                                                                                                                      |
+| Native Frame Rate   | Should Match Master                                                                                                                                                                                                      |
+| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                                      |
+| Filename            | ShowCode_ProdNumber_AirOrder_Language_Proxy_HD_ <br />FN(if applicable)_Audio_Timecode(Clean or VisTC)_RevisionDate-v#_(Final or Pre-QC).mov <br /><br />THAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov |
 
 ### 8.5 Audio stem delivery
 
-Prior to the commencement of principal photography, please reach out to Roku Post Production in order to determine the necessary audio deliverables for your series. As content, formatting, and style will differ from one series to the next, Roku understands that stem delivery may also vary. Please upload to your Archive folder on [Frame.io](http://frame.io/).
+Prior to the commencement of principal photography, please reach out to Roku Post Production in order to determine the necessary audio deliverables for your series. As content, formatting, and style will differ from one series to the next, Roku understands that stem delivery may also vary. Please upload to your Archive folder on S3.
 
 #### 8.5.1 Domestic stems
 
 Provided below are the stems required for delivery of each episode/project:
 
-* Mono Dialogue, Music, and Special Effects stems
+* Mono Dialogue, Music, and Sound Effects stems
 * Stereo & 5.1 Printmasters
 * Stereo & 5.1 M&E - Fully Filled (Scripted Projects Only)
 * Stereo & 5.1 M&E
@@ -835,9 +733,9 @@ Provided below are the stems required for delivery of each episode/project:
 
 Provided below are additional required elements:
 
-* Stereo & 5.1 Mix minus narration stems
+* Stereo & 5.1 Mix minus narration stems (where applicable)
 * Original Score or Original Composition provided as a flattened .WAV for each discrete cue
-* Mono M&E Stems - Opticals, Backgrounds, etc.
+* Mono M&E Stems - Opticals, Backgrounds, etc
 
 All audio should be archived as 24-bit, 48kHz WAV files.
 
@@ -847,11 +745,11 @@ ShowCode_ProdNumber_Vers_LangCode_MaterialType_Channel#_SampleRate_BitRate_TC_Ch
 
 **Examples:**
 
-MAMA_102_v04_enUS_PM_Nearfield_2ch_48k_24b_23976.Lt.wav
+MAMA_102_v04_enUS_PM_Nearfield_2CH_48k_24b_23976_LT.wav
 
 _Roku Best Practices_
 
-* Roku requires that all music be cleared for both domestic and international use across all media on all devices.
+* Roku requires that all music be cleared for both domestic and international use across all media on all devices
 * Optional tracks (foreign language, grunts, breathing, etc.) are preferred, if applicable
 * If budget permits, please create Fully Filled Sound Effects stems as part of delivery
 
@@ -866,6 +764,8 @@ Roku requires all content to be delivered with all of the following timed-text f
 All files are required in an effort to support customers that are deaf or hard of hearing.
 
 Roku requires closed captions and subtitles in **2** formats: SRT and WebVTT. The files have to have the same timecode and frame rate as the video and audio delivered. Character encoding MUST be UTF-8.
+
+All timed text should be delivered to the show's archival folder on S3 via Aspera.
 
 **Languages & formats required:**
 
@@ -883,22 +783,21 @@ NION-101-enUS_FN-20190701
 
 ### 8.7 Breakdown of final locations for media deliverables
 
-<br />
-
-| Media                                          | Final Location |
-| :--------------------------------------------- | :------------- |
-| TXTD Master                                    | S3             |
-| TXLS Master                                    | S3             |
-| Clean Proxy                                    | Frame.io       |
-| Vis. TC Proxy                                  | Frame.io       |
-| Mono Audio Stems                               | S3             |
-| Stereo & 5.1 Printmaster Stems                 | S3             |
-| Stereo & 5.1 Stems (M&E, Music, Dialogue, SFX) | S3             |
-| Pro Tools Session Files (.ptx)                 | S3             |
-| VAM Image Sequence (in .zip container)         | S3             |
-| CTM Image Sequence (in .zip container)         | S3             |
-| Timed Text Files (.srt and .vtt)               | S3             |
-| Paper Deliverables (Credits, Metadata, etc.)   | The Hub        |
+| **Media**                                      | **Final Location** |
+| :--------------------------------------------- | :----------------- |
+| TXTD Master                                    | S3                 |
+| TXLS Master                                    | S3                 |
+| Clean Proxy                                    | Frame.io           |
+| Vis. TC Proxy                                  | Frame.io           |
+| Sizzle or Show Opener Proxy                    | Frame.io           |
+| Mono Audio Stems                               | S3                 |
+| Stereo & 5.1 Printmaster Stems                 | S3                 |
+| Stereo & 5.1 Stems (M&E, Music, Dialogue, SFX) | S3                 |
+| Pro Tools Session Files (.ptx)                 | S3                 |
+| VAM Image Sequence (in .zip container)         | S3                 |
+| CTM Image Sequence (in .zip container)         | S3                 |
+| Timed Text Files (.srt and .vtt)               | S3                 |
+| Paper Deliverables (Credits, Metadata, etc.)   | The Hub            |
 
 ### 8.8 Paper deliverables
 
@@ -945,7 +844,7 @@ Please deliver one document that details the font name and size utilized for ope
 
 Please deliver your final version of the Roku Vendor List that you received in the Kick-Off Delivery Packet to the Hub.
 
-#### 8.8.7 Final Text spotting list
+#### 8.8.7 Final text spotting list
 
 Please deliver the final version of the Text Spotting List that was used to Quality Control the final Texted Master to the Hub. Please ensure that any changes made during Quality Control are reflected in the final document that is delivered to Roku via The Hub. Please deliver a single excel file, via Roku’s template, with episodes separated onto their own tabs.
 
@@ -962,7 +861,12 @@ Please deliver the final version of the Roku Delivery Checklist that you receive
 
 Music Cue Sheets are required for all projects. Please use the cue sheet template found on the American Society of Composers, Authors and Publishers (ASCAP) website linked [here](https://www.ascap.com/help/royalties-and-payment/cue-sheets) or similar cue sheet template when submitting to Roku. The ASCAP template is also available via the Hub in the Production Legal – Scripted folder.
 
-Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Vosper at [svosper@roku.com](mailto:svosper@roku.com).
+For the Roku Originals end logo cue:
+
+* Masters & Publishing: 100% ASCAP
+* Publisher: Roku, Inc
+
+Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Vosper at [svosper@roku.com](mailto:sgrossberg@roku.com).
 
 #### 8.8.10 Not applicable form
 
@@ -970,7 +874,7 @@ In cases where a paper deliverable is non-applicable to the project, please uplo
 
 ## 9. Archival
 
-### 9.1 High resolution masters & source material
+### 9.1 High resolution masters and source material
 
 Roku’s platform for archiving projects is to an AWS S3 bucket. This can be accessed via Aspera Shares. Note that this is separate from the Aspera Ingest upload. A Roku Post Manager will request email addresses and names of those who will be uploading archival assets to the designated archival show folder for credentialing.
 
@@ -983,22 +887,23 @@ Required:
 * Final Texted Masters
 * Final Textless Masters
 * Final Audio Stems
-* Graphic Elements – Main title card, credit PNGs, end credit PNGs, on-screen graphics, interstitials, etc.
+* Graphic Elements – Main title card, credit PNGs, end credit PNGs, on-screen graphics, interstitials, etc
 * Timed Text Files
+* Locked Cuts
 
 Any and all series that are wholly owned by Roku will require delivery of VAMs, CTMs, and final Visual Effects shots (where applicable) via Aspera upload to S3, or, in some cases, LTO10 or greater. LTOs should be formatted LTFs and include a digital manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series. These manifests should be uploaded to The Hub.
 
 For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series.
 
-* VAMs – Un-color-corrected, textless, DPX or TIFF (**Compress** to .ZIP or .TAR)
+* VAMs – Un-color-corrected, textless, DPX or TIFF (*_**Compress***_ to .ZIP or .TAR)
   * Associated Avid bins or Edit Decision Lists
-* CTM – Color-corrected, textless, DPX or TIFF (**Compress** to .ZIP or .TAR)
+* CTM – Color-corrected, textless, DPX or TIFF (*_**Compress***_ to .ZIP or .TAR)
   * Associated LUTs or color-grading files
 * Final Visual Effects Shots – Un-color-corrected preferred (if applicable)
 
 #### 9.1.1 Dailies archival
 
-Any and all series that are wholly owned by Roku will require delivery of dailies/OCF via LTO9 or greater. LTOs should be formatted LTFs and include a manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series.
+Any and all series that are wholly owned by Roku will require delivery of dailies/OCF via LTO10 or greater. LTOs should be formatted LTFs and include a manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series.
 
 ### 9.2 Offline editorial masters
 
@@ -1008,20 +913,16 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 
 ### V4.0
 
-* 3.3.1 Dailies selects and Frame.io set-up.
 * 3.3.3 - Dailies Memo requirements updated.
-* 3.4.1 - Sizzle requirements and Roku’s main title presentation cards added.
-* 3.4.2 - Sizzle Post deliverables.
+* 3.4 - Sizzle requirements added for Roku’s main title presentation cards and deliverables.
 * 5.2.1 - Temp ADR required in all in-progress cuts.
-* 5.4 - Ad breaks specifications
-* 6.1.1  - Uncompressed masters - packaging DPX and TIFF folders into one .zip file.
-* 6.1.4 - Live, remote playback policy for Roku Creative and Post Production.
-* 7.1.3 - Roku Presentation Card requirements added.
-* 8.4.3 - UHD Texted Video Master specifications
+* 5.2.2 - Runtime Requirements Updated.
+* 6.1.1 - Uncompressed masters - packaging DPX and TIFF folders into one .zip file.
+* 6.1.4 - Live, remote mix playback preference for Roku Creative and Post Production.
+* 7.1.3 - Roku presentation cards, duration and style specifications added.
 * 8.6 - Timed Text files will now be delivered to the AWS S3 Archival Bucket.
 * 8.7 - Final destination chart for all deliverables.
-* 9.1 - Final Archival Media will now be uploaded to AWS S3, rather than Frame.io.
-* 9.1 - LTO archive updated to LTO10 requirement.
+* 9.1 - Final Archival Media will now be uploaded to AWS S3, rather than Frame.io and for LTO Archive please use LTO10.
 
 ### V3.0
 
@@ -1032,8 +933,8 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 * 7.2 - Roku Originals end card updated
 * 8.3.1 - Paper deliverable labeling revised.
 * 8.4.5 - If one episode in a series requires a full textless asset delivery, now all episodes in that series will require a fully textless master.
-* 8.7.1 - Link to current metadata templates and guidelines added.
-* 8.7.10 - 'Not Applicable' Form added.
+* 8.8.1 - Link to current metadata templates and guidelines added.
+* 8.8.10 - 'Not Applicable' Form added.
 * 9.1 - LTO archive updated to LTO9 requirement.
 
 ### V2.1

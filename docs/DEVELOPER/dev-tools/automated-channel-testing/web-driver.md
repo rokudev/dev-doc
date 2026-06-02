@@ -11,7 +11,7 @@ next:
 ---
 <HTMLBlock>{`
 <div class="markdown-body developer-content-body">
-<p>The Roku WebDriver is required to control an app. It can be used in conjunction with the <a href="/docs/developer-program/dev-tools/automated-channel-testing/robot-framework-library.md">Roku Robot Framework Library</a>, <a href="/docs/developer-program/dev-tools/automated-channel-testing/javascript-library.md">Roku JavaScript library</a>, another test framework, or a programming language or a programming language such as Python, Java, or Go to execute test cases.</p>
+<p>The Roku WebDriver is required to control an app. It can be used in conjunction with the <a href="/docs/developer/dev-tools/automated-channel-testing/robot-framework-library.md">Roku Robot Framework Library</a>, <a href="/docs/developer/dev-tools/automated-channel-testing/javascript-library.md">Roku JavaScript library</a>, another test framework, or a programming language or a programming language such as Python, Java, or Go to execute test cases.</p>
 <h2 id="roku-webdriver-apis">Roku WebDriver APIs</h2>
 <p>Roku's WebDriver includes a set of Selenium-based REST APIs for sending commands to a Roku device. These APIs conform to the <a href="https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol">WebDriver standards</a> specified by the World Wide Web Consortium (W3C). Specifically, the Roku WebDriver provides an HTTP-compliant JSON wire protocol with endpoints that map to their respective commands.</p>
 <p>Path segments that are prefixed with a colon (:) represent variables.  For example, the <code>:sessionId</code> variable is included in most command paths. This variable represents the ID of the session to be retrieved or the session where a command is to be sent.</p>
@@ -604,7 +604,7 @@ next:
 <tr>
 <td class="short-line">POST</td>
 <td class="short-line">session/:sessionId/input</td>
-<td class="long-line"><strong>channelId</strong> - {number}: The ID of the app to be launched.<br><br><strong>contentId</strong> - {string} (optional): The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.<br><br><strong>contentType</strong> - {string} (optional): The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.<br><br><strong>Example:</strong><br><pre><code>{
+<td class="long-line"><strong>channelId</strong> - {number}: The ID of the app to be launched.<br><br><strong>contentId</strong> - {string} (optional): The <a href="/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.<br><br><strong>contentType</strong> - {string} (optional): The <a href="/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.<br><br><strong>Example:</strong><br><pre><code>{
   "channelId": "dev",
   "contentId": "myMovie123",
   "contentType": "movie"
@@ -704,7 +704,7 @@ next:
 <tr>
 <td class="short-line">POST</td>
 <td class="short-line">session/:sessionId/launch</td>
-<td class="long-line"><strong>channelId</strong> - {number}: The ID of the app to be launched.<br><br><strong>contentId</strong> - {string} (optional): The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.<br><br><strong>contentType</strong> - {string} (optional): The <a href="/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.<br><br><strong>Example:</strong><br><pre><code>{
+<td class="long-line"><strong>channelId</strong> - {number}: The ID of the app to be launched.<br><br><strong>contentId</strong> - {string} (optional): The <a href="/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">contentId</a> of the content to be played. You can include this parameter and the <strong>contentType</strong> to execute deep linking tests.<br><br><strong>contentType</strong> - {string} (optional): The <a href="/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters">mediaType</a> of the content to be played. You can include this parameter and the <strong>contentId</strong> to execute deep linking tests.<br><br><strong>Example:</strong><br><pre><code>{
   "channelId": "dev",
   "contentId": "myMovie123",
   "contentType": "movie"
@@ -1658,7 +1658,7 @@ next:
 </tbody>
 </table></div>
 <h2 id="testing-production-apps">Testing production apps</h2>
-<p>To test production apps with the Roku Web Driver APIs, <a href="/docs/developer-program/publishing/packaging-channels.md#rekeying">package the app</a> on your Roku device using the same Roku developer account linked to the production version of the app.</p></div>
+<p>To test production apps with the Roku Web Driver APIs, <a href="/docs/developer/publishing/packaging-channels.md#rekeying">package the app</a> on your Roku device using the same Roku developer account linked to the production version of the app.</p></div>
 `}</HTMLBlock>
 
 <br />

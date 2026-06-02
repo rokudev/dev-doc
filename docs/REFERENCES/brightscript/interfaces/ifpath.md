@@ -71,7 +71,7 @@ A flag indicating whether the current path is valid.
 
 #### Description
 
-Returns an [roAssociativeArray](https://sdkdocs-archive.staging.web.roku.com/roAssociativeArray_1611481.html) containing keys for the parent directories, extensions, and file name in the file path.
+Returns an [roAssociativeArray](/docs/references/brightscript/components/roassociativearray.md) containing keys for the parent directories, extensions, and file name in the file path.
 
 #### Return Value
 

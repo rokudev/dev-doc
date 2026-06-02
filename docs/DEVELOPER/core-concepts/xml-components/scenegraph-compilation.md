@@ -21,17 +21,17 @@ BrightScript files in the `pkg:/components` directory are compiled in
 the same way as BrightScript files in the `pkg:/source` directory. The
 SceneGraph component files are compiled by creating a list of component
 names for the application, based on the `name` attribute of
-the [**\<component\>**](component_1608292.html) element of each file.
+the [**\<component\>**](/docs/references/scenegraph/xml-elements/component.md) element of each file.
 These component names are checked for validity as instances of the
 components are created in the application. This check is
 *case-sensitive*: the component name to be created must *exactly* match
 a name in the component name list, *including* case. The application
 begins to create instances of SceneGraph components starting with a
 component extended from a scene node class (either
-[**Scene**](Scene_1607315.html) or
-[**OverhangPanelSetScene**](OverhangPanelSetScene_1613108.html)). See
+[**Scene**](/docs/references/scenegraph/scene.md) or
+[**OverhangPanelSetScene**](/docs/references/scenegraph/sliding-panels-nodes/overhangpanelsetscene.md)). See
 [**Component Initialization
-Order**](Component-Initialization-Order_1611697.html) for a description
+Order**](component-initialization-order.md) for a description
 of the process that creates component
 instances.
 

@@ -12,7 +12,7 @@ next:
 ---
 
 
-The roAudioResouce allows .wav files to be cached to memory and quickly played at any time. roAudioResource is intended to support short audio clips which need to be played with very little latency. The system caches the entire wav file in memory so that playback can begin very quickly.
+The roAudioResource allows .wav files to be cached to memory and quickly played at any time. roAudioResource is intended to support short audio clips which need to be played with very little latency. The system caches the entire wav file in memory so that playback can begin very quickly.
 
 On Roku "Classic" models, roAudioResource does not support mixing of sounds. So when you play a sound effect, any background music is paused while the sound effect plays and then resumes after the sound effect ends. On later models, sound effects are mixed with background music. See the [Hardware specifications document](doc:hardware) for a list of Current and Classic models.
 

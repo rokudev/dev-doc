@@ -25,6 +25,6 @@ In addition, the SceneGraph XML programming framework includes a new capability 
 
 You can learn more about the SceneGraph development framework by watching the [Core concepts](doc:debugging) video lesson in Roku's [SceneGraph: Build an App online video course](https://developer.roku.com/videos/courses/rsg/overview).
 
-This lesson reviews core concepts for Roku app app development. It explains the basic design principles and key concepts for developing on the Roku platform, outlines the contents and structure of Roku apps, and compares the programming languages used to build Roku apps: SceneGraph and BrightScript. It highlights the different types of SceneGraph components you can use to build the app UI.
+This lesson reviews core concepts for Roku app development. It explains the basic design principles and key concepts for developing on the Roku platform, outlines the contents and structure of Roku apps, and compares the programming languages used to build Roku apps: SceneGraph and BrightScript. It highlights the different types of SceneGraph components you can use to build the app UI.
 
 The lesson continues by providing a high-level overview of several key topics such as threading, event handling, and data scoping. It concludes by explaining the importance of factoring graceful degradation in the app design.

@@ -11,7 +11,7 @@ Continue Watching is a content category row within the **What to Watch** home sc
 
 <Image align="center" alt="roku815px - continue watching row" border={true} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png" className="border" />
 
-> The Continue Watching feature is available on all Roku devices running [Roku OS 11.0](doc:release-notes#roku-os-110) or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
+> The Continue Watching feature is available on all Roku devices running [Roku OS 11.0](doc:release-notes#roku-os-110) or higher in the United States, Canada, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
 > Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](doc:certification#4-app-operation). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 >
@@ -267,7 +267,7 @@ curl --location --request GET 'https://apipub.roku.com/developer/v1/user-data/v1
 
 ### Update API
 
-To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md#add-api).
+To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](https://developer.roku.com/docs/developer/discovery/continue-watching.md#add-api).
 
 **Example (cURL):**
 

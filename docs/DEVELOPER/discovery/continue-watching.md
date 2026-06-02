@@ -20,7 +20,7 @@ Continue Watching is a content category row within the **What to Watch** home sc
 >
 > **Certification requirement**:
 >
-> * Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](/docs/developer-program/certification/certification.md#4-channel-operation).
+> * Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](/docs/developer/certification-overview/certification.md#4-app-operation).
 > * Effective October 1st, 2026, apps outside the U.S. Streaming Store that have streamed more than an average of 1 million hours per month over the last three months must participate in Roku’s Continue Watching program.
 > * This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 >

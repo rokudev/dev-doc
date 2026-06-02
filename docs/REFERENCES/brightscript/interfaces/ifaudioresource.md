@@ -16,7 +16,7 @@ next:
 
 | Name            | Description                               |
 | --------------- | ----------------------------------------- |
-| [roAudioResource](doc:roaudioresource) | The roAudioResouce allows .wav files to be cached to memory and quickly played at any time |
+| [roAudioResource](doc:roaudioresource) | The roAudioResource allows .wav files to be cached to memory and quickly played at any time |
 
 
 ## Supported methods

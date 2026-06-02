@@ -496,7 +496,7 @@ To delete a product group, click the garbage can icon on the right side of the p
 
 ## Testing in-app product purchases
 
-To test in-app product purchases on a betan app, the app must:
+To test in-app product purchases on a beta app, the app must:
 
 * be configured with subscription and/or one-time purchase monetization methods.
 * be enabled for billing testing.

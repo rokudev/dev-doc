@@ -618,7 +618,7 @@ The Gracenote tech ID (prgSvcId) for the live channel to be made discoverable th
 
 #### PlayOption
 
-In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md) into content from Roku Search) for the live channel.
+In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](https://developer.roku.com/docs/developer/discovery/implementing-deep-linking.md) into content from Roku Search) for the live channel.
 
 <Table>
   <thead>
@@ -687,7 +687,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
         String
       </td>
       <td>
-        A unique, immutable ID for the live channel that is used for deep linking. When customers search for this content item and select your channel to watch it, the **playId** is passed in a [deep link](https://developer.roku.com/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior) back to your channel. The playId may not be a URL. If you require this ID to be a URL please talk to your partner manager.
+        A unique, immutable ID for the live channel that is used for deep linking. When customers search for this content item and select your channel to watch it, the **playId** is passed in a [deep link](https://developer.roku.com/docs/developer/discovery/implementing-deep-linking.md#mediatype-behavior) back to your channel. The playId may not be a URL. If you require this ID to be a URL please talk to your partner manager.
       </td>
       <td>
         Required

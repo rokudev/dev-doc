@@ -16,7 +16,7 @@ It is used in conjunction with [roFontRegistry](doc:rofontregistry) to create an
 
 **Example**
 
-```
+```brightscript
 screen = CreateObject("roScreen")
 white = &hFFFFFFFF
 blue = &h0000FFFF

@@ -560,7 +560,7 @@ An associative array with the supported DRM system and features:
 
 **Example**
 
-```
+```brightscript
 PlayReady : {
     multikey: false
     securestop: true
@@ -706,7 +706,7 @@ The value of the specified global setting property, which may be as follows:
 
 #### Example
 
-```
+```brightscript
 di = CreateObject("roDeviceInfo")
 mode = di.GetCaptionsMode()
 
@@ -1418,7 +1418,7 @@ For example, the name "DD+" may have the value "8:6:0:1" where there are 8 indep
 
 The following example demonstrates how to determine if the attached device supports Dolby Digital Plus audio:
 
-```
+```brightscript
 di = CreateObject("roDeviceInfo")
 audioDecoders = di.GetAudioDecodeInfo()
 

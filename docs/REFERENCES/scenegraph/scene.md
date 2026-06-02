@@ -14,7 +14,7 @@ Extends [**Group**](doc:group)
 
 The **Scene** node class serves as the root of a SceneGraph node tree. Every **roSGScreen** object must have a **Scene** node, or a node that derives from the **Scene** node class as its root, including an XML markup component that extends the Scene node class or subclass. That node must be created using the **roSGScreen** createScene() function, with an argument that is a string of the name of the **Scene** node object created. For example:
 
-```
+```brightscript
 screen = CreateObject("roSGScreen")
 scene = screen.CreateScene("Scene")
 ```

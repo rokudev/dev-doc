@@ -404,7 +404,7 @@ Developers looking to pass custom HTTP headers with a licensing request can now 
 
 ### Example of configuring a dash stream with Widevine DRM
 
-```
+```brightscript
 contMeta = {
     HDPosterUrl:"pkg:/images/BigBuckBunny.jpg"
     SDPosterUrl:"pkg:/images/BigBuckBunny.jpg"
@@ -426,7 +426,7 @@ contMeta = {
 
 The following code demonstrates how you can wrap the Widevine license challenge payload in the request format (JSON or XML) required by your license server proxy.
 
-```
+```brightscript
 ' set the content type
 ' for json it may be set to "application/json
 ' for xml it may be set to "text/xml" or "application/xml"
@@ -1014,7 +1014,7 @@ Content Delivery Networks (CDNs) can be switched during playback to load balance
 
 **Example**
 
-```
+```brightscript
 this.cur_clip.CDNConfig = [
     { URLFilter:"http://cdn1.xyz.com/abc/", ContentFilter, "testProgram", priority: 1, weight: 50, serviceLocation: "west" },
     { URLFilter:"http://cdn2.xyz.com/abc/", ContentFilter, "testProgram", priority: 1, weight: 50, serviceLocation: "east" },
@@ -1039,7 +1039,7 @@ set to only apply to your Audio and Video nodes, create a unique
 instance of roHttpAgent for them and assign it directly. For example,
 for a Video node you should do the following:
 
-```
+```brightscript
 'Assume video is a valid Video node instance
 httpAgent = CreateObject("roHttpAgent")
 video.setHttpAgent(httpAgent)
@@ -1093,7 +1093,7 @@ of requests.
 Once you have created your agent, you can set the Video node's `drmHttpAgent` field directly to designate that the special
 agent is to supersede any currently-set agent in the case of DRM key and license requests. The `drmHttpAgent` field must be configured before setting the content in the Video node.
 
-```
+```brightscript
 ' Configure the DRM HttpAgent before setting content in the Video node
 httpAgent = CreateObject("roHttpAgent")
 httpAgent.AddHeader("DRM-Specific-1", "weqweqweqweqweqweqeqeqeqeqwe")

@@ -36,7 +36,7 @@ reference. For example, the following creates and defines several fields
 for a `dialog` object that can only be accessed within the function in
 which it is created and defined:
 
-```
+```brightscript
 dialog = createObject("RoSGNode","Dialog")
 dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
 dialog.title = "Example Dialog"
@@ -52,7 +52,7 @@ file. For example, if you wanted to create the same `dialog` object
 above in one function, but define it, or otherwise access it, in another
 function in the same component XML file:
 
-```
+```brightscript
 sub createdialog()
     m.dialog = createObject("RoSGNode", "Dialog")
 end sub
@@ -76,7 +76,7 @@ file (which is the required usage of the Dialog node class), assign
 the `dialog` object to the `dialog` field using the `m.top` object
 reference:
 
-```
+```brightscript
 dialog = createObject("RoSGNode", "Dialog")
 dialog.backgroundUri = "pkg:/images/sgetdialogbg.9.png"
 dialog.title = "Example Dialog"
@@ -90,7 +90,7 @@ Likewise, if you want to use `findNode()` to find a SceneGraph node
 object anywhere in the SceneGraph tree for a component XML file, use the
 `m.top` reference to start at the top of the tree:
 
-```
+```brightscript
 m.categorieslist = m.top.findNode("categorieslist")
 ```
 
@@ -113,7 +113,7 @@ m.categorieslist = m.top.findNode("categorieslist")
 
 For example:
 
-```
+```brightscript
 screen = CreateObject("roSGScreen")
 m.port = CreateObject("roMessagePort")
 screen.setMessagePort(m.port)
@@ -134,7 +134,7 @@ get its special global element:
 
 You will need to take the associative array, modify it and save it back into the field.
 
-```
+```brightscript
 m.global.addFields({red: &hff0000ff, green: &h00ff00ff, blue: &h0000ffff})
 ' ...
 

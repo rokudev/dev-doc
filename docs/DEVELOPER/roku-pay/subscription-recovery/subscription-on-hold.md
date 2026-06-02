@@ -283,7 +283,7 @@ This reference summarizes the **request** and **requestStatus** fields used by t
 
 The following code demonstrates how to use the ChannelStore node (SDK 2) to display the Roku Pay subscription renewal dialog and configure it so it blocks access to content:
 
-```
+```brightscript
 function DoRecovery()
     request = {}
     request.command = "DoRecovery"
@@ -315,7 +315,7 @@ end function
 
 The following code demonstrates how to use the roChannelStore node (SDK 1) to display the Roku Pay subscription renewal dialog and block access to content. A **DoRequest()** method, which takes the **request** object, is required for sending the DoRecovery request.
 
-```
+```brightscript
 function DoRecovery() as void
     request = {}
     request.command = "DoRecovery"

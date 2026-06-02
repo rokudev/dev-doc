@@ -45,7 +45,7 @@ Here's an example of a BrightScript function that creates a component named Stop
 
 **BrightScript component creation**
 
-```
+```brightscript
 function createStopwatch(parent as object) as object
   stopWatch = m.top.createChild("StopWatch")
   stopWatch.translation = [100, 200]

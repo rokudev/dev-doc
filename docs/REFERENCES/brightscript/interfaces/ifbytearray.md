@@ -106,7 +106,7 @@ The **start_pos** and **end_pos** fields specify the 0-based indices of items in
 
 #### Example
 
-```
+```brightscript
 '          0   1   2   3   4   5
 byteArr = [99, 26, 26, 36, 42]
 
@@ -291,7 +291,7 @@ The calculated CRC-32 checksum.
 
 #### Example
 
-```
+```brightscript
     ba = CreateObject("roByteArray")
     ba.FromAsciiString("Hello world!")
     n = ba.GetCrc32()

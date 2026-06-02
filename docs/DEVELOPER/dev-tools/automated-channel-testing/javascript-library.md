@@ -415,7 +415,7 @@ const result = library.getChildNodes(rowList, searchData);
 
 - **locator** (optional): An array containing search criteria for the child nodes to be retrieved. The locator has the following syntax:
 
-  ```
+  ```brightscript
   "using" ("attr", "tag", "text") : specify locator type
   "value": tag or attribute value
   "attribute"(only for "attr" type): specify attribute

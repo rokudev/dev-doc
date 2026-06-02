@@ -36,7 +36,7 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
 
 1. Enable the RED library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
-   ```
+   ```brightscript
    sg_component_libs_required=roku_analytics
    ```
 
@@ -50,7 +50,7 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
 
    The following example demonstrates how to send authentication events:  
 
-   ```
+   ```brightscript
    sub Notify_Roku_UserIsLoggedIn(rsgScreen = invalid as Object)
        ' get the global node
        if type(m.top) = "roSGNode"  ' was called from a component script
@@ -83,17 +83,17 @@ To use the RAF **fireRokuMarketingPixel()** method to send authentication events
 
 1. Enable the RAF library in your app by adding the following line to the [manifest](doc:channel-manifest) file:
 
-   ```
+   ```brightscript
    bs_libs_required=roku_ads_lib
    ```
 
 2. Instantiate the RAF library in the app:
 
-   ```
+   ```brightscript
    adIface = Roku_Ads()
    ```
 
 3. When an authenticated customer launches your app, call the **fireRokuMarketingPixel()** method using the following syntax:
 
-   ```
+   ```brightscript
    adIface.fireRokuMarketingPixel("Roku_Authenticated")

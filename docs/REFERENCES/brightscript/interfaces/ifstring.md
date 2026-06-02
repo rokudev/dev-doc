@@ -61,7 +61,7 @@ A flag indicating whether the string is empty (true), or contains characters (fa
 
 #### Example
 
-```
+```brightscript
 a = "myString"
 b = ""
 

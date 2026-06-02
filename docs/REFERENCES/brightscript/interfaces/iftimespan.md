@@ -60,13 +60,13 @@ The number of seconds.
 
 #### Example
 
-```
+```brightscript
 x = timespan.TotalSeconds()
 ```
 
 is equivalent to
 
-```
+```brightscript
 x = Int(timespan.TotalMilliseconds() / 1000)
 ```
 

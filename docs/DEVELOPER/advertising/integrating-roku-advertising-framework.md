@@ -35,7 +35,7 @@ any applications using the Roku Advertising Framework library:
 
 **Manifest entry**
 
-```
+```text
 bs_libs_required=roku_ads_lib
 ```
 
@@ -44,19 +44,19 @@ as part of their own package file. Instead, the “Library” keyword is
 used. The following line should be the first entry in
 your `main.brs` file:
 
-```
+```brightscript
 Library "Roku_Ads.brs"
 ```
 
 The library interface is obtained by calling the constructor with no arguments:
 
-```
+```brightscript
 adIface = Roku_Ads()
 ```
 
 Configure the ad URL before making the ad request call:
 
-```
+```brightscript
 adIface.setAdUrl(myAdUrl)
 ```
 
@@ -71,14 +71,14 @@ makes the initial request to the ad server, parses the server response,
 and returns the structure of ads to be rendered prior to, or during
 playback, of the selected content:
 
-```
+```brightscript
 adPods = adIface.getAds()
 ```
 
 Any preroll ads present in the returned set of ad pods can be
 immediately rendered by calling:
 
-```
+```brightscript
 shouldPlayContent = adIface.showAds(adPods, invalid, adHolder)
 ```
 
@@ -96,7 +96,7 @@ ads:
 
 **Calling getAds() in a while loop**
 
-```
+```brightscript
 while shouldPlayContent
   videoMsg = wait(0, contentVideoScreen.GetMessagePort())
   adPods = adIface.getAds(videoMsg)
@@ -119,7 +119,7 @@ retains control over the * button and will need to handle button
 presses on their own. To set the Video node in focus again, use the
 following code snippet:
 
-```
+```brightscript
 sub init()
   m.top.setFocus(true)
   setVideo()
@@ -142,7 +142,7 @@ URL (which currently provides only a single ad), the ad URL must be
 configured before requesting an
 ad pod:
 
-```
+```brightscript
 Library "Roku_Ads.brs"
 
 adIface = Roku_Ads()
@@ -177,7 +177,7 @@ its `renderSequence` attribute.
 Just call [showAds()](doc:raf-api) with
 the adPods value that the application obtained above:
 
-```
+```brightscript
 shouldPlayContent = adIface.showAds(adPods)
 ```
 
@@ -199,7 +199,7 @@ occur:
 
 **Sequential ad pod rendering example**
 
-```
+```brightscript
 shouldPlayContent = adIface.showAds(adPods)
 while shouldPlayContent
   videoMsg = wait(0, contentVideoScreen.GetMessagePort())
@@ -232,7 +232,7 @@ necessary:
 
 **Custom ad scheduling example**
 
-```
+```brightscript
 adBreakSchedule = [adBreakTime1, adBreakTime2, adBreakTime3]
 scheduledPods = []
 adBreakIndex = 0
@@ -260,7 +260,7 @@ rendering:
 
 **Complete ad rendering control example**
 
-```
+```brightscript
 shouldPlayContent = true
 adBreakIndex = 0
 while shouldPlayContent
@@ -312,7 +312,7 @@ The impression tags fired when video ads are displayed on your app must include 
 
 To enable ad measurement, call the [enableAdMeasurements()](doc:raf-api) method, and pass the required content metadata within the [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api) methods.
 
-```
+```brightscript
 adIface.enableAdMeasurements(true)
 adIface.setContentGenre(content.categories)
 adIface.setContentId(content.stream.contentid)
@@ -335,7 +335,7 @@ Apps can use the [GetRIDA()](doc:ifdeviceinfo) API to get the RIDA of a device a
 
 **Retrieving RIDA example**
 
-```
+```brightscript
 function getAdID() as String
     adId = ""
     dev_info = createObject("roDeviceInfo")
@@ -408,7 +408,7 @@ The supported content meta-data attributes are:
 | Title                | Center-aligned relative to and displayed below PosterUrl | "Title for custom buffering screen"                                                                                                                                                                                                       |
 | Description          | Left-aligned relative to PosterUrl                       | "Description for custom buffering screen"                                                                                                                                                                                                 |
 
-```
+```brightscript
 bufferScreenContent = {}
 bufferScreenContent.HDBackgroundImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png"
 bufferScreenContent.HDPosterUrl = "http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png"
@@ -431,7 +431,7 @@ other roImageCanvas attributes.
 
 **Custom buffering screen using layers**
 
-```
+```brightscript
 layers = [
     {Url: BackgroundImageUrl}
     {Url: PosterUrl, TargetRect : {x : 405, y : 370, w : 467, h : 262}}
@@ -468,7 +468,7 @@ first calling
 the [importAds()](doc:raf-api) method
 with the ad structure constructed externally by the client:
 
-```
+```brightscript
 adIface.importAds(myAdPodArray)
 ```
 
@@ -521,7 +521,7 @@ As an example, if `ad` contains the [Ad structure](doc:integrating-roku-advertis
 video ad that the client application has just begun rendering,
 the `Impression` beacons for that ad could be fired with a single call:
 
-```
+```brightscript
 adIface.fireTrackingEvents(ad, {type: "Impression"})
 ```
 
@@ -530,14 +530,14 @@ variable `adProgressTime` holds a value representing the number of
 seconds since the ad began rendering, the quartile beacons can be sent
 via:
 
-```
+```brightscript
 adIface.fireTrackingEvents(ad, {time: adProgressTime})
 ```
 
 If the ad were paused by the user, then the client app would fire
 the `Pause` beacons:
 
-```
+```brightscript
 adIface.fireTrackingEvents(ad, {type: "Pause"})
 ```
 
@@ -622,7 +622,7 @@ Scheduling and rendering is then initialized by first calling
 the [`stitchedAdsInit()`](doc:raf-api) method with the ad structure constructed by the
 client:
 
-```
+```brightscript
 adIface.stitchedAdsInit(myAdPodArray)
 ```
 
@@ -637,7 +637,7 @@ logic:
 
 **Server side ad insertion example**
 
-```
+```brightscript
 playContent = true
 while playContent
   msg = Wait(0, videoPlayer.GetMessagePort())
@@ -720,7 +720,7 @@ set:
 
 **setAdUrl example**
 
-```
+```brightscript
 rokuAds = Roku_Ads()
 url = "http://my.ad.server.net/?my_first_param=MyFirstValue&my_app_id=ROKU_ADS_APP_ID&my_user_agent=ROKU_ADS_USER_AGENT&my_timestamp=ROKU_ADS_TIMESTAMP&other_param=SomeOtherValue"
 rokuAds.setAdUrl(url)

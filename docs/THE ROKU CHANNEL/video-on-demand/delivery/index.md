@@ -885,7 +885,7 @@ Roku is using Apache [xmlbeans](https://xmlbeans.apache.org/download/index.html)
 
 **Example response**
 
-```
+```text
 XMLBEANS_LIB=./../lib
 ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
 /path/to/file/directory /MEC_SAMPLE_123456789.xml valid

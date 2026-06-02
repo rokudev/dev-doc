@@ -37,7 +37,7 @@ These attributes include but are not limited to the following:
 
 ## Example manifest file
 
-```
+```brightscript
 # Channel Details
 title=HeroGridChannel
 major_version=1

@@ -21,19 +21,19 @@ passed to Dim is the index of the maximum entry to be allocated (the
 array initial size = dimension+1); the array will be resized larger
 automatically if needed.
 
-```
+```brightscript
 Dim array[5]
 ```
 
 Is the same as:
 
-```
+```brightscript
 array=CreateObject("roArray",6,true)
 ```
 
 Note that x\[a,b\] is the same as x\[a\]\[b\].
 
-```
+```brightscript
  dim c[5, 4, 6]
  for x = 1 to 5
     for y = 1 to 4
@@ -65,7 +65,7 @@ value.
 
 **Example**
 
-```
+```brightscript
 a$="a rose is a rose"
 b1=1.23
 x=x-z1
@@ -92,7 +92,7 @@ on a line by itself.
 
 For example:
 
-```
+```brightscript
 mylabel:
 print "Anthony was here!"
 Goto mylabel
@@ -135,7 +135,7 @@ assumed.
 
 For example:
 
-```
+```brightscript
 for i = 10 to 1 Step -1
     print i
 end for
@@ -143,7 +143,7 @@ end for
 
 `NEXT` is supported as an alternative terminator to `END FOR` for legacy compatibility, but `END FOR` is the preferred form:
 
-```
+```brightscript
 for i=10 to 1 step -1
     print i
 next
@@ -169,7 +169,7 @@ roMessagePort.
 
 For example:
 
-```
+```brightscript
 aa = { joe: 10, fred: 11, sue:9 }
 
 for each n in aa
@@ -180,7 +180,7 @@ end for
 
 As with `FOR`, `NEXT` is supported as an alternative terminator to `END FOR` for legacy compatibility, but `END FOR` is the preferred form:
 
-```
+```brightscript
 for each n in aa
     print n;aa[n]
 next
@@ -194,7 +194,7 @@ prematurely.
 
 For example:
 
-```
+```brightscript
 k = 0
 while k = 0
     k = 1
@@ -217,7 +217,7 @@ The "continue" statement terminates the execution of the statements in the curre
 
 For example:
 
-```
+```brightscript
 fruits = ["orange", "lemon", "lime"]
 for each fruit in fruits
     if fruit = "lemon" then continue for
@@ -239,7 +239,7 @@ end while
 
 Use to trap exceptions, which enables the implementation of error handling in BrightScript programs. Schematically, the syntax is as follows:
 
-```
+```brightscript
 try
     ' Zero or more statements ("TRY block")
 catch exception_object_variable_name
@@ -255,7 +255,7 @@ The TRY block of statements is executed. If and only if an error occurs, the CAT
 
 The variable name specified as the *exception object* in the CATCH clause must refer to a *simple variable*. It cannot be an array element, for example. The following are **not** legal as exception object references in the CATCH clause:
 
-```
+```brightscript
 CATCH                ' no object variable at all -- an object must always be specified
 CATCH someArray[23]  ' array element is bad exception object
 CATCH bill.ted       ' object field is bad exception object
@@ -285,7 +285,7 @@ Information about the exception is contained within an exception object that is 
 
 The following example sends an error message, including the contents of the exception record, to the debug console.
 
-```
+```brightscript
 try
     print 1/0
 catch e
@@ -303,7 +303,7 @@ end try
 
 TRY/CATCH statements can be nested within TRY or CATCH blocks, as needed. Here is an example:
 
-```
+```brightscript
 print "Starting"
 x = "I'm not an array"
 try
@@ -334,7 +334,7 @@ The expression given in the THROW statement should evaluate to an exception obje
 
 **Example code**
 
-```
+```brightscript
 function reciprocal(x)
     return 1/x
 end function
@@ -369,7 +369,7 @@ REM.
 
 For example:
 
-```
+```brightscript
 Rem ** this remark introduces the program **
 ' this too is a remark
 ```
@@ -386,7 +386,7 @@ program line.
 
 For example:
 
-```
+```brightscript
 if x > 127 then print "out of range"
 if caveman = "fred" then print "flintstone" else print "rubble"
 ```
@@ -398,7 +398,7 @@ THEN is optional in the above and similar statements.
 The multi-line or block form of IF THEN ELSE is more flexible. It has
 the form:
 
-```
+```brightscript
  if BooleanExpression then
    statements
  elseif BooleanExpression then
@@ -414,7 +414,7 @@ words: "else if".
 
 For example:
 
-```
+```brightscript
 msg = wait(0, p)
 if type(msg) = "roVideoPlayerEvent" then
     if debug then print "video event"
@@ -449,7 +449,7 @@ strings.
 
 For example:
 
-```
+```brightscript
 x=5:print 25; " is equal to"; x^2
  25 is equal to 25
 
@@ -469,7 +469,7 @@ zone 1          zone 2          zone 3          zone 4
 Each print zone is 16 char wide. The cursor moves to the next print zone
 each time a comma is encountered.
 
-```
+```brightscript
 print "print statement #1 "; "print statement #2"
 
 Output: print statement #1 print statement #2
@@ -477,7 +477,7 @@ Output: print statement #1 print statement #2
 
 Semi-colons can be dropped in some cases. For example, this is legal:
 
-```
+```brightscript
 print "this is a five " 5 "!!"
 ```
 
@@ -491,7 +491,7 @@ objects:
 
 **Printing Enumerable Objects**
 
-```
+```brightscript
 print {}
 ' this will print: <Component: roAssociativeArray> =  { }
 
@@ -511,7 +511,7 @@ Moves the cursor to the specified position on the current line (modulo
 the width of your console if you specify TAB positions greater than the
 console width). TAB may be used several times in a PRINT list.
 
-```
+```brightscript
 print tab(5)"tabbed 5";tab(25)"tabbed 25"
 ```
 
@@ -525,7 +525,7 @@ Returns a number from 0 to window width, indicating the current cursor
 position on the cursor. Requires a "dummy argument" (any numeric
 expression).
 
-```
+```brightscript
 print tab(40) pos(0) 'prints 40 at position 40
 print "these" tab(pos(0)+5)"words" tab(pos(0)+5)"are"; tab(pos(0)+5)"evenly" tab(pos(0)+5)"spaced"
 ```
@@ -560,7 +560,7 @@ parameters.
 
 For example:
 
-```
+```brightscript
 function cat(a, b)
     return a+b 'a, b could be numbers or strings
 end function
@@ -593,7 +593,7 @@ in.
 
 For example:
 
-```
+```brightscript
 sub main()
     obj = {
         add: add
@@ -619,7 +619,7 @@ A function is anonymous if it does not have a name. Note that Anonymous
 Functions do not currently create closures. An Anonymous Function can be
 declared like this:
 
-```
+```brightscript
 myfunc = function (a, b)
     return a+b
 end function
@@ -629,7 +629,7 @@ print myfunc(1,2)
 
 They can be used with associative array literals like this:
 
-```
+```brightscript
 q = {
     starring : function(o, e)
         str = e.GetBody()

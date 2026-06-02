@@ -59,7 +59,7 @@ An roArray of matched substrings from str. If no match was made, an empty array 
 
 #### Example (from Brightscript Debugger Interactive Shell)
 
-```
+```brightscript
  r = CreateObject("roRegex", "(a|(z))(bc)","")
  print r.Match("abcd")
  abc
@@ -86,7 +86,7 @@ An roArray where the first element is the full matched string and if there are a
 
 #### Example
 
-```
+```brightscript
   r = CreateObject("roRegex", "\d+", "")
   arr = r.MatchAll("123 456 789")
   print FormatJSON(arr)
@@ -109,7 +109,7 @@ Replaces the first occurrence of a matching pattern in str with replacement and 
 
 #### Example (from Brightscript Debugger Interactive Shell)
 
-```
+```brightscript
  r = CreateObject("roRegex", "(\d+)\s+(\w+)", "")
  print r.Replace("123 abc", "word:\2 number:\1")
  word:abc number:123
@@ -138,7 +138,7 @@ A string with the result of the replace all operation.
 
 #### Example (from Brightscript Debugger Interactive Shell)
 
-```
+```brightscript
   r = CreateObject("roRegex", "a", "i")
   print r.ReplaceAll("Abracadabra", "x")
  xbrxcxdxbrx
@@ -166,7 +166,7 @@ An roList of substrings of str that were separated by strings which match the pa
 
 **Examples from Brightscript Debugger Interactive Shell**
 
-```
+```brightscript
  r = CreateObject("roRegex", ",", "") ' split on comma
  print r.Split("first, second, third and fourth")
  first

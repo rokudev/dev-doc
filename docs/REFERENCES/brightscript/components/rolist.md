@@ -18,7 +18,7 @@ The list object implements the interfaces: ifList, ifArray, ifEnum and therefore
 
 Implementation:
 
-```
+```brightscript
 list = CreateObject("roList")
 list.AddTail("a")
 list.AddTail("b")
@@ -37,7 +37,7 @@ print list[2]
 
 Output:
 
-```
+```brightscript
 a
 b
 c

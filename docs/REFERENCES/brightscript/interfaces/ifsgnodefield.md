@@ -212,7 +212,7 @@ Calls a function when a field of the subject node changes. The function called m
 
 Optionally, this form can pass an [roSGNodeEvent](doc:rosgnode) message to the callback function by specifying the message object as an argument to the callback function. The following sample demonstrates how to do this:
 
-```
+```brightscript
 sub callback_function(message as Object)
   ...
 end sub
@@ -407,7 +407,7 @@ The number of nested objects within an object that were copied, rather than move
 
 #### Example
 
-```
+```brightscript
 ' Can be on Task thread or render thread
   n = CreateObject("roSGNode", "Node")
   n.AddField("aa_field", "assocarray", true)
@@ -419,7 +419,7 @@ The number of nested objects within an object that were copied, rather than move
 
 This code will output the following on the port 8085 console:
 
-```
+```text
 <Component: roAssociativeArray> =
 {
     key: "value"
@@ -453,7 +453,7 @@ The associative array that was moved from the source field.
 
 #### Example
 
-```
+```brightscript
 n = CreateObject("roSGNode", "ContentNode")
 n.AddField("aa_field", "assocarray", true)
 n.aa_field = {key: "value"}' or use moveIntoField()
@@ -476,7 +476,7 @@ print my_aa ' contents of aa_field
 >
 > The following example is the same as the above, except a nested object contains an external reference. As a result, the nested object is **copied** to the destination rather than being moved.
 >
-> ```
+> ```brightscript
 > sub_array = [1, 2, 3]
 > aa = {foo: "hello", bar: sub_array}
 > ' At this point, there is an external reference into aa
@@ -546,7 +546,7 @@ This function returns true a reference to the field’s value. This function ret
 
 #### Example
 
-```
+```brightscript
 ' on render thread:
     n = CreateObject("roSGNode", "Node")
     n.AddField("aa_field", "assocarray", true)
@@ -560,7 +560,7 @@ This function returns true a reference to the field’s value. This function ret
 
 This code will output the following on the port 8085 console:
 
-```
+```text
 <Component: roAssociativeArray> =
 {
     key: "value"
@@ -584,7 +584,7 @@ A runtime debugging method for helping minimize Rendezvous spread.  This method 
 
 The following example demonstrates the information returned by this method:
 
-```
+```brightscript
 {   node: { type: "XXComponent",
     id: "XXID",
     address: 0x123XXX,
@@ -619,7 +619,7 @@ Starting in [Roku OS 9.3](doc:release-notes#roku-os-93), if the app UI displays 
 
 To fire signal beacons within your application, call the `signalBeacon()` function on any node as demonstrated in the following examples:
 
-```
+```brightscript
 myScene.signalBeacon("AppLaunchComplete")
 myEPGComponent.signalBeacon("EPGLaunchInitiate")
 m.top.signalBeacon("EPGLaunchComplete")

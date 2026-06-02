@@ -24,7 +24,7 @@ This object is created with a string that represents the initial path:
 
 **Example**
 
-```
+```brightscript
 path = CreateObject("roPath", filename)
 parts = path.Split()
 if parts.phy = "tmp:" then print "this is a temp file"

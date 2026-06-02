@@ -128,7 +128,7 @@ An array of associative array keys/value pairs.
 
 #### Example
 
-```
+```brightscript
     aa = {one:1, two:2, three:3}
     for each item in aa.Items()
         print item.key, item.value

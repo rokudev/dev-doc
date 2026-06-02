@@ -24,7 +24,7 @@ The date/time of the object is set to the current system time when the object is
 
 **Example**
 
-```
+```brightscript
 date = CreateObject("roDateTime")
 print "The date is now "; date.AsDateString("long-date")
 ```

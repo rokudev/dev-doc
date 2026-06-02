@@ -65,13 +65,13 @@ A Hex string (Digested array data).
 
 #### Example
 
-```
+```brightscript
   x = evp.Process(bytes)
 ```
 
 is equivalent to
 
-```
+```brightscript
   evp.Reinit()
   evp.Update(bytes)
   x = evp.Final()

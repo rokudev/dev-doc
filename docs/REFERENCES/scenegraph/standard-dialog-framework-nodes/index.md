@@ -106,7 +106,7 @@ To create the confirmation dialog with a pre-built StandardDialog node and detec
 
 ##### BrightScript
 
-```
+```brightscript
 sub showAccountDialog()
     ' set up the dialog
     m.accountDialog = createObject("roNode", "StandardMessageDialog")
@@ -156,7 +156,7 @@ To create the confirmation dialog with a custom standard dialog and detect butto
 
 ##### BrightScript
 
-```
+```brightscript
 sub showAccountDialog()
     ' set up the dialog
     m.accountDialog = createObject("roNode", "AccountDialog")
@@ -211,7 +211,7 @@ For more information about how StandardDialog nodes used the RSGPalette colors, 
 
 The following BrightScript code demonsrates how to create an **RSGPalette** node with green colors and assign it to the Scene's palette field. The resulting dialog is displayed below the code.
 
-```
+```brightscript
 m.greenPalette = createObject("roSGNode", "RSGPalette")
 m.greenPalette.colors = {DialogBackgroundColor: "0x003000FF",
                          DialogItemColor: "0x00EF00FF",

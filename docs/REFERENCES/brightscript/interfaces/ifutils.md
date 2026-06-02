@@ -38,7 +38,7 @@ This function returns a copy of the specified object.
 
 #### Example
 
-```
+```brightscript
 utils = CreateObject("roUtils")
     di = CreateObject("roDeviceInfo")
     aa = { a: 1, b: { b1: 42 }, c: di }
@@ -51,7 +51,7 @@ utils = CreateObject("roUtils")
 
 This code will output the following on the port 8085 console:
 
-```
+```brightscript
 IsSameObject    false
 new_aa.a         1
 new_aa.b        <Component: roAssociativeArray> =
@@ -80,7 +80,7 @@ Returns true if **data1** and **data2** reference the same object; otherwise, th
 
 #### Example
 
-```
+```brightscript
 shared = {}
     aa = {"a": shared, "b": shared}
     utils = CreateObject("roUtils")

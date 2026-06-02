@@ -333,13 +333,13 @@ Handling deep links sent to your app from the Continue Watching row is essential
 
 **Syntax:**
 
-```
+```text
 http://<roku-device-ip-address>:8060/launch|input/<channelId>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>&profileId=<profileIdValue>
 ```
 
 **Example:**
 
-```
+```text
 http://192.168.1.4:8060/input/581251?contentId=dev-summit-21-keynote&mediaType=movie&profileId=12345
 ```
 
@@ -347,7 +347,7 @@ http://192.168.1.4:8060/input/581251?contentId=dev-summit-21-keynote&mediaType=m
 
 To call the Continue Watching APIs, the app must include BrightScript code that adds the following HTTP headers (see the [**ifHttpAgent.addHeader()** function](doc:ifhttpagent) for more information). You must set the endpoint first before providing the headers.
 
-```
+```brightscript
 'SetUrl needs to be called first
 request.SetUrl("https://userdata.sr.roku.com/user-data/v1/content/continueWatching")
 request.AddHeader("Content-Type","application/json")

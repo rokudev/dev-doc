@@ -22,7 +22,7 @@ This object is created without any arguments:
 
 **Example: Open TCP Connection to Server**
 
-```
+```brightscript
 sendAddress = CreateObject("roSocketAddress")
 sendAddress.SetAddress("www.google.com:80")
 socket = CreateObject("roStreamSocket")
@@ -34,7 +34,7 @@ end if
 
 **Example: Echo Server**
 
-```
+```brightscript
 function main()
     messagePort = CreateObject("roMessagePort")
     connections = {}

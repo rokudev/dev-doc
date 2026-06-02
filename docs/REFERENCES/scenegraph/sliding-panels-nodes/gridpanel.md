@@ -104,7 +104,7 @@ For efficiency, sometimes the control logic for the GridPanel may create and hol
 
 >  If you are creating the grid field (either a PosterGrid or MarkupGrid) associated with a GridPanel in script of a component that extends GridPanel, you also need to add the grid as a child of the GridPanel. For example, in a component that extends GridPanel, where m.top is that component, you would associate the grid field with a PosterGrid as follows:
 
-```
+```brightscript
 grid = m.top.createChild("PosterGrid")
 m.top.grid = grid
 ```

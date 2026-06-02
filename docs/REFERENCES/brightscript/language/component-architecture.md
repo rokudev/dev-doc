@@ -103,7 +103,7 @@ type results in two copies of the same value, which can be modified
 independently of each other.
 
 
-```
+```brightscript
 a = 42  ' a contains an intrinsic Integer
 b = a   ' b contains a copy of a
 a = 43  ' does not modify b
@@ -126,7 +126,7 @@ intrinsic variables are "passed by value", while object variables are
 
 **Example**
 
-```
+```brightscript
 function Modify(a as Integer, b as Object) as Void
     a = 43
     b.first = 6
@@ -150,7 +150,7 @@ is destroyed.
 
 **Example**
 
-```
+```brightscript
 a = CreateObject("roArray")   ' array has a ref count of 1
 b = a                         ' array has a ref count of 2
 a = invalid                   ' array has a ref count of 1 (a no longer refers to it)
@@ -177,7 +177,7 @@ object is sometimes referred to as "autoboxing".
 
 **Example**
 
-```
+```brightscript
 function Main()
     MyFunA(4)
     MyFunB(4)
@@ -194,7 +194,7 @@ end function
 
 **Will Print:**
 
-```
+```brightscript
   A 4 roInt
   B 4
 Integer
@@ -203,7 +203,7 @@ Integer
 
 **Example**
 
-```
+```brightscript
 print 5.tostr()+"th"   ' prints 5th
 print "5".toint()+5    ' prints 10
 if type(5.tostr())<> "String" then stop
@@ -281,7 +281,7 @@ For example, if the file "example.xml" contains the following:
 
 Then
 
-```
+```brightscript
  rsp=CreateObject("roXMLElement")
  rsp.Parse(ReadAsciiFile("tmp:/example.xml"))
 ```
@@ -305,26 +305,26 @@ For example, if the variable booklist contains this roXMLElement:
 
 then
 
-```
+```brightscript
  print booklist.book.gettext()
 ```
 
 Will print "The Dawn of Man", and
 
-```
+```brightscript
  print booklist.book@lang
 ```
 
 will print
 
-```
+```brightscript
 "eng"
 ```
 
 
 **Example: flikr**
 
-```
+```brightscript
 ' Interestingness
 ' pass an (optional) page of value 1 - 5 to get 100 photos
 ' starting at 0/100/200/300/400
@@ -415,7 +415,7 @@ collection).
 
 **Example**
 
-```
+```brightscript
 i=roCreateObject("roInt")
 j=i ' reference incremented
 i=invalid ' reference decremented
@@ -434,7 +434,7 @@ type roFilesystemEvent.
 
 **Example**
 
-```
+```brightscript
 fs = CreateObject("roFilesystem")
 port = CreateObject("roMessagePort")
 fs.SetMessagePort(port)
@@ -523,7 +523,7 @@ AssociativeArray object.
 
 **Example**
 
-```
+```brightscript
 function Main()
      obj = ConstructMyObject()
      obj.Set("hi!")
@@ -545,7 +545,7 @@ end function
 
 
 Output:
-```
+```brightscript
 hi\!
 \--------
 value: hi\!
@@ -574,7 +574,7 @@ Library "v30/bslCore.brs"
 
 The common library file sources can be viewed from the debug console:
 
-```
+```brightscript
 BrightScript> bslCore =
 ReadAsciiFile("common:/LibCore/v30/bslCore.brs")
 BrightScript> print bslCore
@@ -726,7 +726,7 @@ If spriteMap.xml contains the following:
 
 Then
 
-```
+```brightscript
  BrightScript> xml = ReadAsciiFile("pkg:/images/map.xml")
  BrightScript> bitmapset = dfNewBitmapSet(xml)
  BrightScript> cellwidth=app.bitmapset.extrainfo.cellsize.toint()

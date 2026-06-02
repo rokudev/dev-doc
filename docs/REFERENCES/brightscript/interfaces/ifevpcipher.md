@@ -70,13 +70,13 @@ An [roByteArray](doc:robytearray) containing the result.
 
 #### Example
 
-```
+```brightscript
   x = evp.Process(bytes)
 ```
 
 is equivalent to
 
-```
+```brightscript
   evp.Reinit()
   x = evp.Update(bytes)
   x = x + evp.Final()

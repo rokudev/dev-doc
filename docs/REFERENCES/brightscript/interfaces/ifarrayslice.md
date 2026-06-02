@@ -38,7 +38,7 @@ The **start_pos** and **end_pos** fields specify the 0-based indices of items in
 
 #### Examples
 
-```
+```brightscript
 '      0       1     2      3      4      5
 arr = ["ape", "bat", "cow", "dog", "elk"]
 

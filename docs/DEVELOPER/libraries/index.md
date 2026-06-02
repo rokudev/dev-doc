@@ -113,7 +113,7 @@ Analytics vendors using Model #2 use `trackEvent` rather than `setContentMetadat
 
 #### Example:
 
-```
+```brightscript
 m.global.RSG_analytics.init = {
     ga4: {
         api_secret: "apisecret_value",
@@ -135,7 +135,7 @@ m.global.RSG_analytics.init = {
 
 Manifest entry to use RACL:
 
-```
+```text
 sg_component_libs_required=Roku_Analytics
 ```
 
@@ -155,7 +155,7 @@ set** at the end of mid-roll ads.
 To use RACL, add a field, "RSG_analytics,"
 to `m.global` and then create an roSGNode object like so:
 
-```
+```brightscript
 m.global.addField("RSG_analytics", "node", false)
 m.global.RSG_analytics = CreateObject("roSGNode", "Roku_Analytics:AnalyticsNode")
 ```
@@ -176,7 +176,7 @@ vendor-specific configuration data.
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.init = {
     IQ : {
         PCODE : "pcode_value"
@@ -205,7 +205,7 @@ method needs to be set each time a new Video node is created.
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.initVideoPlayer = {
     video: m.video
 }
@@ -223,7 +223,7 @@ for analytics providers and are optional.
 
 **Example with only Roku content meta-data:**
 
-```
+```brightscript
 myContent = {
     streamFormat: "mp4",
     streamUrl: "www.mycontent.com/video.mp4"
@@ -236,7 +236,7 @@ m.global.RSG_analytics.setContentMetadata = {
 
 **Example with Roku content meta-data and additional analytics provider information:**
 
-```
+```brightscript
 myContent = {
     streamFormat: "mp4",
     streamUrl: "www.mycontent.com/video.mp4"
@@ -271,7 +271,7 @@ after a mid-roll ad).
 
 **Example:**
 
-```
+```brightscript
 sub onVideoState()
     closeStates = {
         finished : "",
@@ -317,7 +317,7 @@ Developers can track events from the [standard GA4 events](https://developers.go
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.trackEvent = {
     GA4: {
         events: [
@@ -348,7 +348,7 @@ displayed in the console).
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.debug = true
 ```
 
@@ -359,7 +359,7 @@ m.global.RSG_analytics.debug = true
 Following is a simple example of using RACL with a
 service that supports Model #1.
 
-```
+```brightscript
 sub VerySimpleShowVideo(item)
     m.global.addField("RSG_analytics","node",false)
     m.global.RSG_analytics = CreateObject("roSGNode","Roku_Analytics:AnalyticsNode")

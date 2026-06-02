@@ -24,7 +24,7 @@ Roku Pay push notifications can not be redirected in any way. Requests time out 
 
 Push notifications include transaction data and a `responseKey`.
 
-```
+```json
 {
 ... transaction data fields
 "responseKey":"abcdabcd6b1649f681a408f1beebabcd"

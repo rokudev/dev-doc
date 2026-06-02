@@ -28,7 +28,7 @@ next:
 
 Returns the number of bytes available in the app's device registry (32K). This function can be used, for example, to check the remaining space and remove older entries before writing newer ones. The following code demonstrates how to do this:
 
-``` 
+```brightscript
 registry = CreateObject("roRegistry")
 buffer = 512 ' arbitrary limit based on the app
 if (registry.GetSpaceAvailable() < buffer)

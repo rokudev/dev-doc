@@ -39,7 +39,7 @@ To check for a valid access token in the device registry, follow these steps:
 
 1. Create an [**roRegistrySection**](doc:roregistrysection) object. This provides access to your section within the device registry to get and read your keys. When creating the registry section, pass in the name of your registry. This must be the same name used when the registry section was created.
 
-   ```
+   ```brightscript
    reg_sec = CreateObject("roRegistrySection", "<your_registry_section>")
    ```
 
@@ -137,7 +137,7 @@ If both the device registry and Roku cloud do not contain a valid access token, 
 
    > Any metadata within the access token related to its validity must be managed entirely by the publisher.
 
-   ```
+   ```brightscript
     myChannelStore.channelCredData = "your access token"
     myChannelStore.command = "storeChannelCredData"
 

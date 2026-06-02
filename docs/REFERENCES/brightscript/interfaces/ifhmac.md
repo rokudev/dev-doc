@@ -54,7 +54,7 @@ An integer indicating whether the function succeeded (0) or failed (1).
 
 Digests the data in an array generates a MAC. Calling this method is the same as making the following calls:
 
-```
+```brightscript
 hmac.Reinit()
 hmac.Update(message)
 mac = hmac.Final()

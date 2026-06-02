@@ -794,7 +794,7 @@ The standard for deep linking uses parameters:
 You trigger deep linking by doing an HTTP post to port 8060 on your Roku
 device. The general form is
 
-```
+```brightscript
 http://<IP of Roku>:8060/launch/[dev | channeID]?contentId=<content ID>&MediaType=<mediaType>
 ```
 

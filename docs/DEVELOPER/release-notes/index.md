@@ -340,8 +340,6 @@ Here is the list of key developer-facing Roku OS 12.5 updates:
 
 #### Deprecated APIs
 
-* [**run_as_process** manifest attribute](/docs/references/deprecated-apis.md#run_as_process-channel-manifest-attribute) has been deprecated — All apps now run in a separate process, regardless if the **run_as_process** attribute has been specified in the manifest.
-
 * [Support for the Windows Media Audio (wma) file format on the Roku platform has been sunset](/docs/references/deprecated-apis.md#audio-node-windows-media-audio). The WMA audio format was originally deprecated in the Roku OS 10.5 release.
 
 ## Roku OS 12.0

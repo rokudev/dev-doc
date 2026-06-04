@@ -662,7 +662,11 @@ POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
 
 ## Rate limiting
 
-The Roku Pay APIs enforce a rate limit of 20 requests per second (rps) per API key. Requests that exceed this limit will receive a 429 error response code (too many requests). 
+The Roku Pay APIs enforce a rate limit of **20 requests per second (rps) per API key**. 
+
+### Rate limit error response
+
+Requests that exceed this limit will receive a 429 error response code (too many requests). 
 
 ```
 HTTP/1.1 429 Too Many Requests

@@ -171,6 +171,13 @@ While it is technically possible to have more than one scene per app, we recomme
 </tbody>
 </table></div></td>
 </tr>
+<tr>
+<td class="short-line">allowBackgroundTask</td>
+<td class="short-line">boolean</td>
+<td class="short-line">false</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">To enable an Instant Resume app to execute background tasks, set this field to true.</td>
+</tr>
 </tbody>
 </table>
 `}</HTMLBlock>

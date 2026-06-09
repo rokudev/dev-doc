@@ -44,6 +44,13 @@ The **StdDlgTextItem** node is used to display a block of text. It should only b
 <td>Specifies the text to be displayed. If the text width does not fit within the width of the content area, the text will wrap onto multiple lines.</td>
 </tr>
 <tr>
+<td>scrollable</td>
+<td>boolean</td>
+<td>false</td>
+<td>READ_WRITE</td>
+<td>Specifies whether the text is scrollable. If true, the text will be displayed in a scrollable area.</td>
+</tr>
+<tr>
 <td>namedTextStyle</td>
 <td>string</td>
 <td>"normal"</td>

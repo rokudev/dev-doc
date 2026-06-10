@@ -17,11 +17,9 @@ If you have content that you would like to submit for The Roku Channel, please f
 
 #### Overview
 
-The Roku Channel partners have access to web-based performance analytics through Roku's Analytics Portal. This allows you to analyze the health, viewership trends, and metrics for specific titles.
+The Roku Channel partners have access to web-based performance analytics through Roku's Content Partner Portal. This allows you to analyze the health, viewership trends, and metrics for specific titles.
 
-#### Access to Roku's analytics portal
-
-In order to access the partner dashboard, you will need a Roku account. To create a Roku account, click [here](https://my.roku.com/signup). If you have a Roku account, please send the e-mail address associated with the Roku account to [trcpartnersupport@roku.com](mailto:trcpartnersupport@roku.com). We can give access to multiple Roku accounts, but it is preferred if you have one Roku account that your entire team can use to access the dashboard.
+[Learn more]()
 
 ### Payout & revenue reporting
 

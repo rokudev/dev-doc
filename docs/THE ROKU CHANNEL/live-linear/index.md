@@ -26,7 +26,7 @@ Welcome to linear channels at Roku! Here are resources to help get you started o
 
 The Roku Channel partners have access to web-based performance analytics through Roku's Content Partner Portal. This allows you to analyze the health, viewership trends, and metrics for specific titles.
 
-[Learn more]()
+[Learn more](https://developer.roku.com/dev/docs/roku-content-partner-portal-analytics)
 
 ### Partner payout
 

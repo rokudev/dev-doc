@@ -1371,7 +1371,7 @@ Original date content was first made available in any presentation. Must include
 
 <u>Example:</u>
 
-```
+```xml
 <release_date>YYYY-MM-DD</release_date>
 ```
 
@@ -1385,7 +1385,7 @@ Total run time of content in whole minutes
 
 <u>Example:</u>
 
-```
+```xml
 <runtime>120</runtime>
 ```
 
@@ -1396,12 +1396,12 @@ Genre classification of the content. Roku requires each movie to be delivered wi
 | XML XPath                     | Accepted Values                                                                                  | Required |
 | ----------------------------- | ------------------------------------------------------------------------------------------------ | -------- |
 | `/package/video/genres/genre` | See [enumerated list](#genres) below. No more than 10 genres may be submitted for a single title | Required |
-
 <u>Example:</u>
 
-```
+```xml
 <genres>
-  <genre>drama</genre>
+  <genre>drama</genre>
+
   <!-- Additional genres here-->
 </genres>
 ```
@@ -1413,12 +1413,12 @@ Parental or content advisory rating for the movie by a rating source. A valid mo
 | XML XPath                                                           | Accepted Values                                                                                                                                        | Required |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | `/package/video/ratings/rating` `must include the system attribute` | See [below](#rating-values-by-rating-system-and-country) for allowable ratings by rating system.<br /> Multiple rating/rating system pairs are allowed | Required |
-
 <u>Example:</u>
 
-```
+```xml
 <ratings>
-  <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
+  <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
+
   <rating system="bbfc">12A</rating>
   <rating system="chvrs">14A</rating>
 </ratings>
@@ -1431,12 +1431,12 @@ Tag is a freeform field that can be used to further categorize content aside fro
 | XML XPath                 | Accepted Values                          | Required                         |
 | ------------------------- | ---------------------------------------- | -------------------------------- |
 | `/package/video/tags/tag` | any string under 50 characters in length | Optional, but HIGHLY recommended |
-
 <u>Example:</u>
 
-```
+```xml
 <tags>
-  <tag>energy</tag>
+  <tag>energy</tag>
+
   <tag>dance</tag>
   <!-- Additional tags here-->
 </tags>
@@ -1475,7 +1475,7 @@ Used to identify the in and out points of opening credits, content recaps, end c
 
 <u>Example:</u>
 
-```
+```xml
 <cuePoints>
 	<cuePoint type="ad overlay">
 		<start_time>00:09:10.456</start_time>
@@ -1519,7 +1519,7 @@ Defines the cuePoint type of the cuePoint provided within the cuePoints block. T
 
 <u>Example:</u>
 
-```
+```xml
 <cuePoint type="intro">
 ```
 
@@ -1530,11 +1530,11 @@ Name of cast member**.** CDATA section supported.
 | XML XPath                                      | Accepted Values    | Required |
 | ---------------------------------------------- | ------------------ | -------- |
 | `/package/video/cast/cast_member/display_name` | Firstname Lastname | Optional |
-
 <u>Example:</u>
 
-```
-<cast>
+```xml
+<season>
+
   <cast_member>
     <display_name><![CDATA[Harrison Ford]]></display_name>
   </cast_member>
@@ -1554,7 +1554,7 @@ Name of crew member. CDATA section supported.
 
 <u>Example:</u>
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -1570,7 +1570,7 @@ Role of the crew member listed in the display_name. Roku requires each crew memb
 
 <u>Example:</u>
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -1584,7 +1584,7 @@ Begins the asset block that provides localized metadata for multi-language packa
 
 <u>Example:</u>
 
-```
+```xml
 <localizations>
 ```
 
@@ -1598,7 +1598,7 @@ Defines the language of the localized title, short_synopsis, and long_synopsis p
 
 <u>Example:</u>
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -1612,7 +1612,7 @@ Localized title of movie in the language specified in the localization tag’s n
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Localized Movie Title. Required.]]></title>
 ```
 
@@ -1626,7 +1626,7 @@ A localized short synopsis of the content in the language specified in the local
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Localized Short summary of movie. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -1640,7 +1640,7 @@ A localized long synopsis of the content in the language specified in the locali
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Localized Long summary of movie. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -1654,7 +1654,7 @@ Begins the asset block that provides the availability information of the package
 
 <u>Example:</u>
 
-```
+```xml
 <playOptions>
 ```
 
@@ -1665,12 +1665,12 @@ Country code of the territory in which the content is available. Multiple countr
 | XML XPath                                       | Accepted Values            | Required  |
 | ----------------------------------------------- | -------------------------- | --------- |
 | `/package/video/playOptions/playOption/country` | US<br />CA<br />GB<br />MX | Preferred |
-
 <u>Example:</u>
 
-```
+```xml
 <playOption>
-  <country>US</country>
+  <country>US</country>
+
   <!-- Additional country nodes here -->
 </playOption>
 ```
@@ -1682,12 +1682,12 @@ Monetization Type of the movie. Multiple vodType nodes can be provided assuming 
 | XML XPath                                       | Accepted Values | Required  |
 | ----------------------------------------------- | --------------- | --------- |
 | `/package/video/playOptions/playOption/vodType` | AVOD<br />SVOD  | Preferred |
-
 <u>Example:</u>
 
-```
+```xml
 <playOption>
-  <vodType>AVOD</vodType>
+  <vodType>AVOD</vodType>
+
   <!-- Additional vodType nodes here -->
 </playOption>
 ```
@@ -1699,12 +1699,12 @@ Start date of content availability to users on Roku Channel. One licensePeriodSt
 | XML XPath                                                  | Accepted Values                                  | Required |
 | ---------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodStart` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <playOption>
-  <licensePeriodStart>YYYY-MM-DDTHH:MM:SS</licensePeriodStart>
+  <licensePeriodStart>YYYY-MM-DDTHH:MM:SS</licensePeriodStart>
+
 </playOption>
 ```
 
@@ -1733,7 +1733,7 @@ Begins the asset block that references the files delivered in the package
 
 <u>Example:</u>
 
-```
+```xml
 <assets media_type="video">
 ```
 
@@ -1746,12 +1746,12 @@ The block that describes the source video file. The asset tag's attribute must b
 | XML XPath                               | Accepted Values                                                            | Required |
 | --------------------------------------- | -------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"` <br />`data_file role="source"` | Required |
-
 <u>Example:</u>
 
-```
-<asset type="full">
-  <data_file role="source">
+```xml
+<asset type="artwork">
+  <data_file role="series">
+
 ```
 
 **full captions**
@@ -1761,12 +1761,12 @@ The block that describes the closed captions for the source video file. The asse
 | XML XPath                               | Accepted Values                                                             | Required       |
 | --------------------------------------- | --------------------------------------------------------------------------- | -------------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="captions"` | Required in US |
-
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
-  <data_file role="captions">
+  <data_file role="captions">
+
 ```
 
 **full audio**
@@ -1778,12 +1778,12 @@ The block that describes sidecar audio for the source video file. The audio file
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional*<br />audio.descriptive is strongly preferred |
 
 *_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_
-
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
-  <data_file role="audio">
+  <data_file role="audio">
+
 ```
 
 **full subtitles**
@@ -1795,12 +1795,12 @@ The block that describes sidecar subtitles for the source video file. The asset 
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="subtitles"` | Optional* |
 
 *_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._
-
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
-  <data_file role="subtitles">
+  <data_file role="subtitles">
+
 ```
 
 **artwork**
@@ -1811,11 +1811,11 @@ The block that describes the artwork file(s). The asset tag's attribute must be 
 | --------------------------------------- | --------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"` | Required |
 
-<u>Examples:</u>
+<u>Example:</u>
 
-```
+```xml
 <asset type="artwork">
-  <data_file>
+  <data_file>
 
 <asset type="artwork">
   <data_file type="background_image">
@@ -1836,7 +1836,7 @@ Applicable to data_file roles: source, captions, audio, subtitles, and asset typ
 
 <u>Example:</u>
 
-```
+```xml
 <locale name="en"/>
 ```
 
@@ -1853,7 +1853,7 @@ Filename of the asset indicated in the data_file role or type attribute. All fil
 
 <u>Example:</u>
 
-```
+```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
@@ -1867,7 +1867,7 @@ Filename of the asset indicated in the data_file role or type attribute. All fil
 
 <u>Example:</u>
 
-```
+```xml
 <audio>stereoOnly</audio>
 ```
 
@@ -1885,7 +1885,7 @@ Defines the package version type
 
 <u>Example:</u>
 
-```
+```xml
 <package version="tv1.0">
 ```
 
@@ -1899,7 +1899,7 @@ Name of content owner/studio/network
 
 <u>Example:</u>
 
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 
@@ -1913,7 +1913,7 @@ Primary language of the package metadata. At a minimum, the value must conform t
 
 <u>Example:</u>
 
-```
+```xml
 <language>en</language>
 ```
 
@@ -1927,7 +1927,7 @@ Defines the content type of the package
 
 <u>Example:</u>
 
-```
+```xml
 <type>tv</type>
 ```
 
@@ -1941,7 +1941,7 @@ Immutable, unique identifier for an episode. IDs are to be generated and supplie
 
 <u>Example:</u>
 
-```
+```xml
 <asset_id>episodeAssetIdHere</asset_id>
 ```
 
@@ -1955,7 +1955,7 @@ EIDR ID if one exists
 
 <u>Example:</u>
 
-```
+```xml
 <eidr></eidr>
 ```
 
@@ -1969,7 +1969,7 @@ Gracenote ID if one exists
 
 <u>Example:</u>
 
-```
+```xml
 <tmsId></tmsId>
 ```
 
@@ -1983,7 +1983,7 @@ Title of episode. Include only the name of the content as it should appear on pl
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Episode Title. Required.]]></title>
 ```
 
@@ -1997,7 +1997,7 @@ Numerical position of the episode within a season of a series. This value will d
 
 <u>Example:</u>
 
-```
+```xml
 <episodeNumber>2</episodeNumber>
 ```
 
@@ -2011,7 +2011,7 @@ A short synopsis of the episode. CDATA section supported. 250-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Short summary of episode. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -2025,7 +2025,7 @@ A long synopsis of the episode. CDATA section supported. 500-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Long summary of episode. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -2039,7 +2039,7 @@ Indicates whether the episode delivered contains closed captions. Accepted value
 
 <u>Example:</u>
 
-```
+```xml
 <closedCaptions>Y</closedCaptions>
 ```
 
@@ -2057,7 +2057,7 @@ Allowable value and their definitions:
 
 <u>Example:</u>
 
-```
+```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
@@ -2071,7 +2071,7 @@ Original date the episode was first made available in any presentation. Must inc
 
 <u>Example:</u>
 
-```
+```xml
 <release_date>YYYY-MM-DD</release_date>
 ```
 
@@ -2085,7 +2085,7 @@ Total run time of content in whole minutes
 
 <u>Example:</u>
 
-```
+```xml
 <runtime>120</runtime>
 ```
 
@@ -2099,7 +2099,7 @@ Parental or content advisory rating for the episode by a rating source. A valid 
 
 <u>Example:</u>
 
-```
+```xml
 <ratings>
 <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
 <rating system="bbfc">12A</rating>
@@ -2117,7 +2117,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 
 <u>Example:</u>
 
-```
+```xml
 <tags>
   <tag>energy</tag>
   <tag>dance</tag>
@@ -2132,13 +2132,13 @@ Used to determine[ Ad Breaks for Ad Supported Content](#ad-breaks). adBreak valu
 | XML XPath                         | Accepted Values | Required                   |
 | --------------------------------- | --------------- | -------------------------- |
 | `/package/video/adBreaks/adBreak` | HH:MM:SS.sss    | Preferred for AVOD content |
-
 <u>Example:</u>
 
-```
+```xml
 <adBreaks>
   <adBreak>
     <start_time>00:03:15.000</start_time>
+
   </adBreak>
   <adBreak>
     <start_time>00:07:45.425</start_time>
@@ -2158,7 +2158,7 @@ Used to identify the in and out points of opening credits, content recaps, end c
 
 <u>Example:</u>
 
-```
+```xml
 <cuePoints>
 	<cuePoint type="ad overlay">
 		<start_time>00:09:10.456</start_time>
@@ -2202,7 +2202,7 @@ Defines the cuePoint type of the cuePoint provided within the cuePoints block. T
 
 <u>Example:</u>
 
-```
+```xml
 <cuePoint type="intro">
 ```
 
@@ -2213,12 +2213,12 @@ Name of cast member for the episode**.** CDATA section supported.
 | XML XPath                                      | Accepted Values         | Required |
 | ---------------------------------------------- | ----------------------- | -------- |
 | `/package/video/cast/cast_member/display_name` | Firstname<br />Lastname | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <cast>
   <cast_member>
+
     <display_name><![CDATA[Harrison Ford]]></display_name>
   </cast_member>
 <!-- Additional cast members here-->
@@ -2237,7 +2237,7 @@ Name of crew member for the episode. CDATA section supported.
 
 <u>Example:</u>
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -2253,7 +2253,7 @@ Role of the crew member listed in the display_name. Roku requires each crew memb
 
 <u>Example:</u>
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -2267,7 +2267,7 @@ Begins the asset block that provides localized metadata of the episode for multi
 
 <u>Example:</u>
 
-```
+```xml
 <localizations>
 ```
 
@@ -2281,7 +2281,7 @@ Defines the language of the localized title, short_synopsis, and long_synopsis p
 
 <u>Example:</u>
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -2295,7 +2295,7 @@ Localized title of episode in the language specified in the localization tag’s
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Localized Episode Title. Required.]]></title>
 ```
 
@@ -2309,7 +2309,7 @@ A localized short synopsis of the episode in the language specified in the local
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Localized Short summary of episode. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -2323,7 +2323,7 @@ A localized long synopsis of the episode in the language specified in the locali
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Localized Long summary of episode. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -2337,7 +2337,7 @@ Begins the series block that references the metadata for the show to which the e
 
 <u>Example:</u>
 
-```
+```xml
 <series>
 ```
 
@@ -2351,7 +2351,7 @@ Immutable, unique identifier for a series. IDs are to be generated and supplied 
 
 <u>Example:</u>
 
-```
+```xml
 <series_id>seriesIdHere</series_id>
 ```
 
@@ -2365,7 +2365,7 @@ Title of series. Include only the name of the content as it should appear on pla
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Episode Title. Required.]]></title>
 ```
 
@@ -2379,7 +2379,7 @@ A short synopsis of the series. CDATA section supported. 250-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Short summary of episode. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -2393,7 +2393,7 @@ A long synopsis of the series. CDATA section supported. 500-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Long summary of episode. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -2407,7 +2407,7 @@ Defines the original production language of the episode being delivered. At a mi
 
 <u>Example:</u>
 
-```
+```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 
@@ -2421,7 +2421,7 @@ Defines the primary country where the film was produced and where the main creat
 
 <u>Example:</u>
 
-```
+```xml
 <country_of_origin>US</ country_of_origin>
 ```
 
@@ -2435,7 +2435,7 @@ Original date the series was first made available in any presentation. This is t
 
 <u>Example:</u>
 
-```
+```xml
 <release_date>YYYY-MM-DD</release_date>
 ```
 
@@ -2449,7 +2449,7 @@ Genre classification of the content. Roku requires each episode to be delivered 
 
 <u>Example:</u>
 
-```
+```xml
 <genres>
   <genre>drama</genre>
   <!-- Additional genres here-->
@@ -2466,7 +2466,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 
 <u>Example:</u>
 
-```
+```xml
 <tags>
   <tag>energy</tag>
   <tag>dance</tag>
@@ -2484,7 +2484,7 @@ Name of cast member of the series**.** CDATA section supported.
 
 <u>Example:</u>
 
-```
+```xml
 <cast>
   <cast_member>
     <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -2505,7 +2505,7 @@ Name of crew member of the series. CDATA section supported.
 
 <u>Example:</u>
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -2521,7 +2521,7 @@ Role of the crew member listed in the display_name. Roku requires each crew memb
 
 <u>Example:</u>
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -2535,7 +2535,7 @@ Begins the asset block that provides localized metadata for the series in multi-
 
 <u>Example:</u>
 
-```
+```xml
 <localizations>
 ```
 
@@ -2549,7 +2549,7 @@ Defines the language of the localized title, short_synopsis, and long_synopsis p
 
 <u>Example:</u>
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -2563,7 +2563,7 @@ Localized title of the series in the language specified in the localization tag�
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Localized Episode Title. Required.]]></title>
 ```
 
@@ -2577,7 +2577,7 @@ A localized short synopsis of the series in the language specified in the locali
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Localized Short summary of episode. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -2591,7 +2591,7 @@ A localized long synopsis of the series in the language specified in the localiz
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Localized Long summary of episode. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -2619,7 +2619,7 @@ Immutable, unique identifier for a season. IDs are to be generated and supplied 
 
 <u>Example:</u>
 
-```
+```xml
 <season_id>seasonIdHere</season_id>
 ```
 
@@ -2633,7 +2633,7 @@ Numerical position of the season within a series. This value will determine the 
 
 <u>Example:</u>
 
-```
+```xml
 <seasonNumber>2</seasonNumber>
 ```
 
@@ -2647,7 +2647,7 @@ Begins the asset block that provides the availability information of the package
 
 <u>Example:</u>
 
-```
+```xml
 <playOptions>
 ```
 
@@ -2661,7 +2661,7 @@ Country code of the territory in which the content is available. Multiple countr
 
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <country>US</country>
   <!-- Additional country nodes here -->
@@ -2678,7 +2678,7 @@ Monetization Type of the episode. Multiple vodType nodes can be provided assumin
 
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <vodType>AVOD</vodType>
   <!-- Additional vodType nodes here -->
@@ -2695,7 +2695,7 @@ Start date of content availability to users on Roku Channel. One licensePeriodSt
 
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <licensePeriodStart>YYYY-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
@@ -2708,12 +2708,12 @@ End date of content availability to users on Roku Channel. One licensePeriodEnd 
 | XML XPath                                                | Accepted Values                                  | Required |
 | -------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodEnd` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <licensePeriodEnd>YYYY-MM-DDTHH:MM:SS</licensePeriodEnd>
+
 </playOption>
 ```
 
@@ -2727,7 +2727,7 @@ Begins the asset block that references the files delivered in the package
 
 <u>Example:</u>
 
-```
+```xml
 <assets media_type="video">
 ```
 
@@ -2740,12 +2740,12 @@ The block that describes the source video file. The asset tag's attribute must b
 | XML XPath                               | Accepted Values                                                           | Required |
 | --------------------------------------- | ------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="source"` | Required |
-
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="source">
+
 ```
 
 **full captions**
@@ -2758,7 +2758,7 @@ The block that describes the closed captions for the source video file. The asse
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="captions">
 ```
@@ -2775,7 +2775,7 @@ The block that describes sidecar audio for the source video file. The audio file
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="audio">
 ```
@@ -2792,7 +2792,7 @@ The block that describes sidecar subtitles for the source video file. The asset 
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="subtitles">
 ```
@@ -2805,12 +2805,12 @@ The block that describes the artwork file(s). The asset tag's attribute must be 
 | --------------------------------------- | ----------------------------------------------------------------------------- | --------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"`<br />`data_file type="episode"` | Preferred |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"`<br />`data_file type="series"`  | Preferred |
-
 <u>Example:</u>
 
-```
+```xml
 <asset type="artwork">
-  <data_file role="episode">
+  <data_file type="thumbnail_boxcover">
+
 ```
 
 ```
@@ -2830,7 +2830,7 @@ Applicable to data_file roles: source, captions, audio, subtitles, and asset typ
 
 <u>Example:</u>
 
-```
+```xml
 <locale name="en"/>
 ```
 
@@ -2849,7 +2849,7 @@ For artwork files the file_name tag's attribute can either be omitted (to indica
 
 <u>Example:</u>
 
-```
+```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
@@ -2863,7 +2863,7 @@ For artwork files the file_name tag's attribute can either be omitted (to indica
 
 <u>Example:</u>
 
-```
+```xml
 <audio>stereoOnly</audio>
 ```
 
@@ -2881,7 +2881,7 @@ Defines the package version type
 
 <u>Example:</u>
 
-```
+```xml
 <package version="clip1.0">
 ```
 
@@ -2895,7 +2895,7 @@ Name of content owner/studio/network
 
 <u>Example:</u>
 
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 
@@ -2909,7 +2909,7 @@ Primary language of the package metadata. At a minimum, the value must conform t
 
 <u>Example:</u>
 
-```
+```xml
 <language>en</language>
 ```
 
@@ -2923,7 +2923,7 @@ Defines the content type of the package
 
 <u>Example:</u>
 
-```
+```xml
 <type>clip</type>
 ```
 
@@ -2937,7 +2937,7 @@ Defines the content subType of the package. Roku does not currently support pare
 
 <u>Example:</u>
 
-```
+```xml
 <subType>trailer</subType>
 ```
 
@@ -2951,7 +2951,7 @@ Immutable, unique identifier for a shortForm clip. IDs are to be generated and s
 
 <u>Example:</u>
 
-```
+```xml
 <asset_id>clipAssetIdHere</asset_id>
 ```
 
@@ -2965,7 +2965,7 @@ EIDR ID if one exists
 
 <u>Example:</u>
 
-```
+```xml
 <eidr></eidr>
 ```
 
@@ -2979,7 +2979,7 @@ Gracenote ID if one exists
 
 <u>Example:</u>
 
-```
+```xml
 <tmsId></tmsId>
 ```
 
@@ -2993,7 +2993,7 @@ Title of shortForm clip. Include only the name of the content as it should appea
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Clip Title. Required.]]></title>
 ```
 
@@ -3007,7 +3007,7 @@ A short synopsis of the content. CDATA section supported. 250-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Short summary of clip. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -3021,7 +3021,7 @@ A long synopsis of the content. CDATA section supported. 500-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Long summary of clip. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -3035,7 +3035,7 @@ Defines the original production language of the title being delivered. At a mini
 
 <u>Example:</u>
 
-```
+```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 
@@ -3049,7 +3049,7 @@ Defines the primary country where the film was produced and where the main creat
 
 <u>Example:</u>
 
-```
+```xml
 <country_of_origin>en</country_of_origin >
 ```
 
@@ -3063,7 +3063,7 @@ Indicates whether the title delivered contains closed captions. Accepted values 
 
 <u>Example:</u>
 
-```
+```xml
 <closedCaptions>Y</closedCaptions>
 ```
 
@@ -3081,7 +3081,7 @@ Allowable value and their definitions:
 
 <u>Example:</u>
 
-```
+```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
@@ -3095,7 +3095,7 @@ Original date content was first made available in any presentation. Must include
 
 <u>Example:</u>
 
-```
+```xml
 <release_date>YYYY-MM-DD</release_date>
 ```
 
@@ -3109,7 +3109,7 @@ Total run time of content in whole minutes
 
 <u>Example:</u>
 
-```
+```xml
 <runtime>120</runtime>
 ```
 
@@ -3123,7 +3123,7 @@ Genre classification of the content. Roku requires each shortForm clip to be del
 
 <u>Example:</u>
 
-```
+```xml
 <genres>
   <genre>drama</genre>
   <!-- Additional genres here-->
@@ -3140,7 +3140,7 @@ Parental or content advisory rating for the shortForm clip by a rating source. A
 
 <u>Example:</u>
 
-```
+```xml
 <ratings>
   <rating system="mpaa" reason="For drug content, some sensuality and war violence.">PG-13</rating>
   <rating system="bbfc">12A</rating>
@@ -3158,7 +3158,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 
 <u>Example:</u>
 
-```
+```xml
 <tags>
   <tag>energy</tag>
   <tag>dance</tag>
@@ -3176,7 +3176,7 @@ Name of cast member**.** CDATA section supported.
 
 <u>Example:</u>
 
-```
+```xml
 <cast>
   <cast_member>
     <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -3197,7 +3197,7 @@ Name of crew member. CDATA section supported.
 
 <u>Example:</u>
 
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
@@ -3213,7 +3213,7 @@ Role of the crew member listed in the display_name. Roku requires each crew memb
 
 <u>Example:</u>
 
-```
+```xml
 <role>director</role>
 ```
 
@@ -3227,7 +3227,7 @@ Begins the asset block that provides localized metadata for multi-language packa
 
 <u>Example:</u>
 
-```
+```xml
 <localizations>
 ```
 
@@ -3241,7 +3241,7 @@ Defines the language of the localized title, short_synopsis, and long_synopsis p
 
 <u>Example:</u>
 
-```
+```xml
 <localization name="es">
 ```
 
@@ -3255,7 +3255,7 @@ Localized title of shortForm clip in the language specified in the localization 
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Localized Clip Title. Required.]]></title>
 ```
 
@@ -3269,7 +3269,7 @@ A localized short synopsis of the content in the language specified in the local
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Localized Short summary of clip. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -3283,7 +3283,7 @@ A localized long synopsis of the content in the language specified in the locali
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Localized Long summary of clip. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -3297,7 +3297,7 @@ Begins the asset block that provides the availability information of the package
 
 <u>Example:</u>
 
-```
+```xml
 <playOptions>
 ```
 
@@ -3311,7 +3311,7 @@ Country code of the territory in which the content is available. Multiple countr
 
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <country>US</country>
   <!-- Additional country nodes here -->
@@ -3328,7 +3328,7 @@ Monetization Type of the shortForm clip. Multiple vodType nodes can be provided 
 
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <vodType>AVOD</vodType>
   <!-- Additional vodType nodes here -->
@@ -3345,7 +3345,7 @@ Start date of content availability to users on Roku Channel. One `licensePeriodS
 
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <licensePeriodStart>YYYY-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
@@ -3361,7 +3361,7 @@ End date of content availability to users on Roku Channel. One `licensePeriodEnd
 
 <u>Example:</u>
 
-```
+```xml
 <playOption>
   <licensePeriodEnd>YYYY-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
@@ -3377,7 +3377,7 @@ Begins the asset block that references the files delivered in the package
 
 <u>Example:</u>
 
-```
+```xml
 <assets media_type="video">
 ```
 
@@ -3393,7 +3393,7 @@ The block that describes the source video file. The asset tag's attribute must b
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="source">
 ```
@@ -3408,7 +3408,7 @@ The block that describes the closed captions for the source video file. The asse
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="captions">
 ```
@@ -3425,7 +3425,7 @@ The block that describes sidecar audio for the source video file. The audio file
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="audio">
 ```
@@ -3442,7 +3442,7 @@ The block that describes sidecar subtitles for the source video file. The asset 
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="full">
   <data_file role="subtitles">
 ```
@@ -3457,7 +3457,7 @@ The block that describes the artwork file(s). The asset tag's attribute must be 
 
 <u>Example:</u>
 
-```
+```xml
 <asset type="artwork">
   <data_file>
 ```
@@ -3474,7 +3474,7 @@ Applicable to data_file roles: source, captions, audio, and subtitles and asset 
 
 <u>Example:</u>
 
-```
+```xml
 <locale name="en"/>
 ```
 
@@ -3488,7 +3488,7 @@ Filename of the asset indicated in the data_file role or type attribute. All fil
 
 <u>Example:</u>
 
-```
+```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
@@ -3502,7 +3502,7 @@ Filename of the asset indicated in the data_file role or type attribute. All fil
 
 <u>Example:</u>
 
-```
+```xml
 <audio>stereoOnly</audio>
 ```
 
@@ -3516,7 +3516,7 @@ Begins the asset block that provides the parent information of the package. pare
 
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
 ```
 
@@ -3527,12 +3527,12 @@ Content Type of the parent the clip is derived from or describes
 | XML XPath                               | Accepted Values                | Required |
 | --------------------------------------- | ------------------------------ | -------- |
 | `/package/video/parentInfo/contentType` | episode<br />movie<br />series | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <contentType>episode</contentType>
+  <contentType>episode</contentType>
+
 </parentInfo>
 ```
 
@@ -3543,12 +3543,12 @@ Title of the parent program if the parent is a movie or episode
 | XML XPath                         | Accepted Values                 | Required |
 | --------------------------------- | ------------------------------- | -------- |
 | `/package/video/parentInfo/title` | Title of Parent Movie or Series | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <title>Title of Parent Movie or Series</title>
+  <title>Title of Parent Movie or Series</title>
+
 </parentInfo>
 ```
 
@@ -3559,12 +3559,12 @@ Runtime of the parent program if the parent is a movie or episode
 | XML XPath                           | Accepted Values | Required |
 | ----------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/runtime` | Integer         | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <runtime>45</runtime>
+  <runtime>45</runtime>
+
 </parentInfo>
 ```
 
@@ -3575,12 +3575,12 @@ Release date of the parent movie, episode, or series
 | XML XPath                               | Accepted Values                         | Required |
 | --------------------------------------- | --------------------------------------- | -------- |
 | `/package/video/parentInfo/releaseDate` | Conforms to ISO 8601 format: YYYY-MM-DD | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <releaseDate>YYYY-MM-DD</releaseDate>
+  <releaseDate>YYYY-MM-DD</releaseDate>
+
 </parentInfo>
 ```
 
@@ -3591,12 +3591,12 @@ TMS ID of the parent movie, episode, or series
 | XML XPath                         | Accepted Values | Required |
 | --------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/tmsId` | Valid TMS ID    | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <tmsId>TMSID</tmsId>
+  <tmsId>TMSID</tmsId>
+
 </parentInfo>
 ```
 
@@ -3607,12 +3607,12 @@ Series Title of the parent program if the parent is an episode
 | XML XPath                               | Accepted Values     | Required |
 | --------------------------------------- | ------------------- | -------- |
 | `/package/video/parentInfo/seriesTitle` | Parent Series Title | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <seriesTitle>Parent Series Title</seriesTitle>
+  <seriesTitle>Parent Series Title</seriesTitle>
+
 </parentInfo>
 ```
 
@@ -3623,12 +3623,12 @@ Season number of the parent program if the parent is an episode
 | XML XPath                                | Accepted Values | Required |
 | ---------------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/seasonNumber` | Integer         | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <seasonNumber>2</seasonNumber>
+  <seasonNumber>2</seasonNumber>
+
 </parentInfo>
 ```
 
@@ -3639,12 +3639,12 @@ Episode number of the parent program if the parent is an episode
 | XML XPath                                 | Accepted Values | Required |
 | ----------------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/episodeNumber` | Integer         | Optional |
-
 <u>Example:</u>
 
-```
+```xml
 <parentInfo>
-  <episodeNumber>14</episodeNumber>
+  <episodeNumber>14</episodeNumber>
+
 </parentInfo>
 ```
 
@@ -3658,7 +3658,7 @@ Name of the sport featured in the clip/highlight
 
 <u>Example:</u>
 
-```
+```xml
 <sportType>Baseball</sportType>
 ```
 
@@ -3672,7 +3672,7 @@ Name of the sport league featured in the clip/highlight
 
 <u>Example:</u>
 
-```
+```xml
 <sportLeague>MLB</sportLeague>
 ```
 
@@ -3688,7 +3688,7 @@ _At this time Roku only supports team-based participant metadata. Individual spo
 
 <u>Example:</u>
 
-```
+```xml
 <teams>
 	<team location="away">Chicago Cubs</team>
 	<team location="home">St. Louis Cardinals</team>

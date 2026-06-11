@@ -164,50 +164,105 @@ _**UHD is supported as an input resolution only. Roku does not currently encode 
 
 #### Video formats
 
-<table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Codecs</th>
-      <th>Extension</th>
-      <th>Bitrate</th>
+      <th>
+        Name
+      </th>
+
+      <th>
+        Codecs
+      </th>
+
+      <th>
+        Extension
+      </th>
+
+      <th>
+        Bitrate
+      </th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td>Apple® ProRes</td>
-      <td>ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles)</td>
-      <td>.mov</td>
-      <td>50 Mbps or greater</td>
+      <td>
+        Apple® ProRes
+      </td>
+
+      <td>
+        ProRes 444 (all profiles)  
+        ProRes 4444 (all profiles)  
+        ProRes 422 (all profiles)
+      </td>
+
+      <td>
+        .mov
+      </td>
+
+      <td>
+        50 Mbps or greater
+      </td>
     </tr>
 
     <tr>
-      <td>XDCam</td>
+      <td>
+        XDCam
+      </td>
 
-      <td />
+      <td>
 
-      <td>.mxf</td>
-      <td>50 Mbps or greater</td>
+      </td>
+
+      <td>
+        .mxf
+      </td>
+
+      <td>
+        50 Mbps or greater
+      </td>
     </tr>
 
     <tr>
-      <td>MPEG-2</td>
+      <td>
+        MPEG-2
+      </td>
 
-      <td />
+      <td>
 
-      <td>.ts.mpg</td>
-      <td>HD = 15Mbps or greaterSD = 3.75Mbps or greater</td>
+      </td>
+
+      <td>
+        .ts  
+        .mpg
+      </td>
+
+      <td>
+        HD - 15 Mbps or greater  
+        SD - 3.75 Mbps or greater
+      </td>
     </tr>
 
     <tr>
-      <td>MPEG-4</td>
-      <td>H.264</td>
-      <td>.mp4</td>
-      <td>5Mbps or greater</td>
+      <td>
+        MPEG-4
+      </td>
+
+      <td>
+        H.264
+      </td>
+
+      <td>
+        .mp4
+      </td>
+
+      <td>
+        5 Mbps or greater
+      </td>
     </tr>
   </tbody>
-</table>
+</Table>
 
 ### Audio requirements
 
@@ -402,57 +457,140 @@ Roku supports three image types for each piece of content. Each image type will 
 
 #### Image type definitions
 
-<table>
+<Table align={["left","left","left","left","left","left"]}>
   <thead>
     <tr>
-      <th>Format</th>
-      <th>Extension</th>
-      <th>Image Type</th>
-      <th>Minimum<br />Resolution</th>
-      <th>Preferred<br />Resolution</th>
-      <th>Aspect Ratio</th>
+      <th>
+        Format
+      </th>
+
+      <th>
+        Extensions
+      </th>
+
+      <th>
+        Image Type
+      </th>
+
+      <th>
+        Aspect  
+        Ratio
+      </th>
+
+      <th>
+        Minimum  
+        Resolution
+      </th>
+
+      <th>
+        Preferred  
+        Resolution
+      </th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
-      <td>.jpg<br />.jpeg<br />.png</td>
-      <td>Key Art<br />Image with title treatment</td>
-      <td>800x450</td>
-      <td>1920x1080</td>
-      <td>16:9</td>
+      <td>
+        JPEG or PNG  
+        RGB  
+        72 ppi
+      </td>
+
+      <td>
+        .jpg  
+        .jpeg  
+        .png
+      </td>
+
+      <td>
+        Texted key art image with title treatment
+      </td>
+
+      <td>
+        16:9
+      </td>
+
+      <td>
+        800x450
+      </td>
+
+      <td>
+        1920x1080
+      </td>
     </tr>
 
     <tr>
-      <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
-      <td>.jpg<br />.jpeg<br />.png</td>
-      <td>Background<br />Textless image used in background of program page</td>
-      <td>800x450</td>
-      <td>1920x1080</td>
-      <td>16:9</td>
+      <td>
+        JPEG or PNG  
+        RGB  
+        72 ppi
+      </td>
+
+      <td>
+        .jpg  
+        .jpeg  
+        .png
+      </td>
+
+      <td>
+        Textless background image used in background of program page
+      </td>
+
+      <td>
+        16:9
+      </td>
+
+      <td>
+        800x450
+      </td>
+
+      <td>
+        1920x1080
+      </td>
     </tr>
 
     <tr>
-      <td><ul><li>JPEG or PNG</li><li>RGB</li><li>72ppi</li></ul></td>
-      <td>.jpg<br />.jpeg<br />.png</td>
-      <td>Box Cover<br />Vertical poster image with title treatment</td>
-      <td>534x801</td>
-      <td>2000x3000</td>
-      <td>2:3</td>
+      <td>
+        JPEG or PNG  
+        RGB  
+        72 ppi
+      </td>
+
+      <td>
+        .jpg  
+        .jpeg  
+        .png
+      </td>
+
+      <td>
+        Texted vertical poster image with title treatment
+      </td>
+
+      <td>
+        2:3
+      </td>
+
+      <td>
+        534x801
+      </td>
+
+      <td>
+        2000x3000
+      </td>
     </tr>
   </tbody>
-</table>
+</Table>
 
 #### Minimum art requirements by content type
 
-**Clip content type art requirements**
+##### Clip content type art requirements
 
 | Art          | Required/Preferred | Notes                                            |
 | ------------ | ------------------ | ------------------------------------------------ |
 | 16:9 Key Art | Required           | Only the 16:9 texted image is required for Clips |
 
-**Movie content type art requirements**
+##### Movie content type art requirements
 
 | Art             | Required/Preferred | Notes                                                                                          |
 | --------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
@@ -460,65 +598,21 @@ Roku supports three image types for each piece of content. Each image type will 
 | 2:3 Box Cover   | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
 | 16:9 Background | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Movie assets. All 3 images are preferred. |
 
-**TV content type art requirements**
+##### TV content type art requirements
 
-<table>
-  <thead>
-    <tr>
-      <th><strong><em>Series Content Type</em></strong></th>
+###### Series content type
 
-      <th />
+| Art             | Required/Preferred | Notes                                                                                           |
+| --------------- | ------------------ | ----------------------------------------------------------------------------------------------- |
+| 16:9 Key Art    | Required           | At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred. |
+| 2:3 Box Cover   | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred. |
+| 16:9 Background | Preferred          | At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred. |
 
-      <th />
-    </tr>
-  </thead>
+###### Episode content type
 
-  <tbody>
-    <tr>
-      <td><strong>Art</strong></td>
-      <td><strong>Required/Preferred</strong></td>
-      <td><strong>Notes</strong></td>
-    </tr>
-
-    <tr>
-      <td>16:9 Key Art</td>
-      <td>Required</td>
-      <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
-    </tr>
-
-    <tr>
-      <td>2:3 Box Cover</td>
-      <td>Preferred</td>
-      <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
-    </tr>
-
-    <tr>
-      <td>16:9 Background</td>
-      <td>Preferred</td>
-      <td>At a minimum, Roku requires the 16:9 Key Art for all Series assets. All 3 images are preferred.</td>
-    </tr>
-
-    <tr>
-      <td><strong><em>Episode Content Type</em></strong></td>
-
-      <td />
-
-      <td />
-    </tr>
-
-    <tr>
-      <td><strong>Art</strong></td>
-      <td><strong>Required/Preferred</strong></td>
-      <td><strong>Notes</strong></td>
-    </tr>
-
-    <tr>
-      <td>16:9 Background</td>
-      <td>Required</td>
-      <td>Episodic image may be letterboxed or pillarboxed depending upon the source video. Windowboxed images will be rejected.<br />Episodic images should be unique for each episode and represent the content of the episode</td>
-    </tr>
-  </tbody>
-</table>
+| Art             | Required/Preferred | Notes                                                                                                                                                                                                             |
+| --------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 16:9 Background | Required           | Episodic image may be letterboxed or pillarboxed depending upon the source video. Windowboxed images will be rejected. Episodic images should be unique for each episode and represent the content of the episode |
 
 #### Artwork content guidelines
 
@@ -654,19 +748,25 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 
 ##### Characters allowed in file names
 
-<table>
+<Table align={["left"]}>
   <thead>
     <tr>
-      <th>Character sets</th>
+      <th>
+        Character sets
+      </th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td><ul><li>0-9</li><li>a-z</li><li>A-Z</li></ul><p><em>Correct file delivery location, proper file delivery cadence, and proper file naming is the responsibility of our Partners as the Partner is the expert in their own content and we do not always have insight into individual Partner delivery schedules.</em></p></td>
+      <td>
+        * 0-9
+        * a-z
+        * A-Z
+      </td>
     </tr>
   </tbody>
-</table>
+</Table>
 
 <br />
 
@@ -676,114 +776,38 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 | Period         | .         |
 | Underscore     | _         |
 
-##### Characters forbidden in file names
+##### Characters forbidden in file na
 
-<table>
-  <thead>
-    <tr>
-      <th>Character Name</th>
-      <th>Character</th>
-      <th>Character Name</th>
-      <th>Character</th>
-    </tr>
-  </thead>
+| Character Name               | Character |
+| :--------------------------- | :-------- |
+| "At" symbol                  | \@        |
+| Ampersand                    | \&        |
+| Asterisk                     | *         |
+| Backslash                    | \         |
+| Caret                        | ^         |
+| Colon                        | :         |
+| Comma                        | ,         |
+| Dollar                       | \$        |
+| Equals                       | =         |
+| Forward slash                | /         |
+| Grave accent                 | `         |
+| Greater than                 | \>        |
+| Left curly brace             | \{        |
+| Left square bracket          | \[        |
+| Less than                    | \<        |
+| Percent                      | %         |
+| Plus                         | +         |
+| Pound/hashtag                | \#        |
+| Question mark                | \?        |
+| Quotation marks/double quote | \"        |
+| Right curly brace            | \}        |
+| Right square bracket         | \]        |
+| Semicolon                    | ;         |
+| Space                        | ` `       |
+| Tilde                        | ~         |
+| Vertical pipe                | \|        |
 
-  <tbody>
-    <tr>
-      <td>"At" symbol</td>
-      <td>@</td>
-      <td>Left square bracket</td>
-      <td>\[</td>
-    </tr>
 
-    <tr>
-      <td>Ampersand</td>
-      <td>&</td>
-      <td>Less than</td>
-      <td>\<</td>
-    </tr>
-
-    <tr>
-      <td>Asterisk</td>
-      <td>\*</td>
-      <td>Percent</td>
-      <td>%</td>
-    </tr>
-
-    <tr>
-      <td>Backslash</td>
-      <td>\\</td>
-      <td>Plus</td>
-      <td>+</td>
-    </tr>
-
-    <tr>
-      <td>Caret</td>
-      <td>^</td>
-      <td>Pound/hashtag</td>
-      <td>#</td>
-    </tr>
-
-    <tr>
-      <td>Colon</td>
-      <td>:</td>
-      <td>Question mark</td>
-      <td>?</td>
-    </tr>
-
-    <tr>
-      <td>Comma</td>
-      <td>,</td>
-      <td>Quotation marks/double quote</td>
-      <td>"</td>
-    </tr>
-
-    <tr>
-      <td>Dollar</td>
-      <td>$</td>
-      <td>Right curly brace</td>
-      <td>}</td>
-    </tr>
-
-    <tr>
-      <td>Equals</td>
-      <td>=</td>
-      <td>Right square bracket</td>
-      <td>]</td>
-    </tr>
-
-    <tr>
-      <td>Forward slash</td>
-      <td>/</td>
-      <td>Semicolon</td>
-      <td>;</td>
-    </tr>
-
-    <tr>
-      <td>Grave accent</td>
-      <td>\`</td>
-      <td>Space</td>
-
-      <td>
-        <code />
-      </td>
-    </tr>
-
-    <tr>
-      <td>Greater than</td>
-      <td>></td>
-      <td>Tilde</td>
-      <td>\~</td>
-    </tr>
-
-    <tr>
-      <td>Left curly brace</td>
-      <td>\{</td>
-      <td>Vertical pipe</td>
-      <td>|</td>
-    </tr>
-  </tbody>
-</table>
 
 ## MovieLabs content delivery
 
@@ -926,21 +950,93 @@ Roku utilizes a transform engine that can “normalize” different metadata for
 
 ### Minimum required metadata by content type
 
-<table>
+<br />
+
+<Table align={["left","left"]}>
   <thead>
     <tr>
-      <th>Film/Clip Requirements</th>
-      <th>TV Requirements</th>
+      <th>
+        Film/Clip Requirements
+      </th>
+
+      <th>
+        TV Requirements
+      </th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td><ul><li>provider</li><li>content type</li><li>asset\_id</li><li>title</li><li>release\_date</li><li>runtime</li><li>genres</li><li>rating</li><li>rating system</li><li>short\_synopsis</li><li>video file\_name</li><li>captions file\_name (if captions are required)</li><li>key art file\_name</li></ul></td>
-      <td><ul><li>provider</li><li>content type</li><li>asset\_id</li><li>episode title</li><li>episodeNumber</li><li>episode release\_date</li><li>runtime</li><li>rating</li><li>rating system</li><li>episode short\_synopsis</li><li>series\_id</li><li>series title</li><li>series release\_date</li><li>series genres</li><li>series short\_synopsis</li><li>season\_id</li><li>seasonNumber</li><li>video file\_name</li><li>captions file\_name (if captions are required)</li><li>episode thumbnail file\_name</li><li>series key art file\_name</li></ul></td>
+      <td>
+        * provider
+        * content type
+        * asset_id
+        * title
+        * release_date
+        * runtime
+        * genres
+        * rating
+        * rating_system
+        * short_synopsis
+        * video_file_name
+        * captions file_name (if captions are required)
+        * key art file_name
+      </td>
+
+      <td>
+        * provider
+
+        * content type
+
+        * asset_id
+
+        * episode_title
+
+        * episode_number
+
+        * episode_release_date
+
+        * runtime
+
+        * rating
+
+        * rating_system
+
+        * episode_short_synopsis
+
+        * series_id
+
+        * series_title
+
+        * series_release_date
+
+        * series_genres
+
+        * series_short_synopsis
+
+        * season_id
+
+        * season_number
+
+        * video_file_name
+
+        * captions file_name (if captions are required)
+
+        * key art file_name
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
   </tbody>
-</table>
+</Table>
 
 ### Content type definitions
 
@@ -1022,33 +1118,73 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
 
 **Supported metadata formats**
 
-<table>
+<Table align={["left","left","left","left"]}>
   <thead>
     <tr>
-      <th>Format Name</th>
-      <th>Format Extension</th>
-      <th>Encoding</th>
-      <th>Package Version</th>
+      <th>
+        Format Name
+      </th>
+
+      <th>
+        Format Extension
+      </th>
+
+      <th>
+        Encoding
+      </th>
+
+      <th>
+        Package Version
+      </th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <td>XML (preferred)</td>
-      <td>.xml</td>
-      <td>UTF-8</td>
-      <td>clip1.0<br />film5.0<br />tv1.0<br />Cablelabs ADI 1.1<br /><br /><strong><em>Additional XML schemas supported on a case-by-case basis</em></strong></td>
+      <td>
+        XML  
+        (preferred)
+      </td>
+
+      <td>
+        .xml
+      </td>
+
+      <td>
+        UTF-8
+      </td>
+
+      <td>
+        clip1.0  
+        film5.0  
+        tv1.0  
+        Cablelabs ADI 1.1  
+        MEC 2.9  
+        MMC 1.10  
+
+        Additional schemas supported on a case-by-case basis
+      </td>
     </tr>
 
     <tr>
-      <td>Excel</td>
-      <td>.xlsx</td>
-      <td>See below for <a href="#roku-excel-metadata-guildelines">Roku Excel Metadata Templates</a> and <a href="#roku-excel-metadata-guidelines-and-templates">Excel Metadata Guidelines</a></td>
+      <td>
+        Excel
+      </td>
 
-      <td />
+      <td>
+        .xlsx
+      </td>
+
+      <td>
+        See below for [Roku Excel Metadata Templates](#roku-excel-metadata-guildelines)  and [Excel Metadata Guidelines](#roku-excel-metadata-guidelines-and-templates) 
+      </td>
+
+      <td>
+
+      </td>
     </tr>
   </tbody>
-</table>
+</Table>
 
 ### Metadata updates (MDU) and file replacements
 
@@ -1396,7 +1532,7 @@ Genre classification of the content. Roku requires each movie to be delivered wi
 | XML XPath                     | Accepted Values                                                                                  | Required |
 | ----------------------------- | ------------------------------------------------------------------------------------------------ | -------- |
 | `/package/video/genres/genre` | See [enumerated list](#genres) below. No more than 10 genres may be submitted for a single title | Required |
-<u>Example:</u>
+| <u>Example:</u>               |                                                                                                  |          |
 
 ```xml
 <genres>
@@ -1413,7 +1549,7 @@ Parental or content advisory rating for the movie by a rating source. A valid mo
 | XML XPath                                                           | Accepted Values                                                                                                                                        | Required |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | `/package/video/ratings/rating` `must include the system attribute` | See [below](#rating-values-by-rating-system-and-country) for allowable ratings by rating system.<br /> Multiple rating/rating system pairs are allowed | Required |
-<u>Example:</u>
+| <u>Example:</u>                                                     |                                                                                                                                                        |          |
 
 ```xml
 <ratings>
@@ -1431,7 +1567,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 | XML XPath                 | Accepted Values                          | Required                         |
 | ------------------------- | ---------------------------------------- | -------------------------------- |
 | `/package/video/tags/tag` | any string under 50 characters in length | Optional, but HIGHLY recommended |
-<u>Example:</u>
+| <u>Example:</u>           |                                          |                                  |
 
 ```xml
 <tags>
@@ -1530,7 +1666,7 @@ Name of cast member**.** CDATA section supported.
 | XML XPath                                      | Accepted Values    | Required |
 | ---------------------------------------------- | ------------------ | -------- |
 | `/package/video/cast/cast_member/display_name` | Firstname Lastname | Optional |
-<u>Example:</u>
+| <u>Example:</u>                                |                    |          |
 
 ```xml
 <season>
@@ -1665,7 +1801,7 @@ Country code of the territory in which the content is available. Multiple countr
 | XML XPath                                       | Accepted Values            | Required  |
 | ----------------------------------------------- | -------------------------- | --------- |
 | `/package/video/playOptions/playOption/country` | US<br />CA<br />GB<br />MX | Preferred |
-<u>Example:</u>
+| <u>Example:</u>                                 |                            |           |
 
 ```xml
 <playOption>
@@ -1682,7 +1818,7 @@ Monetization Type of the movie. Multiple vodType nodes can be provided assuming 
 | XML XPath                                       | Accepted Values | Required  |
 | ----------------------------------------------- | --------------- | --------- |
 | `/package/video/playOptions/playOption/vodType` | AVOD<br />SVOD  | Preferred |
-<u>Example:</u>
+| <u>Example:</u>                                 |                 |           |
 
 ```xml
 <playOption>
@@ -1699,7 +1835,7 @@ Start date of content availability to users on Roku Channel. One licensePeriodSt
 | XML XPath                                                  | Accepted Values                                  | Required |
 | ---------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodStart` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
-<u>Example:</u>
+| <u>Example:</u>                                            |                                                  |          |
 
 ```xml
 <playOption>
@@ -1746,7 +1882,7 @@ The block that describes the source video file. The asset tag's attribute must b
 | XML XPath                               | Accepted Values                                                            | Required |
 | --------------------------------------- | -------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"` <br />`data_file role="source"` | Required |
-<u>Example:</u>
+| <u>Example:</u>                         |                                                                            |          |
 
 ```xml
 <asset type="artwork">
@@ -1761,7 +1897,7 @@ The block that describes the closed captions for the source video file. The asse
 | XML XPath                               | Accepted Values                                                             | Required       |
 | --------------------------------------- | --------------------------------------------------------------------------- | -------------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="captions"` | Required in US |
-<u>Example:</u>
+| <u>Example:</u>                         |                                                                             |                |
 
 ```xml
 <asset type="full">
@@ -1777,8 +1913,7 @@ The block that describes sidecar audio for the source video file. The audio file
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional*<br />audio.descriptive is strongly preferred |
 
-*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_
-<u>Example:</u>
+*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_ <u>Example:</u>
 
 ```xml
 <asset type="full">
@@ -1794,8 +1929,7 @@ The block that describes sidecar subtitles for the source video file. The asset 
 | --------------------------------------- | ---------------------------------------------------------------------------- | --------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="subtitles"` | Optional* |
 
-*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._
-<u>Example:</u>
+*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._ <u>Example:</u>
 
 ```xml
 <asset type="full">
@@ -2132,7 +2266,7 @@ Used to determine[ Ad Breaks for Ad Supported Content](#ad-breaks). adBreak valu
 | XML XPath                         | Accepted Values | Required                   |
 | --------------------------------- | --------------- | -------------------------- |
 | `/package/video/adBreaks/adBreak` | HH:MM:SS.sss    | Preferred for AVOD content |
-<u>Example:</u>
+| <u>Example:</u>                   |                 |                            |
 
 ```xml
 <adBreaks>
@@ -2213,7 +2347,7 @@ Name of cast member for the episode**.** CDATA section supported.
 | XML XPath                                      | Accepted Values         | Required |
 | ---------------------------------------------- | ----------------------- | -------- |
 | `/package/video/cast/cast_member/display_name` | Firstname<br />Lastname | Optional |
-<u>Example:</u>
+| <u>Example:</u>                                |                         |          |
 
 ```xml
 <cast>
@@ -2708,7 +2842,7 @@ End date of content availability to users on Roku Channel. One licensePeriodEnd 
 | XML XPath                                                | Accepted Values                                  | Required |
 | -------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodEnd` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
-<u>Example:</u>
+| <u>Example:</u>                                          |                                                  |          |
 
 ```xml
 <playOption>
@@ -2740,7 +2874,7 @@ The block that describes the source video file. The asset tag's attribute must b
 | XML XPath                               | Accepted Values                                                           | Required |
 | --------------------------------------- | ------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="source"` | Required |
-<u>Example:</u>
+| <u>Example:</u>                         |                                                                           |          |
 
 ```xml
 <asset type="full">
@@ -2805,7 +2939,7 @@ The block that describes the artwork file(s). The asset tag's attribute must be 
 | --------------------------------------- | ----------------------------------------------------------------------------- | --------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"`<br />`data_file type="episode"` | Preferred |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"`<br />`data_file type="series"`  | Preferred |
-<u>Example:</u>
+| <u>Example:</u>                         |                                                                               |           |
 
 ```xml
 <asset type="artwork">
@@ -3527,7 +3661,7 @@ Content Type of the parent the clip is derived from or describes
 | XML XPath                               | Accepted Values                | Required |
 | --------------------------------------- | ------------------------------ | -------- |
 | `/package/video/parentInfo/contentType` | episode<br />movie<br />series | Optional |
-<u>Example:</u>
+| <u>Example:</u>                         |                                |          |
 
 ```xml
 <parentInfo>
@@ -3543,7 +3677,7 @@ Title of the parent program if the parent is a movie or episode
 | XML XPath                         | Accepted Values                 | Required |
 | --------------------------------- | ------------------------------- | -------- |
 | `/package/video/parentInfo/title` | Title of Parent Movie or Series | Optional |
-<u>Example:</u>
+| <u>Example:</u>                   |                                 |          |
 
 ```xml
 <parentInfo>
@@ -3559,7 +3693,7 @@ Runtime of the parent program if the parent is a movie or episode
 | XML XPath                           | Accepted Values | Required |
 | ----------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/runtime` | Integer         | Optional |
-<u>Example:</u>
+| <u>Example:</u>                     |                 |          |
 
 ```xml
 <parentInfo>
@@ -3575,7 +3709,7 @@ Release date of the parent movie, episode, or series
 | XML XPath                               | Accepted Values                         | Required |
 | --------------------------------------- | --------------------------------------- | -------- |
 | `/package/video/parentInfo/releaseDate` | Conforms to ISO 8601 format: YYYY-MM-DD | Optional |
-<u>Example:</u>
+| <u>Example:</u>                         |                                         |          |
 
 ```xml
 <parentInfo>
@@ -3591,7 +3725,7 @@ TMS ID of the parent movie, episode, or series
 | XML XPath                         | Accepted Values | Required |
 | --------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/tmsId` | Valid TMS ID    | Optional |
-<u>Example:</u>
+| <u>Example:</u>                   |                 |          |
 
 ```xml
 <parentInfo>
@@ -3607,7 +3741,7 @@ Series Title of the parent program if the parent is an episode
 | XML XPath                               | Accepted Values     | Required |
 | --------------------------------------- | ------------------- | -------- |
 | `/package/video/parentInfo/seriesTitle` | Parent Series Title | Optional |
-<u>Example:</u>
+| <u>Example:</u>                         |                     |          |
 
 ```xml
 <parentInfo>
@@ -3623,7 +3757,7 @@ Season number of the parent program if the parent is an episode
 | XML XPath                                | Accepted Values | Required |
 | ---------------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/seasonNumber` | Integer         | Optional |
-<u>Example:</u>
+| <u>Example:</u>                          |                 |          |
 
 ```xml
 <parentInfo>
@@ -3639,7 +3773,7 @@ Episode number of the parent program if the parent is an episode
 | XML XPath                                 | Accepted Values | Required |
 | ----------------------------------------- | --------------- | -------- |
 | `/package/video/parentInfo/episodeNumber` | Integer         | Optional |
-<u>Example:</u>
+| <u>Example:</u>                           |                 |          |
 
 ```xml
 <parentInfo>

@@ -1357,7 +1357,7 @@ Allowable value and their definitions: 1 - The content has never aired on televi
 
 <u>Example:</u>
 
-```
+```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 

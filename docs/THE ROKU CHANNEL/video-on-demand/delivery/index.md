@@ -1228,7 +1228,7 @@ Immutable, unique identifier for a movie. IDs are to be generated and supplied b
 
 <u>Example:</u>
 
-```
+```xml
 <asset_id>movieAssetIdHere</asset_id>
 ```
 
@@ -1242,7 +1242,7 @@ EIDR ID if one exists
 
 <u>Example:</u>
 
-```
+```xml
 <eidr></eidr>
 ```
 
@@ -1256,7 +1256,7 @@ Gracenote ID if one exists
 
 <u>Example:</u>
 
-```
+```xml
 <tmsId></tmsId>
 ```
 
@@ -1270,7 +1270,7 @@ Title of movie. Include only the name of the content as it should appear on plat
 
 <u>Example:</u>
 
-```
+```xml
 <title><![CDATA[Movie Title. Required.]]></title>
 ```
 
@@ -1284,7 +1284,7 @@ A short synopsis of the content. CDATA section supported. 250-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <short_synopsis><![CDATA[Short summary of movie. 250 characters maximum. Required]]></short_synopsis>
 ```
 
@@ -1298,7 +1298,7 @@ A long synopsis of the content. CDATA section supported. 500-character limit.
 
 <u>Example:</u>
 
-```
+```xml
 <long_synopsis><![CDATA[Long summary of movie. 500 characters maximum. Required.]]></long_synopsis>
 ```
 
@@ -1312,7 +1312,7 @@ Defines the original production language of the title being delivered. At a mini
 
 <u>Example:</u>
 
-```
+```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 

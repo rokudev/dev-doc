@@ -334,7 +334,7 @@ All content required by the FCC to have closed captioning must be delivered to R
 
 1 - The content has never aired on television in the United States.  
 2 - The content has only aired on television in the United States without captions.  
-3 - The content has not aired on television in the United States with captions since September 30, 2012.   
+3 - The content has not aired on television in the United States with captions since September 30, 2012.  
 4 - The content does not consist of full-length video programming.  
 5 - The content does not fall within a category of online programming that requires captions under FCC regulations (49 C.F.R. § 79.4(b)).  
 6 - The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.
@@ -1172,7 +1172,7 @@ Defines the package version type
 
 <u>Example:</u>
 
-```
+```xml
 <package version="film5.0">
 ```
 
@@ -1186,7 +1186,7 @@ Name of content owner/studio/network
 
 <u>Example:</u>
 
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 
@@ -1200,7 +1200,7 @@ Primary language of the package metadata. At a minimum, the value must conform t
 
 <u>Example:</u>
 
-```
+```xml
 <language>en</language>
 ```
 
@@ -1214,7 +1214,7 @@ Defines the content type of the package
 
 <u>Example:</u>
 
-```
+```xml
 <type>film</type>
 ```
 
@@ -1326,7 +1326,7 @@ Defines the primary country where the film was produced and where the main creat
 
 <u>Example:</u>
 
-```
+```xml
 <country_of_origin>en</ country_of_origin >
 ```
 
@@ -1337,10 +1337,11 @@ Indicates whether the title delivered contains closed captions. Accepted values 
 | XML XPath                       | Accepted Values | Required                       |
 | ------------------------------- | --------------- | ------------------------------ |
 | `/package/video/closedCaptions` | Y or N          | Required for content in the US |
+|                                 |                 |                                |
 
 <u>Example:</u>
 
-```
+```xml
 <closedCaptions>Y</closedCaptions>
 ```
 

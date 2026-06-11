@@ -633,7 +633,7 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 * File names must match the reference to the file name in the metadata supplied for the title delivered
 * File names are case-sensitive
 * File names must end with a proper file extension. File extensions are expected to be lowercase
-* Whitespace and special characters !@#$%^&*()\{}|[];:\’\”?/>,\< must not be included in any file name
+* Whitespace and special characters `!@#$%^&*()\{}|[];:\’\”?/>,\<` must not be included in any file name
 * The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
 
 <br />
@@ -681,9 +681,9 @@ Source video, closed captions, and artwork files delivered for ingest must adher
     </tr>
     <tr>
       <td>Ampersand</td>
-      <td>&</td>
+      <td>&amp;</td>
       <td>Less than</td>
-      <td>\<</td>
+      <td>&lt;</td>
     </tr>
     <tr>
       <td>Asterisk</td>
@@ -743,7 +743,7 @@ Source video, closed captions, and artwork files delivered for ingest must adher
     </tr>
     <tr>
       <td>Greater than</td>
-      <td>></td>
+      <td>&gt;</td>
       <td>Tilde</td>
       <td>\~</td>
     </tr>
@@ -967,7 +967,7 @@ While time settings are dictated by the content owner, Roku will need the metada
 
 ### Special characters
 
-<p>Roku utilizes CDATA sections to allow special characters (e.g. !@#$%^&*()\{}|[];:\’\”?/>\<, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the <em>only</em> nodes that support CDATA sections:</p>
+Roku utilizes CDATA sections to allow special characters (e.g. `!@#$%^&*()\{}|[];:\’\”?/>\<`, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the _only_ nodes that support CDATA sections:
 
 * title
 * long_synopsis

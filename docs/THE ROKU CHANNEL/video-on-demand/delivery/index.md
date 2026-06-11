@@ -336,7 +336,12 @@ For content intended for the US, Roku adheres to FCC closed captioning rules reg
 
 All content required by the FCC to have closed captioning must be delivered to Roku with closed captions and those captions must be conformed and synced to program. For content that is exempt from the closed caption requirement per FCC rules, a valid exemption code number must be included in the metadata. Allowable exemption code numbers and their definitions:
 
-1 - The content has never aired on television in the United States. 2 - The content has only aired on television in the United States without captions. 3 - The content has not aired on television in the United States with captions since September 30, 2012. 4 - The content does not consist of full-length video programming. 5 - The content does not fall within a category of online programming that requires captions under FCC regulations (49 C.F.R. § 79.4(b)). 6 - The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.
+1 - The content has never aired on television in the United States.  
+2 - The content has only aired on television in the United States without captions.  
+3 - The content has not aired on television in the United States with captions since September 30, 2012.   
+4 - The content does not consist of full-length video programming.  
+5 - The content does not fall within a category of online programming that requires captions under FCC regulations (49 C.F.R. § 79.4(b)).  
+6 - The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.
 
 For content intended for territories outside of the US, Roku will adhere to the requirements in that territory.
 

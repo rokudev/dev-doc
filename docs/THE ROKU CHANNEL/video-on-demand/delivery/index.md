@@ -113,14 +113,10 @@ Partners can aid in the curation of their content on Roku Channel by providing T
 ### Video requirements
 
 * All video content must be **full program only**:
-
-* no bars/tone or slates at program start
-
-* no textless video after program end
-
-* no more than 2 seconds of black at program start
-
-* no more than 2 seconds of black after program end
+  * no bars/tone or slates at program start
+  * no textless video after program end
+  * no more than 2 seconds of black at program start
+  * no more than 2 seconds of black after program end
 
 * Video files should be semi-textless (also known as "texted with no subtitles" or "textless with main, ends, and graphic text"). Video can include opening and end credit text but all subtitles for foreign dialogue must be removed.
 

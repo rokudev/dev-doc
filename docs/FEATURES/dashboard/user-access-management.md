@@ -23,7 +23,7 @@ For example, the _app management_ role lets users manage and publish one or more
 
 To add a user to your account and assign them roles and permissions, follow these steps:
 
-1. From the Roku Developer Dashboard, click **User access** on the left sidebar; from the Roku Launchpad, click **Roles and access**.
+1. From the Roku Developer or Roku Content Partner Dashboard, click **User access** on the left sidebar; from the Roku Launchpad, click **Roles and access**.
 
 2. Click **Invite a user**.
 

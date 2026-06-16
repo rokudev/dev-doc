@@ -215,12 +215,14 @@ Moves the subject node to another parent node.
       <th>Description</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>newParent</td>
       <td>roSGNode</td>
       <td>The new parent node where the child node is to be moved.</td>
     </tr>
+
     <tr>
       <td>adjustTransform</td>
       <td>Boolean</td>
@@ -228,13 +230,6 @@ Moves the subject node to another parent node.
     </tr>
   </tbody>
 </table>
-
-=======
-
-| Name            | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| --------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| newParent       | roSGNode | The new parent node where the child node is to be moved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| adjustTransform | Boolean  | Specifies whether the translation, rotation, and scale of the node are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If **adjustTransform** is true, the subject node transformation factor fields (translation/rotation/scale) are adjusted so that the node has the same transformation factors relative to the screen as it previously did.<br /><br />If **adjustTransform** is false, the subject node is simply parented to the new node without adjusting its transformation factor fields, in which case, the reparenting operation could cause the node to jump to a new position on the screen. |
 
 #### Return Value
 

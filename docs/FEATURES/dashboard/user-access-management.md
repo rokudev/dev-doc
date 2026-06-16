@@ -1,11 +1,14 @@
 ---
 title: User access management
-excerpt: 'Invite team members and assign roles and permissions to your developer account'
+excerpt: Invite team members and assign roles and permissions to your developer account
 deprecated: false
 hidden: false
 metadata:
-  title: 'User access management | Roku Developer Docs'
-  description: 'Use the Roles and access page to invite team members, assign roles and permissions, manage user accounts, and view activity logs for your developer account.'
+  title: User access management | Roku Developer Docs
+  description: >-
+    Use the Roles and access page to invite team members, assign roles and
+    permissions, manage user accounts, and view activity logs for your developer
+    account.
   robots: index
 next:
   description: ''
@@ -151,19 +154,22 @@ Roku Content Partner accounts can have the following roles and permissions:
       <th>
         Role
       </th>
+
       <th>
         Permissions
       </th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>
         Administrator
       </td>
+
       <td>
         Maintain administrative control over the Roku Content Partner Portal. This user can:
-        <br /><br />
+
         <ul>
           <li>Manage company account information.</li>
           <li>Manage users, roles, and permissions</li>
@@ -172,13 +178,15 @@ Roku Content Partner accounts can have the following roles and permissions:
         </ul>
       </td>
     </tr>
+
     <tr>
       <td>
         Marketing Manager
       </td>
+
       <td>
         Manage merchandising and creative assets. This user can:
-        <br /><br />
+
         <ul>
           <li>Manage featured rows, brand assets, and promotional creatives.</li>
           <li>Pin titles to featured rows</li>
@@ -187,37 +195,43 @@ Roku Content Partner accounts can have the following roles and permissions:
         </ul>
       </td>
     </tr>
+
     <tr>
       <td>
         Operations Manager
       </td>
+
       <td>
         Manage title assets and operational reports. This user can:
-        <br /><br />
+
         <ul>
           <li>Access title status and issue reports for assets.</li>
         </ul>
       </td>
     </tr>
+
     <tr>
       <td>
         Business Manager
       </td>
+
       <td>
         Manage title rights, partner deals, and business performance reporting. This user can:
-        <br /><br />
+
         <ul>
           <li>Access title status and issue reports for rights.</li>
         </ul>
       </td>
     </tr>
+
     <tr>
       <td>
         Analytics
       </td>
+
       <td>
         View Roku analytics reports. This user can:
-        <br /><br />
+
         <ul>
           <li>Access audience, engagement, and performance analytics.</li>
         </ul>
@@ -234,16 +248,19 @@ Roku Content Partner accounts can have the following roles and permissions:
       <th>
         Role
       </th>
+
       <th>
         Permissions
       </th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>
         Payout admin
       </td>
+
       <td>
         * Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the [Roku Partner Payouts Program](https://developer.roku.com/payments/) in order to monetize content in a Roku app.
         * Access the Roku Pay transaction, sales activity, and payout financial reports.

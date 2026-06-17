@@ -138,7 +138,7 @@ Roku developer accounts can have the following roles and permissions:
 <tr>
 <td class="short-line">Financial Reports</td>
 <td class="long-line">Grant the developer access to the Roku Pay transaction, sales activity, and payout reports for one or more apps.<br><br>Select apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to view the financial reports for all existing apps (as you create new apps, you will need to manually add them to grant access to their financial reports).</td>
-<td class="short-line">Account</td>
+<td class="short-line">App</td>
 </tr>
 </tbody>
 </table>

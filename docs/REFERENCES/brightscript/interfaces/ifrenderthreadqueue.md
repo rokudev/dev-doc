@@ -46,7 +46,7 @@ Returns an object that can be used to unregister the handler, if required.
 >
 > Use the following syntax to define message handlers:
 >
-> ```
+> ```brightscript
 > sub MyMessagehandler(data, msgInfo)
 > ```
 >

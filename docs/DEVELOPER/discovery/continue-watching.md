@@ -20,7 +20,7 @@ Continue Watching is a content category row within the **What to Watch** home sc
 >
 > **Certification requirement**:
 >
-> * Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](/docs/developer-program/certification/certification.md#4-channel-operation).
+> * Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](/docs/developer/certification-overview/certification.md#4-app-operation).
 > * Effective October 1st, 2026, apps outside the U.S. Streaming Store that have streamed more than an average of 1 million hours per month over the last three months must participate in Roku’s Continue Watching program.
 > * This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 >
@@ -251,13 +251,13 @@ Handling deep links sent to your app from the Continue Watching row is essential
 
 **Syntax:**
 
-```
+```text
 http://<roku-device-ip-address>:8060/launch|input/<channelId>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>&profileId=<profileIdValue>
 ```
 
 **Example:**
 
-```
+```text
 http://192.168.1.4:8060/input/581251?contentId=dev-summit-21-keynote&mediaType=movie&profileId=12345
 ```
 
@@ -265,7 +265,7 @@ http://192.168.1.4:8060/input/581251?contentId=dev-summit-21-keynote&mediaType=m
 
 To call the Continue Watching APIs, the app must include BrightScript code that adds the following HTTP headers (see the [**ifHttpAgent.addHeader()** function](doc:ifhttpagent) for more information). You must set the endpoint first before providing the headers.
 
-```
+```brightscript
 'SetUrl needs to be called first
 request.SetUrl("https://userdata.sr.roku.com/user-data/v1/content/continueWatching")
 request.AddHeader("Content-Type","application/json")

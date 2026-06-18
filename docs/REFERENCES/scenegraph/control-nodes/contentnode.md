@@ -56,7 +56,7 @@ To create a ContentNode in BrightScript, you should generally:
 
 As follows:
 
-```
+```brightscript
 ContentNode_object = createObject("RoSGNode","ContentNode")
 ContentNode_child_object = ContentNode_object.createChild("ContentNode")
 ContentNode_child_object.field_name = data
@@ -67,13 +67,13 @@ ContentNode_child_object.field_name = data
 
 For nodes and components that require a ContentNode as the specification of their content field, you can define it as a child of the node or component in XML markup using the role attribute, or just assign the ContentNode object to the content field as follows:
 
-```
+```brightscript
 NodeComponent.content = ContentNode_object
 ```
 
 For other nodes and components that don't require a ContentNode, you can use getChild() or a similar function to locate the specific child ContentNode object that contains the data you want to assign to a particular node/component field:
 
-```
+```brightscript
 ContentNode_child_object = ContentNode_object.getChild(child_number)
 NodeComponent.field_name = ContentNode_child_object.field_name
 ```
@@ -153,7 +153,7 @@ The following creates a component with a LabelList node populated with some spec
 
 All of the attributes listed in [Content Meta-Data](doc:content-metadata) are accessible as fields using dot (.) notation on a ContentNode object. For example, for a ContentNode object iteminfo, the Content Meta-Data Description attribute can be read or written as follows:
 
-```
+```brightscript
 iteminfo.description
 ```
 
@@ -169,7 +169,7 @@ You can also access ContentNode attributes as fields using dot (.) notation if y
 
 Then for a listitemcontent ContentNode object iteminfo, you can read or write the componentname field in the same way as if it were a Content Meta-Data attribute:
 
-```
+```brightscript
 iteminfo.componentname
 ```
 

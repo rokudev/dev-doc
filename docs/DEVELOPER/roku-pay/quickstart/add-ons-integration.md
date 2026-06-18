@@ -157,7 +157,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 1. Initialize the ChannelStore API generic request framework. The following code monitors the **channelStore.requestStatus** field and fires the **onRequestStatus()** callback function when changes to the **requestStatus** field occur. The **onRequestStatus()** function determines which command was sent and sends the results to the dedicated parser for the command.
 
-   ```
+   ```brightscript
    function init()
        m.store = m.parent.FindNode("channelStore")
        m.store.observeField("requestStatus", "onRequestStatus")
@@ -203,7 +203,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 2. Send the **GetCatalog** command to get the list of purchase options. In all the requests within the add-on API workflow, the version field must be set to **2**.
 
-   ```
+   ```brightscript
    sub GetCatalog()
        request = {}
        request.command = "GetCatalog"
@@ -216,7 +216,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 3. From the **OnGetCatalog()** callback function, store the **purchaseOptionsMap** and **productsMap** collections returned by the **GetCatalog** command.
 
-   ```
+   ```brightscript
    sub onGetCatalog(requestResult as object)
        print "requestResult.status", requestResult.status
        print "requestResult.statusMessage", requestResult.statusMessage
@@ -234,7 +234,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 4. Use the **QueryPurchaseOptions** command to offer the customer base and bundle purchase options in the UI. The following example creates a map of base and bundle purchase options:
 
-   ```
+   ```brightscript
    sub queryBasePurchaseOptions()
        query = [
            {"billingType":"Subscription","base":true},
@@ -271,7 +271,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 5. Offer the customer add-on purchase options in the UI. The following example creates a map of add-on purchase options that are available for the specified SKU of a base purchase option:
 
-   ```
+   ```brightscript
    sub queryAddonPurchaseOptions()
           query = [
               {"referenceSku":m.base,"addon":true}
@@ -292,7 +292,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 6. Send the **DoOrder** command to purchase the base prerequisite product and any add-ons, and then check the order status.
 
-   ```
+   ```brightscript
    sub DoOrder()
        request = {}
        request.command = "DoOrder"
@@ -363,7 +363,7 @@ To update your app with the new Channel Store APIs, follow these steps:
 
 7. Send the **GetAllPurchases** command to query the customer's purchases, and then check the order status. The response includes three arrays: **purchases**, **products**, and **entitlements**. If a cross-partner bundle subscription was purchased, its information is in the **entitlements** list.
 
-   ```
+   ```brightscript
    sub GetAllPurchases()
        request = {}
        request.command = "GetPurchases"
@@ -731,7 +731,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <li><strong>type</strong> (string): Indicates whether the purchase option represents a subscription, consumable/non-consumable, and so on. This may be set to one of the following values: "Consumable", "NonConsumable", "MonthlySub", "QuarterlySub", "YearlySub", "PhysicalGood", "Shipping", "Mixed".</li>
 <li><strong>addon</strong> (boolean): A flag indicating whether the purchase was for an add-on. </li>
 <li><strong>purchaseDate</strong> (string): The purchase date (in <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format).</li>
-<li><strong>purchaseChannel</strong> (string): Indicates where the Roku Pay subscription purchase was made: <strong>web</strong> (purchased from <a href="http://roku.com/">Roku.com</a> [for example, through <a href="https://developer.roku.com/docs/developer-program/discovery/instant-signup.md">Instant Signup</a> during the device activation]) or <strong>device</strong> (purchased on the Roku device [through the on-device sign-up flow]).</li>
+<li><strong>purchaseChannel</strong> (string): Indicates where the Roku Pay subscription purchase was made: <strong>web</strong> (purchased from <a href="http://roku.com/">Roku.com</a> [for example, through <a href="https://developer.roku.com/docs/developer/discovery/instant-signup.md">Instant Signup</a> during the device activation]) or <strong>device</strong> (purchased on the Roku device [through the on-device sign-up flow]).</li>
 <li><strong>purchaseContext</strong> (string): Indicates how the subscription purchase was made: <strong>isu</strong> (purchased via Instant Signup) or <strong>iap</strong> (purchased in the app)</li>
 <li>
 <p><strong>billingPlans</strong> (roArray of roAssociativeArrays): A list of billing plans associated with the purchase. Each billing plan contains the following fields:</p>

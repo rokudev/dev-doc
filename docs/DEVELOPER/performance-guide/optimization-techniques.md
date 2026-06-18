@@ -36,13 +36,13 @@ For example, accessing a 5.6MB AA can take hundreds of milliseconds. If this cop
 
 When copying nodes, do not simply call:
 
-```
+```brightscript
 node2.setFields(node1.getFields())
 ```
 
 Setting nonexistent fields in a node will invoke additional internal verification and warning outputs to the debug console, causing UI lag. Instead, do something like:
 
-```
+```brightscript
 function cloneNode(oldNode as Object) as Object
   newNode = createObject("roSGNode",oldNode.subtype()) 'subtyped node should automatically have all the fields of the original node
   newNode.setFields(oldNode.getFields())

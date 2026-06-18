@@ -148,7 +148,7 @@ The field portion is optional, refers to variables within the specified function
 
 ## Example
 
-```
+```brightscript
 ' Gets a false value in a convoluted way
 ' @deprecated Replaced by {@link .Foo2 Foo2} as of version 11.42
 function Foo() as BooLean

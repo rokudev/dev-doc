@@ -171,7 +171,7 @@ This example uses a Key Definition File to specify a simple numeric PIN pad. The
 
 <Image alt="roku815px - pin-pad-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/pin-pad-kdf.jpg" />
 
-```
+```json
 {
   "keyboardWidthFHD": 495,
   "keyboardHeightFHD": 300,
@@ -233,7 +233,7 @@ This example uses the Key Definition File for the Search "MiniKeyboard" used by 
 
 <Image alt="roku815px - mini-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/mini-keyboard-kdf-v2.jpg" />
 
-```
+```json
 {
   "keyboardWidthFHD": 576,
   "keyboardHeightFHD": 630,
@@ -356,7 +356,7 @@ The examples below show the Keyboard in the "NameLower", "Zip" and "FullLower" m
 
 <Image alt="roku815px - key-grid-3-zip" border={false} src="https://image.roku.com/ZHZscHItMTc2/key-grid-3-zip-kdf.jpg" />
 
-```
+```json
 {
   "keyboardWidthFHD": 576,
   "keyboardHeightFHD": 432,
@@ -757,7 +757,7 @@ The examples below show the keyboard in "ABC123Lower" mode as well as "AccentsUp
 
 <Image alt="roku815px - wifi-keyboard-2-symbols-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/wifi-keyboard-2-symbols-kdf.jpg" />
 
-```
+```json
 {
   "keyboardWidthFHD": 1368,
   "keyboardHeightFHD": 336,
@@ -1549,7 +1549,7 @@ This example uses the same Key Definition File as the WiFi keyboard above, but w
 
 <Image alt="roku815px - email-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/email-keyboard-kdf.jpg" />
 
-```
+```json
 {
   "keyboardWidthFHD": 1368,
   "keyboardHeightFHD": 336,
@@ -2347,7 +2347,7 @@ This example starts with the same Key Definition File used for the WiFi keyboard
 
 <Image alt="roku815px - extended-action-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/extended-action-keyboard-kdf.jpg" />
 
-```
+```json
 {
   "keyboardWidthFHD": 1584,
   "keyboardHeightFHD": 336,

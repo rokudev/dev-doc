@@ -96,7 +96,7 @@ Each of the commands starts a sequence of actions associated with the financial 
 
 #### Sign-up example
 
-```
+```brightscript
 store = CreateObject("roSGNode", "ChannelStore")
 
 ' Request several properties for sign-up
@@ -112,7 +112,7 @@ store.command = "getUserData"
 
 #### Sign-in example
 
-```
+```brightscript
 store = CreateObject("roSGNode", "ChannelStore")
 
 ' Set sign-in context for RFI screen
@@ -180,7 +180,7 @@ To create an order, this field needs to be set to a ContentNode that has one chi
 
 To set the `order` field directly, first create a ContentNode, then create one child ContentNode with the `"code"` and `"qty"` fields set for each item to be purchased. Assuming `m.channelStore` is a ChannelStore node object, the following Brightscript code shows how to do this:
 
-```
+```brightscript
 myOrder = CreateObject("roSGNode", "ContentNode")
 myFirstItem = myOrder.createChild("ContentNode")
 myFirstItem.addFields({ "code": "UPC2397", "qty": 1})
@@ -192,7 +192,7 @@ m.channelStore.order = myOrder
 
 The `order` field can be set indirectly as well, by setting the `deltaOrder` field to add or modify the desired quantity of an item. Assuming `m.channelStore` is a ChannelStore node object, the following results in the `order` field containing the same items as the previous example:
 
-```
+```brightscript
 m.channelStore.deltaOrder = { "code": "UPC2397", "qty": 1}
 m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
 ```
@@ -798,7 +798,7 @@ If this command is successful, the [**purchases** field](#purchases) ContentNode
 
 Stores an OAuth token, custom token, or other custom data, which you can then retrieve with the [getChannelCred](#getchannelcred) command (the token is stored in the **channelCred.json.channel_data** field). This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. As a result, users do not have to re-enter their account credentials when setting up new devices associated with the same Roku account. For more information, see [Automatic Account Link](/dev/docs/universal-authentication-protocol-for-single-sign-on).
 
-```
+```brightscript
 function init():
     m.store.ObserveField("storeChannelCredDataStatus", "onStoreChannelCredData")
     m.store.ObserveField("channelCred", "onGetChannelCred")
@@ -921,7 +921,7 @@ Retrieves an oAuth token, custom token, or other authentication artifact (`chann
 
 Generates a signed JSON web token (JWT) in the Roku cloud and returns it to the app. This token can then be used by the publisher's web services to verify that a message originated from a genuine Roku device. The following example demonstrates how to generate the device attestation token:
 
-```
+```brightscript
 sub handleData(event)
   data = event.getData()
   print data.status
@@ -939,7 +939,7 @@ m.channelstore_node.command = "getDeviceAttestationToken"
 
 The following demonstrates a sample JWT that is returned to the app. Developers can use a [JWT debugger](https://jwt.io/#debugger-io) to decode this token.
 
-```
+```text
 eyJ4NXUiOiJodHRwczovL2V4YW1wbGUucm9rdS5jb20vc2FtcGxlY2VydCIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJuYmYiOjE2NTYzNzQyNzQsIngtcm9rdS1hdHRlc3RhdGlvbi1kYXRhIjp7Im5vbmNlIjoiNUUwNjkyRTBBMzg5RjRGNiIsImNoYW5uZWxJZCI6ImRldiIsImRldmVsb3BlcklkIjoiY2FhNzNmYmI1ZTc1YTQ2YTRiNjExNGRlNTFhNWFkYTdkNjE2ZTJlZCIsInRpbWVzdGFtcE1zIjoxNjU2Mzc3ODczOTkwfSwiaXNzIjoidXJuOnJva3U6Y2xvdWQtc2VydmljZXM6ZGV2aWNlLWF0dGVzdGF0aW9uIiwiZXhwIjoxNjU2NDY0Mjc0fQ.nywDvSUys27oeaQZ3yXwNBfOnXbO-TUDuekOPZYjSssfZhNhWwRXvPLbJKHcNMR5Z0vFOQLVDFeqEVGauIMxMEke5UFLuCRxhr3ayBJJPt_BPfrEFbAvYjFEGdKkxJqYUhuFE38R8lU2k7dhO0iFxDw1Qq7W4w8_7CjmDy4YFf7IfyhV7Vf2kGiOx5C94Niw5N2td3s21F3z77Rq_bofQ51DOKIwo_cDVuvPQnDyxG-CNEydZKCZZwGPYCKEHMPrIOOXJ-S9ZjArgaEpBUpMXWJibFxnkpVUVzbC22GEaqz_SjOJXFMQU7TaCKkDeCYVKylgKwCvbvHRDlgogf7kqg
 
 ```
@@ -952,7 +952,7 @@ To verify the JWT, developers must [download the Roku device attestation token c
 
 The decoded JWT contains the following fields:
 
-```
+```brightscript
 "x-roku-attestation-data": {
     "nonce": "5E0692E0A389F4F6",
     "channelId": "dev",

@@ -24,7 +24,7 @@ The layout of the keyboard is customized based on a JSON-formatted Key Definitio
 
 The instance of the **DynamicKeyGrid** node is accessed via the **keyGrid** field of the **DynamicCustomKeyboard** node. The **keyGrid** field includes a **keyDefinitionUri** field, which must be set to a valid Key Definition File. Typically, this is done by creating an RSG component that extends the **DynamicCustomKeyboard** and then defining an **init()** function for that component as demonstrated in the following example:
 
-```
+```brightscript
 sub init()
         m.top.keyGrid.keyDefinitionUri = "pkg:/data/coolKeyboardLayoutKDF.json"
 end sub
@@ -48,7 +48,7 @@ It is recommended that developers create a component that extends the **DynamicC
 
 For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface> element that has the following signature:
 
-```
+```brightscript
 function keySelected(key as string) as boolean
 ```
 
@@ -79,7 +79,7 @@ The following example demonstrates a custom key handler:
    ```
 
 3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:
-   ```
+   ```brightscript
    function keySelected(key as string) as boolean
        if key = "ChangeCase"
            if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()
@@ -106,7 +106,7 @@ In most cases, the default key selection handlers can be used for modifying the 
    ]
    ```
 2. The **keySelected()** function includes the following business logic:
-   ```
+   ```brightscript
    function keySelected(key as string) as boolean
        if key = "DuplicateCharacter"
            currString = m.top.text

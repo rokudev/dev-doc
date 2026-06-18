@@ -247,7 +247,7 @@ We start with the following code example:
 
 The scene has the following parenting structure:
 
-```
+```xml
 Scene
 RectangleGroup
 Rectangle (Green)

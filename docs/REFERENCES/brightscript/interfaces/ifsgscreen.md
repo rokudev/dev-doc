@@ -55,7 +55,7 @@ A global reference object.
 
 #### Example: Starting Scene Graph Applications
 
-```
+```brightscript
 sub showChannelSGScreen()
   print "in showChannelSGScreen"
   screen = CreateObject("roSGScreen")

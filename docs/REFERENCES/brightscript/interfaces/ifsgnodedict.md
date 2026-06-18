@@ -104,7 +104,7 @@ A flag indicating whether the nodes refer to the same SceneGraph node object.
 
 The following example should print "same":
 
-```
+```brightscript
 n = createObject("roSGNode", "Node")
 c = n.createChild("Node")
 if c.isSameNode(n.getChild(0)) then print "same"
@@ -159,7 +159,7 @@ To call the function, use the `callFunc` field with the required method signatur
 
 **Function definition**
 
-```
+```brightscript
 function addSomeValue(params as Object) as Object
     passedDataLabel = m.top.findNode("passedDataLabel")
     passedDataLabel.text = params.passedString
@@ -173,7 +173,7 @@ end function
 
 **callFunc with parameters**
 
-```
+```brightscript
 params = {passedString:"", passedInt:12}
 result = node.callFunc("addSomeValue", params)
 ```

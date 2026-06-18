@@ -443,7 +443,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 
 2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
 
-   ```
+   ```brightscript
    if (myChannelStore.purchases <> invalid)
        count = myChannelStore.purchases.GetChildCount()
        for x = 0 to count - 1
@@ -481,7 +481,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
 
    * Call the [**ChannelStore.storeChannelCredData **](doc:channelstore) command to store the access token in the Roku cloud. You can use the **status** and **response** fields of the **storeChannelCredDataStatus** content node to verify that the command was successful and that the access token stored in the Roku cloud has the specified value.
 
-     ```
+     ```brightscript
      myChannelStore.channelCredData = "your access token"
      myChannelStore.command = "storeChannelCredData "
 

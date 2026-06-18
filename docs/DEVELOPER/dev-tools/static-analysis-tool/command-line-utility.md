@@ -26,7 +26,7 @@ This utility supports Windows, Mac and Linux and requires Java to be installed i
 
 The static analysis utility is distributed as a ZIP file.  The contents of the ZIP as as follows:
 
-```
+```brightscript
 .
 └── sca-cmd
     ├── bin

@@ -55,7 +55,7 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
    * **code**. The uniqueID specified for the product in the **In-App Products** page. Use the **addField()** method to add the **code** field to the **ContentNode**.
    * **title** (optional). The title of the product being purchased (for example, the name of a movie rental).
 
-   ```
+   ```brightscript
    m.orderInfo = createObject("roSGNode", "contentNode")
    m.orderInfo.priceDisplay = "5.99"
    m.orderInfo.price = "3.99"
@@ -71,7 +71,7 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
 2. Set the **ContentNode** to the ChannelStore node's **requestPartnerOrder** field.
 
-   ```
+   ```brightscript
    m.channelStore.requestPartnerOrder = m.orderInfo
    m.channelStore.command = "requestPartnerOrder"
    ```
@@ -80,7 +80,7 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
    If the **status** field is set to **failure**, display an error message.
 
-   ```
+   ```brightscript
    m.store.observeField("requestPartnerOrderStatus", "requestPartnerOrderStatusChanged")
 
    'callback function
@@ -104,7 +104,7 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
    * **contentKey**. The publisher's SKU (or other unique identifier) for the product.
    * **code**. The uniqueID specified for the product in the **In-Channel Products** page. Use the **addField()** method to add the **code** field to the **ContentNode**.
 
-     ```
+     ```brightscript
      m.confirmOrderInfo = CreateObject("roSGNode", "ContentNode")
      m.confirmOrderInfo.orderId = m.store.requestPartnerOrderStatus.orderID
      m.confirmOrderInfo.title = "TV Show 1"
@@ -123,7 +123,7 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
 5. Set the **ContentNode** to the ChannelStore node's **confirmPartnerOrder** field. This will prompt the user to complete the transaction.
 
-   ```
+   ```brightscript
    'Set the ContentNode to the ChannelStore node
     m.store.confirmPartnerOrder = m.confirmOrderInfo
 
@@ -135,7 +135,7 @@ To send the **requestPartnerOrder** and **confirmPartnerOrder** commands, follow
 
    If the **status** field is set to **failure**, display an error message explaining why the transaction could not be completed.
 
-   ```
+   ```brightscript
    m.store.observeField("confirmPartnerOrderStatus", "confirmPartnerOrderStatusChanged")
 
    'callback function

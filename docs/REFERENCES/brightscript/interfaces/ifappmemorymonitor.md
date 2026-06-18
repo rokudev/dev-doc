@@ -50,7 +50,7 @@ The usage percentage of memory limit for the app.
 
 #### Example
 
-```
+```brightscript
 m.port = CreateObject("roMessagePort")
 deviceInfo = CreateObject("roAppMemoryMonitor")
 deviceInfo.setMessagePort(m.port)

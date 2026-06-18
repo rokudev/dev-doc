@@ -21,7 +21,7 @@ after *name*.
 
 For example:
 
-```
+```brightscript
 app_mgr = CreateObject("roAppManager")
 section = CreateObject("roRegistrySection", "Data")
 ```
@@ -33,7 +33,7 @@ Component specification for a list of types.
 
 For example:
 
-```
+```brightscript
 print type(5) 'returns a 2.1 compatible type
 print type("my string", 3) 'return a Roku OS 3.0 type
 ```
@@ -43,14 +43,14 @@ print type("my string", 3) 'return a Roku OS 3.0 type
 Each script has a global Associative Array. It can be fetched with this
 function.   
 
-**New in [Roku OS 3.0](doc:release-notes#roku-os-3-0)**
+**New in [Roku OS 3.0](doc:release-notes#roku-os-30)**
 
 ## Box(x as Dynamic) as Object
 
 Box() will return an object version of an intrinsic type, or pass
 through an object if given one.
 
-``` 
+```brightscript
  bo = box("string")
  bo = box(bo) ' no change to bo
 ```
@@ -72,7 +72,7 @@ If an array of files are passed instead of a single filename, then each file is 
 
 For example:
 
-```
+```brightscript
 sub Main()
     Run("pkg:/test.brs")
     BreakIfRunError(LINE_NUM)
@@ -131,13 +131,13 @@ runtime error, but you don't want code execution to stop.
 
 Example:
 
-```
+```brightscript
 print Eval("n=1/0")
 ```
 
 Outputs:
 
-```
+```brightscript
 20
 ```
 
@@ -160,14 +160,14 @@ Returns an error code result after the last script Run().
 
 These two are normal:  
 
-```
+```brightscript
 &hFC==ERR_NORMAL_END
 &hE2==ERR_VALUE_RETURN
 ```
 
 **Example: Assign variables to common runtime errors**
 
-```
+```brightscript
 ERR_USE_OF_UNINIT_VAR = &hE9
 ERR_DIV_ZERO = &h14
 ERR_TM = &h18

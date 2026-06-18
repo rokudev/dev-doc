@@ -26,7 +26,7 @@ The `flags`, `width`, and `precision` fields are optional, and they may control 
 
 ##### Example
 
-```
+```brightscript
 "%02x%02x%02x".Format(255, 0, 128) ' returns "ff0080"
 ```
 

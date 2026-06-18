@@ -311,7 +311,7 @@ Allows library client to set a callback function to be called when ad tracking e
 
 Callback functions must have the following signature:
 
-```
+```brightscript
 sub CallbackFunc(obj = invalid as Dynamic, eventType = invalid as Dynamic, ctx = invalid as Dynamic)
 ```
 

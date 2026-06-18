@@ -139,7 +139,7 @@ Several attributes have been deprecated; consult the linked documentation page f
 
 ### roAppInfo.getSubtitle()
 
-**roAppInfo.getSubtitle()** function has been deprecated since around [Roku OS 5.0](doc:release-notes#roku-os-5-0).
+**roAppInfo.getSubtitle()** function has been deprecated since around [Roku OS 5.0](doc:release-notes#roku-os-50).
 
 ## Deprecated Components: January 1, 2018
 

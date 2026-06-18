@@ -20,7 +20,7 @@ To set up a fixed focus list or grid, set the focusedTargetSet field to a Target
 
 **focusedTargetSet1**
 
-```
+```brightscript
 focusedTargetSet1 = createObject("roSGNode", "TargetSet")
 m.tList1.focusedTargetSet = [ focusedTargetSet1 ]
 
@@ -38,7 +38,7 @@ focusedTargetSet1.focusIndex = 1
 
 **unfocusedTargetSet**
 
-```
+```brightscript
 unfocusedTargetSet.targetRects = [
     { x:-100, y:-64, height:134, width:240 },
     { x:150, y:-64, height:134, width:240 },
@@ -61,7 +61,7 @@ When the focus moves to Item 2, the layout of the first row is defined by anothe
 
 **focusedTargetSet array**
 
-```
+```brightscript
 focusedTargetSet1 = createObject("roSGNode", "TargetSet")
 focusedTargetSet2 = createObject("roSGNode", "TargetSet")
 focusedTargetSet3 = createObject("roSGNode", "TargetSet")
@@ -71,7 +71,7 @@ m.tList1.focusedTargetSet = [ focusedTargetSet1, focusedTargetSet2, focusedTarge
 
 **Additional TargetSets for floating focus**
 
-```
+```brightscript
 focusedTargetSet2.targetRects = [
     { x:-178, y:-64, height:134, width:240 },
     { x:72, y:-64, height:134, width:240 },

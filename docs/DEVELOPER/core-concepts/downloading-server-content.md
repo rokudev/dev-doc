@@ -119,7 +119,7 @@ downloaded:
 
 **Example Task node configuration and launch**
 
-```
+```brightscript
 m.getHomeOptionsList = createObject("roSGNode", "getLabelListContent")
 m.getHomeOptionsList.setField("uri", "http://www.sdktestinglab.com/homeoptionslistcontent.xml")
 m.getHomeOptionsList.observeField("content", "showhomeoptionslist")

@@ -61,14 +61,14 @@ The following entry loads the adapter into your task:
 
 > At the beginning of the playback Task, instantiate the adapter with proper parameters and then initialize it. The valid values of the parameter name are uplynk, adobe, onceux, yospace, awsemt, and ggldai.
 
-```
+```brightscript
 adapter = RAFX_SSAI({name:"uplynk"})  ' Supported: uplynk, adobeonceux, yospace, awsemt, ggldai
 adapter.init()
 ```
 
 ### 2. Make an initial request to SSAI manifest server getting Ad metadata: Request Ad Metadata
 
-```
+```brightscript
 request = {
     type: adapter.SreamType.VOD  ' Required, VOD or LIVE
     url:  "http://admanifest.ssai.com/api?assetid=abcdefg"' Ad metadata URL, provided by SSAI
@@ -82,7 +82,7 @@ result = adapter.requestStream(request)
 
 The initial request to SSAI manifest servers returns content URL (like Adobe and Verizon Media Services). The following entry gets the content URL:
 
-```
+```brightscript
 streamInfo = adapter.getStreamInfo()
 url = streamInfo["playURL"]
 ```
@@ -92,7 +92,7 @@ url = streamInfo["playURL"]
 Once the content playback URL is known, the adapter is ready to track Ads. Pass the adapter player object and observe the position event on the video node.
 The value of params.player is given to RAF internally as the second parameter of RAF.stitchedAdHandledEvent(). adapter.enableAds() parses Ad metadata and/or configure additional settings such as observing timedMetadata2 of given video node. It then calls RAF.stitchedAdsInit() when valid Ad metadata was found in the initial response from the SSAI manifest servers.
 
-```
+```brightscript
 port = CreateObject("roMessagePort")
 params = {player: {sgnode:m.top.video, port:port}}
 adapter.enableAds(params)
@@ -113,7 +113,7 @@ By default, params.useStitched is set to true. In this case:
 
 #### **a) Optional: enable ads without stitchedAdHandledEvent**
 
-```
+```brightscript
  params = {
      player: {sgnode:m.top.video, port:port},
      useStitched: false
@@ -147,7 +147,7 @@ When params.useStitched = false, it is required to set callbacks and the app MUS
 
 **Setting the callback functions to the Adapter:**
 
-```
+```brightscript
 ' Set adapter callback functions
 adapter.addEventListener(adapter.AdEvent.POD_START, rafxCallback)
 adapter.addEventListener(adapter.AdEvent.POD_END, rafxCallback)
@@ -155,7 +155,7 @@ adapter.addEventListener(adapter.AdEvent.IMPRESSION, rafxCallback)
 ```
 
 Example callback function:
-```
+```brightscript
 function rafxCallback(eventInfo as object) as void
     if adapter.AdEvent.POD_START = eventInfo.event
         m.top.adPlaying = true
@@ -173,7 +173,7 @@ When you are ready to start playback, you need to configure RAF by enabling ad m
 
 Note: It is recommended to use [enableAdMeasurements](doc:raf-api).
 
-```
+```brightscript
 adIface = Roku_Ads()
 adIface.enableAdMeasurements(true) ' Required
 adIface.setContentGenre(...) ' Set app/content genre info
@@ -185,7 +185,7 @@ adIface.setContentId(...) ' Set app/content specific info
 
 The developer can now start the playback and run the message loop:
 
-```
+```brightscript
 video.control = "play"  ' start playback
 
 while true

@@ -14,7 +14,7 @@ Extends [**Group**](doc:group)
 
 The **Scene** node class serves as the root of a SceneGraph node tree. Every **roSGScreen** object must have a **Scene** node, or a node that derives from the **Scene** node class as its root, including an XML markup component that extends the Scene node class or subclass. That node must be created using the **roSGScreen** createScene() function, with an argument that is a string of the name of the **Scene** node object created. For example:
 
-```
+```brightscript
 screen = CreateObject("roSGScreen")
 scene = screen.CreateScene("Scene")
 ```
@@ -170,6 +170,13 @@ While it is technically possible to have more than one scene per app, we recomme
 </tr>
 </tbody>
 </table></div></td>
+</tr>
+<tr>
+<td class="short-line">allowBackgroundTask</td>
+<td class="short-line">boolean</td>
+<td class="short-line">false</td>
+<td class="short-line">READ_WRITE</td>
+<td class="long-line">To enable an Instant Resume app to execute background tasks, set this field to true.</td>
 </tr>
 </tbody>
 </table>

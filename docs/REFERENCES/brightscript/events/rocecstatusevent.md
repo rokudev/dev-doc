@@ -40,7 +40,7 @@ Returns an associative array with the following key/value pairs:
 
 A BrightScript app subscribes to roCECStatusEvent by creating an "roCECStatus" object. For example:
 
-```
+```brightscript
 cecstatus = CreateObject("roCECStatus")
 m.port = CreateObject("roMessagePort")
 cecstatus.SetMessagePort(m.port)

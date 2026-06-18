@@ -307,7 +307,7 @@ functions as a whole or for individuals lines of code in the functions
 
 If any of these metrics appear in a call path, they are specific to that call path. For example, in this call path:
 
-```
+```brightscript
 <root>: cpu.self=0,cpu.callees=14700,tm.self=0.000,tm.callees=1.989,mem.self=0,mem.callees=324452,calls=0
 
 +- func1(): pkg:/components/file1.brs:83,cpu.self=200,cpu.callees=14500,tm.self=0.728,tm.callees=1.261,mem.self=5840,mem.callees=318612,calls=1
@@ -319,7 +319,7 @@ The metrics for func2() are specific to when it is called from func1().
 
 However, in the table below:
 
-```
+```brightscript
 ------------- BEGIN: TOP CONSUMERS: CPU.SELF -----------------
 
   1: func1(): pkg:/components/file1.brs:83,cpu.self=300,cpu.total=450,tm.self=0.001,tm.total=0.001,mem.self=0,mem.total=0,calls=5

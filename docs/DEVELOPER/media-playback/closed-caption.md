@@ -63,7 +63,7 @@ fired, and the **[Video node](doc:video)** is playing full
 screen and setFocus is enabled i.e., the Video node is in focus, as displayed in the following code
 example:
 
-```
+```brightscript
 sub init()
     m.top.setFocus(true)
     setVideo()

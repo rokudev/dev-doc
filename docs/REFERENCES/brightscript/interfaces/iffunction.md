@@ -32,7 +32,7 @@ You can get a plain (non-referenced) version of the value by calling the this me
 
 This method can be used for in/out function parameters. If you have a boxed object, you can change the value in the object via this method, without changing the variable reference itself.
 
-```
+```brightscript
 function Main()
     f1 = Foo
     print "f1 "; Type(f1); "="; f1

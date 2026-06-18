@@ -81,7 +81,7 @@ In the SceneGraph XML file of the app's Scene node, insert `customization suspen
 
 The following BrightScript code demonstrates how to execute the `customSuspend` and `customResume` handlers in the Scene. The **customResume** handler includes logic for managing the playback experience, which includes handling any deep link requests sent to the app upon relaunch. Details for each of these handlers, including the tasks to be performed within them, are provided after.
 
-```
+```brightscript
 function customSuspend(arg as dynamic)
      for each key in arg
        print " " key "=" arg[key]
@@ -144,7 +144,7 @@ Once an Instant Resume app is suspended, it should return the user to the Roku h
 
 To enable an Instant Resume app to execute background tasks, set the **allowBackgroundTask** field of the **Scene** node. The following BrightScript code demonstrates how to do this:
 
-```
+```brightscript
 scene = screen.CreateScene("BackgroundTaskTestScene")
 scene.allowBackgroundTask = true
 ```
@@ -208,7 +208,7 @@ It is recommended that apps use a basic implementation for the playback of VOD c
 
 The following code snippet illustrates logic that could be used to resume an app when a video node has already been created and is on the screen stack. In this case, it closes the video node, removes it from the screen stack, and switches focus on the previous screen, which is typically the Details Screen.
 
-```
+```brightscript
 ' Callback function when the app is suspended from an app exit.
 ' In this example, we are only printing to the brightscript console
 ' that the app is being suspended.

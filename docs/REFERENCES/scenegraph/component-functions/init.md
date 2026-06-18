@@ -18,7 +18,7 @@ If the \<script\> element contains the definition of a function named init() tha
 
 #### Syntax
 
-```
+```brightscript
 sub init()
   ...
 end sub

@@ -22,7 +22,7 @@ An roTextureRequest object is created using the CreateObject() method and passin
 
 **Example: Requesting a URL from the roTextureManager**
 
-```
+```brightscript
 sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
@@ -51,7 +51,7 @@ end sub
 
 **Example: Requesting a scaled image from the roTextureManager**
 
-```
+```brightscript
 sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")
@@ -67,7 +67,7 @@ end sub
 
 **Example: Making an HTTPS request from the roTextureManager**
 
-```
+```brightscript
 sub Main()
     mgr = CreateObject("roTextureManager")
     msgport = CreateObject("roMessagePort")

@@ -94,7 +94,7 @@ As of [Roku OS 10.5](doc:release-notes#roku-os-105), the BrightScript debug cons
 
 ## SceneGraph applications
 
-Beginning with **[Roku OS 7.5](doc:release-notes#roku-os-7-5)** and above, the main BrightScript
+Beginning with **[Roku OS 7.5](doc:release-notes#roku-os-75)** and above, the main BrightScript
 console (port 8085) provides context for all threads. This
 eliminates the need to have multiple telnet sessions open for each
 running thread and **ports 8089 - 8093** will no longer be used.
@@ -108,7 +108,7 @@ threads. All threads will be listed with the following information:
 
 The current selected thread will be marked with an `*`.
 
-```
+```brightscript
 BrightScript Micro Debugger.
 Enter any BrightScript statement, debug commands, or HELP.
 Suspending threads...
@@ -231,7 +231,7 @@ This usually means that a BrightScript variable has been incorrectly spelled aft
 
 This message will often coincide with a blank screen. The line number at which the error is detected will be flagged with an asterisk, and the message will provide the name of the file in which the error was detected:
 
-```
+```brightscript
 020:*       smallexamplesize = smallexample.localBoundingRect()
 ...
 'Dot' Operator attempted with invalid BrightScript Component or interface reference. (runtime error &hec) in ...pkg:/components/smallexamplescene.xml(20)
@@ -240,7 +240,7 @@ This message will often coincide with a blank screen. The line number at which t
 
 This message will appear if a component by that name has either not been created, or an attempt is made to access a component member using an incorrectly spelled component name. Check the backtrace information supplied by the debugger for the component objects and variables used at the time of the error, and note the component objects listed as invalid:
 
-```
+```brightscript
 Backtrace:
 #0  Function init() As Void
    file/line: ...pkg:/components/smallexamplescene.xml(20)
@@ -257,7 +257,7 @@ centery          <uninitialized>
 
 Note also the variables that were assigned values from interface functions on invalid component objects will be listed as \<uninitialized>. Typically in Roku SceneGraph applications, the problem is caused by attempting to create a component object for a component class name that is not in either the built-in node classes, or extended node classes declared in the application package components directory. To fix this error, scroll up in the debugger output to the point at which the component object creation error occurred, which will have the following error message:
 
-```
+```brightscript
 BRIGHTSCRIPT: ERROR: roSGNode: Failed to create roSGNode with type Rectangleexample: ...pkg:/components/smallexamplescene.xml(16)
 ```
 
@@ -267,7 +267,7 @@ This shows the file and line number where the actual component object creation e
 
 This often indicates that the ContentNode assigned to the content field of the list or grid either does not exist, or was assigned after focus was set on the list or grid. Ensure that the ContentNode has been created successfully at the time it is assigned to the list or grid content field. Then check that focus was set on the list or grid after the content field is assigned a valid ContentNode. Since you will generally be generating a ContentNode by parsing data from an XML or JSON file downloaded from your server in a Task node (or possibly downloaded as "singleton" at the time the SceneGraph app was created in the main.brs file and converted), make sure you set the content field and focus on the list or grid in this way:
 
-```
+```brightscript
 sub showvideolist()
   m.videolist.content = m.readVideoContentTask.videocontent
   m.videolist.setFocus(true)
@@ -278,7 +278,7 @@ This is a typical callback function that is triggered by the ContentNode being c
 
 Also, if you are having problems with a callback function not assigning a valid ContentNode, carefully check that the field observers were set before the Task node was configured and launched (but after the Task node object was created). For example, for the above example, the Task node object should have been created, had the field observers set, configured, and launched, in that order:
 
-```
+```brightscript
 m.readVideoContentTask = createObject("RoSGNode","MetaDataCR")
 m.readVideoContentTask.observeField("videocontent","showvideolist")
 m.readVideoContentTask.metadatauri = "pkg:/server/videometadata.xml"

@@ -56,7 +56,7 @@ For reference here are all the fields from an image taken from my camera (with t
 
 The format is IFD#, Tag#[Tag Name], Data Format, Value. The Value is a string representation of data. 
 
-```
+```brightscript
 0, 272[ Model], ASCII,Canon PowerShot SD700 IS
 0, 274[ Orientation], Short,top - left
 0, 283[ YResolution], Rational,180.00
@@ -114,7 +114,7 @@ The format is IFD#, Tag#[Tag Name], Data Format, Value. The Value is a string re
 
 **Example**
 
-```
+```brightscript
 ' printAA() is from generalUtils.brs in our sample apps
 ' and used to print an associative Array
 sub SaveExifImage(filename as String)

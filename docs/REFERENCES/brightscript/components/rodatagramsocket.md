@@ -20,7 +20,7 @@ This object is created without any arguments:
 
 **Example**
 
-```
+```brightscript
 ' UDP 2-way peer-to-peer asynchronous comm on port 54321
 ' periodically sends out a message to a specific address and port
 ' prints any message it receives

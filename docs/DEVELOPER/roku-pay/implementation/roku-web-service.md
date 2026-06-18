@@ -1,11 +1,14 @@
 ---
 title: Roku Pay web services reference
-excerpt: 'RESTful APIs for managing Roku Pay billing transactions and entitlements'
+excerpt: RESTful APIs for managing Roku Pay billing transactions and entitlements
 deprecated: false
 hidden: false
 metadata:
-  title: 'Roku Pay web services reference | Roku Developer Docs'
-  description: 'Use the Roku Pay APIs to validate transactions, cancel and refund subscriptions, update billing cycles, and issue service credits to Roku accounts.'
+  title: Roku Pay web services reference | Roku Developer Docs
+  description: >-
+    Use the Roku Pay APIs to validate transactions, cancel and refund
+    subscriptions, update billing cycles, and issue service credits to Roku
+    accounts.
   robots: index
 next:
   description: ''
@@ -22,58 +25,77 @@ The following table summarizes the basic information for the Roku Pay web servic
       <th>
         Item
       </th>
+
       <th>
         Description
       </th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>
         URL
       </td>
+
       <td>
         The base URL for the Roku Pay APIs is **[https://apipub.roku.com/listen/transaction-service.svc](https://apipub.roku.com/listen/transaction-service.svc)**. The resource name for the API is then appended to the URL.<br /><br />For example, the URL for the `validate-transaction` API is **[https://apipub.roku.com/listen/transaction-service.svc/validate-transaction](https://apipub.roku.com/listen/transaction-service.svc/validate-transaction)**.
       </td>
     </tr>
+
     <tr>
       <td>
         Protocol
       </td>
+
       <td>
         Roku Pay API calls may be sent using either HTTP or HTTPS.
       </td>
     </tr>
+
     <tr>
       <td>
         Format
       </td>
+
       <td>
         Roku Pay APIs support both JSON and XML-formatted data. Format the <code>accept</code> header as follows:
-        <br /><br />
+
+        <br />
+
+        <br />
+
         <ul>
           <li><strong>JSON</strong>: accept: application/json</li>
           <li><strong>XML</strong>: accept: application/xml</li>
         </ul>
       </td>
     </tr>
+
     <tr>
       <td>
         HTTP Methods
       </td>
+
       <td>
         Roku Pay APIs support GET and POST methods for retrieving and managing transaction data:
-        <br /><br />
+
+        <br />
+
+        <br />
+
         <ul>
           <li><strong>GET</strong>: All GET requests must include the Roku Pay API key and the ID of the item being validated in the URL (transaction or refund ID).</li>
           <li><strong>POST</strong>: All POST requests require JSON or XML-formatted data in the body. The Roku Pay API key must be included in the body.</li>
         </ul>
       </td>
     </tr>
+
     <tr>
       <td>
         API Key
       </td>
+
       <td>
         All Roku Pay API requests must include the developer's API key. See [Setting up Roku Pay web services](doc:setting-up-web-services) for more information about getting and managing the key. For all requests, the app associated with the transaction ID or refund ID passed into the call must be owned by the developer associated with the Roku Pay API Key.
       </td>
@@ -106,7 +128,7 @@ For TVOD apps,  the `isEntitled` flag is set to "false"; therefore, your entitle
 
 #### Request example:
 
-```
+```http
 GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/{transactionid}
 ```
 
@@ -303,7 +325,7 @@ The `validate-refund` API is used to verify that a Roku Pay purchase has been re
 
 **Request syntax:**
 
-```
+```http
 GET https://apipub.roku.com/listen/transaction-service.svc/validate-refund/{partnerAPIKey}/{refundId}
 ```
 
@@ -379,7 +401,7 @@ The `cancel-subscription` API cancels the subscription corresponding to the spec
 
 **Method/URL**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/cancel-subscription
 ```
 
@@ -452,7 +474,7 @@ The sum of all partial refunds applied against any given transaction cannot exce
 
 **Method/URL**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/refund-subscription
 ```
 
@@ -516,7 +538,7 @@ Set the `newBillCycleDate` to the updated date on which the user should be bille
 
 **Method/URL**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/update-bill-cycle
 ```
 
@@ -578,7 +600,7 @@ The response will include a `partnerReferenceId` that can be used later to find 
 
 **Request example:**
 
-```
+```http
 POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
 ```
 
@@ -637,3 +659,26 @@ POST https://apipub.roku.com/listen/transaction-service.svc/issue-service-credit
     "ReferenceId": "47674"
 }
 ```
+
+## Rate limiting
+
+The Roku Pay APIs enforce a rate limit of **20 requests per second (rps) per API key**. 
+
+### Rate limit error response
+
+Requests that exceed this limit will receive a 429 error response code (too many requests). 
+
+```
+HTTP/1.1 429 Too Many Requests
+ content-length: 0
+(empty body)
+```
+
+### Best practices 
+
+To handle rate limiting, implement exponential backoff and retry logic. Specifically, do the following:
+
+* **Distribute requests over time**: For high-volume operations such as nightly subscription reconciliations, spread API calls over an extended time window rather than sending bursts of requests. The time window should be proportional to the number of subscriptions.
+* **Implement exponential backoff**:  When you receive a 429 response, wait before retrying. Start with a 1-second delay and double the delay with each successive retry, up to a maximum of 60 seconds.
+* **Avoid immediate retries**: Immediate retries without backoff will result in continued rate limiting and do not improve throughput.
+* **Monitor request rates**:  If your integration consistently approaches the rate limit, extend the request window or limit reconciliation to subscriptions nearing expiration or in dunning states.

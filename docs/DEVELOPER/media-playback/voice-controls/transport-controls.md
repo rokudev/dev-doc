@@ -46,7 +46,7 @@ these steps:
 
 1. Create an **roInput** object, and set the [**roMessagePort**](doc:romessageport) for receiving events.
 
-   ```
+   ```brightscript
    input = CreateObject("roInput")
    port = CreateObject("roMessagePort")
    input.SetMessagePort(port)
@@ -55,7 +55,7 @@ these steps:
 2. Register the **roInput** component for voice commands by calling
    its  [**EnableTransportEvents()**](/dev/docs/ifinput#enabletransportevents-as-boolean) function. This tells the Roku OS that your app can handle voice commands sent to the **roInput** object. Once this is set, your app will receive **roInput** events for every voice command on this **roInput** object.
 
-   ```
+   ```brightscript
    input.enableTransportEvents()
    ```
 
@@ -68,7 +68,7 @@ these steps:
    3. This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
    4. This method should be called immediately after a voice command is received. If your application does not handle a transport event (or the command is unknown or not implemented in your app), mark it as "error.generic" or "unhandled". See [Error handling](#error-handling) for the complete list of error messages to which the **status** field can be set.
       c.  Optionally, for better modularization, you can pass the captured voice command to a function for handing.
-      ```
+      ```brightscript
       while m.isPlaying
             msg = wait(0, port)
             if type(msg) = "roInputEvent" then
@@ -90,7 +90,7 @@ these steps:
 
 4. Add business logic for handling each voice command. In this example, a function is used to receive the voice command and implement the required behavior. As a best practice, set the **ret.status** field to "unhandled" by default, and then update it to "success" if your app handles the command, or "error.generic" if the app cannot fulfill it. Setting the status to "error.generic" displays "That is not available" in the Roku Voice heads-up display. The default "unhandled" status results in the Roku OS executing the default behavior.
 
-   ```
+   ```brightscript
    function handleTransport(evt)
        cmd = evt.command
        ret = {status: "unhandled"}

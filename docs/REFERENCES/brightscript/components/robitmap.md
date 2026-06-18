@@ -34,7 +34,7 @@ An roBitmap can also load its image data from a file:
 
 **Example**
 
-```
+```brightscript
 ' Draw three bitmaps as fast as we can
 '
 Screen=CreateObject("roScreen")
@@ -52,7 +52,7 @@ end while
 
 **Example: Double buffering with roBitmap**
 
-```
+```brightscript
 screen1=CreateObject("roScreen")
 off=CreateObject("roBitmap", {width:1280, height:720, AlphaEnable:false})
 off.Clear(white)

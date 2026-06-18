@@ -24,7 +24,7 @@ The following example shows how to use some simple animations. It uses two Anima
 
 #### Animation BrightScript example
 
-```
+```brightscript
 function init()
    scaleAnimation = m.top.FindNode("scaleAnimation")
    transAnimation = m.top.FindNode("transAnimation")

@@ -1,11 +1,13 @@
 ---
-title: "Creating test users"
-excerpt: 'Set up test users to make free in-app purchases and manage their transactions'
+title: Creating test users
+excerpt: Set up test users to make free in-app purchases and manage their transactions
 deprecated: false
 hidden: false
 metadata:
-  title: 'Creating test users | Roku Developer Docs'
-  description: 'Create test users in the Developer Dashboard to make free in-app purchases, then view or void transactions to re-test purchase workflows in your app.'
+  title: Creating test users | Roku Developer Docs
+  description: >-
+    Create test users in the Developer Dashboard to make free in-app purchases,
+    then view or void transactions to re-test purchase workflows in your app.
   robots: index
 next:
   description: ''

@@ -84,7 +84,7 @@ To check for an active Roku subscription with the **ChannelStore API**, follow t
 
    `myChannelStore.command = "getAllPurchases"`
 2. Get the transaction ID from the **purchaseId** field of the child content node. Find the subscription to be validated using the **code** or **productType** fields of the child content node.
-   ```
+   ```brightscript
    if (myChannelStore.purchases <> invalid)
        count = myChannelStore.purchases.GetChildCount()
        for x = 0 to count - 1
@@ -139,7 +139,7 @@ To check for a valid access token in the device registry, follow these steps:
 
    * Call the [**ChannelStore.storeChannelCredData **](doc:channelstore#storechannelcreddata) command to store an access token in the Roku cloud. You can use the **status** and **response** fields of the **storeChannelCredDataStatus** content node to verify that the command was successful and that the access token stored in the Roku cloud has the specified value.
 
-     ```
+     ```brightscript
      myChannelStore.channelCredData = "your access token"
      myChannelStore.command = "storeChannelCredData "
 
@@ -237,7 +237,7 @@ To complete and validate the new subscription, follow these steps:
 
 2. Once the customer selects a product, [create an order](doc:channelstore) that contains the product the customer is purchasing. To do this, you set the [**ChannelStore.order**](doc:channelstore#order) field to a **ContentNode** that has one child **ContentNode** for the item the customer is purchasing
 
-   ```
+   ```brightscript
    myOrder = CreateObject("roSGNode", "ContentNode")
    itemPurchased = myOrder.createChild("ContentNode")
    itemPurchased.addFields({ "code": "UPC3L5A", "qty": 1})
@@ -273,7 +273,7 @@ If a customer is signing in, have them authenticate themselves in your app UI fo
 
 1. After the user enters the sign-in flow, set the [**ChannelStore.requestedUserData**](doc:channelstore) field to "email" to ask the customer to share their email address, and set the [**ChannelStore.requestedUserDataInfo**](doc:channelstore) field to a ContentNode that has a **context** field set to "signin".
 
-   ```
+   ```brightscript
    myChannelStore.requestedUserData("email")
    info = CreateObject("roSGNode", "ContentNode")
    info.addFields({context: "signin"})

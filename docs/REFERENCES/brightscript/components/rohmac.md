@@ -22,7 +22,7 @@ The supported digest algorithms are the same as those supported by [roEVPDigest]
 
 **Example**
 
-```
+```brightscript
 hmac = CreateObject("roHMAC")
 signature_key = CreateObject("roByteArray")
 signature_key.fromAsciiString(getKey())

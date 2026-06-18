@@ -1,6 +1,7 @@
-# Content tags and metadata
-
-*The following contains best practices for using content tags and metadata for media ingest. Please see [ingest specifications](/trc-docs/video-on-demand/ingest-specifications.md#metadata-updates-mdu-and-file-replacements) for more.*
+---
+title: Content tags and metadata
+---
+_The following document outlines best practices for using content tags and metadata for media ingest. Please see [ingest specifications](/trc-docs/video-on-demand/ingest-specifications.md#metadata-updates-mdu-and-file-replacements) for more._
 
 We are often asked - how does the content appear on the Roku platform? The answer is almost always with metadata.
 
@@ -12,52 +13,52 @@ Quality tagging will help boost the right content to the right people and in mor
 
 ## Roku recommendation:
 
-Include **at least 2 relevant Roku Provided Tags** from the menu below on *every* piece of content delivered to Roku (i.e., Episodes, Movies, Series..).  
+Include **at least 2 relevant Roku Provided Tags** from the menu below on _every_ piece of content delivered to Roku (i.e., Episodes, Movies, Series..).
 
-- You are welcome to add additional relevant or brand specific tags (not on the list) along with the aforementioned Roku required tags. (e.g., LGBTQ, classic, biography)
-- For time-boxed, seasonal, or thematic collections, the Roku team will continue to create bespoke categories as requested in the monthly content refresh. (e.g., Halloween, Back to School, Mother's Day)
-- Roku reserves the right to make changes to metadata if/when content is miscategorized.
+* You are welcome to add additional relevant or brand specific tags (not on the list) along with the aforementioned Roku required tags. (e.g., LGBTQ, classic, biography)
+* For time-boxed, seasonal, or thematic collections, the Roku team will continue to create bespoke categories as requested in the monthly content refresh. (e.g., Halloween, Back to School, Mother's Day)
+* Roku reserves the right to make changes to metadata if/when content is miscategorized.
 
 Examples:
 
-|      Title       | Baseline<br />(2 Roku tags)<br />Preferred |     Rich Tags<br />(2 Roku Tags +)<br />Preferred      |      | Mismatched Tags -<br />Not Preferred |
-| :--------------: | :----------------------------------------: | :----------------------------------------------------: | :--: | :----------------------------------: |
-|    Mean Girls    |         comedy<br />coming of age          | comedy, coming of age, romantic comedy, leading ladies |      |         action, documentary          |
-| Schindler's List |           drama<br />world war 2           |      drama, world war 2, war, history, biography       |      |       comedy, romance, action        |
-|     Hoarders     |        reality tv<br />documentary         |          reality tv, documentary, bingeworthy          |      | romance, ensemble tv shows, cooking  |
+|       Title      | Baseline<br />(2 Roku tags)<br />Preferred |      Rich Tags<br />(2 Roku Tags +)<br />Preferred     |     | Mismatched Tags -<br />Not Preferred |
+| :--------------: | :----------------------------------------: | :----------------------------------------------------: | :-: | :----------------------------------: |
+|    Mean Girls    |          comedy<br />coming of age         | comedy, coming of age, romantic comedy, leading ladies |     |          action, documentary         |
+| Schindler's List |           drama<br />world war 2           |       drama, world war 2, war, history, biography      |     |        comedy, romance, action       |
+|     Hoarders     |         reality tv<br />documentary        |          reality tv, documentary, bingeworthy          |     |  romance, ensemble tv shows, cooking |
 
 Choose from the list of Roku tags:
 
 ### **Core Tags**
 
- These are high (level 1) genres.
+These are high (level 1) genres.
 
-- action
-- adventure
-- biography
-- comedy
-- crime
-- documentary
-- drama
-- history
-- horror
-- mystery
-- romance
-- romantic
-- comedy
-- science fiction
-- suspense
-- thriller
-- british tv
-- classic tv
-- comedies tv
-- drama tv
-- ensemble tv shows
-- favorite tv dads
-- favorite tv moms
-- police tv
-- reality tv
-- tv
+* action
+* adventure
+* biography
+* comedy
+* crime
+* documentary
+* drama
+* history
+* horror
+* mystery
+* romance
+* romantic
+* comedy
+* science fiction
+* suspense
+* thriller
+* british tv
+* classic tv
+* comedies tv
+* drama tv
+* ensemble tv shows
+* favorite tv dads
+* favorite tv moms
+* police tv
+* reality tv
+* tv
 
 ### **Niche/Specific Tags**
 
@@ -70,107 +71,107 @@ Examples:
 | Terminator    | action   | cyborgs       |
 | Downton Abbey | drama    | period pieces |
 
-- aliens
-- animals
-- anime
-- anthology
-- apocalypse
-- art
-- autos
-- baking
-- baseball
-- based on books
-- basketball
-- biopic
-- bus financial
-- collectibles
-- comedy drama
-- coming of age
-- concerts
-- cooking
-- courtroom
-- crime drama
-- crime fighters
-- cyborgs
-- dance
-- dark comedy
-- diy
-- docudrama
-- drama movies
-- dystopian
-- entertainment
-- environment
-- espionage
-- exercise
-- faith and spirituality
-- family dynamics
-- fantasy
-- fashion
-- female directors
-- film noir
-- game show
-- games
-- gay lesbian
-- health
-- heartfelt
-- historical drama
-- home
-- diy
-- home / house / garden
-- home improvement
-- horses
-- indies
-- inspired by true events
-- interview
-- jazz
-- korean war
-- law
-- leading ladies
-- leading men
-- lifestyle
-- martial arts
-- medical
-- medical drama
-- military 
-- miniseries
-- music
-- music docs bios
-- musical
-- musical comedy
-- nature
-- news
-- outdoors
-- paranormal
-- period pieces
-- police movies
-- politics
-- psychological thriller
-- revenge
-- science
-- sitcom
-- sketch comedy
-- slashers
-- sorcery
-- space exploration
-- sports 
-- sports talk
-- standup
-- supernatural
-- survival
-- talk
-- technology
-- thought provoking
-- travel
-- true crime
-- mystery
-- vampires
-- vietnam war
-- war
-- werewolves
-- western
-- world war 1
-- world war 2
-- zombies
+* aliens
+* animals
+* anime
+* anthology
+* apocalypse
+* art
+* autos
+* baking
+* baseball
+* based on books
+* basketball
+* biopic
+* bus financial
+* collectibles
+* comedy drama
+* coming of age
+* concerts
+* cooking
+* courtroom
+* crime drama
+* crime fighters
+* cyborgs
+* dance
+* dark comedy
+* diy
+* docudrama
+* drama movies
+* dystopian
+* entertainment
+* environment
+* espionage
+* exercise
+* faith and spirituality
+* family dynamics
+* fantasy
+* fashion
+* female directors
+* film noir
+* game show
+* games
+* gay lesbian
+* health
+* heartfelt
+* historical drama
+* home
+* diy
+* home / house / garden
+* home improvement
+* horses
+* indies
+* inspired by true events
+* interview
+* jazz
+* korean war
+* law
+* leading ladies
+* leading men
+* lifestyle
+* martial arts
+* medical
+* medical drama
+* military
+* miniseries
+* music
+* music docs bios
+* musical
+* musical comedy
+* nature
+* news
+* outdoors
+* paranormal
+* period pieces
+* police movies
+* politics
+* psychological thriller
+* revenge
+* science
+* sitcom
+* sketch comedy
+* slashers
+* sorcery
+* space exploration
+* sports
+* sports talk
+* standup
+* supernatural
+* survival
+* talk
+* technology
+* thought provoking
+* travel
+* true crime
+* mystery
+* vampires
+* vietnam war
+* war
+* werewolves
+* western
+* world war 1
+* world war 2
+* zombies
 
 Per the Ingest Spec: kidsdirected tag is REQUIRED for all kids directed movies and episodes
 

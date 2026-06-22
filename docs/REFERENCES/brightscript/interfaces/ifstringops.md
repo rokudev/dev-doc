@@ -632,9 +632,9 @@ print "(%c%c%c)".Format(&h7B, 64, &h7D)
 '=> "({@})"
 ```
 
-## Arg(Strings...) As String
+### Arg(Strings...) As String
 
-### Description
+#### Description
 
 Replaces occurrences of `%N` in this string (where N is "1".."9") with the corresponding argument from the parameter _strings._. The arguments are not positional: the first of the _string_ replaces the `%N` with the lowest `N` (all of them), the second of the _strings_ the `%N` with the next-lowest `N`, and so on.
 
@@ -646,11 +646,11 @@ If a parameter is specified, but no placeholders exist, a warning is output to t
 
 If the number of placeholders is greater than the number of parameters, those placeholders are not modified.
 
-### Return Value
+#### Return Value
 
 The resulting string after all eligible placeholder replacements have been made.
 
-### Examples
+#### Examples
 
 ```brightscript
 title = "Princess"

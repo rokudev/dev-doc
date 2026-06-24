@@ -1,11 +1,14 @@
 ---
 title: Release notes
-excerpt: 'Developer-facing API, tools, and media playback changes by Roku OS version'
+excerpt: Developer-facing API, tools, and media playback changes by Roku OS version
 deprecated: false
 hidden: false
 metadata:
-  title: 'Release notes | Roku Developer Docs'
-  description: 'Cumulative developer release notes for Roku OS, covering new APIs, media playback features, debugging tools, and deprecated functions from OS 5.0 through 15.2.'
+  title: Release notes | Roku Developer Docs
+  description: >-
+    Cumulative developer release notes for Roku OS, covering new APIs, media
+    playback features, debugging tools, and deprecated functions from OS 5.0
+    through 15.2.
   robots: index
 next:
   description: ''
@@ -1540,7 +1543,7 @@ from these settings.
 Version 5.2 introduced a new security model for sideloading apps.
 Accessing the web interface for the device now requires a userid and
 password to log in. Please see the article here for more details:
-<http://blog.roku.com/developer/2013/10/08/security-enhancements-added-to-channel-development>
+{'<http://blog.roku.com/developer/2013/10/08/security-enhancements-added-to-channel-development>'}
 
 #### New in this release
 

@@ -361,7 +361,7 @@ The following outlines what we support. A preferred video set up is outlined in 
         Ad queue points quality
       </td>
       <td>
-        ${'${adqueuepoints}'}
+        - Avoid placing ad breaks that interrupt dialogue<br />- Avoid ad breaks that interrupt a major action/dramatic scene<br />- Ad breaks should be placed with frame accuracy in logical ad break points (ex. fades to black, scene transitions, etc)<br />** * Do not include pixels, third-party tags, or Software Development Kits of any kind without express prior written approval and certification by Roku.*
       </td>
       <td>
       </td>

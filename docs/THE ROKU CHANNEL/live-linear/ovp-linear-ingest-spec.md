@@ -60,7 +60,8 @@ For Live events and Special integrations, a custom ingest document will be provi
 
 The following outlines what we support. A preferred video set up is outlined in the referenced column.
 
-<Table align={["left","left","left"]}>
+<HTMLBlock>{`
+<table>
   <thead>
     <tr>
       <th>
@@ -360,7 +361,7 @@ The following outlines what we support. A preferred video set up is outlined in 
         Ad queue points quality
       </td>
       <td>
-        $\{adqueuepoints}
+        ${'${adqueuepoints}'}
       </td>
       <td>
       </td>
@@ -378,7 +379,8 @@ The following outlines what we support. A preferred video set up is outlined in 
       </td>
     </tr>
   </tbody>
-</Table>
+</table>
+`}</HTMLBlock>
 
 ## Live Events
 

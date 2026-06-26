@@ -1,6 +1,6 @@
 ---
 title: User access management
-excerpt: Invite team members and assign roles and permissions to your developer account
+excerpt: Invite team members and assign roles and permissions to your launchpad account
 deprecated: false
 hidden: false
 metadata:

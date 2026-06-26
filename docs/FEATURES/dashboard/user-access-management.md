@@ -144,6 +144,8 @@ Roku developer accounts can have the following roles and permissions:
 </table>
 `}</HTMLBlock>
 
+<br />
+
 ### Roles and permissions for Roku content partners
 
 Roku Content Partner accounts can have the following roles and permissions:

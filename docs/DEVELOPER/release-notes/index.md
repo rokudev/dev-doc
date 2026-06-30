@@ -17,8 +17,6 @@ next:
 
 > [Join the Roku beta program](https://rokutestingportal.centercode.com/key/rdbp) to implement new features in the latest Roku OS before the general release.
 
-<br />
-
 ## Roku OS 15.3 Beta
 
 Roku OS 15.3 is currently being shared with developer beta partners under non-disclosure agreements (NDAs). The update introduces new SceneGraph APIs that render captions on preview screens and other non-fullscreen playback and add support for node fields with Double value types. 

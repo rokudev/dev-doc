@@ -511,6 +511,31 @@ This object represents a live linear stream. Please contact your Roku representa
 | genres              | string                                               | Required  | Array of genre strings for the channel. Must be one or more of the values listed in [genres](#genres-property) .                                                                                                                                                                                                                                                                           |
 | tags                | string                                               | Optional  | One or more optional tags. Each tag is a string and is limited to 20 characters.*See [Kids-Directed content](#kids-directed-content) for tag requirements                                                                                                                                                                                                                                  |
 
+Live Feed Object Example:
+
+```
+{
+   "id":"1509428502953",
+   "title":"Sample Stream",
+   "content":{
+      "..."
+   },
+   "language":{
+      "en"
+   },
+   "thumbnail":"[https://example.org/cdn/thumbnails/1509428502952/1](https://example.org/cdn/thumbnails/1509428502952/2) ",
+   "shortDescription":"A live description",
+   "longDescription":"A longer description of a live stream",
+   "genres":[
+      "drama",
+      "comedy",
+      "horror"
+   ],
+   "tags":[
+     "kidsdirected"
+}
+```
+
 ### Movie content type
 
 Child object of root property `movies`.

@@ -31,6 +31,93 @@ Here is the list of key developer-facing Roku OS 15.3 updates:
 
 The **Video** node includes a new **captionRenderArea** field for rendering captions in specific areas on a screen. Developers can use this function to display captions in custom positions for some preview and other non-full-screen scenarios. 
 
+##### Double support for fields
+
+SceneGraph fields now support Double values.
+
+```
+mynode.addField("largeDecimalNumber", "double", true)
+```
+
+#### BrightScript APIs
+
+##### roUtils predicates
+
+The roUtils component includes new isNumber(), isString(), and isFloatingPoint() functions that check whether a given value is any kind of number or string (boxed or unboxed).
+
+Example
+```
+utils = CreateObject("roUtils")
+? utils.isNumber(42)               ' true
+? utils.isNumber(box(3.14))        ' true
+? utils.isNumber(invalid)          ' false
+? utils.isString("foo")            ' true
+? utils.isString(box("foo"))       ' true
+? utils.IsFloatingPoint(box(3.14)) ' true
+```
+
+##### roAssociativeArray.values() function
+
+The roAssociativeArray component includes a new values() function that returns the values within the associative array in key order. 
+
+**Example**
+
+```
+conventions = \{"2026": "Los Angeles", "2027": "Chicago", "2028": "New York", "2029": "Miami", "2030", "Seattle" \}
+CityLabel.Text = conventions.values().join(", ")
+for each city in conventions.values()
+   ...
+end for
+```
+
+##### roTimespan functions return LongInteger values
+
+The roTimeSpan node now includes the following functions that return the total milliseconds and microseconds from the “Mark” point as LongInteger values.
+
+- totalMillisecondsLong() as LongInteger
+- totalMicrosecondsLong() as LongInteger
+
+##### roAnimatedImage functions enable rotation and scaling around an arbitrary point
+
+The roAnimatedImage interface includes new functions that enable you to rotate and scale images around its center. 
+
+###### SetPretranslation(x as Integer, y as Integer) as Void
+
+Sets the pretranslation for draw, rotate, and scale operations. The pretranslation is applied before rotation and scaling, effectively specifying an offset from the origin of the image that becomes the center of rotation and scaling.
+
+This function is normally used to specify the center of the image so that rotation and scaling occur around the image center instead of the top-left corner. For example, to rotate around the center of a 200x100 image, call SetPretranslation(-100, -50).
+
+The default pretranslation is (0, 0), which preserves the existing behavior of rotating about the top-left corner.
+
+###### GetPretranslationX() as Integer
+
+Returns the x component of the pretranslation value.
+
+###### GetPretranslationY() as Integer
+
+Returns the y component of the pretranslation value.
+
+**Example**
+
+```
+' Create and load an animated image
+animg = CreateObject("roAnimatedImage")
+animg.SetContent({uri: "pkg:/images/spinner.json", mimeType: "video/lottie+json"})
+' ... wait for ready event ...
+animg.SetTargetState("loop")
+
+' Set pretranslation to center of image
+w = animg.GetWidth()
+h = animg.GetHeight()
+animg.SetPretranslation(-w / 2, -h / 2)
+
+' Draw rotated about image center at screen position (cx, cy)
+screen.DrawRotatedObject(cx, cy, angle, animg)
+
+' Also works with DrawScaledObject
+screen.DrawScaledObject(cx, cy, 1.5, 1.5, animg)
+
+```
 
 ## Roku OS 15.2
 

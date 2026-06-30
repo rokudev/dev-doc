@@ -38,7 +38,7 @@ Our systems use a combination of methods to match a title its correct Gracenote 
 
 In order for your content to be surfaced in The Roku Channel, you must adhere to this specification. If you already have a channel powered by Direct Publisher and you want its content to appear in The Roku Channel, you must ensure your feed meets the requirements described in this specification. Likewise, if you've built a channel using our developer program, then you must provide Roku with a separate feed adhering to this specification. The new feed must contain only assets that are available for display in The Roku Channel.
 
-** Note that participation in The Roku Channel is currently limited to select partners. Configuring your feed to meet this specification is a prerequisite to be reviewed for inclusion. To submit a feed for approval into The Roku Channel, contact your Roku representative.*
+**Note that participation in The Roku Channel is currently limited to select partners. Configuring your feed to meet this specification is a prerequisite to be reviewed for inclusion. To submit a feed for approval into The Roku Channel, contact your Roku representative.**
 
 All Linear Partners must utilize one of the **Linear Certified Partners** for their stream and EPG distribution: **Amagi, Wurl, Frequency, OTTera, Xumo, Akta, Zype, Evrideo, or Stenna**. Exceptions will only be considered if the partner can agree to abiding by all rules and requirements as outlined in the linear certification agreement which can be provided if such an exemption is necessary.
 
@@ -438,7 +438,7 @@ Each image must be delivered in the JPEG format (.jpg or .jpeg file extension).
 
 * Artwork for international territories should be localized for each territory
 
-**For content on TRC, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
+**For content on TRC, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.**
 
 Object Example:
 
@@ -745,7 +745,7 @@ Notes:
 
 * Please include the liveFeed as the first item in a feed.
 * Only a title or a **TMS** ExternalID is required for programs referenced in a schedule. We will reject anything that's not a **valid** ExternalID.
-* When referencing an episode, the parent items must also be in included ([series](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#series) and [season](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#season) when applicable). These parent items must be **<u>fully populated with required fields</u>** as specified in the [Roku Direct Publisher feed specification](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md) or the series item must contain a valid External **TMS** id.
+* When referencing an episode, the parent items must also be in included ([series](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#series) and [season](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#season) when applicable). These parent items must be <strong><u>fully populated with required fields</u></strong> as specified in the [Roku Direct Publisher feed specification](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md) or the series item must contain a valid External **TMS** id.
 
 ![roku400px - feedspecs-1](https://image.roku.com/ZHZscHItMTc2/feed-specs-1-v2.jpg)
 

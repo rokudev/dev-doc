@@ -17,6 +17,138 @@ next:
 
 > [Join the Roku beta program](https://rokutestingportal.centercode.com/key/rdbp) to implement new features in the latest Roku OS before the general release.
 
+<br />
+
+## Roku OS 15.3 Beta
+
+Roku OS 15.3 is currently being shared with developer beta partners under non-disclosure agreements (NDAs). The update introduces new SceneGraph APIs that render captions on preview screens and other non-fullscreen playback and add support for node fields with Double value types. 
+
+New BrightScript APIs enable the rotation and scaling of an image around its center, let you check whether a given value is any kind of number or string, return associative array values in key order, and return roTimeSpan data as LongIntegers. 
+
+Here is the list of key developer-facing Roku OS 15.3 updates:
+
+#### SceneGraph APIs
+
+##### Video.captionRenderArea field for displaying captions in custom positions 
+
+The **Video** node includes a new **captionRenderArea** field for rendering captions in specific areas on a screen. Developers can use this function to display captions in custom positions for some preview and other non-full-screen scenarios. 
+
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        captionRenderArea
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        Renders captions in specific areas on a screen. You can use this function to display captions in custom positions for some preview and other non-full-screen scenarios.    
+
+        <table>
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Type</th>
+              <th>Description/Values</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><strong>mode</strong></td>
+              <td>string</td>
+
+              <td>
+                <p><strong>fullscreen (default):</strong> Keeps existing behavior and captions are shown only in "full screen" video playback and in the position that indicated by the content. The rest of attributes are ignored in this mode.</p>
+                <p><strong>auto:</strong> Roku OS uses current video boundaries to render captions. X, Y, Width, Height attributes will be ignored in this mode.</p>
+                <p><strong>override:</strong> Roku OS uses the area provided by X, Y, Width, Height attributes to render captions. The caption render area is not required to match height/width of captions. As captions can be a single word to multiple lines, channel can provide a much bigger area that is safe and there is no conflict with channel UI elements. In this mode the channel is responsible for any conflicts between captions and its own UI elements; Roku OS might disable smart caption adjustment to avoid interfering with the channel positioning choices.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>overridePlacement</strong></td>
+              <td>bool</td>
+
+              <td>
+                <p><strong>true (default for override mode):</strong> Caption position adjusted and shown in the "center-bottom" of the provided render boundary (either by X, Y, Width, Height attributes in override mode or video rect in auto mode) regardless of any positioning/sizing info in caption content.</p>
+                <p><strong>false (default for auto/fullscreen mode):</strong> Caption shown based on positioning/sizing information in caption content interpreted based on new render area. It is recommended when auto mode, but it could cause some unknown behavior (like caption fit, caption visibility or caption overlap with other GUI elements).</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>scaleFonts</strong></td>
+              <td>string</td>
+
+              <td>
+                <p><strong>off:</strong> Fonts will shown based on full-screen and font sizes inside caption content calculations. No any scaling to be done!</p>
+                <p><strong>by-width (default):</strong> The original calculated font size will be scaled based on renderArea width to fullScreen width ratio.</p>
+                <p><strong>by-height:</strong> The original font size will be scaled based on renderArea height to fullScreen height ratio.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>keepSafeMargins</strong></td>
+              <td>bool</td>
+
+              <td>
+                <p><strong>true (default for auto/fullscreen mode):</strong> OS preserves 10% on each side of new renderArea as non renderable. This is recommended option if "auto"/"fullscreen" mode selected.</p>
+                <p><strong>false (default for override mode):</strong> All defined area can be used for caption rendering without any safe margin observation.</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>x</strong></td>
+              <td>integer</td>
+              <td>Horizontal starting offset (left edge) of the caption custom render area (in pixels relative to the video show position in UI).</td>
+            </tr>
+
+            <tr>
+              <td><strong>y</strong></td>
+              <td>integer</td>
+              <td>Vertical starting offset (top edge) of the caption custom render area (in pixels relative to the video show position in UI).</td>
+            </tr>
+
+            <tr>
+              <td><strong>width</strong></td>
+              <td>integer</td>
+              <td>Width of the caption custom render area, in pixels. Recommended to use as big as channel UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</td>
+            </tr>
+
+            <tr>
+              <td><strong>height</strong></td>
+              <td>integer</td>
+              <td>Height of the caption custom render area, in pixels. Recommended to use as big as channel UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+<br />
+
 ## Roku OS 15.2
 
 Roku OS 15.2 enhances Roku's Perfetto-based app tracing tool, which can now visualize the BrightScript heap graph to inform developers which SceneGraph and BrightScript objects consume the most memory.
@@ -990,12 +1122,9 @@ Roku OS 7.7 focuses mainly on bug fixes and firmware optimizations to increase p
 
 * **UI changes to the RowList & ArrayGrid components** — Two new fields have been added to the [RowList](/docs/references/scenegraph/list-and-grid-nodes/rowlist.md) and [ArrayGrid](/docs/references/scenegraph/abstract-nodes/arraygrid.md) components to provide greater control over the UX:
 
-  * **RowList** — `rowCounterRightOffset`
-    Used to specify the location of the right edge of the row counter relative to right edge of the RowList's clipping rectangle.
-  * **RowList** — `showRowCounterForShortRows`
-    Determines whether the row counter is shown for all rows.
-  * **ArrayGrid** — `fadeFocusFeedbackWhenAutoScrolling`
-    Determines whether to fade the focus feedback indicator while scrolling multiple items.
+  * **RowList** — `rowCounterRightOffset` Used to specify the location of the right edge of the row counter relative to right edge of the RowList's clipping rectangle.
+  * **RowList** — `showRowCounterForShortRows` Determines whether the row counter is shown for all rows.
+  * **ArrayGrid** — `fadeFocusFeedbackWhenAutoScrolling` Determines whether to fade the focus feedback indicator while scrolling multiple items.
   * **ArrayGrid** — `currFocusFeedbackOpacity` Provides access to the current opacity of the focus feedback indicator.
 
 * **New field to play animations in reverse** — A "reverse" boolean field has been added to the [`FloatFieldInterpolator`](/docs/references/scenegraph/animation-nodes/floatfieldinterpolator.md), [`ColorFieldInterpolator`](/docs/references/scenegraph/animation-nodes/colorfieldinterpolator.md), and [`Vector2DFieldInterpolator`](/docs/references/scenegraph/animation-nodes/vector2Dfieldinterpolator.md) RSG nodes to allow for interpolated values to be computed in reverse.
@@ -1029,315 +1158,181 @@ For our consumer release notes, visit the [Roku Blog](https://blog.roku.com/roku
 
 #### SceneGraph updates
 
-- [Thread rendezvous](doc:threads#task-node-thread-rendezvous-timeout)
-  no longer timeout and will wait indefinitely.
-- New components:
+* [Thread rendezvous](doc:threads#task-node-thread-rendezvous-timeout) no longer timeout and will wait indefinitely.
+* New components:
 
-  - [TargetGroup](doc:targetgroup)
-  - [TargetList](doc:targetlist)
-  - [TargetSet](doc:targetset)
-  - [SoundEffect](doc:soundeffect) node
-- New and updated fields:
+  * [TargetGroup](doc:targetgroup)
+  * [TargetList](doc:targetlist)
+  * [TargetSet](doc:targetset)
+  * [SoundEffect](doc:soundeffect) node
+* New and updated fields:
 
-  - [\<interface\>](doc:interface):
-    added roArray, rect2D, and rect2DArray
-    types
-  - [LayoutGroup](doc:layoutgroup):
-    "custom" alignment value for horizAlignment and vertAlignment to
-    explicitly set translation values for each child layout
-  - [Poster](doc:poster) node:
-    bitmapMargins - set to an associative array containing margin
-    information for 9-patch images
-  - [Animation](doc:animation):
-    optional - set to true to skip animations on lower performing
-    devices
-  - [Functional Fields](doc:handling-application-events#HandlingApplicationEvents-FunctionalFields)
-    - procedural functions that can be called on components directly
-  - [Overhang](doc:overhang) -
-    added optionsText and optionsMaxWidth to customize the text next
-    to the options (![roku815px - (star)](images/icons/emoticons/star_yellow.png)) symbol
-  - [RowList](doc:rowlist):
-    rowTitleComponentName - specify an XML component to render text
-    in place of the row label
-  - findNode() arguments and nodeType fields are now case
-    insensitive
-  - ChannelStore node commands have been serialized to ensure that
-    one command finishes before the next begins
-  - Components in [Component Libraries](doc:componentlibrary)
-    can be extended
-  - Component Libraries can be unsigned if delivered over HTTPS
-  - New [Dialog](doc:dialog)
-    fields: titleColor, titleFont, numberedBullets, bulletText,
-    graphicWidth, graphicHeight, width, maxHeight
-  - New [ifSGNodeField](doc:ifsgnodefield) methods:
-    observeFieldScoped(), unobserveFieldScoped()
+  * [\<interface>](doc:interface): added roArray, rect2D, and rect2DArray types
+  * [LayoutGroup](doc:layoutgroup): "custom" alignment value for horizAlignment and vertAlignment to explicitly set translation values for each child layout
+  * [Poster](doc:poster) node: bitmapMargins - set to an associative array containing margin information for 9-patch images
+  * [Animation](doc:animation): optional - set to true to skip animations on lower performing devices
+  * [Functional Fields](doc:handling-application-events#HandlingApplicationEvents-FunctionalFields)
+    * procedural functions that can be called on components directly
+  * [Overhang](doc:overhang) - added optionsText and optionsMaxWidth to customize the text next to the options (![roku815px - (star)](images/icons/emoticons/star_yellow.png)) symbol
+  * [RowList](doc:rowlist): rowTitleComponentName - specify an XML component to render text in place of the row label
+  * findNode() arguments and nodeType fields are now case insensitive
+  * ChannelStore node commands have been serialized to ensure that one command finishes before the next begins
+  * Components in [Component Libraries](doc:componentlibrary) can be extended
+  * Component Libraries can be unsigned if delivered over HTTPS
+  * New [Dialog](doc:dialog) fields: titleColor, titleFont, numberedBullets, bulletText, graphicWidth, graphicHeight, width, maxHeight
+  * New [ifSGNodeField](doc:ifsgnodefield) methods: observeFieldScoped(), unobserveFieldScoped()
 
 #### BrightScript updates
 
-- New components:
-  - [roAudioGuide](doc:roaudioguide)
-    [ifAudioGuide](doc:ifaudioguide)
+* New components:
+  * [roAudioGuide](doc:roaudioguide) [ifAudioGuide](doc:ifaudioguide)
 
-- Updated components:
-  - ifChannelStore: [GetIdentity()](doc:ifchannelstore#getidentity-as-integer) -
-    returns a unique number for this object that can be used to
-    identify whether events originated from this object by comparing
-    with [roChannelStoreEvent](doc:rochannelstoreevent).GetSourceIdentity().
-  - [ifTuner](doc:iftuner#getchannelinfo-channel_id-as-string-asobject):
-    GetChannelInfo().delivery_system, source_data.network_id,
-    source_data.transport_stream_id
-  - ifAppManager: [SetAutomaticAudioGuideEnabled(enabled as Boolean)](doc:ifappmanager#setautomaticaudioguideenabledenabled-as-boolean-as-void)
-    - enable/disable automatic Audio Guide and override any manifest
-      setting
-  - Content Meta-Data - [Playback Configuration Attributes](doc:content-metadata#playback-configuration-attributes):
-    - ForwardQueryStringParams - controls whether query string
-      parameters from initial HLS stream manifest requests are
-      forwarded to subsequent segment download requests
-    - IgnoreStreamErrors - continue playback when encountering any
-      streaming related errors
-    - AdaptiveMinStartBitrate - minimum startup bitrate to start
-      streaming with a variant equal to or greater than the value
-      specified
-    - AdaptiveMaxStartBitrate - maximum startup bitrate to start
-      streaming with a variant less than or equal to the value
-      specified
-    - PlayStart - cannot be overridden by a seek operation
-    - BookmarkPosition - can be overridden by a seek operation;
-      this value takes precedence over PlayStart
-  - [roVideoPlayerEvent](doc:rovideoplayerevent):
-    - isStreamSegmentInfo.GetMessage() - supports segment
-      information for HLS, DASH, and Smooth streams
-    - isRequestFailed().GetInfo():
-      - ClipIdx - The zero starting index of the item in the
-        content list this event is related to
-      - Ignored - true if the error was ignored and the player
-        skipped to the next item in the content list
-    - isPlaybackPosition().GetInfo():
-      - ClipIdx - The zero starting index of the item in the
-        content list this event is related to
-      - ClipPos - player position relative to the start of the
-        clip in milliseconds
-  - [ifVideoPlayer](doc:ifvideoplayer):
-    - [Play()](doc:ifvideoplayer#play-as-boolean)
-      - starts playback at the seek position if seek was
-        called prior to play. If seek was not called, the player
-        advances its current position to the next item in the
-        content list and starts playing that item
-    - [Stop()](doc:ifvideoplayer#stop-as-boolean)
-      - stops playback and resets the seek position, keeping the player's current position unchanged
-    - [SetContentList()](doc:ifvideoplayer#setcontentlistcontentlist-as-object-as-void)
-      - Resets the current player position, the next time Play()
-        is called playback will start at the first item of the
-        content list (Unless Seek() is called prior); prefetching
-        updates
-  - [ifDeviceInfo](doc:ifdeviceinfo):
-    - [EnableScreensaverExitedEvent()](doc:ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic) -
-      set to true to enable events to indicate when the user has exited the screensaver
-    - [IsAudioGuideEnabled()](doc:ifdeviceinfo#isaudioguideenabled-as-dynamic)-
-      returns true if Audio Guide is enabled on a supported device
-    - [EnableAudioGuideChangedEvent()](doc:ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic)-
-      set to true to receive Audio Guide events
-  - [roDeviceInfoEvent](doc:rodeviceinfoevent):
-    - GetInfo().audioGuideEnabled
-    - GetInfo().exitedScreensaver
-  - [ifStringOps](doc:ifstringops):
-    Escape(), Unescape(), EncodeUri(), DecodeUri(),
-    EncodeUriComponent(),
-    DecodeUriComponent()
-  - [ifTextToSpeech](doc:iftexttospeech):
-    GetRate(), SetRate(), GetPitch(), SetPitch()
-  - [ifAssociativeArray](doc:ifassociativearray): Items()
-    - Returns an array containing the associative array key/value
-      pairs in lexicographical order of key. Each item is in the
-      returned array is an associative array with 'key' and 'value'
-      fields.
+* Updated components:
+  * ifChannelStore: [GetIdentity()](doc:ifchannelstore#getidentity-as-integer) - returns a unique number for this object that can be used to identify whether events originated from this object by comparing with [roChannelStoreEvent](doc:rochannelstoreevent).GetSourceIdentity().
+  * [ifTuner](doc:iftuner#getchannelinfo-channel_id-as-string-asobject): GetChannelInfo().delivery_system, source_data.network_id, source_data.transport_stream_id
+  * ifAppManager: [SetAutomaticAudioGuideEnabled(enabled as Boolean)](doc:ifappmanager#setautomaticaudioguideenabledenabled-as-boolean-as-void)
+    * enable/disable automatic Audio Guide and override any manifest setting
+  * Content Meta-Data - [Playback Configuration Attributes](doc:content-metadata#playback-configuration-attributes):
+    * ForwardQueryStringParams - controls whether query string parameters from initial HLS stream manifest requests are forwarded to subsequent segment download requests
+    * IgnoreStreamErrors - continue playback when encountering any streaming related errors
+    * AdaptiveMinStartBitrate - minimum startup bitrate to start streaming with a variant equal to or greater than the value specified
+    * AdaptiveMaxStartBitrate - maximum startup bitrate to start streaming with a variant less than or equal to the value specified
+    * PlayStart - cannot be overridden by a seek operation
+    * BookmarkPosition - can be overridden by a seek operation; this value takes precedence over PlayStart
+  * [roVideoPlayerEvent](doc:rovideoplayerevent):
+    * isStreamSegmentInfo.GetMessage() - supports segment information for HLS, DASH, and Smooth streams
+    * isRequestFailed().GetInfo():
+      * ClipIdx - The zero starting index of the item in the content list this event is related to
+      * Ignored - true if the error was ignored and the player skipped to the next item in the content list
+    * isPlaybackPosition().GetInfo():
+      * ClipIdx - The zero starting index of the item in the content list this event is related to
+      * ClipPos - player position relative to the start of the clip in milliseconds
+  * [ifVideoPlayer](doc:ifvideoplayer):
+    * [Play()](doc:ifvideoplayer#play-as-boolean)
+      * starts playback at the seek position if seek was called prior to play. If seek was not called, the player advances its current position to the next item in the content list and starts playing that item
+    * [Stop()](doc:ifvideoplayer#stop-as-boolean)
+      * stops playback and resets the seek position, keeping the player's current position unchanged
+    * [SetContentList()](doc:ifvideoplayer#setcontentlistcontentlist-as-object-as-void)
+      * Resets the current player position, the next time Play() is called playback will start at the first item of the content list (Unless Seek() is called prior); prefetching updates
+  * [ifDeviceInfo](doc:ifdeviceinfo):
+    * [EnableScreensaverExitedEvent()](doc:ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic) - set to true to enable events to indicate when the user has exited the screensaver
+    * [IsAudioGuideEnabled()](doc:ifdeviceinfo#isaudioguideenabled-as-dynamic)- returns true if Audio Guide is enabled on a supported device
+    * [EnableAudioGuideChangedEvent()](doc:ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic)- set to true to receive Audio Guide events
+  * [roDeviceInfoEvent](doc:rodeviceinfoevent):
+    * GetInfo().audioGuideEnabled
+    * GetInfo().exitedScreensaver
+  * [ifStringOps](doc:ifstringops): Escape(), Unescape(), EncodeUri(), DecodeUri(), EncodeUriComponent(), DecodeUriComponent()
+  * [ifTextToSpeech](doc:iftexttospeech): GetRate(), SetRate(), GetPitch(), SetPitch()
+  * [ifAssociativeArray](doc:ifassociativearray): Items()
+    * Returns an array containing the associative array key/value pairs in lexicographical order of key. Each item is in the returned array is an associative array with 'key' and 'value' fields.
 
 #### New [manifest](https://github.com/rokudev/docs/blob/master/develop/specifications/manifest.md) entries
 
-- automatic_audio_guide_disabled: disable Audio Guide within an app
-- usb_media_handler: auto launch apps when a USB device is inserted
-- rsg_version: change the type of [observer callback model](doc:handling-application-events#HandlingApplicationEvents-ObserverCallbackModels)
-  used
+* automatic_audio_guide_disabled: disable Audio Guide within an app
+* usb_media_handler: auto launch apps when a USB device is inserted
+* rsg_version: change the type of [observer callback model](doc:handling-application-events#HandlingApplicationEvents-ObserverCallbackModels) used
 
 #### BrightScript debugger updates
 
-- Port 8085 now provides context for all threads and port 8089-8093 will no longer be used.
-  - STOP, breaks, and continue will stop/resume all threads. Prior to 7.5, only one thread would stop/resume.
-  - See the overview on [Debugging SceneGraph applications](https://github.com/rokudev/docs/blob/master/develop/guides/debugging.md#scenegraph-applications) for more details.
-- New 8085 commands:
-  - threads: list all current executed suspended threads
-  - thread \<id\>: select a suspended thread to debug
-- New 8080 commands:
-  - loaded_textures: display the current set of images loaded into
-    texture memory
-  - sgversion: change the [observer callback model](doc:handling-application-events#HandlingApplicationEvents-ObserverCallbackModels)
+* Port 8085 now provides context for all threads and port 8089-8093 will no longer be used.
+  * STOP, breaks, and continue will stop/resume all threads. Prior to 7.5, only one thread would stop/resume.
+  * See the overview on [Debugging SceneGraph applications](https://github.com/rokudev/docs/blob/master/develop/guides/debugging.md#scenegraph-applications) for more details.
+* New 8085 commands:
+  * threads: list all current executed suspended threads
+  * thread \<id>: select a suspended thread to debug
+* New 8080 commands:
+  * loaded_textures: display the current set of images loaded into texture memory
+  * sgversion: change the [observer callback model](doc:handling-application-events#HandlingApplicationEvents-ObserverCallbackModels)
 
 #### External Control Protocol additions
 
-- [Roku TV commands](doc:external-control-api): query/tv-channels, query/tv-active-channel, launch/tvinput.dtv
-- [search commands](doc:external-control-api): query and launch Roku Search-driven content
+* [Roku TV commands](doc:external-control-api): query/tv-channels, query/tv-active-channel, launch/tvinput.dtv
+* [search commands](doc:external-control-api): query and launch Roku Search-driven content
 
 #### Media Player updates
 
-- Fast Video Start can now prebuffer from non-zero positions, allowing
-  for prebuffering of content in "Continue Watching" lists
-- Live DASH streaming support
-- The Roku MediaPlayer now automatically detects and plays a video
-  even if the file type is not specified. All major file types — HLS,
-  DASH, Smooth and MP4 — are detected
-- Video player automatically scales when changing to a different
-  stream with different aspect ratios
+* Fast Video Start can now prebuffer from non-zero positions, allowing for prebuffering of content in "Continue Watching" lists
+* Live DASH streaming support
+* The Roku MediaPlayer now automatically detects and plays a video even if the file type is not specified. All major file types — HLS, DASH, Smooth and MP4 — are detected
+* Video player automatically scales when changing to a different stream with different aspect ratios
 
 ## Roku OS 7.2
 
 **Initial rollout date:** June 21, 2016
 
-This release adds two notable features. A text to speech feature has
-been added to allow all Roku applications to provide audible spoken
-versions of the user interface. Also, an option to buffer a video stream
-without actually playing it is now included, to provide a "fast start"
-video playback capability to your applications. You can use this option
-to begin buffering the video stream while a user is reading a
-description of the video, and then start the actual playback when the
-user selects it. Roku SceneGraph also supports this new option, as well
-as built-in support for Audio and Video node playlists, improved HTTPS
-support, improved debugging, and several other new features.
+This release adds two notable features. A text to speech feature has been added to allow all Roku applications to provide audible spoken versions of the user interface. Also, an option to buffer a video stream without actually playing it is now included, to provide a "fast start" video playback capability to your applications. You can use this option to begin buffering the video stream while a user is reading a description of the video, and then start the actual playback when the user selects it. Roku SceneGraph also supports this new option, as well as built-in support for Audio and Video node playlists, improved HTTPS support, improved debugging, and several other new features.
 
 #### SceneGraph updates
 
-- A prebuffer option has been added to the control field of the Audio
-  and Video nodes to allow buffering of media playback prior to the
-  user starting the media item ([Audio](doc:audio),
-  [Video](doc:video), [Playing videos](doc:playing-videos)).
-- Screensavers can now be created in SceneGraph
-  ([Screensavers](doc:screensavers)).
-- New debugging commands are available ([Debugging SceneGraph applications](doc:debugging),
-  [ifSGNodeChildren](doc:ifsgnodechildren)).
-- The ChannelStore node class has been added for in-app purchase
-  support in SceneGraph applications
-  ([ChannelStore](doc:channelstore)).
-- The Task node has been modified ([Task](doc:task),
-  [SceneGraph Threads](doc:threads)).
-- A bufferingStatus field has been added to the Audio node
-  ([Audio](doc:audio)).
-- Timed meta-data is now supported for both Audio and Video node
-  playback ([Audio](doc:audio), [Video](doc:video)).
-- Audio and Video nodes now have built-in support for playlists that
-  can play several media items in sequence
-  ([Audio](doc:audio), [Video](doc:video)).
-- HTTPS support is now available for all SceneGraph nodes
-  ([roHttpAgent](doc:rohttpagent)).
-- A MaxVideoDecodeResolution field has been added to the Video node
-  ([Video](doc:video)).
-- New fields have been added to the Video node to allow customizing
-  the internal ProgressBar node ([Video](doc:video)).
-- New fields have been added to the Video node to allow customizing
-  the internal TrickPlayBar node ([Video](doc:video)).
-- The order of field setting of component-based lists and grids has
-  changed ([MarkupList](doc:markuplist),
-  [MarkupGrid](doc:markupgrid),
-  [RowList](doc:rowlist)).
-- Several new methods have been added to the ifSGNodeChildren
-  interface ([ifSGNodeChildren](doc:ifsgnodechildren)).
+* A prebuffer option has been added to the control field of the Audio and Video nodes to allow buffering of media playback prior to the user starting the media item ([Audio](doc:audio), [Video](doc:video), [Playing videos](doc:playing-videos)).
+* Screensavers can now be created in SceneGraph ([Screensavers](doc:screensavers)).
+* New debugging commands are available ([Debugging SceneGraph applications](doc:debugging), [ifSGNodeChildren](doc:ifsgnodechildren)).
+* The ChannelStore node class has been added for in-app purchase support in SceneGraph applications ([ChannelStore](doc:channelstore)).
+* The Task node has been modified ([Task](doc:task), [SceneGraph Threads](doc:threads)).
+* A bufferingStatus field has been added to the Audio node ([Audio](doc:audio)).
+* Timed meta-data is now supported for both Audio and Video node playback ([Audio](doc:audio), [Video](doc:video)).
+* Audio and Video nodes now have built-in support for playlists that can play several media items in sequence ([Audio](doc:audio), [Video](doc:video)).
+* HTTPS support is now available for all SceneGraph nodes ([roHttpAgent](doc:rohttpagent)).
+* A MaxVideoDecodeResolution field has been added to the Video node ([Video](doc:video)).
+* New fields have been added to the Video node to allow customizing the internal ProgressBar node ([Video](doc:video)).
+* New fields have been added to the Video node to allow customizing the internal TrickPlayBar node ([Video](doc:video)).
+* The order of field setting of component-based lists and grids has changed ([MarkupList](doc:markuplist), [MarkupGrid](doc:markupgrid), [RowList](doc:rowlist)).
+* Several new methods have been added to the ifSGNodeChildren interface ([ifSGNodeChildren](doc:ifsgnodechildren)).
 
 #### Component updates
 
-- roVideoPlayer and roVideoScreen interface Prebuffer() method
-  added to allow buffering of video playback prior to the user
-  starting the video ([ifVideoPlayer](doc:ifvideoplayer),
-  [ifVideoScreen](doc:ifvideoscreen), [Fast Video Start](doc:fast-video-start)).
-- A text-to-speech component has been added to support audible spoken
-  versions of the user interface
-  ([roTextToSpeech](doc:rotexttospeech),
-  [ifTextToSpeech](doc:iftexttospeech),
-  [roTextToSpeechEvent](doc:rotexttospeechevent), [Text to Speech](doc:text-to-speech)).
-- New methods have been added to roUniversalControlEvent that improve
-  distinguishing between remote control and keyboard key presses, and
-  the key press and release events ([roUniversalControlEvent](doc:rouniversalcontrolevent)).
+* roVideoPlayer and roVideoScreen interface Prebuffer() method added to allow buffering of video playback prior to the user starting the video ([ifVideoPlayer](doc:ifvideoplayer), [ifVideoScreen](doc:ifvideoscreen), [Fast Video Start](doc:fast-video-start)).
+* A text-to-speech component has been added to support audible spoken versions of the user interface ([roTextToSpeech](doc:rotexttospeech), [ifTextToSpeech](doc:iftexttospeech), [roTextToSpeechEvent](doc:rotexttospeechevent), [Text to Speech](doc:text-to-speech)).
+* New methods have been added to roUniversalControlEvent that improve distinguishing between remote control and keyboard key presses, and the key press and release events ([roUniversalControlEvent](doc:rouniversalcontrolevent)).
 
 #### BrightScript debugger updates
 
-- Commands to step over and out of functions have been added
-  ([Debugging Your Application](doc:debugging)).
-- Special commands to debug SceneGraph applications have been added
-  ([Debugging SceneGraph applications](doc:debugging)).
+* Commands to step over and out of functions have been added ([Debugging Your Application](doc:debugging)).
+* Special commands to debug SceneGraph applications have been added ([Debugging SceneGraph applications](doc:debugging)).
 
 ## Roku OS 7.1
 
 **Initial rollout date:** April 5, 2016
 
-The 7.1 firmware release incorporates several BrightScript and
-BrightScript component improvements. There is now support for playing
-broadcast and cable content on a Roku TV which includes a tuner.
-SceneGraph has numerous improvements to the Video node, and new
-capabilities such as passing global data between components, passing
-parameters to callback functions, localization, and downloading
-libraries of SceneGraph components.
+The 7.1 firmware release incorporates several BrightScript and BrightScript component improvements. There is now support for playing broadcast and cable content on a Roku TV which includes a tuner. SceneGraph has numerous improvements to the Video node, and new capabilities such as passing global data between components, passing parameters to callback functions, localization, and downloading libraries of SceneGraph components.
 
 #### SceneGraph updates
 
-- Libraries of SceneGraph components can now be loaded and used at the
-  start of a SceneGraph application
-  ([**ComponentLibrary**](doc:componentlibrary))
-- SceneGraph components can now be extended from other custom
-  components ([**Creating custom components**](doc:creating-custom-components)).
-- A `uri` field type has been added to better support URL resolution
-  and features like certificates and cookies ([**Content Meta-Data**](doc:content-metadata)).
-- Support for localization/internationalization string translations
-  and automatic localized graphic image insertion ([**SceneGraph Localization**](doc:localization)).
-- Automatic scaling of image files to a specified size on download,
-  with aspect ratio preserving
-  options ([**Poster**](doc:poster),
-  [**PosterGrid**](doc:postergrid)).
-- Parameters can now be passed to observer callback
-  functions ([**ifSGNodeField**](doc:ifsgnodefield)).
-- Global application data can now be more easily shared between
-  components, using an `m.global` object reference ([**SceneGraph Data Scoping**](doc:data-scoping)).
-- Support for node identity
-  comparison ([**ifSGNodeDict**](doc:ifsgnodedict)).
-- Support for dynamic additions to interface fields for all nodes,
-  allowing all node fields to be
-  observed ([**ifSGNodeField**](doc:ifsgnodefield),
-  [**Node**](doc:node)).
-- Video node class includes several new fields to configure trick play
-  and other playback features ([**Video**](doc:video)).
-- Focus indicators for list and grids can now be customized by
-  blending the indicator colors
-  ([**ArrayGrid**](doc:arraygrid)).
-- New XML markup component interfaces:
-  - onChange takes an associative array and a function
-    name (**[\<interface\>](doc:interface)**)
-  - calling functions from an associative array is now
-    supported (**[\<interface\>](doc:interface)**)
+* Libraries of SceneGraph components can now be loaded and used at the start of a SceneGraph application ([**ComponentLibrary**](doc:componentlibrary))
+* SceneGraph components can now be extended from other custom components ([**Creating custom components**](doc:creating-custom-components)).
+* A `uri` field type has been added to better support URL resolution and features like certificates and cookies ([**Content Meta-Data**](doc:content-metadata)).
+* Support for localization/internationalization string translations and automatic localized graphic image insertion ([**SceneGraph Localization**](doc:localization)).
+* Automatic scaling of image files to a specified size on download, with aspect ratio preserving options ([**Poster**](doc:poster), [**PosterGrid**](doc:postergrid)).
+* Parameters can now be passed to observer callback functions ([**ifSGNodeField**](doc:ifsgnodefield)).
+* Global application data can now be more easily shared between components, using an `m.global` object reference ([**SceneGraph Data Scoping**](doc:data-scoping)).
+* Support for node identity comparison ([**ifSGNodeDict**](doc:ifsgnodedict)).
+* Support for dynamic additions to interface fields for all nodes, allowing all node fields to be observed ([**ifSGNodeField**](doc:ifsgnodefield), [**Node**](doc:node)).
+* Video node class includes several new fields to configure trick play and other playback features ([**Video**](doc:video)).
+* Focus indicators for list and grids can now be customized by blending the indicator colors ([**ArrayGrid**](doc:arraygrid)).
+* New XML markup component interfaces:
+  * onChange takes an associative array and a function name (**[\<interface>](doc:interface)**)
+  * calling functions from an associative array is now supported (**[\<interface>](doc:interface)**)
 
 #### BrightScript language updates
 
-added increment (`++`) and decrement (`-`) operators to allow integer
-increment and decrement operations to have effect on a variable
-([**Expressions, Variables, and Types**](doc:expressions-variables-types))
+added increment (`++`) and decrement (`-`) operators to allow integer increment and decrement operations to have effect on a variable ([**Expressions, Variables, and Types**](doc:expressions-variables-types))
 
-added the following assignment operators to support mathematical and
-bitshift operations with numeric operands ([**Expressions, Variables, and Types**](doc:expressions-variables-types)):
+added the following assignment operators to support mathematical and bitshift operations with numeric operands ([**Expressions, Variables, and Types**](doc:expressions-variables-types)):
 
-- `+=`
-- `-=`
-- `*=`
-- `/=`
-- `\=`
-- `<<=`
-- `>>=`
+* `+=`
+* `-=`
+* `*=`
+* `/=`
+* `\=`
+* `<<=`
+* `>>=`
 
 ReadAsciiFile() now supports UTF-16 files ([**Global Utility Functions**](doc:global-utility-functions))
 
 #### BrightScript language fixes
 
-- Print now always explicitly prints the component type for enumerable
-  objects. Previously, it would just print the contents of enumerable
-  objects, and did not identify the container object itself, which
-  could lead to confusion ([**Program Statements**](doc:program-statements)).
-- Print and FormatJSON no longer have side effects on enumation state
-  when accessing enumerable objects (associative array, array, list,
-  and so forth) ([**Program Statements**](doc:program-statements), [**Global Utility Functions**](doc:global-utility-functions))
+* Print now always explicitly prints the component type for enumerable objects. Previously, it would just print the contents of enumerable objects, and did not identify the container object itself, which could lead to confusion ([**Program Statements**](doc:program-statements)).
+* Print and FormatJSON no longer have side effects on enumation state when accessing enumerable objects (associative array, array, list, and so forth) ([**Program Statements**](doc:program-statements), [**Global Utility Functions**](doc:global-utility-functions))
 
   Example:
 
@@ -1348,12 +1343,13 @@ ReadAsciiFile() now supports UTF-16 files ([**Global Utility Functions**](doc:gl
   end for
 ```
 
-  Previously:
+Previously:
 
 ```
   a from ' {...}
 ```
-  Now:
+
+Now:
 
 ```
   a from ' ...
@@ -1363,28 +1359,16 @@ ReadAsciiFile() now supports UTF-16 files ([**Global Utility Functions**](doc:gl
 
 #### Component changes
 
-- roTuner and associated interfaces have been added to support playing
-  broadcast and cable content from a tuner (**roTuner**)
-- roProgramGuide and associated interfaces have been added to support
-  broadcast content program guide data
-  (**[roProgramGuide](doc:roprogramguide)**)
-- roSlideShow SetLoop
-  added (**[roSlideShow](doc:roslideshow)**)
-- roTextureManager ifHttpAgent
-  added (**[roTextureManager](doc:rotexturemanager)**)
-- roUrlTransfer GetToString(), AsyncGetToString() now support UTF-16
-  files (**[roUrlTransfer](doc:rourltransfer)**)
-- roAppManager/ifAppManager SetUserSignedIn() method added to indicate
-  that a user has signed into the app
-  (**[roAppManager](doc:roappmanager)**)
-- roArray/ifArraySort Sort() method was
-  added (**[roArray](doc:roarray)**)
-- roArray/ifArraySort SortBy() method was
-  added (**[roArray](doc:roarray)**)
-- roArray/ifArraySort Reverse() method was
-  added (**[roArray](doc:roarray)**
-- roString/ifStringOps Split() method was
-  added (**[roString](doc:rostring)**)
+* roTuner and associated interfaces have been added to support playing broadcast and cable content from a tuner (**roTuner**)
+* roProgramGuide and associated interfaces have been added to support broadcast content program guide data (**[roProgramGuide](doc:roprogramguide)**)
+* roSlideShow SetLoop added (**[roSlideShow](doc:roslideshow)**)
+* roTextureManager ifHttpAgent added (**[roTextureManager](doc:rotexturemanager)**)
+* roUrlTransfer GetToString(), AsyncGetToString() now support UTF-16 files (**[roUrlTransfer](doc:rourltransfer)**)
+* roAppManager/ifAppManager SetUserSignedIn() method added to indicate that a user has signed into the app (**[roAppManager](doc:roappmanager)**)
+* roArray/ifArraySort Sort() method was added (**[roArray](doc:roarray)**)
+* roArray/ifArraySort SortBy() method was added (**[roArray](doc:roarray)**)
+* roArray/ifArraySort Reverse() method was added (**[roArray](doc:roarray)**
+* roString/ifStringOps Split() method was added (**[roString](doc:rostring)**)
 
 ## Roku OS 7.0
 
@@ -1392,55 +1376,39 @@ ReadAsciiFile() now supports UTF-16 files ([**Global Utility Functions**](doc:gl
 
 ##### SceneGraph XML API
 
-A new user interface programming API has been added. Information on this
-new API can be found in:
+A new user interface programming API has been added. Information on this new API can be found in:
 
-- [SceneGraph XML Guide](doc:overview)
-- [SceneGraph Reference](doc:core-concepts)
-- [SceneGraph XML Tutorial](doc:overview)
+* [SceneGraph XML Guide](doc:overview)
+* [SceneGraph Reference](doc:core-concepts)
+* [SceneGraph XML Tutorial](doc:overview)
 
 #### Roku Search and follow
 
-Users can now follow content from the Roku homescreen **Search** in
-addition to **My Feed**. This allows you to have users who choose to
-follow a particular search term (a movie, director, or an actor) to
-receive automatic updates when your latest content includes that term.
+Users can now follow content from the Roku homescreen **Search** in addition to **My Feed**. This allows you to have users who choose to follow a particular search term (a movie, director, or an actor) to receive automatic updates when your latest content includes that term.
 
 #### Roku 4 support
 
-Support is now included for the Roku 4 Streaming Media Player. This Roku
-Player features greatly enhanced video resolution output up to
-2160p (ultra-high definition, or UHD). This Roku Player also allows
-the creation and use of user interfaces with 1080p (full
-high-definition, or FHD) resolution. The Roku 4 Streaming Media Player
-includes a much more powerful quad core ARM processor and decoding
-support for the HEVC (high-efficiency video code) codec to allow
-efficient streaming of 2160p video content.
+Support is now included for the Roku 4 Streaming Media Player. This Roku Player features greatly enhanced video resolution output up to 2160p (ultra-high definition, or UHD). This Roku Player also allows the creation and use of user interfaces with 1080p (full high-definition, or FHD) resolution. The Roku 4 Streaming Media Player includes a much more powerful quad core ARM processor and decoding support for the HEVC (high-efficiency video code) codec to allow efficient streaming of 2160p video content.
 
 #### ECP install command
 
-An install command has been added to the ECP to allow deep-linking to
-uninstalled apps.
+An install command has been added to the ECP to allow deep-linking to uninstalled apps.
 
 #### BrightScript language
 
-- Associative array literals can now specify key names as string
-  literals (quoted strings).
-- added aa.Keys to return the keys for an associative array
-- added a 64-bit LongInteger type
+* Associative array literals can now specify key names as string literals (quoted strings).
+* added aa.Keys to return the keys for an associative array
+* added a 64-bit LongInteger type
 
 #### BrightScript components
 
 **roAssociativeArray**
 
-- added Function Keys() As Object
+* added Function Keys() As Object
 
 **roDeviceInfo**
 
-- added Functions [CanDecodeVideo()](doc:ifdeviceinfo#candecodevideovideo_format-as-object-as-object),
-  [CanDecodeAudio()](doc:ifdeviceinfo#candecodeaudioaudio_format-as-object-as-object),
-  and [GetDrmInfo()](doc:ifdeviceinfo#getdrminfo-as-object)
-  to [ifDeviceInfo](doc:ifdeviceinfo) interface.
+* added Functions [CanDecodeVideo()](doc:ifdeviceinfo#candecodevideovideo_format-as-object-as-object), [CanDecodeAudio()](doc:ifdeviceinfo#candecodeaudioaudio_format-as-object-as-object), and [GetDrmInfo()](doc:ifdeviceinfo#getdrminfo-as-object) to [ifDeviceInfo](doc:ifdeviceinfo) interface.
 
 ## Roku OS 6.2
 
@@ -1448,23 +1416,23 @@ uninstalled apps.
 
 #### Roku Advertising Framework
 
-- Added the [Roku Advertising Framework](doc:advertising) to natively integrate advertising capabilities
+* Added the [Roku Advertising Framework](doc:advertising) to natively integrate advertising capabilities
 
 #### BrightScript language
 
-- Now supports embedded quotation mark characters in string literals
+* Now supports embedded quotation mark characters in string literals
 
 #### BrightScript components
 
 ##### ifDateTime changes
 
-- Added [GetDayOfWeek()](doc:ifdatetime#getdayofweek-as-integer) as Integer
-- Added [GetTimeZoneOffset()](doc:ifdatetime#gettimezoneoffset-as-integer) as Integer
-- Added [ToISOString()](doc:ifdatetime#toisostring-as-string) as String
+* Added [GetDayOfWeek()](doc:ifdatetime#getdayofweek-as-integer) as Integer
+* Added [GetTimeZoneOffset()](doc:ifdatetime#gettimezoneoffset-as-integer) as Integer
+* Added [ToISOString()](doc:ifdatetime#toisostring-as-string) as String
 
 ##### ifDraw2D changes
 
-- Added [DrawPoint(x as Integer, y as Integer, size as Float, rgba as Integer) as Void](doc:ifdraw2d#drawpointrgba-as-integer-size-as-float-x-as-integer-y-as-integer-as-void)
+* Added [DrawPoint(x as Integer, y as Integer, size as Float, rgba as Integer) as Void](doc:ifdraw2d#drawpointrgba-as-integer-size-as-float-x-as-integer-y-as-integer-as-void)
 
 ## Roku OS 6.1
 
@@ -1472,42 +1440,40 @@ uninstalled apps.
 
 #### BrightScript language
 
-- now supports integer division operator `\`
-- now supports integer bitshift operators `<<` and `>>`
-- roAssociativeArray Count function was added
-- parameter validation diagnostics have been added to core components
-- roString Replace method was added.
-- ParseJSON bug fixes
-- FormatJSON bug fixes
-- global function FindMemberFunction was added.
-- floats are now auto-boxed for method calls
-- global function Val has a new overload for parsing from hexadecimal
-  strings etc.
-- global function StrI has a new overload for formatting hexadecimal
-  strings etc.
+* now supports integer division operator `\`
+* now supports integer bitshift operators `<<` and `>>`
+* roAssociativeArray Count function was added
+* parameter validation diagnostics have been added to core components
+* roString Replace method was added.
+* ParseJSON bug fixes
+* FormatJSON bug fixes
+* global function FindMemberFunction was added.
+* floats are now auto-boxed for method calls
+* global function Val has a new overload for parsing from hexadecimal strings etc.
+* global function StrI has a new overload for formatting hexadecimal strings etc.
 
 #### BrightScript debugger
 
-- bscs 'Summarize BrightScript Component instances' command was added
-- brkd 'Break on BrightScript diagnostics' command was added
+* bscs 'Summarize BrightScript Component instances' command was added
+* brkd 'Break on BrightScript diagnostics' command was added
 
 #### BrightScript components
 
 ##### roDeviceInfo changes
 
-- Added Function [GetModelDetails()](doc:ifdeviceinfo#getmodeldetails-as-object) As Object
-- Added Function [GetFriendlyName()](doc:ifdeviceinfo#getfriendlyname-as-string) As String
-- Added Function GetCreationTime(Void) As String
-- Added Function [GetAudioDecodeInfo()](doc:ifdeviceinfo#getaudiodecodeinfo-as-object) As Object
-- Added Function [GetVideoDecodeInfo()](doc:ifdeviceinfo#getvideodecodeinfo-as-object) As Object
-- Added Function [GetAdvertisingId()](doc:ifdeviceinfo#getadvertisingid-as-string) As String
-- Added Function [IsAdIdTrackingDisabled()](doc:ifdeviceinfo#isadidtrackingdisabled-as-boolean) As Boolean
-- Added Function GetPublisherId(Void) As String
-- Added Function [GetRandomUUID()](doc:ifdeviceinfo#getrandomuuid-as-string) As String
+* Added Function [GetModelDetails()](doc:ifdeviceinfo#getmodeldetails-as-object) As Object
+* Added Function [GetFriendlyName()](doc:ifdeviceinfo#getfriendlyname-as-string) As String
+* Added Function GetCreationTime(Void) As String
+* Added Function [GetAudioDecodeInfo()](doc:ifdeviceinfo#getaudiodecodeinfo-as-object) As Object
+* Added Function [GetVideoDecodeInfo()](doc:ifdeviceinfo#getvideodecodeinfo-as-object) As Object
+* Added Function [GetAdvertisingId()](doc:ifdeviceinfo#getadvertisingid-as-string) As String
+* Added Function [IsAdIdTrackingDisabled()](doc:ifdeviceinfo#isadidtrackingdisabled-as-boolean) As Boolean
+* Added Function GetPublisherId(Void) As String
+* Added Function [GetRandomUUID()](doc:ifdeviceinfo#getrandomuuid-as-string) As String
 
 ##### roMessageDialog changes
 
-- Added Function UpdateButton(id As Integer, title As String) As Boolean
+* Added Function UpdateButton(id As Integer, title As String) As Boolean
 
 ## Roku OS 5.4
 
@@ -1515,43 +1481,30 @@ uninstalled apps.
 
 #### New in this release
 
-- Two new content metadata structures for controlling closed captions:
-  SubtitleConfig and SubtitleTracks. Details of how to use these to
-  control captions [can be found here](doc:closed-caption).
-- Two new caption renderer functions for retrieving all caption tracks
-  in a stream and for setting the current track:
-  ifCaptionRenderer.GetSubtitleTracks() and ChangeSubtitleTrack().
-  Details about these two new functions [can be found here](doc:ifcaptionrenderer#getsubtitletracks-as-object).
-- Bug fix: On the 2450X and 2500X platforms, the
-  ifChannelStore.DoOrder() function was always returning false even if
-  the corresponding purchase was successful.
+* Two new content metadata structures for controlling closed captions: SubtitleConfig and SubtitleTracks. Details of how to use these to control captions [can be found here](doc:closed-caption).
+* Two new caption renderer functions for retrieving all caption tracks in a stream and for setting the current track: ifCaptionRenderer.GetSubtitleTracks() and ChangeSubtitleTrack(). Details about these two new functions [can be found here](doc:ifcaptionrenderer#getsubtitletracks-as-object).
+* Bug fix: On the 2450X and 2500X platforms, the ifChannelStore.DoOrder() function was always returning false even if the corresponding purchase was successful.
 
 ## Roku OS 5.3
 
 **Initial rollout date:** December 17, 2013
 
-Version 5.3 introduced user configurable closed caption settings. The
-Roku settings UI now includes controls for turning captions on or off at
-the system level. These settings control closed caption behavior for
-all apps. Closed captions on instant replay are also controlled
-from these settings.
+Version 5.3 introduced user configurable closed caption settings. The Roku settings UI now includes controls for turning captions on or off at the system level. These settings control closed caption behavior for all apps. Closed captions on instant replay are also controlled from these settings.
 
 ## Roku OS 5.2
 
 **Initial rollout date:** October 8, 2013
 
-Version 5.2 introduced a new security model for sideloading apps.
-Accessing the web interface for the device now requires a userid and
-password to log in. Please see the article here for more details:
+Version 5.2 introduced a new security model for sideloading apps. Accessing the web interface for the device now requires a userid and password to log in. Please see the article here for more details:
+
 {'<http://blog.roku.com/developer/2013/10/08/security-enhancements-added-to-channel-development>'}
 
 #### New in this release
 
-- Security enhancements to app sideloading
-- roListScreen.SetUpBehaviorAtTopRow()
-- Closed Captioning support added to roVideoPlayer,
-  roCaptionRenderer added
-- HLS ID3 events added to BrightScript
+* Security enhancements to app sideloading
+* roListScreen.SetUpBehaviorAtTopRow()
+* Closed Captioning support added to roVideoPlayer, roCaptionRenderer added
+* HLS ID3 events added to BrightScript
 
 ## Roku OS 5.1
 
@@ -1559,26 +1512,23 @@ password to log in. Please see the article here for more details:
 
 #### New in this release
 
-- In-stream 608 captions support
-- updates to roVideoScreen events
-- FLAC container support (local playback)
+* In-stream 608 captions support
+* updates to roVideoScreen events
+* FLAC container support (local playback)
 
 ## Roku OS 5.0
 
 **Initial rollout date:** June 5, 2013
 
-Version 5.0 of the Roku OS was released to all second and later
-generation devices. The home screen introduces a completely new look
-and feel for navigating my apps, the app store, and settings.
-This release does not introduce any new screens or templates to the SDK.
+Version 5.0 of the Roku OS was released to all second and later generation devices. The home screen introduces a completely new look and feel for navigating my apps, the app store, and settings. This release does not introduce any new screens or templates to the SDK.
 
 #### New in this release
 
-- Updated home screen user interface
-- Increase Brightscript function limit beyond 1024
-- Miscellaneous fixes for gaming remotes
-- Memory improvements to the OS
-- Improved ECP security
+* Updated home screen user interface
+* Increase Brightscript function limit beyond 1024
+* Miscellaneous fixes for gaming remotes
+* Memory improvements to the OS
+* Improved ECP security
 
 ## Roku OS 4.9
 
@@ -1586,43 +1536,26 @@ This release does not introduce any new screens or templates to the SDK.
 
 #### New in this release
 
-- Roku billing - in-app subscription support in BrightScript
-- SMPTE TT CC (MP4, HLS, Smooth Streaming)
-- RoTextureManager 2D component
+* Roku billing - in-app subscription support in BrightScript
+* SMPTE TT CC (MP4, HLS, Smooth Streaming)
+* RoTextureManager 2D component
 
 ## Roku OS 4.8
 
 **Initial rollout date:** July 3, 2011
 
-We've had our heads down working diligently on new firmware features and
-supporting new hardware. Hello Streaming Stick! In v4.8, we have some
-new developer SDK features to share with you. We are continuing our
-Roku OS version numbering scheme with v3.1 currently released to all
-"Classic" or "Roku1" models and major version 4.8 coming soon to all
-Roku2 models.
+We've had our heads down working diligently on new firmware features and supporting new hardware. Hello Streaming Stick! In v4.8, we have some new developer SDK features to share with you. We are continuing our Roku OS version numbering scheme with v3.1 currently released to all "Classic" or "Roku1" models and major version 4.8 coming soon to all Roku2 models.
 
-We are maturing as a company, and with that comes new legal
-requirements. In v4.8, we are asking our development community to agree
-to the development terms directly on the box before it can sideload and
-apps. As soon as your developer mode box updates to v4.8, you may
-find you are unable to sideload apps. You will need to re-enable
-developer mode by entering the following remote control sequence: 3x
-Home, 2x Up, Right, Left, Right, Left, Right. After entering "Enable
-Installer" on the secret screen, it will present you with the developer
-terms that you must read and scroll through and then click down to "I
-Agree". The box will then reboot with the sideloading installer
-enabled.
+We are maturing as a company, and with that comes new legal requirements. In v4.8, we are asking our development community to agree to the development terms directly on the box before it can sideload and apps. As soon as your developer mode box updates to v4.8, you may find you are unable to sideload apps. You will need to re-enable developer mode by entering the following remote control sequence: 3x Home, 2x Up, Right, Left, Right, Left, Right. After entering "Enable Installer" on the secret screen, it will present you with the developer terms that you must read and scroll through and then click down to "I Agree". The box will then reboot with the sideloading installer enabled.
 
 The Roku Team
 
 #### New in this release
 
-- Internationalization and Localization support. (Currently
-  localizing to en_US, fr_CA, es_ES, de_DE)
-- Smooth Streaming with PlayReady Support
-- In-app purchasing of new content, upgrades, features.
-- Native, fast [ParseJSON()](doc:global-utility-functions#parsejsonjsonstring-as-string-as-object)
-  function.
+* Internationalization and Localization support. (Currently localizing to en_US, fr_CA, es_ES, de_DE)
+* Smooth Streaming with PlayReady Support
+* In-app purchasing of new content, upgrades, features.
+* Native, fast [ParseJSON()](doc:global-utility-functions#parsejsonjsonstring-as-string-as-object) function.
 
 #### Compatibility issues
 
@@ -1632,548 +1565,245 @@ Remember to re-enable developer mode in v4.8!
 
 **Initial rollout date:** December 21, 2011
 
-With v4.1, Roku is now supporting the "Roku 2" generation of boxes.
-We've tried to keep the Roku SDK compatible across all the different
-models and have highlighted hardware and SDK differences in a new
-Section 1.4 of the Developer Guide. Our Roku OS version
-numbering requires a little explanation as major version 3 is currently
-released to all "Classic" models and major version 4 is release to all
-"Currently Selling" models. We continue to have minor releases planned
-on both of these major release branches. All features from the v3.0 beta
-have made it into the final v3.0 and 4.1.
+With v4.1, Roku is now supporting the "Roku 2" generation of boxes. We've tried to keep the Roku SDK compatible across all the different models and have highlighted hardware and SDK differences in a new Section 1.4 of the Developer Guide. Our Roku OS version numbering requires a little explanation as major version 3 is currently released to all "Classic" models and major version 4 is release to all "Currently Selling" models. We continue to have minor releases planned on both of these major release branches. All features from the v3.0 beta have made it into the final v3.0 and 4.1.
 
-We understand that we haven't exposed all the functionality the Roku 2
-platform has to offer to the entire Roku Developer Community. Roku has a
-good track record of taking security issues seriously. There are many
-such issues to work through before we can expose low level OpenGL
-interfaces in a secure manner that the content owners in our community
-are also comfortable with. We are working diligently toward that end.
+We understand that we haven't exposed all the functionality the Roku 2 platform has to offer to the entire Roku Developer Community. Roku has a good track record of taking security issues seriously. There are many such issues to work through before we can expose low level OpenGL interfaces in a secure manner that the content owners in our community are also comfortable with. We are working diligently toward that end.
 
-We appreciate all the hard work the Roku Developer Community has put
-into developing some great applications on the Roku platform. We are
-happy that the Roku 2 has been well received by the market and are
-looking forward to continued shared success with the Roku Developer
-Community and all the great new apps you can create.
+We appreciate all the hard work the Roku Developer Community has put into developing some great applications on the Roku platform. We are happy that the Roku 2 has been well received by the market and are looking forward to continued shared success with the Roku Developer Community and all the great new apps you can create.
 
 #### New in this release
 
-• Roku 2 platform support.
-• Brightscript Plugin for Eclipse
-• Updated videoPlayer sample application
-• All v3.0 beta features are now fully supported on classic models running v3.0 and Roku 2 models running v4.1:
+• Roku 2 platform support. • Brightscript Plugin for Eclipse • Updated videoPlayer sample application • All v3.0 beta features are now fully supported on classic models running v3.0 and Roku 2 models running v4.1:
 
-- BrightScript v3.0 that includes:
-  - performance improvements
-  - typed values in function parameters and returns
-  - improved auto-boxing and type promotion
-  - explicit programmer controlled garbage collection
-  - better statement stepping in source level debugger
-  - collections can include intrinsic values rather than only
-    objects
-  - 2D Graphics APIs:
-    • roScreen
-    • roBitmap
-    • roRegion
-    • roCompositor
-    • roSprite
-    • roAudioResource
-    • roFont
-    • roFontRegistry
-    • roFontMetrics
-- New Platform Components
-  - roSocketAddress
-  - roStreamSocket
-  - roDataGramSocket
-- New ECP "input" command to pass user defined input parameters to
-  your app.
+* BrightScript v3.0 that includes:
+  * performance improvements
+  * typed values in function parameters and returns
+  * improved auto-boxing and type promotion
+  * explicit programmer controlled garbage collection
+  * better statement stepping in source level debugger
+  * collections can include intrinsic values rather than only objects
+  * 2D Graphics APIs: • roScreen • roBitmap • roRegion • roCompositor • roSprite • roAudioResource • roFont • roFontRegistry • roFontMetrics
+* New Platform Components
+  * roSocketAddress
+  * roStreamSocket
+  * roDataGramSocket
+* New ECP "input" command to pass user defined input parameters to your app.
 
 #### Compatibility issues
 
-Please note that we have deprecated support for Macrovision and WMV
-video. We still have support for CGMS (Copy Guard Management System)
-protection for analog outputs and HDCP protection for digital output.
-There has been very little use of WMV video, and if anyone has content
-out there it can be converted to MP4 with several transcoding
-applications, including ffmeg (please see our encoding guide for example
-usage).
+Please note that we have deprecated support for Macrovision and WMV video. We still have support for CGMS (Copy Guard Management System) protection for analog outputs and HDCP protection for digital output. There has been very little use of WMV video, and if anyone has content out there it can be converted to MP4 with several transcoding applications, including ffmeg (please see our encoding guide for example usage).
 
 ## Roku OS 3.0
 
 **Initial rollout date:** April 18, 2011
 
-We're making the 3.0 Beta firmware available to all developers who
-request it. If your box isn't already part of the developer beta group,
-send a private developer forum message to RokuKevin. Include the serial
-number of the Roku units you would like to run the 3.0 beta on.
-It is very important that all developers regression test their
-applications on version 3.0 and note any incompatibilities. You may need
-to publish an update to your application to make it compatible with
-v3.0.
+We're making the 3.0 Beta firmware available to all developers who request it. If your box isn't already part of the developer beta group, send a private developer forum message to RokuKevin. Include the serial number of the Roku units you would like to run the 3.0 beta on. It is very important that all developers regression test their applications on version 3.0 and note any incompatibilities. You may need to publish an update to your application to make it compatible with v3.0.
 
-There are some exciting new features in the v3.0 SDK that will support
-developers building 2D games for the Roku box. We encourage all game
-developers to support both HD and SD modes. About half of the Roku's out
-there still run in SD mode. We've added screen level scaling to support
-developers using one set of graphics assets and a single game engine
-running in both HD and SD modes. Although v3.0 has not been released to
-end users yet, we are now encouraging discussion about v3.0 features on
-the developer forum.
+There are some exciting new features in the v3.0 SDK that will support developers building 2D games for the Roku box. We encourage all game developers to support both HD and SD modes. About half of the Roku's out there still run in SD mode. We've added screen level scaling to support developers using one set of graphics assets and a single game engine running in both HD and SD modes. Although v3.0 has not been released to end users yet, we are now encouraging discussion about v3.0 features on the developer forum.
 
 #### New in this release
 
-- BrightScript v3.0 that includes:
-  - performance improvements
-  - typed values in function parameters and returns
-  - improved auto-boxing and type promotion
-  - explicit programmer controlled garbage collection
-  - better statement stepping in source level debugger
-  - collections can include intrinsic values rather than only
-    objects
-  - 2D Graphics APIs:
-    - roScreen
-    - roBitmap
-    - roRegion
-    - roCompositor
-    - roSprite
-    - roAudioResource
-    - roFont
-    - roFontRegistry
-    - roFontMetrics
-- New Platform Components
-  - roSocketAddress
-  - roStreamSocket
-  - roDataGramSocket
-- New ECP "input" command to pass user defined input parameters to
-  your app.
+* BrightScript v3.0 that includes:
+  * performance improvements
+  * typed values in function parameters and returns
+  * improved auto-boxing and type promotion
+  * explicit programmer controlled garbage collection
+  * better statement stepping in source level debugger
+  * collections can include intrinsic values rather than only objects
+  * 2D Graphics APIs:
+    * roScreen
+    * roBitmap
+    * roRegion
+    * roCompositor
+    * roSprite
+    * roAudioResource
+    * roFont
+    * roFontRegistry
+    * roFontMetrics
+* New Platform Components
+  * roSocketAddress
+  * roStreamSocket
+  * roDataGramSocket
+* New ECP "input" command to pass user defined input parameters to your app.
 
-The new 2D Graphics components are considered part of the core
-BrightScript language and are documented in the BrightScript Reference.
-The new platform components are documented in the Component Reference.
-New v3.0 components have their own sections and new methods on
-previously existing components are called out with their own "Since
-v3.0" sections.
+The new 2D Graphics components are considered part of the core BrightScript language and are documented in the BrightScript Reference. The new platform components are documented in the Component Reference. New v3.0 components have their own sections and new methods on previously existing components are called out with their own "Since v3.0" sections.
 
 #### Compatibility issues
 
-BrightScript v3.0 is stricter in some ways than BrightScript v2.0. Areas
-in your app with variables that are used before initialized, or return
-statements that return a different type than specified in the function
-declaration may cause runtime errors in v.30 that may have run
-successfully in v2.0.
+BrightScript v3.0 is stricter in some ways than BrightScript v2.0. Areas in your app with variables that are used before initialized, or return statements that return a different type than specified in the function declaration may cause runtime errors in v.30 that may have run successfully in v2.0.
 
-It is very important that all developers regression test their
-applications on version 3.0 and note any incompatibilities. You may need
-to publish an update to your application to make it compatible with
-v3.0.
+It is very important that all developers regression test their applications on version 3.0 and note any incompatibilities. You may need to publish an update to your application to make it compatible with v3.0.
 
 ## Roku OS 2.9
 
 **Initial rollout date:** March 31, 2011
 
-With the release of firmware v2.9 build 1553, we are excited to share
-our latest Developer documentation. We have added several new features that
-developers can take advantage of. Many of you have already seen the new
-Premium Developer Program. With a premium developer account you can
-charge for applications in the Roku app store and Roku will handle
-the billing for you. To sign up for a premium developer account you
-simply need to provide your tax id and agree to the new terms and
-conditions. Our new v2.9 SDK helps support paid applications with the
-ability to launch the app store to purchase your application. You
-can create a free "Lite" app that includes a banner ad that up-sells to
-a premium app. When the user clicks on the ad, the "Buy" page is
-launched in the app store. There is an example of this in the
-roPosterScreen section of the component reference.
+With the release of firmware v2.9 build 1553, we are excited to share our latest Developer documentation. We have added several new features that developers can take advantage of. Many of you have already seen the new Premium Developer Program. With a premium developer account you can charge for applications in the Roku app store and Roku will handle the billing for you. To sign up for a premium developer account you simply need to provide your tax id and agree to the new terms and conditions. Our new v2.9 SDK helps support paid applications with the ability to launch the app store to purchase your application. You can create a free "Lite" app that includes a banner ad that up-sells to a premium app. When the user clicks on the ad, the "Buy" page is launched in the app store. There is an example of this in the roPosterScreen section of the component reference.
 
-Please refer to the Component Reference Section 7 for an introduction to
-the two new components in v2.9. The roAudioMetadata component gives you
-access to metadata included in many audio files. It recognizes ID3 tags
-and supports cover art. The roImageMetadata component gives you access
-to metadata in image files.
+Please refer to the Component Reference Section 7 for an introduction to the two new components in v2.9. The roAudioMetadata component gives you access to metadata included in many audio files. It recognizes ID3 tags and supports cover art. The roImageMetadata component gives you access to metadata in image files.
 
-Version 2.9 updates the grid component by letting the developer control
-the "Up" button behavior and giving developers the ability to stack grid
-screens without a lot of extraneous code.
+Version 2.9 updates the grid component by letting the developer control the "Up" button behavior and giving developers the ability to stack grid screens without a lot of extraneous code.
 
-Thanks for all you've developed so far. We're looking
-forward to all the new ones you're busy working on.
+Thanks for all you've developed so far. We're looking forward to all the new ones you're busy working on.
 
 The Roku Team
 
 #### New in this release
 
-- MKV playback on local USB devices.
-- Developer control of the Up button behavior on the top row of the
-  Grid Screen.
-- Stackable Grid Screens.
-- Streaming Store can be launched to purchase "Premium" app from
-  within "Lite" app
-- Get ID3 tags and other metadata from your audio files
-- Get EXIF and other metadata from your image files
+* MKV playback on local USB devices.
+* Developer control of the Up button behavior on the top row of the Grid Screen.
+* Stackable Grid Screens.
+* Streaming Store can be launched to purchase "Premium" app from within "Lite" app
+* Get ID3 tags and other metadata from your audio files
+* Get EXIF and other metadata from your image files
 
-New v2.9 components have their own section in the reference and new
-methods on previously existing components are called out with their own
-"Since v2.9" sections.
+New v2.9 components have their own section in the reference and new methods on previously existing components are called out with their own "Since v2.9" sections.
 
 ## Roku OS 2.8
 
 **Initial rollout date:** November 18, 2010
 
-It's been a short time since we last updated you, but we still have a
-few things worth sharing in this release of the SDK. We've added
-developer specified HLS stream switching strategies, new commands in the
-External Control API, and customizable GridScreen layouts.
+It's been a short time since we last updated you, but we still have a few things worth sharing in this release of the SDK. We've added developer specified HLS stream switching strategies, new commands in the External Control API, and customizable GridScreen layouts.
 
-We appreciate your support of the Roku platform and always welcome your
-feedback.
-The Roku Team
+We appreciate your support of the Roku platform and always welcome your feedback. The Roku Team
 
 #### New in this release
 
-- Developer controlled HLS stream switching strategies for improved
-  playback ability.
-- Multiple Grid layouts: flat-movie, flat-portrait, flat-landscape,
-  flat-square, and flat-16x9
-- Developer customized Grid Focused Border image, and Grid Descripton
-  callout box image.
-- Use .png and .gif images as Grid posters.
-- Ability to get the Roku's IPAddress within your app. This will
-  enable the External Control API to be utilized directly within your
-  app.
+* Developer controlled HLS stream switching strategies for improved playback ability.
+* Multiple Grid layouts: flat-movie, flat-portrait, flat-landscape, flat-square, and flat-16x9
+* Developer customized Grid Focused Border image, and Grid Descripton callout box image.
+* Use .png and .gif images as Grid posters.
+* Ability to get the Roku's IPAddress within your app. This will enable the External Control API to be utilized directly within your app.
 
-New v2.8 components have their own section in the reference and new
-methods on previously existing components are called out with their own
-"Since v2.8" sections.
+New v2.8 components have their own section in the reference and new methods on previously existing components are called out with their own "Since v2.8" sections.
 
 #### Compatibility issues
 
-We have maintained backward compatibility with the v2.7 SDK. Some have
-experienced video playback issues with their HLS streams. The number one
-issue was incorrect aspect ratios and resolutions. We've addressed most
-of these issues with a new v2.8 build (1158), but we have requested that
-any other HLS playback regression issues from v2.7 be posted to a sticky
-thread on our forum. We will attempt to address them all in a timely
-manner.
+We have maintained backward compatibility with the v2.7 SDK. Some have experienced video playback issues with their HLS streams. The number one issue was incorrect aspect ratios and resolutions. We've addressed most of these issues with a new v2.8 build (1158), but we have requested that any other HLS playback regression issues from v2.7 be posted to a sticky thread on our forum. We will attempt to address them all in a timely manner.
 
 ## Roku OS 2.7
 
 **Initial rollout date:** November 7, 2010
 
-This release brings several new features to the Roku SDK, as well as
-support for the additional hardware capabilities of the new Roku models.
-The new models add 1080p playback capability and a new 12 button remote
-control. The new remote control will come with the Roku XD and Roku XDS.
-The Roku HD will continue to ship a 9 button remote. However, the 12
-button remote will be available for purchase separately. The 12 button
-remote will also work on the older Roku models, providing the installed
-base access to the new button capabilities with only a remote control
-purchase. While not all users will have the 12 button remote, we are
-strongly encouraging developers to add support for the three new remote
-control buttons.
+This release brings several new features to the Roku SDK, as well as support for the additional hardware capabilities of the new Roku models. The new models add 1080p playback capability and a new 12 button remote control. The new remote control will come with the Roku XD and Roku XDS. The Roku HD will continue to ship a 9 button remote. However, the 12 button remote will be available for purchase separately. The 12 button remote will also work on the older Roku models, providing the installed base access to the new button capabilities with only a remote control purchase. While not all users will have the 12 button remote, we are strongly encouraging developers to add support for the three new remote control buttons.
 
-The "Instant Replay", is implemented entirely in the Roku OS and will
-work on all apps during video playback without any changes to
-developer apps. The "Back" button works by default on most screens,
-but needs to be enabled on dialogs if the screen close behavior is
-desired. The "Info" button is intended to provide additional contextual
-information at various points within apps. It is up to developers to
-use the new features in the roMessageDialog and support the "Info"
-button usage pattern of launching context menus and dialogs. We have
-included a simpleinfo sample app in this release that illustrates the
-info button usage.
+The "Instant Replay", is implemented entirely in the Roku OS and will work on all apps during video playback without any changes to developer apps. The "Back" button works by default on most screens, but needs to be enabled on dialogs if the screen close behavior is desired. The "Info" button is intended to provide additional contextual information at various points within apps. It is up to developers to use the new features in the roMessageDialog and support the "Info" button usage pattern of launching context menus and dialogs. We have included a simpleinfo sample app in this release that illustrates the info button usage.
 
-We are also introducing 1080p video playback support on the Roku XD and
-XDS models. Updated Information on supported encoding resolutions is
-included in the new Encoding Guide. We encourage developers to add 1080p
-streaming content at bitrates below 4.0Mbps.
+We are also introducing 1080p video playback support on the Roku XD and XDS models. Updated Information on supported encoding resolutions is included in the new Encoding Guide. We encourage developers to add 1080p streaming content at bitrates below 4.0Mbps.
 
-A much anticipated addition to the SDK is the new roGridScreen component
-which presents the user with a scrolling grid as an alternative to the
-poster screen interface. The simplegrid sample app demonstrates how to
-use this new feature.
+A much anticipated addition to the SDK is the new roGridScreen component which presents the user with a scrolling grid as an alternative to the poster screen interface. The simplegrid sample app demonstrates how to use this new feature.
 
 Below is the complete list of new features in this release.
 
-We appreciate your support of the Roku platform and welcome your
-feedback.
+We appreciate your support of the Roku platform and welcome your feedback.
 
 #### New in this release
 
-- Support for new Remote Buttons - "Back", "Instant Replay", and
-  "Info" buttons support ease of use, better trick play, and
-  contextual menus.
-- 1080p playback support - When the user sets his display to 1080p,
-  any content with meta data parameters for FullHD and a FrameRate of
-  24 or 30 will playback at 1080p 24 fps or 1080p 30 fps.
-- Grid Component - The grid screen enables users to easily navigate
-  large collections of content.
-- External Control Protocol - The ability to control the Roku over the
-  network. It's now possible to create sophisticated iPhone, Android,
-  and Blackberry apps.
-- Paragraph Screen Default Menu Item - You can now control the button
-  that is highlighted on the paragraph screen so that selection
-  dialogs work as expected.
-- Message Dialog Overlay Support - Expected to be popular when used in
-  conjunction with the "Info" button to display contextual
-  information.
-- Content Meta-Data parameters - New parameters provide more control
-  over video playback: min/max bandwidth, and audio stream selection.
-- New Documentation Guides - The External Control Guide illustrates
-  how to create remote control apps that work over the network. The
-  Encoding Guide gives useful guidelines for encoding video content
-  that is compatible with the Roku Streaming Player.
-- Simpleinfo sample application - shows how to use the roMessageDialog
-  with overlay on top of a roPosterScreen when the "Info" button is
-  pressed.
-- SimpleGrid sample application - shows how to use the roGridScreen
-  component to display many rows of items.
-- AudioApp sample application - adds an application screensaver.
+* Support for new Remote Buttons - "Back", "Instant Replay", and "Info" buttons support ease of use, better trick play, and contextual menus.
+* 1080p playback support - When the user sets his display to 1080p, any content with meta data parameters for FullHD and a FrameRate of 24 or 30 will playback at 1080p 24 fps or 1080p 30 fps.
+* Grid Component - The grid screen enables users to easily navigate large collections of content.
+* External Control Protocol - The ability to control the Roku over the network. It's now possible to create sophisticated iPhone, Android, and Blackberry apps.
+* Paragraph Screen Default Menu Item - You can now control the button that is highlighted on the paragraph screen so that selection dialogs work as expected.
+* Message Dialog Overlay Support - Expected to be popular when used in conjunction with the "Info" button to display contextual information.
+* Content Meta-Data parameters - New parameters provide more control over video playback: min/max bandwidth, and audio stream selection.
+* New Documentation Guides - The External Control Guide illustrates how to create remote control apps that work over the network. The Encoding Guide gives useful guidelines for encoding video content that is compatible with the Roku Streaming Player.
+* Simpleinfo sample application - shows how to use the roMessageDialog with overlay on top of a roPosterScreen when the "Info" button is pressed.
+* SimpleGrid sample application - shows how to use the roGridScreen component to display many rows of items.
+* AudioApp sample application - adds an application screensaver.
 
-New v2.7 components have their own section in the reference and new
-methods on v2.4 components are called out with their own "Since v2.7"
-sections.
+New v2.7 components have their own section in the reference and new methods on v2.4 components are called out with their own "Since v2.7" sections.
 
 #### Compatibility issues
 
-We have maintained backward compatibility with the v2.7 SDK. However,
-developers need to be aware of the new hardware models and update their
-apps to take advantage of the new features. If your back end
-services do any type of authentication based on model numbers, or you
-have any code that is based on model numbers you will need to update
-your code.
+We have maintained backward compatibility with the v2.7 SDK. However, developers need to be aware of the new hardware models and update their apps to take advantage of the new features. If your back end services do any type of authentication based on model numbers, or you have any code that is based on model numbers you will need to update your code.
 
-If any of your BrightScript code is enabling certain features based on
-model number, we have a new roDeviceInfo.HasFeature() method that will
-enable you to code this logic in a more forward-looking manner.If you
-don't account for the new "Back" and "Info" buttons in your code, users
-may think your app does not behave correctly.
+If any of your BrightScript code is enabling certain features based on model number, we have a new roDeviceInfo.HasFeature() method that will enable you to code this logic in a more forward-looking manner.If you don't account for the new "Back" and "Info" buttons in your code, users may think your app does not behave correctly.
 
-On most screens, the back button will automatically send an event that
-matches the isScreenClosed() predicate. However, this behavior would
-break many modal dialogs that do not expect to receive an
-isScreenClosed()event because they are waiting for a state change or
-reacting to user input that must be answered. We chose not to break
-these apps and instead did not enable the back button by default on
-the roMessageDialog component. We did provide a method to enable the
-back button on roMessageDialogs that can successfully
-handle an isScreenClosed() event. You should survey your app for any
-roMessageDialog components that should enable the back button with
-EnableBackButton(true). The "Info" button will enable you to pop-up any
-screen of your choosing. There are two new events added to support this
-new button. Events matching isButtonInfo()return the button focus of any
-on screen buttons in when the Info remote key is pressed. Events
-matching isListItemInfo()return the index of the focused poster when the
-Info remote key is pressed. The simpleinfo sample application shows
-basic support for the "Info" button that also demonstrates an overlay
-dialog on a poster screen. When isRemoteKey()events are propogated to
-your script, the event.GetIndex() for the Info key is 10.
+On most screens, the back button will automatically send an event that matches the isScreenClosed() predicate. However, this behavior would break many modal dialogs that do not expect to receive an isScreenClosed()event because they are waiting for a state change or reacting to user input that must be answered. We chose not to break these apps and instead did not enable the back button by default on the roMessageDialog component. We did provide a method to enable the back button on roMessageDialogs that can successfully handle an isScreenClosed() event. You should survey your app for any roMessageDialog components that should enable the back button with EnableBackButton(true). The "Info" button will enable you to pop-up any screen of your choosing. There are two new events added to support this new button. Events matching isButtonInfo()return the button focus of any on screen buttons in when the Info remote key is pressed. Events matching isListItemInfo()return the index of the focused poster when the Info remote key is pressed. The simpleinfo sample application shows basic support for the "Info" button that also demonstrates an overlay dialog on a poster screen. When isRemoteKey()events are propogated to your script, the event.GetIndex() for the Info key is 10.
 
 ## Roku OS 2.6
 
 **Initial rollout date:** June 28, 2010
 
-The 2.6 SDK release adds a number of new components to the Roku Platform
-SDK and introduces a new user interface for developers on the Streaming
-Store for managing your apps.
+The 2.6 SDK release adds a number of new components to the Roku Platform SDK and introduces a new user interface for developers on the Streaming Store for managing your apps.
 
-The Streaming Store Developer Site now provides support for managing
-application dependencies based on minimum required Roku OS version or
-hardware capabilities. For example, if your application requires the
-features of a specific firmware release or a hardware feature, you can
-specify this dependency and ensure your application is only published to
-the correct systems. We recommend studying the App Packaging and
-Publishing Guide for more information about the Streaming Store versioning
-support.
+The Streaming Store Developer Site now provides support for managing application dependencies based on minimum required Roku OS version or hardware capabilities. For example, if your application requires the features of a specific firmware release or a hardware feature, you can specify this dependency and ensure your application is only published to the correct systems. We recommend studying the App Packaging and Publishing Guide for more information about the Streaming Store versioning support.
 
-We have added a number of new components to the SDK and expanded the
-API's for some of our existing components. Be sure to check out the
-new roImageCanvas component, which allows much greater freedom for
-laying out custom types of screens. We've also added API's to open up
-the USB port on the Roku XR for developers, support for HTTP Live
-Streaming, plus many other new features.
+We have added a number of new components to the SDK and expanded the API's for some of our existing components. Be sure to check out the new roImageCanvas component, which allows much greater freedom for laying out custom types of screens. We've also added API's to open up the USB port on the Roku XR for developers, support for HTTP Live Streaming, plus many other new features.
 
-We hope you enjoy these new features and we're anxious to see the new
-types of applications that you develop with these capabilities. Thanks
-again for your support.
+We hope you enjoy these new features and we're anxious to see the new types of applications that you develop with these capabilities. Thanks again for your support.
 
 #### Compatibility issues
 
-The 2.6 SDK release adds additional events. Please be sure your event
-loops ignore unknown events. If your code is exiting event loops rather
-than just ignoring unknown events your application may have undefined
-behavior.
+The 2.6 SDK release adds additional events. Please be sure your event loops ignore unknown events. If your code is exiting event loops rather than just ignoring unknown events your application may have undefined behavior.
 
 Important Notes
 
-- Please review the App Packaging and Publishing guide for more
-  information about the new versioning support and how it impacts your
-  application deployments in the Streaming Store.
-- We have changed the behavior of the Home remote control key. In
-  v2.6, it now immediately kills your application and returns to the
-  home screen. If your app was previously relying on a graceful
-  application exit to do cleanup and bookkeeping, you will need to
-  modify your application. You will want to modify your app to
-  periodically update playback positions, positions in poster screens,
-  search results, etc. This should not wait until application exit, as
-  that could happen to you at any time.
+* Please review the App Packaging and Publishing guide for more information about the new versioning support and how it impacts your application deployments in the Streaming Store.
+* We have changed the behavior of the Home remote control key. In v2.6, it now immediately kills your application and returns to the home screen. If your app was previously relying on a graceful application exit to do cleanup and bookkeeping, you will need to modify your application. You will want to modify your app to periodically update playback positions, positions in poster screens, search results, etc. This should not wait until application exit, as that could happen to you at any time.
 
 #### New in this release
 
-- HTTP Live Streaming (HLS) - This is Roku's implementation of Apple's
-  adaptive bitrate streaming solution. This feature provides support
-  for both windowed, "live" and adaptive bit-rate VOD streaming
-  capabilities.
-- Image Canvas Screen - A clean slate for creating custom screens.
-  This object will allow you to place text and graphics wherever on
-  the screen you desire. You can see an example in the SDK clock
-  sample app.
-- Custom Font Support - Include your own TrueType (TTF) or Open Type
-  (OTF) fonts in your application for use on the Image Canvas.
-- CA-Cert Bundle - For applications that refer to many different
-  feeds, we've included a collection of CA-Certs that is the trusted
-  set from the Firefox browser in a common filesystem. Any application
-  can now easily trust this same set without increasing the size
-  of its package.
-- Customizable Video Player - A video player that allows you play a
-  video in a region on the screen and/or programmatically control
-  playback. When used in conjunction with Image Canvas, you can
-  combine video, images and text on a single screen.
-- USB support - For those of you that have Roku XR boxes or want to
-  develop applications that make use of USB storage. Basic support for
-  USB hotplug events and automounting of USB volumes is included in
-  v2.6. Support for a variety of USB devices and the VFAT, NTFS, HFS
-  and HFS Plus file systems.
-- File System access - You will be able to enumerate available file
-  systems and access the content stored on them.
-- SRT subtitle support - If the content you are playing has an
-  available SRT file for subtitles, enabling subtitle display will be
-  as simple as specifying a path to the SRT file.
-- ScreenSavers - Create standalone screen saver applications that can
-  run whenever the Roku Streaming Player is idle or create a custom
-  screen saver for your app.
-- Perl-Compatible Regular Expressions - String manipulation just got a
-  whole lot easier!
-- Application Logging Support - It's now easier to gather statistics
-  in your application and send them back to your own logging server.
+* HTTP Live Streaming (HLS) - This is Roku's implementation of Apple's adaptive bitrate streaming solution. This feature provides support for both windowed, "live" and adaptive bit-rate VOD streaming capabilities.
+* Image Canvas Screen - A clean slate for creating custom screens. This object will allow you to place text and graphics wherever on the screen you desire. You can see an example in the SDK clock sample app.
+* Custom Font Support - Include your own TrueType (TTF) or Open Type (OTF) fonts in your application for use on the Image Canvas.
+* CA-Cert Bundle - For applications that refer to many different feeds, we've included a collection of CA-Certs that is the trusted set from the Firefox browser in a common filesystem. Any application can now easily trust this same set without increasing the size of its package.
+* Customizable Video Player - A video player that allows you play a video in a region on the screen and/or programmatically control playback. When used in conjunction with Image Canvas, you can combine video, images and text on a single screen.
+* USB support - For those of you that have Roku XR boxes or want to develop applications that make use of USB storage. Basic support for USB hotplug events and automounting of USB volumes is included in v2.6. Support for a variety of USB devices and the VFAT, NTFS, HFS and HFS Plus file systems.
+* File System access - You will be able to enumerate available file systems and access the content stored on them.
+* SRT subtitle support - If the content you are playing has an available SRT file for subtitles, enabling subtitle display will be as simple as specifying a path to the SRT file.
+* ScreenSavers - Create standalone screen saver applications that can run whenever the Roku Streaming Player is idle or create a custom screen saver for your app.
+* Perl-Compatible Regular Expressions - String manipulation just got a whole lot easier!
+* Application Logging Support - It's now easier to gather statistics in your application and send them back to your own logging server.
 
-There are lots of other changes in this release and these are just some
-highlights that we wanted to specifically mention. Please check the
-Component Reference for additional details. New v2.6 components have
-their own section in the reference and new methods on v2.4 components
-are called out with their own "Since v2.6" sections.
+There are lots of other changes in this release and these are just some highlights that we wanted to specifically mention. Please check the Component Reference for additional details. New v2.6 components have their own section in the reference and new methods on v2.4 components are called out with their own "Since v2.6" sections.
 
 ## Roku OS 2.4
 
 **Initial rollout date:** December 17, 2009
 
-This release unites our Streaming Store development activities with the
-SDK. There are a few implications for developers during the transition
-that we'd like to highlight. Our legacy applications will not appear on
-the player until it syncs to our Streaming Store. The Streaming Store is not
-yet deployed in Production, so Netflix and Amazon will not appear on
-your player after the upgrade. These apps will eventually reappear on
-your players as the backend services are upgraded.
+This release unites our Streaming Store development activities with the SDK. There are a few implications for developers during the transition that we'd like to highlight. Our legacy applications will not appear on the player until it syncs to our Streaming Store. The Streaming Store is not yet deployed in Production, so Netflix and Amazon will not appear on your player after the upgrade. These apps will eventually reappear on your players as the backend services are upgraded.
 
-We've provided this firmware update early so that you have an
-opportunity to develop with this release before the Streaming Store beta
-is available. After you update your software build, the only features
-that will be visible on the home screen will be Settings and any
-developer application that you've installed manually. We plan to
-distribute at least one more SDK release before we get to feature
-complete for the
-launch, so we're still adding more features and fixes on your behalf. We
-think that most of these enhancements are things that will be useful to
-a wide variety of developers.
+We've provided this firmware update early so that you have an opportunity to develop with this release before the Streaming Store beta is available. After you update your software build, the only features that will be visible on the home screen will be Settings and any developer application that you've installed manually. We plan to distribute at least one more SDK release before we get to feature complete for the launch, so we're still adding more features and fixes on your behalf. We think that most of these enhancements are things that will be useful to a wide variety of developers.
 
 #### Compatibility issues
 
-There have been significant changes to our file system APIs. We've
-implemented these changes so that they are backward compatible for a
-limited time. Any deprecated API calls will be displayed in the debugger
-with a warning message. The samples applications were updated to use the
-new file specification format. Please refer to the BrightScript and
-Component Reference manuals for more information. Backward compatibility
-will be removed in the next release, so please update as soon as
-possible.
+There have been significant changes to our file system APIs. We've implemented these changes so that they are backward compatible for a limited time. Any deprecated API calls will be displayed in the debugger with a warning message. The samples applications were updated to use the new file specification format. Please refer to the BrightScript and Component Reference manuals for more information. Backward compatibility will be removed in the next release, so please update as soon as possible.
 
 #### Update instructions
 
-The Roku player will automatically update to the new version within the
-next 1-2 days.
+The Roku player will automatically update to the new version within the next 1-2 days.
 
-We hope you force your player to download the new version immediately by
-following these steps
-1) Press the HOME button on the remote control.
-2) Use the arrow keys to highlight the "settings" icon and press the
-SELECT button.
-3) Press the right arrow several times until you see "player info" and
-press SELECT.
-4) Highlight "check for update" and press SELECT.
-5) SELECT "yes".
-5) Wait for the software to download, and then SELECT "ok" to
-restart.
-Note: If you already have the new version, a message will appear letting
-you know your version is current.
+We hope you force your player to download the new version immediately by following these steps
+
+1. Press the HOME button on the remote control.
+2. Use the arrow keys to highlight the "settings" icon and press the SELECT button.
+3. Press the right arrow several times until you see "player info" and press SELECT.
+4. Highlight "check for update" and press SELECT.
+5. SELECT "yes".
+6. Wait for the software to download, and then SELECT "ok" to restart. Note: If you already have the new version, a message will appear letting you know your version is current.
 
 #### Important notes
 
-- This release includes new tools for packaging your application for
-  deployment. Included in the SDK is the ChannelPackagingAndPublishing
-  document. This document provides a step-by-step guide to the
-  packaging process. Please be sure to review this document, since it
-  will answer many questions about how applications will be deployed
-  onto the Streaming Store.
-- The Streaming Store linking screen is included in this release and
-  there are a few situations you could encounter it and get stuck. If
-  you reset your box to factory defaults or change your network
-  settings, this could occur. We don't want you to link your box
-  at this time, so we've provided the following instructions to help
-  you bypass this screen if necessary.
+* This release includes new tools for packaging your application for deployment. Included in the SDK is the ChannelPackagingAndPublishing document. This document provides a step-by-step guide to the packaging process. Please be sure to review this document, since it will answer many questions about how applications will be deployed onto the Streaming Store.
+* The Streaming Store linking screen is included in this release and there are a few situations you could encounter it and get stuck. If you reset your box to factory defaults or change your network settings, this could occur. We don't want you to link your box at this time, so we've provided the following instructions to help you bypass this screen if necessary.
 
 Display the secret screen using the following key sequence:
 
 Home 5x, FastForward 3x, Rewind 2x
 
-After pressing this key sequence, the "secret screen" will appear.
-Select the "cycle channel store server" option until the text "" is displayed and then press the "back" button to exit
-the screen.
+After pressing this key sequence, the "secret screen" will appear. Select the "cycle channel store server" option until the text "" is displayed and then press the "back" button to exit the screen.
 
-The software update options on this screen are controlled via the server
-and are not functional for developers. Just ignore these options, since
-they won't work anyway.
+The software update options on this screen are controlled via the server and are not functional for developers. Just ignore these options, since they won't work anyway.
 
 #### New in this release
 
-- Documentation: There continue to be lots of changes to the
-  documentation set, mostly to the Component Reference manual. The
-  documentation has been reformatted with section numbers to make
-  cross-referencing easier. New features have been added
-  and additional details were provided on some video playback topics.
-  The new file system changes are included as well as lots of API
-  updates. There are several new docs in the set, such as the Channel
-  Packaging and Publishing document mentioned above.
-- More Theme Attributes - We added quite a few more attributes
-  changing colors within the UI. The paragraph and registration
-  screens now support color attributes, as well as font color changes
-  to the buttons and filter banners. These still work the same way
-  as they have in the past and allow you to set an HTML Hex color
-  value to override the default color scheme.
-- Flexible Image Scaling - We've added new scaling options for artwork
-  that's used in the Poster Screen, Slide Show or Banner Ads. The new
-  options allow you to specify how you'd like odd-sized artwork scaled
-  to file the destination area.
-- Image Styles - We've added additional styles to several screens for
-  16x9 and square aspect ratio artwork. There are more changes in the
-  works in this area, which will be coming soon. Many of you have
-  different size and aspect ratio artwork and providing more types of
-  frames, plus better scaling capabilities will help to take advantage
-  of all the existing artwork out there.
-- Display Mode API - Many developers have asked how they can find out
-  the current display mode for the device. Check out the roDeviceInfo
-  component for new APIs to access info about the users display
-  settings.
+* Documentation: There continue to be lots of changes to the documentation set, mostly to the Component Reference manual. The documentation has been reformatted with section numbers to make cross-referencing easier. New features have been added and additional details were provided on some video playback topics. The new file system changes are included as well as lots of API updates. There are several new docs in the set, such as the Channel Packaging and Publishing document mentioned above.
+* More Theme Attributes - We added quite a few more attributes changing colors within the UI. The paragraph and registration screens now support color attributes, as well as font color changes to the buttons and filter banners. These still work the same way as they have in the past and allow you to set an HTML Hex color value to override the default color scheme.
+* Flexible Image Scaling - We've added new scaling options for artwork that's used in the Poster Screen, Slide Show or Banner Ads. The new options allow you to specify how you'd like odd-sized artwork scaled to file the destination area.
+* Image Styles - We've added additional styles to several screens for 16x9 and square aspect ratio artwork. There are more changes in the works in this area, which will be coming soon. Many of you have different size and aspect ratio artwork and providing more types of frames, plus better scaling capabilities will help to take advantage of all the existing artwork out there.
+* Display Mode API - Many developers have asked how they can find out the current display mode for the device. Check out the roDeviceInfo component for new APIs to access info about the users display settings.
 
-There are lots of other changes in this release and these are just some
-highlights that we wanted to specifically mention. Please check the
-documentation for additional details.
+There are lots of other changes in this release and these are just some highlights that we wanted to specifically mention. Please check the documentation for additional details.
 
 <br />

@@ -562,6 +562,32 @@ This object represents a movie.
 | advisoryRatings  | [Advisory Ratings Object](#advisoryratings-property) | Required*    | An array of parental ratings for the content.<br />*See [Kids-Directed content](#kids-directed-content) for rating requirements                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | externalIds      | [External IDs Object](#externalids-property)         | Optional     | One or more third-party metadata provider IDs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
+Movie Object Example:
+
+```
+{
+   "id":"1509428502953",
+   "title":"Sample Stream",
+   "content":{
+      "..."
+   },
+   "language":{
+      "en"
+   },
+   "thumbnail":"https://example.org/cdn/thumbnails/1509428502952/1",
+   "shortDescription":"A live description",
+   "longDescription":"A longer description of a live stream",
+   "genres":[
+      "drama",
+      "comedy",
+      "horror"
+   ],
+   "tags":[
+      "kidsdirected"
+   ]
+}
+```
+
 ### Series content type
 
 Child object of root property `series`.

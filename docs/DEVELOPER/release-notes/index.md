@@ -60,7 +60,7 @@ mynode.addField("largeDecimalNumber", "double", true)
 
 ##### roUtils predicates
 
-The roUtils component includes new isNumber(), isString(), and isFloatingPoint() functions that check whether a given value is any kind of number or string (boxed or unboxed).
+The roUtils component includes new *isNumber()*, *isString()*, and *isFloatingPoint()* functions that check whether a given value is any kind of number or string (boxed or unboxed).
 
 **Example**
 ```
@@ -75,7 +75,7 @@ utils = CreateObject("roUtils")
 
 ##### roAssociativeArray.values() function
 
-The roAssociativeArray component includes a new values() function that returns the values within the associative array in key order. 
+The roAssociativeArray component includes a new *values()* function that returns the values within the associative array in key order. 
 
 **Example**
 

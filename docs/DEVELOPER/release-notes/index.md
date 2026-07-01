@@ -96,7 +96,7 @@ The roTimeSpan node now includes the following functions that return the total m
 
 ##### roAnimatedImage functions enable rotation and scaling around an arbitrary point
 
-The roAnimatedImage interface includes new functions that enable you to rotate and scale images around its center. 
+The roAnimatedImage interface includes new functions that enable you to rotate and scale images around their center. 
 
 ###### SetPretranslation(x as Integer, y as Integer) as Void
 

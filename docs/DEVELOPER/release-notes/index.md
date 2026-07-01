@@ -62,7 +62,7 @@ mynode.addField("largeDecimalNumber", "double", true)
 
 The roUtils component includes new isNumber(), isString(), and isFloatingPoint() functions that check whether a given value is any kind of number or string (boxed or unboxed).
 
-Example
+**Example**
 ```
 utils = CreateObject("roUtils")
 ? utils.isNumber(42)               ' true

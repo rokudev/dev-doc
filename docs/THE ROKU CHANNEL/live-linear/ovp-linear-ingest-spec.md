@@ -609,11 +609,21 @@ This object represents a series, such as a season of a TV show or a mini-series.
 | credits          | [Credit Object](#credit-property)                    | Optional     | One or more credits. The cast and crew of the series.                                                                                                                                                                                                                                                                                                                                      |
 | externalIds      | [External IDs Object](#externalids-property)         | Optional     | One or more third-party metadata provider IDs.                                                                                                                                                                                                                                                                                                                                             |
 
-*Must have either `seasons` or `episodes`
+<Callout icon="🚧">
+   *Must have either `seasons` or `episodes`
+</Callout>
 
 Series Object Example (seasons):
 
-<br />
+```
+{ "id": "1509428502952", "title": "The Amazing Series with Seasons!", "seasons": [ ... ], "genres": [ "educational", "science fiction", "thriller", ], "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1", "shortDescription": "Wondrous series seasons." }
+```
+
+Series Object Example (mini-series):
+
+```
+{ "id": "1509428502952", "title": "The Amazing Series with Episodes Only!", "episodes": [ ... ], "genres": [ "fashion", "romance", "technology", ], "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1", "shortDescription": "Unbelievables series episodes." }
+```
 
 ### Season content type
 

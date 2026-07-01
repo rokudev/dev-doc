@@ -31,6 +31,23 @@ Here is the list of key developer-facing Roku OS 15.3 updates:
 
 The **Video** node includes a new **captionRenderArea** field for rendering captions in specific areas on a screen. Developers can use this function to display captions in custom positions for some preview and other non-full-screen scenarios. 
 
+<table>
+<thead>
+<tr>
+<th><strong>Field</strong></th>
+<th><strong>Type</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>captionRenderArea</td>
+<td>associative array</td>
+<td>Renders captions in specific areas on a screen. You can use this function to display captions in custom positions for some PreView and other non-full-screen scenarios.</td>
+</tr>
+</tbody>
+</table>
+
 ##### Double support for fields
 
 SceneGraph fields now support Double values.

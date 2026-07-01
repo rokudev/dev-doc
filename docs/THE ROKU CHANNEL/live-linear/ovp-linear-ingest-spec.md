@@ -1254,3 +1254,11 @@ This object represents a single person in the credits of a video content.
 | ----- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name  | string | Required | name of the person                                                                                                                                                                |
 | role  | enum   | Required | role of the person - must be one of the following values:<br />- actor<br />- anchor<br />- host<br />- narrator<br />- voice<br />- director<br />- producer<br />- screenwriter |
+
+Credit Object Example:
+
+```
+{ "name": "Douglas N. Adams", "role": "screenwriter", "birthDate": "1952-03-11" }
+```
+
+<br />

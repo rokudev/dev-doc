@@ -63,7 +63,7 @@ The roAssociativeArray component includes a new values() function that returns t
 **Example**
 
 ```
-conventions = \{"2026": "Los Angeles", "2027": "Chicago", "2028": "New York", "2029": "Miami", "2030", "Seattle" \}
+conventions = {"2026": "Los Angeles", "2027": "Chicago", "2028": "New York", "2029": "Miami", "2030", "Seattle"}
 CityLabel.Text = conventions.values().join(", ")
 for each city in conventions.values()
    ...

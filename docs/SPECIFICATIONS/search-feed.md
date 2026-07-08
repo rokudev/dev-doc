@@ -26,7 +26,7 @@ The Roku search feed includes the following key features:
 
 ### Root
 
-The root of the JSON file contains basic information such as the Roku feed specification version, the default language, default availability for different regions, and the list of content items.
+The root of the JSON file contains basic information such as the Roku feed specification version, the default language, default availability for different regions, and the list of content items. For live integrations see [Live feed specification](#live-feed-specification) below
 
 <table>
   <thead>
@@ -88,8 +88,14 @@ An asset represents a specific content item in the app's catalog. It contains al
     <tr>
       <td>type</td>
       <td>Enum</td>
-      <td>The media type of the content item: <br /><ul><li>movie: Movie or long-form film (over 15 minutes).</li><li>tvspecial: One-time TV program that is not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).</li><li>series: Set of related serialized episodes and possibly seasons. Includes TV shows and daily/weekly ongoing shows.</li><li>season: As part of a series, single set of related TV episodes.</li><li>episode: Single content item (an episode of a TV show, for example).</li><li>shortform: Standalone content that is 15 minutes or less that is not a movie or TV show (for example, movie trailers, news clips, comedy clips, food reviews, or other clips).</li><li>externalIdOnly: Validates the <strong>id</strong>, <strong>externalIdSource</strong>, and <strong>playOptions</strong> fields only. For a linear feed, validates the <strong>id</strong> and <strong>externalIdSource</strong> fields only.</li></ul><br />This value is passed into [deep links](doc:implementing-deep-linking#mediatype-behavior) that are sent to the app. The app uses the value to determine how to launch the content. For example, if the type is "movie", the app will launch it directly into playback.</td>
+      <td>The media type of the content item: <br /><ul><li>movie: Movie or long-form film (over 15 minutes).</li><li>tvspecial: One-time TV program that is not part of a series, or content that does not fit into any other mediaType category (for example, music, artists, sporting events, non-episodic news specials).</li><li>series: Set of related serialized episodes and possibly seasons. Includes TV shows and daily/weekly ongoing shows.</li><li>season: As part of a series, single set of related TV episodes.</li><li>episode: Single content item (an episode of a TV show, for example).</li><li>shortform: Standalone content that is 15 minutes or less that is not a movie or TV show (for example, movie trailers, news clips, comedy clips, food reviews, or other clips).</li><li>liveStream: a live channel. In this integration, however, the "liveStream" type specified in the feed is sent as a "livefeed" mediaType in deep link requests.</li><li>externalIdOnly: Validates the <strong>id</strong>, <strong>externalIdSource</strong>, and <strong>playOptions</strong> fields only. For a linear feed, validates the <strong>id</strong> and <strong>externalIdSource</strong> fields only.</li></ul><br />This value is passed into [deep links](doc:implementing-deep-linking#mediatype-behavior) that are sent to the app. The app uses the value to determine how to launch the content. For example, if the type is "movie", the app will launch it directly into playback.</td>
       <td>Required</td>
+    </tr>
+    <tr>
+      <td>subType</td>
+      <td>Enum</td>
+      <td>The subType of the content item: <br /><ul><li>teaser</li><li>trailer</li><li>highlight</li><li>making_of</li><li>behind_scenes</li><li>interview</li><li>related</li><li>recap</li><li>extra</li><li>short</li><li>ancillary</li></ul><br />This value is used to provide more detail on the type of shoulder content.</td>
+      <td>Optional</td>
     </tr>
     <tr>
       <td>externalIds</td>
@@ -161,7 +167,7 @@ An asset represents a specific content item in the app's catalog. It contains al
       <td>images</td>
       <td><a href="#image">Image</a>\[]</td>
       <td>A list of main poster and background images to be displayed for the content item in the Roku Search results. <br /><br />Images may have an aspect ratio of 16:9 or 2:3.<br /><br />Roku determines the dimensions and aspect ratio to be used after downloading the image.</td>
-      <td>A main 16:9 or 2:3 poster image is required.</td>
+      <td>A main 16:9 or 2:3 poster image is required. Unless the type is "episode", in which case only a background is needed</td>
     </tr>
     <tr>
       <td>content</td>
@@ -184,14 +190,32 @@ An asset represents a specific content item in the app's catalog. It contains al
     <tr>
       <td>episodeInfo</td>
       <td><a href="#episodeinfo">EpisodeInfo</a></td>
-      <td>Metadata related to a television episode. <br />The <strong>EpisodeInfo</strong> object  specifies the episode number, season number, and series ID of the episode.</td>
+      <td>Metadata related to a television episode. <br />The <strong>EpisodeInfo</strong> object specifies the episode number, season number, and series ID of the episode.</td>
       <td>Required only if the <strong>type</strong> field is "episode".</td>
     </tr>
     <tr>
       <td>seasonInfo</td>
       <td><a href="#seasoninfo">SeasonInfo</a></td>
-      <td>Metadata related to a television season. <br /><br />The <strong>SeasonInfo</strong> object  specifies the season number and series ID of the season.</td>
+      <td>Metadata related to a television season. <br /><br />The <strong>SeasonInfo</strong> object specifies the season number and series ID of the season.</td>
       <td>Required only if the <strong>type</strong> field is "season".</td>
+    </tr>
+    <tr>
+      <td>liveInfo</td>
+      <td><a href="#liveinfo">LiveInfo</a></td>
+      <td>Metadata related to live events. <br /><br />The <strong>LiveInfo</strong> object specifies the start and end time of a live event.</td>
+      <td>Required only if a PlayOption is marked as live.</td>
+    </tr>
+    <tr>
+      <td>stationInfo</td>
+      <td><a href="#stationinfo">StationInfo</a></td>
+      <td>A reference to a Gracenote Source prgSvcId for a "liveStream" schedule. <br /><br />The <strong>StationInfo</strong> object specifies the Gracenote Station Schedule identifier.</td>
+      <td>Required only if the <strong>type</strong> field is "liveStream".</td>
+    </tr>
+    <tr>
+      <td>relationships</td>
+      <td><a href="#externalid">Relationship</a>\[]</td>
+      <td>A list of related content to this program. <br /><br />Relations may reference TMS ids or REF ids (other content in your catalog)</td>
+      <td>Optional</td>
     </tr>
   </tbody>
 </table>
@@ -277,7 +301,7 @@ Provide the names and roles of cast and crew members that may receive credit for
     <tr>
       <td>role</td>
       <td>String</td>
-      <td>The role of the person: <ul><li>actor</li><li>anchor</li><li>host</li><li>narrator</li><li>voice</li><li>director</li><li>producer</li><li>screenwriter</li></ul></td>
+      <td>The role of the person: <ul><li>actor</li><li>analyst</li><li>anchor</li><li>director</li><li>guest</li><li>host</li><li>judge</li><li>narrator</li><li>producer</li><li>screenwriter</li><li>self</li><li>voice</li></ul></td>
       <td>Required</td>
     </tr>
   </tbody>
@@ -335,8 +359,20 @@ For each country supported by Roku Search, the rating authorities, ratings, and 
     <tr>
       <td>au</td>
       <td>ACB (Australian Classification Board)</td>
-      <td><ul><li>NR</li><li>E</li><li>G</li><li>PG</li><li>M</li><li>MA 15+</li><li>R 18+</li><li>X 18+</li><li>C</li><li>RC</li><li>P</li></ul></td>
+      <td><ul><li>NR</li><li>E</li><li>G</li><li>PG</li><li>M</li><li>MA 15+</li><li>R 18+</li><li>X 18+</li><li>C</li><li>NC</li><li>RC</li><li>P</li></ul></td>
       <td />
+    </tr>
+    <tr>
+      <td>at</td>
+      <td>ABMC (Austrian Board of Media Classification)</td>
+      <td><ul><li>0</li><li>6</li><li>8</li><li>10</li><li>12</li><li>14</li><li>16</li><li>18</li></ul></td>
+      <td />
+    </tr>
+    <tr>
+      <td>gb</td>
+      <td>BBFC (British Board of Film Classification)</td>
+      <td><ul><li>U</li><li>PG</li><li>12-A (also 12A)</li><li>12</li><li>15</li><li>18</li><li>R-18 (also R18)</li></ul></td>
+      <td><ul><li>Theme</li><li>Behaviour</li><li>Horror</li><li>Nudity</li><li>Discrimination</li><li>Language</li><li>Violence</li><li>Drugs</li><li>Sex</li></ul></td>
     </tr>
     <tr>
       <td>br</td>
@@ -369,12 +405,6 @@ For each country supported by Roku Search, the rating authorities, ratings, and 
       <td />
     </tr>
     <tr>
-      <td>gb</td>
-      <td>BBFC (British Board of Film Classification)</td>
-      <td><ul><li>U</li><li>PG</li><li>12-A (also 12A)</li><li>12</li><li>15</li><li>18</li><li>R18</li><li>R-1</li></ul></td>
-      <td><ul><li>Theme</li><li>Behaviour</li><li>Horror</li><li>Nudity</li><li>Discrimination</li><li>Language</li><li>Violence</li><li>Drugs</li><li>Sex</li></ul></td>
-    </tr>
-    <tr>
       <td>mx</td>
       <td>RTC (General Directorate of Radio Television and Cinematography)</td>
       <td><ul><li>AA</li><li>A</li><li>B</li><li>B-15 (also B15)</li><li>C</li><li>D</li></ul></td>
@@ -400,7 +430,7 @@ For each country supported by Roku Search, the rating authorities, ratings, and 
 Provide the poster and background images to be displayed for the content item in the Roku Search results. Provide localized images for each region in which the item is to be made available to Roku Search. The supported image formats and aspect ratios are as follows:
 
 * **format**: JPEG (.jpg file extension), GIF (.gif file extension) or PNG (.png file extension)
-* **aspect ratio**: 16:9 or 2:3 required.
+* **aspect ratio**: 16:9 or 2:3 required, but 4:3, 3:4, 1:1 are also supported
 * **maximum resolution**: 1920 X 1080
 
 <table>
@@ -416,7 +446,7 @@ Provide the poster and background images to be displayed for the content item in
     <tr>
       <td>type</td>
       <td>Enum</td>
-      <td>The image type: <ul><li>main: A poster image with title treatment. The aspect ratio of the poster may be 16:9 or 2:3.</li><li>background: A textless image displayed in the background. The aspect ratio of the background image may be 16:9 or 2:3.</li></ul></td>
+      <td>The image type: <ul><li>main: A poster image with title treatment. The aspect ratio of the poster may be 16:9 or 2:3. Can also be sent as "poster"</li><li>background: A textless image displayed in the background. The aspect ratio of the background image may be 16:9 or 2:3.</li><li>logo</li></ul></td>
       <td>Required</td>
     </tr>
     <tr>
@@ -438,84 +468,28 @@ Provide the poster and background images to be displayed for the content item in
 
 | Field       | Type           | Description                                       | Required |
 | :---------- | :------------- | :------------------------------------------------ | :------- |
-| playOptions | [PlayOption](#playoption) | The list of options for playing the content item. | Required |
+| playOptions | [PlayOption](#playoptions) | The list of options for playing the content item. | Required |
 
 #### playOptions
 
 In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](doc:implementing-deep-linking) into content from Roku Search) for the content item.
 
-<table>
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>license</td>
-      <td>Enum</td>
-      <td>The type of licensing terms for the content: <ul><li>free: Content is directly playable upon being deep linked.</li><li>subscription: Content is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the app typically displays a subscription sign-up page when receiving deep links into content that is behind a paywall.</li><li>rental</li><li>purchase</li></ul></td>
-      <td>Required</td>
-    </tr>
-    <tr>
-      <td>price</td>
-      <td>Float</td>
-      <td>The price of the content in decimal format (for example, 1.90, 1.99, or 2.00).<br /><br />If the price is 0.00, set the <strong>license</strong> field to "subscription" or "free" instead of setting this field. This automatically sets the <strong>price</strong> field to 0.00 by default.</td>
-      <td>Required, if the <strong>license</strong> field is set to "purchase" or "rental".</td>
-    </tr>
-    <tr>
-      <td>quality</td>
-      <td>Enum</td>
-      <td>The playback resolution of the content item: <ul><li>sd</li><li>hd</li><li>hd+</li><li>fhd</li><li>uhd</li></ul></td>
-      <td>Required</td>
-    </tr>
-    <tr>
-      <td>currency</td>
-      <td>String</td>
-      <td>The <a href="https://www.iso.org/iso-4217-currency-codes.html#:~:text=The%20first%20two%20letters%20of,and%20the%20D%20for%20dollar">ISO 4217 three-letter currency code</a> for the value specified in the <strong>price</strong> field: <ul><li>usd (or USD) (default)</li><li>gbp (or GBP)</li><li>cad (or CAD)</li><li>eur (or EUR)</li></ul></td>
-      <td>Required, if the <strong>license</strong> field is set to "purchase" or "rental".</td>
-    </tr>
-    <tr>
-      <td>playId</td>
-      <td>String</td>
-      <td>A unique, immutable ID for the content item. When customers search for this content item and select your app to watch it, the <strong>playId</strong> is passed in a [deep link](doc:implementing-deep-linking) back to your app.<br /><br />The <strong>playId</strong> must map to the <strong>contentid</strong> in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed.</td>
-      <td>Required</td>
-    </tr>
-    <tr>
-      <td>availabilityStartTimeStamp</td>
-      <td>Number</td>
-      <td>The time (in epoch milliseconds) when the content item is to be made available to Roku Search.</td>
-      <td>Optional <br /><br />If you are not providing an availability start time, omit this field from your search feed.</td>
-    </tr>
-    <tr>
-      <td>availabilityEndTimeStamp</td>
-      <td>Number</td>
-      <td>The time (in epoch milliseconds) when the content item is to stop being made available to Roku Search.</td>
-      <td>Optional<br /><br />If you are not providing an availability end time or if the content is available indefinitely, omit this field from your search feed.</td>
-    </tr>
-    <tr>
-      <td>availabilityStartTime</td>
-      <td>String</td>
-      <td>The time (as an ISO timestamp) when the content item is to be made available to Roku Search.</td>
-      <td>Optional <br /><br />If you are not providing an availability start time, omit this field from your search feed.</td>
-    </tr>
-    <tr>
-      <td>availabilityEndTime</td>
-      <td>String</td>
-      <td>The time (as an ISO timestamp) when the content item is to stop being made available to Roku Search.</td>
-      <td>Optional<br /><br />If you are not providing an availability end time or if the content is available indefinitely, omit this field from your search feed.</td>
-    </tr>
-    <tr>
-      <td>availabilityInfo</td>
-      <td>Map\<Enum, String\[]></td>
-      <td>The list of <a href="https://www.iso.org/obp/ui/#search/code/">ISO Alpha-2 two-letter country codes</a> in which the content item is to be made available to Roku Search.</td>
-      <td>Required, if the <strong>defaultAvailabilityCountries</strong> field is not specified.</td>
-    </tr>
-  </tbody>
-</table>
+| Field        | Type   | Description                               | Required |
+| :----------- | :----- | :---------------------------------------- | :------- |
+| license      | Enum   | The type of licensing terms for the content: <ul><li>free: Content is directly playable upon being deep linked.</li><li>subscription: Content is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the app typically displays a subscription sign-up page when receiving deep links into content that is behind a paywall.</li><li>rental</li><li>purchase</li></ul> | Required |
+| price        | Float  | The price of the content in decimal format (for example, 1.90, 1.99, or 2.00).<br /><br />If the price is 0.00, set the **license** field to "subscription" or "free" instead of setting this field. This automatically sets the **price** field to 0.00 by default. | Required, if the **license** field is set to "purchase" or "rental". |
+| quality      | Enum   | The playback resolution of the content item: <ul><li>sd</li><li>hd</li><li>hd+</li><li>fhd</li><li>uhd</li></ul> | Required |
+| currency     | String | The [ISO 4217 three-letter currency code](https://www.iso.org/iso-4217-currency-codes.html) for the value specified in the **price** field: <ul><li>usd (or USD) (default)</li><li>gbp (or GBP)</li><li>cad (or CAD)</li><li>eur (or EUR)</li></ul> | Required, if the **license** field is set to "purchase" or "rental". |
+| playId       | String | A unique, immutable ID for the content item. When customers search for this content item and select your app to watch it, the **playId** is passed in a [deep link](doc:implementing-deep-linking) back to your app.<br /><br />The **playId** must map to the **contentid** in your app for the same content. It is therefore important to keep the Roku Search feed synchronized with the app's content feed. | Required |
+| availabilityStartTimeStamp | Number | The time (in epoch milliseconds) when the content item is to be made available to Roku Search. | Optional <br /><br />If you are not providing an availability start time, omit this field from your search feed. |
+| availabilityEndTimeStamp | Number | The time (in epoch milliseconds) when the content item is to stop being made available to Roku Search. | Optional<br /><br />If you are not providing an availability end time or if the content is available indefinitely, omit this field from your search feed. |
+| availabilityStartTime | String | The time (as an ISO timestamp) when the content item is to be made available to Roku Search. | Optional <br /><br />If you are not providing an availability start time, omit this field from your search feed. |
+| availabilityEndTime | String | The time (as an ISO timestamp) when the content item is to stop being made available to Roku Search. | Optional<br /><br />If you are not providing an availability end time or if the content is available indefinitely, omit this field from your search feed. |
+| live         | boolean | Used to indicate the watch option is live content. This is a short hand for "discreteLiveEvent", if set, the values in the "liveInfo" will be used. | Optional |
+| discreteLiveEvent | [LiveEvent](#liveevent) | The timing in which the watch option is "live" may be different than [LiveInfo](#liveinfo) in case of pre and postgame shows | Optional |
+| promotionalStartTime | String | The time (as an ISO timestamp) when the content item might be promoted as coming soon to Roku Search. | Optional |
+| promotionalEndTime | String | The time (as an ISO timestamp) when the content item is no longer promoted. The default is the availability start | Optional |
+| availabilityInfo | [AvailabilityInfo](#availabilityinfo) | May include following: <ul><li>country: list of [ISO Alpha-2 two-letter country codes](https://www.iso.org/obp/ui/#search/code/) in which the content item is to be made available to Roku Search.</li><li>restriction: any restrictions of where the content may be shown</li></ul> | Required, if the **defaultAvailabilityCountries** field is not specified. |
 
 ### SeasonInfo
 
@@ -536,36 +510,147 @@ If the **asset.type** field is set to "episode" for a content item, provide meta
 | seasonNumber  | Number | The season number in which the episode occurs.             | Optional |
 | episodeNumber | Number | The number used to identify the episode within the season. | Required |
 
+### LiveInfo
+
+If the program is a "live" event this field indicates when the actual event is occuring.
+
+| Field         | Type   | Description                                                | Required |
+| :------------ | :----- | :--------------------------------------------------------- | :------- |
+| startTimeStamp| Number | Start time in milliseconds of the live event               | Required |
+| endTimeStamp  | Number | End time in milliseconds of the live event                 | Required |
+
+### LiveEvent
+
+If the playOption is "live" event this field indicates when the stream should go live.
+
+| Field         | Type   | Description                                                | Required |
+| :------------ | :----- | :--------------------------------------------------------- | :------- |
+| streamStart   | Number | Start time in milliseconds of the live stream              | Required |
+| eventStart    | Number | Start time in milliseconds of the event                    | Required |
+| eventEnd      | Number | End time in milliseconds of the event                      | Required |
+| streamEnd     | Number | End time in milliseconds of the live stream                | Required |
+
+### StationInfo
+
+If the **asset.type** field is set to "liveStream" for a content item, provide metadata about the channel. The Gracenote tech ID (prgSvcId) for the live channel to be made discoverable through the Roku Search customer experience.
+
+| Field         | Type   | Description                                                | Required |
+| :------------ | :----- | :--------------------------------------------------------- | :------- |
+| stationId     | String | The Gracenote prgSvcId of the Source station               | Required |
+| callSign      | String | Optional callsign information                              | Optional |
+| dma           | Number | Optional dma information                                   | Optional |
+
 ### ExternalId
 
 Provide a list of IDs and sources to be used for linking external metadata to the content item.
 
-<table>
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>String</td>
-      <td>The third-party metadata provider ID that uniquely identifies the content item. <br /><br />For Gracenote/TMS, the ID is a 14-character string (for example, MV123456780000). The first 2 characters in the ID represent the unique ID domain applied to the program record: <ul><li>MV: Movie (theatrical, made-for-television, direct-to-video).</li><li>EP: Television episode.</li><li>SH: Television show</li></ul></td>
-      <td>Required</td>
-    </tr>
-    <tr>
-      <td>source</td>
-      <td>String</td>
-      <td>The source of the specified external ID. This must be one of the following values: <ul><li>TMS</li></ul></td>
-      <td>Required</td>
-    </tr>
-  </tbody>
-</table>
+| Field         | Type   | Description                                                | Required |
+| :------------ | :----- | :--------------------------------------------------------- | :------- |
+| id            | String | The third-party metadata provider ID that uniquely identifies the content item. <br /><br />For Gracenote/TMS, the ID is a 14-character string (for example, MV123456780000). The first 2 characters in the ID represent the unique ID domain applied to the program record: <ul><li>MV: Movie (theatrical, made-for-television, direct-to-video).</li><li>EP: Television episode.</li><li>SH: Television show | Required |
+| source        | String | The source of the specified external ID. This must be one of the following values: <ul><li>TMS</li><li>GSD</li><li>IMDB</li><li>REF</li><li>ROKU</li></ul> | Required |
+| providerId    | String | Extra identifier for Referencing content outside of a partners catalog. Primarily for "REF" type, however, the default is the partner's own catalog | Optional |
 
-<br />
+#### AvailabilityInfo
+
+| Field        | Type   | Description                               | Required |
+| :----------- | :----- | :---------------------------------------- | :------- |
+| country      | String[] | countries where playOption available    | Required |
+| restriction  | [Restriction](#restriction)[] | any restriction information | |
+
+#### Restriction
+| Field        | Type    | Description                              | Required |
+| :----------- | :----- | :---------------------------------------- | :------- |
+| allow        | boolean | true for allowlist, false for blocklist  | Required |
+| type         | [RestrictionType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionType) | geo | Required |
+| valueType    | [RestrictionValueType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionValueType) | type of the values (postal_code or dma) | Required |
+| values       | String[]| values for the valueType                 | Required |
+
+### Managing a feed that includes VOD content
+
+You can maintain a single feed that includes both Livestream and VOD content. To add VOD content to your feed, follow the [Roku Search feed specification](https://developer.roku.com/docs/specs/search/search-feed.md). In addition, make sure that your combined feed includes a **defaultAvailabiliityPlatforms** field and that it accurately specifies in which countries content is available (using the **root.defaultAvailabilityCountries** and **asset.availabilityInfo** fields).
+
+The following example demonstrates a feed that includes both Live and VOD content:
+
+```json
+{
+ "version": "1",
+ "defaultLanguage": "en",
+ "defaultAvailabilityCountries": [
+  "us", "mx"
+ ],
+ "defaultAvailabilityPlatforms": [
+  "all"
+ ],
+ "assets": [{
+  "id": "shortform-voice-control",
+  "type": "shortForm",
+  "titles": [{
+   "value": "Voice Features",
+   "language": "en"
+  }],
+  "shortDescriptions": [{
+   "value": "A video highlighting Direct to Play and Enhanced Voice Control features",
+   "language": "en"
+  }],
+  "releaseDate": "2020-01-17",
+  "genres": [
+   "educational"
+  ],
+  "advisoryRatings": [{
+   "source": "USA_PR",
+   "value": "TVG"
+   },
+   {
+   "source": "RTC",
+   "value": "A"
+   }
+  ],
+  "images": [{
+   "type": "main",
+   "url": "https://image.roku.com/ZHZscHItMTc2/roku-dev-search.png",
+   "languages": [
+   "en",
+   "es"
+   ]
+  }],
+  "durationInSeconds": 98,
+  "content": {
+   "playOptions": [{
+   "license": "free",
+   "quality": "UHD",
+   "playId": "shortform-voice-control",
+   "availabilityStartTimeStamp": 1565085600000,
+   "availabilityEndTimeStamp": 1593597600000,
+   "availabilityInfo": {
+    "country": [
+    "us",
+    "mx"
+    ]
+   }
+   }]
+  }
+  },
+  {
+  "id": "liveshow",
+  "type": "liveStream",
+  "content": {
+   "playOptions": [{
+   "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
+   "license": "free",
+   "quality": "HD"
+   }]
+  },
+  "externalIds": [{
+   "source": "GRACENOTE_STATION_ID",
+   "id": "ABCDE"
+  }],
+  "tags": [
+   "partner_channel"
+  ]
+  }
+ ]
+}
+```
 
 ## Live feed specification
 
@@ -574,157 +659,6 @@ Apps in the U.S. Streaming Store with 24/7 live linear streams can participate i
 Your search feed may only include channels directly distributed by your app. Do not include channels offered through third-party channel subscriptions (subscriptions or add-ons that require a separate publisher account).
 
 > The live liner integration requires Gracenote Station IDs. Individual live events or channels without Gracenote Station IDs are currently not supported. Roku uses Gracenote EPG and GSD data (schedule of event IDs). Publishers are responsiiblwe for contacting Gracenote to get their Station IDs.
-
-### Specifications
-
-#### Root
-
-The root of the JSON file contains basic information such as the feed specification version, the default language, default availability for different regions, and the list of live channels.
-
-| **Field**                    | **Type**                                                                                                    | **Description**                                                                                                                                                    | **Required/Optional**                                                       |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| version                      | String                                                                                                      | Roku JSON feed version (use "1").                                                                                                                                  | Required                                                                    |
-| defaultLanguage              | String                                                                                                      | The [ISO 639-1 two-letter language code](https://www.loc.gov/standards/iso639-2/php/code_list.php) to be used when the language is not specified for an asset.     | Required (if you do not provide the language for each asset).               |
-| defaultAvailabilityCountries | String[]                                                                                                    | The list of [ISO Alpha-2 two-letter country codes](https://www.iso.org/obp/ui/#search) to be used when **availabilityInfo.country** is not specified for an asset. | Required (if you do not provide the availability countries for each asset). |
-| assets                       | [Asset](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Asset)[] | The list of live channels in the distributor's service to be surfaced in Roku's Search.                                                                            | Required                                                                    |
-
-#### Asset
-
-An asset represents a specific live channel in the distributor's service. It contains all the metadata for displaying the live channel in the Roku Search UI and directly launching the channel via deeplinking when selected.
-
-| **Field**   | **Type**                                                                                                              | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | **Required/Optional** |
-| ----------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| id          | String                                                                                                                | A maximum 50-character immutable unique ID for the live channel. This ID is used by the distributor for reference.Once an ID is created for a channel, it may not be changed. The id must be unique within the feed. If the feed contains duplicate IDs, only one of the items with the duplicated ID is preserved.                                                                                                                                                                                                                                                                     | Required              |
-| type        | Enum                                                                                                                  | The media type of the live channel, which is **liveStream**. Channels use the type to determine how to launch content.Typically, the type specified in the search feed is directly passed into deep link requests to channels. In this integration, however, the "liveStream" type specified in the feed is sent as a "livefeed" mediaType in deep link requests. Channels participating in Roku's Live Search Feed must therefore launch the channel specified in the **playId** field directly into playback upon receiving a deep link request with the mediaType set to "livefeed". | Required              |
-| externalIds | [ExternalId](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#ExternalId)[] | The list of Gracenote tech IDs (prgSvcID) for the live channels to be discoverable through the Roku Search customer experience.   Roku uses Gracenote stationIDs to obtain EPG and GSD data. Partners need to contact Gracenote directly to obtain stationIDs for their livelinear channels.                                                                                                                                                                                                                                                                                            | Required              |
-| content     | [Content](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Content)         | Contains options for playing the live channel. The Content object includes a **playOptions** field that specifies the availability, pricing, licensing, quality, and playId (for deep linking into content from Roku Search) for the live channel.                                                                                                                                                                                                                                                                                                                                      | Required              |
-| tags        | String[]                                                                                                              | A list of one or more distributor-specific strings for categorizing the channel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Optional              |
-
-#### ExternalId
-
-The Gracenote tech ID (prgSvcId) for the live channel to be made discoverable through the Roku Search customer experience.
-
-| **Field**   | **Type** | **Description**                                                                                                                                    | **Required** |
-| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| id          | String   | The prgSvcId for the channel.                                                                                                                      | Required     |
-| channelName | String   | A human-readable channel name associated with the channel specified in the **externalId.id** field. This helps Roku debug your Search integration. | Required     |
-| source      | String   | The source of the ID, which must be set to the following value: **GRACENOTE_STATION_ID**                                                           | Required     |
-
-#### Content
-
-| **Field**   | **Type**                                                                                                              | **Description**                                   | **Required** |
-| ----------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------ |
-| playOptions | [PlayOption](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#PlayOption)[] | The list of options for playing the live channel. | Required     |
-
-#### PlayOption
-
-In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](https://developer.roku.com/docs/developer/discovery/implementing-deep-linking.md) into content from Roku Search) for the live channel.
-
-<Table>
-  <thead>
-    <tr>
-      <th>
-        **Field**
-      </th>
-      <th>
-        **Type**
-      </th>
-      <th>
-        **Description**
-      </th>
-      <th>
-        **Required**
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        license
-      </td>
-      <td>
-        Enum
-      </td>
-      <td>
-        The type of licensing terms for the channel.
-        <br /><br />
-        <ul>
-          <li><strong>free</strong>: Channel is directly playable upon being deep linked.</li>
-          <li><strong>subscription</strong>: Channel is only playable upon being deep linked if the customer has a subscription. For customers that do not have a subscription, the channel typically displays a subscription sign-up page when receiving deep links into channels that are behind a paywall. This integration does not consider whether a channel is part of a basic or premium package. Channels that are only accessible via a premium package should be considered as "subscription".</li>
-        </ul>
-      </td>
-      <td>
-        Required
-      </td>
-    </tr>
-    <tr>
-      <td>
-        quality
-      </td>
-      <td>
-        Enum
-      </td>
-      <td>
-        The playback resolution of the live channel:
-        <br /><br />
-        <ul>
-          <li>SD</li>
-          <li>HD</li>
-          <li>HD+</li>
-          <li>FHD</li>
-          <li>UHD</li>
-        </ul>
-      </td>
-      <td>
-        Required
-      </td>
-    </tr>
-    <tr>
-      <td>
-        playId
-      </td>
-      <td>
-        String
-      </td>
-      <td>
-        A unique, immutable ID for the live channel that is used for deep linking. When customers search for this content item and select your channel to watch it, the **playId** is passed in a [deep link](https://developer.roku.com/docs/developer/discovery/implementing-deep-linking.md#mediatype-behavior) back to your channel. The playId may not be a URL. If you require this ID to be a URL please talk to your partner manager.
-      </td>
-      <td>
-        Required
-      </td>
-    </tr>
-    <tr>
-      <td>
-        availabilityInfo
-      </td>
-      <td>
-        [AvailabilityInfo](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#AvailabilityInfo)
-      </td>
-      <td>
-        May include following: countryrestriction
-      </td>
-      <td>
-        Required if defaults are not specified.
-      </td>
-    </tr>
-  </tbody>
-</Table>
-
-#### AvailabilityInfo
-
-| **Field**   | **Type**                                                                                                                | **Description**                      | **Required** |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| country     | String[]                                                                                                                | countries where playOption available | Required     |
-| restriction | [Restriction](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Restriction)[] | any restriction information          |              |
-
-#### Restriction
-
-| **Field** | **Type**                                                                                                                                | **Description**                         | **Required** |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
-| allow     | boolean                                                                                                                                 | true for allowlist, false for blocklist |              |
-| type      | [RestrictionType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionType)           | geo                                     | Required     |
-| valueType | [RestrictionValueType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionValueType) | type of the values (postal_code or dma) |              |
-| values    | String[]                                                                                                                                |                                         |              |
 
 ### Live stream sample feed
 
@@ -827,93 +761,6 @@ The following example demonstrates the proper implementation of the various feed
    "tags": [
     "regional_partner_channel"
    ]
-  }
- ]
-}
-```
-
-### Managing a feed that includes VOD content
-
-You can maintain a single feed that includes both Livestream and VOD content. To add VOD content to your feed, follow the [Roku Search feed specification](https://developer.roku.com/docs/specs/search/search-feed.md). In addition, make sure that your combined feed includes a **defaultAvailabiliityPlatforms** field and that it accurately specifies in which countries content is available (using the **root.defaultAvailabilityCountries** and **asset.availabilityInfo** fields).
-
-The following example demonstrates a feed that includes both Live and VOD content:
-
-```json
-{
- "version": "1",
- "defaultLanguage": "en",
- "defaultAvailabilityCountries": [
-  "us", "mx"
- ],
- "defaultAvailabilityPlatforms": [
-  "all"
- ],
- "assets": [{
-  "id": "shortform-voice-control",
-  "type": "shortForm",
-  "titles": [{
-   "value": "Voice Features",
-   "language": "en"
-  }],
-  "shortDescriptions": [{
-   "value": "A video highlighting Direct to Play and Enhanced Voice Control features",
-   "language": "en"
-  }],
-  "releaseDate": "2020-01-17",
-  "genres": [
-   "educational"
-  ],
-  "advisoryRatings": [{
-   "source": "USA_PR",
-   "value": "TVG"
-   },
-   {
-   "source": "RTC",
-   "value": "A"
-   }
-  ],
-  "images": [{
-   "type": "main",
-   "url": "https://image.roku.com/ZHZscHItMTc2/roku-dev-search.png",
-   "languages": [
-   "en",
-   "es"
-   ]
-  }],
-  "durationInSeconds": 98,
-  "content": {
-   "playOptions": [{
-   "license": "free",
-   "quality": "UHD",
-   "playId": "shortform-voice-control",
-   "availabilityStartTimeStamp": 1565085600000,
-   "availabilityEndTimeStamp": 1593597600000,
-   "availabilityInfo": {
-    "country": [
-    "us",
-    "mx"
-    ]
-   }
-   }]
-  }
-  },
-  {
-  "id": "liveshow",
-  "type": "liveStream",
-  "content": {
-   "playOptions": [{
-   "playId": "[https://rokudevelopers.com%3Fchannel_id%3D111111](https://rokudevelopers.com%3Fchannel_id=111111/)",
-   "license": "free",
-   "quality": "HD"
-   }]
-  },
-  "externalIds": [{
-   "source": "GRACENOTE_STATION_ID",
-   "id": "ABCDE"
-  }],
-  "tags": [
-   "partner_channel"
-  ]
   }
  ]
 }

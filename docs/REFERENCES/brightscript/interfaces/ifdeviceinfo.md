@@ -1314,32 +1314,6 @@ An associative array with the following key-value pairs describing the current U
   </tbody>
 </table>
 
-<br />
-
-An associative array containing the following key/value pairs:
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Key</strong></th>
-      <th><strong>Type</strong></th>
-      <th><strong>Value</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>full\_rotation</td>
-      <td>boolean</td>
-      <td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
-    </tr>
-    <tr>
-      <td>astc\_supported</td>
-      <td>boolean</td>
-      <td><ul><li>true: The device supports <a href="https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression">Adaptive Scalable Texture Compression(ASTC)</a> compressed textures and can load <a href="https://github.com/ARM-software/astc-encoder/blob/main/Docs/FileFormat.md">.astc</a> image files.</li><li>false: The device does not support ASTC.</li></ul></td>
-    </tr>
-  </tbody>
-</table>
-
 ### GetGraphicsPlatform() as String
 
 #### Description

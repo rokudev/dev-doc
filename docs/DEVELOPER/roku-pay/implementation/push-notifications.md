@@ -169,7 +169,7 @@ Roku Pay sends push notifications for the following transactions:
         [Cancellation](#cancellation)
       </td>
       <td>
-        A subscription is canceled by the customer, deactivated becuase  the customer opted out of automatic renewal, or is passively canceled because payment could not be recovered.<br /><br />Active cancellations: The **expirationDate** field is set to the current or future date<br /><br />Deactivations: The **expirationDate** field is set to the decactivation date<br /><br />Passive cancellations: The **expirationDate** field is set to a past date.
+        A subscription is canceled by the customer, deactivated becuase  the customer opted out of automatic renewal, or is passively canceled because payment could not be recovered.<br /><br />Active cancellations: The **expirationDate** field is set to the current or future date<br /><br />Deactivations: The **expirationDate** field is set to the deactivation date<br /><br />Passive cancellations: The **expirationDate** field is set to a past date.
       </td>
       <td>
         * expirationDate is a future date: no action is required until the expiration date.
@@ -523,7 +523,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 * **Today's date**: Remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
 * **Past date**: Remove entitlement (passive cancellation; the subscription could not be recovered).
 
-#### Active cancelation/decativation example
+#### Active cancelation/deactivation example
 
 ```json
 {

@@ -146,7 +146,7 @@ You can create a schedule to automatically email a report in a recurring daily, 
     </tr>
     <tr>
       <td>Destination</td>
-      <td>Select one of the following destinations to send the report:<ul><li><strong>Email</strong>: Send the report to one on more recipients by entering their email address and then clicking <strong>Add</strong>. Optionally, select the <strong>Include a Custom Message</strong> check box to include any additional information in the body of the email message.</li><li><strong>Webhook</strong>: Enter the Webhook URL.</li><li><strong>Amazon S3</strong>: Enter the S3 bucket, path (optional), access key, secrey key, and region.</li><li><strong>SFTP</strong>: Enter the address, username, password, and preferred key exchange algorithm.</li></ul>The SFTP, S3, and Webhook options enable you to create automation pipelines for ingesting Roku analytics into your backend systems.</td>
+      <td>Select one of the following destinations to send the report:<ul><li><strong>Email</strong>: Send the report to one on more recipients by entering their email address and then clicking <strong>Add</strong>. Optionally, select the <strong>Include a Custom Message</strong> check box to include any additional information in the body of the email message.</li><li><strong>Webhook</strong>: Enter the Webhook URL.</li><li><strong>Amazon S3</strong>: Enter the S3 bucket, path (optional), access key, secret key, and region.</li><li><strong>SFTP</strong>: Enter the address, username, password, and preferred key exchange algorithm.</li></ul>The SFTP, S3, and Webhook options enable you to create automation pipelines for ingesting Roku analytics into your backend systems.</td>
     </tr>
     <tr>
       <td>Format</td>

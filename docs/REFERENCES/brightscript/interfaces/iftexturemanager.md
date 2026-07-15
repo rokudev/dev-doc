@@ -43,7 +43,7 @@ Cancels the request specified by req, which should be an roTextureRequest previo
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
-| req | Object  | The previoulsy passed roTextureRequest to be cancelled. |
+| req | Object  | The previously passed roTextureRequest to be cancelled. |
 
 ### UnloadBitmap(url as String) as Void
 

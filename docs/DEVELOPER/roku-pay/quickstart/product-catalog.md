@@ -216,7 +216,7 @@ To create a purchase option for a product, follow these steps:
   <tbody>
     <tr>
       <td>Billing frequency</td>
-      <td>Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quartely billing requires [additional API work](doc:add-ons-integration#appendix-a-add-on-api-reference).</td>
+      <td>Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quarterly billing requires [additional API work](doc:add-ons-integration#appendix-a-add-on-api-reference).</td>
     </tr>
     <tr>
       <td>Regular price</td>
@@ -254,7 +254,7 @@ Each set of _mutually exclusive_ subscription products must be added to a produc
 
 * **Double billing**. If an app has two in-app products for the same monthly subscription but with different free trial durations, these two products must be added to the same product group to prevent the customer from paying for two separate monthly subscriptions.
 
-From the customer's perspective, if they try to purchase a subscription product when they already have one in the same product group, Roky Pay displays a "You're already subscribed to this channel" dialog.
+From the customer's perspective, if they try to purchase a subscription product when they already have one in the same product group, Roku Pay displays a "You're already subscribed to this channel" dialog.
 
 ![roku815px - already-subscribed](https://image.roku.com/ZHZscHItMTc2/already-subscribed.jpg)
 
@@ -372,7 +372,7 @@ Before you archive a purchase option, notify existing subscribers that their sub
 
 You can create limited-time offers to provide customers with a free trial or introductory pricing for a specific period of time (for example, a New Year's promotion for the first two weeks of January). When a new customer subscribes to a product during an active limited-time offer, the customer receives that offer (a limited-time offer takes precedence over the base offer). If no limited-time offer is active, the customer receives the base offer. Customers may only ever receive a single free trial or discount offer for a subscription product, and they may only receive an offer that was made and accepted.
 
-To create a lmited-time offer, follow these steps:
+To create a limited-time offer, follow these steps:
 
 1. From the **Purchase options** tab, click the action button for the purchase option, and then click **Add a limited-time offer** on the shortcut menu. Alternatively, click the purchase option row to open the purchase option's details page, and then click **Add limited-time offer** under the **Billing plan** section.
 

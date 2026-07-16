@@ -586,7 +586,7 @@ The root of the JSON file contains basic information such as the feed specificat
 | version                      | String                                                                                                      | Roku JSON feed version (use "1").                                                                                                                                  | Required                                                                    |
 | defaultLanguage              | String                                                                                                      | The [ISO 639-1 two-letter language code](https://www.loc.gov/standards/iso639-2/php/code_list.php) to be used when the language is not specified for an asset.     | Required (if you do not provide the language for each asset).               |
 | defaultAvailabilityCountries | String[]                                                                                                    | The list of [ISO Alpha-2 two-letter country codes](https://www.iso.org/obp/ui/#search) to be used when **availabilityInfo.country** is not specified for an asset. | Required (if you do not provide the availability countries for each asset). |
-| assets                       | [Asset](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Asset)[] | The list of live channels in the distributor's service to be surfaced in Roku's Search.                                                                            | Required                                                                    |
+| assets                       | [Asset](#asset)[] | The list of live channels in the distributor's service to be surfaced in Roku's Search.                                                                            | Required                                                                    |
 
 #### Asset
 
@@ -614,7 +614,7 @@ The Gracenote tech ID (prgSvcId) for the live channel to be made discoverable th
 
 | **Field**   | **Type**                                                                                                              | **Description**                                   | **Required** |
 | ----------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- | ------------ |
-| playOptions | [PlayOption](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#PlayOption)[] | The list of options for playing the live channel. | Required     |
+| playOptions | [PlayOption](#playoption)[] | The list of options for playing the live channel. | Required     |
 
 #### PlayOption
 
@@ -698,7 +698,7 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
         availabilityInfo
       </td>
       <td>
-        [AvailabilityInfo](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#AvailabilityInfo)
+        [AvailabilityInfo](#availabilityinfo)
       </td>
       <td>
         May include following: countryrestriction
@@ -715,15 +715,15 @@ In the **playOptions** field, specify the availability, pricing, licensing, qual
 | **Field**   | **Type**                                                                                                                | **Description**                      | **Required** |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
 | country     | String[]                                                                                                                | countries where playOption available | Required     |
-| restriction | [Restriction](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#Restriction)[] | any restriction information          |              |
+| restriction | [Restriction](#restriction)[] | any restriction information          |              |
 
 #### Restriction
 
 | **Field** | **Type**                                                                                                                                | **Description**                         | **Required** |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
 | allow     | boolean                                                                                                                                 | true for allowlist, false for blocklist |              |
-| type      | [RestrictionType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionType)           | geo                                     | Required     |
-| valueType | [RestrictionValueType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionValueType) | type of the values (postal_code or dma) |              |
+| type      | [RestrictionType](#restrictiontype)           | geo                                     | Required     |
+| valueType | [RestrictionValueType](#restrictionvaluetype) | type of the values (postal_code or dma) |              |
 | values    | String[]                                                                                                                                |                                         |              |
 
 ### Live stream sample feed

@@ -195,14 +195,18 @@ To create a purchase option for a product, follow these steps:
       </td>
 
       <td>
-        Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products: <ul>
-        er 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).</li>
-        onding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).</li>
-        &#x20;See the [Price tier reference guide](doc:price-tiers) for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:<ul>
+        Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products:&#x20;
 
+        - One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).
+        - Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).
 
-        .</li>
-        If you are creating a <a href="/dev/docs/tvod-app-catalog">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier.&#x20;
+        See the [Price tier reference guide](doc:price-tiers) for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:&#x20;
+
+        - The **Currency code** is the three-letter ISO-4217 code of the currency in which the customer will be billed.
+        - The **Purchase price** reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.
+        - The **Net price** field displays the pre-tax price.  The **Proceeds** field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.
+
+        If you are creating a <a href="/dev/docs/tvod-app-catalog">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. <br /><br />**Certification requirement**: SVOD apps must provide a 30-day notice to existing customers before changing the price of their service.<br /><br />If you want certain products to only be available in specific countries, create in-app products for each country and filter out the product by the country in the app business logic. Specifically, you can call the **getUserRegionData** command to determine the country associated with the user's Roku account, and then implement business logic to filter the results of the ChannelStore **getCatalog** command to only display products that should be available for that country. In this case, the publisher is responsible for handling currency coversions.
       </td>
     </tr>
 

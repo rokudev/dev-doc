@@ -43,7 +43,7 @@ Apps can be further promoted globally with Roku home screen banner ads, Roku scr
 
 ## Monetization
 
-### Regional availability of in-app products
+### Regional availability of product catalog
 
 Apps offering subscriptions and one-time purchases (movie rentals, pay-per-views, special events, and so on) can program the app to control the availability of in-app products in different regions. For example, an app may only be able to legally distribute content in a specific set of countries. To do this, apps can use the ChannelStore [**getUserRegionData**](doc:channelstore#getuserregiondata)  command to determine the country associated with the user's Roku account, and then implement business logic to filter the results of the ChannelStore [**getCatalog** command](doc:channelstore#getcatalog) to only display products that should be available for that country.
 

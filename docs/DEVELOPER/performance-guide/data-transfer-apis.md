@@ -134,7 +134,7 @@ print my_aa ' contents of aa_field
 
 ## Accessing fields by reference
 
-You can access fields by reference instead of copying their values. This is significantly faster than copying; however, you can only do this on the render thread for fields with an associative array type. Access by reference cannot be used when queuing fields, and you must explicity set references before getting them.
+You can access fields by reference instead of copying their values. This is significantly faster than copying; however, you can only do this on the render thread for fields with an associative array type. Access by reference cannot be used when queuing fields, and you must explicitly set references before getting them.
 
 > **Function references**
 >
@@ -167,7 +167,7 @@ This function returns true if successful; otherwise it return false, indicating 
 
 #### Description
 
-Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previoulsy been called on the **field_name**.
+Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previously been called on the **field_name**.
 
 The specified **field_name** must be an associative array, and it must have previously been given a value via **SetRef()**.
 
@@ -235,7 +235,7 @@ The **roUtils** component provides a unique namespace for a library of global fu
 
 #### Description
 
-Performs a deep copy of the source node object (it copies the obejct and all of its nested objects). If the source object contains items that are not copyable, they are skipped.
+Performs a deep copy of the source node object (it copies the object and all of its nested objects). If the source object contains items that are not copyable, they are skipped.
 
 #### Parameters
 

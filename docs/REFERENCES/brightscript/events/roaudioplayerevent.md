@@ -73,7 +73,7 @@ Specific information about the event can be obtained by calling the GetMessages(
 
 #### GetMessage() as String
 
-Returns a description of the message (for exampe, "Format Detected").
+Returns a description of the message (for example, "Format Detected").
 
 #### GetInfo() as Object
 

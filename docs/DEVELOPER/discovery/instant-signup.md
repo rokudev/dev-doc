@@ -491,7 +491,7 @@ Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web se
           ...
      end if
 
-     'check if access token stored in Roku cloud has specifed value
+     'check if access token stored in Roku cloud has specified value
       response = myChannelStore.storeChannelCredDataStatus.response
       if response.json.channel_data = myChannelStore.channelCredData
           ...

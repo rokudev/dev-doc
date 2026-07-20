@@ -572,7 +572,7 @@ Note that the fields are updated in the order presented in the table below. Most
 <tr>
 <th>Field Name</th>
 <th>Field Type</th>
-<th>Access Permisson</th>
+<th>Access Permission</th>
 <th>Description</th>
 </tr>
 </thead>

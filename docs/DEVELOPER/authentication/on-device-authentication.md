@@ -149,7 +149,7 @@ To check for a valid access token in the device registry, follow these steps:
        ...
      end if
 
-     'check if access token stored in Roku cloud has specifed value
+     'check if access token stored in Roku cloud has specified value
      response = myChannelStore.storeChannelCredDataStatus.response
      if response.json.channel_data = myChannelStore.channelCredData
         ...

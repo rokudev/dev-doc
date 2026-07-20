@@ -1110,15 +1110,6 @@ An associative array with the following key-value pairs describing the current U
 | 720    | high-definition screen pixel height                                                                                                                                                                                                                                                                                                                                  |       |         |     |                                                       |      |                                                    |      |                                                          |
 | 1080   | full high-definition screen pixel height                                                                                                                                                                                                                                                                                                                             |       |         |     |                                                       |      |                                                    |      |                                                          |
 
-<br />
-
-An associative array containing the following key/value pairs:
-
-| <strong>Key</strong> | <strong>Type</strong> | <strong>Value</strong>                                                                                                                                                                                                                                                                                                                                                 |
-| -------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| full\_rotation       | boolean               | <ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul>                                                                                                                                                                                                                      |
-| astc\_supported      | boolean               | <ul><li>true: The device supports <a href="https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression">Adaptive Scalable Texture Compression(ASTC)</a> compressed textures and can load <a href="https://github.com/ARM-software/astc-encoder/blob/main/Docs/FileFormat.md">.astc</a> image files.</li><li>false: The device does not support ASTC.</li></ul> |
-
 ### GetGraphicsPlatform() as String
 
 #### Description

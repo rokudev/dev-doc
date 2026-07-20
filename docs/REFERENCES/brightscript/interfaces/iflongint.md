@@ -29,7 +29,7 @@ Gets the longinteger value stored in the calling Longinteger object.
 
 #### Return Value
 
-The longinteger value stored in the calling Loninteger object. 
+The longinteger value stored in the calling Longinteger object. 
 
 ### SetLongInt(value As LongInteger) As Void
 

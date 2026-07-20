@@ -1,11 +1,15 @@
 ---
 title: ifDeviceInfo
-excerpt: 'Interface for querying device model, network status, display properties, and DRM support'
+excerpt: >-
+  Interface for querying device model, network status, display properties, and
+  DRM support
 deprecated: false
 hidden: false
 metadata:
-  title: 'ifDeviceInfo'
-  description: 'Documents the ifDeviceInfo interface, which provides methods to query device model, OS version, network status, display properties, and DRM support.'
+  title: ifDeviceInfo
+  description: >-
+    Documents the ifDeviceInfo interface, which provides methods to query device
+    model, OS version, network status, display properties, and DRM support.
   robots: index
 next:
   description: ''
@@ -50,8 +54,8 @@ Returns a string describing the type of device. For future compatibility, the ca
 
 The device type, which may be one of the following values:
 
-* "STB": Set-top box.
-* "TV": Roku TV.
+- "STB": Set-top box.
+- "TV": Roku TV.
 
 ### GetModelDetails() as Object
 
@@ -241,156 +245,157 @@ Checks for the user's current system time zone setting.
 
 A string representing the user's current system time zone setting:
 
-* "US/Puerto Rico-Virgin Islands"
-* "US/Guam"
-* "US/Samoa "
-* "US/Hawaii"
-* "US/Aleutian"
-* "US/Alaska"
-* "US/Pacific"
-* "US/Arizona"
-* "US/Mountain"
-* "US/Central"
-* "US/Eastern"
-* "Canada/Pacific"
-* "Canada/Mountain"
-* "Canada/Central"
-* "Canada/Eastern"
-* "Canada/Mountain Standard"
-* "Canada/Central Standard"
-* "Canada/Atlantic"
-* "Canada/Newfoundland"
-* "Mexico/Pacific"
-* "Mexico/Mountain"
-* "Mexico/Central"
-* "Mexico/Eastern"
-* "America/Argentina/Buenos_Aires"
-* "America/Santiago"
-* "America/Bogota"
-* "America/Costa_Rica"
-* "America/El_Salvador"
-* "America/Guatemala"
-* "America/Tegucigalpa"
-* "America/Managua"
-* "America/Panama"
-* "America/Lima"
-* "America/Campo_Grande"
-* "America/Fortaleza"
-* "America/Manaus"
-* "America/Noronha"
-* "America/Rio_Branco"
-* "America/Sao_Paulo"
-* "Europe/Iceland"
-* "Europe/Ireland"
-* "Europe/United Kingdom"
-* "Europe/Portugal"
-* "Europe/Central European Time"
-* "Europe/France"
-* "Europe/Greece/Finland"
-* "Europe/Western European Time"
-* "Australia/WA"
-* "Australia/Eucla"
-* "Australia/NT"
-* "Australia/SA"
-* "Australia/QLD"
-* "Australia/Lord Howe"
-* "Australia/NSW"
-* "Australia/VIC"
-* "Australia/TAS"
-* "Australia/ACT"
-* "Asia/Arabia"
-* "Asia/Afghanistan"
-* "Asia/Alma-Ata"
-* "Asia/Anadyr"
-* "Asia/Aqtobe"
-* "Asia/Armenia"
-* "Asia/Azerbaijan"
-* "Asia/Bangladesh"
-* "Asia/Bhutan"
-* "Asia/Brunei"
-* "Asia/China"
-* "Asia/Choibalsan"
-* "Asia/EastTimor"
-* "Asia/Georgia"
-* "Asia/Gulf"
-* "Asia/Hong Kong"
-* "Asia/Hovd"
-* "Asia/India"
-* "Asia/Indochina"
-* "Asia/Irkutsk"
-* "Asia/Japan"
-* "Asia/Kamchatka"
-* "Asia/Korea"
-* "Asia/Krasnoyarsk"
-* "Asia/Kyrgyzstan"
-* "Asia/Malaysia"
-* "Asia/Magadan"
-* "Asia/Myanmar"
-* "Asia/Nepal"
-* "Asia/Novosibirsk"
-* "Asia/Omsk"
-* "Asia/Oral"
-* "Asia/Pakistan"
-* "Asia/Philippines"
-* "Asia/Qyzylorda"
-* "Asia/Sakhalin"
-* "Asia/Singapore"
-* "Asia/Tajikistan"
-* "Asia/Turkmenistan"
-* "Asia/Uzbekistan"
-* "Asia/Ulaanbaatar"
-* "Asia/Vladivostok"
-* "Asia/Yakutsk"
-* "Asia/Yekaterinburg"
-* "Asia/Eastern Indonesia"
-* "Asia/Central Indonesia"
-* "Asia/Western Indonesia"
-* "Asia/Beirut"
-* "Asia/Damascus"
-* "Asia/Gaza"
-* "Asia/Nicosia"
-* "Africa/CAT"
-* "Africa/CET"
-* "Africa/CVT"
-* "Africa/EAT"
-* "Africa/EET"
-* "Africa/GMT"
-* "Africa/MUT"
-* "Africa/RET"
-* "Africa/SAST"
-* "Africa/SCT"
-* "Africa/WAST"
-* "Africa/WAT"
-* "Africa/WEST"
-* "Africa/WET"
-* "Africa/WST"
-* "Africa/WT"
-* "Other/UTC-11"
-* "Other/UTC-10"
-* "Other/UTC-9"
-* "Other/UTC-8"
-* "Other/UTC-7"
-* "Other/UTC-6"
-* "Other/UTC-5"
-* "Other/UTC-4"
-* "Other/UTC-3"
-* "Other/UTC-2"
-* "Other/UTC-1"
-* "Other/UTC+0"
-* "Other/UTC+1"
-* "Other/UTC+2"
-* "Other/UTC+3"
-* "Other/UTC+4"
-* "Other/UTC+5"
-* "Other/UTC+6"
-* "Other/UTC+7"
-* "Other/UTC+8"
-* "Other/UTC+9"
-* "Other/UTC+10"
-* "Other/UTC+11"
-* "Other/UTC+12"
-* "Other/UTC+13"
-* "Other/UTC+14"
+- "US/Puerto Rico-Virgin Islands"
+- "US/Guam"
+- "US/Samoa "
+- "US/Hawaii"
+- "US/Aleutian"
+- "US/Alaska"
+- "US/Pacific"
+- "US/Arizona"
+- "US/Mountain"
+- "US/Central"
+- "US/Eastern"
+- "Canada/Pacific"
+- "Canada/Mountain"
+- "Canada/Central"
+- "Canada/Eastern"
+- "Canada/Mountain Standard"
+- "Canada/Central Standard"
+- "Canada/Atlantic"
+- "Canada/Newfoundland"
+- "Mexico/Pacific"
+- "Mexico/Mountain"
+- "Mexico/Central"
+- "Mexico/Eastern"
+- "America/Argentina/Buenos\_Aires"
+- "America/Santiago"
+- "America/Bogota"
+- "America/Costa\_Rica"
+- "America/El\_Salvador"
+- "America/Guatemala"
+- "America/Tegucigalpa"
+- "America/Managua"
+- "America/Panama"
+- "America/Lima"
+- "America/Campo\_Grande"
+- "America/Fortaleza"
+- "America/Manaus"
+- "America/Noronha"
+- "America/Rio\_Branco"
+- "America/Sao\_Paulo"
+- "Europe/Iceland"
+- "Europe/Ireland"
+- "Europe/United Kingdom"
+- "Europe/Portugal"
+- "Europe/Central European Time"
+- "Europe/France"
+- "Europe/Greece/Finland"
+- "Europe/Western European Time"
+- "Australia/WA"
+- "Australia/Eucla"
+- "Australia/NT"
+- "Australia/SA"
+- "Australia/QLD"
+- "Australia/Lord Howe"
+- "Australia/NSW"
+- "Australia/VIC"
+- "Australia/TAS"
+- "Australia/ACT"
+- "Asia/Arabia"
+- "Asia/Afghanistan"
+- "Asia/Alma-Ata"
+- "Asia/Anadyr"
+- "Asia/Aqtobe"
+- "Asia/Armenia"
+- "Asia/Azerbaijan"
+- "Asia/Bangladesh"
+- "Asia/Bhutan"
+- "Asia/Brunei"
+- "Asia/China"
+- "Asia/Choibalsan"
+- "Asia/EastTimor"
+- "Asia/Georgia"
+- "Asia/Gulf"
+- "Asia/Hong Kong"
+- "Asia/Hovd"
+- "Asia/India"
+- "Asia/Indochina"
+- "Asia/Irkutsk"
+- Asia/Israel
+- "Asia/Japan"
+- "Asia/Kamchatka"
+- "Asia/Korea"
+- "Asia/Krasnoyarsk"
+- "Asia/Kyrgyzstan"
+- "Asia/Malaysia"
+- "Asia/Magadan"
+- "Asia/Myanmar"
+- "Asia/Nepal"
+- "Asia/Novosibirsk"
+- "Asia/Omsk"
+- "Asia/Oral"
+- "Asia/Pakistan"
+- "Asia/Philippines"
+- "Asia/Qyzylorda"
+- "Asia/Sakhalin"
+- "Asia/Singapore"
+- "Asia/Tajikistan"
+- "Asia/Turkmenistan"
+- "Asia/Uzbekistan"
+- "Asia/Ulaanbaatar"
+- "Asia/Vladivostok"
+- "Asia/Yakutsk"
+- "Asia/Yekaterinburg"
+- "Asia/Eastern Indonesia"
+- "Asia/Central Indonesia"
+- "Asia/Western Indonesia"
+- "Asia/Beirut"
+- "Asia/Damascus"
+- "Asia/Gaza"
+- "Asia/Nicosia"
+- "Africa/CAT"
+- "Africa/CET"
+- "Africa/CVT"
+- "Africa/EAT"
+- "Africa/EET"
+- "Africa/GMT"
+- "Africa/MUT"
+- "Africa/RET"
+- "Africa/SAST"
+- "Africa/SCT"
+- "Africa/WAST"
+- "Africa/WAT"
+- "Africa/WEST"
+- "Africa/WET"
+- "Africa/WST"
+- "Africa/WT"
+- "Other/UTC-11"
+- "Other/UTC-10"
+- "Other/UTC-9"
+- "Other/UTC-8"
+- "Other/UTC-7"
+- "Other/UTC-6"
+- "Other/UTC-5"
+- "Other/UTC-4"
+- "Other/UTC-3"
+- "Other/UTC-2"
+- "Other/UTC-1"
+- "Other/UTC+0"
+- "Other/UTC+1"
+- "Other/UTC+2"
+- "Other/UTC+3"
+- "Other/UTC+4"
+- "Other/UTC+5"
+- "Other/UTC+6"
+- "Other/UTC+7"
+- "Other/UTC+8"
+- "Other/UTC+9"
+- "Other/UTC+10"
+- "Other/UTC+11"
+- "Other/UTC+12"
+- "Other/UTC+13"
+- "Other/UTC+14"
 
 ### HasFeature(feature as String) as Boolean
 
@@ -400,22 +405,9 @@ Checks if the current device/firmware supports the passed in feature string.
 
 #### Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>feature</td>
-      <td>String</td>
-      <td>The feature to be checked, which may be one of the following values: <ul><li>"5.1\_surround\_sound"</li><li>"can\_output\_5.1\_surround\_sound"</li><li>"sd\_only\_hardware"</li><li>"usb\_hardware"</li><li>"sdcard\_hardware"</li><li>"ethernet\_hardware"</li><li>"gaming\_hardware"</li><li>"energy\_star\_compliant"</li><li>"soundbar\_hardware". Check whether the device has soundbar hardware (for example, speakers).</li><li>"voice\_remote" (). Checks whether a Roku device is paired with a Roku voice remote. This enables developers to tailor the in-app user experience for viewers with Roku voice remote controls.</li><li>"handsfree\_voice" (). Checks whether a Roku device is paired with a hands-free Roku remote control such as the Roku Voice Remote Pro. This enables developers to tailor the in-app user experience for viewers with hands-free Roku remote controls (for example, displaying voice tips and tricks in the UI).</li></ul><blockquote><p>The "1080p\_hardware" argument is deprecated. Apps should use the GetVideoMode() and CanDecodeVideo() functions instead</p></blockquote></td>
-    </tr>
-  </tbody>
-</table>
+| Name    | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| feature | String | The feature to be checked, which may be one of the following values: <ul><li>"5.1\_surround\_sound"</li><li>"can\_output\_5.1\_surround\_sound"</li><li>"sd\_only\_hardware"</li><li>"usb\_hardware"</li><li>"sdcard\_hardware"</li><li>"ethernet\_hardware"</li><li>"gaming\_hardware"</li><li>"energy\_star\_compliant"</li><li>"soundbar\_hardware". Check whether the device has soundbar hardware (for example, speakers).</li><li>"voice\_remote" (). Checks whether a Roku device is paired with a Roku voice remote. This enables developers to tailor the in-app user experience for viewers with Roku voice remote controls.</li><li>"handsfree\_voice" (). Checks whether a Roku device is paired with a hands-free Roku remote control such as the Roku Voice Remote Pro. This enables developers to tailor the in-app user experience for viewers with hands-free Roku remote controls (for example, displaying voice tips and tricks in the UI).</li></ul><blockquote><p>The "1080p\_hardware" argument is deprecated. Apps should use the GetVideoMode() and CanDecodeVideo() functions instead</p></blockquote> |
 
 #### Return Values
 
@@ -431,18 +423,18 @@ Gets the current locale value based on the user's language setting.
 
 A string representing the current locale based on the user's language setting. The string is an ISO 639-1 (2-letter) language code followed by an underscore and a ISO 3166-1 (2-letter) country code. This may be one of the following values:
 
-| String  | Locale                |
-| ------- | --------------------- |
-| "en_US" | US English            |
-| "en_GB" | British English       |
-| "en_CA" | Canadian English      |
-| "en_AU" | Australian English    |
-| "fr_CA" | Canadian French       |
-| "es_ES" | International Spanish |
-| "es_MX" | Mexican Spanish       |
-| "de_DE" | German                |
-| "it_IT" | Italian               |
-| "pt_BR" | Brazilian Portuguese  |
+| String   | Locale                |
+| -------- | --------------------- |
+| "en\_US" | US English            |
+| "en\_GB" | British English       |
+| "en\_CA" | Canadian English      |
+| "en\_AU" | Australian English    |
+| "fr\_CA" | Canadian French       |
+| "es\_ES" | International Spanish |
+| "es\_MX" | Mexican Spanish       |
+| "de\_DE" | German                |
+| "it\_IT" | Italian               |
+| "pt\_BR" | Brazilian Portuguese  |
 
 ### GetCountryCode() as String
 
@@ -545,8 +537,8 @@ An associative array with the supported DRM system and features. For example, a 
 
 The values for the PlayReady key above are:
 
-* **tee** indicates the core DRM system runs in a Trusted Execution Environment
-* **ss** indicates the DRM system supports secure stop
+- **tee** indicates the core DRM system runs in a Trusted Execution Environment
+- **ss** indicates the DRM system supports secure stop
 
 ### GetDrmInfoEx() as Object
 
@@ -589,9 +581,9 @@ Determines whether global captions are turned on or off, or are in instant repla
 
 The current global setting for the Mode property, which may be one of the following values:
 
-* On
-* Off
-* Instant replay
+- On
+- Off
+- Instant replay
 
 > On a Roku TV, when the user selects "On Mute", this function will return "On" when the TV is muted and "Off" when it is not muted.
 
@@ -603,22 +595,9 @@ Sets the current global setting for the Mode property.
 
 #### Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>mode</td>
-      <td>String</td>
-      <td>The current global setting for the Mode property, which may be one of the following values: <ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Name | Type   | Description                                                                                                                                                                           |
+| ---- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mode | String | The current global setting for the Mode property, which may be one of the following values: <ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul> |
 
 #### Return Values
 
@@ -632,77 +611,26 @@ Checks the current value of the specified global setting property.
 
 #### Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Option</td>
-      <td>String</td>
-      <td>The global setting property to be checked, which may be one of the following values: <ul><li>Mode</li><li>Text/Font</li><li>Text/Effect</li><li>Text/Size</li><li>Text/Color</li><li>Text/Opacity</li><li>Background/Color</li><li>Background/Opacity</li><li>Window/Color</li><li>Window/Opacity</li><li>Track</li><li>Track\_Composite</li><li>Track\_Analog</li><li>Muted</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Name   | Type   | Description                                                                                                                                                                                                                                                                                                                                                                            |
+| ------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Option | String | The global setting property to be checked, which may be one of the following values: <ul><li>Mode</li><li>Text/Font</li><li>Text/Effect</li><li>Text/Size</li><li>Text/Color</li><li>Text/Opacity</li><li>Background/Color</li><li>Background/Opacity</li><li>Window/Color</li><li>Window/Opacity</li><li>Track</li><li>Track\_Composite</li><li>Track\_Analog</li><li>Muted</li></ul> |
 
 #### Return Values
 
 The value of the specified global setting property, which may be as follows:
 
-<table>
-  <thead>
-    <tr>
-      <th>Queried Property</th>
-      <th>Possible Values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mode</td>
-      <td><ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul></td>
-    </tr>
-    <tr>
-      <td>Text style</td>
-      <td><ul><li>Default</li><li>Serif Fixed Width</li><li>Serif Proportional</li><li>Sans Serif Fixed Width</li><li>Sans Serif Proportional</li><li>Casual</li><li>Cursive</li><li>Small Caps</li></ul></td>
-    </tr>
-    <tr>
-      <td>Text edge effect</td>
-      <td><ul><li>Default</li><li>None</li><li>Raised</li><li>Depressed</li><li>Uniform</li><li>Drop shadow (left)</li><li>Drop shadow (right)</li></ul></td>
-    </tr>
-    <tr>
-      <td>Text size</td>
-      <td><ul><li>Default</li><li>Extra large</li><li>Large</li><li>Medium</li><li>Small</li><li>Extra small</li></ul></td>
-    </tr>
-    <tr>
-      <td>Text color</td>
-      <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
-    </tr>
-    <tr>
-      <td>Text opacity</td>
-      <td><ul><li>Default</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
-    </tr>
-    <tr>
-      <td>Background Color</td>
-      <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
-    </tr>
-    <tr>
-      <td>Background Opacity</td>
-      <td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
-    </tr>
-    <tr>
-      <td>Window Color</td>
-      <td><ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul></td>
-    </tr>
-    <tr>
-      <td>Window Opacity</td>
-      <td><ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Queried Property   | Possible Values                                                                                                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mode               | <ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul>                                                                                                       |
+| Text style         | <ul><li>Default</li><li>Serif Fixed Width</li><li>Serif Proportional</li><li>Sans Serif Fixed Width</li><li>Sans Serif Proportional</li><li>Casual</li><li>Cursive</li><li>Small Caps</li></ul> |
+| Text edge effect   | <ul><li>Default</li><li>None</li><li>Raised</li><li>Depressed</li><li>Uniform</li><li>Drop shadow (left)</li><li>Drop shadow (right)</li></ul>                                                  |
+| Text size          | <ul><li>Default</li><li>Extra large</li><li>Large</li><li>Medium</li><li>Small</li><li>Extra small</li></ul>                                                                                    |
+| Text color         | <ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul>                                                        |
+| Text opacity       | <ul><li>Default</li><li>25%</li><li>75%</li><li>100%</li></ul>                                                                                                                                  |
+| Background Color   | <ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul>                                                        |
+| Background Opacity | <ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul>                                                                                                                      |
+| Window Color       | <ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul>                                                        |
+| Window Opacity     | <ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul>                                                                                                                      |
 
 #### Example
 
@@ -731,9 +659,9 @@ Checks whether the system settings for Time (**Setting > System > Time**) is set
 
 The time format:
 
-* "12h": 12-hour AM/PM format
-* "24h": 24-hour format
-* "": error
+- "12h": 12-hour AM/PM format
+- "24h": 24-hour format
+- "": error
 
 ### IsClockValid() as Dynamic
 
@@ -835,9 +763,9 @@ Checks the general memory levels of the device.
 
 Returns the general memory levels of the app, which may be one of the following values:
 
-* "normal"
-* "low"
-* "critical"
+- "normal"
+- "low"
+- "critical"
 
 ### IsStoreDemoMode() as Boolean
 
@@ -887,9 +815,9 @@ Checks whether the device has a WiFi or wired connection, or if it is not connec
 
 The type of internet connection the device is using. This may be one of the following values:
 
-* "WiFiConnection"
-* "WiredConnection"
-* "" (the device does not have an Internet connection)
+- "WiFiConnection"
+- "WiredConnection"
+- "" (the device does not have an Internet connection)
 
 ### EnableInternetStatusEvent(enable as Boolean) as Boolean
 
@@ -969,92 +897,27 @@ Checks for the information associated with the hardware's connection
 
 An associative array with the following key-value pairs:
 
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>type</td>
-      <td>Same as the value returned from GetConnectionType(). Indicated whether the device is using a WiFiConnection or WiredConnection.</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>Name of the connection interface.</td>
-    </tr>
-    <tr>
-      <td>ip</td>
-      <td>IP address used by the connection.</td>
-    </tr>
-    <tr>
-      <td>ipv6<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
-      <td>A list of IPv6 addresses used by the connection.</td>
-    </tr>
-    <tr>
-      <td>mac</td>
-      <td><em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the [roDeviceInfo.GetChannelClientId ](doc:ifdeviceinfo#getchannelclientid-as-string)method to uniquely identify devices.</td>
-    </tr>
-    <tr>
-      <td>ssid</td>
-      <td>The SSID of the Access Point (present only if type = "WiFiConnection").</td>
-    </tr>
-    <tr>
-      <td>gateway</td>
-      <td>IP Address of the connection gateway (usually the router).</td>
-    </tr>
-    <tr>
-      <td>dns.0</td>
-      <td>IP Address of first DNS server associated with the connection.</td>
-    </tr>
-    <tr>
-      <td>dns.1</td>
-      <td>IP Address of the second DNS server, if any (Similarly for any subsequent DNS servers).</td>
-    </tr>
-    <tr>
-      <td>dns.2</td>
-      <td>IP Address of the third DNS server, if any (Similarly for any subsequent DNS servers).</td>
-    </tr>
-    <tr>
-      <td>dns.3</td>
-      <td>IP Address of the fourth DNS server, if any (Similarly for any subsequent DNS servers).</td>
-    </tr>
-    <tr>
-      <td>active</td>
-      <td>A flag indicating the network status.</td>
-    </tr>
-    <tr>
-      <td>default</td>
-      <td>A flag indicating whether the default WiFi connection is being used.</td>
-    </tr>
-    <tr>
-      <td>expectedThroughput</td>
-      <td>The actual speed of the connection.  This rate may be significantly lower than theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.</td>
-    </tr>
-    <tr>
-      <td>protocol</td>
-      <td>The Wifi protocol name (IEEE 802.11g).</td>
-    </tr>
-    <tr>
-      <td>signal</td>
-      <td>The received signal strength indicator (RSSI) on a logarithmic scale. Values closer to 0 indicate a stronger signal; values closer to -100 indicate a weaker signal.</td>
-    </tr>
-    <tr>
-      <td>ssid</td>
-      <td>The service set identifier (SSID). The name of the WiFi network to which the device is connected.</td>
-    </tr>
-    <tr>
-      <td>txFailed</td>
-      <td>The number of dropped frames.</td>
-    </tr>
-    <tr>
-      <td>txRetries</td>
-      <td>The number of retries to send frames.</td>
-    </tr>
-  </tbody>
-</table>
+| Key                                                                                    | Value                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type                                                                                   | Same as the value returned from GetConnectionType(). Indicated whether the device is using a WiFiConnection or WiredConnection.                                                                                                                                                         |
+| name                                                                                   | Name of the connection interface.                                                                                                                                                                                                                                                       |
+| ip                                                                                     | IP address used by the connection.                                                                                                                                                                                                                                                      |
+| ipv6<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em> | A list of IPv6 addresses used by the connection.                                                                                                                                                                                                                                        |
+| mac                                                                                    | <em>This field is deprecated</em><br /><br />The device's MAC address is no longer returned (a string of zeros is returned in this field). Developers can use the [roDeviceInfo.GetChannelClientId ](doc:ifdeviceinfo#getchannelclientid-as-string)method to uniquely identify devices. |
+| ssid                                                                                   | The SSID of the Access Point (present only if type = "WiFiConnection").                                                                                                                                                                                                                 |
+| gateway                                                                                | IP Address of the connection gateway (usually the router).                                                                                                                                                                                                                              |
+| dns.0                                                                                  | IP Address of first DNS server associated with the connection.                                                                                                                                                                                                                          |
+| dns.1                                                                                  | IP Address of the second DNS server, if any (Similarly for any subsequent DNS servers).                                                                                                                                                                                                 |
+| dns.2                                                                                  | IP Address of the third DNS server, if any (Similarly for any subsequent DNS servers).                                                                                                                                                                                                  |
+| dns.3                                                                                  | IP Address of the fourth DNS server, if any (Similarly for any subsequent DNS servers).                                                                                                                                                                                                 |
+| active                                                                                 | A flag indicating the network status.                                                                                                                                                                                                                                                   |
+| default                                                                                | A flag indicating whether the default WiFi connection is being used.                                                                                                                                                                                                                    |
+| expectedThroughput                                                                     | The actual speed of the connection.  This rate may be significantly lower than theoretical maximum because of interference, distance, network overhead, and other factors. In ideal conditions, a single client might achieve approximately 65-70% of the physical rate.                |
+| protocol                                                                               | The Wifi protocol name (IEEE 802.11g).                                                                                                                                                                                                                                                  |
+| signal                                                                                 | The received signal strength indicator (RSSI) on a logarithmic scale. Values closer to 0 indicate a stronger signal; values closer to -100 indicate a weaker signal.                                                                                                                    |
+| ssid                                                                                   | The service set identifier (SSID). The name of the WiFi network to which the device is connected.                                                                                                                                                                                       |
+| txFailed                                                                               | The number of dropped frames.                                                                                                                                                                                                                                                           |
+| txRetries                                                                              | The number of retries to send frames.                                                                                                                                                                                                                                                   |
 
 #### Video info
 
@@ -1068,9 +931,9 @@ Gets the text corresponding to the button selection in the Player Info Settings/
 
 The display type, which may be one of the following values:
 
-* "HDTV"
-* "4:3 standard"
-* "16:9 anamorphic"
+- "HDTV"
+- "4:3 standard"
+- "16:9 anamorphic"
 
 ### GetDisplayMode() as String
 
@@ -1082,9 +945,9 @@ Checks the UI resolution of the device.
 
 The configured graphics layer resolution, which may be one of the following values:
 
-* "480i" or "480p" (the **ui_resolutions** manifest entry includes **sd** as a supported resolution).
-* "720p"
-* "1080p" (the **ui_resolutions** manifest file entry includes **fhd** as a supported resolution)
+- "480i" or "480p" (the **ui\_resolutions** manifest entry includes **sd** as a supported resolution).
+- "720p"
+- "1080p" (the **ui\_resolutions** manifest file entry includes **fhd** as a supported resolution)
 
 ### GetDisplayAspectRatio() as String
 
@@ -1096,8 +959,8 @@ Checks the aspect ratio for the display screen.
 
 The aspect ratio, which may be one of the following values:
 
-* "4x3"
-* "16x9"
+- "4x3"
+- "16x9"
 
 ### GetDisplaySize() as Object
 
@@ -1109,9 +972,9 @@ Checks the display size of a screen.
 
 An associative array with the screen width and height. Specifically, the keys "w" and "h" contain the values for the screen width and height respectively. This may be one of the following:
 
-* 720 and 480
-* 1280 and 720
-* 1920 and 1080
+- 720 and 480
+- 1280 and 720
+- 1920 and 1080
 
 ### GetVideoMode() as String
 
@@ -1166,67 +1029,18 @@ Checks for the display properties of the screen.
 
 An associative array with the following key/value pairs for the display properties of the screen:
 
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Type</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Width</td>
-      <td>Integer</td>
-      <td>Physical width of the attached display in centimeters</td>
-    </tr>
-    <tr>
-      <td>Height</td>
-      <td>Integer</td>
-      <td>Physical height of the attached display in centimeters</td>
-    </tr>
-    <tr>
-      <td>Internal</td>
-      <td>Boolean</td>
-      <td>Set to true if the display is part of the Roku Player (such as a Roku TV), false otherwise</td>
-    </tr>
-    <tr>
-      <td>Hdr10</td>
-      <td>Boolean</td>
-      <td>Set to true if the attached display supports HDR10, false otherwise</td>
-    </tr>
-    <tr>
-      <td>Hdr10Plus</td>
-      <td>Boolean</td>
-      <td>Set to true if the attached display supports HDR10+, false otherwise</td>
-    </tr>
-    <tr>
-      <td>HdrSeamless</td>
-      <td>Boolean</td>
-      <td>Set to true if the attached display supports any type of HDR, such as HDR10, HLG, or<br />Dolby Vision, false otherwise.</td>
-    </tr>
-    <tr>
-      <td>Headless</td>
-      <td>Boolean</td>
-      <td>Set to true if the attached display supports being powered off while audio continues to play</td>
-    </tr>
-    <tr>
-      <td>HLG</td>
-      <td>Boolean</td>
-      <td>Set to true if the attached display supports HLG, false otherwise</td>
-    </tr>
-    <tr>
-      <td>DolbyVision</td>
-      <td>Boolean</td>
-      <td>Set to true if the attached display supports Dolby Vision, false otherwise</td>
-    </tr>
-    <tr>
-      <td>visible</td>
-      <td>boolean</td>
-      <td>For Roku TVs only. Indicates whether the TV screen is on/off while the Roku device is actively streaming content. This is useful for checking whether customers have muted their TV screen while streaming video in order to continue listening to the audio (for example, when playing music videos, conferences, or podcasts).</td>
-    </tr>
-  </tbody>
-</table>
+| Key         | Type    | Value                                                                                                                                                                                                                                                                                                                            |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Width       | Integer | Physical width of the attached display in centimeters                                                                                                                                                                                                                                                                            |
+| Height      | Integer | Physical height of the attached display in centimeters                                                                                                                                                                                                                                                                           |
+| Internal    | Boolean | Set to true if the display is part of the Roku Player (such as a Roku TV), false otherwise                                                                                                                                                                                                                                       |
+| Hdr10       | Boolean | Set to true if the attached display supports HDR10, false otherwise                                                                                                                                                                                                                                                              |
+| Hdr10Plus   | Boolean | Set to true if the attached display supports HDR10+, false otherwise                                                                                                                                                                                                                                                             |
+| HdrSeamless | Boolean | Set to true if the attached display supports any type of HDR, such as HDR10, HLG, or<br />Dolby Vision, false otherwise.                                                                                                                                                                                                         |
+| Headless    | Boolean | Set to true if the attached display supports being powered off while audio continues to play                                                                                                                                                                                                                                     |
+| HLG         | Boolean | Set to true if the attached display supports HLG, false otherwise                                                                                                                                                                                                                                                                |
+| DolbyVision | Boolean | Set to true if the attached display supports Dolby Vision, false otherwise                                                                                                                                                                                                                                                       |
+| visible     | boolean | For Roku TVs only. Indicates whether the TV screen is on/off while the Roku device is actively streaming content. This is useful for checking whether customers have muted their TV screen while streaming video in order to continue listening to the audio (for example, when playing music videos, conferences, or podcasts). |
 
 ### GetSupportedGraphicsResolutions() as Object
 
@@ -1246,7 +1060,7 @@ A list of associative arrays. Each associative array contains the following key/
 | ui        | boolean | True if this resolution is the current Roku UI resolution                                           |
 | preferred | boolean | True if this is the preferred UI resolution, i.e., if this is the optimal resolution for the device |
 
-### CanDecodeVideo(video_format as Object) as Object
+### CanDecodeVideo(video\_format as Object) as Object
 
 #### Description
 
@@ -1254,22 +1068,9 @@ Checks whether the device can decode and play the specified video format.
 
 #### Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>video\_format</td>
-      <td>Object</td>
-      <td>An associative array with the following key/value pairs specifying the video format to be checked.<br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
-    </tr>
-  </tbody>
-</table>
+| Name          | Type   | Description                                                                                                                                                                                                                                                                                                      |
+| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| video\_format | Object | An associative array with the following key/value pairs specifying the video format to be checked.<br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /> |
 
 #### Return Values
 
@@ -1291,54 +1092,23 @@ Checks for the UI resolution of the screen.
 
 An associative array with the following key-value pairs describing the current UI resolution:
 
-<table>
-  <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>name</td>
-      <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>SD</td><td>standard definition (720x480 screen pixel dimensions)</td></tr><tr><td>HD</td><td>high-definition (1280x720 screen pixel dimensions)</td></tr><tr><td>FHD</td><td>full high-definition (1920x1080 screen pixel dimensions)</td></tr></tbody></table></td>
-    </tr>
-    <tr>
-      <td>width</td>
-      <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>720</td><td>standard definition screen pixel width</td></tr><tr><td>1280</td><td>high-definition screen pixel width</td></tr><tr><td>1920</td><td>full high-definition screen pixel width</td></tr></tbody></table></td>
-    </tr>
-    <tr>
-      <td>height</td>
-      <td>The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>480</td><td>standard definition screen pixel height</td></tr><tr><td>720</td><td>high-definition screen pixel height</td></tr><tr><td>1080</td><td>full high-definition screen pixel height</td></tr></tbody></table></td>
-    </tr>
-  </tbody>
-</table>
-
-<br />
-
-An associative array containing the following key/value pairs:
-
-<table>
-  <thead>
-    <tr>
-      <th><strong>Key</strong></th>
-      <th><strong>Type</strong></th>
-      <th><strong>Value</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>full\_rotation</td>
-      <td>boolean</td>
-      <td><ul><li>true: The device supports an arbitrary rotation degree.</li><li>false: The device supports 90° rotations only (0, 90, 180, 270)</li></ul></td>
-    </tr>
-    <tr>
-      <td>astc\_supported</td>
-      <td>boolean</td>
-      <td><ul><li>true: The device supports <a href="https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression">Adaptive Scalable Texture Compression(ASTC)</a> compressed textures and can load <a href="https://github.com/ARM-software/astc-encoder/blob/main/Docs/FileFormat.md">.astc</a> image files.</li><li>false: The device does not support ASTC.</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Key    | Value                                                                                                                                                                                                                                                                                                                                                                |       |         |     |                                                       |      |                                                    |      |                                                          |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ------- | --- | ----------------------------------------------------- | ---- | -------------------------------------------------- | ---- | -------------------------------------------------------- |
+| name   | The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>SD</td><td>standard definition (720x480 screen pixel dimensions)</td></tr><tr><td>HD</td><td>high-definition (1280x720 screen pixel dimensions)</td></tr><tr><td>FHD</td><td>full high-definition (1920x1080 screen pixel dimensions)</td></tr></tbody></table> | Value | Meaning | SD  | standard definition (720x480 screen pixel dimensions) | HD   | high-definition (1280x720 screen pixel dimensions) | FHD  | full high-definition (1920x1080 screen pixel dimensions) |
+| Value  | Meaning                                                                                                                                                                                                                                                                                                                                                              |       |         |     |                                                       |      |                                                    |      |                                                          |
+| SD     | standard definition (720x480 screen pixel dimensions)                                                                                                                                                                                                                                                                                                                |       |         |     |                                                       |      |                                                    |      |                                                          |
+| HD     | high-definition (1280x720 screen pixel dimensions)                                                                                                                                                                                                                                                                                                                   |       |         |     |                                                       |      |                                                    |      |                                                          |
+| FHD    | full high-definition (1920x1080 screen pixel dimensions)                                                                                                                                                                                                                                                                                                             |       |         |     |                                                       |      |                                                    |      |                                                          |
+| width  | The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>720</td><td>standard definition screen pixel width</td></tr><tr><td>1280</td><td>high-definition screen pixel width</td></tr><tr><td>1920</td><td>full high-definition screen pixel width</td></tr></tbody></table>                                             | Value | Meaning | 720 | standard definition screen pixel width                | 1280 | high-definition screen pixel width                 | 1920 | full high-definition screen pixel width                  |
+| Value  | Meaning                                                                                                                                                                                                                                                                                                                                                              |       |         |     |                                                       |      |                                                    |      |                                                          |
+| 720    | standard definition screen pixel width                                                                                                                                                                                                                                                                                                                               |       |         |     |                                                       |      |                                                    |      |                                                          |
+| 1280   | high-definition screen pixel width                                                                                                                                                                                                                                                                                                                                   |       |         |     |                                                       |      |                                                    |      |                                                          |
+| 1920   | full high-definition screen pixel width                                                                                                                                                                                                                                                                                                                              |       |         |     |                                                       |      |                                                    |      |                                                          |
+| height | The possible values are: <table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>480</td><td>standard definition screen pixel height</td></tr><tr><td>720</td><td>high-definition screen pixel height</td></tr><tr><td>1080</td><td>full high-definition screen pixel height</td></tr></tbody></table>                                           | Value | Meaning | 480 | standard definition screen pixel height               | 720  | high-definition screen pixel height                | 1080 | full high-definition screen pixel height                 |
+| Value  | Meaning                                                                                                                                                                                                                                                                                                                                                              |       |         |     |                                                       |      |                                                    |      |                                                          |
+| 480    | standard definition screen pixel height                                                                                                                                                                                                                                                                                                                              |       |         |     |                                                       |      |                                                    |      |                                                          |
+| 720    | high-definition screen pixel height                                                                                                                                                                                                                                                                                                                                  |       |         |     |                                                       |      |                                                    |      |                                                          |
+| 1080   | full high-definition screen pixel height                                                                                                                                                                                                                                                                                                                             |       |         |     |                                                       |      |                                                    |      |                                                          |
 
 ### GetGraphicsPlatform() as String
 
@@ -1350,8 +1120,8 @@ Checks the graphics platform of the device.
 
 The device's graphics platform, which may be one of the following values:
 
-* "opengl"
-* "directfb"
+- "opengl"
+- "directfb"
 
 ### GetVideoDecodeInfo() as Object
 
@@ -1361,7 +1131,7 @@ The device's graphics platform, which may be one of the following values:
 
 #### Description
 
-See [http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block](http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block) for an explanation of the information returned.
+See [http://en.wikipedia.org/wiki/Extended\_display\_identification\_data#EIA.2FCEA-861\_extension\_block](http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block) for an explanation of the information returned.
 
 #### Return Values
 
@@ -1395,8 +1165,8 @@ Checks for the type of audio output.
 
 The selected audio output, which may be one of the following values:
 
-* "Stereo"
-* "5.1 surround"
+- "Stereo"
+- "5.1 surround"
 
 ### GetAudioDecodeInfo() as Object
 
@@ -1412,7 +1182,7 @@ Lists each audio decoder supported by the device, with up to four numbers descri
 
 An associative array with EDID (EIA.2FCEA-861) audio decoder information for the device connected to the HDMI port (or the device itself for a Roku TV).
 
-For example, the name "DD+" may have the value "8:6:0:1" where there are 8 independent audio tracks (7.1 audio), 6 is the SAD1 byte, 0 is the SAD2 byte, and 1 is the binary value that indicates this is a pass-through audio device (not a Roku TV). The SAD1 and SAD2 bytes are interpreted differently for different codecs and more information about their values can be found here: [http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format](http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format)
+For example, the name "DD+" may have the value "8:6:0:1" where there are 8 independent audio tracks (7.1 audio), 6 is the SAD1 byte, 0 is the SAD2 byte, and 1 is the binary value that indicates this is a pass-through audio device (not a Roku TV). The SAD1 and SAD2 bytes are interpreted differently for different codecs and more information about their values can be found here: [http://en.wikipedia.org/wiki/Extended\_display\_identification\_data#CEA\_EDID\_Timing\_Extension\_Version\_3\_data\_format](http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format)
 
 #### Example
 
@@ -1428,9 +1198,9 @@ hasDTS = audioDecoders.doesexist("DTS")
 hasDDPlus = audioDecoders.doesexist("DD+")
 ```
 
-> The definition of hasFeature (“5.1_surround_sound”) has changed in [Roku OS 6.1](doc:release-notes#roku-os-61). In previous firmware revisions it returned true when the user set the system audio format to "Surround Sound". In Roku OS6.1 and above, it returns true when any of the codecs in the GetAudioDecodeInfo() AA has more than 2 audio channels. Users devices will also be default to the "Auto Detect" system HDMI audio setting in v6.1.
+> The definition of hasFeature (“5.1\_surround\_sound”) has changed in [Roku OS 6.1](doc:release-notes#roku-os-61). In previous firmware revisions it returned true when the user set the system audio format to "Surround Sound". In Roku OS6.1 and above, it returns true when any of the codecs in the GetAudioDecodeInfo() AA has more than 2 audio channels. Users devices will also be default to the "Auto Detect" system HDMI audio setting in v6.1.
 
-### CanDecodeAudio(audio_format as Object) as Object
+### CanDecodeAudio(audio\_format as Object) as Object
 
 #### Description
 
@@ -1440,22 +1210,9 @@ Checks if the device can decode and play the specified audio format.
 
 #### Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>audio\_format</td>
-      <td>Object</td>
-      <td>An associative array with the audio format to be checked. The general format of the associative arrays for CanDecodeAudio() is similar to the parameter and return associative arrays used in <a href="#candecodevideovideo_format-as-object-as-object">CanDecodeVideo()</a>. <br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /></td>
-    </tr>
-  </tbody>
-</table>
+| Name          | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| audio\_format | Object | An associative array with the audio format to be checked. The general format of the associative arrays for CanDecodeAudio() is similar to the parameter and return associative arrays used in <a href="#candecodevideovideo_format-as-object-as-object">CanDecodeVideo()</a>. <br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /> |
 
 #### Return Values
 

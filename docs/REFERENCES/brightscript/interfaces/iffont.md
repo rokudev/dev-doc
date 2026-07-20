@@ -21,9 +21,9 @@ next:
 
 ### GetOneLineHeight() as Integer
 
-| Name             | Type    | Possible Values             | Description                                                                        |
-| ---------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
-| GetOneLineHeight | Integer | Number of pixels) as Intger | Returns the number of pixels from one line to the next when drawing with this font |
+| Name             | Type    | Possible Values              | Description                                                                        |
+| ---------------- | ------- | ---------------------------  | ---------------------------------------------------------------------------------- |
+| GetOneLineHeight | Integer | Number of pixels) as Integer | Returns the number of pixels from one line to the next when drawing with this font |
 
 ### GetOneLineWidth(text as String, MaxWidth as Integer) as Integer
 

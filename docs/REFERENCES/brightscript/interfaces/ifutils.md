@@ -24,7 +24,7 @@ _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 #### Description
 
-Performs a deep copy of a node object (it copies the obejct and all of its nested objects). If the object contains items that are not copyable, they are skipped.
+Performs a deep copy of a node object (it copies the object and all of its nested objects). If the object contains items that are not copyable, they are skipped.
 
 #### Parameters
 

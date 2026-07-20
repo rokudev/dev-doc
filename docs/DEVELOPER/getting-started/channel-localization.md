@@ -1,11 +1,14 @@
 ---
 title: App localization
-excerpt: 'Localize your app for global Streaming Stores across regions'
+excerpt: Localize your app for global Streaming Stores across regions
 deprecated: false
 hidden: false
 metadata:
-  title: 'App localization | Roku Developer Docs'
-  description: 'Distribute your app across global Streaming Stores using multi-language UI support, localized metadata, regional content filtering, and Roku Pay currency.'
+  title: App localization | Roku Developer Docs
+  description: >-
+    Distribute your app across global Streaming Stores using multi-language UI
+    support, localized metadata, regional content filtering, and Roku Pay
+    currency.
   robots: index
 next:
   description: ''
@@ -14,24 +17,9 @@ Publishers can distribute their content across the world through the [Streaming 
 
 Roku has Streaming Stores in the following countries:
 
-<table>
-  <thead>
-    <tr>
-      <th>North America</th>
-      <th>Europe</th>
-      <th>Latin America</th>
-      <th>Asia Pacific</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><ul><li>United States</li><li>Canada</li></ul></td>
-      <td><ul><li>United Kingdom</li><li>Ireland</li><li>Germany</li></ul></td>
-      <td><ul><li>Argentina</li><li>Brazil</li><li>Chile</li><li>Colombia</li><li>Costa Rica</li><li>El Salvador</li><li>Guatemala</li><li>Honduras</li><li>Mexico</li><li>Nicaragua</li><li>Panama</li><li>Peru</li></ul></td>
-      <td>Australia</td>
-    </tr>
-  </tbody>
-</table>
+| North America                                  | Europe                                                                           | Latin America                                                                                                                                                                                                    | Asia Pacific |
+| ---------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| <ul><li>United States</li><li>Canada</li></ul> | <ul><li>United Kingdom</li><li>Ireland</li><li>Germany</li><li>Austria</li></ul> | <ul><li>Argentina</li><li>Brazil</li><li>Chile</li><li>Colombia</li><li>Costa Rica</li><li>El Salvador</li><li>Guatemala</li><li>Honduras</li><li>Mexico</li><li>Nicaragua</li><li>Panama</li><li>Peru</li></ul> | Australia    |
 
 ## Development
 
@@ -55,7 +43,7 @@ Apps can be further promoted globally with Roku home screen banner ads, Roku scr
 
 ## Monetization
 
-### Regional availability of in-app products
+### Regional availability of product catalog
 
 Apps offering subscriptions and one-time purchases (movie rentals, pay-per-views, special events, and so on) can program the app to control the availability of in-app products in different regions. For example, an app may only be able to legally distribute content in a specific set of countries. To do this, apps can use the ChannelStore [**getUserRegionData**](doc:channelstore#getuserregiondata)  command to determine the country associated with the user's Roku account, and then implement business logic to filter the results of the ChannelStore [**getCatalog** command](doc:channelstore#getcatalog) to only display products that should be available for that country.
 

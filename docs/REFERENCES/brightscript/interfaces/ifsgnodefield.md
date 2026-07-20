@@ -514,7 +514,7 @@ _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 #### Description
 
-Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previoulsy been called on the **field_name**.
+Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previously been called on the **field_name**.
 
 The specified **field_name** must be an associative array, and it must have previously been given a value via **SetRef()**.
 

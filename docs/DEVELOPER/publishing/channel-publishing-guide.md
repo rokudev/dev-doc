@@ -155,7 +155,7 @@ Configure how your app is listed in the Streaming Store, including the app's hom
         Domestic region
       </td>
       <td>
-        Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streming Stores that include your app and are outside your domestic region.
+        Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streaming Stores that include your app and are outside your domestic region.
       </td>
     </tr>
     <tr>

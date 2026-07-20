@@ -89,7 +89,7 @@ For efficiency, sometimes the control logic for the GridPanel may create and hol
 <td>Node</td>
 <td>false</td>
 <td>WRITE_ONLY</td>
-<td>When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in repsonse to the createNextPanelIndex field being set.</td>
+<td>When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in response to the createNextPanelIndex field being set.</td>
 </tr>
 <tr>
 <td>createNextPanelOnItemFocus</td>

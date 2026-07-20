@@ -108,7 +108,7 @@ Roku developer accounts can have the following roles and permissions:
 <li>Static Analysis</li>
 <li>Submit for publishing</li>
 <li>Search feeds (validate, submit, and manage)</li>
-</ul><br><br>Select one or more apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to the managment and publishing features for all existing apps (as you create new apps, you will need to manually add them to grant access).</td>
+</ul><br><br>Select one or more apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to the management and publishing features for all existing apps (as you create new apps, you will need to manually add them to grant access).</td>
 <td class="short-line">App</td>
 </tr>
 <tr>

@@ -22,11 +22,11 @@ next:
 
 Extends [**Dialog**](doc:dialog)
 
-The KeyboardDialog node class is a special type of Dialog node that prompts the user to enter an alphanumeric text string. The KeyboardDialog node class includes an interrnal Keyboard node to allow the user to enter the string.
+The KeyboardDialog node class is a special type of Dialog node that prompts the user to enter an alphanumeric text string. The KeyboardDialog node class includes an internal Keyboard node to allow the user to enter the string.
 
 The KeyboardDialog allows you to add a title (by setting the Dialog title field), a help message (by setting the Dialog message field), and a set of action buttons (by setting the Dialog node buttons field). The bulletText and graphicUrl fields of the Dialog node should not be set. If those Dialog node fields are set, the layout of the dialog will likely not look correct.
 
-Also, the KeyboardDialog node class inherits the behavior of the interrnal [Keyboard](doc:keyboard) node when the Options remote key is pressed. The Keyboard node class toggles between uppercase and lowercase letters when the Options remote key is pressed, to speed the entry of mixed-case strings by the user. Therefore, the optionsDialog field of the Dialog node class should not be set to true.
+Also, the KeyboardDialog node class inherits the behavior of the internal [Keyboard](doc:keyboard) node when the Options remote key is pressed. The Keyboard node class toggles between uppercase and lowercase letters when the Options remote key is pressed, to speed the entry of mixed-case strings by the user. Therefore, the optionsDialog field of the Dialog node class should not be set to true.
 
 Typically, you will want to set the KeyboardDialog node title field to prompt the user to enter the string, and add "OK" and "Cancel" buttons by setting the Dialog node buttons field to [ "OK", "Cancel" ], then observe the Dialog node class buttonSelected field to react when the user presses one of those buttons. At any time, the text field can be accessed to obtain the string entered by the user.
 

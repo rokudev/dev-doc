@@ -113,13 +113,6 @@ end function
       <td>If easeFunction is set to piecewise, easeOutPercent sets the percentage of the animation duration during which ease-out is applied. Note that the values of easeInPercent plus easeOutPercent must be less than or equal to 1. For all other values of easeFunction, easeOutPercent is ignored</td>
     </tr>
     <tr>
-      <td>optional</td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>READ\_WRITE</td>
-      <td>Set to true to skip animations on lower performing Roku devices. See <a href="/dev/docs/hardware#current-roku-models" title="Roku Devices">Roku Devices</a> for model numbers and code names. When an Animation has optional set to true, setting the control field to start will cause the state field to change to running and immediately change again to finished. These state changes allow any logic tied to state field observers that run at the start and end of the Animation to be properly called</td>
-    </tr>
-    <tr>
       <td>willBeSkipped</td>
       <td>boolean</td>
       <td>false</td>

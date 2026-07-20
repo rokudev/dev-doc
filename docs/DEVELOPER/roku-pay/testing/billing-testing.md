@@ -1,11 +1,13 @@
 ---
 title: Enabling billing testing
-excerpt: 'Designate a public or beta app for billing testing with Roku Pay'
+excerpt: Designate a public or beta app for billing testing with Roku Pay
 deprecated: false
 hidden: false
 metadata:
-  title: 'Enabling billing testing | Roku Developer Docs'
-  description: 'Enable billing testing on a public or beta app to observe ChannelStore node output and avoid incurring charges by adding yourself as a Test User.'
+  title: Enabling billing testing | Roku Developer Docs
+  description: >-
+    Enable billing testing on a public or beta app to observe ChannelStore node
+    output and avoid incurring charges by adding yourself as a Test User.
   robots: index
 next:
   description: ''
@@ -15,15 +17,19 @@ Developers can designate one public or beta app for "billing testing" to observe
 When an app enabled for "billing testing" is sideloaded, calls to the ChannelStore node will use the product catalog associated with that app. Developers should therefore upload a package file that reflects the actual app being tested. This is because the product catalog of the app designated for "billing testing" is always returned regardless of the actual UI or behavior of the package that is sideloaded.
 
 > Sideloaded "billing testing" apps make live calls to the ChannelStore node and thus generate actual billing transactions. Developers must therefore add themselves as Test Users to the "billing testing" app to avoid incurring any billing charges while testing the app.
->
-> To use an app for billing testing:
->
-> * The app must be [sideloaded](doc:developer-setup#sideloading-apps) on the Roku device.
-> * The app must be the only one in the developer's account designated for billing testing.
-> * The developer account making purchases on the sideloaded app must be designated as a [Test User](doc:test-users).
-> * The Test User's Roku account must be linked to the Roku device on which the app is sideloaded.
 
-To enable billing testing on an app with the new app builder UI, follow these steps:
+## Prerequisites
+
+Using an app for billing testing requires the following:
+
+- The app must be [sideloaded](doc:developer-setup#sideloading-apps) on the Roku device.
+- The app must be the only one in the developer's account designated for billing testing.
+- The developer account making purchases on the sideloaded app must be designated as a [Test User](doc:test-users).
+- The Test User's Roku account must be linked to the Roku device on which the app is sideloaded.
+
+## Enabling an app for billing test
+
+To enable billing testing on an app, follow these steps:
 
 1. In the [Developer Dashboard](https://developer.roku.com/developer), click **Public apps** or **Beta apps** for whichever app type you want to use for billing testing. You can only use one public or beta app at a time for billing testing.
 

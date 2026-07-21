@@ -13,7 +13,7 @@ metadata:
 next:
   description: ''
 ---
-You can use the [**Roles and access** page in the Roku Launchpad](https://developer.roku.com/account/user-access-list) to enable team members to manage your account or specific apps within it. A _**role**_ gives a user a set of one or more _**permissions**_ to complete specific tasks in your account. Each role has an _**access level**_, which determines whether the user can complete tasks for all the apps in your account or just one or more selected apps.
+You can use the [**Roles and access** page in the Roku Launchpad](https://developer.roku.com/account/user-access-list) to enable team members to manage your account or specific apps within it. A **_role_** gives a user a set of one or more **_permissions_** to complete specific tasks in your account. Each role has an **_access level_**, which determines whether the user can complete tasks for all the apps in your account or just one or more selected apps.
 
 For example, the _app management_ role lets users manage and publish one or more apps, the _financial reports_ role lets users view transaction and sales activity reports for one or more apps in the account, and the _administrative_ role lets users complete all tasks in the account.
 
@@ -29,7 +29,7 @@ To add a user to your account and assign them roles and permissions, follow thes
 
    ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-invite-user-button.png)
 
-3. In the **Invite a user** page, enter the following information: <a id="user-roles" />
+3. In the **Invite a user** page, enter the following information: <a id="user-roles"></a>
    <HTMLBlock>{`
    <table>
    <thead>
@@ -85,6 +85,7 @@ Roku developer accounts can have the following roles and permissions:
 <tbody>
 <tr>
 <td class="short-line"><strong>Administrator</strong></td>
+
 <td class="long-line">Same permissions as the root account holder. An administrator can perform all the tasks listed in this table, as well as: <ul>
 <li>Create and delete apps</li>
 <li>Electronically approve agreements (such as the Roku Distribution Agreement)</li>
@@ -102,22 +103,28 @@ Roku developer accounts can have the following roles and permissions:
 </tr>
 <tr>
 <td class="short-line">App management</td>
+
 <td class="long-line">Access the app management and publishing features for one or more apps, including: <ul>
 <li>App properties and metadata</li>
 <li>Package Upload</li>
 <li>Static Analysis</li>
 <li>Submit for publishing</li>
 <li>Search feeds (validate, submit, and manage)</li>
+<li>Enable billing test app</li>
+
+
 </ul><br><br>Select one or more apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to the management and publishing features for all existing apps (as you create new apps, you will need to manually add them to grant access).</td>
 <td class="short-line">App</td>
 </tr>
 <tr>
 <td class="short-line">Non-financial Reports</td>
+
 <td class="long-line">Access the following app analytics and health reports: <ul>
 <li>App Health</li>
 <li>App Engagement</li>
 <li>App Stability</li>
 <li>Viewership Summary</li>
+
 </ul><br><br>Select apps from the drop-down list. You can filter the list of apps as you enter the app name. Click <strong>Select all</strong> to grant the user access to view the financial reports for all existing apps (as you create new apps, you will need to manually add them to grant access to their financial reports).</td>
 <td class="short-line">App</td>
 </tr>
@@ -170,9 +177,7 @@ Roku Content Partner accounts can have the following roles and permissions:
       </td>
 
       <td>
-        Maintain administrative control over the Roku Content Partner Portal. This user can:
-
-        <ul>
+        Maintain administrative control over the Roku Content Partner Portal. This user can:<ul>
           <li>Manage company account information.</li>
           <li>Manage users, roles, and permissions</li>
           <li>Manage featured rows, brand assets, and promotional creatives</li>
@@ -187,9 +192,7 @@ Roku Content Partner accounts can have the following roles and permissions:
       </td>
 
       <td>
-        Manage merchandising and creative assets. This user can:
-
-        <ul>
+        Manage merchandising and creative assets. This user can:<ul>
           <li>Manage featured rows, brand assets, and promotional creatives.</li>
           <li>Pin titles to featured rows</li>
           <li>Upload and manage brand assets (tiles, banners, CTA images)</li>
@@ -204,9 +207,7 @@ Roku Content Partner accounts can have the following roles and permissions:
       </td>
 
       <td>
-        Manage title assets and operational reports. This user can:
-
-        <ul>
+        Manage title assets and operational reports. This user can:<ul>
           <li>Access title status and issue reports for assets.</li>
         </ul>
       </td>
@@ -218,9 +219,7 @@ Roku Content Partner accounts can have the following roles and permissions:
       </td>
 
       <td>
-        Manage title rights, partner deals, and business performance reporting. This user can:
-
-        <ul>
+        Manage title rights, partner deals, and business performance reporting. This user can:<ul>
           <li>Access title status and issue reports for rights.</li>
         </ul>
       </td>
@@ -232,9 +231,7 @@ Roku Content Partner accounts can have the following roles and permissions:
       </td>
 
       <td>
-        View Roku analytics reports. This user can:
-
-        <ul>
+        View Roku analytics reports. This user can:<ul>
           <li>Access audience, engagement, and performance analytics.</li>
         </ul>
       </td>
@@ -264,8 +261,8 @@ Roku Content Partner accounts can have the following roles and permissions:
       </td>
 
       <td>
-        * Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the [Roku Partner Payouts Program](https://developer.roku.com/payments/) in order to monetize content in a Roku app.
-        * Access the Roku Pay transaction, sales activity, and payout financial reports.
+        - Enter and edit payout settings, which include contact information, entity and payout method, and tax forms. This role (or Admin) is needed for enrolling a Roku developer account in the [Roku Partner Payouts Program](https://developer.roku.com/payments/) in order to monetize content in a Roku app.
+        - Access the Roku Pay transaction, sales activity, and payout financial reports.
       </td>
     </tr>
   </tbody>
@@ -307,10 +304,10 @@ You can search log entries by email address, page name, action, or app name, and
 
 ![roku815px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-activity-logs-page.png)
 
-* To view the activity log for all users, click **Activity logs** at the top of the page.
+- To view the activity log for all users, click **Activity logs** at the top of the page.
 
   ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-activity-logs-link-v2.png)
-* To view the activity log for a specific user, click the menu icon on the right-hand side of the user’s row, and then click **View user activity** in the shortcut menu.
+- To view the activity log for a specific user, click the menu icon on the right-hand side of the user’s row, and then click **View user activity** in the shortcut menu.
 
   ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-activity-logs-shortcut.png)
 
@@ -324,3 +321,5 @@ If you have been granted access to another account, you can change the account y
 2. In the **Choose an account** page, select the desired account from the list. Your root account is listed at the top, and the accounts shared with you are listed below.
 
    ![roku600px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-switch-account-list.png)
+
+<br />

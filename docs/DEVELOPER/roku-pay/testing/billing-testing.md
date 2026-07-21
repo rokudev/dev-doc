@@ -16,6 +16,10 @@ Developers can designate one public or beta app for "billing testing" to observe
 
 When an app enabled for "billing testing" is sideloaded, calls to the ChannelStore node will use the product catalog associated with that app. Developers should therefore upload a package file that reflects the actual app being tested. This is because the product catalog of the app designated for "billing testing" is always returned regardless of the actual UI or behavior of the package that is sideloaded.
 
+> Billing testing now supports multiple developers. Developers with the Admin or App Management role can now enable an app as the billing test app for their account. This removes the previous restriction where only the account owner could enable billing testing for an app in their developer account.
+>
+> As a reminder, while multiple users can now use the same billing test app concurrently, a developer can still have only one billing test app linked to their account at a time.
+
 ## Prerequisites
 
 Using an app for billing testing requires the following:

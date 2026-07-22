@@ -136,13 +136,13 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, or `AV1` (DASH only) codecs
     <tr>
       <th></th>
       <th scope="col">AVC (H.264)</th>
-      <th scope="col">HEVC (H.265)[^1]</th>
+      <th scope="col">HEVC (H.265)<sup>1</sup></th>
       <th scope="col">AV1 (DASH only)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Aspect Ratio 2[^2]</th>
+      <th scope="row">Aspect Ratio<sup>2</sup></th>
       <td>Various</td>
       <td>Various</td>
       <td></td>
@@ -154,7 +154,7 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, or `AV1` (DASH only) codecs
       <td>Various up to 7680 x 4320</td>
     </tr>
     <tr>
-      <th scope="row">Input Frame Rate[^3]</th>
+      <th scope="row">Input Frame Rate<sup>3</sup></th>
       <td>24p, 25p, 30p, 50p, 60p</td>
       <td>24p, 25p, 30p, 50p, 60p</td>
       <td>24p,25p,30p,50p,60p</td>
@@ -196,7 +196,7 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, or `AV1` (DASH only) codecs
       <td>1.5x average</td>
     </tr>
     <tr>
-      <th scope="row">Key Frame Interval [^4]</th>
+      <th scope="row">Key Frame Interval<sup>3</sup></th>
       <td>&lt; 10s</td>
       <td>&lt; 10s</td>
       <td>&lt; 10s</td>
@@ -213,10 +213,11 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, or `AV1` (DASH only) codecs
 
 Some decoder and security features are device specific. For details, see [Roku Models and Features](doc:hardware).
 
-[^1]: Only supported on **Roku 4K capable** devices.
-[^2]: The dimensions vary on a title-by-title basis depending on the source material and the target aspect ratio for the encoding (such as 4:3 or 16:9). Content should always be encoded at full width, and the height is adjusted. For example, a 1.66 aspect ratio source is encoded as a 720x432 video and displayed as letterboxed for a 4:3 display.
-[^3]: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is < 10 seconds for VOD and < 5 seconds for live content, and the segment size should be constant.
-[^4]: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is < 10 seconds for VOD and < 5 seconds for live content, and the segment size should be constant.
+<ol>
+  <li>Only supported on <strong>Roku 4K capable</strong> devices.</li>
+  <li>The dimensions vary on a title-by-title basis depending on the source material and the target aspect ratio for the encoding (such as 4:3 or 16:9). Content should always be encoded at full width, and the height is adjusted. For example, a 1.66 aspect ratio source is encoded as a 720x432 video and displayed as letterboxed for a 4:3 display.</li>
+  <li>All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is &lt; 10 seconds for VOD and &lt; 5 seconds for live content, and the segment size should be constant.</li>
+</ol>
 
 ## Supported audio codecs
 

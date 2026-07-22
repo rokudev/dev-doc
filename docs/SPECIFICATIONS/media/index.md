@@ -25,7 +25,7 @@ Roku devices support several audio/video container formats. These formats encaps
   - supported video codecs: AVC, HEVC
   - supported audio codecs: AAC, AC3, EAC3, AC4, ALAC, MP3, PCM
 - MKV, WebM
-  - supported video codecs: AVC, HEVC, VP9
+  - supported video codecs: AVC, HEVC
   - supported audio codecs: AAC, AC3, EAC3, Dolby Atmos, ALAC, DTS, DTSE, FLAC, MP3, OPUS, PCM, VORBIS
 
 **Additional Notes:**
@@ -69,7 +69,7 @@ Roku supports the following widely-used standard formats for adaptive bit rate s
     <tr>
       <th scope="row">Video Codecs</th>
       <td>AVC, HEVC</td>
-      <td>AVC, HEVC, VP9</td>
+      <td>AVC, HEVC</td>
       <td>AVC, HEVC</td>
     </tr>
     <tr>
@@ -129,9 +129,7 @@ For trickplay of live streams, apps should seek to a position of 999,999 seconds
 
 ## Supported video codecs
 
-Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only) codecs.
-
-
+Videos can be encoded using `H.264`, `HEVC (H.265)`, or `AV1` (DASH only) codecs.
 
 <table>
   <thead>
@@ -139,14 +137,12 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
       <th></th>
       <th scope="col">AVC (H.264)</th>
       <th scope="col">HEVC (H.265)[^1]</th>
-      <th scope="col">VP9[^2]</th>
       <th scope="col">AV1 (DASH only)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Aspect Ratio 2[^3]</th>
-      <td>Various</td>
+      <th scope="row">Aspect Ratio 2[^2]</th>
       <td>Various</td>
       <td>Various</td>
       <td></td>
@@ -155,14 +151,12 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
       <th scope="row">Dimension</th>
       <td>Various up to 1920x1080</td>
       <td>Various up to 3840x2160</td>
-      <td>Various up to 3840x2160</td>
       <td>Various up to 7680 x 4320</td>
     </tr>
     <tr>
-      <th scope="row">Input Frame Rate[^4]</th>
+      <th scope="row">Input Frame Rate[^3]</th>
       <td>24p, 25p, 30p, 50p, 60p</td>
       <td>24p, 25p, 30p, 50p, 60p</td>
-      <td>24p, 25p, 30p, 60p[^6]</td>
       <td>24p,25p,30p,50p,60p</td>
     </tr>
     <tr>
@@ -170,25 +164,21 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
       <td>Rec.709</td>
       <td>Rec.709, Rec.2020</td>
       <td>Rec.709, Rec.2020</td>
-      <td>Rec.709, Rec.2020</td>
     </tr>
     <tr>
       <th scope="row">Profile</th>
       <td>main, high</td>
       <td>main, main 10</td>
-      <td>profile 0, profile 2</td>
       <td>main, main 10</td>
     </tr>
     <tr>
       <th scope="row">Level</th>
       <td>4.1, 4.2</td>
       <td>4.1, 5.0, 5.1</td>
-      <td></td>
       <td>4.1, 5.0, 5.1</td>
     </tr>
     <tr>
       <th scope="row">Video Mode</th>
-      <td>Constrained VBR</td>
       <td>Constrained VBR</td>
       <td>Constrained VBR</td>
       <td>Constrained VBR</td>
@@ -198,18 +188,15 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
       <td>Up to 10Mbps</td>
       <td>Up to 40Mbps</td>
       <td>Up to 40Mbps</td>
-      <td>Up to 40Mbps</td>
     </tr>
     <tr>
       <th scope="row">Peak Video Bit rate</th>
       <td>1.5x average</td>
       <td>1.5x average</td>
       <td>1.5x average</td>
-      <td>1.5x average</td>
     </tr>
     <tr>
-      <th scope="row">Key Frame Interval [^5]</th>
-      <td>&lt; 10s</td>
+      <th scope="row">Key Frame Interval [^4]</th>
       <td>&lt; 10s</td>
       <td>&lt; 10s</td>
       <td>&lt; 10s</td>
@@ -218,7 +205,6 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
       <th scope="row">HDR support</th>
       <td>Dolby Vision: dvav.09</td>
       <td>Dolby Vision: dvhe.05<br />HDR10 (HEVC profile Main 10)<br />HLG</td>
-      <td>HDR10</td>
       <td>Dolby Vision<br />HDR10 <br />HDR10+</td>
     </tr>
   </tbody>
@@ -228,11 +214,9 @@ Videos can be encoded using `H.264`, `HEVC (H.265)`, `VP9`, or `AV1` (DASH only)
 Some decoder and security features are device specific. For details, see [Roku Models and Features](doc:hardware).
 
 [^1]: Only supported on **Roku 4K capable** devices.
-[^2]: Only supported on **Roku 4K capable** devices.
-[^3]: The dimensions vary on a title-by-title basis depending on the source material and the target aspect ratio for the encoding (such as 4:3 or 16:9). Content should always be encoded at full width, and the height is adjusted. For example, a 1.66 aspect ratio source is encoded as a 720x432 video and displayed as letterboxed for a 4:3 display.
+[^2]: The dimensions vary on a title-by-title basis depending on the source material and the target aspect ratio for the encoding (such as 4:3 or 16:9). Content should always be encoded at full width, and the height is adjusted. For example, a 1.66 aspect ratio source is encoded as a 720x432 video and displayed as letterboxed for a 4:3 display.
+[^3]: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is < 10 seconds for VOD and < 5 seconds for live content, and the segment size should be constant.
 [^4]: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is < 10 seconds for VOD and < 5 seconds for live content, and the segment size should be constant.
-[^5]: All segments should start with an IDR frame and align across all bit rate variants. The recommended segment size is < 10 seconds for VOD and < 5 seconds for live content, and the segment size should be constant.
-[^6]: Only supported on HDR10 capable Roku devices.
 
 ## Supported audio codecs
 
@@ -374,13 +358,11 @@ function CanPlay4K() as Boolean
       return false 'HDCP version is not 2.2
   end if
 
-  ' Check if the Roku player can decode 4K 60fps HEVC streams or 4K 30fps vp9 streams
+  ' Check if the Roku player can decode 4K 60fps HEVC streams
   hevc_video = { Codec: "hevc", Profile: "main", Level: "5.1" }
-  vp9_video = { Codec: "vp9", Profile: "profile 0" }
   can_decode_hevc = dev_info.CanDecodeVideo(hevc_video)
-  can_decode_vp9 = dev_info.CanDecodeVideo(vp9_video)
-  if can_decode_hevc.result <> true OR can_decode_vp9.result <> true
-    return false 'device cannot decode 4K HEVC AND VP9 streams
+  if can_decode_hevc.result <> true
+    return false 'device cannot decode 4K HEVC streams
   end if
 
   ' (Optional) Check if the Roku player decrypts inside a TEE
@@ -393,7 +375,7 @@ function CanPlay4K() as Boolean
 end function
 ```
 
->  This example returns true only if both 4K HEVC and 4K VP9 decoding is supported. If your 4K UHD content is only encoded in one of these codecs, modify the third conditional statement as necessary.
+>  This example returns true only if 4K HEVC decoding is supported. If your 4K UHD content is only encoded in one of these codecs, modify the third conditional statement as necessary.
 
 ### HDR10 video streaming requirements
 

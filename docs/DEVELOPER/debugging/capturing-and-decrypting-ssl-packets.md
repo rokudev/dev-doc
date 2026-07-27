@@ -41,7 +41,7 @@ Click for more information on how to create a [self-signed SSL certificate](http
 
 **Important:** Before performing the following steps, make sure that **SSH management** is enabled on **DD-WRT**.
 
-1. SSH into DD-WRT as root root.
+1. SSH into DD-WRT as root.
 2. Add DD-WRT to monitor traffic by entering the following console commands:
 
     ```

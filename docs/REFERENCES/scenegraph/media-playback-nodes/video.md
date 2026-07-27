@@ -109,14 +109,14 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>integer</td>
       <td>0</td>
       <td>READ\_ONLY</td>
-      <td>The error code associated with the video play error set in the <code>state</code> field: <pre><code>-  0    no error                                                     <br />- -1    network error (server down or unresponsive, server is unreachable, network setup problem on the client).<br />- -2    connection timed out                                         <br />- -3    unknown/unspecified or generic Error                         <br />- -4    empty list; no streams were specified to play                <br />- -5    media error; the media format is unknown or unsupported      <br />- -6    DRM error</code></pre><br />Use the <strong>errorStr</strong> and and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
+      <td>The error code associated with the video play error set in the <code>state</code> field: <pre><code>-  0    no error                                                     <br />- -1    network error (server down or unresponsive, server is unreachable, network setup problem on the client).<br />- -2    connection timed out                                         <br />- -3    unknown/unspecified or generic Error                         <br />- -4    empty list; no streams were specified to play                <br />- -5    media error; the media format is unknown or unsupported      <br />- -6    DRM error</code></pre><br />Use the <strong>errorStr</strong> and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
     </tr>
     <tr>
       <td>errorMsg</td>
       <td>string</td>
       <td />
       <td>READ\_ONLY</td>
-      <td>An error message describing the video play error set in the <code>state</code> field.<br /><br />Use the <strong>errorStr</strong> and and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
+      <td>An error message describing the video play error set in the <code>state</code> field.<br /><br />Use the <strong>errorStr</strong> and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
     </tr>
     <tr>
       <td>errorStr</td>

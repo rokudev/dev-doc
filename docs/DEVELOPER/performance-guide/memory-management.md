@@ -118,5 +118,5 @@ You can view system memory usage multiple ways:
 
 - Use the [Roku Resource Monitor](https://devtools.web.roku.com/roku-resource-monitor)
 
-- Ttelnet to `port 8080`and run `sgnodes all`
+- Telnet to `port 8080` and run `sgnodes all`
 - Telnet to port 8085, press **^C** to break into the debugger, and run `bcs` or `bscs`.

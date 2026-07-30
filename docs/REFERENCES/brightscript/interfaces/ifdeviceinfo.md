@@ -1078,7 +1078,7 @@ An associative array that includes a flag indicating whether the video format ca
 
 If the Roku Player cannot play that video format, it will return false, and return the closest video format it can play, with the changed fields, such as:
 
-`{"codec":["hevc","mpeg1","mpeg2","h263","mpeg4 avc","vp9"],"result":false,"updated":"codec"}`
+`{"codec":["hevc","mpeg1","mpeg2","h263","mpeg4 avc"],"result":false,"updated":"codec"}`
 
 The return value shows the Roku Player cannot play requested video format, shows the updated keys of the requested video format (level and profile) that it can support, and the all the key values of the requested video format supported by the Roku Player.
 

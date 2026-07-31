@@ -18,8 +18,8 @@ Below is a comprehensive list of formatting requirements for partner media asset
 
 As an alternative to this specification, Roku Channel supports content delivery via MovieLabs specification.
 
-* **MMC and MEC** - Roku Channel MovieLabs service was built on MEC v2.9 and MMC v1.10 as defined on MovieLabs’ site: [https://www.movielabs.com/md/](https://www.movielabs.com/md/)
-* **EMA avails** - Roku Channel supports the latest version of the [EMA specification](https://movielabs.com/md/avails/) via the xlsx deliverable
+- **MMC and MEC** - Roku Channel MovieLabs service was built on MEC v2.9 and MMC v1.10 as defined on MovieLabs’ site: [https://www.movielabs.com/md/](https://www.movielabs.com/md/)
+- **EMA avails** - Roku Channel supports the latest version of the [EMA specification](https://movielabs.com/md/avails/) via the xlsx deliverable
 
 Roku prefers MovieLabs deliverables from all Premium Subscription (SVOD) Partners. Please see additional Roku Channel-specific MovieLabs delivery details [here](#movielabs-content-delivery)
 
@@ -39,35 +39,35 @@ Ad break timecodes shall be delivered according to the Roku Ad Policy in the adB
 
 ##### Movie ad policy
 
-* No adBreaks should be listed during the first 10 minutes of playback
-* No pre-roll adBreak should be listed – 00:00:00.000
-* adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
-* There should be no less than 10 minutes between each adBreak
-* No adBreaks within 10 minutes of end credits
+- No adBreaks should be listed during the first 10 minutes of playback
+- No pre-roll adBreak should be listed – 00:00:00.000
+- adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
+- There should be no less than 10 minutes between each adBreak
+- No adBreaks within 10 minutes of end credits
 
 ##### Series episode ad policy
 
 Content length longer than 15 minutes:
 
-* No adBreaks should be listed during the first 5 mins of playback
-* No pre-roll adBreak should be listed - 00:00:00
-* adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
-* There should be no less than 7 mins between each adBreak
-* No adBreaks within the last 5 minutes of end credits
+- No adBreaks should be listed during the first 5 mins of playback
+- No pre-roll adBreak should be listed - 00:00:00
+- adBreak cue points should be provided at naturally occurring scene breaks and/or fades to black
+- There should be no less than 7 mins between each adBreak
+- No adBreaks within the last 5 minutes of end credits
 
 ### Kids directed content policy
 
 “Kids-Directed Content” is content that either: (i) is directed to children as defined by the applicable law of the jurisdiction in which the content is shown (e.g., [The Children's Online Privacy Protection Act](https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa)); or (ii) was made for viewing primarily by children within the jurisdiction in which the content is shown.
 
-* Roku must be made aware of the intent to submit or distribute content that is directed at children
-* DO NOT submit or distribute kids directed content without Roku’s express written approval
-* When given approval by Roku to submit or distribute content directed at children, all content metadata must include the following:
-* For Movie content:
-* The `<tag>` “kidsdirected” (all lowercase) must be included as one of the tags for every movie
-* A valid MPAA, USA_PR, or TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
-* For Episodic Series content:
-* The `<tag>` “kidsdirected” (all lowercase) must be included as one of the series and episodic tags for every series and episode
-* A valid TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
+- Roku must be made aware of the intent to submit or distribute content that is directed at children
+- DO NOT submit or distribute kids directed content without Roku’s express written approval
+- When given approval by Roku to submit or distribute content directed at children, all content metadata must include the following:
+- For Movie content:
+- The `<tag>` “kidsdirected” (all lowercase) must be included as one of the tags for every movie
+- A valid MPAA, USA_PR, or TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
+- For Episodic Series content:
+- The `<tag>` “kidsdirected” (all lowercase) must be included as one of the series and episodic tags for every series and episode
+- A valid TV parental [rating](#rating-values-by-rating-system-and-country) must be included. “UNRATED” and “Not Rated” are not acceptable ratings for kids directed content
 
 Please see [here](https://docs.roku.com/published/madeforkids) for more information and guidance on content "made for kids"
 
@@ -75,10 +75,10 @@ Please see [here](https://docs.roku.com/published/madeforkids) for more informat
 
 Roku Channel does not allow branding or external URL links/calls to action on key art or within the video and closed captioning. Calls to action are creatives and/or content segments that direct users outside of the Roku Channel ecosystem to consume content on external services. Video must be edited to remove links or directions for users to visit external sites. This includes:
 
-* Brand logos
-* Web urls
-* QR codes
-* Verbally or textually calling viewers to "click", "subscribe", "buy now", "go to", etc
+- Brand logos
+- Web urls
+- QR codes
+- Verbally or textually calling viewers to "click", "subscribe", "buy now", "go to", etc
 
 Please contact your Roku representative for more details.
 
@@ -94,17 +94,17 @@ Please do not submit music cue sheets with the video package deliverables via As
 
 Roku augments metadata and artwork that appears in Roku Channel on Roku devices, web browsers, mobile applications, and other off-platform players with data supplied from Gracenote’s database where available. The Gracenote data aids in a unified experience of a title across platforms as well as on the greater Roku ecosystem. Roku will attempt to match all content delivered by our Partners to a corresponding record in Gracenote’s database. _At this time all metadata and artwork that appears on Roku Channel is sourced from Gracenote if that content is found in Gracenote’s database._
 
-Gracenote leverages "Artwork Personalization" where they supply alternate imagery to diversify title artwork for different users based on several factors (demographics, popularity, etc.); which has led to an increase in user engagement. Gracenote does accept official key art from Partners, but not all users will see official art unless the algorithm serves it to them. Gracenote supplies ~3 unique images, and create alternative versions of artwork sourced from a variety of places (ex. original broadcaster, production studio, creative agency). Gracenote has stated to Roku that all images are under a fair use license, and they apply the same quality standards to Personalized Images as they do to partner supplied Key Art, e.g., no major spoilers, no dark/blurry/grainy images, no violent/suggestive imagery, avoidance of smoking.
+Gracenote leverages "Artwork Personalization" where they supply alternate imagery to diversify title artwork for different users based on several factors (demographics, popularity, etc.); which has led to an increase in user engagement. Gracenote does accept official key art from Partners, but not all users will see official art unless the algorithm serves it to them. Gracenote supplies \~3 unique images, and create alternative versions of artwork sourced from a variety of places (ex. original broadcaster, production studio, creative agency). Gracenote has stated to Roku that all images are under a fair use license, and they apply the same quality standards to Personalized Images as they do to partner supplied Key Art, e.g., no major spoilers, no dark/blurry/grainy images, no violent/suggestive imagery, avoidance of smoking.
 
 Our systems use a combination of methods to match a title its correct Gracenote record. Partners can aid in the matching to a Gracenote record by providing accurate metadata including:
 
-* Exact title of a series, movie, TV special, or short form video
-* Release dates that are accurate to the year the title was originally released on any platform
-* Accurate season and episode numbers according to the original release order
-* Accurate TMS (Gracenote) IDs by content type
-* Content classified as an episode with Gracenote must be delivered as an Episode to Roku
-* Content classified as a movie with Gracenote must be delivered as a movie to Roku
-* Content classified as a TV Special with Gracenote can be delivered as a movie to Roku
+- Exact title of a series, movie, TV special, or short form video
+- Release dates that are accurate to the year the title was originally released on any platform
+- Accurate season and episode numbers according to the original release order
+- Accurate TMS (Gracenote) IDs by content type
+- Content classified as an episode with Gracenote must be delivered as an Episode to Roku
+- Content classified as a movie with Gracenote must be delivered as a movie to Roku
+- Content classified as a TV Special with Gracenote can be delivered as a movie to Roku
 
 Partners can aid in the curation of their content on Roku Channel by providing Tags with each movie, episode, or clip. Roku Channel editorial team and recommendations engine will utilize the provided Tags and Genres to help surface content on Roku Channel Platform UI. The more tags that are included, the more ways the content can be curated/surfaced to the end user. Please see [Best practices: content tags and metadata](doc:content-tags-and-metadata) for more details.
 
@@ -112,35 +112,35 @@ Partners can aid in the curation of their content on Roku Channel by providing T
 
 ### Video requirements
 
-* All video content must be **full program only**:
-  * no bars/tone or slates at program start
-  * no textless video after program end
-  * no more than 2 seconds of black at program start
-  * no more than 2 seconds of black after program end
+- All video content must be **full program only**:
+  - no bars/tone or slates at program start
+  - no textless video after program end
+  - no more than 2 seconds of black at program start
+  - no more than 2 seconds of black after program end
 
-* Video files should be semi-textless (also known as "texted with no subtitles" or "textless with main, ends, and graphic text"). Video can include opening and end credit text but all subtitles for foreign dialogue must be removed.
+- Video files should be semi-textless (also known as "texted with no subtitles" or "textless with main, ends, and graphic text"). Video can include opening and end credit text but all subtitles for foreign dialogue must be removed.
 
-* Do not include advertisements within the video. All ad insertion points for ad supported content will be provided in the metadata file based on the [Roku Ad Policy guidelines](#ad-policy)
+- Do not include advertisements within the video. All ad insertion points for ad supported content will be provided in the metadata file based on the [Roku Ad Policy guidelines](#ad-policy)
 
-* Commercial blacks may be included within the video so long as they are no longer than 2 seconds
+- Commercial blacks may be included within the video so long as they are no longer than 2 seconds
 
-* Commercial blacks are acceptable for episodic TV content but not expected for movie content
+- Commercial blacks are acceptable for episodic TV content but not expected for movie content
 
-* Video files must be delivered as a single, seamless video file
+- Video files must be delivered as a single, seamless video file
 
-* Do not deliver hard parted (broken into segments at the ad break points) video files
+- Do not deliver hard parted (broken into segments at the ad break points) video files
 
-* Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the video prior to delivery to Roku
+- Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the video prior to delivery to Roku
 
-* HD video content must be delivered in a 16:9 container
+- HD video content must be delivered in a 16:9 container
 
-* Full-Frame presentation (1.78 aspect ratio) is preferred whenever available
+- Full-Frame presentation (1.78 aspect ratio) is preferred whenever available
 
-* Letterboxed 16:9 is allowed but should be minimized
+- Letterboxed 16:9 is allowed but should be minimized
 
-* SD 16:9 content must not be delivered in a 4:3 container with letterboxing
+- SD 16:9 content must not be delivered in a 4:3 container with letterboxing
 
-* High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible.
+- High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible.
 
 #### Video frame rate
 
@@ -148,128 +148,35 @@ Roku supports a variety of frame rates and scan types. All video files should be
 
 #### Video resolution
 
-| Type  | Width | Height | Pixel Aspect Ratio              |
-| ----- | ----- | ------ | ------------------------------- |
-| SD    | 720   | 480    | 4:3 or 16:9 (anamorphic pixels) |
-| SD    | 640   | 480    | 1:1 (square pixels)             |
-| SD    | 853   | 480    | 1:1 (square pixels)             |
-| SD    | 720   | 576    | 4:3 or 16:9 (anamorphic pixels) |
-| SD    | 768   | 576    | 1:1 (square pixels)             |
-| SD    | 1024  | 576    | 1:1 (square pixels)             |
-| HD    | 1280  | 720    | 1:1 (square pixels)             |
-| FHD   | 1920  | 1080   | 1:1 (square pixels)             |
-| UHD** | 3840  | 2160   | 1:1 (square pixels)             |
+| Type    | Width | Height | Pixel Aspect Ratio              |
+| ------- | ----- | ------ | ------------------------------- |
+| SD      | 720   | 480    | 4:3 or 16:9 (anamorphic pixels) |
+| SD      | 640   | 480    | 1:1 (square pixels)             |
+| SD      | 853   | 480    | 1:1 (square pixels)             |
+| SD      | 720   | 576    | 4:3 or 16:9 (anamorphic pixels) |
+| SD      | 768   | 576    | 1:1 (square pixels)             |
+| SD      | 1024  | 576    | 1:1 (square pixels)             |
+| HD      | 1280  | 720    | 1:1 (square pixels)             |
+| FHD     | 1920  | 1080   | 1:1 (square pixels)             |
+| UHD\*\* | 3840  | 2160   | 1:1 (square pixels)             |
 
-_**UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel_
+_\*\*UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel_
 
 #### Video formats
 
-<Table align={["left","left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Name
-      </th>
-
-      <th>
-        Codecs
-      </th>
-
-      <th>
-        Extension
-      </th>
-
-      <th>
-        Bitrate
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        Apple® ProRes
-      </td>
-
-      <td>
-        ProRes 444 (all profiles)  
-        ProRes 4444 (all profiles)  
-        ProRes 422 (all profiles)
-      </td>
-
-      <td>
-        .mov
-      </td>
-
-      <td>
-        50 Mbps or greater
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        XDCam
-      </td>
-
-      <td>
-
-      </td>
-
-      <td>
-        .mxf
-      </td>
-
-      <td>
-        50 Mbps or greater
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        MPEG-2
-      </td>
-
-      <td>
-
-      </td>
-
-      <td>
-        .ts  
-        .mpg
-      </td>
-
-      <td>
-        HD - 15 Mbps or greater  
-        SD - 3.75 Mbps or greater
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        MPEG-4
-      </td>
-
-      <td>
-        H.264
-      </td>
-
-      <td>
-        .mp4
-      </td>
-
-      <td>
-        5 Mbps or greater
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Name          | Codecs                                                                                   | Extension     | Bitrate                                                |
+| :------------ | :--------------------------------------------------------------------------------------- | :------------ | :----------------------------------------------------- |
+| Apple® ProRes | ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles) | .mov          | 50 Mbps or greater                                     |
+| XDCam         |                                                                                          | .mxf          | 50 Mbps or greater                                     |
+| MPEG-2        |                                                                                          | .ts<br />.mpg | HD - 15 Mbps or greater<br />SD - 3.75 Mbps or greater |
+| MPEG-4        | H.264                                                                                    | .mp4          | 5 Mbps or greater                                      |
 
 ### Audio requirements
 
 _Files must have industry standard audio configurations with all channels clearly labeled for position and language_ (depending on file format)
 
-* PCM 16-Bit or 24-Bit 48kHz audio at highest bitrate preferred
-* Dolby AC3 Audio is supported
+- PCM 16-Bit or 24-Bit 48kHz audio at highest bitrate preferred
+- Dolby AC3 Audio is supported
 
 **Roku prefers to receive 5.1 and Stereo audio whenever possible**
 
@@ -308,9 +215,9 @@ Content delivered with an audio language that is not primary to the territory of
 
 #### Sidecar secondary audio
 
-* Sidecar audio must be delivered as a single interleaved file. Roku does not support discrete single-channel files
-* Sidecar audio must sync to the video source file delivered to Roku
-* Roku supports one sidecar audio dub file per language
+- Sidecar audio must be delivered as a single interleaved file. Roku does not support discrete single-channel files
+- Sidecar audio must sync to the video source file delivered to Roku
+- Roku supports one sidecar audio dub file per language
 
 Below are the supported sidecar audio formats. Deliver sidecar audio with highest bitrate and sampling rate available.
 
@@ -347,35 +254,35 @@ Closed captions (also known as subtitles for the deaf or hard of hearing or SDH 
 
 **Closed captions/SDH subtitles/subtitles for the deaf or hard of hearing**
 
-* Transcribes the spoken dialogue and the sounds heard in an audio track
-* Intended as an accessibility device for the deaf or hard of hearing
-* Can be enabled/disabled (toggled on/off) by the viewer during playback
-* Includes text that describes sound effects and/or music cues and lyrics
-* Must include a full transcription of all spoken dialogue and narrative text that needs to be understood by the viewer, including forced narratives as the Roku player will only display a single text track at a time
-* Are companions to an audio track and must be provided in the same language and locale as that audio track
-* Will not be made available to the viewer if a companion audio track in the same language is not provided
-* May be required per regulatory agencies in certain territories
+- Transcribes the spoken dialogue and the sounds heard in an audio track
+- Intended as an accessibility device for the deaf or hard of hearing
+- Can be enabled/disabled (toggled on/off) by the viewer during playback
+- Includes text that describes sound effects and/or music cues and lyrics
+- Must include a full transcription of all spoken dialogue and narrative text that needs to be understood by the viewer, including forced narratives as the Roku player will only display a single text track at a time
+- Are companions to an audio track and must be provided in the same language and locale as that audio track
+- Will not be made available to the viewer if a companion audio track in the same language is not provided
+- May be required per regulatory agencies in certain territories
 
 **Full subtitles**
 
-* Translates all narratively important spoken dialogue and on-screen text from one language to another
-* Intended as a localization device when an audio track is in a language that the viewer does not understand
-* Must include a full translation of all spoken dialogue and narrative text that needs to be understood by the viewer, including forced narratives as the Roku player will only display a single text track at a time
-* Can be enabled/disabled (toggled on/off) by the viewer during playback
-* Does not include text that describes sound effects or music cues, but may translate song lyrics if narratively important to the viewer or as a creative choice
-* Can be made available to the viewer regardless of the audio track language(s) delivered
+- Translates all narratively important spoken dialogue and on-screen text from one language to another
+- Intended as a localization device when an audio track is in a language that the viewer does not understand
+- Must include a full translation of all spoken dialogue and narrative text that needs to be understood by the viewer, including forced narratives as the Roku player will only display a single text track at a time
+- Can be enabled/disabled (toggled on/off) by the viewer during playback
+- Does not include text that describes sound effects or music cues, but may translate song lyrics if narratively important to the viewer or as a creative choice
+- Can be made available to the viewer regardless of the audio track language(s) delivered
 
 **Forced narrative subtitles**
 
-* Translates narratively important spoken dialogue and/or on-screen text for the purpose of conveying information that may not be understood by the viewer. This information could include:
-  * Spoken dialogue in a language different from the audio track language selected by the viewer
-  * On-screen text in a language different from the audio track selected by the viewer
-  * Inaudible or difficult to hear audio (such as an overly noisy scene or poor-quality audio recordings)
-* Intended as a localization device when a portion of a program is presented in a language different from the main audio track language selected by the viewer or is otherwise unintelligible
-* Can NOT be enabled/disabled (toggled on/off) by the viewer during playback
-  * _Forced narrative playback WILL be disabled when the viewer enables a CC/SDH/Subtitle track as the Roku player will only display a single text track at a time. For this reason, it is required that CC/SDH and full subtitles contain all forced narrative elements_
-* Are companions to an audio track and must be provided in the same language and locale as that audio track
-* Will automatically display based on the audio language track selected by the viewer
+- Translates narratively important spoken dialogue and/or on-screen text for the purpose of conveying information that may not be understood by the viewer. This information could include:
+  - Spoken dialogue in a language different from the audio track language selected by the viewer
+  - On-screen text in a language different from the audio track selected by the viewer
+  - Inaudible or difficult to hear audio (such as an overly noisy scene or poor-quality audio recordings)
+- Intended as a localization device when a portion of a program is presented in a language different from the main audio track language selected by the viewer or is otherwise unintelligible
+- Can NOT be enabled/disabled (toggled on/off) by the viewer during playback
+  - _Forced narrative playback WILL be disabled when the viewer enables a CC/SDH/Subtitle track as the Roku player will only display a single text track at a time. For this reason, it is required that CC/SDH and full subtitles contain all forced narrative elements_
+- Are companions to an audio track and must be provided in the same language and locale as that audio track
+- Will automatically display based on the audio language track selected by the viewer
 
 ### Closed captions
 
@@ -387,31 +294,26 @@ For content intended for the US, Roku adheres to FCC closed captioning rules reg
 
 All content required by the FCC to have closed captioning must be delivered to Roku with closed captions and those captions must be conformed and synced to program. For content that is exempt from the closed caption requirement per FCC rules, a valid exemption code number must be included in the metadata. Allowable exemption code numbers and their definitions:
 
-1 - The content has never aired on television in the United States.  
-2 - The content has only aired on television in the United States without captions.  
-3 - The content has not aired on television in the United States with captions since September 30, 2012.  
-4 - The content does not consist of full-length video programming.  
-5 - The content does not fall within a category of online programming that requires captions under FCC regulations (49 C.F.R. § 79.4(b)).  
-6 - The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.
+1 - The content has never aired on television in the United States.<br />2 - The content has only aired on television in the United States without captions.<br />3 - The content has not aired on television in the United States with captions since September 30, 2012.<br />4 - The content does not consist of full-length video programming.<br />5 - The content does not fall within a category of online programming that requires captions under FCC regulations (49 C.F.R. § 79.4(b)).<br />6 - The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.
 
 For content intended for territories outside of the US, Roku will adhere to the requirements in that territory.
 
 Captions may be provided in one of two ways:
 
-* EIA-608/CEA-708 embedded in-stream in the video file
-* Sidecar caption file
-* Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
-* See below for a full listing of supported sidecar caption files
-* Sidecar captions must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
-* Do not provide an empty file (a file without text) for sidecar captions
-* TTML and WebVTT positional data supported
-* Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
+- EIA-608/CEA-708 embedded in-stream in the video file
+- Sidecar caption file
+- Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
+- See below for a full listing of supported sidecar caption files
+- Sidecar captions must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
+- Do not provide an empty file (a file without text) for sidecar captions
+- TTML and WebVTT positional data supported
+- Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
 
 _Closed caption text styling support is limited to:_
 
-* _bold \<b> and italic \<i> tags_
-* _text color_
-* _text positioning_
+- _bold \<b> and italic \<i> tags_
+- _text color_
+- _text positioning_
 
 _Quicktime video files must be accompanied by a sidecar closed caption file. Roku does not support the Quicktime text track._
 
@@ -429,19 +331,19 @@ _Quicktime video files must be accompanied by a sidecar closed caption file. Rok
 
 Content delivered with an audio language that is not primary to the territory of distribution must be delivered with an audio dub and/or subtitle file translating the content into that territory’s primary language.
 
-* Full subtitles must NOT be burned into the video
-* Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
-* See below for a full listing of supported sidecar subtitle files
-* Sidecar subtitles must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
-* Do not provide an empty file (a file without text) for sidecar subtitles
-* TTML and WebVTT positional data supported
-* Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
+- Full subtitles must NOT be burned into the video
+- Roku prefers a human-readable sidecar subtitle file such as .ttml, .dfxp, .vtt, or .srt
+- See below for a full listing of supported sidecar subtitle files
+- Sidecar subtitles must begin at timecode hour 00:00:00:00 as the Roku encoder does not honor the timecode embedded in the video file
+- Do not provide an empty file (a file without text) for sidecar subtitles
+- TTML and WebVTT positional data supported
+- Positional data provided in TTML and WebVTT captions will be honored as defined in the file provided
 
 _Subtitle text styling support is limited to:_
 
-* _bold \<b> and italic \<i> tags_
-* _text color_
-* _text positioning_
+- _bold \<b> and italic \<i> tags_
+- _text color_
+- _text positioning_
 
 | **Format Name**                             | Supports Positional Data | **File Extension** | Encoding | **Delivery Type** | **Languages**                                                                                                |
 | ------------------------------------------- | ------------------------ | ------------------ | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -457,130 +359,11 @@ Roku supports three image types for each piece of content. Each image type will 
 
 #### Image type definitions
 
-<Table align={["left","left","left","left","left","left"]}>
-  <thead>
-    <tr>
-      <th>
-        Format
-      </th>
-
-      <th>
-        Extensions
-      </th>
-
-      <th>
-        Image Type
-      </th>
-
-      <th>
-        Aspect  
-        Ratio
-      </th>
-
-      <th>
-        Minimum  
-        Resolution
-      </th>
-
-      <th>
-        Preferred  
-        Resolution
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        JPEG or PNG  
-        RGB  
-        72 ppi
-      </td>
-
-      <td>
-        .jpg  
-        .jpeg  
-        .png
-      </td>
-
-      <td>
-        Texted key art image with title treatment
-      </td>
-
-      <td>
-        16:9
-      </td>
-
-      <td>
-        800x450
-      </td>
-
-      <td>
-        1920x1080
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        JPEG or PNG  
-        RGB  
-        72 ppi
-      </td>
-
-      <td>
-        .jpg  
-        .jpeg  
-        .png
-      </td>
-
-      <td>
-        Textless background image used in background of program page
-      </td>
-
-      <td>
-        16:9
-      </td>
-
-      <td>
-        800x450
-      </td>
-
-      <td>
-        1920x1080
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        JPEG or PNG  
-        RGB  
-        72 ppi
-      </td>
-
-      <td>
-        .jpg  
-        .jpeg  
-        .png
-      </td>
-
-      <td>
-        Texted vertical poster image with title treatment
-      </td>
-
-      <td>
-        2:3
-      </td>
-
-      <td>
-        534x801
-      </td>
-
-      <td>
-        2000x3000
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| Format                           | Extensions                | Image Type                                                   | Aspect<br />Ratio | Minimum<br />Resolution | Preferred<br />Resolution |
+| :------------------------------- | :------------------------ | :----------------------------------------------------------- | :---------------- | :---------------------- | :------------------------ |
+| JPEG or PNG<br />RGB<br />72 ppi | .jpg<br />.jpeg<br />.png | Texted key art image with title treatment                    | 16:9              | 800x450                 | 1920x1080                 |
+| JPEG or PNG<br />RGB<br />72 ppi | .jpg<br />.jpeg<br />.png | Textless background image used in background of program page | 16:9              | 800x450                 | 1920x1080                 |
+| JPEG or PNG<br />RGB<br />72 ppi | .jpg<br />.jpeg<br />.png | Texted vertical poster image with title treatment            | 2:3               | 534x801                 | 2000x3000                 |
 
 #### Minimum art requirements by content type
 
@@ -616,13 +399,13 @@ Roku supports three image types for each piece of content. Each image type will 
 
 #### Artwork content guidelines
 
-* Key Art (graphic with the full title of the asset visible)
-* No sexually explicit or graphically violent artwork
-* Artwork should be post-theatrical and not include language such as _In Theaters Now_ or _Coming Soon_
-* Artwork designed specifically for digital delivery is preferred
-* Artwork for international territories should be localized for each territory
-* For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
-* Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku
+- Key Art (graphic with the full title of the asset visible)
+- No sexually explicit or graphically violent artwork
+- Artwork should be post-theatrical and not include language such as _In Theaters Now_ or _Coming Soon_
+- Artwork designed specifically for digital delivery is preferred
+- Artwork for international territories should be localized for each territory
+- For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
+- Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku
 
 #### Artwork placement on platform examples
 
@@ -710,39 +493,39 @@ Roku recommends verifying or updating the global and user preferences of the Asp
 
 Depending on what client is being used, there are different settings that can affect transfer speeds.
 
-* If using the Desktop Client GUI, global settings can be set [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings)
-* Transfer speeds can also be set on a per-Connection level (the "Speed" setting in step 7): [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections)
-* If connecting via command line, there is a specific switch: `-l 100m` would set the transfer rate at 100Mbps
-* If connecting via Aspera Shares, target rates can be set both system-wide or per-user in the Shares web interface [https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings) [https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings)
+- If using the Desktop Client GUI, global settings can be set [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings)
+- Transfer speeds can also be set on a per-Connection level (the "Speed" setting in step 7): [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections)
+- If connecting via command line, there is a specific switch: `-l 100m` would set the transfer rate at 100Mbps
+- If connecting via Aspera Shares, target rates can be set both system-wide or per-user in the Shares web interface [https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings) [https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings)
 
 ### File delivery
 
-* Video, closed captions, and artwork files must be _completely delivered prior to the delivery of metadata_
-* Production files MUST be delivered to the **`/prod`** folder. Automation is dependent on proper file delivery location. Failure to deliver files to the correct folder will result in processing delays or content not processing at all
-* Test files may be delivered to the **`/testing`** folder
-* It is preferred that content not be delivered to subfolders. If subfolders are necessary, follow the below guidelines:
-* Subfolders must **not** begin with an underscore
-* Do **not** separate files into subfolders by file type
-* All media files for a single title (episode, movie, or shortForm) must be delivered to the same directory
-* The ingest platform assumes media files referenced in the metadata are in the same directory as the metadata file. As such, metadata must be delivered to the same directory as the media files contained within the metadata
-* Delivery notifications can be sent to [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
+- Video, closed captions, and artwork files must be _completely delivered prior to the delivery of metadata_
+- Production files MUST be delivered to the `/prod` folder. Automation is dependent on proper file delivery location. Failure to deliver files to the correct folder will result in processing delays or content not processing at all
+- Test files may be delivered to the `/testing` folder
+- It is preferred that content not be delivered to subfolders. If subfolders are necessary, follow the below guidelines:
+- Subfolders must **not** begin with an underscore
+- Do **not** separate files into subfolders by file type
+- All media files for a single title (episode, movie, or shortForm) must be delivered to the same directory
+- The ingest platform assumes media files referenced in the metadata are in the same directory as the metadata file. As such, metadata must be delivered to the same directory as the media files contained within the metadata
+- Delivery notifications can be sent to [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
 
 #### File retention
 
 The delivery location is a temporary location for our Partners to upload files for ingestion into Roku Channel content library. Automation will move files from the delivery location upon successful ingest to an archive location to be stored indefinitely. All files uploaded to the delivery location are expected to be ingested within a reasonable time frame not to exceed 30 days. Valid and complete metadata must be delivered shortly after files are delivered to ensure timely ingest. Files in the delivery location that have not ingested after 30 days are subject to deletion.
 
-_Exceptions to the file retention policy may be made to files in the **`/testing`** folder_
+_Exceptions to the file retention policy may be made to files in the&#x20;_`/testing`_&#x20;folder_
 
 #### File naming
 
 Source video, closed captions, and artwork files delivered for ingest must adhere to the following guidelines:
 
-* File names must not exceed 125 characters in length
-* File names must match the reference to the file name in the metadata supplied for the title delivered
-* File names are case-sensitive
-* File names must end with a proper file extension. File extensions are expected to be lowercase
-* Whitespace and special characters `!@#$%^&*()\{}|[];:\’\”?/>,\<` must not be included in any file name
-* The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
+- File names must not exceed 125 characters in length
+- File names must match the reference to the file name in the metadata supplied for the title delivered
+- File names are case-sensitive
+- File names must end with a proper file extension. File extensions are expected to be lowercase
+- Whitespace and special characters `!@#$%^&*()\{}|[];:\’\”?/>,\<` must not be included in any file name
+- The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
 
 <br />
 
@@ -760,9 +543,9 @@ Source video, closed captions, and artwork files delivered for ingest must adher
   <tbody>
     <tr>
       <td>
-        * 0-9
-        * a-z
-        * A-Z
+        - 0-9
+        - a-z
+        - A-Z
       </td>
     </tr>
   </tbody>
@@ -774,53 +557,53 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 | -------------- | --------- |
 | Hyphen         | -         |
 | Period         | .         |
-| Underscore     | _         |
+| Underscore     | \_        |
 
 ##### Characters forbidden in file na
 
 | Character Name               | Character |
 | :--------------------------- | :-------- |
-| "At" symbol                  | \@        |
-| Ampersand                    | \&        |
-| Asterisk                     | *         |
-| Backslash                    | \         |
+| "At" symbol                  | @         |
+| Ampersand                    | &         |
+| Asterisk                     | \*        |
+| Backslash                    | \\        |
 | Caret                        | ^         |
 | Colon                        | :         |
 | Comma                        | ,         |
-| Dollar                       | \$        |
+| Dollar                       | $         |
 | Equals                       | =         |
 | Forward slash                | /         |
-| Grave accent                 | `         |
-| Greater than                 | \>        |
+| Grave accent                 | \`        |
+| Greater than                 | >         |
 | Left curly brace             | \{        |
 | Left square bracket          | \[        |
 | Less than                    | \<        |
 | Percent                      | %         |
 | Plus                         | +         |
-| Pound/hashtag                | \#        |
-| Question mark                | \?        |
-| Quotation marks/double quote | \"        |
+| Pound/hashtag                | #         |
+| Question mark                | ?         |
+| Quotation marks/double quote | "         |
 | Right curly brace            | \}        |
-| Right square bracket         | \]        |
+| Right square bracket         | ]         |
 | Semicolon                    | ;         |
 | Space                        | ` `       |
-| Tilde                        | ~         |
+| Tilde                        | \~        |
 | Vertical pipe                | \|        |
 
-
+<br />
 
 ## MovieLabs content delivery
 
 Order of delivery is important. The Roku MovieLabs service will require that the MMC XML file be delivered after all media files referenced within have completed delivery. Roku cannot process content without successful delivery of both the MMC and MEC XMLs. Please see examples below:
 
-* For each MMC, all files referenced in the MMC should be delivered prior to the delivery of the MMC XML to be considered a successful delivery
-* For each MEC, all files referenced in the MEC should be delivered prior to the delivery of the MEC XML to be considered a successful delivery
-* Movies, Series, Seasons, and Episodes require successful delivery of both MMC and MEC to ingest
-* Episodes cannot ingest without successful delivery and ingest of MMC and MEC of the Season to which the Episode belongs
-* Seasons cannot ingest without successful delivery and ingest of MMC and MEC of the Series to which the Season belongs
-* Episodes processed by Roku’s system before the Series and/or Season to which the Episode belongs will be held in an uningested state until the Series and/or Season has been successfully delivered
-* Seasons processed by Roku’s system before the Series to which the Season belongs and/or an Episode belonging to that Season will be held in an uningested state until the Series and/or an Episode has been successfully delivered
-* Series processed by Roku’s system before a Season and an Episode belonging to that Series will be held in an uningested state until a Season and Episode has been successfully delivered
+- For each MMC, all files referenced in the MMC should be delivered prior to the delivery of the MMC XML to be considered a successful delivery
+- For each MEC, all files referenced in the MEC should be delivered prior to the delivery of the MEC XML to be considered a successful delivery
+- Movies, Series, Seasons, and Episodes require successful delivery of both MMC and MEC to ingest
+- Episodes cannot ingest without successful delivery and ingest of MMC and MEC of the Season to which the Episode belongs
+- Seasons cannot ingest without successful delivery and ingest of MMC and MEC of the Series to which the Season belongs
+- Episodes processed by Roku’s system before the Series and/or Season to which the Episode belongs will be held in an uningested state until the Series and/or Season has been successfully delivered
+- Seasons processed by Roku’s system before the Series to which the Season belongs and/or an Episode belonging to that Season will be held in an uningested state until the Series and/or an Episode has been successfully delivered
+- Series processed by Roku’s system before a Season and an Episode belonging to that Series will be held in an uningested state until a Season and Episode has been successfully delivered
 
 ### Roku specific metadata and media files
 
@@ -968,61 +751,61 @@ Roku utilizes a transform engine that can “normalize” different metadata for
   <tbody>
     <tr>
       <td>
-        * provider
-        * content type
-        * asset_id
-        * title
-        * release_date
-        * runtime
-        * genres
-        * rating
-        * rating_system
-        * short_synopsis
-        * video_file_name
-        * captions file_name (if captions are required)
-        * key art file_name
+        - provider
+        - content type
+        - asset_id
+        - title
+        - release_date
+        - runtime
+        - genres
+        - rating
+        - rating_system
+        - short_synopsis
+        - video_file_name
+        - captions file_name (if captions are required)
+        - key art file_name
       </td>
 
       <td>
-        * provider
+        - provider
 
-        * content type
+        - content type
 
-        * asset_id
+        - asset_id
 
-        * episode_title
+        - episode_title
 
-        * episode_number
+        - episode_number
 
-        * episode_release_date
+        - episode_release_date
 
-        * runtime
+        - runtime
 
-        * rating
+        - rating
 
-        * rating_system
+        - rating_system
 
-        * episode_short_synopsis
+        - episode_short_synopsis
 
-        * series_id
+        - series_id
 
-        * series_title
+        - series_title
 
-        * series_release_date
+        - series_release_date
 
-        * series_genres
+        - series_genres
 
-        * series_short_synopsis
+        - series_short_synopsis
 
-        * season_id
+        - season_id
 
-        * season_number
+        - season_number
 
-        * video_file_name
+        - video_file_name
 
-        * captions file_name (if captions are required)
+        - captions file_name (if captions are required)
 
-        * key art file_name
+        - key art file_name
       </td>
     </tr>
 
@@ -1058,7 +841,7 @@ Short form, stand-alone titles that do not exceed roughly 15 minutes run time sh
 
 Roku does not supply IDs for content. IDs are to be generated and supplied by the Partner for content that is delivered to Roku. Every clip and movie must be delivered with an asset_id. Every episode must be delivered with 3 IDs: an asset_id, a series_id, and a season_id. IDs need to be meaningful to your team as they are how we positively identify a title in our system. The asset ID in the ingest metadata should match the Title ID provided in the avail document. This will aid in tracking the content throughout Roku’s pipeline from Avails submission through publication on Roku Channel. Any updates to the title once it has been ingested into our system MUST be accompanied by the asset ID. Guidelines and definitions of IDs are below:
 
-| **ID **   | Definitions                                                                                                                                                                                                                                                                                                                                                                                       |
+| **ID**    | Definitions                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | asset_id  | Immutable, unique identifier for a clip, episode, or movie. Required for all content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION**                                                                                                                                                              |
 | series_id | Immutable, unique identifier for a series. Cannot be the same as the season or unique episode ID. Must be delivered with all episodes of a series and must be consistent for all episodes of a series. Required for TV content. 50 characters maximum. Alphanumeric characters, hyphens, and underscores only – **SPACES OR SPECIAL CHARACTERS IN ANY ID WILL FAIL INGESTION**                    |
@@ -1081,24 +864,24 @@ If content is to go live at a time other than midnight or expire at a time other
 
 There are two types of specific time designations – relative and absolute.
 
-* Relative Time – a Saturday night premiere of a movie goes into window at 9pm local time for all users. A user in the Eastern Time Zone watches at 9pm but a user in the Pacific Time Zone, at the exact same moment (6pm PT), cannot watch that content.
-* Absolute Time – a new episode of a series goes into window at 9pm Eastern and becomes immediately available across all time zones. A user in the Pacific Time Zone can watch the content at 6 pm local time.
+- Relative Time – a Saturday night premiere of a movie goes into window at 9pm local time for all users. A user in the Eastern Time Zone watches at 9pm but a user in the Pacific Time Zone, at the exact same moment (6pm PT), cannot watch that content.
+- Absolute Time – a new episode of a series goes into window at 9pm Eastern and becomes immediately available across all time zones. A user in the Pacific Time Zone can watch the content at 6 pm local time.
 
 While time settings are dictated by the content owner, Roku will need the metadata as follows:
 
-* If the content has a relative start time, that time must be indicated in the ingest metadata and formatted as “yyyy-mm-ddThh:mm:ss” (2019-11-01T21:00:00)
-* If the content has an absolute start time, that time must be indicated in the ingest metadata. The time must be presented as UTC time and formatted as “yyyy-mm-ddThh:mm:ssZ” (2019-11-02T01:00:00Z).
-* In this example, 9 pm Eastern Time on November 1 is 1 am UTC ([https://www.thetimezoneconverter.com](https://www.thetimezoneconverter.com))
-* If the ingest metadata arrives without a time, Roku will assume a relative start time of midnight and a relative end time of 11:59:59 pm
+- If the content has a relative start time, that time must be indicated in the ingest metadata and formatted as “yyyy-mm-ddThh:mm:ss” (2019-11-01T21:00:00)
+- If the content has an absolute start time, that time must be indicated in the ingest metadata. The time must be presented as UTC time and formatted as “yyyy-mm-ddThh:mm:ssZ” (2019-11-02T01:00:00Z).
+- In this example, 9 pm Eastern Time on November 1 is 1 am UTC ([https://www.thetimezoneconverter.com](https://www.thetimezoneconverter.com))
+- If the ingest metadata arrives without a time, Roku will assume a relative start time of midnight and a relative end time of 11:59:59 pm
 
 ### Special characters
 
 Roku utilizes CDATA sections to allow special characters (e.g. `!@#$%^&*()\{}|[];:\’\”?/>\<`, as well as foreign character sets) within certain node values of the ingest XML. Roku highly recommends wrapping data in CDATA sections to ensure proper ingest of content. The below nodes are the _only_ nodes that support CDATA sections:
 
-* title
-* long_synopsis
-* short_synopsis
-* display_name
+- title
+- long_synopsis
+- short_synopsis
+- display_name
 
 Certain characters in an XML will render the document unreadable by the Roku ingest platform unless handled (escaped) properly. The below characters must be provided in their Escaped Form for all node values that do not support CDATA sections:
 
@@ -1142,8 +925,7 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
   <tbody>
     <tr>
       <td>
-        XML  
-        (preferred)
+        XML<br />(preferred)
       </td>
 
       <td>
@@ -1155,12 +937,7 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
       </td>
 
       <td>
-        clip1.0  
-        film5.0  
-        tv1.0  
-        Cablelabs ADI 1.1  
-        MEC 2.9  
-        MMC 1.10  
+        clip1.0<br />film5.0<br />tv1.0<br />Cablelabs ADI 1.1<br />MEC 2.9<br />MMC 1.10
 
         Additional schemas supported on a case-by-case basis
       </td>
@@ -1176,7 +953,7 @@ XML format preferred. One complete XML shall be delivered for each movie, clip, 
       </td>
 
       <td>
-        See below for [Roku Excel Metadata Templates](#roku-excel-metadata-guildelines)  and [Excel Metadata Guidelines](#roku-excel-metadata-guidelines-and-templates) 
+        See below for [Roku Excel Metadata Templates](#roku-excel-metadata-guildelines)  and [Excel Metadata Guidelines](#roku-excel-metadata-guidelines-and-templates)
       </td>
 
       <td>
@@ -1192,25 +969,25 @@ Updates are automated and can be sent if there is a need to change metadata or a
 
 Roku currently supports updating the below metadata fields via automated MDU:
 
-* TMS ID
-* EIDR ID
-* Titles (primary and localized)
-* Short Descriptions (primary and localized)
-* Long Descriptions (primary and localized)
-* Release Date
-* Series Titles
-* Season Number
-* Episode Number
-* Language (and localized languages)
-* Availability Windows
-* License Types
-* Countries
-* Genres
-* Provider Tags
-* Content Ratings (system & rating)
-* Credits
-* Ad Breaks
-* Cue Points
+- TMS ID
+- EIDR ID
+- Titles (primary and localized)
+- Short Descriptions (primary and localized)
+- Long Descriptions (primary and localized)
+- Release Date
+- Series Titles
+- Season Number
+- Episode Number
+- Language (and localized languages)
+- Availability Windows
+- License Types
+- Countries
+- Genres
+- Provider Tags
+- Content Ratings (system & rating)
+- Credits
+- Ad Breaks
+- Cue Points
 
 **Metadata update (MDU)**
 
@@ -1224,33 +1001,33 @@ _Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.
 
 All file name references must be removed from a metadata only update. This includes:
 
-* source video file name
-* closed captions file name
-* subtitle file name
-* audio dub file name
-* key, background, and/or poster art file names
+- source video file name
+- closed captions file name
+- subtitle file name
+- audio dub file name
+- key, background, and/or poster art file names
 
 Some fields need to be updated in "groups". All required fields in a group must be provided for the update to process successfully. Below are the current groups:
 
-* Metadata group (all of the required fields must be present in order to update one of these)
+- Metadata group (all of the required fields must be present in order to update one of these)
 
-* Language (required)
+- Language (required)
 
-* Title (required)
+- Title (required)
 
-* Short description (required)
+- Short description (required)
 
-* Long description (optional)
+- Long description (optional)
 
-* Availability group (all of the required fields must be present in order to update one of these)
+- Availability group (all of the required fields must be present in order to update one of these)
 
-* License Type (required)
+- License Type (required)
 
-* Country (required)
+- Country (required)
 
-* Start Date (required)
+- Start Date (required)
 
-* End Date (required)
+- End Date (required)
 
 Upload the metadata update to the "prod" folder in Aspera
 
@@ -1263,14 +1040,14 @@ File replacements and additions are automated and will be processed in the same 
 1. File replacements and additions must be delivered in the same format as the ingest metadata
 2. File replacements and additions must include **the exact same asset ID** that was included when the content was originally ingested
 
-* _Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system_
+- _Please reach out to [contentoperations@roku.com](mailto:contentoperations@roku.com) if you need a complete listing of asset IDs as they exist in Roku Channel's system_
 
 3. Only the file name references of the files that are being replaced or added should be included in the metadata file. Any file that is not being replaced or added should not be delivered or referenced in the metadata file.
 4. If the source video file is being replaced and there is a change in the duration of the source, any related files (captions, subtitles, audio dubs) should also be replaced.
 5. File replacements require language values in order to update properly
 6. Upload the file replacement or addition metadata to the "prod" folder in Aspera
 
-_As a best practice, please provide replacement files with a unique name both in the metadata and on the file itself. Simply adding a versionnumber (_v2, _v3, etc.) would suffice. For example:_ `movie_title_v2.mov`
+\_As a best practice, please provide replacement files with a unique name both in the metadata and on the file itself. Simply adding a versionnumber (\_v2, _v3, etc.) would suffice. For example:_ `movie_title_v2.mov`
 
 **Content takedown**
 
@@ -1661,7 +1438,7 @@ Defines the cuePoint type of the cuePoint provided within the cuePoints block. T
 
 **cast display_name**
 
-Name of cast member**.** CDATA section supported.
+Name of cast member\*\*.\*\* CDATA section supported.
 
 | XML XPath                                      | Accepted Values    | Required |
 | ---------------------------------------------- | ------------------ | -------- |
@@ -1682,7 +1459,7 @@ Name of cast member**.** CDATA section supported.
 
 Name of crew member. CDATA section supported.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                                      | Accepted Values    | Required                          |
 | ---------------------------------------------- | ------------------ | --------------------------------- |
@@ -1698,7 +1475,7 @@ Name of crew member. CDATA section supported.
 
 Role of the crew member listed in the display_name. Roku requires each crew member included in the metadata to also include that crew member’s role. Please see the [enumerated list](#crew-roles) of crew roles that Roku supports. Roles are case sensitive.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                              | Accepted Values                          | Required                          |
 | -------------------------------------- | ---------------------------------------- | --------------------------------- |
@@ -1909,11 +1686,11 @@ The block that describes the closed captions for the source video file. The asse
 
 The block that describes sidecar audio for the source video file. The audio file will either be a full audio dub for language translation purposes or a descriptive audio track for the accessibility purposes. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="audio" for translation dubs or role=”audio.descriptive” for accessibility purposes. The `<locale>` and `<file_name>` nodes are also required
 
-| XML XPath                               | Accepted Values                                                                                                    | Required                                               |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional*<br />audio.descriptive is strongly preferred |
+| XML XPath                               | Accepted Values                                                                                                    | Required                                                |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional\*<br />audio.descriptive is strongly preferred |
 
-*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_ <u>Example:</u>
+\*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_ <u>Example:</u>
 
 ```xml
 <asset type="full">
@@ -1925,11 +1702,11 @@ The block that describes sidecar audio for the source video file. The audio file
 
 The block that describes sidecar subtitles for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="subtitles". The `<locale>` and `<file_name>` nodes are also required
 
-| XML XPath                               | Accepted Values                                                              | Required  |
-| --------------------------------------- | ---------------------------------------------------------------------------- | --------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="subtitles"` | Optional* |
+| XML XPath                               | Accepted Values                                                              | Required   |
+| --------------------------------------- | ---------------------------------------------------------------------------- | ---------- |
+| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="subtitles"` | Optional\* |
 
-*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._ <u>Example:</u>
+\*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._ <u>Example:</u>
 
 ```xml
 <asset type="full">
@@ -2342,7 +2119,7 @@ Defines the cuePoint type of the cuePoint provided within the cuePoints block. T
 
 **cast display_name**
 
-Name of cast member for the episode**.** CDATA section supported.
+Name of cast member for the episode\*\*.\*\* CDATA section supported.
 
 | XML XPath                                      | Accepted Values         | Required |
 | ---------------------------------------------- | ----------------------- | -------- |
@@ -2363,7 +2140,7 @@ Name of cast member for the episode**.** CDATA section supported.
 
 Name of crew member for the episode. CDATA section supported.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                                      | Accepted Values         | Required                          |
 | ---------------------------------------------- | ----------------------- | --------------------------------- |
@@ -2379,7 +2156,7 @@ Name of crew member for the episode. CDATA section supported.
 
 Role of the crew member listed in the display_name. Roku requires each crew member included in the metadata to also include that crew member’s role. Please see the [enumerated list](#crew-roles) of crew roles that Roku supports. Roles are case sensitive.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                              | Accepted Values                          | Required                          |
 | -------------------------------------- | ---------------------------------------- | --------------------------------- |
@@ -2610,7 +2387,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 
 **cast display_name**
 
-Name of cast member of the series**.** CDATA section supported.
+Name of cast member of the series\*\*.\*\* CDATA section supported.
 
 | XML XPath                                             | Accepted Values         | Required |
 | ----------------------------------------------------- | ----------------------- | -------- |
@@ -2631,7 +2408,7 @@ Name of cast member of the series**.** CDATA section supported.
 
 Name of crew member of the series. CDATA section supported.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                                             | Accepted Values         | Required                          |
 | ----------------------------------------------------- | ----------------------- | --------------------------------- |
@@ -2647,7 +2424,7 @@ Name of crew member of the series. CDATA section supported.
 
 Role of the crew member listed in the display_name. Roku requires each crew member included in the metadata to also include that crew member’s role. Please see the [enumerated list](#crew-roles) of crew roles that Roku supports. Roles are case sensitive.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                                     | Accepted Values                          | Required                          |
 | --------------------------------------------- | ---------------------------------------- | --------------------------------- |
@@ -2901,11 +2678,11 @@ The block that describes the closed captions for the source video file. The asse
 
 The block that describes sidecar audio for the source video file. The audio file will either be a full audio dub for language translation purposes or a descriptive audio track for the accessibility purposes. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="audio" for translation dubs or role=”audio.descriptive” for accessibility purposes. The `<locale>` and `<file_name>` nodes are also required
 
-| XML XPath                               | Accepted Values                                                                                                    | Required                                               |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional<br />*audio.descriptive is strongly preferred |
+| XML XPath                               | Accepted Values                                                                                                    | Required                                                |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional<br />\*audio.descriptive is strongly preferred |
 
-*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_
+\*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_
 
 <u>Example:</u>
 
@@ -2918,11 +2695,11 @@ The block that describes sidecar audio for the source video file. The audio file
 
 The block that describes sidecar subtitles for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="subtitles". The `<locale>` and `<file_name>` nodes are also required
 
-| XML XPath                               | Accepted Values                                                             | Required  |
-| --------------------------------------- | --------------------------------------------------------------------------- | --------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full`<br />`data_file role="subtitles"` | Optional* |
+| XML XPath                               | Accepted Values                                                             | Required   |
+| --------------------------------------- | --------------------------------------------------------------------------- | ---------- |
+| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full`<br />`data_file role="subtitles"` | Optional\* |
 
-*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._
+\*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._
 
 <u>Example:</u>
 
@@ -3302,7 +3079,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 
 **cast display_name**
 
-Name of cast member**.** CDATA section supported.
+Name of cast member\*\*.\*\* CDATA section supported.
 
 | XML XPath                                      | Accepted Values         | Required |
 | ---------------------------------------------- | ----------------------- | -------- |
@@ -3323,7 +3100,7 @@ Name of cast member**.** CDATA section supported.
 
 Name of crew member. CDATA section supported.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                                      | Accepted Values         | Required                          |
 | ---------------------------------------------- | ----------------------- | --------------------------------- |
@@ -3339,7 +3116,7 @@ Name of crew member. CDATA section supported.
 
 Role of the crew member listed in the display_name. Roku requires each crew member included in the metadata to also include that crew member’s role. Please see the [enumerated list](#crew-roles) of crew roles that Roku supports. Roles are case sensitive.
 
-*NOTE: Director is the only crew_member supported for Excel ingest at this time
+\*NOTE: Director is the only crew_member supported for Excel ingest at this time
 
 | XML XPath                              | Accepted Values                          | Required                          |
 | -------------------------------------- | ---------------------------------------- | --------------------------------- |
@@ -3551,11 +3328,11 @@ The block that describes the closed captions for the source video file. The asse
 
 The block that describes sidecar audio for the source video file. The audio file will either be a full audio dub for language translation purposes or a descriptive audio track for the accessibility purposes. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="audio" for translation dubs or role=”audio.descriptive” for accessibility purposes. The `<locale>` and `<file_name>` nodes are also required
 
-| XML XPath                               | Accepted Values                                                                                                    | Required                                               |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional<br />*audio.descriptive is strongly preferred |
+| XML XPath                               | Accepted Values                                                                                                    | Required                                                |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio.descriptive"` | Optional<br />\*audio.descriptive is strongly preferred |
 
-*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_
+\*_sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations_
 
 <u>Example:</u>
 
@@ -3568,11 +3345,11 @@ The block that describes sidecar audio for the source video file. The audio file
 
 The block that describes sidecar subtitles for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="subtitles". The `<locale>` and `<file_name>` nodes are also required
 
-| XML XPath                               | Accepted Values                                                              | Required  |
-| --------------------------------------- | ---------------------------------------------------------------------------- | --------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="subtitles"` | Optional* |
+| XML XPath                               | Accepted Values                                                              | Required   |
+| --------------------------------------- | ---------------------------------------------------------------------------- | ---------- |
+| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="subtitles"` | Optional\* |
 
-*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._
+\*_sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution._
 
 <u>Example:</u>
 
@@ -3843,19 +3620,19 @@ Excel metadata can only be accepted if delivered in the ROKU approved formats be
 
 The Roku Excel metadata template must be submitted with all required fields populated. Roku has provided hints on row 2 of each metadata template to highlight the required cells and any special formatting needed for each cell. Please refer to these hints when filling out the Excel metadata template. Other considerations when filling out a template include:
 
-* Dates must be provided in YYYY-MM-DD format (change the cell formatting to “Text” if necessary)
-* File names must not contain [special characters or spaces](#special-characters)
-* Any formulas used must be converted to text prior to submission. Inclusion of a formula will result in rejected deliveries and will cause content processing delays/failures
-* Do not link to external data or Excel workbooks. All data must be self contained within the Excel workbook delivered to Roku
-* Do not add additional sheets to the workbook
-* Do not add additional columns to the workbook
-* Do not delete the legend/hint row (row 2)
-* Do not supply a value of “N/A” or “n/a”. Required cells should contain valid data and optional cells may be left blank
-* Multiple movies, clips, and multiple episodes may be supplied in a single Excel workbook
-  * Each row is considered a unique language experience of an episode/movie/clip
-  * Do not leave a blank row between entries in a worksheet. The system will terminate processing at the first empty row.
-  * Do not include more than 900 rows in a single sheet
-* Excel metadata must be saved with .xlsx extension and be exported from Microsoft Excel. If using a different program, please export as CSV
+- Dates must be provided in YYYY-MM-DD format (change the cell formatting to “Text” if necessary)
+- File names must not contain [special characters or spaces](#special-characters)
+- Any formulas used must be converted to text prior to submission. Inclusion of a formula will result in rejected deliveries and will cause content processing delays/failures
+- Do not link to external data or Excel workbooks. All data must be self contained within the Excel workbook delivered to Roku
+- Do not add additional sheets to the workbook
+- Do not add additional columns to the workbook
+- Do not delete the legend/hint row (row 2)
+- Do not supply a value of “N/A” or “n/a”. Required cells should contain valid data and optional cells may be left blank
+- Multiple movies, clips, and multiple episodes may be supplied in a single Excel workbook
+  - Each row is considered a unique language experience of an episode/movie/clip
+  - Do not leave a blank row between entries in a worksheet. The system will terminate processing at the first empty row.
+  - Do not include more than 900 rows in a single sheet
+- Excel metadata must be saved with .xlsx extension and be exported from Microsoft Excel. If using a different program, please export as CSV
 
 ### Excel - film metadata fields
 
@@ -4016,14 +3793,14 @@ The Roku Excel metadata template must be submitted with all required fields popu
 
 ### Crew roles
 
-* Actor
-* Anchor
-* Host
-* Narrator
-* Voice
-* Director
-* Producer
-* Screenwriter
+- Actor
+- Anchor
+- Host
+- Narrator
+- Voice
+- Director
+- Producer
+- Screenwriter
 
 ### Genres
 
@@ -4038,7 +3815,7 @@ A valid film or TV rating from the rating authority (Rating Source) of the Terri
 | **Ratings Authority and Territory**                                 | **Country** | **ratingSystem** | **Rating Value**                                                                                                             |
 | ------------------------------------------------------------------- | ----------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | British Board of Film Classification<br />United Kingdom            | GB          | BBFC             | U<br />PG<br />12A<br />12-A<br />12<br />15<br />18<br />NR<br />R18<br />R-1                                               |
-| Canadian Home Video Rating System<br />Canada                       | CA          | CHVRS            | G<br />PG<br />14A<br />14-A<br />18A<br />18-A<br />NR<br />RE                                                              |
+| Canadian Home Video Rating System<br />Canada                       | CA          | CHVRS            | G<br />PG<br />14A<br />14-A<br />18A<br />18-A<br />NR<br />R<br />E                                                        |
 | Motion Picture Associate of America<br />United States              | US          | MPAA             | G<br />PG<br />PG13<br />PG-13<br />R<br />NC-17<br />NC17<br />NR                                                           |
 | Canadian Parental Rating<br />Canada                                | CA          | CPR              | 14+<br />18+<br />C<br />C8<br />C-8<br />G<br />NR<br />PG<br />E                                                           |
 | Dirección General de Radio, Televisión y Cinematografía<br />Mexico | MX          | RTC              | AA<br />A<br />B<br />B-15<br />B15<br />C<br />DD<br />D<br />NR                                                            |
@@ -4183,7 +3960,7 @@ The below list is the full set of language codes Roku currently supports for con
 | All Metadata Templates/Examples/Schemas   | [https://go.roku.com/metadata-docs](https://go.roku.com/metadata-docs)                                                                                                                                                                                                                                                                                                             |
 | Best practices: content tags and metadata | [https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md](https://developer.roku.com/trc-docs/video-on-demand/content-tags-and-metadata.md)                                                                                                                                                                                                               |
 | Music cue sheet submission                | [https://go.roku.com/music-cue-sheet-submission](https://go.roku.com/music-cue-sheet-submission)                                                                                                                                                                                                                                                                                   |
-| Aspera Client                             | [https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client&release=All&platform=All&function=all](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all) |
+| Aspera Client                             | [https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm\~Other%20software∏uct=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all) |
 | US MPAA Ratings                           | [https://www.filmratings.com/](https://www.filmratings.com/)                                                                                                                                                                                                                                                                                                                       |
 | US TV Ratings                             | [http://tvguidelines.org/](http://tvguidelines.org/)                                                                                                                                                                                                                                                                                                                               |
 | UK BBFC Ratings                           | [https://bbfc.co.uk/](https://bbfc.co.uk/)                                                                                                                                                                                                                                                                                                                                         |
@@ -4194,86 +3971,86 @@ The below list is the full set of language codes Roku currently supports for con
 
 **v2.3 - 2025-02-18**
 
-* Updated all references to The Roku Channel to Roku Channel
-* Added MovieLabs and EMA support
-* Added description of Gracenote's Artwork Personalization employed by Roku Channel
-* Added expectations post-onboarding
-* Added ad-supported content policy
-* Added definition and examples of calls to action
-* Added submission link for music cue sheets
-* Updated video requirements to require semi-textless video
-* Updated Roku's preferred sidecar caption/subtitle files
-* Identified which sidecar captions/subtitles support positional data
-* Updated ratings requirements and preferences discouraging NR and removing support for UR
-* Updated minimum 2:3 image resolution to align dimensions to exactly 2:3
-* Updated image examples on platform
-* Added some guidance on providing images
-* Noted that episodic images should be unique for each episode
-* Noted that sidecar subtitles and captions must not be empty files
-* Added a link to Roku's "made for kids" page
-* Fixed typo in Xpath sample for content type from "episode" to "tv"
-* Noted that Excel documents should not link to external data
-* Clarified that start dates need to be chronologically before end dates
-* Clarified that start dates and end dates cannot be identical
-* Updated ingest templates to add additional hints
-* Added sports metadata nodes to the clip specifications and templates
-* Removed link to file update template
-* Updated XSD documents to account for above changes
+- Updated all references to The Roku Channel to Roku Channel
+- Added MovieLabs and EMA support
+- Added description of Gracenote's Artwork Personalization employed by Roku Channel
+- Added expectations post-onboarding
+- Added ad-supported content policy
+- Added definition and examples of calls to action
+- Added submission link for music cue sheets
+- Updated video requirements to require semi-textless video
+- Updated Roku's preferred sidecar caption/subtitle files
+- Identified which sidecar captions/subtitles support positional data
+- Updated ratings requirements and preferences discouraging NR and removing support for UR
+- Updated minimum 2:3 image resolution to align dimensions to exactly 2:3
+- Updated image examples on platform
+- Added some guidance on providing images
+- Noted that episodic images should be unique for each episode
+- Noted that sidecar subtitles and captions must not be empty files
+- Added a link to Roku's "made for kids" page
+- Fixed typo in Xpath sample for content type from "episode" to "tv"
+- Noted that Excel documents should not link to external data
+- Clarified that start dates need to be chronologically before end dates
+- Clarified that start dates and end dates cannot be identical
+- Updated ingest templates to add additional hints
+- Added sports metadata nodes to the clip specifications and templates
+- Removed link to file update template
+- Updated XSD documents to account for above changes
 
 **v2.2 - 2023-05-18**
 
-* Removed support for legacy MDU
-* Removed requirement for long_synopsis
-* Refreshed the language for automated MDU and file replacements
-* Added a 30 day retention policy for files in delivery location
-* Added list of allowable and forbidden characters for file names
-* Added link to Best practices: content tags and metadata page
-* Added end_time as a requirement for credit cuePoint
-* Added support for ad overlay cuePoints
-* Added language prohibiting delivery of hard parted video segments
-* Added language allowing letterboxed/pillarboxed episodic thumbnails
-* Added link for a .zip file of all sample docs
-* Addressed typographical errors
+- Removed support for legacy MDU
+- Removed requirement for long_synopsis
+- Refreshed the language for automated MDU and file replacements
+- Added a 30 day retention policy for files in delivery location
+- Added list of allowable and forbidden characters for file names
+- Added link to Best practices: content tags and metadata page
+- Added end_time as a requirement for credit cuePoint
+- Added support for ad overlay cuePoints
+- Added language prohibiting delivery of hard parted video segments
+- Added language allowing letterboxed/pillarboxed episodic thumbnails
+- Added link for a .zip file of all sample docs
+- Addressed typographical errors
 
 **v2.1 - 2022-10-28**
 
-* Updated MDU documentation adding support for automated MDUs and renaming legacy method
-* Separated Excel metadata fields descriptions from XML metadata fields descriptions
-* Reformatted XML metadata fields descriptions for increased legibility
-* Clarified audio channel labelling
-* Clarified sidecar audio requirements
-* Clarified sidecar subtitle requirements
-* Updated the list of supported language codes
-* Added support for ingest of credit cuePoints
-* Added Mexico content ratings and rating system (RTC)
+- Updated MDU documentation adding support for automated MDUs and renaming legacy method
+- Separated Excel metadata fields descriptions from XML metadata fields descriptions
+- Reformatted XML metadata fields descriptions for increased legibility
+- Clarified audio channel labelling
+- Clarified sidecar audio requirements
+- Clarified sidecar subtitle requirements
+- Updated the list of supported language codes
+- Added support for ingest of credit cuePoints
+- Added Mexico content ratings and rating system (RTC)
 
 **v2.0 - 2022-04-25**
 
-* Identified .srt as preferred side car caption input
-* Clarified episode number requirements
-* Reorganized document to end with metadata
-* Reformat metadata node definitions to show xpath and Excel column names
-* Hardened and clarified video requirements
-* Added acceptable amount of black video at head/tail
-* Updated Film requirements to allow release_date rather than theatrical_release_date
-* Added support for differing availability information between licenseTypes and/or territories
-* Added support for multiple language deliverables including
-  * Language
-  * Original Spoken Language
-  * Country of Origin
-  * Localized metadata
-  * Sidecar audio
-  * Sidecar subtitles
-  * Localized artwork
-* Added listing of supported subtitle files
-* Added listing of supported sidecar audio files
-* Added listing of supported language codes
-* Added support for delivery of descriptive audio
-* Clarified language code requirements for localized metadata/assets
-* Updated XML samples to include multi-language support
-* Updated XSD to validate multi-language XMLs
-* Updated Excel samples to include multi-language support
-* Added glossary of terminology
-* Added external link to FTC page describing COPPA compliance
-* Updated the name of the audio layout descriptors to audio layout hints to avoid confusion with descriptive audio
-* Updated adBreak policy per latest Roku Ad Policy
+- Identified .srt as preferred side car caption input
+- Clarified episode number requirements
+- Reorganized document to end with metadata
+- Reformat metadata node definitions to show xpath and Excel column names
+- Hardened and clarified video requirements
+- Added acceptable amount of black video at head/tail
+- Updated Film requirements to allow release_date rather than theatrical_release_date
+- Added support for differing availability information between licenseTypes and/or territories
+- Added support for multiple language deliverables including
+  - Language
+  - Original Spoken Language
+  - Country of Origin
+  - Localized metadata
+  - Sidecar audio
+  - Sidecar subtitles
+  - Localized artwork
+- Added listing of supported subtitle files
+- Added listing of supported sidecar audio files
+- Added listing of supported language codes
+- Added support for delivery of descriptive audio
+- Clarified language code requirements for localized metadata/assets
+- Updated XML samples to include multi-language support
+- Updated XSD to validate multi-language XMLs
+- Updated Excel samples to include multi-language support
+- Added glossary of terminology
+- Added external link to FTC page describing COPPA compliance
+- Updated the name of the audio layout descriptors to audio layout hints to avoid confusion with descriptive audio
+- Updated adBreak policy per latest Roku Ad Policy

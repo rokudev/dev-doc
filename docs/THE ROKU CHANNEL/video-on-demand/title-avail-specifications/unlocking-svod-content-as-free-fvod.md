@@ -1,5 +1,5 @@
 ---
-title: Unlocking SVOD content as free (FVOD)
+title: FVOD submissions
 deprecated: false
 hidden: true
 metadata:

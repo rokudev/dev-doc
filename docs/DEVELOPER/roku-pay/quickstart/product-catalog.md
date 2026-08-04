@@ -23,7 +23,7 @@ Roku has updated the product catalog feature with an improved, flexible structur
 
 - [**Cancellation offers:**](#creating-cancellation-offers) Create discount offers to retain customers when they try to cancel their subscription to your app.
 
-- [**Price change scheduling**](#scheduling-a-price-change-for-a-purchase-option). Schedule price increases/decreases and apply them to new subscribers only or both new and existing subscribers.
+- [**Price change scheduling**](#scheduling-a-price-change-for-a-purchase-option). Schedule price increases/decreases and apply them to new subscribers or existing subscribers.
 
 - [**Purchase options**](#creating-purchase-options): Add a single product and then create multiple purchase options for it (a purchase option includes the pricing, billing, and offers for a product). This means that, for example, you can create a subscription product for the content you offer, and then add monthly and annual purchase options for it. This structure simplifies and streamlines the catalog workflow.
 
@@ -71,15 +71,6 @@ Scheduling limited-time offers instead of editing base offers is a more robust m
 
 Limited-time offers (active or scheduled) created in Catalog 1.0 cannot be updated in Catalog 2.0. The limited-time offers continue to work as expected in Catalog 2.0; however, they are not editable and must run for their full duration before you can set up another offer for the same purchase option SKU. Limited-time offers created and scheduled in Catalog 2.0 are editable.
 
-**Price changes to existing customers in Catalog 1.0 are applied to both new and existing customers in Catalog 2.0**
-
-In Catalog 2.0, when you schedule a price change for a purchase option, it is always applied to new subscribers (you can apply price changes to new subscribers only or both new and existing subscribers). As a result, price changes applied to only existing customers in Catalog 1.0 are applied to both existing and new customers after you upgrade to Catalog 2.0.
-
-To maintain separate pricing for new and existing customers, schedule a price change for new customers at the new price (the earliest price changes can go into effect is the next calendar day after you upgrade to Catalog 2.0).
-
-**15-day notice required for price increases to existing subscribers**
-
-If you increase the price of a purchase option for existing subscribers, you must give them a 15-day notice.
 
 **Purchase options for deleted products are in the Purchases>Ended tab**
 
@@ -424,7 +415,7 @@ To create a cancellation offer, follow these steps:
 
 ### Scheduling a price change for a purchase option
 
-You can schedule a price increase/decrease of a purchase option. The price change may be applied to new subscribers only or both new and existing subscribers. If you increase the price for existing subscribers, you must give them 15-days notice.
+You can schedule a price increase/decrease of a purchase option. The price change may be applied to either new subscribers or existing subscribers. If you increase the price for existing subscribers, you must give them notice at least 7 days prior but no more than 30 days of the day the increase takes effect. The notice should provide a simple and easy method to cancel.
 
 > The price change goes into effect based on the location associated with your developer account; therefore, you may need to consider time zones for when you want the price change to start.
 
@@ -448,7 +439,7 @@ To schedule a price change for a purchase option, follow these steps:
 
    a. For new subscribers, the earliest that a price change can go into effect is midnight the next day.
 
-   b. For existing subscribers, the selected date must be 15 days in advance of the listed date. You must give current subscribers 15-days notice per Roku's certification requirements..
+   b. For existing subscribers, the selected date must be 15 days in advance of the listed date. 
 
 6. Click **Review and publish** to review the price change before publishing it.
 

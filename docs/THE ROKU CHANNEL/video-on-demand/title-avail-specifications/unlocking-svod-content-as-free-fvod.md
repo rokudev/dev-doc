@@ -23,13 +23,13 @@ To temporarily make Premium Subscription content available for free on Roku Chan
 
 ### Valid vs. invalid window combinations
 
-| Status  | SVOD Window              | FVOD Window              | Reason                                             |
-| ------- | ------------------------ | ------------------------ | -------------------------------------------------- |
-| Valid   | 2025-04-01 to 2025-10-31 | 2025-05-01 to 2025-06-15 | FVOD is entirely within the SVOD window.           |
-| Valid   | 2025-04-01 to 2025-10-31 | 2025-04-01 to 2025-10-31 | FVOD matches the SVOD window exactly.              |
-| Invalid | 2025-04-01 to 2025-10-31 | 2025-03-25 to 2025-05-01 | FVOD starts before the SVOD window.                |
-| Invalid | 2025-04-01 to 2025-10-31 | 2025-09-01 to 2025-11-15 | FVOD ends after the SVOD window.                   |
-| Invalid | none                     | 2025-06-01 to 2025-06-30 | FVOD-only is not supported; no active SVOD window. |
+| Status  | SVOD Window                   | FVOD Window                   | Reason                                             |
+| ------- | ----------------------------- | ----------------------------- | -------------------------------------------------- |
+| Valid   | 2025-04-01 to<br />2025-10-31 | 2025-05-01 to<br />2025-06-15 | FVOD is entirely within the SVOD window.           |
+| Valid   | 2025-04-01 to<br />2025-10-31 | 2025-04-01 to<br />2025-10-31 | FVOD matches the SVOD window exactly.              |
+| Invalid | 2025-04-01 to<br />2025-10-31 | 2025-03-25 to<br />2025-05-01 | FVOD starts before the SVOD window.                |
+| Invalid | 2025-04-01 to<br />2025-10-31 | 2025-09-01 to<br />2025-11-15 | FVOD ends after the SVOD window.                   |
+| Invalid | none                          | 2025-06-01 to<br />2025-06-30 | FVOD-only is not supported; no active SVOD window. |
 
 ## Delivery method
 

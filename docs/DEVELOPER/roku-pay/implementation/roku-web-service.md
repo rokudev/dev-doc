@@ -7,13 +7,13 @@ metadata:
   title: Roku Pay web services reference | Roku Developer Docs
   description: >-
     Use the Roku Pay APIs to validate transactions, cancel and refund
-    subscriptions, update billing cycles, and issue service credits to Roku
+    subscriptions, and issue service credits to Roku
     accounts.
   robots: index
 next:
   description: ''
 ---
-The Roku Pay APIs are RESTful web services that use standard HTTP methods for transferring billing transaction data between the Roku platform and the publisher's backend system. The Roku Pay APIs enable publishers to validate entitlements to products; refund and cancel subscriptions; issue service credits; and update customer billing cycles.
+The Roku Pay APIs are RESTful web services that use standard HTTP methods for transferring billing transaction data between the Roku platform and the publisher's backend system. The Roku Pay APIs enable publishers to validate entitlements to products; refund and cancel subscriptions; and issue service credits.
 
 ## Getting started
 
@@ -113,7 +113,6 @@ The Roku Pay platform provides the following APIs for managing billing transacti
 | GET    | [validate-refund](#validate-refund)           | Check whether a refund has been issued.                                                                                                                                                           |
 | POST   | [cancel-subscription](#cancel-subscription)   | Cancel a Roku Pay subscription.                                                                                                                                                                   |
 | POST   | [refund-subscription](#refund-subscription)   | Refund a Roku Pay subscription.                                                                                                                                                                   |
-| POST   | [update-bill-cycle](#update-billing-cycle)    | Change the billing cycle data for a Roku Pay subscription (for example, to provide a customer a free week of service due to a service outage, you can delay their next billing date by one week). |
 | POST   | [issue-service-credit](#issue-service-credit) | Give a service credit to a Roku account. (More on service credits below.)                                                                                                                         |
 
 > **transactionId** format: The transactionIds returned by the Roku Pay APIs are ASCII strings of variable length that may be up to 1024 bytes.
@@ -525,65 +524,6 @@ POST https://apipub.roku.com/listen/transaction-service.svc/refund-subscription
     "errorMessage": "",
     "status": 0,
     "RefundId": "304be6b0ddd44f7badfcab3e01436cc6"
-}
-```
-
-### Update billing cycle
-
-The `update-bill-cycle` API updates the billing cycle of the subscription corresponding to the specified `transactionId`.
-
-Set the `newBillCycleDate` to the updated date on which the user should be billed (for example, the user can be billed on the 6th instead of the 4th). The updated date should be within the next billing period (the current expiration date plus the billing interval year or month).
-
-**Request syntax:**
-
-**Method/URL**
-
-```http
-POST https://apipub.roku.com/listen/transaction-service.svc/update-bill-cycle
-```
-
-**XML body**
-
-```xml
-<billCycleUpdate>
-    <partnerAPIKey>F05447A57F8DF275FC30EC835FCAD10A19B6</partnerAPIKey>
-    <newBillCycleDate>2020-02-12T08:17:09</newBillCycleDate>
-    <transactionId>de054ad85a454db38800ab3e014687a6</transactionId>
-</billCycleUpdate>
-```
-
-**JSON body**
-
-```json
-{
-    "transactionId": "fc51c9b9ba324923ae6dab3e01449eb5",
-    "newBillCycleDate": "2020-02-12T08:17:09",
-    "partnerAPIKey": "F05447A57F8DF275FC30EC835FCAD10A19B6"
-
-}
-```
-
-**Response example:**
-
-**XML**:
-
-```xml
-<result xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-    <errorCode i:nil="true"/>
-    <errorDetails i:nil="true"/>
-    <errorMessage/>
-    <status>Success</status>
-</result>
-```
-
-**JSON**:
-
-```json
-{
-    "errorCode": null,
-    "errorDetails": null,
-    "errorMessage": "",
-    "status": 0
 }
 ```
 

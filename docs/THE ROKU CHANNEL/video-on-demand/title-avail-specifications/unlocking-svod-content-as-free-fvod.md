@@ -1,5 +1,6 @@
 ---
 title: FVOD submissions
+excerpt: Offering free preview windows for Premium Subscriptions content
 deprecated: false
 hidden: true
 metadata:

@@ -1,5 +1,5 @@
 ---
-title: Copy of Premium Subscriptions
+title: Legacy Premium Subscriptions Page
 deprecated: false
 hidden: true
 metadata:

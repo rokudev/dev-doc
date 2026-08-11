@@ -29,7 +29,7 @@ Here is the list of key developer-facing Roku OS 15.3 updates:
 
 ##### Video.captionRenderArea field for displaying captions in custom positions
 
-The **Video** node includes a new **captionRenderArea** field for rendering captions in specific areas on a screen. Developers can use this function to display captions in custom positions for some preview and other non-full-screen scenarios.
+The [**Video** node](doc:video#closed-caption-fields) includes a new **captionRenderArea** field for rendering captions in specific areas on a screen. Developers can use this function to display captions in custom positions for some preview and other non-full-screen scenarios.
 
 ##### Double support for fields
 

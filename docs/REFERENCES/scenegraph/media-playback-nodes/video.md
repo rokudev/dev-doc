@@ -1,11 +1,13 @@
 ---
 title: Video
-excerpt: 'Node class that provides controlled playback of live or VOD video'
+excerpt: Node class that provides controlled playback of live or VOD video
 deprecated: false
 hidden: false
 metadata:
-  title: 'Video'
-  description: 'Documents the Video node, which provides controlled playback of live or VOD video, with fields for trickplay, closed captions, and audio tracks.'
+  title: Video
+  description: >-
+    Documents the Video node, which provides controlled playback of live or VOD
+    video, with fields for trickplay, closed captions, and audio tracks.
   robots: index
 next:
   description: ''
@@ -528,6 +530,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>The visible pivot node. This is a generic renderable node that can be used to display any component. This node is only displayed when video is paused.</td>
 </tr>
 </tbody></table>
+
 ### Closed caption fields
 
 <table>

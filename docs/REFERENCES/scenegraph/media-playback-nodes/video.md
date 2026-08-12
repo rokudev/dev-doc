@@ -913,7 +913,97 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>string</td>
 <td>&nbsp;</td>
 <td>READ\_ONLY</td>
-<td>Contains the format of the currently playing audio.
+<td>Contains the format of the currently playing audio.</br><table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>""</td>
+<td>No stream playing</td>
+</tr>
+<tr>
+<td>none</td>
+<td>Stream contains no playable audio</td>
+</tr>
+<tr>
+<td>unknown</td>
+<td>Stream contains unknown audio</td>
+</tr>
+<tr>
+<td>aac</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding</td>
+</tr>
+<tr>
+<td>aac\_adif</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td>
+</tr>
+<tr>
+<td>aac\_adts</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td>
+</tr>
+<tr>
+<td>aac\_latm</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td>
+</tr>
+<tr>
+<td>ac3</td>
+<td>Dolby Digital</td>
+</tr>
+<tr>
+<td>ac4</td>
+<td>Dolby Audio - AC-4</td>
+</tr>
+<tr>
+<td>alac</td>
+<td>Apple Lossless</td>
+</tr>
+<tr>
+<td>dts</td>
+<td>DTS Coherent Acoustics</td>
+</tr>
+<tr>
+<td>eac3</td>
+<td>Dolby Digital Plus</td>
+</tr>
+<tr>
+<td>flac</td>
+<td>Free Lossless Audio Codec</td>
+</tr>
+<tr>
+<td>flac</td>
+<td>Free Lossless Audio Codec</td>
+</tr>
+<tr>
+<td>mat</td>
+<td>Dolby Audio - TrueHD</td>
+</tr>
+<tr>
+<td>mp3</td>
+<td>ISO/IEC 11172-3, MPEG Audio Layer III</td>
+</tr>
+<tr>
+<td>pcm</td>
+<td>linear PCM</td>
+</tr>
+<tr>
+<td>vorbis</td>
+<td>Ogg Vorbis</td>
+</tr>
+<tr>
+<td>wma</td>
+<td>Microsoft Windows Media Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
+</tr>
+<tr>
+<td>wmapro</td>
+<td>Microsoft Windows Media Pro Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
+</tr>
+</tbody>
+</table>
+</td></td>
 </tr>
 <tr>
 <td>supplementaryAudioVolume</td>

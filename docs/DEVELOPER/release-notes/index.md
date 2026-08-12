@@ -39,19 +39,19 @@ SceneGraph fields now support Double values.
 
 ##### roUtils predicates
 
-The roUtils component includes new **isNumber()**, **isString()**, and **isFloatingPoint()** functions that check whether a given value is any kind of number or string (boxed or unboxed).
+The [**roUtils** component](doc:routils) includes new **isNumber()**, **isString()**, and **isFloatingPoint()** functions that check whether a given value is any kind of number or string (boxed or unboxed).
 
 ##### roAssociativeArray.values() function
 
-The roAssociativeArray component includes a new _values()_ function that returns the values within the associative array in key order.
+The [**roAssociativeArray** component](doc:roassociativearray) includes a new **values()** function that returns the values within the associative array in key order.
 
 ##### roTimespan functions return LongInteger values
 
-The roTimeSpan node now includes **totalMillisecondsLong()** and **totalMicrosecondsLong()** functions that return the total milliseconds and microseconds from the “Mark” point as LongInteger values.
+The [**roTimeSpan** node](doc:rotimespan) now includes **totalMillisecondsLong()** and **totalMicrosecondsLong()** functions that return the total milliseconds and microseconds from the “Mark” point as LongInteger values.
 
-##### roAnimatedImage functions enable rotation and scaling around an arbitrary point
+##### New roAnimatedImage component includes functions for rotating and scaling around an arbitrary point
 
-The roAnimatedImage interface includes a new **SetPretranslation()** function that enables you to rotate and scale images around their center. You can also call **GetPretranslationX()** and **GetPretranslationY()&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
+The interface for the new [**roAnimatedImage** component](doc:[roanimatedimage) includes a **SetPretranslation()** function that enables you to rotate and scale images around their center. You can also call **GetPretranslationX()** and **GetPretranslationY()&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
 
 ## Roku OS 15.2
 

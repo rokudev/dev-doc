@@ -58,7 +58,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>roAssociativeArray</td>
 
       <td />
-
+    
       <td>READ\_ONL</td>
       <td>Indicates whether the DRM license was acquired. If a failure occurs, this field provides additional details about the error. The roAssociativeArray contains the following fields:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>response</td><td>string</td><td>The server response. If a license is not retrieved, the response is empty and the HTTP response code is returned instead.</td></tr><tr><td>status</td><td>string</td><td>The HTTP response code.</td></tr><tr><td>keysystem</td><td>string</td><td>The DRM technology used.</td></tr><tr><td>duration</td><td>string</td><td>The total time elapsed in sending a request to the license server and receiving a response (in milliseconds).</td></tr></tbody></table><br /></td>
     </tr>
@@ -128,9 +128,9 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
     <tr>
       <td>errorInfo</td>
       <td>roAssociativeArray</td>
-
+    
       <td />
-
+    
       <td>READ\_ONLY</td>
       <td>A diagnostic message to help resolve the video play error set in the <code>state</code> field.<br /><br />The roAssociativeArray contains the following fields:<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>clipId</td><td>integer</td><td>The unique ID for the clip</td></tr><tr><td>ignored</td><td>integer</td><td>Indicates whether the error generated an exception (0) or was ignored resulting in the next item in the content list being played (1).</td></tr><tr><td>source</td><td>string</td><td>The module that generated the error.</td></tr><tr><td>category</td><td>String</td><td>The type of error, which includes: "http", "drm", "mediaerror", or "mediaplayer".</td></tr><tr><td>errcode</td><td>integer</td><td>The internal Roku code associated with the error.  Use the <strong>dbgmsg</strong> field for debugging.</td></tr><tr><td>dbgmsg</td><td>string</td><td>A verbose debug message that can help identify the root cause of the error.</td></tr><tr><td>drmerrcode</td><td>integer</td><td>The error code returned by the DRM system, if any, when a video player error occurs</td></tr></tbody></table></td>
     </tr>
@@ -353,7 +353,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>string</td>
 
       <td />
-
+    
       <td>READ\_ONLY</td>
       <td>Contains the format of the currently playing video stream.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>""</td><td>No stream playing</td></tr><tr><td>none</td><td>Stream contains no playable video</td></tr><tr><td>unknown</td><td>Stream contains unknown video</td></tr><tr><td>hevc</td><td>ISO/IEC 23008-2, H.265, HEVC</td></tr><tr><td>hevc\_b</td><td>ISO/IEC 23008-2 Annex-B, H.265, HEVC</td></tr><tr><td>mpeg1</td><td>ISO/IEC 11172-2, MPEG-1 part 2, H.261</td></tr><tr><td>mpeg2</td><td>ISO/IEC 13818-2, MPEG-2 part 2, H.262</td></tr><tr><td>mpeg4\_2</td><td>ISO/IEC 14496-2, MPEG-4 part 2, H.263</td></tr><tr><td>mpeg4\_10b</td><td>ISO/IEC 14496-10, MPEG-4 part 10 Annex-B, H.264, vc-1</td></tr><tr><td>mpeg4\_15</td><td>ISO/IEC 14496-15, MPEG-4 part 15, H.264, vc-1</td></tr><tr><td>AVC vc1</td><td>vc-1</td></tr><tr><td>wmv</td><td>Microsoft Windows Media Video</td></tr></tbody></table></td>
     </tr>
@@ -622,63 +622,331 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 ### Closed caption fields
 
 <table>
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Access Permission</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>globalCaptionMode</td>
-      <td>option string</td>
-      <td>Off</td>
-      <td>READ\_WRITE</td>
-      <td>Sets the value of the global Roku closed-caption mode. This can be used to allow the user or the application to change the closed-caption mode in an application just before or during video playback. The possible options are:<br /><br /><table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>"Off"</td><td>Turns the global Roku closed-caption mode off.</td></tr><tr><td>"On"</td><td>Turns the global Roku closed-caption mode on.</td></tr><tr><td>"Instant replay"</td><td>Sets the global Roku closed-caption setting to display captions only during instant replay.</td></tr><tr><td>"When mute"</td><td>Sets the global Roku closed-caption setting to display captions only when the volume is muted. (This only applies to Roku TVs.)</td></tr></tbody></table><br /><br />The app should set the <code>subtitleTrack</code> field regardless of the selected Caption Mode.</td>
-    </tr>
-    <tr>
-      <td>suppressCaptions</td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>READ\_WRITE</td>
-      <td>Suppresses the closed caption for the purpose of resolving conflicts in cases where UI elements are drawn.<br /><br />Note that most of the disabling/enabling of the captions are done by the Roku OS, including enabling closed caption for Instant Replay.</td>
-    </tr>
-    <tr>
-      <td>subtitleTrack</td>
-      <td>string</td>
-
-      <td />
-
-      <td>READ\_WRITE</td>
-      <td>The identifier of the selected subtitle track. Subtitles may or may not be visible on the screen, depending upon the user's caption mode setting. <br /><br />Reading this field will return the identifier of the subtitle track selected by the user. Writing this the field will change the track.<br /><br />See also: <a href="#closed-caption-fields">globalCaptionMode</a></td>
-    </tr>
-    <tr>
-      <td>currentSubtitleTrack</td>
-      <td>string</td>
-
-      <td />
-
-      <td>READ\_ONLY</td>
-      <td>The identifier of the selected subtitle track. Subtitles may or may not be visible on the screen, depending upon the user's caption mode setting. <br /><br />Reading this field will return the identifier of the subtitle track that is playing. When the user has not selected a track, the Roku media player will select a track based on the preferred caption language system setting.</td>
-    </tr>
-    <tr>
-      <td>availableSubtitleTracks</td>
-      <td>array of associative arrays</td>
-      <td>\[ ] empty array</td>
-      <td>READ\_ONLY</td>
-      <td>The list of subtitle tracks available in the video stream. The array is initially populated with the tracks specified in the Content Meta-Data, and additional tracks are added if they are detected by the digital video player. Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Description</td><td>string</td><td>Descriptive name of the subtitle track</td></tr><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>TrackName</td><td>string</td><td>The track identifier. The value of this field may be used to select the subtitle track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-music-and-sound."</td></tr><tr><td>HasAccessibilityCaption<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>HLS: represents "public.accessibility.transcribes-spoken-dialog." <br /><br />DASH: Subtitle track contains captions</td></tr><tr><td>HasAccessibilitySign<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>DASH: Subtitle track contains a sign-language interpretation of an audio component info.</td></tr></tbody></table></td>
-    </tr>
-    <tr>
-      <td>captionStyle</td>
-      <td>associative array</td>
-      <td>system default</td>
-      <td>READ\_WRITE</td>
-      <td>Allows apps to style closed captions. For any keys that are absent from the associative array, or for unexpected values, the Default value is assumed for that property. Following are the possible key names and values for this field:<br /><br /><table><thead><tr><th>Property</th><th>Possible Values</th></tr></thead><tbody><tr><td>Text/Font<br /></td><td>Default<br />Serif Fixed Width<br />Serif Proportional<br />Sans Serif Fixed Width<br />Sans Serif Proportional<br />Casual<br />Cursive<br />Small Caps</td></tr><tr><td>Text/Effect</td><td>Default<br />None<br />Raised<br />Depressed<br />Uniform<br />Drop shadow (left)<br />Drop shadow (right)</td></tr><tr><td>Text/Size</td><td>Default<br />Large<br />Medium<br />Small</td></tr><tr><td>Text/Color</td><td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td></tr><tr><td>Text/Opacity</td><td>Default<br />25%<br />50%<br />75%<br />100%</td></tr><tr><td>Background/Color</td><td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td></tr><tr><td>Background/Opacity</td><td>Default<br />Off<br />25%<br />50%<br />75%<br />100%</td></tr><tr><td>Window/Color</td><td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td></tr><tr><td>Window/Opacity</td><td>Default<br />Off<br />25%<br />50%<br />75%<br />100%</td></tr></tbody></table></td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Access Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>globalCaptionMode</td>
+<td>option string</td>
+<td>Off</td>
+<td>READ\_WRITE</td>
+<td>Sets the value of the global Roku closed-caption mode. This can be used to allow the user or the application to change the closed-caption mode in an application just before or during video playback. The possible options are:<br /><br />
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Off"</td>
+<td>Turns the global Roku closed-caption mode off.</td>
+</tr>
+<tr>
+<td>"On"</td>
+<td>Turns the global Roku closed-caption mode on.</td>
+</tr>
+<tr>
+<td>"Instant replay"</td>
+<td>Sets the global Roku closed-caption setting to display captions only during instant replay.</td>
+</tr>
+<tr>
+<td>"When mute"</td>
+<td>Sets the global Roku closed-caption setting to display captions only when the volume is muted. (This only applies to Roku TVs.)</td>
+</tr>
+</tbody>
+</table>
+<br /><br />The app should set the <code>subtitleTrack</code> field regardless of the selected Caption Mode.</td>
+</tr>
+<tr>
+<td>suppressCaptions</td>
+<td>boolean</td>
+<td>false</td>
+<td>READ\_WRITE</td>
+<td>Suppresses the closed caption for the purpose of resolving conflicts in cases where UI elements are drawn.<br /><br />Note that most of the disabling/enabling of the captions are done by the Roku OS, including enabling closed caption for Instant Replay.</td>
+</tr>
+<tr>
+<td>subtitleTrack</td>
+<td>string</td>
+<td>&nbsp;</td>
+<td>READ\_WRITE</td>
+<td>The identifier of the selected subtitle track. Subtitles may or may not be visible on the screen, depending upon the user's caption mode setting. <br /><br />Reading this field will return the identifier of the subtitle track selected by the user. Writing this the field will change the track.<br /><br />See also: <a href="#closed-caption-fields">globalCaptionMode</a></td>
+</tr>
+<tr>
+<td>currentSubtitleTrack</td>
+<td>string</td>
+<td>&nbsp;</td>
+<td>READ\_ONLY</td>
+<td>The identifier of the selected subtitle track. Subtitles may or may not be visible on the screen, depending upon the user's caption mode setting. <br /><br />Reading this field will return the identifier of the subtitle track that is playing. When the user has not selected a track, the Roku media player will select a track based on the preferred caption language system setting.</td>
+</tr>
+<tr>
+<td>availableSubtitleTracks</td>
+<td>array of associative arrays</td>
+<td>\[ ] empty array</td>
+<td>READ\_ONLY</td>
+<td>The list of subtitle tracks available in the video stream. The array is initially populated with the tracks specified in the Content Meta-Data, and additional tracks are added if they are detected by the digital video player. Each associative array has the following entries:<br /><br />
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>string</td>
+<td>Descriptive name of the subtitle track</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>string</td>
+<td>ISO 639-2 three-letter language code</td>
+</tr>
+<tr>
+<td>TrackName</td>
+<td>string</td>
+<td>The track identifier. The value of this field may be used to select the subtitle track.</td>
+</tr>
+<tr>
+<td>HasAccessibilityDescription<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
+<td>boolean</td>
+<td>HLS: represents "public.accessibility.describes-music-and-sound."</td>
+</tr>
+<tr>
+<td>HasAccessibilityCaption<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
+<td>boolean</td>
+<td>HLS: represents "public.accessibility.transcribes-spoken-dialog." <br /><br />DASH: Subtitle track contains captions</td>
+</tr>
+<tr>
+<td>HasAccessibilitySign<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
+<td>boolean</td>
+<td>DASH: Subtitle track contains a sign-language interpretation of an audio component info.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>captionStyle</td>
+<td>associative array</td>
+<td>system default</td>
+<td>READ\_WRITE</td>
+<td>Allows apps to style closed captions. For any keys that are absent from the associative array, or for unexpected values, the Default value is assumed for that property. Following are the possible key names and values for this field:<br /><br />
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Possible Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text/Font</td>
+<td>Default<br />Serif Fixed Width<br />Serif Proportional<br />Sans Serif Fixed Width<br />Sans Serif Proportional<br />Casual<br />Cursive<br />Small Caps</td>
+</tr>
+<tr>
+<td>Text/Effect</td>
+<td>Default<br />None<br />Raised<br />Depressed<br />Uniform<br />Drop shadow (left)<br />Drop shadow (right)</td>
+</tr>
+<tr>
+<td>Text/Size</td>
+<td>Default<br />Large<br />Medium<br />Small</td>
+</tr>
+<tr>
+<td>Text/Color</td>
+<td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td>
+</tr>
+<tr>
+<td>Text/Opacity</td>
+<td>Default<br />25%<br />50%<br />75%<br />100%</td>
+</tr>
+<tr>
+<td>Background/Color</td>
+<td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td>
+</tr>
+<tr>
+<td>Background/Opacity</td>
+<td>Default<br />Off<br />25%<br />50%<br />75%<br />100%</td>
+</tr>
+<tr>
+<td>Window/Color</td>
+<td>Default<br />White<br />Black<br />Red<br />Green<br />Blue<br />Yellow<br />Magenta<br />Cyan</td>
+</tr>
+<tr>
+<td>Window/Opacity</td>
+<td>Default<br />Off<br />25%<br />50%<br />75%<br />100%</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p data-local-id="a695026f2536" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true" data-pm-slice="1 1 [&quot;table&quot;,{&quot;displayMode&quot;:null,&quot;isNumberColumnEnabled&quot;:false,&quot;layout&quot;:&quot;center&quot;,&quot;localId&quot;:&quot;88252759-35bc-4dad-8da5-dbb7001a6870&quot;,&quot;width&quot;:1088,&quot;__autoSize&quot;:false},&quot;tableRow&quot;,{&quot;localId&quot;:&quot;a92db8f8-a762-4d63-ae1a-547fdaacf623&quot;},&quot;tableCell&quot;,{&quot;colspan&quot;:1,&quot;rowspan&quot;:1,&quot;colwidth&quot;:[172],&quot;background&quot;:null,&quot;localId&quot;:&quot;af890671-7f2b-4ce9-be79-274ca4941038&quot;,&quot;valign&quot;:null}]">captionRenderArea</p>
+</td>
+<td>&nbsp;
+<p data-local-id="a2c59b0a04d5" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true" data-pm-slice="1 1 [&quot;table&quot;,{&quot;displayMode&quot;:null,&quot;isNumberColumnEnabled&quot;:false,&quot;layout&quot;:&quot;center&quot;,&quot;localId&quot;:&quot;88252759-35bc-4dad-8da5-dbb7001a6870&quot;,&quot;width&quot;:1088,&quot;__autoSize&quot;:false},&quot;tableRow&quot;,{&quot;localId&quot;:&quot;a92db8f8-a762-4d63-ae1a-547fdaacf623&quot;},&quot;tableCell&quot;,{&quot;colspan&quot;:1,&quot;rowspan&quot;:1,&quot;colwidth&quot;:[114],&quot;background&quot;:null,&quot;localId&quot;:&quot;62a07f94-f52e-4479-ba7c-de0b51006dd1&quot;,&quot;valign&quot;:null}]">associative array</p>
+</td>
+<td>system default&nbsp;</td>
+<td>READ\_WRITE&nbsp;</td>
+<td>
+<p>Renders captions in specific areas on a screen. You can use this function to display captions in custom positions for some PreView and other non-full-screen scenarios.</p>
+<div class="tableView-content-wrap" data-prosemirror-initial-todom-render="true" data-prosemirror-content-type="node" data-prosemirror-node-name="table" data-prosemirror-node-block="true" data-pm-slice="1 1 []">
+<div data-testid="table-alignment-container">
+<div class="pm-table-resizer-container">
+<div class="resizer-item display-handle">
+<div class="pm-table-container" data-number-column="false" data-layout="default" data-testid="table-container">
+<div class="pm-table-wrapper">
+<table data-number-column="false" data-layout="default" data-autosize="false" data-table-local-id="e4b488a9-6cbd-4846-9373-08aa2f9f7f0f" data-table-width="760" data-ssr-placeholder="table-e4b488a9-6cbd-4846-9373-08aa2f9f7f0f" data-ssr-placeholder-replace="table-e4b488a9-6cbd-4846-9373-08aa2f9f7f0f"><colgroup><col /><col /><col /></colgroup>
+<tbody>
+<tr data-local-id="b0148b9f4e6b" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<th class="pm-table-header-content-wrap" data-colwidth="175" data-local-id="4bb314f6-3aae-4c94-93fa-f22f060c77de" data-prosemirror-content-type="node" data-prosemirror-node-name="tableHeader" data-prosemirror-node-block="true">
+<p data-local-id="7a70612ea955" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true"><strong data-prosemirror-content-type="mark" data-prosemirror-mark-name="strong">Key</strong></p>
+</th>
+<th class="pm-table-header-content-wrap" data-colwidth="54" data-local-id="df856d21-403d-4a82-b349-81d90ab9454e" data-prosemirror-content-type="node" data-prosemirror-node-name="tableHeader" data-prosemirror-node-block="true">
+<p data-local-id="4cf39d2b91de" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true"><strong data-prosemirror-content-type="mark" data-prosemirror-mark-name="strong">Type</strong></p>
+</th>
+<th class="pm-table-header-content-wrap" data-colwidth="437" data-local-id="06be89ea-d396-4178-b399-449d9fb05a47" data-prosemirror-content-type="node" data-prosemirror-node-name="tableHeader" data-prosemirror-node-block="true">
+<p data-local-id="5efc1f7b0c8c" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true"><strong data-prosemirror-content-type="mark" data-prosemirror-mark-name="strong">Description</strong></p>
+</th>
+</tr>
+<tr data-local-id="687aeff84a03" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="ee270114-bca6-4a9f-9cb5-af2fb464ef4a" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="204f81fe15a4" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">mode</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="5d3be50f-46fc-45dd-b11d-8d7bfb5d95e9" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="196b706c1592" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">string</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="11b02faa-5950-4d22-9b78-889ca2cdcb79" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<ul class="ak-ul" data-local-id="04ac3919-d2e9-4bb5-8c5b-492e77428cd9" data-prosemirror-content-type="node" data-prosemirror-node-name="bulletList" data-prosemirror-node-block="true">
+<li data-local-id="31e0b411-5545-43b1-9f3a-1d7699db7378" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="6adda6a05942" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">fullscreen (default): Keeps existing behavior and captions are shown only in "full screen" video playback and in the position that indicated by the content. The rest of attributes are ignored in this mode.</p>
+</li>
+<li data-local-id="f8d791e7-cb64-48a6-b1c7-38ba43d46d01" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="8488cbf0e88f" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">auto: Roku OS uses current video boundaries to render captions. X, Y, Width, Height attributes will be ignored in this mode.</p>
+</li>
+<li data-local-id="a21d0f8e-ca38-45f8-b4a0-2b6b47db4334" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="ee6ced834147" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">override: Roku OS uses the area provided by X, Y, Width, Height attributes to render captions. The caption render area is not required to match height/width of captions. As captions can be a single word to multiple lines, channel can provide a much bigger area that is safe and there is no conflict with channel UI elements. In this mode the channel is responsible for any conflicts between captions and its own UI elements; Roku OS might disable smart caption adjustment to avoid interfering with the channel positioning choices.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr data-local-id="54b4420ff8dd" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="bdadf249-9820-420f-be04-ad30780e98c6" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="c2561265b42c" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">overridePlacement</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="f77ee1b2-1958-4439-b207-377ec0c5e4b0" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="4a89a546b544" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">bool</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="40c22897-410e-411c-8ec1-3b130323afe3" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<ul class="ak-ul" data-local-id="1e1984fc-a333-4a4f-8cee-2a6fc5e55320" data-prosemirror-content-type="node" data-prosemirror-node-name="bulletList" data-prosemirror-node-block="true">
+<li data-local-id="76d1d010-954f-4ad1-828c-c6239e5d8085" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="09657a2063fc" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">true (default for override mode): Caption position adjusted and shown in the "center-bottom" of the provided render boundary (either by X, Y, Width, Height attributes in override mode or video rect in auto mode) regardless of any positioning/sizing info in caption content.</p>
+</li>
+<li data-local-id="ea7010f1-89b9-4e23-989b-209a54f2abaf" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="c5e15f114e62" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">false (default for auto/fullscreen mode): Caption shown based on positioning/sizing information in caption content interpreted based on new render area. It is recommended when auto mode, but it could cause some unknown behavior (like caption fit, caption visibility or caption overlap with other GUI elements).</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr data-local-id="99b72a8b2444" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="c2981b21-a1fb-4131-84ac-63aa10583e90" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="18adac8e56bc" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">scaleFonts</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="fca78468-8579-4470-9e76-5646d3f2e359" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="3c2776ea4bc8" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">string</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="a4f2bbbb-391a-4b55-93ff-2715b2855f15" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<ul class="ak-ul" data-local-id="357204df-67b3-4fb8-afa5-e520dd156fe0" data-prosemirror-content-type="node" data-prosemirror-node-name="bulletList" data-prosemirror-node-block="true">
+<li data-local-id="10fa0b49-9553-4cae-9273-3027121c6fd1" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="ff8173c62e4b" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">off: Fonts will shown based on full-screen and font sizes inside caption content calculations. No any scaling to be done!</p>
+</li>
+<li data-local-id="4f929a01-164f-4b79-a994-039d9289bc3a" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="55408d40834a" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">by-width (default): The original calculated font size will be scaled based on renderArea width to fullScreen width ratio.</p>
+</li>
+<li data-local-id="3ffca37c-fba9-4f22-aa45-7e17ebd889b7" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="32aa07dd09c4" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">by-height: The original font size will be scaled based on renderArea height to fullScreen height ratio.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr data-local-id="a3291ef54f55" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="02784e0f-21d6-49e3-a043-4967f6d767a0" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="e33f96983f54" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">keepSafeMargins</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="34bb95b3-7e30-448d-9ff5-ddadbc15628e" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="a01d473b07cf" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">bool</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="661aeaf9-f301-4ea6-b3e8-a1f9f35f9c40" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<ul class="ak-ul" data-local-id="1ec3430a-6331-4148-a695-2fad5408b88a" data-prosemirror-content-type="node" data-prosemirror-node-name="bulletList" data-prosemirror-node-block="true">
+<li data-local-id="aa6c39ae-c497-452f-9f68-7baf4bf5aace" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="21d2eae611d5" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">true (default for auto/fullscreen mode): OS preserves 10% on each side of new renderArea as non renderable. This is recommended option if "auto"/"fullscreen" mode selected.</p>
+</li>
+<li data-local-id="9d3f94d4-b50d-4e61-86ea-59da9f95afa0" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
+<p data-local-id="5d51cf624010" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">false (default for override mode): All defined area can be used for caption rendering without any safe margin observation.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr data-local-id="681a2fe8e1cc" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="6eef3cd6-8f9c-4236-90e5-83f8cbbd99f7" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="32bffa10892c" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">x</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="b6b53adc-f680-49c2-8866-9329953fa9b1" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="df8a57d48380" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">integer</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="23f126b3-8de2-4907-83b2-98b646e347ef" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="0faba36187c6" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Horizontal starting offset (left edge) of the caption custom render area (in pixels relative to the video show position in UI).</p>
+</td>
+</tr>
+<tr data-local-id="e9e3a1eba70d" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="eff9ed95-d502-47d7-b1ec-57b336ad8653" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="05365d263ae8" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">y</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="7c61e8ca-bce9-48dd-a939-a399284a4d66" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="b2c00fef3009" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">integer</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="656e5d1f-1e33-4b33-a10d-3773a8e6a6cd" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="3ac2a8d0f1ef" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Vertical starting offset (top edge) of the caption custom render area (in pixels relative to the video show position in UI).</p>
+</td>
+</tr>
+<tr data-local-id="63fea047786a" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="f1515e1b-375d-4465-8ce4-1ee0efa8842d" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="74e2dc223ec5" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">width</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="ea2c809d-e310-4b73-ba3d-511f55b1915a" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="fb5cbfac118e" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">integer</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="7a153dcc-6a43-42c7-94e7-d3b97ca29215" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="8ea311ed1f18" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Width of the caption custom render area, in pixels. Recommended to use as big as channel UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</p>
+</td>
+</tr>
+<tr data-local-id="dda9bc71b9a7" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
+<td class="pm-table-cell-content-wrap" data-colwidth="175" data-local-id="4ffa51b9-a9cb-4aa2-a4c1-4a8a2b9c76d0" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="b0857696edac" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">height</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="54" data-local-id="49dce36a-fc61-4bf7-8f0b-8f523adafbe1" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="6914ac2d5fab" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">integer</p>
+</td>
+<td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="1c224f05-8686-4c96-86b2-d4dbbb913f9d" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
+<p data-local-id="e931ea979059" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Height of the caption custom render area, in pixels. Recommended to use as big as channel UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
 </table>
 
 ### Audio fields
@@ -727,26 +995,111 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_WRITE</td>
-      <td>Enables apps to continuously play video when the audio track is switched. This feature currently supports HLS only.<br /><br /><ul><li><strong>true</strong>: Continues video playback when the audio track changes (provided that HLS is being used and the audio format of the new audio track is the same as the original one). In this case, a brief period of no audio may occur while the audio tracks are switched.</li><li><strong>false</strong>: Pauses video playback for approximately 1 second when the audio track changes (default behavior). In this case, a black screen and/or buffering appears while the audio tracks are switched.</li></ul><br /><br />To enable this feature, you must set this field before sending any command to the Video node. This field may not be changed during video playback.</td>
-    </tr>
-    <tr>
-      <td>audioFormat</td>
-      <td>string</td>
-
-      <td />
-
-      <td>READ\_ONLY</td>
-      <td>In all other cases they shouldn't .Contains the format of the currently playing audio.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>""</td><td>No stream playing</td></tr><tr><td>none</td><td>Stream contains no playable audio</td></tr><tr><td>unknown</td><td>Stream contains unknown audio</td></tr><tr><td>aac</td><td>ISO/IEC 14496-3, Advanced Audio Coding</td></tr><tr><td>aac\_adif</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td></tr><tr><td>aac\_adts</td><td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td></tr><tr><td>aac\_latm</td><td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td></tr><tr><td>ac3</td><td>Dolby Digital</td></tr><tr><td>ac4</td><td>Dolby Audio - AC-4</td></tr><tr><td>alac</td><td>Apple Lossless</td></tr><tr><td>dts</td><td>DTS Coherent Acoustics</td></tr><tr><td>eac3</td><td>Dolby Digital Plus</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>flac</td><td>Free Lossless Audio Codec</td></tr><tr><td>mat</td><td>Dolby Audio - TrueHD</td></tr><tr><td>mp3</td><td>ISO/IEC 11172-3, MPEG Audio Layer III</td></tr><tr><td>pcm</td><td>linear PCM</td></tr><tr><td>vorbis</td><td>Ogg Vorbis</td></tr><tr><td>wma</td><td>Microsoft Windows Media Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td></tr><tr><td>wmapro</td><td>Microsoft Windows Media Pro Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td></tr></tbody></table></td>
-    </tr>
-    <tr>
-      <td>supplementaryAudioVolume</td>
-      <td>int</td>
-      <td>50</td>
-      <td>READ\_WRITE</td>
-      <td>Sets the volume of the description tracks separately from the main audio track. The field value can range from 0 to 100.</td>
-    </tr>
-  </tbody>
+      <td>Enables apps to continuously play video when the audio track is switched. This feature currently supports HLS only.<br /><br /><ul><li><strong>true</strong>: Continues video playback when the audio track changes (provided that HLS is being used and the audio format of the new audio track is the same as the original one). In this case, a brief period of no audio may occur while the audio tracks are switched.</li><li><strong>false</strong>: Pauses video playback for approximately 1 second when the audio track changes (default behavior). In this case, a black screen and/or buffering appears while the audio tracks are switched.</li></ul><br />To enable this feature, you must set this field before sending any command to the Video node. This field may not be changed during video playback.</td></tr><tr>
+<td>audioFormat</td>
+<td>string</td>
+<td>&nbsp;</td>
+<td>READ\_ONLY</td>
+<td>In all other cases they shouldn't .Contains the format of the currently playing audio.<br /><br />
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>""</td>
+<td>No stream playing</td>
+</tr>
+<tr>
+<td>none</td>
+<td>Stream contains no playable audio</td>
+</tr>
+<tr>
+<td>unknown</td>
+<td>Stream contains unknown audio</td>
+</tr>
+<tr>
+<td>aac</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding</td>
+</tr>
+<tr>
+<td>aac\_adif</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td>
+</tr>
+<tr>
+<td>aac\_adts</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td>
+</tr>
+<tr>
+<td>aac\_latm</td>
+<td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td>
+</tr>
+<tr>
+<td>ac3</td>
+<td>Dolby Digital</td>
+</tr>
+<tr>
+<td>ac4</td>
+<td>Dolby Audio - AC-4</td>
+</tr>
+<tr>
+<td>alac</td>
+<td>Apple Lossless</td>
+</tr>
+<tr>
+<td>dts</td>
+<td>DTS Coherent Acoustics</td>
+</tr>
+<tr>
+<td>eac3</td>
+<td>Dolby Digital Plus</td>
+</tr>
+<tr>
+<td>flac</td>
+<td>Free Lossless Audio Codec</td>
+</tr>
+<tr>
+<td>flac</td>
+<td>Free Lossless Audio Codec</td>
+</tr>
+<tr>
+<td>mat</td>
+<td>Dolby Audio - TrueHD</td>
+</tr>
+<tr>
+<td>mp3</td>
+<td>ISO/IEC 11172-3, MPEG Audio Layer III</td>
+</tr>
+<tr>
+<td>pcm</td>
+<td>linear PCM</td>
+</tr>
+<tr>
+<td>vorbis</td>
+<td>Ogg Vorbis</td>
+</tr>
+<tr>
+<td>wma</td>
+<td>Microsoft Windows Media Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
+</tr>
+<tr>
+<td>wmapro</td>
+<td>Microsoft Windows Media Pro Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
+</tr>
+</tbody>
 </table>
+</td>
+</tr><tr>
+<td>supplementaryAudioVolume</td>
+<td>int</td>
+<td>50</td>
+<td>READ\_WRITE</td>
+<td>Sets the volume of the description tracks separately from the main audio track. The field value can range from 0 to 100.</td>
+</tr>
+  </tbody></table>
 
 #### Automatic audio track selection
 

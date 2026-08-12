@@ -106,3 +106,77 @@ Verifies whether a component name is already registered. Developers can call thi
 #### Return Value
 
 A flag indicating whether the specified component name has already been registered.
+
+### isNumber(val as Number) as Boolean
+
+_Available since Roku OS 15.3_
+
+#### Description
+
+Verifies whether the provided value is any numeric type (int, float, double, long integer; boxed or unboxed).&#x20;
+
+#### Parameters
+
+| **Name** | **Type** | **Description**            |
+| :------- | :------- | :------------------------- |
+| val      | Number   | The value to be evlauated. |
+
+#### Return Value
+
+A flag indicating whether the specified value is an Integer, LongInteger, Float, or Double.
+
+### isInteger(val as Integer) as Boolean
+
+_Available since Roku OS 15.3_
+
+#### Description
+
+Verifies whether the provided value is an Integer or LongInteger (boxed or unboxed).&#x20;
+
+#### Parameters
+
+| **Name** | **Type** | **Description**            |
+| :------- | :------- | :------------------------- |
+| val      | Integer  | The value to be evlauated. |
+
+#### Return Value
+
+A flag indicating whether the specified value is an Integer or LongInteger.
+
+### isFloatingPoint(val as Float) as Boolean
+
+_Available since Roku OS 15.3_
+
+#### Description
+
+Verifies whether the provided value is a Float or Double (boxed or unboxed).&#x20;
+
+#### Parameters
+
+| **Name** | **Type** | **Description**            |
+| :------- | :------- | :------------------------- |
+| val      | Float    | The value to be evlauated. |
+
+#### Return Value
+
+A flag indicating whether the specified value is a Float or a Double.
+
+### isString(val as String) as Boolean
+
+_Available since Roku OS 15.3_
+
+#### Description
+
+Verifies whether the provided argument is a string type (intrinsic or roString, boxed or unboxed).&#x20;
+
+#### Parameters
+
+| **Name** | **Type** | **Description**            |
+| :------- | :------- | :------------------------- |
+| val      | String   | The value to be evlauated. |
+
+#### Return Value
+
+A flag indicating whether the specified value is a string type.
+
+<br />

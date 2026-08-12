@@ -1002,8 +1002,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>Microsoft Windows Media Pro Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
 </tr>
 </tbody>
-</table>
-</td></td>
+</table></td>
 </tr>
 <tr>
 <td>supplementaryAudioVolume</td>

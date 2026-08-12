@@ -125,6 +125,16 @@ Verifies whether the provided value is any numeric type (int, float, double, lon
 
 A flag indicating whether the specified value is an Integer, LongInteger, Float, or Double.
 
+#### Example
+
+```text
+utils = CreateObject("roUtils")
+? utils.IsNumber(invalid)              ' false
+? utils.IsNumber(42)                   ' true
+? utils.IsNumber(box(42))              ' true
+? utils.IsNumber("42")                 ' false
+```
+
 ### isInteger(val as Integer) as Boolean
 
 _Available since Roku OS 15.3_
@@ -142,6 +152,15 @@ Verifies whether the provided value is an Integer or LongInteger (boxed or unbox
 #### Return Value
 
 A flag indicating whether the specified value is an Integer or LongInteger.
+
+#### Example
+
+```text
+utils = CreateObject("roUtils")
+? utils.isInteger(42)               ' true
+? utils.isInteger(box(42))         ' true
+? utils.isInteger(invalid)          ' false
+```
 
 ### isFloatingPoint(val as Float) as Boolean
 
@@ -161,6 +180,13 @@ Verifies whether the provided value is a Float or Double (boxed or unboxed).&#x2
 
 A flag indicating whether the specified value is a Float or a Double.
 
+#### Example
+
+```text
+utils = CreateObject("roUtils")
+? utils.IsFloatingPoint(box(3.14)) ' true
+```
+
 ### isString(val as String) as Boolean
 
 _Available since Roku OS 15.3_
@@ -179,4 +205,10 @@ Verifies whether the provided argument is a string type (intrinsic or roString, 
 
 A flag indicating whether the specified value is a string type.
 
-<br />
+#### Example
+
+```text
+utils = CreateObject("roUtils")
+? utils.isString("foo")            ' true
+? utils.isString(box("foo"))       ' true
+```

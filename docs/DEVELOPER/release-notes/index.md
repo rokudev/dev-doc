@@ -43,7 +43,7 @@ The [**roUtils** component](doc:routils) includes new **isNumber()**, **isIntege
 
 ##### roAssociativeArray.values() function
 
-The [**roAssociativeArray** component](doc:roassociativearray) includes a new **values()** function that returns the values within the associative array in key order.
+The [**roAssociativeArray**](doc:roassociativearray) and [**roSGNode**](doc:rosgnode) components include a new **values()** function that returns the values within the associative array in key order.
 
 ##### roTimespan functions return LongInteger values
 

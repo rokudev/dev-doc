@@ -938,15 +938,15 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>ISO/IEC 14496-3, Advanced Audio Coding</td>
 </tr>
 <tr>
-<td>aac\_adif</td>
+<td>aac_adif</td>
 <td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td>
 </tr>
 <tr>
-<td>aac\_adts</td>
+<td>aac_adts</td>
 <td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td>
 </tr>
 <tr>
-<td>aac\_latm</td>
+<td>aac_latm</td>
 <td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td>
 </tr>
 <tr>

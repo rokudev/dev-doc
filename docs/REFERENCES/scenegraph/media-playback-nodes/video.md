@@ -907,7 +907,15 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_WRITE</td>
-      <td>Enables apps to continuously play video when the audio track is switched. This feature currently supports HLS only.<br /><br /><ul><li><strong>true</strong>: Continues video playback when the audio track changes (provided that HLS is being used and the audio format of the new audio track is the same as the original one). In this case, a brief period of no audio may occur while the audio tracks are switched.</li><li><strong>false</strong>: Pauses video playback for approximately 1 second when the audio track changes (default behavior). In this case, a black screen and/or buffering appears while the audio tracks are switched.</li></ul><br />To enable this feature, you must set this field before sending any command to the Video node. This field may not be changed during video playback.</td></tr><tr>
+      <td>Enables apps to continuously play video when the audio track is switched. This feature currently supports HLS only.<br /><br /><ul><li><strong>true</strong>: Continues video playback when the audio track changes (provided that HLS is being used and the audio format of the new audio track is the same as the original one). In this case, a brief period of no audio may occur while the audio tracks are switched.</li><li><strong>false</strong>: Pauses video playback for approximately 1 second when the audio track changes (default behavior). In this case, a black screen and/or buffering appears while the audio tracks are switched.</li></ul><br />To enable this feature, you must set this field before sending any command to the Video node. This field may not be changed during video playback.</td></tr>
+<tr>
+<td>audioFormat</td>
+<td>string</td>
+<td>&nbsp;</td>
+<td>READ\_ONLY</td>
+<td>Contains the format of the currently playing audio.
+</tr>
+<tr>
 <td>supplementaryAudioVolume</td>
 <td>int</td>
 <td>50</td>

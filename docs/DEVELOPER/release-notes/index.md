@@ -39,11 +39,11 @@ SceneGraph fields now support Double values.
 
 ##### roUtils predicates
 
-The [**roUtils** component](doc:routils) includes new **isNumber()**, **isString()**, and **isFloatingPoint()** functions that check whether a given value is any kind of number or string (boxed or unboxed).
+The [**roUtils** component](doc:routils) includes new **isNumber()**, **isInteger(), isFloatingPoint()&#x20;**&#x61;nd **isString()** functions that check whether a given value is any kind of number or string (boxed or unboxed).
 
 ##### roAssociativeArray.values() function
 
-The [**roAssociativeArray** component](doc:roassociativearray) includes a new **values()** function that returns the values within the associative array in key order.
+The [**roAssociativeArray**](doc:roassociativearray) and [**roSGNode**](doc:rosgnode) components include a new **values()** function that returns the values within the associative array in key order.
 
 ##### roTimespan functions return LongInteger values
 
@@ -51,7 +51,7 @@ The [**roTimeSpan** node](doc:rotimespan) now includes **totalMillisecondsLong()
 
 ##### New roAnimatedImage component includes functions for rotating and scaling around an arbitrary point
 
-The interface for the new [**roAnimatedImage** component](doc:[roanimatedimage) includes a **SetPretranslation()** function that enables you to rotate and scale images around their center. You can also call **GetPretranslationX()** and **GetPretranslationY()&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
+The interface for the new [**roAnimatedImage** component](doc:\[roanimatedimage) includes a **SetPretranslation()** function that enables you to rotate and scale images around their center. You can also call **GetPretranslationX()** and **GetPretranslationY()&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
 
 ## Roku OS 15.2
 
@@ -981,7 +981,7 @@ Below is a complete list of the APIs deprecated as of Roku OS 8.1.
   - The per-node memory penalty has been significantly reduced.
   - Image caching has been added for all apps.
 
-
+<br />
 
 #### SceneGraph updates
 

@@ -1,11 +1,13 @@
 ---
 title: Video
-excerpt: 'Node class that provides controlled playback of live or VOD video'
+excerpt: Node class that provides controlled playback of live or VOD video
 deprecated: false
 hidden: false
 metadata:
-  title: 'Video'
-  description: 'Documents the Video node, which provides controlled playback of live or VOD video, with fields for trickplay, closed captions, and audio tracks.'
+  title: Video
+  description: >-
+    Documents the Video node, which provides controlled playback of live or VOD
+    video, with fields for trickplay, closed captions, and audio tracks.
   robots: index
 next:
   description: ''
@@ -528,6 +530,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>The visible pivot node. This is a generic renderable node that can be used to display any component. This node is only displayed when video is paused.</td>
 </tr>
 </tbody></table>
+
 ### Closed caption fields
 
 <table>
@@ -701,7 +704,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
 <tr>
 <td>
-<p data-local-id="a695026f2536" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true" data-pm-slice="1 1 [&quot;table&quot;,{&quot;displayMode&quot;:null,&quot;isNumberColumnEnabled&quot;:false,&quot;layout&quot;:&quot;center&quot;,&quot;localId&quot;:&quot;88252759-35bc-4dad-8da5-dbb7001a6870&quot;,&quot;width&quot;:1088,&quot;__autoSize&quot;:false},&quot;tableRow&quot;,{&quot;localId&quot;:&quot;a92db8f8-a762-4d63-ae1a-547fdaacf623&quot;},&quot;tableCell&quot;,{&quot;colspan&quot;:1,&quot;rowspan&quot;:1,&quot;colwidth&quot;:[172],&quot;background&quot;:null,&quot;localId&quot;:&quot;af890671-7f2b-4ce9-be79-274ca4941038&quot;,&quot;valign&quot;:null}]">captionRenderArea</p>
+<p data-local-id="a695026f2536" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true" data-pm-slice="1 1 [&quot;table&quot;,{&quot;displayMode&quot;:null,&quot;isNumberColumnEnabled&quot;:false,&quot;layout&quot;:&quot;center&quot;,&quot;localId&quot;:&quot;88252759-35bc-4dad-8da5-dbb7001a6870&quot;,&quot;width&quot;:1088,&quot;__autoSize&quot;:false},&quot;tableRow&quot;,{&quot;localId&quot;:&quot;a92db8f8-a762-4d63-ae1a-547fdaacf623&quot;},&quot;tableCell&quot;,{&quot;colspan&quot;:1,&quot;rowspan&quot;:1,&quot;colwidth&quot;:[172],&quot;background&quot;:null,&quot;localId&quot;:&quot;af890671-7f2b-4ce9-be79-274ca4941038&quot;,&quot;valign&quot;:null}]">captionRenderArea<br/><br/><em>Available since Roku OS 15.3</em></p>
 </td>
 <td>&nbsp;
 <p data-local-id="a2c59b0a04d5" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true" data-pm-slice="1 1 [&quot;table&quot;,{&quot;displayMode&quot;:null,&quot;isNumberColumnEnabled&quot;:false,&quot;layout&quot;:&quot;center&quot;,&quot;localId&quot;:&quot;88252759-35bc-4dad-8da5-dbb7001a6870&quot;,&quot;width&quot;:1088,&quot;__autoSize&quot;:false},&quot;tableRow&quot;,{&quot;localId&quot;:&quot;a92db8f8-a762-4d63-ae1a-547fdaacf623&quot;},&quot;tableCell&quot;,{&quot;colspan&quot;:1,&quot;rowspan&quot;:1,&quot;colwidth&quot;:[114],&quot;background&quot;:null,&quot;localId&quot;:&quot;62a07f94-f52e-4479-ba7c-de0b51006dd1&quot;,&quot;valign&quot;:null}]">associative array</p>
@@ -904,13 +907,13 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_WRITE</td>
-      <td>Enables apps to continuously play video when the audio track is switched. This feature currently supports HLS only.<br /><br /><ul><li><strong>true</strong>: Continues video playback when the audio track changes (provided that HLS is being used and the audio format of the new audio track is the same as the original one). In this case, a brief period of no audio may occur while the audio tracks are switched.</li><li><strong>false</strong>: Pauses video playback for approximately 1 second when the audio track changes (default behavior). In this case, a black screen and/or buffering appears while the audio tracks are switched.</li></ul><br />To enable this feature, you must set this field before sending any command to the Video node. This field may not be changed during video playback.</td></tr><tr>
+      <td>Enables apps to continuously play video when the audio track is switched. This feature currently supports HLS only.<br /><br /><ul><li><strong>true</strong>: Continues video playback when the audio track changes (provided that HLS is being used and the audio format of the new audio track is the same as the original one). In this case, a brief period of no audio may occur while the audio tracks are switched.</li><li><strong>false</strong>: Pauses video playback for approximately 1 second when the audio track changes (default behavior). In this case, a black screen and/or buffering appears while the audio tracks are switched.</li></ul><br />To enable this feature, you must set this field before sending any command to the Video node. This field may not be changed during video playback.</td></tr>
+<tr>
 <td>audioFormat</td>
 <td>string</td>
 <td>&nbsp;</td>
 <td>READ\_ONLY</td>
-<td>In all other cases they shouldn't .Contains the format of the currently playing audio.<br /><br />
-<table>
+<td>Contains the format of the currently playing audio.</br><table>
 <thead>
 <tr>
 <th>Value</th>
@@ -935,15 +938,15 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>ISO/IEC 14496-3, Advanced Audio Coding</td>
 </tr>
 <tr>
-<td>aac\_adif</td>
+<td>aac_adif</td>
 <td>ISO/IEC 14496-3, Advanced Audio Coding, ADIF container</td>
 </tr>
 <tr>
-<td>aac\_adts</td>
+<td>aac_adts</td>
 <td>ISO/IEC 14496-3, Advanced Audio Coding, ADTS container</td>
 </tr>
 <tr>
-<td>aac\_latm</td>
+<td>aac_latm</td>
 <td>ISO/IEC 14496-3, Advanced Audio Coding, LATM container</td>
 </tr>
 <tr>
@@ -999,9 +1002,9 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>Microsoft Windows Media Pro Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
 </tr>
 </tbody>
-</table>
-</td>
-</tr><tr>
+</table></td>
+</tr>
+<tr>
 <td>supplementaryAudioVolume</td>
 <td>int</td>
 <td>50</td>

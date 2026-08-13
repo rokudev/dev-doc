@@ -29,7 +29,7 @@ Here is the list of key developer-facing Roku OS 15.3 updates:
 
 ##### Video.captionRenderArea field for displaying captions in custom positions
 
-The [**Video** node](doc:video#closed-caption-fields) includes a new **captionRenderArea** field for rendering captions in specific areas on a screen. Developers can use this function to display captions in custom positions for some preview and other non-full-screen scenarios.
+The [**Video** node](doc:video#closed-caption-fields) includes a new [**captionRenderArea** field ](doc:video#closed-caption-fields)for rendering captions in specific areas on a screen. Developers can use this function to display captions in custom positions for some preview and other non-full-screen scenarios.
 
 ##### Double support for fields
 
@@ -39,7 +39,7 @@ SceneGraph fields now support Double values.
 
 ##### roUtils predicates
 
-The [**roUtils** component](doc:routils) includes new **isNumber()**, **isInteger(), isFloatingPoint()&#x20;**&#x61;nd **isString()** functions that check whether a given value is any kind of number or string (boxed or unboxed).
+The [**roUtils** component](doc:ifutils#isnumberval-as-number-as-boolean) includes new **isNumber()**, **isInteger(), isFloatingPoint()&#x20;**&#x61;nd **isString()** functions that check whether a given value is any kind of number or string (boxed or unboxed).
 
 ##### roAssociativeArray.values() function
 
@@ -47,11 +47,11 @@ The [**roAssociativeArray**](doc:roassociativearray) and [**roSGNode**](doc:rosg
 
 ##### roTimespan functions return LongInteger values
 
-The [**roTimeSpan** node](doc:rotimespan) now includes **totalMillisecondsLong()** and **totalMicrosecondsLong()** functions that return the total milliseconds and microseconds from the “Mark” point as LongInteger values.
+The [**roTimeSpan** node](doc:rotimespan) now includes [**totalMillisecondsLong()**](doc:iftimespan#totalmilliseconds-as-longinteger) and[ **totalMicrosecondsLong()** ](doc:doc:iftimespan#totalmicroseconds-as-longinteger)functions that return the total milliseconds and microseconds from the “Mark” point as LongInteger values.
 
 ##### New roAnimatedImage component includes functions for rotating and scaling around an arbitrary point
 
-The interface for the new [**roAnimatedImage** component](doc:\[roanimatedimage) includes a **SetPretranslation()** function that enables you to rotate and scale images around their center. You can also call **GetPretranslationX()** and **GetPretranslationY()&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
+The interface for the new [**roAnimatedImage** component](doc:roanimatedimage) includes a [**SetPretranslation()** function](doc:fanimatedimage#setpretranslationx-as-int-y-as-int-as-void) that enables you to rotate and scale images around their center. You can also call [**GetPretranslationX()**](doc:ifanimatedimage#getpretranslationx-as-int) and [**GetPretranslationY()**](doc:ifanimatedimage#getpretranslationy-as-int)**&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
 
 ## Roku OS 15.2
 

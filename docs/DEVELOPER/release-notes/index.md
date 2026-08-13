@@ -51,7 +51,7 @@ The [**roTimeSpan** node](doc:rotimespan) now includes [**totalMillisecondsLong(
 
 ##### New roAnimatedImage component includes functions for rotating and scaling around an arbitrary point
 
-The interface for the new [**roAnimatedImage** component](doc:roanimatedimage) includes a [**SetPretranslation()** function](doc:animatedimage#setpretranslationx-as-int-y-as-int-as-void) that enables you to rotate and scale images around their center. You can also call [**GetPretranslationX()**](doc:ifanimatedimage#getpretranslationx-as-int) and [**GetPretranslationY()**](doc:ifanimatedimage#getpretranslationy-as-int)**&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
+The interface for the new [**roAnimatedImage** component](doc:roanimatedimage) includes a [**SetPretranslation()** function](doc:ifanimatedimage#setpretranslationx-as-int-y-as-int-as-void) that enables you to rotate and scale images around their center. You can also call [**GetPretranslationX()**](doc:ifanimatedimage#getpretranslationx-as-int) and [**GetPretranslationY()**](doc:ifanimatedimage#getpretranslationy-as-int)**&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
 
 ## Roku OS 15.2
 

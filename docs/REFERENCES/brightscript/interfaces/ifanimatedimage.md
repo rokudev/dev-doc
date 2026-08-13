@@ -33,29 +33,29 @@ The roAnimatedImage component downloads the entire resource asynchronously befor
 
 #### Description
 
-Initializes the animated image from an associative array of properties. Loading occurs asynchronously; therefore, use **roAnimatedImageEvent** to determine when loading is complete. Calling `SetContent()` again re-initializes the animated image with the new properties. If an asynchronous `SetContent()` is still in progress, the new call fails.
+Initializes the animated image from an associative array of properties. Loading occurs asynchronously; therefore, use **roAnimatedImageEvent** to determine when loading is complete. Calling **SetContent()** again re-initializes the animated image with the new properties. If an asynchronous **SetContent()** call is still in progress, the new call fails.
 
-After you call `SetContent()`, the component posts an `roAnimatedImageEvent` to the message port when loading finishes. Call `GetMessage()` on the event to check the result: it returns `ready` on success or `failed` on failure. Call `GetInfo()` on the event to get an associative array whose `id` field matches `GetID()`; on failure, its `error` field may contain additional detail. Set the message port with [SetMessagePort()](https://claude.ai/epitaxy/local_376e24fb-0c09-4a3a-b001-14bc5986fade#setmessageportport-as-object-as-void) before calling `SetContent()`.
+After you call **SetContent()**, the component posts an [**roAnimatedImageEvent**](doc: roanimatedimageevent) to the message port when loading finishes. Call [**GetMessage()**]( doc:roanimatedimageevent#getmessage)) on the event to check the result, which may be "ready" on success or "failed". Call [**GetInfo()**](doc:roanimatedimageevent##getinfo-as-object) on the event to get an associative array whose **id** field matches [**GetID()**](doc:#getid-as-string); on failure, its **error** field may contain additional detail. Set the message port with [**SetMessagePort()**](doc:#setmessageportport-as-object--as-void) before calling **SetContent()**.
 
 #### Parameter
 
 | Name | Type   | Description                                                  |
 | :--- | :----- | :----------------------------------------------------------- |
-| aa   | Object | An associative array (`roAssociativeArray`) containing the properties below. |
+| aa   | Object | An associative array ([**roAssociativeArray**](doc:roassociativearray)) containing the properties below. |
 
-| Property          | Type   | Default       | Description                                                  |
-| :---------------- | :----- | :------------ | :----------------------------------------------------------- |
-| uri               | String | (required)    | File path or URL to the animated image.                      |
-| mimeType          | String | (auto-detect) | Optional type hint: `video/mp4` (VP9 in an MP4 container), `video/webp` (animated WebP), or `video/lottie+json` (Lottie or compressed dotLottie). If omitted, the file type is auto-detected. |
-| loadWidth         | Int    | 0             | Decode width in pixels (0 = original). Scales to fit, preserving aspect ratio. |
-| loadHeight        | Int    | 0             | Decode height in pixels (0 = original).                      |
-| animationStrategy | String | automatic     | `automatic` or `manual`. In manual mode, drive playback by calling `Update()`. |
+| Property          | Type   | Default         | Description                                                  |
+| :---------------- | :----- | :-------------- | :----------------------------------------------------------- |
+| uri               | String | (required)      | File path or URL to the animated image.                      |
+| mimeType          | String | (Auto-detected) | Optionally, specify one of the following file type hints:<br /><br />- **video/mp4** (VP9 in an MP4 container)<br />- **video/webp** (animated WebP)<br />- **video/lottie+json** (Lottie or compressed dotLottie). <br /><br />If omitted, the file type is auto-detected. |
+| loadWidth         | Int    | 0               | Decode width in pixels (0 = original). Scales to fit, preserving aspect ratio. |
+| loadHeight        | Int    | 0               | Decode height in pixels (0 = original).                      |
+| animationStrategy | String | automatic       | Set to **automatic** or **manual**. In manual mode, drive playback by calling **Update()**. |
 
 ### GetID() as String
 
 #### Description
 
-Returns the unique ID of the animated image. This is the same ID returned in the `id` field of the associative array from `roAnimatedImageEvent.GetInfo()`.
+Returns the unique ID of the animated image. This is the same ID returned in the **id** field of the associative array from **roAnimatedImageEvent.GetInfo()**.
 
 #### Return Value
 
@@ -69,7 +69,7 @@ Indicates whether the animated image loaded successfully.
 
 #### Return Value
 
-`true` only after an `roAnimatedImageEvent` with the message `ready` is received, which indicates that the file loaded successfully; otherwise `false`.
+A flag that indicates whether the animation file loaded successfully.  This is set to **true** only after an **roAnimatedImageEvent** with the message **ready** is received, which indicates that the file loaded successfully; otherwise this is **false**.
 
 ### GetWidth() as Int
 
@@ -95,49 +95,45 @@ The height of the animated image, in pixels.
 
 #### Description
 
-Returns the current playback state. The possible states are `init`, `first`, `decode`, `stop`, and `error`.
-
-<!-- TODO (writer): APIREVIEW-647's ifAnimatedImage method table also lists "invalid" as a GetState value but does not define it, and the SceneGraph AnimatedImage node uses "downloading" in its place (nothing is drawn while the resource downloads). Confirm which applies to roAnimatedImage and add it to the table below before publishing. -->
+Returns the current playback state ("init", "first", "decode", "stop", or "error").
 
 #### Return Value
 
-The current playback state:
+The current playback state, which may be one of the following values:
 
-| State  | Meaning                                               |
-| :----- | :---------------------------------------------------- |
-| init   | Initializing. Nothing is drawn.                       |
-| first  | The first frame is ready and displayed.               |
-| decode | Actively rendering the animation.                     |
-| stop   | Playback is halted. The last frame remains displayed. |
-| error  | An error occurred. Nothing is drawn.                  |
+- **init**: Initializing. Nothing is drawn.
+- **first**: The first frame is ready and displayed.
+- **decode**: Actively rendering the animation.
+- **stop**: Playback is halted. The last frame remains displayed.
+- **error**: An error occurred. Nothing is drawn.
 
 ### SetTargetState(state as String) as Boolean
 
 #### Description
 
-Sets the desired playback state. This is the `roAnimatedImage` equivalent of the SceneGraph `AnimatedImage` node's `control` field.
+Sets the desired playback state: "play" (start or resume), "pause", "loop" (play continuously), or "rewind".
 
 #### Parameter
 
 | Name  | Type   | Description                                                  |
 | :---- | :----- | :----------------------------------------------------------- |
-| state | String | The desired playback state: `play` (start or resume), `pause`, `loop` (play continuously), or `rewind`. |
+| state | String | The desired playback state: <br /><br />- "play" (start or resume)<br />- "pause"<br />- "loop" (play continuously)<br />- "rewind" |
 
 #### Return Value
 
-`true` if the requested state was accepted.
+A flag inidcated whether the requested state was accepted.
 
 ### SetMessagePort(port as Object) as Void
 
 #### Description
 
-Sets the message port that receives asynchronous `roAnimatedImageEvent` events.
+Sets the message port that receives asynchronous **roAnimatedImageEvent** events.
 
 #### Parameter
 
-| Name | Type   | Description                                                 |
-| :--- | :----- | :---------------------------------------------------------- |
-| port | Object | The message port (`roMessagePort`) for asynchronous events. |
+| Name | Type   | Description                                                  |
+| :--- | :----- | :----------------------------------------------------------- |
+| port | Object | The message port ([roMessagePort](doc: romessageport)) for asynchronous events. |
 
 ### GetMessagePort() as Object
 
@@ -147,13 +143,13 @@ Returns the message port currently set on the animated image.
 
 #### Return Value
 
-The current message port (`roMessagePort`).
+The current message port ([roMessagePort](doc: romessageport)) ).
 
 ### Update(elapsedMicroseconds as Int) as Void
 
 #### Description
 
-Advances the animation by the elapsed time. This method applies to manual mode only (when the `animationStrategy` property is `manual`). Obtain the elapsed time from `roTimeSpan`, for example `time.TotalMicroseconds()`.
+Advances the animation by the elapsed time. This method applies to manual mode only (when the **animationStrategy** property is set to "manual"). You can obtain the elapsed time from the [**roTimeSpan** component](doc:rotimespan), for example `time.TotalMicroseconds()`.
 
 #### Parameter
 
@@ -206,7 +202,7 @@ The y component of the pretranslation value.
 
 ## Example
 
-The following example loads an animated image in manual mode, waits for it to become ready, then drives playback frame by frame using an `roTimeSpan`.
+The following example loads an animated image in manual mode, waits for it to become ready, then drives playback frame by frame using an **roTimeSpan** component.
 
 ```
 animg = CreateObject("roAnimatedImage")

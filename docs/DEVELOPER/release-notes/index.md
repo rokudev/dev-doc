@@ -39,7 +39,7 @@ SceneGraph fields now support Double values.
 
 ##### roUtils predicates
 
-The [**roUtils** component](doc:ifutils#isnumberval-as-number-as-boolean) includes new **isNumber()**, **isInteger(), isFloatingPoint()&#x20;**&#x61;nd **isString()** functions that check whether a given value is any kind of number or string (boxed or unboxed).
+The [**roUtils** component](doc:ifutils#isnumberval-as-number-as-boolean) includes new [**isNumber()**](doc:ifutils#isnumberval-as-number-as-boolean), [**isInteger()**](doc:ifutils#isintegerval-as-integer-as-boolean)**,&#x20;**[**isFloatingPoint()**](doc:ifutils#isfloatingpointval-as-float-as-boolean)**&#x20;**&#x61;nd [**isString()**](doc:ifutils#isstringval-as-string-as-boolean) functions that check whether a given value is any kind of number or string (boxed or unboxed).
 
 ##### roAssociativeArray.values() function
 

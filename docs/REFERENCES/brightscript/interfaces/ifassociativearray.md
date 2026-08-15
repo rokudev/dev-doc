@@ -162,7 +162,7 @@ Returns the number of keys in the associative array.
 
 The number of keys in the associative array.
 
-### Value(aa as Object) as Object
+### Values() as Object
 
 _Available since Roku OS 15.3_
 
@@ -170,12 +170,6 @@ _Available since Roku OS 15.3_
 
 Returns the values within the associative array in key order.
 
-#### Parameters
-
-| Name | Type   | Description                                 |
-| ---- | ------ | ------------------------------------------- |
-| aa   | Object | The associative array to be ordered by key. |
-
 #### Return Value
 
-An array of associative array keys/value pairs in key order.
+An array of associative array values, sorted in key order.

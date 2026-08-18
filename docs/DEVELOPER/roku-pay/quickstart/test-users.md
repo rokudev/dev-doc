@@ -14,7 +14,7 @@ next:
 ---
 Test users can make in-app purchases free of charge via Roku Pay and view confirmations, error codes, and other transactional metadata. This is useful for testing the Roku Pay integration in an app.
 
-> For a test user to make free in-app purchases, the test user must be the root account owner or have the Admin or App Management role on that account. &#x20;
+> For a test user to make free in-app purchases, they must be the root account owner or have the Admin or App Management role on that account. &#x20;
 
 ## Adding a test user
 

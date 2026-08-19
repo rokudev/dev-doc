@@ -366,7 +366,7 @@ Roku Production will attend in person or via dial-in. It is asked that a phone d
 
 ### 4.3 Internal ad sales needs
 
-As the The Roku Channel is 100% ad supported, we will reach out prior to commencement of principal photograpy to discuss capturing a very simple, straight forward message from talent about the show to be used internally only.
+As The Roku Channel is 100% ad supported, we will reach out prior to commencement of principal photography to discuss capturing a very simple, straightforward message from talent about the show to be used internally only.
 
 * This is a very simple video, straight to camera, not color corrected, for internal use only.
 * Roku will manage all aspects of the content (i.e. wording). This should take no more than 10-20 minutes to capture.

@@ -76,7 +76,7 @@ The number of ads in the ad break are displayed during the ad break using the st
 
 **Tests**: App is meeting the criteria specified in 1.3.
 
-**Expected Result**: App is meeting the contactually-specified terms for ad requests and performance. You can review your contract with [publisheradservices@roku.com](mailto:publisheradservices@roku.com?Subject=New%20application%20Request%20for%20Admittance%20to%20Roku%20Ad%20Revenue%20Share) to ensure the app is meeting the specified terms.
+**Expected Result**: App is meeting the contractually-specified terms for ad requests and performance. You can review your contract with [publisheradservices@roku.com](mailto:publisheradservices@roku.com?Subject=New%20application%20Request%20for%20Admittance%20to%20Roku%20Ad%20Revenue%20Share) to ensure the app is meeting the specified terms.
 
 **ADS 1.3** Apps selling ads must comply with Roku's ad load, ad frequency, and acceptable ad requirements. See [Roku Advertising Guidelines](http://www.roku.com/adguidelines) for more information.
 
@@ -161,7 +161,7 @@ Apps outside the U.S. Roku Streaming Store that have streamed more than an avera
 
 **Tests**: Verify ads in the app cannot be skipped by any mechanism, such as pressing the FF/REW buttons or sending a FF/REW voice command.
 
-**Expected Result**: Ads may not be skipped by pressing the FF/REW buttons, sending a FF/REW voice command, or any other mechansim.
+**Expected Result**: Ads may not be skipped by pressing the FF/REW buttons, sending a FF/REW voice command, or any other mechanism.
 
 ## **2. Accounts and purchases**
 

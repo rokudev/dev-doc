@@ -622,7 +622,7 @@ Once your public app has passed [Static Analysis](doc:static-analysis-tool) an
 
    a. Select the **I confirm that** check box to confirm that you have tested your app per Roku App Publishing Checklist and your app complies with the listed agreements.
 
-   b. Select the **I certify that** check box to confirm that you have the authority the submit the app, the provided listing information is accurate, and that you have the rights to distribute your app in the selected countries.
+   b. Select the **I certify that** check box to confirm that you have the authority to submit the app, the provided listing information is accurate, and that you have the rights to distribute your app in the selected countries.
 
    c. Click **Submit**.
 
@@ -642,7 +642,7 @@ The following section summarizes when updates to the Streaming Store, Roku Searc
 
 After an app is published, it may be tagged with one or more categories. This includes the category selected and any other Roku-applied tags such as "New & Updated" or "Recommended"
 
-An app is typically visible in the selected category after 5 minutes—if the category has less 1,000 apps. Otherwise, the app is not added to the category until it has been streamed by enough customers to move it up the popularity rankings in that category.
+An app is typically visible in the selected category after 5 minutes—if the category has fewer than 1,000 apps. Otherwise, the app is not added to the category until it has been streamed by enough customers to move it up the popularity rankings in that category.
 
 If the category is changed and the app is re-published, it takes approximately 5 minutes for the app to be switched to the new category. However, the app is only visible in that category if the aforementioned criteria is met.
 

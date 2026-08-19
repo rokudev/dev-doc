@@ -161,7 +161,7 @@ Key sizes are computed based on the various width and height properties specifie
 
 * For keys with equal width in a Row object, if there are _K_ keys in the Row, the height of each key is computed as follows: `keyWidth = (sectionWidth) / K`.
 
-* To configure keys with varying widths within in a Row, specify the **keyWidth** attribute for those keys. Those keys will use the explicitly specified widths, and the widths of the remaining keys will be computed by equally dividing the remaining **sectionWidth** evenly after subtracting the width of the keys with explicitly specified widths. For example, if there are _K_ keys in a row and Key 1 has its **keyWidth** explicitly specified as 100, Key 1 will have width 100 and the other keys in the Row will be calculated as follows: `keyWidth = (sectionWidth - 100) / (K - 1)`.
+* To configure keys with varying widths within a Row, specify the **keyWidth** attribute for those keys. Those keys will use the explicitly specified widths, and the widths of the remaining keys will be computed by equally dividing the remaining **sectionWidth** evenly after subtracting the width of the keys with explicitly specified widths. For example, if there are _K_ keys in a row and Key 1 has its **keyWidth** explicitly specified as 100, Key 1 will have width 100 and the other keys in the Row will be calculated as follows: `keyWidth = (sectionWidth - 100) / (K - 1)`.
 
 ## Examples
 

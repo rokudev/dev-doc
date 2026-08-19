@@ -1194,7 +1194,7 @@ hasDDPlus = audioDecoders.doesexist("DD+")
 
 Checks if the device can decode and play the specified audio format.
 
-> Use this method to query the codecs every time before starting playback on content (do not cache  and use the results from a previous call). In addition, use the [**roDeviceInfo.audioCodecCapabilityChanged()**](doc:rodeviceinfoevent) event to identify any codec changes that may occur when the audio output destination is switched. This will help your app to perform well with the Roku mobile app and and private listening.
+> Use this method to query the codecs every time before starting playback on content (do not cache  and use the results from a previous call). In addition, use the [**roDeviceInfo.audioCodecCapabilityChanged()**](doc:rodeviceinfoevent) event to identify any codec changes that may occur when the audio output destination is switched. This will help your app to perform well with the Roku mobile app and private listening.
 
 #### Parameters
 

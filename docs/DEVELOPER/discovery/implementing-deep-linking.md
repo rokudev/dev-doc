@@ -336,7 +336,7 @@ sub Main(args)
     '...
     if (args.mediaType <> invalid) and (args.contentId <> invalid)
         '...
-        'print deep linking paramaters in args
+        'print deep linking parameters in args
         print "args= "; formatjson(args)  'pretty print AA'
         'output
         ' args= {action: "display", contentid: "myAwesomeShow|Season=1|Episode=1", instant_on_run_mode: "foreground", isexternal: true, lastExitOrTerminationReason: "EXIT_UNKNOWN", mediatype: "series", source: "hs-search", splashTime: "0"}
@@ -401,7 +401,7 @@ The one-time TV program identified by the contentId is launched directly into pl
 
 You can learn how to implement deep linking in your app by watching the [Deep linking](doc:deep-linking) video lesson in Roku's [SceneGraph: Build a App online video course](doc:rsg).
 
-This lesson details how to program your app to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences requried for the various types of content in the app's feed.
+This lesson details how to program your app to accept and process deep links upon being launched and while it is already running. It lists the different playback experiences required for the various types of content in the app's feed.
 
 ## Sample app
 

@@ -21,7 +21,7 @@ next:
 
 ## Key features
 
-Building apps require several items to work together in unison:
+Building apps requires several items to work together in unison:
 
 * A Roku device
 * Your app code

@@ -176,7 +176,7 @@ To create a purchase option for a product, follow these steps:
       </td>
 
       <td>
-        Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quartely billing requires [additional API work](doc:add-ons-integration#appendix-a-add-on-api-reference).
+        Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quarterly billing requires [additional API work](doc:add-ons-integration#appendix-a-add-on-api-reference).
       </td>
     </tr>
 

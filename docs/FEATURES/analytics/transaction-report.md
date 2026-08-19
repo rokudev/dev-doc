@@ -22,7 +22,7 @@ To open the Transaction Report, go to the [Developer Dashboard](https://develope
 
 To run a Transaction Report, follow these steps:
 
-1. Specify the time period for the Transaction Report. By default, the report includes data from the previous week (8 days ago for 7 days). To select a different time period, expand **Filters** and then configure the period. You can select a specific date, the last _x_ days, a year, a specific time range, all the dates or or after a specific date, and so on. You can also use <Anchor label="filter expressions" title="Looker Filter Expressions" href="https://docs.looker.com/reference/filter-expressions">filter expressions</Anchor> by selecting **matches (advanced)**.
+1. Specify the time period for the Transaction Report. By default, the report includes data from the previous week (8 days ago for 7 days). To select a different time period, expand **Filters** and then configure the period. You can select a specific date, the last _x_ days, a year, a specific time range, all the dates on or after a specific date, and so on. You can also use <Anchor label="filter expressions" title="Looker Filter Expressions" href="https://docs.looker.com/reference/filter-expressions">filter expressions</Anchor> by selecting **matches (advanced)**.
 
    Optionally, you can include additional criteria in the query by clicking the add icon and configuring another time period. For example, you can create a query that includes transactions for the first quarters of the last two years. Click the delete icon to remove a time period from the query.
 

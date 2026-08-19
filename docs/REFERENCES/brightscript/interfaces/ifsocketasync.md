@@ -95,6 +95,6 @@ Enables roSocketEvent events to be sent via the message port when the underlying
 
 Returns a unique identifier that can be compared to the value returned by the [roSocketEvent.getSocketID()](doc:rosocketevent) method to match the underlying socket to receive the event.
 
-#### Return Paramters
+#### Return Parameters
 
 A unique ID. 

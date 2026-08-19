@@ -568,7 +568,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 - **Today's date**: Remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
 - **Past date**: Remove entitlement (passive cancellation; the subscription could not be recovered).
 
-#### Active cancelation/deactivation example
+#### Active cancellation/deactivation example
 
 ```json
 {
@@ -588,7 +588,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 }
 ```
 
-#### Passive cancelation example
+#### Passive cancellation example
 
 ```json
 {

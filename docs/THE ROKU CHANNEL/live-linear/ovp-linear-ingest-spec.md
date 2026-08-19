@@ -772,7 +772,7 @@ EPG Requirement
 
 15-minute minimum duration for content block
 
-For full details and guidance on constructing your EPG, please refer this this guide.
+For full details and guidance on constructing your EPG, please refer to this guide.
 
 [https://developer.roku.com/en-ot/trc-docs/live-linear/epg-on-trc.md](https://developer.roku.com/en-ot/trc-docs/live-linear/epg-on-trc.md)
 

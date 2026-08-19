@@ -69,12 +69,12 @@ Another easy way to capture SSL packets using Mac OS is through the wireless dia
 
 All you need is:
 
-- The wireless channel of your Wifi connection, and
+- The wireless channel of your Wi-Fi connection, and
 - The app width (20MHz, 40MHz, 80MHz).
 
-These settings can be set in the Web GUI of your router. If this is not possible through the Web GUI of your router, find the default channel setting of your Wifi or install a different firmware on your router that can change this.
+These settings can be set in the Web GUI of your router. If this is not possible through the Web GUI of your router, find the default channel setting of your Wi-Fi or install a different firmware on your router that can change this.
 
-1. Setup your Wifi connection and open the Wireless Diagnostics tool (Pre-installed on later versions of Mac OS).
+1. Setup your Wi-Fi connection and open the Wireless Diagnostics tool (Pre-installed on later versions of Mac OS).
 2. In the top bar, find the field labeled **window** and choose the **Sniffer tool**.
 3. In the window for the sniffer tool:
     - Set the **Channel** to the corresponding Roku’s wireless channel (Same channel as one displayed on router Web GUI) and,

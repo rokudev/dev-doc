@@ -80,13 +80,13 @@ struct HandshakeFromDVP {
     <tr>
       <td class="short-line">magic_number</td>
       <td class="short-line">uint64</td>
-      <td class="long-line">The Roku Brightscript debug protocol identifier, which is the following 64-bit value :<code>0x0067756265647362LU</code>. <br /><br />This is equal to <code>29120988069524322LU</code> or the following little-endian value: <code>b'bsdebug\0</code>.</td>
+      <td class="long-line">The Roku BrightScript debug protocol identifier, which is the following 64-bit value :<code>0x0067756265647362LU</code>. <br /><br />This is equal to <code>29120988069524322LU</code> or the following little-endian value: <code>b'bsdebug\0</code>.</td>
     </tr>
     <tr>
       <td class="long-line">protocol_major_version<br />protocol_minor_version<br />protocol_patch_version</td>
       <td class="short-line">uint32</td>
       <td class="long-line">
-        Each Roku OS release supports only a single version of the Roku Brightscript debug protocol:
+        Each Roku OS release supports only a single version of the Roku BrightScript debug protocol:
         <br />
         <div class="hscroll">
           <table>

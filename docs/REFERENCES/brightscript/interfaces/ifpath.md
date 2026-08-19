@@ -78,7 +78,7 @@ Returns an [roAssociativeArray](/docs/references/brightscript/components/roassoc
 An [roAssociativeArray](doc:roassociativearray) that contains the following keys: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>basename</td><td>String</td><td>The filename, without parent directories or extension.</td></tr><tr><td>extension</td><td>String</td><td>The filename, with extension, without parent directories.</td></tr><tr><td>filename</td><td>String</td><td>The filename.</td></tr><tr><td>parent</td><td>String</td><td>The parent directory, or empty if in a root directory.</td></tr><tr><td>phy</td><td>String</td><td>The PHY volume.</td></tr></tbody></table>
 
 
-#### Example (Brightscript Debugger Interactive Shell)
+#### Example (BrightScript Debugger Interactive Shell)
 
 ```bash
 > mypath = CreateObject("roPath", "pkg:/source/appMain.brs")

@@ -72,7 +72,7 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
         Read-Write
       </td>
       <td>
-        Specifies a string to be displayed if the length of the text field string is zero. The typical usage of this field is to prompt the user about what to enter (such as, "Enter your WiFi password").
+        Specifies a string to be displayed if the length of the text field string is zero. The typical usage of this field is to prompt the user about what to enter (such as, "Enter your Wi-Fi password").
       </td>
     </tr>
     <tr>

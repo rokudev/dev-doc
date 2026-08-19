@@ -13,7 +13,7 @@ next:
 
 
 
-The roRegex component provides the powerful regular expression processing of the PCRE library to Brightscript strings.
+The roRegex component provides the powerful regular expression processing of the PCRE library to BrightScript strings.
 
 > Please see the PCRE documentation (http://www.pcre.org/) for documentation on the PCRE library used for regular expression matching.  See the [perlre documentation](http://perldoc.perl.org/perlre.html) for complete documentation of the possible regular expressions this library can parse and match. In general, most Perl compatible regular expressions are supported.
 

@@ -323,7 +323,7 @@ Here is the list of key developer-facing Roku OS 13.0 updates:
 
 #### BrightScript APIs
 
-- [**Maximum available memory query**](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) —  The **roAppMemoryMonitor** component includes a new [**GetChannelMemoryLimit** () function](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) that returns how much foreground and background memory the app may use and the maximum amount of memory that the RokuOS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics ). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
+- [**Maximum available memory query**](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) —  The **roAppMemoryMonitor** component includes a new [**GetChannelMemoryLimit** () function](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) that returns how much foreground and background memory the app may use and the maximum amount of memory that the Roku OS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics ). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
 
 - [**App exit query**](/docs/references/brightscript/interfaces/ifappmanager.md#getlastexitinfo-as-object) — The **roAppManager** component includes a new [**GetLastExitInfo**() function](/docs/references/brightscript/interfaces/ifappmanager.md#getlastexitinfo-as-object) that returns an exit code indicating why an app was terminated. This helps developers monitor and debug memory issues with their apps. The last exit information is provided for only the 10 most recent exits across all apps, and exit information does not persist across device reboots.
 
@@ -1428,7 +1428,7 @@ Version 5.0 of the Roku OS was released to all second and later generation devic
 #### New in this release
 
 - Updated home screen user interface
-- Increase Brightscript function limit beyond 1024
+- Increase BrightScript function limit beyond 1024
 - Miscellaneous fixes for gaming remotes
 - Memory improvements to the OS
 - Improved ECP security
@@ -1476,7 +1476,7 @@ We appreciate all the hard work the Roku Developer Community has put into develo
 
 #### New in this release
 
-• Roku 2 platform support. • Brightscript Plugin for Eclipse • Updated videoPlayer sample application • All v3.0 beta features are now fully supported on classic models running v3.0 and Roku 2 models running v4.1:
+• Roku 2 platform support. • BrightScript Plugin for Eclipse • Updated videoPlayer sample application • All v3.0 beta features are now fully supported on classic models running v3.0 and Roku 2 models running v4.1:
 
 - BrightScript v3.0 that includes:
   - performance improvements

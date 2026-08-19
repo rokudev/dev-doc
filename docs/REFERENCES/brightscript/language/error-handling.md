@@ -141,7 +141,7 @@ Local Variables:
 global           &h0020 Interface:ifGlobal
 m                &h0010 roAssociativeArray refcnt=3 count:0
 
-Brightscript Debugger>
+BrightScript Debugger>
 ```
 
 A `roAssociativeArray` that describes the exception is also an acceptable argument to `THROW`. Any missing fields will be set with default values as shown in the table below:

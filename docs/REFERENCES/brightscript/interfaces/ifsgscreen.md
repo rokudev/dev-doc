@@ -53,7 +53,7 @@ Returns a global reference object for the SceneGraph application.
 
 A global reference object.
 
-#### Example: Starting Scene Graph Applications
+#### Example: Starting SceneGraph Applications
 
 ```brightscript
 sub showChannelSGScreen()

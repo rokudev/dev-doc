@@ -5,7 +5,7 @@ hidden: true
 metadata:
   robots: index
 ---
-#### **package**
+**package**
 
 Defines the package version type
 
@@ -15,7 +15,7 @@ Defines the package version type
 
 <u>Example:</u>
 
-```
+```xml Package
 <package version="film5.0">
 ```
 
@@ -29,7 +29,7 @@ Name of content owner/studio/network
 
 <u>Example:</u>
 
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 

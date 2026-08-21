@@ -2,7 +2,6 @@
 title: Artwork
 deprecated: false
 hidden: true
-icon: fad fa-image-landscape
 metadata:
   robots: index
 ---

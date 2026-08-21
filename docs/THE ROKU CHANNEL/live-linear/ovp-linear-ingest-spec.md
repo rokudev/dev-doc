@@ -527,18 +527,18 @@ Live Feed Object Example:
 
 ```
 {
-   "id":"1509428502953",
-   "title":"Sample Stream",
-   "content":{
-      "..."
-   },
-   "language":{
-      "en"
-   },
-   "thumbnail":"https://example.org/cdn/thumbnails/1509428502952/1",
-   "shortDescription":"A live description",
-   "longDescription":"A longer description of a live stream",
-   "advisoryRatings": [
+    "id":"1509428502953",
+    "title":"Sample Stream",
+    "content":{
+        "..."
+    },
+    "language":{
+        "en"
+    },
+    "thumbnail":"https://example.org/cdn/thumbnails/1509428502952/1",
+    "shortDescription":"A live description",
+    "longDescription":"A longer description of a live stream",
+    "advisoryRatings":[
         {
             "source": "MPAA",
             "value": "PG13"
@@ -548,13 +548,13 @@ Live Feed Object Example:
             "value": "14+"
         }
     ],
-   "genres":[
-      "drama",
-      "comedy",
-      "horror"
-   ],
+    "genres":[
+    "drama",
+    "comedy",
+    "horror"
+    ],
     "tags":[
-     "kidsdirected"
+    "kidsdirected"
     ]
 }
 ```
@@ -782,7 +782,7 @@ Short-form videos are generally less than 15 minutes long, and are not TV Shows 
 | releaseDate      | string                                               | Required     | The date the video first became available. Used to sort programs chronologically and grouping related content in Roku Search.<br />Conforms to the [ISO 8601 ](http://www.iso.org/iso/home/standards/iso8601.htm) format: \{YYYY\}-\{MM\}-\{DD\}. E.g.: 2015-11-11                                                                                                                         |
 | genres           | string                                               | Required     | Array of genre strings for the video. Must be one or more of the values listed in [genres](#genres-property) .                                                                                                                                                                                                                                                                             |
 | credits          | [Credit Object](#credit-property)                    | Optional     | One or more credits. The cast and crew of the video.                                                                                                                                                                                                                                                                                                                                       |
-| advisoryRatings  | [Advisory Ratings Object](#advisoryratings-property) | Required\*   | A parental rating for the content.<br />\*See [Kids-Directed content ](#kids-directed-content) for rating requirements                                                                                                                                                                                                                                                                     |
+| advisoryRatings  | [Advisory Ratings Object](#advisoryratings-property) | Required\*   | An array of parental ratings for the content.<br />\*See [Kids-Directed content ](#kids-directed-content) for rating requirements                                                                                                                                                                                                                                                          |
 
 Short-form Video Object Example:
 
@@ -834,7 +834,7 @@ Content length longer than 15 minutes:
 | releaseDate      | string                                               | Required     | The date the TV Special first aired. Used to sort programs chronologically and grouping related content in Roku Search. Conforms to the [ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm) format: \{YYYY\}-\{MM\}-\{DD\}. E.g.: 2015-11-11                                                                                                                                     |
 | shortDescription | string                                               | Required     | A description of the special that does not exceed 110 characters. The text will be clipped if longer. No emojis.                                                                                                                                                                                                                                                                           |
 | credits          | [Credit Object](#credit-property)                    | Optional     | One or more credits. The cast and crew of the TV special.                                                                                                                                                                                                                                                                                                                                  |
-| advisoryRatings  | [Advisory Ratings Object](#advisoryratings-property) | Required\*   | A parental rating for the content.<br />\*See [Kids-Directed content ](#kids-directed-content) for rating requirements                                                                                                                                                                                                                                                                     |
+| advisoryRatings  | [Advisory Ratings Object](#advisoryratings-property) | Required\*   | An array of parental ratings for the content.<br />\*See [Kids-Directed content ](#kids-directed-content) for rating requirements                                                                                                                                                                                                                                                          |
 | externalIds      | [External IDs Property](#externalids-property)       | Optional     | One or more third-party metadata provider IDs.                                                                                                                                                                                                                                                                                                                                             |
 
 TV Special Object Example:

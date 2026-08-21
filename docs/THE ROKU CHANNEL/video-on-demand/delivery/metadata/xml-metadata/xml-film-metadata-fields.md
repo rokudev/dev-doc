@@ -73,7 +73,6 @@ EIDR ID if one exists
 | --------------------- | ----------------- | -------- |
 | `/package/video/eidr` | Any valid EIDR ID | Optional |
 
-
 ```
 <eidr></eidr>
 ```
@@ -85,8 +84,6 @@ Gracenote ID if one exists
 | XML XPath              | Accepted Values  | Required |
 | ---------------------- | ---------------- | -------- |
 | `/package/video/tmsId` | Any valid TMS ID | Optional |
-
-<u>Example:</u>
 
 ```
 <tmsId></tmsId>
@@ -100,8 +97,6 @@ Title of movie. Include only the name of the content as it should appear on plat
 | ---------------------- | ----------- | -------- |
 | `/package/video/title` | Movie Title | Required |
 
-<u>Example:</u>
-
 ```
 <title><![CDATA[Movie Title. Required.]]></title>
 ```
@@ -113,8 +108,6 @@ A short synopsis of the content. CDATA section supported. 250-character limit.
 | XML XPath                       | Accepted Values        | Required |
 | ------------------------------- | ---------------------- | -------- |
 | `/package/video/short_synopsis` | 250-character synopsis | Required |
-
-<u>Example:</u>
 
 ```
 <short_synopsis><![CDATA[Short summary of movie. 250 characters maximum. Required]]></short_synopsis>
@@ -128,8 +121,6 @@ A long synopsis of the content. CDATA section supported. 500-character limit.
 | ------------------------------ | ---------------------- | -------- |
 | `/package/video/long_synopsis` | 500-character synopsis | Optional |
 
-<u>Example:</u>
-
 ```
 <long_synopsis><![CDATA[Long summary of movie. 500 characters maximum. Optional.]]></long_synopsis>
 ```
@@ -141,8 +132,6 @@ Defines the original production language of the title being delivered. At a mini
 | XML XPath                                 | Accepted Values                                                                                                | Required |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/original_spoken_language` | Valid [language value](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
-
-<u>Example:</u>
 
 ```
 <original_spoken_language>en</original_spoken_language>
@@ -156,8 +145,6 @@ Defines the primary country where the film was produced and where the main creat
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------- | --------- |
 | `/package/video/country_of_origin` | Valid 2-character country code per [ISO 3166-1 alpha 2](https://www.iso.org/iso-3166-country-codes.html) | Preferred |
 
-<u>Example:</u>
-
 ```
 <country_of_origin>US</country_of_origin>
 ```
@@ -169,8 +156,6 @@ Indicates whether the title delivered contains closed captions. Accepted values 
 | XML XPath                       | Accepted Values | Required                       |
 | ------------------------------- | --------------- | ------------------------------ |
 | `/package/video/closedCaptions` | Y or N          | Required for content in the US |
-
-<u>Example:</u>
 
 ```
 <closedCaptions>Y</closedCaptions>
@@ -193,8 +178,6 @@ Allowable value and their definitions:
 | ---------------------------------------- | ---------------- | ------------------------------ |
 | `/package/video/closedCaptionsExemption` | 1, 2, 3, 4, 5, 6 | Required if closedCaptions = N |
 
-<u>Example:</u>
-
 ```
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
@@ -206,8 +189,6 @@ Original date content was first made available in any presentation. Must include
 | XML XPath                     | Accepted Values                         | Required |
 | ----------------------------- | --------------------------------------- | -------- |
 | `/package/video/release_date` | Conforms to ISO 8601 format: YYYY-MM-DD | Required |
-
-<u>Example:</u>
 
 ```
 <release_date>YYYY-MM-DD</release_date>
@@ -221,8 +202,6 @@ Total run time of content in whole minutes
 | ------------------------ | --------------- | -------- |
 | `/package/video/runtime` | Integers only   | Required |
 
-<u>Example:</u>
-
 ```
 <runtime>120</runtime>
 ```
@@ -234,8 +213,6 @@ Genre classification of the content. Roku requires each movie to be delivered wi
 | XML XPath                     | Accepted Values                                                                                  | Required |
 | ----------------------------- | ------------------------------------------------------------------------------------------------ | -------- |
 | `/package/video/genres/genre` | See [enumerated list](#genres) below. No more than 10 genres may be submitted for a single title | Required |
-
-<u>Example:</u>
 
 ```
 <genres>
@@ -251,8 +228,6 @@ Parental or content advisory rating for the movie by a rating source. A valid mo
 | XML XPath                                                           | Accepted Values                                                                                                                                        | Required |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | `/package/video/ratings/rating` `must include the system attribute` | See [below](#rating-values-by-rating-system-and-country) for allowable ratings by rating system.<br /> Multiple rating/rating system pairs are allowed | Required |
-
-<u>Example:</u>
 
 ```
 <ratings>
@@ -270,8 +245,6 @@ Tag is a freeform field that can be used to further categorize content aside fro
 | ------------------------- | ---------------------------------------- | -------------------------------- |
 | `/package/video/tags/tag` | any string under 50 characters in length | Optional, but HIGHLY recommended |
 
-<u>Example:</u>
-
 ```
 <tags>
   <tag>energy</tag>
@@ -287,8 +260,6 @@ Used to determine[ Ad Breaks for Ad Supported Content](#ad-breaks). adBreak valu
 | XML XPath                                    | Accepted Values | Required                   |
 | -------------------------------------------- | --------------- | -------------------------- |
 | `/package/video/adBreaks/adBreak/start_time` | HH:MM:SS.sss    | Preferred for AVOD content |
-
-<u>Example:</u>
 
 ```
 <adBreaks>
@@ -310,8 +281,6 @@ Used to identify the in and out points of opening credits, content recaps, end c
 | ---------------------------------------------- | --------------- | --------- |
 | `/package/video/cuePoints/cuePoint/start_time` | HH:MM:SS.sss    | Preferred |
 | `/package/video/cuePoints/cuePoint/end_time`   | HH:MM:SS.sss    | Preferred |
-
-<u>Example:</u>
 
 ```
 <cuePoints>
@@ -355,8 +324,6 @@ Defines the cuePoint type of the cuePoint provided within the cuePoints block. T
 | ----------------------------------- | ---------------------------------------------- | ------------------------------- |
 | `/package/video/cuePoints/cuePoint` | One of the values in the enumerated list above | Required if providing cuePoints |
 
-<u>Example:</u>
-
 ```
 <cuePoint type="intro">
 ```
@@ -368,8 +335,6 @@ Name of cast member. CDATA section supported.
 | XML XPath                                      | Accepted Values    | Required |
 | ---------------------------------------------- | ------------------ | -------- |
 | `/package/video/cast/cast_member/display_name` | Firstname Lastname | Optional |
-
-<u>Example:</u>
 
 ```
 <cast>
@@ -390,8 +355,6 @@ _NOTE: Director is the only crew_member supported for Excel ingest at this time_
 | ---------------------------------------------- | ------------------ | --------------------------------- |
 | `/package/video/crew/crew_member/display_name` | Firstname Lastname | Required if providing crew_member |
 
-<u>Example:</u>
-
 ```
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
@@ -406,8 +369,6 @@ _NOTE: Director is the only crew_member supported for Excel ingest at this time_
 | -------------------------------------------- | ---------------------------------------- | --------------------------------- |
 | `/package/video/crew/crew_member/roles/role` | See [enumerated list](#crew-roles) below | Required if providing crew_member |
 
-<u>Example:</u>
-
 ```
 <role>Director</role>
 ```
@@ -419,8 +380,6 @@ Begins the asset block that provides localized metadata for multi-language packa
 | XML XPath                      | Accepted Values | Required |
 | ------------------------------ | --------------- | -------- |
 | `/package/video/localizations` |                 | Required |
-
-<u>Example:</u>
 
 ```
 <localizations>
@@ -434,8 +393,6 @@ Defines the language of the localized title, short_synopsis, and long_synopsis p
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/localizations/localization` | Valid [language code](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
 
-<u>Example:</u>
-
 ```
 <localization name="es">
 ```
@@ -447,8 +404,6 @@ Localized title of movie in the language specified in the localization tag’s n
 | XML XPath                                         | Accepted Values       | Required |
 | ------------------------------------------------- | --------------------- | -------- |
 | `/package/video/localizations/localization/title` | Localized Movie Title | Required |
-
-<u>Example:</u>
 
 ```
 <title><![CDATA[Localized Movie Title. Required.]]></title>
@@ -462,8 +417,6 @@ A localized short synopsis of the content in the language specified in the local
 | ---------------------------------------------------------- | --------------- | -------- |
 | `/package/video/localizations/localization/short_synopsis` | 250 characters  | Required |
 
-<u>Example:</u>
-
 ```
 <short_synopsis><![CDATA[Localized Short summary of movie. 250 characters maximum. Required]]></short_synopsis>
 ```
@@ -475,8 +428,6 @@ A localized long synopsis of the content in the language specified in the locali
 | XML XPath                                                 | Accepted Values | Required |
 | --------------------------------------------------------- | --------------- | -------- |
 | `/package/video/localizations/localization/long_synopsis` | 500 characters  | Optional |
-
-<u>Example:</u>
 
 ```
 <long_synopsis><![CDATA[Localized Long summary of movie. 500 characters maximum. Optional.]]></long_synopsis>
@@ -490,8 +441,6 @@ Begins the asset block that provides the availability information of the package
 | ---------------------------- | --------------- | -------- |
 | `/package/video/playOptions` |                 | Required |
 
-<u>Example:</u>
-
 ```
 <playOptions>
 ```
@@ -503,8 +452,6 @@ Country code of the territory in which the content is available. Multiple countr
 | XML XPath                                       | Accepted Values            | Required  |
 | ----------------------------------------------- | -------------------------- | --------- |
 | `/package/video/playOptions/playOption/country` | US<br />CA<br />GB<br />MX | Preferred |
-
-<u>Example:</u>
 
 ```
 <playOption>
@@ -521,8 +468,6 @@ Monetization Type of the movie. Multiple vodType nodes can be provided assuming 
 | ----------------------------------------------- | --------------- | --------- |
 | `/package/video/playOptions/playOption/vodType` | AVOD<br />SVOD  | Preferred |
 
-<u>Example:</u>
-
 ```
 <playOption>
   <vodType>AVOD</vodType>
@@ -538,8 +483,6 @@ Start date of content availability to users on Roku Channel. One licensePeriodSt
 | ---------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodStart` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
 
-<u>Example:</u>
-
 ```
 <playOption>
   <licensePeriodStart>YYYY-MM-DDTHH:MM:SS</licensePeriodStart>
@@ -553,8 +496,6 @@ End date of content availability to users on Roku Channel. One licensePeriodEnd 
 | XML XPath                                                | Accepted Values                                  | Required |
 | -------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodEnd` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
-
-<u>Example:</u>
 
 ```
 <playOption>
@@ -570,8 +511,6 @@ Begins the asset block that references the files delivered in the package
 | ----------------------- | ------------------ | -------- |
 | `/package/video/assets` | media_type="video" | Required |
 
-<u>Example:</u>
-
 ```
 <assets media_type="video">
 ```
@@ -586,8 +525,6 @@ The block that describes the source video file. The asset tag's attribute must b
 | --------------------------------------- | -------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"` <br />`data_file role="source"` | Required |
 
-<u>Example:</u>
-
 ```
 <asset type="full">
   <data_file role="source">
@@ -600,8 +537,6 @@ The block that describes the closed captions for the source video file. The asse
 | XML XPath                               | Accepted Values                                                             | Required       |
 | --------------------------------------- | --------------------------------------------------------------------------- | -------------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="captions"` | Required in US |
-
-<u>Example:</u>
 
 ```
 <asset type="full">
@@ -618,8 +553,6 @@ The block that describes sidecar audio for the source video file. The audio file
 
 **sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations**
 
-<u>Example:</u>
-
 ```
 <asset type="full">
   <data_file role="audio">
@@ -635,8 +568,6 @@ The block that describes sidecar subtitles for the source video file. The asset 
 
 **sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution.**
 
-<u>Example:</u>
-
 ```
 <asset type="full">
   <data_file role="subtitles">
@@ -650,8 +581,6 @@ The block that describes sidecar forced narrative subtitles for the source video
 | --------------------------------------- | ----------------------------------------------------------------------------------- | ---------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="forced subtitles"` | Optional\* |
 
-<u>Example:</u>
-
 ```
 <asset type="full">
   <data_file role="forced subtitles">
@@ -664,7 +593,6 @@ The block that describes the artwork file(s). The asset tag's attribute must be 
 | XML XPath                               | Accepted Values                               | Required |
 | --------------------------------------- | --------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"` | Required |
-
 
 ```
 <asset type="artwork">
@@ -690,8 +618,6 @@ Applicable to data_file roles: source, captions, audio, subtitles, and asset typ
 | ---------------------------------------------- | ------------------------------------------ | -------- |
 | `/package/video/assets/asset/data_file/locale` | [Supported language code](#language-codes) | Required |
 
-<u>Example:</u>
-
 ```
 <locale name="en"/>
 ```
@@ -708,8 +634,6 @@ Filename of the asset indicated in the data_file role or type attribute. All fil
 | `/package/video/assets/asset/data_file/file_name` | Attribute values:<br />`type="boxcover"`               | Preferred                         |
 | `/package/video/assets/asset/data_file/file_name` | Attribute values:<br />`type="poster"`                 | Preferred                         |
 
-<u>Example:</u>
-
 ```
 <file_name>VideoFilename.mxf</file_name>
 ```
@@ -721,8 +645,6 @@ Filename of the asset indicated in the data_file role or type attribute. All fil
 | XML XPath                                     | Accepted Values                                                                                   | Required |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file/audio` | Allowed values:<br />stereoOnly<br />surroundOnly<br />stereoPlusSurround<br />surroundPlusStereo | Optional |
-
-<u>Example:</u>
 
 ```
 <audio>stereoOnly</audio>

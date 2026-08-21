@@ -2,7 +2,7 @@
 title: Delivery methods
 excerpt: Details of the delivery methods supported by Roku
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

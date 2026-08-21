@@ -1,5 +1,5 @@
 ---
-title: Video Requirements
+title: Video
 excerpt: The following gives an overview of Video requirements
 deprecated: false
 hidden: true

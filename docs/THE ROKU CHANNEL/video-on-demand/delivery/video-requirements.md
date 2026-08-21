@@ -1,12 +1,11 @@
 ---
 title: Video Requirements
+excerpt: The following gives an overview of Video requirements
 deprecated: false
 hidden: true
 metadata:
   robots: index
 ---
-The following gives an overview of Video requirements
-
 1. All video content must be **full program only**:
    1. no bars/tone or slates at program start
    2. no textless video after program end

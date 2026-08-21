@@ -412,7 +412,15 @@ The format of the feed is a comma-separated list with each property enclosed in 
 The Roku Channel Feed Root Object Template:
 
 ```json
-{ "providerName": "Acme Productions", "lastUpdated": "2015-11-11T22:21:37+00:00", "language": "en-US", "categories": [ ... ], "playlists": [ ... ], "movies": [ ... ], "series": [ ... ], "shortFormVideos": [ ... ], "tvSpecials": [ ... ],"liveFeeds": [ ... ]
+{ 
+    "providerName": "Acme Productions", 
+    "lastUpdated": "2015-11-11T22:21:37+00:00", 
+    "language": "en-US",  
+    "movies": [ ... ], 
+    "series": [ ... ], 
+    "shortFormVideos": [ ... ], 
+    "tvSpecials": [ ... ],
+    "liveFeeds": [ ... ]
  }
 ```
 

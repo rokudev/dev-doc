@@ -2,7 +2,7 @@
 title: Audio requirements
 excerpt: The following is an overview of the Audio requirements
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---

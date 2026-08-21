@@ -13,7 +13,7 @@ Defines the package version type
 | ------------------- | --------------- | -------- |
 | `/package/@version` | film5.0         | Required |
 
-```xml Package
+```xml
 <package version="film5.0">
 ```
 
@@ -24,8 +24,6 @@ Name of content owner/studio/network
 | XML XPath           | Example        | Required |
 | ------------------- | -------------- | -------- |
 | `/package/provider` | Roku Originals | Required |
-
-<u>Example:</u>
 
 ```xml
 <provider>Roku Originals</provider>
@@ -39,8 +37,6 @@ Primary language of the package metadata. At a minimum, the value must conform t
 | ------------------- | -------------------------------------------------------------------------------------------------------------- | -------- |
 | `/package/language` | Valid [language value](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
 
-<u>Example:</u>
-
 ```xml
 <language>en</language>
 ```
@@ -53,9 +49,7 @@ Defines the content type of the package
 | --------------------- | --------------- | -------- |
 | `/package/video/type` | film            | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <type>film</type>
 ```
 
@@ -67,9 +61,7 @@ Immutable, unique identifier for a movie. IDs are to be generated and supplied b
 | ------------------------- | ----------------------------------------------------------------------------- | -------- |
 | `/package/video/asset_id` | alphanumeric characters, hyphens, and underscores only. 50 characters maximum | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <asset_id>movieAssetIdHere</asset_id>
 ```
 

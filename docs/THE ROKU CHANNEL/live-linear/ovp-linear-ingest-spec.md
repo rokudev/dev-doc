@@ -527,9 +527,19 @@ Live Feed Object Example:
    "language":{
       "en"
    },
-   "thumbnail":"[https://example.org/cdn/thumbnails/1509428502952/1](https://example.org/cdn/thumbnails/1509428502952/2) ",
+   "thumbnail":"https://example.org/cdn/thumbnails/1509428502952/1",
    "shortDescription":"A live description",
    "longDescription":"A longer description of a live stream",
+   "advisoryRatings": [
+        {
+            "source": "MPAA",
+            "value": "PG13"
+        },
+        {
+            "source": "CPR",
+            "value": "14+"
+        }
+    ],
    "genres":[
       "drama",
       "comedy",
@@ -570,25 +580,26 @@ Movie Object Example:
 
 ```
 {
-   "id":"1509428502953",
-   "title":"Sample Stream",
-   "content":{
-      "..."
-   },
-   "language":{
-      "en"
-   },
-   "thumbnail":"https://example.org/cdn/thumbnails/1509428502952/1",
-   "shortDescription":"A live description",
-   "longDescription":"A longer description of a live stream",
-   "genres":[
+    "id":"1509428502953",
+    "title":"Sample Title",
+    "thumbnail":"https://example.org/cdn/thumbnails/1509428502952/1",
+    "shortDescription":"A movie description",
+    "genres":[
       "drama",
       "comedy",
       "horror"
-   ],
-   "tags":[
-      "kidsdirected"
-   ]
+    ],
+    "releaseDate": "2016-01-01",
+    "advisoryRatings": [
+        {
+            "source": "MPAA",
+            "value": "PG13"
+        },
+        {
+            "source": "CPR",
+            "value": "14+"
+        }
+    ] 
 }
 
 ```
@@ -620,13 +631,57 @@ This object represents a series, such as a season of a TV show or a mini-series.
 Series Object Example (seasons):
 
 ```
-{ "id": "1509428502952", "title": "The Amazing Series with Seasons!", "seasons": [ ... ], "genres": [ "educational", "science fiction", "thriller", ], "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1", "shortDescription": "Wondrous series seasons." }
+{ 
+    "id": "1509428502952", 
+    "title": "The Amazing Series with Seasons!", 
+    "seasons": [ ... ], 
+    "genres": [ 
+        "educational", 
+        "science fiction", 
+        "thriller", 
+    ], 
+    "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1",
+    "shortDescription": "Wondrous series seasons.",
+    "releaseDate": "2016-01-01",
+    "advisoryRatings": [
+        {
+            "source": "USA_PR",
+            "value": "TV-14"
+        },
+        {
+            "source": "CPR",
+            "value": "14+"
+        }
+    ] 
+}
 ```
 
 Series Object Example (mini-series):
 
 ```
-{ "id": "1509428502952", "title": "The Amazing Series with Episodes Only!", "episodes": [ ... ], "genres": [ "fashion", "romance", "technology", ], "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1", "shortDescription": "Unbelievables series episodes." }
+{ 
+    "id": "1509428502952", 
+    "title": "The Amazing Series with Episodes Only!", 
+    "episodes": [ ... ], 
+    "genres": [ 
+        "fashion", 
+        "romance", 
+        "technology" 
+    ], 
+    "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1",
+    "shortDescription": "Unbelievables series episodes.",
+    "releaseDate": "2016-01-01",
+    "advisoryRatings": [
+        {
+            "source": "USA_PR",
+            "value": "TV-14"
+        },
+        {
+            "source": "CPR",
+            "value": "14+"
+        }
+    ]  
+}
 ```
 
 ### Season content type
@@ -643,7 +698,10 @@ This object represents a single season of a series.
 Season Object Example:
 
 ```json
-{ "seasonNumber": 1, "episodes": [ ... ] }
+{ 
+    "seasonNumber": 1, 
+    "episodes": [ ... ] 
+}
 ```
 
 ### Episode content type
@@ -680,7 +738,24 @@ Content length longer than 15 minutes:
 Episode Object Example:
 
 ```
-{ "id": "1509428502952", "title": "The Amazing First Episode Title", "content": { ... }, "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1", "episodeNumber": 1, "shortDescription": "Marvelous episode description" }
+{ 
+    "id": "1509428502952", 
+    "title": "The Amazing First Episode Title", 
+    "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1",
+    "episodeNumber": 1, 
+    "shortDescription": "Marvelous episode description",
+    "releaseDate": "2016-01-01",
+    "advisoryRatings": [
+        {
+            "source": "USA_PR",
+            "value": "TV-14"
+        },
+        {
+            "source": "CPR",
+            "value": "14+"
+        }
+    ] 
+}
 ```
 
 ### ShortFormVideo content type
@@ -703,7 +778,28 @@ Short-form videos are generally less than 15 minutes long, and are not TV Shows 
 Short-form Video Object Example:
 
 ```
-{ "id": "1509428502952", "title": "The Amazing Short-form Video", "content": { ... }, "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1", "shortDescription": "Astonishing short-form video", "releaseDate": "2016-01-01" }
+{ 
+    "id": "1509428502952", 
+    "title": "The Amazing Short-form Video",
+    "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1",
+    "shortDescription": "Astonishing short-form video", 
+    "genres": [ 
+        "animals", 
+        "animated", 
+        "fantasy", 
+    ], 
+    "releaseDate": "2016-01-01",
+    "advisoryRatings": [
+        {
+            "source": "USA_PR",
+            "value": "TV-14"
+        },
+        {
+            "source": "CPR",
+            "value": "14+"
+        }
+    ] 
+}
 ```
 
 ### TvSpecial content type
@@ -735,7 +831,28 @@ Content length longer than 15 minutes:
 TV Special Object Example:
 
 ```
-{ "id": "1509428502952", "title": "The Amazing First Episode Title", "content": { ... }, "genres": [ "animals", "animated", "fantasy", ], "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1", "shortDescription": "Unusual episode description" }
+{ 
+    "id": "1509428502952", 
+    "title": "The Amazing First Episode Title", 
+    "genres": [ 
+        "animals", 
+        "animated", 
+        "fantasy", 
+    ], 
+    "thumbnail": "https://example.org/cdn/thumbnails/1509428502952/1",
+    "shortDescription": "Unusual episode description",
+    "releaseDate": "2016-01-01",
+    "advisoryRatings": [
+        {
+            "source": "USA_PR",
+            "value": "TV-14"
+        },
+        {
+            "source": "CPR",
+            "value": "14+"
+        }
+    ]
+}
 ```
 
 ### **Schedule object**
@@ -1013,7 +1130,13 @@ This object represents the details about the liveFeed
 Content Object Example:
 
 ```json
-{ "dateAdded": "2015-11-11T22:21:37+00:00", "language": "es", "schedule": [...], "validityPeriodStart": "2020-03-13", "validityPeriodEnd": "2100-03-12"}
+{ 
+    "dateAdded": "2015-11-11T22:21:37+00:00", 
+    "language": "es", 
+    "schedule": [...], 
+    "validityPeriodStart": "2020-03-13", 
+    "validityPeriodEnd": "2100-03-12"
+}
 ```
 
 ### Genres property
@@ -1495,5 +1618,9 @@ This object represents a single person in the credits of a video content.
 Credit Object Example:
 
 ```
-{ "name": "Douglas N. Adams", "role": "screenwriter", "birthDate": "1952-03-11" }
+{ 
+    "name": "Douglas N. Adams", 
+    "role": "screenwriter", 
+    "birthDate": "1952-03-11" 
+}
 ```

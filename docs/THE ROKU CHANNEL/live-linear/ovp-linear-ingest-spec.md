@@ -243,7 +243,7 @@ The following outlines what we support. A preferred video set up is outlined in 
       <td>
         CEA 608/708 (embedded)
         <p style="margin:0.5em 0 0;font-size:0.9em;line-height:1.4;">
-          <strong>Note:</strong> Beginning 25&nbsp;May&nbsp;2027, the CRTC requires audiovisual online streaming services operating in Canada to provide closed captions on new original programming and on programs previously broadcast on linear television with captions. See Broadcasting Regulatory Policy CRTC&nbsp;2026-98 for scope and thresholds.
+          <strong>Note:</strong> Beginning 25&nbsp;May&nbsp;2027, the CRTC requires audiovisual online streaming services operating in Canada to provide closed captions on new original programming and on programs previously broadcast on linear television with captions. <i>See Broadcasting Regulatory Policy CRTC&nbsp;2026-98 for scope and thresholds.</i>
         </p>
       </td>
     </tr>

@@ -1,5 +1,5 @@
 ---
-title: Trailer delivery
+title: Trailers
 deprecated: false
 hidden: true
 metadata:

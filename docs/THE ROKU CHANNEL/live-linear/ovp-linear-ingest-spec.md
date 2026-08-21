@@ -785,6 +785,7 @@ Notes:
 - Please include the liveFeed as the first item in a feed.
 - Only a title or a **TMS** ExternalID is required for programs referenced in a schedule. We will reject anything that's not a **valid** ExternalID.
 - When referencing an episode, the parent items must also be in included ([series](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#series) and [season](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md#season) when applicable). These parent items must be <strong><u>fully populated with required fields</u></strong> as specified in the [Roku Direct Publisher feed specification](/docs/specs/direct-publisher-feed-specs/json-dp-spec.md) or the series item must contain a valid External **TMS** id.
+  - Episodes using TMS External IDs must also include the Series TMS ID on the parent.
 
 ![roku400px - feedspecs-1](https://image.roku.com/ZHZscHItMTc2/feed-specs-1-v2.jpg)
 

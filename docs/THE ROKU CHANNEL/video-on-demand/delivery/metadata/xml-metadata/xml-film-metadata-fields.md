@@ -5,7 +5,7 @@ hidden: true
 metadata:
   robots: index
 ---
-**package**
+## **package**
 
 Defines the package version type
 

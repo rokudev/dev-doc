@@ -1,5 +1,5 @@
 ---
-title: Audio requirements
+title: Audio
 excerpt: The following is an overview of the Audio requirements
 deprecated: false
 hidden: true

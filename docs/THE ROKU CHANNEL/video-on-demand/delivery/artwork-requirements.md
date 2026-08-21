@@ -1,5 +1,5 @@
 ---
-title: Artwork requirements
+title: Artwork
 deprecated: false
 hidden: true
 metadata:

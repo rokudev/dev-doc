@@ -120,7 +120,7 @@ Content delivered with an audio language that is not primary to the territory of
 
 _Subtitle text styling support is limited to:_
 
-- _bold <b> and italic <i> tags_
+- _bold \\<b\> and italic&#x20;_<i>_&#x20;tags_
 - _text color_
 - _text positioning_
 

@@ -13,8 +13,6 @@ Defines the package version type
 | ------------------- | --------------- | -------- |
 | `/package/@version` | film5.0         | Required |
 
-<u>Example:</u>
-
 ```xml Package
 <package version="film5.0">
 ```

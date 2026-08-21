@@ -3,7 +3,6 @@ title: Video
 excerpt: The following gives an overview of Video requirements
 deprecated: false
 hidden: true
-icon: fad fa-video
 metadata:
   robots: index
 ---

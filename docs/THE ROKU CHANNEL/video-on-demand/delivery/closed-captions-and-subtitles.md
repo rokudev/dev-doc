@@ -2,7 +2,6 @@
 title: Closed captions and subtitles
 deprecated: false
 hidden: true
-icon: fad fa-closed-captioning
 metadata:
   robots: index
 ---

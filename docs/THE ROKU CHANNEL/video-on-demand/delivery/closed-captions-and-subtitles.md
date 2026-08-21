@@ -85,7 +85,7 @@ Positional data provided in TTML and WebVTT captions will be honored as defined 
 
 _Closed caption text styling support is limited to:_
 
-- bold `<b>` and italic `<i>` tags
+- _bold_ `<b>` _and italic_ `<i>` _tags_
 - _text color_
 - _text positioning_
 
@@ -120,7 +120,7 @@ Content delivered with an audio language that is not primary to the territory of
 
 _Subtitle text styling support is limited to:_
 
-- _bold \\\<b> and italic&#x20;_<i>_&#x20;tags_
+- _bold&#x20;_`<b>`_&#x20;and italic&#x20;_`<i>`_&#x20;tags_
 - _text color_
 - _text positioning_
 

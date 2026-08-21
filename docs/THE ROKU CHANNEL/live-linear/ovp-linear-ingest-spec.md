@@ -495,7 +495,7 @@ Object Example:
 
 ## Content types
 
-### LiveFeed Content Type
+### LiveFeed content type
 
 Child object of root property liveFeeds.
 
@@ -545,8 +545,9 @@ Live Feed Object Example:
       "comedy",
       "horror"
    ],
-   "tags":[
+    "tags":[
      "kidsdirected"
+    ]
 }
 ```
 
@@ -1466,7 +1467,7 @@ This object represents the ratings across multiple territories for the video con
 | Field  | Type | Required | Description                                                                                                                                   |
 | ------ | ---- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | value  | enum | Required | Must be a value listed in [Parental Ratings](#accepted-parental-ratings) .<br />Do not include any content targeted specifically to children. |
-| source | enum | Required | Must be one or more of the following:<br />- BBFC<br />- CHVRS<br />- CPR<br />- MPAA<br />- USA_PR<br />- RTC<br />- ACB<br />- CLASSIND     |
+| source | enum | Required | Must be one or more of the following:<br />- BBFC\*\*<br />- CHVRS<br />- CPR<br />- MPAA<br />- USA_PR<br />- RTC<br />- ACB<br />- CLASSIND |
 
 UK content - rating is required\*\*. If there is no BBFC rating, please note a content rating of 'NR'
 

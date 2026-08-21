@@ -3,7 +3,6 @@ title: Audio
 excerpt: The following is an overview of the Audio requirements
 deprecated: false
 hidden: true
-icon: fad fa-file-audio
 metadata:
   robots: index
 ---

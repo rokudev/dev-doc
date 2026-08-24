@@ -6,115 +6,141 @@ hidden: true
 metadata:
   robots: index
 ---
+## Overview
+
+Roku supports two primary content delivery methods:
+
+1. **Aspera**: via Aspera Shares (desktop app) or Aspera Enterprise/P2P (SSH-key authenticated)
+2. **Direct S3 connection:** cross-account S3-to-S3 transfer
+
+Roku will confirm which delivery method applies to a given partner during onboarding. Alternate file transfer or physical delivery methods **may** be evaluated on a case-by-case basis, but **must** be approved by Roku in advance. **If approved, any physical media/hard drives provided to Roku will not be returned.**
+
+***
+
 ## Aspera
 
-Roku accepts content via Aspera which can be configured as either an Aspera Shares (using the IBM Aspera for Desktop application) or as an Aspera P2P/Enterprise connection (using Aspera Client or Console).
+Roku accepts content via Aspera, configured as either:
 
-Alternate file transfer or physical delivery methods may be evaluated on a case-by-case basis and must be approved by Roku. Any physical media/hard drives Roku may accept will not be returned.
+- **Aspera Shares** (using the IBM Aspera for Desktop application), or
+- **Aspera Enterprise/P2P** (using Aspera Client or Console)
 
-### Aspera shares delivery
+**Choosing between them:** Aspera Shares is a simpler, desktop-app-based option well suited to occasional or smaller-scale transfers. Aspera Enterprise/P2P uses SSH-key authentication and is typically used for larger-volume or more frequent automated transfers. Roku will confirm which applies to your onboarding.
 
-Provide the name(s) and email address(es) for users that will be transmitting content to Roku for Roku Channel.
+### Aspera Shares Delivery
 
-Roku’s Aspera Shares URL: [https://aspera.sr.roku.com](https://aspera.sr.roku.com)
+Provide the name(s) and email address(es) of users who will be transmitting content to Roku for Roku Channel.
 
-**IBM Aspera for Desktop**
+- **Roku's Aspera Shares URL:** [https://aspera.sr.roku.com](https://aspera.sr.roku.com)
+- **Required application:** [IBM Aspera for Desktop](https://ibmaspera.com/help/downloads/desktop) — installation is required to upload content via Aspera Shares.
 
-[IBM Aspera for Desktop Download](https://ibmaspera.com/help/downloads/desktop)
+> **Invitation emails:** account invitations to Aspera Shares are sent from Roku's Aspera Shares server. These automated emails are commonly flagged as spam/junk, or blocked by an organization's email filtering or firewall. If you don't see the invitation, **check your spam/junk folder** and move it out before attempting to use the link.
 
-You will need to install the IBM Aspera for Desktop application to upload content via Aspera Shares.
+### Aspera Enterprise/P2P/HSTS Delivery
 
-Invitations to create an Aspera Shares account will come from Roku’s Aspera Shares server. These automated invitation emails can be flagged as spam or junk emails or can be blocked by an organization’s email filtering system or firewall. Please check the spam/junk folder for the invitation and move it from the spam/junk folder before trying to access the link provided.
+Roku authenticates via **RSA public/private key exchange**. To complete configuration, provide a **public RSA-SSH key**.
 
-### Aspera enterprise/P2P/HSTS delivery
-
-Roku authenticates through RSA Public/Private key exchange. To complete this configuration, please provide a Public RSA-SSH key.
-
-Steps to create SSH keys can be found in [Aspera’s official documentation](https://download.asperasoft.com/download/docs/ascp/3.5.2/html/dita/creating_public_key.html)
-
-Roku will provide host and username information during onboarding.
-
-**Aspera Client**
-
-[Aspera Client Download](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all)
+- Steps to create SSH keys: [Aspera's official documentation](https://download.asperasoft.com/download/docs/ascp/3.5.2/html/dita/creating_public_key.html)
+- Roku will provide **host and username information** during onboarding.
+- **Required application:** [Aspera Client](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all)
 
 #### Transfer Bandwidth
 
-Roku recommends verifying or updating the global and user preferences of the Aspera Client to align with your preferred upload bandwidth. Please note Roku applies a global bandwidth cap of 300Mbps.
+Roku applies a **global bandwidth cap of 300 Mbps**. Roku recommends verifying or updating your Aspera Client's global and user preferences to align with your preferred upload bandwidth.
 
-![asperaPreferences](https://image.roku.com/ZHZscHItMTc2/asperaPreferences.jpg)
+![Aspera preferences example](https://image.roku.com/ZHZscHItMTc2/asperaPreferences.jpg)
 
-Depending on what client is being used, there are different settings that can affect transfer speeds.
+Where you configure transfer speed depends on which client/connection type you're using:
 
-- If using the Desktop Client GUI, global settings can be set
-  [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings)
-- Transfer speeds can also be set on a per-Connection level (the "Speed" setting in step 7):
-  [https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections)
-- If connecting via command line, there is a specific switch: `-l 100m` would set the transfer rate at 100Mbps
-- If connecting via Aspera Shares, target rates can be set both system-wide or per-user in the Shares web interface<br />[https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings)<br />[https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings)
+| Connection Type                      | Where to Configure                                                                         | Reference                                                                                                                                                                                                                                      |
+| ------------------------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Desktop Client GUI (global settings) | Global bandwidth preferences                                                               | [IBM docs: global bandwidth settings](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-global-bandwidth-settings)                                                                                                                              |
+| Desktop Client GUI (per-connection)  | "Speed" setting when adding/editing a connection                                           | [IBM docs: adding/editing connections](https://www.ibm.com/docs/en/asdc/4.4.x?topic=gui-adding-editing-connections)                                                                                                                            |
+| Command line                         | `-l` switch on the transfer command, e.g. `ascp -l 100m ...` sets a 100 Mbps transfer rate | —                                                                                                                                                                                                                                              |
+| Aspera Shares (web interface)        | System-wide or per-user target rate                                                        | [Configuring transfer settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=options-configuring-transfer-settings) / [Configure user settings](https://www.ibm.com/docs/en/aspera-shares/1.10?topic=accounts-configure-user-settings) |
 
-## Direct S3 connection
+> Pick the row matching your connection type — these are alternative configuration paths, not sequential steps.
 
-Roku supports a direct S3 to S3 method for content delivery. The Roku delivery bucket for S3 direct connect uses a customer-managed KMS key. Since we are performing cross-account transfers, a KMS key and policy which grants external accounts permissions will be required.
+***
 
-### What Roku need from Partners
+## Direct S3 Connection
 
-IAM role ARN, which will be used (assumed) for multipart upload/s3 copy. Once we receive the ARN, we will add it into our KMS/policy allow list.<br />Typically, the ARN will be in the form of:
+Roku supports direct S3-to-S3 transfer for content delivery. The Roku delivery bucket for S3 direct connect uses a **customer-managed KMS key**. Because this is a cross-account transfer, a KMS key and policy granting the partner's account permission is required.
+
+### What Roku Needs From Partners
+
+The partner's **IAM role ARN**, used (assumed) for multipart upload/S3 copy. Once received, Roku adds it to the KMS/policy allow list.
+
+Typical ARN format:
 
 ```
 arn:aws:iam::<AWS_ACCOUNT>:role/<ROLE_NAME>
 ```
 
-The IAM role will need to allow KMS related actions:
+The IAM policy below is presented in the source spec as the required permission set for the partner's assumed role:
 
 ```json
 {
-   "Version": "2012-10-17",
-   "Statement": [
-     {
-       "Effect": "Allow",
-       "Action": [
-         "kms:\*",
-         "s3:\*"
-       ],
-       "Resource": "\*"
-     }
-   ]
- }
+"Version": "2012-10-17",
+"Statement": [
+  {
+    "Effect": "Allow",
+    "Action": [
+      "kms:\*",
+      "s3:\*"
+    ],
+    "Resource": "\*"
+  }
+]
+}
 ```
 
-### What Partners need from Roku
+### What Partners Need From Roku
 
-1. Roku’s production environment bucket name for direct ingest
+1. **Roku's production environment bucket name** for direct ingest:
 
    ```
    ingest-direct1-886239521314
    ```
 
-2. Partner-specific prefix within the bucket. This will be supplied by Roku during the onboarding cycle and will follow the convention below: <u>Convention</u>
+2. **Partner-specific prefix** within the bucket, supplied by Roku during onboarding, following this convention:
+
+   **Convention:**
 
    ```
    ingest/<partner_name>/prod/
    ```
 
-   <u>Full bucket path example</u>
+   **Full bucket path example:**
 
    ```
    ingest-direct1-886239521314/ingest/<partner_name>/prod/
    ```
 
-### Best practices/optimization
+### Best Practices / Optimization
 
-Roku’s S3 bucket is located in the **us-east-1** region. Cross region transfers are expected to be slower. Transfers can be optimized by configuring multipart upload/copy settings:
+Roku's S3 bucket is located in the **us-east-1** region — cross-region transfers are expected to be slower. Transfers can be optimized via multipart upload/copy settings:
 
 ```
- aws configure set default.s3.multipart_chunksize 128MB
- aws configure set default.s3.max_concurrent_requests 30** 
+aws configure set default.s3.multipart_chunksize 128MB
+aws configure set default.s3.max_concurrent_requests 30
 ```
 
 ### Testing
 
-To validate the configuration, perform the following test
+To validate configuration, perform the following:
 
-1. Test upload file to Roku S3 bucket and the designated partner prefix
-2. Test copy file from Partner S3 bucket to Roku S3 bucket and the designated partner prefix
+1. Test uploading a file to the Roku S3 bucket, into the designated partner prefix.
+2. Test copying a file from the partner's S3 bucket to the Roku S3 bucket, into the designated partner prefix.
+
+***
+
+## Glossary
+
+| Term                           | Definition                                                                                                                                                       |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Aspera Shares**              | A browser/desktop-app-based Aspera delivery method using user invitations rather than SSH-key authentication.                                                    |
+| **Aspera Enterprise/P2P/HSTS** | An SSH-key-authenticated Aspera delivery method, typically used for larger or automated transfers. _(HSTS here refers to Aspera's "High-Speed Transfer Server")_ |
+| **KMS key**                    | AWS Key Management Service key — used here to encrypt/decrypt content in Roku's S3 delivery bucket.                                                              |
+| **IAM role ARN**               | Amazon Resource Name identifying an AWS IAM role — the identity a partner's system assumes to perform the transfer.                                              |
+| **Multipart upload**           | An S3 upload method that splits a large file into parts uploaded in parallel, improving transfer speed and reliability.                                          |
+| **Cross-account transfer**     | A transfer between two separate AWS accounts (the partner's and Roku's), requiring explicit permission grants on both sides.                                     |

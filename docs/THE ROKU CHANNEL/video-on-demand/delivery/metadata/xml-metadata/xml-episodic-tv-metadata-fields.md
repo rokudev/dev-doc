@@ -5,7 +5,7 @@ hidden: true
 metadata:
   robots: index
 ---
-**package**
+## package
 
 Defines the package version type
 
@@ -13,13 +13,11 @@ Defines the package version type
 | ------------------- | --------------- | -------- |
 | `/package/@version` | tv1.0           | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <package version="tv1.0">
 ```
 
-**provider**
+## provider
 
 Name of content owner/studio/network
 
@@ -27,13 +25,11 @@ Name of content owner/studio/network
 | ------------------- | -------------- | -------- |
 | `/package/provider` | Roku Originals | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <provider>Roku Originals</provider>
 ```
 
-**language**
+## language
 
 Primary language of the package metadata. At a minimum, the value must conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
 
@@ -41,13 +37,11 @@ Primary language of the package metadata. At a minimum, the value must conform t
 | ------------------- | -------------------------------------- | -------- |
 | `/package/language` | [Valid language code](#language-codes) | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <language>en</language>
 ```
 
-**type**
+## type
 
 Defines the content type of the package
 
@@ -55,13 +49,11 @@ Defines the content type of the package
 | --------------------- | --------------- | -------- |
 | `/package/video/type` | tv              | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <type>tv</type>
 ```
 
-**asset_id**
+## asset_id
 
 Immutable, unique identifier for an episode. IDs are to be generated and supplied by the Partner for content that is delivered to Roku. The ID in the ingest metadata should match the ID provided in the avail document. This will aid in tracking the content throughout Roku’s pipeline from Avails submission through publication on Roku Channel. 50 character limit
 
@@ -69,13 +61,11 @@ Immutable, unique identifier for an episode. IDs are to be generated and supplie
 | ------------------------- | ----------------------------------------------------------------------------- | -------- |
 | `/package/video/asset_id` | alphanumeric characters, hyphens, and underscores only. 50 characters maximum | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <asset_id>episodeAssetIdHere</asset_id>
 ```
 
-**eidr**
+## eidr
 
 EIDR ID if one exists
 
@@ -83,13 +73,11 @@ EIDR ID if one exists
 | --------------------- | ----------------- | -------- |
 | `/package/video/eidr` | Any valid EIDR ID | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <eidr></eidr>
 ```
 
-**tmsId**
+## tmsId
 
 Gracenote ID if one exists
 
@@ -97,13 +85,11 @@ Gracenote ID if one exists
 | ---------------------- | ---------------- | -------- |
 | `/package/video/tmsId` | Any valid TMS ID | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <tmsId></tmsId>
 ```
 
-**title**
+## title
 
 Title of episode. Include only the name of the content as it should appear on platform. Do not include non-title parentheticals such as indicator of original/remake, year of release, season, or video format, for example: (Classic), (1987), (Season 1), or (HD)
 
@@ -111,13 +97,11 @@ Title of episode. Include only the name of the content as it should appear on pl
 | ---------------------- | ------------- | -------- |
 | `/package/video/title` | Episode Title | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <title><![CDATA[Episode Title. Required.]]></title>
 ```
 
-**episodeNumber**
+## episodeNumber
 
 Numerical position of the episode within a season of a series. This value will determine the order in which the episodes will be viewed on platform. episodeNumber values must be delivered as they were originally broadcast or exhibited on any platform. Production numbers must not be provided. Only numerical (integer) values are allowed.
 
@@ -125,13 +109,11 @@ Numerical position of the episode within a season of a series. This value will d
 | ------------------------------ | --------------- | -------- |
 | `/package/video/episodeNumber` | Integers only   | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <episodeNumber>2</episodeNumber>
 ```
 
-**short_synopsis**
+## short_synopsis
 
 A short synopsis of the episode. CDATA section supported. 250-character limit.
 
@@ -139,13 +121,11 @@ A short synopsis of the episode. CDATA section supported. 250-character limit.
 | ------------------------------- | ---------------------- | -------- |
 | `/package/video/short_synopsis` | 250-character synopsis | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <short_synopsis><![CDATA[Short summary of episode. 250 characters maximum. Required]]></short_synopsis>
 ```
 
-**long_synopsis**
+## long_synopsis
 
 A long synopsis of the episode. CDATA section supported. 500-character limit.
 
@@ -153,13 +133,11 @@ A long synopsis of the episode. CDATA section supported. 500-character limit.
 | ------------------------------ | ---------------------- | -------- |
 | `/package/video/long_synopsis` | 500-character synopsis | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <long_synopsis><![CDATA[Long summary of episode. 500 characters maximum. Optional.]]></long_synopsis>
 ```
 
-**closedCaptions**
+## closedCaptions
 
 Indicates whether the episode delivered contains closed captions. Accepted values are Y or N. This field is required for all content intended for Roku Channel in the US
 
@@ -167,13 +145,11 @@ Indicates whether the episode delivered contains closed captions. Accepted value
 | ------------------------------- | --------------- | ------------------------------ |
 | `/package/video/closedCaptions` | Y or N          | Required for content in the US |
 
-<u>Example:</u>
-
-```
+```xml
 <closedCaptions>Y</closedCaptions>
 ```
 
-**closedCaptionsExemption**
+## closedCaptionsExemption
 
 FCC exemption code for closed caption requirement. This node is required if the `closedCaptions` value = “N”
 
@@ -189,13 +165,11 @@ Allowable value and their definitions:
 | ---------------------------------------- | ---------------- | ------------------------------ |
 | `/package/video/closedCaptionsExemption` | 1, 2, 3, 4, 5, 6 | Required if closedCaptions = N |
 
-<u>Example:</u>
-
-```
+```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
-**release_date**
+## release_date
 
 Original date the episode was first made available in any presentation. Must include accurate year of release at a minimum
 
@@ -203,13 +177,11 @@ Original date the episode was first made available in any presentation. Must inc
 | ----------------------------- | --------------------------------------- | -------- |
 | `/package/video/release_date` | Conforms to ISO 8601 format: YYYY-MM-DD | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <release_date>YYYY-MM-DD</release_date>
 ```
 
-**runtime**
+## runtime
 
 Total run time of content in whole minutes
 
@@ -217,13 +189,11 @@ Total run time of content in whole minutes
 | ------------------------ | --------------- | -------- |
 | `/package/video/runtime` | Integers only   | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <runtime>45</runtime>
 ```
 
-**rating**
+## rating
 
 Parental or content advisory rating for the episode by a rating source. A valid TV rating from the rating authority (ratingSystem) of the Territory the content will be available in shall be provided for each episode. If the title has not been rated by that Territory’s official rating authority, please include a valid rating from the USA_PR ratingSystem. There is no official body that assigns ratings for the USA_PR ratingSystem. Please use the guidelines listed at [http://tvguidelines.org/](http://tvguidelines.org/) to assign the appropriate rating.
 
@@ -231,9 +201,7 @@ Parental or content advisory rating for the episode by a rating source. A valid 
 | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | `/package/video/ratings/rating` `must include the system attribute` | See [below](#rating-values-by-rating-system-and-country) for allowable ratings by rating system. Multiple rating/rating system pairs are allowed | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <ratings>
 <rating system="MPAA" reason="For drug content, some sensuality and war violence.">PG-13</rating>
 <rating system="BBFC">12A</rating>
@@ -241,7 +209,7 @@ Parental or content advisory rating for the episode by a rating source. A valid 
 </ratings>
 ```
 
-**tag**
+## tag
 
 Tag is a freeform field that can be used to further categorize content aside from the limited number of supported Genre values. Roku Channel editorial team and recommendations engine will utilize the provided Tags to help surface content on Roku Channel Platform UI. The more tags that are included to a clip, episode, or movie, the more ways the content can be curated/surfaced to the end user. There is no limit to the number of tags that can be delivered with a title and there is no defined set of Tags. Tags are case sensitive. For example, a Tags “Rom-Com” and “rom-com” would be considered two unique tags. Please ensure Tags are all delivered consistently.
 
@@ -249,9 +217,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 | ------------------------- | ---------------------------------------- | -------------------------------- |
 | `/package/video/tags/tag` | any string under 50 characters in length | Optional, but HIGHLY recommended |
 
-<u>Example:</u>
-
-```
+```xml
 <tags>
   <tag>energy</tag>
   <tag>dance</tag>
@@ -259,7 +225,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 </tags>
 ```
 
-**adBreak start_time**
+## adBreak start_time
 
 Used to determine[ Ad Breaks for Ad Supported Content](#ad-breaks). adBreak values must be accurate to the millisecond. If the video provided includes commercial blacks, please provide the timecode equal to the midpoint of the commercial black. While not required for SVOD content, frame accurate adBreak data can be ingested if available.
 
@@ -267,9 +233,7 @@ Used to determine[ Ad Breaks for Ad Supported Content](#ad-breaks). adBreak valu
 | --------------------------------- | --------------- | -------------------------- |
 | `/package/video/adBreaks/adBreak` | HH:MM:SS.sss    | Preferred for AVOD content |
 
-<u>Example:</u>
-
-```
+```xml
 <adBreaks>
   <adBreak>
     <start_time>00:03:15.000</start_time>
@@ -281,7 +245,7 @@ Used to determine[ Ad Breaks for Ad Supported Content](#ad-breaks). adBreak valu
 </adBreaks>
 ```
 
-**cuePoint start_time and end_time**
+## cuePoint start_time and end_time
 
 Used to identify the in and out points of opening credits, content recaps, end credits, and behind the scenes footage. cuePoint tags must include the type attribute cuePoint start_time and end_time values must be accurate to the millisecond.
 
@@ -290,9 +254,7 @@ Used to identify the in and out points of opening credits, content recaps, end c
 | `/package/video/cuePoints/cuePoint/start_time` | HH:MM:SS.sss    | Preferred |
 | `/package/video/cuePoints/cuePoint/end_time`   | HH:MM:SS.sss    | Preferred |
 
-<u>Example:</u>
-
-```
+```xml
 <cuePoints>
 	<cuePoint type="ad overlay">
 		<start_time>00:09:10.456</start_time>
@@ -315,10 +277,9 @@ Used to identify the in and out points of opening credits, content recaps, end c
 		<end_time>00:41:59.123</end_time>
 	</cuePoint>
 </cuePoints>
-
 ```
 
-**cuePoint type attribute**
+## cuePoint type attribute
 
 Defines the cuePoint type of the cuePoint provided within the cuePoints block. The cuePoint tag's attribute must be type and the value provided must be one of the below:
 
@@ -334,13 +295,11 @@ Defines the cuePoint type of the cuePoint provided within the cuePoints block. T
 | ----------------------------------- | ---------------------------------------------- | ------------------------------- |
 | `/package/video/cuePoints/cuePoint` | One of the values in the enumerated list above | Required if providing cuePoints |
 
-<u>Example:</u>
-
-```
+```xml
 <cuePoint type="intro">
 ```
 
-**cast display_name**
+## cast display_name
 
 Name of cast member for the episode. CDATA section supported.
 
@@ -348,9 +307,7 @@ Name of cast member for the episode. CDATA section supported.
 | ---------------------------------------------- | ----------------------- | -------- |
 | `/package/video/cast/cast_member/display_name` | Firstname<br />Lastname | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <cast>
   <cast_member>
     <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -359,7 +316,7 @@ Name of cast member for the episode. CDATA section supported.
 </cast>
 ```
 
-**crew display_name**
+## crew display_name
 
 Name of crew member for the episode. CDATA section supported.
 
@@ -369,13 +326,11 @@ _NOTE: Director is the only crew_member supported for Excel ingest at this time_
 | ---------------------------------------------- | ----------------------- | --------------------------------- |
 | `/package/video/crew/crew_member/display_name` | Firstname<br />Lastname | Required if providing crew_member |
 
-<u>Example:</u>
-
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
-**role**
+## role
 
 Role of the crew member listed in the display_name. Roku requires each crew member included in the metadata to also include that crew member’s role. Please see the [enumerated list](#crew-roles) of crew roles that Roku supports. Roles are case sensitive.
 
@@ -385,13 +340,11 @@ _NOTE: Director is the only crew_member supported for Excel ingest at this time_
 | -------------------------------------------- | ---------------------------------------- | --------------------------------- |
 | `/package/video/crew/crew_member/roles/role` | See [enumerated list](#crew-roles) below | Required if providing crew_member |
 
-<u>Example:</u>
-
-```
+```xml
 <role>Director</role>
 ```
 
-**localizations**
+## localizations
 
 Begins the asset block that provides localized metadata of the episode for multi-language packages. localizations define the language and provide the translated title, short_synopsis, and long_synopsis of the package.
 
@@ -399,13 +352,11 @@ Begins the asset block that provides localized metadata of the episode for multi
 | ------------------------------ | --------------- | -------- |
 | `/package/video/localizations` |                 | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <localizations>
 ```
 
-**localization name attribute**
+## localization name attribute
 
 Defines the language of the localized title, short_synopsis, and long_synopsis provided within the localization block. The localization tag's attribute must be name and the value provided in the name must at a minimum conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
 
@@ -413,13 +364,11 @@ Defines the language of the localized title, short_synopsis, and long_synopsis p
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/localizations/localization` | Valid [language code](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <localization name="es">
 ```
 
-**localized title**
+## localized title
 
 Localized title of episode in the language specified in the localization tag’s name attribute. Include only the name of the episode as it should appear on platform. Do not include non-title parentheticals such as indicator of original/remake, year of release, season, or video format, for example: (Classic), (1987), (Season 1), or (HD). Localized `title` must be accompanied by a localized `short_synopsis` and localized `long_synopsis`
 
@@ -427,13 +376,11 @@ Localized title of episode in the language specified in the localization tag’s
 | ------------------------------------------------- | ----------------------- | -------- |
 | `/package/video/localizations/localization/title` | Localized Episode Title | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <title><![CDATA[Localized Episode Title. Required.]]></title>
 ```
 
-**localized short_synopsis**
+## localized short_synopsis
 
 A localized short synopsis of the episode in the language specified in the localization tag’s name attribute. CDATA section supported. 250-character limit. Localized `short_synopsis` must be accompanied by a localized `title` and localized `long_synopsis`
 
@@ -441,13 +388,11 @@ A localized short synopsis of the episode in the language specified in the local
 | ---------------------------------------------------------- | --------------- | -------- |
 | `/package/video/localizations/localization/short_synopsis` | 250 characters  | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <short_synopsis><![CDATA[Localized Short summary of episode. 250 characters maximum. Required]]></short_synopsis>
 ```
 
-**localized long_synopsis**
+## localized long_synopsis
 
 A localized long synopsis of the episode in the language specified in the localization tag’s name attribute. CDATA section supported. 500-character limit. Localized `long_synopsis` must be accompanied by a localized `title` and localized `short_synopsis`
 
@@ -455,13 +400,11 @@ A localized long synopsis of the episode in the language specified in the locali
 | --------------------------------------------------------- | --------------- | -------- |
 | `/package/video/localizations/localization/long_synopsis` | 500 characters  | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <long_synopsis><![CDATA[Localized Long summary of episode. 500 characters maximum. Optional.]]></long_synopsis>
 ```
 
-**series**
+## series
 
 Begins the series block that references the metadata for the show to which the episode belongs. Roku follows the US definition of a series. Episodes are nested within a season of a series following the hierarchy: series -> season -> episode
 
@@ -469,13 +412,11 @@ Begins the series block that references the metadata for the show to which the e
 | ----------------------- | ------- | -------- |
 | `/package/video/series` |         | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <series>
 ```
 
-**series_id**
+## series_id
 
 Immutable, unique identifier for a series. IDs are to be generated and supplied by the Partner for content that is delivered to Roku. The ID in the ingest metadata should match the ID provided in the avail document. This will aid in tracking the content throughout Roku’s pipeline from Avails submission through publication on Roku Channel. 50 character limit
 
@@ -483,13 +424,11 @@ Immutable, unique identifier for a series. IDs are to be generated and supplied 
 | --------------------------------- | ----------------------------------------------------------------------------- | -------- |
 | `/package/video/series/series_id` | alphanumeric characters, hyphens, and underscores only. 50 characters maximum | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <series_id>seriesIdHere</series_id>
 ```
 
-**title**
+## title
 
 Title of series. Include only the name of the content as it should appear on platform. Do not include non-title parentheticals such as indicator of original/remake, year of release, season, or video format, for example: (Classic), (1987), (Season 1), or (HD)
 
@@ -497,13 +436,11 @@ Title of series. Include only the name of the content as it should appear on pla
 | ----------------------------- | ------------ | -------- |
 | `/package/video/series/title` | Series Title | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <title><![CDATA[Series Title. Required.]]></title>
 ```
 
-**short_synopsis**
+## short_synopsis
 
 A short synopsis of the series. CDATA section supported. 250-character limit.
 
@@ -511,13 +448,11 @@ A short synopsis of the series. CDATA section supported. 250-character limit.
 | -------------------------------------- | ---------------------- | -------- |
 | `/package/video/series/short_synopsis` | 250-character synopsis | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <short_synopsis><![CDATA[Short summary of series. 250 characters maximum. Required]]></short_synopsis>
 ```
 
-**long_synopsis**
+## long_synopsis
 
 A long synopsis of the series. CDATA section supported. 500-character limit.
 
@@ -525,13 +460,11 @@ A long synopsis of the series. CDATA section supported. 500-character limit.
 | ------------------------------------- | ---------------------- | -------- |
 | `/package/video/series/long_synopsis` | 500-character synopsis | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <long_synopsis><![CDATA[Long summary of series. 500 characters maximum. Optional.]]></long_synopsis>
 ```
 
-**original_spoken_language**
+## original_spoken_language
 
 Defines the original production language of the series being delivered. At a minimum, the value must conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
 
@@ -539,13 +472,11 @@ Defines the original production language of the series being delivered. At a min
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/series/original_spoken_language` | Valid [language code](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 
-**country_of_origin**
+## country_of_origin
 
 Defines the primary country where the film was produced and where the main creators, crew, and producers are established. Value must conform to one of the supported country codes as defined in the [ISO 3166-1 alpha 2](https://www.iso.org/iso-3166-country-codes.html) list of 2-character country codes.
 
@@ -553,13 +484,11 @@ Defines the primary country where the film was produced and where the main creat
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------- |
 | `/package/video/series/country_of_origin` | Valid 2-character country code per [ISO 3166-1 alpha 2](https://www.iso.org/iso-3166-country-codes.html) | Preferred |
 
-<u>Example:</u>
-
-```
+```xml
 <country_of_origin>US</country_of_origin>
 ```
 
-**release_date**
+## release_date
 
 Original date the series was first made available in any presentation. This is typically the same date as the first episode of the series. Must include accurate year of release at a minimum
 
@@ -567,13 +496,11 @@ Original date the series was first made available in any presentation. This is t
 | ------------------------------------ | --------------------------------------- | -------- |
 | `/package/video/series/release_date` | Conforms to ISO 8601 format: YYYY-MM-DD | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <release_date>YYYY-MM-DD</release_date>
 ```
 
-**genre**
+## genre
 
 Genre classification of the content. Roku requires each episode to be delivered with at least one supported genre. Please see [enumerated list](#genres) of genres that Roku supports.
 
@@ -581,16 +508,14 @@ Genre classification of the content. Roku requires each episode to be delivered 
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/series/genres/genre` | See [enumerated list](#genres) below.<br />No more than 10 genres may be submitted for a single title | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <genres>
   <genre>drama</genre>
   <!-- Additional genres here-->
 </genres>
 ```
 
-**tag**
+## tag
 
 Tag is a freeform field that can be used to further categorize content aside from the limited number of supported Genre values. Roku Channel editorial team and recommendations engine will utilize the provided Tags to help surface content on Roku Channel Platform UI. The more tags that are included to a clip, episode, or movie, the more ways the content can be curated/surfaced to the end user. There is no limit to the number of tags that can be delivered with a title and there is no defined set of Tags. Tags are case sensitive. For example, a Tags “Rom-Com” and “rom-com” would be considered two unique tags. Please ensure Tags are all delivered consistently.
 
@@ -598,9 +523,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 | -------------------------------- | ---------------------------------------- | -------------------------------- |
 | `/package/video/series/tags/tag` | any string under 50 characters in length | Optional, but HIGHLY recommended |
 
-<u>Example:</u>
-
-```
+```xml
 <tags>
   <tag>energy</tag>
   <tag>dance</tag>
@@ -608,7 +531,7 @@ Tag is a freeform field that can be used to further categorize content aside fro
 </tags>
 ```
 
-**cast display_name**
+## cast display_name
 
 Name of cast member of the series. CDATA section supported.
 
@@ -616,9 +539,7 @@ Name of cast member of the series. CDATA section supported.
 | ----------------------------------------------------- | ----------------------- | -------- |
 | `/package/video/series/cast/cast_member/display_name` | Firstname<br />Lastname | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <cast>
   <cast_member>
     <display_name><![CDATA[Harrison Ford]]></display_name>
@@ -627,7 +548,7 @@ Name of cast member of the series. CDATA section supported.
 </cast>
 ```
 
-**crew display_name**
+## crew display_name
 
 Name of crew member of the series. CDATA section supported.
 
@@ -637,13 +558,11 @@ _NOTE: Director is the only crew_member supported for Excel ingest at this time_
 | ----------------------------------------------------- | ----------------------- | --------------------------------- |
 | `/package/video/series/crew/crew_member/display_name` | Firstname<br />Lastname | Required if providing crew_member |
 
-<u>Example:</u>
-
-```
+```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
-**role**
+## role
 
 Role of the crew member listed in the display_name. Roku requires each crew member included in the metadata to also include that crew member’s role. Please see the [enumerated list](#crew-roles) of crew roles that Roku supports. Roles are case sensitive.
 
@@ -653,13 +572,11 @@ _NOTE: Director is the only crew_member supported for Excel ingest at this time_
 | --------------------------------------------------- | ---------------------------------------- | --------------------------------- |
 | `/package/video/series/crew/crew_member/roles/role` | See [enumerated list](#crew-roles) below | Required if providing crew_member |
 
-<u>Example:</u>
-
-```
+```xml
 <role>Director</role>
 ```
 
-**localizations**
+## localizations
 
 Begins the asset block that provides localized metadata for the series in multi-language packages. localizations define the language and provide the translated title, short_synopsis, and long_synopsis of the package.
 
@@ -667,13 +584,11 @@ Begins the asset block that provides localized metadata for the series in multi-
 | ------------------------------------- | --------------- | -------- |
 | `/package/video/series/localizations` |                 | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <localizations>
 ```
 
-**localization name attribute**
+## localization name attribute
 
 Defines the language of the localized title, short_synopsis, and long_synopsis provided within the localization block. The localization tag's attribute must be name and the value provided in the name must at a minimum conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
 
@@ -681,13 +596,11 @@ Defines the language of the localized title, short_synopsis, and long_synopsis p
 | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/series/localizations/localization` | Valid [language code](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <localization name="es">
 ```
 
-**localized title**
+## localized title
 
 Localized title of the series in the language specified in the localization tag’s name attribute. Include only the name of the content as it should appear on platform. Do not include non-title parentheticals such as indicator of original/remake, year of release, season, or video format, for example: (Classic), (1987), (Season 1), or (HD). Localized `title` must be accompanied by a localized `short_synopsis` and localized `long_synopsis`
 
@@ -695,13 +608,11 @@ Localized title of the series in the language specified in the localization tag�
 | -------------------------------------------------------- | ---------------------- | -------- |
 | `/package/video/series/localizations/localization/title` | Localized Series Title | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <title><![CDATA[Localized Series Title. Required.]]></title>
 ```
 
-**localized short_synopsis**
+## localized short_synopsis
 
 A localized short synopsis of the series in the language specified in the localization tag’s name attribute. CDATA section supported. 250-character limit. Localized `short_synopsis` must be accompanied by a localized `title` and localized `long_synopsis`
 
@@ -709,13 +620,11 @@ A localized short synopsis of the series in the language specified in the locali
 | ----------------------------------------------------------------- | --------------- | -------- |
 | `/package/video/series/localizations/localization/short_synopsis` | 250 characters  | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <short_synopsis><![CDATA[Localized Short summary of series. 250 characters maximum. Required]]></short_synopsis>
 ```
 
-**localized long_synopsis**
+## localized long_synopsis
 
 A localized long synopsis of the series in the language specified in the localization tag’s name attribute. CDATA section supported. 500-character limit. Localized `long_synopsis` must be accompanied by a localized `title` and localized `short_synopsis`
 
@@ -723,27 +632,23 @@ A localized long synopsis of the series in the language specified in the localiz
 | ---------------------------------------------------------------- | --------------- | -------- |
 | `/package/video/series/localizations/localization/long_synopsis` | 500 characters  | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <long_synopsis><![CDATA[Localized Long summary of series. 500 characters maximum. Optional.]]></long_synopsis>
 ```
 
-**season**
+## season
 
 Begins the season block that references the metadata for the season of the series to which the episode belongs. Roku follows the US definition of a series. Episodes are nested within a season of a series following the hierarchy: series -> season -> episode
-
-<u>Example:</u>
 
 | XML XPath               | Example | Required |
 | ----------------------- | ------- | -------- |
 | `/package/video/season` |         | Required |
 
-```
+```xml
 <season>
 ```
 
-**season_id**
+## season_id
 
 Immutable, unique identifier for a season. IDs are to be generated and supplied by the Partner for content that is delivered to Roku. The ID in the ingest metadata should match the ID provided in the avail document. This will aid in tracking the content throughout Roku’s pipeline from Avails submission through publication on Roku Channel. 50 character limit
 
@@ -751,13 +656,11 @@ Immutable, unique identifier for a season. IDs are to be generated and supplied 
 | --------------------------------- | ----------------------------------------------------------------------------- | -------- |
 | `/package/video/season/season_id` | alphanumeric characters, hyphens, and underscores only. 50 characters maximum | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <season_id>seasonIdHere</season_id>
 ```
 
-**seasonNumber**
+## seasonNumber
 
 Numerical position of the season within a series. This value will determine the order in which the underlying episodes will be viewed on platform. seasonNumber values must be delivered as they were originally broadcast or exhibited on any platform. Only numerical (integer) values are allowed. seasonNumber must not be 0
 
@@ -765,13 +668,11 @@ Numerical position of the season within a series. This value will determine the 
 | ------------------------------------ | ---------------------------- | -------- |
 | `/package/video/season/seasonNumber` | Integers greater than 0 only | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <seasonNumber>2</seasonNumber>
 ```
 
-**playOptions**
+## playOptions
 
 Begins the asset block that provides the availability information of the package. playOptions consist of the country/territory availability, monetization type, availability start, and availability end dates of the title in the package.
 
@@ -779,13 +680,11 @@ Begins the asset block that provides the availability information of the package
 | ---------------------------- | --------------- | -------- |
 | `/package/video/playOptions` |                 | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <playOptions>
 ```
 
-**country**
+## country
 
 Country code of the territory in which the content is available. Multiple country nodes can be provided assuming vodType, licensePeriodStart, and licensePeriodEnd dates are identical across countries.
 
@@ -793,16 +692,14 @@ Country code of the territory in which the content is available. Multiple countr
 | ----------------------------------------------- | -------------------------- | --------- |
 | `/package/video/playOptions/playOption/country` | US<br />CA<br />GB<br />MX | Preferred |
 
-<u>Example:</u>
-
-```
+```xml
 <playOption>
   <country>US</country>
   <!-- Additional country nodes here -->
 </playOption>
 ```
 
-**vodType**
+## vodType
 
 Monetization Type of the episode. Multiple vodType nodes can be provided assuming country, licensePeriodStart, and licensePeriodEnd dates are identical across vodType.
 
@@ -810,16 +707,14 @@ Monetization Type of the episode. Multiple vodType nodes can be provided assumin
 | ----------------------------------------------- | --------------- | --------- |
 | `/package/video/playOptions/playOption/vodType` | AVOD<br />SVOD  | Preferred |
 
-<u>Example:</u>
-
-```
+```xml
 <playOption>
   <vodType>AVOD</vodType>
   <!-- Additional vodType nodes here -->
 </playOption>
 ```
 
-**licensePeriodStart**
+## licensePeriodStart
 
 Start date of content availability to users on Roku Channel. One licensePeriodStart date is allowed per playOption. licensePeriodStart dates must be chronologically before licensePeriodEnd dates. licensePeriodStart and licensePeriodEnd must not be identical
 
@@ -827,15 +722,13 @@ Start date of content availability to users on Roku Channel. One licensePeriodSt
 | ---------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodStart` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <playOption>
   <licensePeriodStart>YYYY-MM-DDTHH:MM:SS</licensePeriodStart>
 </playOption>
 ```
 
-**licensePeriodEnd**
+## licensePeriodEnd
 
 End date of content availability to users on Roku Channel. One licensePeriodEnd date allowed per playOption. licensePeriodEnd dates must be chronologically after licensePeriodStart dates. licensePeriodStart and licensePeriodEnd must not be identical
 
@@ -843,15 +736,13 @@ End date of content availability to users on Roku Channel. One licensePeriodEnd 
 | -------------------------------------------------------- | ------------------------------------------------ | -------- |
 | `/package/video/playOptions/playOption/licensePeriodEnd` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <playOption>
   <licensePeriodEnd>YYYY-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
 ```
 
-**assets**
+## assets
 
 Begins the asset block that references the files delivered in the package
 
@@ -859,15 +750,13 @@ Begins the asset block that references the files delivered in the package
 | ----------------------- | ------------------ | -------- |
 | `/package/video/assets` | media_type="video" | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <assets media_type="video">
 ```
 
-**data_file**
+## data_file
 
-**full source**
+## full source
 
 The block that describes the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="source". The <locale> and \<file_name> nodes are also required
 
@@ -875,14 +764,12 @@ The block that describes the source video file. The asset tag's attribute must b
 | --------------------------------------- | ------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="source"` | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <asset type="full">
   <data_file role="source">
 ```
 
-**full captions**
+## full captions
 
 The block that describes the closed captions for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="captions". The <locale> and \<file_name> nodes are also required
 
@@ -890,14 +777,12 @@ The block that describes the closed captions for the source video file. The asse
 | --------------------------------------- | --------------------------------------------------------------------------- | -------------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="captions"` | Required in US |
 
-<u>Example:</u>
-
-```
+```xml
 <asset type="full">
   <data_file role="captions">
 ```
 
-**full audio**
+## full audio
 
 The block that describes sidecar audio for the source video file. The audio file will either be a full audio dub for language translation purposes or a descriptive audio track for the accessibility purposes. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="audio" for translation dubs or role=”audio description” for accessibility purposes. The <locale> and \<file_name> nodes are also required
 
@@ -907,14 +792,12 @@ The block that describes sidecar audio for the source video file. The audio file
 
 **sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations**
 
-<u>Example:</u>
-
-```
+```xml
 <asset type="full">
   <data_file role="audio">
 ```
 
-**full subtitles**
+## full subtitles
 
 The block that describes sidecar subtitles for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="subtitles". The <locale> and \<file_name> nodes are also required
 
@@ -924,14 +807,12 @@ The block that describes sidecar subtitles for the source video file. The asset 
 
 **sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution.**
 
-<u>Example:</u>
-
-```
+```xml
 <asset type="full">
   <data_file role="subtitles">
 ```
 
-**forced subtitles**
+## forced subtitles
 
 The block that describes sidecar forced narrative subtitles for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="forced subtitles". The <locale> and \<file_name> nodes are also required
 
@@ -939,14 +820,12 @@ The block that describes sidecar forced narrative subtitles for the source video
 | --------------------------------------- | ----------------------------------------------------------------------------------- | ---------- |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="forced subtitles"` | Optional\* |
 
-<u>Example:</u>
-
-```
+```xml
 <asset type="full">
-  <data_file role="forced subtitles">
+  <data_file role="forced subtitles">
 ```
 
-**artwork**
+## artwork
 
 The block that describes the artwork file(s). The asset tag's attribute must be type="artwork". The data_file tag's attribute can either be type="episode" for episode level image delivery, or type="series" for series level image delivery. The <locale> and \<file_name> nodes are also required. Please see [Artwork](#artwork) for full image delivery specifications.
 
@@ -955,19 +834,17 @@ The block that describes the artwork file(s). The asset tag's attribute must be 
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"`<br />`data_file role="episode"` | Preferred |
 | `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"`<br />`data_file role="series"`  | Preferred |
 
-<u>Example:</u>
-
-```
+```xml
 <asset type="artwork">
   <data_file role="episode">
 ```
 
-```
+```xml
 <asset type="artwork">
   <data_file role="series">
 ```
 
-**locale**
+## locale
 
 Identifies the language of the data_file. At a minimum, the value must conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
 
@@ -977,13 +854,11 @@ Applicable to data_file roles: source, captions, audio, subtitles, and asset typ
 | ---------------------------------------------- | ------------------------------------------ | -------- |
 | `/package/video/assets/asset/data_file/locale` | [Supported language code](#language-codes) | Required |
 
-<u>Example:</u>
-
-```
+```xml
 <locale name="en"/>
 ```
 
-**file_name**
+## file_name
 
 Filename of the asset indicated in the data_file role or type attribute. All file_name values are case-sensitive and must contain the proper file extension.
 
@@ -997,13 +872,11 @@ For artwork files the file_name tag's attribute can either be omitted (to indica
 | `/package/video/assets/asset/data_file/file_name` | Attribute values:<br />`type="boxcover"`               | Preferred                         |
 | `/package/video/assets/asset/data_file/file_name` | Attribute values:<br />`type="poster"`                 | Preferred                         |
 
-<u>Example:</u>
-
-```
+```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
-**audio**
+## audio
 
 [Audio Layout Descriptor](#audio-channel-layout-hints) for the video file delivered. See guidelines below
 
@@ -1011,8 +884,6 @@ For artwork files the file_name tag's attribute can either be omitted (to indica
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------- |
 | `/package/video/assets/asset/data_file/audio` | Allowed values:<br />stereoOnly<br />surroundOnly<br />stereoPlusSurround<br />surroundPlusStereo | Optional |
 
-<u>Example:</u>
-
-```
+```xml
 <audio>stereoOnly</audio>
 ```

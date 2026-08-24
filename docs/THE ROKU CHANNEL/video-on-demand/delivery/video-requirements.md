@@ -6,6 +6,14 @@ hidden: true
 metadata:
   robots: index
 ---
+Roku supports content deliveries containing a single video file per title. Where a title requires additional language support, that support must be delivered as sidecar subtitle files and/or additional audio tracks associated with the single video asset, rather than as separate video files.
+
+Discrete video versions produced in alternate languages (e.g., dubbed or regionally re-cut video files) are not supported as separate deliverable assets for a given title, regardless of territory. Only one video per title will be ingested across all territories. Any additional-language requirements must be expressed through sidecar audio or subtitle elements mapped to that single video file.
+
+Partners requiring delivery of alternate-language video versions (e.g., open-captioned or hardcoded-subtitle versions) should coordinate directly with Roku Content Operations, as such deliveries fall outside standard EMA Avails/MovieLabs MEC-MMC ingest support and may require a separate title record or delivery arrangement outside this specification.
+
+All video delivered to Roku must conform to the following rules.
+
 1. All video content must be **full program only**:
    1. no bars/tone or slates at program start
    2. no textless video after program end
@@ -26,11 +34,11 @@ metadata:
 12. SD 16:9 content must not be delivered in a 4:3 container with letterboxing
 13. High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible
 
-#### Video frame rate
+## Video frame rate
 
 Roku supports a variety of frame rates and scan types. All video files should be delivered in their original native frame rate and scan type
 
-#### Video resolution
+## Video resolution
 
 | Type    | Width | Height | Pixel Aspect Ratio              |
 | ------- | ----- | ------ | ------------------------------- |
@@ -46,7 +54,7 @@ Roku supports a variety of frame rates and scan types. All video files should be
 
 _\*\*UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel_
 
-#### Video formats
+## Video formats
 
 | Name          | Codecs                                                                                   | Extension | Bitrate                                              |
 | ------------- | ---------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------- |

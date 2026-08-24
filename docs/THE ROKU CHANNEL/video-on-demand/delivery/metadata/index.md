@@ -17,9 +17,9 @@ Roku uses a **transform engine** that normalizes different metadata formats to f
 
 This page covers concepts that apply across all metadata delivery formats. Format-specific field-level detail lives in dedicated sub-pages:
 
-- **MovieLabs** — MEC/MMC delivery (see the MovieLabs Migration Playbook / MovieLabs guide)
-- **Roku XML** — three sub-pages, one per content type: **Film**, **TV**, **Clip**
-- **Roku Excel** — three sub-pages, one per content type: **Film**, **TV**, **Clip**
+- **MovieLabs**: MEC/MMC delivery (see the MovieLabs Migration Playbook / MovieLabs guide)
+- **Roku XML**: three sub-pages, one per content type: **Film**, **TV**, **Clip**
+- **Roku Excel**: three sub-pages, one per content type: **Film**, **TV**, **Clip**
 
 ***
 

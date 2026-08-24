@@ -742,8 +742,6 @@ Episode number of the parent program, if the parent is an episode.
 
 The following fields are **required specifically for sports clips**.
 
-> **⚠️ Gap flagged for review:** it's not stated how a clip is identified as a "sports clip" that triggers these requirements — the [`subType`](#subtype) enumerated list has no explicit `sports` value (the closest is `highlight`). **Recommend confirming** what determines sports-clip status (a specific `subType` value, a genre, or something else) so this requirement is unambiguous to partners delivering sports content.
-
 ### sportType
 
 Name of the sport featured in the clip/highlight.

@@ -6,61 +6,104 @@ hidden: true
 metadata:
   robots: index
 ---
-Roku supports content deliveries containing a single video file per title. Where a title requires additional language support, that support must be delivered as sidecar subtitle files and/or additional audio tracks associated with the single video asset, rather than as separate video files.
+## Language & Version Policy
 
-Discrete video versions produced in alternate languages (e.g., dubbed or regionally re-cut video files) are not supported as separate deliverable assets for a given title, regardless of territory. Only one video per title will be ingested across all territories. Any additional-language requirements must be expressed through sidecar audio or subtitle elements mapped to that single video file.
+Roku supports **one video file per title**. Where a title requires additional language support, that support **must** be delivered as:
 
-Partners requiring delivery of alternate-language video versions (e.g., open-captioned or hardcoded-subtitle versions) should coordinate directly with Roku Content Operations, as such deliveries fall outside standard EMA Avails/MovieLabs MEC-MMC ingest support and may require a separate title record or delivery arrangement outside this specification.
+- Sidecar subtitle files, and/or
+- Additional audio tracks
 
-All video delivered to Roku must conform to the following rules.
+associated with the single video asset — **not** as separate video files.
 
-1. All video content must be **full program only**:
-   1. no bars/tone or slates at program start
-   2. no textless video after program end
-   3. no more than 2 seconds of black at program start
-   4. no more than 2 seconds of black after program end
-   5. no FBI warnings or MPAA cards
-   6. no promotional material including references to theatrical, home video, or streaming release dates
-2. Video files should be semi-textless (also known as "texted with no subtitles" or "textless with main, ends, and graphic text"). Video can include opening and end credit text but all subtitles for foreign dialogue must be removed.
-3. Do not include advertisements within the video. All ad insertion points for ad supported content will be provided in the metadata file based on the [Roku Ad Policy guidelines](#ad-policy)
-4. Commercial blacks may be included within the video so long as they are no longer than 2 seconds
-5. Commercial blacks are acceptable for episodic TV content but not expected for movie content
-6. Video files must be delivered as a single, seamless video file
-7. Do not deliver hard parted (broken into segments at the ad break points) video files
-8. Calls to action (CTAs) or links to external platforms or sites (including QR codes) are not permissible and must be removed from the video prior to delivery to Roku
-9. HD video content must be delivered in a 16:9 container
-10. Full-Frame presentation (1.78 aspect ratio) is preferred whenever available
-11. Letterboxed 16:9 is allowed but should be minimized
-12. SD 16:9 content must not be delivered in a 4:3 container with letterboxing
-13. High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible
+**Discrete video versions produced in alternate languages** (e.g., dubbed or regionally re-cut video files) are **not supported** as separate deliverable assets for a given title, regardless of territory. Only one video per title will be ingested across all territories. Any additional-language requirements must be expressed through sidecar audio or subtitle elements mapped to that single video file.
 
-## Video frame rate
+> **Exception:** Partners requiring delivery of alternate-language video versions (e.g., open-captioned or hardcoded-subtitle versions) should coordinate directly with Roku Content Operations. These deliveries fall outside standard EMA Avails/MovieLabs MEC-MMC ingest support and may require a separate title record or delivery arrangement outside this specification.
 
-Roku supports a variety of frame rates and scan types. All video files should be delivered in their original native frame rate and scan type
+***
 
-## Video resolution
+## Program Content & Editorial
 
-| Type    | Width | Height | Pixel Aspect Ratio              |
-| ------- | ----- | ------ | ------------------------------- |
-| SD      | 720   | 480    | 4:3 or 16:9 (anamorphic pixels) |
-| SD      | 640   | 480    | 1:1 (square pixels)             |
-| SD      | 853   | 480    | 1:1 (square pixels)             |
-| SD      | 720   | 576    | 4:3 or 16:9 (anamorphic pixels) |
-| SD      | 768   | 576    | 1:1 (square pixels)             |
-| SD      | 1024  | 576    | 1:1 (square pixels)             |
-| HD      | 1280  | 720    | 1:1 (square pixels)             |
-| FHD     | 1920  | 1080   | 1:1 (square pixels)             |
-| UHD\*\* | 3840  | 2160   | 1:1 (square pixels)             |
+All video delivered to Roku **must** contain the **full program only**:
 
-_\*\*UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel_
+- No bars/tone or slates at program start
+- No textless video after program end
+- No more than 2 seconds of black at program start (**head black**)
+- No more than 2 seconds of black after program end (**tail black**)
+- No FBI warnings or MPAA cards
+- No promotional material referencing theatrical, home video, or streaming release dates
 
-## Video formats
+Video files **should** be **semi-textless** — meaning opening and end credit text may remain, but all subtitles for foreign dialogue must be removed. _(Also referred to as "texted with no subtitles" or "textless with main, ends, and graphic text.")_
 
-| Name          | Codecs                                                                                   | Extension | Bitrate                                              |
-| ------------- | ---------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------- |
-| Apple® ProRes | ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles) | .mov      | 50 Mbps or greater                                   |
-| XDCam         |                                                                                          | .mxf      | 50 Mbps or greater                                   |
-| MPEG-2        |                                                                                          | .ts, .mpg | HD = 15Mbps or greater<br />SD = 3.75Mbps or greater |
-| MPEG-4        | H.264                                                                                    | .mp4      | 5Mbps or greater                                     |
+***
 
-###
+## Advertising & Commercial Blacks
+
+- Do **not** include advertisements within the video. All ad insertion points for ad-supported content are provided separately in the metadata file, per [Roku Ad Policy guidelines](#ad-policy).
+- **Commercial blacks** (black frames at internal ad-break points, distinct from head/tail black above) **may** be included, provided each is no longer than 2 seconds.
+- Commercial blacks are acceptable for episodic TV content but not expected for movie content.
+
+***
+
+## File Delivery Format
+
+- Video **must** be delivered as a **single, seamless file**.
+- Do **not** deliver hard-parted files (i.e., broken into segments at ad-break points).
+- Calls to action (CTAs) or links to external platforms/sites (including QR codes) are **not permissible** and must be removed prior to delivery.
+- **High-quality mezzanine-level files are preferred** — the highest bitrate and resolution available should be used.
+
+***
+
+## Aspect Ratio & Frame
+
+- **Full-frame presentation (1.78 aspect ratio) is preferred** whenever available.
+- Letterboxed 16:9 is allowed but **should be minimized**.
+- HD video content **must** be delivered in a 16:9 container.
+- SD 16:9 content **must not** be delivered in a 4:3 container with letterboxing (i.e., do not pillarbox 16:9 content into a 4:3 frame).
+
+***
+
+## Video Frame Rate
+
+Roku supports a variety of frame rates and scan types. All video files **must** be delivered in their **original native frame rate and scan type** — no frame rate conversion.
+
+***
+
+## Video Resolution
+
+| Type  | Width | Height | Pixel Aspect Ratio              |
+| ----- | ----- | ------ | ------------------------------- |
+| SD    | 720   | 480    | 4:3 or 16:9 (anamorphic pixels) |
+| SD    | 640   | 480    | 1:1 (square pixels)             |
+| SD    | 853   | 480    | 1:1 (square pixels)             |
+| SD    | 720   | 576    | 4:3 or 16:9 (anamorphic pixels) |
+| SD    | 768   | 576    | 1:1 (square pixels)             |
+| SD    | 1024  | 576    | 1:1 (square pixels)             |
+| HD    | 1280  | 720    | 1:1 (square pixels)             |
+| FHD   | 1920  | 1080   | 1:1 (square pixels)             |
+| UHD\* | 3840  | 2160   | 1:1 (square pixels)             |
+
+\* UHD is supported as an **input resolution only**. Roku does not currently encode to or display 4K UHD video on Roku Channel.
+
+***
+
+## Video Formats
+
+| Name          | Codecs                                                                                   | Extension | Bitrate                                                |
+| ------------- | ---------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------ |
+| Apple® ProRes | ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles) | .mov      | 50 Mbps or greater                                     |
+| XDCam         | _(TBD — confirm codec)_                                                                  | .mxf      | 50 Mbps or greater                                     |
+| MPEG-2        | MPEG-2                                                                                   | .ts, .mpg | HD = 15 Mbps or greater<br />SD = 3.75 Mbps or greater |
+| MPEG-4        | H.264                                                                                    | .mp4      | 5 Mbps or greater                                      |
+
+***
+
+## Glossary
+
+| Term                  | Definition                                                                                                             |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Sidecar file**      | A subtitle or audio file delivered alongside (not embedded in) the video file, mapped to it via metadata.              |
+| **Mezzanine file**    | A high-quality, typically near-lossless master file used as the source for further encoding.                           |
+| **Anamorphic pixels** | Non-square pixels used to fit a widescreen image into a standard frame size.                                           |
+| **Square pixels**     | Pixels with a 1:1 aspect ratio, common in modern digital video.                                                        |
+| **Hard-parted**       | A video file physically split into multiple segments at ad-break points, rather than delivered as one continuous file. |
+| **Semi-textless**     | Video with opening/end credit text intact but with foreign-dialogue subtitles removed.                                 |

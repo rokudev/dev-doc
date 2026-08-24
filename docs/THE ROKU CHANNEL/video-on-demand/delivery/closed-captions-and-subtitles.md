@@ -7,7 +7,7 @@ metadata:
 ---
 Closed captions (also known as subtitles for the deaf or hard of hearing or SDH subtitles) and subtitles, while similar, serve separate distinct functions:
 
-**Closed captions/SDH subtitles/subtitles for the deaf or hard of hearing**
+## **Closed captions/SDH subtitles/subtitles for the deaf or hard of hearing**
 
 - Transcribes the spoken dialogue and the sounds heard in an audio track
 - Intended as an accessibility device for the deaf or hard of hearing
@@ -18,7 +18,7 @@ Closed captions (also known as subtitles for the deaf or hard of hearing or SDH 
 - Will not be made available to the viewer if a companion audio track in the same language is not provided
 - May be required per regulatory agencies in certain territories
 
-**Full subtitles**
+## **Full subtitles**
 
 - Translates all narratively important spoken dialogue and on-screen text from one language to another
 - Intended as a localization device when an audio track is in a language that the viewer does not understand
@@ -27,7 +27,7 @@ Closed captions (also known as subtitles for the deaf or hard of hearing or SDH 
 - Does not include text that describes sound effects or music cues, but may translate song lyrics if narratively important to the viewer or as a creative choice
 - Can be made available to the viewer regardless of the audio track language(s) delivered
 
-**Forced narrative subtitles**
+## **Forced narrative subtitles**
 
 - Translates narratively important spoken dialogue and/or on-screen text for the purpose of conveying information that may not be understood by the viewer. This information could include:
 
@@ -47,7 +47,7 @@ Closed captions (also known as subtitles for the deaf or hard of hearing or SDH 
 
 - Will automatically display based on the audio language track selected by the viewer
 
-#### Closed captions/SDH
+## Closed captions/SDH
 
 Roku prefers to receive closed captions/SDH for all content to provide the best user experience possible.
 
@@ -106,7 +106,7 @@ _Roku supports, but does not prefer the below legacy closed caption format. When
 | ------------------ | --------------------------- | ---------------------- | ------------------ | -------- | ----------------- | ------------------------------------------------------- |
 | SCC                | N                           | N                      | .scc               | ASCII    | sidecar           | follows audio language of either video file or dub file |
 
-#### Subtitles
+## Subtitles
 
 Content delivered with an audio language that is not primary to the territory of distribution must be delivered with an audio dub and/or subtitle file translating the content into that territory’s primary language.
 

@@ -91,7 +91,7 @@ Roku supports a variety of frame rates and scan types. All video files **must** 
 | Name          | Codecs                                                                                   | Extension | Bitrate                                                |
 | ------------- | ---------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------ |
 | Apple® ProRes | ProRes 444 (all profiles)<br />ProRes 4444 (all profiles)<br />ProRes 422 (all profiles) | .mov      | 50 Mbps or greater                                     |
-| XDCam         | _(TBD — confirm codec)_                                                                  | .mxf      | 50 Mbps or greater                                     |
+| XDCam         |                                                                                          | .mxf      | 50 Mbps or greater                                     |
 | MPEG-2        | MPEG-2                                                                                   | .ts, .mpg | HD = 15 Mbps or greater<br />SD = 3.75 Mbps or greater |
 | MPEG-4        | H.264                                                                                    | .mp4      | 5 Mbps or greater                                      |
 

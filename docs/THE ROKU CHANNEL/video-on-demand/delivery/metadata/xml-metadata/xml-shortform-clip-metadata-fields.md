@@ -21,9 +21,9 @@ Defines the package version type
 
 Name of content owner/studio/network
 
-| XML XPath           | Accepted Values        | Required |
-| ------------------- | ---------------------- | -------- |
-| `/package/provider` | Example:Roku Originals | Required |
+| XML XPath           | Accepted Values | Required |
+| ------------------- | --------------- | -------- |
+| `/package/provider` | Roku Originals  | Required |
 
 ```xml
 <provider>Roku Originals</provider>
@@ -244,7 +244,7 @@ Total run time of content in whole minutes
 | `/package/video/runtime` | Integers only   | Required |
 
 ```xml
-<runtime>120</runtime>
+<runtime>3</runtime>
 ```
 
 ## genre
@@ -615,7 +615,7 @@ Begins the asset block that provides the parent information of the package. pare
 <parentInfo>
 ```
 
-## contentType
+## parent contentType
 
 Content Type of the parent the clip is derived from or describes
 
@@ -629,7 +629,7 @@ Content Type of the parent the clip is derived from or describes
 </parentInfo>
 ```
 
-## title
+## parent title
 
 Title of the parent program if the parent is a movie or episode
 
@@ -643,7 +643,7 @@ Title of the parent program if the parent is a movie or episode
 </parentInfo>
 ```
 
-## runtime
+## parent runtime
 
 Runtime of the parent program if the parent is a movie or episode
 
@@ -657,7 +657,7 @@ Runtime of the parent program if the parent is a movie or episode
 </parentInfo>
 ```
 
-## releaseDate
+## parent releaseDate
 
 Release date of the parent movie, episode, or series
 
@@ -671,7 +671,7 @@ Release date of the parent movie, episode, or series
 </parentInfo>
 ```
 
-## tmsId
+## parent tmsId
 
 TMS ID of the parent movie, episode, or series
 
@@ -685,7 +685,7 @@ TMS ID of the parent movie, episode, or series
 </parentInfo>
 ```
 
-## seriesTitle
+## parent seriesTitle
 
 Series Title of the parent program if the parent is an episode
 
@@ -699,7 +699,7 @@ Series Title of the parent program if the parent is an episode
 </parentInfo>
 ```
 
-## seasonNumber
+## parent seasonNumber
 
 Season number of the parent program if the parent is an episode
 
@@ -713,7 +713,7 @@ Season number of the parent program if the parent is an episode
 </parentInfo>
 ```
 
-## episodeNumber
+## parent episodeNumber
 
 Episode number of the parent program if the parent is an episode
 

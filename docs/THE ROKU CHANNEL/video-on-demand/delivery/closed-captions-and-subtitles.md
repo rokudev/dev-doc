@@ -11,7 +11,7 @@ Roku supports three distinct text-track types: **Closed Captions/SDH**, **Full S
 
 **Critical constraint:** the Roku player displays **only one text track at a time**. This has two direct consequences that shape the rest of this document:
 
-- Any CC/SDH or Full Subtitle track **must** contain a complete transcription/translation of all narratively important dialogue and on-screen text — a viewer will never see two tracks layered together.
+- Any CC/SDH or Full Subtitle track **must** contain a complete transcription/translation of all narratively important dialogue and on-screen text. A viewer will never see two tracks layered together.
 - Forced Narrative content **must also be duplicated inside** any CC/SDH or Full Subtitle track, because enabling one of those tracks will suppress the Forced Narrative track entirely.
 
 ***

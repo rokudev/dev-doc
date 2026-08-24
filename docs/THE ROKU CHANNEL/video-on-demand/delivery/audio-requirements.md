@@ -42,7 +42,7 @@ _Files must have industry standard audio configurations with all channels clearl
 | Channel 1  | Stereo Left (SL)  |
 | Channel 2  | Stereo Right (SR) |
 
-### Sidecar audio deliverables
+## Sidecar audio deliverables
 
 Content delivered with an audio language that is not primary to the territory of distribution must be delivered with an audio dub and/or subtitle file translating the content into that territory’s primary language. Localized audio tracks may be multiplexed in with the video file deliverable or delivered in a single interleaved sidecar audio file. All localized audio tracks, whether multiplexed in the video or delivered as an interleaved sidecar file, must be delivered as a full audio mix. Roku does not support dialogue-only dub tracks.
 
@@ -60,7 +60,7 @@ Below are the supported sidecar audio formats. Deliver sidecar audio with highes
 | MPEG-1 Layer 3  | MP3                        | .mp3      |
 | OGA             | FLAC<br />Opus<br />Vorbis | .ogg      |
 
-#### Descriptive audio
+### Descriptive audio
 
 Descriptive audio is an alternative audio track for the visually impaired. The official FCC Audio Description documentation can be found at the below link:
 
@@ -68,7 +68,7 @@ Descriptive audio is an alternative audio track for the visually impaired. The o
 
 Roku strongly prefers to receive descriptive audio tracks wherever available. Descriptive audio deliveries will follow the deliverables outlined in the [Sidecar audio deliverables](#sidecar-audio-deliverables) section above
 
-#### Audio channel layout hints
+### Audio channel layout hints
 
 In the event video files cannot be created to include proper audio channel labels, an audio layout hint must be provided in the metadata for the video files that are delivered. The available hints are defined below.
 

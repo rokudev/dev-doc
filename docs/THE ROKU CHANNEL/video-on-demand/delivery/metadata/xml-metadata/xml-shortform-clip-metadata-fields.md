@@ -5,21 +5,33 @@ hidden: true
 metadata:
   robots: index
 ---
-## package
+## Overview
 
-Defines the package version type
+This page is the field-by-field XML reference for the **Clip** content type — short-form, stand-alone or ancillary titles (see [Content Type Definitions](#content-type-definitions)). For the schema download and annotated sample, see the [Roku XML Metadata Overview](#roku-xml-metadata-overview).
+
+Clips support two optional feature sets not present in Film/TV: `subType`**/**`parentInfo` (identifying a clip as ancillary to a parent program) and **sports metadata** (`sportType`, `sportLeague`, `teams`).
+
+Fields are grouped into: **Package Info**, **Content Descriptors**, **Cast & Crew**, **Localizations**, **Play Options / Availability**, **Assets**, **Parent Info**, and **Sports Metadata**.
+
+***
+
+## Package Info
+
+### package
+
+Defines the package version type.
 
 | XML XPath           | Accepted Values | Required |
 | ------------------- | --------------- | -------- |
-| `/package/@version` | clip1.0         | Required |
+| `/package/@version` | `clip1.0`       | Required |
 
 ```xml
 <package version="clip1.0">
 ```
 
-## provider
+### provider
 
-Name of content owner/studio/network
+Name of the content owner/studio/network.
 
 | XML XPath           | Accepted Values | Required |
 | ------------------- | --------------- | -------- |
@@ -29,9 +41,9 @@ Name of content owner/studio/network
 <provider>Roku Originals</provider>
 ```
 
-## language
+### language
 
-Primary language of the package metadata. At a minimum, the value must conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
+Primary language of the package metadata. At minimum, must conform to a [supported language code](#language-codes). Best practice: include a region code (e.g., `es-MX` vs. `es-ES`).
 
 | XML XPath           | Accepted Values                        | Required |
 | ------------------- | -------------------------------------- | -------- |
@@ -41,75 +53,45 @@ Primary language of the package metadata. At a minimum, the value must conform t
 <language>en</language>
 ```
 
-## type
+### type
 
-Defines the content type of the package
+Defines the content type of the package.
 
 | XML XPath             | Accepted Values | Required |
 | --------------------- | --------------- | -------- |
-| `/package/video/type` | clip            | Required |
+| `/package/video/type` | `clip`          | Required |
 
 ```xml
 <type>clip</type>
 ```
 
-## subType
+### subType
 
-Defines the content subType of the package. Roku does not currently support parent/child connections natively. Ancillary or related content can be delivered and identified using one of the below subTypes. _There is no link between the parent and child asset_
+Defines the content sub-type of the package. Roku does **not** currently support native parent/child connections — ancillary or related content can be identified using one of the sub-types below, but **there is no system-level link created between the parent and child asset**. (See [Parent Info](#parent-info) below for how descriptive, non-linking context about a parent program can still be provided.)
 
-<Table>
-  <thead>
-    <tr>
-      <th>
-        XML XPath
-      </th>
-
-      <th>
-        Accepted Values
-      </th>
-
-      <th>
-        Required
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td>
-        `/package/video/subType`
-      </td>
-
-      <td>
-        - trailer<br />- highlight<br />- making_of<br />- behind_scenes<br />- interview<br />- related<br />- recap<br />- extra
-      </td>
-
-      <td>
-        Optional
-      </td>
-    </tr>
-  </tbody>
-</Table>
+| XML XPath                | Accepted Values                                                                                | Required |
+| ------------------------ | ---------------------------------------------------------------------------------------------- | -------- |
+| `/package/video/subType` | `trailer`, `highlight`, `making_of`, `behind_scenes`, `interview`, `related`, `recap`, `extra` | Optional |
 
 ```xml
 <subType>trailer</subType>
 ```
 
-## asset_id
+### asset_id
 
-Immutable, unique identifier for a shortForm clip. IDs are to be generated and supplied by the Partner for content that is delivered to Roku. The ID in the ingest metadata should match the ID provided in the avail document. This will aid in tracking the content throughout Roku’s pipeline from Avails submission through publication on Roku Channel. 50 character limit
+Immutable, unique identifier for a shortForm clip. Generated/supplied by the partner; should match the Avails document ID, to aid tracking across Roku's pipeline. **50-character limit.**
 
-| XML XPath                 | Accepted Values                                                               | Required |
-| ------------------------- | ----------------------------------------------------------------------------- | -------- |
-| `/package/video/asset_id` | alphanumeric characters, hyphens, and underscores only. 50 characters maximum | Required |
+| XML XPath                 | Accepted Values                                                                | Required |
+| ------------------------- | ------------------------------------------------------------------------------ | -------- |
+| `/package/video/asset_id` | Alphanumeric characters, hyphens, and underscores only. 50 characters maximum. | Required |
 
 ```xml
 <asset_id>clipAssetIdHere</asset_id>
 ```
 
-## eidr
+### eidr
 
-EIDR ID if one exists
+EIDR ID, if one exists.
 
 | XML XPath             | Accepted Values   | Required |
 | --------------------- | ----------------- | -------- |
@@ -119,9 +101,9 @@ EIDR ID if one exists
 <eidr></eidr>
 ```
 
-## tmsId
+### tmsId
 
-Gracenote ID if one exists
+Gracenote ID, if one exists.
 
 | XML XPath              | Accepted Values  | Required |
 | ---------------------- | ---------------- | -------- |
@@ -131,9 +113,13 @@ Gracenote ID if one exists
 <tmsId></tmsId>
 ```
 
-## title
+***
 
-Title of shortForm clip. Include only the name of the content as it should appear on platform. Do not include non-title parentheticals such as indicator of original/remake, year of release, season, or video format, for example: (Classic), (1987), (Season 1), or (HD)
+## Content Descriptors
+
+### title
+
+Title of the shortForm clip. Include **only** the name as it should appear on platform — no non-title parentheticals (e.g., `(Classic)`, `(1987)`, `(Season 1)`, `(HD)`).
 
 | XML XPath              | Example    | Required |
 | ---------------------- | ---------- | -------- |
@@ -143,9 +129,9 @@ Title of shortForm clip. Include only the name of the content as it should appea
 <title><![CDATA[Clip Title. Required.]]></title>
 ```
 
-## short_synopsis
+### short_synopsis
 
-A short synopsis of the content. CDATA section supported. 250-character limit.
+A short synopsis of the content. CDATA supported. **250-character limit.**
 
 | XML XPath                       | Accepted Values        | Required |
 | ------------------------------- | ---------------------- | -------- |
@@ -155,9 +141,9 @@ A short synopsis of the content. CDATA section supported. 250-character limit.
 <short_synopsis><![CDATA[Short summary of clip. 250 characters maximum. Required]]></short_synopsis>
 ```
 
-## long_synopsis
+### long_synopsis
 
-A long synopsis of the content. CDATA section supported. 500-character limit.
+A long synopsis of the content. CDATA supported. **500-character limit.**
 
 | XML XPath                      | Accepted Values        | Required |
 | ------------------------------ | ---------------------- | -------- |
@@ -167,77 +153,78 @@ A long synopsis of the content. CDATA section supported. 500-character limit.
 <long_synopsis><![CDATA[Long summary of clip. 500 characters maximum. Optional.]]></long_synopsis>
 ```
 
-## original_spoken_language
+### original_spoken_language
 
-Defines the original production language of the title being delivered. At a minimum, the value must conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
+Original production language of the title. At minimum, must conform to a [supported language code](#language-codes) (region code recommended).
 
-| XML XPath                                 | Accepted Values                                                                                               | Required |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
-| `/package/video/original_spoken_language` | Valid [language code](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
+| XML XPath                                 | Accepted Values                                                 | Required |
+| ----------------------------------------- | --------------------------------------------------------------- | -------- |
+| `/package/video/original_spoken_language` | Valid [language code](#language-codes); may include region code | Required |
 
 ```xml
 <original_spoken_language>en</original_spoken_language>
 ```
 
-## country_of_origin
+### country_of_origin
 
-Defines the primary country where the film was produced and where the main creators, crew, and producers are established. Value must conform to one of the supported country codes as defined in the [ISO 3166-1 alpha 2](https://www.iso.org/iso-3166-country-codes.html) list of 2-character country codes.
+The primary country where the clip was produced, and where the main creators, crew, and producers are established. Must conform to a supported [ISO 3166-1 alpha-2](https://www.iso.org/iso-3166-country-codes.html) code.
 
 | XML XPath                          | Accepted Values                                                                                          | Required  |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------- | --------- |
-| `/package/video/country_of_origin` | Valid 2-character country code per [ISO 3166-1 alpha 2](https://www.iso.org/iso-3166-country-codes.html) | Preferred |
+| `/package/video/country_of_origin` | Valid 2-character country code per [ISO 3166-1 alpha-2](https://www.iso.org/iso-3166-country-codes.html) | Preferred |
 
 ```xml
 <country_of_origin>US</country_of_origin>
 ```
 
-## closedCaptions
+### closedCaptions
 
-Indicates whether the title delivered contains closed captions. Accepted values are Y or N. This field is required for all content intended for Roku Channel in the US
+Indicates whether the delivered title contains closed captions. **Required for all content intended for Roku Channel in the US.**
 
-| XML XPath                       | Accepted Values | Required                       |
-| ------------------------------- | --------------- | ------------------------------ |
-| `/package/video/closedCaptions` | Y or N          | Required for content in the US |
+| XML XPath                       | Accepted Values | Required                |
+| ------------------------------- | --------------- | ----------------------- |
+| `/package/video/closedCaptions` | `Y` or `N`      | Required for US content |
 
 ```xml
 <closedCaptions>Y</closedCaptions>
 ```
 
-## closedCaptionsExemption
+### closedCaptionsExemption
 
-FCC exemption code for closed caption requirement. This node is required if the `closedCaptions` value = “N”
+FCC exemption code for the closed caption requirement. **Required if&#x20;**`closedCaptions`**&#x20;=&#x20;**`N`**.**
 
-Allowable value and their definitions:
-1 - The content has never aired on television in the United States.
-2 - The content has only aired on television in the United States without captions.
-3 - The content has not aired on television in the United States with captions since September 30, 2012.
-4 - The content does not consist of full-length video programming.
-5 - The content does not fall within a category of online programming that requires captions under FCC regulations (49 C.F.R. § 79.4(b)).
-6 - The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.
+| Code | Definition                                                                                                                            |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | The content has never aired on television in the United States.                                                                       |
+| 2    | The content has only aired on television in the United States without captions.                                                       |
+| 3    | The content has not aired on television in the United States with captions since September 30, 2012.                                  |
+| 4    | The content does not consist of full-length video programming.                                                                        |
+| 5    | The content does not fall within a category of online programming that requires captions under FCC regulations (47 C.F.R. § 79.4(b)). |
+| 6    | The FCC and/or U.S. Congress has granted an exemption from caption requirements for this content.                                     |
 
-| XML XPath                                | Accepted Values  | Required                       |
-| ---------------------------------------- | ---------------- | ------------------------------ |
-| `/package/video/closedCaptionsExemption` | 1, 2, 3, 4, 5, 6 | Required if closedCaptions = N |
+| XML XPath                                | Accepted Values              | Required                           |
+| ---------------------------------------- | ---------------------------- | ---------------------------------- |
+| `/package/video/closedCaptionsExemption` | `1`, `2`, `3`, `4`, `5`, `6` | Required if `closedCaptions` = `N` |
 
 ```xml
 <closedCaptionsExemption>1</closedCaptionsExemption>
 ```
 
-## release_date
+### release_date
 
-Original date content was first made available in any presentation. Must include accurate year of release at a minimum
+Original date the content was first made available in any presentation. Must include an accurate **year of release** at minimum.
 
-| XML XPath                     | Accepted Values                         | Required |
-| ----------------------------- | --------------------------------------- | -------- |
-| `/package/video/release_date` | Conforms to ISO 8601 format: YYYY-MM-DD | Required |
+| XML XPath                     | Accepted Values               | Required |
+| ----------------------------- | ----------------------------- | -------- |
+| `/package/video/release_date` | ISO 8601 format: `YYYY-MM-DD` | Required |
 
 ```xml
 <release_date>YYYY-MM-DD</release_date>
 ```
 
-## runtime
+### runtime
 
-Total run time of content in whole minutes
+Total runtime of the content, in **whole minutes**.
 
 | XML XPath                | Accepted Values | Required |
 | ------------------------ | --------------- | -------- |
@@ -247,13 +234,13 @@ Total run time of content in whole minutes
 <runtime>3</runtime>
 ```
 
-## genre
+### genre
 
-Genre classification of the content. Roku requires each shortForm clip to be delivered with at least one supported genre. Please see [enumerated list](#genres) of genres that Roku supports.
+Genre classification of the content. Each shortForm clip **must** be delivered with **at least one** supported genre. See the [enumerated genre list](#genres).
 
-| XML XPath                     | Accepted Values                                                                                  | Required |
-| ----------------------------- | ------------------------------------------------------------------------------------------------ | -------- |
-| `/package/video/genres/genre` | See [enumerated list](#genres) below. No more than 10 genres may be submitted for a single title | Required |
+| XML XPath                     | Accepted Values                                                   | Required |
+| ----------------------------- | ----------------------------------------------------------------- | -------- |
+| `/package/video/genres/genre` | See [enumerated list](#genres). No more than 10 genres per title. | Required |
 
 ```xml
 <genres>
@@ -262,13 +249,13 @@ Genre classification of the content. Roku requires each shortForm clip to be del
 </genres>
 ```
 
-## rating
+### rating
 
-Parental or content advisory rating for the shortForm clip by a rating source. A valid movie or TV rating from the rating authority (ratingSystem) of the Territory the content will be available in shall be provided for each shortForm clip. If the title has not been rated by that Territory’s official rating authority, please include a valid rating from the USA_PR ratingSystem. There is no official body that assigns ratings for the USA_PR ratingSystem. Please use the guidelines listed at [http://tvguidelines.org/](http://tvguidelines.org/) to assign the appropriate rating.
+Parental/content advisory rating from a rating source. A valid movie or TV rating from the rating authority (`ratingSystem`) of the territory where the content will be available **must** be provided for each shortForm clip. If not rated by that territory's official authority, use a valid `USA_PR` rating instead, per [tvguidelines.org](http://tvguidelines.org/) guidelines (there is no official ratings body for `USA_PR`).
 
-| XML XPath                                                           | Accepted Values                                                                                                                                        | Required |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| `/package/video/ratings/rating` `must include the system attribute` | See [below](#rating-values-by-rating-system-and-country) for allowable ratings by rating system. <br />Multiple rating/rating system pairs are allowed | Required |
+| XML XPath                                                             | Accepted Values                                                                                                                      | Required |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------- |
+| `/package/video/ratings/rating` (must include the `system` attribute) | See [rating values by system and country](#rating-values-by-rating-system-and-country). Multiple rating/rating-system pairs allowed. | Required |
 
 ```xml
 <ratings>
@@ -278,13 +265,13 @@ Parental or content advisory rating for the shortForm clip by a rating source. A
 </ratings>
 ```
 
-## tag
+### tag
 
-Tag is a freeform field that can be used to further categorize content aside from the limited number of supported Genre values. Roku Channel editorial team and recommendations engine will utilize the provided Tags to help surface content on Roku Channel Platform UI. The more tags that are included to a clip, episode, or movie, the more ways the content can be curated/surfaced to the end user. There is no limit to the number of tags that can be delivered with a title and there is no defined set of Tags. Tags are case sensitive. For example, a Tags “Rom-Com” and “rom-com” would be considered two unique tags. Please ensure Tags are all delivered consistently.
+Freeform categorization field beyond Genre. Used by Roku's editorial team and recommendations engine to surface content. No limit on count; no defined tag set. **Case-sensitive** — deliver consistently.
 
-| XML XPath                 | Accepted Values                          | Required                         |
-| ------------------------- | ---------------------------------------- | -------------------------------- |
-| `/package/video/tags/tag` | any string under 50 characters in length | Optional, but HIGHLY recommended |
+| XML XPath                 | Accepted Values                | Required                             |
+| ------------------------- | ------------------------------ | ------------------------------------ |
+| `/package/video/tags/tag` | Any string under 50 characters | Optional, but **highly recommended** |
 
 ```xml
 <tags>
@@ -294,13 +281,17 @@ Tag is a freeform field that can be used to further categorize content aside fro
 </tags>
 ```
 
-## cast display_name
+***
 
-Name of cast member. CDATA section supported.
+## Cast & Crew
 
-| XML XPath                                      | Accepted Values         | Required |
-| ---------------------------------------------- | ----------------------- | -------- |
-| `/package/video/cast/cast_member/display_name` | Firstname<br />Lastname | Optional |
+### cast display_name
+
+Name of a cast member. CDATA supported.
+
+| XML XPath                                      | Accepted Values    | Required |
+| ---------------------------------------------- | ------------------ | -------- |
+| `/package/video/cast/cast_member/display_name` | Firstname Lastname | Optional |
 
 ```xml
 <cast>
@@ -311,61 +302,65 @@ Name of cast member. CDATA section supported.
 </cast>
 ```
 
-## crew display_name
+### crew display_name
 
-Name of crew member. CDATA section supported.
+Name of a crew member. CDATA supported.
 
-_NOTE: Director is the only crew_member supported for Excel ingest at this time_
+> **Cross-format note:** Director is currently the **only** `crew_member` role supported for **Excel** ingest (this XML reference supports the full crew role list; the limitation is specific to the Excel delivery format).
 
-| XML XPath                                      | Accepted Values         | Required                          |
-| ---------------------------------------------- | ----------------------- | --------------------------------- |
-| `/package/video/crew/crew_member/display_name` | Firstname<br />Lastname | Required if providing crew_member |
+| XML XPath                                      | Accepted Values    | Required                              |
+| ---------------------------------------------- | ------------------ | ------------------------------------- |
+| `/package/video/crew/crew_member/display_name` | Firstname Lastname | Required if providing a `crew_member` |
 
 ```xml
 <display_name><![CDATA[George Lucas]]></display_name>
 ```
 
-## role
+### role
 
-Role of the crew member listed in the display_name. Roku requires each crew member included in the metadata to also include that crew member’s role. Please see the [enumerated list](#crew-roles) of crew roles that Roku supports. Roles are case sensitive.
+Role of the crew member named in `display_name`. Every crew member **must** also include their role. See the [enumerated crew roles list](#crew-roles). **Roles are case-sensitive.**
 
-_NOTE: Director is the only crew_member supported for Excel ingest at this time_
+> **Cross-format note:** as above, Director is currently the only `crew_member` role supported for Excel ingest.
 
-| XML XPath                                    | Accepted Values                          | Required                          |
-| -------------------------------------------- | ---------------------------------------- | --------------------------------- |
-| `/package/video/crew/crew_member/roles/role` | See [enumerated list](#crew-roles) below | Required if providing crew_member |
+| XML XPath                                    | Accepted Values                    | Required                              |
+| -------------------------------------------- | ---------------------------------- | ------------------------------------- |
+| `/package/video/crew/crew_member/roles/role` | See [enumerated list](#crew-roles) | Required if providing a `crew_member` |
 
 ```xml
 <role>Director</role>
 ```
 
-## localizations
+***
 
-Begins the asset block that provides localized metadata for multi-language packages. localizations define the language and provide the translated title, short_synopsis, and long_synopsis of the package.
+## Localizations
+
+### localizations
+
+Begins the block providing localized metadata for multi-language packages — language, translated title, `short_synopsis`, and `long_synopsis`.
 
 | XML XPath                      | Accepted Values | Required |
 | ------------------------------ | --------------- | -------- |
-| `/package/video/localizations` |                 | Required |
+| `/package/video/localizations` | —               | Required |
 
 ```xml
 <localizations>
 ```
 
-## localization name attribute
+### localization name attribute
 
-Defines the language of the localized title, short_synopsis, and long_synopsis provided within the localization block. The localization tag's attribute must be name and the value provided in the name must at a minimum conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
+Defines the language of the localized fields within a `localization` block. Attribute name **must** be `name`; value must, at minimum, conform to a [supported language code](#language-codes) (region code recommended).
 
-| XML XPath                                   | Accepted Values                                                                                               | Required |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | -------- |
-| `/package/video/localizations/localization` | Valid [language code](#language-codes) (en, es, etc.)<br />May also include region codes (en-US, es-MX, etc.) | Required |
+| XML XPath                                   | Accepted Values                                                 | Required |
+| ------------------------------------------- | --------------------------------------------------------------- | -------- |
+| `/package/video/localizations/localization` | Valid [language code](#language-codes); may include region code | Required |
 
 ```xml
 <localization name="es">
 ```
 
-## localized title
+### localized title
 
-Localized title of shortForm clip in the language specified in the localization tag’s name attribute. Include only the name of the content as it should appear on platform. Do not include non-title parentheticals such as indicator of original/remake, year of release, season, or video format, for example: (Classic), (1987), (Season 1), or (HD)
+Localized title of the shortForm clip. Same non-title-parenthetical restrictions as [title](#title) above.
 
 | XML XPath                                         | Example              | Required |
 | ------------------------------------------------- | -------------------- | -------- |
@@ -375,9 +370,9 @@ Localized title of shortForm clip in the language specified in the localization 
 <title><![CDATA[Localized Clip Title. Required.]]></title>
 ```
 
-## localized short_synopsis
+### localized short_synopsis
 
-A localized short synopsis of the content in the language specified in the localization tag’s name attribute. CDATA section supported. 250-character limit.
+CDATA supported. **250-character limit.**
 
 | XML XPath                                                  | Accepted Values | Required |
 | ---------------------------------------------------------- | --------------- | -------- |
@@ -387,9 +382,9 @@ A localized short synopsis of the content in the language specified in the local
 <short_synopsis><![CDATA[Localized Short summary of clip. 250 characters maximum. Required]]></short_synopsis>
 ```
 
-## localized long_synopsis
+### localized long_synopsis
 
-A localized long synopsis of the content in the language specified in the localization tag’s name attribute. CDATA section supported. 500-character limit.
+CDATA supported. **500-character limit.**
 
 | XML XPath                                                 | Accepted Values | Required |
 | --------------------------------------------------------- | --------------- | -------- |
@@ -399,25 +394,29 @@ A localized long synopsis of the content in the language specified in the locali
 <long_synopsis><![CDATA[Localized Long summary of clip. 500 characters maximum. Optional.]]></long_synopsis>
 ```
 
-## playOptions
+***
 
-Begins the asset block that provides the availability information of the package. playOptions consist of the country/territory availability, monetization type, availability start, and availability end dates of the title in the package.
+## Play Options / Availability
+
+### playOptions
+
+Begins the block providing availability information: country/territory availability, monetization type, and availability start/end dates.
 
 | XML XPath                    | Accepted Values | Required |
 | ---------------------------- | --------------- | -------- |
-| `/package/video/playOptions` |                 | Required |
+| `/package/video/playOptions` | —               | Required |
 
 ```xml
 <playOptions>
 ```
 
-## country
+### country
 
-Country code of the territory in which the content is available. Multiple country nodes can be provided assuming vodType, licensePeriodStart, and licensePeriodEnd dates are identical across countries.
+Country code of the territory where the content is available. Multiple `country` nodes allowed if `vodType`, `licensePeriodStart`, and `licensePeriodEnd` are identical across them.
 
-| XML XPath                                       | Accepted Values            | Required  |
-| ----------------------------------------------- | -------------------------- | --------- |
-| `/package/video/playOptions/playOption/country` | US<br />CA<br />GB<br />MX | Preferred |
+| XML XPath                                       | Accepted Values        | Required  |
+| ----------------------------------------------- | ---------------------- | --------- |
+| `/package/video/playOptions/playOption/country` | `US`, `CA`, `GB`, `MX` | Preferred |
 
 ```xml
 <playOption>
@@ -426,13 +425,13 @@ Country code of the territory in which the content is available. Multiple countr
 </playOption>
 ```
 
-## vodType
+### vodType
 
-Monetization Type of the shortForm clip. Multiple vodType nodes can be provided assuming country, licensePeriodStart, and licensePeriodEnd dates are identical across vodType.
+Monetization type of the shortForm clip. Multiple `vodType` nodes allowed if `country`, `licensePeriodStart`, and `licensePeriodEnd` are identical across them.
 
 | XML XPath                                       | Accepted Values | Required  |
 | ----------------------------------------------- | --------------- | --------- |
-| `/package/video/playOptions/playOption/vodType` | AVOD<br />SVOD  | Preferred |
+| `/package/video/playOptions/playOption/vodType` | `AVOD`, `SVOD`  | Preferred |
 
 ```xml
 <playOption>
@@ -441,13 +440,13 @@ Monetization Type of the shortForm clip. Multiple vodType nodes can be provided 
 </playOption>
 ```
 
-## licensePeriodStart
+### licensePeriodStart
 
-Start date of content availability to users on Roku Channel. One `licensePeriodStart` date is allowed per playOption. licensePeriodStart dates must be chronologically before licensePeriodEnd dates. licensePeriodStart and licensePeriodEnd must not be identical
+Start date of content availability. **One** per `playOption`. Must be chronologically **before** `licensePeriodEnd`; the two **must not** be identical.
 
-| XML XPath                                                  | Accepted Values                                  | Required |
-| ---------------------------------------------------------- | ------------------------------------------------ | -------- |
-| `/package/video/playOptions/playOption/licensePeriodStart` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
+| XML XPath                                                  | Accepted Values                        | Required |
+| ---------------------------------------------------------- | -------------------------------------- | -------- |
+| `/package/video/playOptions/playOption/licensePeriodStart` | ISO 8601 format: `YYYY-MM-DDTHH:MM:SS` | Optional |
 
 ```xml
 <playOption>
@@ -455,13 +454,13 @@ Start date of content availability to users on Roku Channel. One `licensePeriodS
 </playOption>
 ```
 
-## licensePeriodEnd
+### licensePeriodEnd
 
-End date of content availability to users on Roku Channel. One `licensePeriodEnd` date allowed per playOption. licensePeriodEnd dates must be chronologically after licensePeriodStart dates. licensePeriodStart and licensePeriodEnd must not be identical
+End date of content availability. **One** per `playOption`. Must be chronologically **after** `licensePeriodStart`; the two **must not** be identical.
 
-| XML XPath                                                | Accepted Values                                  | Required |
-| -------------------------------------------------------- | ------------------------------------------------ | -------- |
-| `/package/video/playOptions/playOption/licensePeriodEnd` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
+| XML XPath                                                | Accepted Values                        | Required |
+| -------------------------------------------------------- | -------------------------------------- | -------- |
+| `/package/video/playOptions/playOption/licensePeriodEnd` | ISO 8601 format: `YYYY-MM-DDTHH:MM:SS` | Optional |
 
 ```xml
 <playOption>
@@ -469,107 +468,111 @@ End date of content availability to users on Roku Channel. One `licensePeriodEnd
 </playOption>
 ```
 
-## assets
+***
 
-Begins the asset block that references the files delivered in the package
+## Assets
 
-| XML XPath               | Accepted Values    | Required |
-| ----------------------- | ------------------ | -------- |
-| `/package/video/assets` | media_type="video" | Required |
+The `assets` block references every file delivered as part of the package (video, captions, audio, subtitles, artwork), each described by an `asset`/`data_file` pair.
+
+### assets
+
+Begins the asset block.
+
+| XML XPath               | Accepted Values      | Required |
+| ----------------------- | -------------------- | -------- |
+| `/package/video/assets` | `media_type="video"` | Required |
 
 ```xml
 <assets media_type="video">
 ```
 
-## data_file
+### Full Source (Video)
 
-## full source
+Describes the source video file. `asset type="full"`; `data_file role="source"`. `<locale>` and `<file_name>` also required.
 
-The block that describes the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="source". The <locale> and \<file_name> nodes are also required
-
-| XML XPath                               | Accepted Values                                                           | Required |
-| --------------------------------------- | ------------------------------------------------------------------------- | -------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="source"` | Required |
+| XML XPath                               | Accepted Values                                | Required |
+| --------------------------------------- | ---------------------------------------------- | -------- |
+| `/package/video/assets/asset/data_file` | `asset type="full"`; `data_file role="source"` | Required |
 
 ```xml
 <asset type="full">
   <data_file role="source">
 ```
 
-## full captions
+### Full Captions
 
-The block that describes the closed captions for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="captions". The <locale> and \<file_name> nodes are also required
+Describes closed captions for the source video file. `asset type="full"`; `data_file role="captions"`. `<locale>` and `<file_name>` also required.
 
-| XML XPath                               | Accepted Values                                                             | Required       |
-| --------------------------------------- | --------------------------------------------------------------------------- | -------------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="captions"` | Required in US |
+| XML XPath                               | Accepted Values                                  | Required       |
+| --------------------------------------- | ------------------------------------------------ | -------------- |
+| `/package/video/assets/asset/data_file` | `asset type="full"`; `data_file role="captions"` | Required in US |
 
 ```xml
 <asset type="full">
   <data_file role="captions">
 ```
 
-## full audio
+### Full Audio
 
-The block that describes sidecar audio for the source video file. The audio file will either be a full audio dub for language translation purposes or a descriptive audio track for the accessibility purposes. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="audio" for translation dubs or role=”audio description” for accessibility purposes. The <locale> and \<file_name> nodes are also required
+Describes sidecar audio for the source video file — either a full audio dub for language translation, or a descriptive audio track for accessibility. `asset type="full"`; `data_file role="audio"` (translation dub) or `role="audio description"` (accessibility). `<locale>` and `<file_name>` also required.
 
-| XML XPath                               | Accepted Values                                                                                                    | Required                                                |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="audio"`<br />`data_file role="audio description"` | Optional<br />\*audio description is strongly preferred |
+**Sidecar audio may be required** when localized assets are needed (source audio not native to the distribution territory) or to comply with FCC regulations.
 
-**sidecar audio may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution or when complying with FCC regulations**
+| XML XPath                               | Accepted Values                                                             | Required                                          |
+| --------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------- |
+| `/package/video/assets/asset/data_file` | `asset type="full"`; `data_file role="audio"` or `role="audio description"` | Optional\* — audio description strongly preferred |
 
 ```xml
 <asset type="full">
   <data_file role="audio">
 ```
 
-## full subtitles
+### Full Subtitles
 
-The block that describes sidecar subtitles for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="subtitles". The <locale> and \<file_name> nodes are also required
+Describes sidecar subtitles for the source video file. `asset type="full"`; `data_file role="subtitles"`. `<locale>` and `<file_name>` also required.
 
-| XML XPath                               | Accepted Values                                                              | Required   |
-| --------------------------------------- | ---------------------------------------------------------------------------- | ---------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="subtitles"` | Optional\* |
+**Sidecar subtitles may be required** when localized assets are needed (source audio not native to the distribution territory).
 
-**sidecar subtitles may be required if localized assets are needed when the original audio of the source file is not native to the territory of distribution.**
+| XML XPath                               | Accepted Values                                   | Required   |
+| --------------------------------------- | ------------------------------------------------- | ---------- |
+| `/package/video/assets/asset/data_file` | `asset type="full"`; `data_file role="subtitles"` | Optional\* |
 
 ```xml
 <asset type="full">
   <data_file role="subtitles">
 ```
 
-## forced subtitles
+### Forced Subtitles
 
-The block that describes sidecar forced narrative subtitles for the source video file. The asset tag's attribute must be type="full" and the data_file tag's attribute must be role="forced subtitles". The <locale> and \<file_name> nodes are also required
+Describes sidecar forced narrative subtitles for the source video file. `asset type="full"`; `data_file role="forced subtitles"`. `<locale>` and `<file_name>` also required.
 
-| XML XPath                               | Accepted Values                                                                     | Required   |
-| --------------------------------------- | ----------------------------------------------------------------------------------- | ---------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="full"`<br />`data_file role="forced subtitles"` | Optional\* |
+| XML XPath                               | Accepted Values                                          | Required   |
+| --------------------------------------- | -------------------------------------------------------- | ---------- |
+| `/package/video/assets/asset/data_file` | `asset type="full"`; `data_file role="forced subtitles"` | Optional\* |
 
 ```xml
 <asset type="full">
   <data_file role="forced subtitles">
 ```
 
-## artwork
+### Artwork
 
-The block that describes the artwork file(s). The asset tag's attribute must be type="artwork". The <locale> and \<file_name> nodes are also required. Please see [Artwork](#artwork) for full image delivery specifications.
+Describes the artwork file(s). `asset type="artwork"`. `<locale>` and `<file_name>` also required. See [Artwork](#artwork) for full image delivery specifications.
 
-| XML XPath                               | Accepted Values                               | Required |
-| --------------------------------------- | --------------------------------------------- | -------- |
-| `/package/video/assets/asset/data_file` | Attribute values:<br />`asset type="artwork"` | Required |
+> **Note:** unlike Film and TV, Clip artwork does not break out into `background_image`/`boxcover`/`poster` variants here — this is consistent with the [Artwork Specification](#), where Clips require only a single 16:9 Key Art image type.
+
+| XML XPath                               | Accepted Values        | Required |
+| --------------------------------------- | ---------------------- | -------- |
+| `/package/video/assets/asset/data_file` | `asset type="artwork"` | Required |
 
 ```xml
 <asset type="artwork">
   <data_file>
 ```
 
-## locale
+### locale
 
-Identifies the language of the data_file. At a minimum, the value must conform to a [supported language code](#language-codes). As a best practice when providing language, please also include a region code to convey helpful information such as the distinction between Spanish spoken in Mexico (es-MX) and Spanish spoken in Spain (es-ES).
-
-Applicable to data_file roles: source, captions, audio, and subtitles and asset type: artwork.
+Identifies the language of the `data_file`. At minimum, must conform to a [supported language code](#language-codes) (region code recommended). Applicable to `data_file` roles `source`, `captions`, `audio`, and `subtitles`, and asset type `artwork`.
 
 | XML XPath                                      | Accepted Values                            | Required |
 | ---------------------------------------------- | ------------------------------------------ | -------- |
@@ -579,49 +582,55 @@ Applicable to data_file roles: source, captions, audio, and subtitles and asset 
 <locale name="en"/>
 ```
 
-## file_name
+### file_name
 
-Filename of the asset indicated in the data_file role or type attribute. All file_name values are case-sensitive and must contain the proper file extension.
+Filename of the asset indicated by the enclosing `data_file`'s `role` or `type` attribute. All values are **case-sensitive** and **must** include the proper file extension.
 
 | XML XPath                                         | Accepted Values                                        | Required                          |
 | ------------------------------------------------- | ------------------------------------------------------ | --------------------------------- |
-| `/package/video/assets/asset/data_file/file_name` | See guidelines below for asset delivery specifications | Required for each asset delivered |
+| `/package/video/assets/asset/data_file/file_name` | See guidelines above for asset delivery specifications | Required for each asset delivered |
 
 ```xml
 <file_name>VideoFilename.mxf</file_name>
 ```
 
-## audio
+### audio
 
-[Audio Layout Descriptor](#audio-channel-layout-hints) for the video file delivered. See guidelines below
+[Audio layout descriptor](#audio-channel-layout-hints) for the delivered video file.
 
-| XML XPath                                     | Accepted Values                                                                                   | Required |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------- | -------- |
-| `/package/video/assets/asset/data_file/audio` | Allowed values:<br />stereoOnly<br />surroundOnly<br />stereoPlusSurround<br />surroundPlusStereo | Optional |
+| XML XPath                                     | Accepted Values                                                          | Required |
+| --------------------------------------------- | ------------------------------------------------------------------------ | -------- |
+| `/package/video/assets/asset/data_file/audio` | `stereoOnly`, `surroundOnly`, `stereoPlusSurround`, `surroundPlusStereo` | Optional |
 
 ```xml
 <audio>stereoOnly</audio>
 ```
 
-## parentInfo
+***
 
-Begins the asset block that provides the parent information of the package. parentInfo consists of the parent content's contentType, episode/movie title, episode/movie runtime, releaseDate, TMS ID, seriesTitle, seasonNumber, and episodeNumber. Used in combination with a valid subType
+## Parent Info
+
+`parentInfo` provides **descriptive, contextual** metadata about the program a clip is derived from or related to — used in combination with a valid [`subType`](#subtype) value above. **This is descriptive metadata only; it does not create a navigable link or on-platform relationship** between the clip and its parent (consistent with the `subType` note above that Roku does not natively support parent/child connections).
+
+### parentInfo
+
+Begins the block providing parent information for the package.
 
 | XML XPath                   | Accepted Values | Required |
 | --------------------------- | --------------- | -------- |
-| `/package/video/parentInfo` |                 | Optional |
+| `/package/video/parentInfo` | —               | Optional |
 
 ```xml
 <parentInfo>
 ```
 
-## parent contentType
+### parent contentType
 
-Content Type of the parent the clip is derived from or describes
+Content type of the parent the clip is derived from or describes.
 
-| XML XPath                               | Accepted Values                | Required |
-| --------------------------------------- | ------------------------------ | -------- |
-| `/package/video/parentInfo/contentType` | episode<br />movie<br />series | Optional |
+| XML XPath                               | Accepted Values              | Required |
+| --------------------------------------- | ---------------------------- | -------- |
+| `/package/video/parentInfo/contentType` | `episode`, `movie`, `series` | Optional |
 
 ```xml
 <parentInfo>
@@ -629,9 +638,9 @@ Content Type of the parent the clip is derived from or describes
 </parentInfo>
 ```
 
-## parent title
+### parent title
 
-Title of the parent program if the parent is a movie or episode
+Title of the parent program, if the parent is a movie or episode.
 
 | XML XPath                         | Accepted Values                 | Required |
 | --------------------------------- | ------------------------------- | -------- |
@@ -643,9 +652,9 @@ Title of the parent program if the parent is a movie or episode
 </parentInfo>
 ```
 
-## parent runtime
+### parent runtime
 
-Runtime of the parent program if the parent is a movie or episode
+Runtime of the parent program, if the parent is a movie or episode.
 
 | XML XPath                           | Accepted Values | Required |
 | ----------------------------------- | --------------- | -------- |
@@ -657,13 +666,13 @@ Runtime of the parent program if the parent is a movie or episode
 </parentInfo>
 ```
 
-## parent releaseDate
+### parent releaseDate
 
-Release date of the parent movie, episode, or series
+Release date of the parent movie, episode, or series.
 
-| XML XPath                               | Accepted Values                         | Required |
-| --------------------------------------- | --------------------------------------- | -------- |
-| `/package/video/parentInfo/releaseDate` | Conforms to ISO 8601 format: YYYY-MM-DD | Optional |
+| XML XPath                               | Accepted Values               | Required |
+| --------------------------------------- | ----------------------------- | -------- |
+| `/package/video/parentInfo/releaseDate` | ISO 8601 format: `YYYY-MM-DD` | Optional |
 
 ```xml
 <parentInfo>
@@ -671,9 +680,9 @@ Release date of the parent movie, episode, or series
 </parentInfo>
 ```
 
-## parent tmsId
+### parent tmsId
 
-TMS ID of the parent movie, episode, or series
+TMS ID of the parent movie, episode, or series.
 
 | XML XPath                         | Accepted Values | Required |
 | --------------------------------- | --------------- | -------- |
@@ -685,9 +694,9 @@ TMS ID of the parent movie, episode, or series
 </parentInfo>
 ```
 
-## parent seriesTitle
+### parent seriesTitle
 
-Series Title of the parent program if the parent is an episode
+Series title of the parent program, if the parent is an episode.
 
 | XML XPath                               | Accepted Values     | Required |
 | --------------------------------------- | ------------------- | -------- |
@@ -699,9 +708,9 @@ Series Title of the parent program if the parent is an episode
 </parentInfo>
 ```
 
-## parent seasonNumber
+### parent seasonNumber
 
-Season number of the parent program if the parent is an episode
+Season number of the parent program, if the parent is an episode.
 
 | XML XPath                                | Accepted Values        | Required |
 | ---------------------------------------- | ---------------------- | -------- |
@@ -713,9 +722,9 @@ Season number of the parent program if the parent is an episode
 </parentInfo>
 ```
 
-## parent episodeNumber
+### parent episodeNumber
 
-Episode number of the parent program if the parent is an episode
+Episode number of the parent program, if the parent is an episode.
 
 | XML XPath                                 | Accepted Values | Required |
 | ----------------------------------------- | --------------- | -------- |
@@ -727,39 +736,47 @@ Episode number of the parent program if the parent is an episode
 </parentInfo>
 ```
 
-## sportType
+***
 
-Name of the sport featured in the clip/highlight
+## Sports Metadata
 
-| XML XPath                  | Accepted Values   | Required                       |
-| -------------------------- | ----------------- | ------------------------------ |
-| `/package/video/sportType` | Name of the sport | Required for<br />sports clips |
+The following fields are **required specifically for sports clips**.
+
+> **⚠️ Gap flagged for review:** it's not stated how a clip is identified as a "sports clip" that triggers these requirements — the [`subType`](#subtype) enumerated list has no explicit `sports` value (the closest is `highlight`). **Recommend confirming** what determines sports-clip status (a specific `subType` value, a genre, or something else) so this requirement is unambiguous to partners delivering sports content.
+
+### sportType
+
+Name of the sport featured in the clip/highlight.
+
+| XML XPath                  | Accepted Values   | Required                  |
+| -------------------------- | ----------------- | ------------------------- |
+| `/package/video/sportType` | Name of the sport | Required for sports clips |
 
 ```xml
 <sportType>Baseball</sportType>
 ```
 
-## sportLeague
+### sportLeague
 
-Name of the sport league featured in the clip/highlight
+Name of the sport league featured in the clip/highlight.
 
-| XML XPath                    | Accepted Values          | Required                       |
-| ---------------------------- | ------------------------ | ------------------------------ |
-| `/package/video/sportLeague` | Name of the sport league | Required for<br />sports clips |
+| XML XPath                    | Accepted Values          | Required                  |
+| ---------------------------- | ------------------------ | ------------------------- |
+| `/package/video/sportLeague` | Name of the sport league | Required for sports clips |
 
 ```xml
 <sportLeague>MLB</sportLeague>
 ```
 
-## teams
+### teams
 
-Teams featured in the sport clip/highlight. Home and Away teams to be defined in the Location attribute
+Teams featured in the sport clip/highlight. Home and away teams are defined via the `location` attribute.
 
-_At this time Roku only supports team-based participant metadata. Individual sports will be supported at a later date_
+> **Note:** at this time, Roku only supports **team-based** participant metadata. Individual/solo sports (e.g., tennis, golf) will be supported at a later date.
 
-| XML XPath                   | Accepted Values                                                           | Required                       |
-| --------------------------- | ------------------------------------------------------------------------- | ------------------------------ |
-| `/package/video/teams/team` | Attribute values:<br />`team location="away"`<br />`team location="home"` | Required for<br />sports clips |
+| XML XPath                   | Accepted Values                                | Required                  |
+| --------------------------- | ---------------------------------------------- | ------------------------- |
+| `/package/video/teams/team` | `team location="away"`; `team location="home"` | Required for sports clips |
 
 ```xml
 <teams>

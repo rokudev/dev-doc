@@ -7,7 +7,7 @@ metadata:
 ---
 Roku supports three image types for each piece of content. Each image type will be used in a different location within Roku Channel. Roku prefers to receive all three art sizes whenever possible. Each image must be delivered in JPEG or PNG format. Please provide images in Roku's preferred image resolution to avoid delays in publishing. Images _must_ meet or exceed the minimum resolution and _must_ be delivered in the _exact_ aspect ratio defined for each image type.
 
-#### Image types
+## Image types
 
 | **Image type**         | Aspect Ratio | **Preferred resolution**         | **Minimum resolution** | **Maximum resolution** | **Format**                      | **Extension**               | **Purpose** | **Description**                                                                                                                                                                                                                                   |
 | ---------------------- | ------------ | -------------------------------- | ---------------------- | ---------------------- | ------------------------------- | --------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -18,15 +18,15 @@ Roku supports three image types for each piece of content. Each image type will 
 | **Background art**     | 16:9         | 1920x1080<br />or<br />3840x2160 | 1920x1080              | 3840x2160              | JPEG or PNG<br />RGB<br />72ppi | .jpg<br />.jpeg  <br />.png | background  | 16:9 artwork used as the background of the details page  of a series or movie. There must be no text on the Background art                                                                                                                        |
 | **Episode art**        | 16:9         | 1920x1080<br />or<br />3840x2160 | 1920x1080              | 3840x2160              | JPEG or PNG<br />RGB<br />72ppi | .jpg<br />.jpeg  <br />.png | thumbnail   | 16:9 artwork representing the episode without spoilers.  This is usually a still from the episode and must not contain any text                                                                                                                   |
 
-#### Minimum art requirements by content type
+## Minimum art requirements by content type
 
-##### Clip content type art requirements
+### Clip content type art requirements
 
 | Art          | Required/Preferred | Notes                                            |
 | ------------ | ------------------ | ------------------------------------------------ |
 | 16:9 Key Art | Required           | Only the 16:9 texted image is required for Clips |
 
-##### Movie content type art requirements
+### Movie content type art requirements
 
 | Art             | Required/Preferred | Notes                         |
 | --------------- | ------------------ | ----------------------------- |
@@ -35,9 +35,9 @@ Roku supports three image types for each piece of content. Each image type will 
 | 3:4 Box Cover   | Required           | All image types are required. |
 | 16:9 Background | Required           | All image types are required. |
 
-##### TV art requirements
+### TV art requirements
 
-###### Series content type
+#### Series content type
 
 | **Art**         | **Required/Preferred** | **Notes**                     |
 | --------------- | ---------------------- | ----------------------------- |
@@ -46,13 +46,13 @@ Roku supports three image types for each piece of content. Each image type will 
 | 4:3 Box Cover   | Required               | All image types are required. |
 | 16:9 Background | Required               | All image types are required. |
 
-###### Episode content type
+#### Episode content type
 
 | **Art**         | **Required/Preferred** | **Notes**                                                                                                                                                                                                              |
 | --------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 16:9 Background | Required               | Episodic image may be letterboxed or pillarboxed depending upon the source video. Windowboxed images will be rejected.<br />Episodic images should be unique for each episode and represent the content of the episode |
 
-#### Artwork content guidelines
+### Artwork content guidelines
 
 - Key Art (graphic with the full title of the asset visible)
 - No sexually explicit or graphically violent artwork
@@ -62,7 +62,7 @@ Roku supports three image types for each piece of content. Each image type will 
 - For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
 - Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku
 
-#### Artwork placement on platform examples
+## Artwork placement on platform examples
 
 **Movie artwork - browse experience**
 

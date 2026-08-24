@@ -6,67 +6,104 @@ hidden: true
 metadata:
   robots: index
 ---
-- Video, closed captions, and artwork files must be _completely delivered prior to the delivery of metadata_
+## Delivery Sequence
 
-- Production files MUST be delivered to the `/prod` folder. Automation is dependent on proper file delivery location. Failure to deliver files to the correct folder will result in processing delays or content not processing at all
+Video, closed caption, and artwork files **must** be **completely delivered prior to** the delivery of metadata. Metadata references these files by name, so delivering metadata first (or before the referenced files finish transferring) can cause processing failures.
 
-- Test files may be delivered to the `/testing` folder
+***
 
-- It is preferred that content not be delivered to subfolders. If subfolders are necessary, follow the below guidelines:
-  - Subfolders must **not** begin with an underscore. Roku's system will ignore sufolders beginning with an underscore
-  - Do **not** separate files into subfolders by file type
-  - All media files for a single title (episode, movie, or shortForm) must be delivered to the same directory
-  - The ingest platform assumes media files referenced in the metadata are in the same directory as the metadata file. As such, metadata must be delivered to the same directory as the media files contained within the metadata
-  - When using subfolders, if a file replacement needs to be made, the replacement file and associated metadata must be delivered to a folder named identically to the original delivery
+## Folder Structure
 
-- Delivery notifications can be sent to [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
+- Production files **MUST** be delivered to the `/prod` folder. Automation depends on proper file delivery location. Failure to deliver to the correct folder will result in processing delays, or content not processing at all.
+- Test files **may** be delivered to the `/testing` folder.
 
-## File retention
+### Subfolders
 
-The delivery location is a temporary location for our Partners to upload files for ingestion into Roku Channel content library. Automation will move files from the delivery location upon successful ingest to an archive location to be stored indefinitely. All files uploaded to the delivery location are expected to be ingested within a reasonable time frame not to exceed 30 days. Valid and complete metadata must be delivered shortly after files are delivered to ensure timely ingest. Files in the delivery location that have not ingested after 30 days are subject to deletion.
+Content **should not** be delivered into subfolders. Deliver directly to `/prod` (or `/testing`) whenever possible. **If subfolders are necessary**, follow these guidelines:
 
-_Exceptions to the file retention policy may be made to files in the&#x20;_`/testing`_&#x20;folder_
+- Subfolder names **must not** begin with an underscore. Roku's system will **ignore** any subfolder beginning with an underscore. _(Note: this is a separate rule from the file-naming underscore rule below. It applies to the folder name itself, not the files inside it.)_
+- Do **not** separate files into subfolders by file type (e.g., don't put all video in one subfolder and all artwork in another).
+- All media files for a single title (episode, movie, or short-form) **must** be delivered to the **same** directory.
+- Metadata **must** be delivered to the **same** directory as the media files it references — the ingest platform assumes referenced media files are located alongside the metadata file.
+- When replacing a file delivered via subfolder, the replacement file **and** its associated metadata **must** be delivered to a folder named **identically** to the original delivery folder.
 
-## File naming
+## Delivery Notifications
 
-Source video, closed captions, and artwork files delivered for ingest must adhere to the following guidelines:
+Delivery notifications can be sent to: [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
 
-- File names must not exceed 125 characters in length
-- File names must match the reference to the file name in the metadata supplied for the title delivered
-- File names are case-sensitive
-- File names must end with a proper file extension. File extensions are expected to be lowercase
-- File names must **not** begin with an underscore. Roku's system will ignore files beginning with an underscore
-- Whitespace and special characters `!@#$%^&*(){}|[]\;:’”?/><,` must not be included in any file name (this includes video, subtitle, closed caption, sidecar audio, and metadata files)
-- The same image can be used for every episode of a series, but it is not ideal. If the same image is used for every episode, that image must be delivered multiple times and uniquely named for each episode. For example, “episode.jpg” should be delivered as “episode_01.jpg”, “episode_02.jpg”, etc.…
+***
 
-### Characters allowed in file names
+## File Retention
 
-| Character sets        |
-| --------------------- |
-| 0-9<br />a-z<br />A-Z |
+The delivery location is a **temporary** staging area for partners to upload files for ingestion into the Roku Channel content library.
 
-| Character name | Character |
+- Upon successful ingest, automation moves files from the delivery location to an archive location, where they are stored **indefinitely**.
+- Files uploaded to the delivery location are expected to be ingested within a **reasonable timeframe, not to exceed 30 days**.
+- Valid and complete metadata **must** be delivered shortly after files are delivered, to ensure timely ingest.
+- Files remaining in the delivery location **after 30 days without ingesting are subject to deletion.**
+
+> **Exception:** files in the `/testing` folder may be exempted from the file retention policy.
+
+***
+
+## File Naming
+
+Source video, closed caption, and artwork files delivered for ingest **must** adhere to the following:
+
+- File names **must not** exceed **125 characters** in length.
+- File names **must** match the file name referenced in the metadata supplied for the title.
+- File names are **case-sensitive**.
+- File names **must** end with a proper file extension, and extensions **must** be **lowercase**.
+- File names **must not** begin with an underscore. Roku's system will **ignore** any file beginning with an underscore. _(This is a separate rule from the subfolder-naming rule above. It applies to individual file names, not folder names.)_
+- Whitespace and special characters **must not** be included in any file name — this restriction applies to video, subtitle, closed caption, sidecar audio, and metadata files alike. See the forbidden character table below for the complete list with character names.
+- Reusing the same image across every episode of a series is **discouraged.** A unique per-episode image is preferred. **If** the same image is reused, it **must** still be delivered as a separate, uniquely-named file for each episode (e.g., `episode.jpg` delivered as `episode_01.jpg`, `episode_02.jpg`, etc.) Identical image content does not exempt a file from unique naming.
+
+### Characters Allowed in File Names
+
+| Character Set |
+| ------------- |
+| `0-9`         |
+| `a-z`         |
+| `A-Z`         |
+
+| Character Name | Character |
 | -------------- | --------- |
-| Hyphen         | -         |
-| Period         | .         |
-| Underscore     | \_        |
+| Hyphen         | `-`       |
+| Period         | `.`       |
+| Underscore     | `_`       |
 
-### Characters forbidden in file names
+### Characters Forbidden in File Names
 
-| Character Name   | Character | Character Name               | Character |
-| ---------------- | --------- | ---------------------------- | --------- |
-| "At" symbol      | @         | Left square bracket          | \[        |
-| Ampersand        | &         | Less than                    | \<        |
-| Asterisk         | \*        | Percent                      | %         |
-| Backslash        | \\        | Plus                         | +         |
-| Caret            | ^         | Pound/hashtag                | #         |
-| Colon            | :         | Question mark                | ?         |
-| Comma            | ,         | Quotation marks/double quote | "         |
-| Dollar           | $         | Right curly brace            | \}        |
-| Equals           | =         | Right square bracket         | ]         |
-| Forward slash    | /         | Semicolon                    | ;         |
-| Grave accent     | \`        | Space                        | ` `       |
-| Greater than     | >         | Tilde                        | \~        |
-| Left curly brace | \{        | Vertical pipe                | \|        |
+| Character Name    | Character | Character Name               | Character |
+| ----------------- | --------- | ---------------------------- | --------- |
+| "At" symbol       | `@`       | Left square bracket          | `[`       |
+| Ampersand         | `&`       | Less than                    | `<`       |
+| Asterisk          | `*`       | Percent                      | `%`       |
+| Backslash         | `\`       | Plus                         | `+`       |
+| Caret             | `^`       | Pound/hashtag                | `#`       |
+| Colon             | `:`       | Question mark                | `?`       |
+| Comma             | `,`       | Quotation marks/double quote | `"`       |
+| Dollar            | `$`       | Right curly brace            | `}`       |
+| Equals            | `=`       | Right square bracket         | `]`       |
+| Exclamation point | `!`       | Semicolon                    | `;`       |
+| Forward slash     | `/`       | Single quote/apostrophe      | `'`       |
+| Grave accent      | `` ` ``   | Space                        | ` `       |
+| Greater than      | `>`       | Tilde                        | `~`       |
+| Left curly brace  | `{`       | Vertical pipe                | `\|`      |
+| Left parenthesis  | `(`       | Right parenthesis            | `)`       |
 
-_Correct file delivery location, proper file delivery cadence, and proper file naming is the responsibility of our Partners as the Partner is the expert in their own content and we do not always have insight into individual Partner delivery schedules._
+***
+
+## Partner Responsibility
+
+> Correct file delivery location, proper file delivery cadence, and proper file naming are the responsibility of Roku's partners, as the partner is the expert in their own content — Roku does not always have insight into individual partner delivery schedules.
+
+***
+
+## Glossary
+
+| Term                  | Definition                                                                                                                                                    |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ingest**            | The automated process by which Roku pulls delivered files and metadata into the Roku Channel content library.                                                 |
+| **Delivery location** | The temporary staging folder(s) (`/prod`, `/testing`) partners upload to; distinct from the permanent archive location files move to after successful ingest. |
+| **Sidecar file**      | A subtitle, caption, or audio file delivered alongside (not embedded in) the video file, referenced by the metadata.                                          |

@@ -92,8 +92,6 @@ Trailer videos **must** be **full program only**:
 
 - Trailer audio **must** be delivered in a language that is also present in the main program (i.e., at least one trailer audio language must match one of the main program's delivered audio languages). A trailer **is not required** to include a separate audio track for every language delivered on the main program.
 
-> **Gap flagged for review:** this document does not specify whether the channel configuration and labeling requirements in the [Audio Specification](#) (e.g., 5.1+Stereo preferred, explicit channel labeling) apply to trailer audio, given trailers are short-form promotional assets. **Recommend confirming with the content ops/metadata team** whether trailers follow the full audio spec or a lighter-weight standard, and documenting that explicitly here.
-
 ***
 
 ## Artwork

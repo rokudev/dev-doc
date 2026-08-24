@@ -37,13 +37,17 @@ Content structured in a **series > season > episode** hierarchy should be delive
 
 ### Film
 
-Full-length, long-form, stand-alone titles should be delivered under the Film specification — any program **not** intended to nest in a series/season/episode hierarchy, and exceeding **roughly 15 minutes** runtime. This includes stand-alone TV specials.
+Full-length, stand-alone titles should be delivered under the Film specification — any program **not** intended to nest in a series/season/episode hierarchy. This includes stand-alone TV specials and short films.
 
 ### Clip
 
-Short-form, stand-alone titles **not exceeding roughly 15 minutes** runtime should be delivered under the Clip specification.
+Short-form, stand-alone or ancillary titles intended as a companion to a longer program (e.g., sporting events, movies, TV series) should be delivered under the Clip specification.
 
-> **Open question flagged for review:** both Film and Clip definitions use "roughly 15 minutes" as the dividing line, but neither defines what happens at exactly 15:00, or how much tolerance "roughly" allows (14:30–15:30? 14:45–15:15?). **Recommend confirming an exact boundary rule** (e.g., "15:00 and under = Clip; over 15:00 = Film") with the content classification team before publishing, so partners aren't left guessing on borderline titles.
+**Clip presentation and on-platform behavior differs from Film:**
+
+- Runtime and title are **superimposed directly on the content tile** — a viewer sees this information without clicking in.
+- Clips **do not** have a content details page. Unlike Film, a viewer cannot click into a Clip to reach a synopsis or additional information screen.
+- A Clip's synopsis is instead accessible by pressing the **\* (asterisk/options) button** on the Roku remote.
 
 ***
 

@@ -1,5 +1,6 @@
 ---
 title: Artwork
+excerpt: Required image types, resolutions, and aspect ratios by content type.
 deprecated: false
 hidden: true
 metadata:

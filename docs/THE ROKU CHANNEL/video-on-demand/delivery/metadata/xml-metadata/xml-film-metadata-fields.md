@@ -1,5 +1,6 @@
 ---
 title: XML - film metadata fields
+excerpt: Field-by-field XML reference for Film content delivery.
 deprecated: false
 hidden: true
 metadata:

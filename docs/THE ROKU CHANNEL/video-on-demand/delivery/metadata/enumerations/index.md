@@ -1,5 +1,8 @@
 ---
 title: Enumerations
+excerpt: >-
+  Landing page for supported-value lists: crew roles, genres, ratings,
+  languages.
 deprecated: false
 hidden: true
 metadata:

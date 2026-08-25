@@ -1,6 +1,6 @@
 ---
 title: File delivery
-excerpt: Details to ensure successful file delivery
+excerpt: Folder structure, retention windows, and file-naming rules.
 deprecated: false
 hidden: true
 metadata:

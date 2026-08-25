@@ -1,5 +1,6 @@
 ---
 title: Trailers
+excerpt: MovieLabs-only trailer delivery requirements, including parent-title linking.
 deprecated: false
 hidden: true
 metadata:

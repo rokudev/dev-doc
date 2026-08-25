@@ -123,8 +123,6 @@ Auto-play trailer experience within the branded Premium Subscriptions publisher 
 
 ![Premium Subscriptions auto-play trailer](https://image.roku.com/ZHZscHItMTc2/trailer-glow-up-small.gif)
 
-> **Note:** Image URLs above are preserved from the source document and point to Roku's CDN. Recommend verifying they still resolve before this spec is published externally.
-
 ***
 
 ## Glossary

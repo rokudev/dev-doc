@@ -1,5 +1,6 @@
 ---
 title: XML - shortForm clip metadata fields
+excerpt: Field-by-field XML reference for Clip content delivery.
 deprecated: false
 hidden: true
 metadata:

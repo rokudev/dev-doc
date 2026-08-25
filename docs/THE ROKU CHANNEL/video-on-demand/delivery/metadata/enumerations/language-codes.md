@@ -1,5 +1,6 @@
 ---
 title: Language codes
+excerpt: Full list of supported language codes and regional variants.
 deprecated: false
 hidden: true
 metadata:

@@ -99,7 +99,7 @@ Trailer videos **must** be **full program only**:
 
 - Each trailer **must** include a thumbnail image: a clear, **textless 16:9** image sourced directly from the trailer video.
 
-**Note on scope:** unlike parent movie/series content — which requires up to six image types (Key Art, Box Cover, Poster, Background, etc. — see the [Artwork Specification](#)) — trailers require **only this single thumbnail image type**. No other trailer-specific artwork is needed.
+**Note on scope:** unlike parent movie/series content — which requires up to six image types (Key Art, Box Cover, Poster, Background, etc. — see the [Artwork Specification](https://developer.roku.com/dev/update/docs/artwork-requirements)) — trailers require **only this single thumbnail image type**. No other trailer-specific artwork is needed.
 
 ***
 

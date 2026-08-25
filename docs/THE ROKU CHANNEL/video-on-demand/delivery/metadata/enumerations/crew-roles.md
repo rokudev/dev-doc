@@ -1,5 +1,6 @@
 ---
 title: Crew roles
+excerpt: Fixed list of supported crew role values.
 deprecated: false
 hidden: true
 metadata:

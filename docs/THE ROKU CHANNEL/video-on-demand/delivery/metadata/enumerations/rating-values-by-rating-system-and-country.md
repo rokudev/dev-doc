@@ -1,5 +1,6 @@
 ---
 title: Rating values by rating system and country
+excerpt: Supported rating authorities and values by territory.
 deprecated: false
 hidden: true
 metadata:

@@ -1,6 +1,6 @@
 ---
 title: Delivery methods
-excerpt: Details of the delivery methods supported by Roku
+excerpt: 'Supported transfer methods: Aspera (Shares/P2P) and direct S3 connection.'
 deprecated: false
 hidden: true
 metadata:

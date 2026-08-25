@@ -1,5 +1,6 @@
 ---
 title: Excel - shortForm clip metadata fields
+excerpt: Field-by-field reference for the Clip Excel template.
 deprecated: false
 hidden: true
 metadata:

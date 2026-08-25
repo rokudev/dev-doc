@@ -1,5 +1,6 @@
 ---
 title: XML - episodic TV metadata fields
+excerpt: Field-by-field XML reference for TV series/season/episode delivery.
 deprecated: false
 hidden: true
 metadata:

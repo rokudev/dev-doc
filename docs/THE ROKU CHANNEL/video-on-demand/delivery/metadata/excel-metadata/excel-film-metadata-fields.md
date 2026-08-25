@@ -1,5 +1,6 @@
 ---
 title: Excel - film metadata fields
+excerpt: Field-by-field reference for the Film Excel template.
 deprecated: false
 hidden: true
 metadata:

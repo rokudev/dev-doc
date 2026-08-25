@@ -1,6 +1,6 @@
 ---
 title: Video
-excerpt: The following gives an overview of Video requirements
+excerpt: Video file, format, resolution, and editorial requirements for all deliveries.
 deprecated: false
 hidden: true
 metadata:

@@ -1,5 +1,6 @@
 ---
 title: Metadata updates (MDU) and file replacements
+excerpt: How to update metadata or replace/add files post-delivery.
 deprecated: false
 hidden: true
 metadata:

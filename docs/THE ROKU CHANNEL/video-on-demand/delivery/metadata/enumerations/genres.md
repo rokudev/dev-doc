@@ -5,8 +5,6 @@ hidden: true
 metadata:
   robots: index
 ---
-# Supported Genres
-
 Roku supports the following genre values, referenced by the `genre`/`genres` field wherever genre metadata is delivered (see the Film/TV/Clip XML and Excel metadata references). Each title **must** be delivered with **at least one** supported genre, and **no more than 10** genres per title.
 
 |                     |                          |                     |                  |

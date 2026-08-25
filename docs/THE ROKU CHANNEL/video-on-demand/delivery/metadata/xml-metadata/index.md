@@ -1,5 +1,6 @@
 ---
 title: XML metadata
+excerpt: Index of Roku's XML schemas and annotated samples by content type.
 deprecated: false
 hidden: true
 metadata:

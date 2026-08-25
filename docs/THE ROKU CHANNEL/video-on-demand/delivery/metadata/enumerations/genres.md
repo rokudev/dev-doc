@@ -1,5 +1,6 @@
 ---
 title: Genres
+excerpt: Fixed list of supported genre values.
 deprecated: false
 hidden: true
 metadata:

@@ -1,5 +1,8 @@
 ---
 title: Closed captions and subtitles
+excerpt: >-
+  Requirements for Closed Captions/SDH, Full Subtitles, and Forced Narrative
+  Subtitles.
 deprecated: false
 hidden: true
 metadata:

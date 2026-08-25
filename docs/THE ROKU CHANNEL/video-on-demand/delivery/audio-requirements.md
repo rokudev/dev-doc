@@ -1,6 +1,8 @@
 ---
 title: Audio
-excerpt: The following is an overview of the Audio requirements
+excerpt: >-
+  Audio codec, channel configuration, and sidecar dub/descriptive audio
+  requirements.
 deprecated: false
 hidden: true
 metadata:

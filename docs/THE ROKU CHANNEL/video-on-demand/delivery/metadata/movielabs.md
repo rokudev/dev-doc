@@ -1,5 +1,6 @@
 ---
 title: MovieLabs
+excerpt: Roku-specific MovieLabs delivery order, tags, markers, and schema validation.
 deprecated: false
 hidden: true
 metadata:

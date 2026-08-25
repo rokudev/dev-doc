@@ -1,6 +1,6 @@
 ---
 title: Helpful Links
-excerpt: A consolidated set of resources referenced throughout this specification.
+excerpt: Consolidated external resources referenced throughout the spec.
 deprecated: false
 hidden: true
 metadata:

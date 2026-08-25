@@ -5,9 +5,9 @@ hidden: true
 metadata:
   robots: index
 ---
-<br />
+The list below is the full set of language codes Roku currently supports for content ingest. This is a simplified version of the [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646) specification.
 
-The below list is the full set of language codes Roku currently supports for content ingest. This list is a simplified version of the [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646) specification.
+Where a region-specific variant exists (e.g., `es-mx` for Spanish (Mexico) vs. `es-es` for Spanish (Spain)), including the region code is a best practice wherever the field description recommends it. See the individual field references in the Film/TV/Clip XML and Excel metadata pages.
 
 | Language Code | Language                 | Language Code | Language                       |
 | ------------- | ------------------------ | ------------- | ------------------------------ |

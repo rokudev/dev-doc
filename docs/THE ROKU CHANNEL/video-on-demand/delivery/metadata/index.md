@@ -1,5 +1,8 @@
 ---
 title: Metadata
+excerpt: >-
+  Content type definitions, ID rules, availability windows, and supported
+  formats.
 deprecated: false
 hidden: true
 metadata:

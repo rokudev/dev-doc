@@ -1,5 +1,6 @@
 ---
 title: Excel metadata
+excerpt: 'Workbook rules for Excel metadata: formatting, structure, and file format.'
 deprecated: false
 hidden: true
 metadata:

@@ -1,5 +1,6 @@
 ---
 title: Excel - episodic TV metadata fields
+excerpt: Field-by-field reference for the TV Excel template.
 deprecated: false
 hidden: true
 metadata:

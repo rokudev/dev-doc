@@ -10,7 +10,7 @@ metadata:
 
 Roku accepts trailers **exclusively via MovieLabs delivery.** Trailers are treated as **separate entities** from their parent content and are displayed on-platform at the movie or series level.
 
-Much of the video, audio, and general delivery guidance in this document mirrors the [general Video Specification](https://developer.roku.com/dev/update/docs/video-requirements) and [Audio Specification](#) — this doc calls out only trailer-specific requirements and deltas. Where a rule is copied inline below (e.g., "full program only" rules), it is intentionally kept in sync with those specs rather than a fork; if the two ever diverge, the general specs are authoritative for non-trailer-specific rules.
+Much of the video, audio, and general delivery guidance in this document mirrors the [general Video Specification](https://developer.roku.com/dev/update/docs/video-requirements) and [Audio Specification](https://developer.roku.com/dev/update/docs/audio-requirements) — this doc calls out only trailer-specific requirements and deltas. Where a rule is copied inline below (e.g., "full program only" rules), it is intentionally kept in sync with those specs rather than a fork; if the two ever diverge, the general specs are authoritative for non-trailer-specific rules.
 
 ## Delivery Method
 
@@ -100,8 +100,6 @@ Trailer videos **must** be **full program only**:
 ## Audio
 
 - Trailer audio **must** be delivered in a language that is also present in the main program (i.e., at least one trailer audio language must match one of the main program's delivered audio languages). A trailer **is not required** to include a separate audio track for every language delivered on the main program.
-
-> **Gap flagged for review:** this document does not specify whether the channel configuration and labeling requirements in the [Audio Specification](#) (e.g., 5.1+Stereo preferred, explicit channel labeling) apply to trailer audio, given trailers are short-form promotional assets. **Recommend confirming with the content ops/metadata team** whether trailers follow the full audio spec or a lighter-weight standard, and documenting that explicitly here.
 
 ***
 

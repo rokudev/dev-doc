@@ -10,7 +10,7 @@ metadata:
 
 Roku accepts trailers **exclusively via MovieLabs delivery.** Trailers are treated as **separate entities** from their parent content and are displayed on-platform at the movie or series level.
 
-Much of the video, audio, and general delivery guidance in this document mirrors the [general Video Specification](#) and [Audio Specification](#) — this doc calls out only trailer-specific requirements and deltas. Where a rule is copied inline below (e.g., "full program only" rules), it is intentionally kept in sync with those specs rather than a fork; if the two ever diverge, the general specs are authoritative for non-trailer-specific rules.
+Much of the video, audio, and general delivery guidance in this document mirrors the [general Video Specification](https://developer.roku.com/dev/update/docs/video-requirements) and [Audio Specification](#) — this doc calls out only trailer-specific requirements and deltas. Where a rule is copied inline below (e.g., "full program only" rules), it is intentionally kept in sync with those specs rather than a fork; if the two ever diverge, the general specs are authoritative for non-trailer-specific rules.
 
 ## Delivery Method
 

@@ -21,9 +21,9 @@ Much of the video, audio, and general delivery guidance in this document mirrors
 
 ## Avails Requirements
 
-**Avails are required to publish a trailer.** A trailer will not go live on Roku Channel without an associated avail — this is a publish-blocking requirement, not merely preferred. See [Avails and Committed Title Lists for The Roku Channel](#avails-and-committed-title-lists-for-the-roku-channel) for the full submission process.
+**Avails are required to publish a trailer.** A trailer will not go live on Roku Channel without an associated avail — this is a publish-blocking requirement, not merely preferred. See [Avails and Committed Title Lists for The Roku Channel](https://developer.roku.com/dev/update/docs/title-avail-specifications) for the full submission process.
 
-**Trailers intended to be viewable in front of the paywall** (i.e., accessible without an active subscription, even though tied to SVOD content) **require an FVOD availability window.** The FVOD window **must** be fully contained within an active SVOD window for the trailer's parent title — Roku does not support FVOD-only availability. See [Rights Management](#rights-management) for the complete FVOD window rules, valid/invalid examples, and delivery instructions.
+**Trailers intended to be viewable in front of the paywall** (i.e., accessible without an active subscription, even though tied to SVOD content) **require an FVOD availability window.** The FVOD window **must** be fully contained within an active SVOD window for the trailer's parent title — Roku does not support FVOD-only availability. See [FVOD submissions](https://developer.roku.com/dev/update/docs/unlocking-svod-content-as-free-fvod) for the complete FVOD window rules, valid/invalid examples, and delivery instructions.
 
 ***
 
@@ -107,7 +107,7 @@ Trailer videos **must** be **full program only**:
 
 - Each trailer **must** include a thumbnail image: a clear, **textless 16:9** image sourced directly from the trailer video.
 
-**Note on scope:** unlike parent movie/series content — which requires up to six image types (Key Art, Box Cover, Poster, Background, etc. — see the [Artwork Specification](#)) — trailers require **only this single thumbnail image type**. No other trailer-specific artwork is needed.
+**Note on scope:** unlike parent movie/series content — which requires up to six image types (Key Art, Box Cover, Poster, Background, etc. — see the [Artwork Specification](https://developer.roku.com/dev/update/docs/artwork-requirements)) — trailers require **only this single thumbnail image type**. No other trailer-specific artwork is needed.
 
 ***
 
@@ -135,13 +135,13 @@ Auto-play trailer experience within the branded Premium Subscriptions publisher 
 
 ## Glossary
 
-| Term                                   | Definition                                                                                                                                                                                                                        |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **MEC**                                | Media Entertainment Core — the MovieLabs metadata schema describing the content itself (title, work type, parent/child relationships, etc.).                                                                                      |
-| **MMC**                                | Media Manifest Core — the MovieLabs schema describing the manifest of deliverable assets (video, audio, images) associated with a title.                                                                                          |
-| **Avails**                             | EMA Avails — the metadata format expressing licensing/availability terms (territory, window, rights) for a piece of content.                                                                                                      |
-| **ParentContentID / relationshipType** | The mechanism by which a trailer's MEC links back to its parent movie or series: `relationshipType="ispromotionfor"` declares the relationship, and `ParentContentID` supplies the exact, case-sensitive ID of the parent title.  |
-| **Cardset**                            | An MMC element used to categorize a promotional asset (e.g., tagging a video as a `Trailer`) beyond its base `WorkType`.                                                                                                          |
-| **Red Band trailer**                   | Industry term for a trailer containing mature content (graphic violence, nudity, strong language) not suitable for general audiences. Not accepted by Roku.                                                                       |
-| **Avails** _(publish requirement)_     | An availability submission required before a trailer can go live — distinct from the EMA Avails metadata format referenced above; see [Avails and Committed Title Lists](#avails-and-committed-title-lists-for-the-roku-channel). |
-| **FVOD**                               | Free Video on Demand — a license type allowing temporarily free access to otherwise-SVOD content; required for trailers viewable in front of the paywall. See [Rights Management](#rights-management).                            |
+| Term                                   | Definition                                                                                                                                                                                                                                                        |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **MEC**                                | Media Entertainment Core — the MovieLabs metadata schema describing the content itself (title, work type, parent/child relationships, etc.).                                                                                                                      |
+| **MMC**                                | Media Manifest Core — the MovieLabs schema describing the manifest of deliverable assets (video, audio, images) associated with a title.                                                                                                                          |
+| **Avails**                             | EMA Avails — the metadata format expressing licensing/availability terms (territory, window, rights) for a piece of content.                                                                                                                                      |
+| **ParentContentID / relationshipType** | The mechanism by which a trailer's MEC links back to its parent movie or series: `relationshipType="ispromotionfor"` declares the relationship, and `ParentContentID` supplies the exact, case-sensitive ID of the parent title.                                  |
+| **Cardset**                            | An MMC element used to categorize a promotional asset (e.g., tagging a video as a `Trailer`) beyond its base `WorkType`.                                                                                                                                          |
+| **Red Band trailer**                   | Industry term for a trailer containing mature content (graphic violence, nudity, strong language) not suitable for general audiences. Not accepted by Roku.                                                                                                       |
+| **Avails** _(publish requirement)_     | An availability submission required before a trailer can go live — distinct from the EMA Avails metadata format referenced above; see [Avails and Committed Title Lists](#avails-and-committed-title-lists-for-the-roku-channel).                                 |
+| **FVOD**                               | Free Video on Demand — a license type allowing temporarily free access to otherwise-SVOD content; required for trailers viewable in front of the paywall. See [FVOD submissions](https://developer.roku.com/dev/update/docs/unlocking-svod-content-as-free-fvod). |

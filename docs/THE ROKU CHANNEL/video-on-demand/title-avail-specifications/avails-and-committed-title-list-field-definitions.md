@@ -1,5 +1,6 @@
 ---
 title: Avails and Committed Title List - Field Definitions
+excerpt: Field-by-field reference for every column in the Avails/CTL sheet.
 deprecated: false
 hidden: true
 metadata:

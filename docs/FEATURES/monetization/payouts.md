@@ -42,7 +42,7 @@ For more information on payout terms, see the [Roku Distribution Agreement](http
 
 ### Restricted payout countries
 
-Roku does not process payouts to bank accounts registered in the following countries:
+Roku currently does not process payouts to bank accounts registered in the following countries:
 
 - China
 - Cayman Islands

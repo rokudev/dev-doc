@@ -10,8 +10,6 @@ metadata:
 
 Roku supports **six image types**, each used in a different location within Roku Channel. Roku **prefers** to receive all applicable image types whenever possible.
 
-> **Note:** This spec previously described "three image types." That count is out of date — the table below reflects all six currently in use (Key Art, Box Cover \[Series], Box Cover \[Movies], Poster Art, Background Art, Episode Art).
-
 **All image types share the following delivery requirements**, regardless of type:
 
 - **Format:** JPEG or PNG
@@ -34,13 +32,11 @@ Beyond these shared rules:
 | Key Art            | 16:9         | 1920×1080 or 3840×2160 | 1920×1080      | 3840×2160      | `keyart`       |
 | Box Cover (Series) | 4:3          | 2560×1920              | 1600×1200      | 2560×1920      | `boxcover`     |
 | Box Cover (Movies) | 3:4          | 1920×2560              | 1200×1600      | 1920×2560      | `boxcover`     |
-| Poster Art         | 2:3          | 2000×3000              | 2000×3000      | 2000×3000      | `poster`       |
+| Poster Art         | 2:3          | 2000×3000              | 1000×1500      | 2000×3000      | `poster`       |
 | Background Art     | 16:9         | 1920×1080 or 3840×2160 | 1920×1080      | 3840×2160      | `background`   |
 | Episode Art        | 16:9         | 1920×1080 or 3840×2160 | 1920×1080      | 3840×2160      | `thumbnail`    |
 
 _The Metadata Field column reflects the field name used to tag each image type in delivery metadata — not a separate description._
-
-> **Note on Poster Art:** unlike other image types, Poster Art has no tolerance range — preferred, minimum, and maximum resolution are all identical (2000×3000). This is intentional, not a copy error: Poster Art must be delivered at this exact resolution.
 
 ### Key Art
 
@@ -70,16 +66,14 @@ _The Metadata Field column reflects the field name used to tag each image type i
 
 ## Minimum Art Requirements by Content Type
 
-| Image Type                   | Clip         | Movie        | Series       | Episode            |
-| ---------------------------- | ------------ | ------------ | ------------ | ------------------ |
-| 16:9 Key Art                 | **Required** | **Required** | **Required** | —                  |
-| 2:3 Poster Art               | —            | **Required** | **Required** | —                  |
-| 3:4 Box Cover                | —            | **Required** | —            | —                  |
-| 4:3 Box Cover                | —            | —            | **Required** | —                  |
-| 16:9 Background Art          | —            | **Required** | **Required** | **Required**       |
-| 16:9 Episode Art (thumbnail) | —            | —            | —            | _(see note below)_ |
-
-> **⚠️ Gap flagged for review:** Episode Art (`thumbnail`) is defined as one of the six core image types above, but it does not appear as a requirement in the original Episode content-type table — only Background Art is listed as required for Episodes. This may mean Episode Art has a requirement that was omitted from this doc, or that it's intentionally not required at the episode level (e.g., covered by Background Art alone). **Recommend confirming with the content ops/metadata team before publishing** and updating this row accordingly.
+| Image Type                   | Clip         | Movie        | Series       | Episode      |
+| ---------------------------- | ------------ | ------------ | ------------ | ------------ |
+| 16:9 Key Art                 | **Required** | **Required** | **Required** | —            |
+| 2:3 Poster Art               | —            | **Required** | **Required** | —            |
+| 3:4 Box Cover                | —            | **Required** | —            | —            |
+| 4:3 Box Cover                | —            | —            | **Required** | —            |
+| 16:9 Background Art          | —            | **Required** | **Required** | **Required** |
+| 16:9 Episode Art (thumbnail) | —            | —            | —            | **Required** |
 
 ### Episode-Specific Notes
 
@@ -143,8 +137,6 @@ For Episode content, delivered Background Art:
 2:3 texted image with title treatment, as shown in the search experience. 2:3 images are **preferred** for series and movie content types.
 
 ![Poster search example](https://image.roku.com/ZHZscHItMTc2/posterSearch.jpg)
-
-> **Note:** Image URLs above are preserved from the source document and point to Roku's CDN. Recommend verifying they still resolve before this spec is published externally.
 
 ***
 

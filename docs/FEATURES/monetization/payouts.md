@@ -1,5 +1,5 @@
 ---
-title: "Publisher payouts"
+title: Publisher payouts
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,8 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
-
 Roku’s Partner Payouts Program is the vehicle through which partners receive payments for apps, games, content, and ads served to millions of active Roku users.
 
 To sign up for Roku Partner Payouts Program, see the [Enrolling in the Roku Partner Payouts Program](doc:partner-payouts) guide.
@@ -41,6 +39,23 @@ Payouts from Roku are made no later than 60 days after the end of each month in 
 No minimum sum is required to receive payouts from purchases made through Roku Pay. Payouts are made based on the specified interval regardless of the amount of accrued revenue.
 
 For more information on payout terms, see the [Roku Distribution Agreement](https://docs.roku.com/doc/developerdistribution/en-us).
+
+### Restricted payout countries
+
+Roku does not process payouts to bank accounts registered in the following countries:
+
+- China
+- Cayman Islands
+- Lebanon
+- Nepal
+- Nigeria
+- Pakistan
+- Panama
+- Russia
+- Turkey
+- UAE
+- Ukraine
+- US Virgin Islands
 
 ## FAQs
 
@@ -82,10 +97,7 @@ When a customer disputes a transaction made through Roku Pay that results in a c
 
 - "Chargeback": The customer has initiated a transaction dispute. Roku will dispute the chargeback if it is $8.99 or more. If the chargeback is reversed, Roku will send a subsequent refund notification with the **transactionType** set to "ChargebackReversed". If the chargeback is not reversed, no further notifications are sent.
 
-
 - "ChargebackReversed": Roku successfully reversed the chargeback claim.
-
-
 
 - "SecondChargeback": The customer's bank has disputed the chargeback reversal on the transaction (this may occur if the customer provided new information, the chargeback reason changed, or the bank determined that the information provided by Roku was not sufficient to refute the chargeback). Roku will not dispute the second chargeback.
 
@@ -95,7 +107,7 @@ No. Roku only disputes chargebacks that are $8.99 or more. Any chargeback less t
 
 **How long does it take to receive the ChargebackReversed and SecondChargeback notifications?**
 
-Upon receiving a "Chargeback" notification, it may take up to 60 days to receive a "ChargebackReversed" notification if Roku successfully gets the chargeback claim reversed. The time it takes to receive a "SecondChargeback" notification depends on how long the issuer allows the cardholder to file a second dispute.   
+Upon receiving a "Chargeback" notification, it may take up to 60 days to receive a "ChargebackReversed" notification if Roku successfully gets the chargeback claim reversed. The time it takes to receive a "SecondChargeback" notification depends on how long the issuer allows the cardholder to file a second dispute.
 
 **Does Roku pass the Fraud/Non-Fraud indicator to publishers?**
 

@@ -46,6 +46,7 @@ Roku currently does not process payouts to bank accounts registered in the follo
 
 - China
 - Cayman Islands
+- Iran
 - Lebanon
 - Nepal
 - Nigeria

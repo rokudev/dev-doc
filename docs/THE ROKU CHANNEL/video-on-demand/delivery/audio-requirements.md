@@ -128,3 +128,17 @@ If video files cannot be created with proper audio channel labels embedded, an *
 | **LFE**                 | Low-Frequency Effects channel — the ".1" in 5.1 surround, typically routed to a subwoofer.                 |
 | **Full audio mix**      | A complete mixed audio track (dialogue, music, effects), as opposed to a dialogue-only or partial track.   |
 | **Language code**       | A standardized code identifying language and, optionally, regional locale (e.g., `en-US`, `es-MX`).        |
+
+{/* Example Usage */}
+<RokuTable
+  columns={[
+    { header: 'Name', accessor: 'name' },
+    { header: 'Email', accessor: 'email' },
+    { header: 'Role', accessor: 'role' }
+  ]}
+  data={[
+    { name: 'John Doe', email: 'john@example.com', role: 'Admin' },
+    { name: 'Jane Smith', email: 'jane@example.com', role: 'User' },
+    { name: 'Bob Johnson', email: 'bob@example.com', role: 'Editor' }
+  ]}
+/>

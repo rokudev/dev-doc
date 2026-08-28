@@ -34,9 +34,8 @@ Roku Channel supports **three content types**: `tv`, `film`, and `clip`. All con
 
 ```mermaid
 flowchart LR 
- A --- B[fa:fa-spinner B] 
- B --> C[fa:fa-check C] 
- B --> D[fa:fa-ban D]
+ Series --- Season[fa:fa-spinner B] 
+ Season --> Episode[fa:fa-check C]
 ```
 
 Content structured in a **series > season > episode** hierarchy should be delivered under the TV specification.

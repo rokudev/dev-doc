@@ -84,12 +84,13 @@ Deliver sidecar audio at the highest bitrate and sampling rate available.
 
 ### Supported Sidecar Audio Formats
 
-| Container         | Codecs                     | Extension |
-| ----------------- | -------------------------- | --------- |
-| WAV _(preferred)_ | PCM<br />GSM               | .wav      |
-| MP4 (MPEG-4)      | AAC<br />FLAC              | .mp4      |
-| MPEG-1 Layer 3    | MP3                        | .mp3      |
-| OGA               | FLAC<br />Opus<br />Vorbis | .ogg      |
+| Container                                          | Codecs                     | Extension |
+| -------------------------------------------------- | -------------------------- | --------- |
+| WAV _(preferred)_                                  | PCM<br />GSM               | .wav      |
+| MOV<br />(must not include a video track)          | AAC<br />MP3<br />PCM      | .mov      |
+| MP4 (MPEG-4)<br />(must not include a video track) | AAC<br />FLAC              | .mp4      |
+| MPEG-1 Layer 3                                     | MP3                        | .mp3      |
+| OGA                                                | FLAC<br />Opus<br />Vorbis | .ogg      |
 
 ***
 
@@ -130,6 +131,7 @@ If video files cannot be created with proper audio channel labels embedded, an *
 | **Language code**       | A standardized code identifying language and, optionally, regional locale (e.g., `en-US`, `es-MX`).        |
 
 {/* Example Usage */}
+
 <RokuTable
   columns={[
     { header: 'Name', accessor: 'name' },

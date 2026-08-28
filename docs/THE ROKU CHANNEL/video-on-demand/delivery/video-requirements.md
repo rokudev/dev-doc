@@ -82,10 +82,6 @@ Roku supports a variety of frame rates and scan types. All video files **must** 
 | FHD   | 1920  | 1080   | 1:1 (square pixels)             |
 | UHD\* | 3840  | 2160   | 1:1 (square pixels)             |
 
-<HeaderThingyComponent />
-
-<HeaderThingyComponent Tacos />
-
 \* UHD is supported as an **input resolution only**. Roku does not currently encode to or display 4K UHD video on Roku Channel.
 
 ***

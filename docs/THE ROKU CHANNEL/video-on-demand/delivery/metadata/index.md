@@ -33,7 +33,7 @@ Roku Channel supports **three content types**: `tv`, `film`, and `clip`. All con
 ### TV
 
 ```mermaid
-flowchart LR 
+flowchart TB 
  Series --- Season 
  Season --> Episode
 ```

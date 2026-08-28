@@ -32,12 +32,6 @@ Roku Channel supports **three content types**: `tv`, `film`, and `clip`. All con
 
 ### TV
 
-```mermaid
-flowchart TB 
- Series --- Season 
- Season --> Episode
-```
-
 Content structured in a **series > season > episode** hierarchy should be delivered under the TV specification.
 
 - **Series** — a collection of programs/episodes released under a common title with a consistent narrative, characters, or theme. In North America, each year of a series is called a season; a series can span several seasons.

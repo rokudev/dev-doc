@@ -6,6 +6,10 @@ hidden: true
 metadata:
   robots: index
 ---
+<Callout icon="far fa-bell-exclamation" theme="warn">
+  ### Current trailer support is limited to a single trailer at a movie or series level only. Season and episode level trailers are not currently supported.
+</Callout>
+
 ## Overview
 
 Roku accepts trailers **exclusively via MovieLabs delivery.** Trailers are treated as **separate entities** from their parent content and are displayed on-platform at the movie or series level.

@@ -68,7 +68,7 @@ Roku supports a variety of frame rates and scan types. All video files **must** 
 
 ***
 
-## Video Resolution<br />\<RokuTable<br />  columns=\{\[<br />    \{ header: 'Name', accessor: 'name' \},<br />    \{ header: 'Email', accessor: 'email' \},<br />    \{ header: 'Role', accessor: 'role' \}<br />  ]\}<br />  data=\{\[<br />    \{ name: 'John Doe', email: 'john\@example.com', role: 'Admin' \},<br />    \{ name: 'Jane Smith', email: 'jane\@example.com', role: 'User' \},<br />    \{ name: 'Bob Johnson', email: 'bob\@example.com', role: 'Editor' \}<br />  ]\}<br />/>
+## Video Resolution
 
 | Type  | Width | Height | Pixel Aspect Ratio              |
 | ----- | ----- | ------ | ------------------------------- |
@@ -81,6 +81,10 @@ Roku supports a variety of frame rates and scan types. All video files **must** 
 | HD    | 1280  | 720    | 1:1 (square pixels)             |
 | FHD   | 1920  | 1080   | 1:1 (square pixels)             |
 | UHD\* | 3840  | 2160   | 1:1 (square pixels)             |
+
+<HeaderThingyComponent />
+
+<HeaderThingyComponent Tacos />
 
 \* UHD is supported as an **input resolution only**. Roku does not currently encode to or display 4K UHD video on Roku Channel.
 

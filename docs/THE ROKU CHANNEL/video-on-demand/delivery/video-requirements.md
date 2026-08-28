@@ -68,7 +68,7 @@ Roku supports a variety of frame rates and scan types. All video files **must** 
 
 ***
 
-## Video Resolution
+## Video Resolution<br />\<RokuTable<br />  columns=\{\[<br />    \{ header: 'Name', accessor: 'name' \},<br />    \{ header: 'Email', accessor: 'email' \},<br />    \{ header: 'Role', accessor: 'role' \}<br />  ]\}<br />  data=\{\[<br />    \{ name: 'John Doe', email: 'john\@example.com', role: 'Admin' \},<br />    \{ name: 'Jane Smith', email: 'jane\@example.com', role: 'User' \},<br />    \{ name: 'Bob Johnson', email: 'bob\@example.com', role: 'Editor' \}<br />  ]\}<br />/>
 
 | Type  | Width | Height | Pixel Aspect Ratio              |
 | ----- | ----- | ------ | ------------------------------- |

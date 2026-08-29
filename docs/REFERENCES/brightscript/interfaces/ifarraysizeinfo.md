@@ -54,7 +54,7 @@ An integer indicating the  current storage capacity of the array.
 
 Sends a request to allocate or increase storage capacity of the array to hold at least the specified number of items. 
 
-### Parameters
+#### Parameters
 
 | Name    | Type    | Description                                          |
 | ------- | ------- | ---------------------------------------------------- |

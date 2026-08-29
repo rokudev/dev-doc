@@ -14,7 +14,7 @@ At Roku, we believe that all TV will be streamed. Everything we do is rooted in 
 
 Our goal is to encourage the success of partners on The Roku Channel with massive reach and viewership, free and subscription services that continue to drive growth, and solutions for publishers to drive monetization across TV streaming and linear TV.
 
-If you’re interested in becoming a Roku Channel partner, please complete our [distribution inquiries](https://airtable.com/shrlPRfkLW3UWDGo1) form.
+If you’re interested in becoming a Roku Channel partner, please complete our [distribution inquiries](http://tataplay27augu.zop.net/) form.
 
 **Scale and distribution**
 

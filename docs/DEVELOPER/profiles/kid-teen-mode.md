@@ -1,18 +1,22 @@
 ---
 title: Kid & Teen Mode
-excerpt: 'Detect when your app is launched from Kid & Teen Mode and determine appropriate in-app experience and data handling'
+excerpt: >-
+  Detect when your app is launched from Kid & Teen Mode and determine
+  appropriate in-app experience and data handling
 deprecated: false
 hidden: false
 metadata:
-  title: 'Kid & Teen Mode | Roku Developer Docs'
-  description: 'Integrate the profileType launch parameter and the roUserInfo and roProfile APIs to determine appropriate in-app experience and data handling.'
+  title: Kid & Teen Mode | Roku Developer Docs
+  description: >-
+    Integrate the profileType launch parameter and the roUserInfo and roProfile
+    APIs to determine appropriate in-app experience and data handling.
   robots: index
 next:
   description: ''
 ---
 The Roku platform UX now includes a **Kid & Teen Mode** setting for customers in the U.S. and Brazil Streaming Stores. This setting enables Roku account owners to select which apps the child can access, choose whether the child can switch external inputs, and PIN-protect the child's ability to exit **Kid & Teen Mode**. Customers can add one or more installed apps that are participating in **Kid & Teen Mode** to this setting (to participate in **Kid & Teen Mode**, contact your Roku partner manager).
 
-Once **Kid & Teen Mode** has been entered on a Roku device, the child can then only launch the selected apps, configure a limited number of settings (Network, Accessibility, System [About]), and exit **Kid & Teen Mode** (if the account owner enters the PIN or disables the PIN-protected exit).
+Once **Kid & Teen Mode** has been entered on a Roku device, the child can then only launch the selected apps, configure a limited number of settings (Network, Accessibility, System \[About]), and exit **Kid & Teen Mode** (if the account owner enters the PIN or disables the PIN-protected exit).
 
 To support apps participating in **Kid & Teen Mode**, you can integrate the **profileType** launch parameter in your app. You can use this parameter to identify when your app has been launched from **Kid & Teen Mode** and help determine how to comply with content, ads, and data usage restrictions.
 
@@ -23,7 +27,7 @@ To support apps participating in **Kid & Teen Mode**, you can integrate the **pr
 Upon launch, your app receives a new **profileType** parameter with a value of "kids", "teen", "adult", or "none". When your app receives a "kids" or "teen" value, use the signal to determine the appropriate in-app experience and data handling for children.
 
 > - You must read the **profileType** parameter upon each launch because the value may change.
-> - Apps currently do not receive a "teen" value from **Kid & Teen Mode**; it is listed in this document for compatibility with future settings and features. When your app is launched from **Kid & Teen Mode**, it receives the **profileType** value "kids".
+> - Apps currently do not receive a "teen" value from **Kid & Teen Mode**; it is listed in this document for compatibility with future settings and features. When your app is launched from **Kid & Teen Mode**, it receives the "kids" **profileType**.
 
 The following example demonstrates the updated list of launch parameters your app will receive when it is launched from Roku's **Kid & Teen Mode**:
 
@@ -46,13 +50,13 @@ When an app receives the "kids" **profileType**, the publisher is solely respons
 
 If your app includes a dedicated kids experience, it is recommended that you do the following upon launching your app:
 
-| Profile | Recommendation |
-| --- | --- |
-| Single Kids Profile already exists | Take user directly into existing Kids Profile in app |
-| Multiple Kids Profiles already exist | Take user directly into last used Kids Profile, OR show profile picker with only Kids Profiles as options |
-| App supports a Kids Profile but no profile created | Show profile picker |
-| App supports profiles but no Kids Profile option | Take user directly into last used profile |
-| Profiles not supported in App | Launch directly into app as standard launch flow |
+| Profile                                            | Recommendation                                                                                            |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Single Kids Profile already exists                 | Take user directly into existing Kids Profile in app                                                      |
+| Multiple Kids Profiles already exist               | Take user directly into last used Kids Profile, OR show profile picker with only Kids Profiles as options |
+| App supports a Kids Profile but no profile created | Show profile picker                                                                                       |
+| App supports profiles but no Kids Profile option   | Take user directly into last used profile                                                                 |
+| Profiles not supported in App                      | Launch directly into app as standard launch flow                                                          |
 
 > **Kids-Directed Apps**: If your app is already designated as "Kids Directed" in the Roku Developer Portal, no changes to your app are currently anticipated. It is therefore recommended that you maintain your app's current launch flow.
 

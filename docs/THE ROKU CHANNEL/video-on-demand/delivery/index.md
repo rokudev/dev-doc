@@ -1365,7 +1365,7 @@ Used to determine[ Ad Breaks for Ad Supported Content](#ad-breaks). adBreak valu
 
 <u>Example:</u>
 
-```
+```xml
 <adBreaks>
   <adBreak>
     <start_time>00:03:15.000</start_time>
@@ -1630,7 +1630,7 @@ End date of content availability to users on Roku Channel. One licensePeriodEnd 
 | `/package/video/playOptions/playOption/licensePeriodEnd` | Conforms to ISO 8601 format: YYYY-MM-DDTHH:MM:SS | Optional |
 | <u>Example:</u>                                          |                                                  |          |
 
-```
+```xml
 <playOption>
   <licensePeriodEnd>YYYY-MM-DDTHH:MM:SS</licensePeriodEnd>
 </playOption>
@@ -2516,7 +2516,7 @@ Begins the season block that references the metadata for the season of the serie
 | ----------------------- | ------- | -------- |
 | `/package/video/season` |         | Required |
 
-```
+```xml
 <season>
 ```
 
@@ -2724,7 +2724,7 @@ The block that describes the artwork file(s). The asset tag's attribute must be 
 
 ```
 
-```
+```xml
 <asset type="artwork">
   <data_file role="series">
 ```

@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-# 1. General overview
+## 1. General overview
 
 Roku pioneered streaming to the TV. The company operates the No. 1 TV streaming platform in the U.S. as measured by hours streamed (Hypothesis Group 2021). The Roku Channel is a top streaming channel on the Roku platform, owned and operated by Roku. It is available to consumers in the U.S., Canada, and the UK for free on Roku streaming devices, the Web, Amazon Fire TV and select Samsung TVs, and iOS and Android devices.
 
@@ -348,7 +348,7 @@ Cut filenames must follow the proper naming convention below:
 - Cut version (Rough Cut 1, FC, etc.)
 - Date the cut was released to Roku (YYYYMMDD)
 
-Example: FLIP\_102\_AIR\_2\_FC\_20260513
+Example: FLIP_102_AIR_2_FC_20260513
 
 All rough cut links should be confined to viewing only (i.e. no download access). When sharing cuts, please do not create any folders, or copy any folders into the Roku Review projects.
 
@@ -527,18 +527,18 @@ The Texted Spotting List should contain any and all text that is burned into pic
 
 Paper deliverables should all be uploaded to the “Hub” platform noted above. Please adhere to the following naming conventions when delivering documents to the Hub:
 
-- ShowCode _ProdNumbe&#x72;_&#x41;irOrder\_Version\_LangCode\_Date\_FINAL
-- Example: GABH _30&#x31;_&#x41;ir\_1\_PostVendorList\_enUS\_20250303\_FINAL
+- ShowCode _ProdNumbe&#x72;_&#x41;irOrder_Version_LangCode_Date_FINAL
+- Example: GABH _30&#x31;_&#x41;ir_1_PostVendorList_enUS_20250303_FINAL
 
 #### 8.3.2 Master video deliverables
 
 All master\* video files should be labeled as follows:
 
-- ShowCode\_ProdNumber\_AirOrder\_Version\_LangCode\_Resolution\_ColorSpace\_FN\_Audio\_FrameRate\_Date-v#.mov
+- ShowCode_ProdNumber_AirOrder_Version_LangCode_Resolution_ColorSpace_FN_Audio_FrameRate_Date-v#.mov
 
 Example:
 
-NION\_101\_AIR\_1\_TXTD\_enUS\_UHD\_SDR\_FN\_2CH\_23976p\_20190701-v2.mov
+NION_101_AIR_1_TXTD_enUS_UHD_SDR_FN_2CH_23976p_20190701-v2.mov
 
 Production Number = As listed on Post Grids
 
@@ -561,11 +561,11 @@ Air Order = Please list even if the Air Order is the same as the Production Numb
 
 Audio materials should be named to include all appropriate information:
 
-ShowCode\_ProdNumber\_Vers\_Date\_LangCode\_MaterialType\_Channel#\_SampleRate\_BitRate\_TC\_Channel.wav
+ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#\_SampleRate_BitRate_TC_Channel.wav
 
 **Example:**
 
-MAMA\_102\_v04\_20220919\_enUS\_PM\_Nearfield\_2ch\_48k\_24b\_23976\_LT.wav
+MAMA_102_v04_20220919_enUS_PM_Nearfield_2ch_48k_24b_23976_LT.wav
 
 | **Material Type**                             | **Abbreviation**                  |
 | --------------------------------------------- | --------------------------------- |
@@ -686,19 +686,19 @@ _Roku Best Practices_
 
 From each Texted Master created, please export the following proxy files:
 
-| **Video Codec**     | **H.264**                                                                                                                                                                                                                   |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Container           | MOV or MP4                                                                                                                                                                                                                  |
-| Picture             | (1) Clean & (1) w/ Vis.TC UR (1) Series Opener Only                                                                                                                                                                         |
-| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                                                     |
-| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                                          |
-| Scan Type           | Progressive scan type                                                                                                                                                                                                       |
-| Color Space         | BT.709 Legal Video Range                                                                                                                                                                                                    |
-| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                                            |
-| Constant Frame Rate | Should Match Master                                                                                                                                                                                                         |
-| Native Frame Rate   | Should Match Master                                                                                                                                                                                                         |
-| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                                         |
-| Filename            | ShowCode\_ProdNumber\_AirOrder\_Language\_Proxy\_HD\_FN(if applicable)\_Audio\_Timecode(Clean or VisTC)\_RevisionDate-v#\_(Final or Pre-QC).mov THAM\_101\_AIR\_1\_PROXY\_enUS\_HD\_FN\_2CH\_CLEAN\_20200916\_V4\_FINAL.mov |
+| **Video Codec**     | **H.264**                                                                                                                                                                                                |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container           | MOV or MP4                                                                                                                                                                                               |
+| Picture             | (1) Clean & (1) w/ Vis.TC UR (1) Series Opener Only                                                                                                                                                      |
+| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                                  |
+| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                       |
+| Scan Type           | Progressive scan type                                                                                                                                                                                    |
+| Color Space         | BT.709 Legal Video Range                                                                                                                                                                                 |
+| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                         |
+| Constant Frame Rate | Should Match Master                                                                                                                                                                                      |
+| Native Frame Rate   | Should Match Master                                                                                                                                                                                      |
+| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                      |
+| Filename            | ShowCode_ProdNumber_AirOrder_Language_Proxy_HD_FN(if applicable)\_Audio_Timecode(Clean or VisTC)\_RevisionDate-v#\_(Final or Pre-QC).mov THAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov |
 
 ### 8.6 Audio delivery
 
@@ -726,11 +726,11 @@ All audio should be archived as 24-bit, 48kHz WAV files.
 
 Please see section 8.3.3 for full guidelines on labeling audio files.
 
-ShowCode\_ProdNumber\_Vers\_\_DateLangCode\_MaterialType\_Channel#\_SampleRate\_BitRate\_TC\_Channel.wav
+ShowCode_ProdNumber_Vers__DateLangCode_MaterialType_Channel#\_SampleRate_BitRate_TC_Channel.wav
 
 **Example:**
 
-MAMA\_102\_v04\_enUS\_PM\_Nearfield\_2ch\_48k\_24b\_23976\_LT.wav
+MAMA_102_v04_enUS_PM_Nearfield_2ch_48k_24b_23976_LT.wav
 
 _Roku Best Practices_
 
@@ -756,13 +756,13 @@ English (American, Code: enUS): Subtitles, SDH, & Forced Narrative
 
 **All files should be labeled as follows:**
 
-ShowCode-ProdNumber-LanguageCode\_Format-RevisionDate.srt
+ShowCode-ProdNumber-LanguageCode_Format-RevisionDate.srt
 
 **Filename examples:**
 
-NION-101-enUS\_SDH-20190701
+NION-101-enUS_SDH-20190701
 
-NION-101-enUS\_FN-20190701
+NION-101-enUS_FN-20190701
 
 ### 8.8 Paper deliverables
 
@@ -964,5 +964,3 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 - 5.2.2 – Clarified that Ad Breaks should have no text
 - 7.2 – Updated End Credits section with more detail
 - 8.7.9 – Updated Music Cue Sheet information and point of contact for questions
-
-<br />

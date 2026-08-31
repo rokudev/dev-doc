@@ -117,6 +117,6 @@ end if
 
 ### QueryDeviceInfo ECP command
 
-The ECP [QueryDeviceInfo command](doc:ecp#querydevice-info-example) response now includes a "user-profile-type" field that indicates the profile type for the current user: "kids", "teen", "adult", or "none" (**Kid & Teen Mode** is not enabled or not supported on the device).
+The ECP [QueryDeviceInfo command](doc:external-control-api#querydevice-info-example) response now includes a "user-profile-type" field that indicates the profile type for the current user: "kids", "teen", "adult", or "none" (**Kid & Teen Mode** is not enabled or not supported on the device).
 
 Apps currently do not receive a "teen" value from **Kid & Teen Mode**; it is listed in this document for compatibility with future settings and features.

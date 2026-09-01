@@ -836,7 +836,7 @@ In cases where a paper deliverable is non-applicable to the project, please uplo
 
 ### 9.1 High resolution masters and source material
 
-AWS is Roku’s platform for archiving projects. Roku’s S3 bucket can be accessed via Aspera Shares. Note that this is separate destination from the Aspera Ingest upload. A Roku Post Manager will request email addresses and names of those who will be uploading archival assets to the the designated archival show folder.
+AWS is Roku’s platform for archiving projects. Roku’s S3 bucket can be accessed via Aspera Shares. Note that this is separate destination from the Aspera Ingest upload. A Roku Post Manager will request email addresses and names of those who will be uploading archival assets to the designated archival show folder.
 
 Reach out to Roku Post if you have not received access to Aspera credentials.
 

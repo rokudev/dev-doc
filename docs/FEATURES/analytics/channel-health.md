@@ -14,7 +14,7 @@ next:
 
 You can use the App Health Report to examine the number and type of crashes for your app to understand how the app is performing. This report can be especially helpful around the time of a new release for your app when a spike in errors may indicate the need to either rollback or quickly update your app version to prevent the user experience from degrading substantially. Included in this report is a crash log showing BrightScript errors.
 
-This reports helps you identify products experiencing the most BrightScript crashes. Crashes are measured in total counts as well as normalized for the total number of devices and streaming hours.  The higher the count and normalized  measurement, the more opportunity for improvement.  Counts and normalized measurements should always be interpreted together.  A relatively high count alone may be more indicative of the size of the install base, while a high normalized measurement could be indicative of a particularly problematic minority of the install base.
+This report helps you identify products experiencing the most BrightScript crashes. Crashes are measured in total counts as well as normalized for the total number of devices and streaming hours.  The higher the count and normalized  measurement, the more opportunity for improvement.  Counts and normalized measurements should always be interpreted together.  A relatively high count alone may be more indicative of the size of the install base, while a high normalized measurement could be indicative of a particularly problematic minority of the install base.
 
 Analyzing patterns in crashes will help you find ways to improve the user experience.  For example, video start times and rebuffering have been shown to be highly predictive of time spent streaming and are strong indicators of the overall user experience in the app.  If the dashboard reveals that videos are slower to start on certain devices or that rebuffers or crashes occur more frequently, you might focus your troubleshooting on those devices to improve your overall app stability and user experience.
 
@@ -35,7 +35,7 @@ The band of metrics below FILTERS shows the summary statistics based on what you
 
   - **Devices with Channel Crashes** - percentage of unique devices that have streamed in your app which have experienced a BrightScript crash in the selected Time Period; the lower, the better
   - **Channel Crashes per Streaming Hour** - count of BrightScript crashes normalized for total streaming hours; the lower the better
-  - **Average Video Start Time (seconds)** - average time required video content to start streaming; the lower, the better
+  - **Average Video Start Time (seconds)** - average time required for video content to start streaming; the lower, the better
   - **Average Bitrate (Megabits)** - the average number of bits per second streamed in your app; the higher, the better
   - **Average Rebuffers per Device** - average number of rebuffers per unique device that has streamed in your app; the fewer, the better
   - **Buffering Time as % of Total Streaming Time** - effectively the ratio of time spent waiting on content to stream vs. total streaming time; the lower the better

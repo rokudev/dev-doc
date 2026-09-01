@@ -45,7 +45,7 @@ Some elementary stream formats can be streamed directly without encapsulating th
 ## Adaptive streaming protocols
 
 Network speeds can vary over time; therefore, it is important to provide multiple
-video streams of varying quality to provide the best experience to your viewers is. Roku devices can then automatically select the best streaming quality based on the viewer's network connection.
+video streams of varying quality to provide the best experience to your viewers. Roku devices can then automatically select the best streaming quality based on the viewer's network connection.
 
 Roku supports the following widely-used standard formats for adaptive bit rate switching:
 
@@ -277,7 +277,7 @@ For typical streaming video applications, we recommend a range of about 400Kbps 
 
 > If the content contains a surround sound track, AAC 2-channel stereo must be provided as a backup audio track.
 
-All devices do not support 1080p60 playback; therefore, include a high-quality 720p60 or 1080p24/30 encoding; otherwise, users with these devices may not get a good experience, even under excellent network conditions.
+Not all devices support 1080p60 playback; therefore, include a high-quality 720p60 or 1080p24/30 encoding; otherwise, users with these devices may not get a good experience, even under excellent network conditions.
 
 The ideal bitrate ladder is as follows:
 

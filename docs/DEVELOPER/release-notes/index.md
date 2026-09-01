@@ -51,7 +51,7 @@ The [**roTimeSpan** node](doc:rotimespan) now includes [**totalMillisecondsLong(
 
 ##### New roAnimatedImage component includes functions for rotating and scaling around an arbitrary point
 
-The interface for the new [**roAnimatedImage** component](doc:roanimatedimage) includes a [**SetPretranslation()** function](doc:ifanimatedimage#setpretranslationx-as-int-y-as-int-as-void) that enables you to rotate and scale images around their center. You can also call [**GetPretranslationX()**](doc:ifanimatedimage#getpretranslationx-as-int) and [**GetPretranslationY()**](doc:ifanimatedimage#getpretranslationy-as-int)**&#x20;**&#x66;unctions to get the the x and y components of the pretranslation value.&#x20;
+The interface for the new [**roAnimatedImage** component](doc:roanimatedimage) includes a [**SetPretranslation()** function](doc:ifanimatedimage#setpretranslationx-as-int-y-as-int-as-void) that enables you to rotate and scale images around their center. You can also call [**GetPretranslationX()**](doc:ifanimatedimage#getpretranslationx-as-int) and [**GetPretranslationY()**](doc:ifanimatedimage#getpretranslationy-as-int)**&#x20;**&#x66;unctions to get the x and y components of the pretranslation value.&#x20;
 
 ## Roku OS 15.2
 
@@ -323,7 +323,7 @@ Here is the list of key developer-facing Roku OS 13.0 updates:
 
 #### BrightScript APIs
 
-- [**Maximum available memory query**](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) —  The **roAppMemoryMonitor** component includes a new [**GetChannelMemoryLimit** () function](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) that returns how much foreground and background memory the app may use and the maximum amount of memory that the RokuOS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics ). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
+- [**Maximum available memory query**](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) —  The **roAppMemoryMonitor** component includes a new [**GetChannelMemoryLimit** () function](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getchannelmemorylimit-as-object) that returns how much foreground and background memory the app may use and the maximum amount of memory that the Roku OS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics ). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
 
 - [**App exit query**](/docs/references/brightscript/interfaces/ifappmanager.md#getlastexitinfo-as-object) — The **roAppManager** component includes a new [**GetLastExitInfo**() function](/docs/references/brightscript/interfaces/ifappmanager.md#getlastexitinfo-as-object) that returns an exit code indicating why an app was terminated. This helps developers monitor and debug memory issues with their apps. The last exit information is provided for only the 10 most recent exits across all apps, and exit information does not persist across device reboots.
 
@@ -561,7 +561,7 @@ Below is a list of key developer-facing Roku OS 10.5 updates:
 
 #### Roku Pay APIs
 
-- [**ChannelStore subscription recovery**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) (also available in Roku OS 10.0) — Developers can now directly use the ChannelStore API to check whether a subscription is in recovery. When a subscritpion is in recovery, Roku Pay notifies the customer once a day for multiple consecutive days (typically three) to update their method of payment in order to renew the subscription, and it attempts to charge the customer's method of payment to ensure collection of payment and continuation of service. The [**ChannelStore.getAllPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) and [**getPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) commands now return a **status** field and an **inDunning** flag to determine whether a subscription is in the dunning state and therefore should be placed on hold. Previously, developers had to pass the **transactionId** returned by the **getAllPurchases** and **getPurchases** commands into a Roku Pay **validate-transaction** API call to determine whether a subscription was in recovery.
+- [**ChannelStore subscription recovery**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) (also available in Roku OS 10.0) — Developers can now directly use the ChannelStore API to check whether a subscription is in recovery. When a subscription is in recovery, Roku Pay notifies the customer once a day for multiple consecutive days (typically three) to update their method of payment in order to renew the subscription, and it attempts to charge the customer's method of payment to ensure collection of payment and continuation of service. The [**ChannelStore.getAllPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases) and [**getPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) commands now return a **status** field and an **inDunning** flag to determine whether a subscription is in the dunning state and therefore should be placed on hold. Previously, developers had to pass the **transactionId** returned by the **getAllPurchases** and **getPurchases** commands into a Roku Pay **validate-transaction** API call to determine whether a subscription was in recovery.
 
 - [**Instant Signup purchase flag for Roku Pay APIs**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) (also available in Roku OS 10.0) — Developers can now identify whether Roku Pay subscription purchases originated from Instant Signup. The ChannelStore node [**getPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getpurchases) and [**getAllPurchases**](/docs/references/scenegraph/control-nodes/channelstore.md#getallpurchases)) commands, [**roChannelStore.getPurchases**](/docs/references/brightscript/interfaces/ifchannelstore.md#getpurchases-as-void) function, [Roku Pay **validate-transaction** web service](/docs/developer/roku-pay/implementation/roku-web-service.md#validate-transaction), and [Roku Pay **Sale** push notification](/docs/developer/roku-pay/implementation/push-notifications.md#sale) all include a new **purchaseChannel** field that is set to "web" and a **purchaseContext** field that is set to "isu" to indicate that a purchase was made via Instant Signup (for on-device purchases, these fields would be set to "device" and "iap", respectively).
 
@@ -1428,7 +1428,7 @@ Version 5.0 of the Roku OS was released to all second and later generation devic
 #### New in this release
 
 - Updated home screen user interface
-- Increase Brightscript function limit beyond 1024
+- Increase BrightScript function limit beyond 1024
 - Miscellaneous fixes for gaming remotes
 - Memory improvements to the OS
 - Improved ECP security
@@ -1476,7 +1476,7 @@ We appreciate all the hard work the Roku Developer Community has put into develo
 
 #### New in this release
 
-• Roku 2 platform support. • Brightscript Plugin for Eclipse • Updated videoPlayer sample application • All v3.0 beta features are now fully supported on classic models running v3.0 and Roku 2 models running v4.1:
+• Roku 2 platform support. • BrightScript Plugin for Eclipse • Updated videoPlayer sample application • All v3.0 beta features are now fully supported on classic models running v3.0 and Roku 2 models running v4.1:
 
 - BrightScript v3.0 that includes:
   - performance improvements

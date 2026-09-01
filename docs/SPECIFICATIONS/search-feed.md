@@ -16,7 +16,7 @@ The Roku search feed includes the following key features:
 
 * **One feed for all regions**. A single feed may contain region-specific content metadata and rating sources.
 
-* **Content availabilty windows**. A feed may include availability windows for individual content items.
+* **Content availability windows**. A feed may include availability windows for individual content items.
 
 * **Variety of content**. The feed may contain the metadata for movies, television shows, and short-form content (for example, cooking videos, sports highlights, and so on).
 
@@ -512,7 +512,7 @@ If the **asset.type** field is set to "episode" for a content item, provide meta
 
 ### LiveInfo
 
-If the program is a "live" event this field indicates when the actual event is occuring.
+If the program is a "live" event this field indicates when the actual event is occurring.
 
 | Field         | Type   | Description                                                | Required |
 | :------------ | :----- | :--------------------------------------------------------- | :------- |
@@ -658,7 +658,7 @@ Apps in the U.S. Streaming Store with 24/7 live linear streams can participate i
 
 Your search feed may only include channels directly distributed by your app. Do not include channels offered through third-party channel subscriptions (subscriptions or add-ons that require a separate publisher account).
 
-> The live liner integration requires Gracenote Station IDs. Individual live events or channels without Gracenote Station IDs are currently not supported. Roku uses Gracenote EPG and GSD data (schedule of event IDs). Publishers are responsiiblwe for contacting Gracenote to get their Station IDs.
+> The live linear integration requires Gracenote Station IDs. Individual live events or channels without Gracenote Station IDs are currently not supported. Roku uses Gracenote EPG and GSD data (schedule of event IDs). Publishers are responsible for contacting Gracenote to get their Station IDs.
 
 ### Live stream sample feed
 

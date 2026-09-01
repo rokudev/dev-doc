@@ -181,7 +181,7 @@ Each of the values listed in the graph is described as follows:
     </tr>
     <tr>
       <td>Swap</td>
-      <td>The total amount of app process memory swapped out to 'disk' (RokuOS uses ZRAM 'disk'). This value varies for different Roku device models.</td>
+      <td>The total amount of app process memory swapped out to 'disk' (Roku OS uses ZRAM 'disk'). This value varies for different Roku device models.</td>
     </tr>
     <tr>
       <td>Anonymous</td>

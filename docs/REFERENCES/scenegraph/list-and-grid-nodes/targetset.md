@@ -42,7 +42,7 @@ The TargetSet node class is used to specify a set of target regions where items 
 <td>integer</td>
 <td>-1</td>
 <td>READ_WRITE</td>
-<td>Identifies the index of an element of the targetRects array that will be treated as the region occupied by the focus item. The default of of -1 indicates that the TargetGroup's current focus index will not be changed when the TargetGroup is set to use the TargetSet to define its target regions.</td>
+<td>Identifies the index of an element of the targetRects array that will be treated as the region occupied by the focus item. The default of -1 indicates that the TargetGroup's current focus index will not be changed when the TargetGroup is set to use the TargetSet to define its target regions.</td>
 </tr>
 <tr>
 <td>color</td>

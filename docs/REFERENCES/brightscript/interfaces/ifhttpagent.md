@@ -105,7 +105,7 @@ Initializes the Roku device's built-in client certificate for use in mutual TLS 
 
 #### Return Value
 
-A flag indicating whether the object sent to to the Roku client certificate was successfully initialized.
+A flag indicating whether the object sent to the Roku client certificate was successfully initialized.
 
 ### SetCertificatesFile(path as String) as Boolean
 

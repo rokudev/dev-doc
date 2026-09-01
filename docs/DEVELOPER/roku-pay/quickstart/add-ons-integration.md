@@ -1351,7 +1351,7 @@ When an add-on is canceled, its entitlement is removed from the Roku customer ac
 
 #### On-device subscription management workflow
 
-The following images demonstrate how the on-device add-on management and cancelation workflow can be used to cancel base subscription products and add-ons:
+The following images demonstrate how the on-device add-on management and cancellation workflow can be used to cancel base subscription products and add-ons:
 
 ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/managesub.jpg)
 

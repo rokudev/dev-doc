@@ -29,8 +29,8 @@ Screensavers **cannot** include:
 
 ## Screensaver context
 
-When a screensaver is run, a new Brightscript context is created for screensaver execution. The
-screensaver does not share Brightscript data objects with the streaming app.
+When a screensaver is run, a new BrightScript context is created for screensaver execution. The
+screensaver does not share BrightScript data objects with the streaming app.
 
 The screensaver's [BrightScript Debugger](doc:debugging) uses port 8087.
 

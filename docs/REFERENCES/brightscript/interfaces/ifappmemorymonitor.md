@@ -99,7 +99,7 @@ _Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 **Description**
 
-Returns the amount of foreground and background memory the app may use and the maximum amount of memory that the RokuOS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
+Returns the amount of foreground and background memory the app may use and the maximum amount of memory that the Roku OS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
 
 **Return Value**
 
@@ -109,4 +109,4 @@ An roAssociativeArray that contains the following fields:
 | :----------------------- | :------ | :--------------------------------------------------------------------------------------------------------------------------- |
 | maxForegroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the foreground.                                       |
 | maxBackgroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the background.                                       |
-| maxRokuManagedHeapMemory | Integer | The maximum amount of memory that the RokuOS may allocate on behalf of the app that shows up in the app's heap memory stats. |
+| maxRokuManagedHeapMemory | Integer | The maximum amount of memory that the Roku OS may allocate on behalf of the app that shows up in the app's heap memory stats. |

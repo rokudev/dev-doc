@@ -15,7 +15,7 @@ next:
 An XML-based markup language has been added to the SceneGraph API that
 allows new SceneGraph components to be defined consisting of a set of
 SceneGraph nodes loaded from a declarative description, with interactive
-or animated behaviors added using Brightscript, similar to how HTML and
+or animated behaviors added using BrightScript, similar to how HTML and
 Javascript are used in web development.
 
 Once a XML component has been defined, it can be used just like any of

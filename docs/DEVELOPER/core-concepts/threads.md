@@ -26,7 +26,7 @@ SceneGraph applications support these basic thread types:
 
 ## Thread limits
 
-RokuOS imposes a limit of 100 concurrent threads per running instance of an app. When the instance exceeds 100 threads, a “too many threads” error exception (&h29) is raised; if the app does not catch this exception, app operation is terminated, along with a corresponding stack trace
+Roku OS imposes a limit of 100 concurrent threads per running instance of an app. When the instance exceeds 100 threads, a “too many threads” error exception (&h29) is raised; if the app does not catch this exception, app operation is terminated, along with a corresponding stack trace
 
 In practice, developers should minimize the number of concurrent threads for better app performance.
 

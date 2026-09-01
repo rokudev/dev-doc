@@ -187,7 +187,7 @@ Returns the integer value from parsing the string with the specified
 radix.
 
 Radix should be 2 .. 36 or the special value 0 (which automatically
-identified hexadecimal or octal numbers based on 0x or 0 prefixes
+identifies hexadecimal or octal numbers based on 0x or 0 prefixes
 respectively).
 
 Leading whitespace is ignored then as much of the rest of the string

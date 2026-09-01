@@ -101,7 +101,7 @@ c1(): v2
 init(): v2
 ```
 
-The `rsg_version` entry in your the manifest file defaults to 1.2. To check and test different SceneGraph versions without refactoring your app, see the guide on [Debugging](doc:debugging)
+The `rsg_version` entry in the manifest file defaults to 1.2. To check and test different SceneGraph versions without refactoring your app, see the guide on [Debugging](doc:debugging)
 
 > Support for the [“rsg_version=1.0"](doc:channel-manifest) manifest flag is deprecated as of [Roku OS 8](doc:release-notes#roku-os-8). This deprecation means that the 1.0 features continue to work in [Roku OS 8](doc:release-notes#roku-os-8), but will no longer be supported (and thus should not be expected to work) starting with the next major firmware release. All apps must adopt the [current observer callback](doc:handling-application-events) model in successive firmware updates.
 

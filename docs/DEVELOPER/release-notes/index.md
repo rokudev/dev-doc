@@ -17,9 +17,9 @@ next:
 
 > [Join the Roku beta program](https://rokutestingportal.centercode.com/key/rdbp) to implement new features in the latest Roku OS before the general release.
 
-## Roku OS 16.0
+## Roku OS 16.0 Beta Release
 
-Roku OS 16.0 introduces new SceneGraph APIs that apply GPU-accelerated visual effects such as rounded corners, borders, and gradients to Poster and Rectangle nodes, expose the ArrayGrid focus indicator to apps, and animate array-valued fields.
+Roku OS 16.0 is currently being shared with developer beta partners under non-disclosure agreements (NDAs). This update introduces new SceneGraph APIs that apply GPU-accelerated visual effects such as rounded corners, borders, and gradients to Poster and Rectangle nodes, expose the ArrayGrid focus indicator to apps, and animate array-valued fields.
 
 New BrightScript APIs add server-sent events support to the roUrlTransfer component and enable WebSocket connections to remote WebSocket server URLs for bi-directional communication. Roku OS 16.0 also relaxes conditional compilation rules, increases the maximum BrightScript stack depth, and changes several ifDraw2D functions to return a Boolean success value. This release also adds a **SetDrawable()** function to the **roTextureRequest** component.
 
@@ -35,21 +35,21 @@ A new **Effect** node applies predefined shader effects to existing SceneGraph n
 
 On platforms without a shader-capable GPU, or when disabled by configuration, the **Effect** node does nothing and the node to which it is applied renders as though the Effect were not present. Check the read-only **supported** field to determine availability.
 
-| Field | Type | Description |
-| --- | --- | --- |
-| supported | boolean | Read-only. Whether effects are supported on this platform. |
-| borderRadius | array of float | 0, 1, or 4 floats specifying corner radii clockwise from the top right, in pixels. Other lengths are silently truncated to length 1 or 4. |
-| borderWidth | float | The width in pixels of a border drawn around the edge. |
-| borderPadding | float | Padding between the content rect and the border stroke, in pixels. Default is 0. |
-| borderColor | color | The color of the border. |
-| gradientColors | array of color | At least 2 and at most 8 color values interpolated along a gradient. Indexes 8 or higher are ignored. |
-| gradientStops | array of float | The fractional distances along the gradient of each color. If not specified, even distribution is assumed. If specified, it should have the same length as gradientColors, and is truncated or ignored if it does not. |
-| gradientAngle | float | The angle of a linear gradient, in degrees, clockwise from "up". Default is 0. |
-| gradientCentre | vector2d | The center point of a radial gradient, normalized between 0 and 1. Values outside that range work, but are outside the node. |
-| gradientRadius | vector2d | The radius of a radial gradient in the x and y directions, proportional to the node size. Default is 1.0. |
-| gradientStyle | string | Gradient fill style applied over the content area: "none" (default), "linear", or "radial". |
-| gradientFillContent | boolean | Applies the specified gradient to the content area. Default is true. |
-| gradientFillBorder | boolean | Applies the specified gradient to the border area. Default is false. Both fields may be set to true. |
+| Field               | Type           | Description                                                                                                                                                                                                            |
+| ------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| supported           | boolean        | Read-only. Whether effects are supported on this platform.                                                                                                                                                             |
+| borderRadius        | array of float | 0, 1, or 4 floats specifying corner radii clockwise from the top right, in pixels. Other lengths are silently truncated to length 1 or 4.                                                                              |
+| borderWidth         | float          | The width in pixels of a border drawn around the edge.                                                                                                                                                                 |
+| borderPadding       | float          | Padding between the content rect and the border stroke, in pixels. Default is 0.                                                                                                                                       |
+| borderColor         | color          | The color of the border.                                                                                                                                                                                               |
+| gradientColors      | array of color | At least 2 and at most 8 color values interpolated along a gradient. Indexes 8 or higher are ignored.                                                                                                                  |
+| gradientStops       | array of float | The fractional distances along the gradient of each color. If not specified, even distribution is assumed. If specified, it should have the same length as gradientColors, and is truncated or ignored if it does not. |
+| gradientAngle       | float          | The angle of a linear gradient, in degrees, clockwise from "up". Default is 0.                                                                                                                                         |
+| gradientCentre      | vector2d       | The center point of a radial gradient, normalized between 0 and 1. Values outside that range work, but are outside the node.                                                                                           |
+| gradientRadius      | vector2d       | The radius of a radial gradient in the x and y directions, proportional to the node size. Default is 1.0.                                                                                                              |
+| gradientStyle       | string         | Gradient fill style applied over the content area: "none" (default), "linear", or "radial".                                                                                                                            |
+| gradientFillContent | boolean        | Applies the specified gradient to the content area. Default is true.                                                                                                                                                   |
+| gradientFillBorder  | boolean        | Applies the specified gradient to the border area. Default is false. Both fields may be set to true.                                                                                                                   |
 
 **Example**
 
@@ -587,7 +587,7 @@ Here is the list of key developer-facing Roku OS 11.5 updates:
 
 - **Playback UX** — Roku's SceneGraph [Video](/docs/references/scenegraph/media-playback-nodes/video.md) and [Content](/docs/developer/getting-started/architecture/content-metadata.md) nodes include new fields that enable developers to integrate playback features for the trickplay and pause screen experiences such as audio and subtitle selection, playlist features such as skip, next, and queues, and autoplay recommendation features such "More like this"/"Because you watched". Customers have become accustomed to this playback experience on The Roku Channel, and it is now available to apps across the platform.
 
-- **[Content.secondaryTitle](/docs/developer/getting-started/architecture/content-metadata.md#descriptive-attributes)**. Adds a secondary title for the video content. This field can be used to display the release year of movies, for example.
+- [Content.secondaryTitle](/docs/developer/getting-started/architecture/content-metadata.md#descriptive-attributes). Adds a secondary title for the video content. This field can be used to display the release year of movies, for example.
 
 - [**Video.playbackActionButtons**](/docs/references/scenegraph/media-playback-nodes/video.md#playback-fields). Shows the buttons and other specified UI elements on the pause screen at the start of playback. This field includes properties for the button text, icon, and status (enabled/disabled). Related fields identify which pause screen button is selected and has key focus, and sets the button color, text color, and background color based on whether the button has key focus.
 
@@ -627,7 +627,7 @@ Here is the list of key developer-facing Roku OS 11.5 updates:
 
 - [**SDK1 visual screen components sunset**](/docs/references/deprecated-apis.md#deprecated-components-january-1-2018) — The [SDK1 visual screen components that were deprecated in 2017](https://blog.roku.com/developer/legacy-sdk) have been completely removed from the Roku OS. As a result, apps that still had these [sunset components](https://developer.roku.com/docs/references/deprecated-apis.md#deprecated-components-january-1-2018) as of August 22nd were disabled and removed from the Streaming Store. These apps can no longer be installed or launched unless they were migrated to SDK2 (SceneGraph).
 
-- **[roUrlTransfer.enableFreshConnection()](/docs/references/deprecated-apis.md#rourltransferenablefreshconnection)** — The Roku OS no longer supports the [**roUrlTransfer.enableFreshConnection()** function](/docs/references/brightscript/interfaces/ifurltransfer.md#enablefreshconnectionenable-as-boolean-as-boolean). Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).
+- [roUrlTransfer.enableFreshConnection()](/docs/references/deprecated-apis.md#rourltransferenablefreshconnection) — The Roku OS no longer supports the [**roUrlTransfer.enableFreshConnection()** function](/docs/references/brightscript/interfaces/ifurltransfer.md#enablefreshconnectionenable-as-boolean-as-boolean). Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).
 
 ## Roku OS 11.0
 
@@ -645,15 +645,15 @@ Below is a list of key developer-facing Roku OS 11.0 updates:
 
 - **New standard dialog framework nodes** — Roku's Standard Dialog Framework includes the following new nodes that enable developers to decorate or annotate custom dialogs and highlight the grouping of radio button and checkbox options in them:
 
-  - **[StdDlgMultiStyleTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-multi-style-text-item.md)**. A line of text with multiple styles in the content area of a custom dialog. The text may include, for example, plain and bold characters, different fonts, multiple colors, and/or emojis.
+  - [StdDlgMultiStyleTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-multi-style-text-item.md). A line of text with multiple styles in the content area of a custom dialog. The text may include, for example, plain and bold characters, different fonts, multiple colors, and/or emojis.
 
   - [**StdDlgSideCardArea**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-side-card-area.md).  A freeform area on the right or left side of a custom dialog that developers can use to display images or notes.
 
-  - **[StdDlgActionCardItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-action-card-item.md)**. Highlighting for the child items in the content area of a custom dialog. This node enables developers to add a "more info" arrow icon, radio button icon, or check box icon to the items in the content area.
+  - [StdDlgActionCardItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-action-card-item.md). Highlighting for the child items in the content area of a custom dialog. This node enables developers to add a "more info" arrow icon, radio button icon, or check box icon to the items in the content area.
 
   - [**StdDlgItemGroup**](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-item-group.md). Visual grouping for a set of StdDlgAreaBase child nodes in a custom dialog. Developers can use this node to reduce the vertical spacing between the StdDlgItemBase child nodes in the dialog.
 
-- **[Option for Label and TextEditBox nodes to display the end of overflowing text](/docs/references/scenegraph/label-nodes/label.md#fields)** — The [**Label**](/docs/references/scenegraph/label-nodes/label.md#fields) and [**TextEditBox**](docs/references/scenegraph/widget-nodes/texteditbox.md) nodes now include a **leadingEllipsis** flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog". When the flag is false, the start of the text is shown ("the quick brown fox jumps...").
+- [Option for Label and TextEditBox nodes to display the end of overflowing text](/docs/references/scenegraph/label-nodes/label.md#fields) — The [**Label**](/docs/references/scenegraph/label-nodes/label.md#fields) and [**TextEditBox**](docs/references/scenegraph/widget-nodes/texteditbox.md) nodes now include a **leadingEllipsis** flag that enables developers to specify whether to show the end or beginning of text that overflows its available width. When this flag is set to true, the end of the text is shown. For example, "the quick brown fox jumps over the lazy dog" would be truncated to "...jumps over the lazy dog". When the flag is false, the start of the text is shown ("the quick brown fox jumps...").
 
 - [**Voice keyboard enhancements**](/docs/references/scenegraph/abstract-nodes/dynamic-keyboard-base.md#fields) — The SceneGraph [**DynamicKeyboardBase**](/docs/references/scenegraph/abstract-nodes/dynamic-keyboard-base.md#fields)) node class now includes a **hideTextBox** flag that enables developers to hide a voice keyboard's VoiceTextEditBox.
 
@@ -665,7 +665,7 @@ Below is a list of key developer-facing Roku OS 11.0 updates:
 
 #### Roku Pay APIs
 
-- [**RFI sign-up screen option to display requested customer information**](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) — The [**ChannelStore.requestedUserDataInfo**](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) associative array now includes an optional **forceShowData** flag. When this flag is enabled, the RFI sign-up screen displays the actual customer information values to be shared with the app instead of just the types of information. For example, if the email address, first name, and last name are requested for sign-ups and the **forceShowData** flag is enabled, the "Let's create your account" RFI screen explicitly lists the customer's actual email address and name in bold text (for example, **Bob** **Smith**, **[bsmith@roku.com](mailto:bsmith@roku.com)**). If this flag is disabled and the customer is in the United States, the RFI screen displays "share your name and email address".
+- [**RFI sign-up screen option to display requested customer information**](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) — The [**ChannelStore.requestedUserDataInfo**](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) associative array now includes an optional **forceShowData** flag. When this flag is enabled, the RFI sign-up screen displays the actual customer information values to be shared with the app instead of just the types of information. For example, if the email address, first name, and last name are requested for sign-ups and the **forceShowData** flag is enabled, the "Let's create your account" RFI screen explicitly lists the customer's actual email address and name in bold text (for example, **Bob** **Smith**, [bsmith@roku.com](mailto:bsmith@roku.com)). If this flag is disabled and the customer is in the United States, the RFI screen displays "share your name and email address".
 
 - **Direct access to RFI screen for authenticated free and AVOD apps** — Developers of authenticated free and AVOD apps can now use the ChannelStore [**getUserData**](/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata) and [**getPartialUserData**](/docs/references/brightscript/interfaces/ifchannelstore.md#getpartialuserdataproperties-as-string-requestinfo-as-object-as-object) APIs to display an RFI screen when customers sign up or sign in to the app—without having to first enroll in the [Roku Partner Payouts Program](/docs/developer/roku-pay/quickstart/partner-payouts.md). In this case, the RFI sign-up screen can request or display the customer's email address, phone number, and zip code; the RFI sign-in screen can request or display the customer's email address and phone number.
 
@@ -689,7 +689,7 @@ Below is a list of key developer-facing Roku OS 11.0 updates:
 
 #### Tools
 
-- [**ECP query commands for debugging channels**](/docs/developer/dev-tools/external-control-api.md#general-ecp-commands) — Developers can use the following new ECP query commands to help debug their apps: [**query/chanperf**](/docs/developer/dev-tools/external-control-api.md#querychanperf-example), [**query/r2d2-bitmaps**](/docs/developer/dev-tools/external-control-api.md#queryr2d2-bitmaps-example), **and [query/sgnodes/\[all | root | nodes?node-id=_nodeId_\]](/docs/developer/dev-tools/external-control-api.md#querysgnodesall-example)**. Developers can leverage these debugging commands, which were previously only available via the debug console, in their web services.
+- [**ECP query commands for debugging channels**](/docs/developer/dev-tools/external-control-api.md#general-ecp-commands) — Developers can use the following new ECP query commands to help debug their apps: [**query/chanperf**](/docs/developer/dev-tools/external-control-api.md#querychanperf-example), [**query/r2d2-bitmaps**](/docs/developer/dev-tools/external-control-api.md#queryr2d2-bitmaps-example), **and&#x20;**[query/sgnodes/\[all | root | nodes?node-id=_nodeId_\]](/docs/developer/dev-tools/external-control-api.md#querysgnodesall-example). Developers can leverage these debugging commands, which were previously only available via the debug console, in their web services.
 
 - [**BrightScript debug protocol updates**](/docs/developer/debugging/socket-based-debugger.md#debugging-target-startup-sequence) — The BrightScript debug protocol includes the following new features: a **platform_revision_timestamp** field for the initial handshake, a **packet_length** field that is included with all packets from the debugger, and runtime errors for the [EXECUTE debug response format](/docs/developer/debugging/socket-based-debugger.md#debugger-response-format).
 
@@ -797,15 +797,15 @@ Below is a list of key developer-facing Roku OS 10.0 updates:
 
 #### API
 
-- **[Request for Information (RFI) screen enhanced with optimized displays for sign-ins and sign-ups](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo)** — Developers can now specify whether the Roku Pay RFI screen displays sign-up or sign-in-related information. For example, if the RFI screen is configured for sign-ins, it displays a "Sign in" title and lists only the customer's email address and/or phone number. Apps using SceneGraph ChannelStore node can use the **[requestedUserDataInfo](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo)** field when sending the [**getUserData** command](/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata) to configure the RFI screen for sign-ins; apps using the roChannelStore component can set the new "requestInfo" parameter in the [**GetPartialUserData()** method](/docs/references/brightscript/interfaces/ifchannelstore.md#getpartialuserdataproperties-as-string-requestinfo-as-object-as-object). No additional steps are required for displaying sign-up information on the RFI screen.
+- [Request for Information (RFI) screen enhanced with optimized displays for sign-ins and sign-ups](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) — Developers can now specify whether the Roku Pay RFI screen displays sign-up or sign-in-related information. For example, if the RFI screen is configured for sign-ins, it displays a "Sign in" title and lists only the customer's email address and/or phone number. Apps using SceneGraph ChannelStore node can use the [requestedUserDataInfo](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdatainfo) field when sending the [**getUserData** command](/docs/references/scenegraph/control-nodes/channelstore.md#getuserdata) to configure the RFI screen for sign-ins; apps using the roChannelStore component can set the new "requestInfo" parameter in the [**GetPartialUserData()** method](/docs/references/brightscript/interfaces/ifchannelstore.md#getpartialuserdataproperties-as-string-requestinfo-as-object-as-object). No additional steps are required for displaying sign-up information on the RFI screen.
 
-- **[New "birth" and "gender" return values added to ChannelStore](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdata)** — The **[ChannelStore.requestedUserData](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdata)** field now lets developers request the birthdate (MM/YY) and gender associated with the customer's Roku account, and return these values in the **[userData](/docs/references/scenegraph/control-nodes/channelstore.md#userdata)** field. Similarly, the roChannelStore **[GetUserData()](/docs/references/brightscript/interfaces/ifchannelstore.md#getuserdata-as-object) and [GetPartialUserData()](/docs/references/brightscript/interfaces/ifchannelstore.md#getpartialuserdataproperties-as-string-requestinfo-as-object-as-object)** methods can now be used to retrieve the customer's birthdate and gender.
+- [New "birth" and "gender" return values added to ChannelStore](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdata) — The [ChannelStore.requestedUserData](/docs/references/scenegraph/control-nodes/channelstore.md#requesteduserdata) field now lets developers request the birthdate (MM/YY) and gender associated with the customer's Roku account, and return these values in the [userData](/docs/references/scenegraph/control-nodes/channelstore.md#userdata) field. Similarly, the roChannelStore [GetUserData()](/docs/references/brightscript/interfaces/ifchannelstore.md#getuserdata-as-object)**&#x20;and&#x20;**[GetPartialUserData()](/docs/references/brightscript/interfaces/ifchannelstore.md#getpartialuserdataproperties-as-string-requestinfo-as-object-as-object) methods can now be used to retrieve the customer's birthdate and gender.
 
-- **[roChannelStore.getUserRegionData() method for getting customer's location](/docs/references/brightscript/interfaces/ifchannelstore.md#getuserregiondata-as-object)** — The **[roChannelStore.getUserRegionData()](/docs/references/brightscript/interfaces/ifchannelstore.md#getuserregiondata-as-object)** method can be used to retrieve the state, zip code, and country associated with the customer's Roku account. (Also available in Roku OS 9.4)
+- [roChannelStore.getUserRegionData() method for getting customer's location](/docs/references/brightscript/interfaces/ifchannelstore.md#getuserregiondata-as-object) — The [roChannelStore.getUserRegionData()](/docs/references/brightscript/interfaces/ifchannelstore.md#getuserregiondata-as-object) method can be used to retrieve the state, zip code, and country associated with the customer's Roku account. (Also available in Roku OS 9.4)
 
-- **[New "error.generic" status added to roInput.EventResponse() method for unhandled voice commands](/docs/references/brightscript/interfaces/ifinput.md#eventresponseroassociativearray-aa-as-boolean)**. The [roInput.EventResponse()](/docs/references/brightscript/interfaces/ifinput.md#eventresponseroassociativearray-aa-as-boolean) method now takes an "error.generic" status that can be used when an app does not have any media to fulfill a voice command (for example, if the app receives a "forward" or "next" command, but there is no content to fast forward or play next, respectively). Passing this status displays "That is not available" in the Roku Voice heads-up display.
+- [New "error.generic" status added to roInput.EventResponse() method for unhandled voice commands](/docs/references/brightscript/interfaces/ifinput.md#eventresponseroassociativearray-aa-as-boolean). The [roInput.EventResponse()](/docs/references/brightscript/interfaces/ifinput.md#eventresponseroassociativearray-aa-as-boolean) method now takes an "error.generic" status that can be used when an app does not have any media to fulfill a voice command (for example, if the app receives a "forward" or "next" command, but there is no content to fast forward or play next, respectively). Passing this status displays "That is not available" in the Roku Voice heads-up display.
 
-- **[roDeviceInfo internet connectivity status methods](/docs/references/brightscript/interfaces/ifdeviceinfo.md#enableinternetstatuseventenable-as-boolean-as-boolean)** — **[EnableInternetStatusEvent()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#enableinternetstatuseventenable-as-boolean-as-boolean)**, **[GetInternetStatus()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getinternetstatus-as-boolean)**, and **[ForceInternetStatusCheck()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#forceinternetstatuscheck-as-boolean)** can all be used to retrieve the connectivity status of the device.
+- [roDeviceInfo internet connectivity status methods](/docs/references/brightscript/interfaces/ifdeviceinfo.md#enableinternetstatuseventenable-as-boolean-as-boolean) — [EnableInternetStatusEvent()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#enableinternetstatuseventenable-as-boolean-as-boolean), [GetInternetStatus()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getinternetstatus-as-boolean), and [ForceInternetStatusCheck()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#forceinternetstatuscheck-as-boolean) can all be used to retrieve the connectivity status of the device.
 
 - [**The time reported by ifDateTime.toISOString() now resolves to milliseconds**](/docs/references/brightscript/interfaces/ifdatetime.md#toisostring-as-string)**.** (Also available in Roku OS 9.4)
 
@@ -815,31 +815,31 @@ Below is a list of key developer-facing Roku OS 10.0 updates:
 
 - **Roku SceneGraph (RSG) performance enhancements** — Various RSG data structures have been optimized, and off-screen content nodes are now being managed on an app's behalf. This reduces app memory consumption, allowing internal cache mechanisms to be more effective in improving performance.
 
-- **[Support for UTCTiming in DASH](/docs/specs/media/dash-if.md#utctiming)** — The UTCTiming element is used in DASH manifests to allow the clocks employed by the server and player to remain in close synchronization. Without this, when there is a timing discrepancy of even as little as 100ms between the local and server clocks live video play can freeze, and audio and video can fall out of sync, as the player requests unavailable, out-of-window segments.
+- [Support for UTCTiming in DASH](/docs/specs/media/dash-if.md#utctiming) — The UTCTiming element is used in DASH manifests to allow the clocks employed by the server and player to remain in close synchronization. Without this, when there is a timing discrepancy of even as little as 100ms between the local and server clocks live video play can freeze, and audio and video can fall out of sync, as the player requests unavailable, out-of-window segments.
 
 - [**ForwardDashQueryStringParams content metadata field**](/docs/developer/getting-started/architecture/content-metadata.md#playback-configuration-attributes) — This field enables apps to forward DASH manifest query parameters to segment URLS.
 
-- **[Video node seekMode field allows apps to specify maximum available seek accuracy](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields).** The app can set this field to "accurate," in order to achieve accuracy to the exact requested time, if supported by the player; otherwise seek is accurate to the nearest sync frame. (Also available in Roku OS 9.4)
+- [Video node seekMode field allows apps to specify maximum available seek accuracy](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields)**.** The app can set this field to "accurate," in order to achieve accuracy to the exact requested time, if supported by the player; otherwise seek is accurate to the nearest sync frame. (Also available in Roku OS 9.4)
 
-- **[Seek-to-pause is now supported through Video node enhancements](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields).** The bufferingStatus field now includes boolean prebufferDone and time element actualStart, which are used in conjunction with seekMode and playStart to facilitate pausing at a particular point, and resuming playback from that point. (Also available in Roku OS 9.4)
+- [Seek-to-pause is now supported through Video node enhancements](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields)**.** The bufferingStatus field now includes boolean prebufferDone and time element actualStart, which are used in conjunction with seekMode and playStart to facilitate pausing at a particular point, and resuming playback from that point. (Also available in Roku OS 9.4)
 
-- **[SceneGraph Video node PlayStartInfo field now contains additional timestamp information](/docs/references/scenegraph/media-playback-nodes/video.md#playback-fields)** for start of manifest and DRM loading, DRM license acquisition, and pre-buffering, which supplements already available duration information for those processes.
+- [SceneGraph Video node PlayStartInfo field now contains additional timestamp information](/docs/references/scenegraph/media-playback-nodes/video.md#playback-fields) for start of manifest and DRM loading, DRM license acquisition, and pre-buffering, which supplements already available duration information for those processes.
 
-- **[New SceneGraph Animation node field willBeSkipped](/docs/references/scenegraph/animation-nodes/animation.md#fields)**. This field indicates whether an animation runs or jumps to the end (effectively skipping the animation and rendering it in its final state).
+- [New SceneGraph Animation node field willBeSkipped](/docs/references/scenegraph/animation-nodes/animation.md#fields). This field indicates whether an animation runs or jumps to the end (effectively skipping the animation and rendering it in its final state).
 
-- **[DRM is no longer required for AES-128 key exchange using HLS and DASH](/docs/specs/media/content-protection.md).**
+- [DRM is no longer required for AES-128 key exchange using HLS and DASH](/docs/specs/media/content-protection.md)**.**
 
-- **[The HLS ASSOC-LANGUAGE audio rendition attribute is now supported](/docs/developer/media-playback/trick-mode/hls-and-dash.md#assoc-language-audio-rendition-attribute).** This **optional** attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect (e.g., Cantonese/"yue"), is represented in forced subtitles by a different but associated language (e.g., Traditional Chinese/"zh_HANT").
+- [The HLS ASSOC-LANGUAGE audio rendition attribute is now supported](/docs/developer/media-playback/trick-mode/hls-and-dash.md#assoc-language-audio-rendition-attribute)**.** This **optional** attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect (e.g., Cantonese/"yue"), is represented in forced subtitles by a different but associated language (e.g., Traditional Chinese/"zh_HANT").
 
 - **The DASH Role and Accessibility attributes may now be used in Adaptation Sets to make various audio tracks available for viewer selection.** This brings Roku OS into closer conformance with the DASH-IF specification.
 
-- **[UI graphics resolution available through External Control Protocol (ECP)](/docs/developer/dev-tools/external-control-api.md#general-ecp-commands)** —The [`query/device-info` ECP command](/docs/developer/dev-tools/external-control-api.md#querydevice-info-example) now provides a UI-resolution field. (Also available in Roku OS 9.4)
+- [UI graphics resolution available through External Control Protocol (ECP)](/docs/developer/dev-tools/external-control-api.md#general-ecp-commands) —The [`query/device-info` ECP command](/docs/developer/dev-tools/external-control-api.md#querydevice-info-example) now provides a UI-resolution field. (Also available in Roku OS 9.4)
 
 #### Architecture
 
-- **[Dynamic voice-enabled keyboards](/docs/references/scenegraph/abstract-nodes/dynamic-keyboard-base.md)** — Developers can create keyboards, mini keyboards, and pin pads that can be controlled by voice. This helps speed up on-device sign-ups and sign-ins by enabling customers to speak their PIN codes when subscribing to apps and their passwords when logging in. A sample app demonstrating this feature is available [here](https://github.com/rokudev/dynamic-voice-enabled-keyboards).
+- [Dynamic voice-enabled keyboards](/docs/references/scenegraph/abstract-nodes/dynamic-keyboard-base.md) — Developers can create keyboards, mini keyboards, and pin pads that can be controlled by voice. This helps speed up on-device sign-ups and sign-ins by enabling customers to speak their PIN codes when subscribing to apps and their passwords when logging in. A sample app demonstrating this feature is available [here](https://github.com/rokudev/dynamic-voice-enabled-keyboards).
 
-- **[Standard dialog framework](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog-framework-overview.md)** — Developers can use new pre-built modal pop-up dialogs and build custom ones. A sample app demonstrating this feature is available [here](https://github.com/rokudev/standard-dialog-framework).
+- [Standard dialog framework](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog-framework-overview.md) — Developers can use new pre-built modal pop-up dialogs and build custom ones. A sample app demonstrating this feature is available [here](https://github.com/rokudev/standard-dialog-framework).
 
   These new pre-built and custom standard keyboards are summarized as follows:
 
@@ -851,29 +851,29 @@ Below is a list of key developer-facing Roku OS 10.0 updates:
 
     The **voiceEntryType** field of the [VoiceTextEditBox](/docs/references/scenegraph/dynamic-voice-keyboard-nodes/voice-text-edit-box.md) node.<br /> The **domain** field of the [DynamicKeyboardBase](/docs/references/scenegraph/abstract-nodes/dynamic-keyboard-base.md) node.<br /> The **keyboardDomain** field of the [StandardKeyboardDialog](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-keyboard-dialog.md) node.<br /> The **bulletType** field of the [StdDlgBulletTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-bullet-text-item.md) node.<br /> The **graphicAlign** field of the [StdDlgGraphicItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-graphic-item.md) node.<br /> The **keyLayout** field of the [StdDlgKeyboardItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-keyboard-item.md) node.<br /> The **namedTextStyle** field of the [StdDlgTextItem](/docs/references/scenegraph/standard-dialog-framework-nodes/std-dlg-text-item.md) node.
 
-- **[Enhanced Visual Search Results for Roku Voice](/docs/developer/discovery/search/implementing-search.md#visual-search-results-for-roku-voice)** - When users ask for content while in an app, the Roku UI displays a partial overlay with content matching the search request. Content from within the active app is listed in the first row of the display if the active app participates in Roku Search. The rows below include matches from other apps.
+- [Enhanced Visual Search Results for Roku Voice](/docs/developer/discovery/search/implementing-search.md#visual-search-results-for-roku-voice) - When users ask for content while in an app, the Roku UI displays a partial overlay with content matching the search request. Content from within the active app is listed in the first row of the display if the active app participates in Roku Search. The rows below include matches from other apps.
 
 - [**Instant Resume**](/docs/developer/media-playback/instant-resume.md) — Developers can implement Instant Resume in their app to save their current state upon exit and then continue playback upon relaunch. This improves the user experience by letting viewers quickly get back to the content they were watching without having to find it first.
 
-- **[The number of concurrent threads per running instance of an app is now limited to 100](/docs/developer/core-concepts/threads.md#thread-limits)** — When the instance exceeds 50 concurrent threads, Roku displays a warning on the port 8085 console. When the instance exceeds 100 threads, a "too many threads" error exception (\&h29) is raised; if the app does not catch this exception, app operation is terminated, along with a corresponding stack trace. Task threads that have properly terminated and are no longer running will not count towards the limit, even if the task object itself is still valid (e.g., the state is stopped or done). As a best practice, developers should take steps to ensure that their apps always remain well under the 50-thread "warning" limit.
+- [The number of concurrent threads per running instance of an app is now limited to 100](/docs/developer/core-concepts/threads.md#thread-limits) — When the instance exceeds 50 concurrent threads, Roku displays a warning on the port 8085 console. When the instance exceeds 100 threads, a "too many threads" error exception (\&h29) is raised; if the app does not catch this exception, app operation is terminated, along with a corresponding stack trace. Task threads that have properly terminated and are no longer running will not count towards the limit, even if the task object itself is still valid (e.g., the state is stopped or done). As a best practice, developers should take steps to ensure that their apps always remain well under the 50-thread "warning" limit.
 
-- [**New manifest attribute pause_aware**](/docs/developer/getting-started/architecture/channel-manifest.md#special-purpose-attributes) **and corresponding [pause button event](/docs/references/scenegraph/component-functions/onkeyevent.md)**— Use the new key event when the app strictly needs to pause, and not toggle between play and pause (as might happen, for example, during trickplay, in situations where the proper behavior is to leave fast-forward or rewind mode but _not_ immediately begin playing).
+- [**New manifest attribute pause_aware**](/docs/developer/getting-started/architecture/channel-manifest.md#special-purpose-attributes) **and corresponding&#x20;**[pause button event](/docs/references/scenegraph/component-functions/onkeyevent.md)— Use the new key event when the app strictly needs to pause, and not toggle between play and pause (as might happen, for example, during trickplay, in situations where the proper behavior is to leave fast-forward or rewind mode but _not_ immediately begin playing).
 
 #### Tools
 
 This release includes three new or updated port 8080 commands:
 
-- **[New chanperf command](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands)** displays memory and CPU utilization of a side-loaded app.
+- [New chanperf command](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands) displays memory and CPU utilization of a side-loaded app.
 
-- **[New remove_plugin command](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands)** that deletes a particular app from the local device _as well as from other devices_ on the same Roku account. The local device, on which the remove_plugin command is executed, must be linked to a Roku account, and deletions elsewhere don't take effect until a device synchronizes with the Streaming Store. Some system capabilities, such as RAF, can be implemented/augmented by the installation of special apps. Especially in beta-test situations, the developer can delete old versions of such channels before installing more recent (or production) versions.
+- [New remove_plugin command](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands) that deletes a particular app from the local device _as well as from other devices_ on the same Roku account. The local device, on which the remove_plugin command is executed, must be linked to a Roku account, and deletions elsewhere don't take effect until a device synchronizes with the Streaming Store. Some system capabilities, such as RAF, can be implemented/augmented by the installation of special apps. Especially in beta-test situations, the developer can delete old versions of such channels before installing more recent (or production) versions.
 
-- **["sgnodes all" command extended to detail whether reference counts are held by the OS or the app's scripts](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands)** — A sample app demonstrating this feature is available [here](https://github.com/rokudev/sgnodes-all-demo).
+- ["sgnodes all" command extended to detail whether reference counts are held by the OS or the app's scripts](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands) — A sample app demonstrating this feature is available [here](https://github.com/rokudev/sgnodes-all-demo).
 
 #### Deprecated APIs
 
-- **[SteadyMaxMemPoints removed from signal beacon performance measurements](/docs/references/deprecated-apis.md#signal-beacon-steadymaxmempoints)** — As the **chanperf** command now reports actual memory figures, the **SteadyMaxMemPoints** app performance metric is no longer reported in the debugging logs when an app is exited.
+- [SteadyMaxMemPoints removed from signal beacon performance measurements](/docs/references/deprecated-apis.md#signal-beacon-steadymaxmempoints) — As the **chanperf** command now reports actual memory figures, the **SteadyMaxMemPoints** app performance metric is no longer reported in the debugging logs when an app is exited.
 
-- **[roDeviceInfo.GetVersion()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getversion-as-string)** — Use the [**roDeviceInfo.GetOsVersion()** function](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getosversion-as-object) instead, which was introduced in Roku 9.2 OS, to get the **major**, **minor**, **revision**, and **build** numbers of the Roku OS running on a device.
+- [roDeviceInfo.GetVersion()](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getversion-as-string) — Use the [**roDeviceInfo.GetOsVersion()** function](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getosversion-as-object) instead, which was introduced in Roku 9.2 OS, to get the **major**, **minor**, **revision**, and **build** numbers of the Roku OS running on a device.
 
 - Apps must replace all **file://** URLs with **pkg:/** URLs.
 
@@ -887,33 +887,33 @@ Below is a list of key developer-facing Roku OS 9.4 updates:
 
 #### API
 
-- **[BrightScript now supports exception handling](/docs/references/brightscript/language/error-handling.md)** — Developers can use TRY/CATCH blocks and THROW expressions for handling exceptions in their apps. Developers can define code that may potentially generate errors within a TRY statement, and then provide error handling, such as printing out the error type and message, in a CATCH statement. Developers can also create custom errors with the THROW expression.
+- [BrightScript now supports exception handling](/docs/references/brightscript/language/error-handling.md) — Developers can use TRY/CATCH blocks and THROW expressions for handling exceptions in their apps. Developers can define code that may potentially generate errors within a TRY statement, and then provide error handling, such as printing out the error type and message, in a CATCH statement. Developers can also create custom errors with the THROW expression.
 
 - [**New getUserRegionData command added to SceneGraph ChannelStore node**](/docs/references/scenegraph/control-nodes/channelstore.md#getuserregiondata) — The ChannelStore node now includes a **getUserRegionData** command for retrieving the state, zip code, and country associated with the customer's Roku account. Developers can use the location information returned by this command to determine a customer's eligibility for regional-specific subscription products and content.
 
-- **[doOrder command status fixed](/docs/references/scenegraph/control-nodes/channelstore.md#doorder)** — The SceneGraph ChannelStore **doOrder** command now only returns a status of 2 ("interrupted") if the back button is pressed from a "Confirm Purchase" dialog.
+- [doOrder command status fixed](/docs/references/scenegraph/control-nodes/channelstore.md#doorder) — The SceneGraph ChannelStore **doOrder** command now only returns a status of 2 ("interrupted") if the back button is pressed from a "Confirm Purchase" dialog.
 
-- **[ParseJson and FormatJson now accept "flags" parameter as a String](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-flags---as-string-as-object)** — The BrightScript ParseJson and FormatJson global utility functions now accept a String parameter, flags, for specifying the functions' options. (Note that FormatJson already accepted flags as an Integer and now accepts the String version as well.)
+- [ParseJson and FormatJson now accept "flags" parameter as a String](/docs/references/brightscript/language/global-utility-functions.md#parsejsonjsonstring-as-string-flags---as-string-as-object) — The BrightScript ParseJson and FormatJson global utility functions now accept a String parameter, flags, for specifying the functions' options. (Note that FormatJson already accepted flags as an Integer and now accepts the String version as well.)
 
 #### Media, DRM, and content meta-data updates
 
 - **Enhanced media player performance** — Numerous improvements in media player performance to minimize video start time, re-buffering, and playback failure rates.
 
-- **[Content-specific whitelisting/blacklisting of audio and caption tracks for different languages](/docs/developer/getting-started/architecture/content-metadata.md#playback-configuration-attributes)** —  Audio and captioning tracks can now be blacklisted or whitelisted dynamically for individual content items. The new metadata attributes, **audioBlacklist**, **audioWhitelist**, **captionBlacklist**, and **captionWhitelist**, can be used to make resources in various languages available or unavailable dynamically, under app control, affecting the options that a viewer sees in the UI.
+- [Content-specific whitelisting/blacklisting of audio and caption tracks for different languages](/docs/developer/getting-started/architecture/content-metadata.md#playback-configuration-attributes) —  Audio and captioning tracks can now be blacklisted or whitelisted dynamically for individual content items. The new metadata attributes, **audioBlacklist**, **audioWhitelist**, **captionBlacklist**, and **captionWhitelist**, can be used to make resources in various languages available or unavailable dynamically, under app control, affecting the options that a viewer sees in the UI.
 
 - **Open SSL 1.1.1** — Roku OS now supports Open SSL 1.1.1. The OpenSSL version that was previously supported by Roku (1.0.2h) has reached end of life. OpenSSL 1.1.1 offers better performance and greater security, among other benefits.
 
-- **[Widevine v16](/docs/specs/media/content-protection.md#widevine)** — Roku OS now supports Widevine v16 DRM, including on older supported platforms.
+- [Widevine v16](/docs/specs/media/content-protection.md#widevine) — Roku OS now supports Widevine v16 DRM, including on older supported platforms.
 
-- **[WebP image format](/docs/specs/media/index.md#supported-image-formats)** — The Roku platform now supports the WebP image format, which provides smaller compressed image files and faster decoding and rendering.
+- [WebP image format](/docs/specs/media/index.md#supported-image-formats) — The Roku platform now supports the WebP image format, which provides smaller compressed image files and faster decoding and rendering.
 
-- **[DRM security level reporting](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfoex-as-object)** — The **ifDeviceInfo.GetDrmInfoEx()** method now returns the security levels of Widevine and PlayReady DRMs.
+- [DRM security level reporting](/docs/references/brightscript/interfaces/ifdeviceinfo.md#getdrminfoex-as-object) — The **ifDeviceInfo.GetDrmInfoEx()** method now returns the security levels of Widevine and PlayReady DRMs.
 
-- **[DASH thumbnail improvements](/docs/developer/media-playback/trick-mode/hls-and-dash.md#dash-standard-thumbnail-tiles)** — The DASH manifest information is now provided more efficiently to the Roku Media Player, especially benefiting low-end devices.
+- [DASH thumbnail improvements](/docs/developer/media-playback/trick-mode/hls-and-dash.md#dash-standard-thumbnail-tiles) — The DASH manifest information is now provided more efficiently to the Roku Media Player, especially benefiting low-end devices.
 
 - **HLS and DASH trickplay thumbnails in SSAI apps now remain in sync** — A bug in the handling of discontinuities (insertion breaks) for trickplay thumbnails in apps with ads inserted server-side (SSAI) previously caused thumbnails to fall out of synch with the video content over time during playback, as more discontinuities were processed. This bug is resolved in Roku OS 9.4 for HLS and DASH streaming with standard thumbnails, but it remains a problem for apps that use BIF thumbnails. Roku recommends that developers who can switch to standard thumbnails in the context of HLS or DASH streaming should do so.
 
-- **[Video node includes DASH manifest information](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields)** — The DASH manifest is exposed through the SceneGraph Video node and is updated efficiently during live-streams, especially benefitting low-end devices.
+- [Video node includes DASH manifest information](/docs/references/scenegraph/media-playback-nodes/video.md#trickplay-fields) — The DASH manifest is exposed through the SceneGraph Video node and is updated efficiently during live-streams, especially benefitting low-end devices.
 
 - [**HDCP status reporting for HDMI connections improved**](/docs/references/brightscript/interfaces/ifhdmistatus.md#gethdcpversion-as-string) — The **roHdmiStatus.getHdcpVersion()** method now returns an empty string if HDCP is disabled.
 
@@ -921,7 +921,7 @@ Below is a list of key developer-facing Roku OS 9.4 updates:
 
 #### Tools
 
-- **[Component library compilation errors on port 8085](/docs/references/scenegraph/control-nodes/componentlibrary.md#loading-component-libraries)** — Compilation info/failure messages for Roku SceneGraph component libraries when running side-loaded apps now appear on port 8085 of the debug console.
+- [Component library compilation errors on port 8085](/docs/references/scenegraph/control-nodes/componentlibrary.md#loading-component-libraries) — Compilation info/failure messages for Roku SceneGraph component libraries when running side-loaded apps now appear on port 8085 of the debug console.
 
 #### Deprecated APIs
 
@@ -1373,8 +1373,8 @@ The 7.1 firmware release incorporates several BrightScript and BrightScript comp
 - Video node class includes several new fields to configure trick play and other playback features ([**Video**](doc:video)).
 - Focus indicators for list and grids can now be customized by blending the indicator colors ([**ArrayGrid**](doc:arraygrid)).
 - New XML markup component interfaces:
-  - onChange takes an associative array and a function name (**[\<interface>](doc:interface)**)
-  - calling functions from an associative array is now supported (**[\<interface>](doc:interface)**)
+  - onChange takes an associative array and a function name ([\<interface>](doc:interface))
+  - calling functions from an associative array is now supported ([\<interface>](doc:interface))
 
 #### BrightScript language updates
 
@@ -1423,15 +1423,15 @@ Now:
 #### Component changes
 
 - roTuner and associated interfaces have been added to support playing broadcast and cable content from a tuner (**roTuner**)
-- roProgramGuide and associated interfaces have been added to support broadcast content program guide data (**[roProgramGuide](doc:roprogramguide)**)
-- roSlideShow SetLoop added (**[roSlideShow](doc:roslideshow)**)
-- roTextureManager ifHttpAgent added (**[roTextureManager](doc:rotexturemanager)**)
-- roUrlTransfer GetToString(), AsyncGetToString() now support UTF-16 files (**[roUrlTransfer](doc:rourltransfer)**)
-- roAppManager/ifAppManager SetUserSignedIn() method added to indicate that a user has signed into the app (**[roAppManager](doc:roappmanager)**)
-- roArray/ifArraySort Sort() method was added (**[roArray](doc:roarray)**)
-- roArray/ifArraySort SortBy() method was added (**[roArray](doc:roarray)**)
-- roArray/ifArraySort Reverse() method was added (**[roArray](doc:roarray)**
-- roString/ifStringOps Split() method was added (**[roString](doc:rostring)**)
+- roProgramGuide and associated interfaces have been added to support broadcast content program guide data ([roProgramGuide](doc:roprogramguide))
+- roSlideShow SetLoop added ([roSlideShow](doc:roslideshow))
+- roTextureManager ifHttpAgent added ([roTextureManager](doc:rotexturemanager))
+- roUrlTransfer GetToString(), AsyncGetToString() now support UTF-16 files ([roUrlTransfer](doc:rourltransfer))
+- roAppManager/ifAppManager SetUserSignedIn() method added to indicate that a user has signed into the app ([roAppManager](doc:roappmanager))
+- roArray/ifArraySort Sort() method was added ([roArray](doc:roarray))
+- roArray/ifArraySort SortBy() method was added ([roArray](doc:roarray))
+- roArray/ifArraySort Reverse() method was added ([roArray](doc:roarray)
+- roString/ifStringOps Split() method was added ([roString](doc:rostring))
 
 ## Roku OS 7.0
 

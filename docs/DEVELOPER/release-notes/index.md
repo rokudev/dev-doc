@@ -33,6 +33,8 @@ Here is the list of key developer-facing Roku OS 16.0 updates:
 
 A new **Effect** node applies predefined shader effects to existing SceneGraph nodes. **Poster** and **Rectangle** nodes include a new **effect** field that references an **Effect** node.
 
+![effect-node](https://image.roku.com/ZHZscHItMTc2/effects-node.png)
+
 On platforms without a shader-capable GPU, or when disabled by configuration, the **Effect** node does nothing and the node to which it is applied renders as though the Effect were not present. Check the read-only **supported** field to determine availability.
 
 | Field               | Type           | Description                                                                                                                                                                                                            |

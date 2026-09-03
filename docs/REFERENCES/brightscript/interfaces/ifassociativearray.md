@@ -162,7 +162,7 @@ Returns the number of keys in the associative array.
 
 The number of keys in the associative array.
 
-### Value(aa as Object) as Object
+### Values(aa as Object) as Object
 
 _Available since Roku OS 15.3_
 

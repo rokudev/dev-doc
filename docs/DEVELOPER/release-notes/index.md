@@ -8,7 +8,7 @@ metadata:
   description: >-
     Cumulative developer release notes for Roku OS, covering new APIs, media
     playback features, debugging tools, and deprecated functions from OS 5.0
-    through 15.2.
+    through 16.0.
   robots: index
 next:
   description: ''
@@ -16,6 +16,166 @@ next:
 # Roku OS developer release notes
 
 > [Join the Roku beta program](https://rokutestingportal.centercode.com/key/rdbp) to implement new features in the latest Roku OS before the general release.
+
+## Roku OS 16.0
+
+Roku OS 16.0 introduces new SceneGraph APIs that apply GPU-accelerated visual effects such as rounded corners, borders, and gradients to Poster and Rectangle nodes, expose the ArrayGrid focus indicator to apps, and animate array-valued fields.
+
+New BrightScript APIs add server-sent events support to the roUrlTransfer component and enable WebSocket connections to remote WebSocket server URLs for bi-directional communication. Roku OS 16.0 also relaxes conditional compilation rules, increases the maximum BrightScript stack depth, and changes several ifDraw2D functions to return a Boolean success value. This release also adds a **SetDrawable()** function to the **roTextureRequest** component.
+
+> For a detailed summary of the changes to the BrightScript 2D Graphics APIs in Roku OS 16.0, read the blog post.
+
+Here is the list of key developer-facing Roku OS 16.0 updates:
+
+#### SceneGraph APIs
+
+##### Effect node for GPU-accelerated rounded corners, borders, and gradients
+
+A new **Effect** node applies predefined shader effects to existing SceneGraph nodes. **Poster** and **Rectangle** nodes include a new **effect** field that references an **Effect** node.
+
+On platforms without a shader-capable GPU, or when disabled by configuration, the **Effect** node does nothing and the node to which it is applied renders as though the Effect were not present. Check the read-only **supported** field to determine availability.
+
+| Field | Type | Description |
+| --- | --- | --- |
+| supported | boolean | Read-only. Whether effects are supported on this platform. |
+| borderRadius | array of float | 0, 1, or 4 floats specifying corner radii clockwise from the top right, in pixels. Other lengths are silently truncated to length 1 or 4. |
+| borderWidth | float | The width in pixels of a border drawn around the edge. |
+| borderPadding | float | Padding between the content rect and the border stroke, in pixels. Default is 0. |
+| borderColor | color | The color of the border. |
+| gradientColors | array of color | At least 2 and at most 8 color values interpolated along a gradient. Indexes 8 or higher are ignored. |
+| gradientStops | array of float | The fractional distances along the gradient of each color. If not specified, even distribution is assumed. If specified, it should have the same length as gradientColors, and is truncated or ignored if it does not. |
+| gradientAngle | float | The angle of a linear gradient, in degrees, clockwise from "up". Default is 0. |
+| gradientCentre | vector2d | The center point of a radial gradient, normalized between 0 and 1. Values outside that range work, but are outside the node. |
+| gradientRadius | vector2d | The radius of a radial gradient in the x and y directions, proportional to the node size. Default is 1.0. |
+| gradientStyle | string | Gradient fill style applied over the content area: "none" (default), "linear", or "radial". |
+| gradientFillContent | boolean | Applies the specified gradient to the content area. Default is true. |
+| gradientFillBorder | boolean | Applies the specified gradient to the border area. Default is false. Both fields may be set to true. |
+
+**Example**
+
+```
+rounded = CreateObject("roSGNode", "Effect")
+rounded.borderRadius = [50]
+
+square = CreateObject("roSGNode", "Poster")
+square.uri = "pkg:/images/square.png"
+square.effect = rounded
+```
+
+##### ArrayGrid.focusFeedbackPoster field for customizing the focus indicator
+
+The **Poster** node that **ArrayGrid** uses to draw its focus indicator is now a public **focusFeedbackPoster** field. Grids derived from ArrayGrid, such as **MarkupGrid** and **RowList**, already let apps customize the content item type. This field lets apps apply the same treatment, including an Effect, to the focus indicator so it conforms to custom item shapes such as rounded or asymmetric corners.
+
+**Example**
+
+```
+m.perfGrid = CreateObject("roSGNode", "MarkupGrid")
+m.perfGrid.focusBitmapUri = "pkg:/images/square.png"
+focusEffect = CreateObject("roSGNode", "Effect")
+focusEffect.id = "gridFocusEffect"
+focusEffect.borderRadius = [8]
+focusEffect.borderWidth = 4
+m.perfGrid.focusFeedbackPoster.effect = focusEffect
+```
+
+##### FloatArrayFieldInterpolator node
+
+A new **FloatArrayFieldInterpolator** node animates fields that hold arrays of floats, such as **Effect.borderRadius** and **colorStops**. Previously these fields could only be animated through callbacks into BrightScript.
+
+FloatArrayFieldInterpolator is a sibling of **FloatFieldInterpolator**, **ColorFieldInterpolator**, and **Vector2DFieldInterpolator**. Interpolation is performed piecewise, with each entry interpolated independently. Passing arrays of different lengths is an error condition equivalent to passing the wrong type.
+
+**Example**
+
+```
+<FloatArrayFieldInterpolator
+    id="radiusInterp"
+    fieldToInterp="itemEffect.borderRadius"
+    key="[0.0, 1.0]"
+    keyValue="[ [ 8.0, 8.0, 8.0, 32.0 ], [ 8.0, 8.0, 8.0, 8.0 ] ]"
+/>
+```
+
+##### ChannelStore GetRokuCustomerId command
+
+The **ChannelStore** node includes a new **GetRokuCustomerId** command that lets you retrieve a unique Roku customer ID—without a prior purchase. You can use it to identify Roku users accurately and consistently across your apps, and to keep order context intact from on-device in-app purchases through to Roku Pay push notifications.
+
+#### BrightScript APIs
+
+##### Server-sent events support in roUrlTransfer
+
+The **roUrlTransfer** component now supports Server-Sent Events (SSE). It inspects the response headers, detects the endless stream, and delivers each server event to your app as an **roUrlEvent** on your message port as it arrives.
+
+##### WebSocket connections with roWebSocket
+
+The [**roWebSocket**](doc:rowebsocket) component enables apps to establish WebSocket connections to remote WebSocket server URLs and perform bi-directional communication according to the [WebSocket protocol](https://datatracker.ietf.org/doc/html/rfc6455).
+
+##### Undefined conditional compilation values default to false
+
+BrightScript conditional compilation values that are not defined in the manifest or in code are now treated as **false** rather than raising an error.
+
+This makes it easier for BrightScript library developers to include development-only features without requiring every downstream consumer to define the value in their build system. For example, a library author can gate detailed logging behind an unused name such as `mylibrary_enable_detailed_logging` and distribute it safely.
+
+This change does not break existing apps because they must already have fully defined conditional values to compile successfully.
+
+```
+#if mylibrary_enable_detailed_logging
+   ? "hello world"
+#endif
+```
+
+##### ifDraw2D draw functions return a Boolean
+
+The **DrawPoint()**, **DrawLine()**, **DrawRect()**, and **Clear()** functions in the **ifDraw2D** interface now return a Boolean instead of Void. True indicates the draw succeeded; false indicates it failed and the reason is printed to the BrightScript debug log if a bitmap is modified after being drawn to the screen. **DrawObject()** and its derivatives, along with **DrawText()**, already returned a Boolean.
+
+If a bitmap is modified after it has been drawn to the screen but before the screen's **SwapBuffers()** function is called, true is returned and the draw succeeds. In addition, the Roku debug console prints a warning that the app needs to be updated because this behavior will fail in the future (Roku OS 16.3 at the earliest).
+
+**Not allowed**
+
+```
+offscreen.DrawLine(...)
+screen.DrawObject(offscreen, ...)
+' This DrawRect() will fail and return false in the future
+' In 16.0, this returns true and prints a warning to debug console
+offscreen.DrawRect(...)
+screen.SwapBuffers()
+```
+
+**Allowed**
+
+```
+offscreen1.DrawLine(...)
+offscreen2.DrawObject(offscreen1, ...)
+screen.DrawObject(offscreen2, ...)
+screen.SwapBuffers()      ' resets object state
+offscreen1.DrawRect(...)  ' allowed
+offscreen2.DrawLine(...)  ' allowed
+```
+
+> The **DrawPoint()** function has a maximum point size of 100.
+
+##### roTextureRequest includes new SetDrawable() function
+
+The **roTextureRequest** component includes a new **SetDrawable(drawable as Boolean) as Void** function that lets you specify whether the **ifDraw2D.Clear()** and **ifDraw2D.Draw()** functions may draw and modify the returned **roBitmap**.
+
+The **Clear()** and **Draw()** APIs on the returned roBitmap return false (indicating failure) unless **SetDrawable(true)** is called on the texture request.
+
+Non-drawable bitmaps can be reused from a texture cache and are loaded only once in texture memory, even if multiple requests are made for the same bitmap. Each drawable bitmap gets its own unique copy of the bitmap in texture memory.
+
+##### Increased maximum BrightScript stack depth
+
+The maximum stack depth of a BrightScript program has been increased.
+
+#### Deprecations
+
+##### Animation.optional field
+
+The **optional** field on the **Animation** node has been deprecated and will be removed from the documentation. This field only affected legacy platforms that have been sunset (Giga, Jackson, Paolo, Sugarland, and Tyler).
+
+##### rohttpagent.InitClientCertificates() function
+
+The **rohttpagent.InitClientCertificates()** function has been deprecated. Static Analysis now reports a warning if your app uses this function. Starting April 1, 2027, Static Analysis will report an error and block the publishing of your app if it includes this function.
+
+Developers can use the ChannelStore node's **getDeviceAttestationToken** command to generate a signed JSON web token (JWT) in the Roku cloud and return it to the app. The token can then be used by the publisher's web services to verify that a message originated from a genuine Roku device.
 
 ## Roku OS 15.3
 

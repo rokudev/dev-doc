@@ -24,7 +24,7 @@ This utility supports Windows, Mac and Linux and requires Java to be installed i
 
 ## Structure of the utility
 
-The static analysis utility is distributed as a ZIP file.  The contents of the ZIP as as follows:
+The static analysis utility is distributed as a ZIP file.  The contents of the ZIP are as follows:
 
 ```brightscript
 .

@@ -23,7 +23,7 @@ Roku OS 16.0 is currently being shared with developer beta partners under non-di
 
 New BrightScript APIs add server-sent events support to the roUrlTransfer component and enable WebSocket connections to remote WebSocket server URLs for bi-directional communication. Roku OS 16.0 also relaxes conditional compilation rules, increases the maximum BrightScript stack depth, and changes several ifDraw2D functions to return a Boolean success value. This release also adds a **SetDrawable()** function to the **roTextureRequest** component.
 
-> For a detailed summary of the changes to the BrightScript 2D Graphics APIs in Roku OS 16.0, read the blog post.
+> For a detailed summary of the changes to the BrightScript 2D Graphics APIs in Roku OS 16.0, read the [blog post](https://blog.roku.com/developer/ifdraw2d-updates).
 
 Here is the list of key developer-facing Roku OS 16.0 updates:
 

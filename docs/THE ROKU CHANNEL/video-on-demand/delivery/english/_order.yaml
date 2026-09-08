@@ -15,6 +15,7 @@
 - excel-film-metadata-fields
 - excel-episodic-tv-metadata-fields
 - excel-shortform-clip-metadata-fields
+- enumerations
 - crew-roles
 - genres
 - rating-values-by-rating-system-and-country

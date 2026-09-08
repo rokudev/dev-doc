@@ -1,8 +1,10 @@
 ---
-title: Helpful Links
+title: Helpful links
 excerpt: Consolidated external resources referenced throughout the spec.
 deprecated: false
 hidden: true
+link:
+  new_tab: false
 metadata:
   robots: index
 ---

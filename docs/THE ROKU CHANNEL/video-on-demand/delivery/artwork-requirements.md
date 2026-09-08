@@ -70,8 +70,8 @@ _The Metadata Field column reflects the field name used to tag each image type i
 | ---------------------------- | ------------ | ------------ | ------------ | ------------ |
 | 16:9 Key Art                 | **Required** | **Required** | **Required** | —            |
 | 2:3 Poster Art               | —            | **Required** | **Required** | —            |
-| 3:4 Box Cover                | —            | **Required** | —            | —            |
-| 4:3 Box Cover                | —            | —            | **Required** | —            |
+| 3:4 Box Cover                | —            | **Optional** | —            | —            |
+| 4:3 Box Cover                | —            | —            | **Optional** | —            |
 | 16:9 Background Art          | —            | **Required** | **Required** | **Required** |
 | 16:9 Episode Art (thumbnail) | —            | —            | —            | **Required** |
 

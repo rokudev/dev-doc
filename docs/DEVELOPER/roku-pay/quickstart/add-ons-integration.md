@@ -1,16 +1,21 @@
 ---
 title: Catalog 2.0 API integration guide
-excerpt: 'Step-by-step guide to integrating add-ons and purchase options using Catalog 2.0 APIs'
+excerpt: >-
+  Step-by-step guide to integrating add-ons and purchase options using Catalog
+  2.0 APIs
 deprecated: false
 hidden: false
 metadata:
-  title: 'Catalog 2.0 API integration guide | Roku Developer Docs'
-  description: 'Integrate add-ons in your app using the Catalog 2.0 APIs, including GetCatalog, QueryPurchaseOptions, DoOrder, and GetAllPurchases ChannelStore commands.'
+  title: Catalog 2.0 API integration guide | Roku Developer Docs
+  description: >-
+    Integrate add-ons in your app using the Catalog 2.0 APIs, including
+    GetCatalog, QueryPurchaseOptions, DoOrder, and GetAllPurchases ChannelStore
+    commands.
   robots: index
 next:
   description: ''
 ---
-Publishers can integrate add-ons in their apps to offer customers premium content, additional apps, and other upgrades and features, and they can bundle add-ons with base subscriptions. By integrating add-ons, customers can complete the purchase of all desired products and features for their subscription online and directly on-device with just a few key presses. This enables publishers to maximize subscription revenue through upsells, without any additional friction in the purchase workflow.
+&#x20;   Publishers can integrate add-ons in their apps to offer customers premium content, additional apps, and other upgrades and features, and they can bundle add-ons with base subscriptions. By integrating add-ons, customers can complete the purchase of all desired products and features for their subscription online and directly on-device with just a few key presses. This enables publishers to maximize subscription revenue through upsells, without any additional friction in the purchase workflow.
 
 > An add-on is defined as a service purchased on top of a base subscription product.
 
@@ -18,7 +23,7 @@ Integrating add-ons entails the following steps:
 
 1. Creating add-on products in the Developer Dashboard. A product represents a set of content (for example, a premium app or app package) or other features offered by your app. **You must upgrade to Product Catalog 2.0 to create add-ons** (see [Creating the Product Catalog](doc:product-catalog) for how to migrate the In-app purchase workflow in the Developer Dashboard to the new Product Catalog 2.0 experience).
 
-2. Creating purchase options for the add-on. A purchase option specifies the billing frequency (monthly, quarterly, or annual), price, and any free trial or introductory price offers for the add-on product.
+2. Creating purchase options for the add-on. A purchase option specifies the billing frequency (monthly, quarterly [requires additional API work], or annual), price, and any free trial or introductory price offers for the add-on product.
 
 3. Update the app with new ChannelStore APIs that support add-ons.
 
@@ -54,7 +59,7 @@ You can create a subscription bundle that includes two base products or a single
 
 ## Creating purchase options for add-ons
 
-Once you have created an add-on product, you create one or more purchase options for it. A purchase option specifies the billing frequency (monthly, quarterly, or annual), price, and any free trial or introductory price offers for the add-on.
+Once you have created an add-on product, you create one or more purchase options for it. A purchase option specifies the billing frequency (monthly, quarterly [requires additional API work)], or annual), price, and any free trial or introductory price offers for the add-on.
 
 To create a purchase option for an add-on product, follow these steps:
 
@@ -81,53 +86,72 @@ To create a purchase option for an add-on product, follow these steps:
          <th>
            Billing plan setting
          </th>
+
          <th>
            Description
          </th>
        </tr>
      </thead>
+
      <tbody>
        <tr>
          <td>
            Product
          </td>
+
          <td>
            Select the add-on product for which you are creating a purchase option. Add-on products are tagged with a blue "ADD-ON" label in the drop-down list.
          </td>
        </tr>
+
        <tr>
          <td>
            Billing periods
          </td>
+
          <td>
-           Select the billing period for the add-on product: **monthly**, **quarterly**, or **annual**. The billing period for the add-on must be the same as the base product.
+           Select the billing period for the add-on product: **monthly**, **quarterly** (requires additional API work), or **annual**. The billing period for the add-on must be the same as the base product. 
          </td>
        </tr>
+
        <tr>
          <td>
            Regular price
          </td>
+
          <td>
            Select one of the predefined price tiers for the product. Tiers are used to enforce 99-cent or 49-cent pricing (in USD) on app products.
-           <br /><br />
-           <ul>
-             <li>One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).</li>
-             <li>Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).</li>
-           </ul>
+
+
+
+
+
+            used to enforce 99-cent or 49-cent pricing (in USD) on app products.
+              <br /><br />
+              <ul>
+                <li>One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).</li>
+                <li>Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1
          </td>
        </tr>
+
        <tr>
          <td>
            Base offer
          </td>
+
          <td>
            The administrator (root account) can create free trial and introductory price offers for an add-on product. Roku Pay automatically handles the auto-renewals of the trial or discounted offers to paid full-price subscriptions. Separate products do not need to be created for free trial or introductory price offers. A single product may include both a base offer (the standard base price) and a trial/discount offer. Select one of the following base offers:
-           <br /><br />
-           <ul>
-             <li><strong>None</strong> (default). The purchase option does not include an offer.</li>
-             <li><strong>Free trial</strong>. Include a free trial period with the purchase option. In the <strong>Trial length</strong> box, enter the number of days or months in the trial offer and then select the unit of time (<strong>Days</strong> or <strong>Months</strong>).</li>
-             <li><strong>Introductory price</strong>. Include a discount with the purchase option. In the <strong>Introductory period</strong> box, enter the number of days, months, or years the introductory price is valid, and then select the pricing tier corresponding to the discounted price to be offered from the <strong>Price</strong> list. Discounts cannot be specified using percentages or absolute currency units (for example, USD). Discounts may only be specified using the appropriate price tier. For example, the absolute discount from tier 9 to tier 6 is $3.00 ($8.99-5.99); the percentage discount is 33.4% ($(1-(5.99/8.99))x100).</li>
-           </ul>
+
+
+
+
+
+            a base offer (the standard base price) and a trial/discount offer. Select one of the following base offers:
+              <br /><br />
+              <ul>
+                <li><strong>None</strong> (default). The purchase option does not include an offer.</li>
+                <li><strong>Free trial</strong>. Include a free trial period with the purchase option. In the <strong>Trial length</strong> box, enter the number of days or months in the trial offer and then select the unit of time (<strong>Days</strong> or <strong>Months</strong>).</li>
+                <li><strong>Introductory price</strong>. Include a discount with the purchase option. In the <strong>Introductory period</strong> box, enter the number of days, months, or years the introductory price is valid, and then select the pricing tier corresponding to the discounted price to be offered from the <strong>Price</strong> list. Discounts cannot be specified using percentages or absolute currency units (for example, USD). Discounts may only be specified using the appropriate price tier. Fo
          </td>
        </tr>
      </tbody>
@@ -581,6 +605,7 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 <tr>
 <td class="short-line">requestStatus</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Returns the request's command and parameters: <div class="hscroll"><table>
 <thead>
 <tr>
@@ -598,6 +623,7 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 <tr>
 <td class="short-line">status</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">The command completion status, which may be one of the following values: <br><ul>
 <li><strong>2</strong>  Interrupted</li>
 <li><strong>1</strong>  Success</li>
@@ -649,6 +675,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <tr>
 <td class="short-line">request</td>
 <td class="short-line">roAssociativeArray</td>
+
 <td class="long-line">Includes the request's command and parameters:<br><div class="hscroll"><table>
 <thead>
 <tr>
@@ -666,6 +693,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <tr>
 <td class="short-line">params</td>
 <td class="short-line">roAssociativeArray</td>
+
 <td class="long-line">Include the following key-value pairs: <br><div class="hscroll"><table>
 <thead>
 <tr>
@@ -710,6 +738,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <tr>
 <td class="short-line">result</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Includes the transaction data returned by the GetPurchases:<br><br><div class="hscroll"><table>
 <thead>
 <tr>
@@ -722,6 +751,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <tr>
 <td class="short-line">purchases</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">The list of current (and optionally historical) purchases associated with the Roku customer account. Each purchase has the following fields:<br><ul>
 <li><strong>rokuCustomerId</strong> (string): The Roku customer ID associated with the user. </li>
 <li><strong>sku</strong> (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.</li>
@@ -780,6 +810,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <tr>
 <td class="short-line">products</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">The list of current (and optionally historical) products associated with the Roku customer account. Each product has the following fields:<br><ul>
 <li><strong>productId</strong> (string): The developer-specified product ID entered in the Developer Dashboard. </li>
 <li><strong>name</strong> (string): The developer-specified product name entered in the Developer Dashboard.</li>
@@ -803,6 +834,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <tr>
 <td class="short-line">entitlements</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">The list of current (and optionally historical) entitlements associated with the Roku customer account. Each entitlement has the following fields: <ul>
 <li><strong>entitlementKey</strong> (string): The developer-specified entitlement scope.</li>
 <li><strong>entitlementScope</strong> (string): The Roku-provided entitlement scope.</li>
@@ -817,6 +849,7 @@ Returns the list of current and historical (optional) purchases associated with 
 <tr>
 <td class="short-line">status</td>
 <td class="short-line">enum</td>
+
 <td class="long-line">The command completion status, which may be one of the following values: <br><ul>
 <li><strong>2</strong>  Interrupted</li>
 <li><strong>1</strong>  Success</li>
@@ -855,6 +888,7 @@ Lists the products and purchase options linked to the app.
 <tr>
 <td class="short-line">request</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Includes the request's command and parameters: <br><div class="hscroll"><table>
 <thead>
 <tr>
@@ -872,6 +906,7 @@ Lists the products and purchase options linked to the app.
 <tr>
 <td class="short-line">params</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Include the following key-value pair: <div class="hscroll"><table>
 <thead>
 <tr>
@@ -911,6 +946,7 @@ Lists the products and purchase options linked to the app.
 <tr>
 <td class="short-line">result</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Includes the products and purchase options returned by the GetCatalog command: <div class="hscroll"><table>
 <thead>
 <tr>
@@ -923,6 +959,7 @@ Lists the products and purchase options linked to the app.
 <tr>
 <td class="short-line">products</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">The list of products linked to the app. Each product has the following fields: <br><ul>
 <li><strong>productId</strong> (string): The developer-specified product ID entered in the Developer Dashboard. </li>
 <li><strong>name</strong> (string): The developer-specified product name entered in the Developer Dashboard.</li>
@@ -947,6 +984,7 @@ Lists the products and purchase options linked to the app.
 <tr>
 <td class="short-line">purchaseOptions</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">The list of purchase options linked to the app. Each purchase option has the following fields:<br><ul>
 <li><strong>sku</strong> (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.</li>
 <li><strong>name</strong> (string): The developer-specified name for the purchase option entered in the Developer Dashboard. </li>
@@ -1001,6 +1039,7 @@ Lists the products and purchase options linked to the app.
 <tr>
 <td class="short-line">status</td>
 <td class="short-line">enum</td>
+
 <td class="long-line">The command completion status, which may be one of the following values: <br><ul>
 <li><strong>2</strong>  Interrupted</li>
 <li><strong>1</strong>  Success</li>
@@ -1039,6 +1078,7 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 <tr>
 <td class="short-line">result</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Includes the products and purchase options returned by the GetCatalog command: <div class="hscroll"><table>
 <thead>
 <tr>
@@ -1051,6 +1091,7 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 <tr>
 <td class="short-line">products</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">The list of products linked to the app. Each product has the following fields: <br><ul>
 <li><strong>productId</strong> (string): The developer-specified product ID entered in the Developer Dashboard. </li>
 <li><strong>name</strong> (string): The developer-specified product name entered in the Developer Dashboard.</li>
@@ -1075,6 +1116,7 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 <tr>
 <td class="short-line">purchaseOptions</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">The list of purchase options linked to the app. Each purchase option has the following fields:<br><ul>
 <li><strong>sku</strong> (string): The developer-specified SKU for the purchase option entered in the Developer Dashboard.</li>
 <li><strong>name</strong> (string): The developer-specified name for the purchase option entered in the Developer Dashboard. </li>
@@ -1129,6 +1171,7 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 <tr>
 <td class="short-line">status</td>
 <td class="short-line">enum</td>
+
 <td class="long-line">The command completion status, which may be one of the following values: <br><ul>
 <li><strong>2</strong>  Interrupted</li>
 <li><strong>1</strong>  Success</li>
@@ -1203,6 +1246,7 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 <tr>
 <td class="short-line">request</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Includes the request's command and parameters: <div class="hscroll"><table>
 <thead>
 <tr>
@@ -1220,6 +1264,7 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 <tr>
 <td class="short-line">params</td>
 <td class="short-line">associative array</td>
+
 <td class="long-line">Include the following key-value pairs:<br><div class="hscroll"><table>
 <thead>
 <tr>
@@ -1237,6 +1282,7 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 <tr>
 <td class="short-line">orderItems</td>
 <td class="short-line">roArray of roAssociativeArray</td>
+
 <td class="long-line">The list of purchase options the customer has selected. Each orderItem has the following fields:<br><ul>
 <li><strong>sku</strong> (string): The developer-specified SKU for the selected purchase option.</li>
 <li><strong>qty</strong> (integer): The quantity of the item to be purchased, which is typically 1 for most purchase options.</li>
@@ -1281,6 +1327,7 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 <tr>
 <td class="short-line">purchases</td>
 <td class="short-line">roArray of roAssociativeArrays</td>
+
 <td class="long-line">Includes the purchase data returned by the DoOrder command. Each purchase includes the following set of key-value pairs:<br><ul>
 <li><strong>rokuCustomerId</strong> (string): The Roku customer ID associated with the user. </li>
 <li><strong>purchaseId</strong> (string): The transaction ID generated for the purchase. </li>
@@ -1300,6 +1347,7 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 <tr>
 <td class="short-line">status</td>
 <td class="short-line">enum</td>
+
 <td class="long-line">The command completion status, which may be one of the following values:  <br><ul>
 <li><strong>2</strong>  Interrupted</li>
 <li><strong>1</strong>  Success</li>

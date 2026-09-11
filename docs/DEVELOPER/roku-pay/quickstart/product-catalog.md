@@ -71,7 +71,6 @@ Scheduling limited-time offers instead of editing base offers is a more robust m
 
 Limited-time offers (active or scheduled) created in Catalog 1.0 cannot be updated in Catalog 2.0. The limited-time offers continue to work as expected in Catalog 2.0; however, they are not editable and must run for their full duration before you can set up another offer for the same purchase option SKU. Limited-time offers created and scheduled in Catalog 2.0 are editable.
 
-
 **Purchase options for deleted products are in the Purchases>Ended tab**
 
 The purchase options for products that were deleted before the migration are listed in the **Purchase Options>Ended** tab. Existing subscriptions associated with this purchase options will continue to renew. if you no longer want any subscribers to access the product via the given purchase option, you need to [archive the purchase option](https://roku.atlassian.net/wiki/spaces/DR/pages/148500544/Creating+the+product+catalog#Creatingtheproductcatalog-archive).
@@ -123,7 +122,7 @@ To create a new product, follow these steps:
 
 ### Creating purchase options
 
-Once you have created a product, you create one or more purchase options for a single product or a bundle of products. A purchase option specifies the product type (monthly, quarterly, or annual subscription, one-time purchase, or bundle), price, and any free trial or introductory price offers.
+Once you have created a product, you create one or more purchase options for a single product or a bundle of products. A purchase option specifies the product type (monthly, quarterly \[requires [additional API work\]](doc:add-ons-integration#appendix-a-add-on-api-reference), or annual subscription, one-time purchase, or bundle), price, and any free trial or introductory price offers.
 
 To create a purchase option for a product, follow these steps:
 
@@ -439,7 +438,7 @@ To schedule a price change for a purchase option, follow these steps:
 
    a. For new subscribers, the earliest that a price change can go into effect is midnight the next day.
 
-   b. For existing subscribers, the selected date must be 15 days in advance of the listed date. 
+   b. For existing subscribers, the selected date must be 15 days in advance of the listed date.
 
 6. Click **Review and publish** to review the price change before publishing it.
 
@@ -478,5 +477,3 @@ To test in-app product purchases on a beta app, the app must:
 - be configured with subscription and/or one-time purchase monetization methods.
 - be enabled for billing testing.
 - have test users associated with it (the test users' Roku accounts must be linked to the Roku devices being used for testing).
-
-<br />

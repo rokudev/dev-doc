@@ -1,8 +1,8 @@
 ---
 title: Subtítulos descriptivos y subtítulos
 excerpt: >-
-  Requisitos para subtítulos descriptivos (SDH), subtítulos completos y
-  subtítulos narrativos forzados.
+  Requisitos para subtítulos descriptivos, subtítulos completos y subtítulos
+  narrativos forzados.
 deprecated: false
 hidden: true
 metadata:
@@ -86,7 +86,7 @@ Roku **prefiere** un archivo sidecar legible por humanos (`.ttml`, `.dfxp`, `.vt
 * **No** proporciones un archivo vacío (un archivo sin texto) como entregable de subtítulos descriptivos/SDH sidecar.
 * Los datos de posición de TTML y WebVTT **sí** se admiten y se respetarán tal como se definan en el archivo.
 * Los archivos de video de QuickTime **deben** ir acompañados de un archivo sidecar de subtítulos descriptivos — Roku **no** admite la pista de texto de QuickTime.
-* La compatibilidad de estilo de texto se limita a: etiquetas en negrita (`<b>`) y cursiva (`<i>`), color de texto y posicionamiento de texto. _(Esto aplica de manera idéntica a los Subtítulos completos — consulta [Compatibilidad de estilo de texto](#text-styling-support).)_
+* La compatibilidad de estilo de texto se limita a: etiquetas en negrita (`<b>`) y cursiva (`<i>`), color de texto y posicionamiento de texto. _(Esto aplica de manera idéntica a los Subtítulos completos — consulta&#x20;_[Compatibilidad de estilo de texto](#text-styling-support)_.)_
 
 ### Formatos admitidos
 

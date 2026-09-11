@@ -1,10 +1,12 @@
 ---
-title: Enumerations
+title: Allowed values
 excerpt: >-
   Landing page for supported-value lists: crew roles, genres, ratings,
   languages.
 deprecated: false
 hidden: true
+link:
+  new_tab: false
 metadata:
   robots: index
 ---

@@ -3,6 +3,8 @@ title: Valores de clasificación por sistema de clasificación y país
 excerpt: Autoridades y valores de clasificación admitidos por territorio.
 deprecated: false
 hidden: true
+link:
+  new_tab: false
 metadata:
   robots: index
 ---

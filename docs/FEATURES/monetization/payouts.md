@@ -44,6 +44,24 @@ For more information on payout terms, see the [Roku Distribution Agreement](http
 
 Roku cannot make any payouts to the entities registered or with bank accounts from the following countries:
 
+- China
+- Cayman Islands
+- Iran
+- Lebanon
+- Nepal
+- Nigeria
+- Pakistan
+- Panama
+- Russia
+- Turkey
+- UAE
+- Ukraine
+- US Virgin Islands
+
+### Restricted PayPal payout countries
+
+Roku does not process PayPal payouts registered in the following countries:
+
 - Afghanistan
 - Aland Islands
 - American Samoa

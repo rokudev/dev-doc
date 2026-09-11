@@ -356,7 +356,7 @@ Cut filenames must follow the proper naming convention below:
 - Cut version (RC1, FC, etc.)
 - Date the cut was released to Roku (YYYYMMDD)
 
-Example: FLIP_MV100_FC_20260413
+Example: `FLIP_MV100_FC_20260413`
 
 All rough cut links should be confined to viewing only (i.e. no download access). When sharing cuts, please do not create any folders, or copy any folders into the Roku Review projects.
 
@@ -557,18 +557,18 @@ The Text Spotting List should contain any and all text that is burned into pictu
 
 Paper deliverables should all be uploaded to the “Hub” platform noted above. Please adhere to the following naming conventions when delivering documents to the Hub:
 
-- ShowCode_ProdNumber_AirOrder_Version_LangCode_Date_FINAL
-- Example: SMSP_MV100_AIR_1_PostVendorList_enUS_20260504_FINAL
+- `ShowCode_ProdNumber_AirOrder_Version_LangCode_Date_FINAL`
+- Example: `SMSP_MV100_AIR_1_PostVendorList_enUS_20260504_FINAL`
 
 #### 8.3.2 Master video deliverables
 
 All master\* video files should be labeled as follows:
 
-ShowCode_ProdNumber_AirOrder_Versio&#x6E;**\_**&#x4C;angCode_Resolution_ColorSpace_FN_Audio_FrameRate_Date-v#.mov
+`ShowCode_ProdNumber_AirOrder_Version_LangCode_Resolution_ColorSpace_FN_Audio_FrameRate_Date-v#.mov`
 
 Example:
 
-ZOEC_MV100_AIR_1_TXTD_enUS_UHD_SDR_FN_2CH_23976p_20190701-v2.mov
+`ZOEC_MV100_AIR_1_TXTD_enUS_UHD_SDR_FN_2CH_23976p_20190701-v2.mov`
 
 Production Number = As listed on Post Grids (MV100, MV200, SP100, SP200, etc.)
 
@@ -591,11 +591,11 @@ Air Order = Please list even if the Air Order is the same as the Production Numb
 
 Audio materials should be named to include all appropriate information:
 
-ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#\_SampleRate_BitRate_TC_Channel.wav
+`ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#_SampleRate_BitRate_TC_Channel.wav`
 
 **Examples:**
 
-MAMA_102_v04_20220919_enUS_PM_Nearfield_2CH_48k_24b_23976_LT.wav
+`MAMA_102_v04_20220919_enUS_PM_Nearfield_2CH_48k_24b_23976_LT.wav`
 
 | **Material Type**                             | **Abbreviation**                  |
 | --------------------------------------------- | --------------------------------- |
@@ -697,19 +697,19 @@ _Roku Best Practices_
 
 From each Texted Master created, please export following proxy files (two total per episode + one series opener):
 
-| **Video Codec**     | **H.264**                                                                                                                                                                                                                               |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Container           | MOV or MP4                                                                                                                                                                                                                              |
-| Picture             | (1) Clean (1) w/ Vis.TC UR (1) Series Opener Only (where applicable)                                                                                                                                                                    |
-| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                                                                 |
-| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                                                      |
-| Scan Type           | Progressive scan type                                                                                                                                                                                                                   |
-| Color Space         | BT.709 Legal Video Range                                                                                                                                                                                                                |
-| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                                                        |
-| Constant Frame Rate | Should Match Master                                                                                                                                                                                                                     |
-| Native Frame Rate   | Should Match Master                                                                                                                                                                                                                     |
-| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                                                     |
-| Filename            | ShowCode_ProdNumber_AirOrder_Proxy_Languag&#x65;_&#x48;D_ <br />FN(if applicable)\_Audio_Timecode(Clean or VisTC)\_RevisionDate-v#\_(Final or Pre-QC).mov <br /><br />ASHN_SP100_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20260421-v2_FINAL.mov |
+| **Video Codec**     | **H.264**                                                                                                                                                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container           | MOV or MP4                                                                                                                                                                                                                       |
+| Picture             | (1) Clean (1) w/ Vis.TC UR (1) Series Opener Only (where applicable)                                                                                                                                                             |
+| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                                                          |
+| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                                               |
+| Scan Type           | Progressive scan type                                                                                                                                                                                                            |
+| Color Space         | BT.709 Legal Video Range                                                                                                                                                                                                         |
+| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                                                 |
+| Constant Frame Rate | Should Match Master                                                                                                                                                                                                              |
+| Native Frame Rate   | Should Match Master                                                                                                                                                                                                              |
+| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                                              |
+| Filename            | `ShowCode_ProdNumber_AirOrder_Proxy_Language_HD_` <br />`FN(if applicable)_Audio_Timecode(Clean or VisTC)_RevisionDate-v#_(Final or Pre-QC).mov` <br /><br />`ASHN_SP100_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20260421-v2_FINAL.mov` |
 
 ### 8.5 Audio stem delivery
 
@@ -738,11 +738,11 @@ All audio should be archived as 24-bit, 48kHz WAV files.
 
 Please see section 8.3.3 for full guidelines on labeling audio files.
 
-ShowCode_ProdNumber_Vers_LangCode_MaterialType_Channel#\_SampleRate_BitRate_TC_Channel.wav
+`ShowCode_ProdNumber_Vers_LangCode_MaterialType_Channel#_SampleRate_BitRate_TC_Channel.wav`
 
 **Examples:**
 
-MAMA_102_v04_enUS_PM_Nearfield_2CH_48k_24b_23976_LT.wav
+`MAMA_102_v04_enUS_PM_Nearfield_2CH_48k_24b_23976_LT.wav`
 
 _Roku Best Practices_
 
@@ -770,13 +770,13 @@ English (American, Code: enUS): Subtitles, SDH, and Forced Narrative
 
 **All files should be labeled as follows:**
 
-ShowCode-ProdNumber-LanguageCode_Format-RevisionDate.srt
+`ShowCode-ProdNumber-LanguageCode_Format-RevisionDate.srt`
 
 **Filename Examples:**
 
-NION-101-enUS_SDH-20190701
+`NION-101-enUS_SDH-20190701`
 
-NION-101-enUS_FN-20190701
+`NION-101-enUS_FN-20190701`
 
 ### 8.7 Breakdown of final locations for media deliverables
 
@@ -947,9 +947,9 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 - Multiple Sections - Timecodes of act breaks updated to HH:MM:SS:FF
 - 5.2.1 - Total run time must be locked at Locked Cut stage, inclusive of a slug for the end credit bed.
 - 5.5 - Locked Cut requirements updated
+- 8.5.1 - Audio Deliverables updated
 - 8.3.2 - Replaced Mexican Spanish (esMX) labeling with Neutral Latin American Spanish (esMX)
 - 8.4.5 - Final Proxy file size changed to a maximum of 2gb
-- 8.5.1 - Audio Deliverables updated
 - 8.6 - Replaced Mexican Spanish (esMX) labeling with Neutral Latin American Spanish (esMX); Removed SCC file requirement
 - 9.1 - Archival - Use of [Frame.io](http://frame.io/) Transfer App required for all uploads to the app
 

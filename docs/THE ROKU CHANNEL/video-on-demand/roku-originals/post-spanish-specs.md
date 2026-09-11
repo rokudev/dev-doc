@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+_Version 4.0 - May 2026_
+
 ## 1. General overview
 
 Roku pioneered streaming to the TV. The company operates the No. 1 TV streaming platform in the U.S. as measured by hours streamed (Hypothesis Group 2021). The Roku Channel is a top streaming channel on the Roku platform, owned and operated by Roku. It is available to consumers in the U.S., Canada, and the UK for free on Roku streaming devices, the Web, Amazon Fire TV and select Samsung TVs, and iOS and Android devices.
@@ -40,8 +42,6 @@ Please note that the Post Grid template provides columns for multiple types of s
 
 - **Air Order**: 1-digit number that reflects the order in which each episode will air.
 
-- **Story Number**: 1-digit number that relates to multiple episodes tied together by one story arc.
-
 ### 2.2 Notifications workflow
 
 - Once in production, any changes to the post schedule/calendar must be communicated to Roku Post Production immediately (within 24 hours)
@@ -57,11 +57,11 @@ Please note that the Post Grid template provides columns for multiple types of s
 - Do not include the Roku name or logo on any documents (including contact sheets, call sheets, PR’s, casting notices etc.) without written permission from Roku Production
 - The Roku Contact sheet is for Studio use and should not be distributed widely
 
-### 2.4 Roku marketing
+### 2.4 Roku Marketing
 
 Marketing will be directly involved in the Main Title treatment creative process.
 
-### 2.5 Roku localization
+### 2.5 Roku Localization
 
 Roku’s Localization Team will handle the creation of English subtitles and Audio Descriptions (AD) files.
 
@@ -110,15 +110,18 @@ DAILIES & EDIT PROXY PROCESS
 
 ### 3.4 Sizzle
 
+#### 3.4.1 Sizzle
+
 Roku may request your team create a 30-45 second sizzle for your project to be used for business-to-business purposes.
 
 Please note that the sizzle does not require formal finishing, i.e. final assembly, conform, color, or mix. As it is for B2B use, it does not require clearances or music licensing.
 
 Process:
 
-- Please include sizzle milestones in overall calendar deliverable.
-- Please account for 2 rounds of notes from Roku Creative, plus an approval review.
-- Please reach out to your Roku Post Manager for the delivery date, as the sizzle might be required prior to the end of principal photography for some projects.
+- Your Roku Production Executive will inform you if a sizzle is needed for your project.
+- Please include sizzle milestones in overall calendar deliverable once due date has been provided by your Roku Post Manager.
+- Please account for two rounds of notes from Roku Creative, plus an approval review.
+- Please reach out to your Roku Post Manager for the delivery date.
 
 Sizzle should include:
 
@@ -139,7 +142,7 @@ Technical Specs for Either Deliverable:
 
 Please reach out to your Roku Post Manager if you would like to see an example of a previous sizzle.
 
-#### 3.4.2 Sizzle deliverables
+### 3.4.2 Sizzle deliverables
 
 An HD primary video deliverable is required as follows:
 
@@ -158,7 +161,7 @@ Security is of the utmost importance to Roku. As such, access to all of the exci
 
 ### 4.1 Review platform
 
-Roku’s approved platform for content sharing and final archive is [Frame.io](http://frame.io/). Roku and [Frame.io](http://frame.io/) have developed a content review workflow that both ensures security and limits access to all pre-launched content. In this workflow, anyone viewing Roku content will be required to set up a user account within [Frame.io](http://frame.io/) so that their activity can be tracked.
+Roku’s approved platform for content sharing is [Frame.io](http://frame.io/). Roku and [Frame.io](http://frame.io/) have developed a content review workflow that both ensures security and limits access to all pre-launched content. In this workflow, anyone viewing Roku content will be required to set up a user account within [Frame.io](http://frame.io/) so that their activity can be tracked.
 
 **No material should be shared on any other platform without written approval from Roku.**
 
@@ -254,7 +257,7 @@ Roku Originals content must fall within a TV-PG or TV-14 rating. Some general ra
 
 #### 5.3.1 Review platform
 
-Roku’s approved platform for dailies, rough cut release, and final archive is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. If you are working with a partner who utilizes a different internal platform, there will not be a need to render out separate files just for use with [Frame.io](http://frame.io/); [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, which allows the same file to be uploaded to both platforms.
+Roku’s approved platform for dailies and rough cut release is [Frame.io](http://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. If you are working with a partner who utilizes a different internal platform, there will not be a need to render out separate files just for use with [Frame.io](http://frame.io/); [Frame.io](http://frame.io/)’s platform is compatible with most commonly used codecs, which allows the same file to be uploaded to both platforms.
 
 The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
 
@@ -359,7 +362,7 @@ Cut filenames must follow the proper naming convention below:
 - Cut version (RC1, FC, etc.)
 - Date the cut was released to Roku (YYYYMMDD)
 
-Example: FLIP\_102\_AIR\_2\_FC\_20260513
+Example: `FLIP_102_AIR_2_FC_20260513`
 
 All rough cut links should be confined to viewing only (i.e. no download access). When sharing cuts, please do not create any folders, or copy any folders into the Roku Review projects.
 
@@ -418,7 +421,7 @@ As each production will differ with regards to promotional assets, please reach 
 
 **The first draft of credits (opening title card + end credits) must be submitted to Roku Post for approval with delivery of the first Fine Cut.**
 
-### **7.1 Opening credits**
+### 7.1 Opening credits
 
 For opening credits, Roku will utilize traditional burned-in credits. Full requirements are noted below. Please reach out to Roku Post Production with any questions.
 
@@ -498,7 +501,7 @@ For end credits, Roku will utilize traditional burned-in credits. Please follow 
 
 The specifications below detail all deliverables required for each Roku production. A production will not be considered wrapped until all assets below are delivered and approved by the Roku Post Production team. If you have any questions, please do not hesitate to reach out to Roku Post Production.
 
-The Delivery Phase begins as soon as your episodes are ready for Quality Control, after Visual Effects color, and mix are complete. The following timeline is required to ensure that all pertinent assets are received on time for Post, Marketing, and Operations:
+The Delivery Phase begins as soon as your episodes are ready for Quality Control, after visual effects color, and mix are complete. The following timeline is required to ensure that all pertinent assets are received on time for Post, Marketing, and Operations:
 
 - Due 1 Week Before First Episode Delivered to Quality Control Vendor
   - Let Roku Post know which vendor you’re proceeding with
@@ -527,7 +530,7 @@ If an episode has passed Quality Control but a revision is necessary (incorrect 
 
 #### 8.2.1 Texted spotting list (TSL)
 
-You will be required to deliver a TSL file for each episode when it is submitted for Quality Control. This list will help Quality Control vendors verify that creatively intended text is included in the final file. A Roku Text Spotting List template was provided in your Post Kickoff zip file. This single file should be updated as episodes are sent to Quality Control so that all information for the series is included in the same master spreadsheet.
+You will be required to deliver a Texted Spotting List file for each episode when it is submitted for Quality Control. This list will help Quality Control vendors verify that creatively intended text is included in the final file. A Roku Text Spotting List template was provided in your Post Kickoff zip file. This single file should be updated as episodes are sent to Quality Control so that all information for the series is included in the same master spreadsheet.
 
 The Text Spotting List should contain any and all text that is burned into picture, and the corresponding timecodes for each. If an episode has no burned-in text, you will still be required to deliver this file, but will specify the lack of text by checking the box at the top of the template.
 
@@ -537,18 +540,18 @@ The Text Spotting List should contain any and all text that is burned into pictu
 
 Paper deliverables should all be uploaded to the “Hub” platform noted above. Please adhere to the following naming conventions when delivering documents to the Hub:
 
-- ShowCode _ProdNumbe&#x72;_&#x41;irOrder\_Version\_LangCode\_Date\_FINAL
-- Example: GABH _30&#x31;_&#x41;ir\_1\_PostVendorList\_enUS\_20250303\_FINAL
+- `ShowCode_ ProdNumber_AirOrder_Version_LangCode_Date_FINAL`
+- Example: `GABH_ 301_Air_1_PostVendorList_enUS_20250303_FINAL`
 
 #### 8.3.2 Master video deliverables
 
 All master\* video files should be labeled as follows:
 
-ShowCode\_ProdNumber\_AirOrder\_Version\_LangCode\_Resolution\_ColorSpace\_FN\_Audio\_FrameRate\_Date-v#.mov
+`ShowCode_ProdNumber_AirOrder_Version_LangCode_Resolution_ColorSpace_FN_Audio_FrameRate_Date-v#.mov`
 
 Example:
 
-NION\_101\_AIR\_1\_TXTD\_enUS\_UHD\_SDR\_FN\_2CH\_23976p\_20190701-v2.mov
+`NION_101_AIR_1_TXTD_enUS_UHD_SDR_FN_2CH_23976p_20190701-v2.mov`
 
 Production Number = As listed on Post Grids
 
@@ -571,11 +574,11 @@ Air Order = Please list even if the Air Order is the same as the Production Numb
 
 Audio materials should be named to include all appropriate information:
 
-ShowCode\_ProdNumber\_Vers\_Date\_LangCode\_MaterialType\_Channel#\_SampleRate\_BitRate\_TC\_Channel.wav
+`ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#_SampleRate_BitRate_TC_Channel.wav`
 
 **Examples:**
 
-MAMA\_102\_v04\_20220919\_enUS\_PM\_Nearfield\_2ch\_48k\_24b\_23976\_LT.wav
+`MAMA_102_v04_20220919_enUS_PM_Nearfield_2ch_48k_24b_23976_LT.wav`
 
 | **Material Type**                             | **Abbreviation**                  |
 | --------------------------------------------- | --------------------------------- |
@@ -636,7 +639,7 @@ If promotional bugs or watermarks are required by a 3rd party, Roku Content Lega
 
 #### 8.5.2 Audio formatting
 
-For the Final Texted Masters, all audio should be contained within the delivered mezzanine file. See the audio settings listed in 8.5.3 for specifications based on delivery codec.
+For the Final Texted Masters, all audio should be contained within the delivered mezzanine file. See the audio settings listed in 8.5.3 or specifications based on delivery codec.
 
 **The audio channel mapping and tagging of metadata must be verified via a program like QuickTime 7, QuickTime Pro, Telestream Switch or Adobe Media Encoder for all Texted and Textless Masters.**
 
@@ -677,7 +680,7 @@ If your content includes burned-in on screen text, you will be required to deliv
 
 Audio mapping label verification as noted in 8.5.2 must be verified in textless master.
 
-Additionally, if foreign language subtitles cover 30% or more of a given episode, you will be required to deliver a fully textless version of that episode.
+Additionally, if foreign language subtitles cover 30% or more of a given episode, you will be required to deliver a fully textless version of that episode. All episodes should be delivered with the same formatting; if one episode requires a textless master, versus a reel, then all remaining episodes should also be delivered as textless masters.
 
 Examples of what to remove for the Textless Masters:
 
@@ -696,23 +699,23 @@ _Roku Best Practices_
 
 From each Texted Master created, please export the following proxy files:
 
-| Video Codec         | H.264                                                                                                                                                                                                                                                 |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Container           | MOV or MP4                                                                                                                                                                                                                                            |
-| Picture             | (1) Clean & (1) w/ Vis.TC UR & (1) w/ Burned English CC\*                                                                                                                                                                                             |
-| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                                                                               |
-| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                                                                    |
-| Scan Type           | Progressive scan type                                                                                                                                                                                                                                 |
-| Color Space         | BT.709 Legal Video Range                                                                                                                                                                                                                              |
-| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                                                                      |
-| Constant Frame Rate | Should Match Master                                                                                                                                                                                                                                   |
-| Native Frame Rate   | Should Match Master                                                                                                                                                                                                                                   |
-| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                                                                   |
-| Filename            | ShowCode\_ProdNumber\_AirOrder\_Language\_Prox&#x79;_&#x48;D_<br />FN(if applicable)\_Audio\_Timecode(Clean or VisTC)\_RevisionDate-v#\_(Final or Pre-QC).mov<br /><br /> THAM\_101\_AIR\_1\_PROXY\_enUS\_HD\_FN\_2CH\_CLEAN\_20200916\_V4\_FINAL.mov |
+| Video Codec         | H.264                                                                                                                                                                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container           | MOV or MP4                                                                                                                                                                                                                   |
+| Picture             | (1) Clean & (1) w/ Vis.TC UR & (1) w/ Burned English CC\* & (1) Series Opener Only                                                                                                                                           |
+| Bitrate             | 5mbit/s (total file size \< 1gb to 2gb)                                                                                                                                                                                      |
+| Dimensions          | W1920 x H1080 (HD)                                                                                                                                                                                                           |
+| Scan Type           | Progressive scan type                                                                                                                                                                                                        |
+| Color Space         | BT.709 Legal Video Range                                                                                                                                                                                                     |
+| Bit Depth           | 10-bit or 12-bit                                                                                                                                                                                                             |
+| Constant Frame Rate | Should Match Master                                                                                                                                                                                                          |
+| Native Frame Rate   | Should Match Master                                                                                                                                                                                                          |
+| Audio               | Ch.1 Stereo Left, Ch.2 Stereo Right                                                                                                                                                                                          |
+| Filename            | `ShowCode_ProdNumber_AirOrder_Language_Proxy_HD_`<br />`FN(if applicable)_Audio_Timecode(Clean or VisTC)_RevisionDate-v#_(Final or Pre-QC).mov`<br /><br />`THAM_101_AIR_1_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov` |
 
 **Spanish language series will require a third proxy deliverable with burned in English cc. Closed captions must be 100% final. This should be labeled as “PRESS” preceding “PROXY” in the file name. Example:**
 
-THAM\_101\_AIR\_1\_PRESS\_PROXY\_enUS\_HD\_FN\_2CH\_CLEAN\_20200916\_V4\_FINAL.mov
+`THAM_101_AIR_1_PRESS_PROXY_enUS_HD_FN_2CH_CLEAN_20200916_V4_FINAL.mov`
 
 ### 8.6 Audio delivery
 
@@ -740,11 +743,11 @@ All audio should be archived as 24-bit, 48kHz WAV files.
 
 Please see section 8.3.3 for full guidelines on labeling audio files.
 
-ShowCode\_ProdNumber\_Vers\_Date\_LangCode\_MaterialType\_Channel#\_SampleRate\_BitRate\_TC\_Channel.wav
+`ShowCode_ProdNumber_Vers_Date_LangCode_MaterialType_Channel#_SampleRate_BitRate_TC_Channel.wav`
 
 **Example:**
 
-MAMA\_102\_v03\_20220919\_esMX\_FXSTEM\_6ch\_48k\_24b\_23976\_R.wav
+`MAMA_102_v03_20220919_esMX_FXSTEM_6ch_48k_24b_23976_R.wav`
 
 _Roku Best Practices_
 
@@ -771,19 +774,17 @@ Roku requires closed captions and subtitles in **2** formats: SRT and WebVTT. Th
 
 Spanish (Mexico, Code: esMX): Subtitles, SDH, Closed Caption Files, & FN
 
-English (American, Code: EN): Subtitles, SDH, Closed Caption Files, & FN
+English (American, Code: enUS): Subtitles, SDH, Closed Caption Files, & FN
 
 **All files should be labeled as follows:**
 
-ShowCode-ProdNumber-LanguageCode\_Format-RevisionDate.mov
+`ShowCode-ProdNumber-LanguageCode_Format-RevisionDate.mov`
 
 **Filename Examples:**
 
-NION-101-esMX\_SUB-20190701
+`NION-101-enUS_SDH-20190701`
 
-NION-101-enUS\_SDH-20190701
-
-NION-101-enUS\_FN-20190701
+`NION-101-enUS_FN-20190701`
 
 ### 8.8 Paper deliverables
 
@@ -849,7 +850,7 @@ Please deliver the final version of the Roku Episodic Delivery Checklist that yo
 
 Music Cue Sheets are required for all projects. Please use the cue sheet template found on the American Society of Composers, Authors and Publishers (ASCAP) website linked [here](https://www.ascap.com/help/royalties-and-payment/cue-sheets) or similar cue sheet template when submitting to Roku. The ASCAP template is also available via the Hub in the Production Legal – Scripted folder.
 
-Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Vosper at [svosper@roku.com](mailto:sgrossberg@roku.com).
+Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Vosper at [svosper@roku.com](mailto:svosper@roku.com).
 
 #### 8.8.10 Not applicable form
 
@@ -873,6 +874,7 @@ Required:
 - Final Textless Masters
 - Final Audio Stems
 - Graphic Elements – Main title card, credit PNGs, end credit PNGs, on-screen graphics, interstitials, etc.
+- Timed Text Files
 
 Any and all series that are wholly owned by Roku will require delivery of VAMs, CTMs, and final Visual Effects shots (where applicable) via LTO10 or greater. LTOs should be formatted LTFs and include a digital manifest for each tape. For all licensed or co-produced content, please reach out to your Roku Post Production Manager to discuss the specific requirements and expectations for each series. These manifests should be uploaded to The Hub.
 
@@ -932,9 +934,9 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 - Multiple Sections - Timecodes of act breaks updated to HH:MM:SS:FF
 - 5.2.1 - Total run time must be locked at Locked Cut stage, inclusive of a slug for the end credit bed.
 - 5.5 - Locked Cut requirements updated
+- 8.5.1 - Audio Deliverables updated
 - 8.3.2 - Replaced Mexican Spanish (esMX) labeling with Neutral Latin American Spanish (esMX)
 - 8.4.5 - Final Proxy file size changed to a maximum of 2gb
-- 8.5.1 - Audio Deliverables updated
 - 8.6 - Replaced Mexican Spanish (esMX) labeling with Neutral Latin American Spanish (esMX); Removed SCC file requirement
 - 9.1 - Archival - Use of [Frame.io](http://frame.io/) Transfer App required for all uploads to the app
 
@@ -988,5 +990,3 @@ Please be sure that all consolidated avid media is archived and removed from [Fr
 - 5.2.2 – Clarified that Ad Breaks should have no text
 - 7.2 – Updated End Credits section with more detail
 - 8.7.9 – Updated Music Cue Sheet information and point of contact for questions
-
-<br />

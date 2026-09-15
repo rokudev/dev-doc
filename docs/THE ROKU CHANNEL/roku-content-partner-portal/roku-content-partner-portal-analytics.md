@@ -23,7 +23,7 @@ The analytics section provides insights into how your content and storefront exp
 
   Analytics reports and metrics vary based on your partner type and subscription level. Not all data is available to all partners.
 
-  For example, merchandising and storefront performance insights are only available to Premium Subscription partners, since these features are tied to storefront and promotional capabilities that are exclusive to that tier.
+  For example, merchandising and performance insights are only available to Premium Subscription partners, since these features are tied to storefront and promotional capabilities that are exclusive to that tier.
 
   If you do not see certain reports or metrics in your analytics view, it is likely due to your current access level or report eligibility.
 </Callout>

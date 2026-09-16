@@ -144,7 +144,7 @@ m                &h0010 roAssociativeArray refcnt=3 count:0
 Brightscript Debugger>
 ```
 
-A `roAssociativeArray` that describes the exception is also an acceptable argument to `THROW`. Any missing fields will will be set with default values as shown in the table below:
+A `roAssociativeArray` that describes the exception is also an acceptable argument to `THROW`. Any missing fields will be set with default values as shown in the table below:
 
 | Name      | Default                                           |
 | :-------- | :------------------------------------------------ |

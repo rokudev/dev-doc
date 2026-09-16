@@ -42,168 +42,151 @@ For more information on payout terms, see the [Roku Distribution Agreement](http
 
 ### Restricted payout countries
 
-Roku cannot make any payouts to the entities registered or with bank accounts from the following countries:
-
-- China
-- Cayman Islands
-- Iran
-- Lebanon
-- Nepal
-- Nigeria
-- Pakistan
-- Panama
-- Russia
-- Turkey
-- UAE
-- Ukraine
-- US Virgin Islands
-
-### Restricted PayPal payout countries
-
-Roku does not process PayPal payouts registered in the following countries:
+Roku cannot make any payouts to the entities from these regions (countries/territories).
 
 - Afghanistan
-- Aland Islands
-- American Samoa
-- Angola
-- Anguilla
-- Antarctica
-- Armenia
-- Aruba
-- Ascension Island
-- Azerbaijan
-- Azores
-- Bangladesh
-- Belarus
-- Benin
-- Bhutan
-- Bolivia
-- Bonaire
-- British Indian Ocean Territory
-- British Virgin Islands
-- Brunei
-- Burkina Faso
-- Burundi
-- Cape Verde
-- Cambodia
-- Cameroon
-- Canary Islands
-- Caribbean Netherlands
-- Central African Republic
-- Ceuta and Melila
-- Chad
-- China
-- Christmas Island
-- Cocos (Keeling) Islands
-- Comoros
-- Cook Islands
-- Congo, Democratic Republic of the
-- Congo, Republic of the
-- Cote d'Ivoire
-- Cuba
-- Curacao
-- Djibouti
-- Equatorial Guinea
-- Eritrea
-- Ethiopia
-- Falkland Islands
-- French Southern Territories
-- Gabon
-- Gambia
-- Ghana
-- Guam
-- Guernsey
-- Guinea
-- Guinea-Bissau
-- Guyana
-- Haiti
-- Iran
-- Iraq
-- Isle of Man
-- Jersey
-- Kiribati
-- Kosovo
-- Kyrgyzstan
-- Laos
-- Lebanon
-- Liberia
-- Libya
-- Madeira
-- Macau
-- Macedonia
-- Madagascar
-- Maldives
-- Mali
-- Marshall Islands
-- Mauritania
-- Mayotte
-- Micronesia
-- Monaco
-- Mongolia
-- Montenegro
-- Montserrat
-- Myanmar (Burma)
-- Namibia
-- Nauru
-- Nepal
-- Niger
-- Nigeria
-- Niue
-- Norfolk Island
-- Northern Mariana Islands
-- North Korea
-- Pakistan
-- Palestine
-- Papua New Guinea
-- Paraguay
-- Pitcairn Islands
-- Puerto Rico
-- Russia
-- Rwanda
-- Saba
-- Saint Barthelemy
-- Saint Helena
-- Saint Martin
-- Saint Pierre and Miquelon
-- Saint Vincent and the Grenadines
-- Samoa
-- Sao Tome and Principe
-- Sierra Leone
-- Sint Eustatius
-- Sint Maarten
-- Solomon Islands
-- Somalia
-- South Georgia Island
-- South Sudan
-- Sri Lanka
-- Sudan
-- Suriname
-- Svalbard And Jan Mayen Islands
-- Swaziland
-- Syria
-- Tajikistan
-- Tanzania
-- Thailand
-- Timor-Leste
-- Togo
-- Tokelau
-- Tonga
-- Tristan da Cunha
-- Tunisia
-- Turkey
-- Turkmenistan
-- Tuvalu
-- Uganda
-- Ukraine
-- US Virgin Islands
-- Uzbekistan
-- Vanuatu
-- Vatican City
-- Wallis and Futuna
-- Western Sahara
-- Yemen
-- Zambia
-- Zimbabwe
+
+* Aland Islands
+* American Samoa
+* Angola
+* Anguilla
+* Antarctica
+* Armenia
+* Aruba
+* Ascension Island
+* Azerbaijan
+* Azores
+* Bangladesh
+* Belarus
+* Benin
+* Bhutan
+* Bolivia
+* Bonaire
+* British Indian Ocean Territory
+* British Virgin Islands
+* Brunei
+* Burkina Faso
+* Burundi
+* Cape Verde
+* Cambodia
+* Cameroon
+* Canary Islands
+* Caribbean Netherlands
+* Central African Republic
+* Ceuta and Melila
+* Chad
+* China
+* Christmas Island
+* Cocos (Keeling) Islands
+* Comoros
+* Cook Islands
+* Congo, Democratic Republic of the
+* Congo, Republic of the
+* Cote d'Ivoire
+* Cuba
+* Curacao
+* Djibouti
+* Equatorial Guinea
+* Eritrea
+* Ethiopia
+* Falkland Islands
+* French Southern Territories
+* Gabon
+* Gambia
+* Ghana
+* Guam
+* Guernsey
+* Guinea
+* Guinea-Bissau
+* Guyana
+* Haiti
+* Iran
+* Iraq
+* Isle of Man
+* Jersey
+* Kiribati
+* Kosovo
+* Kyrgyzstan
+* Laos
+* Lebanon
+* Liberia
+* Libya
+* Madeira
+* Macau
+* Macedonia
+* Madagascar
+* Maldives
+* Mali
+* Marshall Islands
+* Mauritania
+* Mayotte
+* Micronesia
+* Monaco
+* Mongolia
+* Montenegro
+* Montserrat
+* Myanmar (Burma)
+* Namibia
+* Nauru
+* Nepal
+* Niger
+* Nigeria
+* Niue
+* Norfolk Island
+* Northern Mariana Islands
+* North Korea
+* Pakistan
+* Palestine
+* Papua New Guinea
+* Paraguay
+* Pitcairn Islands
+* Puerto Rico
+* Russia
+* Rwanda
+* Saba
+* Saint Barthelemy
+* Saint Helena
+* Saint Martin
+* Saint Pierre and Miquelon
+* Saint Vincent and the Grenadines
+* Samoa
+* Sao Tome and Principe
+* Sierra Leone
+* Sint Eustatius
+* Sint Maarten
+* Solomon Islands
+* Somalia
+* South Georgia Island
+* South Sudan
+* Sri Lanka
+* Sudan
+* Suriname
+* Svalbard And Jan Mayen Islands
+* Swaziland
+* Syria
+* Tajikistan
+* Tanzania
+* Thailand
+* Timor-Leste
+* Togo
+* Tokelau
+* Tonga
+* Tristan da Cunha
+* Tunisia
+* Turkey
+* Turkmenistan
+* Tuvalu
+* Uganda
+* Ukraine
+* US Virgin Islands
+* Uzbekistan
+* Vanuatu
+* Vatican City
+* Wallis and Futuna
+* Western Sahara
+* Yemen
+* Zambia
+* Zimbabwe
 
 <br />
 

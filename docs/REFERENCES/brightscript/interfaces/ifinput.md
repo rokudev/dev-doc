@@ -58,7 +58,7 @@ See [Implementing Voice Controls](doc:transport-controls) for more information.
 
 A flag indicating whether transport event notifications were successfully registered.  
 
-### EventResponse(roAssociativeArray aa) as Boolean
+### EventResponse(aa as roAssociativeArray) as Boolean
 
 #### Description
 

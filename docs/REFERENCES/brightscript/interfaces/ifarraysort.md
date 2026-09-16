@@ -21,7 +21,7 @@ next:
 
 ## Supported methods
 
-### Sort(flags as String = "") as Void
+### Sort(flags = "" as String) as Void
 
 #### Description
 
@@ -62,7 +62,7 @@ next:
     ' sets the array to ["DOG", "cat", "bee"]
 ```
 
-### SortBy(fieldName as String, flags as String = "") as Void
+### SortBy(fieldName as String, flags = "" as String) as Void
 
 #### Description
 

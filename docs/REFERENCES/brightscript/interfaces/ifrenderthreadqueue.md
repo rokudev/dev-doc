@@ -111,6 +111,6 @@ This function is similar to the **PostMessage()** function, but it copies data i
 
 Returns the total number of objects for the channel that were copied by the **PostMessage()** function instead of being moved.
 
-### Return Value
+#### Return Value
 
 An integer indicating the total number of objects that were copied by the **PostMessage()** function

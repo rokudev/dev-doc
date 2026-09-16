@@ -16,7 +16,7 @@ Many digital media development studios have incorporated Roku development into t
 
 Below is a list of studios that have demonstrated success effectively developing and launching apps on the Roku platform:
 
-<HTMLBlock>{`
+<HTMLBlock>
 <table>
 <thead>
 <tr>
@@ -474,7 +474,7 @@ Below is a list of studios that have demonstrated success effectively developing
 <p>Global</p>
 </td>
 <td class="long-line" colspan="1" rowspan="1">
-<p><a href="mailto:ankur.tripathi@tothenew.com%60HY">Ankur Tripathi</a></p>
+<p><a href="mailto:ankur.tripathi@tothenew.com">Ankur Tripathi</a></p>
 </td>
 <td class="long-line" colspan="1" rowspan="1">
 <p>Stretch (US), Stadium (US), Birde (AU), Intelivideo (US)</p>
@@ -573,7 +573,7 @@ Below is a list of studios that have demonstrated success effectively developing
 <p>North America</p>
 </td>
 <td class="long-line" colspan="1" rowspan="1">
-<p><a href="mailto:woody.zantzinger@willowtreeapps.comm">Woody Zantzinger</a></p>
+<p><a href="mailto:woody.zantzinger@willowtreeapps.com">Woody Zantzinger</a></p>
 </td>
 <td class="long-line" colspan="1" rowspan="1">
 <p><a href="https://channelstore.roku.com/details/2946">Fox News Channel</a></p>
@@ -616,6 +616,6 @@ Below is a list of studios that have demonstrated success effectively developing
 </tr>
 </tbody>
 </table>
-`}</HTMLBlock>
+</HTMLBlock>
 
 <br />

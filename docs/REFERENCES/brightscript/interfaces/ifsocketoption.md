@@ -16,7 +16,7 @@ next:
 
 | Name             | Description                                                                                                                            |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [roDataGramSocket](doc:rodatagramsocket) | The roDataGramSocket component enables Brightscript apps to send and receive UDP packets                                               |
+| [roDataGramSocket](doc:rodatagramsocket) | The roDataGramSocket component enables BrightScript apps to send and receive UDP packets                                               |
 | [roStreamSocket](doc:rostreamsocket)   | The roStreamSocket component enables BrightScript apps to accept and connect to TCP streams as well as send and receive data with them |
 
 

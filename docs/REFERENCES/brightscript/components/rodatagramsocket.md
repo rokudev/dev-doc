@@ -12,7 +12,7 @@ next:
 ---
 
 
-The roDataGramSocket component enables Brightscript apps to send and receive UDP packets. The interface is modeled on and works much like standard Berkeley sockets.
+The roDataGramSocket component enables BrightScript apps to send and receive UDP packets. The interface is modeled on and works much like standard Berkeley sockets.
 
 This object is created without any arguments:
 

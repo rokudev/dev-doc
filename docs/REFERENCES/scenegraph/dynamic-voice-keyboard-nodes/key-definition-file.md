@@ -33,7 +33,7 @@ The **KeyLayout** object specifies the key configuration for a keyboard instance
 | keyboardWidthFHD  | unsigned                     | Overall width of the keyboard for FHD.                                                                                                                                                                                                                                                                                                                   |
 | keyboardHeightHD  | unsigned                     | Overall height of the keyboard for HD.                                                                                                                                                                                                                                                                                                                   |
 | keyboardWidthHD   | unsigned                     | Overall width of the keyboard for HD.                                                                                                                                                                                                                                                                                                                    |
-| sections          | array of **Section** objects | An array of **Section** objects in the **KeyLayout**. A **KeyLayout** object contains one or more **Section** objects (it must have at least one). Most have a single **Section** object (for example, a PIN pad). In some cases, however, a **KeyLayout** will have multiple **Section** objects (for example, Roku's WiFi keyboard has four sections). |
+| sections          | array of **Section** objects | An array of **Section** objects in the **KeyLayout**. A **KeyLayout** object contains one or more **Section** objects (it must have at least one). Most have a single **Section** object (for example, a PIN pad). In some cases, however, a **KeyLayout** will have multiple **Section** objects (for example, Roku's Wi-Fi keyboard has four sections). |
 
 ## Section
 
@@ -47,7 +47,7 @@ A **Section** contains one or more **Grid** objects.
 
 ## Grid
 
-A **Section** may contain one or more **Grid** objects. A **Section** typically contains multiple **Grid** objects when defining different key layouts for a particular mode of the overall **KeyLayout**. For example, the "alpha key" section of Roku's current WiFi keyboard has six modes ("alphanumLowerCase", "alphanumUpperCase", "symbolsLowerCase", "symbolsUpperCase", "accentsLowerCase", "accentsUpperCase"). Each of the modes for these **Section** objects is specified using a different **Grid**.
+A **Section** may contain one or more **Grid** objects. A **Section** typically contains multiple **Grid** objects when defining different key layouts for a particular mode of the overall **KeyLayout**. For example, the "alpha key" section of Roku's current Wi-Fi keyboard has six modes ("alphanumLowerCase", "alphanumUpperCase", "symbolsLowerCase", "symbolsUpperCase", "accentsLowerCase", "accentsUpperCase"). Each of the modes for these **Section** objects is specified using a different **Grid**.
 
 <table>
   <thead>
@@ -71,7 +71,7 @@ A **Section** may contain one or more **Grid** objects. A **Section** typically 
     <tr>
       <td>modes</td>
       <td>string/array of strings</td>
-      <td>The keyboard mode when this grid is shown.If the <strong>mode</strong> field of a <strong><a href="/dev/docs/dynamic-key-grid">DynamicKeyGrid</a></strong> node is set, the <strong>Grid</strong> object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's WiFi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes.</td>
+      <td>The keyboard mode when this grid is shown.If the <strong>mode</strong> field of a <strong><a href="/dev/docs/dynamic-key-grid">DynamicKeyGrid</a></strong> node is set, the <strong>Grid</strong> object with the matching mode is displayed. In some cases, the same grid is shown for different keyboard modes. For example, Roku's Wi-Fi keyboard shows the same numeric characters grid in both "alphaNumUpperCase" and "alphaNumLowerCase" modes.</td>
     </tr>
     <tr>
       <td>rows</td>
@@ -161,7 +161,7 @@ Key sizes are computed based on the various width and height properties specifie
 
 * For keys with equal width in a Row object, if there are _K_ keys in the Row, the height of each key is computed as follows: `keyWidth = (sectionWidth) / K`.
 
-* To configure keys with varying widths within in a Row, specify the **keyWidth** attribute for those keys. Those keys will use the explicitly specified widths, and the widths of the remaining keys will be computed by equally dividing the remaining **sectionWidth** evenly after subtracting the width of the keys with explicitly specified widths. For example, if there are _K_ keys in a row and Key 1 has its **keyWidth** explicitly specified as 100, Key 1 will have width 100 and the other keys in the Row will be calculated as follows: `keyWidth = (sectionWidth - 100) / (K - 1)`.
+* To configure keys with varying widths within a Row, specify the **keyWidth** attribute for those keys. Those keys will use the explicitly specified widths, and the widths of the remaining keys will be computed by equally dividing the remaining **sectionWidth** evenly after subtracting the width of the keys with explicitly specified widths. For example, if there are _K_ keys in a row and Key 1 has its **keyWidth** explicitly specified as 100, Key 1 will have width 100 and the other keys in the Row will be calculated as follows: `keyWidth = (sectionWidth - 100) / (K - 1)`.
 
 ## Examples
 
@@ -229,7 +229,7 @@ This example uses a Key Definition File to specify a simple numeric PIN pad. The
 
 ### MiniKeyboard
 
-This example uses the Key Definition File for the Search "MiniKeyboard" used by the RokuOS. The KeyLayout has a single Section with a single Grid that has six rows, with six keys each for the characters a-z and 0-9. The seventh row of the grid has three double-width keys for **Clear**, **Space**, and **Backspace**.
+This example uses the Key Definition File for the Search "MiniKeyboard" used by the Roku OS. The KeyLayout has a single Section with a single Grid that has six rows, with six keys each for the characters a-z and 0-9. The seventh row of the grid has three double-width keys for **Clear**, **Space**, and **Backspace**.
 
 <Image alt="roku815px - mini-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/mini-keyboard-kdf-v2.jpg" />
 
@@ -744,9 +744,9 @@ The examples below show the Keyboard in the "NameLower", "Zip" and "FullLower" m
 }
 ```
 
-### WiFi Keyboard
+### Wi-Fi Keyboard
 
-This example shows the Key Definition File for the WiFi keyboard used by the Roku OS. That keyboard has four Sections. Each Section supports one or more modes with the modes being associated with one or more Grid objects. Each Grid ha four Row's with varying numbers of keys.
+This example shows the Key Definition File for the Wi-Fi keyboard used by the Roku OS. That keyboard has four Sections. Each Section supports one or more modes with the modes being associated with one or more Grid objects. Each Grid ha four Row's with varying numbers of keys.
 
 The examples below show the keyboard in "ABC123Lower" mode as well as "AccentsUpper" mode. Note the following:
 
@@ -1545,7 +1545,7 @@ The examples below show the keyboard in "ABC123Lower" mode as well as "AccentsUp
 
 ### Email Keyboard with pop-up suggestions
 
-This example uses the same Key Definition File as the WiFi keyboard above, but with KeySuggestions added for the ampersand key. The suggestions pop-up is set to trigger when the key is focused for a short amount of time as well as when the key is selected.
+This example uses the same Key Definition File as the Wi-Fi keyboard above, but with KeySuggestions added for the ampersand key. The suggestions pop-up is set to trigger when the key is focused for a short amount of time as well as when the key is selected.
 
 <Image alt="roku815px - email-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/email-keyboard-kdf.jpg" />
 
@@ -2343,7 +2343,7 @@ This example uses the same Key Definition File as the WiFi keyboard above, but w
 
 ### Full Keyboard with Extended Action Section
 
-This example starts with the same Key Definition File used for the WiFi keyboard above, but adds a 5th Section that includes additional action keys. The _rows_ array for that Section's Grid contains 4 elements. The 1st, 2nd and 4th Row's in that array contain a single Key (Close, Clear and Continue). The 3rd element of that array is a null Row. This causes a gap to be left between the 2nd and 4th rows of that Section. See the Section near of the bottom of the Key Definition File to see how a null Row is specified in the Grid's _rows_ array.
+This example starts with the same Key Definition File used for the Wi-Fi keyboard above, but adds a 5th Section that includes additional action keys. The _rows_ array for that Section's Grid contains 4 elements. The 1st, 2nd and 4th Row's in that array contain a single Key (Close, Clear and Continue). The 3rd element of that array is a null Row. This causes a gap to be left between the 2nd and 4th rows of that Section. See the Section near of the bottom of the Key Definition File to see how a null Row is specified in the Grid's _rows_ array.
 
 <Image alt="roku815px - extended-action-keyboard-kdf" border={false} src="https://image.roku.com/ZHZscHItMTc2/extended-action-keyboard-kdf.jpg" />
 

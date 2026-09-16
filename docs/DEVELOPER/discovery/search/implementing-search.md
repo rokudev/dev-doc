@@ -243,7 +243,7 @@ Before submitting your search feed for review, you need to test your app's [deep
    > * The auto-created Search beta apps do count towards the limit of 10 beta apps per developer account.
    > * A developer account may have a maximum of four auto-created beta apps.
    > * The auto-created beta apps cannot be deleted (they are automatically removed 120 days after being created).
-   > * If a user on your team cannot access to the auto-created beta app, manually grant them access via the [User Management page in the Developer Dashboard](https://developer.roku.com/user/access).
+   > * If a user on your team cannot access the auto-created beta app, manually grant them access via the [User Management page in the Developer Dashboard](https://developer.roku.com/user/access).
    >
    > **Keeping the Search beta app synced with the production app**
    >

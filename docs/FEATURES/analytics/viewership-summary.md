@@ -12,7 +12,7 @@ next:
 ---
 
 
-You can the Viewership Summary Report to examine the number of visits, streaming hours and rebuffers per hour for your app.
+You can use the Viewership Summary Report to examine the number of visits, streaming hours and rebuffers per hour for your app.
 
 ![roku815px - analytics-report-viewership](https://image.roku.com/ZHZscHItMTc2/viewership-summary-report.png "analytics-report-viewership")
 

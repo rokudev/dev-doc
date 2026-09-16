@@ -20,7 +20,7 @@ next:
 
 | Name    | Description                                                                                                           |
 | ------- | --------------------------------------------------------------------------------------------------------------------- |
-| [roRegex](doc:roregex) | The roRegex component provides the powerful regular expression processing of the PCRE library to Brightscript strings |
+| [roRegex](doc:roregex) | The roRegex component provides the powerful regular expression processing of the PCRE library to BrightScript strings |
 
 
 ## Supported methods
@@ -57,7 +57,7 @@ If the matching pattern contains N parenthetical substrings, the relevant substr
 
 An roArray of matched substrings from str. If no match was made, an empty array is returned. If a match was made, the entire match is returned in array[0]. If there are no parenthetical substrings this is the only entry in the array
 
-#### Example (from Brightscript Debugger Interactive Shell)
+#### Example (from BrightScript Debugger Interactive Shell)
 
 ```brightscript
  r = CreateObject("roRegex", "(a|(z))(bc)","")
@@ -107,7 +107,7 @@ Replaces the first occurrence of a matching pattern in str with replacement and 
 | str         | String | The string to be searched.                                 |
 | replacement | String | The string to be used to replace matches in source string. |
 
-#### Example (from Brightscript Debugger Interactive Shell)
+#### Example (from BrightScript Debugger Interactive Shell)
 
 ```brightscript
  r = CreateObject("roRegex", "(\d+)\s+(\w+)", "")
@@ -136,7 +136,7 @@ Replaces all occurrences of a matching pattern in str with replacement and retur
 
 A string with the result of the replace all operation.
 
-#### Example (from Brightscript Debugger Interactive Shell)
+#### Example (from BrightScript Debugger Interactive Shell)
 
 ```brightscript
   r = CreateObject("roRegex", "a", "i")
@@ -164,7 +164,7 @@ Uses the matching pattern as a separator and splits the string on the separator 
 
 An roList of substrings of str that were separated by strings which match the pattern in the CreateObject call. The separator strings are not returned. If no matches were found, the returned list contains a single item with the string unchanged.
 
-**Examples from Brightscript Debugger Interactive Shell**
+**Examples from BrightScript Debugger Interactive Shell**
 
 ```brightscript
  r = CreateObject("roRegex", ",", "") ' split on comma

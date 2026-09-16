@@ -596,7 +596,7 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">Url</td>
         <td class="short-line">String</td>
-        <td class="short-line">Stream URL for Scene Graph Video node</td>
+        <td class="short-line">Stream URL for SceneGraph Video node</td>
         <td class="short-line">mysite.com/img/vacation.jpg</td>
       </tr>
       <tr>
@@ -621,7 +621,7 @@ Playback configuration meta-data attributes are used to configure the playback o
         <td class="short-line">Stream</td>
         <td class="short-line">roAssociativeArray</td>
         <td class="long-line">
-          Supported by roVideoPlayer and roVideoScreen, but not the Roku Scene Graph Video node.<br />For the Video node, use the top level url, streamformat, etc. attributes. <br /><br />The exception is cases where you don't have adaptive streams (typically MP4) and need to specify different bitrate variants separately. For this use case use the Streams attribute. roAssociativeArray that has parameters representing the stream settings that were set as individual roArrays in previous firmware revisions. <br /><br />The old method is still supported and descriptions of the parameters can be found under those content-meta data entries. <br /><br />For url please see StreamUrls, for quality it is now a Boolean that is true for HD quality. <br />
+          Supported by roVideoPlayer and roVideoScreen, but not the Roku SceneGraph Video node.<br />For the Video node, use the top level url, streamformat, etc. attributes. <br /><br />The exception is cases where you don't have adaptive streams (typically MP4) and need to specify different bitrate variants separately. For this use case use the Streams attribute. roAssociativeArray that has parameters representing the stream settings that were set as individual roArrays in previous firmware revisions. <br /><br />The old method is still supported and descriptions of the parameters can be found under those content-meta data entries. <br /><br />For url please see StreamUrls, for quality it is now a Boolean that is true for HD quality. <br />
           <div class="hscroll">
             <table>
               <thead>
@@ -821,7 +821,7 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">VideoDisableUI</td>
         <td class="short-line">Boolean</td>
-        <td class="long-line">If set to true, hides the Scene Graph Video node trick play UI; If set to false (the default) shows the Scene Graph Video node trick play UI</td>
+        <td class="long-line">If set to true, hides the SceneGraph Video node trick play UI; If set to false (the default) shows the SceneGraph Video node trick play UI</td>
         <td class="long-line">video = createObject("roSGNode", "Video"); video.content.VideoDisableUI = true</td>
       </tr>
       <tr>
@@ -1056,7 +1056,7 @@ video.setHttpAgent(httpAgent)
       <tr>
         <td class="short-line">HttpCertificatesFile</td>
         <td class="short-line">uri</td>
-        <td class="long-line">If set, the Scene Graph Audio or Video node loads this public certificate bundle, to authenticate the server. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When playing this content, the agent is updated in the following manner: <ul>
+        <td class="long-line">If set, the SceneGraph Audio or Video node loads this public certificate bundle, to authenticate the server. The protocol must be https for this to have any effect. When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When playing this content, the agent is updated in the following manner: <ul>
             <li>If this attribute is defined, the file URI is set into the HttpAgent instance. However, if this attribute is specified and the value is the empty string (""), then no changes will be made to the HttpAgent.</li>
             <li>
               <p>If this attribute is not defined, the behavior depends upon whether the Content Meta-Data (CMD) contains secure (https) URLs:</p>
@@ -1070,17 +1070,17 @@ video.setHttpAgent(httpAgent)
       <tr>
         <td class="short-line">HttpCookies</td>
         <td class="short-line">array of strings</td>
-        <td class="long-line">If set, the Scene Graph Audio or Video node send the cookies to the server. Each cookie must have the following syntax: dom=domain;path=path;name=name;val=value; When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP cookies in the agent are cleared and replaced with the cookies defined by this attribute</td>
+        <td class="long-line">If set, the SceneGraph Audio or Video node send the cookies to the server. Each cookie must have the following syntax: dom=domain;path=path;name=name;val=value; When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP cookies in the agent are cleared and replaced with the cookies defined by this attribute</td>
       </tr>
       <tr>
         <td class="short-line">HttpHeaders</td>
         <td class="short-line">array of strings</td>
-        <td class="long-line">If set, the Scene Graph Audio or Video node sends these headers to the server. Each string must be of the format "name:value". When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP headers in the agent are cleared and replaced with the headers defined by this attribute</td>
+        <td class="long-line">If set, the SceneGraph Audio or Video node sends these headers to the server. Each string must be of the format "name:value". When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP headers in the agent are cleared and replaced with the headers defined by this attribute</td>
       </tr>
       <tr>
         <td class="short-line">HttpSendClientCertificate</td>
         <td class="short-line">Boolean</td>
-        <td class="long-line">If true, the Scene Graph Audio or Video node sends the client device certificate to the server, for client authentication. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute exists, the value of this attribute (true or false) is set into the HttpAgent</td>
+        <td class="long-line">If true, the SceneGraph Audio or Video node sends the client device certificate to the server, for client authentication. The protocol must be https for this to have any effect. When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute exists, the value of this attribute (true or false) is set into the HttpAgent</td>
       </tr>
     </tbody>
 </table></div>

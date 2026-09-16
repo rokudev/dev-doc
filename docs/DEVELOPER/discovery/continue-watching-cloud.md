@@ -321,7 +321,7 @@ As of Apr 1, 2026, the Continue Watching integration supports 24/7 live linear s
 
 * **Events**: A live linear stream requires a single playback event that is sent via a POST request after 60 seconds of playback. Do not make any other API calls to send events.
 * **ContentId**: The contentId is the ID of the live linear stream itself, not the currently playing program.
-* **Deep links**: When your app receives a deep link from Continue Watching, the contentId is is the ID of the live linear stream (not the currently running program), and the mediaType is “liveFeed”.  The required playback behavior is to resume with the currently running program in the stream.
+* **Deep links**: When your app receives a deep link from Continue Watching, the contentId is the ID of the live linear stream (not the currently running program), and the mediaType is “liveFeed”.  The required playback behavior is to resume with the currently running program in the stream.
 
 ## Managing user consent
 

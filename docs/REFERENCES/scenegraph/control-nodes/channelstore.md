@@ -178,7 +178,7 @@ store.command = "getUserData"
 
 To create an order, this field needs to be set to a ContentNode that has one child ContentNode for each item to be purchased. There are two approaches to setting the `order` field: setting it directly, or setting the `deltaOrder` field.
 
-To set the `order` field directly, first create a ContentNode, then create one child ContentNode with the `"code"` and `"qty"` fields set for each item to be purchased. Assuming `m.channelStore` is a ChannelStore node object, the following Brightscript code shows how to do this:
+To set the `order` field directly, first create a ContentNode, then create one child ContentNode with the `"code"` and `"qty"` fields set for each item to be purchased. Assuming `m.channelStore` is a ChannelStore node object, the following BrightScript code shows how to do this:
 
 ```brightscript
 myOrder = CreateObject("roSGNode", "ContentNode")

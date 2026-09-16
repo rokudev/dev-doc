@@ -31,8 +31,8 @@ The band of metrics below FILTERS shows the summary statistics based on the time
 
   - **New Installs** - total count of new unique accounts during the selected Time Period.
   - **Uninstalls** - total count of accounts uninstalled during the selected Time Period.
-  - **Cumulative Installs To-Date** - count of unique accounts that that have installed your app to-date; roughly equivalent to the size of your install base. When users uninstall and re-install an app, this is credited as one net new installation and will increase the Cumulative Installs To-Date.
-  - **Average Daily Viewers** - average number of daily views similar to DAU "daily active users." Changing Time Grain will not effect this measurement.
+  - **Cumulative Installs To-Date** - count of unique accounts that have installed your app to-date; roughly equivalent to the size of your install base. When users uninstall and re-install an app, this is credited as one net new installation and will increase the Cumulative Installs To-Date.
+  - **Average Daily Viewers** - average number of daily views similar to DAU "daily active users." Changing Time Grain will not affect this measurement.
   - **Average Minutes Per Viewer** - total streaming minutes on the app per number of unique accounts that visited the app.
   - **Total Hours Streamed** - total hours streamed during the selected Time Period.
 

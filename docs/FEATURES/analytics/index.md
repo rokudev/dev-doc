@@ -167,7 +167,7 @@ You can create a schedule to automatically email a report in a recurring daily, 
 
 7. Click **Save** to save the schedule.
 
-8. To create another schedule, click **New** to and repeat steps 3-7 .
+8. To create another schedule, click **New** and repeat steps 3-7 .
 
 ## Using Streaming Store codes
 

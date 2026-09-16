@@ -135,7 +135,7 @@ follows:
 `pkg:/locale/default/images/image_name_default`
 
 
-In Brightscript in a \<script\> element, you can also use the getLocalizedAsset() method in [ifLocalization](doc:iflocalization) to get a localized
+In BrightScript in a \<script\> element, you can also use the getLocalizedAsset() method in [ifLocalization](doc:iflocalization) to get a localized
 graphical image.
 
 For example:

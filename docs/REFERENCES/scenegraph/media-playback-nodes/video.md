@@ -111,14 +111,14 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>integer</td>
       <td>0</td>
       <td>READ\_ONLY</td>
-      <td>The error code associated with the video play error set in the <code>state</code> field: <pre><code>-  0    no error                                                     <br />- -1    network error (server down or unresponsive, server is unreachable, network setup problem on the client).<br />- -2    connection timed out                                         <br />- -3    unknown/unspecified or generic Error                         <br />- -4    empty list; no streams were specified to play                <br />- -5    media error; the media format is unknown or unsupported      <br />- -6    DRM error</code></pre><br />Use the <strong>errorStr</strong> and and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
+      <td>The error code associated with the video play error set in the <code>state</code> field: <pre><code>-  0    no error                                                     <br />- -1    network error (server down or unresponsive, server is unreachable, network setup problem on the client).<br />- -2    connection timed out                                         <br />- -3    unknown/unspecified or generic Error                         <br />- -4    empty list; no streams were specified to play                <br />- -5    media error; the media format is unknown or unsupported      <br />- -6    DRM error</code></pre><br />Use the <strong>errorStr</strong> and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
     </tr>
     <tr>
       <td>errorMsg</td>
       <td>string</td>
       <td />
       <td>READ\_ONLY</td>
-      <td>An error message describing the video play error set in the <code>state</code> field.<br /><br />Use the <strong>errorStr</strong> and and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
+      <td>An error message describing the video play error set in the <code>state</code> field.<br /><br />Use the <strong>errorStr</strong> and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
     </tr>
     <tr>
       <td>errorStr</td>
@@ -1084,7 +1084,7 @@ Developers can receive event-based notifications when the CDN is switched during
       <td>vector2d (width, height)</td>
       <td>\[0,0]</td>
       <td>READ\_WRITE</td>
-      <td>Sets the max resolution required by your video.<br /><br />Video decode memory is a shared resource with OpenGL texture memory. The Brightscript 2D APIs are implemented using OpenGL texture memory on Roku models that support the Open GL APIs (see [Hardware specifications](doc:hardware) for a list of these models).<br /><br />On models that do not support Open GL APIs, this field exists for API compatibility but has no effect on actual memory allocations.<br /><br />Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720 as the maximum supported resolution for a particular Roku model (see [Hardware specifications](doc:hardware) for a list of these models).<br /><br />This field enables applications that want to use both the 2D APIs and video playback with a lower resolution than 1080p. Without this field, these applications are likely to not have enough memory for either video playback or UI rendering.<br /><br />If width is 0 (the default), it is unlimited. If height is 0 (the default), it is unlimited.</td>
+      <td>Sets the max resolution required by your video.<br /><br />Video decode memory is a shared resource with OpenGL texture memory. The BrightScript 2D APIs are implemented using OpenGL texture memory on Roku models that support the Open GL APIs (see [Hardware specifications](doc:hardware) for a list of these models).<br /><br />On models that do not support Open GL APIs, this field exists for API compatibility but has no effect on actual memory allocations.<br /><br />Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720 as the maximum supported resolution for a particular Roku model (see [Hardware specifications](doc:hardware) for a list of these models).<br /><br />This field enables applications that want to use both the 2D APIs and video playback with a lower resolution than 1080p. Without this field, these applications are likely to not have enough memory for either video playback or UI rendering.<br /><br />If width is 0 (the default), it is unlimited. If height is 0 (the default), it is unlimited.</td>
     </tr>
     <tr>
       <td>cgms</td>

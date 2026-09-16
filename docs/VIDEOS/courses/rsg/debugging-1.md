@@ -25,7 +25,7 @@ This lesson explains how to access the [debug console](doc:debugging) via Telnet
 | Item                                                         | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Debugging code](doc:debugging) | Read how to how to access the debug console via Telnet and the Roku Eclipse Plug-in and use the different debug ports. Review the list of debugging commands that can be entered in the BrightScript (port 8085) and SceneGraph (port 8080) debug ports. |
-| [Roku Eclipse plug-in](https://devtools.web.roku.com/ide/eclipse/plugin) | Install and open Roku's plug-in for the Eclipse IDE, which includes SceneGraph and Brightscript support to make building Roku apps easier. This plug-in helps with scripting tasks such as code completion, error compilation, code commenting, and static analysis. |
+| [Roku Eclipse plug-in](https://devtools.web.roku.com/ide/eclipse/plugin) | Install and open Roku's plug-in for the Eclipse IDE, which includes SceneGraph and BrightScript support to make building Roku apps easier. This plug-in helps with scripting tasks such as code completion, error compilation, code commenting, and static analysis. |
 | [Roku Eclipse plug-in overview](doc:ide-support) | Read a high-level overview of the features included in the Roku Eclipse plug-in. |
 
 ## Related

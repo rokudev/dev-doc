@@ -45,9 +45,9 @@ Audio playback failed due to an error
 
 ### isTimedMetaData() as Boolean
 
-This event is fired when an ID3 timecode has passed with an event that includes key/value pairs for timed metadata that the Brightscript app is interested in.
+This event is fired when an ID3 timecode has passed with an event that includes key/value pairs for timed metadata that the BrightScript app is interested in.
 
-All timed metadata is released after it is delivered to the Brightscript app. It is also released without delivery if the Brightscript app did not indicate it’s interest in the data with a SetTimedMetaDataForKeys() call.
+All timed metadata is released after it is delivered to the BrightScript app. It is also released without delivery if the BrightScript app did not indicate it’s interest in the data with a SetTimedMetaDataForKeys() call.
 
 ### isRequestSucceeded() as Boolean
 

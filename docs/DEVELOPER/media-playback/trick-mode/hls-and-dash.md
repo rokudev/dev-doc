@@ -135,7 +135,7 @@ Attributes:
 
 The Time Remaining for an Image Resource is the EXTINF duration minus the Total Elapsed Time of the Image Archive. Tiles are selected from the Grid in a specific Sequence starting top-left, moving left-to-right and top-to-bottom, following the Grid Layout. Each Tile from the Sequence is displayed for DURATION seconds or Time Remaining seconds, whichever is less. If Time Remaining is greater than zero when the Sequence completes, the last Image is displayed until Time Remaining is zero.
 
-> Experimental results suggest that durations of around 10 seconds offer good performance vs. viewer convenience. As a general rule, the duration of each thumbnail should be be as long as the I-Frame, which it represents.
+> Experimental results suggest that durations of around 10 seconds offer good performance vs. viewer convenience. As a general rule, the duration of each thumbnail should be as long as the I-Frame, which it represents.
 
 ## Standard-thumbnail file creation
 

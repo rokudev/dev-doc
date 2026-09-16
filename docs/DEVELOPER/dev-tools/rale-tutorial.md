@@ -59,7 +59,7 @@ Dragging and resizing the node in the GUI will correspond with your Roku app on 
 
 ## Release notes
 
-**2.1.7**: RALE version 2.1.7 includes the following new features that that help developers work with designers to implement app layouts:
+**2.1.7**: RALE version 2.1.7 includes the following new features that help developers work with designers to implement app layouts:
 
 - **Overlays**: Upload a wireframe and then place components on top of a transparent overlay to quickly and accurately match the layout design.
 - **Guides**: Drag vertical and horizontal guides onto your app to organize components into columns and rows and ensure text, images, and other nodes are aligned on the page per the wireframe.

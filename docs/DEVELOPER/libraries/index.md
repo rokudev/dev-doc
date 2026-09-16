@@ -260,7 +260,7 @@ m.global.RSG_analytics.setContentMetadata = {
 
 This method is similar to `initVideoPlayer` and takes a single
 roAssociativeArray with exactly one attribute named `video` containing a
-Scenegraph [Video Node](doc:video).
+SceneGraph [Video Node](doc:video).
 This should be set once video playback has finished which will allow the
 component to finish analytics tasks and stop observing Video node
 events.

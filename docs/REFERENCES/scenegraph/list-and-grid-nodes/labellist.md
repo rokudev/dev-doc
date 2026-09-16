@@ -14,7 +14,7 @@ Extends [**ArrayGrid**](doc:arraygrid)
 
 The LabelList node class is a simple list class that can be used to display a list of items. Each item can include a text string and an optional icon positioned to the left of the text string.
 
-The list items can be organized into sections that are demarcated by labelled horizontal divider lines between the sections.
+The list items can be organized into sections that are demarcated by labeled horizontal divider lines between the sections.
 
 In most cases, you will want to populate the content of a LabelList (or other similar components like PosterGrids, etc.) from a content feed, web service API, or some other dynamic data source.  However, to illustrate the basics of how a LabelList is constructed and used, here is a simple example of creating a LabelList and populating it with static data.  Static data in a LabelList may be useful for app screens such as settings or menus with fixed items.
 

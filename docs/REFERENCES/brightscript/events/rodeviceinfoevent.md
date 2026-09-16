@@ -99,7 +99,7 @@ Indicates the current global setting for the Mode property, which may be one of 
 
 ### EnableValidClockEvent(enable as Boolean)
 
-Indicates whether the RokuOS has successfully connected to the network and contacted the timeserver in order to set the device's clock. Call the [GetInfo()](#getinfo-as-object) method to confirm that the system clock is valid.
+Indicates whether the Roku OS has successfully connected to the network and contacted the timeserver in order to set the device's clock. Call the [GetInfo()](#getinfo-as-object) method to confirm that the system clock is valid.
 
 #### GetInfo() as Object
 

@@ -534,3 +534,73 @@ Returns the user agent of the device, which can then be passed into server-side 
 #### Return Value
 
 The device user agent, which has the following syntax: "Roku/DVP-major.minor (major.minor.revision.build-plid)". For example, Roku/DVP‑12.0 (12.0.0.4171‑29).
+
+### AsyncGetSSEvents() as Boolean
+
+*Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
+
+#### Description
+
+Enables server-sent event (SSE) handling on the transfer and starts reading the event stream.
+
+Call this function instead of **AsyncGetToString()** when the URL returns an SSE stream. The transfer detects the endless stream from the response headers and delivers each server event to the message port as an [roSSEvent](doc:rossevent), rather than accumulating the response in memory. An [roUrlEvent](doc:rourlevent) with event type 2 (transfer started) is sent when the first server event arrives, and an roUrlEvent with event type 1 (transfer complete) is sent when the stream ends.
+
+While SSE handling is enabled, the transfer tracks the id of the last server event it received and sends it automatically in the `Last-Event-ID` header of the next SSE transfer.
+
+#### Return Value
+
+A flag indicating whether SSE handling was successfully enabled.
+
+#### Example
+
+```brightscript
+transfer = CreateObject("roUrlTransfer")
+port = CreateObject("roMessagePort")
+transfer.SetMessagePort(port)
+transfer.SetUrl("https://example.com/api/story")
+transfer.AsyncGetSSEvents()
+```
+
+### SSELastEventId() as String
+
+*Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
+
+#### Description
+
+Returns the id of the last server-sent event received in the previous SSE transfer.
+
+#### Return Value
+
+The last server-sent event id.
+
+### SSERetry() as Integer
+
+*Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
+
+#### Description
+
+Returns the reconnection interval in milliseconds that the server sent in the previous SSE transfer, or 0 if the server did not provide one.
+
+> roUrlTransfer does not retry SSE transfers automatically. Your app is responsible for observing the retry interval and reconnecting.
+
+#### Return Value
+
+The last server-sent event retry interval.
+
+### SSEClearLastEventId() as Void
+
+*Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
+
+#### Description
+
+Clears the id of the last server-sent event received in the previous SSE transfer.
+
+Clearing the id suppresses the automatic `Last-Event-ID` header, which lets you start a fresh SSE transfer or set the header yourself with **AddHeader()**.
+
+#### Example
+
+```brightscript
+' Start a new stream from event 15 rather than resuming where the last one stopped.
+transfer.SSEClearLastEventId()
+transfer.AddHeader("Last-Event-ID", "15")
+```

@@ -15,6 +15,8 @@ next:
 
 A roUrlTransfer object transfers data to or from remote servers specified by URLs. It can perform mutual authentication with a web server.
 
+As of [Roku OS 16.0](doc:release-notes#roku-os-160), roUrlTransfer also supports Server-Sent Events (SSE). Call [AsyncGetSSEvents()](doc:ifurltransfer#asyncgetssevents-as-boolean) to read an event stream; each server event is delivered to the message port as an [roSSEvent](doc:rossevent).
+
 This object is created with no parameters:
 
 ``CreateObject("roUrlTransfer")``

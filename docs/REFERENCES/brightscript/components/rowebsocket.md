@@ -1,22 +1,29 @@
 ---
-title: "Secure WebSockets"
-excerpt: 'Establish secure, bi-directional WebSocket connections from BrightScript'
+title: "roWebSocket"
+excerpt: 'Establish and manage secure WebSocket connections from BrightScript'
 deprecated: false
 hidden: false
 metadata:
-  title: 'Secure WebSockets | Roku Developer Docs'
-  description: 'Use the roWebSocket and roWebSocketEvent BrightScript components to open secure WebSocket connections and exchange real-time messages with a backend system.'
+  title: 'roWebSocket | Roku Developer Docs'
+  description: 'The roWebSocket BrightScript component establishes secure WebSocket connections and performs bi-directional communication using the ifWebSocket interface.'
   robots: index
 next:
   description: ''
 ---
 
-The BrightScript language supports secure WebSocket connections. This enables apps, for example, to receive real-time entitlement notifications that grant customers immediate access to content they have purchased, update the app UI based on real-time data received from a backend system, and send real-time analytics and other data to a backend system without repeatedly creating and terminating network connections.
+The **roWebSocket** component enables apps to establish WebSocket connections to remote WebSocket server URLs and perform bi-directional communication according to the [WebSocket protocol](https://datatracker.ietf.org/doc/html/rfc6455). This enables apps, for example, to receive real-time entitlement notifications that grant customers immediate access to content they have purchased, update the app UI based on real-time data received from a backend system, and send real-time analytics and other data to a backend system without repeatedly creating and terminating network connections.
 
-The components that enable secure WebSockets in BrightScript are as follows:
+An instance of the **roWebSocket** component maintains an open connection unless the app closes it explicitly with the **Close()** method, the server closes it, or a transport or protocol error occurs. During an open connection, the **roWebSocket** object generates multiple asynchronous WebSocket events that are delivered as **roWebSocketEvent** objects via the object's message port. If the object is dereferenced and goes out of scope, it closes the WebSocket connection and stops delivering WebSocket events.
 
-- [**roWebSocket**](doc:rowebsocket). Establishes WebSocket connections to remote WebSocket server URLs and performs bi-directional communication according to the [WebSocket protocol](https://datatracker.ietf.org/doc/html/rfc6455).
-- [**roWebSocketEvent**](doc:rowebsocketevent). Delivers asynchronous WebSocket event notifications to your app.
+The opening handshake for WebSocket connections is done over HTTP. The **roWebSocket** interface therefore includes several methods ([ifHttpAgent](doc:ifhttpagent), [ifSetMessagePort](doc:ifsetmessageport), [ifGetMessagePort](doc:ifgetmessageport)) that set up the HTTP-related parameters of the handshake, similar to the **roUrlTransfer** interface.
+
+To create a secure WebSocket connection, you may need to perform the actions described in the [**roUrlTransfer** documentation](doc:rourltransfer) for configuring HTTPS parameters.
+
+An **roWebSocket** object is created with no parameters:
+
+```
+CreateObject("roWebSocket")
+```
 
 ## WebSocket examples
 
@@ -187,3 +194,14 @@ function waitForWSEvent(port as Object, event as Integer, timeout = 0 as Integer
     return Invalid
 end function
 ```
+
+## Supported interfaces
+
+- [ifWebSocket](doc:ifwebsocket). The core WebSocket methods.
+- [ifHttpAgent](doc:ifhttpagent). Configures the HTTP part of the WebSocket handshake (see the [**roUrlTransfer** documentation](doc:rourltransfer) for more information).
+- [ifSetMessagePort](doc:ifsetmessageport). Configures a message port for receiving asynchronous WebSocket events.
+- [ifGetMessagePort](doc:ifgetmessageport). Gets the message port used to receive asynchronous WebSocket events.
+
+## Supported events
+
+- [roWebSocketEvent](doc:rowebsocketevent). Delivers asynchronous WebSocket event notifications to your app.

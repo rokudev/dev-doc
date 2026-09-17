@@ -101,6 +101,8 @@ A flag indicating whether the HTTP header was successfully set.
 
 Initializes the Roku device's built-in client certificate for use in mutual TLS (mTLS) authentication. When called, the device will present its Roku-issued client certificate during the TLS handshake (if server requests it), allowing the server to verify that the request originates from a genuine Roku device running your specific app. For backend service verification purposes it is recommended to use [GetDeviceAttestation(nonce as String) as String](https://developer.roku.com/dev/docs/ifchannelstore#getdeviceattestationnonce-as-string-as-string) 
 
+> This function is [deprecated](doc:deprecated-apis) as of [Roku OS 16.0](doc:release-notes#roku-os-160). [Static Analysis](doc:static-analysis-tool) reports a warning if your app uses it, and starting April 1, 2027, Static Analysis will report an error and block publishing. Use the ChannelStore node's [getDeviceAttestationToken](doc:channelstore#getdeviceattestationtoken) command instead.
+
 > The Roku Developer Dashboard includes a link for downloading the [RokuTV Certification Authority](https://developer.roku.com/certificate). This CA can be passed to an app through this function.
 
 #### Return Value

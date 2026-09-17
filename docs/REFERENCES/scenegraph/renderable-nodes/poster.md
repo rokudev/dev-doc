@@ -201,6 +201,13 @@ Rotation of Posters is supported. On platforms that do not support OpenGL, only 
       <td>READ\_WRITE</td>
       <td>If muteAudioGuide is false, this string will be spoken when the poster is focused</td>
     </tr>
+    <tr>
+      <td>effect<br /><br /><em>Available since Roku OS 16.0.</em></td>
+      <td>node</td>
+      <td>invalid</td>
+      <td>READ\_WRITE</td>
+      <td>References an <a href="/dev/docs/effect" title="Effect">Effect</a> node that applies shader effects, such as rounded corners, borders, and gradients, to the poster</td>
+    </tr>
   </tbody>
 </table>
 

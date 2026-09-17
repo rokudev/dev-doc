@@ -961,40 +961,185 @@ The decoded JWT contains the following fields:
  }
 ```
 
-### requestPartnerOrder
+### GetRokuCustomerId
 
-> See [Creating TVOD Apps](/dev/docs/tvod-channel) for how to use this command for transactional purchases.
+*Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
 
-Checks the user's billing status for transactional purchases. This is a prerequisite for sending the [confirmPartnerOrder command](#confirmpartnerorder).
+Returns the unique **rokuCustomerId** for the app, without requiring a prior purchase.
 
-If this command is successful, the [**requestPartnerOrderStatus** field](#requestpartnerorderstatus) contains the following values:
+You can use the **rokuCustomerId** to identify Roku customers consistently across your apps, and to keep order context intact from on-device in-app purchases through to Roku Pay push notifications. Before Roku OS 16.0, this ID was only available from the [getPurchases](#getpurchases) command after a successful purchase.
 
-| Field   | Type   | Description                                                                                                                                      |
-| ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| orderId | String | The ID that must be included as a field in the **confirmOrderInfo** ContentNode used by the [confirmPartnerOrder](#confirmpartnerorder) command. |
-| status  | String | Success                                                                                                                                          |
-| tax     | String | Cost of tax (if applicable)                                                                                                                      |
-| total   | String | Total cost of transaction                                                                                                                        |
+> To send the **GetRokuCustomerId**, you must use Roku's [generic request framework](doc:appendixagenericrequestframework). Set the **request** field to an associative array containing the command, and observe the **requestStatus** field for the result.
 
-If this command fails, the [**requestPartnerOrderStatus** field](#requestpartnerorderstatus) contains the following values:
+**Request**
 
-| Field        | Type   | Description                                            |
-| ------------ | ------ | ------------------------------------------------------ |
-| errorCode    | String | An error code representing why the transaction failed  |
-| errorMessage | String | An error message explaining why the transaction failed |
-| status       | String | Failure                                                |
+| Field   | Type   | Description         |
+| ------- | ------ | ------------------- |
+| command | string | "GetRokuCustomerId" |
 
-### confirmPartnerOrder
+**Result fields**
 
-> See [Creating TVOD Apps](/dev/docs/tvod-channel) for how to use this command for transactional purchases.
+| Field          | Type               | Description                      |
+| -------------- | ------------------ | -------------------------------- |
+| result         | roAssociativeArray | Wraps the response data          |
+| rokuCustomerId | string             | The Roku customer ID for the app |
 
-This command is equivalent to the **doOrder** command for transaction purchases. The user's billing status must first be confirmed with the [requestPartnerOrder command](#requestpartnerorder) before sending this command.
+**Example**
 
-If this command is successful, the [**confirmPartnerOrderStatus** field](#confirmpartnerorderstatus) contains the following values:
+```brightscript
+function init()
+    m.store = m.top.findNode("channelStore")
+    m.store.observeField("requestStatus", "onRequestStatus")
 
-| Field      | Type   | Description        |
-| ---------- | ------ | ------------------ |
-| purchaseId | String | The transaction ID |
-| status     | String | Success            |
+    request = {}
+    request.command = "GetRokuCustomerId"
+    m.store.request = request
+end function
 
-If this command fails, the [**confirmPartnerOrderStatus** field](#confirmpartnerorderstatus) contains the following values:
+function onRequestStatus()
+    requestStatus = m.store.requestStatus
+
+    if requestStatus <> invalid and requestStatus.status = 1
+        if requestStatus.command = "GetRokuCustomerId"
+            print "rokuCustomerId: "; requestStatus.result.rokuCustomerId
+        end if
+    end if
+end function
+```
+
+## Appendix A: Generic request framework
+
+Roku's Channel Store generic request framework enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it.
+
+This API is available for both SceneGraph (SDK 2) and BrightScript (SDK 1).
+
+#### request
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request</td>
+<td>associative array</td>
+<td>Includes the request's command and context. <br /><br />
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>command</td>
+<td>string</td>
+<td>Set to the ChannelStore command</td>
+</tr>
+<tr>
+<td>context</td>
+<td>associative array</td>
+<td>Used to match the <strong>requestStatus</strong> with <strong>request</strong>. For example, you can set this to "id: {commandName}".</td>
+</tr>
+<tr>
+<td>params</td>
+<td>associative array</td>
+<td>See the command documentation for how to set this parameter.<br />
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+#### requestStatus
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requestStatus</td>
+<td>associative array</td>
+<td>Includes the status of the command and the data returned by it. <br /><br />
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td>associative array</td>
+<td>Any return data</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>The command completion status, which may be one of the following values: <br />
+<ul>
+<li><strong>2</strong> Interrupted</li>
+<li><strong>1</strong> Success</li>
+<li><strong>0</strong> Network error</li>
+<li><strong>-1</strong> HTTP Error/Timeout</li>
+<li><strong>-2</strong> Timeout</li>
+<li><strong>-3</strong> Unknown Error</li>
+<li><strong>-4</strong> Invalid request</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>statusMessage</td>
+<td>string</td>
+<td>A text description of the command completion status.</td>
+</tr>
+<tr>
+<td>command</td>
+<td>string</td>
+<td>The command passed into the request.</td>
+</tr>
+<tr>
+<td>context</td>
+<td>associative array</td>
+<td>The context passed into the request.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+

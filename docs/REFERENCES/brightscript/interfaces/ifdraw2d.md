@@ -12,9 +12,35 @@ next:
 ---
 
 
-Coordinates (x,y) for this interface are based on an origin (0,0) at the top, left. (This is common for 2D drawing APIs, but is different than OpenGL's default coordinate system).
+Coordinates (x,y) for this interface are based on an origin (0,0) at the top, left. (This is common for 2D drawing APIs, but is different than OpenGL's default coordinate system). Bitmap pixel values and color values are always represented as 32-bit integer RGBA color values.  That is, red is in the most significant byte and alpha is in the least significant byte.
 
-Bitmap pixel values and color values are always represented as 32-bit integer RGBA color values.  That is, red is in the most significant byte and alpha is in the least significant byte.
+> Starting in [Roku OS 16.0](doc:release-notes#roku-os-160), the **Clear()**, **DrawLine()**, **DrawPoint()**, and **DrawRect()** functions return a Boolean indicating whether the draw succeeded, as **DrawObject()** and its derivatives and **DrawText()** already did. When a draw fails, the reason is printed to the BrightScript debug log.
+>
+> A bitmap must not be modified after it has been used as the source of another draw. Calling **SwapBuffers()** on the screen resets this state, after which the bitmap may be modified again.
+>
+> **Not allowed**
+>
+> ```
+> offscreen.DrawLine(...)
+> screen.DrawObject(offscreen, ...)
+> ' This DrawRect() will fail and return false in the future.
+> ' In Roku OS 16.0, it returns true and prints a warning to the debug console.
+> offscreen.DrawRect(...)
+> screen.SwapBuffers()
+> ```
+>
+> **Allowed**
+>
+> ```
+> offscreen1.DrawLine(...)
+> offscreen2.DrawObject(offscreen1, ...)
+> screen.DrawObject(offscreen2, ...)
+> screen.SwapBuffers()      ' resets object state
+> offscreen1.DrawRect(...)  ' allowed
+> offscreen2.DrawLine(...)  ' allowed
+> ```
+>
+> Modifying a bitmap after it has been drawn to the screen but before **SwapBuffers()** is called returns true and the draw succeeds. The Roku debug console prints a warning that the app needs to be updated, because this will fail in a future release (Roku OS 16.3 at the earliest).
 
 
 ## Implemented by
@@ -28,7 +54,7 @@ Bitmap pixel values and color values are always represented as 32-bit integer RG
 
 ## Supported methods
 
-### Clear(rgba as Integer) as Void
+### Clear(rgba as Integer) as Boolean
 
 #### Description
 
@@ -41,6 +67,11 @@ Clears the bitmap, and fills it with the specified RGBA color.
 | Name | Type    | Description                                   |
 | ---- | ------- | --------------------------------------------- |
 | rgba | Integer | The RGBA color to be used to fill the bitmap. |
+
+
+#### Return Value
+
+A flag indicating whether the bitmap was successfully cleared.
 
 > Clear() is not the same as a DrawRect() for the entire bitmap. Clear() fills the bitmap with the specified RGBA; it does not perform any alpha blending operations.
 
@@ -171,7 +202,7 @@ function Main()
  end function
 ```
 
-### DrawRect(x as Integer, y as Integer, width as Integer, height as Integer, rgba as Integer) as Void
+### DrawRect(x as Integer, y as Integer, width as Integer, height as Integer, rgba as Integer) as Boolean
 
 #### Description
 
@@ -187,7 +218,11 @@ Fills the specified rectangle from left (x), top (y) to right (x + width), botto
 | height | Integer | The height of the rectangle.                     |
 | rgba   | Integer | The RGBA color to be used to fill the rectangle. |
 
-### DrawPoint(x as Integer, y as Integer, size as Float, rgba as Integer) as Void
+#### Return Value
+
+A flag indicating whether the rectangle was successfully drawn.
+
+### DrawPoint(x as Integer, y as Integer, size as Float, rgba as Integer) as Boolean
 
 #### Description
 
@@ -199,10 +234,14 @@ Draws a point at (x,y) with the given size and RGBA color.
 | ---- | ------- | ------------------------------ |
 | x    | Integer | The x-coordinate of the point. |
 | y    | Integer | The y-coordinate of the point. |
-| size | Float   | The size of the point.         |
+| size | Float   | The size of the point. The maximum point size is 100. |
 | rgba | Integer | The RGBA color of the point.   |
 
-### DrawLine(xStart as Integer, yStart as Integer, xEnd as Integer,  yEnd as Integer, rgba as Integer) as Void
+#### Return Value
+
+A flag indicating whether the point was successfully drawn.
+
+### DrawLine(xStart as Integer, yStart as Integer, xEnd as Integer, yEnd as Integer, rgba as Integer) as Boolean
 
 #### Description
 
@@ -217,6 +256,10 @@ Draws a line from (xStart, yStart) to (xEnd, yEnd) with RGBA color.
 | xEnd   | Integer | The x-coordinate of the line's end point.   |
 | yEnd   | Integer | The y-coordinate of the line's end point.   |
 | rgba   | Integer | The RGBA color of the line.                 |
+
+#### Return Value
+
+A flag indicating whether the line was successfully drawn.
 
 ### DrawObject(x as Integer, y as Integer, src as Object) as Boolean
 

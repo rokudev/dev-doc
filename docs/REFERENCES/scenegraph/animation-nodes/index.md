@@ -25,6 +25,7 @@ are:
 * **[FloatFieldInterpolator](doc:floatfieldinterpolator)**
 * **[Vector2DFieldInterpolator](doc:vector2dfieldinterpolator)**
 * **[ColorFieldInterpolator](doc:colorfieldinterpolator)**
+* **[FloatArrayFieldInterpolator](doc:floatarrayfieldinterpolator)**
 
 All animations require that you target a specific field of a specific
 renderable node or group of renderable nodes. You must also start (and
@@ -48,6 +49,11 @@ shrink it. The
 **[ColorFieldInterpolator](doc:colorfieldinterpolator)** node
 class operates on target node fields of type `color`, so can be used to
 change the color of a target node that includes a color field.
+The
+**[FloatArrayFieldInterpolator](doc:floatarrayfieldinterpolator)** node
+class operates on target node fields that hold arrays of floats, such as
+the [**Effect**](doc:effect) node's `borderRadius` field. Each entry in
+the array is interpolated independently.
 
 The child interpolator nodes each include two field arrays: `key` and
 `keyValue`. These two arrays _must_ contain the same number of elements
@@ -64,6 +70,7 @@ The following summarizes how to achieve certain animation effects.
 | Fade-In/Out    | [FloatFieldInterpolator](doc:floatfieldinterpolator)       | `opacity`     | The `opacity` field ranges in value from 1.0 (fully opaque and visible) to 0.0 (fully transparent and invisible) by setting the alpha channel of screen elements.                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Rotate         | [FloatFieldInterpolator](doc:floatfieldinterpolator)       | `rotation`    | Set the target `scaleRotateCenter` field to specify the point around which the element rotates                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Change Color   | [ColorFieldInterpolator](doc:colorfieldinterpolator)       | color         | The interpolator for the `color` field ranges through the HSV color space bounded by the low and high color values set in the `keyValue` field array. For example, if the low color value in the `keyValue` field array is set to the bottom of the HSV color space, and the high color value is set to the top of the HSV color space, the interpolator will range the animation throughout the entire HSV color space, with perhaps surprising (but not unpredictable) results. You should carefully choose the low and high key values to achieve a desired color animation result. |
+| Animate an array of floats | [FloatArrayFieldInterpolator](doc:floatarrayfieldinterpolator) | any field holding an array of floats | Each `keyValue` entry is itself an array, and every one of those arrays must have the same number of entries as the field being interpolated. Available since [Roku OS 16.0](doc:release-notes#roku-os-160) |
 
 You can try out these concepts by downloading and installing this
 sample: [SimpleAnimation](https://github.com/rokudev/samples/tree/master/ux%20components/animation). It

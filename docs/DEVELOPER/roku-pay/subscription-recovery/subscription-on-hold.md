@@ -128,7 +128,7 @@ You should routinely synchronize your entitlement service with the Roku Pay web 
 
 You must use the ChannelStore DoRecovery API to display the Roku Pay subscription renewal dialog in your app when customers select content, navigate to or land on a specific screen, or upon other specific interactions. This API lets developers configure the last option in the in-app subscription renewal dialog to either "Continue Watching" (if the subscription is in grace) or "Close" (if the subscription is on hold; this is the default and it closes the dialog and returns the customer to the previous screen).
 
-The ChannelStore DoRecovery API uses Roku's Streaming Store generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it.
+The ChannelStore DoRecovery API uses Roku's Channel Store generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it.
 
 This API is available for both SceneGraph (SDK 2) and BrightScript (SDK 1).
 

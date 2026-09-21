@@ -48,4 +48,4 @@ You can view all the transactions made by test users on your apps. You can also 
 
    ![roku815px - void-test-user-transaction](https://image.roku.com/ZHZscHItMTc2/test-user-transaction.png)
 
-3. To void the transactions made by the test user on a specific app, click **Void transactions**. All transactions made by the test user on that app are permanently deleted. The transaction IDs of the voided transactions are not accessible via the Roku Pay Web Service API.
+3. To void the transactions made by the test user on a specific app, click **Void**. All transactions made by the test user on that app are permanently deleted. The transaction IDs of the voided transactions are not accessible via the Roku Pay Web Service API.

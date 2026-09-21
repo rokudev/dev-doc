@@ -46,6 +46,6 @@ You can view all the transactions made by test users on your apps. You can also 
 
 2. The **Test user transaction** page lists each transaction made by the test user per app, including the purchase date, app name, transaction ID (used by the Roku Pay Web Service API for validating, refunding, and canceling purchases), and product name.
 
-   ![roku815px - void-test-user-transaction](https://image.roku.com/ZHZscHItMTc2/void-test-user-transaction-v2a.png)
+   ![roku815px - void-test-user-transaction](https://image.roku.com/ZHZscHItMTc2/test-user-transaction.png)
 
 3. To void the transactions made by the test user on a specific app, click **Void transactions**. All transactions made by the test user on that app are permanently deleted. The transaction IDs of the voided transactions are not accessible via the Roku Pay Web Service API.

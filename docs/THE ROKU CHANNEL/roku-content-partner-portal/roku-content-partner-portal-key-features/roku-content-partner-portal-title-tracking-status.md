@@ -66,17 +66,19 @@ To use this feature, get the appropriate role assigned to your account.
 
 # Page layout
 
-<Image align="center" caption="Each labeled element corresponds to the components described in the table below." src="https://files.readme.io/562797f2fcdb83f59caa9de4f89dfa67647517fac5a93fa373e3ad8c9d6b1221-image.png" />
 
-| Key   | Page component                                                                                                                                                                                                                                                |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A** | **Feature navigation:** Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Storefront, Creatives, and more. |
-| **B** | **Page header and feature description:** Displays the current page title and a brief description of the feature. Provides context on what the page is used for and what actions users can take.                                                               |
-| **C** | **Title status cards:** Displays a summary of titles by status and acts as a primary filter for the table below.                                                                                                                                              |
-| **D** | **Title status table:** Displays detailed information for each title, including status, territories, availability dates, and more.                                                                                                                            |
-| **E** | **Title status search field:** Enables searching for titles by name, series, or title ID.                                                                                                                                                                     |
-| **F** | **Title status filter panel:** Provides filtering options to refine the title list based on selected criteria.                                                                                                                                                |
-| **G** | **Collapse left navigation:** Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                                   |
+<Image src="https://files.readme.io/562797f2fcdb83f59caa9de4f89dfa67647517fac5a93fa373e3ad8c9d6b1221-image.png" align="center" caption="Each labeled element corresponds to the components described in the table below." />
+
+
+| Key   | Page component                                                                                                                                                                                                                                    |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A** | **Feature navigation:** Displays the available features within the portal and allows users to switch between them. Organizes functionality into sections so users can quickly access different areas such as Title Tracking, Creatives, and more. |
+| **B** | **Page header and feature description:** Displays the current page title and a brief description of the feature. Provides context on what the page is used for and what actions users can take.                                                   |
+| **C** | **Title status cards:** Displays a summary of titles by status and acts as a primary filter for the table below.                                                                                                                                  |
+| **D** | **Title status table:** Displays detailed information for each title, including status, territories, availability dates, and more.                                                                                                                |
+| **E** | **Title status search field:** Enables searching for titles by name, series, or title ID.                                                                                                                                                         |
+| **F** | **Title status filter panel:** Provides filtering options to refine the title list based on selected criteria.                                                                                                                                    |
+| **G** | **Collapse left navigation:** Toggles the visibility of the left-hand navigation panel to expand workspace.                                                                                                                                       |
 
 <br />
 
@@ -108,11 +110,15 @@ Click any card to filter the table.
 
 <br />
 
-<Image align="center" caption="Selecting the 'Failed' status card displays titles that are failed for at least one territory." src="https://files.readme.io/988d59541b4bd2223fe860108e1cfb73cd1b61d3f171121a123a714db2d973c9-image.png" />
+
+<Image src="https://files.readme.io/988d59541b4bd2223fe860108e1cfb73cd1b61d3f171121a123a714db2d973c9-image.png" align="center" caption="Selecting the 'Failed' status card displays titles that are failed for at least one territory." />
+
 
 <br />
 
-<Image align="center" caption="Select the 'Live' status card to view titles currently live in at least one territory." src="https://files.readme.io/1edfc4c2e015726a41e8aa665c37cc48565b5f634091c54b2f5cb91aa1c77419-image.png" />
+
+<Image src="https://files.readme.io/1edfc4c2e015726a41e8aa665c37cc48565b5f634091c54b2f5cb91aa1c77419-image.png" align="center" caption="Select the 'Live' status card to view titles currently live in at least one territory." />
+
 
 <br />
 
@@ -207,7 +213,9 @@ But in the **All titles** view, the **Status** column shows the most restrictive
 
 # What requires your attention
 
-<Image align="center" caption="Focus on these two statuses first." src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" width="40% " />
+
+<Image src="https://files.readme.io/e677410ccdca15e0983ce273c1444200d00e0cae5a3acd2ef03121c973395449-image.png" align="center" width="40% " caption="Focus on these two statuses first." />
+
 
 ## Unfulfilled
 
@@ -236,7 +244,9 @@ This means blocking errors occurred during processing.
 
 Each row represents a single title and its current status across territories.
 
-<Image align="center" caption="The following table below explains each column in the title table illustrated above." src="https://files.readme.io/fe20faa7f6dabf5d966489bee56880a71d7f11618bacfc6ca727cea3194c9dbd-image.png" />
+
+<Image src="https://files.readme.io/fe20faa7f6dabf5d966489bee56880a71d7f11618bacfc6ca727cea3194c9dbd-image.png" align="center" caption="The following table below explains each column in the title table illustrated above." />
+
 
 <br />
 
@@ -246,27 +256,36 @@ Each row represents a single title and its current status across territories.
       <th>
         Column
       </th>
+
       <th>
         Description
       </th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>
         **Title**
       </td>
+
       <td>
         Displays the title name. Includes your **Title ID**, which can be copied on click. Use the Title ID for support, troubleshooting, and internal tracking.
       </td>
     </tr>
+
     <tr>
       <td>
         **Content type**
       </td>
+
       <td>
         Indicates the type of content. Each title has one type:
-        <br /><br />
+
+
+
+
+
         <ul>
           <li><strong>Movie</strong></li>
           <li><strong>Short-form clip</strong></li>
@@ -274,34 +293,45 @@ Each row represents a single title and its current status across territories.
           <li><strong>TV season</strong></li>
           <li><strong>TV series</strong></li>
         </ul>
+
         <Callout icon="📘" theme="info">
           TV episodes are the actual playable titles. TV seasons and TV series are organizational levels used to group and structure episodes. Status, Territories, Expected start date, and Expected end date for seasons and series are rolled up from their underlying episodes.
         </Callout>
       </td>
     </tr>
+
     <tr>
       <td>
         **License types**
       </td>
+
       <td>
-        A title may have one or more license types, including **Ad-supported**, **Linear O&O FAST**, and **Premium subscription**.
+        A title may have one or more license types, including **Ad-supported**, **Linear O\&O FAST**, and **Premium subscription**.
       </td>
     </tr>
+
     <tr>
       <td>
         **Services**
       </td>
+
       <td>
-        A service represents how your content is distributed and monetized on The Roku Channel. Examples include **TRC AVOD**, **TRC O&O FAST**, or one of your own or participating Premium subscriptions such as **Howdy**. A single title may appear under multiple services depending on its rights.
+        A service represents how your content is distributed and monetized on The Roku Channel. Examples include **TRC AVOD**, **TRC O\&O FAST**, or one of your own or participating Premium subscriptions such as **Howdy**. A single title may appear under multiple services depending on its rights.
       </td>
     </tr>
+
     <tr>
       <td>
         **Status**
       </td>
+
       <td>
         Displays the overall status of the title, such as:
-        <br /><br />
+
+
+
+
+
         <dl>
           <dt><strong>Unfulfilled</strong></dt>
           <dd>Waiting for ordered rights, assets, or a match between the two. Requires your attention.</dd>
@@ -318,31 +348,38 @@ Each row represents a single title and its current status across territories.
           <dt><strong>Expired</strong></dt>
           <dd>Update windows to reactivate.</dd>
         </dl>
+
         <Callout icon="📘" theme="info">
           For multi-territory titles, you may see values like <strong>1 of 3 unfulfilled</strong>, which means only some territories are impacted.
         </Callout>
       </td>
     </tr>
+
     <tr>
       <td>
         **Territories**
       </td>
+
       <td>
         Displays the countries where the title is available or targeted. Territories appear as country flags and codes, such as **US**, **CA**, and **MX**. A title may be available in multiple territories, and status may vary by territory.
       </td>
     </tr>
+
     <tr>
       <td>
         **Expected start date**
       </td>
+
       <td>
         Shows when the title is expected to become available. It reflects the next upcoming start date across all territories. If all start dates are in the past, it shows the most recent start date. Dates are based on your local timezone.
       </td>
     </tr>
+
     <tr>
       <td>
         **Expected end date**
       </td>
+
       <td>
         Shows when the title is expected to expire. It reflects the next upcoming expiration date. If all dates are in the past, it shows the most recent expiration date. Dates are based on your local timezone.
       </td>
@@ -361,14 +398,14 @@ When reviewing a title:
 1. Start with **License types** by identifying how the title is licensed:
 
    * Ad-supported
-   * Linear O&O FAST
+   * Linear O\&O FAST
    * Premium subscription
 
    This tells you what types of distribution the title is eligible for.
 2. Next, review **Services** where the title will appear:
 
    * TRC AVOD
-   * TRC O&O FAST
+   * TRC O\&O FAST
    * Premium Subscription services
 
    A title may be associated with multiple services depending on its rights.
@@ -394,8 +431,7 @@ When reviewing a title:
    * This means the dates represent the earliest upcoming availability or expiration across all episodes.
 
 <Callout icon="🧐" theme="default">
-  A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.  
-  To investigate territory-level differences, expand the row.
+  A title can appear ready in one territory but blocked in another. The **Status** column shows the most restrictive condition across all territories.<br />To investigate territory-level differences, expand the row.
 </Callout>
 
 <br />
@@ -415,7 +451,9 @@ This ensures that:
 
 * Seasons and episodes display in a logical viewing order
 
-<Image align="center" caption="Seasons and episodes appear in chronological sequence for a logical viewing order." src="https://files.readme.io/e925873200a455ce0cff81ae86a1549578e1e93c485eb527783d197bae1b2545-image.png" />
+
+<Image src="https://files.readme.io/e925873200a455ce0cff81ae86a1549578e1e93c485eb527783d197bae1b2545-image.png" align="center" caption="Seasons and episodes appear in chronological sequence for a logical viewing order." />
+
 
 <br />
 
@@ -423,7 +461,9 @@ This ensures that:
 
 Use search and filtering to limit results and improve your focus.
 
-<Image align="center" width="40% " src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" />
+
+<Image src="https://files.readme.io/c39820813074ade679bbe992e58eb2c52e2312aa9c66a94255daa12fd39a154f-image.png" align="center" width="40% " />
+
 
 <br />
 
@@ -476,7 +516,9 @@ Use search and filtering to limit results and improve your focus.
   * Take action to extend availability
   * Monitor upcoming expirations across your catalog
 
-<Image align="center" caption="Filter titles by 'This month' while viewing 'Failed' to prioritize fixes for titles that are scheduled to go live soon." src="https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png" />
+
+<Image src="https://files.readme.io/aa6fd085789b62b0ca8a75cab0f5e5e644e9fee0efb1f6db99b3390556dcca47-image.png" align="center" caption="Filter titles by 'This month' while viewing 'Failed' to prioritize fixes for titles that are scheduled to go live soon." />
+
 
 These filters use the rolled-up **Expected start** and **Expected end** dates shown in the table.
 

@@ -23,11 +23,11 @@ next:
 
 ### SetMessagePort(port as roMessagePort) as Void
 
-#### Description
+##### Description
 
 Specifies the roMessagePort object for the roSGScreen object
 
-#### Parameters
+##### Parameters
 
 | Name | Type          | Description                                            |
 | ---- | ------------- | ------------------------------------------------------ |
@@ -35,25 +35,25 @@ Specifies the roMessagePort object for the roSGScreen object
 
 ### GetMessagePort() as roMessagePort
 
-#### Description
+##### Description
 
 Returns the roMessagePort object for the SceneGraph scene.
 
-#### Return Value
+##### Return Value
 
 The roMessagePort object.
 
 ### getGlobalNode() as roSGNode
 
-#### Description
+##### Description
 
 Returns a global reference object for the SceneGraph application.
 
-#### Return Value
+##### Return Value
 
 A global reference object.
 
-#### Example: Starting Scene Graph Applications
+##### Example: Starting Scene Graph Applications
 
 ```brightscript
 sub showChannelSGScreen()
@@ -85,42 +85,42 @@ end sub
 
 ### Show() as Boolean
 
-#### Description
+##### Description
 
 Renders the SceneGraph scene defined by the roSGScreen object on the display screen.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the screen is displayed. 
 
 ### Close() as Void
 
-#### Description
+##### Description
 
 Removes the SceneGraph scene from the display screen.
 
 ### CreateScene(sceneType as String) as Object
 
-#### Description
+##### Description
 
 Creates the SceneGraph scene object based on the specified sceneType object.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                                 |
 | --------- | ------ | ----------------------------------------------------------- |
 | sceneType | String | The sceneType object to be used to create the scene object. |
 
-#### Return Value
+##### Return Value
 
 The roSGScene object associated with the screen.
 
 ### GetScene() as roSGNode
 
-#### Description
+##### Description
 
 The roSGScene object associated with the screen.
 
-#### Return Value
+##### Return Value
 
 Typically, the scene created in main.brs by a roSGScreen.CreateScene() call.

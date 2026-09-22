@@ -22,21 +22,21 @@ _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
 ### DeepCopy(data as Object) as Object
 
-#### Description
+##### Description
 
 Performs a deep copy of a node object (it copies the object and all of its nested objects). If the object contains items that are not copyable, they are skipped.
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description**         |
 | :------- | :------- | :---------------------- |
 | data     | Object   | The object to be copied |
 
-#### Return Value
+##### Return Value
 
 This function returns a copy of the specified object.
 
-#### Example
+##### Example
 
 ```brightscript
 utils = CreateObject("roUtils")
@@ -63,22 +63,22 @@ new_aa.c        invalid
 
 ### IsSameObject(data1 as Object, data2 as Object) as Boolean
 
-#### Description
+##### Description
 
 Checks whether two BrightScript objects refer to the same instance and returns a flag indicating the result.
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description** |
 | :------- | :------- | :-------------- |
 | data1    | Object   | First object    |
 | data2    | Object   | Second object   |
 
-#### Return Value
+##### Return Value
 
 Returns true if **data1** and **data2** reference the same object; otherwise, this returns false.
 
-#### Example
+##### Example
 
 ```brightscript
 shared = {}
@@ -93,17 +93,17 @@ shared = {}
 
 _Available since [Roku OS 15.2](doc:release-notes#roku-os-152)_
 
-#### Description
+##### Description
 
 Verifies whether a component name is already registered. Developers can call this method before trying to create an instance.
 
-#### Parameters
+##### Parameters
 
 | **Name**      | **Type** | **Description**                                           |
 | :------------ | :------- | :-------------------------------------------------------- |
 | componentName | String   | The component name to check for an existing registration. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the specified component name has already been registered.
 
@@ -111,21 +111,21 @@ A flag indicating whether the specified component name has already been register
 
 _Available since Roku OS 15.3_
 
-#### Description
+##### Description
 
 Verifies whether the provided value is any numeric type (int, float, double, long integer; boxed or unboxed).&#x20;
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description**            |
 | :------- | :------- | :------------------------- |
 | val      | Number   | The value to be evlauated. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the specified value is an Integer, LongInteger, Float, or Double.
 
-#### Example
+##### Example
 
 ```text
 utils = CreateObject("roUtils")
@@ -139,21 +139,21 @@ utils = CreateObject("roUtils")
 
 _Available since Roku OS 15.3_
 
-#### Description
+##### Description
 
 Verifies whether the provided value is an Integer or LongInteger (boxed or unboxed).&#x20;
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description**            |
 | :------- | :------- | :------------------------- |
 | val      | Integer  | The value to be evlauated. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the specified value is an Integer or LongInteger.
 
-#### Example
+##### Example
 
 ```text
 utils = CreateObject("roUtils")
@@ -166,21 +166,21 @@ utils = CreateObject("roUtils")
 
 _Available since Roku OS 15.3_
 
-#### Description
+##### Description
 
 Verifies whether the provided value is a Float or Double (boxed or unboxed).&#x20;
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description**            |
 | :------- | :------- | :------------------------- |
 | val      | Float    | The value to be evlauated. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the specified value is a Float or a Double.
 
-#### Example
+##### Example
 
 ```text
 utils = CreateObject("roUtils")
@@ -191,21 +191,21 @@ utils = CreateObject("roUtils")
 
 _Available since Roku OS 15.3_
 
-#### Description
+##### Description
 
 Verifies whether the provided argument is a string type (intrinsic or roString, boxed or unboxed).&#x20;
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description**            |
 | :------- | :------- | :------------------------- |
 | val      | String   | The value to be evlauated. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the specified value is a string type.
 
-#### Example
+##### Example
 
 ```text
 utils = CreateObject("roUtils")

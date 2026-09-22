@@ -23,11 +23,11 @@ next:
 
 ### Trigger(volume as Integer) as Void
 
-#### Description
+##### Description
 
 This method triggers the start of the audio resource sound playback. The effect of Trigger(volume) is identical to Trigger(volume, 0).
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -35,11 +35,11 @@ This method triggers the start of the audio resource sound playback. The effect 
 
 ### Trigger(volume as Integer, index as Integer) as Void
 
-#### Description
+##### Description
 
 Triggers the start of the audio resource sound playback. This method will interrupt any playing sound when the index is the same. It will mix with any playing sound if the index is different.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -48,37 +48,37 @@ Triggers the start of the audio resource sound playback. This method will interr
 
 ### IsPlaying() as Boolean
 
-#### Description
+##### Description
 
 Checks whether this audio resource is currently playing.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the calling audio resource is playing. 
 
 ### Stop() as Void
 
-#### Description
+##### Description
 
 Stops playing the audio resource. If the resource is not currently playing, has no effect.
 
 ### MaxSimulStreams() as Integer
 
-#### Description
+##### Description
 
 Returns the device-dependent maximum number of audio streams that can be mixed together and presented simultaneously.
 
-#### Return Value
+##### Return Value
 
 Typically, 1-2. 
 
 ### GetMetaData() as Object
 
-#### Description
+##### Description
 
 Returns an [roAssociativeArray](doc:roassociativearray) array containing the indicated metadata parameters about the audio resource.
 
-#### Return Value
+##### Return Value
 
 An associative array with the following integer values:
 

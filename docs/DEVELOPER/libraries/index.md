@@ -48,7 +48,7 @@ be compatible with RACL.
 
 **Model #1**
 
-#### Initialization attributes
+##### Initialization attributes
 
 | Attribute | Type                          | Required | Description                                                                            |
 | --------- | ----------------------------- | -------- | -------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@ be compatible with RACL.
 | userinfo  | roAssociativeArray of Strings | Optional | [User information](https://apidocs.ooyala.com/iq_roku/IQ.html#toc17__anchor)           |
 | geoinfo   | roAssociativeArray of Strings | Optional | [Geographic information](https://apidocs.ooyala.com/iq_roku/IQ.html#toc16__anchor)     |
 
-#### Vendor-specific attributes for `setContentMetadata`
+##### Vendor-specific attributes for `setContentMetadata`
 
 | Attribute | Type    | Required | Description                                                                                     |
 | --------- | ------- | -------- | ----------------------------------------------------------------------------------------------- |
@@ -68,14 +68,14 @@ be compatible with RACL.
 
 **Model #1**
 
-#### Initialization attributes
+##### Initialization attributes
 
 | Attribute | Type   | Required | Description             |
 | --------- | ------ | -------- | ----------------------- |
 | account   | String | Required | Brightcove account ID   |
 | user      | String | Optional | Unique ID for this user |
 
-#### Vendor-specific attributes for `setContentMetadata`
+##### Vendor-specific attributes for `setContentMetadata`
 
 | Attribute      | Type    | Required | Description                                                                                                                                             |
 | -------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -111,7 +111,7 @@ Analytics vendors using Model #2 use `trackEvent` rather than `setContentMetadat
 | defaultParams      | roAssociativeArray | Optional | -             | A set of static parameters and values that should be included in each request (see the [Google Analytics (GA4) JSON body documentation](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=gtag#payload_post_body) for more information). | RAC applies these parameters and values to the root level of each payload constructed by the [**trackEvent()** method](#trackevent).                                                                                                                                                         |
 | defaultEventParams | roAssociativeArray | Optional | -             | A set of static parameters and values that should be sent with every event.                                                                                                                                                                                                            | RAC applies these parameters and values to each event within every payload constructed by the [**trackEvent()** method](#trackevent).                                                                                                                                                        |
 
-#### Example:
+##### Example:
 
 ```brightscript
 m.global.RSG_analytics.init = {
@@ -191,9 +191,9 @@ m.global.RSG_analytics.init = {
 
 ### Methods
 
-#### Model #1
+##### Model #1
 
-#### initVideoPlayer
+##### initVideoPlayer
 
 > This method can only be used for vendors using model #1 such as
 > Ooyala or Brightcove.
@@ -211,7 +211,7 @@ m.global.RSG_analytics.initVideoPlayer = {
 }
 ```
 
-#### setContentMetadata
+##### setContentMetadata
 
 > This method can only be used for vendors using model #1 such as
 > Ooyala or Brightcove.
@@ -254,7 +254,7 @@ m.global.RSG_analytics.setContentMetadata = {
 }
 ```
 
-#### finishedVideoPlayback
+##### finishedVideoPlayback
 
 > This method can only be used for vendors using model #1 such as Ooyala or Brightcove.
 
@@ -289,9 +289,9 @@ end sub
 
 ***
 
-#### Model #2
+##### Model #2
 
-#### trackEvent
+##### trackEvent
 
 > This method can only be used for vendors using model #2 such as Google Analytics (GA4) or Omniture.
 

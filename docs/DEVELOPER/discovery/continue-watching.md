@@ -222,7 +222,7 @@ To replace the list of content items in the Continue Watching row with a new lis
 
 To remove content items from the Continue Watching row, send a **DELETE** request to the Continue Watching API with a JSON body containing the **contentId** of the item to be removed.
 
-#### Example
+##### Example
 
 **URL**:
 
@@ -281,11 +281,11 @@ request.AddHeader("x-roku-reserved-serial-number", "")
 
 Developers can test the Continue Watching integration in both sideloaded and beta environments. Testing should verify that each step in the [integration workflow](#integrating-into-continue-watching) is completed successfully.
 
-#### End-to-end testing
+##### End-to-end testing
 
 When doing end-to-end testing, launching content from the Continue Watching row will always launch the production app instead of the sideloaded or beta version—even if the production version is not currently integrated with Continue Watching. This is because the app's search feed, which is used by Roku to load content into the Continue Watching row, is always associated with the production app. Testing therefore should focus on adding content to the Continue Watching row when playback starts, updating bookmarks as users stop and resume watching, and removing content when it has been completed.
 
-#### Activating the Continue Watching row on new test devices
+##### Activating the Continue Watching row on new test devices
 
 When using a Roku device that has not previously been used for testing the Continue Watching integration, the Continue Watching row is not displayed on the **What to Watch** screen until content on the app has been watched. The required watch time for adding the first content item to the Continue Watching row and therefore activating the feature on a new test device is as follows:
 

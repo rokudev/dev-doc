@@ -27,7 +27,7 @@ The following are guidelines for use of rows and images.
 - The items in any single row must be the same size, however different rows in the list can have different item sizes (see sample image below).
 - Each row may include a left-justified title label at the top of the row, and a right-justified label at the top that displays a message of the format "*item\_number* of *total\_number\_of\_items*", indicating which item in the row currently has focus.
 
-#### Horizontal Row Scrolling
+##### Horizontal Row Scrolling
 
 There are three horizontal item scrolling options for the RowList node class controlled by the `rowFocusAnimationStyle` field.
 
@@ -35,7 +35,7 @@ There are three horizontal item scrolling options for the RowList node class con
 - Setting the `rowFocusAnimationStyle` field to `fixedFocusWrap` causes each row to wrap around when navigation reaches the first or last item in the row, as long as the row contains enough items to fill the row. If the row does not contain enough items to fill the row, the focus will float left and right.
 - Setting the `rowFocusAnimationStyle` field to `fixedFocus` causes the focus to stay fixed on the first item in each row. As the user scrolls, the previous selected item goes off the screen. Scrolling continues until the last item is reached with no wrapping.
 
-#### Vertical Row Scrolling
+##### Vertical Row Scrolling
 
 The vertical row scrolling options are controlled by the `vertFocusAnimationStyle` field, and behave in the same way for rows as they do for list items as described in [**ArrayGrid**](doc:arraygrid).
 

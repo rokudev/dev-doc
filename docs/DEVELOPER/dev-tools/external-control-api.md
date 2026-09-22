@@ -320,7 +320,7 @@ Content-Type: image/jpeg
 
 ### Query debugging examples
 
-#### Query/chanperf example
+##### Query/chanperf example
 
 The following command returns the current memory and CPU utilization of an app (RAM usage is reported in bytes).
 
@@ -367,7 +367,7 @@ The response includes the following fields:
 </chanperf>
 ```
 
-#### Query/r2d2-bitmaps example
+##### Query/r2d2-bitmaps example
 
 The following command returns a list of the assets that have been loaded into texture memory, and the amount of used, available, and maximum memory on your device (in bytes).
 
@@ -407,7 +407,7 @@ The response includes the following fields:
 </r2d2-bitmaps>
 ```
 
-#### Query/sgnodes/all example
+##### Query/sgnodes/all example
 
 The following command returns each existing node created by the currently running app. This includes the number of **osref** references to the node (held in the Roku platform) and **bscref** references (held in the app)..
 
@@ -436,7 +436,7 @@ The response includes the following fields:
 </sgnodes>
 ```
 
-#### query/sgrendezvous example
+##### query/sgrendezvous example
 
 The following commands enable rendezvous tracking and list the rendezvous events for a sideloaded app or production/beta app linked to the Roku developer's account:
 
@@ -544,7 +544,7 @@ The response includes the following fields:
 </fwbeacons>
 ```
 
-#### query/app-object-counts example
+##### query/app-object-counts example
 
 The following command returns the counts for the different BrightScript node objects in the app.
 
@@ -598,7 +598,7 @@ The response includes the following fields:
 </app-object-counts>
 ```
 
-#### query/app-state example
+##### query/app-state example
 
 The following command returns the state of the app state: "active", "background" (suspended; running in the background), or "inactive".
 
@@ -617,7 +617,7 @@ The response includes the following fields:
 </channel>
 ```
 
-#### exit-app example
+##### exit-app example
 
 The following command suspends or terminates an app that is running. The optional `/true` parameter will force the termination of the app even if it supports instant-resume. Without this, an instant-resume channel will remain running in the background.
 

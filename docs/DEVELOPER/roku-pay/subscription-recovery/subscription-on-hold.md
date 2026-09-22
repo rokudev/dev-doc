@@ -58,9 +58,9 @@ You must use the Roku Pay APIs to check whether a subscription is current, in re
 
 > When payment is recovered for a subscription that is in-grace or on-hold, check the entitlement status of the subscription upon receiving and processing the recovery event and entitle the customer.
 
-#### ChannelStore API
+##### ChannelStore API
 
-#### Product Catalog 2.0 (ChannelStore generic request framework)
+##### Product Catalog 2.0 (ChannelStore generic request framework)
 
 When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API (with **version**=2 and **includeExpired**=true), as part of the required on-device authentication, to determine whether to block access to content.
 
@@ -99,7 +99,7 @@ The [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API returns an **
   </tbody>
 </table>
 
-#### Product Catalog 1.0 (ChannelStore API)
+##### Product Catalog 1.0 (ChannelStore API)
 
 When customers launch an app, the app calls the ChannelStore [getAllPurchases](doc:channelstore#getallpurchases) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](doc:channelstore#getallpurchases) API returns an **inDunning** flag that is used along with the **status** field to get the status of a subscription:
 
@@ -110,7 +110,7 @@ When customers launch an app, the app calls the ChannelStore [getAllPurchases](d
 | On Hold                             | true            | Invalid      |
 | Canceled                            | false           | Invalid      |
 
-#### Roku Pay web service APIs
+##### Roku Pay web service APIs
 
 You should routinely synchronize your entitlement service with the Roku Pay web services to make sure your system has up-to-date entitlement data (this also provides a backup in case your backend system occasionally does not receive or process a batch of push notifications sent by Roku). Call the [validate-transaction API](doc:roku-web-service#validate-transaction) as part of a nightly batch routine to get the updated status of your customers' subscriptions. This API returns an **isEntitled** flag that is used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
 
@@ -134,7 +134,7 @@ This API is available for both SceneGraph (SDK 2) and BrightScript (SDK 1).
 
 This reference summarizes the **request** and **requestStatus** fields used by the DoRecovery API.
 
-#### request
+##### request
 
 <table>
   <thead>
@@ -201,7 +201,7 @@ This reference summarizes the **request** and **requestStatus** fields used by t
   </tbody>
 </table>
 
-#### requestStatus
+##### requestStatus
 
 <table>
   <thead>
@@ -279,7 +279,7 @@ This reference summarizes the **request** and **requestStatus** fields used by t
   </tbody>
 </table>
 
-#### SceneGraph (SDK 2) example
+##### SceneGraph (SDK 2) example
 
 The following code demonstrates how to use the ChannelStore node (SDK 2) to display the Roku Pay subscription renewal dialog and configure it so it blocks access to content:
 
@@ -311,7 +311,7 @@ function onRequestStatus()
 end function
 ```
 
-#### BrightScript (SDK 1) example
+##### BrightScript (SDK 1) example
 
 The following code demonstrates how to use the roChannelStore node (SDK 1) to display the Roku Pay subscription renewal dialog and block access to content. A **DoRequest()** method, which takes the **request** object, is required for sending the DoRecovery request.
 
@@ -371,7 +371,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 | OnHoldInitiated      | Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.           |
 | OnHoldRecovered Sale | Payment is received for a subscription that was on-hold. Customer is granted access to content automatically and the billing period is adjusted to the time that the payment was collected. |
 
-#### GraceInitiated
+##### GraceInitiated
 
 ```json
 {
@@ -391,7 +391,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 }
 ```
 
-#### GraceRecovered
+##### GraceRecovered
 
 ```json
 {
@@ -411,7 +411,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 }
 ```
 
-#### OnHoldInitiated
+##### OnHoldInitiated
 
 ```json
 {
@@ -431,7 +431,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 }
 ```
 
-#### OnHoldRecovered
+##### OnHoldRecovered
 
 ```json
 {

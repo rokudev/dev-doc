@@ -24,17 +24,17 @@ next:
 
 ### GetCurrentProfile() as Object
 
-#### Description
+##### Description
 
 Returns an [roProfile](doc:roprofile) object representing a snapshot of the currently active profile.
 
 Because the object is a snapshot, query it again rather than caching the values it returns; a customer can switch profiles between queries.
 
-#### Return Value
+##### Return Value
 
 An [roProfile](doc:roprofile) object. This function does not return `invalid`.
 
-#### Example
+##### Example
 
 ```brightscript
 userInfo = CreateObject("roUserInfo")

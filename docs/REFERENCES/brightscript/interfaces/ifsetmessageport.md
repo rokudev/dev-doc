@@ -25,11 +25,11 @@ next:
 
 ### SetMessagePort(port as Object ) as Void
 
-#### Description
+##### Description
 
 Sets the [roMessagePort](doc:romessageport) to be used for all events from the screen.
 
-#### Parameters
+##### Parameters
 
 | Name           | Type | Description           |
 | -------------- | ---- | --------------------- |

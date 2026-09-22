@@ -25,41 +25,41 @@ The ifSocketAsync interface provides asynchronous socket features that utilize a
 
 ### IsReadable() as Boolean
 
-#### Description
+##### Description
 
 Checks whether underlying select determines non-blocking read is possible.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether underlying select determines non-blocking read is possible.
 
 ### IsWritable() as Boolean
 
-#### Description
+##### Description
 
 Checks whether underlying select determines non-blocking write is possible.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether underlying select determines non-blocking write is possible.
 
 ### IsException() as Boolean
 
-#### Description
+##### Description
 
 Checks whether underlying select determines non-blocking read of OOB data is possible.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether underlying select determines non-blocking read of OOB data is possible.
 
 ### NotifyReadable(enable as Boolean) as Void
 
-#### Description
+##### Description
 
 Enables roSocketEvent events to be sent via the message port when the underlying socket becomes readable.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -67,11 +67,11 @@ Enables roSocketEvent events to be sent via the message port when the underlying
 
 ### NotifyWritable(enable as Boolean) as Void
 
-#### Description
+##### Description
 
 Enables roSocketEvent events to be sent via the message port when the underlying socket becomes writable.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -79,11 +79,11 @@ Enables roSocketEvent events to be sent via the message port when the underlying
 
 ### NotifyException(enable as Boolean) as Void
 
-#### Description
+##### Description
 
 Enables roSocketEvent events to be sent via the message port when the underlying socket gets an exception or OOB data.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -91,10 +91,10 @@ Enables roSocketEvent events to be sent via the message port when the underlying
 
 ### GetID() as Integer
 
-#### Description
+##### Description
 
 Returns a unique identifier that can be compared to the value returned by the [roSocketEvent.getSocketID()](doc:rosocketevent) method to match the underlying socket to receive the event.
 
-#### Return Paramters
+##### Return Paramters
 
 A unique ID. 

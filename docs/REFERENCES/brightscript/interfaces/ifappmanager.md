@@ -12,31 +12,31 @@ hidden: false
 
 ### GetUptime() as Object
 
-#### Description
+##### Description
 
 Returns an [roTimespan](doc:rotimespan) object, which is "marked" when the user clicked on the application button on the home screen.<br /><br />Calling the TotalMilliseconds() method on the returned roTimespan object returns the total number of milliseconds since the application started. ddd
 
-#### Return Value
+##### Return Value
 
 An [roTimespan](doc:rotimespan) object.
 
 ### GetScreensaverTimeout() as Integer
 
-#### Description
+##### Description
 
 Returns the user's screensaver wait time setting in number of minutes, or zero if the screensaver is disabled.
 
-#### Return Value
+##### Return Value
 
 The number of minutes set for the screensaver wait time.
 
 ### SetUserSignedIn(signedIn as Boolean) as Void
 
-#### Description
+##### Description
 
 This method allows an app to tell Roku when the user is signed in or signed out of the app<br /><br />If the app is removed, the Roku OS will call SetUserSignedIn(false) on the app's behalf.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description                                                                                          |
 | -------- | ------- | ---------------------------------------------------------------------------------------------------- |
@@ -44,11 +44,11 @@ This method allows an app to tell Roku when the user is signed in or signed out 
 
 ### SetAutomaticAudioGuideEnabled(enabled as Boolean) as Void
 
-#### Description
+##### Description
 
 Enables or disables the automatic screen reader and override any manifest setting.<br /><br />This is useful for apps that want to temporarily turn off the automatic screen reader for specific screens.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type    | Description                                                                 |
 | ------- | ------- | --------------------------------------------------------------------------- |
@@ -56,34 +56,34 @@ Enables or disables the automatic screen reader and override any manifest settin
 
 ### IsAppInstalled(channelID as String, version As String) as Boolean
 
-#### Description
+##### Description
 
 This method returns true if an app with the specified channelID and the minimum version required is installed.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                                     |
 | --------- | ------ | --------------------------------------------------------------- |
 | channelID | String | The unique id of the app.                                       |
 | version   | String | The minimum version number of the app to be used for the query. |
 
-#### Return Value
+##### Return Value
 
 A boolean indicating whether the specified BrightScript app is installed.
 
 ### SetNowPlayingContentMetaData(contentMetaData as Object) as Void
 
-#### Description
+##### Description
 
 Updates video or audio [content metadata](doc:content-metadata) during playback. This method takes a subset of content metadata parameters to be updated. These values override any previously ones sent to the Roku Media Player, and they are used until this function is called again or until the [**roAppManager**](doc:roappmanager) instance is deleted.
 
-#### Parameters
+##### Parameters
 
 | Name            | Type               | Description                                                                                                                   |
 | --------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
 | contentMetaData | roAssociativeArray | The video or audio [content metadata](doc:content-metadata) parameters to be updated (for example, the title and contentType) |
 
-#### Example
+##### Example
 
 ```brightscript
 appmgr = CreateObject("roAppManager")
@@ -101,7 +101,7 @@ appmgr.SetNowPlayingContentMetaData(invalid)
 
 ### StartVoiceActionSelectionRequest() as Void
 
-#### Description
+##### Description
 
 Triggers a voice request for the viewer to select a user profile if the device is paired with a hands-free Roku Voice remote control. This function should be called by apps that support voice commands and display a user profile selection screen upon launch, which is when this method should be called.
 
@@ -111,7 +111,7 @@ Apps can check the launch parameters to determine whether the app was launched v
 
 ### SetVoiceActionStrings(actions as Object) as Void
 
-#### Description
+##### Description
 
 Specifies a list of text strings, such as user profile names, that can be matched to voice requests.
 
@@ -136,7 +136,7 @@ When there is a match (the name uttered by the user matches the registered text 
   </tbody>
 </table>
 
-#### Example
+##### Example
 
 ```brightscript
 appMgr = CreateObject("roAppManager")

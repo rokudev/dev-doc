@@ -29,11 +29,11 @@ Roku prefers MovieLabs deliverables from all Premium Subscription (SVOD) Partner
 
 Roku will serve up to 8 minutes of advertisements per viewing hour. Roku’s ad policy is subject to change.
 
-#### Ad-supported content on Roku Channel
+##### Ad-supported content on Roku Channel
 
 Roku Channel is looking for ad-supported content that is appropriate for our users and advertisers – for example, Roku Channel does not want ad-supported content that contains excessive nudity or extreme/graphic violence.Please use your best judgement when sharing content. If an asset is questionable, please find an alternative to share. We reserve the right to remove or reject any content that we deem inappropriate.
 
-#### Ad breaks
+##### Ad breaks
 
 Ad break timecodes shall be delivered according to the Roku Ad Policy in the adBreak nodes of the movie/episode/clip metadata to trigger ad breaks during playback on the platform. adBreaks should be accurately provided to the millisecond. Please convert any frame rate value to a millisecond equivalent. Providing adBreaks in the ingest metadata is highly recommended and will speed up the QC process. All adBreak data must be supplied as HH:MM:SS.sss (e.g., 01:23:45.678)
 
@@ -142,11 +142,11 @@ Partners can aid in the curation of their content on Roku Channel by providing T
 
 - High-quality mezzanine level files are preferred with the highest bitrate and highest resolution possible.
 
-#### Video frame rate
+##### Video frame rate
 
 Roku supports a variety of frame rates and scan types. All video files should be delivered in their original native frame rate and scan type
 
-#### Video resolution
+##### Video resolution
 
 | Type    | Width | Height | Pixel Aspect Ratio              |
 | ------- | ----- | ------ | ------------------------------- |
@@ -162,7 +162,7 @@ Roku supports a variety of frame rates and scan types. All video files should be
 
 _\*\*UHD is supported as an input resolution only. Roku does not currently encode to or display 4K UHD video on Roku Channel_
 
-#### Video formats
+##### Video formats
 
 | Name          | Codecs                                                                                   | Extension     | Bitrate                                                |
 | :------------ | :--------------------------------------------------------------------------------------- | :------------ | :----------------------------------------------------- |
@@ -213,7 +213,7 @@ _Files must have industry standard audio configurations with all channels clearl
 
 Content delivered with an audio language that is not primary to the territory of distribution must be delivered with an audio dub and/or subtitle file translating the content into that territory’s primary language. Secondary audio tracks may be multiplexed in with the video file deliverable or delivered in a single interleaved sidecar audio file. All secondary audio tracks, whether multiplexed in the video or delivered as an interleaved sidecar file, must be delivered as a full audio mix. Roku does not support dialogue only dub tracks.
 
-#### Sidecar secondary audio
+##### Sidecar secondary audio
 
 - Sidecar audio must be delivered as a single interleaved file. Roku does not support discrete single-channel files
 - Sidecar audio must sync to the video source file delivered to Roku
@@ -227,7 +227,7 @@ Below are the supported sidecar audio formats. Deliver sidecar audio with highes
 | MPEG-1 Layer 3  | MP3          | .mp3      |
 | OGA             | Opus, Vorbis | .ogg      |
 
-#### Descriptive audio
+##### Descriptive audio
 
 Descriptive audio is an alternate audio track for the visually impaired. The official FCC Audio Description documentation can be found at the below link:
 
@@ -235,7 +235,7 @@ Descriptive audio is an alternate audio track for the visually impaired. The off
 
 Roku strongly prefers to receive descriptive audio tracks wherever available. Descriptive audio deliveries will follow the deliverables outlined in the [Secondary Audio Deliverables](#secondary-audio-deliverables) section above
 
-#### Audio channel layout hints
+##### Audio channel layout hints
 
 In the event video files cannot be created to include proper audio channel labels, an audio layout hint must be provided in the metadata for the video files that are delivered. The available hints are defined below.
 
@@ -357,7 +357,7 @@ _Subtitle text styling support is limited to:_
 
 Roku supports three image types for each piece of content. Each image type will be used in a different location within Roku Channel. Roku prefers to receive all three art sizes whenever possible. Each image must be delivered in JPEG or PNG format. Please provide images in Roku's preferred image resolution to avoid delays in publishing. Images _must_ meet or exceed the minimum resolution and _must_ be delivered in the _exact_ aspect ratio defined for each image type.
 
-#### Image type definitions
+##### Image type definitions
 
 | Format                           | Extensions                | Image Type                                                   | Aspect<br />Ratio | Minimum<br />Resolution | Preferred<br />Resolution |
 | :------------------------------- | :------------------------ | :----------------------------------------------------------- | :---------------- | :---------------------- | :------------------------ |
@@ -365,7 +365,7 @@ Roku supports three image types for each piece of content. Each image type will 
 | JPEG or PNG<br />RGB<br />72 ppi | .jpg<br />.jpeg<br />.png | Textless background image used in background of program page | 16:9              | 800x450                 | 1920x1080                 |
 | JPEG or PNG<br />RGB<br />72 ppi | .jpg<br />.jpeg<br />.png | Texted vertical poster image with title treatment            | 2:3               | 534x801                 | 2000x3000                 |
 
-#### Minimum art requirements by content type
+##### Minimum art requirements by content type
 
 ##### Clip content type art requirements
 
@@ -397,7 +397,7 @@ Roku supports three image types for each piece of content. Each image type will 
 | --------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 16:9 Background | Required           | Episodic image may be letterboxed or pillarboxed depending upon the source video. Windowboxed images will be rejected. Episodic images should be unique for each episode and represent the content of the episode |
 
-#### Artwork content guidelines
+##### Artwork content guidelines
 
 - Key Art (graphic with the full title of the asset visible)
 - No sexually explicit or graphically violent artwork
@@ -407,7 +407,7 @@ Roku supports three image types for each piece of content. Each image type will 
 - For content on Roku Channel, Roku will not accept branded artwork without prior approval for any individual video asset nor for season/series entities.
 - Calls to action (CTAs) or links to external platforms or sites are not permissible and must be removed from the image file prior to delivery to Roku
 
-#### Artwork placement on platform examples
+##### Artwork placement on platform examples
 
 **Movie artwork -browse experience**
 
@@ -485,7 +485,7 @@ Roku will provide host and username information during onboarding.
 
 [Aspera Client Download](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all)
 
-#### Transfer Bandwidth
+##### Transfer Bandwidth
 
 Roku recommends verifying or updating the global and user preferences of the Aspera Client to align with your preferred upload bandwidth. Please note Roku applies a global bandwidth cap of 300Mbps.
 
@@ -510,13 +510,13 @@ Depending on what client is being used, there are different settings that can af
 - The ingest platform assumes media files referenced in the metadata are in the same directory as the metadata file. As such, metadata must be delivered to the same directory as the media files contained within the metadata
 - Delivery notifications can be sent to [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
 
-#### File retention
+##### File retention
 
 The delivery location is a temporary location for our Partners to upload files for ingestion into Roku Channel content library. Automation will move files from the delivery location upon successful ingest to an archive location to be stored indefinitely. All files uploaded to the delivery location are expected to be ingested within a reasonable time frame not to exceed 30 days. Valid and complete metadata must be delivered shortly after files are delivered to ensure timely ingest. Files in the delivery location that have not ingested after 30 days are subject to deletion.
 
 _Exceptions to the file retention policy may be made to files in the&#x20;_`/testing`_&#x20;folder_
 
-#### File naming
+##### File naming
 
 Source video, closed captions, and artwork files delivered for ingest must adhere to the following guidelines:
 
@@ -609,7 +609,7 @@ Order of delivery is important. The Roku MovieLabs service will require that the
 
 [Video files](#video-requirements), [audio files](#audio-requirements), [closed caption files](#closed-captions), [subtitle files](#subtitles), [image files](#artwork), [minimum metadata requirements](#minimum-required-metadata-by-content-type), [genres](#genres), and [ratings and rating sources](#rating-values-by-rating-system-and-country), must adhere to the supported formats and requirements defined in this specification
 
-#### Tags
+##### Tags
 
 Tags for merchandising/curation can be delivered via the Keyword node supported in the MovieLabs MEC XML. Please see the [MovieLabs MEC Schema](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link116) for proper placement of the Keyword node
 
@@ -625,7 +625,7 @@ Tags for merchandising/curation can be delivered via the Keyword node supported 
 </md:LocalizedInfo>
 ```
 
-#### TMS IDs
+##### TMS IDs
 
 Gracenote TMS IDs can be delivered via the MovieLabs MEC XML as an Identifier with Namespace TMSID in the AltIdentifier node. Please see the [MovieLabs MEC Schema](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link121) for proper structure of the AltIdentifier node
 
@@ -638,7 +638,7 @@ Gracenote TMS IDs can be delivered via the MovieLabs MEC XML as an Identifier wi
 </md:AltIdentifier>
 ```
 
-#### MMC XML ad breaks and cue points
+##### MMC XML ad breaks and cue points
 
 Ad break, intro credit, and end credit cue points can be supplied in the MovieLabs MMC XML in the Markers node. Please see the [MovieLabs MMC Schema](https://movielabs.com/md/manifest/v1.10/manifest-v1.10/manifest-v1.10.html#Link184) for proper structure of the Markers node
 

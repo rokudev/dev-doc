@@ -168,7 +168,7 @@ custom components:
 * All functions defined in a component that is extended can be called
   directly from any components extended from it.
 
-#### Example
+##### Example
 
 For an example of extending custom components, download the sample
 app [ExtendingCustomComponents](https://github.com/rokudev/samples/tree/master/ux%20components).

@@ -18,7 +18,7 @@ The ScrollingLabel node class provides an automatic way to make a string scroll 
 
 The ScrollingLabel node class uses the horizAlign and vertAlign fields to allow you to position the rendered text relative to a specified bounding rectangle.
 
-#### Horizontal Alignment
+##### Horizontal Alignment
 
 The horizAlign field allows you to position text horizontally relative to the maximum width of the label as specified by the maxWidth field.
 
@@ -30,7 +30,7 @@ There are three possible values for the horizAlign field:
 
 * **right**: The right edge of each line of text is positioned at x-coordinate position corresponding to the computed width of the ScrollingLabel node's local coordinate system.
 
-#### Vertical Alignment
+##### Vertical Alignment
 
 The vertAlign field allows you to position text vertically relative to the computed height of the label. The computed height is determined in one of two ways:
 

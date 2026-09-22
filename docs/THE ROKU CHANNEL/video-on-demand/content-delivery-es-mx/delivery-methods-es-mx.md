@@ -45,7 +45,7 @@ Roku realiza la autenticación mediante el **intercambio de claves RSA públicas
 * Roku proporcionará la **información de host y nombre de usuario** durante la incorporación.
 * **Aplicación requerida:** [Aspera Client](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all)
 
-#### Ancho de banda de transferencia
+##### Ancho de banda de transferencia
 
 Roku aplica un **límite global de ancho de banda de 300 Mbps**. Roku recomienda verificar o actualizar las preferencias globales y de usuario de tu Aspera Client para que se ajusten al ancho de banda de carga que prefieras.
 

@@ -19,7 +19,7 @@ The roDeviceInfo component sends the roDeviceInfoEvent with the following predic
 
 Checks if the device status has changed. This method returns true if the device status has changed; otherwise, it returns false.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Checks the current status of the device. This method returns an roAssociativeArray containing one of the following members:
 
@@ -88,7 +88,7 @@ Indicates whether the user has changed the closed caption mode or track.  This m
 
 Call the [GetInfo()](#getinfo-as-object) method to get the caption mode.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Indicates the current global setting for the Mode property, which may be one of the following values:
 
@@ -101,7 +101,7 @@ Indicates the current global setting for the Mode property, which may be one of 
 
 Indicates whether the RokuOS has successfully connected to the network and contacted the timeserver in order to set the device's clock. Call the [GetInfo()](#getinfo-as-object) method to confirm that the system clock is valid.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 This method returns an roAssociativeArray containing a **validClock** field that indicates whether the system clock is valid.
 

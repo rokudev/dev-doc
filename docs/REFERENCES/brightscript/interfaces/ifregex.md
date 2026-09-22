@@ -27,37 +27,37 @@ next:
 
 ### IsMatch(str as String) as Boolean
 
-#### Description
+##### Description
 
 Checks if a string matches the matching pattern.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description               |
 | ---- | ------ | ------------------------- |
 | str  | String | The string to be checked. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the string matches the matching pattern.
 
 ### Match(str as String) as Object
 
-#### Description
+##### Description
 
 If the matching pattern contains N parenthetical substrings, the relevant substrings are returned as an array of length N+1, where array[0] is again the entire match and each additional entry in the array is the match for the corresponding parenthetical expression.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                        |
 | ---- | ------ | -------------------------------------------------- |
 | str  | String | The string to be searched for matching substrings. |
 
-#### Return Value
+##### Return Value
 
 An roArray of matched substrings from str. If no match was made, an empty array is returned. If a match was made, the entire match is returned in array[0]. If there are no parenthetical substrings this is the only entry in the array
 
-#### Example (from Brightscript Debugger Interactive Shell)
+##### Example (from Brightscript Debugger Interactive Shell)
 
 ```brightscript
  r = CreateObject("roRegex", "(a|(z))(bc)","")
@@ -70,21 +70,21 @@ An roArray of matched substrings from str. If no match was made, an empty array 
 
 ### MatchAll(str as String) as Object
 
-#### Description
+##### Description
 
 Returns all matches of the specific regular expression pattern in the target string.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                        |
 | ---- | ------ | -------------------------------------------------- |
 | str  | String | The string to be searched for matching substrings. |
 
-#### Return Value
+##### Return Value
 
 An roArray where the first element is the full matched string and if there are any capture groups those are returned in subsequent array elements
 
-#### Example
+##### Example
 
 ```brightscript
   r = CreateObject("roRegex", "\d+", "")
@@ -96,18 +96,18 @@ An roArray where the first element is the full matched string and if there are a
 
 ### Replace(str as String, replacement as String) as String
 
-#### Description
+##### Description
 
 Replaces the first occurrence of a matching pattern in str with replacement and returns the result. The replacement may contain numbered back-references to parenthetical substrings.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type   | Description                                                |
 | ----------- | ------ | ---------------------------------------------------------- |
 | str         | String | The string to be searched.                                 |
 | replacement | String | The string to be used to replace matches in source string. |
 
-#### Example (from Brightscript Debugger Interactive Shell)
+##### Example (from Brightscript Debugger Interactive Shell)
 
 ```brightscript
  r = CreateObject("roRegex", "(\d+)\s+(\w+)", "")
@@ -115,28 +115,28 @@ Replaces the first occurrence of a matching pattern in str with replacement and 
  word:abc number:123
 ```
 
-#### Return Value
+##### Return Value
 
 A string with the result of the replace operation.
 
 ### ReplaceAll(str as String, replacement as String) as String
 
-#### Description
+##### Description
 
 Replaces all occurrences of a matching pattern in str with replacement and returns the result. The replacement may contain numbered back-references to parenthetical substrings.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type   | Description                                                |
 | ----------- | ------ | ---------------------------------------------------------- |
 | str         | String | The string to be searched.                                 |
 | replacement | String | The string to be used to replace matches in source string. |
 
-#### Return Value
+##### Return Value
 
 A string with the result of the replace all operation.
 
-#### Example (from Brightscript Debugger Interactive Shell)
+##### Example (from Brightscript Debugger Interactive Shell)
 
 ```brightscript
   r = CreateObject("roRegex", "a", "i")
@@ -150,17 +150,17 @@ A string with the result of the replace all operation.
 
 ### Split(str as String) as Object
 
-#### Description
+##### Description
 
 Uses the matching pattern as a separator and splits the string on the separator boundaries.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description             |
 | ---- | ------ | ----------------------- |
 | str  | String | The string to be split. |
 
-#### Return Value
+##### Return Value
 
 An roList of substrings of str that were separated by strings which match the pattern in the CreateObject call. The separator strings are not returned. If no matches were found, the returned list contains a single item with the string unchanged.
 

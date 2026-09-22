@@ -463,7 +463,7 @@ Object Example:
 
 - Partners are permitted to have Logos, bugs and lower thirds in their channels
 
-#### Content Expectations
+##### Content Expectations
 
 - _Content Hours_: minimum of **150 hours of content**
 - _Content per Hour:_ minimum of **50 minutes per hour** of content
@@ -471,7 +471,7 @@ Object Example:
 - Content Recommendation
   - _Content Loop:_ minimum of **8 hours of content before loop**
 
-#### Content Policy
+##### Content Policy
 
 - Content rated R and TV-MA is allowed only **between 9pm-5am Eastern Time**
 - Public policy and political issues must be presented with accuracy, honesty and fairness
@@ -481,7 +481,7 @@ Object Example:
 - **Every program must have a rating**.&#x20;
   - _Note for channels in the US_: If a program has an MPAA rating, the partner must use the MPAA rating for the program. If the program does not have an MPAA rating, or is a TV edit of an MPAA film, the partner must use a TV Ratings (USA_PR) rating. See [Advisory Ratings object](#advisoryratings-property)
 
-#### Slate Requirements
+##### Slate Requirements
 
 - Must be animated & have audio
 
@@ -496,7 +496,7 @@ Object Example:
 
 - Cannot promote a channel outside of TRC
 
-#### LiveFeed Promotion Guidelines
+##### LiveFeed Promotion Guidelines
 
 - Partners are not allowed to promote Partner content without explicit permission from TRC.
 - Calls to action (CTAs) or links to external platforms or sites (including QR codes) are not permissible and must be removed from the video prior to delivery to Roku.
@@ -565,7 +565,7 @@ Child object of root property `movies`.
 
 This object represents a movie.
 
-#### Movie ad policy
+##### Movie ad policy
 
 - No adBreaks should be listed during the first 10 minutes of program start
 - No pre-roll adBreak should be listed - 00:00:00
@@ -722,7 +722,7 @@ Child object of property:
 
 This object represents a single episode in a series or a season.
 
-#### Episode ad policy
+##### Episode ad policy
 
 Content length longer than 15 minutes:
 
@@ -815,7 +815,7 @@ Short-form Video Object Example:
 
 Child object of root property `tvSpecials`.
 
-#### TvSpecial ad policy
+##### TvSpecial ad policy
 
 Content length longer than 15 minutes:
 
@@ -915,7 +915,7 @@ Notes:
 
 ![roku400px - feedspecs-1](https://image.roku.com/ZHZscHItMTc2/feed-specs-1-v2.jpg)
 
-#### EPG logos
+##### EPG logos
 
 **To be provided via .zip file to Roku**
 

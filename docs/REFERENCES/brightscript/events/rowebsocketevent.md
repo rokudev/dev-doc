@@ -20,11 +20,11 @@ During an open WebSocket connection, the **roWebSocket** object generates multip
 
 ### GetType() as Int
 
-#### Description
+##### Description
 
 Returns the event type of the WebSocket event.
 
-#### Event types
+##### Event types
 
 | Type | Value | Description |
 | --- | --- | --- |
@@ -38,11 +38,11 @@ Returns the event type of the WebSocket event.
 | PongReceived | 8 | A WebSocket Pong message has been received. |
 | Timer | 9 | A timer event has occurred. |
 
-#### Return Value
+##### Return Value
 
 The event type value.
 
-#### Example
+##### Example
 
 ```
 sub Setup()
@@ -71,15 +71,15 @@ end sub
 
 ### GetSocketId() as Int
 
-#### Description
+##### Description
 
 Returns a unique number for the WebSocket instance that originated the event.
 
-#### Return Value
+##### Return Value
 
 The WebSocket identifier.
 
-#### Example
+##### Example
 
 ```
 sub Setup()
@@ -111,15 +111,15 @@ end sub
 
 ### GetSocketData() as Dynamic
 
-#### Description
+##### Description
 
 Returns the socket data object stored in the WebSocket instance that originated the event. The socket data object is set with the [**roWebSocket.SetData()**](doc:rowebsocket) method.
 
-#### Return Value
+##### Return Value
 
 The socket data object.
 
-#### Example
+##### Example
 
 ```
 websocket = createObject("roWebSocket")
@@ -149,15 +149,15 @@ end sub
 
 ### GetInfo() as Object
 
-#### Description
+##### Description
 
 Returns an associative array with event-specific information.
 
-#### Return Value
+##### Return Value
 
 The event-info associative array.
 
-#### Event-specific fields
+##### Event-specific fields
 
 ##### Opened event (type: 1)
 
@@ -224,7 +224,7 @@ The event-info associative array.
 | TimerId | String | The timer ID string assigned by the [**roWebSocket.SetTimer()**](doc:rowebsocket) method. |
 | Occur | Int | The timer occurrence, which indicates how many times the timer event has fired since being set up. |
 
-#### Example
+##### Example
 
 ```
 sub Setup()

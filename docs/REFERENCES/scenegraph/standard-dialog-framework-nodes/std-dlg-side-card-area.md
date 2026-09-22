@@ -79,7 +79,7 @@ The **StdDlgSideCardArea** node never gains key focus; therefore, it should not 
 
 The following examples demonstrate how to use the **StdDlgSideCardArea** node to display decorative images or annotative text.
 
-#### Decorative
+##### Decorative
 
 In this example, the **StdDlgSideCardArea** has a child **Poster** node with its **uri** field set to the URI of a mountain lake image. The height of the dialog is computed to equal the height of the mountain lake image [800 (FHD), 300 (HD)]. The mountain lake **Poster** node has a child **SimpleLabel** node positioned at 575, 775 to show the "PhotoCredit:Jeff Anderson" text on top of the Poster.
 
@@ -130,7 +130,7 @@ In this example, the **StdDlgSideCardArea** has a child **Poster** node with its
 </component>
 ```
 
-#### Annotative
+##### Annotative
 
 In this example, the **StdDlgSideCardArea** has a child **Label** node ("Show the QR Code...") and a child **Poster** node to show the QR code below the Label. The height of the dialog is set to the maximum height of the bounding rectangle of the **StdDlgSideCardArea** and the vertical column that contains the dialog's child [StdDlgAreaBase](doc:std-dlg-area-base) nodes ([TitleArea](doc:std-dlg-title-area), [StdDlgContentArea(s)](doc:std-dlg-content-area), and/or [StdDlgButtonArea](doc:std-dlg-button-area)). In this case, the StdDlgSideCardArea is slightly taller; therefore, it's height is used.
 

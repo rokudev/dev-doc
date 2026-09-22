@@ -22,43 +22,43 @@ The ifSGNodeField interface allows querying, getting, setting, and performing ot
 
 ### hasField(fieldName as String) as Boolean
 
-#### Description
+##### Description
 
 Checks whether a field exists in the node.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                                            |
 | --------- | ------ | ---------------------------------------------------------------------- |
 | fieldName | String | The name of the field to be checked for whether it exists in the node. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the subject node has a field whose name exactly matches fieldName, or whose fully lowercase analog is identical to that of fieldName.
 
 ### getFieldType(fieldName as String) as String
 
-#### Description
+##### Description
 
 Returns the type of a specific field of the subject node.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                       |
 | --------- | ------ | ------------------------------------------------- |
 | fieldName | String | The name of the field to have its type retrieved. |
 
-#### Return Value
+##### Return Value
 
 The field type.
 
 ### getFieldTypes() as Object
 
-#### Description
+##### Description
 
 Returns the names and types of all the fields in the node.
 
-#### Return Value
+##### Return Value
 
 An roAssociativeArray containing key-value pairs with the element names and types.
 
@@ -68,48 +68,48 @@ An roAssociativeArray containing key-value pairs with the element names and type
 
 ### getField(fieldName as String) as Object
 
-#### Description
+##### Description
 
 Returns the appropriately-typed value from the specified field of the subject node.
 
 You can also use the node.field syntax to get the same result as getField(). Specifically, `rectpos = rect.getField("translation")` is equivalent to `rectpos = rect.translation`. You can also use the syntax node[fieldName].
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                            |
 | --------- | ------ | -------------------------------------- |
 | fieldName | String | The name of the field to be retrieved. |
 
-#### Return Value
+##### Return Value
 
 A typed value.
 
 ### getFields() as Object
 
-#### Description
+##### Description
 
 Returns the names and values of all the fields in the node.
 
-#### Return Value
+##### Return Value
 
 An roAssociativeArray containing key-value pairs with the element names and values.
 
 ### setField(fieldName as String, value as Object) as Boolean
 
-#### Description
+##### Description
 
 Sets the value of a subject node field. This will fail and stop script execution if the value is not of the appropriate type.
 
 You can also use the node.field syntax to get the same result as setField(). Specifically, rect.setField("opacity", 0.5) is equivalent to rect.opacity = 0.5.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                          |
 | --------- | ------ | ------------------------------------ |
 | fieldName | String | The name of the field to be updated. |
 | value     | Object | The updated value for the field.     |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the field was successfully updated.
 
@@ -117,29 +117,29 @@ _Since [Roku OS 9.3](doc:release-notes#roku-os-93)_, `observeField()` and `obser
 
 ### setFields(fields as Object) as Boolean
 
-#### Description
+##### Description
 
 Sets the values for one or more fields.
 
 > This function does not set the fields according to their index position within an associative array. Do not use it if setting fields in a specific order is critical to your app.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type   | Description                                                                    |
 | ------ | ------ | ------------------------------------------------------------------------------ |
 | fields | Object | An roAssociativeArray containing key-value pairs for the fields to be updated. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the fields have been successfully updated.
 
 ### addField(fieldName as String, type as String, alwayNotify as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Adds a field with the specified name and type to the subject node. The added field is initialized to the default value for the type.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -168,45 +168,45 @@ Adds a field with the specified name and type to the subject node. The added fie
   </tbody>
 </table>
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the field have been successfully added.
 
 ### addFields(fields as Object) as Boolean
 
-#### Description
+##### Description
 
 Adds the field(s) and corresponding field value(s) defined as key-value pair(s) in the associative array fields to the subject node. The types of the added fields are determined by the values which correspond to the allowable types for an `<interface>` field.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type   | Description                                                                  |
 | ------ | ------ | ---------------------------------------------------------------------------- |
 | fields | Object | An roAssociativeArray containing key-value pairs for the fields to be added. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the fields have been successfully added.
 
 ### removeField(fieldName as String) as Boolean
 
-#### Description
+##### Description
 
 Removes a field from the subject node. Fields defined in [content metadata](doc:content-metadata) and the related SceneGraph node class metadata bindings can be removed, but will be dynamically re-added at any time they are explicitly accessed.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                          |
 | --------- | ------ | ------------------------------------ |
 | fieldName | String | The name of the field to be removed. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the field has been successfully removed.
 
 ### observeField(fieldName as String, functionName as String [, infoFields as Object]) as Boolean
 
-#### Description
+##### Description
 
 Calls a function when a field of the subject node changes. The function called must be in the scope of the current component.
 
@@ -220,7 +220,7 @@ end sub
 
 From this message in the callback function, you can get the node ID, the field name, and the field value at the time it was set, using the same [roSGNodeEvent](doc:rosgnode) methods described in the overloaded form observeField(fieldName as String, port as Object). The [roSGNodeEvent](doc:rosgnode) message also includes a pointer to the node that can be accessed using getRoSGNode(), to associate nodes without an ID in the callback function. Additional information can be accessed in the callback function by storing the information in a custom field of the node.
 
-#### Parameters
+##### Parameters
 
 | Name         | Type                  | Description                                                                                              |
 | ------------ | --------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -228,13 +228,13 @@ From this message in the callback function, you can get the node ID, the field n
 | functionName | String                | The name of the method to be executed when the value of the field   changes.                             |
 | infoFields   | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### observeField(fieldName as String, port as Object [, infoFields as Object]) as Boolean
 
-#### Description
+##### Description
 
 This overloaded form sends an [roSGNodeEvent](doc:rosgnode) message to the [roMessagePort](doc:romessageport) identified by port when the subject node field identified by fieldName changes value.
 
@@ -244,7 +244,7 @@ This overloaded form sends an [roSGNodeEvent](doc:rosgnode) message to the [roMe
 
 This allows other threads to react to field changes, and avoids missing a value when the field changes twice before the message handler is able to receive the [roSGNodeEvent](doc:rosgnode) messages.
 
-#### Parameters
+##### Parameters
 
 | Name       | Type                  | Description                                                                                                                    |
 | ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -252,29 +252,29 @@ This allows other threads to react to field changes, and avoids missing a value 
 | port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
 | infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes.                       |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### unobserveField(fieldName as String) as Boolean
 
-#### Description
+##### Description
 
 Removes the previously established connections between the subject node field identified by fieldName and any callback functions or message ports.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                      |
 | --------- | ------ | ------------------------------------------------ |
 | fieldName | String | The name of the field to no longer be monitored. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### observeFieldScoped(fieldName as String, functionName as String[, infoFields as Object]) as Boolean
 
-#### Description
+##### Description
 
 Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](doc:ifsgnodefield)") method.
 
@@ -282,7 +282,7 @@ While the connection exists, any change in the called/observed node's field spec
 
 The callback will be on the thread that owns the observed node. This is usually the render thread except in some narrowly defined scenarios. See [SceneGraph Threads](doc:threads) for further details.
 
-#### Parameters
+##### Parameters
 
 | Name         | Type                  | Description                                                                                              |
 | ------------ | --------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -290,7 +290,7 @@ The callback will be on the thread that owns the observed node. This is usually 
 | functionName | String                | The name of the method to be executed when the value of the field   changes.                             |
 | infoFields   | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
@@ -298,7 +298,7 @@ A flag indicating whether this operation was successful.
 
 > This function is deprecated. Use the [ObserveFieldScopedEx()](#observefieldscopedexfieldname-as-string-port-as-object-infofields-as-object-as-boolean) function for improved memory usage as it correctly monitors the observing component.
 
-#### Description
+##### Description
 
 Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](doc:ifsgnodefield)") method.
 
@@ -306,7 +306,7 @@ While the connection exists, any change in the called/observed node's field spec
 
 The message will be received on the thread that owns the port. This is either a task thread or the main BrightScript thread. See [SceneGraph Threads](doc:threads) for further details.
 
-#### Parameters
+##### Parameters
 
 | Name       | Type                  | Description                                                                                                                    |
 | ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -314,7 +314,7 @@ The message will be received on the thread that owns the port. This is either a 
 | port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
 | infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes.                       |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
@@ -322,7 +322,7 @@ A flag indicating whether this operation was successful.
 
 _Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
-#### Description
+##### Description
 
 Sets up a connection between the observed node's field and the current component from which this call is made. This method is similar to the [observeField()](doc:ifsgnodefield)") method.
 
@@ -330,7 +330,7 @@ While the connection exists, any change in the called/observed node's field spec
 
 The message will be received on the thread that owns the port. This is either a task thread or the main BrightScript thread. See [SceneGraph Threads](doc:threads) for further details.
 
-#### Parameters
+##### Parameters
 
 | Name       | Type                  | Description                                                                                                                    |
 | ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -338,13 +338,13 @@ The message will be received on the thread that owns the port. This is either a 
 | port       | Object                | The [roMessagePort](doc:romessageport) to receive a [roSGNodeEvent](doc:rosgnode) message when the value of the field changes. |
 | infoFields | Object (String array) | Optional. Names of "context" field values to be reported via getInfo() when the monitored field changes.                       |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### unobserveFieldScoped(fieldName as String) as Boolean
 
-#### Description
+##### Description
 
 Removes the connection between the observing component and the observed node's field.
 
@@ -352,19 +352,19 @@ This is similar to the [unobserveField()](doc:ifsgnodefield)") method, which und
 
 This method looks for and removes the implicit connection state stored in the observing object so that the calling component will no longer receive notification of changes in the specified node's field. Connections in other observing objects or even in the observed object are not affected
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                      |
 | --------- | ------ | ------------------------------------------------ |
 | fieldName | String | The name of the field to no longer be monitored. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### queueFields(queueNode as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Makes subsequent operations on the node fields to queue on the node itself rather than on the [Scene](doc:scene) node render thread. This prevents the operations from being executed immediately.
 
@@ -372,13 +372,13 @@ Subsequently setting this method to false will then cause all of the operations 
 
 This method should not be used on a node that is not owned by the render thread, as the render thread will not be able to execute the operations when they are released to it. You can use it when a node owned by a [Task](doc:task) node thread is transferred to the render thread, by setting it to a child or a node field of a node already owned by the render thread, where the queue is then released.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type    | Description                          |
 | --------- | ------- | ------------------------------------ |
 | queueNode | Boolean | A flag enabling queuing on the node. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating the current state of **queueNode**.
 
@@ -386,7 +386,7 @@ A flag indicating the current state of **queueNode**.
 
 _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
-#### Description
+##### Description
 
 Moves an object into an **roSGNode** field, which must be an associative array. If the destinaton field is not an associative array, the call fails. When the move succeeds, the source object is empty after the call. This function may be called from any thread.
 
@@ -394,18 +394,18 @@ If the source object has any nested objects with external references, those nest
 
 > If this function is called on a task node thread for an object that is not owned by the task thread, a rendezvous occurs.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                                              |
 | :--------- | :------- | :------------------------------------------------------------------------------------------- |
 | field_name | String   | The target field (an associativeArray) of the node where you want to move the source object. |
 | data       | Object   | The source object to be moved.                                                               |
 
-#### Return Value
+##### Return Value
 
 The number of nested objects within an object that were copied, rather than moved, because of external references.
 
-#### Example
+##### Example
 
 ```brightscript
 ' Can be on Task thread or render thread
@@ -441,17 +441,17 @@ Moves data _out_ of a field. The field must be of type _assocarray_.
 
 Moves an object out of an **roSGNode** field (an associative array). If the source field is not an associative array, the call fails. When the move succeeds, the source field is empty after the call. This function may be called from any thread.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                   |
 | :--------- | :------- | :---------------------------------------------------------------- |
 | field_name | String   | The source field that contains the associative array to be moved. |
 
-#### Return Value
+##### Return Value
 
 The associative array that was moved from the source field.
 
-#### Example
+##### Example
 
 ```brightscript
 n = CreateObject("roSGNode", "ContentNode")
@@ -489,7 +489,7 @@ print my_aa ' contents of aa_field
 
 _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
-#### Description
+##### Description
 
 Assigns an associative array to the field of a **roSGNode** via reference. This avoids the expense of copying when directly assigning a field to the value.
 
@@ -497,14 +497,14 @@ This function may only be called on the render thread.
 
 Field observers are not notified when this function is called.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                    |
 | :--------- | :------- | :----------------------------------------------------------------- |
 | field_name | String   | The name of the node's field to be assigned the associative array. |
 | data       | Object   | The associative array to be referenced by the field.               |
 
-#### Return Value
+##### Return Value
 
 This function returns true if successful; otherwise it return false, indicating that the reference could not be set.
 
@@ -512,7 +512,7 @@ This function returns true if successful; otherwise it return false, indicating 
 
 _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
-#### Description
+##### Description
 
 Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previously been called on the **field_name**.
 
@@ -520,7 +520,7 @@ The specified **field_name** must be an associative array, and it must have prev
 
 The **CanGetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
-#### Return Value
+##### Return Value
 
 This function returns true if the call to the **GetRef()** function will succeed in the current context.
 
@@ -528,23 +528,23 @@ This function returns true if the call to the **GetRef()** function will succeed
 
 _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
-#### Description
+##### Description
 
 Returns a reference to the value of an **roSGNode** field, which must be an associative array.  If the field is not an associative array, the call fails. The specified field must have previously been given a value via **SetRef()**.
 
 The **GetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                |
 | :--------- | :------- | :--------------------------------------------- |
 | field_name | String   | The name of the node's field to be referenced. |
 
-#### Return Value
+##### Return Value
 
 This function returns true a reference to the field’s value. This function returns  `<invalid>` if accessing the field via reference is not valid.
 
-#### Example
+##### Example
 
 ```brightscript
 ' on render thread:
@@ -578,7 +578,7 @@ This code will output the following on the port 8085 console:
 
 ### threadinfo() as Object
 
-#### Description
+##### Description
 
 A runtime debugging method for helping minimize Rendezvous spread.  This method can be called on any node from any thread.
 
@@ -598,7 +598,7 @@ The following example demonstrates the information returned by this method:
 
 > Do not call this method from within function main() or any function called by function main()
 
-#### Return Value
+##### Return Value
 
 An roAssociativeArray with the following information:
 
@@ -609,7 +609,7 @@ An roAssociativeArray with the following information:
 
 ### signalBeacon(beacon As String) As Integer
 
-#### Description
+##### Description
 
 Signals start and/or stop points for measuring app launch and Electronic Program Grid (EPG) launch times.
 
@@ -639,7 +639,7 @@ The following table summarizes when to fire the `AppLaunchComplete`, `AppDialogI
 | EPGLaunchInitiate | Where your app initiates the display of the app guide.                                                                                                                                                                                                                                          | The last keypress before the start beacon was signaled. If there was no prior keypress, the start beacon signal time. |
 | EPGLaunchComplete | Where the app guide is fully rendered and operational.                                                                                                                                                                                                                                          | The first render pass completes after the stop point has been signaled.                                               |
 
-#### Return Value
+##### Return Value
 
 When you fire a launch event, the system will return an integer indicating the result of its signaling:
 

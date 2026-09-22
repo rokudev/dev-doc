@@ -28,7 +28,7 @@ The files have opaque white lines that show the key outlines with the rest of th
 
 When creating your own keyboard background artwork, you must maintain the size of the image and the position of the keys in order for it to align properly with the rendered key labels and icons.
 
-#### Templates:
+##### Templates:
 
 - [SD PinPad Template](https://image.roku.com/ZHZscHItMTc2/pinpad---SD.png)
 - [HD PinPad Template](https://image.roku.com/ZHZscHItMTc2/pinpad---HD.png)

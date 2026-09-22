@@ -23,10 +23,10 @@ next:
 
 ### IsActiveSource() As Boolean
 
-#### Description
+##### Description
 
 Indicates whether the device is the active source.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the device is the active source (true). If the device is not the active source, this flag is set to false.

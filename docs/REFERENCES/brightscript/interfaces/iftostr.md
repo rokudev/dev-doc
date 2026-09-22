@@ -31,17 +31,17 @@ next:
 
 ### ToStr() As String
 
-#### Description
+##### Description
 
 Returns the value as a string.
 
-#### Return Value
+##### Return Value
 
 The string.
 
 ### ToStr(format As String) As String
 
-#### Description
+##### Description
 
 Returns the object's value formatted as a string according to the specified printf-like [format string](doc:global-string-functions).
 
@@ -49,11 +49,11 @@ The object's value can be considered as an implicit parameter to be converted in
 
 The format specifier must match the value's data type (for example, *"%d"* would be valid for an integer value, but not for a string value).
 
-#### Return Value
+##### Return Value
 
 The formatted string.
 
-#### Support
+##### Support
 
 Format-string support (the `ifToStr` interface) is implemented by the following types:
 
@@ -66,7 +66,7 @@ Format-string support (the `ifToStr` interface) is implemented by the following 
 
 
 
-#### Examples
+##### Examples
 
 ##### Integer (Decimal)
 

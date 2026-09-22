@@ -26,10 +26,10 @@ next:
 
 > This function is available in [Roku OS 8.0](doc:release-notes#roku-os-8) or later
 
-#### Description
+##### Description
 
 Returns an roArray containing the same elements as the list.
 
-#### Return Value
+##### Return Value
 
  An element list as an array.

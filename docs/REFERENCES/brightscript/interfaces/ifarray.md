@@ -24,31 +24,31 @@ next:
 
 ### Peek() As Dynamic
 
-#### Description
+##### Description
 
 Returns the last (highest index) array entry without removing it. If the array is empty, returns invalid
 
-#### Return Value
+##### Return Value
 
 Invalid
 
 ### Pop() As Dynamic
 
-#### Description
+##### Description
 
 Returns the last entry (highest index) from the array and removes it from the array. If the array is empty, returns invalid and does not change the array.
 
-#### Return Value
+##### Return Value
 
 The last (highest index) array entry.
 
 ### Push(value As Dynamic) As Void
 
-#### Description
+##### Description
 
 Adds the specified value to the end of the array.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                    |
 | ------ | ------- | ---------------------------------------------- |
@@ -56,21 +56,21 @@ Adds the specified value to the end of the array.
 
 ### Shift() As Dynamic
 
-#### Description
+##### Description
 
 Removes the first entry (zero index) from the beginning of the array and shifts the other entries up. This method is similar to the [Pop method](#pop-as-dynamic), but removes the first entry in the array instead of the last one.
 
-#### Return Value
+##### Return Value
 
 The first entry (zero index) removed from the array.
 
 ### Unshift(value As Dynamic) As Void
 
-#### Description
+##### Description
 
 Adds the specified value to the beginning of the array (at the zero index) and shifts the other entries down. This method is similar to the [Push method](#pushvalue-as-dynamic-as-void), but adds the new entry to the beginning of the array instead of to the end.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                          |
 | ------ | ------- | ---------------------------------------------------- |
@@ -78,43 +78,43 @@ Adds the specified value to the beginning of the array (at the zero index) and s
 
 ### Delete(index as Integer) As Boolean
 
-#### Description
+##### Description
 
 Deletes the indicated array entry, and shifts all entries up. This decreases the array length by one.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                             |
 | ----- | ------- | --------------------------------------- |
 | index | Integer | The entry to be removed from the array. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the specified array entry has been removed.  If the entry was successfully deleted, returns true. If index is out of range, returns false and does not change the array.
 
 ### Count() As Integer
 
-#### Description
+##### Description
 
 Returns the length of the array, which is one more than the index of highest entry.
 
-#### Return Value
+##### Return Value
 
 The length of the array.
 
 ### Clear() As Void
 
-#### Description
+##### Description
 
 Deletes all the entries in the array.
 
 ### Append(array As Object) As Void
 
-#### Description
+##### Description
 
 Appends the entries in one **roArray** to another. If the passed array contains entries that have not been set to a value, they are not appended.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                         |
 | ----- | ------ | --------------------------------------------------- |

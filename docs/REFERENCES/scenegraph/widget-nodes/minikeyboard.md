@@ -28,7 +28,7 @@ The default appearance of the MiniKeyboard node is very transparent, allowing th
 - The files have opaque white lines that show the key outlines with the rest of the images fully transparent. Looking at the files in some image viewers that do not support transparency will result in the images looking all white.
 - When creating your own keyboard background artwork, you must maintain the size of the image and the position of the keys in order for it to align properly with the rendered key labels and icons.
 
-#### Templates
+##### Templates
 
 - [SD MiniKeyboard Template](https://image.roku.com/ZHZscHItMTc2/SDMiniKeyboardTemplate.png "SD MiniKeyboard Template")
 - [HD MiniKeyboard Template](https://image.roku.com/ZHZscHItMTc2/HDMiniKeyboardTemplate.png "HD MiniKeyboard Template")

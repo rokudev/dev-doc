@@ -22,7 +22,7 @@ next:
 
 ### SwapBuffers() as Void
 
-#### Description
+##### Description
 
 This function first operates the same as a call to [ifDraw2D](doc:ifdraw2d), completing all queued drawing operations on the back buffer (draw surface).
 
@@ -38,11 +38,11 @@ If the screen is single buffered, this method returns immediately after this ope
 
 _Available since [Roku OS 14.0](doc:release-notes#roku-os-140)_
 
-#### Description
+##### Description
 
 Checks the graphics features supported by the device.
 
-#### Return Values
+##### Return Values
 
 An associative array containing the following key/value pairs:
 

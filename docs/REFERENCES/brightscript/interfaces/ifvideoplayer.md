@@ -23,11 +23,11 @@ next:
 
 ### SetContentList(contentList as Object) as Void
 
-#### Description
+##### Description
 
 Sets the content to be played by the roVideoPlayer.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -50,11 +50,11 @@ Sets the content to be played by the roVideoPlayer.
 
 ### AddContent(contentItem as Object) as Void
 
-#### Description
+##### Description
 
 Adds a new [Content Meta-Data](doc:content-metadata) item to the end of the content list for the roVideoPlayer. roVideoPlayer playback buffers on each Content item transition.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type   | Description                                                  |
 | ----------- | ------ | ------------------------------------------------------------ |
@@ -62,70 +62,70 @@ Adds a new [Content Meta-Data](doc:content-metadata) item to the end of the cont
 
 ### ClearContent() as Void
 
-#### Description
+##### Description
 
 Clears all content from the roVideoPlayer. If the player is currently playing, it stops. Next, the current player position is reset so the next time the [Play()](#play-as-boolean) method is called, playback starts at the first item of the content list (unless the [Seek()](#seekoffsetms-as-integer-as-boolean) method is called prior to Play()).
 
 
 ### PreBuffer() as Boolean
 
-#### Description
+##### Description
 
 Begins downloading and buffering of a video that may be selected by a user. This method can be used to reduce buffering delays after a user has selected a video for playback. It is typically called when the user is in the roSpringboardScreen (or equivalent), anticipating that the user will select a video on the springboard screen for download.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### Play() as Boolean
 
-#### Description
+##### Description
 
 Puts the roVideoPlayer object into play mode starting at the beginning of the content list. This will stop any currently playing Content List.
 
 If the [Seek()](#seekoffsetms-as-integer-as-boolean) method was called prior to this method, the player will start playing at the seek position. If Seek() was not called, the player advances its current position to the next item in the content list and starts playing that item.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### Stop() as Boolean
 
-#### Description
+##### Description
 
 Stops playback and resets the seek position; keeps the player’s current position unchanged.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### Pause() as Boolean
 
-#### Description
+##### Description
 
 Puts the roVideoPlayer object into pause mode. If the player is already in pause mode, this will generate an error.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### Resume() as Boolean
 
-#### Description
+##### Description
 
 Puts the roVideoPlayer object into play mode starting from the pause point. This method must be called when the roVideoPlayer object is in pause mode; otherwise, it will generate an error.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### SetLoop(loop as Boolean) as Void
 
-#### Description
+##### Description
 
 Automatically replays the content list. This method buffers on every loop to the beginning of the content list.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                          |
 | ---- | ------- | ---------------------------------------------------- |
@@ -133,11 +133,11 @@ Automatically replays the content list. This method buffers on every loop to the
 
 ### SetNext(item as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the next item in the Content List to be played.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                          |
 | ---- | ------- | ---------------------------------------------------- |
@@ -147,11 +147,11 @@ Sets the next item in the Content List to be played.
 
 
 
-#### Description
+##### Description
 
 Mutes the audio during video playback. This is useful, for example, for implementing a video preview feature in an app.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                            |
 | ------ | ------- | -------------------------------------- |
@@ -159,11 +159,11 @@ Mutes the audio during video playback. This is useful, for example, for implemen
 
 ### Seek(offsetMs as Integer) as Boolean
 
-#### Description
+##### Description
 
 Sets the start point of playback for the current video to a specific offset.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description                                                  |
 | -------- | ------- | ------------------------------------------------------------ |
@@ -171,11 +171,11 @@ Sets the start point of playback for the current video to a specific offset.
 
 ### SetPositionNotificationPeriod(period as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the interval to receive playback position events from the roVideoPlayer.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -183,11 +183,11 @@ Sets the interval to receive playback position events from the roVideoPlayer.
 
 ### SetCGMS(level as Integer) as Void
 
-#### Description
+##### Description
 
 Sets CGMS (Copy Guard Management System) on analog outputs to the desired level.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -211,11 +211,11 @@ Sets CGMS (Copy Guard Management System) on analog outputs to the desired level.
 
 ### SetDestinationRect(rect as Object) as Void
 
-#### Description
+##### Description
 
 Sets the target display window for the video.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -238,11 +238,11 @@ Sets the target display window for the video.
 
 ###  SetDestinationRect(x as Integer, y as Integer, w as Integer, h as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the target display window for the video. This is similar to the [SetDestinationRect()](#setdestinationrectrect-as-object-as-void) function except that the values are specified as separate parameters.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                         |
 | ---- | ------- | --------------------------------------------------- |
@@ -253,7 +253,7 @@ Sets the target display window for the video. This is similar to the [SetDestina
 
 ### SetMaxVideoDecodeResolution(width as Integer, height as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the max resolution required by your video.
 
@@ -263,7 +263,7 @@ Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720
 
 This API enables applications that want to use both the 2D APIs and video playback with a lower resolution than 1080p. Without this call, these applications are likely to not have enough memory for either video playback or roScreen rendering.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                |
 | ------ | ------- | ------------------------------------------ |
@@ -272,21 +272,21 @@ This API enables applications that want to use both the 2D APIs and video playba
 
 ### GetPlaybackDuration() as Integer
 
-#### Description
+##### Description
 
 Returns the duration of the video, in seconds. This information may not be available until after the video starts playing.
 
-#### Return Value
+##### Return Value
 
 The duration of the video. A value of 0 is returned if the duration is unknown.
 
 ### GetAudioTracks() as Object
 
-#### Description
+##### Description
 
 Returns the audio tracks contained in the current stream.
 
-#### Return Value
+##### Return Value
 
 An roArray, where each element in the array represents a single audio track that contains the following attributes: $&#123;getaudiotracksvalues&#125;
 
@@ -337,11 +337,11 @@ An roArray, where each element in the array represents a single audio track that
 
 ### ChangeAudioTrack(trackID as String) as Void
 
-#### Description
+##### Description
 
 Changes the currently playing audio track. For content with multiple audio tracks, the current track can be selected programmatically using this function.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type   | Description                                              |
 | ------- | ------ | -------------------------------------------------------- |
@@ -349,11 +349,11 @@ Changes the currently playing audio track. For content with multiple audio track
 
 ### SetTimedMetaDataForKeys(keys[] as Dynamic) as Void
 
-#### Description
+##### Description
 
 Specifies the timedMetaData keys that the BrightScript app is interested in receiving from the timedMetaData event.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -376,13 +376,13 @@ Specifies the timedMetaData keys that the BrightScript app is interested in rece
 
 ### GetCaptionRenderer() as Object
 
-#### Description
+##### Description
 
 This method returns the roCaptionRenderer instance associated with this roVideoPlayer.
 
 Apps that render their own captions need to call this method to get the caption renderer for their video player. This is required for doing capture rendering. See roCaptionRenderer for details.
 
-#### Return Value
+##### Return Value
 
 The roCaptionRenderer instance associated with this roVideoPlayer.
 

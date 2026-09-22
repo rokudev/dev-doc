@@ -111,7 +111,7 @@ By default, params.useStitched is set to true. In this case:
 * Pixels are fired internally by the adapter and RAF
 * Interactive Ads are running and managed by the adapter and RAF
 
-#### **a) Optional: enable ads without stitchedAdHandledEvent**
+##### **a) Optional: enable ads without stitchedAdHandledEvent**
 
 ```brightscript
  params = {
@@ -122,7 +122,7 @@ By default, params.useStitched is set to true. In this case:
  adapter.enableAds(params) ' adapter will not call RAF.stitchedAdHandledEvent() and RAF will not play Interactive Ad
 ```
 
-#### **b) Optional: set callbacks**
+##### **b) Optional: set callbacks**
 
 A callback parameter is an object with keys, event, and position.
 

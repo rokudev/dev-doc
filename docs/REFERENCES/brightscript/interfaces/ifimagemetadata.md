@@ -23,11 +23,11 @@ next:
 
 ### SetUrl(url as String) as Void
 
-#### Description
+##### Description
 
 Sets the URL to the image. Only file URLs are supported
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description           |
 | ---- | ------ | --------------------- |
@@ -35,11 +35,11 @@ Sets the URL to the image. Only file URLs are supported
 
 ### GetMetadata() as Object
 
-#### Description
+##### Description
 
 Returns a set of simple and common image metadata
 
-#### Return Value
+##### Return Value
 
 An associative array containing the following key-value pairs with image metadata:
 
@@ -85,11 +85,11 @@ An associative array containing the following key-value pairs with image metadat
 
 ### GetThumbnail() as Object
 
-#### Description
+##### Description
 
 Returns a thumbnail image if one is embedded in the image metadata and the corresponding associative array with image data.  This only generates a thumbnail if one exists. 
 
-#### Return Value
+##### Return Value
 
 An associative array that with **bytes** and **type** keys with the image data: 
 
@@ -100,27 +100,27 @@ An associative array that with **bytes** and **type** keys with the image data:
 
 ### GetRawExif() as Object
 
-#### Description
+##### Description
 
 Returns all of the raw EXIF metadata.
 
-#### Return Value
+##### Return Value
 
 An associative array with all of the raw EXIF metadata. See the [EXIF section](doc:roimagemetadata) for details about EXIF metadata.
 
 ### GetRawExifTag(ifd as Integer, tagnum as Integer) as Dynamic
 
-#### Description
+##### Description
 
 Returns the raw data for an Exif tag. The method provides direct access to a specific raw EXIF tag
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                     |
 | ------ | ------- | ------------------------------- |
 | ifd    | Integer | The ifd of the Exif tag.        |
 | tagnum | Integer | The tag number of the Exif tag. |
 
-#### Return Value
+##### Return Value
 
 The raw data of an Exif tag. It the Exif tag doesn't exist it returns invalid.

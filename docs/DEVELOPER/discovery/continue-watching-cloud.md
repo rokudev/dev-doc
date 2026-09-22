@@ -210,7 +210,7 @@ To add new content items and update existing ones to the Continue Watching row, 
   </tbody>
 </table>
 
-#### Example
+##### Example
 
 **URL**:
 
@@ -284,7 +284,7 @@ curl --location --request PUT 'https://apipub.roku.com/developer/v1/user-data/v1
 
 To remove content items from the Continue Watching row, send a **DELETE** request to the Continue Watching API with a JSON body containing the **contentId** of the item to be removed.
 
-#### Example
+##### Example
 
 **URL**:
 
@@ -371,7 +371,7 @@ The HTTPS request body may be any arbitrary array of bytes. Roku's gateway calcu
 
 Inbound requests must use the Bearer Authentication scheme. The bearer token must be a [JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519) with the following header, payload, and signature :
 
-#### JWT header
+##### JWT header
 
 The JWT header must have the following parameters (all other parameters are ignored):
 
@@ -397,7 +397,7 @@ token = jwt.encode(payload=payload, key=key, algorithm='RS256', headers=headers)
 jwt_token = token.decode('utf-8')
 ```
 
-#### JWT payload
+##### JWT payload
 
 The JWT payload must have the following claims:
 
@@ -511,7 +511,7 @@ The HTTP method must match the method invoked on the internal service.
 
 The path and parameters sent to Roku's inbound request service are ignored; however, they should still match the internal request for clarity.
 
-#### JWT signature
+##### JWT signature
 
 The JWT must be signed with the private part of the public key specified in the JOSE header. The public key is used to verify the JWT signature and authenticate your API calls.
 
@@ -519,7 +519,7 @@ The JWT must be signed with the private part of the public key specified in the 
 
 This section demonstrates how to send Continue Watching API calls to Roku using Python.
 
-#### Prerequisites
+##### Prerequisites
 
 The following packages must be installed to run this sample:
 

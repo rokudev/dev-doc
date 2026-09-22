@@ -110,18 +110,18 @@ Roku supports the following widely-used standard formats for adaptive bit rate s
   - un-fragmented as a single resource with url information embedded in the manifest.
   - fragmented as chunks with url information embedded in the manifest.
 
-#### DASH streams
+##### DASH streams
 
 - All video chunks must start with an IDR frame.
 - Chunks of the same media type (audio or video) must be aligned across representations.
 - For best video start performance, manifest should specify the DRM system and PSSH.
 
-#### HLS streams
+##### HLS streams
 
 - For best performance, all segments should start with an IDR frame and segments.
 - For best performance, all segments of the same media type (audio or video) should be aligned across variants.
 
-#### Playing and seeking to the live edge
+##### Playing and seeking to the live edge
 
 For live streams, apps must be a minimum of 30 seconds away from the live edge.
 
@@ -332,7 +332,7 @@ Developers can encode video content using services like Azure or [Encoding.com](
 | HDMI Version  | 2.0         |
 | HDCP Version  | 2.2         |
 
-#### Detecting 4K UHD compatibility
+##### Detecting 4K UHD compatibility
 
 There are several conditions that must be checked to see if 4K UHD content can be played:
 

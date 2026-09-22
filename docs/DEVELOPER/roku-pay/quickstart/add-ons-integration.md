@@ -660,7 +660,7 @@ The **requestStatus** object returned by the ChannelStore generic request framew
 
 Returns the list of current and historical (optional) purchases associated with the Roku customer account.
 
-#### request
+##### request
 
 <HTMLBlock>{`
 <table>
@@ -723,7 +723,7 @@ Returns the list of current and historical (optional) purchases associated with 
 </table>
 `}</HTMLBlock>
 
-#### requestStatus.result
+##### requestStatus.result
 
 <HTMLBlock>{`
 <table>
@@ -873,7 +873,7 @@ Returns the list of current and historical (optional) purchases associated with 
 
 Lists the products and purchase options linked to the app.
 
-#### request
+##### request
 
 <HTMLBlock>{`
 <table>
@@ -931,7 +931,7 @@ Lists the products and purchase options linked to the app.
 </table>
 `}</HTMLBlock>
 
-#### requestStatus.result
+##### requestStatus.result
 
 <HTMLBlock>{`
 <table>
@@ -1063,7 +1063,7 @@ Lists the products and purchase options linked to the app.
 
 Returns the collection of purchaseOptionMap objects matching the specified query.
 
-#### request
+##### request
 
 <HTMLBlock>{`
 <table>
@@ -1191,7 +1191,7 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 </table>
 `}</HTMLBlock>
 
-#### requestStatus.result
+##### requestStatus.result
 
 <HTMLBlock>{`
 <table>
@@ -1231,7 +1231,7 @@ Returns the collection of purchaseOptionMap objects matching the specified query
 
 Displays the Roku Pay order confirmation screen, which is populated with information about the current order (product name, price, any free trial or discount offer). The customer can then either approve and complete the purchase, or cancel the purchase.
 
-#### request
+##### request
 
 <HTMLBlock>{`
 <table>
@@ -1300,7 +1300,7 @@ Displays the Roku Pay order confirmation screen, which is populated with informa
 </table>
 `}</HTMLBlock>
 
-#### requestStatus.result
+##### requestStatus.result
 
 <HTMLBlock>{`
 <table>
@@ -1397,7 +1397,7 @@ When an add-on is canceled, its entitlement is removed from the Roku customer ac
 
 > When a customer upgrades/downgrades their base subscription product and retains one or more add-ons linked to that base product, you must include those retained add-ons in the **DoOrder** request.
 
-#### On-device subscription management workflow
+##### On-device subscription management workflow
 
 The following images demonstrate how the on-device add-on management and cancelation workflow can be used to cancel base subscription products and add-ons:
 
@@ -1409,7 +1409,7 @@ The following images demonstrate how the on-device add-on management and cancela
 
 ![img - roku600px](https://image.roku.com/ZHZscHItMTc2/canceladdon.jpg)
 
-#### Online subscription management
+##### Online subscription management
 
 The following images demonstrate the online add-on management and cancellation workflow:
 

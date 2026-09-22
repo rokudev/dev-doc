@@ -29,21 +29,21 @@ Also implemented by selected objects that can return a string representation.
 
 ### GetString() As String
 
-#### Description
+##### Description
 
 Gets the string value stored in the calling String object. 
 
-#### Return Value
+##### Return Value
 
 The string value stored in the calling String object. 
 
 ### SetString(value As String) As Void
 
-#### Description
+##### Description
 
 Sets the calling String object to the specified string value. 
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                              |
 | ----- | ------ | -------------------------------------------------------- |
@@ -51,15 +51,15 @@ Sets the calling String object to the specified string value.
 
 ### IsEmpty() as Boolean
 
-#### Description
+##### Description
 
 Checks whether a string is empty.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the string is empty (true), or contains characters (false).
 
-#### Example
+##### Example
 
 ```brightscript
 a = "myString"

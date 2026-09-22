@@ -579,7 +579,7 @@ Developers can use optional chaining operators, "?.", "?@", "?[", and "?(", in t
 
 > The optional chaining operators feature is not supported on devices running firmware earlier than [Roku OS 11.0](doc:release-notes#roku-os-110) (doing so generates syntax errors). If the app does use the optional chaining operators feature, specify [Roku OS 11.0](doc:release-notes#roku-os-110) (or later) as the minimum version when [uploading your package file](doc:channel-publishing-guide) in order to publish to the Streaming Store.
 
-#### Example
+##### Example
 
 The following example demonstrates how the BrightScript optional chaining operators enable developers to write concise expressions when accessing chained properties that may contain a missing reference. The following example attempts to call the `bar()` method of the `foo` member nested at index 3. With the optional chaining operators, this validation can be done in a single line of code; otherwise, it requires many additional lines.
 
@@ -615,7 +615,7 @@ else
 end if
 ```
 
-#### Notes
+##### Notes
 
 * The new operators are indivisible "tokens". You must write `a = b ?. c`. Do not write `a = b ? . c`.
 
@@ -647,7 +647,7 @@ end if
   IF aa?.foo = TRUE     THEN ...   ' Test if aa.foo is present and true
   IF aa?.foo \<> FALSE   THEN ...   ' Test if aa.foo is true, or missing
 
-#### Support details
+##### Support details
 
 * The optional chaining operators are only supported in the context of expressions. They cannot be used directly in a standalone function call or as the target of an assignment:
 

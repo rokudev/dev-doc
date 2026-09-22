@@ -20,7 +20,7 @@ This object is created without any arguments:
 
 ``CreateObject("roImageMetadata")``
  
-#### EXIF Background
+##### EXIF Background
 
 Each EXIF tag represents one piece of metadata. Each tag is uniquely identified by a tag number and the IFD in which it was found. All the tags are grouped into a small set of IFDs (Image File Directory). The EXIF specification describes 5 IFDs:
 
@@ -50,7 +50,7 @@ The best way to illustrate how the EXIF data is accessed is through some concret
 - To get the camera model: aa.image.model.value
 - To get the gps latitude: aa.gps.GPSLatitude.value
 
-#### Reference
+##### Reference
 
 For reference here are all the fields from an image taken from my camera (with the addition of GPS attributes I added using Picasa). 
 

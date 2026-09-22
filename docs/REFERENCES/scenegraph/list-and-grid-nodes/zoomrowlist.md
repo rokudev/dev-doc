@@ -20,7 +20,7 @@ ZoomRowList is a vertically scrolling list of ZoomRowItem's. ZoomRowItem refers 
 
 ![roku815px - partsLabelled](https://image.roku.com/ZHZscHItMTc2/partsLabelled.jpg "partsLabelled")
 
-#### ZoomRowItem's consist of four parts:
+##### ZoomRowItem's consist of four parts:
 
 - **Row Title** - This is a built-in Label used to display a title for the row. The string that is displayed comes from the _title _field of the Row's ContentNode. The Row Title supports turning its display on or off, changing its position relative to the ZoomRowItem's coordinate system and modifying its color and font. This is identified by the **green** box in the diagram above.
 - **Row Counter** - This is a built-in Label used to display a counter for the row (i.e. 3 of 14). The string that is displayed is automatically generating by the ZoomRowList. In addition to supporting the display attributes listed above for the Row Title, the Row Counter also supports the option of only displaying it when there are enough items in the row to fill up the entire width of the ZoomRowList. By default, the Row Counter is only displayed for the focused row. This is identified by the **orange** box in the diagram above.
@@ -442,13 +442,13 @@ This table documents all the fields in ZoomRowList:
 
 A ZoomRowList node should have a single ContentNode as the root node stored in its content field. One child ContentNode should be added to the root node for each row in the list (these nodes can be thought of as `row nodes`). Each row node should contain one child ContentNode for each item in the row (these nodes can be thought of as `item nodes`).
 
-#### Row ContentNode data bindings
+##### Row ContentNode data bindings
 
 | Attribute | Type   | Description                                         |
 |-----------|--------|-----------------------------------------------------|
 | title     | string | This is used as the string display in the Row Title |
 
-#### Item ContentNode data bindings
+##### Item ContentNode data bindings
 
 
 <table>

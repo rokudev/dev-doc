@@ -25,21 +25,21 @@ next:
 
 ### ResetIndex() As Boolean
 
-#### Description
+##### Description
 
 Resets the current index or position in list to the head element.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the index has been reset.
 
 ### AddTail(tval As Dynamic) As Void
 
-#### Description
+##### Description
 
 Adds an element to the tail of the list.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type    | Description                      |
 | ------- | ---- | -------------------------------- |
@@ -47,11 +47,11 @@ Adds an element to the tail of the list.
 
 ### AddHead(tval As Dynamic) As Void
 
-#### Description
+##### Description
 
 Adds an element to the head of the list.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type    | Description                                      |
 | ------- | ------- | ------------------------------------------------ |
@@ -59,71 +59,71 @@ Adds an element to the head of the list.
 
 ### RemoveIndex() As Dynamic
 
-#### Description
+##### Description
 
 Removes the entry at the current index or position from the list and increments the index or position in the list.
 
-#### Return Value
+##### Return Value
 
 The entry removed from the list. This method returns invalid if the end of the list is reached.
 
 ### GetIndex() As Dynamic
 
-#### Description
+##### Description
 
 Gets the entry at current index or position from the list and increments the index or position in the list.
 
-#### Return Value
+##### Return Value
 
 The entry retrieved from the list. This method returns invalid if the end of the list is reached.
 
 ### RemoveTail() As Dynamic
 
-#### Description
+##### Description
 
 Removes the entry at the tail of the list.
 
-#### Return Value
+##### Return Value
 
 The entry removed from the tail of the list. 
 
 ### RemoveHead() As Dynamic
 
-#### Description
+##### Description
 
 Removes the entry at the head of the list.
 
-#### Return Value
+##### Return Value
 
 The entry removed from the head of the list. 
 
 ### GetTail() As Dynamic
 
-#### Description
+##### Description
 
 Retrieves the entry at the tail of the list.
 
-#### Return Value
+##### Return Value
 
 The entry retrieved from the tail of the list. 
 
 ### GetHead() As Dynamic
 
-#### Description
+##### Description
 
 Retrieves the entry at the head of the list.
 
-#### Return Value
+##### Return Value
 
 The entry retrieved from the head of the list. 
 
 ### Count() As Integer
 
-#### Description
+##### Description
 
 Returns the number of elements in the list.
 
-#### Return Value
+##### Return Value
 
 The number of elements in the list. 
 

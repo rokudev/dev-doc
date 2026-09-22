@@ -35,7 +35,7 @@ The following list breaks down these new data transfer and reference handling AP
 
 ### roSGNode.MoveIntoField(field_name as String, data as Object) as Integer
 
-#### Description
+##### Description
 
 Moves an object into an **roSGNode** field, which must be an associative array. If the destinaton field is not an associative array, the call fails. When the move succeeds, the source object is empty after the call. This function may be called from any thread.
 
@@ -43,18 +43,18 @@ If the source object has any nested objects with external references, those nest
 
 > If this function is called on a task node thread for an object that is not owned by the task thread, a rendezvous occurs.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                                              |
 | :--------- | :------- | :------------------------------------------------------------------------------------------- |
 | field_name | String   | The target field (an associativeArray) of the node where you want to move the source object. |
 | data       | Object   | The source object to be moved.                                                               |
 
-#### Return Value
+##### Return Value
 
 The number of nested objects within an object that were copied, rather than moved, because of external references.
 
-#### Example
+##### Example
 
 ```brightscript
 ' Can be on Task thread or render thread
@@ -78,7 +78,7 @@ This code will output the following on the port 8085 console:
 }
 ```
 
-#### Performance improvement
+##### Performance improvement
 
 Using the **MoveIntoField()** and **MoveFromField()** functions is significantly faster than standard field copy operations (`node.field = value`, `Update`, `AddFields`, and so on). This is because the data is _moved_ and no copies are used (unless external references are present).
 
@@ -88,17 +88,17 @@ Moves data _out_ of a field. The field must be of type _assocarray_.
 
 Moves an object out of an **roSGNode** field (an associative array). If the source field is not an associative array, the call fails. When the move succeeds, the source field is empty after the call. This function may be called from any thread.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                   |
 | :--------- | :------- | :---------------------------------------------------------------- |
 | field_name | String   | The source field that contains the associative array to be moved. |
 
-#### Return Value
+##### Return Value
 
 The associative array that was moved from the source field.
 
-#### Example
+##### Example
 
 ```brightscript
 n = CreateObject("roSGNode", "ContentNode")
@@ -144,7 +144,7 @@ You can access fields by reference instead of copying their values. This is sign
 
 ### roSGNode.SetRef(field_name as String, data as Object)
 
-#### Description
+##### Description
 
 Assigns an associative array to the field of a **roSGNode** via reference. This avoids the expense of copying when directly assigning a field to the value.
 
@@ -152,20 +152,20 @@ This function may only be called on the render thread.
 
 Field observers are not notified when this function is called.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                    |
 | :--------- | :------- | :----------------------------------------------------------------- |
 | field_name | String   | The name of the node's field to be assigned the associative array. |
 | data       | Object   | The associative array to be referenced by the field.               |
 
-#### Return Value
+##### Return Value
 
 This function returns true if successful; otherwise it return false, indicating that the reference could not be set.
 
 ### roSGNode.CanGetRef(field_name as String) as Boolean
 
-#### Description
+##### Description
 
 Indicates whether the **GetRef()** function will succeed in the current context. The **GetRef()** call will only succeed if is called on the render thread and the **SetRef()** function had previously been called on the **field_name**.
 
@@ -173,29 +173,29 @@ The specified **field_name** must be an associative array, and it must have prev
 
 The **CanGetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
-#### Return Value
+##### Return Value
 
 This function returns true if the call to the **GetRef()** function will succeed in the current context.
 
 ### roSGNode.GetRef(field_name as String) as Object
 
-#### Description
+##### Description
 
 Returns a reference to the value of an **roSGNode** field, which must be an associative array.  If the field is not an associative array, the call fails. The specified field must have previously been given a value via **SetRef()**.
 
 The **GetRef()** function may only be called on the render thread. This function cannot be used if [queueFields](doc:ifsgnodefield) has been enabled.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                |
 | :--------- | :------- | :--------------------------------------------- |
 | field_name | String   | The name of the node's field to be referenced. |
 
-#### Return Value
+##### Return Value
 
 This function returns a reference to the field’s value. This function returns  `<invalid>` if accessing the field via reference is not valid.
 
-#### Example
+##### Example
 
 ```brightscript
 ' on render thread:
@@ -233,21 +233,21 @@ The **roUtils** component provides a unique namespace for a library of global fu
 
 ### roUtils.DeepCopy(data as Object) as Object
 
-#### Description
+##### Description
 
 Performs a deep copy of the source node object (it copies the object and all of its nested objects). If the source object contains items that are not copyable, they are skipped.
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description**         |
 | :------- | :------- | :---------------------- |
 | data     | Object   | The object to be copied |
 
-#### Return Value
+##### Return Value
 
 This function returns a copy of the specified object.
 
-#### Example
+##### Example
 
 ```brightscript
 utils = CreateObject("roUtils")
@@ -274,22 +274,22 @@ new_aa.c        invalid
 
 ### roUtils.IsSameObject(data1 as Object, data2 as Object) as Boolean
 
-#### Description
+##### Description
 
 Checks whether two BrightScript objects refer to the same instance and returns a flag indicating the result.
 
-#### Parameters
+##### Parameters
 
 | **Name** | **Type** | **Description** |
 | :------- | :------- | :-------------- |
 | data1    | Object   | First object    |
 | data2    | Object   | Second object   |
 
-#### Return Value
+##### Return Value
 
 Returns true if **data1** and **data2** reference the same object; otherwise, this returns false.
 
-#### Example
+##### Example
 
 ```brightscript
 shared = {}
@@ -319,7 +319,7 @@ In general, handlers should be written to be as fast as possible to avoid droppi
 
 ### roRenderThreadQueue.AddMessageHandler(message_id as String, handler as String) as Object
 
-#### Description
+##### Description
 
 Registers a handler for messages received on the async message channel with the given message ID. The handler is called on the render thread for each message received.
 
@@ -327,26 +327,26 @@ You can register multiple handlers for a single ID. In this case, the handlers a
 
 This function can only be called on the render thread.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                           |
 | :--------- | :------- | :------------------------------------------------------------------------ |
 | message_id | String   | The ID of the message channel to which this handler should be registered. |
 | handler    | String   | The name of the handler function to be called for each message received.  |
 
-#### Return Value
+##### Return Value
 
 Returns an object that can be used to unregister the handler, if required.
 
 ### roRenderThreadQueue.PostMessage(message_id as String, data as Object) as Void
 
-#### Description
+##### Description
 
 Posts a message to the queue. The data is _moved_ and becomes unavailable to the calling thread. The call returns immediately and does not block the calling thread.
 
 This function may be called from any thread.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -372,13 +372,13 @@ This function may be called from any thread.
 
 ### roRenderThreadQueue.CopyMessage(message_id as String, data as Object) as Void
 
-#### Description
+##### Description
 
 Posts a message to the queue. The call returns immediately and does not block the calling thread.
 
 This function is similar to the **PostMessage()** function, but it copies data instead of moving it.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                                         |
 | :--------- | :------- | :---------------------------------------------------------------------- |
@@ -387,6 +387,6 @@ This function is similar to the **PostMessage()** function, but it copies data i
 
 ### roRenderThreadQueue.NumCopies() as Integer
 
-#### Description
+##### Description
 
 Returns the total number of objects for the channel that were copied by the **PostMessage()** function instead of being moved.

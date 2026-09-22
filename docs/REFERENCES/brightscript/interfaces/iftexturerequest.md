@@ -23,21 +23,21 @@ next:
 
 ### GetId() as Integer
 
-#### Description
+##### Description
 
 Returns a unique id for the request.
 
-#### Parameters
+##### Parameters
 
 The unique ID.
 
 ### GetState() as Integer
 
-#### Description
+##### Description
 
 Returns the state of the request.
 
-#### Return Value
+##### Return Value
 
 The state value, which may be one of the following:
 
@@ -52,11 +52,11 @@ The state value, which may be one of the following:
 
 ### SetAsync(async as Boolean) as Void
 
-#### Description
+##### Description
 
 Sets the request to be either asynchronous (true) or synchronous (false). The default is asynchronous
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
@@ -64,11 +64,11 @@ Sets the request to be either asynchronous (true) or synchronous (false). The de
 
 ### SetSize(width as Integer, height as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the desired size of the roBitmap. The default is to return a bitmap in its native size.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
@@ -77,17 +77,17 @@ Sets the desired size of the roBitmap. The default is to return a bitmap in its 
 
 ### SetScaleMode(mode as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the scaling mode to be used. 
 
-#### Parameters
+##### Parameters
 
 ### SetDrawable(drawable as Boolean) as Void
 
 *Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
 
-#### Description
+##### Description
 
 Specifies whether the [**ifDraw2D**](doc:ifdraw2d) functions may draw to and modify the [roBitmap](doc:robitmap) returned by the request.
 
@@ -97,7 +97,7 @@ Non-drawable bitmaps can be reused from the texture cache and are loaded into te
 
 > Bitmaps created with `CreateObject("roBitmap", ...)` are always drawable and are unaffected by this function.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description |
 | ----     | ------- | -------------- |

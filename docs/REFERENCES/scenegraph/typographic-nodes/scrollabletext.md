@@ -20,7 +20,7 @@ The ScrollableText node class provides an interactive, vertically scrolling pane
 
 The ScrollableText node class uses the horizAlign and vertAlign fields to allow you to position the rendered text relative to a specified bounding rectangle.
 
-#### Horizontal Alignment
+##### Horizontal Alignment
 
 The horizAlign field allows you to position text horizontally relative to the computed width of the ScrollableText node. The computed width is determined by subtracting the width of the scrollbar from the value specified by the width field.
 
@@ -37,7 +37,7 @@ There are three possible values for the horizAlign field:
 
 In most cases, the horizAlign field should remain set to left.
 
-#### Vertical Alignment
+##### Vertical Alignment
 
 The vertAlign field allows you to position text vertically relative to the height of the ScrollableText node, as specified by the height field.
 

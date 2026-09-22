@@ -16,7 +16,7 @@ The `onKeyEvent()` function receives remote control key events from the Roku OS,
 
 > Several node classes handle certain remote control key events automatically, so the `onKeyEvent()` function is not required to handle those events, and should not be used for those events in those nodes. As an example of node classes that automatically handle certain remote control key events, grid node classes such as [PosterGrid](doc:postergrid) automatically handle **Up**, **Down**, **Right**, and **Left** key presses when the poster grid has focus. Typically, you should use the ifSGNodeField `observeField()` method to handle changes in the subject node fields caused by automatic key event handling of the node.
 
-#### Syntax
+##### Syntax
 
 ```brightscript
 function onKeyEvent(_key_ as String, _press_ as Boolean) as Boolean
@@ -59,7 +59,7 @@ The behavior of the Roku Options overlay has been modified, such that the Option
 
 Such keys are now sent at "Lit_" followed by the actual keypress ("A," "B," "C," etc.).
 
-#### Example
+##### Example
 
 The following `onKeyEvent()` example handles supported remote control key presses other than the **Back** key by displaying a warning message until the **OK** key is pressed.
 

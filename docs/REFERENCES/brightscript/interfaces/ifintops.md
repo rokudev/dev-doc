@@ -30,14 +30,14 @@ next:
 
 ### ToStr() As String
 
-#### Description
+##### Description
 
 Returns the integer value formatted as a decimal string. No leading space is appended for non-negative numbers.
 
-#### Return Value
+##### Return Value
 
 A decimal string.
 
-#### Example
+##### Example
 
 `5.ToStr() = "5", (-5).ToStr() = "-5"`

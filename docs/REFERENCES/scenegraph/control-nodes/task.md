@@ -40,7 +40,7 @@ Also review "[SceneGraph threads](doc:threads)" for in-depth information on usin
 
 The following reads attributes from an XML file on a server containing the content for a PosterGrid node into a ContentNode, which can then be assigned to the content field of the PosterGrid node to configure and populate the grid.
 
-#### Task Node Example
+##### Task Node Example
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

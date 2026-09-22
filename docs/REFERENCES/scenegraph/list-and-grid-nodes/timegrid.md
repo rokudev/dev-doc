@@ -24,14 +24,14 @@ The TimeGrid node has a **content **field that can be used to store the informat
 
 > For any program in any channel, the start time plus the duration of any program must be less than or equal to the start time of the next program.
 
-#### App attributes
+##### App attributes
 
 | Attribute      | Type   | Description                                                                                              |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------------- |
 | TITLE          | string | The name of this channel, to be visible only if HDSMALLICONURL is not set or if the icon failed to load. |
 | HDSMALLICONURL | uri    | The image file for the channel logo.                                                                     |
 
-#### Program attributes
+##### Program attributes
 
 | Attribute      | Type       | Description                                                                  |
 | -------------- | ---------- | ---------------------------------------------------------------------------- |

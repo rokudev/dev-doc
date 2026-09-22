@@ -31,11 +31,11 @@ The ifArraySet interface supports the array indexing operator [].
 
 ### SetEntry(index As Integer, tvalue As Dynamic) As Void
 
-#### Description
+##### Description
 
 Sets an entry at a given index to the passed value. If index is beyond the bounds of the array, the array is expanded to accommodate it.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                            |
 | ------ | ------- | -------------------------------------- |

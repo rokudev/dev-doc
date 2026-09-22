@@ -20,7 +20,7 @@ next:
 
 ### Change(path as String) as Boolean
 
-#### Description
+##### Description
 
 Modifies or changes the current path via the specified relative or absolute path.
 
@@ -47,38 +47,38 @@ Modifies or changes the current path via the specified relative or absolute path
 </table>
 
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                               |
 | ---- | ------ | --------------------------------------------------------- |
 | path | String | The new relative or absolute file system path to be used. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the path was successfully changed. 
 
 ### IsValid() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the current path is valid (the path is correctly formed). This does not check whether the file actually exists.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the current path is valid. 
 
 ### Split() as Object
 
-#### Description
+##### Description
 
 Returns an [roAssociativeArray](/docs/references/brightscript/components/roassociativearray.md) containing keys for the parent directories, extensions, and file name in the file path.
 
-#### Return Value
+##### Return Value
 
 An [roAssociativeArray](doc:roassociativearray) that contains the following keys: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>basename</td><td>String</td><td>The filename, without parent directories or extension.</td></tr><tr><td>extension</td><td>String</td><td>The filename, with extension, without parent directories.</td></tr><tr><td>filename</td><td>String</td><td>The filename.</td></tr><tr><td>parent</td><td>String</td><td>The parent directory, or empty if in a root directory.</td></tr><tr><td>phy</td><td>String</td><td>The PHY volume.</td></tr></tbody></table>
 
 
-#### Example (Brightscript Debugger Interactive Shell)
+##### Example (Brightscript Debugger Interactive Shell)
 
 ```bash
 > mypath = CreateObject("roPath", "pkg:/source/appMain.brs")

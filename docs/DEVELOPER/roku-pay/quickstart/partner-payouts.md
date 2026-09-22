@@ -52,7 +52,7 @@ To enroll in the Roku Partner Payouts Program, enter your payout settings follow
 
      ![roku600px - ](https://image.roku.com/ZHZscHItMTc2/payment-settings-enrolled.png)
 
-#### Video demo
+##### Video demo
 
 <video src="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.mp4" poster="https://image.roku.com/ZHZscHItMTc2/entering-payout-settings.png" width="720" height="480" controls />
 

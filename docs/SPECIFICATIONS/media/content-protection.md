@@ -52,7 +52,7 @@ contentNode.encodingKey = "PlayReadyLicenseServerUrl" + "%%%" + customData
 m.video.content = contentNode
 ```
 
-#### PlayReady 3
+##### PlayReady 3
 
 Starting from [Roku OS version 8.1](doc:release-notes#roku-os-81), all Roku devices with MStar chips are updating to the PlayReady 3 library. Prior to this update, all platforms were using PlayReady 2.5.
 
@@ -68,7 +68,7 @@ The following devices contain MStar chips:
 | 2017 Roku Ultra                                          | Bryan            | 4660X               |
 | Roku TV                                                  | Midland          | 8000X               |
 
-#### Supported security levels
+##### Supported security levels
 
 | Device Code Name                          | Security level supported |
 | ----------------------------------------- | ------------------------ |

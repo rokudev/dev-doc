@@ -172,7 +172,7 @@ will render the first pod scheduled as a preroll. Calling it with a
 single ad pod will render that pod, regardless of
 its `renderSequence` attribute.
 
-#### Single preroll ad pod
+##### Single preroll ad pod
 
 Just call [showAds()](doc:raf-api) with
 the adPods value that the application obtained above:
@@ -185,7 +185,7 @@ Note that the return value should still be checked to see if the user
 exited the ad, and therefore should also exit out of content playback
 back to a selection screen.
 
-#### Sequential rendering
+##### Sequential rendering
 
 Typically, if the ad service URL is configured to return a slate of ad
 pods to be presented throughout the presentation of the content, it is
@@ -221,7 +221,7 @@ re-render ads that have already been viewed. This policy permits the
 user to rewind content up to 5 minutes before a scheduled ad break
 before displaying that ad pod again.
 
-#### Custom scheduling
+##### Custom scheduling
 
 Alternatively, there may be instances where the application must have
 greater control over when ad breaks occur. As an example, if the ad
@@ -290,7 +290,7 @@ by [getAds()](doc:raf-api),
 to get the ads from each service. Then scheduling and rendering can be
 done using one of the methods described above.
 
-#### Example
+##### Example
 
 For examples, see the [Roku Advertising sample apps](https://github.com/rokudev/samples/tree/master/advertising)
 
@@ -319,7 +319,7 @@ adIface.setContentId(content.stream.contentid)
 adIface.setContentLength(content.length)
 ```
 
-#### Setting the content genre
+##### Setting the content genre
 
 Each ad server may require different [Roku genre tags](#roku-genre-tags) tags that you need to pass. Check with your ad server for the  [Roku genre tags](#roku-genre-tags) to be used.
 
@@ -346,7 +346,7 @@ function getAdID() as String
 end function
 ```
 
-#### RIDA specific parameters
+##### RIDA specific parameters
 
 Many leading ad servers such as FreeWheel and DFP have Roku specific
 parameters in their ad request that the app can pass the RIDA in.
@@ -381,7 +381,7 @@ url = http://pubads.g.doubleclick.net/gampad/request-type?my_first_param=MyFirst
 RAF also supports multiple ways of customizing the buffering screen
 which appear before ad playback.
 
-#### Default ad buffering screen
+##### Default ad buffering screen
 
 The default ad buffering screen displays a message and a progress bar.
 Both attributes can either be enabled or disabled
@@ -389,7 +389,7 @@ using [enableAdBufferMessaging()](doc:raf-api).
 
 <Image alt="roku815px - integrateraf1" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf1.jpg" title="integrateraf1" />
 
-#### Custom buffering screen using content metadata (fixed positioning)
+##### Custom buffering screen using content metadata (fixed positioning)
 
 The buffering screen can also be customized by passing a content
 metadata object
@@ -420,7 +420,7 @@ adIface.SetAdBufferScreenContent(bufferScreenContent)
 
 <Image alt="roku815px - integrateraf2" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf2.jpg" title="integrateraf2" />
 
-#### Custom buffering screen using content metadata (custom positioning)
+##### Custom buffering screen using content metadata (custom positioning)
 
 For a complete custom buffering
 screen, [setAdBufferScreenLayer()](doc:raf-api) allows
@@ -455,7 +455,7 @@ Custom ad parsing and rendering requires explicit approval from Roku to
 ensure proper ad delivery and quality. Please reach out to \<[adsupport@roku.com](mailto:adsupport@roku.com)\ for verifying your implementation prior to
 submitting your app for publication.
 
-#### Custom ad parsing
+##### Custom ad parsing
 
 Some applications may use an ad service that returns an unsupported
 response format, but can still take advantage of the library’s ad
@@ -472,7 +472,7 @@ with the ad structure constructed externally by the client:
 adIface.importAds(myAdPodArray)
 ```
 
-#### Custom ad rendering
+##### Custom ad rendering
 
 Client applications may elect to control the ad rendering within the
 application, either to provide custom UI while loading ads, or because
@@ -543,7 +543,7 @@ adIface.fireTrackingEvents(ad, {type: "Pause"})
 
 ## Requirements for server side ad insertion
 
-#### 1. Frequency capping and targeting requirements
+##### 1. Frequency capping and targeting requirements
 
 For apps that serve ads via SSAI, the outbound ad call to the ad server
 is not made from the client. The app will have to assume the onus of
@@ -556,7 +556,7 @@ server side component. In some cases, the app may need to pass the RIDA
 as part of an ad call, in other cases there may be a web service that
 the app needs to call.
 
-#### 2. Ad measurement beacon requirements
+##### 2. Ad measurement beacon requirements
 
 For server side ad inserted applications,
 call [fireTrackingEvents()](doc:raf-api) in
@@ -571,14 +571,14 @@ pass-through.
 keep or save any of these data elements on the device or any cloud
 storage.
 
-#### 3. User agent requirements
+##### 3. User agent requirements
 
 Apps must use the Roku-generated device user agent in all server-side ad requests to pass certification. To include the user agent in server-side ad requests, do the following:
 
 1. Obtain the user agent from a client-side call made to the ad stitcher or ad server.
 2. Pass the user agent into the User-Agent header in the server-side ad request, without any modifications.
 
-#### 4. Uniform ad experience requirements
+##### 4. Uniform ad experience requirements
 
 To enhance user engagement and consistency of ads served on the Roku
 platform, RAF supports rendering of both video and interactive ads (from
@@ -592,7 +592,7 @@ server-stitched would need to be rendered by the application. See
 [Custom Ad Rendering](doc:integrating-roku-advertising-framework)
 above.
 
-#### Implementation details
+##### Implementation details
 
 There are two API methods required for these use cases. First, the
 application is responsible for requesting and parsing the ad response,
@@ -710,7 +710,7 @@ device.
 | ROKU_ADS_KIDS_CONTENT   | Mark ad requests as appearing in a content title, app, or area of an app that is made for kids, or where you have actual knowledge that the end user is a child. This macro is designed to help flag ad requests that may be subject to child privacy and child protection laws such as the Children's Online Privacy Protection Act (COPPA). For more information about these laws, see [Channels or Content Made for Kids](https://docs.roku.com/published/madeforkids). |
 | ROKU_ADS_LOCALE         | Returns current locale in the same format as [roDeviceInfo.getCurrentLocale()](doc:ifdeviceinfo) (e.g., "en_US", "es_ES")                                                                                                                                                                                                                                                                                      |
 
-#### Example
+##### Example
 
 To make an ad request that requires the application ID, user agent, and
 timestamp values,

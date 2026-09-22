@@ -25,15 +25,15 @@ We look forward to working with you! You should have received a “Welcome to Ro
 
 ### **2.1 Production kick-off documents** 
 
-#### **2.1.1 Branded Production Guidelines** 
+##### **2.1.1 Branded Production Guidelines** 
 
 - Roku production document for branded content & branded series – document you are currently reading 
 
-#### **2.1.2 Branded media delivery specifications**
+##### **2.1.2 Branded media delivery specifications**
 
 - Roku post specifications for branded content & branded series
 
-#### **2.1.3 Branded production legal guidelines** 
+##### **2.1.3 Branded production legal guidelines** 
 
 - Roku Production Legal guidelines when creating content for exhibition on Roku 
 
@@ -138,13 +138,13 @@ In the event of any non-emergency incident (property/location damage, equipment 
 
 Roku Production looks forward to partnering with you to ensure delivery of the best content to The Roku Channel. Below are some guidelines to assist with budgeting, scheduling and cost reporting for your project. Please reach out to Roku Production with any questions. 
 
-#### **4.1.1 Chart of accounts (COA)** 
+##### **4.1.1 Chart of accounts (COA)** 
 
 Please reach out to Roku Production for the Roku COA template when you are ready to begin budgeting for your project. The COA will be used throughout the project's lifecycle: subsequent budget revisions and all Cost Reports, Variance Reports, General Ledgers, etc. 
 
 The COA template is provided in movie magic budgeting format. 
 
-#### **4.1.2 Assumptions page** 
+##### **4.1.2 Assumptions page** 
 
 Please reach out to Roku Production to provide the Roku Assumptions Template. Please make sure the following information, when applicable, included on the assumptions page: 
 
@@ -179,7 +179,7 @@ Please reach out to Roku Production to provide the Roku Assumptions Template. Pl
 - List “Roku Branded Media Delivery Specifications” version & date 
 - List “Roku Branded Production Guidelines” (this document) version & date 
 
-#### **4.1.3 Budget requirements** 
+##### **4.1.3 Budget requirements** 
 
 Roku Production asks that the following information, when applicable, be included/considered when budgeting: 
 
@@ -217,13 +217,13 @@ Roku Production asks that the following information, when applicable, be include
 - Spend beyond the Approved Budget is never authorized without **<u>written</u>** approval from Roku Production 
 - For each budget revision please be sure to note the date, version and bullet point relevant changes in the body of the email to Roku Production. 
 
-#### **4.1.4 Foreign exchange rate (aka FX)** 
+##### **4.1.4 Foreign exchange rate (aka FX)** 
 
 If shooting in a location outside of the United States please be sure to note what foreign exchange rate you have assumed in your budget. 
 
 - Partner is responsible for noting the FX on the top of the budget top sheet as well as the assumptions. 
 
-#### **4.1.5 Tax Incentives** 
+##### **4.1.5 Tax Incentives** 
 
 If shooting in a location in which a tax incentive or rebate is accessible, please be mindful of the below: 
 
@@ -291,7 +291,7 @@ Revised calendars are required whenever there is a schedule adjustment. Please u
 - In the body of the email that comes with calendar revisions, bullet point relevant changes to current calendar. Roku Production will review and confirm via email if approved. 
 - Master delivery dates cannot shift without **<u>written</u>** approval by Roku Production and Post 
 
-#### **4.2.1 Calendar requirements** 
+##### **4.2.1 Calendar requirements** 
 
 Your calendar should cover all phases of production (i.e., casting, pre-production, physical production, post, QC and final delivery) and include key dates, as applicable, for the following: 
 
@@ -309,7 +309,7 @@ Your calendar should cover all phases of production (i.e., casting, pre-producti
   - GFX milestones (i.e. GFX review 1, GFX review 2) 
   - VFX milestones (i.e., VFX review 1, VFX review 2) 
 
-#### **4.2.2 Game play / blocking / rehearsal** 
+##### **4.2.2 Game play / blocking / rehearsal** 
 
 - If applicable, Roku requests game play, and blocking rehearsal for our content 
 - Typically, game play is a full run-through to time of the game or challenge course to determine the course, camera positioning, and coverage 
@@ -317,7 +317,7 @@ Your calendar should cover all phases of production (i.e., casting, pre-producti
 - Please reach out to Roku Production for an invitation list to game play and / or rehearsal  
 - Please provide a dial-in/video conference line for Roku representatives who may not be able to attend the table read in-person 
 
-#### **4.2.3 Camera test milestone** 
+##### **4.2.3 Camera test milestone** 
 
 Roku Production will alert you if the below is applicable to your project.  
 
@@ -327,7 +327,7 @@ Roku Production will alert you if the below is applicable to your project.
   - Ideally this is sent prior to commencement of principal photography. If that isn’t possible, within the first two days of shooting or rehearsal 
 - Your Roku Post Manager will create a specific folder via [Frame.io](http://frame.io/)  for uploading the camera test 
 
-#### **4.2.4 Production Meetings / rehearsals / tech scouts** 
+##### **4.2.4 Production Meetings / rehearsals / tech scouts** 
 
 If applicable, Roku Production will attend in person or via dial-in. It is asked that a phone dial-in be made available for all attending Roku departments 
 
@@ -381,7 +381,7 @@ Roku follows the guidance of the AMPTP and local regulations when it comes to Co
   - Include invoice due dates, percentage, and amounts 
 - If applicable, Production Company Fee, Breakage, and Residuals/Buyouts can be listed, but should not roll up into the total milestone payments 
 
-#### **5.1.1 Payment descriptions** 
+##### **5.1.1 Payment descriptions** 
 
 Possible payment milestones and when to submit invoices for processing listed below: 
 
@@ -389,7 +389,7 @@ Possible payment milestones and when to submit invoices for processing listed be
 - Production Company Fee – Invoice due receipt and approval of all Paper Deliverables and Final Cost Report 
 - Audit - Reference closed project deal terms for audit language 
 
-#### **5.1.2 Invoices** 
+##### **5.1.2 Invoices** 
 
 All invoices should be sent via email to [roinvoices@roku.com](mailto:roinvoices@roku.com)
 
@@ -492,7 +492,7 @@ The Roku Production Legal Guidelines will cover the topics listed below. You can
 
 We rely on our production Partners to acquire the appropriate coverage as deemed necessary for each production. When binding coverage please ensure it satisfies all of Roku’s insurance requirements with the exception of Workers’ Compensation/Employer’s Liability, Owned Automobile, Guild Travel Accident (if your production is union) and any local foreign compulsory coverage(s) (such as auto liability) which are collectively the responsibility of the production company. 
 
-#### **6.2.1 Certificates of insurance** 
+##### **6.2.1 Certificates of insurance** 
 
 Certificates of insurance (COIs) should be bound and sent to Roku Production / Production Legal prior to the commencement of any production activities. 
 
@@ -568,7 +568,7 @@ Productions should be uploading documents to the Hub on an ongoing basis through
 
 Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post and Production Legal. Please be aware, this list is subject to amendment (within reason) at any time. Make sure to follow specific instructions for each document and upload accordingly. Please note other departments may have additional required deliverables. 
 
-#### **8.1.1 Production** 
+##### **8.1.1 Production** 
 
 - Beat Sheets 
 - Call Sheets & Maps (upload at the same time as distribution to crew) 
@@ -585,7 +585,7 @@ Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post
 - Schedules (all approved and final versions)  
 - Staff & Crew Lists (all approved and final versions) 
 
-#### **8.1.2 Post** 
+##### **8.1.2 Post** 
 
 - CC/Sub/FN Files 
 - Episodic Delivery Checklist 
@@ -598,7 +598,7 @@ Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post
 - Final Credits (also vetted by Business Affairs) 
 - Music Cue Sheets (vetted by Production Legal) 
 
-#### **8.1.3 Production legal** 
+##### **8.1.3 Production legal** 
 
 - Chain of Title Agreements  
 - Fair Use Grid (if applicable) 

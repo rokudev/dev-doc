@@ -34,7 +34,7 @@ Adds the specified HTTP header to the list of headers that will be sent in the H
 
 Certain well known headers such as User-Agent, Content-Length, and so on are automatically sent. The application may override the values for these headers if needed (for example, some servers may require a specific user agent string).
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -60,17 +60,17 @@ Certain well known headers such as User-Agent, Content-Length, and so on are aut
 </table>
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the HTTP header was successfully added.
 
 ### SetHeaders(nameValueMap as Object) as Boolean
 
-#### Description
+##### Description
 
 Sets the HTTP headers to be sent in the HTTP request.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -91,13 +91,13 @@ Sets the HTTP headers to be sent in the HTTP request.
 </table>
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the HTTP header was successfully set.
 
 ### InitClientCertificates() as Boolean
 
-#### Description
+##### Description
 
 Initializes the Roku device's built-in client certificate for use in mutual TLS (mTLS) authentication. When called, the device will present its Roku-issued client certificate during the TLS handshake (if server requests it), allowing the server to verify that the request originates from a genuine Roku device running your specific app. For backend service verification purposes it is recommended to use [GetDeviceAttestation(nonce as String) as String](https://developer.roku.com/dev/docs/ifchannelstore#getdeviceattestationnonce-as-string-as-string) 
 
@@ -105,7 +105,7 @@ Initializes the Roku device's built-in client certificate for use in mutual TLS 
 
 > The Roku Developer Dashboard includes a link for downloading the [RokuTV Certification Authority](https://developer.roku.com/certificate). This CA can be passed to an app through this function.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object sent to to the Roku client certificate was successfully initialized.
 
@@ -113,23 +113,23 @@ A flag indicating whether the object sent to to the Roku client certificate was 
 
 Set the certificates file used for SSL to the specified .pem file.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                     |
 | ---- | ------ | ----------------------------------------------- |
 | path | String | The directory path of the .pem file to be used. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the certificate was successfully set.
 
 ### SetCertificatesDepth(depth as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the maximum depth of the certificate chain that will be accepted.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                   |
 | ----- | ------- | ----------------------------- |
@@ -137,17 +137,17 @@ Sets the maximum depth of the certificate chain that will be accepted.
 
 ### EnableCookies() as Void
 
-#### Description
+##### Description
 
 Enables any Set-Cookie headers returned from the request to be interpreted and the resulting cookies to be added to the cookie cache.
 
 ### GetCookies(domain as String, path as String) as Object
 
-#### Descripton
+##### Descripton
 
 Returns any cookies from the cookie cache that match the specified domain and path. Expired cookies are not returned.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -178,7 +178,7 @@ Returns any cookies from the cookie cache that match the specified domain and pa
 </table>
 
 
-#### Return Value
+##### Return Value
 
 An roArray of roAssociativeArrays, where each associative array represents a cookie. The roAssociativeArrays contain the following key-value pairs:
 
@@ -193,11 +193,11 @@ An roArray of roAssociativeArrays, where each associative array represents a coo
 
 ### AddCookies(cookies as Object) as Boolean
 
-#### Description
+##### Description
 
 Adds the specified cookies to the cookie cache.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -219,13 +219,13 @@ Adds the specified cookies to the cookie cache.
 
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the cookies were successfully added to the cache.
 
 ### ClearCookies() as Void
 
-#### Description
+##### Description
 
 Removes all cookies from the cookie cache.
 

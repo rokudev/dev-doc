@@ -22,35 +22,35 @@ next:
 
 ## Supported methods
 
-#### Device properties
+##### Device properties
 
 ### GetModel() as String
 
-#### Description
+##### Description
 
 Returns the model name of the Roku device. See the [Hardware Specification](doc:hardware) for the list of the current, updatable, and legacy Roku models.
 
-#### Return Values
+##### Return Values
 
 A five-character alphanumeric string (for example, "3050X") .
 
 ### GetModelDisplayName() as String
 
-#### Description
+##### Description
 
 Returns the model display name of the Roku device.
 
-#### Return Values
+##### Return Values
 
 The model display name (for example, "Roku 2 XD")
 
 ### GetModelType() as String
 
-#### Description
+##### Description
 
 Returns a string describing the type of device. For future compatibility, the caller should by default assume "STB" when anything other than described value is returned
 
-#### Return Values
+##### Return Values
 
 The device type, which may be one of the following values:
 
@@ -59,11 +59,11 @@ The device type, which may be one of the following values:
 
 ### GetModelDetails() as Object
 
-#### Description
+##### Description
 
 Returns detailed information about the device model.
 
-#### Return Values
+##### Return Values
 
 An associative array containing the following information about the device model:
 
@@ -77,21 +77,21 @@ An associative array containing the following information about the device model
 
 ### GetFriendlyName() as String
 
-#### Description
+##### Description
 
 Returns a string describing the device that may be used for network device selection.  The string is subject to change and should not be used as a persistent key or ID
 
-#### Return Values
+##### Return Values
 
 A user-assigned device name or a description of the device such as model name and/or serial number.
 
 ### GetOSVersion() As Object
 
-#### Description
+##### Description
 
 Returns an roAssociativeArray containing the **major**, **minor**, **revision**, and **build** numbers of the Roku OS running on the device.
 
-#### Return Values
+##### Return Values
 
 An roAssociativeArray containing the following fields:
 
@@ -108,11 +108,11 @@ An roAssociativeArray containing the following fields:
 >
 > Developers must update their apps to use [GetOSVersion()](doc:ifdeviceinfo) method to get the current Roku OS version running on a device.
 
-#### Description
+##### Description
 
 Returns the version number of the device.
 
-#### Return Values
+##### Return Values
 
 A 13-character string (for example "034.08E01185A"). The third through sixth characters are the major/minor version number ("4.08") and the ninth through twelfth are the build number ("1185")
 
@@ -122,11 +122,11 @@ A 13-character string (for example "034.08E01185A"). The third through sixth cha
 >
 > Developers must update their apps to use the 32-character alphanumeric unique identifier returned by [GetChannelClientId()](doc:ifdeviceinfo).
 
-#### Description
+##### Description
 
 Returns a string of 12 zeroes (it no longer returns the unique identifier for the app on a device).
 
-#### Return Values
+##### Return Values
 
 A string of 12 zeros ("000000000000")
 
@@ -136,19 +136,19 @@ A string of 12 zeros ("000000000000")
 >
 > Developers must update their apps to use the [GetRIDA()](doc:ifdeviceinfo) method to get the unique identifier.
 
-#### Description
+##### Description
 
 Returns a unique identifier for the device. This identifier is persistent but can be reset by the user from the device's Settings menu or by performing a factory reset on the device.
 
 If the user has disabled Ad ID tracking from the settings menu, then this identifier should not be used for targeted advertising. IsAdIdTrackingDisabled() should be called to check if the user has disabled Ad ID tracking
 
-#### Return Values
+##### Return Values
 
 A Universally Unique Identifier (UUID) as specified in IETF-RFC 4122 with 36 characters (32 alphanumeric characters and four hyphens). The characters are grouped in the form 8-4-4-4-12, for example "123e4567-e89b-12d3-a456-426655440000"
 
 ### GetRIDA() as String
 
-#### Description
+##### Description
 
 Returns a unique identifier for the device.
 
@@ -156,7 +156,7 @@ If the user has set "Limit ad tracking" from the **Settings** menu (the user has
 
 > If the user’s country is an EU member country, any data collection must be compliant with the [EU General Data Protection Regulation (GDPR)](doc:legal#gdpr).
 
-#### Return Values
+##### Return Values
 
 A Universally Unique Identifier (UUID). This identifier is persistent, but it can be reset by the user from the device's **Settings** menu or by performing a factory reset on the device
 
@@ -166,21 +166,21 @@ A Universally Unique Identifier (UUID). This identifier is persistent, but it ca
 >
 > Developers must update their apps to use [IsRIDADisabled()](doc:ifdeviceinfo) to get the Ad Id tracking status.
 
-#### Description
+##### Description
 
 If Ad Id tracking is disabled, the identifier returned by GetAdvertisingId() should not be used for Ad targeting
 
-#### Return Values
+##### Return Values
 
 Returns true if the user has disabled Ad Id tracking by selecting "Limit ad tracking" from the Roku Settings menu, false otherwise.
 
 ### IsRIDADisabled() as Boolean
 
-#### Description
+##### Description
 
 Indicates whether tracking via Roku's ID for Advertisers (RIDA) is disabled on the device.
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether RIDA tracking is disabled on the device (RIDA tracking can be disabled by selecting "Limit ad tracking" from the **Settings>Privacy>Advertising** menu). If RIDA tracking is disabled, this returns true; false otherwise.
 
@@ -190,21 +190,21 @@ A flag indicating whether RIDA tracking is disabled on the device (RIDA tracking
 >
 > Developers must update their apps to use the [GetChannelClientId](doc:ifdeviceinfo) method to get the unique identifier.
 
-#### Description
+##### Description
 
 Returns a unique identifier for the device.
 
-#### Return Values
+##### Return Values
 
 A unique identifier. This identifier is different across apps so each app will get a different identifier when calling this function
 
 ### GetChannelClientId() as String
 
-#### Description
+##### Description
 
 Returns a unique identifier for the device. The ID is persistent and cannot be reset. This value can be used to manage or identify devices linked to the app’s content services.
 
-#### Return Values
+##### Return Values
 
 A unique identifier. This identifier is different across apps so each app will get a different identifier when calling this function
 
@@ -212,7 +212,7 @@ A unique identifier. This identifier is different across apps so each app will g
 
 Returns the ISO 3166-1 (2-letter) country code associated with the user's Roku account.
 
-#### Return Values
+##### Return Values
 
 An ISO 3166-1 (2-letter) country code.
 
@@ -227,21 +227,21 @@ An ISO 3166-1 (2-letter) country code.
 
 ### GetRandomUUID() as String
 
-#### Description
+##### Description
 
 Returns a randomly generated unique identifier. Each time this function is called, a different identifier is returned
 
-#### Return Values
+##### Return Values
 
 A Universally Unique Identifier (UUID) version 4 as specified in IETF-RFC 4122 with 36 characters (32 alphanumeric characters and four hyphens). The characters are grouped in the form 8-4-4-4-12, for example "123e4567-e89b-12d3-a456-426655440000"
 
 ### GetTimeZone() as String
 
-#### Description
+##### Description
 
 Checks for the user's current system time zone setting.
 
-#### Return Values
+##### Return Values
 
 A string representing the user's current system time zone setting:
 
@@ -399,27 +399,27 @@ A string representing the user's current system time zone setting:
 
 ### HasFeature(feature as String) as Boolean
 
-#### Description
+##### Description
 
 Checks if the current device/firmware supports the passed in feature string.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | feature | String | The feature to be checked, which may be one of the following values: <ul><li>"5.1\_surround\_sound"</li><li>"can\_output\_5.1\_surround\_sound"</li><li>"sd\_only\_hardware"</li><li>"usb\_hardware"</li><li>"sdcard\_hardware"</li><li>"ethernet\_hardware"</li><li>"gaming\_hardware"</li><li>"energy\_star\_compliant"</li><li>"soundbar\_hardware". Check whether the device has soundbar hardware (for example, speakers).</li><li>"voice\_remote" (). Checks whether a Roku device is paired with a Roku voice remote. This enables developers to tailor the in-app user experience for viewers with Roku voice remote controls.</li><li>"handsfree\_voice" (). Checks whether a Roku device is paired with a hands-free Roku remote control such as the Roku Voice Remote Pro. This enables developers to tailor the in-app user experience for viewers with hands-free Roku remote controls (for example, displaying voice tips and tricks in the UI).</li></ul><blockquote><p>The "1080p\_hardware" argument is deprecated. Apps should use the GetVideoMode() and CanDecodeVideo() functions instead</p></blockquote> |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the current device/firmware supports the passed in feature string.
 
 ### GetCurrentLocale() as String
 
-#### Description
+##### Description
 
 Gets the current locale value based on the user's language setting.
 
-#### Return Values
+##### Return Values
 
 A string representing the current locale based on the user's language setting. The string is an ISO 639-1 (2-letter) language code followed by an underscore and a ISO 3166-1 (2-letter) country code. This may be one of the following values:
 
@@ -438,11 +438,11 @@ A string representing the current locale based on the user's language setting. T
 
 ### GetCountryCode() as String
 
-#### Description
+##### Description
 
 Checks for the country code of the app.
 
-#### Return Values
+##### Return Values
 
 A value that indicates the Streaming Store associated with a user’s Roku account. Typically, the value returned will be an ISO 3166-1 (2-letter) country code representing the country. Alternatively, if the app owner entered into an additional agreement to have the app published to a curated [Roku Powered Streaming Store](https://www.roku.com/roku-powered) instead of the user country, then a Roku Powered Streaming Store Identifier will instead be returned. This may be one of the following values:
 
@@ -481,11 +481,11 @@ A value that indicates the Streaming Store associated with a user’s Roku accou
 
 ### GetPreferredCaptionLanguage() as String
 
-#### Description
+##### Description
 
 Checks the two-letter ISO 639-1 language terminology code of the preferred caption language set on the Roku device.
 
-#### Return Values
+##### Return Values
 
 The two-letter ISO 639-1 language terminology code, which may be one of the following values:
 
@@ -511,11 +511,11 @@ The two-letter ISO 639-1 language terminology code, which may be one of the foll
 
 ### TimeSinceLastKeypress() as Integer
 
-#### Description
+##### Description
 
 Checks for the number of seconds passed since the last remote keypress.
 
-#### Return Values
+##### Return Values
 
 The number of seconds since the last remote keypress was received.
 
@@ -525,11 +525,11 @@ The number of seconds since the last remote keypress was received.
 >
 > Developers must update their apps to use the replacement API [GetDrmInfoEx()](doc:ifdeviceinfo) to return the supported DRM system and features.
 
-#### Description
+##### Description
 
 Checks for the supported DRM system and its features.
 
-#### Return Values
+##### Return Values
 
 An associative array with the supported DRM system and features. For example, a device that supports PlayReady inside a trusted environment with secure stop returns:
 
@@ -573,11 +573,11 @@ Widevine : {
 
 ### GetCaptionsMode() as String
 
-#### Description
+##### Description
 
 Determines whether global captions are turned on or off, or are in instant replay mode.
 
-#### Return Values
+##### Return Values
 
 The current global setting for the Mode property, which may be one of the following values:
 
@@ -589,33 +589,33 @@ The current global setting for the Mode property, which may be one of the follow
 
 ### SetCaptionsMode(mode as String) as Boolean
 
-#### Description
+##### Description
 
 Sets the current global setting for the Mode property.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                                                                                                                                                           |
 | ---- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mode | String | The current global setting for the Mode property, which may be one of the following values: <ul><li>On</li><li>Off</li><li>Instant replay</li><li>When mute (Roku TVs only)</li></ul> |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the Mode property was successfully set.
 
 ### GetCaptionsOption(option as String) as String
 
-#### Description
+##### Description
 
 Checks the current value of the specified global setting property.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type   | Description                                                                                                                                                                                                                                                                                                                                                                            |
 | ------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Option | String | The global setting property to be checked, which may be one of the following values: <ul><li>Mode</li><li>Text/Font</li><li>Text/Effect</li><li>Text/Size</li><li>Text/Color</li><li>Text/Opacity</li><li>Background/Color</li><li>Background/Opacity</li><li>Window/Color</li><li>Window/Opacity</li><li>Track</li><li>Track\_Composite</li><li>Track\_Analog</li><li>Muted</li></ul> |
 
-#### Return Values
+##### Return Values
 
 The value of the specified global setting property, which may be as follows:
 
@@ -632,7 +632,7 @@ The value of the specified global setting property, which may be as follows:
 | Window Color       | <ul><li>Default</li><li>White</li><li>Black</li><li>Red</li><li>Green</li><li>Blue</li><li>Yellow</li><li>Magenta</li><li>Cyan</li></ul>                                                        |
 | Window Opacity     | <ul><li>Default</li><li>Off</li><li>25%</li><li>75%</li><li>100%</li></ul>                                                                                                                      |
 
-#### Example
+##### Example
 
 ```brightscript
 di = CreateObject("roDeviceInfo")
@@ -651,11 +651,11 @@ print "Window Opacity=";di.GetCaptionsOption("Window/Opacity")
 
 ### GetClockFormat() as String
 
-#### Description
+##### Description
 
 Checks whether the system settings for Time (**Setting > System > Time**) is set to a 12 or 24-hour format.
 
-#### Return Values
+##### Return Values
 
 The time format:
 
@@ -665,11 +665,11 @@ The time format:
 
 ### IsClockValid() as Dynamic
 
-#### Description
+##### Description
 
 Checks if the device's system clock is valid.
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the system clock on the device is valid.
 
@@ -677,51 +677,51 @@ A flag indicating whether the system clock on the device is valid.
 
 _Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
-#### Description
+##### Description
 
 Notifies the app when the device's system clock becomes valid.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                    |
 | ------ | ------- | -------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable valid system clock events. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether valid system clock events are enabled (true) or disabled (false).
 
 ### EnableAppFocusEvent(enable as Boolean) as Dynamic
 
-#### Description
+##### Description
 
 Notifies the app when a system overlay event (such as the [confirm partner button HUD](doc:channel-manifest) or the caption control overlay) is displayed. This notification gives the app the opportunity to do any processing they may want to when the app loses or regains focus.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                                     |
 | ------ | ------- | ------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable system overlay event notifications. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the system overlay event notifications are enabled (true) or disabled (false).
 
 ### EnableScreensaverExitedEvent(enable as Boolean) as Dynamic
 
-#### Description
+##### Description
 
 Notifies the app when a screensaver exit event occurs. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when a user has exited the screensaver.
 
 To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                                       |
 | ------ | ------- | --------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable screensaver exit event notifications. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether screensaver exit event notifications are enabled (true) or disabled (false).
 
@@ -731,35 +731,35 @@ A flag indicating whether screensaver exit event notifications are enabled (true
 >
 > Developers must use the [ifHdmiStatus](doc:ifhdmistatus) interface functions instead.
 
-#### Description
+##### Description
 
 Checks for an HDMI connection.
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether an HDMI connection to a TV has been detected.
 
 ### EnableLowGeneralMemoryEvent(enabled as Boolean) as Dynamic
 
-#### Description
+##### Description
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                                            |
 | ------ | ------- | -------------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable lowGeneralMemoryLevel event notifications. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether lowGeneralMemoryLevel event notifications are enabled (true) or disabled (false).
 
 ### GetGeneralMemoryLevel() as String
 
-#### Description
+##### Description
 
 Checks the general memory levels of the device.
 
-#### Return Values
+##### Return Values
 
 Returns the general memory levels of the app, which may be one of the following values:
 
@@ -769,49 +769,49 @@ Returns the general memory levels of the app, which may be one of the following 
 
 ### IsStoreDemoMode() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the device is in demo mode.
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the device is in demo mode.
 
-#### Network info
+##### Network info
 
 ### GetLinkStatus() as Boolean
 
-#### Description
+##### Description
 
 Checks if the device has an active connection.
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the device has an active connection.
 
 ### EnableLinkStatusEvent(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Notifies the app when a network connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the network connection status changes. To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                                                |
 | ------ | ------- | ------------------------------------------------------------------------------------------ |
 | enable | Boolean | A flag specifying whether to enable/disable network connection status event notifications. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether network connection status event notifications are enabled (true) or disabled (false).
 
 ### GetConnectionType() as String
 
-#### Description
+##### Description
 
 Checks whether the device has a WiFi or wired connection, or if it is not connected through any type of network.
 
-#### Return Values
+##### Return Values
 
 The type of internet connection the device is using. This may be one of the following values:
 
@@ -821,17 +821,17 @@ The type of internet connection the device is using. This may be one of the foll
 
 ### EnableInternetStatusEvent(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Notifies the app when an internet connection status event occurs. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the network connection status changes, as indicated by `roDeviceInfoEvent.internetStatus`. To receive events, the app must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                                                |
 | :----- | :------ | :----------------------------------------------------------------------------------------- |
 | enable | Boolean | A flag specifying whether to enable/disable network connection status event notifications. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether network connection status event notifications are enabled (true) or disabled (false).
 
@@ -839,61 +839,61 @@ A flag indicating whether network connection status event notifications are enab
 
 _Available since [Roku OS 15.0](doc:release-notes#roku-os-150)_
 
-#### Description
+##### Description
 
 Returns the system's uptime since the last reboot (in milliseconds as a Long). This function is similar to the [global utility Uptime function](doc:global-utility-functions), but makes it easier for developers to handle monotonic milliseconds.
 
-#### Return Value
+##### Return Value
 
 A Long indicating the system's uptime since the last reboot (in milliseconds).
 
 ### GetInternetStatus() as Boolean
 
-#### Description
+##### Description
 
 Checks the internet connection status of the device.
 
-#### Return Value
+##### Return Value
 
 True if the cached internet status shows a connection; false, otherwise.
 
 ### ForceInternetStatusCheck() as Boolean
 
-#### Description
+##### Description
 
 Forces a new internet connection check. A new check will only be initiated if the cached internet status is older than 10 seconds.
 
-#### Return Value
+##### Return Value
 
 True indicates only that a new internet check has been initiated; otherwise, false. To get the actual internet connection status, use the [**GetInternetStatus()**](getinternetstatus-as-boolean) method.
 
 ### GetExternalIp() as String
 
-#### Description
+##### Description
 
 Checks the IP address assigned to the device by your internet service provider (ISP). This IP address is visible to the internet and all other computers outside your local network.
 
-#### Return Values
+##### Return Values
 
 The external IP address assigned to the device.
 
 ### GetIPAddrs() as Object
 
-#### Description
+##### Description
 
 Checks the local IP address of the device.
 
-#### Return Values
+##### Return Values
 
 An associative array, where each key is the name of a network interface and the value is the IP-address of the interface. Typically, the associative array only contains a single interface.
 
 ### GetConnectionInfo() as Object
 
-#### Description
+##### Description
 
 Checks for the information associated with the hardware's connection
 
-#### Return Values
+##### Return Values
 
 An associative array with the following key-value pairs:
 
@@ -919,15 +919,15 @@ An associative array with the following key-value pairs:
 | txFailed                                                                               | The number of dropped frames.                                                                                                                                                                                                                                                           |
 | txRetries                                                                              | The number of retries to send frames.                                                                                                                                                                                                                                                   |
 
-#### Video info
+##### Video info
 
 ### GetDisplayType() as String
 
-#### Description
+##### Description
 
 Gets the text corresponding to the button selection in the Player Info Settings/Display Type page.
 
-#### Return Values
+##### Return Values
 
 The display type, which may be one of the following values:
 
@@ -937,11 +937,11 @@ The display type, which may be one of the following values:
 
 ### GetDisplayMode() as String
 
-#### Description
+##### Description
 
 Checks the UI resolution of the device.
 
-#### Return Values
+##### Return Values
 
 The configured graphics layer resolution, which may be one of the following values:
 
@@ -951,11 +951,11 @@ The configured graphics layer resolution, which may be one of the following valu
 
 ### GetDisplayAspectRatio() as String
 
-#### Description
+##### Description
 
 Checks the aspect ratio for the display screen.
 
-#### Return Values
+##### Return Values
 
 The aspect ratio, which may be one of the following values:
 
@@ -964,11 +964,11 @@ The aspect ratio, which may be one of the following values:
 
 ### GetDisplaySize() as Object
 
-#### Description
+##### Description
 
 Checks the display size of a screen.
 
-#### Return Values
+##### Return Values
 
 An associative array with the screen width and height. Specifically, the keys "w" and "h" contain the values for the screen width and height respectively. This may be one of the following:
 
@@ -978,11 +978,11 @@ An associative array with the screen width and height. Specifically, the keys "w
 
 ### GetVideoMode() as String
 
-#### Description
+##### Description
 
 Checks the video playback resolution.
 
-#### Return Values
+##### Return Values
 
 The video playback resolution, which maybe one of the following values:
 
@@ -1021,11 +1021,11 @@ The video playback resolution, which maybe one of the following values:
 
 ### GetDisplayProperties() as Object
 
-#### Description
+##### Description
 
 Checks for the display properties of the screen.
 
-#### Return Values
+##### Return Values
 
 An associative array with the following key/value pairs for the display properties of the screen:
 
@@ -1044,11 +1044,11 @@ An associative array with the following key/value pairs for the display properti
 
 ### GetSupportedGraphicsResolutions() as Object
 
-#### Description
+##### Description
 
 Checks the supported graphics resolutions.
 
-#### Return Values
+##### Return Values
 
 A list of associative arrays. Each associative array contains the following key/value pairs for the graphics resolutions:
 
@@ -1062,17 +1062,17 @@ A list of associative arrays. Each associative array contains the following key/
 
 ### CanDecodeVideo(video\_format as Object) as Object
 
-#### Description
+##### Description
 
 Checks whether the device can decode and play the specified video format.
 
-#### Parameters
+##### Parameters
 
 | Name          | Type   | Description                                                                                                                                                                                                                                                                                                      |
 | ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | video\_format | Object | An associative array with the following key/value pairs specifying the video format to be checked.<br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /> |
 
-#### Return Values
+##### Return Values
 
 An associative array that includes a flag indicating whether the video format can be played, and the closest video format supported by the device.
 
@@ -1084,11 +1084,11 @@ The return value shows the Roku Player cannot play requested video format, shows
 
 ### GetUIResolution() as Object
 
-#### Description
+##### Description
 
 Checks for the UI resolution of the screen.
 
-#### Return Values
+##### Return Values
 
 An associative array with the following key-value pairs describing the current UI resolution:
 
@@ -1100,11 +1100,11 @@ An associative array with the following key-value pairs describing the current U
 
 ### GetGraphicsPlatform() as String
 
-#### Description
+##### Description
 
 Checks the graphics platform of the device.
 
-#### Return Values
+##### Return Values
 
 The device's graphics platform, which may be one of the following values:
 
@@ -1117,39 +1117,39 @@ The device's graphics platform, which may be one of the following values:
 >
 > Developers  should use the [CanDecodeVideo()](#candecodevideovideo_format-as-object-as-object) function instead.
 
-#### Description
+##### Description
 
 See [http://en.wikipedia.org/wiki/Extended\_display\_identification\_data#EIA.2FCEA-861\_extension\_block](http://en.wikipedia.org/wiki/Extended_display_identification_data#EIA.2FCEA-861_extension_block) for an explanation of the information returned.
 
-#### Return Values
+##### Return Values
 
 An associative array with the EDID (EIA.2FCEA-861) information describing the video display
 
 ### EnableCodecCapChangedEvent(enable As Boolean)
 
-#### Description
+##### Description
 
 Notifies the app when the audio or video codec changes. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the codec changes. To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                                   |
 | ------ | ------- | ----------------------------------------------------------------------------- |
 | enable | Boolean | A flag indicating whether to enable/disable codec change event notifications. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether codec change event notifications are enabled (true) or disabled (false).
 
-#### Audio info
+##### Audio info
 
 ### GetAudioOutputChannel() as String
 
-#### Description
+##### Description
 
 Checks for the type of audio output.
 
-#### Return Values
+##### Return Values
 
 The selected audio output, which may be one of the following values:
 
@@ -1162,17 +1162,17 @@ The selected audio output, which may be one of the following values:
 >
 > Developers  should use the [CanDecodeAudio()](#candecodeaudioaudio_format-as-object-as-object) function instead.
 
-#### Description
+##### Description
 
 Lists each audio decoder supported by the device, with up to four numbers describing the decoder from the EDID SAD (Short Audio Descriptor). Each value is of the form `"<number of channels>:<SAD1>:<SAD2>:<PassThru>:"`
 
-#### Return Values
+##### Return Values
 
 An associative array with EDID (EIA.2FCEA-861) audio decoder information for the device connected to the HDMI port (or the device itself for a Roku TV).
 
 For example, the name "DD+" may have the value "8:6:0:1" where there are 8 independent audio tracks (7.1 audio), 6 is the SAD1 byte, 0 is the SAD2 byte, and 1 is the binary value that indicates this is a pass-through audio device (not a Roku TV). The SAD1 and SAD2 bytes are interpreted differently for different codecs and more information about their values can be found here: [http://en.wikipedia.org/wiki/Extended\_display\_identification\_data#CEA\_EDID\_Timing\_Extension\_Version\_3\_data\_format](http://en.wikipedia.org/wiki/Extended_display_identification_data#CEA_EDID_Timing_Extension_Version_3_data_format)
 
-#### Example
+##### Example
 
 The following example demonstrates how to determine if the attached device supports Dolby Digital Plus audio:
 
@@ -1190,25 +1190,25 @@ hasDDPlus = audioDecoders.doesexist("DD+")
 
 ### CanDecodeAudio(audio\_format as Object) as Object
 
-#### Description
+##### Description
 
 Checks if the device can decode and play the specified audio format.
 
 > Use this method to query the codecs every time before starting playback on content (do not cache  and use the results from a previous call). In addition, use the [**roDeviceInfo.audioCodecCapabilityChanged()**](doc:rodeviceinfoevent) event to identify any codec changes that may occur when the audio output destination is switched. This will help your app to perform well with the Roku mobile app and and private listening.
 
-#### Parameters
+##### Parameters
 
 | Name          | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | audio\_format | Object | An associative array with the audio format to be checked. The general format of the associative arrays for CanDecodeAudio() is similar to the parameter and return associative arrays used in <a href="#candecodevideovideo_format-as-object-as-object">CanDecodeVideo()</a>. <br /><br />As of Roku OS 14.1, the keys in the associative array are fully case-insensitive. For older OS versions, use lower-case letters for the keys when specified within double quotes ("").<br /><br /> |
 
-#### Return Values
+##### Return Values
 
 An associative array that includes a flag indicating whether the audio format can be played, and the closest audio format supported by the device.
 
 ### IsPassthruCodecActive() as Boolean
 
-#### Description
+##### Description
 
 Indicates whether a passthrough device that owns the codec (a TV, audio receiver, or soundbar connected to a Roku device via HDMI) is rendering audio.
 
@@ -1216,17 +1216,17 @@ Apps can call the [CanDecodeAudio()](#candecodevideovideo_format-as-object-as-ob
 
 If the app receives a [**roDeviceInfoEvent.audioCodecCapabilityChanged**](doc:rodeviceinfoevent) event, it can call this function again to determine whether the audio output has changed (for example, check whether a different set of codecs are now relevant). The app can also re-query the [CanDecodeAudio()](#candecodevideovideo_format-as-object-as-object) function to determine whether the codecs themselves have changed (for example, an audio receiver has been disconnected).
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the passthrough device is rendering audio.
 
 ### GetSoundEffectsVolume() as Integer
 
-#### Description
+##### Description
 
 Checks for the user interface sound effects volume level.
 
-#### Return Values
+##### Return Values
 
 The UI sounds effects volume as a percentage. A return value of 0 indicates that UI sound effects are muted, and a value of 100 indicates that they are set to the maximum volume level
 
@@ -1234,11 +1234,11 @@ The UI sounds effects volume as a percentage. A return value of 0 indicates that
 
 > The screen reader is available on the following devices: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running [Roku OS version 7.5](doc:release-notes#roku-os-75) and later.
 
-#### Description
+##### Description
 
 Checks if the screen reader is enabled.
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the screen reader is enabled.
 
@@ -1246,17 +1246,17 @@ A flag indicating whether the screen reader is enabled.
 
 > The screen reader is available on: Roku Streaming Stick (3600X), Roku Express (3700X) and Express+ (3710X), Roku Premiere (4620X) and Premiere+ (4630X), Roku Ultra (4640X), and any Roku TV running [Roku OS version 7.5](doc:release-notes#roku-os-75) and above
 
-#### Description
+##### Description
 
 Notifies the app when the screen reader changes. This function enables the sending of an [roDeviceInfoEvent](doc:rodeviceinfoevent) when the screen reader changes. To receive events, you must have first called [SetMessagePort](doc:ifsetmessageport) on the roDeviceInfo object specifying the message port that is to receive the events
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                                           |
 | ------ | ------- | ------------------------------------------------------------------------------------- |
 | enable | Boolean | A flag indicating whether to enable/disable screen reader change event notifications. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether screen reader change event notifications are enabled (true) or disabled (false).
 

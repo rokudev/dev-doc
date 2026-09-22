@@ -23,11 +23,11 @@ These are the basic binding and data transfer operations used on both [roStreamS
 
 ### Send(data as Object, startIndex as Integer, length as Integer) as Integer
 
-#### Description
+##### Description
 
 Sends up to length bytes of data to the socket.
 
-#### Parameters
+##### Parameters
 
 | Name       | Type    | Description                                                      |
 | ---------- | ------- | ---------------------------------------------------------------- |
@@ -35,33 +35,33 @@ Sends up to length bytes of data to the socket.
 | startIndex | Integer | The index of the byte array from which to start sending data.    |
 | length     | Integer | The amount of data to be sent to the socket.                     |
 
-#### Return Value
+##### Return Value
 
 The number of bytes sent.
 
 ### SendStr(data as String) as Integer
 
-#### Description
+##### Description
 
 Sends the whole string to the socket, if possible.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                              |
 | ---- | ------ | ---------------------------------------- |
 | data | String | A string containing the data to be sent. |
 
-#### Return Value
+##### Return Value
 
 The number of bytes sent.
 
 ### Receive(data as Object, startIndex as Integer, length as Integer) as Integer
 
-#### Description
+##### Description
 
 Reads data from the socket.
 
-#### Parameters
+##### Parameters
 
 | Name       | Type    | Description                                                        |
 | ---------- | ------- | ------------------------------------------------------------------ |
@@ -69,7 +69,7 @@ Reads data from the socket.
 | startIndex | Integer | The index of the byte array from which to start reading data.      |
 | length     | Integer | The amount of data to be read from the socket.                     |
 
-#### Return Value
+##### Return Value
 
 The number of bytes read.
 
@@ -77,13 +77,13 @@ The number of bytes read.
 
 Reads data from the socket and stores the result in a string.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                    |
 | ------ | ------- | ---------------------------------------------- |
 | length | Integer | The amount of data to be read from the socket. |
 
-#### Return Value
+##### Return Value
 
 The received byte length string.  If no bytes are received, the string is empty.
 
@@ -97,7 +97,7 @@ On non-blocking sockets, both the send and the receive buffer may be read but no
 
 ### SetAddress(sockAddr as Object) as Boolean
 
-#### Description
+##### Description
 
 Sets the address using a BSD bind() call
 
@@ -139,82 +139,82 @@ Sets the address using a BSD bind() call
 
 <br />
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the address was successfully set.
 
 ### GetAddress() as Object
 
-#### Description
+##### Description
 
 Returns the roSocketAddress object bound to this socket.
 
-#### Return Value
+##### Return Value
 
 roSocketAddress Object.
 
 ### SetSendToAddress(sockAddr as Object) as Boolean
 
-#### Description
+##### Description
 
 Sets the remote address for next message to be sent.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type   | Description         |
 | -------- | ------ | ------------------- |
 | sockAddr | Object | An roSocketAddress. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the address was successfully stored as the first half of underlying BSD sendto() call.
 
 ### GetSendToAddress() as Object
 
-#### Description
+##### Description
 
 Returns the roSocketAddress for the remote address of the next message to be sent. This method can also be used to return the remote address on newly accepted sockets.
 
-#### Return Value
+##### Return Value
 
 The roSocketAddress for the remote address of the next message to be sent.
 
 ### GetReceivedFromAddress() as Object
 
-#### Description
+##### Description
 
 Returns the roSocketAddress for the remote address of the last message received via the [receive()](#receivedata-as-object-startindex-as-integer-length-as-integer-as-integer) method. This method can also be used to return the remote address on newly accepted sockets.
 
-#### Return Value
+##### Return Value
 
 The roSocketAddress for the remote address of the last message received.
 
 ### GetCountRcvBuf() as Integer
 
-#### Description
+##### Description
 
 Returns the number of bytes in the receive buffer.
 
-#### Return Value
+##### Return Value
 
 Number of bytes.
 
 ### GetCountSendBuf() as Integer
 
-#### Description
+##### Description
 
 Returns the number of bytes in the send buffer.
 
-#### Return Value
+##### Return Value
 
 Number of bytes.
 
 ### Status() as Integer
 
-#### Description
+##### Description
 
 Indicates whether the last operation was successful.
 
-#### Return Value
+##### Return Value
 
 This method returns 0 if the last operation was successful or an error number if it failed.

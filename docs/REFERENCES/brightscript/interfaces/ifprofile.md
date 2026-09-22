@@ -24,11 +24,11 @@ next:
 
 ### GetProfileType() as String
 
-#### Description
+##### Description
 
 Returns the type of the current user profile.
 
-#### Return Value
+##### Return Value
 
 The type of the current user profile, which. may be one of the following values:
 
@@ -41,7 +41,7 @@ The type of the current user profile, which. may be one of the following values:
 
 This function does not return `invalid`.
 
-#### Example
+##### Example
 
 ```brightscript
 profile = userInfo.GetCurrentProfile()

@@ -38,47 +38,47 @@ The **roWebSocket** component implements the following **ifWebSocket** methods.
 
 ### GetSocketId() as Int
 
-#### Description
+##### Description
 
 Returns a unique identifier for this WebSocket instance. The same value is reported by [**roWebSocketEvent.GetSocketId()**](doc:rowebsocketevent), which lets you match an event to the WebSocket that generated it.
 
-#### Return Value
+##### Return Value
 
 The WebSocket identifier.
 
 ### SetUrl(url as String) as Boolean
 
-#### Description
+##### Description
 
 Sets the WebSocket server URL to connect to (for example, `wss://example.com/socket`).
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | url | String | The WebSocket server URL. |
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether the URL was accepted.
 
 ### GetUrl() as String
 
-#### Description
+##### Description
 
 Returns the WebSocket server URL currently set.
 
-#### Return Value
+##### Return Value
 
 The WebSocket server URL.
 
 ### SetData(data as Dynamic) as Void
 
-#### Description
+##### Description
 
 Stores an arbitrary "socket data" object on the WebSocket instance. This object is delivered with each event via [**roWebSocketEvent.GetSocketData()**](doc:rowebsocketevent). The socket data can be any object type.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
@@ -86,96 +86,96 @@ Stores an arbitrary "socket data" object on the WebSocket instance. This object 
 
 ### GetData() as String
 
-#### Description
+##### Description
 
 Returns the socket data previously set with **SetData()**.
 
-#### Return Value
+##### Return Value
 
 The socket data.
 
 ### SetUserAndPassword(user as String, password as String) as Boolean
 
-#### Description
+##### Description
 
 Sets the credentials used for HTTP basic authentication during the opening handshake.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | user | String | The user name. |
 | password | String | The password. |
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether the credentials were accepted.
 
 ### EnablePeerVerification(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables or disables verification of the server's TLS certificate chain (peer verification).
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | enable | Boolean | Set to **true** to verify the server's certificate chain. |
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether the setting was applied.
 
 ### EnableHostVerification(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables or disables verification that the server's TLS certificate matches the host name in the URL.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | enable | Boolean | Set to **true** to verify that the certificate matches the host name. |
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether the setting was applied.
 
 ### Open(wait_time = 0 as Int) as Boolean
 
-#### Description
+##### Description
 
 Initiates the WebSocket opening handshake. If **wait_time** is greater than 0, the call blocks for up to **wait_time** milliseconds for the connection to open. If **wait_time** is 0, the call returns immediately and connection completion is reported asynchronously through an Opened event.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | wait_time | Int | The maximum time to wait for the connection to open, in milliseconds. The default is 0 (do not block). |
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether the connection opened. <!-- TODO: Confirm the return value when wait_time is 0 (asynchronous) versus greater than 0 (synchronous). -->
 
 ### GetOpenInfo() as Object
 
-#### Description
+##### Description
 
 Returns an associative array with information about the open connection. This is the same information reported by the Opened event's [**GetInfo()**](doc:rowebsocketevent) (**Protocol**, **TargetIPAddr**, and **EffectiveUrl**).
 
-#### Return Value
+##### Return Value
 
 An associative array with the open-connection information.
 
 ### Close(code = 1000 as Int, reason = "" as String) as Void
 
-#### Description
+##### Description
 
 Closes the WebSocket connection, optionally sending a close code and reason to the server.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
@@ -184,115 +184,115 @@ Closes the WebSocket connection, optionally sending a close code and reason to t
 
 ### SetProtocols(protocols as String) as Boolean
 
-#### Description
+##### Description
 
 Sets the list of WebSocket subprotocols to request during the opening handshake.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | protocols | String | A comma-separated list of subprotocol names. |
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether the subprotocols were accepted.
 
 ### GetSelectedProtocol() as String
 
-#### Description
+##### Description
 
 Returns the subprotocol that the server selected during the opening handshake.
 
-#### Return Value
+##### Return Value
 
 The selected subprotocol name.
 
 ### Send(data as Object, wait_time = 0 as Int) as Object
 
-#### Description
+##### Description
 
 Sends a message to the server. Pass a String to send a text message or an **roByteArray** to send a binary message. If **wait_time** is greater than 0, the call blocks for up to **wait_time** milliseconds while the message is queued for sending.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | data | Object | The message to send, as a String (text) or **roByteArray** (binary). |
 | wait_time | Int | The maximum time to block while queuing the message, in milliseconds. The default is 0. |
 
-#### Return Value
+##### Return Value
 
 An object with the result of the send operation. <!-- TODO: Confirm the exact structure returned by Send(); not specified in the source. -->
 
 ### SendPing(data as Object, wait_time = 0 as Int) as Object
 
-#### Description
+##### Description
 
 Sends a WebSocket Ping control frame with an optional payload.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | data | Object | The optional Ping payload, as a String or **roByteArray**. |
 | wait_time | Int | The maximum time to block while queuing the frame, in milliseconds. The default is 0. |
 
-#### Return Value
+##### Return Value
 
 An object with the result of the send operation.
 
 ### SendPong(data as Object, wait_time = 0 as Int) as Object
 
-#### Description
+##### Description
 
 Sends a WebSocket Pong control frame with an optional payload. Use this to reply to a received Ping when automatic Pong replies are disabled (see **SetAutoPingReply()**).
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | data | Object | The optional Pong payload, as a String or **roByteArray**. |
 | wait_time | Int | The maximum time to block while queuing the frame, in milliseconds. The default is 0. |
 
-#### Return Value
+##### Return Value
 
 An object with the result of the send operation.
 
 ### GetBuffered() as Int
 
-#### Description
+##### Description
 
 Returns the number of bytes that have been queued for sending but not yet sent.
 
-#### Return Value
+##### Return Value
 
 The number of buffered bytes.
 
 ### PingTest(timeout = 0 as Int, text as String = "") as Boolean
 
-#### Description
+##### Description
 
 Sends a Ping frame and waits for the matching Pong reply from the server.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
 | timeout | Int | The maximum time to wait for the Pong reply, in milliseconds. The default is 0. |
 | text | String | An optional payload to include in the Ping. |
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether a matching Pong reply was received.
 
 ### SetTimer(timer_id as String, timeout as Int, one_shot as Boolean = False) as Void
 
-#### Description
+##### Description
 
 Schedules a timer that fires a Timer event after the specified interval. The timer is identified in the event's [**GetInfo()**](doc:rowebsocketevent) by its **timer_id**.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
@@ -302,11 +302,11 @@ Schedules a timer that fires a Timer event after the specified interval. The tim
 
 ### SetAutoPingReply(auto_reply as Boolean) as Void
 
-#### Description
+##### Description
 
 Sets whether the WebSocket automatically replies to incoming Ping frames with a Pong.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
@@ -314,21 +314,21 @@ Sets whether the WebSocket automatically replies to incoming Ping frames with a 
 
 ### GetAutoPingReply() as Int
 
-#### Description
+##### Description
 
 Returns whether automatic Pong replies to incoming Ping frames are enabled.
 
-#### Return Value
+##### Return Value
 
 A non-zero value if automatic Ping replies are enabled; otherwise 0.
 
 ### SetFragmentSize(size as Int) as Void
 
-#### Description
+##### Description
 
 Sets the maximum size of an outgoing message fragment. Messages larger than this size are split into multiple WebSocket fragments.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description |
 | :--- | :--- | :--- |
@@ -336,31 +336,31 @@ Sets the maximum size of an outgoing message fragment. Messages larger than this
 
 ### GetFragmentSize() as Int
 
-#### Description
+##### Description
 
 Returns the current maximum outgoing fragment size, in bytes.
 
-#### Return Value
+##### Return Value
 
 The outgoing fragment size, in bytes.
 
 ### GetMsgSendBufferSize() as Int
 
-#### Description
+##### Description
 
 Returns the size of the send message buffer, in bytes.
 
-#### Return Value
+##### Return Value
 
 The send buffer size, in bytes.
 
 ### GetMsgRecvBufferSize() as Int
 
-#### Description
+##### Description
 
 Returns the size of the receive message buffer, in bytes.
 
-#### Return Value
+##### Return Value
 
 The receive buffer size, in bytes.
 

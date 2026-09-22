@@ -20,13 +20,13 @@ Use the following guidelines to develop, test, and submit your new or updated ap
 
 ### Developing apps
 
-#### Use current APIs
+##### Use current APIs
 
 Using deprecated APIs may cause your app to fail certification testing. See the list of [deprecated APIs](doc:deprecated-apis).
 
 ### Testing apps
 
-#### Test apps before submission
+##### Test apps before submission
 
 Use the certification criteria and the [list of pre-certification tests](doc:cert-tests) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
 
@@ -36,17 +36,17 @@ Use the certification criteria and the [list of pre-certification tests](doc:cer
 
 * [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including app purchasing, performance, deep linking, and other certification criteria.
 
-#### Test using beta apps
+##### Test using beta apps
 
 Roku provides developers with an access code for [distributing beta versions of apps](doc:channel-publishing-guide) during development and testing. You can use beta apps to preview the most recently uploaded version of the app (app updates are not reviewed for certification until they have been submitted for certification).
 
-#### Test across multiple device types
+##### Test across multiple device types
 
 You must test the app on multiple Roku device models before submitting for certification. Your test suite should include a combination of Roku models with varying processing power and memory. This is because your apps must be performant on all Roku device models that currently receive OS updates. For more information on current and updatable Roku device models, see the [Hardware specifications](doc:hardware).
 
 ### Submitting apps for certification
 
-#### Provide required resources and information
+##### Provide required resources and information
 
 As part of the app publishing flow, you must provide the following resources to submit an app for publishing:
 
@@ -64,7 +64,7 @@ As part of the app publishing flow, you must provide the following resources to 
 
   * Administrative and technical leads (names, email addresses, and phone numbers [with country codes]).
 
-#### Run certification tests
+##### Run certification tests
 
 Once you’ve finished QA testing your app and have packaged it, you can begin the certification process by running [Static Analysis](doc:static-analysis-tool) and [App Behavior Analysis Testing](doc:channel-publishing-guide) on your app in the Developer Dashboard. The Static Analysis tool checks the structure and syntax of your app's code for common problems related to certification requirements. This tool lists any errors requiring resolution before the app can be scheduled for publishing. The App Behavior Analysis tool, which is only available to free, ad-supported, and subscription apps, launches the app and checks for state-driven results to verify compliance with Roku's certification criteria. TVE, TVOD, PVOD, and vMVPD apps must include login credentials with their app certification submission.
 
@@ -99,7 +99,7 @@ All requirements with streaming hours thresholds are stated as an average number
 
 ### App definitions
 
-#### App types
+##### App types
 
 The term "app" is used throughout this document and may refer to the different app types on the Roku platform, which include but are not limited to the following:
 
@@ -110,7 +110,7 @@ The term "app" is used throughout this document and may refer to the different a
 * games.
 * utilities.
 
-#### App model types
+##### App model types
 
 Certification criteria may be applicable to one or more app model types supported by Roku, These app model types, include, but are not limited to, the following:
 

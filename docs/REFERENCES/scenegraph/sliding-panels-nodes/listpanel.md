@@ -23,7 +23,7 @@ The ListPanel node class allows you to easily create a Panel that adheres to the
 - Default fade in/out animation of the next panel when the simple mechanism is used
 - Default fade out mask effect applied to the list items at the bottom of the panel
 
-#### Automatic Create Next Panel Functionality
+##### Automatic Create Next Panel Functionality
 
 One key feature of the ListPanel node is providing a simple mechanism for setting up the common use case where each time a new item in the grid receives the focus, a new "next" panel is added to the PanelSet. This mechanism is enabled or disabled by setting the createNextPanelOnItemFocus field to true or false.
 
@@ -35,11 +35,11 @@ The createNextPanelIndex field is guaranteed to be set exactly once whenever a n
 
 For efficiency, sometimes the control logic for the ListPanel may create and hold onto Panel pointers internally so that the next Panel does not have to be newly created each the createNextPanelIndex field is set. If this is done, it is important to never reuse the current Panel node, as that Panel may still be fading out when the new next Panel needs to be created. A typical use case, where all the right Panels are identical other than the data they display, is to create a single pair of Panel nodes and alternate between them each time the createNextPanelIndex field is set, updating the panel data based on the specified list index.
 
-#### LabelList Specific UsageNotes
+##### LabelList Specific UsageNotes
 
 If you set the list field to a LabelList node, the default values for the itemSize, itemSpacing, numRows and translation fields for the LabelList will be automatically set to the recommended default values for Roku apps. By default, the panel will use the "narrow" panelSize. It is possible to override these default values, but in most cases, that will not be necessary.
 
-#### MarkupList Specific Usage Notes
+##### MarkupList Specific Usage Notes
 
 If you set the list field to a MarkupList node, because the MarkupList is by nature custom, you will generally need to set the MarkupList's itemSize, itemSpacing and numRows fields. The ListPanel will position the list appropriately.
 

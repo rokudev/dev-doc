@@ -269,7 +269,7 @@ Normally non-ASCII characters are escaped in the output string as
 "\uXXXX" where XXXX is the hexadecimal representation of the Unicode
 character value.
 
-#### Output flags (optional)
+##### Output flags (optional)
 
 | **Value** | **Description**                                                                                                                                         |
 | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -290,7 +290,7 @@ print FormatJSON(euroStr, &h0001)
 ' => "€"
 ```
 
-#### Behavior flags (optional)
+##### Behavior flags (optional)
 
 | **Flag** | **Description**                                                                                   |
 | :------- | :------------------------------------------------------------------------------------------------ |

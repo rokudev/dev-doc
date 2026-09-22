@@ -221,7 +221,7 @@ Deep linking is implemented by passing launch parameters to your app's Main() fu
       end while
       ```
 
-#### Custom deep linking experiences from ads and Home screen banners
+##### Custom deep linking experiences from ads and Home screen banners
 
 For campaigns and promotions, publishers can build custom deep linking experiences to drive users to any screen within their app from a home screen banner or ad placement. Use cases include (but are not limited to) launching to a content details screen or a subscription plan selection screen to promote content or subscriptions plans.
 
@@ -361,37 +361,37 @@ To submit deep links for certification, follow these steps:
 
 The following GIFs demonstrate the required launch behavior for the different mediaType values:
 
-#### movie
+##### movie
 
 The movie identified by the contentId is launched directly into playback. [Bookmarks](doc:bookmarking) are used to determine the playback position.
 
 ![roku600px movie-deeplink-gif](https://image.roku.com/ZHZscHItMTc2/weird-deeplink-movie.gif)
 
-#### episode
+##### episode
 
 The episode identified by the contentId is launched directly into playback. [Bookmarks](doc:bookmarking) are used to determine the playback position.
 
 ![roku600px movie-deeplink-gif](https://image.roku.com/ZHZscHItMTc2/children-deeplink-episode.gif)
 
-#### season (optional)
+##### season (optional)
 
 A content springboard is launched. The springboard displays episodes organized by season and the episode mapped to the contentid is highlighted.
 
 ![roku600px movie-deeplink-gif](https://image.roku.com/ZHZscHItMTc2/rokurec-deeplink-season.gif)
 
-#### series
+##### series
 
 The episode identified by the contentId is launched directly into playback. Smart bookmarks are used to determine which episode to launch. The playback position is based on the type of series, whether the user has previously watched the series, and whether they completed the last watched episode.
 
 ![roku600px movie-deeplink-gif](https://image.roku.com/ZHZscHItMTc2/reno911-deeplink-series.gif)
 
-#### shortFormVideo
+##### shortFormVideo
 
 The shortForm video (less than 15 minutes) identified by the contentId is launched directly into playback.
 
 ![roku600px movie-deeplink-gif](https://image.roku.com/ZHZscHItMTc2/bangles-deeplink-shortform.gif)
 
-#### tvSpecial
+##### tvSpecial
 
 The one-time TV program identified by the contentId is launched directly into playback. [Bookmarks](doc:bookmarking) are used to determine the playback position.
 

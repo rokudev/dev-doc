@@ -56,7 +56,7 @@ The _key_ parameter is set to the key's "strOut" field, if specified; otherwise,
 
 The function should return _true_ if it handles the key selection. Returning _false_ causes the [default key selection handler](#default-key-selection-handlers)  behavior to be used.
 
-#### Example custom key select handler
+##### Example custom key select handler
 
 The following example demonstrates a custom key handler:
 
@@ -94,7 +94,7 @@ The following example demonstrates a custom key handler:
    end function
    ```
 
-#### Custom key handlers that modify the entered text string
+##### Custom key handlers that modify the entered text string
 
 In most cases, the default key selection handlers can be used for modifying the entered text string. However, if a custom key handler is used to do this, it must update the **cursorPosition** of the **DynamicCustomKeyboard**. The following example demonstrates a custom key handler that changes the text string:
 

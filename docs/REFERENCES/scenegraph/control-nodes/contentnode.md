@@ -84,7 +84,7 @@ NodeComponent.field_name = ContentNode_child_object.field_name
 
 The following creates a component with a LabelList node populated with some specific content. To configure the content, a ContentNode is created for the content field of the LabelList node. The LabelList node is divided into several sections, so for each section, a child ContentNode object is added to the parent ContentNode using the addSection() function. Then the individual items in each section of the list are added as child nodes of the section ContentNode object using the addItem() function. The functions access the global variables for the ContentNode object reference m.content for the parent ContentNode, and m.sectionContent for the section ContentNodes.
 
-#### ContentNode Class Example
+##### ContentNode Class Example
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

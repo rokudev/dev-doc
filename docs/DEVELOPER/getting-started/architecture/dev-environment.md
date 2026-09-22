@@ -117,7 +117,7 @@ the app.
 
 ### Sub RunUserInterface()
 
-#### Sub RunUserInterface(aa as Object)
+##### Sub RunUserInterface(aa as Object)
 
 RunUserInterface is the normal entry point which is called when a
 app is selected on the Roku Home Screen.  It may take an
@@ -126,7 +126,7 @@ APIs.
 
 ### Sub Main()
 
-#### Sub Main(aa as Object)
+##### Sub Main(aa as Object)
 
 If there is no RunUserInterface() function in the application, the
 function Main() will be called as the entry point for the application.

@@ -20,7 +20,7 @@ The Timer node class generates an observable event after a specified amount of t
 
 The following changes the text string on the display screen every five seconds as the Timer node generates a fire field observable event.  
 
-#### Timer Node Class Example
+##### Timer Node Class Example
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

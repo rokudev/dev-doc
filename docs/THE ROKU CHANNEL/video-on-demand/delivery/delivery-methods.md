@@ -43,7 +43,7 @@ Roku authenticates via **RSA public/private key exchange**. To complete configur
 - Roku will provide **host and username information** during onboarding.
 - **Required application:** [Aspera Client](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all)
 
-#### Transfer Bandwidth
+##### Transfer Bandwidth
 
 Roku applies a **global bandwidth cap of 300 Mbps**. Roku recommends verifying or updating your Aspera Client's global and user preferences to align with your preferred upload bandwidth.
 

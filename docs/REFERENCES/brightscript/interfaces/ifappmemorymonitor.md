@@ -25,31 +25,31 @@ next:
 
 ### EnableMemoryWarningEvent(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables an app to be alerted when memory usage exceeds or falls below thresholds (currently 80%, 85%, 90%, 95% of the per-app limit). These thresholds may change in future releases. Notifications are throttled to prevent excessive events.
 
-#### Parameter
+##### Parameter
 
 | Name   | Type    | Description                                               |
 | :----- | :------ | :-------------------------------------------------------- |
 | enable | Boolean | A flag that enables or disables memory alerts on the app. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether memory alerts have been enabled.
 
 ### GetMemoryLimitPercent() as Int
 
-#### Description
+##### Description
 
 Returns the usage percentage of memory limit for the app.
 
-#### Return Values
+##### Return Values
 
 The usage percentage of memory limit for the app.
 
-#### Example
+##### Example
 
 ```brightscript
 m.port = CreateObject("roMessagePort")
@@ -85,11 +85,11 @@ end while
 
 _Available since [Roku OS 12.5](doc:release-notes#roku-os-125)_
 
-#### Description
+##### Description
 
 Returns the estimated kilobytes (Kb) of memory available for the app. This can be used to determine when to release memory when an app receives low-memory warnings.
 
-#### Return Value
+##### Return Value
 
 An integer indicating the estimated available memory remaining for the app or the available memory for the device, whichever is lower.
 

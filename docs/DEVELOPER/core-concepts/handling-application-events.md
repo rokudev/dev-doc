@@ -18,7 +18,7 @@ You can pass data between threads without incurring rendezvous or blocking a Tas
 
 ### Example
 
-#### Task thread
+##### Task thread
 
 ```brightscript
 my_array = { str_key: "my_string", int_key: 42 }
@@ -35,7 +35,7 @@ This will result in the following being printed to the console. The array is emp
 }
 ```
 
-#### Render thread
+##### Render thread
 
 Setting up a message handler is very similar to setting up a field observer.
 

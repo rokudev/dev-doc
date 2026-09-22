@@ -102,7 +102,7 @@ Provide the list of parental advisory rating objects for the content item. Each 
 | value       | Enum                   | The rating received by the content item from the rating source (for example, a "G" rating from the MPAA in the United States). <br /><br />See the <strong>Ratings</strong> column in the <a href="#ratings">Ratings</a> table for the complete list of possible values per rating source.                                            | Required |
 | descriptors | Enum\[] (String enums) | The list of advisory ratings received by the content item (for example, adult language \["AL"] or mild violence \["MV"] from the MPAA in the United States).<br /><br />See the <strong>Ratings descriptors</strong> column in the <a href="#ratings">Ratings</a> table for the complete list of possible values per rating source. . | Optional |
 
-#### Ratings
+##### Ratings
 
 For each country supported by Roku Search, the rating authorities, ratings, and advisory ratings are as follows:
 
@@ -140,7 +140,7 @@ Provide the poster and background images to be displayed for the content item in
 | :---------- | :------------------------- | :------------------------------------------------ | :------- |
 | playOptions | [PlayOption](#playoptions) | The list of options for playing the content item. | Required |
 
-#### playOptions
+##### playOptions
 
 In the **playOptions** field, specify the availability, pricing, licensing, quality, and playId (for [deep linking](doc:implementing-deep-linking) into content from Roku Search) for the content item.
 
@@ -220,13 +220,14 @@ Provide a list of IDs and sources to be used for linking external metadata to th
 | source     | String | The source of the specified external ID. This must be one of the following values: <ul><li>TMS</li><li>GSD</li><li>IMDB</li><li>REF</li><li>ROKU</li></ul>                                                                                                                                                                                                                                                     | Required |
 | providerId | String | Extra identifier for Referencing content outside of a partners catalog. Primarily for "REF" type, however, the default is the partner's own catalog                                                                                                                                                                                                                                                            | Optional |
 
-#### AvailabilityInfo
+##### AvailabilityInfo
 
 | Field       | Type                           | Description                          | Required |
 | :---------- | :----------------------------- | :----------------------------------- | :------- |
 | country     | String\[]                      | countries where playOption available | Required |
 | restriction | [Restriction](#restriction)\[] | any restriction information          |          |
 
+<<<<<<< Updated upstream
 #### Restriction
 
 | Field     | Type                                                                                                                                    | Description                             | Required |
@@ -235,6 +236,15 @@ Provide a list of IDs and sources to be used for linking external metadata to th
 | type      | [RestrictionType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionType)           | geo                                     | Required |
 | valueType | [RestrictionValueType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionValueType) | type of the values (postal_code or dma) | Required |
 | values    | String\[]                                                                                                                               | values for the valueType                | Required |
+=======
+##### Restriction
+| Field        | Type    | Description                              | Required |
+| :----------- | :----- | :---------------------------------------- | :------- |
+| allow        | boolean | true for allowlist, false for blocklist  | Required |
+| type         | [RestrictionType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionType) | geo | Required |
+| valueType    | [RestrictionValueType](https://roku.atlassian.net/wiki/spaces/NPIPM/pages/450330792/Live+Search+feed+requirements#RestrictionValueType) | type of the values (postal_code or dma) | Required |
+| values       | String[]| values for the valueType                 | Required |
+>>>>>>> Stashed changes
 
 ### Managing a feed that includes VOD content
 

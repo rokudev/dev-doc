@@ -25,11 +25,11 @@ The ifSGNodeHttpAgentAccess interface allows you to get an [roHttpAgent](doc:roh
 
 ### getHttpAgent() as Object
 
-#### Description
+##### Description
 
 Returns the roHttpAgent object for the node.
 
-#### Return Value
+##### Return Value
 
 The roHttpAgent object for the node, which may be one of the following:
 
@@ -41,12 +41,12 @@ The roHttpAgent object for the node, which may be one of the following:
 
 Sets an roHttpAgent object for the node. 
 
-#### Parameters
+##### Parameters
 
 | Name       | Type   | Description                                    |
 | ---------- | ------ | ---------------------------------------------- |
 | HTTP_agent | Object | The roHttpAgent object to be set for the node. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the roHttpAgent object was successfully set.

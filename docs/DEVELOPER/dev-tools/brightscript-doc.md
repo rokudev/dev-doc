@@ -45,12 +45,12 @@ Singleton block tag instances may only appear once per code element. If more tha
 
 Multi-instance block tags may be either named or unnamed , and may appear 0 or more times per code element. Multi-instance block tag's processed output is grouped together in a single output section. Example tag types include the @see and @param tags.
 
-#### The @deprecated tag
+##### The @deprecated tag
 
 The @deprecated tag is a singleton block tag.
 @deprecated is used to indicate that the associated code element should be considered deprecated. @deprecated takes a single optional argument (i.e. everything after the tag itself) - the descriptive text, to be displayed in the code element's documentation section marked “Deprecated:”. The “Deprecated” documentation section is special in that it is the only block tag/section to display before the code element's main description section in the HTML output.
 
-#### The @param tag
+##### The @param tag
 
 The @param tag is a named, multi-instance block tag.
 @param is used to describe one of a function/sub's parameter values.
@@ -58,19 +58,19 @@ The @param tag is a named, multi-instance block tag.
 @param tags have 2 arguments – 1 required and 1 optional.
 The first sequence of characters not including a space (i.e. the first word) after the tag itself is considered the name of the parameter, and everything after that is considered the descriptive text argument, to be displayed in the code element's documentation section marked “Parameters:”.
 
-#### The @return tag
+##### The @return tag
 
 The @return tag is a singleton block tag.
 The associated code element must be a function (including anonymous functions) or sub. @return is used to describe the function/sub's return value.
 @return takes a single required descriptive text argument, to be displayed in the code element's documentation section marked “Returns:”.
 
-#### The @since tag
+##### The @since tag
 
 The @since tag is a singleton block tag.
 @since is used to indicate when the code element first came into existence.
 @since takes a single descriptive text argument, to be displayed in the code element's documentation section marked “Since:”. Typically the descriptive text should center on datetime and/or version information.
 
-#### The @see tag
+##### The @see tag
 
 The @see tag is an unnamed mult-instance block tag.
 @see is used to reference other items that are related to the associated code element.
@@ -96,17 +96,17 @@ Inline tags are in the format: \{@tagname \<tag specific arguments\>\}
 
 Inline tags can be used anywhere display text can be used, including in the descriptive text arguments of block tags and the main comment section. Example tag types include the \{@link\}, \{@literal\}, and \{@code\} tags.
 
-#### The \{@link\} tag
+##### The \{@link\} tag
 
 The @link tag is an inline tag.
 @link is an inline version of the 3rd form of the @see tag (i.e. the type.method#field form). Note that the \<a href... form of @see is not needed as a separate inline tag, since most HTML markup is permitted inline in text as-is.
 
-#### The \{@literal\} tag
+##### The \{@literal\} tag
 
 The @literal tag is an inline tag.
 @literal is used to display the first and only tag argument by applying HTML4 escape sequences to it. The resulting escaped text is wrapped in an HTML span tag.
 
-#### The \{@code\} tag
+##### The \{@code\} tag
 
 The @code tag is an inline tag.
 @code is very similar to the @literal tag is that it is also used to display the first and only tag argument by applying HTML4 escape sequences to it.

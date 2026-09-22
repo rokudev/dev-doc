@@ -23,13 +23,13 @@ next:
 
 ### EnableType(logType as String) as Void
 
-#### Description
+##### Description
 
 Enables log message of type logType. When a log type is enabled, system log messages of that type are sent to the message port that was set using SetMessagePort().  
 
 All system log events are disabled by default and must be explicitly enabled by the application.
 
-#### Parameters
+##### Parameters
 
 
 <table>

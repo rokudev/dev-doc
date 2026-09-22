@@ -24,7 +24,7 @@ The **StdDlgItemGroup** node may contain one or more [**StdDlgItemBase**](doc:st
 
 > See the [**stdDlgActionCardItem** documentation](doc:std-dlg-action-card-item) for code demonstarting how to use the **StdDlgItemGroup** node in a custom dialog.
 
-#### Fields
+##### Fields
 
 
 <table>

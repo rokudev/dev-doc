@@ -23,20 +23,20 @@ next:
 
 ### Slice([start_pos as Integer[, end_pos as Integer]]) As Object
 
-#### Description
+##### Description
 
 Returns a new array object with a shallow copy of the specified portion of the array. 
 
 The **start_pos** and **end_pos** fields specify the 0-based indices of items in the array, where the **end_pos** field represents the position **past** the last element to be copied.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type    | Description                                                  |
 | :-------- | :------ | :----------------------------------------------------------- |
 | start_pos | Integer | The 0-based index of first element to copy. A negative index specifies an offset from the end of the array. The default value is 0. |
 | end_pos   | Integer | The 0-based index past last element to copy. A negative index indicates an offset from the end of the array. The default value is the array length. |
 
-#### Examples
+##### Examples
 
 ```brightscript
 '      0       1     2      3      4      5
@@ -67,4 +67,4 @@ print FormatJSON(arr2)
 
 
 
-####  
+#####  

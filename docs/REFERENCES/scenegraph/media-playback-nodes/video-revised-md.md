@@ -53,7 +53,7 @@ The **control** field includes a prebuffer option, which allows the video to beg
 | subtitleSelectionPreferences<br /><br />*Available since Roku OS 12.5* | roAssociativeArray | { } | WRITE_ONLY | The significance and priority order of the attributes and values for the subtitle tracks available in the video stream. See [**subtitleSelectionPreferences**](#subtitleselectionpreferences). |
 | audioSelectionPreferences<br /><br />*Available since Roku OS 12.5* | roAssociativeArray | { } | WRITE_ONLY | The significance and priority order of the attributes and values for the audio tracks available in the video stream. See [**audioSelectionPreferences**](#audioselectionpreferences). |
 
-#### playStartInfo
+##### playStartInfo
 
 Provides timing measurements related to the start of video playback. All measurements are in seconds.
 
@@ -71,7 +71,7 @@ Provides timing measurements related to the start of video playback. All measure
 
 > The **\*_start** fields correspond to the similarly named **\*_dur** (duration) fields in this structure. In each case, the **_start** point is the number of milliseconds elapsed from the initialization of the media player (t=0.000). If required, ending points for each interval can be derived from its associated starting point and duration.
 
-#### errorStr
+##### errorStr
 
 A diagnostic message to help resolve the video play error set in the **state** field. The format of **errorStr** is as follows:
 
@@ -90,7 +90,7 @@ category:{category_name}:error:{error_code}:ignored:{0|1}:{source}:{source_name}
 | error_string | string | A text message describing the video play error. |
 | error_attributes | string | The error attribute, which includes the **clipId** (the unique ID of the clip that failed to play). |
 
-#### errorInfo
+##### errorInfo
 
 A diagnostic message to help resolve the video play error set in the **state** field.
 
@@ -104,7 +104,7 @@ A diagnostic message to help resolve the video play error set in the **state** f
 | dbgmsg | string | A verbose debug message that can help identify the root cause of the error. |
 | drmerrcode | integer | The error code returned by the DRM system, if any, when a video player error occurs. |
 
-#### subtitleSelectionPreferences
+##### subtitleSelectionPreferences
 
 *Available since Roku OS 12.5*
 
@@ -132,7 +132,7 @@ video.subtitleSelectionPreferences = { values: [
 
 The subtitle language with the highest priority is "es" with a country code of "419". The next highest priority language is "es" with no country code, and then "es" with any country code.
 
-#### audioSelectionPreferences
+##### audioSelectionPreferences
 
 *Available since Roku OS 12.5*
 
@@ -195,7 +195,7 @@ The audio language with the highest priority is "en-US". The next highest priori
 | thumbnailTiles | roAssociativeArray | [ ] | READ_WRITE | Information about HLS and DASH standard thumbnail tiles as they are discovered within the manifest. See [**thumbnailTiles**](#thumbnailtiles). |
 | trickPlayBackgroundOverlay | uri | | WRITE | The background overlay to be displayed whenever the playback UI is visible during the video playback experience. |
 
-#### timedMetaData2
+##### timedMetaData2
 
 Contains all the same information included in the **timedMetaData** field, plus the following:
 
@@ -205,7 +205,7 @@ Contains all the same information included in the **timedMetaData** field, plus 
 | position | time | The Presentation Time Stamp (PTS) when the tag was seen. |
 | source | enum | The metadata source. This may be one of the following string values: "emsg", "id3", "hls", or "unk". |
 
-#### streamInfo
+##### streamInfo
 
 Information about the video stream that is currently playing or buffering.
 
@@ -217,7 +217,7 @@ Information about the video stream that is currently playing or buffering.
 | streamBitrate | integer | The bitrate of the stream. |
 | streamUrl | URI | The URL of the stream. |
 
-#### videoFormat
+##### videoFormat
 
 Contains the format of the currently playing video stream.
 
@@ -236,7 +236,7 @@ Contains the format of the currently playing video stream.
 | AVC vc1 | string | vc-1. |
 | wmv | string | Microsoft Windows Media Video. |
 
-#### streamingSegment
+##### streamingSegment
 
 Information about the video segment that is currently streaming. Only meaningful for segmented video transports, such as DASH and HLS.
 
@@ -254,7 +254,7 @@ Information about the video segment that is currently streaming. Only meaningful
 | width | integer | For video segments, the width of the encoded video picture. |
 | height | integer | For video segments, the height of the encoded video picture. |
 
-#### downloadedSegment
+##### downloadedSegment
 
 Information about the video segment that was just downloaded. Only meaningful for segmented video transports, such as DASH and HLS.
 
@@ -274,7 +274,7 @@ Information about the video segment that was just downloaded. Only meaningful fo
 | Height | integer | For video segments, the height of the encoded video picture. |
 | HdrMode | integer | Indicates the HDR format of the content, which may be one of the following values: 0 (UNKNOWN), 1 (NONE/SDR), 2 (HDR10), 3 (DOLBY_VISION), 4 (HLG10), 5 (HDR10_PLUS), or 6 (SL_HDR2). |
 
-#### thumbnailTiles
+##### thumbnailTiles
 
 Information about HLS and DASH standard thumbnail tiles as they are discovered within the manifest for streams that contain them.
 
@@ -316,7 +316,7 @@ The **tile_id** field is a unique string identifier for the **tile_set**, which 
 | retrievingTextColor | color | system default | READ_WRITE | The color of the text displayed near the retrieving bar, when the retrieving bar defined in the **retrievingBar** field is visible. If this is 0, the system default color is used. |
 | pivotNode | renderable node | - | READ_WRITE | The visible pivot node. This is a generic renderable node that can be used to display any component. This node is only displayed when video is paused. |
 
-#### bifDisplay
+##### bifDisplay
 
 Component that displays BIFs and allows navigation. The fields of this internal node are as follows:
 
@@ -327,7 +327,7 @@ Component that displays BIFs and allows navigation. The fields of this internal 
 | getNearestFrame | time | invalid | WRITE_ONLY | Requests the nearest BIF to the time specified. This would normally be an offset from the current playback position. The request is passed to the BifCache, which uses the getNearestFrame() method implemented on all BIF storage classes. Existing BifCache functionality is then used to retrieve the bitmap data and load it into the texture manager. |
 | nearestFrame | string | | READ_ONLY | Contains the URI of the requested BIF. The returned URIs are of the form memory://BIF_%d_%d. These URIs can then be used directly in the **uri** field of a Poster node or similar. |
 
-#### trickPlayBar
+##### trickPlayBar
 
 The visible TrickPlayBar node. The fields of this internal node are as follows:
 
@@ -342,7 +342,7 @@ The visible TrickPlayBar node. The fields of this internal node are as follows:
 | trackBlendColor | color | 0xFFFFFFFF | Blended with the graphical image specified by the **trackImageUri** field. |
 | trackImageUri | uri | | A 9-patch or ordinary PNG of the track of the progress bar, which surrounds the filled and empty bars. |
 
-#### bufferingBar
+##### bufferingBar
 
 Component that shows the progress of re-buffering, after video playback has started. The fields of this internal node are as follows:
 
@@ -371,7 +371,7 @@ Component that shows the progress of re-buffering, after video playback has star
 | availableSubtitleTracks | roArray of roAssociativeArrays | [ ] empty array | READ_ONLY | The list of subtitle tracks available in the video stream. See [**availableSubtitleTracks**](#availablesubtitletracks). |
 | captionStyle | roAssociativeArray | system default | READ_WRITE | Allows apps to style closed captions. See [**captionStyle**](#captionstyle). |
 
-#### availableSubtitleTracks
+##### availableSubtitleTracks
 
 The list of subtitle tracks available in the video stream. The array is initially populated with the tracks specified in the Content Meta-Data, and additional tracks are added if they are detected by the digital video player. Each associative array has the following entries:
 
@@ -384,7 +384,7 @@ The list of subtitle tracks available in the video stream. The array is initiall
 | HasAccessibilityCaption | boolean | *Available since Roku OS 13.0.* HLS: represents "public.accessibility.transcribes-spoken-dialog". DASH: subtitle track contains captions. |
 | HasAccessibilitySign | boolean | *Available since Roku OS 13.0.* DASH: subtitle track contains a sign-language interpretation of an audio component. |
 
-#### captionStyle
+##### captionStyle
 
 Allows apps to style closed captions. For any keys absent from the associative array, or for unexpected values, the default value is assumed for that property.
 

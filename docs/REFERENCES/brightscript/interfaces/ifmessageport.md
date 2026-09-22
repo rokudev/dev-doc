@@ -20,11 +20,11 @@ next:
 
 ### WaitMessage(timeout as Integer) as Dynamic
 
-#### Description
+##### Description
 
 Waits until an event object is available or timeout milliseconds have passed.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -43,26 +43,26 @@ Waits until an event object is available or timeout milliseconds have passed.
   </tbody>
 </table>
 
-#### Return Value
+##### Return Value
 
 If an event is available, it is returned. If the timeout expires, invalid is returned.
 
 ### GetMessage() as Dynamic
 
-#### Description
+##### Description
 
 If an event object is available, it is returned.  Otherwise invalid is returned.  The method returns immediately in either case and does not wait.
 
-#### Return Value
+##### Return Value
 
 An event object.
 
 ### PeekMessage() as Dynamic
 
-#### Description
+##### Description
 
 This method is similar to the [GetMessage()](#getmessage-as-dynamic) method, but the returned object (if not invalid) remains in the message queue.  A later call to [WaitMessage()](#waitmessagetimeout-as-integer-as-dynamic), [GetMessage()](#getmessage-as-dynamic) or PeekMessage() will return the same message.
 
-#### Return Value
+##### Return Value
 
 An event object.

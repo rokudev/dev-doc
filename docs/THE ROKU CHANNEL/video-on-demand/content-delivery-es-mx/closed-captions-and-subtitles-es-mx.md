@@ -103,7 +103,7 @@ Roku **prefiere** un archivo sidecar legible por humanos (`.ttml`, `.dfxp`, `.vt
 
 > **Nota sobre el idioma de CC/SDH:** debido a que los subtítulos descriptivos/SDH son un complemento de accesibilidad para una pista de audio _específica_, su idioma simplemente sigue la pista de audio (principal o de doblaje) que acompañan — no requieren una declaración de código de idioma independiente, como sí la requieren los Subtítulos completos (ver más abajo).
 
-#### Formato heredado (admitido, no preferido)
+##### Formato heredado (admitido, no preferido)
 
 | Nombre del formato                                                         | Datos de posición | Datos de estilo | Extensión | Codificación | Tipo de entrega | Idiomas                                                                |
 | -------------------------------------------------------------------------- | ----------------- | --------------- | --------- | ------------ | --------------- | ---------------------------------------------------------------------- |

@@ -23,7 +23,7 @@ Roku Pay push notifications send billing data to a publisher's web server listen
 
 This section describes how to receive and respond to Roku Pay push notifications, which are sent without any authentication.
 
-#### Requests (sent by Roku)
+##### Requests (sent by Roku)
 
 Roku Pay push notifications can not be redirected in any way. Requests time out after 10 seconds. If a redirect attempt is made, the request fails.
 
@@ -37,7 +37,7 @@ Push notifications include transaction data and a `responseKey`.
 https://pushNotificationEndpoint
 ```
 
-#### Text body
+##### Text body
 
 Include the value of the **responseKey** sent by Roku Pay (the `responseKey` does not have cryptographic signatures in both the request and response). Roku Pay compares the size of the `responseKey` in the response to ensure it matches the one it sent before downloading the content. This helps maintain the security of the Roku Pay web services.
 
@@ -355,7 +355,7 @@ When a renewal occurs, the **comments** field in the notification is set to "Rec
 
 > As of [Roku OS 10.0](doc:release-notes#roku-os-100), the Sale push notification includes **purchaseChannel** and **purchaseContext** fields that identify whether a Roku Pay subscription purchase originated from Instant Signup. For purchases made via Instant Signup, the **purchaseChannel** field is set to "web" and  **purchaseContext** field is set to "isu". For on-device purchases, these fields are set to "device" and "iap", respectively.
 
-#### Purchase example
+##### Purchase example
 
 ```json
 {
@@ -381,7 +381,7 @@ When a renewal occurs, the **comments** field in the notification is set to "Rec
 }
 ```
 
-#### Renewal example
+##### Renewal example
 
 ```json
 {
@@ -422,7 +422,7 @@ If Roku receives a payment during the 3-day grace period, it is processed and en
 
 See [Basic Subscription Recovery](doc:basic-recovery) for more information.
 
-#### GraceInitiated example
+##### GraceInitiated example
 
 ```json
 {
@@ -442,7 +442,7 @@ See [Basic Subscription Recovery](doc:basic-recovery) for more information.
 }
 ```
 
-#### GraceRecovered example
+##### GraceRecovered example
 
 ```json
 {
@@ -474,7 +474,7 @@ If Roku receives a payment, it is processed and entitlement is automatically gra
 
 See [Enhanced Subscription Recovery](doc:subscription-on-hold) for more information.
 
-#### OnHoldInitiated example
+##### OnHoldInitiated example
 
 ```json
 {
@@ -494,7 +494,7 @@ See [Enhanced Subscription Recovery](doc:subscription-on-hold) for more informat
 }
 ```
 
-#### OnHoldRecovered example
+##### OnHoldRecovered example
 
 ```json
 {
@@ -518,7 +518,7 @@ See [Enhanced Subscription Recovery](doc:subscription-on-hold) for more informat
 
 A **CancellationOfferInitated** event is fired when the customer accepts a [cancellation offer](doc:product-catalog) and its specified pricing and billing terms for the subscription go into effect. A **CancellationOfferEnded** event is sent when the pricing and billing terms specified in the cancellation offer elapse.
 
-#### CancellationOfferInitated
+##### CancellationOfferInitated
 
 ```json
 {
@@ -538,7 +538,7 @@ A **CancellationOfferInitated** event is fired when the customer accepts a [canc
 }
 ```
 
-#### CancellationOfferEnded
+##### CancellationOfferEnded
 
 ```json
 {
@@ -568,7 +568,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 - **Today's date**: Remove the entitlement (the customer actively canceled the subscription and today is the last day of the billing cycle).
 - **Past date**: Remove entitlement (passive cancellation; the subscription could not be recovered).
 
-#### Active cancelation/deactivation example
+##### Active cancelation/deactivation example
 
 ```json
 {
@@ -588,7 +588,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 }
 ```
 
-#### Passive cancelation example
+##### Passive cancelation example
 
 ```json
 {
@@ -612,7 +612,7 @@ The publisher action required (if any) depends on the **expirationDate** field:
 
 A **Refund** push notification is sent when the publisher or Roku Pay initiates a refund. If the refund was a result of an unauthorized purchase, Roku cancels the subscription. In this case, the publisher should remove the entitlement upon receipt of a subsequent **Cancellation** notification.
 
-#### Example
+##### Example
 
 ```json
 {
@@ -640,7 +640,7 @@ A **Refund** push notification is sent when the publisher or Roku Pay initiates 
 
 A **Credit** push notification is sent when the publisher or Roku Pay issues a service credit for a Roku customer. No publisher action is required upon receiving this event.
 
-#### Example
+##### Example
 
 ```json
 {
@@ -666,7 +666,7 @@ A **Credit** push notification is sent when the publisher or Roku Pay issues a s
 
 A **Resubscribe** push notification is sent when a customer opts to keep a subscription they previously canceled within the current billing period. For example, during a 30-day billing period, a customer cancels a subscription on day 10, but on day 20 decides to keep it. If the customer repurchases the subscription after the billing period ends, a **Sale** notification is sent. When a customer resubscribes, service will continue for them as though they never canceled the subscription at all.
 
-#### Example
+##### Example
 
 ```json
 {
@@ -710,7 +710,7 @@ For example, if a customer upgrades from a monthly to an annual subscription, th
 
 The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` notifications sent when a customer upgrades from a monthly to an annual subscription. Samples of the `DowngradeSale` and `DowngradeCancellation` notifications are included as well.
 
-#### UpgradeSale example
+##### UpgradeSale example
 
 ```json
 {
@@ -733,7 +733,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 }
 ```
 
-#### UpgradeCancellation example
+##### UpgradeCancellation example
 
 ```json
 {
@@ -753,7 +753,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 }
 ```
 
-#### DowngradeSale example
+##### DowngradeSale example
 
 ```json
 {
@@ -776,7 +776,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 }
 ```
 
-#### DowngradeCancellation example
+##### DowngradeCancellation example
 
 ```json
 {
@@ -805,7 +805,7 @@ The following samples demonstrate the `UpgradeSale` and `UpgradeCancellation` no
 
 A **Chargeback** push notification is sent when a customer initiates a transaction dispute. The transaction is deducted from the partner's payout.
 
-#### Example
+##### Example
 
 ```json
 {

@@ -125,13 +125,13 @@ For TVOD apps,  the `isEntitled` flag is set to "false"; therefore, your entitle
 
 > The `validate-transaction` API includes **purchaseChannel** and **purchaseContext** fields that identify whether a Roku Pay subscription purchase originated from Instant Signup. For purchases made via Instant Signup, the **purchaseChannel** field is set to "web" and  **purchaseContext** field is set to "isu". For on-device purchases, these fields are set to "device" and "iap", respectively.
 
-#### Request example:
+##### Request example:
 
 ```http
 GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/{partnerAPIKey}/{transactionid}
 ```
 
-#### Response example:
+##### Response example:
 
 **XML**:
 
@@ -199,7 +199,7 @@ GET https://apipub.roku.com/listen/transaction-service.svc/validate-transaction/
 }
 ```
 
-#### Managing subscription recovery
+##### Managing subscription recovery
 
 The `isEntitled` flag returned by the `validate-transaction` API is also critical for managing subscription recovery in the Roku platform. Subscription recovery is the process of handling expired Roku Pay subscriptions due to failed payments or declined credit cards. When a subscription is in recovery, Roku Pay notifies the customer once a day for multiple consecutive days (typically three) to update their method of payment in order to renew the subscription, and it attempts to charge the customer's method of payment to ensure collection of payment and continuation of service.
 
@@ -231,7 +231,7 @@ The following table summarizes the action to be taken after checking the `expira
 | Current or past date | true           | recovery               | Entitle user and check again next day |
 | Past date            | false          | canceled               | Cancel subscription                   |
 
-#### Managing upgrades/downgrades
+##### Managing upgrades/downgrades
 
 Roku Pay supports on-device upgrades and downgrades between subscription products. Once an upgrade/downgrade has been completed, apps should call the `validate-transaction` API with the transaction ID from the `purchaseid` field of the [**doOrder** command](doc:channelstore) to update their system. For subscription upgrades and downgrades, the `validate-transaction` API response includes the following fields to identify the transaction:
 

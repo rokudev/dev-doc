@@ -159,7 +159,7 @@ Apps must implement an API that retrieves the images and description of the app 
 </table>
 `}</HTMLBlock>
 
-#### Image specifications
+##### Image specifications
 
 The images used for the app must meet the requirements for width, height, minimum resolution, and format.
 
@@ -170,7 +170,7 @@ The images used for the app must meet the requirements for width, height, minimu
 | Minimum resolution | 72ppi       |
 | File format        | JPG         |
 
-#### Poster/artwork specifications
+##### Poster/artwork specifications
 
 The posters/artwork with the content or networks featured in the app are used to highlight the app's offerings. The posters/artwork must meet the following requirements:
 
@@ -350,7 +350,7 @@ The following table lists the requirements for implementing the personalized pro
 
 <br />
 
-#### Using email hashes to determine offer eligibility
+##### Using email hashes to determine offer eligibility
 
 Apps should leverage the email hash included in the Products API GET requests to verify whether a customer is eligible for a specific offer during activation before returning an offer to Roku (the email hash is based on the email address provided and verified by the customer prior to entering the offers flow).
 
@@ -377,7 +377,7 @@ Additionally, apps can use the [ChannelStore APIs](doc:channelstore) to create n
 
 > It is recommended that apps requiring user accounts support both account creation scenarios. Automatically creating user account upon activation of the trial subscription enables the customer to directly and seamlessly access content upon launching the app without any additional input. In the event that the app's web server listener is not responding to the push notifications or there is some other push notification failure, account creation can still be completed upon app launch as a backup.
 
-#### Creating user accounts upon activation
+##### Creating user accounts upon activation
 
 Apps can provide an **account** endpoint that accepts POST requests. This enables apps to receive the customer's information that is collected during device activation and use it to create new user accounts in their backend system automatically.
 
@@ -433,7 +433,7 @@ Alternatively, you can ask the user to create a password upon launching the app 
 
 Upon launch, apps may only display a single dialog for entering a password. The dialog may not serve any purpose other than password creation, and multiple dialogs are not allowed.
 
-#### Creating user accounts upon app launch
+##### Creating user accounts upon app launch
 
 Apps can leverage the [ChannelStore](doc:channelstore) APIs and [Roku Pay web services](doc:roku-web-service) to create user accounts when customers launch their app. This ensures that user accounts have been created before customers can access content. Creating user accounts with these APIs entails getting the purchase data, validating the subscription, and storing access tokens in the device registry and in the Roku cloud. The following steps describe how to do this:
 
@@ -534,31 +534,31 @@ In addition, the [Roku Pay Transaction Report](doc:transaction-report) includes 
 
 The Instant Signup user experience slightly varies based on whether a free trial, promotional pricing, or standard pricing is offered and whether the offer includes a single plan or multiple plans. The following images illustrate the workflows for each of these scenarios:
 
-#### Free trial offer - single plan
+##### Free trial offer - single plan
 
 | Offer                                                   | Confirm selection                                                             | Success                                                                                                                     |
 | :------------------------------------------------------ | :---------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
 | ![](https://image.roku.com/ZHZscHItMTc2/Free-trial.png) | ![](https://image.roku.com/ZHZscHItMTc2/Free-trial---confirmation-dialog.png) | ![](https://image.roku.com/ZHZscHItMTc2/Free-trial---post-acceptance.png?version=1\&modificationDate=1613586217000\&api=v2) |
 
-#### Free trial offer - multiple plans
+##### Free trial offer - multiple plans
 
 | Offer                                                        | Plan selection                                                          | Confirm selection                                                                  | Success                                                                        |
 | :----------------------------------------------------------- | :---------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
 | ![](https://image.roku.com/ZHZscHItMTc2/Multiple-trials.png) | ![](https://image.roku.com/ZHZscHItMTc2/Multiple-trials---expanded.png) | ![](https://image.roku.com/ZHZscHItMTc2/Multiple-trials---confirmation-dialog.png) | ![](https://image.roku.com/ZHZscHItMTc2/Multiple-trials---post-acceptance.png) |
 
-#### Promotional pricing
+##### Promotional pricing
 
 | Offer                                                       | Confirm selection                                                                | Success                                                                      |
 | :---------------------------------------------------------- | :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
 | ![](https://image.roku.com/ZHZscHItMTc2/Promo-pricing.png?) | ![](https://image.roku.com/ZHZscHItMTc2/Promo-pricing---confirmation-dialog.png) | ![](https://image.roku.com/ZHZscHItMTc2/Promo-pricing---post-acceptance.png) |
 
-#### Standard pricing - single plan
+##### Standard pricing - single plan
 
 | Offer                                                      | Confirm selection                                                                | Success                                                                      |
 | :--------------------------------------------------------- | :------------------------------------------------------------------------------- | :--------------------------------------------------------------------------- |
 | ![](https://image.roku.com/ZHZscHItMTc2/Direct-to-pay.png) | ![](https://image.roku.com/ZHZscHItMTc2/Direct-to-pay---confirmation-dialog.png) | ![](https://image.roku.com/ZHZscHItMTc2/Direct-to-pay---post-acceptance.png) |
 
-#### Standard pricing - multiple plans
+##### Standard pricing - multiple plans
 
 | Offer                                                                              | Plan selection                                                                                | Confirm selection                                                                                        | Success                                                                                              |
 | :--------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
@@ -568,7 +568,7 @@ The Instant Signup user experience slightly varies based on whether a free trial
 
 The subscription terms presented in the subscription confirmation dialog, which are fixed and cannot be modified, differ based on whether the offer is a free trial, promotional price, or standard price. This appendix provides the text displayed for each of these scenarios.
 
-#### Free trial subscription terms
+##### Free trial subscription terms
 
 You must cancel before your “\<product-name>“\<trial duration in days>-day trial ends to avoid being charged. After the trial, your account will be charged \<product-price> each month to your payment method on file until you cancel.
 
@@ -576,7 +576,7 @@ By selecting “Start your free trial” you agree that we may share your Roku a
 
 Recurring subscriptions are pre-paid and will automatically renew until you cancel. No refunds are given for partial term cancellations. You must cancel before your free trial ends to avoid being billed. You can manage your subscription at [my.roku.com](http://my.roku.com/). Valid payment method required. A temporary authorization hold may appear on your payment method. Certain promotional offers are available for new subscribers only. Certain promotional offers are subject to change or may be canceled at any time without notice. Void where prohibited.
 
-#### Promotional pricing subscription terms
+##### Promotional pricing subscription terms
 
 “\<product-name>“ is a recurring, pre-paid subscription that will begin immediately after you select “Start your subscription”. Your “\<product-name>“ subscription includes promotional pricing of \<product-price> per month for the first \<x> months. After the promotional period, your account will be charged \<product-price> each month to your payment method on file until you cancel. You must cancel before your \<x>-month promotional period ends to avoid being charged the non-promotional rate thereafter.
 
@@ -584,13 +584,13 @@ By selecting “Start your subscription” you agree that we may share your Roku
 
 Recurring subscriptions are pre-paid and will automatically renew until you cancel. You must cancel before your subscription renews to avoid being billed for the next term. You can manage your subscription at [my.roku.com](http://my.roku.com/). No refunds are given for partial term cancellations. Valid payment method required. Certain promotional offers are available for new subscribers only. Promotional offers are subject to change or may be canceled at any time without notice. Void where prohibited.
 
-#### Standard pricing subscription terms - single plan
+##### Standard pricing subscription terms - single plan
 
 “\<product-name>“ is a recurring, pre-paid subscription that will begin immediately after you select “Start your subscription” at the cost of \<product-price> per \<month|year>. By selecting “Start your subscription” you agree that we may share your Roku account information with \<publisher name>, which may include your name, email address, zip code, age and gender, to create your account with “\<publisher name>”. Visit “\<product privacy policy URL>” to learn how \<publisher name> uses your information. Access and use of “\<product-name>“is subject to the publisher terms of service URL>, which may require you to create an account.
 
 The subscription will automatically renew for \<product-price> per \<month|year> until you cancel. You must cancel before your subscription renews to avoid being billed for the next term. You can manage your subscription at [my.roku.com](http://my.roku.com/). No refunds are given for partial term cancellations. Void where prohibited.
 
-#### Standard pricing subscription terms - multiple plans
+##### Standard pricing subscription terms - multiple plans
 
 After selecting “Start your subscription” you will be charged the \<product-price> \<monthly|annual> price for this subscription now.
 

@@ -47,11 +47,11 @@ Features](doc:hardware) for the list of hardware and model numbers.
 
 Click on the legend at the bottom of each visualization to view only one or multiple metrics.  
 
-#### Channel Crashes by Product visualization
+##### Channel Crashes by Product visualization
 
 This visualization shows the number of app crashes on the devices that have streamed in the sample time period. The left vertical axis is for the total number of BrightScript crashes while the right vertical axis is for the average number of crashes per streaming hour.
 
-#### Devices with Channel Crashes by Product visualization
+##### Devices with Channel Crashes by Product visualization
 
 This visualization shows the number of crashes on each type of device that has streamed in the sample time period. The left vertical axis is for the number of unique devices that experienced a BrightScript crash in the selected time period, while the right vertical axis is for the percentage of all device streaming in your app that experienced a BrightScript crash in the selected time period.
 

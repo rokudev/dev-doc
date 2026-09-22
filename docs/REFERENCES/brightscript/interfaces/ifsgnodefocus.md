@@ -25,11 +25,11 @@ The ifSGNodeFocus interface is used to query and manipulate the remote control f
 
 ### setFocus(on as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Sets the current remote control focus to the subject node.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -50,26 +50,26 @@ Sets the current remote control focus to the subject node.
 </table>
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether focus on the subject node has successfully been updated. 
 
 ### hasFocus() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the subject node has the remote control focus.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the subject node has the remote control focus.
 
 ### isInFocusChain() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the subject node or any of its descendants in the SceneGraph node tree have remote control focus.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the subject node or any of its descendants in the SceneGraph node tree have the remote control focus.

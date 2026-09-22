@@ -67,145 +67,145 @@ The Scene node children are hidden elements used by the SceneGraph framework. Th
 
 ### appendChild(child as roSGNode) as Boolean
 
-#### Description
+##### Description
 
 Adds a child node to the end of the subject node list of children so that it is traversed last (of those children) during render.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type     | Description                                           |
 | ----- | -------- | ----------------------------------------------------- |
 | child | roSGNode | The child node to be appended to the end of the list. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the child node was successfully appended.
 
 ### createChild(nodeType as String) as Object
 
-#### Description
+##### Description
 
 Creates a child node of type nodeType, and adds the new node to the end of the subject node list of children.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type   | Description                   |
 | -------- | ------ | ----------------------------- |
 | nodeType | String | The node class to be created. |
 
-#### Return Value
+##### Return Value
 
 The child node that was created.
 
 ### insertChild(child as roSGNode, index as Integer) as Boolean
 
-#### Description
+##### Description
 
 Inserts a previously-created child node at the position index in the subject node list of children, so that this is the position that the new child node is traversed during render.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type     | Description                                               |
 | ----- | -------- | --------------------------------------------------------- |
 | child | roSGNode | The child node to be added to the child tree.             |
 | index | Integer  | The postion index where the child node is to be inserted. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the child node that was successfully inserted.
 
 ### removeChild(child as roSGNode) as Boolean
 
-#### Description
+##### Description
 
 Finds a child node in the subject node list of children, and if found, remove it from the list of children. The match is made on the basis of actual object identity, that is, the value of the pointer to the child node.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type     | Description                                       |
 | ----- | -------- | ------------------------------------------------- |
 | child | roSGNode | The child node to be removed from the child tree. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the child node that was successfully removed.
 
 ### removeChildIndex(index as Integer) as Boolean
 
-#### Description
+##### Description
 
 If the subject node has a child node in the index position, removes that child node from the subject node list of children.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                               |
 | ----- | ------- | --------------------------------------------------------- |
 | index | Integer | The position in the tree of the child node to be removed. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the child node that was successfully removed.
 
 ### replaceChild(newChild as roSGNode, index as Integer) as Boolean
 
-#### Description
+##### Description
 
 If the subject node has a child node in the index position, replace that child node with the newChild node in the subject node list of children, otherwise do nothing.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type     | Description                                               |
 | -------- | -------- | --------------------------------------------------------- |
 | newChild | roSGNode | The child node to replace the one specified by the index. |
 | index    | Integer  | The index of the child node to be replaced.               |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the child node that was successfully replaced.
 
 ### getChild(index as Integer) as Dynamic
 
-#### Description
+##### Description
 
 Returns the child node specified by the index.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                  |
 | ----- | ------- | -------------------------------------------- |
 | index | Integer | The index of the child node to be retrieved. |
 
-#### Return Value
+##### Return Value
 
 The child node at the index position; otherwise, "invalid".
 
 ### getParent() as roSGNode
 
-#### Description
+##### Description
 
 Returns the parent node of a node has been added to a list of children.
 
-#### Return Value
+##### Return Value
 
 The parent node; otherwise, "invalid".
 
 ### getChildCount() as Integer
 
-#### Description
+##### Description
 
 Returns the current number of children in the subject node list of children. This is always a non-negative number.
 
-#### Return Value
+##### Return Value
 
 The number of child nodes in the tree.
 
 ### reparent(newParent as roSGNode, adjustTransform as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Moves the subject node to another parent node.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -231,90 +231,90 @@ Moves the subject node to another parent node.
   </tbody>
 </table>
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the node that was successfully moved to another parent node.
 
 ### appendChildren(child_nodes as Object) as Boolean
 
-#### Description
+##### Description
 
 Appends an array of children nodes to the subject node.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type   | Description                                                   |
 | ----------- | ------ | ------------------------------------------------------------- |
 | child_nodes | Object | An roArray of child nodes to be appended to the subject node. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the children nodes were successfully appended.
 
 ### insertChildren(child_nodes as Object, index as Integer) as Boolean
 
-#### Description
+##### Description
 
 Inserts an array of child nodes to the subject node, starting at a specific position.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type    | Description                                               |
 | ----------- | ------- | --------------------------------------------------------- |
 | child_nodes | Object  | An roArray of child nodes to be inserted in the tree.     |
 | index       | Integer | The position in the tree where to insert the child nodes. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the children nodes were successfully inserted.
 
 ### removeChildren(child_nodes as Object) as Boolean
 
-#### Description
+##### Description
 
 Removes an array of child nodes from the subject node.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type   | Description                                        |
 | ----------- | ------ | -------------------------------------------------- |
 | child_nodes | Object | An roArray of child nodes to removed from the tree |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the children nodes were successfully removed.
 
 ### removeChildrenIndex(num_children as Integer, index as Integer ) as Boolean
 
-#### Description
+##### Description
 
 Removes a specific number of child nodes from the subject node starting at a specific position.
 
-#### Parameters
+##### Parameters
 
 | Name         | Type    | Description                                                                                         |
 | ------------ | ------- | --------------------------------------------------------------------------------------------------- |
 | num_children | Integer | The number of child nodes to be removed.                                                            |
 | index        | Integer | The starting position in the child node tree where the specified number of nodes are to be removed. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the children nodes were successfully removed.
 
 ### update(fields as roAssociativeArray[, addFields as Boolean]) as Void
 
-#### Description
+##### Description
 
 Takes the key-value pairs in an roAssociativeArray and maps the values to the respective field name in the calling node.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type               | Description                                                                                                |
 | --------- | ------------------ | ---------------------------------------------------------------------------------------------------------- |
 | fields    | roAssociativeArray | Contains key-value pairs corresponding to the fields in the subject node to be updated.                    |
 | addFields | Boolean            | optional (default = false). If true, and a specified key is not yet present, add it and value to the node. |
 
-#### Example
+##### Example
 
 The following example demonstrates how to use this method:
 
@@ -341,64 +341,64 @@ cn.update(aa,false)
 
 ### replaceChildren(child_nodes as Object, index as Integer) as Boolean
 
-#### Description
+##### Description
 
 Replaces the child nodes in the subject node, starting at the position specified by index, with new child nodes specified by child_nodes
 
 > Starting from [Roku OS 8.1](doc:release-notes#roku-os-81), when using this method to update the content of each item in a markupGrid, if more items are supplied than there are in the original list (going from 4 items to 5), the 'extra' items are ignored and not added as children. The [appendChildren()](#appendchildchild-as-rosgnode-as-boolean) function can be used to add the extra items.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type    | Description                                                              |
 | ----------- | ------- | ------------------------------------------------------------------------ |
 | child_nodes | Object  | An roArray of child nodes to replace the nodes in the tree.              |
 | index       | Integer | The starting position in the tree from where to replace the child nodes. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the children nodes were successfully replaced.
 
 ### getChildren(num_children as Integer, index as Integer) as Object
 
-#### Description
+##### Description
 
 Retrieves a specific number of child nodes from the subject node, starting at a specific position.
 
-#### Parameters
+##### Parameters
 
 | Name         | Type    | Description                                                                                           |
 | ------------ | ------- | ----------------------------------------------------------------------------------------------------- |
 | num_children | Integer | The number of child nodes to be retrieved.                                                            |
 | index        | Integer | The starting position in the child node tree where the specified number of nodes are to be retrieved. |
 
-#### Return Value
+##### Return Value
 
 An roArray containing the child nodes retrieved. If num_children is -1, all the child nodes are returned.
 
 ### createChildren(num_children as Integer, subtype as String ) as Object
 
-#### Description
+##### Description
 
 Creates a specific number of new child nodes of a specific type or extended type.
 
-#### Parameters
+##### Parameters
 
 | Name         | Type    | Description                                                      |
 | ------------ | ------- | ---------------------------------------------------------------- |
 | num_children | Integer | Number of new child nodes to be created.                         |
 | subtype      | String  | Node type or extended type of the new child nodes to be created. |
 
-#### Return Value
+##### Return Value
 
 An roArray containing the new child nodes created.
 
 ### getScene() as roSGNode
 
-#### Description
+##### Description
 
 Returns the node's root Scene. This returns a valid Scene even if the node is not parented.
 
-#### Return Value
+##### Return Value
 
 The node's root Scene.
 
@@ -410,44 +410,44 @@ The following methods can be called on any subject node and return the same glob
 
 ### getAll() as Object
 
-#### Description
+##### Description
 
 Returns an array with every existing node created by the currently running app.
 
-#### Return Value
+##### Return Value
 
 An roArray with the all the existing nodes created by the app.
 
 ### getRoots() as Object
 
-#### Description
+##### Description
 
 Returns an array with every existing node without a parent created by the currently running app.
 
 The existence of these unparented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.
 
-#### Return Type
+##### Return Type
 
 An roArray with every existing node without a parent created by the currently running app
 
 ### getRootsMeta() as Object
 
-#### Description
+##### Description
 
 Returns a string with every existing node without a parent created by the currently running app.
 
 The existence of these unparented nodes means they are being kept alive by direct BrightScript references. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node. These unparented nodes are organized as an XML forest of trees.
 
-#### Return Value
+##### Return Value
 
 A string with every existing node without a parent created by the currently running app.
 
 ### getAllMeta() as Object
 
-#### Description
+##### Description
 
 Returns a string with every existing node created by the currently running app (similar to the [getAll()](#getall-as-object) method) organized as an XML forest of trees according to the usual parent-child node relationship. Cycles are handled with a reference entry in the tree rather than indefinite recursion.
 
-#### Return Value
+##### Return Value
 
 A string with the all the existing nodes created by the app.

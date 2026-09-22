@@ -24,21 +24,21 @@ next:
 
 ### Join(separator as String) as String
 
-#### Description
+##### Description
 
 Creates a string by joining all array elements together separated by the specified separator. All elements must be of type string; otherwise, an empty string is returned
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                       |
 | --------- | ------ | ------------------------------------------------- |
 | separator | String | The string used to separate elements in an array. |
 
-#### Return Value
+##### Return Value
 
 A String containing the array elements. 
 
-#### Examples
+##### Examples
 
 ```brightscript
     a = ["ant","bat","cat"]

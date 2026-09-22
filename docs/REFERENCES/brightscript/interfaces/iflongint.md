@@ -23,18 +23,18 @@ next:
 
 ### GetLongInt() As LongInteger
 
-#### Description
+##### Description
 
 Gets the longinteger value stored in the calling Longinteger object. 
 
-#### Return Value
+##### Return Value
 
 The longinteger value stored in the calling Longinteger object. 
 
 ### SetLongInt(value As LongInteger) As Void
 
-#### Description
+##### Description
 
 Sets the calling Longinteger object to the specified longinteger value. 
 
-#### Parameters
+##### Parameters

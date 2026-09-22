@@ -92,7 +92,7 @@ The body of the BrightScript profiling file contains a stream of entries of vary
 
 Most entries are referenced multiple times, but they are not duplicates. For example, in the previous CPU entry example, the string table and path element entries would be referenced many times for other CPU or memory operation entries.
 
-#### Common entry format
+##### Common entry format
 
 Each entry is a stream of bytes, beginning with a varint-encoded unsigned 64-bit (uint64) entry tag, where the least significant three bits define the entry type. Once this entry is parsed, no value in the entry tag payload is greater than 32 bits.
 
@@ -170,7 +170,7 @@ The modules listed in a profiler file are run simultaneously within a single pro
 
 A path element represents a single entry in a call path that is typically a function name. The path element ID is a uint32, where 0 is explicitly invalid and is used to mark a null value.
 
-#### Root
+##### Root
 
 
 <table>
@@ -199,7 +199,7 @@ A path element represents a single entry in a call path that is typically a func
 </table>
 
 
-#### Non-root (chained)
+##### Non-root (chained)
 
 
 <table>

@@ -28,36 +28,36 @@ next:
 
 ### Reset() as Void
 
-#### Description
+##### Description
 
 Resets the current position to the first element of the enumeration.
 
 ### Next() as Dynamic
 
-#### Description
+##### Description
 
 Increments the position of an enumeration. If the last element of the enumeration is returned, this method sets the current position to indicate that it is now past the end. 
 
-#### Return Value
+##### Return Value
 
 The value at the current position of the enumeration. If the current position is already past the end (that is, the last element has already been returned by a previous call to this method), "invalid" is returned.
 
 ### IsNext() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the current position is not past the end of the enumeration.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the current position is not past the end (true), or is past the end (false). 
 
 ### IsEmpty() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the enumeration contains no elements.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the enumeration contains no elements (true), or contains elements (false). 

@@ -66,7 +66,7 @@ When the user later returns to the app, the Roku OS invokes the matching **custo
 >
 > Apps should minimize memory usage to increase the probability of their app being re-launched with Instant Resume. Apps can use the [BrightScript Profiler](doc:brightscript-profiler) or the [**chanperf** command in the debug console](doc:debugging) to monitor memory consumption.
 
-#### Example
+##### Example
 
 ##### SceneGraph
 
@@ -102,7 +102,7 @@ function customResume(arg as dynamic)
 end function
 ```
 
-#### customSuspend(arg as dynamic) as Void
+##### customSuspend(arg as dynamic) as Void
 
 ##### Tasks
 
@@ -118,7 +118,7 @@ The **arg** parameter is an associative array that provides the source of the in
 
 * **home**. The Home key or a labeled app key on the Roku remote control is pressed (or any other source).
 
-#### customResume (arg as dynamic) as Void
+##### customResume (arg as dynamic) as Void
 
 ##### Tasks
 
@@ -140,7 +140,7 @@ Once an Instant Resume app is suspended, it should return the user to the Roku h
 
 > Apps should only use background tasks for lightweight tasks that do not consume too many CPU resources (for example, network IO tasks or logging); otherwise, the app may be removed from memory.
 
-#### Enabling background tasks
+##### Enabling background tasks
 
 To enable an Instant Resume app to execute background tasks, set the **allowBackgroundTask** field of the **Scene** node. The following BrightScript code demonstrates how to do this:
 
@@ -153,11 +153,11 @@ Optionally, once the background tasks have been completed, the app can set the *
 
 Background tasks are automatically **blocked after 5 seconds** of app suspension (or if the app sets the **Scene.allowBackgroundTask** field to false, whichever happens first).
 
-#### Screensaver interrupts
+##### Screensaver interrupts
 
 Background tasks are not executed when an app is interrupted by a screensaver.
 
-#### Debugging
+##### Debugging
 
 The BrightScript debug console (port 8085) cannot be used by the app once it has been suspended. As a result, any logging statements execute during background tasks are not be visible to the app on 8085 port, and also the app cannot debug background tasks using STOP statements.
 
@@ -165,11 +165,11 @@ The BrightScript debug console (port 8085) cannot be used by the app once it has
 
 Apps must use signal beacons to measure and record how long it takes to be suspended and resumed.
 
-#### AppSuspend beacons
+##### AppSuspend beacons
 
 The Roku OS automatically fires **AppSuspendInitiate**/**AppSuspendComplete** beacons to measure the time it takes for an app to be suspended after being interrupted. No additional implementation is therefore required for apps to measure suspend times.
 
-#### AppResume beacons
+##### AppResume beacons
 
 The **AppResume** beacons are similar to the [**AppLaunch** signal beacons](doc:measuring-channel-performance), which are used to measure app launch times (normal launches done without Instant Resume). Beacons are fired when a user presses OK to select an app from the Roku home screen (marking the start point) and when the selected app is fully rendered (the stop point). The elapsed time between the start and stop points is recorded and can be viewed using the [BrightScript console](doc:debugging). You can then use the feedback from the console to update your application.
 
@@ -181,7 +181,7 @@ To fire the **AppResumeComplete** beacon from the app, call the **signalBeacon()
 
 `myScene.signalBeacon(“AppResumeComplete”)`
 
-#### Instant Resume performance metrics
+##### Instant Resume performance metrics
 
 You can use the BrightScript console (port 8085) to view a log with your app's Instant Resume performance metrics. When a beacon is fired, the console immediately outputs statistics related to the initiate or complete beacon. When you exit your app, the console displays a report summarizing the statistics for the just-concluded session.
 

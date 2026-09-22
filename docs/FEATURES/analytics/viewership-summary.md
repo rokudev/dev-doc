@@ -42,7 +42,7 @@ Below the band of summary statistics are three visualizations. These are time-se
 
 Click on the legend at the bottom of each visualization to view only one or multiple metrics.  
 
-#### Visits and Streams visualization
+##### Visits and Streams visualization
 
 This visualization shows the number of times an app has been launched and the number of times content has been streamed within that app. When someone launches an app, that counts as one visit (this is sometimes called a session, as in web analytics). Duration does not factor into visit counts. Starting an app and immediately exiting would still count as one visit.
 
@@ -52,7 +52,7 @@ The number of streams can be expected to be higher in apps with shorter form con
 
 Streams can generally be expected to exceed visits. If visits exceeds streams, that would indicate account holders are starting your app, then exiting without ever streaming any content.
 
-#### Streaming Ratios visualization
+##### Streaming Ratios visualization
 
 This visualization shows the ratio of streams to visits to help you closely examine this important issue. The relationship between visits and streams tends to be more meaningful than either count alone. The higher the ratio, the more times on average account holders are streaming content each time they visit your app. This ratio should be interpreted in the context of total streaming time or average stream duration, both of which we have also included in this visualization.
 
@@ -62,7 +62,7 @@ Conversely, if the ratio of streams to visits drops but the average stream durat
 
 If total streaming time increases more or faster than the ratio of streams to visits, that suggests visitors to your app are streaming longer, while a larger or faster decrease in streaming time could be explained by a drop in time spent streaming.  Looking at the average stream duration measurement is another way to detect these kinds of trends.
 
-#### Rebuffers per Streaming Hour visualization
+##### Rebuffers per Streaming Hour visualization
 
 This visualization compares the number of rebuffers per hour to the total hours streamed in an app.
 

@@ -25,7 +25,7 @@ next:
 
 Returns the model number of the specified Roku remote control. For example, this function returns 135 for an RC135 remote that is connected to the Roku device.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -47,7 +47,7 @@ Returns the model number of the specified Roku remote control. For example, this
 
 
 
-#### Return Values
+##### Return Values
 
 The model number of the specified Roku remote control, or 0 if the specified remote does not exist. 
 
@@ -55,7 +55,7 @@ The model number of the specified Roku remote control, or 0 if the specified rem
 
 Checks whether the specified Roku remote control is awake. 
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -76,17 +76,17 @@ Checks whether the specified Roku remote control is awake.
 </table>
 
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the specified Roku remote control is awake.
 
 ### HasFeature(feature as String, remoteIndex as Integer) as Boolean
 
-#### Description
+##### Description
 
 Checks if the specified Roku remote control supports the passed in feature string.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -112,6 +112,6 @@ Checks if the specified Roku remote control supports the passed in feature strin
 </table>
 
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the Roku remote control supports the passed in feature string.

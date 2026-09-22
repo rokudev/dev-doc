@@ -22,7 +22,7 @@ Welcome to linear channels at Roku! Here are resources to help get you started o
 
 ### Analytics dashboard
 
-#### Overview
+##### Overview
 
 The Roku Channel partners have access to web-based performance analytics through Roku's Content Partner Portal. This allows you to analyze the health, viewership trends, and metrics for specific titles.
 
@@ -30,11 +30,11 @@ The Roku Channel partners have access to web-based performance analytics through
 
 ### Partner payout
 
-#### Overview
+##### Overview
 
 The Roku Channel Partners must enroll in Roku’s Partner Payouts Program, which is the vehicle through which partners receive payments for content served to Roku Users.
 
-#### Enrolling in Roku's Partner Payouts Program
+##### Enrolling in Roku's Partner Payouts Program
 
 To sign up for Roku Partner Payouts Program:
 
@@ -49,7 +49,7 @@ In order to enroll in the Roku Partner Payout Program, you will need to provide 
 * Tax forms (W9, W8-BEN, or W8-BEN-E)
 * You can come back and edit this information at any time.
 
-#### The Roku Channel partner payouts
+##### The Roku Channel partner payouts
 
 Partners can select between three payout methods when enrolling in the Roku Partner Payouts Program:
 

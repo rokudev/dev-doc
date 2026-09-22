@@ -42,13 +42,13 @@ Below the band of summary statistics are three visualizations. These are time-se
 
 Click on the legend at the bottom of each visualization to view only one or multiple metrics. For instance, on Channel Visitors and Streaming Viewers you can choose to see only Bounce Rate or you can choose to see all three metrics displayed simultaneously.
 
-#### Channel Visitors and Streaming Viewers visualization
+##### Channel Visitors and Streaming Viewers visualization
 
 This visualization shows whether people are engaging with your content after accessing your app. After getting a visitor to install and open your app, you want them to stream content so they become viewers. Also, you want them to keep coming back so the relationship grows and becomes stickier over time.
 
 Bounce rate measures how often visitors open the app but do not stream any content. Bounce rate is calculated as 1-(viewers/visitors). As the number of viewers increases relative to visitors, bounce rates go down. A high bounce rate indicates a need to focus more on the immediate experience when visitors open your app, including what kind of content visitors see and how that content is presented.
 
-#### Minutes Streamed visualization
+##### Minutes Streamed visualization
 
 This visualization shows how much content is being consumed by your viewers. The more minutes streamed, the more time viewers are spending in your app engaging with your content. Minutes Streamed includes both an aggregate total across all accounts, as well as an average number of minutes for those accounts that streamed during the period selected in FILTERS.
 
@@ -56,7 +56,7 @@ The relationship between the aggregate total and the average indicates whether t
 
 Additionally, this visualization shows the percent of accounts with your app installed that have streamed content in the selected time period. This metric connects the report on Visitors and Viewers to the report on Install Base Growth because the rate at which viewers stream content is a leading indicator of retention. Expressed differently, viewers that are not engaging with content in your app are more likely, on average, to uninstall your app. The more your viewers stream, the less likely it is that they will churn and the better your prospect for growing your install base.
 
-#### Install Base Growth visualization
+##### Install Base Growth visualization
 
 This visualization shows how your install base is changing over time. Some uninstalls are normal and expected, but overall you want installs to outpace uninstalls. A growing install base is represented by a positive net install value, and accelerating growth is represented by an upward sloping net install line. The difference between new installs and uninstalls is shown in Net Installs.
 

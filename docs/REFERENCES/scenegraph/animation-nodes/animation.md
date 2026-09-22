@@ -22,7 +22,7 @@ The Animation node class provides a simple linear interpolator function, where t
 
 The following example shows how to use some simple animations. It uses two Animation nodes, each with its own Vector2DFieldInterpolator. The first defines a translation animation of the poster image, and the second defines a scale animation. They are both launched in an init() function using BrightScript. When run together, the effect is to "bloom" the poster image on the screen.
 
-#### Animation BrightScript example
+##### Animation BrightScript example
 
 ```brightscript
 function init()
@@ -33,7 +33,7 @@ function init()
 end function
 ```
 
-#### Animation XML example
+##### Animation XML example
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

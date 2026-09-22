@@ -101,7 +101,7 @@ Roku **prefers** a human-readable sidecar file (`.ttml`, `.dfxp`, `.vtt`, or `.s
 
 > **Note on CC/SDH language:** because CC/SDH is an accessibility companion to a _specific_ audio track, its language simply follows whichever audio track (main or dub) it accompanies — it does not require an independent language-code declaration the way Full Subtitles do (see below).
 
-#### Legacy Format (supported, not preferred)
+##### Legacy Format (supported, not preferred)
 
 | Format Name                                           | Positional Data | Style Data | Extension | Encoding | Delivery Type | Languages                                        |
 | ----------------------------------------------------- | --------------- | ---------- | --------- | -------- | ------------- | ------------------------------------------------ |

@@ -28,15 +28,15 @@ next:
 
 ### GetIdentity() as Integer
 
-#### Description
+##### Description
 
 Returns a unique number for this object that can be used to identify whether events originated from this object. The value can be any arbitrary value as assigned by the Roku OS, and should only be used for comparison purposes. For example, the value should not be used as an array index. For use as a look-up key, one option would be to use `GetIdentity().ToStr()` as an associative array key.
 
-#### Return Value
+##### Return Value
 
 A unique number for the object.
 
-#### Example
+##### Example
 
 ```brightscript
 function Setup()
@@ -63,11 +63,11 @@ end function
 
 ### SetUrl(url as String) as Void
 
-#### Description
+##### Description
 
 Sets the URL to use for the transfer request.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description |
 | ----- | -----  | -------------- |
@@ -75,23 +75,23 @@ Sets the URL to use for the transfer request.
 
 ### GetUrl() as String
 
-#### Description
+##### Description
 
 Returns the current URL.
 
-#### Return Value
+##### Return Value
 
 The URL.
 
 ### SetRequest(req as String)
 
-#### Description
+##### Description
 
 Changes the request method from the normal GET, HEAD or POST to the value passed as a string.
 
 >  Use this function cautiously because it can generate invalid HTTP requests.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
@@ -99,55 +99,55 @@ Changes the request method from the normal GET, HEAD or POST to the value passed
 
 ### GetRequest() as String
 
-#### Description
+##### Description
 
 Returns the current request method.
 
-#### Return Value
+##### Return Value
 
 The request method.
 
 ### GetToString() as String
 
-#### Description
+##### Description
 
 Connects to the remote service as specified in the URL and returns the response body as a string. This function waits for the transfer to complete and it may block for a long time. This calls discards the headers and response codes. If that information is required, use the [AsyncGetToString()](#asyncgettostring-as-boolean) method.
 
-#### Return Value
+##### Return Value
 
 The response body.
 
 ### GetToFile(filename as String) as Integer
 
-#### Description
+##### Description
 
 Connect to the remote service as specified in the URL and write the response body to a file on the Roku device's filesystem. This function does not return until the exchange is complete and may block for a long time. The HTTP response code from the server is returned. It is not possible to access any of the response headers. If this information is required use the [AsyncGetToFile()](#asyncgettofilefilename-as-string-as-boolean) method instead.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description |
 | ----     | ------- | -------------- |
 | filename | String  | The file on the Roku device's filesystem to which the response body is to be written |
 
-#### Return Value
+##### Return Value
 
 The HTTP response code.
 
 ### AsyncGetToString() as Boolean
 
-#### Description
+##### Description
 
 Starts a GET request to a server, but does not wait for the transfer to complete.
 
 When the GET request completes, a [roUrlEvent](doc:rourlevent) will be sent to the message port associated with the object. The event will contain a roString with the body of the response. If false is returned then the request could not be issued and no events will be delivered.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the request was issued.
 
 ### AsyncGetToFile(filename as String) as Boolean
 
-#### Description
+##### Description
 
 Starts a transfer without waiting for it to complete, similar to the [AsyncGetToString()](#asyncgettostring-as-boolean) method. However, the response body will be written to a file on the device's filesystem instead of being returned in a String object.
 
@@ -157,108 +157,108 @@ When the GET request completes, an [roUrlEvent](doc:rourlevent) will be sent to 
 | ----  | ------- | -------------- |
 | filename | String  | The file on the Roku device's filesystem to which the response body is to be written |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the request was issued.
 
 ### Head() as Dynamic
 
-#### Description
+##### Description
 
 Synchronously performs an HTTP HEAD request and returns an [roUrlTransfer](doc:ifurltransfer) object.
 
-#### Return Value
+##### Return Value
 
 An [roUrlTransfer](doc:ifurltransfer) object.  If a catastrophic failure occurs (for example, an asynchronous operation is already active), invalid is returned
 
 ### AsyncHead() as Boolean
 
-#### Description
+##### Description
 
 Begins an HTTP HEAD request without waiting for it to complete. When the HEAD completes, an [roUrlEvent](doc:rourlevent) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the request was issued.
 
 ### PostFromString(request as String) as Integer
 
-#### Description
+##### Description
 
 Uses the HTTP POST method to send the supplied string to the current URL. The HTTP response code is returned. Any response body is discarded
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | request | String  | The POST request to be sent |
 
-#### Return Value
+##### Return Value
 
 The HTTP response code.
 
 ### PostFromFile(filename as String) as Integer
 
-#### Description
+##### Description
 
 Uses the HTTP POST method to send the contents of the specified file to the current URL. The HTTP response code is returned. Any response body is discarded
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | filename | String  | The file containing the POST request to be sent |
 
-#### Return Value
+##### Return Value
 
 The HTTP response code.
 
 ### AsyncPostFromString(request as String) as Boolean
 
-#### Description
+##### Description
 
 Uses the HTTP POST method to send the supplied string to the current URL. When the POST request completes, an [roUrlTransfer](doc:ifurltransfer) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | request | String  | The POST request to be sent asynchronously|
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the request was issued.
 
 ### AsyncPostFromFile(filename as String) as Boolean
 
-#### Description
+##### Description
 
 Uses the HTTP POST method to send the contents of the specified file to the current URL. When the POST request completes, an [roUrlTransfer](doc:ifurltransfer) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description |
 | ----     | ------- | -------------- |
 | filename | String  | The file containing the POST request to be sent asynchronously|
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the request was issued.
 
 ### AsyncPostFromFileToFile(fromFile as String, toFile as String) as Boolean
 
-#### Description
+##### Description
 
 Uses the HTTP POST method to send the contents of the specified file (fromFile) to the current URL. When the POST request completes successfully, an [roUrlTransfer](doc:ifurltransfer) will be sent to the message port associated with the object. If false is returned then the request could not be issued and no events will be delivered.  This function is the same as AsyncPostFromFile, except that the HTTP response is written to the file specified by the toFile parameter.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description |
 | ----     | ------- | -------------- |
 | fromFile | String  | The file containing the POST request to be sent asynchronously |
 | toFile   | String  | The file on the Roku device's filesystem to which the response body is to be written |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the request was issued.
 
@@ -270,46 +270,46 @@ A flag indicating whether the request was issued.
 
 ### RetainBodyOnError(retain as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Returns the body of the response even if the HTTP status code indicates that an error occurred.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type     | Description |
 | ----   | -------  | -------------- |
 | retain | Boolean  | A flag specifying whether to return the response body when there is an HTTP error response code. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### SetUserAndPassword(user as String, password as String) as Boolean
 
-#### Description
+##### Description
 
 Enables HTTP authentication using the specified user name and password.
 
 > HTTP basic authentication is intentionally disabled because it is inherently insecure. [HTTP digest authentication](https://tools.ietf.org/html/rfc2617 "HTTP digest authentication") is supported.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description |
 | ----     | ------- | -------------- |
 | user     | String  | The user name to be authenticated|
 | password | String  | The password to be authenticated|
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### SetMinimumTransferRate(bytes_per_second as Integer, period_in_seconds as Integer) as Boolean
 
-#### Description
+##### Description
 
 Terminates the transfer automatically if the transfer rate drops below the specified rate (bytes_per_second) over a specific interval (period_in_seconds).
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -335,65 +335,65 @@ Terminates the transfer automatically if the transfer rate drops below the speci
 </table>
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### GetFailureReason() as String
 
-#### Description
+##### Description
 
 If any of the `roUrlEvent` functions indicate failure then this function may provide more information regarding the failure.
 
-#### Return Value
+##### Return Value
 
 Failure reason.
 
 ### EnableEncodings(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables gzip encoding of transfers
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | retain | Boolean  | A flag specifying whether to enable gzip encoding of transfers |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### Escape(text as String) as String
 
-#### Description
+##### Description
 
 URL encodes the specified string per [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt "RFC 3986") and return the encoded string
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | text | String  | The string to be URL-encoded|
 
-#### Return Value
+##### Return Value
 
 The URL-encoded string.
 
 ### Unescape(text as String) as String
 
-#### Description
+##### Description
 
 Decodes the specified string per [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt "RFC 3986") and returns the unencoded string.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | text  | String  | The string to be URL-decoded|
 
-#### Return Value
+##### Return Value
 
 The decoded string.
 
@@ -401,7 +401,7 @@ The decoded string.
 
 > This method is deprecated. Use the [Escape()](doc:ifurltransfer) method.
 
-#### Description
+##### Description
 
 URL encodes the specified string per RFC 3986 and return the encoded string
 
@@ -428,61 +428,61 @@ URL encodes the specified string per RFC 3986 and return the encoded string
 </table>
 
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | text | String  | The string to be URL-encoded|
 
-#### Return Value
+##### Return Value
 
 The encoded string.
 
 ### EnableResume(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables automatic resumption of `AsyncGetToFile` and `GetToFile` requests
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | enable | Boolean  | A flag specifying whether to automatically resume `AsyncGetToFile` and `GetToFile` requests |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### EnablePeerVerification(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Verifies that the certificate has a chain of trust up to a valid root certificate using CURLOPT_SSL_VERIFYPEER.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | enable | Boolean  | A flag specifying whether to verify a certificate has a chain-of-trust up to a valid root certificate |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### EnableHostVerification(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Verifies that the certificate belongs to the host using CURLOPT_SSL_VERIFYHOST.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
 | enable | Boolean  | A flag specifying whether to verify a certificate belonging to the host. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
@@ -490,23 +490,23 @@ A flag indicating whether the operation was successful.
 
 > The Roku OS no longer supports this function. Apps should always reuse connections because it is more efficient (new connections impact app performance by increasing latency and consuming more CPU).
 
-#### Description
+##### Description
 
 Enables a fresh connection using CURLOPT_FRESH_CONNECT.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description |
 | ----   | ------- | -------------- |
 | enable | Boolean | A flag specifying whether to enable fresh connections. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the operation was successful.
 
 ### SetHttpVersion(version as String) as Void
 
-#### Description
+##### Description
 
 An optional function that enables HTTP/2 support. If version is set to `"http2"`, HTTP/2 will be used for all underlying transfers.
 
@@ -515,7 +515,7 @@ This must be set on a roUrlTransfer instance prior to any data transfer. The HTT
 For the HTTP/2 connection sharing feature, all roUrlTransfers should be made from the same thread.
 
 
-#### Parameters
+##### Parameters
 
 | Name    | Type    | Description |
 | ----    | ------- | -------------- |
@@ -527,11 +527,11 @@ For the HTTP/2 connection sharing feature, all roUrlTransfers should be made fro
 
 *Available since [Roku OS 12.5](doc:release-notes#roku-os-125)*
 
-#### Description
+##### Description
 
 Returns the user agent of the device, which can then be passed into server-side ad requests.
 
-#### Return Value
+##### Return Value
 
 The device user agent, which has the following syntax: "Roku/DVP-major.minor (major.minor.revision.build-plid)". For example, Roku/DVP‑12.0 (12.0.0.4171‑29).
 
@@ -539,7 +539,7 @@ The device user agent, which has the following syntax: "Roku/DVP-major.minor (ma
 
 *Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
 
-#### Description
+##### Description
 
 Enables server-sent event (SSE) handling on the transfer and starts reading the event stream.
 
@@ -547,11 +547,11 @@ Call this function instead of **AsyncGetToString()** when the URL returns an SSE
 
 While SSE handling is enabled, the transfer tracks the id of the last server event it received and sends it automatically in the `Last-Event-ID` header of the next SSE transfer.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether SSE handling was successfully enabled.
 
-#### Example
+##### Example
 
 ```brightscript
 transfer = CreateObject("roUrlTransfer")
@@ -565,11 +565,11 @@ transfer.AsyncGetSSEvents()
 
 *Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
 
-#### Description
+##### Description
 
 Returns the id of the last server-sent event received in the previous SSE transfer.
 
-#### Return Value
+##### Return Value
 
 The last server-sent event id.
 
@@ -577,13 +577,13 @@ The last server-sent event id.
 
 *Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
 
-#### Description
+##### Description
 
 Returns the reconnection interval in milliseconds that the server sent in the previous SSE transfer, or 0 if the server did not provide one.
 
 > roUrlTransfer does not retry SSE transfers automatically. Your app is responsible for observing the retry interval and reconnecting.
 
-#### Return Value
+##### Return Value
 
 The last server-sent event retry interval.
 
@@ -591,13 +591,13 @@ The last server-sent event retry interval.
 
 *Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
 
-#### Description
+##### Description
 
 Clears the id of the last server-sent event received in the previous SSE transfer.
 
 Clearing the id suppresses the automatic `Last-Event-ID` header, which lets you start a fresh SSE transfer or set the header yourself with **AddHeader()**.
 
-#### Example
+##### Example
 
 ```brightscript
 ' Start a new stream from event 15 rather than resuming where the last one stopped.

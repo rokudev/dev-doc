@@ -38,7 +38,7 @@ Additionally, please make sure to send the preliminary versions of all documents
 3. Preliminary Vendor List
 4. Dailies Memo
 
-#### 2.1.1 Episode numbering & post grid workflow
+##### 2.1.1 Episode numbering & post grid workflow
 
 Post Grids accuracy must be confirmed weekly either via revised grid or an email reflecting that no changes have been made. For distribution, Roku requires these grids to be both uploaded to The Hub and emailed to a distribution list that Roku Post Production will provide prior to Production.
 
@@ -134,7 +134,7 @@ Before Post Production, your Roku Post Manager will reach out to schedule a week
 
 ### 5.2 Rough cut formatting
 
-#### 5.2.1 General requirements
+##### 5.2.1 General requirements
 
 Below are the basic parameters to keep in mind as you begin the rough cut process:
 
@@ -155,13 +155,13 @@ Below are the basic parameters to keep in mind as you begin the rough cut proces
 
 - The use of blurs on un-cleared video content is not permitted without Roku Creative approval beforehand.
 
-#### 5.2.2 Music
+##### 5.2.2 Music
 
 Roku distributes content worldwide. Music should be cleared in perpetuity (or for licensed projects, the full length of the license), and allow for in-context promotional use, unless approved in writing by Roku Production Legal. Please source music that is covered by the following PROs: BMI, ASCAP, SESAC, and GMR.
 
 For branded content, Roku uses DeWolfe Music as a music provider. Please contact your Roku Post Production Manager to be granted a login and password to access DeWolfe’s library.
 
-#### 5.2.3 Rating guidelines
+##### 5.2.3 Rating guidelines
 
 Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ratings guidance has been provided below for you to keep in mind as the creative story progresses in editorial. Please note, however, this is a very subjective process and the rating tiers below are regularly reviewed and may be modified in response to shifts in industry standards. So please be sure to reach out to your Roku Legal contact if you have any questions or clarifications.
 
@@ -173,7 +173,7 @@ Roku Originals content must fall within a TV-14 or TV-PG rating. Some general ra
 | <strong>TV-14</strong> | <strong>✔</strong>  Brief violence, OK with some blood shown<br /><strong>✕</strong> No gore | <strong>✔</strong>  Covered sex is allowed, brief thrusting, implied sexual abuse OK<br /><strong>✔</strong> Exposed butt/side breast OK<br /><strong>✖</strong> No full nudity | <strong>✔</strong>  Visuals/use of drug abuse (not glorified, must show consequences)<br /><strong>✖</strong> No smoking minors                 | <strong>✔</strong>  Shit, asshole, bastard (when used in a pejorative matter), goddamn, bitch, dick and pussy (as an insult)                   |
 | <strong>TV-MA</strong> | <strong>✔</strong>  On-screen graphic violence, gore                                         | <strong>✔</strong>  Depictions of graphic sexual activity or sexual violence<br /><strong>✔</strong>  Full male or female nudity                                                | <strong>✔</strong>  Graphic visuals of substance use/abuse, injection, etc. (both. minors and adults)<br /><strong>✖</strong> No smoking minors | <strong>✔</strong>  Use of fuck, tits, twat, cum, pussy, and cunt<br /><strong>✖</strong> Racial slurs and hate speech on a case-by-case basis |
 
-#### 5.2.4 Graphics milestones and review process
+##### 5.2.4 Graphics milestones and review process
 
 Roku should be involved in key discussions related to graphics from title treatments to episodic graphics packages. All graphics work (title treatment, lower thirds, interstitials, etc.) must be completed by a Roku approved graphics vendor. These vendors are listed in the Roku Approved Graphics Vendor List in the Branded Content Series Kick-off Packet. This is to ensure brand safety and so graphics can have a streamlined approval before review of RC1 is underway. Roku Brand Studio requires final versions of graphics to be included for approval starting at the RC1 stage. This most importantly includes the title treatment. An RBS project will always have a graphics review timeline with the below milestones:
 
@@ -200,13 +200,13 @@ After Roku has approved all in-show graphics and the first cut is locked, no cha
 
 ### 5.3 Rough cut review
 
-#### 5.3.1 Review platform
+##### 5.3.1 Review platform
 
 Roku’s approved platform for dailies and rough cut release is [Frame.io](https://frame.io/). All content being sent for review by the Roku team will need to be shared via this platform. If you are working with a partner who utilizes a different internal platform, there will not be a need to render out separate files just for use with [Frame.io](https://frame.io/); Frame.io’s platform is compatible with most commonly used codecs, which allows the same file to be uploaded to both platforms.
 
 The Roku Post team will initiate onboarding prior to the first day of production. That will trigger a member of the [Frame.io](http://frame.io/) team to reach out to set up a training session with your team. Each series will only be granted one ‘Team Manager’, who will have the ability to add users and download content (with Roku’s approval).
 
-#### **5.3.2 Cut review & turnaround timing**
+##### **5.3.2 Cut review & turnaround timing**
 
 For each episode, Roku will provide notes listed within the Post Grid, but this is usually within 48 business hours after receipt, whether the Production Company is based in the United States or outside the United States. For cuts submitted earlier than the scheduled date, please note that the original notes return timing will need to be honored unless otherwise approved by Roku.
 
@@ -236,7 +236,7 @@ For any variations to the schedule above, please check with your Post Production
 
 ### 5.4 Technical specifications for rough cuts
 
-#### 5.4.1 General technical requirements
+##### 5.4.1 General technical requirements
 
 Formatting:
 
@@ -338,13 +338,13 @@ During the initial design phase of any title treatments, please reach out to you
 
 **The first draft of series credits (where applicable) must be submitted to Roku Post for approval with delivery of the first Fine Cut.**
 
-#### 6.1.1 Disclaimer use
+##### 6.1.1 Disclaimer use
 
 If your show contains sensitive content, please reach out to your Roku Legal Executive to see if your episode requires a trigger warning prior to the cold open.
 
 **For any other opening cards or disclaimers, please reach out to Roku Post Production for approval.**
 
-#### 6.1.2 Main title card
+##### 6.1.2 Main title card
 
 For shows that choose to utilize a main title card, please follow the formatting requirements below:
 
@@ -428,7 +428,7 @@ Roku accepts delivery content for ingest to The Roku Channel via Aspera which ca
 - Test files may be delivered to the **/testing** folder.
 - Video, closed captions, and key art files must be delivered in one folder. Video, closed captions, and key art files must also be completely delivered prior to the delivery of the metadata sheet. More regarding the Metadata Sheet in Section 7.10.1.
 
-#### 7.4 Still photographs
+##### 7.4 Still photographs
 
 A timeline for stills capture, review and delivery should be included in every production calendar, with final delivery of photos happening before the delivery of a project’s first rough cut. Please discuss with the RBS Team how stills should be captured, how many final photos will need to be delivered, and a timeline for creative, selects review, final selection, and delivery.
 
@@ -492,7 +492,7 @@ If your image capture settings are <u>not</u> at the same data rate or higher as
 
 If your capture workflow is different than specified above, please contact Roku Post Production before final mastering begins. It is important to keep master sequences and final deliverables in alignment with dailies capture specifications (i.e. free of any up-scaling, cross-conversions, or up-conversions).
 
-#### 7.6.1 Video formatting
+##### 7.6.1 Video formatting
 
 All delivery files should be formatted to start at 00:00:00:00.
 
@@ -500,7 +500,7 @@ All video files \*\*<u>MUST NOT</u> \*\*contain any of the following: bars and t
 
 Master files should be expected to be the files that will stream on The Roku Channel as is.
 
-#### 7.6.2 Audio formatting
+##### 7.6.2 Audio formatting
 
 For the Final Texted Masters, all audio should be contained within the delivered mezzanine file. See the audio settings listed in 7.6.3 for specifications based on delivery codec.
 
@@ -514,7 +514,7 @@ Mixing Specifications:
 - Target -24LKFS +/- 2 (any average between -22 & -26). Based on ITU-R 1170-3 measurement.
 - Audio should not peak above -2 dBfs (True Peak)
 
-#### 7.6.3 Texted video masters
+##### 7.6.3 Texted video masters
 
 | <strong>Video Codec</strong> | <strong>ProRes</strong>                                 |
 | ---------------------------- | ------------------------------------------------------- |
@@ -535,7 +535,7 @@ Mixing Specifications:
 | Sample Rate                  | 48000Hz                                                 |
 | Bit Depth                    | 24-bit                                                  |
 
-#### 7.6.4 Textless delivery
+##### 7.6.4 Textless delivery
 
 If your content includes burned-in on screen text, you will be required to deliver a Full Episode. This file should include clean, text-free versions of any shots that contain burned-in subtitles or graphic text elements. If the show contains a comprehensive graphics package, please strip all graphics and supply the graphics package or elements in Archival. Video and Audio specs should mirror the Texted Masters noted above.
 
@@ -554,7 +554,7 @@ Roku Best Practices
 - Background elements with text, such as street signs, do not need to be included in a Textless version.
 - ‘Forced Narratives’ refers to on-screen text that is used in one of two ways: to translate foreign dialogue into English or to clarify dialogue that may be inaudible.
 
-#### 7.6.5 Marquee Ad Video (MAV) delivery
+##### 7.6.5 Marquee Ad Video (MAV) delivery
 
 Note that the TXLS video master is the deliverable that is ingested into the Roku Channel. The TXTD MAV video masters will be used as a reference for Roku Design. Follow the below technical specifications for both TXTD and TXLS MAV Master delivery:
 
@@ -579,7 +579,7 @@ Note that the TXLS video master is the deliverable that is ingested into the Rok
 | Sample Rate                  | 48000Hz                                          |
 | Bit Depth                    | 24-bit                                           |
 
-#### 7.6.6 Branded Stitched Interstitial delivery workflow
+##### 7.6.6 Branded Stitched Interstitial delivery workflow
 
 If a piece of branded content is being stitched into Roku Originals (RO) content, Visual Data Media Services (VDMS) is Roku's branded content delivery partner. Once final deliverables have been approved, the production company must reach out to [RokuOriginals@visualdatamedia.com](mailto:RokuOriginals@visualdatamedia.com) to organize the stitch and delivery of launch critical materials to be put on Roku's Aspera Shares for final content ingest.
 
@@ -595,7 +595,7 @@ Stitched Content Delivery requires:
 - TXLS Master files are treated identically.
 - Segment Rundown and Ingest Metadata template have been modified to accommodate timing shift of stitched material.
 
-#### 7.6.7 Final proxy files (clean & visible timecode)
+##### 7.6.7 Final proxy files (clean & visible timecode)
 
 From each Texted Master created, please export the following proxy files:
 
@@ -619,7 +619,7 @@ Note: Textless versions of final proxies are not required: only a texted version
 
 Prior to the commencement of principal photography, please reach out to Roku Post Production in order to determine the necessary audio deliverables for your series. As content, formatting, and style will differ from one series to the next, Roku understands that stem delivery may also vary. Please upload to your Final Archive folder via Aspera Shares.
 
-#### **7.7.1 Domestic episodic stems**
+##### **7.7.1 Domestic episodic stems**
 
 Provided below are the stems required for delivery of each episode / project:
 
@@ -689,7 +689,7 @@ NION-Nike-101-enUS_FN_20190701.srt
 
 ### 7.9 Filename specifications
 
-#### 7.9.1 Paper deliverables
+##### 7.9.1 Paper deliverables
 
 Paper deliverables should all be uploaded to the “Hub” platform noted above. Please adhere to the following naming conventions when delivering documents to the Hub:
 
@@ -698,7 +698,7 @@ Paper deliverables should all be uploaded to the “Hub” platform noted above.
 
 \*For any redeliveries of post deliverables, please include the date in addition to “FINAL”.
 
-#### 7.9.2 Master video deliverables
+##### 7.9.2 Master video deliverables
 
 All master video files should be labeled as follows:
 
@@ -753,7 +753,7 @@ MAMA_Nike_102_v02_20220919_esMX_ME_Nearfield_6ch_48k_24b_23976_C.wav
 | Mono                                          | N/A                              |
 | Stereo                                        | LT, RT                           |
 
-#### 7.9.4 File naming limitations
+##### 7.9.4 File naming limitations
 
 Source video, closed captions, and artwork files delivered for ingest must adhere to the following guidelines:
 
@@ -765,7 +765,7 @@ Source video, closed captions, and artwork files delivered for ingest must adher
 
 Roku’s External Deliverables Hub (“Hub”) is a centralized location for all wrap deliverables documents. If you have not been granted access and will be handling this portion of delivery, please reach out to your Roku Post Manager.
 
-#### 7.10.1 Roku metadata template
+##### 7.10.1 Roku metadata template
 
 Metadata allows Roku to ingest and display all series related information for our customers. Please do not alter the formatting of this spreadsheet as it will break the coding required for ingest.
 
@@ -783,7 +783,7 @@ The metadata sheet should only be submitted after all other Launch Critical mate
 
 The metadata sheet must be delivered to the same folder as all other launch critical delivery material. Failure to do so will result in content processing delays. Reach out to the RBS Producer or Post Manager for any needed information for the Metadata Sheet.
 
-#### 7.10.2 Credits documents
+##### 7.10.2 Credits documents
 
 Please deliver all of the following items as part of Final Delivery:
 
@@ -791,25 +791,25 @@ Please deliver all of the following items as part of Final Delivery:
 2. Roku Branded Credit Approval Form - This document should include both main title and end credits for Business Affairs Approval.
 3. Traditional Episodic Credits Lists that detail the specific credits tied to each episode should be uploaded to the Hub. This can either be Excel or Word formatted in a standard traditional scrolling or end-card format.
 
-#### 7.10.3 As broadcast scripts (ABS)
+##### 7.10.3 As broadcast scripts (ABS)
 
 Please deliver one set of As Broadcast Scripts for each series to the Hub. As Broadcast Script files should have a timecode-based breakdown of each line of dialogue. You are approved to submit the As Broadcast Scripts in any format that a Roku approved vendor utilizes.
 
-#### 7.10.4 Final font memo
+##### 7.10.4 Final font memo
 
 Please deliver one document that details the font name and size utilized for identifiers and/or other on-screen text added to each episode (where applicable) to the Hub. If applicable, please also note which vendor created the show logo.
 
-#### 7.10.5 Final vendor list
+##### 7.10.5 Final vendor list
 
 Please deliver your final version of the Roku Vendor List that you received in the Kick-Off Delivery Packet to the Hub.
 
-#### 7.10.6 Final text spotting list
+##### 7.10.6 Final text spotting list
 
 If an approved QC vendor was used, please deliver the Text Spotting List used to QC the final episodes to the Hub. Please ensure that any changes made during QC are reflected in the final document that is delivered to Roku via The Hub. Please deliver a single excel file, via Roku’s template, with episodes separated onto their own tabs.
 
 If a QC vendor was not used, still submit a final TSL to document all text information for a project.
 
-#### 7.10.7 Episodic delivery checklist
+##### 7.10.7 Episodic delivery checklist
 
 Please deliver the final version of the Roku Episodic Delivery Checklist that you received in the Kick-Off Delivery Packet to the Hub. Please fill in all applicable delivery dates of assets and indicate when Archival will be completed.
 
@@ -818,13 +818,13 @@ Please deliver the final version of the Roku Episodic Delivery Checklist that yo
 - Any assets not being delivered to Roku, as approved by Roku Post, should be identified as such within the “Delivery Destination/Notes” section of each deliverable
 - If archival delivery will trail wrap, please indicate when it will be completed and who the primary point person will be to confirm for Roku Post
 
-#### 7.10.8 Music cue sheets
+##### 7.10.8 Music cue sheets
 
 Music Cue Sheets are required for all projects. Please use the cue sheet template found on the ASCAP website linked [here](https://www.ascap.com/help/royalties-and-payment/cue-sheets) or similar cue sheet template when submitting to Roku. The ASCAP template is also available via the Hub in the Production Legal – Scripted folder.
 
 Upload completed cue sheets to the Hub. If you have specific questions about Roku requirements for Music Cue Sheets, please contact Sydnee Vosper at [svosper@roku.com](mailto:svosper@roku.com).
 
-#### 7.10.9 Not applicable form
+##### 7.10.9 Not applicable form
 
 In cases where a paper deliverable is non-applicable to the project, please upload the Roku Not Applicable Form to the Hub with a written explanation of why this deliverable does not apply.
 
@@ -848,7 +848,7 @@ Required:
 - Graphic Elements – Main title card, MOV files with an alpha channel. After Effects graphics package on-screen with graphics, interstitials, etc.
 - Timed Text Files
 
-#### 8.1.1 Dailies archival
+##### 8.1.1 Dailies archival
 
 Dailies and all production assets should be kept for a minimum of 30 days after the receipt of all deliverables to Roku.
 

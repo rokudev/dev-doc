@@ -73,7 +73,7 @@ The alternative format adds the following tags to master playlists and image med
 
 ### Tag for master playlist
 
-#### EXT-X-IMAGE-STREAM-INF
+##### EXT-X-IMAGE-STREAM-INF
 
 The EXT-X-IMAGE-STREAM-INF tag identifies an Image Media Playlist file containing Images in a compressed graphic image format. It stands alone, in that it does not apply to a particular URI in the Master Playlist.
 
@@ -95,7 +95,7 @@ The EXT-X-IMAGE-STREAM-INF tag identifies an Image Media Playlist file containin
 
 ### Tags for image media playlist
 
-#### EXT-X-IMAGES-ONLY
+##### EXT-X-IMAGES-ONLY
 
 The EXT-X-IMAGES-ONLY tag indicates that each resource URI in an Image Media Playlist is an Image Resource. By default, each Image Resource describes a single Image in a compressed graphic image format. If an Image Archive tag is present in the Playlist, the next Image Resource MAY contain multiple Images and require additional information for timing and display. Therefore, the client MUST use processing logic specific to the Image Archive type to ensure proper display.
 
@@ -115,7 +115,7 @@ If an Image Resource is unavailable for the presentation, a placeholder Image Re
 
 The File Signature (magic number) of an Image Resource, including Images referenced using EXT-X-BYTERANGE, MUST be a valid expected value for at least one entry in the CODECS attribute of the EXT-X-IMAGE-STREAM-INF tag referencing the Image Media Playlist. For example, the expected File Signature of a JPEG Image is 0xFFD8.
 
-#### EXT-X-TILES
+##### EXT-X-TILES
 
 The EXT-X-TILES tag indicates the Image Resource is an Image Archive that contains one or more Images arranged in a Grid. A client processing the EXT-X-TILES tag MUST be capable of displaying individual Image Tiles using the Grid Sequence and Timing Model.
 
@@ -240,7 +240,7 @@ After the thumbnails manifest snippet(s) are generated, they should be entered i
 
 ### Example Playlists
 
-#### Master playlist sample 1
+##### Master playlist sample 1
 
 ```
 #EXTM3U
@@ -272,7 +272,7 @@ URI="sd-tn.m3u8"
 URI="hd-tn.m3u8"
 ```
 
-#### Master playlist sample 2
+##### Master playlist sample 2
 
 ```
 #EXTM3U
@@ -315,7 +315,7 @@ layer8/layer8_cl_0.m3u8
 #EXT-X-MEDIA:TYPE=CLOSED-CAPTIONS,GROUP-ID="cc1",LANGUAGE="en",NAME="English",DEFAULT=YES,AUTOSELECT=YES,INSTREAM-ID="CC1"
 ```
 
-#### VOD image media playlist sample 1a
+##### VOD image media playlist sample 1a
 
 ```
 #EXTM3U
@@ -380,7 +380,7 @@ content-39.jpg
 #EXT-X-ENDLIST
 ```
 
-#### VOD image media playlist sample 1b
+##### VOD image media playlist sample 1b
 
 ```
 #EXTM3U
@@ -433,7 +433,7 @@ credits_2_1.jpg
 #EXT-X-ENDLIST
 ```
 
-#### VOD image media playlist sample 2a
+##### VOD image media playlist sample 2a
 
 ```
 #EXTM3U
@@ -484,7 +484,7 @@ credits_2_1.jpg
 #EXT-X-ENDLIST
 ```
 
-#### VOD image media playlist sample 2b
+##### VOD image media playlist sample 2b
 
 ```
 #EXTM3U
@@ -535,7 +535,7 @@ credits_2_1.jpg
 #EXT-X-ENDLIST
 ```
 
-#### VOD image media playlist sample 2c
+##### VOD image media playlist sample 2c
 
 ```
 #EXTM3U
@@ -586,7 +586,7 @@ credits_2_1.jpg
 #EXT-X-ENDLIST
 ```
 
-#### Live image media playlist sample 1
+##### Live image media playlist sample 1
 
 ```
 #EXTM3U
@@ -629,7 +629,7 @@ content-130.jpg
 content-131.jpg
 ```
 
-#### ASSOC-LANGUAGE audio rendition attribute
+##### ASSOC-LANGUAGE audio rendition attribute
 
 As of [Roku OS 10.0](doc:release-notes#roku-os-100), the HLS **ASSOC-LANGUAGE** audio rendition attribute is supported. This optional attribute is used, for example, to specify that a particular rendition's audio, provided in a given spoken language dialect, is represented in forced subtitles by a different but associated language.
 

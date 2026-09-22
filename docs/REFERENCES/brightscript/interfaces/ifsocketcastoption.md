@@ -24,110 +24,110 @@ Only the [roDataGramSocket](doc:rodatagramsocket) component supports the ifSocke
 
 ### GetBroadcast() as Boolean
 
-#### Description
+##### Description
 
 Checks whether broadcast messages may be sent or received.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether broadcast messages may be sent or received.
 
 ### SetBroadcast(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables broadcast messages to be sent or received. 
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
 | enable | Boolean | A flag specifying whether broadcast messages may be sent or received. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation succeeded.
 
 ### JoinGroup(ipAddress as Object) as Boolean
 
-#### Description
+##### Description
 
 Joins a specific multicast group.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                                  |
 | --------- | ------ | ------------------------------------------------------------ |
 | ipAddress | Object | An [roSocketAddress](doc:rostreamsocket) representing the group to be joined. IPV4 multicast addresses are in the range of 224.0.0.0 through 239.255.255.255. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### DropGroup(ipAddress as Object) as Boolean
 
-#### Description
+##### Description
 
 Drops out of a specific multicast group.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                                  |
 | --------- | ------ | ------------------------------------------------------------ |
 | ipAddress | Object | An [roSocketAddress](doc:rostreamsocket) representing the group to leave. IPV4 multicast addresses are in the range of 224.0.0.0 through 239.255.255.255. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### GetMulticastLoop() as Boolean
 
-#### Description
+##### Description
 
 Checks whether multicast messages are enabled for local loopback.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether multicast messages are enabled for local loopback. If this flag is true, multicast message sent locally are to be received locally.
 
 ### SetMulticastLoop(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables local loopback of multicast messages.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
 | enable | Boolean | A flag specifying whether local loopback of multicast messages; otherwise do not send or receive broadcast messages. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether this operation was successful.
 
 ### GetMulticastTTL() as Integer
 
-#### Description
+##### Description
 
 Returns the TTL integer value for multicast messages. This is the number of hops a packet is allowed before a router drops the packet.
 
-#### Return Value
+##### Return Value
 
 The multicast messages value.
 
 ### SetMulticastTTL(ttl as Integer) as Boolean
 
-#### Description
+##### Description
 
 Sets the TTL integer value for multicast messages. 
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                                  |
 | ---- | ------- | ------------------------------------------------------------ |
 | ttl  | Integer | The number of hops a packet is allowed before a router drops the packet |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the TTL value was successfully set.

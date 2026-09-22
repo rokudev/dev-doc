@@ -1013,7 +1013,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
   </tbody></table>
 
-#### Automatic audio track selection
+##### Automatic audio track selection
 
 If multiple audio tracks are available for video content, the Roku OS automatically selects the best track based on the preferred audio track settings on the device (language, country code, and descriptive setting) and the quality of the audio track (bitrate/format).
 

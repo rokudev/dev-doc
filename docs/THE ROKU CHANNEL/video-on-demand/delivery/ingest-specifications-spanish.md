@@ -26,11 +26,11 @@ Roku prefiere los entregables de MovieLabs de todas las empresas socias de suscr
 
 Roku mostrará hasta 8 minutos de anuncios por hora de visualización. La política de anuncios de Roku está sujeta a cambios.
 
-#### Contenido financiado con anuncios en Roku Channel
+##### Contenido financiado con anuncios en Roku Channel
 
 Roku Channel busca contenido financiado con anuncios que sea adecuado para nuestras personas usuarias y anunciantes; por ejemplo, Roku Channel no quiere contenido financiado con anuncios con desnudez excesiva o violencia extrema o gráfica.  Utiliza el sentido común a la hora de compartir contenido. Si un activo te genera dudas, busca alguna opción alternativa para compartir. Nos reservamos el derecho a eliminar o rechazar cualquier contenido que consideremos inadecuado.
 
-#### Cortes publicitarios
+##### Cortes publicitarios
 
 Los códigos de tiempo de los cortes publicitarios se deben entregar en conformidad con la Política de anuncios de Roku en los nodos adBreak de los metadatos de la película, el episodio o el clip para activar los cortes publicitarios durante la reproducción en la plataforma. Los adBreaks deben proporcionarse con una precisión de milisegundos. Convierte cualquier valor de velocidad de fotogramas a su equivalente en milisegundos. Recomendamos incluir los adBreaks en los metadatos de ingesta, ya que así se acelerará el proceso de control de calidad. Todos los datos de adBreak deben suministrarse como HH:MM:SS.sss (por ejemplo, 01:23:45.678).
 
@@ -141,11 +141,11 @@ Las empresas socias pueden ayudar en la selección de su contenido en Roku Chann
 
 * Se prefieren archivos de nivel intermedio de alta calidad con la mayor tasa de bits y la mayor resolución posible.
 
-#### Velocidad de fotogramas del video
+##### Velocidad de fotogramas del video
 
 Roku admite una gran variedad de velocidades de fotogramas y tipos de escaneo. Todos los archivos de video deben entregarse con su velocidad de fotogramas y tipo de escaneo originales.
 
-#### Resolución de video
+##### Resolución de video
 
 | Tipo  | Ancho | Alto | Relación de aspecto de pixeles   |
 | ----- | ----- | ---- | -------------------------------- |
@@ -161,7 +161,7 @@ Roku admite una gran variedad de velocidades de fotogramas y tipos de escaneo. T
 
 _**La resolución UHD solo se admite como resolución de entrada. Actualmente, Roku no codifica ni muestra video en formato 4K UHD en Roku Channel._
 
-#### Formatos de video
+##### Formatos de video
 
 | Nombre        | Códecs                                                                                                     | Extensión | Tasa de bits                           |
 | ------------- | ---------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------- |
@@ -212,7 +212,7 @@ _La configuración de audio de los archivos debe ser la estándar de la industri
 
 El contenido que se entregue con audio en un idioma que no sea el principal del territorio de distribución debe entregarse con un archivo de doblaje de audio o subtítulos que traduzcan el contenido al idioma principal de ese territorio. Las pistas de audio secundarias pueden multiplexarse con el archivo de video entregable o entregarse en un único archivo de audio sidecar entrelazado. Todas las pistas de audio secundarias, ya sea que estén multiplexadas en el video o entregadas como un archivo sidecar entrelazado, deben entregarse como una mezcla de audio completa. Roku no admite pistas de doblaje que solo contengan diálogo.
 
-#### Audio secundario sidecar
+##### Audio secundario sidecar
 
 * El audio sidecar debe entregarse como un único archivo entrelazado. Roku no admite archivos discretos de un solo canal.
 * El audio sidecar debe sincronizarse con el archivo fuente de video que se entregó a Roku.
@@ -226,7 +226,7 @@ A continuación, se enumeran los formatos de audio sidecar compatibles. Entrega 
 | MPEG-1 Layer 3  | MP3          | .mp3      |
 | OGA             | Opus, Vorbis | .ogg      |
 
-#### Audio descriptivo
+##### Audio descriptivo
 
 El audio descriptivo es una pista de audio alternativa para las personas con discapacidad visual. Puedes consultar la documentación oficial de la FCC sobre descripción de audio en el siguiente enlace:
 
@@ -234,7 +234,7 @@ El audio descriptivo es una pista de audio alternativa para las personas con dis
 
 Roku prefiere recibir pistas de audio descriptivo siempre que sea posible. El material de audio descriptivo debe entregarse de acuerdo con las pautas indicadas en la sección anterior de [Entregables de audio secundario](#entregables-de-audio-secundario)
 
-#### Consejos para el diseño de los canales de audio
+##### Consejos para el diseño de los canales de audio
 
 En caso de que los archivos de video no puedan crearse para incluir etiquetas de canal de audio adecuadas, se debe proporcionar un consejo de diseño de audio en los metadatos para los archivos de video que se entreguen. A continuación, se definen los consejos disponibles.
 
@@ -325,7 +325,7 @@ _Solo se admiten los siguientes estilos de texto para los subtítulos:_
 
 Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se utilizará en una ubicación diferente dentro de Roku Channel. Roku prefiere recibir los tres tamaños de la ilustración, siempre que sea posible. Cada imagen debe entregarse en formato JPEG o PNG. Proporciona las imágenes en la resolución de imagen preferida de Roku para evitar retrasos en la publicación. Las imágenes _deben_ tener al menos la resolución mínima y _entregarse_ en la relación de aspecto _exacta_ definida para cada tipo de imagen.
 
-#### Definiciones de tipo de imagen
+##### Definiciones de tipo de imagen
 
 <Table align={["left","left","left","left","left","left"]}>
   <thead>
@@ -420,7 +420,7 @@ Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se uti
   </tbody>
 </Table>
 
-#### Requisitos de ilustración mínimos por tipo de contenido
+##### Requisitos de ilustración mínimos por tipo de contenido
 
 **Requisitos de ilustración para contenido de clips**
 
@@ -448,7 +448,7 @@ Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se uti
 | **Ilustración**                      | **Obligatorio o preferido** | **Notas**                                                                                                                                                                                                                                                |
 | Fondo en 16:9                        | Obligatorio                 | La imagen de los episodios puede estar en formato letterbox o pillarbox según el video fuente. Las imágenes en formato windowbox serán rechazadas. Las imágenes de los episodios deben ser únicas para cada episodio y representar el contenido de este. |
 
-#### Pautas de las ilustraciones de contenido
+##### Pautas de las ilustraciones de contenido
 
 * Arte clave (gráfico con el título completo del activo visible).
 * Sin ilustraciones explícitas ni violencia gráfica.
@@ -458,7 +458,7 @@ Roku admite tres tipos de imagen para cada contenido. Cada tipo de imagen se uti
 * Para el contenido de Roku Channel, Roku no aceptará ilustraciones de marca sin aprobación previa para ningún activo de video individual ni para entidades de temporadas o series.
 * No se permiten las llamadas a la acción (CTA) ni los enlaces a plataformas o sitios externos, y deben eliminarse del archivo de imagen antes de entregarlo a Roku.
 
-#### Ejemplo de ubicaciones de las ilustraciones en la plataforma
+##### Ejemplo de ubicaciones de las ilustraciones en la plataforma
 
 **Ilustraciones de películas: experiencia de navegación**
 
@@ -535,7 +535,7 @@ Roku proporcionará información sobre el host y el nombre de persona usuaria du
 **Aspera Client**
 [Descarga de Aspera Client](https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=ibm~Other%20software\&product=ibm/Other%20software/IBM%20Aspera%20Desktop%20Client\&release=All\&platform=All\&function=all)
 
-#### Ancho de banda de transferencia
+##### Ancho de banda de transferencia
 
 Roku recomienda verificar o actualizar las preferencias globales y de uso de Aspera Client para que se ajusten a tu ancho de banda de carga preferido. Ten en cuenta que Roku aplica un límite global de ancho de banda de 300 Mbps.
 
@@ -562,13 +562,13 @@ Según el cliente que se utilice, hay diferentes configuraciones que pueden afec
   * La plataforma de ingesta asume que los archivos multimedia a los que se hace referencia en los metadatos se encuentran en el mismo directorio que el archivo de metadatos. Por lo tanto, los metadatos deben entregarse en el mismo directorio que los archivos multimedia que contienen.
 * Las notificaciones de entrega pueden enviarse a [deliverynotifications@roku.com](mailto:deliverynotifications@roku.com)
 
-#### Conservación de archivos
+##### Conservación de archivos
 
 La ubicación de entrega es una ubicación temporal para que nuestras empresas socias carguen archivos para la ingesta en la biblioteca de contenido de Roku Channel. Tras completar la ingesta, la automatización moverá los archivos desde la ubicación de entrega hasta una ubicación de archivo en la que se almacenarán por tiempo indefinido. Se espera que todos los archivos cargados en la ubicación de entrega se ingieran en un plazo razonable que no supere los 30 días. Los metadatos válidos y completos deben entregarse poco después de la entrega de los archivos para garantizar la ingesta oportuna. Los archivos en la ubicación de entrega que no se hayan ingerido al cabo de 30 días están sujetos a eliminación.
 
 _Es posible hacer excepciones a la política de conservación de archivos para los archivos de la carpeta **`/testing`**_
 
-#### Denominación de archivos
+##### Denominación de archivos
 
 Los archivos de video fuente, subtítulos descriptivos e ilustraciones entregados para su ingesta deben cumplir las siguientes pautas:
 
@@ -643,7 +643,7 @@ El orden de entrega es importante. El servicio MovieLabs de Roku requerirá que 
 
 [Los archivos de video](#requisitos-de-video), [archivos de audio](#requisitos-de-audio), [archivos de subtítulos descriptivos](#subtítulos-descriptivos), [archivos de subtítulos](#subtítulos), [archivos de imágenes](#ilustraciones), [requisitos mínimos de metadatos](#metadatos-mínimos-requeridos-por-tipo-de-contenido), [géneros](#géneros) y [clasificaciones y fuentes de clasificación](#valores-de-clasificación-por-sistema-de-clasificación-y-país) deben adherirse a los formatos y requisitos compatibles definidos en esta especificación
 
-#### Tags
+##### Tags
 
 Las etiquetas para merchandising/curación se pueden enviar a través del nodo de palabras clave compatible con el XML de MovieLabs MEC. Consulte [el esquema MEC de MovieLabs](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link116) para la correcta colocación del nodo de palabra clave.
 
@@ -659,7 +659,7 @@ Las etiquetas para merchandising/curación se pueden enviar a través del nodo d
 </md:LocalizedInfo>
 ```
 
-#### IDs TMS
+##### IDs TMS
 
 Los TMS IDs de Gracenote se pueden enviar a través del XML de MovieLabs MEC como un identificador con el Namespace TMSID en el nodo AltIdentifier. Consulte [el esquema MEC de MovieLabs](https://movielabs.com/md/mec/v2.9/mdmec-v2.9/mdmec-v2.9.html#Link121) para conocer la estructura adecuada del nodo AltIdentifier
 
@@ -672,7 +672,7 @@ Ejemplo:
 </md:AltIdentifier>
 ```
 
-#### Entrega MMC XML adBreak and cuePoint
+##### Entrega MMC XML adBreak and cuePoint
 
 adBreak, intro credit, and end credit cuePoints pueden ser entregado en MovieLabs MMC XML in el nodo marcado, Por favor revise la siguiente información  [MovieLabs MMC Schema](https://movielabs.com/md/manifest/v1.10/manifest-v1.10/manifest-v1.10.html#Link184) para una apropiada estructura de los nodos de Markeres
 Ejemplo:

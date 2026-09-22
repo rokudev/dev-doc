@@ -85,7 +85,7 @@ These settings can be set in the Web GUI of your router. If this is not possible
 4. Start the **Sniffer tool** and launch your Roku application. Once you have stopped the recording, the file containing your recorded internet traffic will be exported to the file path displayed in the Sniffer window (In this case /var/tmp).
 5. Launch **Wireshark** and open the cap file exported from your **Sniffer tool**.
 
-#### Tcpdump
+##### Tcpdump
 
 1. The previous method can also be viewed using **tcpdump**.
 2. After going through steps 1 through 4 in the section above, you can open the cap file.

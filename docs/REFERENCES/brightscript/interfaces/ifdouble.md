@@ -26,21 +26,21 @@ next:
 
 ### GetDouble() As Double
 
-#### Description
+##### Description
 
 Gets the double value stored in the calling Double object. 
 
-#### Return Value
+##### Return Value
 
 The double value stored in the calling Double object. 
 
 ### SetDouble(value As Double) As Void
 
-#### Description
+##### Description
 
 Sets the calling Double object to the specified double value. 
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                              |
 | ----- | ------ | -------------------------------------------------------- |

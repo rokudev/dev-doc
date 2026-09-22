@@ -94,7 +94,7 @@ Each of the commands starts a sequence of actions associated with the financial 
   </tbody>
 </table>
 
-#### Sign-up example
+##### Sign-up example
 
 ```brightscript
 store = CreateObject("roSGNode", "ChannelStore")
@@ -110,7 +110,7 @@ store.command = "getUserData"
  phone = m.store.userData.phone
 ```
 
-#### Sign-in example
+##### Sign-in example
 
 ```brightscript
 store = CreateObject("roSGNode", "ChannelStore")
@@ -174,7 +174,7 @@ store.command = "getUserData"
   </tbody>
 </table>
 
-#### Creating an order
+##### Creating an order
 
 To create an order, this field needs to be set to a ContentNode that has one child ContentNode for each item to be purchased. There are two approaches to setting the `order` field: setting it directly, or setting the `deltaOrder` field.
 
@@ -222,7 +222,7 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
   </tbody>
 </table>
 
-#### requestPartnerOrder
+##### requestPartnerOrder
 
 > See [Creating TVOD apps](/dev/docs/tvod-channel) for how to use this field for transactional purchases.
 
@@ -247,7 +247,7 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
   </tbody>
 </table>
 
-#### confirmPartnerOrder
+##### confirmPartnerOrder
 
 > See [Creating TVOD apps](/dev/docs/tvod-channel) for how to use this field for transactional purchases.
 
@@ -272,43 +272,43 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
   </tbody>
 </table>
 
-#### orderStatus
+##### orderStatus
 
 | Field       | Type        | Default | Access Permission | Description                                                  |
 | ----------- | ----------- | ------- | ----------------- | ------------------------------------------------------------ |
 | orderStatus | ContentNode | invalid | READ_WRITE        | Contains the results of the [**doOrder**](#doorder) command. |
 
-#### purchases
+##### purchases
 
 | Field     | Type        | Default | Access Permission | Description                                                                                                     |
 | --------- | ----------- | ------- | ----------------- | --------------------------------------------------------------------------------------------------------------- |
 | purchases | ContentNode | invalid | READ_WRITE        | Contains the results of a [**getPurchases**](#getpurchases) or [**getAllPurchases**](#getallpurchases) command. |
 
-#### catalog
+##### catalog
 
 | Field   | Type        | Default | Access Permission | Description                                                      |
 | ------- | ----------- | ------- | ----------------- | ---------------------------------------------------------------- |
 | catalog | ContentNode | invalid | READ_WRITE        | Contains the results of a [**getCatalog**](#getcatalog) command. |
 
-#### storeCatalog
+##### storeCatalog
 
 | Field        | Type        | Default | Access Permission | Description                                                                |
 | ------------ | ----------- | ------- | ----------------- | -------------------------------------------------------------------------- |
 | storeCatalog | ContentNode | invalid | READ_WRITE        | Contains the results of a [**getStoreCatalog**](#getstorecatalog) command. |
 
-#### requestPartnerOrderStatus
+##### requestPartnerOrderStatus
 
 | Field                     | Type        | Default | Access Permission | Description                                                                        |
 | ------------------------- | ----------- | ------- | ----------------- | ---------------------------------------------------------------------------------- |
 | requestPartnerOrderStatus | ContentNode | invalid | READ_WRITE        | Contains the results of a [**requestPartnerOrder**](#requestpartnerorder) command. |
 
-#### confirmPartnerOrderStatus
+##### confirmPartnerOrderStatus
 
 | Field                     | Type        | Default | Access Permission | Description                                                                        |
 | ------------------------- | ----------- | ------- | ----------------- | ---------------------------------------------------------------------------------- |
 | confirmPartnerOrderStatus | ContentNode | invalid | READ_WRITE        | Contains the results of a [**confirmPartnerOrder**](#confirmpartnerorder) command. |
 
-#### fakeServer
+##### fakeServer
 
 <table>
   <thead>
@@ -1013,7 +1013,7 @@ Roku's Channel Store generic request framework enables developers to pass the Ch
 
 This API is available for both SceneGraph (SDK 2) and BrightScript (SDK 1).
 
-#### request
+##### request
 
 <table>
 <thead>
@@ -1077,7 +1077,7 @@ This API is available for both SceneGraph (SDK 2) and BrightScript (SDK 1).
 </table>
 
 
-#### requestStatus
+##### requestStatus
 
 <table>
 <thead>

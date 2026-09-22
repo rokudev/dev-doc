@@ -25,11 +25,11 @@ next:
 
 ### Say(text as String, flushSpeech as Boolean, dontRepeat as Boolean) as Integer
 
-#### Description
+##### Description
 
 Returns an ID for the spoken string to notify observer callbacks about a specific spoken string. This ID can be used with the [roTextToSpeechEvent](doc:rotexttospeechevent).<br /><br />This method will automatically split up text to reduce lag. Due to this automatic splitting, the roTextToSpeechEvent 0 ("Started speech") event for the returned ID may not be sent until later than expected. The roTextToSpeechEvents 1 ("Speech has completed") and 2 ("Speech has been flushed") events are sent at the expected times.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type    | Description                                                  |
 | ----------- | ------- | ------------------------------------------------------------ |
@@ -37,13 +37,13 @@ Returns an ID for the spoken string to notify observer callbacks about a specifi
 | flushSpeech | Boolean | Set to true to make the screen reader immediately stop speaking any other speech before speaking. <br /><br />Set to false to make the screen reader wait until any current speech is done before speaking. |
 | dontRepeat  | Boolean | Set to true to ignore calls to the say() method with the same text.<br /><br />Set to false to speak when calls to the say() method are sent with the same text. |
 
-#### Return Value
+##### Return Value
 
 An ID associated with the spoken string to be used to notify observer callbacks.
 
 ### Flush()
 
-#### Description
+##### Description
 
 Interrupts and stops any current text to speech spoken string, to be used when the application does not want the text to speech to continue.
 
@@ -51,16 +51,16 @@ Interrupts and stops any current text to speech spoken string, to be used when t
 
 ### Silence(duration as Integer) as Integer
 
-#### Description
+##### Description
 
 If the screen reader is enabled, causes text to speech to continue to suppress any application background sound for the amount of time specified by duration (in milliseconds).<br /><br />This can be used to add clarity for longer spoken text that may have pauses that might otherwise allow application background sound to be heard. This method does nothing if screen reader is currently disabled.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description                                                  |
 | -------- | ------- | ------------------------------------------------------------ |
 | duration | Integer | The number of milliseconds to suppress application background sounds. |
 
-#### Return Value
+##### Return Value
 
 The number of milliseconds that the background sound has been silenced.

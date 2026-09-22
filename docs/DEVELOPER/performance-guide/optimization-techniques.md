@@ -32,7 +32,7 @@ When accessing fields on an SG node, either for read or write, the data will be 
 
 For example, accessing a 5.6MB AA can take hundreds of milliseconds. If this copy happens inside a rendezvous observer, the render thread may skip frames during animation.
 
-#### Copying Nodes
+##### Copying Nodes
 
 When copying nodes, do not simply call:
 
@@ -50,11 +50,11 @@ function cloneNode(oldNode as Object) as Object
 end function
 ```
 
-#### ContentNode vs. associative arrays
+##### ContentNode vs. associative arrays
 
 Use [ContentNode](doc:contentnode) fields to represent complex trees of nested data that are expensive to copy, since they will be passed by reference. Use associative arrays to store small, shallow data structs. Associative arrays will be deep-copied through fields (pass-by-value) and has the advantage of keeping parallelization safer and more efficient.
 
-#### Avoiding onChange in Task threads
+##### Avoiding onChange in Task threads
 
 If you'd like a Task node to execute a function in response to a field change, use the overloaded version of [**observeField()**](doc:ifsgnodedict) to send an roSGNodeEvent to your message port. Do this instead of setting **onChange** in the field you want to watch. While this is certainly not necessary, it might improve visual performance since onChange is usually executed on the render thread.
 

@@ -91,7 +91,7 @@ After watching this video, publishers can complete the initial requirements and 
 
 [Roku Streaming Store](https://channelstore.roku.com/)
 
-#### Attribution for statistics displayed in video
+##### Attribution for statistics displayed in video
 
 * **Roku OS is the number one smart TV OS sold in the U.S. and Canada**: Source, US & Canada: The NPD Group, Inc., Weekly Retail Tracking Service, U.S. & Canada, LCD TV, Software Service Name, Smart TV: Web Browser Only, Apps and Web Browser, Apps Only, based on unit share, Jan. 5, 2020 – Dec. 26, 2020 combined.
 * **57% US households have shaved, cut, or never had Pay TV:** Source, Roku Cord Cutting survey. Survey was conducted by MACRO Consulting, Inc. on behalf of Roku Inc. 7,000 Americans ages 18 and over were surveyed in March 2020 about their TV household, followed by 2,000 Americans ages 18 and over in May 2020 to understand changes amidst the COVID-19 pandemic.

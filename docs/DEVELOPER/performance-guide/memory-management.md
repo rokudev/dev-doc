@@ -50,7 +50,7 @@ larger images.
 
 ### How to avoid going over memory limits
 
-#### Make images smaller
+##### Make images smaller
 
 The simplest solution\! If you're planning on displaying an image on a
 200x200 Poster node, don't load in and render a 1920x1080 image. It will
@@ -61,7 +61,7 @@ quick calculation puts a 1920x1080 image at using a whopping
 loadHeight fields of a Poster node would be an equivalent solution to
 resizing the images themselves.
 
-#### Use minimalistic item renderers
+##### Use minimalistic item renderers
 
 The fewer elements, the better.
 Use [Rectangle](doc:rectangle) nodes,

@@ -256,7 +256,7 @@ tab.
 
 ![roku815px - bsprofilerMemoryTab](https://image.roku.com/ZHZscHItMTc2/bsprofilerMemoryTab.png "bsprofilerMemoryTab")
 
-#### Line-Level profiling
+##### Line-Level profiling
 
 You can collect profile data for each line of BrightScript source code
 to better pinpoint high CPU and memory usage. To do this, enable
@@ -278,7 +278,7 @@ See [Profiling Values](#profiling-values) for
 more information on the CPU and memory statistics displayed in the
 tool.
 
-#### Profiling Values
+##### Profiling Values
 
 The following table describes the profile statistics displayed in the
 BrightScript profiler tool. The descriptions are applicable for the

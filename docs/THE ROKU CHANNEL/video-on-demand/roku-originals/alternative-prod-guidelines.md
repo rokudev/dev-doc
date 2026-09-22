@@ -24,12 +24,12 @@ We look forward to working with you! You should have received a “Welcome to Ro
 
 ### 2.1 Production kick-off documents
 
-#### 2.1.1 Alternative production guidelines
+##### 2.1.1 Alternative production guidelines
 
 * Roku production document for alternative & documentary series – document you are currently reading
 * Located on the Roku Deliverables Hub (Hub) in the Production - Alternative folder
 
-#### 2.1.2 Alternative media delivery specifications
+##### 2.1.2 Alternative media delivery specifications
 
 * Roku Alternative Hour-Long Delivery Specifications
 * Roku Alternative Half-Hour Long Delivery Specifications
@@ -39,7 +39,7 @@ We look forward to working with you! You should have received a “Welcome to Ro
   * Roku technical specifications for alternative series
   * Located on the Roku Deliverables Hub (Hub) in the Post - Alternative folder
 
-#### 2.1.3 Alternative production legal guidelines
+##### 2.1.3 Alternative production legal guidelines
 
 * Roku Production Legal guidelines when creating content for exhibition on Roku
 
@@ -144,13 +144,13 @@ In the event of any non-emergency incident (property/location damage, equipment 
 
 Roku Production looks forward to partnering with you to ensure delivery of the best content to The Roku Channel. Below are some guidelines to assist with budgeting, scheduling and cost reporting for your project. Please reach out to Roku Production with any questions.
 
-#### 4.1.1 Chart of accounts (COA)
+##### 4.1.1 Chart of accounts (COA)
 
 Please reach out to Roku Production for the Roku COA template when you are ready to begin budgeting for your project. The COA is to be used throughout the lifecycle of the project: i.e., subsequent budget revisions and all Cost Reports, Variance Reports, General Ledgers, etc.
 
 The COA template is provided in movie magic budgeting format.
 
-#### 4.1.2 Assumptions page
+##### 4.1.2 Assumptions page
 
 Please reach out to Roku Production to provide the Roku Assumptions Template. Please make sure the following information, when applicable, is included on the assumptions page:
 
@@ -183,7 +183,7 @@ Please reach out to Roku Production to provide the Roku Assumptions Template. Pl
 * List “Roku Alternative Media Delivery Specifications” version & date
 * List “Roku Alternative Production Guidelines” (this document) version & date
 
-#### 4.1.3 Budget requirements
+##### 4.1.3 Budget requirements
 
 Roku Production asks that the following information, when applicable, be included/considered when budgeting:
 
@@ -242,13 +242,13 @@ Roku Production asks that the following information, when applicable, be include
 
 * For each budget revision please be sure to note the date, version and bullet point relevant changes in the body of the email
 
-#### 4.1.4 Foreign exchange rate (aka FX)
+##### 4.1.4 Foreign exchange rate (aka FX)
 
 If shooting in a location outside of the United States please be sure to note what foreign exchange rate you have assumed in your budget.
 
 * Partner is responsible for noting the FX on the top of the budget top sheet as well as the assumptions.
 
-#### 4.1.5 Tax incentives
+##### 4.1.5 Tax incentives
 
 If shooting in a location in which a tax incentive or rebate is accessible, please be mindful of the below:
 
@@ -276,17 +276,17 @@ If shooting in a location in which a tax incentive or rebate is accessible, plea
   * Please reflect all VAT tax in the Cost Report and flag those costs the General Ledger within the naming convention “VAT”
   * Please review the Roku Credit Requirements per the Roku Media Delivery Specifications prior to agreeing to any embedded logo credit related to receiving tax credits or incentive uplift
 
-#### 4.1.6 Guild and union affiliation(s)
+##### 4.1.6 Guild and union affiliation(s)
 
 Email Roku Production and Roku Legal prior to engaging with the guild(s) / union(s).
 
-#### 4.1.7 Agency package fee
+##### 4.1.7 Agency package fee
 
 When applicable, please include an Agency Package Fee within the production budget.
 
 * Alternative & Documentary Package Fees should be calculated at 3% of the 80% total budget, unless otherwise noted by Roku Business Affairs.
 
-#### 4.1.8 Unapproved budgetary line items
+##### 4.1.8 Unapproved budgetary line items
 
 Roku does not typically allow the following examples, or similar, to be included as line items in Approved Budgets:
 
@@ -302,7 +302,7 @@ Roku does not typically allow the following examples, or similar, to be included
 * Advanced financing interest, loans, etc.
 * All expenses related to the program beyond Roku delivery and exhibition
 
-#### 4.1.9 Approved budget
+##### 4.1.9 Approved budget
 
 All Conditions Precedent and required certificates of insurance (e.g., General Liability, Errors & Omissions) must be fulfilled prior to the official Greenlight/Budget Approval being issued. Additionally, prior to Roku Production sending the official Greenlight / Budget approval, Roku requires a final budget packet to review. The packet should consist of the following items:
 
@@ -324,7 +324,7 @@ Revised calendars are required whenever there is a schedule adjustment. Please u
 * In the body of the email that comes with calendar revisions, bullet point relevant changes to current calendar. Roku Production will review and confirm via email if approved.
 * Master delivery dates cannot shift without **<u>written</u>** approval by Roku Production and Post
 
-#### 4.2.1 Calendar requirements
+##### 4.2.1 Calendar requirements
 
 Your calendar should cover all phases of production (i.e., casting, pre-production, physical production, post, QC and final delivery) and include key dates, as applicable, for the following:
 
@@ -343,7 +343,7 @@ Your calendar should cover all phases of production (i.e., casting, pre-producti
   * Please be sure to build time into your delivery schedule to account for the Roku QC process. Roku advises that you set aside two weeks for each episode to complete QC of all masters.
   * Roku Post will provide a list of approved QC vendors
 
-#### 4.2.2 Game play/table reads/blocking/rehearsal
+##### 4.2.2 Game play/table reads/blocking/rehearsal
 
 * If applicable, Roku requests game play, table reads, and blocking rehearsal for our content
 * Typically, game play is a full run-through to time of the game or challenge course to determine the course, camera positioning, and coverage
@@ -352,7 +352,7 @@ Your calendar should cover all phases of production (i.e., casting, pre-producti
 * Please reach out to Roku Production for an invitation list to game play, table reads and / or rehearsal
 * Please provide a dial-in/video conference line for Roku representatives who may not be able to attend the table read in-person
 
-#### 4.2.3 Camera test milestone
+##### 4.2.3 Camera test milestone
 
 * The Director, Director of Photography and/or producing team should oversee the camera test
 * Please provide scratch framing mocks or test storyboard compositions
@@ -360,7 +360,7 @@ Your calendar should cover all phases of production (i.e., casting, pre-producti
   * Ideally this is sent prior to commencement of principal photography. If that isn’t possible, within the first two days of shooting or rehearsal
 * Your Roku Post Manager will create a specific folder via [Frame.io](http://frame.io/) for uploading the camera test
 
-#### 4.2.4 Production meetings/rehearsals/tech scouts
+##### 4.2.4 Production meetings/rehearsals/tech scouts
 
 Roku Production will attend in person or via dial-in. It is asked that a phone dial-in be made available, for all attending Roku departments.
 
@@ -425,7 +425,7 @@ Roku follows the guidance of the AMPTP and local regulations when it comes to Co
   * Include invoice due dates, percentage, and amounts
 * If applicable, Production Company Fee, Breakage, and Residuals/Buyouts can be listed, but should not roll up into the total milestone payments
 
-#### 5.1.1 Payment descriptions
+##### 5.1.1 Payment descriptions
 
 Possible payment milestones and when to submit invoices for processing listed below:
 
@@ -433,7 +433,7 @@ Possible payment milestones and when to submit invoices for processing listed be
 * *Production Company Fee – Invoice due upon receipt and approval of all Paper Deliverables and Final Cost Report
 * Audit - Reference closed project deal terms for audit language
 
-#### 5.1.2 Invoices
+##### 5.1.2 Invoices
 
 All invoices should be sent via email to [roinvoices@roku.com](mailto:roinvoices@roku.com)
 
@@ -602,7 +602,7 @@ The Roku Production Legal Guidelines will cover the topics listed below. You can
 
 We rely on our production Partners to acquire the appropriate coverage as deemed necessary for each production. When binding coverage please ensure it satisfies all of Roku’s insurance requirements with the exception of Workers’ Compensation/Employer’s Liability, Owned Automobile, Guild Travel Accident (if your production is union) and any local foreign compulsory coverage(s) (such as auto liability) which are collectively the responsibility of the production company.
 
-#### 6.2.1 Certificates of insurance
+##### 6.2.1 Certificates of insurance
 
 Certificates of Insurance should be bound and sent to Roku Production / Production Legal prior to the commencement of any production activities.
 
@@ -678,7 +678,7 @@ Productions should be uploading documents to the Hub on an ongoing basis through
 
 Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post and Production Legal. Please be aware, this list is subject to amendment (within reason) at any time. Make sure to follow specific instructions for each document and upload accordingly. Please note other departments may have additional required deliverables.
 
-#### 8.1.1 Production
+##### 8.1.1 Production
 
 * Call Sheets & Maps (upload at the same time as distribution to crew)
 * Cast Lists (all approved and final versions) (If applicable)
@@ -696,7 +696,7 @@ Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post
 * Trade-Out Request Form
 * Trade-Out Grid
 
-#### 8.1.2 Post
+##### 8.1.2 Post
 
 * Post Calendar (all approved and final versions)
 * As Broadcast Scripts
@@ -712,7 +712,7 @@ Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post
 * Text Spotting List (TSL)
 * Segment Rundown
 
-#### 8.1.3 Production legal
+##### 8.1.3 Production legal
 
 * Ad/Promo Restrictions
 * Fair Use Grid (if applicable)
@@ -727,7 +727,7 @@ Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post
 * Guild & Union Documentation (if applicable)
 * Employment Agreements
 
-#### 8.1.4 Public relations/marketing
+##### 8.1.4 Public relations/marketing
 
 * Approved Bios
 * Still Photography
@@ -752,7 +752,7 @@ If items are not delivered correctly, they will not be accepted. Please do not a
 
 There is a “Guidelines & Templates'” section located on the Roku Deliverables Hub. Here you will find folders containing key documents in relation to each department (Production Legal, Post, Production). 
 
-#### 8.4.1 Post – alternative folder
+##### 8.4.1 Post – alternative folder
 
 * Alternative Media Delivery Specs
 * Credits Approval Form
@@ -763,13 +763,13 @@ There is a “Guidelines & Templates'” section located on the Roku Deliverable
 * Segment Rundown
 * Text Spotting List
 
-#### 8.4.2 Production legal – alternative folder
+##### 8.4.2 Production legal – alternative folder
 
 * Ad Promo Template
 * Insurance Guidelines
 * Music Cue Sheet Template
 
-#### 8.4.3 Production – alternative folder
+##### 8.4.3 Production – alternative folder
 
 * Alternative Production Guidelines
 * Chart of accounts (COA)

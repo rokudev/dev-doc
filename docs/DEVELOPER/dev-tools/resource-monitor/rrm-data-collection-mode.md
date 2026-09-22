@@ -50,10 +50,10 @@ You can add RRM in a Docker image and run data collection mode.
 
 The following Dockerfile creates a containerized environment for running the Roku Resource Monitor (RRM).
 
-#### Build Command:
+##### Build Command:
 `docker build -t rrm:latest .`
 
-#### Run Command:
+##### Run Command:
 `docker run --shm-size=2g -v [docker host output dir]:/output --env-file=[env file path] rrm:latest`
 
 ```bash
@@ -202,13 +202,13 @@ POLLING_INTERVAL: "5"
 
 Configure your environment variables and local output directory directly in the **docker-compose.yml** file. Alternatively, you can use an environment file (with matching variable names) when running the container using the docker run command.
 
-#### Docker Compose usage
+##### Docker Compose usage
 
 ```bash
 docker compose up --build
 ```
 
-#### Docker usage
+##### Docker usage
 
 ```bash
 docker build -t roku-resource-monitor:latest . docker run --shm-size=2g -v [docker host output dir]:/output --env-file=[env file path] roku-resource-monitor

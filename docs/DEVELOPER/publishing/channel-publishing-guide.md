@@ -32,7 +32,7 @@ Beta apps are a special app type designed specifically to enable you to test you
 
 A beta app allows the developer to instantly revise an app for test users to try out. You just create the app and upload your package. You can then provide the app access code to your selected group of beta test users so that they can install and QA test your app. No certification testing is required for beta apps.
 
-#### Beta app rules
+##### Beta app rules
 
 Beta app usage is **limited** to its intended purpose of quality assurance, as follows:
 
@@ -46,7 +46,7 @@ Beta app usage is **limited** to its intended purpose of quality assurance, as f
 
 * **20 users.** You can have up to 20 beta test users per beta app at any given time.
 
-#### Beta apps vs. public apps
+##### Beta apps vs. public apps
 
 Additional differences between beta and public apps are summarized as follows:
 
@@ -58,7 +58,7 @@ Additional differences between beta and public apps are summarized as follows:
 | **Access Code**           | **Immediately usable.** You send your beta test users an access code that allows them to install your test app on their Roku device.                                                                                                | **After publication.** The vanity access code you chose during app creation can be given to anyone to do a quick public app installation.    |
 | **Streaming Store**       | **Not available.** Beta apps are not available for installation through the Streaming Store, or discoverable via Roku Search.                                                                                                       | **Available.** Published public apps are always available for installation through the Streaming Store and are discoverable via Roku Search. |
 
-#### Creating a beta app
+##### Creating a beta app
 
 To create and start testing a beta app, you will need to:
 
@@ -638,7 +638,7 @@ Once your public app has passed [Static Analysis](doc:static-analysis-tool) an
 
 The following section summarizes when updates to the Streaming Store, Roku Search, and other platform features are propagated once a public app has been published or updated.
 
-#### Streaming Store categories
+##### Streaming Store categories
 
 After an app is published, it may be tagged with one or more categories. This includes the category selected and any other Roku-applied tags such as "New & Updated" or "Recommended"
 
@@ -648,7 +648,7 @@ If the category is changed and the app is re-published, it takes approximately 5
 
 For Roku-curated categories (for example, Featured Free), the app is typically visible after 5 minutes.
 
-#### Other Streaming Store updates
+##### Other Streaming Store updates
 
 The following items take approximately 5 minutes to be updated in the Streaming Store after the app is re-published:
 
@@ -662,11 +662,11 @@ The following items take approximately 5 minutes to be updated in the Streaming 
 
 * App removed from Roku Streaming Store after it has been deleted.
 
-#### Roku Search
+##### Roku Search
 
 Apps and their individual content items are typically added to Roku Search within 24 hours of the app being published.
 
-#### Device installation
+##### Device installation
 
 Once a public app is published to the Streaming Store, it is available for installation on Roku devices immediately using the app's vanity access code, which is specified in the [Properties window](#app-properties). To get the latest version of the app, users can do a System Update (Home > Settings > System > System update > Check now) or update the individual app (press the options key [*] on the app tile > Check for updates).
 

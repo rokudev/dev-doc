@@ -22,7 +22,7 @@ Checks whether video playback was paused by the user. This method returns true i
 
 Checks whether the video player is about to start playing a new item in the content list. This method returns true if a new item in the content list was selected; otherwise, it returns false.
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the index of the item that is about to start playing.
 
@@ -32,11 +32,11 @@ Checks whether an event has been fired when the format of all tracks in the medi
 
 Specific information about the event can be obtained by calling the GetMessages() and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a description of the message (for example, "Format Detected").
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns information about the video player event. This method returns an roAssociativeArray that contains the following keys:
 
@@ -52,11 +52,11 @@ Checks whether video playback has failed. This method returns true if video play
 
 Specific information about the event can be obtained by calling the GetMessage(), GetIndex(), and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a description of the message (for example, "Segment download started").
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the error ID, which may be one of the following values:
 
@@ -70,7 +70,7 @@ Returns the error ID, which may be one of the following values:
 | -5    | Media error; the media format is unknown or unsupported                                                  |
 | -6    | DRM error                                                                                                |
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array containing information about the event failure. The associative array contains the following key-value pairs:
 
@@ -85,11 +85,11 @@ Checks whether the individual segments in an HLS or smooth stream are about to b
 
 Specific information about the event can be obtained by calling the GetMessages() and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a description of the message (for example, "Segment download started").
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array containing the following information about the segment download event:
 
@@ -104,11 +104,11 @@ Returns an associative array containing the following information about the segm
 
 Checks whether the video stream has started playing. This method returns true if the video stream has started playing; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetIndex() and GetInfo() methods on the event.
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the segment sequence number.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array containing the following information about the stream started event:
 
@@ -123,7 +123,7 @@ Returns an associative array containing the following information about the stre
 
 Checks whether status information or other diagnostic message is available. This method returns true if status information or  diagnostic message is available; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage() method on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns status information or other diagnostic message, which may be one of the following:
 
@@ -145,11 +145,11 @@ Checks whether video playback has resumed. This method returns true if video pla
 
 Checks whether closed caption mode or track has been changed by the user. This method returns true if closed caption mode or track has been changed by the user; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex(), and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a caption track name, such as: "eia608/1" ,"eia608/3", and so on.
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the index of the captions mode, which may be one of the following values:
 
@@ -159,13 +159,13 @@ Returns the index of the captions mode, which may be one of the following values
 | 1     | On             |
 | 2     | Instant replay |
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 | Name    | Return Type | Return Value | Description                         |
 | ------- | ----------- | ------------ | ----------------------------------- |
 | GetInfo | Object      | Invalid      | This method always returns invalid. |
 
-#### Example: isCaptionModeChanged() Event
+##### Example: isCaptionModeChanged() Event
 
 ```brightscript
 function showVideoScreen(episode as Object)
@@ -201,11 +201,11 @@ All timed metadata is released after it is delivered to the BrightScript app.  I
 
 This method returns true if an ID3 timecode has passed; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex(), and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns the string "Timed Metadata".
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the PTS timecode.
 
@@ -213,7 +213,7 @@ Returns the PTS timecode.
 | -------- | ----------- | ------------- | ----------- |
 | GetIndex | Integer     | PTS timecode. |             |
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array with timedMetadata at the PTS timecode specified in the index.
 
@@ -238,15 +238,15 @@ Returns an roAssociativeArray array with the following key-value pairs:
 
 Checks whether playback has begun of a segment in an HLS, DASH, or smooth stream. This method returns true if the playback of a segment in an HLS, DASH, or smooth stream has begun; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex() and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a description of the message (for example, "Stream segment info").
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the segment start time in seconds.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array with the following information about the stream segment:
 

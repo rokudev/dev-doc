@@ -20,7 +20,7 @@ The LabelBase node is an abstract base class for the [**Label**](doc:label) and 
 
 The LabelBase node uses the horizAlign and vertAlign fields to allow you to position the rendered text relative to a specified bounding rectangle.
 
-#### Horizontal Alignment
+##### Horizontal Alignment
 
 The horizAlign field allows you to position text horizontally relative to the computed width of the label. The computed width is determined in one of two ways:
 
@@ -40,7 +40,7 @@ There are three possible values for the horizAlign field:
 
 > If the width field is equal to zero, a single line of text will be rendered (see [Wrapping](#wrapping-text) for more details). In that case, all three values of the horizAlign field have the same result, since the computed width equals the rendered width of the text.
 
-#### Vertical Alignment
+##### Vertical Alignment
 
 The vertAlign field allows you to position text vertically relative to the computed height of the label. The computed height is determined in one of four ways, which in some cases depend on the values set in the numLines and maxLines fields:
 
@@ -65,7 +65,7 @@ There are three possible values for the vertAlign field:
 
 Note that if the computed height equals the actual height of the rendered text (such as when the height and numLines field values are both zero), all three values of the vertAlign field have the same result, since the computed height equals the rendered height of the text.
 
-#### Text Alignment Example
+##### Text Alignment Example
 
 The following image shows a Rectangle node with a width of 1000 pixels and a height of 500 pixels. The Rectangle node has nine Label child nodes. Each Label child node has its width field value set to 1000 and its height field value set to 500. All nine combinations of the horizAlign and vertAlign fields are used to position the labels relative to the 1000x500 bounding rectangle.
 

@@ -71,7 +71,7 @@ To provide additional support for Roku's **Kid & Teen Mode**, the Roku OS includ
 
 The [**roUserInfo.GetCurrentProfile()**](doc:ifuserinfo#getcurrentprofile-as-object) and [**roProfile.GetProfileType()**](doc:ifprofile#getprofiletype-as-string) functions enable you to get the current active profile and then get the profile type that launched the app (kids, teen, adult, or none). These functions are available since [Roku OS 16.0](doc:release-notes#roku-os-160); on earlier versions, `CreateObject("roUserInfo")` returns `invalid`.
 
-#### roUserInfo
+##### roUserInfo
 
 The [`roUserInfo`](doc:rouserinfo) component provides access to the current active profile snapshot. Its interface includes a `GetCurrentProfile()` function.
 
@@ -94,7 +94,7 @@ if userInfo <> invalid
 end if
 ```
 
-#### roProfile
+##### roProfile
 
 The [`roProfile`](doc:roprofile) component represents the user profile object returned by the `roUserInfo.GetCurrentProfile()` function. Its interface provides methods for retrieving the profile type.
 

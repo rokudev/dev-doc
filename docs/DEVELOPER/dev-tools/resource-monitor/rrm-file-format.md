@@ -99,7 +99,7 @@ The **metadata** object contains the following fields that provide information a
 
 The **session** object contains the static memory usage limits of the test app and the live resource usage statistics generated during the monitoring session.
 
-#### Static object
+##### Static object
 
 The **static** object contains the following persistent data:
 
@@ -128,7 +128,7 @@ The **static** object contains the following persistent data:
   </tbody>
 </table>
 
-#### Live
+##### Live
 
 The **live** object contains the following objects for the resource usage statistics generated during the monitoring session:
 

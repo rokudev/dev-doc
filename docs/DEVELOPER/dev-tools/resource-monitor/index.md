@@ -238,13 +238,13 @@ You can click the **Thread/Object configuration** setting, manually select up to
 
 ![roku815px - rrm4-brs-objects](https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects.png)
 
-#### Filtering objects by threads
+##### Filtering objects by threads
 
 You can select the **Thread/Object configuration** setting to monitor the memory consumption of the task threads in your app. When you select this setting, the **Threads** tab lists the various task threads in your app, the number of objectinstances in each thread or the amount of memory consumed by each one, and the percentage of the count/memory to the total group (the **Count**/**Memory** option selected in the graph determines which metric is used in the table). Select one or more check boxes for the task threads to be plotted on the graph and then click **Save**. This enables you to prioritize which threads to optimize and helps you identify how consumptive any 3rd-party libraries in your app are.
 
 ![roku600px - rrm4-brs-objects-filtering-threads](https://image.roku.com/ZHZscHItMTc2/rrm4-brs-objects-filtering-threads.png)
 
-#### Selecting BrightScript objects to be monitored
+##### Selecting BrightScript objects to be monitored
 
 You can click the **Objects** tab to list all the BrightScript objects used by the app and their counts/memory usage. You can sort the table alphabetically or by count. You can click the copy icon in the upper right-hand corner of the dialog and paste the data to a text file or other document.
 
@@ -266,7 +266,7 @@ Each of the values listed in the graph is described as follows:
 | Count            | The number of thread rendezvous events on the app.                                                                                                                               |
 | Drop-count       | The number of rendezvous events that were dropped because the event queue was full. This value is only displayed on the graph; it is not listed in the metrics pane on the left. |
 
-#### Viewing rendezvous details
+##### Viewing rendezvous details
 
 You can click on a rendezvous (denoted with a red dot on the graph) to view the timestamp of the event and the following details:
 
@@ -283,13 +283,13 @@ You can click on a rendezvous (denoted with a red dot on the graph) to view the 
 
 You can click the copy icon in the upper right-hand corner of the dialog and paste the rendezvous data to a text file or other document.
 
-#### Viewing rendezvous timestamps
+##### Viewing rendezvous timestamps
 
 You can click on a row in the rendezvous dialog to view the start and end times of an event (unix timestamps) and the duration of the event (in milliseconds). You can click the copy icon in the upper right-hand corner of the dialog and paste the rendezvous data to a text file or other document.
 
 ![roku600px - rrm-rendezvous](https://image.roku.com/ZHZscHItMTc2/rrm4-1-rendezvous-timestamps.png)
 
-#### Viewing the source code associated with an event (sideloaded apps)
+##### Viewing the source code associated with an event (sideloaded apps)
 
 If you are monitoring a sideloaded app in live mode, you can drill down into the source code associated with a rendezvous event. When you view the details of an event, you can click on the source file/line number and the tool will show the code associated with that event. This feature is not available for production apps.
 
@@ -305,7 +305,7 @@ You can click the **Node configuration** setting, manually select up to 10 objec
 
 ![roku815px - rrm4-rsg-nodes](https://image.roku.com/ZHZscHItMTc2/rrm4-1-rsg-memory.png)
 
-#### Selecting SceneGraph nodes to be monitored
+##### Selecting SceneGraph nodes to be monitored
 
 You can click the **Node configuration** setting to view the count/memory usage of the SceneGraph nodes in your app, manually select up to 10 nodes to track, and then click **Save** to plot the selected nodes on the graph. The **Count**/**Memory** option selected in the graph determines which metric is used in the table.
 

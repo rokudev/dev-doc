@@ -208,7 +208,7 @@ end try
 
 An exception object that has been caught is a valid argument to `THROW`. This is useful in some circumstances, for example:
 
-#### Reacting to an error without handling it
+##### Reacting to an error without handling it
 
 ```brightscript
 try
@@ -219,7 +219,7 @@ catch e
 end try
 ```
 
-#### Handling only some errors
+##### Handling only some errors
 
 ```brightscript
 LIBRARY "v30/bslCore.brs"

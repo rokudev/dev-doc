@@ -23,10 +23,10 @@ next:
 
 ### GetSourceIdentity() as Integer
 
-#### Description
+##### Description
 
 Returns the ID currently associated with this source (event generating) or event object
 
-#### Return Value
+##### Return Value
 
 The ID value of the source or event object.

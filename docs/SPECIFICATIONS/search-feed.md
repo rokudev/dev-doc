@@ -443,7 +443,7 @@ Pagination can be used to separate a single search feed into multiple discrete p
 
 > If the search feed is 250MB or larger, pagination should be used.
 
-If a page within the search feed has not changed, Roku attempts to skip the downloading of it and use the previous download instead. To force a new download, update the **ETag** or **Last-Modified** header.
+If a page within the search feed has not changed, Roku attempts to skip downloading it and use the previous download instead. To force a new download, update the **ETag** or **Last-Modified** header.
 
 To use pagination in your search feed, follow these steps:
 

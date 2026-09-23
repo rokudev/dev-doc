@@ -8,7 +8,7 @@ hidden: false
 link:
   new_tab: false
 metadata:
-  title: API Guide
+  title: Roku Cloud Emulator API Guide
   description: >-
     Use the Roku Cloud Emulator REST APIs to add, start, and manage virtual
     devices, send ECP commands, sideload apps, stream logs, and access the debug

@@ -1,14 +1,19 @@
 ---
 title: Roku Cloud Emulator API Guide
-excerpt: 'Manage Roku virtual devices programmatically with the RCE Core and Device REST APIs'
+excerpt: >-
+  Manage Roku virtual devices programmatically with the RCE Core and Device REST
+  APIs
 deprecated: false
 hidden: false
+link:
+  new_tab: false
 metadata:
-  title: 'Roku Cloud Emulator API Guide'
-  description: 'Use the Roku Cloud Emulator REST APIs to add, start, and manage virtual devices, send ECP commands, sideload apps, stream logs, and access the debug consoles.'
+  title: API Guide
+  description: >-
+    Use the Roku Cloud Emulator REST APIs to add, start, and manage virtual
+    devices, send ECP commands, sideload apps, stream logs, and access the debug
+    consoles.
   robots: index
-next:
-  description: ''
 ---
 The Roku Cloud Emulator (RCE) REST API enables you to manage virtual devices programmatically. You can use the API for automation workflows, CI/CD integration, and direct scripting without using the web interface. There are two sets of APIs:
 
@@ -19,24 +24,24 @@ The Roku Cloud Emulator (RCE) REST API enables you to manage virtual devices pro
 
 ## Core API reference
 
-| Item | Description |
-| --- | --- |
-| **Endpoint** | The base URL for the RCE Core APIs is `api.rce.roku.com`. |
-| **Protocol** | RCE Core API calls use only HTTPS to send requests. |
-| **Methods** | The RCE Core APIs support the following REST methods for adding, running, managing, and deleting virtual devices: **POST** (add, manage, and stop devices; save snapshots), **GET** (get a project ID, run devices, check device status, retrieve device activity logs), **PATCH** (update devices and snapshots), and **DELETE** (remove a device). |
-| **Header** | Requests to the RCE Core APIs require the following headers: **Authorization** (bearer authentication) `Authorization: Bearer <PERSONAL_ACCESS_TOKEN>` — see [Appendix A](#appendix-a-generate-a-personal-access-token) for how to generate the token; and **Content-Type** `application/json`. |
-| **Resource IDs** | Resource IDs are integers, except for users, which use UUIDs. |
-| **Response** | Most of the RCE Core APIs return a JSON payload. The only exception is the logs API, which returns a gzipped tar file (`.tar.gz`). All APIs return one of the following response codes: **200** OK; **201** Created (resource created successfully); **202** Accepted (device start or stop request queued); **204** No content (DELETE requests only); **400** Bad request (required fields are missing from the payload; a description of the error is returned); **401** Unauthorized (invalid or missing token, bad credentials); **403** Forbidden (role or permission denied); **404** Not found (user not found, generic resource missing); **409** Conflict (duplicate or state conflict: project devices, running devices); **422** Unprocessable entity (bad UUID, timestamp, or format). |
+| Item             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Endpoint**     | The base URL for the RCE Core APIs is `api.rce.roku.com`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Protocol**     | RCE Core API calls use only HTTPS to send requests.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Methods**      | The RCE Core APIs support the following REST methods for adding, running, managing, and deleting virtual devices: **POST** (add, manage, and stop devices; save snapshots), **GET** (get a project ID, run devices, check device status, retrieve device activity logs), **PATCH** (update devices and snapshots), and **DELETE** (remove a device).                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Header**       | Requests to the RCE Core APIs require the following headers: **Authorization** (bearer authentication) `Authorization: Bearer <PERSONAL_ACCESS_TOKEN>` — see [Appendix A](#appendix-a-generate-a-personal-access-token) for how to generate the token; and **Content-Type** `application/json`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Resource IDs** | Resource IDs are integers, except for users, which use UUIDs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Response**     | Most of the RCE Core APIs return a JSON payload. The only exception is the logs API, which returns a gzipped tar file (`.tar.gz`). All APIs return one of the following response codes: **200** OK; **201** Created (resource created successfully); **202** Accepted (device start or stop request queued); **204** No content (DELETE requests only); **400** Bad request (required fields are missing from the payload; a description of the error is returned); **401** Unauthorized (invalid or missing token, bad credentials); **403** Forbidden (role or permission denied); **404** Not found (user not found, generic resource missing); **409** Conflict (duplicate or state conflict: project devices, running devices); **422** Unprocessable entity (bad UUID, timestamp, or format). |
 
 ## Device API reference
 
-| Item | Description |
-| --- | --- |
+| Item         | Description                                                                                                                                                                                                                                                               |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Endpoint** | The base URL for the RCE Device APIs is `device.rce.roku.com/instance/{instance_uuid}`. You can retrieve the `instance_uuid` from the RCE web interface with the **Copy device API URL** button, or programmatically with the `GET /api/v1/devices/{device_id}` endpoint. |
-| **Protocol** | RCE Device API calls use HTTPS (`https://`) for ECP key commands, and WebSocket (`wss://`) for telnet interactions and log streaming. |
-| **Methods** | The RCE Device APIs support the following REST methods: **GET** and **POST**, both used to send ECP commands to the virtual device. |
-| **Header** | Requests to the RCE Device APIs require the **Authorization** header (bearer authentication): `Authorization: Bearer <PERSONAL_ACCESS_TOKEN>`. See [Appendix A](#appendix-a-generate-a-personal-access-token) for how to generate the token. |
-| **Response** | All APIs return one of the following response codes: **200** OK; **400** Bad request (wrong protocol); **422** Unprocessable entity (bad UUID, timestamp, or format). |
+| **Protocol** | RCE Device API calls use HTTPS (`https://`) for ECP key commands, and WebSocket (`wss://`) for telnet interactions and log streaming.                                                                                                                                     |
+| **Methods**  | The RCE Device APIs support the following REST methods: **GET** and **POST**, both used to send ECP commands to the virtual device.                                                                                                                                       |
+| **Header**   | Requests to the RCE Device APIs require the **Authorization** header (bearer authentication): `Authorization: Bearer <PERSONAL_ACCESS_TOKEN>`. See [Appendix A](#appendix-a-generate-a-personal-access-token) for how to generate the token.                              |
+| **Response** | All APIs return one of the following response codes: **200** OK; **400** Bad request (wrong protocol); **422** Unprocessable entity (bad UUID, timestamp, or format).                                                                                                     |
 
 ## API workflow
 
@@ -67,10 +72,10 @@ POST /api/v1/devices
 }
 ```
 
-| Field | Type | Description |
-| --- | --- | --- |
-| `name` | string | A unique, descriptive name for your device that makes it easy to identify. |
-| `device_type` | string | Whether you are creating a Roku TV (`tv`) or a streaming player (`stb`). |
+| Field         | Type   | Description                                                                |
+| ------------- | ------ | -------------------------------------------------------------------------- |
+| `name`        | string | A unique, descriptive name for your device that makes it easy to identify. |
+| `device_type` | string | Whether you are creating a Roku TV (`tv`) or a streaming player (`stb`).   |
 
 **Response**
 
@@ -161,11 +166,11 @@ To launch and run a device, you need a build and a snapshot.
    }
    ```
 
-   | Field | Type | Description |
-   | --- | --- | --- |
-   | `snapshot_id` | integer | The unique ID generated for a snapshot. |
-   | `firmware_version_id` | string | The unique ID of the firmware version to run. |
-   | `max_runtime` | integer | The maximum runtime for the device, in seconds. |
+   | Field                 | Type    | Description                                     |
+   | --------------------- | ------- | ----------------------------------------------- |
+   | `snapshot_id`         | integer | The unique ID generated for a snapshot.         |
+   | `firmware_version_id` | string  | The unique ID of the firmware version to run.   |
+   | `max_runtime`         | integer | The maximum runtime for the device, in seconds. |
 
    This API returns a JSON object describing the properties of a device resource.
 
@@ -275,18 +280,18 @@ POST /sideload/plugin_install
 
 **Headers**
 
-| Header | Value |
-| --- | --- |
-| `Content-Type` | `multipart/form-data` |
-| `X-Authorization` | `Bearer {RCE_TOKEN}` |
-| `Authorization` | Digest (realm `rokudev`, algorithm `MD5`, qop `auth`). Digest credentials: username `rokudev`; password set when developer mode was enabled. |
+| Header            | Value                                                                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Content-Type`    | `multipart/form-data`                                                                                                                        |
+| `X-Authorization` | `Bearer {RCE_TOKEN}`                                                                                                                         |
+| `Authorization`   | Digest (realm `rokudev`, algorithm `MD5`, qop `auth`). Digest credentials: username `rokudev`; password set when developer mode was enabled. |
 
 **Form fields**
 
-| Field | Type | Description |
-| --- | --- | --- |
+| Field      | Type   | Description                                                                                                      |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------- |
 | `mysubmit` | string | One of the following values: `Install` (install a dev app) or `Delete` (remove the currently installed dev app). |
-| `archive` | binary | The app `.zip` file. Omit for `Delete` operations. |
+| `archive`  | binary | The app `.zip` file. Omit for `Delete` operations.                                                               |
 
 **Response**
 
@@ -366,8 +371,8 @@ POST /api/v1/devices/{device_id}/snapshots
 }
 ```
 
-| Field | Type | Description |
-| --- | --- | --- |
+| Field  | Type   | Description                                                                                  |
+| ------ | ------ | -------------------------------------------------------------------------------------------- |
 | `name` | string | A unique, descriptive name for the snapshot that makes it easy to identify the device state. |
 
 **Response**

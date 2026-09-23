@@ -1,6 +1,8 @@
 ---
-title: API reference
-excerpt: 'Manage Roku virtual devices programmatically with the RCE Core and Device REST APIs'
+title: Roku Cloud Emulator API reference
+excerpt: >-
+  Manage Roku virtual devices programmatically with the RCE Core and Device REST
+  APIs
 deprecated: false
 hidden: false
 link:

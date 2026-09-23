@@ -1,5 +1,5 @@
 ---
-title: Roku Cloud Emulator Release Notes
+title: Release notes
 excerpt: 'Known issues for the Roku Cloud Emulator, including critical, major, and minor severity items'
 deprecated: false
 hidden: false

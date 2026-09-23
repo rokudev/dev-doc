@@ -1,5 +1,5 @@
 ---
-title: Roku Cloud Emulator Partner Security Brief
+title: Security
 excerpt: 'Security controls and isolation model for the Roku Cloud Emulator, including compute, storage, network, and data lifecycle'
 deprecated: false
 hidden: false

@@ -251,7 +251,7 @@ end try
 
 The TRY block of statements is executed. If and only if an error occurs, the CATCH block of statements is executed, and the named variable is assigned the information about the triggering exception. If no error occurs during execution of the TRY block, the CATCH block is skipped.
 
-> It is illegal to put a GOTO label within a TRY block (i.e., between TRY and CATCH). A GOTO label may exist exist between CATCH and END TRY, however.
+> It is illegal to put a GOTO label within a TRY block (i.e., between TRY and CATCH). A GOTO label may exist between CATCH and END TRY, however.
 
 The variable name specified as the *exception object* in the CATCH clause must refer to a *simple variable*. It cannot be an array element, for example. The following are **not** legal as exception object references in the CATCH clause:
 

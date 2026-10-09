@@ -10,12 +10,9 @@ metadata:
 next:
   description: ''
 ---
-SceneGraph is built around a tree of _nodes_ which are then rendered onto the display. BrightScript can
-manipulate these nodes. You can extend the built-in node classes by defining
-_component classes_.
+SceneGraph is built around a tree of _nodes_ which are then rendered onto the display. BrightScript can manipulate these nodes. You can extend the built-in node classes by defining _component classes_.
 
-This guide describes how these parts work and how they affect the performance
-and memory use of a BrightScript/SceneGraph app.
+This guide describes how these parts work and how they affect the performance and memory use of a BrightScript/SceneGraph app.
 
 ## SceneGraph nodes
 

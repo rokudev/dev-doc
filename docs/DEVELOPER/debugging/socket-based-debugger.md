@@ -15,6 +15,8 @@ next:
 ---
 The Roku socket-based BrightScript debug protocol enables Roku app development to be tightly integrated into Visual Studio Code, Eclipse, and other Integrated Development Environments (IDEs). A tight integration helps expedite Roku app development as an IDE could be used to do the following:
 
+> Roku has discontinued support for its Eclipse IDE plug-in. You can use IDE extensions maintained by the Roku developer community, such as the [BrightScript extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=celsoaf.brightscript).
+
 * Write code using BrightScript syntax-directed editing and highlighting.
 * Upload and run the app directly to the Roku media player.
 * Communicate app stops and failures.
@@ -53,7 +55,7 @@ The network format of the protocol adheres to the following rules:
 
 After an app is launched with a request to enable remote debugging, the firmware waits for a connection from the remote debugger client. Immediately after a connection is established, an initial handshake is then performed. The handshake consists of the following data being sent by each end of the connection:
 
-```
+```c
 struct HandshakeToDVP {    // DVP = Digital Video Player (Roku device)
     uint64 magic_number;   // 0x0067756265647362LU
 };
@@ -68,7 +70,6 @@ struct HandshakeFromDVP {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -81,13 +82,13 @@ struct HandshakeFromDVP {
     <tr>
       <td class="short-line">magic_number</td>
       <td class="short-line">uint64</td>
-      <td class="long-line">The Roku Brightscript debug protocol identifier, which is the following 64-bit value :<code>0x0067756265647362LU</code>. <br /><br />This is equal to <code>29120988069524322LU</code> or the following little-endian value: <code>b'bsdebug\0</code>.</td>
+      <td class="long-line">The Roku BrightScript debug protocol identifier, which is the following 64-bit value :<code>0x0067756265647362LU</code>. <br /><br />This is equal to <code>29120988069524322LU</code> or the following little-endian value: <code>b'bsdebug\0</code>.</td>
     </tr>
     <tr>
       <td class="long-line">protocol_major_version<br />protocol_minor_version<br />protocol_patch_version</td>
       <td class="short-line">uint32</td>
       <td class="long-line">
-        Each Roku OS release supports only a single version of the Roku Brightscript debug protocol:
+        Each Roku OS release supports only a single version of the Roku BrightScript debug protocol:
         <br />
         <div class="hscroll">
           <table>
@@ -103,23 +104,23 @@ struct HandshakeFromDVP {
                 <td class="short-line">3.3.0</td>
               </tr>
               <tr>
-                <td class="short-line">[Roku OS 12.0](doc:release-notes#roku-os-120)</td>
+                <td class="short-line"><a href="https://developer.roku.com/dev/docs/release-notes#roku-os-120">Roku OS 12.0</a></td>
                 <td class="short-line">3.2.0</td>
               </tr>
               <tr>
-                <td class="short-line">[Roku OS 11.5](doc:release-notes#roku-os-115)</td>
+                <td class="short-line"><a href="https://developer.roku.com/dev/docs/release-notes#roku-os-115">Roku OS 11.5</a></td>
                 <td class="short-line">3.1.0</td>
               </tr>
               <tr>
-                <td class="short-line">[Roku OS 11.0](doc:release-notes#roku-os-110)</td>
+                <td class="short-line"><a href="https://developer.roku.com/dev/docs/release-notes#roku-os-110">Roku OS 11.0</a></td>
                 <td class="short-line">3.0.0</td>
               </tr>
               <tr>
-                <td class="short-line">[Roku OS 9.3](doc:release-notes#roku-os-93), [9.4](doc:release-notes#roku-os-94), [10.0](doc:release-notes#roku-os-100), [10.5](doc:release-notes#roku-os-105)</td>
+                <td class="short-line"><a href="https://developer.roku.com/dev/docs/release-notes#roku-os-93">Roku OS 9.3</a>, <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-94">9.4</a>, <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-100">10.0</a>, <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-105">10.5</a></td>
                 <td class="short-line">2.0.0</td>
               </tr>
               <tr>
-                <td class="short-line">[Roku OS 9.2](doc:release-notes#roku-os-92)</td>
+                <td class="short-line"><a href="https://developer.roku.com/dev/docs/release-notes#roku-os-92">Roku OS 9.2</a></td>
                 <td class="short-line">1.0.1</td>
               </tr>
             </tbody>
@@ -132,16 +133,15 @@ struct HandshakeFromDVP {
     <tr>
       <td class="short-line">remaining_packet_length</td>
       <td class="short-line">uint32</td>
-      <td class="long-line">The length in bytes of the remaining data, including the <strong>remaining_packet_length</strong> itself. The debugger client must read this number of bytes.<br /><br />As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), all packets from the debugging target include a <strong>packet_length</strong>. The length is always in bytes, and includes the <strong>packet_length</strong> field, itself. <br /><br />This field avoids the need for changes to the major version of the protocol because it allows a debugger client to read past data it does not understand and is not critical to debugger operations.<br /><br />The debug target may intentionally send a <strong>packet_length</strong> longer than the actual data, with a small number of trailing padding bytes to complete the length. Clients must read the entire <strong>packet_length</strong> before expecting the next packet.</td>
+      <td class="long-line">The length in bytes of the remaining data, including the <strong>remaining_packet_length</strong> itself. The debugger client must read this number of bytes.<br /><br />As of BrightScript debug protocol 3.0.0 (<a href="https://developer.roku.com/dev/docs/release-notes#roku-os-110">Roku OS 11.0</a>), all packets from the debugging target include a <strong>packet_length</strong>. The length is always in bytes, and includes the <strong>packet_length</strong> field, itself. <br /><br />This field avoids the need for changes to the major version of the protocol because it allows a debugger client to read past data it does not understand and is not critical to debugger operations.<br /><br />The debug target may intentionally send a <strong>packet_length</strong> longer than the actual data, with a small number of trailing padding bytes to complete the length. Clients must read the entire <strong>packet_length</strong> before expecting the next packet.</td>
     </tr>
     <tr>
       <td class="short-line">platform_revision_timestamp</td>
       <td class="short-line">int64</td>
-      <td class="long-line">A platform-specific implementation timestamp (in milliseconds since epoch \[1970-01-01T00:00:00.000Z]). <br /><br />As of BrightScript debug protocol 3.0.0 ([Roku OS 11.0](doc:release-notes#roku-os-110)), a timestamp is sent to the debugger client in the initial handshake.  This timestamp is platform-specific data that is included in the system software of the platform being debugged. It is changed by the platform's vendor when there is any change that affects the behavior of the debugger.<br /><br />The value can be used in manners similar to a build number, and is primarily used to differentiate between pre-release builds of the platform being debugged.</td>
+      <td class="long-line">A platform-specific implementation timestamp (in milliseconds since epoch \[1970-01-01T00:00:00.000Z]). <br /><br />As of BrightScript debug protocol 3.0.0 (<a href="https://developer.roku.com/dev/docs/release-notes#roku-os-110">Roku OS 11.0</a>), a timestamp is sent to the debugger client in the initial handshake.  This timestamp is platform-specific data that is included in the system software of the platform being debugged. It is changed by the platform's vendor when there is any change that affects the behavior of the debugger.<br /><br />The value can be used in manners similar to a build number, and is primarily used to differentiate between pre-release builds of the platform being debugged.</td>
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 The behavior after the handshake has been executed, depends on the version of the BrightScript debug protocol being used:
 
@@ -152,7 +152,7 @@ The behavior after the handshake has been executed, depends on the version of th
 
 Remote debugging clients can send a debugger request to the debugging target (for example, the script group) using the following packet structure for the network byte stream:
 
-```
+```c
 struct DebuggerRequest {
     uint32 packet_length;
     uint32 request_id;
@@ -161,7 +161,6 @@ struct DebuggerRequest {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -226,7 +225,7 @@ struct DebuggerRequest {
               </tr>
               <tr>
                 <td class="short-line">8</td>
-                <td class="long-line">LIST_BREAKPOINTS<br /><br />(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
+                <td class="long-line">LIST_BREAKPOINTS<br /><br />(<em>As of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-115">Roku OS 11.5</a>, this command supports both conditional and non-conditional breakpoints</em>)</td>
               </tr>
               <tr>
                 <td class="short-line">9</td>
@@ -262,13 +261,12 @@ struct DebuggerRequest {
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 ## Debugger Response Format
 
 The debugger sends responses to DebuggerRequest messages in the following format:
 
-```
+```c
 struct DebuggerResponse {
     uint32 packet_length;
     uint32 request_id;
@@ -279,7 +277,6 @@ struct DebuggerResponse {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -344,7 +341,7 @@ struct DebuggerResponse {
               </tr>
               <tr>
                 <td class="short-line">8</td>
-                <td class="long-line">LIST_BREAKPOINTS<br /><br />(<em>As of [Roku OS 11.5](doc:release-notes#roku-os-115), this command supports both conditional and non-conditional breakpoints</em>)</td>
+                <td class="long-line">LIST_BREAKPOINTS<br /><br />(<em>As of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-115">Roku OS 11.5</a>, this command supports both conditional and non-conditional breakpoints</em>)</td>
               </tr>
               <tr>
                 <td class="short-line">9</td>
@@ -380,7 +377,6 @@ struct DebuggerResponse {
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 <br />
 
@@ -388,7 +384,7 @@ struct DebuggerResponse {
 
 The debugger sends an update message when a state change occurs in the application being debugged, which may or may not have been requested by the debugging client or user. DebuggerUpdate messages have a similar format as DebuggerResponse messages, except that the **request_id** is always **0**, and it includes an **update_type** field, which specifies the type of update being sent.
 
-```
+```c
 struct DebuggerUpdate {
 		uint32 packet_length;
 		uint32 request_id;
@@ -398,7 +394,6 @@ struct DebuggerUpdate {
 };
 ```
 
-<HTMLBlock>{`
 <table>
   <thead>
     <tr>
@@ -517,12 +512,12 @@ struct DebuggerUpdate {
                 <td class="short-line">A compilation error occurred.</td>
               </tr>
               <tr>
-                <td class="short-line">6<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
+                <td class="short-line">6<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-120">Roku OS 12.0</a></em></td>
                 <td class="short-line">BREAKPOINT_VERIFIED</td>
                 <td class="long-line">A breakpoint has successfully been applied to an executable line of code.</td>
               </tr>
               <tr>
-                <td class="short-line">7<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
+                <td class="short-line">7<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-120">Roku OS 12.0</a></em></td>
                 <td class="short-line">PROTOCOL_ERROR</td>
                 <td class="long-line">An unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated.</td>
               </tr>
@@ -547,13 +542,12 @@ struct DebuggerUpdate {
     </tr>
   </tbody>
 </table>
-`}</HTMLBlock>
 
 ### AllThreadsStopped
 
 If the **update_type** in a DebuggerUpdate message is set to ALL_THREADS_STOPPED, the **data** field contains a structure named **AllThreadsStoppedUpdateData** that provides the reason for the stop. The **AllThreadsStoppedUpdateData** structure has the following syntax:
 
-```
+```c
 struct AllThreadsStoppedUpdateData{
 		int32 primary_thread_index;
 		uint8 stop_reason;
@@ -639,7 +633,7 @@ struct AllThreadsStoppedUpdateData{
 
 If the **update_type** in a DebuggerUpdate message is set to THREAD_ATTACHED, the **data** field contains a structure named **ThreadAttachedUpdateData** that provides the reason for the stop. The **ThreadAttachedUpdateData** structure has the following syntax (see [AllThreadsStopped](#allthreadsstopped) for the details of each field):
 
-```
+```c
 struct ThreadAttachedUpdateData{
      int32 thread_index;
      uint8 stop_reason;
@@ -651,7 +645,7 @@ struct ThreadAttachedUpdateData{
 
 A BREAKPOINT_ERROR is sent if a compilation or runtime error occurs while evaluating the cond_expr of a conditional breakpoint. In this case, the **update_type** field in a DebuggerUpdate message is set to BREAKPOINT_ERROR, and the **data** field contains a structure named **BreakpointErrorUpdateData** that provides the reason for the error. The **BreakpointErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct BreakpointErrorUpdateData {
     uint32                    flags;
     uint32                    breakpoint_id;
@@ -679,7 +673,7 @@ struct BreakpointErrorUpdateData {
 
 A COMPILE_ERROR is sent if a compilation error occurs. In this case, the **update_type** field in a DebuggerUpdate message is set to COMPILE_ERROR, and the **data** field contains a structure named **CompileErrorUpdateData** that provides the reason for the error. The **CompileErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct CompileErrorUpdateData {
     uint32 flags;
     utf8z  error_string;
@@ -703,7 +697,7 @@ _Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
 A BREAKPOINT_VERIFIED message is sent when a breakpoint has successfully been applied to an executable line of code. Breakpoints may be added at any time; however, the changes may not be applied immediately if the debug target is running.  In this case, the **update_type** field in a DebuggerUpdate message is set to BREAKPOINT_VERIFIED, and the **data** field contains a structure named **BreakpointVerifiedUpdateData** that provides the ID assigned to the verified breakpoint. The **BreakpointVerifiedUpdateData** structure has the following syntax:
 
-```
+```c
 struct BreakpointVerifiedUpdateData {
     uint32 flags // Reserved for future use
     uint32 num_breakpoints
@@ -711,7 +705,7 @@ struct BreakpointVerifiedUpdateData {
 }
 ```
 
-```
+```c
 struct VerifiedBreakpointInfo {
     uint32 breakpoint_id
 }
@@ -767,14 +761,14 @@ _Available since [Roku OS 12.0](doc:release-notes#roku-os-120)_
 
 A PROTOCOL_ERROR message is sent when an unrecoverable error has occurred on the protocol stream. As a result, the debug target is terminated. In this case, the **update_type** field in a DebuggerUpdate message is set to PROTOCOL_ERROR, and the **data** field contains a structure named **ProtocolErrorUpdateData** that provides the reason for the protocol error. The **ProtocolErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct ProtocolErrorUpdateData {
     uint32 flags // Reserved for future use
     uint32 protocol_error_code
 }
 ```
 
-```
+```c
 enum ProtocolErrorCode {
     UNDEFINED = 0,
     IO_CONSOLE_FAIL = 1
@@ -829,7 +823,7 @@ enum ProtocolErrorCode {
 
 An EXCEPTION_BREAKPOINT_ERROR is sent if a compilation or runtime error occurs while evaluating the cond_expr of an exception breakpoint. In this case, the **update_type** field in a DebuggerUpdate message is set to EXCEPTION_BREAKPOINT_ERROR, and the **data** field contains a structure named **ExceptionBreakpointErrorUpdateData** that provides the reason for the error. The **ExceptionBreakpointErrorUpdateData** structure has the following syntax:
 
-```
+```c
 struct ExceptionBreakpointErrorUpdateData {
     uint32                    flags;
     uint32                    filter_id;
@@ -939,7 +933,7 @@ The BrightScript debugger supports the following debug commands:
 | THREADS                     | Application threads info                                                                                        | Debugger is active. All threads are stopped.                                                                                                                                                                                                                                                | none                                                                                    | A [ThreadsResponse](#threadsresponse) struct.                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | STACKTRACE                  | Get the stack trace of a specific thread.                                                                       | Debugger is active. All threads are stopped.                                                                                                                                                                                                                                                | uint32 thread_index                                                                     | A [StackTraceResponse](#stacktraceresponse) struct.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | VARIABLES                   | Listing of variables accessible from selected thread and stack frame.                                           | Debugger is active, all thread                                                                                                                                                                                                                                                              | [variables arguments](#variables-arguments)                                             | A [VariablesResponse](#variablesresponse) struct.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| STEP                        | Execute one step on a specified thread.                                                                         | Debugger is active. All threads are stopped.<br /><br />As of [Roku OS 14.6](doc:release-notes#roku-os-146), you can use the STEP command to step over and out of SceneGraph observer callbacks and functions called via [CallFunc](/docs/developer-program/core-concepts/handling-application-events.md#functional-fields). | [step arguments](#step-arguments)                                                       | [DebuggerResponse](#debugger-response-format) with no payload (OK or Error if successful).<br /><br />If the STEP command is valid, the debugging target responds immediately with an OK response. The specified thread will then detach from the debugger, execute briefly as specified by the **step_type** parameter, and then re-attach to the debugger.<br /><br />The re-attachment causes another [THREAD_ATTACHED](#threadattached) update message to be sent to the debugger client. |
+| STEP                        | Execute one step on a specified thread.                                                                         | Debugger is active. All threads are stopped.<br /><br />As of [Roku OS 14.6](doc:release-notes#roku-os-146), you can use the STEP command to step over and out of SceneGraph observer callbacks and functions called via [CallFunc](/docs/developer/core-concepts/handling-application-events.md#functional-fields). | [step arguments](#step-arguments)                                                       | [DebuggerResponse](#debugger-response-format) with no payload (OK or Error if successful).<br /><br />If the STEP command is valid, the debugging target responds immediately with an OK response. The specified thread will then detach from the debugger, execute briefly as specified by the **step_type** parameter, and then re-attach to the debugger.<br /><br />The re-attachment causes another [THREAD_ATTACHED](#threadattached) update message to be sent to the debugger client. |
 | ADD_BREAKPOINTS             | Add a dynamic breakpoint.                                                                                       | Debugger is active. Application is active (may be stopped or running).                                                                                                                                                                                                                      | An [AddBreakpointsRequestArgs](#addbreakpointsrequestargs) struct.                      | An [AddBreakpointsResponseData](#addbreakpointsresponsedata) struct.<br /><br />If a redundant breakpoint is attempted to be added, the ID of the previous breakpoint is returned and the debugging target is not affected.                                                                                                                                                                                                                                                                   |
 | LIST_BREAKPOINTS            | Lists existing dynamic and conditional breakpoints and their status.                                            | Debugger is active. All threads in script group are stopped.                                                                                                                                                                                                                                | none                                                                                    | A [ListBreakpointsResponseData](#listbreakpointsresponsedata) struct.                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | REMOVE_BREAKPOINTS          | Removes dynamic breakpoints.                                                                                    | Debugger is active. All threads in script group are stopped.                                                                                                                                                                                                                                | A [RemoveBreakpointsRequestArgs](#removebreakpointsrequestargs) struct.                 | A [RemoveBreakpointsResponseData](#removebreakpointsrequestargs) struct.                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -951,7 +945,7 @@ The BrightScript debugger supports the following debug commands:
 
 The **ThreadsResponse** struct has the following syntax:
 
-```
+```c
 struct ThreadsResponse{
     uint32 threads_count;
     ThreadInfo[] threads;
@@ -1082,7 +1076,7 @@ struct ThreadsResponse{
 
 The **StackTraceReponse** struct has the following syntax:
 
-```
+```c
 struct StackTraceResponse{
     uint32 stack_size;
     StackEntry[] entries;
@@ -1225,7 +1219,7 @@ struct StackTraceResponse{
 
 The **VariablesResponse** struct has the following syntax:
 
-```
+```c
 struct VariablesResponse{
     uint32 num_variables;
     VariableInfo[] variables;
@@ -1439,7 +1433,7 @@ Dynamic breakpoints enable developers to navigate through the app, inspect its s
 
 The **AddBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct AddBreakpointsRequestArgs {
     uint32 num_breakpoints;
     BreakpointSpec[] breakpoints;
@@ -1504,7 +1498,7 @@ struct AddBreakpointsRequestArgs {
 
 The **AddBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct AddBreakpointsResponseData {
     uint32 num_breakpoints;
     BreakpointInfo[] breakpoint_responses;
@@ -1589,7 +1583,7 @@ struct AddBreakpointsResponseData {
 
 The **ListBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct ListBreakpointsResponseData {
     uint32 num_breakpoints;
     BreakpointInfo[] breakpoints;
@@ -1676,7 +1670,7 @@ struct ListBreakpointsResponseData {
 
 The **RemoveBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct RemoveBreakpointsRequestArgs {
     uint32 num_breakpoints;
     uint32[] breakpoint_ids;
@@ -1692,7 +1686,7 @@ struct RemoveBreakpointsRequestArgs {
 
 The **RemoveBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct RemoveBreakpointsResponseData {
     uint32 num_breakpoints;
     BreakpointInfo[] breakpoint_infos;
@@ -1783,7 +1777,7 @@ Use the LIST_BREAKPOINTS debugging command to get the existing conditional break
 
 The **AddConditonalBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct AddBreakpointsRequestArgs {
     uint32 flags;
     uint32 num_breakpoints;
@@ -1860,7 +1854,7 @@ struct AddBreakpointsRequestArgs {
 
 The **AddConditonalBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct AddConditonalBreakpointsResponseData {
     uint32 num_breakpoints;
     ConditionalBreakpointInfo[] breakpoint_responses;
@@ -1951,7 +1945,7 @@ Exception breakpoints enable developers to pause the debugger whenever a runtime
 
 The **SetExceptionBreakpointsRequestArgs** struct has the following syntax:
 
-```
+```c
 struct SetExceptionBreakpointsRequestArgs {
     uint32 num_breakpoints;
     ExceptionBreakpointSpec[] breakpoints;
@@ -2030,7 +2024,7 @@ struct SetExceptionBreakpointsRequestArgs {
 
 The **SetExceptionBreakpointsResponseData** struct has the following syntax:
 
-```
+```c
 struct SetExceptionBreakpointsResponseData {
     uint32 num_breakpoints;
     ExceptionBreakpointInfo[] breakpoint_responses;
@@ -2158,13 +2152,13 @@ Virtual variables are only returned if both GET_VIRTUAL_KEYS and GET_CHILD_KEYS 
 
 ## Sample remote debugger
 
-You can [download the Roku Remote Debugger](https://github.com/rokudev/remote-debugger), which is a Python-based sample command-line remote debugger for testing and debugging Roku apps under development. The Roku Remote Debugger (**rokudebug.py**) provides the same functionality as the [BrightScript debug console](/docs/developer-program/debugging/debugging-channels.md#brightscript-console-port-8085-commands); however, it demonstrates how the BrightScript network debug protocol could be used to integrate a debug tool into an IDE.
+You can [download the Roku Remote Debugger](https://github.com/rokudev/remote-debugger), which is a Python-based sample command-line remote debugger for testing and debugging Roku apps under development. The Roku Remote Debugger (**rokudebug.py**) provides the same functionality as the [BrightScript debug console](/docs/developer/debugging/index.md#brightscript-console-port-8085-commands); however, it demonstrates how the BrightScript network debug protocol could be used to integrate a debug tool into an IDE.
 
 To run the Roku Remote Debugger, follow these steps:
 
 1. Verify that you have Python 3.5.3 (or greater) installed on your machine.
 
-2. [Create a ZIP file](/docs/developer-program/getting-started/hello-world.md#compressing-the-contents-of-the-hello-world-directory) containing the development app to be tested. You can also [download sample apps](https://github.com/rokudev/samples) to test with the debugger.
+2. [Create a ZIP file](/docs/developer/getting-started/hello-world.md#compressing-the-contents-of-the-hello-world-directory) containing the development app to be tested. You can also [download sample apps](https://github.com/rokudev/samples) to test with the debugger.
 
 3. Sideload an app by entering the following command in a terminal or command prompt:
 

@@ -43,7 +43,7 @@ The following will be printed:
 
 **roInput Example**
 
-```
+```brightscript
 msgPort = CreateObject("roMessagePort")
 
 input = CreateObject("roInput")

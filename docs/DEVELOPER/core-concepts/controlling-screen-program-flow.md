@@ -205,7 +205,7 @@ Then we can write the \<script\> element callback function
 `showfocus()` to indicate focus when the `focusPercent`
 \<interface\> field changes:
 
-```
+```brightscript
 sub showfocus()
   m.itemcursor.opacity = m.top.focusPercent
   m.itemposter.opacity = m.top.focusPercent

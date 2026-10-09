@@ -51,7 +51,7 @@ effect.
 
 The following code demonstrates this use case.
 
-```
+```brightscript
 port = CreateObject( "roMessagePort" )
 
 content = {

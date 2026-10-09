@@ -108,7 +108,7 @@ threads. All threads will be listed with the following information:
 
 The current selected thread will be marked with an `*`.
 
-```
+```brightscript
 BrightScript Micro Debugger.
 Enter any BrightScript statement, debug commands, or HELP.
 Suspending threads...
@@ -178,7 +178,7 @@ ID    Location                                Source Code
     </tr>
     <tr>
       <td>r2d2\_bitmaps</td>
-      <td>Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively. Starting with [Roku OS 9.3](doc:release-notes#roku-os-93), the name of each bitmap is included</td>
+      <td>Prints a list of assets loaded into texture memory and the amount of free, used, and maximum available memory on your device, respectively. Starting with <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-93">Roku OS 9.3</a>, the name of each bitmap is included</td>
     </tr>
     <tr>
       <td>remove\_plugin <em>app id</em></td>
@@ -186,7 +186,7 @@ ID    Location                                Source Code
     </tr>
     <tr>
       <td>sgnodes all</td>
-      <td>Prints every existing node created by the currently running app. <br /><br />As of [Roku OS 14.5](doc:release-notes#roku-os-145), you can use this command on your published app if the device is keyed with the same developer ID/key used to generate the app's package file.<br /><br />As of [Roku OS 10.0](doc:release-notes#roku-os-100), this prints the number of <strong>osref</strong> references to the node (held in the Roku platform) and <strong>bscref</strong> references (held in the app). The <strong>bcsref</strong> count includes references from "m." variable and local variables. Child references and field references do not increase <strong>bscref</strong> counts. <br /><br />The <strong>osref</strong> count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one <strong>osref</strong> on the child. Additionally, any field of type <strong>node</strong>, <strong>nodearray</strong>, or <strong>assocarray</strong> will add one <strong>osref</strong> to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.<br /><br />The reported <strong>osref</strong> count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes. The <strong>bscref</strong> count provides a more relevant and accurate indication of the resources that the app itself controls.<br /><br />The <code>sgnodes all</code>, <code>sgnodes roots</code>, and <code>sgnodes node\_ID</code> commands are similar to the getAll() , getRoots() , getRootsMeta(), and getAllMeta() <a href="/dev/docs/ifsgnodechildren">ifSGNodeChildren</a> methods, which can be called on any SceneGraph node.</td>
+      <td>Prints every existing node created by the currently running app. <br /><br />As of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-145">Roku OS 14.5</a>, you can use this command on your published app if the device is keyed with the same developer ID/key used to generate the app's package file.<br /><br />As of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-100">Roku OS 10.0</a>, this prints the number of <strong>osref</strong> references to the node (held in the Roku platform) and <strong>bscref</strong> references (held in the app). The <strong>bcsref</strong> count includes references from "m." variable and local variables. Child references and field references do not increase <strong>bscref</strong> counts. <br /><br />The <strong>osref</strong> count also includes child references and references from Roku SceneGraph interface fields. For example, for any node with a parent, the parent will count as one <strong>osref</strong> on the child. Additionally, any field of type <strong>node</strong>, <strong>nodearray</strong>, or <strong>assocarray</strong> will add one <strong>osref</strong> to each node referenced from within that field. These could be in variables local to a function, arrays, or associative arrays, including a component global m or an associative array field of a node.<br /><br />The reported <strong>osref</strong> count may vary from release to release of Roku OS; the information here is provided only to give a sense of the kinds of items that the count includes. The <strong>bscref</strong> count provides a more relevant and accurate indication of the resources that the app itself controls.<br /><br />The <code>sgnodes all</code>, <code>sgnodes roots</code>, and <code>sgnodes node\_ID</code> commands are similar to the getAll() , getRoots() , getRootsMeta(), and getAllMeta() <a href="https://developer.roku.com/dev/docs/ifsgnodechildren">ifSGNodeChildren</a> methods, which can be called on any SceneGraph node.</td>
     </tr>
     <tr>
       <td>sgnodes roots</td>
@@ -231,7 +231,7 @@ This usually means that a BrightScript variable has been incorrectly spelled aft
 
 This message will often coincide with a blank screen. The line number at which the error is detected will be flagged with an asterisk, and the message will provide the name of the file in which the error was detected:
 
-```
+```brightscript
 020:*       smallexamplesize = smallexample.localBoundingRect()
 ...
 'Dot' Operator attempted with invalid BrightScript Component or interface reference. (runtime error &hec) in ...pkg:/components/smallexamplescene.xml(20)
@@ -240,7 +240,7 @@ This message will often coincide with a blank screen. The line number at which t
 
 This message will appear if a component by that name has either not been created, or an attempt is made to access a component member using an incorrectly spelled component name. Check the backtrace information supplied by the debugger for the component objects and variables used at the time of the error, and note the component objects listed as invalid:
 
-```
+```brightscript
 Backtrace:
 #0  Function init() As Void
    file/line: ...pkg:/components/smallexamplescene.xml(20)
@@ -257,7 +257,7 @@ centery          <uninitialized>
 
 Note also the variables that were assigned values from interface functions on invalid component objects will be listed as \<uninitialized>. Typically in Roku SceneGraph applications, the problem is caused by attempting to create a component object for a component class name that is not in either the built-in node classes, or extended node classes declared in the application package components directory. To fix this error, scroll up in the debugger output to the point at which the component object creation error occurred, which will have the following error message:
 
-```
+```brightscript
 BRIGHTSCRIPT: ERROR: roSGNode: Failed to create roSGNode with type Rectangleexample: ...pkg:/components/smallexamplescene.xml(16)
 ```
 
@@ -267,7 +267,7 @@ This shows the file and line number where the actual component object creation e
 
 This often indicates that the ContentNode assigned to the content field of the list or grid either does not exist, or was assigned after focus was set on the list or grid. Ensure that the ContentNode has been created successfully at the time it is assigned to the list or grid content field. Then check that focus was set on the list or grid after the content field is assigned a valid ContentNode. Since you will generally be generating a ContentNode by parsing data from an XML or JSON file downloaded from your server in a Task node (or possibly downloaded as "singleton" at the time the SceneGraph app was created in the main.brs file and converted), make sure you set the content field and focus on the list or grid in this way:
 
-```
+```brightscript
 sub showvideolist()
   m.videolist.content = m.readVideoContentTask.videocontent
   m.videolist.setFocus(true)
@@ -278,7 +278,7 @@ This is a typical callback function that is triggered by the ContentNode being c
 
 Also, if you are having problems with a callback function not assigning a valid ContentNode, carefully check that the field observers were set before the Task node was configured and launched (but after the Task node object was created). For example, for the above example, the Task node object should have been created, had the field observers set, configured, and launched, in that order:
 
-```
+```brightscript
 m.readVideoContentTask = createObject("RoSGNode","MetaDataCR")
 m.readVideoContentTask.observeField("videocontent","showvideolist")
 m.readVideoContentTask.metadatauri = "pkg:/server/videometadata.xml"

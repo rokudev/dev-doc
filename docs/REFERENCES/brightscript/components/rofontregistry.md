@@ -20,7 +20,7 @@ This object is created with no parameters:
 
 **Example**
 
-```
+```brightscript
 reg = CreateObject("roFontRegistry")
 font = reg.GetDefaultFont(30, false, false)
 screen = CreateObject("roScreen")
@@ -29,7 +29,7 @@ screen.DrawText("hello world", 100, 100, &hFFFFFFFF, font)
 
 **Example using a font file**
 
-```
+```brightscript
 reg.Register("pkg:/fonts/myfont.ttf")
 font = reg.GetFont("MyFont", 30, false, false)
 screen = CreateObject("roScreen")

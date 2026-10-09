@@ -20,7 +20,7 @@ The ScrollableText node class provides an interactive, vertically scrolling pane
 
 The ScrollableText node class uses the horizAlign and vertAlign fields to allow you to position the rendered text relative to a specified bounding rectangle.
 
-#### Horizontal Alignment
+##### Horizontal Alignment
 
 The horizAlign field allows you to position text horizontally relative to the computed width of the ScrollableText node. The computed width is determined by subtracting the width of the scrollbar from the value specified by the width field.
 
@@ -37,7 +37,7 @@ There are three possible values for the horizAlign field:
 
 In most cases, the horizAlign field should remain set to left.
 
-#### Vertical Alignment
+##### Vertical Alignment
 
 The vertAlign field allows you to position text vertically relative to the height of the ScrollableText node, as specified by the height field.
 
@@ -66,7 +66,7 @@ In most cases, the vertAlign field should remain set to top.
 | lineSpacing | float | 8 | READ_WRITE | If the text is displayed on more than one line, specifies the amount of additional space added between lines |
 | horizAlign              | string            | left                                      | READ_WRITE        | See [Horizontal Alignment](doc:scrollinglabel) |
 | vertAlign               | string | top            | READ_WRITE        | See [Vertical Alignment](doc:scrollinglabel) |
-| scrollbarTrackBitmapUri | string            | ""                                        | READ_WRITE        | Specifies the URI of an image file to be loaded to replace the default scrollbar track. This should be a 9-patch image so that it can be stretched to the appropriate height specifed by the height field |
+| scrollbarTrackBitmapUri | string            | ""                                        | READ_WRITE        | Specifies the URI of an image file to be loaded to replace the default scrollbar track. This should be a 9-patch image so that it can be stretched to the appropriate height specified by the height field |
 | scrollbarThumbBitmapUri | string | ""             | READ_WRITE        | Specifies the URI of an image file to be loaded to replace the default scrollbar thumb. This should be a 9-patch image so that it can be stretched to the appropriate size |
 
 ## Sample app

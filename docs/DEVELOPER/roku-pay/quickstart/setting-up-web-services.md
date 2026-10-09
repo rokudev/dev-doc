@@ -50,15 +50,15 @@ To generate a new Roku Pay API Key, follow these steps:
 
    ![roku815px roku-pay-web-services-invalidate-key rokupx-](https://image.roku.com/ZHZscHItMTc2/roku-pay-web-services-new-key.png)
 
-#### Changing the grace period for an expiring API key
+##### Changing the grace period for an expiring API key
 
 To change the grace period for invalidating an expiring API key, click **Edit** on the Expiring API key, change the number of days in which it will be invalidated, and then click **Submit**.
 
-#### Reactivating an expired API key
+##### Reactivating an expired API key
 
 To reactivate an expired API key, click **Edit** on the Expired API key, schedule its expiration in 1–365 days, and then click **Submit**.
 
-#### Deleting an expired or expiring API key
+##### Deleting an expired or expiring API key
 
 To permanently delete an expired or expiring API key, follow these steps:
 

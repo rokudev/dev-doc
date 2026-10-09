@@ -22,7 +22,7 @@ It is created with no parameters:
 
 **Example**
 
-```
+```brightscript
 loc = CreateObject("roLocalization")
 image = loc.GetLocalizedAsset("images", "splash.png")
 ```

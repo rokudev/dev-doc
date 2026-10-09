@@ -29,7 +29,7 @@ Apps must fire an **AppLaunchComplete** beacon when the app home page is fully r
 
 To fire the **AppLaunchComplete** beacon from the app, call the **signalBeacon()** function on any node as demonstrated in the following example:
 
-```
+```brightscript
 myScene.signalBeacon("AppLaunchComplete")
 ```
 
@@ -43,7 +43,7 @@ These beacons, which were introduced in [Roku OS 9.3](doc:release-notes#roku-os-
 
 To fire the **AppDialogInitiate**/**AppDialogComplete** beacons from the app, call the **signalBeacon()** function on any node as demonstrated in the following example:
 
-```
+```brightscript
 myScene.signalBeacon("AppDialogInitiate")
 myScene.signalBeacon("AppDialogComplete")
 ```
@@ -54,7 +54,7 @@ myScene.signalBeacon("AppDialogComplete")
 
 If your app contains an EPG, the application must also fire beacons when the user initiates a keypress to display the EPG (**EPGLaunchInitiate**) and when the EPG is fully rendered and navigable (**EPGLaunchComplete**). The following example demonstrates how to do this:
 
-```
+```brightscript
 myEPGComponent.signalBeacon("EPGLaunchInitiate")
 m.top.signalBeacon("EPGLaunchComplete")
 ```
@@ -99,7 +99,7 @@ beacon. When you exit your app, the console displays a report summarizing the st
 
 ## Performance metrics reference
 
-The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start,  change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.
+The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start, channel change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.
 
 <table>
   <thead>

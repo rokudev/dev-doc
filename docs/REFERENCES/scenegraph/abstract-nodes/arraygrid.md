@@ -98,14 +98,14 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 <td>option string</td>
 <td>floatingFocus</td>
 <td>READ_WRITE</td>
-<td>Specifies the how the focus indicator moves in a row of grid items in response to the remote direction pad Left and Right key presses. This field is not used for lists. The possible values are: <table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>floatingFocus</td><td>Causes the focus indicator to float left or right until it reaches the end of the row, at which point the focus indicator will stay fixed on the first or last item in the row, and the items will scroll left or right if there were items that were not visible.</td></tr><tr><td>fixedFocusWrap</td><td>Causes the row to wrap around when the focus indicator reaches the first or last item in the row, as long as the row contains enough items to fill the row. If the row does not contain enough items to fill the row, the focus indicator will float left and right.</td></tr></tbody></table></td>
+<td>Specifies how the focus indicator moves in a row of grid items in response to the remote direction pad Left and Right key presses. This field is not used for lists. The possible values are: <table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>floatingFocus</td><td>Causes the focus indicator to float left or right until it reaches the end of the row, at which point the focus indicator will stay fixed on the first or last item in the row, and the items will scroll left or right if there were items that were not visible.</td></tr><tr><td>fixedFocusWrap</td><td>Causes the row to wrap around when the focus indicator reaches the first or last item in the row, as long as the row contains enough items to fill the row. If the row does not contain enough items to fill the row, the focus indicator will float left and right.</td></tr></tbody></table></td>
 </tr>
 <tr>
 <td>vertFocusAnimationStyle</td>
 <td>option string</td>
 <td>floatingFocus</td>
 <td>READ_WRITE</td>
-<td>Specifies the how the focus indicator moves in a list or a column of grid items in response to the remote direction pad Up and Down key presses. The possible values are: <table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>floatingFocus</td><td>Causes the focus indicator to float up or down until it reaches the end of the list or grid column, at which point the focus indicator will stay fixed on the first or last item in the list or grid column, and the items will scroll up or down if there are items that were not visible. Note that when this style is set, section dividers are not rendered.</td></tr><tr><td>fixedFocusWrap</td><td>Causes the column to wrap around when the focus indicator reaches the first or last item in the list or grid column, as long as the list or grid column contains enough items to fill the list or grid column. If the list or grid column does not contain enough items to fill the list or grid column, the focus indicator will float up and down.</td></tr><tr><td>fixedFocus</td><td>Causes the focus to stay fixed on the upper leftmost item. As the user scrolls down, the row containing the previously selected item scrolls up off screen. Scrolling continues until the last row is reached.</td></tr></tbody></table></td>
+<td>Specifies how the focus indicator moves in a list or a column of grid items in response to the remote direction pad Up and Down key presses. The possible values are: <table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>floatingFocus</td><td>Causes the focus indicator to float up or down until it reaches the end of the list or grid column, at which point the focus indicator will stay fixed on the first or last item in the list or grid column, and the items will scroll up or down if there are items that were not visible. Note that when this style is set, section dividers are not rendered.</td></tr><tr><td>fixedFocusWrap</td><td>Causes the column to wrap around when the focus indicator reaches the first or last item in the list or grid column, as long as the list or grid column contains enough items to fill the list or grid column. If the list or grid column does not contain enough items to fill the list or grid column, the focus indicator will float up and down.</td></tr><tr><td>fixedFocus</td><td>Causes the focus to stay fixed on the upper leftmost item. As the user scrolls down, the row containing the previously selected item scrolls up off screen. Scrolling continues until the last row is reached.</td></tr></tbody></table></td>
 </tr>
 <tr>
 <td>drawFocusFeedbackOnTop</td>
@@ -157,6 +157,13 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 <td>If the drawFocusFeedback field value is set to true, specifies a custom bitmap to be drawn on list or grid items to indicate focus on that item, when the list or grid itself does not have focus. Only set this field to use a bitmap with a different appearance than the system default. In most cases, you will want to use a 9-patch PNG bitmap with both expandable regions as well as margins to fit around the item, which is the type of bitmap used as the system default</td>
 </tr>
 <tr>
+<td>focusFeedbackPoster<br /><br /><em>Available since Roku OS 16.0.</em></td>
+<td>node</td>
+<td></td>
+<td>READ_ONLY</td>
+<td>The Poster node that the list or grid uses to draw its focus indicator. Use this field to apply the same treatment to the focus indicator that you apply to custom list or grid items, such as an <a href="https://developer.roku.com/dev/docs/effect" title="Effect">Effect</a> that gives the indicator rounded or asymmetric corners matching the item shape</td>
+</tr>
+<tr>
 <td>focusBitmapBlendColor</td>
 <td>color</td>
 <td>0xFFFFFFFF</td>
@@ -194,7 +201,7 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 <tr>
 <td>wrapDividerHeight</td>
 <td>float</td>
-<td>36</td>
+<td>0.0</td>
 <td>READ_WRITE</td>
 <td>If the vertFocusAnimationStyle field value is set to fixedFocusWrap, specifies the height of a bitmap used as a visual divider between the last and first list or grid items, when the list or grid wraps. Only set this field to use a value with a different appearance than the system default</td>
 </tr>
@@ -257,14 +264,14 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 <tr>
 <td>sectionDividerTextColor</td>
 <td>color</td>
-<td>system default</td>
+<td>0xddddddff</td>
 <td>READ_WRITE</td>
 <td>If the ContentNode specifies sections for a list or grid, specifies a custom color to use for the section title text. Only set this field to use a different text color than the system default</td>
 </tr>
 <tr>
 <td>sectionDividerSpacing</td>
 <td>float</td>
-<td>0.0</td>
+<td>10</td>
 <td>READ_WRITE</td>
 <td>If the ContentNode specifies sections for a list or grid, and the section dividers are specified to include an icon and/or a label, specifies the spacing between the icon, label, and section divider bitmap</td>
 </tr>
@@ -278,14 +285,14 @@ Each node class extended from the ArrayGrid abstract node class will have custom
 <tr>
 <td>sectionDividerHeight</td>
 <td>float</td>
-<td>0.0</td>
+<td>40</td>
 <td>READ_WRITE</td>
 <td>If the ContentNode specifies sections for a list or grid, specifies the height of the section divider bitmap</td>
 </tr>
 <tr>
 <td>sectionDividerMinWidth</td>
 <td>float</td>
-<td>0.0</td>
+<td>117</td>
 <td>READ_WRITE</td>
 <td>If the ContentNode specifies sections for a list or grid, specifies the minimum width of the section divider bitmap</td>
 </tr>

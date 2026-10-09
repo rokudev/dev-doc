@@ -1,16 +1,18 @@
 ---
 title: Basic Subscription Recovery
-excerpt: 'Handle failed auto-renewals with a 3-day grace period and daily emails'
+excerpt: Handle failed auto-renewals with a 3-day grace period and daily emails
 deprecated: false
 hidden: false
 metadata:
-  title: 'Basic Subscription Recovery | Roku Developer Docs'
-  description: 'Basic subscription recovery gives customers a 3-day grace period when auto-renewal fails, while Roku Pay emails them daily to update their MOP.'
+  title: Basic Subscription Recovery | Roku Developer Docs
+  description: >-
+    Basic subscription recovery gives customers a 3-day grace period when
+    auto-renewal fails, while Roku Pay emails them daily to update their MOP.
   robots: index
 next:
   description: ''
 ---
-When payment for a subscription auto-renewal fails, Roku's basic subscription recovery feature gives customers a 3-day grace period where they can continue accessing content, while Roku Pay notifies them daily via email to update their method of payment (MOP). Once the 3-day grace period expires, the subscription is canceled. This solution helps the publisher improve the chance of recovering payments and thereby reduce passive cancelations.
+When payment for a subscription auto-renewal fails, Roku's basic subscription recovery feature gives customers a 3-day grace period where they can continue accessing content, while Roku Pay notifies them daily via email to update their method of payment (MOP). Once the 3-day grace period expires, the subscription is canceled. This solution helps the publisher improve the chance of recovering payments and thereby reduce passive cancellations.
 
 > Effective October 1, 2024, all apps using Roku Pay must implement Enhanced Subscription Recovery to pass [certification](doc:roku-pay-requirements#rp-4-authentication-and-entitlement-requirements). As a result, apps using basic subscription recovery solution must migrate to [Enhanced Subscription Recovery](doc:subscription-on-hold).
 
@@ -50,11 +52,11 @@ The publisher should routinely synchronize their entitlement service with the Ro
 | In recovery (3-day grace period) | true             | current or past date | false           |
 | Canceled                         | false            | past date            | true            |
 
-> **Free trials:** When a free trial ends and the customer's method of payment fails, the `is_entitled` flag is set to "false", and the subscription is automatically cancelled (there is no grace period in this case).
+> **Free trials:** When a free trial ends and the customer's method of payment fails, the `isEntitled` flag is set to "false", and the subscription is automatically cancelled (there is no grace period in this case).
 
 ## Push notifications
 
-Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-grace-period) when a subscription is put on hold, it sends a [GraceRecovered](doc:push-notifications#in-grace-period) notification when the subscription is recovered (renewed after being put in a grace period):
+Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-grace-period) when the auto-renewal payment first fails while the customer still has access. It sends a [GraceRecovered](doc:push-notifications#in-grace-period) notification when the subscription is recovered (renewed after being put in a grace period):
 
 ### GraceInitiated
 

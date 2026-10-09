@@ -60,7 +60,7 @@ select the item.
         <td class="short-line">ContentType</td>
         <td class="short-line">String</td>
         <td class="long-line">
-          Although ContentType accepts type String, the return value is of type [roInt](doc:roint). See table below.
+          Although ContentType accepts type String, the return value is of type <a href="https://developer.roku.com/dev/docs/roint">roInt</a>. See table below.
           <div class="hscroll">
             <table>
               <thead>
@@ -319,7 +319,7 @@ Digital rights management (DRM) content meta-data control attributes are availab
         <td class="short-line">Required for all</td>
         <td class="short-line">String</td>
         <td class="long-line">"playready" or "widevine". This value is case-insensitive. The default is an empty string.<br /><br /><blockquote>
-            <p>As of [Roku OS 9.3](doc:release-notes#roku-os-93), support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click [here](doc:content-protection) for more information on implementing these DRMs.</p>
+            <p>As of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-93">Roku OS 9.3</a>, support for Verimatrix DRM has been removed from the firmware. Make sure that content in your app is protected using one of the following Roku-supported DRMs: Microsoft PlayReady or Widevine. Click <a href="https://developer.roku.com/dev/docs/content-protection">here</a> for more information on implementing these DRMs.</p>
         </blockquote></td>
         <td class="short-line">"widevine"</td>
       </tr>
@@ -359,35 +359,35 @@ Digital rights management (DRM) content meta-data control attributes are availab
         <td class="short-line">1000</td>
       </tr>
       <tr>
-        <td class="long-line">ignoreInitDataPssh<br /><br /><em>Available since [Roku OS 14.5](doc:release-notes#roku-os-145)</em></td>
+        <td class="long-line">ignoreInitDataPssh<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-145">Roku OS 14.5</a></em></td>
         <td class="short-line">Widevine: Optional</td>
         <td class="short-line">String</td>
         <td class="long-line">Ignores the PSSH in the initialization segment. This enables support for Harmonic/DTV-GO DASH-IOP v5.0.0 streams with In-Band Key-Rotation Signaling without breaking legacy streams/apps that do not provide the <code>&lt;ContentProtection&gt;</code> element with PSSH info in the DASH manifest. <br /><br />The default value is <code>"false"</code>.</td>
         <td class="short-line">"true"</td>
       </tr>
       <tr>
-        <td class="long-line">licReqTemplate<br /><br /><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
+        <td class="long-line">licReqTemplate<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-146">Roku OS 14.6</a></em></td>
         <td class="short-line">Widevine</td>
         <td class="short-line"></td>
         <td class="long-line">Contains the license request "template, which is the entire license request without the license challenge filled-in<br /><br />JSON or XML formats are supported.<br /><br />Use this parameter and the <strong>templateType</strong>, <strong>requestField</strong>, and <strong>responseField</strong> parameters to wrap the Widevine license challenge payload in the request format (JSON or XML) required by your license server proxy. <br /><br />See [Example of wrapping the Widevine license challenge payload](#example-of-wrapping-the-widevine-license-challenge-payload) for more information.</td>
         <td class="short-line">"JSON"</td>
       </tr>
       <tr>
-        <td class="long-line">templateType<br /><br /><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
+        <td class="long-line">templateType<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-146">Roku OS 14.6</a></em></td>
         <td class="short-line">Widevine</td>
         <td class="short-line">String</td>
         <td class="long-line">Set to "JSON", "XML" or "BASE64"<br />-  JSON: licReqTemplate is in json format<br />- XML: licReqTemplate is in XML format<br />- BASE64 - Does not use licReqTemplate Instead, base64 encode the challenge and send it in POST body<br /> If no value is specified, the license template is not used</td>
         <td class="short-line">"JSON"</td>
       </tr>
       <tr>
-        <td class="long-line">requestField<br /><br /><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
+        <td class="long-line">requestField<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-146">Roku OS 14.6</a></em></td>
         <td class="short-line">Widevine</td>
         <td class="short-line">String</td>
-        <td class="long-line">jsonpath or xpath to the element whose value must contain the fixed token LICENSE_CHALLENGE<br />- jsonpath if templateType is "JSON" <br />- xpath if templateType is "XML"<br /><br />The Roku OS Roku replaces the  LICENSE_CHALLENGE token with the base64 encoded license challenge.<br /><br />As of [Roku OS 15.0](doc:release-notes#roku-os-150), the LICENSE_CHALLENGE token can be provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.</td>
+        <td class="long-line">jsonpath or xpath to the element whose value must contain the fixed token LICENSE_CHALLENGE<br />- jsonpath if templateType is "JSON" <br />- xpath if templateType is "XML"<br /><br />The Roku OS Roku replaces the  LICENSE_CHALLENGE token with the base64 encoded license challenge.<br /><br />As of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-150">Roku OS 15.0</a>, the LICENSE_CHALLENGE token can be provided as a URL (in addition to a text string).  The Roku OS automatically follows the challenge URLs properly.</td>
         <td class="short-line">".parameters[0].body"</td>
       </tr>
       <tr>
-        <td class="long-line">responseField<br /><br /><em>Available since [Roku OS 14.6](doc:release-notes#roku-os-146)</em></td>
+        <td class="long-line">responseField<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-146">Roku OS 14.6</a></em></td>
         <td class="short-line">Widevine</td>
         <td class="short-line">String</td>
         <td class="long-line">json-path or xpath to the element that         contains the base64 encoded license response<br />- jsonpath if templateType is "JSON" <br />- xpath if templateType is "XML"<br /><br />The Roku OS extracts the license response, base64 decodes it, and provides it to the DRM client in the Roku firmware.<br /><br />After setting the license response in the DRM agent , the license response is made available in the <strong>licenseStatus</strong> Playback field, which is an associative array. The <strong>response</strong> field in the associative array contains the entire license response.</td>
@@ -404,7 +404,7 @@ Developers looking to pass custom HTTP headers with a licensing request can now 
 
 ### Example of configuring a dash stream with Widevine DRM
 
-```
+```brightscript
 contMeta = {
     HDPosterUrl:"pkg:/images/BigBuckBunny.jpg"
     SDPosterUrl:"pkg:/images/BigBuckBunny.jpg"
@@ -426,7 +426,7 @@ contMeta = {
 
 The following code demonstrates how you can wrap the Widevine license challenge payload in the request format (JSON or XML) required by your license server proxy.
 
-```
+```brightscript
 ' set the content type
 ' for json it may be set to "application/json
 ' for xml it may be set to "text/xml" or "application/xml"
@@ -596,7 +596,7 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">Url</td>
         <td class="short-line">String</td>
-        <td class="short-line">Stream URL for Scene Graph Video node</td>
+        <td class="short-line">Stream URL for SceneGraph Video node</td>
         <td class="short-line">mysite.com/img/vacation.jpg</td>
       </tr>
       <tr>
@@ -621,7 +621,7 @@ Playback configuration meta-data attributes are used to configure the playback o
         <td class="short-line">Stream</td>
         <td class="short-line">roAssociativeArray</td>
         <td class="long-line">
-          Supported by roVideoPlayer and roVideoScreen, but not the Roku Scene Graph Video node.<br />For the Video node, use the top level url, streamformat, etc. attributes. <br /><br />The exception is cases where you don't have adaptive streams (typically MP4) and need to specify different bitrate variants separately. For this use case use the Streams attribute. roAssociativeArray that has parameters representing the stream settings that were set as individual roArrays in previous firmware revisions. <br /><br />The old method is still supported and descriptions of the parameters can be found under those content-meta data entries. <br /><br />For url please see StreamUrls, for quality it is now a Boolean that is true for HD quality. <br />
+          Supported by roVideoPlayer and roVideoScreen, but not the Roku SceneGraph Video node.<br />For the Video node, use the top level url, streamformat, etc. attributes. <br /><br />The exception is cases where you don't have adaptive streams (typically MP4) and need to specify different bitrate variants separately. For this use case use the Streams attribute. roAssociativeArray that has parameters representing the stream settings that were set as individual roArrays in previous firmware revisions. <br /><br />The old method is still supported and descriptions of the parameters can be found under those content-meta data entries. <br /><br />For url please see StreamUrls, for quality it is now a Boolean that is true for HD quality. <br />
           <div class="hscroll">
             <table>
               <thead>
@@ -773,7 +773,7 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">PlayStart</td>
         <td class="short-line">Float</td>
-        <td class="long-line">PlayStart defines the start position of the content, in seconds.<br /><br />Starting from [Roku OS 8.0](doc:release-notes#roku-os-8), content metadata supports negative PlayStart values. This feature allows the media players to start playbacks distanced from the edge of the live stream</td>
+        <td class="long-line">PlayStart defines the start position of the content, in seconds.<br /><br />Starting from <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-8">Roku OS 8.0</a>, content metadata supports negative PlayStart values. This feature allows the media players to start playbacks distanced from the edge of the live stream</td>
         <td class="short-line">0</td>
       </tr>
       <tr>
@@ -815,13 +815,13 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">SubtitleUrl</td>
         <td class="short-line">String</td>
-        <td class="long-line">Specifies the path to an SRT or TTML formatted file used to render subtitles or closed captions, respectively. This is supported on roVideoScreen only. See [Closed Caption Support](doc:closed-caption) for additional details</td>
+        <td class="long-line">Specifies the path to an SRT or TTML formatted file used to render subtitles or closed captions, respectively. This is supported on roVideoScreen only. See <a href="https://developer.roku.com/dev/docs/closed-caption">Closed Caption Support</a> for additional details</td>
         <td class="long-line">"mysite.com/vid/1932.srt"; "mysite.com/vid/1932.xml"</td>
       </tr>
       <tr>
         <td class="short-line">VideoDisableUI</td>
         <td class="short-line">Boolean</td>
-        <td class="long-line">If set to true, hides the Scene Graph Video node trick play UI; If set to false (the default) shows the Scene Graph Video node trick play UI</td>
+        <td class="long-line">If set to true, hides the SceneGraph Video node trick play UI; If set to false (the default) shows the SceneGraph Video node trick play UI</td>
         <td class="long-line">video = createObject("roSGNode", "Video"); video.content.VideoDisableUI = true</td>
       </tr>
       <tr>
@@ -896,19 +896,19 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">LiveBoundsPauseBehavior</td>
         <td class="short-line">String</td>
-        <td class="long-line">Allows an app to customize Media Player behavior on live streams when playing in the earliest part of a DVR buffer.<br /><br />The stream remains paused even though it is playing in the earliest part of the buffer of a live stream when the value of the attribute is set to "pause." This enables the Roku OS to distinguish between live streams and live streams that eventually transition to video on demand.<br /><br />The possible values of this attribute are "resume", "stop", "pause", with resume being the default value.<br /><br /><strong>Currently, this attribute will work only with Smooth and Dash streams.</strong>  (Available since [Roku OS 8.1](doc:release-notes#roku-os-81))</td>
+        <td class="long-line">Allows an app to customize Media Player behavior on live streams when playing in the earliest part of a DVR buffer.<br /><br />The stream remains paused even though it is playing in the earliest part of the buffer of a live stream when the value of the attribute is set to "pause." This enables the Roku OS to distinguish between live streams and live streams that eventually transition to video on demand.<br /><br />The possible values of this attribute are "resume", "stop", "pause", with resume being the default value.<br /><br /><strong>Currently, this attribute will work only with Smooth and Dash streams.</strong>  (Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-81">Roku OS 8.1</a>)</td>
         <td class="short-line">Resume</td>
       </tr>
       <tr>
         <td class="short-line">ClipStart</td>
         <td class="short-line">Float</td>
-        <td class="long-line">ClipStart sets the clip start position of the playback. The unit of ClipStart is seconds (Available since [Roku OS 8.1](doc:release-notes#roku-os-81)).</td>
+        <td class="long-line">ClipStart sets the clip start position of the playback. The unit of ClipStart is seconds (Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-81">Roku OS 8.1</a>).</td>
         <td class="short-line">00.0</td>
       </tr>
       <tr>
         <td class="short-line">ClipEnd</td>
         <td class="short-line">Float</td>
-        <td class="long-line">ClipEnd sets the clip end position. The unit of ClipEnd is seconds (Available since [Roku OS 8.1](doc:release-notes#roku-os-81)).</td>
+        <td class="long-line">ClipEnd sets the clip end position. The unit of ClipEnd is seconds (Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-81">Roku OS 8.1</a>).</td>
         <td class="short-line">00.0</td>
       </tr>
       <tr>
@@ -926,7 +926,7 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">AudioBlacklist</td>
         <td class="short-line">String</td>
-        <td class="long-line">Comma-separated list of audio tracks (based on ISO 639-1 or 639-2 language code) that may not be selected from the <strong>Audio track</strong> setting for the content. <br /><br />(Available since [Roku OS 9.4](doc:release-notes#roku-os-94))<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
+        <td class="long-line">Comma-separated list of audio tracks (based on ISO 639-1 or 639-2 language code) that may not be selected from the <strong>Audio track</strong> setting for the content. <br /><br />(Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-94">Roku OS 9.4</a>)<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
         <td class="short-line">"ita, fr"</td>
       </tr>
       <tr>
@@ -938,7 +938,7 @@ Playback configuration meta-data attributes are used to configure the playback o
       <tr>
         <td class="short-line">CaptionBlacklist</td>
         <td class="short-line">String</td>
-        <td class="long-line">Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may not be selected from the <strong>Accessibility&gt;Captioning track</strong> setting for the content.<br /><br />(Available since [Roku OS 9.4](doc:release-notes#roku-os-94))<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
+        <td class="long-line">Comma-separated list of captioning tracks (based on ISO 639-2 language code) that may not be selected from the <strong>Accessibility&gt;Captioning track</strong> setting for the content.<br /><br />(Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-94">Roku OS 9.4</a>)<br /><br />If a language is both blacklisted  and whitelisted, the blacklisting takes precedence.</td>
         <td class="short-line">"deu, dan"</td>
       </tr>
     </tbody>
@@ -1014,7 +1014,7 @@ Content Delivery Networks (CDNs) can be switched during playback to load balance
 
 **Example**
 
-```
+```brightscript
 this.cur_clip.CDNConfig = [
     { URLFilter:"http://cdn1.xyz.com/abc/", ContentFilter, "testProgram", priority: 1, weight: 50, serviceLocation: "west" },
     { URLFilter:"http://cdn2.xyz.com/abc/", ContentFilter, "testProgram", priority: 1, weight: 50, serviceLocation: "east" },
@@ -1039,7 +1039,7 @@ set to only apply to your Audio and Video nodes, create a unique
 instance of roHttpAgent for them and assign it directly. For example,
 for a Video node you should do the following:
 
-```
+```brightscript
 'Assume video is a valid Video node instance
 httpAgent = CreateObject("roHttpAgent")
 video.setHttpAgent(httpAgent)
@@ -1056,7 +1056,7 @@ video.setHttpAgent(httpAgent)
       <tr>
         <td class="short-line">HttpCertificatesFile</td>
         <td class="short-line">uri</td>
-        <td class="long-line">If set, the Scene Graph Audio or Video node loads this public certificate bundle, to authenticate the server. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When playing this content, the agent is updated in the following manner: <ul>
+        <td class="long-line">If set, the SceneGraph Audio or Video node loads this public certificate bundle, to authenticate the server. The protocol must be https for this to have any effect. When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When playing this content, the agent is updated in the following manner: <ul>
             <li>If this attribute is defined, the file URI is set into the HttpAgent instance. However, if this attribute is specified and the value is the empty string (""), then no changes will be made to the HttpAgent.</li>
             <li>
               <p>If this attribute is not defined, the behavior depends upon whether the Content Meta-Data (CMD) contains secure (https) URLs:</p>
@@ -1070,17 +1070,17 @@ video.setHttpAgent(httpAgent)
       <tr>
         <td class="short-line">HttpCookies</td>
         <td class="short-line">array of strings</td>
-        <td class="long-line">If set, the Scene Graph Audio or Video node send the cookies to the server. Each cookie must have the following syntax: dom=domain;path=path;name=name;val=value; When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP cookies in the agent are cleared and replaced with the cookies defined by this attribute</td>
+        <td class="long-line">If set, the SceneGraph Audio or Video node send the cookies to the server. Each cookie must have the following syntax: dom=domain;path=path;name=name;val=value; When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP cookies in the agent are cleared and replaced with the cookies defined by this attribute</td>
       </tr>
       <tr>
         <td class="short-line">HttpHeaders</td>
         <td class="short-line">array of strings</td>
-        <td class="long-line">If set, the Scene Graph Audio or Video node sends these headers to the server. Each string must be of the format "name:value". When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP headers in the agent are cleared and replaced with the headers defined by this attribute</td>
+        <td class="long-line">If set, the SceneGraph Audio or Video node sends these headers to the server. Each string must be of the format "name:value". When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute is set, all HTTP headers in the agent are cleared and replaced with the headers defined by this attribute</td>
       </tr>
       <tr>
         <td class="short-line">HttpSendClientCertificate</td>
         <td class="short-line">Boolean</td>
-        <td class="long-line">If true, the Scene Graph Audio or Video node sends the client device certificate to the server, for client authentication. The protocol must be https for this to have any effect. When used with a Scene Graph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute exists, the value of this attribute (true or false) is set into the HttpAgent</td>
+        <td class="long-line">If true, the SceneGraph Audio or Video node sends the client device certificate to the server, for client authentication. The protocol must be https for this to have any effect. When used with a SceneGraph Audio or Video node, the node or global HttpAgent is found, as explained elsewhere in this documentation. When this Content Meta-Data is played and this attribute exists, the value of this attribute (true or false) is set into the HttpAgent</td>
       </tr>
     </tbody>
 </table></div>
@@ -1093,7 +1093,7 @@ of requests.
 Once you have created your agent, you can set the Video node's `drmHttpAgent` field directly to designate that the special
 agent is to supersede any currently-set agent in the case of DRM key and license requests. The `drmHttpAgent` field must be configured before setting the content in the Video node.
 
-```
+```brightscript
 ' Configure the DRM HttpAgent before setting content in the Video node
 httpAgent = CreateObject("roHttpAgent")
 httpAgent.AddHeader("DRM-Specific-1", "weqweqweqweqweqweqeqeqeqeqwe")

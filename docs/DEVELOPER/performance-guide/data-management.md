@@ -30,7 +30,7 @@ next:
 
 Given the rendezvous penalties, don't repeatedly reference the same fields in `m.global` to get data subsections. Use temporaries to hold references to successive parts of the tree. For example, assume that you have a large set of app configuration data stored in `m.global.config`. This data is a large web with elements (AAs or node trees) for settings, analytics, etc.:
 
-```
+```brightscript
 m.global
 {
     config
@@ -115,7 +115,7 @@ The Task makes a local copy of the config global data which it then references v
 ## Garbage Collector
 
 - **SceneGraph Nodes** Nodes are reference counted. When the reference count goes to zero, the Roku OS automatically handles the clean up of SceneGraph nodes.
-- **Brightscript Objects** Brightscript objects can be cleaned up using the built-in Garbage Collector if no other elements are referencing the Brightscript object. Generally, this is done once right before video playback.
+- **BrightScript Objects** BrightScript objects can be cleaned up using the built-in Garbage Collector if no other elements are referencing the BrightScript object. Generally, this is done once right before video playback.
 
   > There is no advantage to calling the Garbage Collector frequently. For more information refer to [RunGarbageCollector](doc:global-utility-functions).
 

@@ -121,7 +121,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         READ_WRITE
       </td>
       <td style={{ textAlign: "left" }}>
-        Sets the color palette for the dialog's background, text, buttons, and other elements. <br /><br />By default, no palette is specified; therefore, the dialog inherits the color palette from the nodes higher in the scene graph (typically, from the dialog's [Scene](doc:scene) node, which has a **palette** field that can be used to consistently color the standard dialogs and keyboards in the app). <br /><br />The RSGPalette color values used by the StandardDialog node are listed in the RSGPalette color node fields section.
+        Sets the color palette for the dialog's background, text, buttons, and other elements. <br /><br />By default, no palette is specified; therefore, the dialog inherits the color palette from the nodes higher in the scene graph (typically, from the dialog's <a href="https://developer.roku.com/dev/docs/scene">Scene</a> node, which has a **palette** field that can be used to consistently color the standard dialogs and keyboards in the app). <br /><br />The RSGPalette color values used by the StandardDialog node are listed in the RSGPalette color node fields section.
       </td>
     </tr>
     <tr>
@@ -197,8 +197,8 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         Blend color for the following items:
         <br /><br />
         <ul>
-          <li>[StdDlgProgressItem's](doc:std-dlg-progress-item) spinner bitmap</li>
-          <li>[StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic</li>
+          <li><a href="https://developer.roku.com/dev/docs/std-dlg-progress-item">StdDlgProgressItem's</a> spinner bitmap</li>
+          <li><a href="https://developer.roku.com/dev/docs/std-dlg-determinate-progress-item">StdDlgDeterminateProgressItem's</a> graphic</li>
         </ul>
       </td>
     </tr>
@@ -210,9 +210,9 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         Color for the text in the following items:
         <br /><br />
         <ul>
-          <li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
-          <li>All [content area items](doc:std-dlg-item-base), except for [StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item).</li>
-          <li>[Title area](doc:std-dlg-title-area). Unfocused button.</li>
+          <li><a href="https://developer.roku.com/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="https://developer.roku.com/dev/docs/std-dlg-graphic-item">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "normal" or "bold".</li>
+          <li>All <a href="https://developer.roku.com/dev/docs/std-dlg-item-base">content area items</a>, except for <a href="https://developer.roku.com/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="https://developer.roku.com/dev/docs/std-dlg-graphic-item">StdDlgGraphicItem</a>.</li>
+          <li><a href="https://developer.roku.com/dev/docs/std-dlg-title-area">Title area</a>. Unfocused button.</li>
         </ul>
       </td>
     </tr>
@@ -224,7 +224,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         Blend color for the following:
         <br /><br />
         <ul>
-          <li>The [button area](doc:std-dlg-button-area) focus bitmap.</li>
+          <li>The <a href="https://developer.roku.com/dev/docs/std-dlg-button-area">button area</a> focus bitmap.</li>
           <li>The focused scrollbar thumb.</li>
         </ul>
       </td>
@@ -245,7 +245,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         Color for the text in the following items:
         <br /><br />
         <ul>
-          <li>[StdDlgTextItem](doc:std-dlg-text-item) and [StdDlgGraphicItem](doc:std-dlg-graphic-item) if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
+          <li><a href="https://developer.roku.com/dev/docs/std-dlg-text-item">StdDlgTextItem</a> and <a href="https://developer.roku.com/dev/docs/std-dlg-graphic-item">StdDlgGraphicItem</a> if the <strong>namedTextStyle</strong> field is set to "secondary".</li>
           <li>Disabled button.</li>
         </ul>
       </td>
@@ -259,7 +259,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         <br /><br />
         <ul>
           <li>The divider displayed below the title area.</li>
-          <li>The unfilled portion of the [StdDlgDeterminateProgressItem's](doc:std-dlg-determinate-progress-item) graphic.</li>
+          <li>The unfilled portion of the <a href="https://developer.roku.com/dev/docs/std-dlg-determinate-progress-item">StdDlgDeterminateProgressItem's</a> graphic.</li>
         </ul>
       </td>
     </tr>
@@ -287,7 +287,7 @@ The **StandardDialog** node is the base for Roku's pre-built standard message, k
         The blend color for the following items:
         <br /><br />
         <ul>
-          <li>The button focus footprint bitmap that is displayed when the [button area](doc:std-dlg-button-area) does not have focus.</li>
+          <li>The button focus footprint bitmap that is displayed when the <a href="https://developer.roku.com/dev/docs/std-dlg-button-area">button area</a> does not have focus.</li>
           <li>Unfocused scrollbar thumb and scrollbar track.</li>
         </ul>
       </td>

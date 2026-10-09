@@ -45,23 +45,23 @@ Audio playback failed due to an error
 
 ### isTimedMetaData() as Boolean
 
-This event is fired when an ID3 timecode has passed with an event that includes key/value pairs for timed metadata that the Brightscript app is interested in.
+This event is fired when an ID3 timecode has passed with an event that includes key/value pairs for timed metadata that the BrightScript app is interested in.
 
-All timed metadata is released after it is delivered to the Brightscript app. It is also released without delivery if the Brightscript app did not indicate it’s interest in the data with a SetTimedMetaDataForKeys() call.
+All timed metadata is released after it is delivered to the BrightScript app. It is also released without delivery if the BrightScript app did not indicate it’s interest in the data with a SetTimedMetaDataForKeys() call.
 
 ### isRequestSucceeded() as Boolean
 
 Stream playback has completed successfully.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns the string "Timed Metadata"
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array of key/value pairs of timedMetadata at the pts timecode specified in the index.
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the index of the audio stream.
 
@@ -71,11 +71,11 @@ Checks whether an event has been fired when the format of all tracks in the medi
 
 Specific information about the event can be obtained by calling the GetMessages() and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
-Returns a description of the message (for exampe, "Format Detected").
+Returns a description of the message (for example, "Format Detected").
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns information about the video player event. This method returns an roAssociativeArray that contains the following keys:
 
@@ -91,11 +91,11 @@ Checks whether the individual segments in an HLS or smooth stream are about to b
 
 Specific information about the event can be obtained by calling the GetMessages() and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a description of the message (for example, "Segment download started").
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array containing the following information about the segment download event:
 
@@ -110,15 +110,15 @@ Returns an associative array containing the following information about the segm
 
 Checks whether playback has begun of a segment in an HLS, DASH, or smooth stream. This method returns true if the playback of a segment in an HLS, DASH, or smooth stream has begun; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex() and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a description of the message (for example, "Stream segment info").
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the segment start time in seconds.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array with the following information about the stream segment:
 
@@ -191,15 +191,15 @@ Returns an associative array with the following information about the stream seg
 
 Checks whether a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded. This method returns true if a segment in an adaptive stream (HLS, Smooth, or DASH) has been downloaded; otherwise, it returns false.  Specific information about the event can be obtained by calling the GetMessage(), GetIndex() and GetInfo() methods on the event.
 
-#### GetMessage() as String
+##### GetMessage() as String
 
 Returns a description of the message (for example, "Download segment info").
 
-#### GetIndex() as Integer
+##### GetIndex() as Integer
 
 Returns the segment sequence number.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns an associative array containing the following information about the segment download:
 

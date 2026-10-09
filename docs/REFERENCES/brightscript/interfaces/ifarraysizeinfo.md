@@ -26,23 +26,23 @@ The **ifArraySizeInfo()** interface includes set of functions that provide devel
 
 ### IsResizable() As Boolean
 
-#### Description
+##### Description
 
 Returns a flag indicating whether the array will automatically expand to store new items.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the array will automatically expand to store new items.
 
 ### Capacity() As Integer
 
-#### Description
+##### Description
 
 Returns the current storage capacity of the array (specifically, how many items could be stored without allocating additional storage).
 
 The return value may be 0 if the array is empty and no storage has been allocated yet.
 
-#### Return Value
+##### Return Value
 
 An integer indicating the  current storage capacity of the array.
 
@@ -50,7 +50,7 @@ An integer indicating the  current storage capacity of the array.
 
 > *As of [Roku OS 15.0](doc:release-notes#roku-os-150), the roByteArray node does not support this function.*
 
-#### Description
+##### Description
 
 Sends a request to allocate or increase storage capacity of the array to hold at least the specified number of items. 
 
@@ -60,7 +60,7 @@ Sends a request to allocate or increase storage capacity of the array to hold at
 | ------- | ------- | ---------------------------------------------------- |
 | minSize | Integer | The specified number of items the array is to store. |
 
-#### Return Value
+##### Return Value
 
 Returns true if the potential capacity update can hold the specified number of items. Otherwise, returns false if the array is not resizable or storage allocation fails.
 
@@ -70,11 +70,11 @@ Returns true if the potential capacity update can hold the specified number of i
 
 > *As of [Roku OS 15.0](doc:release-notes#roku-os-150), the roByteArray node does not support this function.*
 
-#### Description
+##### Description
 
 Sends a request to free or decrease storage to the minimum needed to store the current number of items.
 
-#### Return Value
+##### Return Value
 
 Returns true unless the array is not resizable or storage reallocation fails.
 

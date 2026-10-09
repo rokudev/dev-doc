@@ -74,19 +74,19 @@ The **Utilities** tab contains several tools essential for Roku app development:
 
 * **Profiling data**: Collect app performance statistics such as CPU and memory usage, "wall-clock" time, and function call counts. You can then use the [BrightScript Profiler](doc:brightscript-profiler) to analyze the collected data and optimize your app.
 
-#### Package inspector
+##### Package inspector
 
 The package inspector is a utility to inspect the details of the package such as the developer ID used and the creation date. This is helpful for verifying the same developer ID is used when updating a package to ensure any registry data remains intact. The app registry data will be lost when using a different developer ID to update a published app.
 
-#### Rekey utility
+##### Rekey utility
 
 The rekey utility allows you to replace the signing key on the current Roku device with a key from an existing package. This utility is most useful when developing multiple apps on the same Roku device. See [Packaging apps](doc:packaging-channels#packaging-with-the-development-application-installer) for how to rekey a Roku device.
 
-#### Screenshot utility
+##### Screenshot utility
 
 The screenshot utility enables you to take an HD screenshot (1280 X 720) of your sideloaded app's UI (you cannot take a screenshot of any content playback). FHD (1920x1080) screenshots require a 4K-capable Roku set to 1080p or 4K UHD display type. This is useful for generating images that highlight your app in the Streaming Store. See [App Publishing](doc:channel-publishing-guide#streaming-store-assets) for more information on uploading the screenshots when submitting your app for publishing to the Streaming Store.
 
-#### Profiling data utility
+##### Profiling data utility
 
 The profiling data utility enables you to capture app performance statistics. You can then use the [BrightScript Profiler](doc:brightscript-profiler) to analyze the collected data and determine where performance improvements and efficiencies can be made in the app. See the [BrightScript Profiler documentation](doc:brightscript-profiler#collecting-the-data) for more information on collecting data with this tool.
 

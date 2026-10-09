@@ -22,9 +22,9 @@ The Animation node class provides a simple linear interpolator function, where t
 
 The following example shows how to use some simple animations. It uses two Animation nodes, each with its own Vector2DFieldInterpolator. The first defines a translation animation of the poster image, and the second defines a scale animation. They are both launched in an init() function using BrightScript. When run together, the effect is to "bloom" the poster image on the screen.
 
-#### Animation BrightScript example
+##### Animation BrightScript example
 
-```
+```brightscript
 function init()
    scaleAnimation = m.top.FindNode("scaleAnimation")
    transAnimation = m.top.FindNode("transAnimation")
@@ -33,7 +33,7 @@ function init()
 end function
 ```
 
-#### Animation XML example
+##### Animation XML example
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -111,13 +111,6 @@ end function
       <td>0.5</td>
       <td>READ\_WRITE</td>
       <td>If easeFunction is set to piecewise, easeOutPercent sets the percentage of the animation duration during which ease-out is applied. Note that the values of easeInPercent plus easeOutPercent must be less than or equal to 1. For all other values of easeFunction, easeOutPercent is ignored</td>
-    </tr>
-    <tr>
-      <td>optional</td>
-      <td>boolean</td>
-      <td>false</td>
-      <td>READ\_WRITE</td>
-      <td>Set to true to skip animations on lower performing Roku devices. See <a href="/dev/docs/hardware#current-roku-models" title="Roku Devices">Roku Devices</a> for model numbers and code names. When an Animation has optional set to true, setting the control field to start will cause the state field to change to running and immediately change again to finished. These state changes allow any logic tied to state field observers that run at the start and end of the Animation to be properly called</td>
     </tr>
     <tr>
       <td>willBeSkipped</td>

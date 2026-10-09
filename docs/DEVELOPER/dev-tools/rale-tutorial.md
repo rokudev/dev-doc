@@ -38,9 +38,11 @@ you can select the template you want to use, or upload your own zip to edit.
 
 ![roku815px - RALE-SELECTCHANNEL](https://image.roku.com/ZHZscHItMTc2/RALE-SELECTCHANNEL.png "RALE-SELECTCHANNEL")
 
-The code for these templates can be found in our Eclipse Plugin. For instructions on how to download the Eclipse plugin visit
-
-[Download the Eclipse plugin here!](doc:ide-support)
+<!-- TODO: this previously pointed readers to the Eclipse plugin for template source.
+Roku has discontinued the Eclipse plugin (see ide-support.md) and its update site no
+longer serves installable plugin files (confirmed: content.xml/artifacts.xml return
+404 as of 2026-10-01). Confirm with the RALE/DevTools team where template source now
+lives, if anywhere, and replace this paragraph accordingly. -->
 
 ## Editing components in RALE
 
@@ -59,7 +61,7 @@ Dragging and resizing the node in the GUI will correspond with your Roku app on 
 
 ## Release notes
 
-**2.1.7**: RALE version 2.1.7 includes the following new features that that help developers work with designers to implement app layouts:
+**2.1.7**: RALE version 2.1.7 includes the following new features that help developers work with designers to implement app layouts:
 
 - **Overlays**: Upload a wireframe and then place components on top of a transparent overlay to quickly and accurately match the layout design.
 - **Guides**: Drag vertical and horizontal guides onto your app to organize components into columns and rows and ensure text, images, and other nodes are aligned on the page per the wireframe.

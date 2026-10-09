@@ -24,21 +24,21 @@ next:
 
 ### GetMessagePort() as Object
 
-#### Description
+##### Description
 
 Returns the message port (if any) currently associated with the object.
 
-#### Return Value
+##### Return Value
 
 The message port value.
 
 ### SetMessagePort(port as Object) as Void
 
-#### Description
+##### Description
 
 Sets the roMessagePort to be used to receive events.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                            |
 | ---- | ------ | -------------------------------------- |
@@ -46,7 +46,7 @@ Sets the roMessagePort to be used to receive events.
 
 ### EnableTransportEvents() as Boolean
 
-#### Description
+##### Description
 
 Registers an app to receive `roInput transport` events, which are voice commands sent via the Roku remote control, Roku mobile app, or a virtual assistant such as Amazon Alexa or Google Assistant. 
 
@@ -54,13 +54,13 @@ Voice commands include the following: "fast forward", "next, "play", "pause", "r
 
 See [Implementing Voice Controls](doc:transport-controls) for more information.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether transport event notifications were successfully registered.  
 
 ### EventResponse(roAssociativeArray aa) as Boolean
 
-#### Description
+##### Description
 
 Marks a transport command as handled, unhandled, or handled with an error. 
 
@@ -68,7 +68,7 @@ If your app has registered for handling transport events (by calling the `Enable
 
 If your app has registered for transport events, but does not call this method within 5 seconds of receiving a transport event, the event is considered unhandled.
 
-#### Parameters
+##### Parameters
 
 This method takes an AssociativeArray with two fields: **id** and **status**. The **id** field specifies the transport ID event; the **status** specifies whether the event was handled, handled with an error, or unhandled.
 
@@ -97,6 +97,6 @@ This method takes an AssociativeArray with two fields: **id** and **status**. Th
 
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the event response operation was successful.  

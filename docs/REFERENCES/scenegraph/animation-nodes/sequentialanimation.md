@@ -22,7 +22,7 @@ The state field is set to running when any of the child animations is in progres
 
 The following example animates a group of rectangles to expand and change opacity sequentially from left to right. 
 
-#### SequentialAnimation Node Class Example
+##### SequentialAnimation Node Class Example
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

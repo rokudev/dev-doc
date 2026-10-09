@@ -62,6 +62,7 @@ Rotation of Rectangles is supported. On platforms that do not support OpenGL, on
 | height | float | 0.0 | READ_WRITE | Specifies the height of rectangle in local coordinates |
 | color                  | color (string containing hex value e.g. RGBA) | 0xFFFFFFFF                                | READ_WRITE        | Specifies the color of the rectangle |
 | blendingEnabled        | boolean                                       | true                                      | READ_WRITE        | Specifies if the rectangle should be alpha blended with the nodes that are behind it |
+| effect<br /><br />*Available since [Roku OS 16.0](doc:release-notes#roku-os-160).* | node | invalid | READ_WRITE | References an [**Effect**](doc:effect) node that applies shader effects, such as rounded corners, borders, and gradients, to the rectangle |
 
 ## Sample app
 

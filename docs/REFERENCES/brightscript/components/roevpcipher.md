@@ -138,7 +138,7 @@ Some of the ciphers do not have large keys and others have security implications
     </tr>
     <tr>
       <td>
-        aes-gcm-128<br />_Available since [Roku OS 15.2](doc:release-notes#roku-os-152)_
+        aes-gcm-128<br />_Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-152">Roku OS 15.2</a>_
       </td>
       <td>
         128 bit AES in GCM mode

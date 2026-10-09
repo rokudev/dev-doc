@@ -32,7 +32,7 @@ Beta apps are a special app type designed specifically to enable you to test you
 
 A beta app allows the developer to instantly revise an app for test users to try out. You just create the app and upload your package. You can then provide the app access code to your selected group of beta test users so that they can install and QA test your app. No certification testing is required for beta apps.
 
-#### Beta app rules
+##### Beta app rules
 
 Beta app usage is **limited** to its intended purpose of quality assurance, as follows:
 
@@ -46,7 +46,7 @@ Beta app usage is **limited** to its intended purpose of quality assurance, as f
 
 * **20 users.** You can have up to 20 beta test users per beta app at any given time.
 
-#### Beta apps vs. public apps
+##### Beta apps vs. public apps
 
 Additional differences between beta and public apps are summarized as follows:
 
@@ -58,7 +58,7 @@ Additional differences between beta and public apps are summarized as follows:
 | **Access Code**           | **Immediately usable.** You send your beta test users an access code that allows them to install your test app on their Roku device.                                                                                                | **After publication.** The vanity access code you chose during app creation can be given to anyone to do a quick public app installation.    |
 | **Streaming Store**       | **Not available.** Beta apps are not available for installation through the Streaming Store, or discoverable via Roku Search.                                                                                                       | **Available.** Published public apps are always available for installation through the Streaming Store and are discoverable via Roku Search. |
 
-#### Creating a beta app
+##### Creating a beta app
 
 To create and start testing a beta app, you will need to:
 
@@ -155,7 +155,7 @@ Configure how your app is listed in the Streaming Store, including the app's hom
         Domestic region
       </td>
       <td>
-        Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streming Stores that include your app and are outside your domestic region.
+        Select the country where your app is considered native and/or domestic. Your app will be displayed in the "International" category of all regional Streaming Stores that include your app and are outside your domestic region.
       </td>
     </tr>
     <tr>
@@ -289,7 +289,7 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
         My app offers subscriptions.
       </td>
       <td>
-        The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
+        The app must <a href="https://developer.roku.com/dev/docs/roku-pay">implement Roku Pay</a> and adhere to all <a href="https://developer.roku.com/dev/docs/roku-pay-requirements#rp-3-payment-requirements">Roku Pay certification requirements</a>.
       </td>
     </tr>
     <tr>
@@ -300,7 +300,7 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
         My app offers one-time purchases (movie rentals/purchases, PPVs, sporting events, and other transactional content).
       </td>
       <td>
-        The app must [implement Roku Pay](doc:roku-pay) and adhere to all [Roku Pay certification requirements](doc:roku-pay-requirements#rp-3-payment-requirements).
+        The app must <a href="https://developer.roku.com/dev/docs/roku-pay">implement Roku Pay</a> and adhere to all <a href="https://developer.roku.com/dev/docs/roku-pay-requirements#rp-3-payment-requirements">Roku Pay certification requirements</a>.
       </td>
     </tr>
     <tr>
@@ -472,7 +472,7 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
         Certification Requirement
       </td>
       <td>
-        Provides a link to any related certification requirements in the [Certification Criteria](doc:certification) document.
+        Provides a link to any related certification requirements in the <a href="https://developer.roku.com/dev/docs/certification">Certification Criteria</a> document.
       </td>
     </tr>
   </tbody>
@@ -556,7 +556,7 @@ To run App Behavior Analysis testing on your app, follow these steps:
         Test title
       </td>
       <td>
-        The name of the test being executed ("Channel Launch Performance", "Channel Deep Linking Basic", "Channel Content Play Performance").
+        The name of the test being executed ("App Launch Performance", "App Deep Linking Basic", "App Content Play Performance").
       </td>
     </tr>
     <tr>
@@ -588,7 +588,7 @@ To run App Behavior Analysis testing on your app, follow these steps:
         Certification requirements
       </td>
       <td>
-        Provides a link to the section in the [Certification Criteria](doc:certification) document, where the criterion in question is located.
+        Provides a link to the section in the <a href="https://developer.roku.com/dev/docs/certification">Certification Criteria</a> document, where the criterion in question is located.
       </td>
     </tr>
     <tr>
@@ -622,7 +622,7 @@ Once your public app has passed [Static Analysis](doc:static-analysis-tool) an
 
    a. Select the **I confirm that** check box to confirm that you have tested your app per Roku App Publishing Checklist and your app complies with the listed agreements.
 
-   b. Select the **I certify that** check box to confirm that you have the authority the submit the app, the provided listing information is accurate, and that you have the rights to distribute your app in the selected countries.
+   b. Select the **I certify that** check box to confirm that you have the authority to submit the app, the provided listing information is accurate, and that you have the rights to distribute your app in the selected countries.
 
    c. Click **Submit**.
 
@@ -638,17 +638,17 @@ Once your public app has passed [Static Analysis](doc:static-analysis-tool) an
 
 The following section summarizes when updates to the Streaming Store, Roku Search, and other platform features are propagated once a public app has been published or updated.
 
-#### Streaming Store categories
+##### Streaming Store categories
 
 After an app is published, it may be tagged with one or more categories. This includes the category selected and any other Roku-applied tags such as "New & Updated" or "Recommended"
 
-An app is typically visible in the selected category after 5 minutes—if the category has less 1,000 apps. Otherwise, the app is not added to the category until it has been streamed by enough customers to move it up the popularity rankings in that category.
+An app is typically visible in the selected category after 5 minutes—if the category has fewer than 1,000 apps. Otherwise, the app is not added to the category until it has been streamed by enough customers to move it up the popularity rankings in that category.
 
 If the category is changed and the app is re-published, it takes approximately 5 minutes for the app to be switched to the new category. However, the app is only visible in that category if the aforementioned criteria is met.
 
 For Roku-curated categories (for example, Featured Free), the app is typically visible after 5 minutes.
 
-#### Other Streaming Store updates
+##### Other Streaming Store updates
 
 The following items take approximately 5 minutes to be updated in the Streaming Store after the app is re-published:
 
@@ -662,11 +662,11 @@ The following items take approximately 5 minutes to be updated in the Streaming 
 
 * App removed from Roku Streaming Store after it has been deleted.
 
-#### Roku Search
+##### Roku Search
 
 Apps and their individual content items are typically added to Roku Search within 24 hours of the app being published.
 
-#### Device installation
+##### Device installation
 
 Once a public app is published to the Streaming Store, it is available for installation on Roku devices immediately using the app's vanity access code, which is specified in the [Properties window](#app-properties). To get the latest version of the app, users can do a System Update (Home > Settings > System > System update > Check now) or update the individual app (press the options key [*] on the app tile > Check for updates).
 

@@ -14,7 +14,7 @@ next:
 
 BrightScript supports the following familiar looking statement types:
 
-```
+```brightscript
 If / Then / Else If / Else / End If
 For / To / End For / Step / Exit For
 For Each / In / End For / Exit For
@@ -36,7 +36,7 @@ Each statement's syntax is documented precisely later in the manual.
 
 For example:
 
-```
+```brightscript
 function Main() as Void
     dim cavemen[10]
     cavemen.push("fred")
@@ -53,7 +53,7 @@ end function
 Each line may contain a single statement, or a colon ( : ) may be used
 to separate multiple statements on a single line.  
 
-```
+```brightscript
 myname = "fred"
 if myname="fred" then yourname = "barney" : ? yourname
 ```

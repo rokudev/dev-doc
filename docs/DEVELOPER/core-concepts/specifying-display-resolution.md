@@ -31,11 +31,11 @@ Roku players support up to three screen resolutions for the application user int
 
 SceneGraph applications can automatically scale screen elements, such as fonts and rectangles, to any specified supported resolution. This scaling is controlled by specifying the screen resolutions the application is intended to support. If support is only specified for high-definition, and not full high-definition, then the screen elements are scaled from 720 resolution to 1080 resolution if needed for the display resolution. If support is only specified for full high-definition, and not high definition, then the screen elements are scaled from 1080 resolution to 720 resolution if needed for the display resolution.
 
-#### Automatic selection of supported graphical image resolutions
+##### Automatic selection of supported graphical image resolutions
 
 SceneGraph applications can automatically select graphical images based on the supported resolution. The Roku OS can modify a special URI string with a variable that gets the correct graphical image for each supported and specified resolution. If this special URI string is not specified, the Roku OS will automatically scale graphical images to the display resolution from the specified intended resolution.
 
-#### Recommended intended resolution
+##### Recommended intended resolution
 
 For SceneGraph applications, Roku recommends you design and develop for an intended 1080 screen resolution. But for performance reasons, for Roku players and display screens that do not support full high-definition resolution, you should supply both 1080 and 720 graphical images for your application. The SceneGraph application will scale the design elements and the graphical images for the actual supported resolution, but you can achieve the best appearance for all supported resolutions if you provide both resolutions of graphical images. If you can only provide one resolution of graphical images, provide 720 graphical images.
 

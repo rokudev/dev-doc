@@ -25,7 +25,7 @@ and has the form:
 
 **Examples of valid expressions**
 
-```
+```brightscript
 #const someFlag = true
 #const anotherFlag = false
 #const someOtherFlag = someFlag
@@ -40,6 +40,19 @@ This initial release only supports `boolean` constant values.
   - Constant names must be composed of alphanumeric characters, and optionally, the underscore `_` character. There is no limit to the length of a constant name.
   - Constant names are case-insensitive.
   - A constant name should not be redefined if it has already been defined prior.
+  - A constant name that is not defined, either in the manifest or in code, is treated as `false` (since [Roku OS 16.0](doc:release-notes#roku-os-160)). In earlier versions, referencing an undefined constant raised a compilation error.
+
+### Undefined constants
+
+Because an undefined constant evaluates to `false`, a BrightScript library can gate development-only features behind a constant that its consumers never define. In the following example, the logging statement is compiled only in builds whose manifest sets `mylibrary_enable_detailed_logging=true`; every other build compiles without error and without the statement.
+
+```brightscript
+#if mylibrary_enable_detailed_logging
+    ? "hello world"
+#end if
+```
+
+This change does not affect existing apps, which must already define every constant they reference in order to compile.
 
 ## Defining a constant
 
@@ -66,7 +79,7 @@ There are a variety of ways Conditional compilation can be used:
 
 **Example demonstrating use of manifest constants**
 
-```
+```brightscript
 #if someFlag
     'code to execute when someFlag is true
 #else if anotherFlag
@@ -77,7 +90,7 @@ There are a variety of ways Conditional compilation can be used:
 
 **Example demonstrating locally scoped constants**
 
-```
+```brightscript
 #const FeatureA = true
 #const FeatureB = false
 
@@ -96,7 +109,7 @@ An `#error` constant can also be used to force a compilation error with an error
 
 **Example demonstrating usage of \#error constant**
 
-```
+```brightscript
 #const FeatureAImplemented = true
 
 #if FeatureAImplemented
@@ -114,7 +127,7 @@ Conditional compilation can also be used to form block comments. Previously, eac
 
 **Example of code block comments**
 
-```
+```brightscript
 #if false
     This is a function that does nothing.
     This function takes no parameters.
@@ -129,7 +142,7 @@ end function
 
 **Example of commenting out code**
 
-```
+```brightscript
 #if false
     function Order66() as void
         'code for Order66

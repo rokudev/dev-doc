@@ -43,7 +43,7 @@ below.
 
 The `manifest` file contains the following fields:
 
-```
+```text
 title=application_title
 subtitle=application_subtitle
 major_version=major_version_number
@@ -102,7 +102,7 @@ file.
 
 **Manifest file example**
 
-```
+```text
 title=Test Application
 subtitle=A SceneGraph Test
 major_version=1
@@ -146,7 +146,7 @@ directory](doc:developing-scenegraph-applications)).
 
 **Example main.brs file**
 
-```
+```brightscript
 sub Main()
   showChannelSGScreen()
 end sub
@@ -183,7 +183,7 @@ For example:
 Similarly, you can control the flow of scenes through your application
 by creating and showing scenes as needed:
 
-```
+```brightscript
 screen = CreateObject("roSGScreen")
 m.port = CreateObject("roMessagePort")
 screen.setMessagePort(m.port)

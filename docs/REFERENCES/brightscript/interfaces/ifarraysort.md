@@ -23,19 +23,19 @@ next:
 
 ### Sort(flags as String = "") as Void
 
-#### Description
+##### Description
 
  Performs a stable sort on an array. 
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                                  |
 | ----- | ------- | ------------------------------------------------------------ |
 | flags | Dynamic | Items are arbitrarily grouped by comparable type of number or string, and are sorted within the group with a logical comparison.<br/><br/>If "r" is included in flags, a reverse sort is performed. If "i" is included in flags, a case-insensitive sort is performed. If invalid flags are specified, the sort is not performed. |
 
-#### Examples
+##### Examples
 
-```
+```brightscript
     a=[3, 1, 2]
     a.Sort()
     print a
@@ -64,20 +64,20 @@ next:
 
 ### SortBy(fieldName as String, flags as String = "") as Void
 
-#### Description
+##### Description
 
 Performs a stable sort of an array of associative arrays by value of a common field.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type    | Description                                                  |
 | --------- | ------- | ------------------------------------------------------------ |
 | fieldName | String  | The field to be used for sorting.                            |
 | flags     | Dynamic | Items are arbitrarily grouped by comparable type of number or string, and are sorted within the group with a logical comparison.<br/><br/>If "r" is included in flags, a reverse sort is performed. If "i" is included in flags, a case-insensitive sort is performed. If invalid flags are specified, the sort is not performed. |
 
-#### Examples
+##### Examples
 
-```
+```brightscript
     a=[ {id:3, name:"Betty"}, {id:1, name:"Carol"}, {id:2, name:"Anne"} ]
     a.SortBy("name")
     ' sets the array to [ {id:2, name:"Anne"}, {id:3, name:"Betty"}, {id:1, name:"Carol"} ]
@@ -89,13 +89,13 @@ Performs a stable sort of an array of associative arrays by value of a common fi
 
 ### Reverse() as Void
 
-#### Description
+##### Description
 
 Reverses the order of elements in an array.
 
-#### Example
+##### Example
 
-```
+```brightscript
     a=[1, "one", 2, "two"]
     a.Reverse()
     ' sets the array to ["two", 2, "one", 1]

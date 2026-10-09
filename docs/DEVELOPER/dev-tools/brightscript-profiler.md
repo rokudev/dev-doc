@@ -103,7 +103,7 @@ Below is the list of manifest keys used by the profiler:
 <td>1.1, 1.2</td>
 <td></td>
 <td>Yes, if using line-levl memory profiling</td>
-<td>To use line-level profiling, this must be set to 1.2 (<code>rsg_version=1.2</code>). If it is not set to 1.2, profiling will still work correctly; however, line-level data will not be generated.<br /><br /><code>rsg_version 1.2</code> provides significant performance improvements; therefore, you should set it to 1.2 regardless whether your app is using line-level profiling.<br /><br />See [Roku Manifest for more information](doc:channel-manifest).</td>
+<td>To use line-level profiling, this must be set to 1.2 (<code>rsg_version=1.2</code>). If it is not set to 1.2, profiling will still work correctly; however, line-level data will not be generated.<br /><br /><code>rsg_version 1.2</code> provides significant performance improvements; therefore, you should set it to 1.2 regardless whether your app is using line-level profiling.<br /><br />See <a href="https://developer.roku.com/dev/docs/channel-manifest">Roku Manifest for more information</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +256,7 @@ tab.
 
 ![roku815px - bsprofilerMemoryTab](https://image.roku.com/ZHZscHItMTc2/bsprofilerMemoryTab.png "bsprofilerMemoryTab")
 
-#### Line-Level profiling
+##### Line-Level profiling
 
 You can collect profile data for each line of BrightScript source code
 to better pinpoint high CPU and memory usage. To do this, enable
@@ -278,7 +278,7 @@ See [Profiling Values](#profiling-values) for
 more information on the CPU and memory statistics displayed in the
 tool.
 
-#### Profiling Values
+##### Profiling Values
 
 The following table describes the profile statistics displayed in the
 BrightScript profiler tool. The descriptions are applicable for the
@@ -307,7 +307,7 @@ functions as a whole or for individuals lines of code in the functions
 
 If any of these metrics appear in a call path, they are specific to that call path. For example, in this call path:
 
-```
+```brightscript
 <root>: cpu.self=0,cpu.callees=14700,tm.self=0.000,tm.callees=1.989,mem.self=0,mem.callees=324452,calls=0
 
 +- func1(): pkg:/components/file1.brs:83,cpu.self=200,cpu.callees=14500,tm.self=0.728,tm.callees=1.261,mem.self=5840,mem.callees=318612,calls=1
@@ -319,7 +319,7 @@ The metrics for func2() are specific to when it is called from func1().
 
 However, in the table below:
 
-```
+```brightscript
 ------------- BEGIN: TOP CONSUMERS: CPU.SELF -----------------
 
   1: func1(): pkg:/components/file1.brs:83,cpu.self=300,cpu.total=450,tm.self=0.001,tm.total=0.001,mem.self=0,mem.total=0,calls=5

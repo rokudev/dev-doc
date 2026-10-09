@@ -155,7 +155,7 @@ presses.
 
 **Panel Adding/Sliding Example**
 
-```
+```brightscript
 sub init()
   m.top.backgroundURI = "pkg:/images/rsgetbg.jpg"
   m.top.overhang.showClock = false

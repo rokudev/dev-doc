@@ -104,7 +104,7 @@ The Roku's Robot Framework Library includes the following keywords:
         * **password**: The password for accessing the Development Application Installer on your Roku device.
       </td>
       <td>
-        Sideloads an app that has been packaged into a zip file.<br /><br />If the **Sideload** command fails, [sideload](/docs/developer-program/getting-started/developer-setup.md#sideloading-channels) the app to be tested and use the **Launch the app** command.
+        Sideloads an app that has been packaged into a zip file.<br /><br />If the **Sideload** command fails, [sideload](/docs/developer/getting-started/developer-setup.md#sideloading-channels) the app to be tested and use the **Launch the app** command.
       </td>
       <td>
         `Sideload  myChannel.zip rokudev   your_device_password`
@@ -139,8 +139,8 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
       <td>
         * **channel_code**: The ID of the app to be launched.
-        * **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
-        * **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+        * **contentId**: The [contentId](/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
+        * **mediaType**: The [mediaType](/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
       </td>
       <td>
         Launches the app corresponding to the specified channel ID.
@@ -180,8 +180,8 @@ The Roku's Robot Framework Library includes the following keywords:
       </td>
       <td>
         * **channelId**: The ID of the app to be launched.
-        * **contentId**: The [contentId](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
-        * **mediaType**: The [mediaType](/docs/developer-program/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
+        * **contentId**: The [contentId](/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentType** to execute deep linking tests.
+        * **mediaType**: The [mediaType](/docs/developer/discovery/implementing-deep-linking.md#understanding-deep-linking-parameters) of the content to be played. You can include this parameter and the **contentId** to execute deep linking tests.
       </td>
       <td>
         Launches the app corresponding to the specified app ID.
@@ -429,7 +429,7 @@ The Roku's Robot Framework Library includes the following keywords:
         Verify is screen loaded
       </td>
       <td>
-        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) command for more information.
+        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) command for more information.
         * **retries**: The number of requests that can be made before returning false. This argument is optional, and it defaults to 10 if not specified.
         * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
       </td>
@@ -528,7 +528,7 @@ The Roku's Robot Framework Library includes the following keywords:
         Get element
       </td>
       <td>
-        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
+        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
         * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
       </td>
       <td>
@@ -571,7 +571,7 @@ The Roku's Robot Framework Library includes the following keywords:
         Get elements
       </td>
       <td>
-        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
+        * **data**: An object with locators for elementData and parentData (parentData is optional). See the [WebDriver element command](/docs/developer/dev-tools/automated-channel-testing/web-driver.md#POST-v1/session/:sessionId/elements) for more information.
         * **delay**: The delay (in seconds) between retries. This argument is optional, and it defaults to 1 second if not specified.
       </td>
       <td>
@@ -592,7 +592,7 @@ The Roku's Robot Framework Library includes the following keywords:
 
 | Keyword             | Description                                                                                                                                                                                                                                     | Example                           |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| Get focused element | Return the element on the screen that currently has focus. See the [WebDriver active element command](/docs/developer-program/dev-tools/automated-channel-testing/web-driver.md#get-v1/session/:sessionId/element/active) for more information. | `&{element}=	Get focused element` |
+| Get focused element | Return the element on the screen that currently has focus. See the [WebDriver active element command](/docs/developer/dev-tools/automated-channel-testing/web-driver.md#get-v1/session/:sessionId/element/active) for more information. | `&{element}=	Get focused element` |
 
 ### Verify is channel loaded
 

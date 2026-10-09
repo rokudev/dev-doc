@@ -1,18 +1,22 @@
 ---
 title: Development environment overview
-excerpt: 'Understand the Roku Streaming Player platform architecture and app entry points'
+excerpt: >-
+  Understand the Roku Streaming Player platform architecture and app entry
+  points
 deprecated: false
 hidden: false
 metadata:
-  title: 'Development environment overview | Roku Developer Docs'
-  description: 'Covers the Roku Streaming Player architecture, entry points, display modes, exit codes, and the event-oriented model for building apps.'
+  title: Development environment overview | Roku Developer Docs
+  description: >-
+    Covers the Roku Streaming Player architecture, entry points, display modes,
+    exit codes, and the event-oriented model for building apps.
   robots: index
 next:
   description: ''
 ---
 ## Architectural overview
 
-<Image alt="roku815px - Architecture block diagram" border={false} src="https://image.roku.com/ZHZscHItMTc2/devenvironmentarchoverview.png" title="devenvironmentarchoverview" />
+![roku815px - Architecture block diagram](https://image.roku.com/ZHZscHItMTc2/roku-architecture-v2.png "devenvironmentarchoverview")
 
 The diagram above provides a high-level overview of the main system
 components for the Roku Streaming Player platform. Developer
@@ -117,7 +121,7 @@ the app.
 
 ### Sub RunUserInterface()
 
-#### Sub RunUserInterface(aa as Object)
+##### Sub RunUserInterface(aa as Object)
 
 RunUserInterface is the normal entry point which is called when a
 app is selected on the Roku Home Screen.  It may take an
@@ -126,7 +130,7 @@ APIs.
 
 ### Sub Main()
 
-#### Sub Main(aa as Object)
+##### Sub Main(aa as Object)
 
 If there is no RunUserInterface() function in the application, the
 function Main() will be called as the entry point for the application.
@@ -196,7 +200,7 @@ Exit codes do not persist across system reboots and system resumptions. The last
 | EXIT_CHANNEL_SIDELOAD      | The app was exited due to the user installing a sideloaded app.                                                                                                                                                              |
 | EXIT_CHANNEL_RESTART       | The app was exited due to an app-initiated restart. This is typically a reserved function in the system.                                                                                                                     |
 | EXIT_TILE_HIDDEN           | The app was exited due to the user hiding the Soundbar tile on a Roku TV.                                                                                                                                                    |
-| EXIT_SETTINGS_UPDATE       | The app was exited by the system due to a device settings update (for exampe, a theme or resolution change that required restart).                                                                                           |
+| EXIT_SETTINGS_UPDATE       | The app was exited by the system due to a device settings update (for example, a theme or resolution change that required restart).                                                                                          |
 | EXIT_CHANNEL_MEM_LIMIT_FG  | The app was exited by the system because it exceeded its memory limit while running in the foreground.                                                                                                                       |
 | EXIT_CHANNEL_MEM_LIMIT_BG  | The app was exited by the system because it exceeded its memory limit while running in the background.                                                                                                                       |
 | EXIT_ADDON_DEPENDENCY      | The app was exited by the system while applying a system dependency update. This should only apply while running in the background.                                                                                          |

@@ -20,7 +20,7 @@ Once you have [enabled the RAF library](doc:integrating-roku-advertising-framewo
 
 The following code example demonstrates how to create a stitched stream:
 
-```
+```brightscript
 screen = CreateObject("roSGScreen")
 scene = screen.CreateScene("MainScene")
 
@@ -56,7 +56,7 @@ csasStream = m.adIface.constructStitchedStream(myContentNode, m.adPods)
 
 You can render a stitched stream using the  [**renderStitchedStream()**](doc:raf-api) method. This method takes the playlist created via the [**constructStitchedStream()**](doc:raf-api) method and a renderable node to which the stitched stream can be attached.
 
-```
+```brightscript
 ' render the stitched stream
 m.adIface.renderStitchedStream(csasStream, scene)
 ```

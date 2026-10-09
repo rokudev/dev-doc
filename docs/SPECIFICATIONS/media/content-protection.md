@@ -28,7 +28,7 @@ next:
 
 **Setup ContentNode and set to Video node:**
 
-```
+```brightscript
 contentNode = createObject("roSGNode", "contentNode")
 contentNode.streamFormat = "smooth"
 contentNode.url = "wwww.myvideo.com/content.ism"
@@ -42,7 +42,7 @@ If your PlayReady implementation requires custom request
 data, `encodingType` and `encodingKey` should be formatted like the
 following:
 
-```
+```brightscript
 contentNode = createObject("roSGNode", "contentNode")
 contentNode.streamFormat = "ism"
 contentNode.url = "wwww.myvideo.com/content.ism"
@@ -52,11 +52,11 @@ contentNode.encodingKey = "PlayReadyLicenseServerUrl" + "%%%" + customData
 m.video.content = contentNode
 ```
 
-#### PlayReady 3
+##### PlayReady 3
 
 Starting from [Roku OS version 8.1](doc:release-notes#roku-os-81), all Roku devices with MStar chips are updating to the PlayReady 3 library. Prior to this update, all platforms were using PlayReady 2.5.
 
-While PlayReady 3 is expected to be backward compatible with PlayReady 2.5, we encourage all developers using PlayReady to test their streams on a range of MStar and non-MStar devices.
+While PlayReady 3 is expected to be backward compatible with PlayReady 2.5, we encourage all publishers using PlayReady to test their streams on a range of MStar and non-MStar devices.
 
 The following devices contain MStar chips:
 
@@ -68,7 +68,7 @@ The following devices contain MStar chips:
 | 2017 Roku Ultra                                          | Bryan            | 4660X               |
 | Roku TV                                                  | Midland          | 8000X               |
 
-#### Supported security levels
+##### Supported security levels
 
 | Device Code Name                          | Security level supported |
 | ----------------------------------------- | ------------------------ |
@@ -81,14 +81,14 @@ As of [Roku OS 9.3](doc:release-notes#roku-os-93), support for Verimatrix DRM ha
 
 **Required Roku manifest entries:**
 
-```
+```text
 requires_verimatrix_drm=1
 requires_verimatrix_version=1.0
 ```
 
 **Configure DRM parameters in an roAssociativeArray:**
 
-```
+```brightscript
 drmParams = createObject("roAssociativeArray")
 drmParams.name = "Verimatrix"
 drmParams.authDomain = "auth-value-from-streaming-provider"
@@ -97,7 +97,7 @@ drmParams.serializationUrl = "hostname-url-from-streaming-provider"
 
 **Setup ContentNode and set to Video node:**
 
-```
+```brightscript
 contentNode = createObject("roSGNode", "contentNode")
 contentNode.streamFormat = "hls"
 contentNode.url = "wwww.myvideo.com/content.m3u8"

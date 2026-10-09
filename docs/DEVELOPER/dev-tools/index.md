@@ -44,7 +44,7 @@ Describes each SceneGraph component, defines the relationship between nodes, and
 
 ## Development Application Installer
 
-Every Roku device can be configured to support developer tasks such as installing apps, packaging apps, and creating your app's screenshots. The Developmemnt Application Installer enables installing or "sideloading" an app to a Roku device to test and QA before submitting for publication.
+Every Roku device can be configured to support developer tasks such as installing apps, packaging apps, and creating your app's screenshots. The Development Application Installer enables installing or "sideloading" an app to a Roku device to test and QA before submitting for publication.
 
 ![roku815px - developersettings](https://image.roku.com/ZHZscHItMTc2/developersettings.png "developersettings")
 

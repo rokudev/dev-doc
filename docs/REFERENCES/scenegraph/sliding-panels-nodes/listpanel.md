@@ -23,7 +23,7 @@ The ListPanel node class allows you to easily create a Panel that adheres to the
 - Default fade in/out animation of the next panel when the simple mechanism is used
 - Default fade out mask effect applied to the list items at the bottom of the panel
 
-#### Automatic Create Next Panel Functionality
+##### Automatic Create Next Panel Functionality
 
 One key feature of the ListPanel node is providing a simple mechanism for setting up the common use case where each time a new item in the grid receives the focus, a new "next" panel is added to the PanelSet. This mechanism is enabled or disabled by setting the createNextPanelOnItemFocus field to true or false.
 
@@ -35,11 +35,11 @@ The createNextPanelIndex field is guaranteed to be set exactly once whenever a n
 
 For efficiency, sometimes the control logic for the ListPanel may create and hold onto Panel pointers internally so that the next Panel does not have to be newly created each the createNextPanelIndex field is set. If this is done, it is important to never reuse the current Panel node, as that Panel may still be fading out when the new next Panel needs to be created. A typical use case, where all the right Panels are identical other than the data they display, is to create a single pair of Panel nodes and alternate between them each time the createNextPanelIndex field is set, updating the panel data based on the specified list index.
 
-#### LabelList Specific UsageNotes
+##### LabelList Specific UsageNotes
 
 If you set the list field to a LabelList node, the default values for the itemSize, itemSpacing, numRows and translation fields for the LabelList will be automatically set to the recommended default values for Roku apps. By default, the panel will use the "narrow" panelSize. It is possible to override these default values, but in most cases, that will not be necessary.
 
-#### MarkupList Specific Usage Notes
+##### MarkupList Specific Usage Notes
 
 If you set the list field to a MarkupList node, because the MarkupList is by nature custom, you will generally need to set the MarkupList's itemSize, itemSpacing and numRows fields. The ListPanel will position the list appropriately.
 
@@ -97,7 +97,7 @@ If you set the list field to a MarkupList node, because the MarkupList is by nat
 <td>Node</td>
 <td>false</td>
 <td>WRITE_ONLY</td>
-<td>When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in repsonse to the createNextPanelIndex field being set.</td>
+<td>When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in response to the createNextPanelIndex field being set.</td>
 </tr>
 <tr>
 <td>createNextPanelOnItemFocus</td>
@@ -113,7 +113,7 @@ If you set the list field to a MarkupList node, because the MarkupList is by nat
 
 > If you are creating the list field(either a LabelList or MarkupList) associated with a ListPanel in script of a component that extends ListPanel, you also need to add the list as a child of the ListPanel. For example, in a component that extends ListPanel, where m.top is that component, you would associate the list field with a LabelList as follows:
 
-```
+```brightscript
 list = m.top.createChild("LabelList")
 m.top.list = list
 ```

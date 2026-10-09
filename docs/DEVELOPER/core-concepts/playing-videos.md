@@ -169,7 +169,7 @@ and partially defined in XML markup, you must use
 the `findNode()` function to declare the node object and access the
 internal retrieving bar node fields:
 
-```
+```brightscript
 m.video = m.top.findNode("channel_video_node_id")
 ...
 m.video.retrievingBar.internal_node_field = internal_node_field_value
@@ -203,7 +203,7 @@ the `control` field in a callback function triggered by the
 screen focus event as
 follows:
 
-```
+```brightscript
 sub setDetailsScreenFocus()
   if m.top.isInFocusChain() and not m.buttons.hasFocus() and not m.videoPlayer.hasFocus() then
     m.buttons.setFocus(true)
@@ -216,7 +216,7 @@ end sub
 Then write the callback function for the playback button press event
 that includes:
 
-```
+```brightscript
 m.videoPlayer.control = "start"
 ```
 
@@ -240,7 +240,7 @@ assign the ContentNode to the `content` field of
 the Video node, then set the Video node `control` field value
 to `play` to start the video. For example:
 
-```
+```brightscript
 videoContent = createObject("RoSGNode", "ContentNode")
 videoContent.url = "video_URI"
 videoContent.streamformat = "hls"

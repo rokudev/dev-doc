@@ -15,6 +15,8 @@ next:
 
 A roUrlTransfer object transfers data to or from remote servers specified by URLs. It can perform mutual authentication with a web server.
 
+As of [Roku OS 16.0](doc:release-notes#roku-os-160), roUrlTransfer also supports Server-Sent Events (SSE). Call [AsyncGetSSEvents()](doc:ifurltransfer#asyncgetssevents-as-boolean) to read an event stream; each server event is delivered to the message port as an [roSSEvent](doc:rossevent).
+
 This object is created with no parameters:
 
 ``CreateObject("roUrlTransfer")``
@@ -32,7 +34,7 @@ The web server can authenticate that the requested connection is from a Roku Str
 
 In order for your web server to perform the steps above to authenticate your Roku Streaming Player, your application needs to call the following functions before performing any https requests:
 
-```
+```brightscript
 object.SetCertificatesFile("common:/certs/ca-bundle.crt")
 object.AddHeader("X-Roku-Reserved-Dev-Id", "")
 object.InitClientCertificates()

@@ -19,7 +19,7 @@ roByteArray supports the [ifArray](doc:ifarray) interface, and so can be accesse
 
 **Example**
 
-```
+```brightscript
 ba=CreateObject("roByteArray")
 ba.FromAsciiString("leasure.")
 if ba.ToBase64String()<>"bGVhc3VyZS4=" then stop

@@ -97,7 +97,7 @@ next:
   RAF would print
   a warning:
 
-  ```
+  ```brightscript
   [RAF.err] roUrlTransfer.setURL("some invalid URL") rejected argument - invalid chars? (space and "<>\^\`{|} must be %-encoded)
   ```
 - Bug fixes and performance improvements

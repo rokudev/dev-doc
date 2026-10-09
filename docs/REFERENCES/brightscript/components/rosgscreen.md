@@ -25,7 +25,7 @@ to `CreateScene().`
 
 **roSGScreen typical usage example**
 
-```
+```brightscript
 screen = CreateObject("roSGScreen")
 scene  = screen.CreateScene("Scene")
 screen.show()

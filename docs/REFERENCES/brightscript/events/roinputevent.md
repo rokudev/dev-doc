@@ -70,7 +70,7 @@ Returns an roAssociativeArray describing the input event, which may be one of th
         The type of command:
         <br /><br />
         <ul>
-          <li>"action()". Indicates that the app has received an utterance matching a name or word previously registered with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager)</li>
+          <li>"action()". Indicates that the app has received an utterance matching a name or word previously registered with the <a href="https://developer.roku.com/dev/docs/ifappmanager">roAppManager.SetVoiceActionStrings()</a></li>
           <li>"select()". Indicates that the app has received a command for selecting an item via an ordinal number.</li>
           <li>"forward"</li>
           <li>"next"</li>
@@ -121,7 +121,7 @@ Returns an roAssociativeArray describing the input event, which may be one of th
         string
       </td>
       <td>
-        If the **type** is set to "transport" and the **command** is set to "action", this field contains the utterance matching the name or word previously registered for the app with the [roAppManager.SetVoiceActionStrings()](doc:ifappmanager#setvoiceactionstringsactions-as-object-as-void) method.
+        If the **type** is set to "transport" and the **command** is set to "action", this field contains the utterance matching the name or word previously registered for the app with the <a href="https://developer.roku.com/dev/docs/ifappmanager#setvoiceactionstringsactions-as-object-as-void">roAppManager.SetVoiceActionStrings()</a> method.
       </td>
     </tr>
     <tr>

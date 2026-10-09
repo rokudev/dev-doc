@@ -15,23 +15,21 @@ If you have content that you would like to submit for The Roku Channel, please f
 
 ### Analytics dashboard
 
-#### Overview
+##### Overview
 
-The Roku Channel partners have access to web-based performance analytics through Roku's Analytics Portal. This allows you to analyze the health, viewership trends, and metrics for specific titles.
+The Roku Channel partners have access to web-based performance analytics through Roku's Content Partner Portal. This allows you to analyze the health, viewership trends, and metrics for specific titles.
 
-#### Access to Roku's analytics portal
-
-In order to access the partner dashboard, you will need a Roku account. To create a Roku account, click [here](https://my.roku.com/signup). If you have a Roku account, please send the e-mail address associated with the Roku account to [trcpartnersupport@roku.com](mailto:trcpartnersupport@roku.com). We can give access to multiple Roku accounts, but it is preferred if you have one Roku account that your entire team can use to access the dashboard.
+[Learn more](https://developer.roku.com/dev/docs/roku-content-partner-portal-analytics)
 
 ### Payout & revenue reporting
 
-#### Overview
+##### Overview
 
 The Roku Channel Partners must enroll in Roku’s Partner Payouts Program, which is the vehicle through which partners receive payments for content served to Roku Users.
 
-#### Enrolling in Roku's Partner Payouts Program
+##### Enrolling in Roku's Partner Payouts Program
 
-To sign up for Roku Partner Payouts Program:
+To sign up for Roku Partner Payouts Program, see [Set up your Roku account](doc:account-setup) for a complete walkthrough, or follow these steps:
 
 * Create a [Roku customer account](https://developer.roku.com/enrollment/standard)
 * Enroll your [Roku account in the Developer Program](https://developer.roku.com/developer/billing)
@@ -43,7 +41,7 @@ In order to enroll in the Roku Partner Payout Program, you will need to provide 
 * Bank information
 * Tax forms (W9, W8-BEN, or W8-BEN-E)
 
-#### The Roku Channel partner payouts & revenue reports
+##### The Roku Channel partner payouts & revenue reports
 
 Partners can select between three payout methods when enrolling in the Roku Partner Payouts Program:
 
@@ -63,4 +61,4 @@ Payments and revenue reports are sent out quarterly, 60 days post-quarter closin
 | Q3      | By November 30th |
 | Q4      | By February 28th |
 
-Not that partners will not be paid until the aggregate sums due are equal to or exceed $100.00. Detailed payout terms are found in the Commercial Terms Exhibit of the [Roku Distribution Agreement](https://docs.roku.com/doc/developerdistribution/en-us).
+Note that partners will not be paid until the aggregate sums due are equal to or exceed $100.00. Detailed payout terms are found in the Commercial Terms Exhibit of the [Roku Distribution Agreement](https://docs.roku.com/doc/developerdistribution/en-us).

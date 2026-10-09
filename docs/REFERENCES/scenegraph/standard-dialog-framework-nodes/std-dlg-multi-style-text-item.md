@@ -24,7 +24,7 @@ The **StdDlgMultiStyleTextItem** node enables developers to add a line of text w
 
 - The **text** field uses a simple markup style. Markup tags with the names of the styles defined in the **drawingStyles** field are used to delineate the boundaries of the label text to be rendered in that specific style.
 
-```
+```brightscript
 msTextItem.drawingStyles = {
       "default": {
         "fontSize": {fhd:33,hd:22}

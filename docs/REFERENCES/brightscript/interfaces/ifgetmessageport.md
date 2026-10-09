@@ -26,10 +26,10 @@ next:
 
 ### GetMessagePort() as Object
 
-#### Description
+##### Description
 
 Returns the message port (if any) currently associated with the object
 
-#### Return Value
+##### Return Value
 
 The message port.

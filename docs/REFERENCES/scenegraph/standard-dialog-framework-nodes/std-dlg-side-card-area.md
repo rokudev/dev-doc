@@ -61,14 +61,14 @@ The **StdDlgSideCardArea** node never gains key focus; therefore, it should not 
 <td>boolean</td>
 <td>false</td>
 <td>READ_WRITE</td>
-<td>Specifies whether a thin vertical divider line is displayed between the <strong>StdDlgSideCardArea</strong> and the vertical column that contains the dialog's child <strong>StdDlgAreaBase</strong> nodes ([TitleArea](doc:std-dlg-title-area), [StdDlgContentArea(s)](doc:std-dlg-content-area), and/or [StdDlgButtonArea](doc:std-dlg-button-area)). The divider line, if shown, uses the <strong>DialogSecondaryItemColor</strong> field from the current [RSG palette](doc:scene#fields).</td>
+<td>Specifies whether a thin vertical divider line is displayed between the <strong>StdDlgSideCardArea</strong> and the vertical column that contains the dialog's child <strong>StdDlgAreaBase</strong> nodes (<a href="https://developer.roku.com/dev/docs/std-dlg-title-area">TitleArea</a>, <a href="https://developer.roku.com/dev/docs/std-dlg-content-area">StdDlgContentArea(s)</a>, and/or <a href="https://developer.roku.com/dev/docs/std-dlg-button-area">StdDlgButtonArea</a>). The divider line, if shown, uses the <strong>DialogSecondaryItemColor</strong> field from the current <a href="https://developer.roku.com/dev/docs/scene#fields">RSG palette</a>.</td>
 </tr>
 <tr>
 <td>width</td>
 <td>float</td>
 <td>0.0f</td>
 <td>READ_WRITE</td>
-<td>Specifies the width of the <strong>StdDlgSideCardArea</strong> node.<br /><br />If this field is set to its default value (0.0), the width is set to the width of the [<strong>StdDlgContentArea</strong>](doc:std-dlg-content-area)) node's bounding rectangle (the union of the width of all of its child nodes).<br /><br />If set to a value greater than 0.0, the width of the <strong>StdDlgSideCardArea</strong> node is fixed to that explicit value.<br /><br />The height of <strong>StdDlgSideCardArea</strong> node is based on the StandardDialog layout logic. This sets the height to a maximum of the height of the <strong>StdDlgSideCardArea</strong> bounding rectangle and the height of the vertical column containing the dialog's child [<strong>StdDlgAreaBase</strong>](doc:std-dlg-area-base) nodes. This is constrained by the maximum permissible height of the dialog such that it is fully visible onscreen.</td>
+<td>Specifies the width of the <strong>StdDlgSideCardArea</strong> node.<br /><br />If this field is set to its default value (0.0), the width is set to the width of the <a href="https://developer.roku.com/dev/docs/std-dlg-content-area"><strong>StdDlgContentArea</strong></a>) node's bounding rectangle (the union of the width of all of its child nodes).<br /><br />If set to a value greater than 0.0, the width of the <strong>StdDlgSideCardArea</strong> node is fixed to that explicit value.<br /><br />The height of <strong>StdDlgSideCardArea</strong> node is based on the StandardDialog layout logic. This sets the height to a maximum of the height of the <strong>StdDlgSideCardArea</strong> bounding rectangle and the height of the vertical column containing the dialog's child <a href="https://developer.roku.com/dev/docs/std-dlg-area-base"><strong>StdDlgAreaBase</strong></a> nodes. This is constrained by the maximum permissible height of the dialog such that it is fully visible onscreen.</td>
 </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ The **StdDlgSideCardArea** node never gains key focus; therefore, it should not 
 
 The following examples demonstrate how to use the **StdDlgSideCardArea** node to display decorative images or annotative text.
 
-#### Decorative
+##### Decorative
 
 In this example, the **StdDlgSideCardArea** has a child **Poster** node with its **uri** field set to the URI of a mountain lake image. The height of the dialog is computed to equal the height of the mountain lake image [800 (FHD), 300 (HD)]. The mountain lake **Poster** node has a child **SimpleLabel** node positioned at 575, 775 to show the "PhotoCredit:Jeff Anderson" text on top of the Poster.
 
@@ -130,7 +130,7 @@ In this example, the **StdDlgSideCardArea** has a child **Poster** node with its
 </component>
 ```
 
-#### Annotative
+##### Annotative
 
 In this example, the **StdDlgSideCardArea** has a child **Label** node ("Show the QR Code...") and a child **Poster** node to show the QR code below the Label. The height of the dialog is set to the maximum height of the bounding rectangle of the **StdDlgSideCardArea** and the vertical column that contains the dialog's child [StdDlgAreaBase](doc:std-dlg-area-base) nodes ([TitleArea](doc:std-dlg-title-area), [StdDlgContentArea(s)](doc:std-dlg-content-area), and/or [StdDlgButtonArea](doc:std-dlg-button-area)). In this case, the StdDlgSideCardArea is slightly taller; therefore, it's height is used.
 

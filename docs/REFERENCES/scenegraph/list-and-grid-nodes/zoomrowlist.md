@@ -20,7 +20,7 @@ ZoomRowList is a vertically scrolling list of ZoomRowItem's. ZoomRowItem refers 
 
 ![roku815px - partsLabelled](https://image.roku.com/ZHZscHItMTc2/partsLabelled.jpg "partsLabelled")
 
-#### ZoomRowItem's consist of four parts:
+##### ZoomRowItem's consist of four parts:
 
 - **Row Title** - This is a built-in Label used to display a title for the row. The string that is displayed comes from the _title _field of the Row's ContentNode. The Row Title supports turning its display on or off, changing its position relative to the ZoomRowItem's coordinate system and modifying its color and font. This is identified by the **green** box in the diagram above.
 - **Row Counter** - This is a built-in Label used to display a counter for the row (i.e. 3 of 14). The string that is displayed is automatically generating by the ZoomRowList. In addition to supporting the display attributes listed above for the Row Title, the Row Counter also supports the option of only displaying it when there are enough items in the row to fill up the entire width of the ZoomRowList. By default, the Row Counter is only displayed for the focused row. This is identified by the **orange** box in the diagram above.
@@ -96,14 +96,14 @@ This table documents all the fields in ZoomRowList:
 <td>ContentNode</td>
 <td>invalid</td>
 <td>READ_WRITE</td>
-<td>Specifies the content for the list. The content should be a single ContentNode that has one child ContentNode for each row. These child ContentNodes for each row should themselves contains child ContentNodes for each item in the row. See [ZoomRowList data model](doc:zoomrowlist#zoomrowlist-data-model) below for more details.</td>
+<td>Specifies the content for the list. The content should be a single ContentNode that has one child ContentNode for each row. These child ContentNodes for each row should themselves contains child ContentNodes for each item in the row. See <a href="https://developer.roku.com/dev/docs/zoomrowlist#zoomrowlist-data-model">ZoomRowList data model</a> below for more details.</td>
 </tr>
 <tr>
 <td>itemComponentName</td>
 <td>string</td>
 <td>""</td>
 <td>READ_WRITE</td>
-<td>Specifies the name of an XML component for the items in each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed [Item component fields](doc:zoomrowlist#item-component-fields) below.</td>
+<td>Specifies the name of an XML component for the items in each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed <a href="https://developer.roku.com/dev/docs/zoomrowlist#item-component-fields">Item component fields</a> below.</td>
 </tr>
 <tr>
 <td>rowWidth</td>
@@ -334,7 +334,7 @@ This table documents all the fields in ZoomRowList:
 <td>array of strings</td>
 <td>[]</td>
 <td>READ_WRITE</td>
-<td>Specifies the name of an XML component to decorate each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed in the [Row decoration component fields](doc:zoomrowlist#row-decoration-component-fields) section below.</td>
+<td>Specifies the name of an XML component to decorate each row. An instance of this component is created on demand for each visible item of each row. The XML component must define a specific interface as detailed in the <a href="https://developer.roku.com/dev/docs/zoomrowlist#row-decoration-component-fields">Row decoration component fields</a> section below.</td>
 </tr>
 <tr>
 <td>rowSelected</td>
@@ -442,13 +442,13 @@ This table documents all the fields in ZoomRowList:
 
 A ZoomRowList node should have a single ContentNode as the root node stored in its content field. One child ContentNode should be added to the root node for each row in the list (these nodes can be thought of as `row nodes`). Each row node should contain one child ContentNode for each item in the row (these nodes can be thought of as `item nodes`).
 
-#### Row ContentNode data bindings
+##### Row ContentNode data bindings
 
 | Attribute | Type   | Description                                         |
 |-----------|--------|-----------------------------------------------------|
 | title     | string | This is used as the string display in the Row Title |
 
-#### Item ContentNode data bindings
+##### Item ContentNode data bindings
 
 
 <table>
@@ -572,7 +572,7 @@ Note that the fields are updated in the order presented in the table below. Most
 <tr>
 <th>Field Name</th>
 <th>Field Type</th>
-<th>Access Permisson</th>
+<th>Access Permission</th>
 <th>Description</th>
 </tr>
 </thead>

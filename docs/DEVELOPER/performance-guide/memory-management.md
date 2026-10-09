@@ -50,7 +50,7 @@ larger images.
 
 ### How to avoid going over memory limits
 
-#### Make images smaller
+##### Make images smaller
 
 The simplest solution\! If you're planning on displaying an image on a
 200x200 Poster node, don't load in and render a 1920x1080 image. It will
@@ -61,7 +61,7 @@ quick calculation puts a 1920x1080 image at using a whopping
 loadHeight fields of a Poster node would be an equivalent solution to
 resizing the images themselves.
 
-#### Use minimalistic item renderers
+##### Use minimalistic item renderers
 
 The fewer elements, the better.
 Use [Rectangle](doc:rectangle) nodes,
@@ -77,6 +77,8 @@ Using r2d2*bitmaps to check the amount of texture memory
 available:*
 
 ![roku815px - texturememory](https://image.roku.com/ZHZscHItMTc2/texturememory.png "texturememory")
+
+> The "r2d2_bitmaps" command applies to pre-SceneGraph, 2D API, or template apps. If your app is SceneGraph, use the "loaded_textures" command instead.
 
 You can check your texture memory usage by telnetting to port 8080 on
 your Roku device and running the command “r2d2\_bitmaps”. This command
@@ -118,5 +120,5 @@ You can view system memory usage multiple ways:
 
 - Use the [Roku Resource Monitor](https://devtools.web.roku.com/roku-resource-monitor)
 
-- Ttelnet to `port 8080`and run `sgnodes all`
+- Telnet to `port 8080` and run `sgnodes all`
 - Telnet to port 8085, press **^C** to break into the debugger, and run `bcs` or `bscs`.

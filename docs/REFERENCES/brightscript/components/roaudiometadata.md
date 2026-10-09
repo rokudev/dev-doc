@@ -24,7 +24,7 @@ This object is created without any arguments:
 
 **Example**
 
-```
+```brightscript
 ' printAA() is from generalUtils.brs in our sample apps
 ' and used to print an associative Array
 

@@ -14,7 +14,7 @@ Extends [**ArrayGrid**](doc:arraygrid)
 
 The LabelList node class is a simple list class that can be used to display a list of items. Each item can include a text string and an optional icon positioned to the left of the text string.
 
-The list items can be organized into sections that are demarcated by labelled horizontal divider lines between the sections.
+The list items can be organized into sections that are demarcated by labeled horizontal divider lines between the sections.
 
 In most cases, you will want to populate the content of a LabelList (or other similar components like PosterGrids, etc.) from a content feed, web service API, or some other dynamic data source.  However, to illustrate the basics of how a LabelList is constructed and used, here is a simple example of creating a LabelList and populating it with static data.  Static data in a LabelList may be useful for app screens such as settings or menus with fixed items.
 
@@ -60,7 +60,7 @@ In this screen shot, the user has scrolled down one item to highlight "Drama" sh
       <td>ContentNode</td>
       <td>none</td>
       <td>READ\_WRITE</td>
-      <td>Specifies the content for the list. See <a href="/dev/docs/labellist#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
+      <td>Specifies the content for the list. See <a href="https://developer.roku.com/dev/docs/labellist#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
     </tr>
     <tr>
       <td>itemSize</td>

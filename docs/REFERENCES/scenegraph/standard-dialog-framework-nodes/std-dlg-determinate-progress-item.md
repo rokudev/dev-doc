@@ -36,8 +36,8 @@ The **StdDlgDeterminateProgressItem** node is used to display a progress indicat
 <tbody>
 <tr>
 <td>percent</td>
-<td>string</td>
-<td>"0"</td>
+<td>Float</td>
+<td>0</td>
 <td>READ_WRITE</td>
 <td>Specifies the current completion percentage text and graphic to be displayed (for example "35%" with more than a third of the indicator filled). <br /><br />If this is set to a number less than 0 or greater than 100, the progress indicator will display "0%" or "100%" completion, respectively.</td>
 </tr>

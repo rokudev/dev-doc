@@ -15,7 +15,7 @@ These tests describe the specific behavior and attributes an app must demonstrat
 To help developers test their apps, Roku provides a suite of tools to ensure your app complies with the certification criteria. The test suite includes the following tools:
 
 * [Static Analysis tool](doc:static-analysis-tool): Checks the app's code for certification-related errors.
-* [App Behavior Analysis tool](doc:channel-publishing-guide#channel-behavior-analysis): For SVOD, AVOD, and free apps, verifies app performance and deep linking meets certification requirements.
+* [App Behavior Analysis tool](doc:channel-publishing-guide#app-behavior-analysis): For SVOD, AVOD, and free apps, verifies app performance and deep linking meets certification requirements.
 * [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including app purchasing, performance, deep linking, and other certification criteria.
 
 Developers are expected to use these tools, the [certification criteria](doc:certification), and the list of certification tests in this document to guide internal quality assurance testing before [submitting an app to Roku for review](doc:channel-publishing-guide#publishing-an-app).
@@ -68,15 +68,15 @@ The number of ads in the ad break are displayed during the ad break using the st
 
 **ADS 1.1** Apps must disclose integration/use of all non-Roku SDKs, libraries, or other software systems and external advertising partners (e.g., DSPs) that enable video, audio, or banner ad insertion. Roku has the right to approve or deny such non-Roku SDKs, libraries, or other software systems.
 
-**Tests**: App is meeting the criteria specified in 1.2.
+**Tests**: App is meeting the criteria specified in ADS 1.1.
 
 **Expected Result**: App does not contain any undisclosed third-party SDKs, libraries, or other software systems that enable video, audio, or banner ad insertion.
 
 **ADS 1.2** Apps that have an inventory relationship with Roku must meet the advertising terms specified in all applicable agreements. See [Video Advertisements](doc:video-advertisements) for more information.
 
-**Tests**: App is meeting the criteria specified in 1.3.
+**Tests**: App is meeting the criteria specified in ADS 1.2.
 
-**Expected Result**: App is meeting the contactually-specified terms for ad requests and performance. You can review your contract with [publisheradservices@roku.com](mailto:publisheradservices@roku.com?Subject=New%20application%20Request%20for%20Admittance%20to%20Roku%20Ad%20Revenue%20Share) to ensure the app is meeting the specified terms.
+**Expected Result**: App is meeting the contractually-specified terms for ad requests and performance. You can review your contract with [publisheradservices@roku.com](mailto:publisheradservices@roku.com?Subject=New%20application%20Request%20for%20Admittance%20to%20Roku%20Ad%20Revenue%20Share) to ensure the app is meeting the specified terms.
 
 **ADS 1.3** Apps selling ads must comply with Roku's ad load, ad frequency, and acceptable ad requirements. See [Roku Advertising Guidelines](http://www.roku.com/adguidelines) for more information.
 
@@ -88,7 +88,7 @@ The number of ads in the ad break are displayed during the ad break using the st
 
 Apps outside the U.S. Roku Streaming Store that have streamed more than an average of 200,000 hours per month over the last three months, and new apps outside the U.S. Roku Streaming Store that are projected to reach this threshold, may also be required to implement the Demand API. See [Implementing the Demand API](doc:demand-api).
 
-**Tests**: App is meeting the criteria specified in ADS 1.1.
+**Tests**: App is meeting the criteria specified in ADS 1.4.
 
 **Expected Result**: Apps meeting the streaming hours threshold have integrated the Demand API.
 
@@ -161,7 +161,7 @@ Apps outside the U.S. Roku Streaming Store that have streamed more than an avera
 
 **Tests**: Verify ads in the app cannot be skipped by any mechanism, such as pressing the FF/REW buttons or sending a FF/REW voice command.
 
-**Expected Result**: Ads may not be skipped by pressing the FF/REW buttons, sending a FF/REW voice command, or any other mechansim.
+**Expected Result**: Ads may not be skipped by pressing the FF/REW buttons, sending a FF/REW voice command, or any other mechanism.
 
 ## **2. Accounts and purchases**
 

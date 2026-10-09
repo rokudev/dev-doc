@@ -23,7 +23,7 @@ This function causes the script to pause for the specified time, without
 wasting CPU cycles. There are 1000 milliseconds in one
 second.
 
-```
+```brightscript
 sleep(1000) ' sleep for 1 second
 sleep(200) ' sleep 2/10 of a second
 sleep(3000) ' sleep three seconds
@@ -39,7 +39,7 @@ are received. In this case, Wait returns a type "invalid".
 
 **Example**
 
-```
+```brightscript
 p = CreateObject("roMessagePort")
 s = CreateObject("roScreen")
 s.SetPort(p)
@@ -63,7 +63,7 @@ function, or invalid if not found.
 
 For example:
 
-```
+```brightscript
 print FindMemberFunction({}, "Count") '= <Interface: ifAssociativeArray>
 ```
 
@@ -83,7 +83,7 @@ specified.
 
 For example:
 
-```
+```brightscript
  BrightScript> l=ListDir("pkg:/movies")
  BrightScript> print l
  test_movie_3.vob
@@ -103,7 +103,7 @@ An empty string is returned if the file can not be read.
 
 For example:
 
-```
+```brightscript
 text=ReadAsciiFile("tmp:/config.txt")
 ```
 
@@ -119,7 +119,7 @@ The function returns true if the file was successfully written.
 
 For example:
 
-```
+```brightscript
 WriteAsciiFile("tmp:/config.txt", "the text to write")
 ```
 
@@ -158,7 +158,7 @@ The pattern may contain certain special characters:
 
 For example:
 
-```
+```brightscript
 files = MatchFiles(".", "*.mpg")
 ```
 
@@ -186,13 +186,13 @@ Return the integer value of the string, or 0 if nothing is parsed.
 
 ## RunGarbageCollector() as Object
 
-This function runs the garbage collector on the current thread. It returns and Associative array with some statistics regarding the garbage collection.  
+This function runs the garbage collector on the current thread. It returns an Associative array with some statistics regarding the garbage collection.  
 See the [Garbage collection](doc:component-architecture) section of this manual for more detail. You don't normally need to call
 this function.
 
 For example:
 
-```
+```brightscript
 BrightScript Debugger> a=[]
 BrightScript Debugger> a[0]=a
 BrightScript Debugger> a=invalid
@@ -242,7 +242,7 @@ list of photo URLs:
 }
 ```
 
-```
+```brightscript
 searchRequest = CreateObject("roUrlTransfer")
 searchRequest.SetURL("http://api.example.com/services/rest/getPhotos")
 response = ParseJson(searchRequest.GetToString())
@@ -269,7 +269,7 @@ Normally non-ASCII characters are escaped in the output string as
 "\uXXXX" where XXXX is the hexadecimal representation of the Unicode
 character value.
 
-#### Output flags (optional)
+##### Output flags (optional)
 
 | **Value** | **Description**                                                                                                                                         |
 | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -278,7 +278,7 @@ character value.
 
 ##### Example
 
-```
+```brightscript
 euroStr = Chr(&h20AC)
 
 '* By default, non-ASCII Unicode characters are escaped in JSON style
@@ -290,17 +290,17 @@ print FormatJSON(euroStr, &h0001)
 ' => "€"
 ```
 
-#### Behavior flags (optional)
+##### Behavior flags (optional)
 
 | **Flag** | **Description**                                                                                   |
 | :------- | :------------------------------------------------------------------------------------------------ |
-| &h0000   | Default: If an unsupported value type is encounted, FormatJSON fails and returns an empty string. |
+| &h0000   | Default: If an unsupported value type is encountered, FormatJSON fails and returns an empty string. |
 | &h0100   | Ignore: Unsupported value types are output as JSON null values.                                   |
 | &h0200   | Annotate: Unsupported value types are output as a descriptive string.                             |
 
 ##### Example
 
-```
+```brightscript
 list = CreateObject("roList")
 obj = {list:list, n:1}
 
@@ -343,7 +343,7 @@ value returned from the Tr() lookup.
 
 For example:
 
-```
+```brightscript
 `text = Tr("Video will start in %1 seconds").Replace("%1",
 numSeconds.ToStr())`
 ```

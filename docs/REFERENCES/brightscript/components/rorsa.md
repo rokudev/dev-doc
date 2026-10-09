@@ -21,7 +21,7 @@ Typically, you would use the roEVPDigest component to create a message digest, t
 
 **Example: RSA signing using SHA1**
 
-```
+```brightscript
 ba = CreateObject("roByteArray")
 ' ...populate bytearray...
 
@@ -41,7 +41,7 @@ signature = rsa.Sign(hashBA)
 
 **Example: RSA verification using SHA1**
 
-```
+```brightscript
 rsa = CreateObject("roRSA")
 rsa.SetPublicKey("tmp:/publicKey.txt")
 rsa.SetDigestAlgorithm("sha1")

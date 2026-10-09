@@ -36,7 +36,7 @@ When this command is executed, a Request for Information (RFI) screen is display
 
 The [**doOrder** command](doc:channelstore#doorder) completes the transaction for the customer's purchase.
 
-When this command is executed, the Roku Pay order confirmation screen is displayed. This publisher-branded screen summarizes the product being purchased, including the price, product name, and any trial period/discount. It enables the customer to confirm their purchase and update their method of payment if neccessary.
+When this command is executed, the Roku Pay order confirmation screen is displayed. This publisher-branded screen summarizes the product being purchased, including the price, product name, and any trial period/discount. It enables the customer to confirm their purchase and update their method of payment if necessary.
 
 ![roku815px - img](https://image.roku.com/ZHZscHItMTc2/rsg-channelstore-doorder.jpg)
 

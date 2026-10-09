@@ -22,7 +22,7 @@ For example, suppose the PanelSet node has two Panel nodes as children, panel A 
 
 At this point, if the user presses the **Left** key (or **Back** key), the panels will slide one position to the *right*, *back* towards the original home position, so panel D will slide offscreen to the right, panel C will slide to the right position, and panel B will slide to the left position (panel A is still offscreen to the left). When the sliding animation ends, since panel D is offscreen to the right, it is automatically removed as a child node of the PanelSet node.
 
-#### Panel Layout
+##### Panel Layout
 
 For consistency, it is recommended that panels be set to the default height. Similarly, panels should be set to one of four default width sizes. For each panel width, the default defines a corresponding left position for the panel. This is summarized in the table below, along with the default values for each of these fields:
 
@@ -44,7 +44,7 @@ When two panels are onscreen, a default gap is added between the left and right 
 
 Note that the PanelSet node positions the origin of each Panel node coordinate system by setting the Panel node `translation` field, but it does not clip the panel to the rectangle defined by the Panel node `width` and `height` fields, so if the Panel node contains a child node with translation set to (`-10, -5`), that child will be rendered 10 pixels to the right and 5 pixels above the panel origin.
 
-#### Child Management
+##### Child Management
 
 The regular roSGNode child management interface, ifSGNodeChildren, is used for adding panels to the PanelSet node. Since adding children to the PanelSet node can trigger the panels to slide left, care must be taken to use those functions in the expected manner.
 

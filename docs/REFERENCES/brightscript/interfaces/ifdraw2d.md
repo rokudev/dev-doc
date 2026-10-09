@@ -12,9 +12,35 @@ next:
 ---
 
 
-Coordinates (x,y) for this interface are based on an origin (0,0) at the top, left. (This is common for 2D drawing APIs, but is different than OpenGL's default coordinate system).
+Coordinates (x,y) for this interface are based on an origin (0,0) at the top, left. (This is common for 2D drawing APIs, but is different than OpenGL's default coordinate system). Bitmap pixel values and color values are always represented as 32-bit integer RGBA color values.  That is, red is in the most significant byte and alpha is in the least significant byte.
 
-Bitmap pixel values and color values are always represented as 32-bit integer RGBA color values.  That is, red is in the most significant byte and alpha is in the least significant byte.
+> Starting in [Roku OS 16.0](doc:release-notes#roku-os-160), the **Clear()**, **DrawLine()**, **DrawPoint()**, and **DrawRect()** functions return a Boolean indicating whether the draw succeeded, as **DrawObject()** and its derivatives and **DrawText()** already did. When a draw fails, the reason is printed to the BrightScript debug log.
+>
+> A bitmap must not be modified after it has been used as the source of another draw. Calling **SwapBuffers()** on the screen resets this state, after which the bitmap may be modified again.
+>
+> **Not allowed**
+>
+> ```
+> offscreen.DrawLine(...)
+> screen.DrawObject(offscreen, ...)
+> ' This DrawRect() will fail and return false in the future.
+> ' In Roku OS 16.0, it returns true and prints a warning to the debug console.
+> offscreen.DrawRect(...)
+> screen.SwapBuffers()
+> ```
+>
+> **Allowed**
+>
+> ```
+> offscreen1.DrawLine(...)
+> offscreen2.DrawObject(offscreen1, ...)
+> screen.DrawObject(offscreen2, ...)
+> screen.SwapBuffers()      ' resets object state
+> offscreen1.DrawRect(...)  ' allowed
+> offscreen2.DrawLine(...)  ' allowed
+> ```
+>
+> Modifying a bitmap after it has been drawn to the screen but before **SwapBuffers()** is called returns true and the draw succeeds. The Roku debug console prints a warning that the app needs to be updated, because this will fail in a future release (Roku OS 16.3 at the earliest).
 
 
 ## Implemented by
@@ -28,49 +54,54 @@ Bitmap pixel values and color values are always represented as 32-bit integer RG
 
 ## Supported methods
 
-### Clear(rgba as Integer) as Void
+### Clear(rgba as Integer) as Boolean
 
-#### Description
+##### Description
 
 Clears the bitmap, and fills it with the specified RGBA color.
 
 > The alpha channel will be filled into the bitmap, even when not used. Once AlphaEnable is set to true, the alpha channel will be taken into account when using this bitmap as a source. See SetAlphaEnable() for more information on alpha blending.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                   |
 | ---- | ------- | --------------------------------------------- |
 | rgba | Integer | The RGBA color to be used to fill the bitmap. |
 
+
+##### Return Value
+
+A flag indicating whether the bitmap was successfully cleared.
+
 > Clear() is not the same as a DrawRect() for the entire bitmap. Clear() fills the bitmap with the specified RGBA; it does not perform any alpha blending operations.
 
 ### GetWidth() as Integer
 
-#### Description
+##### Description
 
 Gets the width of the bitmap.
 
-#### Return Value
+##### Return Value
 
 The width of the bitmap in pixels.
 
 ### GetHeight() as Integer
 
-#### Description
+##### Description
 
 Gets the height of the bitmap in pixels.
 
-#### Return Value
+##### Return Value
 
 The height of the bitmap in pixels.
 
 ### GetByteArray(x as Integer, y as Integer, width as Integer, height as Integer) as Object
 
-#### Description
+##### Description
 
 Gets the RGBA pixel values for the specified rectangle.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                        |
 | ------ | ------- | ---------------------------------- |
@@ -79,17 +110,17 @@ Gets the RGBA pixel values for the specified rectangle.
 | width  | Integer | The width of the rectangle.        |
 | height | Integer | The height of the rectangle.       |
 
-#### Return Value
+##### Return Value
 
 An roByteArray representing the RGBA pixel values for the specified rectangle.
 
 ### GetPng(x as Integer, y as Integer, width as Integer, height as Integer) as Object
 
-#### Description
+##### Description
 
 Gets PNG image data for the specified area of the bitmap. The PNG is in 32-bit RGBA format.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                        |
 | ------ | ------- | ---------------------------------- |
@@ -98,13 +129,13 @@ Gets PNG image data for the specified area of the bitmap. The PNG is in 32-bit R
 | width  | Integer | The width of the rectangle.        |
 | height | Integer | The height of the rectangle.       |
 
-#### Return Value
+##### Return Value
 
 An roByteArray object containing PNG image data for the specified area of the bitmap. If the coordinates are out of bounds, or the PNG conversion fails for any reason, then invalid is returned
 
-#### Example
+##### Example
 
-```
+```brightscript
 function SaveTestPng()
     w = 200 : h = 100
     bm = CreateObject("roBitmap", {width: w, height: h, AlphaEnable: true})
@@ -117,17 +148,17 @@ function SaveTestPng()
 
 ### GetAlphaEnable() as Boolean
 
-#### Description
+##### Description
 
 Checks if the alpha blending is enabled.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether alpha blending is enabled.
 
 ### SetAlphaEnable(enable as Boolean) as Void
 
-#### Description
+##### Description
 
 Enables alpha blending when the source bitmap is the destination. The setting of the source bitmap's alpha enable is ignored.
 
@@ -135,15 +166,15 @@ When alpha blending is enabled, each pixel in the destination bitmap is set by c
 
 By default, alpha blending is off. Even when alpha blending is off, the alpha value is still present in the bitmap, and it must be passed when a function parameter is a color, which is always RGBA.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                          |
 | ------ | ------- | ---------------------------------------------------- |
 | enable | Boolean | A flag specifying whether alpha blending is enabled. |
 
-#### Example
+##### Example
 
-```
+```brightscript
 function Main()
     s=CreateObject("roScreen")
     ' Clear to White with alpha fully opaque
@@ -171,13 +202,13 @@ function Main()
  end function
 ```
 
-### DrawRect(x as Integer, y as Integer, width as Integer, height as Integer, rgba as Integer) as Void
+### DrawRect(x as Integer, y as Integer, width as Integer, height as Integer, rgba as Integer) as Boolean
 
-#### Description
+##### Description
 
 Fills the specified rectangle from left (x), top (y) to right (x + width), bottom (y + height) with the RGBA color.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                      |
 | ------ | ------- | ------------------------------------------------ |
@@ -187,28 +218,36 @@ Fills the specified rectangle from left (x), top (y) to right (x + width), botto
 | height | Integer | The height of the rectangle.                     |
 | rgba   | Integer | The RGBA color to be used to fill the rectangle. |
 
-### DrawPoint(x as Integer, y as Integer, size as Float, rgba as Integer) as Void
+##### Return Value
 
-#### Description
+A flag indicating whether the rectangle was successfully drawn.
+
+### DrawPoint(x as Integer, y as Integer, size as Float, rgba as Integer) as Boolean
+
+##### Description
 
 Draws a point at (x,y) with the given size and RGBA color.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                    |
 | ---- | ------- | ------------------------------ |
 | x    | Integer | The x-coordinate of the point. |
 | y    | Integer | The y-coordinate of the point. |
-| size | Float   | The size of the point.         |
+| size | Float   | The size of the point. The maximum point size is 100. |
 | rgba | Integer | The RGBA color of the point.   |
 
-### DrawLine(xStart as Integer, yStart as Integer, xEnd as Integer,  yEnd as Integer, rgba as Integer) as Void
+##### Return Value
 
-#### Description
+A flag indicating whether the point was successfully drawn.
+
+### DrawLine(xStart as Integer, yStart as Integer, xEnd as Integer, yEnd as Integer, rgba as Integer) as Boolean
+
+##### Description
 
 Draws a line from (xStart, yStart) to (xEnd, yEnd) with RGBA color.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                 |
 | ------ | ------- | ------------------------------------------- |
@@ -218,13 +257,17 @@ Draws a line from (xStart, yStart) to (xEnd, yEnd) with RGBA color.
 | yEnd   | Integer | The y-coordinate of the line's end point.   |
 | rgba   | Integer | The RGBA color of the line.                 |
 
+##### Return Value
+
+A flag indicating whether the line was successfully drawn.
+
 ### DrawObject(x as Integer, y as Integer, src as Object) as Boolean
 
-#### Description
+##### Description
 
 Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                                  |
 | ---- | ------- | ------------------------------------------------------------ |
@@ -232,17 +275,17 @@ Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegio
 | y    | Integer | The y-coordinate of the source object.                       |
 | src  | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### DrawScaledObject(x as Integer, y as Integer, scaleX as Float, scaleY as Float, src as Object) as Boolean
 
-#### Description
+##### Description
 
 Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y, scaled in the x direction by scaleX and in the y direction by scaleY. scaleX and scaleY should each be greater than zero and less than one to reduce the object size, or greater than one to increase the object size
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -252,17 +295,17 @@ Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegio
 | scaleY | Float   | The y direction in which the source object is to be scaled.  |
 | src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### DrawScaledObject(x as Integer, y as Integer, scaleX as Float, scaleY as Float, src as Object, rgba as Integer) as Boolean
 
-#### Description
+##### Description
 
 Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y, scaled in the x direction by scaleX and in the y direction by scaleY. scaleX and scaleY should each be greater than zero and less than one to reduce the object size, or greater than one to increase the object size.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -273,17 +316,17 @@ Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegio
 | src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 | rgba   | Integer | The RGBA color of the source object.                         |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### DrawRotatedObject(x as Integer, y as Integer, theta as Float, src as Object) as Boolean
 
-#### Description
+##### Description
 
 Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object, at position x,y rotated by angle theta degrees.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                                  |
 | ----- | ------- | ------------------------------------------------------------ |
@@ -292,17 +335,17 @@ Draws the source object, where src is an [roBitmap](doc:robitmap) or an [roRegio
 | Theta | Float   | The position which to rotate the source object. This may be 0, 90, 180, and 270 degrees. |
 | src   | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### DrawTransformedObject(x as Integer, y as Integer, theta as Float, scaleX as Float, scaleY as Float, src as Object) as Boolean
 
-#### Description
+##### Description
 
 Draws and then scales and rotates the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object;  at position x,y; scaled in the x direction by scaleX and in the y direction by scaleY; and rotated by angle theta degrees.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -313,17 +356,17 @@ Draws and then scales and rotates the source object, where src is an [roBitmap](
 | scaleY | Float   | The y direction in which the source object is to be scaled.  |
 | src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### DrawTransformedObject(x as Integer, y as Integer, theta as Float, scaleX as Float, scaleY as Float, src as Object, rgba as Integer) as Boolean
 
-#### Description
+##### Description
 
 Draws and then scales and rotates the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object;  at position x,y; scaled in the x direction by scaleX and in the y direction by scaleY; and rotated by angle theta degrees.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -335,17 +378,17 @@ Draws and then scales and rotates the source object, where src is an [roBitmap](
 | src    | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 | rgba   | Integer | The RGBA color of the source object.                         |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### DrawRotatedObject(x as Integer, y as Integer, theta as Float, src as Object, rgba as Integer) as Boolean
 
-#### Description
+##### Description
 
 Draws and rotates the source object, where src is an [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object at position x,y, rotated by angle theta degrees.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                                  |
 | ----- | ------- | ------------------------------------------------------------ |
@@ -355,17 +398,17 @@ Draws and rotates the source object, where src is an [roBitmap](doc:robitmap) or
 | src   | Object  | The [roBitmap](doc:robitmap) or an [roRegion](doc:roregion) object to be drawn. |
 | rgba  | Integer | The RGBA color of the source object.                         |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### DrawText(text as String, x as Integer, y as Integer, rgba as Integer, font as Object) as Boolean
 
-#### Description
+##### Description
 
 Draws the text at position (x,y) using the specified RGBA color and [roFont](doc:rofont) font object. Text is drawn anti-aliased. The background image/color behind the text will show through the spaces and holes in the text. To have the text erase the background, make a call to [DrawRect()](#drawrectx-as-integer-y-as-integer-width-as-integer-height-as-integer-rgba-as-integer-as-void) before calling DrawText(). The size, bold, and italic attributes are specified when creating the [roFont](doc:rofont).
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                                  |
 | ---- | ------- | ------------------------------------------------------------ |
@@ -375,13 +418,13 @@ Draws the text at position (x,y) using the specified RGBA color and [roFont](doc
 | rgba | Integer | The color of the text.                                       |
 | font | Object  | The [roFont](doc:rofont) object to be used for the text. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the object was successfully drawn.
 
 ### Finish() as Void
 
-#### Description
+##### Description
 
 Realizes the bitmap by finishing all queued draw calls. Until Finish() is called, prior graphics operations may not be user visible. For example, they may be in the graphics display pipeline, or in a server queue.
 

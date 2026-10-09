@@ -44,7 +44,7 @@ The **VoiceTextEditBox** node is similar to the [legacy **TextEditBox** node](do
 <td>float</td>
 <td>FHD: 321HD: 214</td>
 <td>READ_WRITE</td>
-<td>The maximum width of the voice hint tootip. The height scales based on the specified width.</td>
+<td>The maximum width of the voice hint tooltip. The height scales based on the specified width.</td>
 </tr>
 <tr>
 <td>voiceEntryType</td>

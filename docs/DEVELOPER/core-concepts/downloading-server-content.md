@@ -22,7 +22,7 @@ configuration of the node.
 
 For many nodes that require more complex data, a `content` field is
 provided. This special field is designed to be assigned the value of a
-Content node node that you configure to contain the data required for
+Content node that you configure to contain the data required for
 the node. 
 
 ## Configuring a content node for static content
@@ -119,7 +119,7 @@ downloaded:
 
 **Example Task node configuration and launch**
 
-```
+```brightscript
 m.getHomeOptionsList = createObject("roSGNode", "getLabelListContent")
 m.getHomeOptionsList.setField("uri", "http://www.sdktestinglab.com/homeoptionslistcontent.xml")
 m.getHomeOptionsList.observeField("content", "showhomeoptionslist")

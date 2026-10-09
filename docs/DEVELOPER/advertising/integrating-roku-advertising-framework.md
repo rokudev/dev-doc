@@ -35,7 +35,7 @@ any applications using the Roku Advertising Framework library:
 
 **Manifest entry**
 
-```
+```text
 bs_libs_required=roku_ads_lib
 ```
 
@@ -44,19 +44,19 @@ as part of their own package file. Instead, the “Library” keyword is
 used. The following line should be the first entry in
 your `main.brs` file:
 
-```
+```brightscript
 Library "Roku_Ads.brs"
 ```
 
 The library interface is obtained by calling the constructor with no arguments:
 
-```
+```brightscript
 adIface = Roku_Ads()
 ```
 
 Configure the ad URL before making the ad request call:
 
-```
+```brightscript
 adIface.setAdUrl(myAdUrl)
 ```
 
@@ -71,14 +71,14 @@ makes the initial request to the ad server, parses the server response,
 and returns the structure of ads to be rendered prior to, or during
 playback, of the selected content:
 
-```
+```brightscript
 adPods = adIface.getAds()
 ```
 
 Any preroll ads present in the returned set of ad pods can be
 immediately rendered by calling:
 
-```
+```brightscript
 shouldPlayContent = adIface.showAds(adPods, invalid, adHolder)
 ```
 
@@ -96,7 +96,7 @@ ads:
 
 **Calling getAds() in a while loop**
 
-```
+```brightscript
 while shouldPlayContent
   videoMsg = wait(0, contentVideoScreen.GetMessagePort())
   adPods = adIface.getAds(videoMsg)
@@ -119,7 +119,7 @@ retains control over the * button and will need to handle button
 presses on their own. To set the Video node in focus again, use the
 following code snippet:
 
-```
+```brightscript
 sub init()
   m.top.setFocus(true)
   setVideo()
@@ -142,7 +142,7 @@ URL (which currently provides only a single ad), the ad URL must be
 configured before requesting an
 ad pod:
 
-```
+```brightscript
 Library "Roku_Ads.brs"
 
 adIface = Roku_Ads()
@@ -172,12 +172,12 @@ will render the first pod scheduled as a preroll. Calling it with a
 single ad pod will render that pod, regardless of
 its `renderSequence` attribute.
 
-#### Single preroll ad pod
+##### Single preroll ad pod
 
 Just call [showAds()](doc:raf-api) with
 the adPods value that the application obtained above:
 
-```
+```brightscript
 shouldPlayContent = adIface.showAds(adPods)
 ```
 
@@ -185,7 +185,7 @@ Note that the return value should still be checked to see if the user
 exited the ad, and therefore should also exit out of content playback
 back to a selection screen.
 
-#### Sequential rendering
+##### Sequential rendering
 
 Typically, if the ad service URL is configured to return a slate of ad
 pods to be presented throughout the presentation of the content, it is
@@ -199,7 +199,7 @@ occur:
 
 **Sequential ad pod rendering example**
 
-```
+```brightscript
 shouldPlayContent = adIface.showAds(adPods)
 while shouldPlayContent
   videoMsg = wait(0, contentVideoScreen.GetMessagePort())
@@ -221,7 +221,7 @@ re-render ads that have already been viewed. This policy permits the
 user to rewind content up to 5 minutes before a scheduled ad break
 before displaying that ad pod again.
 
-#### Custom scheduling
+##### Custom scheduling
 
 Alternatively, there may be instances where the application must have
 greater control over when ad breaks occur. As an example, if the ad
@@ -232,7 +232,7 @@ necessary:
 
 **Custom ad scheduling example**
 
-```
+```brightscript
 adBreakSchedule = [adBreakTime1, adBreakTime2, adBreakTime3]
 scheduledPods = []
 adBreakIndex = 0
@@ -260,7 +260,7 @@ rendering:
 
 **Complete ad rendering control example**
 
-```
+```brightscript
 shouldPlayContent = true
 adBreakIndex = 0
 while shouldPlayContent
@@ -290,7 +290,7 @@ by [getAds()](doc:raf-api),
 to get the ads from each service. Then scheduling and rendering can be
 done using one of the methods described above.
 
-#### Example
+##### Example
 
 For examples, see the [Roku Advertising sample apps](https://github.com/rokudev/samples/tree/master/advertising)
 
@@ -312,14 +312,14 @@ The impression tags fired when video ads are displayed on your app must include 
 
 To enable ad measurement, call the [enableAdMeasurements()](doc:raf-api) method, and pass the required content metadata within the [setContentGenre()](doc:raf-api), [setContentId()](doc:raf-api), and [setContentLength()](doc:raf-api) methods.
 
-```
+```brightscript
 adIface.enableAdMeasurements(true)
 adIface.setContentGenre(content.categories)
 adIface.setContentId(content.stream.contentid)
 adIface.setContentLength(content.length)
 ```
 
-#### Setting the content genre
+##### Setting the content genre
 
 Each ad server may require different [Roku genre tags](#roku-genre-tags) tags that you need to pass. Check with your ad server for the  [Roku genre tags](#roku-genre-tags) to be used.
 
@@ -335,7 +335,7 @@ Apps can use the [GetRIDA()](doc:ifdeviceinfo) API to get the RIDA of a device a
 
 **Retrieving RIDA example**
 
-```
+```brightscript
 function getAdID() as String
     adId = ""
     dev_info = createObject("roDeviceInfo")
@@ -346,7 +346,7 @@ function getAdID() as String
 end function
 ```
 
-#### RIDA specific parameters
+##### RIDA specific parameters
 
 Many leading ad servers such as FreeWheel and DFP have Roku specific
 parameters in their ad request that the app can pass the RIDA in.
@@ -381,7 +381,7 @@ url = http://pubads.g.doubleclick.net/gampad/request-type?my_first_param=MyFirst
 RAF also supports multiple ways of customizing the buffering screen
 which appear before ad playback.
 
-#### Default ad buffering screen
+##### Default ad buffering screen
 
 The default ad buffering screen displays a message and a progress bar.
 Both attributes can either be enabled or disabled
@@ -389,7 +389,7 @@ using [enableAdBufferMessaging()](doc:raf-api).
 
 <Image alt="roku815px - integrateraf1" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf1.jpg" title="integrateraf1" />
 
-#### Custom buffering screen using content metadata (fixed positioning)
+##### Custom buffering screen using content metadata (fixed positioning)
 
 The buffering screen can also be customized by passing a content
 metadata object
@@ -408,7 +408,7 @@ The supported content meta-data attributes are:
 | Title                | Center-aligned relative to and displayed below PosterUrl | "Title for custom buffering screen"                                                                                                                                                                                                       |
 | Description          | Left-aligned relative to PosterUrl                       | "Description for custom buffering screen"                                                                                                                                                                                                 |
 
-```
+```brightscript
 bufferScreenContent = {}
 bufferScreenContent.HDBackgroundImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Aspect-ratio-16x9.svg/1280px-Aspect-ratio-16x9.svg.png"
 bufferScreenContent.HDPosterUrl = "http://static.commentcamarche.net/ccm.net/faq/images/0-BX4VeV6H-resolution-comparison-s-.png"
@@ -420,7 +420,7 @@ adIface.SetAdBufferScreenContent(bufferScreenContent)
 
 <Image alt="roku815px - integrateraf2" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf2.jpg" title="integrateraf2" />
 
-#### Custom buffering screen using content metadata (custom positioning)
+##### Custom buffering screen using content metadata (custom positioning)
 
 For a complete custom buffering
 screen, [setAdBufferScreenLayer()](doc:raf-api) allows
@@ -431,7 +431,7 @@ other roImageCanvas attributes.
 
 **Custom buffering screen using layers**
 
-```
+```brightscript
 layers = [
     {Url: BackgroundImageUrl}
     {Url: PosterUrl, TargetRect : {x : 405, y : 370, w : 467, h : 262}}
@@ -455,7 +455,7 @@ Custom ad parsing and rendering requires explicit approval from Roku to
 ensure proper ad delivery and quality. Please reach out to \<[adsupport@roku.com](mailto:adsupport@roku.com)\ for verifying your implementation prior to
 submitting your app for publication.
 
-#### Custom ad parsing
+##### Custom ad parsing
 
 Some applications may use an ad service that returns an unsupported
 response format, but can still take advantage of the library’s ad
@@ -468,11 +468,11 @@ first calling
 the [importAds()](doc:raf-api) method
 with the ad structure constructed externally by the client:
 
-```
+```brightscript
 adIface.importAds(myAdPodArray)
 ```
 
-#### Custom ad rendering
+##### Custom ad rendering
 
 Client applications may elect to control the ad rendering within the
 application, either to provide custom UI while loading ads, or because
@@ -521,7 +521,7 @@ As an example, if `ad` contains the [Ad structure](doc:integrating-roku-advertis
 video ad that the client application has just begun rendering,
 the `Impression` beacons for that ad could be fired with a single call:
 
-```
+```brightscript
 adIface.fireTrackingEvents(ad, {type: "Impression"})
 ```
 
@@ -530,20 +530,20 @@ variable `adProgressTime` holds a value representing the number of
 seconds since the ad began rendering, the quartile beacons can be sent
 via:
 
-```
+```brightscript
 adIface.fireTrackingEvents(ad, {time: adProgressTime})
 ```
 
 If the ad were paused by the user, then the client app would fire
 the `Pause` beacons:
 
-```
+```brightscript
 adIface.fireTrackingEvents(ad, {type: "Pause"})
 ```
 
 ## Requirements for server side ad insertion
 
-#### 1. Frequency capping and targeting requirements
+##### 1. Frequency capping and targeting requirements
 
 For apps that serve ads via SSAI, the outbound ad call to the ad server
 is not made from the client. The app will have to assume the onus of
@@ -556,7 +556,7 @@ server side component. In some cases, the app may need to pass the RIDA
 as part of an ad call, in other cases there may be a web service that
 the app needs to call.
 
-#### 2. Ad measurement beacon requirements
+##### 2. Ad measurement beacon requirements
 
 For server side ad inserted applications,
 call [fireTrackingEvents()](doc:raf-api) in
@@ -571,14 +571,14 @@ pass-through.
 keep or save any of these data elements on the device or any cloud
 storage.
 
-#### 3. User agent requirements
+##### 3. User agent requirements
 
 Apps must use the Roku-generated device user agent in all server-side ad requests to pass certification. To include the user agent in server-side ad requests, do the following:
 
 1. Obtain the user agent from a client-side call made to the ad stitcher or ad server.
 2. Pass the user agent into the User-Agent header in the server-side ad request, without any modifications.
 
-#### 4. Uniform ad experience requirements
+##### 4. Uniform ad experience requirements
 
 To enhance user engagement and consistency of ads served on the Roku
 platform, RAF supports rendering of both video and interactive ads (from
@@ -592,7 +592,7 @@ server-stitched would need to be rendered by the application. See
 [Custom Ad Rendering](doc:integrating-roku-advertising-framework)
 above.
 
-#### Implementation details
+##### Implementation details
 
 There are two API methods required for these use cases. First, the
 application is responsible for requesting and parsing the ad response,
@@ -622,7 +622,7 @@ Scheduling and rendering is then initialized by first calling
 the [`stitchedAdsInit()`](doc:raf-api) method with the ad structure constructed by the
 client:
 
-```
+```brightscript
 adIface.stitchedAdsInit(myAdPodArray)
 ```
 
@@ -637,7 +637,7 @@ logic:
 
 **Server side ad insertion example**
 
-```
+```brightscript
 playContent = true
 while playContent
   msg = Wait(0, videoPlayer.GetMessagePort())
@@ -710,7 +710,7 @@ device.
 | ROKU_ADS_KIDS_CONTENT   | Mark ad requests as appearing in a content title, app, or area of an app that is made for kids, or where you have actual knowledge that the end user is a child. This macro is designed to help flag ad requests that may be subject to child privacy and child protection laws such as the Children's Online Privacy Protection Act (COPPA). For more information about these laws, see [Channels or Content Made for Kids](https://docs.roku.com/published/madeforkids). |
 | ROKU_ADS_LOCALE         | Returns current locale in the same format as [roDeviceInfo.getCurrentLocale()](doc:ifdeviceinfo) (e.g., "en_US", "es_ES")                                                                                                                                                                                                                                                                                      |
 
-#### Example
+##### Example
 
 To make an ad request that requires the application ID, user agent, and
 timestamp values,
@@ -720,7 +720,7 @@ set:
 
 **setAdUrl example**
 
-```
+```brightscript
 rokuAds = Roku_Ads()
 url = "http://my.ad.server.net/?my_first_param=MyFirstValue&my_app_id=ROKU_ADS_APP_ID&my_user_agent=ROKU_ADS_USER_AGENT&my_timestamp=ROKU_ADS_TIMESTAMP&other_param=SomeOtherValue"
 rokuAds.setAdUrl(url)
@@ -897,8 +897,58 @@ of genre tags that can be used to improve ad targeting:
 
 ## Nielsen DAR genre tags
 
-Tagging content by genre
-via [setNielsenGenre()](doc:raf-api) requires
-a single primary genre code for the selected content from the following
-set of values. Publishers should provide the most specific category
-applicable to the content for which ads are to be shown.
+The enableAdMeasurements method deprecates the enableNielsenDAR API; therefore, do not use the enableNielsenDAR API. The [setContentGenre()](doc:raf-api) API translates Roku Genres to Nielsen Genres without additional steps. Optionally, apps may also use the [setNielsenGenre()](doc:raf-api) API to pass specific Nielsen Genre granularity. If using the [setNielsenGenre()](doc:raf-api) API, pass a single primary genre code for the selected content from the following set of values. Publishers should provide the most specific category applicable to the content for which ads are to be shown.
+
+Action:             "GD"
+Adventure:          "A"
+Animated:           "GV"
+Ballet:             "GV"
+Biography:          "DO"
+Children:           "CP"
+Comedy:             "CV"
+"Comedy drama":     "CV"
+"Crime drama":      "GD"
+Cuisine:            "GV"
+"Dark comedy":      "CV"
+Docudrama:          "GD"
+Documentary:        "DO"
+Drama:              "GD"
+Entertainment:      "GV"
+Fantasy:            "GV"
+"Historical drama": "GD"
+Horror:             "SM"
+"Martial arts":     "GV"
+Music:              "GV"
+Musical:            "MD"
+"Musical comedy":   "CV"
+Mystery:            "SM"
+"Performing arts":  "GV"
+Romance:            "GV"
+"Romantic comedy":  "CV"
+"Science fiction":  "SF"
+Special:            "GV"
+Suspense:           "SM"
+Talk:               "GV"
+Theater:            "GV"
+Thriller:           "SM"
+Travel:             "GV"
+War:                "GD"
+Western:            "EW"
+animals:            "GV"
+anime:              "GV"
+crime:              "GD"
+educational:        "IA"
+faith:              "D"
+food:               "GV"
+fashion:            "GV"
+gaming:             "GV"
+health:             "IA"
+history:            "GD"
+miniseries:         "GV"
+nature:             "GV"
+news:               "N"
+reality:            "GV"
+science:            "GV"
+sitcom:             "CS"
+sports:             "SE"
+technology:         "GV"

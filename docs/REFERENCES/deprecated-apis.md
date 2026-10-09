@@ -18,6 +18,16 @@ The [Roku OS release notes](doc:release-notes) document which APIs are being dep
 
 > Do not use deprecated APIs. Roku's [Static Analysis tool](doc:static-analysis-tool), which is used for [certification testing](doc:certification) of apps, detects and reports any deprecated APIs in the app code as errors. All reported errors in the app code (including those resulting from the use of deprecated APIs) must be resolved to pass Static Analysis testing and publish the app.
 
+## [rohttpagent.InitClientCertificates()](doc:ifhttpagent#initclientcertificates-as-boolean)
+
+As of [Roku OS 16.0](doc:release-notes#roku-os-160), the **rohttpagent.InitClientCertificates()** function is deprecated. [Static Analysis](doc:static-analysis-tool) reports a warning if your app uses this function. Starting April 1, 2027, Static Analysis will report an error and block the publishing of your app if it includes this function.
+
+Use the ChannelStore node's [getDeviceAttestationToken](doc:channelstore#getdeviceattestationtoken) command instead. It generates a signed JSON web token (JWT) in the Roku cloud and returns it to the app. Your web services can then use the token to verify that a message originated from a genuine Roku device.
+
+## [Animation.optional](doc:animation)
+
+As of [Roku OS 16.0](doc:release-notes#roku-os-160), the **optional** field on the **Animation** node is deprecated and is no longer documented. The field only affected legacy platforms that have since been sunset (Giga, Jackson, Paolo, Sugarland, and Tyler), and setting it has no effect.
+
 ## Roku SceneGraph (RSG) 1.1 apps
 
 As of the [Roku OS 14.5](doc:release-notes#roku-os-145) release (April 10, 2025), support for apps using SceneGraph 1.1 (RSG 1.1) has ended on [Roku OS 14.5](doc:release-notes#roku-os-145). Apps claiming "rsg_version=1.1" in the manifest file will execute as if rsg_version=1.2 was specified and therefore may stop functioning properly on [Roku OS 14.5](doc:release-notes#roku-os-145). Developers must migrate their RSG 1.1 apps to RSG 1.2 to ensure they run on [Roku OS 14.5](doc:release-notes#roku-os-145).

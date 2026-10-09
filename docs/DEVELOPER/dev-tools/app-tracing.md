@@ -234,7 +234,7 @@ The following examples demonstrate some of the use cases for querying your trace
 
 Roku's Perfetto-based app tracing solution exposes a number of terms that Roku developers may be unfamiliar with:
 
-| Term               | Defintion                                                                                                                                                                                                                                        |
+| Term               | Definition                                                                                                                                                                                                                                       |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SdkLauncher        | A Roku OS plugin that provides an environment for running SDK apps in a sandboxed process.                                                                                                                                                       |
 | PR_ui              | The main BrightScript thread.                                                                                                                                                                                                                    |

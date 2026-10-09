@@ -22,7 +22,7 @@ This object is created with no parameters:
 
 **Example**
 
-```
+```brightscript
 sub Main()
     audioPlayer = CreateObject("roAudioPlayer")
     port = CreateObject("roMessagePort")

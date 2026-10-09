@@ -11,7 +11,7 @@ Continue Watching is a content category row within the **What to Watch** home sc
 
 <Image align="center" alt="roku815px - continue watching row" border={true} src="https://image.roku.com/ZHZscHItMTc2/continue-watching-ui-v2.png" className="border" />
 
-> The Continue Watching feature is available on all Roku devices running [Roku OS 11.0](doc:release-notes#roku-os-110) or higher in the United States, Canda, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
+> The Continue Watching feature is available on all Roku devices running [Roku OS 11.0](doc:release-notes#roku-os-110) or higher in the United States, Canada, United Kingdom, Germany, Mexico, Chile, Argentina, and Colombia.
 >
 > Apps in the U.S. Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must participate in Roku’s Continue Watching program to pass [certification](doc:certification#4-app-operation). This requirement also applies to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 >
@@ -142,7 +142,7 @@ The following table summarizes the basic information for the Continue Watching R
       <td>Requests to the Continue Watching APIs require the following headers (the Roku OS automatically populates the headers with empty string values):<ul>
       <li><p><strong>Authorization bearer</strong>: The JWT-encrypted payload, which includes the continue watching event data.</p></li><li><p><strong>Content-Type</strong>: application/json</p></li>
       <li><p><strong>Accept</strong>: application/json</p></li><li><p><strong>x-roku-reserved-federation-token</strong>: An encrypted payload that includes the channel ID and customer's unique user ID (UUID)</p>
-      </li></ul><blockquote>See <a href="#appendix-a-sample-brightscript-code-for-adding-http-headers">Appendix A</a> for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the [roHttpAgent.setHeaders()](doc:ifhttpagent#setheadersnamevaluemap-as-object-as-boolean) function to pass the headers.</blockquote></td>
+      </li></ul><blockquote>See <a href="#appendix-a-sample-brightscript-code-for-adding-http-headers">Appendix A</a> for sample BrightScript code that demonstrates how to add these headers to your app. Do not use the <a href="https://developer.roku.com/dev/docs/ifhttpagent#setheadersnamevaluemap-as-object-as-boolean">roHttpAgent.setHeaders()</a> function to pass the headers.</blockquote></td>
     </tr>
     <tr>
       <td><strong>Response</strong></td>
@@ -169,7 +169,7 @@ To add new content items and update existing ones to the Continue Watching row, 
       <td>contentId</td>
       <td>String</td>
       <td>Required</td>
-      <td>The ASCII string (maximum 255 characters) used to uniquely identify the content in your app. <br /><br />This maps directly to the playID (contentId) field in the [Roku Search feed specification](doc:search-feed) or contentId for any search implementations using externalId providers.<br /><br />For a TV series, the seriesId maps to the corresponding seriesId field in Search feed spec. <br /><blockquote><p>For a TV series, you must pass (1) the seriesId (the ID of series asset) in the <strong>contentId</strong> field and (2) the playID of the episode in the <strong>episodeId</strong> field.</p></blockquote></td>
+      <td>The ASCII string (maximum 255 characters) used to uniquely identify the content in your app. <br /><br />This maps directly to the playID (contentId) field in the <a href="https://developer.roku.com/dev/docs/search-feed">Roku Search feed specification</a> or contentId for any search implementations using externalId providers.<br /><br />For a TV series, the seriesId maps to the corresponding seriesId field in Search feed spec. <br /><blockquote><p>For a TV series, you must pass (1) the seriesId (the ID of series asset) in the <strong>contentId</strong> field and (2) the playID of the episode in the <strong>episodeId</strong> field.</p></blockquote></td>
     </tr>
     <tr>
       <td>episodeId</td>
@@ -181,7 +181,7 @@ To add new content items and update existing ones to the Continue Watching row, 
       <td>waitForNextEpisodeAvailability</td>
       <td>Boolean</td>
       <td>Optional</td>
-      <td>This field is used for episodic content. Set it to <strong>true</strong> when an episode has been completed and the next episode has not been released yet; otherwise, set it to <strong>false</strong>.<br /><br />Roku can use this information to show the content in the Continue Watching row whenever the next episode becomes available. <br /><br />This feature requires a <a href="/dev/docs/search-feed">search feed</a> that lists "serial" and "episode" assets.<br /><br />The following matrix demonstrates how to use this field. In this example, E1 and E2 are available, but E3 has not been released yet.<br /><table><tr><td>Event</td><td>episodeId value</td><td>waitForNextEpisodeAvailability flag</td><td>Episode shown in Continue Watching row</td></tr><tr><td>Start E1</td><td>E1</td><td>false</td><td>E1</td></tr><tr><td>Complete E1</td><td>E1</td><td>true</td><td>E2</td></tr><tr><td>Start E2</td><td>E2</td><td>false</td><td>E2</td></tr><tr><td>Complete E2</td><td>E2</td><td>true</td><td>none</td></tr><tr><td>E3 becomes available later</td><td>-</td><td>-</td><td>E3</td></tr><tr><td>Start E3</td><td>E3</td><td>false</td><td>E3</td></tr><tr><td>Complete E3</td><td>E3</td><td>true</td><td>none</td></tr></table></td>
+      <td>This field is used for episodic content. Set it to <strong>true</strong> when an episode has been completed and the next episode has not been released yet; otherwise, set it to <strong>false</strong>.<br /><br />Roku can use this information to show the content in the Continue Watching row whenever the next episode becomes available. <br /><br />This feature requires a <a href="https://developer.roku.com/dev/docs/search-feed">search feed</a> that lists "serial" and "episode" assets.<br /><br />The following matrix demonstrates how to use this field. In this example, E1 and E2 are available, but E3 has not been released yet.<br /><table><tr><td>Event</td><td>episodeId value</td><td>waitForNextEpisodeAvailability flag</td><td>Episode shown in Continue Watching row</td></tr><tr><td>Start E1</td><td>E1</td><td>false</td><td>E1</td></tr><tr><td>Complete E1</td><td>E1</td><td>true</td><td>E2</td></tr><tr><td>Start E2</td><td>E2</td><td>false</td><td>E2</td></tr><tr><td>Complete E2</td><td>E2</td><td>true</td><td>none</td></tr><tr><td>E3 becomes available later</td><td>-</td><td>-</td><td>E3</td></tr><tr><td>Start E3</td><td>E3</td><td>false</td><td>E3</td></tr><tr><td>Complete E3</td><td>E3</td><td>true</td><td>none</td></tr></table></td>
     </tr>
     <tr>
       <td>profileLabel</td>
@@ -210,7 +210,7 @@ To add new content items and update existing ones to the Continue Watching row, 
   </tbody>
 </table>
 
-#### Example
+##### Example
 
 **URL**:
 
@@ -267,7 +267,7 @@ curl --location --request GET 'https://apipub.roku.com/developer/v1/user-data/v1
 
 ### Update API
 
-To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](https://developer.roku.com/docs/developer-program/discovery/continue-watching.md#add-api).
+To replace the list of content items in the Continue Watching row with a new list, send a **PUT** request to the Continue Watching API with a JSON body containing the same parameters listed in the [Add API section](https://developer.roku.com/docs/developer/discovery/continue-watching.md#add-api).
 
 **Example (cURL):**
 
@@ -284,7 +284,7 @@ curl --location --request PUT 'https://apipub.roku.com/developer/v1/user-data/v1
 
 To remove content items from the Continue Watching row, send a **DELETE** request to the Continue Watching API with a JSON body containing the **contentId** of the item to be removed.
 
-#### Example
+##### Example
 
 **URL**:
 
@@ -321,7 +321,7 @@ As of Apr 1, 2026, the Continue Watching integration supports 24/7 live linear s
 
 * **Events**: A live linear stream requires a single playback event that is sent via a POST request after 60 seconds of playback. Do not make any other API calls to send events.
 * **ContentId**: The contentId is the ID of the live linear stream itself, not the currently playing program.
-* **Deep links**: When your app receives a deep link from Continue Watching, the contentId is is the ID of the live linear stream (not the currently running program), and the mediaType is “liveFeed”.  The required playback behavior is to resume with the currently running program in the stream.
+* **Deep links**: When your app receives a deep link from Continue Watching, the contentId is the ID of the live linear stream (not the currently running program), and the mediaType is “liveFeed”.  The required playback behavior is to resume with the currently running program in the stream.
 
 ## Managing user consent
 
@@ -333,13 +333,13 @@ Handling deep links sent to your app from the Continue Watching row is essential
 
 **Syntax:**
 
-```
+```text
 http://<roku-device-ip-address>:8060/launch|input/<channelId>?contentId=<contentIdValue>&mediaType=<mediaTypeValue>&profileId=<profileIdValue>
 ```
 
 **Example:**
 
-```
+```text
 http://192.168.1.4:8060/input/581251?contentId=dev-summit-21-keynote&mediaType=movie&profileId=12345
 ```
 
@@ -347,7 +347,7 @@ http://192.168.1.4:8060/input/581251?contentId=dev-summit-21-keynote&mediaType=m
 
 To call the Continue Watching APIs, the app must include BrightScript code that adds the following HTTP headers (see the [**ifHttpAgent.addHeader()** function](doc:ifhttpagent) for more information). You must set the endpoint first before providing the headers.
 
-```
+```brightscript
 'SetUrl needs to be called first
 request.SetUrl("https://userdata.sr.roku.com/user-data/v1/content/continueWatching")
 request.AddHeader("Content-Type","application/json")
@@ -371,7 +371,7 @@ The HTTPS request body may be any arbitrary array of bytes. Roku's gateway calcu
 
 Inbound requests must use the Bearer Authentication scheme. The bearer token must be a [JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519) with the following header, payload, and signature :
 
-#### JWT header
+##### JWT header
 
 The JWT header must have the following parameters (all other parameters are ignored):
 
@@ -397,7 +397,7 @@ token = jwt.encode(payload=payload, key=key, algorithm='RS256', headers=headers)
 jwt_token = token.decode('utf-8')
 ```
 
-#### JWT payload
+##### JWT payload
 
 The JWT payload must have the following claims:
 
@@ -511,7 +511,7 @@ The HTTP method must match the method invoked on the internal service.
 
 The path and parameters sent to Roku's inbound request service are ignored; however, they should still match the internal request for clarity.
 
-#### JWT signature
+##### JWT signature
 
 The JWT must be signed with the private part of the public key specified in the JOSE header. The public key is used to verify the JWT signature and authenticate your API calls.
 
@@ -519,7 +519,7 @@ The JWT must be signed with the private part of the public key specified in the 
 
 This section demonstrates how to send Continue Watching API calls to Roku using Python.
 
-#### Prerequisites
+##### Prerequisites
 
 The following packages must be installed to run this sample:
 

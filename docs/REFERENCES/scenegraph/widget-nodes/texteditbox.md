@@ -10,11 +10,11 @@ metadata:
 next:
   description: ''
 ---
-Extends <Anchor label="**Group**" title="**Group**" href="/dev/docs/group">**Group**</Anchor>
+Extends <Anchor label="**Group**" title="**Group**" href="https://developer.roku.com/dev/docs/group">**Group**</Anchor>
 
 The **TextEditBox** node class is intended to display a string of characters as they are typed. When focused, it displays a flashing cursor to indicate the text insertion position.
 
-**TextEditBox** nodes are automatically included in the <Anchor label="**Keyboard**" title="**Keyboard**" href="/dev/docs/keyboard">**Keyboard**</Anchor> and <Anchor label="**MiniKeyboard**" title="**MiniKeyboard**" href="/dev/docs/minikeyboard">**MiniKeyboard**</Anchor> node classes.
+**TextEditBox** nodes are automatically included in the <Anchor label="**Keyboard**" title="**Keyboard**" href="https://developer.roku.com/dev/docs/keyboard">**Keyboard**</Anchor> and <Anchor label="**MiniKeyboard**" title="**MiniKeyboard**" href="https://developer.roku.com/dev/docs/minikeyboard">**MiniKeyboard**</Anchor> node classes.
 
 The default appearance of the **TextEditBox** is very transparent, allowing it to pick up most of its color from what is rendered underneath it. The appearance can be customized by changing the backgroundUri and other fields.
 
@@ -72,7 +72,7 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
         Read-Write
       </td>
       <td>
-        Specifies a string to be displayed if the length of the text field string is zero. The typical usage of this field is to prompt the user about what to enter (such as, "Enter your WiFi password").
+        Specifies a string to be displayed if the length of the text field string is zero. The typical usage of this field is to prompt the user about what to enter (such as, "Enter your Wi-Fi password").
       </td>
     </tr>
     <tr>

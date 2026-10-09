@@ -324,11 +324,11 @@ Also note how the `focusPercent` interface field has an `onChange` function defi
 
 A **MarkupList** node should have a single **ContentNode** node as the root node in its content field. The structure of the rest of the data model depends on whether or not the list items are to be grouped into sections.
 
-#### List Items Not Grouped Into Sections
+##### List Items Not Grouped Into Sections
 
 If the list items are not to be grouped into sections, one child **ContentNode** node should be added to the root node for each item in the list (these child nodes can be thought of as _item nodes_). Item nodes should contain the data required by the **MarkupList** node XML component.
 
-#### List Items Grouped Into Sections
+##### List Items Grouped Into Sections
 
 If the list items are to be grouped into sections, one child **ContentNode** node should be added to the root node for each section in the list (these child nodes can be thought of as _section roots_). Each section root should contain one child **ContentNode** node for each item in the section (that is, item nodes). The item nodes should contain the data required by the **MarkupList** node XML component.
 

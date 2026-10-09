@@ -24,7 +24,7 @@ The layout of rows and columns in the grid is very flexible. Possible layouts in
 * a layout with the posters in some rows having varying heights and/or the posters in some columns having varying widths
 * a layout with varying width rows and columns and items that occupy one or more rows and columns
 
-The grid items can be organized into sections that are demarcated by labelled horizontal divider lines between the sections.
+The grid items can be organized into sections that are demarcated by labeled horizontal divider lines between the sections.
 
 The PosterGrid node class includes the capability to automatically scale the loaded graphical images to fit within the target screen element area specified by the `basePosterSize` field value. To use this capability, select the scaling option you want as the value of the `posterDisplayMode` field.
 
@@ -72,7 +72,7 @@ There are three general categories of layouts.
       <td>ContentNode</td>
       <td>none</td>
       <td>READ\_WRITE</td>
-      <td>Specifies the content for the list. See <a href="/dev/docs/markuplist#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
+      <td>Specifies the content for the list. See <a href="https://developer.roku.com/dev/docs/markuplist#data-bindings">Data bindings</a> below for more details.<br />If the data contains section markers, section dividers will be drawn between each section. These section dividers may contain an icon and/or a string.</td>
     </tr>
     <tr>
       <td>basePosterSize</td>

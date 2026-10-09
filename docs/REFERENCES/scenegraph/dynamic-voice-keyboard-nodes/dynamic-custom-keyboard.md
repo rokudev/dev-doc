@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>
+Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://developer.roku.com/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>
 
-The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
+The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://developer.roku.com/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
 
 <br />
 
@@ -24,7 +24,7 @@ The layout of the keyboard is customized based on a JSON-formatted Key Definitio
 
 The instance of the **DynamicKeyGrid** node is accessed via the **keyGrid** field of the **DynamicCustomKeyboard** node. The **keyGrid** field includes a **keyDefinitionUri** field, which must be set to a valid Key Definition File. Typically, this is done by creating an RSG component that extends the **DynamicCustomKeyboard** and then defining an **init()** function for that component as demonstrated in the following example:
 
-```
+```brightscript
 sub init()
         m.top.keyGrid.keyDefinitionUri = "pkg:/data/coolKeyboardLayoutKDF.json"
 end sub
@@ -48,7 +48,7 @@ It is recommended that developers create a component that extends the **DynamicC
 
 For most keys defined in the Key Definition File, the [default key selection handlers](#default-key-selection-handlers)  will provide the desired behavior. If custom handling is needed, the component that extends the **DynamicCustomKeyboard** node class can implement an interface function. To do this, include a function within the component's \<interface> element that has the following signature:
 
-```
+```brightscript
 function keySelected(key as string) as boolean
 ```
 
@@ -56,7 +56,7 @@ The _key_ parameter is set to the key's "strOut" field, if specified; otherwise,
 
 The function should return _true_ if it handles the key selection. Returning _false_ causes the [default key selection handler](#default-key-selection-handlers)  behavior to be used.
 
-#### Example custom key select handler
+##### Example custom key select handler
 
 The following example demonstrates a custom key handler:
 
@@ -79,7 +79,7 @@ The following example demonstrates a custom key handler:
    ```
 
 3. In the corresponding BrightScript file for the child **DynamicCustomKeyboard** component, the **keySelected()** function includes the following business logic:
-   ```
+   ```brightscript
    function keySelected(key as string) as boolean
        if key = "ChangeCase"
            if m.top.keyGrid.mode = "UpperCase"   ' m.top.keyGrid.mode would likely be initialized in the component's init()
@@ -94,7 +94,7 @@ The following example demonstrates a custom key handler:
    end function
    ```
 
-#### Custom key handlers that modify the entered text string
+##### Custom key handlers that modify the entered text string
 
 In most cases, the default key selection handlers can be used for modifying the entered text string. However, if a custom key handler is used to do this, it must update the **cursorPosition** of the **DynamicCustomKeyboard**. The following example demonstrates a custom key handler that changes the text string:
 
@@ -106,7 +106,7 @@ In most cases, the default key selection handlers can be used for modifying the 
    ]
    ```
 2. The **keySelected()** function includes the following business logic:
-   ```
+   ```brightscript
    function keySelected(key as string) as boolean
        if key = "DuplicateCharacter"
            currString = m.top.text
@@ -128,7 +128,7 @@ In most cases, the default key selection handlers can be used for modifying the 
 
 ## Fields
 
-See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
+See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://developer.roku.com/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
 
 <HTMLBlock>{`
 <table>

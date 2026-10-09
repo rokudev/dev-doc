@@ -1,46 +1,45 @@
 ---
-title: "ifArrayJoin"
-excerpt: 'Interface providing Join to concatenate array elements into a single string'
+title: ifArrayJoin
+excerpt: Interface providing Join to concatenate array elements into a single string
 deprecated: false
 hidden: false
 metadata:
-  title: 'ifArrayJoin'
-  description: 'The ifArrayJoin interface provides the Join method, which concatenates all string elements of an array into a single string separated by a specified separator.'
+  title: ifArrayJoin
+  description: >-
+    The ifArrayJoin interface provides the Join method, which concatenates all
+    string elements of an array into a single string separated by a specified
+    separator.
   robots: index
 next:
   description: ''
 ---
-
-
-
 ## Implemented by
 
-| Name      | Description                               |
-| --------- | ----------------------------------------- |
-|  [roArray](doc:roarray)   | Returns information about the application |
-
+| Name                   | Description                                                                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| [roArray](doc:roarray) | Stores an indexed collection of BrightScript objects. Each entry of an array can be a different type, or they may all be of the same type. |
 
 ## Supported methods
 
 ### Join(separator as String) as String
 
-#### Description
+##### Description
 
-Creates a string by joining all array elements together separated by the specified separator. All elements must be of type string; otherwise, an empty string is returned
+Creates a string by joining all array elements together separated by the specified separator. All elements must be of type String; otherwise, an empty string is returned
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                       |
 | --------- | ------ | ------------------------------------------------- |
 | separator | String | The string used to separate elements in an array. |
 
-#### Return Value
+##### Return Value
 
-A String containing the array elements. 
+A String containing the array elements.
 
-#### Examples
+##### Examples
 
-```
+```brightscript
     a = ["ant","bat","cat"]
     s = a.Join(",")
     print """" + s + """"
@@ -51,5 +50,3 @@ A String containing the array elements.
     print """" + s + """"
     ' "a--b--c"
 ```
-
-

@@ -23,7 +23,7 @@ The GridPanel node class allows you to easily create a Panel that adheres to the
 - Default fade in/out animation of the next panel when the simple mechanism is used
 - Default fade out mask effect applied to the grid items at the bottom of the panel
 
-#### Automatic Create Next Panel Functionality
+##### Automatic Create Next Panel Functionality
 
 One key feature of the GridPanel node is providing a simple mechanism for setting up the common use case where each time a new item in the list receives the focus, a new "next" panel is added to the PanelSet. This mechanism is enabled or disabled by setting the createNextPanelOnItemFocus field to true or false.
 
@@ -89,7 +89,7 @@ For efficiency, sometimes the control logic for the GridPanel may create and hol
 <td>Node</td>
 <td>false</td>
 <td>WRITE_ONLY</td>
-<td>When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in repsonse to the createNextPanelIndex field being set.</td>
+<td>When the createNextPanelOnItemFocus field is true, the nextPanel field should be set to a Panel node to the next panel to add to the PanelSet in response to the createNextPanelIndex field being set. It must be set immediately in response to the createNextPanelIndex field being set.</td>
 </tr>
 <tr>
 <td>createNextPanelOnItemFocus</td>
@@ -104,7 +104,7 @@ For efficiency, sometimes the control logic for the GridPanel may create and hol
 
 >  If you are creating the grid field (either a PosterGrid or MarkupGrid) associated with a GridPanel in script of a component that extends GridPanel, you also need to add the grid as a child of the GridPanel. For example, in a component that extends GridPanel, where m.top is that component, you would associate the grid field with a PosterGrid as follows:
 
-```
+```brightscript
 grid = m.top.createChild("PosterGrid")
 m.top.grid = grid
 ```

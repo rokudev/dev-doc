@@ -20,7 +20,7 @@ next:
 
 ### GetIdentity() as Integer
 
-#### Description
+##### Description
 
 Returns a unique number for this object that can be used to identify whether a roChannelStoreEvent event originated from this object, by comparing with the roChannelStoreEvent object's GetSourceIdentity() value.
 
@@ -28,13 +28,13 @@ Returns a unique number for this object that can be used to identify whether a r
 >
 > For use as a look-up key, you can use GetIdentity().ToStr() as an associative array key.
 
-#### Return Value
+##### Return Value
 
 The unique number generated for the object.
 
 ### GetCatalog() as Void
 
-#### Description
+##### Description
 
 Requests the list of in-app products that are linked to the running app.
 
@@ -57,7 +57,7 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
 
 ### GetStoreCatalog() as Void
 
-#### Description
+##### Description
 
 Requests the list of globally available in-app products, which are available to all apps.
 
@@ -74,7 +74,7 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
 
 ### GetPurchases() as Void
 
-#### Description
+##### Description
 
 Requests the list of purchases associated with the current user account.
 
@@ -92,7 +92,7 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
     <tr>
       <td>code</td>
       <td>string</td>
-      <td>The <strong>Product Identifier</strong> that was entered in the [In-app Products page in the Developer Dashboard](doc:product-catalog#creating-products).</td>
+      <td>The <strong>Product Identifier</strong> that was entered in the <a href="https://developer.roku.com/dev/docs/product-catalog#creating-products">In-app Products page in the Developer Dashboard</a>.</td>
     </tr>
     <tr>
       <td>cost</td>
@@ -132,12 +132,12 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
     <tr>
       <td>purchaseChannel</td>
       <td>string</td>
-      <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through [Instant Signup](doc:instant-signup) during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
+      <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="https://developer.roku.com/dev/docs/instant-signup">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
     </tr>
     <tr>
       <td>purchaseContext</td>
       <td>string</td>
-      <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via [Instant Signup](doc:instant-signup).</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
+      <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="https://developer.roku.com/dev/docs/instant-signup">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
     </tr>
     <tr>
       <td>purchaseDate</td>
@@ -184,7 +184,7 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
 
 ### GetAllPurchases() as Void
 
-#### Description
+##### Description
 
 The **getAllPurchases** function is similar to the [**getPurchases** function](#getpurchases-as-void) except that it requests the historical list of all canceled, expired, and terminated subscriptions over the lifetime of the current user account—in addition to the active subscriptions. You can use this method to leverage purchase history in order to implement subscription renewal flows and more easily determine if subscriptions have expired.
 
@@ -192,11 +192,11 @@ If successful, a subsequent [roChannelStoreEvent](doc:rochannelstoreevent) will 
 
 ### SetOrder(order as Object, orderInfo as Object) as Void
 
-#### Description
+##### Description
 
 Sets the current Order (shopping cart) to the elements specified in the parameter, which must be an roList of roAssociativeArray items.<br /><br />Passing an empty roList clears the Order, like calling ClearOrder().
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -215,7 +215,7 @@ Sets the current Order (shopping cart) to the elements specified in the paramete
     <tr>
       <td>orderInfo</td>
       <td>roAssociativeArray</td>
-      <td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: $}action-list}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>\<br>m.store = CreateObject("roChannelStore")​\<br>' Populate myOrderItems\<br>myOrderInfo.action = "Upgrade"\<br>m.store.setOrder(myOrderItems, myOrderInfo)\<br></code></code></pre><br />See [On-device upgrade and downgrade](doc:on-device-upgrade-downgrade#calling-the-roku-pay-validate-transaction-api) for how to implement Roku Pay web services for upgrades/downgrades.</td>
+      <td>This parameter is used for subscription upgrades and downgrades. If it is not specified, the action is a product purchase. It contains the following fields: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>String</td><td>The action to be performed, which may be one of the following: $}action-list}</td></tr></tbody></table><br /><strong>Example</strong> <pre><code><code>\<br>m.store = CreateObject("roChannelStore")​\<br>' Populate myOrderItems\<br>myOrderInfo.action = "Upgrade"\<br>m.store.setOrder(myOrderItems, myOrderInfo)\<br></code></code></pre><br />See <a href="https://developer.roku.com/dev/docs/on-device-upgrade-downgrade#calling-the-roku-pay-validate-transaction-api">On-device upgrade and downgrade</a> for how to implement Roku Pay web services for upgrades/downgrades.</td>
     </tr>
   </tbody>
 </table>
@@ -228,31 +228,31 @@ Sets the current Order (shopping cart) to the elements specified in the paramete
 
 ### DeltaOrder(code as Object, qty as Integer) as Integer
 
-#### Description
+##### Description
 
 Applies a change in quantity to one item in the current Order (shopping cart).
 
 * If the item identified by code is not in the **Order**, it is added with the specified **qty**.
 * If the item already exists in the **Order**, **qty** is added to the quantity of this item in the **Order**.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                            |
 | ---- | ------- | ------------------------------------------------------ |
 | code | String  | The product identifier.                                |
 | qty  | Integer | The quantity purchased. This may be a negative number. |
 
-#### Return Type
+##### Return Type
 
 The quantity of the item remaining in the Order after applying the change. If the returned value is zero or negative, the item is deleted from the Order.
 
 ### GetOrder() as Object
 
-#### Description
+##### Description
 
 Retrieves the current Order.
 
-#### Return Value
+##### Return Value
 
 The returned object is an roList of roAssociativeArray items, where each item contains the following parameter names with specified value type:
 
@@ -263,13 +263,13 @@ The returned object is an roList of roAssociativeArray items, where each item co
 
 ### DoOrder() as Boolean
 
-#### Description
+##### Description
 
 Displays the Streaming Store Product Purchase Screen populated with information from the current Order.
 
 The user can then either approve and complete the purchase, or cancel the purchase. In the case that the user approves, the app should wait for and respond to the roChannelStoreEvent.isRequestSucceeded event to get the details of the completed transaction.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the user approved the order (true if the order was approved; false otherwise).
 
@@ -277,13 +277,13 @@ A flag indicating whether the user approved the order (true if the order was app
 
 It is recommended that developers use [billing testing](doc:billing-testing) instead of this method.
 
-#### Description
+##### Description
 
 This test mode short circuits communication to the Streaming Store. It makes other methods get their responses to async queries and operations from configuration files, rather than actual server communication.
 
 > Do not call this method in a production app.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                              |
 | ------ | ------- | ------------------------------------------------------------------------ |
@@ -300,7 +300,7 @@ See the [SimpleChannelStore sample app](https://github.com/rokudev/samples/tree/
 
 ### GetUserData() as Object
 
-#### Description
+##### Description
 
 The GetUserData() function provides a way to request user authorization to share the user’s account information with the calling app.
 
@@ -308,7 +308,7 @@ The primary use case of this method is to facilitate partner account creation/up
 
 For example, a developer may have a Roku app that offers a VOD subscription to users. This subscription may require an account with the content provider. The GetUserData() method could be called to read the user’s account information in order to prepopulate an account registration screen.
 
-#### Return Value
+##### Return Value
 
 When called, the method presents a dialog screen containing the user’s account information, along with two buttons labeled Share and Don’t Share.
 
@@ -342,11 +342,11 @@ When called, the method presents a dialog screen containing the user’s account
 
 ### GetPartialUserData(properties as String, requestInfo as Object) as Object
 
-#### Description
+##### Description
 
 This function works like GetUserData(), but allows the caller to specify which user data elements to return. The specified values are also displayed in the user data dialog screen.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -378,7 +378,7 @@ This function works like GetUserData(), but allows the caller to specify which u
   </tbody>
 </table>
 
-#### Return Value
+##### Return Value
 
 An roAssociativeArray containing the Roku account information passed in the method.
 
@@ -387,18 +387,18 @@ An roAssociativeArray containing the Roku account information passed in the meth
 * **Sign-up RFI screen**: email, phone, and zip.
 * **Sign-in RFI screen**: email and phone.
 
-#### Sign-up example
+##### Sign-up example
 
-```
+```brightscript
 store = CreateObject("roChannelStore")
 
 ' Request user's email, phone, first name, and last name for sign-up
 userData = store.GetPartialUserData("email, phone, firstname, lastname")
 ```
 
-#### Sign-in example
+##### Sign-in example
 
-```
+```brightscript
 store = CreateObject("roChannelStore")
 
 ' Request user's email for sign-in
@@ -407,11 +407,11 @@ userData = store.GetPartialUserData("email"}context: "signin"})
 
 ### GetUserRegionData() as Object
 
-#### Description
+##### Description
 
 Retrieves the state, zip code, and country associated with the customer's Roku account. The location information returned by this command can be used to determine a customer's eligibility for regional-specific subscription products and content.
 
-#### Return Value
+##### Return Value
 
 An associative array that contains the following fields:
 
@@ -423,17 +423,17 @@ An associative array that contains the following fields:
 
 ### StoreChannelCredData(data as String) as Object
 
-#### Description
+##### Description
 
 Stores an access token, oAuth token, or other authentication artifact that can be retrieved by calling the [GetChannelCred()](doc:ifchannelstore)method. This data is stored securely in the Roku cloud and can be retrieved by other devices linked to the same Roku account. <br /><br />This method can be used to store an authentication artifact with Roku for a signed in user, associating that user with a particular Roku account. For more information, see [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on).
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                                      |
 | ---- | ------ | ---------------------------------------------------------------- |
 | data | String | An OAuth token, custom token, or other custom data to be stored. |
 
-#### Return Value
+##### Return Value
 
 This command returns an roAssociativeArray with the following values:
 
@@ -461,11 +461,11 @@ This command returns an roAssociativeArray with the following values:
 
 ### GetChannelCred() as Object
 
-#### Description
+##### Description
 
 Retrieves a Roku Partner Unique Customer Identifier (roku_pucid), or retrieves an access token, oAuth token, or other authentication artifact (channel_data).
 
-#### Return Value
+##### Return Value
 
 An associative array that contains the following fields:
 
@@ -510,23 +510,23 @@ An associative array that contains the following fields:
 
 Generates a signed JSON web token (JWT) in the Roku cloud and returns it to the app. This token can then be used by the publisher's web services to verify that a message originated from a genuine Roku device. The following example demonstrates how to generate the device attestation token:
 
-```
+```brightscript
 store  = CreateObject("roChannelStore")
 nonce = GetRandomHexString(16)
 token = store.GetDeviceAttestation(nonce)
 ```
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                                                                                                                                 |
 | :---- | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | nonce | String | A random number used to generate the JWT token. This can be, for example, a hash of the user's account ID that can be verified by the publisher's services. |
 
-#### Return Value
+##### Return Value
 
 The generated JWT token. The following demonstrates a sample JWT that is returned to the app. Developers can use a [JWT debugger](https://jwt.io/#debugger-io) to decode this token.
 
-```
+```text
 eyJ4NXUiOiJodHRwczovL2V4YW1wbGUucm9rdS5jb20vc2FtcGxlY2VydCIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJuYmYiOjE2NTYzNzQyNzQsIngtcm9rdS1hdHRlc3RhdGlvbi1kYXRhIjp7Im5vbmNlIjoiNUUwNjkyRTBBMzg5RjRGNiIsImNoYW5uZWxJZCI6ImRldiIsImRldmVsb3BlcklkIjoiY2FhNzNmYmI1ZTc1YTQ2YTRiNjExNGRlNTFhNWFkYTdkNjE2ZTJlZCIsInRpbWVzdGFtcE1zIjoxNjU2Mzc3ODczOTkwfSwiaXNzIjoidXJuOnJva3U6Y2xvdWQtc2VydmljZXM6ZGV2aWNlLWF0dGVzdGF0aW9uIiwiZXhwIjoxNjU2NDY0Mjc0fQ.nywDvSUys27oeaQZ3yXwNBfOnXbO-TUDuekOPZYjSssfZhNhWwRXvPLbJKHcNMR5Z0vFOQLVDFeqEVGauIMxMEke5UFLuCRxhr3ayBJJPt_BPfrEFbAvYjFEGdKkxJqYUhuFE38R8lU2k7dhO0iFxDw1Qq7W4w8_7CjmDy4YFf7IfyhV7Vf2kGiOx5C94Niw5N2td3s21F3z77Rq_bofQ51DOKIwo_cDVuvPQnDyxG-CNEydZKCZZwGPYCKEHMPrIOOXJ-S9ZjArgaEpBUpMXWJibFxnkpVUVzbC22GEaqz_SjOJXFMQU7TaCKkDeCYVKylgKwCvbvHRDlgogf7kqg
 
 ```
@@ -539,7 +539,7 @@ To verify the JWT, developers must [download the Roku device attestation token c
 
 The decoded JWT contains the following fields:
 
-```
+```brightscript
 "x-roku-attestation-data":}
     "nonce": "5E0692E0A389F4F6",
     "channelId": "dev",
@@ -550,11 +550,11 @@ The decoded JWT contains the following fields:
 
 ### RequestPartnerOrder(orderInfo as roAssociativeArray, productID as String) as Object
 
-#### Description
+##### Description
 
 Checks the user's billing status and is a prerequisite for ConfirmPartnerOrder() when doing transactional purchases.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -578,7 +578,7 @@ Checks the user's billing status and is a prerequisite for ConfirmPartnerOrder()
   </tbody>
 </table>
 
-#### Return Value
+##### Return Value
 
 If the order is successful, an roAssociativeArray is returned that contains the following keys with string values:
 
@@ -595,11 +595,11 @@ If the order fails, an roAssociativeArray is returned that contains the followin
 
 ### ConfirmPartnerOrder(confirmOrderInfo as roAssociativeArray, productID as String) as Object
 
-#### Description
+##### Description
 
 This function is equivalent to doOrder() for transactional purchases. The user's billing status must first be confirmed with RequestPartnerOrder() prior to calling this function.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -623,7 +623,7 @@ This function is equivalent to doOrder() for transactional purchases. The user's
   </tbody>
 </table>
 
-#### Return Value
+##### Return Value
 
 If the order is successful, an roAssociativeArray is returned that contains the following keys with string values:
 

@@ -63,7 +63,7 @@ fired, and the **[Video node](doc:video)** is playing full
 screen and setFocus is enabled i.e., the Video node is in focus, as displayed in the following code
 example:
 
-```
+```brightscript
 sub init()
     m.top.setFocus(true)
     setVideo()
@@ -78,13 +78,13 @@ key.
 
 ### Custom control settings
 
-#### Certification requirements
+##### Certification requirements
 
 Per Roku's [certification requirements](doc:certification) Apps must support the following closed captioning settings in the Options menu: On, Off, On instant replay, and On mute (Roku TVs only).
 
 For VOD content, apps must synchronize the captions with the audio.
 
-#### Recommendations
+##### Recommendations
 
 * Apps should provide all available closed captioning tracks, but do not need to handle track selection. The Roku OS
   selects a closed caption track based on the preferred caption

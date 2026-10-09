@@ -89,6 +89,8 @@ To get started, users must have the appropriate access role, typically **busines
 
 Access to the portal requires a Roku account. You can sign in or create an account at: [https://my.roku.com/signin](https://my.roku.com/signin)
 
+If your company is new to Roku, see [Set up your Roku account](doc:account-setup) for how to create and enroll your company's account, give your team access, and enroll in payouts.
+
 Once signed in, you can access the [Roku Launchpad](https://developer.roku.com/dev/landing) to explore available tools. Access to the portal itself must be granted before you see it in the Roku Launchpad.
 
 * Ask your company's administrator to grant access based on your responsibilities.  

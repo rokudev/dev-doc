@@ -46,7 +46,7 @@ The following is a sample screenshot showing the use of CheckList:
 <td>array of Boolean</td>
 <td>all false</td>
 <td>READ_WRITE</td>
-<td>Specifies the checked state of each item in the list. A value of true indicates the item is in the checked state. A value of false indicates that the item is in the unchecked state. When reading the value of the field, note that the field array will always include one value for each item in the list.<br /><br />When writing the value of the field, if the specified array includes fewer values than items in the list, the list items that are unspecified will remain in their current state. For example, if there are 10 items in the list and the field value is set to [ <code>true</code>, <code>true</code> ], items 0 and 1 will have their checked state set to true, and the checked state of the remaining items (items 3 to 9) will be unchanged.</td>
+<td>Specifies the checked state of each item in the list. A value of true indicates the item is in the checked state. A value of false indicates that the item is in the unchecked state. When reading the value of the field, note that the field array will always include one value for each item in the list.<br /><br />When writing the value of the field, if the specified array includes fewer values than items in the list, the list items that are unspecified will remain in their current state. For example, if there are 10 items in the list and the field value is set to [ <code>true</code>, <code>true</code> ], items 0 and 1 will have their checked state set to true, and the checked state of the remaining items (items 2 to 9) will be unchanged.</td>
 </tr>
 <tr>
 <td>checkOnSelect</td>
@@ -91,7 +91,7 @@ The following is a sample screenshot showing the use of CheckList:
 
 The data model for the CheckList node should have a single ContentNode as the root node in its `content` field. The structure of the rest of the data model depends on whether or not the list items are to be grouped into sections.
 
-#### List items not grouped into sections
+##### List items not grouped into sections
 
 If the list items are not to be grouped into sections, one child ContentNode should be added to the root node for each item in the list (these child nodes can be thought of as `item nodes`). Item nodes should have their ContentNode attributes set as shown in the table below.
 
@@ -100,7 +100,7 @@ If the list items are not to be grouped into sections, one child ContentNode sho
 | TITLE     | string  | The label for the list item                                                                                                                                                                                                                      |
 | HIDEICON  | Boolean | When set to true, the default, the list item displays the checkbox icon, reflecting the item's current selection state. When set to false, no checkbox icon is displayed, allowing the list to contain a mix of checkbox and regular list items. |
 
-#### List items grouped into sections
+##### List items grouped into sections
 
 If the list items are to be grouped into sections, one child ContentNode should be added to the root node for each section in the list (these child nodes can be thought of as `section roots`). Each section root should contain one child ContentNode for each item in the section (that is, item nodes). Each item ContentNode uses the same attributes as the item nodes when there are no sections, as shown in the table above.
 

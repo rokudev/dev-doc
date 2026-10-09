@@ -48,7 +48,7 @@ be compatible with RACL.
 
 **Model #1**
 
-#### Initialization attributes
+##### Initialization attributes
 
 | Attribute | Type                          | Required | Description                                                                            |
 | --------- | ----------------------------- | -------- | -------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@ be compatible with RACL.
 | userinfo  | roAssociativeArray of Strings | Optional | [User information](https://apidocs.ooyala.com/iq_roku/IQ.html#toc17__anchor)           |
 | geoinfo   | roAssociativeArray of Strings | Optional | [Geographic information](https://apidocs.ooyala.com/iq_roku/IQ.html#toc16__anchor)     |
 
-#### Vendor-specific attributes for `setContentMetadata`
+##### Vendor-specific attributes for `setContentMetadata`
 
 | Attribute | Type    | Required | Description                                                                                     |
 | --------- | ------- | -------- | ----------------------------------------------------------------------------------------------- |
@@ -68,14 +68,14 @@ be compatible with RACL.
 
 **Model #1**
 
-#### Initialization attributes
+##### Initialization attributes
 
 | Attribute | Type   | Required | Description             |
 | --------- | ------ | -------- | ----------------------- |
 | account   | String | Required | Brightcove account ID   |
 | user      | String | Optional | Unique ID for this user |
 
-#### Vendor-specific attributes for `setContentMetadata`
+##### Vendor-specific attributes for `setContentMetadata`
 
 | Attribute      | Type    | Required | Description                                                                                                                                             |
 | -------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -111,9 +111,9 @@ Analytics vendors using Model #2 use `trackEvent` rather than `setContentMetadat
 | defaultParams      | roAssociativeArray | Optional | -             | A set of static parameters and values that should be included in each request (see the [Google Analytics (GA4) JSON body documentation](https://developers.google.com/analytics/devguides/collection/protocol/ga4/reference?client_type=gtag#payload_post_body) for more information). | RAC applies these parameters and values to the root level of each payload constructed by the [**trackEvent()** method](#trackevent).                                                                                                                                                         |
 | defaultEventParams | roAssociativeArray | Optional | -             | A set of static parameters and values that should be sent with every event.                                                                                                                                                                                                            | RAC applies these parameters and values to each event within every payload constructed by the [**trackEvent()** method](#trackevent).                                                                                                                                                        |
 
-#### Example:
+##### Example:
 
-```
+```brightscript
 m.global.RSG_analytics.init = {
     ga4: {
         api_secret: "apisecret_value",
@@ -135,7 +135,7 @@ m.global.RSG_analytics.init = {
 
 Manifest entry to use RACL:
 
-```
+```text
 sg_component_libs_required=Roku_Analytics
 ```
 
@@ -155,7 +155,7 @@ set** at the end of mid-roll ads.
 To use RACL, add a field, "RSG_analytics,"
 to `m.global` and then create an roSGNode object like so:
 
-```
+```brightscript
 m.global.addField("RSG_analytics", "node", false)
 m.global.RSG_analytics = CreateObject("roSGNode", "Roku_Analytics:AnalyticsNode")
 ```
@@ -176,7 +176,7 @@ vendor-specific configuration data.
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.init = {
     IQ : {
         PCODE : "pcode_value"
@@ -191,9 +191,9 @@ m.global.RSG_analytics.init = {
 
 ### Methods
 
-#### Model #1
+##### Model #1
 
-#### initVideoPlayer
+##### initVideoPlayer
 
 > This method can only be used for vendors using model #1 such as
 > Ooyala or Brightcove.
@@ -205,13 +205,13 @@ method needs to be set each time a new Video node is created.
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.initVideoPlayer = {
     video: m.video
 }
 ```
 
-#### setContentMetadata
+##### setContentMetadata
 
 > This method can only be used for vendors using model #1 such as
 > Ooyala or Brightcove.
@@ -223,7 +223,7 @@ for analytics providers and are optional.
 
 **Example with only Roku content meta-data:**
 
-```
+```brightscript
 myContent = {
     streamFormat: "mp4",
     streamUrl: "www.mycontent.com/video.mp4"
@@ -236,7 +236,7 @@ m.global.RSG_analytics.setContentMetadata = {
 
 **Example with Roku content meta-data and additional analytics provider information:**
 
-```
+```brightscript
 myContent = {
     streamFormat: "mp4",
     streamUrl: "www.mycontent.com/video.mp4"
@@ -254,13 +254,13 @@ m.global.RSG_analytics.setContentMetadata = {
 }
 ```
 
-#### finishedVideoPlayback
+##### finishedVideoPlayback
 
 > This method can only be used for vendors using model #1 such as Ooyala or Brightcove.
 
 This method is similar to `initVideoPlayer` and takes a single
 roAssociativeArray with exactly one attribute named `video` containing a
-Scenegraph [Video Node](doc:video).
+SceneGraph [Video Node](doc:video).
 This should be set once video playback has finished which will allow the
 component to finish analytics tasks and stop observing Video node
 events.
@@ -271,7 +271,7 @@ after a mid-roll ad).
 
 **Example:**
 
-```
+```brightscript
 sub onVideoState()
     closeStates = {
         finished : "",
@@ -289,9 +289,9 @@ end sub
 
 ***
 
-#### Model #2
+##### Model #2
 
-#### trackEvent
+##### trackEvent
 
 > This method can only be used for vendors using model #2 such as Google Analytics (GA4) or Omniture.
 
@@ -317,7 +317,7 @@ Developers can track events from the [standard GA4 events](https://developers.go
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.trackEvent = {
     GA4: {
         events: [
@@ -348,7 +348,7 @@ displayed in the console).
 
 **Example:**
 
-```
+```brightscript
 m.global.RSG_analytics.debug = true
 ```
 
@@ -359,7 +359,7 @@ m.global.RSG_analytics.debug = true
 Following is a simple example of using RACL with a
 service that supports Model #1.
 
-```
+```brightscript
 sub VerySimpleShowVideo(item)
     m.global.addField("RSG_analytics","node",false)
     m.global.RSG_analytics = CreateObject("roSGNode","Roku_Analytics:AnalyticsNode")

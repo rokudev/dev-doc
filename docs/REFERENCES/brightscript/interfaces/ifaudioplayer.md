@@ -25,21 +25,21 @@ next:
 
 ### SetContentList(contentList as Object) as Void
 
-#### Description
+##### Description
 
 Sets the content list to be played by the Audio Player.
 
-#### Parameters
+##### Parameters
 
 An array of associative arrays (Content Meta-Data objects) representing the information for each stream to be played. See [Content Meta-Data](doc:content-metadata) for details on the attributes for each element in the array.
 
 ### AddContent(contentItem as Object) as Void
 
-#### Description
+##### Description
 
 Adds a new ContentMetaData item to the end of the content list for the Audio Player. 
 
-#### Parameters
+##### Parameters
 
 | Name        | Type   | Description                                                  |
 | ----------- | ------ | ------------------------------------------------------------ |
@@ -47,57 +47,57 @@ Adds a new ContentMetaData item to the end of the content list for the Audio Pla
 
 ### ClearContent() as Void
 
-#### Description
+##### Description
 
 Clears the content list.
 
 ### Play() as Boolean
 
-#### Description
+##### Description
 
 Puts the Audio Player into play mode starting at the current item in the Content List. This will stop any currently playing content.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the Audio Player was successfully set to play mode. 
 
 ### Stop() as Boolean
 
-#### Description
+##### Description
 
 Stops the Audio Player from playing or pausing and cleanup.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the Audio Player was successfully stopped. 
 
 ### Pause() as Boolean
 
-#### Description
+##### Description
 
 Puts the Audio Player into pause mode. It is an error to Pause if player is not in play mode.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the Audio Player was successfully set to pause mode.
 
 ### Resume() as Boolean
 
-#### Description
+##### Description
 
 Puts the Audio Player into play mode starting from the pause point. It is an error to Resume if the player is not in pause mode.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the Audio Player was successfully set to play mode.
 
 ### SetLoop(enable as Boolean) as Void
 
-#### Description
+##### Description
 
 Enables/disables the automatic replaying of the Content List.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
@@ -105,11 +105,11 @@ Enables/disables the automatic replaying of the Content List.
 
 ### SetNext(item as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the next item in the Content List to be played.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                                  |
 | ---- | ------- | ------------------------------------------------------------ |
@@ -117,30 +117,30 @@ Sets the next item in the Content List to be played.
 
 ### Seek(offsetMs as Integer) as Boolean
 
-#### Description
+##### Description
 
 Set the start point of playback for the current item to offsetMs milliseconds. 
 
 - If the item is currently playing, playback will be interrupted and will restart at the specified offset. 
 - If the item is not currently playing, playback will begin at the specified offset when Play() is called.
 
-#### Parameters
+##### Parameters
 
 | Type    | Name     | Description                                                  |
 | ------- | -------- | ------------------------------------------------------------ |
 | Integer | offsetMs | The offset to be used to determine the start point of the current content item. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the Audio Player was successfully set to the specified offset.
 
 ### SetTimedMetaDataForKeys(keys[] as Dynamic) as Void
 
-#### Description
+##### Description
 
 Specifies the timedMetaData keys that the app is interested in receiving from the timedMetaData event.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |

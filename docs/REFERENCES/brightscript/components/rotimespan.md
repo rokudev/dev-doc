@@ -18,7 +18,7 @@ The Timespan object provides an interface to a simple timer for tracking the dur
 
 **Example: Timing an activity**
 
-```
+```brightscript
 ' ******************************************************
 ' Compute the number of millisecs to perform a task
 ' ******************************************************

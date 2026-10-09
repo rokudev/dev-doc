@@ -1,13 +1,16 @@
 ---
 title: Enhanced Subscription Recovery
-excerpt: 'Recover failed subscription auto-renewals with grace and on-hold states'
+excerpt: Recover failed subscription auto-renewals with grace and on-hold states
 deprecated: false
 hidden: false
 link:
   new_tab: false
 metadata:
-  title: 'Enhanced Subscription Recovery | Roku Developer Docs'
-  description: 'Integrate Enhanced Subscription Recovery to handle failed auto-renewals using entitlement checks, the DoRecovery API, and Roku Pay push notifications.'
+  title: Enhanced Subscription Recovery | Roku Developer Docs
+  description: >-
+    Integrate Enhanced Subscription Recovery to handle failed auto-renewals
+    using entitlement checks, the DoRecovery API, and Roku Pay push
+    notifications.
   robots: index
 ---
 When payment for a subscription auto-renewal fails, Roku's Enhanced Subscription Recovery feature (formerly referred to as "Passive Subscription on Hold" or "Subscription on Hold") notifies the customer on-device and via email to update their method of payment (MOP) on file for 60 days. This helps the publisher improve the chance of recovering payments and thereby reduce passive cancellations.
@@ -58,9 +61,9 @@ You must use the Roku Pay APIs to check whether a subscription is current, in re
 
 > When payment is recovered for a subscription that is in-grace or on-hold, check the entitlement status of the subscription upon receiving and processing the recovery event and entitle the customer.
 
-#### ChannelStore API
+##### ChannelStore API
 
-#### Product Catalog 2.0 (ChannelStore generic request framework)
+##### Product Catalog 2.0 (ChannelStore generic request framework)
 
 When customers launch an app, the app calls the ChannelStore [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API (with **version**=2 and **includeExpired**=true), as part of the required on-device authentication, to determine whether to block access to content.
 
@@ -69,13 +72,22 @@ The [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API returns an **
 <table>
   <thead>
     <tr>
-      <th>Subscription state</th>
-      <th>**purchases.billingPlan.state**</th>
+      <th>
+        Subscription state
+      </th>
+
+      <th>
+        **purchases.billingPlan.state**
+      </th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
-      <td>Current</td>
+      <td>
+        Current
+      </td>
+
       <td>
         <ul>
           <li>"ActivePaid"</li>
@@ -84,22 +96,40 @@ The [v2 getAllPurchases](doc:add-ons-integration#getpurchases) API returns an **
         </ul>
       </td>
     </tr>
+
     <tr>
-      <td>In Recovery</td>
-      <td>"ActiveInGracePeriod" (in 3-day grace period)</td>
+      <td>
+        In Recovery
+      </td>
+
+      <td>
+        "ActiveInGracePeriod" (in 3-day grace period)
+      </td>
     </tr>
+
     <tr>
-      <td>On Hold</td>
-      <td>"InactiveOnHold"</td>
+      <td>
+        On Hold
+      </td>
+
+      <td>
+        "InactiveOnHold"
+      </td>
     </tr>
+
     <tr>
-      <td>Cancelled</td>
-      <td>"InactiveExpired"</td>
+      <td>
+        Cancelled
+      </td>
+
+      <td>
+        "InactiveExpired"
+      </td>
     </tr>
   </tbody>
 </table>
 
-#### Product Catalog 1.0 (ChannelStore API)
+##### Product Catalog 1.0 (ChannelStore API)
 
 When customers launch an app, the app calls the ChannelStore [getAllPurchases](doc:channelstore#getallpurchases) API, as part of the required on-device authentication, to determine whether to block access to content. The [getAllPurchases](doc:channelstore#getallpurchases) API returns an **inDunning** flag that is used along with the **status** field to get the status of a subscription:
 
@@ -110,7 +140,7 @@ When customers launch an app, the app calls the ChannelStore [getAllPurchases](d
 | On Hold                             | true            | Invalid      |
 | Canceled                            | false           | Invalid      |
 
-#### Roku Pay web service APIs
+##### Roku Pay web service APIs
 
 You should routinely synchronize your entitlement service with the Roku Pay web services to make sure your system has up-to-date entitlement data (this also provides a backup in case your backend system occasionally does not receive or process a batch of push notifications sent by Roku). Call the [validate-transaction API](doc:roku-web-service#validate-transaction) as part of a nightly batch routine to get the updated status of your customers' subscriptions. This API returns an **isEntitled** flag that is used along with the **expirationDate** field and **cancelled** flag to get the status of a subscription:
 
@@ -122,35 +152,126 @@ You should routinely synchronize your entitlement service with the Roku Pay web 
 | Canceled                                                           | false            | past date            | true            |
 | Canceled - pending **(subscription canceled during current term)** | true             | future date          | true            |
 
-> **Free trials:** When a free trial ends and the customer's method of payment fails, the `is_entitled` flag is set to "false" and the subscription is automatically placed on hold.
+> **Free trials:** When a free trial ends and the customer's method of payment fails, the `isEntitled` flag is set to "false" and the subscription is automatically placed on hold.
 
 ### DoRecovery API
 
 You must use the ChannelStore DoRecovery API to display the Roku Pay subscription renewal dialog in your app when customers select content, navigate to or land on a specific screen, or upon other specific interactions. This API lets developers configure the last option in the in-app subscription renewal dialog to either "Continue Watching" (if the subscription is in grace) or "Close" (if the subscription is on hold; this is the default and it closes the dialog and returns the customer to the previous screen).
 
-The ChannelStore DoRecovery API uses Roku's Streaming Store generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it.
+The ChannelStore DoRecovery API uses Roku's Channel Store generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it.
 
 This API is available for both SceneGraph (SDK 2) and BrightScript (SDK 1).
 
 This reference summarizes the **request** and **requestStatus** fields used by the DoRecovery API.
 
-#### request
+##### request
 
 <table>
   <thead>
     <tr>
-      <th>Field</th>
-      <th>Type</th>
-      <th>Description</th>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
-      <td>request</td>
-      <td>associative array</td>
+      <td>
+        request
+      </td>
+
+      <td>
+        associative array
+      </td>
+
       <td>
         Includes the request's command and context.
-        <br /><br />
+
+        <br />
+
+        <br />
+
         <table>
           <thead>
             <tr>
@@ -197,27 +318,748 @@ This reference summarizes the **request** and **requestStatus** fields used by t
           </tbody>
         </table>
       </td>
+
+      <td>
+        Field
+      </td>
+
+      <td>
+        Type
+      </td>
+
+      <td>
+        Description
+      </td>
+
+      <td>
+        command
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        Set to "DoRecovery"
+      </td>
+
+      <td>
+        context
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        Used to match the <strong>requestStatus</strong> with <strong>request</strong>. For example, you can set this to "id: DoRecovery_1".
+      </td>
+
+      <td>
+        params
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        Optional. Used to configure the in-app Roku Pay subscription renewal dialog. If this parameter is not included, the in-app Roku Pay subscription renewal dialog does not allow customers to watch content while their subscription is in recovery.
+
+        <br />
+
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>recoveryContext</td>
+              <td>string</td>
+              <td>This may be set to the following value: <br /><br />"playback": Sets the last option in the Roku Pay subscription renewal dialog to "Continue Watching". This lets customers continue watching content while their subscription is in recovery.</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+
+      <td>
+        Field
+      </td>
+
+      <td>
+        Type
+      </td>
+
+      <td>
+        Description
+      </td>
+
+      <td>
+        recoveryContext
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        This may be set to the following value: <br /><br />"playback": Sets the last option in the Roku Pay subscription renewal dialog to "Continue Watching". This lets customers continue watching content while their subscription is in recovery.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Field
+      </td>
+
+      <td>
+        Type
+      </td>
+
+      <td>
+        Description
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        command
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        Set to "DoRecovery"
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        context
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        Used to match the <strong>requestStatus</strong> with <strong>request</strong>. For example, you can set this to "id: DoRecovery_1".
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        params
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        Optional. Used to configure the in-app Roku Pay subscription renewal dialog. If this parameter is not included, the in-app Roku Pay subscription renewal dialog does not allow customers to watch content while their subscription is in recovery.
+
+        <br />
+
+        <br />
+
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>recoveryContext</td>
+              <td>string</td>
+              <td>This may be set to the following value: <br /><br />"playback": Sets the last option in the Roku Pay subscription renewal dialog to "Continue Watching". This lets customers continue watching content while their subscription is in recovery.</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+
+      <td>
+        Field
+      </td>
+
+      <td>
+        Type
+      </td>
+
+      <td>
+        Description
+      </td>
+
+      <td>
+        recoveryContext
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        This may be set to the following value: <br /><br />"playback": Sets the last option in the Roku Pay subscription renewal dialog to "Continue Watching". This lets customers continue watching content while their subscription is in recovery.
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Field
+      </td>
+
+      <td>
+        Type
+      </td>
+
+      <td>
+        Description
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        recoveryContext
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        This may be set to the following value: <br /><br />"playback": Sets the last option in the Roku Pay subscription renewal dialog to "Continue Watching". This lets customers continue watching content while their subscription is in recovery.
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
   </tbody>
 </table>
 
-#### requestStatus
+##### requestStatus
 
 <table>
   <thead>
     <tr>
-      <th>Field</th>
-      <th>Type</th>
-      <th>Description</th>
+      <th>
+        Field
+      </th>
+
+      <th>
+        Type
+      </th>
+
+      <th>
+        Description
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
+
+      <th>
+
+      </th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
-      <td>requestStatus</td>
-      <td>associative array</td>
+      <td>
+        requestStatus
+      </td>
+
+      <td>
+        associative array
+      </td>
+
       <td>
         Includes the status of the DoRecovery command and the recovery status data returned by it.
-        <br /><br />
+
+        <br />
+
+        <br />
+
         <table>
           <thead>
             <tr>
@@ -275,15 +1117,651 @@ This reference summarizes the **request** and **requestStatus** fields used by t
           </tbody>
         </table>
       </td>
+
+      <td>
+        Field
+      </td>
+
+      <td>
+        Type
+      </td>
+
+      <td>
+        Description
+      </td>
+
+      <td>
+        result
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        Contains the following key-value pairs for the recovery status of the subscription:
+
+        <br />
+
+        <br />
+
+        <ul>
+          <li><strong>3</strong>. A subscription, which was in recovery (Roku was attempting to charge their method of payment over a period of days), has been canceled by the user. As a result, the subscription is no longer valid.</li>
+          <li><strong>2</strong>. One or more subscriptions are still in recovery.</li>
+          <li><strong>1</strong>. No subscriptions are in recovery.</li>
+        </ul>
+      </td>
+
+      <td>
+        status
+      </td>
+
+      <td>
+        enum
+      </td>
+
+      <td>
+        The command completion status, which may be one of the following values:
+
+        <br />
+
+        <br />
+
+        <ul>
+          <li><strong>2</strong>  Interrupted</li>
+          <li><strong>1</strong>  Success</li>
+          <li><strong>0</strong>  Network error</li>
+          <li><strong>-1</strong> HTTP Error/Timeout</li>
+          <li><strong>-2</strong> Timeout</li>
+          <li><strong>-3</strong> Unknown Error</li>
+          <li>**-4** Invalid request</li>
+        </ul>
+      </td>
+
+      <td>
+        statusMessage
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        A text description of the command completion status.
+      </td>
+
+      <td>
+        command
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        The command passed into the request, which is "DoRecovery".
+      </td>
+
+      <td>
+        context
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        The context passed into the request (for example, id: "DoRecovery_1").
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Field
+      </td>
+
+      <td>
+        Type
+      </td>
+
+      <td>
+        Description
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        result
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        Contains the following key-value pairs for the recovery status of the subscription:
+
+        <br />
+
+        <br />
+
+        <ul>
+          <li><strong>3</strong>. A subscription, which was in recovery (Roku was attempting to charge their method of payment over a period of days), has been canceled by the user. As a result, the subscription is no longer valid.</li>
+          <li><strong>2</strong>. One or more subscriptions are still in recovery.</li>
+          <li><strong>1</strong>. No subscriptions are in recovery.</li>
+        </ul>
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        status
+      </td>
+
+      <td>
+        enum
+      </td>
+
+      <td>
+        The command completion status, which may be one of the following values:
+
+        <br />
+
+        <br />
+
+        <ul>
+          <li><strong>2</strong>  Interrupted</li>
+          <li><strong>1</strong>  Success</li>
+          <li><strong>0</strong>  Network error</li>
+          <li><strong>-1</strong> HTTP Error/Timeout</li>
+          <li><strong>-2</strong> Timeout</li>
+          <li><strong>-3</strong> Unknown Error</li>
+          <li>**-4** Invalid request</li>
+        </ul>
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        statusMessage
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        A text description of the command completion status.
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        command
+      </td>
+
+      <td>
+        string
+      </td>
+
+      <td>
+        The command passed into the request, which is "DoRecovery".
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        context
+      </td>
+
+      <td>
+        associative array
+      </td>
+
+      <td>
+        The context passed into the request (for example, id: "DoRecovery_1").
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
+
+      <td>
+
+      </td>
     </tr>
   </tbody>
 </table>
 
-#### SceneGraph (SDK 2) example
+##### SceneGraph (SDK 2) example
 
 The following code demonstrates how to use the ChannelStore node (SDK 2) to display the Roku Pay subscription renewal dialog and configure it so it blocks access to content:
 
-```
+```brightscript
 function DoRecovery()
     request = {}
     request.command = "DoRecovery"
@@ -311,11 +1789,11 @@ function onRequestStatus()
 end function
 ```
 
-#### BrightScript (SDK 1) example
+##### BrightScript (SDK 1) example
 
 The following code demonstrates how to use the roChannelStore node (SDK 1) to display the Roku Pay subscription renewal dialog and block access to content. A **DoRequest()** method, which takes the **request** object, is required for sending the DoRecovery request.
 
-```
+```brightscript
 function DoRecovery() as void
     request = {}
     request.command = "DoRecovery"
@@ -371,7 +1849,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 | OnHoldInitiated      | Payment for a subscription auto-renewal fails after the grace period elapses. Customer should no longer have access to content while Roku continues to attempt to charge the MOP.           |
 | OnHoldRecovered Sale | Payment is received for a subscription that was on-hold. Customer is granted access to content automatically and the billing period is adjusted to the time that the payment was collected. |
 
-#### GraceInitiated
+##### GraceInitiated
 
 ```json
 {
@@ -391,7 +1869,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 }
 ```
 
-#### GraceRecovered
+##### GraceRecovered
 
 ```json
 {
@@ -411,7 +1889,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 }
 ```
 
-#### OnHoldInitiated
+##### OnHoldInitiated
 
 ```json
 {
@@ -431,7 +1909,7 @@ You must ingest and process the following additional [push notifications](doc:pu
 }
 ```
 
-#### OnHoldRecovered
+##### OnHoldRecovered
 
 ```json
 {

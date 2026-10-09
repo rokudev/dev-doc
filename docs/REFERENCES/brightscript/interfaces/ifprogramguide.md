@@ -22,11 +22,11 @@ next:
 
 ### GetChannels(id as Integer) as Object
 
-#### Description
+##### Description
 
 Returns the list of logical channel numbers on which the given program ID can be found.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description           |
 | ---- | ------- | --------------------- |
@@ -34,17 +34,17 @@ Returns the list of logical channel numbers on which the given program ID can be
 
 ### GetNowNextPrograms(channel as String) as Dynamic
 
-#### Description
+##### Description
 
 Returns details about the current and next program on an app. 
 
-#### Parameters
+##### Parameters
 
 | Name    | Type   | Description                                                |
 | ------- | ------ | ---------------------------------------------------------- |
 | channel | String | The app number for which programs are to be retrieved. |
 
-#### Return Value
+##### Return Value
 
 An roAssociativeArray containing two roArray components: one for the current program and another for the next program on the app. Each roArray contains the following key/value pairs detailing the program:   
 
@@ -129,21 +129,21 @@ An roAssociativeArray containing two roArray components: one for the current pro
 
 ### GetVersion() as Integer
 
-#### Description
+##### Description
 
 Returns an integer which is incremented each time the underlying data in the guide changes.
 
-#### Return Value
+##### Return Value
 
 The version number of the program guide.
 
 ### GetPrograms(startTime as roDateTime, channel as String, endTime as roDateTime) as Object
 
-#### Description
+##### Description
 
 Returns the programs falling within the given time range. 
 
-#### Parameters
+##### Parameters
 
 | Name      | Type       | Description                                                |
 | --------- | ---------- | ---------------------------------------------------------- |
@@ -151,6 +151,6 @@ Returns the programs falling within the given time range.
 | channel   | String     | The app number for which programs are to be retrieved. |
 | endTime   | roDateTime | The end time programs must fall within to be retrieved.    |
 
-#### Return Value
+##### Return Value
 
 An roArray of programs falling within the given time range (returns invalid if the given channel is unknown). Each entry in the array contains an roAssociativeArray containing the following details of a program: 

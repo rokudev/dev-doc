@@ -21,7 +21,7 @@ This object is created with no parameters:
 
 **Example**
 
-```
+```brightscript
 di = CreateObject("roDeviceInfo")
 print di.GetModel()
 print di.GetVersion()
@@ -32,7 +32,7 @@ print di.GetChannelClientId()
 
 The output from the above code would like the following:
 
-```
+```brightscript
  N1000
  999.99E99999X
  20E825000036

@@ -167,7 +167,7 @@ ParentalControlPinPad includes a new field, pinSuccess for blocking content:
         ""
       </td>
       <td>
-        Specifed the URI of an image file to be loaded to replace the default box drawn underneath each entered digit in the pin display. This should be a 9-patch image so that it can be stretched to appropriate size depending on the pinLength field.
+        Specified the URI of an image file to be loaded to replace the default box drawn underneath each entered digit in the pin display. This should be a 9-patch image so that it can be stretched to appropriate size depending on the pinLength field.
       </td>
     </tr>
     <tr>

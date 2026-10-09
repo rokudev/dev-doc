@@ -20,7 +20,7 @@ To set up a fixed focus list or grid, set the focusedTargetSet field to a Target
 
 **focusedTargetSet1**
 
-```
+```brightscript
 focusedTargetSet1 = createObject("roSGNode", "TargetSet")
 m.tList1.focusedTargetSet = [ focusedTargetSet1 ]
 
@@ -38,7 +38,7 @@ focusedTargetSet1.focusIndex = 1
 
 **unfocusedTargetSet**
 
-```
+```brightscript
 unfocusedTargetSet.targetRects = [
     { x:-100, y:-64, height:134, width:240 },
     { x:150, y:-64, height:134, width:240 },
@@ -61,7 +61,7 @@ When the focus moves to Item 2, the layout of the first row is defined by anothe
 
 **focusedTargetSet array**
 
-```
+```brightscript
 focusedTargetSet1 = createObject("roSGNode", "TargetSet")
 focusedTargetSet2 = createObject("roSGNode", "TargetSet")
 focusedTargetSet3 = createObject("roSGNode", "TargetSet")
@@ -71,7 +71,7 @@ m.tList1.focusedTargetSet = [ focusedTargetSet1, focusedTargetSet2, focusedTarge
 
 **Additional TargetSets for floating focus**
 
-```
+```brightscript
 focusedTargetSet2.targetRects = [
     { x:-178, y:-64, height:134, width:240 },
     { x:72, y:-64, height:134, width:240 },
@@ -106,7 +106,7 @@ focusedTargetSet4.color = "0x00202020AA"
 focusedTargetSet4.focusIndex = 4
 ```
 
-#### Notes
+##### Notes
 
 * To set up floating focus, it is important that all of the TargetSet's specify the same number of target rectangles and for the TargetSet's focusIndex fields to increase by 1 for each TargetSet in the focusedTargetSet field. In the example below, each TargetSet contains an array of 6 rectangles with the focus set to index 1 in focusedTargetSet1, index 2 in focusedTargetSet2, index 3 in focusedTargetSet3, and index 4 in focusedTargetSet4.
 * Setting up an unfocused layout works the same as in the fixed focus case above. Make sure that you do not specify a focusIndex for the unfocusedTargetSet (or set it equal to the default value of -1). Doing this keeps the focus index unchanged when the list loses, then regains focus.

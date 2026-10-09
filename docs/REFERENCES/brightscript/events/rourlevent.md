@@ -23,7 +23,7 @@ Returns the type of event, which may be one of the following values:
 | Event Type | Description                                                                                 |
 | ---------- | ------------------------------------------------------------------------------------------- |
 | 1          | transfer complete                                                                           |
-| 2          | transfer started. Headers are available for suitable protocols. (Not currently implemented) |
+| 2          | transfer started. Headers are available for suitable protocols. Sent when the first server event of a [server-sent event stream](doc:ifurltransfer#asyncgetssevents-as-boolean) is received (since [Roku OS 16.0](doc:release-notes#roku-os-160)); not sent for other transfers |
 
 ### GetResponseCode() as Integer
 

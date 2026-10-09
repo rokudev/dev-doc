@@ -23,74 +23,74 @@ next:
 
 ### GetNamedElements(name As String) As Object
 
-#### Description
+##### Description
 
 Returns a new XMLList that contains all roXMLElements that matched the passed in name (case-sensitive matching is used). This is the same as using the dot operator on an roXMLList.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                 |
 | ---- | ------ | ------------------------------------------- |
 | Name | String | The XML element to be used to find matches. |
 
-#### Return Value
+##### Return Value
 
 An XMLList that contains the matches. 
 
 ### GetNamedElementsCi(name As String) As Object
 
-#### Description
+##### Description
 
 Returns a new XMLList that contains all roXMLElements that matched the passed in name (case-insensitive matching is used). This is the same as using the dot operator on an roXMLList.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                 |
 | ---- | ------ | ------------------------------------------- |
 | Name | String | The XML element to be used to find matches. |
 
-#### Return Value
+##### Return Value
 
 An XMLList that contains the matches. 
 
 ### Simplify() As Object
 
-#### Description
+##### Description
 
 If the list contains exactly one item, this function returns that item. Otherwise, it returns itself.
 
-#### Return Value
+##### Return Value
 
 The object item.
 
 ### GetAttributes() As Object
 
-#### Description
+##### Description
 
 If the list contains exactly one item, this function returns the attributes of that item. Otherwise it returns invalid.
 
-#### Return Value
+##### Return Value
 
 The object item.
 
 ### GetText() As String
 
-#### Description
+##### Description
 
 If the list contains exactly one item, this function returns the text of that item. Otherwise, it returns an empty string.
 
-#### Return Value
+##### Return Value
 
 The object string.
 
 ### GetChildElements() As Object
 
-#### Description
+##### Description
 
 If the list contains exactly one item, this function returns the child elements of that item. Otherwise it returns invalid. 
 
 > This function does not return the items contained in the roXMLList. Use [ifList](doc:iflist) functions to access those items.
 
-#### Return Value
+##### Return Value
 
 The object item.

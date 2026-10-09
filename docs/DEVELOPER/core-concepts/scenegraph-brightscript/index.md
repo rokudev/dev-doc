@@ -18,7 +18,7 @@ Two BrightScript objects, [roSGScreen](doc:rosgscreen) and [roSGNode](doc:rosgno
 Currently, a fairly strict ordering must be used in BrightScript to
 create a screen and set up its Scene node.
 
-```
+```brightscript
 screen = CreateObject("roSGScreen")     ' create the roSGScreen
 m.port = CreateObject("roMessagePort")
 screen.setMessagePort(m.port)

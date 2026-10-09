@@ -1,5 +1,5 @@
 ---
-title: "BrightScript access to SceneGraph nodes: performance considerations"
+title: "Accessing SceneGraph nodes"
 excerpt: 'How SceneGraph nodes, BrightScript, fields, copying, and threads affect the performance and memory use of your app'
 deprecated: false
 hidden: false
@@ -357,7 +357,7 @@ m.top.data = invalid   ' Field data released (takes time)
 
 The Perfetto trace of this code looks like the following. Some event names are truncated.
 
-![Perfetto trace of the example code: roSGNode.setField and roSGNode.getField calls, each with bscCopyToDomainEx and Rendezvous blocks, inside an ExecBrightScript event](copying-in-scenegraph.png)
+![Perfetto trace of the example code: roSGNode.setField and roSGNode.getField calls, each with bscCopyToDomainEx and Rendezvous blocks, inside an ExecBrightScript event](https://image.roku.com/ZHZscHItMTc2/copying-in-scenegraph.png)
 
 - `bscCopyToDomainEx` is the internal function which clones BrightScript objects.
 - The multiple `getField` and `bscCopyToDomainEx` blocks are the multiple field accesses in the code above.

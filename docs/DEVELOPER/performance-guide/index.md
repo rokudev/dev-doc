@@ -19,4 +19,4 @@ Use these guides to measure, diagnose, and improve the performance and memory us
 - [Optimization techniques](doc:optimization-techniques): Reduce SceneGraph node copies, limit `formatJSON()`, and manage memory for smoother frames.
 - [Optimized data transfer and reference handling](doc:data-transfer-apis): Move data into and out of node fields without copying.
 - [Measuring app performance](doc:measuring-channel-performance): Track app launch, video start, and EPG performance using signal beacons.
-- [BrightScript access to SceneGraph nodes: performance considerations](doc:sgnode-access): How SceneGraph nodes, BrightScript, fields, copying, and threads affect the performance and memory use of your app.
+- [Accessing SceneGraph nodes](doc:sgnode-access): How SceneGraph nodes, BrightScript, fields, copying, and threads affect the performance and memory use of your app.

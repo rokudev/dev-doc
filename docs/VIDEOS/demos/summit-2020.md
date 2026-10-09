@@ -52,7 +52,7 @@ Roku held their annual developer summit online on October 13, 2020. Topics cover
 
 This section provides links to the major topics covered within each presentation at the 2020 developer summit.
 
-#### Fall updates: Hardware & OS
+##### Fall updates: Hardware & OS
 
 * [Roku platform overview](doc:features-overview)
 * [Roku TV and player products](https://www.roku.com/products)
@@ -61,7 +61,7 @@ This section provides links to the major topics covered within each presentation
 * [Hardware specifications](doc:hardware)
 * [Roku OS 9.4 consumer blog post](https://blog.roku.com/roku-os-94)
 
-#### Developer updates
+##### Developer updates
 
 * [BrightScript exception handling](doc:error-handling)
 * [Static Analysis testing](doc:static-analysis-tool)
@@ -69,7 +69,7 @@ This section provides links to the major topics covered within each presentation
 * [App publishing scheduler](doc:channel-publishing-guide)
 * [Deep linking app publishing window](doc:channel-publishing-guide)
 
-#### Certification update
+##### Certification update
 
 * [Certification criteria](doc:certification)
 * [Fall 2020 certification update](https://blog.roku.com/developer/channel-certification-criteria-updates-october-2020)
@@ -81,7 +81,7 @@ This section provides links to the major topics covered within each presentation
 * [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)
 * [Voice controls](doc:transport-controls)
 
-#### Roku Pay
+##### Roku Pay
 
 * [Roku Pay](doc:billing)
 * [Roku Pay training video](doc:subscriptions)
@@ -90,11 +90,11 @@ This section provides links to the major topics covered within each presentation
 * [Subscription product groups](doc:product-catalog)
 * [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on)
 
-#### Demand API
+##### Demand API
 
 * [Demand API](doc:demand-api)
 
-#### Growing an audience
+##### Growing an audience
 
 * [Roku Search](doc:implementing-search)
 * [Instant Signup](doc:instant-signup)

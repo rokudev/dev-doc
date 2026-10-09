@@ -145,7 +145,7 @@ The external control services provided by ECP are included in a simple RESTful A
             </tbody>
           </table>
       </div></td><td class="long-line">Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting "Enabled"</td></tr>
-    <tr><td class="long-line">query/app-object-counts/&lt;<em>channelId</em>&gt;<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td><td class="long-line">Returns the counts for the different BrightScript node objects in the app. This helps developers determine the counts of each type of object held by their Brightscript app.<br /><br />The app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file.</td><td class="long-line">Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting "Enabled"</td></tr>
+    <tr><td class="long-line">query/app-object-counts/&lt;<em>channelId</em>&gt;<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td><td class="long-line">Returns the counts for the different BrightScript node objects in the app. This helps developers determine the counts of each type of object held by their BrightScript app.<br /><br />The app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file.</td><td class="long-line">Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting "Enabled"</td></tr>
     <tr><td class="long-line">query/app-state/&lt;<em>appId</em>&gt;<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td><td class="long-line">Returns the current app state: "active", "background" (suspended; running in the background), or "inactive". <br /><br />The app may either be a sideloaded app or an app from the Streaming Store. To output the results for an app in the app store, the device must be keyed with the same developer ID/key that was used to generate the package file.<br /><br />If the app is not installed, this command returns an error.</td><td class="long-line">Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting "Enabled"</td></tr>
     <tr><td class="long-line">exit-app/&lt;<em>channelId</em>&gt;[true]<br /><br />(POST request)<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td><td class="long-line">Suspends or terminates an app that is running: <br /><ul><li>If the app does not support Instant Resume and is running, sending this command terminates the app.</li><li>If the app supports Instant Resume and is running, sending this command suspends the app (the app runs in the background).</li><li>If the app supports Instant Resume and is running, sending this command with the optional <code>true</code> parameter terminates the app (the app does not run in the background).</li></ul></td><td class="long-line">Developer mode enabled<br /><br /><strong>Control by mobile apps</strong> setting "Enabled"</td></tr>
     <tr><td class="short-line">input</td><td class="long-line">Sends custom events to the current application. It takes a user defined list of name-value pairs sent as query string URI parameters. The external control server places these name-value pairs into an associative array, and passes them directly through to the currently executing app script using a Message Port attached to a created roInput object.<br /><br />Input Command Conventions includes detailed recommendations on how to pass your data.<br /><br />Messages of type <a href="https://developer.roku.com/dev/docs/roinputevent">roInputEvent</a> have a GetInfo() method that will obtain the associative array. The arguments must be URL-encoded. <br /><br />This command is sent using an HTTP POST with no body. Example: <code>POST /input?acceleration.x=0.0&acceleration.y=0.0&acceleration.z=9.8</code></td><td class="short-line" /></tr>
@@ -320,7 +320,7 @@ Content-Type: image/jpeg
 
 ### Query debugging examples
 
-#### Query/chanperf example
+##### Query/chanperf example
 
 The following command returns the current memory and CPU utilization of an app (RAM usage is reported in bytes).
 
@@ -367,7 +367,7 @@ The response includes the following fields:
 </chanperf>
 ```
 
-#### Query/r2d2-bitmaps example
+##### Query/r2d2-bitmaps example
 
 The following command returns a list of the assets that have been loaded into texture memory, and the amount of used, available, and maximum memory on your device (in bytes).
 
@@ -407,7 +407,7 @@ The response includes the following fields:
 </r2d2-bitmaps>
 ```
 
-#### Query/sgnodes/all example
+##### Query/sgnodes/all example
 
 The following command returns each existing node created by the currently running app. This includes the number of **osref** references to the node (held in the Roku platform) and **bscref** references (held in the app)..
 
@@ -436,7 +436,7 @@ The response includes the following fields:
 </sgnodes>
 ```
 
-#### query/sgrendezvous example
+##### query/sgrendezvous example
 
 The following commands enable rendezvous tracking and list the rendezvous events for a sideloaded app or production/beta app linked to the Roku developer's account:
 
@@ -544,7 +544,7 @@ The response includes the following fields:
 </fwbeacons>
 ```
 
-#### query/app-object-counts example
+##### query/app-object-counts example
 
 The following command returns the counts for the different BrightScript node objects in the app.
 
@@ -598,7 +598,7 @@ The response includes the following fields:
 </app-object-counts>
 ```
 
-#### query/app-state example
+##### query/app-state example
 
 The following command returns the state of the app state: "active", "background" (suspended; running in the background), or "inactive".
 
@@ -617,7 +617,7 @@ The response includes the following fields:
 </channel>
 ```
 
-#### exit-app example
+##### exit-app example
 
 The following command suspends or terminates an app that is running. The optional `/true` parameter will force the termination of the app even if it supports instant-resume. Without this, an instant-resume channel will remain running in the background.
 

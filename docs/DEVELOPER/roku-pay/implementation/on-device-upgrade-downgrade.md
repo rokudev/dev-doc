@@ -46,7 +46,7 @@ Apps must complete the following steps to handle on-device upgrades and downgrad
 
 ### Sending the upgrade/downgrade action
 
-#### SceneGraph ChannelStore node (SDK 2)
+##### SceneGraph ChannelStore node (SDK 2)
 
 To send a [**doOrder command**](doc:channelstore#doorder) to upgrade or downgrade a plan with the SceneGraph ChannelStore node, follow these steps:
 
@@ -71,7 +71,7 @@ To send a [**doOrder command**](doc:channelstore#doorder) to upgrade or downgrad
 
    * **Downgrade**. The current plan is marked for cancellation on its expiration date. On the expiration date, the purchase of the downgrade is completed and the previous plan is canceled automatically. No service credit is issued as part of a downgrade.
 
-#### BrightScript roChannelStore node (SDK 1)
+##### BrightScript roChannelStore node (SDK 1)
 
 To call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object-orderinfo-as-object-as-void) to upgrade or downgrade a plan with the BrightScript roChannelStore node, follow these steps:
 
@@ -118,13 +118,13 @@ Once an upgrade or downgrade has been completed on-device, apps should call the 
 
 The API responses for the original purchase and upgrades/downgrades are as follows:
 
-#### Upgrades
+##### Upgrades
 
 After an upgrade has been completed on-device, responses to [**validate transaction** API](doc:roku-web-service#validate-transaction) calls made with the transaction IDs of the original base plan and the upgrade will result in the following:
 
 **Original base plan purchase**. The `cancelled` field is set to true (no renewal will therefore happen); the `expirationDate` field remains unchanged.
 
-#### JSON
+##### JSON
 
 ```json
 {
@@ -157,7 +157,7 @@ After an upgrade has been completed on-device, responses to [**validate transact
 }
 ```
 
-#### XML
+##### XML
 
 ```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -196,7 +196,7 @@ When a free trial _is_ offered with the upgrade subscription, the `purchase_stat
 
 **Upgrade plan purchase**. The `creditsApplied` field is set to the prorated balance from the base plan; the `expirationDate` is set to the applicable expiration date (for example, if a customer switched from a monthly to an annual plan, the expiration date would be set to one year later).
 
-#### JSON
+##### JSON
 
 ```json
 {
@@ -231,7 +231,7 @@ When a free trial _is_ offered with the upgrade subscription, the `purchase_stat
 }
 ```
 
-#### XML
+##### XML
 
 ```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -264,13 +264,13 @@ When a free trial _is_ offered with the upgrade subscription, the `purchase_stat
 </result>
 ```
 
-#### Downgrades
+##### Downgrades
 
 After a downgrade has been completed on-device, responses to [**validate transaction** API](doc:roku-web-service#validate-transaction) calls made with the transaction IDs of the original plan and the downgrade will result in the following:
 
 **Original plan purchase**. The `cancelled` field is set to true (no renewal will therefore happen); the `expirationDate` field remains unchanged.
 
-#### JSON
+##### JSON
 
 ```json
 {
@@ -303,7 +303,7 @@ After a downgrade has been completed on-device, responses to [**validate transac
 }
 ```
 
-#### XML
+##### XML
 
 ```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -338,7 +338,7 @@ After a downgrade has been completed on-device, responses to [**validate transac
 
 **Downgrade plan purchase**. The `expirationDate` is based on that of the original plan; the `total` field is set to 0.00 because there is no actual charge. On the expiration date, the customer will be charged for the renewal of the downgraded plan.
 
-#### JSON
+##### JSON
 
 ```json
 {
@@ -375,7 +375,7 @@ After a downgrade has been completed on-device, responses to [**validate transac
 
 Since the "downgrade" subscription will be activated sometime in the future (i.e., the expiration date of the original plan), `purchase_status` status of the downgrade is set `pending_active`. The status will be set to `valid` at the time of activation.
 
-#### XML
+##### XML
 
 ```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
@@ -424,7 +424,7 @@ For example, if a customer upgrades from a monthly to an annual subscription, th
 
 The following sample demonstrates an **UpgradeSale** notification:
 
-#### JSON
+##### JSON
 
 ```json
 {
@@ -448,7 +448,7 @@ The following sample demonstrates an **UpgradeSale** notification:
 }
 ```
 
-#### XML
+##### XML
 
 ```xml
 <result xmlns="http://api.roku.com/transaction" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">

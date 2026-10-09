@@ -16,6 +16,8 @@ Our goal is to encourage the success of partners on The Roku Channel with massiv
 
 If you’re interested in becoming a Roku Channel partner, please complete our [distribution inquiries](https://airtable.com/shrlPRfkLW3UWDGo1) form.
 
+After you are accepted as a partner, [set up your Roku account](doc:account-setup). The guide explains how to create the account, give your team access to the Roku Content Partner Portal, and enroll in payouts. You do not need to build an app to distribute on The Roku Channel.
+
 **Scale and distribution**
 
 * The Roku Channel now reaches ~145 million streamers in U.S. households (2025)

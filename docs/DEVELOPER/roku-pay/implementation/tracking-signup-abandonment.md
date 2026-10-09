@@ -31,7 +31,7 @@ The names of the signup events must include two elements:
 * **Page Number**. A unique page number that identifies the page's sequence within the sign-up flow.
 * **Page Type**.  A label that clearly describes the page's functionality.
 
-#### Syntax
+##### Syntax
 
 When firing the signup event, pass in `"Sign_Up|"` along with pipe-separated key-value pairs for the page number and page type.
 
@@ -43,7 +43,7 @@ You can use a hierarchal page numbering system to identify different pages in th
 
 `"Sign_Up"|pageNumber=\{_int_}.\{_int_}|pageType=\{_type_}`
 
-#### Examples
+##### Examples
 
 Developers should use the following syntax for naming signup events:
 
@@ -58,7 +58,7 @@ Developers should use the following syntax for naming signup events:
 "Sign_Up|pageNumber=6|pageType=sign_up_complete"
 ```
 
-#### Including form elements
+##### Including form elements
 
 Optionally, you can add form element data in the signup event to generate more granular feedback on your app's signup flow. To do this, append a key-value pair with the name of the field. For example, you could fire the following event when a user enters their email address on the sign-in page:
 
@@ -68,11 +68,11 @@ Optionally, you can add form element data in the signup event to generate more g
 
 If your app's signup flow is contained within a form that covers one or more pages, fire a signup event after each field in the form has been completed. When firing the signup event, include **Sign_Up|** and the name of the element as a key-value pair.
 
-#### Syntax
+##### Syntax
 
 `"Sign_Up"|field=\{_string_}`
 
-#### Examples
+##### Examples
 
 `"Sign_Up"|field=emailAddress`
 

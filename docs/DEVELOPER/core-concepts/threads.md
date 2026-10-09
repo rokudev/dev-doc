@@ -26,7 +26,7 @@ SceneGraph applications support these basic thread types:
 
 ## Thread limits
 
-RokuOS imposes a limit of 100 concurrent threads per running instance of an app. When the instance exceeds 100 threads, a “too many threads” error exception (&h29) is raised; if the app does not catch this exception, app operation is terminated, along with a corresponding stack trace
+Roku OS imposes a limit of 100 concurrent threads per running instance of an app. When the instance exceeds 100 threads, a “too many threads” error exception (&h29) is raised; if the app does not catch this exception, app operation is terminated, along with a corresponding stack trace
 
 In practice, developers should minimize the number of concurrent threads for better app performance.
 
@@ -72,7 +72,7 @@ Avoid excessive rendezvous to improve app performance. It is better to build an 
 
 Since Task nodes are owned by the Render thread, setting Task node fields from a Task thread  happens via rendezvous, and all observer callbacks on the fields are executed in the Render thread. The only case where observer callbacks are executed in a Task thread is if the observed field is in a node object owned by the Task thread.
 
-#### Render Thread
+##### Render Thread
 
 ```brightscript
 my_task = CreateObject("roSGNode", "MyTask")
@@ -82,7 +82,7 @@ my_task.my_field = "some value"
 my_task.ObserveField("my_field", "OnMyFieldChanged")
 ```
 
-#### Task Thread
+##### Task Thread
 
 ```brightscript
 ' setting fields from the Task thread WILL rendezvous

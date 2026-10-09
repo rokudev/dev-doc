@@ -87,7 +87,7 @@ Rotation of Posters is supported. On platforms that do not support OpenGL, only 
       <td>string</td>
       <td />
       <td>READ\_WRITE</td>
-      <td>Specifies the URI of the image file. Images included as part of the application package can be referenced using the pkg:/images prefix. Images included as part of the application package that are to be localized can be referenced using the pkg:/locale/images/ prefix (see <a href="/dev/docs/localization#localizing-graphical-images-in-the-application-package" title="Localizing Graphical Images in the Application Package">Localizing Graphical Images in the Application Package</a>)</td>
+      <td>Specifies the URI of the image file. Images included as part of the application package can be referenced using the pkg:/images prefix. Images included as part of the application package that are to be localized can be referenced using the pkg:/locale/images/ prefix (see <a href="https://developer.roku.com/dev/docs/localization#localizing-graphical-images-in-the-application-package" title="Localizing Graphical Images in the Application Package">Localizing Graphical Images in the Application Package</a>)</td>
     </tr>
     <tr>
       <td>width</td>
@@ -200,6 +200,13 @@ Rotation of Posters is supported. On platforms that do not support OpenGL, only 
       <td />
       <td>READ\_WRITE</td>
       <td>If muteAudioGuide is false, this string will be spoken when the poster is focused</td>
+    </tr>
+    <tr>
+      <td>effect<br /><br /><em>Available since Roku OS 16.0.</em></td>
+      <td>node</td>
+      <td>invalid</td>
+      <td>READ\_WRITE</td>
+      <td>References an <a href="https://developer.roku.com/dev/docs/effect" title="Effect">Effect</a> node that applies shader effects, such as rounded corners, borders, and gradients, to the poster</td>
     </tr>
   </tbody>
 </table>

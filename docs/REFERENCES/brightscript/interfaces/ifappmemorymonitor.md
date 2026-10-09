@@ -25,31 +25,31 @@ next:
 
 ### EnableMemoryWarningEvent(enable as Boolean) as Boolean
 
-#### Description
+##### Description
 
 Enables an app to be alerted when memory usage exceeds or falls below thresholds (currently 80%, 85%, 90%, 95% of the per-app limit). These thresholds may change in future releases. Notifications are throttled to prevent excessive events.
 
-#### Parameter
+##### Parameter
 
 | Name   | Type    | Description                                               |
 | :----- | :------ | :-------------------------------------------------------- |
 | enable | Boolean | A flag that enables or disables memory alerts on the app. |
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether memory alerts have been enabled.
 
 ### GetMemoryLimitPercent() as Int
 
-#### Description
+##### Description
 
 Returns the usage percentage of memory limit for the app.
 
-#### Return Values
+##### Return Values
 
 The usage percentage of memory limit for the app.
 
-#### Example
+##### Example
 
 ```brightscript
 m.port = CreateObject("roMessagePort")
@@ -85,11 +85,11 @@ end while
 
 _Available since [Roku OS 12.5](doc:release-notes#roku-os-125)_
 
-#### Description
+##### Description
 
 Returns the estimated kilobytes (Kb) of memory available for the app. This can be used to determine when to release memory when an app receives low-memory warnings.
 
-#### Return Value
+##### Return Value
 
 An integer indicating the estimated available memory remaining for the app or the available memory for the device, whichever is lower.
 
@@ -99,7 +99,7 @@ _Available since [Roku OS 13.0](doc:release-notes#roku-os-130)_
 
 **Description**
 
-Returns the amount of foreground and background memory the app may use and the maximum amount of memory that the RokuOS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
+Returns the amount of foreground and background memory the app may use and the maximum amount of memory that the Roku OS may allocate on behalf of the app (the memory that shows up in the app's heap memory statistics). This helps developers debug memory issues and find out the maximum available memory for scenarios such as when their app has been suspended and is in the background, is playing a video, and so on.
 
 **Return Value**
 
@@ -109,4 +109,4 @@ An roAssociativeArray that contains the following fields:
 | :----------------------- | :------ | :--------------------------------------------------------------------------------------------------------------------------- |
 | maxForegroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the foreground.                                       |
 | maxBackgroundMemory      | Integer | The maximum amount of memory that app could have when it is running in the background.                                       |
-| maxRokuManagedHeapMemory | Integer | The maximum amount of memory that the RokuOS may allocate on behalf of the app that shows up in the app's heap memory stats. |
+| maxRokuManagedHeapMemory | Integer | The maximum amount of memory that the Roku OS may allocate on behalf of the app that shows up in the app's heap memory stats. |

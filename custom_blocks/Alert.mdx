@@ -1,0 +1,129 @@
+---
+name: Alert
+---
+import React, { useState } from "react";
+export const AlertGlyph = ({ children }) => (<svg className="w-3.5 h-3.5 block" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    {children}
+  </svg>);
+export const InfoIcon = () => (<AlertGlyph>
+    <circle cx="8" cy="8" r="8" fill="currentColor"/>
+    <circle cx="8" cy="4.25" r="0.9" fill="#ffffff"/>
+    <rect x="7.1" y="6.25" width="1.8" height="5.2" rx="0.6" fill="#ffffff"/>
+  </AlertGlyph>);
+export const WarningIcon = () => (<AlertGlyph>
+    <circle cx="8" cy="8" r="8" fill="currentColor"/>
+    <rect x="7.1" y="3.75" width="1.8" height="5.2" rx="0.6" fill="#ffffff"/>
+    <circle cx="8" cy="11.25" r="0.9" fill="#ffffff"/>
+  </AlertGlyph>);
+export const ErrorIcon = () => (<AlertGlyph>
+    <path d="M7.134 1.804a1 1 0 0 1 1.732 0l6.268 10.864c.385.667-.096 1.502-.866 1.502H1.732c-.77 0-1.251-.835-.866-1.502L7.134 1.804z" fill="currentColor"/>
+    <rect x="7.1" y="5.5" width="1.8" height="4.5" rx="0.6" fill="#ffffff"/>
+    <circle cx="8" cy="11.8" r="0.8" fill="#ffffff"/>
+  </AlertGlyph>);
+export const CheckIcon = () => (<AlertGlyph>
+    <circle cx="8" cy="8" r="8" fill="currentColor"/>
+    <path d="M4.5 8.2L6.8 10.5L11.5 5.5" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </AlertGlyph>);
+export const DismissIcon = () => (<svg className="w-[18px] h-[18px] block" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.5 4.5L13.5 13.5M13.5 4.5L4.5 13.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+  </svg>);
+export const configMap = {
+    info: {
+        role: "status",
+        ariaLive: "polite",
+        label: "Information",
+        backgroundColor: "bg-[#e5f4ff]",
+        border: "border-[#a9dbff]",
+        text: "text-[#095286]",
+        icon: <InfoIcon />,
+    },
+    warning: {
+        role: "status",
+        ariaLive: "polite",
+        label: "Warning",
+        backgroundColor: "bg-[#fff1e0]",
+        border: "border-[#ffd0a9]",
+        text: "text-[#8c4300]",
+        icon: <WarningIcon />,
+    },
+    error: {
+        role: "alert",
+        ariaLive: "assertive",
+        label: "Error",
+        backgroundColor: "bg-[#fff0f1]",
+        border: "border-[#ffccd1]",
+        text: "text-[#990022]",
+        icon: <ErrorIcon />,
+    },
+    success: {
+        role: "status",
+        ariaLive: "polite",
+        label: "Success",
+        backgroundColor: "bg-[#e6f7ed]",
+        border: "border-[#b2ebcc]",
+        text: "text-[#006633]",
+        icon: <CheckIcon />,
+    },
+    note: {
+        role: "status",
+        ariaLive: "polite",
+        label: "Note",
+        backgroundColor: "bg-[#e8dbff]",
+        border: "border-[#d5bfff]",
+        text: "text-[#5111a8]",
+        icon: <CheckIcon />,
+    },
+};
+export const Alert = ({ type = "info", title, children, closable = true, className = "", }) => {
+    const [isVisible, setIsVisible] = useState(true);
+    if (!isVisible)
+        return null;
+    const config = configMap[type] || configMap.info;
+    return (<div className={`flex items-start gap-3 pt-3.5 px-4.5 mb-4 border rounded-[4px] text-left transition-all box-border ${config.backgroundColor} ${config.border} ${config.text} ${className}`} role={config.role} aria-live={config.ariaLive} aria-atomic="true">
+      {/* Left Icon */}
+      <div className="flex items-center justify-center w-3.5 h-3.5 mt-0.5 shrink-0 text-current" aria-hidden="true">
+        {config.icon}
+      </div>
+
+      {/* Content Block (Title & Subtitle) */}
+      <div className="flex-1 flex flex-col gap-1 min-w-0">
+        <div className="text-sm font-bold leading-tight text-current">
+          {title}
+        </div>
+        {children && (<div className="text-[13px] leading-snug text-current [&_p]:m-0 [&_p]:p-0">
+            {children}
+          </div>)}
+      </div>
+
+      {/* Close / Dismiss Button */}
+      {closable && (<button type="button" onClick={() => setIsVisible(false)} className="flex items-center justify-center w-[18px] h-[18px] p-0 m-0 mt-px shrink-0 bg-transparent border-0 text-current hover:opacity-70 transition-opacity rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-current" aria-label={`Dismiss ${config.label} alert`}>
+          <DismissIcon />
+        </button>)}
+    </div>);
+};
+
+
+{/* Example Usage */}
+<Alert type="info" title="Info Alert">
+  Please review the latest certification criteria before submitting your channel.
+</Alert>
+
+<Alert type="warning" title="Warning Alert">
+  This action is irreversible. Make sure to back up your data.
+</Alert>
+
+<Alert type="error" title="Error Alert">
+  An error occurred while processing your request. Please try again.
+</Alert>
+
+<Alert type="success" title="Success Alert">
+  Your changes have been saved successfully.
+</Alert>
+
+<Alert type="note" title="Note Alert">
+  Discover new features and tools available in the developer portal.
+</Alert>
+
+<Alert type="info" title="Persistent Alert" closable={false}>
+  This alert cannot be closed by the user.
+</Alert>

@@ -31,13 +31,13 @@ The roAnimatedImage component downloads the entire resource asynchronously befor
 
 ### SetContent(aa as Object) as Void
 
-#### Description
+##### Description
 
 Initializes the animated image from an associative array of properties. Loading occurs asynchronously; therefore, use **roAnimatedImageEvent** to determine when loading is complete. Calling **SetContent()** again re-initializes the animated image with the new properties. If an asynchronous **SetContent()** call is still in progress, the new call fails.
 
 After you call **SetContent()**, the component posts an [**roAnimatedImageEvent**](doc: roanimatedimageevent) to the message port when loading finishes. Call [**GetMessage()**]( doc:roanimatedimageevent#getmessage)) on the event to check the result, which may be "ready" on success or "failed". Call [**GetInfo()**](doc:roanimatedimageevent##getinfo-as-object) on the event to get an associative array whose **id** field matches [**GetID()**](doc:#getid-as-string); on failure, its **error** field may contain additional detail. Set the message port with [**SetMessagePort()**](doc:#setmessageportport-as-object--as-void) before calling **SetContent()**.
 
-#### Parameter
+##### Parameter
 
 | Name | Type   | Description                                                  |
 | :--- | :----- | :----------------------------------------------------------- |
@@ -53,51 +53,51 @@ After you call **SetContent()**, the component posts an [**roAnimatedImageEvent*
 
 ### GetID() as String
 
-#### Description
+##### Description
 
 Returns the unique ID of the animated image. This is the same ID returned in the **id** field of the associative array from **roAnimatedImageEvent.GetInfo()**.
 
-#### Return Value
+##### Return Value
 
 The unique ID of the animated image.
 
 ### IsValid() as Boolean
 
-#### Description
+##### Description
 
 Indicates whether the animated image loaded successfully.
 
-#### Return Value
+##### Return Value
 
 A flag that indicates whether the animation file loaded successfully.  This is set to **true** only after an **roAnimatedImageEvent** with the message **ready** is received, which indicates that the file loaded successfully; otherwise this is **false**.
 
 ### GetWidth() as Int
 
-#### Description
+##### Description
 
 Returns the width of the animated image, in pixels.
 
-#### Return Value
+##### Return Value
 
 The width of the animated image, in pixels.
 
 ### GetHeight() as Int
 
-#### Description
+##### Description
 
 Returns the height of the animated image, in pixels.
 
-#### Return Value
+##### Return Value
 
 The height of the animated image, in pixels.
 
 ### GetState() as String
 
-#### Description
+##### Description
 
 Returns the current playback state ("init", "first", "decode", "stop", or "error").
 
-#### Return Value
+##### Return Value
 
 The current playback state, which may be one of the following values:
 
@@ -109,27 +109,27 @@ The current playback state, which may be one of the following values:
 
 ### SetTargetState(state as String) as Boolean
 
-#### Description
+##### Description
 
 Sets the desired playback state: "play" (start or resume), "pause", "loop" (play continuously), or "rewind".
 
-#### Parameter
+##### Parameter
 
 | Name  | Type   | Description                                                  |
 | :---- | :----- | :----------------------------------------------------------- |
 | state | String | The desired playback state: <br /><br />- "play" (start or resume)<br />- "pause"<br />- "loop" (play continuously)<br />- "rewind" |
 
-#### Return Value
+##### Return Value
 
 A flag inidcated whether the requested state was accepted.
 
 ### SetMessagePort(port as Object) as Void
 
-#### Description
+##### Description
 
 Sets the message port that receives asynchronous **roAnimatedImageEvent** events.
 
-#### Parameter
+##### Parameter
 
 | Name | Type   | Description                                                  |
 | :--- | :----- | :----------------------------------------------------------- |
@@ -137,21 +137,21 @@ Sets the message port that receives asynchronous **roAnimatedImageEvent** events
 
 ### GetMessagePort() as Object
 
-#### Description
+##### Description
 
 Returns the message port currently set on the animated image.
 
-#### Return Value
+##### Return Value
 
 The current message port ([roMessagePort](doc: romessageport)) ).
 
 ### Update(elapsedMicroseconds as Int) as Void
 
-#### Description
+##### Description
 
 Advances the animation by the elapsed time. This method applies to manual mode only (when the **animationStrategy** property is set to "manual"). You can obtain the elapsed time from the [**roTimeSpan** component](doc:rotimespan), for example `time.TotalMicroseconds()`.
 
-#### Parameter
+##### Parameter
 
 | Name                | Type | Description                                                  |
 | :------------------ | :--- | :----------------------------------------------------------- |
@@ -161,7 +161,7 @@ Advances the animation by the elapsed time. This method applies to manual mode o
 
 *Available since Roku OS 15.3*
 
-#### Description
+##### Description
 
 Sets the pretranslation for draw, rotate, and scale operations. The pretranslation is applied before rotation and scaling, effectively specifying an offset from the origin of the image that becomes the center of rotation and scaling.
 
@@ -169,7 +169,7 @@ This function is normally used to specify the center of the image so that rotati
 
 The default pretranslation is (0, 0), which preserves the existing behavior of rotating about the top-left corner.
 
-#### Parameter
+##### Parameter
 
 | Name | Type | Description                                                  |
 | :--- | :--- | :----------------------------------------------------------- |
@@ -180,11 +180,11 @@ The default pretranslation is (0, 0), which preserves the existing behavior of r
 
 *Available since Roku OS 15.3*
 
-#### Description
+##### Description
 
 Returns the x component of the pretranslation value.
 
-#### Return Value
+##### Return Value
 
 The x component of the pretranslation value.
 
@@ -192,11 +192,11 @@ The x component of the pretranslation value.
 
 *Available since Roku OS 15.3*
 
-#### Description
+##### Description
 
 Returns the y component of the pretranslation value.
 
-#### Return Value
+##### Return Value
 
 The y component of the pretranslation value.
 

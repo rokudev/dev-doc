@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+> This page applies to publishers who build Roku apps. If you distribute content on The Roku Channel, see the [Roku Content Partner Portal](doc:roku-content-partner-portal).
+
 <br />
 
 ![roku815px - channelstore1](https://image.roku.com/ZHZscHItMTc2/channelstore1.png "channelstore1")

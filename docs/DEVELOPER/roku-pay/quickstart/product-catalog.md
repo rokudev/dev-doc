@@ -71,7 +71,6 @@ Scheduling limited-time offers instead of editing base offers is a more robust m
 
 Limited-time offers (active or scheduled) created in Catalog 1.0 cannot be updated in Catalog 2.0. The limited-time offers continue to work as expected in Catalog 2.0; however, they are not editable and must run for their full duration before you can set up another offer for the same purchase option SKU. Limited-time offers created and scheduled in Catalog 2.0 are editable.
 
-
 **Purchase options for deleted products are in the Purchases>Ended tab**
 
 The purchase options for products that were deleted before the migration are listed in the **Purchase Options>Ended** tab. Existing subscriptions associated with this purchase options will continue to renew. if you no longer want any subscribers to access the product via the given purchase option, you need to [archive the purchase option](https://roku.atlassian.net/wiki/spaces/DR/pages/148500544/Creating+the+product+catalog#Creatingtheproductcatalog-archive).
@@ -112,7 +111,7 @@ To create a new product, follow these steps:
 
 | Setting                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Product name              | Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the <a href="/dev/docs/channel-publishing-guide#channel-properties">Channel Properties window</a>. <br /><br />To provide additional localized product names, click <strong>Add product name in another language</strong>, select a locale, and then enter the localized product name. You can provide one product name per locale. |
+| Product name              | Select a locale and then enter a unique product name. This name is used in Roku Pay reports, and it is displayed to customers only for product bundles. The list of available locales is based on the languages selected in the <a href="https://developer.roku.com/dev/docs/channel-publishing-guide#channel-properties">Channel Properties window</a>. <br /><br />To provide additional localized product names, click <strong>Add product name in another language</strong>, select a locale, and then enter the localized product name. You can provide one product name per locale. |
 | Product Id                | The internal code for your product.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Category                  | Select one of the following categories:<br /><br /><ul><li>Video content</li><li>Audio content</li><li>Game token</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Internet required         | Select 'Yes' for video and audio apps.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -123,7 +122,7 @@ To create a new product, follow these steps:
 
 ### Creating purchase options
 
-Once you have created a product, you create one or more purchase options for a single product or a bundle of products. A purchase option specifies the product type (monthly, quarterly, or annual subscription, one-time purchase, or bundle), price, and any free trial or introductory price offers.
+Once you have created a product, you create one or more purchase options for a single product or a bundle of products. A purchase option specifies the product type (monthly, quarterly \[requires [additional API work\]](doc:add-ons-integration#appendix-a-add-on-api-reference), or annual subscription, one-time purchase, or bundle), price, and any free trial or introductory price offers.
 
 To create a purchase option for a product, follow these steps:
 
@@ -176,7 +175,7 @@ To create a purchase option for a product, follow these steps:
       </td>
 
       <td>
-        Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quartely billing requires [additional API work](doc:add-ons-integration#appendix-a-add-on-api-reference).
+        Select the billing period to be used for the subscription product: <strong>monthly</strong>, <strong>quarterly</strong>, or <strong>annual</strong>. Using quarterly billing requires <a href="https://developer.roku.com/dev/docs/add-ons-integration#appendix-a-add-on-api-reference">additional API work</a>.
       </td>
     </tr>
 
@@ -191,13 +190,13 @@ To create a purchase option for a product, follow these steps:
         - One to three-digit tier numbers are used for 99-cent pricing. Subtract 1 cent from a tier to get the corresponding price. For example, Tier 1 is 99 cents, Tier 2 is $1.99, Tier 10 is $9.99, Tier 100 is $99.99 and so on. The highest tier is 400 ($399.99).
         - Four-digit tier numbers are used for 49-cent pricing. Append 49 cents to the last digit or last two digits in the tier to get the corresponding price. For example, Tier 1000 is 49 cents, Tier 1001 is $1.49, Tier 1010 is $10.49, Tier 1020 is $20.49, and so on. The highest tier is 1030 ($30.49).
 
-        See the [Price tier reference guide](doc:price-tiers) for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:&#x20;
+        See the <a href="https://developer.roku.com/dev/docs/price-tiers">Price tier reference guide</a> for the complete list of price tiers for each Roku Streaming Store.<br /><br />A chart displays the price, in the appropriate local currency, for each Roku Streaming Store where the product will be available:&#x20;
 
         - The **Currency code** is the three-letter ISO-4217 code of the currency in which the customer will be billed.
         - The **Purchase price** reflects the amount to be paid by the customer. The purchase price for EU Streaming Store countries includes VAT. Proceeds are based on pre-tax (net) prices.
         - The **Net price** field displays the pre-tax price.  The **Proceeds** field displays the amount that you receive from Roku for the sale of the product. Based on exchange rate fluctuations, the proceeds in one Channel Store may not equal the amount to be received in another.
 
-        If you are creating a <a href="/dev/docs/tvod-app-catalog">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. <br /><br />**Certification requirement**: SVOD apps must provide a 30-day notice to existing customers before changing the price of their service.<br /><br />If you want certain products to only be available in specific countries, create in-app products for each country and filter out the product by the country in the app business logic. Specifically, you can call the **getUserRegionData** command to determine the country associated with the user's Roku account, and then implement business logic to filter the results of the ChannelStore **getCatalog** command to only display products that should be available for that country. In this case, the publisher is responsible for handling currency coversions.
+        If you are creating a <a href="https://developer.roku.com/dev/docs/tvod-app-catalog">TVOD-exclusive app</a>, select any price tier. The price passed in the <a href="https://developer.roku.com/dev/docs/channelstore">ChannelStore APIs</a> overrides the price corresponding to the selected price tier. <br /><br />**Certification requirement**: SVOD apps must provide a 30-day notice to existing customers before changing the price of their service.<br /><br />If you want certain products to only be available in specific countries, create in-app products for each country and filter out the product by the country in the app business logic. Specifically, you can call the **getUserRegionData** command to determine the country associated with the user's Roku account, and then implement business logic to filter the results of the ChannelStore **getCatalog** command to only display products that should be available for that country. In this case, the publisher is responsible for handling currency coversions.
       </td>
     </tr>
 
@@ -413,6 +412,8 @@ To create a cancellation offer, follow these steps:
 
 10. if you are publishing the cancellation offer, click Yes to confirm its publishing. If you are using offer variations, the confirmation dialog includes the variation ID, offer ID, and price for each one.
 
+> Once your cancellation offers are live, use the [Cancellation Offers Report](doc:cancellation-offers-report) to see how many viewers enter the cancellation flow, how your offers perform, and which offers get redeemed by plan and currency.
+
 ### Scheduling a price change for a purchase option
 
 You can schedule a price increase/decrease of a purchase option. The price change may be applied to either new subscribers or existing subscribers. If you increase the price for existing subscribers, you must give them notice at least 7 days prior but no more than 30 days of the day the increase takes effect. The notice should provide a simple and easy method to cancel.
@@ -439,7 +440,7 @@ To schedule a price change for a purchase option, follow these steps:
 
    a. For new subscribers, the earliest that a price change can go into effect is midnight the next day.
 
-   b. For existing subscribers, the selected date must be 15 days in advance of the listed date. 
+   b. For existing subscribers, the selected date must be 15 days in advance of the listed date.
 
 6. Click **Review and publish** to review the price change before publishing it.
 
@@ -478,5 +479,3 @@ To test in-app product purchases on a beta app, the app must:
 - be configured with subscription and/or one-time purchase monetization methods.
 - be enabled for billing testing.
 - have test users associated with it (the test users' Roku accounts must be linked to the Roku devices being used for testing).
-
-<br />

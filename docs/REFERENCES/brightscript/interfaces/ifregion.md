@@ -23,61 +23,61 @@ next:
 
 ### GetBitmap() as Object
 
-#### Description
+##### Description
 
 Returns the roBitmap object of the bitmap to which this region refers. A region is always a section of a bitmap.
 
-#### Return Value
+##### Return Value
 
 An roBitmap object of the bitmap. 
 
 ### GetX() as Integer
 
-#### Description
+##### Description
 
 Returns the x coordinate of the region in its bitmap.
 
-#### Return Value
+##### Return Value
 
 The x coordinate value
 
 ### GetY() as Integer
 
-#### Description
+##### Description
 
 Returns the y coordinate of the region in its bitmap.
 
-#### Return Value
+##### Return Value
 
 The y coordinate value
 
 ### GetWidth() as Integer
 
-#### Description
+##### Description
 
 Returns the width of the region.
 
-#### Return Value
+##### Return Value
 
 The width of the region.
 
 ### GetHeight() as Integer
 
-#### Description
+##### Description
 
 Returns the height of the region.
 
-#### Return Value
+##### Return Value
 
 The height of the region.
 
 ### Offset(x as Dynamic, y as Dynamic, w as Dynamic, h as Dynamic) as Void
 
-#### Description
+##### Description
 
 Adds the passed parameters x,y, w, and h to the values of those roRegion fields. Respects the wrap setting when adjusting the fields by the offsets.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                     |
 | ---- | ------- | ------------------------------- |
@@ -88,11 +88,11 @@ Adds the passed parameters x,y, w, and h to the values of those roRegion fields.
 
 ### Set(srcRegion as Object) as Void
 
-#### Description
+##### Description
 
 Initializes the fields of this region to be the same as the values of the fields in the srcRegion.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description         |
 | --------- | ------ | ------------------- |
@@ -100,21 +100,21 @@ Initializes the fields of this region to be the same as the values of the fields
 
 ### Copy() as Object
 
-#### Description
+##### Description
 
 Returns a newly created copy of the region as a new [roRegion](doc:roregion) object.
 
-#### Return Value
+##### Return Value
 
 An roRegion Object.
 
 ### SetWrap(wrap as Boolean) as Void
 
-#### Description
+##### Description
 
 Wraps any part of a region that extends beyond the bounds of its bitmap to the other side of the bitmap and renders it there.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                                                  |
 | ---- | ------- | ------------------------------------------------------------ |
@@ -122,21 +122,21 @@ Wraps any part of a region that extends beyond the bounds of its bitmap to the o
 
 ### GetWrap() as Boolean
 
-#### Description
+##### Description
 
 Returns if the region can be wrapped.
 
-#### Parameters
+##### Parameters
 
 A flag indicating whether wrapping of the region is enabled. 
 
 ### SetTime(time as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the duration of each frame of any animated sprite that uses this region.
 
-#### Parameters
+##### Parameters
 
 A flag indicating whether wrapping of region is enabled. 
 
@@ -152,11 +152,11 @@ A flag indicating whether wrapping of region is enabled.
 
 ### SetPretranslation(x as Integer, y as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the pre-translation for DrawObject, DrawRotatedObject, and DrawScaledObject.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                  |
 | ---- | ------- | ---------------------------- |
@@ -165,31 +165,31 @@ Sets the pre-translation for DrawObject, DrawRotatedObject, and DrawScaledObject
 
 ### GetPretranslationX() as Integer
 
-#### Description
+##### Description
 
 Returns the pre-translation x value. 
 
-#### Return Value
+##### Return Value
 
 The pre-translation x value.
 
 ### GetPretranslationY() as Integer
 
-#### Description
+##### Description
 
 Returns the pre-translation y value. 
 
-#### Return Value
+##### Return Value
 
 The pre-translation y value.
 
 ### SetScaleMode(mode as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the scaling mode used for DrawScaledObject.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -213,11 +213,11 @@ Sets the scaling mode used for DrawScaledObject.
 
 ### GetScaleMode() as Integer
 
-#### Description
+##### Description
 
 Returns the scaling mode.
 
-#### Return Value
+##### Return Value
 
 The scaling mode, which may be one of the following values:
 
@@ -226,11 +226,11 @@ The scaling mode, which may be one of the following values:
 
 ### SetCollisionType(collisiontype as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the type of region to be used for collision tests with this sprite.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -254,11 +254,11 @@ Sets the type of region to be used for collision tests with this sprite.
 
 ### GetCollisionType() as Integer
 
-#### Description
+##### Description
 
 Returns the collision type.
 
-#### Return Value
+##### Return Value
 
 The collision type, which may be one of the following values:
 
@@ -268,11 +268,11 @@ The collision type, which may be one of the following values:
 
 ### SetCollisionRectangle(xOffset as Integer, yOffset as Integer, width as Integer, height as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the collision rectangle used for type-1 collision tests. The upper left corner of the rectangle is the (x,y) position of the sprite plus the specified offsets. The width and height specify the size of the rectangle.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type    | Description                                   |
 | ------- | ------- | --------------------------------------------- |
@@ -283,8 +283,8 @@ Sets the collision rectangle used for type-1 collision tests. The upper left cor
 
 ### SetCollisionCircle(xOffset as Integer, yOffset as Integer, Radius as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the collision circle used for type-2 collision tests. The center of the circle is the  (x,y) position of the sprite plus the specified offsets. The radius specifies the size of the circle.
 
-#### Parameters
+##### Parameters

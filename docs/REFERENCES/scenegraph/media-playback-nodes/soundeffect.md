@@ -106,9 +106,9 @@ A sample demonstrating how to use the SoundEffect node can be found here: [Simpl
 </tr>
 <tr>
 <td class="short-line">notready</td>
-<td class="long-line">The sound file is not on the device. This is set in response to the control field being set to "play".<br><br>For local WAV files included in a package file, it will be occur if the path to the file is not correct, or if the file is not a valid WAV file.<br><br>For network-accessed WAV files, this indicates one of these three conditions is true:<br><br><ul>
+<td class="long-line">The sound file is not on the device. This is set in response to the control field being set to "play".<br><br>For local WAV files included in a package file, it will occur if the path to the file is not correct, or if the file is not a valid WAV file.<br><br>For network-accessed WAV files, this indicates one of these three conditions is true:<br><br><ul>
 <li>The file has been requested, but is not finished downloading. In this case, the <code>loadStatus</code> field will be set to "loading".</li>
-<li>The file request has completed, but the URL is incorrect or the downloaded file is not a valid WAV filed. In this case, the <code>loadStatus</code> field will be set to "failed"</li>
+<li>The file request has completed, but the URL is incorrect or the downloaded file is not a valid WAV file. In this case, the <code>loadStatus</code> field will be set to "failed"</li>
 <li>The file has previously been downloaded, but has been flushed from the LRU cache. In this case, the <code>loadStatus</code> field will be set to "flushed".</li>
 </ul></td>
 </tr>

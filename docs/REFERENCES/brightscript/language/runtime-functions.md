@@ -57,11 +57,7 @@ through an object if given one.
 
 ## Run(filename as String \[ , Args…\]) As dynamic
 
->  This function is deprecated. 
-
 ## Run(filenamearray as Object \[ , Args…\]) As dynamic
-
-> This function is deprecated. 
 
 The run command will run a script from a script. Args may be passed to
 the scripts Main() function, and the called script may return

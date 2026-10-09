@@ -32,7 +32,7 @@ The default appearance of a Keyboard node is very transparent, allowing the keyb
 | textEditBox       | TextEditBox node | system default | READ_ONLY         | This provides access to the Keyboard node internal TextEditBox node so that its appearance can be modified. You should not set this field, but you can set the fields of the TextEditBox node (such as, myKeyboard.textEditBox.textColor = "0xFF0000FF") |
 | showTextEditBox   | boolean          | true           | READ_WRITE        | Specifies whether or not the Keyboard node internal TextEditBox node is displayed. In most cases, it is desirable to display the TextEditBox node so that the user can see the string as it is entered. In some cases though, you might want to show only the keyboard part of the Keyboard node. In those cases, the text field of the node will still contain the string entered by the user, so it can displayed in some different manner |
 
-#### Keyboard Bitmap Templates
+##### Keyboard Bitmap Templates
 
 You can use the following bitmap templates to design your own keyboard background artwork.  These templates have opaque white lines that show the key outlines with the rest of the images fully transparent. Looking at the files in some image viewers that do not support transparency will result in the images looking all white.
 

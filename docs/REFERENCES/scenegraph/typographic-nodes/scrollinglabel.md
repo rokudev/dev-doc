@@ -18,7 +18,7 @@ The ScrollingLabel node class provides an automatic way to make a string scroll 
 
 The ScrollingLabel node class uses the horizAlign and vertAlign fields to allow you to position the rendered text relative to a specified bounding rectangle.
 
-#### Horizontal Alignment
+##### Horizontal Alignment
 
 The horizAlign field allows you to position text horizontally relative to the maximum width of the label as specified by the maxWidth field.
 
@@ -30,7 +30,7 @@ There are three possible values for the horizAlign field:
 
 * **right**: The right edge of each line of text is positioned at x-coordinate position corresponding to the computed width of the ScrollingLabel node's local coordinate system.
 
-#### Vertical Alignment
+##### Vertical Alignment
 
 The vertAlign field allows you to position text vertically relative to the computed height of the label. The computed height is determined in one of two ways:
 
@@ -53,7 +53,7 @@ There are three possible values for the vertAlign field:
 | color       | color         | 0xddddddff     | READ_WRITE        | Specifies the text color                                                                                                                                                                                                                                                                                             |
 | font        | Font          | system default | READ_WRITE        | Specifies the Font node to be used                                                                                                                                                                                                                                                                                   |
 | maxWidth    | float         | 500            | READ_WRITE        | Specifies the maximum width of the rendered text. If the rendered text exceeds the maximum width, the scrolling behavior is automatically triggered                                                                                                                                                                  |
-| height      | float         | 0              | READ_WRITE        | Specifies the height of the label. If set to zero, the actual height is determined by the value of the numLines field if it is greater than zero. See [Vertical Alignment](#vertical-alignment)                                                                                                                      |
+| height      | float         | 0              | READ_WRITE        | Specifies the height of the label. If set to zero, the actual height is determined by the font's line height, since ScrollingLabel always renders a single line of text. See [Vertical Alignment](#vertical-alignment)                                                                                                                      |
 | scrollSpeed | float         | 100            | READ_WRITE        | Specifies the horizontal scrolling speed in pixels per second                                                                                                                                                                                                                                                        |
 | repeatCount | float         | -1             | READ_WRITE        | If set to the default value of -1, the text scrolling behavior repeats continuously. If set to zero, the text will remain ellipsized and never scroll. If set to a value greater than zero, the text will scroll the specified number of times, at the end of which the text is rendered with an ellipsis at the end |
 | horizAlign  | option string | left           | READ_WRITE        | See [Horizontal Alignment](#horizontal-alignment)                                                                                                                                                                                                                                                                    |

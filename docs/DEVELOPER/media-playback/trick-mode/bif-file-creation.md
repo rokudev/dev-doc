@@ -75,7 +75,7 @@ You can also type `--help` after dragging the biftool executable, and the termin
 
 We recommend generating two `.bif` archives for each piece of content, one for SD and one for HD. Roku devices automatically select which version will be used **depending on the user UI.** That is why it is important to generate HD `.bif` archives even if the content is SD. If there is no HD `.bif` available, the player will fallback to using the SD `.bif`.
 
-#### Example:
+##### Example:
 
 ```bash
 $ mkdir abc-sd abc-hd
@@ -176,7 +176,7 @@ This specification assumes that all values are stored little-endian.
 
 All multibyte integers are stored in little-endian format. That is, the first byte is the least significant byte and the last byte is the most significant.
 
-#### Magic number
+##### Magic number
 
 This is a file identifier. It contains enough information to identify the file type uniquely.
 
@@ -184,7 +184,7 @@ This is a file identifier. It contains enough information to identify the file t
 | :---- | :----- | :----- | :----- | :----- | :----- | :----- | :----- | :----- |
 | value | `0x89` | `0x42` | `0x49` | `0x46` | `0x0d` | `0x0a` | `0x1a` | `0x0a` |
 
-#### Version
+##### Version
 
 This space is reserved for a revision number. The current specification is file format version 0. The value should be incremented for non-backward-compatible revisions of this document.
 
@@ -192,7 +192,7 @@ This space is reserved for a revision number. The current specification is file 
 | :---- | :-------- |
 | value | Version   |
 
-#### Number of BIF images
+##### Number of BIF images
 
 This is an unsigned 32-bit value (N) that represents the number of BIF images in the file. The number of entries in the index will be N+1, including the end-of-data entry.
 
@@ -200,7 +200,7 @@ This is an unsigned 32-bit value (N) that represents the number of BIF images in
 | :---- | :----------------------- |
 | value | Number of BIF images (N) |
 
-#### Framewise separation
+##### Framewise separation
 
 This specifies the denomination of the frame timestamp values. In order to obtain the "real" timestamp (in milliseconds) of a frame, this value is multiplied by the timestamp entry in the BIF index. If this value is 0, the timestamp multiplier shall be 1000 milliseconds.
 
@@ -208,7 +208,7 @@ This specifies the denomination of the frame timestamp values. In order to obtai
 | :---- | :------------------------------------- |
 | value | Timestamp Multiplier (in milliseconds) |
 
-#### Reserved
+##### Reserved
 
 These bytes are reserved for future expansion. They shall be 0.
 
@@ -216,7 +216,7 @@ These bytes are reserved for future expansion. They shall be 0.
 | :---- | :------------ |
 | value | 0x00 / / 0x00 |
 
-#### BIF index
+##### BIF index
 
 This space is used for the BIF index entries. There are N+1 entries. Each entry contains two unsigned 32-bit values.
 
@@ -233,7 +233,7 @@ Because the size of each BIF is determined by subtracting its offset from the of
 
 The absolute timstamps of the BIF captures can be obtained by multiplying the frame timestamp by the timestamp multiplier.
 
-#### Data section
+##### Data section
 
 This section contains the BIF images. It begins after the index, though it is not necessary that the first image appear immediately after the index. Each image in the data section must begin at the offset specified in the BIF index.
 

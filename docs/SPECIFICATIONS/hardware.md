@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Roku has a wide assortment of hardware products, including streaming players and smart TVs. This document provides key specifications for these products that can be considered when developing apps on the Roku platform.
+Roku has a wide assortment of hardware products, including streaming players and smart TVs. This document provides key specifications for these products that can be considered when developing apps for the Roku platform or choosing encoding profiles for content that plays on Roku devices.
 
 This spec first groups the hardware products by their production status:
 

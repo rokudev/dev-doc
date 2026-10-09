@@ -64,7 +64,7 @@ For content metadata to be added to the Roku Search master database, the search 
 > By starting with a test feed, you can make sure that the search feed integration works end-to-end with all the different content types in your catalog. You can then use the small feed as a template for adding the rest of your catalog to the feed.  
 > You can use the sample feeds in the [Search Feed specification](doc:search-feed) as templates for adding entries to your feed. The sample feeds adhere to the feed spec and pass validation.
 
-#### Third-party support for integrating Roku Search
+##### Third-party support for integrating Roku Search
 
 Apps can work with third-party vendors such as [Universal Search and Discovery](https://universalsearch.io/get-started) (USAND) or [Instant TV App](https://www.instanttvchannel.com/roku/search-feed) to onboard their content feed into Roku Search. These services provide outsourced feed ingestion and metadata delivery services for the Roku platform.
 
@@ -165,7 +165,7 @@ Once you have validated your search feed, you can submit your feed following the
     </tr>
     <tr>
       <td>Feed URL</td>
-      <td>Enter the URL where your search feed is hosted. The search feed is a JSON file with content metadata from one or more sources. See the <a href="/dev/docs/search-feed"><strong>Roku Search feed</strong></a> specification for how to create your feed.<br /><br />Optionally, you can protect your search feed with basic HTTP authentication and provide the username and password credentials. If your search feed uses basic HTTP authentication, select <strong>Basic Authentication</strong> from the <strong>Feed Authentication Type</strong> field, and then enter the <strong>Username</strong> and <strong>Password</strong> for the feed.</td>
+      <td>Enter the URL where your search feed is hosted. The search feed is a JSON file with content metadata from one or more sources. See the <a href="https://developer.roku.com/dev/docs/search-feed"><strong>Roku Search feed</strong></a> specification for how to create your feed.<br /><br />Optionally, you can protect your search feed with basic HTTP authentication and provide the username and password credentials. If your search feed uses basic HTTP authentication, select <strong>Basic Authentication</strong> from the <strong>Feed Authentication Type</strong> field, and then enter the <strong>Username</strong> and <strong>Password</strong> for the feed.</td>
     </tr>
     <tr>
       <td>Provider list logo</td>
@@ -243,7 +243,7 @@ Before submitting your search feed for review, you need to test your app's [deep
    > * The auto-created Search beta apps do count towards the limit of 10 beta apps per developer account.
    > * A developer account may have a maximum of four auto-created beta apps.
    > * The auto-created beta apps cannot be deleted (they are automatically removed 120 days after being created).
-   > * If a user on your team cannot access to the auto-created beta app, manually grant them access via the [User Management page in the Developer Dashboard](https://developer.roku.com/user/access).
+   > * If a user on your team cannot access the auto-created beta app, manually grant them access via the [User Management page in the Developer Dashboard](https://developer.roku.com/user/access).
    >
    > **Keeping the Search beta app synced with the production app**
    >
@@ -319,13 +319,13 @@ SVOD and TVE apps must [send authentication events](doc:prioritizing-authenticat
 
 ### Updating search feeds
 
-#### Metadata updates
+##### Metadata updates
 
 If you need to update the URL, logos, or validation email for your feed, click the more (...) icon in the upper right-hand corner of the **Test & Submit** page and make changes.
 
 <Image alt="roku600px - feed-submission-checklist" border={false} src="https://image.roku.com/ZHZscHItMTc2/edit-feed-option.png" />
 
-#### Feed updates
+##### Feed updates
 
 You can upload changes to your search feed and resubmit your feed to update Roku Search with your current content (changes are not processed unless you resubmit your feed in the Developer Dashboard). Search feed updates may take up to 24 hours to be propagated to Roku Search.
 

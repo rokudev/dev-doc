@@ -23,7 +23,7 @@ next:
 
 ### AddMessageHandler(message_id as String, handler as String) as Object
 
-#### Description
+##### Description
 
 Registers a handler for messages received on the async message channel with the given message ID. The handler is called on the render thread for each message received.
 
@@ -31,14 +31,14 @@ You can register multiple handlers for a single ID. In this case, the handlers a
 
 This function can only be called on the render thread.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                              |
 | :--------- | :------- | :----------------------------------------------------------- |
 | message_id | String   | The ID of the message channel to which this handler should be registered. |
 | handler    | String   | The name of the handler function to be called for each message received. |
 
-#### Return Value
+##### Return Value
 
 Returns an object that can be used to unregister the handler, if required.
 
@@ -57,13 +57,13 @@ Returns an object that can be used to unregister the handler, if required.
 
 ### PostMessage(message_id as String, data as Object) as Void
 
-#### Description
+##### Description
 
 Posts a message to the queue. The data is *moved* and becomes unavailable to the calling thread. The call returns immediately and does not block the calling thread.
 
 This function may be called from any thread.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -92,13 +92,13 @@ This function may be called from any thread.
 
 ### CopyMessage(message_id as String, data as Object) as Void
 
-#### Description
+##### Description
 
 Posts a message to the queue. The call returns immediately and does not block the calling thread.
 
 This function is similar to the **PostMessage()** function, but it copies data instead of moving it.
 
-#### Parameters
+##### Parameters
 
 | **Name**   | **Type** | **Description**                                              |
 | :--------- | :------- | :----------------------------------------------------------- |
@@ -107,7 +107,7 @@ This function is similar to the **PostMessage()** function, but it copies data i
 
 ### NumCopies() as Integer
 
-#### Description
+##### Description
 
 Returns the total number of objects for the channel that were copied by the **PostMessage()** function instead of being moved.
 

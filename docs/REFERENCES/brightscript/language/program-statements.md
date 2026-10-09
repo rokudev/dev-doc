@@ -251,7 +251,7 @@ end try
 
 The TRY block of statements is executed. If and only if an error occurs, the CATCH block of statements is executed, and the named variable is assigned the information about the triggering exception. If no error occurs during execution of the TRY block, the CATCH block is skipped.
 
-> It is illegal to put a GOTO label within a TRY block (i.e., between TRY and CATCH). A GOTO label may exist exist between CATCH and END TRY, however.
+> It is illegal to put a GOTO label within a TRY block (i.e., between TRY and CATCH). A GOTO label may exist between CATCH and END TRY, however.
 
 The variable name specified as the *exception object* in the CATCH clause must refer to a *simple variable*. It cannot be an array element, for example. The following are **not** legal as exception object references in the CATCH clause:
 
@@ -586,6 +586,10 @@ Functions have their own scope.
 
 The statement "Sub" can be used instead of "function" as a shortcut to a
 function of Void return Type.
+
+### Maximum stack depth
+
+Each function call occupies a slot on the BrightScript call stack. As of [Roku OS 16.0](doc:release-notes#roku-os-160), the maximum stack depth of a BrightScript program is 8192 slots, increased from 1024 slots in earlier versions. A program that exceeds the maximum stack depth stops with a stack overflow error.
 
 If a function is called from an associative array, then a local variable
 "m" is set to the AssociativeArray that the function is stored

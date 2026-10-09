@@ -23,11 +23,11 @@ next:
 
 ### Setup(encrypt as Boolean, format as String, key as String, iv as String, padding as Integer) as Integer
 
-#### Description
+##### Description
 
 Configures and initializes a new cipher context.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type    | Description                                                  |
 | ------- | ------- | ------------------------------------------------------------ |
@@ -37,38 +37,38 @@ Configures and initializes a new cipher context.
 | iv      | String  | A hex-encoded initialization vector, which can be an empty string |
 | padding | Integer | 1 to use standard padding; 0 for no padding)                 |
 
-#### Return Value
+##### Return Value
 
 Returns 0 on success or non-zero on failure.
 
 ### Reinit() as Integer
 
-#### Description
+##### Description
 
 Reinitializes an existing cipher context. This can be called to reuse an existing [roEVPCipher](doc:roevpdigest) object to encrypt new data
 
-#### Return Value
+##### Return Value
 
 Returns 0 on success or non-zero on failure.
 
 
 ### Process(bytes as Object) as Object
 
-#### Description
+##### Description
 
 Processes the included [roByteArray](doc:robytearray) containing encrypted/decrypted data.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
 | bytes | Object | An [roByteArray](doc:robytearray) containing data that is encrypted or decrypted. |
 
-#### Return Value
+##### Return Value
 
 An [roByteArray](doc:robytearray) containing the result.
 
-#### Example
+##### Example
 
 ```brightscript
   x = evp.Process(bytes)
@@ -84,26 +84,26 @@ is equivalent to
 
 ### Update(bytes as Object) as Object
 
-#### Description
+##### Description
 
 Updates the included [roByteArray](doc:robytearray) containing encrypted/decrypted data.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
 | bytes | Object | An [roByteArray](doc:robytearray) containing data that is encrypted or decrypted. |
 
-#### Return Value
+##### Return Value
 
 An [roByteArray](doc:robytearray) containing a subset of the result. Some or all of the result may not be returned until the next call to Update().
 
 ### Final() as Object
 
-#### Description
+##### Description
 
 Signals that all data has been submitted by previous calls to Update().
 
-#### Return Value
+##### Return Value
 
 The last remaining encrypted or decrypted bytes.

@@ -24,7 +24,7 @@ At this stage, creative control is intentionally scoped to a small number of hig
 
 # Who this is for
 
-Creatives is available to eligible content partners who manage **Premium Subscription** storefronts on The Roku Channel.
+Creatives is available to eligible content partners who manage **Premium Subscription** content on The Roku Channel.
 
 This feature is intended for users responsible for maintaining brand consistency and subscription presentation, including:
 
@@ -91,8 +91,8 @@ This means updates will immediately replace the existing asset and apply univers
 
 All assets must meet Roku’s branding and technical requirements. For full specifications, safe zones, and design recommendations, refer to the official documentation:
 
-* <Anchor label="CTA Banner Guidelines" target="_blank" href="https://developer.roku.com/dev/docs/assets_and_branding#cta-call-to-action-banner">CTA Banner Guidelines</Anchor>
-* <Anchor label="Partner Tile (4:3) Guidelines" target="_blank" href="https://developer.roku.com/dev/docs/assets_and_branding#partner-tile-43">Partner Tile (4:3) Guidelines</Anchor>
+* <Anchor target="_blank" href="https://developer.roku.com/dev/docs/assets_and_branding#cta-call-to-action-banner">CTA Banner Guidelines</Anchor>
+* <Anchor target="_blank" href="https://developer.roku.com/dev/docs/assets_and_branding#partner-tile-43">Partner Tile (4:3) Guidelines</Anchor>
 
 Failure to meet these requirements may result in assets being rejected or rendered incorrectly in the UI.
 
@@ -122,5 +122,5 @@ These creatives directly impact how consumers perceive your service and whether 
 To use this feature, get the appropriate role assigned to your account.
 
 1. Request **marketing manager** access from your company’s account administrator.
-2. Ask your administrator to grant access based on your responsibilities, such as storefront and creative management.
+2. Ask your administrator to grant access based on your responsibilities, such as creative management.
 3. Contact your internal team if you are not sure who your administrator is.

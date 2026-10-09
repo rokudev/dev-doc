@@ -31,16 +31,16 @@ The ifArrayGet interface supports the array indexing operator [ ]
 
 ### GetEntry(index As Integer) As Dynamic
 
-#### Description
+##### Description
 
 Returns an array entry based on the provided index.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                  |
 | ----- | ------- | -------------------------------------------- |
 | index | Integer | The index of the array entry to be returned. |
 
-#### Return Value
+##### Return Value
 
 The array entry corresponding to the provided index, or invalid if the entry has not been set.  

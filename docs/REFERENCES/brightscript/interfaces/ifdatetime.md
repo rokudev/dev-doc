@@ -22,7 +22,7 @@ next:
 
 ### Mark() as Void
 
-#### Description
+##### Description
 
 Sets the date/time value to the current UTC date and time.
 
@@ -30,49 +30,49 @@ Sets the date/time value to the current UTC date and time.
 
 ### ToLocalTime() as Void
 
-#### Description
+##### Description
 
 Offsets the date/time value from an assumed UTC date/time to a local date/time using the system time zone setting. This function is not idempotent, and multiple calls will do multiple timezone adjustments to the time yielding an incorrect result.
 
 ### GetTimeZoneOffset() as Integer
 
-#### Description
+##### Description
 
 Returns the offset in minutes from the system time zone to UTC. For example, if the system time zone is in PDT / UTC-7 the value returned would be 420.
 
 > The time zone offset is returned for the current date/time, regardless of the object's date/time value.
 
-#### Return Value
+##### Return Value
 
 Minutes of offset as Integer.
 
 ### AsSeconds() as Integer
 
-#### Description
+##### Description
 
 Returns an Integer representing the date/time as the number of seconds from the Unix epoch (00:00:00 1/1/1970 GMT).
 
-#### Return Value
+##### Return Value
 
 Number of seconds as Integer.
 
 ### AsSecondsLong() as Object
 
-#### Description
+##### Description
 
 Returns a LongInteger representing the date/time as the number of seconds from the Unix epoch (00:00:00 1/1/1970 GMT).
 
-#### Return Value
+##### Return Value
 
 Number of seconds as a LongInteger.
 
 ### FromSeconds(numSeconds as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the date/time value using the number of seconds from the Unix epoch.
 
-#### Parameters
+##### Parameters
 
 | Name       | Type    | Description                                |
 | ---------- | ------- | ------------------------------------------ |
@@ -80,11 +80,11 @@ Sets the date/time value using the number of seconds from the Unix epoch.
 
 ### FromSecondsLong(numSeconds as LongInteger) as Void
 
-#### Description
+##### Description
 
 Sets the date/time value using the number of seconds from the Unix epoch.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type                   | Description                                |
 | ------- | ---------------------- | ------------------------------------------ |
@@ -92,11 +92,11 @@ Sets the date/time value using the number of seconds from the Unix epoch.
 
 ### ToISOString() as String
 
-#### Description
+##### Description
 
 Returns an ISO 8601 representation of the date/time value.
 
-#### Return Value
+##### Return Value
 
 ISO 8601 as String, e.g. "2021-03-25T18:53:03+0000"
 
@@ -104,29 +104,29 @@ ISO 8601 as String, e.g. "2021-03-25T18:53:03+0000"
 
 
 
-#### Description
+##### Description
 
 Returns an ISO 8601 representation of the date/time value with milliseconds precision.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type   | Format      |
 | ------ | ------ | ----------- |
 | format | String | The format of the date string to be returned, which is "milliseconds" |
 
-#### Return Value
+##### Return Value
 
 ISO 8601 as String with milliseconds precision, e.g. "2021-03-25T18:53:03.220+0000"
 
 ### FromISO8601String(dateString as String) as Void
 
-#### Description
+##### Description
 
 Sets the date/time using a string in the ISO 8601 format. For example "YYYY-MM-DD HH:MM:SS" e.g "2009-01-01 01:00:00.000" or "2009-01-01T01:00:00.000".
 
 > This function is unaware of the local time zone, so these time formats are effectively UTC even though the ISO 8601 spec says they should be in local time. The above formats are also the only formats recognized by this function, even though the ISO 8601 spec contains other valid formats.
 
-#### Parameters
+##### Parameters
 
 | Name       | Type   | Description                                              |
 | ---------- | ------ | -------------------------------------------------------- |
@@ -136,11 +136,11 @@ Sets the date/time using a string in the ISO 8601 format. For example "YYYY-MM-D
 
 *Available since [Roku OS 12.0](doc:release-notes#roku-os-120)*
 
-#### Description
+##### Description
 
 Returns the localized date of the device. 
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -162,7 +162,7 @@ Returns the localized date of the device.
 
 
 
-#### Custom date formatting values
+##### Custom date formatting values
 
 | Date symbol |                       Description                       |
 | :---------: | :-----------------------------------------------------: |
@@ -177,7 +177,7 @@ Returns the localized date of the device.
 |      y      |              Year, numeric, minimum digits              |
 |     yy      | Year, numeric, two low-order digits, zero pad if needed |
 
-#### Return Value
+##### Return Value
 
 A date string corresponding to the specified format:
 
@@ -193,11 +193,11 @@ A date string corresponding to the specified format:
 
 *Available since [Roku OS 12.0](doc:release-notes#roku-os-120)*
 
-#### Description
+##### Description
 
 Returns the localized time of the device. 
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -219,7 +219,7 @@ Returns the localized time of the device.
 
 
 
-#### Custom time formatting values
+##### Custom time formatting values
 
 | Time symbol | Description                                  |
 | :---------- | :------------------------------------------- |
@@ -231,7 +231,7 @@ Returns the localized time of the device.
 | mm          | minute, 2 digits, zero pad if needed         |
 | a           | AM PM, abbreviated                           |
 
-#### Return Value
+##### Return Value
 
 A time string corresponding to the specified format:
 
@@ -244,20 +244,20 @@ A time string corresponding to the specified format:
 
 ### AsDateString(format as String) as String
 
-#### Description
+##### Description
 
 Returns the date/time formatted string.
 
 >  Day names, month names, separators, and order of fields may vary depending on the current locale.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type   | Description                     |
 | ------ | ------ | ------------------------------- |
 | format | String | <table><thead><tr><th>Format</th></tr></thead><tbody><tr><td>long-date</td></tr><tr><td>short-weekday</td></tr><tr><td>no-weekday</td></tr><tr><td>short-month</td></tr><tr><td>short-month-short-weekday</td></tr><tr><td>short-month-no-weekday</td></tr><tr><td>short-date</td></tr><tr><td>short-date-dashes</td></tr></tbody></table> |
 
 
-#### Return Value
+##### Return Value
 
 A dateString corresponding to the specified format.
 
@@ -282,11 +282,11 @@ A dateString corresponding to the specified format.
 
 ### AsDateStringNoParam() as String
 
-#### Description
+##### Description
 
 Returns the date/time in long-date format.
 
-#### Return Value
+##### Return Value
 
 A date/time string in long-date format (for example, Tuesday October 9, 2012)
 
@@ -294,112 +294,112 @@ A date/time string in long-date format (for example, Tuesday October 9, 2012)
 
 *Available since [Roku OS 15.0](doc:release-notes#roku-os-150)*
 
-#### Description
+##### Description
 
 Returns a Long representing the date/time as the number of milliseconds from the Unix epoch (00:00:00 1/1/1970 GMT).
 
-#### Return Value
+##### Return Value
 
 A Long representing the date/time as the number of milliseconds from the Unix epoch.
 
 ### GetWeekday() as String
 
-#### Description
+##### Description
 
 Returns the day of the week.
 
 > This function always returns the canonical English day of week names, regardless of the current locale.  For a locale-independent index, see the [GetDayOfWeek()](#getdayofweek-as-integer) function.
 
-#### Return Value
+##### Return Value
 
 Week value as a String (e.g. "Monday").
 
 ### GetYear() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's year
 
-#### Return Value
+##### Return Value
 
 Returns the year value as an Integer, e.g. 2015
 
 ### GetMonth() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's month.
 
-#### Return Value
+##### Return Value
 
 Month value as an Integer (1=Jan, 12=Dec).
 
 ### GetDayOfMonth() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's day of the month.
 
-#### Return Value
+##### Return Value
 
 Date value as an Integer (1-31).
 
 ### GetHours() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's hour within the day.
 
-#### Return Value
+##### Return Value
 
 Hour value as an Integer (0-23)
 
 ### GetMinutes() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's minute within the hour.
 
-#### Return Value
+##### Return Value
 
 Minute value as an Integer (0-59)
 
 ### GetSeconds() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's second within the minute.
 
-#### Return Value
+##### Return Value
 
 Second value as an Integer (0-59).
 
 ### GetMilliseconds() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's millisecond within the second.
 
-#### Return Value
+##### Return Value
 
 Millisecond value as an Integer (0-999).
 
 ### GetLastDayOfMonth() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's last day of the month.
 
-#### Return Value
+##### Return Value
 
 Day as an Integer (28-31)
 
 ### GetDayOfWeek() as Integer
 
-#### Description
+##### Description
 
 Returns the date/time value's day of week.
 
-#### Return Value
+##### Return Value
 
 Day value as an Integer (Sunday=0, Monday=1, ..., Saturday=6).

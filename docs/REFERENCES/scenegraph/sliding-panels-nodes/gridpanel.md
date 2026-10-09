@@ -23,7 +23,7 @@ The GridPanel node class allows you to easily create a Panel that adheres to the
 - Default fade in/out animation of the next panel when the simple mechanism is used
 - Default fade out mask effect applied to the grid items at the bottom of the panel
 
-#### Automatic Create Next Panel Functionality
+##### Automatic Create Next Panel Functionality
 
 One key feature of the GridPanel node is providing a simple mechanism for setting up the common use case where each time a new item in the list receives the focus, a new "next" panel is added to the PanelSet. This mechanism is enabled or disabled by setting the createNextPanelOnItemFocus field to true or false.
 

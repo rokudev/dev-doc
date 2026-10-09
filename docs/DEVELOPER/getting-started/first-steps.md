@@ -14,7 +14,7 @@ next:
 
 To get started building a Roku app, do the following:
 
-- **[Create a Roku customer account](https://my.roku.com/signup)**. This enables you to enroll in the Roku developer program. Make sure that the email address you use for your account is one that you actively use and monitor. Roku frequently sends notifications that require you to take action (for example, to maintain your account, keep your app in the Streaming Store, or receive payouts).
+- **[Create a Roku customer account](https://my.roku.com/signup)**. This enables you to enroll in the Roku developer program. Make sure that the email address you use for your account is one that you actively use and monitor. Roku frequently sends notifications that require you to take action (for example, to maintain your account, keep your app in the Streaming Store, or receive payouts). If you are setting up an account for a company, see [Set up your Roku account](doc:account-setup) for guidance on choosing a company account, using an email alias, and giving your team access.
 
 
 

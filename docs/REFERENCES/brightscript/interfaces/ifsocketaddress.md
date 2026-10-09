@@ -23,17 +23,17 @@ next:
 
 ### SetAddress(address as String) as Boolean
 
-#### Description
+##### Description
 
 Sets the IPV4 address.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type   | Description|
 | ------- | ------ |------------|
 | address | String |The string consists of a hostname, optionally followed by a colon and a decimal port number. The hostname may be either dotted quad (such as "192.168.1.120") or a DNS name (such as "roku.com"). If a name is given, a DNS lookup is performed to convert it to dotted quad. Use IsAddressValid() to determine the result of the DNS lookup. Example: "192.168.1.120:8888" or "roku.com".|
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the IPV4 address was successfully set.
 
@@ -41,33 +41,33 @@ A flag indicating whether the IPV4 address was successfully set.
 
 Returns the IPV4 address in dotted quad format (for example, "192.168.1.120:8888").
 
-#### Return Value
+##### Return Value
 
 The IPV4 address.
 
 ### SetHostName(hostname as String) as Boolean
 
-#### Description
+##### Description
 
 Sets the hostname. The port number is unchanged.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type   | Description              |
 | -------- | ------ | ------------------------ |
 | hostname | String | The hostname to be used. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the hostname was successfully set.
 
 ### GetHostName() as String
 
-#### Description
+##### Description
 
 Returns the hostname.
 
-#### Return Value
+##### Return Value
 
 The hostname.
 
@@ -75,36 +75,36 @@ The hostname.
 
 > This function is deprecated and should not be used. Use the [setMessagePort()](doc:ifsetmessageport) function instead.
 
-#### Description
+##### Description
 
 Sets the port number. The hostname is unchanged.
 
-#### Parameters
+##### Parameters
 
 | Name | Type    | Description                 |
 | ---- | ------- | --------------------------- |
 | port | Integer | The port number to be used. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the port number was successfully set.
 
 ### GetPort() as Integer
 
-#### Description
+##### Description
 
 Returns the port number.
 
-#### Return Value
+##### Return Value
 
 The port number.
 
 ### IsAddressValid() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the component contains a valid IP address.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the component contains a valid IP address.

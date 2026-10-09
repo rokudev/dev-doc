@@ -24,17 +24,17 @@ Each of these operations except listen() is either synchronous or asynchronous a
 
 ### Listen(backlog as Integer) as Boolean
 
-#### Description
+##### Description
 
 Puts the socket into the listen state. 
 
-#### Parameters
+##### Parameters
 
 | Name    | Type    | Description                                     |
 | ------- | ------- | ----------------------------------------------- |
 | backlog | Integer | The limit for the queue of incoming connections |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether listening can be done (generally, if bound address is valid).
 
@@ -42,36 +42,36 @@ A flag indicating whether listening can be done (generally, if bound address is 
 
 Checks whether if the [listen()](#listenbacklog-as-integer-as-boolean) method has been successfully called on this socket.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the [listen()](#listenbacklog-as-integer-as-boolean) method has been successfully called on this socket.
 
 ### Connect() as Boolean
 
-#### Description
+##### Description
 
 Establishes a connection. 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether a socket connection has successfully been created. The connection might still not be complete if the socket is non-blocking
 
 ### Accept() as Object
 
-#### Description
+##### Description
 
 Accepts incoming requests.
 
-#### Return Value
+##### Return Value
 
 An roStreamSocket if the connection is pending; invalid otherwise. Use status to distinguish among success (eSuccess() or isConnected()), not ready (eOK()), and error.
 
 ### IsConnected() as Boolean
 
-#### Description
+##### Description
 
 Checks whether a [connect](#connect-as-boolean) or [accept](#accept-as-object) function has been completed on this socket. 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether a connection has been established or accepted on this socket.

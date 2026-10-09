@@ -20,28 +20,28 @@ next:
 
 ### Encrypt (input as roByteArray, String as encType) as roByteArray
 
-#### Description
+##### Description
 
 Encrypts data on a device that is unique per device, app, or model.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | input   | roByteArray | The data to be encrypted.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | encType | String      | The encryption key type, which is a string that may be set to "channel", "device", or "model": <table><thead><tr><th>encType</th><th>Description</th></tr></thead><tbody><tr><td>device</td><td>Encrypt data with a device unique key. This can be used to implement a secure storage-like algorithm.</td></tr><tr><td>channel</td><td>Encrypt data with an app unique key This enables you to provision credentials, API tokens, or other data from the cloud to devices securely. Apps signed with same signing key will share the encryption key.</td></tr><tr><td>model</td><td>Encrypt app with a model unique key This is similar to the "channel" encryption type, but with the scope limited to a specific model.</td></tr></tbody></table> |
 
-#### Return Value
+##### Return Value
 
 An roByteArray containing the encrypted data.
 
 ### Decrypt (EncryptedData as roByteArray, String as encType) as roByteArray
 
-#### Description
+##### Description
 
 Decrypts data stored on a device that was previously encoded with the [**Encrypt()**](#encrypt-input-as-robytearray-string-as-enctype-as-robytearray) method.
 
-#### Parameters
+##### Parameters
 
 <table>
   <thead>
@@ -65,11 +65,11 @@ Decrypts data stored on a device that was previously encoded with the [**Encrypt
   </tbody>
 </table>
 
-#### Return Value
+##### Return Value
 
 An roByteArray containing the decrypted data.
 
-#### Example
+##### Example
 
 You can use the `Encrypt()` and `Decrypt()` methods to encrypt plaintext on a Roku device
 and then decode it, as demonstrated in the following example:

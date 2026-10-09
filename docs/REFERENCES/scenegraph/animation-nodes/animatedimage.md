@@ -22,7 +22,7 @@ The AnimatedImage downloads the entire resource before decoding. Playback begins
 
 ### Example
 
-#### BrightScript
+##### BrightScript
 
 ```brightscript
 ' main.brs
@@ -39,7 +39,7 @@ function init()
 end function
 ```
 
-#### XML
+##### XML
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

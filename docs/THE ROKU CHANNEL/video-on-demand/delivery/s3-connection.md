@@ -38,7 +38,7 @@ The IAM role will need to allow KMS related actions:
    ingest-direct1-886239521314
    ```
 
-2. Partner-specific prefix within the bucket. This will be supplied by Roku during the onboarding cycle and will follow the convention below: <u>Convention</u>
+2. Partner-specific prefix within the bucket. This will be supplied by Roku during the onboarding cycle and will follow the convention below:<br /><u>Convention</u>
 
    ```
    ingest/<partner_name>/

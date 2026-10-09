@@ -381,7 +381,7 @@ function pGetURL() as String
 end function
 ```
 
-#### Parsing colons in namespace element and attribute tags
+##### Parsing colons in namespace element and attribute tags
 
 For elements and attributes with namespaces, you can use the [roXMLElement interface](doc:ifxmlelement) to parse the colons in their tags. Consider the following XML:
 
@@ -585,39 +585,39 @@ BrightScript> print bslCore
 This library provides platform constant definitions as well as some
 common utility functions.
 
-#### bslBrightScriptErrorCodes() as Object
+##### bslBrightScriptErrorCodes() as Object
 
   - Returns an roAssociativeArray with name value pairs of the error
     name and corresponding integer value, for example ERR\_OKAY = &hFF.
 
-#### bslGeneralConstants() as Object
+##### bslGeneralConstants() as Object
 
   - Returns an roAssociativeArray with name value pairs of system
     constants, for example MAX\_INT = 2147483647.
 
-#### bslUniversalControlEventCodes() as Object
+##### bslUniversalControlEventCodes() as Object
 
   - Returns an roAssociativeArray with name value pairs of the remote
     key code (buttons) constants, for example BUTTON\_SELECT\_PRESSED =
     6.
 
-#### AsciiToHex(ascii as String) as String
+##### AsciiToHex(ascii as String) as String
 
   - Returns the hex encoded string, for example AsciiToHex("Hi\!") =
     "486921".
 
-#### HexToAscii(hex as String) as String
+##### HexToAscii(hex as String) as String
 
   - Returns a string that is the hex decoded string, for example
     HexToAscii("486921") = "Hi\!".
 
-#### HexToInteger(hex as String) as Integer
+##### HexToInteger(hex as String) as Integer
 
   - Returns the integer value of the passed in hex string.
 
 This library includes 2D graphics helper functions on top of the native components.
 
-#### Object dfNewBitmapSet(String filename)
+##### Object dfNewBitmapSet(String filename)
 
 The goal is to enable simple xml descriptions of graphics resources like
 bitmaps, regions, sprites, animations, and layouts to be used in your
@@ -653,21 +653,21 @@ sprites sheets (multiple images in a single png file).
           - Use in conjunction with dfSetBackground() to manage
             backgrounds
 
-#### dfDrawMessage(dest as Object, region as Object) as Void
+##### dfDrawMessage(dest as Object, region as Object) as Void
 
   - dest is an roScreen/roBitmap/roRegion and region is an roRegion
   - greys the entire dest region and draws it the region centered on the
     drawable
     dest.
 
-#### dfDrawImage(dest as Object, path as String, x as Integer, y as Integer) as Boolean
+##### dfDrawImage(dest as Object, path as String, x as Integer, y as Integer) as Boolean
 
   - Returns True if successful
   - Creates a bitmap out of the image stored in the filename "path" and
     draws it at position (x,y) of the drawable
     dest.
 
-#### dfSetupDisplayRegions(screen as Object, topx as Integer, topy as Integer, width as Integer, height as Integer) as Object
+##### dfSetupDisplayRegions(screen as Object, topx as Integer, topy as Integer, width as Integer, height as Integer) as Object
 
   - Helper function to setup screen scaling with supplied pillar box or
     letterbox images to fill the entire screen.
@@ -684,7 +684,7 @@ sprites sheets (multiple images in a single png file).
     Lower: lower region if there is a letterbox area at the bottom
     When using these regions as drawables, your graphics will be translated and clipped to these regions.
 
-#### Object dfSetBackground(String backgroundName, Object backgrounds)
+##### Object dfSetBackground(String backgroundName, Object backgrounds)
 
   - dfSetBackground helps manage the limited video memory. The video
     memory does not currently run a defragmenter, and is very limited.

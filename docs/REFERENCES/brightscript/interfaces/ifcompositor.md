@@ -23,11 +23,11 @@ next:
 
 ### SetDrawTo(destBitmap as Object, rgbaBackground as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the destBitmap ([roBitmap](doc:robitmap) or [roScreen](doc:roscreen)) and the background color.
 
-#### Parameters
+##### Parameters
 
 | Name           | Type    | Description                      |
 | -------------- | ------- | -------------------------------- |
@@ -36,23 +36,23 @@ Sets the destBitmap ([roBitmap](doc:robitmap) or [roScreen](doc:roscreen)) and t
 
 ### Draw() as Void
 
-#### Description
+##### Description
 
 Draws any dirty sprites (that is, whatever is new or has changed since the last Draw). No compositor or sprite operations will be reflected on the display until Draw() is called. After calling Draw(), you must call Finish() (if single buffered) or SwapBuffers() (if double buffered) before the changes will be user visible
 
 ### DrawAll() as Void
 
-#### Description
+##### Description
 
 Redraws all sprites even if not dirty. After calling Draw(), you must call Finish() (if single buffered) or SwapBuffers() (if double buffered) before the changes will be user visible
 
 ### NewSprite(x as Integer, y as Integer, region as Object, z as Integer) as Object
 
-#### Description
+##### Description
 
 Creates a new sprite, using an roRegion to define the sprite's bitmap. Position the sprite at coordinate x,y. If z is provided, position the sprite in front of all other sprites with equal or lower z value. Sprites with negative z values are not rendered or displayed on the screen.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                          |
 | ------ | ------- | ---------------------------------------------------- |
@@ -61,17 +61,17 @@ Creates a new sprite, using an roRegion to define the sprite's bitmap. Position 
 | region | Object  | The region to be used to define the sprite's bitmap. |
 | z      | Integer | The z-coordinate of the sprite.                      |
 
-#### Return Value
+##### Return Value
 
 Returns an [roSprite](doc:rosprite) object.
 
 ### NewAnimatedSprite(x as Integer, y as Integer, regionArray as Object, z as Integer) as Object
 
-#### Description
+##### Description
 
 Creates a new sprite that consists of a sequence of frames to be animated. The frames are defined by the regionArray which is an [roArray](doc:roarray) of [roRegions](doc:roregion). Position the sprite at coordinate x,y. If z is provided, position the sprite in front of all other sprites with equal or lower z value
 
-#### Parameters
+##### Parameters
 
 | Name        | Type    | Description                     |
 | ----------- | ------- | ------------------------------- |
@@ -80,17 +80,17 @@ Creates a new sprite that consists of a sequence of frames to be animated. The f
 | regionArray | Object  | The frames to be animated.      |
 | z           | Integer | The z-coordinate of the sprite. |
 
-#### Return Value
+##### Return Value
 
 Returns an [roSprite](doc:rosprite) object.
 
 ### AnimationTick(duration as Integer) as Void
 
-#### Description
+##### Description
 
 Moves all animated sprites. Sprites will not animate unless you call this function regularly.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type    | Description                           |
 | -------- | ------- | ------------------------------------- |
@@ -98,11 +98,11 @@ Moves all animated sprites. Sprites will not animate unless you call this functi
 
 ### ChangeMatchingRegions(oldRegion as Object, newRegion as Object) as Void
 
-#### Description
+##### Description
 
 Provides a global search and replace of sprite [roRegions](doc:roregion). Replaces regions that match oldRegion with newRegion
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                         |
 | --------- | ------ | ----------------------------------- |

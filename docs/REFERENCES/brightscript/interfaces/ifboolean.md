@@ -25,21 +25,21 @@ Interface equivalent for intrinsic type Boolean.
 
 ### GetBoolean() As Boolean
 
-#### Description
+##### Description
 
 Gets the boolean value stored in the calling boolean object. 
 
-#### Return Value
+##### Return Value
 
 The boolean value stored in the calling boolean object. 
 
 ### SetBoolean(value As Boolean) As Void
 
-#### Description
+##### Description
 
 Sets the calling boolean object to the specified true/false value. 
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----- | ------- | ----------- |

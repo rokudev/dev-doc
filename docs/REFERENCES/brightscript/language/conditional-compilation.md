@@ -40,6 +40,19 @@ This initial release only supports `boolean` constant values.
   - Constant names must be composed of alphanumeric characters, and optionally, the underscore `_` character. There is no limit to the length of a constant name.
   - Constant names are case-insensitive.
   - A constant name should not be redefined if it has already been defined prior.
+  - A constant name that is not defined, either in the manifest or in code, is treated as `false` (since [Roku OS 16.0](doc:release-notes#roku-os-160)). In earlier versions, referencing an undefined constant raised a compilation error.
+
+### Undefined constants
+
+Because an undefined constant evaluates to `false`, a BrightScript library can gate development-only features behind a constant that its consumers never define. In the following example, the logging statement is compiled only in builds whose manifest sets `mylibrary_enable_detailed_logging=true`; every other build compiles without error and without the statement.
+
+```brightscript
+#if mylibrary_enable_detailed_logging
+    ? "hello world"
+#end if
+```
+
+This change does not affect existing apps, which must already define every constant they reference in order to compile.
 
 ## Defining a constant
 

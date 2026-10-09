@@ -24,14 +24,14 @@ The TimeGrid node has a **content **field that can be used to store the informat
 
 > For any program in any channel, the start time plus the duration of any program must be less than or equal to the start time of the next program.
 
-#### App attributes
+##### App attributes
 
 | Attribute      | Type   | Description                                                                                              |
 | -------------- | ------ | -------------------------------------------------------------------------------------------------------- |
 | TITLE          | string | The name of this channel, to be visible only if HDSMALLICONURL is not set or if the icon failed to load. |
 | HDSMALLICONURL | uri    | The image file for the channel logo.                                                                     |
 
-#### Program attributes
+##### Program attributes
 
 | Attribute      | Type       | Description                                                                  |
 | -------------- | ---------- | ---------------------------------------------------------------------------- |
@@ -184,7 +184,7 @@ The following fields are used to configure and control the channel information c
       <td>channelInfoComponentName</td>
       <td>roSGNode</td>
       <td>Object</td>
-      <td>Uses the specified RSG component to display the data for each channel in the Channel Information column.<br /><br />An instance of this component is created on demand for each channel. The component must define a specific interface. <br /><br />Specifically, the <strong>content</strong> field of this component can be used to configure the data for the app information column (see [Specifying list and grid content](doc:list-and-grid-nodes#specifying-list-and-grid-content) for more information).<br /><br />Additionally, observer functions of the optional <strong>width</strong>, <strong>height</strong>, and <strong>hasFocus</strong> fields of the custom component can be used to customize the appearance (see [Custom item definitions and focus indicators](doc:overview#custom-item-definitions-and-focus-indicators) for more information). <br /><br />If this field is not specified, the default channel info will be displayed, which is an optional channel icon followed by a label containing the name of the app. The icon and label come from the app ContentNodes as described in the [Channel Attributes](doc:timegrid#fields) section.</td>
+      <td>Uses the specified RSG component to display the data for each channel in the Channel Information column.<br /><br />An instance of this component is created on demand for each channel. The component must define a specific interface. <br /><br />Specifically, the <strong>content</strong> field of this component can be used to configure the data for the app information column (see <a href="https://developer.roku.com/dev/docs/list-and-grid-nodes#specifying-list-and-grid-content">Specifying list and grid content</a> for more information).<br /><br />Additionally, observer functions of the optional <strong>width</strong>, <strong>height</strong>, and <strong>hasFocus</strong> fields of the custom component can be used to customize the appearance (see <a href="https://developer.roku.com/dev/docs/overview#custom-item-definitions-and-focus-indicators">Custom item definitions and focus indicators</a> for more information). <br /><br />If this field is not specified, the default channel info will be displayed, which is an optional channel icon followed by a label containing the name of the app. The icon and label come from the app ContentNodes as described in the <a href="https://developer.roku.com/dev/docs/timegrid#fields">Channel Attributes</a> section.</td>
     </tr>
     <tr>
       <td>channelInfoSelected</td>

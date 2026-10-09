@@ -1,20 +1,23 @@
 ---
-title: "Global math functions"
-excerpt: 'Reference for global math functions including trig, rounding, and random number generation'
+title: Global math functions
+excerpt: >-
+  Reference for global math functions including trig, rounding, and random
+  number generation
 deprecated: false
 hidden: false
 metadata:
-  title: 'Global math functions | Roku Developer Docs'
-  description: 'Documents the global math functions available in BrightScript, including Abs, Sin, Cos, Tan, Log, Exp, Rnd, and Sqr, with trig functions using radians.'
+  title: Global math functions | Roku Developer Docs
+  description: >-
+    Documents the global math functions available in BrightScript, including
+    Abs, Sin, Cos, Tan, Log, Exp, Rnd, and Sqr, with trig functions using
+    radians.
   robots: index
 next:
   description: ''
 ---
-
-
 The following math functions are part of global. Trig functions use or return radians, not degrees.
 
-----
+***
 
 ## Abs(x as Float) as Float
 
@@ -39,8 +42,7 @@ midpoints. CINT(2.1) returns 2; CINT(2.5) returns 3; CINT(-2.2) returns
 
 ## Cos(x as Float) as Float
 
-Returns the cosine of the argument (argument must be in radians). To
-obtain the cosine of X when X is in degrees, use CGS(X\*.01745329).
+Returns the cosine of the argument (argument must be in radians). To<br />obtain the cosine of X when X is in degrees, use COS(X\*.01745329).
 
 ## Csng(x as Integer) as Float
 
@@ -48,7 +50,7 @@ Returns a single-precision float representation of the argument.
 
 ## Exp(x as Float) as Float
 
-Returns the "natural exponential" of X, that is, *ex.* This is the
+Returns the "natural exponential" of X, that is, _ex._ This is the
 inverse of the LOG function, so X=EXP(LOG(X)).
 
 ## Fix(x as Float) as Integer
@@ -61,14 +63,12 @@ FIX(-2.2) returns -2.
 
 ## Int(x as Float) as Integer
 
-Returns an integer representation of the argument, using the largest
-whole number that is not greater than the argument.. INT(2.5) returns 2;
-INT(-2.5) returns -3; and INT(1000101.23) returns 10000101.
+Returns an integer representation of the argument, using the largest<br />whole number that is not greater than the argument.. INT(2.5) returns 2;<br />INT(-2.5) returns -3; and INT(1000101.23) returns 1000101.
 
 ## Log(x as Float) as Float
 
 Returns the natural logarithm of the argument, that
-is, **log<sub>e</sub>(x)** or **ln(x).** This is the inverse of the EXP
+is, **log**<sub>**e**</sub>**(x)** or **ln(x).** This is the inverse of the EXP
 function, so LOG(EXP(X)) = X. To find the logarithm of a number to
 another base b, use the formula log<sub>b</sub>(X) = log<sub>e</sub>(X)
 / log<sub>e</sub>(b). For example, LOG(32767) / LOG(2) returns the
@@ -81,9 +81,7 @@ logarithm to base 2 of 32767.
 Generates a pseudo-random number using the current pseudo-random "seed
 number" (generated internally and not accessible to user). RND may be
 used to produce random numbers between 0 and 1, or random integers
-greater than 0, depending on the argument.   
-RND(0) returns a float value between 0 and 1.  
-RND(integer) returns an integer between 1 and *integer* inclusive . For
+greater than 0, depending on the argument.<br />RND(0) returns a float value between 0 and 1.<br />RND(integer) returns an integer between 1 and _integer_ inclusive . For
 example, RND(55) returns a pseudo-random integer greater than zero and
 less than 56.
 
@@ -107,4 +105,4 @@ Returns the square root of the argument. SQR(X) is the same as X ^
 ## Tan(x as Float) as Float
 
 Returns the tangent of the argument (argument must be in radians). To
-obtain the tangent of X when X is in degrees, use TAN(X\*.01745329). 
+obtain the tangent of X when X is in degrees, use TAN(X\*.01745329).

@@ -11,11 +11,11 @@ Roku requests an initial launch list of titles/episodes/shortForm videos in the 
 
 ### Roku content policies
 
-#### Ad-supported content on The Roku Channel
+##### Ad-supported content on The Roku Channel
 
 The Roku Channel is looking for ad-supported content that is appropriate for our users and advertisers – for example, The Roku Channel does not want ad-supported content that contains excessive nudity or extreme/graphic violence.  Please use your best judgement when sharing content. If an asset is questionable, please find an alternative to share. We reserve the right to remove or reject any content that we deem inappropriate.
 
-#### Kids directed content policy
+##### Kids directed content policy
 
 “Kids-Directed Content” is content that either: (i) is directed to children as defined by the applicable law of the jurisdiction in which the content is shown (e.g., The Children's Online Privacy Protection Act); or (ii) was made for viewing primarily by children within the jurisdiction in which the content is shown.
 
@@ -55,7 +55,7 @@ An availability window is the length of time during which a title is viewable by
 - Territory
 - Language
 
-#### Availability date and time
+##### Availability date and time
 
 Roku has the ability for content to display on-device and for user playback at a specific starting time. By default, content will go into window at 12:00 am (midnight) and expire at 11:59:59 pm in the users’ time zone.
 
@@ -153,7 +153,7 @@ When submitting avails and Committed Title Lists via Excel workbook, all require
 
 A valid film or TV rating from the rating authority (Rating Source) of the Territory the title will be available in shall be provided for each movie, episode, or shortForm video. If the title has not been rated by that Territory’s official rating authority, a rating of NR (Not Rated) may be provided, however please note that Roku strongly prefers an actual rating on all content. Titles with a rating of NR (Not Rated) will be subject to manual verification which can delay the selection process and publishing to The Roku Channel. Discoverability on The Roku Channel may also be impacted for titles with the NR (Not Rated) rating and placement within the Kids & Family experience will be prohibited. In lieu of the NR (Not Rated) rating, the title should be self rated using the USA_PR rating system. Guidelines pertaining to the USA_PR ratings can be found [here](http://tvguidelines.org/)
 
-#### Rating values by rating system and country
+##### Rating values by rating system and country
 
 
 | **Ratings Authority and Territory** | **Country** | **ratingSystem** | **Rating Value** |  |  |

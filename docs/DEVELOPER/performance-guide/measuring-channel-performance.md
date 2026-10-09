@@ -99,7 +99,7 @@ beacon. When you exit your app, the console displays a report summarizing the st
 
 ## Performance metrics reference
 
-The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start,  change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.
+The Roku OS can measure and record eight app performance metrics: app launch, app compile, dialog launch, Electronic Program Guide (EPG) launch, video start, live start, channel change, and channel exit. For each app performance metric, the following table lists how they are measured and when their initiate and complete beacons are fired.
 
 <table>
   <thead>

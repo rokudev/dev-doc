@@ -186,7 +186,7 @@ Return the integer value of the string, or 0 if nothing is parsed.
 
 ## RunGarbageCollector() as Object
 
-This function runs the garbage collector on the current thread. It returns and Associative array with some statistics regarding the garbage collection.  
+This function runs the garbage collector on the current thread. It returns an Associative array with some statistics regarding the garbage collection.  
 See the [Garbage collection](doc:component-architecture) section of this manual for more detail. You don't normally need to call
 this function.
 
@@ -269,7 +269,7 @@ Normally non-ASCII characters are escaped in the output string as
 "\uXXXX" where XXXX is the hexadecimal representation of the Unicode
 character value.
 
-#### Output flags (optional)
+##### Output flags (optional)
 
 | **Value** | **Description**                                                                                                                                         |
 | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -290,11 +290,11 @@ print FormatJSON(euroStr, &h0001)
 ' => "€"
 ```
 
-#### Behavior flags (optional)
+##### Behavior flags (optional)
 
 | **Flag** | **Description**                                                                                   |
 | :------- | :------------------------------------------------------------------------------------------------ |
-| &h0000   | Default: If an unsupported value type is encounted, FormatJSON fails and returns an empty string. |
+| &h0000   | Default: If an unsupported value type is encountered, FormatJSON fails and returns an empty string. |
 | &h0100   | Ignore: Unsupported value types are output as JSON null values.                                   |
 | &h0200   | Annotate: Unsupported value types are output as a descriptive string.                             |
 

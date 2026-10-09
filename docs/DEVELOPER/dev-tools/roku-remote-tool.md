@@ -218,7 +218,7 @@ Creation of the following blocks is aided by macros. Click on each label for det
   </tbody>
 </table>
 
-#### Defining your own blocks of steps for re-use
+##### Defining your own blocks of steps for re-use
 
 For sequences of steps that you have to follow in multiple places within your script, define the sequence once and then label it for re-use.
 
@@ -334,7 +334,7 @@ Selecting a block of code for deletion, or highlighting a section to create a Lo
 
 The macro functions listed here allow rapid generation of blocks of scripting code. These sections may also be entered or copied in manually.
 
-#### App Tile Order
+##### App Tile Order
 
 To reorder apps:
 
@@ -348,7 +348,7 @@ To insert the ordering command and the ordered list to the script:
 
 ![roku600px - rremote-advanced-mode-channel-tile-order-roku815px](https://image.roku.com/ZHZscHItMTc2/rremote-advanced-mode-channel-tile-order.png?version=3\&modificationDate=1626143400000\&api=v2)
 
-#### Block IDs
+##### Block IDs
 
 Lists defined Block IDs within the script.
 
@@ -382,12 +382,12 @@ These utility functions operate as follows.
 * Page icon: Brings up a [RASP documentation article](http://devtools.web.roku.com/RokuRemote/rasp.html) that explains the scripting language.
 * Gear icon: Displays the Settings pages shown below.
 
-#### Start-up / run options (Settings page)
+##### Start-up / run options (Settings page)
 
-#### Automation
+##### Automation
 
 ![roku600px - rremote-settings-automation-roku815px](https://image.roku.com/ZHZscHItMTc2/rremote-settings-automation.png?version=3\&modificationDate=1626143651000\&api=v2)
 
-#### Options
+##### Options
 
 ![roku600px - rremote-settings-options-roku815px](https://image.roku.com/ZHZscHItMTc2/rremote-settings-options.png?version=3\&modificationDate=1626143662000\&api=v2)

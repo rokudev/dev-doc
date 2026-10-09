@@ -5,16 +5,26 @@ deprecated: false
 hidden: false
 metadata:
   title: 'Content engagement | Roku Developer Docs'
-  description: 'Documents the content engagement tools available to app publishers, including Roku Search, Instant Signup, Featured Free, and home screen display ads.'
+  description: 'Documents the content engagement tools available to app developers and content publishers, including Roku Search, Instant Signup, Featured Free, audience development, and home screen display ads.'
   robots: index
 next:
   description: ''
 ---
-Roku offers a robust promotional toolset for app publishers. This includes several free programs for organically driving content discovery such as [Roku Search](#roku-search), [Instant Signup](#instant-signup), and [Featured Free](#featured-free). These programs provide a high ROI as they typically require a simple integration and no economics.
+Roku offers a robust promotional toolset for content publishers. Which tools you can use depends on how you distribute your content.
 
-Additionally, apps can further increase their exposure by leveraging [Roku's audience development](#audience-development) programs such as [self-serve Roku home screen display ads](#roku-home-screen-display-ads), on-device promotions (targeted display and video ads, microsites, remote control buttons), and off-device email marketing messages. These programs actively recommend content in your app to users that are most likely to be engaged by it.
+| Program | Apps | The Roku Channel |
+| :-- | :-- | :-- |
+| [Roku Search](#roku-search) | Yes. Submit a search feed from your app. | Automatic. Your content is included in Roku Search. |
+| [Instant Signup](#instant-signup) and [Featured Free](#featured-free) | Yes. Each requires an integration in your app. | Not applicable. These programs integrate with an app. |
+| [Audience development](#audience-development) | Yes | Yes |
+| [Self-serve home screen display ads](#roku-home-screen-display-ads) | Yes | Not applicable. These ads promote apps. |
+| Storefront and creative tools for Premium Subscriptions | Not applicable | Yes. See the [Roku Content Partner Portal](doc:roku-content-partner-portal). |
 
-Using these promotional tools enables apps to maximize the value of their content by increasing installations, engagement, and revenue via subscriptions, purchases/rentals, and ads. This document highlights these tools.
+Apps can use several free programs for organically driving content discovery such as Roku Search, Instant Signup, and Featured Free. These programs provide a high ROI as they typically require a simple integration and no economics.
+
+Additionally, publishers can further increase their exposure by leveraging Roku's audience development programs such as self-serve Roku home screen display ads, on-device promotions (targeted display and video ads, microsites, remote control buttons), and off-device email marketing messages. These programs actively recommend your content to users that are most likely to be engaged by it.
+
+Using these promotional tools enables publishers to maximize the value of their content by increasing installations, engagement, and revenue via subscriptions, purchases/rentals, and ads. This document highlights these tools.
 
 ## Roku Search
 
@@ -54,7 +64,7 @@ When customers search for content, they can add the movies and TV shows that the
 
 ## Instant Signup
 
-Instant Signup enables users to start free trial subscriptions with just a few clicks when activating their Roku devices, and then directly access content on the app without any additional steps. This provides SVOD apps using Roku Pay an opportunity to offer free trials and related promotions to customers for their subscription services in order to drive conversions to paid subscriptions.
+_Applies to apps._ Instant Signup enables users to start free trial subscriptions with just a few clicks when activating their Roku devices, and then directly access content on the app without any additional steps. This provides SVOD apps using Roku Pay an opportunity to offer free trials and related promotions to customers for their subscription services in order to drive conversions to paid subscriptions.
 
 See [Instant Signup](doc:instant-signup) to integrate your SVOD app into this program.
 
@@ -62,7 +72,7 @@ See [Instant Signup](doc:instant-signup) to integrate your SVOD app into this pr
 
 ## Featured Free
 
-The Featured Free page, which is directly accessible from the Roku home screen, is the go-to destination for free content on the Roku platform. It lets users quickly find content that they can begin watching without having to first sign in. TVE, AVOD, and other apps can make their content directly accessible from the Featured Free page to drive traffic to their apps and promote upcoming live events.
+_Applies to apps._ The Featured Free page, which is directly accessible from the Roku home screen, is the go-to destination for free content on the Roku platform. It lets users quickly find content that they can begin watching without having to first sign in. TVE, AVOD, and other apps can make their content directly accessible from the Featured Free page to drive traffic to their apps and promote upcoming live events.
 
 To participate in Featured Free, apps must have already implemented Roku Search, and their content to be included in the program may not require a subscription, authentication, payment, or any other terms.
 
@@ -76,9 +86,9 @@ Roku offers tools to engage with your existing and potential audiences within th
 * On-device promotions.
 * Off-device promotions.
 
-Publishers interested in learning more about these opportunities can [visit the Publisher Solutions page](https://advertising.roku.com/content-publishers) on our advertising site.
+Publishers, whether they build apps or distribute on The Roku Channel, who are interested in learning more about these opportunities can [visit the Publisher Solutions page](https://advertising.roku.com/content-publishers) on our advertising site.
 
-In addition, Roku offers self-serve tools that you can use to purchase display ads on the Roku home screen and gain insights on your app's  performance.
+In addition, Roku offers self-serve tools that apps can use to purchase display ads on the Roku home screen and gain insights on app performance.
 
 ### Roku home screen display ads
 
@@ -90,10 +100,10 @@ See [Self-Serve Promotions](doc:self-serve-promotions) for more information on p
 
 ### Analytics and reporting
 
-Roku provides apps with a robust suite of reports for analyzing app performance, including dashboards for app engagement, transactions, payments, and more.
+Roku provides a suite of reports for analyzing performance. Apps have dashboards for app engagement, transactions, payments, and more. Publishers who distribute on The Roku Channel have analytics in the Roku Content Partner Portal.
 
 <Image alt="roku815px - analytics-7-channel-engagement" border={false} src="https://image.roku.com/ZHZscHItMTc2/analytics-7.png" title="analytics-7" />
 
-See [Analytics and Reporting](doc:analytics) for more information.
+See [Analytics and reporting for apps](doc:analytics) or [Roku Content Partner Portal analytics](doc:roku-content-partner-portal-analytics) for more information.
 
 <br />

@@ -23,21 +23,21 @@ next:
 
 ### CanRecord() as Boolean
 
-#### Description
+##### Description
 
 Indicates whether the platform and paired remote control can be requested to open the microphone.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the microphone can be opened.
 
 ### SetPrompt(prompt as String) as Void
 
-#### Description
+##### Description
 
 Sets the text to be displayed in the system microphone UI.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type   | Description                                           |
 | ------ | ------ | ----------------------------------------------------- |
@@ -45,38 +45,38 @@ Sets the text to be displayed in the system microphone UI.
 
 ### RecordToFile(wavFilePath as String) as Boolean
 
-#### Description
+##### Description
 
 Opens the microphone and records to create a WAV file at the specified output file path. Only tmp:/ paths are supported.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type   | Description                                       |
 | ----------- | ------ | ------------------------------------------------- |
 | wavFilePath | String | The file path where the WAV file is to be stored. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the recording was performed and saved successfully.
 
 ### StartRecording() as Boolean
 
-#### Description
+##### Description
 
 Opens the microphone and begins streaming microphone events to the app. The app must have called the [SetMessagePort()](doc:ifsetmessageport) method previously. 
 
 While the microphone is open, [RecordingInfo](doc:romicrophoneevent) events will be sent periodically with audio data. When the microphone is closed, a [RecordingDone](doc:romicrophoneevent) event will be sent. See [roMicrophoneEvent](doc:romicrophoneevent) for detailed information.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the microphone was opened successfully.
 
 ### StopRecording() as Boolean
 
-#### Description
+##### Description
 
 Stops recording and closes the microphone. This method is useful if the microphone was previously opened via the [StartRecording()](#startrecording-as-boolean) method and the app needs to cancel the current recording prematurely, (for example, the duration limit was reached or an application error). 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the microphone was opened and closed successfully.

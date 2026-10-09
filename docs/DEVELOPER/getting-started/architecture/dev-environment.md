@@ -1,18 +1,22 @@
 ---
 title: Development environment overview
-excerpt: 'Understand the Roku Streaming Player platform architecture and app entry points'
+excerpt: >-
+  Understand the Roku Streaming Player platform architecture and app entry
+  points
 deprecated: false
 hidden: false
 metadata:
-  title: 'Development environment overview | Roku Developer Docs'
-  description: 'Covers the Roku Streaming Player architecture, entry points, display modes, exit codes, and the event-oriented model for building apps.'
+  title: Development environment overview | Roku Developer Docs
+  description: >-
+    Covers the Roku Streaming Player architecture, entry points, display modes,
+    exit codes, and the event-oriented model for building apps.
   robots: index
 next:
   description: ''
 ---
 ## Architectural overview
 
-<Image alt="roku815px - Architecture block diagram" border={false} src="https://image.roku.com/ZHZscHItMTc2/devenvironmentarchoverview.png" title="devenvironmentarchoverview" />
+![roku815px - Architecture block diagram](https://image.roku.com/ZHZscHItMTc2/roku-architecture-v2.png "devenvironmentarchoverview")
 
 The diagram above provides a high-level overview of the main system
 components for the Roku Streaming Player platform. Developer
@@ -117,7 +121,7 @@ the app.
 
 ### Sub RunUserInterface()
 
-#### Sub RunUserInterface(aa as Object)
+##### Sub RunUserInterface(aa as Object)
 
 RunUserInterface is the normal entry point which is called when a
 app is selected on the Roku Home Screen.  It may take an
@@ -126,7 +130,7 @@ APIs.
 
 ### Sub Main()
 
-#### Sub Main(aa as Object)
+##### Sub Main(aa as Object)
 
 If there is no RunUserInterface() function in the application, the
 function Main() will be called as the entry point for the application.

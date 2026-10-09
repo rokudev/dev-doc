@@ -25,21 +25,21 @@ Interface equivalent for intrinsic type Float
 
 ### GetFloat() As Float
 
-#### Description
+##### Description
 
 Gets the float value stored in the calling Float object. 
 
-#### Return Value
+##### Return Value
 
 The float value stored in the calling Float object. 
 
 ### SetFloat(value As Float) As Void
 
-#### Description
+##### Description
 
 Sets the calling Float object to the specified float value. 
 
-#### Parameters
+##### Parameters
 
 | Name  | Type  | Description                                            |
 | ----- | ----- | ------------------------------------------------------ |

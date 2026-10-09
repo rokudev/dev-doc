@@ -45,7 +45,7 @@ Some elementary stream formats can be streamed directly without encapsulating th
 ## Adaptive streaming protocols
 
 Network speeds can vary over time; therefore, it is important to provide multiple
-video streams of varying quality to provide the best experience to your viewers is. Roku devices can then automatically select the best streaming quality based on the viewer's network connection.
+video streams of varying quality to provide the best experience to your viewers. Roku devices can then automatically select the best streaming quality based on the viewer's network connection.
 
 Roku supports the following widely-used standard formats for adaptive bit rate switching:
 
@@ -110,18 +110,18 @@ Roku supports the following widely-used standard formats for adaptive bit rate s
   - un-fragmented as a single resource with url information embedded in the manifest.
   - fragmented as chunks with url information embedded in the manifest.
 
-#### DASH streams
+##### DASH streams
 
 - All video chunks must start with an IDR frame.
 - Chunks of the same media type (audio or video) must be aligned across representations.
 - For best video start performance, manifest should specify the DRM system and PSSH.
 
-#### HLS streams
+##### HLS streams
 
 - For best performance, all segments should start with an IDR frame and segments.
 - For best performance, all segments of the same media type (audio or video) should be aligned across variants.
 
-#### Playing and seeking to the live edge
+##### Playing and seeking to the live edge
 
 For live streams, apps must be a minimum of 30 seconds away from the live edge.
 
@@ -277,7 +277,7 @@ For typical streaming video applications, we recommend a range of about 400Kbps 
 
 > If the content contains a surround sound track, AAC 2-channel stereo must be provided as a backup audio track.
 
-All devices do not support 1080p60 playback; therefore, include a high-quality 720p60 or 1080p24/30 encoding; otherwise, users with these devices may not get a good experience, even under excellent network conditions.
+Not all devices support 1080p60 playback; therefore, include a high-quality 720p60 or 1080p24/30 encoding; otherwise, users with these devices may not get a good experience, even under excellent network conditions.
 
 The ideal bitrate ladder is as follows:
 
@@ -322,7 +322,7 @@ Encoding in Dolby Digital Plus (instead of Dolby Digital) is recommended with th
 | Multi-channel 7.1 | 384 kbps |
 
 
-Developers can encode video content using services like Azure or [Encoding.com](http://Encoding.com). For more information, visit [developer.dolby.com](https://developer.dolby.com/)
+You can encode video content using services like Azure or [Encoding.com](http://Encoding.com). For more information, visit [developer.dolby.com](https://developer.dolby.com/)
 
 ### 4K UHD video streaming requirements
 
@@ -332,7 +332,7 @@ Developers can encode video content using services like Azure or [Encoding.com](
 | HDMI Version  | 2.0         |
 | HDCP Version  | 2.2         |
 
-#### Detecting 4K UHD compatibility
+##### Detecting 4K UHD compatibility
 
 There are several conditions that must be checked to see if 4K UHD content can be played:
 

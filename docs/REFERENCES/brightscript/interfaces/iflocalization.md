@@ -20,11 +20,11 @@ next:
 
 ### GetPluralString(count as Integer, zeroString as String, oneString as String, pluralString as String) as String
 
-#### Description
+##### Description
 
 Replaces `"^n"` in pluralString with count and returns the result.
 
-#### Parameters
+##### Parameters
 
 | Name         | Type    |
 | ------------ | ------- |
@@ -33,11 +33,11 @@ Replaces `"^n"` in pluralString with count and returns the result.
 | oneString    | String  |
 | pluralString | String  |
 
-#### Return Value
+##### Return Value
 
 The result of the operation. If count is 0, this returns zeroString. If count is 1, it returns oneString.
 
-#### Examples
+##### Examples
 
 `GetPluralString(count, "0 books", "1 book", "^n books")`
 
@@ -51,17 +51,17 @@ If the file does not exist in the current locale directory, then this will searc
 
 A list of currently supported locales can be found at [ifDeviceInfo.GetCurrentLocale](doc:ifdeviceinfo#getcurrentlocale-as-string).
 
-#### Parameters
+##### Parameters
 
 | Name     | Type   | Description                                                                                                 |
 | -------- | ------ | ----------------------------------------------------------------------------------------------------------- |
 | dirName  | String | The name of a subdirectory in the directory pkg:/locale/XX_YY/ where XX_YY is the current language setting. |
 | fileName | String | The name of the file.                                                                                       |
 
-#### Return Value
+##### Return Value
 
 An asset path.
 
-#### Example
+##### Example
 
 `GetLocalizedAsset("images", "MyImage.png")`.

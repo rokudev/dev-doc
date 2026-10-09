@@ -1,13 +1,13 @@
+- app-tracing
+- resource-monitor
+- external-control-api
 - roku-remote-tool
 - scenegraph-schema
 - ide-support
 - sgdex
 - rale-tutorial
-- resource-monitor
-- app-tracing
 - brightscript-profiler
 - brs-profiler-file-format
-- external-control-api
 - brightscript-doc
 - static-analysis-tool
 - automated-channel-testing

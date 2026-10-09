@@ -23,47 +23,47 @@ next:
 
 ### Setup(digestType as String) as Integer
 
-#### Descriptions
+##### Descriptions
 
 Initializes a new message digest context. 
 
-#### Parameters
+##### Parameters
 
 | Name       | Type   | Description                                                  |
 | ---------- | ------ | ------------------------------------------------------------ |
 | digestType | String | The supported digest algorithm from openssl, listed at roEVPDigest. |
 
-#### Return Value
+##### Return Value
 
 Returns 0 on success or non-zero on failure.
 
 ### Reinit() as Integer
 
-#### Description
+##### Description
 
 Re-initializes an existing message digest context. This can be called to reuse an existing [roEVPDigest](doc:roevpdigest) object to digest new data.
 
-#### Return Value
+##### Return Value
 
 Returns 0 on success or non-zero on failure.
 
 ### Process(bytes as Object) as String
 
-#### Description
+##### Description
 
 Digests the provided data. 
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
 | bytes | Object | An [roByteArray](doc:robytearray) containing digested data |
 
-#### Return Value
+##### Return Value
 
 A Hex string (Digested array data).
 
-#### Example
+##### Example
 
 ```brightscript
   x = evp.Process(bytes)
@@ -79,11 +79,11 @@ is equivalent to
 
 ### Update(bytes as Object) as Void
 
-#### Description
+##### Description
 
 Adds more data to be digested.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type   | Description                                                  |
 | ----- | ------ | ------------------------------------------------------------ |
@@ -91,10 +91,10 @@ Adds more data to be digested.
 
 ### Final() as String
 
-#### Description
+##### Description
 
 Returns the digest of data passed in by previous calls to [Update()](#updatebytes-as-object-as-void) as a hex string.
 
-#### Return Value
+##### Return Value
 
 Hex string (digest of data)

@@ -34,7 +34,7 @@ Adds the specified HTTP header to the list of headers that will be sent in the H
 
 Certain well known headers such as User-Agent, Content-Length, and so on are automatically sent. The application may override the values for these headers if needed (for example, some servers may require a specific user agent string).
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -60,17 +60,17 @@ Certain well known headers such as User-Agent, Content-Length, and so on are aut
 </table>
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the HTTP header was successfully added.
 
 ### SetHeaders(nameValueMap as Object) as Boolean
 
-#### Description
+##### Description
 
 Sets the HTTP headers to be sent in the HTTP request.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -91,43 +91,45 @@ Sets the HTTP headers to be sent in the HTTP request.
 </table>
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the HTTP header was successfully set.
 
 ### InitClientCertificates() as Boolean
 
-#### Description
+##### Description
 
 Initializes the Roku device's built-in client certificate for use in mutual TLS (mTLS) authentication. When called, the device will present its Roku-issued client certificate during the TLS handshake (if server requests it), allowing the server to verify that the request originates from a genuine Roku device running your specific app. For backend service verification purposes it is recommended to use [GetDeviceAttestation(nonce as String) as String](https://developer.roku.com/dev/docs/ifchannelstore#getdeviceattestationnonce-as-string-as-string) 
 
+> This function is [deprecated](doc:deprecated-apis) as of [Roku OS 16.0](doc:release-notes#roku-os-160). [Static Analysis](doc:static-analysis-tool) reports a warning if your app uses it, and starting April 1, 2027, Static Analysis will report an error and block publishing. Use the ChannelStore node's [getDeviceAttestationToken](doc:channelstore#getdeviceattestationtoken) command instead.
+
 > The Roku Developer Dashboard includes a link for downloading the [RokuTV Certification Authority](https://developer.roku.com/certificate). This CA can be passed to an app through this function.
 
-#### Return Value
+##### Return Value
 
-A flag indicating whether the object sent to to the Roku client certificate was successfully initialized.
+A flag indicating whether the object sent to the Roku client certificate was successfully initialized.
 
 ### SetCertificatesFile(path as String) as Boolean
 
 Set the certificates file used for SSL to the specified .pem file.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                     |
 | ---- | ------ | ----------------------------------------------- |
 | path | String | The directory path of the .pem file to be used. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the certificate was successfully set.
 
 ### SetCertificatesDepth(depth as Integer) as Void
 
-#### Description
+##### Description
 
 Sets the maximum depth of the certificate chain that will be accepted.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                   |
 | ----- | ------- | ----------------------------- |
@@ -135,17 +137,17 @@ Sets the maximum depth of the certificate chain that will be accepted.
 
 ### EnableCookies() as Void
 
-#### Description
+##### Description
 
 Enables any Set-Cookie headers returned from the request to be interpreted and the resulting cookies to be added to the cookie cache.
 
 ### GetCookies(domain as String, path as String) as Object
 
-#### Descripton
+##### Descripton
 
 Returns any cookies from the cookie cache that match the specified domain and path. Expired cookies are not returned.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -168,7 +170,7 @@ Returns any cookies from the cookie cache that match the specified domain and pa
 <td>The path of the cookies to be retrieved.</td>
 </tr>
 <tr>
-<td>secure<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td>
+<td>secure<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-120">Roku OS 12.0</a></em></td>
 <td>Boolean</td>
 <td>Indicates whether the cookie is to be retrieved via HTTPS (true) or HTTP (false).</td>
 </tr>
@@ -176,7 +178,7 @@ Returns any cookies from the cookie cache that match the specified domain and pa
 </table>
 
 
-#### Return Value
+##### Return Value
 
 An roArray of roAssociativeArrays, where each associative array represents a cookie. The roAssociativeArrays contain the following key-value pairs:
 
@@ -191,11 +193,11 @@ An roArray of roAssociativeArrays, where each associative array represents a coo
 
 ### AddCookies(cookies as Object) as Boolean
 
-#### Description
+##### Description
 
 Adds the specified cookies to the cookie cache.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -210,20 +212,20 @@ Adds the specified cookies to the cookie cache.
 <tr>
 <td>cookies</td>
 <td>Object</td>
-<td>An roArray of roAssociativeArrays, where each associative array represents a cookie to be added. Each associative array must contain the following key-value pairs: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Version</td><td>Integer</td><td>Cookie version number</td></tr><tr><td>Domain</td><td>String</td><td>Domain to which cookie applies</td></tr><tr><td>Path</td><td>String</td><td>Path to which cookie applies</td></tr><tr><td>Name</td><td>String</td><td>Name of the cookie</td></tr><tr><td>Value</td><td>String</td><td>Value of the cookie</td></tr><tr><td>Expires</td><td>roDateTime</td><td>Cookie expiration date, if any</td></tr><tr><td>Secure<br /><br /><em>Available since [Roku OS 12.0](doc:release-notes#roku-os-120)</em></td><td>Boolean</td><td>Indicates whether the cookie is to be sent over HTTPS (true) or HTTP (false).</td></tr></tbody></table></td>
+<td>An roArray of roAssociativeArrays, where each associative array represents a cookie to be added. Each associative array must contain the following key-value pairs: <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Version</td><td>Integer</td><td>Cookie version number</td></tr><tr><td>Domain</td><td>String</td><td>Domain to which cookie applies</td></tr><tr><td>Path</td><td>String</td><td>Path to which cookie applies</td></tr><tr><td>Name</td><td>String</td><td>Name of the cookie</td></tr><tr><td>Value</td><td>String</td><td>Value of the cookie</td></tr><tr><td>Expires</td><td>roDateTime</td><td>Cookie expiration date, if any</td></tr><tr><td>Secure<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-120">Roku OS 12.0</a></em></td><td>Boolean</td><td>Indicates whether the cookie is to be sent over HTTPS (true) or HTTP (false).</td></tr></tbody></table></td>
 </tr>
 </tbody>
 </table>
 
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the cookies were successfully added to the cache.
 
 ### ClearCookies() as Void
 
-#### Description
+##### Description
 
 Removes all cookies from the cookie cache.
 

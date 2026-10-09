@@ -23,27 +23,27 @@ next:
 
 ### WriteFile(path as String) As Boolean
 
-#### Description
+##### Description
 
 Writes the bytes contained in the Byte Array to the specified file.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                                |
 | ---- | ------ | ---------------------------------------------------------- |
 | path | String | The path to the file to which the bytes are to be written. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the bytes were successfully written to the file.
 
 ### WriteFile(path as String, start_index as Integer, length as Integer) As Boolean
 
-#### Description
+##### Description
 
 Writes a subset of the bytes contained in the Byte Array to the specified file.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type    | Description                                                  |
 | ----------- | ------- | ------------------------------------------------------------ |
@@ -51,33 +51,33 @@ Writes a subset of the bytes contained in the Byte Array to the specified file.
 | start_index | Integer | The index of the calling ByteArray from which to start writing bytes. |
 | length      | Integer | The length of the bytes to be written to the file, starting from the specified index. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the bytes were successfully written to the file.
 
 ### ReadFile(path as String) As Boolean
 
-#### Description
+##### Description
 
 Reads the specified file into the Byte Array. Any data currently in the Byte Array is discarded.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                      |
 | ---- | ------ | -------------------------------- |
 | path | String | The path to the file to be read. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the bytes were successfully read into the Byte Array.
 
 ### ReadFile(path as String, start_pos as Integer, length as Integer) As Boolean
 
-#### Description
+##### Description
 
 Reads the specified file into the Byte Array. Any data currently in the Byte Array is discarded.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type    | Description                                                  |
 | --------- | ------- | ------------------------------------------------------------ |
@@ -85,26 +85,26 @@ Reads the specified file into the Byte Array. Any data currently in the Byte Arr
 | start_pos | Integer | The index of the file from which to start reading bytes.     |
 | length    | Integer | The length of the bytes to be read from the file, starting from the specified starting position. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the bytes were successfully read into the Byte Array.
 
 ## Slice([start_pos as Integer[, end_pos as Integer]]) As Object
 
-#### Description
+##### Description
 
 Returns a new array object with a shallow copy of the specified portion of the array. 
 
 The **start_pos** and **end_pos** fields specify the 0-based indices of items in the array, where the **end_pos** field represents the position **past** the last element to be copied.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type    | Description                                                  |
 | :-------- | :------ | :----------------------------------------------------------- |
 | start_pos | Integer | The 0-based index of first element to copy. A negative index specifies an offset from the end of the array. The default value is 0. |
 | end_pos   | Integer | The 0-based index past last element to copy. A negative index indicates an offset from the end of the array. The default value is the array length. |
 
-#### Example
+##### Example
 
 ```brightscript
 '          0   1   2   3   4   5
@@ -135,28 +135,28 @@ print FormatJSON(byteArr2)
 
 ### AppendFile(path as String) As Boolean
 
-#### Description
+##### Description
 
 Appends the contents of the Byte Array to the specified file.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                           |
 | ---- | ------ | ----------------------------------------------------- |
 | path | String | The path to the file to be appended to the ByteArray. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the file was successfully appended to the calling ByteArray.
 
 
 ### AppendFile(path as String, start_pos as Integer, length as Integer) As Boolean
 
-#### Description
+##### Description
 
 Appends the contents of the Byte Array to the specified file.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type    | Description                                                  |
 | --------- | ------- | ------------------------------------------------------------ |
@@ -164,17 +164,17 @@ Appends the contents of the Byte Array to the specified file.
 | start_pos | Integer | The position in the file from which to start appending bytes. |
 | length    | Integer | The length of the bytes to be appended to the Byte Array, starting from the specified starting position. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the file was successfully appended to the calling ByteArray.
 
 ### SetResize(min_size as Integer, auto_resize as Boolean) As Void
 
-#### Description
+##### Description
 
 If the size of the Byte Array is less than min_size, expands the Byte Array to min_size. Also sets the auto-resize attribute of the Byte Array to the specified value.
 
-#### Parameters
+##### Parameters
 
 | Name        | Type    | Description                                                  |
 | ----------- | ------- | ------------------------------------------------------------ |
@@ -183,21 +183,21 @@ If the size of the Byte Array is less than min_size, expands the Byte Array to m
 
 ### ToHexString() As String
 
-#### Description
+##### Description
 
 Returns a hexadecimal string representing the contents of the Byte Array, two digits per byte.
 
-#### Return Value
+##### Return Value
 
 A hexadecimal string.
 
 ### FromHexString(hexstring as String) As Void
 
-#### Description
+##### Description
 
 Sets the contents of the Byte Array to the specified value. Any data currently in the Byte Array is discarded.
 
-#### Parameters
+##### Parameters
 
 | Name      | Type   | Description                                                  |
 | --------- | ------ | ------------------------------------------------------------ |
@@ -205,21 +205,21 @@ Sets the contents of the Byte Array to the specified value. Any data currently i
 
 ### ToBase64String() As String
 
-#### Description
+##### Description
 
 Returns a base-64 string representing the contents of the Byte Array.
 
-#### Return Value
+##### Return Value
 
 A base-64 string representing the contents of the Byte Array.
 
 ### FromBase64String(s as String) As Void
 
-#### Description
+##### Description
 
 Sets the contents of the Byte Array to the specified value. Any data currently in the Byte Array is discarded.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description              |
 | ---- | ------ | ------------------------ |
@@ -227,21 +227,21 @@ Sets the contents of the Byte Array to the specified value. Any data currently i
 
 ### ToAsciiString() As String
 
-#### Description
+##### Description
 
 Returns the contents of the Byte Array as a string. The contents must be valid UTF-8 (or ASCII subset), or the result is undefined
 
-#### Return Value
+##### Return Value
 
 A String containing the contents of the ByteArray.
 
 ### FromAsciiString(s as String)
 
-#### Description
+##### Description
 
 Sets the contents of the Byte Array to the specified string using UTF-8 encoding. Any data currently in the Byte Array is discarded.
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                                     |
 | ---- | ------ | ----------------------------------------------- |
@@ -249,47 +249,47 @@ Sets the contents of the Byte Array to the specified string using UTF-8 encoding
 
 ### GetSignedByte(index as Integer) As Integer
 
-#### Description
+##### Description
 
 Returns the signed byte at the specified zero-based index in the Byte Array<br /><br />Use the [ifArrayGet.GetEntry()](doc:ifarrayget) method or the [ ] array operator to read an unsigned byte in the Byte Array.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                  |
 | ----- | ------- | -------------------------------------------- |
 | index | Integer | The index of the signed byte to be returned. |
 
-#### Return Value
+##### Return Value
 
 The signed byte at the specified zero-based index in the Byte Array.
 
 ### GetSignedLong(index as Integer) As Integer
 
-#### Description
+##### Description
 
 Returns the signed long (four bytes) starting at the specified zero-based index in the Byte Array.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description                                                  |
 | ----- | ------- | ------------------------------------------------------------ |
 | index | Integer | The index of the ByteArray from which to start retrieving the signed long. |
 
-#### Return Value
+##### Return Value
 
 A signed long. 
 
 ### GetCRC32() as Integer
 
-#### Description
+##### Description
 
 Calculates a CRC-32 of the contents of the Byte Array.
 
-#### Return Value
+##### Return Value
 
 The calculated CRC-32 checksum. 
 
-#### Example
+##### Example
 
 ```brightscript
     ba = CreateObject("roByteArray")
@@ -301,28 +301,28 @@ The calculated CRC-32 checksum.
 
 ### GetCRC32(start as Integer, length as Integer) As Integer
 
-#### Description
+##### Description
 
 Calculates a CRC-32 of a subset of bytes within the Byte Array.
 
-#### Parameters
+##### Parameters
 
 | Name   | Type    | Description                                                  |
 | ------ | ------- | ------------------------------------------------------------ |
 | start  | Integer | The starting index of the subset of bytes to be used in the CRC-32 calculation. |
 | length | Integer | The length of the bytes to be included.                      |
 
-#### Return Value
+##### Return Value
 
 The calculated CRC-32 checksum. 
 
 ### IsLittleEndianCPU() As Boolean
 
-#### Description
+##### Description
 
 Returns true if the CPU architecture is little-endian.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the CPU architecture is little-endian.
 

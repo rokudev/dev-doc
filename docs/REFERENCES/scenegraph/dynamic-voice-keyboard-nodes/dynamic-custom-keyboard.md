@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>
+Extends <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://developer.roku.com/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>
 
-The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
+The **DynamicCustomKeyboard** node enables developers to create a voice-enabled keyboard that has a custom layout. As specified in its parent <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://developer.roku.com/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor>  class, the **DynamicCustomKeyboard** node has a built-in [**VoiceTextEditBox**](doc:voice-text-edit-box)  node for displaying the string of characters provided via text or voice entry, and it has a  [**DynamicKeyGrid**](doc:dynamic-key-grid)  node that provides keyboard functionality.
 
 <br />
 
@@ -56,7 +56,7 @@ The _key_ parameter is set to the key's "strOut" field, if specified; otherwise,
 
 The function should return _true_ if it handles the key selection. Returning _false_ causes the [default key selection handler](#default-key-selection-handlers)  behavior to be used.
 
-#### Example custom key select handler
+##### Example custom key select handler
 
 The following example demonstrates a custom key handler:
 
@@ -94,7 +94,7 @@ The following example demonstrates a custom key handler:
    end function
    ```
 
-#### Custom key handlers that modify the entered text string
+##### Custom key handlers that modify the entered text string
 
 In most cases, the default key selection handlers can be used for modifying the entered text string. However, if a custom key handler is used to do this, it must update the **cursorPosition** of the **DynamicCustomKeyboard**. The following example demonstrates a custom key handler that changes the text string:
 
@@ -128,7 +128,7 @@ In most cases, the default key selection handlers can be used for modifying the 
 
 ## Fields
 
-See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
+See the <Anchor label="DynamicKeyboardBase" title="DynamicKeyboardBase" href="https://developer.roku.com/dev/docs/dynamic-keyboard-base">DynamicKeyboardBase</Anchor> node and its base classes ([Group](doc:group) and [Node](doc:node)) for configuring the fields inherited by the **DynamicCustomKeyboard** node.
 
 <HTMLBlock>{`
 <table>

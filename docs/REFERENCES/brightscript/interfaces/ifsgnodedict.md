@@ -25,67 +25,67 @@ The ifSGNodeDict interface allows you access information about the nodes in a Sc
 
 ### findNode(name as String) as Object
 
-#### Description
+##### Description
 
 Returns the node that is a descendant of the nearest component ancestor of the subject node (possibly the subject node itself) and whose id field is set to name. The search for the descendant node is a breadth-first search that includes child nodes in nodes that are declared as custom components defined in other XML component files. These together allow finding siblings and cousins of a node within the context of a component. If a node with the specified name is not found, an invalid object is returned
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                           |
 | ---- | ------ | ------------------------------------- |
 | name | String | The name of the node to be retrieved. |
 
-#### Return Value
+##### Return Value
 
 The node that is a descendant of the nearest component ancestor of the subject node.
 
 ### subtype() as String
 
-#### Description
+##### Description
 
 Returns the subtype of the subject node as specified when it was created.
 
-#### Return Value
+##### Return Value
 
 The subtype of the subject node.
 
 ### parentSubtype(nodeType as String) as String
 
-#### Description
+##### Description
 
 Returns the subtype of the parent of the nodeType in the SceneGraph node class hierarchy.
 
 > This method does not actually reference the subject node.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type   | Description                       |
 | -------- | ------ | --------------------------------- |
 | nodeType | String | The node type of the parent node. |
 
-#### Return Value
+##### Return Value
 
 The subtype of the parent node.
 
 ### isSubtype(nodeType as String) as Boolean
 
-#### Description
+##### Description
 
 Checks whether the subtype of the subject node is a descendant of the subtype nodeType in the SceneGraph node class hierarchy.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type   | Description                        |
 | -------- | ------ | ---------------------------------- |
 | nodeType | String | The node type of the subject node. |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the subtype of the subject node is a descendant of the subtype nodeType.
 
 ### isSameNode(RoSGNode as Object) as Boolean
 
-#### Description
+##### Description
 
 Checks whether a specific roSGNode refers to the same SceneGraph node object as the subject node.
 
@@ -96,11 +96,11 @@ This can be useful when the RoSGNode objects come from two different sources, fo
 | isSameNode | Boolean | <table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>RoSGNode</td><td>Object</td><td>The roSGNode to be checked.</td></tr></tbody></table> | True/False      | Returns a Boolean value indicating whether the RoSGNode parameter refers to the same SceneGraph node object as the subject node |
 
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the nodes refer to the same SceneGraph node object.
 
-#### Example:
+##### Example:
 
 The following example should print "same":
 
@@ -139,7 +139,7 @@ Returns a copy of the entire node tree or just a shallow copy.
 
 
 
-#### Return Value
+##### Return Value
 
 A node tree.
 
@@ -182,6 +182,6 @@ result = node.callFunc("addSomeValue", params)
 
 Checks whether the specified callable function exists.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the specified callable function exists.

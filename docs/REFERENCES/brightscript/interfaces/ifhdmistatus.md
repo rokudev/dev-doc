@@ -22,21 +22,21 @@ next:
 
 ### IsConnected() as Boolean
 
-#### Description
+##### Description
 
 Checks whether the HDMI or MHL output is connected to an HDMI device.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the HDMI or MHL output is connected to an HDMI device.
 
 ### GetHdcpVersion() as String
 
-#### Description
+##### Description
 
 Returns the version number of the currently established HDCP link.
 
-#### Return Value
+##### Return Value
 
 The version number of the HDCP link: 1.4 or 2.2.
 
@@ -46,16 +46,16 @@ If an empty string is returned, HDCP is disabled. In this case, videos that requ
 
 ### IsHdcpActive(version as String) as Boolean
 
-#### Description
+##### Description
 
 Checks if the current established HDCP link is the specified version or higher
 
-#### Parameters
+##### Parameters
 
 | Name    | Type   | Description                                                  |
 | ------- | ------ | ------------------------------------------------------------ |
 | version | String | The HDCP link version to be checked (for example, "1.4" or "2.2"). |
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the current established HDCP link is the specified `version`.

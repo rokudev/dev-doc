@@ -141,10 +141,10 @@ Local Variables:
 global           &h0020 Interface:ifGlobal
 m                &h0010 roAssociativeArray refcnt=3 count:0
 
-Brightscript Debugger>
+BrightScript Debugger>
 ```
 
-A `roAssociativeArray` that describes the exception is also an acceptable argument to `THROW`. Any missing fields will will be set with default values as shown in the table below:
+A `roAssociativeArray` that describes the exception is also an acceptable argument to `THROW`. Any missing fields will be set with default values as shown in the table below:
 
 | Name      | Default                                           |
 | :-------- | :------------------------------------------------ |
@@ -208,7 +208,7 @@ end try
 
 An exception object that has been caught is a valid argument to `THROW`. This is useful in some circumstances, for example:
 
-#### Reacting to an error without handling it
+##### Reacting to an error without handling it
 
 ```brightscript
 try
@@ -219,7 +219,7 @@ catch e
 end try
 ```
 
-#### Handling only some errors
+##### Handling only some errors
 
 ```brightscript
 LIBRARY "v30/bslCore.brs"

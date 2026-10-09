@@ -88,13 +88,13 @@ Each of the commands starts a sequence of actions associated with the financial 
       <td>invalid</td>
       <td>READ\_WRITE</td>
       <td>Specifies whether the RFI screen is used for customer sign-ups or sign-ins. This may be one of the following values:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>context</td><td>string</td><td>"signup"</td><td>Specifies the context of the RFI screen, which may be one of the following values:<ul>
-      <li>"signup": The RFI screen displays a "Let's create your account" title and lists the customer information specified in the <a href="#requesteduserdata"><strong>requestedUserData</strong> field</a>. The RFI screen uses the "signup" context by default. See <a href="/dev/docs/signup-best-practices">Sign-up requirements and best practices</a> for more information on implementing the app sign-up UI.</li><li>"signin: "The RFI screen displays a "Sign in" title and lists only email or phone attributes, if specified in the <a href="#requesteduserdata"><strong>requestedUserData</strong> field</a>. Other attributes are ignored, even if specified. See the <a href="#sign-in-example">Sign-in example</a> for how to use this field. See <a href="/dev/docs/signin-best-practices">Sign-in requirements and best practices</a> for more information on implementing the app sign-in UI.</li></ul>
+      <li>"signup": The RFI screen displays a "Let's create your account" title and lists the customer information specified in the <a href="#requesteduserdata"><strong>requestedUserData</strong> field</a>. The RFI screen uses the "signup" context by default. See <a href="https://developer.roku.com/dev/docs/signup-best-practices">Sign-up requirements and best practices</a> for more information on implementing the app sign-up UI.</li><li>"signin: "The RFI screen displays a "Sign in" title and lists only email or phone attributes, if specified in the <a href="#requesteduserdata"><strong>requestedUserData</strong> field</a>. Other attributes are ignored, even if specified. See the <a href="#sign-in-example">Sign-in example</a> for how to use this field. See <a href="https://developer.roku.com/dev/docs/signin-best-practices">Sign-in requirements and best practices</a> for more information on implementing the app sign-in UI.</li></ul>
       </td></tr><tr><td>forceShowData</td><td>Boolean</td><td>false</td><td>If true, the RFI signup screen displays the values of the requested customer information to be shared with the app (for example, Jone Doe, [jon.doe@emailaddress.com](mailto:jon.doe@emailaddress.com)).<br /><br />By default, this flag is set to false, which means that the default RFI screen for the region is used. For example, in the US, the RFI screen displays the type of customer information being requested (email address, name, and so on).<br /><br />This flag has no effect if the context field is set to "signin" (the RFI sign-in screen always displays the customer information values). <br /><br /><strong>Example</strong>:<br /><pre><code>store = CreateObject("roSGNode", "ChannelStore")<br />' Doesn't show user data in dialog unless necessary in the user's region.<br /> store.requestedUserData = "email,firstname,lastname,gender,birth"<br />store.command = "getUserData"<br />' Shows user data in dialog.<br />info = CreateObject("roSGNode", "ContentNode")<br />info.addFields(\{forceShowData: true})<br />store.requestedUserDataInfo = info<br />store.requestedUserData = "email"<br />store.command = "getUserData"</code></pre></td></tr></tbody></table></td>
     </tr>
   </tbody>
 </table>
 
-#### Sign-up example
+##### Sign-up example
 
 ```brightscript
 store = CreateObject("roSGNode", "ChannelStore")
@@ -110,7 +110,7 @@ store.command = "getUserData"
  phone = m.store.userData.phone
 ```
 
-#### Sign-in example
+##### Sign-in example
 
 ```brightscript
 store = CreateObject("roSGNode", "ChannelStore")
@@ -169,16 +169,16 @@ store.command = "getUserData"
       <td>ContentNode</td>
       <td>invalid</td>
       <td>READ\_WRITE</td>
-      <td>Contains the order to be filled when the <a href="#doorder"><strong>doOrder</strong></a> command is executed. This ContentNode contains one child ContentNode for each of the items to be purchased. The child ContentNode must contain the following fields:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>code</td><td>string</td><td>Identifies the product to be purchased, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-App Product page in the Developer Dashboard</a> when the product was created. See <a href="#creating-an-order">Creating an order</a> for more information.</td></tr><tr><td>qty</td><td>Integer</td><td>The quantity of the item to be purchased, which is typically 1 for most in-app products.<br /><br />This is only typically more than 1 if the product is a "packet" of identical items (such as game points, number of viewings permitted of some item of content, and so on).</td></tr></tbody></table><br />To clear an order, set the <strong>order</strong> field to "invalid".<br /><br /><strong>For upgrades/downgrades only</strong>. You need to include an <strong>action</strong> field to specify a subscription plan change. <table><thead><tr><th>Field</th><th>Type</th><th>Access Permission</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>string</td><td>READ\_WRITE</td><td>Set this to "Upgrade" or "Downgrade" to change the subscription plan from a previous purchase (for example, <code>myOrder.action = "Upgrade"</code>). The required values are case-sensitive; do not pass "upgrade" or "downgrade". See <a href="/dev/docs/on-device-upgrade-downgrade">On-device upgrade and downgrade</a> for more information.</td></tr></tbody></table></td>
+      <td>Contains the order to be filled when the <a href="#doorder"><strong>doOrder</strong></a> command is executed. This ContentNode contains one child ContentNode for each of the items to be purchased. The child ContentNode must contain the following fields:<br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>code</td><td>string</td><td>Identifies the product to be purchased, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-App Product page in the Developer Dashboard</a> when the product was created. See <a href="#creating-an-order">Creating an order</a> for more information.</td></tr><tr><td>qty</td><td>Integer</td><td>The quantity of the item to be purchased, which is typically 1 for most in-app products.<br /><br />This is only typically more than 1 if the product is a "packet" of identical items (such as game points, number of viewings permitted of some item of content, and so on).</td></tr></tbody></table><br />To clear an order, set the <strong>order</strong> field to "invalid".<br /><br /><strong>For upgrades/downgrades only</strong>. You need to include an <strong>action</strong> field to specify a subscription plan change. <table><thead><tr><th>Field</th><th>Type</th><th>Access Permission</th><th>Description</th></tr></thead><tbody><tr><td>action</td><td>string</td><td>READ\_WRITE</td><td>Set this to "Upgrade" or "Downgrade" to change the subscription plan from a previous purchase (for example, <code>myOrder.action = "Upgrade"</code>). The required values are case-sensitive; do not pass "upgrade" or "downgrade". See <a href="https://developer.roku.com/dev/docs/on-device-upgrade-downgrade">On-device upgrade and downgrade</a> for more information.</td></tr></tbody></table></td>
     </tr>
   </tbody>
 </table>
 
-#### Creating an order
+##### Creating an order
 
 To create an order, this field needs to be set to a ContentNode that has one child ContentNode for each item to be purchased. There are two approaches to setting the `order` field: setting it directly, or setting the `deltaOrder` field.
 
-To set the `order` field directly, first create a ContentNode, then create one child ContentNode with the `"code"` and `"qty"` fields set for each item to be purchased. Assuming `m.channelStore` is a ChannelStore node object, the following Brightscript code shows how to do this:
+To set the `order` field directly, first create a ContentNode, then create one child ContentNode with the `"code"` and `"qty"` fields set for each item to be purchased. Assuming `m.channelStore` is a ChannelStore node object, the following BrightScript code shows how to do this:
 
 ```brightscript
 myOrder = CreateObject("roSGNode", "ContentNode")
@@ -222,7 +222,7 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
   </tbody>
 </table>
 
-#### requestPartnerOrder
+##### requestPartnerOrder
 
 > See [Creating TVOD apps](/dev/docs/tvod-channel) for how to use this field for transactional purchases.
 
@@ -247,7 +247,7 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
   </tbody>
 </table>
 
-#### confirmPartnerOrder
+##### confirmPartnerOrder
 
 > See [Creating TVOD apps](/dev/docs/tvod-channel) for how to use this field for transactional purchases.
 
@@ -272,43 +272,43 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
   </tbody>
 </table>
 
-#### orderStatus
+##### orderStatus
 
 | Field       | Type        | Default | Access Permission | Description                                                  |
 | ----------- | ----------- | ------- | ----------------- | ------------------------------------------------------------ |
 | orderStatus | ContentNode | invalid | READ_WRITE        | Contains the results of the [**doOrder**](#doorder) command. |
 
-#### purchases
+##### purchases
 
 | Field     | Type        | Default | Access Permission | Description                                                                                                     |
 | --------- | ----------- | ------- | ----------------- | --------------------------------------------------------------------------------------------------------------- |
 | purchases | ContentNode | invalid | READ_WRITE        | Contains the results of a [**getPurchases**](#getpurchases) or [**getAllPurchases**](#getallpurchases) command. |
 
-#### catalog
+##### catalog
 
 | Field   | Type        | Default | Access Permission | Description                                                      |
 | ------- | ----------- | ------- | ----------------- | ---------------------------------------------------------------- |
 | catalog | ContentNode | invalid | READ_WRITE        | Contains the results of a [**getCatalog**](#getcatalog) command. |
 
-#### storeCatalog
+##### storeCatalog
 
 | Field        | Type        | Default | Access Permission | Description                                                                |
 | ------------ | ----------- | ------- | ----------------- | -------------------------------------------------------------------------- |
 | storeCatalog | ContentNode | invalid | READ_WRITE        | Contains the results of a [**getStoreCatalog**](#getstorecatalog) command. |
 
-#### requestPartnerOrderStatus
+##### requestPartnerOrderStatus
 
 | Field                     | Type        | Default | Access Permission | Description                                                                        |
 | ------------------------- | ----------- | ------- | ----------------- | ---------------------------------------------------------------------------------- |
 | requestPartnerOrderStatus | ContentNode | invalid | READ_WRITE        | Contains the results of a [**requestPartnerOrder**](#requestpartnerorder) command. |
 
-#### confirmPartnerOrderStatus
+##### confirmPartnerOrderStatus
 
 | Field                     | Type        | Default | Access Permission | Description                                                                        |
 | ------------------------- | ----------- | ------- | ----------------- | ---------------------------------------------------------------------------------- |
 | confirmPartnerOrderStatus | ContentNode | invalid | READ_WRITE        | Contains the results of a [**confirmPartnerOrder**](#confirmpartnerorder) command. |
 
-#### fakeServer
+##### fakeServer
 
 <table>
   <thead>
@@ -326,7 +326,7 @@ m.channelStore.deltaOrder = { "code": "UPC4321", "qty": 1}
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_WRITE</td>
-      <td>Enables a test mode for the <strong>ChannelStore</strong> node. The test mode disables communication by the ChannelStore node with the Streaming Store server, and it causes responses to asynchronous queries and operations to come from XML test configuration files rather than the server. <br /><br />To use this test method, create a <strong>csFake</strong> folder and add the following XML files to it in order to simulate web service request and response data: <ul><li><strong>csfake/GetCatalog.xml</strong>: Simulates the list of products available for purchase in the app.</li><li><strong>csfake/GetPurchases.xml</strong>: Simulates the list of products already purchased by the user.</li><li><strong>csfake/PlaceOrder.xml</strong>: Contains information about the product to be ordered.</li><li><strong>csfake/CheckOrder.xml</strong>: Verifies the validity of the order placed. For example, if the <strong>order</strong> and <strong>id</strong> values in the PlaceOrder and CheckOrder XML files do not match, the fake server will report an error in the order processing.</li></ul><br /><br />See the <a href="https://github.com/rokudev/samples/tree/master/roku%20pay/SimpleChannelStore/csfake">SimpleChannelStore sample app</a> for how to use this testing method.<br /><br />The <strong>fakeServer</strong> field must be set to false in a published app to allow actual <a href="/dev/docs/in-channel-products">In-App Product</a> purchases by users.It is recommended that developers use <a href="/dev/docs/billing-testing">billing testing</a> instead of the fakeServer.</td>
+      <td>Enables a test mode for the <strong>ChannelStore</strong> node. The test mode disables communication by the ChannelStore node with the Streaming Store server, and it causes responses to asynchronous queries and operations to come from XML test configuration files rather than the server. <br /><br />To use this test method, create a <strong>csFake</strong> folder and add the following XML files to it in order to simulate web service request and response data: <ul><li><strong>csfake/GetCatalog.xml</strong>: Simulates the list of products available for purchase in the app.</li><li><strong>csfake/GetPurchases.xml</strong>: Simulates the list of products already purchased by the user.</li><li><strong>csfake/PlaceOrder.xml</strong>: Contains information about the product to be ordered.</li><li><strong>csfake/CheckOrder.xml</strong>: Verifies the validity of the order placed. For example, if the <strong>order</strong> and <strong>id</strong> values in the PlaceOrder and CheckOrder XML files do not match, the fake server will report an error in the order processing.</li></ul><br /><br />See the <a href="https://github.com/rokudev/samples/tree/master/roku%20pay/SimpleChannelStore/csfake">SimpleChannelStore sample app</a> for how to use this testing method.<br /><br />The <strong>fakeServer</strong> field must be set to false in a published app to allow actual <a href="https://developer.roku.com/dev/docs/in-channel-products">In-App Product</a> purchases by users.It is recommended that developers use <a href="https://developer.roku.com/dev/docs/billing-testing">billing testing</a> instead of the fakeServer.</td>
     </tr>
   </tbody>
 </table>
@@ -617,12 +617,12 @@ If this command is successful, the [**purchases** field](#purchases) ContentNode
     <tr>
       <td>purchaseChannel</td>
       <td>string</td>
-      <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="/dev/docs/instant-signup">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
+      <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="https://developer.roku.com/dev/docs/instant-signup">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
     </tr>
     <tr>
       <td>purchaseContext</td>
       <td>string</td>
-      <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="/dev/docs/instant-signup">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
+      <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="https://developer.roku.com/dev/docs/instant-signup">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
     </tr>
     <tr>
       <td>purchaseDate</td>
@@ -744,12 +744,12 @@ If this command is successful, the [**purchases** field](#purchases) ContentNode
     <tr>
       <td>purchaseChannel</td>
       <td>string</td>
-      <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="/dev/docs/instant-signup">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
+      <td>Indicates where the Roku Pay subscription purchase was made:<br /><ul><li><strong>web</strong>. Subscription was purchased from <a href="http://roku.com/">Roku.com</a> (for example, through <a href="https://developer.roku.com/dev/docs/instant-signup">Instant Signup</a> during the device activation).</li><li><strong>device</strong>. Subscription was purchased on the Roku device (through the on-device sign-up flow).</li></ul></td>
     </tr>
     <tr>
       <td>purchaseContext</td>
       <td>string</td>
-      <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="/dev/docs/instant-signup">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
+      <td>Indicates how the subscription purchase was made:<br /><ul><li><strong>isu</strong>. Subscription was purchased via <a href="https://developer.roku.com/dev/docs/instant-signup">Instant Signup</a>.</li><li><strong>iap</strong>. Subscription was purchased via an in-application purchase.</li></ul></td>
     </tr>
     <tr>
       <td>purchaseDate</td>
@@ -961,40 +961,185 @@ The decoded JWT contains the following fields:
  }
 ```
 
-### requestPartnerOrder
+### GetRokuCustomerId
 
-> See [Creating TVOD Apps](/dev/docs/tvod-channel) for how to use this command for transactional purchases.
+*Available since [Roku OS 16.0](doc:release-notes#roku-os-160).*
 
-Checks the user's billing status for transactional purchases. This is a prerequisite for sending the [confirmPartnerOrder command](#confirmpartnerorder).
+Returns the unique **rokuCustomerId** for the app, without requiring a prior purchase.
 
-If this command is successful, the [**requestPartnerOrderStatus** field](#requestpartnerorderstatus) contains the following values:
+You can use the **rokuCustomerId** to identify Roku customers consistently across your apps, and to keep order context intact from on-device in-app purchases through to Roku Pay push notifications. Before Roku OS 16.0, this ID was only available from the [getPurchases](#getpurchases) command after a successful purchase.
 
-| Field   | Type   | Description                                                                                                                                      |
-| ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| orderId | String | The ID that must be included as a field in the **confirmOrderInfo** ContentNode used by the [confirmPartnerOrder](#confirmpartnerorder) command. |
-| status  | String | Success                                                                                                                                          |
-| tax     | String | Cost of tax (if applicable)                                                                                                                      |
-| total   | String | Total cost of transaction                                                                                                                        |
+> To send the **GetRokuCustomerId**, you must use Roku's [generic request framework](doc:appendixagenericrequestframework). Set the **request** field to an associative array containing the command, and observe the **requestStatus** field for the result.
 
-If this command fails, the [**requestPartnerOrderStatus** field](#requestpartnerorderstatus) contains the following values:
+**Request**
 
-| Field        | Type   | Description                                            |
-| ------------ | ------ | ------------------------------------------------------ |
-| errorCode    | String | An error code representing why the transaction failed  |
-| errorMessage | String | An error message explaining why the transaction failed |
-| status       | String | Failure                                                |
+| Field   | Type   | Description         |
+| ------- | ------ | ------------------- |
+| command | string | "GetRokuCustomerId" |
 
-### confirmPartnerOrder
+**Result fields**
 
-> See [Creating TVOD Apps](/dev/docs/tvod-channel) for how to use this command for transactional purchases.
+| Field          | Type               | Description                      |
+| -------------- | ------------------ | -------------------------------- |
+| result         | roAssociativeArray | Wraps the response data          |
+| rokuCustomerId | string             | The Roku customer ID for the app |
 
-This command is equivalent to the **doOrder** command for transaction purchases. The user's billing status must first be confirmed with the [requestPartnerOrder command](#requestpartnerorder) before sending this command.
+**Example**
 
-If this command is successful, the [**confirmPartnerOrderStatus** field](#confirmpartnerorderstatus) contains the following values:
+```brightscript
+function init()
+    m.store = m.top.findNode("channelStore")
+    m.store.observeField("requestStatus", "onRequestStatus")
 
-| Field      | Type   | Description        |
-| ---------- | ------ | ------------------ |
-| purchaseId | String | The transaction ID |
-| status     | String | Success            |
+    request = {}
+    request.command = "GetRokuCustomerId"
+    m.store.request = request
+end function
 
-If this command fails, the [**confirmPartnerOrderStatus** field](#confirmpartnerorderstatus) contains the following values:
+function onRequestStatus()
+    requestStatus = m.store.requestStatus
+
+    if requestStatus <> invalid and requestStatus.status = 1
+        if requestStatus.command = "GetRokuCustomerId"
+            print "rokuCustomerId: "; requestStatus.result.rokuCustomerId
+        end if
+    end if
+end function
+```
+
+## Appendix A: Generic request framework
+
+Roku's Channel Store generic request framework enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it.
+
+This API is available for both SceneGraph (SDK 2) and BrightScript (SDK 1).
+
+##### request
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>request</td>
+<td>associative array</td>
+<td>Includes the request's command and context. <br /><br />
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>command</td>
+<td>string</td>
+<td>Set to the ChannelStore command</td>
+</tr>
+<tr>
+<td>context</td>
+<td>associative array</td>
+<td>Used to match the <strong>requestStatus</strong> with <strong>request</strong>. For example, you can set this to "id: {commandName}".</td>
+</tr>
+<tr>
+<td>params</td>
+<td>associative array</td>
+<td>See the command documentation for how to set this parameter.<br />
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+##### requestStatus
+
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requestStatus</td>
+<td>associative array</td>
+<td>Includes the status of the command and the data returned by it. <br /><br />
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>result</td>
+<td>associative array</td>
+<td>Any return data</td>
+</tr>
+<tr>
+<td>status</td>
+<td>enum</td>
+<td>The command completion status, which may be one of the following values: <br />
+<ul>
+<li><strong>2</strong> Interrupted</li>
+<li><strong>1</strong> Success</li>
+<li><strong>0</strong> Network error</li>
+<li><strong>-1</strong> HTTP Error/Timeout</li>
+<li><strong>-2</strong> Timeout</li>
+<li><strong>-3</strong> Unknown Error</li>
+<li><strong>-4</strong> Invalid request</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>statusMessage</td>
+<td>string</td>
+<td>A text description of the command completion status.</td>
+</tr>
+<tr>
+<td>command</td>
+<td>string</td>
+<td>The command passed into the request.</td>
+</tr>
+<tr>
+<td>context</td>
+<td>associative array</td>
+<td>The context passed into the request.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+

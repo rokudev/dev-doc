@@ -25,7 +25,7 @@ next:
 
 Returns the model number of the specified Roku remote control. For example, this function returns 135 for an RC135 remote that is connected to the Roku device.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -47,7 +47,7 @@ Returns the model number of the specified Roku remote control. For example, this
 
 
 
-#### Return Values
+##### Return Values
 
 The model number of the specified Roku remote control, or 0 if the specified remote does not exist. 
 
@@ -55,7 +55,7 @@ The model number of the specified Roku remote control, or 0 if the specified rem
 
 Checks whether the specified Roku remote control is awake. 
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -76,17 +76,17 @@ Checks whether the specified Roku remote control is awake.
 </table>
 
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the specified Roku remote control is awake.
 
 ### HasFeature(feature as String, remoteIndex as Integer) as Boolean
 
-#### Description
+##### Description
 
 Checks if the specified Roku remote control supports the passed in feature string.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -101,7 +101,7 @@ Checks if the specified Roku remote control supports the passed in feature strin
 <tr>
 <td>feature</td>
 <td>String</td>
-<td>The feature to be checked, which may be one of the following values: <ul><li>"bluetooth"</li><li>"wifi"</li><li>"motion"</li><li>"audio"</li><li>"voicecapture"</li><li>"findremote"</li><li>"hasMuteSwitch" (<em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em>; enables developers to check whether a Roku remote control includes a hands-free voice switch).</li></ul></td>
+<td>The feature to be checked, which may be one of the following values: <ul><li>"bluetooth"</li><li>"wifi"</li><li>"motion"</li><li>"audio"</li><li>"voicecapture"</li><li>"findremote"</li><li>"hasMuteSwitch" (<em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em>; enables developers to check whether a Roku remote control includes a hands-free voice switch).</li></ul></td>
 </tr>
 <tr>
 <td>remoteIndex</td>
@@ -112,6 +112,6 @@ Checks if the specified Roku remote control supports the passed in feature strin
 </table>
 
 
-#### Return Values
+##### Return Values
 
 A flag indicating whether the Roku remote control supports the passed in feature string.

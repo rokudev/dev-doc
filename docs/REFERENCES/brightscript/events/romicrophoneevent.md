@@ -27,7 +27,7 @@ Checks if the microphone recording session has been closed.  This method returns
 
 Checks whether the microphone is open. This method returns true when the microphone is open; otherwise, it returns false. 
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Returns the information regarding a particular microphone recording session. This method returns an roAssociativeArray containing the following information:
 

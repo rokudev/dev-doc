@@ -20,33 +20,33 @@ Use the following guidelines to develop, test, and submit your new or updated ap
 
 ### Developing apps
 
-#### Use current APIs
+##### Use current APIs
 
 Using deprecated APIs may cause your app to fail certification testing. See the list of [deprecated APIs](doc:deprecated-apis).
 
 ### Testing apps
 
-#### Test apps before submission
+##### Test apps before submission
 
 Use the certification criteria and the [list of pre-certification tests](doc:cert-tests) as tools to guide certification-compliance testing. Roku also provides a suite of tools to help developers verify that their apps comply with Roku's certification criteria before being submitting them for certification:
 
 * [Static Analysis tool](doc:static-analysis-tool): Checks the app's code for certification-related errors.
 
-* [App Behavior Analysis tool](doc:channel-publishing-guide): For SVOD, AVOD, and free apps, verifies whether app performance and deep linking meet applicable certification requirements.
+* [App Behavior Analysis tool](doc:channel-publishing-guide#app-behavior-analysis): For SVOD, AVOD, and free apps, verifies whether app performance and deep linking meet applicable certification requirements.
 
 * [Test automation software](doc:automated-channel-testing): Enables developers to write and execute automated test cases, including app purchasing, performance, deep linking, and other certification criteria.
 
-#### Test using beta apps
+##### Test using beta apps
 
 Roku provides developers with an access code for [distributing beta versions of apps](doc:channel-publishing-guide) during development and testing. You can use beta apps to preview the most recently uploaded version of the app (app updates are not reviewed for certification until they have been submitted for certification).
 
-#### Test across multiple device types
+##### Test across multiple device types
 
 You must test the app on multiple Roku device models before submitting for certification. Your test suite should include a combination of Roku models with varying processing power and memory. This is because your apps must be performant on all Roku device models that currently receive OS updates. For more information on current and updatable Roku device models, see the [Hardware specifications](doc:hardware).
 
 ### Submitting apps for certification
 
-#### Provide required resources and information
+##### Provide required resources and information
 
 As part of the app publishing flow, you must provide the following resources to submit an app for publishing:
 
@@ -64,7 +64,7 @@ As part of the app publishing flow, you must provide the following resources to 
 
   * Administrative and technical leads (names, email addresses, and phone numbers [with country codes]).
 
-#### Run certification tests
+##### Run certification tests
 
 Once you’ve finished QA testing your app and have packaged it, you can begin the certification process by running [Static Analysis](doc:static-analysis-tool) and [App Behavior Analysis Testing](doc:channel-publishing-guide) on your app in the Developer Dashboard. The Static Analysis tool checks the structure and syntax of your app's code for common problems related to certification requirements. This tool lists any errors requiring resolution before the app can be scheduled for publishing. The App Behavior Analysis tool, which is only available to free, ad-supported, and subscription apps, launches the app and checks for state-driven results to verify compliance with Roku's certification criteria. TVE, TVOD, PVOD, and vMVPD apps must include login credentials with their app certification submission.
 
@@ -99,7 +99,7 @@ All requirements with streaming hours thresholds are stated as an average number
 
 ### App definitions
 
-#### App types
+##### App types
 
 The term "app" is used throughout this document and may refer to the different app types on the Roku platform, which include but are not limited to the following:
 
@@ -110,7 +110,7 @@ The term "app" is used throughout this document and may refer to the different a
 * games.
 * utilities.
 
-#### App model types
+##### App model types
 
 Certification criteria may be applicable to one or more app model types supported by Roku, These app model types, include, but are not limited to, the following:
 
@@ -128,7 +128,7 @@ Certification criteria may be applicable to one or more app model types supporte
 
 ## Certification criteria
 
-**Last updated**: April, 2026
+**Last updated**: October, 2026
 
 Certification criteria are listed by functionality. <br />
 
@@ -206,9 +206,11 @@ Apps must adhere to [Roku’s autoplay policy](doc:autoplay).
 
 **4.12** Apps must use [Roku voice keyboards](doc:dynamic-keyboard-base) for [email](doc:dynamic-keyboard), [PIN](doc:dynamic-pinpad), and [password](doc:dynamic-keyboard) entry.
 
-**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months and apps outside the U.S. Streaming Store that have streamed more than an average of 1million hours per month over the last three months (effective October 1, 2026) must implement Roku’s [Continue Watching](doc:continue-watching) feature. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
+**4.13** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months and apps outside the U.S. Streaming Store that have streamed more than an average of 1 million hours per month over the last three months must implement Roku’s [Continue Watching](doc:continue-watching) feature. This requirement is also applicable to new apps projected to reach the specified streaming hours threshold shortly after launch. TVOD, live linear, and made-for-kids apps are excluded from this requirement.
 
-**4.14** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Instant Resume feature](doc:instant-resume) (effective October 1, 2026).
+**4.14** Apps in the U.S. Roku Streaming Store that have streamed more than an average of 5 million hours per month over the last three months must implement Roku’s [Instant Resume feature](doc:instant-resume).
+
+**4.15** Apps may not use the end user's device, network connection, or bandwidth to route network traffic for third parties (including through SDKs or libraries); operate as a proxy, relay, or exit node; join a proxy or VPN network; scrape or crawl for third parties, or collect data for third parties except as Roku expressly permits; or for any purpose not directly related to the app's stated purpose.
 
 ### 5. Deep linking
 

@@ -1,29 +1,33 @@
 ---
 title: Legal
-excerpt: ''
+excerpt: Agreements and policies that apply when you distribute content on Roku
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: Legal | Roku Developer Docs
+  description: >-
+    The agreements, policies, and requirements that apply to app developers and
+    content publishers who distribute content on the Roku platform.
   robots: index
 next:
   description: ''
 ---
-## Developer terms
+When you enroll in the Roku Developer Program, you agree to comply with the applicable terms, rules, and policies that Roku makes available to you. This applies whether you build an app or distribute your content on The Roku Channel. Your contract with Roku can include additional terms.
 
-By becoming a Roku Developer, you are subject to and agree to comply with all applicable Developer Terms, and any other terms, rules, and policies applicable to the Developer Program that Roku makes available to you.
+## Agreements and policies for all publishers
 
-- [Certification Requirements](doc:certification)
-- [Claimed Copyright Infringement Procedures](https://docs.roku.com/doc/dmca/en-us)
-- [Roku’s Address for Notices](https://docs.roku.com/doc/addressfornotices/en-us)
-- [Roku Advertising Guidelines](https://docs.roku.com/doc/advertisingguidelines/en-us)
-- [Roku Data Processing Policy for Channel and Content Providers](https://docs.roku.com/published/providerdatapolicy/en/us)
-- [Roku Trademark Guidelines](https://docs.roku.com/doc/TrademarkGuidelines/en-us)
+* [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us)
+* [Claimed Copyright Infringement Procedures](https://docs.roku.com/doc/dmca/en-us)
+* [Roku's Address for Notices](https://docs.roku.com/doc/addressfornotices/en-us)
+* [Roku Advertising Guidelines](https://docs.roku.com/doc/advertisingguidelines/en-us)
+* [Roku Data Processing Policy for Channel and Content Providers](https://docs.roku.com/published/providerdatapolicy/en/us)
+* [Roku Trademark Guidelines](https://docs.roku.com/doc/TrademarkGuidelines/en-us)
 
-## Developer agreements
+## Requirements for app developers
 
-- [Roku Distribution Agreement](https://docs.roku.com/published/developerdistribution/en/us)
-- [Developer tools license agreement](https://docs.roku.com/published/developersdk/en/us)
+If you build a Roku app, the following also apply:
+
+* [Certification Requirements](doc:certification)
+* [Developer tools license agreement](https://docs.roku.com/published/developersdk/en/us)
 
 <br />

@@ -103,7 +103,7 @@ Below is the list of manifest keys used by the profiler:
 <td>1.1, 1.2</td>
 <td></td>
 <td>Yes, if using line-levl memory profiling</td>
-<td>To use line-level profiling, this must be set to 1.2 (<code>rsg_version=1.2</code>). If it is not set to 1.2, profiling will still work correctly; however, line-level data will not be generated.<br /><br /><code>rsg_version 1.2</code> provides significant performance improvements; therefore, you should set it to 1.2 regardless whether your app is using line-level profiling.<br /><br />See [Roku Manifest for more information](doc:channel-manifest).</td>
+<td>To use line-level profiling, this must be set to 1.2 (<code>rsg_version=1.2</code>). If it is not set to 1.2, profiling will still work correctly; however, line-level data will not be generated.<br /><br /><code>rsg_version 1.2</code> provides significant performance improvements; therefore, you should set it to 1.2 regardless whether your app is using line-level profiling.<br /><br />See <a href="https://developer.roku.com/dev/docs/channel-manifest">Roku Manifest for more information</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -256,7 +256,7 @@ tab.
 
 ![roku815px - bsprofilerMemoryTab](https://image.roku.com/ZHZscHItMTc2/bsprofilerMemoryTab.png "bsprofilerMemoryTab")
 
-#### Line-Level profiling
+##### Line-Level profiling
 
 You can collect profile data for each line of BrightScript source code
 to better pinpoint high CPU and memory usage. To do this, enable
@@ -278,7 +278,7 @@ See [Profiling Values](#profiling-values) for
 more information on the CPU and memory statistics displayed in the
 tool.
 
-#### Profiling Values
+##### Profiling Values
 
 The following table describes the profile statistics displayed in the
 BrightScript profiler tool. The descriptions are applicable for the

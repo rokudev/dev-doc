@@ -36,27 +36,27 @@ The ifSGNodeBoundingRect interface can be used to query the bounding rectangle o
 
 ### boundingRect() as Dynamic
 
-#### Description
+##### Description
 
 Returns the node bounding rectangle. The bounding rectangle of a node is the axis-aligned rectangle computed by transforming the local bounding rectangle of the node by the node transformation matrix. The resulting rectangle corresponds to the node local bounding rectangle transformed into its parent node local coordinate system.
 
-#### Return Value
+##### Return Value
 
 An associative array with the node bounding rectangle.
 
 ### localBoundingRect() as Dynamic
 
-#### Description
+##### Description
 
 Returns the node local bounding rectangle. The local bounding rectangle of a node is the axis-aligned rectangle, that includes the union of the bounding rectangle of the geometry of the node, and the bounding rectangles of all of the node children, transformed into the local coordinate system of the node.
 
-#### Return Value
+##### Return Value
 
 An associative array with the node local bounding rectangle.
 
 ### sceneBoundingRect() as Dynamic
 
-#### Description
+##### Description
 
 Returns the bounding rectangle for scene components (component nodes extended from a [Scene](doc:scene) or [OverhangPanelSetScene](doc:overhangpanelsetscene) node class).
 
@@ -64,13 +64,13 @@ If this method is called before any child components have been added to the **Sc
 
 If this method is called after child components have been added that are larger than the **Scene** component, the returned bounding rectangle will be larger than the user interface dimensions.
 
-#### Return Value
+##### Return Value
 
 An associative array with the bounding rectangle.
 
 ### ancestorBoundingRect(ancestor as roSGNode) as Dynamic
 
-#### Description
+##### Description
 
 Returns the bounding rectangle of this node and all of its children in the Scene's root coordinate system, including any transformation specified in the Scene node.
 
@@ -78,23 +78,23 @@ In most cases, this will result in the bounding rectangle expressed in display c
 
 If the node is not connected to a Scene node, this will return the same value as the [boundingRect()](#boundingrect-as-dynamic) method.
 
-#### Parameters
+##### Parameters
 
 | Name     | Type     | Description                       |
 | -------- | -------- | --------------------------------- |
 | ancestor | roSGNode | The ancestor of the subject node. |
 
-#### Return Value
+##### Return Value
 
 An associative array with the bounding rectangle and all of its children in the Scene's root coordinate system.
 
 ### localSubBoundingRect(itemnumber as String) as Dynamic
 
-#### Description
+##### Description
 
 Returns the local bounding rectangle of this node's identified sub part in the node's local coordinate system. If the subpart does not exist, the node's local bounding rectangle is returned.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -115,17 +115,17 @@ Returns the local bounding rectangle of this node's identified sub part in the n
 </table>
 
 
-#### Return Value
+##### Return Value
 
 An associative array with the local bounding rectangle of the node's identified sub part.
 
 ### subBoundingRect(itemnumber as String) as Dynamic
 
-#### Description
+##### Description
 
 Returns the bounding rectangle of this node's identified sub part, as transformed by this node's transformation matrix, in its parent node's coordinate system. If the subpart does not exist, the node's bounding rectangle is returned.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -147,17 +147,17 @@ Returns the bounding rectangle of this node's identified sub part, as transforme
 
 
 
-#### Return Value
+##### Return Value
 
 An associative array with the bounding rectangle. 
 
 ### sceneSubBoundingRect(itemnumber as String) as Dynamic
 
-#### Description
+##### Description
 
 Returns the bounding rectangle of this node's subpart in its Scene's coordinate system If the subpart does not exist or if the node is not an ancestor of a Scene node, this will return the node's bounding rectangle.
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -178,7 +178,7 @@ Returns the bounding rectangle of this node's subpart in its Scene's coordinate 
 </table>
 
 
-#### Return Value
+##### Return Value
 
 An associative array with the bounding rectangle. 
 
@@ -207,11 +207,11 @@ An associative array with the bounding rectangle.
 
 ### ancestorSubBoundingRect(itemnumber as String, ancestor as roSGNode) as Object
 
-#### Description
+##### Description
 
 Returns the bounding rectangle of this node's subpart into the specified  ancestor' s coordinate system. If the subpart does not exist or if the node is not an ancestor of the specified node, this will return the node's bounding rectangle
 
-#### Parameters
+##### Parameters
 
 
 <table>
@@ -237,7 +237,7 @@ Returns the bounding rectangle of this node's subpart into the specified  ancest
 </table>
 
 
-#### Return Value
+##### Return Value
 
 An associative array with the bounding rectangle. 
 

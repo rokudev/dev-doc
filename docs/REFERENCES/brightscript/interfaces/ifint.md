@@ -25,18 +25,18 @@ next:
 
 ### GetInt() As Integer
 
-#### Description
+##### Description
 
 Gets the integer value stored in the calling Integer object. 
 
-#### Return Value
+##### Return Value
 
 The integer value stored in the calling Integer object. 
 
 ### SetInt(value As Integer) As Void
 
-#### Description
+##### Description
 
 Sets the calling Integer object to the specified integer value. 
 
-#### Parameters
+##### Parameters

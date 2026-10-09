@@ -72,20 +72,20 @@ To help developers with testing their titles and action spaces, we've
 created a simple function that overlays these screens on their app.
 Great for UX testing on FHD and HD. This brightscript file contains a function to overlay your current UI in your SceneGraph scene with a transparent safezone markup.
 
-#### Use case
+##### Use case
 
 This BrightScript file can be added to an app before publishing to avoid issues with truncated overhangs, posters, etc. Note: Works with apps built in Roku SceneGraph
 
-#### How to run this sample
+##### How to run this sample
 
 - Add the SafeZone.brs file to your source folder in your SceneGraph app
 - Call the method SafeZone(scene) underneath your screen.show() line in your main.brs
 
-#### Features
+##### Features
 
 Creates a transparent SafeZone markup on top of any SceneGraph app
 
-#### App Flow
+##### App Flow
 
 **Event:** Once the app starts, a transparent overlay will show on top of the app UI
 

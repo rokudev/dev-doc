@@ -19,7 +19,7 @@ The roDeviceInfo component sends the roDeviceInfoEvent with the following predic
 
 Checks if the device status has changed. This method returns true if the device status has changed; otherwise, it returns false.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Checks the current status of the device. This method returns an roAssociativeArray containing one of the following members:
 
@@ -35,12 +35,12 @@ Checks the current status of the device. This method returns an roAssociativeArr
     <tr>
       <td>audioGuideEnabled</td>
       <td>Boolean</td>
-      <td>True if the screen reader is enabled. The audioGuideEnabled event will only ever get fired if [ifDeviceInfo.EnableAudioGuideChangedEvent(true)](doc:ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic) is called before entering the message loop.</td>
+      <td>True if the screen reader is enabled. The audioGuideEnabled event will only ever get fired if <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#enableaudioguidechangedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableAudioGuideChangedEvent(true)</a> is called before entering the message loop.</td>
     </tr>
     <tr>
       <td>exitedScreensaver</td>
       <td>Boolean</td>
-      <td>True if the screensaver was exited. The exitedScreensaver event will only ever get fired if [ifDeviceInfo.EnableScreensaverExitedEvent(true)](doc:ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic) is called before entering the message loop.</td>
+      <td>True if the screensaver was exited. The exitedScreensaver event will only ever get fired if <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#enablescreensaverexitedeventenable-as-boolean-as-dynamic">ifDeviceInfo.EnableScreensaverExitedEvent(true)</a> is called before entering the message loop.</td>
     </tr>
     <tr>
       <td>appFocused</td>
@@ -50,12 +50,12 @@ Checks the current status of the device. This method returns an roAssociativeArr
     <tr>
       <td>linkStatus</td>
       <td>Boolean</td>
-      <td>True if the device currently seems to have an active network connection. The linkStatus event will only ever get fired if [ifDeviceInfo.EnableLinkStatusEvent(true)](doc:ifdeviceinfo#enablelinkstatuseventenable-as-boolean-as-boolean) is called before entering the message loop.</td>
+      <td>True if the device currently seems to have an active network connection. The linkStatus event will only ever get fired if <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#enablelinkstatuseventenable-as-boolean-as-boolean">ifDeviceInfo.EnableLinkStatusEvent(true)</a> is called before entering the message loop.</td>
     </tr>
     <tr>
       <td>internetStatus</td>
       <td>Boolean</td>
-      <td>True if the device currently has a valid connection to the external internet. This status is determined by the device's ability to reach Roku's backend services. The internetStatus event will only be fired if [ifDeviceInfo.EnableInternetStatusEvent(true)](doc:ifdeviceinfo#enableinternetstatuseventenable-as-boolean-as-boolean) is called. Note that a device may have <code>linkStatus</code> as true (connected to a router) while <code>internetStatus</code> remains false (no ISP connectivity).</td>
+      <td>True if the device currently has a valid connection to the external internet. This status is determined by the device's ability to reach Roku's backend services. The internetStatus event will only be fired if <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#enableinternetstatuseventenable-as-boolean-as-boolean">ifDeviceInfo.EnableInternetStatusEvent(true)</a> is called. Note that a device may have <code>linkStatus</code> as true (connected to a router) while <code>internetStatus</code> remains false (no ISP connectivity).</td>
     </tr>
     <tr>
       <td>generalMemoryLevel</td>
@@ -72,12 +72,12 @@ Checks the current status of the device. This method returns an roAssociativeArr
     <tr>
       <td>audioCodecCapabilityChanged</td>
       <td>Boolean</td>
-      <td>The audio codec capability has changed if true. If your application receives this event, you can check the current audio playback capability using the [`roDeviceInfo.CanDecodeAudio(audio_format as Object)`](doc:ifdeviceinfo#candecodeaudioaudio_format-as-object-as-object) and [`roDeviceInfo.GetAudioDecodeInfo()`](doc:ifdeviceinfo#getaudiodecodeinfo-as-object) methods.<br /><br />This event is only fired if [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo#enablecodeccapchangedeventenable-as-boolean) is called before entering the message loop.</td>
+      <td>The audio codec capability has changed if true. If your application receives this event, you can check the current audio playback capability using the <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#candecodeaudioaudio_format-as-object-as-object">`roDeviceInfo.CanDecodeAudio(audio_format as Object)`</a> and <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#getaudiodecodeinfo-as-object">`roDeviceInfo.GetAudioDecodeInfo()`</a> methods.<br /><br />This event is only fired if <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#enablecodeccapchangedeventenable-as-boolean">`ifDeviceInfo.EnableCodecCapChangedEvent(true)`</a> is called before entering the message loop.</td>
     </tr>
     <tr>
       <td>videoCodecCapabilityChanged</td>
       <td>Boolean</td>
-      <td>The video codec capability has changed if true. If your application receives this event, you can check the current video playback capability using the [`roDeviceInfo.CanDecodeVideo(video_format as Object)`](doc:ifdeviceinfo#candecodevideovideo_format-as-object-as-object) method.<br /><br />This event is only fired if [`ifDeviceInfo.EnableCodecCapChangedEvent(true)`](doc:ifdeviceinfo#enablecodeccapchangedeventenable-as-boolean) is called before entering the message loop.</td>
+      <td>The video codec capability has changed if true. If your application receives this event, you can check the current video playback capability using the <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#candecodevideovideo_format-as-object-as-object">`roDeviceInfo.CanDecodeVideo(video_format as Object)`</a> method.<br /><br />This event is only fired if <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#enablecodeccapchangedeventenable-as-boolean">`ifDeviceInfo.EnableCodecCapChangedEvent(true)`</a> is called before entering the message loop.</td>
     </tr>
   </tbody>
 </table>
@@ -88,7 +88,7 @@ Indicates whether the user has changed the closed caption mode or track.  This m
 
 Call the [GetInfo()](#getinfo-as-object) method to get the caption mode.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 Indicates the current global setting for the Mode property, which may be one of the following values:
 
@@ -99,9 +99,9 @@ Indicates the current global setting for the Mode property, which may be one of 
 
 ### EnableValidClockEvent(enable as Boolean)
 
-Indicates whether the RokuOS has successfully connected to the network and contacted the timeserver in order to set the device's clock. Call the [GetInfo()](#getinfo-as-object) method to confirm that the system clock is valid.
+Indicates whether the Roku OS has successfully connected to the network and contacted the timeserver in order to set the device's clock. Call the [GetInfo()](#getinfo-as-object) method to confirm that the system clock is valid.
 
-#### GetInfo() as Object
+##### GetInfo() as Object
 
 This method returns an roAssociativeArray containing a **validClock** field that indicates whether the system clock is valid.
 

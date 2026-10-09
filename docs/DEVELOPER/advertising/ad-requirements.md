@@ -41,13 +41,13 @@ This document lists the requirements for displaying video and interactive ads in
       <td>ADS 1.1</td>
       <td>SDKs and libraries</td>
       <td>Partners must disclose integration/use of all non-Roku SDKs, libraries, or other software systems and external advertising partners (for example, DSPs) that enable video, audio, or banner ad insertion, and Roku has the right to approve or deny such non-Roku SDKs, libraries, or other software systems.</td>
-      <td>[Roku Advertising Framework overview](doc:advertising)</td>
+      <td><a href="https://developer.roku.com/dev/docs/advertising">Roku Advertising Framework overview</a></td>
     </tr>
     <tr>
       <td>ADS 1.2</td>
       <td>Ad terms</td>
       <td>Apps that have an inventory relationship with Roku must meet the advertising terms specified in all applicable agreements.</td>
-      <td>[Video Advertising](doc:video-advertisements)</td>
+      <td><a href="https://developer.roku.com/dev/docs/video-advertisements">Video Advertising</a></td>
     </tr>
     <tr>
       <td>ADS 1.3</td>
@@ -59,13 +59,13 @@ This document lists the requirements for displaying video and interactive ads in
       <td>ADS 1.4</td>
       <td>Demand API</td>
       <td>Apps in the U.S. Streaming Store that have both streamed more than an average of 100,000 hours per month and averaged more than 10,000 new installs per month over the last three months may be required to implement the Demand API as part of their integration (this requirement may also be applicable to new apps projected to reach the specified thresholds shortly after launch).<br /><br />Apps outside the U.S. Streaming Store that have streamed more than an average of 200,000 hours per month over the last three months, and new apps outside the U.S. Streaming Store that are projected to reach this threshold, may also be required to implement the Demand API.</td>
-      <td>[Implementing the Demand API](doc:demand-api)</td>
+      <td><a href="https://developer.roku.com/dev/docs/demand-api">Implementing the Demand API</a></td>
     </tr>
     <tr>
       <td>ADS 1.5</td>
       <td>RFI screen for authenticated ad-monetized apps</td>
-      <td>Authenticated ad-monetized apps must use the [getUserData](doc:channelstore#getuserdata) command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the channel. Only if the user declines the request may apps require the customer to manually enter their information.</td>
-      <td>[Signup requirements and best practices](doc:signup-best-practices)<br /><br />[Sign-in requirements and best practices](doc:signin-best-practices)</td>
+      <td>Authenticated ad-monetized apps must use the <a href="https://developer.roku.com/dev/docs/channelstore#getuserdata">getUserData</a> command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the channel. Only if the user declines the request may apps require the customer to manually enter their information.</td>
+      <td><a href="https://developer.roku.com/dev/docs/signup-best-practices">Signup requirements and best practices</a><br /><br /><a href="https://developer.roku.com/dev/docs/signin-best-practices">Sign-in requirements and best practices</a></td>
     </tr>
   </tbody>
 </table>
@@ -85,14 +85,14 @@ This document lists the requirements for displaying video and interactive ads in
     <tr>
       <td>ADS 2.1</td>
       <td>Roku ID for Advertisers (RIDA) identifier  Limit Ad Tracking (LAT) flag</td>
-      <td>Apps must pass Roku's ID for Advertisers (RIDA) and "limit ad tracking" (LAT) value on ad server requests. If the user has opted out, apps must still pass the temporary ID returned by the [rodeviceInfo.GetRida()](doc:ifdeviceinfo#getrida-as-string) function to support frequency capping (this temporary ID is different than the UUID returned if the user has not opted out; it expires after 30 days).</td>
-      <td>[GetRida()](doc:ifdeviceinfo#getrida-as-string)<br /><br /> [IsRIDADisabled()asBoolean](doc:ifdeviceinfo#isridadisabled-as-boolean) <br /><br />[URL parameter macros](doc:integrating-roku-advertising-framework#url-parameter-macros)</td>
+      <td>Apps must pass Roku's ID for Advertisers (RIDA) and "limit ad tracking" (LAT) value on ad server requests. If the user has opted out, apps must still pass the temporary ID returned by the <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#getrida-as-string">rodeviceInfo.GetRida()</a> function to support frequency capping (this temporary ID is different than the UUID returned if the user has not opted out; it expires after 30 days).</td>
+      <td><a href="https://developer.roku.com/dev/docs/ifdeviceinfo#getrida-as-string">GetRida()</a><br /><br /> <a href="https://developer.roku.com/dev/docs/ifdeviceinfo#isridadisabled-as-boolean">IsRIDADisabled()asBoolean</a> <br /><br /><a href="https://developer.roku.com/dev/docs/integrating-roku-advertising-framework#url-parameter-macros">URL parameter macros</a></td>
     </tr>
     <tr>
       <td>ADS 2.2</td>
       <td>Child-directed content</td>
       <td>Apps with child-directed content must make ad requests that indicate that content is child-directed when serving ads during child-directed content.</td>
-      <td>[kidsContent parameter in the setContentGenre() method](doc:raf-api#setcontentgenregenres-as-string-kidscontent-as-boolean) <br /><br />[ROKU\_ADS\_KIDS\_CONTENT URL parameter macro](doc:integrating-roku-advertising-framework#url-parameter-macros)</td>
+      <td><a href="https://developer.roku.com/dev/docs/raf-api#setcontentgenregenres-as-string-kidscontent-as-boolean">kidsContent parameter in the setContentGenre() method</a> <br /><br /><a href="https://developer.roku.com/dev/docs/integrating-roku-advertising-framework#url-parameter-macros">ROKU\_ADS\_KIDS\_CONTENT URL parameter macro</a></td>
     </tr>
   </tbody>
 </table>
@@ -113,13 +113,13 @@ This document lists the requirements for displaying video and interactive ads in
       <td>ADS 3.1</td>
       <td>Channel ID</td>
       <td>Apps must pass their Roku channel ID in ad server requests to Roku.</td>
-      <td>[roChannelInfo.getId() function](doc:ifappinfo#getid-as-string)<br /><br />[ROKU\_ADS\_APP\_ID URL parameter macro populated by RAF](doc:integrating-roku-advertising-framework#url-parameter-macros)</td>
+      <td><a href="https://developer.roku.com/dev/docs/ifappinfo#getid-as-string">roChannelInfo.getId() function</a><br /><br /><a href="https://developer.roku.com/dev/docs/integrating-roku-advertising-framework#url-parameter-macros">ROKU\_ADS\_APP\_ID URL parameter macro populated by RAF</a></td>
     </tr>
     <tr>
       <td>ADS 3.2</td>
       <td>User agent</td>
       <td>Apps must use the Roku-generated device user agent in all server-side ad requests.</td>
-      <td>[RAF integration guide](doc:integrating-roku-advertising-framework#3-user-agent-requirements)</td>
+      <td><a href="https://developer.roku.com/dev/docs/integrating-roku-advertising-framework#3-user-agent-requirements">RAF integration guide</a></td>
     </tr>
   </tbody>
 </table>

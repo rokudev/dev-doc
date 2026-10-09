@@ -46,7 +46,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>ContentNode</td>
       <td>NULL</td>
       <td>READ\_WRITE</td>
-      <td>The ContentNode with the [Content Meta-Data](doc:content-metadata) for the video, or a video playlist (a sequence of videos) to be played.<br /><br />If a video playlist is to be played, the children of this ContentNode comprise the playlist, and each ContentNode child must have all attributes required to play that video. For example, if the videos "A" and "B" are to be played, three ContentNodes must be created: the parent ContentNode (which is largely ignored), one ContentNode child for "A," and one ContentNode child for "B." The parent node is set into this content field, and when video playback is started, all of its children will be played in sequence. Any changes made to the playlist after playback has started are ignored. See the <code>contentIsPlaylist</code> and <code>contentIndex</code> fields, for more information on playlists.</td>
+      <td>The ContentNode with the <a href="https://developer.roku.com/dev/docs/content-metadata">Content Meta-Data</a> for the video, or a video playlist (a sequence of videos) to be played.<br /><br />If a video playlist is to be played, the children of this ContentNode comprise the playlist, and each ContentNode child must have all attributes required to play that video. For example, if the videos "A" and "B" are to be played, three ContentNodes must be created: the parent ContentNode (which is largely ignored), one ContentNode child for "A," and one ContentNode child for "B." The parent node is set into this content field, and when video playback is started, all of its children will be played in sequence. Any changes made to the playlist after playback has started are ignored. See the <code>contentIsPlaylist</code> and <code>contentIndex</code> fields, for more information on playlists.</td>
     </tr>
     <tr>
       <td>playStartInfo</td>
@@ -61,7 +61,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 
       <td />
     
-      <td>READ\_ONL</td>
+      <td>READ\_ONLY</td>
       <td>Indicates whether the DRM license was acquired. If a failure occurs, this field provides additional details about the error. The roAssociativeArray contains the following fields:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>response</td><td>string</td><td>The server response. If a license is not retrieved, the response is empty and the HTTP response code is returned instead.</td></tr><tr><td>status</td><td>string</td><td>The HTTP response code.</td></tr><tr><td>keysystem</td><td>string</td><td>The DRM technology used.</td></tr><tr><td>duration</td><td>string</td><td>The total time elapsed in sending a request to the license server and receiving a response (in milliseconds).</td></tr></tbody></table><br /></td>
     </tr>
     <tr>
@@ -93,10 +93,10 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>Sets the desired play state for the video, such as starting or stopping the video play. Getting the value of this field returns the most recent value set, or none if no value has been set. To dynamically monitor the actual state of the video, see the <code>state</code> field.<br /><br />The play and stop commands to commence and discontinue playback should not be used to implement trick modes like rewind, or replay. For that use the <code>seek</code> field.<br /><br /><table><thead><tr><th>Option</th><th>Effect</th></tr></thead><tbody><tr><td>none</td><td>No play state set</td></tr><tr><td>play</td><td>Start video play</td></tr><tr><td>stop</td><td>Stop video play</td></tr><tr><td>pause</td><td>Pause video play</td></tr><tr><td>resume</td><td>Resume video play after a pause</td></tr><tr><td>replay</td><td>Replay video</td></tr><tr><td>prebuffer</td><td>Starts buffering the video stream before the Video node actually begins playback. Only one video stream can be buffering in the application at any time. Setting the <code>control</code> field to <code>prebuffer</code> for another video stream after setting <code>prebuffer</code> for a previous video stream stops the buffering of the previous video stream.</td></tr><tr><td>skipcontent</td><td>Skip the currently-playing content and begin playing the next content in the playlist. If the content is not a playlist, or if the current content is the end of the playlist, this will end playback.</td></tr></tbody></table></td>
     </tr>
     <tr>
-      <td>asyncStopSemantics<br /><br /><em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em></td>
+      <td>asyncStopSemantics<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-125">Roku OS 12.5</a></em></td>
       <td>boolean</td>
       <td>false</td>
-      <td>WRITE</td>
+      <td>WRITE\_ONLY</td>
       <td>Indicates whether the "STOP" command is executed asynchronously (true) or synchronously (false). <br /><br />By default, the STOP command is executed synchronously, which blocks the UI thread. Enabling this field makes the STOP command non-blocking, which enables the video to be switched faster. <br /><br />When this field is enabled, the <code>state</code> field is set to "stopping" when the asynchronous stop begins. The <code>state</code> field then changes to "stopped" once the stop has been completed.<br /><br />Any other media player component calls on the UI thread that require the Video node to be re-instantiated should be blocked until the asynchronous stop has been completed (for example, updating the <code>control</code> field to "Play" or "Prebuffer" or updating the <code>seek</code> field). This is because a video node in the "stopping" state is still using the underlying media player, which is not available at that time. As a result, performing these types of operations on a different video while in the "stopping" state may result in a playback failure.</td>
     </tr>
     <tr>
@@ -104,21 +104,21 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>value string</td>
       <td>none</td>
       <td>READ\_ONLY</td>
-      <td>Describes the current video play state, such as if the video play has been paused.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>none</td><td>No current play state</td></tr><tr><td>buffering</td><td>Video stream is currently buffering</td></tr><tr><td>playing</td><td>Video is currently playing</td></tr><tr><td>paused</td><td>Video is currently paused</td></tr><tr><td>stopping<br /><br /><em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em></td><td>Video is in the process of being stopped. This value is only returned if the <code>asyncStopSemantics</code> field is enabled.</td></tr><tr><td>stopped</td><td>Video is currently stopped</td></tr><tr><td>finished</td><td>Video has successfully completed playback</td></tr><tr><td>error</td><td>An error has occurred in the video play. The error code, message, and diagnostics can be found in the <code>errorCode</code>, <code>errorMsg</code>, and <code>errorStr</code> fields respectively.</td></tr></tbody></table></td>
+      <td>Describes the current video play state, such as if the video play has been paused.<br /><br /><table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>none</td><td>No current play state</td></tr><tr><td>buffering</td><td>Video stream is currently buffering</td></tr><tr><td>playing</td><td>Video is currently playing</td></tr><tr><td>paused</td><td>Video is currently paused</td></tr><tr><td>stopping<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-125">Roku OS 12.5</a></em></td><td>Video is in the process of being stopped. This value is only returned if the <code>asyncStopSemantics</code> field is enabled.</td></tr><tr><td>stopped</td><td>Video is currently stopped</td></tr><tr><td>finished</td><td>Video has successfully completed playback</td></tr><tr><td>error</td><td>An error has occurred in the video play. The error code, message, and diagnostics can be found in the <code>errorCode</code>, <code>errorMsg</code>, and <code>errorStr</code> fields respectively.</td></tr></tbody></table></td>
     </tr>
     <tr>
       <td>errorCode</td>
       <td>integer</td>
       <td>0</td>
       <td>READ\_ONLY</td>
-      <td>The error code associated with the video play error set in the <code>state</code> field: <pre><code>-  0    no error                                                     <br />- -1    network error (server down or unresponsive, server is unreachable, network setup problem on the client).<br />- -2    connection timed out                                         <br />- -3    unknown/unspecified or generic Error                         <br />- -4    empty list; no streams were specified to play                <br />- -5    media error; the media format is unknown or unsupported      <br />- -6    DRM error</code></pre><br />Use the <strong>errorStr</strong> and and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
+      <td>The error code associated with the video play error set in the <code>state</code> field: <pre><code>-  0    no error                                                     <br />- -1    network error (server down or unresponsive, server is unreachable, network setup problem on the client).<br />- -2    connection timed out                                         <br />- -3    unknown/unspecified or generic Error                         <br />- -4    empty list; no streams were specified to play                <br />- -5    media error; the media format is unknown or unsupported      <br />- -6    DRM error</code></pre><br />Use the <strong>errorStr</strong> and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
     </tr>
     <tr>
       <td>errorMsg</td>
       <td>string</td>
       <td />
       <td>READ\_ONLY</td>
-      <td>An error message describing the video play error set in the <code>state</code> field.<br /><br />Use the <strong>errorStr</strong> and and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
+      <td>An error message describing the video play error set in the <code>state</code> field.<br /><br />Use the <strong>errorStr</strong> and <strong>errorInfo</strong> fields for more descriptive diagnostic information to help identify and resolve the cause of the error.</td>
     </tr>
     <tr>
       <td>errorStr</td>
@@ -177,46 +177,46 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>playbackActionButtonFocusedTextFont</td>
       <td>Font</td>
       <td>SmallBoldSystemFont</td>
-      <td>WRITE</td>
+      <td>WRITE\_ONLY</td>
       <td>Specifies the font of the button label when the button has key focus.</td>
     </tr>
     <tr>
       <td>playbackActionButtonUnfocusedTextFont</td>
       <td>Font</td>
       <td>SmallSystemFont</td>
-      <td>WRITE</td>
+      <td>WRITE\_ONLY</td>
       <td>Specifies the font of the button label when the button does not have key focus.</td>
     </tr>
     <tr>
       <td>playbackActionButtonFocusedTextColor</td>
       <td>Color</td>
       <td>OX121212FF</td>
-      <td>WRITE</td>
+      <td>WRITE\_ONLY</td>
       <td>Specifies the color of the button label text when the button has key focus.</td>
     </tr>
     <tr>
       <td>playbackActionButtonUnfocusedTextColor</td>
       <td>Color</td>
       <td>0xEFEFEFFF</td>
-      <td>WRITE</td>
+      <td>WRITE\_ONLY</td>
       <td>Specifies the color of the button label text when the button does not have key focus.</td>
     </tr>
     <tr>
       <td>playbackActionButtonFocusIndicatorBlendColor</td>
       <td>Color</td>
       <td>-</td>
-      <td>WRITE</td>
+      <td>WRITE\_ONLY</td>
       <td>Specifies the button background color when the button has key focus.</td>
     </tr>
     <tr>
-      <td>subtitleSelectionPreferences<br /><br />(<em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em>)</td>
+      <td>subtitleSelectionPreferences<br /><br />(<em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-125">Roku OS 12.5</a></em>)</td>
       <td>oAssociativeArray</td>
       <td>\{ }</td>
       <td>WRITE\_ONLY</td>
       <td>The significance and priority order of the attributes and values for the subtitle tracks available in the video stream.<br /><br /> Provide the attribute fields from highest to lowest significance (for example, if <strong>language</strong> should take precedence over all other attributes, list it first). For the subtitle track languages, provide the language codes from highest to lowest priority (for example, if Spanish for Latin America and the Caribbean \["es-419"] has precedence over Spanish \["es"], list the language codes in the following order: \["es-419", "es"].<br /><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>values</td><td>roArray of roAssociativeArrays</td><td>Specify values for the following subtitle track attributes. List the attributes from highest to lowest significance.<br />$\{subtitle-selection-values-table}</td></tr><tr><td>overrideSystem</td><td>boolean</td><td>Specify whether to use the app's preferences over the system preferences (true) or use the app's preferences only when the system preferences do not match any of the available tracks (false), which allows the app to provide additional rules in this case. The default value is false.</td></tr></tbody></table><br /><br /><strong>Example</strong><br /><pre><code><code>\<br />video.subtitleSelectionPreferences = \\\{ values: \[\<br />    \\\{ language: \["es-419", "es", "es-\*", "fr", "en-US", "en-UK", "en"] \\},\<br />    \\\{ caption: "true" \\},\<br />    \\\{ descriptive: \["false"] \\},\<br />    \\\{ easyReader: "true" \\} ],\<br />    overrideSystem: true \\}\<br /></code></code></pre><br /><strong>Explanation</strong><br /><br />The subititle language with the highest priority is "es" with a country code of "419". The next highest priority language is "es" with no country code, and then "es" with any country code.</td>
     </tr>
     <tr>
-      <td>audioSelectionPreferences<br /><br />(<em>Available since [Roku OS 12.5](doc:release-notes#roku-os-125)</em>)</td>
+      <td>audioSelectionPreferences<br /><br />(<em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-125">Roku OS 12.5</a></em>)</td>
       <td>roAssociativeArray</td>
       <td>\{ }</td>
       <td>WRITE\_ONLY</td>
@@ -257,7 +257,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>time</td>
       <td>invalid</td>
       <td>READ\_ONLY</td>
-      <td>Time of the current position in the stream. Either UTC time or elapsed since start of stream depending on content type. <br /><br />As of [Roku OS 9.3](doc:release-notes#roku-os-93), when the video is paused, the position is recorded for that pause event. This means that playing, pausing, and resuming a video generates three separate positions.</td>
+      <td>Time of the current position in the stream. Either UTC time or elapsed since start of stream depending on content type. <br /><br />As of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-93">Roku OS 9.3</a>, when the video is paused, the position is recorded for that pause event. This means that playing, pausing, and resuming a video generates three separate positions.</td>
     </tr>
     <tr>
       <td>positionInfo</td>
@@ -399,7 +399,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>associative array</td>
       <td>\{ }</td>
       <td>READ\_ONLY</td>
-      <td>Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>hdrModeStr</td><td>string</td><td>HDR format of the content, which may be one of the following values: "invalid", "unknown", "none", "hdr10", "dolby\_vision", "hlg10", "hdr10", "sl-hdr2".</td></tr><tr><td>segBitrateBps</td><td>integer</td><td>Bitrate of the segment in bits per second</td></tr><tr><td>segSequence</td><td>integer</td><td>The sequence number of the segment in the video</td></tr><tr><td>segStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>segUrl</td><td>string</td><td>URL of the segment</td></tr><tr><td>segType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>segTypeStr</td><td>String</td><td>Type of data in the segment:  "audio", "video", "captions",  "mux"</td></tr><tr><td>latency</td><td>integer</td><td>The time, in milliseconds, between the current live edge (or most recent available media segment on the CDN) and the segment currently being played.</td></tr><tr><td>path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: \<period>/\<adaptset>/\<repr>/\<segment></td></tr><tr><td>width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr></tbody></table></td>
+      <td>Information about the video segment that is currently streaming. This is only meaningful for segmented video transports, such as DASH and HLS. The associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>hdrModeStr</td><td>string</td><td>HDR format of the content, which may be one of the following values: "invalid", "unknown", "none", "hdr10", "dolby\_vision", "hlg10", "hdr10+", "sl-hdr2".</td></tr><tr><td>segBitrateBps</td><td>integer</td><td>Bitrate of the segment in bits per second</td></tr><tr><td>segSequence</td><td>integer</td><td>The sequence number of the segment in the video</td></tr><tr><td>segStart</td><td>time</td><td>The start time of the segment from the start of the video, specified in seconds</td></tr><tr><td>segUrl</td><td>string</td><td>URL of the segment</td></tr><tr><td>segType</td><td>integer</td><td>Type of data in the segment: 1=audio, 2=video, 3=captions, 0=mux</td></tr><tr><td>segTypeStr</td><td>String</td><td>Type of data in the segment:  "audio", "video", "captions",  "mux"</td></tr><tr><td>latency</td><td>integer</td><td>The time, in milliseconds, between the current live edge (or most recent available media segment on the CDN) and the segment currently being played.</td></tr><tr><td>path</td><td>string</td><td>A path indicating the Period, AdaptationSet and Representation that is played. This is in UNIX directory notation as: \<period>/\<adaptset>/\<repr>/\<segment></td></tr><tr><td>width</td><td>integer</td><td>For video segments, the width of the encoded video picture</td></tr><tr><td>height</td><td>integer</td><td>For video segments, the height of the encoded video picture</td></tr></tbody></table></td>
     </tr>
     <tr>
       <td>downloadedSegment</td>
@@ -427,13 +427,13 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>roAssociativeArray</td>
       <td>\[]</td>
       <td>READ\_WRITE</td>
-      <td>Contains the information about HLS and DASH standard thumbnail tiles as they are discovered within the manifest for streams which contain them.<br /><br />This field was first introduced (for VOD only) starting in [Roku OS 9.1](doc:release-notes#roku-os-91). Starting with [Roku OS 11.0](doc:release-notes#roku-os-110), the app can enable this field for HLS and DASH live streams containing standard thumbnails by setting enableThumbnailTilesDuringLive to true.<br /><br /><blockquote><p>For Roku OS releases before 9.4, the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: tile\_set}(string to associative array)</p><p>For [Roku OS 9.4](doc:release-notes#roku-os-94) and later,  the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: \[tile\_set, tile\_set, tile\_set,...]}(string to array of associative arrays). This format allows discontinuous tile\_sets of the same resolution to be grouped together as a "choice" for display.</p></blockquote><br /><br />The <strong>tile\_id</strong> field is a unique string identifier for the <strong>tile\_set</strong>, which is an associative array containing the attributes of the tile set as well as information about the thumbnails.<br /><br />The <strong>tile\_set</strong> field contains the following fields:<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>htiles</td><td>integer</td><td>0</td><td>Horizontal number of thumbnails in a tile (columns.)</td></tr><tr><td>vtiles</td><td>integer</td><td>0</td><td>Vertical number of thumbnails in a tile (rows.)</td></tr><tr><td>width</td><td>integer</td><td>0</td><td>Number of horizontal pixels in a thumbnail (this is not the tile as the one in the DASH spec).</td></tr><tr><td>height</td><td>integer</td><td>0</td><td>Number of vertical pixels in a thumbnail (this is not the same tile as the one in the DASH spec).</td></tr><tr><td>bandwidth</td><td>integer</td><td>0</td><td>Max tile size in bits / duration.</td></tr><tr><td>duration</td><td>float</td><td>0.0</td><td>Duration of one tile in seconds (assuming a full tile).</td></tr><tr><td>initial\_time<br /></td><td>float</td><td>0.0</td><td>Presentation start time of current <strong>tile\_set</strong> in seconds. Thumbnails in tiles beginning before this time should be skipped, and the first relevant thumbnail duration should be updated accordingly.</td></tr><tr><td>final\_time</td><td>float</td><td>0.0</td><td>End time of current tile\_set in seconds.</td></tr><tr><td>tiles</td><td>roArray</td><td>\[]</td><td>Contains information about each tile in the <strong>tile\_set</strong>. This contains the following fields: <br />$\{tiles-list}</td></tr></tbody></table></td>
+      <td>Contains the information about HLS and DASH standard thumbnail tiles as they are discovered within the manifest for streams which contain them.<br /><br />This field was first introduced (for VOD only) starting in <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-91">Roku OS 9.1</a>. Starting with <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-110">Roku OS 11.0</a>, the app can enable this field for HLS and DASH live streams containing standard thumbnails by setting enableThumbnailTilesDuringLive to true.<br /><br /><blockquote><p>For Roku OS releases before 9.4, the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: tile\_set}(string to associative array)</p><p>For <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-94">Roku OS 9.4</a> and later,  the <strong>thumbnailTiles</strong> associative array has the following structure: \{tile\_id: \[tile\_set, tile\_set, tile\_set,...]}(string to array of associative arrays). This format allows discontinuous tile\_sets of the same resolution to be grouped together as a "choice" for display.</p></blockquote><br /><br />The <strong>tile\_id</strong> field is a unique string identifier for the <strong>tile\_set</strong>, which is an associative array containing the attributes of the tile set as well as information about the thumbnails.<br /><br />The <strong>tile\_set</strong> field contains the following fields:<br /><br /><table><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>htiles</td><td>integer</td><td>0</td><td>Horizontal number of thumbnails in a tile (columns.)</td></tr><tr><td>vtiles</td><td>integer</td><td>0</td><td>Vertical number of thumbnails in a tile (rows.)</td></tr><tr><td>width</td><td>integer</td><td>0</td><td>Number of horizontal pixels in a thumbnail (this is not the tile as the one in the DASH spec).</td></tr><tr><td>height</td><td>integer</td><td>0</td><td>Number of vertical pixels in a thumbnail (this is not the same tile as the one in the DASH spec).</td></tr><tr><td>bandwidth</td><td>integer</td><td>0</td><td>Max tile size in bits / duration.</td></tr><tr><td>duration</td><td>float</td><td>0.0</td><td>Duration of one tile in seconds (assuming a full tile).</td></tr><tr><td>initial\_time<br /></td><td>float</td><td>0.0</td><td>Presentation start time of current <strong>tile\_set</strong> in seconds. Thumbnails in tiles beginning before this time should be skipped, and the first relevant thumbnail duration should be updated accordingly.</td></tr><tr><td>final\_time</td><td>float</td><td>0.0</td><td>End time of current tile\_set in seconds.</td></tr><tr><td>tiles</td><td>roArray</td><td>\[]</td><td>Contains information about each tile in the <strong>tile\_set</strong>. This contains the following fields: <br />$\{tiles-list}</td></tr></tbody></table></td>
     </tr>
     <tr>
       <td>trickPlayBackgroundOverlay</td>
       <td>uri</td>
       <td>""</td>
-      <td>WRITE</td>
+      <td>WRITE\_ONLY</td>
       <td>The background overlay to be displayed whenever the playback UI is visible during the video playback experience.</td>
     </tr>
   </tbody>
@@ -471,7 +471,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>Boolean</td>
 <td>true</td>
 <td>READ_WRITE</td>
-<td>If set to true (the default), the entire Video node user interface (such as ProgressBar and TrickPlayBar nodes, and BIF navigation) appear in response to stream events and remote control key presses.<br /><br />If set to false, most of the Video node user interface will not be shown, and the application is expected to implement the UI. The one exception is the closed-caption dialog, which always appears when the video is playing fullscreen (either full height or full width) and the user presses the Options (*) button.<br /><br />When using the [Roku Advertising Framework (RAF)](doc:advertising), the RAF library may temporarily set this field to false while playing ads.</td>
+<td>If set to true (the default), the entire Video node user interface (such as ProgressBar and TrickPlayBar nodes, and BIF navigation) appear in response to stream events and remote control key presses.<br /><br />If set to false, most of the Video node user interface will not be shown, and the application is expected to implement the UI. The one exception is the closed-caption dialog, which always appears when the video is playing fullscreen (either full height or full width) and the user presses the Options (*) button.<br /><br />When using the <a href="https://developer.roku.com/dev/docs/advertising">Roku Advertising Framework (RAF)</a>, the RAF library may temporarily set this field to false while playing ads.</td>
 </tr>
 <tr>
 <td>enableTrickPlay</td>
@@ -630,17 +630,17 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <td>The track identifier. The value of this field may be used to select the subtitle track.</td>
 </tr>
 <tr>
-<td>HasAccessibilityDescription<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
+<td>HasAccessibilityDescription<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td>
 <td>boolean</td>
 <td>HLS: represents "public.accessibility.describes-music-and-sound."</td>
 </tr>
 <tr>
-<td>HasAccessibilityCaption<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
+<td>HasAccessibilityCaption<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td>
 <td>boolean</td>
 <td>HLS: represents "public.accessibility.transcribes-spoken-dialog." <br /><br />DASH: Subtitle track contains captions</td>
 </tr>
 <tr>
-<td>HasAccessibilitySign<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
+<td>HasAccessibilitySign<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td>
 <td>boolean</td>
 <td>DASH: Subtitle track contains a sign-language interpretation of an audio component info.</td>
 </tr>
@@ -900,10 +900,10 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
       <td>array of associative arrays</td>
       <td>\[ ] empty array</td>
       <td>READ\_ONLY</td>
-      <td>Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>Name</td><td>string</td><td>Descriptive name of the audio track</td></tr><tr><td>Track</td><td>string</td><td>The track identifier. The value of this field may be used to select the audio track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-video." <br /><br />DASH: Audio track contains a textual description (intended for audio synthesis) or an audio description describing a visual component.</td></tr><tr><td>HasAccessibilityEAI<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td><td>boolean</td><td>DASH: Audio track contains an element for improved intelligibility of the dialogue \[Enhanced Audio Intelligibility].</td></tr></tbody></table><br /><br />The field also retrieves audio description tracks which are typically seen on broadcast TV. An audio description track is mixed with the main audio track.</td>
+      <td>Each associative array has the following entries:<br /><br /><table><thead><tr><th>Key</th><th>Type</th><th>Value</th></tr></thead><tbody><tr><td>Language</td><td>string</td><td>ISO 639-2 three-letter language code</td></tr><tr><td>Name</td><td>string</td><td>Descriptive name of the audio track</td></tr><tr><td>Track</td><td>string</td><td>The track identifier. The value of this field may be used to select the audio track.</td></tr><tr><td>HasAccessibilityDescription<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td><td>boolean</td><td>HLS: represents "public.accessibility.describes-video." <br /><br />DASH: Audio track contains a textual description (intended for audio synthesis) or an audio description describing a visual component.</td></tr><tr><td>HasAccessibilityEAI<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td><td>boolean</td><td>DASH: Audio track contains an element for improved intelligibility of the dialogue \[Enhanced Audio Intelligibility].</td></tr></tbody></table><br /><br />The field also retrieves audio description tracks which are typically seen on broadcast TV. An audio description track is mixed with the main audio track.</td>
     </tr>
     <tr>
-      <td>seamlessAudioTrackSelection<br /><br /><em>Available since [Roku OS 13.0](doc:release-notes#roku-os-130)</em></td>
+      <td>seamlessAudioTrackSelection<br /><br /><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-130">Roku OS 13.0</a></em></td>
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_WRITE</td>
@@ -995,11 +995,11 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
 <tr>
 <td>wma</td>
-<td>Microsoft Windows Media Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
+<td>Microsoft Windows Media Audio (sunset as of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-125">Roku OS 12.5</a>)</td>
 </tr>
 <tr>
 <td>wmapro</td>
-<td>Microsoft Windows Media Pro Audio (sunset as of [Roku OS 12.5](doc:release-notes#roku-os-125))</td>
+<td>Microsoft Windows Media Pro Audio (sunset as of <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-125">Roku OS 12.5</a>)</td>
 </tr>
 </tbody>
 </table></td>
@@ -1013,7 +1013,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 </tr>
   </tbody></table>
 
-#### Automatic audio track selection
+##### Automatic audio track selection
 
 If multiple audio tracks are available for video content, the Roku OS automatically selects the best track based on the preferred audio track settings on the device (language, country code, and descriptive setting) and the quality of the audio track (bitrate/format).
 
@@ -1084,7 +1084,7 @@ Developers can receive event-based notifications when the CDN is switched during
       <td>vector2d (width, height)</td>
       <td>\[0,0]</td>
       <td>READ\_WRITE</td>
-      <td>Sets the max resolution required by your video.<br /><br />Video decode memory is a shared resource with OpenGL texture memory. The Brightscript 2D APIs are implemented using OpenGL texture memory on Roku models that support the Open GL APIs (see [Hardware specifications](doc:hardware) for a list of these models).<br /><br />On models that do not support Open GL APIs, this field exists for API compatibility but has no effect on actual memory allocations.<br /><br />Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720 as the maximum supported resolution for a particular Roku model (see [Hardware specifications](doc:hardware) for a list of these models).<br /><br />This field enables applications that want to use both the 2D APIs and video playback with a lower resolution than 1080p. Without this field, these applications are likely to not have enough memory for either video playback or UI rendering.<br /><br />If width is 0 (the default), it is unlimited. If height is 0 (the default), it is unlimited.</td>
+      <td>Sets the max resolution required by your video.<br /><br />Video decode memory is a shared resource with OpenGL texture memory. The BrightScript 2D APIs are implemented using OpenGL texture memory on Roku models that support the Open GL APIs (see <a href="https://developer.roku.com/dev/docs/hardware">Hardware specifications</a> for a list of these models).<br /><br />On models that do not support Open GL APIs, this field exists for API compatibility but has no effect on actual memory allocations.<br /><br />Video decode memory allocation is based on a resolution of 1920x1080 or 1280x720 as the maximum supported resolution for a particular Roku model (see <a href="https://developer.roku.com/dev/docs/hardware">Hardware specifications</a> for a list of these models).<br /><br />This field enables applications that want to use both the 2D APIs and video playback with a lower resolution than 1080p. Without this field, these applications are likely to not have enough memory for either video playback or UI rendering.<br /><br />If width is 0 (the default), it is unlimited. If height is 0 (the default), it is unlimited.</td>
     </tr>
     <tr>
       <td>cgms</td>
@@ -1112,7 +1112,7 @@ Developers can receive event-based notifications when the CDN is switched during
       <td>Boolean</td>
       <td>false</td>
       <td>READ\_ONLY</td>
-      <td><em>Available since [Roku OS 8](doc:release-notes#roku-os-8).</em><br /><br />Determines whether the current content is blocked.</td>
+      <td><em>Available since <a href="https://developer.roku.com/dev/docs/release-notes#roku-os-8">Roku OS 8</a>.</em><br /><br />Determines whether the current content is blocked.</td>
     </tr>
   </tbody>
 </table>

@@ -1,11 +1,13 @@
 ---
 title: Basic Subscription Recovery
-excerpt: 'Handle failed auto-renewals with a 3-day grace period and daily emails'
+excerpt: Handle failed auto-renewals with a 3-day grace period and daily emails
 deprecated: false
 hidden: false
 metadata:
-  title: 'Basic Subscription Recovery | Roku Developer Docs'
-  description: 'Basic subscription recovery gives customers a 3-day grace period when auto-renewal fails, while Roku Pay emails them daily to update their MOP.'
+  title: Basic Subscription Recovery | Roku Developer Docs
+  description: >-
+    Basic subscription recovery gives customers a 3-day grace period when
+    auto-renewal fails, while Roku Pay emails them daily to update their MOP.
   robots: index
 next:
   description: ''
@@ -50,11 +52,11 @@ The publisher should routinely synchronize their entitlement service with the Ro
 | In recovery (3-day grace period) | true             | current or past date | false           |
 | Canceled                         | false            | past date            | true            |
 
-> **Free trials:** When a free trial ends and the customer's method of payment fails, the `is_entitled` flag is set to "false", and the subscription is automatically cancelled (there is no grace period in this case).
+> **Free trials:** When a free trial ends and the customer's method of payment fails, the `isEntitled` flag is set to "false", and the subscription is automatically cancelled (there is no grace period in this case).
 
 ## Push notifications
 
-Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-grace-period) when a subscription is put on hold, it sends a [GraceRecovered](doc:push-notifications#in-grace-period) notification when the subscription is recovered (renewed after being put in a grace period):
+Roku Pay sends a [GraceInitiated push notification](doc:push-notifications#in-grace-period) when the auto-renewal payment first fails while the customer still has access. It sends a [GraceRecovered](doc:push-notifications#in-grace-period) notification when the subscription is recovered (renewed after being put in a grace period):
 
 ### GraceInitiated
 

@@ -51,7 +51,7 @@ With ui_resolutions=hd specified in the manifest, the following displays the tex
 
 The SimpleLabel node uses the horizOrigin and vertOrigin fields to control the origin of the coordinate system for the node.
 
-#### Horizontal Origin
+##### Horizontal Origin
 
 The horizOrigin field allows controlling the x=0 position of the SimpleLabel node's local coordinate system.
 
@@ -66,7 +66,7 @@ There are three possible values for the horizOrigin field:
 * right
   The right edge of the text is positioned at the 0 x-coordinate position of the SimpleLabel node's local coordinate system
 
-#### Vertical Origin
+##### Vertical Origin
 
 The vertOrigin field allows controlling the y=0 position of the SimpleLabel node's local coordinate system.
 
@@ -84,7 +84,7 @@ There are four possible values for the vertOrigin field:
 * bottom
   The bottom edge of the text is located at the 0 y-coordinate position of the SimpleLabel node's local coordinate system
 
-#### SimpleLabel Origin Example
+##### SimpleLabel Origin Example
 
 The following image illustrates the horizontal and vertical origin options supported by the SimpleLabel node. The manifest includes ui_resolutions=fhd, so all coordinate values are in the range 1920x1080.
 

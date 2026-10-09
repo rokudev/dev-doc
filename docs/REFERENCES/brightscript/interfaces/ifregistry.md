@@ -24,7 +24,7 @@ next:
 
 ### GetSpaceAvailable() as Integer
 
-#### Description
+##### Description
 
 Returns the number of bytes available in the app's device registry (32K). This function can be used, for example, to check the remaining space and remove older entries before writing newer ones. The following code demonstrates how to do this:
 
@@ -36,42 +36,42 @@ if (registry.GetSpaceAvailable() < buffer)
 end if
 ```
 
-#### Return Value
+##### Return Value
 
 An integer representing the number of bytes available in the device registry.
 
 ### GetSectionList() as Object
 
-#### Description
+##### Description
 
 Returns the registry sections on the device. 
 
-#### Return Value
+##### Return Value
 
 An roList with one entry for each registry section. Each registry section is an roString containing the name of the section. The section itself can be accessed by creating an [roRegistrySection](doc:roregistrysection) object using that name.
 
 ### Delete(section as String) as Boolean
 
-#### Description
+##### Description
 
 Deletes the specified registry section.
 
-#### Parameters
+##### Parameters
 
 | Name    | Type   | Description                         |
 | ------- | ------ | :---------------------------------- |
 | section | String | The registry section to be deleted. |
 
-#### Return Value
+##### Return Value
 
  A flag indicating whether the registry section was successfully deleted.
 
 ### Flush() as Boolean
 
-#### Description
+##### Description
 
 Flushes the contents of the registry out to persistent storage in order to permanently store a token or other setting on the device.
 
-#### Return Value
+##### Return Value
 
 A flag indicating whether the registry was successfully flushed.

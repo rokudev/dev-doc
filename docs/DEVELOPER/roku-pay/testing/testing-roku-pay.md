@@ -1,11 +1,14 @@
 ---
 title: Testing a Roku Pay app
-excerpt: 'Step-by-step verification of Roku Pay purchase and entitlement workflows'
+excerpt: Step-by-step verification of Roku Pay purchase and entitlement workflows
 deprecated: false
 hidden: false
 metadata:
-  title: 'Testing a Roku Pay app | Roku Developer Docs'
-  description: 'Verify entitlement, purchase, and subscription workflows in your Roku Pay app by testing getAllPurchases, getChannelCred, and validate-transaction calls.'
+  title: Testing a Roku Pay app | Roku Developer Docs
+  description: >-
+    Verify entitlement, purchase, and subscription workflows in your Roku Pay
+    app by testing getAllPurchases, getChannelCred, and validate-transaction
+    calls.
   robots: index
 next:
   description: ''
@@ -18,7 +21,7 @@ To verify that a customer cannot be entitled to content without a subscription p
 
 2. Send the [**getAllPurchases** command](doc:channelstore#getallpurchases). Verify that it does not return any active subscription products.
 
-3. Call the **[roRegistrySection.read()](doc:ifregistrysection)** function on the device registry section for the app. Verify that it does not return an access token from device registry.
+3. Call the [roRegistrySection.read()](doc:ifregistrysection) function on the device registry section for the app. Verify that it does not return an access token from device registry.
 
 4. Send the [**getChannelCred** command](doc:channelstore#getchannelcred). Verify that it does not return an access token from Roku cloud.
 
@@ -40,7 +43,7 @@ To verify that a customer can purchase a subscription product and upgrade/downgr
 
    a. The [**storeChannelCredData** command](doc:channelstore#storechannelcreddata) to store the access token in the Roku cloud.
 
-   b. The **[roRegistrySection.write()](doc:ifregistrysection)** function to store the access token in the device registry.
+   b. The [roRegistrySection.write()](doc:ifregistrysection) function to store the access token in the device registry.
 
 7. If your app includes a [product group](doc:product-catalog#creating-product-exclusivity-groups), select another in-app product that is in the same product group as the previously ordered one. Verify that the "You're already subscribed" dialog is displayed.
 
@@ -52,11 +55,11 @@ To verify that a customer can purchase a subscription product and upgrade/downgr
 
    b. Call the `validate-transaction` API with purchase ID included in the `orderStatus` field. Confirm the following:
 
-   * The `purchase_type` is set to `UPGRADE` or `DOWNGRADE`.
+   * The `purchaseType` is set to `UPGRADE` or `DOWNGRADE`.
 
-   * The `cancelled_transaction_ids` field is set to the transaction ID of the original subscription purchase.
+   * The `cancelledTransaction_ids` field is set to the transaction ID of the original subscription purchase.
 
-   * The `purchase_status` field is set to `active`.
+   * The `purchaseStatus` field is set to `active`.
 
 10. Close the app.
 
@@ -70,7 +73,7 @@ To verify that a customer is entitled to content after purchasing a subscription
 
 3. Call the [**validate-transaction** API](doc:roku-web-service#validate-transaction) with purchase ID included in the `purchases` field. Verify that the `isEntitled` flag is set to "true".
 
-4. Call the **[roRegistrySection.read()](doc:ifregistrysection)** function on the device registry section for the app. Verify that it returns an access token from the device registry.
+4. Call the [roRegistrySection.read()](doc:ifregistrysection) function on the device registry section for the app. Verify that it returns an access token from the device registry.
 
 5. Send the [**getChannelCred** command](doc:channelstore#getchannelcred). Verify that it returns an access token from Roku cloud.
 

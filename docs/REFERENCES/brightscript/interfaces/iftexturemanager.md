@@ -23,11 +23,11 @@ next:
 
 ### RequestTexture(req as Object) as Void
 
-#### Description
+##### Description
 
 Makes a request for an roBitmap with the attributes specified by the roTextureRequest. The roTextureManager will pass an roTextureRequestEvent to the message port when completed.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
@@ -35,11 +35,11 @@ Makes a request for an roBitmap with the attributes specified by the roTextureRe
 
 ### CancelRequest(req as Object) as Void
 
-#### Description
+##### Description
 
 Cancels the request specified by req, which should be an roTextureRequest previously passed to the [RequestTexture()](#requesttexturereq-as-object-as-void) method.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
@@ -47,11 +47,11 @@ Cancels the request specified by req, which should be an roTextureRequest previo
 
 ### UnloadBitmap(url as String) as Void
 
-#### Description
+##### Description
 
 Removes a bitmap from the roTextureManager with the specified URL.
 
-#### Parameters
+##### Parameters
 
 | Name  | Type    | Description |
 | ----  | ------- | -------------- |
@@ -59,6 +59,6 @@ Removes a bitmap from the roTextureManager with the specified URL.
 
 ### Cleanup() as Void
 
-#### Description
+##### Description
 
 Removes all bitmaps from the roTextureManager.

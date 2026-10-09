@@ -23,11 +23,11 @@ next:
 
 ### SetUrl(url as String) as Void
 
-#### Description
+##### Description
 
 Sets the URL to the audio file. Only file URLs are initially supported
 
-#### Parameters
+##### Parameters
 
 | Name | Type   | Description                |
 | ---- | ------ | -------------------------- |
@@ -35,11 +35,11 @@ Sets the URL to the audio file. Only file URLs are initially supported
 
 ### GetTags() as Object
 
-#### Description
+##### Description
 
 Returns an associative array that contains a simple set of tags that are common to most audio formats.
 
-#### Return Value
+##### Return Value
 
 An associative array that may be set to one of the following values:
 
@@ -56,11 +56,11 @@ An associative array that may be set to one of the following values:
 
 ### GetAudioProperties() as Object
 
-#### Description
+##### Description
 
 Returns an associative array with a simple set of audio properties.
 
-#### Return Value
+##### Return Value
 
 An associative array that may be set to one of the following values (these are values that may involve reading a larger portion of the file and thus may take longer to retrieve than tags):
 
@@ -73,11 +73,11 @@ An associative array that may be set to one of the following values (these are v
 
 ### GetCoverArt() as Object
 
-#### Description
+##### Description
 
 Returns the cover art, if available.
 
-#### Return Value
+##### Return Value
 
 An associative array with two entries: "bytes" and "type".
 

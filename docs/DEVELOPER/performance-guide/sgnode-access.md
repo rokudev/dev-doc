@@ -18,25 +18,7 @@ This guide describes how these parts work and how they affect the performance an
 
 SceneGraph nodes are built upon a base C++ `Node` class (for example, `Group` or `ContentNode`). `Node`s can have children and can also reference other nodes through fields. These nodes are reference-counted in C++ via `std::shared_ptr`and live independently of BrightScript. They are released when their reference count drops to zero.
 
-```mermaid
----
-  config:
-    class:
-      hideEmptyMembersBox: true
----
-
-classDiagram
-    Node <|-- ContentNode
-    Node <|-- Group
-    Group <|-- LabelBase
-    LabelBase <|-- Label
-    Group <|-- Rectangle
-    Group <|-- ArrayGrid
-    Node: refcount
-    Node: threadId
-    Node: fields
-    Node: children
-```
+![Class diagram of the SceneGraph node hierarchy. Node, with the members refcount, threadId, fields, and children, is the base class. ContentNode and Group extend Node. LabelBase, Rectangle, and ArrayGrid extend Group, and Label extends LabelBase.](https://image.roku.com/ZHZscHItMTc2/sgnode-access-1.png)
 
 ### Thread ownership
 
@@ -68,26 +50,7 @@ When a component node is created (`CreateObject("roSGNode", "MyContentNode")`), 
 
 That is, a "component" is a SceneGraph `Node` with an associated `Component` data structure which extends the derived-`Node`'s behavior (refcounting, ownership, etc). The words "component", "node", and "component node" are often used interchangeably but as far as programming from BrightScript is concerned, all classes of "component" are actually "nodes" with extended user-defined fields and functions and have all the properties of a node.
 
-```mermaid
----
-  config:
-    class:
-      hideEmptyMembersBox: true
----
-classDiagram
-
-    Component: XML fields
-    Component: dynamic fields
-    Component: m[2]
-
-    Node "1" --> "1" Component
-    Node <|-- ContentNode
-    Component "*" --> "1" CompiledComponent
-
-    CompiledComponent: field definitions
-    CompiledComponent: interface functions
-    CompiledComponent: BrightScript function table
-```
+![Class diagram of a SceneGraph component. A Node has one Component, which holds the XML fields, dynamic fields, and the m array. Many Components reference one CompiledComponent, which holds the field definitions, interface functions, and BrightScript function table. ContentNode extends Node.](https://image.roku.com/ZHZscHItMTc2/sgnode-access-2.png)
 
 Each CompiledComponent keeps a lookup table (hashmap) of functions—this is used for the per-component function namespacing.
 
@@ -136,27 +99,7 @@ n = CreateObject("roSGNode", "MyContentNode")
 
 The `Node` instance will have a refcount of 1, as will the BrightScript `roSGNode` instance.
 
-```mermaid
----
-  config:
-    class:
-      hideEmptyMembersBox: true
----
-
-classDiagram
-    Script "1" --> "*" bsProc
-    bsProc *-- bscDomain
-    Node: SceneGraph refcount=1
-    roSGNode: BrightScript refcount=1
-    roSGNode: m_sgNode
-    bscDomain "1" --> "*" roSGNode
-    Node <|-- ContentNode
-    roSGNode "n" --> "1" Node
-    Node "1" --> "1" Component
-    Node: children
-    Node: observers
-    Component "*" --> "1" CompiledComponent
-```
+![Class diagram of how BrightScript references SceneGraph. A Script has many bsProc objects. Each bsProc owns a bscDomain, which holds many roSGNode objects. Each roSGNode references one Node, which has one Component. Many Components reference one CompiledComponent.](https://image.roku.com/ZHZscHItMTc2/sgnode-access-3.png)
 
 ### Two different refcounts
 
@@ -178,38 +121,7 @@ When you use the `/query/sgnodes` External Control Protocol (ECP) command, the `
 
 When values are passed from a BrightScript object to a SceneGraph node (via an `roSGNode` object) using either "dot" notation or explicit `set` or `get` operations, the data is _copied_ to or from the field.
 
-```mermaid
-flowchart RL
-    BS_Obj["BrightScript Code"]
-
-    subgraph SG_Group["Node"]
-        direction TB
-        SG_Node["SceneGraph Node Field"]
-        AA["AssocArray"]
-        foo["foo"]
-        bar["bar"]
-
-        SG_Node -- "myfield" --> AA
-        AA --> foo
-        AA --> bar
-    end
-
-    %% Explicit ordering constraint: BS_Obj precedes the subgraph.
-    BS_Obj -- "set\nCopy AA\nRendezvous" --> SG_Node
-    SG_Node -- "get\nCopy AA\nRendezvous" --> BS_Obj
-
-    classDef bsObject stroke:#818cf8,fill:#eef2ff
-    classDef sgNode stroke:#2dd4bf,fill:#f0fdfa
-    classDef assocArray stroke:#a78bfa,fill:#f5f3ff
-    classDef element stroke:#fb923c,fill:#fff7ed
-    classDef group stroke:#2dd4bf,fill:transparent
-
-    class BS_Obj bsObject
-    class SG_Node sgNode
-    class AA assocArray
-    class foo,bar element
-    class SG_Group group
-```
+![Flowchart of passing a value between BrightScript and SceneGraph. A set from BrightScript code copies the associative array and rendezvouses into the node field. A get copies the associative array and rendezvouses back out. The field myfield holds an associative array with the elements foo and bar.](https://image.roku.com/ZHZscHItMTc2/sgnode-access-4.png)
 
 Just like `set` and `get`, `callfunc` *also* copies its arguments and result, and *also* does a rendezvous if ownership does not match.
 
@@ -353,13 +265,7 @@ foo.bar = {}
 foo.bar.cycle = foo    ' cyclic - each references the other - refcount never drops to zero
 ```
 
-```mermaid
-flowchart LR
-
-    foo --> bar
-    bar --> cycle
-    cycle --> foo
-```
+![Flowchart of a reference cycle. The object foo references bar, bar references cycle, and cycle references foo, so none of them is ever released.](https://image.roku.com/ZHZscHItMTc2/sgnode-access-5.png)
 
 This can be detected at run time with `RunGarbageCollector()` which will walk the objects in the domain (thread) that it is invoked on and find those that have outstanding refcounts. Cycles can also be detected with Perfetto where they will be reported as unreachable objects.
 

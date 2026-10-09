@@ -152,7 +152,9 @@ This function may only be called on the render thread.
 
 Field observers are not notified when this function is called.
 
-##### Parameters
+Unlike direct field assignment, associative arrays passed via SetRef() may contain anonymous functions which can be pass callbacks and behavior between nodes.
+
+#### Parameters
 
 | **Name**   | **Type** | **Description**                                                    |
 | :--------- | :------- | :----------------------------------------------------------------- |

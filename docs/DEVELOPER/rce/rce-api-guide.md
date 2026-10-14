@@ -28,10 +28,10 @@ The Roku Cloud Emulator (RCE) REST API enables you to manage virtual devices pro
 | :--------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Endpoint**     | The base URL for the RCE Core APIs is `api.rce.roku.com`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **Protocol**     | RCE Core API calls use only HTTPS to send requests.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Methods**      | The RCE Core APIs support the following REST methods for adding, running, managing, and deleting virtual devices: **POST** (add, manage, and stop devices; save snapshots), **GET** (get a project ID, run devices, check device status, retrieve device activity logs), **PATCH** (update devices and snapshots), and **DELETE** (remove a device).                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Methods**      | The RCE Core APIs support the following REST methods for adding, running, and managing virtual devices and snapshots: **POST** (add, start, and stop devices; save snapshots), **GET** (list firmware versions, devices, snapshots, and run history; check device status), **PATCH** (update devices and snapshots), and **DELETE** (remove a snapshot).                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Header**       | Requests to the RCE Core APIs require the following headers: **Authorization** (bearer authentication) `Authorization: Bearer <PERSONAL_ACCESS_TOKEN>` — see [Appendix A](#appendix-a-generate-a-personal-access-token) for how to generate the token; and **Content-Type** `application/json`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Resource IDs** | Resource IDs are integers, except for users, which use UUIDs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Response**     | Most of the RCE Core APIs return a JSON payload. The only exception is the logs API, which returns a gzipped tar file (`.tar.gz`). All APIs return one of the following response codes: **200** OK; **201** Created (resource created successfully); **202** Accepted (device start or stop request queued); **204** No content (DELETE requests only); **400** Bad request (required fields are missing from the payload; a description of the error is returned); **401** Unauthorized (invalid or missing token, bad credentials); **403** Forbidden (role or permission denied); **404** Not found (user not found, generic resource missing); **409** Conflict (duplicate or state conflict: project devices, running devices); **422** Unprocessable entity (bad UUID, timestamp, or format). |
+| **Response**     | The RCE Core APIs return a JSON payload. All APIs return one of the following response codes: **200** OK; **201** Created (resource created successfully); **202** Accepted (device start or stop request queued); **204** No content (DELETE requests only); **400** Bad request (for example, the firmware version is unknown or unavailable, or `max_runtime` is too large; a description of the error is returned); **401** Unauthorized (invalid or missing token, bad credentials); **403** Forbidden (role or permission denied; also returned, with an empty message, when the device does not exist or you can't access it); **404** Not found (generic resource missing); **409** Conflict (duplicate or state conflict: project devices, running devices); **422** Unprocessable entity (missing required fields, bad UUID, timestamp, or format). |
 
 ## Device API reference
 
@@ -41,7 +41,7 @@ The Roku Cloud Emulator (RCE) REST API enables you to manage virtual devices pro
 | **Protocol** | RCE Device API calls use HTTPS (`https://`) for ECP key commands, and WebSocket (`wss://`) for telnet interactions and log streaming.                                                                                                                                     |
 | **Methods**  | The RCE Device APIs support the following REST methods: **GET** and **POST**, both used to send ECP commands to the virtual device.                                                                                                                                       |
 | **Header**   | Requests to the RCE Device APIs require the **Authorization** header (bearer authentication): `Authorization: Bearer <PERSONAL_ACCESS_TOKEN>`. See [Appendix A](#appendix-a-generate-a-personal-access-token) for how to generate the token.                              |
-| **Response** | All APIs return one of the following response codes: **200** OK; **400** Bad request (wrong protocol); **422** Unprocessable entity (bad UUID, timestamp, or format).                                                                                                     |
+| **Response** | All APIs return one of the following response codes: **200** OK; **202** Accepted (the request is accepted); **400** Bad request (wrong protocol); **403** Forbidden (the device isn't linked to your account, developer mode is off, or **Control by mobile apps** blocks the request); **404** Not found; **422** Unprocessable entity (bad UUID, timestamp, or format); **502** Bad gateway and **503** Service unavailable (the device or a required service is unreachable, for example `upstream connect error` when developer mode is off). |
 
 ## API workflow
 
@@ -51,7 +51,7 @@ The general API workflow for adding and using Roku virtual devices is as follows
 2. Start a device.
 3. Check the device status.
 4. Interact with the device: control the device, stream firmware logs, and access the debug console.
-5. Manage the device: save a snapshot, stop the device, and delete the device.
+5. Manage the device: save a snapshot and stop the device.
 
 ### Add a device
 
@@ -84,14 +84,17 @@ This API returns a JSON object describing the properties of a device resource. T
 ```json
 {
   "id": 74,
-  "esn": "XY0000FAKESN",
+  "serial_number": "XY0000FAKESN",
   "device_type": "tv",
   "name": "Regression Test Device",
-  "description": null,
+  "note": null,
+  "properties": null,
   "account_name": null,
-  "last_snapshot": null,
+  "created_at": "2026-07-08T21:01:49.511879Z",
+  "last_snapshot_id": null,
   "last_snapshot_name": null,
-  "rootfs_artifactory_path": null,
+  "firmware_version_id": null,
+  "firmware_version_display_name": null,
   "snapshots": [
     215,
     216
@@ -116,7 +119,7 @@ To launch and run a device, you need a build and a snapshot.
    ```json
    [
      {
-       "firmware_version_id": "rce-fw:15.2.4-tv_prod",
+       "firmware_version_id": "304",
        "device_type": "tv",
        "display_name": "15.2.4 TV"
      }
@@ -139,8 +142,8 @@ To launch and run a device, you need a build and a snapshot.
        "parent_id": null,
        "name": "base-snapshot",
        "description": "Snapshot at the beginning of device setup...",
-       "rootfs_artifactory_path": null,
-       "build_display_name": null,
+       "firmware_version_id": null,
+       "firmware_version_display_name": null,
        "started_at": "2026-07-08T21:14:25.942083Z",
        "children": [],
        "ready": true,
@@ -161,7 +164,7 @@ To launch and run a device, you need a build and a snapshot.
    ```json
    {
      "snapshot_id": 215,
-     "firmware_version_id": "rce-fw:15.2.4-tv_prod",
+     "firmware_version_id": "304",
      "max_runtime": 3600
    }
    ```
@@ -172,11 +175,11 @@ To launch and run a device, you need a build and a snapshot.
    | `firmware_version_id` | string  | The unique ID of the firmware version to run.   |
    | `max_runtime`         | integer | The maximum runtime for the device, in seconds. |
 
-   This API returns a JSON object describing the properties of a device resource.
+   This API returns a JSON object describing the properties of a device resource. The device starts in the background, so check its status until it is running.
 
 ### Check the device status
 
-Wait until the device is in the running state before interacting with it. To check the current state of a device, send the following GET request:
+Wait until the device is in the running state before interacting with it. To check the current state of a device, send the following GET request. You can also connect to the [device status WebSocket](#watch-device-status) to receive state updates as they happen.
 
 **Request**
 
@@ -190,25 +193,26 @@ This API returns a JSON object describing the properties of a device resource.
 
 The `status` property is a string representing the state of a Roku virtual device, which may have one of the following values:
 
-- `created`: The request to add the device was captured.
 - `pending`: Waiting for compute capacity, or launching.
 - `running`: The device is running and accessible.
-- `completed`: The device was stopped by the user.
-- `failed`: The device failed to start or quit unexpectedly.
+- `shutdown`: The device isn't running, either because it was never started or because it was stopped.
 
 Use the `running_device.instance_uuid` property in the Device API base URL to make API requests to the device.
 
 ```json
 {
   "id": 74,
-  "esn": "XY0000FAKESN",
+  "serial_number": "XY0000FAKESN",
   "device_type": "tv",
   "name": "API Test",
-  "description": null,
+  "note": null,
+  "properties": null,
   "account_name": null,
-  "last_snapshot": 215,
+  "created_at": "2026-07-08T21:01:49.511879Z",
+  "last_snapshot_id": 215,
   "last_snapshot_name": "base-snapshot",
-  "rootfs_artifactory_path": "rce-fw:15.2.4-tv_prod",
+  "firmware_version_id": "304",
+  "firmware_version_display_name": "15.2.4 TV",
   "snapshots": [
     215,
     216
@@ -220,9 +224,31 @@ Use the `running_device.instance_uuid` property in the Device API base URL to ma
 }
 ```
 
+##### Watch device status
+
+To receive the current device state and each later state change without polling, connect to the following WebSocket on the Core API host. Authenticate with the `Authorization: Bearer` header.
+
+```
+wss://api.rce.roku.com/api/v1/devices/{device_id}/ws
+```
+
+Each message contains a `state_version` that increases with every change, and a `device` object with the same fields as the device resource above.
+
 ### Interact with a device
 
 Use the Device APIs to interact with the device. You can access the debug consoles, firmware logs, and send ECP key commands.
+
+#### Prerequisites
+
+Most control-port calls fail with `403` until the device is set up:
+
+1. Link the device to your Roku account.
+2. Enable developer mode on the device. To open the developer settings screen, send `POST /api/v0/xi/developer-settings-combo`, which sends the remote key sequence for you.
+3. Set **Control by mobile apps** to **Enabled** or **Permissive**. The default setting, **Limited**, blocks these calls.
+
+On a new device that isn't set up, `query/apps`, `query/app-ui`, `search`, and even key presses sent through the control port return `403`. Only `query/device-info` and `query/active-app` still work. Without developer mode, sideloading and the console WebSockets fail with `503` or `502` and an `upstream connect error` message, not a `403`.
+
+To check whether the device is ready to accept key commands, send `GET /api/v0/input/ready`.
 
 > The Device APIs have a different base URL and protocols from the Core APIs. For more information, see [Device API reference](#device-api-reference).
 
@@ -248,34 +274,34 @@ For a list of key values, see the [External Control Protocol documentation](http
 
 ##### Other ECP commands
 
-> These endpoints require **Control by mobile apps** and developer mode to be enabled.
+> These endpoints require the device to be linked to your account, developer mode to be enabled, and **Control by mobile apps** to be set to **Enabled** or **Permissive**. See [Prerequisites](#prerequisites).
 
-To send ECP commands, for example to query the device, make a GET or POST request to the `/api/v0/port/8060/http/{command}` path.
+To send ECP commands, for example to query the device, make a GET or POST request to the `/api/v0/ports/8060/http/{command}` path.
 
 For example, to retrieve device info:
 
 ```
-GET /api/v0/port/8060/http/query/device-info
+GET /api/v0/ports/8060/http/query/device-info
 ```
 
 To use the search UI:
 
 ```
-POST /api/v0/port/8060/http/search/browse?keyword=stranger%20things&type=tv-show
+POST /api/v0/ports/8060/http/search/browse?keyword=stranger%20things&type=tv-show
 ```
 
 For a list of commands, see the [External Control Protocol documentation](https://developer.roku.com/dev/docs/external-control-api).
 
 ##### Sideload an app
 
-To sideload an app, POST form data to the `/sideload/plugin_install` endpoint with your app ZIP file.
+To sideload an app, POST form data to the `/api/v0/ports/80/http/plugin_install` endpoint with your app ZIP file.
 
 Send your RCE token in the `X-Authorization` header instead of the `Authorization` header. The `Authorization` header uses HTTP digest authentication (username `rokudev`, password set when developer mode was enabled). Most HTTP clients negotiate the digest challenge automatically.
 
 **Request**
 
 ```
-POST /sideload/plugin_install
+POST /api/v0/ports/80/http/plugin_install
 ```
 
 **Headers**
@@ -304,7 +330,7 @@ curl -X POST --digest -u "rokudev:$PASSWORD" \
 -H "Content-type: multipart/form-data" \
 -H "X-Authorization: Bearer $RCE_TOKEN" \
 -F "mysubmit=Install" -F "archive=@app.zip" \
-https://device.rce.roku.com/instance/{INSTANCE_UUID}/sideload/plugin_install
+https://device.rce.roku.com/instance/{INSTANCE_UUID}/api/v0/ports/80/http/plugin_install
 ```
 
 ##### Stream firmware logs
@@ -328,19 +354,19 @@ To access the debug consoles, establish a WebSocket connection to any of the fol
 **SceneGraph console**
 
 ```
-wss://device.rce.roku.com/instance/{instance_uuid}/api/v0/port/8080
+wss://device.rce.roku.com/instance/{instance_uuid}/api/v0/ports/8080
 ```
 
 **BrightScript console**
 
 ```
-wss://device.rce.roku.com/instance/{instance_uuid}/api/v0/port/8085
+wss://device.rce.roku.com/instance/{instance_uuid}/api/v0/ports/8085
 ```
 
 **Screensaver console**
 
 ```
-wss://device.rce.roku.com/instance/{instance_uuid}/api/v0/port/8087
+wss://device.rce.roku.com/instance/{instance_uuid}/api/v0/ports/8087
 ```
 
 You can send commands and receive responses once you establish a connection.
@@ -349,7 +375,7 @@ For more information on using these consoles, see [Debugging](https://developer.
 
 ### Manage devices
 
-Once the device runs, use the Core APIs to save snapshots and then stop it. After stopping the device, you can delete it.
+Once the device runs, use the Core APIs to save snapshots and then stop it.
 
 ##### Save snapshots
 
@@ -385,9 +411,10 @@ This API returns a JSON object describing a snapshot resource.
   "created_at": "2026-07-08T21:43:53.857605Z",
   "parent_id": 215,
   "name": "After Guided Setup",
-  "description": null,
-  "rootfs_artifactory_path": "rce-fw:15.2.4-tv_prod",
-  "build_display_name": "15.2.4 TV",
+  "note": null,
+  "properties": {},
+  "firmware_version_id": "304",
+  "firmware_version_display_name": "15.2.4 TV",
   "started_at": null,
   "children": [],
   "ready": false,
@@ -404,13 +431,7 @@ To stop running a device, send the following POST request:
 POST /api/v1/devices/{device_id}/stop
 ```
 
-##### Delete a device
-
-To permanently remove a device, send the following DELETE request:
-
-```
-DELETE /api/v1/devices/{device_id}
-```
+This API returns a JSON object describing the device resource. The device stops in the background, and its `status` becomes `shutdown`.
 
 ## Appendix A: Generate a Personal Access Token
 
@@ -418,7 +439,7 @@ The RCE APIs require a Personal Access Token (PAT) for authentication. To genera
 
 1. From the [Roku Launchpad](https://developer.roku.com/dev/landing), click **Cloud Emulator** in the **Roku Developers** pane.
 2. The [Roku Cloud Emulator UI](https://developer.roku.com/cloud-emulator/devices) opens with the index page.
-3. Click the **Token** tab.
+3. Click the **Tokens** tab.
 4. Click **Add token** to open the **Add token** dialog.
 5. In the dialog:
    1. Enter a name for the token.

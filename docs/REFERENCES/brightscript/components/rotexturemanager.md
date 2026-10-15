@@ -15,6 +15,7 @@ next:
 
 The Texture Manager provides a set of API's for managing an roBitmap cache.
 
+All roTextureManager instances within an app share a single underlying texture cache. Cache-modifying operations (Cleanup, UnloadBitmap) affect all instances.
 
 **Example: Requesting an roBitmap from the roTextureManager**
 

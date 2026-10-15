@@ -67,7 +67,7 @@ Roku Production will send you a distribution list. You will find the Roku Altern
 - Daily Production Reports (Prelim & Approved)
 - Cost Reports
 
-**<u>Don't include the Roku name or logo on any documents</u>** (including contact sheets, call sheets, production reports, casting notices etc.) without written approval from Roku Production Legal.
+<u>**Don't include the Roku name or logo on any documents**</u> (including contact sheets, call sheets, production reports, casting notices etc.) without written approval from Roku Production Legal.
 
 ### 3.4 Roku calls
 
@@ -219,7 +219,7 @@ Roku Production asks that the following information, when applicable, be include
 
 - Extraordinary talent fees and costs should be excluded from all fee calculations
 
-- Budget for all necessary worldwide clearances in **<u>all media</u>** for music and footage
+- Budget for all necessary worldwide clearances in <u>**all media**</u> for music and footage
   - All licenses required for the production, synchronization, exhibition, performance, distribution, and exploitation (including in context marketing and promotion) of the Program by Roku for the term of the license
   - Include music label waiver costs, if required
   - Include AFM fees if applicable
@@ -238,7 +238,7 @@ Roku Production asks that the following information, when applicable, be include
   - Include captioning, subtitles, and technical QC in your budget
   - A list of preferred vendors will be provided by Roku Post
 
-- Spend beyond the Approved Budget is never authorized without **<u>written</u>** approval from Roku Production
+- Spend beyond the Approved Budget is never authorized without <u>**written**</u> approval from Roku Production
 
 - For each budget revision please be sure to note the date, version and bullet point relevant changes in the body of the email
 
@@ -323,7 +323,7 @@ Revised calendars are required whenever there is a schedule adjustment. Please u
 - Every version of the calendar should have title, version #, ‘as of’ date and page numbers
 - Once in production, any changes to the production and or post schedule/calendar must be submitted to [production@roku.com](mailto:production@roku.com) and [dlropost@roku.com](mailto:dlropost@roku.com) for approval within 24 hours
 - In the body of the email that comes with calendar revisions, bullet point relevant changes to current calendar. Roku Production will review and confirm via email if approved.
-- Master delivery dates can't shift without **<u>written</u>** approval by Roku Production and Post
+- Master delivery dates can't shift without <u>**written**</u> approval by Roku Production and Post
 
 #### 4.2.1 Calendar requirements
 
@@ -405,7 +405,7 @@ Deliver Cost Reports to Roku Production and Production Finance weekly on Thursda
     - Safety Costs
     - Adjusting number of shooting days
 
-Roku won't be responsible for any amounts in excess of the Approved Budget without prior **<u>written</u>** approval by Roku Production.
+Roku won't be responsible for any amounts in excess of the Approved Budget without prior <u>**written**</u> approval by Roku Production.
 
 ### 4.6 Staff and crew
 
@@ -414,7 +414,7 @@ Roku Content, Production, and Post reserves customary approval of department hea
 - Showrunner, Casting Director/Company, Director, Director of Photography, Line Producer, Accountant, Post Supervisor, and Editors
   - Please submit credit, resume and/or reel (as applicable) to the appropriate Roku Content, Production, or Post contact
 
-- Please don't put any key production hires on “pay or play” deals without prior **<u>written</u>** approval from Roku Business Affairs
+- Please don't put any key production hires on “pay or play” deals without prior <u>**written**</u> approval from Roku Business Affairs
 
 - Outside production counsel must be experienced and qualified based on the nature of the program
 
@@ -501,11 +501,11 @@ Please refer to your agreement to determine if a Production Company fee is appli
 
 ### 5.4 Residual calculation
 
-The Roku Channel is a free to consumer ad supported platform (AVOD). Roku asks that Partners calculate the estimated residuals, again **<u>please be mindful of The Roku Channel’s AVOD status</u>**.
+The Roku Channel is a free to consumer ad supported platform (AVOD). Roku asks that Partners calculate the estimated residuals, again <u>**please be mindful of The Roku Channel’s AVOD status**</u>.
 
 - Check the definition of “accountable receipts” or “distributor’s gross” with the applicable guild
 - Include the project residual estimate on the Budget Assumptions Page
-- Residuals should **<u>not</u>** be a line item in the budget
+- Residuals should <u>**not**</u> be a line item in the budget
   - For purposes of calculating a rebate, if you need to include buyouts in your budget please discuss with Roku production
 - Roku may request an updated residual estimate prior to closing out the project
 
@@ -513,7 +513,7 @@ Please check with your Roku Production Executive if this applies to this project
 
 ### 5.5 Overages and breakage
 
-Roku won't be responsible for any overages. Production spend over and above the Approved Budget is never authorized without written approval from Roku Production. If there is a request made by Roku that materially changes the creative elements or delivery of the project it's the responsibility of the Prod Co/Studio to reach out to Roku Production to discuss the financial implications **<u>before</u>** any decisions/changes are made.
+Roku won't be responsible for any overages. Production spend over and above the Approved Budget is never authorized without written approval from Roku Production. If there is a request made by Roku that materially changes the creative elements or delivery of the project it's the responsibility of the Prod Co/Studio to reach out to Roku Production to discuss the financial implications <u>**before**</u> any decisions/changes are made.
 
 - Approved talent breakage is paid 50% upon commencement of principal photography, 50% on the completion of principal photography
 
@@ -562,7 +562,7 @@ There may be circumstances when Roku requests assistance with marketing efforts.
 
 ### 5.9 Trade-outs
 
-When budgeting, do **<u>NOT</u>** assume any trade-outs will be allowed. We are an ad-supported platform and cannot guarantee trade-outs. Product placement and trade-outs may be allowed at Roku’s discretion.
+When budgeting, do <u>**NOT**</u> assume any trade-outs will be allowed. We are an ad-supported platform and cannot guarantee trade-outs. Product placement and trade-outs may be allowed at Roku’s discretion.
 
 - If a trade-out opportunity presents itself, please fill out the Trade-Out Request form located in the downloadables folder on the Hub.
 - Submit the form to Roku Production and Production Legal for approval using the email template below. If you do not yet have access to the Hub, please reach out to Roku Production and we will send you the form.
@@ -680,13 +680,13 @@ Roku uses a deliverables Hub (“Hub”) to receive specific production document
 
 Prior to pre-production you will receive an email with instructions for accessing the Hub.
 
-Due to the **<u>confidential</u>** nature of the requested paper deliverables, access to the Hub will be limited to 4 key project personnel. Only those who are responsible for uploading the deliverables as noted in [section 8.1](#81-required-paper-deliverables), should have access.
+Due to the <u>**confidential**</u> nature of the requested paper deliverables, access to the Hub will be limited to 4 key project personnel. Only those who are responsible for uploading the deliverables as noted in [section 8.1](#81-required-paper-deliverables), should have access.
 
 ### 8.1 Required paper deliverables
 
 Productions should be uploading documents to the Hub on an ongoing basis throughout all phases of production, starting with pre-production and concluding with uploading final documents during wrap.
 
-Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post, and Production Legal. Please be aware, this list is subject to amendment (within reason) at any time. Make sure to follow specific instructions for each document and upload accordingly. Please note other departments may have additional required deliverables.
+Below you’ll find a list of <u>**paper**</u> deliverables for Production, Post, and Production Legal. Please be aware, this list is subject to amendment (within reason) at any time. Make sure to follow specific instructions for each document and upload accordingly. Please note other departments may have additional required deliverables.
 
 #### 8.1.1 Production
 
@@ -772,7 +772,7 @@ For questions or concerns please reach out to Roku Production at [production@rok
 
 ### 8.3 Naming conventions (as it relates to paper deliverables on the Hub)
 
-All Roku projects have a unique Project Title ID (PTID). You must follow specific naming conventions for the files to be considered acceptable. Examples of how each file(s) should be named can be found on the Hub, in the Production - Alternative folder.
+All Roku projects have a unique Project Title ID (PTID). You must follow specific naming conventions for the files to be considered acceptable.
 
 If items aren't delivered correctly, they won't be accepted. Please don't add or remove folders. If you have questions or can't find specific folders, please reach out to Roku Production.
 

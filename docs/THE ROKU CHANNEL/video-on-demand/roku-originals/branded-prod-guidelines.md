@@ -40,7 +40,7 @@ We look forward to working with you! You should have received a “Welcome to Ro
 
 ### **3.1 Roku emails**
 
-For email correspondence, Roku asks that the **<u>full name</u>** of the project be included in the subject line. Please don't use acronyms for the title.
+For email correspondence, Roku asks that the <u>**full name**</u> of the project be included in the subject line. Please don't use acronyms for the title.
 
 ### **3.2 Roku branded content contact sheet**
 
@@ -60,7 +60,7 @@ Roku Production will send you a distribution list. The distro list will include 
 - Daily Production Reports (Prelim & Approved)
 - Cost Reports
 
-**<u>Don't include the Roku name or logo on any documents</u>** (including contact sheets, call sheets, production reports, casting notices etc.) without written approval from Roku Production Legal.
+<u>**Don't include the Roku name or logo on any documents**</u> (including contact sheets, call sheets, production reports, casting notices etc.) without written approval from Roku Production Legal.
 
 ### **3.4 Roku calls**
 
@@ -213,7 +213,7 @@ Roku Production asks that the following information, when applicable, be include
   - Include captioning, subtitles in your budget
   - A list of preferred vendors will be provided by Roku Post
     - i.e. GFX, Captioning, QC, etc.
-- Spend beyond the Approved Budget is never authorized without **<u>written</u>** approval from Roku Production
+- Spend beyond the Approved Budget is never authorized without <u>**written**</u> approval from Roku Production
 - For each budget revision please be sure to note the date, version and bullet point relevant changes in the body of the email to Roku Production
 
 #### **4.1.4 Foreign exchange rate (aka FX)**
@@ -230,8 +230,8 @@ If shooting in a location in which a tax incentive or rebate is accessible, plea
 - Roku Production to confirm in writing how / who is responsible for applying for tax incentives/rebates
   - Please work with Roku Production when filing for incentives/rebates
 - Please reference closed deal for contractual funding; for example, if Roku funds the Net budget — differential between the Gross and Net budget is the responsibility of the Studio / Production Company
-  - Roku **<u>doesn't</u>** pay interest associated to financing the tax incentive
-  - Roku **<u>will allow</u>** the following incentive related expenses to be line items in the approved budget:
+  - Roku <u>**doesn't**</u> pay interest associated to financing the tax incentive
+  - Roku <u>**will allow**</u> the following incentive related expenses to be line items in the approved budget:
     - Audit Fees associated with filing for the incentive (e.g., CPA or Third-Party Auditor/Firm)
     - Post Accounting as needed in finalizing expenses in conjunction with submitting final documentation
     - Tax Credit Analysis, Applications, and Admin Fees
@@ -288,7 +288,7 @@ Revised calendars are required whenever there is a schedule adjustment. Please u
 - Every version of the calendar should have title, version #, ‘as of’ date and page numbers
 - Once in production, any changes to the post schedule/calendar must be submitted to [production@roku.com](mailto:production@roku.com) and [dlropost@roku.com](mailto:dlropost@roku.com) for approval within 24 hours
 - In the body of the email that comes with calendar revisions, bullet point relevant changes to current calendar. Roku Production will review and confirm via email if approved.
-- Master delivery dates can't shift without **<u>written</u>** approval by Roku Production and Post
+- Master delivery dates can't shift without <u>**written**</u> approval by Roku Production and Post
 
 #### **4.2.1 Calendar requirements**
 
@@ -357,7 +357,7 @@ After greenlight and milestone approval, connect with your Production Lead on if
     - Safety Costs
     - Adjusting number of shooting days
 
-Roku won't be responsible for any amounts in excess of the Approved Budget without prior **<u>written</u>** approval by Roku Production.
+Roku won't be responsible for any amounts in excess of the Approved Budget without prior <u>**written**</u> approval by Roku Production.
 
 ### **4.6 Staff & crew**
 
@@ -365,7 +365,7 @@ Roku Content, Production and Post reserves customary approval of department head
 
 - Showrunner, Casting Director/Company, Director, Director of Photography, Line Producer, Accountant, Post Supervisor, and Editors
   - Please submit credit, resume and/or reel (as applicable) to the appropriate Roku Content, Production, or Post contact
-- Please don't put any key production hires on “pay or play” deals without prior **<u>written</u>** approval from Roku Business Affairs
+- Please don't put any key production hires on “pay or play” deals without prior <u>**written**</u> approval from Roku Business Affairs
 - Outside production counsel must be experienced and qualified based on the nature of the program
 
 ### **4.7 Covid-19**
@@ -455,7 +455,7 @@ Please check with your Roku Production Executive if this applies to this project
 
 ### **5.5 Overages & breakage**
 
-Roku won't be responsible for any overages. Production spend over and above the Approved Budget is never authorized without written approval from Roku Production. If there is a request made by Roku that materially changes the creative elements or delivery of the project it is the responsibility of the Prod Co/Studio to reach out to Roku Production to discuss the financial implications **<u>before</u>** any decisions/changes are made.
+Roku won't be responsible for any overages. Production spend over and above the Approved Budget is never authorized without written approval from Roku Production. If there is a request made by Roku that materially changes the creative elements or delivery of the project it is the responsibility of the Prod Co/Studio to reach out to Roku Production to discuss the financial implications <u>**before**</u> any decisions/changes are made.
 
 - Approved talent breakage is paid 50% upon commencement of principal photography, 50% on the completion of principal photography
   - Fringe is paid on actuals which is typically in the last 50% payment or later
@@ -560,13 +560,13 @@ Roku uses a deliverables Hub (“Hub”) to receive specific production document
 
 Prior to pre-production you will receive an email with instructions for accessing the Hub.
 
-Due to the **<u>confidential</u>** nature of the requested paper deliverables, access to the Hub will be limited to 4 key project personnel. Only those who are responsible for uploading the deliverables as noted in **<u>section 8.1</u>**, should have access.
+Due to the <u>**confidential**</u> nature of the requested paper deliverables, access to the Hub will be limited to 4 key project personnel. Only those who are responsible for uploading the deliverables as noted in <u>**section 8.1**</u>, should have access.
 
 ### **8.1 Required paper deliverables**
 
 Productions should be uploading documents to the Hub on an ongoing basis throughout all phases of production, starting with pre-production and concluding with uploading final documents during wrap.
 
-Below you’ll find a list of **<u>paper</u>** deliverables for Production, Post and Production Legal. Please be aware, this list is subject to amendment (within reason) at any time. Make sure to follow specific instructions for each document and upload accordingly. Please note other departments may have additional required deliverables.
+Below you’ll find a list of <u>**paper**</u> deliverables for Production, Post and Production Legal. Please be aware, this list is subject to amendment (within reason) at any time. Make sure to follow specific instructions for each document and upload accordingly. Please note other departments may have additional required deliverables.
 
 #### **8.1.1 Production**
 
@@ -630,7 +630,7 @@ For questions or concerns please reach out to Roku Production at [production@rok
 
 ### **8.3 Naming conventions (as it Relates to Deliverables in the Hub)**
 
-All Roku projects have a unique Project Title ID (PTID). You must follow specific naming conventions for the files to be considered acceptable. Examples of how each file(s) should be named can be found on the Hub, in the Production - Branded folder.
+All Roku projects have a unique Project Title ID (PTID). You must follow specific naming conventions for the files to be considered acceptable.
 
 If items are not delivered correctly, they will not be accepted. Please do not add or remove folders. If you have questions or can't find specific folders, please reach out to Roku Production.
 

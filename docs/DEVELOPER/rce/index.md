@@ -409,7 +409,7 @@ The following video demonstrates how to purchase an RCE subscription from the AW
 
 The RCE provides a REST API for managing virtual devices programmatically. You can use the API to start devices, sideload apps, send ECP commands, access the BrightScript debug console, and more, enabling integration into CI/CD pipelines and automated testing workflows.
 
-To authenticate with the API, generate a Personal Access Token (PAT) from the Cloud Emulator tokens page. Include this token in your API requests in the `X-Authorization` header.
+To authenticate with the API, generate a Personal Access Token (PAT) from the Cloud Emulator tokens page. Include this token in your API requests in the `Authorization: Bearer <PAT>` header.
 
 ![The Add token dialog on the Cloud Emulator Token tab](https://image.roku.com/ZHZscHItMTc2/rce-add-token-dialog.png)
 

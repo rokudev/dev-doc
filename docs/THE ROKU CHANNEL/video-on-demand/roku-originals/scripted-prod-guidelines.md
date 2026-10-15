@@ -48,11 +48,11 @@ For email correspondence, with Roku Production, we requests that the full name o
 
 ### 3.2 Roku scripted contact sheet
 
-The Roku Scripted Contact Sheet is for Partner use only. Please don't distribute. The contact sheet can be found on the Hub in the Production – Scripted folder.
+The Roku Scripted Contact Sheet is for Partner use only. Please don't distribute.
 
 ### 3.3 Roku scripted distribution list
 
-Roku Production will send you a distribution list. You will also find the Roku Scripted Distribution List via the Hub in the Production – Scripted folder. The distro list will include the name, title, email, and required documents/media for each Roku recipient. There are a handful of documents we request be emailed directly to Roku which include, but are not limited to:
+Roku Production will send you a distribution list. The distro list will include the name, title, email, and required documents/media for each Roku recipient. There are a handful of documents we request be emailed directly to Roku which include, but aren't limited to:
 
 - Budgets
 - Call Sheets
@@ -100,7 +100,7 @@ Please inform Roku Production, at least 2 weeks prior to any of the following ac
 
 ### 3.6 Roku emergency notifications
 
-In the event of an emergency or incident, once the situation is stable, please contact Roku Production immediately. If you cannot reach Roku Production, please call Production Legal. Incidents include, but not limited to:
+In the event of an emergency or incident, once the situation is stable, please contact Roku Production immediately. If you can't reach Roku Production, please call Production Legal. Incidents include, but not limited to:
 
 - Stopping down pre-production, production, and/or post
 - Unplanned hiatus or postponement
@@ -122,7 +122,7 @@ In the event of an emergency or incident, once the situation is stable, please c
 **AFTER** informing Roku, please email detailed information, while respecting the privacy of individuals, regarding the incident to [production@roku.com](mailto:production@roku.com):
 
 - Title the subject of your email as follows: “Show Name” - Notification - CONFIDENTIAL
-- If the incident is sensitive in nature, in the body of your email please relay that an incident has occurred and request an immediate call with Roku Production and Production Legal.
+- If the incident is sensitive in nature, in the body of your email please relay that an incident has occurred and request an immediate call with Roku Production and Production Legal
 
 In the event of any non-emergency incident (property/location damage, equipment damage):
 
@@ -185,7 +185,7 @@ Please reach out to Roku Production to provide the Roku Assumptions Template. Pl
 - Please list out the following types of equipment/software:
 
   - Camera package
-    - Specialty equipment: Cranes, dollies, drones, etc
+    - Specialty equipment: Cranes, dollies, drones, etc.
 
   - Edit software (i.e., Final Cut, Premiere, and Avid)
 
@@ -200,7 +200,7 @@ Please reach out to Roku Production to provide the Roku Assumptions Template. Pl
 Roku Production asks that the following information, when applicable, be included/considered when budgeting:
 
 - Include the budget as a PDF of the Movie Magic Budget (MMB) using Roku’s provided COA
-- Include title, version #, ‘as of’ date and page numbers
+- Include title, version #, ‘as of’ date, and page numbers
 - Include Budget Top Sheet header information as noted in [Section 4.1.1](#411-chart-of-accounts)
 - Avoid large flat allowances. Provide details instead (cost per day/week/month etc.)
 - Fringes should be by category and broken out — avoid lump sum fringe rates
@@ -212,12 +212,12 @@ Roku Production asks that the following information, when applicable, be include
 - Budget for script clearance
 - Budget for worldwide title clearance and opinion letter
 - Include any security and general safety costs, include fees for risk managers, intimacy coordinators, or assessments and safety consultants
-- Budget for insurance – minding stunts, aircraft, watercraft etc.
+- Budget for insurance — minding stunts, aircraft, watercraft etc.
 - Extraordinary talent fees and costs should be excluded from all fee calculations
 - Budget for all necessary worldwide clearances in all media for music and footage
   - All licenses required for the production, synchronization, exhibition, performance, distribution, and exploitation (including in context marketing and promotion) of the Program by Roku for the term of the license
   - Include music label waiver costs, if required
-  - Include AFM fees if applicable.
+  - Include AFM fees if applicable
   - Reach out to Roku Legal with specific questions related to required terms
 - Computer Box Rentals are capped at $50/week and can't exceed $500 overall
   - Please provide an inventory with values for larger box rentals
@@ -228,25 +228,25 @@ Roku Production asks that the following information, when applicable, be include
   - Include captioning, subtitles, and technical QC in your budget
   - A list of preferred vendors will be provided by Roku Post
   - Spend beyond the Approved Budget is never authorized without **<u>written</u>** approval from Roku Production
-- For each budget revision please be sure to note the date, version and bullet point relevant changes in the body of the email
+- For each budget revision please be sure to note the date, version, and bullet point relevant changes in the body of the email
 
 #### 4.1.4 Foreign exchange rate (aka FX)
 
 If shooting in a location outside of the United States please be sure to note what foreign exchange rate you have assumed in your budget.
 
 - Your budget should reflect USD and the FX
-- Partner is responsible for noting the FX on the top of the budget top sheet as well as the assumptions.
+- Partner is responsible for noting the FX on the top of the budget top sheet as well as the assumptions
 
 #### 4.1.5 Tax incentives
 
 If shooting in a location in which a tax incentive or rebate is accessible, please be mindful of the below:
 
-- Partner is responsible for confirming whether production is eligible for potential incentives based on the project format (episodic, feature, etc) and minimum production spend
+- Partner is responsible for confirming whether production is eligible for potential incentives based on the project format (episodic, feature, etc.) and minimum production spend
 
 - Partner is responsible for applying for tax incentives/rebates
   - Please work with Roku Production when filing for incentives/rebates
 
-- Unless otherwise specified in the agreement, Roku funds the net budget -- differential between the gross and net budget is the responsibility of the Studio
+- Unless otherwise specified in the agreement, Roku funds the net budget — differential between the gross and net budget is the responsibility of the Studio
 
   - Roku **<u>doesn't</u>** pay interest associated to financing the tax incentive
   - Roku **<u>will allow</u>** the following incentive related expenses to be line items in the approved budget:
@@ -272,7 +272,7 @@ If shooting in a location in which a tax incentive or rebate is accessible, plea
 
 - Please reflect all VAT tax in the Cost Report and flag those costs the General Ledger within the naming convention “VAT”
 
-- Please review the Roku Credit Requirements per the Roku Scripted Media Delivery Specifications prior to agreeing to any embedded logo credit related to receiving tax credits or incentive uplift.
+- Please review the Roku Credit Requirements per the Roku Scripted Media Delivery Specifications prior to agreeing to any embedded logo credit related to receiving tax credits or incentive uplift
 
 #### 4.1.6 Unapproved budgetary line items
 
@@ -311,27 +311,27 @@ Upon review and acceptance of the final budget packet, Roku Production will issu
 
 Revised calendars are required whenever there is a schedule adjustment. Please use the following when submitting calendars:
 
-- Every version of the calendar should have title, version #, ‘as of’ date and page numbers
+- Every version of the calendar should have title, version #, ‘as of’ date, and page numbers
 - Once in production, any changes to the production or post schedule/calendar must be submitted to [production@roku.com](mailto:production@roku.com) and [dlropost@roku.com](mailto:dlropost@roku.com) for approval within 24 hours
 - In the body of the email that comes with calendar revisions, bullet point relevant changes to current calendar. Roku Production will review and confirm via email if approved.
 - Master delivery dates can't shift without **<u>written</u>** approval by Roku Production and Post
 
 #### 4.2.1 Calendar requirements
 
-Calendar should cover all phases of production (i.e., casting, pre-production, production, post, QC and final delivery) and include key dates, as applicable, for the following:
+Calendar should cover all phases of production (i.e., casting, pre-production, production, post, QC, and final delivery) and include key dates, as applicable, for the following:
 
 - Pre-production
 - Writing
 - Casting weeks including deadlines
 - Key hire start and end dates
 - Scout milestones (if applicable)
-- Show & Tell
+- Show and Tell
 - Table Read
 - Production Meeting
 - Key VFX design review, as applicable
 - Deadline to clear title
 - Production
-- Prep, shoot, and wrap dates – including set build, rehearsal(s), and travel days
+- Prep, shoot, and wrap dates — including set build, rehearsal(s), and travel days
 - Please identify on your calendar when you plan to shoot and deliver your camera test (see [Section 4.2.3](#423-camera-test-milestone), Camera Test Milestone)
 - Post
 - Start and wrap, finishing (i.e., audio and color), delivery of cuts and when notes are due, and master delivery dates
@@ -340,12 +340,12 @@ Calendar should cover all phases of production (i.e., casting, pre-production, p
 - Please be sure to build time into your delivery schedule to account for the Roku QC process. Roku advises that you set aside 2 weeks for each episode or 3 weeks for a feature, to complete the QC of all masters.
 - Roku Post will provide a list of approved QC vendors
 
-#### 4.2.2 Table reads/show & tells
+#### 4.2.2 Table reads/show and tells
 
-- Roku requests table reads and show & tell presentations for our content, unless otherwise noted by Roku Creative
+- Roku requests table reads and show and tell presentations for our content, unless otherwise noted by Roku Creative
 - Typically, the table read is a one-time read-thru of all the scripts, with at least the lead talent in attendance
-- Typically, the show & tell covers at least wardrobe, set design, locations, color tones, and any/all department presentations depending on the specific creative needs of the show
-- Please reach out to Roku Production for an invitation list to both the table read and the show & tell presentation
+- Typically, the show and tell covers at least wardrobe, set design, locations, color tones, and any/all department presentations depending on the specific creative needs of the show
+- Please reach out to Roku Production for an invitation list to both the table read and the show and tell presentation
 - Please provide a dial-in/video conference line for Roku representatives who may not be able to attend the table read in-person
 
 #### 4.2.3 Camera test milestone
@@ -353,7 +353,7 @@ Calendar should cover all phases of production (i.e., casting, pre-production, p
 - The Director, Director of Photography and/or producing team should oversee the camera test
 - Please provide scratch framing mocks or test storyboard compositions
 - It can be a “slap-comp sequence” or “center-punching sequence,” generated by the Editor or Assistant Editor
-- Ideally this is sent prior to commencement of principal photography. If that isn’t possible, within the first two days of shooting or rehearsal
+- Ideally this is sent prior to commencement of principal photography. If that isn’t possible, within the first 2 days of shooting or rehearsal.
 - Your Roku Post Manager will create a specific folder via [Frame.io](http://frame.io/) for uploading the camera test
 
 #### 4.2.4 Production meetings
@@ -365,24 +365,24 @@ Roku Production will attend in person or via dial-in. It is asked that a phone d
 As The Roku Channel is 100% ad supported, we'll reach out prior to commencement of principal photography to discuss the B2B sizzle as well as if there is a need to capture a very simple, straightforward message from talent about the show to be used internally only.
 
 - B2B Sizzle — this is a 30-45 second sizzle to be used internally only for business to business purposes.
-- Important notes: the sizzle doesn't require any clearance or music licensing or formal finishing (e.g. color, mix)
+  - Important notes: the sizzle doesn’t require any clearance or music licensing or formal finishing (e.g. color, mix)
 - Talent Read(s) — if applicable, this is a very simple video, straight to camera, not color corrected, for internal use only.
-- Roku will manage all aspects of the reads if they're necessary (e.g. the wording). If the request is made this shouldn't take more than 10-20 minutes to capture.
-- For example, talent talking straight to camera says: “Hey, I’m TBD, coming to you live from the set of _insert Show Title here_ streaming soon on the Roku Channel!”
+  - Roku will manage all aspects of the reads if they’re necessary (e.g. the wording). If the request is made this shouldn’t take more than 10-20 minutes to capture.
+    - For example, talent talking straight to camera says: “Hey, I’m TBD, coming to you live from the set of _insert Show Title here_ streaming soon on the Roku Channel!”
 
 ### 4.4 Cost report requirements
 
 If applicable, please confirm with your Roku Production Executive the cadence in which cost report packages are submitted and to find out if Hot Costs will be a requirement for your project. Cost Report packets will be required throughout all phases of production, using industry standard software. Please use the following when submitting cost reports:
 
-- The cost report should reflect the Approved Production Costs, do not include the Premium (if applicable)
+- The cost report should reflect the Approved Production Costs, don't include the Premium (if applicable)
 - The approved budget column must match the amounts and chart of accounts of the budget submitted and approved by Roku Production
-- Cost report must include the following columns: actuals to date, committed costs, total costs, estimate to complete, estimated final costs, approved budget and variance (over/under)
+- Cost report must include the following columns: actuals to date, committed costs, total costs, estimate to complete, estimated final costs, approved budget, and variance (over/under)
 - In the event of approved breakage, the approved breakage amount must appear in an approved overage column in the cost report. Cost report software must have this capability.
 - Fringes should be per category to match the approved budget
 - No negative ETC’s
 - Cost report to be accompanied with general ledger, trial balance, PO log, and variance report
-- If applicable - Please reflect all VAT tax in the Cost Report and flag those costs the General Ledger within the naming convention “VAT”
-- Movement between budget accounts in an amount less than $35,000 is permissible. Amounts at or over $35,000 are subject to written approval by Roku Production
+- If applicable — Please reflect all VAT tax in the Cost Report and flag those costs the General Ledger within the naming convention “VAT”
+- Movement between budget accounts in an amount less than $35,000 is permissible. Amounts at or over $35,000 are subject to written approval by Roku Production.
 - Any movement from the following accounts require prior approval from Roku Production:
   - Cast
   - VFX
@@ -394,7 +394,7 @@ Roku won't be responsible for any amounts in excess of the Approved Budget witho
 
 ### 4.5 Staff and crew
 
-Roku Content, Production, and Post reserves customary approval of department heads, key creative, and key production staff. This can include, but is not limited to:
+Roku Content, Production, and Post reserves customary approval of department heads, key creative, and key production staff. This can include, but isn't limited to:
 
 - Showrunner, Casting Director/Company, Director, Director of Photography, Line Producer, Accountant, Post Supervisor, and Editors
 - Please submit credit, resume and/or reel (as applicable) to the appropriate Roku Content, Production, or Post contacts
@@ -422,14 +422,14 @@ Roku follows the guidance of the AMPTP and local regulations when it comes to Co
 
 Please reference closed deal for contractual payment terms. Possible payment milestones and when to submit invoices for processing listed below:
 
-- Commencement of Pre-Production – Invoice due upon first day of pre-production
-- Commencement of Principal Photography – Invoice due upon first day of principal photography
-- Completion of Principal Photography – Invoice due upon last day of principal photography
-- Commencement of Post – Invoice due upon start of post/editorial staff
-- Delivery of First Rough Cut – Invoice due upon Roku’s receipt of first rough cut
-- Complete Delivery / Complete & Final Delivery – Invoice due upon receipt and approval of all Roku Post Paper and Media Deliverables
-- Premium – If applicable, due upon receipt and approval of all Paper Deliverables and Final Cost Report
-- Audit - Reference closed project deal terms for audit language
+- Commencement of Pre-Production — Invoice due upon first day of pre-production
+- Commencement of Principal Photography — Invoice due upon first day of principal photography
+- Completion of Principal Photography — Invoice due upon last day of principal photography
+- Commencement of Post — Invoice due upon start of post/editorial staff
+- Delivery of First Rough Cut — Invoice due upon Roku’s receipt of first rough cut
+- Complete Delivery / Complete and Final Delivery — Invoice due upon receipt and approval of all Roku Post Paper and Media Deliverables
+- Premium — If applicable, due upon receipt and approval of all Paper Deliverables and Final Cost Report
+- Audit — Reference closed project deal terms for audit language
 
 #### 5.1.2 Invoices
 
@@ -460,7 +460,7 @@ The email must include:
 
 - Project Name
 
-- What Banking Information has been updated - i.e. Routing or account or both
+- What Banking Information has been updated — i.e. Routing or account or both
 
 - Attachment with updated information on company letter head
 
@@ -483,9 +483,9 @@ Once AP confirms the update has been made, Production Finance will let you that 
 
 Important Notes:
 
-- Roku requires 1 week to amend in the system.
-- Invoice(s) may be submitted no earlier than 1 week from any bank change requests.
-- Invoice(s) must be submitted no later than EOD Thursday to potentially make the following week pay run.
+- Roku requires 1 week to amend in the system
+- Invoice(s) may be submitted no earlier than 1 week from any bank change requests
+- Invoice(s) must be submitted no later than EOD Thursday to potentially make the following week pay run
 
 ### 5.3 Premium calculation
 
@@ -493,7 +493,7 @@ Please refer to your agreement to determine if a Premium fee is applicable. If s
 
 - Calculate your premium with applicable exclusions as per your closed deal and include the Premium amount on the Budget Assumption Page
 - If applicable, please calculate your premium with applicable exclusions as per your closed deal and include the estimate on the Budget Assumptions Page
-- Although the Premium Fee is part of the overall fee, it should not be a line item in the budget
+- Although the Premium Fee is part of the overall fee, it shouldn't be a line item in the budget
 
 ### 5.4 Residual calculation
 
@@ -501,7 +501,7 @@ The Roku Channel is a free to consumer ad supported platform (AVOD). Roku asks t
 
 - Check the definition of “accountable receipts” or “distributor’s gross” with the applicable guild
 - Include the project residual estimate on the Budget Assumptions Page
-- Residuals should not be a line item in the budget
+- Residuals shouldn't be a line item in the budget
   - For purposes of calculating a rebate, if you need to include buyouts in the budget, please discuss with Roku Production
 - Roku may request an updated residual estimate prior to closing out project
 
@@ -530,7 +530,7 @@ To start the project close out process Roku must receive and approve all media a
 Please reference the closed deal regarding Audit election and timelines.
 
 - Roku will notify Partner in writing as to whether it intends to conduct an audit
-- Roku Production Legal will provide Partners with the “Roku Audit Requirements".
+- Roku Production Legal will provide Partners with the “Roku Audit Requirements”
 - Audit Requirements document will elaborate on the following:
   - Non-reimbursable expenses unless previously approved
   - Overages/Breakage
@@ -548,19 +548,19 @@ You will be introduced to Roku Marketing during pre-production.
 
 Unless otherwise discussed and approved by Roku Production, all Marketing and PR costs are expected to be excluded from the budget.
 
-There may be circumstances when Roku requests assistance with marketing efforts. In the event Roku pre-approved any marketing expense (i.e., unit photography, BTS, HMU etc.) please review the below:
+There may be circumstances when Roku requests assistance with marketing efforts. In the event Roku pre-approved marketing expense (i.e., unit photography, BTS, HMU etc.) please review the below:
 
 - Marketing invoices should be sent to your Roku Marketing contact
-- Marketing expenses should not be included as part of the series budget
-- Marketing expenses should not be included as an expense in the cost report
+- Marketing expenses shouldn't be included as part of the series budget
+- Marketing expenses shouldn't be included as an expense in the cost report
 
 ### 5.9 Trade-outs
 
-When budgeting, don't assume any trade-outs will be allowed. We are an ad-supported platform and cannot guarantee trade-outs. Product placement and trade-outs may be allowed at Roku's discretion.
+When budgeting, don't assume any trade-outs will be allowed. We are an ad-supported platform and can't guarantee trade-outs. Product placement and trade-outs may be allowed at Roku's discretion.
 
 If a trade-out opportunity presents itself, please fill out the Trade-Out Request form located in the downloadables folder on the Hub.
 
-Submit the form to Roku Production and Production Legal for approval using the email template below. If you do not yet have access to the Hub, please reach out to Roku Production and we will send you the form.
+Submit the form to Roku Production and Production Legal for approval using the email template below. If you don't yet have access to the Hub, please reach out to Roku Production and we'll send you the form.
 
 Roku Production will reply to your email confirming approved or not.
 
@@ -618,8 +618,8 @@ Below is list of COIs that may be required by Roku. This information along with 
 - Applicable Collective Bargaining Agreement/Guild Travel Accident Coverage
 - Foreign General Liability
 - Cast Insurance
-  - Necessary cast members should be declared so they are eligible for cast insurance.
-  - Please discuss with Roku Production Legal whether your talent needs to be declared separately for Cast Insurance Coverage; and additionally, whether accident-only or full coverage would be preferable.
+  - Necessary cast members should be declared so they are eligible for cast insurance
+  - Please discuss with Roku Production Legal whether your talent needs to be declared separately for Cast Insurance Coverage; and additionally, whether accident-only or full coverage would be preferable
 - High-Hazards and Special Risk Coverage (i.e., aircraft/watercraft etc.)
   - There may be special risks associated with your project. This includes but is not limited to stunts, firearms, minors, pyrotechnics, precision driving, aircraft, drones, watercraft, railroads, foreign activities, animals, or any unusual or hazardous exposures and/or conditions involving either cast or crew. Special Risk Coverage may be required for your production, please budget accordingly.
 
@@ -651,7 +651,7 @@ We ask that you provide the following information in the body of your email requ
 - The specific reason for the removal request (e.g., "wrong photo included in opening shot," "music was not cleared properly”)
 - A point of contact along with email and phone number to call for any follow up questions
 - An ETA for delivery of a replacement episode
-  - Ideally when requesting that content be removed from the Roku eco-system, you will be able to provide a replacement episode ASAP. If this isn't possible (or deemed not necessary based on the content), Roku will address on a case-by-case basis
+  - Ideally when requesting that content be removed from the Roku eco-system, you will be able to provide a replacement episode ASAP. If this isn't possible (or deemed not necessary based on the content), Roku will address on a case-by-case basis.
 
 ## 7. Post
 
@@ -694,7 +694,6 @@ Below you’ll find a list of **paper** deliverables for Production, Post, and P
 - Production Vendor List
 - Script Supervisor Continuity Breakdowns and Fully-Lined Scripts
 - Set Status Reports (First Shot, Lunch, Wrap)
-- Shooting Schedule
 - Staff and Crew Lists (all approved and final versions)
 - Talent Days Worked
 - Trade-Out Request Form(s)
@@ -702,9 +701,7 @@ Below you’ll find a list of **paper** deliverables for Production, Post, and P
 
 #### 8.1.2 Post
 
-- Post Calendar (all approved and final versions)
 - As Broadcast Scripts
-- CC/Sub/FN Files
 - Episodic Delivery Checklist
 - Final Post Contact List
 - Final Post Vendor List
@@ -761,7 +758,7 @@ For questions or concerns reach out to Roku Production at [production@roku.com](
 
 ### 8.3 Naming conventions (as it relates to deliverables on the Hub)
 
-All Roku projects have a unique Project Title ID (PTID). You must follow specific naming conventions for the files to be considered acceptable. Examples of how each file should be named can be found on the Hub in the Production – Scripted folder.
+All Roku projects have a unique Project Title ID (PTID). You must follow specific naming conventions for the files to be considered acceptable.
 
 If items aren't delivered correctly, they won't be accepted. Please don't add or remove folders. If you have questions or can't find specific folders, please reach out to Roku Production.
 
